@@ -1,6 +1,3 @@
-# sig-release
-Repo for SIG release
-=======
 # SIG Release
 
 ### Table of Contents
