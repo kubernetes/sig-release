@@ -20,7 +20,7 @@
    - [CI Signal Lead](#ci-signal-lead)
    - [Release Team Shadow](#release-team-shadow)
    - [Individual Contributors](#individual-contributors)
-      - [During a patch pelease](#during-a-patch-pelease)
+      - [During a patch release](#during-a-patch-pelease)
       - [During a major/minor release](#during-a-majorminor-release)
          - [Propose and track feature](#propose-and-track-feature)
          - [Write feature documentation](#write-feature-documentation)
@@ -53,7 +53,7 @@
 - Continually improving release and development processes
   - Work closely with SIG Contributor Experience to define and build tools to facilitate release process (e.g. dashboards)
   - Work with downstream communities responsible for packaging Kubernetes releases
-  - Work with other SIGs to agree upon the responsibilities of thier SIG with respect to the release
+  - Work with other SIGs to agree upon the responsibilities of their SIG with respect to the release
   - Define and collect metrics related to the release in order to measure progress over each release
 - Collaboration with downstream communities which build artifacts from Kubernetes releases
   - Ensure the appropriate level of integration with publishing the OSS build artifacts
@@ -167,7 +167,7 @@ be familiar with the release process and remain ready to discharge the responsib
     ensures that actions are taken ASAP to bring it back to a healthy state
 - Initiates automatic fast-forwards of the release branch to pick up all changes from master branch, when appropriate
 - Reviews and approves [cherry picks](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md) to the release branch
-  - Ensures onlyl bug/security fixes (but no new features) are cherry-picked after code complete unless approved by the [exception process](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md)
+  - Ensures only bug/security fixes (but no new features) are cherry-picked after code complete unless approved by the [exception process](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md)
   - Ensures that cherry-picks do not destabilize the branch by either giving the PR enough time to stabilize in master or giving it enough time to stabilize in the release branch before cutting the release
 - Cuts the actual [release](https://github.com/kubernetes/kubernetes/releases)
 
@@ -210,9 +210,9 @@ be prepared to devote a significant amount of time to shadowing their mentor dur
 should be prepared to assume a lead role in a subsequent release.
 
 ### Individual Contributors
-Release responsiblites of indvidual contributors to the Kubernetes project are captured below
+Release responsibilities of individual contributors to the Kubernetes project are captured below
 
-#### During a patch pelease
+#### During a patch release
 If you have a patch that needs to be ported back to a previous release (meaning it is a critical bug/security fix), once it is merged to the Kubernetes `master` branch:
 - Mark your PR with the milestone corresponding to the release you want to port back to (e.g. `v1.5`), and add the `cherrypick-candidate` label to it
 - The Patch Release Manager will then review the PR and if it is ok for cherry-picking, will apply a `cherrypick-approved` label to it
@@ -225,14 +225,14 @@ If you are developing a feature for Kubernetes, make sure that an issue is open 
 
 Ensure that all code for your feature is written, tested, reviewed, and merged before code freeze date for the target release.
 
-During the code freeze period, fix any bugs discovered with you feature, and write feature documentation.
+During the code freeze period, fix any bugs discovered with your feature, and write feature documentation.
 
 ##### Write feature documentation
 
 1. Make sure your feature for the upcoming release is on the release tracking board (e.g. [link](https://docs.google.com/spreadsheets/d/1nspIeRVNjAQHRslHQD1-6gPv99OcYZLMezrBe3Pfhhg/edit#gid=0) for 1.6).
 2. Create a PR with documentation for your feature in the [documents repo](https://github.com/kubernetes/kubernetes.github.io).
     - **Your PR should target the release branch (e.g. [release-1.6](https://github.com/kubernetes/kubernetes.github.io/tree/release-1.6)), not the [`master`](https://github.com/kubernetes/kubernetes.github.io/tree/master) branch.**
-      - Any changes to the master branch become live on https://kubernetes.io/docs/ as soon as they are merged, and for releases we do not want docuemntation to go live until the release is cut.
+      - Any changes to the master branch become live on https://kubernetes.io/docs/ as soon as they are merged, and for releases we do not want documentation to go live until the release is cut.
 3. Add link to your docs PR in the release tracking board, and notify the docs lead for the release (e.g. [Devin Donnelly](https://www.github.com/devin-donnelly) for 1.6).
 4. The docs lead will review your PR and give you feedback.
 5. Once approved, the docs lead will merge your PR into the release branch.
@@ -242,7 +242,7 @@ During the code freeze period, fix any bugs discovered with you feature, and wri
 
 ### During "Major" releases
 To date no major release has been scheduled, however, SIG Release would be responsible for working closely with SIG PM
-and SIG Testing to coordinate this effort across SIGs. The precise work required to produce a major relaese (e.g. 2.0, 3.0)
+and SIG Testing to coordinate this effort across SIGs. The precise work required to produce a major release (e.g. 2.0, 3.0)
 is undefined.
 
 ### During "Security" releases
