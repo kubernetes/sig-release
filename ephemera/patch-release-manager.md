@@ -29,9 +29,11 @@ The playbook is more what you call "guidelines" than actual rules.
 As a patch release manager, you are responsible for reviewing
 [cherrypicks](../cherry-picks.md) on your release branch.
 
-You can find candidate PRs in the [cherrypick queue dashboard](http://cherrypick.k8s.io/#/queue).
-Once a cherrypick PR is created and ready for your review, it should show up in
-a GitHub search such as [`is:pr is:open base:release-1.6`](https://github.com/kubernetes/kubernetes/pulls?q=is%3Apr%20is%3Aopen%20base%3Arelease-1.6).
+**Finding candidate cherry picks**
+
+Use a GitHub search such as [`is:pr is:open base:release-1.6`](https://github.com/kubernetes/kubernetes/pulls?q=is%3Apr%20is%3Aopen%20base%3Arelease-1.6) to find all cherrypick PRs for a branch.
+
+You can also find candidate PRs in the [cherrypick queue dashboard](http://cherrypick.k8s.io/#/queue).
 
 As an example of the kind of load to expect, there were about 150 cherrypick PRs
 against the `release-1.6` branch in the 3 months between v1.6.0 and v1.7.0.
