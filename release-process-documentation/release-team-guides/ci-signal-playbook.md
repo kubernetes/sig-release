@@ -86,19 +86,18 @@ I plan on experimenting with scripting or improvements to test-infra if/when I h
 
 ## Code Slush
 
-TBD
-- I plan on doing more of the same for sig-release-master-blocking
-- I plan on collaborating with the Test Infra role to make sure release-1.y-blocking looks correct
-- I plan on starting to look at release-master upgrade
+I check [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) daily.
+
+I will ocasionally check [sig-release-1.y-blocking](https://k8s-testgrid.appspot.com/sig-release-1.y-blocking) and work with the Test Infra role to make sure the list of jobs looks correct
 
 ## Code Freeze
 
-TBD
-- TODO: I think I need help figuring out where the authoritative set of blocking release upgrade tests lives?
-- I plan on doing more of the same for sig-release-master-blocking, sig-release-master-upgrade
-- I start keeping an eye on sig-release-1.y-blocking 
+I check [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) daily.
+
+I expect more responsiveness from SIG's at this point. In addition to filing github issues, I start pinging issues for updates, and pinging sig slack channels.
 
 ## Exit Code Freeze
 
 TBD
-- I am planning on doing more of the same for release-1.y-blocking
+- I stop looking at release-master-blocking
+- I look solely at release-1.y-blocking and release-master-upgrade
