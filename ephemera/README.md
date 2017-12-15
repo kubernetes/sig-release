@@ -25,7 +25,7 @@ Patch releases are managed by the **Patch Release Manager**. Duties of the patch
 
 See the [Patch Release Manager Playbook](patch-release-manager.md) for more details.
 
-Current and past patch release managers are listed [here](https://github.com/kubernetes/community/wiki).
+Current and past patch release managers are listed [here](/release-managers.md).
 
 ## Kubernetes Release Management Team for Major/Minor Releases
 
