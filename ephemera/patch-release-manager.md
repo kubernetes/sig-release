@@ -10,7 +10,7 @@ The playbook is more what you call "guidelines" than actual rules.
 
 ## Getting started
 
-* Add yourself to the [Release Manager table](https://github.com/kubernetes/community/wiki)
+* Add yourself to the [Release Manager table](/release-managers.md)
   so the community knows you're the point of contact.
 * Ask a maintainer to add you to the [kubernetes-release-managers](https://github.com/orgs/kubernetes/teams/kubernetes-release-managers/members)
   team so you have write access to the main repository.
