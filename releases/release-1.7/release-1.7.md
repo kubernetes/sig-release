@@ -70,7 +70,7 @@ link](https://docs.google.com/spreadsheets/d/1IJSTd3MHorwUt8i492GQaKKuAFsZppauT4
 
 ## Notable operational changes
 
-1. Starting in the 1.7 release the [release team](https://github.com/kubernetes/features/blob/master/release-1.7/release_team.md)
+1. Starting in the 1.7 release the [release team](https://github.com/kubernetes/sig-release/blob/master/release-1.7/release_team.md)
   will use the following procedure to identify release blocking issues
   1. Any issues listed in the [v1.7 milestone](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20milestone%3Av1.7)
      will be considered release blocking. It is everyone's responsibility to move non blocking issues out of the `v1.7` milestone. Items targeting 1.7 can be moved into the `v1.7` milestone.
