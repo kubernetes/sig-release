@@ -15,7 +15,7 @@ In this document, we address the following process-related problems wrt scale te
 
 ## Non-Goals
 
-We do not intend to:
+This document does not intend to:
 
 - Define the set of tests that comprise scalability and correctness suite
 - Define SLIs/SLOs (that’s discussed [here]) and thresholds for the tests
@@ -40,44 +40,54 @@ We need to run them on 5k-node clusters, but they’re:
 - Expensive (tens of thousands of core hours per run)
 - Blocking other large tests (quota limitations + only one large test project available viz. 'kubernetes-scale')
 
-So we don’t want to run them too frequently. On the other hand, running them too infrequently means late identification and piling up of regressions. So we choose the following middleground:  
-(B = release-blocking, NB = not release-blocking)
+So we don’t want to run them too frequently. On the other hand, running them too infrequently means late identification and piling up of regressions. So we choose the following middleground:
 
-- Performance tests on 2k-node cluster in GCE/GKE alternatingly each week (NB)
-  - would catch most scale-related regressions
-  - would catch bugs in both GCE and GKE
-- Performance tests on 5k-node cluster in GCE each week (B)
-  - would catch scale-related bugs missed by 2k-node test (should be rare)
-- Correctness tests on 2k-node cluster in GCE/GKE alternatingly each week (NB)
-  - correctness tests failing on just large clusters is rare, so weekly is enough
-  - would catch bugs in both GCE and GKE
-- Correctness tests on 5k-node cluster in GCE/GKE alternatingly each week (B for GCE)
-  - would catch bugs left out by 2k-node (should be rare)
-  - would verify 5k-node clusters on GKE but without blocking the release
+- Performance tests on 2k-node/5k-node GCE clusters alternatingly from Mon-Sat
+  - would give us one performance run from each day to help catch regressions fast
+  - running 2k-node on alternating days gives time for 5k-node correctness tests to run on those days
+  - many of the performance regressions on 5k-node should also be seen on 2k-node (albeit a smaller version probably)
+- Correctness tests on 2k-node/5k-node GCE clusters alternatingly from Mon-Sat
+  - would give us one correctness run from each day to help catch regressions fast
+  - running 2k-node on alternating days gives time for 5k-node performance tests to run on those days
+  - many of the correctness regressions on 5k-node should also be seen on 2k-node
+- Performance tests on 2k-node GKE cluster on Sun
+  - would give us a performance run for sunday too
+  - would also additionally help verify performance of GKE
+- Correctness tests on 2k-node GKE cluster on Sun
+  - would give us a correctness run for sunday too
+  - would also additionally help verify correctness of GKE
 
 Here's the proposed schedule (may be fine-tuned later based on test health / release schedule):
+(B = release-blocking job)
 
-| | Mon | Tue | Wed | Thu | Fri | Sat | Sun
-| ---- | :----: | :----: | :----:| :----: | :----: | :----: | :----:
-| Week 2k | GCE 5k perf (B) | | | GCE 5k corr (B) | | GKE 2k perf+corr (NB) |
-| Week 2k+1 | GCE 5k perf (B) | | | GKE 5k corr (NB) | | GCE 2k perf+corr (NB) |
+| Day | | |
+| ------------- |:-------------:| -----:|
+| Mon | 5k-node performance @ 00:01 PT (B) | 2k-node correctness @ 22:01 PT |
+| Tue | 2k-node performance @ 05:01 PT | 5k-node correctness @ 14:01 PT (B) |
+| Wed | 5k-node performance @ 00:01 PT (B) | 2k-node correctness @ 22:01 PT |
+| Thu | 2k-node performance @ 05:01 PT | 5k-node correctness @ 14:01 PT (B) |
+| Fri | 5k-node performance @ 00:01 PT (B) | 2k-node correctness @ 22:01 PT |
+| Sat | 2k-node performance @ 05:01 PT | 5k-node correctness @ 14:01 PT (B) |
+| Sun | 'GKE' 2k-node performance @ 05:01 PT | 'GKE' 2k-node correctness @ 15:01 PT |
+
+Note: The above schedule is subject to change based on job health, release requirements, etc. You should find it up-to-date in this [calendar].
 
 Why this schedule?
 
-- 5k tests might need special attention in case of failures so they should run on weekdays
-- Running 5k perf test on Mon gives the whole week for debugging in case of failures
-- Running 5k corr test on Thu gives Tue-Wed to debug any setup issues found on Mon
-- Running 5k corr tests alternatingly on GKE and GCE validates both setups
-- 2k perf and corr tests can be run in parallel to save time
-- Running 2k tests on weekend will free up a weekday for the project to run other tests
+- 5k tests might need special attention in case of failures so they should mostly run on weekdays (EDIT: Given that they're quite stable now, we're trying running them on weekend too)
+- Running a large-scale performance job and a large-scale correctness job each day would:
+  - help catch regressions on a daily basis
+  - help verify fixes with low latency
+  - ensure a good release signal
+- Running large scale tests on GKE once a week would help verify GKE setup also, at no real loss of signal ideally
 
-Why GKE tests?
+Why run GKE tests at all?
 
 Google is currently using a single project for scalability testing, on both GCE and GKE. As a result we need to schedule them together. There's a plan for CNCF becoming responsible for funding k8s testing, and GCE/GKE tests would be separated to different projects when that happens, with only GCE being funded by them. This ensures fairness across all cloud providers.
 
 ### Concretely define test configuration
 
-This is a relatively minor issue but it is important that we clearly define the test configuration we use for the release. E.g. there was a confusion this time around testing k8s services, machine-type and no. of the nodes we used (we tested 4k instead of 5k due to a CIDR-setup problem). For ref - [#47344] [#47865]. To solve this, we need to document it using the below template in a file named scalability-validation-report.md placed under kubernetes/features/release-<N>. And this file should be linked from under the scalability section in the release's CHANGELOG.md.
+This is a relatively minor issue but it is important that we clearly define the test configuration we use for the release. E.g. there was a confusion this time around testing k8s services, machine-type and no. of the nodes we used (we tested 4k instead of 5k due to a CIDR-setup problem). For ref - [#47344] [#47865]. To solve this, we need to document it using the below template in a file named scalability-validation-report.md placed under kubernetes/features/release-&gt;N&lt;. And this file should be linked from under the scalability section in the release's CHANGELOG.md.
 
 ```
 Validated large cluster performance under the following configuration:
@@ -123,3 +133,4 @@ Responsibilities lying with other SIGs/teams as applicable (could be sig-scalabi
 [here]: https://docs.google.com/document/d/15rD6XBtKyvXXifkRAsAVFBqEGApQxDRWM3H1bZSBsKQ
 [#47865]: https://github.com/kubernetes/kubernetes/issues/47865
 [test_owners.csv]: https://github.com/kubernetes/kubernetes/blob/master/test/test_owners.csv
+[calendar]: https://calendar.google.com/calendar?cid=Z29vZ2xlLmNvbV9tNHA3bG1jODVubGlmazFxYzRnNTRqZjg4a0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t
