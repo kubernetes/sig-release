@@ -2,8 +2,5 @@
 #  https://github.com/kubernetes/kubernetes/blob/master/docs/devel/owners.md
 
 approvers:
-  - calebamiles
-  - enisoc
-  - idvoretskyi
-  - jdumars
-  - pwittrock
+  - sig-release-leads
+  - release-team-leads
