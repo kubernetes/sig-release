@@ -114,7 +114,7 @@ which shall be the discharged by the Release Team.
 
 ## Kubernetes Release Team roles
 
-As documented in the [Kubernetes Versioning doc](https://github.com/kubernetes/kubernetes/blob/master/docs/design/versioning.md),
+As documented in the [Kubernetes Versioning doc](https://git.k8s.io/community/contributors/design-proposals/release/versioning.md),
 there are 3 types of Kubernetes releases:
 - Major (x.0.0)
 - Minor (x.x.0)
