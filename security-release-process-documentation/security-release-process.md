@@ -11,7 +11,7 @@ The Product Security Team (PST) is responsible for organizing the entire respons
 The initial Product Security Team will consist of four volunteers subscribed to the private [Kubernetes Security](https://groups.google.com/forum/#!forum/kubernetes-security) list. These are the people who have been involved in the initial discussion and volunteered:
 
 - Brandon Philips `<brandon.philips@coreos.com>` [4096R/154343260542DF34]
-- Jess Frazelle `<jessfraz@google.com>` [4096R/0x18F3685C0022BFF3]
+- Jess Frazelle `<jess@linux.com>` [4096R/0x18F3685C0022BFF3]
 - CJ Cullen `<cjcullen@google.com>`
 - Tim Allclair `<tallclair@google.com>` [4096R/0x5E6F2E2DA760AF51]
 - Jordan Liggitt `<jliggitt@redhat.com>` [4096R/0x39928704103C7229]
@@ -22,7 +22,7 @@ The initial Product Security Team will consist of four volunteers subscribed to 
 
 ## Release Manager Role
 
-Also included on the private [Kubernetes Security](https://groups.google.com/forum/#!forum/kubernetes-security) list are all [Release Managers](https://github.com/kubernetes/community/wiki).
+Also included on the private [Kubernetes Security](https://groups.google.com/forum/#!forum/kubernetes-security) list are all [Release Managers](/release-managers.md).
 
 It is the responsibility of the PST to add and remove Release Managers as Kubernetes minor releases created and deprecated.
 
@@ -40,11 +40,19 @@ If possible the PST will ask the person making the public report if the issue ca
 
 ## Patch, Release, and Public Communication
 
-For each vulnerability a member of the PST will volunteer to lead coordination with the Fix Team, Release Managers and is responsible for sending disclosure emails to the rest of the community. This lead will be referred to as the Fix Lead.
+For each vulnerability a member of the PST will volunteer to lead coordination
+with the Fix Team, Release Managers and is responsible for sending disclosure
+emails to the rest of the community. This lead will be referred to as the Fix Lead.
 
 The role of Fix Lead should rotate round-robin across the PST.
 
-All of the timelines below are suggestions and assume a Private Disclosure. The Fix Lead drives the schedule using their best judgment based on severity, development time, and release manager feedback. If the Fix Lead is dealing with a Public Disclosure all timelines become ASAP.
+All of the timelines below are suggestions and assume a Private Disclosure.
+The Fix Lead drives the schedule using their best judgment based on severity,
+development time, and release manager feedback. If the Fix Lead is dealing with
+a Public Disclosure all timelines become ASAP. If the fix relies on another
+upstream project's disclosure timeline, that will adjust the process as well.
+We will work with the upstream project to fit their timeline and best protect
+our users.
 
 ### Fix Team Organization
 
@@ -76,8 +84,7 @@ The communication to users should be actionable. They should know when to block 
 **Optional Fix Disclosure to Private Distributors List** (Completed within 1-14 days of Disclosure):
 
 - The Fix Lead will make a determination with the help of the Fix Team if an issue is critical enough to require early disclosure to distributors. Generally this Private Distributor Disclosure process should be reserved for remotely exploitable or privilege escalation issues. Otherwise, this process can be skipped.
-- The Fix Lead will email the patches to kubernetes-distributors-announce@googlegroups.com so distributors can prepare builds to be available to users on the day of the issue's announcement. Distributors can ask to be added to this list by emailing kubernetes-security@googlegroups.com and it is up to the Product Security Team's discretion to manage the list.
-  - TODO: Figure out process for getting folks onto this list.
+- The Fix Lead will email the patches to kubernetes-distributors-announce@googlegroups.com so distributors can prepare builds to be available to users on the day of the issue's announcement. Distributors should read about the [Private Distributors List](#private-distributors-list) to find out the requirements for being added to this list.
 - **What if a vendor breaks embargo?** The PST will assess the damage. The Fix Lead will make the call to release earlier or continue with the plan. When in doubt push forward and go public ASAP.
 
 **Fix Release Day** (Completed within 1-21 days of Disclosure)
@@ -88,7 +95,7 @@ The communication to users should be actionable. They should know when to block 
 - The Fix Lead will cherry-pick the patches onto the master branch and all relevant release branches. The Fix Team will LGTM and merge.
 - The Release Managers will merge these PRs as quickly as possible. Changes shouldn't be made to the commits even for a typo in the CHANGELOG as this will change the git sha of the already built and commits leading to confusion and potentially conflicts as the fix is cherry-picked around branches.
 - The Fix Lead will request a CVE from [DWF](https://github.com/distributedweaknessfiling/DWF-Documentation) and include the CVSS and release details.
-- The Fix Lead will email kubernetes-{dev,users,announce,security-announce}@googlegroups.com now that everything is public announcing the new releases, the CVE number, the location of the binaries, and the relevant merged PRs to get wide distribution and user action. As much as possible this email should be actionable and include links how to apply the fix to users environments; this can include links to external distributor documentation.
+- The Fix Lead will email kubernetes-{dev,users,announce,security-announce}@googlegroups.com now that everything is public announcing the new releases, the CVE number, the location of the binaries, and the relevant merged PRs to get wide distribution and user action. As much as possible this email should be actionable and include links how to apply the fix to users environments; this can include links to external distributor documentation. The recommended target time is 4pm UTC on a non-Friday weekday. This means the announcement will be seen morning Pacific, early evening Europe, and late evening Asia.
 - The Fix Lead will remove the Fix Team from the private security repo.
 
 ### Retrospective
@@ -98,6 +105,123 @@ These steps should be completed 1-3 days after the Release Date. The retrospecti
 - The Fix Lead will send a retrospective of the process to kubernetes-dev@googlegroups.com including details on everyone involved, the timeline of the process, links to relevant PRs that introduced the issue, if relevant, and any critiques of the response and release process.
 - The Release Managers and Fix Team are also encouraged to send their own feedback on the process to kubernetes-dev@googlegroups.com. Honest critique is the only way we are going to get good at this as a community.
 
-<!-- BEGIN MUNGE: GENERATED_ANALYTICS -->
-[![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/devel/security-release-process.md?pixel)]()
-<!-- END MUNGE: GENERATED_ANALYTICS -->
+## Private Distributors List
+
+This list is intended to be used primarily to provide actionable information to
+multiple distribution vendors at once. This list is not intended for
+individuals to find out about security issues.
+
+### Embargo Policy
+
+The information members receive on kubernetes-distributors-announce must not be
+made public, shared, nor even hinted at anywhere beyond the need-to-know within
+your specific team except with the list's explicit approval. This holds
+true until the public disclosure date/time that was agreed upon by the list.
+Members of the list and others may not use the information for anything other
+than getting the issue fixed for your respective distribution's users.
+
+Before any information from the list is shared with respective members of your
+team required to fix said issue, they must agree to the same terms and only
+find out information on a need-to-know basis.
+
+In the unfortunate event you share the information beyond what is allowed by
+this policy, you _must_ urgently inform the kubernetes-security@googlegroups.com
+mailing list of exactly what information
+leaked and to whom. A retrospective will take place after the leak so
+we can assess how to not make the same mistake in the future.
+
+If you continue to leak information and break the policy outlined here, you
+will be removed from the list.
+
+### Contributing Back
+
+This is a team effort. As a member of the list you must carry some water. This
+could be in the form of the following:
+
+**Technical**
+
+- Review and/or test the proposed patches and point out potential issues with
+  them (such as incomplete fixes for the originally reported issues, additional
+  issues you might notice, and newly introduced bugs), and inform the list of the
+  work done even if no issues were encountered.
+
+**Administrative**
+
+- Help draft emails to the public disclosure mailing list.
+- Help with release notes.
+
+### Membership Criteria
+
+To be eligible for the kubernetes-distributors-announce mailing list, your
+distribution should:
+
+1. Be an actively maintained distribution of kubernetes components.
+2. Have a user base not limited to your own organization.
+3. Have a publicly verifiable track record up to present day of fixing security
+   issues.
+4. Not be a downstream or rebuild of another distribution.
+5. Be a participant and active contributor in the community.
+6. Accept the [Embargo Policy](#embargo-policy) that is outlined above.
+7. Be willing to [contribute back](#contributing-back) as outlined above.
+8. Have someone already on the list vouch for the person requesting membership
+   on behalf of your distribution.
+
+### Requesting to Join
+
+New membership requests are sent to kubernetes-security@googlegroups.com.
+
+In the body of your request please specify how you qualify and fulfill each
+criterion listed in [Membership Criteria](#membership-criteria).
+
+Here is a psuedo example:
+
+```
+To: kubernetes-security@googlegroups.com
+Subject: Seven-Corp Membership to kubernetes-distributors-announce
+
+Below are each criterion and why I think we, Seven-Corp, qualify.
+
+> 1. Be an actively maintained distribution of kubernetes components.
+
+We distribute the "Seven" distribution of kubernetes [link]. We have been doing
+this since 1999 before containers were even cool.
+
+> 2. Have a user base not limited to your own organization.
+
+Our user base spans of the extensive "Seven" community. We have a slack and
+GitHub repos and mailing lists where the community hangs out. [links]
+
+> 3. Have a publicly verifiable track record up to present day of fixing security
+   issues.
+
+We announce on our blog all upstream patches we apply to "Seven." [link to blog
+posts]
+
+> 4. Not be a downstream or rebuild of another distribution.
+
+This does not apply, "Seven" is a unique snowflake distribution.
+
+> 5. Be a participant and active contributor in the community.
+
+Our members, Acidburn, Cereal, and ZeroCool are outstanding members and are well
+known throughout the kubernetes community. Especially for their contributions
+in hacking the Gibson.
+
+> 6. Accept the Embargo Policy that is outlined above.
+
+We accept.
+
+> 7. Be willing to contribute back as outlined above.
+
+We are definitely willing to help!
+
+> 8. Be willing and able to handle PGP-encrypted email.
+
+Yes.
+
+> 9. Have someone already on the list vouch for the person requesting membership
+   on behalf of your distribution.
+
+CrashOverride will vouch for Acidburn joining the list on behalf of the "Seven"
+distribution.
+```
