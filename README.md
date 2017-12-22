@@ -10,7 +10,7 @@
    - [Patch Release Manager](#patch-release-manager)
    - [Kubernetes Release Management Team for Major/Minor Releases](#kubernetes-release-management-team-for-majorminor-releases)
    - [Release Team Lead](#release-team-lead)
-   - [Release Team Secondary](#release-team-secondary)
+   - [Release Team Lead Shadow](#release-team-lead-shadow)
    - [Release Branch Manager](#release-branch-manager)
    - [Docs Lead](#docs-lead)
    - [Features Lead](#features-lead)
@@ -154,9 +154,8 @@ All the roles defined below report to the Release Management Team Lead.
   and all deadlines leading up to release
 - Manages [exception](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md) process for features that want to merge after code freeze
 
-### Release Team Secondary
-The Release Team Secondary is an assistant to the Release Team Lead and works to fill gaps in Release Team staffing or effort. The Secondary should
-be familiar with the release process and remain ready to discharge the responsibilities of the Lead in the event the Lead is unavailable.
+### Release Team Lead Shadow
+The Release Team Lead Shadow is an assistant to the Release Team Lead and works to fill gaps in Release Team staffing or effort. The Shadow should be familiar with the release process and remain ready to discharge the responsibilities of the Lead in the event the Lead is unavailable.
 
 ### Release Branch Manager
 - Manages (initiates and enforces) code freeze on main branch as scheduled for the release
@@ -204,10 +203,9 @@ be familiar with the release process and remain ready to discharge the responsib
 - Tracks and finds owners to fix any issues with any (non-upgrade) tests
 
 ### Release Team Shadow
-Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future
-Release Team staffing requirements and continue to grow the Kubernetes community in general. Potential mentees should
-be prepared to devote a significant amount of time to shadowing their mentor during the release cycle. Successful Release Team Shadows
-should be prepared to assume a lead role in a subsequent release.
+One or more volunteers may apply to shadow the release process in order to help fulfill future
+Release Team staffing requirements and continue to grow the Kubernetes community in general. Potential Shadows should
+be prepared to devote a significant amount of time to shadowing their mentor during the release cycle. Successful Release Team Shadows should be prepared to assume a lead role in a subsequent release.
 
 ### Individual Contributors
 Release responsibilities of individual contributors to the Kubernetes project are captured below
