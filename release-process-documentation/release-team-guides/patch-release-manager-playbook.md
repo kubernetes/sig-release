@@ -4,8 +4,8 @@ This is a playbook intended to guide new patch release managers.
 It consists of opinions and recommendations from former patch release managers.
 
 Note that patch release managers are ultimately responsible for carrying out
-their [duties](README.md#patch-release-manager) in whatever manner they deem
-best for the project.
+their [duties](https://github.com/kubernetes/sig-release#patch-release-manager)
+in whatever manner they deem best for the project.
 The playbook is more what you call "guidelines" than actual rules.
 
 ## Getting started
@@ -27,7 +27,8 @@ The playbook is more what you call "guidelines" than actual rules.
 ## Cherrypick requests
 
 As a patch release manager, you are responsible for reviewing
-[cherrypicks](../cherry-picks.md) on your release branch.
+[cherrypicks](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md)
+on your release branch.
 
 **Finding candidate cherry picks**
 
@@ -136,14 +137,20 @@ For each cherrypick request:
     The code itself was already reviewed, assuming it's copied from `master`.
 
     * For an *automated cherrypick* (created with `hack/cherry_pick_pull.sh`),
-      you can directly apply the `approved` label as long as the parent PR was
-      approved and merged into `master`.
+      first make sure the parent PR has merged into master.
       If the parent PR hasn't merged yet, leave a comment explaining that you
       will wait for it before approving the cherrypick.
       We don't want the release branch to get out of sync if the parent PR changes.
 
-      Then comment `/lgtm` to apply the `lgtm` label and notify the author
-      you've reviewed the cherrypick request.
+      If the parent PR has merged, comment `/lgtm` to apply the `lgtm` label and
+      notify the author that you've reviewed the cherrypick request.
+
+      For cherrypicks that are clearly justified and low risk in your judgment,
+      you can directly apply the `approved` label as long as the parent PR was
+      approved and merged into `master`.
+      If you lack sufficient context or have any doubts, leave a comment
+      explaining that the PR needs to get an `/approve` from relevant OWNERS
+      to ensure that the change is appropriate for a cherrypick.
 
     * For a *manual patch or cherrypick* (not a direct copy of a PR already merged
       on `master`), leave a comment explaining that it needs to get
@@ -255,6 +262,6 @@ on your branch.
 In contrast to a normal release, you should not make any public announcements
 or push tags or release artifacts to public repositories until the PST tells you to.
 
-See the [Security Release Process](../security-release-process.md) doc for more
-details.
+See the [Security Release Process](https://github.com/kubernetes/sig-release/blob/master/security-release-process-documentation/security-release-process.md)
+doc for more details.
 
