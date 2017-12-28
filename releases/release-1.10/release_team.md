@@ -1,7 +1,6 @@
 | **Role** | **Name** (**GitHub/Slack ID**)  | **Shadow Name(s) (GitHub/Slack ID), ...** |
 | ------ | ------ | ------ |
 | Lead | | |
-| Secondary | | |
 | Features | | |
 | CI Signal | | |
 | Test Infra | | |
