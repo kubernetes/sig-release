@@ -8,6 +8,6 @@
 | Branch Manager | | |
 | Docs | Jennifer Rondeau ([@Bradamant3](https://github.com/Bradamant3)) | Jessica Yao ([@abiogenesis-now](https://github.com/abiogenesis-now)) |
 | Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | |
-| Marketing | Caitlyn O'Connell | |
+| Marketing | Natasha Woods @nwoods  | Caitlyn O'Connell |
 | Patch Release Manager | Shyam JVS ([@shyamjvs](https://github.com/shyamjvs)) | |
 | Approval Notifier | 	k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) | |
