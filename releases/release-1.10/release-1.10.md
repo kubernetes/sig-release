@@ -145,7 +145,7 @@
   </tr>
   <tr>
     <td>Blog post: what we're working on for 1.10</td>
-    <td>Marketing</td>
+    <td>Communications</td>
     <td></td>
     <td>6</td>
     <td></td>
@@ -369,7 +369,7 @@
 
 ### Feature Freeze
 
-All features going into the release must have an associated issue in the features repo by Monday, January 22nd. That issue must be in the 1.10 milestone.  SIG "themes" should also be in the release notes draft at this time to prepare for blog posts and release marketing.  Any work the SIG wants publicized needs to be called out to the Features Lead so the Release Team marketing lead can work with SIG-PM and the CNCF. 
+All features going into the release must have an associated issue in the features repo by Monday, January 22nd. That issue must be in the 1.10 milestone.  SIG "themes" should also be in the release notes draft at this time to prepare for blog posts and release marketing.  Any work the SIG wants publicized needs to be called out to the Features Lead so the Release Team communications lead can work with SIG-PM and the CNCF. 
 
 ### Code Slush
 
