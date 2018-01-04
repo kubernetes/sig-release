@@ -4,7 +4,7 @@
 | Features | Ihor Dvoretskyi ([@idvoretskyi](https://github.com/idvoretskyi)) | 	Weiwei Jiang ([@wjiangjay](https://github.com/wjiangjay)) |
 | CI Signal | | |
 | Test Infra | Cole Wagner ([@cjwagner](https://github.com/cjwagner)) | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)) |
-| Bug Triage | | |
+| Bug Triage | Josh Berkus ([@jberkus](https://github.com/jberkus))| |
 | Branch Manager | | |
 | Docs | Jennifer Rondeau ([@Bradamant3](https://github.com/Bradamant3)) | Jessica Yao ([@abiogenesis-now](https://github.com/abiogenesis-now)) |
 | Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | |
