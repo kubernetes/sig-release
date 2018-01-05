@@ -5,7 +5,7 @@
 - Kubernetes 1.3 - July 1, 2016 (+3mo14d or 15w1d)
 
 #Proposed timeline
-Kubernetes 1.3 ships June 24 ([schedule](https://github.com/kubernetes/kubernetes/wiki/Release-1.3)) (actual was July 1).  To land 2 more releases in 2016, we should aim for 1.5 in early December (late December is a holiday period), and work back.  December 9 is a decent choice (and allows slip without landing during the holidays, if absolutely necessary).
+Kubernetes 1.3 ships June 24 ([schedule](/releases/release-1.3/release-1.3.md)) (actual was July 1).  To land 2 more releases in 2016, we should aim for 1.5 in early December (late December is a holiday period), and work back.  December 9 is a decent choice (and allows slip without landing during the holidays, if absolutely necessary).
 
 A proposal so far has been to not immediately enter 1.4 after 1.3, and to actually build in a week for focusing on flakes and testing across our dev community.
 
