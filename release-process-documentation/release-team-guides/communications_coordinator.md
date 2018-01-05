@@ -2,7 +2,9 @@
 
 ## Overview:
 
-The Communications Coordinator role is responsible for facilitating, empowering, and curating communication between the release team and various stakeholders including the Cloud Native Computing Foundation (CNCF), the media, contributing vendors, and Kubernetes project managers. Additionally, there are specific deliverables that must come from the release process in the form of a release blog, event speaking opportunities, webinars, coordination of 5 Day blog series with the CNCF, and approved messaging for media. In the event that the release schedule slips, the Marketing Lead will ensure press timing is synchronized and kept advised of the revised timing.  
+The Communications Coordinator role is responsible for facilitating, empowering, and curating communication between the release team and various stakeholders including the Cloud Native Computing Foundation (CNCF), the media, contributing vendors, and Kubernetes project managers. 
+
+Additionally, there are specific deliverables that must come from the release process in the form of a release blog, event speaking opportunities, webinars, coordination of 5 Day blog series with the CNCF, and approved messaging for media. In the event that the release schedule slips, the Marketing Lead will ensure press timing is synchronized and kept advised of the revised timing.  
 
 ## Skills and Experience Required:
 
