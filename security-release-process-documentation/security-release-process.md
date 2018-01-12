@@ -16,11 +16,44 @@ The initial Product Security Team will consist of four volunteers subscribed to 
 - Tim Allclair (**[@tallclair](https://github.com/tallclair)**) `<tallclair@google.com>` [4096R/0x5E6F2E2DA760AF51]
 - Jordan Liggitt (**[@liggitt](https://github.com/liggitt)**) `<jliggitt@redhat.com>` [4096R/0x39928704103C7229]
 
-**Known issues**
+### Product Security Team Membership
 
-- We haven't specified a way to cycle the Product Security Team; but we need this process deployed quickly as our current process isn't working. I (@philips) will put a deadline of March 1st 2017 to sort that.
+Membership to the product security team is based on filling a specific role.
+These are defined below to make sure everyone "carries water".
 
-## Release Manager Role
+#### Roles
+
+##### Release/Project Manager
+
+Per issue, sees it through to the end. The sheep herder.
+A rotating role so we can make sure everyone helps and no one is stuck constantly with the sheep herding.
+
+##### Triage
+
+Makes sure the people who should be in "the know" (aka notified) are notified, also responds to issues that are not actually issues and lets the OP know that.
+This person is the escalation path for a bug if it is one.
+Right now it seems like it's a kinda first come, first served, in that who ever responds first basically does this or escalates to someone who can.
+
+##### Infra
+
+Making sure we can test the fixes appropriately. This person is the build cop.
+Who do you call when the cluster is not well or you gotta test something weird, or the release branch is all messed up? This person.
+
+##### Disclosure
+
+Handles public messaging around the bug. Documentation on how to upgrade. Changelog. Explaining to public the severity. Notifications of bugs sent to mailing lists etc. Requests CVEs.
+
+#### Per-Issue Assignment Options:
+
+##### Scheduled Rotation
+
+Each week has a primary & secondary for each role. If something comes up that week, primary owns it. Secondary is there if we can't get a hold of the primary, or if primary has a really good reason why they can’t handle it.
+
+##### Queue
+
+Each role has an ordered list of “who’s handling the next issue.” If something comes up, top of the list takes it. If we can’t contact them, or they have a good reason not to, we go down the list. We’d probably need some coordination of vacation schedules to make sure we don’t leave a role unstaffed.
+
+#### Release Manager Role
 
 Also included on the private [Kubernetes Security](https://groups.google.com/forum/#!forum/kubernetes-security) list are all [Release Managers](/release-managers.md).
 
