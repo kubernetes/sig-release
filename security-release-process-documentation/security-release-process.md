@@ -76,7 +76,7 @@ With the Fix Development underway the Fix Lead needs to come up with an overall 
 
 **Disclosure of Forthcoming Fix to Users** (Completed within 1-7 days of Disclosure)
 
-- The Fix Lead will email [kubernetes-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-announce) and [kubernetes-security-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-security-announce) informing users that a security vulnerability has been disclosed and that a fix will be made available at YYYY-MM-DD HH:MM UTC in the future via this list. This time is the Release Date.
+- The Fix Lead will email [kubernetes-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-announce) and [kubernetes-security-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-security-announce) informing users that a security vulnerability has been disclosed and that a fix will be made available at YYYY-MM-DD HH:MM UTC in the future via this list. This time is the Release Date. This will be the action of any release that causes a new release of [github.com/kubernetes/kubernetes/releases](https://github.com/kubernetes/kubernetes/releases). Any other releases should use [kubernetes-users@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-users).
 - The Fix Lead will include any mitigating steps users can take until a fix is available.
 
 The communication to users should be actionable. They should know when to block time to apply patches, understand exact mitigation steps, etc.
