@@ -4,7 +4,7 @@
 * [Zoom](http://bit.ly/k8s110-zoom)
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
 * [Forum](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-* Feature Tracking Sheet
+* [Feature Tracking Sheet](https://docs.google.com/spreadsheets/d/17bZrKTk8dOx5nomLrD1-93uBfajK5JS-v1o-nCLJmzE/edit?usp=sharing)
 * [Milestone Process](https://github.com/kubernetes/community/blob/master/contributors/devel/release/issues.md)
 * [Burndown / Meeting Minutes](http://bit.ly/k8s110-burndown)
 * [Retrospective Document](http://bit.ly/kube110retro)

@@ -22,6 +22,7 @@ Currently, here's what I'm doing as the CI Signal role for release 1.y:
 
 I check [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) daily.
 
+- quirk: if a job is listed as FAILING but doesn't have "Overall" as one of its ongoing failures, it's not actually failing
 - if a job is failing in one of the meta-stages (Up, Down, DumpClusterLogs, etc), I find the owning sig
 - if a job is failing because a specific test case is failing, and that test case has a [sig-foo] in its name, I go bug sig-foo
 - with unit test case failures, I try to infer the sig from the path, or OWNERS files in it, otherwise I find the owning sig to help
@@ -76,13 +77,9 @@ Examples:
 
 ### Reporting Status
 
-TBD
-
 I'm not sure I want to act as a human dashboard generator on an ongoing basis, so I'd like to find a better way to do this.
 
 I have been updating the sig-release issue for the latest release each time I scrub through dashboards, eg: [1.9.0-alpha.2 issue](https://github.com/kubernetes/sig-release/issues/22#issuecomment-340970138)
-
-I plan on experimenting with scripting or improvements to test-infra if/when I have time, and hope that consistent github labeling hygiene will help out.
 
 ## Code Slush
 
@@ -98,6 +95,6 @@ I expect more responsiveness from SIG's at this point. In addition to filing git
 
 ## Exit Code Freeze
 
-TBD
-- I stop looking at release-master-blocking
-- I look solely at release-1.y-blocking and release-master-upgrade
+I stop looking at release-master-blocking
+
+I look solely at release-1.y-blocking and release-master-upgrade
