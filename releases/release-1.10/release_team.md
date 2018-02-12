@@ -9,5 +9,5 @@
 | Docs | Jennifer Rondeau ([@Bradamant3](https://github.com/Bradamant3)) | Jessica Yao ([@abiogenesis-now](https://github.com/abiogenesis-now)) |
 | Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | Noah Abrahams ([@qedrakmar](https://github.com/qedrakmar)) |
 | Communications | Natasha Woods (@nwoods)  | Caitlyn O'Connell |
-| Patch Release Manager | Shyam JVS ([@shyamjvs](https://github.com/shyamjvs)) | |
+| Patch Release Manager | Maciek Pytel ([@MaciekPytel](https://github.com/MaciekPytel)) | |
 | Approval Notifier | 	k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) | |
