@@ -154,7 +154,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
   </tr>
   <tr>
     <td>8</td>
-    <td><p>- Code slush begins.  SIGs will need to ensure all work moving forward is carefully curated with labels, especially approved-for-milestone that acts as an acceptance by the SIG of the work being targeted for the release
+    <td><p>- Code slush begins.  SIGs will need to ensure all work moving forward is carefully curated with labels, especially `status/approved-for-milestone` that acts as an acceptance by the SIG of the work being targeted for the release
 <p>- The code exception process is now in effect, meaning you will likely have to assemble decision makers on specific pending PRs to assess whether the risk of inclusion is acceptable or not. Remember this is not you making a decision, it’s you helping SIGs follow the process, and ensuring there’s consensus. In the event of a contentious PR, you should err on the side of risk aversion. In extreme cases, you can defer to the steering committee, but that is extremely unlikely.
 <p>- Focus after this point will be on ensuring the release branch is healthy, stable, and passing tests consistently.  
 <p>- Check in on the blog post draft
