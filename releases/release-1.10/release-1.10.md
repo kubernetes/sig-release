@@ -278,9 +278,9 @@
     <td>Bot, Lead</td>
     <td></td>
     <td></td>
-    <td>14</td>
+    <td>19</td>
     <td></td>
-    <td></td>
+    <td>week 12</td>
     <td></td>
   </tr>
   <tr>
@@ -288,17 +288,27 @@
     <td>Branch Manager</td>
     <td></td>
     <td></td>
-    <td>14</td>
+    <td>19</td>
     <td></td>
     <td></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>1.10.0-rc.1 release</td>
+    <td>Branch Manager</td>
+    <td></td>
+    <td></td>
+    <td>19</td>
+    <td></td>
+    <td></td>
+    <td>1.10-blocking, master-blocking, master-upgrade</td>
   </tr>
   <tr>
     <td>Master branch re-opens for 1.11</td>
     <td>Bot, Branch Manager</td>
     <td></td>
     <td></td>
-    <td>14</td>
+    <td>19</td>
     <td></td>
     <td></td>
     <td></td>
@@ -308,7 +318,7 @@
     <td>Branch Manager</td>
     <td></td>
     <td></td>
-    <td>14</td>
+    <td>19</td>
     <td></td>
     <td></td>
     <td></td>
@@ -318,7 +328,7 @@
     <td>Lead</td>
     <td></td>
     <td></td>
-    <td>15</td>
+    <td>20</td>
     <td></td>
     <td></td>
     <td></td>
@@ -328,9 +338,9 @@
     <td>Branch Manager</td>
     <td></td>
     <td></td>
-    <td>21</td>
+    <td>26</td>
     <td></td>
-    <td>week 12</td>
+    <td>week 13</td>
     <td>1.10-blocking</td>
   </tr>
   <tr>
@@ -338,7 +348,7 @@
     <td>Branch Manager</td>
     <td></td>
     <td></td>
-    <td>22</td>
+    <td>27</td>
     <td></td>
     <td></td>
     <td></td>
@@ -350,7 +360,7 @@
     <td></td>
     <td>29</td>
     <td></td>
-    <td>week 13</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
