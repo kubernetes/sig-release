@@ -785,10 +785,6 @@ parameters:
 
 * GCE: support Cloud TPU API in cloud provider ([#58029](https://github.com/kubernetes/kubernetes/pull/58029), [@yguo0905](https://github.com/yguo0905))
 
-* Upgrade the default etcd server version to 3.2.16 ([#59836](https://github.com/kubernetes/kubernetes/pull/59836), [@jpbetz](https://github.com/jpbetz))
-
-* Downgrade default etcd server version to 3.1.11 due to [#60589]([https://github.com/kubernetes/kubernetes/pull/60589](https://github.com/kubernetes/kubernetes/pull/60589)) ([#60891]([https://github.com/kubernetes/kubernetes/pull/60891](https://github.com/kubernetes/kubernetes/pull/60891)), [@shyamjvs](https://github.com/shyamjvs))
-
 * kubelet now notifies systemd that it has finished starting, if systemd is available and running. ([#60654](https://github.com/kubernetes/kubernetes/pull/60654), [@dcbw](https://github.com/dcbw))
 
 * Do not count failed pods as unready in HPA controller ([#60648](https://github.com/kubernetes/kubernetes/pull/60648), [@bskiba](https://github.com/bskiba))
