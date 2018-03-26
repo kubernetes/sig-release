@@ -52,6 +52,8 @@ In terms of networking, Kubernetes 1.10 is about control. Users now have beta su
 
 * In-place node upgrades to this release from versions 1.7.14, 1.8.9, and 1.9.4 are not supported if using subpath volumes with PVCs.  Such pods should be drained from the node first.
 
+* The minimum supported version of Docker is now 1.11; if you are using Docker 1.10 or below, be sure to upgrade Docker before upgrading Kubernetes. ([#57845](https://github.com/kubernetes/kubernetes/pull/57845), [@yujuhong](https://github.com/yujuhong))
+
 * The Container Runtime Interface (CRI) version has increased from v1alpha1 to v1alpha2. Runtimes implementing the CRI will need to update to the new version, which configures container namespaces using an enumeration rather than booleans. This change to the alpha API is not backwards compatible; implementations of the CRI such as containerd, will need to update to the new API version. ([#58973](https://github.com/kubernetes/kubernetes/pull/58973), [@verb](https://github.com/verb))
 
 * The default Flexvolume plugin directory for COS images on GCE has changed to `/home/kubernetes/flexvolume`, rather than `/etc/srv/kubernetes/kubelet-plugins/volume/exec`. Existing Flexvolume installations in clusters using COS images must be moved to the new directory, and installation processes must be updated with the new path.. ([#58171](https://github.com/kubernetes/kubernetes/pull/58171), [@verult](https://github.com/verult))
