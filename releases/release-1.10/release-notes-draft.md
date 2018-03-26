@@ -416,6 +416,12 @@ And point to the file using the --config flag, as in
 
 ### Node
 
+* Summary of Container Runtime changes:
+  * [beta] [cri-tools](https://github.com/kubernetes-incubator/cri-tools): CLI and validation tools for CRI is now v1.0.0-beta.0. This release mainly focused on UX improvements. [@feiskyer]
+  * [stable] [containerd](https://github.com/containerd/containerd): containerd v1.1 natively supports CRI v1alpha2 now, so users can use Kubernetes v1.10 with containerd v1.1 directly, without having to use the intermediate cri-containerd daemon. [All Kubernetes 1.10 tests passed](https://k8s-testgrid.appspot.com/sig-node-containerd). [@Random-Liu]
+  * [stable] [cri-o](https://github.com/kubernetes-incubator/cri-o): cri-o v1.10 updated CRI version to v1alpha2 and made several bug and stability fixes. [@mrunalp]
+  * [stable] [frakti](https://github.com/kubernetes/frakti): frakti v1.10 implemented GCE Persistent Disk as a high performance volume, fixed several bugs, added ARM64 support, and passed all CRI validation conformance tests and node e2e conformance tests. [@resouer]
+
 * Fixed race conditions around devicemanager Allocate() and endpoint deletion. ([#60856](https://github.com/kubernetes/kubernetes/pull/60856), [@jiayingz](https://github.com/jiayingz))
 
 * kubelet initial flag parse now normalizes flags instead of exiting.  ([#61053](https://github.com/kubernetes/kubernetes/pull/61053), [@andrewsykim](https://github.com/andrewsykim))
