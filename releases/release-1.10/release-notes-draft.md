@@ -827,7 +827,7 @@ parameters:
 
 * Fix kubelet PVC stale metrics ([#59170](https://github.com/kubernetes/kubernetes/pull/59170), [@cofyc](https://github.com/cofyc))
 
-* - Separate current ARM rate limiter into read/write ([#59830](https://github.com/kubernetes/kubernetes/pull/59830), [@khenidak](https://github.com/khenidak))
+* Separate current ARM rate limiter into read/write ([#59830](https://github.com/kubernetes/kubernetes/pull/59830), [@khenidak](https://github.com/khenidak))
 
 * Improve control over how ARM rate limiter is used within Azure cloud provider, add generic cache for Azure VM/LB/NSG/RouteTable ([#59520](https://github.com/kubernetes/kubernetes/pull/59520), [@feiskyer](https://github.com/feiskyer))
 
