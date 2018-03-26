@@ -133,6 +133,8 @@ kind: KubeProxyConfiguration
 
 This section is still in flux.  Please make sure all issues are documented in the known Issue accumulator: [https://github.com/kubernetes/kubernetes/issues/59764](https://github.com/kubernetes/kubernetes/issues/59764)
 
+* DaemonSet scheduling associated with the alpha ScheduleDaemonSetPods feature flag has been removed from the 1.10 release. See https://github.com/kubernetes/features/issues/548 for feature status. ([#61411](https://github.com/kubernetes/kubernetes/pull/61411), [@liggitt](https://github.com/liggitt))
+
 # Deprecations
 
 * etcd2 as a backend is deprecated and support will be removed in Kubernetes 1.13.
@@ -974,22 +976,5 @@ parameters:
 * Add support for cloud-controller-manager in local-up-cluster.sh ([#57757](https://github.com/kubernetes/kubernetes/pull/57757), [@dims](https://github.com/dims)
 
 * GCE: A role and clusterrole will now be provided with GCE/GKE for allowing the cloud-provider to post warning events on all services and watching configmaps in the kube-system namespace. No user action is required. ([#59686](https://github.com/kubernetes/kubernetes/pull/59686), [@nicksardo](https://github.com/nicksardo))
+
 * Wait for kubedns to be ready when collecting the cluster IP. ([#57337](https://github.com/kubernetes/kubernetes/pull/57337), [@wwwtyro](https://github.com/wwwtyro))
-
-=========================================================================
-
-**Possibly missing Cherry-Picks/Watch List:**
-
-PLEASE DO NOT EDIT THE BELOW LIST.  It is being pulled from Slack and other ephemeral communication sources.
-
-* 61418 (rel note needed?)
-
-* 61411/61412
-
-    * DaemonSet scheduling associated with the alpha ScheduleDaemonSetPods feature flag has been removed from the 1.10 release. See https://github.com/kubernetes/features/issues/548 for feature status. ([#61411](https://github.com/kubernetes/kubernetes/pull/61411), [@liggitt](https://github.com/liggitt))
-
-* 60597 (golang v1.10, on hold?)
-
-* 60933
-
-    * Known issues?  Part of the scaling issues.
