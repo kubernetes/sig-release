@@ -18,7 +18,7 @@
 * The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) failures to SIGs throughout the cycle, not just near release cuts.
 * Key deliverables (e.g. initial release cuts) tend to be scheduled on Tuesdays to maintain context while ramping up and then responding to any problems.  The final release will be on a Wednesday in keeping with prior practice.
 * The release length is nearly 12 weeks
-* Code name "Kiwi" for no good reason
+* Code name "*Left Shark*" because it's been my favorite meme of the release cycle (Thanks [Cristoph](https://github.com/cblecker))
 
 ## Timeline
 
