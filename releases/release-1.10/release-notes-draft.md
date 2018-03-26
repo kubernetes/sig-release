@@ -773,27 +773,6 @@ parameters:
 
 * [fluentd-gcp addon] Switch to the image provided by Stackdriver. The Stackdriver Logging Agent container image uses fluentd v0.14.25. ([#59128](https://github.com/kubernetes/kubernetes/pull/59128), [@bmoyles0117](https://github.com/bmoyles0117))
 
-# Upgraded Requirements
-
-* Updates Calico version to v2.6.7 (Fixed a bug where Felix would crash when parsing a NetworkPolicy with a named port. See https://github.com/projectcalico/calico/releases/tag/v2.6.7) ([#59130](https://github.com/kubernetes/kubernetes/pull/59130), [@caseydavenport](https://github.com/caseydavenport))
-* Upgrade default etcd server version to 3.2.14 ([#58645](https://github.com/kubernetes/kubernetes/pull/58645), [@jpbetz](https://github.com/jpbetz))
-
-* Build using go1.9.3. ([#59012](https://github.com/kubernetes/kubernetes/pull/59012), [@ixdy](https://github.com/ixdy))
-
-* update etcd unified version to 3.1.10 ([#54242](https://github.com/kubernetes/kubernetes/pull/54242), [@zouyee](https://github.com/zouyee))
-
-* updates fluentd in fluentd-es-image to fluentd 1.1.0 ([#58525](https://github.com/kubernetes/kubernetes/pull/58525), [@monotek](https://github.com/monotek))
-
-* fluentd-gcp updated to version 2.0.14. ([#58224](https://github.com/kubernetes/kubernetes/pull/58224), [@zombiezen](https://github.com/zombiezen))
-
-* Update kube-dns to Version 1.14.8 that includes only small changes to how Prometheus metrics are collected. ([#57918](https://github.com/kubernetes/kubernetes/pull/57918), [@rramkumar1](https://github.com/rramkumar1))
-
-* Upgrade to etcd client 3.2.11 and grpc 1.7.5 to improve HA etcd cluster stability. ([#57160](https://github.com/kubernetes/kubernetes/pull/57160), [@jpbetz](https://github.com/jpbetz)
-
-* GCE: bump COS image version to cos-stable-63-10032-71-0 ([#57204](https://github.com/kubernetes/kubernetes/pull/57204), [@yujuhong](https://github.com/yujuhong))
-
-* fluentd-gcp updated to version 2.0.11. ([#56927](https://github.com/kubernetes/kubernetes/pull/56927), [@x13n](https://github.com/x13n))
-
 # Non-user-facing Changes
 
 * CRI now uses moutpoint as image filesystem identifier instead of UUID. ([#59475](https://github.com/kubernetes/kubernetes/pull/59475), [@Random-Liu](https://github.com/Random-Liu))
@@ -984,3 +963,22 @@ parameters:
 * GCE: A role and clusterrole will now be provided with GCE/GKE for allowing the cloud-provider to post warning events on all services and watching configmaps in the kube-system namespace. No user action is required. ([#59686](https://github.com/kubernetes/kubernetes/pull/59686), [@nicksardo](https://github.com/nicksardo))
 
 * Wait for kubedns to be ready when collecting the cluster IP. ([#57337](https://github.com/kubernetes/kubernetes/pull/57337), [@wwwtyro](https://github.com/wwwtyro))
+
+# External Dependencies
+The supported etcd server version is 3.1.12, as compared to 3.0.170 in v1.9 ([ref](https://github.com/kubernetes/kubernetes/blob/master/build/root/WORKSPACE#L22))
+The validated docker versions are the same as for v1.9: 1.11.2 to 1.13.1 and 17.03.x ([ref](https://github.com/kubernetes/kubernetes/blob/master/test/e2e_node/system/docker_validator_test.go))
+The Go version was the same as for v1.9: go1.9.2 ([ref](https://github.com/kubernetes/kubernetes/blob/master/build/root/WORKSPACE#L49))
+The minimum supported go is the same as for v1.9: go1.9.1. (#55301, @xiangpengzhao)
+CNI is the same as v1.9: v0.6.0 (#51250, @dixudx)
+CSI is updated to 0.2.0 as compared to 0.1.0 in v1.9. ([ref](https://github.com/kubernetes/kubernetes/blob/master/Godeps/Godeps.json#L456))
+The dashboard add-on has been updated to v1.8.3, as compared to 1.8.0 in v1.9. ([#517326](https://github.com/kubernetes/kubernetes/pull/57326))
+Heapster has is the same as v1.9: v1.5.0. It will be upgraded in v1.11. ([ref](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/cluster-monitoring/google/heapster-controller.yaml))
+Cluster Autoscaler has been updated to v1.2.0. ([#60842](https://github.com/kubernetes/kubernetes/pull/60842), [@mwielgus](https://github.com/mwielgus))
+* Updates kube-dns to v1.14.8 ([#57918](https://github.com/kubernetes/kubernetes/pull/57918), [@rramkumar1](https://github.com/rramkumar1))
+Influxdb is unchanged from v1.9: v1.3.3 ([ref](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/cluster-monitoring/influxdb/influxdb-grafana-controller.yaml))
+Grafana is unchanged from v1.9: v4.4.3 ([ref](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/cluster-monitoring/influxdb/influxdb-grafana-controller.yaml))
+Calico has been updated to v2.6.7 ([#59130](https://github.com/kubernetes/kubernetes/pull/59130), [@caseydavenport](https://github.com/caseydavenport))
+* Updated fluentd in fluentd-es-image to fluentd v1.1.0 ([#58525](https://github.com/kubernetes/kubernetes/pull/58525), [@monotek](https://github.com/monotek))
+* Updated fluentd-gcp to v2.0.14. ([#58224](https://github.com/kubernetes/kubernetes/pull/58224), [@zombiezen](https://github.com/zombiezen))
+* Updated COS image version to cos-stable-63-10032-71-0 ([#57204](https://github.com/kubernetes/kubernetes/pull/57204), [@yujuhong](https://github.com/yujuhong))
+* Updated fluentd-gcp updated to v2.0.11. ([#56927](https://github.com/kubernetes/kubernetes/pull/56927), [@x13n](https://github.com/x13n))
