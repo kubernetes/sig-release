@@ -103,7 +103,7 @@ kind: KubeProxyConfiguration
 
 * kubectl port-forward no longer supports the deprecated -p <pod-name> flag; the flag itself is unnecessary and should be replaced by just the <pod-name>. ([#59705](https://github.com/kubernetes/kubernetes/pull/59705), [@phsiao](https://github.com/phsiao))
 
-* Remove deprecated --require-kubeconfig flag, remove default --kubeconfig value (([#58367](https://github.com/kubernetes/kubernetes/pull/58367), [@zhangxiaoyu-zidif](https://github.com/zhangxiaoyu-zidif)
+* Removed deprecated --require-kubeconfig flag, removed default --kubeconfig value (([#58367](https://github.com/kubernetes/kubernetes/pull/58367), [@zhangxiaoyu-zidif](https://github.com/zhangxiaoyu-zidif)
 
 * The public-address-override, address, and port flags have been removed and replaced by bind-address, insecure-bind-address, and insecure-port, respectively. They are marked as deprecated in [#36604](https://github.com/kubernetes/kubernetes/pull/36604), which is more than a year ago.  ([#59018](https://github.com/kubernetes/kubernetes/pull/59018), [@hzxuzhonghu](https://github.com/hzxuzhonghu)
 
@@ -139,7 +139,7 @@ This section is still in flux.  Please make sure all issues are documented in th
 
 * Use of subPath module with hostPath volumes can cause issues during reconstruction ([#61446](https://github.com/kubernetes/kubernetes/issues/61446)) and with containerized kubelets ([#61456](https://github.com/kubernetes/kubernetes/issues/61456)). The workaround for this issue is to specify the complete path in the hostPath volume.
 
-* DaemonSet scheduling associated with the alpha ScheduleDaemonSetPods feature flag has been removed from the 1.10 release. See https://github.com/kubernetes/features/issues/548 for feature status. ([#61411](https://github.com/kubernetes/kubernetes/pull/61411), [@liggitt](https://github.com/liggitt))
+* Kubeadm is currently omitting etcd certificates in a self-hosted deployment; this will be fixed in a point relelase. ([#61322](https://github.com/kubernetes/kubernetes/issues/61322))
 
 # Deprecations
 
