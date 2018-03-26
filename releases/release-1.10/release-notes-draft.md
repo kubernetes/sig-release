@@ -12,7 +12,7 @@ The Resource Management Working Group graduated three features to beta in the 1.
 
 This release brings additional power to both local storage and Persistent Volumes. [Mount namespace propagation](https://github.com/kubernetes/features/issues/432) allows a container to mount a volume as rslave so that host mounts can be seen inside the container, or as rshared so that mounts made inside a container can be seen by the host. [Local Ephemeral Storage Capacity Isolation](https://github.com/kubernetes/features/issues/361) makes it possible to set requests and limits on ephemeral local storage resources. In addition, you can now create [Local Persistent Storage](https://github.com/kubernetes/features/issues/121), which enables PersistentVolumes to be created with locally attached disks, and not just network volumes.
 
-On the Persistent Volumes side, this release [Prevents deletion of Persistent Volume Claims that are used by a pod](https://github.com/kubernetes/features/issues/498) and [Persistent Volumes that are bound to a Persistent Volume Claim](https://github.com/kubernetes/features/issues/499), making it impossible to delete storage that is in use by a pod. It also includes alpha support for [online resizing of PVs](https://github.com/kubernetes/features/issues/531) without disrupting existing data.
+On the Persistent Volumes side, this release [Prevents deletion of Persistent Volume Claims that are used by a pod](https://github.com/kubernetes/features/issues/498) and [Persistent Volumes that are bound to a Persistent Volume Claim](https://github.com/kubernetes/features/issues/499), making it impossible to delete storage that is in use by a pod. 
 
 This release also includes [Topology Aware Volume Scheduling](https://github.com/kubernetes/features/issues/490) for local persistent volumes, the stable release of [Detailed storage metrics of internal state](https://github.com/kubernetes/features/issues/496), and beta support for [Out-of-tree CSI Volume Plugins](https://github.com/kubernetes/features/issues/178).
 
@@ -138,6 +138,8 @@ kind: KubeProxyConfiguration
 * Use of subPath module with hostPath volumes can cause issues during reconstruction ([#61446](https://github.com/kubernetes/kubernetes/issues/61446)) and with containerized kubelets ([#61456](https://github.com/kubernetes/kubernetes/issues/61456)). The workaround for this issue is to specify the complete path in the hostPath volume. Use of subPathmounts nested within atomic writer volumes (configmap, secret, downwardAPI, projected) does not work ([#61545](https://github.com/kubernetes/kubernetes/issues/61545)), and socket files cannot be loaded from a subPath ([#62377](https://github.com/kubernetes/kubernetes/issues/61377)). Work on these issues is ongoing.
 
 * Kubeadm is currently omitting etcd certificates in a self-hosted deployment; this will be fixed in a point relelase. ([#61322](https://github.com/kubernetes/kubernetes/issues/61322))
+
+* Some users, especially those with very large clusters, may see higher memory usage by the kube-controller-manager in 1.10. ([#61041](https://github.com/kubernetes/kubernetes/issues/61041))
 
 # Deprecations
 
