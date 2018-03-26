@@ -761,7 +761,7 @@ parameters:
 
 * Updated dashboard version to v1.8.3, which keeps auto-generated certs in memory. ([#57326](https://github.com/kubernetes/kubernetes/pull/57326), [@floreks](https://github.com/floreks))
 
-* [fluentd-gcp addon] Fixed bug with reporting metrics in event-exporter. ([#60126](https://github.com/kubernetes/kubernetes/pull/60126), [@serathius](https://github.com/serathius))
+* fluentd-gcp addon: Fixed bug with reporting metrics in event-exporter. ([#60126](https://github.com/kubernetes/kubernetes/pull/60126), [@serathius](https://github.com/serathius))
 
 * Avoid hook errors when effecting label changes on kubernetes-worker charm. ([#59803](https://github.com/kubernetes/kubernetes/pull/59803), [@wwwtyro](https://github.com/wwwtyro))
 
