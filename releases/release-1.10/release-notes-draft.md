@@ -64,16 +64,20 @@ In terms of networking, Kubernetes 1.10 is about control. Users now have beta su
 
 KubeProxyConfiguration Before:
 
+```
 apiVersion: kubeproxy.config.k8s.io/v1alpha1
 kind: KubeProxyConfiguration
 **featureGates: "SupportIPVSProxyMode=true"**
+```
 
 KubeProxyConfiguration After:
 
+```
 apiVersion: kubeproxy.config.k8s.io/v1alpha1
 kind: KubeProxyConfiguration
 **featureGates:**
 **  SupportIPVSProxyMode: true**
+```
 
 ([#57962](https://github.com/kubernetes/kubernetes/pull/57962), [@xiangpengzhao](https://github.com/xiangpengzhao)
 
@@ -132,6 +136,8 @@ kind: KubeProxyConfiguration
 # Known Issues
 
 This section is still in flux.  Please make sure all issues are documented in the known Issue accumulator: [https://github.com/kubernetes/kubernetes/issues/59764](https://github.com/kubernetes/kubernetes/issues/59764)
+
+* Use of subPath module with hostPath volumes can cause issues during reconstruction ([#61446](https://github.com/kubernetes/kubernetes/issues/61446)) and with containerized kubelets ([#61456](https://github.com/kubernetes/kubernetes/issues/61456)). The workaround for this issue is to specify the complete path in the hostPath volume.
 
 * DaemonSet scheduling associated with the alpha ScheduleDaemonSetPods feature flag has been removed from the 1.10 release. See https://github.com/kubernetes/features/issues/548 for feature status. ([#61411](https://github.com/kubernetes/kubernetes/pull/61411), [@liggitt](https://github.com/liggitt))
 
