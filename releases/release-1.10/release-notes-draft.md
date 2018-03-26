@@ -115,6 +115,8 @@ kind: KubeProxyConfiguration
 
 * The deprecated –mode switch for GCE has been removed.([#61203](https://github.com/kubernetes/kubernetes/pull/61203))
 
+* The word “manifest” has been expunged from the Kubelet API. ([#60314](https://github.com/kubernetes/kubernetes/pull/60314))
+
 * [https://github.com/kubernetes/kubernetes/issues/49213](https://github.com/kubernetes/kubernetes/issues/49213) sig-cluster-lifecycle has decided to phase out the cluster/ directory over the next couple of releases in favor of deployment automations maintained outside of the core repo and outside of kubernetes orgs. [@kubernetes/sig-cluster-lifecycle-misc](https://github.com/orgs/kubernetes/teams/sig-cluster-lifecycle-misc))
 
     * Remove deprecated ContainerVM support from GCE kube-up.  ([#58247](https://github.com/kubernetes/kubernetes/pull/58247), [@mikedanese](https://github.com/mikedanese))
@@ -581,7 +583,7 @@ And point to the file using the --config flag, as in
 
 * Get windows kernel version directly from registry rather than windows.getVersion(). ([#58498](https://github.com/kubernetes/kubernetes/pull/58498), [@feiskyer](https://github.com/feiskyer))
 
-* Fixed controller manager crash when using mixed-case names in a vSphere cloud provider environment. ([#57286](https://github.com/kubernetes/kubernetes/pull/57286), [@rohitjogvmw](https://github.com/rohitjogvmw))
+* Fixed controller manager crash when using mixed case names in a vSphere cloud provider environment. ([#57286](https://github.com/kubernetes/kubernetes/pull/57286), [@rohitjogvmw](https://github.com/rohitjogvmw))
 
 * Flexvolume is now [enabled on Windows nodes](https://github.com/andyzhangx/Demo/tree/master/windows/flexvolume). ([#56921](https://github.com/kubernetes/kubernetes/pull/56921), [@andyzhangx](https://github.com/andyzhangx))
 
@@ -871,8 +873,6 @@ parameters:
 
 * Compare correct file names for volume detach operation ([#57053](https://github.com/kubernetes/kubernetes/pull/57053), [@prashima](https://github.com/prashima))
 
-* COS: Keep the docker network checkpoint ([#54805](https://github.com/kubernetes/kubernetes/pull/54805), [@yujuhong](https://github.com/yujuhong))
-
 * Fixed documentation typo in IPVS README. ([#56578](https://github.com/kubernetes/kubernetes/pull/56578), [@shift](https://github.com/shift))
 
 * The ConfigOK node condition has been renamed to KubeletConfigOk. ([#59905](https://github.com/kubernetes/kubernetes/pull/59905), [@mtaufen](https://github.com/mtaufen))
@@ -905,7 +905,7 @@ parameters:
 
 * Fixed a bug which caused the apiserver reboot failure in the presence of malfunctioning webhooks. ([#59073](https://github.com/kubernetes/kubernetes/pull/59073), [@caesarxuchao](https://github.com/caesarxuchao))
 
-* [GCE] Apiserver uses `InternalIP` as the most preferred kubelet address type by default. ([#59019](https://github.com/kubernetes/kubernetes/pull/59019), [@MrHohn](https://github.com/MrHohn))
+* GCE: Apiserver uses `InternalIP` as the most preferred kubelet address type by default. ([#59019](https://github.com/kubernetes/kubernetes/pull/59019), [@MrHohn](https://github.com/MrHohn))
 
 * CRI: Add a call to reopen log file for a container.  ([#58899](https://github.com/kubernetes/kubernetes/pull/58899), [@yujuhong](https://github.com/yujuhong))
 
@@ -969,7 +969,7 @@ parameters:
 * Wait for kubedns to be ready when collecting the cluster IP. ([#57337](https://github.com/kubernetes/kubernetes/pull/57337), [@wwwtyro](https://github.com/wwwtyro))
 
 # External Dependencies
-* The supported etcd server version is 3.1.12, as compared to 3.0.170 in v1.9 ([#60988](https://github.com/kubernetes/kubernetes/pull/60988))
+* The supported etcd server version is 3.1.12, as compared to 3.0.17 in v1.9 ([#60988](https://github.com/kubernetes/kubernetes/pull/60988))
 * The validated docker versions are the same as for v1.9: 1.11.2 to 1.13.1 and 17.03.x ([ref](https://github.com/kubernetes/kubernetes/blob/master/test/e2e_node/system/docker_validator_test.go))
 * The Go version is go1.9.3, as compared to go1.9.2 in v1.9. ([#59012](https://github.com/kubernetes/kubernetes/pull/59012))
 * The minimum supported go is the same as for v1.9: go1.9.1. ([#55301](https://github.com/kubernetes/kubernetes/pull/55301))
@@ -988,6 +988,5 @@ parameters:
 * Updated fluentd-gcp to v3.0.0. ([#60722](https://github.com/kubernetes/kubernetes/pull/60722))
 * Ingress glbc is v1.0.0 ([#61302](https://github.com/kubernetes/kubernetes/pull/61302)) 
 * OIDC authentication is coreos/go-oidc v2 ([#58544](https://github.com/kubernetes/kubernetes/pull/58544)) 
-* Updated COS image version to cos-stable-63-10032-71-0 ([#57204](https://github.com/kubernetes/kubernetes/pull/57204), [@yujuhong](https://github.com/yujuhong))
 * Updated fluentd-gcp updated to v2.0.11. ([#56927](https://github.com/kubernetes/kubernetes/pull/56927), [@x13n](https://github.com/x13n))
 * Calico has been updated to v2.6.7 ([#59130](https://github.com/kubernetes/kubernetes/pull/59130), [@caseydavenport](https://github.com/caseydavenport))
