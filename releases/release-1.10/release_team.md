@@ -12,4 +12,4 @@
 | Patch Release Manager | Maciek Pytel ([@MaciekPytel](https://github.com/MaciekPytel)) | |
 | Approval Notifier | 	k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) | |
 
-Special thanks: Jordan Liggitt ([@liggitt](https://github.com/liggitt)), Davanum Srinivas ([@dims](https://github.com/dims)), Cristoph Blecker ([@cblecker](https://github.com/cblecker))
+Special thanks: Jordan Liggitt ([@liggitt](https://github.com/liggitt)), Davanum Srinivas ([@dims](https://github.com/dims)), Christoph Blecker ([@cblecker](https://github.com/cblecker))
