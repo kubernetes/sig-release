@@ -8,7 +8,7 @@
 | Branch Manager | | |
 | Docs | | |
 | Release Notes | | |
-| Communications | | |
+| Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | |
 | Patch Release Manager | | |
 | Approval Notifier | k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) | | |
 
