@@ -18,3 +18,5 @@
 | 1.8 patch (post 1.8.0) | Joe Betz [@jpbetz](https://github.com/jpbetz) | NA | - | - | 
 | 1.9 minor (up to 1.9.0) | Anthony Yeh [@enisoc](https://github.com/enisoc) | Jaice Singer DuMars [@jdumars](https://github.com/jdumars) | - | - |
 | 1.9 patch (post 1.9.0) | Mehdy Bohlool [@mbohlool](https://github.com/mbohlool) | NA | - | - |
+| 1.10 minor (up to 1.10.0) | Jaice Singer DuMars [@jdumars](https://github.com/jdumars) | - | - | - |
+| 1.10 patch (post 1.10.0) | Maciek Pytel [@MaciekPytel](https://github.com/MaciekPytel) | NA | - | - |
