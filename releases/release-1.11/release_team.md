@@ -3,11 +3,11 @@
 | Lead | Josh Berkus ([@jberkus](https://github.com/jberkus))  |  |
 | Features | Ihor Dvoretskyi ([@idvoretskyi](https://github.com/idvoretskyi)) |  |
 | CI Signal | Aishwarya Sundar ([@AishSundar](https://github.com/AishSundar)) | |
-| Test Infra | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)) |  |
-| Bug Triage | | |
+| Test Infra | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)) | Cole Wagner ([@cjwagner](https://github.com/cjwagner)/cjwagner) |
+| Bug Triage | Tim Pepper ([@tpepper](https://github.com/tpepper)) | |
 | Branch Manager | Caleb Miles ([@calebamiles](https://github.com/calebamiles)) | Sen Lu ([@krzyzacy](https://github.com/krzyzacy)) |
-| Docs | | |
-| Release Notes | | |
+| Docs | Zach Corliesson ([@zacharysarah](https://github.com/zacharysarah)) | |
+| Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | |
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | |
 | Patch Release Manager | | |
 | Approval Notifier | k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) | | |
