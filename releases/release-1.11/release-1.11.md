@@ -2,14 +2,14 @@
 
 *Handy Links (not populated yet):*
 
-* [Release Team](http://bit.ly/kube111-team)
-* [Zoom](http://bit.ly/kube111-zoom)
+* [Release Team](http://bit.ly/k8s111-team)
+* [Zoom](http://bit.ly/k8s111-zoom)
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
 * [Forum](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
 * [Feature Tracking Sheet]()
 * [Milestone Process](https://github.com/kubernetes/community/blob/master/contributors/devel/release/issues.md)
-* [Burndown / Meeting Minutes](http://bit.ly/kube111-burndown)
-* [Retrospective Document](http://bit.ly/kube111retro)
+* [Burndown / Meeting Minutes](http://bit.ly/k8s111-burndown)
+* [Retrospective Document](http://bit.ly/k8s111retro)
 
 **tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Wednesday, June 27th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Monday, May 28th** and ends **Wednesday, June 20th**. Docs must be completed and reviewed by **Friday, May 11th**.
 
@@ -31,11 +31,11 @@
 | Begin collecting planned work from SIGs | Lead, Features Lead | 9| | | | week 2 |
 | Begin weekly release team meetings | Lead | 10 |
 | Begin weekly status reports at Community | Lead, Shadow | 12 |
-| Finalize Release Team | Lead | 15 |
+| Finalize Release Team | Lead | 16 |
 | Start Release Notes Draft | Release Notes Lead | 17 | || | week 3 |
 | Clean up features repo | Features Lead | 17 |
 | 1.11.0-alpha.2 release | Branch Manager | 18 | || | |master-blocking |
-| "Feature Freeze" begins (EOD PST) | Feature Lead | 24 | || | week 4 |
+| "Feature Freeze" begins (EOD PST) | Features Lead | 24 | || | week 4 |
 | 1.11.0-alpha.3 release | Branch Manager | |2 | | | week 5 | master-blocking |
 | Blog post: what we're working on for 1.11 | Communications | |10 | | | week 6 |
 | 1.11.0-beta.0 release | Branch Manager | |15 | | | week 7 | master-blocking, master-upgrade |
@@ -113,7 +113,7 @@ For documentation PRs:
 
 ### Burndown
 
-Burndown meetings are held on Mondays, Wednesdays and Fridays at 10AM Pacific until the final release is near, and then every business day until the release.  On Thursdays of the final 2 weeks, the meeting will happen alongside the Community Meeting.
+Burndown meetings are held on Mondays, Wednesdays and Fridays at TIME TBD until the final release is near, and then every business day until the release.  On Thursdays of the final 2 weeks, the meeting may happen alongside the Community Meeting.
 
 Join the [Kubernetes Milestone Burndown Group](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) to get the calendar invite.
 
