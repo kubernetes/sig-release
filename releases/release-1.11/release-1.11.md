@@ -11,7 +11,7 @@
 * [Burndown / Meeting Minutes](http://bit.ly/k8s111-burndown)
 * [Retrospective Document](http://bit.ly/k8s111retro)
 
-**tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Wednesday, June 27th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Monday, May 28th** and ends **Wednesday, June 20th**. Docs must be completed and reviewed by **Friday, May 11th**.
+**tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Tuesday, June 26th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Monday, May 28th** and ends **Tuesday, June 19th**. Docs must be completed and reviewed by **Friday, May 11th**.
 
 ## Notes About this Release
 
@@ -52,7 +52,7 @@
 | 1.11.0-beta.2 release | Branch Manager | | | 7 | |week 10 | 1.11-blocking, master-blocking, master-upgrade |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | | | 11 | |week 11
 | Begin M-F Burndown meetings | Lead | | | 11 |
-| End of code freeze (EOD PST) | Bot, Lead | | | 20 | |week 12 |
+| End of code freeze (EOD PST) | Bot, Lead | | | 19 | |week 12 |
 | Perform final branch | Branch Manager | | | 20 |
 | 1.11.0-rc.1 release | Branch Manager | | | 20 | | | 1.11-blocking, master-blocking, master-upgrade |
 | Master branch re-opens for 1.12 | Bot, Branch Manager | | | 20 |
