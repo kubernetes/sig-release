@@ -1,7 +1,7 @@
 | **Role** | **Name** (**GitHub/Slack ID**)  | **Shadow Name(s) (GitHub/Slack ID), ...** |
 | ------ | ------ | ------ |
 | Lead | Josh Berkus ([@jberkus](https://github.com/jberkus))  |  |
-| Features | Ihor Dvoretskyi ([@idvoretskyi](https://github.com/idvoretskyi)) |  |
+| Features | Ihor Dvoretskyi ([@idvoretskyi](https://github.com/idvoretskyi)) | Stephen Augustus ([@justaugustus](https://github.com/justaugustus)) |
 | CI Signal | Aishwarya Sundar ([@AishSundar](https://github.com/AishSundar)) | |
 | Test Infra | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)) | Cole Wagner ([@cjwagner](https://github.com/cjwagner)/cjwagner) |
 | Bug Triage | Tim Pepper ([@tpepper](https://github.com/tpepper)) | Cole Mickens ([@colemickens](https://github.com/colemickens)) |
