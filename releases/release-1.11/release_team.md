@@ -6,7 +6,7 @@
 | Test Infra | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)) | Cole Wagner ([@cjwagner](https://github.com/cjwagner)/cjwagner) |
 | Bug Triage | Tim Pepper ([@tpepper](https://github.com/tpepper)) | Cole Mickens ([@colemickens](https://github.com/colemickens)) |
 | Branch Manager | Caleb Miles ([@calebamiles](https://github.com/calebamiles)) | Sen Lu ([@krzyzacy](https://github.com/krzyzacy)) |
-| Docs | Zach Corleissen ([@zacharysarah](https://github.com/zacharysarah)) | |
+| Docs | Zach Corleissen ([@zacharysarah](https://github.com/zacharysarah)) | Zach Arnold ([@zparnold](https://github.com/zparnold) |
 | Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | |
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | |
 | Patch Release Manager | | |
