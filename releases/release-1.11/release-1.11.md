@@ -6,7 +6,12 @@
 * [Zoom](http://bit.ly/k8s111-zoom)
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
 * [Forum](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+<<<<<<< HEAD
 * [Feature Tracking Sheet](http://bit.ly/k8s111-features)
+=======
+* [Feature Tracking
+  Sheet](https://docs.google.com/spreadsheets/d/16N9KSlxWwxUA2gV6jvuW9N8tPRHzNhu1-RYY4Y0RZLs/edit?usp=sharing)
+>>>>>>> ad271a99c2f822b2120103ff26492f55f65df32f
 * [Milestone Process](https://github.com/kubernetes/community/blob/master/contributors/devel/release/issues.md)
 * [Meeting Minutes](http://bit.ly/k8s111-minutes)
 * [Retrospective Document](http://bit.ly/k8s111-retro)
