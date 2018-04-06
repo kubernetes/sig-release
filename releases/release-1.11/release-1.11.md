@@ -2,15 +2,19 @@
 
 *Handy Links (not populated yet):*
 
-* [Release Team](http://bit.ly/k8s111-team)
+* [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.11/release_team.md)
 * [Zoom](http://bit.ly/k8s111-zoom)
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
 * [Forum](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+<<<<<<< HEAD
+* [Feature Tracking Sheet](http://bit.ly/k8s111-features)
+=======
 * [Feature Tracking
   Sheet](https://docs.google.com/spreadsheets/d/16N9KSlxWwxUA2gV6jvuW9N8tPRHzNhu1-RYY4Y0RZLs/edit?usp=sharing)
+>>>>>>> ad271a99c2f822b2120103ff26492f55f65df32f
 * [Milestone Process](https://github.com/kubernetes/community/blob/master/contributors/devel/release/issues.md)
-* [Burndown / Meeting Minutes](http://bit.ly/k8s111-burndown)
-* [Retrospective Document](http://bit.ly/k8s111retro)
+* [Meeting Minutes](http://bit.ly/k8s111-minutes)
+* [Retrospective Document](http://bit.ly/k8s111-retro)
 
 **tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Tuesday, June 26th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Monday, May 28th** and ends **Tuesday, June 19th**. Docs must be completed and reviewed by **Friday, May 11th**.
 
