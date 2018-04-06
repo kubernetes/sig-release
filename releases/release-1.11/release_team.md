@@ -7,7 +7,7 @@
 | Bug Triage | Tim Pepper ([@tpepper](https://github.com/tpepper)) | Cole Mickens ([@colemickens](https://github.com/colemickens)) |
 | Branch Manager | Caleb Miles ([@calebamiles](https://github.com/calebamiles)) | Sen Lu ([@krzyzacy](https://github.com/krzyzacy)) |
 | Docs | Zach Corliesson ([@zacharysarah](https://github.com/zacharysarah)) | |
-| Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | |
+| Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | Mike Arpaia ([@marpaia](https://github.com/marpaia)) |
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | |
 | Patch Release Manager | | |
 | Approval Notifier | k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) | | |
