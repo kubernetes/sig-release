@@ -200,8 +200,8 @@ be familiar with the release process and remain ready to discharge the responsib
   finding manual testing volunteers, and ensuring any issues discovered are communicated widely and fixed quickly
 
 ### CI Signal Lead
-- Ensures that all non-upgrade test CI provides a clear go/no-go signal for the release
-- Tracks and finds owners to fix any issues with any (non-upgrade) tests
+- Ensures that all test (master-blocking, master-upgrade and 1.y-blocking) CI provides a clear go/no-go signal for the release
+- Tracks and finds owners to fix any issues with any tests
 
 ### Release Team Shadow
 Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future
