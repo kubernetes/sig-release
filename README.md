@@ -36,7 +36,7 @@
 
 ## Join us!
 - [Google group](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-- [Slack channel](https://kubernetes.slack.com/messages/C56HWQ0TH/)
+- [Slack channel](https://kubernetes.slack.com/messages/C2C40FMNF/)
 - [Events and meetings calendar](https://calendar.google.com/calendar/embed?src=coreos.com_regcvcrgvq98lua2ikijg1g1uk%40group.calendar.google.com&ctz=America/Los_Angeles)
 - [Meeting agenda and notes](https://docs.google.com/document/d/1vhsixdT58iJFfoGZbpmvI_xnK59XyAjtadu3h6hHPpY/edit?usp=sharing)
 
