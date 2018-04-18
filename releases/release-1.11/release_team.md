@@ -9,7 +9,7 @@
 | Docs | Zach Corleissen ([@zacharysarah](https://github.com/zacharysarah)) | Zach Arnold ([@zparnold](https://github.com/zparnold)), Misty Stanley-Jones ([@mistyhacks](https://github.com/mistyhacks)), Tom van Waardhuizen ([@tallt0m](https://github.com/tallt0m)) |
 | Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | Mike Arpaia ([@marpaia](https://github.com/marpaia)) |
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | |
-| Patch Release Manager | | |
+| Patch Release Manager | Anirudh Ramanathan | [@foxish](https://github.com/foxish) |
 | Approval Notifier | k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) | | |
 
 Special thanks:
