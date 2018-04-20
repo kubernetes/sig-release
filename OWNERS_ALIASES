@@ -1,9 +1,9 @@
-# See the OWNERS docs: https://git.k8s.io/community/docs/devel/owners.md
+# See the OWNERS docs: https://git.k8s.io/community/contributors/devel/owners.md
 
 aliases:
   sig-release-leads:
     - calebamiles
-    - pwittrock
+    - jdumars
   release-team-leads:
     - bgrant0607
     - dchen1107
@@ -13,6 +13,7 @@ aliases:
     - jdumars
     - pwittrock
     - saad-ali
+    - jberkus
   patch-release-managers:
     - enisoc
     - fabioy

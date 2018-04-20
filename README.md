@@ -16,7 +16,6 @@
    - [Features Lead](#features-lead)
    - [Bug Triage Lead](#bug-triage-lead)
    - [Test Infra Lead](#test-infra-lead)
-   - [Upgrade Testing Lead](#upgrade-testing-lead)
    - [CI Signal Lead](#ci-signal-lead)
    - [Release Team Shadow](#release-team-shadow)
    - [Individual Contributors](#individual-contributors)
@@ -37,7 +36,7 @@
 
 ## Join us!
 - [Google group](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-- [Slack channel](https://kubernetes.slack.com/messages/C56HWQ0TH/)
+- [Slack channel](https://kubernetes.slack.com/messages/C2C40FMNF/)
 - [Events and meetings calendar](https://calendar.google.com/calendar/embed?src=coreos.com_regcvcrgvq98lua2ikijg1g1uk%40group.calendar.google.com&ctz=America/Los_Angeles)
 - [Meeting agenda and notes](https://docs.google.com/document/d/1vhsixdT58iJFfoGZbpmvI_xnK59XyAjtadu3h6hHPpY/edit?usp=sharing)
 
@@ -192,16 +191,9 @@ be familiar with the release process and remain ready to discharge the responsib
 ### Test Infra Lead
 - Sets up and maintains all CI for the release branch
 
-### Upgrade Testing Lead
-- Ensures that automated upgrade tests provide a clear go/no-go signal for the release
-- Tracks and finds owners for all issues with automated upgrade tests
-- Ensures that any gaps in automated upgrade testing are covered by manual upgrade testing
-- Organizes the manual upgrade testing efforts, including setting up instructions for manual testing,
-  finding manual testing volunteers, and ensuring any issues discovered are communicated widely and fixed quickly
-
 ### CI Signal Lead
-- Ensures that all non-upgrade test CI provides a clear go/no-go signal for the release
-- Tracks and finds owners to fix any issues with any (non-upgrade) tests
+- Ensures that all test (master-blocking, master-upgrade and 1.y-blocking) CI provides a clear go/no-go signal for the release
+- Tracks and finds owners to fix any issues with any tests
 
 ### Release Team Shadow
 Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future

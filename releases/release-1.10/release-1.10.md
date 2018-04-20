@@ -18,7 +18,7 @@
 * The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) failures to SIGs throughout the cycle, not just near release cuts.
 * Key deliverables (e.g. initial release cuts) tend to be scheduled on Tuesdays to maintain context while ramping up and then responding to any problems.  The final release will be on a Wednesday in keeping with prior practice.
 * The release length is nearly 12 weeks
-* Code name "Kiwi" for no good reason
+* Code name "*Left Shark*" because it's been my favorite meme of the release cycle (Thanks [Christoph](https://github.com/cblecker))
 
 ## Timeline
 
@@ -278,9 +278,9 @@
     <td>Bot, Lead</td>
     <td></td>
     <td></td>
-    <td>14</td>
+    <td>19</td>
     <td></td>
-    <td></td>
+    <td>week 12</td>
     <td></td>
   </tr>
   <tr>
@@ -288,17 +288,27 @@
     <td>Branch Manager</td>
     <td></td>
     <td></td>
-    <td>14</td>
+    <td>19</td>
     <td></td>
     <td></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>1.10.0-rc.1 release</td>
+    <td>Branch Manager</td>
+    <td></td>
+    <td></td>
+    <td>19</td>
+    <td></td>
+    <td></td>
+    <td>1.10-blocking, master-blocking, master-upgrade</td>
   </tr>
   <tr>
     <td>Master branch re-opens for 1.11</td>
     <td>Bot, Branch Manager</td>
     <td></td>
     <td></td>
-    <td>14</td>
+    <td>19</td>
     <td></td>
     <td></td>
     <td></td>
@@ -308,7 +318,7 @@
     <td>Branch Manager</td>
     <td></td>
     <td></td>
-    <td>14</td>
+    <td>19</td>
     <td></td>
     <td></td>
     <td></td>
@@ -318,7 +328,7 @@
     <td>Lead</td>
     <td></td>
     <td></td>
-    <td>15</td>
+    <td>20</td>
     <td></td>
     <td></td>
     <td></td>
@@ -328,9 +338,9 @@
     <td>Branch Manager</td>
     <td></td>
     <td></td>
-    <td>21</td>
+    <td>26</td>
     <td></td>
-    <td>week 12</td>
+    <td>week 13</td>
     <td>1.10-blocking</td>
   </tr>
   <tr>
@@ -338,7 +348,7 @@
     <td>Branch Manager</td>
     <td></td>
     <td></td>
-    <td>22</td>
+    <td>27</td>
     <td></td>
     <td></td>
     <td></td>
@@ -350,7 +360,7 @@
     <td></td>
     <td>29</td>
     <td></td>
-    <td>week 13</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -373,13 +383,13 @@ All features going into the release must have an associated issue in the feature
 
 ### Code Slush
 
-Starting on Tuesday, February 20th, only PRs labeled by their owner SIGs with "[approved-for-milestone](https://github.com/kubernetes/community/blob/master/contributors/devel/release/issues.md)" will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can add the approved-for-milestone label in cases where the SIG approvers do not have permissions to do so.
+Starting on Tuesday, February 20th, only PRs labeled by their owner SIGs with [`status/approved-for-milestone`](/ephemera/issues.md)will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can add the `status/approved-for-milestone` label in cases where the SIG approvers do not have permissions to do so.
 
 Code Slush begins prior to Code Freeze to help reduce noise from miscellaneous changes that aren't related to issues that SIGs have approved for the milestone. Feature work is still allowed at this point, but it must follow the process to get approved for the milestone. SIGs are the gatekeepers of this label, not the release team.
 
 #### Exceptions
 
-Starting at Code Slush, the release team will solicit and rule on [exception requests](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md) for feature and test work that is unlikely to be done by Code Freeze. As with the approved-for-milestone label, the exception approval is the responsibility of the SIG or SIGs labeled in the pull request. The release team may intervene or deny the request only if it poses a risk to release quality, or could negatively impact the overall timeline. Changes introduced at this point should be well-tested, well-understood, limited in architectural scope, and low risk.  All of those factors should be considered in the approval process.
+Starting at Code Slush, the release team will solicit and rule on [exception requests](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md) for feature and test work that is unlikely to be done by Code Freeze. As with the `status/approved-for-milestone` label, the exception approval is the responsibility of the SIG or SIGs labeled in the pull request. The release team may intervene or deny the request only if it poses a risk to release quality, or could negatively impact the overall timeline. Changes introduced at this point should be well-tested, well-understood, limited in architectural scope, and low risk.  All of those factors should be considered in the approval process.
 
 ### Code Freeze
 
