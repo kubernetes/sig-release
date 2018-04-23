@@ -9,6 +9,7 @@
 * [Feature Tracking Sheet](http://bit.ly/k8s111-features)
 * [Milestone Process](https://github.com/kubernetes/community/blob/master/contributors/devel/release/issues.md)
 * [Meeting Minutes](http://bit.ly/k8s111-minutes)
+* [CI Signal Report](http://bit.ly/k8s111-cisignal)
 * [Retrospective Document](http://bit.ly/k8s111-retro)
 
 **tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Tuesday, June 26th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Monday, May 28th** and ends **Tuesday, June 19th**, but [may be shortened](#conditionally-shortening-code-freeze) and begin later. Docs must be completed and reviewed by **Friday, June 11th**.
