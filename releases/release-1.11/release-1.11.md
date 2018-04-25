@@ -44,6 +44,7 @@
 | All release branch CI jobs created | Test Infra Lead | |18 |
 | Begin Code Slush | Bot, Lead | | 22 | | | week 8 |
 | All Issues & PRs must have complete labels | Bug Triage | | 22 |
+| Docs deadline - Open placeholder PRs | Docs Lead | | 25 | | | week 8 | |
 | Begin code freeze (EOD PST) | Bot, Lead | | 29 | | | week 9 | 1.11-blocking, master-blocking, master-upgrade |
 | Begin pruning | Lead and release team | | 29 |
 | 1.11.0-beta.1 release | Branch Manager | | 29 | || | 1.11-blocking, master-blocking, master-upgrade |
