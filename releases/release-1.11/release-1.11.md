@@ -1,21 +1,21 @@
 # Kubernetes 1.11 Release Schedule
 
-*Handy Links (not populated yet):*
+*Handy Links*
 
-* [Release Team](http://bit.ly/k8s111-team)
+* [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.11/release_team.md)
 * [Zoom](http://bit.ly/k8s111-zoom)
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
 * [Forum](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-* [Feature Tracking
-  Sheet](https://docs.google.com/spreadsheets/d/16N9KSlxWwxUA2gV6jvuW9N8tPRHzNhu1-RYY4Y0RZLs/edit?usp=sharing)
+* [Feature Tracking Sheet](http://bit.ly/k8s111-features)
 * [Milestone Process](https://github.com/kubernetes/community/blob/master/contributors/devel/release/issues.md)
-* [Burndown / Meeting Minutes](http://bit.ly/k8s111-burndown)
-* [Retrospective Document](http://bit.ly/k8s111retro)
+* [Meeting Minutes](http://bit.ly/k8s111-minutes)
+* [Retrospective Document](http://bit.ly/k8s111-retro)
 
-**tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Tuesday, June 26th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Monday, May 28th** and ends **Tuesday, June 19th**. Docs must be completed and reviewed by **Friday, May 11th**.
+**tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Tuesday, June 26th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Monday, May 28th** and ends **Tuesday, June 19th**, but [may be shortened](#conditionally-shortening-code-freeze) and begin later. Docs must be completed and reviewed by **Friday, June 11th**.
 
 ## Notes About this Release
 
+* The Release Team will be using a conditional process to potentially shorten Code Freeze, [see below](#conditionally-shortening-code-freeze).
 * The feature process is remaining as it has in prior releases.
 * Features that don't have complete code and tests by [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.11/release-1.11.md#code-freeze) may be disabled by the release team before cutting the first beta.
 * The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) failures to SIGs throughout the cycle, not just near release cuts.
@@ -40,11 +40,13 @@
 | 1.11.0-alpha.3 release | Branch Manager | |2 | | | week 5 | master-blocking |
 | Blog post: what we're working on for 1.11 | Communications | |10 | | | week 6 |
 | 1.11.0-beta.0 release | Branch Manager | |15 | | | week 7 | master-blocking, master-upgrade |
+| [1st stability evaluation to shorten Code Freeze](#conditionally-shortening-code-freeze) | Release Lead | | 18 | | | | master-blocking, master-upgrade |
 | Create 'release-1.11' branch and begin daily branch | Branch Manager | |15 |
 | All release branch CI jobs created | Test Infra Lead | |18 |
 | Begin Code Slush | Bot, Lead | | 22 | | | week 8 |
 | All Issues & PRs must have complete labels | Bug Triage | | 22 |
 | Docs deadline - Open placeholder PRs | Docs Lead | | 25 | | | week 8 | |
+| [2nd stability evaluation to shorten Code Freeze](#conditionally-shortening-code-freeze) | Release Lead | | 25 | | | | 1.11-blocking, master-blocking, master-upgrade |
 | Begin code freeze (EOD PST) | Bot, Lead | | 29 | | | week 9 | 1.11-blocking, master-blocking, master-upgrade |
 | Begin pruning | Lead and release team | | 29 |
 | 1.11.0-beta.1 release | Branch Manager | | 29 | || | 1.11-blocking, master-blocking, master-upgrade |
@@ -66,6 +68,18 @@
 | Release retrospective | Community | || | 12 |
 
 ## Details
+
+### Conditionally Shortening Code Freeze
+
+In an effort to make the Code Freeze period shorter, and allow more time for feature development, the Release Team will be testing out a procedure for postponing it based on release stability.
+
+On **May 18th**, the Release Team will evaluate the stability of 1.11.  This stability will be primarily based on "clean signal", primarily that all tests in [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) are passing and have been passing for a few days.  If the tests boards are green, the release team will announce delaying the start of Code Slush and Code Freeze by one week each (to **May 29** and **June 5**) on that day.
+
+If Code Freeze is not postponed on May 18th, then on **May 25** the Release Team will evaluate again.  This evaluation will be based primarily on the three test suites (master-blocking, master-upgrade, and 1.11-blocking), and if passed, Code Freeze will be postponed by one week, to **June 5th**.
+
+Code Freeze will end on **June 19th** regardless, unless that is delayed for unrelated reasons.
+
+If we are able to shorten Code Freeze, the 1.12 Release Team will take that into account when setting the 1.12 schedule.
 
 ### Feature Freeze
 
