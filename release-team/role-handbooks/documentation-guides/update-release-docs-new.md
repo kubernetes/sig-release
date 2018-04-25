@@ -1,88 +1,180 @@
 # Kubernetes.io Docs Release Playbook
 
-author(s): [chenopis@](mailto:chenopis@google.com), stevepe@
+author(s): @chenopis, @steveperry-53
+revisions: @bradamant3, @zacharysarah
 
+This doc shows how to release documentation during a Kubernetes minor version (for example, v1.10) release.
 
-## TL;DR
+## Introduction
 
-This doc contains an outline of tasks to be completed during a Kubernetes.io docs release cycle for a Kubernetes minor release, e.g. v1.9.
+Kubernetes releases minor versions on a quarterly cadence. For example, in 2017, the releases were: v1.6 (Q1/Jan-Mar), v1.7 (Q2/Apr-Jun), v1.8 (Q3/Jul-Sep), and v1.9 (Q4/Oct-Dec).
 
-## Quarterly release cycle
+SIG Docs is part of the Kubernetes release process: its [maintainers](https://github.com/orgs/kubernetes/teams/sig-docs-maintainers) support documentation created/updated for releases and published on the [kubernetes website](https://kubernetes.io/).
 
-The Kubernetes release cycle is on a quarterly cadence. For example, in 2017, the releases are: v1.6 Jan-Mar, v1.7 Apr-Jun, v1.8 Jul-Sep, and v1.9 Oct-Dec. Consequently, [kubernetes.io](https://kubernetes.io/) and its [docs maintainers](https://github.com/orgs/kubernetes/teams/sig-docs-maintainers) are part of that process to support documentation created/updated for those releases.
-
-## Managing the cycle
-
-The designated "release meister" (aka Docs Lead), voluntold from [@kubernetes/sig-docs-maintainers](https://github.com/orgs/kubernetes/teams/sig-docs-maintainers), is responsible for managing the process on the docs side and releasing the documentation on [kubernetes.io](https://kubernetes.io/) when the Kubernetes binary release goes out.
+The designated "release meister" (aka Docs Lead), voluntold from [@kubernetes/sig-docs-maintainers](https://github.com/orgs/kubernetes/teams/sig-docs-maintainers), is responsible for managing the docs release  for new and updated documentation [kubernetes.io](https://kubernetes.io/) during quarterly releases.
 
 ### Relevant links
 
 *   k8s.io website - [https://kubernetes.io/](https://kubernetes.io/)
-*   k8s.io (docs) GitHub repo - [kubernetes/kubernetes.github.io](https://github.com/kubernetes/kubernetes.github.io)
-*   k8s.io [pull request (PR) queue](https://github.com/kubernetes/kubernetes.github.io/pulls) 
-*   OSS Kubernetes features tracking spreadsheet
-    *   [Kubernetes Features OSS tracking board (1.7 release)](https://docs.google.com/spreadsheets/d/1IJSTd3MHorwUt8i492GQaKKuAFsZppauT4v1LJ91WHY/edit?usp=sharing)
-    *   [Kubernetes Features OSS tracking board (1.8 release)](https://docs.google.com/spreadsheets/d/1AFksRDgAt6BGA3OjRNIiO3IyKmA-GU7CXaxbihy48ns/edit#gid=0)
-    *   Not sure whether there will be a tracking spreadsheet for 1.9
+*   k8s.io (docs) GitHub repo - [kubernetes/website](https://github.com/kubernetes/website)
+*   k8s.io [pull request (PR) queue](https://github.com/kubernetes/website/pulls)
 *   Netlify dashboard - [https://app.netlify.com/](https://app.netlify.com/)
-*   [kubernetes.slack.com #sig-release](https://kubernetes.slack.com/messages/C2C40FMNF/) Slack channel
+*   Kubernetes [#sig-release channel](https://kubernetes.slack.com/messages/C2C40FMNF/) on Slack
 
-### Start the cycle
+## Start the release cycle
 
-*   Create a new GitHub branch from `master` using the naming convention `release-X.Y`, e.g. `release-1.9`. Here's the [release-1.9 branch](https://github.com/kubernetes/kubernetes.github.io/tree/release-1.9).
-*   Update the Netlify _vnext staging_ site to use the new branch:
-    *   Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
-    *   Go to the settings for the [kubernetes-io-vnext-staging](https://app.netlify.com/sites/kubernetes-io-vnext-staging/settings) site.
-    *   Edit the Deploy settings and change "Branch" to the new version branch, e.g `release-1.9`.
-    *   Save the change and verify that it is live at [https://kubernetes-io-vnext-staging.netlify.com/](https://kubernetes-io-vnext-staging.netlify.com/).
-*   Add a reminder in the [pull request template](https://github.com/kubernetes/kubernetes.github.io/blob/master/.github/PULL_REQUEST_TEMPLATE.md) for PRs going into the new release to use the release base branch and set the Milestone, e. g. [this commit](https://github.com/kubernetes/kubernetes.github.io/pull/4632).
-*   Connect with the release manager -- introduce yourself, etc.
-*   Join these groups: [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release), [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads), [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev).
-*   Make sure you have been added to the release team and in the doc, e.g. [https://github.com/kubernetes/features/blob/master/release-1.7/release_team.md](https://github.com/kubernetes/features/blob/master/release-1.7/release_team.md).
-*   Check the proposed timeline for the release, e.g. [https://github.com/kubernetes/features/blob/master/release-1.7/release-1.7.md](https://github.com/kubernetes/features/blob/master/release-1.7/release-1.7.md).
-*   Make sure a public OSS feature tracking spreadsheet, e.g. [Kubernetes Features OSS tracking board (1.8 release)](https://docs.google.com/spreadsheets/d/1AFksRDgAt6BGA3OjRNIiO3IyKmA-GU7CXaxbihy48ns/edit#gid=0), has been created by the Features manager, currently Jaice Singer DuMars (jdumars).
-*   Update [kubernetes/community/contributors/devel/release/README.md](https://github.com/kubernetes/community/blob/master/contributors/devel/release/README.md) with your contact info for the Docs role.
+Release cycles usually begin 1-2 weeks after the previous cycle completes.
 
-### Ongoing tasks
+### General starting tasks
 
-*   Look through the [PR queue](https://github.com/kubernetes/kubernetes.github.io/pulls) to make sure ones related to the new release are using the correct base branch and have the Milestone set, e.g. base branch is `release-1.8` and Milestone is `1.8`. Example PRs from the v1.7 release can be viewed [here](https://github.com/kubernetes/kubernetes.github.io/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aclosed%20milestone%3A1.7%20).
-*   Merge `master` branch back into the branch for the last release. 
-For example, if you are currently on the v1.8 release, you will need to periodically merge `master` into `release-1.7` right up until `release-1.8` is merged into `master`. This is to make sure that the last release branch is as up to date as possible and left as a snapshot when the new version is released.
-*   Merge `master` into the branch for the next release.
-For example, if you are currently on the v1.8 release, you will need to periodically merge `master` into `release-1.8` in order to pick up any changes in `master` during the release process. Therefore, `release-1.8` should effectively be `master` + commits for v1.8.
-*   Update the OSS feature tracking spreadsheet with progress on reviews and merge status for each feature doc, e.g. [Kubernetes Features OSS tracking board (1.7 release)](https://docs.google.com/spreadsheets/d/1IJSTd3MHorwUt8i492GQaKKuAFsZppauT4v1LJ91WHY/edit?usp=sharing).
-*   Attend Kubernetes Tactics meetings.
-*   Attend Kubernetes Burndown meetings.
-*   Sync with the release manager biweekly, then weekly, then daily.
+1. Get connected.
 
-### Work with the engineers and community
+- Join the Kubernetes [#sig-release Slack channel](https://kubernetes.slack.com/messages/C2C40FMNF/).
 
-*   Sync with the dev managers and SIG leads so that they know to direct the engineers to you if they have any docs questions.
-*   Send announcements to:
-    *   [gke-kubernetes-team@google.com](mailto:gke-kubernetes-team@google.com)
-    *   [kubernetes-sig-release@google.com](mailto:kubernetes-sig-release@google.com), Slack #sig-release
-    *   [kubernetes-sig-leads@google.com](mailto:kubernetes-sig-leads@google.com)
-    *   feature owners listed in the OSS feature tracking spreadsheet
-*   Announcements should cover:
-    *   TL;DR on the docs release process with your contact info.
-    *   Dates for:
-        *   filling in features in the OSS feature tracking spreadsheet
-        *   opening a placeholder PR in the k8s.io repo
-        *   when PRs should be completed and ready for review
-        *   when PRs tech reviews should be completed
-        *   when review feedback should be incorporated by and Docs and Tech LGTMs given
-        *   the drop-dead merge date and time for any last minute PRs
-*   Meet with engineers early about feature docs and give guidance on what should be a Concept, Task, Tutorial, or Reference doc.
-*   Recruit community tech writers to help with docs reviews.
+    Introduce yourself as the docs lead for the release.
 
-### Generate reference docs
+- Connect with the release manager.
 
-*   Generate reference docs and place them in kubernetes/website. See [PR 6366](https://github.com/kubernetes/website/pull/6366).
-*   Update reference page for feature gates. See [PR 6364](https://github.com/kubernetes/website/pull/6364).
+- Join these Google groups:
+
+    - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+    - [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads)
+    - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
+
+- Make sure you're included in the release team docs, for example: [release 1.11](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.11/release_team.md).
+
+- Review (and correct if necessary) the proposed timeline for the release, for example: [release 1.11](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.11/release-1.11.md).
+
+    Make sure the timeline includes dates for:
+    - Placeholder PRs open (~3.5 weeks before release)
+    - PRs ready for review: (~2.5 weeks before release)
+    - Reviews complete, PRs ready to merge: First business day of the week prior to release (~9-10 days before release)
+
+- Watch for the release feature tracking spreadsheet.
+
+    Early in the cycle, the release manager opens a feature tracking spreadsheet (for example, [the 1.8 release spreadsheet](https://docs.google.com/spreadsheets/d/1AFksRDgAt6BGA3OjRNIiO3IyKmA-GU7CXaxbihy48ns/edit#gid=0)). The spreadsheet contains important information for docs:
+
+    - Which features need user-facing docs
+    - Feature owners (and their GitHub IDs)
+    - The SIG associated with each feature (useful for obtaining technical reviews)
+    - Links to docs PRs opened for each feature
+
+### Docs starting tasks
+
+1. Create a pull request for the release.
+
+- Open a pull request against `master` with a new branch that follows the naming convention `release-X.Y`.
+
+    For example, the [Release 1.11](https://github.com/kubernetes/website/pull/8046) PR uses the branch `release-1.11`.
+
+    This release pull request (also known as a _megabranch_) serves as the base for individual, component feature PRs of the release. A megabranch lets you bundle and merge multiple PRs simultaneously.
+
+    Use previous release PRs as a template. For example: https://github.com/kubernetes/website/pull/8046
+
+- Add the label `do-not-merge/hold` to the PR.
+
+2. Add a tracking comment to the megabranch PR.
+
+Use this placeholder text:
+
+```
+## Release X.Y megabranch
+
+PR | Based on `release-X.Y`? | Tech LGTM | Docs approved | Merged
+---|---|---|---|---
+| | | |
+```
+
+    A tracking comment helps track the identity and status of component PRs in the megabranch.
+
+    For example: https://github.com/kubernetes/website/pull/8046#issuecomment-380226165
+
+2. Update the Netlify _vnext staging_ site to use the new branch:
+
+- Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
+
+- Open the settings for the [kubernetes-io-vnext-staging](https://app.netlify.com/sites/kubernetes-io-vnext-staging/settings) site.
+
+- Edit the Deploy settings and change "Branch" to the new version branch, for example: `release-1.11`.
+
+- Save the change and verify that the change is live at [https://kubernetes-io-vnext-staging.netlify.com/](https://kubernetes-io-vnext-staging.netlify.com/).
+
+- Update the [pull request template](https://github.com/kubernetes/kubernetes.github.io/blob/master/.github/PULL_REQUEST_TEMPLATE.md) with the version in development. For example: https://github.com/kubernetes/website/pull/8057
+
+## Continue the release cycle
+
+### Track PRs
+
+- Follow the feature spreadsheet.
+
+    Keep the feature tracking spreadsheet up to date with review progress and merge status for each documentation PR. For example: [Kubernetes Features OSS tracking board (1.11 release)](https://docs.google.com/spreadsheets/d/16N9KSlxWwxUA2gV6jvuW9N8tPRHzNhu1-RYY4Y0RZLs/edit#gid=0)
+
+- Update documentation PR progress in the megabranch PR's tracking comment. For example, [Release 1.11 (tracking comment)](https://github.com/kubernetes/website/pull/8046#issuecomment-380226165)
+
+- Make sure that docs PRs for the release have the correct base and set the correct Milestone. For example, feature PRs for version 1.11 need a base branch of `release-1.11` and the Milestone set to `1.11`.
+
+### Maintain the current and upcoming release branches
+
+- Periodically merge `master` into the current release branch.
+
+For example, during the v1.11 release cycle, you must periodically merge `master` into `release-1.10`.
+
+Periodic merges must continue throughout the release cycle, until the pending release (for example, `release-1.11`) merges to `master`. This is to ensure that the current release branch remains up to date, and to preserve the current branch as a snapshot when the new version is released. Periodic maintenance also helps avoid excessive merge conflicts between `master` and the current branch at the end of the release cycle.
+
+On your local fork:
+```
+$ git fetch upstream
+$ git checkout release-<current>
+$ git merge upstream/master
+$ git push -f upstream release-<current>
+```
+
+- Periodically rebase the upcoming release branch onto `master`.
+
+For example, during the v1.11 release, you must periodically rebase `release-1.11` onto `master` in order to pick up any changes in `master` during the release process.
+
+On your local fork:
+```
+$ git fetch upstream
+$ checkout release-<upcoming>
+$ git rebase upstream/master
+$ git push -f upstream release-<upcoming>
+```
+
+### Stay connected with the release cycle
+
+- Attend #sig-release meetings.
+
+    Meetings increase in frequency over the course of the release, moving from weekly to daily.
+
+### Work with feature developers and reviewers
+
+- Keep developers apprised of due dates for docs.
+
+    Send announcements to:
+        - [gke-kubernetes-team@google.com](mailto:gke-kubernetes-team@google.com)
+        - [kubernetes-sig-release@google.com](mailto:kubernetes-sig-release@google.com)
+        - [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF/) on Slack
+        - [kubernetes-sig-leads@google.com](mailto:kubernetes-sig-leads@google.com)
+        - Feature owners listed in the OSS feature tracking spreadsheet
+
+- As developers open PRs, give them `sig/*` labels (listed in the feature tracking spreadsheet) to help find technical reviewers.
+
+### Review PRs
+
+- Remind tech reviewers to comment with `/lgtm` when PRs pass review.
+
+- Ask SIG Docs (#sig-docs channel on Slack) for help with reviews.
+
+- Review PR commit histories.
+
+    Make sure that PR commit histories contain only changes to files. It's especially important to avoid revert commits.
+
+    Encourage developers to rebase any PRs with complicated commit histories.
 
 ### Last minute PRs
 
-*   Triage: 
+*   Triage:
     *   Decide what must go out with release, what can be published just after the release.
     *   Determine how much effort will be required to review the doc(s).
         *   Is it a complex feature needing specific reviewers?
@@ -93,16 +185,26 @@ For example, if you are currently on the v1.8 release, you will need to periodic
 *   Ask the release manager at the burndown meeting to help find appropriate tech reviewers.
 *   If not critical to initial release, un-merged PRs can be dealt with after the release.
 
-### Finalize for release
+## Finalize for release
 
-*   Create a PR for the merge but do not merge yet, e.g. [PR #4094](https://github.com/kubernetes/kubernetes.github.io/pull/4094) for v1.7 release
-    *   Add tag _do-not-merge_
-    *   Add note and target date in the description, e.g.
-_DO NOT MERGE UNTIL KUBERNETES 1.7 IS RELEASED
-Target Date: 2017-06-29 @ 13:00 PDT_
-*   Update the site variables for version numbers:
-    *   Open a PR to modify [/_config.yml](https://github.com/kubernetes/kubernetes.github.io/blob/master/_config.yml) and change version variables to v1.8 and v1.8.0, e.g. [PR #4210](https://github.com/kubernetes/kubernetes.github.io/pull/4210/files).
-    *   Update [/update-imported-docs.sh](https://github.com/kubernetes/kubernetes.github.io/blob/master/update-imported-docs.sh), e.g. [PR #4210](https://github.com/kubernetes/kubernetes.github.io/pull/4210/files#diff-8696ecc75d1b25a0b2812f88aefea8c3).
+### Update site variables
+
+1. Update the site versions.
+
+- Open a PR to modify site versions in `/config.toml`.
+
+    Site versions include the current version plus the four previous versions ("current+4"). For example, supported versions in v1.11 are: v1.11-v1.7.
+
+- Open a PR to update `/update-imported-docs/*`.
+
+### Generate reference docs
+
+- Regenerate [reference docs](https://kubernetes.io/editdocs/) ("Updating Automatically Generated Reference Pages") and open PRs.
+
+- Update the reference page for [feature gates](https://github.com/kubernetes/website/blob/master/content/en/docs/reference/feature-gates.md).
+
+
+    *   Update [/update-imported-docs.sh](https://github.com/kubernetes/website/blob/master/update-imported-docs.sh), e.g. [PR #4210](https://github.com/kubernetes/website/pull/4210/files#diff-8696ecc75d1b25a0b2812f88aefea8c3).
 *   Make sure the auto-generated docs have been updated.
     *   Check with Phillip Wittrock ([pwittroc@google.com](mailto:pwittroc@google.com)).
     *   Run update-imported-docs.sh.
@@ -115,14 +217,14 @@ Target Date: 2017-06-29 @ 13:00 PDT_
 
 ### Release and cleanup
 
-*   _Squash and merge_ the release PR, e.g. [PR #4094](https://github.com/kubernetes/kubernetes.github.io/pull/4094).
+*   _Squash and merge_ the release PR, e.g. [PR #4094](https://github.com/kubernetes/website/pull/4094).
 *   Move any hanging (un-merged) PRs back to the `master` branch.
-*   Remove the reminder in the [pull request template](https://github.com/kubernetes/kubernetes.github.io/blob/master/.github/PULL_REQUEST_TEMPLATE.md) for release PRs.
+*   Remove the reminder in the [pull request template](https://github.com/kubernetes/website/blob/master/.github/PULL_REQUEST_TEMPLATE.md) for release PRs.
 *   Merge `master` back into the current release branch to keep them in sync.
 
 ## Appendix I: Setup and tools
 
-You will need to use [Git source control management](https://git-scm.com/) with the [GitHub](https://github.com/) site. 
+You will need to use [Git source control management](https://git-scm.com/) with the [GitHub](https://github.com/) site.
 
 Make sure you have a GitHub account and are properly setup with the following:
 
