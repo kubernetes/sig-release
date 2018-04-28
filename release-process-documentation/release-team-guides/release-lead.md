@@ -118,7 +118,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
     <td>4</td>
     <td><p>- Assist the features lead with anything required for feature freeze
 <p>- Remind the community about feature freeze
-<p>- Bring exceptions to to the Release Team meetings, and make sure SIG representatives for the exception(s) know to attend and discuss if necessary
+<p>- Bring exceptions to the Release Team meetings, and make sure SIG representatives for the exception(s) know to attend and discuss if necessary
 <p>- Make sure everything is in synch between the features repo and the features tracking spreadsheet
 <p>- If there are features with questions or concerns, help coordinate those conversations between the team and the SIG/owners
 <p>- Start collecting SIG release themes in the release notes draft, outlining what they are delivering this release milestone, and how it aligns with their mission statements - start with SIGs identifying features in the features repo, and focus on those since not every SIG will be delivering something</td>
