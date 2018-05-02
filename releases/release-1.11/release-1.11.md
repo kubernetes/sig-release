@@ -36,9 +36,9 @@
 | Finalize Release Team | Lead | 16 |
 | Start Release Notes Draft | Release Notes Lead | 17 | || | week 3 |
 | Clean up features repo | Features Lead | 17 |
-| 1.11.0-alpha.2 release | Branch Manager | 18 | || | |master-blocking |
+| 1.11.0-alpha.1 release | Branch Manager | 18 | || | |master-blocking |
 | "Feature Freeze" begins (EOD PST) | Features Lead | 24 | || | week 4 |
-| 1.11.0-alpha.3 release | Branch Manager | |2 | | | week 5 | master-blocking |
+| 1.11.0-alpha.2 release | Branch Manager | |2 | | | week 5 | master-blocking |
 | Blog post: what we're working on for 1.11 | Communications | |10 | | | week 6 |
 | 1.11.0-beta.0 release | Branch Manager | |15 | | | week 7 | master-blocking, master-upgrade |
 | [1st stability evaluation to shorten Code Freeze](#conditionally-shortening-code-freeze) | Release Lead | | 18 | | | | master-blocking, master-upgrade |
