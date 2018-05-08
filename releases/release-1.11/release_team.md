@@ -2,7 +2,7 @@
 | ------ | ------ | ------ |
 | Lead | Josh Berkus ([@jberkus](https://github.com/jberkus))  |  |
 | Features | Ihor Dvoretskyi ([@idvoretskyi](https://github.com/idvoretskyi)) | Stephen Augustus ([@justaugustus](https://github.com/justaugustus)) |
-| CI Signal | Aishwarya Sundar ([@AishSundar](https://github.com/AishSundar)) | Mohammed Zeeshan Ahmed ([@mohammedzee1000](https://github.com/mohammedzee1000))/@mzee1000 |
+| CI Signal | Aishwarya Sundar ([@AishSundar](https://github.com/AishSundar)) | Mohammed Zeeshan Ahmed ([@mohammedzee1000](https://github.com/mohammedzee1000)) |
 | Test Infra | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)) | Cole Wagner ([@cjwagner](https://github.com/cjwagner)/cjwagner) |
 | Bug Triage | Tim Pepper ([@tpepper](https://github.com/tpepper)) | Cole Mickens ([@colemickens](https://github.com/colemickens)) |
 | Branch Manager | Caleb Miles ([@calebamiles](https://github.com/calebamiles)) | Sen Lu ([@krzyzacy](https://github.com/krzyzacy)) |
