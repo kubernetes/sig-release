@@ -45,6 +45,7 @@
 | Create 'release-1.11' branch and begin daily branch | Branch Manager | | 15 |
 | All release branch CI jobs created | Test Infra Lead | |18 |
 | Begin Code Slush | Bot, Lead | | 29 | | | week 9 |
+| Docs deadline - Open placeholder PRs | Docs Lead | | 25 | | | week 8 | |
 | All Issues & PRs must have complete labels | Bug Triage | | 29 |
 | | 1.11-blocking, master-blocking, master-upgrade |
 | 1.11.0-beta.1 release | Branch Manager | | 30 | || | 1.11-blocking, master-blocking, master-upgrade |
