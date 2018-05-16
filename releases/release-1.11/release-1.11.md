@@ -12,7 +12,7 @@
 * [CI Signal Report](http://bit.ly/k8s111-cisignal)
 * [Retrospective Document](http://bit.ly/k8s111-retro)
 
-**tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Tuesday, June 26th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Monday, May 28th** and ends **Tuesday, June 19th**, but [may be shortened](#conditionally-shortening-code-freeze) and begin later. Docs must be completed and reviewed by **Friday, June 11th**.
+**tl;dr** The 1.11 release cycle begins on **Tuesday, April 3rd, 2018**, and ends on release day, **Tuesday, June 26th**.  Feature freeze is **Tuesday, April 24th**.  Code freeze begins **Tuesday, June 5th** and ends **Tuesday, June 19th**. Docs must be completed and reviewed by **Friday, June 11th**.
 
 ## Notes About this Release
 
@@ -42,15 +42,15 @@
 | Blog post: what we're working on for 1.11 | Communications | |10 | | | week 6 |
 | 1.11.0-beta.0 release | Branch Manager | |15 | | | week 7 | master-blocking, master-upgrade |
 | [1st stability evaluation to shorten Code Freeze](#conditionally-shortening-code-freeze) | Release Lead | | 18 | | | | master-blocking, master-upgrade |
-| Create 'release-1.11' branch and begin daily branch | Branch Manager | |15 |
+| Create 'release-1.11' branch and begin daily branch | Branch Manager | | 15 |
 | All release branch CI jobs created | Test Infra Lead | |18 |
-| Begin Code Slush | Bot, Lead | | 22 | | | week 8 |
-| All Issues & PRs must have complete labels | Bug Triage | | 22 |
-| [2nd stability evaluation to shorten Code Freeze](#conditionally-shortening-code-freeze) | Release Lead | | 25 | | | | 1.11-blocking, master-blocking, master-upgrade |
-| Begin code freeze (EOD PST) | Bot, Lead | | 29 | | | week 9 | 1.11-blocking, master-blocking, master-upgrade |
-| Begin pruning | Lead and release team | | 29 |
-| 1.11.0-beta.1 release | Branch Manager | | 29 | || | 1.11-blocking, master-blocking, master-upgrade |
-| Begin MWF Burndown meetings | Lead | | 30 |
+| Begin Code Slush | Bot, Lead | | 29 | | | week 9 |
+| All Issues & PRs must have complete labels | Bug Triage | | 29 |
+| | 1.11-blocking, master-blocking, master-upgrade |
+| 1.11.0-beta.1 release | Branch Manager | | 30 | || | 1.11-blocking, master-blocking, master-upgrade |
+| Begin code freeze (EOD PST) | Bot, Lead | | | 5 | | week 10 | 1.11-blocking, master-blocking, master-upgrade |
+| Begin pruning | Lead and release team | |  | 5 |
+| Begin MWF Burndown meetings | Lead | | | 6 |
 | Unapproved/non-critical Issues/PRs get kicked out | Bot, Bug Triage | | | 1 |
 | Docs deadline - PRs ready for review | Docs Lead | | | 4 |
 | 1.11.0-beta.2 release | Branch Manager | | | 7 | |week 10 | 1.11-blocking, master-blocking, master-upgrade |
@@ -70,6 +70,8 @@
 ## Details
 
 ### Conditionally Shortening Code Freeze
+
+*Update: due to fairly stable test results and low bug counts, the Release Team shortened Code Freeze per the below*
 
 In an effort to make the Code Freeze period shorter, and allow more time for feature development, the Release Team will be testing out a procedure for postponing it based on release stability.
 
