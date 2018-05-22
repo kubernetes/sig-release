@@ -38,7 +38,7 @@
 - [Google group](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
 - [Slack channel](https://kubernetes.slack.com/messages/C2C40FMNF/)
 - [Events and meetings calendar](https://calendar.google.com/calendar/embed?src=coreos.com_regcvcrgvq98lua2ikijg1g1uk%40group.calendar.google.com&ctz=America/Los_Angeles)
-- [Meeting agenda and notes](https://docs.google.com/document/d/1vhsixdT58iJFfoGZbpmvI_xnK59XyAjtadu3h6hHPpY/edit?usp=sharing)
+- [Meeting agenda and notes](https://docs.google.com/a/google.com/document/d/e/2PACX-1vRsGZTlmggTI5T4ysYGlaJiaW3vgnrc_dlv-B1nnt69gU2Xt6vzRpZDMm-7driIj14T1DraicGzkAHr/pub)
 
 ## Broad responsibilities
 - Ensuring high quality Kubernetes releases
