@@ -17,6 +17,7 @@
 ## Notes About this Release
 
 * The Release Team will be using a conditional process to potentially shorten Code Freeze, [see below](#conditionally-shortening-code-freeze).
+* We have changed [burndown times]() to make it easier for more contributors to attend.
 * The feature process is remaining as it has in prior releases.
 * Features that don't have complete code and tests by [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.11/release-1.11.md#code-freeze) may be disabled by the release team before cutting the first beta.
 * The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) failures to SIGs throughout the cycle, not just near release cuts.
@@ -51,12 +52,12 @@
 | 1.11.0-beta.1 release | Branch Manager | | 30 | || | 1.11-blocking, master-blocking, master-upgrade |
 | Begin code freeze (EOD PST) | Bot, Lead | | | 5 | | week 10 | 1.11-blocking, master-blocking, master-upgrade |
 | Begin pruning | Lead and release team | |  | 5 |
-| Begin MWF Burndown meetings | Lead | | | 6 |
+| Begin MWF Burndown meetings | Lead | | | 1 |
 | Unapproved/non-critical Issues/PRs get kicked out | Bot, Bug Triage | | | 1 |
 | Docs deadline - PRs ready for review | Docs Lead | | | 4 |
 | 1.11.0-beta.2 release | Branch Manager | | | 7 | |week 10 | 1.11-blocking, master-blocking, master-upgrade |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | | | 11 | |week 11
-| Begin M-F Burndown meetings | Lead | | | 11 |
+| Begin M-F Burndown meetings | Lead | | | 18 |
 | End of code freeze (EOD PST) | Bot, Lead | | | 19 | |week 12 |
 | Perform final branch | Branch Manager | | | 20 |
 | 1.11.0-rc.1 release | Branch Manager | | | 20 | | | 1.11-blocking, master-blocking, master-upgrade |
@@ -90,7 +91,7 @@ All features going into the release must have an associated issue in the feature
 
 ### Code Slush
 
-Starting on Tuesday, May 22nd, only PRs labeled by their owner SIGs with [`status/approved-for-milestone`](/ephemera/issues.md) will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can add the `status/approved-for-milestone` label in cases where the SIG approvers do not have permissions to do so.
+Starting on Tuesday, May 29th, only PRs labeled by their owner SIGs with [`status/approved-for-milestone`](/ephemera/issues.md) will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can add the `status/approved-for-milestone` label in cases where the SIG approvers do not have permissions to do so.
 
 At this time, any issues/PRs with incomplete labels, or which are "stale" will be removed from the release.  The release team will work with SIGs to make sure that labels are complete prior to removal.
 
@@ -102,7 +103,7 @@ Starting at Code Slush, the release team will solicit and rule on [exception req
 
 ### Code Freeze
 
-All features going into the release must be code-complete (including tests) and have docs PRs open by Monday, May 28th.
+All features going into the release must be code-complete (including tests) and have docs PRs open by Tuesday, June 5th.
 
 The docs PRs don't have to be ready to merge, but it should be clear what the topic will be and who is responsible for writing it. This person will become the primary contact for the documentation lead. It’s incredibly important that documentation work gets completed as quickly as possible.
 
@@ -132,9 +133,9 @@ For documentation PRs:
 
 ### Burndown
 
-Burndown meetings are held on Mondays, Wednesdays and Fridays at TIME TBD until the final release is near, and then every business day until the release.  On Thursdays of the final 2 weeks, the meeting may happen alongside the Community Meeting.
+Burndown meetings are held on Mondays, Wednesdays and Fridays, alternating between 8am Pacific and 10am Pacific, until about a week before the scheduled final release when they become every day.
 
-Join the [Kubernetes Milestone Burndown Group](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) to get the calendar invite.
+Join the [Kubernetes Milestone Burndown Group](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) to get the calendar invite, or subscribe to the SIG-Release calendar.
 
 The intent of these meetings is to:
 
