@@ -2,6 +2,34 @@
 
 Kubernetes is a large growing community of volunteers, users, and vendors. The Kubernetes community has adopted this security disclosures and response policy to ensure we responsibly handle critical issues.
 
+
+**Table of Contents**
+
+- [Product Security Team (PST)](#product-security-team-pst)
+  * [Product Security Team Membership](#product-security-team-membership)
+    + [Roles](#roles)
+      - [Release/Project Manager](#release-project-manager)
+      - [Triage](#triage)
+      - [Infra](#infra)
+      - [Disclosure](#disclosure)
+    + [Per-Issue Assignment Options](#per-issue-assignment-options)
+      - [Scheduled Rotation](#scheduled-rotation)
+      - [Queue](#queue)
+    + [Release Manager Role](#release-manager-role)
+- [Disclosures](#disclosures)
+  * [Private Disclosure Processes](#private-disclosure-processes)
+  * [Public Disclosure Processes](#public-disclosure-processes)
+- [Patch, Release, and Public Communication](#patch-release-and-public-communication)
+  * [Fix Team Organization](#fix-team-organization)
+  * [Fix Development Process](#fix-development-process)
+  * [Fix Disclosure Process](#fix-disclosure-process)
+  * [Retrospective](#retrospective)
+- [Private Distributors List](#private-distributors-list)
+  * [Embargo Policy](#embargo-policy)
+  * [Contributing Back](#contributing-back)
+  * [Membership Criteria](#membership-criteria)
+  * [Requesting to Join](#requesting-to-join)
+
 ## Product Security Team (PST)
 
 Security vulnerabilities should be handled quickly and sometimes privately. The primary goal of this process is to reduce the total time users are vulnerable to publicly known exploits.
@@ -43,7 +71,7 @@ Who do you call when the cluster is not well or you gotta test something weird, 
 
 Handles public messaging around the bug. Documentation on how to upgrade. Changelog. Explaining to public the severity. Notifications of bugs sent to mailing lists etc. Requests CVEs.
 
-#### Per-Issue Assignment Options:
+#### Per-Issue Assignment Options
 
 ##### Scheduled Rotation
 
