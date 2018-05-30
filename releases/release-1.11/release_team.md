@@ -14,4 +14,4 @@
 
 Special thanks:
 
-- @cblecker
+- Christoph Blecker ([@cblecker](https://github.com/cblecker))
