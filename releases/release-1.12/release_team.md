@@ -6,7 +6,7 @@
 | Test Infra | Cole Wagner ([@cjwagner](https://github.com/cjwagner)) | Amit Watve ([@amwat](https://github.com/amwat)) |
 | Bug Triage |||
 | Branch Manager |||
-| Docs |||
+| Docs | Zach Arnold ([@zparnold](https://github.com/zparnold)) | Samuel Tauil ([@samueltauil](https://github.com/samueltauil)) |
 | Release Notes |||
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) ||
 | Patch Release Manager |||
