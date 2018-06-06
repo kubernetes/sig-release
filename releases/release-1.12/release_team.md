@@ -3,7 +3,7 @@
 | Lead | Tim Pepper ([@tpepper](https://github.com/tpepper)) | Aishwarya Sundar ([@AishSundar](https://github.com/AishSundar)) |
 | Features | Stephen Augustus ([@justaugustus](https://github.com/justaugustus)) | Kendrick Coleman ([@kacole2](https://github.com/kacole2)) |
 | CI Signal |||
-| Test Infra | Cole Wagner ([@cjwagner](https://github.com/cjwagner)) ||
+| Test Infra | Cole Wagner ([@cjwagner](https://github.com/cjwagner)) | Amit Watve ([@amwat](https://github.com/amwat)) |
 | Bug Triage |||
 | Branch Manager |||
 | Docs |||
