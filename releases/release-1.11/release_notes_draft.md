@@ -31,16 +31,28 @@ This tag is for changes that don't affect the user experience, such as behind-th
 * Default mount propagation has changed from "HostToContainer" ("rslave" in Linux terminology), as it was in 1.10, to "None" ("private") to match the behavior in 1.9 and earlier releases. "HostToContainer" as a default caused regressions in some pods. ([#62462](https://github.com/kubernetes/kubernetes/pull/62462), [@jsafrane](https://github.com/jsafrane))
 * The kube-apiserver `--storage-version` flag has been removed; you must use `--storage-versions` instead. ([#61453](https://github.com/kubernetes/kubernetes/pull/61453), [@hzxuzhonghu](https://github.com/hzxuzhonghu))
 
-
 ### Pending
 
 * client-go developers must switch to the new dynamic client. This new client is easier to use, and the old one is deprecated and will be removed in a future version. **(EDITOR'S NOTE:  If the old client is deprecated, it's still there, so do developers actually HAVE to switch, and if so, why?)** (#62913, @deads2k)
 * Add warnings that authors of aggregated API servers must not rely on authorization being done by the kube-apiserver. **(EDITOR'S NOTE: Why? And is this note that warnings must be added, or is this note the warning?)** ([#61349](https://github.com/kubernetes/kubernetes/pull/61349), [@sttts](https://github.com/sttts))
+* kubeadm: Remove the `.CloudProvider` and `.PrivilegedPods` configuration option (#63866, @luxas)
+* kubeadm now uses an upgraded API version for the configuration file, `kubeadm.k8s.io/v1alpha2`. kubeadm in v1.11 will still be able to read `v1alpha1` configuration, and will automatically convert the configuration to `v1alpha2` internally and when storing the configuration in the ConfigMap in the cluster. (#63788, @luxas)
+* The annotation `service.alpha.kubernetes.io/tolerate-unready-endpoints` is deprecated.  Users should use Service.spec.publishNotReadyAddresses instead. (#63742, @thockin)
+* avoid duplicate status in audit events (#62695, @CaoShuFeng)
+* You must now specify Node.Spec.ConfigSource.ConfigMap.KubeletConfigKey when using dynamic Kubelet config to tell the Kubelet which key of the ConfigMap identifies its config file. (#59847, @mtaufen)
+* Kubernetes version command line parameter in kubeadm has been updated to drop an unnecessary redirection from ci/latest.txt to ci-cross/latest.txt. Users should know exactly where the builds are stored on Google Cloud storage buckets from now on. For example for 1.9 and 1.10, users can specify ci/latest-1.9 and ci/latest-1.10 as the CI build jobs what build images correctly updates those. The CI jobs for master update the ci-cross/latest location, so if you are looking for latest master builds, then the correct parameter to use would be ci-cross/latest. (#63504, @dims)
+* GC is now bound by QPS (it wasn't before) and so if you need more QPS to avoid ratelimiting GC, you'll have to set it. (#63657, @shyamjvs)
 
 #### New Deprecations
 
 * `--show-all`, which only affected pods, and even then only for human readable/non-API printers, is inert in v1.11, and will be removed in a future release. ([#60793](https://github.com/kubernetes/kubernetes/pull/60793), [@charrywanganthony](https://github.com/charrywanganthony))
 * Deprecate kubectl rolling-update  (#61285, @soltysh)
+* Deprecate InfluxDB cluster monitoring (#62328, @serathius)
+* The annotation `service.alpha.kubernetes.io/tolerate-unready-endpoints` is deprecated.  Users should use Service.spec.publishNotReadyAddresses instead. (#63742, @thockin)
+* kube-apiserver: the default `--endpoint-reconciler-type` is now `lease`. The `master-count` endpoint reconciler type is deprecated and will be removed in 1.13. (#63383, @liggitt)
+* OpenStack built-in cloud provider is now deprecated. Please use the external cloud provider for OpenStack. (#63524, @dims)
+* The Kubelet's deprecated --allow-privileged flag now defaults to true. This enables users to stop setting --allow-privileged in order to transition to PodSecurityPolicy. Previously, users had to continue setting --allow-privileged, because the default was false. (#63442, @mtaufen)
+* The old dynamic client has been replaced by a new one.  The previous dynamic client will exist for one release in `client-go/deprecated-dynamic`.  Switch as soon as possible. (#63446, @deads2k)
 
 #### Removed Deprecations
 
@@ -60,6 +72,7 @@ This tag is for changes that don't affect the user experience, such as behind-th
 #### Alpha, Beta, Stable
 
 * The --experimental-qos-reserve kubelet flags has been replaced by the alpha level --qos-reserved flag or the QOSReserved field in the kubeletconfig, and requires the QOSReserved feature gate to be enabled. (#62509, @sjenning)
+* The `PriorityClass` API is promoted to `scheduling.k8s.io/v1beta1` (#63100, @ravisantoshgudimetla)
 
 **Pending**
 
@@ -69,7 +82,6 @@ This tag is for changes that don't affect the user experience, such as behind-th
 
 ### Sig API-Machinery
 * The kubeadm config option `API.ControlPlaneEndpoint` has been extended to take an optional port which may differ from the apiserver's bind port. ([#62314](https://github.com/kubernetes/kubernetes/pull/62314), [@rjosephwright](https://github.com/rjosephwright))
-
 
 ### Sig Auth
 * RBAC information is now included in audit logs via audit.Event annotations: ([#58807](https://github.com/kubernetes/kubernetes/pull/58807), [@CaoShuFeng](https://github.com/CaoShuFeng))
@@ -138,9 +150,39 @@ If excludeMasterFromStandardLB is not set, it will be default to true, which mea
 * Add all kinds of resource objects' statuses in HPA description. ([#59609](https://github.com/kubernetes/kubernetes/pull/59609), [@zhangxiaoyu-zidif](https://github.com/zhangxiaoyu-zidif))
 * Add apiserver configuration option to choose audit output version. **(Which is?)** ([#60056](https://github.com/kubernetes/kubernetes/pull/60056), [@crassirostris](https://github.com/crassirostris))
 * Implement preemption for extender with a verb and new interface ([#58717](https://github.com/kubernetes/kubernetes/pull/58717), [@resouer](https://github.com/resouer))
+* vSphere Cloud Provider: add SAML token authentication support (#63824, @dougm)
+* adds the `kubeadm upgrade diff` command to show how static pod manifests will be changed by an upgrade. (#63930, @liztio)
+* Adds a `kubeadm config images pull` command to pull container images used by kubeadm. (#63833, @chuckha)
+* Restores the pre-1.10 behavior of the openstack cloud provider which uses the instance name as the Kubernetes Node name. This requires instances be named with RFC-1123 compatible names. (#63903, @liggitt)
+* Added support for NFS relations on kubernetes-worker charm. (#63817, @hyperbolic2346)
+* Kubernetes cluster on GCE have crictl installed now. Users can use it to help debug their node. The documentation of crictl can be found https://github.com/kubernetes-incubator/cri-tools/blob/master/docs/crictl.md. (#63357, @Random-Liu)
+* The NodeRestriction admission plugin now prevents kubelets from modifying/removing taints applied to their Node API object. (#63167, @liggitt)
+* kubeadm now checks that IPv4/IPv6 forwarding is enabled (#63872, @kad)
+* kubeadm will now deploy CoreDNS by default instead of KubeDNS (#63509, @detiber)
+* owner references can be set during creation without deletion power (#63403, @deads2k)
+* Implements OIDC distributed claims. (#63213, @filmil)
+* Use /usr/bin/env in all script shebangs to increase portability. (#62657, @matthyx)
+* `kubectl cp` supports completion. (#60371, @superbrothers)
+* Azure VMSS: support VM names to contain the `_` character (#63526, @djsly)
+* Create a new `dryRun` query parameter for mutating endpoints. If the parameter is set, then the query will be rejected, as the feature is not implemented yet. This will allow forward compatibility with future clients; otherwise, future clients talking with older apiservers might end up modifying a resource even if they include the `dryRun` query parameter. (#63557, @apelisse)
+* Search standard KubeConfig file locations when using `kubeadm token` without `--kubeconfig`. (#62850, @neolit123)
+*   Include the list of security groups when failing with the errors that more then one is tagged (#58874, @sorenmat)
+* Allow "required" to be used at the CRD OpenAPI validation schema when the /status subresource is enabled. (#63533, @sttts)
+* try to read openstack auth config from client config and fall back to read from the environment variables if not available (#60200, @dixudx)
+* Services can listen on same host ports on different interfaces with --nodeport-addresses specified (#62003, @m1093782566)
+* Adding initial Korean translation for kubectl (#62040, @ianychoi)
+* Report node DNS info with --node-ip flag (#63170, @micahhausler)
+* CustomResourceDefinitions Status subresource now supports GET and PATCH (#63619, @roycaihw)
+* Re-enable nodeipam controller for external clouds.  (#63049, @andrewsykim)
+* Removes a preflight check for kubeadm that validated custom kube-apiserver, kube-controller-manager and kube-scheduler arguments. (#63673, @chuckha)
+* Adds a list-images subcommand to kubeadm that lists required images for a kubeadm install. (#63450, @chuckha)
+* list/watch API requests with a fieldSelector that specifies `metadata.name` can now be authorized as requests for an individual named resource (#63469, @wojtek-t)
+* Add a way to pass extra arguments to etcd. (#63961, @mborsz)
+* `kubectl delete` with selection criteria defaults to ignoring not found errors (#63490, @deads2k)
+* When updating /status subresource of a custom resource, only the value at the `.status` subpath for the update is considered. (#63385, @CaoShuFeng)
+* Supported nodeSelector.matchFields (node's `metadata.node`) in scheduler. (#62453, @k82cn)
 
 #### New Stuff
-
 
 #### Version Upgrades
 
@@ -160,6 +202,7 @@ If excludeMasterFromStandardLB is not set, it will be default to true, which mea
     * - Update go version to 1.9.3.
 * Cluster Autoscaler 1.2.0 - release notes available here: https://github.com/kubernetes/autoscaler/releases ([#61561](https://github.com/kubernetes/kubernetes/pull/61561), [@mwielgus](https://github.com/mwielgus))
 * Bump Heapster to v1.5.2 ([#61396](https://github.com/kubernetes/kubernetes/pull/61396), [@kawych](https://github.com/kawych))
+* Update to use go1.10.2 ([#63412](https://github.com/kubernetes/kubernetes/pull/63412), [@praseodym](https://github.com/praseodym))
 
 #### Not Very Notable
 
@@ -208,6 +251,14 @@ If excludeMasterFromStandardLB is not set, it will be default to true, which mea
 * Modify the kubeadm upgrade DAG for the TLS Upgrade (#62655, @stealthybox)
 * stop kubelet to cloud provider integration potentially wedging kubelet sync loop (#62543, @ingvagabund)
 * Set pod status to "Running" if there is at least one container still reporting as "Running" status and others are "Completed". (#62642, @ceshihao)
+* Add 'UpdateStrategyType' and 'RollingUpdateStrategy' to 'kubectl describe sts' command output. (#63844, @tossmilestone)
+* kubeadm has removed `.Etcd.SelfHosting` from its configuration API. It was never used in practice. (#63871, @luxas)
+* Fix memory cgroup notifications, and reduce associated log spam. (#63220, @dashpole)
+* The status of dynamic Kubelet config is now reported via Node.Status.Config, rather than the KubeletConfigOk node condition. (#63314, @mtaufen)
+* use subtest for table units (pkg-scheduler-algorithm-priorities) (#63658, @xchapter7x)
+* CRI: update documents for container logpath. The container log path has been changed from containername_attempt#.log to containername/attempt#.log  (#62015, @feiskyer)
+* kubeadm will no longer generate an unused etcd CA and certificates when configured to use an external etcd cluster. (#63806, @detiber)
+* Apply pod name and namespace labels to pod cgroup in cAdvisor metrics (#63406, @derekwaynecarr)
 
 ## Bug Fixes
 
@@ -223,6 +274,16 @@ If excludeMasterFromStandardLB is not set, it will be default to true, which mea
 * kube-scheduler has been fixed to use `--leader-elect` option back to true (as it was in previous versions) ([#59732](https://github.com/kubernetes/kubernetes/pull/59732), [@dims](https://github.com/dims))
 * kubectl: fixes issue with `-o yaml` and `-o json` omitting kind and apiVersion when used with `--dry-run` ([#61808](https://github.com/kubernetes/kubernetes/pull/61808), [@liggitt](https://github.com/liggitt))
 * Ensure reasons end up as comments in `kubectl edit`. ([#60990](https://github.com/kubernetes/kubernetes/pull/60990), [@bmcstdio](https://github.com/bmcstdio))
+* Remove UID mutation from request.context. (#63957, @hzxuzhonghu)
+* minor fix for VolumeZoneChecker predicate, storageclass can be in annotation and spec. (#63749, @wenlxie)
+* Fixes issue where subpath readOnly mounts failed (#63045, @msau42)
+* `kubectl create [secret | configmap] --from-file` now works on Windows with fully-qualified paths (#63439, @liggitt)
+* Fix stackdriver metrics for node memory using wrong metric type (#63535, @serathius)
+* kubeadm upgrade now supports external etcd setups again (#63495, @detiber)
+* fix mount unmount failure for a Windows pod (#63272, @andyzhangx)
+* Do not check vmSetName when getting Azure node's IP (#63541, @feiskyer)
+* [fluentd-gcp addon] Use the logging agent's node name as the metadata agent URL. (#63353, @bmoyles0117)
+* corrects a race condition in bootstrapping aggregated cluster roles in new HA clusters (#63761, @liggitt)
 
 #### General Fixes and Reliability
 
@@ -277,79 +338,14 @@ If excludeMasterFromStandardLB is not set, it will be default to true, which mea
 * Nodes are not deleted from kubernetes anymore if node is shutdown in Openstack. ([#59931](https://github.com/kubernetes/kubernetes/pull/59931), [@zetaab](https://github.com/zetaab))
 * authz: nodes should not be able to delete themselves (#62818, @mikedanese)
 * removed unsafe double RLock in cpumanager (#62464, @choury)
+* kubelet: fix hangs in updating Node status after network interruptions/changes between the kubelet and API server (#63492, @liggitt)
+* the shortcuts which were moved server-side in at least 1.9 have been removed from being hardcoded in kubectl (#63507, @deads2k)
+* Increase scheduler cache generation number monotonically in order to avoid collision and use of stale information in scheduler. (#63264, @bsalamat)
+* Fixes fake client generation for non-namespaced subresources (#60445, @jhorwit2)
+* kubelet: fix hangs in updating Node status after network interruptions/changes between the kubelet and API server (#63492, @liggitt)
 
 ## Not Sorted Yet
 
 ### Action Required
 
-*  kubeadm: Remove the `.CloudProvider` and `.PrivilegedPods` configuration option (#63866, @luxas)
-* [action required] kubeadm now uses an upgraded API version for the configuration file, `kubeadm.k8s.io/v1alpha2`. kubeadm in v1.11 will still be able to read `v1alpha1` configuration, and will automatically convert the configuration to `v1alpha2` internally and when storing the configuration in the ConfigMap in the cluster. (#63788, @luxas)
-* The annotation `service.alpha.kubernetes.io/tolerate-unready-endpoints` is deprecated.  Users should use Service.spec.publishNotReadyAddresses instead. (#63742, @thockin)
-* avoid duplicate status in audit events (#62695, @CaoShuFeng)
-
 ### Other notable changes
-
-* Add 'UpdateStrategyType' and 'RollingUpdateStrategy' to 'kubectl describe sts' command output. (#63844, @tossmilestone)
-* Remove UID mutation from request.context. (#63957, @hzxuzhonghu)
-* kubeadm has removed `.Etcd.SelfHosting` from its configuration API. It was never used in practice. (#63871, @luxas)
-* list/watch API requests with a fieldSelector that specifies `metadata.name` can now be authorized as requests for an individual named resource (#63469, @wojtek-t)
-* Add a way to pass extra arguments to etcd. (#63961, @mborsz)
-* minor fix for VolumeZoneChecker predicate, storageclass can be in annotation and spec. (#63749, @wenlxie)
-* vSphere Cloud Provider: add SAML token authentication support (#63824, @dougm)
-* adds the `kubeadm upgrade diff` command to show how static pod manifests will be changed by an upgrade. (#63930, @liztio)
-* Fix memory cgroup notifications, and reduce associated log spam. (#63220, @dashpole)
-* Adds a `kubeadm config images pull` command to pull container images used by kubeadm. (#63833, @chuckha)
-* Restores the pre-1.10 behavior of the openstack cloud provider which uses the instance name as the Kubernetes Node name. This requires instances be named with RFC-1123 compatible names. (#63903, @liggitt)
-* Added support for NFS relations on kubernetes-worker charm. (#63817, @hyperbolic2346)
-* Deprecate InfluxDB cluster monitoring (#62328, @serathius)
-* Kubernetes cluster on GCE have crictl installed now. Users can use it to help debug their node. The documentation of crictl can be found https://github.com/kubernetes-incubator/cri-tools/blob/master/docs/crictl.md. (#63357, @Random-Liu)
-* The NodeRestriction admission plugin now prevents kubelets from modifying/removing taints applied to their Node API object. (#63167, @liggitt)
-* The status of dynamic Kubelet config is now reported via Node.Status.Config, rather than the KubeletConfigOk node condition. (#63314, @mtaufen)
-* kubeadm now checks that IPv4/IPv6 forwarding is enabled (#63872, @kad)
-* kubeadm will now deploy CoreDNS by default instead of KubeDNS (#63509, @detiber)
-* use subtest for table units (pkg-scheduler-algorithm-priorities) (#63658, @xchapter7x)
-* The annotation `service.alpha.kubernetes.io/tolerate-unready-endpoints` is deprecated.  Users should use Service.spec.publishNotReadyAddresses instead. (#63742, @thockin)
-* kubeadm upgrade now supports external etcd setups again (#63495, @detiber)
-* fix mount unmount failure for a Windows pod (#63272, @andyzhangx)
-* CRI: update documents for container logpath. The container log path has been changed from containername_attempt#.log to containername/attempt#.log  (#62015, @feiskyer)
-* Create a new `dryRun` query parameter for mutating endpoints. If the parameter is set, then the query will be rejected, as the feature is not implemented yet. This will allow forward compatibility with future clients; otherwise, future clients talking with older apiservers might end up modifying a resource even if they include the `dryRun` query parameter. (#63557, @apelisse)
-* kubelet: fix hangs in updating Node status after network interruptions/changes between the kubelet and API server (#63492, @liggitt)
-* The `PriorityClass` API is promoted to `scheduling.k8s.io/v1beta1` (#63100, @ravisantoshgudimetla)
-* Services can listen on same host ports on different interfaces with --nodeport-addresses specified (#62003, @m1093782566)
-* kubeadm will no longer generate an unused etcd CA and certificates when configured to use an external etcd cluster. (#63806, @detiber)
-* corrects a race condition in bootstrapping aggregated cluster roles in new HA clusters (#63761, @liggitt)
-* Adding initial Korean translation for kubectl (#62040, @ianychoi)
-* Report node DNS info with --node-ip flag (#63170, @micahhausler)
-* The old dynamic client has been replaced by a new one.  The previous dynamic client will exist for one release in `client-go/deprecated-dynamic`.  Switch as soon as possible. (#63446, @deads2k)
-* CustomResourceDefinitions Status subresource now supports GET and PATCH (#63619, @roycaihw)
-* Re-enable nodeipam controller for external clouds.  (#63049, @andrewsykim)
-* Removes a preflight check for kubeadm that validated custom kube-apiserver, kube-controller-manager and kube-scheduler arguments. (#63673, @chuckha)
-* Adds a list-images subcommand to kubeadm that lists required images for a kubeadm install. (#63450, @chuckha)
-* Apply pod name and namespace labels to pod cgroup in cAdvisor metrics (#63406, @derekwaynecarr)
-* try to read openstack auth config from client config and fall back to read from the environment variables if not available (#60200, @dixudx)
-* GC is now bound by QPS (it wasn't before) and so if you need more QPS to avoid ratelimiting GC, you'll have to set it. (#63657, @shyamjvs)
-* The Kubelet's deprecated --allow-privileged flag now defaults to true. This enables users to stop setting --allow-privileged in order to transition to PodSecurityPolicy. Previously, users had to continue setting --allow-privileged, because the default was false. (#63442, @mtaufen)
-* You must now specify Node.Spec.ConfigSource.ConfigMap.KubeletConfigKey when using dynamic Kubelet config to tell the Kubelet which key of the ConfigMap identifies its config file. (#59847, @mtaufen)
-* Kubernetes version command line parameter in kubeadm has been updated to drop an unnecessary redirection from ci/latest.txt to ci-cross/latest.txt. Users should know exactly where the builds are stored on Google Cloud storage buckets from now on. For example for 1.9 and 1.10, users can specify ci/latest-1.9 and ci/latest-1.10 as the CI build jobs what build images correctly updates those. The CI jobs for master update the ci-cross/latest location, so if you are looking for latest master builds, then the correct parameter to use would be ci-cross/latest. (#63504, @dims)
-* Search standard KubeConfig file locations when using `kubeadm token` without `--kubeconfig`. (#62850, @neolit123)
-*   Include the list of security groups when failing with the errors that more then one is tagged (#58874, @sorenmat)
-* Allow "required" to be used at the CRD OpenAPI validation schema when the /status subresource is enabled. (#63533, @sttts)
-* When updating /status subresource of a custom resource, only the value at the `.status` subpath for the update is considered. (#63385, @CaoShuFeng)
-* Supported nodeSelector.matchFields (node's `metadata.node`) in scheduler. (#62453, @k82cn)
-* Do not check vmSetName when getting Azure node's IP (#63541, @feiskyer)
-* Fix stackdriver metrics for node memory using wrong metric type (#63535, @serathius)
-* [fluentd-gcp addon] Use the logging agent's node name as the metadata agent URL. (#63353, @bmoyles0117)
-* `kubectl cp` supports completion. (#60371, @superbrothers)
-* Azure VMSS: support VM names to contain the `_` character (#63526, @djsly)
-* OpenStack built-in cloud provider is now deprecated. Please use the external cloud provider for OpenStack. (#63524, @dims)
-* the shortcuts which were moved server-side in at least 1.9 have been removed from being hardcoded in kubectl (#63507, @deads2k)
-* Fixes fake client generation for non-namespaced subresources (#60445, @jhorwit2)
-* `kubectl delete` with selection criteria defaults to ignoring not found errors (#63490, @deads2k)
-* Increase scheduler cache generation number monotonically in order to avoid collision and use of stale information in scheduler. (#63264, @bsalamat)
-* Fixes issue where subpath readOnly mounts failed (#63045, @msau42)
-* Update to use go1.10.2 (#63412, @praseodym)
-* `kubectl create [secret | configmap] --from-file` now works on Windows with fully-qualified paths (#63439, @liggitt)
-* kube-apiserver: the default `--endpoint-reconciler-type` is now `lease`. The `master-count` endpoint reconciler type is deprecated and will be removed in 1.13. (#63383, @liggitt)
-* owner references can be set during creation without deletion power (#63403, @deads2k)
-* Implements OIDC distributed claims. (#63213, @filmil)
-* Use /usr/bin/env in all script shebangs to increase portability. (#62657, @matthyx)
