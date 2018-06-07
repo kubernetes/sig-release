@@ -10,5 +10,5 @@
 | Docs | Zach Arnold ([@zparnold](https://github.com/zparnold)) | Samuel Tauil ([@samueltauil](https://github.com/samueltauil)) |
 | Release Notes |||
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) ||
-| Patch Release Manager |||
+| Patch Release Manager | Pengfei Ni ([@feiskyer](https://github.com/feiskyer)) ||
 | Approval Notifier | k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) ||
