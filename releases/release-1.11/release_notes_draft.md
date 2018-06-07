@@ -115,6 +115,19 @@ If excludeMasterFromStandardLB is not set, it will be default to true, which mea
 * gitRepo volumes in pods no longer require git 1.8.5 or newer; older git versions are now supported. ([#62394](https://github.com/kubernetes/kubernetes/pull/62394), [@jsafrane](https://github.com/jsafrane))
 * Added support for resizing Portworx volumes. (#62308, @harsh-px)
 
+### Sig Windows
+
+This release supports more of Kubernetes API for pods and containers on Windows:
+
+* Metrics: Pod, Container, Log filesystem ([#62266](https://github.com/kubernetes/kubernetes/pull/62266), [@feiskyer](https://github.com/feiskyer))
+* Security contexts: run_as_user [#64009](https://github.com/kubernetes/kubernetes/pull/64009), ([@feiskyer](https://github.com/feiskyer))
+* Storage: Local persistent volumes ([#62012](https://github.com/kubernetes/kubernetes/pull/62012), [@andyzhangx](https://github.com/andyzhangx)) and fstype for Azure disk ([#61267](https://github.com/kubernetes/kubernetes/pull/61267), [@andyzhangx](https://github.com/andyzhangx))
+
+Improvements in Windows Server version 1803 also bring new storage functionality to Kubernetes v1.11
+
+* Volume mounts for ConfigMap and Secret
+* Flexvolume plugins for SMB and iSCSI storage are also available out-of-tree at [Microsoft/K8s-Storage-Plugins](https://github.com/Microsoft/K8s-Storage-Plugins)
+
 ### Uncategorized
 
 * Added prometheus cluster monitoring addon to kube-up ([#62195](https://github.com/kubernetes/kubernetes/pull/62195), [@serathius](https://github.com/serathius))
