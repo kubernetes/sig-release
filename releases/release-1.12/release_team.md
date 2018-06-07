@@ -5,6 +5,7 @@
 | CI Signal || Christian Hernandez ([@christianh814](https://github.com/christianh814)) |
 | Test Infra | Cole Wagner ([@cjwagner](https://github.com/cjwagner)) | Amit Watve ([@amwat](https://github.com/amwat)) |
 | Bug Triage |||
+| PR Triage |||
 | Branch Manager |||
 | Docs | Zach Arnold ([@zparnold](https://github.com/zparnold)) | Samuel Tauil ([@samueltauil](https://github.com/samueltauil)) |
 | Release Notes |||
