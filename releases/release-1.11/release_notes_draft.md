@@ -25,6 +25,75 @@ This tag is for changes that don't affect the user experience, such as behind-th
 - April 24, 2018: Added pending notes from v1.10.0 to to 3dbcd1d ([@marpaia](https://github.com/marpaia))
 - April 28, 2018: Sorted through 4/24/18 notes ([@nickchase](https://github.com/nickchase))
 - May 17, 2018: Added unsorted notes from 3bdcd1d to f86ec3f ([@marpaia](https://github.com/marpaia))
+- June 8, 2018: Added placeholders for "Major Themes"
+
+## Major Themes
+
+### sig-api-machinery
+
+
+### sig-apps
+
+
+### sig-architecture
+
+
+### sig-auth
+
+
+### sig-autoscaling
+
+
+### sig-aws
+
+
+### sig-azure
+
+
+### sig-big-data
+
+
+### sig-cli
+
+
+### sig-cluster-lifecycle
+
+
+### sig-cluster-ops
+
+
+### sig-gcp
+
+
+### sig-instrumentation
+
+
+### sig-multicluster
+
+
+### sig-network
+
+
+### sig-node
+
+
+### sig-openstack
+
+
+### sig-scalability
+
+
+### sig-scheduling
+
+
+### sig-service-catalog
+
+
+### sig-storage
+
+
+### sig-windows
+
 
 ## Before Upgrading
 
