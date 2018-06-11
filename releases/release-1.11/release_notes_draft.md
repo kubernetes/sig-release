@@ -68,6 +68,7 @@ This tag is for changes that don't affect the user experience, such as behind-th
 
 ### sig-instrumentation
 
+* Deprecating Heapster: as part of the ongoing efforts to moving to the new Kubernetes monitoring model, Heapster is now deprecated.  Clusters still using it for autoscaling should be migrated over to [metrics-server ](https://github.com/kubernetes-incubator/metrics-server) and the [custom metrics API](https://github.com/kubernetes/metrics).  See the deprecation note below for more information on this.  Clusters using Heapster for transfering metrics into long-term storage should consider using their metric solution's native Kubernetes support, if present, or should consider alternative solutions.
 
 ### sig-multicluster
 
@@ -123,6 +124,8 @@ This tag is for changes that don't affect the user experience, such as behind-th
 * OpenStack built-in cloud provider is now deprecated. Please use the external cloud provider for OpenStack. (#63524, @dims)
 * The Kubelet's deprecated --allow-privileged flag now defaults to true. This enables users to stop setting --allow-privileged in order to transition to PodSecurityPolicy. Previously, users had to continue setting --allow-privileged, because the default was false. (#63442, @mtaufen)
 * The old dynamic client has been replaced by a new one.  The previous dynamic client will exist for one release in `client-go/deprecated-dynamic`.  Switch as soon as possible. (#63446, @deads2k)
+* Heapster is now deprecated, and support for setting up Heapster in Kubernetes and consuming it from the Horizontal Pod Autoscaler will be removed in a future release.  If you are currently manually setting `--horizontal-pod-autoscaler-use-rest-clients=false` on the controller-manager, please migrate to metrics-server, and set the flag back to its default (`true`).  For more information on the Heapster deprecation, see [the Heapster deprecation timeline](https://github.com/kubernetes/heapster/blob/master/docs/deprecation.md).
+
 
 #### Removed Deprecations
 
