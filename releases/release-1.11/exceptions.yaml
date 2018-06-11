@@ -1,0 +1,17 @@
+# Exceptions to code freeze requested in 1.11
+# Google Group: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown
+# Release Team Lead: Josh Berkus (@jberkus)
+
+- name: "Update Istio addon manifest"
+  issue: "https://github.com/kubernetes/kubernetes/issues/64563"
+  thread: "https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/68ivj9MGBdU"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/64537"
+  status: "approved"
+
+- name: "Implement IPVS-based in-cluster service load balancing"
+  issue: "https://github.com/kubernetes/features/issues/265"
+  thread: "https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/MJrcqkLAcn0"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/58442"
+  status: "approved"
