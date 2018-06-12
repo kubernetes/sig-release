@@ -4,14 +4,6 @@ This document is for release notes for Kubernetes 1.11. These release notes are 
 
 Commits should be tagged as follows:
 
-**/release-note-before-upgrading**
-
-This tag is for urgent changes that users must take into consideration before upgrading. For example, mandatory upgrades of dependencies or other upgrade/downgrade issues belong in this category.
-
-**/release-note-feature**
-
-This tag is for changes that are related to major features that are listed in the feature tracking spreadsheet.
-
 **/release-note**
 
 This tag is for changes that are user-facing. For example, API changes or CLI flag changes belong in this category. Fixed bugs that affect the user experience should also be in this category.
