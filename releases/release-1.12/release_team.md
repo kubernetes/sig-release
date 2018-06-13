@@ -2,7 +2,7 @@
 | ------ | ------ | ------ |
 | Lead | Tim Pepper ([@tpepper](https://github.com/tpepper)) | Aishwarya Sundar ([@AishSundar](https://github.com/AishSundar)) |
 | Features | Stephen Augustus ([@justaugustus](https://github.com/justaugustus)) | Kendrick Coleman ([@kacole2](https://github.com/kacole2)), Robert Sandoval ([@robertsandoval](https://github.com/robertsandoval)), Rajendar Talatam ([@rajendar38](https://github.com/rajendar38)) |
-| CI Signal || Christian Hernandez ([@christianh814](https://github.com/christianh814)) |
+| CI Signal | Mohammed Zeeshan Ahmed ([@mohammedzee1000](https://github.com/mohammedzee1000)) | Christian Hernandez ([@christianh814](https://github.com/christianh814)) |
 | Test Infra | Cole Wagner ([@cjwagner](https://github.com/cjwagner)) | Amit Watve ([@amwat](https://github.com/amwat)), Paul Renato ([@prwitt](https://github.com/prwitt)) |
 | Bug Triage || Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)), Arnaud Meukam ([@ameukam](https://github.com/ameukam)) |
 | PR Triage || Anubhuti Manohar ([@amanohar](https://github.com/amanohar)) |
