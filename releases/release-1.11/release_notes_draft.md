@@ -102,7 +102,17 @@ This tag is for changes that don't affect the user experience, such as behind-th
 
 * Default mount propagation has changed from "HostToContainer" ("rslave" in Linux terminology), as it was in 1.10, to "None" ("private") to match the behavior in 1.9 and earlier releases. "HostToContainer" as a default caused regressions in some pods. ([#62462](https://github.com/kubernetes/kubernetes/pull/62462), [@jsafrane](https://github.com/jsafrane))
 * The kube-apiserver `--storage-version` flag has been removed; you must use `--storage-versions` instead. ([#61453](https://github.com/kubernetes/kubernetes/pull/61453), [@hzxuzhonghu](https://github.com/hzxuzhonghu))
-
+* [Pod priority and preemption](https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/)
+is enabled by default. Even if you don't plan to use this feature,
+you might need to take some action right after upgrading.
+In multi-tenant clusters where not all users are trusted, you are advised to create appropriate
+amount of quota for two default priority classes, `system-cluster-critical` and
+`system-node-critical`. These two priority classes are added to clusters by default.
+[ResourceQuota](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
+should be created to limit users from creating Pods at these priorities if not all users of your
+cluster are trusted. We do not advise disabling this feature since critical system Pods rely on
+the scheduler preemption to be scheduled when cluster is under resource pressure.
+ 
 ### Pending
 
 * client-go developers must switch to the new dynamic client. This new client is easier to use, and the old one is deprecated and will be removed in a future version. **(EDITOR'S NOTE:  If the old client is deprecated, it's still there, so do developers actually HAVE to switch, and if so, why?)** (#62913, @deads2k)
@@ -345,18 +355,18 @@ If excludeMasterFromStandardLB is not set, it will be default to true, which mea
 ### Sig Scheduler
 * kube-scheduler now has the --write-config-to flag ([#62515](https://github.com/kubernetes/kubernetes/pull/62515), [@resouer](https://github.com/resouer))
 * Performance of the affinity/anti-affinity predicate for the default scheduler has been significantly improved. ([#62211](https://github.com/kubernetes/kubernetes/pull/62211), [@bsalamat](https://github.com/bsalamat))
+* The scheduler schedules DaemonSet Pods. This is an alpha feature disabled by default. ([#63223](https://github.com/kubernetes/kubernetes/pull/63223), [@k82cn](https://github.com/k82cn))
+* The `PriorityClass` API is promoted to `scheduling.k8s.io/v1beta1` ([#63100](https://github.com/kubernetes/kubernetes/pull/63100), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))
+* Rescheduler is now used only to help schedule critical DaemonSet Pods. Other critical pods rely
+ on the scheduler preemption to be scheduled when a cluster is under resource pressure. ([#64592](https://github.com/kubernetes/kubernetes/pull/64592), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))
+* Improve the scheduler's cache robustness by increasing cache generation numbers monotonically in
+  order to avoid collision and use of stale information in the scheduler. ([#63264](https://github.com/kubernetes/kubernetes/pull/63264), [@bsalamat](https://github.com/bsalamat))
+* `nodeSelector` has a new field called `matchFields`. It can be used to constraint placement of a
+ Pod on a Node with the given name. ([#62453](https://github.com/kubernetes/kubernetes/pull/62453), [@k82cn](https://github.com/k82cn))
 
 ### Sig Storage
 * gitRepo volumes in pods no longer require git 1.8.5 or newer; older git versions are now supported. ([#62394](https://github.com/kubernetes/kubernetes/pull/62394), [@jsafrane](https://github.com/jsafrane))
 * Added support for resizing Portworx volumes. (#62308, @harsh-px)
-* Revert #64364 to resurrect rescheduler. More info https://github.com/kubernetes/kubernetes/issues/64725 :) (#64592, @ravisantoshgudimetla)
-* Schedule DaemonSet Pods in scheduler. (#63223, @k82cn)
-* Remove rescheduler from master. (#64364, @ravisantoshgudimetla)
-* use subtest for table units (pkg-scheduler-algorithm-priorities) (#63658, @xchapter7x)
-* The `PriorityClass` API is promoted to `scheduling.k8s.io/v1beta1` (#63100, @ravisantoshgudimetla)
-* Supported nodeSelector.matchFields (node's `metadata.node`) in scheduler. (#62453, @k82cn)
-* Increase scheduler cache generation number monotonically in order to avoid collision and use of stale information in scheduler. (#63264, @bsalamat)
-
 
 #### Pending
 
