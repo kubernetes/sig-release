@@ -34,6 +34,13 @@ This tag is for changes that don't affect the user experience, such as behind-th
 
 ### sig-auth
 
+* [client-go credential plugins](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins) added support for obtaining TLS credentials from an external plugin, and graduated to beta status.
+* PodSecurityPolicy gained the ability to [limit hostPath volume mounts to be read-only](https://kubernetes.io/docs/concepts/policy/pod-security-policy/#volumes-and-file-systems).
+* RBAC [cluster role aggregation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles) (introduced in 1.9) graduated to stable status with no changes.
+* Audit events can now be annotated with information about how an API request was handled:
+  * Authorization sets `authorization.k8s.io/decision` and `authorization.k8s.io/reason` annotations with the authorization decision ("allow" or "forbid") and a human-readable description of why the decision was made (for example, RBAC includes the name of the role/binding/subject which allowed a request).
+  * PodSecurityPolicy admission sets `podsecuritypolicy.admission.k8s.io/admit-policy` and `podsecuritypolicy.admission.k8s.io/validate-policy` annotations containing the name of the policy that allowed a pod to be admitted.
+* The NodeRestriction admission plugin now prevents kubelets from modifying taints on their Node API objects.
 
 ### sig-autoscaling
 
