@@ -7,7 +7,7 @@
 | Bug Triage | Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger)) | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)), Arnaud Meukam ([@ameukam](https://github.com/ameukam)) |
 | PR Triage || Anubhuti Manohar ([@amanohar](https://github.com/amanohar)) |
 | Branch Manager || Etienne Coutaud ([@etiennecoutaud](https://github.com/etiennecoutaud)), Yang Li ([@idealhack](https://github.com/idealhack)) |
-| Docs | Zach Arnold ([@zparnold](https://github.com/zparnold)) | Samuel Tauil ([@samueltauil](https://github.com/samueltauil)) |
+| Docs | Zach Arnold ([@zparnold](https://github.com/zparnold)) | Samuel Tauil ([@samueltauil](https://github.com/samueltauil)), Jim Angel ([@jimangel](https://github.com/jimangel)) |
 | Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | Dave Strebel ([@dstrebel](https://github.com/dstrebel)) |
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | Keri Dell ([@kerilynndell](https://github.com/kerilynndell)) |
 | Patch Release Manager | Pengfei Ni ([@feiskyer](https://github.com/feiskyer)) ||
