@@ -1,13 +1,9 @@
 # See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
 
 approvers:
-  - idvoretskyi
-  - spiffxp
-  - calebamiles
-  - jdumars
-  - jberkus
   - tpepper
-  - nickchase
   - AishSundar
+  - justaugustus
+  - nickchase
   - sig-release-leads
   - release-team-leads
