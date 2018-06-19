@@ -5,7 +5,7 @@
 | CI Signal | Mohammed Zeeshan Ahmed ([@mohammedzee1000](https://github.com/mohammedzee1000)) | Christian Hernandez ([@christianh814](https://github.com/christianh814)) |
 | Test Infra | Cole Wagner ([@cjwagner](https://github.com/cjwagner)) | Amit Watve ([@amwat](https://github.com/amwat)), Paul Renato ([@prwitt](https://github.com/prwitt)), RaviSantosh Gudimetla ([@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla)) |
 | Bug Triage | Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger)) | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)), Arnaud Meukam ([@ameukam](https://github.com/ameukam)), Anubhuti Manohar ([@amanohar](https://github.com/amanohar)), Niko Penteridis ([@dogopupper](https://github.com/dogopupper)) |
-| Branch Manager || Etienne Coutaud ([@etiennecoutaud](https://github.com/etiennecoutaud)), Yang Li ([@idealhack](https://github.com/idealhack)) |
+| Branch Manager || Etienne Coutaud ([@etiennecoutaud](https://github.com/etiennecoutaud)), Yang Li ([@idealhack](https://github.com/idealhack)), Hannes Hoerl ([@hoegaarden](https://github.com/hoegaarden)) |
 | Docs | Zach Arnold ([@zparnold](https://github.com/zparnold)) | Samuel Tauil ([@samueltauil](https://github.com/samueltauil)), Jim Angel ([@jimangel](https://github.com/jimangel)) |
 | Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | Dave Strebel ([@dstrebel](https://github.com/dstrebel)) |
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | Keri Dell ([@kerilynndell](https://github.com/kerilynndell)) |
