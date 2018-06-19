@@ -7,7 +7,7 @@
 | Bug Triage | Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger)) | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)), Arnaud Meukam ([@ameukam](https://github.com/ameukam)), Anubhuti Manohar ([@amanohar](https://github.com/amanohar)), Niko Penteridis ([@dogopupper](https://github.com/dogopupper)) |
 | Branch Manager || Etienne Coutaud ([@etiennecoutaud](https://github.com/etiennecoutaud)), Yang Li ([@idealhack](https://github.com/idealhack)) |
 | Docs | Zach Arnold ([@zparnold](https://github.com/zparnold)) | Samuel Tauil ([@samueltauil](https://github.com/samueltauil)), Jim Angel ([@jimangel](https://github.com/jimangel)) |
-| Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | Dave Strebel ([@dstrebel](https://github.com/dstrebel)) |
+| Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | Dave Strebel ([@dstrebel](https://github.com/dstrebel)), Lindsey Tulloch ([@onyiny-ang](https://github.com/onyiny-ang)) |
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | Keri Dell ([@kerilynndell](https://github.com/kerilynndell)) |
 | Patch Release Manager | Pengfei Ni ([@feiskyer](https://github.com/feiskyer)) ||
 | Approval Notifier | k8s-ci-robot ([@k8s-ci-robot](https://github.com/k8s-ci-robot)) ||
