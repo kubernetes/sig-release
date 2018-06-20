@@ -1,3 +1,7 @@
+# Eleventy-One: A Long-Expected Release
+
+![Hobbit Hole with Kubernetes Logo.](long_expected.png)
+
 # Kubernetes 1.11 Release Schedule
 
 *Handy Links*
