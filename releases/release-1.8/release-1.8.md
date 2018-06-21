@@ -80,7 +80,7 @@ modifications:
 link](https://docs.google.com/spreadsheets/d/1AFksRDgAt6BGA3OjRNIiO3IyKmA-GU7CXaxbihy48ns/edit#gid=0)
 
 ## Operational Changes 
-1. For the 1.8 release, the [release team](https://github.com/kubernetes/sig-release/blob/master/release-1.8/release_team.md)
+1. For the 1.8 release, the [release team](release_team.md)
   will use the following procedure to identify release blocking issues
   1. Any issues listed in the [v1.8 milestone](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20milestone%3Av1.8)
      will be considered release blocking. It is everyone's responsibility to move non blocking issues out of the `v1.8` milestone. Items targeting 1.8 can be moved into the `v1.8` milestone.
