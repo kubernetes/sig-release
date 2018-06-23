@@ -95,16 +95,32 @@ This tag is for changes that don't affect the user experience, such as behind-th
 * Default mount propagation has changed from "HostToContainer" ("rslave" in Linux terminology), as it was in 1.10, to "None" ("private") to match the behavior in 1.9 and earlier releases. "HostToContainer" as a default caused regressions in some pods. ([#62462](https://github.com/kubernetes/kubernetes/pull/62462), [@jsafrane](https://github.com/jsafrane))
 * The kube-apiserver `--storage-version` flag has been removed; you must use `--storage-versions` instead. ([#61453](https://github.com/kubernetes/kubernetes/pull/61453), [@hzxuzhonghu](https://github.com/hzxuzhonghu))
 * [Pod priority and preemption](https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/)
-is enabled by default. Even if you don't plan to use this feature,
-you might need to take some action right after upgrading.
-In multi-tenant clusters where not all users are trusted, you are advised to create appropriate
-amount of quota for two default priority classes, `system-cluster-critical` and
-`system-node-critical`. These two priority classes are added to clusters by default.
-[ResourceQuota](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
-should be created to limit users from creating Pods at these priorities if not all users of your
-cluster are trusted. We do not advise disabling this feature since critical system Pods rely on
-the scheduler preemption to be scheduled when cluster is under resource pressure.
- 
+is enabled by default.\
+  Note that **it will be possible for users of the cluster to create pods that block some system daemons from running, and/or evict system daemons that are already running, by creating pods at the `system-cluster-critical` and `system-node-critical` priority classes, which are present in all clusters by default.** Please read the following information to understand the details. This is particularly important for those who have untrusted users in their Kubernetes clusters.
+
+  There are two kinds of critical system daemons in Kubernetes -- ones that run per-node as DaemonSets (e.g. fluentd, XXX list the rest of them here) and ones that run per-cluster (possibly more than one instance per cluster, but not one per node) (e.g. DNS, heapster, XXX list the rest of them here).
+
+  Prior to Kubernetes 1.11, priority/preemption is disabled by default and
+  * per-node daemons are scheduled directly by the DaemonSet controller, bypassing the default scheduler. Because they are marked with the [critical pod annotation](https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/), the  ["rescheduler"](https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/) guarantees they are able to schedule in a cluster that is full of regular user pods, by evicting regular user pods to make room for them. They cannot themselves be preempted, since preemption is disabled by default and the rescheduler will not evict critical system pods.
+  * cluster-level system pods are scheduled by the default scheduler. As with the per-node daemons, because they are marked with the [critical pod annotation](https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/), the ["rescheduler"](https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/) guarantees they are able to schedule in a cluster that is full of regular user pods, by evicting regular user pods to make room for them. They cannot themselves be preempted, since preemption is disabled by default and the rescheduler will not evict critical system pods.
+  
+  In Kubernetes 1.11, priority/preemption is enabled by default and
+  * per-node daemons continue to be scheduled directly by the DaemonSet controller, bypassing the default scheduler. As in Kubernetes versions before 1.11, the DaemonSet controller does not preempt pods, so we continue to rely on the ["rescheduler"](https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/) to guarantee that per-node daemons are able to schedule in a cluster that is full of regular user pods, by evicting regular user pods to make room for them. Per-node daemons are given a priority class of `system-node-critical`.
+  * cluster-level system pods continue to be scheduled by the default scheduler. The cluster-level daemons are given a priority class of `system-cluster-critical`. Because the default scheduler can preempt pods, the rescheduler in Kubernetes 1.11 is modified to *not* preempt pods to ensure the cluster-level system pods can schedule; instead we rely on the scheduler preemption mechanism to do this.
+
+  Thus in a cluster where users do not set priorities, or where users only use priority classes that map to priorities less than `system-cluster-critical` (which is lower than `system-node-critical`), the system generally behaves the same as before, just with a different mechanism (preemption) to ensure that cluster-level system pods can schedule.
+
+  **However**, by default nothing prevents users from creating pods at the `system-node-critical` and `system-cluster-critical` priority classes. In addition, a key property of preemption is that a pod from one namespace can preempt a pod in another namespace (as long as the first pod's priority is higher than the second pod's priority). This means that
+  * when cluster-level system pods are already running, a user can create a pod at `system-node-critical` priority and thereby preempt an already-running cluster-level system pod.
+  * a malicious user who fills the cluster with `system-node-critical` or `system-cluster-critical` pods can prevent cluster-level system pods from scheduling (note that they cannot prevent per-node daemons from scheduling, because the rescheduler ignores priority when deciding which pods it can evict, and it is still responsible for evicting pods to get per-node daemons to schedule in Kubernetes 1.11).
+
+  The only way to prevent this vulnerability is:
+  * Step 1: Configure the ResourceQuota admission controller (via a config file) to use the ["limitedResources"](https://kubernetes.io/docs/concepts/policy/resource-quotas/) feature to require quota for pods in PriorityClass `system-node-critical` and `system-cluster-critical`.
+  * Step 2: Enable the [`ResourceQuotaScopeSelectors`](https://kubernetes.io/docs/concepts/policy/resource-quotas/) feature gate (this is in alpha feature in Kubernetes 1.11)
+  * Step 3: Create infinite ResourceQuota in the `kube-system` namespace at PriorityClass `system-node-critical` and `system-cluster-critical` using the [scopeSelector feature of ResourceQuota](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
+
+  This will prevent anyone who does not have access to the `kube-system` namespace from creating pods with the `system-node-critical` or `system-cluster-critical` priority class, by only allowing pods with those priority classes to be created in the `kube-system` namespace.
+
 ### Pending
 
 * client-go developers must switch to the new dynamic client. This new client is easier to use, and the old one is deprecated and will be removed in a future version. **(EDITOR'S NOTE:  If the old client is deprecated, it's still there, so do developers actually HAVE to switch, and if so, why?)** (#62913, @deads2k)
