@@ -68,6 +68,7 @@ This tag is for changes that don't affect the user experience, such as behind-th
 
 ### sig-network
 
+- IPVS-based kube-proxy is GA now
 
 ### sig-node
 
@@ -183,7 +184,6 @@ the scheduler preemption to be scheduled when cluster is under resource pressure
 * Removed alpha functionality that allowed the controller manager to approve kubelet server certificates. **(EDITOR'S NOTE: Has this been replaced with something else? What is the effect on the user?)** ([#62471](https://github.com/kubernetes/kubernetes/pull/62471), [@mikedanese](https://github.com/mikedanese))
 * Modify e2e tests to use priorityClass beta version & switch priorityClass feature to beta (#63724, @ravisantoshgudimetla)
 * client-go: credential exec plugins have been promoted to beta (#64482, @ericchiang)
-* Declare IPVS-based kube-proxy GA (#58442, @m1093782566)
 
 
 
@@ -317,6 +317,7 @@ If excludeMasterFromStandardLB is not set, it will be default to true, which mea
 * The internal IP address of the node is now added as additional information for kubectl, ([#57623](https://github.com/kubernetes/kubernetes/pull/57623), [@dixudx](https://github.com/dixudx))
 * NetworkPolicies can now target specific pods in other namespaces by including both a namespaceSelector and a podSelector in the same peer element. ([#60452](https://github.com/kubernetes/kubernetes/pull/60452), [@danwinship](https://github.com/danwinship))
 * kubelet's --cni-bin-dir option now accepts multiple comma-separated CNI binary directory paths, which are searched for CNI plugins in the given order. ([#58714](https://github.com/kubernetes/kubernetes/pull/58714), [@dcbw](https://github.com/dcbw))
+* Declare IPVS-based kube-proxy GA. ([#58442](https://github.com/kubernetes/kubernetes/pull/58442), [@m1093782566](https://github.com/m1093782566)
 * Added --ipvs-exclude-cidrs flag to kube-proxy.  ([#62083](https://github.com/kubernetes/kubernetes/pull/62083), [@rramkumar1](https://github.com/rramkumar1))
 
 #### Pending
