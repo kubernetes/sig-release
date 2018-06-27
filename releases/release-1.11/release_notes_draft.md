@@ -6,23 +6,22 @@
 Before upgrading to Kubernetes 1.11, you must keep the following in mind:
 
 * **JSON configuration files that contain fields with incorrect case will no longer be valid. You must correct these files before upgrading.** When specifying keys in JSON resource definitions during direct API server communication, the keys are case-sensitive. A bug introduced in Kubernetes 1.8 caused the API server to accept a request with incorrect case and coerce it to correct case, but this behaviour has been fixed in 1.11 and the API server will once again be enforcing the correct case. It’s worth noting that during this time, the `kubectl` tool continued to enforce case-sensitive keys, so users that strictly manage resources with `kubectl` will be unaffected by this change. ([#65034](https://github.com/kubernetes/kubernetes/pull/65034), [@caesarxuchao](https://github.com/caesarxuchao))
-* **[Pod priority and preemption](https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/) is now enabled by default. Note that this means it will be possible for users of the cluster to create pods that block some system daemons from running, and/or evict system daemons that are already running,** by creating pods at the `system-cluster-critical` and `system-node-critical` priority classes, which are present in all clusters by default. Please read the following information to understand the details. For full details, see [this PR](https://github.com/kubernetes/sig-release/pull/201/fileshttps://github.com/kubernetes/sig-release/pull/180/files). The only way to prevent this vulnerability is:
+* **[Pod priority and preemption](https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/) is now enabled by default. Note that this means it will be possible for users of the cluster to create pods that block some system daemons from running, and/or evict system daemons that are already running,** by creating pods at the `system-cluster-critical` and `system-node-critical` priority classes, which are present in all clusters by default. Please read the following information to understand the details. For full details, see [this PR](https://github.com/kubernetes/sig-release/pull/201/files). The only way to prevent this vulnerability is:
   * Step 1: Configure the ResourceQuota admission controller (via a config file) to use the "[limitedResources](https://kubernetes.io/docs/concepts/policy/resource-quotas/)" feature to require quota for pods in PriorityClass `system-node-critical` and `system-cluster-critical`.
   * Step 2: Enable the [ResourceQuotaScopeSelectors](https://kubernetes.io/docs/concepts/policy/resource-quotas/) feature gate (this is in alpha feature in Kubernetes 1.11)
   * Step 3: Create infinite ResourceQuota in the kube-system namespace at PriorityClass `system-node-critical` and `system-cluster-critical` using the [scopeSelector feature of ResourceQuota](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
   This will prevent anyone who does not have access to the kube-system namespace from creating pods with the `system-node-critical` or `system-cluster-critical` priority class, by only allowing pods with those priority classes to be created in the kube-system namespace.
-
 * Additional upgrade considerations are included in the "Before upgrading" section.
 
 ## Major Themes
 
-### sig-api-machinery
+### SIG API Machinery
 
 This release SIG API Machinery focused mainly on CustomResources. For example, subresources for CustomResources are now beta and enabled by default. With this, updates to the `/status` subresource will disallow updates to all fields other than `.status` (not just `.spec` and `.metadata` as before). Also, `required` and `description` can be used at the root of the CRD OpenAPI validation schema when the `/status` subresource is enabled.
 
 In addition, users can now create multiple versions of CustomResourceDefinitions, but without any kind of automatic conversion, and CustomResourceDefinitions now allow specification of additional columns for `kubectl get` output via the `spec.additionalPrinterColumns` field.
 
-### sig-auth
+### SIG Auth
 
 Work this cycle focused on graduating existing functions, and on making security functions more understandable for users.
 
@@ -34,31 +33,31 @@ Kubernetes 1.11 also makes it easier to see what's happening, as audit events ca
 
 In addition, the NodeRestriction admission plugin now prevents kubelets from modifying taints on their Node API objects, making it easier to keep track of which nodes should be in use.
 
-### sig-cli
+### SIG CLI
 
 SIG CLI's main focus this release was on refactoring `kubectl` internals to improve composability, readability and testability of `kubectl` commands. Those refactors will allow the team to extract a mechanism for extensibility of kubectl -- that is, plugins -- in the next releases. 
 
-### sig-cluster-lifecycle
+### SIG Cluster Lifecycle
 
 SIG Cluster Lifecycle focused on improving kubeadm’s user experience by including a set of new commands related to maintaining the kubeadm configuration file, the API version of which has now has been incremented to `v1alpha2`. These commands can handle the migration of the configuration to a newer version, printing the default configuration, and listing and pulling the required container images for bootstrapping a cluster.
 
 Other notable changes include:
-CoreDNS replaces kube-dns as the default DNS provider
-Improved user experience for environments without a public internet connection and users using other CRI runtimes than Docker
-Support for structured configuration for the kubelet, which avoids the need to modify the systemd drop-in file
-Many improvements to the upgrade process and other bug fixes
+* CoreDNS replaces kube-dns as the default DNS provider
+* Improved user experience for environments without a public internet connection and users using other CRI runtimes than Docker
+* Support for structured configuration for the kubelet, which avoids the need to modify the systemd drop-in file
+* Many improvements to the upgrade process and other bug fixes
 
-### sig-instrumentation
+### SIG Instrumentation
 
 As far as Sig Instrumentation, the major change in Kubernetes 1.11 is the deprecation of Heapster as part of ongoing efforts to move to the new Kubernetes monitoring model. Clusters still using Heapster for autoscaling should be migrated over to metrics-server and the custom metrics API. See the deprecation section for more information.
 
-### sig-network
+### SIG Network
 
 The main milestones for SIG Network this release are the graduation of IPVS-based load balancing and CoreDNS to general availability.
 
 IPVS is an alternative approach to in-cluster load balancing that uses in-kernel hash tables rather than the previous iptables approach, while CoreDNS is a replacement for kube-dns for service discovery.
 
-### sig-node
+### SIG Node
 
 SIG-Node advanced several features and made incremental improvements in a few key topic areas this release.  
 
@@ -68,16 +67,16 @@ The cri-tools project, which aims to provide consistent tooling for operators to
 
 As far as platforms, working with SIG-Windows, enhancements were made to the kubelet to improve platform support on Windows operating systems, and improvements to resource management were also made.  In particular, support for sysctls on Linux graduated to beta.
 
-### sig-openstack
+### SIG OpenStack
 
 SIG-OpenStack continued to build out testing, with eleven acceptance tests covering a wide-range of scenarios and use-cases. During the 1.11 cycle our reporting back to test-grid has qualified the OpenStack cloud provider as a gating job for the Kubernetes release.
 
 New features include improved integration between the Keystone service and Kubernetes RBAC, and a number of stability and compatibility improvements across the entire provider code-base.
 
-### sig-scheduling
+### SIG Scheduling
 [Pod Priority and Preemption](https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/) has graduated to Beta, so it is enabled by default. Note that this involves [significant and important changes for operators](https://github.com/kubernetes/sig-release/pull/201/files). The team also worked on improved performance and reliability of the scheduler.
 
-### sig-storage
+### SIG Storage
 
 Sig Storage graduated two features that had been introduced in previous versions and introduced three new features in an alpha state.
 
@@ -88,18 +87,25 @@ New alpha features include:
 * AWS EBS and GCE PD volumes support increased limits on the maximum number of attached volumes per node.
 * Subpath volume directories can be created using DownwardAPI environment variables.
 
-### sig-windows
+### SIG Windows
 
 This release supports more of Kubernetes API for pods and containers on Windows, including:
 
 * Metrics for Pod, Container, Log filesystem
-* The run_as_user ecurity contexts
+* The run_as_user security contexts
 * Local persistent volumes and fstype for Azure disk 
 
 Improvements in Windows Server version 1803 also bring new storage functionality to Kubernetes v1.11, including:
 
 * Volume mounts for ConfigMap and Secret
 * Flexvolume plugins for SMB and iSCSI storage are also available out-of-tree at [Microsoft/K8s-Storage-Plugins](https://github.com/Microsoft/K8s-Storage-Plugin)
+
+## Known Issues
+
+* IPVS based kube-proxy doesn't support graceful close connections for terminating pod. This issue will be fixed in a future release. ([#57841](https://github.com/kubernetes/kubernetes/pull/57841), [@jsravn](https://github.com/jsravn))
+* kube-proxy needs to be configured to override hostname in some environments. ([#857](https://github.com/kubernetes/kubeadm/issues/857), [@detiber](https://github.com/detiber))
+* There's a known issue where the Vertical Pod Autoscaler will radically change implementation in 1.12, so users of VPA (alpha) in 1.11 are warned that they will not be able to automatically migrate their VPA configs from 1.11 to 1.12.
+
 
 ## Before Upgrading
 
@@ -123,7 +129,7 @@ or `/etc/sysconfig/kubelet`, depending on the system you're running on.
 ([#64706](https://github.com/kubernetes/kubernetes/pull/64706), [@liztio](https://github.com/liztio))
 * The `PersistentVolumeLabel` admission controller is now disabled by default. If you depend on this feature (AWS/GCE) then ensure it is added to the `--enable-admission-plugins` flag on the kube-apiserver. ([#64326](https://github.com/kubernetes/kubernetes/pull/64326), [@andrewsykim](https://github.com/andrewsykim))
 * kubeadm: kubelets in kubeadm clusters now disable the readonly port (10255). If you're relying on unauthenticated access to the readonly port, please switch to using the secure port (10250). Instead, you can now use ServiceAccount tokens when talking to the secure port, which will make it easier to get access to, for example, the `/metrics` endpoint of the kubelet, securely. ([#64187](https://github.com/kubernetes/kubernetes/pull/64187), [@luxas](https://github.com/luxas))
-* The formerly publicly-available cAdvisor web UI that the kubelet ran on port 4194 by default is now turned off by default. The flag configuring what port to run this UI on `--cadvisor-port` was deprecated in v1.10. Now the default is `--cadvisor-port=0`, in other words, to not run the web server. If you still need to run cAdvisor, the recommended way to run it is via a DaemonSet. Not that the `--cadvisor-port` will be removed in v1.12 ([#63881](https://github.com/kubernetes/kubernetes/pull/63881), [@luxas](https://github.com/luxas))
+* The formerly publicly-available cAdvisor web UI that the kubelet ran on port 4194 by default is now turned off by default. The flag configuring what port to run this UI on `--cadvisor-port` was deprecated in v1.10. Now the default is `--cadvisor-port=0`, in other words, to not run the web server. If you still need to run cAdvisor, the recommended way to run it is via a DaemonSet. Note that the `--cadvisor-port` will be removed in v1.12 ([#63881](https://github.com/kubernetes/kubernetes/pull/63881), [@luxas](https://github.com/luxas))
 
 #### New Deprecations
 
@@ -374,9 +380,9 @@ You can now bind tokens to service requests. ([ref](https://github.com/kubernete
 * CoreDNS deployment configuration now uses the k8s.gcr.io imageRepository. ([#64775](https://github.com/kubernetes/kubernetes/pull/64775), [@rajansandeep](https://github.com/rajansandeep))
 * kubelet's `--cni-bin-dir` option now accepts multiple comma-separated CNI binary directory paths, which are searched for CNI plugins in the given order. ([#58714](https://github.com/kubernetes/kubernetes/pull/58714), [@dcbw](https://github.com/dcbw))
 * You can now use `--ipvs-exclude-cidrs` to specify a list of CIDR's which the IPVS proxier should not touch when cleaning up IPVS rules. ([#62083](https://github.com/kubernetes/kubernetes/pull/62083), [@rramkumar1](https://github.com/rramkumar1))
-* You can now receive node DNS info with the `--node-ip` flag, which adds `ExternalDNS`, `InternalDNS`, and `ExternalIP` to kubelet's output. enabled.([#63170](https://github.com/kubernetes/kubernetes/pull/63170), [@micahhausler](https://github.com/micahhausler))
+* You can now receive node DNS info with the `--node-ip` flag, which adds `ExternalDNS`, `InternalDNS`, and `ExternalIP` to kubelet's output. ([#63170](https://github.com/kubernetes/kubernetes/pull/63170), [@micahhausler](https://github.com/micahhausler))
 * You can now have services that listen on the same host ports on different interfaces by specifying `--nodeport-addresses`. ([#62003](https://github.com/kubernetes/kubernetes/pull/62003), [@m1093782566](https://github.com/m1093782566)) 
-* Add port-forward examples for service 
+* Added port-forward examples for service 
 
 ### SIG Node
 
@@ -552,6 +558,7 @@ You can now bind tokens to service requests. ([ref](https://github.com/kubernete
 
 #### General Fixes and Reliability
 
+* Fixed a regression in kube-scheduler to properly load client connection information from a `--config` file that references a kubeconfig file. ([#65507](https://github.com/kubernetes/kubernetes/pull/65507), [@liggitt](https://github.com/liggitt))
 * Fix regression in `v1.JobSpec.backoffLimit` that caused failed Jobs to be restarted indefinitely. ([#63650](https://github.com/kubernetes/kubernetes/pull/63650), [@soltysh](https://github.com/soltysh))
 * fixes a potential deadlock in the garbage collection controller ([#64235](https://github.com/kubernetes/kubernetes/pull/64235), [@liggitt](https://github.com/liggitt))
 * fix formatAndMount func issue on Windows ([#63248](https://github.com/kubernetes/kubernetes/pull/63248), [@andyzhangx](https://github.com/andyzhangx))
