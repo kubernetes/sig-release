@@ -6,7 +6,7 @@
 | Test Infra | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)) | Cole Wagner ([@cjwagner](https://github.com/cjwagner)/cjwagner) |
 | Bug Triage | Tim Pepper ([@tpepper](https://github.com/tpepper)) | Cole Mickens ([@colemickens](https://github.com/colemickens)) |
 | Branch Manager | Caleb Miles ([@calebamiles](https://github.com/calebamiles)) | Sen Lu ([@krzyzacy](https://github.com/krzyzacy)) |
-| Docs | Misty Stanley-Jones ([@misty](https://github.com/mistyhacks)) | Zach Arnold ([@zparnold](https://github.com/zparnold)), Zach Corleissen ([@zacharysarah](https://github.com/zacharysarah)), Tom van Waardhuizen ([@tallt0m](https://github.com/tallt0m)) |
+| Docs | Misty Stanley-Jones ([@misty](https://github.com/mistyhacks)) | Zach Arnold ([@zparnold](https://github.com/zparnold)), Zach Corleissen ([@zacharysarah](https://github.com/zacharysarah)) |
 | Release Notes | Nick Chase ([@nickchase](https://github.com/nickchase)) | Mike Arpaia ([@marpaia](https://github.com/marpaia)) |
 | Communications | Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) | Andrew Hatfield ([@andrewhatfield](https://github.com/andrewhatfield))|
 | Patch Release Manager | Anirudh Ramanathan ([@foxish](https://github.com/foxish)) |  |
@@ -15,3 +15,6 @@
 Special thanks:
 
 - Christoph Blecker ([@cblecker](https://github.com/cblecker))
+- Jordan Liggitt ([@liggitt](https://github.com/liggitt))
+- Davanum Srinivas ([@dims](https://github.com/dims))
+- Shyam Jeedigunta ([@shyamjvs](https://github.com/shyamjvs))
