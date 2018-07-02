@@ -239,7 +239,7 @@ is undefined.
 
 ### During "Security" releases
 For all unplanned or embargoed releases
-- Facilitate security releases following the under the [Security Release Process](https://github.com/kubernetes/community/blob/master/contributors/devel/security-release-process.md)
+- Facilitate security releases following the under the [Security Release Process](security-release-process-documentation/security-release-process.md)
 
 ## References
 1. https://docs.google.com/a/google.com/document/d/1JAUqKl-lYdYLQ7GUT_9LzqxwQv-PcOdyAxNRZKItajo/edit?usp=sharing
