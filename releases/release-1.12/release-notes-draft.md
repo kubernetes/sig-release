@@ -2,6 +2,7 @@
 
 ## Action Required
 
+- kube-apiserver: the `Priority` admission plugin is now enabled by default when using `--enable-admission-plugins`. If using `--admission-control` to fully specify the set of admission plugins, the `Priority` admission plugin should be added if using the `PodPriority` feature, which is enabled by default in 1.11. ([#65739](https://github.com/kubernetes/kubernetes/pull/65739), [@liggitt](https://github.com/liggitt))
 - Limit the usage of system-node-critical and system-cluster-critical priority classes to kube-system namespace. ([#65593](https://github.com/kubernetes/kubernetes/pull/65593), [@bsalamat](https://github.com/bsalamat))
 
 
@@ -29,6 +30,7 @@
 
 ## SIG CLI
 
+- Fix 'kubectl cp' with no arguments causes a panic ([#65482](https://github.com/kubernetes/kubernetes/pull/65482), [@wgliang](https://github.com/wgliang))
 - kubectl: --use-openapi-print-columns is deprecated in favor of --server-print ([#65601](https://github.com/kubernetes/kubernetes/pull/65601), [@liggitt](https://github.com/liggitt))
 - kubectl: fixes a regression with --use-openapi-print-columns that would not print object contents ([#65600](https://github.com/kubernetes/kubernetes/pull/65600), [@liggitt](https://github.com/liggitt))
 - Improve the display of jobs in `kubectl get` and `kubectl describe` to emphasize progress and duration. ([#65463](https://github.com/kubernetes/kubernetes/pull/65463), [@smarterclayton](https://github.com/smarterclayton))
@@ -36,6 +38,7 @@
 
 ## SIG Cluster Lifecycle
 
+- bazel deb package bugfix: The kubeadm deb package now reloads the kubelet after installation ([#65554](https://github.com/kubernetes/kubernetes/pull/65554), [@rdodev](https://github.com/rdodev))
 - Unix: support ZFS as a valid graph driver for Docker ([#65635](https://github.com/kubernetes/kubernetes/pull/65635), [@neolit123](https://github.com/neolit123))
 - kubeadm: remove redundant flags settings for kubelet ([#64682](https://github.com/kubernetes/kubernetes/pull/64682), [@dixudx](https://github.com/dixudx))
 
@@ -57,6 +60,7 @@
 
 ## SIG Scheduling
 
+- kube-apiserver: the `Priority` admission plugin is now enabled by default when using `--enable-admission-plugins`. If using `--admission-control` to fully specify the set of admission plugins, the `Priority` admission plugin should be added if using the `PodPriority` feature, which is enabled by default in 1.11. ([#65739](https://github.com/kubernetes/kubernetes/pull/65739), [@liggitt](https://github.com/liggitt))
 - Limit the usage of system-node-critical and system-cluster-critical priority classes to kube-system namespace. ([#65593](https://github.com/kubernetes/kubernetes/pull/65593), [@bsalamat](https://github.com/bsalamat))
 - fixes an out of range panic in the NoExecuteTaintManager controller when running a non-64-bit build ([#65596](https://github.com/kubernetes/kubernetes/pull/65596), [@liggitt](https://github.com/liggitt))
 
