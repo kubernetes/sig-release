@@ -8,17 +8,20 @@ is outlined below.
 
 - *issue owners*: creator, assignees, and user who moved the issue into a release milestone
 - *Y days*: refers to business days (using the location local to the release-manager M-F)
-- *code slush*: starts when master branch only accepts PRs for release milestone.  no additional feature development is merged after this point.
-- *code freeze*: starts 2 weeks after code slush.  only critical bug fixes are accepted into the release codebase.
+- *code slush*: starts when master branch only accepts PRs for release milestone.  No additional feature development is merged after this point.
+- *code freeze*: starts ~1 week after code slush and continues for ~2 weeks.  Only critical bug fixes are accepted into the release codebase.
 
 ## Requirements for adding an issue to the milestone
 
 **Note**: Issues with unmet label requirements will automatically be removed from the release milestone.
 
-When adding an issue to a milestone, the Kubernetes bot will check that the following
-labels are set, and comment on the issue with the appropriate instructions.  The
-bot will attempt to contact the issue creator 3 times (over 3 days)
-before automatically removing the issue from the milestone.
+When adding an issue to a milestone, the Kubernetes [mungegithub
+bot](http://git.k8s.io/test-infra/mungegithub/mungers/milestone-maintainer.go)
+will check that the required labels are set and, if any are found
+missing or inconsistent, comment on the issue with instructions on
+reconciling the labelling problem.  The bot will attempt to contact
+the issue creator regularly and repeatedly via GitHub before
+automatically removing the issue from the milestone.
 
 Label categories:
 
