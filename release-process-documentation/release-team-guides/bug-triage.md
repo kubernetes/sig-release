@@ -24,6 +24,8 @@ As Bug Triage lead, it is not your job to fix, label, sort, or gatekeep issues a
 
 In practice, you should fix anything simple that saves folks time and doesn't usurp the decision-making of the SIGs.  For example, adding/modifying kind and priority labels, or making PR labels match issue labeling.  However, you should never decide whether something is in or out of a milestone; the SIG or the Release Team Lead needs to do that.
 
+The job relates to both the Features Lead and CI Signal Lead roles.  Understanding the in-bound features is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](ci-signal-playbook.md) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug TriageLead should regularly interact with the peer leads for Features and CI Signal.
+
 ## Early Release
 
 You have no critical work during this cycle.
@@ -160,9 +162,16 @@ Starting a few working days before the first Release Candidate, we go into Sudde
 
 During this period, it's reasonable to expect issue owners and SIG leads to get back to you within hours (check their time zones, though).  In cases where SIG Leads are unavailable, you may need to appeal to Kubernetes project leaders to deal with stuck PRs.
 
+Another part of staying on top of code churn, regression, and risk is monitoring commits to master and the release branch especially in the final days of the release, as shown below in Sample Searches for this phase.  On occasion things will merge that are unexpected by the release team.  This possibility needs monitored and when it happens the commits need triaged for destabilizing risk and proper exception justification, tests, docs, etc.
+
 ### Sample Searches
 
 Same as in code freeze.  Here it becomes critical to have recorded the results of prior queries to compare what issues/PRs have come into or left from the query results compared to the last time you ran a query.
+
+Additionally for tracking recent changes to master and the release branch,
+eg:
+* [master branch commits](https://github.com/kubernetes/kubernetes/commits/master/)
+* [release-1.11 branch commits](https://github.com/kubernetes/kubernetes/commits/release-1.11)
 
 ### Reports
 
