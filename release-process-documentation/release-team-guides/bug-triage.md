@@ -160,9 +160,16 @@ Starting a few working days before the first Release Candidate, we go into Sudde
 
 During this period, it's reasonable to expect issue owners and SIG leads to get back to you within hours (check their time zones, though).  In cases where SIG Leads are unavailable, you may need to appeal to Kubernetes project leaders to deal with stuck PRs.
 
+Another part of staying on top of code churn, regression, and risk is monitoring commits to master and the release branch especially in the final days of the release, as shown below in Sample Searches for this phase.  On occasion things will merge that are unexpected by the release team.  This possibility needs monitored and when it happens the commits need triaged for destabilizing risk and proper exception justification, tests, docs, etc.
+
 ### Sample Searches
 
 Same as in code freeze.  Here it becomes critical to have recorded the results of prior queries to compare what issues/PRs have come into or left from the query results compared to the last time you ran a query.
+
+Additionally for tracking recent changes to master and the release branch,
+eg:
+* [master branch commits](https://github.com/kubernetes/kubernetes/commits/master/)
+* [release-1.11 branch commits](https://github.com/kubernetes/kubernetes/commits/release-1.11)
 
 ### Reports
 
