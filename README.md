@@ -192,8 +192,9 @@ be familiar with the release process and remain ready to discharge the responsib
 - Sets up and maintains all CI for the release branch
 
 ### CI Signal Lead
-- Ensures that all test (master-blocking, master-upgrade and 1.y-blocking) CI provides a clear go/no-go signal for the release
-- Tracks and finds owners to fix any issues with any tests
+- Monitors various e2e tests in sig-release dashboard ([master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking), [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade), [x.y-blocking](https://k8s-testgrid.appspot.com/sig-release-1.11-blocking)) on a regular basis and provides early and continuous signals on release and test health to both Release team and owning SIGs
+- Ensures that all release blocking tests provide a clear Go/No-Go signal for the release
+- Tracks and finds owners to fix any failing or flaky tests in the release blocking dashboards mentioned above
 
 ### Release Team Shadow
 Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future
