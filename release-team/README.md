@@ -1,4 +1,6 @@
-## Relation to the Release Manager and Team
+# Kubernetes Release Team
+
+## Overview
 
 The Kubernetes Release Team is embedded within SIG Release and is responsible for the day to day work required to
 successfully release while the SIG at large is focused on the continued improvement of the release process. Historically
@@ -16,6 +18,42 @@ Release the following additional responsibilities
 - Authority to close the submit queue to any changes which do not target the release as part of enforcing the code slush
   period
 which shall be the discharged by the Release Team.
+
+## Specific responsibilities
+
+- Support SIG PM by providing tooling and processes for the generation of release notes
+- Coordinate with SIG PM to communicate feature burndown progress during a release cycle
+- Manage repositories and tooling dedicated to releasing Kubernetes which at time of chartering these include:
+  - kubernetes/release
+  - deb/rpm packaging and hosting
+  - Container image hosting
+- Set and enforce criteria for repository inclusion in a Kubernetes release
+  - Governance
+  - Stabilization
+  - Test coverage
+- Set and enforce criteria for code inclusion in a Kubernetes release
+  - Feature flags
+  - Documentation
+  - Test coverage
+  - Dashboards
+  - Status reports
+- Define template and format for communication of release status
+  - Ongoing status of the release process
+  - Announcement of alpha, beta, release candidate availability
+  - Announcement of release availability
+- Deriving signal from the following sources
+  - [test grid](https://k8s-testgrid.appspot.com/)
+  - GitHub [flake issues](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+label%3Akind%2Fflake)
+  - GitHub [bug issues](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3Akind%2Fbug)
+- Identifying owning individuals and SIGs for blocking issues
+- Working with SIGs and individuals to drive resolution of open issues
+- Building summary of release criteria and status and publish to the community on a regular basis throughout the release cycle
+- Manage the contents of `kubernetes/features` along with SIG PM
+- Define burndown process
+  - use of GitHub labels to signal release blocking status
+  - use of GitHub milestones to communicate release blocking issues
+  - use of flake GitHub issue count or CI signal as a release blocking status
+- Coordinate the resolution of release blocking issues
 
 ## Kubernetes Release Team roles
 
