@@ -7,7 +7,7 @@
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
 * [Forum](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
 * [Feature Tracking Sheet](http://bit.ly/k8s112-features)
-* [Milestone Process](https://github.com/kubernetes/community/blob/master/contributors/devel/release/issues.md)
+* [Targeting Issues and PRs to This Milestone](ephemera/issues.md)
 * [Meeting Minutes](http://bit.ly/k8s112-minutes)
 * [CI Signal Report](http://bit.ly/k8s112-cisignal)
 * [Retrospective Document](http://bit.ly/k8s112-retro)
