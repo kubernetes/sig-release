@@ -22,3 +22,5 @@
 | 1.10 patch (post 1.10.0) | Maciek Pytel [@MaciekPytel](https://github.com/MaciekPytel) | - | - | - |
 | 1.11 minor (up to 1.11.0) | Josh Berkus ([@jberkus](https://github.com/jberkus)) | - | - | - |
 | 1.11 patch (post 1.11.0) | Anirudh Ramanathan ([@foxish](https://github.com/foxish)) | - | - | - |
+| 1.12 minor (up to 1.12.0) | Tim Pepper ([@tpepper](https://github.com/tpepper)) | - | - | - |
+| 1.12 patch (post 1.12.0) | Pengfei Ni ([@feisky](https://github.com/feiskyer)) | - | - | - |
