@@ -40,11 +40,17 @@
 
 ## SIG CLI
 
+- Introduce a new flag `--keepalive` for kubectl proxy to allow setting keep-alive period for long-running request. ([#63793](https://github.com/kubernetes/kubernetes/pull/63793), [@hzxuzhonghu](https://github.com/hzxuzhonghu))
 - Running `kubectl describe pvc` now shows which pods are mounted to the pvc being described with the `Mounted By` field ([#65837](https://github.com/kubernetes/kubernetes/pull/65837), [@clandry94](https://github.com/clandry94))
 - Fix 'kubectl cp' with no arguments causes a panic ([#65482](https://github.com/kubernetes/kubernetes/pull/65482), [@wgliang](https://github.com/wgliang))
 - kubectl: --use-openapi-print-columns is deprecated in favor of --server-print ([#65601](https://github.com/kubernetes/kubernetes/pull/65601), [@liggitt](https://github.com/liggitt))
 - kubectl: fixes a regression with --use-openapi-print-columns that would not print object contents ([#65600](https://github.com/kubernetes/kubernetes/pull/65600), [@liggitt](https://github.com/liggitt))
 - Improve the display of jobs in `kubectl get` and `kubectl describe` to emphasize progress and duration. ([#65463](https://github.com/kubernetes/kubernetes/pull/65463), [@smarterclayton](https://github.com/smarterclayton))
+
+
+## SIG Cloud Provider
+
+- If Openstack LoadBalancer is not defined in cloud config, the loadbalancer is not initialized any more in openstack. All setups must have some setting under that section ([#65781](https://github.com/kubernetes/kubernetes/pull/65781), [@zetaab](https://github.com/zetaab))
 
 
 ## SIG Cluster Lifecycle
@@ -114,4 +120,9 @@
 
 ## Other Notable Changes
 
+- "kubectl delete" no longer waits for dependent objects to be deleted when removing parent resources ([#65908](https://github.com/kubernetes/kubernetes/pull/65908), [@juanvallejo](https://github.com/juanvallejo))
+- Re-adds `pkg/generated/bindata.go` to the repository to allow some parts of k8s.io/kubernetes to be go-vendorable. ([#65985](https://github.com/kubernetes/kubernetes/pull/65985), [@ixdy](https://github.com/ixdy))
 - Update to use go1.10.3 ([#65726](https://github.com/kubernetes/kubernetes/pull/65726), [@ixdy](https://github.com/ixdy))
+
+
+
