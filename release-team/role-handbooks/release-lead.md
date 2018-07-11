@@ -91,6 +91,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
     <td>1</td>
     <td><p>- Start the release cycle
 <p>- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.x/release-x.x.md
+<p>- Add the release schedule to the <a href="https://calendar.google.com/calendar/embed?src=cgnt364vd8s86hr2phapfjc6uk%40group.calendar.google.com">community calendar</a>
 <p>- Ensure that relevant feedback from the prior retrospective is incorporated into the process
 <p>- Send an update to kubernetes-dev mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 <p>- Create the retrospective document and corresponding bit.ly link
