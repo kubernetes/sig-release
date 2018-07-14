@@ -43,6 +43,7 @@
 | Create 'release-1.12' branch and begin daily branch | Branch Manager | |14 | | | | |
 | 1.12.0-beta.0 released from branch | Branch Manager | | 14 | | | week 7 | master-blocking, master-upgrade |
 | All release branch CI jobs created | Test Infra Lead | |17 | | | | |
+| Docs deadline - Open placeholder PRs | Docs Lead | |21 | | | | |
 | Begin Test Case Freeze? | Lead | | 28 | | | week 9 | |
 | Begin Code Slush | Bot, Lead | | 28 | | | week 9 | |
 | All Issues & PRs must have complete labels | Bug Triage | | 29 | | | | |
