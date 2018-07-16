@@ -2,6 +2,7 @@
 
 ## Action Required
 
+- [action required] The `NodeConfiguration` kind in the kubeadm v1alpha2 API has been renamed `JoinConfiguration` in v1alpha3 ([#65951](https://github.com/kubernetes/kubernetes/pull/65951), [@luxas](https://github.com/luxas))
 - [action required] The `MasterConfiguration` kind in the kubeadm v1alpha2 API has been renamed `InitConfiguration` in v1alpha3 ([#65945](https://github.com/kubernetes/kubernetes/pull/65945), [@luxas](https://github.com/luxas))
 - [action required] The formerly publicly-available cAdvisor web UI that the kubelet started using `--cadvisor-port` is now entirely removed in 1.12. The recommended way to run cAdvisor if you still need it, is via a DaemonSet. ([#65707](https://github.com/kubernetes/kubernetes/pull/65707), [@dims](https://github.com/dims))
 - Cluster Autoscaler version updated to 1.3.1-beta.1. Release notes: https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.3.1-beta.1 ([#65857](https://github.com/kubernetes/kubernetes/pull/65857), [@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
@@ -48,6 +49,7 @@
 
 ## SIG CLI
 
+- Fix validation for HealthzBindAddress in kube-proxy when --healthz-port is set to 0 ([#66138](https://github.com/kubernetes/kubernetes/pull/66138), [@wsong](https://github.com/wsong))
 - `kubectl config set-context` can now set attributes of the current context, like the current namespace, by passing `--current` instead of a specific context name ([#66140](https://github.com/kubernetes/kubernetes/pull/66140), [@liggitt](https://github.com/liggitt))
 - prevents infinite CLI wait on delete when item is recreated ([#66136](https://github.com/kubernetes/kubernetes/pull/66136), [@deads2k](https://github.com/deads2k))
 - Introduce a new flag `--keepalive` for kubectl proxy to allow setting keep-alive period for long-running request. ([#63793](https://github.com/kubernetes/kubernetes/pull/63793), [@hzxuzhonghu](https://github.com/hzxuzhonghu))
@@ -65,6 +67,7 @@
 
 ## SIG Cluster Lifecycle
 
+- [action required] The `NodeConfiguration` kind in the kubeadm v1alpha2 API has been renamed `JoinConfiguration` in v1alpha3 ([#65951](https://github.com/kubernetes/kubernetes/pull/65951), [@luxas](https://github.com/luxas))
 - kubeadm: use an HTTP request timeout when fetching the latest version of Kubernetes from dl.k8s.io ([#65676](https://github.com/kubernetes/kubernetes/pull/65676), [@dkoshkin](https://github.com/dkoshkin))
 - kubeadm: Default component configs are printable via kubeadm config print-default ([#66074](https://github.com/kubernetes/kubernetes/pull/66074), [@rosti](https://github.com/rosti))
 - kubeadm: run kube-proxy on non-master tainted nodes ([#65931](https://github.com/kubernetes/kubernetes/pull/65931), [@neolit123](https://github.com/neolit123))
@@ -92,6 +95,7 @@
 
 ## SIG Network
 
+- Fix validation for HealthzBindAddress in kube-proxy when --healthz-port is set to 0 ([#66138](https://github.com/kubernetes/kubernetes/pull/66138), [@wsong](https://github.com/wsong))
 - Support traffic shaping for CNI network driver ([#63194](https://github.com/kubernetes/kubernetes/pull/63194), [@m1093782566](https://github.com/m1093782566))
 
 
