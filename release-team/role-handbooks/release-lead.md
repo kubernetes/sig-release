@@ -68,7 +68,11 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
 * Feature exceptions are to be reviewed by the owner SIG and brought to the release team for assessment of risk, especially across SIGs
 
-* All issues in the milestone are considered release-blocking until proven otherwise by the owner SIG
+* All issues and PRs in the milestone are considered release-blocking until proven otherwise by the owner SIG.
+    * Issues and PRs are added to the milestone only by members of the [kubernetes-milestone-maintainers" GitHub team](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers) which primarily includes SIG leads.
+    * Typically the release lead will have been granted maintainer priviledge on this team for adding/removing folks as needing during the release cycle if SIG leads have turned over.  If not and it is needed ask in Slack #sig-contribx to find the current administrator of teams.
+    * The release lead may also need to add members of the release team, and should check with and prune prior release team members who are no longer active.  With maintainer permission the release lead can add and remove GitHub users to and from the team via the [kubernetes-milestone-maintainers" GitHub team](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers).
+    * Members of the team are not the ones making the choice whether issues and PRs are in a milestone.  This is the job of SIG leads.  But the release team members may add the milestone label when doing housekeeping on tracked issues and PRs and the milestone label has clearly been forgotten.
 
 * The release lead is responsible for updating the [burndown template](https://docs.google.com/document/d/1zLnmDDOp_ko9Yh5uPJtgqPFD7GKq76fQsKaenXoMHzM/edit) ahead of the release (changing the milestone in links and anything else requested during the retrospective)
 
@@ -90,19 +94,22 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
   <tr>
     <td>1</td>
     <td><p>- Start the release cycle
+<p>- Insure you are joined to the following Google Groups: [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown),[kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release), [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads), [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev).
 <p>- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.x/release-x.x.md
 <p>- Ensure that relevant feedback from the prior retrospective is incorporated into the process
 <p>- Send an update to kubernetes-dev mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 <p>- Create the retrospective document and corresponding bit.ly link
 <p>- Identify vacant release team roles and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers
 <p>- Begin meeting with SIGs to introduce yourself</td>
+<p>- Request review of this document by the release lead shadow.  The shadow should also take all actions in this document around joining groups and requesting access permissions.
   </tr>
   <tr>
     <td>2</td>
     <td><p>- Assist the features lead in collecting planned work from SIGs
-<p>- Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team.  These will eventually turn into burndown meetings and occur daily.
+<p>- Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team.  These will eventually turn into burndown meetings and occur daily.  Invite the kubernetes-milestone-burndown@googlegroups.com group.  You will need to contact SIG-Release leads to gain access to the SIG's zoom.us account for hosting/recording/posting meeting video.
+<p>- Create a Google Calendar for the release:  Follow the steps in [the sig-governance documentation](https://git.k8s.io/community/sig-governance.md) to create and share a calendar with the community.  Add key event dates during the cycle.
 <p>- Begin reporting release status at the community meeting
-<p>- Ensure the release team is fully filled if possible
+<p>- Ensure the release team is fully filled if possible, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
 <p>- Begin paying attention to CI signal, as it will begin degrading soon after the prior release is cut
 <p>- Continue meeting with SIGs for introductions</td>
   </tr>
