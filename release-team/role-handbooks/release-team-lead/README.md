@@ -2,7 +2,7 @@
 
 ## Overview:
 
-The release team leader role is responsible for coordinating release activities, assembling the release team, taking ultimate accountability for all release tasks to be completed on time, and ensuring a retrospective happens.  The lead is also responsible for ensuring a successor is selected once the release is complete.  
+The release team leader role is responsible for coordinating release activities, assembling the release team, taking ultimate accountability for all release tasks to be completed on time, and ensuring a retrospective happens.  The lead is also responsible for ensuring a successor is trained for future release cycles.
 
 ## Authority and Responsibility:
 
@@ -34,6 +34,33 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
 * Prior experience in release management is extremely helpful
 
+## Time Commitments:
+
+Release Lead is a very time-consuming role, especially towards the end of the release cycle.  Before you volunteer to be Release Lead, please make certain that your employer and your family are OK with you spending a lot of time on the release for the next three months.  Here's a rough estimate of the time requirements by week:
+
+* Weeks 1-4: 4-8 hours a week
+* Weeks 5-8: 6-12 hours a week
+* Weeks 9-13: 10 to 25 hours a week, including some after-hours and weekend work
+
+Among the specific time commitments you have are:
+
+* SIG-Release and Release Team meetings once a week during weeks 1-7.
+* Burndown meetings three to five times a week during weeks 8-12.
+* Community meetings once a week.
+
+## Choosing a Release Team
+
+One of your first, and definitely your most important, duties as Release Lead is to select a Release Team in consultation with SIG-Release.  Currently there are 10 roles to fill on the Release Team, plus one or more shadows (trainees) of each of those roles. each of which has specific requirements. Aside from any specifics, in general you are looking for candidates who:
+
+1. Can commit to the amount of time required across the release cycle;
+2. Are enthusiastic about being on the release team;
+3. Are members of the relevant SIGs for their role, if applicable;
+4. And have some prior experience with contributing to Kubernetes (such as shadowing a role for a prior release).
+
+In most cases, you will have a pool of candidates in the form of people who have previously shadowed the role in question, or have filled a different role on the Release Team and want to try something else.  Where possible, do select new team members over someone who has done the role several times, as we are trying to share experience across the organization.
+
+Also give some thought to ensuring diversity on the team, including members of more than one gender, ethnicity, nationality, and company affiliation.  This should not be hard to do, as prior release teams have had several women, several non-white folks, and staff from five or more companies.  In some cases, though, you may need to reach out to individuals you know and suggest that they apply for the team.
+
 ## Standards:
 
 * The GitHub repository layout is:
@@ -50,7 +77,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
 * Short links are handled with [http://bit.ly](http://bit.ly) - and each release follows the convention of:
 
-    * Retro doc:  [http://bit.ly/](http://bit.ly/kubeXXretro)[kube](http://bit.ly/kubeXXretro)[XXretro](http://bit.ly/kubeXXretro) where XX is the version number minus dots, e.g.: [http://bit.ly/kube110retro](http://bit.ly/kube110retro) 
+    * Retro doc:  [http://bit.ly/](http://bit.ly/kubeXXretro)[kube](http://bit.ly/kubeXXretro)[XXretro](http://bit.ly/kubeXXretro) where XX is the version number minus dots, e.g.: [http://bit.ly/kube110retro](http://bit.ly/kube110retro)
 
     * Release Schedule overview [http://bit.ly/k8sXX-release-info](http://bit.ly/k8sXX-release-info)
 
@@ -58,9 +85,9 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
     * Burndown/Meeting Minutes: [http://bit.ly/k8sXX-burndown](http://bit.ly/k8sXX-burndown)
 
-    * Features tracking spreadsheet:  [http://bit.ly/k8sXX-features](http://bit.ly/k8sXX-features) 
+    * Features tracking spreadsheet:  [http://bit.ly/k8sXX-features](http://bit.ly/k8sXX-features)
 
-    * Merged PRs with release notes: [http://bit.ly/k8sXX-relnotes](http://bit.ly/k8sXX-relnotes) 
+    * Merged PRs with release notes: [http://bit.ly/k8sXX-relnotes](http://bit.ly/k8sXX-relnotes)
 
     * Use the same conventions for additional documents
 
@@ -80,7 +107,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
 * The release lead is responsible for updating the [burndown template](https://docs.google.com/document/d/1zLnmDDOp_ko9Yh5uPJtgqPFD7GKq76fQsKaenXoMHzM/edit) ahead of the release (changing the milestone in links and anything else requested during the retrospective)
 
-* Release theme: There is no particular reason for this other than to have fun.  As release lead you get to pick a theme naming the release.
+* Release theme: There is no particular reason for this other than to have fun, and possibly provide a theme for Release Team gifts / shirts. As Release Team Lead, you get to pick a theme for the release.
     * Releases 1.8 to 1.10, had unofficial food-based code names.
        * 1.8 - "Burrito"
        * 1.9 - "Pumpkin"
@@ -163,7 +190,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
     <td>
 <p>- Coordinate x.x.0-beta.0 release, ensuring master-blocking, and master-upgrade dashboards are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal.  The release-x.x branch is created automatically as a part of the beta.0 release.  The branch manager now begins daily fast forwards.
 <p>- The burndown templates should be useful at this point since it starts asking about status relevant to each area now tracking (e.g. branch health, docs, communications, issues, etc.)
-<p>- Insure Test Infra Lead has release branch CI created and added to Testgrid
+<p>- Ensure Test Infra Lead has release branch CI created and added to Testgrid
 <p>- Most feature-oriented tasks should be completed at the end of this week
 <p>- SIGs that have not completed release themes should be contacted again, with a focus on explaining why this matters to the community
 <p>- Ping release team leads reminding them to start considering succession plans.  If they are handing the role off to a successor, identifying them early gives more time for the committed volunteer to get targeted mentoring.</td>
