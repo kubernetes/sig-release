@@ -50,12 +50,12 @@ Among the specific time commitments you have are:
 
 ## Choosing a Release Team
 
-One of your first, and definitely your most important, duties as Release Lead is to select a Release Team.  Currently there are 10 roles to fill on the Release Team, plus one or more shadows (trainees) of each of those roles. each of which has specific requirements. Aside from any specifics, in general you are looking for candidates who:
+One of your first, and definitely your most important, duties as Release Lead is to select a Release Team in consultation with SIG-Release.  Currently there are 10 roles to fill on the Release Team, plus one or more shadows (trainees) of each of those roles. each of which has specific requirements. Aside from any specifics, in general you are looking for candidates who:
 
 1. Can commit to the amount of time required across the release cycle;
 2. Are enthusiastic about being on the release team;
-3. Are members of the relevant SIGs for their role;
-4. And have some prior experience with contributing to Kubernetes.
+3. Are members of the relevant SIGs for their role, if applicable;
+4. And have some prior experience with contributing to Kubernetes (such as shadowing a role for a prior release).
 
 In most cases, you will have a pool of candidates in the form of people who have previously shadowed the role in question, or have filled a different role on the Release Team and want to try something else.  Where possible, do select new team members over someone who has done the role several times, as we are trying to share experience across the organization.
 
