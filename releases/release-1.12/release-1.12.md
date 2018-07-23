@@ -44,7 +44,6 @@
 | 1.12.0-beta.0 released from branch | Branch Manager | | 14 | | | week 7 | master-blocking, master-upgrade |
 | All release branch CI jobs created | Test Infra Lead | |17 | | | | |
 | Docs deadline - Open placeholder PRs | Docs Lead | |21 | | | | |
-| Begin Test Case Freeze? | Lead | | 28 | | | week 9 | |
 | Begin Code Slush | Bot, Lead | | 28 | | | week 9 | |
 | All Issues & PRs must have complete labels | Bug Triage | | 29 | | | | |
 | Begin code and test freeze (EOD PST) | Bot, Lead | | | 4 | | week 10 | 1.12-blocking, master-blocking, master-upgrade |
@@ -82,7 +81,7 @@ All features going into the release must have an associated issue in the feature
 
 ### Code Slush
 
-Starting on ***Tuesday, July 28th, 2018***, only PRs labeled by their owner SIGs with [`status/approved-for-milestone`](/ephemera/issues.md) will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can add the `status/approved-for-milestone` label in cases where the SIG approvers do not have permissions to do so.
+Starting on ***Tuesday, August 28th, 2018***, only PRs labeled by their owner SIGs with [`status/approved-for-milestone`](/ephemera/issues.md) will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can add the `status/approved-for-milestone` label in cases where the SIG approvers do not have permissions to do so.
 
 At this time, any issues/PRs with incomplete labels, or which are "stale" will be removed from the release.  The release team will work with SIGs to make sure that labels are complete prior to removal.
 
@@ -94,7 +93,7 @@ Starting at Code Slush, the release team will solicit and rule on [exception req
 
 ### Code Freeze
 
-All features going into the release must be code-complete, ***including tests***, and have docs PRs open by ***Tuesday, August 4th, 2018***.
+All features going into the release must be code-complete, ***including tests***, and have docs PRs open by ***Tuesday, September 4th, 2018***.
 
 The docs PRs don't have to be ready to merge, but it should be clear what the topic will be and who is responsible for writing it. This person will become the primary contact for the documentation lead. It’s incredibly important that documentation work gets completed as quickly as possible.
 
