@@ -208,11 +208,11 @@ Video [Link](https://youtu.be/QLiym7j60f4)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 3 ↕0
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 3 ↕0
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 0 ↕0
 
@@ -363,11 +363,11 @@ Video [Link](https://youtu.be/5NnZ1wuHo7Y)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 3 ↑1
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 3 ↑1
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 0 ↕0
 
@@ -508,11 +508,11 @@ Video [Link](https://youtu.be/5NnZ1wuHo7Y)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 2 ↓1
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 2 ↓1
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 0 ↕0
 
@@ -526,7 +526,7 @@ Video [Link](https://youtu.be/5NnZ1wuHo7Y)
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
         * [milestone/incomplete-labels](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fincomplete-labels+) (links to PRs of interest)
 
@@ -696,11 +696,11 @@ Video [Link](https://youtu.be/BZ1jshT198E)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 3 ↓1
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 3 ↓1
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 0 ↕0
 
@@ -718,7 +718,7 @@ Video [Link](https://youtu.be/BZ1jshT198E)
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
         * [milestone/incomplete-labels](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fincomplete-labels+) (links to PRs of interest)
 
@@ -930,11 +930,11 @@ Video [Link](https://youtu.be/Kiu4lUPxJig)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 4 ↓2
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 4 ↓2
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 0 ↓4
 
@@ -962,7 +962,7 @@ Video [Link](https://youtu.be/Kiu4lUPxJig)
 
                 * Merging once tests are green
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
         * [milestone/incomplete-labels](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fincomplete-labels+) (links to PRs of interest)
 
@@ -1125,11 +1125,11 @@ Video [Link](https://youtu.be/gdW3a7PvBbs)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 6 ↓5
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 6 ↓5
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 4 ↓2
 
@@ -1155,7 +1155,7 @@ Video [Link](https://youtu.be/gdW3a7PvBbs)
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
         * [milestone/incomplete-labels](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fincomplete-labels+) (links to PRs of interest)
 
@@ -1336,11 +1336,11 @@ Video [Link](https://youtu.be/p7Nlrub-dg4)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 11 ↕0
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 11 ↕0
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 6 ↕0
 
@@ -1374,7 +1374,7 @@ Video [Link](https://youtu.be/p7Nlrub-dg4)
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
             * [Backoff only when failed pod shows up ](https://github.com/kubernetes/kubernetes/pull/60985)
 
@@ -1541,11 +1541,11 @@ Video [Link](https://youtu.be/e14tlUBd2jQ)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 11 ↑1
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 11 ↑1
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 6 ↑2
 
@@ -1579,7 +1579,7 @@ test/e2e/framework/framework.go:318
 
                 * **Still Needs LGTM & Approve**, @sig-testing-approvers
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
             * [Backoff only when failed pod shows up ](https://github.com/kubernetes/kubernetes/pull/60985)
 
@@ -1736,11 +1736,11 @@ Video [Link](https://youtu.be/kcKw57uEp20)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 10 ↓2
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 10 ↓2
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 4 ↓12
 
@@ -1786,7 +1786,7 @@ Video [Link](https://youtu.be/kcKw57uEp20)
 
                 * **Needs LGTM from ****[@dixud**x](https://github.com/dixudx)** ****[@fabriziopandin**i](https://github.com/fabriziopandini)** ****[@timothys**c](https://github.com/timothysc)** ****[@luxa**s](https://github.com/luxas)** **
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
             * [Backoff only when failed pod shows up ](https://github.com/kubernetes/kubernetes/pull/60985)
 
@@ -1933,11 +1933,11 @@ Attending:
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 0 ↓1
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 12 ↓1
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 12 ↓1
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 16 ↑1 Review Needed
 
@@ -1963,7 +1963,7 @@ Attending:
 
             * [Cleanup old upgrading code that is v1.8->v1.9-specific ](https://github.com/kubernetes/kubernetes/pull/60359)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
             * [Backoff only when failed pod shows up ](https://github.com/kubernetes/kubernetes/pull/60985) **(Needs attention) **
 
@@ -2150,11 +2150,11 @@ Video [Link](https://youtu.be/JU8ZwLScA4Q)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 1 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 13 ↓2
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 13 ↓2
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 0 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 0 ↕0
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 15 ↓1
 
@@ -2170,7 +2170,7 @@ Video [Link](https://youtu.be/JU8ZwLScA4Q)
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest) ~ 7
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -2281,11 +2281,11 @@ Video Link
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 1 ↓1
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 15 ↕0
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 15 ↕0
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 0 ↓1
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 0 ↓2
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 0 ↓2
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 16 ↑2
 
@@ -2301,7 +2301,7 @@ Video Link
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -2420,13 +2420,13 @@ Attending:
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 2
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 15
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 15
 
             * Test failures have been added
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 1
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 2
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 2
 
         * [milestone/needs-attention](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone%2Fneeds-attention) issues: 14
 
@@ -2438,7 +2438,7 @@ Attending:
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -2561,11 +2561,11 @@ Video [Link](https://youtu.be/HeuMd3UDut8)
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues:
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues:
 
         * Other priority Issues: 
 
@@ -2577,7 +2577,7 @@ Video [Link](https://youtu.be/HeuMd3UDut8)
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -2802,11 +2802,11 @@ Attending:
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 17↓2
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 7↑1
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 7↑1
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 6↓1
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 5↑1
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 5↑1
 
         * Other priority Issues: 0↓2
 
@@ -2818,7 +2818,7 @@ Attending:
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -2960,11 +2960,11 @@ Attending:
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 21 ↑3 (trending up week over week)
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 5 ↑5 
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 5 ↑5 
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 8 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 13 ↓3
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 13 ↓3
 
         * Other priority Issues: 
 
@@ -2978,7 +2978,7 @@ Attending:
 
             * [Maximum of N per topology value. ](https://github.com/kubernetes/kubernetes/pull/41718)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -3045,11 +3045,11 @@ Attending:
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 18 ↑2 (trending up)
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 0 ↕0
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 0 ↕0
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 8 ↑3 
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 16 ↓8
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 16 ↓8
 
         * Other Priority Issues: 1  ↕0
 
@@ -3061,7 +3061,7 @@ Attending:
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -3289,11 +3289,11 @@ Attending:
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 16 ↑4
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 0 ↕0
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 0 ↕0
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 5 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 25 ↓2
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 25 ↓2
 
         * Other Priority Issues: 1  ↕0
 
@@ -3305,7 +3305,7 @@ Attending:
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -3544,11 +3544,11 @@ Attending:
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 12 ↕0
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 0 ↕0
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 0 ↕0
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 5 ↕0
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 27 ↕0
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 27 ↕0
 
         * Other Priority Issues: 1  ↕0
 
@@ -3562,7 +3562,7 @@ Attending:
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 
@@ -3796,11 +3796,11 @@ Attending:
 
         * [Important](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-soon) Issues: 12
 
-        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Ffailing-test) issues: 0
+        * [Failing test](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Akind%2Ffailing-test) issues: 0
 
         * [Long term](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Apriority%2Fimportant-longterm) issues: 5
 
-        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Apriority%2Ffailing-test%20) Issues: 27
+        * [No-priority](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=-label%3Apriority%2Fimportant-longterm%20is%3Aissue%20is%3Aopen%20milestone%3Av1.10%20-label%3Apriority%2Fcritical-urgent%20-label%3Apriority%2Fimportant-soon%20-label%3Akind%2Ffailing-test%20) Issues: 27
 
         * [Non-Blocking, Labels Incomplete](https://github.com/kubernetes/kubernetes/issues?q=is%3Aissue+is%3Aopen+milestone%3Av1.10+label%3Amilestone-labels-incomplete) Issues: 0
 
@@ -3814,7 +3814,7 @@ Attending:
 
         * [Important-Soon](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-soon) (links to PRs of interest)
 
-        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Ffailing-test) (links to PRs of interest)
+        * [Test-blocking](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Akind%2Ffailing-test) (links to PRs of interest)
 
     * [Long-term](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aopen%20milestone%3Av1.10%20label%3Apriority%2Fimportant-long-term)
 

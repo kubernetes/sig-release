@@ -42,7 +42,7 @@ Here are some good early deliverables from the CI Signal lead between start of t
 - Maintain a master tracking sheet and keep it up-to-date with issues tracking any test failure/flake - [Sample sheet](https://docs.google.com/spreadsheets/d/1j2K8cxraSp8jZR2S-kJUT6GNjtXYU9hocNRiVUGZWvc/edit#gid=127492362)
 - Copy over any open test issues from previous release (ask previous CI Signal lead for the tracker sheet) and follow up on them with owners
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
-  - Make sure all open issues have a kind/bug, priority/flake or priority/failing-test, priority/important-soon labels 
+  - Make sure all open issues have a `priority/` label and one of either the `kind/flake` or `kind/failing-test` label
   - Make sure the issue is assigned against the current milestone 1.x, using /milestone
   - Assign the issue to appropriate SIG using /sig label
   - If you are aware of the individual associated with the feature area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around
@@ -145,7 +145,7 @@ This can be done in 2 ways (i) including @kubernetes/sig-foo-test-failures teams
 If a job as a whole is failing, file a v1.y issue in kubernetes/kubernetes titled:`[job failure] job name issue`
 ```
 /priority critical-urgent
-/priority failing-test
+/kind failing-test
 @kubernetes/sig-FOO-test-failures
 
 This job is on the [sig-release-master-blocking dashboard](https://k8s-testgrid.appspot.com/sig-release-master-blocking),
@@ -161,7 +161,7 @@ Examples:
 If a test case is failing, file a v1.y milestone issue in kubernetes/kubernetes titled: `[e2e failure] full test case name`
 ```
 /priority critical-urgent
-/priority failing-test
+/kind failing-test
 @kubernetes/sig-FOO-test-failures
 
 This test case has been failing [SINCE WHEN OR FOR HOW LONG] and affects [WHICH JOBS]: [triage report](LINK TO TRIAGE REPORT)
