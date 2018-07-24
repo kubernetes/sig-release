@@ -2,7 +2,7 @@ aliases:
   sig-release-leads:
     - calebamiles
     - jdumars
-  release-team-leads:
+  release-team-lead-role:
     - bgrant0607
     - dchen1107
     - enisoc
@@ -13,7 +13,7 @@ aliases:
     - saad-ali
     - jberkus
     - tpepper
-  patch-release-managers:
+  patch-release-manager-role:
     - enisoc
     - fabioy
     - jessfraz
@@ -23,6 +23,49 @@ aliases:
     - roberthbailey
     - saad-ali
     - wojtek-t
+    - MaciekPytel
+    - foxish
+    - feiskyer
+  ci-signal-role:
+    - ericchiang
+    - spiffxp
+    - krzyzacy
+    - aishsundar
+    - mohammedzee1000
+  features-role:
+    - idvoretskyi
+    - justaugustus
+  test-infra-role:
+    - krzyzacy
+    - bentheelder
+    - cjwagner
+  bug-triage-role:
+    - marun
+    - spiffxp
+    - jberkus
+    - tpepper
+    - guineveresaenger
+  branch-manager-role:
+    - caesarxychao
+    - abgworrall
+    - dashpole
+    - calebamiles
+    - dougm
+  docs-role:
+    - chenopis
+    - steveperry-53
+    - zacharysarah
+    - bradamant3
+    - misty
+    - zparnold
+  release-notes-role:
+    - spiffxp
+    - radhikapc
+    - bradamant3
+    - nickchase
+  communications-role:
+    - nwoods
+    - kbarnard10
   product-security-team:
     - philips
     - jessfraz
