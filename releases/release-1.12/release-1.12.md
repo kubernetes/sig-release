@@ -2,6 +2,8 @@
 
 *Handy Links*
 
+* This document via short url:
+  [http://bit.ly/k8s112-release-info](http://bit.ly/k8s112-release-info)
 * [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.12/release_team.md)
 * Zoom: join Google Group to receive meeting invite
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
