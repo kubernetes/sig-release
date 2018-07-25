@@ -1,0 +1,4 @@
+approvers:
+  - patch-release-manager-role
+reviewers:
+  - patch-release-manager-role
