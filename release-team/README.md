@@ -185,3 +185,26 @@ is undefined.
 ### During "Security" releases
 For all unplanned or embargoed releases
 - Facilitate security releases following the under the [Security Release Process](security-release-process-documentation/security-release-process.md)
+
+---
+
+## Milestone Maintainers
+
+Across release cycles, one of the best signals for [issue triage](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#milestones) is whether or not an issue or PR is actually targeted for the current milestone.
+
+To maintain up-to-date status on milestone inclusion, we rely on a set of Milestone Maintainers (members of the `kubernetes-milestone-maintainers` GitHub team) to apply the appropriate labels to issues / PRs. This is facilitated by `/milestone` commands and bot automation.
+
+Each release cycle, the current Release Team Lead must update membership to the aforementioned GitHub team.
+
+Maintainers of the `kubernetes-milestone-maintainers` GitHub team are defined as follows:
+- SIG Release Chairs
+- Current Release Team Lead
+
+Members of the `kubernetes-milestone-maintainers` GitHub team can include:
+- SIG leadership (SIG Chairs / Technical Leads) from all SIGs
+- SIG milestone maintainers from all SIGs (in addition to SIG leadership)
+- Special code reviewers, as selected by SIG Release
+
+Maintainers of the GitHub team can, with justification, add or remove members at any time during release cycles.
+
+Members are expected to actively triage issues and PRs to retain membership in `kubernetes-milestone maintainers`. Members not fulfilling the duties of this role should be removed.
