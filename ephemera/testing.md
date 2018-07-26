@@ -136,7 +136,7 @@ urgent than persistent failures, but still expected to have a root cause investi
 SIGs are expected to proactively monitor and maintain their tests.
 
 - File an issue for the broken test so it can be referenced and discovered
-  - Set the following labels: `priority/failing-test`, `sig/*`
+  - Set the following labels: `priority/critical-urgent`, `kind/failing-test`, `sig/*`
   - Assign the issue to whoever is working on it
 - Root cause analysis of the test failure is performed by the owner
 - **Note**: The owning SIG for a test can reassign ownership of a resolution to another SIG only after getting

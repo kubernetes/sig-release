@@ -60,13 +60,13 @@ If issues do not match the above, you should comment and urge the SIGs to fix th
 
 The second thing you need to do is to start filtering issues which have been assigned to the milestone, specifically getting SIGs to change milestones on issues which are not making progress.  For example, if there's an issue with no consensus on an approach to fix it, and no PRs, you should comment and suggest that that issue be taken out of the milestone.
 
-The third thing you should do, time permitting, is to scan through the newly opened issue and PR lists for bugs to see if they're failures against the upcoming release features, especially critical ones.  For ones which are, you should ensure that they have all the correct labelling to be tracked and updated.  Depending on volume and time, you may wish to exclude ```label:"kind/feature"``` and ```label:"priority/failing-test"``` from your searches, as those are covered by the Features and CI Signal leads respectively.
+The third thing you should do, time permitting, is to scan through the newly opened issue and PR lists for bugs to see if they're failures against the upcoming release features, especially critical ones.  For ones which are, you should ensure that they have all the correct labelling to be tracked and updated.  Depending on volume and time, you may wish to exclude ```label:"kind/feature"``` and ```label:"kind/failing-test"``` from your searches, as those are covered by the Features and CI Signal leads respectively.
 
 ### Sample Searches
 * Open v1.11 Issues
-   * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"priority/failing-test"` [milestone open issues, excluding kind/feature and priority/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22priority%2Ffailing-test%22+)
+   * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
 * Open v1.11 PRs
-   * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"priority/failing-test"` [milestone open PRs, excluding kind/feature and priority/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22priority%2Ffailing-test%22+)
+   * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
 
 ### Reports
 
@@ -90,10 +90,10 @@ Issues and PRs missing correct labels will begin to see reminders from the bot. 
 ### Sample Searches
 
 * Open v1.11 Issues
-  * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"priority/failing-test"` [milestone open issues, excluding kind/feature and priority/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22priority%2Ffailing-test%22+)
+  * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
   * `is:open is:issue milestone:v1.11` [milestone open issues, no exclusions](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+)
 * Open v1.11 PRs
-  * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"priority/failing-test"` [milestone open PRs, excluding kind/feature and priority/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22priority%2Ffailing-test%22+)
+  * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
   * `is:open is:pr milestone:v1.11"` [milestone open PRs, no exclusions](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+)
 
 ### Reports
@@ -127,12 +127,12 @@ As Code Freeze progresses, you should get increasingly aggressive about getting 
 ### Sample Searches
 
 * Open v1.11 Issues
-  * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"priority/failing-test"` [milestone open issues, excluding kind/feature and priority/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22priority%2Ffailing-test%22+)
+  * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
   * `is:open is:issue milestone:v1.11` [milestone open issues, no exclusions](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+)
   * `is:open is:issue created:>2018-06-14` [open issues, no exclusions, created since you last looked](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen++created%3A%3E2018-06-14)
   * `is:open is:issue modified:>2018-06-14` [open issues, no exclusions, modified since you last looked](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen++modified%3A%3E2018-06-14)
 * Open v1.11 PRs
-  * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"priority/failing-test"` [milestone open PRs, excluding kind/feature and priority/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22priority%2Ffailing-test%22+)
+  * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
   * `is:open is:pr milestone:v1.11"` [milestone open PRs, no exclusions](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+)
   * `is:open is:pr created:>2018-06-14` [open PRs, no exclusions, created since you last looked](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen++created%3A%3E2018-06-14)
   * `is:open is:pr modified:>2018-06-14` [open PRs, no exclusions, modified since you last looked](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen++modified%3A%3E2018-06-14)
