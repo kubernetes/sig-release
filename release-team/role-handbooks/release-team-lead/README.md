@@ -76,13 +76,13 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
 * The release lead is responsible for updating the [burndown template](https://docs.google.com/document/d/1zLnmDDOp_ko9Yh5uPJtgqPFD7GKq76fQsKaenXoMHzM/edit) ahead of the release (changing the milestone in links and anything else requested during the retrospective)
 
-* Since 1.8, releases have had unofficial food-based code names. There is no particular reason for this other than to have fun.  As release lead you get to pick your food.
-
-    * 1.8 - "Burrito"
-
-    * 1.9 - "Pumpkin"
-
-    * 1.10 - "Kiwi"
+* Release theme: There is no particular reason for this other than to have fun.  As release lead you get to pick a theme naming the release.
+    * Releases 1.8 to 1.10, had unofficial food-based code names.
+       * 1.8 - "Burrito"
+       * 1.9 - "Pumpkin"
+       * 1.10 - "Kiwi"
+    * Release 1.10 had a late change to "Left Shark".
+    * Release 1.11 had a Tolkien theme of "Eleventy-One: A Long-Expected Release"
 
 ## Release Milestone Activities:
 
@@ -94,7 +94,13 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
   <tr>
     <td>1</td>
     <td><p>- Start the release cycle
-<p>- Insure you are joined to the following Google Groups: [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown),[kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release), [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads), [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev).
+<p>- Ensure you are joined to the following Google Groups:
+     <ul>
+     <li><a href="https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown">kubernetes-milestone-burndown</a></li>
+     <li><a href="https://groups.google.com/forum/#!forum/kubernetes-sig-release">kubernetes-sig-release</a></li>
+     <li><a href="https://groups.google.com/forum/#!forum/kubernetes-sig-leads">kubernetes-sig-leads</a></li>
+     <li><a href="https://groups.google.com/forum/#!forum/kubernetes-dev">kubernetes-dev</a></li>
+     </ul>
 <p>- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.x/release-x.x.md
 <p>- Ensure that relevant feedback from the prior retrospective is incorporated into the process
 <p>- Send an update to kubernetes-dev mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
@@ -107,7 +113,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
     <td>2</td>
     <td><p>- Assist the features lead in collecting planned work from SIGs
 <p>- Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team.  These will eventually turn into burndown meetings and occur daily.  Invite the kubernetes-milestone-burndown@googlegroups.com group.  You will need to contact SIG-Release leads to gain access to the SIG's zoom.us account for hosting/recording/posting meeting video.
-<p>- Create a Google Calendar for the release:  Follow the steps in [the sig-governance documentation](https://git.k8s.io/community/sig-governance.md) to create and share a calendar with the community.  Add key event dates during the cycle.
+<p>- Create a Google Calendar for the release:  Follow the steps in <a href="https://git.k8s.io/community/sig-governance.md">the sig-governance documentation</a> to create and share a calendar with the community.  Add key event dates during the cycle.
 <p>- Begin reporting release status at the community meeting
 <p>- Ensure the release team is fully filled if possible, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
 <p>- Begin paying attention to CI signal, as it will begin degrading soon after the prior release is cut
