@@ -2,6 +2,7 @@
 
 ## Action Required
 
+- the API server and client-go libraries have been fixed to support additional non-alpha-numeric characters in UserInfo "extra" data keys. Both should be updated in order to properly support extra data containing "/" characters or other characters disallowed in HTTP headers. ([#65799](https://github.com/kubernetes/kubernetes/pull/65799), [@dekkagaijin](https://github.com/dekkagaijin))
 - The `NodeConfiguration` kind in the kubeadm v1alpha2 API has been renamed `JoinConfiguration` in v1alpha3 ([#65951](https://github.com/kubernetes/kubernetes/pull/65951), [@luxas](https://github.com/luxas))
 - The `MasterConfiguration` kind in the kubeadm v1alpha2 API has been renamed `InitConfiguration` in v1alpha3 ([#65945](https://github.com/kubernetes/kubernetes/pull/65945), [@luxas](https://github.com/luxas))
 - The formerly publicly-available cAdvisor web UI that the kubelet started using `--cadvisor-port` is now entirely removed in 1.12. The recommended way to run cAdvisor if you still need it, is via a DaemonSet. ([#65707](https://github.com/kubernetes/kubernetes/pull/65707), [@dims](https://github.com/dims))
@@ -13,6 +14,7 @@
 
 ## New Features
 
+- Kubelet serving certificate bootstrapping and rotation has been promoted to beta status. ([#66726](https://github.com/kubernetes/kubernetes/pull/66726), [@liggitt](https://github.com/liggitt))
 - Azure nodes with availability zone now will have label `failure-domain.beta.kubernetes.io/zone=<region>-<zoneID>`. ([#66242](https://github.com/kubernetes/kubernetes/pull/66242), [@feiskyer](https://github.com/feiskyer))
 - kubeadm: Default component configs are printable via kubeadm config print-default ([#66074](https://github.com/kubernetes/kubernetes/pull/66074), [@rosti](https://github.com/rosti))
 - Add Ubuntu 18.04 (Bionic) series to Juju charms ([#65644](https://github.com/kubernetes/kubernetes/pull/65644), [@tvansteenburgh](https://github.com/tvansteenburgh))
@@ -32,6 +34,7 @@
 - The alpha `Initializers` admission plugin is no longer enabled by default. This matches the off-by-default behavior of the alpha API which drives initializer behavior. ([#66039](https://github.com/kubernetes/kubernetes/pull/66039), [@liggitt](https://github.com/liggitt))
 - LimitRange and Endpoints resources can be created via an update API call if the object does not already exist. When this occurs, an authorization check is now made to ensure the user making the API call is authorized to create the object. In previous releases, only an update authorization check was performed. ([#65150](https://github.com/kubernetes/kubernetes/pull/65150), [@jennybuckley](https://github.com/jennybuckley))
 - More fields are allowed at the root of the CRD validation schema when the status subresource is enabled. ([#65357](https://github.com/kubernetes/kubernetes/pull/65357), [@nikhita](https://github.com/nikhita))
+- bugfix: Do not print feature gates in the generic apiserver code for glog level 0 ([#65584](https://github.com/kubernetes/kubernetes/pull/65584), [@neolit123](https://github.com/neolit123))
 - api-machinery utility functions `SetTransportDefaults` and `DialerFor` once again respect custom Dial functions set on transports ([#65547](https://github.com/kubernetes/kubernetes/pull/65547), [@liggitt](https://github.com/liggitt))
 
 
@@ -43,7 +46,10 @@
 
 ## SIG Auth
 
+- Kubelet serving certificate bootstrapping and rotation has been promoted to beta status. ([#66726](https://github.com/kubernetes/kubernetes/pull/66726), [@liggitt](https://github.com/liggitt))
+- the API server and client-go libraries have been fixed to support additional non-alpha-numeric characters in UserInfo "extra" data keys. Both should be updated in order to properly support extra data containing "/" characters or other characters disallowed in HTTP headers. ([#65799](https://github.com/kubernetes/kubernetes/pull/65799), [@dekkagaijin](https://github.com/dekkagaijin))
 - kubelets that specify `--cloud-provider` now only report addresses in Node status as determined by the cloud provider ([#65594](https://github.com/kubernetes/kubernetes/pull/65594), [@liggitt](https://github.com/liggitt))
+- Fix an issue with dropped audit logs, when truncating and batch backends enabled at the same time. ([#65823](https://github.com/kubernetes/kubernetes/pull/65823), [@loburm](https://github.com/loburm))
 
 
 ## SIG Autoscaling
@@ -52,8 +58,14 @@
 - Cluster Autoscaler version updated to 1.3.1-beta.1. Release notes: https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.3.1-beta.1 ([#65857](https://github.com/kubernetes/kubernetes/pull/65857), [@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 
 
+## SIG AWS
+
+- Make EBS volume expansion faster ([#66728](https://github.com/kubernetes/kubernetes/pull/66728), [@gnufied](https://github.com/gnufied))
+
+
 ## SIG Azure
 
+- Azure Go SDK has been upgraded to v19.0.0 and VirtualMachineScaleSetVM now supports availability zones. ([#66648](https://github.com/kubernetes/kubernetes/pull/66648), [@feiskyer](https://github.com/feiskyer))
 - Add support for using User Assigned MSI (https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) with Kubernetes cluster on Azure. ([#66180](https://github.com/kubernetes/kubernetes/pull/66180), [@kkmsft](https://github.com/kkmsft))
 - Azure nodes with availability zone now will have label `failure-domain.beta.kubernetes.io/zone=<region>-<zoneID>`. ([#66242](https://github.com/kubernetes/kubernetes/pull/66242), [@feiskyer](https://github.com/feiskyer))
 - Support configuring the Azure load balancer idle connection timeout for services ([#66045](https://github.com/kubernetes/kubernetes/pull/66045), [@cpuguy83](https://github.com/cpuguy83))
@@ -63,6 +75,8 @@
 
 ## SIG CLI
 
+- Flag --pod (-p shorthand) of kubectl exec command marked as deprecated ([#66558](https://github.com/kubernetes/kubernetes/pull/66558), [@quasoft](https://github.com/quasoft))
+- Fix kubelet startup failure when using ExecPlugin in kubeconfig ([#66395](https://github.com/kubernetes/kubernetes/pull/66395), [@awly](https://github.com/awly))
 - kubectl: fixes a panic displaying pods with nominatedNodeName set ([#66406](https://github.com/kubernetes/kubernetes/pull/66406), [@liggitt](https://github.com/liggitt))
 - Fix validation for HealthzBindAddress in kube-proxy when --healthz-port is set to 0 ([#66138](https://github.com/kubernetes/kubernetes/pull/66138), [@wsong](https://github.com/wsong))
 - `kubectl config set-context` can now set attributes of the current context, like the current namespace, by passing `--current` instead of a specific context name ([#66140](https://github.com/kubernetes/kubernetes/pull/66140), [@liggitt](https://github.com/liggitt))
@@ -83,6 +97,9 @@
 
 ## SIG Cluster Lifecycle
 
+- kubeadm now can join the cluster with pre-existing client certificate if provided ([#66482](https://github.com/kubernetes/kubernetes/pull/66482), [@dixudx](https://github.com/dixudx))
+- kubeadm: remove misleading error message regarding image pulling ([#66658](https://github.com/kubernetes/kubernetes/pull/66658), [@dixudx](https://github.com/dixudx))
+- When attaching iSCSI volumes, kubelet now scans only the specific ([#63176](https://github.com/kubernetes/kubernetes/pull/63176), [@bswartz](https://github.com/bswartz))
 - kubeadm: Pull sidecar and dnsmasq-nanny images when using kube-dns ([#66499](https://github.com/kubernetes/kubernetes/pull/66499), [@rosti](https://github.com/rosti))
 - renamed command line option  --cri-socket-path of the kubeadm subcommand "kubeadm config images pull" to --cri-socket to be consistent with the rest of kubeadm subcommands. ([#66382](https://github.com/kubernetes/kubernetes/pull/66382), [@bart0sh](https://github.com/bart0sh))
 - kubeadm: stop setting UID in the kubelet ConfigMap ([#66341](https://github.com/kubernetes/kubernetes/pull/66341), [@runiq](https://github.com/runiq))
@@ -100,10 +117,14 @@
 - bazel deb package bugfix: The kubeadm deb package now reloads the kubelet after installation ([#65554](https://github.com/kubernetes/kubernetes/pull/65554), [@rdodev](https://github.com/rdodev))
 - Unix: support ZFS as a valid graph driver for Docker ([#65635](https://github.com/kubernetes/kubernetes/pull/65635), [@neolit123](https://github.com/neolit123))
 - kubeadm: remove redundant flags settings for kubelet ([#64682](https://github.com/kubernetes/kubernetes/pull/64682), [@dixudx](https://github.com/dixudx))
+- Add prometheus scrape port to CoreDNS service ([#65589](https://github.com/kubernetes/kubernetes/pull/65589), [@rajansandeep](https://github.com/rajansandeep))
+- bugfix: Do not print feature gates in the generic apiserver code for glog level 0 ([#65584](https://github.com/kubernetes/kubernetes/pull/65584), [@neolit123](https://github.com/neolit123))
 
 
 ## SIG GCP
 
+- Fixed an issue which prevented `gcloud` from working on GCE when metadata concealment was enabled. ([#66630](https://github.com/kubernetes/kubernetes/pull/66630), [@dekkagaijin](https://github.com/dekkagaijin))
+- Fix Stackdriver integration based on node annotation container.googleapis.com/instance_id. ([#66676](https://github.com/kubernetes/kubernetes/pull/66676), [@kawych](https://github.com/kawych))
 - Update crictl to v1.11.1. ([#66152](https://github.com/kubernetes/kubernetes/pull/66152), [@Random-Liu](https://github.com/Random-Liu))
 - GCE: Fixes loadbalancer creation and deletion issues appearing in 1.10.5. ([#66400](https://github.com/kubernetes/kubernetes/pull/66400), [@nicksardo](https://github.com/nicksardo))
 - Bump Ingress-gce version to 1.2.0 ([#65641](https://github.com/kubernetes/kubernetes/pull/65641), [@freehan](https://github.com/freehan))
@@ -120,16 +141,25 @@
 
 - Fix validation for HealthzBindAddress in kube-proxy when --healthz-port is set to 0 ([#66138](https://github.com/kubernetes/kubernetes/pull/66138), [@wsong](https://github.com/wsong))
 - Support traffic shaping for CNI network driver ([#63194](https://github.com/kubernetes/kubernetes/pull/63194), [@m1093782566](https://github.com/m1093782566))
+- Add prometheus scrape port to CoreDNS service ([#65589](https://github.com/kubernetes/kubernetes/pull/65589), [@rajansandeep](https://github.com/rajansandeep))
+- Set “priorityClassName: system-node-critical” on kube-proxy manifest by default. ([#60150](https://github.com/kubernetes/kubernetes/pull/60150), [@MrHohn](https://github.com/MrHohn))
 
 
 ## SIG Node
 
+- Added CPU Manager state validation in case of changed CPU topology. ([#66718](https://github.com/kubernetes/kubernetes/pull/66718), [@ipuustin](https://github.com/ipuustin))
+- Kubelet serving certificate bootstrapping and rotation has been promoted to beta status. ([#66726](https://github.com/kubernetes/kubernetes/pull/66726), [@liggitt](https://github.com/liggitt))
+- Add support kubelet plugin watcher in device manager. ([#58755](https://github.com/kubernetes/kubernetes/pull/58755), [@vikaschoudhary16](https://github.com/vikaschoudhary16))
+- If `TaintNodesByCondition` enabled, taint node with `TaintNodeUnschedulable` when ([#63955](https://github.com/kubernetes/kubernetes/pull/63955), [@k82cn](https://github.com/k82cn))
 - The --docker-disable-shared-pid kubelet flag has been removed. PID namespace sharing can instead be enable per-pod using the ShareProcessNamespace option. ([#66506](https://github.com/kubernetes/kubernetes/pull/66506), [@verb](https://github.com/verb))
 - Update crictl to v1.11.1. ([#66152](https://github.com/kubernetes/kubernetes/pull/66152), [@Random-Liu](https://github.com/Random-Liu))
 - Fixed a panic in the node status update logic when existing node has nil labels. ([#66307](https://github.com/kubernetes/kubernetes/pull/66307), [@guoshimin](https://github.com/guoshimin))
 - kubelets that specify `--cloud-provider` now only report addresses in Node status as determined by the cloud provider ([#65594](https://github.com/kubernetes/kubernetes/pull/65594), [@liggitt](https://github.com/liggitt))
+- Fix the bug where image garbage collection is disabled by mistake. ([#66051](https://github.com/kubernetes/kubernetes/pull/66051), [@jiaxuanzhou](https://github.com/jiaxuanzhou))
+- Fix a bug that preempting a pod may block forever. ([#65987](https://github.com/kubernetes/kubernetes/pull/65987), [@Random-Liu](https://github.com/Random-Liu))
 - Support traffic shaping for CNI network driver ([#63194](https://github.com/kubernetes/kubernetes/pull/63194), [@m1093782566](https://github.com/m1093782566))
 - Fix `RunAsGroup` which doesn't work since 1.10. ([#65926](https://github.com/kubernetes/kubernetes/pull/65926), [@Random-Liu](https://github.com/Random-Liu))
+- Reload systemd config files before starting kubelet. ([#65702](https://github.com/kubernetes/kubernetes/pull/65702), [@mborsz](https://github.com/mborsz))
 - Unix: support ZFS as a valid graph driver for Docker ([#65635](https://github.com/kubernetes/kubernetes/pull/65635), [@neolit123](https://github.com/neolit123))
 
 
@@ -156,7 +186,10 @@
 
 ## SIG Storage
 
+- Make EBS volume expansion faster ([#66728](https://github.com/kubernetes/kubernetes/pull/66728), [@gnufied](https://github.com/gnufied))
+- When attaching iSCSI volumes, kubelet now scans only the specific ([#63176](https://github.com/kubernetes/kubernetes/pull/63176), [@bswartz](https://github.com/bswartz))
 - Fix volume limit for EBS on m5 and c5 instance types ([#66397](https://github.com/kubernetes/kubernetes/pull/66397), [@gnufied](https://github.com/gnufied))
+- Allow ScaleIO volumes to be provisioned without having to first manually create /dev/disk/by-id path on each kubernetes node (if not already present) ([#66174](https://github.com/kubernetes/kubernetes/pull/66174), [@ddebroy](https://github.com/ddebroy))
 - fixes an issue with multi-line annotations injected via downward API files getting scrambled ([#65992](https://github.com/kubernetes/kubernetes/pull/65992), [@liggitt](https://github.com/liggitt))
 - Fix flexvolume in containarized kubelets ([#65549](https://github.com/kubernetes/kubernetes/pull/65549), [@gnufied](https://github.com/gnufied))
 - Add volume mode filed to constructed volume spec for CSI plugin ([#65456](https://github.com/kubernetes/kubernetes/pull/65456), [@wenlxie](https://github.com/wenlxie))
@@ -169,6 +202,7 @@
 ## SIG VMWare
 
 - Fix for resourcepool-path configuration in the vsphere.conf file. ([#66261](https://github.com/kubernetes/kubernetes/pull/66261), [@divyenpatel](https://github.com/divyenpatel))
+- Preserve vmUUID when renewing nodeinfo in vSphere cloud provider ([#66007](https://github.com/kubernetes/kubernetes/pull/66007), [@w-leads](https://github.com/w-leads))
 - Can configure the vsphere cloud provider with a trusted Root-CA ([#64758](https://github.com/kubernetes/kubernetes/pull/64758), [@mariantalla](https://github.com/mariantalla))
 
 
