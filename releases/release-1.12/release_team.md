@@ -1,7 +1,7 @@
 | **Role** | **Name** (**GitHub / Slack ID**)  | **Shadow Name(s) (GitHub / Slack ID)** |
 | ------ | ------ | ------ |
 | Lead | Tim Pepper ([@tpepper](https://github.com/tpepper)) | Aishwarya Sundar ([@AishSundar](https://github.com/AishSundar)) |
-| Features | Stephen Augustus ([@justaugustus](https://github.com/justaugustus)) | Kendrick Coleman ([@kacole2](https://github.com/kacole2)), Robert Sandoval ([@robertsandoval](https://github.com/robertsandoval)), Rajendar Talatam ([@rajendar38](https://github.com/rajendar38)) |
+| Features | Stephen Augustus ([@justaugustus](https://github.com/justaugustus)) | Kendrick Coleman ([@kacole2](https://github.com/kacole2)), Robert Sandoval ([@robertsandoval](https://github.com/robertsandoval)), Rajendar Talatam ([@rajendar38](https://github.com/rajendar38)), Michael Scott Singh ([@wadadli](https://github.com/wadadli))|
 | CI Signal | Mohammed Zeeshan Ahmed ([@mohammedzee1000](https://github.com/mohammedzee1000)) | Christian Hernandez ([@christianh814](https://github.com/christianh814)), Suraj Narwade ([@surajnarwade](https://github.com/surajnarwade)) |
 | Test Infra | Cole Wagner ([@cjwagner](https://github.com/cjwagner)) | Amit Watve ([@amwat](https://github.com/amwat)), Paul Renato ([@prwitt](https://github.com/prwitt)), RaviSantosh Gudimetla ([@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla)) |
 | Bug Triage | Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger)/ @gsaenger on Slack) | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)), Arnaud Meukam ([@ameukam](https://github.com/ameukam)), Anubhuti Manohar ([@amanohar](https://github.com/amanohar)), Niko Penteridis ([@dogopupper](https://github.com/dogopupper)) |
