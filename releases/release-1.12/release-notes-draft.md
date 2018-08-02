@@ -14,6 +14,7 @@
 
 ## New Features
 
+- Add kubectl create job command ([#60316](https://github.com/kubernetes/kubernetes/pull/60316), [@soltysh](https://github.com/soltysh))
 - Kubelet serving certificate bootstrapping and rotation has been promoted to beta status. ([#66726](https://github.com/kubernetes/kubernetes/pull/66726), [@liggitt](https://github.com/liggitt))
 - Azure nodes with availability zone now will have label `failure-domain.beta.kubernetes.io/zone=<region>-<zoneID>`. ([#66242](https://github.com/kubernetes/kubernetes/pull/66242), [@feiskyer](https://github.com/feiskyer))
 - kubeadm: Default component configs are printable via kubeadm config print-default ([#66074](https://github.com/kubernetes/kubernetes/pull/66074), [@rosti](https://github.com/rosti))
@@ -54,6 +55,7 @@
 
 ## SIG Autoscaling
 
+- Speed up HPA reaction to metric changes by removing scale up forbidden window. ([#66615](https://github.com/kubernetes/kubernetes/pull/66615), [@jbartosik](https://github.com/jbartosik))
 - Cluster Autoscaler version updated to 1.3.1. Release notes: https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.3.1 ([#66122](https://github.com/kubernetes/kubernetes/pull/66122), [@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 - Cluster Autoscaler version updated to 1.3.1-beta.1. Release notes: https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.3.1-beta.1 ([#65857](https://github.com/kubernetes/kubernetes/pull/65857), [@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 
@@ -75,6 +77,9 @@
 
 ## SIG CLI
 
+- Add kubectl create job command ([#60316](https://github.com/kubernetes/kubernetes/pull/60316), [@soltysh](https://github.com/soltysh))
+- The `kubectl patch` command no longer exits with exit code 1 when a redundant patch results in a no-op ([#66725](https://github.com/kubernetes/kubernetes/pull/66725), [@juanvallejo](https://github.com/juanvallejo))
+- Improved the output of `kubectl get events` to prioritize showing the message, and move some fields to `-o wide`. ([#66643](https://github.com/kubernetes/kubernetes/pull/66643), [@smarterclayton](https://github.com/smarterclayton))
 - Flag --pod (-p shorthand) of kubectl exec command marked as deprecated ([#66558](https://github.com/kubernetes/kubernetes/pull/66558), [@quasoft](https://github.com/quasoft))
 - Fix kubelet startup failure when using ExecPlugin in kubeconfig ([#66395](https://github.com/kubernetes/kubernetes/pull/66395), [@awly](https://github.com/awly))
 - kubectl: fixes a panic displaying pods with nominatedNodeName set ([#66406](https://github.com/kubernetes/kubernetes/pull/66406), [@liggitt](https://github.com/liggitt))
@@ -163,6 +168,11 @@
 - Unix: support ZFS as a valid graph driver for Docker ([#65635](https://github.com/kubernetes/kubernetes/pull/65635), [@neolit123](https://github.com/neolit123))
 
 
+## SIG OpenStack
+
+- If Openstack LoadBalancer is not defined in cloud config, the loadbalancer is not initialized any more in openstack. All setups must have some setting under that section ([#65781](https://github.com/kubernetes/kubernetes/pull/65781), [@zetaab](https://github.com/zetaab))
+
+
 ## SIG Release
 
 - kubeadm: run kube-proxy on non-master tainted nodes ([#65931](https://github.com/kubernetes/kubernetes/pull/65931), [@neolit123](https://github.com/neolit123))
@@ -186,6 +196,7 @@
 
 ## SIG Storage
 
+- This fix prevents a GCE PD volume from being mounted if the udev device link is stale and tries to correct the link. ([#66832](https://github.com/kubernetes/kubernetes/pull/66832), [@msau42](https://github.com/msau42))
 - Make EBS volume expansion faster ([#66728](https://github.com/kubernetes/kubernetes/pull/66728), [@gnufied](https://github.com/gnufied))
 - When attaching iSCSI volumes, kubelet now scans only the specific ([#63176](https://github.com/kubernetes/kubernetes/pull/63176), [@bswartz](https://github.com/bswartz))
 - Fix volume limit for EBS on m5 and c5 instance types ([#66397](https://github.com/kubernetes/kubernetes/pull/66397), [@gnufied](https://github.com/gnufied))
@@ -214,6 +225,7 @@
 
 ## Other Notable Changes
 
+- admin RBAC role now aggregates edit and view.  edit RBAC role now aggregates view.  ([#66684](https://github.com/kubernetes/kubernetes/pull/66684), [@deads2k](https://github.com/deads2k))
 - Extend TLS timeouts to work around slow arm64 math/big ([#66264](https://github.com/kubernetes/kubernetes/pull/66264), [@joejulian](https://github.com/joejulian))
 - Expose docker registry config for addons used in Juju deployments ([#66092](https://github.com/kubernetes/kubernetes/pull/66092), [@kwmonroe](https://github.com/kwmonroe))
 
