@@ -38,11 +38,11 @@
 | Finalize Release Team | Lead | 13 | | | | | |
 | Start Release Notes Draft | Release Notes Lead | 17 | || | week 3 | |
 | Clean up features repo | Features Lead | 17 | | | | | |
-| 1.12.0-alpha.1 release | Branch Manager | 18 | || | |master-blocking, master-upgrade |
 | "Feature Freeze" begins (EOD PST) | Features Lead | 31 | || | week 4 | |
-| 1.12.0-alpha.2 release | Branch Manager | 31 | | | | week 5 | master-blocking, master-upgrade |
+| 1.12.0-alpha.1 release | Branch Manager | 31 | | | | week 5 | master-blocking, master-upgrade |
 | Blog post: what we're working on for 1.12 | Communications | | 9 | | | week 6 | |
 | Create 'release-1.12' branch and begin daily branch | Branch Manager | |14 | | | | |
+| v1.13.0-alpha.0 | Branch Manager | | 14 | | | | |
 | 1.12.0-beta.0 released from branch | Branch Manager | | 14 | | | week 7 | master-blocking, master-upgrade |
 | All release branch CI jobs created | Test Infra Lead | |17 | | | | |
 | Docs deadline - Open placeholder PRs | Docs Lead | |21 | | | | |
@@ -64,7 +64,6 @@
 | cherry pick deadline | Branch Manager | | | 21 | | | |
 | v1.12.0 | Branch Manager | | | 25 | |week 13 | 1.12-blocking |
 | Release retrospective | Community | | | 27? | | | | |
-| v1.12.0-alpha.1 | Branch Manager | | | | 1 | | |
 | 1.13 Release Cycle Begins | Next Lead | | | | 1 | | |
 
 ## Details
