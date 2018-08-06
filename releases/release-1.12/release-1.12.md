@@ -41,6 +41,7 @@
 | "Feature Freeze" begins (EOD PST) | Features Lead | 31 | || | week 4 | |
 | 1.12.0-alpha.1 release | Branch Manager | 31 | | | | week 5 | [master-blocking], [master-upgrade] |
 | Blog post: what we're working on for 1.12 | Communications | | 9 | | | week 6 | |
+| All release-1.8 CI jobs/testgrid removed | Test Infra Lead | |14 | | | | |
 | Create 'release-1.12' branch and begin daily branch | Branch Manager | |14 | | | | |
 | v1.13.0-alpha.0 | Branch Manager | | 14 | | | | |
 | 1.12.0-beta.0 released from branch | Branch Manager | | 14 | | | week 7 | [master-blocking], [master-upgrade] |
