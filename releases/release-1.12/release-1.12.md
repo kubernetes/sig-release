@@ -39,30 +39,31 @@
 | Start Release Notes Draft | Release Notes Lead | 17 | || | week 3 | |
 | Clean up features repo | Features Lead | 17 | | | | | |
 | "Feature Freeze" begins (EOD PST) | Features Lead | 31 | || | week 4 | |
-| 1.12.0-alpha.1 release | Branch Manager | 31 | | | | week 5 | master-blocking, master-upgrade |
+| 1.12.0-alpha.1 release | Branch Manager | 31 | | | | week 5 | [master-blocking], [master-upgrade] |
 | Blog post: what we're working on for 1.12 | Communications | | 9 | | | week 6 | |
+| All release-1.8 CI jobs/testgrid removed | Test Infra Lead | |14 | | | | |
 | Create 'release-1.12' branch and begin daily branch | Branch Manager | |14 | | | | |
 | v1.13.0-alpha.0 | Branch Manager | | 14 | | | | |
-| 1.12.0-beta.0 released from branch | Branch Manager | | 14 | | | week 7 | master-blocking, master-upgrade |
-| All release branch CI jobs created | Test Infra Lead | |17 | | | | |
+| 1.12.0-beta.0 released from branch | Branch Manager | | 14 | | | week 7 | [master-blocking], [master-upgrade] |
+| All release-1.12 CI jobs/testgrid created | Test Infra Lead | |17 | | | | |
 | Docs deadline - Open placeholder PRs | Docs Lead | |21 | | | | |
+| Begin MWF Burndown meetings | Lead | | 27 | | | | |
 | Begin Code Slush | Bot, Lead | | 28 | | | week 9 | |
 | All Issues & PRs must have complete labels | Bug Triage | | 29 | | | | |
-| Begin code and test freeze (EOD PST) | Bot, Lead | | | 4 | | week 10 | 1.12-blocking, master-blocking, master-upgrade |
+| Begin code and test freeze (EOD PST) | Bot, Lead | | | 4 | | week 10 | [1.12-blocking], [master-blocking], [master-upgrade] |
 | Begin pruning | Lead and release team | | | 4 | | | |
-| 1.12.0-beta.1 released from branch | Branch Manager | | | 4 || | 1.12-blocking, master-blocking, master-upgrade |
-| Begin MWF Burndown meetings | Lead | | 27 | | | | |
+| 1.12.0-beta.1 released from branch | Branch Manager | | | 4 || | [1.12-blocking], [master-blocking], [master-upgrade] |
 | Unapproved/non-critical Issues/PRs get kicked out | Bot, Bug Triage | | | 7 | | | |
 | Docs deadline - PRs ready for review | Docs Lead | | | 7 | | week 11 | |
 | Begin M-F Burndown meetings | Lead | | | 10 | | | |
-| 1.12.0-beta.2 released from branch | Branch Manager | | | 11 | | | 1.12-blocking, master-blocking, master-upgrade |
+| 1.12.0-beta.2 released from branch | Branch Manager | | | 11 | | | [1.12-blocking], [master-blocking], [master-upgrade] |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | | | 18 | | week 12 | |
-| 1.12.0-rc.1 released from branch | Branch Manager | | | 18 | | | 1.12-blocking, master-blocking, master-upgrade |
+| 1.12.0-rc.1 released from branch | Branch Manager | | | 18 | | | [1.12-blocking], [master-blocking], [master-upgrade] |
 | End of code freeze (EOD PST): Master branch re-opens for 1.12 | Bot, Branch Manager, Lead | | | 19 | | | |
 | PRs for v1.12.0 must be cherry picked to release-1.12 | Branch Manager | | | 19 | | | |
 | Notify kubernetes-dev of lifting code freeze | Lead | | | 19 | | | |
 | cherry pick deadline | Branch Manager | | | 21 | | | |
-| v1.12.0 | Branch Manager | | | 25 | |week 13 | 1.12-blocking |
+| v1.12.0 | Branch Manager | | | 25 | |week 13 | [1.12-blocking] |
 | Release retrospective | Community | | | 27? | | | | |
 | 1.13 Release Cycle Begins | Next Lead | | | | 1 | | |
 
@@ -135,3 +136,7 @@ The intent of these meetings is to:
 * Identify all features going into the release, and make sure alpha, beta, ga is marked in features repo.
 * Provide a [one-stop view of release progress](http://bit.ly/kube112-minutes) including relevant release metrics.
 * Host SIG stakeholders for updates.
+
+[master-blocking]: https://testgrid.k8s.io/sig-release-master-blocking#Summary
+[master-upgrade]: https://testgrid.k8s.io/sig-release-master-upgrade#Summary
+[1.12-blocking]:https://testgrid.k8s.io/sig-release-1.12-blocking#Summary
