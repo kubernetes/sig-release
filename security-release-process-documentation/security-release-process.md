@@ -74,7 +74,7 @@ The initial Product Security Team will consist of four volunteers subscribed to 
 - Jess Frazelle (**[@jessfraz](https://github.com/jessfraz)**) `<jess@linux.com>` [4096R/0x18F3685C0022BFF3]
 - CJ Cullen (**[@cjcullen](https://github.com/cjcullen)**) `<cjcullen@google.com>`
 - Tim Allclair (**[@tallclair](https://github.com/tallclair)**) `<tallclair@google.com>` [4096R/0x5E6F2E2DA760AF51]
-- Jordan Liggitt (**[@liggitt](https://github.com/liggitt)**) `<jliggitt@redhat.com>` [4096R/0x39928704103C7229]
+- Jordan Liggitt (**[@liggitt](https://github.com/liggitt)**) `<jordan@liggitt.net>` [4096R/0x39928704103C7229]
 
 ### Product Security Team Membership
 
