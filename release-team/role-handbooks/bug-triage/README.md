@@ -85,7 +85,7 @@ Even when bugs have PRs resolving them, these PRs can get stuck in the approval 
 
 Checking newly-reported test failures is now more urgent; you should assume that any new failure is related to the upcoming release, bring to the attention of the CI Signal lead, and assist in getting follow-up from the appropriate SIG.  Generally the CI Signal lead will track these failures, but newly opened issues may not initially have sufficient labelling to catch their attention.
 
-Issues and PRs missing correct labels will begin to see reminders from the bot.  While the bot gives clear instructions, you may still need to help owners understand what they need to do.
+Issues and PRs missing correct labels will begin to see reminders from the bot.  While the bot gives clear instructions, you may still need to help owners understand what they need to do.  A detailed page is in the [developer guide](https://git.k8s.io/community/contributors/devel/release.md) describing how developers target issues and pull requests to a milestone.
 
 ### Sample Searches
 
