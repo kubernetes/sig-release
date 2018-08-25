@@ -5,3 +5,5 @@ approvers:
   - jdumars
   - sig-release-leads
   - release-team-lead-role
+labels:
+  - sig/release
