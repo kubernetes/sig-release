@@ -152,7 +152,9 @@ our users.
 These steps should be completed within the first 24 hours of Disclosure.
 
 - The Fix Lead will work quickly to identify relevant engineers from the affected projects and packages and CC those engineers into the disclosure thread. This selected developers are the Fix Team. A best guess is to invite all assignees in the OWNERS file from the affected packages.
-- The Fix Lead will get the Fix Team access to private security repos to develop the fix.
+- The Fix Lead will get the Fix Team access to private security repos in the kubernetes-security GitHub org to develop the fix.
+
+Note: The kubernetes-security GitHub org is co-owned and viewable by the PST and Kubernetes Release Managers. Management of the org is done by SIG Contributor Experience's [GitHub management subproject](https://github.com/kubernetes/community/tree/master/github-management).
 
 ### Fix Development Process
 
