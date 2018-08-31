@@ -2,14 +2,13 @@
 
 *Handy Links*
 
-* This document via short url:
-  [http://bit.ly/k8s112-release-info](http://bit.ly/k8s112-release-info)
-* [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.12/release_team.md)
+* [This document](https://git.k8s.io/sig-release/releases/release-1.12/README.md)
+* [Release Team](https://git.k8s.io/sig-release/releases/release-1.12/release_team.md)
 * Zoom: join Google Group to receive meeting invite
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
 * [Forum](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
 * [Feature Tracking Sheet](http://bit.ly/k8s112-features)
-* [Targeting Issues and PRs to This Milestone](ephemera/issues.md)
+* [Targeting Issues and PRs to This Milestone](https://git.k8s.io/community/contributors/devel/release.md)
 * [Meeting Minutes](http://bit.ly/k8s112-minutes)
 * [CI Signal Report](http://bit.ly/k8s112-cisignal)
 * [Retrospective Document](http://bit.ly/k8s112-retro)
@@ -83,7 +82,7 @@ All features going into the release must have an associated issue in the feature
 
 ### Code Slush
 
-Starting on ***Tuesday, August 28th, 2018***, only PRs labeled by their owner SIGs with [`status/approved-for-milestone`](/ephemera/issues.md) will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can add the `status/approved-for-milestone` label in cases where the SIG approvers do not have permissions to do so.
+Starting on ***Tuesday, August 28th, 2018***, only PRs correctly marked by their owner SIGs as per [the release process](https://git.k8s.io/community/contributors/devel/release.md) will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can fixup PRs in cases where the SIG approvers do not have permissions to do so.
 
 At this time, any issues/PRs with incomplete labels, or which are "stale" will be removed from the release.  The release team will work with SIGs to make sure that labels are complete prior to removal.
 
