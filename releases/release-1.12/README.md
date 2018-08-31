@@ -82,7 +82,7 @@ All features going into the release must have an associated issue in the feature
 
 ### Code Slush
 
-Starting on ***Tuesday, August 28th, 2018***, only PRs correctly marked by their owner SIGs as per [the release process](https://git.k8s.io/community/contributors/devel/release.md) will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can fixup PRs in cases where the SIG approvers do not have permissions to do so.
+Starting on ***Tuesday, August 28th, 2018***, only PRs marked for the 1.12 milestone (issue the Prow "/milestone v1.12" command) by their owner SIGs' leadership will be allowed to merge into the master branch. All others will be deferred until the end of Code Freeze, when master opens back up for the next release cycle. If necessary, the release team can add the milestone in cases where the SIG approvers do not have permissions to do so.  For more information on correct PR marking see [the release process](https://git.k8s.io/community/contributors/devel/release.md) in the developer guide.
 
 At this time, any issues/PRs with incomplete labels, or which are "stale" will be removed from the release.  The release team will work with SIGs to make sure that labels are complete prior to removal.
 
@@ -90,7 +90,7 @@ Code Slush begins prior to Code Freeze to help reduce noise from miscellaneous c
 
 #### Exceptions
 
-Starting at Code Slush, the release team will solicit and rule on [exception requests](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md) for feature and test work that is unlikely to be done by Code Freeze. As with the `status/approved-for-milestone` label, the exception approval is the responsibility of the SIG or SIGs labeled in the pull request. The release team may intervene or deny the request only if it poses a risk to release quality, or could negatively impact the overall timeline. Changes introduced at this point should be well-tested, well-understood, limited in architectural scope, and low risk.  All of those factors should be considered in the approval process.  Features on a feature branch with documentation, test cases, and passing CI are more likely to be accepted.
+Starting at Code Slush, the release team will solicit and rule on [exception requests](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md) for feature and test work that is unlikely to be done by Code Freeze. The exception approval is the responsibility of the SIG or SIGs labeled in the pull request. The release team may intervene or deny the request only if it poses a risk to release quality, or could negatively impact the overall timeline. Changes introduced at this point should be well-tested, well-understood, limited in architectural scope, and low risk.  All of those factors should be considered in the approval process.  Features on a feature branch with documentation, test cases, and passing CI are more likely to be accepted.
 
 ### Code Freeze
 
@@ -98,7 +98,7 @@ All features going into the release must be code-complete, ***including tests***
 
 The docs PRs don't have to be ready to merge, but it should be clear what the topic will be and who is responsible for writing it. This person will become the primary contact for the documentation lead. It’s incredibly important that documentation work gets completed as quickly as possible.
 
-After this point, only release-blocking issues and PRs will be allowed in the milestone. The milestone bot will remove anything that lacks the priority/critical-urgent label, as well as other required labels.
+After this point, only release-blocking issues and PRs will be allowed in the milestone.
 
 ### Pruning
 

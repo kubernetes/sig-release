@@ -77,9 +77,8 @@ No reports are required during this period, although you should be maintaining a
 At the beginning of Code Slush, all issues to stay in the milestone need to have the following characteristics.  PRs for the milestone should share the same labels.
 
 * kind, sig, and milestone labels
-* status/approved-for-milestone
 
-All bugs should also show progress towards resolution and that they're getting attention between Code Slush and Code Freeze.  If they're not, you need to get the attention of the SIG(s) on those specific bugs, and find out if they're going to fix them or target the fix for a future milestone instead.  Also, SIGs need to make a decision on "approved-for-milestone" during Code Slush; you need to remind them to do so on each bug.
+All bugs should also show progress towards resolution and that they're getting attention between Code Slush and Code Freeze.  If they're not, you need to get the attention of the SIG(s) on those specific bugs, and find out if they're going to fix them or target the fix for a future milestone instead.  Also, SIGs need to make a decisions on milestone inclusion and prioritization; you need to remind them to do so on each bug for example reminding them to run the "/milestone vX.YY" and "/priority ${prioritylevel}" Prow commands.
 
 Even when bugs have PRs resolving them, these PRs can get stuck in the approval process. This means it's your job to remind SIG leads of any stuck PRs until they get approved and merged.
 
