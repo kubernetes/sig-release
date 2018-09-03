@@ -132,7 +132,8 @@ Release Team selection should happen in accordance with the [Release Team Select
 <p>- Create the retrospective document and corresponding bit.ly link
 <p>- Begin meeting with SIGs to introduce yourself
 <p>- Begin paying attention to <a href="https://git.k8s.io/sig-release/release-team/role-handbooks/ci-signal/README.md">CI signal</a>, as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
-<p>- Request review of this document by the release lead shadow.  The shadow should also take all actions in this document around joining groups and requesting access permissions.</td>
+<p>- Request review of this document by the release lead shadow.  The shadow should also take all actions in this document around joining groups and requesting access permissions.
+<p>- Update the blockade config in [prow/plugins.yaml](https://git.k8s.io/test-infra/prow/plugins.yaml) to prevent changes to all but the three most recent release folders.</td>
   </tr>
   <tr>
     <td>2</td>
