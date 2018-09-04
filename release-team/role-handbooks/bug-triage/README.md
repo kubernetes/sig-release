@@ -22,9 +22,9 @@ As Bug Triage lead, it is not your job to fix, label, sort, or gatekeep issues a
 3. Messaging individual owners and reviewers via Slack and/or direct email (GitHub notification emails must have been filtered or missed if you're past step #1).  Individual's email addresses may be harder to find than GitHub ID, but ure usually in the git commit history.  Slack handles are often harder yet to find.  There is no master list mapping human names to GitHub ID, email or Slack ID.  If you can't find contact info, asking in the appropriate SIG's Slack channel will usually get you pointed in the right direction.
 4. Escalating to the Release Team Lead with suggestions on what to do with non-responsive issues.
 
-In practice, you should fix anything simple that saves folks time and doesn't usurp the decision-making of the SIGs.  For example, adding/modifying kind and priority labels, or making PR labels match issue labeling.  However, you should never decide whether something is in or out of a milestone; the SIG or the Release Team Lead needs to do that.
+In practice, you should fix anything simple that saves folks time and doesn't usurp the decision-making of the SIGs.  For example, adding/modifying kind and priority labels, or making sure PR labels match issue labeling.  However, you should never decide whether something is in or out of a milestone; the SIG or the Release Team Lead needs to do that.
 
-The job relates to both the Features Lead and CI Signal Lead roles.  Understanding the in-bound features is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](ci-signal-playbook.md) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug TriageLead should regularly interact with the peer leads for Features and CI Signal.
+The job relates to both the Features Lead and CI Signal Lead roles.  Understanding the in-bound features is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](ci-signal-playbook.md) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Features and CI Signal.
 
 ## Early Release
 
@@ -84,7 +84,7 @@ Even when bugs have PRs resolving them, these PRs can get stuck in the approval 
 
 Checking newly-reported test failures is now more urgent; you should assume that any new failure is related to the upcoming release, bring to the attention of the CI Signal lead, and assist in getting follow-up from the appropriate SIG.  Generally the CI Signal lead will track these failures, but newly opened issues may not initially have sufficient labelling to catch their attention.
 
-Issues and PRs missing correct labels will begin to see reminders from the bot.  While the bot gives clear instructions, you may still need to help owners understand what they need to do.  A detailed page is in the [developer guide](https://git.k8s.io/community/contributors/devel/release.md) describing how developers target issues and pull requests to a milestone.
+A detailed page is in the [developer guide](https://git.k8s.io/community/contributors/devel/release.md) describing how developers target issues and pull requests to a milestone.
 
 ### Sample Searches
 
@@ -115,7 +115,7 @@ The Release Lead will include a template for this information in the Monday/Wedn
 
 ## Code Freeze
 
-Once Code Freeze starts, all issues still in the upcoming release **must** have labels of `approved-for-milestone` and `priority/critical-urgent`.  This means that on the morning before Code Freeze begins you need to go through the open issues (and PRs) which are approved-for-milestone but not marked critical-urgent and poke the owners reminding them that in the next day Code Freeze will mean any issues not marked both approved-for-milestome and critical-urgent will be kicked out of the milestone by the bot.
+Once Code Freeze starts, all issues still in the upcoming release **must** have a priority label of `priority/critical-urgent`.  This means that on the morning before Code Freeze begins you need to go through the open issues (and PRs) which are approved-for-milestone but not marked critical-urgent and poke the owners reminding them that in the next day Code Freeze will mean any issues not marked `priority/critical-urgent` will be kicked out of the milestone by the bot.
 
 After this, you need to monitor all of these issues to make sure that daily progress is made on them.  Theoretically, issue owners/SIGs are supposed to make a daily status comment in the issue, but this is seldom followed. You also will need to send daily reminders/queries about stuck PRs.
 
