@@ -1,5 +1,12 @@
 # Kubernetes Release Team
 
+- [Overview][overview]
+- [Specific responsibilities][specific-responsibilities]
+- [Kubernetes Release Team roles][kubernetes-release-team-roles]
+- [Other activities of the Release Team][other-activities-of-the-release-team]
+- [Release Team Selection][release-team-selection]
+- [Milestone Maintainers][milestone-maintainers]
+
 ## Overview
 
 The Kubernetes Release Team is embedded within SIG Release and is responsible for the day to day work required to
@@ -262,3 +269,10 @@ Members of the `kubernetes-milestone-maintainers` GitHub team can include:
 Maintainers of the GitHub team can, with justification, add or remove members at any time during release cycles.
 
 Members are expected to actively triage issues and PRs to retain membership in `kubernetes-milestone maintainers`. Members not fulfilling the duties of this role should be removed.
+
+[overview]: #overview
+[specific-responsibilities]: #specific-responsibilities
+[kubernetes-release-team-roles]: #kubernetes-release-team-roles
+[other-activities-of-the-release-team]: #other-activities-of-the-release-team
+[release-team-selection]: #release-team-selection
+[milestone-maintainers]: #milestone-maintainers
