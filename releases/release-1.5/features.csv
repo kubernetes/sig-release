@@ -1,0 +1,41 @@
+Feature name,Stage,SIG,Assignee,One Line Release Note Description,Needs Docs?,Docs PR,Needs Doc Review,Needs Tech Review,Merged,Notes
+Role-based access control,Alpha,SIG-Auth,deads2k,Further polishing of the alpha API including a default set of cluster roles.,No,Already exist as http://kubernetes.io/docs/admin/authorization/,N/A,N/A,N/A,
+Dramatically Simplify Kubernetes Cluster Creation,Alpha,SIG-ClusterLifecycle,jbeda,Use kubeadm to make it easy to get a cluster running.,No,"Pre-existing docs from 1.4, no updates.",N/A,N/A,N/A,
+Simplify HA Setup for Master,Alpha,SIG-ClusterOps,jszczepkowski,Added ability to create/remove clusters w/highly available (replicaed) masters on GCE using kube-up/kube-down scripts.,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1810,Complete,Complete,Yes,x
+Federated Daemonset,Alpha,SIG-Federation,mwielgus,Alpha level support for Daemonsets in federation.,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1827,Complete,Complete,Yes,x
+Federated Deployments,Alpha,SIG-Federation,mwielgus,Alpha level support for Deployments in federation.,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1828,Complete,Complete,Yes,x
+"Federation: Support generalized deletions, including cascading and ...",Alpha,SIG-Federation,nikhiljindal,Cluster federation: Added support for DeleteOptions.OrphanDependents for federation resources.,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1787,Complete,Complete,Yes,x
+It should be fast and painless to deploy a Federation of Kubernetes,Alpha,SIG-Federation,madhusudancs,"Introducing `kubefed`, a new command line tool to simplify federation control plane deployment and cluster registration/deregistration experience.",Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1822,Complete,Complete,Yes,x
+Enable userns support for containers launched by kubelet,Alpha,SIG-Node,derekwaynecarr,Added ability to preserve access to host userns when userns remapping is enabled in container runtime,No,-,N/A,N/A,N/A,
+Container Runtime Interface (CRI),Alpha,SIG-Node,yujuhong,Introducing the v1alpha1 CRI API to allow pluggable container runtimes; an experimental docker-CRI integration is ready for testing and feedback.,Yes,https://github.com/kubernetes/kubernetes/blob/release-1.5/docs/devel/container-runtime-interface.md,Complete,Complete,Yes,
+Add support for pod and qos level cgroups,Alpha,SIG-Node,derekwaynecarr,Kubelet launches container in a per pod cgroup hiearchy based on quality of service tier,No,,N/A,N/A,N/A,
+Accounting and feasibility for opaque integer resources in the API,Alpha,SIG-Scheduling,ConnorDoyle,Added support for accounting opaque integer resources.,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1783,Complete,Complete,Yes,x
+Support Windows Server Containers for K8s,Alpha,SIG-Windows,michmike,Added support for Windows Server 2016 nodes and scheduling Windows Server Containers,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1771,Complete,Complete,Yes,x
+Allow deployments to correctly indicate they are failing to deploy,Beta,SIG-Apps,smarterclayton,Deployments that cannot make progress in rolling out the newest version will now indicate via the API they are blocked,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1699,Complete,Complete,Yes,
+StatefulSets to Beta,Beta,SIG-Apps,smarterclayton,StatefulSets allow workloads that require persistent identity or per-instance storage to be created and managed on Kubernetes.,Yes,"https://github.com/kubernetes/kubernetes.github.io/pull/1704
+https://github.com/kubernetes/kubernetes.github.io/pull/1707
+https://github.com/kubernetes/kubernetes.github.io/pull/1718
+https://github.com/kubernetes/kubernetes.github.io/pull/1719
+https://github.com/kubernetes/kubernetes.github.io/pull/1722
+https://github.com/kubernetes/kubernetes.github.io/pull/1821
+https://github.com/kubernetes/kubernetes.github.io/pull/1803
+https://github.com/kubernetes/kubernetes.github.io/pull/1731
+https://github.com/kubernetes/kubernetes.github.io/pull/1811
+https://github.com/kubernetes/kubernetes.github.io/pull/1737
+https://github.com/kubernetes/kubernetes.github.io/pull/1757 
+https://github.com/kubernetes/kubernetes.github.io/pull/1857
+https://github.com/kubernetes/kubernetes.github.io/pull/1894",Yes,Complete,Yes,
+Make StatefulSets safe during cluster failure,Beta,SIG-Apps,smarterclayton,In order to preserve safety guarantees the cluster no longer force deletes pods on un-responsive nodes and users are now warned if they try to force delete pods via the CLI. ,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1894,Complete,Complete,Yes,
+Authenticated/Authorized access to kubelet API,Beta,SIG-Auth,liggitt,Added ability to authenticate/authorize access to the Kubelet API,Yes,#1684,Complete,Complete,Yes,
+Federated ConfigMap ,Beta,SIG-Federation,mwielgus,Support for config maps in federation.,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1838,Complete,Complete,Yes,
+GCP Cloud Provider: Source IP preservation for Virtual IPs,Beta,SIG-Network,bprashanth,Opt in source ip preservation for Services with Type NodePort or LoadBalancer,Yes,"https://github.com/kubernetes/kubernetes.github.io/pull/1833
+https://github.com/kubernetes/kubernetes.github.io/pull/1841",Complete,Complete,Yes,
+Improve responsiveness of kubelet eviction module,Beta,SIG-Node,derekwaynecarr,Kubelet integrates with memcg notification API to detect when a hard eviction threshold is crossed,No,,N/A,N/A,N/A,
+Node Conformance Test,Beta,SIG-Node,Random-Liu,Introducing the beta version containerized node conformance test gcr.io/google_containers/node-test:0.2 for users to verify node setup.,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1784,Complete,Complete,Yes,
+PodDisruptionBudget and /eviction subresource,Beta,SIG-Scheduling,davidopp,Moving PodDisruptionBudget to Beta + Machine drain task doc,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1789,Complete,Complete,Yes,
+Communicate replica set and deployment status via conditions,Stable,SIG-Apps,smarterclayton,"When replica sets cannot create pods, they will now report detail via the API about the underlying reason",No,- ,N/A,N/A,N/A,
+Support deleting previous objects in `kubectl apply`,Stable,SIG-Apps,smarterclayton,`kubectl apply` is now able to delete resources you no longer need with --prune,No,- (command will be documented automatically) ,N/A,N/A,N/A,
+Show roles in kubectl,Stable,SIG-AWS,justinsb,Roles should appear in kubectl get nodes,No,No docs.  ,N/A,N/A,N/A,
+Support services that reference an external service,Stable,SIG-Network,smarterclayton ,"Services can reference another service by DNS name, rather than being hosted in pods.",No,"Pre-existing docs from 1.4, no updates.",N/A,N/A,Yes,
+Dashboard UI: show all user facing resources,Stable,SIG-UI,bryk,Dashboard UI now shows all user facing objects and their resource usage.,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1793,Complete,Complete,Yes,
+OpenAPI/Swagger 2.0 support,Beta,SIG-api-machinery,mbohlool,OpenAPI spec is now generated on API_SERVER/swagger.json,Yes,https://github.com/kubernetes/kubernetes.github.io/pull/1933,,,,
