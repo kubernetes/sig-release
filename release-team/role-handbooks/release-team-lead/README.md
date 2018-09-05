@@ -2,7 +2,7 @@
 
 ## Overview:
 
-The release team leader role is responsible for coordinating release activities, assembling the release team, taking ultimate accountability for all release tasks to be completed on time, and ensuring a retrospective happens.  The lead is also responsible for ensuring a successor is trained for future release cycles.
+The release team leader role is responsible for coordinating release activities, assembling the release team, taking ultimate accountability for all release tasks to be completed on time, and ensuring a retrospective happens. The lead is also responsible for ensuring a successor is selected and trained for future release cycles.
 
 ## Authority and Responsibility:
 
@@ -50,16 +50,9 @@ Among the specific time commitments you have are:
 
 ## Choosing a Release Team
 
-One of your first, and definitely your most important, duties as Release Lead is to select a Release Team in consultation with SIG-Release.  Currently there are 10 roles to fill on the Release Team, plus one or more shadows (trainees) of each of those roles. each of which has specific requirements. Aside from any specifics, in general you are looking for candidates who:
+One of your first, and definitely your most important, duties as Release Lead is to ensure a Release Team is in place.
 
-1. Can commit to the amount of time required across the release cycle;
-2. Are enthusiastic about being on the release team;
-3. Are members of the relevant SIGs for their role, if applicable;
-4. And have some prior experience with contributing to Kubernetes (such as shadowing a role for a prior release).
-
-In most cases, you will have a pool of candidates in the form of people who have previously shadowed the role in question, or have filled a different role on the Release Team and want to try something else.  Where possible, do select new team members over someone who has done the role several times, as we are trying to share experience across the organization.
-
-Also give some thought to ensuring diversity on the team, including members of more than one gender, ethnicity, nationality, and company affiliation.  This should not be hard to do, as prior release teams have had several women, several non-white folks, and staff from five or more companies.  In some cases, though, you may need to reach out to individuals you know and suggest that they apply for the team.
+Release Team selection should happen in accordance with the [Release Team Selection](/release-team/README.md#release-team-selection) process.
 
 ## Standards:
 
@@ -219,7 +212,7 @@ Also give some thought to ensuring diversity on the team, including members of m
 <p>- Assist the documentation leads in collecting missing docs PRs.
 <p>- Schedule burndown meetings starting next week for every weekday until the Friday after release day, make sure to invite the community calendar
 <p>- Release notes, and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress.  As the lead you may need to help assemble the notes.
-<p>- Identify vacancies on the incoming release team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles.  Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their release team role.
+<p>- Identify vacancies on the incoming release team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles. Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their release team role. Continue to improve and uphold the [Release Team Selection](/release-team/README.md#release-team-selection) process.
 <p>- Prepare for x.x.0-beta.2 release (week 11), ensuring x.x-blocking, master-blocking, and master-upgrade dashboards are 100% green.</td>
   </tr>
   <tr>
@@ -251,7 +244,6 @@ Also give some thought to ensuring diversity on the team, including members of m
   </tr>
   <tr>
     <td>14</td>
-    <td><p>- Help fill the any open position for the next release milestone
-<p>- If no one qualified steps up as a lead, you need to keep the following x.y release on track until you find your replacement.  </td>
+    <td><p>- Help fill the any open positions for the next release milestone</td>
   </tr>
 </table>

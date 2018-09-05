@@ -201,7 +201,7 @@ In addition to discharging the duties of their respective Release Team roles, th
 
 Team selection should happen transparently.
 
-In the 1.11 release cycle, we selected the Release Team Lead by quorum during a public Release Team meeting and additional roles with staffed via [an issue in k/sig-release](https://github.com/kubernetes/sig-release/issues/167) and a set of PRs, starting with [this one](https://github.com/kubernetes/sig-release/pull/168).
+In the 1.11 release cycle, we selected the Release Team Lead by quorum during a public Release Team meeting and additional roles were staffed via [an issue in k/sig-release](https://github.com/kubernetes/sig-release/issues/167) and a set of PRs, starting with [this one](https://github.com/kubernetes/sig-release/pull/168).
 
 Each Release Team role is responsible for staffing their respective role, with this order of fall-through in mind:
 - training and selecting a successor from the current pool of role shadows
@@ -214,38 +214,45 @@ Ultimately, if none of these can be satisfied, responsibility falls to the futur
 
 The incoming Release Team Lead _MUST_ have participated on the Release Team for 2 or more release cycles, acting in a lead (non-shadow) capacity for at least one of those cycles.
 
-Release Team Leads can be staffed, with this order of fall-through in mind:
+Release Team Leads should be staffed, with this order of fall-through in mind:
 - the current pool of Release Team Lead shadows
 - the current pool of Release Team members
 - former Release Team members
 
-_The new Release Team Lead should be agreed by quorum of the current Release Team members._
+Bear in mind that these are suggestions based on precedent and a Release Team Lead may be nominated by any Release Team member, past or present.
 
-**If for some reason a new RT Lead cannot be selected by these methods, the current Release Team Lead should be prepared to continue to serve in the following release cycle until a successor can be found.**
+_The new Release Team Lead can be selected via lazy consensus of the current Release Team members._
 
 ### Shadows
 
-Every Release Team role should seek to accomodate a set of role shadows. This creates a new avenue for code and non-code contributors alike to contribute to the project. Additionally, it seeds future release cycles with new leaders.
+Every Release Team role should seek to accommodate a set of role shadows. This creates a new avenue for code and non-code contributors alike to contribute to the project. Additionally, it seeds future release cycles with new leaders.
 
 While there isn't a strict restriction on the amount of shadows, we've found three shadows per role to be a reasonable upper bound.
 
 If there are more contributors interested in shadowing once hitting that upper bound, we welcome them to sit in on Release Team meetings in preparation for shadowing in a future release cycle.
 
-### Additional Considerations
+### Considerations
 
-- Staff early! The 1.11 and 1.12 Release Teams began the selection process during Code Freeze
-- Try to ensure potential Release Team candidates:
-  - can commit to the amount of time required across the release cycle
-  - are enthusiastic about being on the release team
-  - are members of the relevant SIGs for their role, if applicable
-  - have some prior experience with contributing to Kubernetes (such as shadowing a role for a prior release)
+#### Timing
+
+Staff early! The Release Team should undertake the selection process at the beginning Code Freeze, with a deadline of three days following the current release.
+
+Any staffing decisions that cannot be made within this timeframe should be escalated to SIG Release Chairs and discussed publicly.
+
+#### Membership
+
+Try to ensure potential Release Team candidates:
+- can commit to the amount of time required across the release cycle
+- are enthusiastic about being on the release team
+- are members of the relevant SIGs for their role, if applicable
+- have some prior experience with contributing to Kubernetes (such as shadowing a role for a prior release)
 
 Most importantly, strive for diversity in:
 - gender identity
 - ethnicity
 - nationality
 - locality
-- company affliation
+- company affiliation
 
 ---
 
