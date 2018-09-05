@@ -2,7 +2,7 @@
 
 ## Overview:
 
-The release team leader role is responsible for coordinating release activities, assembling the release team, taking ultimate accountability for all release tasks to be completed on time, and ensuring a retrospective happens.  The lead is also responsible for ensuring a successor is selected once the release is complete.  
+The release team leader role is responsible for coordinating release activities, assembling the release team, taking ultimate accountability for all release tasks to be completed on time, and ensuring a retrospective happens. The lead is also responsible for ensuring a successor is selected and trained for future release cycles.
 
 ## Authority and Responsibility:
 
@@ -34,6 +34,26 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
 * Prior experience in release management is extremely helpful
 
+## Time Commitments:
+
+Release Lead is a very time-consuming role, especially towards the end of the release cycle.  Before you volunteer to be Release Lead, please make certain that your employer and your family are OK with you spending a lot of time on the release for the next three months.  Here's a rough estimate of the time requirements by week:
+
+* Weeks 1-4: 4-8 hours a week
+* Weeks 5-8: 6-12 hours a week
+* Weeks 9-13: 10 to 25 hours a week, including some after-hours and weekend work
+
+Among the specific time commitments you have are:
+
+* SIG-Release and Release Team meetings once a week during weeks 1-7.
+* Burndown meetings three to five times a week during weeks 8-12.
+* Community meetings once a week.
+
+## Choosing a Release Team
+
+One of your first, and definitely your most important, duties as Release Lead is to ensure a Release Team is in place.
+
+Release Team selection should happen in accordance with the [Release Team Selection](/release-team/README.md#release-team-selection) process.
+
 ## Standards:
 
 * The GitHub repository layout is:
@@ -50,7 +70,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
 * Short links are handled with [http://bit.ly](http://bit.ly) - and each release follows the convention of:
 
-    * Retro doc:  [http://bit.ly/](http://bit.ly/kubeXXretro)[kube](http://bit.ly/kubeXXretro)[XXretro](http://bit.ly/kubeXXretro) where XX is the version number minus dots, e.g.: [http://bit.ly/kube110retro](http://bit.ly/kube110retro) 
+    * Retro doc:  [http://bit.ly/](http://bit.ly/kubeXXretro)[kube](http://bit.ly/kubeXXretro)[XXretro](http://bit.ly/kubeXXretro) where XX is the version number minus dots, e.g.: [http://bit.ly/kube110retro](http://bit.ly/kube110retro)
 
     * Release Schedule overview [http://bit.ly/k8sXX-release-info](http://bit.ly/k8sXX-release-info)
 
@@ -58,9 +78,9 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
     * Burndown/Meeting Minutes: [http://bit.ly/k8sXX-burndown](http://bit.ly/k8sXX-burndown)
 
-    * Features tracking spreadsheet:  [http://bit.ly/k8sXX-features](http://bit.ly/k8sXX-features) 
+    * Features tracking spreadsheet:  [http://bit.ly/k8sXX-features](http://bit.ly/k8sXX-features)
 
-    * Merged PRs with release notes: [http://bit.ly/k8sXX-relnotes](http://bit.ly/k8sXX-relnotes) 
+    * Merged PRs with release notes: [http://bit.ly/k8sXX-relnotes](http://bit.ly/k8sXX-relnotes)
 
     * Use the same conventions for additional documents
 
@@ -80,7 +100,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 
 * The release lead is responsible for updating the [burndown template](https://docs.google.com/document/d/1zLnmDDOp_ko9Yh5uPJtgqPFD7GKq76fQsKaenXoMHzM/edit) ahead of the release (changing the milestone in links and anything else requested during the retrospective)
 
-* Release theme: There is no particular reason for this other than to have fun.  As release lead you get to pick a theme naming the release.
+* Release theme: There is no particular reason for this other than to have fun, and possibly provide a theme for Release Team gifts / shirts. As Release Team Lead, you get to pick a theme for the release.
     * Releases 1.8 to 1.10, had unofficial food-based code names.
        * 1.8 - "Burrito"
        * 1.9 - "Pumpkin"
@@ -163,7 +183,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
     <td>
 <p>- Coordinate x.x.0-beta.0 release, ensuring master-blocking, and master-upgrade dashboards are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal.  The release-x.x branch is created automatically as a part of the beta.0 release.  The branch manager now begins daily fast forwards.
 <p>- The burndown templates should be useful at this point since it starts asking about status relevant to each area now tracking (e.g. branch health, docs, communications, issues, etc.)
-<p>- Insure Test Infra Lead has release branch CI created and added to Testgrid
+<p>- Ensure Test Infra Lead has release branch CI created and added to Testgrid
 <p>- Most feature-oriented tasks should be completed at the end of this week
 <p>- SIGs that have not completed release themes should be contacted again, with a focus on explaining why this matters to the community
 <p>- Ping release team leads reminding them to start considering succession plans.  If they are handing the role off to a successor, identifying them early gives more time for the committed volunteer to get targeted mentoring.</td>
@@ -192,7 +212,7 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
 <p>- Assist the documentation leads in collecting missing docs PRs.
 <p>- Schedule burndown meetings starting next week for every weekday until the Friday after release day, make sure to invite the community calendar
 <p>- Release notes, and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress.  As the lead you may need to help assemble the notes.
-<p>- Identify vacancies on the incoming release team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles.  Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their release team role.
+<p>- Identify vacancies on the incoming release team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles. Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their release team role. Continue to improve and uphold the [Release Team Selection](/release-team/README.md#release-team-selection) process.
 <p>- Prepare for x.x.0-beta.2 release (week 11), ensuring x.x-blocking, master-blocking, and master-upgrade dashboards are 100% green.</td>
   </tr>
   <tr>
@@ -224,7 +244,6 @@ A guiding principle for the lead is be an arbiter of decisions, and not the prim
   </tr>
   <tr>
     <td>14</td>
-    <td><p>- Help fill the any open position for the next release milestone
-<p>- If no one qualified steps up as a lead, you need to keep the following x.y release on track until you find your replacement.  </td>
+    <td><p>- Help fill the any open positions for the next release milestone</td>
   </tr>
 </table>

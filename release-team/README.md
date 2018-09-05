@@ -1,5 +1,12 @@
 # Kubernetes Release Team
 
+- [Overview][overview]
+- [Specific responsibilities][specific-responsibilities]
+- [Kubernetes Release Team roles][kubernetes-release-team-roles]
+- [Other activities of the Release Team][other-activities-of-the-release-team]
+- [Release Team Selection][release-team-selection]
+- [Milestone Maintainers][milestone-maintainers]
+
 ## Overview
 
 The Kubernetes Release Team is embedded within SIG Release and is responsible for the day to day work required to
@@ -188,6 +195,67 @@ For all unplanned or embargoed releases
 
 ---
 
+## Release Team Selection
+
+In addition to discharging the duties of their respective Release Team roles, the current Release Team is charged with selecting the team for the following release cycle.
+
+Team selection should happen transparently.
+
+In the 1.11 release cycle, we selected the Release Team Lead by quorum during a public Release Team meeting and additional roles were staffed via [an issue in k/sig-release](https://github.com/kubernetes/sig-release/issues/167) and a set of PRs, starting with [this one](https://github.com/kubernetes/sig-release/pull/168).
+
+Each Release Team role is responsible for staffing their respective role, with this order of fall-through in mind:
+- training and selecting a successor from the current pool of role shadows
+- training and selecting a successor from non-Release Team members
+- staffing the role themselves
+
+Ultimately, if none of these can be satisfied, responsibility falls to the future Release Team Lead and SIG Release to staff the roles.
+
+### Release Team Lead Selection
+
+The incoming Release Team Lead _MUST_ have participated on the Release Team for 2 or more release cycles, acting in a lead (non-shadow) capacity for at least one of those cycles.
+
+Release Team Leads should be staffed, with this order of fall-through in mind:
+- the current pool of Release Team Lead shadows
+- the current pool of Release Team members
+- former Release Team members
+
+Bear in mind that these are suggestions based on precedent and a Release Team Lead may be nominated by any Release Team member, past or present.
+
+_The new Release Team Lead can be selected via lazy consensus of the current Release Team members._
+
+### Shadows
+
+Every Release Team role should seek to accommodate a set of role shadows. This creates a new avenue for code and non-code contributors alike to contribute to the project. Additionally, it seeds future release cycles with new leaders.
+
+While there isn't a strict restriction on the amount of shadows, we've found three shadows per role to be a reasonable upper bound.
+
+If there are more contributors interested in shadowing once hitting that upper bound, we welcome them to sit in on Release Team meetings in preparation for shadowing in a future release cycle.
+
+### Considerations
+
+#### Timing
+
+Staff early! The Release Team should undertake the selection process at the beginning Code Freeze, with a deadline of three days following the current release.
+
+Any staffing decisions that cannot be made within this timeframe should be escalated to SIG Release Chairs and discussed publicly.
+
+#### Membership
+
+Try to ensure potential Release Team candidates:
+- can commit to the amount of time required across the release cycle
+- are enthusiastic about being on the release team
+- are members of the relevant SIGs for their role, if applicable
+- have some prior experience with contributing to Kubernetes (such as shadowing a role for a prior release)
+
+Most importantly, strive for diversity in:
+- gender identity
+- ethnicity
+- nationality
+- locality
+- company affiliation
+
+---
+
 ## Milestone Maintainers
 
 Across release cycles, one of the best signals for [issue triage](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#milestones) is whether or not an issue or PR is actually targeted for the current milestone.
@@ -208,3 +276,10 @@ Members of the `kubernetes-milestone-maintainers` GitHub team can include:
 Maintainers of the GitHub team can, with justification, add or remove members at any time during release cycles.
 
 Members are expected to actively triage issues and PRs to retain membership in `kubernetes-milestone maintainers`. Members not fulfilling the duties of this role should be removed.
+
+[overview]: #overview
+[specific-responsibilities]: #specific-responsibilities
+[kubernetes-release-team-roles]: #kubernetes-release-team-roles
+[other-activities-of-the-release-team]: #other-activities-of-the-release-team
+[release-team-selection]: #release-team-selection
+[milestone-maintainers]: #milestone-maintainers
