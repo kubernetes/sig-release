@@ -60,9 +60,9 @@ Release Team selection should happen in accordance with the [Release Team Select
 
     * kubernetes/sig-release
 
-        * releases/release-x.x
+        * releases/release-x.y
 
-            * release-x.x.md (release schedule)
+            * README.md (release schedule)
 
             * release-notes-draft.md (consumed by the automated release process)
 
@@ -126,13 +126,14 @@ Release Team selection should happen in accordance with the [Release Team Select
      <li><a href="https://groups.google.com/forum/#!forum/kubernetes-dev">kubernetes-dev</a></li>
      </ul>
 <p>- Ensure the release team is fully filled, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
-<p>- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.x/release-x.x.md
+<p>- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
 <p>- Ensure that relevant feedback from the prior retrospective is incorporated into the process
 <p>- Send an update to kubernetes-dev and kubernetes-sig-leads mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 <p>- Create the retrospective document and corresponding bit.ly link
 <p>- Begin meeting with SIGs to introduce yourself
 <p>- Begin paying attention to <a href="https://git.k8s.io/sig-release/release-team/role-handbooks/ci-signal/README.md">CI signal</a>, as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
-<p>- Request review of this document by the release lead shadow.  The shadow should also take all actions in this document around joining groups and requesting access permissions.</td>
+<p>- Request review of this document by the release lead shadow.  The shadow should also take all actions in this document around joining groups and requesting access permissions.
+<p>- Update the blockade config in [prow/plugins.yaml](https://git.k8s.io/test-infra/prow/plugins.yaml) to prevent changes to all but the three most recent release folders.</td>
   </tr>
   <tr>
     <td>2</td>
@@ -146,7 +147,7 @@ Release Team selection should happen in accordance with the [Release Team Select
   <tr>
     <td>3</td>
     <td><p>- Create the release notes draft file in the release directory per the standard above
-<p>- Prepare for x.x.0-alpha.0 "release", specifically that there is a <a href="https://git.k8s.io/sig-release/release-team/role-handbooks/branch-manager/README.md">branch manager</a> on the team, and that master-blocking tests are all green.  The alpha.0 artifacts were created already as a part of the prior release.  But this synthetic notation is a point to review process with the branch manager.  Request access to GCB through Caleb Miles for branch manager lead and optionally also read-only access (if system supports this) for the release lead and release lead shadow.
+<p>- Prepare for x.y.0-alpha.0 "release", specifically that there is a <a href="https://git.k8s.io/sig-release/release-team/role-handbooks/branch-manager/README.md">branch manager</a> on the team, and that master-blocking tests are all green.  The alpha.0 artifacts were created already as a part of the prior release.  But this synthetic notation is a point to review process with the branch manager.  Request access to GCB through Caleb Miles for branch manager lead and optionally also read-only access (if system supports this) for the release lead and release lead shadow.
 <p>- Begin coordination with SIG-Cluster-Lifecycle for their kubeadm release (they may create an issue in the milestone to track release blocking issues)
 <p>- Identify any other dependent ecosystem projects that need release coordination
 <p>- Announce/email that the following week is "features freeze" and what that means</td>
@@ -161,7 +162,7 @@ Release Team selection should happen in accordance with the [Release Team Select
   </tr>
   <tr>
     <td>5</td>
-    <td><p>- Prepare for x.x.0-alpha.1 release ensuring that master-blocking tests are all green
+    <td><p>- Prepare for x.y.0-alpha.1 release ensuring that master-blocking tests are all green
 <p>- Bring exceptions to the Release Team meetings, and make sure SIG representatives for the exception(s) know to attend and discuss if necessary
 <p>- Check in with docs team on release notes progress
 <p>- Follow up with SIGs on release themes
@@ -181,7 +182,7 @@ Release Team selection should happen in accordance with the [Release Team Select
   <tr>
     <td>7</td>
     <td>
-<p>- Coordinate x.x.0-beta.0 release, ensuring master-blocking, and master-upgrade dashboards are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal.  The release-x.x branch is created automatically as a part of the beta.0 release.  The branch manager now begins daily fast forwards.
+<p>- Coordinate x.y.0-beta.0 release, ensuring master-blocking, and master-upgrade dashboards are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal.  The release-x.y branch is created automatically as a part of the beta.0 release.  The branch manager now begins daily fast forwards.
 <p>- The burndown templates should be useful at this point since it starts asking about status relevant to each area now tracking (e.g. branch health, docs, communications, issues, etc.)
 <p>- Ensure Test Infra Lead has release branch CI created and added to Testgrid
 <p>- Most feature-oriented tasks should be completed at the end of this week
@@ -201,7 +202,7 @@ Release Team selection should happen in accordance with the [Release Team Select
 <p>- Test Infra Lead insures automation ready to enforce labeling and other release policies
 <p>- The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, and less for the other team members)
 <p>- Make sure everyone knows the docs deadline (PRs ready for review) is coming the following Friday.
-<p>- Prepare for x.x.0-beta.1 release (week 10), ensuring x.x-blocking, master-blocking, and master-upgrade dashboards are 100% green, or all failures have issues filed and are being actively worked.</td>
+<p>- Prepare for x.y.0-beta.1 release (week 10), ensuring x.y-blocking, master-blocking, and master-upgrade dashboards are 100% green, or all failures have issues filed and are being actively worked.</td>
   </tr>
   <tr>
     <td>10</td>
@@ -213,16 +214,16 @@ Release Team selection should happen in accordance with the [Release Team Select
 <p>- Schedule burndown meetings starting next week for every weekday until the Friday after release day, make sure to invite the community calendar
 <p>- Release notes, and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress.  As the lead you may need to help assemble the notes.
 <p>- Identify vacancies on the incoming release team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles. Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their release team role. Continue to improve and uphold the [Release Team Selection](/release-team/README.md#release-team-selection) process.
-<p>- Prepare for x.x.0-beta.2 release (week 11), ensuring x.x-blocking, master-blocking, and master-upgrade dashboards are 100% green.</td>
+<p>- Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking, and master-upgrade dashboards are 100% green.</td>
   </tr>
   <tr>
     <td>11</td>
     <td><p>- Begin daily burndown meetings
 <p>- If the release branch, master branch and associated tests are stable, it’s time to lift code freeze. The bot will need to be updated.
 <p>- The branch manager will perform one final branchff - make sure everything pending has been merged beforehand
-<p>- Master branch is then opened for new pull requests on x.y (the next release). Remaining release activities will happen on the release-x.x branch via cherry picks from master.
+<p>- Master branch is then opened for new pull requests on x.y (the next release). Remaining release activities will happen on the release-x.y branch via cherry picks from master.
 <p>- Use all of the appropriate communications channels to announce the lifting of code freeze
-<p>- The task is now to ensure the release branch is ready to go.  This means there are zero pending PRs, no failing x.x-blocking tests, no open issues in the milestone.  This will continue until release day
+<p>- The task is now to ensure the release branch is ready to go.  This means there are zero pending PRs, no failing x.y-blocking tests, no open issues in the milestone.  This will continue until release day
 <p>- Final documentation PRs are reviewed and ready to be merged. Likely, this is not true and some are outstanding, so you need to help convince SIG doc writers to get these in with urgency.
 <p>- The release notes draft needs to be completely done and ready to consume by anago. Have SIG volunteers do a final proofread of their sections.  Make sure people actually do this.  You need to avoid having the release notes volunteers pull “all nighters” before the release.
 <p>- Work with the CNCF, SIG-PM, SIG-Docs, and communications lead to start the Release Blog post pulling from SIG Themes, the features repo, SIG members, and possibly release notes in specific PRs
