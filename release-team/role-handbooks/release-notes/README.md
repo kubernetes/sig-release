@@ -29,6 +29,10 @@ in completing the notes
 - The confirmed upon notes are cleaned up and copy edited by the release team to ensure uniform language/style is used.
 - Kubernetes is released with the completed notes!
 
+## Tools
+
+- [Release notes tool](https://github.com/marpaia/release-notes)
+- [Hackmd](https://hackmd.io/)
 
 ## Release Milestone Activities:
 
@@ -39,19 +43,18 @@ in completing the notes
   </tr>
   <tr>
     <td>1</td>
-    <td>- Former Release Notes lead helps identify new leads and shadows
-<br>- Help finalize release-notes milestones in the release timeline
-<br>- ? </td>
+<td>- Begin running release-notes script for ongoing collection of release notes
+<br>- Begin attending release team meetings
+<br>- Informal intro meeting with release notes team to discuss contact information and logistics </td>
   </tr>
   <tr>
     <td>2</td>
-    <td>- Begin attending release team meetings
-<br>- Finalize lead and shadow rolesi
-<br>- ?</td>
+<td>- ?</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>- ?</td>
+    <td>- Begin attending burndown meetings
+    <br>- ?</td>
   </tr>
   <tr>
     <td>4</td>
@@ -75,12 +78,13 @@ in completing the notes
   </tr>
   <tr>
     <td>9</td>
-    <td>- Begin attending burndown meetings
+    <td>- Former Release Notes lead helps identify new leads and shadows
 <br>- ?</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>- ?</td>
+    <td>- Finalize lead and shadow roles
+    <br>- ?</td>
   </tr>
   <tr>
     <td>11</td>
