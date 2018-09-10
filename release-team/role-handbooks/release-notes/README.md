@@ -79,26 +79,25 @@ in completing the notes
   <tr>
     <td>9</td>
     <td>- Former Release Notes lead helps identify new leads and shadows
-<br>- ?</td>
+<br>- Start determining major themes for release notes template to send to sig-leads </td>
   </tr>
   <tr>
     <td>10</td>
-    <td>- Finalize lead and shadow roles
-    <br>- ?</td>
+    <td>- Finalize lead and shadow roles for subsequent release
+    <br>- Work with sig-leads to finalize major themes for release-notes
+    <br>- Copy edit notes for spelling, grammar and uniform style</td>
   </tr>
   <tr>
     <td>11</td>
-    <td>- ?</td>
+    <td>- Repeat previous tasks until final copy is complete</td>
   </tr>
   <tr>
     <td>12</td>
     <td>- Release day
-<br>- Continue managing release timing in case of delay
-<br>- ?</td>
+<br>- Final version of release notes submitted for release </td>
   </tr>
   <tr>
     <td>13</td>
-    <td>- Release retrospective participation
-<br>- ? </td>
+    <td>- Release retrospective participation</td>
   </tr>
 </table>
