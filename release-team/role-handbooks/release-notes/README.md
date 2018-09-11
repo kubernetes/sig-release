@@ -34,6 +34,19 @@ in completing the notes
 - [Release notes tool](https://github.com/marpaia/release-notes)
 - [Hackmd](https://hackmd.io/)
 
+
+## Todos
+
+Update this section at the end of each release for the next team
+
+### Post 1.12 todos
+
+- Create new tool to process language in generated release notes file (or incorporate into the release notes tool)
+    Goals:
+    - Generate uniform style across release notes (ie. past tense, formatting)
+    - Decrease copy editing time
+
+
 ## Release Milestone Activities:
 
 <table>
