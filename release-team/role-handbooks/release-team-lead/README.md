@@ -120,10 +120,11 @@ Release Team selection should happen in accordance with the [Release Team Select
     <td><p>- Start the release cycle
 <p>- Ensure you are joined to the following Google Groups:
      <ul>
-     <li><a href="https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown">kubernetes-milestone-burndown</a></li>
-     <li><a href="https://groups.google.com/forum/#!forum/kubernetes-sig-release">kubernetes-sig-release</a></li>
-     <li><a href="https://groups.google.com/forum/#!forum/kubernetes-sig-leads">kubernetes-sig-leads</a></li>
-     <li><a href="https://groups.google.com/forum/#!forum/kubernetes-dev">kubernetes-dev</a></li>
+     <li><a href="https://groups.google.com/forum/#!aboutgroup/kubernetes-milestone-burndown">kubernetes-milestone-burndown</a></li>
+     <li><a href="https://groups.google.com/forum/#!aboutgroup/kubernetes-sig-release">kubernetes-sig-release</a></li>
+     <li><a href="https://groups.google.com/forum/#!aboutgroup/kubernetes-sig-leads">kubernetes-sig-leads</a></li>
+     <li><a href="https://groups.google.com/forum/#!aboutgroup/kubernetes-dev">kubernetes-dev</a></li>
+     <li><a href="https://groups.google.com/forum/#!aboutgroup/kubernetes-security">kubernetes-security</a>: Send message to this private list introducing self, key release team roles and also request list membership be added for the release branch manager, patch manager, and release lead shadow.</li>
      </ul>
 <p>- Ensure the release team is fully filled, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
 <p>- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
@@ -241,7 +242,8 @@ Release Team selection should happen in accordance with the [Release Team Select
     <td>13</td>
     <td><p>- Release retrospective participation (you may also choose to facilitate it, but it’s not recommended)
 <p>- Follow-up interviews with the media, the media roundtable.
-<p>- Contact Caleb Miles to remove release lead, release lead shadow, and branch manager authorization in GCB, as appropriate for release team turn over</td>
+<p>- Contact Caleb Miles to remove release lead, release lead shadow, and branch manager authorization in GCB, as appropriate for release team turn over.
+<p>- Insure self, shadow and branch manager are removed as members of <a href="https://groups.google.com/forum/#!aboutgroup/kubernetes-security">kubernetes-security</a>, leaving patch release manager.</td>
   </tr>
   <tr>
     <td>14</td>
