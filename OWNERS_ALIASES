@@ -33,9 +33,10 @@ aliases:
     - krzyzacy
     - aishsundar
     - mohammedzee1000
-  features-role:
+  enhancements-role:
     - idvoretskyi
     - justaugustus
+    - kacole2
   test-infra-role:
     - krzyzacy
     - bentheelder
