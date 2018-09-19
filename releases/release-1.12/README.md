@@ -13,7 +13,7 @@
 * [CI Signal Report](http://bit.ly/k8s112-cisignal)
 * [Retrospective Document](http://bit.ly/k8s112-retro)
 
-**tl;dr** The 1.12 release cycle begins on **Monday, July 2nd, 2018**, and ends on release day, **Tuesday, September 25, 2018**.  Feature freeze is **Tuesday, July 31, 2018**.  Code freeze begins **Tuesday, September 4, 2018** and ends **Wednesday, September 19, 2018**, but [may be vary depending on CI Signal](#conditionally-shortened-code-freeze). Docs must be completed and reviewed by **Tuesday, September 18, 2018**. Release blocking test case additions must be completed by in conjunction with features by code freeze.
+**tl;dr** The 1.12 release cycle begins on **Monday, July 2nd, 2018**, and ends on release day, ~~Tuesday, September 25, 2018~~ **Thursday, September 27, 2018** .  Feature freeze is **Tuesday, July 31, 2018**.  Code freeze begins **Tuesday, September 4, 2018** and ends **Wednesday, September 19, 2018**, but [may be vary depending on CI Signal](#conditionally-shortened-code-freeze). Docs must be completed and reviewed by **Tuesday, September 18, 2018**. Release blocking test case additions must be completed by in conjunction with features by code freeze.
 
 ## Notes About this Release
 
@@ -62,7 +62,7 @@
 | PRs for v1.12.0 must be cherry picked to release-1.12 | Branch Manager | | | 19 | | | |
 | Notify kubernetes-dev of lifting code freeze | Lead | | | 19 | | | |
 | cherry pick deadline | Branch Manager | | | 21 | | | |
-| v1.12.0 | Branch Manager | | | 25 | |week 13 | [1.12-blocking] |
+| v1.12.0 | Branch Manager | | | ~~25~~ moved to **27** | |week 13 | [1.12-blocking] |
 | Release retrospective | Community | | | 27? | | | | |
 | 1.13 Release Cycle Begins | Next Lead | | | | 1 | | |
 
