@@ -21,18 +21,15 @@ NB: these examples are based on the current cycle at time of writing, which is r
 ### Option A: Look at the job name
 aka trust the job
 
-ref: https://github.com/kubernetes/community/blob/master/contributors/devel/e2e-tests.md#test-jobs-naming-convention
-
 - upgrade-cluster: master + nodes upgraded to **new-version**, **old-version** tests run
 - upgrade-cluster-new: master + nodes upgraded to **new-version**, **new-version** tests run
 - upgrade-master: master upgraded to **new-version**, nodes left at **old-version**, **old-version** tests run
 
+references:
+- https://github.com/kubernetes/community/blob/master/contributors/devel/e2e-tests.md#test-jobs-naming-convention
+
 ### Option B: Look at the job arguments
 aka trust the CI
-
-ref: https://github.com/kubernetes/test-infra#release-branch-jobs--image-validation-jobs
-ref: https://github.com/kubernetes/test-infra/tree/master/kubetest#extract-a-build
-ref: https://github.com/kubernetes/test-infra/blob/master/kubetest/extract_k8s.go
 
 - job config is output as first line of build log
 - OR if you know the job name, you can search for it in kubernetes/test-infra
@@ -60,6 +57,10 @@ $ for prefix in latest stable; do
 release/latest-1.11: v1.11.4-beta.0
 release/stable-1.11: v1.11.3
 ```
+references:
+- https://github.com/kubernetes/test-infra#release-branch-jobs--image-validation-jobs
+- https://github.com/kubernetes/test-infra/tree/master/kubetest#extract-a-build
+- https://github.com/kubernetes/test-infra/blob/master/kubetest/extract_k8s.go
 
 ### Option C: Look at the job's log
 aka trust nothing
@@ -70,6 +71,12 @@ aka trust nothing
 - if there is a +, everything after the + is a commit sha
 - you can use https://github.com/kubernetes/kubernetes/commit/`<commit sha>`
 - everything displayed under the commit has made it into the build
+
+### Known Issues
+
+- the "version" displayed by Gubernator is the **old-version**
+- the commit displayed by TestGrid is the **old-version**
+- neither of these display the **new-version** (ref: [kubernetes/test-infra#3392](https://github.com/kubernetes/test-infra/issues/3392))
 
 ---
 
@@ -92,7 +99,6 @@ OR:
 - search for the job https://github.com/kubernetes/test-infra/search?q=ci-kubernetes-e2e-gce-new-master-upgrade-cluster-parallel&unscoped_q=ci-kubernetes-e2e-gce-new-master-upgrade-cluster-parallel
 - job is defined at https://github.com/kubernetes/test-infra/blob/3caafeffebfef243499a92c76cc5eea9e216f138/config/jobs/kubernetes/sig-cluster-lifecycle/k8s-upgrade-gce.yaml#L355
 - relevant paramters are `- --extract=ci/latest - --extract=ci/k8s-stable1`
-- **old-version** is `release-1.11` HEAD, **new-version** is `master` HEAD (as of the the time the job ran)
 - **old-version** is `release-1.11` HEAD, **new-version** is `master` HEAD (as of the the time the job ran)
 
 ### Option C: Look at the job's log
