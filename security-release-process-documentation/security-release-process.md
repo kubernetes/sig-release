@@ -250,7 +250,9 @@ could be in the form of the following:
 To be eligible for the kubernetes-distributors-announce mailing list, your
 distribution should:
 
-1. Be an actively maintained distribution of kubernetes components.
+0. Have an actively monitored security email alias for our project.
+1. Be an actively maintained and [CNCF certified distribution of
+   Kubernetes][conformance] components.
 2. Have a user base not limited to your own organization.
 3. Have a publicly verifiable track record up to present day of fixing security
    issues.
@@ -260,6 +262,11 @@ distribution should:
 7. Be willing to [contribute back](#contributing-back) as outlined above.
 8. Have someone already on the list vouch for the person requesting membership
    on behalf of your distribution.
+
+[conformance]: https://www.cncf.io/certification/software-conformance/
+
+**Removal**: If your distribution stops meeting one or more of these criteria
+after joining the list then you will be unsubscribed.
 
 ### Requesting to Join
 
@@ -275,6 +282,11 @@ To: kubernetes-security@googlegroups.com
 Subject: Seven-Corp Membership to kubernetes-distributors-announce
 
 Below are each criterion and why I think we, Seven-Corp, qualify.
+
+> 0. Have an actively monitored security alias email for our project.
+
+Yes, please subscribe kubernetes-security-team@example.com to the distributor's
+announce list.
 
 > 1. Be an actively maintained distribution of kubernetes components.
 
