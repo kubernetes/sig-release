@@ -165,7 +165,7 @@ Once you know your environment is good and running for the fast forwards:
 Subsequent runs will simply be merging in changes from master to the branch, keeping the previous API fixup commits on the branch.
 
 ## Code Slush, Freeze, Thaw
-Code merge restriction periods have been implemented by a combination of the GitHub milestone munger, prow plugins config, submit-queue config and tide.  The Test Infra Lead, Branch Manager and Release Lead coordinate checking in whichever config changes are required to enable and disable merge restrictions.
+Code merge restriction periods have been implemented by a combination of prow plugins config, submit-queue config, and tide.  The Test Infra Lead, Branch Manager and Release Lead coordinate checking in whichever config changes are required to enable and disable merge restrictions.
 
 ## Reverts
 During code freeze it is especially important to first look at the list of commits on master since the prior fast forward, scanning their content and issue/PR artifacts to insure they are changes expected for this milestone.  There merge-blocking mechanisms are relatively weak.  It is possible still for some people to write directly to the repo (bypassing blocking mechanisms) as well as for well intentioned milestone maintainers to approve a merge incorrectly.  The branch manager is a last pair of eyes.
