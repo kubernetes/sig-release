@@ -113,7 +113,10 @@ Adding the --rc flag switches behavior on to building release candidates.  Again
 * `./gcbmgr stage release-1.12 --official --build-at-head --nomock`
 
 ## Debs and RPMs
-These require an additional layer of build and publish, which is currently still done by a Googler.  After building, but before release notification, ping @mbohlool on slack indicating for which build (for example: 1.12.0-beta.1) Debs and RPMs are required.
+
+When we cut beta or release candidates, in order to test the changes, we should publish the deb/rpm artifacts (kubeadm, kubelet and kubectl etc). This will enable someone to try installing using kubeadm and actually kick the tires.
+
+These artifacts require an additional layer of build and publish, which is currently still done by a Googler.  After building, but before release notification, ping @mbohlool on slack indicating for which build (for example: 1.12.0-beta.1) Debs and RPMs are required.
 
 These build relatively quickly and should be available ahead of sending the release notification, especially for the official release when the worldwide community will attempt to get the new artifacts.
 
