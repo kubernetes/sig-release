@@ -96,7 +96,6 @@ Release Team selection should happen in accordance with the [Release Team Select
 - Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal](https://git.k8s.io/sig-release/release-team/role-handbooks/ci-signal/README.md), as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
 - Request review of this document by the release lead shadow. The shadow should also take all actions in this document around joining groups and requesting access permissions.
-- Update the blockade config in [prow/plugins.yaml](https://git.k8s.io/test-infra/prow/plugins.yaml) to prevent changes to all but the three most recent release folders.
 
 ### Week 2
 
