@@ -383,9 +383,9 @@ This includes all write access violations.
 
 ##### Information disclosure (targeted)
 
-Cases where the attacker can locate and read information from anywhere on the 
-system, including system information that was not intended or designed to be 
-exposed.
+Cases where an unprivileged user can locate and read highly sensitive
+information from anywhere on the system, including system information that was
+not intended or designed to be exposed.
 
 - [Remote Anonymous User](#remote-anonymous-user) 
     - Unauthorized access. Examples:
@@ -467,23 +467,36 @@ Examples:
 
 ##### Information disclosure (targeted)
 
-Cases where the attacker can easily read information on the system from 
-specific locations, including system information, which was not 
+Cases where an anonymous user can easily read sensitive information on the
+system from specific locations, including system information that was not
 intended/designed to be exposed.
 
 Examples:
 
-- Targeted disclosure of the existence of a file
-- Targeted disclosure of anonymous data
+- Targeted disclosure of the existence of an arbitrary file
 - Arbitrary filesystem or application data that should not typically be accessed
 - Arbitrary API resources that should not typically be accessed
-- Workload & namespace names or metadata
-- System & workload metrics or logs that are not typically exposed
+- Workload & namespace names or identifying metadata
+- System & workload logs that are not typically exposed
+- Workload or user-created metrics
 
 #### Medium
 
 "High" attacks are downgraded to "Medium" when requiring [local
 access](#local-access) or when there is a straight-forward mitigation.
+
+##### Information disclosure (targeted)
+
+Cases where an anonymous user can easily read anonymous (non-sensitive)
+information on the system, including system metrics that were not intended to be
+exposed.
+
+Examples:
+
+- System metrics common to most Kubernetes installs that were not intended to be
+  public
+- Non-identifying workload metadata (e.g. UIDs, creationTimestamps,
+  resourceVersions)
 
 #### Low
 
