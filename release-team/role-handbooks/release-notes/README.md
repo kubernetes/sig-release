@@ -53,72 +53,46 @@ Update this section at the end of each release for the next team
 
 ## Release Milestone Activities:
 
-<table>
-  <tr>
-    <td>RELEASE WEEK</td>
-    <td>ACTIVITIES</td>
-  </tr>
-  <tr>
-    <td>1</td>
-<td>- Begin running release-notes script for ongoing collection of release notes
-<br>- Begin attending release team meetings
-<br>- Informal intro meeting with release notes team to discuss contact information and logistics </td>
-  </tr>
-  <tr>
-    <td>2</td>
-<td>- Same as above</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>- Begin attending burndown meetings
-    <br>- Same as above</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>- Same as above</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>- Same as above</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>- Same as above</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>- Same as above</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>- Same as above</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>- Former Release Notes lead helps identify new leads and shadows
-    <br>- Create Google Doc for generated release notes and share with release-notes team
-    <br>- Share created doc with release-team
-<br>- Start determining major themes for release notes template to send to sig-leads </td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>- Finalize lead and shadow roles for subsequent release
-    <br>- Work with sig-leads to finalize major themes for release-notes
-    <br>- Copy edit notes for spelling, grammar and uniform style</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>- Repeat previous tasks until final copy is complete
-    <br>- Ensure "known issues" section is incorporated into final document</td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>- Release day
-<br>- Copy notes from Google Doc to HackMD in markdown
-<br>- Final version of release notes committed for release </td>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>- Release retrospective participation</td>
-  </tr>
-</table>
+### Week 1 - 2
+
+- Begin running release-notes script for ongoing collection of release notes
+- Begin attending release team meetings
+- Informal intro meeting with release notes team to discuss contact information and logistics
+
+
+### Weeks 3 - 8
+
+- Begin attending burndown meetings
+- Same as above
+
+
+### Week 9
+
+- Former Release Notes lead helps identify new leads and shadows
+- Create Google Doc for generated release notes and share with release-notes team
+- Share created doc with release-team
+- Start determining major themes for release notes template to send to sig-leads
+
+
+### Week 10
+
+- Finalize lead and shadow roles for subsequent release
+- Work with sig-leads to finalize major themes for release-notes
+- Copy edit notes for spelling, grammar and uniform style
+
+
+### Week 11
+
+- Repeat previous tasks until final copy is complete
+- Ensure "known issues" section is incorporated into final document
+
+### Week 12
+
+- Release day
+- Copy notes from Google Doc to HackMD in markdown
+- Final version of release notes committed for release
+
+### Week13
+
+- Release retrospective participation
+
