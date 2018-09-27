@@ -16,17 +16,21 @@ completed at the end, once the release is firmed up.
 
 ## Tasks
 
-- The Release notes lead and shadows attend burn down meetings, sig-release meetings and follow the sig-release slack chat for relevant
-information throughout the release cycle to keep up with relevant release specific information.
+- The Release notes lead and shadows attend burn down meetings, sig-release meetings and follow the sig-release
+slack chat for relevant information throughout the release cycle.
 - One member of the release notes team should be responsible for setting up and running the [release notes tool](https://github.com/marpaia/release-notes)
-to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are always welcome!
-- Drafts produced by the tool are copied to Hackmd and shared with the rest of the release team (there is currently no automated way to keep the generated
-release-notes and the hackmd file concurrent. Some tool to automate this process would be a good task for the 1.13 release team)
-- Closer to the release date, major themes are collected from the release notes draft and the release notes team creates a draft in markdown of
-the identified major themes to send to sig-leads for feedback/confirmation
-- If gentle nudging of sig leads is not effective in retrieving feedback/confirmation, the release-notes team can use a reasonable amount of creative liberity
-in completing the notes
-- The confirmed upon notes are cleaned up and copy edited by the release team to ensure uniform language/style is used.
+to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are
+always welcome!
+- Drafts produced by the tool are copied to a Google Document that gives editing privleges to each member of the
+release-notes team (there is currently no automated way to keep the generated release-notes and the google doc
+concurrent. Some tool to automate this process would be a good task for the 1.13 release team)
+- Closer to the release date, major themes are collected from the release notes draft and the release notes team
+creates a draft in markdown of the identified major themes to send to sig-leads for feedback/confirmation
+- If gentle nudging of sig leads is not effective in retrieving feedback/confirmation, the release-notes team can
+use a reasonable amount of creative liberity in completing the notes
+- A "Known Issues" section will also be created in a github issue to be added to the release notes before release date
+- The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style
+is used.
 - Kubernetes is released with the completed notes!
 
 ## Tools
@@ -41,11 +45,11 @@ Update this section at the end of each release for the next team
 
 ### Post 1.12 todos
 
-- Create new tool to process language in generated release notes file (or incorporate into the release notes tool)
-    Goals:
+- Implement new functionality in release-notes tool to process language in generated release notes file
+
+  Goals:
     - Generate uniform style across release notes (ie. past tense, formatting)
     - Decrease copy editing time
-
 
 ## Release Milestone Activities:
 
@@ -62,36 +66,38 @@ Update this section at the end of each release for the next team
   </tr>
   <tr>
     <td>2</td>
-<td>- ?</td>
+<td>- Same as above</td>
   </tr>
   <tr>
     <td>3</td>
     <td>- Begin attending burndown meetings
-    <br>- ?</td>
+    <br>- Same as above</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>- ?</td>
+    <td>- Same as above</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>- ?</td>
+    <td>- Same as above</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>- ?</td>
+    <td>- Same as above</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>- ?</td>
+    <td>- Same as above</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>- ?</td>
+    <td>- Same as above</td>
   </tr>
   <tr>
     <td>9</td>
     <td>- Former Release Notes lead helps identify new leads and shadows
+    <br>- Create Google Doc for generated release notes and share with release-notes team
+    <br>- Share created doc with release-team
 <br>- Start determining major themes for release notes template to send to sig-leads </td>
   </tr>
   <tr>
@@ -102,12 +108,14 @@ Update this section at the end of each release for the next team
   </tr>
   <tr>
     <td>11</td>
-    <td>- Repeat previous tasks until final copy is complete</td>
+    <td>- Repeat previous tasks until final copy is complete
+    <br>- Ensure "known issues" section is incorporated into final document</td>
   </tr>
   <tr>
     <td>12</td>
     <td>- Release day
-<br>- Final version of release notes submitted for release </td>
+<br>- Copy notes from Google Doc to HackMD in markdown
+<br>- Final version of release notes committed for release </td>
   </tr>
   <tr>
     <td>13</td>
