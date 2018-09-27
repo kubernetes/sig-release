@@ -1,3 +1,9 @@
+# 1.12: A next iteration in the evolving stable distributed system.
+
+"Class 4: Nearly all initial patterns evolve into structures that interact in complex and interesting ways, with the formation of local structures that are able to survive for long periods of time." ([see Cellular Automaton](https://en.wikipedia.org/wiki/Cellular_automaton); see also [TestGrid.k8s.io](https://testgrid.k8s.io))
+
+![Conway's Game of Life configuration in shape of Kubernetes logo](1.12_life.png)
+
 # Kubernetes 1.12 Release Schedule
 
 *Handy Links*
