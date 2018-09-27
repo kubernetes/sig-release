@@ -203,6 +203,22 @@ Release Day
 - Every issue in the milestone is considered release blocking.
 - If you have to push the release date back, try to avoid Friday since it makes release publicity extremely difficult. Also, people seem to have patience with delay as long as the reasons are clear and openly communicated. This is your duty. You must over-communicate and ensure the team is also talking to their stakeholders (CNCF, community, press, etc.)
 - Make release day as fun as you can for the team. Plan ahead for this and do something nice.
+- The following final actions should be ordered, with successful completion of each being the entry criteria to the next.
+  - Release day morning:
+    - Go / No-Go: should generally be clear a day or three ahead of release, but the day's burndown provides a final opportunity for the team to affirm things are ready.
+    - Release notes lead PR's final draft release notes to sig-release, with release lead approving merge.
+    - Branch manager lead does mock release build.
+    - Branch manager lead does mock publication.  Validates with release team lead and broader team the mock announcement email content.
+    - Branch manager lead does nomock release build.
+  - Starting approximately 4pm Pacific:
+    - Communications lead begins staging blog post.
+    - Branch manager lead does nomock publication.
+    - Branch manager or release lead requests RPMs/Debs build from Google representative.
+    - Google representative affirms build is complete.
+    - Docs lead publishes release docs to website.
+    - Branch manager does release-notify.
+  - Approximately 5pm Pacific: all work is complete and the release team
+    lead announces release to k-dev, sig leads lists, and discuss.k8s.io.
 
 ### Week 13
 
