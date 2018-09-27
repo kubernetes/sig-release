@@ -68,7 +68,6 @@ Update this section at the end of each release for the next team
 
 ### Week 9
 
-- Former Release Notes lead helps identify new leads and shadows
 - Create Google Doc for generated release notes and share with release-notes team
 - Share created doc with release-team
 - Start determining major themes for release notes template to send to sig-leads
