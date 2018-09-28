@@ -1,15 +1,15 @@
 # Test Infra Lead Playbook
 
-## Overview of Test Infra Lead responsibilities
-
 Note: Currently, the test-infra lead has to be someone from Google GKE Engprod Team, in order to gain access to the prow cluster. This
 will change once we migrate our testing infrastructure under CNCF account. (xref kubernetes/test-infra#5085)
 
-There are two major area that test-infra lead need to take care during the release cycle, which are:
+There are three major area that test-infra lead need to take care during the release cycle, which are:
 
-1. Create CI/Presubmit jobs for the new release, and populate the testgrid dashboard
+1. [Create CI/Presubmit jobs for the new release, and populate the testgrid dashboard](#create-cipresubmit-jobs-for-the-new-release)
 
-1. Watch for test infra status, make sure test infra is stable, react to test infra related issues and notify Release Lead and CI Signal Lead of issue status changes
+1. [Configure merge automation for code slush, freeze, and thaw](#configure-merge-automation-for-code-slush-freeze-and-thaw)
+
+1. [Watch for test infra status, make sure test infra is stable, react to test infra related issues and notify Release Lead and CI Signal Lead of issue status changes](#ensure-the-stability-of-test-infra)
 
 It's important to ensure the stability of our test infra during the release cycle, so that we can get reliable testing signals throughout the release cycle.
 
@@ -17,7 +17,7 @@ You can also work with @kubernetes/test-infra-maintainers or [test infra oncall]
 
 Also feel free to ping #sig-testing and #testing-ops to reach out for help.
 
-### Create CI/Presubmit jobs for the new release
+## Create CI/Presubmit jobs for the new release
 
 This step should happen in week 6-7, when we create the new release branch.
 
@@ -42,7 +42,123 @@ Note that this section reflects the status of the world today, we are actively l
 Not all the steps need to happen together, some new jobs, like bazel-build/integration/verify will require images to be pushed before they can work properly. 
 
 
-### Ensure the stability of test infra
+## Configure merge automation for code slush, freeze, and thaw
+
+The code slush, code freeze, and code thaw dates in the release cycle mark points at which merge requirements for PRs in the `master` branch and `release-<current-release-number>` change. The remaining branches are `release-X.X` branches for *previous* releases and are unaffected by the release cycle.
+Code slush and freeze are the two phases of the release cycle with additional merge requirements. Code thaw marks the switch back to the development (normal) phase.
+
+### Tide
+
+The tool that we use to automate merges is called [Tide](https://github.com/kubernetes/test-infra/tree/master/prow/cmd/tide#tide). Its configuration lives in [`config.yaml`](https://github.com/kubernetes/test-infra/blob/master/prow/config.yaml). Tide identifies PRs that are mergeable using GitHub queries that correspond to the entries in the `queries` field.
+Here is an example of what the query config for `kubernetes/kubernetes` looks like without additional constraints related to the release cycle:
+
+```yaml
+  - repos:
+    - kubernetes/kubernetes
+    labels:
+    - lgtm
+    - approved
+    - "cncf-cla: yes"
+    missingLabels:
+    - do-not-merge
+    - do-not-merge/blocked-paths
+    - do-not-merge/cherry-pick-not-approved
+    - do-not-merge/hold
+    - do-not-merge/invalid-owners-file
+    - do-not-merge/release-note-label-needed
+    - do-not-merge/work-in-progress
+    - needs-kind
+    - needs-rebase
+    - needs-sig
+```
+
+During code slush and freeze we use two queries instead of one for the `kubernetes/kubernetes` repo. One query handles the `master` and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
+
+### Code Slush
+
+Code slush is when merge requirements for the `master` and current release branch diverge from the requirements for the other branches so this is when we split the `kubernetes/kubernetes` Tide query into two queries.
+
+We only add one additional merge requirement for PRs to these two branches for code slush:
+- PRs must be in the GitHub milestone for the current release (e.g. `v1.12`).
+
+Milestone requirements are configured by adding `milestone: foo` to a query config.
+
+```yaml
+  - repos:
+    - kubernetes/kubernetes
+    milestone: v1.12
+    includedBranches:
+    - master
+    - release-1.12
+    labels:
+    - lgtm
+    - approved
+    - "cncf-cla: yes"
+    missingLabels:
+      # as above...
+  - repos:
+    - kubernetes/kubernetes
+    excludedBranches:
+    - master
+    - release-1.12
+    labels:
+    - lgtm
+    - approved
+    - "cncf-cla: yes"
+    missingLabels:
+      # as above...
+```
+
+### Code Freeze
+
+Code freeze adds one more merge requirement for PRs in the `master` and current release branches:
+- PRs must have the `priority/critical-urgent` label.
+
+This label requirement is configured by adding `priority/critical-urgent` to the list specified by the `labels` field.
+
+```yaml
+  - repos:
+    - kubernetes/kubernetes
+    milestone: v1.12
+    includedBranches:
+    - master
+    - release-1.12
+    labels:
+    - lgtm
+    - approved
+    - priority/critical-urgent
+    - "cncf-cla: yes"
+    missingLabels:
+      # as above...
+  - repos:
+    - kubernetes/kubernetes
+    excludedBranches:
+    - master
+    - release-1.12
+    labels:
+    - lgtm
+    - approved
+    - "cncf-cla: yes"
+    missingLabels:
+      # as above...
+```
+
+### Code Thaw
+
+Code thaw removes the release cycle merge restrictions and replaces the two queries with a single one. We remain in this state until the next code slush.
+
+```yaml
+  - repos:
+    - kubernetes/kubernetes
+    labels:
+    - lgtm
+    - approved
+    - "cncf-cla: yes"
+    missingLabels:
+      # as above...
+```
+
+## Ensure the stability of test infra
 
 During the release cycle, especially inside the code freeze, the test infra lead need to actively watch for
 
@@ -55,8 +171,17 @@ test infra lead can diff the SHAs to triage if the failure is caused by a test-i
 
 The [velodrome monitoring dashboard](http://velodrome.k8s.io/dashboard/db/monitoring?orgId=1) will be your good friends.
 
+### Monitoring Tide
+
+It is important to monitor Tide after config changes are made for code slush, freeze and thaw to ensure that the changes are having the intended effect.
+
+Until the CNCF infra migration is complete, a member of Google's gke-engprod team will need to monitor Tide logs.
+However, most of Tide's behavior can be monitored without access to the cluster. The [Tide dashboard](https://prow.k8s.io/tide) and [Velodrome monitoring dashboard](http://velodrome.k8s.io/dashboard/db/monitoring?orgId=1) provide insight into what Tide is currently doing, how much load it is handling, and how it is performing.
+
 ## Useful Links
 
 [Test Infra Home Page](https://github.com/kubernetes/test-infra)
 
 [Prow Home Page](https://prow.k8s.io)
+
+[Tide](https://github.com/kubernetes/test-infra/tree/master/prow/cmd/tide#tide)
