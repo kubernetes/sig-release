@@ -1,7 +1,9 @@
 Bug Triage Release Team Role
 ==============================
 
-Your job for the release is to make sure that bugs (represented by GitHub issues PRs) which affect the release are dealt with in a timely fashion.  In general, you will be polling bugs, checking status, sending reminders and questions to contributors and SIG leads, and publishing summary reports.  The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  Especially as the requirement in kubernetes is no longer in place that PRs must have an associated issue, it is important to think of the role as broadly covering bug triage and covering both `is:issue` and `is:pr` GitHub artifacts.
+Your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  Bugs can appear either as GitHub Issues or Pull Requests (PRs).  
+
+Primarily, you will be polling bugs, checking status, sending reminders and questions to contributors and SIG leads, and publishing summary reports.  The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  It is important to consider both `is:issue` and `is:pr` GitHub artifacts when triaging bugs.
 
 Secondarily, you will be helping improve automation around artifact management and release tagging.
 
