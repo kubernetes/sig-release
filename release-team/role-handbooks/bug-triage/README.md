@@ -68,7 +68,7 @@ The third thing you should do, time permitting, is to scan through the newly ope
 * Open v1.11 Issues
    * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
 * Open v1.11 PRs
-   * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
+   * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
 
 ### Reports
 
