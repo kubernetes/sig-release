@@ -26,7 +26,7 @@ As Bug Triage lead, it is not your job to fix, label, sort, or gatekeep issues a
 
 In general, you should never decide whether something is in or out of a milestone; the SIG or the Release Team Lead needs to do that.  In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made.  For example, you might add/modify kind and priority labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.
 
-The job relates to both the Features Lead and CI Signal Lead roles.  Understanding the in-bound features is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](ci-signal-playbook.md) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Features and CI Signal.
+The job relates to both the Features Lead and CI Signal Lead roles.  Understanding the inbound features is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](ci-signal-playbook.md) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Features and CI Signal.
 
 ## Early Release
 
@@ -52,10 +52,10 @@ No reports are required during this period, although you might consider setting 
 
 ## Pre-Code-Slush
 
-During this period your job is to make sure that all issues and PRs which are related to features for the upcoming release have reasonable labels.  While you may have been doing that some earlier, now you have a deadline.  From the beginning of Code Slush every feature issue or PR should be linked to the milestone.  Specifically:
+During this period your job is to make sure that all issues and PRs which are related to bugfixes for the upcoming release have reasonable labels.  While you may have been doing that some earlier, now you have a deadline.  From the beginning of Code Slush every bug issue or PR should be linked to the milestone.  Specifically:
 
-* each Feature issue should have a milestone, kind, and sig.
-* PRs linked to these feature issues should have the same labels (and milestone)
+* each issue should have a milestone, kind, and sig.
+* PRs linked to these issues should have the same labels (and milestone)
 * priority should be important-soon or critical-urgent
 
 If issues do not match the above, you should comment and urge the SIGs to fix them, or even fix some labels yourself (particularly kind and sig).
