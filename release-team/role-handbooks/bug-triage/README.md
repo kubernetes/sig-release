@@ -1,7 +1,9 @@
 Bug Triage Release Team Role
 ==============================
 
-Your job for the release is to make sure that bugs (represented by GitHub issues PRs) which affect the release are dealt with in a timely fashion.  In general, you will be polling bugs, checking status, sending reminders and questions to contributors and SIG leads, and publishing summary reports.  The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  Especially as the requirement in kubernetes is no longer in place that PRs must have an associated issue, it is important to think of the role as broadly covering bug triage and covering both `is:issue` and `is:pr` GitHub artifacts.
+Your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  Bugs can appear either as GitHub Issues or Pull Requests (PRs).  
+
+Primarily, you will be polling bugs, checking status, sending reminders and questions to contributors and SIG leads, and publishing summary reports.  The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  It is important to consider both `is:issue` and `is:pr` GitHub artifacts when triaging bugs.
 
 Secondarily, you will be helping improve automation around artifact management and release tagging.
 
@@ -22,9 +24,9 @@ As Bug Triage lead, it is not your job to fix, label, sort, or gatekeep issues a
 3. Messaging individual owners and reviewers via Slack and/or direct email (GitHub notification emails must have been filtered or missed if you're past step #1).  Individual's email addresses may be harder to find than GitHub ID, but ure usually in the git commit history.  Slack handles are often harder yet to find.  There is no master list mapping human names to GitHub ID, email or Slack ID.  If you can't find contact info, asking in the appropriate SIG's Slack channel will usually get you pointed in the right direction.
 4. Escalating to the Release Team Lead with suggestions on what to do with non-responsive issues.
 
-In practice, you should fix anything simple that saves folks time and doesn't usurp the decision-making of the SIGs.  For example, adding/modifying kind and priority labels, or making sure PR labels match issue labeling.  However, you should never decide whether something is in or out of a milestone; the SIG or the Release Team Lead needs to do that.
+In general, you should never decide whether something is in or out of a milestone; the SIG or the Release Team Lead needs to do that.  In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made.  For example, you might add/modify kind and priority labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label)
 
-The job relates to both the Features Lead and CI Signal Lead roles.  Understanding the in-bound features is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](ci-signal-playbook.md) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Features and CI Signal.
+The job relates to both the Features Lead and CI Signal Lead roles.  Understanding the inbound features is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](ci-signal-playbook.md) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Features and CI Signal.
 
 ## Early Release
 
@@ -50,10 +52,10 @@ No reports are required during this period, although you might consider setting 
 
 ## Pre-Code-Slush
 
-During this period your job is to make sure that all issues and PRs which are related to features for the upcoming release have reasonable labels.  While you may have been doing that some earlier, now you have a deadline.  From the beginning of Code Slush every feature issue or PR should be linked to the milestone.  Specifically:
+During this period your job is to make sure that all issues and PRs which are related to bugfixes for the upcoming release have reasonable labels.  While you may have been doing that some earlier, now you have a deadline.  From the beginning of Code Slush every bug issue or PR should be linked to the milestone.  Specifically:
 
-* each Feature issue should have a milestone, kind, and sig.
-* PRs linked to these feature issues should have the same labels (and milestone)
+* each issue should have a milestone, kind, and sig.
+* PRs linked to these issues should have the same labels (and milestone)
 * priority should be important-soon or critical-urgent
 
 If issues do not match the above, you should comment and urge the SIGs to fix them, or even fix some labels yourself (particularly kind and sig).
@@ -66,7 +68,7 @@ The third thing you should do, time permitting, is to scan through the newly ope
 * Open v1.11 Issues
    * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
 * Open v1.11 PRs
-   * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
+   * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
 
 ### Reports
 
