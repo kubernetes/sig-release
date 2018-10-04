@@ -63,6 +63,7 @@
 | PRs for v1.13.0 must be cherry picked to release-1.13 | Branch Manager | | 28 | | | | |
 | Notify kubernetes-dev of lifting code freeze | Lead | | 28 | | | | |
 | cherry pick deadline (EOD PST) | Branch Manager | | 30 | | | | |
+| 1.13.0-rc.2 released from branch | Branch Manager | | 30 | | | | [1.13-blocking], [master-blocking], [master-upgrade] |
 | v1.13.0 | Branch Manager | | | 3 | |week 10 | [1.13-blocking] |
 | Release retrospective | Community | | | 6? | | | | |
 | Contributor Summit + Kubecon Seattle 2018 | Community event | | | 9 - 13 | | week 11 | |
