@@ -87,7 +87,7 @@ Release Team selection should happen in accordance with the [Release Team Select
   - [kubernetes-sig-release](https://groups.google.com/forum/#!aboutgroup/kubernetes-sig-release)
   - [kubernetes-sig-leads](https://groups.google.com/forum/#!aboutgroup/kubernetes-sig-leads)
   - [kubernetes-dev](https://groups.google.com/forum/#!aboutgroup/kubernetes-dev)
-  - [kubernetes-security](https://groups.google.com/forum/#!aboutgroup/kubernetes-security): Send message to this private list introducing self, key release team roles and also request list membership be added for the release branch manager, patch manager, and release lead shadow.
+  - [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team): Send message to this private list introducing self, key release team roles and also request list membership be added for the release branch manager, patch manager, and release lead shadow. Any previous release managers can add you.
 - Ensure the release team is fully filled, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
 - Ensure that relevant feedback from the prior retrospective is incorporated into the process
@@ -225,7 +225,7 @@ Release Day
 - Release retrospective participation (you may also choose to facilitate it, but it’s not recommended)
 - Follow-up interviews with the media, the media roundtable.
 - Contact Caleb Miles to remove release lead, release lead shadow, and branch manager authorization in GCB, as appropriate for release team turn over.
--  ensure self, shadow and branch manager are removed as members of [kubernetes-security](https://groups.google.com/forum/#!aboutgroup/kubernetes-security), leaving patch release manager.
+-  ensure self, shadow and branch manager are removed as members of [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team), leaving patch release manager.
 
 ### Week 14
 
