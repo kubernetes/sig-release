@@ -179,7 +179,7 @@ The communication to users should be actionable. They should know when to block 
 **Optional Fix Disclosure to Private Distributors List** (Completed within 1-14 days of Disclosure):
 
 - The Fix Lead will make a determination with the help of the Fix Team if an issue is critical enough to require early disclosure to distributors. Generally this Private Distributor Disclosure process should be reserved for remotely exploitable or privilege escalation issues. Otherwise, this process can be skipped.
-- The Fix Lead will email the patches to kubernetes-distributors-announce@googlegroups.com so distributors can prepare builds to be available to users on the day of the issue's announcement. Distributors should read about the [Private Distributors List](#private-distributors-list) to find out the requirements for being added to this list.
+- The Fix Lead will email the patches to distributors-announce@kubernetes.io so distributors can prepare builds to be available to users on the day of the issue's announcement. Distributors should read about the [Private Distributors List](#private-distributors-list) to find out the requirements for being added to this list.
 - **What if a vendor breaks embargo?** The PST will assess the damage. The Fix Lead will make the call to release earlier or continue with the plan. When in doubt push forward and go public ASAP.
 
 **Fix Release Day** (Completed within 1-21 days of Disclosure)
@@ -208,7 +208,7 @@ individuals to find out about security issues.
 
 ### Embargo Policy
 
-The information members receive on kubernetes-distributors-announce must not be
+The information members receive on distributors-announce@kubernetes.io must not be
 made public, shared, nor even hinted at anywhere beyond the need-to-know within
 your specific team except with the list's explicit approval. This holds
 true until the public disclosure date/time that was agreed upon by the list.
@@ -247,7 +247,7 @@ could be in the form of the following:
 
 ### Membership Criteria
 
-To be eligible for the kubernetes-distributors-announce mailing list, your
+To be eligible for the distributors-announce@kubernetes.io mailing list, your
 distribution should:
 
 0. Have an actively monitored security email alias for our project.
@@ -279,7 +279,7 @@ Here is a psuedo example:
 
 ```
 To: kubernetes-security@googlegroups.com
-Subject: Seven-Corp Membership to kubernetes-distributors-announce
+Subject: Seven-Corp Membership to distributors-announce@kubernetes.io
 
 Below are each criterion and why I think we, Seven-Corp, qualify.
 

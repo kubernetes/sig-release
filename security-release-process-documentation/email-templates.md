@@ -8,7 +8,7 @@ Subject: Kubernetes Disclosure List Removal Due to Uncertified Status
 
 Hello $MEMBER-
 
-The [Kubernetes Product Security Team][pst] has removed $EMAIL from the kubernetes-distributors-announce Google Group.
+The [Kubernetes Product Security Team][pst] has removed $EMAIL from the distributors-announce@kubernetes.io Google Group.
 
 This is because $PRODUCT is no longer a [certified Kubernetes Distribution][conformance], a requirement for membership to this list.
 
