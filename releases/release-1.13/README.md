@@ -10,6 +10,7 @@
 * [Enhancements Tracking Sheet](http://bit.ly/k8s113-enhancements)
 * [Targeting Issues and PRs to This Milestone](https://git.k8s.io/community/contributors/devel/release.md)
 * [Meeting Minutes](http://bit.ly/k8s113-minutes)
+* [Bug Triage Tracking Sheet](http://bit.ly/k8s113-bugtriage)
 * [CI Signal Report](http://bit.ly/k8s113-cisignal)
 * [Retrospective Document](http://bit.ly/k8s113-retro)
 
