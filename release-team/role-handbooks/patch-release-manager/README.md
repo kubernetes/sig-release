@@ -14,7 +14,7 @@ The playbook is more what you call "guidelines" than actual rules.
   so the community knows you're the point of contact.
 * Ask a maintainer to add you to the [kubernetes-release-managers](https://github.com/orgs/kubernetes/teams/kubernetes-release-managers/members)
   team so you have write access to the main repository.
-* Ask to be added to the [kubernetes-security](https://groups.google.com/forum/#!forum/kubernetes-security)
+* Ask to be added to the [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team)
   mailing list.
 * Ask to be given access to post to the [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
   and [kubernetes-dev-announce](https://groups.google.com/forum/#!forum/kubernetes-dev-announce)

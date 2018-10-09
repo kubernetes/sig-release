@@ -68,7 +68,7 @@ Security vulnerabilities should be handled quickly and sometimes privately. The 
 
 The Product Security Team (PST) is responsible for organizing the entire response including internal communication and external disclosure but will need help from relevant developers and release managers to successfully run this process.
 
-The initial Product Security Team will consist of four volunteers subscribed to the private [Kubernetes Security](https://groups.google.com/forum/#!forum/kubernetes-security) list. These are the people who have been involved in the initial discussion and volunteered:
+The initial Product Security Team will consist of volunteers subscribed to the private [Kubernetes Security](https://groups.google.com/a/kubernetes.io/forum/#!forum/security) list. These are the people who have been involved in the initial discussion and volunteered:
 
 - Brandon Philips (**[@philips](https://github.com/philips)**) `<brandon.philips@coreos.com>` [4096R/154343260542DF34]
 - Jess Frazelle (**[@jessfraz](https://github.com/jessfraz)**) `<jess@linux.com>` [4096R/0x18F3685C0022BFF3]
@@ -126,9 +126,9 @@ Each role has an ordered list of “who’s handling the next issue.” If somet
 
 #### Release Manager Role
 
-Also included on the private [Kubernetes Security](https://groups.google.com/forum/#!forum/kubernetes-security) list are all [Release Managers](/release-managers.md).
+Also included on the private [Security Release Team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team) list are all [Release Managers](/release-managers.md).
 
-It is the responsibility of the PST to add and remove Release Managers as Kubernetes minor releases created and deprecated.
+It is the responsibility of the Release Managers to add and remove people from the Security Release Team group as Kubernetes minor releases created and deprecated.
 
 ## Disclosures
 
@@ -138,7 +138,7 @@ The Kubernetes Community asks that all suspected vulnerabilities be privately an
 
 ### Public Disclosure Processes
 
-If you know of a publicly disclosed security vulnerability please IMMEDIATELY email [kubernetes-security@googlegroups.com](mailto:kubernetes-security@googlegroups.com) to inform the Product Security Team (PST) about the vulnerability so they may start the patch, release, and communication process.
+If you know of a publicly disclosed security vulnerability please IMMEDIATELY email [security@kubernetes.io](mailto:security@kubernetes.io) to inform the Product Security Team (PST) about the vulnerability so they may start the patch, release, and communication process.
 
 If possible the PST will ask the person making the public report if the issue can be handled via a private disclosure process. If the reporter denies the PST will move swiftly with the fix and release process. In extreme cases you can ask GitHub to delete the issue but this generally isn't necessary and is unlikely to make a public disclosure less damaging.
 
@@ -174,7 +174,7 @@ These steps should be completed within the 1-7 days of Disclosure.
 - The Fix Lead and the Fix Team will create a [CVSS](https://www.first.org/cvss/specification-document) using the [CVSS Calculator](https://www.first.org/cvss/calculator/3.0). They will also use the [Severity Thresholds - How We Do Vulnerability Scoring](#severity-thresholds-how-we-do-vulnerability-scoring) to determine the effect and severity of the bug. The Fix Lead makes the final call on the calculated risk; it is better to move quickly than make the perfect assessment.
 - The Fix Team will notify the Fix Lead that work on the fix branch is complete once there are LGTMs on all commits in the private repo from one or more relevant assignees in the relevant OWNERS file.
 
-If the CVSS score is under 4.0 ([a low severity score](https://www.first.org/cvss/specification-document#i5)) or the assessed risk is low the Fix Team can decide to slow the release process down in the face of holidays, developer bandwidth, etc. These decisions must be discussed on the kubernetes-security mailing list.
+If the CVSS score is under 4.0 ([a low severity score](https://www.first.org/cvss/specification-document#i5)) or the assessed risk is low the Fix Team can decide to slow the release process down in the face of holidays, developer bandwidth, etc. These decisions must be discussed on the security@kubernetes.io mailing list.
 
 ### Fix Disclosure Process
 
@@ -190,7 +190,7 @@ The communication to users should be actionable. They should know when to block 
 **Optional Fix Disclosure to Private Distributors List** (Completed within 1-14 days of Disclosure):
 
 - The Fix Lead will make a determination with the help of the Fix Team if an issue is critical enough to require early disclosure to distributors. Generally this Private Distributor Disclosure process should be reserved for remotely exploitable or privilege escalation issues. Otherwise, this process can be skipped.
-- The Fix Lead will email the patches to kubernetes-distributors-announce@googlegroups.com so distributors can prepare builds to be available to users on the day of the issue's announcement. Distributors should read about the [Private Distributors List](#private-distributors-list) to find out the requirements for being added to this list.
+- The Fix Lead will email the patches to distributors-announce@kubernetes.io so distributors can prepare builds to be available to users on the day of the issue's announcement. Distributors should read about the [Private Distributors List](#private-distributors-list) to find out the requirements for being added to this list.
 - **What if a vendor breaks embargo?** The PST will assess the damage. The Fix Lead will make the call to release earlier or continue with the plan. When in doubt push forward and go public ASAP.
 
 **Fix Release Day** (Completed within 1-21 days of Disclosure)
@@ -219,7 +219,7 @@ individuals to find out about security issues.
 
 ### Embargo Policy
 
-The information members receive on kubernetes-distributors-announce must not be
+The information members receive on distributors-announce@kubernetes.io must not be
 made public, shared, nor even hinted at anywhere beyond the need-to-know within
 your specific team except with the list's explicit approval. This holds
 true until the public disclosure date/time that was agreed upon by the list.
@@ -231,7 +231,7 @@ team required to fix said issue, they must agree to the same terms and only
 find out information on a need-to-know basis.
 
 In the unfortunate event you share the information beyond what is allowed by
-this policy, you _must_ urgently inform the kubernetes-security@googlegroups.com
+this policy, you _must_ urgently inform the security@kubernetes.io
 mailing list of exactly what information
 leaked and to whom. A retrospective will take place after the leak so
 we can assess how to not make the same mistake in the future.
@@ -258,7 +258,7 @@ could be in the form of the following:
 
 ### Membership Criteria
 
-To be eligible for the kubernetes-distributors-announce mailing list, your
+To be eligible for the distributors-announce@kubernetes.io mailing list, your
 distribution should:
 
 0. Have an actively monitored security email alias for our project.
@@ -281,7 +281,7 @@ after joining the list then you will be unsubscribed.
 
 ### Requesting to Join
 
-New membership requests are sent to kubernetes-security@googlegroups.com.
+New membership requests are sent to security@kubernetes.io
 
 In the body of your request please specify how you qualify and fulfill each
 criterion listed in [Membership Criteria](#membership-criteria).
@@ -289,8 +289,8 @@ criterion listed in [Membership Criteria](#membership-criteria).
 Here is a psuedo example:
 
 ```
-To: kubernetes-security@googlegroups.com
-Subject: Seven-Corp Membership to kubernetes-distributors-announce
+To: security@kubernetes.io
+Subject: Seven-Corp Membership to distributors-announce@kubernetes.io
 
 Below are each criterion and why I think we, Seven-Corp, qualify.
 
