@@ -76,6 +76,17 @@ The initial Product Security Team will consist of four volunteers subscribed to 
 - Tim Allclair (**[@tallclair](https://github.com/tallclair)**) `<tallclair@google.com>` [4096R/0x5E6F2E2DA760AF51]
 - Jordan Liggitt (**[@liggitt](https://github.com/liggitt)**) `<jordan@liggitt.net>` [4096R/0x39928704103C7229]
 
+### Contacting the Team
+
+There are a number of contact points for the PST and release managers in charge of security releases. Please use the correct forum for the best and fastest response.
+
+| List or Group | Visibility | Uses |
+| ------------- | ---------- | ---- |
+| security@kubernetes.io | Private | Kubernetes security disclosures. This list is closely monitored and triaged by the PST. [See the disclosure guide for full details.](http://kubernetes.io/security) |
+| [kubernetes-security-discuss Google Group](https://groups.google.com/forum/#!forum/kubernetes-security-discuss) | Public | Discussion about security disclosure handling, this document, and other updates. |
+| security-release-team@kubernetes.io | Private | Release manager private discussion. All members are subscribed to security@kubernetes.io. |
+| security-discuss-private@kubernetes.io | Private | PST private discussion. All members are subscribed to security@kubernetes.io |
+
 ### Product Security Team Membership
 
 Membership to the product security team is based on filling a specific role.
