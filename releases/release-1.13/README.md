@@ -36,7 +36,7 @@
 | Begin collecting planned work from SIGs | Lead, Enhancements Lead | 8| | | | week 2 | |
 | Begin weekly status reports at Community | Lead, Shadow | 11 | | | | | |
 | Finalize Release Team | Lead | 12 | | | | | |
-| 1.13.0-alpha.1 release | Branch Manager | 12 | | | | | |
+| 1.13.0-alpha.1 release | Branch Manager | 15 | | | | | |
 | Start Release Notes Draft | Release Notes Lead | 16 | || | week 3 | |
 | Clean up enhancements repo | Enhancements Lead | 16 | | | | | |
 | "Enhancements Freeze" begins (EOD PST) | Enhancements Lead | 23 | || | week 4 | |
