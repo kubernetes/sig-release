@@ -10,7 +10,7 @@ While the Enhancements Lead serves as a member of the Release Team (a subproject
 ## Responsibilities
 
 An Enhancements Lead holds the following responsibilities:
-- Maintain the active status of Enhancements within [kubernetes/features][k/features]
+- Maintain the active status of Enhancements within [kubernetes/enhancements][k/enhancements]
 - Facilitate communication between Enhancement Owners, Product Management, and SIG leadership, as necessary
 - Collate the major themes of the release, including but not limited to:
   - new enhancements
@@ -45,23 +45,23 @@ Helpful characteristics of an Enhancements Lead include:
 ### Access Required
 Ensure that the previous Enhancements Lead has given (or facilitated getting) you access to:
 - GitHub teams
-  - features-maintainers
+  - enhancements-maintainers
   - kubernetes-milestone-maintainers
-- OWNERS_ALIASES (as `features-maintainers` in [kubernetes/features][k/features] repo)
-- Edit access to the Kubernetes x.y.0 Enhancements Tracking Sheet e.g., [Kubernetes 1.12 Features Tracking][1.12-tracking]
+- OWNERS_ALIASES (as `enhancements-maintainers` in [kubernetes/enhancements][k/enhancements] repo)
+- Edit access to the Kubernetes x.y.0 Enhancements Tracking Sheet e.g., [Kubernetes 1.12 Enhancements Tracking][1.12-tracking]
 
 ## Process
 
 ### Standards
 As mentioned previously, the Enhancements Lead role encompasses several cross-functional responsibilities with [SIG PM][sig-pm].
 
-The process of maintaining an enhancement in Kubernetes is documented in the [kubernetes/features][k/features] repo. Any questions / concerns / suggestions for improvement to the Enhancements process should be raised as GitHub issues / PRs to k/features.
+The process of maintaining an enhancement in Kubernetes is documented in the [kubernetes/enhancements][k/enhancements] repo. Any questions / concerns / suggestions for improvement to the Enhancements process should be raised as GitHub issues / PRs to k/enhancements.
 
-It is important that this process be followed and documentation remain up-to-date as the [Enhancements repo][k/features] is the primary ingress point for contributors interested in tracking enhancements.
+It is important that this process be followed and documentation remain up-to-date as the [Enhancements repo][k/enhancements] is the primary ingress point for contributors interested in tracking enhancements.
 
 ### Milestone Activities + Timing
 - Link items from succession section
-- (optional) Watch the kubernetes/features repo to get notified on all issues
+- (optional) Watch the kubernetes/enhancements repo to get notified on all issues
 - Ensure that Enhancement Tracking sheet for the new release was created by the previous Enhancements Lead and populated with the enhancements removed from the previous milestone
 - Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements
 - Ensure the Enhancements Tracking sheet has the appropriate permissions:
@@ -80,8 +80,8 @@ ownership transferred to you
   - Check enhancements and ensure they provide the required information and labels to be accepted into the milestone.
     - Enhancements marked for current milestone
     - Enhancements marked for previous milestone
-    - Enhancements marked with `next-milestone` (https://github.com/kubernetes/features/issues?q=is%3Aopen+is%3Aissue+milestone%3Anext-milestone+sort%3Acreated-desc)
-    - Enhancements without a milestone (https://github.com/kubernetes/features/issues?q=is%3Aopen+is%3Aissue+sort%3Acreated-desc+no%3Amilestone)
+    - Enhancements marked with `next-milestone` (https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Anext-milestone+sort%3Acreated-desc)
+    - Enhancements without a milestone (https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+sort%3Acreated-desc+no%3Amilestone)
     - Enhancements from two or more milestones ago
   - Confirm with the Enhancement Owner if work is planned for current milestone
     - Apply the current milestone
@@ -108,7 +108,7 @@ List of unresponsive issues? Add unresponsive status to enhancements tracking?
 
 ### Limitations
 - Populating the Enhancements Tracking sheet is a manual process
-- Enhancements issues that are not submitted to [k/features][k/features] are not actively tracked in the context of the Release Team and Release cycle e.g.,
+- Enhancements issues that are not submitted to [k/enhancements][k/enhancements] are not actively tracked in the context of the Release Team and Release cycle e.g.,
   - `kubeadm` (https://github.com/kubernetes/kubeadm/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Akind%2Ffeature+milestone%3Av1.12+)
   - out-of-tree Cloud Provider code that may live in `kubernetes-sigs/*`
   - additional out-of-tree code that may live in the following organizations:
@@ -131,7 +131,7 @@ https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 
 
 [burndown-group]: https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown
-[k/features]: https://github.com/kubernetes/features
+[k/enhancements]: https://github.com/kubernetes/enhancements
 [rt-group]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [rt-selection]: /README.md#release-team-selection
 [rt-requirements]: /README.md#release-team-requirements
@@ -142,4 +142,4 @@ https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 [sig-release]: https://github.com/kubernetes/community/blob/master/sig-release/README.md
 [sig-release-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [1.11-announcement]: https://kubernetes.io/blog/2018/06/27/kubernetes-1.11-release-announcement/
-[1.12-tracking]: http://bit.ly/k8s112-features
+[1.12-tracking]: http://bit.ly/k8s112-enhancements

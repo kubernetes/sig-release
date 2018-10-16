@@ -19,7 +19,7 @@
 ## Notes About this Release
 
 * The Release Team will continue with the shortened Code Freeze, [see below](#conditionally-shortened-code-freeze).
-* The feature process is remaining as it has in prior releases, except the it is being renamed from features to Enhancements.
+* The Features process is remaining as it has in prior releases, except that it is being renamed from Features to Enhancements.
 * Enhancements that don't have complete code and tests by [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.13/release-1.13.md#code-freeze) may be disabled by the release team before cutting the first beta.
 * The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) failures to SIGs throughout the cycle, not just near release cuts.
 * Unlike the previous cycles key deliverables, including the final release, do **not** fall on Tuesdays due to shortened release cycle.
@@ -93,7 +93,7 @@ Code Slush begins prior to Code Freeze to help reduce noise from miscellaneous c
 
 #### Exceptions
 
-Starting at Code Slush, the release team will solicit and rule on [exception requests](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md) for enhancements and test work that is unlikely to be done by Code Freeze. The exception approval is the responsibility of the SIG or SIGs labeled in the pull request. The release team may intervene or deny the request only if it poses a risk to release quality, or could negatively impact the overall timeline. Changes introduced at this point should be well-tested, well-understood, limited in architectural scope, and low risk.  All of those factors should be considered in the approval process.  Enhancements on a feature branch with documentation, test cases, and passing CI are more likely to be accepted.
+Starting at Code Slush, the release team will solicit and rule on [exception requests](https://github.com/kubernetes/enhancements/blob/master/EXCEPTIONS.md) for enhancements and test work that is unlikely to be done by Code Freeze. The exception approval is the responsibility of the SIG or SIGs labeled in the pull request. The release team may intervene or deny the request only if it poses a risk to release quality, or could negatively impact the overall timeline. Changes introduced at this point should be well-tested, well-understood, limited in architectural scope, and low risk.  All of those factors should be considered in the approval process.  Enhancements on an feature branch with documentation, test cases, and passing CI are more likely to be accepted.
 
 ### Code Freeze
 
@@ -118,7 +118,7 @@ This should occur before 1.13.0-beta.1 is cut so we have time to gather signal o
 
 ### Docs
 
-If a enhancement needs documentation, enter Yes in the enhancement tracking spreadsheet and add a link to the documentation PR. You can open documentation PRs in the [kubernetes/website](https://github.com/kubernetes/website) repository. If you have questions, the release documentation lead, or representatives from SIG-Docs will be happy to assist you.
+If an enhancement needs documentation, enter Yes in the enhancement tracking spreadsheet and add a link to the documentation PR. You can open documentation PRs in the [kubernetes/website](https://github.com/kubernetes/website) repository. If you have questions, the release documentation lead, or representatives from SIG-Docs will be happy to assist you.
 
 For documentation PRs:
 

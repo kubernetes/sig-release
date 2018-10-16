@@ -50,14 +50,14 @@ Release cycles usually begin 1-2 weeks after the previous cycle completes.
     - PRs ready for review: (~2.5 weeks before release)
     - Reviews complete, PRs ready to merge: First business day of the week prior to release (~9-10 days before release)
 
-- Watch for the release feature tracking spreadsheet.
+- Watch for the release enhancement tracking spreadsheet.
 
-    Early in the cycle, the release manager opens a feature tracking spreadsheet (for example, [the 1.8 release spreadsheet](https://docs.google.com/spreadsheets/d/1AFksRDgAt6BGA3OjRNIiO3IyKmA-GU7CXaxbihy48ns/edit#gid=0)). The spreadsheet contains important information for docs:
+    Early in the cycle, the release manager opens an enhancement tracking spreadsheet (for example, [the 1.8 release spreadsheet](https://docs.google.com/spreadsheets/d/1AFksRDgAt6BGA3OjRNIiO3IyKmA-GU7CXaxbihy48ns/edit#gid=0)). The spreadsheet contains important information for docs:
 
-    - Which features need user-facing docs
+    - Which enhancements need user-facing docs
     - Feature owners (and their GitHub IDs)
-    - The SIG associated with each feature (useful for obtaining technical reviews)
-    - Links to docs PRs opened for each feature
+    - The SIG associated with each enhancement (useful for obtaining technical reviews)
+    - Links to docs PRs opened for each enhancement
 
 ### Docs starting tasks
 
@@ -67,7 +67,7 @@ Release cycles usually begin 1-2 weeks after the previous cycle completes.
 
     For example, the [Release 1.11](https://github.com/kubernetes/website/pull/8046) PR uses the branch `release-1.11`.
 
-    This release pull request (also known as a _megabranch_) serves as the base for individual, component feature PRs of the release. A megabranch lets you bundle and merge multiple PRs simultaneously.
+    This release pull request (also known as a _megabranch_) serves as the base for individual, component enhancement PRs of the release. A megabranch lets you bundle and merge multiple PRs simultaneously.
 
     Use previous release PRs as a template. For example: https://github.com/kubernetes/website/pull/8046
 
@@ -105,13 +105,13 @@ PR | Based on `release-X.Y`? | Tech LGTM | Docs approved | Merged
 
 ### Track PRs
 
-- Follow the feature spreadsheet.
+- Follow the enhancement spreadsheet.
 
-    Keep the feature tracking spreadsheet up to date with review progress and merge status for each documentation PR. For example: [Kubernetes Features OSS tracking board (1.11 release)](https://docs.google.com/spreadsheets/d/16N9KSlxWwxUA2gV6jvuW9N8tPRHzNhu1-RYY4Y0RZLs/edit#gid=0)
+    Keep the enhancement tracking spreadsheet up to date with review progress and merge status for each documentation PR. For example: [Kubernetes Enhancements OSS tracking board (1.11 release)](https://docs.google.com/spreadsheets/d/16N9KSlxWwxUA2gV6jvuW9N8tPRHzNhu1-RYY4Y0RZLs/edit#gid=0)
 
 - Update documentation PR progress in the megabranch PR's tracking comment. For example, [Release 1.11 (tracking comment)](https://github.com/kubernetes/website/pull/8046#issuecomment-380226165)
 
-- Make sure that docs PRs for the release have the correct base and set the correct Milestone. For example, feature PRs for version 1.11 need a base branch of `release-1.11` and the Milestone set to `1.11`.
+- Make sure that docs PRs for the release have the correct base and set the correct Milestone. For example, enhancement PRs for version 1.11 need a base branch of `release-1.11` and the Milestone set to `1.11`.
 
 ### Maintain the current and upcoming release branches
 
@@ -147,7 +147,7 @@ $ git push -f upstream release-<upcoming>
 
     Meetings increase in frequency over the course of the release, moving from weekly to daily.
 
-### Work with feature developers and reviewers
+### Work with enhancement developers and reviewers
 
 - Keep developers apprised of due dates for docs.
 
@@ -156,9 +156,9 @@ $ git push -f upstream release-<upcoming>
         - [kubernetes-sig-release@google.com](mailto:kubernetes-sig-release@google.com)
         - [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF/) on Slack
         - [kubernetes-sig-leads@google.com](mailto:kubernetes-sig-leads@google.com)
-        - Feature owners listed in the OSS feature tracking spreadsheet
+        - Feature owners listed in the OSS enhancement tracking spreadsheet
 
-- As developers open PRs, give them `sig/*` labels (listed in the feature tracking spreadsheet) to help find technical reviewers.
+- As developers open PRs, give them `sig/*` labels (listed in the enhancement tracking spreadsheet) to help find technical reviewers.
 
 ### Review PRs
 
@@ -177,7 +177,7 @@ $ git push -f upstream release-<upcoming>
 *   Triage:
     *   Decide what must go out with release, what can be published just after the release.
     *   Determine how much effort will be required to review the doc(s).
-        *   Is it a complex feature needing specific reviewers?
+        *   Is it a complex enhancement needing specific reviewers?
         *   Is it a long doc? Is it several docs?
         *   Do you have edit permissions to help speed up the turnaround? If not, request that they check the [Allow edits from maintainers](https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) checkbox.
 *   Get the PR author to help find tech reviewers.
@@ -201,7 +201,7 @@ $ git push -f upstream release-<upcoming>
 
 - Regenerate [reference docs](https://kubernetes.io/editdocs/) ("Updating Automatically Generated Reference Pages") and open PRs.
 
-- Update the reference page for [feature gates](https://github.com/kubernetes/website/blob/master/content/en/docs/reference/feature-gates.md).
+- Update the reference page for [enhancement gates](https://github.com/kubernetes/website/blob/master/content/en/docs/reference/enhancement-gates.md).
 
 
     *   Update [/update-imported-docs.sh](https://github.com/kubernetes/website/blob/master/update-imported-docs.sh), e.g. [PR #4210](https://github.com/kubernetes/website/pull/4210/files#diff-8696ecc75d1b25a0b2812f88aefea8c3).
@@ -213,7 +213,7 @@ $ git push -f upstream release-<upcoming>
 *   Merge `master` back into the branch for the last release to create final snapshot of the last release, e.g. finalize `release-1.7` branch before `release-1.8` is merged into `master`.
 *   Add tags to `master`, last release, and next release branches to keep track of snapshot points, e.g. `snapshot-final-v1.6`, `snapshot-initial-v1.7`, etc.
 *   Update links for release announcement given by Kubernetes PM, currently Aparna Sinha ([apsinha@google.com](mailto:apsinha@google.com)), e.g. [Kubernetes.io Blog: 1.7 Release announcement](https://docs.google.com/a/google.com/document/d/1U8oNYK-baoF-ObIRFKEmCicDnrgFdXAz7Nfkatg_jUo/edit?usp=sharing).
-*   Work with release manager to update links in release notes to k8s.io docs, e.g. [Google Doc](https://docs.google.com/a/google.com/document/d/1dWFkFJIHo3liTWomvB1ur6jqd6cnxvGb_jjE-3-c6Bo/edit?usp=sharing) that fed into [kubernetes/features: /release-1.7/release-notes-draft.md](https://github.com/kubernetes/features/blob/master/release-1.7/release-notes-draft.md).
+*   Work with release manager to update links in release notes to k8s.io docs, e.g. [Google Doc](https://docs.google.com/a/google.com/document/d/1dWFkFJIHo3liTWomvB1ur6jqd6cnxvGb_jjE-3-c6Bo/edit?usp=sharing) that fed into [kubernetes/enhancements: /release-1.7/release-notes-draft.md](https://github.com/kubernetes/enhancements/blob/master/release-1.7/release-notes-draft.md).
 
 ### Release and cleanup
 

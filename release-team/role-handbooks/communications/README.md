@@ -31,12 +31,12 @@ Additionally, there are specific deliverables that must come from the release pr
 ### Week 3
 
 - Begin analyzing the release notes draft
-- Work with the features lead to understand what might be delivered
+- Work with the enhancements lead to understand what might be delivered
 
 ### Week 4
 
-- Continue analysis of planned features
-- Begin attending SIG meetings where features will be delivered from
+- Continue analysis of planned enhancements
+- Begin attending SIG meetings where enhancements will be delivered from
 
 ### Week 5
 

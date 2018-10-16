@@ -46,9 +46,9 @@ For each cherrypick request:
     Make sure the PR author has supplied enough information to answer:
 
     * What bug does this fix?
-      (e.g. *feature X was already launched but doesn't work as intended*)
+      (e.g. *enhancement X was already launched but doesn't work as intended*)
     * What is the scope of users affected?
-      (e.g. *anyone who uses feature X*)
+      (e.g. *anyone who uses enhancement X*)
     * How big is the impact on affected users?
       (e.g. *pods using X fail to start*)
     * How have you verified the fix works and is safe?
@@ -76,7 +76,7 @@ For each cherrypick request:
       context on the other changes and use your best judgment.
 
     * Historically (up through at least 1.6), patch release managers have
-      occasionally granted exceptions to the "no new features" rule for
+      occasionally granted exceptions to the "no new enhancements" rule for
       cherrypicks that are confined to plugins like cloudproviders
       (e.g. vSphere, Azure) and volumes (e.g. Portworx).
 

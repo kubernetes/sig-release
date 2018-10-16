@@ -9,7 +9,7 @@ Secondarily, you will be helping improve automation around artifact management a
 
 How this works depends on where you are in the release cycle.  There are five relevant periods where your workload changes:
 
-1. Early Release: between Feature Freeze and a week before Code Slush.
+1. Early Release: between Enhancement Freeze and a week before Code Slush.
 2. Pre-Code-Slush: a week to 10 days before Code Slush
 3. Code Slush: from Code Slush to Code Freeze, usually 3-4 days.
 4. Code Freeze: from Code Freeze through Betas, until Release Burndown
@@ -26,25 +26,25 @@ As Bug Triage lead, it is not your job to fix, label, sort, or gatekeep issues a
 
 In general, you should never decide whether something is in or out of a milestone; the SIG or the Release Team Lead needs to do that.  In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made.  For example, you might add/modify kind and priority labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label)
 
-The job relates to both the Features Lead and CI Signal Lead roles.  Understanding the in-bound features is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](../ci-signal) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Features and CI Signal.
+The job relates to both the Enhancements Lead and CI Signal Lead roles.  Understanding the in-bound enhancements is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](../ci-signal) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Enhancements and CI Signal.
 
 ## Early Release
 
 You have no critical work during this cycle.
 
-Instead, use the time to familiarize yourself with the major features and fixes planned by each SIG for this release, so that you build context in advance of when you will need to identify incoming bugs as being associated with a work focus in the current release.  It is a good time to interact with the Features Lead and CI Signal Lead to understand any early concerns they might have, as the release team's risk management comes as much from this proactive collaboration more as from the Bug Triage lead reacting to incoming issues and PRs.
+Instead, use the time to familiarize yourself with the major enhancements and fixes planned by each SIG for this release, so that you build context in advance of when you will need to identify incoming bugs as being associated with a work focus in the current release.  It is a good time to interact with the Enhancements Lead and CI Signal Lead to understand any early concerns they might have, as the release team's risk management comes as much from this proactive collaboration more as from the Bug Triage lead reacting to incoming issues and PRs.
 
 This is also a good time to do any work on automation that you plan to do.  You can also get started early on the pre-code-slush work.
 
 ### Sample Searches
 
-* Open Feature v1.11 Issues:
-  * `is:issue is:open milestone:v1.11 repo:kubernetes/features` [k/features repo milestone features](https://github.com/kubernetes/features/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.11)
-  * `is:issue is:open milestone:v1.11 label:kind/feature repo:kubernetes/kubernetes` [k/k repo milestone features](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.11+label%3Akind%2Ffeature)
-  * `is:issue is:open milestone:v1.11 label:kind/feature org:kubernetes` [k org-wide milestone features](https://github.com/search?q=org%3Akubernetes+is%3Aissue+is%3Aopen+milestone%3Av1.11+label%3Akind%2Ffeature)
+* Open Enhancement v1.11 Issues:
+  * `is:issue is:open milestone:v1.11 repo:kubernetes/enhancements` [k/enhancements repo milestone enhancements](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.11)
+  * `is:issue is:open milestone:v1.11 label:kind/feature repo:kubernetes/kubernetes` [k/k repo milestone enhancements](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.11+label%3Akind%2Ffeature)
+  * `is:issue is:open milestone:v1.11 label:kind/feature org:kubernetes` [k org-wide milestone enhancements](https://github.com/search?q=org%3Akubernetes+is%3Aissue+is%3Aopen+milestone%3Av1.11+label%3Akind%2Ffeature)
 * Issues in the v1.11 milestone which haven't been updated in a while: `is:open is:issue milestone:v1.11 updated:<2018-05-01 repo:kubernetes/kubernetes` [k/k old issues in milestone](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-05-01+repo%3Akubernetes%2Fkubernetes)
 * Issues in the milestone with no SIG or Kind: **code/automation needed**
-* Feature Issues with no PR: **code/automation needed**
+* Enhancement Issues with no PR: **code/automation needed**
 
 ### Reports
 
@@ -62,7 +62,7 @@ If issues do not match the above, you should comment and urge the SIGs to fix th
 
 The second thing you need to do is to start filtering issues which have been assigned to the milestone, specifically getting SIGs to change milestones on issues which are not making progress.  For example, if there's an issue with no consensus on an approach to fix it, and no PRs, you should comment and suggest that that issue be taken out of the milestone.
 
-The third thing you should do, time permitting, is to scan through the newly opened issue and PR lists for bugs to see if they're failures against the upcoming release features, especially critical ones.  For ones which are, you should ensure that they have all the correct labelling to be tracked and updated.  Depending on volume and time, you may wish to exclude ```label:"kind/feature"``` and ```label:"kind/failing-test"``` from your searches, as those are covered by the Features and CI Signal leads respectively.
+The third thing you should do, time permitting, is to scan through the newly opened issue and PR lists for bugs to see if they're failures against the upcoming release enhancements, especially critical ones.  For ones which are, you should ensure that they have all the correct labelling to be tracked and updated.  Depending on volume and time, you may wish to exclude ```label:"kind/feature"``` and ```label:"kind/failing-test"``` from your searches, as those are covered by the Enhancements and CI Signal leads respectively.
 
 ### Sample Searches
 * Open v1.11 Issues
@@ -101,17 +101,17 @@ A detailed page is in the [developer guide](https://git.k8s.io/community/contrib
 
 Starting with Code Slush, you should report on issue status at least three times per week.  This report will break down into red/yellow/green issues and PRs.  As you get closer to release, the specific definitions of red/yellow/green will change, but the basic idea won't:
 
-* red: issues/PRs which don't seem to be headed towards any resolution on deadline, and represent either major breakage or features still in the release
+* red: issues/PRs which don't seem to be headed towards any resolution on deadline, and represent either major breakage or enhancements still in the release
 * yellow: issues/PRs which are in progress but need to be watched
 * green: issues/PRs which still show up on the reports, but are on their way to being resolved very soon
 
 In Code Slush, these three levels are:
 
-* red: major breakage issues which are both old and getting no attention at all, and feature issues without a PR.
-* yellow: major breakage issues with a PR in progress, minor breakage issues, and feature issues with a PR which is in progress but still needs work.
-* green: minor breakage issues with a PR and feature issues with a PR that looks to be approved soon.
+* red: major breakage issues which are both old and getting no attention at all, and enhancement issues without a PR.
+* yellow: major breakage issues with a PR in progress, minor breakage issues, and enhancement issues with a PR which is in progress but still needs work.
+* green: minor breakage issues with a PR and enhancement issues with a PR that looks to be approved soon.
 
-You should also identify to the release team a "leader board" of those areas which appear to need major attention (e.g. upgrade testing, some specific feature).
+You should also identify to the release team a "leader board" of those areas which appear to need major attention (e.g. upgrade testing, some specific enhancement).
 
 The Release Lead will include a template for this information in the Monday/Wednesday/Friday release team meeting notes.
 
@@ -123,7 +123,7 @@ After this, you need to monitor all of these issues to make sure that daily prog
 
 New test failures will also show up during Code Freeze and you need to make sure that these are labeled properly, get attention of the CI Signal lead, and get attention from the appropriate SIGs.
 
-As Code Freeze progresses, you should get increasingly aggressive about getting SIGs to kick out any issue which doesn't represent substantial breakage in the new release.  Particularly, new features which aren't making rapid progress need to either jump to the next release, or reduce their scope.  You can remove issues from the release by downgrading their priority, but it's really better if the SIGs do it.  Start watching for issues with the release version string in them, eg: "1.11.0-beta".
+As Code Freeze progresses, you should get increasingly aggressive about getting SIGs to kick out any issue which doesn't represent substantial breakage in the new release.  Particularly, new enhancements which aren't making rapid progress need to either jump to the next release, or reduce their scope.  You can remove issues from the release by downgrading their priority, but it's really better if the SIGs do it.  Start watching for issues with the release version string in them, eg: "1.11.0-beta".
 
 ### Sample Searches
 
@@ -145,11 +145,11 @@ As Code Freeze progresses, you should get increasingly aggressive about getting 
 
 We're still doing the red/yellow/green reports:
 
-* red: major breakage issues which are not making daily progress, and feature issues without a PR which looks to be approved soon.
-* yellow: major breakage issues with a PR in good shape, minor breakage issues, and feature issues with a PR in good shape.
-* green: minor breakage issues with a good PR and feature issues with a PR that is just waiting on merge.
+* red: major breakage issues which are not making daily progress, and enhancement issues without a PR which looks to be approved soon.
+* yellow: major breakage issues with a PR in good shape, minor breakage issues, and enhancement issues with a PR in good shape.
+* green: minor breakage issues with a good PR and enhancement issues with a PR that is just waiting on merge.
 
-There will also be several features which will have requested exceptions from the normal release timeline/requirements.  You'll want to track the exceptions specifically and report on them.  It is useful to be tracking in a spreadsheet the open issues/PRs which have caught your attention, because GitHub queries are only point in time.  It's easy for an issue you want to follow to stop showing up in a query and thus fall off your radar if you're only going by the queries.
+There will also be several enhancements which will have requested exceptions from the normal release timeline/requirements.  You'll want to track the exceptions specifically and report on them.  It is useful to be tracking in a spreadsheet the open issues/PRs which have caught your attention, because GitHub queries are only point in time.  It's easy for an issue you want to follow to stop showing up in a query and thus fall off your radar if you're only going by the queries.
 
 The Release Lead will include a template for this information in the Monday/Wednesday/Friday release team meeting notes.
 
@@ -178,8 +178,8 @@ eg:
 
 During Release Burndown, you need to report on issue status at least once per day.
 
-* red: major breakage issues or feature issues without a PR which looks to be approved very soon.  Minor breakage issues with no PR.
-* yellow: major breakage issues with an nearly-approved PR, minor breakage issues with a PR, and feature issues with a nearly-approved PR.
+* red: major breakage issues or enhancement issues without a PR which looks to be approved very soon.  Minor breakage issues with no PR.
+* yellow: major breakage issues with an nearly-approved PR, minor breakage issues with a PR, and enhancement issues with a nearly-approved PR.
 * green: issues and PRs which are just waiting on being taken out of the milestone.
 
 The Release Lead will include a template for this information in the daily Monday through Friday release team meeting notes.

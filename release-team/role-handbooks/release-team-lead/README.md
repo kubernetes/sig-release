@@ -56,7 +56,7 @@ Release Team selection should happen in accordance with the [Release Team Select
   - Release Schedule overview [http://bit.ly/k8sXX-release-info](http://bit.ly/k8sXX-release-info)
   - Zoom link: [http://bit.ly/k8sXX-zoom](http://bit.ly/k8sXX-zoom)
   - Burndown/Meeting Minutes: [http://bit.ly/k8sXX-burndown](http://bit.ly/k8sXX-burndown)
-  - Features tracking spreadsheet: [http://bit.ly/k8sXX-features](http://bit.ly/k8sXX-features)
+  - Enhancements tracking spreadsheet: [http://bit.ly/k8sXX-enhancements](http://bit.ly/k8sXX-enhancements)
   - Merged PRs with release notes: [http://bit.ly/k8sXX-relnotes](http://bit.ly/k8sXX-relnotes)
   - Use the same conventions for additional documents
 - Burndown meetings happen at 10AM Pacific Time, and you invite the [community calendar](mailto:cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) to them.
@@ -99,7 +99,7 @@ Release Team selection should happen in accordance with the [Release Team Select
 
 ### Week 2
 
-- Assist the features lead in collecting planned work from SIGs
+- Assist the enhancements lead in collecting planned work from SIGs
 - Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the kubernetes-milestone-burndown@googlegroups.com group. You will need to contact SIG-Release leads to gain access to the SIG's zoom.us account for hosting / recording / posting meeting video.
 - Poll release team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
 - Create a Google Calendar for the release: Follow the steps in the [sig-governance documentation](https://git.k8s.io/community/sig-governance.md) to create and share a calendar with the community. Add key event dates during the cycle.
@@ -112,15 +112,15 @@ Release Team selection should happen in accordance with the [Release Team Select
 - Prepare for x.y.0-alpha.0 "release", specifically that there is a branch manager on the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. But this synthetic notation is a point to review process with the branch manager. Request access to GCB through Caleb Miles for branch manager lead and optionally also read-only access (if system supports this) for the release lead and release lead shadow.
 - Begin coordination with SIG-Cluster-Lifecycle for their kubeadm release (they may create an issue in the milestone to track release blocking issues)
 - Identify any other dependent ecosystem projects that need release coordination
-- Announce/email that the following week is "features freeze" and what that means
+- Announce/email that the following week is "enhancements freeze" and what that means
 
 ### Week 4
 
-- Assist the features lead with anything required for feature freeze
-- Remind the community about feature freeze
-- Make sure everything is in synch between the features repo and the features tracking spreadsheet
-- If there are features with questions or concerns, help coordinate those conversations between the team and the SIG/owners
-- Start collecting SIG release themes in the release notes draft, outlining what they are delivering this release milestone, and how it aligns with their mission statements - start with SIGs identifying features in the features repo, and focus on those since not every SIG will be delivering something
+- Assist the enhancements lead with anything required for enhancement freeze
+- Remind the community about enhancement freeze
+- Make sure everything is in synch between the enhancements repo and the enhancements tracking spreadsheet
+- If there are enhancements with questions or concerns, help coordinate those conversations between the team and the SIG/owners
+- Start collecting SIG release themes in the release notes draft, outlining what they are delivering this release milestone, and how it aligns with their mission statements - start with SIGs identifying enhancements in the enhancements repo, and focus on those since not every SIG will be delivering something
 
 ### Week 5
 
@@ -137,12 +137,12 @@ Release Halfway Point
 
 ### Week 6
 
-- Continue reviewing feature exceptions as needed
+- Continue reviewing enhancement exceptions as needed
 - Release themes should be completed by now
 - Exception requests should be almost zero
 - The kubeadm and other dependent project issues should be created already
-- Check in with SIGs on their feature work to make sure they know code freeze is 3 weeks away, as well as emailing the kubernetes-dev list, and notifying the community at the weekly meeting
-- Adjust the features repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered)
+- Check in with SIGs on their enhancement work to make sure they know code freeze is 3 weeks away, as well as emailing the kubernetes-dev list, and notifying the community at the weekly meeting
+- Adjust the enhancements repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered)
 - Remind Test Infra Lead that branch CI jobs will need next week.
 
 ### Week 7
@@ -150,7 +150,7 @@ Release Halfway Point
 - Coordinate x.y.0-beta.0 release, ensuring master-blocking, and master-upgrade dashboards are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal. The release-x.y branch is created automatically as a part of the beta.0 release. The branch manager now begins daily fast forwards.
 - The burndown templates should be useful at this point since it starts asking about status relevant to each area now tracking (e.g. branch health, docs, communications, issues, etc.)
 - Ensure Test Infra Lead has release branch CI created and added to Testgrid
-- Most feature-oriented tasks should be completed at the end of this week
+- Most enhancement-oriented tasks should be completed at the end of this week
 - SIGs that have not completed release themes should be contacted again, with a focus on explaining why this matters to the community
 - Ping release team leads reminding them to start considering succession plans. If they are handing the role off to a successor, identifying them early gives more time for the committed volunteer to get targeted mentoring.
 
@@ -189,7 +189,7 @@ Release Halfway Point
 - The task is now to ensure the release branch is ready to go. This means there are zero pending PRs, no failing x.y-blocking tests, no open issues in the milestone. This will continue until release day
 - Final documentation PRs are reviewed and ready to be merged. Likely, this is not true and some are outstanding, so you need to help convince SIG doc writers to get these in with urgency.
 - The release notes draft needs to be completely done and ready to consume by anago. Have SIG volunteers do a final proofread of their sections. Make sure people actually do this. You need to avoid having the release notes volunteers pull “all nighters” before the release.
-- Work with the CNCF, SIG-PM, SIG-Docs, and communications lead to start the Release Blog post pulling from SIG Themes, the features repo, SIG members, and possibly release notes in specific PRs
+- Work with the CNCF, SIG-PM, SIG-Docs, and communications lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs
 - Work with incoming release lead to establish incoming release team.
 
 
