@@ -3,72 +3,47 @@ aliases:
     - calebamiles
     - jdumars
   release-team-lead-role:
-    - bgrant0607
-    - dchen1107
-    - enisoc
-    - erictune
-    - ethernetdan
-    - jdumars
-    - pwittrock
-    - saad-ali
-    - jberkus
-    - tpepper
-    - aishsundar
+    - jdumars # 1.10
+    - jberkus # 1.11
+    - tpepper # 1.12
+    - aishsundar # 1.13
   patch-release-manager-role:
-    - enisoc
-    - fabioy
-    - jessfraz
-    - jpbetz
-    - mbohlool
-    - mwielgus
-    - roberthbailey
-    - saad-ali
-    - wojtek-t
-    - MaciekPytel
-    - foxish
-    - feiskyer
+    - MaciekPytel # 1.10
+    - foxish # 1.11
+    - feiskyer # 1.12
+    - aleksandra-malinowska # 1.13
+    - tpepper # 1.13
   ci-signal-role:
-    - ericchiang
-    - spiffxp
-    - krzyzacy
-    - aishsundar
-    - mohammedzee1000
+    - krzyzacy # 1.10
+    - aishsundar # 1.11
+    - mohammedzee1000 # 1.12
+    - jberkus # 1.13
   enhancements-role:
-    - idvoretskyi
-    - justaugustus
-    - kacole2
+    - idvoretskyi # 1.11
+    - justaugustus # 1.12
+    - kacole2 # 1.13
   test-infra-role:
-    - krzyzacy
-    - bentheelder
-    - cjwagner
+    - bentheelder # 1.11
+    - cjwagner # 1.13 / 1.12 / 1.10
   bug-triage-role:
-    - marun
-    - spiffxp
-    - jberkus
-    - tpepper
-    - guineveresaenger
-    - nikopen
+    - jberkus # 1.10
+    - tpepper # 1.11
+    - guineveresaenger # 1.12
+    - nikopen # 1.13
   branch-manager-role:
-    - caesarxychao
-    - abgworrall
-    - dashpole
-    - calebamiles
-    - dougm
+    - calebamiles # 1.11 / 1.10
+    - dougm # 1.13 / 1.12
   docs-role:
-    - chenopis
-    - steveperry-53
-    - zacharysarah
-    - bradamant3
-    - misty
-    - zparnold
+    - bradamant3 # 1.10
+    - misty # 1.11
+    - zparnold # 1.12
+    - tfogo # 1.13
   release-notes-role:
-    - spiffxp
-    - radhikapc
-    - bradamant3
-    - nickchase
+    - nickchase # 1.12 / 1.11 / 1.10
+    - marpaia # 1.13
   communications-role:
-    - nwoods
-    - kbarnard10
+    - nwoods # 1.10
+    - kbarnard10 # 1.13 / 1.12 / 1.11
   product-security-team:
     - philips
     - jessfraz

@@ -89,6 +89,7 @@ Release Team selection should happen in accordance with the [Release Team Select
   - [kubernetes-dev](https://groups.google.com/forum/#!aboutgroup/kubernetes-dev)
   - [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team): Send message to this private list introducing self, key release team roles and also request list membership be added for the release branch manager, patch manager, and release lead shadow. Any previous release managers can add you.
 - Ensure the release team is fully filled, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
+- Ensure top-level OWNERS_ALIASES only includes personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
 - Ensure that relevant feedback from the prior retrospective is incorporated into the process
 - Send an update to kubernetes-dev and kubernetes-sig-leads mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
