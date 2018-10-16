@@ -1,12 +1,12 @@
-# How to update docs for new kubernetes features
+# How to update docs for new kubernetes enhancements
 
-This document describes things to consider when updating Kubernetes docs for new features or changes to existing features (including removing features).
+This document describes things to consider when updating Kubernetes docs for new enhancements or changes to existing enhancements (including removing enhancements).
 
 ## Who should read this doc?
 
 Anyone making user facing changes to kubernetes.  This is especially important for Api changes or anything impacting the getting started experience.
 
-## What docs changes are needed when adding or updating a feature in kubernetes?
+## What docs changes are needed when adding or updating an enhancement in kubernetes?
 
 ### When making Api changes
 
@@ -72,5 +72,5 @@ Anyone making user facing changes to kubernetes.  This is especially important f
 
 
 <!-- BEGIN MUNGE: GENERATED_ANALYTICS -->
-[![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/devel/updating-docs-for-feature-changes.md?pixel)]()
+[![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/devel/updating-docs-for-enhancement-changes.md?pixel)]()
 <!-- END MUNGE: GENERATED_ANALYTICS -->

@@ -14,7 +14,7 @@ CI Signal lead assumes the responsibility of the quality gate for the release. T
   - Work with SIG-Testing on any possible test infra improvement to help improve test pass rate
 - Making recommendations to SIG-Release for promoting and demoting release blocking and merge blocking tests as per the [Blocking tests Proposal](https://docs.google.com/document/d/1kCDdmlpTnHPQt5z8JzODdFCc3T2D4MKR53twsDZu20c/edit)
 
-The core responsibility of the CI Signal lead is to foster a culture of continuous test integration, fail-fast and fix-fast mindset and strive for continuously passing tests that provide true positive signal to the release team. To ensure that releases go out on-time with high quality it is absolutely critical to maintain a sustained focus on test health through the entire release cycle, as opposed to accepting destabilizing test failures during active feature development followed by a long test stabilization phase.
+The core responsibility of the CI Signal lead is to foster a culture of continuous test integration, fail-fast and fix-fast mindset and strive for continuously passing tests that provide true positive signal to the release team. To ensure that releases go out on-time with high quality it is absolutely critical to maintain a sustained focus on test health through the entire release cycle, as opposed to accepting destabilizing test failures during active enhancement development followed by a long test stabilization phase.
 
 ### Explicit detail is important:
 
@@ -38,14 +38,14 @@ For any release, its schedule and activities/deliverable for each week will be p
 
 ### Pre Feature Freeze
 
-Here are some good early deliverables from the CI Signal lead between start of the release to feature freeze.
+Here are some good early deliverables from the CI Signal lead between start of the release to enhancement freeze.
 - Maintain a master tracking sheet and keep it up-to-date with issues tracking any test failure/flake - [Sample sheet](https://docs.google.com/spreadsheets/d/1j2K8cxraSp8jZR2S-kJUT6GNjtXYU9hocNRiVUGZWvc/edit#gid=127492362)
 - Copy over any open test issues from previous release (ask previous CI Signal lead for the tracker sheet) and follow up on them with owners
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
   - Make sure all open issues have a `priority/` label and one of either the `kind/flake` or `kind/failing-test` label
   - Make sure the issue is assigned against the current milestone 1.x, using /milestone
   - Assign the issue to appropriate SIG using /sig label
-  - If you are aware of the individual associated with the feature area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around
+  - If you are aware of the individual associated with the enhancement area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around
   - Add @kubernetes/sig-foo-test-failures to draw SIG-foo’s attention to the issue
   - CC the release manager and bug triage lead
   - Post the test failure in SIG’s Slack channel to get help in routing the issue to the rightful owner(s)

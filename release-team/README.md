@@ -29,7 +29,7 @@ which shall be the discharged by the Release Team.
 ## Specific responsibilities
 
 - Support SIG PM by providing tooling and processes for the generation of release notes
-- Coordinate with SIG PM to communicate feature burndown progress during a release cycle
+- Coordinate with SIG PM to communicate enhancement burndown progress during a release cycle
 - Manage repositories and tooling dedicated to releasing Kubernetes which at time of chartering these include:
   - kubernetes/release
   - deb/rpm packaging and hosting
@@ -55,7 +55,7 @@ which shall be the discharged by the Release Team.
 - Identifying owning individuals and SIGs for blocking issues
 - Working with SIGs and individuals to drive resolution of open issues
 - Building summary of release criteria and status and publish to the community on a regular basis throughout the release cycle
-- Manage the contents of `kubernetes/features` along with SIG PM
+- Manage the contents of `kubernetes/enhancements` along with SIG PM
 - Define burndown process
   - use of GitHub labels to signal release blocking status
   - use of GitHub milestones to communicate release blocking issues
@@ -80,7 +80,7 @@ Patch releases are managed by the **Patch Release Manager**. Duties of the patch
   - If the build breaks or any CI for the release branch becomes unhealthy due to a bad merge or infrastructure issue,
     ensure that actions are taken ASAP to bring it back to a healthy state
 - Reviewing and approving [cherry picks](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md) to the release branch
-  - Patch releases should not contain new features, so ensure that cherry-picks are for bug/security fixes only
+  - Patch releases should not contain new enhancements, so ensure that cherry-picks are for bug/security fixes only
   - Cherry picks should not destabilize the branch, so ensure that either the PR has had time to stabilize in master
     or will have time to stabilize in the release branch before the next patch release is cut
 - Setting the exact schedule (and cadence) for patch releases and actually cutting the [releases](https://github.com/kubernetes/kubernetes/releases)
@@ -97,12 +97,12 @@ Roles and responsibilities within the Kubernetes Release Management Team are as 
 ### Release Team Lead
 The Release Team Lead is the person ultimately responsible for ensuring the release goes out on-time with high-quality.
 All the roles defined below report to the Release Management Team Lead.
-- Establishes and communicates responsibilities and deadlines to release management team members, developers/feature owners, SIG leads, etc
+- Establishes and communicates responsibilities and deadlines to release management team members, developers/enhancement owners, SIG leads, etc
 - Escalates and unblocks any issue that may jeopardise the release schedule or quality as quickly as possible
 - Finds people to take ownership of any release blocking issues that are not getting adequate attention
 - Keeps track of, and widely communicates, the status of the release (including status of all sub-leads, all release blockers, etc)
   and all deadlines leading up to release
-- Manages [exception](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md) process for features that want to merge after code freeze
+- Manages [exception](https://github.com/kubernetes/enhancements/blob/master/EXCEPTIONS.md) process for enhancements that want to merge after code freeze
 
 ### Release Team Secondary
 The Release Team Secondary is an assistant to the Release Team Lead and works to fill gaps in Release Team staffing or effort. The Secondary should
@@ -110,27 +110,27 @@ be familiar with the release process and remain ready to discharge the responsib
 
 ### Release Branch Manager
 - Manages (initiates and enforces) code freeze on main branch as scheduled for the release
-  - Ensures no new features are merged after code complete, unless they've been approved by the [exception process](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md)
+  - Ensures no new enhancements are merged after code complete, unless they've been approved by the [exception process](https://github.com/kubernetes/enhancements/blob/master/EXCEPTIONS.md)
 - Cuts the `release-x.x` branch at the appropriate time during the milestone
 - Ensures release branch (e.g. `release-1.5`) remains in a healthy state for the duration of the major or minor release
   - If the build breaks, or any CI for the release branch becomes unhealthy due to a bad merge or infrastructure issue,
     ensures that actions are taken ASAP to bring it back to a healthy state
 - Initiates automatic fast-forwards of the release branch to pick up all changes from master branch, when appropriate
 - Reviews and approves [cherry picks](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md) to the release branch
-  - Ensures only bug/security fixes (but no new features) are cherry-picked after code complete unless approved by the [exception process](https://github.com/kubernetes/features/blob/master/EXCEPTIONS.md)
+  - Ensures only bug/security fixes (but no new enhancements) are cherry-picked after code complete unless approved by the [exception process](https://github.com/kubernetes/enhancements/blob/master/EXCEPTIONS.md)
   - Ensures that cherry-picks do not destabilize the branch by either giving the PR enough time to stabilize in master or giving it enough time to stabilize in the release branch before cutting the release
 - Cuts the actual [release](https://github.com/kubernetes/kubernetes/releases)
 
 ### Docs Lead
 - Sets docs related deadlines for developers and works with Release Management Team Lead to ensure they are widely communicated
 - Sets up release branch for docs
-- Pings feature owners to ensure that release docs are created on time
+- Pings enhancement owners to ensure that release docs are created on time
 - Reviews/merges release doc PRs
 - Merges the docs release branch to master to make release docs live as soon as the release is official
 
-### Features Lead
-- Compiles the major themes, new features, known issues, actions required, notable changes to existing behavior, deprecations, etc
-  and edits them into a release doc checked in to the feature repository (ready to go out with the release)
+### Enhancements Lead
+- Compiles the major themes, new enhancements, known issues, actions required, notable changes to existing behavior, deprecations, etc
+  and edits them into a release doc checked in to the enhancement repository (ready to go out with the release)
 - Collects and prepares the release notes
 
 ### Bug Triage Lead
@@ -164,17 +164,17 @@ If you have a patch that needs to be ported back to a previous release (meaning 
 
 #### During a major/minor release
 
-##### Propose and track feature
-If you are developing a feature for Kubernetes, make sure that an issue is open in the [features repository](https://github.com/kubernetes/features/issues). If you are targeting a particular release, make sure the issue is marked with the corresponding release milestone.
+##### Propose and track enhancement
+If you are developing an enhancement for Kubernetes, make sure that an issue is open in the [enhancements repository](https://github.com/kubernetes/enhancements/issues). If you are targeting a particular release, make sure the issue is marked with the corresponding release milestone.
 
-Ensure that all code for your feature is written, tested, reviewed, and merged before code freeze date for the target release.
+Ensure that all code for your enhancement is written, tested, reviewed, and merged before code freeze date for the target release.
 
-During the code freeze period, fix any bugs discovered with your feature, and write feature documentation.
+During the code freeze period, fix any bugs discovered with your enhancement, and write enhancement documentation.
 
-##### Write feature documentation
+##### Write enhancement documentation
 
-1. Make sure your feature for the upcoming release is on the release tracking board (e.g. [link](https://docs.google.com/spreadsheets/d/1nspIeRVNjAQHRslHQD1-6gPv99OcYZLMezrBe3Pfhhg/edit#gid=0) for 1.6).
-2. Create a PR with documentation for your feature in the [documents repo](https://github.com/kubernetes/kubernetes.github.io).
+1. Make sure your enhancement for the upcoming release is on the release tracking board (e.g. [link](https://docs.google.com/spreadsheets/d/1nspIeRVNjAQHRslHQD1-6gPv99OcYZLMezrBe3Pfhhg/edit#gid=0) for 1.6).
+2. Create a PR with documentation for your enhancement in the [documents repo](https://github.com/kubernetes/kubernetes.github.io).
     - **Your PR should target the release branch (e.g. [release-1.6](https://github.com/kubernetes/kubernetes.github.io/tree/release-1.6)), not the [`master`](https://github.com/kubernetes/kubernetes.github.io/tree/master) branch.**
       - Any changes to the master branch become live on https://kubernetes.io/docs/ as soon as they are merged, and for releases we do not want documentation to go live until the release is cut.
 3. Add link to your docs PR in the release tracking board, and notify the docs lead for the release (e.g. [Devin Donnelly](https://www.github.com/devin-donnelly) for 1.6).

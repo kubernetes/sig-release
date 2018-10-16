@@ -5,7 +5,7 @@
   - [ ] CNCF / Media Engagement
   - [ ] Useful Signals
   - [ ] Sample Searches (examples)
-  - [ ] Understanding Labels (this should be in k/features)
+  - [ ] Understanding Labels (this should be in k/enhancements)
   - [ ] Archiving Enhancements Tracking sheets as `.csv`s
   - [ ] Link cleanup, where necessary
   - [ ] [Qualifying a tracked issue](https://github.com/kubernetes/sig-release/issues/124#issuecomment-407140647)
