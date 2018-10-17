@@ -94,7 +94,7 @@ Release responsibilities of individual contributors to the Kubernetes project ar
 
 #### During a patch release
 If you have a patch that needs to be ported back to a previous release (meaning it is a critical bug/security fix), once it is merged to the Kubernetes `master` branch:
-- Follow the [cherry-pick instructions to open a cherry-pick PR.](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md
+- Follow the [cherry-pick instructions to open a cherry-pick PR.](https://git.k8s.io/community/contributors/devel/cherry-picks.md
 - The Patch Release Manager will then review the PR and if it is ok for cherry-picking, will apply a `cherrypick-approved` label to it.
 
 #### During a major/minor release
