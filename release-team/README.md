@@ -94,9 +94,8 @@ Release responsibilities of individual contributors to the Kubernetes project ar
 
 #### During a patch release
 If you have a patch that needs to be ported back to a previous release (meaning it is a critical bug/security fix), once it is merged to the Kubernetes `master` branch:
-- Mark your PR with the milestone corresponding to the release you want to port back to (e.g. `v1.5`), and add the `cherrypick-candidate` label to it
-- The Patch Release Manager will then review the PR and if it is ok for cherry-picking, will apply a `cherrypick-approved` label to it
-- Once your PR has been marked with the `cherrypick-approved` label by the Patch Release Manager, you should prepare a cherry-pick to the requested branch following the instructions [here](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md#how-do-cherrypick-candidates-make-it-to-the-release-branch)
+- Follow the [cherry-pick instructions to open a cherry-pick PR.](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md
+- The Patch Release Manager will then review the PR and if it is ok for cherry-picking, will apply a `cherrypick-approved` label to it.
 
 #### During a major/minor release
 
