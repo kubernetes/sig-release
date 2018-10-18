@@ -24,24 +24,22 @@ The playbook is more what you call "guidelines" than actual rules.
 * Run [anago](https://github.com/kubernetes/release) in mock mode to get prompts
   for setting up your environment, and familiarize yourself with the tool.
 
-## Cherrypick requests
+## Cherry-pick requests
 
 As a patch release manager, you are responsible for reviewing
-[cherrypicks](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md)
+[cherry-picks](https://github.com/kubernetes/community/blob/master/contributors/devel/cherry-picks.md)
 on your release branch.
 
-**Finding candidate cherry picks**
+**Finding outstanding cherry-picks**
 
-Use a GitHub search such as [`is:pr is:open base:release-1.6`](https://github.com/kubernetes/kubernetes/pulls?q=is%3Apr%20is%3Aopen%20base%3Arelease-1.6) to find all cherrypick PRs for a branch.
+Use a GitHub search such as [`is:pr is:open label:do-not-merge/cherry-pick-not-approved base:release-1.12`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+base%3Arelease-1.12+label%3Ado-not-merge%2Fcherry-pick-not-approved+) to find all untriaged cherry-pick PRs for a branch.
 
-You can also find candidate PRs in the [cherrypick queue dashboard](http://cherrypick.k8s.io/#/queue).
+As an example of the kind of load to expect, there were about 100 cherry-pick PRs
+against the 1.11 milestone.
 
-As an example of the kind of load to expect, there were about 150 cherrypick PRs
-against the `release-1.6` branch in the 3 months between v1.6.0 and v1.7.0.
+For each cherry-pick request:
 
-For each cherrypick request:
-
-1.  **Decide if it meets the criteria for a cherrypick**
+1.  **Decide if it meets the criteria for a cherry-pick**
 
     Make sure the PR author has supplied enough information to answer:
 
@@ -72,24 +70,24 @@ For each cherrypick request:
       part of the Kubernetes release cycle.
 
       However, this gets tricky when there are fixes you need for your branch
-      that are tied up with other changes. Ask the cherrypick requester for
+      that are tied up with other changes. Ask the cherry-pick requester for
       context on the other changes and use your best judgment.
 
     * Historically (up through at least 1.6), patch release managers have
       occasionally granted exceptions to the "no new enhancements" rule for
-      cherrypicks that are confined to plugins like cloudproviders
+      cherry-picks that are confined to plugins like cloudproviders
       (e.g. vSphere, Azure) and volumes (e.g. Portworx).
 
       However, we required that these exceptions be approved by the plugin
       owners, who were asked to `/approve` through the normal `OWNERS` process
-      (despite it being a cherrypick PR).
+      (despite it being a cherry-pick PR).
 
 1.  **Make sure it has an appropriate release note**
 
     [Good release notes](https://github.com/kubernetes/community/issues/484)
     are particularly important for patch releases because cluster admins expect
     the release branch to remain stable and need to know exactly what changed.
-    Take care to ensure every cherrypick that deserves a release note has one
+    Take care to ensure every cherry-pick that deserves a release note has one
     *before you approve it* or else the change may fall through the cracks at
     release cut time.
 
@@ -110,25 +108,25 @@ For each cherrypick request:
     Lastly, make sure the release note is located where the [relnotes](https://github.com/kubernetes/release/blob/master/relnotes)
     script will find it:
 
-    * If the cherrypick PR comes from a branch called `automated-cherry-pick-of-*`,
+    * If the cherry-pick PR comes from a branch called `automated-cherry-pick-of-*`,
       then the release notes are taken from each parent PR (possibly more than one)
-      and the cherrypick PR itself is ignored.
+      and the cherry-pick PR itself is ignored.
 
-      Make sure the cherrypick PR and parent PRs have the `release-note` label.
+      Make sure the cherry-pick PR and parent PRs have the `release-note` label.
 
-    * Otherwise, the release note is taken from the cherrypick PR.
+    * Otherwise, the release note is taken from the cherry-pick PR.
 
-      Make sure the cherrypick PR has the `release-note` label.
+      Make sure the cherry-pick PR has the `release-note` label.
 
     **Notes**
 
-    * Almost all changes that are important enough to cherrypick are important
+    * Almost all changes that are important enough to cherry-pick are important
       enough that we should inform users about them when they upgrade.
 
       Rare exceptions include test-only changes or follow-ups to a previous
-      cherrypick whose release note already explains all the intended changes.
+      cherry-pick whose release note already explains all the intended changes.
 
-1.  **Approve for cherrypick**
+1.  **Approve for Cherry-pick**
 
     PRs on release branches follow a different review process than those on the
     `master` branch.
@@ -136,43 +134,43 @@ For each cherrypick request:
     but the focus is just on ensuring the above criteria are met.
     The code itself was already reviewed, assuming it's copied from `master`.
 
-    * For an *automated cherrypick* (created with `hack/cherry_pick_pull.sh`),
+    * For an *automated cherry-pick* (created with `hack/cherry_pick_pull.sh`),
       first make sure the parent PR has merged into master.
       If the parent PR hasn't merged yet, leave a comment explaining that you
-      will wait for it before approving the cherrypick.
+      will wait for it before approving the cherry-pick.
       We don't want the release branch to get out of sync if the parent PR changes.
 
       If the parent PR has merged, comment `/lgtm` to apply the `lgtm` label and
-      notify the author that you've reviewed the cherrypick request.
+      notify the author that you've reviewed the cherry-pick request.
 
-      For cherrypicks that are clearly justified and low risk in your judgment,
+      For cherry-picks that are clearly justified and low risk in your judgment,
       you can directly apply the `approved` label as long as the parent PR was
       approved and merged into `master`.
       If you lack sufficient context or have any doubts, leave a comment
       explaining that the PR needs to get an `/approve` from relevant OWNERS
-      to ensure that the change is appropriate for a cherrypick.
+      to ensure that the change is appropriate for a cherry-pick.
 
-    * For a *manual patch or cherrypick* (not a direct copy of a PR already merged
+    * For a *manual patch or cherry-pick* (not a direct copy of a PR already merged
       on `master`), leave a comment explaining that it needs to get
       LGTM+Approval through the usual review process.
 
       You don't need to do anything special to fall back to this process.
       The bot will suggest reviewers and approvers just like on `master`.
 
-    Finally, apply the `cherrypick-approved` label and remove the `do-not-merge`
+    Finally, apply the `cherry-pick-approved` label and remove the `do-not-merge`
     label to tell the bot that this PR is allowed to merge into a release
     branch.
 
     Note that the PR will not actually merge until it meets the usual criteria
     enforced by the merge bot (`lgtm` + `approved` labels, required presubmits,
     etc.) and makes its way through the submit queue.
-    To give cherrypick PRs priority over other PRs in the submit queue,
+    To give cherry-pick PRs priority over other PRs in the submit queue,
     make sure the PR is in the `vX.Y` release milestone, and that the milestone
     has a due date.
 
 ## Branch health
 
-Keep an eye on approved cherrypick PRs to make sure they aren't getting blocked
+Keep an eye on approved cherry-pick PRs to make sure they aren't getting blocked
 on presubmits that are failing across the whole branch.
 Also periodically check the [testgrid](https://k8s-testgrid.appspot.com)
 dashboard for your release branch to make sure the continuous jobs are healthy.
@@ -191,13 +189,13 @@ The upper bound is intended to avoid making users wait too long for fixes that
 are ready to go.
 
 The actual timing is up to the patch release manager, who should take into
-account input from cherrypick PR authors and SIGs.
+account input from cherry-pick PR authors and SIGs.
 For example, some bugs may be serious enough, and have a clear enough fix,
 to trigger a new patch release immediately.
 
 You should attend the [sig-release](https://github.com/kubernetes/community/tree/master/sig-release)
 meetings whenever possible to give updates on activity in your release branch
-(bugs, tests, cherrypicks, etc.) and discuss release timing.
+(bugs, tests, cherry-picks, etc.) and discuss release timing.
 
 When you have a plan for the next patch release, send an announcement
 ([example](https://groups.google.com/forum/#!topic/kubernetes-dev-announce/HGYsjOFtcdU))
@@ -210,7 +208,7 @@ script ([example usage](https://gist.github.com/enisoc/058bf0feddf6bffd8e25aa72f
 ## Release cut
 
 A few days before you plan to cut a patch release, put a temporary freeze on
-cherrypick requests by removing the `cherrypick-approved` label from any PR that
+cherry-pick requests by removing the `cherry-pick-approved` label from any PR that
 isn't ready to merge.
 Leave a comment explaining that a freeze is in effect until after the release.
 
@@ -231,8 +229,8 @@ On the day before the planned release, run a mock build with `anago` to make
 sure the tooling is ready.
 If the mock goes well and the tests are healthy, run the real cut the next day.
 
-After the release cut, reapply the `cherrypick-approved` label to any PRs that
-had it before the freeze, and go through the backlog of new cherrypicks.
+After the release cut, reapply the `cherry-pick-approved` label to any PRs that
+had it before the freeze, and go through the backlog of new cherry-picks.
 
 ### Hotfix release
 
@@ -246,7 +244,7 @@ risk of allowing other changes in.
 In this case, you would create a new, three-part branch of the form
 `release-X.Y.Z`, which [branches from a tag](https://github.com/kubernetes/release/blob/master/docs/branching.md#branching-from-a-tag)
 called `vX.Y.Z`.
-You would then use the normal cherrypick PR flow, except that you target PRs at
+You would then use the normal cherry-pick PR flow, except that you target PRs at
 the `release-X.Y.Z` branch instead of `release-X.Y`.
 This lets you exclude the rest of the changes that already went into
 `release-X.Y` since the `vX.Y.Z` tag was cut.
