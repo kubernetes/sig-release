@@ -29,11 +29,11 @@ The designated "release meister" (aka Docs Lead), voluntold from [@kubernetes/si
 
 ### Start the cycle
 
-*   Create a new GitHub branch from `master` using the naming convention `release-X.Y`, e.g. `release-1.9`. Here's the [release-1.9 branch](https://github.com/kubernetes/kubernetes.github.io/tree/release-1.9).
+*   Create a new GitHub branch from `master` using the naming convention `dev-X.Y`, e.g. `dev-1.9`. Here's the [release-1.9 branch](https://github.com/kubernetes/kubernetes.github.io/tree/release-1.9).
 *   Update the Netlify _vnext staging_ site to use the new branch:
     *   Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
     *   Go to the settings for the [kubernetes-io-vnext-staging](https://app.netlify.com/sites/kubernetes-io-vnext-staging/settings) site.
-    *   Edit the Deploy settings and change "Branch" to the new version branch, e.g `release-1.9`.
+    *   Edit the Deploy settings and change "Branch" to the new version branch, e.g `dev-1.9`.
     *   Save the change and verify that it is live at [https://kubernetes-io-vnext-staging.netlify.com/](https://kubernetes-io-vnext-staging.netlify.com/).
 *   Add a reminder in the [pull request template](https://github.com/kubernetes/kubernetes.github.io/blob/master/.github/PULL_REQUEST_TEMPLATE.md) for PRs going into the new release to use the release base branch and set the Milestone, e. g. [this commit](https://github.com/kubernetes/kubernetes.github.io/pull/4632).
 *   Connect with the release manager -- introduce yourself, etc.
@@ -45,11 +45,11 @@ The designated "release meister" (aka Docs Lead), voluntold from [@kubernetes/si
 
 ### Ongoing tasks
 
-*   Look through the [PR queue](https://github.com/kubernetes/kubernetes.github.io/pulls) to make sure ones related to the new release are using the correct base branch and have the Milestone set, e.g. base branch is `release-1.8` and Milestone is `1.8`. Example PRs from the v1.7 release can be viewed [here](https://github.com/kubernetes/kubernetes.github.io/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aclosed%20milestone%3A1.7%20).
+*   Look through the [PR queue](https://github.com/kubernetes/kubernetes.github.io/pulls) to make sure ones related to the new release are using the correct base branch and have the Milestone set, e.g. base branch is `dev-1.8` and Milestone is `1.8`. Example PRs from the v1.7 release can be viewed [here](https://github.com/kubernetes/kubernetes.github.io/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Aclosed%20milestone%3A1.7%20).
 *   Merge `master` branch back into the branch for the last release. 
-For example, if you are currently on the v1.8 release, you will need to periodically merge `master` into `release-1.7` right up until `release-1.8` is merged into `master`. This is to make sure that the last release branch is as up to date as possible and left as a snapshot when the new version is released.
+For example, if you are currently on the v1.8 release, you will need to periodically merge `master` into `dev-1.7` right up until `release-1.8` is merged into `master`. This is to make sure that the last release branch is as up to date as possible and left as a snapshot when the new version is released.
 *   Merge `master` into the branch for the next release.
-For example, if you are currently on the v1.8 release, you will need to periodically merge `master` into `release-1.8` in order to pick up any changes in `master` during the release process. Therefore, `release-1.8` should effectively be `master` + commits for v1.8.
+For example, if you are currently on the v1.8 release, you will need to periodically merge `master` into `dev-1.8` in order to pick up any changes in `master` during the release process. Therefore, `release-1.8` should effectively be `master` + commits for v1.8.
 *   Update the OSS feature tracking spreadsheet with progress on reviews and merge status for each feature doc, e.g. [Kubernetes Features OSS tracking board (1.7 release)](https://docs.google.com/spreadsheets/d/1IJSTd3MHorwUt8i492GQaKKuAFsZppauT4v1LJ91WHY/edit?usp=sharing).
 *   Attend Kubernetes Tactics meetings.
 *   Attend Kubernetes Burndown meetings.
@@ -108,7 +108,7 @@ Target Date: 2017-06-29 @ 13:00 PDT_
     *   Run update-imported-docs.sh.
 *   Make sure the tutorials are imported from kubernetes/examples repo.
     *   Run ./update-imported-tutorials.py
-*   Merge `master` back into the branch for the last release to create final snapshot of the last release, e.g. finalize `release-1.7` branch before `release-1.8` is merged into `master`.
+*   Merge `master` back into the branch for the last release to create final snapshot of the last release, e.g. finalize `dev-1.7` branch before `release-1.8` is merged into `master`.
 *   Add tags to `master`, last release, and next release branches to keep track of snapshot points, e.g. `snapshot-final-v1.6`, `snapshot-initial-v1.7`, etc.
 *   Update links for release announcement given by Kubernetes PM, currently Aparna Sinha ([apsinha@google.com](mailto:apsinha@google.com)), e.g. [Kubernetes.io Blog: 1.7 Release announcement](https://docs.google.com/a/google.com/document/d/1U8oNYK-baoF-ObIRFKEmCicDnrgFdXAz7Nfkatg_jUo/edit?usp=sharing).
 *   Work with release manager to update links in release notes to k8s.io docs, e.g. [Google Doc](https://docs.google.com/a/google.com/document/d/1dWFkFJIHo3liTWomvB1ur6jqd6cnxvGb_jjE-3-c6Bo/edit?usp=sharing) that fed into [kubernetes/features: /release-1.7/release-notes-draft.md](https://github.com/kubernetes/features/blob/master/release-1.7/release-notes-draft.md).
@@ -145,25 +145,25 @@ Use one of the tools below:
     *   Source URL: [https://github.com/kubernetes/kubernetes.github.io.git](https://github.com/kubernetes/kubernetes.github.io.git)
     *   Under _REMOTES_, use _origin_ (the one that points at the k8s.io repo) and check out the branches:
         *   `master` branch
-        *   current release branch, e.g. `release-1.8`
-        *   previous release branch, e.g. `release-1.7`
+        *   current release branch, e.g. `dev-1.8`
+        *   previous release branch, e.g. `dev-1.7`
 
 ## Appendix II: Merging master into a branch
 
-When merging master into a release branch, e.g. `release-1.8`:
+When merging master into a release branch, e.g. `dev-1.8`:
 
-1.  Make sure you are on the checked out `release-1.8` branch.
+1.  Make sure you are on the checked out `dev-1.8` branch.
 1.  Do a _Pull_ from the k8s.io repo but set the _Remote branch to pull_ to `master`.
 1.  Resolve any conflicts.
-1.  Push the commits back up to the k8s.io repo to the `release-1.8` remote branch.
+1.  Push the commits back up to the k8s.io repo to the `dev-1.8` remote branch.
 
 ## Appendix III: Resolving conflicts during a merge
 
 If using a Git client such as SourceTree, here is a good guide for dealing with merge conflicts: [https://githubtraining.com/fix-merge-conflict-git-using-sourcetree/](https://githubtraining.com/fix-merge-conflict-git-using-sourcetree/)
 
-When you are on a release branch, e.g. `release-1.8`, and are merging `master` into it, the options to resolve a conflict are:
+When you are on a release branch, e.g. `dev-1.8`, and are merging `master` into it, the options to resolve a conflict are:
 
-*   Resolve using 'mine' - this means to take all the changes from the `release-1.8` branch to resolve the conflict.
+*   Resolve using 'mine' - this means to take all the changes from the `dev-1.8` branch to resolve the conflict.
 *   Resolve using 'theirs' - this means to take all the changes from the `master` branch to resolve the conflict.
 *   Resolve using an external merge tool - there are visual merge tools, like FileMerge on the Mac, that can help you see the differences between file versions and will allow you to select each one you want to keep. I recommend this for more complicated conflicts.
 *   Resolve manually - you can open the conflicted file with a text editor and manually edit the conflicts. Perform a text search for '>>>>>>', '<<<<<<' and '======'. This will help you navigate to conflicted parts of the file quickly.
