@@ -41,6 +41,7 @@
 | Clean up enhancements repo | Enhancements Lead | 16 | | | | | |
 | "Enhancements Freeze" begins (EOD PST) | Enhancements Lead | 23 | || | week 4 | |
 | 1.13.0-alpha.2 release | Branch Manager | 23 | | | | | [master-blocking], [master-upgrade] |
+| 1.13.0-alpha.3 release | Branch Manager | 31 | | | | | [master-blocking], [master-upgrade] |
 | Begin MWF Burndown meetings | Lead | | 5 | | | week 6 | |
 | All release-1.9 CI jobs/testgrid removed | Test Infra Lead | | 6 | | | | |
 | Create 'release-1.13' branch and begin daily branch | Branch Manager | | 6 | | | | |
