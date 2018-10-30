@@ -38,7 +38,7 @@ kubernetes/kubernetes.github.io#5496
 kubernetes/kubernetes.github.io#5421",https://github.com/kubernetes/features/commit/b302cbdf03184148f6bd8f4259bd4e5a8c6649b7,,,,,
 CronJob to beta,Beta,SIG-Apps,soltysh,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5475,,,,,,
 Arbitrary/Custom Metrics in the Horizontal Pod Autoscaler,Beta,SIG-Autoscaling,DirectXMan12,no,,,,,,,
-Integrate Cluster Bootstrap/Discovery with Kubenetes Core,Beta,SIG-ClusterLifecycle,jbeda,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5440,,,,,,
+Integrate Cluster Bootstrap/Discovery with Kubernetes Core,Beta,SIG-ClusterLifecycle,jbeda,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5440,,,,,,
 "Easy, automated upgrades with the `kubeadm upgrade` command",Beta,SIG-ClusterLifecycle,luxas,yes,https://github.com/kubernetes/kubernetes.github.io/pull/4770,,,,,,
 Metrics Server & Master Metrics API,Beta,SIG-Instrumentation,piosz,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5560,,,,,,
 NetworkPolicy CIDR support,Beta,SIG-Network,cmluciano,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5529,,,,,,
