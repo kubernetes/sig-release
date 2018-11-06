@@ -1,7 +1,8 @@
 aliases:
   sig-release-leads:
     - calebamiles
-    - jdumars
+    - justaugustus
+    - tpepper
   release-team-lead-role:
     - jdumars # 1.10
     - jberkus # 1.11
