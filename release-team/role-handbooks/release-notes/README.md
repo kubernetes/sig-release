@@ -37,6 +37,7 @@ is used.
 
 - [Release notes tool](https://github.com/marpaia/release-notes)
 - [Hackmd](https://hackmd.io/)
+- [LWKD](http://lwkd.info) *(consider contributing to LWKD as part of your role)*
 
 
 ## Todos
@@ -94,4 +95,3 @@ Update this section at the end of each release for the next team
 ### Week13
 
 - Release retrospective participation
-
