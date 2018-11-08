@@ -1,0 +1,11 @@
+reviewers:
+  - release-team-lead-role
+  - patch-release-manager-role
+  - ci-signal-role
+  - enhancements-role
+  - test-infra-role
+  - bug-triage-role
+  - branch-manager-role
+  - docs-role
+  - release-notes-role
+  - communications-role

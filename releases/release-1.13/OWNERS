@@ -1,11 +1,10 @@
 approvers:
-  - AishSundar
-  - spiffxp
+  - AishSundar # RT Lead
+  - spiffxp # RT Lead Shadow
+reviewers:
   - kacole2
   - jberkus
   - dougm
   - tfogo
   - marpaia
   - nikopen
-  - sig-release-leads
-  - release-team-lead-role
