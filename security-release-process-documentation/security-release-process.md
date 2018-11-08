@@ -7,11 +7,16 @@ Kubernetes is a large growing community of volunteers, users, and vendors. The K
 
 - [Product Security Team (PST)](#product-security-team-pst)
   * [Product Security Team Membership](#product-security-team-membership)
+    + [Joining](#joining)
+      - [PST Lazy Consensus Selection](#pst-lazy-consensus-selection)
+    + [Stepping Down](#stepping-down)
+    + [Responsibilities](#responsibilities)
     + [Roles](#roles)
       - [Release/Project Manager](#release-project-manager)
       - [Triage](#triage)
       - [Infra](#infra)
       - [Disclosure](#disclosure)
+      - [Associate](#associate)
     + [Per-Issue Assignment Options](#per-issue-assignment-options)
       - [Scheduled Rotation](#scheduled-rotation)
       - [Queue](#queue)
@@ -89,10 +94,40 @@ There are a number of contact points for the PST and release managers in charge 
 
 ### Product Security Team Membership
 
-Membership to the product security team is based on filling a specific role.
-These are defined below to make sure everyone "carries water".
+#### Joining
+
+New potential members to the PST will first fill a minimum of a 3 month rotation in the [Associate](#Associate) role.
+
+These individuals will be nominated by individuals on steering committee, PST, or release manager lead and patch release manager.
+
+The PST has a goal to expand the PST to 7 members by end of year (2018) or
+early 2019. [Please delete this when this has been done :)].
+
+Members will also abide by the [1/3 maximal representation policy like the steering committee](https://github.com/kubernetes/steering/blob/master/elections.md#maximal-representation).
+
+##### PST Lazy Consensus Selection
+
+Selection of new members from the associates will be done by lazy consensus.
+
+- Use lazy consensus amongst members for adding new people up to 7 from pool of associate members with fallback on majority vote.
+- Use lazy consensus amongst other members with fallback on majority vote to accept proposal on step down.
+
+#### Stepping Down
+
+Members may step down at anytime and propose a replacement from pool of eligible associate members.
+
+#### Responsibilities
+
+- Members should remain active and responsive in their Roles.
+- Members taking an extended leave of 1 or more months should coordinate with other members to ensure the role is adequately staffed during the leave.
+- Members going on leave for 1-3 months may identify a temporary replacement.
+- Members of a role should remove any other members that have not communicated a leave of absence and either cannot be reached for more than 1 month or are not fulfilling their documented responsibilities for more than 1 month. This may be done through a super-majority vote of members.
+
 
 #### Roles
+
+Membership to the product security team is based on filling a specific role.
+These are defined below to make sure everyone "carries water".
 
 ##### Release/Project Manager
 
@@ -113,6 +148,18 @@ Who do you call when the cluster is not well or you gotta test something weird, 
 ##### Disclosure
 
 Handles public messaging around the bug. Documentation on how to upgrade. Changelog. Explaining to public the severity. Notifications of bugs sent to mailing lists etc. Requests CVEs.
+
+##### Associate
+
+A role for those wishing to join the PST. They should not currently be a member
+of security@kubernetes.io. 
+
+Their rotation will involve the following:
+
+- lead disclosures that are publicly disclosed on a public GitHub issue tracker
+    (often done because of reporter request, a low CVSS score, or design issue
+    that requires long-term refactoring).
+- assisting in process improvements, bug bounty administration, audits, or other non-disclosure activities
 
 #### Per-Issue Assignment Options
 
