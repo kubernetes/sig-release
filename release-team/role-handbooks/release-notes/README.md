@@ -12,14 +12,13 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 
 ## Tasks
 
-- The Release notes lead and shadows attend burn down meetings, SIG Release meetings and follow the [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF) Slack channel for relevant information throughout the release cycle.
-- One member of the release notes team should be responsible for setting up and running the [release notes tool](https://github.com/marpaia/release-notes) to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are always welcome!
-- Drafts produced by the tool are copied to a Google Document that gives editing privleges to each member of the release-notes team (there is currently no automated way to keep the generated release-notes and the google doc concurrent. Some tool to automate this process would be a good task for the 1.13 release team)
-- Closer to the release date, major themes are collected from the release notes draft and the release notes team creates a draft in markdown of the identified major themes to send to sig-leads for feedback/confirmation
-- If gentle nudging of sig leads is not effective in retrieving feedback/confirmation, the release-notes team can use a reasonable amount of creative liberity in completing the notes
-- A "Known Issues" section will also be created in a github issue to be added to the release notes before release date
-- The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style
-is used.
+- The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetings and follow the [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF) Slack channel for relevant information throughout the release cycle.
+- One member of the Release Notes Team should be responsible for setting up and running the [`release-notes` tool](https://github.com/marpaia/release-notes) to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are always welcome!
+- Drafts produced by the tool are copied to a file called `release-notes-draft.md` in the release folder for the current release in the `sig-release` repo.
+- Towards the end of code slush, the Release Notes Team will copy the latest draft into a Google Doc and start reaching out to SIG Leads in an effort to have them fill in a prose paragraph of "Major Themes" that outlines what their SIG has been working on throughout the lifecycle.
+- If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberity in completing the notes
+- A "Known Issues" section will also be created in a GitHub issue to be added to the release notes before release date.
+- The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
 - Kubernetes is released with the completed notes!
 
 ## Tools
