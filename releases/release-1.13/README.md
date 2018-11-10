@@ -128,7 +128,7 @@ For documentation PRs:
 
 ### Burndown
 
-Burndown meetings are held on Mondays, Wednesdays and Fridays at TIME TBD until the final release is near, and then every business day until the release.  These meetings may overlap with other SIG meetings and the Community Meeting, but it is critical that SIGs provide representation at the release burndown meeting when requested to discuss specific issues and insure they do not become gating on the release. The release lead or a release team representative will keep the Community Meeting informed of release status even if there are meeting conflicts.
+Burndown meetings are held on Mondays, Wednesdays and Fridays at TIME TBD until the final release is near, and then every business day until the release.  These meetings may overlap with other SIG meetings and the Community Meeting, but it is critical that SIGs provide representation at the release burndown meeting when requested to discuss specific issues and ensure they do not become gating on the release. The release lead or a release team representative will keep the Community Meeting informed of release status even if there are meeting conflicts.
 
 Join the [Kubernetes Milestone Burndown Group](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) to get the calendar invite.
 
@@ -137,7 +137,7 @@ The intent of these meetings is to:
 * Focus on fixing bugs, eliminating test flakes and general release stabilization.
 * Ensure docs and release notes are written and accurate.
 * Identify all enhancement going into the release, and make sure alpha, beta, GA is marked in enhancements repo.
-* Provide a [one-stop view of release progress](http://bit.ly/kube113-minutes) including relevant release metrics.
+* Provide a [one-stop view of release progress](https://bit.ly/k8s113-minutes) including relevant release metrics.
 * Host SIG stakeholders for updates.
 
 [master-blocking]: https://testgrid.k8s.io/sig-release-master-blocking#Summary
