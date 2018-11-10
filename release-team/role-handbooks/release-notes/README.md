@@ -21,7 +21,7 @@ slack chat for relevant information throughout the release cycle.
 - One member of the release notes team should be responsible for setting up and running the [release notes tool](https://github.com/marpaia/release-notes)
 to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are
 always welcome!
-- Drafts produced by the tool are copied to a Google Document that gives editing privleges to each member of the
+- Drafts produced by the tool are copied to a Google Document that gives editing privileges to each member of the
 release-notes team (there is currently no automated way to keep the generated release-notes and the google doc
 concurrent. Some tool to automate this process would be a good task for the 1.13 release team)
 - Closer to the release date, major themes are collected from the release notes draft and the release notes team
