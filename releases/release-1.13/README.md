@@ -119,7 +119,7 @@ This should occur before 1.13.0-beta.1 is cut so we have time to gather signal o
 
 ### Docs
 
-If an enhancement needs documentation, enter Yes in the enhancement tracking spreadsheet and add a link to the documentation PR. You can open documentation PRs in the [kubernetes/website](https://github.com/kubernetes/website) repository. If you have questions, the release documentation lead, or representatives from SIG-Docs will be happy to assist you.
+If an enhancement needs documentation, enter "Yes" in the enhancement tracking spreadsheet and add a link to the documentation PR. You can open documentation PRs in the [kubernetes/website](https://github.com/kubernetes/website) repository. If you have questions, the release documentation lead, or representatives from SIG-Docs will be happy to assist you.
 
 For documentation PRs:
 
@@ -128,7 +128,7 @@ For documentation PRs:
 
 ### Burndown
 
-Burndown meetings are held on Mondays, Wednesdays and Fridays at TIME TBD until the final release is near, and then every business day until the release.  These meetings may overlap with other SIG meetings and the Community Meeting, but it is critical that SIGs provide representation at the release burndown meeting when requested to discuss specific issues and ensure they do not become gating on the release. The release lead or a release team representative will keep the Community Meeting informed of release status even if there are meeting conflicts.
+Burndown meetings are held on Mondays, Wednesdays and Fridays at 10am PST until the final release is near, and then every business day until the release. These meetings may overlap with other SIG meetings and the Community Meeting, but it is critical that SIGs provide representation at the release burndown meeting when requested to discuss specific issues and ensure they do not become gating on the release. The release lead or a release team representative will keep the Community Meeting informed of release status even if there are meeting conflicts.
 
 Join the [Kubernetes Milestone Burndown Group](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) to get the calendar invite.
 
