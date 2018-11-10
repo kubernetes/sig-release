@@ -4,7 +4,7 @@
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.13/README.md)
 * [Release Team](https://git.k8s.io/sig-release/releases/release-1.13/release_team.md)
-* Zoom: join Google Group to receive meeting invite
+* Zoom: join [Google Group](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) to receive meeting invite
 * [Slack](https://kubernetes.slack.com/messages/sig-release/)
 * [Forum](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
 * [Enhancements Tracking Sheet](http://bit.ly/k8s113-enhancements)
