@@ -14,7 +14,7 @@
 * [CI Signal Report](http://bit.ly/k8s113-cisignal)
 * [Retrospective Document](http://bit.ly/k8s113-retro)
 
-**tl;dr** The 1.13 release cycle begins on **Monday, October 1st, 2018**, and ends on release day, **Monday, December 03, 2018**.  Enhancements freeze is **Tuesday, October 23, 2018**.  Code slush is **Friday, November 09, 2018**. Code freeze begins **Thursday, November 15, 2018** and ends **Wednesday, November 28, 2018**, but [may vary depending on CI Signal](#conditionally-shortened-code-freeze). Docs must be completed and reviewed by **Tuesday, November 27, 2018**. Release blocking test case additions must be completed by in conjunction with enhancements by code freeze.
+**tl;dr** The 1.13 release cycle begins on **Monday, October 1st, 2018**, and ends on release day, **Monday, December 03, 2018**.  Enhancements freeze is **Tuesday, October 23, 2018**.  Code slush is **Friday, November 09, 2018**. Code freeze begins **Friday, November 16, 2018** and ends **Wednesday, November 28, 2018**, but [may vary depending on CI Signal](#conditionally-shortened-code-freeze). Docs must be completed and reviewed by **Tuesday, November 27, 2018**. Release blocking test case additions must be completed by in conjunction with enhancements by code freeze.
 
 ## Notes About this Release
 
@@ -52,7 +52,7 @@
 | Begin Code Slush | Bot, Lead | | 9 | | | week 6 | |
 | All Issues & PRs must have complete labels | Bug Triage | | 12 | | | week 7 | |
 | Kubecon Shangai 2018 | Community event | | 13 - 15 | | | | |
-| Begin code and test freeze (EOD PST) | Bot, Lead | | 15 | | | week 7 | [1.13-blocking], [master-blocking], [master-upgrade] |
+| Begin code and test freeze (EOD PST) | Bot, Lead | | 16 | | | week 7 | [1.13-blocking], [master-blocking], [master-upgrade] |
 | Begin pruning | Lead and release team | | 16 | | | | |
 | 1.13.0-beta.1 released from branch | Branch Manager | | 16 | || | [1.13-blocking], [master-blocking], [master-upgrade] |
 | Begin M-F Burndown meetings | Lead | | 19 | | | week 8 | |
