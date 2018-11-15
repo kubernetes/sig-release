@@ -1,8 +1,7 @@
 approvers:
-  - tpepper
-  - AishSundar
+  - tpepper # RT Lead
+  - AishSundar # RT Lead Shadow
+reviewers:
   - justaugustus
   - nickchase
   - marpaia
-  - sig-release-leads
-  - release-team-lead-role

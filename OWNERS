@@ -1,9 +1,9 @@
 approvers:
   - sig-release-leads
 reviewers:
-  - idvoretskyi
-  - spiffxp
-  - jdumars
   - release-team-lead-role
+  - idvoretskyi
+  - jdumars
+  - spiffxp
 labels:
   - sig/release
