@@ -125,6 +125,8 @@ The criteria for moving issues is a mix of:
 - Is the PR expected to be ready for merging soon?
 - How big is the change? Could it cause instability to CI? If so, it either needs to be closely tracked /or/ moved.
 
+For issues/PRs that look tricky, you can consolidate with the Release Lead and SIG/PR owners to reach a decision.
+
 After this, you need to monitor all of these issues to make sure that daily progress is made on them.  Theoretically, issue owners/SIGs are supposed to make a daily status comment in the issue, but this is seldom followed. You also will need to send daily reminders/queries about stuck PRs.
 
 New test failures will also show up during Code Freeze and you need to make sure that these are labeled properly, get attention of the CI Signal lead, and get attention from the appropriate SIGs.
