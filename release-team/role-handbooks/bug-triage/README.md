@@ -117,7 +117,13 @@ The Release Lead will include a template for this information in the Monday/Wedn
 
 ## Code Freeze
 
-Once Code Freeze starts, all issues still in the upcoming release **must** have a priority label of `priority/critical-urgent`.  This means that on the morning before Code Freeze begins you need to go through the open issues (and PRs) which are approved-for-milestone but not marked critical-urgent and poke the owners reminding them that in the next day Code Freeze will mean any issues not marked `priority/critical-urgent` will be kicked out of the milestone by the bot.
+Once Code Freeze starts, all issues still in the upcoming release **should** have a priority label of `priority/critical-urgent`.  This means that on the morning before Code Freeze begins you need to go through the open issues (and PRs) which are approved-for-milestone but not marked critical-urgent and poke the owners reminding them that in the next day Code Freeze will mean any issues not marked `priority/critical-urgent` will potentially be moved to the subsequent release. 
+
+The criteria for moving issues is a mix of:
+
+- How critical is the Issue to be fixed for the currently imminent release?
+- Is the PR expected to be ready for merging soon?
+- How big is the change? Could it cause instability to CI? If so, it either needs to be closely tracked /or/ moved.
 
 After this, you need to monitor all of these issues to make sure that daily progress is made on them.  Theoretically, issue owners/SIGs are supposed to make a daily status comment in the issue, but this is seldom followed. You also will need to send daily reminders/queries about stuck PRs.
 
