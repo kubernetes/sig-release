@@ -81,6 +81,10 @@ The initial Product Security Team will consist of volunteers subscribed to the p
 - Tim Allclair (**[@tallclair](https://github.com/tallclair)**) `<tallclair@google.com>` [4096R/0x5E6F2E2DA760AF51]
 - Jordan Liggitt (**[@liggitt](https://github.com/liggitt)**) `<jordan@liggitt.net>` [4096R/0x39928704103C7229]
 
+[Associate](#Associate) members include:
+
+- Jonathan Pulsifer (**[@jonpulsifer](https://github.com/jonpulsifer)**) `<jonathan@pulsifer.ca>`
+
 ### Contacting the Team
 
 There are a number of contact points for the PST and release managers in charge of security releases. Please use the correct forum for the best and fastest response.
