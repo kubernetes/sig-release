@@ -269,6 +269,7 @@
 
 - Corrected family type (inet6) for ipsets in ipv6-only clusters ([#68436](https://github.com/kubernetes/kubernetes/pull/68436), [@uablrek](https://github.com/uablrek))
 - kube-proxy argument `hostname-override` can be used to override hostname defined in the configuration file ([#69340](https://github.com/kubernetes/kubernetes/pull/69340), [@stevesloka](https://github.com/stevesloka))
+- CoreDNS correctly implements DNS spec for Services with externalNames that look like IP addresses. Kube-dns does not follow the spec for the same case, resulting in a behavior change when moving from Kube-dns to CoreDNS. See: [coredns/coredns#2324](https://github.com/coredns/coredns/issues/2324)
 
 ### SIG Node
 
