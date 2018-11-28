@@ -19,6 +19,7 @@ Before upgrading to Kubernetes 1.13, you must keep the following in mind:
 - kubectl
   - The deprecated command `run-container` has been removed. Invocations should use `kubectl run` instead ([#70728](https://github.com/kubernetes/kubernetes/pull/70728), [@Pingan2017](https://github.com/Pingan2017))
 - client-go releases will no longer have bootstrap (k8s.io/client-go/tools/bootstrap) related code. any reference to it will break. Please redirect all references to k8s.io/bootstrap instead. ([#67356](https://github.com/kubernetes/kubernetes/pull/67356), [@yliaog](https://github.com/yliaog))
+- Kubernetes cannot distinguish between GCE Zonal PDs and Regional PDs with the same name. To workaround this issue, precreate PDs with unique names. PDs that are dynamically provisioned do not encounter this issue. ([#70716](https://github.com/kubernetes/kubernetes/pull/70716), [@msau42](https://github.com/msau42))
 
 ## Known Issues
 
