@@ -62,8 +62,6 @@ Before upgrading to Kubernetes 1.13, you must keep the following in mind:
 - kubeadm: JoinConfiguration now houses the discovery options in a nested Discovery structure, which in turn has a couple of other nested structures to house more specific options (BootstrapTokenDiscovery and FileDiscovery) ([#67763](https://github.com/kubernetes/kubernetes/pull/67763), [@rosti](https://github.com/rosti))
 - kubeadm: Added a `v1beta1` API. ([#69289](https://github.com/kubernetes/kubernetes/pull/69289), [@fabriziopandini](https://github.com/fabriziopandini))
 - kubectl: support multiple arguments for cordon/uncordon and drain ([#68655](https://github.com/kubernetes/kubernetes/pull/68655), [@goodluckbot](https://github.com/goodluckbot))
-- kubeadm: UnifiedControlPlaneImage is replaced by UseHyperKubeImage boolean value. ([#70793](https://github.com/kubernetes/kubernetes/pull/70793), [@rosti](https://github.com/rosti))
-- kubeadm v1beta1 API: InitConfiguration.APIEndpoint has been renamed to .LocalAPIEndpoint ([#70761](https://github.com/kubernetes/kubernetes/pull/70761), [@luxas](https://github.com/luxas))
 
 ## Major Themes
 
@@ -73,7 +71,7 @@ For the 1.13 release, SIG API Machinery is happy to announce that the dry-run fu
 
 ### SIG Auth
 
-With this release we've made several important enhancements to core SIG-Auth areas. In the authorization category, we've further reduced Kubelet privileges by restricting node self-updates of labels to a whitelisted selection and by disallowing kubelets from deleting their Node API object. In authentication, we added alpha-level support for automounting improved service account tokens through projected volumes. We also enabled audience validation in TokenReview for the new tokens for improved scoping. Under audit logging, the new alpha-level "dynamic audit configuration" adds support for dynamically registering webhooks to receive a stream of audit events. Finally, we've enhanced secrets protection by graduating etcd encryption out of experimental.
+With this release we've made several important enhancements to core SIG-Auth areas. In the authorization category, we've further reduced Kubelet privileges by [restricting node self-updates of labels to a whitelisted selection and by disallowing kubelets from deleting their Node API object](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#noderestriction). In authentication, we added alpha-level support for automounting improved service account tokens through projected volumes. We also enabled [audience validation in TokenReview](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.13/#tokenreview-v1-authentication-k8s-io) for the new tokens for improved scoping. Under audit logging, the new alpha-level "dynamic audit configuration" adds support for [dynamically registering webhooks to receive a stream of audit events](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#dynamic-backend). Finally, we've enhanced secrets protection by graduating etcd encryption out of experimental.
 
 ### SIG AWS
 
