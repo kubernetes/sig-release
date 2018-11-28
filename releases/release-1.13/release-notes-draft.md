@@ -24,7 +24,7 @@ Before upgrading to Kubernetes 1.13, you must keep the following in mind:
 ## Known Issues
 
 - If kubelet plugin registration for a driver fails, kubelet will not retry. The driver must delete and recreate the driver registration socket in order to force kubelet to attempt registration again. Restarting only the driver container may not be sufficient to trigger recreation of the socket, instead a pod restart may be required. ([#71487](https://github.com/kubernetes/kubernetes/issues/71487))
-- In come cases, a PVC may have erroneous Resizing condition even after volume has been successfully expanded. Users may choose to delete the condition, but it is not required.
+- In some cases, a Flex volume resize may leave a PVC with erroneous Resizing condition even after volume has been successfully expanded. Users may choose to delete the condition, but it is not required. ([#71470](https://github.com/kubernetes/kubernetes/issues/71470))
 
 ## Deprecations
 
