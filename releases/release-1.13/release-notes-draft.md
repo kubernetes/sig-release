@@ -25,6 +25,8 @@ Before upgrading to Kubernetes 1.13, you must keep the following in mind:
 
 - If kubelet plugin registration for a driver fails, kubelet will not retry. The driver must delete and recreate the driver registration socket in order to force kubelet to attempt registration again. Restarting only the driver container may not be sufficient to trigger recreation of the socket, instead a pod restart may be required. ([#71487](https://github.com/kubernetes/kubernetes/issues/71487))
 - In some cases, a Flex volume resize may leave a PVC with erroneous Resizing condition even after volume has been successfully expanded. Users may choose to delete the condition, but it is not required. ([#71470](https://github.com/kubernetes/kubernetes/issues/71470))
+- The CSI driver-registrar external sidecar container v1.0.0-rc2 is known to take up to 1 minute to start in some cases. We expect this issue to be resolved in a future release of the sidecar container. For verification, please see the release notes of future releases of the external sidecar container. ([#76](https://github.com/kubernetes-csi/driver-registrar/issues/76))
+- When using IPV6-only, be sure to use `proxy-mode=iptables` as `proxy-mode=ipvs` is known to not work. ([#68437](https://github.com/kubernetes/kubernetes/issues/68437))
 
 ## Deprecations
 
@@ -78,7 +80,7 @@ For detailed release notes on the three alpha features from SIG AWS, please refe
 
 - [aws-alb-ingress-controller v1.0.0](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/releases/tag/v1.0.0)
 - [aws-ebs-csi-driver v0.1](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/master/CHANGELOG-0.1.md)
-- [cloudprovider-aws external](https://github.com/kubernetes/cloud-provider-aws)
+- [cloudprovider-aws external v0.1.0] (https://github.com/kubernetes/cloud-provider-aws/blob/master/changelogs/CHANGELOG-0.1.md)
 
 ### SIG Azure
 
@@ -190,7 +192,7 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 - vSphereVolume implements Raw Block Volume Support  ([#68761](https://github.com/kubernetes/kubernetes/pull/68761), [@fanzhangio](https://github.com/fanzhangio))
 - CRD supports multi-version Schema, Subresources and AdditionalPrintColumns (NOTE that CRDs created prior to 1.13 populated the top-level additionalPrinterColumns field by default. To apply an updated that changes to per-version additionalPrinterColumns, the top-level additionalPrinterColumns field must be explicitly set to null). ([#70211](https://github.com/kubernetes/kubernetes/pull/70211), [@roycaihw](https://github.com/roycaihw))
 - New addon in addon manager that automatically installs CSI CRDs if CSIDriverRegistry or CSINodeInfo feature gates are true. ([#70193](https://github.com/kubernetes/kubernetes/pull/70193), [@saad-ali](https://github.com/saad-ali))
-- delegated authorization can now allow unrestricted access for `system:masters` like the main kube-apiserver ([#70671](https://github.com/kubernetes/kubernetes/pull/70671), [@deads2k](https://github.com/deads2k))
+- Delegated authorization can now allow unrestricted access for `system:masters` like the main kube-apiserver ([#70671](https://github.com/kubernetes/kubernetes/pull/70671), [@deads2k](https://github.com/deads2k))
 - Added dns capabilities for Windows CNI plugins: ([#67435](https://github.com/kubernetes/kubernetes/pull/67435), [@feiskyer](https://github.com/feiskyer))
 - kube-apiserver: `--audit-webhook-version` and `--audit-log-version` now default to `audit.k8s.io/v1` if unspecified ([#70476](https://github.com/kubernetes/kubernetes/pull/70476), [@charrywanganthony](https://github.com/charrywanganthony))
 - kubeadm: timeoutForControlPlane is introduced as part of the API Server config, that controls the timeout for the wait for control plane to be up. Default value is 4 minutes. ([#70480](https://github.com/kubernetes/kubernetes/pull/70480), [@rosti](https://github.com/rosti))
@@ -290,16 +292,16 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 
 ### SIG Azure
 
-- Ensure orphan public IPs on Azure deleted when service recreated with the same name. ([#70463](https://github.com/kubernetes/kubernetes/pull/70463), [@feiskyer](https://github.com/feiskyer))
-- Improve Azure instance metadata handling by adding caches. ([#70353](https://github.com/kubernetes/kubernetes/pull/70353), [@feiskyer](https://github.com/feiskyer))
-- Corrects check for non-Azure managed nodes with the Azure cloud provider ([#70135](https://github.com/kubernetes/kubernetes/pull/70135), [@marc-sensenich](https://github.com/marc-sensenich))
+- Ensured orphan public IPs on Azure deleted when service recreated with the same name. ([#70463](https://github.com/kubernetes/kubernetes/pull/70463), [@feiskyer](https://github.com/feiskyer))
+- Improved Azure instance metadata handling by adding caches. ([#70353](https://github.com/kubernetes/kubernetes/pull/70353), [@feiskyer](https://github.com/feiskyer))
+- Corrected check for non-Azure managed nodes with the Azure cloud provider ([#70135](https://github.com/kubernetes/kubernetes/pull/70135), [@marc-sensenich](https://github.com/marc-sensenich))
 - Fixed azure disk attach/detach failed forever issue ([#71377](https://github.com/kubernetes/kubernetes/pull/71377), [@andyzhangx](https://github.com/andyzhangx))
 - DisksAreAttached --> getNodeDataDisks--> GetDataDisks --> getVirtualMachine --> vmCache.Get ([#71495](https://github.com/kubernetes/kubernetes/pull/71495), [@andyzhangx](https://github.com/andyzhangx))
 
 ### SIG CLI
 
 - `kubectl apply` can now change a deployment strategy from rollout to recreate without explicitly clearing the rollout-related fields ([#70436](https://github.com/kubernetes/kubernetes/pull/70436), [@liggitt](https://github.com/liggitt))
-- The `kubectl plugin list` command will now display discovered plugin paths in the same order as they are found in a user's PATH variable. ([#70443](https://github.com/kubernetes/kubernetes/pull/70443), [@juanvallejo](https://github.com/juanvallejo))
+- The `kubectl plugin list` command now displays discovered plugin paths in the same order as they are found in a user's PATH variable. ([#70443](https://github.com/kubernetes/kubernetes/pull/70443), [@juanvallejo](https://github.com/juanvallejo))
 - `kubectl get` no longer exits before printing all of its results if an error is found ([#70311](https://github.com/kubernetes/kubernetes/pull/70311), [@juanvallejo](https://github.com/juanvallejo))
 - Fixed a runtime error occuring when sorting the output of `kubectl get` with empty results ([#70740](https://github.com/kubernetes/kubernetes/pull/70740), [@mfpierre](https://github.com/mfpierre))
 - kubectl: support multiple arguments for cordon/uncordon and drain ([#68655](https://github.com/kubernetes/kubernetes/pull/68655), [@goodluckbot](https://github.com/goodluckbot))
