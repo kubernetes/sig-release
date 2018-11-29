@@ -63,17 +63,17 @@ For the 1.13 release, SIG API Machinery is happy to announce that the dry-run fu
 
 ### SIG Auth
 
-With this release we've made several important enhancements to core SIG-Auth areas. In the authorization category, we've further reduced Kubelet privileges by [restricting node self-updates of labels to a whitelisted selection and by disallowing kubelets from deleting their Node API object](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#noderestriction). In authentication, we added alpha-level support for automounting improved service account tokens through projected volumes. We also enabled [audience validation in TokenReview](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.13/#tokenreview-v1-authentication-k8s-io) for the new tokens for improved scoping. Under audit logging, the new alpha-level "dynamic audit configuration" adds support for [dynamically registering webhooks to receive a stream of audit events](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#dynamic-backend). Finally, we've enhanced secrets protection by graduating etcd encryption out of experimental.
+With this release we've made several important enhancements to core SIG Auth areas. In the authorization category, we've further reduced Kubelet privileges by [restricting node self-updates of labels to a whitelisted selection and by disallowing kubelets from deleting their Node API object](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#noderestriction). In authentication, we added alpha-level support for automounting improved service account tokens through projected volumes. We also enabled [audience validation in TokenReview](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.13/#tokenreview-v1-authentication-k8s-io) for the new tokens for improved scoping. Under audit logging, the new alpha-level "dynamic audit configuration" adds support for [dynamically registering webhooks to receive a stream of audit events](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#dynamic-backend). Finally, we've enhanced secrets protection by graduating etcd encryption out of experimental.
 
 ### SIG AWS
 
-In v1.13 we worked towards alpha releases for tighter integration of Kubernetes api objects with AWS services. These include AWS ALB (Application Load Balancer) integration to Kubernetes Ingress resources; CSI specification 0.3 integration to AWS EBS (Elastic Block Store) and an alpha release for the aws cloudprovider cloud controller manager binary. Additionally we also integrated an eks-tester to prow upstream allowing us to provide CI signal for all 3 alpha features in https://testgrid.k8s.io/ for SIG-AWS
+In v1.13 we worked towards alpha releases for tighter integration of Kubernetes api objects with AWS services. These include AWS ALB (Application Load Balancer) integration to Kubernetes Ingress resources; CSI specification 0.3 integration to AWS EBS (Elastic Block Store) and an alpha release for the aws cloudprovider cloud controller manager binary. Additionally we also integrated an eks-tester to prow upstream allowing us to provide CI signal for all 3 alpha features in https://testgrid.k8s.io/ for SIG AWS.
 
 Further, [v1.0.0 of the AWS ALB Ingress Controller](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/) was released, as well as [v0.1.0-alpha.1 of the AWS EBS CSI Driver](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/v0.1.0-alpha.1/docs/README.md) and [v0.1.0 of the AWS CCM](https://github.com/kubernetes/cloud-provider-aws). For more information on these projects, please see each projects documentation and release notes.
 
 ### SIG Azure
 
-For 1.13 SIG-Azure was focused on adding additional Azure Disk support for Ultra SSD, Standard SSD, and Premium Azure Files. Azure Availability Zones and cross resource group nodes were also moved from Alpha to Beta in 1.13.
+For 1.13 SIG Azure was focused on adding additional Azure Disk support for Ultra SSD, Standard SSD, and Premium Azure Files. Azure Availability Zones and cross resource group nodes were also moved from Alpha to Beta in 1.13.
 
 ### SIG Big Data
 
@@ -169,7 +169,7 @@ The migration to the newest version of Angular is still under active development
 
 Major focus for SIG VMware for this release is the work on moving internal APIs that the vSphere provider depends upon to staging to guarantee API stability. This work is being done in conjunction with SIG Cloud Provider and includes the creation of a brand new vsphere-csi plugin to replace the current volume functionalities in-tree.
 
-Additional work was also done to implement a vSphere provider for the Cluster API effort lead by SIG-Cluster-Lifecycle. For the out-of-tree vSphere cloud provider, the SIG largely focused on bug fixes and updates to match K8s 1.13 development.
+Additional work was also done to implement a vSphere provider for the Cluster API effort lead by SIG Cluster Lifecycle. For the out-of-tree vSphere cloud provider, the SIG largely focused on bug fixes and updates to match K8s 1.13 development.
 
 ### SIG Windows
 
