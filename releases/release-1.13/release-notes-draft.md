@@ -31,6 +31,7 @@ Before upgrading to Kubernetes 1.13, you must keep the following in mind:
 - kube-apiserver
   - The `--service-account-api-audiences` flag is deprecated in favor of `--api-audiences`. The old flag is accepted with a warning but will be removed in a future release. ([#70105](https://github.com/kubernetes/kubernetes/pull/70105), [@mikedanese](https://github.com/mikedanese))
   - The `--experimental-encryption-provider-config` flag is deprecated in favor of `--encryption-provider-config`. The old flag is accepted with a warning but will be removed in 1.14. ([#71206](https://github.com/kubernetes/kubernetes/pull/71206), [@stlaz](https://github.com/stlaz))
+  - As part of graduating the etcd encryption feature to beta, the configuration file referenced by `--encryption-provider-config` now uses `kind: EncryptionConfiguration` and `apiVersion: apiserver.config.k8s.io/v1`. Support for `kind: EncryptionConfig` and `apiVersion: v1` is deprecated and will be removed in a future release. ([#67383](https://github.com/kubernetes/kubernetes/pull/67383), [@stlaz](https://github.com/stlaz))
   - The `--deserialization-cache-size` flag is deprecated, and will be removed in a future release. The flag is inactive since the etcd2 storage backend was removed. ([#69842](https://github.com/kubernetes/kubernetes/pull/69842), [@liggitt](https://github.com/liggitt))
   - The `Node` authorization mode no longer allows kubelets to delete their Node API objects (prior to 1.11, in rare circumstances related to cloudprovider node ID changes, kubelets would attempt to delete/recreate their Node object at startup) ([#71021](https://github.com/kubernetes/kubernetes/pull/71021), [@liggitt](https://github.com/liggitt))
   - The built-in `system:csi-external-provisioner` and `system:csi-external-attacher` cluster roles are deprecated and will not be auto-created in a future release. CSI deployments should provide their own RBAC role definitions with required permissions. ([#69868](https://github.com/kubernetes/kubernetes/pull/69868), [@pohly]( https://github.com/pohly))
@@ -49,7 +50,7 @@ Before upgrading to Kubernetes 1.13, you must keep the following in mind:
 - kubeadm
   - The DynamicKubeletConfig feature gate is deprecated. The functionality is still accessible by using the kubeadm alpha kubelet enable-dynamic command.
   - The command `kubeadm config print-defaults` is deprecated in favor of `kubeadm config print init-defaults` and `kubeadm config print join-defaults` ([#69617](https://github.com/kubernetes/kubernetes/pull/69617), [@rosti](https://github.com/rosti))
-  - support for the `v1alpha3` configuration file format is deprecated and will be removed in 1.14. Use `kubeadm config migrate` to migrate `v1alpha3` configuration files to `v1beta1`, which provides improvements in image repository management, addons configuration, and other areas.
+  - support for the `v1alpha3` configuration file format is deprecated and will be removed in 1.14. Use `kubeadm config migrate` to migrate `v1alpha3` configuration files to `v1beta1`, which provides improvements in image repository management, addons configuration, and other areas. The documentation for `v1beta1` can be found here: https://godoc.org/k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1beta1
 - The `node.status.volumes.attached.devicePath` field is deprecated for CSI volumes and will not be set in future releases ([#71095](https://github.com/kubernetes/kubernetes/pull/71095), [@msau42](https://github.com/msau42))
 - kubectl
   - The `kubectl convert` command is deprecated and will be removed in a future release ([#70820](https://github.com/kubernetes/kubernetes/pull/70820), [@seans3](https://github.com/seans3))
@@ -59,11 +60,11 @@ Before upgrading to Kubernetes 1.13, you must keep the following in mind:
 
 ### SIG API Machinery
 
-For the 1.13 release, SIG API Machinery is happy to announce that the dry-run functionality is now beta.
+For the 1.13 release, SIG API Machinery is happy to announce that the [dry-run functionality](https://kubernetes.io//docs/reference/using-api/api-concepts/#dry-run) is now beta.
 
 ### SIG Auth
 
-With this release we've made several important enhancements to core SIG Auth areas. In the authorization category, we've further reduced Kubelet privileges by [restricting node self-updates of labels to a whitelisted selection and by disallowing kubelets from deleting their Node API object](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#noderestriction). In authentication, we added alpha-level support for automounting improved service account tokens through projected volumes. We also enabled [audience validation in TokenReview](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.13/#tokenreview-v1-authentication-k8s-io) for the new tokens for improved scoping. Under audit logging, the new alpha-level "dynamic audit configuration" adds support for [dynamically registering webhooks to receive a stream of audit events](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#dynamic-backend). Finally, we've enhanced secrets protection by graduating etcd encryption out of experimental.
+With this release we've made several important enhancements to core SIG Auth areas. In the authorization category, we've further reduced Kubelet privileges by [restricting node self-updates of labels to a whitelisted selection and by disallowing kubelets from deleting their Node API object](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#noderestriction). In authentication, we added alpha-level support for automounting improved service account tokens through projected volumes. We also enabled [audience validation in TokenReview](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.13/#tokenreview-v1-authentication-k8s-io) for the new tokens for improved scoping. Under audit logging, the new alpha-level "dynamic audit configuration" adds support for [dynamically registering webhooks to receive a stream of audit events](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/#dynamic-backend). Finally, we've enhanced secrets protection by graduating [etcd encryption](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) out of experimental.
 
 ### SIG AWS
 
@@ -89,7 +90,7 @@ During the 1.13 release cycle, SIG Big Data has been focused on community engage
 
 ### SIG CLI
 
-Over the course of 1.13 release SIG CLI mostly focused on stabilizing the items we’ve been working on over the past releases such as server-side printing and its support in kubectl, as well as finishing kubectl diff which is based on server-side dry-run feature. We’ve continued separating kubectl code to prepare for extraction out of main repository. Finally, thanks to the awesome support and feedback from community we’ve managed to promote the new plugin mechanism to Beta.
+Over the course of 1.13 release SIG CLI mostly focused on stabilizing the items we’ve been working on over the past releases such as server-side printing and its support in kubectl, as well as finishing [kubectl diff which is based on server-side dry-run feature](https://kubernetes.io/docs/concepts/overview/object-management-kubectl/#how-to-create-objects). We’ve continued separating kubectl code to prepare for extraction out of main repository. Finally, thanks to the awesome support and feedback from community we’ve managed to promote the new [plugin mechanism to Beta](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/).
 
 ### SIG Cloud Provider
 
@@ -159,13 +160,13 @@ We continue to improve the UX for the svcat CLI, specifically filling in gaps fo
 
 ### SIG Storage
 
-Over the last year, SIG Storage has been focused on adding support for the Container Storage Interface (CSI) to Kubernetes. The specification recently moved to 1.0, and on the heels of this achievement, Kubernetes v1.13 moves CSI support to GA.
+Over the last year, SIG Storage has been focused on adding support for the Container Storage Interface (CSI) to Kubernetes. The specification recently moved to 1.0, and on the heels of this achievement, Kubernetes v1.13 moves CSI support for PersistentVolumes to GA.
 
 With CSI the Kubernetes volume layer becomes truly extensible, allowing third party storage developers to write drivers making their storage systems available in Kubernetes without having to touch the core code.
 
 CSI was first introduction as alpha in Kubernetes v1.9 and moved to beta in Kubernetes v1.10.
 
-You can find a list of sample and production drivers in the CSI Documentation.
+You can find a list of sample and production drivers in the [CSI Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#csi).
 
 SIG Storage also moves support for Block Volumes to beta (introduced as alpha in v1.9) and support for Topology Aware Volume Scheduling to stable (introduced as alpha in v1.9 and promoted to beta in 1.10).
 
@@ -267,13 +268,13 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 - Fixed an issue with stuck connections handling error responses ([#71419](https://github.com/kubernetes/kubernetes/pull/71419), [@liggitt](https://github.com/liggitt))
 - kube-controller-manager and cloud-controller-manager now hold generated serving certificates in-memory unless a writeable location is specified with --cert-dir ([#69884](https://github.com/kubernetes/kubernetes/pull/69884), [@liggitt](https://github.com/liggitt))
 - CCM server will not listen insecurely if secure port is specified ([#68982](https://github.com/kubernetes/kubernetes/pull/68982), [@aruneli](https://github.com/aruneli))
+- List operations against the API now return internal server errors instead of partially complete lists when a value cannot be transformed from storage. The updated behavior is consistent with all other operations that require transforming data from storage such as watch and get. ([#69399](https://github.com/kubernetes/kubernetes/pull/69399), [@mikedanese](https://github.com/mikedanese))
 
 ### SIG Auth
 
 - API Server can be configured to reject requests that cannot be audit-logged. ([#65763](https://github.com/kubernetes/kubernetes/pull/65763), [@x13n](https://github.com/x13n))
 - Go clients created from a kubeconfig that specifies a TokenFile now periodically reload the token from the specified file. ([#70606](https://github.com/kubernetes/kubernetes/pull/70606), [@mikedanese](https://github.com/mikedanese))
 - When `--rotate-server-certificates` is enabled, kubelet will no longer request a new certificate on startup if the current certificate on disk is satisfactory. ([#69991](https://github.com/kubernetes/kubernetes/pull/69991), [@agunnerson-ibm](https://github.com/agunnerson-ibm))
-- List operations against the API now return internal server errors instead of partially complete lists when a value cannot be transformed from storage. The updated behavior is consistent with all other operations that require transforming data from storage such as watch and get. ([#69399](https://github.com/kubernetes/kubernetes/pull/69399), [@mikedanese](https://github.com/mikedanese))
 - Added dynamic audit configuration api ([#67547](https://github.com/kubernetes/kubernetes/pull/67547), [@pbarker](https://github.com/pbarker))
 - Added ability to control primary GID of containers through Pod Spec and PodSecurityPolicy ([#67802](https://github.com/kubernetes/kubernetes/pull/67802), [@krmayankk](https://github.com/krmayankk))
 - kube-apiserver: the `NodeRestriction` admission plugin now prevents kubelets from modifying `Node` labels prefixed with `node-restriction.kubernetes.io/`. The `node-restriction.kubernetes.io/` label prefix is reserved for cluster administrators to use for labeling `Node` objects to target workloads to nodes in a way that kubelets cannot modify or spoof. ([#68267](https://github.com/kubernetes/kubernetes/pull/68267), [@liggitt](https://github.com/liggitt))
