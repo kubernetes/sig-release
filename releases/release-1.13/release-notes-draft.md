@@ -67,7 +67,7 @@ With this release we've made several important enhancements to core SIG Auth are
 
 ### SIG AWS
 
-In v1.13 we worked on tighter integrations of Kubernetes API objects with AWS services. These include threee out-of-tree alpha feature releases:
+In v1.13 we worked on tighter integrations of Kubernetes API objects with AWS services. These include three out-of-tree alpha feature releases:
 
 1) Alpha for AWS ALB (Application Load Balancer) integration to Kubernetes Ingress resources.
 2) Alpha for CSI specification 0.3 integration to AWS EBS (Elastic Block Store)
