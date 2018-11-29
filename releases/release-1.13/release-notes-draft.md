@@ -67,9 +67,17 @@ With this release we've made several important enhancements to core SIG Auth are
 
 ### SIG AWS
 
-In v1.13 we worked towards alpha releases for tighter integration of Kubernetes api objects with AWS services. These include AWS ALB (Application Load Balancer) integration to Kubernetes Ingress resources; CSI specification 0.3 integration to AWS EBS (Elastic Block Store) and an alpha release for the aws cloudprovider cloud controller manager binary. Additionally we also integrated an eks-tester to prow upstream allowing us to provide CI signal for all 3 alpha features in https://testgrid.k8s.io/ for SIG AWS.
+In v1.13 we worked on tighter integrations of Kubernetes API objects with AWS services. These include threee out-of-tree alpha feature releases:
 
-Further, [v1.0.0 of the AWS ALB Ingress Controller](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/) was released, as well as [v0.1.0-alpha.1 of the AWS EBS CSI Driver](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/v0.1.0-alpha.1/docs/README.md) and [v0.1.0 of the AWS CCM](https://github.com/kubernetes/cloud-provider-aws). For more information on these projects, please see each projects documentation and release notes.
+1) Alpha for AWS ALB (Application Load Balancer) integration to Kubernetes Ingress resources.
+2) Alpha for CSI specification 0.3 integration to AWS EBS (Elastic Block Store)
+3) Alpha for the cloudprovider-aws cloud controller manager binary. Additionally we added [aws-k8s-tester](https://github.com/kubernetes/test-infra/issues/9814), deployer interface for kubetest, to the test-infra repository. This plugin allowed us to integrate Prow to the 3 subprojects defined above in order to provide CI signal for all 3 features. The CI signal is visible [here](https://testgrid.k8s.io/) under SIG-AWS.
+
+For detailed release notes on the three alpha features from SIG AWS, please refer to the following Changelogs:
+
+- [aws-alb-ingress-controller v1.0.0](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/releases/tag/v1.0.0)
+- [aws-ebs-csi-driver v0.1](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/master/CHANGELOG-0.1.md)
+- [cloudprovider-aws external](https://github.com/kubernetes/cloud-provider-aws)
 
 ### SIG Azure
 
