@@ -26,6 +26,7 @@ Before upgrading to Kubernetes 1.13, you must keep the following in mind:
 - If kubelet plugin registration for a driver fails, kubelet will not retry. The driver must delete and recreate the driver registration socket in order to force kubelet to attempt registration again. Restarting only the driver container may not be sufficient to trigger recreation of the socket, instead a pod restart may be required. ([#71487](https://github.com/kubernetes/kubernetes/issues/71487))
 - In some cases, a Flex volume resize may leave a PVC with erroneous Resizing condition even after volume has been successfully expanded. Users may choose to delete the condition, but it is not required. ([#71470](https://github.com/kubernetes/kubernetes/issues/71470))
 - The CSI driver-registrar external sidecar container v1.0.0-rc2 is known to take up to 1 minute to start in some cases. We expect this issue to be resolved in a future release of the sidecar container. For verification, please see the release notes of future releases of the external sidecar container. ([#76](https://github.com/kubernetes-csi/driver-registrar/issues/76))
+- When using IPV6-only, be sure to use `proxy-mode=iptables` as `proxy-mode=ipvs` is known to not work. ([#68437](https://github.com/kubernetes/kubernetes/issues/68437))
 
 ## Deprecations
 
