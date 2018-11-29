@@ -280,7 +280,7 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 
 ### SIG Autoscaling
 
-- Updated Cluster Autoscaler version to 1.13.0-rc.2. See the [Release Notes](https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.13.0-rc.2) for more information. ([#71452](https://github.com/kubernetes/kubernetes/pull/71452), [@losipiuk](https://github.com/losipiuk))
+- Updated Cluster Autoscaler version to 1.13.0. See the [Release Notes](https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.13.0) for more information. ([#71513](https://github.com/kubernetes/kubernetes/pull/71513), [@losipiuk](https://github.com/losipiuk))
 
 ### SIG AWS
 
