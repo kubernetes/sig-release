@@ -60,35 +60,30 @@ The process of maintaining an enhancement in Kubernetes is documented in the [ku
 It is important that this process be followed and documentation remain up-to-date as the [Enhancements repo][k/enhancements] is the primary ingress point for contributors interested in tracking enhancements.
 
 ### Milestone Activities + Timing
-- Link items from succession section
-- (optional) Watch the kubernetes/enhancements repo to get notified on all issues
-- Ensure that Enhancement Tracking sheet for the new release was created by the previous Enhancements Lead and populated with the enhancements removed from the previous milestone
-- Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements
-- Ensure the Enhancements Tracking sheet has the appropriate permissions:
-ownership transferred to you
-  - anyone who has the link can comment
-  - Edit access
-    - [SIG PM][sig-pm] Chairs
-    - [Kubernetes Release Team Google Group][rt-group]
-  - Comment access
-    - [SIG Release Google Group][sig-release-group]
-    - [SIG PM Google Group][sig-pm-group]
-    - [SIG Docs Google Group][sig-docs-group]
-    - [SIG Leads Google Group][sig-leads-group]
-- Work with outgoing Enhancements Lead to elicit information from SIGs on enhancements removed from previous milestone
-- Enhancements Triage
-  - Check enhancements and ensure they provide the required information and labels to be accepted into the milestone.
-    - Enhancements marked for current milestone
-    - Enhancements marked for previous milestone
-    - Enhancements marked with `next-milestone` (https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Anext-milestone+sort%3Acreated-desc)
-    - Enhancements without a milestone (https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+sort%3Acreated-desc+no%3Amilestone)
-    - Enhancements from two or more milestones ago
-  - Confirm with the Enhancement Owner if work is planned for current milestone
-    - Apply the current milestone
-    - Add the enhancement to the Enhancements Tracking sheet
-    - Apply the `tracked/yes` label
-    - Remove `lifecycle/frozen` label from all issues
-- Sync with Product Management Chair (bi-weekly?)
+
+| **Week** | **Stage** | **Action** |
+| --- | --- | --- |
+| 0 | Pre-Collection | Gather Shadows to have them read this handbook, watch the [k/enhancements](https://github.com/kubernetes/enhancements) repo to get notified on all issues, and give expectations on what the process looks like and their particular role. |
+| 0 | Pre-Collection | Duplicate the previous enhancement collection spreadsheet into your own Google Drive and adjust it for the current milestone. Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements. Edit access is needed for yourself, prior lead, release lead, shadows, [SIG PM][sig-pm] Chairs, and  [Kubernetes Release Team Google Group][rt-group]. Access is done two ways. First is giving sheet RW access with Data -> Protected Sheets and Ranges. Add users there and then Share the sheet as well. Comment access is needed by [SIG Release Google Group][sig-release-group], [SIG PM Google Group][sig-pm-group], [SIG Docs Google Group][sig-docs-group], and [SIG Leads Google Group][sig-leads-group]. Remove all currently tracked issues. |
+| 0 | Pre-Collection | Examine the `Removed From Milestone` tab and visit those issues to see if they have been added to the current milestone. These enhancements likely slipped because of docs or testing. Ping owners to make sure they are targeted for the current milestone. |
+| 0 | Pre-Collection | Find Issues from previous milestone that have graduated to Stable and close the issue. Remove `tracked/yes` or `tracked/no` labels. |
+| 0 | Pre-Collection | Clear out previous milestone issues. Ping owners to get them to drop milestone or add to the current milestone so it can be tracked. This can be a responsibility for shadow roles. |
+| 0 | Pre-Collection | Close previous milestone. |
+| 0 | Pre-Collection | Any issues in the current milestone can be added to the tracking sheet. Add the `tracked/yes` label to any issue that is being tracked in the sheet and current milestone. |
+| 0 | Pre-Collection | Ping any owners on `lifecycle/frozen` label from all issues to see if there is any planned work or if the issue is no longer relevant to Kubernetes. |
+| 0 | Pre-Collection | Send an email to the [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) mailing list with a call for enhancements. View prior examples for references ([1](https://groups.google.com/forum/#!msg/kubernetes-dev/vGSBzUUWp9g/bFa1re3ZAgAJ) [2](https://groups.google.com/forum/#!msg/kubernetes-dev/T-kIHtgS5J4/ZjKTsCf_AwAJ;context-place=msg/kubernetes-dev/vGSBzUUWp9g/bFa1re3ZAgAJ)). |
+| 1 | Collection | Find Issues that have been marked with the current milestone and apply the `tracked/yes` label and add it to the tracking sheet. Ensure they provide the required information and labels to be accepted into the milestone. |
+| 1 | Collection | Go to every open issue that is marked with `tracked/no` and ping the owner to see if the enhancement will be included or graduating stages in the current milestone. If there is no graduation, leave as-is. If the enhancement is graduating, remove `tracked/no`, add `tracked/yes`, add to the current milestone, and add to the tracking sheet. Another great task for shadow help or some automation. |
+| 1 | Collection | Verify issues have k/k PRs associated so they can be referenced and easily tracked. This is going to be critical come to Enhancement Freeze and Code Slush to see the status of the code. |
+| 1 | Collection | Work with the Release Lead to attend every SIG meeting over the span of 2-3 weeks. Take 2 minutes to introduce yourself, talk about release information, and relay information about issues that haven't been removed from the previous milestone or call out issues that may need some attention. |
+| 1 | Collection | New issues will be created. Take the opportunity to apply correct labels, milestone information, and add to the sheet if necessary. |
+| 1 | Collection | Weekly Release meetings require updates of current status. Use the `Feature stats` tab to update the release team on counts of enhancements in good and bad progress.|
+| 2-3 | Collection Monitoring and Triage | Stay on top of comments in issues when owners respond. Apply correct labels, milestone information, and add to the sheet if necessary. |
+| 2-3 | Collection Monitoring and Triage | Mark features as "At Risk" if there is no communication or active PRs on the issues coming into Enhancement Freeze. |
+| 4 | Enhancement Freeze | On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) that freeze has happened. "We are at X enhancements, and any new ones will require an exception." Examples [1](https://groups.google.com/forum/#!msg/kubernetes-dev/4kefhF6nOFQ/rCOme6vjCAAJ) [2](https://groups.google.com/forum/#!msg/kubernetes-dev/T-kIHtgS5J4/wW73F2HmBAAJ;context-place=msg/kubernetes-dev/T-kIHtgS5J4/ZjKTsCf_AwAJ). |
+| 5-7 | Freeze Monitoring | Stay on top of issues and continually monitor them twice a week and look at attached PRs. As Code Slush gets closer, there are PRs that have not been merged, move the issue to At Risk. If there is no activity, ping issue owners on either the issue or the k/k PR. |
+| 8-10 | Freeze Monitoring | Monitor issues that are At Risk closer, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward. |
+| 10 | Code Freeze | Start planning for the next release while assisting the Release Lead with anything relating to Analyst or Public Relation planning. Work with the Communications Lead to develop major themes for the official Kubernetes blog post. |
 
 ### Escalation / Handling Unresponsive Enhancement Owners
 List of unresponsive issues? Add unresponsive status to enhancements tracking?
