@@ -132,7 +132,7 @@ Progress was made towards finalizing the IPv6 dual stack support KEP and support
 
 ### SIG Node
 
-SIG Node focused on stability and performance improvements in the 1.13 release.  A new alpha feature is introduced to improve the mechanism that nodes heartbeat back to the control plane.  The `NodeLease` feature results in the node using a `Lease` resource in the `kube-node-lease` namespace that is renewed periodically.  The `NodeStatus` that was used previously to heartbeat back to the control plane is only updated when it changes.  This reduces load on the control plane for large clusters.
+SIG Node focused on stability and performance improvements in the 1.13 release.  A new alpha feature is introduced to improve the mechanism that nodes heartbeat back to the control plane.  The `NodeLease` feature results in the node using a `Lease` resource in the `kube-node-lease` namespace that is renewed periodically.  The `NodeStatus` that was used previously to heartbeat back to the control plane is only updated when it changes.  This reduces load on the control plane for large clusters. The Kubelet plugin registration mechanism, which enables automatic discovery of external plugins (including CSI and device plugins) has been promoted to stable in this release (introduced as alpha in 1.11 and promoted to beta in 1.12).
 
 ### SIG Openstack
 
@@ -325,7 +325,6 @@ filename  | sha512 hash
 * Implement support for storage class parameter - volume type ([#73](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/73), [@leakingtapan](https://github.com/leakingtapan/))
 * Implement support for storage class parameter - fsType ([#67](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/67), [@leakingtapan](https://github.com/leakingtapan/))
 * Added missing capability and clusterrole permission to enable tology awareness scheduling ([2873e0b](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/commit/2873e0b), [@leakingtapan](https://github.com/leakingtapan/))
-* Wait for correct attachment state ([f11db6c](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/commit/f11db6c), [@bertinatto](https://github.com/bertinatto/))
 * Implement topology awareness support for dynamic provisioning ([#42](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/42), [@leakingtapan](https://github.com/leakingtapan/))
 * Wait for volume status in e2e test ([#34](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/34), [@bertinatto](https://github.com/bertinatto/))
 * Updated cloud provider interface to take in context ([#45](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/45), [@leakingtapan](https://github.com/leakingtapan/))
