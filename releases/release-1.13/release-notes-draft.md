@@ -69,6 +69,8 @@ With this release we've made several important enhancements to core SIG-Auth are
 
 In v1.13 we worked towards alpha releases for tighter integration of Kubernetes api objects with AWS services. These include AWS ALB (Application Load Balancer) integration to Kubernetes Ingress resources; CSI specification 0.3 integration to AWS EBS (Elastic Block Store) and an alpha release for the aws cloudprovider cloud controller manager binary. Additionally we also integrated an eks-tester to prow upstream allowing us to provide CI signal for all 3 alpha features in https://testgrid.k8s.io/ for SIG-AWS
 
+Further, [v1.0.0 of the AWS ALB Ingress Controller](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/) was released, as well as [v0.1.0-alpha.1 of the AWS EBS CSI Driver](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/v0.1.0-alpha.1/docs/README.md) and [v0.1.0 of the AWS CCM](https://github.com/kubernetes/cloud-provider-aws). For more information on these projects, please see each projects documentation and release notes.
+
 ### SIG Azure
 
 For 1.13 SIG-Azure was focused on adding additional Azure Disk support for Ultra SSD, Standard SSD, and Premium Azure Files. Azure Availability Zones and cross resource group nodes were also moved from Alpha to Beta in 1.13.
@@ -276,68 +278,6 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 
 - `service.beta.kubernetes.io/aws-load-balancer-internal` now supports true and false values, previously it only supported non-empty strings ([#69436](https://github.com/kubernetes/kubernetes/pull/69436), [@mcrute](https://github.com/mcrute))
 - Added `service.beta.kubernetes.io/aws-load-balancer-security-groups` annotation to set the security groups to the AWS ELB to be the only ones specified in the annotation in case this is present (does not add `0.0.0.0/0`).  ([#62774](https://github.com/kubernetes/kubernetes/pull/62774), [@Raffo](https://github.com/Raffo))
-
-#### aws-alb-ingress-controller v1.0.0
-
-- [Documentation](https://kubernetes-sigs.github.io/aws-alb-ingress-controller)
-
-##### Changelog since 1.0-beta.7
-
-###### Action Required
-
-- change annotation `security-group-inbound-cidr` to `inbound-cidr`([#733](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/pull/733), [@M00nF1sh](https://github.com/m00nf1sh))
-
-###### Other notable changes
-
-* Added support for specify default tags at controller level([#711](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/pull/711), [@jmcarp](https://github.com/jmcarp))
-* Added feature gate for WAF support([#728](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/pull/728), [@M00nF1sh](https://github.com/m00nf1sh))
-* Allow service of type LoadBalancer for instance target mode([#732](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/pull/732), [@hatmatter](https://github.com/hatmatter))
-* Align tagging support for securityGroups with other resources([#730](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/pull/730), [@M00nF1sh](https://github.com/m00nf1sh))
-* Fixed bug when handling empty path in ingress spec([#736](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/pull/736), [@M00nF1sh](https://github.com/m00nf1sh))
-* Resolve VPC ID and AWS Region from ec2metadata during start up([#723](https://github.com/kubernetes-sigs/aws-alb-ingress-controller/pull/723), [@M00nF1sh](https://github.com/m00nf1sh))
-
-
-#### aws-ebs-csi-driver v0.1.0-alpha.1
-
-- [Documentation](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/v0.1.0-alpha.1/docs/README.md)
-
-##### Downloads for v0.1.0-alpha.1
-
-filename  | sha512 hash
---------- | ------------
-[v0.1.0-alpha.1.zip](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/archive/v0.1.0-alpha.1.zip) | `95b24b02a23a0806332371b9fdf071efe48c88a572038c2a8d15b98f63d053462620f6752b04ccd29ba26520b43087cd52504cce81b029c527be606e12133212`
-[v0.1.0-alpha.1.tar.gz](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/archive/v0.1.0-alpha.1.tar.gz) | `c1e89917e6d6b4b2102c8a2f20936b994488db69b10d66cc490076ccb0793dbcb2f70b77efa751a35b331059062745c829a1a951eefde6d0a059058906530c51`
-
-##### Changelog since initial commit
-
-###### Other notable changes
-
-* Updated driver name and topology key ([#105](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/105), [@leakingtapan](https://github.com/leakingtapan/))
-* Added support for creating encrypted volume and unit test ([#80](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/80), [@leakingtapan](https://github.com/leakingtapan/))
-* Implement support for storage class parameter - volume type ([#73](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/73), [@leakingtapan](https://github.com/leakingtapan/))
-* Implement support for storage class parameter - fsType ([#67](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/67), [@leakingtapan](https://github.com/leakingtapan/))
-* Added missing capability and clusterrole permission to enable tology awareness scheduling ([2873e0b](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/commit/2873e0b), [@leakingtapan](https://github.com/leakingtapan/))
-* Implement topology awareness support for dynamic provisioning ([#42](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/42), [@leakingtapan](https://github.com/leakingtapan/))
-* Wait for volume status in e2e test ([#34](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/34), [@bertinatto](https://github.com/bertinatto/))
-* Updated cloud provider interface to take in context ([#45](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/pull/45), [@leakingtapan](https://github.com/leakingtapan/))
-* Initial driver implementation ([9ba4c5d](https://github.com/kubernetes-sigs/aws-ebs-csi-driver/commit/9ba4c5d), [@bertinatto](https://github.com/bertinatto/))
-
-#### external ccm cloudprovider-aws v0.1.0
-
-- [Documentation](https://github.com/kubernetes/cloud-provider-aws)
-
-##### Features (or) Other Notable Changes
-
-* service.beta.kubernetes.io/aws-load-balancer-internal now supports true and false values, previously it only supported non-empty strings (#69436, @mcrute)
-* Cleanup of AWS cloud provider code style
-* Fixed AWS cloud provider import order (#69708, @mcrute)
-* AWS cloud provider is golint clean (#69387 , @mcrute)
-* Rename test case in AWS cloud provider (#69706, @mcrute)
-
-#### EKS test-infra/kubetest plugin
-
-* Added EKS plugin to "kubetest" ([test-infra#9811](https://github.com/kubernetes/test-infra/pull/9811), @gyuho)
-* Added ci-kubernetes-e2e-aws-eks Prow job (as a non-blocking post-submit job) ([test-infra#9940](https://github.com/kubernetes/test-infra/pull/9940), @gyuho)
 
 ### SIG Azure
 
