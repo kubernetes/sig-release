@@ -444,7 +444,7 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 - The fluent-plugin-kubernetes_metadata_filter plugin in fluentd-elasticsearch is unchanged from v1.12: 2.0.0 ([#67544](https://github.com/kubernetes/kubernetes/pull/67544))
 - fluentd-gcp has been updated to v3.2.0 ([#70954](https://github.com/kubernetes/kubernetes/pull/70954))
 - OIDC authentication is unchanged from 1.10: coreos/go-oidc v2 ([#58544](https://github.com/kubernetes/kubernetes/pull/58544))
-- Calico wsa updated to v3.3.1 ([#70932](https://github.com/kubernetes/kubernetes/pull/70932))
+- Calico was updated to v3.3.1 ([#70932](https://github.com/kubernetes/kubernetes/pull/70932))
 - hcsshim is unchanged from v1.11, at v0.6.11 ([#64272](https://github.com/kubernetes/kubernetes/pull/64272))
 - Upgraded crictl on GCE to v1.12.0 ([#69033](https://github.com/kubernetes/kubernetes/pull/69033))
 - CoreDNS has been updated to v1.2.6 ([#70799](https://github.com/kubernetes/kubernetes/pull/70799))
