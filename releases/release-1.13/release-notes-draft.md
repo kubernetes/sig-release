@@ -438,7 +438,7 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 - Grafana is unchanged from v1.10: v4.4.3 ([#53319](https://github.com/kubernetes/kubernetes/pull/53319))
 - Kibana is at v6.3.2.  ([#67582](https://github.com/kubernetes/kubernetes/pull/67582))
 - CAdvisor was updated to v0.32.0 ([#70964](https://github.com/kubernetes/kubernetes/pull/70964))
-- fluentd-gcp-scaler is unchanged from v1.11: 0.4.0 ([#67691](https://github.com/kubernetes/kubernetes/pull/67691))
+- fluentd-gcp-scaler has been updated to v0.5.0 ([#68837](https://github.com/kubernetes/kubernetes/pull/68837))
 - Fluentd in fluentd-elasticsearch is unchanged from v1.11:  v1.2.4 ([#67434](https://github.com/kubernetes/kubernetes/pull/67434))
 - fluentd-elasticsearch was updated to v2.2.1 ([#68012](https://github.com/kubernetes/kubernetes/pull/68012))
 - The fluent-plugin-kubernetes_metadata_filter plugin in fluentd-elasticsearch is unchanged from v1.12: 2.0.0 ([#67544](https://github.com/kubernetes/kubernetes/pull/67544))
