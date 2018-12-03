@@ -436,7 +436,7 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 - kube-dns is unchanged at v1.14.13 since Kubernetes 1.12 ([#68900](https://github.com/kubernetes/kubernetes/pull/68900))
 - Influxdb is unchanged at v1.3.3 since Kubernetes 1.10 ([#53319](https://github.com/kubernetes/kubernetes/pull/53319))
 - Grafana is unchanged at v4.4.3 since Kubernetes 1.10 ([#53319](https://github.com/kubernetes/kubernetes/pull/53319))
-- Kibana is at v6.3.2.  ([#67582](https://github.com/kubernetes/kubernetes/pull/67582))
+- Kibana has been upgraded to v6.3.2.  ([#67582](https://github.com/kubernetes/kubernetes/pull/67582))
 - CAdvisor has been updated to v0.32.0 ([#70964](https://github.com/kubernetes/kubernetes/pull/70964))
 - fluentd-gcp-scaler has been updated to v0.5.0 ([#68837](https://github.com/kubernetes/kubernetes/pull/68837))
 - Fluentd in fluentd-elasticsearch is unchanged at v1.2.4 since Kubernetes 1.11 ([#67434](https://github.com/kubernetes/kubernetes/pull/67434))
