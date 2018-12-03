@@ -1,5 +1,9 @@
 # Kubernetes 1.13 Release Notes
 
+## Security Content
+
+- CVE-2018-1002105, a critical security issue in the Kubernetes API Server, is resolved in v1.13.0 (and in [v1.10.11](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.10.md/#v11011), [v1.11.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.11.md/#v1115), and [v1.12.3](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md/#v1123)). We recommend all clusters running previous versions update to one of these releases immediately. See issue [#71411](https://github.com/kubernetes/kubernetes/issues/71411) for details.
+
 ## Urgent Upgrade Notes
 
 ### (No, really, you MUST do this before you upgrade)
