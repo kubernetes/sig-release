@@ -431,7 +431,7 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 - CNI is unchanged from v1.10: v0.6.0 ([#51250](https://github.com/kubernetes/kubernetes/pull/51250))
 - CSI is bumped to 1.0.0. Pre-1.0.0 API support is deprecated. ([#71020](https://github.com/kubernetes/kubernetes/pull/71020)])
 - The dashboard add-on has been updated to v1.10.0. ([#68450](https://github.com/kubernetes/kubernetes/pull/68450))
-- Bump Heapster to v1.6.0-beta as compared to v1.5.2 in v1.11  ([#67074](https://github.com/kubernetes/kubernetes/pull/67074))
+- Heapster remains at v1.6.0-beta, but is now retired in v1.13  ([#67074](https://github.com/kubernetes/kubernetes/pull/67074))
 - Cluster Autoscaler has been upgraded to v1.13.0 ([#71513](https://github.com/kubernetes/kubernetes/pull/71513))
 - kube-dns is unchanged from v1.12: v1.14.13. ([#68900](https://github.com/kubernetes/kubernetes/pull/68900))
 - Influxdb is unchanged from v1.10: v1.3.3 ([#53319](https://github.com/kubernetes/kubernetes/pull/53319))
