@@ -19,6 +19,9 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 - If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberity in completing the notes
 - A "Known Issues" section will also be created in a GitHub issue to be added to the release notes before release date.
 - The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
+- An "External Dependencies" section should be currated which outlines how external depdendency versions have changed since the last release
+  - See [the 1.12 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md#external-dependencies) for an example
+	- Note that there are [plans in the process to formalize and automate the process of aggregating the changes](https://github.com/kubernetes/community/issues/2234), but this is currently [a very manual process](https://github.com/kubernetes/sig-release/pull/398).
 - Kubernetes is released with the completed notes!
 
 ## Tools
