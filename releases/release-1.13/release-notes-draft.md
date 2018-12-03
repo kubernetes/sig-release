@@ -429,7 +429,6 @@ SIG Windows focused on improving reliability for Windows and Kubernetes support
 - The default Go version was updated to 1.11.2. ([#70665](https://github.com/kubernetes/kubernetes/pull/70665))
 - The minimum supported Go version was updated to 1.11.2 ([#69386](https://github.com/kubernetes/kubernetes/pull/69386))
 - CNI is unchanged from v1.10: v0.6.0 ([#51250](https://github.com/kubernetes/kubernetes/pull/51250))
-- CSI is unchanged from v1.11:  0.3.0 ([#64719](https://github.com/kubernetes/kubernetes/pull/64719))
 - CSI is bumped to 1.0.0. Pre-1.0.0 API support is deprecated. ([#71020](https://github.com/kubernetes/kubernetes/pull/71020)])
 - The dashboard add-on has been updated to v1.10.0. ([#68450](https://github.com/kubernetes/kubernetes/pull/68450))
 - Bump Heapster to v1.6.0-beta as compared to v1.5.2 in v1.11  ([#67074](https://github.com/kubernetes/kubernetes/pull/67074))
