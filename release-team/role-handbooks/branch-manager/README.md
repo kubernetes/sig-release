@@ -18,6 +18,7 @@
     -   [Code Slush, Freeze, Thaw](#code-slush-freeze-thaw)
     -   [Reverts](#reverts)
 -   [Cherry Picks](#cherry-picks)
+-   [Staging Repositories](#staging-repositories)
 
 ---
 
@@ -181,3 +182,20 @@ The current documentation in the [contributor guide for cherry picks](https://gi
 The cherry pick script is also fairly self documenting in terms of how to invoke the command.
 
 There has been quite a bit of recent discussion (see: [1](https://github.com/kubernetes/community/pull/2408), [2](https://github.com/kubernetes/community/pull/1980)) around improving both the cherry pick process process and its documentation.  Watch for and contribute to improvements.
+
+# Staging Repositories
+
+The [publishing-bot](https://github.com/kubernetes/publishing-bot) is responsible for publishing the code in
+[staging](https://git.k8s.io/kubernetes/staging/src/k8s.io) to their own repositories.
+
+The bot also syncs the Kubernetes version tags to the published repos, prefixed with `kubernetes-`.
+For example, if you check out the `kubernetes-1.13.0` tag in client-go, the code you get is exactly the same
+as if you check out the `v1.13.0` tag in Kubernetes, and change the directory to `staging/src/k8s.io/client-go`.
+
+[client-go](https://github.com/kubernetes/client-go) follows [semver](http://semver.org/)
+and has its own release process. This release process and the publishing-bot are maintained
+by SIG API Machinery. In case of any questions related to the published staging repos,
+please ask someone listed in the following [OWNERS](https://git.k8s.io/publishing-bot/OWNERS) file.
+
+The bot runs every four hours, so it might take sometime for a new tag to appear on a published repository.
+The client-go major release (eg `v1.13.0`) is released manually a day after the main Kubernetes release.
