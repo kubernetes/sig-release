@@ -224,6 +224,7 @@ Note: The kubernetes-security GitHub org is co-owned and viewable by the PST and
 These steps should be completed within the 1-7 days of Disclosure.
 
 - The Fix Lead and the Fix Team will create a [CVSS](https://www.first.org/cvss/specification-document) using the [CVSS Calculator](https://www.first.org/cvss/calculator/3.0). They will also use the [Severity Thresholds - How We Do Vulnerability Scoring](#severity-thresholds-how-we-do-vulnerability-scoring) to determine the effect and severity of the bug. The Fix Lead makes the final call on the calculated risk; it is better to move quickly than make the perfect assessment.
+- The Fix Lead will request a CVE from [DWF](https://github.com/distributedweaknessfiling/DWF-Documentation).
 - The Fix Team will notify the Fix Lead that work on the fix branch is complete once there are LGTMs on all commits in the private repo from one or more relevant assignees in the relevant OWNERS file.
 
 If the CVSS score is under 4.0 ([a low severity score](https://www.first.org/cvss/specification-document#i5)) or the assessed risk is low the Fix Team can decide to slow the release process down in the face of holidays, developer bandwidth, etc. These decisions must be discussed on the security@kubernetes.io mailing list.
@@ -231,13 +232,6 @@ If the CVSS score is under 4.0 ([a low severity score](https://www.first.org/cvs
 ### Fix Disclosure Process
 
 With the Fix Development underway the Fix Lead needs to come up with an overall communication plan for the wider community. This Disclosure process should begin after the Fix Team has developed a Fix or mitigation so that a realistic timeline can be communicated to users.
-
-**Disclosure of Forthcoming Fix to Users** (Completed within 1-7 days of Disclosure)
-
-- The Fix Lead will email [kubernetes-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-announce) and [kubernetes-security-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-security-announce) informing users that a security vulnerability has been disclosed and that a fix will be made available at YYYY-MM-DD HH:MM UTC in the future via this list. This time is the Release Date. This will be the action of any release that causes a new release of [github.com/kubernetes/kubernetes/releases](https://github.com/kubernetes/kubernetes/releases). Any other releases should use [kubernetes-users@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-users).
-- The Fix Lead will include any mitigating steps users can take until a fix is available.
-
-The communication to users should be actionable. They should know when to block time to apply patches, understand exact mitigation steps, etc.
 
 **Optional Fix Disclosure to Private Distributors List** (Completed within 1-14 days of Disclosure):
 
@@ -247,13 +241,15 @@ The communication to users should be actionable. They should know when to block 
 
 **Fix Release Day** (Completed within 1-21 days of Disclosure)
 
-- The Release Managers will ensure all the binaries are built, publicly available, and functional before the Release Date.
-  - TODO: this will require a private security build process.
-- The Release Managers will create a new patch release branch from the latest patch release tag + the fix from the security branch. As a practical example if v1.5.3 is the latest patch release in kubernetes.git a new branch will be created called v1.5.4 which includes only patches required to fix the issue.
-- The Fix Lead will cherry-pick the patches onto the master branch and all relevant release branches. The Fix Team will LGTM and merge.
-- The Release Managers will merge these PRs as quickly as possible. Changes shouldn't be made to the commits even for a typo in the CHANGELOG as this will change the git sha of the already built and commits leading to confusion and potentially conflicts as the fix is cherry-picked around branches.
-- The Fix Lead will request a CVE from [DWF](https://github.com/distributedweaknessfiling/DWF-Documentation) and include the CVSS and release details.
-- The Fix Lead will email kubernetes-{dev,users,announce,security-announce}@googlegroups.com now that everything is public announcing the new releases, the CVE number, the location of the binaries, and the relevant merged PRs to get wide distribution and user action. As much as possible this email should be actionable and include links how to apply the fix to users environments; this can include links to external distributor documentation. The recommended target time is 4pm UTC on a non-Friday weekday. This means the announcement will be seen morning Pacific, early evening Europe, and late evening Asia.
+- The Fix Lead will cherry-pick the patches onto the master branch and all relevant release branches. The Fix Team will `/lgtm` and `/approve`.
+- The Release Managers will merge these PRs as quickly as possible. Changes shouldn't be made to the commits at this point, to prevent potential conflicts with the patches sent to distributors, and conflicts as the fix is cherry-picked around branches.
+- The Release Managers will ensure all the binaries are built, publicly available, and functional.
+- The Fix Lead will announce the new releases, the CVE number, severity, and impact, and the location of the binaries to get wide distribution and user action. As much as possible this announcement should be actionable, and include any mitigating steps users can take prior to upgrading to a fixed version. The recommended target time is 4pm UTC on a non-Friday weekday. This means the announcement will be seen morning Pacific, early evening Europe, and late evening Asia. The announcement will be sent via the following channels:
+  - kubernetes-dev@googlegroups.com
+  - kubernetes-announce@googlegroups.com
+  - kubernetes-security-announce@googlegroups.com
+  - [#announcements slack channel](https://kubernetes.slack.com/messages/C9T0QMNG4)
+  - [discuss.kubernetes.io](https://discuss.kubernetes.io/c/announcements) forum
 - The Fix Lead will remove the Fix Team from the private security repo.
 
 ### Retrospective
