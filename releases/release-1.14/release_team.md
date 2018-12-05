@@ -9,4 +9,4 @@
 | Docs | Jim Angel ([@jimangel](https://github.com/jimangel)) |  |
 | Release Notes | Dave Strebel ([@dstrebel](https://github.com/dstrebel)) |  |
 | Communications | Natasha Woods ([@nwoods3](https://github.com/nwoods3)) |  Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) |
-| Patch Release Managers | | |
+| Stable Branch Management Team  | Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska)), Tim Pepper ([@tpepper](https://github.com/tpepper)) | Abubakr-Sadik Nii Nai Davis ([@ttousai](https://github.com/ttousai)) |
