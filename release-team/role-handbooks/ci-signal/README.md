@@ -8,9 +8,9 @@ CI Signal lead assumes the responsibility of the quality gate for the release. T
 - Ensuring that all release blocking tests provide a clear Go/No-Go signal for the release
 - Flagging regressions as close to source as possible i.e., as soon as the offending code was merged
 - Filing issues proactively for test failures and flakes, triaging issues to appropriate SIG/owner, following up on status and verifying fixes on newer test runs
-- Studying patterns/history of test health from previous releases and working closely with SIGs and test owners to 
+- Studying patterns/history of test health from previous releases and working closely with SIGs and test owners to
   - Understand and fix the test for the current release
-  - Understand if the test needs to be release blocking 
+  - Understand if the test needs to be release blocking
   - Work with SIG-Testing on any possible test infra improvement to help improve test pass rate
 - Making recommendations to SIG-Release for promoting and demoting release blocking and merge blocking tests as per the [Blocking tests Proposal](https://docs.google.com/document/d/1kCDdmlpTnHPQt5z8JzODdFCc3T2D4MKR53twsDZu20c/edit)
 
@@ -24,11 +24,39 @@ The core responsibility of the CI Signal lead is to foster a culture of continuo
 
 ## Requirements
 
-- Signal lead needs the ability to notify kubernetes org github teams, so must be a kubernetes org collaborator or member
+### Time Requirements
+
+CI Signal is one of the more time-intensive roles on the release team, and as such is not recommended for candidates who do not have employer support for their work on the Release Team.  General time requirements for Leads and Shadows are:
+
+- 1/2 hour to 2 hours a day, every workday, checking failing tests and following up on failing test and flake issues.
+- Availability to attend the majority of Release Team (weekly) and Burndown meetings (daily during Code Freeze), subject to time zone appropriateness.
+- Ability to follow-up on test fixes during Code Freeze at arbitrary times to ensure rapid turnaround.
+- The time commitment becomes greater through the release cycle, peaking during Code Freeze.  In the last week of Code Freeze, Shadows should expect to spend at least 10 hours and leads at least 20 hours.
+
+### Additional Requirements for Shadows
+
+The following requirements are all things that Leads should already have, and Shadows should acquire, with coaching, within the first weeks of the release cycle:
+
+- Have signed the contributor CLA for Kubernetes.
+- Become a Kubernetes org member.  In many cases, this will be done with the sponsorship of the CI Signal Lead or Release Lead in the first week of the cycle.
   - The process to become one of these is in [our community membership ladder](https://github.com/kubernetes/community/blob/master/community-membership.md#requirements-for-outside-collaborators)
-- Signal lead needs the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers)
-  - The process to join this group is in [our community project-managers page](https://github.com/kubernetes/community/blob/master/project-managers/README.md#joining-the-group)
-- Signal lead need to understand what tests matter and generally how our testing infra is wired together
+- General familiarity with our [test boards](https://testgrid.k8s.io/) and examining test results from automated tests.
+- Willingness and ability to follow-up with contributors about test failures, on Slack, email, Discuss, and SIG meetings, as appropriate.
+- Ability to file well-crafted Kubernetes issues, including labelling.
+- General knowledge of our SIG system and SIGs' areas of responsibility.
+
+Additionally, the following qualifications make a candidate more suitable for the CI Signal team, but are not requirements:
+
+- Prior involvement with SIG Testing and the Test Infrastructure team.
+- Experience with automated testing, CI/CD, quality engineering, and/or quality assurance.
+
+### Additional Requirements for Leads
+
+In addition to the above requirements for Shadows, most of which become prerequisites, CI Signal Leads must:
+
+- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers)
+- Have an working knowledge of our various test infrastructure tools, such as Testgrid, Triage, gubernator, Prow, and Tide.
+- Signal lead need to understand what tests matter and generally how our testing infra is wired together.
   - He/she can ask previous CI Signal leads for advice
   - He/she can ask SIG-Testing for guidance
 
@@ -51,8 +79,8 @@ Here are some good early deliverables from the CI Signal lead between start of t
   - Post the test failure in SIG’s Slack channel to get help in routing the issue to the rightful owner(s)
   - [Sample test failure issue](https://github.com/kubernetes/kubernetes/issues/63611)
 - Build and maintain a document of area experts / owners across SIGs for future needs e.g.: Scalability experts, upgrade test experts etc
-  
-#### **_Best Practice:_** 
+
+#### **_Best Practice:_**
 The SLA and involvement of signal lead at this stage might vary from release to release (and the CI Signal lead). However in an effort to establish an early baseline of the test health the signal lead can take an initial stab at the tests runs at the start of the release, open issues, gather and report on the current status. Post that, it might suffice to check on the tests **twice a week** due to high code churn and expected test instability.
 
 ### Feature Freeze to Code Slush
@@ -83,7 +111,7 @@ This is when things really begin to ramp up in the release cycle with active bug
 
 - Once 1.x.y-rc.1 release branch is cut and master re-opens for next release PRs
   - continue **monitoring master-upgrade and 1.x.y-blocking dashboards on daily basis**
-  - you need not monitor master-blocking on a daily basis. It is, however, worth keeping an eye on master-blocking especially before risky cherry-picks make their way into the release branch 
+  - you need not monitor master-blocking on a daily basis. It is, however, worth keeping an eye on master-blocking especially before risky cherry-picks make their way into the release branch
 - If tests have stabilized (they should have by now), you may stop sending the weekly CI report
 
 ## Special high risk test categories to monitor
@@ -91,7 +119,7 @@ This is when things really begin to ramp up in the release cycle with active bug
 Historically there are a couple of families of test that are hard to stabilize, regression prone and pose a high risk of delaying and/or derailing a release. As CI Signal lead it is highly recommended to pay close attention and extra caution when dealing with test failures in the following areas.
 
 ### Scalability tests
-Scalability testing is inherently challenging and regressions in this area are potentially a huge project risk 
+Scalability testing is inherently challenging and regressions in this area are potentially a huge project risk
 - Requires lots and lots of servers running tests, and hence expensive
 - Tests are long running, so especially hard/expensive/slow to resolve issues via Git bisection
 - Examination of results is actually the bigger more expensive part of the situation
@@ -102,8 +130,8 @@ The following scalability jobs/tests could regress quite easily (due to seemingl
 - [master-blocking gce-scale-performance](https://k8s-testgrid.appspot.com/sig-release-master-blocking#gce-scale-performance)
 - [release 1.xx-blocking gce-scalability-1.xx](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking#gci-gce-scalability-1.10) (Post release branch cut)
 
-The CI Signal lead should 
-- Continuously monitor these tests early in the release cycle, ensure issues are filed and escalated to the Release team and right owners in SIG-Scalability (@bobwise, @shyamjvs, @wojtek-t) 
+The CI Signal lead should
+- Continuously monitor these tests early in the release cycle, ensure issues are filed and escalated to the Release team and right owners in SIG-Scalability (@bobwise, @shyamjvs, @wojtek-t)
 - Work with SIG-Scalability to understand if the failure is a product regression versus a test issue (flake) and in either case followup closely on a fix
 - Additionally, it might help to monitor SIG-Scalability’s performance dashboard to flag if and when there is considerable performance degradation
 
@@ -116,12 +144,12 @@ Starting in 1.11, scalability tests are now blocking OSS presubmits. Specificall
 - on gce and gke
 - in parallel and otherwise
 
-We also run **skewed tests** which involve running the old k8s version’s tests i.e., 1.x-1.y tests, against the new (upcoming) version i.e., 1.x.y. Many of those tests will fail because of intentional changes in the new version, putting us in the position of back-patching tests to old versions and thus forcing us to add lots of new code to a stable release. 
+We also run **skewed tests** which involve running the old k8s version’s tests i.e., 1.x-1.y tests, against the new (upcoming) version i.e., 1.x.y. Many of those tests will fail because of intentional changes in the new version, putting us in the position of back-patching tests to old versions and thus forcing us to add lots of new code to a stable release.
 
-The CI Signal lead should 
+The CI Signal lead should
 - Continuously monitor the [master-upgrade tests](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#Summary) throughout the cycle
 - If an upgrade/downgrade job is listed as FAILING, check the following and escalate accordingly
-  - if "UpgradeTest", "hpa-upgrade", "ingress-upgrade" tests are failing in an upgrade/downgrade job, then indeed master/cluster is failing to upgrade or downgrade. This is potentially release blocking. Escalate to SIG-cluster-lifecycle 
+  - if "UpgradeTest", "hpa-upgrade", "ingress-upgrade" tests are failing in an upgrade/downgrade job, then indeed master/cluster is failing to upgrade or downgrade. This is potentially release blocking. Escalate to SIG-cluster-lifecycle
   - if "UpgradeTest", "hpa-upgrade", "ingress-upgrade" tests are passing and other SIG specific tests are failing, then upgrade/downgrade completed succesfully. Such failures are historically mostly flakes, resolve in subsequent runs and hence mostly not release blocking. Nevertheless, file issues (even for flakes) and escalate to appropriate test owning SIG for triage, assessment and resolution
   - To get a better and quicker feedback on upgrade/downgrade tests, we can look at upgrade jobs that have "parallel" in their title eg: [gce-1.10-master-upgrade-cluster-parallel](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.10-master-upgrade-cluster-parallel). These complete faster and are more stable since they don't run slow long running tests. If the parallel upgrade/downgrade jobs are green, this indicates we are mostly good with respect to upgrade functionality
   - Yet another tip to assess seriousness of the failure is to see if both gce and gke counterparts of a upgrade/downgrade job are failing eg: [gce-1.10-master-upgrade-master](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.10-master-upgrade-master) and [gke-gci-1.10-gci-master-upgrade-master](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gke-gci-1.10-gci-master-upgrade-master). If both are failing then its indicative of a systemic failure in upgrade functionality. If only gke jobs are failing then it might be a GKE only issue and does not block k8s release. In this case escalate to GKE Cluster Lifecycle team  (@roberthbailey, @krousey)
@@ -166,7 +194,7 @@ If a test case is failing, file a v1.y milestone issue in kubernetes/kubernetes 
 
 This test case has been failing [SINCE WHEN OR FOR HOW LONG] and affects [WHICH JOBS]: [triage report](LINK TO TRIAGE REPORT)
 
-This is affecting [WHICH JOBS] on the [sig-release-master-blocking dashboard](https://k8s-testgrid.appspot.com/sig-release-master-blocking), 
+This is affecting [WHICH JOBS] on the [sig-release-master-blocking dashboard](https://k8s-testgrid.appspot.com/sig-release-master-blocking),
 and prevents us from cutting [WHICH RELEASE] (kubernetes/sig-release#NNN). Is there work ongoing to bring this test back to green?
 
 ...any additional debugging info I can offer...
@@ -198,9 +226,9 @@ Since 1.11 we started curating and broadcasting a weekly CI Signal report to the
   - Call out SIGs actively fixing and ignoring issues
   - Call out potential release blocking issues
   - Call out upcoming key dates e.g., Code slush, freeze etc
-  - [Link to the previous reports](https://docs.google.com/document/d/1y044OcaKGEUgj094JH1ZxnnLRHnqi0Kq0f4ov56kvxE/edit) 
+  - [Link to the previous reports](https://docs.google.com/document/d/1y044OcaKGEUgj094JH1ZxnnLRHnqi0Kq0f4ov56kvxE/edit)
   - CCing individual SIGs (kubernetes-sig-foo@googlegroups.com) that own failing tests help in getting their attention
-  
+
 [Sample Weekly CI Signal Report](https://groups.google.com/forum/#!topic/kubernetes-dev/S9AuFMiIJkQ)
 
-Early and continuous reporting of test health proved greatly effective in rallying SIG attention to test failures and stabilizing the release much early in the release cycle. 
+Early and continuous reporting of test health proved greatly effective in rallying SIG attention to test failures and stabilizing the release much early in the release cycle.
