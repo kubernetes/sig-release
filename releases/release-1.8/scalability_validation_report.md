@@ -1,4 +1,4 @@
-This is the scalability validation report for release-1.8 written as per [this](https://github.com/kubernetes/community/blob/master/contributors/devel/release/scalability-validation.md#concretely-define-test-configuration) template.
+This is the scalability validation report for release-1.8 written as per [this](https://github.com/kubernetes/community/blob/master/sig-scalability/processes/scalability-validation.md#concretely-define-test-configuration) template.
 
 Validated large cluster performance under the following configuration:
 - Cloud-provider - GCE
