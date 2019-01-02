@@ -83,6 +83,7 @@ The initial Product Security Team will consist of volunteers subscribed to the p
 
 [Associate](#Associate) members include:
 
+- Micah Hausler (**[@micahhausler](https://github.com/micahhausler)**) `<mhausler@amazon.com>`
 - Jonathan Pulsifer (**[@jonpulsifer](https://github.com/jonpulsifer)**) `<jonathan@pulsifer.ca>`
 - Joel Smith (**[@joelsmith](https://github.com/joelsmith)**) `<joelsmith@redhat.com>`
 
