@@ -242,6 +242,7 @@ With the Fix Development underway the Fix Lead needs to come up with an overall 
 
 **Fix Release Day** (Completed within 1-21 days of Disclosure)
 
+- The [Private Distributors List](#private-distributors-list) will be notified at least 24 hours in advance of a pending release with the public messaging, date, and time of the announcement.
 - The Fix Lead will cherry-pick the patches onto the master branch and all relevant release branches. The Fix Team will `/lgtm` and `/approve`.
 - The Release Managers will merge these PRs as quickly as possible. Changes shouldn't be made to the commits at this point, to prevent potential conflicts with the patches sent to distributors, and conflicts as the fix is cherry-picked around branches.
 - The Release Managers will ensure all the binaries are built, publicly available, and functional.
