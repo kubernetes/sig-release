@@ -1,11 +1,11 @@
 Bug Triage Release Team Role
 ==============================
 
-Your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  
+Primarily, your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  
 Bugs can appear either as GitHub Issues or Pull Requests (PRs).  
 
 A list of common tasks is:
-- Polling for bugs (primarily with the  label `kind/bug`)
+- Polling for bugs (mainly issues with the label `kind/bug`)
 - Checking status of open issues / PRs
 - Sending reminders to relevant assignees / owners / sig-leads
 - Publishing summary reports 
@@ -28,6 +28,7 @@ There are five relevant periods where your workload changes:
 As Bug Triage lead, _it is not your job_ to label, sort or gatekeep issues and PRs.
 
 _Instead_, you should get the assignees, owners, SIG-leads or key contributors to do it, as it is their _job_ to do so.
+Check [Escalation Path] on how you can do it.
 
 In general, you shouldn't decide whether something is in or out of a milestone; either the SIG or the Release Team Lead needs to do that.  
 In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made. 
