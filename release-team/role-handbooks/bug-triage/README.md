@@ -1,13 +1,22 @@
 Bug Triage Release Team Role
 ==============================
 
-Your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  Bugs can appear either as GitHub Issues or Pull Requests (PRs).  
+Your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  
+Bugs can appear either as GitHub Issues or Pull Requests (PRs).  
 
-Primarily, you will be polling bugs, checking status, sending reminders and questions to contributors and SIG leads, and publishing summary reports.  The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  It is important to consider both `is:issue` and `is:pr` GitHub artifacts when triaging bugs.
+A list of common tasks is:
+- Polling for bugs (primarily with the  label `kind/bug`)
+- Checking status of open issues / PRs
+- Sending reminders to relevant assignees / owners / sig-leads
+- Publishing summary reports 
+- Moving issues out of current milestone (mainly during code freeze)
 
-Secondarily, you will be helping improve automation around artifact management and release tagging.
+The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  It is important to consider both `is:issue` and `is:pr` GitHub artifacts when triaging bugs.
 
-How this works depends on where you are in the release cycle.  There are five relevant periods where your workload changes:
+Secondarily, you will be helping improve automation around tracking issues against the current milestone.
+
+How this works depends on where you are in the release cycle.  
+There are five relevant periods where your workload changes:
 
 1. Early Release: between Enhancement Freeze and a week before Code Slush.
 2. Pre-Code-Slush: a week to 10 days before Code Slush
