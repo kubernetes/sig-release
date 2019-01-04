@@ -9,7 +9,6 @@ A list of common tasks is:
 - Checking status of open issues / PRs
 - Sending reminders to relevant assignees / owners / sig-leads
 - Publishing summary reports 
-- Moving issues out of current milestone (mainly during code freeze)
 
 The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  It is important to consider both `is:issue` and `is:pr` GitHub artifacts when triaging bugs.
 
@@ -26,16 +25,24 @@ There are five relevant periods where your workload changes:
 
 ## How You Do Your Job
 
-As Bug Triage lead, it is not your job to fix, label, sort, or gatekeep issues and PRs.  It is your job to get the SIGs, the issue or PR owners, and the key contributors to do it.  So whenever you find a bug that needs to be "fixed" or kicked out of the release, you go through the following escalation:
+As Bug Triage lead, _it is not your job_ to label, sort or gatekeep issues and PRs.
 
-1. Leaving a comment on the GitHub issue or PR, e.g. "This issue hasn't been updated in 3 months.  Are you still expecting to complete it for 1.11?".  It's helpful here to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
-2. Sending a message to the SIG channel or mailing list about the problem.  It's helpful here to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.11?"
-3. Messaging individual owners and reviewers via Slack and/or direct email (GitHub notification emails must have been filtered or missed if you're past step #1).  Individual's email addresses may be harder to find than GitHub ID, but ure usually in the git commit history.  Slack handles are often harder yet to find.  There is no master list mapping human names to GitHub ID, email or Slack ID.  If you can't find contact info, asking in the appropriate SIG's Slack channel will usually get you pointed in the right direction.
-4. Escalating to the Release Team Lead with suggestions on what to do with non-responsive issues.
+_Instead_, you should get the assignees, owners, SIG-leads or key contributors to do it, as it is their _job_ to do so.
 
-In general, you should never decide whether something is in or out of a milestone; the SIG or the Release Team Lead needs to do that.  In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made.  For example, you might add/modify kind and priority labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label)
+In general, you shouldn't decide whether something is in or out of a milestone; either the SIG or the Release Team Lead needs to do that.  
+In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made. 
+For example, you might add/modify kind and priority labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label)
 
-The job relates to both the Enhancements Lead and CI Signal Lead roles.  Understanding the in-bound enhancements is important during the Early Release phase.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](../ci-signal) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Enhancements and CI Signal.
+Bug Triage relates to both the Enhancements Lead and CI Signal Lead roles.  Understanding the in-bound enhancements is important during the Early Release phase as they set the themes for incoming issues and bugs.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](../ci-signal) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Enhancements and CI Signal.
+
+### Escalation Path
+Whenever you find a bug that needs to be "fixed" or kicked out of the release, try the following escalation path:
+
+1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months.  Are you still expecting to complete it for 1.14?".  It's helpful here to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
+2. Send a message to relevant SIG slack channels or mailing list about the problem: It's helpful to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.11?"
+3. Message individual owners and reviewers directly via Slack and/or email (GitHub notification emails must have been filtered or missed if you're past step #1).  Individual's email addresses may be harder to find than GitHub ID, but ure usually in the git commit history.  Sometimes Slack handles are hard to find.  There is no master list mapping human names to GitHub ID, email or Slack ID.  If you can't find contact info, asking in the appropriate SIG's Slack channel will usually get you pointed in the right direction.
+4. Escalate to the Release Team Lead with suggestions on what to do with non-responsive issues.
+
 
 ## Early Release
 
