@@ -42,7 +42,7 @@ The 1.14 release cycle is proposed as follows:
 
 
 | **What** | **Who** | **Jan** | **Feb** | **Mar** | **WEEK** | **CI SIGNAL** |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | Start of Release Cycle | Lead | Mon 7 | | | week 1 | [master-blocking] |
 | Schedule finalized | Lead | Fri 11 | | | | |
 | Team finalized | Lead | Tue 15 | | | week 2 | |
