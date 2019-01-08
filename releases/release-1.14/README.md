@@ -46,19 +46,22 @@ The 1.14 release cycle is proposed as follows:
 | Start of Release Cycle | Lead | Mon 7 | | | week 1 | [master-blocking] |
 | Schedule finalized | Lead | Fri 11 | | | | |
 | Team finalized | Lead | Tue 15 | | | week 2 | |
+| Start Enhancements Tracking | Enhancements Lead | Tue 15 | | | | |
 | 1.14.0-alpha.1 released | Branch Manager | Tue 15 | | | | |
 | Start Release Notes Draft | Release Notes Lead | Tue 22 | | | week 3 | |
 | **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | Tue 29 | | | week 4 | [master-blocking], [master-upgrade] |
 | 1.14.0-alpha.2 released | Branch Manager | Tue 29 | | | | |
 | 1.14.0-alpha.3 released | Branch Manager | | Tue 12 | | week 6 | |
+| release-1.10 jobs removed | Test Infra Lead | | Tue 12 | | | |
 | release-1.14 branch created | Branch Manager | | Tue 19 | | week 7 | |
 | 1.14.0-beta.0 released | Branch Manager | | Tue 19 | | | |
-| **Begin [Burndown]** (MWF meetings) | Lead | | Mon 25 | | week 8 | |
-| **Call for [Exceptions]** | Lead | | Mon 25 | | week 8 | |
+| release-1.14 jobs created| Test Infra Lead | | Tue 19 | | | |
+| **Begin [Burndown]** (MWF meetings) | Lead | | Mon 25 | | week 8 | [1.14-blocking], [master-blocking], [master-upgrade] |
+| **Call for [Exceptions]** | Lead | | Mon 25 | | | |
+| Brace Yourself, Code Freeze is Coming | Comms | | Mon 25 | | | |
 | 1.14.0-beta.1 released | Branch Manager | | Tue 26 | | | |
-| Brace Yourself, Code Freeze is Coming | Comms | | Tue 26 | | | |
-| **Begin [Code Freeze]** (EOD PST) | Test Infra | | | Tue 5 | week 9 | [1.14-blocking], [master-blocking], [master-upgrade] |
-| Daily Burndown Meetings | Lead | | | Mon 11 | week 10 | |
+| **Begin [Code Freeze]** (EOD PST) | Test Infra | | | Thu 7 | week 9 | |
+| Burndown Meetings daily| Lead | | | Mon 11 | week 10 | |
 | 1.14.0-beta.2 released | Branch Manager | | | Tue 12 | | |
 | **Begin [Code Thaw]** (EOD PST) | Test Infra | | | Tue 19 | week 11 | [1.14-blocking] |
 | 1.14.0-rc.1 released | Branch Manager | | | Tue 19 | | |
