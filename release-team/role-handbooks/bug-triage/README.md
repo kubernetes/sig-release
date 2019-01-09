@@ -15,13 +15,12 @@ The role has been interchangeably called "Bug Triage" and "Issue Triage", but th
 Secondarily, you will be helping improve automation around tracking issues against the current milestone.
 
 How this works depends on where you are in the release cycle.  
-There are five relevant periods where your workload changes:
+There are four relevant periods where your workload changes:
 
-1. Early Release: between Enhancement Freeze and a week before Code Slush.
-2. Pre-Code-Slush: a week to 10 days before Code Slush
-3. Code Slush: from Code Slush to Code Freeze, usually 3-4 days.
-4. Code Freeze: from Code Freeze through Betas, until Release Burndown
-5. Release Burndown: Less than 1 week until final release.
+1. Early Release: from day 1 up to about a week before Code Freeze. *Duration: ~ 7-8 weeks*
+2. Pre-Code-Freeze: last week before Code Freeze. *Duration: 1 week*
+3. Code Freeze: from Code Freeze through Betas, until Release Burndown. *Duration: ~2 weeks*
+4. Release Burndown: Last two weeks of the cycle. *Duration: ~2 weeks*
 
 ## How You Do Your Job
 
@@ -32,7 +31,7 @@ Check [Escalation Path] on how you can do it.
 
 In general, you shouldn't decide whether something is in or out of a milestone; either the SIG or the Release Team Lead needs to do that.  
 In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made. 
-For example, you might add/modify kind and priority labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label)
+For example, you might add/modify `kind` and `priority` labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label)
 
 Bug Triage relates to both the Enhancements Lead and CI Signal Lead roles.  Understanding the in-bound enhancements is important during the Early Release phase as they set the themes for incoming issues and bugs.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](../ci-signal) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Enhancements and CI Signal.
 
@@ -45,13 +44,16 @@ Whenever you find a bug that needs to be "fixed" or kicked out of the release, t
 4. Escalate to the Release Team Lead with suggestions on what to do with non-responsive issues.
 
 
-## Early Release
+## Early Release 
 
-You have no critical work during this cycle.
+There is no critical work for you in this stage.
 
-Instead, use the time to familiarize yourself with the major enhancements and fixes planned by each SIG for this release, so that you build context in advance of when you will need to identify incoming bugs as being associated with a work focus in the current release.  It is a good time to interact with the Enhancements Lead and CI Signal Lead to understand any early concerns they might have, as the release team's risk management comes as much from this proactive collaboration more as from the Bug Triage lead reacting to incoming issues and PRs.
+This is the best stage to get involved with any automation work that can ease the workload of later stages.
 
-This is also a good time to do any work on automation that you plan to do.  You can also get started early on the pre-code-slush work.
+As this stage lasts nearly 2 months up until Code Freeze, you can use this time to familiarize yourself with the _major enhancements and fixes_ planned by each SIG for this release, so that you can have context in advance of when you will need to identify incoming bugs as being associated with a work focus in the current release. This can greatly help in focused communication with the relevant SIG leads, as in later stages there can be an elevated urgency to fix related critical bugs and deliver new features in time.
+
+It is also a good time to interact with the Enhancements Lead and CI Signal Lead to understand any early concerns they might have, as the release team's risk management comes as much from this proactive collaboration more as from the Bug Triage lead reacting to incoming issues and PRs.
+
 
 ### Sample Searches
 
