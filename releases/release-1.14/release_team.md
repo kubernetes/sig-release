@@ -1,6 +1,6 @@
 | **Role** | **Name** (**GitHub / Slack ID**)  | **Shadow Name(s) (GitHub / Slack ID)** |
 | ------ | ------ | ------ |
-| Lead | Aaron Crickenberger ([@spiffxp](https://github.com/spiffxp)) |  |
+| Lead | Aaron Crickenberger ([@spiffxp](https://github.com/spiffxp)) | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)), Mike Arpaia ([@marpaia](https://github.com/marpaia)) |
 | Enhancements | Claire Laurence ([@claurence](https://github.com/claurence)) | |
 | CI Signal | Maria Ntalla ([@mariantalla](https://github.com/mariantalla)) | |
 | Test Infra | Amit Watve ([@amwat](https://github.com/amwat)) | |
