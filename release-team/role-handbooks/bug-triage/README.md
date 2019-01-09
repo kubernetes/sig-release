@@ -18,7 +18,7 @@ How this works depends on where you are in the release cycle.
 There are four relevant periods where your workload changes:
 
 1. Early Release: from day 1 up to about a week before Code Freeze. *Duration: ~ 7-8 weeks*
-2. Pre-Code-Freeze: last week before Code Freeze. *Duration: 1 week*
+2. Code Freeze Preparations: last week before Code Freeze. *Duration: 1 week*
 3. Code Freeze: from Code Freeze through Betas, until Release Burndown. *Duration: ~2 weeks*
 4. Release Burndown: Last two weeks of the cycle. *Duration: ~2 weeks*
 
@@ -57,19 +57,25 @@ It is also a good time to interact with the Enhancements Lead and CI Signal Lead
 
 ### Sample Searches
 
-* Open Enhancement v1.11 Issues:
-  * `is:issue is:open milestone:v1.11 repo:kubernetes/enhancements` [k/enhancements repo milestone enhancements](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.11)
-  * `is:issue is:open milestone:v1.11 label:kind/feature repo:kubernetes/kubernetes` [k/k repo milestone enhancements](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.11+label%3Akind%2Ffeature)
-  * `is:issue is:open milestone:v1.11 label:kind/feature org:kubernetes` [k org-wide milestone enhancements](https://github.com/search?q=org%3Akubernetes+is%3Aissue+is%3Aopen+milestone%3Av1.11+label%3Akind%2Ffeature)
-* Issues in the v1.11 milestone which haven't been updated in a while: `is:open is:issue milestone:v1.11 updated:<2018-05-01 repo:kubernetes/kubernetes` [k/k old issues in milestone](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-05-01+repo%3Akubernetes%2Fkubernetes)
-* Issues in the milestone with no SIG or Kind: **code/automation needed**
-* Enhancement Issues with no PR: **code/automation needed**
+* Issues in the v1.14 milestone which haven't been updated in a while: `[is:open is:issue milestone:v1.14 updated:<2018-10-01 repo:kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-10-01+repo%3Akubernetes%2Fkubernetes)`
+
+* Issues in the milestone with no SIG or Kind: `(is:open is:issue milestone:v1.14 label:needs-sig)[https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+label%3Aneeds-sig]` 
+
+* Enhancements (for familiarization purposes):
+
+  * [k/enhancements repo milestone enhancements](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.14) `is:issue is:open milestone:v1.14 repo:kubernetes/enhancements` 
+
+  * [k/k main repo milestone enhancements](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.14+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.14 label:kind/feature repo:kubernetes/kubernetes` 
+
+  * [k org-wide milestone enhancements](https://github.com/search?q=org%3Akubernetes+is%3Aissue+is%3Aopen+milestone%3Av1.14+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.14 label:kind/feature org:kubernetes` 
+
+
 
 ### Reports
 
 No reports are required during this period, although you might consider setting up a red/yellow/green report template.
 
-## Pre-Code-Slush
+## Code Freeze Preparations
 
 During this period your job is to make sure that all issues and PRs which are related to bugfixes for the upcoming release have reasonable labels.  While you may have been doing that some earlier, now you have a deadline.  From the beginning of Code Slush every bug issue or PR should be linked to the milestone.  Specifically:
 
