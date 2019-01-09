@@ -57,9 +57,9 @@ It is also a good time to interact with the Enhancements Lead and CI Signal Lead
 
 ### Sample Searches
 
-* Issues in the v1.14 milestone which haven't been updated in a while: `[is:open is:issue milestone:v1.14 updated:<2018-10-01 repo:kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-10-01+repo%3Akubernetes%2Fkubernetes)`
+* [Issues in the v1.14 milestone which haven't been updated in a while](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-10-01+repo%3Akubernetes%2Fkubernetes): `is:open is:issue milestone:v1.14 updated:<2018-10-01 repo:kubernetes/kubernetes`
 
-* Issues in the milestone with no SIG or Kind: `(is:open is:issue milestone:v1.14 label:needs-sig)[https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+label%3Aneeds-sig]` 
+* [Issues in the milestone with no SIG or Kind](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+label%3Aneeds-sig): `is:open is:issue milestone:v1.14 label:needs-sig`
 
 * Enhancements (for familiarization purposes):
 
