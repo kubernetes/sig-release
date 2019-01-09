@@ -18,7 +18,7 @@ How this works depends on where you are in the release cycle.
 There are four relevant periods where your workload changes:
 
 1. Early Release: from day 1 up to about a week before Code Freeze. *Duration: ~ 7-8 weeks*
-2. Code Freeze Preparations: last week before Code Freeze. *Duration: 1 week*
+2. Code Freeze Preparations: ~1.5 weeks before Code Freeze. *Duration: ~1.5 weeks*
 3. Code Freeze: from Code Freeze through Betas, until Release Burndown. *Duration: ~2 weeks*
 4. Release Burndown: Last two weeks of the cycle. *Duration: ~2 weeks*
 
@@ -39,7 +39,7 @@ Bug Triage relates to both the Enhancements Lead and CI Signal Lead roles.  Unde
 Whenever you find a bug that needs to be "fixed" or kicked out of the release, try the following escalation path:
 
 1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months.  Are you still expecting to complete it for 1.14?".  It's helpful here to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
-2. Send a message to relevant SIG slack channels or mailing list about the problem: It's helpful to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.11?"
+2. Send a message to relevant SIG slack channels or mailing list about the problem: It's helpful to directly @ mention the relevant SIG Leads / Owners, and to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.11?"
 3. Message individual owners and reviewers directly via Slack and/or email (GitHub notification emails must have been filtered or missed if you're past step #1).  Individual's email addresses may be harder to find than GitHub ID, but ure usually in the git commit history.  Sometimes Slack handles are hard to find.  There is no master list mapping human names to GitHub ID, email or Slack ID.  If you can't find contact info, asking in the appropriate SIG's Slack channel will usually get you pointed in the right direction.
 4. Escalate to the Release Team Lead with suggestions on what to do with non-responsive issues.
 
@@ -69,76 +69,88 @@ It is also a good time to interact with the Enhancements Lead and CI Signal Lead
 
   * [k org-wide milestone enhancements](https://github.com/search?q=org%3Akubernetes+is%3Aissue+is%3Aopen+milestone%3Av1.14+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.14 label:kind/feature org:kubernetes` 
 
-
-
 ### Reports
 
-No reports are required during this period, although you might consider setting up a red/yellow/green report template.
+No reports are required during this period.
+
 
 ## Code Freeze Preparations
 
-During this period your job is to make sure that all issues and PRs which are related to bugfixes for the upcoming release have reasonable labels.  While you may have been doing that some earlier, now you have a deadline.  From the beginning of Code Slush every bug issue or PR should be linked to the milestone.  Specifically:
+As Code Freeze approaches, proper tracking ensues and merge gates become stricter.
+A main purpose of Code Freeze is to get issues and PRs filtered through the use of labels, with `priority` specifically playing an important role on that.
 
-* each issue should have a milestone, kind, and sig.
-* PRs linked to these issues should have the same labels (and milestone)
-* priority should be important-soon or critical-urgent
+The following items help with achieving the above:
 
-If issues do not match the above, you should comment and urge the SIGs to fix them, or even fix some labels yourself (particularly kind and sig).
+* issues targeting your release should have a milestone, kind, and sig.
+* PRs linked to these issues should have the same labels and milestone.
+* priority should be `important-soon` or `critical-urgent`.
 
-The second thing you need to do is to start filtering issues which have been assigned to the milestone, specifically getting SIGs to change milestones on issues which are not making progress.  For example, if there's an issue with no consensus on an approach to fix it, and no PRs, you should comment and suggest that that issue be taken out of the milestone.
+If issues/PRs do not match the above and if they are obvious, you can add the relevant labels.
 
-The third thing you should do, time permitting, is to scan through the newly opened issue and PR lists for bugs to see if they're failures against the upcoming release enhancements, especially critical ones.  For ones which are, you should ensure that they have all the correct labelling to be tracked and updated.  Depending on volume and time, you may wish to exclude ```label:"kind/feature"``` and ```label:"kind/failing-test"``` from your searches, as those are covered by the Enhancements and CI Signal leads respectively.
+If you are not sure (mainly priority), you can comment and ask the owner or SIG leads about the status of the issue/PR (also see [Escalation Path] on pinging options).
 
-### Sample Searches
-* Open v1.11 Issues
-   * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
-* Open v1.11 PRs
-   * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
+Other regular patterns are:
 
-### Reports
+Stuck PRs: Sometimes PRs get stuck in the approval process, as every PR requires both a `/lgtm` and an `/approve` by an Owner. When you detect such cases, you should remind relevant SIG Leads / Owners to review these.
 
-No reports are required during this period, although you should be maintaining a red/yellow/green report template starting now.
-
-## Code Slush
-
-At the beginning of Code Slush, all issues to stay in the milestone need to have the following characteristics.  PRs for the milestone should share the same labels.
-
-* kind, sig, and milestone labels
-
-All bugs should also show progress towards resolution and that they're getting attention between Code Slush and Code Freeze.  If they're not, you need to get the attention of the SIG(s) on those specific bugs, and find out if they're going to fix them or target the fix for a future milestone instead.  Also, SIGs need to make a decisions on milestone inclusion and prioritization; you need to remind them to do so on each bug for example reminding them to run the "/milestone vX.YY" and "/priority ${prioritylevel}" Prow commands.
-
-Even when bugs have PRs resolving them, these PRs can get stuck in the approval process. This means it's your job to remind SIG leads of any stuck PRs until they get approved and merged.
-
-Checking newly-reported test failures is now more urgent; you should assume that any new failure is related to the upcoming release, bring to the attention of the CI Signal lead, and assist in getting follow-up from the appropriate SIG.  Generally the CI Signal lead will track these failures, but newly opened issues may not initially have sufficient labelling to catch their attention.
+CI Signal: Checking newly-reported test failures becomes more important; you should assume that any new failure is related to the upcoming release, bring to the attention of the CI Signal lead, and assist in getting follow-up from the appropriate SIG.  Generally the CI Signal lead will track these failures, but newly opened issues may not initially have sufficient labelling to catch their attention.
 
 A detailed page is in the [developer guide](https://git.k8s.io/community/contributors/devel/release.md) describing how developers target issues and pull requests to a milestone.
 
-### Sample Searches
 
-* Open v1.11 Issues
-  * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
-  * `is:open is:issue milestone:v1.11` [milestone open issues, no exclusions](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+)
-* Open v1.11 PRs
-  * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
-  * `is:open is:pr milestone:v1.11"` [milestone open PRs, no exclusions](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+)
+### Filtering
+
+Around this point, the release is about 1 month away, and there is less and less time for PRs to make it in time.
+
+Filtering is one of the main functions of the Bug Triage role. It involves informing owners and SIG leads about the timelines and asking  whether an issue/PR at hand is relevant to the release, whether it should be prioritized or moved to another release. This process involves a mix of multiple parameters such as:
+
+- time left
+- time estimation
+- importance
+- relevance
+- kind (kind/cleanup is usually less important)
+- technical difficulty
+- CI Signal stability
+- consensus by multiple parties 
+- critical thinking...
+
+As stated on a previoous section, decisions and actions should be made either by the Release Lead or SIG Leads - Bug Triage's role is mainly to keep track, ping people and report the overall status to the Release Lead.
+
+If you see an issue or PR that is not making progress, hasn't got an update for a while and there is no anecdotal knowledge that someone is working on it, you should comment and ask about the status. This task becomes more frequent during Code Freeze and even more during Burndown.
+
+
+### Sample Searches
+* Open v1.14 Issues
+   * `is:open is:issue milestone:v1.14 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
+   * `is:open is:issue milestone:v1.14` [milestone open issues, no exclusions](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14)
+* Open v1.14 PRs
+   * `is:open is:pr milestone:v1.14 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.14+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
+  * `is:open is:pr milestone:v1.14"` [milestone open PRs, no exclusions](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.14)
+
 
 ### Reports
 
-Starting with Code Slush, you should report on issue status at least three times per week.  This report will break down into red/yellow/green issues and PRs.  As you get closer to release, the specific definitions of red/yellow/green will change, but the basic idea won't:
+Somewhere around this time, release meetings occur ~3 times per week and a report is expected in each of them.
+
+You should soon start maintaining an overall list of items/areas/issues which seem to be delaying, at risk of not making it in time, or in need of attention by the Release Lead or other roles, and present it in the meetings.
+
+The Release Lead will include a template for this information in the Monday/Wednesday/Friday release team meeting notes.
+
+Code Freeze hasn't really started yet at this point, and it depends on the overall status and volume of open issues/PRs on how many to report. It's good to have some numbers of total issues/PRs available to see general trends over time, like increased or lowered volumes.
+
+Overall, you can use the Red/Yellow/Green pattern on keeping track and reporting. 
+As you get closer to release, the specific definitions of red/yellow/green will change, but the basic idea won't:
 
 * red: issues/PRs which don't seem to be headed towards any resolution on deadline, and represent either major breakage or enhancements still in the release
 * yellow: issues/PRs which are in progress but need to be watched
 * green: issues/PRs which still show up on the reports, but are on their way to being resolved very soon
 
-In Code Slush, these three levels are:
+At this stage, these three levels generally are:
 
 * red: major breakage issues which are both old and getting no attention at all, and enhancement issues without a PR.
 * yellow: major breakage issues with a PR in progress, minor breakage issues, and enhancement issues with a PR which is in progress but still needs work.
 * green: minor breakage issues with a PR and enhancement issues with a PR that looks to be approved soon.
 
-You should also identify to the release team a "leader board" of those areas which appear to need major attention (e.g. upgrade testing, some specific enhancement).
-
-The Release Lead will include a template for this information in the Monday/Wednesday/Friday release team meeting notes.
 
 ## Code Freeze
 
