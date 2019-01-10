@@ -27,7 +27,7 @@ There are four relevant periods where your workload changes:
 As Bug Triage lead, _it is not your job_ to label, sort or gatekeep issues and PRs.
 
 _Instead_, you should get the assignees, owners, SIG-leads or key contributors to do it, as it is their _job_ to do so.
-Check [Escalation Path] on how you can do it.
+Check [Escalation Path](#escalation-path) on how you can do it.
 
 In general, you shouldn't decide whether something is in or out of a milestone; either the SIG or the Release Team Lead needs to do that.  
 In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made. 
@@ -87,7 +87,7 @@ The following items help with achieving the above:
 
 If issues/PRs do not match the above and if they are obvious, you can add the relevant labels.
 
-If you are not sure (mainly priority), you can comment and ask the owner or SIG leads about the status of the issue/PR (also see [Escalation Path] on pinging options).
+If you are not sure (mainly priority), you can comment and ask the owner or SIG leads about the status of the issue/PR (also see [Escalation Path](#escalation-path) on pinging options).
 
 Other regular patterns are:
 
@@ -158,7 +158,7 @@ Once Code Freeze kicks in, only PRs with the label `priority/critical-urgent` &&
 
 This is enforced via test-infra automation, as a means of "new release coming in a few weeks - we're only merging critical PRs in".
 
-As explained in sections [Code Freeze Preparation] and [Filtering], it becomes incrementally more difficult to merge new stuff as time progresses, and this should be incrementally enforced. As such, in the days around the start of Code Freeze, owners of issues and PRs not marked as critical-urgent should be poked again, reminding them that Code Freeze starts/started at DD/MM, which means any issues not marked `priority/critical-urgent` _could_ be moved to the subsequent release. 
+As explained in sections [Code Freeze Preparation](#code-freeze-preparation) and [Filtering](#filtering), it becomes incrementally more difficult to merge new stuff as time progresses, and this should be incrementally enforced. As such, in the days around the start of Code Freeze, owners of issues and PRs not marked as critical-urgent should be poked again, reminding them that Code Freeze starts/started at DD/MM, which means any issues not marked `priority/critical-urgent` _could_ be moved to the subsequent release. 
 
 The criteria for moving issues is a mix of:
 
