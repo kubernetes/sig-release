@@ -45,7 +45,7 @@ The 1.14 release cycle is proposed as follows:
 | --- | --- | --- | --- | --- | --- | --- |
 | Start of Release Cycle | Lead | Mon 7 | | | week 1 | [master-blocking] |
 | Schedule finalized | Lead | Fri 11 | | | | |
-| Team finalized | Lead | Tue 15 | | | week 2 | |
+| Team finalized | Lead | Fri 18 | | | week 2 | |
 | Start Enhancements Tracking | Enhancements Lead | Tue 15 | | | | |
 | 1.14.0-alpha.1 released | Branch Manager | Tue 15 | | | | |
 | Start Release Notes Draft | Release Notes Lead | Tue 22 | | | week 3 | |
