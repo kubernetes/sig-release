@@ -154,13 +154,17 @@ At this stage, these three levels generally are:
 
 ## Code Freeze
 
-Once Code Freeze starts, all issues still in the upcoming release **should** have a priority label of `priority/critical-urgent`.  This means that on the morning before Code Freeze begins you need to go through the open issues (and PRs) which are approved-for-milestone but not marked critical-urgent and poke the owners reminding them that in the next day Code Freeze will mean any issues not marked `priority/critical-urgent` will potentially be moved to the subsequent release. 
+Once Code Freeze kicks in, only PRs with the label `priority/critical-urgent` && targeting the upcoming release (/milestone v1.xx) are able to get merged.
+
+This is enforced via test-infra automation, as a means of "new release coming in a few weeks - we're only merging critical PRs in".
+
+As explained in sections [Code Freeze Preparation] and [Filtering], it becomes incrementally more difficult to merge new stuff as time progresses, and this should be incrementally enforced. As such, in the days around the start of Code Freeze, owners of issues and PRs not marked as critical-urgent should be poked again, reminding them that Code Freeze starts/started at DD/MM, which means any issues not marked `priority/critical-urgent` _could_ be moved to the subsequent release. 
 
 The criteria for moving issues is a mix of:
 
-- How critical is the Issue to be fixed for the currently imminent release?
-- Is the PR expected to be ready for merging soon?
-- How big is the change? Could it cause instability to CI? If so, it either needs to be closely tracked /or/ moved.
+- Criticality: How critical is the Issue to be fixed for the currently imminent release?
+- Time Estimation: Is the PR expected to be ready for merging soon?
+- CI Stability: How big is the change? Could it cause instability to CI? If so, it either needs to be closely tracked /or/ moved.
 
 For issues/PRs that look tricky, you can consolidate with the Release Lead and SIG/PR owners to reach a decision.
 
