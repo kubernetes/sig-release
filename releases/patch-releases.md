@@ -44,7 +44,38 @@ days after cherry-picks deadline to allow all release-blocking tests to run.
 
 # 1.12
 
-TODO(@feiskyer)
+## Patch Release Management Team
+
+To discuss a cherry-pick, schedule, or anything else related to 1.12 patch releases,
+contact any member of the team. You can just tag us on #sig-release Slack channel
+or message directly. Please give us a business day to respond - we may be in a different timezone!
+
+Cherry-picks are monitored on regular basis, so it's likely you'll hear
+from us on PRs to release-1.12 branch by the time the next patch release is due.
+
+| **Github username** | **Slack username** |
+| --- | --- |
+| @feiskyer | @feisky |
+
+## Timeline
+
+Next patch release is **1.12.5**.
+
+Frequency of releases is likely to be about every 3 weeks. However, it can be affected
+by other factors, such as critical security fixes or holiday season.
+
+Cherry-picks deadline is the end of day by which all pending PRs to release-1.12
+branch have to merge to be included in the patch release. Any PRs left pending past
+this point will either wait for the next patch release, or may in rare cases
+delay current release.
+
+Target date is the date on which the patch release is cut. Must be at least 2
+days after cherry-picks deadline to allow all release-blocking tests to run.
+
+| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
+| --- | --- | --- | --- |
+| 1.12.6 | TBA | TBA | TBA |
+| 1.12.5 | 2019-01-15 | 2019-01-17 | @feiskyer |
 
 # 1.11
 
