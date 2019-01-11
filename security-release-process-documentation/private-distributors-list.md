@@ -157,6 +157,10 @@ Yes.
 
 CrashOverride will vouch for Acidburn joining the list on behalf of the "Seven"
 distribution.
+
+> 10. Link to PR updating this document with your email in the membership table.
+
+https://github.com/kubernetes/sig-release/edit/master/security-release-process-documentation/private-distributors-list.md
 ```
 
 
