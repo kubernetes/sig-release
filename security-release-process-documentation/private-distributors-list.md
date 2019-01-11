@@ -53,8 +53,6 @@ could be in the form of the following:
 | bphilips@redhat.com | Kubernetes PST |
 | brandon@ifup.org | Kubernetes PST |
 | cjcullen@google.com | Kubernetes PST |
-| etune@google.com | Kubernetes PST |
-| jpbetz@google.com | Kubernetes PST |
 | kops-security-response@googlegroups.com | Kops |
 | kubernetes-security-disclosure@google.com | Google |
 | kubernetes-security@huawei.com | Huawei |
@@ -63,9 +61,6 @@ could be in the form of the following:
 | liggitt@google.com | Kubernetes PST |
 | me@jessfraz.com | Kubernetes PST |
 | mke-security@mesosphere.com | Mesosphere |
-| pwittroc@google.com | Kubernetes PST |
-| ralph@uk.ibm.com | ??? |
-| saadali@google.com | Kubernetes PST |
 | secalert@redhat.com | Red Hat |
 | secure@sap.com | SAP |
 | security-release-team@kubernetes.io | Kubernetes PST |
