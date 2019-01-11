@@ -1,8 +1,8 @@
 ## Private Distributors List
 
-This list is intended to be used primarily to provide actionable information to
-multiple distribution vendors at once. This list is not intended for
-individuals to find out about security issues.
+This list is used to provide actionable information to multiple distribution
+vendors at once. This list is not intended for individuals to find out about
+security issues.
 
 ### Embargo Policy
 
@@ -42,6 +42,39 @@ could be in the form of the following:
 
 - Help draft emails to the public disclosure mailing list.
 - Help with release notes.
+
+### Membership
+
+
+| Email		| Organization	|
+| ------------- |:-------------:|
+| argoprod@us.ibm.com | IBM |
+| aws-k8s-embargo-notification@amazon.com | AWS |
+| bphilips@redhat.com | Kubernetes PST |
+| brandon@ifup.org | Kubernetes PST |
+| cjcullen@google.com | Kubernetes PST |
+| etune@google.com | Kubernetes PST |
+| jpbetz@google.com | Kubernetes PST |
+| kops-security-response@googlegroups.com | Kops |
+| kubernetes-security-disclosure@google.com | Google |
+| kubernetes-security@huawei.com | Huawei |
+| kubernetes-security@service.aliyun.com | Aliyun |
+| kubernetes-security@service.microsoft.com | Microsoft |
+| liggitt@google.com | Kubernetes PST |
+| me@jessfraz.com | Kubernetes PST |
+| mke-security@mesosphere.com | Mesosphere |
+| pwittroc@google.com | Kubernetes PST |
+| ralph@uk.ibm.com | ??? |
+| saadali@google.com | Kubernetes PST |
+| secalert@redhat.com | Red Hat |
+| secure@sap.com | SAP |
+| security-release-team@kubernetes.io | Kubernetes PST |
+| security@kubernetes.io | Kubernetes PST |
+| security@rancher.com | Rancher |
+| security@vmware.com | VMware |
+| stclair@google.com | Kubernetes PST |
+| upstream-security@heptio.com | Heptio |
+| vulnerabilityreports@cloudfoundry.org | Cloud Foundry |
 
 ### Membership Criteria
 
