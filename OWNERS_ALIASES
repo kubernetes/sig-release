@@ -4,47 +4,49 @@ aliases:
     - justaugustus
     - tpepper
   release-team-lead-role:
-    - jdumars # 1.10
     - jberkus # 1.11
     - tpepper # 1.12
     - aishsundar # 1.13
+    - spiffxp # 1.14
   patch-release-manager-role:
-    - MaciekPytel # 1.10
     - foxish # 1.11
     - feiskyer # 1.12
     - aleksandra-malinowska # 1.13
     - tpepper # 1.13
   ci-signal-role:
-    - krzyzacy # 1.10
     - aishsundar # 1.11
     - mohammedzee1000 # 1.12
     - jberkus # 1.13
+    - mariantalla # 1.14
   enhancements-role:
     - idvoretskyi # 1.11
     - justaugustus # 1.12
     - kacole2 # 1.13
+    - claurence # 1.14
   test-infra-role:
     - bentheelder # 1.11
-    - cjwagner # 1.13 / 1.12 / 1.10
+    - cjwagner # 1.13 / 1.12
+    - amwat # 1.14
   bug-triage-role:
-    - jberkus # 1.10
     - tpepper # 1.11
     - guineveresaenger # 1.12
-    - nikopen # 1.13
+    - nikopen # 1.13 / 1.14
   branch-manager-role:
-    - calebamiles # 1.11 / 1.10
+    - calebamiles # 1.11
     - dougm # 1.13 / 1.12
+    - hoegaarden # 1.14
   docs-role:
-    - bradamant3 # 1.10
     - misty # 1.11
     - zparnold # 1.12
     - tfogo # 1.13
+    - jimangel # 1.14
   release-notes-role:
-    - nickchase # 1.12 / 1.11 / 1.10
+    - nickchase # 1.12 / 1.11
     - marpaia # 1.13
+    - dstrebel # 1.10
   communications-role:
-    - nwoods # 1.10
     - kbarnard10 # 1.13 / 1.12 / 1.11
+    - nwoods3 # 1.14
   product-security-team:
     - philips
     - jessfraz
