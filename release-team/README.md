@@ -79,7 +79,7 @@ there are 3 types of Kubernetes releases:
 | Test Infra | [Test Infra Handbook](role-handbooks/test-infra/README.md) |
 | Bug Triage | [Bug Triage Handbook](role-handbooks/bug-triage/README.md) |
 | Branch Manager | [Branch Manager Handbook](role-handbooks/branch-manager/README.md) |
-| Docs | [Doc Handbook](role-handbooks/docs/README.md) |
+| Docs | [Docs Handbook](role-handbooks/docs/README.md) |
 | Release Notes | [Release Notes Handbook](role-handbooks/release-notes/README.md) |
 | Communications | [Communications Handbook](role-handbooks/communications/README.md) |
 | Patch Release Management Team | [Patch Release Handbook](role-handbooks/patch-release-manager/README.md) |
