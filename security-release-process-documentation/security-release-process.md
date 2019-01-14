@@ -30,10 +30,6 @@ Kubernetes is a large growing community of volunteers, users, and vendors. The K
   * [Fix Disclosure Process](#fix-disclosure-process)
   * [Retrospective](#retrospective)
 - [Private Distributors List](#private-distributors-list)
-  * [Embargo Policy](#embargo-policy)
-  * [Contributing Back](#contributing-back)
-  * [Membership Criteria](#membership-criteria)
-  * [Requesting to Join](#requesting-to-join)
 - [Severity Thresholds - How We Do Vulnerability Scoring](#severity-thresholds-how-we-do-vulnerability-scoring)
   * [Server](#server)
     + [Critical](#critical)
@@ -254,145 +250,19 @@ With the Fix Development underway the Fix Lead needs to come up with an overall 
   - [discuss.kubernetes.io](https://discuss.kubernetes.io/c/announcements) forum
 - The Fix Lead will remove the Fix Team from the private security repo.
 
+## Private Distributors List
+
+This list is used to provide actionable information to multiple distribution
+vendors at once.
+
+See the [private distributor list doc](private-distributors-list.md) for more information.
+
 ### Retrospective
 
 These steps should be completed 1-3 days after the Release Date. The retrospective process [should be blameless](https://landing.google.com/sre/book/chapters/postmortem-culture.html).
 
 - The Fix Lead will send a retrospective of the process to kubernetes-dev@googlegroups.com including details on everyone involved, the timeline of the process, links to relevant PRs that introduced the issue, if relevant, and any critiques of the response and release process.
 - The Release Managers and Fix Team are also encouraged to send their own feedback on the process to kubernetes-dev@googlegroups.com. Honest critique is the only way we are going to get good at this as a community.
-
-## Private Distributors List
-
-This list is intended to be used primarily to provide actionable information to
-multiple distribution vendors at once. This list is not intended for
-individuals to find out about security issues.
-
-### Embargo Policy
-
-The information members receive on distributors-announce@kubernetes.io must not be
-made public, shared, nor even hinted at anywhere beyond the need-to-know within
-your specific team except with the list's explicit approval. This holds
-true until the public disclosure date/time that was agreed upon by the list.
-Members of the list and others may not use the information for anything other
-than getting the issue fixed for your respective distribution's users.
-
-Before any information from the list is shared with respective members of your
-team required to fix said issue, they must agree to the same terms and only
-find out information on a need-to-know basis.
-
-In the unfortunate event you share the information beyond what is allowed by
-this policy, you _must_ urgently inform the security@kubernetes.io
-mailing list of exactly what information
-leaked and to whom. A retrospective will take place after the leak so
-we can assess how to not make the same mistake in the future.
-
-If you continue to leak information and break the policy outlined here, you
-will be removed from the list.
-
-### Contributing Back
-
-This is a team effort. As a member of the list you must carry some water. This
-could be in the form of the following:
-
-**Technical**
-
-- Review and/or test the proposed patches and point out potential issues with
-  them (such as incomplete fixes for the originally reported issues, additional
-  issues you might notice, and newly introduced bugs), and inform the list of the
-  work done even if no issues were encountered.
-
-**Administrative**
-
-- Help draft emails to the public disclosure mailing list.
-- Help with release notes.
-
-### Membership Criteria
-
-To be eligible for the distributors-announce@kubernetes.io mailing list, your
-distribution should:
-
-0. Have an actively monitored security email alias for our project.
-1. Be an actively maintained and [CNCF certified distribution of
-   Kubernetes][conformance] components.
-2. Have a user base not limited to your own organization.
-3. Have a publicly verifiable track record up to present day of fixing security
-   issues.
-4. Not be a downstream or rebuild of another distribution.
-5. Be a participant and active contributor in the community.
-6. Accept the [Embargo Policy](#embargo-policy) that is outlined above.
-7. Be willing to [contribute back](#contributing-back) as outlined above.
-8. Have someone already on the list vouch for the person requesting membership
-   on behalf of your distribution.
-
-[conformance]: https://www.cncf.io/certification/software-conformance/
-
-**Removal**: If your distribution stops meeting one or more of these criteria
-after joining the list then you will be unsubscribed.
-
-### Requesting to Join
-
-New membership requests are sent to security@kubernetes.io
-
-In the body of your request please specify how you qualify and fulfill each
-criterion listed in [Membership Criteria](#membership-criteria).
-
-Here is a psuedo example:
-
-```
-To: security@kubernetes.io
-Subject: Seven-Corp Membership to distributors-announce@kubernetes.io
-
-Below are each criterion and why I think we, Seven-Corp, qualify.
-
-> 0. Have an actively monitored security alias email for our project.
-
-Yes, please subscribe kubernetes-security-team@example.com to the distributor's
-announce list.
-
-> 1. Be an actively maintained distribution of kubernetes components.
-
-We distribute the "Seven" distribution of kubernetes [link]. We have been doing
-this since 1999 before containers were even cool.
-
-> 2. Have a user base not limited to your own organization.
-
-Our user base spans of the extensive "Seven" community. We have a slack and
-GitHub repos and mailing lists where the community hangs out. [links]
-
-> 3. Have a publicly verifiable track record up to present day of fixing security
-   issues.
-
-We announce on our blog all upstream patches we apply to "Seven." [link to blog
-posts]
-
-> 4. Not be a downstream or rebuild of another distribution.
-
-This does not apply, "Seven" is a unique snowflake distribution.
-
-> 5. Be a participant and active contributor in the community.
-
-Our members, Acidburn, Cereal, and ZeroCool are outstanding members and are well
-known throughout the kubernetes community. Especially for their contributions
-in hacking the Gibson.
-
-> 6. Accept the Embargo Policy that is outlined above.
-
-We accept.
-
-> 7. Be willing to contribute back as outlined above.
-
-We are definitely willing to help!
-
-> 8. Be willing and able to handle PGP-encrypted email.
-
-Yes.
-
-> 9. Have someone already on the list vouch for the person requesting membership
-   on behalf of your distribution.
-
-CrashOverride will vouch for Acidburn joining the list on behalf of the "Seven"
-distribution.
-```
 
 ## Severity Thresholds - How We Do Vulnerability Scoring
 
