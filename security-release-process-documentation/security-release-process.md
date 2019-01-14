@@ -140,7 +140,7 @@ A rotating role so we can make sure everyone helps and no one is stuck constantl
 
 Makes sure the people who should be in "the know" (aka notified) are notified, also responds to issues that are not actually issues and lets the OP know that.
 This person is the escalation path for a bug if it is one.
-Right now it seems like it's a kinda first come, first served, in that who ever responds first basically does this or escalates to someone who can.
+The on-call PST member should triage the request. If the on-call member is unavailable then it is first come first serve on the alert escalation.
 
 ##### Infra
 
