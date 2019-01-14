@@ -17,7 +17,7 @@ The Release Team Lead should be an arbiter of decisions, and not the primary dec
   - You must be a member in good standing, and part of the Kubernetes org
   - You must be active in at least one Kubernetes SIG
   - You must be a member of the kubernetes-dev mailing list
-- Several release team members are in the Pacific Time Zone partially due to infrastructure access limitations at Google, therefore, the release lead must be comfortable scheduling meetings and events compatible with PT working hours
+- The Release Team is a global volunteer group, as is the Kubernetes project, so the Lead must be prepared to schedule and attend meetings that may be very late or very early in his or her time zone, in order to include as many of the team as possible.
 - Project management experience is highly desirable
 - Strong written and verbal communications skills are required
 - As the public face of the community during release time, you must do so with a very high level of professionalism
@@ -36,6 +36,8 @@ Among the specific time commitments you have are:
 - SIG-Release and Release Team meetings once a week during weeks 1-7.
 - Burndown meetings three to five times a week during weeks 8-12.
 - Community meetings once a week.
+
+In addition to the absolute time commitment you make, you must also consider the relative burdens on yourself and your team when establishing meetings.  This means scheduling meetings and release events compatible with global working hours and coordinating with a global set of team leads and shadows.  You may hold the traditional 10am Pacific release team meeting, but also might schedule alternate time meetings and varying the final weeks' burndown meeting time slots to best accommodate the individuals, both release team and broader SIG representation on the issues of the day, whose presence and information is needed.  You may also work to maximize asynchronous communications and reduce face to face meetings to where absolutely required.  Time sacrifices may be necessary at times and the Release Team Lead should endeavor to spread this so as not to focus any inconvenience on specific individuals or specific geographies, for example considering major global holidays when planning the release timeline while also making sure the project is correctly moving forward.
 
 ## Choosing a Release Team
 
