@@ -5,13 +5,14 @@
 * [This document](https://git.k8s.io/sig-release/releases/release-1.14/README.md)
 * [Release Team](https://git.k8s.io/sig-release/releases/release-1.14/release_team.md)
 * [Meeting Minutes](http://bit.ly/k8s114-minutes) (join [kubernetes-milestone-burndown@] to receive meeting invites)
-* Contact: [#sig-release] on slack, [kubernetes-sig-release@] on e-mail
+* Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
+* [Internal Contact Info](https://bit.ly/k8s114-contacts) (accessible only to members of [kubernetes-release-team@])
 
 #### Tracking docs
 
-* TODO: [Enhancements Tracking Sheet](http://bit.ly/k8s114-enhancements)
-* TODO: [Bug Triage Tracking Sheet](http://bit.ly/k8s114-bugtriage)
-* TODO: [CI Signal Report](http://bit.ly/k8s114-cisignal)
+* [Enhancements Tracking Sheet](http://bit.ly/k8s114-enhancements) (NB: this was copied from 1.13, may still have old content)
+* [Bug Triage Tracking Sheet](http://bit.ly/k8s114-bugtriage) (NB: this was copied from 1.13, may still have old content)
+* [CI Signal Report](http://bit.ly/k8s114-cisignal) (NB: this was copied from 1.13, may still have old content)
 * [Retrospective Document](http://bit.ly/k8s114-retro)
 
 #### Guides
@@ -137,8 +138,10 @@ For documentation PRs:
 [Exceptions]: #exceptions
 
 [kubernetes-milestone-burndown@]: https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown
+[kubernetes-release-team@]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
+[contact-info]: https://bit.ly/k8s114-contacts
 
 [kubernetes/website]: https://github.com/kubernetes/website
 
