@@ -47,7 +47,7 @@ Whenever you find a bug that needs to be "fixed" or kicked out of the release, t
 
 ## Early Release 
 
-There is no critical work for you in this stage.
+*There is no critical work for you in this stage.*
 
 This is the best stage to get involved with any automation work that can ease the workload of later stages.
 
@@ -77,15 +77,15 @@ No reports are required during this period.
 ## Code Freeze Preparations
 
 As Code Freeze approaches, proper tracking ensues and merge gates become stricter.
-One of the main purposes of Code Freeze is to get issues and PRs filtered through the use of labels, with the `priority` label playing an important role on that.
+One of the main purposes of Code Freeze is to get issues and PRs filtered through the use of labels, with `milestone` and the `priority` label playing an important role on that.
 
 The following items help with achieving the above:
 
-* issues targeting your release should have a milestone, kind, and sig.
+* issues targeting your release should have a *milestone*, kind, and sig.
 * PRs linked to these issues should have the same labels and milestone.
 * priority should be `important-soon` or `critical-urgent`.
 
-If issues/PRs do not match the above and if they are obvious, you can add the relevant labels.
+If the needed additions on the issues/PRs do not match the above, you can add the relevant labels.
 
 If you are not sure (mainly priority), you can comment and ask the owner or SIG leads about the status of the issue/PR (also see [Escalation Path](#escalation-path) on pinging options).
 
@@ -95,14 +95,13 @@ Stuck PRs: Sometimes PRs get stuck in the approval process, as every PR requires
 
 CI Signal: Checking newly-reported test failures becomes more important; you should assume that any new failure is related to the upcoming release, bring to the attention of the CI Signal lead, and assist in getting follow-up from the appropriate SIG.  Generally the CI Signal lead will track these failures, but newly opened issues may not initially have sufficient labelling to catch their attention.
 
-A detailed page is in the [developer guide](https://git.k8s.io/community/contributors/devel/release.md) describing how developers target issues and pull requests to a milestone.
+[The release document from the developer's guide](https://git.k8s.io/community/contributors/devel/release.md) is also a good resource on describing how developers target issues and pull requests to a milestone. 
 
-
-### Filtering
+### Filtering / What belongs in the milestone
 
 Around this point, the release is about 1 month away, and there is less and less time for PRs to make it in time.
 
-Filtering is one of the main functions of the Bug Triage role. It involves informing owners and SIG leads about the timelines and asking  whether an issue/PR at hand is relevant to the release, whether it should be prioritized or moved to another release. This process involves a mix of multiple parameters such as:
+Filtering is one of the main functions of the Bug Triage role. It involves informing owners and SIG leads about the timelines and asking  whether an issue/PR at hand is relevant to the release, whether it should be prioritized or moved to another release via the use of `milestone`. This process involves a mix of multiple parameters such as:
 
 - time left
 - time estimation
@@ -112,11 +111,17 @@ Filtering is one of the main functions of the Bug Triage role. It involves infor
 - technical difficulty
 - CI Signal stability
 - consensus by multiple parties 
-- critical thinking...
+- critical thinking
 
 As stated on a previoous section, decisions and actions should be made either by the Release Lead or SIG Leads - Bug Triage's role is mainly to keep track, ping people and report the overall status to the Release Lead.
 
-If you see an issue or PR that is not making progress, hasn't got an update for a while and there is no anecdotal knowledge that someone is working on it, you should comment and ask about the status. This task becomes more frequent during Code Freeze and even more during Burndown.
+If you see an issue or PR that is not making progress, hasn't got an update for a while and there is no anecdotal knowledge that someone is working on it, you should comment and ask about the status. If there is no response for quite some time, it's very likely that it will be marked for the subsequent release. The task of filtering becomes more frequent as time progresses.
+
+This section is also described in [the release document](https://github.com/kubernetes/community/blob/master/contributors/devel/release.md#removal-of-items-from-the-milestone) from the contributor's perspective.
+
+### Priority label definitions
+
+You can [refer to this guide](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#define-priority).
 
 
 ### Sample Searches
@@ -130,7 +135,7 @@ If you see an issue or PR that is not making progress, hasn't got an update for 
 
 ### Reports
 
-Somewhere around this time, release meetings occur ~3 times per week and a report is expected in each of them.
+At this point, release meetings occur ~3 times per week and a report is expected in each of them.
 
 You should soon start maintaining an overall list of items/areas/issues which seem to be delaying, at risk of not making it in time, or in need of attention by the Release Lead or other roles, and present it in the meetings.
 
@@ -158,7 +163,7 @@ Once Code Freeze kicks in, only PRs with the label `priority/critical-urgent` &&
 
 This is enforced via test-infra automation, as a means of "new release coming in a few weeks - we're only merging critical PRs in".
 
-As explained in sections [Code Freeze Preparation](#code-freeze-preparation) and [Filtering](#filtering), it becomes incrementally more difficult to merge new stuff as time progresses, and this should be incrementally enforced. As such, in the days around the start of Code Freeze, owners of issues and PRs not marked as critical-urgent should be poked again, reminding them that Code Freeze starts/started at DD/MM, which means any issues not marked `priority/critical-urgent` _could_ be moved to the subsequent release. 
+As explained in sections [Code Freeze Preparation](#code-freeze-preparation) and [Filtering](#filtering), it becomes incrementally more difficult to merge new stuff as time progresses, and this should be incrementally enforced. As such, in the days around the start of Code Freeze, owners of issues and PRs not marked as critical-urgent should be poked again, reminding them that Code Freeze starts/started at DD/MM, which means any issues not marked `priority/critical-urgent` _might_ be moved to the subsequent release. 
 
 The criteria for moving issues is a mix of:
 
