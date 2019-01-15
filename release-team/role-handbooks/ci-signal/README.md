@@ -83,16 +83,16 @@ Here are some good early deliverables from the CI Signal lead between start of t
 #### **_Best Practice:_**
 The SLA and involvement of signal lead at this stage might vary from release to release (and the CI Signal lead). However in an effort to establish an early baseline of the test health the signal lead can take an initial stab at the tests runs at the start of the release, open issues, gather and report on the current status. Post that, it might suffice to check on the tests **twice a week** due to high code churn and expected test instability.
 
-### Feature Freeze to Code Slush
+### Feature Freeze to Burndown
 
 Day to day tasks remain pretty much the same as before, with the following slight changes
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) dashboard **daily**
 - Monitor [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) **every other day**
 - Starting now, curate a **weekly CI Signal report** escalating current test failures and flakes and send to kubernetes-dev@googlegroups.com community. [See below](#reporting-status) for more details on the report format and contents
 
-Increased attention on maintaining signal early in the release cycle goes a long way in reducing the risk of late-found issues destabilizing the release during code slush and freeze.
+Increased attention on maintaining signal early in the release cycle goes a long way in reducing the risk of late-found issues destabilizing the release during code freeze.
 
-### Code Slush to Code Freeze
+### Burndown to Code Freeze
 
 This is when things really begin to ramp up in the release cycle with active bug triaging and followup on possible release blocking issues to assess release health. Day to day tasks of CI Signal lead include
 - Auditing test status of master-blocking, master-upgrade and release-1.x.y-blocking dashboards on **daily basis**
@@ -103,7 +103,7 @@ This is when things really begin to ramp up in the release cycle with active bug
 
 ### During Code Freeze
 
-- Continue best practices from Code slush stage. Monitor master-blocking, master-upgrade and release-1.x.y-blocking dashboards on **daily basis**
+- Continue best practices from Burndown stage. Monitor master-blocking, master-upgrade and release-1.x.y-blocking dashboards on **daily basis**
 - Quickly escalate any new failures to release team and SIGs
 - Continuing to send [weekly CI signal report](#reporting-status)
 
@@ -225,7 +225,7 @@ Since 1.11 we started curating and broadcasting a weekly CI Signal report to the
   - New failing and flaky jobs and tests in the past week
   - Call out SIGs actively fixing and ignoring issues
   - Call out potential release blocking issues
-  - Call out upcoming key dates e.g., Code slush, freeze etc
+  - Call out upcoming key dates e.g., Code freeze, thaw etc
   - [Link to the previous reports](https://docs.google.com/document/d/1y044OcaKGEUgj094JH1ZxnnLRHnqi0Kq0f4ov56kvxE/edit)
   - CCing individual SIGs (kubernetes-sig-foo@googlegroups.com) that own failing tests help in getting their attention
 
