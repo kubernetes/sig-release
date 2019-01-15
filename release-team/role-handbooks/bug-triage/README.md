@@ -74,9 +74,8 @@ It is also a good time to interact with the Enhancements Lead and CI Signal Lead
 No reports are required during this period.
 
 
-## Code Freeze Preparations
+## Brace Yourselves, Code Freeze Is Coming
 
-As Code Freeze approaches, proper tracking ensues and merge gates become stricter.
 One of the main purposes of Code Freeze is to get issues and PRs filtered through the use of labels, with `milestone` and the `priority` label playing an important role on that.
 
 The following items help with achieving the above:
@@ -103,15 +102,12 @@ Around this point, the release is about 1 month away, and there is less and less
 
 Filtering is one of the main functions of the Bug Triage role. It involves informing owners and SIG leads about the timelines and asking  whether an issue/PR at hand is relevant to the release, whether it should be prioritized or moved to another release via the use of `milestone`. This process involves a mix of multiple parameters such as:
 
-- time left
-- time estimation
-- importance
-- relevance
-- kind (kind/cleanup is usually less important)
-- technical difficulty
-- CI Signal stability
-- consensus by multiple parties 
-- critical thinking
+- Criticality: How critical is the Issue to be fixed for the currently imminent release?
+- Relevance: What does it fix/introduce? e.g. - issues marked as kind/cleanup are usually less important.
+- Time Estimation: Is the PR expected to be ready for merging soon? Is there any time left?
+- CI Stability: How big is the change? Could it cause instability to CI? If so, it either needs to be closely tracked /or/ moved.
+- Consensus 
+- Critical Thinking
 
 As stated on a previoous section, decisions and actions should be made either by the Release Lead or SIG Leads - Bug Triage's role is mainly to keep track, ping people and report the overall status to the Release Lead.
 
@@ -143,18 +139,21 @@ The Release Lead will include a template for this information in the Monday/Wedn
 
 Code Freeze hasn't really started yet at this point, and it depends on the overall status and volume of open issues/PRs on how many to report. It's good to have some numbers of total issues/PRs available to see general trends over time, like increased or lowered volumes.
 
-Overall, you can use the Red/Yellow/Green pattern on keeping track and reporting. 
-As you get closer to release, the specific definitions of red/yellow/green will change, but the basic idea won't:
+### Issue Categorization
 
-* red: issues/PRs which don't seem to be headed towards any resolution on deadline, and represent either major breakage or enhancements still in the release
-* yellow: issues/PRs which are in progress but need to be watched
-* green: issues/PRs which still show up on the reports, but are on their way to being resolved very soon
+Issues can be categorized with the following 'status codes', Green/Yellow/Red.
 
-At this stage, these three levels generally are:
+* green: issues/PRs where the resolution is known and will be resolved soon
+* yellow: issues/PRs which are in progress but are not as easy and need to be watched
+* red: issues/PRs that are heavily release-impacting, and/or with a likelihood of not making it in time.
 
-* red: major breakage issues which are both old and getting no attention at all, and enhancement issues without a PR.
-* yellow: major breakage issues with a PR in progress, minor breakage issues, and enhancement issues with a PR which is in progress but still needs work.
-* green: minor breakage issues with a PR and enhancement issues with a PR that looks to be approved soon.
+In each meeting, it is good to give an overall status of Bug Triage: Green, Yellow or Red, generally based on the amount of issues from each category. Examples are:
+
+- status can be Red if there are multiple release-impacting issues that are in danger of not being fixed in the release.
+- status can be Yellow if there are multiple issues open but they are being worked on, which is the usual state of the world.
+- status can be Green if there are no Red issues and workpaces seem normal.
+
+It is useful to keep Red issues on a separate section and report them during the meetings.
 
 
 ## Code Freeze
@@ -165,77 +164,61 @@ This is enforced via test-infra automation, as a means of "new release coming in
 
 As explained in sections [Code Freeze Preparation](#code-freeze-preparation) and [Filtering](#filtering), it becomes incrementally more difficult to merge new stuff as time progresses, and this should be incrementally enforced. As such, in the days around the start of Code Freeze, owners of issues and PRs not marked as critical-urgent should be poked again, reminding them that Code Freeze starts/started at DD/MM, which means any issues not marked `priority/critical-urgent` _might_ be moved to the subsequent release. 
 
-The criteria for moving issues is a mix of:
+The criteria for moving issues are described in [Filtering](#filtering).
 
-- Criticality: How critical is the Issue to be fixed for the currently imminent release?
-- Time Estimation: Is the PR expected to be ready for merging soon?
-- CI Stability: How big is the change? Could it cause instability to CI? If so, it either needs to be closely tracked /or/ moved.
+For issues/PRs that look tricky, you can always consolidate with the Release Lead and SIG/PR owners to reach a decision.
 
-For issues/PRs that look tricky, you can consolidate with the Release Lead and SIG/PR owners to reach a decision.
-
-After this, you need to monitor all of these issues to make sure that daily progress is made on them.  Theoretically, issue owners/SIGs are supposed to make a daily status comment in the issue, but this is seldom followed. You also will need to send daily reminders/queries about stuck PRs.
+Any new enhancements that aren't making rapid progress need to either jump to the next release, or reduce their scope.
+You may need to send daily reminders/queries about stuck PRs.
 
 New test failures will also show up during Code Freeze and you need to make sure that these are labeled properly, get attention of the CI Signal lead, and get attention from the appropriate SIGs.
 
-As Code Freeze progresses, you should get increasingly aggressive about getting SIGs to kick out any issue which doesn't represent substantial breakage in the new release.  Particularly, new enhancements which aren't making rapid progress need to either jump to the next release, or reduce their scope.  You can remove issues from the release by downgrading their priority, but it's really better if the SIGs do it.  Start watching for issues with the release version string in them, eg: "1.11.0-beta".
 
 ### Sample Searches
 
-* Open v1.11 Issues
-  * `is:open is:issue milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
-  * `is:open is:issue milestone:v1.11` [milestone open issues, no exclusions](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+)
+* Open v1.14 Issues
+  * `is:open is:issue milestone:v1.14 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
+  * `is:open is:issue milestone:v1.14` [milestone open issues, no exclusions](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+)
   * `is:open is:issue created:>2018-06-14` [open issues, no exclusions, created since you last looked](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen++created%3A%3E2018-06-14)
   * `is:open is:issue modified:>2018-06-14` [open issues, no exclusions, modified since you last looked](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen++modified%3A%3E2018-06-14)
-* Open v1.11 PRs
-  * `is:open is:pr milestone:v1.11 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
-  * `is:open is:pr milestone:v1.11"` [milestone open PRs, no exclusions](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.11+)
+* Open v1.14 PRs
+  * `is:open is:pr milestone:v1.14 -label:"kind/feature" -label:"kind/failing-test"` [milestone open PRs, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.14+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
+  * `is:open is:pr milestone:v1.14"` [milestone open PRs, no exclusions](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.14+)
   * `is:open is:pr created:>2018-06-14` [open PRs, no exclusions, created since you last looked](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen++created%3A%3E2018-06-14)
   * `is:open is:pr modified:>2018-06-14` [open PRs, no exclusions, modified since you last looked](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen++modified%3A%3E2018-06-14)
 * Reports against the beta(s):
-  * `is:issue "1.11.0-beta"' [issues mentioning beta version](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=%221.11.0-beta%22)
-  * `is:pr "1.11.0-beta"' [PRs mentioning beta version](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=%221.11.0-beta%22)
+  * `is:issue "1.14.0-beta"' [issues mentioning beta version](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=%221.14.0-beta%22)
+  * `is:pr "1.14.0-beta"' [PRs mentioning beta version](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=%221.14.0-beta%22)
 
 ### Reports
 
-We're still doing the red/yellow/green reports:
-
-* red: major breakage issues which are not making daily progress, and enhancement issues without a PR which looks to be approved soon.
-* yellow: major breakage issues with a PR in good shape, minor breakage issues, and enhancement issues with a PR in good shape.
-* green: minor breakage issues with a good PR and enhancement issues with a PR that is just waiting on merge.
+A few days after Code Freeze kicks in, daily 'burndown' meetings start, which means that either you or a shadow has to give updates every day. See [Issue Categorization](#issue-categorization).
 
 There will also be several enhancements which will have requested exceptions from the normal release timeline/requirements.  You'll want to track the exceptions specifically and report on them.  It is useful to be tracking in a spreadsheet the open issues/PRs which have caught your attention, because GitHub queries are only point in time.  It's easy for an issue you want to follow to stop showing up in a query and thus fall off your radar if you're only going by the queries.
 
-The Release Lead will include a template for this information in the Monday/Wednesday/Friday release team meeting notes.
-
 ## Code Thaw
 
-Starting a few working days before the first Release Candidate, we go into Sudden Death Overtime.  At this point, you need to make sure that three things happen:
+Starting a few working days before the first Release Candidate, Code Freeze labeling restrictions are lifted.  At this point, you need to make sure that three things happen:
 
 1. major breakage bugs get fixed immediately
 2. any pending PRs get approved and merged
-3. anything else gets kicked out of the release
+3. *anything else gets kicked out of the release*
 
-During this period, it's reasonable to expect issue owners and SIG leads to get back to you within hours (check their time zones, though).  In cases where SIG Leads are unavailable, you may need to appeal to Kubernetes project leaders to deal with stuck PRs.
+During this period, it's reasonable to expect issue owners and SIG leads to get back to you within hours (check their time zones, though). In cases where SIG Leads are unavailable, you may need to appeal to Kubernetes project leaders to deal with stuck PRs.
 
 Another part of staying on top of code churn, regression, and risk is monitoring commits to master and the release branch especially in the final days of the release, as shown below in Sample Searches for this phase.  On occasion things will merge that are unexpected by the release team.  This possibility needs monitored and when it happens the commits need triaged for destabilizing risk and proper exception justification, tests, docs, etc.
 
 ### Sample Searches
 
-Same as in code freeze.  Here it becomes critical to have recorded the results of prior queries to compare what issues/PRs have come into or left from the query results compared to the last time you ran a query.
+Most important query at this point is a plain `milestone:v1.xx`, which includes all remaining issues/PRs. Ideally, the queue should be empty.
 
 Additionally for tracking recent changes to master and the release branch,
 eg:
 * [master branch commits](https://github.com/kubernetes/kubernetes/commits/master/)
-* [release-1.11 branch commits](https://github.com/kubernetes/kubernetes/commits/release-1.11)
+* [release-1.14 branch commits](https://github.com/kubernetes/kubernetes/commits/release-1.14)
 
 ### Reports
 
-During Code Thaw, you need to report on issue status at least once per day.
+Same as Code Freeze.
 
-* red: major breakage issues or enhancement issues without a PR which looks to be approved very soon.  Minor breakage issues with no PR.
-* yellow: major breakage issues with an nearly-approved PR, minor breakage issues with a PR, and enhancement issues with a nearly-approved PR.
-* green: issues and PRs which are just waiting on being taken out of the milestone.
-
-The Release Lead will include a template for this information in the daily Monday through Friday release team meeting notes.
-
-During this short period it may also be necessary to check in on and report out status changes on the weekend.  This should be an exception versus the norm because all the prior months' work by the release team and community has led to well managed and understood risks, but surprises do happen.
+During this short period it may also be necessary to check in on and report out status changes on the weekend. This should be an exception versus the norm because all the prior months' work by the release team and community has led to well managed and understood risks, but surprises do happen.
