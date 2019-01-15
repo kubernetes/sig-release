@@ -15,7 +15,7 @@
     -   [Release](#release)
     -   [Release Validation](#release-validation)
 -   [Branch Fast Forward](#branch-fast-forward)
-    -   [Code Slush, Freeze, Thaw](#code-slush-freeze-thaw)
+    -   [Code Freeze, Thaw](#code-freeze-thaw)
     -   [Reverts](#reverts)
 -   [Cherry Picks](#cherry-picks)
 
@@ -164,7 +164,7 @@ Once you know your environment is good and running for the fast forwards:
 
 Subsequent runs will simply be merging in changes from master to the branch, keeping the previous API fixup commits on the branch.
 
-## Code Slush, Freeze, Thaw
+## Code Freeze, Thaw
 Code merge restriction periods have been implemented by a combination of prow plugins config, submit-queue config, and tide.  The Test Infra Lead, Branch Manager and Release Lead coordinate checking in whichever config changes are required to enable and disable merge restrictions.
 
 ## Reverts
