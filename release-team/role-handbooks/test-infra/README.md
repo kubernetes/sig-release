@@ -7,7 +7,7 @@ There are three major area that test-infra lead need to take care during the rel
 
 1. [Create CI/Presubmit jobs for the new release, and populate the Testgrid dashboard](#create-cipresubmit-jobs-for-the-new-release)
 
-1. [Configure merge automation for code slush, freeze, and thaw](#configure-merge-automation-for-code-slush-freeze-and-thaw)
+1. [Configure merge automation for code freeze, and thaw](#configure-merge-automation-for-code-freeze-and-thaw)
 
 1. [Watch for test infra status, make sure test infra is stable, react to test infra related issues and notify Release Lead and CI Signal Lead of issue status changes](#ensure-the-stability-of-test-infra)
 
@@ -39,10 +39,11 @@ Note that this section reflects the status of the world today, we are actively l
 Not all the steps need to happen together, some new jobs, like bazel-build/integration/verify will require images to be pushed before they can work properly. 
 
 
-## Configure merge automation for code slush, freeze, and thaw
+## Configure merge automation for code freeze, and thaw
 
-The code slush, code freeze, and code thaw dates in the release cycle mark points at which merge requirements for PRs in the `master` branch and `release-<current-release-number>` change. The remaining branches are `release-X.X` branches for *previous* releases and are unaffected by the release cycle.
-Code slush and freeze are the two phases of the release cycle with additional merge requirements. Code thaw marks the switch back to the development (normal) phase.
+The code freeze and code thaw dates in the release cycle mark points at which merge requirements for PRs in the `master` branch and `release-<current-release-number>` change. The remaining branches are `release-X.X` branches for *previous* releases and are unaffected by the release cycle.
+
+Code freeze is the one phase of the release cycle with additional merge requirements. Code thaw marks the switch back to the development (normal) phase.
 
 ### Tide
 
@@ -69,57 +70,27 @@ Here is an example of what the query config for `kubernetes/kubernetes` looks li
     - needs-sig
 ```
 
-During code slush and freeze we use two queries instead of one for the `kubernetes/kubernetes` repo. One query handles the `master` and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
-
-### Code Slush
-
-Code slush is when merge requirements for the `master` and current release branch diverge from the requirements for the other branches so this is when we split the `kubernetes/kubernetes` Tide query into two queries.
-
-We only add one additional merge requirement for PRs to these two branches for code slush:
-- PRs must be in the GitHub milestone for the current release (e.g. `v1.12`).
-
-Milestone requirements are configured by adding `milestone: foo` to a query config.
-
-```yaml
-  - repos:
-    - kubernetes/kubernetes
-    milestone: v1.12
-    includedBranches:
-    - master
-    - release-1.12
-    labels:
-    - lgtm
-    - approved
-    - "cncf-cla: yes"
-    missingLabels:
-      # as above...
-  - repos:
-    - kubernetes/kubernetes
-    excludedBranches:
-    - master
-    - release-1.12
-    labels:
-    - lgtm
-    - approved
-    - "cncf-cla: yes"
-    missingLabels:
-      # as above...
-```
+During code freeze we use two queries instead of one for the `kubernetes/kubernetes` repo. One query handles the `master` and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
 
 ### Code Freeze
 
-Code freeze adds one more merge requirement for PRs in the `master` and current release branches:
+Code freeze is when merge requirements for the `master` and current release branch diverge from the requirements for the other branches so this is when we split the `kubernetes/kubernetes` Tide query into two queries.
+
+We only add additional merge requirements for PRs to these two branches for code freeze:
+- PRs must be in the GitHub milestone for the current release (e.g. `v1.14`).
 - PRs must have the `priority/critical-urgent` label.
 
-This label requirement is configured by adding `priority/critical-urgent` to the list specified by the `labels` field.
+Milestone requirements are configured by adding `milestone: foo` to a query config.
+
+The label requirement is configured by adding `priority/critical-urgent` to the list specified by the `labels` field.
 
 ```yaml
   - repos:
     - kubernetes/kubernetes
-    milestone: v1.12
+    milestone: v1.14
     includedBranches:
     - master
-    - release-1.12
+    - release-1.14
     labels:
     - lgtm
     - approved
@@ -131,7 +102,7 @@ This label requirement is configured by adding `priority/critical-urgent` to the
     - kubernetes/kubernetes
     excludedBranches:
     - master
-    - release-1.12
+    - release-1.14
     labels:
     - lgtm
     - approved
@@ -142,7 +113,7 @@ This label requirement is configured by adding `priority/critical-urgent` to the
 
 ### Code Thaw
 
-Code thaw removes the release cycle merge restrictions and replaces the two queries with a single one. We remain in this state until the next code slush.
+Code thaw removes the release cycle merge restrictions and replaces the two queries with a single one. We remain in this state until the next code freeze.
 
 ```yaml
   - repos:
@@ -169,14 +140,14 @@ The [velodrome monitoring dashboard](http://velodrome.k8s.io/dashboard/db/monito
 
 ### Monitoring Tide
 
-It is important to monitor Tide after config changes are made for code slush, freeze and thaw to ensure that the changes are having the intended effect.
+It is important to monitor Tide after config changes are made for code freeze and thaw to ensure that the changes are having the intended effect.
 
 Until the CNCF infra migration is complete, a member of Google's gke-engprod team will need to monitor Tide logs.
 However, most of Tide's behavior can be monitored without access to the cluster. The [Tide dashboard](https://prow.k8s.io/tide) and [Velodrome monitoring dashboard](http://velodrome.k8s.io/dashboard/db/monitoring?orgId=1) provide insight into what Tide is currently doing, how much load it is handling, and how it is performing.
 
 ### Test-Infra 'Code Freeze'
 
-The stability of our test infra is critical to getting reliable testing signals throughout the release cycle, but the signal is most important at the end of the release cycle during code slush and freeze. While the `kubernetes/test-infra` repo does not enforce additional merge restrictions related to the release cycle, we do try to limit the changes that are merged. Specifically, during slush and freeze, changes to test-infra should be limited to important fixes and work that doesn't impact critical infrastructure. Large changes should be delayed if possible.
+The stability of our test infra is critical to getting reliable testing signals throughout the release cycle, but the signal is most important at the end of the release cycle during code freeze. While the `kubernetes/test-infra` repo does not enforce additional merge restrictions related to the release cycle, we do try to limit the changes that are merged. Specifically, during freeze, changes to test-infra should be limited to important fixes and work that doesn't impact critical infrastructure. Large changes should be delayed if possible.
 In particular, bumping the kubekins-e2e images should be avoided unless a critical fix in necessary.
 
 ## Useful Links
