@@ -9,11 +9,11 @@ Secondarily, you will be helping improve automation around artifact management a
 
 How this works depends on where you are in the release cycle.  There are five relevant periods where your workload changes:
 
-1. Early Release: between Enhancement Freeze and a week before Code Slush.
-2. Pre-Code-Slush: a week to 10 days before Code Slush
-3. Code Slush: from Code Slush to Code Freeze, usually 3-4 days.
-4. Code Freeze: from Code Freeze through Betas, until Release Burndown
-5. Release Burndown: Less than 1 week until final release.
+1. Early Release: between Enhancement Freeze and a week before Burndown.
+2. Pre-Burndown: a week to 10 days before Burndown
+3. Burndown: Burndown to Code Freeze, usually 3-4 days.
+4. Code Freeze: from Code Freeze through Betas, until Code Thaw
+5. Code Thaw: Less than 1 week until final release.
 
 ## How You Do Your Job
 
@@ -34,7 +34,7 @@ You have no critical work during this cycle.
 
 Instead, use the time to familiarize yourself with the major enhancements and fixes planned by each SIG for this release, so that you build context in advance of when you will need to identify incoming bugs as being associated with a work focus in the current release.  It is a good time to interact with the Enhancements Lead and CI Signal Lead to understand any early concerns they might have, as the release team's risk management comes as much from this proactive collaboration more as from the Bug Triage lead reacting to incoming issues and PRs.
 
-This is also a good time to do any work on automation that you plan to do.  You can also get started early on the pre-code-slush work.
+This is also a good time to do any work on automation that you plan to do.  You can also get started early on the pre-burndown work.
 
 ### Sample Searches
 
@@ -50,9 +50,9 @@ This is also a good time to do any work on automation that you plan to do.  You 
 
 No reports are required during this period, although you might consider setting up a red/yellow/green report template.
 
-## Pre-Code-Slush
+## Pre-Burndown
 
-During this period your job is to make sure that all issues and PRs which are related to bugfixes for the upcoming release have reasonable labels.  While you may have been doing that some earlier, now you have a deadline.  From the beginning of Code Slush every bug issue or PR should be linked to the milestone.  Specifically:
+During this period your job is to make sure that all issues and PRs which are related to bugfixes for the upcoming release have reasonable labels.  While you may have been doing that some earlier, now you have a deadline.  From the beginning of Burndown every bug issue or PR should be linked to the milestone.  Specifically:
 
 * each issue should have a milestone, kind, and sig.
 * PRs linked to these issues should have the same labels (and milestone)
@@ -74,13 +74,13 @@ The third thing you should do, time permitting, is to scan through the newly ope
 
 No reports are required during this period, although you should be maintaining a red/yellow/green report template starting now.
 
-## Code Slush
+## Burndown 
 
-At the beginning of Code Slush, all issues to stay in the milestone need to have the following characteristics.  PRs for the milestone should share the same labels.
+At the beginning of Burndown, all issues to stay in the milestone need to have the following characteristics.  PRs for the milestone should share the same labels.
 
 * kind, sig, and milestone labels
 
-All bugs should also show progress towards resolution and that they're getting attention between Code Slush and Code Freeze.  If they're not, you need to get the attention of the SIG(s) on those specific bugs, and find out if they're going to fix them or target the fix for a future milestone instead.  Also, SIGs need to make a decisions on milestone inclusion and prioritization; you need to remind them to do so on each bug for example reminding them to run the "/milestone vX.YY" and "/priority ${prioritylevel}" Prow commands.
+All bugs should also show progress towards resolution and that they're getting attention.  If they're not, you need to get the attention of the SIG(s) on those specific bugs, and find out if they're going to fix them or target the fix for a future milestone instead.  Also, SIGs need to make a decisions on milestone inclusion and prioritization; you need to remind them to do so on each bug for example reminding them to run the "/milestone vX.YY" and "/priority ${prioritylevel}" Prow commands.
 
 Even when bugs have PRs resolving them, these PRs can get stuck in the approval process. This means it's your job to remind SIG leads of any stuck PRs until they get approved and merged.
 
@@ -99,13 +99,13 @@ A detailed page is in the [developer guide](https://git.k8s.io/community/contrib
 
 ### Reports
 
-Starting with Code Slush, you should report on issue status at least three times per week.  This report will break down into red/yellow/green issues and PRs.  As you get closer to release, the specific definitions of red/yellow/green will change, but the basic idea won't:
+Starting with Burndown, you should report on issue status at least three times per week.  This report will break down into red/yellow/green issues and PRs.  As you get closer to release, the specific definitions of red/yellow/green will change, but the basic idea won't:
 
 * red: issues/PRs which don't seem to be headed towards any resolution on deadline, and represent either major breakage or enhancements still in the release
 * yellow: issues/PRs which are in progress but need to be watched
 * green: issues/PRs which still show up on the reports, but are on their way to being resolved very soon
 
-In Code Slush, these three levels are:
+In Burndown, these three levels are:
 
 * red: major breakage issues which are both old and getting no attention at all, and enhancement issues without a PR.
 * yellow: major breakage issues with a PR in progress, minor breakage issues, and enhancement issues with a PR which is in progress but still needs work.
@@ -161,7 +161,7 @@ There will also be several enhancements which will have requested exceptions fro
 
 The Release Lead will include a template for this information in the Monday/Wednesday/Friday release team meeting notes.
 
-## Release Burndown
+## Code Thaw
 
 Starting a few working days before the first Release Candidate, we go into Sudden Death Overtime.  At this point, you need to make sure that three things happen:
 
@@ -184,7 +184,7 @@ eg:
 
 ### Reports
 
-During Release Burndown, you need to report on issue status at least once per day.
+During Code Thaw, you need to report on issue status at least once per day.
 
 * red: major breakage issues or enhancement issues without a PR which looks to be approved very soon.  Minor breakage issues with no PR.
 * yellow: major breakage issues with an nearly-approved PR, minor breakage issues with a PR, and enhancement issues with a nearly-approved PR.

@@ -161,11 +161,9 @@ Release Halfway Point
 
 - The code exception process is now in effect, meaning you will likely have to assemble decision makers on specific pending PRs to assess whether the risk of inclusion is acceptable or not. Remember this is not you making a decision, it’s you helping SIGs follow the process, and ensuring there’s consensus. In the event of a contentious PR, you should err on the side of risk aversion. In extreme cases, you can defer to the steering committee, but that is extremely unlikely.
 - If the the release branch is not healthy, stable, and passing tests consistently, notify community through standard channels of need to rectify or code freeze will come early to force focus on stabilization.
-- Announce (again) that code slush is the following week, and code freeze the week after. Touch base with SIGs again, and see if there is anything they need ahead of code freeze.
 
 ### Week 9
 
-- Code slush begins. SIGs will need to ensure all work moving forward is carefully curated with merge required labels ([more info here](https://git.k8s.io/community/contributors/devel/release.md)).
 - Test Infra Lead  ensures automation ready to enforce labeling and other release policies
 - The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, and less for the other team members)
 - Make sure everyone knows the docs deadline (PRs ready for review) is coming the following Friday.
@@ -173,7 +171,7 @@ Release Halfway Point
 
 ### Week 10
 
-- Code freeze begins, and it’s now the home stretch of the release
+- Code freeze begins, and it’s now the home stretch of the release. SIGs will need to ensure all work moving forward is carefully curated with merge required labels ([more info here](https://git.k8s.io/community/contributors/devel/release.md)). 
 - Test Infra Lead ensures automation actively enforcing merge blocking labeling and other release policies
 - The release team needs to look at any in-flight PRs and ensure nothing is being jammed in at the last minute without proper tests, review, etc. This is something to watch extremely closely because it happens every release. Just watch what gets merged closely after code freeze. Incorrectly merged items need assessed and perhaps reverted. GitHub has [a query comparing a release branch and master](https://github.com/kubernetes/kubernetes/compare/release-1.12).
 - Assist the documentation leads in collecting missing docs PRs.

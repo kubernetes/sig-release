@@ -15,7 +15,7 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 - The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetings and follow the [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF) Slack channel for relevant information throughout the release cycle.
 - One member of the Release Notes Team should be responsible for setting up and running the [`release-notes` tool](https://github.com/marpaia/release-notes) to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are always welcome!
 - Drafts produced by the tool are copied to a file called `release-notes-draft.md` in the release folder for the current release in the `sig-release` repo.
-- Towards the end of code slush, the Release Notes Team will copy the latest draft into a Google Doc and start reaching out to SIG Leads in an effort to have them fill in a prose paragraph of "Major Themes" that outlines what their SIG has been working on throughout the lifecycle.
+- Before the beginning of Code Freeze, the Release Notes Team will copy the latest draft into a Google Doc and start reaching out to SIG Leads in an effort to have them fill in a prose paragraph of "Major Themes" that outlines what their SIG has been working on throughout the lifecycle.
 - If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberity in completing the notes
 - A "Known Issues" section will also be created in a GitHub issue to be added to the release notes before release date.
 - The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
