@@ -18,9 +18,10 @@ How this works depends on where you are in the release cycle.
 There are four relevant periods where your workload changes:
 
 1. Early Release: from day 1 up to about a week before Code Freeze. *Duration: ~ 7-8 weeks*
-2. Code Freeze Preparations: ~1.5 weeks before Code Freeze. *Duration: ~1.5 weeks*
-3. Code Freeze: from Code Freeze through Betas, until Release Burndown. *Duration: ~2 weeks*
-4. Release Burndown: Last two weeks of the cycle. *Duration: ~2 weeks*
+2. CodeFreeze is Coming: ~10 days before Code Freeze. *Duration: ~10 days*
+3. Code Freeze: Code Freeze & Burndown, beta releases, until Code Thaw. *Duration: ~2 weeks*
+4. Code Thaw: Last two weeks of the cycle. *Duration: ~2 weeks*
+
 
 ## How You Do Your Job
 
@@ -54,7 +55,6 @@ As this stage lasts nearly 2 months up until Code Freeze, you can use this time 
 
 It is also a good time to interact with the Enhancements Lead and CI Signal Lead to understand any early concerns they might have, as the release team's risk management comes as much from this proactive collaboration more as from the Bug Triage lead reacting to incoming issues and PRs.
 
-
 ### Sample Searches
 
 * [Issues in the v1.14 milestone which haven't been updated in a while](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-10-01+repo%3Akubernetes%2Fkubernetes): `is:open is:issue milestone:v1.14 updated:<2018-10-01 repo:kubernetes/kubernetes`
@@ -77,7 +77,7 @@ No reports are required during this period.
 ## Code Freeze Preparations
 
 As Code Freeze approaches, proper tracking ensues and merge gates become stricter.
-A main purpose of Code Freeze is to get issues and PRs filtered through the use of labels, with `priority` specifically playing an important role on that.
+One of the main purposes of Code Freeze is to get issues and PRs filtered through the use of labels, with the `priority` label playing an important role on that.
 
 The following items help with achieving the above:
 
@@ -202,7 +202,7 @@ There will also be several enhancements which will have requested exceptions fro
 
 The Release Lead will include a template for this information in the Monday/Wednesday/Friday release team meeting notes.
 
-## Release Burndown
+## Code Thaw
 
 Starting a few working days before the first Release Candidate, we go into Sudden Death Overtime.  At this point, you need to make sure that three things happen:
 
@@ -225,7 +225,7 @@ eg:
 
 ### Reports
 
-During Release Burndown, you need to report on issue status at least once per day.
+During Code Thaw, you need to report on issue status at least once per day.
 
 * red: major breakage issues or enhancement issues without a PR which looks to be approved very soon.  Minor breakage issues with no PR.
 * yellow: major breakage issues with an nearly-approved PR, minor breakage issues with a PR, and enhancement issues with a nearly-approved PR.

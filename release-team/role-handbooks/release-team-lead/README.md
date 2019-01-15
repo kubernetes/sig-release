@@ -17,7 +17,7 @@ The Release Team Lead should be an arbiter of decisions, and not the primary dec
   - You must be a member in good standing, and part of the Kubernetes org
   - You must be active in at least one Kubernetes SIG
   - You must be a member of the kubernetes-dev mailing list
-- Several release team members are in the Pacific Time Zone partially due to infrastructure access limitations at Google, therefore, the release lead must be comfortable scheduling meetings and events compatible with PT working hours
+- The Release Team is a global volunteer group, as is the Kubernetes project, so the Lead must be prepared to schedule and attend meetings that may be very late or very early in his or her time zone, in order to include as many of the team as possible.
 - Project management experience is highly desirable
 - Strong written and verbal communications skills are required
 - As the public face of the community during release time, you must do so with a very high level of professionalism
@@ -36,6 +36,8 @@ Among the specific time commitments you have are:
 - SIG-Release and Release Team meetings once a week during weeks 1-7.
 - Burndown meetings three to five times a week during weeks 8-12.
 - Community meetings once a week.
+
+In addition to the absolute time commitment you make, you must also consider the relative burdens on yourself and your team when establishing meetings.  This means scheduling meetings and release events compatible with global working hours and coordinating with a global set of team leads and shadows.  You may hold the traditional 10am Pacific release team meeting, but also might schedule alternate time meetings and varying the final weeks' burndown meeting time slots to best accommodate the individuals, both release team and broader SIG representation on the issues of the day, whose presence and information is needed.  You may also work to maximize asynchronous communications and reduce face to face meetings to where absolutely required.  Time sacrifices may be necessary at times and the Release Team Lead should endeavor to spread this so as not to focus any inconvenience on specific individuals or specific geographies, for example considering major global holidays when planning the release timeline while also making sure the project is correctly moving forward.
 
 ## Choosing a Release Team
 
@@ -159,11 +161,9 @@ Release Halfway Point
 
 - The code exception process is now in effect, meaning you will likely have to assemble decision makers on specific pending PRs to assess whether the risk of inclusion is acceptable or not. Remember this is not you making a decision, it’s you helping SIGs follow the process, and ensuring there’s consensus. In the event of a contentious PR, you should err on the side of risk aversion. In extreme cases, you can defer to the steering committee, but that is extremely unlikely.
 - If the the release branch is not healthy, stable, and passing tests consistently, notify community through standard channels of need to rectify or code freeze will come early to force focus on stabilization.
-- Announce (again) that code slush is the following week, and code freeze the week after. Touch base with SIGs again, and see if there is anything they need ahead of code freeze.
 
 ### Week 9
 
-- Code slush begins. SIGs will need to ensure all work moving forward is carefully curated with merge required labels ([more info here](https://git.k8s.io/community/contributors/devel/release.md)).
 - Test Infra Lead  ensures automation ready to enforce labeling and other release policies
 - The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, and less for the other team members)
 - Make sure everyone knows the docs deadline (PRs ready for review) is coming the following Friday.
@@ -171,7 +171,7 @@ Release Halfway Point
 
 ### Week 10
 
-- Code freeze begins, and it’s now the home stretch of the release
+- Code freeze begins, and it’s now the home stretch of the release. SIGs will need to ensure all work moving forward is carefully curated with merge required labels ([more info here](https://git.k8s.io/community/contributors/devel/release.md)). 
 - Test Infra Lead ensures automation actively enforcing merge blocking labeling and other release policies
 - The release team needs to look at any in-flight PRs and ensure nothing is being jammed in at the last minute without proper tests, review, etc. This is something to watch extremely closely because it happens every release. Just watch what gets merged closely after code freeze. Incorrectly merged items need assessed and perhaps reverted. GitHub has [a query comparing a release branch and master](https://github.com/kubernetes/kubernetes/compare/release-1.12).
 - Assist the documentation leads in collecting missing docs PRs.
