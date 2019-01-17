@@ -79,6 +79,21 @@ days after cherry-picks deadline to allow all release-blocking tests to run.
 
 # 1.11
 
+## Patch Release Management Team
+
+To discuss a cherry-pick, schedule, or anything else related to 1.12 patch releases,
+contact any member of the team. You can just tag us on #sig-release Slack channel
+or message directly. Please give us a business day to respond - we may be in a different timezone!
+
+Cherry-picks are monitored on regular basis, so it's likely you'll hear
+from us on PRs to release-1.11 branch by the time the next patch release is due.
+
+| **Github username** | **Slack username** |
+| --- | --- |
+| @foxish | @foxish |
+
+## Timeline
+
 Next patch release is **1.11.7**.
 
 Frequency of releases is likely to be about every 3 weeks. However, it can be affected
