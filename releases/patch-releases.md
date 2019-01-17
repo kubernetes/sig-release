@@ -81,7 +81,7 @@ days after cherry-picks deadline to allow all release-blocking tests to run.
 
 ## Patch Release Management Team
 
-To discuss a cherry-pick, schedule, or anything else related to 1.12 patch releases,
+To discuss a cherry-pick, schedule, or anything else related to 1.11 patch releases,
 contact any member of the team. You can just tag us on #sig-release Slack channel
 or message directly. Please give us a business day to respond - we may be in a different timezone!
 
