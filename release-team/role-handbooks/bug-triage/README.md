@@ -18,7 +18,7 @@ How this works depends on where you are in the release cycle.
 There are four relevant periods where your workload changes:
 
 1. Early Release: from day 1 up to about a week before Code Freeze. *Duration: ~ 7-8 weeks*
-2. CodeFreeze is Coming: ~10 days before Code Freeze. *Duration: ~10 days*
+2. CodeFreeze is Coming: ~2 weeks before Code Freeze. *Duration: ~2 weeks*
 3. Code Freeze: Code Freeze & Burndown, beta releases, until Code Thaw. *Duration: ~2 weeks*
 4. Code Thaw: Last two weeks of the cycle. *Duration: ~2 weeks*
 
@@ -131,7 +131,7 @@ You can [refer to this guide](https://github.com/kubernetes/community/blob/maste
 
 ### Reports
 
-At this point, release meetings occur ~3 times per week and a report is expected in each of them.
+At this point, release meetings start occurring ~3 times per week and a report is expected in each of them.
 
 You should soon start maintaining an overall list of items/areas/issues which seem to be delaying, at risk of not making it in time, or in need of attention by the Release Lead or other roles, and present it in the meetings.
 
