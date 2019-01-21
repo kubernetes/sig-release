@@ -55,7 +55,7 @@ As this stage lasts nearly 2 months up until Code Freeze, you can use this time 
 
 It is also a good time to interact with the Enhancements Lead and CI Signal Lead to understand any early concerns they might have, as the release team's risk management comes as much from this proactive collaboration more as from the Bug Triage lead reacting to incoming issues and PRs.
 
-### Sample Searches
+### Sample Searches [Early]
 
 * [Issues in the v1.14 milestone which haven't been updated in a while](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-10-01+repo%3Akubernetes%2Fkubernetes): `is:open is:issue milestone:v1.14 updated:<2018-10-01 repo:kubernetes/kubernetes`
 
@@ -69,7 +69,7 @@ It is also a good time to interact with the Enhancements Lead and CI Signal Lead
 
   * [k org-wide milestone enhancements](https://github.com/search?q=org%3Akubernetes+is%3Aissue+is%3Aopen+milestone%3Av1.14+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.14 label:kind/feature org:kubernetes` 
 
-### Reports
+### Reports [Early]
 
 No reports are required during this period.
 
@@ -82,7 +82,6 @@ The following items help with achieving the above:
 
 * issues targeting your release should have a *milestone*, kind, and sig.
 * PRs linked to these issues should have the same labels and milestone.
-* priority should be `important-soon` or `critical-urgent`.
 
 If the needed additions on the issues/PRs do not match the above, you can add the relevant labels.
 
@@ -109,7 +108,7 @@ Filtering is one of the main functions of the Bug Triage role. It involves infor
 - Consensus 
 - Critical Thinking
 
-As stated on a previoous section, decisions and actions should be made either by the Release Lead or SIG Leads - Bug Triage's role is mainly to keep track, ping people and report the overall status to the Release Lead.
+As stated on a previous section, decisions and actions should be made either by the Release Lead or SIG Leads - Bug Triage's role is mainly to keep track, ping people and report the overall status to the Release Lead.
 
 If you see an issue or PR that is not making progress, hasn't got an update for a while and there is no anecdotal knowledge that someone is working on it, you should comment and ask about the status. If there is no response for quite some time, it's very likely that it will be marked for the subsequent release. The task of filtering becomes more frequent as time progresses.
 
@@ -120,7 +119,7 @@ This section is also described in [the release document](https://github.com/kube
 You can [refer to this guide](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#define-priority).
 
 
-### Sample Searches
+### Sample Searches [Before Freeze]
 * Open v1.14 Issues
    * `is:open is:issue milestone:v1.14 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
    * `is:open is:issue milestone:v1.14` [milestone open issues, no exclusions](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14)
@@ -129,7 +128,7 @@ You can [refer to this guide](https://github.com/kubernetes/community/blob/maste
   * `is:open is:pr milestone:v1.14"` [milestone open PRs, no exclusions](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.14)
 
 
-### Reports
+### Reports [Before Freeze]
 
 At this point, release meetings start occurring ~3 times per week and a report is expected in each of them.
 
@@ -158,11 +157,11 @@ It is useful to keep Red issues on a separate section and report them during the
 
 ## Code Freeze
 
-Once Code Freeze kicks in, only PRs with the label `priority/critical-urgent` && targeting the upcoming release (/milestone v1.xx) are able to get merged.
+Once Code Freeze kicks in, only PRs targeting the upcoming release (/milestone v1.xx) are able to get merged. This is done to stabilize the release as much as possible, and reduce the overall tracking footprint to focus on the upcoming release.
 
-This is enforced via test-infra automation, as a means of "new release coming in a few weeks - we're only merging critical PRs in".
+This is enforced via test-infra automation, as a means of "new release coming in a few weeks - we're only merging relevant PRs in".
 
-As explained in sections [Code Freeze Preparation](#code-freeze-preparation) and [Filtering](#filtering), it becomes incrementally more difficult to merge new stuff as time progresses, and this should be incrementally enforced. As such, in the days around the start of Code Freeze, owners of issues and PRs not marked as critical-urgent should be poked again, reminding them that Code Freeze starts/started at DD/MM, which means any issues not marked `priority/critical-urgent` _might_ be moved to the subsequent release. 
+As explained in sections [Code Freeze Preparation](#code-freeze-preparation) and [Filtering](#filtering), it becomes incrementally more difficult to merge new stuff as time progresses. As such, in the days around the start of Code Freeze, owners of issues and PRs should be poked again, reminding them that Code Freeze starts/started at DD/MM.
 
 The criteria for moving issues are described in [Filtering](#filtering).
 
@@ -174,7 +173,7 @@ You may need to send daily reminders/queries about stuck PRs.
 New test failures will also show up during Code Freeze and you need to make sure that these are labeled properly, get attention of the CI Signal lead, and get attention from the appropriate SIGs.
 
 
-### Sample Searches
+### Sample Searches [Freeze]
 
 * Open v1.14 Issues
   * `is:open is:issue milestone:v1.14 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
@@ -190,7 +189,7 @@ New test failures will also show up during Code Freeze and you need to make sure
   * `is:issue "1.14.0-beta"' [issues mentioning beta version](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=%221.14.0-beta%22)
   * `is:pr "1.14.0-beta"' [PRs mentioning beta version](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=%221.14.0-beta%22)
 
-### Reports
+### Reports [Freeze]
 
 A few days after Code Freeze kicks in, daily 'burndown' meetings start, which means that either you or a shadow has to give updates every day. See [Issue Categorization](#issue-categorization).
 
@@ -208,7 +207,7 @@ During this period, it's reasonable to expect issue owners and SIG leads to get 
 
 Another part of staying on top of code churn, regression, and risk is monitoring commits to master and the release branch especially in the final days of the release, as shown below in Sample Searches for this phase.  On occasion things will merge that are unexpected by the release team.  This possibility needs monitored and when it happens the commits need triaged for destabilizing risk and proper exception justification, tests, docs, etc.
 
-### Sample Searches
+### Sample Searches [Thaw]
 
 Most important query at this point is a plain `milestone:v1.xx`, which includes all remaining issues/PRs. Ideally, the queue should be empty.
 
@@ -217,7 +216,7 @@ eg:
 * [master branch commits](https://github.com/kubernetes/kubernetes/commits/master/)
 * [release-1.14 branch commits](https://github.com/kubernetes/kubernetes/commits/release-1.14)
 
-### Reports
+### Reports [Thaw]
 
 Same as Code Freeze.
 
