@@ -3,7 +3,7 @@
 | Lead | Aaron Crickenberger ([@spiffxp](https://github.com/spiffxp)) | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)), Mike Arpaia ([@marpaia](https://github.com/marpaia)) |
 | Enhancements | Claire Laurence ([@claurence](https://github.com/claurence)) | |
 | CI Signal | Maria Ntalla ([@mariantalla](https://github.com/mariantalla)) | |
-| Test Infra | Amit Watve ([@amwat](https://github.com/amwat)) | |
+| Test Infra | Amit Watve ([@amwat](https://github.com/amwat)) | Dhawal Yogesh Bhanushali ([@imkin](https://github.com/imkin)), James Munnelly ([@munnerz](https://github.com/munnerz)), Tara Gu ([@taragu](https://github.com/taragu)) |
 | Bug Triage | Niko Penteridis ([@nikopen](https://github.com/nikopen)) | |
 | Branch Manager | Hannes Hoerl ([@hoegaarden](https://github.com/hoegaarden)) | |
 | Docs | Jim Angel ([@jimangel](https://github.com/jimangel)) |  |
