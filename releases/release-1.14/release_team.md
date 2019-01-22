@@ -7,6 +7,6 @@
 | Bug Triage | Niko Penteridis ([@nikopen](https://github.com/nikopen)) | |
 | Branch Manager | Hannes Hoerl ([@hoegaarden](https://github.com/hoegaarden)) | |
 | Docs | Jim Angel ([@jimangel](https://github.com/jimangel)) |  |
-| Release Notes | Dave Strebel ([@dstrebel](https://github.com/dstrebel)) |  |
+| Release Notes | Dave Strebel ([@dstrebel](https://github.com/dstrebel)) | Jeff Sica ([@jeefy](https://github.com/jeefy)), Lindsey Tulloch ([@onyiny-ang](https://github.com/onyiny-ang)), Alena Varkockova ([@alenkacz](https://github.com/alenkacz)) |
 | Communications | Natasha Woods ([@nwoods3](https://github.com/nwoods3)) |  Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) |
 | Patch Release Managers | | |
