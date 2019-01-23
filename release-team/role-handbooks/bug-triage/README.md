@@ -27,21 +27,21 @@ There are four relevant periods where your workload changes:
 
 As Bug Triage lead, _it is not your job_ to label, sort or gatekeep issues and PRs.
 
-_Instead_, you should get the assignees, owners, SIG-leads or key contributors to do it, as it is their _job_ to do so.
-Check [Escalation Path](#escalation-path) on how you can do it.
+Instead, you should get the assignees, owners, SIG-leads or key contributors to do it, as it is their job to do so.
+Check [How To Escalate](#how-to-escalate) on how you can do it.
 
 In general, you shouldn't decide whether something is in or out of a milestone; either the SIG or the Release Team Lead needs to do that.  
 In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made. 
-For example, you might add/modify `kind` and `priority` labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label)
+For example, you might add/modify `kind` and `priority` labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label).
 
 Bug Triage relates to both the Enhancements Lead and CI Signal Lead roles.  Understanding the in-bound enhancements is important during the Early Release phase as they set the themes for incoming issues and bugs.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](../ci-signal) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Enhancements and CI Signal.
 
-### Escalation Path
+### How to Escalate
 Whenever you find a bug that needs to be "fixed" or kicked out of the release, try the following escalation path:
 
 1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months.  Are you still expecting to complete it for 1.14?".  It's helpful here to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
 2. Send a message to relevant SIG slack channels or mailing list about the problem: It's helpful to directly @ mention the relevant SIG Leads / Owners, and to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.11?"
-3. Message individual owners and reviewers directly via Slack and/or email (GitHub notification emails must have been filtered or missed if you're past step #1).  Individual's email addresses may be harder to find than GitHub ID, but ure usually in the git commit history.  Sometimes Slack handles are hard to find.  There is no master list mapping human names to GitHub ID, email or Slack ID.  If you can't find contact info, asking in the appropriate SIG's Slack channel will usually get you pointed in the right direction.
+3. Message individual owners and reviewers directly via Slack and/or email (GitHub notification emails must have been filtered or missed if you're past step #1).  Individual's email addresses may be harder to find than GitHub ID, but are usually in the git commit history.  Sometimes Slack handles are hard to find.  There is no master list mapping human names to GitHub ID, email or Slack ID.  If you can't find contact info, asking in the appropriate SIG's Slack channel will usually get you pointed in the right direction.
 4. Escalate to the Release Team Lead with suggestions on what to do with non-responsive issues.
 
 
@@ -76,7 +76,7 @@ No reports are required during this period.
 
 ## Brace Yourselves, Code Freeze Is Coming
 
-One of the main purposes of Code Freeze is to get issues and PRs filtered through the use of labels, with `milestone` and the `priority` label playing an important role on that.
+One of the main purposes of Code Freeze is to get issues and PRs filtered through the use of labels, with `milestone` and the `priority` label playing an important role in that.
 
 The following items help with achieving the above:
 
@@ -85,13 +85,13 @@ The following items help with achieving the above:
 
 If the needed additions on the issues/PRs do not match the above, you can add the relevant labels.
 
-If you are not sure (mainly priority), you can comment and ask the owner or SIG leads about the status of the issue/PR (also see [Escalation Path](#escalation-path) on pinging options).
+If you are not sure (mainly priority), you can comment and ask the owner or SIG leads about the status of the issue/PR (also see [How To Escalate](#how-to-escalate) on pinging options).
 
 Other regular patterns are:
 
-Stuck PRs: Sometimes PRs get stuck in the approval process, as every PR requires both a `/lgtm` and an `/approve` by an Owner. When you detect such cases, you should remind relevant SIG Leads / Owners to review these.
+*Stuck PRs*: Sometimes PRs get stuck in the approval process, as every PR requires both a `/lgtm` and an `/approve` by an Owner. When you detect such cases, you should remind relevant SIG Leads / Owners to review/approve these.
 
-CI Signal: Checking newly-reported test failures becomes more important; you should assume that any new failure is related to the upcoming release, bring to the attention of the CI Signal lead, and assist in getting follow-up from the appropriate SIG.  Generally the CI Signal lead will track these failures, but newly opened issues may not initially have sufficient labelling to catch their attention.
+*CI Signal*: Checking newly-reported test failures becomes more important; you should assume that any new failure is related to the upcoming release. Bring the issue to the attention of the CI Signal lead, and assist in getting follow-up from the appropriate SIG.  Generally the CI Signal lead will track these failures, but newly opened issues may not initially have sufficient labelling to catch their attention.
 
 [The release document from the developer's guide](https://git.k8s.io/community/contributors/devel/release.md) is also a good resource on describing how developers target issues and pull requests to a milestone. 
 
@@ -101,12 +101,12 @@ Around this point, the release is about 1 month away, and there is less and less
 
 Filtering is one of the main functions of the Bug Triage role. It involves informing owners and SIG leads about the timelines and asking  whether an issue/PR at hand is relevant to the release, whether it should be prioritized or moved to another release via the use of `milestone`. This process involves a mix of multiple parameters such as:
 
-- Criticality: How critical is the Issue to be fixed for the currently imminent release?
-- Relevance: What does it fix/introduce? e.g. - issues marked as kind/cleanup are usually less important.
-- Time Estimation: Is the PR expected to be ready for merging soon? Is there any time left?
-- CI Stability: How big is the change? Could it cause instability to CI? If so, it either needs to be closely tracked /or/ moved.
-- Consensus 
-- Critical Thinking
+- *Criticality*: How critical is the Issue to be fixed for the currently imminent release?
+- *Relevance*: What does it fix/introduce? e.g. - issues marked as kind/cleanup are usually less important.
+- *Time Estimation*: Is the PR expected to be ready for merging soon? Is there any time left?
+- *CI Stability*: How big is the change? Could it cause instability to CI? If so, it either needs to be closely tracked /or/ moved.
+- *Consensus*
+- *Critical Thinking*
 
 As stated on a previous section, decisions and actions should be made either by the Release Lead or SIG Leads - Bug Triage's role is mainly to keep track, ping people and report the overall status to the Release Lead.
 
@@ -165,7 +165,7 @@ As explained in sections [Code Freeze Preparation](#code-freeze-preparation) and
 
 The criteria for moving issues are described in [Filtering](#filtering).
 
-For issues/PRs that look tricky, you can always consolidate with the Release Lead and SIG/PR owners to reach a decision.
+For issues/PRs that look tricky, you can always coordinate with the Release Lead and SIG/PR owners to reach a decision.
 
 Any new enhancements that aren't making rapid progress need to either jump to the next release, or reduce their scope.
 You may need to send daily reminders/queries about stuck PRs.
@@ -201,11 +201,11 @@ Starting a few working days before the first Release Candidate, Code Freeze labe
 
 1. major breakage bugs get fixed immediately
 2. any pending PRs get approved and merged
-3. *anything else gets kicked out of the release*
+3. _anything else should get kicked out of the release_
 
 During this period, it's reasonable to expect issue owners and SIG leads to get back to you within hours (check their time zones, though). In cases where SIG Leads are unavailable, you may need to appeal to Kubernetes project leaders to deal with stuck PRs.
 
-Another part of staying on top of code churn, regression, and risk is monitoring commits to master and the release branch especially in the final days of the release, as shown below in Sample Searches for this phase.  On occasion things will merge that are unexpected by the release team.  This possibility needs monitored and when it happens the commits need triaged for destabilizing risk and proper exception justification, tests, docs, etc.
+Another part of staying on top of code churn, regression, and risk is monitoring commits to master and the release branch especially in the final days of the release, as shown below in Sample Searches for this phase.  On occasion, things will merge that are unexpected by the release team.  This possibility needs to be monitored and when it happens, the commits need to be triaged for destabilizing risk and proper exception justification, tests, docs, etc.
 
 ### Sample Searches [Thaw]
 
