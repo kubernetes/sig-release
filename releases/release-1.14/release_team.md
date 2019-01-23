@@ -1,7 +1,7 @@
 | **Role** | **Name** (**GitHub / Slack ID**)  | **Shadow Name(s) (GitHub / Slack ID)** |
 | ------ | ------ | ------ |
 | Lead | Aaron Crickenberger ([@spiffxp](https://github.com/spiffxp)) | Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder)), Mike Arpaia ([@marpaia](https://github.com/marpaia)) |
-| Enhancements | Claire Laurence ([@claurence](https://github.com/claurence)) | |
+| Enhancements | Claire Laurence ([@claurence](https://github.com/claurence)) |Lachlan Evenson ([@lachie83](https://github.com/lachie83)), Loic LE DRU ([@lledru](https://github.com/lledru)) Arnaud Meukam ([@ameukam](https://github.com/ameukam)) |
 | CI Signal | Maria Ntalla ([@mariantalla](https://github.com/mariantalla)) | |
 | Test Infra | Amit Watve ([@amwat](https://github.com/amwat)) | Dhawal Yogesh Bhanushali ([@imkin](https://github.com/imkin)), James Munnelly ([@munnerz](https://github.com/munnerz)), Tara Gu ([@taragu](https://github.com/taragu)) |
 | Bug Triage | Niko Penteridis ([@nikopen](https://github.com/nikopen)) | |
