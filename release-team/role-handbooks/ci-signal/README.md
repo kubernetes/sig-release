@@ -166,7 +166,7 @@ Questions to ask sig-<name>:
   - Is there a playbook for how to resolve test failures and how to identify whether or not another SIG owns the resolution of the issue? If not, could you (sig-<name>) develop one?
   - What is the escalation point (email + slack) that will be responsible for keeping this test healthy?
 
-1.Escalating test failures/flakes to sig-<name>. Expectations:
+1. Escalating test failures/flakes to sig-<name>. Expectations:
   - Each test must have an escalation point (email + slack).  The escalation point is responsible for keeping the test healthy.
   - Fixes for test failures caused by areas of ownership outside the responsibility of the escalation point should be coordinated with other teams by the test escalation point.
   - Escalation points are expected to be responsive within 24 hours, and prioritize test failure issues over other issues.
