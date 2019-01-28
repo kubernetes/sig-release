@@ -47,8 +47,6 @@
 Run the following command to affirm your release repo checkout is in a good state, your development client is fully configured, and your user identity is authorized for the builds:
 * `./gcbmgr`
    * should run successfully and even show some green colored "OK" words
-* `./gcbmgr --project kubernetes-release-test builds list`
-   * should show a list of containers builds and results
 * `./gcbmgr list`
    * should see for example: 1.9, 1.10, 1.11 builds
 
@@ -114,15 +112,16 @@ Adding the --rc flag switches behavior on to building release candidates.  Again
 * `./gcbmgr stage release-1.12 --official --build-at-head --nomock`
 
 ## Debs and RPMs
-These require an additional layer of build and publish, which is currently still done by a Googler.  After building, but before release notification, ping @mbohlool on slack indicating for which build (for example: 1.12.0-beta.1) Debs and RPMs are required.
+These require an additional layer of build and publish, which is currently still done by a Googler.  After building, but before release notification, ping @sumi on Slack indicating for which build (for example: 1.12.0) Debs and RPMs are required.
 
-These build relatively quickly and should be available ahead of sending the release notification, especially for the official release when the worldwide community will attempt to get the new artifacts.
+These build relatively quickly and should be available ahead of sending the release notification, especially for the official release when the worldwide community will attempt to get the new artifacts.  Since they build from the release tag, the first release step below is a pre-requisite for initiating the package builds.
 
-TODO: How do we automate this?  And in the meantime how do we insure it is not bottlenecked on a one-on-one ping of a single Google employee (@jpbetz or @mbohlool)?  And these should not just be made but also validated prior to the release-notify phase.
+TODO: How do we automate this?  And in the meantime how do we insure it is not bottlenecked on a one-on-one ping of a single Google employee (currently @sumi)?  And these should not just be made but also validated prior to the release-notify phase.
 
 ## Release
 Releasing has multiple phases.  In the first phase the non-public build artifacts are published.  In the second phase the email notification goes out to the community.
 * `./gcbmgr release master --buildversion=${{VERSIONID}} --nomock`
+* ...interface with Google staffing to complete Debs and RPMs build, as per the prior section...
 * `./release-notify v1.12.0-alpha.1`
 * `./release-notify v1.12.0-alpha.1 --nomock --mailto=${{YOUREMAILADDRESS}}[a][b]`
 
