@@ -1,13 +1,34 @@
-Bug Triage Release Team Role
+Bug Triage Handbook
 ==============================
 
+-   [Summary](#summary)
+    -   [How To Do Your Job](#how-to-do-your-job)
+    -   [How To Escalate](#how-to-escalate)
+-   [Early Release](#early-release)
+    -   [Sample Searches](#sample-searches-[early])
+    -   [Reports](#reports-[early])
+-   [Brace Yourselves, Code Freeze Is Coming](#brace-yourselves,-code-freeze-is-coming)
+    -   [Filtering / What belongs in the milestone](#filtering-/-What-belongs-in-the-milestone)
+    -   [Priority label definitions](#priority-label-definitions)
+    -   [Sample Searches](#sample-searches-[before-freeze])
+    -   [Reports](#reports-[before-freeze])
+    -   [Issue Categorization](#issue-categorization)
+-   [Code Freeze](#code-freeze)
+    -   [Sample Searches](#sample-searches-[freeze])
+    -   [Reports](#reports-[freeze])
+-   [Code Thaw](#code-thaw
+    -   [Sample Searches](#sample-searches-[thaw])
+    -   [Reports](#reports-[thaw])
+
+## Summary
 Primarily, your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  
 Bugs can appear either as GitHub Issues or Pull Requests (PRs).  
 
-A list of common tasks is:
+Some common tasks include:
 - Polling for bugs (mainly issues with the label `kind/bug`)
 - Checking status of open issues / PRs
-- Sending reminders to relevant assignees / owners / sig-leads
+- Interlocking with relevant assignees / owners / sig-leads of issues/PRs to get status
+- Updating issues/PRs, clarifying situations, enabling next level decision making
 - Publishing summary reports 
 
 The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  It is important to consider both `is:issue` and `is:pr` GitHub artifacts when triaging bugs.
@@ -23,7 +44,7 @@ There are four relevant periods where your workload changes:
 4. Code Thaw: Last two weeks of the cycle. *Duration: ~2 weeks*
 
 
-## How You Do Your Job
+## How To Do Your Job
 
 As Bug Triage lead, _it is not your job_ to label, sort or gatekeep issues and PRs.
 
@@ -59,7 +80,7 @@ It is also a good time to interact with the Enhancements Lead and CI Signal Lead
 
 * [Issues in the v1.14 milestone which haven't been updated in a while](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-10-01+repo%3Akubernetes%2Fkubernetes): `is:open is:issue milestone:v1.14 updated:<2018-10-01 repo:kubernetes/kubernetes`
 
-* [Issues in the milestone with no SIG or Kind](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+label%3Aneeds-sig): `is:open is:issue milestone:v1.14 label:needs-sig`
+* [Issues in the milestone with no SIG label](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+label%3Aneeds-sig): `is:open is:issue milestone:v1.14 label:needs-sig`
 
 * Enhancements (for familiarization purposes):
 
