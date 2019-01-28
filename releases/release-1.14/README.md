@@ -27,6 +27,7 @@ The 1.14 release cycle is proposed as follows:
 - **Monday, January 07**: Week 1 - Release cycle begins
 - **Tuesday, January 29**: Week 4 - [Enhancements Freeze]
 - **Thursday, March 07**: Week 9* - [Code Freeze]
+- **Monday, March 18**: Week 11 - Docs must be completed and reviewed
 - **Monday, March 25**: Week 12 - Kubernetes v1.14.0 released
 
 
@@ -61,9 +62,12 @@ The 1.14 release cycle is proposed as follows:
 | **Call for [Exceptions]** | Lead | | Mon 25 | | | |
 | Brace Yourself, Code Freeze is Coming | Comms | | Mon 25 | | | |
 | 1.14.0-beta.1 released | Branch Manager | | Tue 26 | | | |
+| Docs deadline - Open placeholder PRs | Docs Lead | | | Fri 1 | | |
 | **Begin [Code Freeze]** (EOD PST) | Test Infra | | | Thu 7 | week 9 | |
 | Burndown Meetings daily| Lead | | | Mon 11 | week 10 | |
+| Docs deadline - PRs ready for review | Docs Lead | | | Mon 11 | | |
 | 1.14.0-beta.2 released | Branch Manager | | | Tue 12 | | |
+| Docs complete - All PRs reviewed and ready to merge | Docs Lead | | | Mon 18 | | |
 | **Begin [Code Thaw]** (EOD PST) | Test Infra | | | Tue 19 | week 11 | [1.14-blocking] |
 | 1.14.0-rc.1 released | Branch Manager | | | Tue 19 | | |
 | **Cherry Pick Deadline** (EOD PST) | Branch Manager | | | Thu 21 | week 11 | |
@@ -128,7 +132,7 @@ If an enhancement needs documentation, enter "Yes" in the enhancement tracking s
 
 For documentation PRs:
 
-* Open PRs against the release-1.14 branch based off of the 1.14 release PR. The documentation workflow uses feature branches for release documentation, rather than basing from master. **Be sure to open your PR against the release branch**.
+* Open PRs against the dev-1.14 branch based off of the 1.14 release PR. The documentation workflow uses feature branches for release documentation, rather than basing from master. **Be sure to open your PR against the release branch**.
 * Add your PR to the 1.14 Release milestone.
 
 [Enhancements Freeze]: #enhancements-freeze
