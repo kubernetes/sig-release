@@ -8,5 +8,5 @@
 | Branch Manager | Hannes Hoerl ([@hoegaarden](https://github.com/hoegaarden)) | Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon)), Melynda Hunter ([@melyndah](https://github.com/melyndah)), Nikhil Manchanda ([@SlickNik](https://github.com/SlickNik)) |
 | Docs | Jim Angel ([@jimangel](https://github.com/jimangel)) | Barnabas Makonda ([@MAKOSCAFEE](https://github.com/MAKOSCAFEE)), Cody Clark ([@cody-clark](https://github.com/cody-clark)), Jared Bhatti ([@jaredbhatti](https://github.com/jaredbhatti)), Naomi Pentrel ([@npentrel](https://github.com/npentrel)), Tunde Oladipupo ([@simplytunde](https://github.com/simplytunde)) |
 | Release Notes | Dave Strebel ([@dstrebel](https://github.com/dstrebel)) | Jeff Sica ([@jeefy](https://github.com/jeefy)), Lindsey Tulloch ([@onyiny-ang](https://github.com/onyiny-ang)), Alena Varkockova ([@alenkacz](https://github.com/alenkacz)) |
-| Communications | Natasha Woods ([@nwoods3](https://github.com/nwoods3)) |  Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)) |
+| Communications | Natasha Woods ([@nwoods3](https://github.com/nwoods3)) |  Kaitlyn Barnard ([@kbarnard10](https://github.com/kbarnard10)), Jorge Castro ([@castrojo](https://github.com/castrojo)), Taylor Dolezal ([@onlydole](https://github.com/onlydole))  |
 | Patch Release Managers | | |
