@@ -14,6 +14,7 @@
 * [Bug Triage Tracking Sheet](http://bit.ly/k8s114-bugtriage)
 * [CI Signal Report](http://bit.ly/k8s114-cisignal)
 * [Retrospective Document](http://bit.ly/k8s114-retro)
+* [kubernetes/sig-release v1.14 milestone][k/sr-milestone-v1.14]
 
 #### Guides
 
@@ -26,7 +27,7 @@ The 1.14 release cycle is proposed as follows:
 
 - **Monday, January 07**: Week 1 - Release cycle begins
 - **Tuesday, January 29**: Week 4 - [Enhancements Freeze]
-- **Thursday, March 07**: Week 9* - [Code Freeze]
+- **Thursday, March 07**: Week 9 - [Code Freeze]
 - **Monday, March 18**: Week 11 - Docs must be completed and reviewed
 - **Monday, March 25**: Week 12 - Kubernetes v1.14.0 released
 
@@ -82,12 +83,21 @@ The 1.14 release cycle is proposed as follows:
 
 ### Enhancements Freeze
 
-All enhancements going into the release must have an associated issue in the
-enhancements repo by ***Tuesday, January 29, 2019***. That issue must be in the
-1.14 milestone.  SIG "themes" should also be in the release notes draft at this
-time to prepare for blog posts and release marketing.  Any work the SIG wants
-publicized needs to be called out to the Enhancements Lead so the Release Team
-communications lead can work with SIG-PM and the CNCF.
+By **Tuesday January 29, 2019** all enhancements landing in v1.14.0 must:
+
+- have an associated tracking issue in [kubernetes/enhancements] in the
+  [v1.14 milestone][k/e-milestone-v1.14]
+- have an associated KEP merged into [kubernetes/enhancements] with an
+  implementable status, linked to in the description of the tracking issue
+
+We will de-milestone any enhancements that fail to meet these criteria. Any
+new enhancements not in the milestone will require an [Exception]. We will be
+lenient within reason if a KEP not quite landing on time is the justification.
+
+SIG "themes" should also be in the release notes draft at this time to prepare
+for blog posts and release marketing.  Any work the SIG wants publicized needs
+to be called out to the Enhancements Lead so the Release Team communications 
+lead can work with SIG-PM and the CNCF.
 
 ### Burndown
 
@@ -98,8 +108,8 @@ burn that list down.  SIG representatives are asked to attend if their SIG has
 specific outstanding issues that are blocking the release.
 
 Join [kubernetes-milestone-burndown@] to get a calendar invite.  This meeting
-may conflict with other community meetings, please prioritize this meeting if a
-member of the release team asks you to attend.
+may conflict with other community meetings.  Please prioritize this meeting if
+a member of the release team asks you to attend.
 
 The intent of these meetings is to:
 
@@ -137,11 +147,11 @@ release-1.14 branch.
 
 ### Exceptions
 
-Starting at [Burndown] the release team will solicit and rule on [exception
-requests] for enhancements and test work that is unlikely to be done by Code
-Freeze. The exception approval is the responsibility of the SIG or SIGs labeled
-in the pull request. The release team may intervene or deny the request only if
-it poses a risk to release quality, or could negatively impact the overall
+Starting at [Enhancements Freeze] the release team will solicit and rule on 
+[exception requests] for enhancements and test work that is unlikely to be done
+by Code Freeze. The exception approval is the responsibility of the SIG or SIGs
+labeled in the pull request. The release team may intervene or deny the request 
+only if it poses a risk to release quality, or could negatively impact the overall
 timeline. Changes introduced at this point should be well-tested,
 well-understood, limited in architectural scope, and low risk.  All of those
 factors should be considered in the approval process.  Enhancements on an
@@ -196,10 +206,16 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
 [contact-info]: https://bit.ly/k8s114-contacts
 
+[kubernetes/kubernetes]: https://github.com/kubernetes/kubernetes
+[kubernetes/enhancements]: https://github.com/kubernetes/enhancements
 [kubernetes/website]: https://github.com/kubernetes/website
+
+[k/e-milestone-v1.14]: https://github.com/kubernetes/enhancements/milestone/13
+[k/k-milestone-v1.14]: https://github.com/kubernetes/kubernetes/milestone/41
+[k/sr-milestone-v1.14]: https://github.com/kubernetes/sig-release/milestone/7
 
 [master-blocking]: https://testgrid.k8s.io/sig-release-master-blocking#Summary
 [master-upgrade]: https://testgrid.k8s.io/sig-release-master-upgrade#Summary
 [1.14-blocking]:https://testgrid.k8s.io/sig-release-1.14-blocking#Summary
 
-[exception requests]: https://github.com/kubernetes/enhancements/blob/master/EXCEPTIONS.md
+[exception requests]: https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md
