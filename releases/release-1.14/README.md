@@ -95,7 +95,7 @@ time to complete KEPs that were in progress by enhancements freeze. In future re
 intent is to require associated KEPs be merged/implementable by the enhancements freeze date.
 
 We will de-milestone any enhancements that fail to meet these criteria. Any
-new enhancements not in the milestone will require an [Exception]. We will be
+new enhancements not in the milestone will require an [Exception][Exception]. We will be
 lenient within reason if a KEP not quite landing on time is the justification.
 
 SIG "themes" should also be in the release notes draft at this time to prepare
@@ -166,7 +166,7 @@ be accepted.
 
 Enhancements that are partially implemented and/or lack sufficient tests may be
 considered for pruning beginning after [Code Freeze], unless they've been
-granted [Exceptions]
+granted an [Exception].
 
 The release team will work with SIGs and enhancements owners to evaluate each
 case, but for example, pruning could include actions such as:
@@ -202,7 +202,7 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [Burndown]: #burndown
 [Code Freeze]: #code-freeze
 [Code Thaw]: #code-thaw
-[Exceptions]: #exceptions
+[Exception]: #exceptions
 
 [kubernetes-milestone-burndown@]: https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown
 [kubernetes-release-team@]: https://groups.google.com/forum/#!forum/kubernetes-release-team
