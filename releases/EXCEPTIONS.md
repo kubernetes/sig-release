@@ -38,11 +38,17 @@ Email them to:
 
 [You should have *very high confidence* on the “additional time needed” number - we will not grant multiple exceptions for a enhancement.]
 
-Requests for exceptions must be submitted before the first milestone burn down meeting. All requests for exception will be reviewed and either approved or rejected during the first meeting.
+
+Exceptions after enhancements freeze:
+If your issue was removed during the enhancements freeze please file an exception at your earlierst convinence.  All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.  
+
+Exceptoins after code freeze: 
+Requests for exceptions must be submitted before the first milestone burn down meeting. All requests for exception will be reviewed and either approved or rejected during the first meeting. The release team will be responsible for approving or rejecting exceptions based on the questions above.
+
 
 Information about the current release can be found in the relevant release directory:
-- important dates e.g., [releases/release-1.13/README.md](/releases/release-1.13/README.md)
-- Release Team members e.g., [releases/release-1.13/release_team.md](/releases/release-1.13/release_team.md)
+- important dates e.g., [releases/release-1.14/README.md](/releases/release-1.14/README.md)
+- Release Team members e.g., [releases/release-1.14/release_team.md](/releases/release-1.14/release_team.md)
 
 
 Once an exception is approved, it should be broadcast broadly: send an email with the data and approval to kubernetes-dev@ and your SIG group, then follow up with a reply to that email once the enhancement is completed.
