@@ -84,11 +84,15 @@ The 1.14 release cycle is proposed as follows:
 ### Enhancements Freeze
 
 By **Tuesday January 29, 2019** all enhancements landing in v1.14.0 must:
-
-- have an associated tracking issue in [kubernetes/enhancements] in the
+- have an associated tracking issue in [kubernetes/enhancements] in the 
   [v1.14 milestone][k/e-milestone-v1.14]
-- have an associated KEP merged into [kubernetes/enhancements] with an
-  implementable status, linked to in the description of the tracking issue
+- have an associated KEP merged or in progress in [kubernetes/enhancements], 
+  linked to in the description of the tracking issue
+
+By **Monday, February 4, 2019**, the KEPs associated with all enhancements landing in v1.14.0 
+must be merged with an implementable status. This 1.14-specific extension is intended to allow 
+time to complete KEPs that were in progress by enhancements freeze. In future releases, the 
+intent is to require associated KEPs be merged/implementable by the enhancements freeze date.
 
 We will de-milestone any enhancements that fail to meet these criteria. Any
 new enhancements not in the milestone will require an [Exception]. We will be
