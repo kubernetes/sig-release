@@ -64,7 +64,7 @@ The 1.14 release cycle is proposed as follows:
 | 1.14.0-beta.0 released | Branch Manager | | Tue 19 | | | |
 | release-1.14 jobs created| Test Infra Lead | | Tue 19 | | | |
 | **Begin [Burndown]** (MWF meetings) | Lead | | Mon 25 | | week 8 | [1.14-blocking], [master-blocking], [master-upgrade] |
-| **Call for [Exceptions]** | Lead | | Mon 25 | | | |
+| **Call for [Exceptions][Exception]** | Lead | | Mon 25 | | | |
 | Brace Yourself, Code Freeze is Coming | Comms | | Mon 25 | | | |
 | 1.14.0-beta.1 released | Branch Manager | | Tue 26 | | | |
 | Docs deadline - Open placeholder PRs | Docs Lead | | | Fri 1 | | |
