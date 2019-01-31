@@ -22,6 +22,13 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 - An "External Dependencies" section should be currated which outlines how external depdendency versions have changed since the last release
   - See [the 1.12 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md#external-dependencies) for an example
 	- Note that there are [plans in the process to formalize and automate the process of aggregating the changes](https://github.com/kubernetes/community/issues/2234), but this is currently [a very manual process](https://github.com/kubernetes/sig-release/pull/398).
+  - To update an entry in this section the following steps must be performed:
+    - Pick an entry, for example "Default etcd server was updated to v3.2.24. (#68318)"
+    - Open the linked PR 68318 and find which files and lines it modifies
+    - Open the same files in the `kubernetes/kubernetes` master branch and see if the version changed from v3.2.24
+    - Look at the history of the file and find which commit / PR changed the version
+    - Update the entry with the new version and PR URL
+    - Update the entry message accordingly - if the version has changed or it has been preserved between versions
 - Kubernetes is released with the completed notes!
 
 ## Tools
