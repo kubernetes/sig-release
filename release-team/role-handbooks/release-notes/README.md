@@ -29,6 +29,7 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
     - Look at the history of the file and find which commit / PR changed the version
     - Update the entry with the new version and PR URL
     - Update the entry message accordingly - if the version has changed or it has been preserved between versions
+  - The website [lwkd.info](http://lwkd.info/) has weekly Kubernetes updates that often include information about changes in dependencies under a "Version Updates" section
 - Kubernetes is released with the completed notes!
 
 ## Tools
