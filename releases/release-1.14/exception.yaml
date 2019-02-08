@@ -50,7 +50,7 @@
   - 
   status: Approved
   
-  - name: Pid Limiting
+- name: Pid Limiting
   issue: 757
   date_requested: Jan 30th, 2019
   date_reviewed: Jan 31st, 2019
