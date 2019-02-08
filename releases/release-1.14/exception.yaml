@@ -20,7 +20,7 @@
   - 
   status: Approved 
   
-  - name: Kubelet Resource Metrics Endpoint
+- name: Kubelet Resource Metrics Endpoint
   issue: 727
   date_requested: Jan 30th, 2019
   date_reviewed: Jan 31st, 2019
