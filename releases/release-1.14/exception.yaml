@@ -69,7 +69,7 @@
   - 
   status: Approved
   
-  - name: Promote Node OS/Arch labels to GA
+- name: Promote Node OS/Arch labels to GA
   issue: 793
   date_requested: Jan 30th, 2019
   date_reviewed: Jan 31st, 2019
