@@ -34,7 +34,10 @@
   date_requested: Feb 1st, 2019
   date_reviewed: Feb 4th, 2019
   thread: https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/kubernetes-milestone-burndown/d7P6XjunEjg/nHmWwaeWEwAJ
-  pull_requests:https://github.com/kubernetes/kubernetes/pull/73007,  https://github.com/kubernetes/enhancements/pull/800, https://github.com/kubernetes/website/pull/12297
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/73007
+    - https://github.com/kubernetes/enhancements/pull/800
+    - https://github.com/kubernetes/website/pull/12297
   - 
   status:Approved
  
