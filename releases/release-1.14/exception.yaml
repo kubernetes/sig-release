@@ -39,7 +39,7 @@
     - https://github.com/kubernetes/enhancements/pull/800
     - https://github.com/kubernetes/website/pull/12297
   - 
-  status:Approved
+  status: Approved
  
 - name: Promote HugePages to GA
   issue: 750
