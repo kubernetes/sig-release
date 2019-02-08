@@ -11,7 +11,7 @@
   - 
   status:
   
-  - name: Support Out-of-Tree vSphere Cloud Provider 
+- name: Support Out-of-Tree vSphere Cloud Provider 
   issue: 670
   date_requested: Jan 30th, 2019
   date_reviewed: Jan 30th, 2019
