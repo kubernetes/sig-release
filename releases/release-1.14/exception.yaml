@@ -30,7 +30,7 @@
   status: Approved 
 
 - name: Promote RunAsGroup  to beta
-  issue:213 
+  issue: 213 
   date_requested: Feb 1st, 2019
   date_reviewed: Feb 4th, 2019
   thread: https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/kubernetes-milestone-burndown/d7P6XjunEjg/nHmWwaeWEwAJ
