@@ -161,7 +161,7 @@ The CI Signal lead should
 1. Identifying tests from sig-<name> that should be/are part of sig-release's blocking and informing dashboards. Those tests could be submitted as part of a new feature/enhancement that sig-<name> is developing, or could be existing tests in blocking/informing dashboards.
 Questions to ask sig-<name>:
   - Which e2e test jobs are release blocking for your SIG?
-  - What is the process for making sure the SIGs test grid remains healthy and resolving test failures?
+  - What is the process for making sure the SIG's test grid remains healthy and resolving test failures?
   - Would moving the e2e tests for the SIG into their own test jobs make maintaining those tests easier? If yes, consider placing them in a dashboard owned by sig-<name>.
   - Is there a playbook for how to resolve test failures and how to identify whether or not another SIG owns the resolution of the issue? If not, could you (sig-<name>) develop one?
   - What is the escalation point (email + slack) that will be responsible for keeping this test healthy?
