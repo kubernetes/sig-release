@@ -55,7 +55,8 @@
   date_requested: Jan 30th, 2019
   date_reviewed: Jan 31st, 2019
   thread: https://urldefense.proofpoint.com/v2/url?u=https-3A__groups.google.com_d_msgid_kubernetes-2Dmilestone-2Dburndown_CAHROWxQ27R-2DG25n-252BzDCuAw2ew6dLnqtez0Z3c-2DNbWvFJH-2DH24A-2540mail.gmail.com-3Futm-5Fmedium-3Demail-26utm-5Fsource-3Dfooter&d=DwMFaQ&c=lnl9vOaLMzsy2niBC8-h_K-7QJuNJEsFrzdndhuJ3Sw&r=jp67QQzRU2EkaBX4M5K9sdqcpSUKjuk9hPRw5RDty3g&m=SR_3nDzUiANMKnKG4i-Slmv7V8KF-CoZpZVu9LTsIdg&s=EU0TA1-h_riKT8G_wn3XE3-y4jYw6x0Ncv2O6BOX3gc&e=
-  pull_requests:https://github.com/kubernetes/kubernetes/pull/72076
+  pull_requests:
+  - https://github.com/kubernetes/kubernetes/pull/72076
   - 
   status: Approved 
   
