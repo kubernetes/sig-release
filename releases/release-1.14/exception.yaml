@@ -60,7 +60,7 @@
   - 
   status: Approved 
   
-  - name: Add new Taint Effect: ForceEviction
+- name: Add new Taint Effect: ForceEviction
   issue: 719
   date_requested: Jan 31st, 2019
   date_reviewed: Feb 1st, 2019
