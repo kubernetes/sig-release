@@ -8,6 +8,7 @@ CI Signal lead assumes the responsibility of the quality gate for the release. T
 - Ensuring that all release blocking tests provide a clear Go/No-Go signal for the release
 - Flagging regressions as close to source as possible i.e., as soon as the offending code was merged
 - Filing issues proactively for test failures and flakes, triaging issues to appropriate SIG/owner, following up on status and verifying fixes on newer test runs
+  - See also: [Working with SIGs outside sig-release](#working-with-sigs-outside-sig-release)
 - Studying patterns/history of test health from previous releases and working closely with SIGs and test owners to
   - Understand and fix the test for the current release
   - Understand if the test needs to be release blocking
@@ -153,6 +154,23 @@ The CI Signal lead should
   - if "UpgradeTest", "hpa-upgrade", "ingress-upgrade" tests are passing and other SIG specific tests are failing, then upgrade/downgrade completed succesfully. Such failures are historically mostly flakes, resolve in subsequent runs and hence mostly not release blocking. Nevertheless, file issues (even for flakes) and escalate to appropriate test owning SIG for triage, assessment and resolution
   - To get a better and quicker feedback on upgrade/downgrade tests, we can look at upgrade jobs that have "parallel" in their title eg: [gce-1.10-master-upgrade-cluster-parallel](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.10-master-upgrade-cluster-parallel). These complete faster and are more stable since they don't run slow long running tests. If the parallel upgrade/downgrade jobs are green, this indicates we are mostly good with respect to upgrade functionality
   - Yet another tip to assess seriousness of the failure is to see if both gce and gke counterparts of a upgrade/downgrade job are failing eg: [gce-1.10-master-upgrade-master](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.10-master-upgrade-master) and [gke-gci-1.10-gci-master-upgrade-master](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gke-gci-1.10-gci-master-upgrade-master). If both are failing then its indicative of a systemic failure in upgrade functionality. If only gke jobs are failing then it might be a GKE only issue and does not block k8s release. In this case escalate to GKE Cluster Lifecycle team  (@roberthbailey, @krousey)
+
+## Working with SIGs outside sig-release
+2 scenarios that you will be involved in:
+
+1. Identifying tests from sig-<name> that should be/are part of sig-release's blocking and informing dashboards. Those tests could be submitted as part of a new feature/enhancement that sig-<name> is developing, or could be existing tests in blocking/informing dashboards.
+Questions to ask sig-<name>:
+  - Which e2e test jobs are release blocking for your SIG?
+  - What is the process for making sure the SIG's test grid remains healthy and resolving test failures?
+  - Would moving the e2e tests for the SIG into their own test jobs make maintaining those tests easier? If yes, consider placing them in a dashboard owned by sig-<name>.
+  - Is there a playbook for how to resolve test failures and how to identify whether or not another SIG owns the resolution of the issue? If not, could you (sig-<name>) develop one?
+  - What is the escalation point (email + slack) that will be responsible for keeping this test healthy?
+
+1. Escalating test failures/flakes to sig-<name>. Expectations:
+  - Each test must have an escalation point (email + slack).  The escalation point is responsible for keeping the test healthy.
+  - Fixes for test failures caused by areas of ownership outside the responsibility of the escalation point should be coordinated with other teams by the test escalation point.
+  - Escalation points are expected to be responsive within 24 hours, and to prioritize test failure issues over other issues.
+    - If you don't see this happening, get in touch with them on slack or other means to ask for their support.
 
 ## Tips and Tricks of the game
 
