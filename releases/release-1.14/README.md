@@ -5,6 +5,7 @@
 * [This document](https://git.k8s.io/sig-release/releases/release-1.14/README.md)
 * [Release Team](https://git.k8s.io/sig-release/releases/release-1.14/release_team.md)
 * [Meeting Minutes](http://bit.ly/k8s114-minutes) (join [kubernetes-milestone-burndown@] to receive meeting invites)
+* [v1.14 Release Calendar][k8s114-calendar]
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
 * [Internal Contact Info](https://bit.ly/k8s114-contacts) (accessible only to members of [kubernetes-release-team@])
 
@@ -209,6 +210,7 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
 [contact-info]: https://bit.ly/k8s114-contacts
+[k8s114-calendar]: https://bit.ly/k8s114-calendar
 
 [kubernetes/kubernetes]: https://github.com/kubernetes/kubernetes
 [kubernetes/enhancements]: https://github.com/kubernetes/enhancements
