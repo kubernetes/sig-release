@@ -3,6 +3,17 @@ aliases:
     - calebamiles
     - justaugustus
     - tpepper
+  licensing:
+    - dims
+    - justaugustus
+    - nikhita
+    - swinslow
+  release-engineering:
+    - aleksandra-malinowska
+    - calebamiles
+    - ixdy
+    - mikedanese
+    - tpepper
   release-team-lead-role:
     - jberkus # 1.11
     - tpepper # 1.12
