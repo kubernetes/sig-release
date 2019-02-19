@@ -5,7 +5,7 @@ This is a collection of email templates to handle various situations the PST nee
 ## Security Fix Announcement
 
 Subject: [ANNOUNCE] Security release of $COMPONENT $VERSION - $CVE
-To: kubernetes-dev@googlegroups.com, kubernetes-security-announce@googlegroups.com, kubernetes-security-discuss@googlegroups.com
+To: kubernetes-dev@googlegroups.com, kubernetes-security-announce@googlegroups.com, kubernetes-security-discuss@googlegroups.com, kubernetes+announcements@discoursemail.com
 
 Hello Kubernetes Community-
 
