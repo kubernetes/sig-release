@@ -196,6 +196,9 @@ New test failures will also show up during Code Freeze and you need to make sure
 
 ### Sample Searches [Freeze]
 
+* Prow is an alternative tool for PR visualisation that can run full GH queries:   
+    * [PRs with LGTM but not 'approved' in Prow](https://prow.k8s.io/pr?query=is%3Apr%20state%3Aopen%20label%3Algtm%20-label%3Aapproved%20milestone%3Av1.14)
+
 * Open v1.14 Issues
   * `is:open is:issue milestone:v1.14 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)
   * `is:open is:issue milestone:v1.14` [milestone open issues, no exclusions](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+)
