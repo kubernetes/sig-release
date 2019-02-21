@@ -12,7 +12,7 @@ The communication and coordination for the overwhelming majority of SIG Release 
 
 ### Kubernetes Community Membership
 
-The Kubernetes Community defines Members as the following:
+The Kubernetes Community [defines](https://github.com/kubernetes/community/blob/master/community-membership.md#member) Members as the following:
 
 > Members are continuously active contributors in the community. They can have issues and PRs assigned to them, participate in SIGs through GitHub teams, and pre-submit tests are automatically run for their PRs. Members are expected to remain active contributors to the community.
 >
@@ -46,7 +46,7 @@ The leads of each role need some access. If this is your first time as a lead, p
 
 ### Milestone Maintainers
 
-The leads of all roles should be able to manage issue milestones (often in [k/enhancements](https://github.com/kubernetes/enhancements)) using the Prow `/milestone` command. To gain access as a Milestone Maintainer, please talk to the Release Lead.
+The leads of all roles should be able to manage issue milestones (often in [k/enhancements](https://github.com/kubernetes/enhancements)) using the [Prow `/milestone` command](https://prow.k8s.io/command-help#milestone). To gain access as a Milestone Maintainer, please talk to the Release Lead. For more information on Prow, see [the docs](https://github.com/kubernetes/test-infra/tree/master/prow).
 
 ## Release Lead
 
