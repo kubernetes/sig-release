@@ -97,8 +97,7 @@ The first time a specific branch is mentioned for the release instead of "master
 * `gcbmgr stage release-1.12 --build-at-head --nomock`
 
 Then behind the scenes anago will do a branch create and push.
-
-In the past, an additional action to protect the branch on GitHub was required, but this [is now automatic](https://github.com/kubernetes/release/issues/364#issuecomment-409772545) via prow’s branchprotector.  This automation [runs once per day](https://github.com/kubernetes/test-infra/blob/a362b01ca57be7c170f7ef51c2f14dfd98986669/prow/cluster/branchprotector_cronjob.yaml#L1-L6).
+`prow`’s `branchprotector` [runs once per day](https://github.com/kubernetes/test-infra/blob/a362b01ca57be7c170f7ef51c2f14dfd98986669/prow/cluster/branchprotector_cronjob.yaml#L1-L6) and automatically adds branch protection to any new branch in the `k/k` repo.
 
 New release branch creation (for example: release-1.12) automatically also triggers an alpha.0 build for the subsequent release (for example: release-1.13). This means that the staging step will take about twice as long, as it will stage both versions `v1.12.0-beta.0` and `v1.13.0-alpha.0`. The release step will also take a bit (maybe a couple of minutes) longer, but not significantly.
 
