@@ -144,15 +144,23 @@ Run simply as:
 
 This is done daily.
 
-Earlier in the release the exact time of running `branchff` might just be at the discretion of the branch manager, as agreed upon with the release lead.
+Earlier in the release the exact time of running [`branchff`] might just be at the discretion of the branch manager, as agreed upon with the release lead.
 
 Later in the release it will probably become more important to algin with the release lead and the CI signal team (and probably other release team members).
 The exact time for pulling in the changes from master to the release branch might depend on the features that have or are to be merged. Considerations could be:
-- We should run `branchff` sooner, before `$bigFeature` so we have a signal in the release branch before that fetature was brought in
-- We should run `branchff` later, after `$theOtherFeature` has been merged, so we get signal on that feature from both the master and the release branch
+- We should run [`branchff`] sooner, before `$bigFeature` so we have a signal in the release branch before that fetature was brought in
+- We should run [`branchff`] later, after `$theOtherFeature` has been merged, so we get signal on that feature from both the master and the release branch
 
 
-The first time the ‘[branchff](https://git.k8s.io/release/branchff)’ tool is run on a branch will do a clone of k/k to a temporary directory, run a git merge-base, run a few cleanup scripts to insure the branch’s generated API bits are in order (master branch content will move on toward version N+1, while release branch needs to stay at version N), commit the results of those scripts to the branch, and push to the GitHub remote lease branch.  Except again, we have a safety net and the default is a mock run.
+The first time the [`branchff`] tool is run on a branch it will
+- do a clone of `k/k` to a temporary directory
+- run a git merge-base
+- run a few cleanup scripts to insure the branch’s generated API bits are in order  
+  (master branch content will move on toward version `n+1`, while release branch needs to stay at version `n`)
+- commit the results of those scripts to the branch
+- push to the GitHub remote release branch
+
+Except again, we have a safety net and the default is a mock run.
 
 The script encourages you before committing to:
 ```
@@ -178,6 +186,8 @@ Once you know your environment is good and running for the fast forwards:
 * `./branchff release-1.12 --nomock`
 
 Subsequent runs will simply be merging in changes from master to the branch, keeping the previous API fixup commits on the branch.
+
+[`branchff`]: https://git.k8s.io/release/branchff
 
 ## Code Freeze, Thaw
 Code merge restriction periods have been implemented by a combination of prow plugins config, submit-queue config, and tide.  The Test Infra Lead, Branch Manager and Release Lead coordinate checking in whichever config changes are required to enable and disable merge restrictions.
