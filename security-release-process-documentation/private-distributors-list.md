@@ -53,11 +53,14 @@ could be in the form of the following:
 | bphilips@redhat.com | Kubernetes PST |
 | brandon@ifup.org | Kubernetes PST |
 | cjcullen@google.com | Kubernetes PST |
+| k8s_security_grp@oracle.com | Oracle |
 | kops-security-response@googlegroups.com | Kops |
 | kubernetes-security-disclosure@google.com | Google |
+| kubernetes-security@docker.com | Docker |
 | kubernetes-security@huawei.com | Huawei |
 | kubernetes-security@service.aliyun.com | Aliyun |
 | kubernetes-security@service.microsoft.com | Microsoft |
+| kubernetes-security@weave.works | WeaveWorks |
 | liggitt@google.com | Kubernetes PST |
 | me@jessfraz.com | Kubernetes PST |
 | mke-security@mesosphere.com | Mesosphere |
