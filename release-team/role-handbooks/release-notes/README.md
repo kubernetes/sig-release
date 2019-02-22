@@ -13,11 +13,11 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 ## Tasks
 
 - The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetings and follow the [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF) Slack channel for relevant information throughout the release cycle.
-- One member of the Release Notes Team should be responsible for setting up and running the [`release-notes` tool](https://github.com/marpaia/release-notes) to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are always welcome!
-- Drafts produced by the tool are copied to a file called `release-notes-draft.md` in the release folder for the current release in the `sig-release` repo.
-- Before the beginning of Code Freeze, the Release Notes Team will copy the latest draft into a Google Doc and start reaching out to SIG Leads in an effort to have them fill in a prose paragraph of "Major Themes" that outlines what their SIG has been working on throughout the lifecycle.
+- One member of the Release Notes Team should be responsible for setting up and running the [`release-notes` tool](https://github.com/kubernetes/release/tree/master/toolbox/relnotes) to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are always welcome!
+- Drafts produced by the tool are copied to a file called `release-notes-draft.md` in the [releases folder](../../../releases) for the current release in the `sig-release` repo.
+- Before the beginning of Code Freeze, the Release Notes Team will copy the latest draft into a Google Doc and start [reaching out to SIG Leads](sig-leads-email.md) in an effort to have them fill in a prose paragraph of "Major Themes" that outlines what their SIG has been working on throughout the lifecycle.
 - If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberity in completing the notes
-- A "Known Issues" section will also be created in a GitHub issue to be added to the release notes before release date.
+- A ["Known Issues"](known-issues) section will also be created in a GitHub issue to be added to the release notes before release date.
 - The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
 - An "External Dependencies" section should be currated which outlines how external depdendency versions have changed since the last release
   - See [the 1.12 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md#external-dependencies) for an example
@@ -34,7 +34,7 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 
 ## Tools
 
-- [Release notes tool](https://github.com/marpaia/release-notes)
+- [Release notes tool](https://github.com/kubernetes/release/tree/master/toolbox/relnotes)
 - [Hackmd](https://hackmd.io/)
 - [LWKD](http://lwkd.info) *(consider contributing to LWKD as part of your role)*
 
@@ -68,7 +68,9 @@ Update this section at the end of each release for the next Release Notes Team.
 ### Week 9
 
 - Create Google Doc for generated release notes and share with release-notes team
+- Create [known issues issue](known-issues-bucket.md) in `kubernetes/kubernetes` to capture known issues for the release
 - Share created doc with release-team
+- Send [an email to sig leads](sig-leads-email) to capture major themes from their sig
 - Start determining major themes for release notes template to send to sig-leads
 
 
