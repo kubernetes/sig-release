@@ -156,6 +156,24 @@ Maintainers of the GitHub team can, with justification, add or remove members at
 
 Members are expected to actively triage issues and PRs to retain membership in `kubernetes-milestone maintainers`. Members not fulfilling the duties of this role should be removed.
 
+Milestone maintainers also have write access to [kubernetes/enhancements][k/enhancements], which allows them to keep enhancement tracking issue descriptions up-to-date.
+
+To request membership to `kubernetes-milestone-maintainers` or update the team:
+- File a PR to [kubernetes/org][k/org] making changes to the `kubernetes-milestone-maintainers` team config [here](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml). In your PR, include the reason you're requesting access in the description, as well as a comment next to your username in the team config
+  e.g.,
+  ```
+  - justaugustus # Azure / PM / Release
+  - spiffxp # 1.14 RT Lead / Testing
+  ```
+- Assign an approver from the group you'll be maintaining issues/PRs for
+  i.e.,
+  - for SIGs: Request approval from a SIG Chair or Technical Lead
+  - for Release Team: Request approval from the current Release Team Lead or SIG Release Chairs
+  - for Special code reviewers: Request approval from SIG Release Chairs
+
+- Once your request is approved by the appropriate group, you can now assign to the PR to a SIG Release Chair for final approval.
+
+
 ---
 
 ## Filing exceptions
@@ -172,3 +190,5 @@ The process for filing an enhancement exception can be found [here][exceptions].
 [milestone-maintainers]: #milestone-maintainers
 [filing-exceptions]: #filing-exceptions
 [exceptions]: /releases/EXCEPTIONS.md
+[k/enhancements]: https://git.k8s.io/enhancements
+[k/org]: https://git.k8s.io/org
