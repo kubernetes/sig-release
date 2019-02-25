@@ -1,5 +1,7 @@
 ---
-name: Cut 1.x.y-{alpha,beta,rc}.z release
+name: Cut a release
+about: Create a tracking issue for a release cut
+title: Cut 1.x.y-{alpha,beta,rc}.z release
 ---
 /assign <!-- @ the release branch manager or the person who cuts the release -->
 
