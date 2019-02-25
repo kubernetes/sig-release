@@ -7,7 +7,7 @@ Bug Triage Handbook
 -   [Early Release](#early-release)
     -   [Sample Searches](#sample-searches-early)
     -   [Reports](#reports-early)
--   [Brace Yourselves, Code Freeze Is Coming](#brace-yourselves,-code-freeze-is-coming)
+-   [Brace Yourselves, Code Freeze Is Coming](#brace-yourselves-code-freeze-is-coming)
     -   [Filtering / What belongs in the milestone](#filtering--What-belongs-in-the-milestone)
     -   [Priority label definitions](#priority-label-definitions)
     -   [Sample Searches](#sample-searches-before-freeze)
