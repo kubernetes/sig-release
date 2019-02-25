@@ -15,4 +15,5 @@ Any bumps or issues encountered along the way, post here. /close when the releas
 - [ ] send notification mail
 
 /milestone <!-- v1.14 -->
+/sig release
 /area release-team
