@@ -78,11 +78,9 @@ Code freeze is when merge requirements for the `master` and current release bran
 
 We only add additional merge requirements for PRs to these two branches for code freeze:
 - PRs must be in the GitHub milestone for the current release (e.g. `v1.14`).
-- PRs must have the `priority/critical-urgent` label.
 
 Milestone requirements are configured by adding `milestone: foo` to a query config.
 
-The label requirement is configured by adding `priority/critical-urgent` to the list specified by the `labels` field.
 
 ```yaml
   - repos:
@@ -94,7 +92,6 @@ The label requirement is configured by adding `priority/critical-urgent` to the 
     labels:
     - lgtm
     - approved
-    - priority/critical-urgent
     - "cncf-cla: yes"
     missingLabels:
       # as above...
@@ -156,4 +153,26 @@ In particular, bumping the kubekins-e2e images should be avoided unless a critic
 
 [Prow Home Page](https://prow.k8s.io)
 
-[Tide](https://github.com/kubernetes/test-infra/tree/master/prow/cmd/tide#tide)
+[PR Status Dashboard](https://prow.k8s.io/pr)
+
+[Tide](https://prow.k8s.io/tide)
+
+[Gubernator PR Dashboard](https://gubernator.k8s.io/pr)
+
+[Velodrome](http://velodrome.k8s.io)
+
+[Code search](https://cs.k8s.io/)
+
+[Devstats](https://k8s.devstats.cncf.io)
+
+[Test Infra oncall](https://go.k8s.io/oncall)
+
+[API Snoop](https://apisnoop.cncf.io)
+
+[TestGrid](https://testgrid.k8s.io/)
+
+[Triage Dashboard](https://storage.googleapis.com/k8s-gubernator/triage/index.html)
+
+[Gubernator Event Dump](http://github-dot-k8s-gubernator.appspot.com/timeline?repo=kubernetes/kubernetes&number=1)
+
+[GCSWeb](http://gcsweb.k8s.io/gcs/test-infra-oncall/)
