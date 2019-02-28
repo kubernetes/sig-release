@@ -95,13 +95,15 @@ Builds against master are implicitly a next alpha.  The gcbmgr/anago scripting a
 ## Branch Creation
 The first time a specific branch is mentioned for the release instead of "master", for example:
 * `gcbmgr stage release-1.12 --build-at-head --nomock`
+
 Then behind the scenes anago will do a branch create and push.
+`prow`’s `branchprotector` [runs once per day](https://github.com/kubernetes/test-infra/blob/a362b01ca57be7c170f7ef51c2f14dfd98986669/prow/cluster/branchprotector_cronjob.yaml#L1-L6) and automatically adds branch protection to any new branch in the `k/k` repo.
 
-In the past, an additional action to protect the branch on GitHub was required, but this [is now automatic](https://github.com/kubernetes/release/issues/364#issuecomment-409772545) via prow’s branchprotector.  This automation [runs once per day](https://github.com/kubernetes/test-infra/blob/a362b01ca57be7c170f7ef51c2f14dfd98986669/prow/cluster/branchprotector_cronjob.yaml#L1-L6).
+New release branch creation (for example: release-1.12) automatically also triggers an alpha.0 build for the subsequent release (for example: release-1.13). This means that the staging step will take about twice as long, as it will stage both versions `v1.12.0-beta.0` and `v1.13.0-alpha.0`. The release step will also take a bit (maybe a couple of minutes) longer, but not significantly.
 
-New release branch creation (for example: release-1.12) automatically also triggers an alpha.0 build for the subsequent release (for example: release-1.13).
-
-Once the branch is created, insert the patch release manager into the branch manager list in the prow configuration ([example](https://github.com/kubernetes/test-infra/blob/a362b01ca57be7c170f7ef51c2f14dfd98986669/prow/plugins.yaml#L151-L162)).
+Once the branch is created:
+- Insert the patch release manager into the branch manager list in the prow configuration ([example](https://github.com/kubernetes/test-infra/blob/a362b01ca57be7c170f7ef51c2f14dfd98986669/prow/plugins.yaml#L151-L162)).
+- Notify the [test-infra team](../test-infra), so they can setup the jobs & testgrid for the new branch.
 
 ## Beta Build
 Builds against a release-1.X branch are implicitly a next beta.  The gcbmgr/anago scripting automatically finds and increments the current build number.
@@ -142,7 +144,23 @@ Run simply as:
 
 This is done daily.
 
-The first time the ‘[branchff](https://git.k8s.io/release/branchff)’ tool is run on a branch will do a clone of k/k to a temporary directory, run a git merge-base, run a few cleanup scripts to insure the branch’s generated API bits are in order (master branch content will move on toward version N+1, while release branch needs to stay at version N), commit the results of those scripts to the branch, and push to the GitHub remote lease branch.  Except again, we have a safety net and the default is a mock run.
+Earlier in the release the exact time of running [`branchff`] might just be at the discretion of the branch manager, as agreed upon with the release lead.
+
+Later in the release it will probably become more important to align with the release lead and the CI signal team (and probably other release team members).
+The exact time for pulling in the changes from master to the release branch might depend on the features that have or are to be merged. Considerations could be:
+- We should run [`branchff`] sooner, before `$bigFeature` so we have a signal in the release branch before that fetature was brought in
+- We should run [`branchff`] later, after `$theOtherFeature` has been merged, so we get signal on that feature from both the master and the release branch
+
+
+The first time the [`branchff`] tool is run on a branch it will
+- do a clone of `k/k` to a temporary directory
+- run a git merge-base
+- run a few cleanup scripts to ensure the branch’s generated API bits are in order  
+  (master branch content will move on toward version `n+1`, while release branch needs to stay at version `n`)
+- commit the results of those scripts to the branch
+- push to the GitHub remote release branch
+
+Except again, we have a safety net and the default is a mock run.
 
 The script encourages you before committing to:
 ```
@@ -162,12 +180,14 @@ git log origin/release-1.12..HEAD
 
 Each and every commit ought to be something the release team has visibility into.  Each merge commit indicates a PR number and owner.  Invest in researching these.  If unexpected code was merged to master, use your judgement on whether to escalate to the release team and SIG leadership associated with PR to question whether the commit is truly targeted for the release.
 
-The release team and the branch manager are the final safety guard on the release content.
+**The release team and the branch manager are the final safety guard on the release content.**
 
 Once you know your environment is good and running for the fast forwards:
 * `./branchff release-1.12 --nomock`
 
 Subsequent runs will simply be merging in changes from master to the branch, keeping the previous API fixup commits on the branch.
+
+[`branchff`]: https://git.k8s.io/release/branchff
 
 ## Code Freeze, Thaw
 Code merge restriction periods have been implemented by a combination of prow plugins config, submit-queue config, and tide.  The Test Infra Lead, Branch Manager and Release Lead coordinate checking in whichever config changes are required to enable and disable merge restrictions.

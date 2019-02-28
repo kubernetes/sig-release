@@ -7,7 +7,7 @@ Bug Triage Handbook
 -   [Early Release](#early-release)
     -   [Sample Searches](#sample-searches-early)
     -   [Reports](#reports-early)
--   [Brace Yourselves, Code Freeze Is Coming](#brace-yourselves,-code-freeze-is-coming)
+-   [Brace Yourselves, Code Freeze Is Coming](#brace-yourselves-code-freeze-is-coming)
     -   [Filtering / What belongs in the milestone](#filtering--What-belongs-in-the-milestone)
     -   [Priority label definitions](#priority-label-definitions)
     -   [Sample Searches](#sample-searches-before-freeze)
@@ -195,6 +195,9 @@ New test failures will also show up during Code Freeze and you need to make sure
 
 
 ### Sample Searches [Freeze]
+
+* Prow is an alternative tool for PR visualisation that can run full GH queries:   
+    * [PRs with LGTM but not 'approved' in Prow](https://prow.k8s.io/pr?query=is%3Apr%20state%3Aopen%20label%3Algtm%20-label%3Aapproved%20milestone%3Av1.14)
 
 * Open v1.14 Issues
   * `is:open is:issue milestone:v1.14 -label:"kind/feature" -label:"kind/failing-test"` [milestone open issues, excluding kind/feature and kind/failing-test](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+-label%3A%22kind%2Ffeature%22+-label%3A%22kind%2Ffailing-test%22+)

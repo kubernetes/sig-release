@@ -4,7 +4,7 @@
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.14/README.md)
 * [Release Team](https://git.k8s.io/sig-release/releases/release-1.14/release_team.md)
-* [Meeting Minutes](http://bit.ly/k8s114-minutes) (join [kubernetes-milestone-burndown@] to receive meeting invites)
+* [Meeting Minutes](http://bit.ly/k8s114-minutes) (join [kubernetes-sig-release@] to receive meeting invites)
 * [v1.14 Release Calendar][k8s114-calendar]
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
 * [Internal Contact Info](https://bit.ly/k8s114-contacts) (accessible only to members of [kubernetes-release-team@])
@@ -112,7 +112,7 @@ point we have a list of outstanding issues and PRs, and are actively working to
 burn that list down.  SIG representatives are asked to attend if their SIG has
 specific outstanding issues that are blocking the release.
 
-Join [kubernetes-milestone-burndown@] to get a calendar invite.  This meeting
+Join [kubernetes-sig-release@] to get a calendar invite.  This meeting
 may conflict with other community meetings.  Please prioritize this meeting if
 a member of the release team asks you to attend.
 
@@ -205,7 +205,6 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [Code Thaw]: #code-thaw
 [Exception]: #exceptions
 
-[kubernetes-milestone-burndown@]: https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown
 [kubernetes-release-team@]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
