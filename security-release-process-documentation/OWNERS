@@ -1,6 +1,6 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 reviewers:
-  - product-security-team
+  - product-security-committee
 approvers:
-  - product-security-team
+  - product-security-committee
