@@ -5,6 +5,7 @@ approvers:
 reviewers:
   - hoegaarden
   - sumitranr
+  - listx
   - branch-manager-role
   - patch-release-manager-role
 labels:
