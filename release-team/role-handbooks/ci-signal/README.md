@@ -20,7 +20,7 @@ The core responsibility of the CI Signal lead is to foster a culture of continuo
 ### Explicit detail is important:
 
 - If you're looking for answer that's not in this document, please file an issue so we can keep the document current.
-- Generally CI Signal lead errs on the side of filing an issue for each test failure or flake before following up with SIGs/owners. This way we dont _lose track of an issue_
+- Generally CI Signal lead errs on the side of filing an issue for each test failure or flake before following up with SIGs/owners. This way we don't _lose track of an issue_
 - If a dashboard isn't listed here, or a test isn't on one of the listed dashboards, **_CI Signal lead is not looking at it_**
 
 ## Requirements
@@ -71,7 +71,7 @@ Here are some good early deliverables from the CI Signal lead between start of t
 - Maintain a master tracking sheet and keep it up-to-date with issues tracking any test failure/flake - [Sample sheet](https://docs.google.com/spreadsheets/d/1j2K8cxraSp8jZR2S-kJUT6GNjtXYU9hocNRiVUGZWvc/edit#gid=127492362)
 - Copy over any open test issues from previous release (ask previous CI Signal lead for the tracker sheet) and follow up on them with owners
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
-  - Make sure all open issues have a `priority/` label and one of either the `kind/flake` or `kind/failing-test` label
+  - Make sure all open issues have a `priority/` label (see: [Priority Labels](#priority-labels)) and one of either the `kind/flake` or `kind/failing-test` label
   - Make sure the issue is assigned against the current milestone 1.x, using /milestone
   - Assign the issue to appropriate SIG using /sig label
   - If you are aware of the individual associated with the enhancement area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around
@@ -183,6 +183,19 @@ Questions to ask sig-<name>:
 - with verify failures, try to infer the failure from the log. Otherwise find the owning SIG to help
 - if a test case is failing in one job consistently, but not others, both the job owner and test case owner are responsible for identifying why this combination is different
 - You can look at past history of the job/test (even as far back as multiple releases) by querying the [triage dashboard for specific job and/or test name](https://storage.googleapis.com/k8s-gubernator/triage/index.html)
+
+### Priority Labels
+Issues you create for test failures and flakes must be assigned a `priority` label, that is compatible with the priorities described in the [Issue Triage contributor guide](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#define-priority).
+
+In the CI signal context, we're using priority labels to mean:
+
+| priority | Description | Expectation |
+| -- | -- | -- |
+| `priority/critical-urgent` | Actively impacting release-blocking signal. Includes: consistently failing tests,  frequently (more than 20% of the time) flaking tests  in release-blocking dashboards. | Work with sigs for these to be worked on as soon as possible, prioritized over other work. |
+| `priority/important-soon` | Negatively impacting release-blocking signal. Includes: Flakes (especially occurring >2% of the time) in release-blocking jobs, failures and flakes in release-informing jobs. | Work with sigs to resolve them soon, ideally before the end of this release cycle. |
+| `priority/important-longterm` | Painful, results in manual workarounds/toil, limits developer productivity, but is of lower urgency and importance than issues in `priority/critical-urgent` or `priority/important-soon`. | In reality, there's a high chance these won't be finished, or even started within the current release. Work with sigs to ensure they are on their radar, and help find ways they can be broken down into smaller chunks. |
+
+CI signal is not currently using `priority/backlog` or `priority/awaiting-more-evidence`.
 
 ### Routing test issues to SIG/owner
 
