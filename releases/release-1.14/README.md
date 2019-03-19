@@ -19,8 +19,8 @@
 
 #### Guides
 
-* [Targeting Issues and PRs to This Milestone](https://git.k8s.io/community/contributors/devel/release.md)
-* [Triaging and Escalating Test Failures](https://git.k8s.io/sig-release/ephemera/testing.md) (TODO: this guide should live elsewhere, ref: [kubernetes/sig-release#428](https://github.com/kubernetes/sig-release/issues/428))
+* [Targeting Issues and PRs to This Milestone](https://git.k8s.io/community/contributors/devel/sig-release/release.md)
+* [Triaging and Escalating Test Failures](https://git.k8s.io/community/contributors/devel/sig-testing/testing.md#troubleshooting-a-failure)
 
 ## tl;dr
 
@@ -36,8 +36,8 @@ The 1.14 release cycle is proposed as follows:
 ## What Will We Do Differently This Release?
 
 * All proposed Enhancements for this release must have an associated KEP.
-  * There is no grandfathering; if the enhancement had no associated KEP before,
-    it must have one now.
+  * There are no exceptions; if the enhancement had no associated KEP
+    before, it must have one now.
   * The KEP must have a checklist of requirements necessary for a feature to
     land as alpha, beta, or stable.  That checklist must have at a minimum a
     test plan, and an upgrade/downgrade plan.
