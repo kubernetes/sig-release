@@ -279,7 +279,9 @@ When you have a plan for the next patch release, send an announcement
 * TO: [kubernetes-dev@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-dev)
 * *BCC*: [kubernetes-dev-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-dev-announce)
 
-several working days in advance, including a release notes preview.
+several working days in advance, including a release notes preview.  Also
+update the [posted schedule](https://git.k8s.io/sig-release/releases/patch-releases.md).
+
 You generate the preview with the [relnotes](https://git.k8s.io/release/relnotes)
 script, run against a local checkout of the release branch, and querying
 GitHub via an API token associated with your GitHub identity.  For example:
@@ -342,6 +344,9 @@ kubernetes-dev and kubernetes-announce mailing lists.
 
 After the release cut, reapply the `cherry-pick-approved` label to any PRs that
 had it before the freeze, and go through the backlog of new cherry-picks.
+
+Update the [posted schedule](https://git.k8s.io/sig-release/releases/patch-releases.md)
+to reflect the actual release date and any initial info on the next release's timing.
 
 ### Hotfix release
 
