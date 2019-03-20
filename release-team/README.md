@@ -127,7 +127,7 @@ is undefined.
 
 ### During "Security" releases
 For all unplanned or embargoed releases
-- Facilitate security releases following the under the [Security Release Process](security-release-process-documentation/security-release-process.md)
+- Facilitate security releases following the [Security Release Process](https://git.k8s.io/security/security-release-process.md)
 
 ## Release Team Selection
 
