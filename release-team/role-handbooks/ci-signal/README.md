@@ -201,44 +201,55 @@ CI signal is not currently using `priority/backlog` or `priority/awaiting-more-e
 
 This can be done in 2 ways (i) including @kubernetes/sig-foo-test-failures teams in the issue files and (ii) going to the #sig-foo slack channel if you need help routing the failure to appropriate owner.
 
-If a job as a whole is failing, file a v1.y issue in kubernetes/kubernetes titled:`[job failure] job name issue`
+For every test case that fails, file a v1.y milestone issue in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues) titled: `[Failing test] full test case name`
 ```
-/priority critical-urgent
+*Which jobs are failing*:
+`ci-kubernetes-e2e-test-name` in
+
+* [sig-release-master-upgrade#gce-new-master-upgrade-cluster](https://testgrid.k8s.io/sig-release-master-upgrade#gce-new-master-upgrade-cluster)
+
+*Which test(s) are failing*:
+
+`[sig-network] Firewall rule [Slow] [Serial] should create valid firewall rules for LoadBalancer type service`
+
+Include a spyglass link to the latest failed job and a triage link to visualize
+the severity of the failure.
+
+*Since when has it been failing*:
+2019-03-01, k/k diff or k/test-infra diff.
+
+
+*Testgrid link*:
+
+https://testgrid.k8s.io/sig-release-master-upgrade#gce-new-master-upgrade-cluster
+
+*Reason for failure*:
+
+Include any more information that may help troubleshoot (i.e.,error messages).
+
+/sig FOO
 /kind failing-test
+/priority FOO
+/milestone v1.y
 @kubernetes/sig-FOO-test-failures
 
-This job is on the [sig-release-master-blocking dashboard](https://k8s-testgrid.appspot.com/sig-release-master-blocking),
-and prevents us from cutting [WHICH RELEASE] (kubernetes/sig-release#NNN). Is there work ongoing to bring this job back to green?
-
-https://k8s-testgrid.appspot.com/sig-sig-release-master-blocking#[THE FAILING JOB]
-
-...any additional debugging info I can offer...
+cc @release-team-lead
+cc @bug-triage-lead
+cc @other-members-of-ci-signal
 ```
+
 Examples:
-- [[job failure] ci-kubernetes-e2e-kubeadm-gce](https://github.com/kubernetes/kubernetes/issues/54905)
+- [[Failing test] [sig-network] Firewall rule [Slow] [Serial] should create valid firewall rules for LoadBalancer type service](https://github.com/kubernetes/kubernetes/issues/74887)
+- [[Failing test] verify.godeps is failing in master-blocking and 1.14-blocking](https://github.com/kubernetes/kubernetes/issues/75125)
 
-If a test case is failing, file a v1.y milestone issue in kubernetes/kubernetes titled: `[e2e failure] full test case name`
-```
-/priority critical-urgent
-/kind failing-test
-@kubernetes/sig-FOO-test-failures
+If a test case is failing but not consistently, then file a v1.y milestone issue in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues) titled: `[Flaky test] full test case name`.
+For flaky tests, use the `/kind flake` label instead of `/kind failing-test`.
 
-This test case has been failing [SINCE WHEN OR FOR HOW LONG] and affects [WHICH JOBS]: [triage report](LINK TO TRIAGE REPORT)
-
-This is affecting [WHICH JOBS] on the [sig-release-master-blocking dashboard](https://k8s-testgrid.appspot.com/sig-release-master-blocking),
-and prevents us from cutting [WHICH RELEASE] (kubernetes/sig-release#NNN). Is there work ongoing to bring this test back to green?
-
-...any additional debugging info I can offer...
-
-eg: if there's a really obvious single cluster / cause of failures
-[triage cluster 12345](LINK TO TRIAGE CLUSTER)
----
-the text from the triage cluster
----
-```
 Examples:
-- [[e2e failure] [sig-network] Networking Granular Checks: Services [Slow] should function for client IP based session affinity: udp](https://github.com/kubernetes/kubernetes/issues/54524)
-- [[e2e failure] [sig-network] Networking Granular Checks: Services [Slow] should function for client IP based session affinity: http](https://github.com/kubernetes/kubernetes/issues/54571)
+- [[Flaky test] [sig-apps] DaemonRestart [Disruptive] Kubelet should not restart containers across restart](https://github.com/kubernetes/kubernetes/issues/75373)
+
+In previous releases, job failure issues were prefixed with `[job failure]` and
+single test failure with `[e2e failure]`.
 
 ### Monitoring Commits for test failure triangulation
 Yet another effective way for a signal lead to stay on top of code churn and regression is by monitoring commits to master and specific branch periodically.
