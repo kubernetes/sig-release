@@ -23,7 +23,8 @@ An Enhancements Lead holds the following responsibilities:
   - Engage with media analysts during the embargo period to discuss the release themes
   - CNCF Kubernetes Release webinar
   - Identify potential contributors for the “5 Days of Kubernetes” blog series
-  - Identify candidates to assume the Enhancements Lead role (according to the [Release Team selection process][rt-selection]) in the following release cycle
+- Identify candidates to assume the Enhancements Lead role (according to the [Release Team selection process][rt-selection]) in the following release cycle
+  - Chose Enhancement shadows whom you believe would be a good fit for succession and help mentor them throughout the release cycle  
 
 ## General Requirements
 
@@ -38,7 +39,13 @@ Helpful characteristics of an Enhancements Lead include:
 - product / project / program management experience
 - release management experience
 
+Approximate Time Committments 
+Beginning of the cycle through enhancement freeze: 3-6 hours a week fluctuating based on how many SIG meetings need to be attended
+Enhancement Freeze through Code Freeze: 4-7 hours a week
+Code Freeze through Release Day: 1-4 hours a week 
+
 ## Mentoring Shadows
+It is importantto select shadows who are interested in learning more about the Kubernetes release process and are able to devote a couple hours a week for attending the Release meeting as well as helping with weekly tasks.  Remeber one of these shadows should eventually be taking on the Enhancement Lead role so it is important to think about how you can delegate tasks to them to train them for succession.  
 
 ## Getting Started
 
@@ -78,21 +85,29 @@ It is important that this process be followed and documentation remain up-to-dat
 | 1 | Collection | Work with the Release Lead to attend every SIG meeting over the span of 2-3 weeks. Take 2 minutes to introduce yourself, talk about release information, and relay information about issues that haven't been removed from the previous milestone or call out issues that may need some attention. |
 | 1 | Collection | New issues will be created. Take the opportunity to apply correct labels, milestone information, and add to the sheet if necessary. |
 | 1 | Collection | Weekly Release meetings require updates of current status. Use the `Feature stats` tab to update the release team on counts of enhancements in good and bad progress.|
+| 1 | Collection | Start reminding Issue owners that KEPs are required for each enhancement and that KEPs must be in an implementable state by Enhancement Freeze. | 
 | 2-3 | Collection Monitoring and Triage | Stay on top of comments in issues when owners respond. Apply correct labels, milestone information, and add to the sheet if necessary. |
 | 2-3 | Collection Monitoring and Triage | Mark features as "At Risk" if there is no communication or active PRs on the issues coming into Enhancement Freeze. |
-| 4 | Enhancement Freeze | On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) that freeze has happened. "We are at X enhancements, and any new ones will require an exception." Examples [1](https://groups.google.com/forum/#!msg/kubernetes-dev/4kefhF6nOFQ/rCOme6vjCAAJ) [2](https://groups.google.com/forum/#!msg/kubernetes-dev/T-kIHtgS5J4/wW73F2HmBAAJ;context-place=msg/kubernetes-dev/T-kIHtgS5J4/ZjKTsCf_AwAJ). |
+| 4 | Enhancement Freeze | On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) that freeze has happened. "We are at X enhancements, and any new ones will require an exception." Examples [1](https://groups.google.com/forum/#!msg/kubernetes-dev/4kefhF6nOFQ/rCOme6vjCAAJ) [2](https://groups.google.com/forum/#!msg/kubernetes-dev/T-kIHtgS5J4/wW73F2HmBAAJ;context-place=msg/kubernetes-dev/T-kIHtgS5J4/ZjKTsCf_AwAJ). | 
+| 4 | Enhancement Freeze | Remove any enhancements from the sheet that do not have a KEP in an implementable state. |
+| 4 | Enhancement Freeze | Any enhancements removed from the milestone will now require an exception.  As exception requests come in approve/reject at your descretion and create the exception file in the Release for exceptions Example [1](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.14/exception.yaml). | 
 | 5-7 | Freeze Monitoring | Stay on top of issues and continually monitor them twice a week and look at attached PRs. As Code Freeze gets closer, there are PRs that have not been merged, move the issue to At Risk. If there is no activity, ping issue owners on either the issue or the k/k PR. |
 | 8-10 | Freeze Monitoring | Monitor issues that are At Risk closer, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward. |
-| 10 | Code Freeze | Start planning for the next release while assisting the Release Lead with anything relating to Analyst or Public Relation planning. Work with the Communications Lead to develop major themes for the official Kubernetes blog post. |
+| 10+ | Code Freeze | Start planning for the next release while assisting the Release Lead with anything relating to Analyst or Public Relation planning. Work with the Communications Lead to develop major themes for the official Kubernetes blog post. |
 
 ### Escalation / Handling Unresponsive Enhancement Owners
-List of unresponsive issues? Add unresponsive status to enhancements tracking?
+For issues where the initial owner is unresponsive goin to the issue SIG leadership to check if the issue is still targeted for the release.  
+
+If there is continue unresponsiveness on issues remove them from the milestone at your descretion.  
 
 ### Exceptions
+Exception process is outlined [here](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md)
 
 ### CNCF / Media Engagement
+ - You may be called upon by the communications lead to help with media engagement near the end of the release cycle.  Please ensure that if there are any restrictions or training required by your company before engaging that you have completed those ahead of Code Thaw.  
 
 ### Succession
+- Select who will be the new enhancement lead for the next release.  Shadows should be the first source pool.  If none are available to lead then look externally through other release team members or members of #SIG-PM 
 - Generate new Enhancements Tracking sheet with enhancements that were removed from the current milestone
 - Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements
 - Continually work to improve Enhancements process
