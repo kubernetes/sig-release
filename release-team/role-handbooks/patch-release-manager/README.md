@@ -372,6 +372,6 @@ releases are needed on branches.
 In contrast to a normal release, you must not make any public announcements
 or push tags or release artifacts to public repositories until the PST tells you to.
 
-See the [Security Release Process](https://git.k8s.io/sig-release/security-release-process-documentation/security-release-process.md)
+See the [Security Release Process](https://git.k8s.io/security/security-release-process.md)
 doc for more details.
 
