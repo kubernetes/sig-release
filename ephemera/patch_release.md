@@ -89,4 +89,4 @@ How the issue will be (was) fixed
 ## Communicating security fixes to the community
 
 Due to the sensitive nature of security fixes, their details maybe omitted from the GitHub issue and
-simply state that the owner is working with the [product security team](https://github.com/kubernetes/community/blob/master/contributors/devel/security-release-process.md) on a resolution.
+simply state that the owner is working with the [Product Security Committee](https://git.k8s.io/security/security-release-process.md#product-security-committee-psc) on a resolution.

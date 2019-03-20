@@ -366,7 +366,7 @@ next patch release.
 
 ### Security release
 
-The Product Security Team (PST) will contact you if a security
+The Product Security Committee (PSC) will contact you if a security
 releases are needed on branches.
 
 In contrast to a normal release, you must not make any public announcements
