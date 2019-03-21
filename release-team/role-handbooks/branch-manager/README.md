@@ -36,7 +36,7 @@
 * Ask the list owner(s) to give you access to **post** to these mailing lists:
    * [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
 * Development client machine setup:
-   * Linux.  MacOS/Windows are not supported by the scripting today.
+   * Linux.  MacOS/Windows are not supported by the scripting today.  However, running the [release tooling] inside a Linux image on MacOS' docker engine works well.
    * ssh configuration set up for GitHub (either static .ssh/config or ssh agent works)
    * run `gcloud init` using the identity that you had authorized in the prior bullet point
    * git clone and checkout the [k/release repo](https://github.com/kubernetes/release) for the `gcbmgr` and `release-notify` scripts
@@ -47,6 +47,7 @@
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
+[release tooling]: https://github.com/kubernetes/release
 
 # Safety Check
 Run the following command to affirm your release repo checkout is in a good state, your development client is fully configured, and your user identity is authorized for the builds:
@@ -115,6 +116,45 @@ As the first build from the new release branch, publication this build does not 
 Adding the --rc flag switches behavior on to building release candidates.  Again the gcbmgr/anago scripting automatically finds and increments the current build number.
 * `./gcbmgr stage release-1.12 --rc --build-at-head --nomock`
 
+In an perfect world, `rc.1` and the official release are the same commit. To
+get as close to that perfect state as we can, the following things should be
+considered:
+
+1. All the PRs in the milestone should merge to master
+
+   [`is:pr is:open milestone:v1.14`][pr-milestone-query] should be empty, there
+   should be no open PR for that milestone.
+
+   This means you (the release team) should really push on PRs towards the end
+   of code freeze or assess if they can be removed from the milestone and can
+   be punted to a next release.
+
+1. `rc.1` should be staged and released
+
+   Make sure that all the changes that have been merged in master also made it
+   into the release branch. You can also do a
+   [`branchff`](#branch-fast-forward) to see the state of the two branches and
+   potentially pull any remaining PR from master into the release branch.
+
+   At this point in time, the master and the release branch are the same.
+   Nothing new gets merged into master, because we are still in code freeze.
+   Therefore, it is safe to cut the release candidate.
+
+1. Code Freeze can be lifted
+
+   Technically we can keep code freeze in place after `rc.1` was cut. However,
+   we should aim at lifting code freeze relatively quickly after `rc.1`.
+
+   Otherwise we might have a mix of PRs against master, some have been merged
+   in code freeze and for the milestone, just after `rc.1`, and others have
+   been merged when code freeze has been lifted. We might miss this specific PR
+   in the plethora of PRs that [tide] merges after code thaw, and we might
+   miss that this PR actually needs to be cherry-picked into the release
+   branch.
+
+[pr-milestone-query]: https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.14
+[tide]: https://git.k8s.io/test-infra/prow/tide
+
 ## Official Build
 * `./gcbmgr stage release-1.12 --official --build-at-head --nomock`
 
@@ -123,7 +163,7 @@ These require an additional layer of build and publish, which is currently still
 
 These build relatively quickly and should be available ahead of sending the release notification, especially for the official release when the worldwide community will attempt to get the new artifacts.  Since they build from the release tag, the first release step below is a pre-requisite for initiating the package builds.
 
-TODO: How do we automate this?  And in the meantime how do we insure it is not bottlenecked on a one-on-one ping of a single Google employee (currently @sumi)?  And these should not just be made but also validated prior to the release-notify phase.
+TODO: How do we automate this?  And in the meantime how do we ensure it is not bottlenecked on a one-on-one ping of a single Google employee (currently @sumi)?  And these should not just be made but also validated prior to the release-notify phase.
 
 ## Release
 Releasing has multiple phases.  In the first phase the non-public build artifacts are published.  In the second phase the email notification goes out to the community.
@@ -164,11 +204,15 @@ Except again, we have a safety net and the default is a mock run.
 
 The script encourages you before committing to:
 ```
-Go look around in /usr/local/google/tpepper/branchff-release-1.12/src/k8s.io/kubernetes to make sure things look ok:
+Go look around in /usr/local/google/nobody/branchff-release-1.14/src/k8s.io/kubernetes to make sure things look ok:
 # Any files left uncommitted?
 * git status -s
 # What does the commit look like?
 * git show
+# What are the changes we just pulled in from master?
+#   will be available after push at:
+#   https://github.com/kubernetes/kubernetes/compare/641856db18...6ac5d02668
+* git log origin/release-1.14..HEAD
 
 OK to push now? (y/n):
 ```
@@ -193,7 +237,7 @@ Subsequent runs will simply be merging in changes from master to the branch, kee
 Code merge restriction periods have been implemented by a combination of prow plugins config, submit-queue config, and tide.  The Test Infra Lead, Branch Manager and Release Lead coordinate checking in whichever config changes are required to enable and disable merge restrictions.
 
 ## Reverts
-During code freeze it is especially important to first look at the list of commits on master since the prior fast forward, scanning their content and issue/PR artifacts to insure they are changes expected for this milestone.  There merge-blocking mechanisms are relatively weak.  It is possible still for some people to write directly to the repo (bypassing blocking mechanisms) as well as for well intentioned milestone maintainers to approve a merge incorrectly.  The branch manager is a last pair of eyes.
+During code freeze it is especially important to first look at the list of commits on master since the prior fast forward, scanning their content and issue/PR artifacts to ensure they are changes expected for this milestone.  There merge-blocking mechanisms are relatively weak.  It is possible still for some people to write directly to the repo (bypassing blocking mechanisms) as well as for well intentioned milestone maintainers to approve a merge incorrectly.  The branch manager is a last pair of eyes.
 
 If code incorrectly hits master it should be reverted in master.  Alternatively, release branch management must go to all cherry picks, picking around the errant commit.
 
@@ -206,6 +250,28 @@ The current documentation in the [contributor guide for cherry picks](https://gi
 The cherry pick script is also fairly self documenting in terms of how to invoke the command.
 
 There has been quite a bit of recent discussion (see: [1](https://github.com/kubernetes/community/pull/2408), [2](https://github.com/kubernetes/community/pull/1980)) around improving both the cherry pick process process and its documentation.  Watch for and contribute to improvements.
+
+
+After the official release has been published, the [patch release
+team](#../patch-release-manager/) will take over in handling cherry picks.
+In the time between code thaw and the official release, cherry picks are the
+responsibility of the branch management team. Consider the following when
+assessing the cherry-picks:
+
+- Check regularly if there are new cherry picks with
+  [`is:open is:pr base:release-1.14label:do-not-merge/cherry-pick-not-approved`][cherry-pick-query]
+- Consider that each cherry-pick diverges the latest release candidate that has
+  been cut from the bits to be released as the official release
+- Engage with the cherry pick requesters: How important is that cherry-pick,
+  can it be pushed to a later release (patch or even minor), ... ?
+- Discuss (especially controversial) cherry-picks in #sig-release or at the
+  burndown meeting if you are not sure
+- If certain cherry-picks go in, does this mean we want another release
+  candidate, more time for the release candidate to soak (e.g. over the
+  weekend)?
+
+
+[cherry-pick-query]: https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+base%3Arelease-1.14+label%3Ado-not-merge%2Fcherry-pick-not-approved
 
 # Staging Repositories
 
