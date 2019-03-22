@@ -8,7 +8,7 @@
 | Branch Manager | Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon) / Slack: `@cherylfong`) | |
 | Docs | Barnabas Makonda ([@MAKOSCAFEE](https://github.com/MAKOSCAFEE) / Slack: `@barnie`) | |
 | Release Notes | Lindsey Tulloch ([@onyiny-ang](https://github.com/onyiny-ang)) | Jeff Sica ([@jeefy](https://github.com/jeefy))|
-| Communications | Jorge Castro ([@castrojo](https://github.com/castrojo)) | |
+| Communications | Jorge Castro ([@castrojo](https://github.com/castrojo)) | Taylor Dolezal ([@onlydole](https://github.com/onlydole))|                                                                                          
 
 
 
