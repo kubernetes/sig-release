@@ -17,8 +17,8 @@ releases during major holiday periods.
 
 | **Github username** | **Slack username** | **Focus area** |
 | --- | --- | --- |
-| @aleksandra-malinowska | @aleksandram | 1.13.y |
-| @tpepper | @tpepper | 1.13.y |
+| @aleksandra-malinowska | @aleksandram | 1.13.y, 1.14.y |
+| @tpepper | @tpepper | 1.13.y, 1.14.y |
 | @feiskyer | @feisky | 1.12.y |
 | @foxish | @foxish | 1.11.y |
 
@@ -56,6 +56,14 @@ Cherry-pick PRs which miss merge criteria will be carried over and tracked
 for the next patch release.
 
 ## Timelines
+
+### 1.14
+
+Next patch release is **1.14.1**.
+
+| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
+| --- | --- | --- | --- |
+| 1.14.1 | 2019-04-05 | 2019-04-08 | @aleksandra-malinowska, @tpepper |
 
 ### 1.13
 
