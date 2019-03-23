@@ -3,6 +3,7 @@
 approvers:
   - sig-release-leads
 reviewers:
+  - release-team
   - release-team-lead-role
   - idvoretskyi
   - jdumars

@@ -1,0 +1,18 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - claurence    # Release Team Lead
+  - lachie83     # Lead Shadow
+  - nikopen      # Lead Shadow
+  - tpepper      # Lead Shadow
+
+reviewers:
+  - kacole2      # Enhancements
+  - alejandrox1  # CI Signal
+  - imkin        # Test Infra
+  - soggiest     # Bug Triage
+  - bubblemelon  # Branch Manager
+  - MAKOSCAFEE   # Docs
+  - onyiny-ang   # Release Notes
+  - castrojo     # Communications
+
