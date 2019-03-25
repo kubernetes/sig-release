@@ -20,7 +20,6 @@ releases during major holiday periods.
 | @aleksandra-malinowska | @aleksandram | 1.13.y, 1.14.y |
 | @tpepper | @tpepper | 1.13.y, 1.14.y |
 | @feiskyer | @feisky | 1.12.y |
-| @foxish | @foxish | 1.11.y |
 
 ## Contact
 
@@ -28,11 +27,13 @@ To discuss a cherry-pick, schedule, or anything else related to
 patch releases, contact the team as a whole or the appropriate member if
 there is a specific one:
 
-* Email: the whole team is reachable via email to
+* Email: The whole team is reachable via email to
   [kubernetes-patch-release-team].
 * Slack: You can just tag appropriate individuals or start a broader
   conversation on #sig-release, as well as reach out to team members
   via direct message.
+* GitHub: Notifications are sent to the team via
+  `<@kubernetes/patch-release-team>`.
 
 Please give us a business day to respond - we may be in a different timezone!
 
@@ -63,14 +64,15 @@ Next patch release is **1.14.1**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
-| 1.14.1 | 2019-04-05 | 2019-04-08 | @aleksandra-malinowska, @tpepper |
+| 1.14.1 | 2019-04-05 | 2019-04-08 | [kubernetes-patch-release-team] |
 
 ### 1.13
 
-Next patch release is **1.13.5**.
+Next patch release is **1.13.6**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
+| 1.13.6 | **TBD April 2019** | **TBD April 2019** | [kubernetes-patch-release-team] |
 | 1.13.5 | 2019-03-25 | 2019-03-21 | @aleksandra-malinkowska, @tpepper |
 | 1.13.4 | 2019-02-26 | 2019-02-28 | @aleksandra-malinkowska |
 | 1.13.3 | 2019-01-24 | 2019-02-01 | @tpepper |
@@ -79,10 +81,11 @@ Next patch release is **1.13.5**.
 
 ### 1.12
 
-Next patch release is **1.12.7**.
+Next patch release is **1.12.8**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
+| 1.12.8 | **Target: 2019-04-22** | **Target: 2019-04-19** | @feiskyer |
 | 1.12.7 | 2019-03-25 | 2019-03-21 | @feiskyer |
 | 1.12.6 | 2019-02-23 | 2019-02-26 | @feiskyer |
 | 1.12.5 | 2019-01-15 | 2019-01-17 | @feiskyer |
@@ -91,23 +94,7 @@ Next patch release is **1.12.7**.
 | 1.12.2 | 2018-10-23 | 2018-10-26 | @feiskyer |
 | 1.12.1 | 2018-10-05 | 2018-10-05 | @feiskyer |
 
-### 1.11
-
-Next patch release is **1.11.9**.
-
-| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
-| --- | --- | --- | --- |
-| 1.11.9 | 2019-03-25 | 2019-03-21 | @foxish |
-| 1.11.8 | 2019-02-26 | 2019-02-28 | @foxish |
-| 1.11.7 | 2019-01-22 | 2019-01-24 | @foxish |
-| 1.11.6 | 2018-12-11 | 2018-12-18 | @foxish |
-| 1.11.5 | 2018-XX-XX | 2018-11-26 | @MaciekPytel |
-| 1.11.4 | 2018-10-19 | 2018-10-25 | @foxish |
-| 1.11.3 | 2018-09-04 | 2018-09-09 | @foxish |
-| 1.11.2 | 2018-08-03 | 2018-08-07 | @foxish |
-| 1.11.1 | 2018-07-12 | 2018-07-17 | @foxish |
-
-### 1.10 and older
+### 1.11 and older
 
 These releases are no longer supported.
 
