@@ -118,6 +118,11 @@ Adding the --rc flag switches behavior on to building release candidates.  Again
 ## Official Build
 * `./gcbmgr stage release-1.12 --official --build-at-head --nomock`
 
+In addition to `v1.12.n` this will also build and stage the subsequent patch's
+`beta.0`, in this example `v1.12.(n+1)-beta.0`. Similar to [creating a new
+branch](#branch-creation), the staging step will take about twice as long, the
+release step will also take a couple of minutes more.
+
 ## Debs and RPMs
 These require an additional layer of build and publish, which is currently still done by a Googler.  After building, but before release notification, ping @sumi on Slack indicating for which build (for example: 1.12.0) Debs and RPMs are required.
 
