@@ -68,7 +68,7 @@ access to multiple build and release tools:
 * If applicable, sync up with the outgoing release branch manager
   to take ownership of any lingering issues on the branch.
 * Review the [Branch Manager
-  Handbook](/release-team/role-handbooks/patch-release-manager/README.md) as
+  Handbook](/release-team/role-handbooks/branch-manager/README.md) as
   much of the tooling and process used by the branch manager pre-release
   relates to the post-release duties of Patch Release management.
   Pay close attention to the
@@ -290,8 +290,8 @@ GitHub via an API token associated with your GitHub identity.  For example:
 ~$ cd src/k8s.io/kubernetes
 ~/src/k8s.io/kubernetes$ git checkout release-1.13
 ~/src/k8s.io/kubernetes$ ../release/relnotes --htmlize-md \
-		--markdown-file=~/tmp/relnotes.md \
-		--html-file=~/tmp/relnotes.html \
+		--markdown-file=$HOME/tmp/relnotes.md \
+		--html-file=$HOME/tmp/relnotes.html \
 		--preview
 ```
 
@@ -317,7 +317,7 @@ The freeze serves several purposes:
 
 On the day before the planned release, run a mock build with `gcbmgr`
 to make sure the tooling is ready as per the [Branch Manager
-Handbook](/release-team/role-handbooks/patch-release-manager/README.md).
+Handbook](/release-team/role-handbooks/branch-manager/README.md).
 Also give the Google Debs/RPMs build staff notification that their
 help will be needed the next day.  Once you've done the mock build, you can
 also do a mock release and notify, sending the release notification email
