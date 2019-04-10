@@ -1,7 +1,7 @@
 | **Role** | **Name** (**GitHub / Slack ID**)  | **Shadow Name(s) (GitHub / Slack ID)** |
 | ------ | ------ | ------ |
 | Lead |  Claire Laurence ([@claurence](https://github.com/claurence)) | Lachlan Evenson ([@lachie83](https://github.com/lachie83)), Niko Penteridis ([@nikopen](https://github.com/nikopen)), Tim Pepper ([@tpepper](https://github.com/tpepper)) |
-| Enhancements | Kendrick Coleman ([@kacole2](https://github.com/kacole2)) | |
+| Enhancements | Kendrick Coleman ([@kacole2](https://github.com/kacole2) / Slack: `@kacole2`) | Bob Killen ([@mrbobbytables](https://github.com/mrbobbytables) / Slack: `@mrbobbytables`), Craig Peters ([@craiglpeters](https://github.com/craiglpeters) / Slack: `@craiglpeters`) |
 | CI Signal | Jorge Alarcon ([@alejandrox1](https://github.com/alejandrox1)) | |
 | Test Infra | Dhawal Yogesh Bhanushali ([@imkin](https://github.com/imkin) / Slack: `@dbhanushali`) | Katharine Berry ([@Katharine](https://github.com/Katharine)) |
 | Bug Triage | Nicholas Lane ([@soggiest](https://github.com/soggiest) / Slack: `@soggy`) | |
