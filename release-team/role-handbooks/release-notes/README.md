@@ -4,11 +4,42 @@
 
 The Release Notes role is responsible for collecting and fine-tuning release-notes from the many contributions to Kubernetes between release cycles. This role is likely to find that work during the first several weeks of the release cycle is very laid back with the bulk of the tasks being completed at the end, once the release is firmed up.
 
-## Skills and Experience Required:
+## Requirements
+
+### Skills and Experience Requirments:
 
 * Strong written and verbal communications skills
 * A working knowledge of Kubernetes concepts
 * Project management experience is helpful
+
+### Time Requirements:
+
+Compared to other release team roles, release notes is one of the least time
+intensive roles.
+#### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
+For the first few weeks, attending meetings and running the
+[release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
+weekly to create an early draft of the release notes is all that is absolutely
+required of the release team. The release lead will be responsible for introducing
+shadows to the team and the release notes tool and may ask shadows to run it
+and make the weekly update PR. The release notes lead should indicate pain
+points and known issues to the shadows (if there are any) and work on strategies
+for overcoming them to avoid their coalescence during the later weeks. If there
+are potential fixes to the issues indicated and team members are keen, this time
+can be used to address them. Fixes and automation of the process is very welcome
+but not expected.
+
+#### Late release cycle (weeks 9-12+) ~4-10 hours/week
+This period has an increase in release team  meetings each week and there is
+also significantly more work to do to ensure the release notes are in good
+working order for the release. Once code freeze begins, the release notes draft
+is transfered to a google doc which is made public to the Kubernetes community.
+The doc will be edited by SIG leads and SIG members but will also be edited for
+grammar and uniform style by the release notes team. The changelog must also be
+generated and the release notes tool must continue to be run on the release
+branch in order to pull in any outstanding PRs that are merged between the
+beginning of code freeze and the release.
+
 
 ## Tasks
 
