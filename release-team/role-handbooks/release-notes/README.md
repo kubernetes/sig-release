@@ -73,10 +73,17 @@ beginning of code freeze and the release.
 
 Update this section at the end of each release for the next Release Notes Team.
 
-### Post 1.12 TODOs
+### Post 1.14 TODOs
 
-- Implement new functionality in release-notes tool to process language in generated release notes file
+#### High Priority
+- Implement [UI for 1.15 release](https://github.com/kubernetes/enhancements/pull/928)
+- Determine a format for release notes that fits well with the UI and
+  highlights overarching highly critical changes
+- Modify the release notes tool to be able to select from the release branch after code freeze begins
+- Migrate release notes tools to an appropriate location
 
+#### If any team members have NLP experience:
+- Implement functionality in release-notes tool to automatically process language in generated release notes file
   Goals:
     - Generate uniform style across release notes (ie. past tense, formatting)
     - Decrease copy editing time
