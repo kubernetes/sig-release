@@ -4,18 +4,49 @@
 
 The Release Notes role is responsible for collecting and fine-tuning release-notes from the many contributions to Kubernetes between release cycles. This role is likely to find that work during the first several weeks of the release cycle is very laid back with the bulk of the tasks being completed at the end, once the release is firmed up.
 
-## Skills and Experience Required:
+## Requirements
+
+### Skills and Experience Requirments:
 
 * Strong written and verbal communications skills
 * A working knowledge of Kubernetes concepts
 * Project management experience is helpful
+
+### Time Requirements:
+
+Compared to other release team roles, release notes is one of the least time
+intensive roles.
+#### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
+For the first few weeks, attending meetings and running the
+[release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
+weekly to create an early draft of the release notes is all that is absolutely
+required of the release team. The release lead will be responsible for introducing
+shadows to the team and the release notes tool and may ask shadows to run it
+and make the weekly update PR. The release notes lead should indicate pain
+points and known issues to the shadows (if there are any) and work on strategies
+for overcoming them to avoid their coalescence during the later weeks. If there
+are potential fixes to the issues indicated and team members are keen, this time
+can be used to address them. Fixes and automation of the process is very welcome
+but not expected.
+
+#### Late release cycle (weeks 9-12+) ~4-10 hours/week
+This period has an increase in release team  meetings each week and there is
+also significantly more work to do to ensure the release notes are in good
+working order for the release. Once code freeze begins, the release notes draft
+is transfered to a google doc which is made public to the Kubernetes community.
+The doc will be edited by SIG leads and SIG members but will also be edited for
+grammar and uniform style by the release notes team. The changelog must also be
+generated and the release notes tool must continue to be run on the release
+branch in order to pull in any outstanding PRs that are merged between the
+beginning of code freeze and the release.
+
 
 ## Tasks
 
 - The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetings and follow the [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF) Slack channel for relevant information throughout the release cycle.
 - One member of the Release Notes Team should be responsible for setting up and running the [release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes) to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are always welcome!
 - Drafts produced by the tool are copied to a file called `release-notes-draft.md` in the [releases folder](../../../releases) for the current release in the `sig-release` repo.
-- Before the beginning of Code Freeze, the Release Notes Team will copy the latest draft into a Google Doc and start [reaching out to SIG Leads](sig-leads-email.md) in an effort to have them fill in a prose paragraph of "Major Themes" that outlines what their SIG has been working on throughout the lifecycle.
+- The Communications team will hold meetings to discuss blogposts and media releases regarding the release sometime before code freeze. Ensure that at least one person from the release notes team attends this meeting with the release lead and enhancements lead. The release notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the communications team, release lead or enhancements lead to ensure messaging around Major Themes is coordinated.
 - If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberity in completing the notes
 - A ["Known Issues"](known-issues-bucket.md) section will also be created in a GitHub issue to be added to the release notes before release date.
 - The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
@@ -42,10 +73,17 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 
 Update this section at the end of each release for the next Release Notes Team.
 
-### Post 1.12 TODOs
+### Post 1.14 TODOs
 
-- Implement new functionality in release-notes tool to process language in generated release notes file
+#### High Priority
+- Implement [UI for 1.15 release](https://github.com/kubernetes/enhancements/pull/928)
+- Determine a format for release notes that fits well with the UI and
+  highlights overarching highly critical changes
+- Modify the release notes tool to be able to select from the release branch after code freeze begins
+- Migrate release notes tools to an appropriate location
 
+#### If any team members have NLP experience:
+- Implement functionality in release-notes tool to automatically process language in generated release notes file
   Goals:
     - Generate uniform style across release notes (ie. past tense, formatting)
     - Decrease copy editing time
