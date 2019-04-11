@@ -21,6 +21,10 @@ Staff early! The Release Team should undertake the selection process at the begi
 
 Any staffing decisions that cannot be made within this timeframe should be escalated to SIG Release Chairs and discussed publicly.
 
+Following the future Release Team selection, or the end of Code Freeze (whichever comes first), the Emeritus Adviser will publish a questionnaire and announce that we are accepting submissions for [shadows](#shadows).
+
+The questionnaire / survey will remain open for 2 weeks. Once closed, the respective role leads within the Release Team will have 1 week to review and select their shadows based on the role's specific handbook criteria and fit.
+
 ### Membership
 
 Try to ensure potential Release Team candidates:
@@ -55,7 +59,7 @@ _The new Release Team Lead can be selected via lazy consensus of the current Rel
 
 Same as [Release Team Lead](#release-team-lead).
 
-### Shadows
+### <a name="shadows"></a>Shadows
 
 Every Release Team role should seek to accommodate a set of role shadows. This creates a new avenue for code and non-code contributors alike to contribute to the project. Additionally, it seeds future release cycles with new leaders.
 
