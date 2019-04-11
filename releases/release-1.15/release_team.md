@@ -6,7 +6,7 @@
 | Test Infra | Dhawal Yogesh Bhanushali ([@imkin](https://github.com/imkin) / Slack: `@dbhanushali`) | Katharine Berry ([@Katharine](https://github.com/Katharine)) |
 | Bug Triage | Nicholas Lane ([@soggiest](https://github.com/soggiest) / Slack: `@soggy`) | |
 | Branch Manager | Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon) / Slack: `@cherylfong`) | |
-| Docs | Barnabas Makonda ([@MAKOSCAFEE](https://github.com/MAKOSCAFEE) / Slack: `@barnie`) | |
+| Docs | Barnabas Makonda ([@MAKOSCAFEE](https://github.com/MAKOSCAFEE) / Slack: `@barnie`) | Tunde Oladipupo ([@simplytunde](https://github.com/simplytunde) / Slack: `@simplytunde`), Damini Satya Kammakomati ([@daminisatya](https://github.com/daminisatya) / Slack: `@Damini satya`), Christian Hernandez ([@christianh814](https://github.com/christianh814) / Slack: `@christianh814`) |
 | Release Notes | Lindsey Tulloch ([@onyiny-ang](https://github.com/onyiny-ang)) | Jeff Sica ([@jeefy](https://github.com/jeefy))|
 | Communications | Jorge Castro ([@castrojo](https://github.com/castrojo)) | Taylor Dolezal ([@onlydole](https://github.com/onlydole)) |
 
