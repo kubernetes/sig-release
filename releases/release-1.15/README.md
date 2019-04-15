@@ -62,7 +62,7 @@ The 1.15 release cycle is proposed as follows:
 | Docs Deadline - Open placeholder Prs | Docs Lead | Friday, May 31, 2019 | Week 8 | 
 | Code Freeze | Test Infra Lead | Thursday, May 30th, 2019 | Week 8 |
 | Daily burndowns start | Release Lead | Monday, June 03, 2019 | Week 9 |
-| Docs deadline - PRs ready for review | Tuesday, June 04, 2019 | Week 9 |
+| Docs deadline - PRs ready for review | Docs Lead |Tuesday, June 04, 2019 | Week 9 |
 | 1.15.0-beta.2 released | Branch Manager Lead | Wednesday, June 05, 2019 | Week 9 | 
 | Docs Last Call | Docs Lead | Monday, June 10th, 2019 | Week 10 |
 | Code Thaw | Test Infra Lead | Tuesday, June 11th. 2019 | Week 10 
