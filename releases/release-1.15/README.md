@@ -53,7 +53,7 @@ The 1.15 release cycle is proposed as follows:
 | Enhancements Freeze | Enhancements Lead | Tuesday, April 30th, 2019 | Week 4 | 
 | 1.15.0-alpha.2 released | Branch Manager Lead | Monday, April 29, 2019 | Week 4|
 | 1.15.0-alpha.3 releaed | Branch Manager Lead | Tuesday May 07, 2019  | Week 5 |
-| 1.12.0 jobs removed | Test Infra Lead | Tuesday, May 07, 2019 | Week 5 | 
+| 1.11.0 jobs removed | Test Infra Lead | Tuesday, May 07, 2019 | Week 5 | 
 | 1.15.0 branch cut | Branch Manager Lead | Tuesday, May 14th, 2019 | Week 6 |
 | 1.15.0-beta.0 released | Branch Manager Lead | Tuesday, May 14th, 2019 | Week 6 |
 | 1.15.0 release jobs created | Test Infra Lead | Thursday, May 16th, 2019 | Week 6 |
