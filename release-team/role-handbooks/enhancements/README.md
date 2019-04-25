@@ -148,7 +148,7 @@ https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 [sig-docs-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-docs
 [sig-leads-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads
 [sig-pm]: https://github.com/kubernetes/community/blob/master/sig-pm/README.md
-[sig-pm-group]: https://groups.google.com/forum/#!forum/kubernetes-pm
+[sig-pm-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-pm
 [sig-release]: https://github.com/kubernetes/community/blob/master/sig-release/README.md
 [sig-release-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [1.11-announcement]: https://kubernetes.io/blog/2018/06/27/kubernetes-1.11-release-announcement/
