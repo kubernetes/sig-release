@@ -28,6 +28,21 @@
 * [Non-release-workflow-specific, generic gcbmgr documentation](https://github.com/kubernetes/release/blob/master/README.md)
 * [Patch release notes from exercising the new gcbmgr flow](https://docs.google.com/document/d/1x-GQDZpKk3WajtSnO0axDazE9Xs2mOSVgjziIuTWNO0/edit)
 
+# Overview
+The release branch manager is responsible for cutting a version of [Kubernetes](https://github.com/kubernetes/kubernetes/releases). Each release is a three month cycle where as branch manager:
+1. You will cut releases of v1.X as specified on the Timeline in `sig-release/releases/release-1.X/README.md`
+1. Participate in weekly release team meetings
+1. Commit about approx. 8hrs or less in a week of your time
+1. You will also get to select shadows and guide them in preparation to lead the next release cycle.
+
+For example, as branch manager of v1.15, the release cut dates as specified in the Timeline can be found at [`sig-release/releases/release-1.15/README.md`](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.15). The bulk of your time commitment is during release cut days.
+
+## Minimum Skills
+* Familiarity with basic Unix commands.
+* General knowledge of Google Cloud.
+* Able to debug Shell scripting.
+* Open to seeking help and can communicating clearly.
+
 # Pre-requirements
 * contact [Caleb Miles](mailto:calebmiles@google.com) (TODO: identify alternate/backup), identifying yourself as the incoming release branch manager for the current release team and requesting to be added to the special privilege group for the GCP project used to build the releases
    * TODO: should the release lead also request some type of read access here for themselves?
