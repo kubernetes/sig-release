@@ -183,11 +183,11 @@ branch](#branch-creation), the staging step will take about twice as long, the
 release step will also take a couple of minutes more.
 
 ## Debs and RPMs
-These require an additional layer of build and publish, which is currently still done by a Googler.  After building, but before release notification, ping @sumi on Slack indicating for which build (for example: 1.12.0) Debs and RPMs are required.
+These require an additional layer of build and publish, which is currently still done by a Googler.  After building the official release, but before release notification, ping @sumi on Slack indicating for which build (for example: 1.12.0) Debs and RPMs are required.
 
 These build relatively quickly and should be available ahead of sending the release notification, especially for the official release when the worldwide community will attempt to get the new artifacts.  Since they build from the release tag, the first release step below is a pre-requisite for initiating the package builds.
 
-TODO: How do we automate this?  And in the meantime how do we ensure it is not bottlenecked on a one-on-one ping of a single Google employee (currently @sumi)?  And these should not just be made but also validated prior to the release-notify phase.
+TODO: How do we automate this?  And in the meantime how do we ensure it is not bottlenecked on a one-on-one ping of a single Google employee (currently @sumi)?  And these should not just be made but also validated prior to the release-notify phase. See issue: [/sig-release/#issues/10](https://github.com/kubernetes/sig-release/issues/10)
 
 ## Release
 Releasing has multiple phases.  In the first phase the non-public build artifacts are published.  In the second phase the email notification goes out to the community.
@@ -195,6 +195,9 @@ Releasing has multiple phases.  In the first phase the non-public build artifact
 * ...interface with Google staffing to complete Debs and RPMs build, as per the prior section...
 * `./release-notify v1.12.0-alpha.1`
 * `./release-notify v1.12.0-alpha.1 --nomock --mailto=${{YOUREMAILADDRESS}}[a][b]`
+
+**Note**
+> deb and rpm packages are only built after a version of Kubernetes is GA-ed (General Availability). Meaning that only official releases will be packaged into deb and rpm packages. The above example is the general flow of commands, you do not need to ping @sumi for alpha, beta, and release candidate cuts.
 
 ## Release Validation
 * The build tag and release artifacts become [visible on GitHub at https://github.com/kubernetes/kubernetes/releases](https://github.com/kubernetes/kubernetes/releases)
