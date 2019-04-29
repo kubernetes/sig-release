@@ -50,6 +50,7 @@ For example, as branch manager of v1.15, the release cut dates as specified in t
    * TODO: can the group name be identified here in a clear/transparent way?
 * Ask the list owner(s) to give you access to **post** to these mailing lists:
    * [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
+   * If you haven't received access after 24hrs, contact Caleb.
 * Development client machine setup:
    * Linux.  MacOS/Windows are not supported by the scripting today.  However, running the [release tooling] inside a Linux image on MacOS' docker engine works well.
    * ssh configuration set up for GitHub (either static .ssh/config or ssh agent works)
@@ -59,6 +60,9 @@ For example, as branch manager of v1.15, the release cut dates as specified in t
    * ability to run `sendmail` from local Unix command line (BUG: should release-notify script be sending from GCB instead of the local machine, and can it?)
    * branchff: requires ability for your user to write /usr/local/ directory (BUG),
      sudo priv's, and membership in https://github.com/orgs/kubernetes/teams/kubernetes-release-managers
+* Join these mailing lists to keep updated:
+   * [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-release-team)
+   * [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team)
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
