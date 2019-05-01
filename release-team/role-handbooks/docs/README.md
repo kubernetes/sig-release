@@ -59,7 +59,6 @@ Docs Lead Shadows are people who are preparing to be a Docs Lead in the future. 
 - General knowledge of our SIG-Docs [areas of responsibility](https://github.com/kubernetes/community/tree/master/sig-docs#subprojects).
 - Experience with the general process involved with [contributing](https://kubernetes.io/docs/contribute/start/) to Kubernetes website.
 
-
 ## Release Timeline
 
 For each release, the schedule with deliverables is added to the release directory. This section talks about specific Docs Lead deliverables for each milestone in the release timeline.
@@ -73,7 +72,7 @@ These steps take approximately one hour to complete, and should be completed imm
     - Join the Kubernetes [#sig-release](https://kubernetes.slack.com/messages/sig-release) Slack channel. Introduce yourself as the Docs Lead for the [future release].
 
     - Send a Slack direct message to the [future release] lead to introduce yourself.
-
+    
     - ⚠️ Join these Google groups:
         - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
         - [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads)
