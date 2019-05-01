@@ -106,11 +106,11 @@ These steps take approximately one hour to complete, and should be completed imm
 
 1. Select your Shadows
 
-    You will be provided with survey results from people interested working on the release team. If you do not have the results, contact the release lead for more informaiton.
+    You will be provided with survey results from people interested working on the release team. If you do not have the results, contact the release lead for more information.
 
     After vetting the volunteers for their roles, role leads should make a final decision on selected shadows with the incoming Release Team Lead. **In the past the SIG Docs release team has been between 3-6 members.**
     
-    ⚠️ Beyond meeting the basic requirements / commitments, a good Shadow is someone who is active in sig-docs. Seleciton priority should go to previous shadows who want to continue their journey (to one day eventually lead). Other than those few guidelines, use your best judgement!
+    ⚠️ Beyond meeting the basic requirements and time commitments, a good Shadow is someone who is active in SIG-Docs. Selection priority should go to previous shadows who want to eventually lead a SIG-Docs release. Other than those few guidelines, use your best judgement!
      
     [Link for additional information on shadows](https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-selection.md#shadows)
 
