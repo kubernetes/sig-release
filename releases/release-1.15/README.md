@@ -106,7 +106,7 @@ The intent of these meetings is to:
 ### Code Freeze
 
 All enhancements going into the release must be code-complete, **including
-tests**, and have docs PRs open by ***Thursday, June 6th, 2019***.
+tests**, and have docs PRs open by ***Thursday, May 30th, 2019***.
 
 The docs PRs don't have to be ready to merge, but it should be clear what the
 topic will be and who is responsible for writing it. This person will become the
