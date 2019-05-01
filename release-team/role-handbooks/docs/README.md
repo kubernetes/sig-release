@@ -43,7 +43,6 @@ Release cycles usually begin 1-2 weeks after the previous cycle completes.
     - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
     - [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads)
     - [kubernetes-sig-docs](https://groups.google.com/forum/#!forum/kubernetes-sig-docs)
-    - [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown)
     - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
     - [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team) #important for enhancement google sheets access!
 
@@ -65,13 +64,13 @@ Release cycles usually begin 1-2 weeks after the previous cycle completes.
     - The SIG associated with each enhancement (useful for obtaining technical reviews)
     - Links to docs PRs opened for each enhancement
 
-2. Open PR with localization owners to sync up early on strategy (needs coordination for main release). Example: https://github.com/kubernetes/website/issues/12396
+1. Open PR with localization owners to sync up early on strategy (needs coordination for main release). Example: https://github.com/kubernetes/website/issues/12396
 
-3. **Attend the release team meeting outlined in k/sig-release.**
+2. **Attend the release team meeting outlined in k/sig-release.**
 
-4. Read this: https://github.com/kubernetes/sig-release/tree/master/release-team
+3. Read this: https://github.com/kubernetes/sig-release/tree/master/release-team
 
-5. Selecting your shadows
+4. Selecting your shadows
 
     In Kubernetes 1.14, we begun handling shadow selection using a questionnaire, as opposed to the first-come, first-served GitHub issue approach that we had adopted during previous release cycles (1.12, 1.13.
 
@@ -87,7 +86,7 @@ Release cycles usually begin 1-2 weeks after the previous cycle completes.
      
     [For additional information on shadows](https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-selection.md#shadows)
 
-6. Contact all volunteers
+5. Contact all volunteers
 
 Send a Slack message to those that you select. Example:
 

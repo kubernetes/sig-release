@@ -30,9 +30,9 @@ An Enhancements Lead holds the following responsibilities:
 
 In addition to the [requirements detailed for all Release Team members][rt-requirements], becoming an Enhancements Lead has additional gates:
   - MUST have served on the Release Team in a previous capacity, ideally as an Enhancements Shadow
+  - MUST be a member of the [Release Team Google Group][rt-group]
   - MUST be a member of the [SIG Release Google Group][sig-release-group]
   - MUST be a member of the [SIG PM Google Group][sig-pm-group]
-  - MUST be a member of the [Kubernetes Milestone Burndown Google Group][burndown-group]
 
 Helpful characteristics of an Enhancements Lead include:
 - experience with the Kubernetes community, code layout, ecosystem projects, organizational norms, governance, SIG structure, architecture, and release process
@@ -140,7 +140,6 @@ Exception process is outlined [here](https://github.com/kubernetes/sig-release/b
 https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 
 
-[burndown-group]: https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown
 [k/enhancements]: https://github.com/kubernetes/enhancements
 [rt-group]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [rt-selection]: /README.md#release-team-selection
