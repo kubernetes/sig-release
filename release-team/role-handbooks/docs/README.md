@@ -1,7 +1,5 @@
 # Kubernetes Docs Lead Handbook
 
-[TOC]
-
 ## Overview
 
 This document covers the responsibilites, time commitments, and timeline for Docs Leads sheparding docs releases for Kubernetes. Docs Lead Shadows should also read through this document and understand the launch processes so they can do it in the future.
