@@ -62,7 +62,7 @@ Release Team selection should happen in accordance with the [Release Team Select
   - Merged PRs with release notes: [http://bit.ly/k8sXX-relnotes](http://bit.ly/k8sXX-relnotes)
   - Use the same conventions for additional documents
 - Burndown meetings happen at 10AM Pacific Time, and you invite the [community calendar](mailto:cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) to them.
-- Burndown communications happen on the [burndown mailing list](mailto:kubernetes-milestone-burndown@googlegroups.com), not SIG-Release
+- Burndown communications happen on the [kubernetes-sig-release] mailing list.
 - Feature exceptions are to be reviewed by the owner SIG and brought to the release team for assessment of risk, especially across SIGs
 - General notification regarding the release should go to the kubernetes-dev and kubernetes-sig-leads lists, and this should automatically be captured into the [Kubernetes Discourse site](https://discuss.kubernetes.io/).
 - All issues and PRs in the milestone are considered release-blocking until proven otherwise by the owner SIG.
@@ -84,13 +84,13 @@ Release Team selection should happen in accordance with the [Release Team Select
 ### Week 1
 
 - Start the release cycle
-- Ensure you are joined to the following Google Groups:
-  - [kubernetes-milestone-burndown](https://groups.google.com/forum/#!aboutgroup/kubernetes-milestone-burndown)
-  - [kubernetes-sig-release](https://groups.google.com/forum/#!aboutgroup/kubernetes-sig-release)
-  - [kubernetes-sig-leads](https://groups.google.com/forum/#!aboutgroup/kubernetes-sig-leads)
-  - [kubernetes-dev](https://groups.google.com/forum/#!aboutgroup/kubernetes-dev)
-  - [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team): Send message to this private list introducing self, key release team roles and also request list membership be added for the release branch manager, patch manager, and release lead shadow. Any previous release managers can add you.
-- Ensure the release team is fully filled, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
+- Ensure you have joined the following Google Groups:
+  - [kubernetes-release-team]
+  - [kubernetes-sig-release]
+  - [kubernetes-sig-leads]
+  - [kubernetes-dev]
+  - [security-release-team]: Send message to this private list introducing self, key release team roles and also request list membership be added for the release branch manager, patch manager, and release lead shadow. Any previous release managers can add you.
+- Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
 - Ensure top-level OWNERS_ALIASES only includes personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
 - Ensure that relevant feedback from the prior retrospective is incorporated into the process
@@ -103,7 +103,7 @@ Release Team selection should happen in accordance with the [Release Team Select
 ### Week 2
 
 - Assist the enhancements lead in collecting planned work from SIGs
-- Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the kubernetes-milestone-burndown@googlegroups.com group. You will need to contact SIG-Release leads to gain access to the SIG's zoom.us account for hosting / recording / posting meeting video.
+- Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group. You will need to contact SIG Release leads to gain access to the SIG's zoom.us account for hosting / recording / posting meeting video.
 - Poll release team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
 - Create a Google Calendar for the release: Follow the steps in the [sig-governance documentation](https://git.k8s.io/community/sig-governance.md) to create and share a calendar with the community. Add key event dates during the cycle.
 - Begin reporting release status at the community meeting
@@ -231,3 +231,10 @@ Release Day
 ### Week 14
 
 - Help fill the any open positions for the next release milestone
+
+
+[kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
+[kubernetes-sig-release]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+[kubernetes-sig-leads]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads
+[kubernetes-dev]: https://groups.google.com/forum/#!forum/kubernetes-dev
+[security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team

@@ -36,9 +36,9 @@ There are a few mailing lists that you should be aware of. Depending on your rel
 
 All members of the current release team should be apart of this list. If you're on the Release Team, please join this list: https://groups.google.com/forum/#!forum/kubernetes-release-team
 
-#### Milestone Burn Down Mailing List
+#### SIG Release Mailing List
 
-All members of the release team and anyone who attends Release Team meetings / keeps up with the release process should join the Milestone Burndown group: https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown
+All members of the release team and anyone who attends Release Team meetings / keeps up with the release process should join the SIG Release group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 
 ## Role Leads
 
