@@ -250,7 +250,7 @@ The middle weeks of the launch are where the Docs Lead and Docs Lead Shadows tra
 
 1. ⚠️ Enforce deadlines. Communicate with SIGs via Slack and email lists to keep up to date on status.
 
-    ### COMUNICATE ALL 3 MAJOR DATES AT LEAST A WEEK PRIOR, INCLUDING THE RELEASE DATE REPO FREEZE, FOLLOWING THE BELOW METHODS:
+    ### COMMUNICATE ALL 3 MAJOR DATES AT LEAST A WEEK PRIOR, INCLUDING THE RELEASE DATE REPO FREEZE, FOLLOWING THE BELOW METHODS:
 
     - Keep developers apprised of due dates for docs.
 
@@ -277,7 +277,7 @@ The middle weeks of the launch are where the Docs Lead and Docs Lead Shadows tra
 
 1. Review PRs
 
-    It is the Docs Lead and Shaddows' responsibility to ensure the incomming docs meet our standards. It's impossible for us to understand every technical component, so it is important to get a **technical LGTM** too if you're unsure about technical accuracy.
+    It is the Docs Lead and Shadows' responsibility to ensure the incomming docs meet our standards. It's impossible for us to understand every technical component, so it is important to get a **technical LGTM** too if you're unsure about technical accuracy.
     
     Also review each PR for:
 
@@ -318,7 +318,7 @@ The middle weeks of the launch are where the Docs Lead and Docs Lead Shadows tra
 
 1.  Nominate a Docs Lead for the Next Release
 
-    ⚠️ **Durring Code Freeze** Pick a successor who has demonstrated the ability and understanding of the process. **Usually this is a Docs Lead Shadow that has been on the team for 2 releases with a desire to continue with the SIG Docs.**
+    ⚠️ **During Code Freeze** Pick a successor who has demonstrated the ability and understanding of the process. **Usually this is a Docs Lead Shadow that has been on the team for 2 releases with a desire to continue with the SIG Docs.**
 
     1. Reach out to the person you have in mind and confirm they are able to commit the time and effort for a successful release.
 
@@ -332,7 +332,7 @@ The middle weeks of the launch are where the Docs Lead and Docs Lead Shadows tra
 
 1. Regenerate [reference docs](https://kubernetes.io/docs/contribute/generate-ref-docs/) ("Reference docs overview") and open PRs.
 
-    - This is currently a pain point for the release process with active work in k/website to fix. Use [issue #14111](https://github.com/kubernetes/website/issues/14111) for the most accurate instrucitons.
+    - This is currently a pain point for the release process with active work in k/website to fix. Use [issue #14111](https://github.com/kubernetes/website/issues/14111) for the most accurate instructions.
     - The Docs Lead is responsible to generate:
       - K8s API reference
       - Kube Components
@@ -342,7 +342,7 @@ The middle weeks of the launch are where the Docs Lead and Docs Lead Shadows tra
 
 #### Touch base with SIG Cluster Lifecycle (Kubeadm)
 
-Validate that sig-cluster-lifecycle has all of the docs in place for the upcoming release. Theses are mainly Kubeadm docs (upgrading, installing, changes, etc). If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages/sig-cluster-lifecycle/).
+Validate that sig-cluster-lifecycle has all of the docs in place for the upcoming release. These are mainly Kubeadm docs (upgrading, installing, changes, etc). If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages/sig-cluster-lifecycle/).
 
 #### ⚠️ Stage "Sunset" PRs
 
@@ -385,13 +385,13 @@ Create the PRs needed to roll the docs to the new version on the dev branch
 
     24 hours before the release, freeze the repo. No PRs allowed to merge AT ALL until the release PR has successfully merged.
 
-    ⚠️ **NEW:** This hasn't been tested, but after 1.14, we relized that not everyone would see our communications. We can temporarily modify k/website to be a "staging repo" which allows PROW to block all automatic functions (like merging).
+    ⚠️ **NEW:** This hasn't been tested, but after 1.14, we realized that not everyone would see our communications. We can temporarily modify k/website to be a "staging repo" which allows PROW to block all automatic functions (like merging).
 
     - Submit a PR to include Kubernetes website as a "staging repo"
       - https://github.com/kubernetes/test-infra/blob/master/prow/config.yaml#L360
     - Submit a freeze announcement following [our protocol](#COMUNICATE-ALL-3-MAJOR-DATES-AT-LEAST-A-WEEK-PRIOR-INCLUDING-THE-RELEASE-DATE-REPO-FREEZE-FOLLOWING-THE-BELOW-METHODS)
 
-1. Let localization team know about freeze and next tenative timeline(s) for important dates
+1. Let localization team know about freeze and next tentative timeline(s) for important dates
 
     > Hello localization team leads! We talked about docs in v1.14 here (https://github.com/kubernetes/website/issues/12396). I don't think any action is required from you, but I wanted to let you know that we are on track for the release (3/25/19) and all Kubernetes website branches are up to date (master, dev-1.14, release-1.13). Let me know if I can help with anything! Thanks!
 
@@ -488,8 +488,6 @@ These steps should be done after the launch. They require approximately 4 hours 
     ```
 
 1. Enable branch protection on the new `dev-` branch and deprecate the older one, e.g: https://github.com/kubernetes/test-infra/pull/11984
-    
-
 
 1. Create milestone for NEW upcoming release. Depending on your permissions, you might need to contact a SIG Docs maintainer. Move anything missed for the current release to the new milestone.
 
@@ -506,7 +504,7 @@ These steps should be done after the launch. They require approximately 4 hours 
         - When in doubt, compare it to a working example
         - (check) build only production branch
 
-      - Create a site for when the current release rolls from master to release-[version]. For example, for the 1.14 release, we needed to create a release-1.14 site that wont come into play until the future lead rolls the sites.
+      - Create a Netlify site that builds from `release-[future release]` branch. Even though the `[future release]` is currently `master` (e.g: https://kubernetes.io), eventually `master` will be a newer k8s version and we'll use the `release-[future release]` branch to contain all prior changes - like a snapshot. (e.g: https://v1-14.docs.kubernetes.io)
         - Taking the defaults here is mostly fine
         - When in doubt, compare it to a working example
         - e.g, site name: k8s-v1-14
