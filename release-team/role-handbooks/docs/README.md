@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document covers the responsibilites, time commitments, and timeline for Docs Leads sheparding docs releases for Kubernetes. Docs Lead Shadows should also read through this document and understand the launch processes so they can do it in the future.
+This document covers the responsibilites, time commitments, and timeline for Docs Leads shepherding docs releases for Kubernetes. Docs Lead Shadows should also read through this document and understand the launch processes so they can do it in the future.
 
 ### Common Terms
 
@@ -349,6 +349,10 @@ Validate that sig-cluster-lifecycle has all of the docs in place for the upcomin
 Create the PRs needed to roll the docs to the new version on the dev branch
 
 1. Deprecate the oldest API link in the reference docs, e.g: https://github.com/kubernetes/website/pull/13467
+
+1. Update the index for the API reference docs, e.g: https://github.com/kubernetes/website/pull/14139
+
+    - NOTE: These first two steps can be combined into one single PR. If done in a single PR, please update this handbook with examples.
 
 1. Create the updated config.toml's for the 4 previous releases. These need to be 4 PRs because they are all separate `release-` branches.
 
