@@ -99,6 +99,6 @@ Next patch release is **1.12.9**.
 
 These releases are no longer supported.
 
-[release process description]: https://git.k8s.io/community/contributors/devel/release.md
+[release process description]: https://git.k8s.io/community/contributors/devel/sig-release/release.md
 [kubernetes-patch-release-team]: mailto:kubernetes-patch-release-team@googlegroups.com
 [cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md
