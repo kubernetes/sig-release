@@ -8,6 +8,17 @@ of support in terms of patches for bugfixes and ongoing CI insuring
 the branch's health and the ability to update from 1.X.Y to 1.(X+1).Y,
 for the newest Y on each of those two branches.
 
+-   [Getting started](#getting-started)
+-   [Cherry-pick requests](#cherry-pick-requests)
+-   [Branch health](#branch-health)
+-   [Release timing](#release-timing)
+-   [Release cut](#release-cut)
+    -   [Hotfix release](#hotfix-release)
+    -   [Security release](#security-release)
+-   [Release Commands Cheat Sheet](#release-commands-cheat-sheet)
+
+---
+
 Specific duties of the Patch Release Manager include:
 
 - Ensuring the release branch (e.g. `release-1.13`) remains in a
@@ -380,3 +391,26 @@ or push tags or release artifacts to public repositories until the PST tells you
 See the [Security Release Process](https://git.k8s.io/security/security-release-process.md)
 doc for more details.
 
+## Release Commands Cheat Sheet
+
+| Action | Example flow for 1.13.3 |
+| --- |--- |
+| Make sure you have latest release tooling | ```cd ~/go/src/k8s.io/release && git pull``` |
+| Configure branch | n/a |
+| Mock build staging | ```./gcbmgr stage release-1.13 ``` This may fail (eg: CI not fully green), and if so gives hint on suggested buildversion for explicit use. |
+| Mock build staging , optionally running on explicit commit (CI not green, looks like flake) | ```./gcbmgr stage release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail eaa329ae-b013-4feb-9194-68fe8597b497 ``` |
+| Mock build staging success? | Visually confirm yes |
+| Mock release | ```./gcbmgr release release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail c2cfa733-de1a-4faa-a746-c4f018768ff8``` |
+| Mock release success? | Visually confirm yes |
+| Mock email notify test | ```./release-notify v1.13.3-beta.1 --mailto=me@some.com``` |
+| Check mail arrives, list has expected commits? | manual/visual |
+| Official build staging | ```./gcbmgr stage --official --nomock release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail aae9f1e1-6a03-4848-ba48-c3c1f7e71f16 ``` |
+| Official build staging success? | Visually confirm yes |
+| Official release | ```./gcbmgr release --official --nomock  release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail bcd8809f-afd0-40fd-8498-561a596e7bbd ``` |
+| Official email notify test | ```./release-notify v1.13.3 --nomock --mailto=me@some.com``` |
+| Check mail arrives, list has expected commits? | manual/visual |
+| Package creation (needs its own improved workflow; work starting on that) | Ping Sumi for package building |
+| Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVR's |
+| Official email notify | ```./release-notify v1.13.3 --nomock``` |
+| Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) got mail OK |
+| Completion | n/a |
