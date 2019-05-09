@@ -393,24 +393,29 @@ doc for more details.
 
 ## Release Commands Cheat Sheet
 
-| Action | Example flow for 1.13.3 |
-| --- |--- |
-| Make sure you have latest release tooling | ```cd ~/go/src/k8s.io/release && git pull``` |
-| Configure branch | n/a |
-| Mock build staging | ```./gcbmgr stage release-1.13 ``` This may fail (eg: CI not fully green), and if so gives hint on suggested buildversion for explicit use. |
-| Mock build staging , optionally running on explicit commit (CI not green, looks like flake) | ```./gcbmgr stage release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail eaa329ae-b013-4feb-9194-68fe8597b497 ``` |
-| Mock build staging success? | Visually confirm yes |
-| Mock release | ```./gcbmgr release release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail c2cfa733-de1a-4faa-a746-c4f018768ff8``` |
-| Mock release success? | Visually confirm yes |
-| Mock email notify test | ```./release-notify v1.13.3-beta.1 --mailto=me@some.com``` |
-| Check mail arrives, list has expected commits? | manual/visual |
-| Official build staging | ```./gcbmgr stage --official --nomock release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail aae9f1e1-6a03-4848-ba48-c3c1f7e71f16 ``` |
-| Official build staging success? | Visually confirm yes |
-| Official release | ```./gcbmgr release --official --nomock  release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail bcd8809f-afd0-40fd-8498-561a596e7bbd ``` |
-| Official email notify test | ```./release-notify v1.13.3 --nomock --mailto=me@some.com``` |
-| Check mail arrives, list has expected commits? | manual/visual |
-| Package creation (needs its own improved workflow; work starting on that) | Ping Sumi for package building |
-| Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVR's |
-| Official email notify | ```./release-notify v1.13.3 --nomock``` |
-| Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) got mail OK |
-| Completion | n/a |
+| Action | Example flow for 1.13.3 | Possible wrapping |
+| --- |--- | --- |
+| Make sure you have latest release tooling | ```cd ~/go/src/k8s.io/release && git pull``` | same |
+| Configure branch | n/a | ```make releasebranch release-1.13```  Stores locally in a .releasebranch file for subsequent commands. |
+| Mock build staging | ```./gcbmgr stage release-1.13 ``` This may fail (eg: CI not fully green), and if so gives hint on suggested buildversion for explicit use. | ```make mockstage ``` |
+| Mock build staging , optionally running on explicit commit (CI not green, looks like flake) | ```./gcbmgr stage release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail eaa329ae-b013-4feb-9194-68fe8597b497 ``` | ```make buildversionexception=v1.13.3-beta.0.37+721bfa751924da```  Stores locally a .buildversionexception file holding the exception string. ```make mockbuild ``` |
+| Mock build staging success? | Visually confirm yes | same |
+| Mock release | ```./gcbmgr release release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail c2cfa733-de1a-4faa-a746-c4f018768ff8``` | ```make mockrelease```  Optionally checks for / uses / resets config dotfile contents. |
+| Mock release success? | Visually confirm yes | same |
+| Mock email notify test | ```./release-notify v1.13.3-beta.1 --mailto=me@some.com``` | ```make mocknotify me@some.com``` |
+| Check mail arrives, list has expected commits? | manual/visual | same |
+| Official build staging | ```./gcbmgr stage --official --nomock release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail aae9f1e1-6a03-4848-ba48-c3c1f7e71f16 ``` | ```make officialstage```  Optionally checks for / uses / resets config dotfile contents. |
+| Official build staging success? | Visually confirm yes | same |
+| Official release | ```./gcbmgr release --official --nomock  release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail bcd8809f-afd0-40fd-8498-561a596e7bbd ``` | ```make officialrelease```  Optionally checks for / uses / resets config dotfile contents. |
+| Official email notify test | ```./release-notify v1.13.3 --nomock --mailto=me@some.com``` | ```make officialnotify me@some.com``` |
+| Check mail arrives, list has expected commits? | manual/visual | same |
+| Package creation (needs its own improved workflow; work starting on that) | Ping Sumi for package building | same |
+| Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVR's | same |
+| Official email notify | ```./release-notify v1.13.3 --nomock``` | ```make officialnotify``` |
+| Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) got mail OK | same |
+| Completion | n/a | ```make configreset```  Removes dotfiles |
+
+
+Each build stage and release command would automatically move into
+tailing, and accept a ctrl-C gracefully.  `make tail` would find
+and tail your most recent build.
