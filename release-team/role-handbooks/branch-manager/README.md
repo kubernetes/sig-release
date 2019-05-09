@@ -28,6 +28,21 @@
 * [Non-release-workflow-specific, generic gcbmgr documentation](https://github.com/kubernetes/release/blob/master/README.md)
 * [Patch release notes from exercising the new gcbmgr flow](https://docs.google.com/document/d/1x-GQDZpKk3WajtSnO0axDazE9Xs2mOSVgjziIuTWNO0/edit)
 
+# Overview
+The release branch manager is responsible for cutting a version of [Kubernetes](https://github.com/kubernetes/kubernetes/releases). Each release is a three month cycle where as branch manager:
+1. You will cut releases of v1.X as specified on the Timeline in `sig-release/releases/release-1.X/README.md`
+1. Participate in weekly release team meetings
+1. Fast-forward the release branch on a daily basis as soon as the release branch `release-1.X` [has been created](#branch-creation).
+1. Commit about approximate 8 hours or less in a week of your time
+1. You will also get to select shadows and guide them in preparation to become the section lead for the next cycle.
+
+For example, as branch manager of v1.15, the release cut dates as specified in the Timeline can be found at [`sig-release/releases/release-1.15/README.md`](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.15). The bulk of your time commitment is during release cut days.
+
+## Minimum Skills
+* Familiarity with basic Unix commands and able to debug shell scripts.
+* General knowledge of Google Cloud (Cloud Build and Cloud Storage).
+* Open to seeking help and can communicating clearly.
+
 # Pre-requirements
 * contact [Caleb Miles](mailto:calebmiles@google.com) (TODO: identify alternate/backup), identifying yourself as the incoming release branch manager for the current release team and requesting to be added to the special privilege group for the GCP project used to build the releases
    * TODO: should the release lead also request some type of read access here for themselves?
@@ -35,6 +50,7 @@
    * TODO: can the group name be identified here in a clear/transparent way?
 * Ask the list owner(s) to give you access to **post** to these mailing lists:
    * [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
+   * If you haven't received access after 24hrs, contact Caleb.
 * Development client machine setup:
    * Linux.  MacOS/Windows are not supported by the scripting today.  However, running the [release tooling] inside a Linux image on MacOS' docker engine works well.
    * ssh configuration set up for GitHub (either static .ssh/config or ssh agent works)
@@ -44,6 +60,9 @@
    * ability to run `sendmail` from local Unix command line (BUG: should release-notify script be sending from GCB instead of the local machine, and can it?)
    * branchff: requires ability for your user to write /usr/local/ directory (BUG),
      sudo priv's, and membership in https://github.com/orgs/kubernetes/teams/kubernetes-release-managers
+* Join these mailing lists to keep updated:
+   * [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+   * [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team)
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
@@ -164,11 +183,11 @@ branch](#branch-creation), the staging step will take about twice as long, the
 release step will also take a couple of minutes more.
 
 ## Debs and RPMs
-These require an additional layer of build and publish, which is currently still done by a Googler.  After building, but before release notification, ping @sumi on Slack indicating for which build (for example: 1.12.0) Debs and RPMs are required.
+These require an additional layer of build and publish, which is currently still done by a Googler.  After building the official release, but before release notification, ping @sumi on Slack indicating for which build (for example: 1.12.0) Debs and RPMs are required.
 
 These build relatively quickly and should be available ahead of sending the release notification, especially for the official release when the worldwide community will attempt to get the new artifacts.  Since they build from the release tag, the first release step below is a pre-requisite for initiating the package builds.
 
-TODO: How do we automate this?  And in the meantime how do we ensure it is not bottlenecked on a one-on-one ping of a single Google employee (currently @sumi)?  And these should not just be made but also validated prior to the release-notify phase.
+TODO: How do we automate this?  And in the meantime how do we ensure it is not bottlenecked on a one-on-one ping of a single Google employee (currently @sumi)?  And these should not just be made but also validated prior to the release-notify phase. See issue: [kubernetes/release/#631](https://github.com/kubernetes/release/issues/631)
 
 ## Release
 Releasing has multiple phases.  In the first phase the non-public build artifacts are published.  In the second phase the email notification goes out to the community.
