@@ -11,7 +11,7 @@
 
 * [Enhancements Tracking Sheet](http://bit.ly/115-enhancements)
 * Bug Triage Tracking Sheet
-* CI Signal Report
+* [CI Signal Report](http://bit.ly/k8sv115cisignal)
 * [Retrospective Document](http://bit.ly/115-retro)
 * [kubernetes/kubernetes v1.15 milestone](https://github.com/kubernetes/kubernetes/milestone/42)
 
