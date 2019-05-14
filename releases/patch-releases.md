@@ -87,7 +87,8 @@ Next patch release is **1.12.9**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
-| 1.12.9 | TBD late May / early June | TBD late May / early June | @feiskyer |
+| 1.12.10 | TBD late June | TBD late June | @feiskyer |
+| 1.12.9 | 2019-05-24 | 2019-05-27 | @feiskyer |
 | 1.12.8 | 2019-04-19 | 2019-04-24 | @feiskyer |
 | 1.12.7 | 2019-03-21 | 2019-03-25 | @feiskyer |
 | 1.12.6 | 2019-02-23 | 2019-02-26 | @feiskyer |
