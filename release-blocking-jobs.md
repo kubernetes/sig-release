@@ -29,10 +29,7 @@ The ideal release-blocking job meets the following criteria:
   commit(s))
 - Is capable of passing 3 times in a row against the same commit
 - Is owned by a SIG that is responsive to addressing failures
-<!-- TODO(spiffxp):
-  - represented by a configured testgrid alert
-  - contact info is also part of job description
--->
+  - Represented by a configured testgrid alert email (enforced via presubmit)
 - Fails for no more than 10 runs in a row
 - Has a documented reason for its inclusion in the release-blocking suite
 <!-- TODO(spiffxp):
