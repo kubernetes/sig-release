@@ -18,7 +18,7 @@ Specific duties of the Patch Release Manager include:
   to a bad merge or infrastructure issue, ensure that actions are
   taken ASAP to bring it back to a healthy state.
 - Reviewing and approving [cherry
-  picks](https://git.k8s.io/community/contributors/devel/cherry-picks.md) to
+  picks](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) to
   the release branch.
   - Patch releases should not contain new features, so ensure that
     cherry-picks are for bug/security fixes only.
@@ -81,7 +81,7 @@ access to multiple build and release tools:
 ## Cherry-pick requests
 
 As a patch release manager, you are responsible for reviewing
-[cherry-picks](https://git.k8s.io/community/contributors/devel/cherry-picks.md)
+[cherry-picks](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md)
 on your release branch.
 
 **Finding outstanding cherry-picks**
