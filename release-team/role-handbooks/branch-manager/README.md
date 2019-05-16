@@ -269,7 +269,7 @@ If code incorrectly hits master it should be reverted in master.  Alternatively,
 
 Once code freeze is lifted, and for the post-release patch management process, commits are cherry picked from master.
 
-The current documentation in the [contributor guide for cherry picks](https://git.k8s.io/community/contributors/devel/cherry-picks.md) should be generally sufficient.  There are a couple prerequisites to running the script which are outlined in that guide.
+The current documentation in the [contributor guide for cherry picks](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) should be generally sufficient.  There are a couple prerequisites to running the script which are outlined in that guide.
 
 The cherry pick script is also fairly self documenting in terms of how to invoke the command.
 
