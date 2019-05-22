@@ -25,12 +25,16 @@ The ideal release-blocking job meets the following criteria:
   - this should be a percentile, not a max
 -->
 - It runs at least every 3 hours
-- It passes 75% of all of its runs in the past week (regardless of underlying
-  commit(s))
 - Is capable of passing 3 times in a row against the same commit
 - Is owned by a SIG that is responsive to addressing failures
   - Represented by a configured testgrid alert email (enforced via presubmit)
-- Fails for no more than 10 runs in a row
+- It passes 75% of all of its runs in the past week (regardless of underlying
+  commit(s)) and fails for no more than 10 runs in a row
+  - In the case of failures, there must be an issue in kubernetes/kubernetes
+    detailing that there is at least one person from the owning SIG working to
+    resolve the issue. Said issue must be acknowledged within a short period
+    (i.e., a week) and resolved within a short period being acknowledged by the
+    owning SIG (i.e., a week as well).
 - Has a documented reason for its inclusion in the release-blocking suite
 <!-- TODO(spiffxp):
   - represented in description? link to an issue where discussion was had?
