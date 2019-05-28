@@ -150,7 +150,7 @@ Release Halfway Point
 
 ### Week 7
 
-- Coordinate x.y.0-beta.0 release, ensuring master-blocking, and master-upgrade dashboards are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal. The release-x.y branch is created automatically as a part of the beta.0 release. The branch manager now begins daily fast forwards.
+- Coordinate x.y.0-beta.0 release, ensuring master-blocking are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal. The release-x.y branch is created automatically as a part of the beta.0 release. The branch manager now begins daily fast forwards.
 - The burndown templates should be useful at this point since it starts asking about status relevant to each area now tracking (e.g. branch health, docs, communications, issues, etc.)
 - Ensure Test Infra Lead has release branch CI created and added to Testgrid
 - Most enhancement-oriented tasks should be completed at the end of this week
@@ -167,7 +167,7 @@ Release Halfway Point
 - Test Infra Lead  ensures automation ready to enforce labeling and other release policies
 - The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, and less for the other team members)
 - Make sure everyone knows the docs deadline (PRs ready for review) is coming the following Friday.
-- Prepare for x.y.0-beta.1 release (week 10), ensuring x.y-blocking, master-blocking, and master-upgrade dashboards are 100% green, or all failures have issues filed and are being actively worked.
+- Prepare for x.y.0-beta.1 release (week 10), ensuring x.y-blocking, master-blocking are 100% green, or all failures have issues filed and are being actively worked.  
 
 ### Week 10
 
@@ -178,7 +178,7 @@ Release Halfway Point
 - Schedule burndown meetings starting next week for every weekday until the Friday after release day, make sure to invite the community calendar
 - Release notes, and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead you may need to help assemble the notes.
 - Identify vacancies on the incoming release team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles. Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their release team role. Continue to improve and uphold the [Release Team Selection](/release-team/README.md#release-team-selection) process.
-- Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking, and master-upgrade dashboards are 100% green.
+- Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking are 100% green.  
 
 ### Week 11
 
