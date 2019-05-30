@@ -60,10 +60,11 @@ for the next patch release.
 
 ### 1.14
 
-Next patch release is **1.14.2**.
+Next patch release is **1.14.3**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
+| 1.14.3 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
 | 1.14.2 | 2019-05-10 | 2019-05-14 | [kubernetes-patch-release-team] |
 | 1.14.1 | 2019-04-05 | 2019-04-08 | [kubernetes-patch-release-team] |
 
@@ -73,7 +74,7 @@ Next patch release is **1.13.7**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
-| 1.13.7 | TBD late May / early June | TBD late May / early June | [kubernetes-patch-release-team] |
+| 1.13.7 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
 | 1.13.6 | 2019-05-06 | 2019-05-08 | [kubernetes-patch-release-team] |
 | 1.13.5 | 2019-03-21 | 2019-03-25 | @aleksandra-malinkowska, @tpepper |
 | 1.13.4 | 2019-02-26 | 2019-02-28 | @aleksandra-malinkowska |
