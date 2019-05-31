@@ -169,6 +169,14 @@ Release Halfway Point
 - Make sure everyone knows the docs deadline (PRs ready for review) is coming the following Friday.
 - Prepare for x.y.0-beta.1 release (week 10), ensuring x.y-blocking, master-blocking are 100% green, or all failures have issues filed and are being actively worked.  
 
+#### Code Freeze Day
+Code Freeze will typically fall around Weeks 8 or 9 depending on the length or release cycle.  As Code Freeze approaches here are some good practices 
+- Monitor the enhancements spreadsheet to get an idea of how many PRs are still outstanding leading up to Code Freeze
+- Send a reminder email to k-dev 
+- Monitor [Testgrid](https://testgrid.k8s.io/) and [Prow](https://prow.k8s.io/) to understand the stability of the release and PRs getting ready to merge.  If Prow and Test grid are not in a good state consult folks from SIG Testing on delaying code freeze by a day if needed.  
+- LGTM / Approve and remove the hold on the PR for enabling code freeze.  [Example from 1.15 here](https://github.com/kubernetes/test-infra/pull/12808)
+- As meeded assist the Bug Triage lead and Enhancements lead removing PRs and enhancements from the milestone that aren't merged in time
+
 ### Week 10
 
 - Code freeze begins, and it’s now the home stretch of the release. SIGs will need to ensure all work moving forward is carefully curated with merge required labels ([more info here](https://git.k8s.io/community/contributors/devel/release.md)). 
