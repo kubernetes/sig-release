@@ -112,7 +112,7 @@ Release Team selection should happen in accordance with the [Release Team Select
 ### Week 3
 
 - Create the release notes draft file in the release directory per the standard above
-- Prepare for x.y.0-alpha.0 "release", specifically that there is a branch manager on the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. But this synthetic notation is a point to review process with the branch manager. Request access to GCB through Caleb Miles for branch manager lead and optionally also read-only access (if system supports this) for the release lead and release lead shadow.
+- Prepare for x.y.0-alpha.0 "release", specifically that there is a branch manager on the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. But this synthetic notation is a point to review process with the branch manager. Request access to GCB through [Kubernetes Build Admins][kubernetes-build-admins] for branch manager lead and optionally also read-only access (if system supports this) for the release lead and release lead shadow.
 - Begin coordination with SIG-Cluster-Lifecycle for their kubeadm release (they may create an issue in the milestone to track release blocking issues)
 - Identify any other dependent ecosystem projects that need release coordination
 - Announce/email that the following week is "enhancements freeze" and what that means
@@ -225,14 +225,14 @@ Release Day
 
 - Release retrospective participation (you may also choose to facilitate it, but it’s not recommended)
 - Follow-up interviews with the media, the media roundtable.
-- Contact Caleb Miles to remove release lead, release lead shadow, and branch manager authorization in GCB, as appropriate for release team turn over.
--  ensure self, shadow and branch manager are removed as members of [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team), leaving patch release manager.
+- Contact [Kubernetes Build Admins][kubernetes-build-admins] to remove release lead, release lead shadow, and branch manager authorization in GCB, as appropriate for release team turn over.
+- Ensure self, shadows, and branch managers are removed as members of [security-release-team], leaving patch release manager.
 
 ### Week 14
 
 - Help fill the any open positions for the next release milestone
 
-
+[kubernetes-build-admins]: https://groups.google.com/forum/#!forum/kubernetes-build-admins
 [kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [kubernetes-sig-release]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [kubernetes-sig-leads]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads

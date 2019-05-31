@@ -1,24 +1,27 @@
 # Branch Manager Handbook
 
--   [References](#references)
--   [Pre-requirements](#pre-requirements)
--   [Safety Check](#safety-check)
-    -   [First Alpha Mock Build](#first-alpha-mock-build)
-    -   [Alpha Mock Release](#alpha-mock-release)
--   [Build and Release](#build-and-release)
-    -   [Alpha Build](#alpha-build)
-    -   [Branch Creation](#branch-creation)
-    -   [Beta Build](#beta-build)
-    -   [RC Build](#rc-build)
-    -   [Official Build](#official-build)
-    -   [Debs and RPMs](#debs-and-rpms)
-    -   [Release](#release)
-    -   [Release Validation](#release-validation)
--   [Branch Fast Forward](#branch-fast-forward)
-    -   [Code Freeze, Thaw](#code-freeze-thaw)
-    -   [Reverts](#reverts)
--   [Cherry Picks](#cherry-picks)
--   [Staging Repositories](#staging-repositories)
+- [Branch Manager Handbook](#branch-manager-handbook)
+- [References](#references)
+- [Overview](#overview)
+  - [Minimum Skills](#minimum-skills)
+- [Prerequisite](#prerequisite)
+- [Safety Check](#safety-check)
+  - [First Alpha Mock Build](#first-alpha-mock-build)
+  - [Alpha Mock Release](#alpha-mock-release)
+- [Build and Release](#build-and-release)
+  - [Alpha Build](#alpha-build)
+  - [Branch Creation](#branch-creation)
+  - [Beta Build](#beta-build)
+  - [RC Build](#rc-build)
+  - [Official Build](#official-build)
+  - [Debs and RPMs](#debs-and-rpms)
+  - [Release](#release)
+  - [Release Validation](#release-validation)
+- [Branch Fast Forward](#branch-fast-forward)
+  - [Code Freeze, Thaw](#code-freeze-thaw)
+  - [Reverts](#reverts)
+- [Cherry Picks](#cherry-picks)
+- [Staging Repositories](#staging-repositories)
 
 ---
 
@@ -43,14 +46,14 @@ For example, as branch manager of v1.15, the release cut dates as specified in t
 * General knowledge of Google Cloud (Cloud Build and Cloud Storage).
 * Open to seeking help and can communicating clearly.
 
-# Pre-requirements
-* contact [Caleb Miles](mailto:calebmiles@google.com) (TODO: identify alternate/backup), identifying yourself as the incoming release branch manager for the current release team and requesting to be added to the special privilege group for the GCP project used to build the releases
+# Prerequisite
+* Contact [Kubernetes Build Admins][kubernetes-build-admins], identifying yourself as the incoming release branch manager for the current release team and requesting to be added to the special privilege group for the GCP project used to build the releases
    * TODO: should the release lead also request some type of read access here for themselves?
    * TODO: should the branch manager shadows also get at least read access at the beginning?  If a shadow is going to exercise the process on behalf of the lead, they will need full read/write access ahead of time.
    * TODO: can the group name be identified here in a clear/transparent way?
 * Ask the list owner(s) to give you access to **post** to these mailing lists:
    * [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
-   * If you haven't received access after 24hrs, contact Caleb.
+   * If you haven't received access after 24 hrs, contact the [Release Team][kubernetes-release-team].
 * Development client machine setup:
    * Linux.  MacOS/Windows are not supported by the scripting today.  However, running the [release tooling] inside a Linux image on MacOS' docker engine works well.
    * ssh configuration set up for GitHub (either static .ssh/config or ssh agent works)
@@ -148,7 +151,7 @@ considered:
    of code freeze or assess if they can be removed from the milestone and can
    be punted to a next release.
 
-1. `rc.1` should be staged and released
+2. `rc.1` should be staged and released
 
    Make sure that all the changes that have been merged in master also made it
    into the release branch. You can also do a
@@ -159,7 +162,7 @@ considered:
    Nothing new gets merged into master, because we are still in code freeze.
    Therefore, it is safe to cut the release candidate.
 
-1. Code Freeze can be lifted
+3. Code Freeze can be lifted
 
    Technically we can keep code freeze in place after `rc.1` was cut. However,
    we should aim at lifting code freeze relatively quickly after `rc.1`.
@@ -183,11 +186,11 @@ branch](#branch-creation), the staging step will take about twice as long, the
 release step will also take a couple of minutes more.
 
 ## Debs and RPMs
-These require an additional layer of build and publish, which is currently still done by a Googler.  After building the official release, but before release notification, ping @sumi on Slack indicating for which build (for example: 1.12.0) Debs and RPMs are required.
+These require an additional layer of build and publish, which is currently still done by a Googler.  After building the official release, but before release notification, contact [Kubernetes Build Admins][kubernetes-build-admins] indicating for which build (for example: 1.12.0) Debs and RPMs are required.
 
 These build relatively quickly and should be available ahead of sending the release notification, especially for the official release when the worldwide community will attempt to get the new artifacts.  Since they build from the release tag, the first release step below is a pre-requisite for initiating the package builds.
 
-TODO: How do we automate this?  And in the meantime how do we ensure it is not bottlenecked on a one-on-one ping of a single Google employee (currently @sumi)?  And these should not just be made but also validated prior to the release-notify phase. See issue: [kubernetes/release/#631](https://github.com/kubernetes/release/issues/631)
+TODO: How do we automate this? These should not just be made but also validated prior to the release-notify phase. See issue: [kubernetes/release/#631](https://github.com/kubernetes/release/issues/631)
 
 ## Release
 Releasing has multiple phases.  In the first phase the non-public build artifacts are published.  In the second phase the email notification goes out to the community.
@@ -313,3 +316,6 @@ please ask someone listed in the following [OWNERS](https://git.k8s.io/publishin
 
 The bot runs every four hours, so it might take sometime for a new tag to appear on a published repository.
 The client-go major release (eg `v1.13.0`) is released manually a day after the main Kubernetes release.
+
+[kubernetes-build-admins]: https://groups.google.com/forum/#!forum/kubernetes-build-admins
+[kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
