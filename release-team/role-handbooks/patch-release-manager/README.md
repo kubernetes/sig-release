@@ -144,7 +144,7 @@ For each cherry-pick request:
 
     * Historically (up through at least 1.6), patch release managers have
       occasionally granted exceptions to the "no new enhancements" rule for
-      cherry-picks that are confined to plugins like cloudproviders
+      cherry-picks that are confined to plugins like cloud providers
       (e.g. vSphere, Azure) and volumes (e.g. Portworx).
 
       However, we required that these exceptions be approved by the plugin
@@ -277,7 +277,7 @@ to trigger a new patch release immediately.
 As a 1.X minor release is getting towards its final weeks pre-release, it
 is beneficial to begin tracking that release team's meetings to get an
 early idea of bugs for which the fix may need delays to the 1.X.1 first
-patch release and insure a smooth hand off from the release team into the
+patch release and ensure a smooth handoff from the release team into the
 post-release patch support phase.
 
 You should attend the [Kubernetes Community Meeting](http://bit.ly/k8scommunity)
