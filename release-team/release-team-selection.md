@@ -44,7 +44,7 @@ Most importantly, strive for diversity in:
 
 ### Release Team Lead
 
-The incoming Release Team Lead _MUST_ have participated on the Release Team for 2 or more release cycles, acting in a lead (non-shadow) capacity for at least one of those cycles or acting as a Release Lead Shadow for one of those two cycles.
+The incoming Release Team Lead _MUST_ have participated on the Release Team for two or more release cycles, acting in a lead (non-shadow) or Release Team Lead shadow capacity for at least one of those cycles.
 
 Release Team Leads should be staffed, with this order of fall-through in mind:
 - the current pool of Release Team Lead shadows
