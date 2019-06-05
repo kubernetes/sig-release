@@ -81,7 +81,13 @@ Release Team selection should happen in accordance with the [Release Team Select
 
 ## Release Milestone Activities:
 
-### Week 1
+### Before Release Begins
+- Attend previous release retro to capture feedback and encorporate it into next release cycle 
+- Plan release schedule and milestones.  Gather feedback as needed
+- Make sure you have your shadows confirmed 
+- Have a handover meeting with the outgoing lead to get credentials to SIG Release Zoom and any other needed permissions
+
+### Week 1 
 
 - Start the release cycle
 - Ensure you are joined to the following Google Groups:
@@ -93,12 +99,11 @@ Release Team selection should happen in accordance with the [Release Team Select
 - Ensure the release team is fully filled, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
 - Ensure top-level OWNERS_ALIASES only includes personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
-- Ensure that relevant feedback from the prior retrospective is incorporated into the process
 - Send an update to kubernetes-dev and kubernetes-sig-leads mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 - Create the retrospective document and corresponding bit.ly link
-- Begin meeting with SIGs to introduce yourself
+- Begin meeting with SIGs to introduce yourself 
 - Begin paying attention to [CI signal](https://git.k8s.io/sig-release/release-team/role-handbooks/ci-signal/README.md), as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
-- Request review of this document by the release lead shadow. The shadow should also take all actions in this document around joining groups and requesting access permissions.
+- Request review of this document by the release lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
 
 ### Week 2
 
@@ -156,6 +161,14 @@ Release Halfway Point
 - Most enhancement-oriented tasks should be completed at the end of this week
 - SIGs that have not completed release themes should be contacted again, with a focus on explaining why this matters to the community
 - Ping release team leads reminding them to start considering succession plans. If they are handing the role off to a successor, identifying them early gives more time for the committed volunteer to get targeted mentoring.
+
+#### Code Freeze Day
+Code Freeze will typically fall around Weeks 8 or 9 depending on the length or release cycle.  As Code Freeze approaches here are some good practices 
+- Monitor the enhancements spreadsheet to get an idea of how many PRs are still outstanding leading up to Code Freeze
+- Send a reminder email to k-dev 
+- Monitor [Testgrid](https://testgrid.k8s.io/) and [Prow](https://prow.k8s.io/) to understand the stability of the release and PRs getting ready to merge.  If Prow and Test grid are not in a good state consult folks from SIG Testing on delaying code freeze by a day if needed.  
+- LGTM / Approve and remove the hold on the PR for enabling code freeze.  [Example from 1.15 here](https://github.com/kubernetes/test-infra/pull/12808)
+- As needed assist the Bug Triage lead and Enhancements lead removing PRs and enhancements from the milestone that aren't merged in time 
 
 ### Week 8
 
