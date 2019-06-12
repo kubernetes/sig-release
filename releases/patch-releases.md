@@ -17,8 +17,9 @@ releases during major holiday periods.
 
 | **Github username** | **Slack username** | **Focus area** |
 | --- | --- | --- |
-| @aleksandra-malinowska | @aleksandram | 1.13.y, 1.14.y |
-| @tpepper | @tpepper | 1.13.y, 1.14.y |
+| @hoegaarden | @hhorl | 1.13.y, 1.14.y, 1.15.y |
+| @aleksandra-malinowska | @aleksandram | 1.13.y, 1.14.y, 1.15.y |
+| @tpepper | @tpepper | 1.13.y, 1.14.y, 1.15.y |
 | @feiskyer | @feisky | 1.12.y |
 
 ## Contact
@@ -58,22 +59,32 @@ for the next patch release.
 
 ## Timelines
 
-### 1.14
+### 1.15
 
-Next patch release is **1.14.3**.
+Coming soon...
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
+| 1.15.1 | TBD early July | TBD early July | [kubernetes-patch-release-team] |
+
+### 1.14
+
+Next patch release is **1.14.4**.
+
+| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
+| --- | --- | --- | --- |
+| 1.14.4 | TBD late June | TBD late June | [kubernetes-patch-release-team] |
 | 1.14.3 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
 | 1.14.2 | 2019-05-10 | 2019-05-14 | [kubernetes-patch-release-team] |
 | 1.14.1 | 2019-04-05 | 2019-04-08 | [kubernetes-patch-release-team] |
 
 ### 1.13
 
-Next patch release is **1.13.7**.
+Next patch release is **1.13.8**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
+| 1.13.8 | TBD late June | TBD late June | kubernetes-patch-release-team] |
 | 1.13.7 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
 | 1.13.6 | 2019-05-06 | 2019-05-08 | [kubernetes-patch-release-team] |
 | 1.13.5 | 2019-03-21 | 2019-03-25 | @aleksandra-malinkowska, @tpepper |
