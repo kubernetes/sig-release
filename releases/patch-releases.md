@@ -13,20 +13,18 @@ after a 1.X minor release.  Critical bug fixes may cause a more
 immediate release outside of the normal cadence.  We also aim to not make
 releases during major holiday periods.
 
-## Patch Release Management Team
-
-| **Github username** | **Slack username** | **Focus area** |
-| --- | --- | --- |
-| @hoegaarden | @hhorl | 1.13.y, 1.14.y, 1.15.y |
-| @aleksandra-malinowska | @aleksandram | 1.13.y, 1.14.y, 1.15.y |
-| @tpepper | @tpepper | 1.13.y, 1.14.y, 1.15.y |
-| @feiskyer | @feisky | 1.12.y |
-
 ## Contact
 
 To discuss a cherry-pick, schedule, or anything else related to
 patch releases, contact the team as a whole or the appropriate member if
 there is a specific one:
+
+| **Github username** | **Slack username** |
+| --- | --- |
+| @hoegaarden | @hhorl |
+| @aleksandra-malinowska | @aleksandram |
+| @tpepper | @tpepper |
+| @feiskyer | @feisky |
 
 * Email: The whole team is reachable via email to
   [kubernetes-patch-release-team].
