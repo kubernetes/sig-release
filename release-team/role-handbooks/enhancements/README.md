@@ -45,7 +45,7 @@ Enhancement Freeze through Code Freeze: 4-7 hours a week
 Code Freeze through Release Day: 1-4 hours a week 
 
 ## Mentoring Shadows
-It is importantto select shadows who are interested in learning more about the Kubernetes release process and are able to devote a couple hours a week for attending the Release meeting as well as helping with weekly tasks.  Remeber one of these shadows should eventually be taking on the Enhancement Lead role so it is important to think about how you can delegate tasks to them to train them for succession.  
+It is important to select shadows who are interested in learning more about the Kubernetes release process and are able to devote a couple hours a week for attending the Release meeting as well as helping with weekly tasks.  Remeber one of these shadows should eventually be taking on the Enhancement Lead role so it is important to think about how you can delegate tasks to them to train them for succession.  
 
 ## Getting Started
 
