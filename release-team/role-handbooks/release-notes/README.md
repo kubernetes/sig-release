@@ -10,7 +10,7 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 
 * Strong written and verbal communications skills
 * A working knowledge of Kubernetes concepts
-* Project management experience is helpful
+* Project management experience is helpful but not requried
 
 ### Time Requirements:
 
@@ -35,8 +35,11 @@ also significantly more work to do to ensure the release notes are in good
 working order for the release. Once code freeze begins, the release notes draft
 is transfered to a google doc which is made public to the Kubernetes community.
 The doc will be edited by SIG leads and SIG members but will also be edited for
-grammar and uniform style by the release notes team. The changelog must also be
-generated and the release notes tool must continue to be run on the release
+grammar and uniform style by the release notes team. The Release Notes team
+should use the [template](relnotes-template.md) to organize the raw generated release notes
+in the Google doc as best as possible and help to guide SIG leads and members in their further
+editing of the release notes. The final edited release notes should follow this
+template. The changelog must also be generated and the release notes tool must continue to be run on the release
 branch in order to pull in any outstanding PRs that are merged between the
 beginning of code freeze and the release.
 
@@ -48,7 +51,7 @@ beginning of code freeze and the release.
 - Drafts produced by the tool are copied to a file called `release-notes-draft.md` in the [releases folder](../../../releases) for the current release in the `sig-release` repo.
 - The Communications team will hold meetings to discuss blogposts and media releases regarding the release sometime before code freeze. Ensure that at least one person from the release notes team attends this meeting with the release lead and enhancements lead. The release notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the communications team, release lead or enhancements lead to ensure messaging around Major Themes is coordinated.
 - If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberity in completing the notes
-- A ["Known Issues"](known-issues-bucket.md) section will also be created in a GitHub issue to be added to the release notes before release date.
+- A ["Known Issues Bucket Issue"](known-issues-bucket.md) for the release must be created by the release notes team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes.
 - The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
 - An "External Dependencies" section should be currated which outlines how external depdendency versions have changed since the last release
   - See [the 1.12 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md#external-dependencies) for an example
@@ -66,6 +69,7 @@ beginning of code freeze and the release.
 ## Tools
 
 - [Release notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
+- [Release notes website](https://relnotes.k8s.io)
 - [Hackmd](https://hackmd.io/)
 - [LWKD](http://lwkd.info) *(consider contributing to LWKD as part of your role)*
 
