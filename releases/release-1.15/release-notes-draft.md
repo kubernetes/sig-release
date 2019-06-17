@@ -4,7 +4,7 @@
 
 A complete changelog for the release notes is now hosted in a customizable format at [https://relnotes.k8s.io/](https://relnotes.k8s.io/?releaseVersions=1.15.0). Check it out and please give us your feedback!
 
-Kubernetes 1.15 consists of **26 enhancements**: 3 moving to stable, 13 in beta, and 10 in alpha. The main themes of this release are:
+Kubernetes 1.15 consists of **26 enhancements**: 2 moving to stable, 13 in beta, and 10 in alpha. The main themes of this release are:
 
 #### Continuous Improvement
 - Project sustainability is not just about features. Many SIGs have been working on  improving test coverage, ensuring the basics stay reliable, and stability of the core feature set and working on maturing existing features and cleaning up the backlog.
