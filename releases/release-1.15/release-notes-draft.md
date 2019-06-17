@@ -2,7 +2,7 @@
 
 ## 1.15 What’s New
 
-A complete changelog for the release notes is now hosted in a customizable format at [https://relnotes.k8s.io/](https://relnotes.k8s.io/). Check it out and please give us your feedback!
+A complete changelog for the release notes is now hosted in a customizable format at [https://relnotes.k8s.io/](https://relnotes.k8s.io/?releaseVersions=1.15.0). Check it out and please give us your feedback!
 
 Kubernetes 1.15 consists of **26 enhancements**: 3 moving to stable, 13 in beta, and 10 in alpha. The main themes of this release are:
 
@@ -66,7 +66,7 @@ These changes are reflected in the following Kubernetes enhancements:
 - ExecutionHook API [designed to trigger hook commands](https://github.com/kubernetes/enhancements/issues/962) in containers is now Alpha.
 - Continued deprecation of extensions/v1beta1, apps/v1beta1, and apps/v1beta2 APIs; these extensions will be retired in 1.16!
 
-Check the [release notes website](https://relnotes.k8s.io/) for the complete changelog of notable features and fixes.
+Check the [release notes website](https://relnotes.k8s.io/?releaseVersions=1.15.0) for the complete changelog of notable features and fixes.
 
 
 
