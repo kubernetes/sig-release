@@ -19,6 +19,8 @@ intensive roles.
 #### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
 For the first few weeks, attending meetings and running the
 [release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
+as well as updating the
+[release-notes website](https://github.com/kubernetes-sigs/release-notes)
 weekly to create an early draft of the release notes is all that is absolutely
 required of the release team. The release lead will be responsible for introducing
 shadows to the team and the release notes tool and may ask shadows to run it
@@ -38,7 +40,8 @@ The doc will be edited by SIG leads and SIG members but will also be edited for
 grammar and uniform style by the release notes team. The changelog must also be
 generated and the release notes tool must continue to be run on the release
 branch in order to pull in any outstanding PRs that are merged between the
-beginning of code freeze and the release.
+beginning of code freeze and the release. The same applies to the website, which
+should always represent the same state as the markdown document.
 
 
 ## Tasks
@@ -46,11 +49,20 @@ beginning of code freeze and the release.
 - The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetings and follow the [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF) Slack channel for relevant information throughout the release cycle.
 - One member of the Release Notes Team should be responsible for [setting up and running](setup-tool.md) the [release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes) to collect generated drafts of all release-notes identified in the current release -- improvements to the tool are always welcome!
 - Drafts produced by the tool are copied to a file called `release-notes-draft.md` in the [releases folder](../../../releases) for the current release in the `sig-release` repo.
+- The [release-notes website](https://github.com/kubernetes-sigs/release-notes)
+  should be updated together with the markdown based version: The website uses the
+  JSON output from the release-notes tool to render it online. We publish the
+  intermediate version directly to the `master` branch to reflect the current
+  state. For this, the currently deployed release notes have to be preserved.
+  Contributions and enhancements to the website are very welcome, whereas the
+  feature planning and bug tracking happens directly in the GitHub repository. A
+  note to this deployment will be added to the final manually edited release
+  notes markdown document.
 - The Communications team will hold meetings to discuss blogposts and media releases regarding the release sometime before code freeze. Ensure that at least one person from the release notes team attends this meeting with the release lead and enhancements lead. The release notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the communications team, release lead or enhancements lead to ensure messaging around Major Themes is coordinated.
-- If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberity in completing the notes
+- If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberty in completing the notes
 - A ["Known Issues"](known-issues-bucket.md) section will also be created in a GitHub issue to be added to the release notes before release date.
 - The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
-- An "External Dependencies" section should be currated which outlines how external depdendency versions have changed since the last release
+- An "External Dependencies" section should be currated which outlines how external dependency versions have changed since the last release
   - See [the 1.12 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md#external-dependencies) for an example
 	- Note that there are [plans in the process to formalize and automate the process of aggregating the changes](https://github.com/kubernetes/community/issues/2234), but this is currently [a very manual process](https://github.com/kubernetes/sig-release/pull/398).
   - To update an entry in this section the following steps must be performed:
@@ -93,6 +105,8 @@ Update this section at the end of each release for the next Release Notes Team.
 ### Week 1 - 2
 
 - Begin running release-notes script for ongoing collection of release notes
+    - Update the `release-notes-draft.md`
+    - Update the website
 - Begin attending release team meetings
 - Informal intro meeting with release notes team to discuss contact information and logistics
 
