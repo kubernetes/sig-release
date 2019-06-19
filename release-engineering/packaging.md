@@ -45,14 +45,14 @@ Must be a member of mdb group - [mdb/cloud-kubernetes-release](mdb/cloud-kuberne
 
 ### Clone Release Repository
 
-Before proceeding with the release, ensure the [kubernetes/release][kubernetes/release] repository is checked out. 
+Before proceeding with the release, ensure the [kubernetes/release][kubernetes/release] repository is checked out.
 
 **NOTE**: It is a good idea to start in a clean directory, when possible.
 
 _The directory name can be anything. We'll use `$HOME/k8s-1.20.0` as the example here._
 
 ```shell
-mkdir -p $HOME/k8s-1.20.0 
+mkdir -p $HOME/k8s-1.20.0
 cd $HOME/k8s-1.20.0
 git clone https://github.com/kubernetes/release.git
 cd release
@@ -63,15 +63,15 @@ cd release
 Run the following commands to ensure that we are logged in and also the proper project context is setup.
 
 
-```
+```shell
 prodaccess
 gcloud auth login
-gcloud config set project kubernetes-release-dev
+gcloud config set project kubernetes-release-test
 ```
 
 ### Build the Debs & RPMs
 
-The entire build process takes several hours. Once you are ready to begin, the debs and rpms can be built using [rapture][rapture]. 
+The entire build process takes several hours. Once you are ready to begin, the debs and rpms can be built using [rapture][rapture].
 
 `rapture` can be executed as follows:
 
@@ -81,7 +81,7 @@ The entire build process takes several hours. Once you are ready to begin, the d
 
 #### Notes
 - There are several points during the process where you will be prompted to answer “y/N” or your password.
-- There will be a warning about trusty. This can be ignored. 
+- There will be a warning about trusty. This can be ignored.
 
 
 ### Validating packages
@@ -106,7 +106,7 @@ The following jobs are currently configured to do some aspect of package validat
 
 **These tend to break when we are in the middle of a push.**
 
-If any of these tests are broken, the [Patch Release Team][patch-release-team] should receive an alert regarding the failure. 
+If any of these tests are broken, the [Patch Release Team][patch-release-team] should receive an alert regarding the failure.
 
 If there is continued test failure on this dashboard without intervention from the Patch Release Team, escalate to the current [Release Team][release-team] and [test-infra on-call][test-infra-oncall].
 
