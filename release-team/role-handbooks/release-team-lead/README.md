@@ -61,7 +61,7 @@ Release Team selection should happen in accordance with the [Release Team Select
   - Enhancements tracking spreadsheet: [http://bit.ly/k8sXX-enhancements](http://bit.ly/k8sXX-enhancements)
   - Merged PRs with release notes: [http://bit.ly/k8sXX-relnotes](http://bit.ly/k8sXX-relnotes)
   - Use the same conventions for additional documents
-- Burndown meetings happen at 10AM Pacific Time, and you invite the [community calendar](mailto:cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) to them.
+- Burndown meetings happen at 10AM Pacific Time, and you invite the [community calendar](cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) and the [Kubernetes Release calendar](agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com) to them.
 - Burndown communications happen on the [kubernetes-sig-release] mailing list.
 - Feature exceptions are to be reviewed by the owner SIG and brought to the release team for assessment of risk, especially across SIGs
 - General notification regarding the release should go to the kubernetes-dev and kubernetes-sig-leads lists, and this should automatically be captured into the [Kubernetes Discourse site](https://discuss.kubernetes.io/).
@@ -83,9 +83,10 @@ Release Team selection should happen in accordance with the [Release Team Select
 
 ### Before Release Begins
 - Attend previous release retro to capture feedback and encorporate it into next release cycle 
-- Plan release schedule and milestones.  Gather feedback as needed
+- Plan release schedule and milestones. Gather feedback as needed.
 - Make sure you have your shadows confirmed 
 - Have a handover meeting with the outgoing lead to get credentials to SIG Release Zoom and any other needed permissions
+- Request edit access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from the SIG Release Chairs
 
 ### Week 1 
 
@@ -110,7 +111,7 @@ Release Team selection should happen in accordance with the [Release Team Select
 - Assist the enhancements lead in collecting planned work from SIGs
 - Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group. You will need to contact SIG Release leads to gain access to the SIG's zoom.us account for hosting / recording / posting meeting video.
 - Poll release team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
-- Create a Google Calendar for the release: Follow the steps in the [sig-governance documentation](https://git.k8s.io/community/sig-governance.md) to create and share a calendar with the community. Add key event dates during the cycle.
+- Add key event dates to the [Kubernetes Release Calendar][kubernetes-release-calendar] during the cycle. Ensure major calendar events are set to send an email reminder one week in advance.
 - Begin reporting release status at the community meeting
 - Continue meeting with SIGs for introductions
 
@@ -188,7 +189,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - Test Infra Lead ensures automation actively enforcing merge blocking labeling and other release policies
 - The release team needs to look at any in-flight PRs and ensure nothing is being jammed in at the last minute without proper tests, review, etc. This is something to watch extremely closely because it happens every release. Just watch what gets merged closely after code freeze. Incorrectly merged items need assessed and perhaps reverted. GitHub has [a query comparing a release branch and master](https://github.com/kubernetes/kubernetes/compare/release-1.12).
 - Assist the documentation leads in collecting missing docs PRs.
-- Schedule burndown meetings starting next week for every weekday until the Friday after release day, make sure to invite the community calendar
+- Schedule burndown meetings starting next week for every weekday until the Friday after release day. Make sure to invite the [community calendar](cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) and the [Kubernetes Release calendar](agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com).
 - Release notes, and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead you may need to help assemble the notes.
 - Identify vacancies on the incoming release team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles. Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their release team role. Continue to improve and uphold the [Release Team Selection](/release-team/README.md#release-team-selection) process.
 - Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking are 100% green.  
@@ -246,6 +247,7 @@ Release Day
 - Help fill the any open positions for the next release milestone
 
 [kubernetes-build-admins]: https://groups.google.com/forum/#!forum/kubernetes-build-admins
+[kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
 [kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [kubernetes-sig-release]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [kubernetes-sig-leads]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads
