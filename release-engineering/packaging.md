@@ -1,7 +1,7 @@
 # Packaging Kubernetes <!-- omit in toc -->
 
-_Author(s): Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))_  
-_Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_  
+_Author(s): Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))_
+_Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_
 _Original document: [Building debs/rpms for Kubernetes
 ](https://docs.google.com/document/d/1PAN5tVJO_NMfHZmnk8mDQTwAbFHPky7JBgWJgckNjro/edit?usp=sharing)_
 
@@ -32,7 +32,7 @@ Patch Release Team members or Branch Managers requesting debs/rpms should be sur
 
 ## Release Steps
 
-In this process, we are pulling the artifacts published by a Release Manager to the GCS bucket and building debs/rpms to be published to the rapture repository. 
+In this process, we are pulling the artifacts published by a Release Manager to the GCS bucket and building debs/rpms to be published to the rapture repository.
 
 Refer to the [Branch Manager handbook][branch-manager-build-and-release] for details on the artifacts that are built by the Branch Manager.
 
