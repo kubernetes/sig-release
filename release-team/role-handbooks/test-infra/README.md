@@ -1,5 +1,5 @@
 # Test Infra Lead Handbook 
-Note: This role was deprecated after the 1.15 release.  Starting with 1.16 this role was mostly merged with [Branch Management](https://github.com/sig-release/blob/updating-test-infra-role-references/release-team/role-handbooks/branch-manager/README.md) 
+Note: This role was deprecated after the 1.15 release.  Starting with 1.16 this role was mostly merged with [Branch Management](https://github.com/sig-release/blob/updating-test-infra-role-references/release-team/role-handbooks/branch-manager/README.md)and Test Infra on Call.  Questions for Test Infra On Call should be directed to @test-infra-oncall in the #testing-ops and #sig-testing slack channels 
 
 Note: Currently, the test-infra lead has to be someone from Google GKE Engprod Team, in order to gain access to the prow cluster. This
 will change once we migrate our testing infrastructure under CNCF account. (xref kubernetes/test-infra#5085)
