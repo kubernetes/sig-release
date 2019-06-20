@@ -92,6 +92,17 @@ Now that `rapture` has successfully complete, we need to verify the packages tha
 
 Follow the [kubeadm instructions][kubeadm-install] to install kubeadm, kubelet, and kubectl.
 
+```shell
+# <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
+version=
+[[ -n "${version}" ]] \
+    && curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg \
+    | sudo apt-key add - \
+    && echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" \
+    | sudo tee /etc/apt/sources.list.d/kubernetes.list \
+    && sudo apt-get update -q \
+    && sudo apt-get install -qy kubelet="${version}-00" kubectl="${version}-00" kubeadm="${version}-00"
+```
 
 ### Package verification tests
 
