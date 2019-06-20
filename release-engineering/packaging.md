@@ -1,7 +1,7 @@
 # Packaging Kubernetes <!-- omit in toc -->
 
-_Author(s): Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))_  
-_Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_  
+_Author(s): Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))_
+_Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_
 _Original document: [Building debs/rpms for Kubernetes
 ](https://docs.google.com/document/d/1PAN5tVJO_NMfHZmnk8mDQTwAbFHPky7JBgWJgckNjro/edit?usp=sharing)_
 
@@ -32,7 +32,7 @@ Patch Release Team members or Branch Managers requesting debs/rpms should be sur
 
 ## Release Steps
 
-In this process, we are pulling the artifacts published by a Release Manager to the GCS bucket and building debs/rpms to be published to the rapture repository. 
+In this process, we are pulling the artifacts published by a Release Manager to the GCS bucket and building debs/rpms to be published to the rapture repository.
 
 Refer to the [Branch Manager handbook][branch-manager-build-and-release] for details on the artifacts that are built by the Branch Manager.
 
@@ -92,6 +92,17 @@ Now that `rapture` has successfully complete, we need to verify the packages tha
 
 Follow the [kubeadm instructions][kubeadm-install] to install kubeadm, kubelet, and kubectl.
 
+```shell
+# <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
+version=
+[[ -n "${version}" ]] \
+    && curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg \
+    | sudo apt-key add - \
+    && echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" \
+    | sudo tee /etc/apt/sources.list.d/kubernetes.list \
+    && sudo apt-get update -q \
+    && sudo apt-get install -qy kubelet="${version}-00" kubectl="${version}-00" kubeadm="${version}-00"
+```
 
 ### Package verification tests
 
