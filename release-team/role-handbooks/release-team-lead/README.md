@@ -151,7 +151,7 @@ Release Halfway Point
 - The kubeadm and other dependent project issues should be created already
 - Check in with SIGs on their enhancement work to make sure they know code freeze is 3 weeks away, as well as emailing the kubernetes-dev list, and notifying the community at the weekly meeting
 - Adjust the enhancements repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered)
-- Remind Branch Manager that branch CI jobs will need next week.
+- Remind Branch Manager that branch CI jobs will be needed next week.
 
 ### Week 7
 
@@ -177,7 +177,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 
 ### Week 9
 
-- Branch Manager ensures automation ready to enforce labeling and other release policies
+- Branch Manager ensures automation is ready to enforce labeling and other release policies
 - The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, and less for the other team members)
 - Make sure everyone knows the docs deadline (PRs ready for review) is coming the following Friday.
 - Prepare for x.y.0-beta.1 release (week 10), ensuring x.y-blocking, master-blocking, and master-upgrade dashboards are 100% green, or all failures have issues filed and are being actively worked.
@@ -185,7 +185,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 ### Week 10
 
 - Code freeze begins, and it’s now the home stretch of the release. SIGs will need to ensure all work moving forward is carefully curated with merge required labels ([more info here](https://git.k8s.io/community/contributors/devel/release.md)). 
-- Branch Manager ensures automation actively enforcing merge blocking labeling and other release policies
+- Branch Manager ensures automation is actively enforcing merge blocking labeling and other release policies
 - The release team needs to look at any in-flight PRs and ensure nothing is being jammed in at the last minute without proper tests, review, etc. This is something to watch extremely closely because it happens every release. Just watch what gets merged closely after code freeze. Incorrectly merged items need assessed and perhaps reverted. GitHub has [a query comparing a release branch and master](https://github.com/kubernetes/kubernetes/compare/release-1.12).
 - Assist the documentation leads in collecting missing docs PRs.
 - Schedule burndown meetings starting next week for every weekday until the Friday after release day, make sure to invite the community calendar
