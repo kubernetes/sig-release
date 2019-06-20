@@ -1,24 +1,29 @@
 Bug Triage Handbook
 ==============================
 
--   [Summary](#summary)
-    -   [How To Do Your Job](#how-to-do-your-job)
-    -   [How To Escalate](#how-to-escalate)
--   [Early Release](#early-release)
-    -   [Sample Searches](#sample-searches-early)
-    -   [Reports](#reports-early)
--   [Brace Yourselves, Code Freeze Is Coming](#brace-yourselves-code-freeze-is-coming)
-    -   [Filtering / What belongs in the milestone](#filtering--What-belongs-in-the-milestone)
-    -   [Priority label definitions](#priority-label-definitions)
-    -   [Sample Searches](#sample-searches-before-freeze)
-    -   [Reports](#reports-before-freeze)
-    -   [Issue Categorization](#issue-categorization)
--   [Code Freeze](#code-freeze)
-    -   [Sample Searches](#sample-searches-freeze)
-    -   [Reports](#reports-freeze)
--   [Code Thaw](#code-thaw)
-    -   [Sample Searches](#sample-searches-thaw)
-    -   [Reports](#reports-thaw)
+- [Bug Triage Handbook](#Bug-Triage-Handbook)
+  - [Summary](#Summary)
+  - [Requirements](#Requirements)
+    - [Time Requirements](#Time-Requirements)
+    - [Additional Requirements for Shadows](#Additional-Requirements-for-Shadows)
+    - [Additional Requirements for Leads](#Additional-Requirements-for-Leads)
+  - [How To Do Your Job](#How-To-Do-Your-Job)
+    - [How to Escalate](#How-to-Escalate)
+  - [Early Release](#Early-Release)
+    - [Sample Searches [Early]](#Sample-Searches-Early)
+    - [Reports [Early]](#Reports-Early)
+  - [Brace Yourselves, Code Freeze Is Coming](#Brace-Yourselves-Code-Freeze-Is-Coming)
+    - [Filtering / What belongs in the milestone](#Filtering--What-belongs-in-the-milestone)
+    - [Priority label definitions](#Priority-label-definitions)
+    - [Sample Searches [Before Freeze]](#Sample-Searches-Before-Freeze)
+    - [Reports [Before Freeze]](#Reports-Before-Freeze)
+    - [Issue Categorization](#Issue-Categorization)
+  - [Code Freeze](#Code-Freeze)
+    - [Sample Searches [Freeze]](#Sample-Searches-Freeze)
+    - [Reports [Freeze]](#Reports-Freeze)
+  - [Code Thaw](#Code-Thaw)
+    - [Sample Searches [Thaw]](#Sample-Searches-Thaw)
+    - [Reports [Thaw]](#Reports-Thaw)
 
 ## Summary
 Primarily, your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  
@@ -44,6 +49,8 @@ There are four relevant periods where your workload changes:
 4. Code Thaw: Last two weeks of the cycle. *Duration: ~2 weeks*
 
 ## Requirements
+
+**Before continuing on to the Bug Triage specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
 
 ### Time Requirements
 

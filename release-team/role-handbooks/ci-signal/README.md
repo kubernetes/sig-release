@@ -25,6 +25,8 @@ The core responsibility of the CI Signal lead is to foster a culture of continuo
 
 ## Requirements
 
+**Before continuing on to the CI Signal specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
 ### Time Requirements
 
 CI Signal is one of the more time-intensive roles on the release team, and as such is not recommended for candidates who do not have employer support for their work on the Release Team.  General time requirements for Leads and Shadows are:

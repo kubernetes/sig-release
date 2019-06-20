@@ -46,7 +46,14 @@ For example, as branch manager of v1.15, the release cut dates as specified in t
 * General knowledge of Google Cloud (Cloud Build and Cloud Storage).
 * Open to seeking help and can communicating clearly.
 
-# Prerequisite
+# Prerequisites for Branch Manager and Shadows
+
+## General Requirements
+
+**Before continuing on to the Branch Manager specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
+## Branch Manager Specific 
+
 * Contact [Kubernetes Build Admins][kubernetes-build-admins], identifying yourself as the incoming release branch manager for the current release team and requesting to be added to the special privilege group for the GCP project used to build the releases
    * TODO: should the release lead also request some type of read access here for themselves?
    * TODO: should the branch manager shadows also get at least read access at the beginning?  If a shadow is going to exercise the process on behalf of the lead, they will need full read/write access ahead of time.

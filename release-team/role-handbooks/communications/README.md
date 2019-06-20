@@ -6,7 +6,11 @@ The Communications Coordinator role is responsible for facilitating, empowering,
 
 Additionally, there are specific deliverables that must come from the release process in the form of a release blog, event speaking opportunities, webinars, coordination of 5 Day blog series with the CNCF, and approved messaging for media. In the event that the release schedule slips, the communications coordinator will ensure press timing is synchronized and kept advised of the revised timing.
 
-## Skills and Experience Required:
+## Requirements
+
+**Before continuing on to the Communications specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
+### Skills and Experience Required:
 
 - Strong written and verbal communications skills
 - Experience with the Kubernetes release process enough to understand how communications milestones fit into the overall release
@@ -14,7 +18,7 @@ Additionally, there are specific deliverables that must come from the release pr
 - A working knowledge of Kubernetes concepts
 - Project management experience is helpful
 
-## Expected Time Investment
+### Expected Time Investment
 
 The Kubernetes release cycle usually spans 12 weeks. The typical workload for the communications team is _very_ light the first few weeks. In the later weeks of the release cycle, the workload can get very heavy.
 

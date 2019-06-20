@@ -51,6 +51,13 @@ Manager should endeavor to keep this document up to date, improve
 its content, and improve the overall process of patch management
 for the project.
 
+## Prerequisites for Patch Release Lead and Shadows
+
+### General Requirements
+
+**Before continuing on to the Patch Release specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
+
 ## Getting started
 
 You're here because you've volunteered and have been selected to
