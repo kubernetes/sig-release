@@ -43,6 +43,38 @@ There are four relevant periods where your workload changes:
 3. Code Freeze: Code Freeze & Burndown, beta releases, until Code Thaw. *Duration: ~2 weeks*
 4. Code Thaw: Last two weeks of the cycle. *Duration: ~2 weeks*
 
+## Requirements
+
+### Time Requirements
+
+Bug Triage has a lower time requirement than most roles at the beginning of the release cycle, however, leading up to and during Code Freeze, that requirement increases drastically.
+
+General time requirements for Leads and Shadows are:
+
+- Availability to attend the majority of Release Team (weekly) and Burndown meetings (daily during Code Freeze). At least one member in the Bug Triage role should be present for all burndown meeting.
+- Ability to follow-up on issues and PRs during Code Freeze at arbitrary times to ensure rapid turnaround.
+- The time commitment becomes greater through the release cycle, peaking during Code Freeze.  In the last two weeks of the release, leading up to and during Code Freeze, Shadows should expect to spend at least 5 hours and leads at least 10 hours.
+
+### Additional Requirements for Shadows
+
+- Have signed the contributor CLA for Kubernetes.
+- [Become a Kubernetes org member](https://git.k8s.io/community/community-membership.md#member). This should be done with the sponsorship of the Bug Triage Lead or Release Lead in the first week of the cycle.
+  - The process to become one of these is in [our community membership ladder](https://github.com/kubernetes/community/blob/master/community-membership.md#requirements-for-outside-collaborators)
+- General familiarity with GitHub labels and how to find issues/PRs for the current milestone. 
+- Commitment to follow-up with contributors about issues/PRs, on Slack, email, Discuss, and SIG meetings, as appropriate.
+- General knowledge of the [Kubernetes Community governance model](https://git.k8s.io/community/governance.md#community-groups), specifically, a SIGs' areas of responsibility.
+
+Additionally, the following qualifications make a candidate more suitable for the Bug Triage team, but are not requirements:
+
+- Experience with quality assurance and bug tracking systems.
+
+### Additional Requirements for Leads
+ 
+In addition to the above requirements for Shadows, most of which become prerequisites, Bug Triage Leads must:
+
+- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](/release-team/README.md#milestone-maintainers)
+- Have a working knowledge of GitHub labeling. Bug Triage leads must be able to identify relevant issues and PRs for a given milestone.
+- Have an understanding of what defines a ["Release Blocking"](/release-blocking-jobs.md) issue or PR, or know who to contact to determine that information.
 
 ## How To Do Your Job
 

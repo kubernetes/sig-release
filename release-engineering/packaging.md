@@ -1,7 +1,7 @@
 # Packaging Kubernetes <!-- omit in toc -->
 
-_Author(s): Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))_  
-_Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_  
+_Author(s): Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))_
+_Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_
 _Original document: [Building debs/rpms for Kubernetes
 ](https://docs.google.com/document/d/1PAN5tVJO_NMfHZmnk8mDQTwAbFHPky7JBgWJgckNjro/edit?usp=sharing)_
 
@@ -32,7 +32,7 @@ Patch Release Team members or Branch Managers requesting debs/rpms should be sur
 
 ## Release Steps
 
-In this process, we are pulling the artifacts published by a Release Manager to the GCS bucket and building debs/rpms to be published to the rapture repository. 
+In this process, we are pulling the artifacts published by a Release Manager to the GCS bucket and building debs/rpms to be published to the rapture repository.
 
 Refer to the [Branch Manager handbook][branch-manager-build-and-release] for details on the artifacts that are built by the Branch Manager.
 
@@ -45,14 +45,14 @@ Must be a member of mdb group - [mdb/cloud-kubernetes-release](mdb/cloud-kuberne
 
 ### Clone Release Repository
 
-Before proceeding with the release, ensure the [kubernetes/release][kubernetes/release] repository is checked out. 
+Before proceeding with the release, ensure the [kubernetes/release][kubernetes/release] repository is checked out.
 
 **NOTE**: It is a good idea to start in a clean directory, when possible.
 
 _The directory name can be anything. We'll use `$HOME/k8s-1.20.0` as the example here._
 
 ```shell
-mkdir -p $HOME/k8s-1.20.0 
+mkdir -p $HOME/k8s-1.20.0
 cd $HOME/k8s-1.20.0
 git clone https://github.com/kubernetes/release.git
 cd release
@@ -63,15 +63,15 @@ cd release
 Run the following commands to ensure that we are logged in and also the proper project context is setup.
 
 
-```
+```shell
 prodaccess
 gcloud auth login
-gcloud config set project kubernetes-release-dev
+gcloud config set project kubernetes-release-test
 ```
 
 ### Build the Debs & RPMs
 
-The entire build process takes several hours. Once you are ready to begin, the debs and rpms can be built using [rapture][rapture]. 
+The entire build process takes several hours. Once you are ready to begin, the debs and rpms can be built using [rapture][rapture].
 
 `rapture` can be executed as follows:
 
@@ -81,7 +81,7 @@ The entire build process takes several hours. Once you are ready to begin, the d
 
 #### Notes
 - There are several points during the process where you will be prompted to answer “y/N” or your password.
-- There will be a warning about trusty. This can be ignored. 
+- There will be a warning about trusty. This can be ignored.
 
 
 ### Validating packages
@@ -92,6 +92,17 @@ Now that `rapture` has successfully complete, we need to verify the packages tha
 
 Follow the [kubeadm instructions][kubeadm-install] to install kubeadm, kubelet, and kubectl.
 
+```shell
+# <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
+version=
+[[ -n "${version}" ]] \
+    && curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg \
+    | sudo apt-key add - \
+    && echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" \
+    | sudo tee /etc/apt/sources.list.d/kubernetes.list \
+    && sudo apt-get update -q \
+    && sudo apt-get install -qy kubelet="${version}-00" kubectl="${version}-00" kubeadm="${version}-00"
+```
 
 ### Package verification tests
 
@@ -106,7 +117,7 @@ The following jobs are currently configured to do some aspect of package validat
 
 **These tend to break when we are in the middle of a push.**
 
-If any of these tests are broken, the [Patch Release Team][patch-release-team] should receive an alert regarding the failure. 
+If any of these tests are broken, the [Patch Release Team][patch-release-team] should receive an alert regarding the failure.
 
 If there is continued test failure on this dashboard without intervention from the Patch Release Team, escalate to the current [Release Team][release-team] and [test-infra on-call][test-infra-oncall].
 
