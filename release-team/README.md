@@ -77,11 +77,16 @@ there are 3 types of Kubernetes releases:
 | Enhancements | [Enhancements Handbook](role-handbooks/enhancements/README.md) |
 | CI Signal | [CI Signal Handbook](role-handbooks/ci-signal/README.md) |
 | Bug Triage | [Bug Triage Handbook](role-handbooks/bug-triage/README.md) |
-| Branch Manager | [Branch Manager Handbook](role-handbooks/branch-manager/README.md) |
 | Docs | [Docs Handbook](role-handbooks/docs/README.md) |
 | Release Notes | [Release Notes Handbook](role-handbooks/release-notes/README.md) |
 | Communications | [Communications Handbook](role-handbooks/communications/README.md) |
-| Patch Release Management Team | [Patch Release Handbook](role-handbooks/patch-release-manager/README.md) |
+
+
+#### Retired Release Team roles
+
+- Patch Release Manager: moved to a role of [Release Managers][release-managers], which operates under the Release Engineering subproject
+- Branch Manager: moved to a role of [Release Managers][release-managers], which operates under the Release Engineering subproject
+
 
 ### Release Team Shadow
 Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future
@@ -184,6 +189,7 @@ The process for filing an enhancement exception can be found [here][exceptions].
 [specific-responsibilities]: #specific-responsibilities
 [kubernetes-release-team-roles]: #kubernetes-release-team-roles
 [other-activities-of-the-release-team]: #other-activities-of-the-release-team
+[release-managers]: /release-managers.md
 [release-team-selection]: #release-team-selection
 [release-team-selection-process]: release-team-selection.md
 [milestone-maintainers]: #milestone-maintainers

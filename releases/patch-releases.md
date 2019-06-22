@@ -15,24 +15,7 @@ releases during major holiday periods.
 
 ## Contact
 
-To discuss a cherry-pick, schedule, or anything else related to
-patch releases, contact the team as a whole or the appropriate member if
-there is a specific one:
-
-| **Github username** | **Slack username** |
-| --- | --- |
-| @hoegaarden | @hhorl |
-| @aleksandra-malinowska | @aleksandram |
-| @tpepper | @tpepper |
-| @feiskyer | @feisky |
-
-* Email: The whole team is reachable via email to
-  [kubernetes-patch-release-team].
-* Slack: You can just tag appropriate individuals or start a broader
-  conversation on #sig-release, as well as reach out to team members
-  via direct message.
-* GitHub: Notifications are sent to the team via
-  `<@kubernetes/patch-release-team>`.
+See the [Release Managers page][release-managers] for full contact details on the Patch Release Team.
 
 Please give us a business day to respond - we may be in a different timezone!
 
@@ -112,6 +95,7 @@ Next patch release is **1.12.9**.
 
 These releases are no longer supported.
 
+[release-managers]: /release-managers.md
 [release process description]: https://git.k8s.io/community/contributors/devel/sig-release/release.md
 [kubernetes-patch-release-team]: mailto:kubernetes-patch-release-team@googlegroups.com
 [cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md

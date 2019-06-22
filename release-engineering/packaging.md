@@ -5,16 +5,16 @@ _Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_
 _Original document: [Building debs/rpms for Kubernetes
 ](https://docs.google.com/document/d/1PAN5tVJO_NMfHZmnk8mDQTwAbFHPky7JBgWJgckNjro/edit?usp=sharing)_
 
-- [Introduction](#introduction)
-- [Communication](#communication)
-- [Release Steps](#release-steps)
-  - [Permissions](#permissions)
-  - [Clone Release Repository](#clone-release-repository)
-  - [Authenticate](#authenticate)
-  - [Build the Debs & RPMs](#build-the-debs--rpms)
-    - [Notes](#notes)
-  - [Validating packages](#validating-packages)
-  - [Package verification tests](#package-verification-tests)
+- [Introduction](#Introduction)
+- [Communication](#Communication)
+- [Release Steps](#Release-Steps)
+  - [Permissions](#Permissions)
+  - [Clone Release Repository](#Clone-Release-Repository)
+  - [Authenticate](#Authenticate)
+  - [Build the Debs & RPMs](#Build-the-Debs--RPMs)
+    - [Notes](#Notes)
+  - [Validating packages](#Validating-packages)
+  - [Package verification tests](#Package-verification-tests)
 
 ## Introduction
 
@@ -122,8 +122,8 @@ If any of these tests are broken, the [Patch Release Team][patch-release-team] s
 If there is continued test failure on this dashboard without intervention from the Patch Release Team, escalate to the current [Release Team][release-team] and [test-infra on-call][test-infra-oncall].
 
 
-[branch-manager-handbook]: /release-team/role-handbooks/branch-manager/README.md
-[branch-manager-build-and-release]: /release-team/role-handbooks/branch-manager/README.md#build-and-release
+[branch-manager-handbook]: /release-engineering/role-handbooks/branch-manager.md
+[branch-manager-build-and-release]: /release-engineering/role-handbooks/branch-manager.md#build-and-release
 [kubeadm-install]: https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl
 [kubernetes/release]: https://git.k8s.io/release
 [kubernetes-build-admins]: https://groups.google.com/forum/#!forum/kubernetes-build-admins
