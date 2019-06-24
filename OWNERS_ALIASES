@@ -16,55 +16,58 @@ aliases:
     - tpepper
   release-team:
     - aishsundar
+    - claurence
     - jberkus
     - justaugustus
     - spiffxp
     - tpepper
+  patch-release-team:
+    - aleksandra-malinowska
+    - feiskyer
+    - hoegaarden
+    - tpepper
+  branch-managers:
+    - bubblemelon
+    - idealhack
+  build-admins:
+    - aleksandra-malinowska
+    - listx
+    - sumitranr
   release-team-lead-role:
-    - tpepper # 1.12
     - aishsundar # 1.13
     - spiffxp # 1.14
     - claurence # 1.15
-  patch-release-manager-role:
-    - foxish # 1.11
-    - feiskyer # 1.12
-    - aleksandra-malinowska # 1.13
-    - tpepper # 1.13
+    - lachie83 # 1.16
   ci-signal-role:
-    - mohammedzee1000 # 1.12
     - jberkus # 1.13
     - mariantalla # 1.14
-    - alejandrox1 # 1.15
+    - alejandrox1 # 1.16 / 1.15
   enhancements-role:
-    - justaugustus # 1.12
-    - kacole2 # 1.15 / 1.13
+    - kacole2 # 1.16 / 1.15 / 1.13
     - claurence # 1.14
   test-infra-role:
     - cjwagner # 1.13 / 1.12
     - amwat # 1.14
     - imkin # 1.15
   bug-triage-role:
-    - guineveresaenger # 1.12
     - nikopen # 1.14 / 1.13
     - soggiest # 1.15
-  branch-manager-role:
-    - dougm # 1.13 / 1.12
-    - hoegaarden # 1.14
-    - bubblemelon # 1.15
+    - xmudrii # 1.16
   docs-role:
-    - zparnold # 1.12
     - tfogo # 1.13
     - jimangel # 1.14
     - MAKOSCAFEE # 1.15
+    - simplytunde # 1.16
   release-notes-role:
-    - nickchase # 1.12 / 1.11
     - marpaia # 1.13
     - dstrebel # 1.14
     - onyiny-ang # 1.15
+    - saschagrunert # 1.16
   communications-role:
     - kbarnard10 # 1.13 / 1.12 / 1.11
     - nwoods3 # 1.14
     - castrojo # 1.15
+    - onlydole # 1.16
   committee-product-security:
     - philips
     - cjcullen

@@ -1,6 +1,6 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
-  - branch-manager-role
+  - branch-managers
 reviewers:
-  - branch-manager-role
+  - branch-managers
