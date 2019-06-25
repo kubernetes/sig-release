@@ -83,6 +83,12 @@ there are 3 types of Kubernetes releases:
 | Communications | [Communications Handbook](role-handbooks/communications/README.md) |
 | Patch Release Management Team | [Patch Release Handbook](role-handbooks/patch-release-manager/README.md) |
 
+#### Retired Release Team roles
+
+- Test Infra: deprecated at the end of Kubernetes 1.15. Duties are now spread across [Branch Manager](/release-team/role-handbooks/branch-manager/README.md), [Bug Triage](/release-team/role-handbooks/branch-manager/README.md), and [Test Infra On-call (SIG Testing)](https://go.k8s.io/oncall) (#testing-ops and #sig-testing on Slack).
+
+
+
 ### Release Team Shadow
 Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future
 Release Team staffing requirements and continue to grow the Kubernetes community in general. Potential mentees should
