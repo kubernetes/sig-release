@@ -4,7 +4,11 @@
 
 The Release Notes role is responsible for collecting and fine-tuning release-notes from the many contributions to Kubernetes between release cycles. This role is likely to find that work during the first several weeks of the release cycle is very laid back with the bulk of the tasks being completed at the end, once the release is firmed up.
 
-## Requirements
+## Prerequisites for Release Notes Lead and Shadows
+
+### General Requirements
+
+**Before continuing on to the Release Notes specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
 
 ### Skills and Experience Requirments:
 

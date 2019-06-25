@@ -26,13 +26,18 @@ An Enhancements Lead holds the following responsibilities:
 - Identify candidates to assume the Enhancements Lead role (according to the [Release Team selection process][rt-selection]) in the following release cycle
   - Chose Enhancement shadows whom you believe would be a good fit for succession and help mentor them throughout the release cycle  
 
-## General Requirements
+## Prerequisits for Enhancements Lead and Shadows
 
-In addition to the [requirements detailed for all Release Team members][rt-requirements], becoming an Enhancements Lead has additional gates:
-  - MUST have served on the Release Team in a previous capacity, ideally as an Enhancements Shadow
-  - MUST be a member of the [Release Team Google Group][rt-group]
-  - MUST be a member of the [SIG Release Google Group][sig-release-group]
-  - MUST be a member of the [SIG PM Google Group][sig-pm-group]
+### General Requirements
+
+**Before continuing on to the Enhancements specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
+### Enhancements Specific Requirements
+
+- MUST have served on the Release Team in a previous capacity, ideally as an Enhancements Shadow
+- MUST be a member of the [Release Team Google Group][rt-group]
+- MUST be a member of the [SIG Release Google Group][sig-release-group]
+- MUST be a member of the [SIG PM Google Group][sig-pm-group]
 
 Helpful characteristics of an Enhancements Lead include:
 - experience with the Kubernetes community, code layout, ecosystem projects, organizational norms, governance, SIG structure, architecture, and release process
@@ -143,7 +148,7 @@ https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 [k/enhancements]: https://github.com/kubernetes/enhancements
 [rt-group]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [rt-selection]: /README.md#release-team-selection
-[rt-requirements]: /README.md#release-team-requirements
+[rt-requirements]: /release-team/release-team-onboarding.md
 [sig-docs-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-docs
 [sig-leads-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads
 [sig-pm]: https://github.com/kubernetes/community/blob/master/sig-pm/README.md

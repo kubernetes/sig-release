@@ -30,7 +30,11 @@ Responsibilities include:
 
 ## Prerequisites for Docs Lead and Shadows
 
-### General Time Requirements
+### General Requirements
+
+**Before continuing on to the Docs specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
+### Time Requirements
 
 A release is usually 12 weeks long. In general, there's a lot of work in the first few weeks of the release cycle to get the process started, and a lot of work in the last few weeks of the release cycle as documentation deadlines approach. 
 
@@ -55,7 +59,7 @@ In addition to the time requirements above, a Docs Lead must:
 Docs Lead Shadows are people who are preparing to be a Docs Lead in the future. In addition to the time requirements above, shadows must: 
 
 - Have signed the [contributor CLA](https://github.com/kubernetes/community/blob/master/CLA.md) for Kubernetes.
-- Be a Kubernetes org member. The process to become one is in the [Kubernetes community membership ladder](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
+- Be invested in becoming an org member within the release cycle. This can often be achieved during the release cycle with sponsorship from a role lead. See the [Release Team onboarding guide](/release-team/release-team-onboarding.md) for more details.
 - General knowledge of our SIG-Docs [areas of responsibility](https://github.com/kubernetes/community/tree/master/sig-docs#subprojects).
 - Experience with the general process involved with [contributing](https://kubernetes.io/docs/contribute/start/) to Kubernetes website.
 

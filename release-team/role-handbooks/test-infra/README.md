@@ -1,5 +1,13 @@
 # Test Infra Lead Handbook
 
+## Prerequisites for Test Infra Lead and Shadows
+
+### General Requirements
+
+**Before continuing on to the Test Infra specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
+## Test Infra Responsibilities
+
 There are two major areas that test-infra lead need to take care of during the release cycle, which are:
 
 1. [Create CI/Presubmit jobs for the new release, and populate the Testgrid dashboard](#create-cipresubmit-jobs-for-the-new-release)
