@@ -76,7 +76,6 @@ there are 3 types of Kubernetes releases:
 | Release Team Lead | [Lead Handbook](role-handbooks/release-team-lead/README.md) |
 | Enhancements | [Enhancements Handbook](role-handbooks/enhancements/README.md) |
 | CI Signal | [CI Signal Handbook](role-handbooks/ci-signal/README.md) |
-| Test Infra | [Test Infra Handbook](role-handbooks/test-infra/README.md) |
 | Bug Triage | [Bug Triage Handbook](role-handbooks/bug-triage/README.md) |
 | Branch Manager | [Branch Manager Handbook](role-handbooks/branch-manager/README.md) |
 | Docs | [Docs Handbook](role-handbooks/docs/README.md) |

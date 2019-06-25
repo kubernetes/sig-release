@@ -1,4 +1,5 @@
-# Test Infra Lead Handbook
+# Test Infra Lead Handbook 
+Note: This role was deprecated after the 1.15 release.  Starting with 1.16 this role was mostly merged with [Branch Management](https://github.com/sig-release/blob/updating-test-infra-role-references/release-team/role-handbooks/branch-manager/README.md)and Test Infra on Call.  Questions for Test Infra On Call should be directed to @test-infra-oncall in the #testing-ops and #sig-testing slack channels 
 
 ## Prerequisites for Test Infra Lead and Shadows
 
