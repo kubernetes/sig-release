@@ -86,7 +86,7 @@ access to multiple build and release tools:
 * If applicable, sync up with the outgoing release branch manager
   to take ownership of any lingering issues on the branch.
 * Review the [Branch Manager
-  Handbook](/release-team/role-handbooks/branch-manager/README.md) as
+  Handbook](/release-engineering/role-handbooks/branch-manager.md) as
   much of the tooling and process used by the branch manager pre-release
   relates to the post-release duties of Patch Release management.
   Pay close attention to the
@@ -335,7 +335,7 @@ The freeze serves several purposes:
 
 On the day before the planned release, run a mock build with `gcbmgr`
 to make sure the tooling is ready as per the [Branch Manager
-Handbook](/release-team/role-handbooks/branch-manager/README.md).
+Handbook](/release-engineering/role-handbooks/branch-manager.md).
 Also give the Google Debs/RPMs build staff notification that their
 help will be needed the next day.  Once you've done the mock build, you can
 also do a mock release and notify, sending the release notification email
