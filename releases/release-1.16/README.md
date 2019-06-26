@@ -58,8 +58,8 @@ The 1.16 release cycle is proposed as follows:
 | **Call for [Exceptions][Exception]** | Lead | | Mon 19 | | | |
 | Brace Yourselves, Code Freeze is Coming | Comms / Bug Triage| | Mon 19 | | | |
 | 1.16.0-beta.1 released | Branch Manager | | Tue 20 | | | |
-| Docs deadline - Open placeholder PRs | Docs Lead | | | Fri 23 | | |
-| **Begin [Code Freeze]** (EOD PST) | Branch Manager | | | Thu 29 | week 9 | |
+| Docs deadline - Open placeholder PRs | Docs Lead | | Fri 23 | | | |
+| **Begin [Code Freeze]** (EOD PST) | Branch Manager | | Thu 29 | | week 9 | |
 | Burndown Meetings daily | Lead | | | Tues 3 | week 10 | |
 | Docs deadline - PRs ready for review | Docs Lead | | | Tues 3 | | |
 | 1.16.0-beta.2 released | Branch Manager | | | Wed 4 | | |
