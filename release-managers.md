@@ -52,6 +52,7 @@ Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of K
 Release Manager Associates are apprentices to the Branch Managers, formerly referred to as Branch Manager shadows.
 
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
+- Nikhil Manchanda ([@slicknik](https://github.com/slicknik))
 
 
 ## Build Admins
