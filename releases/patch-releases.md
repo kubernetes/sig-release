@@ -54,7 +54,8 @@ Next patch release is **1.14.4**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
-| 1.14.4 | TBD late June | TBD late June | [kubernetes-patch-release-team] |
+| 1.14.5 | TBD  | TBD | [kubernetes-patch-release-team] |
+| 1.14.4 | 2019-07-02 | 2019-07-08 | [kubernetes-patch-release-team] |
 | 1.14.3 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
 | 1.14.2 | 2019-05-10 | 2019-05-14 | [kubernetes-patch-release-team] |
 | 1.14.1 | 2019-04-05 | 2019-04-08 | [kubernetes-patch-release-team] |
@@ -65,7 +66,8 @@ Next patch release is **1.13.8**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
-| 1.13.8 | TBD late June | TBD late June | kubernetes-patch-release-team] |
+| 1.13.9 | TBD | TBD | kubernetes-patch-release-team] |
+| 1.13.8 | 2019-07-02 | 2019-07-08 | [kubernetes-patch-release-team] |
 | 1.13.7 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
 | 1.13.6 | 2019-05-06 | 2019-05-08 | [kubernetes-patch-release-team] |
 | 1.13.5 | 2019-03-21 | 2019-03-25 | @aleksandra-malinkowska, @tpepper |
