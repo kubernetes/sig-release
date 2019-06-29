@@ -53,6 +53,17 @@ Release Manager Associates are apprentices to the Branch Managers, formerly refe
 
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Nikhil Manchanda ([@slicknik](https://github.com/slicknik))
+- Vivek Taparia ([@vivektaparia](https://github.com/vivektaparia))
+- Christian Jantz ([@chrisz100](https://github.com/chrisz100))
+- Dhawal Yogesh Bhanushali ([@imkin](https://github.com/imkin))
+- Nikhita Raghunath ([@nikhita](https://github.com/nikhita))
+- Javier B Perez ([@javier-b-perez](https://github.com/javier-b-perez))
+- Klaus Ma ([@k82cn](https://github.com/k82cn))
+- Giri Kuncoro ([@girikuncoro](https://github.com/girikuncoro))
+- Peter Swica ([@pswica](https://github.com/pswica))
+- Carlos Panato ([@cpanato](https://github.com/cpanato))
+- Mike Crute ([@mcrute](https://github.com/mcrute))
+- Ace Eldeib ([@alexeldeib](https://github.com/alexeldeib))
 
 
 ## Build Admins
