@@ -9,7 +9,7 @@
 | Docs | Barnabas Makonda ([@MAKOSCAFEE](https://github.com/MAKOSCAFEE) / Slack: `@barnie`) | Tunde Oladipupo ([@simplytunde](https://github.com/simplytunde) / Slack: `@simplytunde`), Damini Satya Kammakomati ([@daminisatya](https://github.com/daminisatya) / Slack: `@Damini satya`), Christian Hernandez ([@christianh814](https://github.com/christianh814) / Slack: `@christianh814`) |
 | Release Notes | Lindsey Tulloch ([@onyiny-ang](https://github.com/onyiny-ang) / Slack: `@onyiny-ang`) | Jeff Sica ([@jeefy](https://github.com/jeefy) / Slack: `@jeefy`), Nick Chase ([@NickChase](https://github.com/NickChase) / Slack: `@nickchase`), Sascha Grunert ([saschagrunert](https://github.com/saschagrunert) / Slack: `@sgrunert`), Alok Patra ([alokpatra](https://github.com/alokpatra) / `@Alok Patra`)|
 | Communications | Jorge Castro ([@castrojo](https://github.com/castrojo)) | Taylor Dolezal ([@onlydole](https://github.com/onlydole)), David McKay ([@rawkode](https://github.com/rawkode))|
-
+Review the [Patch Releases page](/releases/patch-releases.md) for up-to-date contact information and the schedule for 1.15 patch releases.
 
 
 **Emeritus Adviser:** Josh Berkus ([@jberkus](https://github.com/jberkus))
