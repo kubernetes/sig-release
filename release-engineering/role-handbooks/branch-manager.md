@@ -1,4 +1,4 @@
-# Branch Manager Handbook
+# Branch Manager Handbook <!-- omit in toc -->
 
 - [Overview](#Overview)
   - [Minimum Skills and Requirements](#Minimum-Skills-and-Requirements)
@@ -22,9 +22,9 @@
   - [Code Freeze](#Code-Freeze)
   - [Code Thaw](#Code-Thaw)
 - [Branch Content Management](#Branch-Content-Management)
-   - [Branch Fast Forward](#Branch-Fast-Forward)
-   - [Reverts](#Reverts)
-   - [Cherry Picks](#Cherry-Picks)
+  - [Branch Fast Forward](#Branch-Fast-Forward)
+  - [Reverts](#Reverts)
+  - [Cherry Picks](#Cherry-Picks)
 - [Staging Repositories](#Staging-Repositories)
 - [Debugging](#Debugging)
 - [References](#References)
@@ -85,7 +85,7 @@ This is a collection of requirements and conditions to fulfil when taking on the
 
 A list of To Do(s) to get started as Branch Manager:
 
-- [ ] Contact [Kubernetes Build Admins][kubernetes-build-admins], to identify yourself as the incoming release branch manager for the current release team and request to be added to the special privilege group for the `kubernetes-release-test` GCP project that's used to build the releases
+- [ ] Contact the [Release Managers Google Group][release-managers-group] to identify yourself as the incoming release branch manager for the current release team and request to be added to the special privilege group for the `kubernetes-release-test` GCP project that's used to build the releases
    * Similar access later in the cycle should be granted to shadows depending on how they progress and what actions they prove able to step up to exercise during the cycle.
 - [ ] Request permission to post on [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
    * If you haven't received access after 24 hrs, contact the [Release Team][kubernetes-release-team].
@@ -280,7 +280,7 @@ To better prepare and see what to expect, this is a sequence of events that took
 
 ### Debian and RPM Packaging
 
-[Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `./gcbmgr release --offical ...` has completed, **before sending out the email notification**, contact the [Kubernetes Build Admins][kubernetes-build-admins] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
+[Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `./gcbmgr release --offical ...` has completed, **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
 
 The entire packaging process including the build and validation of the builds could take around 3-4 hours. It is preferable to have the DEB and RPM files ready prior to sending out the release notification email since, people worldwide will attempt to download the official release. Since packaging uses the release tag, it is important to [validate the release process](#release-validation).
 
@@ -581,9 +581,6 @@ The bot runs every four hours, so it might take sometime for a new tag to appear
 
 The client-go major release (.e.g `v1.13.0`) is released manually a day after the main Kubernetes release.
 
-[kubernetes-build-admins]: mailto:kubernetes-build-admins@googlegroups.com
-[kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
-
 # Debugging
 
 Logs from `branchff`, `gcbmgr`, etc are stored in the `/tmp` directory and can provide more details as to why command executions are failing.
@@ -670,3 +667,7 @@ See the branch management process prior to v1.12 when `anago` was still used.
 * [Branch Management Playbook](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
 
 > Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
+
+
+[kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
+[release-managers-group]: https://groups.google.com/forum/#!forum/kubernetes-release-managers

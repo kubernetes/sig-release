@@ -44,60 +44,63 @@ for the next patch release.
 
 Coming soon...
 
-| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
-| --- | --- | --- | --- |
-| 1.15.1 | TBD early July | TBD early July | [kubernetes-patch-release-team] |
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.15.1 | TBD early July | TBD early July |
+
 
 ### 1.14
 
 Next patch release is **1.14.4**.
 
-| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
-| --- | --- | --- | --- |
-| 1.14.5 | TBD  | TBD | [kubernetes-patch-release-team] |
-| 1.14.4 | 2019-07-02 | 2019-07-08 | [kubernetes-patch-release-team] |
-| 1.14.3 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
-| 1.14.2 | 2019-05-10 | 2019-05-14 | [kubernetes-patch-release-team] |
-| 1.14.1 | 2019-04-05 | 2019-04-08 | [kubernetes-patch-release-team] |
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.14.5 | TBD  | TBD |
+| 1.14.4 | 2019-07-02 | 2019-07-08 |
+| 1.14.3 | 2019-06-03 | 2019-06-06 |
+| 1.14.2 | 2019-05-10 | 2019-05-14 |
+| 1.14.1 | 2019-04-05 | 2019-04-08 |
+
 
 ### 1.13
 
 Next patch release is **1.13.8**.
 
-| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
-| --- | --- | --- | --- |
-| 1.13.9 | TBD | TBD | [kubernetes-patch-release-team] |
-| 1.13.8 | 2019-07-02 | 2019-07-08 | [kubernetes-patch-release-team] |
-| 1.13.7 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
-| 1.13.6 | 2019-05-06 | 2019-05-08 | [kubernetes-patch-release-team] |
-| 1.13.5 | 2019-03-21 | 2019-03-25 | @aleksandra-malinkowska, @tpepper |
-| 1.13.4 | 2019-02-26 | 2019-02-28 | @aleksandra-malinkowska |
-| 1.13.3 | 2019-01-24 | 2019-02-01 | @tpepper |
-| 1.13.2 | 2019-01-08 | 2019-01-10 | @tpepper |
-| 1.13.1 | 2018-12-11 | 2018-12-13 | @aleksandra-malinowska |
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.13.9 | TBD | TBD |
+| 1.13.8 | 2019-07-02 | 2019-07-08 |
+| 1.13.7 | 2019-06-03 | 2019-06-06 |
+| 1.13.6 | 2019-05-06 | 2019-05-08 |
+| 1.13.5 | 2019-03-21 | 2019-03-25 |
+| 1.13.4 | 2019-02-26 | 2019-02-28 |
+| 1.13.3 | 2019-01-24 | 2019-02-01 |
+| 1.13.2 | 2019-01-08 | 2019-01-10 |
+| 1.13.1 | 2018-12-11 | 2018-12-13 |
+
 
 ### 1.12
 
 Next patch release is **1.12.9**.
 
-| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
-| --- | --- | --- | --- |
-| 1.12.10 | 2019-06-28 | 2019-07-01 | @feiskyer |
-| 1.12.9 | 2019-05-24 | 2019-05-27 | @feiskyer |
-| 1.12.8 | 2019-04-19 | 2019-04-24 | @feiskyer |
-| 1.12.7 | 2019-03-21 | 2019-03-25 | @feiskyer |
-| 1.12.6 | 2019-02-23 | 2019-02-26 | @feiskyer |
-| 1.12.5 | 2019-01-15 | 2019-01-17 | @feiskyer |
-| 1.12.4 | 2018-12-13 | 2018-12-18 | @feiskyer |
-| 1.12.3 | 2018-11-08 | 2018-11-26 | @feiskyer |
-| 1.12.2 | 2018-10-23 | 2018-10-26 | @feiskyer |
-| 1.12.1 | 2018-10-05 | 2018-10-05 | @feiskyer |
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.12.10 | 2019-06-28 | 2019-07-01 |
+| 1.12.9 | 2019-05-24 | 2019-05-27 |
+| 1.12.8 | 2019-04-19 | 2019-04-24 |
+| 1.12.7 | 2019-03-21 | 2019-03-25 |
+| 1.12.6 | 2019-02-23 | 2019-02-26 |
+| 1.12.5 | 2019-01-15 | 2019-01-17 |
+| 1.12.4 | 2018-12-13 | 2018-12-18 |
+| 1.12.3 | 2018-11-08 | 2018-11-26 |
+| 1.12.2 | 2018-10-23 | 2018-10-26 |
+| 1.12.1 | 2018-10-05 | 2018-10-05 |
+
 
 ### 1.11 and older
 
 These releases are no longer supported.
 
+[cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md
 [release-managers]: /release-managers.md
 [release process description]: https://git.k8s.io/community/contributors/devel/sig-release/release.md
-[kubernetes-patch-release-team]: mailto:kubernetes-patch-release-team@googlegroups.com
-[cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md
