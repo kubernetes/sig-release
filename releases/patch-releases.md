@@ -66,7 +66,7 @@ Next patch release is **1.13.8**.
 
 | **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
 | --- | --- | --- | --- |
-| 1.13.9 | TBD | TBD | kubernetes-patch-release-team] |
+| 1.13.9 | TBD | TBD | [kubernetes-patch-release-team] |
 | 1.13.8 | 2019-07-02 | 2019-07-08 | [kubernetes-patch-release-team] |
 | 1.13.7 | 2019-06-03 | 2019-06-06 | [kubernetes-patch-release-team] |
 | 1.13.6 | 2019-05-06 | 2019-05-08 | [kubernetes-patch-release-team] |
