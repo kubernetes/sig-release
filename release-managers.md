@@ -34,7 +34,7 @@ The responsibilities of each role are described below.
 The Patch Release Team is responsible for coordinating patch releases (`x.y.z`, where `z` >= 0) of Kubernetes. This team at times works in close conjunction with the [Product Security Committee](https://git.k8s.io/community/committee-product-security/README.md) and therefore should abide by the guidelines set forth in the [Security Release Process](https://git.k8s.io/security/security-release-process.md). 
 
 - Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
-- Hannes Horl ([@hoegaarden](https://github.com/hoegaarden))
+- Hannes Hörl ([@hoegaarden](https://github.com/hoegaarden))
 - Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
 - Tim Pepper ([@tpepper](https://github.com/tpepper))
 
