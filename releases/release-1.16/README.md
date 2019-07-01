@@ -1,6 +1,6 @@
 # Kubernetes 1.16
 
-#### Links 
+#### Links
 * [This document](https://git.k8s.io/sig-release/releases/release-1.16/README.md)
 * [Release Team](https://git.k8s.io/sig-release/releases/release-1.16/release_team.md)
 * [Meeting Minutes](http://bit.ly/k8s116-releasemtg) - TBD
@@ -21,24 +21,24 @@
 * [Triaging and Escalating Test Failures](https://git.k8s.io/community/contributors/devel/sig-testing/testing.md#troubleshooting-a-failure)
 
 ## tl;dr
-The 1.16 release cycle is proposed as follows: 
+The 1.16 release cycle is proposed as follows:
 
-- **Monday, July 01**  - Release Cycle Begins 
-- **Tuesday, July 30, EOD PST** - Enhancements Freeze 
-- **Thursday, August 29, EOD PST**  - Code Freeze 
-- **Monday, September 9** - Docs must be completed and reviewed 
-- **Monday, September 16** - Kubernetes 1.16.0 Released 
+- **Monday, July 01**  - Release Cycle Begins
+- **Tuesday, July 30, EOD PST** - Enhancements Freeze
+- **Thursday, August 29, EOD PST**  - Code Freeze
+- **Monday, September 9** - Docs must be completed and reviewed
+- **Monday, September 16** - Kubernetes 1.16.0 Released
 
-## What will we do differently this release? 
-* We have dissolved the test-infra role from the release team. The responsibilities of this role have been reallocted amongst other roles on the release team. This is the tracking [issue](https://github.com/kubernetes/sig-release/issues/631)
+## What will we do differently this release?
+* We have dissolved the test-infra role from the release team. The responsibilities of this role have been reallocated amongst other roles on the release team. This is the tracking [issue](https://github.com/kubernetes/sig-release/issues/631)
 * The itemized list of code changes for the release will be migrated from the release changelog `CHANGELOG-x.y.md` (where `x` and `y` are major and minor versions of Kubernetes, respectively) to [https://relnotes.k8s.io](https://relnotes.k8s.io)
 
-## What are we continuing from the previous release 
+## What are we continuing from the previous release
 * All Enhancements must have a KEP that is in `implementable` state by Enhancements Freeze. If the enhancement does not have a KEP in `implementable` state by Enhancements Freeze it will be removed from the milestone and will require an [exception](/releases/EXCEPTIONS.md).
 * No code slush
 * The Emeritus Adviser will be responsible for advising the Release Team Lead and Lead Shadows, ensuring shadow selection happens, and that release shadows are getting the most out of their participation in the release process.
 
-## Timeline 
+## Timeline
 | **What** | **Who** | **Jul** | **Aug** | **Sep** | **WEEK** | **CI SIGNAL** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Start of Release Cycle | Lead | Mon 1 | | | week 1 | [master-blocking] |
@@ -73,11 +73,11 @@ The 1.16 release cycle is proposed as follows:
 ## Phases
 
 ### Enhancements Freeze
-All enhancements wishing to be included in 1.16 must have 
-* A KEP in an implementable state 
-  * Including Testing Plans 
-  * Including Graduation Criteria 
-* An open issue in the 1.16 Milestone 
+All enhancements wishing to be included in 1.16 must have
+* A KEP in an implementable state
+  * Including Testing Plans
+  * Including Graduation Criteria
+* An open issue in the 1.16 Milestone
 
 If your enhancement does not meet these requirements, it will be removed from the milestone and will require an [exception](/releases/EXCEPTIONS.md).
 
@@ -101,7 +101,7 @@ The intent of these meetings is to:
   is marked in enhancements repo.
 * Provide a [one-stop view of release progress](http://bit.ly/k8s116-releasemtg)
   including relevant release metrics.
-  
+
 ### Code Freeze
 
 All enhancements going into the release must be code-complete, **including
@@ -126,10 +126,10 @@ release-1.16 branch.
 
 ### Exceptions
 
-Starting at [Enhancements Freeze] the release team will solicit and rule on 
+Starting at [Enhancements Freeze] the release team will solicit and rule on
 [exception requests] for enhancements and test work that is unlikely to be done
 by Code Freeze. The exception approval is the responsibility of the SIG or SIGs
-labeled in the pull request. The release team may intervene or deny the request 
+labeled in the pull request. The release team may intervene or deny the request
 only if it poses a risk to release quality, or could negatively impact the overall
 timeline. Changes introduced at this point should be well-tested,
 well-understood, limited in architectural scope, and low risk.  All of those
@@ -192,4 +192,4 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [master-upgrade]: https://testgrid.k8s.io/sig-release-master-upgrade#Summary
 [1.16-blocking]:https://testgrid.k8s.io/sig-release-1.16-blocking#Summary
 
-[exception requests]: https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md  
+[exception requests]: https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md
