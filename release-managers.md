@@ -7,19 +7,25 @@ The responsibilities of each role are described below.
 - [Contact](#Contact)
 - [Handbooks](#Handbooks)
 - [Patch Release Team](#Patch-Release-Team)
+  - [GitHub teams](#GitHub-teams)
+  - [Members](#Members)
 - [Branch Managers](#Branch-Managers)
+  - [Members](#Members-1)
 - [Associates](#Associates)
+  - [Members](#Members-2)
 - [Build Admins](#Build-Admins)
+  - [GitHub team](#GitHub-team)
+  - [Members](#Members-3)
 - [SIG Release Chairs](#SIG-Release-Chairs)
+  - [GitHub team](#GitHub-team-1)
+  - [Members](#Members-4)
 
 ## Contact
 
-| Role | Mailing List | Mailing List Visibility/Usage | GitHub | Slack |
+| Mailing List | Slack | Visibility | Usage | Membership |
 |---|---|---|---|---|
-| All | [kubernetes-release-managers@googlegroups.com](mailto:kubernetes-release-managers@googlegroups.com) | Private, communications to all roles | [@kubernetes/release-managers](https://github.com/orgs/kubernetes/teams/release-managers) | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group)
-| Patch Release Managers | [kubernetes-patch-release-team@googlegroups.com](mailto:kubernetes-patch-release-team@googlegroups.com) | Private, communications regarding patch releases | [@kubernetes/patch-release-team](https://github.com/orgs/kubernetes/teams/patch-release-team) | [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) (**_private_** channel) |
-| Branch Managers | N/A | N/A | N/A | N/A |
-| Build Admins | [kubernetes-build-admins@googlegroups.com](mailto:kubernetes-patch-release-team@googlegroups.com) | Private, communications regarding packaging debs/rpms | [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams/build-admins) | N/A |
+| [kubernetes-release-managers@googlegroups.com](mailto:kubernetes-release-managers@googlegroups.com) | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public | Public discussion for Release Managers | All Release Managers (Patch Release Team, Branch Managers, Associates, Build Admins, SIG Chairs) |
+| [kubernetes-release-managers-private@googlegroups.com](mailto:kubernetes-release-managers-private@googlegroups.com)| [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Patch Release Team, Build Admins, SIG Chairs |
 
 
 ## Handbooks
@@ -33,6 +39,11 @@ The responsibilities of each role are described below.
 
 The Patch Release Team is responsible for coordinating patch releases (`x.y.z`, where `z` >= 0) of Kubernetes. This team at times works in close conjunction with the [Product Security Committee](https://git.k8s.io/community/committee-product-security/README.md) and therefore should abide by the guidelines set forth in the [Security Release Process](https://git.k8s.io/security/security-release-process.md). 
 
+### GitHub teams
+- Access: [@kubernetes/release-managers](https://github.com/orgs/kubernetes/teams/release-managers)
+- Contact: [@kubernetes/patch-release-team](https://github.com/orgs/kubernetes/teams/patch-release-team)
+
+### Members
 - Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 - Hannes Hörl ([@hoegaarden](https://github.com/hoegaarden))
 - Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
@@ -43,6 +54,7 @@ The Patch Release Team is responsible for coordinating patch releases (`x.y.z`, 
 
 Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working in close conjunction with the [Release Team](/release-team/README.md) through each release cycle.
 
+### Members
 - Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon))
 - Yang Li ([@idealhack](https://github.com/idealhack))
 
@@ -51,6 +63,7 @@ Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of K
 
 Release Manager Associates are apprentices to the Branch Managers, formerly referred to as Branch Manager shadows.
 
+### Members
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Nikhil Manchanda ([@slicknik](https://github.com/slicknik))
 - Vivek Taparia ([@vivektaparia](https://github.com/vivektaparia))
@@ -70,6 +83,10 @@ Release Manager Associates are apprentices to the Branch Managers, formerly refe
 
 Build Admins are (currently) Google employees with the requisite access to Google build systems/tooling to publish deb/rpm packages on behalf of the Kubernetes project.
 
+### GitHub team
+- [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams/build-admins)
+
+### Members
 - Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 - Linus Arver ([@listx](https://github.com/listx))
 - Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))
@@ -81,6 +98,10 @@ SIG Release Chairs are responsible for the governance of SIG Release. They are m
 
 As such, they are highly privileged community members and privy to some private communications, which can at times relate to Kubernetes security disclosures.
 
+### GitHub team
+- [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes/teams/sig-release-admins)
+
+### Members
 - Caleb Miles ([@calebamiles](https://github.com/calebamiles))
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Tim Pepper ([@tpepper](https://github.com/tpepper))

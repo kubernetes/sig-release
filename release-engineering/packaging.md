@@ -24,7 +24,7 @@ This guide outlines the process of building debs/rpms for Kubernetes minor and p
 
 ## Communication
 
-The [Patch Release Team][patch-release-team] (patch releases) or [Branch Manager][branch-manager-handbook] (minor releases) will reach out to the [Kubernetes Build Admins][kubernetes-build-admins] via [email][kubernetes-build-admins] or `#release-managers` on [Kubernetes Slack](https://slack.k8s.io) (for more synchronous communication) requesting help to build the debs and rpms.
+The [Patch Release Team][patch-release-team] (patch releases) or [Branch Manager][branch-manager-handbook] (minor releases) will reach out to the [Kubernetes Build Admins][kubernetes-build-admins] via the [Release Managers Google Group][release-managers-group] or [`#release-management`][release-management-slack] (for more synchronous communication) requesting help to build the debs and rpms.
 
 Patch Release Team members or Branch Managers requesting debs/rpms should be sure to provide explicit details on the package name(s), version(s), and revision(s) they need built.
 
@@ -117,20 +117,22 @@ The following jobs are currently configured to do some aspect of package validat
 
 **These tend to break when we are in the middle of a push.**
 
-If any of these tests are broken, the [Patch Release Team][patch-release-team] should receive an alert regarding the failure.
+If any of these tests are broken, the [Release Managers Google Group][release-managers-group] should receive an alert regarding the failure.
 
-If there is continued test failure on this dashboard without intervention from the Patch Release Team, escalate to the current [Release Team][release-team] and [test-infra on-call][test-infra-oncall].
+If there is continued test failure on this dashboard without intervention from the Release Managers, escalate to the current [Release Team][release-team] and [test-infra on-call][test-infra-oncall].
 
 
 [branch-manager-handbook]: /release-engineering/role-handbooks/branch-manager.md
 [branch-manager-build-and-release]: /release-engineering/role-handbooks/branch-manager.md#build-and-release
 [kubeadm-install]: https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl
 [kubernetes/release]: https://git.k8s.io/release
-[kubernetes-build-admins]: https://groups.google.com/forum/#!forum/kubernetes-build-admins
-[patch-release-team]: /releases/patch-releases.md
+[kubernetes-build-admins]: /release-managers.md#build-admins
+[patch-release-team]: /release-managers.md#patch-release-team
 [rapture]: https://cs.corp.google.com/piper///depot/google3/experimental/users/mehdy/kubernetes/k8s-rapture.sh
 [rapture-readme]: https://g3doc.corp.google.com/cloud/kubernetes/g3doc/release/rapture.md?cl=head
 [release-engineering-dashboard]: https://testgrid.k8s.io/sig-release-misc
+[release-management-slack]: https://kubernetes.slack.com/messages/CJH2GBF7Y
+[release-managers-group]: https://groups.google.com/forum/#!forum/kubernetes-release-managers
 [release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [security-release-process]: /security-release-process-documentation/security-release-process.md
 [test-infra-oncall]: https://go.k8s.io/oncall
