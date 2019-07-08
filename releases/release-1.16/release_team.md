@@ -12,6 +12,6 @@ Review the [Release Managers page](/release-managers.md) for up-to-date contact 
 
 The schedule for all patch releases can be found at [Patch Releases page](/releases/patch-releases.md). It will be updated to include 1.16, once the 1.16 release cycle concludes.
 
-**Emeritus Adviser:** Josh Berkus ([@jberkus](https://github.com/jberkus))
+**Emeritus Advisers:** Josh Berkus   ([@jberkus](https://github.com/jberkus)), Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 
 (Emeritus Adviser assists in shadow selection, and mentors shadows through Release Team participation, development, and graduation.)
