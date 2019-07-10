@@ -42,16 +42,17 @@ for the next patch release.
 
 ### 1.15
 
-Coming soon...
+Next patch release is **1.15.1**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
-| 1.15.1 | TBD early July | TBD early July |
+| 1.15.2 | TBD mid August | TBD mid August |
+| 1.15.1 | 2019-07-15 | 2019-07-18 |
 
 
 ### 1.14
 
-Next patch release is **1.14.4**.
+Next patch release is **1.14.5**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
@@ -64,7 +65,7 @@ Next patch release is **1.14.4**.
 
 ### 1.13
 
-Next patch release is **1.13.8**.
+Next patch release is **1.13.9**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
@@ -79,25 +80,7 @@ Next patch release is **1.13.8**.
 | 1.13.1 | 2018-12-11 | 2018-12-13 |
 
 
-### 1.12
-
-Next patch release is **1.12.9**.
-
-| Patch Release | Cherry-picks deadline | Target date |
-| --- | --- | --- |
-| 1.12.10 | 2019-06-28 | 2019-07-01 |
-| 1.12.9 | 2019-05-24 | 2019-05-27 |
-| 1.12.8 | 2019-04-19 | 2019-04-24 |
-| 1.12.7 | 2019-03-21 | 2019-03-25 |
-| 1.12.6 | 2019-02-23 | 2019-02-26 |
-| 1.12.5 | 2019-01-15 | 2019-01-17 |
-| 1.12.4 | 2018-12-13 | 2018-12-18 |
-| 1.12.3 | 2018-11-08 | 2018-11-26 |
-| 1.12.2 | 2018-10-23 | 2018-10-26 |
-| 1.12.1 | 2018-10-05 | 2018-10-05 |
-
-
-### 1.11 and older
+### 1.12 and older
 
 These releases are no longer supported.
 
