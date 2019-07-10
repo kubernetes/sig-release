@@ -42,16 +42,17 @@ for the next patch release.
 
 ### 1.15
 
-Coming soon...
+Next patch release is **1.15.1**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
-| 1.15.1 | TBD early July | TBD early July |
+| 1.15.2 | TBD mid August | TBD mid August |
+| 1.15.1 | 2019-07-15 | 2019-07-18 |
 
 
 ### 1.14
 
-Next patch release is **1.14.4**.
+Next patch release is **1.14.5**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
@@ -64,7 +65,7 @@ Next patch release is **1.14.4**.
 
 ### 1.13
 
-Next patch release is **1.13.8**.
+Next patch release is **1.13.9**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
