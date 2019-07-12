@@ -2,17 +2,33 @@
 
 ## Overview:
 
-The Communications Coordinator role is responsible for facilitating, empowering, and curating communication between the release team and various stakeholders including the Cloud Native Computing Foundation (CNCF), the media, contributing vendors, and Kubernetes project managers. 
+The Communications Coordinator role is responsible for facilitating, empowering, and curating communication between the release team and various stakeholders including the Cloud Native Computing Foundation (CNCF), the media, contributing vendors, and Kubernetes project managers.
 
-Additionally, there are specific deliverables that must come from the release process in the form of a release blog, event speaking opportunities, webinars, coordination of 5 Day blog series with the CNCF, and approved messaging for media. In the event that the release schedule slips, the communications coordinator will ensure press timing is synchronized and kept advised of the revised timing.  
+Additionally, there are specific deliverables that must come from the release process in the form of a release blog, event speaking opportunities, webinars, coordination of 5 Day blog series with the CNCF, and approved messaging for media. In the event that the release schedule slips, the communications coordinator will ensure press timing is synchronized and kept advised of the revised timing.
 
-## Skills and Experience Required:
+## Requirements
+
+**Before continuing on to the Communications specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
+### Skills and Experience Required:
 
 - Strong written and verbal communications skills
 - Experience with the Kubernetes release process enough to understand how communications milestones fit into the overall release
 - Existing relationships with the CNCF, relevant media personnel and outlets, Kubernetes project managers, and vendor stakeholders
 - A working knowledge of Kubernetes concepts
 - Project management experience is helpful
+
+### Expected Time Investment
+
+The Kubernetes release cycle usually spans 12 weeks. The typical workload for the communications team is _very_ light the first few weeks. In the later weeks of the release cycle, the workload can get very heavy.
+
+The expected time investment for both leads and shadows are as follows:
+
+- 30 minutes to 2 hours a day, reviewing incoming KEPs and PRs, working with other SIGs or the CNCF on creating blog posts, and following Slack channels
+
+- 1 to 5 hours a week, attending Release Team (weekly) and Burndown meetings (daily during Code Freeze)
+
+**NOTE:** These are estimates and your personal experience may vary. The more time you can spend working as a team and regularly communicating within your team, the better off your experience will be.
 
 ## Release Milestone Activities:
 

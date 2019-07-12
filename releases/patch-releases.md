@@ -1,117 +1,89 @@
-# Kubernetes patch releases' schedule
+# Kubernetes Patch Releases
 
 Schedule and team contact information for Kubernetes patch releases.
 
-For general information about Kubernetes release cycle, see https://github.com/kubernetes/community/blob/master/contributors/devel/release.md
+For general information about Kubernetes release cycle, see the
+[release process description].
 
-# 1.13
+## Cadence
 
-## Patch Release Management Team
+The typical patch release cadence tends to be 3 to 4 weeks.  It is
+commonly a bit faster (1 to 2 weeks) for the earliest patch releases
+after a 1.X minor release.  Critical bug fixes may cause a more
+immediate release outside of the normal cadence.  We also aim to not make
+releases during major holiday periods.
 
-To discuss a cherry-pick, schedule, or anything else related to 1.13 patch releases,
-contact any member of the team. You can just tag us on #sig-release Slack channel
-or message directly. Please give us a business day to respond - we may be in a different timezone!
+## Contact
 
-Cherry-picks are monitored on regular basis, so it's likely you'll hear
-from us on PRs to release-1.13 branch by the time the next patch release is due.
+See the [Release Managers page][release-managers] for full contact details on the Patch Release Team.
 
-| **Github username** | **Slack username** |
-| --- | --- |
-| @aleksandra-malinowska | @aleksandram |
-| @tpepper | @tpepper |
+Please give us a business day to respond - we may be in a different timezone!
 
-## Timeline
+In between releases the team is looking at incoming cherry-pick
+requests on a weekly basis.  The team will get in touch with
+submitters via GitHub PR, SIG channels in Slack, and direct messages
+in Slack and email if there are questions on the PR.
 
-Next patch release is **1.13.2**.
+## Cherry-Picks
 
-Frequency of releases is likely to be about every 2 weeks at least until Kubernetes 1.14.0
-is released. After that, it may slow down based on demand. However, it can be affected
-by other factors, such as critical security fixes or holiday season.
+Please follow the [cherry-pick process].
 
-Cherry-picks deadline is the end of day by which all pending PRs to release-1.13
-branch have to merge to be included in the patch release. Any PRs left pending past
-this point will either wait for the next patch release, or may in rare cases
-delay current release.
+Cherry-picks must be merge-ready in GitHub with proper labels (eg:
+approved, lgtm, release note) and passing CI tests ahead of the
+cherry-pick deadline.  This is typically two days before the target
+release, but may be more.  Earlier PR readiness is better, as we
+need time to get CI signal after merging your cherry-picks ahead
+of the actual release.
 
-Target date is the date on which the patch release is cut. Must be at least 2
-days after cherry-picks deadline to allow all release-blocking tests to run.
+Cherry-pick PRs which miss merge criteria will be carried over and tracked
+for the next patch release.
 
-| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
-| --- | --- | --- | --- |
-| 1.13.3 | TBA | 2019-01-24 | TBA |
-| 1.13.2 | 2019-01-08 | 2019-01-10 | @tpepper |
-| 1.13.1 | 2018-12-11 | 2018-12-13 | @aleksandra-malinowska |
+## Timelines
 
-# 1.12
+### 1.15
 
-## Patch Release Management Team
+Next patch release is **1.15.1**.
 
-To discuss a cherry-pick, schedule, or anything else related to 1.12 patch releases,
-contact any member of the team. You can just tag us on #sig-release Slack channel
-or message directly. Please give us a business day to respond - we may be in a different timezone!
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.15.2 | TBD mid August | TBD mid August |
+| 1.15.1 | 2019-07-15 | 2019-07-18 |
 
-Cherry-picks are monitored on regular basis, so it's likely you'll hear
-from us on PRs to release-1.12 branch by the time the next patch release is due.
 
-| **Github username** | **Slack username** |
-| --- | --- |
-| @feiskyer | @feisky |
+### 1.14
 
-## Timeline
+Next patch release is **1.14.5**.
 
-Next patch release is **1.12.5**.
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.14.5 | TBD  | TBD |
+| 1.14.4 | 2019-07-02 | 2019-07-08 |
+| 1.14.3 | 2019-06-03 | 2019-06-06 |
+| 1.14.2 | 2019-05-10 | 2019-05-14 |
+| 1.14.1 | 2019-04-05 | 2019-04-08 |
 
-Frequency of releases is likely to be about every 3 weeks. However, it can be affected
-by other factors, such as critical security fixes or holiday season.
 
-Cherry-picks deadline is the end of day by which all pending PRs to release-1.12
-branch have to merge to be included in the patch release. Any PRs left pending past
-this point will either wait for the next patch release, or may in rare cases
-delay current release.
+### 1.13
 
-Target date is the date on which the patch release is cut. Must be at least 2
-days after cherry-picks deadline to allow all release-blocking tests to run.
+Next patch release is **1.13.9**.
 
-| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
-| --- | --- | --- | --- |
-| 1.12.6 | TBA | TBA | TBA |
-| 1.12.5 | 2019-01-15 | 2019-01-17 | @feiskyer |
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.13.9 | TBD | TBD |
+| 1.13.8 | 2019-07-02 | 2019-07-08 |
+| 1.13.7 | 2019-06-03 | 2019-06-06 |
+| 1.13.6 | 2019-05-06 | 2019-05-08 |
+| 1.13.5 | 2019-03-21 | 2019-03-25 |
+| 1.13.4 | 2019-02-26 | 2019-02-28 |
+| 1.13.3 | 2019-01-24 | 2019-02-01 |
+| 1.13.2 | 2019-01-08 | 2019-01-10 |
+| 1.13.1 | 2018-12-11 | 2018-12-13 |
 
-# 1.11
 
-## Patch Release Management Team
-
-To discuss a cherry-pick, schedule, or anything else related to 1.11 patch releases,
-contact any member of the team. You can just tag us on #sig-release Slack channel
-or message directly. Please give us a business day to respond - we may be in a different timezone!
-
-Cherry-picks are monitored on regular basis, so it's likely you'll hear
-from us on PRs to release-1.11 branch by the time the next patch release is due.
-
-| **Github username** | **Slack username** |
-| --- | --- |
-| @foxish | @foxish |
-
-## Timeline
-
-Next patch release is **1.11.7**.
-
-Frequency of releases is likely to be about every 3 weeks. However, it can be affected
-by other factors, such as critical security fixes or holiday season.
-
-Cherry-picks deadline is the end of day by which all pending PRs to release-1.11
-branch have to merge to be included in the patch release. Any PRs left pending past
-this point will either wait for the next patch release, or may in rare cases
-delay current release.
-
-Target date is the date on which the patch release is cut. Must be at least 2
-days after cherry-picks deadline to allow all release-blocking tests to run.
-
-| **Patch Release** | **Cherry-picks deadline** | **Target date** | **Owner** |
-| --- | --- | --- | --- |
-| 1.11.8 | TBA | TBA | TBA |
-| 1.11.7 | 2019-01-22 | 2019-01-24 | @foxish |
-
-# 1.10 and older
+### 1.12 and older
 
 These releases are no longer supported.
+
+[cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md
+[release-managers]: /release-managers.md
+[release process description]: https://git.k8s.io/community/contributors/devel/sig-release/release.md

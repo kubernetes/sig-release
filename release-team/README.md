@@ -77,11 +77,16 @@ there are 3 types of Kubernetes releases:
 | Enhancements | [Enhancements Handbook](role-handbooks/enhancements/README.md) |
 | CI Signal | [CI Signal Handbook](role-handbooks/ci-signal/README.md) |
 | Bug Triage | [Bug Triage Handbook](role-handbooks/bug-triage/README.md) |
-| Branch Manager | [Branch Manager Handbook](role-handbooks/branch-manager/README.md) |
 | Docs | [Docs Handbook](role-handbooks/docs/README.md) |
 | Release Notes | [Release Notes Handbook](role-handbooks/release-notes/README.md) |
 | Communications | [Communications Handbook](role-handbooks/communications/README.md) |
-| Patch Release Management Team | [Patch Release Handbook](role-handbooks/patch-release-manager/README.md) |
+
+
+#### Retired Release Team roles
+
+- Patch Release Manager: moved to a role of [Release Managers][release-managers], which operates under the Release Engineering subproject.
+- Branch Manager: moved to a role of [Release Managers][release-managers], which operates under the Release Engineering subproject.
+- Test Infra: deprecated at the end of Kubernetes 1.15. Duties are now distributed to the [Branch Manager](/release-engineering/role-handbooks/branch-manager.md) and [Test Infra On-call (SIG Testing)](https://go.k8s.io/oncall) (#testing-ops and #sig-testing on Slack).
 
 ### Release Team Shadow
 Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future
@@ -94,7 +99,7 @@ Release responsibilities of individual contributors to the Kubernetes project ar
 
 #### During a patch release
 If you have a patch that needs to be ported back to a previous release (meaning it is a critical bug/security fix), once it is merged to the Kubernetes `master` branch:
-- Follow the [cherry-pick instructions to open a cherry-pick PR.](https://git.k8s.io/community/contributors/devel/cherry-picks.md)
+- Follow the [cherry-pick instructions to open a cherry-pick PR.](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md)
 - The Patch Release Manager will then review the PR and if it is ok for cherry-picking, will apply a `cherrypick-approved` label to it.
 
 #### During a major/minor release
@@ -126,7 +131,7 @@ is undefined.
 
 ### During "Security" releases
 For all unplanned or embargoed releases
-- Facilitate security releases following the under the [Security Release Process](security-release-process-documentation/security-release-process.md)
+- Facilitate security releases following the [Security Release Process](https://git.k8s.io/security/security-release-process.md)
 
 ## Release Team Selection
 
@@ -155,6 +160,24 @@ Maintainers of the GitHub team can, with justification, add or remove members at
 
 Members are expected to actively triage issues and PRs to retain membership in `kubernetes-milestone maintainers`. Members not fulfilling the duties of this role should be removed.
 
+Milestone maintainers also have write access to [kubernetes/enhancements][k/enhancements], which allows them to keep enhancement tracking issue descriptions up-to-date.
+
+To request membership to `kubernetes-milestone-maintainers` or update the team:
+- File a PR to [kubernetes/org][k/org] making changes to the `kubernetes-milestone-maintainers` team config [here](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml). In your PR, include the reason you're requesting access in the description, as well as a comment next to your username in the team config
+  e.g.,
+  ```
+  - justaugustus # Azure / PM / Release
+  - spiffxp # 1.14 RT Lead / Testing
+  ```
+- Assign an approver from the group you'll be maintaining issues/PRs for
+  i.e.,
+  - for SIGs: Request approval from a SIG Chair or Technical Lead
+  - for Release Team: Request approval from the current Release Team Lead or SIG Release Chairs
+  - for Special code reviewers: Request approval from SIG Release Chairs
+
+- Once your request is approved by the appropriate group, you can now assign to the PR to a SIG Release Chair for final approval.
+
+
 ---
 
 ## Filing exceptions
@@ -166,8 +189,11 @@ The process for filing an enhancement exception can be found [here][exceptions].
 [specific-responsibilities]: #specific-responsibilities
 [kubernetes-release-team-roles]: #kubernetes-release-team-roles
 [other-activities-of-the-release-team]: #other-activities-of-the-release-team
+[release-managers]: /release-managers.md
 [release-team-selection]: #release-team-selection
 [release-team-selection-process]: release-team-selection.md
 [milestone-maintainers]: #milestone-maintainers
 [filing-exceptions]: #filing-exceptions
 [exceptions]: /releases/EXCEPTIONS.md
+[k/enhancements]: https://git.k8s.io/enhancements
+[k/org]: https://git.k8s.io/org

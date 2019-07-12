@@ -8,6 +8,7 @@ CI Signal lead assumes the responsibility of the quality gate for the release. T
 - Ensuring that all release blocking tests provide a clear Go/No-Go signal for the release
 - Flagging regressions as close to source as possible i.e., as soon as the offending code was merged
 - Filing issues proactively for test failures and flakes, triaging issues to appropriate SIG/owner, following up on status and verifying fixes on newer test runs
+  - See also: [Working with SIGs outside sig-release](#working-with-sigs-outside-sig-release)
 - Studying patterns/history of test health from previous releases and working closely with SIGs and test owners to
   - Understand and fix the test for the current release
   - Understand if the test needs to be release blocking
@@ -19,10 +20,12 @@ The core responsibility of the CI Signal lead is to foster a culture of continuo
 ### Explicit detail is important:
 
 - If you're looking for answer that's not in this document, please file an issue so we can keep the document current.
-- Generally CI Signal lead errs on the side of filing an issue for each test failure or flake before following up with SIGs/owners. This way we dont _lose track of an issue_
+- Generally CI Signal lead errs on the side of filing an issue for each test failure or flake before following up with SIGs/owners. This way we don't _lose track of an issue_
 - If a dashboard isn't listed here, or a test isn't on one of the listed dashboards, **_CI Signal lead is not looking at it_**
 
 ## Requirements
+
+**Before continuing on to the CI Signal specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
 
 ### Time Requirements
 
@@ -55,7 +58,7 @@ Additionally, the following qualifications make a candidate more suitable for th
 In addition to the above requirements for Shadows, most of which become prerequisites, CI Signal Leads must:
 
 - Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers)
-- Have an working knowledge of our various test infrastructure tools, such as Testgrid, Triage, gubernator, Prow, and Tide.
+- Have a working knowledge of our various test infrastructure tools, such as Testgrid, Triage, gubernator, Prow, and Tide.
 - Signal lead need to understand what tests matter and generally how our testing infra is wired together.
   - He/she can ask previous CI Signal leads for advice
   - He/she can ask SIG-Testing for guidance
@@ -70,7 +73,7 @@ Here are some good early deliverables from the CI Signal lead between start of t
 - Maintain a master tracking sheet and keep it up-to-date with issues tracking any test failure/flake - [Sample sheet](https://docs.google.com/spreadsheets/d/1j2K8cxraSp8jZR2S-kJUT6GNjtXYU9hocNRiVUGZWvc/edit#gid=127492362)
 - Copy over any open test issues from previous release (ask previous CI Signal lead for the tracker sheet) and follow up on them with owners
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
-  - Make sure all open issues have a `priority/` label and one of either the `kind/flake` or `kind/failing-test` label
+  - Make sure all open issues have a `priority/` label (see: [Priority Labels](#priority-labels)) and one of either the `kind/flake` or `kind/failing-test` label
   - Make sure the issue is assigned against the current milestone 1.x, using /milestone
   - Assign the issue to appropriate SIG using /sig label
   - If you are aware of the individual associated with the enhancement area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around
@@ -154,6 +157,23 @@ The CI Signal lead should
   - To get a better and quicker feedback on upgrade/downgrade tests, we can look at upgrade jobs that have "parallel" in their title eg: [gce-1.10-master-upgrade-cluster-parallel](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.10-master-upgrade-cluster-parallel). These complete faster and are more stable since they don't run slow long running tests. If the parallel upgrade/downgrade jobs are green, this indicates we are mostly good with respect to upgrade functionality
   - Yet another tip to assess seriousness of the failure is to see if both gce and gke counterparts of a upgrade/downgrade job are failing eg: [gce-1.10-master-upgrade-master](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.10-master-upgrade-master) and [gke-gci-1.10-gci-master-upgrade-master](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gke-gci-1.10-gci-master-upgrade-master). If both are failing then its indicative of a systemic failure in upgrade functionality. If only gke jobs are failing then it might be a GKE only issue and does not block k8s release. In this case escalate to GKE Cluster Lifecycle team  (@roberthbailey, @krousey)
 
+## Working with SIGs outside sig-release
+2 scenarios that you will be involved in:
+
+1. Identifying tests from sig-<name> that should be/are part of sig-release's blocking and informing dashboards. Those tests could be submitted as part of a new feature/enhancement that sig-<name> is developing, or could be existing tests in blocking/informing dashboards.
+Questions to ask sig-<name>:
+  - Which e2e test jobs are release blocking for your SIG?
+  - What is the process for making sure the SIG's test grid remains healthy and resolving test failures?
+  - Would moving the e2e tests for the SIG into their own test jobs make maintaining those tests easier? If yes, consider placing them in a dashboard owned by sig-<name>.
+  - Is there a playbook for how to resolve test failures and how to identify whether or not another SIG owns the resolution of the issue? If not, could you (sig-<name>) develop one?
+  - What is the escalation point (email + slack) that will be responsible for keeping this test healthy?
+
+1. Escalating test failures/flakes to sig-<name>. Expectations:
+  - Each test must have an escalation point (email + slack).  The escalation point is responsible for keeping the test healthy.
+  - Fixes for test failures caused by areas of ownership outside the responsibility of the escalation point should be coordinated with other teams by the test escalation point.
+  - Escalation points are expected to be responsive within 24 hours, and to prioritize test failure issues over other issues.
+    - If you don't see this happening, get in touch with them on slack or other means to ask for their support.
+
 ## Tips and Tricks of the game
 
 ### Checking test dashboards
@@ -165,6 +185,19 @@ The CI Signal lead should
 - with verify failures, try to infer the failure from the log. Otherwise find the owning SIG to help
 - if a test case is failing in one job consistently, but not others, both the job owner and test case owner are responsible for identifying why this combination is different
 - You can look at past history of the job/test (even as far back as multiple releases) by querying the [triage dashboard for specific job and/or test name](https://storage.googleapis.com/k8s-gubernator/triage/index.html)
+
+### Priority Labels
+Issues you create for test failures and flakes must be assigned a `priority` label, that is compatible with the priorities described in the [Issue Triage contributor guide](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#define-priority).
+
+In the CI signal context, we're using priority labels to mean:
+
+| priority | Description | Expectation |
+| -- | -- | -- |
+| `priority/critical-urgent` | Actively impacting release-blocking signal. Includes: consistently failing tests,  frequently (more than 20% of the time) flaking tests  in release-blocking dashboards. | Work with sigs for these to be worked on as soon as possible, prioritized over other work. |
+| `priority/important-soon` | Negatively impacting release-blocking signal. Includes: Flakes (especially occurring >2% of the time) in release-blocking jobs, failures and flakes in release-informing jobs. | Work with sigs to resolve them soon, ideally before the end of this release cycle. |
+| `priority/important-longterm` | Painful, results in manual workarounds/toil, limits developer productivity, but is of lower urgency and importance than issues in `priority/critical-urgent` or `priority/important-soon`. | In reality, there's a high chance these won't be finished, or even started within the current release. Work with sigs to ensure they are on their radar, and help find ways they can be broken down into smaller chunks. |
+
+CI signal is not currently using `priority/backlog` or `priority/awaiting-more-evidence`.
 
 ### Routing test issues to SIG/owner
 

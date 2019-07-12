@@ -4,6 +4,11 @@
 
 The release team leader role is responsible for coordinating release activities, assembling the release team, taking ultimate accountability for all release tasks to be completed on time, and ensuring that a retrospective happens. The lead is also responsible for ensuring a successor is selected and trained for future release cycles.
 
+## Prerequisites Release Lead and Shadows
+
+**Before continuing on to the Release Lead specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
+
+
 ## Authority and Responsibility:
 
 The Release Team Lead should be an arbiter of decisions, and not the primary decision-maker. A lead should constantly search for the best-qualified people or SIGs to guide the decision, not "go it alone", unless it is a very specific concern within the release process itself. When decisions are made they must be weighted in favor of community concerns over those of individuals or specific companies. Leads must also relinquish any favoritism for the company they work for. If there is a conflict of interest, the lead must recuse themselves from that decision. Above all, the release lead is a servant leader to the team and the community.
@@ -61,8 +66,8 @@ Release Team selection should happen in accordance with the [Release Team Select
   - Enhancements tracking spreadsheet: [http://bit.ly/k8sXX-enhancements](http://bit.ly/k8sXX-enhancements)
   - Merged PRs with release notes: [http://bit.ly/k8sXX-relnotes](http://bit.ly/k8sXX-relnotes)
   - Use the same conventions for additional documents
-- Burndown meetings happen at 10AM Pacific Time, and you invite the [community calendar](mailto:cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) to them.
-- Burndown communications happen on the [burndown mailing list](mailto:kubernetes-milestone-burndown@googlegroups.com), not SIG-Release
+- Burndown meetings happen at 10AM Pacific Time, and you invite the [community calendar](cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) and the [Kubernetes Release calendar](agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com) to them.
+- Burndown communications happen on the [kubernetes-sig-release] mailing list.
 - Feature exceptions are to be reviewed by the owner SIG and brought to the release team for assessment of risk, especially across SIGs
 - General notification regarding the release should go to the kubernetes-dev and kubernetes-sig-leads lists, and this should automatically be captured into the [Kubernetes Discourse site](https://discuss.kubernetes.io/).
 - All issues and PRs in the milestone are considered release-blocking until proven otherwise by the owner SIG.
@@ -83,20 +88,21 @@ Release Team selection should happen in accordance with the [Release Team Select
 
 ### Before Release Begins
 - Attend previous release retro to capture feedback and encorporate it into next release cycle 
-- Plan release schedule and milestones.  Gather feedback as needed
+- Plan release schedule and milestones. Gather feedback as needed.
 - Make sure you have your shadows confirmed 
 - Have a handover meeting with the outgoing lead to get credentials to SIG Release Zoom and any other needed permissions
+- Request edit access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from the SIG Release Chairs
 
 ### Week 1 
 
 - Start the release cycle
-- Ensure you are joined to the following Google Groups:
-  - [kubernetes-milestone-burndown](https://groups.google.com/forum/#!aboutgroup/kubernetes-milestone-burndown)
-  - [kubernetes-sig-release](https://groups.google.com/forum/#!aboutgroup/kubernetes-sig-release)
-  - [kubernetes-sig-leads](https://groups.google.com/forum/#!aboutgroup/kubernetes-sig-leads)
-  - [kubernetes-dev](https://groups.google.com/forum/#!aboutgroup/kubernetes-dev)
-  - [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team): Send message to this private list introducing self, key release team roles and also request list membership be added for the release branch manager, patch manager, and release lead shadow. Any previous release managers can add you.
-- Ensure the release team is fully filled, with members subscribed to the kubernetes-milestone-burndown@googlegroups.com group.
+- Ensure you have joined the following Google Groups:
+  - [kubernetes-release-team]
+  - [kubernetes-sig-release]
+  - [kubernetes-sig-leads]
+  - [kubernetes-dev]
+  - [security-release-team]: Send message to this private list introducing self, key release team roles and also request list membership be added for the release branch manager, patch manager, and release lead shadow. Any previous release managers can add you.
+- Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
 - Ensure top-level OWNERS_ALIASES only includes personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
 - Send an update to kubernetes-dev and kubernetes-sig-leads mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
@@ -108,16 +114,16 @@ Release Team selection should happen in accordance with the [Release Team Select
 ### Week 2
 
 - Assist the enhancements lead in collecting planned work from SIGs
-- Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the kubernetes-milestone-burndown@googlegroups.com group. You will need to contact SIG-Release leads to gain access to the SIG's zoom.us account for hosting / recording / posting meeting video.
+- Schedule weekly release team meetings at 10 am Pacific time on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group. You will need to contact SIG Release leads to gain access to the SIG's zoom.us account for hosting / recording / posting meeting video.
 - Poll release team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
-- Create a Google Calendar for the release: Follow the steps in the [sig-governance documentation](https://git.k8s.io/community/sig-governance.md) to create and share a calendar with the community. Add key event dates during the cycle.
+- Add key event dates to the [Kubernetes Release Calendar][kubernetes-release-calendar] during the cycle. Ensure major calendar events are set to send an email reminder one week in advance.
 - Begin reporting release status at the community meeting
 - Continue meeting with SIGs for introductions
 
 ### Week 3
 
 - Create the release notes draft file in the release directory per the standard above
-- Prepare for x.y.0-alpha.0 "release", specifically that there is a branch manager on the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. But this synthetic notation is a point to review process with the branch manager. Request access to GCB through Caleb Miles for branch manager lead and optionally also read-only access (if system supports this) for the release lead and release lead shadow.
+- Prepare for x.y.0-alpha.0 "release", specifically that there is a branch manager on the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. But this synthetic notation is a point to review process with the branch manager. Request access to GCB through the [Release Managers Google Group][release-managers-group] for branch manager lead and optionally also read-only access (if system supports this) for the release lead and release lead shadow.
 - Begin coordination with SIG-Cluster-Lifecycle for their kubeadm release (they may create an issue in the milestone to track release blocking issues)
 - Identify any other dependent ecosystem projects that need release coordination
 - Announce/email that the following week is "enhancements freeze" and what that means
@@ -151,11 +157,11 @@ Release Halfway Point
 - The kubeadm and other dependent project issues should be created already
 - Check in with SIGs on their enhancement work to make sure they know code freeze is 3 weeks away, as well as emailing the kubernetes-dev list, and notifying the community at the weekly meeting
 - Adjust the enhancements repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered)
-- Remind Branch Manager that branch CI jobs will need next week.
+- Remind Branch Manager that branch CI jobs will be needed next week.
 
 ### Week 7
 
-- Coordinate x.y.0-beta.0 release, ensuring master-blocking, and master-upgrade dashboards are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal. The release-x.y branch is created automatically as a part of the beta.0 release. The branch manager now begins daily fast forwards.
+- Coordinate x.y.0-beta.0 release, ensuring master-blocking are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal. The release-x.y branch is created automatically as a part of the beta.0 release. The branch manager now begins daily fast forwards.
 - The burndown templates should be useful at this point since it starts asking about status relevant to each area now tracking (e.g. branch health, docs, communications, issues, etc.)
 - Branch Manager has release branch CI created and added to Testgrid
 - Most enhancement-oriented tasks should be completed at the end of this week
@@ -177,21 +183,21 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 
 ### Week 9
 
-- Branch Manager ensures automation ready to enforce labeling and other release policies
+- Branch Manager ensures automation is ready to enforce labeling and other release policies
 - The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, and less for the other team members)
 - Make sure everyone knows the docs deadline (PRs ready for review) is coming the following Friday.
-- Prepare for x.y.0-beta.1 release (week 10), ensuring x.y-blocking, master-blocking, and master-upgrade dashboards are 100% green, or all failures have issues filed and are being actively worked.
+- Prepare for x.y.0-beta.1 release (week 10), ensuring x.y-blocking, master-blocking are 100% green, or all failures have issues filed and are being actively worked.  
 
 ### Week 10
 
 - Code freeze begins, and it’s now the home stretch of the release. SIGs will need to ensure all work moving forward is carefully curated with merge required labels ([more info here](https://git.k8s.io/community/contributors/devel/release.md)). 
-- Branch Manager ensures automation actively enforcing merge blocking labeling and other release policies
+- Branch Manager ensures automation is actively enforcing merge blocking labeling and other release policies
 - The release team needs to look at any in-flight PRs and ensure nothing is being jammed in at the last minute without proper tests, review, etc. This is something to watch extremely closely because it happens every release. Just watch what gets merged closely after code freeze. Incorrectly merged items need assessed and perhaps reverted. GitHub has [a query comparing a release branch and master](https://github.com/kubernetes/kubernetes/compare/release-1.12).
 - Assist the documentation leads in collecting missing docs PRs.
-- Schedule burndown meetings starting next week for every weekday until the Friday after release day, make sure to invite the community calendar
+- Schedule burndown meetings starting next week for every weekday until the Friday after release day. Make sure to invite the [community calendar](cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) and the [Kubernetes Release calendar](agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com).
 - Release notes, and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead you may need to help assemble the notes.
 - Identify vacancies on the incoming release team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles. Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their release team role. Continue to improve and uphold the [Release Team Selection](/release-team/README.md#release-team-selection) process.
-- Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking, and master-upgrade dashboards are 100% green.
+- Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking are 100% green.  
 
 ### Week 11
 
@@ -238,9 +244,18 @@ Release Day
 
 - Release retrospective participation (you may also choose to facilitate it, but it’s not recommended)
 - Follow-up interviews with the media, the media roundtable.
-- Contact Caleb Miles to remove release lead, release lead shadow, and branch manager authorization in GCB, as appropriate for release team turn over.
--  ensure self, shadow and branch manager are removed as members of [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team), leaving patch release manager.
+- Contact the [Release Managers Google Group][release-managers-group] to remove release lead, release lead shadow, and branch manager authorization in GCB, as appropriate for release team turn over.
+- Ensure self, shadows, and branch managers are removed as members of [security-release-team], leaving patch release manager.
 
 ### Week 14
 
 - Help fill the any open positions for the next release milestone
+
+
+[kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
+[kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
+[kubernetes-sig-release]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+[kubernetes-sig-leads]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads
+[kubernetes-dev]: https://groups.google.com/forum/#!forum/kubernetes-dev
+[release-managers-group]: https://groups.google.com/forum/#!forum/kubernetes-release-managers
+[security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
