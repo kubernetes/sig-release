@@ -1,4 +1,5 @@
-# Kubernetes 1.15 
+# Kubernetes 1.15: The Persevering Release 
+![Game-of-kubernetes](game-of-kubernetes.jpg)
 
 #### Links 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.15/README.md)
