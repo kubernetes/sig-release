@@ -10,7 +10,7 @@
 #### Tracking docs
 
 * [Enhancements Tracking Sheet](http://bit.ly/k8s116-enhancement-tracking)
-* Bug Triage Tracking Sheet
+* [Bug Triage Tracking Sheet](http://bit.ly/k8s116-bugtriage)
 * [CI Signal Report](http://bit.ly/k8s116-cisignal)
 * [Retrospective Document](http://bit.ly/k8s116-retro)
 * [kubernetes/kubernetes v1.16 milestone](https://github.com/kubernetes/kubernetes/milestone/45)
