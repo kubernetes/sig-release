@@ -3,7 +3,7 @@
 ## Overview of CI Signal responsibilities
 
 CI Signal lead assumes the responsibility of the quality gate for the release. This person is responsible for:
-- Continuously monitoring various e2e tests in sig-release dashboards ([master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking), [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade), [x.y-blocking](https://k8s-testgrid.appspot.com/sig-release-1.11-blocking)) throughout the release cycle
+- Continuously monitoring various e2e tests in sig-release dashboards ([master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking), [master-informing](https://k8s-testgrid.appspot.com/sig-release-master-informing), `x.y-blocking` (x.y being the current release)) throughout the release cycle
 - Providing early and ongoing signals on release and test health to both Release team and various SIGs
 - Ensuring that all release blocking tests provide a clear Go/No-Go signal for the release
 - Flagging regressions as close to source as possible i.e., as soon as the offending code was merged
@@ -72,7 +72,7 @@ For any release, its schedule and activities/deliverable for each week will be p
 Here are some good early deliverables from the CI Signal lead between start of the release to enhancement freeze.
 - Maintain a master tracking sheet and keep it up-to-date with issues tracking any test failure/flake - [Sample sheet](https://docs.google.com/spreadsheets/d/1j2K8cxraSp8jZR2S-kJUT6GNjtXYU9hocNRiVUGZWvc/edit#gid=127492362)
 - Copy over any open test issues from previous release (ask previous CI Signal lead for the tracker sheet) and follow up on them with owners
-- Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
+- Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
   - Make sure all open issues have a `priority/` label (see: [Priority Labels](#priority-labels)) and one of either the `kind/flake` or `kind/failing-test` label
   - Make sure the issue is assigned against the current milestone 1.x, using /milestone
   - Assign the issue to appropriate SIG using /sig label
@@ -90,7 +90,7 @@ The SLA and involvement of signal lead at this stage might vary from release to 
 
 Day to day tasks remain pretty much the same as before, with the following slight changes
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) dashboard **daily**
-- Monitor [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) **every other day**
+- Monitor [master-informing](https://k8s-testgrid.appspot.com/sig-release-master-informing) **every other day**
 - Starting now, curate a **weekly CI Signal report** escalating current test failures and flakes and send to kubernetes-dev@googlegroups.com community. [See below](#reporting-status) for more details on the report format and contents
 
 Increased attention on maintaining signal early in the release cycle goes a long way in reducing the risk of late-found issues destabilizing the release during code freeze.
@@ -128,10 +128,10 @@ Scalability testing is inherently challenging and regressions in this area are p
 - Examination of results is actually the bigger more expensive part of the situation
 
 The following scalability jobs/tests could regress quite easily (due to seemingly unrelated PRs anywhere in k8s codebase), require constant manual monitoring/triaging and domain expertise to investigate and resolve.
-- [master-blocking gci-gce-100](https://k8s-testgrid.appspot.com/sig-release-master-blocking#gci-gce-100)
-- [master-blocking gce-scale-correctness](https://k8s-testgrid.appspot.com/sig-release-master-blocking#gce-scale-correctness)
-- [master-blocking gce-scale-performance](https://k8s-testgrid.appspot.com/sig-release-master-blocking#gce-scale-performance)
-- [release 1.xx-blocking gce-scalability-1.xx](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking#gci-gce-scalability-1.10) (Post release branch cut)
+- [master-blocking gce-cos-master-scalability-100](https://testgrid.k8s.io/sig-release-master-blocking#gce-cos-master-scalability-100)
+- [master-informing gce-scale-correctness](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-correctness)
+- [master-informing gce-scale-performance](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-performance)
+- `release 1.xx-blocking gce-cos-1.xx-scalability-100`
 
 The CI Signal lead should
 - Continuously monitor these tests early in the release cycle, ensure issues are filed and escalated to the Release team and right owners in SIG-Scalability (@bobwise, @shyamjvs, @wojtek-t)
@@ -139,23 +139,6 @@ The CI Signal lead should
 - Additionally, it might help to monitor SIG-Scalability’s performance dashboard to flag if and when there is considerable performance degradation
 
 Starting in 1.11, scalability tests are now blocking OSS presubmits. Specifically we are running performance tests on gce-100 and kubemark-500 setups. This is a step towards catching regressions sooner and stabilizing the release faster.
-
-### Upgrade/Downgrade tests
-[Upgrade tests](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#Summary) are inherently tricky in the way they are setup to run and test. We run multiple  combinations that test upgrading and downgrading of
-- just the master
-- entire cluster
-- on gce and gke
-- in parallel and otherwise
-
-We also run **skewed tests** which involve running the old k8s version’s tests i.e., 1.x-1.y tests, against the new (upcoming) version i.e., 1.x.y. Many of those tests will fail because of intentional changes in the new version, putting us in the position of back-patching tests to old versions and thus forcing us to add lots of new code to a stable release.
-
-The CI Signal lead should
-- Continuously monitor the [master-upgrade tests](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#Summary) throughout the cycle
-- If an upgrade/downgrade job is listed as FAILING, check the following and escalate accordingly
-  - if "UpgradeTest", "hpa-upgrade", "ingress-upgrade" tests are failing in an upgrade/downgrade job, then indeed master/cluster is failing to upgrade or downgrade. This is potentially release blocking. Escalate to SIG-cluster-lifecycle
-  - if "UpgradeTest", "hpa-upgrade", "ingress-upgrade" tests are passing and other SIG specific tests are failing, then upgrade/downgrade completed succesfully. Such failures are historically mostly flakes, resolve in subsequent runs and hence mostly not release blocking. Nevertheless, file issues (even for flakes) and escalate to appropriate test owning SIG for triage, assessment and resolution
-  - To get a better and quicker feedback on upgrade/downgrade tests, we can look at upgrade jobs that have "parallel" in their title eg: [gce-1.10-master-upgrade-cluster-parallel](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.10-master-upgrade-cluster-parallel). These complete faster and are more stable since they don't run slow long running tests. If the parallel upgrade/downgrade jobs are green, this indicates we are mostly good with respect to upgrade functionality
-  - Yet another tip to assess seriousness of the failure is to see if both gce and gke counterparts of a upgrade/downgrade job are failing eg: [gce-1.10-master-upgrade-master](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.10-master-upgrade-master) and [gke-gci-1.10-gci-master-upgrade-master](https://k8s-testgrid.appspot.com/sig-release-master-upgrade#gke-gci-1.10-gci-master-upgrade-master). If both are failing then its indicative of a systemic failure in upgrade functionality. If only gke jobs are failing then it might be a GKE only issue and does not block k8s release. In this case escalate to GKE Cluster Lifecycle team  (@roberthbailey, @krousey)
 
 ## Working with SIGs outside sig-release
 2 scenarios that you will be involved in:
