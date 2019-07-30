@@ -67,7 +67,7 @@ In addition to the above requirements for Shadows, most of which become prerequi
 
 For any release, its schedule and activities/deliverable for each week will be published in the release directory, e.g: [1.11 schedule](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.11/release-1.11.md#timeline). This section talks about specific CI Signal lead deliverable for each milestone in the release cycle.
 
-### Pre Feature Freeze
+### Pre Enhancement Freeze
 
 Here are some good early deliverables from the CI Signal lead between start of the release to enhancement freeze.
 - Maintain a master tracking sheet and keep it up-to-date with issues tracking any test failure/flake - [Sample sheet](https://docs.google.com/spreadsheets/d/1j2K8cxraSp8jZR2S-kJUT6GNjtXYU9hocNRiVUGZWvc/edit#gid=127492362)
@@ -86,7 +86,7 @@ Here are some good early deliverables from the CI Signal lead between start of t
 #### **_Best Practice:_**
 The SLA and involvement of signal lead at this stage might vary from release to release (and the CI Signal lead). However in an effort to establish an early baseline of the test health the signal lead can take an initial stab at the tests runs at the start of the release, open issues, gather and report on the current status. Post that, it might suffice to check on the tests **twice a week** due to high code churn and expected test instability.
 
-### Feature Freeze to Burndown
+### Enhancement Freeze to Burndown
 
 Day to day tasks remain pretty much the same as before, with the following slight changes
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) dashboard **daily**
@@ -143,7 +143,7 @@ Starting in 1.11, scalability tests are now blocking OSS presubmits. Specificall
 ## Working with SIGs outside sig-release
 2 scenarios that you will be involved in:
 
-1. Identifying tests from sig-<name> that should be/are part of sig-release's blocking and informing dashboards. Those tests could be submitted as part of a new feature/enhancement that sig-<name> is developing, or could be existing tests in blocking/informing dashboards.
+1. Identifying tests from sig-<name> that should be/are part of sig-release's blocking and informing dashboards. Those tests could be submitted as part of a new enhancement that sig-<name> is developing, or could be existing tests in blocking/informing dashboards.
 Questions to ask sig-<name>:
   - Which e2e test jobs are release blocking for your SIG?
   - What is the process for making sure the SIG's test grid remains healthy and resolving test failures?
@@ -242,9 +242,9 @@ Since 1.11 we started curating and broadcasting a weekly CI Signal report to the
   - Call out SIGs actively fixing and ignoring issues
   - Call out potential release blocking issues
   - Call out upcoming key dates e.g., Code freeze, thaw etc
-  - [Link to the previous reports](https://docs.google.com/document/d/1y044OcaKGEUgj094JH1ZxnnLRHnqi0Kq0f4ov56kvxE/edit)
+  - [Link to the previous reports](https://docs.google.com/document/d/1Xesru5QkBxxl8WOirNcWI4ho3exqfQBGz6mYJeXOi3U/edit#heading=h.qs3772g2kexl)
   - CCing individual SIGs (kubernetes-sig-foo@googlegroups.com) that own failing tests help in getting their attention
 
-[Sample Weekly CI Signal Report](https://groups.google.com/forum/#!topic/kubernetes-dev/S9AuFMiIJkQ)
+[Sample Weekly CI Signal Report](https://groups.google.com/d/msg/kubernetes-dev/nO8aKz3tavE/-aBpStu4CQAJ)
 
 Early and continuous reporting of test health proved greatly effective in rallying SIG attention to test failures and stabilizing the release much early in the release cycle.
