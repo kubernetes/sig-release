@@ -50,8 +50,8 @@ The 1.16 release cycle is proposed as follows:
 | **Begin [Enhancements Freeze][Enhancements Freeze** (EOD PST) | Enhancements Lead | Tue 30 | | | week 5 | [master-blocking], [master-upgrade] |
 | 1.16.0-alpha.2 released | Branch Manager | Tue 30 | | |  | |
 | 1.16.0-alpha.3 released | Branch Manager | | Tue 6 | | week 6 | |
-| release-1.12 jobs removed | Branch Manager | | Tue 6 | | | |
-| release-1.16 branch created | Branch Manager | | Tue 13 | | week 7 | |
+| release-1.12 jobs removed | Branch Manager | | Tue 13 | | week 7 | |
+| release-1.16 branch created | Branch Manager | | Tue 13 | | | |
 | 1.16.0-beta.0 released | Branch Manager | | Tue 13 | | | |
 | release-1.16 jobs created| Branch Manager | | Tue 13 | | | |
 | **Begin [Burndown]** (MWF meetings) | Lead | | Mon 19 | | week 8 | [1.16-blocking], [master-blocking], [master-upgrade] |
