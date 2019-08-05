@@ -1,0 +1,22 @@
+# Exceptions to Code Freeze requested in 1.16
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Lachlan Evenson ([@lachie83](https://github.com/lachie83))
+
+- name: Add status code and content check for HTTP Probe
+  issue: 1186
+  date_requested: 2019-07-31
+  date_reviewed: 2019-07-31
+  thread: https://groups.google.com/forum/#!topic/kubernetes-sig-release/D1roq-x_oh4
+  pull_requests:
+  -
+  status: Denied
+
+- name: Building Kubernetes Without In-Tree Cloud Providers
+  issue: 1179
+  date_requested: 2019-07-31
+  date_reviewed: 2019-08-01
+  thread: https://groups.google.com/forum/#!topic/kubernetes-sig-release/oE9TBpgiabU
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1180
+  - https://github.com/kubernetes/kubernetes/pull/80353
+  status: Approved
