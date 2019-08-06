@@ -132,7 +132,7 @@ If there is continued test failure on this dashboard without intervention from t
 [rapture-readme]: https://g3doc.corp.google.com/cloud/kubernetes/g3doc/release/rapture.md?cl=head
 [release-engineering-dashboard]: https://testgrid.k8s.io/sig-release-misc
 [release-management-slack]: https://kubernetes.slack.com/messages/CJH2GBF7Y
-[release-managers-group]: https://groups.google.com/forum/#!forum/kubernetes-release-managers
+[release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
 [release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [security-release-process]: /security-release-process-documentation/security-release-process.md
 [test-infra-oncall]: https://go.k8s.io/oncall

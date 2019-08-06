@@ -4,28 +4,28 @@ Release Managers is an umbrella term that encompasses the set of Kubernetes cont
 
 The responsibilities of each role are described below.
 
-- [Contact](#Contact)
-- [Handbooks](#Handbooks)
-- [Patch Release Team](#Patch-Release-Team)
-  - [GitHub teams](#GitHub-teams)
-  - [Members](#Members)
-- [Branch Managers](#Branch-Managers)
-  - [Members](#Members-1)
-- [Associates](#Associates)
-  - [Members](#Members-2)
-- [Build Admins](#Build-Admins)
-  - [GitHub team](#GitHub-team)
-  - [Members](#Members-3)
-- [SIG Release Chairs](#SIG-Release-Chairs)
-  - [GitHub team](#GitHub-team-1)
-  - [Members](#Members-4)
+- [Contact](#contact)
+- [Handbooks](#handbooks)
+- [Patch Release Team](#patch-release-team)
+  - [GitHub teams](#github-teams)
+  - [Members](#members)
+- [Branch Managers](#branch-managers)
+  - [Members](#members-1)
+- [Associates](#associates)
+  - [Members](#members-2)
+- [Build Admins](#build-admins)
+  - [GitHub team](#github-team)
+  - [Members](#members-3)
+- [SIG Release Chairs](#sig-release-chairs)
+  - [GitHub team](#github-team-1)
+  - [Members](#members-4)
 
 ## Contact
 
 | Mailing List | Slack | Visibility | Usage | Membership |
 |---|---|---|---|---|
-| [kubernetes-release-managers@googlegroups.com](mailto:kubernetes-release-managers@googlegroups.com) | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public | Public discussion for Release Managers | All Release Managers (Patch Release Team, Branch Managers, Associates, Build Admins, SIG Chairs) |
-| [kubernetes-release-managers-private@googlegroups.com](mailto:kubernetes-release-managers-private@googlegroups.com)| [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Patch Release Team, Build Admins, SIG Chairs |
+| [release-managers@kubernetes.io](mailto:release-managers@kubernetes.io) | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public | Public discussion for Release Managers | All Release Managers (Patch Release Team, Branch Managers, Associates, Build Admins, SIG Chairs) |
+| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io)| [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Patch Release Team, Build Admins, SIG Chairs |
 
 
 ## Handbooks

@@ -295,7 +295,7 @@ Release Day
 [onboarding]: /release-team/release-team-onboarding.md
 [Prow]: https://prow.k8s.io/
 [release-blocking]: /release-blocking-jobs.md
-[release-managers-group]: https://groups.google.com/forum/#!forum/kubernetes-release-managers
+[release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
 [security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
 [selection]: /release-team/release-team-selection.md
 [Testgrid]: https://testgrid.k8s.io/
