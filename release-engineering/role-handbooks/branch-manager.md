@@ -2,7 +2,7 @@
 
 - [Overview](#Overview)
   - [Minimum Skills and Requirements](#Minimum-Skills-and-Requirements)
-  - [Shadow Expectations](#Shadow-Expectations)
+  - [Associates Expectations](#Associates-Expectations)
 - [Prerequisite](#Prerequisite)
   - [Release Team Onboarding](#Release-Team-Onboarding)
   - [Branch Management Onboarding](#Branch-Management-Onboarding)
@@ -40,10 +40,10 @@ The release branch manager is responsible for cutting a version of [Kubernetes].
 1. Participate in weekly one hour release team meetings.
 1. Run `./branchff` on a daily basis as soon as the release branch i.e. `release-X.Y` [is created](#branch-creation). (Less than 45mins)
 1. Your time commitment increases during code freeze (when approaching the official release), expect 3 or more 1 hour meetings in a week.
-1. Select shadows and guide them in preparation to become the section lead for the next cycle.
-1. Delegate tasks to shadows (where applicable), so that they may exercise the release process.
+1. Select Associates and guide them in preparation to become the section lead for the next cycle.
+1. Delegate tasks to the Associates (where applicable), so that they may exercise the release process.
 1. Update this handbook where appropriate for the next release cycle.
-1. Have willingness to accommodate with different timezone esp. for the release team and your shadows.
+1. Have willingness to accommodate with different timezone esp. for the release team and your Associates.
 1. Participate in conversations that happen on [#sig-release] and [#release-management]
 
 To get a better overview of the time it takes to run the release tools, you can take a look at the collected metrics from each of these [release cut issues][release-cut-issues].
@@ -64,9 +64,9 @@ To get a better overview of the time it takes to run the release tools, you can 
 * Open to seeking help and can communicating clearly.
 * [Kubernetes Community Membership](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
 
-## Shadow Expectations
+## Associates Expectations
 
-This is not a rigid list of obligations from shadows under branch management, treat this as a list of tasks that we would like to see shadows participate in.
+This is not a rigid list of obligations from Associates under branch management, treat this as a list of tasks that we would like to see the Associates participate in.
 1. Attend most of the release team meetings; you're highly encouraged to give suggestions, ask questions, voice thoughts, etc.
 1. Know the release dates from the [release cycle Timeline](https://github.com/kubernetes/sig-release/tree/master/releases) and offer help if possible.
 1. Find ways or make/participate in discussion to improve the [release tools].
@@ -86,7 +86,7 @@ This is a collection of requirements and conditions to fulfil when taking on the
 A list of To Do(s) to get started as Branch Manager:
 
 - [ ] Contact the [Release Managers Google Group][release-managers-group] to identify yourself as the incoming release branch manager for the current release team and request to be added to the special privilege group for the `kubernetes-release-test` GCP project that's used to build the releases
-   * Similar access later in the cycle should be granted to shadows depending on how they progress and what actions they prove able to step up to exercise during the cycle.
+   * Similar access later in the cycle should be granted to the associates depending on how they progress and what actions they prove able to step up to exercise during the cycle.
 - [ ] Request permission to post on [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
    * If you haven't received access after 24 hrs, contact the [Release Team][kubernetes-release-team].
 - Machine setup:
