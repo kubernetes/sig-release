@@ -1,4 +1,4 @@
-# Patch Release Manager Playbook
+# Patch Release Manager Playbook <!-- omit in toc -->
 
 As the name implies, Patch Release Managers are responsible for
 managing patches against Kubernetes release branches and making the
@@ -8,14 +8,16 @@ of support in terms of patches for bugfixes and ongoing CI insuring
 the branch's health and the ability to update from 1.X.Y to 1.(X+1).Y,
 for the newest Y on each of those two branches.
 
--   [Getting started](#getting-started)
--   [Cherry-pick requests](#cherry-pick-requests)
--   [Branch health](#branch-health)
--   [Release timing](#release-timing)
--   [Release cut](#release-cut)
-    -   [Hotfix release](#hotfix-release)
-    -   [Security release](#security-release)
--   [Release Commands Cheat Sheet](#release-commands-cheat-sheet)
+- [Prerequisites for Patch Release Lead and Shadows](#prerequisites-for-patch-release-lead-and-shadows)
+  - [General Requirements](#general-requirements)
+- [Getting started](#getting-started)
+- [Cherry-pick requests](#cherry-pick-requests)
+- [Branch health](#branch-health)
+- [Release timing](#release-timing)
+- [Release cut](#release-cut)
+  - [Hotfix release](#hotfix-release)
+  - [Security release](#security-release)
+- [Release Commands Cheat Sheet](#release-commands-cheat-sheet)
 
 ---
 
@@ -78,7 +80,7 @@ access to multiple build and release tools:
   against the [sig-release teams configuration](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
   adding your userid to the kubernetes-release-managers member list.
 * Ask the list owner(s) to add you to the
-  [security-release-team](https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team)
+  [release-managers-private](https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers-private)
   via the owner contact form [here](https://groups.google.com/forum/#!contactowner/kubernetes-dev).
 * Ask the list owner(s) to give you access to post to these mailing lists:
    * [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) via owner contact form [here](https://groups.google.com/forum/#!contactowner/kubernetes-announce)
