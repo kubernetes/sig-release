@@ -203,21 +203,21 @@ Builds against the `master` branch are implicitly the next alpha. `gcbmgr` and `
 
 ## Beta Releases
 
-### Branch Creation
+### `beta.0` and Branch Creation
 
 During a `beta.0` release e.g., `1.16.0-beta.0`, our release tooling creates a new release branch named `release-x.y`, where `x` and `y` are the major and minor versions of the next release, respectively.
 
-Behind the scenes `anago` is doing a branch create and push.
+Behind the scenes `anago` is doing a git branch create and git push.
 
-`prow`’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs once per day and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `k/k` repo.
+`prow`’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs [every hour at 54 minutes past the hour](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/test-infra/test-infra-trusted.yaml#L867) and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo.
 
 New release branch creation (for example: `release-1.16`) also automatically triggers an alpha.0 build for the subsequent release (for example: [`v1.17.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.17.0-alpha.0)).
 
 **n.b.** This means that the staging step will take about twice as long, as it will stage both versions `v1.16.0-beta.0` and `v1.17.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
 
----
+### `beta.1` and Other Beta Releases
 
-Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `anago` automatically finds and increments the current build number. The command example below is to stage a build for a beta release:
+Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `anago` automatically find and increment the current build number. The command example below is to stage a build for a beta release:
 
 `./gcbmgr stage release-1.16 --build-at-head --nomock`
 
@@ -310,7 +310,7 @@ The following are some ways to determine if the release process was successful:
 
 1. The build tag and release artifacts become [visible on GitHub at https://github.com/kubernetes/kubernetes/releases](https://github.com/kubernetes/kubernetes/releases)
 
-2. The release is logged automatically by [k8s-release-robot](https://github.com/k8s-release-robot) in [sig-release](https://github.com/k8s-release-robot/sig-release)
+2. The release is logged automatically by [k8s-release-robot](https://github.com/k8s-release-robot) in [k/sig-release](https://git.k8s.io/sig-release)
 
 3. CHANGELOG-X.Y.md is automatically loaded into the kubernetes/kubernetes repo: [https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md)
 
@@ -390,14 +390,14 @@ This takes place around week 6-7, as soon as the new [`release-x.y` branch is cr
 
    `grep` for [`manual-release-bump-required`](https://github.com/kubernetes/test-infra/search?q=manual-release-bump-required&unscoped_q=manual-release-bump-required) in [test-infra](https://github.com/kubernetes/test-infra) and duplicate block entries appropriately
 
-7. Update release dashboards in [`testgrid/config.yaml`](https://github.com/kubernetes/test-infra/blob/master/testgrid/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/8aad58b09ae718139b44c70512d2d133d094ed82))
+7. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/8aad58b09ae718139b44c70512d2d133d094ed82))
    - Remove the oldest release `sig-release-<version>-{master,informing,all}` dashboards e.g., `sig-release-1.12-all`
    - Add dashboards for the current release e.g., `sig-release-1.16-{master,informing,all}`
 
 8. Check for and resolve configuration errors ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/867e9ee0329228c6c79399dc67097d0f94814f8f)):
 
    ```shell
-   bazel test //testgrid/cmd/configurator/...
+   bazel test //config/... //testgrid/... //hack:verify-config
    ```
 
    **Known issues**
@@ -406,15 +406,18 @@ This takes place around week 6-7, as soon as the new [`release-x.y` branch is cr
 
 9. Enable/update the `milestoneapplier` plugin configs for the following repos ([example PR](https://github.com/kubernetes/test-infra/pull/13888)):
     - `kubernetes/enhancements`
-      - Update config for `master` to current milestone e.g., `1.16`
+      - Update config for `master` to current milestone e.g., `v1.16`
     - `kubernetes/kubernetes`
       - Remove config oldest release branch
       - Add config for the current release branch
-      - Update config for `master` to current milestone e.g., `1.16`
+      - Update config for `master` to current milestone e.g., `v1.16`
     - `kubernetes/release`
-      - Update config for `master` to current milestone e.g., `1.16`
+      - Update config for `master` to current milestone e.g., `v1.16`
     - `kubernetes/sig-release`
-      - Update config for `master` to current milestone e.g., `1.16`
+      - Update config for `master` to current milestone e.g., `v1.16`
+
+   **Known issues**
+   - Once the handbook includes sections that explicitly dictate timeline, we need to mention that after Code Freeze we need to update the `kubernetes/kubernetes` config for `master` to next milestone e.g., `v1.17`.
 
 10. Update [kubernetes-versions.md](https://github.com/kubernetes/test-infra/blob/master/docs/kubernetes-versions.md)
 
@@ -427,7 +430,7 @@ This takes place around week 6-7, as soon as the new [`release-x.y` branch is cr
 12. Do a final check for configuration errors:
 
     ```shell
-    bazel test //testgrid/cmd/configurator/...
+   bazel test //config/... //testgrid/... //hack:verify-config
     ```
 
 13. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/13882))
@@ -446,7 +449,7 @@ This takes place around week 6-7, as soon as the new [`release-x.y` branch is cr
 
 Starting release cycle v1.16, branch management will take on duties from the Test Infra lead. Since the role was dissolved at the end of cycle v1.15. This section describes the added responsibility that branch management will partake:
 
-Between the Code Freeze and lifting Code Freeze (or Code Thaw) period, merging new code is restricted (focus is on fixing existing code and getting green test builds on Testgrid) and is implemented by a combination of prow plugins config, submit-queue config, and [tide]. The `master` and current release cycle branch i.e. release-x.y are the only branches affected during this period.
+Between the Code Freeze and lifting Code Freeze (or Code Thaw) period, merging new code is restricted (focus is on fixing existing code and getting green test builds on Testgrid) and is implemented by config changes for [tide]. The `master` and current release cycle branch i.e. release-x.y are the only branches affected during this period.
 
 Code freeze initiates additional merge requirements, while Code thaw marks the switch back to the development phase. Look at the [release cycle timeline](https://github.com/kubernetes/sig-release/tree/master/releases) for the exact dates for code freeze and code thaw. Usually the the date for code thaw is flexible depending on pending PRs.
 
