@@ -114,7 +114,7 @@ This is when things really begin to ramp up in the release cycle with active bug
 
 - Once 1.x.y-rc.1 release branch is cut and master re-opens for next release PRs
   - continue **1.x.y-blocking, and 1.x.y-informing dashboards on daily basis**
-  - check the **scalability jobs on master-informing** daily.
+  - check the **scalability jobs on master-informing** as often as they run.
   - you need not monitor master-blocking on a daily basis. It is, however, worth keeping an eye on master-blocking especially before risky cherry-picks make their way into the release branch
 - If tests have stabilized (they should have by now), you may stop sending the weekly CI report
 
@@ -144,7 +144,7 @@ The following scalability jobs/tests could regress quite easily (due to seemingl
 - [master-informing gce-scale-performance](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-performance)
 - `release 1.xx-blocking gce-cos-1.xx-scalability-100`
 
-Importantly, the expensive scalability jobs that run on master-informing do not run or appear on release-1.x.y-informing because we don't currently run them against the release branch as well as master.  As such, you need to look at these in master-informing even after you've otherwise stopped tracking master, and may need to interpret the delta between master and your release branch.
+Importantly, the expensive scalability jobs that run on master-informing do not run or appear on release-1.x.y-informing because we don't currently run them against the release branch as well as master.  This means that during Code Freeze, when you would normally ignore master-informing, you still need to keep track of gce-scale-performance and gce-scale-correctness there, since they don't run in the current release branch.  In the event of a problem with these jobs, you then will have to figure out whether the problem is related to code that's in the release branch, as opposed to code that exists only in master.
 
 The CI Signal lead should
 - Continuously monitor these tests early in the release cycle, ensure issues are filed and escalated to the Release team and right owners in SIG-Scalability (@bobwise, @shyamjvs, @wojtek-t)
