@@ -64,15 +64,6 @@
 - kubeadm: enable secure serving for the kube-scheduler ([#80951](https://github.com/kubernetes/kubernetes/pull/80951), [@neolit123](https://github.com/neolit123))
 
   Courtesy of SIG Cluster Lifecycle
-- goos: linux
-  goarch: amd64
-  pkg: k8s.io/kubernetes/pkg/controller/deployment
-  BenchmarkGetPodMapForDeployment-12    	    5000	    286957 ns/op	  553957 B/op	     242 allocs/op
-  PASS
-  ok  	k8s.io/kubernetes/pkg/controller/deployment	1.649s
-   ([#79933](https://github.com/kubernetes/kubernetes/pull/79933), [@mm4tt](https://github.com/mm4tt))
-
-  Courtesy of SIG Apps, and SIG Scalability
 - Addition of Overhead field to the PodSpec and RuntimeClass types as part of the Pod Overhead KEP ([#76968](https://github.com/kubernetes/kubernetes/pull/76968), [@egernst](https://github.com/egernst))
 
   Courtesy of SIG API Machinery, SIG Apps, SIG CLI, and SIG Node
@@ -384,10 +375,6 @@
 ### SIG API Machinery, SIG CLI, SIG Cloud Provider, SIG Cluster Lifecycle, SIG Node, and SIG Release
 
 - Update golang/x/net dependency to bring in fixes for CVE-2019-9512, CVE-2019-9514 ([#81394](https://github.com/kubernetes/kubernetes/pull/81394), [@cblecker](https://github.com/cblecker))
-
-### SIG API Machinery, SIG Apps, SIG CLI, SIG Cloud Provider, SIG Cluster Lifecycle, SIG Network, SIG Node, and SIG Testing
-
-- "NONE" ([#79392](https://github.com/kubernetes/kubernetes/pull/79392), [@Bowenislandsong](https://github.com/Bowenislandsong))
 
 ### SIG Apps, SIG Node, SIG Testing, and SIG Windows
 
