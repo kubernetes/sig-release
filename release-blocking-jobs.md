@@ -1,4 +1,4 @@
-# Release Blocking Test Jobs
+# Release Blocking Jobs and Criteria
 
 [SIG-Release TestGrid](https://testgrid.k8s.io/sig-release-master-blocking)
 
@@ -18,13 +18,13 @@ determine readiness to release.  They are there either to support other
 teams (such as the Release Engineering) or as "parking" for jobs that need to
 be fixed.
 
-If you want to add a release-blocking job, please add them to the appropriate
+If you want to add a Blocking job, please add them to the appropriate
 Informing dashboard first. The release team can later decide if the test should
 be moved to the Blocking dashboard.
 
 Additional documentation may be found in the [CI Signal Role Handbook](./release-team/role-handbooks/ci-signal/README.md).
 
-## Release-Blocking Dashboard
+## Release-Blocking Criteria and Dashboard
 
 Jobs on the Blocking dashboard for a particular release should block that
 release if they do not have at least three successive "green" runs at go/nogo
@@ -36,7 +36,7 @@ As such, criteria for what jobs are on Blocking are rather stringent, in order
 to prevent aborting a release unnecessarily.  Note that not all current jobs
 meet the below criteria completely due to technical debt.  Blocking jobs must:
 
-- Have a documented reason for its inclusion in the release-blocking suite
+- Have a documented reason for its inclusion in the Blocking suite
 <!-- TODO(spiffxp):
   - represented in description? link to an issue where discussion was had?
 -->
@@ -67,21 +67,14 @@ The thresholds given have some flexibility. We recognize that not every job may 
 able to strictly adhere to all of these criteria all of the time.  We also
 recognize that metrics can be gamed. Thus we consider human review to be the
 ultimate authority in the process to promote a demote a job as
-release-blocking, and metrics to be the triggering criteria for such review.
+Blocking, and metrics to be the triggering criteria for such review.
 There is no shame in being demoted, and once the problems have been fixed, a
 job can be promoted back.
-
-<!--
-We intend to drive the criteria to stricter thresholds over time, e.g.,
-- finishing a run in 60min or less
-- running at least every 2 hours
-- passing at least 90% of all runs
--->
 
 ## Release-Informing Dashboard
 
 Jobs that are considered useful or necessary to inform whether a commit on
-master is ready for release, but that clearly do not meet release-blocking
+master is ready for release, but that clearly do not meet Blocking
 criteria, may be placed on the Informing dashboard. These
 are often jobs that are some combination of slow, flaky, infrequent, or
 difficult to maintain.  There are often good reasons for these jobs to not meet
@@ -100,7 +93,7 @@ a release, they can be failing for known and "acceptable" reasons.
 ## Promoting or Demoting Jobs
 
 As described above, the thresholds and criteria given for jobs to be considered
-release-blocking or release-informing are at present aspirational. Having a
+Blocking or release-informing are at present aspirational. Having a
 formal, detailed process to promote or demote jobs is also aspirational.
 
 Here is a sketch of a process to follow, we will iterate as we find areas to
