@@ -1,6 +1,7 @@
 # Release Blocking Jobs and Criteria
 
-[SIG-Release TestGrid](https://testgrid.k8s.io/sig-release-master-blocking)
+* [SIG-Release-Master-Blocking](https://testgrid.k8s.io/sig-release-master-blocking)
+* [SIG-Release-Master-Blocking](https://testgrid.k8s.io/sig-release-master-informing)
 
 SIG-release maintains two sets of jobs that decide whether the release is
 healthy: Blocking and Informing.  Each of these sets is instantiated for each
@@ -18,7 +19,7 @@ determine readiness to release.  They are there either to support other
 teams (such as the Release Engineering) or as "parking" for jobs that need to
 be fixed.
 
-If you want to add a Blocking job, please add them to the appropriate
+If you want to add a Blocking job, please ask to add them to the appropriate
 Informing dashboard first. The release team can later decide if the test should
 be moved to the Blocking dashboard.
 
@@ -37,14 +38,12 @@ to prevent aborting a release unnecessarily.  Note that not all current jobs
 meet the below criteria completely due to technical debt.  Blocking jobs must:
 
 - Have a documented reason for its inclusion in the Blocking suite
-<!-- TODO(spiffxp):
-  - represented in description? link to an issue where discussion was had?
+<!-- TODO(spiffxp, jberkus):
+  - need to determine by policy where such documentation would exist
+  - this will probably be tied to the process of adding new jobs
 -->
 - Provision clusters via open-source software instead of a hosted service
-<!-- TODO(spiffxp):
-  - should any allowances be made for conformance?
--->
-- Have 75% of runs, or more, finishing in 120 minutes or less
+- Have the average of 75% percentile duration of all runs for a week finishing in 120 minutes or less
 - Run at least every 3 hours
 - Be able to pass 3 times in a row against the same commit
 - Be Owned by a SIG, WG, or other team that is responsive to addressing failures, and whose alert email is configured in the job.
@@ -73,6 +72,8 @@ job can be promoted back.
 
 ## Release-Informing Dashboard
 
+
+
 Jobs that are considered useful or necessary to inform whether a commit on
 master is ready for release, but that clearly do not meet Blocking
 criteria, may be placed on the Informing dashboard. These
@@ -93,7 +94,7 @@ a release, they can be failing for known and "acceptable" reasons.
 ## Promoting or Demoting Jobs
 
 As described above, the thresholds and criteria given for jobs to be considered
-Blocking or release-informing are at present aspirational. Having a
+Blocking or Informing are at present aspirational. Having a
 formal, detailed process to promote or demote jobs is also aspirational.
 
 Here is a sketch of a process to follow, we will iterate as we find areas to
