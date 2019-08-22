@@ -187,6 +187,22 @@ In the CI signal context, we're using priority labels to mean:
 | `priority/important-longterm` | Painful, results in manual workarounds/toil, limits developer productivity, but is of lower urgency and importance than issues in `priority/critical-urgent` or `priority/important-soon`. | In reality, there's a high chance these won't be finished, or even started within the current release. Work with sigs to ensure they are on their radar, and help find ways they can be broken down into smaller chunks. |
 
 CI signal is not currently using `priority/backlog` or `priority/awaiting-more-evidence`.
+If ever in doubt, label as `critical-urgent` to make sure you get eyes on the
+issue.
+
+### Milestones
+
+All issues the CI signal team creates must be part of the current milestone.
+In order to apply a milestone, you'll need to be part of the GitHub team
+[milestone-maintainers](https://github.com/orgs/kubernetes/teams/milestone-maintainers).
+
+To add an issue or PR to a milestone use the following Prow command:
+```
+/milestone v1.x
+```
+
+Near the end of the release cycle, if you still have open issues that are not
+release blocking, then feel free to move these to the next milestone.
 
 ### Routing test issues to SIG/owner
 
