@@ -42,7 +42,7 @@ for the next patch release.
 
 ### 1.15
 
-Next patch release is **1.15.3**.
+Next patch release is **1.15.4**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Next patch release is **1.15.3**.
 
 ### 1.14
 
-Next patch release is **1.14.6**.
+Next patch release is **1.14.7**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
@@ -69,7 +69,7 @@ Next patch release is **1.14.6**.
 
 ### 1.13
 
-Next patch release is **1.13.10**.
+Next patch release is **1.13.11**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
