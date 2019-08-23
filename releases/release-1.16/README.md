@@ -88,7 +88,7 @@ point we have a list of outstanding issues and PRs, and are actively working to
 burn that list down.  SIG representatives will be asked to attend if their SIG has
 specific outstanding issues that are blocking the release.
 
-Please subscribe to [Kubernetes Release Calendar] for joining this Meeting, it
+Please subscribe to the [Kubernetes Release Calendar][kubernetes-release-calendar] to see meeting events. Burndown meetings
 may conflict with other community meetings.  Please prioritize this meeting if
 a member of the release team asks you to attend.
 
