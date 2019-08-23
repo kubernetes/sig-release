@@ -186,7 +186,6 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [kubernetes/kubernetes]: https://github.com/kubernetes/kubernetes
 [kubernetes/enhancements]: https://github.com/kubernetes/enhancements
 [kubernetes/website]: https://github.com/kubernetes/website
-[Kubernetes Release Calendar]: https://bitly.com/k8s-release-cal
 
 [master-blocking]: https://testgrid.k8s.io/sig-release-master-blocking#Summary
 [master-upgrade]: https://testgrid.k8s.io/sig-release-master-upgrade#Summary
