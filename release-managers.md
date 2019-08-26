@@ -56,6 +56,7 @@ Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of K
 
 ### Members
 - Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon))
+- Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Yang Li ([@idealhack](https://github.com/idealhack))
 
 
@@ -64,7 +65,6 @@ Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of K
 Release Manager Associates are apprentices to the Branch Managers, formerly referred to as Branch Manager shadows.
 
 ### Members
-- Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Nikhil Manchanda ([@slicknik](https://github.com/slicknik))
 - Vivek Taparia ([@vivektaparia](https://github.com/vivektaparia))
 - Christian Jantz ([@chrisz100](https://github.com/chrisz100))

@@ -88,7 +88,7 @@ point we have a list of outstanding issues and PRs, and are actively working to
 burn that list down.  SIG representatives will be asked to attend if their SIG has
 specific outstanding issues that are blocking the release.
 
-Join [kubernetes-sig-release@] to get a calendar invite.  This meeting
+Please subscribe to the [Kubernetes Release Calendar][kubernetes-release-calendar] to see meeting events. Burndown meetings
 may conflict with other community meetings.  Please prioritize this meeting if
 a member of the release team asks you to attend.
 
@@ -183,7 +183,6 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
 [kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
-
 [kubernetes/kubernetes]: https://github.com/kubernetes/kubernetes
 [kubernetes/enhancements]: https://github.com/kubernetes/enhancements
 [kubernetes/website]: https://github.com/kubernetes/website

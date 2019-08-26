@@ -26,14 +26,6 @@
 
 <Add here>
 
-#### AWS
-
-<Add here>
-
-#### Azure
-
-<Add here>
-
 #### CLI
 
 <Add here>
@@ -43,10 +35,6 @@
 <Add here>
 
 #### Cluster Lifecycle
-
-<Add here>
-
-#### GCP
 
 <Add here>
 
@@ -62,10 +50,6 @@
 
 <Add here>
 
-#### Openstack
-
-<Add here>
-
 #### Release
 
 <Add here>
@@ -75,10 +59,6 @@
 <Add here>
 
 #### Storage
-
-<Add here>
-
-#### VMware
 
 <Add here>
 
@@ -149,12 +129,6 @@
 ### Autoscaling
 <Add here>
 
-### AWS
-<Add here>
-
-### Azure
-<Add here>
-
 ### CLI
 <Add here>
 
@@ -162,9 +136,6 @@
 <Add here>
 
 ### Cluster Lifecycle
-<Add here>
-
-### GCP
 <Add here>
 
 ### Instrumentation
@@ -176,9 +147,6 @@
 ### Node
 <Add here>
 
-### OpenStack
-<Add here>
-
 ### Release
 <Add here>
 
@@ -186,9 +154,6 @@
 <Add here>
 
 ### Storage
-<Add here>
-
-### VMware
 <Add here>
 
 ### Windows
