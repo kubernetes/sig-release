@@ -46,8 +46,8 @@ meet the below criteria completely due to technical debt.  Blocking jobs must:
 - Have the average of 75% percentile duration of all runs for a week finishing in 120 minutes or less
 - Run at least every 3 hours
 - Be able to pass 3 times in a row against the same commit
-- Be Owned by a SIG, WG, or other team that is responsive to addressing failures, and whose alert email is configured in the job.
-- Have passed 75% of all of its runs in the week before adding it to Blocking, and have failed for no more than 10 runs in a row
+- Be Owned by a SIG, or other team, that is responsive to addressing failures, and whose alert email is configured in the job.
+- Have passed 75% of all of its runs in a week, and have failed for no more than 10 runs in a row
 
 *In the case of failures, there must be an issue in kubernetes/kubernetes
 detailing that there is at least one person from the owning SIG working to
