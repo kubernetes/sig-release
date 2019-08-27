@@ -38,6 +38,16 @@ Refer to the [Branch Manager handbook][branch-manager-build-and-release] for det
 
 See also the [rapture documentation][rapture-readme], which contains details on running `rapture` (Google internal packaging tool).
 
+### Dependecy Pre-checks
+
+Before starting the release process, check for following items in your system.
+1.  Docker should be installed (`docker -v`)
+2.  You should be able to run docker commands without sudo (`docker image ls` )
+3.  rpm should be installed (`rpm --version`)
+4.  rapture should be installed (`rapture --version`)
+5.  gsutil should be installed (`gsutil -v`)
+
+
 ### Permissions
 
 Must be a member of mdb group - [mdb/cloud-kubernetes-release](mdb/cloud-kubernetes-release) to be able to perform the debs/rpms releases.
@@ -56,6 +66,11 @@ mkdir -p $HOME/k8s-1.20.0
 cd $HOME/k8s-1.20.0
 git clone https://github.com/kubernetes/release.git
 cd release
+```
+**UPDATE**: There have been some refactoring on `master` branch, so the internal script won't work as expected. For now you can checkout the latest tag `v0.1.3` before moving to next steps.
+
+```shell
+git checkout v0.1.3
 ```
 
 ### Authenticate
@@ -86,7 +101,7 @@ The entire build process takes several hours. Once you are ready to begin, the d
 
 ### Validating packages
 
-Now that `rapture` has successfully complete, we need to verify the packages that were just created. This validation can be done on any instance where Kubernetes is not already installed.
+Now that `rapture` has successfully complete, we need to verify the packages that were just created. This validation can be done on any instance where Kubernetes is not already installed. (Ideally, you would want to spin up a new VM to test.)
 
 **If you are on a system with any of these packages are already installed, you must uninstall them first.**
 
