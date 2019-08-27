@@ -3,7 +3,7 @@
 ## Overview of CI Signal responsibilities
 
 CI Signal lead assumes the responsibility of the quality gate for the release. This person is responsible for:
-- Continuously monitoring various e2e tests in sig-release dashboards ([master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking), [master-informing](https://k8s-testgrid.appspot.com/sig-release-master-informing), `x.y-blocking` (x.y being the current release)) throughout the release cycle
+- Continuously monitoring various e2e tests in sig-release dashboards ([master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking), [master-informing](https://k8s-testgrid.appspot.com/sig-release-master-informing), `release-x.y-blocking/informing` (x.y being the current release)) throughout the release cycle
 - Providing early and ongoing signals on release and test health to both Release team and various SIGs
 - Ensuring that all release blocking tests provide a clear Go/No-Go signal for the release
 - Flagging regressions as close to source as possible i.e., as soon as the offending code was merged
@@ -99,26 +99,52 @@ Increased attention on maintaining signal early in the release cycle goes a long
 ### Burndown to Code Freeze
 
 This is when things really begin to ramp up in the release cycle with active bug triaging and followup on possible release blocking issues to assess release health. Day to day tasks of CI Signal lead include
+<<<<<<< HEAD
+- Auditing test status of master-blocking, master-informing, release-x.y-blocking and release-x.y-informing dashboards on **daily basis**
+- Keeping issues' status up-to-date on GitHub
+=======
 - Auditing test status of master-blocking, master-informing, release-1.x.y-blocking, and release-1.x.y-informing dashboards on **daily basis**
 - Keeping issues' status upto-date on GitHub
+>>>>>>> master
 - Working closely with SIGs, test owners, bug triage lead and Release team in triaging, punting and closing issues
 - Updating issue tracker frequently so anyone on the release team can get to speed and help followup on open issues
 - Continuing to send [weekly CI signal report](#reporting-status)
 
 ### During Code Freeze
 
+<<<<<<< HEAD
+- Continue best practices from Burndown stage. Monitor master-blocking, master-informing, release-x.y-blocking, and release-x.y-informing dashboards on **daily basis**
+=======
 - Continue best practices from Burndown stage. Monitor master-blocking, master-informing, release-1.x.y-blocking, and release-1.x.y-informing dashboards on **daily basis**
+>>>>>>> master
 - Quickly escalate any new failures to release team and SIGs
 - Continuing to send [weekly CI signal report](#reporting-status)
 
 ### Exit Code Freeze
 
+<<<<<<< HEAD
+- Once 1.x.0-rc.1 release branch is cut and master re-opens for next release PRs
+  - continue **release-x.y-blocking, and release-x.y-informing dashboards on daily basis**
+  - check the **scalability jobs on master-informing** as often as they run.
+=======
 - Once 1.x.y-rc.1 release branch is cut and master re-opens for next release PRs
   - continue **master-informing, release-1.x.y-blocking, and release-1.x.y-informing dashboards on daily basis**
     - scalability tests are currently only running against the master branch so
       you'll need to contninue monitoring these in master-informing
+>>>>>>> master
   - you need not monitor master-blocking on a daily basis. It is, however, worth keeping an eye on master-blocking especially before risky cherry-picks make their way into the release branch
 - If tests have stabilized (they should have by now), you may stop sending the weekly CI report
+
+## Blocking vs. Informing Dashboards
+
+Summary: failing Blocking jobs always block release.  Failing Informing jobs sometimes block release.
+
+Jobs on the master-blocking and release-x.y-blocking dashboards are expected to be green *all the time*.  As such, you should take immediate action when one of them turns red, and may recommend postponing the release if any one of these jobs is not passing.
+
+Jobs on the master-informing and release-x.y-informing dashboards require more interpretation.  Some run infrequently or for a long time, and can take days to show effects from merged changes.  Others are inconsistent and require you to wait for several failed runs to file an issue and consult the owning SIG.  As a result, these tests block release either when they have unexplained failures, or failures that have been investigated and relate to blocking issues.  If they're just flaking, or failing for explained and tolerated reasons, they do not block.
+<!-- TODO: document procedure/criteria for tolerated failures in Informing -->
+
+For more detailed information about what's on these dashboards, see [Release Blocking Jobs](/release-blocking-jobs.md) documentation.
 
 ## Special high risk test categories to monitor
 
@@ -134,7 +160,9 @@ The following scalability jobs/tests could regress quite easily (due to seemingl
 - [master-blocking gce-cos-master-scalability-100](https://testgrid.k8s.io/sig-release-master-blocking#gce-cos-master-scalability-100)
 - [master-informing gce-scale-correctness](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-correctness)
 - [master-informing gce-scale-performance](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-performance)
-- `release 1.xx-blocking gce-cos-1.xx-scalability-100`
+- `release-x.y-blocking gce-cos-x.y-scalability-100`
+
+Importantly, the expensive scalability jobs that run on master-informing do not run or appear on release-x.y-informing because we don't currently run them against the release branch as well as master.  This means that during Code Freeze, when you would normally ignore master-informing, you still need to keep track of gce-scale-performance and gce-scale-correctness there, since they don't run in the current release branch.  In the event of a problem with these jobs, you then will have to figure out whether the problem is related to code that's in the release branch, as opposed to code that exists only in master.
 
 The CI Signal team should
 - Continuously monitor these tests early in the release cycle, ensure issues are filed and escalated to the Release team and right owners in [SIG-Scalability](https://github.com/kubernetes/community/tree/master/sig-scalability#chairs)
