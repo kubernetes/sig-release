@@ -1,4 +1,4 @@
-# Exceptions to Code Freeze requested in 1.16
+# Exceptions to Enhancement Freeze requested in 1.16
 # Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 # Release Team Lead: Lachlan Evenson ([@lachie83](https://github.com/lachie83))
 
@@ -28,4 +28,14 @@
   thread: https://groups.google.com/forum/#!topic/kubernetes-sig-release/0FT43tb7O-A
   pull_requests:
   - https://github.com/kubernetes/kubernetes/pull/80376
+  status: Approved
+
+# Exceptions to Code Freeze requested in 1.16
+- name: RuntimeClass Scheduling
+  issue: 894
+  date_requested: 2019-08-30
+  date_reviewed: 2019-08-30
+  thread: https://groups.google.com/forum/#!topic/kubernetes-sig-release/aidsW6L7ryU
+  pull_requests:
+  - https://github.com/kubernetes/kubernetes/pull/81915
   status: Approved
