@@ -50,8 +50,8 @@ The 1.16 release cycle is proposed as follows:
 | **Begin [Enhancements Freeze][Enhancements Freeze** (EOD PST) | Enhancements Lead | Tue 30 | | | week 5 | [master-blocking], [master-upgrade] |
 | 1.16.0-alpha.2 released | Branch Manager | Tue 30 | | |  | |
 | 1.16.0-alpha.3 released | Branch Manager | | Tue 6 | | week 6 | |
-| release-1.12 jobs removed | Branch Manager | | Tue 6 | | | |
-| release-1.16 branch created | Branch Manager | | Tue 13 | | week 7 | |
+| release-1.12 jobs removed | Branch Manager | | Tue 13 | | week 7 | |
+| release-1.16 branch created | Branch Manager | | Tue 13 | | | |
 | 1.16.0-beta.0 released | Branch Manager | | Tue 13 | | | |
 | release-1.16 jobs created| Branch Manager | | Tue 13 | | | |
 | **Begin [Burndown]** (MWF meetings) | Lead | | Mon 19 | | week 8 | [1.16-blocking], [master-blocking], [master-upgrade] |
@@ -88,7 +88,7 @@ point we have a list of outstanding issues and PRs, and are actively working to
 burn that list down.  SIG representatives will be asked to attend if their SIG has
 specific outstanding issues that are blocking the release.
 
-Join [kubernetes-sig-release@] to get a calendar invite.  This meeting
+Please subscribe to the [Kubernetes Release Calendar][kubernetes-release-calendar] to see meeting events. Burndown meetings
 may conflict with other community meetings.  Please prioritize this meeting if
 a member of the release team asks you to attend.
 
@@ -183,7 +183,6 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
 [kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
-
 [kubernetes/kubernetes]: https://github.com/kubernetes/kubernetes
 [kubernetes/enhancements]: https://github.com/kubernetes/enhancements
 [kubernetes/website]: https://github.com/kubernetes/website

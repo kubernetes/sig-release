@@ -10,6 +10,9 @@
 | kube-proxy               	|  ✅  	|   ✅   	|  ✅  	|   ✅   	|    ✅    	|   ✅   	|
 | kube-scheduler           	|  ✅  	|   ✅   	|  ✅  	|   ✅   	|    ✅    	|   ✅   	|
 
+Note: starting at 1.16 container images archives for 'amd64' will contain the arch in the name, like 'kube-apiserver-amd64'.
+These can be found inside the binaries tar files, in the manifest.json file under "RepoTags".
+
 ## Storage
 
 ### Binaries

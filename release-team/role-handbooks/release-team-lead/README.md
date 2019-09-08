@@ -4,31 +4,31 @@
 
 The release team leader role is responsible for coordinating release activities, assembling the release team, taking ultimate accountability for all release tasks to be completed on time, and ensuring that a retrospective happens. The lead is also responsible for ensuring a successor is selected and trained for future release cycles.
 
-- [Authority and Responsibility](#Authority-and-Responsibility)
-- [Prerequisites](#Prerequisites)
-- [Skills and Experience Required](#Skills-and-Experience-Required)
-- [Time Commitments](#Time-Commitments)
-- [Choosing a Release Team](#Choosing-a-Release-Team)
-- [Standards](#Standards)
-- [Release Milestone Activities](#Release-Milestone-Activities)
-  - [Before Release Begins](#Before-Release-Begins)
-  - [Week 1](#Week-1)
-  - [Week 2](#Week-2)
-  - [Week 3](#Week-3)
-  - [Week 4](#Week-4)
-  - [Week 5](#Week-5)
-- [Release Halfway Point](#Release-Halfway-Point)
-  - [Week 6](#Week-6)
-  - [Week 7](#Week-7)
-    - [Code Freeze Day](#Code-Freeze-Day)
-  - [Week 8](#Week-8)
-  - [Week 9](#Week-9)
-  - [Week 10](#Week-10)
-  - [Week 11](#Week-11)
-- [Release Day](#Release-Day)
-  - [Week 12](#Week-12)
-  - [Week 13](#Week-13)
-  - [Week 14](#Week-14)
+- [Authority and Responsibility](#authority-and-responsibility)
+- [Prerequisites](#prerequisites)
+- [Skills and Experience Required](#skills-and-experience-required)
+- [Time Commitments](#time-commitments)
+- [Choosing a Release Team](#choosing-a-release-team)
+- [Standards](#standards)
+- [Release Milestone Activities](#release-milestone-activities)
+  - [Before Release Begins](#before-release-begins)
+  - [Week 1](#week-1)
+  - [Week 2](#week-2)
+  - [Week 3](#week-3)
+  - [Week 4](#week-4)
+  - [Week 5](#week-5)
+- [Release Halfway Point](#release-halfway-point)
+  - [Week 6](#week-6)
+  - [Week 7](#week-7)
+    - [Code Freeze Day](#code-freeze-day)
+  - [Week 8](#week-8)
+  - [Week 9](#week-9)
+  - [Week 10](#week-10)
+  - [Week 11](#week-11)
+- [Release Day](#release-day)
+  - [Week 12](#week-12)
+  - [Week 13](#week-13)
+  - [Week 14](#week-14)
 
 
 ## Authority and Responsibility
@@ -125,7 +125,7 @@ Release Team selection should happen in accordance with the [Release Team select
   - [kubernetes-release-team]
   - [kubernetes-release-managers][release-managers-group]
   - [kubernetes-sig-leads]
-  - [security-release-team]: Request membership for you and your shadow(s) from the [Release Managers group][release-managers-group]
+  - [release-managers-private]: Request membership for you and your shadow(s) from the [Release Managers group][release-managers-group]
 - Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
@@ -271,7 +271,7 @@ Release Day
 - Release Retrospective participation
 - Follow-up interviews with the media, the media roundtable.
 - Contact the [Release Managers Google Group][release-managers-group] to remove Release Team Lead and shadows authorization in GCP, as appropriate for Release Team turn over.
-- Ensure self and shadows are removed as members of [security-release-team].
+- Ensure self and shadows are removed as members of [release-managers-private].
 
 ### Week 14
 
@@ -295,7 +295,7 @@ Release Day
 [onboarding]: /release-team/release-team-onboarding.md
 [Prow]: https://prow.k8s.io/
 [release-blocking]: /release-blocking-jobs.md
-[release-managers-group]: https://groups.google.com/forum/#!forum/kubernetes-release-managers
-[security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
+[release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
+[release-managers-private]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers-private
 [selection]: /release-team/release-team-selection.md
 [Testgrid]: https://testgrid.k8s.io/
