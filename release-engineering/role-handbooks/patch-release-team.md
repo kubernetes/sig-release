@@ -12,6 +12,13 @@ for the newest Y on each of those two branches.
   - [General Requirements](#general-requirements)
 - [Getting started](#getting-started)
 - [Cherry-pick requests](#cherry-pick-requests)
+- [Patch branch merge workflow and status tracking](#patch-branch-merge-workflow-and-status-tracking)
+  - [Rationale](#rationale)
+  - [Spreadsheets](#spreadsheets)
+    - [Time ordered rows](#time-ordered-rows)
+    - [Coloring](#coloring)
+    - [Row details](#row-details)
+  - [Tooling future work](#tooling-future-work)
 - [Branch health](#branch-health)
 - [Release timing](#release-timing)
 - [Release cut](#release-cut)
@@ -255,6 +262,174 @@ For each cherry-pick request:
     Tide has pools per active branch, so release branch cherry-pick
     PRs pending merge will be visible as rows distinct from the master
     branch in the [Tide Status](https://prow.k8s.io/tide).
+
+## Patch branch merge workflow and status tracking
+
+###  Rationale
+
+At any moment we typically have between a half dozen and a dozen
+cherry pick PRs pending on each branch.  Many of these are in a
+"cluster", picking the same change from master back to the various
+release branches.  These can be found per branch by a query such as:
+[is:open is:pr base:release-1.16
+label:do-not-merge/cherry-pick-not-approved](https://github.com/kubernetes/kubernetes/pulls?utf8=✓&q=is%3Aopen+is%3Apr+base%3Arelease-1.16+label%3Ado-not-merge%2Fcherry-pick-not-approved+).
+
+But these GitHub queries are point-in-time and do not show what's
+changed versus a prior run of the query.  Intermediate state must
+be externally recorded and updated for consistency.
+
+### Spreadsheets
+
+We maintain this evolving state in a set of spreadsheets, one
+spreadsheet per release branch.  These are privately shared amongst
+the patch release team because they contain information on inbound
+PRs that relate to security patches and target release date information
+that may be embargoed as per the Kubernetes security process (link).
+The use of the Google Docs platform means the team can simultaneously
+edit the state while also retaining a version history of changes
+for the team's future reference.
+
+![Image of a patch release team spreadsheet example](patch-release-team-spreadsheet-example.png)
+
+#### Time Ordered Rows
+
+The spreadsheets run in reverse chronological order with the newest
+patch release's activity at the top.
+
+Sections are made per patch release.
+
+A row is entered in a section per cherry pick pending ahead of that
+patch release.  Within each of these sections, cherry picks are
+listed in reverse PR number order, newest on top.  To add a notation
+for a newly inbound cherry pick, add a row above the current newest
+row.
+
+Using a consistent schema for rows and columns means the results
+of triaging one cherry pick, when it is part of a cluster of cherry
+picks on multiple branches pulling the same change from master, can
+be copy/pasted between spreadsheets.  This on average saves a lot
+of time and effort.  While we have settled into a roughly monthly
+release cadence and release udpates for all branches simultaneously
+most of the time, on occasion the branches do diverge both on release
+timing and on state for a cluster of cherry picks of the same parent
+PR, and this divergent state needs tracked distinctly per branch.
+
+The result is roughly a running log of our activities with the
+newest items on top.
+
+#### Coloring
+
+Rows are colored with red/yellow/green scheme to focus activity on
+specific cherry picks:
+
+ * red - a cherry pick that has been closed
+
+ * yellow - a cherry pick that is open and has no 'cherry-pick-approved' label
+
+ * green - a cherry pick that has the 'cherry-pick-approvel' label
+
+Cells are colored with bright yellow or red to highlight special action
+required, eg:
+
+ * yellow - Eg: decision needed, is in Tide merge pool, is a CVE or security related
+
+ * red - Eg: PR is held
+
+#### Row Details
+
+Each cherry pick row has a set of associated columns:
+
+ * ***Issue*** - link to GitHub issue, or "none"
+
+ * ***PR*** - link to the cherry pick PR
+
+ * ***Kind*** - eg: "bug", "cleanup", "feature", etc. from the PR label
+
+   * May be comma separated list depending on PR labels
+
+   * If the bug is determined to be a CVE this should also be noted, eg:
+     "bug CVE" and highlighted bright yellow.  This serves to help remind
+     that these are important to not discuss publicly and may have
+     additional external context not yet publicly in the GitHub PR.
+
+ * ***Submitter*** - human contact for the cherry pick PR
+
+ * ***SIG*** - comma separated list of SIGs labelled on the cherry pick PR
+
+ * ***Notes*** - short, human readable summary of the cherry pick PR, eg:
+
+   * "race in the ECR credentials provider kubernetes -> kubelet panic"
+
+   * "NPE in apiserver(?) and/or cli{?)"
+
+   * "upgrade release-1.13 to go1.11.13"
+
+   * In general our community does not provide the best of PR summary lines
+     and it can take considerable time for each patch release team member to
+     get to an understanding of the PR content.  Once one of us has done
+     that, storing it helps the rest of us as we collaboratively assess the
+     merit of the cherry pick.
+
+ * ***Disposition*** - "to merge?", "to close?", "to merge", "merging", "merged", "hold", "closed"
+
+   * current short form thinking of the team regarding where the cherry pick is
+
+   * "merging": when applying the ```cherry-pick-approved``` label in GitHub, update
+     the disposition to "merging" and highlight it bright yellow.  These PRs
+     will fall off the standard query of ```cherry-pick-not-approved``` PRs,
+     but may not actually merge for example due to a test failure or a Tide
+     hiccup, yet they need tracked until they have actually fully merged.
+     Once merged the cell can move back to a basic green.
+
+ * ***TODO*** - multi-line additional details on status and actions, where each
+  line may be, eg:
+
+   * "needs lgtm"
+
+   * "needs approve"
+
+   * "needs lgtm/approve"
+
+   * "CVE-2018-1002105"
+
+   * For many of the cherry picks, there is a corresponding cherry pick on
+     other release branches which should be noted, eg:
+
+     ```
+     CP in other releases:
+     1.13 https://github.com/kubernetes/kubernetes/pull/82503
+     1.14 https://github.com/kubernetes/kubernetes/pull/82502
+     1.15 https://github.com/kubernetes/kubernetes/pull/82384
+     ```
+
+     Filling this out means that once an issue is triaged for one branch,
+     it's just a copy/paste of that row into the spreadsheet for the other
+     branches.
+
+   * It can be useful to note your name and a date next to a line of text
+     here, especially early during the triage where we're trying to come to
+     a consensus on the merit of the cherry pick.
+
+A number of the fields here come from the parent PR automatically
+when the cherry pick automation is used (this should be the norm
+for most PRs).  The parent PRs may have poor labelling resulting
+in incomplete labels on the cherry pick.  Attempt to clean then up
+if possible or comment asking for owners to better disposition them.
+When recording unsure status from labels add a "?" in the spreadsheet
+cell to indicate the uncertainty.
+
+### Future Work
+
+ * It would be awesome to replace this manual stateful review workflow with a
+   tool.  Such a tool appears to need invented.
+
+ * Enhancing the cherry pick automation to accept a list of branches to
+   target, add cross-reference mentions between the clustered GitHub pull
+   requests, and assign the same human initial default reviewer to the set.
+
+ * Enhancing the k8s-ci-robot and merge criteria automation such that
+   features, api-changes, and non-critical-urgent pull requests are by default
+   merge blocked.
 
 ## Branch health
 
