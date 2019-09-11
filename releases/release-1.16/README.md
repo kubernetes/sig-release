@@ -3,7 +3,7 @@
 #### Links
 * [This document](https://git.k8s.io/sig-release/releases/release-1.16/README.md)
 * [Release Team](https://git.k8s.io/sig-release/releases/release-1.16/release_team.md)
-* [Meeting Minutes](http://bit.ly/k8s116-releasemtg) - TBD
+* [Meeting Minutes](http://bit.ly/k8s116-releasemtg)
 * [Kubernetes Release Calendar](https://bit.ly/k8s-release-cal)
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
 
