@@ -1,6 +1,6 @@
-# Patch Release Manager Playbook <!-- omit in toc -->
+# Patch Release Team Playbook <!-- omit in toc -->
 
-As the name implies, Patch Release Managers are responsible for
+As the name implies, Patch Release Team members are responsible for
 managing patches against Kubernetes release branches and making the
 1.X.Y patch releases during the support period after each 1.X minor
 release.  Kubernetes 1.X releases receive approximately 9 months
@@ -8,7 +8,7 @@ of support in terms of patches for bugfixes and ongoing CI insuring
 the branch's health and the ability to update from 1.X.Y to 1.(X+1).Y,
 for the newest Y on each of those two branches.
 
-- [Prerequisites for Patch Release Lead and Shadows](#prerequisites-for-patch-release-lead-and-shadows)
+- [Prerequisites for Patch Release Team members](#prerequisites-for-patch-release-team-members)
   - [General Requirements](#general-requirements)
 - [Getting started](#getting-started)
 - [Cherry-pick requests](#cherry-pick-requests)
@@ -21,7 +21,7 @@ for the newest Y on each of those two branches.
 
 ---
 
-Specific duties of the Patch Release Manager include:
+Specific duties of the Patch Release Team include:
 
 - Ensuring the release branch (e.g. `release-1.13`) remains in a
   healthy state as measured by the branch version specific release-blocking
@@ -43,17 +43,17 @@ Specific duties of the Patch Release Manager include:
   releases](/releases/patch-releases.md) and cutting the
   [releases](https://github.com/kubernetes/kubernetes/releases).
 
-While this playbook is intended to guide Patch Release Managers,
+While this playbook is intended to guide Patch Release Team members,
 it largely consists of opinions and recommendations from former
-patch release managers.  Each Patch Release Managers is ultimately
+patch release managers.  Each Patch Release Team member is ultimately
 responsible for carrying out their duties in the manner they deem
 best for the project.  The playbook then is more what you might
 call "guidelines" than actual hard rules.  Still each Patch Release
-Manager should endeavor to keep this document up to date, improve
+Team member should endeavor to keep this document up to date, improve
 its content, and improve the overall process of patch management
 for the project.
 
-## Prerequisites for Patch Release Lead and Shadows
+## Prerequisites for Patch Release Team members
 
 ### General Requirements
 
@@ -151,8 +151,8 @@ For each cherry-pick request:
       that are tied up with other changes. Ask the cherry-pick requester for
       context on the other changes and use your best judgment.
 
-    * Historically (up through at least 1.6), patch release managers have
-      occasionally granted exceptions to the "no new enhancements" rule for
+    * Historically (up through at least 1.6), there have been exceptions
+      occasionally granted to the "no new enhancements" rule for
       cherry-picks that are confined to plugins like cloud providers
       (e.g. vSphere, Azure) and volumes (e.g. Portworx).
 
@@ -210,7 +210,7 @@ For each cherry-pick request:
 1.  **Approve for Cherry-pick**
 
     PRs on release branches follow a different review process than those on the
-    `master` branch.  Patch release managers review every PR on the release branch,
+    `master` branch.  Patch Release Team members review every PR on the release branch,
     but the focus is just on ensuring the above criteria are met.
     The code itself was already reviewed, assuming it's copied from `master`, and
     should have `/lgtm` and `/approve` from the relevant reviewers and
@@ -242,7 +242,7 @@ For each cherry-pick request:
       The bot will suggest reviewers and approvers just like on `master`.
 
     Compared to non-cherry-pick PR's, a cherry-pick PR has one
-    additional merge criteria:  The Patch Release Manager(s) are
+    additional merge criteria:  The Patch Release Team members are
     entrusted with applying the `cherry-pick-approved` label.  This
     is done manually directly through the GitHub UI, not through a
     Prow command.  In response, the bot will remove the
@@ -278,7 +278,7 @@ branch.
 The upper bound is intended to avoid making users wait too long for fixes that
 are ready to go.
 
-The actual timing is up to the patch release manager, who should take into
+The actual timing is up to the patch release team, who should take into
 account input from cherry-pick PR authors and SIGs.
 For example, some bugs may be serious enough, and have a clear enough fix,
 to trigger a new patch release immediately.

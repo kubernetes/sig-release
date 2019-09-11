@@ -30,7 +30,7 @@ The responsibilities of each role are described below.
 
 ## Handbooks
 
-- [Patch Release Team](/release-engineering/role-handbooks/patch-release-manager.md)
+- [Patch Release Team](/release-engineering/role-handbooks/patch-release-team.md)
 - [Branch Managers](/release-engineering/role-handbooks/branch-manager.md)
 - [Build Admins](/release-engineering/packaging.md)
 
