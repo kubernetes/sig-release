@@ -285,4 +285,6 @@ Since 1.11 we started curating and broadcasting a weekly CI Signal report to the
 
 [Sample Weekly CI Signal Report](https://groups.google.com/d/msg/kubernetes-dev/nO8aKz3tavE/-aBpStu4CQAJ)
 
+You can use [this tool](https://github.com/alenkacz/ci-signal-report) to help you scaffold the report.
+
 Early and continuous reporting of test health proved greatly effective in rallying SIG attention to test failures and stabilizing the release much early in the release cycle.
