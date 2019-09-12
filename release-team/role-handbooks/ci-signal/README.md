@@ -99,39 +99,23 @@ Increased attention on maintaining signal early in the release cycle goes a long
 ### Burndown to Code Freeze
 
 This is when things really begin to ramp up in the release cycle with active bug triaging and followup on possible release blocking issues to assess release health. Day to day tasks of CI Signal lead include
-<<<<<<< HEAD
 - Auditing test status of master-blocking, master-informing, release-x.y-blocking and release-x.y-informing dashboards on **daily basis**
 - Keeping issues' status up-to-date on GitHub
-=======
-- Auditing test status of master-blocking, master-informing, release-1.x.y-blocking, and release-1.x.y-informing dashboards on **daily basis**
-- Keeping issues' status upto-date on GitHub
->>>>>>> master
 - Working closely with SIGs, test owners, bug triage lead and Release team in triaging, punting and closing issues
 - Updating issue tracker frequently so anyone on the release team can get to speed and help followup on open issues
 - Continuing to send [weekly CI signal report](#reporting-status)
 
 ### During Code Freeze
 
-<<<<<<< HEAD
 - Continue best practices from Burndown stage. Monitor master-blocking, master-informing, release-x.y-blocking, and release-x.y-informing dashboards on **daily basis**
-=======
-- Continue best practices from Burndown stage. Monitor master-blocking, master-informing, release-1.x.y-blocking, and release-1.x.y-informing dashboards on **daily basis**
->>>>>>> master
 - Quickly escalate any new failures to release team and SIGs
 - Continuing to send [weekly CI signal report](#reporting-status)
 
 ### Exit Code Freeze
 
-<<<<<<< HEAD
 - Once 1.x.0-rc.1 release branch is cut and master re-opens for next release PRs
   - continue **release-x.y-blocking, and release-x.y-informing dashboards on daily basis**
   - check the **scalability jobs on master-informing** as often as they run.
-=======
-- Once 1.x.y-rc.1 release branch is cut and master re-opens for next release PRs
-  - continue **master-informing, release-1.x.y-blocking, and release-1.x.y-informing dashboards on daily basis**
-    - scalability tests are currently only running against the master branch so
-      you'll need to contninue monitoring these in master-informing
->>>>>>> master
   - you need not monitor master-blocking on a daily basis. It is, however, worth keeping an eye on master-blocking especially before risky cherry-picks make their way into the release branch
 - If tests have stabilized (they should have by now), you may stop sending the weekly CI report
 
