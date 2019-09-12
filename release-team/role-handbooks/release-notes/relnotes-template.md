@@ -1,10 +1,22 @@
+<!-- TODO: change the version number -->
+
+# Kubernetes vX.XX.0 Release Notes
+
+A complete changelog for the release notes is now hosted in a customizable
+format at [https://relnotes.k8s.io][1]. Check it out and please give us your
+feedback!
+
+<!-- TODO: change the version number -->
+
+[1]: https://relnotes.k8s.io/?releaseVersions=X.XX.0
+
 ## What’s New (Major Themes)
 
-<Add themes from Comms Blog here>
+<!-- Add themes from Comms Blog here -->
 
 ## Known Issues
 
-<Add issues from known issues bucket (known-issues-bucket.md) here>
+<!-- Add issues from known issues bucket (known-issues-bucket.md) here -->
 
 ## Urgent Upgrade Notes
 
@@ -12,153 +24,174 @@
 
 #### API Machinery
 
-<Add here>
+<!-- Add here -->
 
 #### Apps
 
-<Add here>
+<!-- Add here -->
 
 #### Auth
 
-<Add here>
+<!-- Add here -->
 
 #### Autoscaling
 
-<Add here>
+<!-- Add here -->
 
 #### CLI
 
-<Add here>
+<!-- Add here -->
 
 #### Cloud Provider
 
-<Add here>
+<!-- Add here -->
 
 #### Cluster Lifecycle
 
-<Add here>
+<!-- Add here -->
 
 #### Instrumentation
 
-<Add here>
+<!-- Add here -->
 
 #### Network
 
-<Add here>
+<!-- Add here -->
 
 #### Node
 
-<Add here>
+<!-- Add here -->
 
 #### Release
 
-<Add here>
+<!-- Add here -->
 
 #### Scheduling
 
-<Add here>
+<!-- Add here -->
 
 #### Storage
 
-<Add here>
+<!-- Add here -->
 
 #### Windows
 
-<Add here>
+<!-- Add here -->
 
 ## Deprecations and Removals
 
-<Add
+<!-- Add in the format
+
 - Component
   - deprecation
   - removal
-  >
+
+-->
 
 ## Metrics Changes
 
-<Add here>
+<!-- Add here -->
 
 ### Added metrics
 
-<Add here>
+<!-- Add here -->
 
 ### Removed metrics
 
-<Add here>
+<!-- Add here -->
 
 ### Deprecated/changed metrics
 
-<Add here>
+<!-- Add here -->
 
 ## Notable Features
 
 ### Stable
 
-<Add here>
+<!-- Add here -->
 
 ### Beta
-<Add here>
+
+<!-- Add here -->
 
 ### Alpha
-<Add here>
+
+<!-- Add here -->
 
 ### Staging Repositories
-<Add here>
+
+<!-- Add here -->
 
 ### CLI Improvements
-<Add here>
+
+<!-- Add here -->
 
 ### Misc
-<Add here>
+
+<!-- Add here -->
 
 ## API Changes
 
-<Add here>
+<!-- Add here -->
 
 ## Other notable changes
 
 ### API Machinery
-<Add here>
+
+<!-- Add here -->
 
 ### Apps
-<Add here>
+
+<!-- Add here -->
 
 ### Auth
-<Add here>
+
+<!-- Add here -->
 
 ### Autoscaling
-<Add here>
+
+<!-- Add here -->
 
 ### CLI
-<Add here>
+
+<!-- Add here -->
 
 ### Cloud Provider
-<Add here>
+
+<!-- Add here -->
 
 ### Cluster Lifecycle
-<Add here>
+
+<!-- Add here -->
 
 ### Instrumentation
-<Add here>
+
+<!-- Add here -->
 
 ### Network
-<Add here>
+
+<!-- Add here -->
 
 ### Node
-<Add here>
+
+<!-- Add here -->
 
 ### Release
-<Add here>
+
+<!-- Add here -->
 
 ### Scheduling
-<Add here>
+
+<!-- Add here -->
 
 ### Storage
-<Add here>
+
+<!-- Add here -->
 
 ### Windows
-<Add here>
+
+<!-- Add here -->
 
 ## Dependencies
-<Add here>
 
+<!-- Add here -->
