@@ -93,16 +93,13 @@ should always represent the same state as the markdown document.
 
 Update this section at the end of each release for the next Release Notes Team.
 
-### Post 1.15 TODOs
+### Post 1.16 TODOs
 
 #### High Priority
 - Include previous release notes (1.14 and prior) in [Release notes website](https://relnotes.k8s.io)
-- Survey users and use Google analytics from the release notes website to continually improve the format of the UX of the release notes
 - Investigate opportunities to improve release notes collection by changing the
   PR boilerplate and/or creating new labels to indicate deprecations and
   dependencies (as per [#668](https://github.com/kubernetes/sig-release/issues/668))
-- Add links to relevant documentation in the release notes--especially the
-  Major Themes (as per [#667](https://github.com/kubernetes/sig-release/issues/667))
 
 #### If any team members have NLP experience:
 - Implement functionality in release-notes tool to automatically process language in generated release notes file
