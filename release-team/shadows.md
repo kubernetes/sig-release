@@ -90,3 +90,19 @@ A: Yes.  The time requirements for shadows are smaller and more flexible than th
 *Q: I want to shadow, but I'll be unavailable for part of the release cycle. Is that OK?*
 
 A: Maybe; it depends on when it is, and which role. Put your availability limitations in the form, and the Role Lead will decide if your absence means that shadowing won't work.
+
+*Q: I've run into problems with Shadowing, who do I talk to?*
+
+A: if it's a problem with your schedule or the tasks you're assigned, you can simply ask your Role Lead.  If you're having problems in your relationship with your Role Lead, then contact the Emeritus Advisor. If someone in the Release Team violates the Kubernetes Code of Conduct, then contact the CoC Committee *and* the EA.
+
+*Q: I'm a Role Lead and I'm having Shadow issues, who do I talk to?*
+
+A: Talk to the Emeritus Advisor.
+
+*Q: What if a Shadow needs to drop out?*
+
+A: This happens frequently; usually the Shadow is simply dropped from the roster. In some cases, particularly in the first two weeks of the release cycle, they may be replaced.
+
+*Q: What if the Role Lead can't continue, and one of the Shadows needs to take over?*
+
+A: The Release Lead, the EA, and the outgoing Role Lead (if possible) will discuss the matter and select one of the Shadows to become the new Role Lead.  This is one of the reasons we have Shadows.
