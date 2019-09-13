@@ -27,7 +27,7 @@ The 1.16 release cycle is proposed as follows:
 - **Tuesday, July 30, EOD PST** - Enhancements Freeze
 - **Thursday, August 29, EOD PST**  - Code Freeze
 - **Monday, September 9** - Docs must be completed and reviewed
-- **Monday, September 16** - Kubernetes 1.16.0 Released
+- **Wednesday, September 18** - Kubernetes 1.16.0 Released
 
 ## What will we do differently this release?
 * We have dissolved the test-infra role from the release team. The responsibilities of this role have been reallocated amongst other roles on the release team. This is the tracking [issue](https://github.com/kubernetes/sig-release/issues/631)
@@ -67,7 +67,8 @@ The 1.16 release cycle is proposed as follows:
 | **Begin [Code Thaw]** (EOD PST) | Branch Manager | | | Tue 10 |  | [1.16-blocking] |
 | 1.16.0-rc.1 released | Branch Manager | | | Tue 10 | | |
 | **Cherry Pick Deadline** (EOD PST) | Branch Manager | | | Thu 12 | | |
-| **v1.16.0 released** | Branch Manager | | | Mon 16 | week 12 | |
+| 1.16.0-rc.2 released | Branch Manager | | | Fri 13 | | |
+| **v1.16.0 released** | Branch Manager | | | Wed 18 | week 12 | |
 | Release retrospective | Community | | | Thu 19 | | | | |
 
 ## Phases
