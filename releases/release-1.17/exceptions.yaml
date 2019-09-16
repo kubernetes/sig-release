@@ -1,0 +1,12 @@
+# Exceptions to Enhancement Freeze requested in 1.17
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger)
+
+- name: This is an example Enhancement exception
+  issue: nnnn
+  date_requested: YYYY-MM-DD
+  date_reviewed: YYYY-MM-DD
+  thread: https://groups.google.com/forum/#!topic/kubernetes-sig-release/fake-topic
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/nnnn
+  status: Approved|Denied
