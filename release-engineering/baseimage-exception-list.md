@@ -16,7 +16,6 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 |stackdriver-logging-agent |  | requires fluentd |
 |ip-masq-agent | k8s.gcr.io/debian-iptables| Requires the iptables for all arches.|
 |kube-addon-manager | k8s.gcr.io/debian-base| Requires [shell](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/addon-manager/kube-addons.sh).|
-|cluster-autoscaler | k8s.gcr.io/debian-base| Requires removing shell and update CA vendors.  OWNER: @losipiuk|
 |k8s-dns-kube-dns  |  k8s.gcr.io/debian-base  | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
 |k8s-dns-sidecar  |  k8s.gcr.io/debian-base  |  Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
 |k8s-dns-dnsmasq-nanny  |  k8s.gcr.io/debian-base  |  Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
