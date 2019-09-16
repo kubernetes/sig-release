@@ -1,0 +1,15 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - guineveresaenger  # Release Team Lead
+  - jeefy             # Lead Shadow
+  - alejandrox1       # Lead Shadow
+  - claurence         # Emeritus Adviser
+
+reviewers:
+  - mrbobbytables     # Enhancements
+  - alenkacz          # CI Signal
+  - josiahbjorgaard   # Bug Triage
+  - daminisatya       # Docs
+  - cartyc            # Release Notes
+  - rawkode           # Communications
