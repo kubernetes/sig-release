@@ -25,7 +25,7 @@ The first week should be used to get Shadows set up with all of the "paperwork" 
 * Join the [#sig-release slack channel](https://slack.k8s.io/).
 * Get added to the `kubernetes-release-team` group by the Release Lead.
 * Join the [sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release) and [release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team) Google Groups and calendars.
-* All all contact information to their Release Team's contact sheet.
+* Add all contact information to their Release Team's contact sheet.
 * Get invited to the weekly Release Team Meeting and add the [sig-release calendar](https://calendar.google.com/calendar/embed?src=kipmnllvl17vl9m98jen6ujcrs%40group.calendar.google.com) to their calendar
 
 Becoming a Release Team Shadow is considered sufficient contribution to become a Kubernetes Org Member, and membership is needed for several tasks, especially having the Github bots obey the Shadow's commands. As such, each Shadow who is not already an org member should [apply to become one](https://github.com/kubernetes/community/blob/master/community-membership.md#member) with their mentoring role lead, the Release Lead, and/or the Emeritus Advisor as their sponsors.
@@ -42,7 +42,7 @@ For the "main" part of the development cycle, new shadows should be learning the
 * Reviewing and resolving open issues in sig-release and test-infra that affect their roles, especially ones left over from last release.
 * Other tasks as defined in the [Role Handbook](https://github.com/kubernetes/sig-release/tree/master/release-team).
 
-For a couple roles, particularly Enhancements, this first period is actually the busiest period of the release, so there will be a lot for the Shadows to do.  For other roles, the shadows for a role should expect to be in communication with their Lead and each other a few times a week, via Slack, shared documents, and Github issues/project boards.
+For a couple roles, particularly Enhancements, this first period is actually the busiest period of the release, so there will be a lot for the Shadows to do. Consult the Role Handbook for the role to find out.  For other roles, the shadows for a role should expect to be in communication with their Lead and each other a few times a week, via Slack, shared documents, and Github issues/project boards.
 
 More experienced shadows (those returning to the Release Team) may be starting work on some project to improve the efficiency or effectiveness of their roles.  Early in the release cycle is really the best time to work on longstanding issues.  See Experienced Shadow Projects below.
 
@@ -79,7 +79,7 @@ Here's the common paths for Shadows after the release cycle ends:
 
 **Becoming Role Lead**: The main goal of the Shadow program is to train new Leads.  So, if you are ready to take on Leading the Role in the succeeding cycle, then let your Role Lead know.  They will be selecting a nominee or nominees to recommend to the incoming Release Lead, who has the final decision.  You can also skip a release cycle, and volunteer to become Role Lead in a later release cycle, in which case you should contact the incoming Release Lead as soon as they are announced.  There is usually an issue in the SIG-Release repository called "Assemble Kubernetes X.YY Release Team" where you can comment with your interest in a Role.
 
-**Another role in SIG-Release**: some Shadows go on to do something else within SIG-Release.  For example, they may join the Branch Managers as an RMA, or they may decide to take on a release-related project that's not directly tied to the release cycle.  If you are interested in the Branch Managers, wait for them to announce their next recruitment cycle, or ask in the SIG-Release Slack channel.
+**Another role in SIG-Release**: some Shadows go on to do something else within SIG-Release.  For example, they may join the Branch Managers as an Release Management Associate (RMA), or they may decide to take on a release-related project that's not directly tied to the release cycle.  If you are interested in the Branch Managers, wait for them to announce their next recruitment cycle, or ask in the SIG-Release Slack channel.
 
 ## Q&A
 
