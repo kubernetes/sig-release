@@ -89,6 +89,7 @@ Build Admins are (currently) Google employees with the requisite access to Googl
 ### Members
 - Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 - Linus Arver ([@listx](https://github.com/listx))
+- Premdeep Sharma ([@ps882 (premdeep)](https://github.com/ps882))
 - Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))
 
 
