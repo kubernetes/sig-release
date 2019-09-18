@@ -3,10 +3,9 @@
 approvers:
   - sig-release-leads
 reviewers:
+  - licensing
+  - release-engineering
   - release-team
   - release-team-lead-role
-  - idvoretskyi
-  - jdumars
-  - spiffxp
 labels:
   - sig/release
