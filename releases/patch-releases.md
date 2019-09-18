@@ -40,12 +40,22 @@ for the next patch release.
 
 ## Timelines
 
-### 1.15
+### 1.16
 
-Next patch release is **1.15.4**.
+Next patch release is **1.16.1**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.16.2 | 2019-10-11 | 2019-10-15 |
+| 1.16.1 | 2019-09-27 | 2019-10-02 |
+
+### 1.15
+
+Next patch release is **1.15.5**.
+
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.15.5 | 2019-10-11 | 2019-10-15 |
 | 1.15.4 | 2019-09-13 | 2019-09-18 |
 | 1.15.3 | 2019-08-15 | 2019-08-19 |
 | 1.15.2 | 2019-08-02 | 2019-08-05 |
@@ -54,10 +64,11 @@ Next patch release is **1.15.4**.
 
 ### 1.14
 
-Next patch release is **1.14.7**.
+Next patch release is **1.14.8**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.14.8 | 2019-10-11 | 2019-10-15 |
 | 1.14.7 | 2019-09-13 | 2019-09-18 |
 | 1.14.6 | 2019-08-15 | 2019-08-19 |
 | 1.14.5 | 2019-08-02 | 2019-08-05 |
@@ -69,10 +80,12 @@ Next patch release is **1.14.7**.
 
 ### 1.13
 
-Next patch release is **1.13.11**.
+Next patch release is **1.13.12**.  This is expected to be the final
+release of the 1.13 branch.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.13.12 | 2019-10-11 | 2019-10-15 |
 | 1.13.11 | 2019-09-13 | 2019-09-18 |
 | 1.13.10 | 2019-08-15 | 2019-08-19 |
 | 1.13.9 | 2019-08-02 | 2019-08-05 |
