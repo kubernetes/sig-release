@@ -26,7 +26,7 @@ An Enhancements Lead holds the following responsibilities:
 - Identify candidates to assume the Enhancements Lead role (according to the [Release Team selection process][rt-selection]) in the following release cycle
   - Chose Enhancement shadows whom you believe would be a good fit for succession and help mentor them throughout the release cycle  
 
-## Prerequisits for Enhancements Lead and Shadows
+## Prerequisites for Enhancements Lead and Shadows
 
 ### General Requirements
 
