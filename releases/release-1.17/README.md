@@ -9,9 +9,9 @@
 
 #### Tracking docs
 
-* [Enhancements Tracking Sheet](http://bit.ly/k8s116-enhancement-tracking) TODO
-* [Bug Triage Tracking Sheet](http://bit.ly/k8s116-bugtriage) TODO
-* [CI Signal Report](http://bit.ly/k8s116-cisignal) TODO
+* [Enhancements Tracking Sheet](http://bit.ly/k8s117-enhancement-tracking) TODO
+* [Bug Triage Tracking Sheet](http://bit.ly/k8s117-bugtriage) TODO
+* [CI Signal Report](http://bit.ly/k8s117-cisignal) TODO
 * [Retrospective Document](http://bit.ly/k8s117-retro)
 * [kubernetes/kubernetes v1.17 milestone](https://github.com/kubernetes/kubernetes/milestone/43)
 
@@ -26,7 +26,7 @@ The 1.17 release cycle is proposed as follows:
 - **Tuesday, October 15, EOD PST** - Enhancements Freeze
 - **Thursday, November 14, EOD PST**  - Code Freeze
 - **Tuesday, November 19** - Docs must be completed and reviewed
-- **Monday, December 9** - Kubernetes 1.16.0 Released
+- **Monday, December 9** - Kubernetes 1.17.0 Released
 
 ## What will we do differently this release?
 * Due to the end of the year, this release cycle will be shorter than the other cycles this year. In accordance, we will have a slightly accelerated schedule.
@@ -54,7 +54,7 @@ The 1.17 release cycle is proposed as follows:
 | release-1.17 branch created | Branch Manager | | Tue 29 | | | | |
 | 1.17.0-beta.0 released | Branch Manager | | Tue 29 | | | | |
 | release-1.17 jobs created| Branch Manager | | Tue 29 | | | | |
-| **Begin [Burndown]** (MWF meetings) | Lead | | | Mon 4 | | week 7 | [1.17-blocking], [master-blocking], [master-upgrade] |
+| **Begin [Burndown]** (MWF meetings) | Lead | | | Mon 4 | | week 7 | [1.17-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | | | Mon 4 | | | |
 | Brace Yourselves, Code Freeze is Coming | Comms / Bug Triage| | | Mon 4 | | | |
 | 1.17.0-beta.1 released | Branch Manager | | | Tue 5| | | |
@@ -190,7 +190,7 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [kubernetes/website]: https://github.com/kubernetes/website
 
 [master-blocking]: https://testgrid.k8s.io/sig-release-master-blocking#Summary
-[master-upgrade]: https://testgrid.k8s.io/sig-release-master-upgrade#Summary
-[1.16-blocking]:https://testgrid.k8s.io/sig-release-1.16-blocking#Summary TODO: update
+[master-informing]: https://testgrid.k8s.io/sig-release-master-informing#Summary
+[1.17-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking#Summary
 
 [exception requests]: https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md
