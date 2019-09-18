@@ -26,27 +26,24 @@ Bug Triage Handbook
     - [Reports [Thaw]](#Reports-Thaw)
 
 ## Summary
-Primarily, your job is to make sure that bugs which affect the release are dealt with in a timely fashion.  
-Bugs can appear either as GitHub Issues or Pull Requests (PRs).  
+The role of the bug triage team is to make sure that Pull Requests (PRs) and Github Issues which affect the release are dealt with in a timely fashion.
 
-Some common tasks include:
-- Polling for bugs (mainly issues with the label `kind/bug`)
-- Checking status of open issues / PRs
-- Interlocking with relevant assignees / owners / sig-leads of issues/PRs to get status
+Primary tasks include:
+- Listing the status of open issues / PRs
+- Communicating with relevant assignees / owners / sig-leads of issues/PRs to get status
 - Updating issues/PRs, clarifying situations, enabling next level decision making
-- Publishing summary reports 
+- Presenting summary reports at release meetings
 
-The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  It is important to consider both `is:issue` and `is:pr` GitHub artifacts when triaging bugs.
-
-Secondarily, you will be helping improve automation around tracking issues against the current milestone.
-
-How this works depends on where you are in the release cycle.  
-There are four relevant periods where your workload changes:
+There are four relevant periods where the workload changes:
 
 1. Early Release: from day 1 up to about a week before Code Freeze. *Duration: ~ 7-8 weeks*
-2. CodeFreeze is Coming: ~2 weeks before Code Freeze. *Duration: ~2 weeks*
+2. Code Freeze is Coming: ~2 weeks before Code Freeze. *Duration: ~2 weeks*
 3. Code Freeze: Code Freeze & Burndown, beta releases, until Code Thaw. *Duration: ~2 weeks*
 4. Code Thaw: Last two weeks of the cycle. *Duration: ~2 weeks*
+
+Secondarily, you will be helping improve automation around tracking issues against the current milestone during the Early Release phase.
+
+The role has been interchangeably called "Bug Triage" and "Issue Triage", but the general term "issue" can be conflated with the specific GitHub usage of `is:issue` artifact type.  It is important to consider both `is:issue` and `is:pr` GitHub artifacts when triaging bugs.
 
 ## Requirements
 
@@ -67,16 +64,16 @@ General time requirements for Leads and Shadows are:
 - Have signed the contributor CLA for Kubernetes.
 - [Become a Kubernetes org member](https://git.k8s.io/community/community-membership.md#member). This should be done with the sponsorship of the Bug Triage Lead or Release Lead in the first week of the cycle.
   - The process to become one of these is in [our community membership ladder](https://github.com/kubernetes/community/blob/master/community-membership.md#requirements-for-outside-collaborators)
-- General familiarity with GitHub labels and how to find issues/PRs for the current milestone. 
-- Commitment to follow-up with contributors about issues/PRs, on Slack, email, Discuss, and SIG meetings, as appropriate.
+- General familiarity with GitHub labels and how to find issues/PRs for the current milestone.
+- Commitment to follow-up with contributors about issues/PRs on Slack, email, Discuss, and SIG meetings, as appropriate.
 - General knowledge of the [Kubernetes Community governance model](https://git.k8s.io/community/governance.md#community-groups), specifically, a SIGs' areas of responsibility.
 
 Additionally, the following qualifications make a candidate more suitable for the Bug Triage team, but are not requirements:
-
 - Experience with quality assurance and bug tracking systems.
+- Experience with GitHub automation.
 
 ### Additional Requirements for Leads
- 
+
 In addition to the above requirements for Shadows, most of which become prerequisites, Bug Triage Leads must:
 
 - Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](/release-team/README.md#milestone-maintainers)
@@ -90,8 +87,8 @@ As Bug Triage lead, _it is not your job_ to label, sort or gatekeep issues and P
 Instead, you should get the assignees, owners, SIG-leads or key contributors to do it, as it is their job to do so.
 Check [How To Escalate](#how-to-escalate) on how you can do it.
 
-In general, you shouldn't decide whether something is in or out of a milestone; either the SIG or the Release Team Lead needs to do that.  
-In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made. 
+In general, you shouldn't decide whether something is in or out of a milestone; either the SIG or the Release Team Lead needs to do that.
+In practice, you should fix anything simple that saves folks time when the intent is obvious or a milestone decision has been made.
 For example, you might add/modify `kind` and `priority` labels for a PR to match a correlating issue, or make sure an urgently awaited PR is in the milestone so it will pass CI.  See [the documentation for issue kind labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label).
 
 Bug Triage relates to both the Enhancements Lead and CI Signal Lead roles.  Understanding the in-bound enhancements is important during the Early Release phase as they set the themes for incoming issues and bugs.  Having an awareness on current test status is also critical, even though there is a specific lead for that area.  The [documentation for CI Signal lead role](../ci-signal) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage Lead to also understand.  The Bug Triage Lead should regularly interact with the peer leads for Enhancements and CI Signal.
@@ -99,35 +96,40 @@ Bug Triage relates to both the Enhancements Lead and CI Signal Lead roles.  Unde
 ### How to Escalate
 Whenever you find a bug that needs to be "fixed" or kicked out of the release, try the following escalation path:
 
-1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months.  Are you still expecting to complete it for 1.14?".  It's helpful here to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
-2. Send a message to relevant SIG slack channels or mailing list about the problem: It's helpful to directly @ mention the relevant SIG Leads / Owners, and to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.11?"
+1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months.  Are you still expecting to complete it for 1.17?".  It's helpful here to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
+2. Send a message to relevant SIG slack channels or mailing list about the problem: It's helpful to directly @ mention the relevant SIG Leads / Owners, and to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.17?"
 3. Message individual owners and reviewers directly via Slack and/or email (GitHub notification emails must have been filtered or missed if you're past step #1).  Individual's email addresses may be harder to find than GitHub ID, but are usually in the git commit history.  Sometimes Slack handles are hard to find.  There is no master list mapping human names to GitHub ID, email or Slack ID.  If you can't find contact info, asking in the appropriate SIG's Slack channel will usually get you pointed in the right direction.
 4. Escalate to the Release Team Lead with suggestions on what to do with non-responsive issues.
 
 
-## Early Release 
+## Early Release
 
 *There is no critical work for you in this stage.*
-
-This is the best stage to get involved with any automation work that can ease the workload of later stages.
 
 As this stage lasts nearly 2 months up until Code Freeze, you can use this time to familiarize yourself with the _major enhancements and fixes_ planned by each SIG for this release, so that you can have context in advance of when you will need to identify incoming bugs as being associated with a work focus in the current release. This can greatly help in focused communication with the relevant SIG leads, as in later stages there can be an elevated urgency to fix related critical bugs and deliver new features in time.
 
 It is also a good time to interact with the Enhancements Lead and CI Signal Lead to understand any early concerns they might have, as the release team's risk management comes as much from this proactive collaboration more as from the Bug Triage lead reacting to incoming issues and PRs.
 
+This is the best stage to get involved with any automation work that can ease the workload of later stages. Some tasks include:
+- updating/extending scripts to populate spreadsheets with relevant issues/PRs, delegate them to Bug Triage team members, and track them.
+- automation of notifications on relevant issues/PRs of the release cycle timeline.
+- automation of tracking/categorizing issues/PRs by responses to notifications of release cycle timeline.
+
+The major PRs/issues in this stage should be identified and a strategy to distribute the workload amongst the team should be devised. A [tracking spreadsheet](https://docs.google.com/spreadsheets/d/14DzSChatdcwKLBxshMkE9ul4jaocBJGPdR1VnrMCqPs) is in use for this purpose and should be populated using the current status of PRs/issues. It is also important to identify _priority/critical-urgent_ and _priority/important-soon_ PRs/issues early on which could become release blocking later in the cycle.
+
 ### Sample Searches [Early]
+* Issues which could require early intervention
+  - [Issues in the v1.17 milestone which haven't been updated in a while](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3Av1.17+updated%3A%3C2019-09-01+repo%3Akubernetes%2Fkubernetes+is%3Aopen+): `is:issue milestone:v1.17 updated:<2019-09-01 repo:kubernetes/kubernetes is:open`
 
-* [Issues in the v1.14 milestone which haven't been updated in a while](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.11+updated%3A%3C2018-10-01+repo%3Akubernetes%2Fkubernetes): `is:open is:issue milestone:v1.14 updated:<2018-10-01 repo:kubernetes/kubernetes`
-
-* [Issues in the milestone with no SIG label](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.14+label%3Aneeds-sig): `is:open is:issue milestone:v1.14 label:needs-sig`
+  - [Issues in the milestone with no SIG label](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.17+label%3Aneeds-sig): `is:issue milestone:v1.17 label:needs-sig is:open`
 
 * Enhancements (for familiarization purposes):
 
-  * [k/enhancements repo milestone enhancements](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.14) `is:issue is:open milestone:v1.14 repo:kubernetes/enhancements` 
+  - [k/enhancements repo milestone enhancements](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.17) `is:issue is:open milestone:v1.17 repo:kubernetes/enhancements`
 
-  * [k/k main repo milestone enhancements](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.14+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.14 label:kind/feature repo:kubernetes/kubernetes` 
+  - [k/k main repo milestone enhancements](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.17+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.17 label:kind/feature repo:kubernetes/kubernetes`
 
-  * [k org-wide milestone enhancements](https://github.com/search?q=org%3Akubernetes+is%3Aissue+is%3Aopen+milestone%3Av1.14+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.14 label:kind/feature org:kubernetes` 
+  - [k org-wide milestone enhancements](https://github.com/search?q=org%3Akubernetes+is%3Aissue+is%3Aopen+milestone%3Av1.17+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.17 label:kind/feature org:kubernetes`
 
 ### Reports [Early]
 
@@ -153,7 +155,7 @@ Other regular patterns are:
 
 *CI Signal*: Checking newly-reported test failures becomes more important; you should assume that any new failure is related to the upcoming release. Bring the issue to the attention of the CI Signal lead, and assist in getting follow-up from the appropriate SIG.  Generally the CI Signal lead will track these failures, but newly opened issues may not initially have sufficient labelling to catch their attention.
 
-[The release document from the developer's guide](https://git.k8s.io/community/contributors/devel/release.md) is also a good resource on describing how developers target issues and pull requests to a milestone. 
+[The release document from the developer's guide](https://git.k8s.io/community/contributors/devel/release.md) is also a good resource on describing how developers target issues and pull requests to a milestone.
 
 ### Filtering / What belongs in the milestone
 
@@ -235,7 +237,7 @@ New test failures will also show up during Code Freeze and you need to make sure
 
 ### Sample Searches [Freeze]
 
-* Prow is an alternative tool for PR visualisation that can run full GH queries:   
+* Prow is an alternative tool for PR visualisation that can run full GH queries:
     * [PRs with LGTM but not 'approved' in Prow](https://prow.k8s.io/pr?query=is%3Apr%20state%3Aopen%20label%3Algtm%20-label%3Aapproved%20milestone%3Av1.14)
 
 * Open v1.14 Issues
