@@ -47,7 +47,7 @@ The 1.17 release cycle is proposed as follows:
 | Start Enhancements Tracking | Enhancements Lead | | Tue 1 | | | week 2 | |
 | 1.17.0-alpha.1 released | Branch Manager | | Tue 1 | | | |
 | Start Release Notes Draft | Release Notes Lead | | Tue 8 | | | week 3 | |
-| **Begin [Enhancements Freeze][Enhancements Freeze** (EOD PST) | Enhancements Lead | | Tue 15 | | | week 4 | [master-blocking], [master-upgrade] |
+| **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | | Tue 15 | | | week 4 | [master-blocking], [master-informing] |
 | 1.17.0-alpha.2 released | Branch Manager | | Tue 15 | | | | |
 | 1.17.0-alpha.3 released | Branch Manager | | Tue 22 | | | week 5 | |
 | release-1.13 jobs removed | Branch Manager | | Tue 29 | | | week 6 | |
