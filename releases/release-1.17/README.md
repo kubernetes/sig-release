@@ -40,12 +40,12 @@ The 1.17 release cycle is proposed as follows:
 ## Timeline
 | **What** | **Who** | **Sept** | **Oct** | **Nov** | **Dec** | **WEEK** | **CI SIGNAL** |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Team Leads finalized | Lead | Fri 20 | | | | week 0 | |
+| Team Leads finalized | Lead | Wed 18 | | | | week 0 | |
 | Start of Release Cycle | Lead | Mon 23 | | | | week 1 | [master-blocking] |
+| Start Enhancements Tracking | Enhancements Lead | Tue 24  | | | |  | |
 | Schedule finalized | Lead | Wed 25 | | | | | |
 | Team Shadows finalized | Lead | Wed 25 | | | | | |
-| Start Enhancements Tracking | Enhancements Lead | | Tue 1 | | | week 2 | |
-| 1.17.0-alpha.1 released | Branch Manager | | Tue 1 | | | |
+| 1.17.0-alpha.1 released | Branch Manager | | Tue 1 | | | week 2| |
 | Start Release Notes Draft | Release Notes Lead | | Tue 8 | | | week 3 | |
 | **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | | Tue 15 | | | week 4 | [master-blocking], [master-informing] |
 | 1.17.0-alpha.2 released | Branch Manager | | Tue 15 | | | | |
