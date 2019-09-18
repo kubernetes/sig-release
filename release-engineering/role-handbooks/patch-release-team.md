@@ -593,7 +593,7 @@ doc for more details.
 | Official release | ```./gcbmgr release --official --nomock  release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail bcd8809f-afd0-40fd-8498-561a596e7bbd ``` |
 | Official email notify test | ```./release-notify v1.13.3 --nomock --mailto=me@some.com``` |
 | Check mail arrives, list has expected commits? | manual/visual |
-| Package creation (needs its own improved workflow; work starting on that) | Ping @Sumi on Slack for package building |
+| Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://git.k8s.io/sig-release/release-managers.md#build-admins) by name on Slack for package building |
 | Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVRs (Name-Version-Release) |
 | Official email notify | ```./release-notify v1.13.3 --nomock``` |
 | Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) got mail OK |
