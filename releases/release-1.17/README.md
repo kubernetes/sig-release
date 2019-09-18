@@ -3,8 +3,8 @@
 #### Links
 * [This document](https://git.k8s.io/sig-release/releases/release-1.17/README.md)
 * [Release Team](https://git.k8s.io/sig-release/releases/release-1.17/release_team.md)
-* [Meeting Minutes](http://bit.ly/k8s116-releasemtg) TODO
-* [Kubernetes Release Calendar](https://bit.ly/k8s-release-cal) TODO
+* [Meeting Minutes](http://bit.ly/k8s117-releasemtg)
+* [Kubernetes Release Calendar](https://bit.ly/k8s-release-cal)
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
 
 #### Tracking docs
@@ -12,7 +12,7 @@
 * [Enhancements Tracking Sheet](http://bit.ly/k8s116-enhancement-tracking) TODO
 * [Bug Triage Tracking Sheet](http://bit.ly/k8s116-bugtriage) TODO
 * [CI Signal Report](http://bit.ly/k8s116-cisignal) TODO
-* [Retrospective Document](http://bit.ly/k8s116-retro) TODO
+* [Retrospective Document](http://bit.ly/k8s117-retro)
 * [kubernetes/kubernetes v1.17 milestone](https://github.com/kubernetes/kubernetes/milestone/43)
 
 #### Guides
@@ -22,7 +22,6 @@
 
 ## tl;dr
 The 1.17 release cycle is proposed as follows:
-TODO
 - **Monday, September 23**  - Release Cycle Begins
 - **Tuesday, October 15, EOD PST** - Enhancements Freeze
 - **Thursday, November 14, EOD PST**  - Code Freeze
@@ -30,13 +29,13 @@ TODO
 - **Monday, December 9** - Kubernetes 1.16.0 Released
 
 ## What will we do differently this release?
-* We will implement guidelines around CI Signal and test: which jobs should be considered master-informing vs master blocking. TODO: relevant issue(s):
 * Due to the end of the year, this release cycle will be shorter than the other cycles this year. In accordance, we will have a slightly accelerated schedule.
 
 ## What are we continuing from the previous release
 * All Enhancements must have a KEP that is in `implementable` state by Enhancements Freeze. If the enhancement does not have a KEP in `implementable` state by Enhancements Freeze it will be removed from the milestone and will require an [exception](/releases/EXCEPTIONS.md).
 * The Emeritus Adviser will be responsible for advising the Release Team Lead and Lead Shadows, ensuring shadow selection happens, and that release shadows are getting the most out of their participation in the release process.
 * The itemized list of code changes for the release is being migrated from the release changelog `CHANGELOG-x.y.md` (where `x` and `y` are major and minor versions of Kubernetes, respectively) to [https://relnotes.k8s.io](https://relnotes.k8s.io)
+* We will continue to implement guidelines and clean up around CI Signal.
 
 ## Timeline
 | **What** | **Who** | **Sept** | **Oct** | **Nov** | **Dec** | **WEEK** | **CI SIGNAL** |
@@ -102,7 +101,7 @@ The intent of these meetings is to:
 * Ensure docs and release notes are written and accurate.
 * Identify all enhancement going into the release, and make sure alpha, beta, GA
   is marked in enhancements repo.
-* TODO: Provide a [one-stop view of release progress](http://bit.ly/k8s116-releasemtg)
+* Provide a [one-stop view of release progress](http://bit.ly/k8s117-releasemtg)
   including relevant release metrics.
 
 ### Code Freeze
