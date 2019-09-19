@@ -7,23 +7,24 @@
   - [Release Team Onboarding](#release-team-onboarding)
   - [Branch Management Onboarding](#branch-management-onboarding)
   - [Safety Check](#safety-check)
-- [The Release Process](#the-release-process)
-  - [Alpha Stage](#alpha-stage)
+- [Releases Management](#releases-management)
   - [Alpha Releases](#alpha-releases)
+    - [Alpha Stage](#alpha-stage)
+    - [Alpha Release](#alpha-release)
   - [Beta Releases](#beta-releases)
     - [`beta.0` and Branch Creation](#beta0-and-branch-creation)
     - [`beta.1` and Other Beta Releases](#beta1-and-other-beta-releases)
   - [Release Candidates](#release-candidates)
-  - [Official Stage and Release](#official-stage-and-release)
-  - [Post-release Activities](#post-release-activities)
-    - [Debian and RPM Packaging](#debian-and-rpm-packaging)
-  - [Release Validation](#release-validation)
+  - [Official Releases](#official-releases)
+    - [Post-release Activities](#post-release-activities)
+      - [Debian and RPM Packaging](#debian-and-rpm-packaging)
+      - [Release Validation](#release-validation)
+- [Branch Management](#branch-management)
   - [Create CI/Presubmit jobs](#create-cipresubmit-jobs)
   - [Configure Merge Automation](#configure-merge-automation)
   - [Tide](#tide)
   - [Code Freeze](#code-freeze)
   - [Code Thaw](#code-thaw)
-- [Branch Content Management](#branch-content-management)
   - [Branch Fast Forward](#branch-fast-forward)
   - [Reverts](#reverts)
   - [Cherry Picks](#cherry-picks)
@@ -120,7 +121,7 @@ The following command can help verify that your clone of the [release tools] are
 `./gcbmgr`
    * should run successfully and even show some green colored "OK" words
 
-## The Release Process
+## Releases Management
 
 **General overview**:
 
@@ -154,7 +155,9 @@ A section of the log above is usually copied over as a comment on the issue. See
 
 After having thoroughly read the section on cutting a release version of the handbook, and that all items on the checklist have completed (you may include notes on events that was unique to cutting that release version as comments), close the issue with `/close` as a comment the issue thread.
 
-### Alpha Stage
+### Alpha Releases
+
+#### Alpha Stage
 
 Start staging a build by running:
 
@@ -180,7 +183,7 @@ WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. B
 
 For more information on the usage of `./gcbmgr` run `./gcbmgr --help` or inspect the [`gcbmgr` script](https://github.com/kubernetes/release/blob/master/gcbmgr).
 
-### Alpha Releases
+#### Alpha Release
 
 After staging comes the actual releasing, but this may be intentionally delayed. For example, the branch manager may stage a build from the head of the release branch late in the release cycle, doing so in the morning so that it is fully build and would be releasable in the afternoon (pending CI tests will results from the head of the branch). If the results are good and the release team gives the go ahead, you can initiate the publishing portion of the release process. If staging the build only happened after the receipt of clean CI tests results, this will delay completing the entire release process for a release version (alpha,beta,rc,...). This of course presumes reproducible builds and that CI builds and tests are meaningful relative to the release builds. There is always a risk that these diverge, and this needs managed broadly by the project and the release team.
 
@@ -279,7 +282,7 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 [pr-milestone-query]: https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.16
 [tide]: https://git.k8s.io/test-infra/prow/tide
 
-### Official Stage and Release
+### Official Releases
 
 To initiate staging the build for the official release, the `--official` flag is used. For example:
 
@@ -293,11 +296,11 @@ When staging is done, as usual, use the command `./gcbmgr release` with the `--b
 
 To better prepare and see what to expect, this is a sequence of events that took place on past [official release days](https://docs.google.com/document/d/1K0B91lgeEiJTbT602VloA5arb6AkaTif-MLryaHmlYc/edit?usp=sharing).
 
-### Post-release Activities
+#### Post-release Activities
 
 - Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` in the [`variants.yaml` file for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml). ([reference PR review comment](https://github.com/kubernetes/test-infra/pull/13870#discussion_r313628808))
 
-#### Debian and RPM Packaging
+##### Debian and RPM Packaging
 
 [Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `./gcbmgr release --offical ...` has completed, **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
 
@@ -305,7 +308,7 @@ The entire packaging process including the build and validation of the builds co
 
 Once the .deb and .rpm packages are done building, you can `grep` for `X.Y` e.g. `1.16` in the [yum](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) repositories.
 
-### Release Validation
+##### Release Validation
 
 The following are some ways to determine if the release process was successful:
 
@@ -315,7 +318,9 @@ The following are some ways to determine if the release process was successful:
 
 3. CHANGELOG-X.Y.md is automatically loaded into the kubernetes/kubernetes repo: [https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md)
 
----
+## Branch Management
+
+This section discusses the methods in managing commits on the `release-x.y` branch.
 
 ### Create CI/Presubmit jobs
 
@@ -538,10 +543,6 @@ Code thaw removes the release cycle merge restrictions and replaces the two quer
     .
     .
 ```
-
-## Branch Content Management
-
-This section discusses the methods in managing commits on the `release-x.y` branch.
 
 ### Branch Fast Forward
 
