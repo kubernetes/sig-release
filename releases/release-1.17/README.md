@@ -38,39 +38,39 @@ The 1.17 release cycle is proposed as follows:
 * We will continue to implement guidelines and clean up around CI Signal.
 
 ## Timeline
-| **What** | **Who** | **Sept** | **Oct** | **Nov** | **Dec** | **WEEK** | **CI SIGNAL** |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Team Leads finalized | Lead | Wed 18 | | | | week 0 | |
-| Start of Release Cycle | Lead | Mon 23 | | | | week 1 | [master-blocking] |
-| Start Enhancements Tracking | Enhancements Lead | Tue 24  | | | |  | |
-| Schedule finalized | Lead | Wed 25 | | | | | |
-| Team Shadows finalized | Lead | Wed 25 | | | | | |
-| 1.17.0-alpha.1 released | Branch Manager | | Tue 1 | | | week 2| |
-| Start Release Notes Draft | Release Notes Lead | | Tue 8 | | | week 3 | |
-| **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | | Tue 15 | | | week 4 | [master-blocking], [master-informing] |
-| 1.17.0-alpha.2 released | Branch Manager | | Tue 15 | | | | |
-| 1.17.0-alpha.3 released | Branch Manager | | Tue 22 | | | week 5 | |
-| release-1.13 jobs removed | Branch Manager | | Tue 29 | | | week 6 | |
-| release-1.17 branch created | Branch Manager | | Tue 29 | | | | |
-| 1.17.0-beta.0 released | Branch Manager | | Tue 29 | | | | |
-| release-1.17 jobs created| Branch Manager | | Tue 29 | | | | |
-| **Begin [Burndown]** (MWF meetings) | Lead | | | Mon 4 | | week 7 | [1.17-blocking], [master-blocking], [master-informing] |
-| **Call for [Exceptions][Exception]** | Lead | | | Mon 4 | | | |
-| Brace Yourselves, Code Freeze is Coming | Comms / Bug Triage| | | Mon 4 | | | |
-| 1.17.0-beta.1 released | Branch Manager | | | Tue 5| | | |
-| Docs deadline - Open placeholder PRs | Docs Lead | | | Fri 8 | | | |
-| **Begin [Code Freeze]** (EOD PST) | Branch Manager | | | Thu 14 | | week 8 | |
-| KubeCon Begins | Community | | | Mon 18 | | week 9 | |
-| Burndown Meetings daily | Lead | | | Tues 19 | | week 9 | |
-| Docs deadline - PRs ready for review | Docs Lead | | | Tues 19 | | |
-| 1.17.0-beta.2 released | Branch Manager | | |  Wed 20| |
-| Docs complete - All PRs reviewed and ready to merge | Docs Lead | | | Mon 25 | | week 10 | |
-| **Begin [Code Thaw]** (EOD PST) | Branch Manager | | | Tue 26 | | | [1.17-blocking] |
-| 1.17.0-rc.1 released | Branch Manager | | | Tue 26 | | |
-| **Cherry Pick Deadline** (EOD PST) | Branch Manager | | | Wed 27 | | |
-| 1.17.0-rc.2 released | Branch Manager | |  | |Tue 2 | week 11 |
-| **v1.17.0 released** | Branch Manager | | | | Mon 9 | week 12 | |
-| Release retrospective | Community | | | | Thu 12 | | | | |
+| **What** | **Who** | **When** | **WEEK** | **CI SIGNAL** |
+| --- | --- | --- | --- | --- | 
+| Team Leads finalized | Lead | Wed September 18 | week 0 | |
+| Start of Release Cycle | Lead | Mon September 23 |week 1 | [master-blocking] |
+| Start Enhancements Tracking | Enhancements Lead | Tue 24  | |
+| Schedule finalized | Lead | Wed September 25 | |
+| Team Shadows finalized | Lead | Wed September 25 | 
+| 1.17.0-alpha.1 released | Branch Manager | Tue October 1 | week 2| |
+| Start Release Notes Draft | Release Notes Lead | Tue October 8 | week 3 | |
+| **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | Tue October 15 | week 4 | [master-blocking], [master-informing] |
+| 1.17.0-alpha.2 released | Branch Manager | Tue October 15 | |
+| 1.17.0-alpha.3 released | Branch Manager | Tue October 22 |  week 5 | |
+| release-1.13 jobs removed | Branch Manager | Tue October 29 | week 6 | |
+| release-1.17 branch created | Branch Manager | Tue October 29 | 
+| 1.17.0-beta.0 released | Branch Manager | Tue October 29 |
+| release-1.17 jobs created| Branch Manager |  Tue October 29 | | 
+| **Begin [Burndown]** (MWF meetings) | Lead | Mon November 4 | week 7 | [1.17-blocking], [master-blocking], [master-informing] |
+| **Call for [Exceptions][Exception]** | Lead | Mon November 4 | 
+| Brace Yourselves, Code Freeze is Coming | Comms / Bug Triage| Mon November 4 | 
+| 1.17.0-beta.1 released | Branch Manager | Tue November 5 | 
+| Docs deadline - Open placeholder PRs | Docs Lead | Fri November 8 |
+| **Begin [Code Freeze]** (EOD PST) | Branch Manager | Thu November 14 | week 8 |
+| Docs deadline - PRs ready for review | Docs Lead | Fri November 15 | 
+| KubeCon Begins | Community |Mon November 18 | week 9 | |
+| 1.17.0-beta.2 released | Branch Manager | Mon November 18 | week 9 |
+| Burndown Meetings daily | Lead | Tues November 19 | |
+| Docs complete - All PRs reviewed and ready to merge | Docs Lead | Fri November 22 | |
+| 1.17.0-rc.1 released | Branch Manager | Fri November 22 |
+| **Begin [Code Thaw]** (EOD PST) | Branch Manager | Fri November 22 | [1.17-blocking]|
+| **Cherry Pick Deadline** (EOD PST) | Branch Manager | Mon December 2 | 
+| 1.17.0-rc.2 released | Branch Manager | Tue December 3 | week 11 |
+| **v1.17.0 released** | Branch Manager | Mon December 9 | week 12 | |
+| Release retrospective | Community | Thu December 12 | 
 
 ## Phases
 
