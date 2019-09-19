@@ -292,7 +292,8 @@ In addition to `v1.16.n` this will also build and stage the subsequent patch's
 `beta.0`, in this example `v1.16.(n+1)-beta.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
 release step will also take a couple of minutes more.
 
-When staging is done, as usual, use the command `./gcbmgr release` with the `--buildversion=` specified when `./gcbmgr stage` is done.
+When staging is done, you may use the command `./gcbmgr release` with the `--buildversion=` specified as usual when `./gcbmgr stage` is done.
+However, there is an embargo policy which requires the nomock release publication happens after 4 pm Pacific (see [Release Team Lead Handbook](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-team-lead#week-12) for details), make sure to coordinates with other roles and follow the timeline.
 
 To better prepare and see what to expect, this is a sequence of events that took place on past [official release days](https://docs.google.com/document/d/1K0B91lgeEiJTbT602VloA5arb6AkaTif-MLryaHmlYc/edit?usp=sharing).
 
