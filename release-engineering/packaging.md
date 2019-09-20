@@ -107,6 +107,7 @@ Now that `rapture` has successfully complete, we need to verify the packages tha
 
 Follow the [kubeadm instructions][kubeadm-install] to install kubeadm, kubelet, and kubectl.
 
+To confirm Debian packages
 ```shell
 # <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
 version=
@@ -117,6 +118,24 @@ version=
     | sudo tee /etc/apt/sources.list.d/kubernetes.list \
     && sudo apt-get update -q \
     && sudo apt-get install -qy kubelet="${version}-00" kubectl="${version}-00" kubeadm="${version}-00"
+```
+To confirm Rhel packages
+```shell
+# <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
+version=
+if [[ -n "${version}" ]]; then
+cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOF
+
+sudo yum install -y kubelet-${version} kubeadm-${version} kubectl-${version} --disableexcludes=kubernetes
+fi
 ```
 
 ### Package verification tests
