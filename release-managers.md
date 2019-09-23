@@ -45,9 +45,11 @@ The Patch Release Team is responsible for coordinating patch releases (`x.y.z`, 
 
 ### Members
 - Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
+- Doug MacEachern ([@dougm](https://github.com/dougm))
 - Hannes Hörl ([@hoegaarden](https://github.com/hoegaarden))
 - Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
 - Tim Pepper ([@tpepper](https://github.com/tpepper))
+- Yang Li ([@idealhack](https://github.com/idealhack))
 
 
 ## Branch Managers
@@ -55,9 +57,9 @@ The Patch Release Team is responsible for coordinating patch releases (`x.y.z`, 
 Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working in close conjunction with the [Release Team](/release-team/README.md) through each release cycle.
 
 ### Members
+- Carlos Panato ([@cpanato](https://github.com/cpanato))
 - Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon))
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
-- Yang Li ([@idealhack](https://github.com/idealhack))
 
 
 ## Associates
@@ -66,16 +68,11 @@ Release Manager Associates are apprentices to the Branch Managers, formerly refe
 
 ### Members
 - Nikhil Manchanda ([@slicknik](https://github.com/slicknik))
-- Vivek Taparia ([@vivektaparia](https://github.com/vivektaparia))
-- Christian Jantz ([@chrisz100](https://github.com/chrisz100))
 - Dhawal Yogesh Bhanushali ([@imkin](https://github.com/imkin))
 - Nikhita Raghunath ([@nikhita](https://github.com/nikhita))
 - Javier B Perez ([@javier-b-perez](https://github.com/javier-b-perez))
-- Klaus Ma ([@k82cn](https://github.com/k82cn))
 - Giri Kuncoro ([@girikuncoro](https://github.com/girikuncoro))
 - Peter Swica ([@pswica](https://github.com/pswica))
-- Carlos Panato ([@cpanato](https://github.com/cpanato))
-- Mike Crute ([@mcrute](https://github.com/mcrute))
 - Ace Eldeib ([@alexeldeib](https://github.com/alexeldeib))
 
 
