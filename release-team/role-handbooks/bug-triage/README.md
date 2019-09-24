@@ -35,7 +35,7 @@ General time requirements for Leads and Shadows are:
 
 - Availability to attend the majority of Release Team (weekly) and Burndown meetings
 - Ability to follow-up on issues and PRs since around week 6 (mid-release)
-- Since week 6 to the end of the release cycle the time commitment becomes greater. Shadows should expect to spend at least 3-5 hours and leads around 5-10 hours a week.
+- From week 6 to the end of the release cycle the time commitment becomes greater. Shadows should expect to spend at least 3-5 hours and leads around 5-10 hours a week.
 
 ### Additional Requirements for Shadows
 
@@ -67,7 +67,7 @@ In practice, you should fix anything simple that saves folks time when the inten
 The Bug Triage role relates to both the Enhancements and CI Signal roles. Understanding the in-bound enhancements is important during the Early Release phase as they set the themes for incoming issues and bugs. Having an awareness on current test status is also critical, even though there is a specific lead for that area. The [documentation for CI Signal lead role](../ci-signal) includes a listing of special high risk test categories to monitor with useful information for the Bug Triage to also understand. The Bug Triage Lead should regularly interact with the peer leads for Enhancements and CI Signal.
 
 Before starting, the Bug Triage members should refer to the following guides to get familiar with used labels:
-- [the documentation for issue `kind` labels](https://git.k8s.io/community/contributors/devel/release.md#issue-kind-label)
+- [the documentation for issue `kind` labels](https://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label)
 - [the documentation for defining priority and `priority` labels](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#define-priority).
 
 ### How to Escalate
@@ -98,7 +98,7 @@ This is the best stage to get involved with any automation work that can ease th
 
 #### Setting up the Bug Triage Spreadsheet
 
-The Bug Triage team is using a [tracking spreadsheet](https://docs.google.com/spreadsheets/d/14DzSChatdcwKLBxshMkE9ul4jaocBJGPdR1VnrMCqPs) to track the current status of all issues and PRs targeting the release, their priorities, and to distribute the work among the Bug Triage team.
+The Bug Triage team is using a tracking spreadsheet to track the current status of all issues and PRs targeting the release, their priorities, and to distribute the work among the Bug Triage team.
 
 At the beginning of the cycle, the Bug Triage Lead should communicate with the Release Team Lead to get the spreadsheet set up for the ongoing release cycle.
 
@@ -108,7 +108,7 @@ With this done, the lead needs to put the link to the spreadsheet in the relevan
 
 #### Updating the Bug Triage Spreadsheet
 
-The Bug Triage Spreadsheet is updated manually. The commands for updating the spreadsheet can be found in the `Kubernetes Github Commands` menu.
+The Bug Triage Spreadsheet is updated manually. The spreadsheet has a dedicated `Kubernetes Github Commands` menu in the spreadsheet header that has commands for managing the data. Open the menu and first run the `Refresh Issues & PRs` command. After it is done, you can run other commands to populate issues/PRs metadata, such as `kind`, `priority` and SIGs. The menu and all commands are implemented as scripts that you can access by choosing Tools -> Script editor.
 
 **Note:** Due to bug in the `Refresh Issues & PRs` command, it is recommended to delete the issues/PRs from the spreadsheet and then run the command. Otherwise, it may happen that some issues are omitted or shown even if closed.
 
@@ -178,7 +178,7 @@ Your responsibility here is to actively watch for any new issues/PRs targeting t
 
 On the day of the Code Freeze, your responsibility is to try to help contributors to get the approval on their PRs and needed label. Check [How To Escalate](#how-to-escalate) part of the document for guide how to do this.
 
-When the code freeze starts, the highest priority has the PRs which had `approved` and `lgtm` labels before the code freeze started and are in the milestones. Depending on the merge queue length, it might be proposed to hold PRs that have `approved` and `lgtm`, but are not in the milestone.
+When the code freeze starts, the highest priority has the PRs which had `approved` and `lgtm` labels before the code freeze started and are in the milestones. Depending on the merge queue length, it might be proposed to hold PRs that have `approved` and `lgtm`, but are not in the milestone (using the following query [`is:pr is:open no:milestone label:approved label:lgtm`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+no%3Amilestone+label%3Aapproved+label%3Algtm)).
 
 You can monitor PRs using the following queries:
 - [PRs supposed to be in the merge pool (`is:pr is:open milestone:v1.17 label:approved label:lgtm -label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.17+label%3Aapproved+label%3Algtm+-label%3Ado-not-merge%2Fhold)
