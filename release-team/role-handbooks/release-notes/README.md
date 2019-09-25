@@ -10,11 +10,11 @@ The Release Notes role is responsible for collecting and fine-tuning release-not
 
 **Before continuing on to the Release Notes specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
 
-### Skills and Experience Requirments:
+### Skills and Experience Requirements:
 
 * Strong written and verbal communications skills
 * A working knowledge of Kubernetes concepts
-* Project management experience is helpful but not requried
+* Project management experience is helpful but not required
 
 ### Time Requirements:
 
