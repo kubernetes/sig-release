@@ -242,7 +242,7 @@ The middle weeks of the launch are where the Docs Lead and Docs Lead Shadows tra
     $ git push origin merged-master-release-[current release]
     ```
 
-    Submit a PR against upstream ```release-[current release]```  from your fork  ```merged-master-release-[current release]``` branch.
+    Submit a PR against upstream ```release-[current release]```  from your fork  ```merged-master-release-[current release]``` branch with label ```tide/merge-method-merge```. e.g [merge master into current release](https://github.com/kubernetes/website/pull/16224)
 
     To merge `master` into `dev-[future release]` on your local fork:
 
@@ -259,7 +259,7 @@ The middle weeks of the launch are where the Docs Lead and Docs Lead Shadows tra
     $ git push origin merged-master-dev-[future release]
     ```
 
-    Submit a PR against upstream ```dev-[future release]```  from your fork  ```merged-master-dev-[future release]``` branch.
+    Submit a PR against upstream ```dev-[future release]```  from your fork  ```merged-master-dev-[future release]``` branch with label ```tide/merge-method-merge```. e.g [merge master into future release](https://github.com/kubernetes/website/pull/16225)
 
     You may need to fix conflicts manually. If somebody has improved a page on master, and at the same time it has been updated in dev-1.14, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
 
@@ -371,7 +371,7 @@ Create the PRs needed to roll the docs to the new version on the dev branch
 
     - NOTE: These first two steps can be combined into one single PR. If done in a single PR, please update this handbook with examples.
 
-1. Create the updated config.toml's for the 4 previous releases. These need to be 4 PRs because they are all separate `release-` branches.
+1. Create the updated config.toml's for the 4 previous releases. These need to be 4 PRs because they are all separate `release-` branches. **Make sure to update**  ```release-[current release]``` config.toml chinese localization configuration with ```deprecated = false```. e.g [chinese localization current](https://github.com/kubernetes/website/pull/16131)
 
     See this for example (1.13 was the "future release"):
     * 1.9 https://github.com/kubernetes/website/pull/11493
@@ -406,9 +406,9 @@ Create the PRs needed to roll the docs to the new version on the dev branch
 
     24 hours before the release, freeze the repo. No PRs allowed to merge AT ALL until the release PR has successfully merged.
 
-    ⚠️ **NEW:** After 1.16 release, we realized you only need to create an issue with ```blocker_label``` to prevent merging on a repo. Please check with **test-infra**  as this is not tested. You can find more information [here](https://github.com/kubernetes/test-infra/blob/master/prow/cmd/tide/config.md#merge-blocker-issues)
+    ⚠️ **NEW:** After 1.16 release, we realized you only need to create an issue with ```tide/merge-blocker``` label to prevent merging on a repo. Please check with **test-infra**  as this is not tested. You can find more information [here](https://github.com/kubernetes/test-infra/blob/master/prow/cmd/tide/config.md#merge-blocker-issues)
 
-    - Submit an issue with ```blocker_label``` label.
+    - Submit an issue with ```tide/merge-blocker``` label.
     - Submit a freeze announcement following [our protocol](#COMUNICATE-ALL-3-MAJOR-DATES-AT-LEAST-A-WEEK-PRIOR-INCLUDING-THE-RELEASE-DATE-REPO-FREEZE-FOLLOWING-THE-BELOW-METHODS)
     
 1. Let localization team know about freeze and next tentative timeline(s) for important dates
@@ -459,7 +459,7 @@ Coordinate with the Release team for the exact timing. Typically the release is 
     - "Draft a new release"
     - Use new snapshot tag for release
 
-1. Unfreeze the repo as done earlier (remove the blocker_label and close issue)
+1. Unfreeze the repo as done earlier (remove the ```tide/merge-blocker``` and close issue)
 
 1. Close the [future release] milestone.
 
