@@ -95,7 +95,7 @@ These steps take approximately one hour to complete, and should be completed imm
 
 
 1.  Read the release timeline and **make sure the timeline includes deadlines for documentation work**, e.g: [1.14 timeline](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.14#timeline): 
- 
+
      - Docs deadline - Open placeholder PRs (~3.5 weeks before release)
      - Docs deadline - PRs ready for review: (~2 weeks before release)
      - Docs complete - All PRs reviewed and ready to merge (~1 week before release)
@@ -115,7 +115,7 @@ These steps take approximately one hour to complete, and should be completed imm
     After vetting the volunteers for their roles, role leads should make a final decision on selected shadows with the incoming Release Team Lead. **In the past the SIG Docs release team has been between 3-6 members.**
     
     ⚠️ Beyond meeting the basic requirements and time commitments, a good Shadow is someone who is active in SIG-Docs. Selection priority should go to previous shadows who want to eventually lead a SIG-Docs release. Other than those few guidelines, use your best judgement!
-     
+    
     [Link for additional information on shadows](https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-selection.md#shadows)
 
 1. Contact all volunteers
@@ -151,7 +151,7 @@ These steps take approximately one hour to complete, and should be completed imm
 
 
     Also send a Slack message to those that you didn't select, e.g:
-
+    
     > Hey, I'm Jim Angel (Docs Lead for SIG Docs). Thanks for your interest in the SIG Docs 1.14 release team!
     > 
     > The release team for sig-doc shadows has no additional availability, but please stick around help out with some of our other sigs (including sig-docs)!
@@ -170,6 +170,10 @@ These steps take approximately one hour to complete, and should be completed imm
 1. Find 1/2 - 1 hour of time to meet with shadows and explain the release process. Walk through this entire document and review the flow with them. It helps to set expectations that the mantra is "hurry up and wait" but then it gets very hectic at the end. If you have the ability to, please record the meeting and share it with your Shadows for future review.
 
 1. Add contacts to the shadows release docs, e.g: [https://bit.ly/k8s114-contacts](https://docs.google.com/spreadsheets/d/1BiGSLuCqjglQS1bJvpKk6rKFMciebPkUndzgDRnJsns/edit?ts=5c3bd42a#gid=0)
+
+1. Make sure all shadows have edit access to the enhancement spreadsheet.
+
+1. **As a lead**, make sure you are part of the [milestone-maintainers](https://github.com/orgs/kubernetes/teams/milestone-maintainers) and [sig-docs-en-owners](https://github.com/orgs/kubernetes/teams/sig-docs-en-owners).
 
 1. You need push access to the Kubernetes website repo (contact a SIG Docs chair if you don't have it)
 
@@ -227,26 +231,35 @@ The middle weeks of the launch are where the Docs Lead and Docs Lead Shadows tra
 
     This allows us to avoid merge conflicts on release day with `dev-[future release]` and it allows us to easily sunset the current docs under it's new branch `release-[current release]` after we merge `dev-[future release]`.
 
-    merge `master` into `release-[current release]` on your local fork:
+    To merge `master` into `release-[current release]` on your local fork:
     ```
     $ git remote add upstream https://github.com/kubernetes/website.git
     $ git fetch upstream
     $ git checkout upstream/release-[current release]
     $ git merge upstream/master
-    $ git push upstream upstream/release-[current release]
+    $ git checkout -b merged-master-release-[current release]
+    $ git commit -m "merged master into release-[current release] to keep in sync"
+    $ git push origin merged-master-release-[current release]
     ```
 
-    merge `master` into `dev-[future release]` on your local fork:
+    Submit a PR against upstream ```release-[current release]```  from your fork  ```merged-master-release-[current release]``` branch with label ```tide/merge-method-merge```. e.g [merge master into current release](https://github.com/kubernetes/website/pull/16224)
+
+    To merge `master` into `dev-[future release]` on your local fork:
+
     ```
     $ git remote add upstream https://github.com/kubernetes/website.git
     $ git fetch upstream
-    $ checkout upstream/dev-[future release]
+    $ git checkout upstream/dev-[future release]
     $ git merge upstream/master
+    $ git checkout -b merged-master-dev-[future release]
+    $ git commit -m "merged master into dev-[future release] to keep in sync"
     ## if needed: https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
     ## git add ...
     ## git commit -m "resolving conflicts"
-    $ git push upstream upstream/dev-[future release]
+    $ git push origin merged-master-dev-[future release]
     ```
+
+    Submit a PR against upstream ```dev-[future release]```  from your fork  ```merged-master-dev-[future release]``` branch with label ```tide/merge-method-merge```. e.g [merge master into future release](https://github.com/kubernetes/website/pull/16225)
 
     You may need to fix conflicts manually. If somebody has improved a page on master, and at the same time it has been updated in dev-1.14, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
 
@@ -358,7 +371,7 @@ Create the PRs needed to roll the docs to the new version on the dev branch
 
     - NOTE: These first two steps can be combined into one single PR. If done in a single PR, please update this handbook with examples.
 
-1. Create the updated config.toml's for the 4 previous releases. These need to be 4 PRs because they are all separate `release-` branches.
+1. Create the updated config.toml's for the 4 previous releases. These need to be 4 PRs because they are all separate `release-` branches. **Make sure to update**  ```release-[current release]``` config.toml chinese localization configuration with ```deprecated = false```. e.g [chinese localization current](https://github.com/kubernetes/website/pull/16131)
 
     See this for example (1.13 was the "future release"):
     * 1.9 https://github.com/kubernetes/website/pull/11493
@@ -393,12 +406,11 @@ Create the PRs needed to roll the docs to the new version on the dev branch
 
     24 hours before the release, freeze the repo. No PRs allowed to merge AT ALL until the release PR has successfully merged.
 
-    ⚠️ **NEW:** This hasn't been tested, but after 1.14, we realized that not everyone would see our communications. We can temporarily modify k/website to be a "staging repo" which allows PROW to block all automatic functions (like merging).
+    ⚠️ **NEW:** After 1.16 release, we realized you only need to create an issue with ```tide/merge-blocker``` label to prevent merging on a repo. Please check with **test-infra**  as this is not tested. You can find more information [here](https://github.com/kubernetes/test-infra/blob/master/prow/cmd/tide/config.md#merge-blocker-issues)
 
-    - Submit a PR to include Kubernetes website as a "staging repo"
-      - https://github.com/kubernetes/test-infra/blob/master/prow/config.yaml#L360
+    - Submit an issue with ```tide/merge-blocker``` label.
     - Submit a freeze announcement following [our protocol](#COMUNICATE-ALL-3-MAJOR-DATES-AT-LEAST-A-WEEK-PRIOR-INCLUDING-THE-RELEASE-DATE-REPO-FREEZE-FOLLOWING-THE-BELOW-METHODS)
-
+    
 1. Let localization team know about freeze and next tentative timeline(s) for important dates
 
     > Hello localization team leads! We talked about docs in v1.14 here (https://github.com/kubernetes/website/issues/12396). I don't think any action is required from you, but I wanted to let you know that we are on track for the release (3/25/19) and all Kubernetes website branches are up to date (master, dev-1.14, release-1.13). Let me know if I can help with anything! Thanks!
@@ -447,7 +459,7 @@ Coordinate with the Release team for the exact timing. Typically the release is 
     - "Draft a new release"
     - Use new snapshot tag for release
 
-1. Unfreeze the repo as done earlier (PR to test-infra)
+1. Unfreeze the repo as done earlier (remove the ```tide/merge-blocker``` and close issue)
 
 1. Close the [future release] milestone.
 
