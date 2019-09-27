@@ -13,7 +13,7 @@ As a returning RT member, the EA is also there to supply the Release Lead with h
 
 ## Requirements
 
-The EA is a returning senior Release Team member, ideally a former Release Team Lead.  If not a former Lead, the EA should either have served in more than one Role on the Release Team, or be a lead in SIG-Release, or both.  They must be tempermentally suited to people management, including a commitment to diversity and helping others ascend the Contributor Ladder.
+The EA is a returning senior Release Team member, ideally a former Release Team Lead. If not a former Release Team Lead, the EA should have been on the Release Team for no less than two release cycles, serving as a Role Lead for at least one of those cycles.  An ideal Emeritus Adviser is inherently suited to people management, has shown sustained interest in the health and growth of SIG Release, and has a commitment to Release Team diversity and helping others ascend the [Contributor Ladder](https://git.k8s.io/community/community-membership.md).
 
 Time commitments for the EA are relatively light, with the largest time commitment in the two-week period where Shadows are being selected.  However, the EA role starts 2-3 weeks before the release cycle officially begins, and continues for 1-2 weeks after it ends.
 
