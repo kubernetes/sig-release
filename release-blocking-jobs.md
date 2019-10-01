@@ -1,7 +1,7 @@
 # Release Blocking Jobs and Criteria
 
 * [SIG-Release-Master-Blocking](https://testgrid.k8s.io/sig-release-master-blocking)
-* [SIG-Release-Master-Blocking](https://testgrid.k8s.io/sig-release-master-informing)
+* [SIG-Release-Master-Informing](https://testgrid.k8s.io/sig-release-master-informing)
 
 SIG-release maintains two sets of jobs that decide whether the release is
 healthy: Blocking and Informing.  Each of these sets is instantiated for each
