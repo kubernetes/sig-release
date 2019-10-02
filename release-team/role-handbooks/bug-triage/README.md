@@ -1,5 +1,31 @@
 # Bug Triage Role Handbook
 
+- [Bug Triage Role Handbook](#bug-triage-role-handbook)
+  - [Overview](#overview)
+  - [Responsibilities](#responsibilities)
+  - [Requirements](#requirements)
+    - [Time Requirements](#time-requirements)
+    - [Additional Requirements for Shadows](#additional-requirements-for-shadows)
+    - [Additional Requirements for Leads](#additional-requirements-for-leads)
+  - [Getting Started](#getting-started)
+    - [How to Escalate](#how-to-escalate)
+  - [Timeline](#timeline)
+    - [Early Release](#early-release)
+      - [Setting up the Bug Triage Spreadsheet](#setting-up-the-bug-triage-spreadsheet)
+      - [Updating the Bug Triage Spreadsheet](#updating-the-bug-triage-spreadsheet)
+      - [Sample Searches](#sample-searches)
+      - [Reports](#reports)
+    - [Mid-Release Cycle](#mid-release-cycle)
+      - [Reports](#reports-1)
+    - [Code Freeze](#code-freeze)
+      - [Day Of The Code Freeze](#day-of-the-code-freeze)
+      - [Once the Code Freeze starts until one week later](#once-the-code-freeze-starts-until-one-week-later)
+      - [Week 1 of Code Freeze until Code Thaw starts](#week-1-of-code-freeze-until-code-thaw-starts)
+      - [Reports](#reports-2)
+    - [Code Thaw](#code-thaw)
+      - [Sample Searches](#sample-searches-1)
+      - [Reports](#reports-3)
+
 ## Overview
 
 The bug triage team is responsible to make sure that Issues and Pull Requests (PRs) which are targeted for the ongoing release cycle are dealt with in a timely fashion.
@@ -215,7 +241,7 @@ If there are issues/PRs that are going to block the release (i.e. `priority/crit
 
 ### Code Thaw
 
-Starting a week before the stable release, Code Freeze labeling restrictions are lifted. At this point, you need to make sure that three things happen:
+Starting a week before the release target date, Code Freeze labeling restrictions are lifted. At this point, you need to make sure that three things happen:
 
 1. major breakage bugs get fixed immediately
 2. any pending release-blocking PRs get approved and merged
