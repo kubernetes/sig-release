@@ -102,7 +102,7 @@ Whenever you find an issue or PR that needs to be finished or kicked out of the 
 
 1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months. Are you still expecting to complete it for 1.17?". It's helpful to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
 2. Send a message to relevant SIG Slack channel or mailing list about the problem: It's helpful to directly @ mention the relevant SIG Leads / Owners, and to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.17?"
-3. Message individual owners and reviewers directly via Slack.
+3. Message individual owners and reviewers directly via Slack. If owners and reviewers are unresponsive, you can reach out to the SIG leads using the `kubernetes-sig-${name}-leads@googlegroups.com` mailing lists.
 4. Escalate to the Release Team Lead with suggestions on what to do with non-responsive issues.
 
 ## Timeline
