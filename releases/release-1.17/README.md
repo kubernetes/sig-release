@@ -9,9 +9,9 @@
 
 #### Tracking docs
 
-* [Enhancements Tracking Sheet](http://bit.ly/k8s117-enhancement-tracking) TODO
-* [Bug Triage Tracking Sheet](http://bit.ly/k8s117-bugtriage) TODO
-* [CI Signal Report](http://bit.ly/k8s117-cisignal) TODO
+* [Enhancements Tracking Sheet](http://bit.ly/k8s117-enhancement-tracking)
+* [Bug Triage Tracking Sheet](http://bit.ly/k8s117-bugtriage)
+* [CI Signal Report](http://bit.ly/k8s117-cisignal)
 * [Retrospective Document](http://bit.ly/k8s117-retro)
 * [kubernetes/kubernetes v1.17 milestone](https://github.com/kubernetes/kubernetes/milestone/43)
 

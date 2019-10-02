@@ -126,6 +126,10 @@ Release Team selection should happen in accordance with the [Release Team select
   - [kubernetes-release-managers][release-managers-group]
   - [kubernetes-sig-leads]
   - [release-managers-private]: Request membership for you and your shadow(s) from the [Release Managers group][release-managers-group]
+    
+- While the release team lead has always been a stakeholder in getting security fixes out the door, the Kubernetes security disclosures and response policy has evolved into something more formal. The documents linked below are required reading for an incoming release team lead, who must understand and abide by the embargo policy.
+    - [Security in the release process][security-release-process].
+    - [Private distributors and Embargo Policy][private-distributors-list]
 - Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
@@ -133,7 +137,7 @@ Release Team selection should happen in accordance with the [Release Team select
 - Create the retrospective document and corresponding bit.ly link
 - Begin meeting with SIGs to introduce yourself 
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
-- Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
+- Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions with the esception of release-managers-private.
 
 ### Week 2
 
@@ -299,3 +303,5 @@ Release Day
 [release-managers-private]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers-private
 [selection]: /release-team/release-team-selection.md
 [Testgrid]: https://testgrid.k8s.io/
+[security-release-process]: https://github.com/kubernetes/security/blob/master/security-release-process.md
+[private-distributors-list]: https://github.com/kubernetes/security/blob/master/private-distributors-list.md
