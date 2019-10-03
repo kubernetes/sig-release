@@ -5,7 +5,7 @@
 | CI Signal | Alena Varkockova ([@alenkacz](https://github.com/alenkacz) / Slack: `@alenkacz`) | |
 | Bug Triage | Josiah Bjorgaard ([@josiahbjorgaard](https://github.com/josiahbjorgaard) / Slack: `@jb`) |  |
 | Docs | Damini Satya Kammakomati ([@daminisatya](https://github.com/daminisatya) / Slack: `@Damini Satya`) |  |
-| Release Notes | Chris Carty ([@cartyc](https://github.com/cartyc)) / Slack: `@macintoshprime` | Taylor Dolezal ([@onlydole](https://github.com/onlydole) / Slack `onlydole`), Ramesh Kumar ([@kylix3511](https://github.com/kylix3511) / Slack: `kylix3511`), Bridget Kromhout ([bridgetkromhout](https://github.com/bridgetkromhout)) / Slack: `bridgetkromhout`  |
+| Release Notes | Chris Carty ([@cartyc](https://github.com/cartyc)) / Slack: `@macintoshprime` | Eddie Villalba ([@Evillgenius75](https://github.com/Evillgenius75) / Slack: `Evill_genius`), Ramesh Kumar ([@kylix3511](https://github.com/kylix3511) / Slack: `kylix3511`), Bridget Kromhout ([@bridgetkromhout](https://github.com/bridgetkromhout) / Slack: `bridgetkromhout` ) |
 | Communications | David McKay ([@rawkode](https://github.com/rawkode) / Slack: `@rawkode`) |  |
 | Emeritus Adviser | Claire Laurence ([@claurence](https://github.com/claurence)) |  |
 
