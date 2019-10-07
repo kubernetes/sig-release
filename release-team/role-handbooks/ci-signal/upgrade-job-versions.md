@@ -38,8 +38,8 @@ aka trust the CI
 
 ci/foo versions live in kubernetes-release-dev:
 ```shell
-$ for suffix in beta stable1 stable2 stable3; do 
-  echo ci/k8s-$suffix: $(gsutil cat gs://kubernetes-release-dev/ci/k8s-$suffix.txt); 
+$ for suffix in beta stable1 stable2 stable3; do
+  echo ci/k8s-$suffix: $(gsutil cat gs://kubernetes-release-dev/ci/k8s-$suffix.txt);
 done
 
 ci/k8s-beta: v1.12.0-beta.1.129+1d58f1aebfe1e3
@@ -94,11 +94,11 @@ https://k8s-gubernator.appspot.com/build/kubernetes-jenkins/logs/ci-kubernetes-e
 - first line of build log has `--extract=ci/latest --extract=ci/k8s-stable1`
 - **old-version** is `release-1.11` HEAD, **new-version** is `master` HEAD (as of the the time the job ran)
 
-OR: 
+OR:
 
 - search for the job https://github.com/kubernetes/test-infra/search?q=ci-kubernetes-e2e-gce-new-master-upgrade-cluster-parallel&unscoped_q=ci-kubernetes-e2e-gce-new-master-upgrade-cluster-parallel
 - job is defined at https://github.com/kubernetes/test-infra/blob/3caafeffebfef243499a92c76cc5eea9e216f138/config/jobs/kubernetes/sig-cluster-lifecycle/k8s-upgrade-gce.yaml#L355
-- relevant paramters are `- --extract=ci/latest - --extract=ci/k8s-stable1`
+- relevant parameters are `- --extract=ci/latest - --extract=ci/k8s-stable1`
 - **old-version** is `release-1.11` HEAD, **new-version** is `master` HEAD (as of the the time the job ran)
 
 ### Option C: Look at the job's log
@@ -119,7 +119,7 @@ I0912 04:58:45.311] Sep 12 04:58:45.307: INFO: kube-apiserver version: v1.13.0-a
   - it has a -alpha or -beta suffix, it is not a tag or cut build
   - everything after the + is a commit sha https://github.com/kubernetes/kubernetes/commit/426ef9d349bb3a
   - everything under that commit has been included
-  
+
 ---
 
 ## Jobs that do use release builds
