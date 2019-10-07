@@ -272,7 +272,7 @@ Features for this release were tracked via the use of the [kubernetes/features](
 * Remove cmd/kube-discovery from the tree since it's not necessary anymore ([#42070](https://github.com/kubernetes/kubernetes/pull/42070), [@luxas](https://github.com/luxas))
 
 #### kubeadm
-* Quite a few flags been renamed or removed.  Those options that are removed as flags can still be accessed via the config file.  Most noteably this includes external etcd settings and the option for setting the cloud provider on the API server.  The [kubeadm reference documentation](https://kubernetes.io/docs/admin/kubeadm/) is up to date with the new flags.
+* Quite a few flags been renamed or removed.  Those options that are removed as flags can still be accessed via the config file.  Most notably this includes external etcd settings and the option for setting the cloud provider on the API server.  The [kubeadm reference documentation](https://kubernetes.io/docs/admin/kubeadm/) is up to date with the new flags.
 
 ## Changes to API Resources
 ### ABAC
