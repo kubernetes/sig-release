@@ -60,7 +60,7 @@ The 1.17 release cycle is proposed as follows:
 | 1.17.0-beta.1 released | Branch Manager | Tue November 5 | 
 | Docs deadline - Open placeholder PRs | Docs Lead | Fri November 8 |
 | **Begin [Code Freeze]** (EOD PST) | Branch Manager | Thu November 14 | week 8 |
-| Docs deadline - PRs ready for review | Docs Lead | Fri November 15 | 
+| Docs deadline - PRs ready for review | Docs Lead | Tues November 19 |
 | KubeCon Begins | Community |Mon November 18 | week 9 | |
 | 1.17.0-beta.2 released | Branch Manager | Mon November 18 | week 9 |
 | Burndown Meetings daily | Lead | Tues November 19 | |
