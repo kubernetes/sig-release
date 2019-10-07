@@ -10,7 +10,7 @@ Feature Name,Stage,SIG,Assignee,Needs Docs?,k8s.io Docs PR,additional PR,One Lin
 Failure policy for Jobs,Alpha,SIG-Apps,soltysh,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5319,,,,,,
 Federated Jobs feature,Alpha,SIG-Federation,quinton-hoole,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5485,,,,,,
 kubectl binary plugins,Alpha,SIG-CLI,fabianofranz,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5294,,,,,,
-Improve the multi-platform compability,Alpha,SIG-ClusterLifecycle,luxas,no,,,,,,,
+Improve the multi-platform compatibility,Alpha,SIG-ClusterLifecycle,luxas,no,,,,,,,
 Extensible configuration/invocation of `kubeadm`,Alpha,SIG-ClusterLifecycle,luxas,yes,https://github.com/kubernetes/kubeadm/blob/master/docs/design/design_v1.8.md,,,,,,
 Self-hosting support in kubeadm,Alpha,SIG-ClusterLifecycle,luxas,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5497,,,,,,
 Federated Pod AutoScaler feature,Alpha,SIG-Federation,irfanurrehman,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5487,,,,,,
