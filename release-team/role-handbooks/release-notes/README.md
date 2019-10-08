@@ -65,6 +65,7 @@ should always represent the same state as the markdown document.
   feature planning and bug tracking happens directly in the GitHub repository. A
   note to this deployment will be added to the final manually edited release
   notes markdown document.
+- The team is responsible for adding Patch Release (e.g. 1.15.1, etc.) notes to the website. The [procedure for producing Patch Release notes](patch-notes.md) is slightly different than generating the release notes Drafts.
 - The Communications team will hold meetings to discuss blogposts and media releases regarding the release sometime before code freeze. Ensure that at least one person from the release notes team attends this meeting with the release lead and enhancements lead. The release notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the communications team, release lead or enhancements lead to ensure messaging around Major Themes is coordinated.
 - If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberty in completing the notes
 - A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must be created by the release notes team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes.
