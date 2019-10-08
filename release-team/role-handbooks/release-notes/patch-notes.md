@@ -1,44 +1,28 @@
 ### Generating Patch Release Notes for the Release Notes website
 
-Note: There is likely an opportunity to automate this process :)
-
 To follow this process, fork the[Release Notes repo](https://github.com/kubernetes-sigs/release-notes), and create your own branch.
-
-First, go to [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes), and select the release branch (e.g. 1.15)
-
-![Select release branch](select-branch.png)
-
-Second, select Commits
-
-![Select Commits](commits.png)
-
-Third, find the start SHA for the patch release-- look at the list of commits and find the entry for the CHANGELOG of the previous patch release (in this example 1.15.2 is the previous patch release):
-
-![Select Start SHA](select-start-sha.png)
-
-Fourth, find the end SHA for the patch release-- look at the list of commits and find the entry for the CHANGELOG of the current patch release (in this example 1.15.3 is the current patch release):
-
-![Select End SHA](select-end-sha.png)
 
 #### Running the Release Notes Tool for Patch Release
 
-Run the [Release notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes) with the start and end SHAs from above.
+Run the [Release notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes) with the following options:
 
-Also, make sure you specify the branch, patch release, and `JSON` as the format:
+Release branch, your GitHub token, repo path, patch release version, `json` as the format, and choose the previous and current patch releases for your start and end revisions:
 
 Example:
 
 ```
-./release-notes \
--branch=release-1.15 \
--format=json \
--release-version=1.15.3 \
-  -start-sha 37cd490ae77a893ecd73f4c372ebed0cf29a3727 \
-  -end-sha 2ede767523a0b7e8bea869da223a7b5c616f4894
+release-notes
+    --branch=release-1.15
+    --github-token X
+    --repo-path /tmp/k8s
+    --release-version 1.15.3
+    --format json
+    --output release-notes-1.15.3.json
+    --start-rev v1.15.2
+    --end-rev v1.15.3
   ```
 
-After you successfully run the Release Notes tool, copy the resulting file into the `src/assets` directory,
-and name it [release-notes-patch-release.json] [1.15.3 Example](https://github.com/kubernetes-sigs/release-notes/blob/master/src/assets/release-notes-1.15.3.json)
+After you successfully run the Release Notes tool, make sure the resulting file is in the `src/assets` directory of your repo. [1.15.3 Example](https://github.com/kubernetes-sigs/release-notes/blob/master/src/assets/release-notes-1.15.3.json)
 
 #### Two More Steps!
 
