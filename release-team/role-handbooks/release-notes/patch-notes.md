@@ -19,7 +19,7 @@ Example:
     --format json \
     --output release-notes-1.15.3.json \
     --start-rev v1.15.2 \
-    --end-rev v1.15.3 \
+    --end-rev v1.15.3
   ```
 
 After you successfully run the Release Notes tool, make sure the resulting file is in the `src/assets` directory of your repo. [1.15.3 Example](https://github.com/kubernetes-sigs/release-notes/blob/master/src/assets/release-notes-1.15.3.json)
