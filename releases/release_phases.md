@@ -1,15 +1,15 @@
-## Phases
+# Release Phases
 
-### Enhancements Freeze
+## Enhancements Freeze
 All enhancements wishing to be included in the current release must have
 * A KEP in an implementable state
   * Including Testing Plans
   * Including Graduation Criteria
 * An open issue in the Release Milestone
 
-If your enhancement does not meet these requirements, it will be removed from the milestone and will require an [exception](/releases/EXCEPTIONS.md).
+If your enhancement does not meet these requirements, it will be removed from the milestone and will require an [Exception].
 
-### Burndown
+## Burndown
 One week prior to Code Freeze, we increase the cadence of release team meetings
 to begin tracking work more closely.  We call this Burndown, because at this
 point we have a list of outstanding issues and PRs, and are actively working to
@@ -29,7 +29,7 @@ The intent of these meetings is to:
   is marked in enhancements repo.
 * Provide a one-stop view of release progress via the current meeting notes (TODO: link to the template?) including relevant release metrics.
 
-### Code Freeze
+## Code Freeze
 
 All enhancements going into the release must be code-complete, **including
 tests**, and have docs PRs open by the due date.
@@ -42,18 +42,10 @@ documentation work gets completed as quickly as possible.
 After this point, only release-blocking issues and PRs will be allowed in the
 milestone.
 
-### Code Freeze Lifted
-
-One week prior to release, it is expected that all but a handful of outstanding
-PRs for the current release have landed in the release-1.x branch. Assuming the
-release team agrees, Code Freeze will be lifted, and master will again be ava.
-
-From this point forward, any PRs intended for the current release must be cherry picked to the release branch.
-
-### Exceptions
+## Exceptions
 
 Starting at [Enhancements Freeze] the release team will solicit and rule on
-[exception requests] for enhancements and test work that is unlikely to be done
+[Exception] requests for enhancements and test work that is unlikely to be done
 by Code Freeze. The exception approval is the responsibility of the SIG or SIGs
 labeled in the pull request. The release team may intervene or deny the request
 only if it poses a risk to release quality, or could negatively impact the overall
@@ -63,11 +55,11 @@ factors should be considered in the approval process.  Enhancements on an
 feature branch with documentation, test cases, and passing CI are more likely to
 be accepted.
 
-### Pruning
+## Pruning
 
 Enhancements that are partially implemented and/or lack sufficient tests may be
 considered for pruning beginning after [Code Freeze], unless they've been
-granted an [Exception].
+granted an [Exception](./EXCEPTIONS.md).
 
 The release team will work with SIGs and enhancements owners to evaluate each
 case, but for example, pruning could include actions such as:
@@ -84,7 +76,7 @@ before this time. The goal is to make code freeze, and overall project
 transparency, enforceable despite the lack of a consistently used feature branch
 process.
 
-### Docs
+## Docs
 
 If an enhancement needs documentation, enter "Yes" in the enhancement tracking
 spreadsheet and add a link to the documentation PR. You can open documentation
@@ -99,6 +91,6 @@ For documentation PRs:
 than basing from master. **Be sure to open your PR against the release branch**.
 * Add your PR to the current Release milestone.
 
-TODO: discuss Code Thaw with Tim
-
-TODO: fix all the links
+[kubernetes/website]: https://github.com/kubernetes/website
+[kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
+[Exception]: ./EXCEPTIONS.md
