@@ -25,7 +25,7 @@ The 1.17 release cycle is proposed as follows:
 - **Monday, September 23**  - Release Cycle Begins
 - **Tuesday, October 15, EOD PST** - Enhancements Freeze
 - **Thursday, November 14, EOD PST**  - Code Freeze
-- **Tuesday, November 19** - Docs must be completed and reviewed
+- **Friday, November 22** - Docs must be completed and reviewed, ready to merge
 - **Monday, December 9** - Kubernetes 1.17.0 Released
 
 ## What will we do differently this release?
