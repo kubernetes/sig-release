@@ -30,6 +30,10 @@ The expected time investment for both leads and shadows are as follows:
 
 **NOTE:** These are estimates and your personal experience may vary. The more time you can spend working as a team and regularly communicating within your team, the better off your experience will be.
 
+### Slack Channel
+
+There is a channel on the Kubernetes Slack workspace, `release-comms`, which is used by the communications release team to coordinate their efforts. If you're on the communications team, or applying to be, then it would be advantageous to follow along with the conversations.
+
 ## Release Milestone Activities:
 
 ### Week 1
