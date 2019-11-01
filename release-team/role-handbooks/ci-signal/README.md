@@ -73,6 +73,9 @@ Here are some good early deliverables from the CI Signal lead between start of t
 - Start maintain the [CI signal project board](https://github.com/orgs/kubernetes/projects/11) and keep it up-to-date with issues tracking any test failure/flake
 - Copy over any open test issues from previous release and follow up on them with owners
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
+  - Make sure all issues are titled either:
+    - For failing tests: `[Failing Test]: testgrid-tab-name (prow-job-name)`
+    - For flaky tests: `[Flaky Test]: testgrid-tab-name (prow-job-name)`
   - Make sure all open issues have a `priority/` label (see: [Priority Labels](#priority-labels)) and one of either the `kind/flake` or `kind/failing-test` label
   - Make sure the issue is assigned against the current milestone 1.x, using /milestone
   - Assign the issue to appropriate SIG using /sig label
@@ -221,7 +224,7 @@ release blocking, then feel free to move these to the next milestone.
 This can be done in 2 ways (i) including @kubernetes/sig-foo-test-failures teams in the issue files and (ii) going to the #sig-foo slack channel if you need help routing the failure to appropriate owner.
 
 
-If a test case is failing, file a v1.y milestone issue in kubernetes/kubernetes titled: `[Failing Test] full test case name`
+If a test case is failing, file a v1.y milestone issue in kubernetes/kubernetes titled: `[Failing Test] testgrid-tab-name (prow-job-name)`
 ```
 /priority critical-urgent
 /kind failing-test
@@ -241,11 +244,11 @@ the text from the triage cluster
 ---
 ```
 
-If a test case is flaky, file a v1.y milestone issue in kubernetes/kubernetes titled: `[Flaky Test] full test case name` and follow the same rocedure as above.
+If a test case is flaky, file a v1.y milestone issue in kubernetes/kubernetes titled: `[Flaky Test] testgrid-tab-name (prow-job-name)` and follow the same procedure as above.
 
 Examples:
-- [[Failing Test] CSI volume tests failing in ci-kubernetes-e2e-gci-gce-alpha-features](https://github.com/kubernetes/kubernetes/issues/81191)
-- [[Flaky Test] diffResources test failling in ci-kubernetes-e2e-gci-gce-ingress](https://github.com/kubernetes/kubernetes/issues/81198)
+- [[Failing Test] aks-engine-azure-1-16-windows (ci-kubernetes-e2e-aks-engine-azure-1-16-windows)](https://github.com/kubernetes/kubernetes/issues/81191)
+- [[Flaky Test] kind-master-parallel (ci-kubernetes-kind-e2e-parallel) ](https://github.com/kubernetes/kubernetes/issues/83594)
 
 ### Monitoring Commits for test failure triangulation
 Yet another effective way for the signal team to stay on top of code churn and regression is by monitoring commits to master and specific branch periodically.
