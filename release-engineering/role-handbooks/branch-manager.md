@@ -552,6 +552,10 @@ Prior to running `./branchff`, you will need:
 - permission to run under `root` privileges
 - membership in the [Release Managers GitHub Group](https://github.com/orgs/kubernetes/teams/release-managers)
 
+Machine requirements:
+- at least 8 Gb of memory (better 16 GB)
+- at least 4 CPUs (will take some time - better 6 CPUs)
+
 Command invocation:
 ```bash
 ./branchff release-x.y
