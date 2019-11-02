@@ -2,28 +2,70 @@
 name: Cut a release
 about: Create a tracking issue for a release cut
 title: Cut 1.x.y-{alpha,beta,rc}.z release
+labels: sig/release, area/release-eng
 ---
-Scheduled to happen: <!-- Tue, 2019-02-26 -->
+## Scheduled to happen: <!-- Tue, 2019-02-26 -->
 
 <!-- 
 - Add/Remove items of the checklist as you see fit 
 - Post bumps or issues encountered along the way
 -->
 
-- [ ] screen shot master's unhealthy testgrid boards and add them as a comment 
-<!-- see template below, example: https://github.com/kubernetes/sig-release/issues/520#issuecomment-467546320 -->  
+- [ ] Screenshot unhealthy `master` branch testgrid boards and add them as a comment
+<!-- see template below, example: https://github.com/kubernetes/sig-release/issues/842#issuecomment-547453821 -->
+- [ ] Stage & release
+  - [ ] Notify [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y): [see notification](https://link-to-slack-message)
+  <!-- e.g. https://kubernetes.slack.com/archives/CJH2GBF7Y/p1572365803088800 -->
+  - [ ] Collect metrics and add them to the `Release steps` table below
+<!-- ONLY FOR OFFICIAL RELEASES - [ ] Build & publish packages (debs & rpms) -->
+- [ ] Send notification [email](https://link-to-email-on-kubernetes-announce-google-group)
 
-- [ ] stage & release
-  - [ ] notify [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF/): [see notification](/link-to-slack-message)
-  <!-- e.g. https://kubernetes.slack.com/archives/C2C40FMNF/p1551205263064000 -->
-  - [ ] collect metrics, links, ... and add them as a comment 
-  <!-- example: https://github.com/kubernetes/sig-release/issues/506#issuecomment-465202113 -->
-<!-- [ ] build & publish packages (debs & rpms) Only for Official Release -->
-- [ ] send notification [email](/link-to-email-on-kubernetes-announce-google-group)
+## Release steps
 
-/milestone <!-- v1.x e.g. v1.14 -->  
-/sig release  
-/area release-team  
+| Step | Command | Link | Start | Duration | Succeeded? |
+| --- | --- | --- | --- | --- | --- |
+| Mock stage | `./gcbmgr stage [arguments]` | <!-- link-to-MOCK-gcb-stage-run --> |  |  |  |
+| Mock release | `./gcbmgr release [arguments]` | <!-- link-to-MOCK-gcb-release-run --> |  |  |  |
+| Stage | `./gcbmgr stage [arguments]` | <!-- link-to-REAL-gcb-stage-run --> |  |  |  |
+| Release | `./gcbmgr release [arguments]` | <!-- link-to-REAL-gcb-release-run --> |  |  |  |
+| Cut packages <!-- not required for pre-releases (alpha, beta, rc) --> | -- | -- |  |  |  |
+| Notify | -- | <!-- link-to-kubernetes-announce-list-thread --> |  | -- |  |
+
+## Action items
+
+<!--
+During the release, you may find a few things that require updates
+(process changes, documentation updates, fixes to release tooling).
+
+Please list them here.
+
+It will be your responsibility to open issues/PRs to resolve these issues/improvements.
+Keep this issue open until these action items are complete.
+
+- [ ] Item 1
+- [ ] Item 2
+- [ ] Item 3
+-->
+
+## Open questions
+
+<!--
+During the release, you may have a few questions that you can't answer yourself or may
+require group discussion.
+
+Please list them here.
+
+Follow up with Branch Managers/Patch Release Team/Release Engineering subproject owners
+to get these questions answered.
+
+- [ ] Item 1
+- [ ] Item 2
+- [ ] Item 3
+-->
+
+/milestone <!-- v1.x e.g. v1.14 -->
+/assign <!-- @ the Release Manager responsible for this release -->
+<!-- cc: shadows (optional)-->
 
 <!-- Example template for screenshots comment:
 
@@ -37,8 +79,7 @@ Scheduled to happen: <!-- Tue, 2019-02-26 -->
 ... paste image here ...
 </p></details>
 
-
-#### sig-release-master-upgrade
+#### sig-release-master-informing
 
 <details><summary>`gce-new-master-upgrade-master`</summary><p>
 
@@ -46,11 +87,7 @@ Scheduled to happen: <!-- Tue, 2019-02-26 -->
 ... paste multiple images here ...
 </p></details>
 
-[screenshot capture tool](https://gist.github.com/hoegaarden/0e9aab9d29885074a0f60f8398880397)
+[screenshot capture tool](https://git.k8s.io/release/testgridshot)
 ----[ template ]----
 
 -->
-
-/assign <!-- @ the release branch manager or the person who cuts the release -->
-<!-- cc: shadows (optional)-->
-<!-- `/close` when the release has been cut. -->
