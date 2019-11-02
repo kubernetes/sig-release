@@ -60,6 +60,13 @@ Release Manager Associates are apprentices to the Branch Managers, formerly refe
 - Giri Kuncoro ([@girikuncoro](https://github.com/girikuncoro))
 - Peter Swica ([@pswica](https://github.com/pswica))
 - Ace Eldeib ([@alexeldeib](https://github.com/alexeldeib))
+- Kendrick Coleman ([@kacole2](https://github.com/kacole2))
+- Sascha Grunert ([saschagrunert](https://github.com/saschagrunert))
+- Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
+- Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
+- Taylor Dolezal ([@onlydole](https://github.com/onlydole))
+- Paul Bouwer ([@paulbouwer](https://github.com/paulbouwer))
+- Jim Angel ([@jimangel](https://github.com/jimangel))
 
 ## Build Admins
 
@@ -69,7 +76,8 @@ GitHub team: [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams
 
 - Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 - Linus Arver ([@listx](https://github.com/listx))
-- Premdeep Sharma ([@ps882 (premdeep)](https://github.com/ps882))
+- Premdeep Sharma ([@ps882](https://github.com/ps882))
+- Simon Yang ([@simony-gke](https://github.com/simony-gke))
 - Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))
 
 ## SIG Release Chairs
