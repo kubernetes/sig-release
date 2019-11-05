@@ -235,8 +235,8 @@ When the new `release-x.y` branch is created, it marks the beginning of another 
 
 The following tasks should take place as soon as possible:
 
-1. Update the [Slack branch whitelist](https://github.com/kubernetes/test-infra/blob/89e6e9743b74a646ca883c21a127773e8eb35e7d/prow/plugins.yaml#L211-L230) ([example PR](https://github.com/kubernetes/test-infra/pull/13869)):
-   - Find the current branch whitelist config ([`prow/plugins.yaml`](https://github.com/kubernetes/test-infra/blob/master/prow/plugins.yaml), grep for `branch_whitelist:`)
+1. Update the [Slack branch whitelist](https://github.com/kubernetes/test-infra/blob/16cb8d25c7a01d3ab90a8502e45ea6f26492cdba/config/prow/plugins.yaml#L209-L240) ([example PR](https://github.com/kubernetes/test-infra/pull/13869)):
+   - Find the current branch whitelist ([`config/prow/plugins.yaml`](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml), grep for `branch_whitelist:`)
    - Remove the oldest release branch block e.g., `release-1.12`
    - Add an entry for the newest release branch e.g., `release-1.16`
    - Add all current [Patch Release Team members](/release-managers.md#patch-release-team) to all `kubernetes/kubernetes` release branches
