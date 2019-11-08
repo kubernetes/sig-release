@@ -22,7 +22,8 @@ Please give us a business day to respond - we may be in a different timezone!
 In between releases the team is looking at incoming cherry-pick
 requests on a weekly basis.  The team will get in touch with
 submitters via GitHub PR, SIG channels in Slack, and direct messages
-in Slack and email if there are questions on the PR.
+in Slack and [email](mailto:release-managers-private@kubernetes.io)
+if there are questions on the PR.
 
 ## Cherry-Picks
 
