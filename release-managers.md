@@ -30,9 +30,9 @@ The responsibilities of each role are described below.
 
 The Patch Release Team is responsible for coordinating patch releases (`x.y.z`, where `z` >= 0) of Kubernetes. This team at times works in close conjunction with the [Product Security Committee](https://git.k8s.io/community/committee-product-security/README.md) and therefore should abide by the guidelines set forth in the [Security Release Process](https://git.k8s.io/security/security-release-process.md). 
 
-Access: [@kubernetes/release-managers](https://github.com/orgs/kubernetes/teams/release-managers)
+GitHub Access Controls: [@kubernetes/release-managers](https://github.com/orgs/kubernetes/teams/release-managers)
 
-Contact: [@kubernetes/patch-release-team](https://github.com/orgs/kubernetes/teams/patch-release-team)
+GitHub Mentions: [@kubernetes/patch-release-team](https://github.com/orgs/kubernetes/teams/patch-release-team)
 
 - Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 - Doug MacEachern ([@dougm](https://github.com/dougm))
