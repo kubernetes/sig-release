@@ -87,9 +87,33 @@ manual, human interpretation, we choose to move them to a separate dashboard.
 
 CI Signal Team members will regularly check the Informing Dashboard for new
 failures.  Unexplained failures that are not flakes should be considered reason
-to block the release until the failures are investigated and evaluated.  Unlike
-Blocking, however, jobs in Informing do not need to be green before authorizing
-a release, they can be failing for known and "acceptable" reasons.
+to block the release until the failures are investigated and evaluated.
+Unlike Blocking, however, jobs in Informing do not need to be green before
+authorizing a release, they can be failing for known and "acceptable" reasons.
+Such failures are "tolerated", meaning that they are not release-blocking, although
+they need to be corrected after the release as time allows.
+
+The criteria for deciding whether a failure in informing is not release-blocking is
+based on the following considerations:
+
+* Failure is due to a malfunction of the components that run a job and said
+  components are not part of Kubernetes
+  * For example, if a job is marked as failing because a test cluster could not be setup
+    but there are similar jobs that run the same tests, then the failing job
+    is tolerated.
+  * If a job fails at a stage that is not related to any Kubernetes e2e test,
+    (e.g., couldn't upload some logs to a remote source) then the job failure can be
+    tolerated given that the stage doesn't disrupt any e2e tests.
+  * If a test-infra-related component fails and there are no other factors
+    that could be responsible for the failure then the failure can be tolerated.
+* Failure is well understood and is caused by the configuration of a test and said
+  configuration is not related to an official SLO
+  * For example, if a test polls for metrics more frequently than these are
+    updated and fails because of it, then the failure may be tolerated.
+* Job is flaking too frequently and is marked as failing
+  * This should only be done when different tests are flaking. If the same set
+    of tests are flaking then we should fix them.
+* A test failed and was subsequently removed, thus marking the job as failed.
 
 ## Promoting or Demoting Jobs
 
