@@ -67,6 +67,12 @@ In addition to the above requirements for Shadows, most of which become prerequi
 
 For any release, its schedule and activities/deliverable for each week will be published in the release directory, e.g: [1.16 schedule](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.16#timeline). This section talks about specific CI Signal lead deliverable for each milestone in the release cycle.
 
+### Onboarding
+Right after the CI signal release team is formed, CI signal lead is responsible for following onboarding actions:
+- adding write access to all new shadows for the [CI signal board](https://github.com/orgs/kubernetes/projects/11)
+- updating the [CI signal github team](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml)
+- adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml)
+
 ### Pre Enhancement Freeze
 
 Here are some good early deliverables from the CI Signal lead between start of the release to enhancement freeze.
@@ -81,10 +87,10 @@ Here are some good early deliverables from the CI Signal lead between start of t
   - Assign the issue to appropriate SIG using /sig label
   - If you are aware of the individual associated with the enhancement area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around
   - Add @kubernetes/sig-foo-test-failures to draw SIG-foo’s attention to the issue
-  - CC the release manager and bug triage lead if the issue needs attention
-    immediately
+  - CC @ci-signal github team on the issue to let rest of the team know about it, you might also CC the release lead and bug triage lead if the issue needs extra attention immediately
   - Post the test failure in SIG’s Slack channel to get help in routing the issue to the rightful owner(s)
   - [Sample test failure issue](https://github.com/kubernetes/kubernetes/issues/81191)
+  - Add the issue to [CI signal board](https://github.com/orgs/kubernetes/projects/11) under "New"
 - Build and maintain a document of area experts / owners across SIGs for future needs e.g.: Scalability experts, upgrade test experts etc
 
 #### **_Best Practice:_**
