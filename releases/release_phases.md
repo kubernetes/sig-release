@@ -42,6 +42,15 @@ documentation work gets completed as quickly as possible.
 After this point, only release-blocking issues and PRs will be allowed in the
 milestone.
 
+## Code Thaw
+
+One week prior to release, it is expected that all but a handful of outstanding
+PRs for the relase of kubernetes have landed in the release branch. Assuming the
+release team agrees, Code Freeze will be lifted, and we enter Code Thaw.
+
+From this point forward, any PRs intended for the current release must be cherry picked to the
+appropriate branch.
+
 ## Exceptions
 
 Starting at [Enhancements Freeze] the release team will solicit and rule on
