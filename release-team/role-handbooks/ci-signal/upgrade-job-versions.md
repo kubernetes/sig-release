@@ -26,7 +26,7 @@ aka trust the job
 - upgrade-master: master upgraded to **new-version**, nodes left at **old-version**, **old-version** tests run
 
 references:
-- https://github.com/kubernetes/community/blob/master/contributors/devel/e2e-tests.md#test-jobs-naming-convention
+- https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests.md#test-jobs-naming-convention
 
 ### Option B: Look at the job arguments
 aka trust the CI
