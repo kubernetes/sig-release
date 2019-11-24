@@ -47,7 +47,7 @@ GitHub Mentions: [@kubernetes/patch-release-team](https://github.com/orgs/kubern
 Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working in close conjunction with the [Release Team](/release-team/README.md) through each release cycle.
 
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
-- Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon))
+- Sascha Grunert ([saschagrunert](https://github.com/saschagrunert))
 
 ## Associates
 
@@ -61,7 +61,6 @@ Release Manager Associates are apprentices to the Branch Managers, formerly refe
 - Peter Swica ([@pswica](https://github.com/pswica))
 - Ace Eldeib ([@alexeldeib](https://github.com/alexeldeib))
 - Kendrick Coleman ([@kacole2](https://github.com/kacole2))
-- Sascha Grunert ([saschagrunert](https://github.com/saschagrunert))
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
 - Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
 - Taylor Dolezal ([@onlydole](https://github.com/onlydole))
