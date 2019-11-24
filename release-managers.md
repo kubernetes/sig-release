@@ -53,12 +53,6 @@ Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of K
 
 Release Manager Associates are apprentices to the Branch Managers, formerly referred to as Branch Manager shadows.
 
-- Nikhil Manchanda ([@slicknik](https://github.com/slicknik))
-- Dhawal Yogesh Bhanushali ([@imkin](https://github.com/imkin))
-- Nikhita Raghunath ([@nikhita](https://github.com/nikhita))
-- Javier B Perez ([@javier-b-perez](https://github.com/javier-b-perez))
-- Giri Kuncoro ([@girikuncoro](https://github.com/girikuncoro))
-- Peter Swica ([@pswica](https://github.com/pswica))
 - Ace Eldeib ([@alexeldeib](https://github.com/alexeldeib))
 - Kendrick Coleman ([@kacole2](https://github.com/kacole2))
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
