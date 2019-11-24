@@ -38,7 +38,6 @@ GitHub Mentions: [@kubernetes/patch-release-team](https://github.com/orgs/kubern
 - Doug MacEachern ([@dougm](https://github.com/dougm))
 - Hannes Hörl ([@hoegaarden](https://github.com/hoegaarden))
 - Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
-- Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Tim Pepper ([@tpepper](https://github.com/tpepper))
 - Yang Li ([@idealhack](https://github.com/idealhack))
 
@@ -47,14 +46,22 @@ GitHub Mentions: [@kubernetes/patch-release-team](https://github.com/orgs/kubern
 Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working in close conjunction with the [Release Team](/release-team/README.md) through each release cycle.
 
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
-- Sascha Grunert ([saschagrunert](https://github.com/saschagrunert))
+- Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon))
+- Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 
 ## Associates
 
 Release Manager Associates are apprentices to the Branch Managers, formerly referred to as Branch Manager shadows.
 
+- Nikhil Manchanda ([@slicknik](https://github.com/slicknik))
+- Dhawal Yogesh Bhanushali ([@imkin](https://github.com/imkin))
+- Nikhita Raghunath ([@nikhita](https://github.com/nikhita))
+- Javier B Perez ([@javier-b-perez](https://github.com/javier-b-perez))
+- Giri Kuncoro ([@girikuncoro](https://github.com/girikuncoro))
+- Peter Swica ([@pswica](https://github.com/pswica))
 - Ace Eldeib ([@alexeldeib](https://github.com/alexeldeib))
 - Kendrick Coleman ([@kacole2](https://github.com/kacole2))
+- Sascha Grunert ([saschagrunert](https://github.com/saschagrunert))
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
 - Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
 - Taylor Dolezal ([@onlydole](https://github.com/onlydole))
