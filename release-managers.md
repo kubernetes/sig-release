@@ -38,6 +38,7 @@ GitHub Mentions: [@kubernetes/patch-release-team](https://github.com/orgs/kubern
 - Doug MacEachern ([@dougm](https://github.com/dougm))
 - Hannes Hörl ([@hoegaarden](https://github.com/hoegaarden))
 - Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
+- Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Tim Pepper ([@tpepper](https://github.com/tpepper))
 - Yang Li ([@idealhack](https://github.com/idealhack))
 
@@ -47,7 +48,6 @@ Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of K
 
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
 - Cheryl Fong ([@bubblemelon](https://github.com/bubblemelon))
-- Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 
 ## Associates
 
