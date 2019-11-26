@@ -89,6 +89,21 @@ Next patch release is **1.14.10**.
 
 These releases are no longer supported.
 
+| Minor Version | Final Patch Release | EOL date |
+| --- | --- | --- |
+| 1.13 | 1.13.12 | 2019-10-15 |
+| 1.12 | 1.12.10 | 2019-07-08 |
+| 1.11 | 1.11.10 | 2019-05-01 |
+| 1.10 | 1.10.13 | 2019-02-13 |
+| 1.9  | 1.9.11  | 2018-09-29 |
+| 1.8  | 1.8.15  | 2018-07-12 |
+| 1.7  | 1.7.16  | 2018-04-04 |
+| 1.6  | 1.6.13  | 2017-11-23 |
+| 1.5  | 1.5.8   | 2017-10-01 |
+| 1.4  | 1.4.12  | 2017-04-21 |
+| 1.3  | 1.3.10  | 2016-11-01 |
+| 1.2  | 1.2.7   | 2016-10-23 |
+
 [cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md
 [release-managers]: /release-managers.md
 [release process description]: https://git.k8s.io/community/contributors/devel/sig-release/release.md
