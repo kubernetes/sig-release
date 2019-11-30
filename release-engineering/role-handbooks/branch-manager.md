@@ -30,6 +30,7 @@
 - [Staging Repositories](#staging-repositories)
 - [Debugging](#debugging)
 - [References](#references)
+  - [Test Infra references](#test-infra-references)
 - [Background information](#background-information)
 
 ## Overview
@@ -61,11 +62,11 @@ To get a better overview of the time it takes to run the release tools, you can 
 
 ### Minimum Skills and Requirements
 
-* Familiarity with basic Unix commands and able to debug shell scripts.
-* Familiarity with branched source code workflows via `git` and associated `git` command line invocations.
-* General knowledge of Google Cloud (Cloud Build and Cloud Storage).
-* Open to seeking help and can communicating clearly.
-* [Kubernetes Community Membership](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
+- Familiarity with basic Unix commands and able to debug shell scripts.
+- Familiarity with branched source code workflows via `git` and associated `git` command line invocations.
+- General knowledge of Google Cloud (Cloud Build and Cloud Storage).
+- Open to seeking help and can communicating clearly.
+- [Kubernetes Community Membership](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
 
 ### Associates Expectations
 
@@ -89,25 +90,24 @@ This is a collection of requirements and conditions to fulfil when taking on the
 
 A list of To Do(s) to get started as Branch Manager:
 
-- [ ] Contact the [Release Managers Google Group][release-managers-group] to identify yourself as the incoming release branch manager for the current release team and request to be added to the special privilege group for the `kubernetes-release-test` GCP project that's used to build the releases
-   * Similar access later in the cycle should be granted to the associates depending on how they progress and what actions they prove able to step up to exercise during the cycle.
-- [ ] Request permission to post on [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
-   * If you haven't received access after 24 hrs, contact the [Release Team][kubernetes-release-team].
+- Contact the [Release Managers Google Group][release-managers-group] to identify yourself as the incoming release branch manager for the current release team and request to be added to the special privilege group for the `kubernetes-release-test` GCP project that's used to build the releases
+  - Similar access later in the cycle should be granted to the associates depending on how they progress and what actions they prove able to step up to exercise during the cycle.
+- Request permission to post on [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
+  - If you haven't received access after 24 hrs, contact the [Release Team][kubernetes-release-team].
 - Machine setup:
-   - [ ] Linux OS
-      * MacOS/Windows are not supported by [release tools] today. However, running inside a Linux container on MacOS via Docker works well.
-      * See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Dockerfile.
-   - [ ] Setup SSH keys for GitHub (either static .ssh/config or ssh agent works)
-   - [ ] Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)
-   - [ ] Run `gcloud init` using the identity (i.e. email address) that you had authorized for the GCP project
-   - [ ] `git clone git@github.com:kubernetes/release.git`
-   - [ ] ability to run `sendmail` from local Unix command line
-      * You may send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: [`Buckets/kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`](https://console.cloud.google.com/storage/browser/kubernetes-release/archive/?project=kubernetes-release-test)
+  - Linux OS
+    - MacOS/Windows are not supported by [release tools] today. However, running inside a Linux container on MacOS via Docker works well.
+    - See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Dockerfile.
+  - Setup SSH keys for GitHub (either static .ssh/config or ssh agent works)
+  - Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)
+  - Run `gcloud init` using the identity (i.e. email address) that you had authorized for the GCP project
+  - `git clone git@github.com:kubernetes/release.git`
+  - ability to run `sendmail` from local Unix command line
+    - You may send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: [`Buckets/kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`](https://console.cloud.google.com/storage/browser/kubernetes-release/archive/?project=kubernetes-release-test)
 - Join these mailing lists to stay current:
-   - [ ] [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-   - [ ] [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team)
-   - [ ] [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
-
+  - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+  - [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team)
+  - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
@@ -118,7 +118,8 @@ A list of To Do(s) to get started as Branch Manager:
 The following command can help verify that your clone of the [release tools] are up-to-date, that your setup is fully configured, and your `gcloud` identity is authorized for the release builds:
 
 `./gcbmgr`
-   * should run successfully and even show some green colored "OK" words
+
+- should run successfully and even show some green colored "OK" words
 
 ## Releases Management
 
@@ -126,7 +127,7 @@ The following command can help verify that your clone of the [release tools] are
 
 Public build artifacts are published and an email notification goes out to the community. You will become very familiar with the following commands over the course of the 3 month release cycle:
 
-```bash
+```shell
 ./gcbmgr stage
 ./gcbmgr release ${{BRANCH_NAME}} --buildversion=${{VERSIONID}} --nomock
 # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds
@@ -161,24 +162,28 @@ After having thoroughly read the section on cutting a release version of the han
 Start staging a build by running:
 
 `./gcbmgr stage master`
-   * returns relatively quick
-   * provides a link to GCP where you can track the process of the build
+
+- returns relatively quick
+- provides a link to GCP where you can track the process of the build
 
 Early in the release cycle, it is likely that the build might fail. By default the `gcbmgr stage master` command automatically looks for a place where [release master blocking tests](https://k8s-testgrid.appspot.com/sig-release-master-blocking) have green results, which traditionally has not happened in Kubernetes on an ongoing basis.
 
 WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. But in the meantime, acknowledging today especially for an early alpha or beta release, it is possible to just build via:
 
 `./gcbmgr stage master --build-at-head`
-   * Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from HEAD (the last commit on the current branch).
-   * This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
+
+- Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from HEAD (the last commit on the current branch).
+- This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
 
 `./gcbmgr list`
-   * You should now see your new job running.
+
+- You should now see your new job running.
 
 `./gcbmgr tail`
-   * To observe the output log for the build (same as on Google Cloud Console).
-   * Scan output for failures and warnings.
-   * Successful build information is displayed for your next steps, including a build version identifier for the staged build, like `vX.Y.0-alpha.0.N+commit-hash`. This string is passed on to the release scripting, which is nicely displayed for you to copy and paste.
+
+- To observe the output log for the build (same as on Google Cloud Console).
+- Scan output for failures and warnings.
+- Successful build information is displayed for your next steps, including a build version identifier for the staged build, like `vX.Y.0-alpha.0.N+commit-hash`. This string is passed on to the release scripting, which is nicely displayed for you to copy and paste.
 
 For more information on the usage of `./gcbmgr` run `./gcbmgr --help` or inspect the [`gcbmgr` script](https://github.com/kubernetes/release/blob/master/gcbmgr).
 
@@ -189,8 +194,9 @@ After staging comes the actual releasing, but this may be intentionally delayed.
 Use the `--buildversion=` as specified in the output when `gcbmgr` is done with the stage command.
 
 `./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash`
-   * This copies the staged build to public GCP buckets at well-known urls for the truncated release version string. The unique build staging identifier will subsequently be just “v1.16.0-alpha.1”, even though the staged build had an “alpha.0” in its name
-   * This can be confusing. The v1.16.0-alpha.0 tag was created automatically in the past when the v1.15 branch was forked, but it wasn’t actually build.
+
+- This copies the staged build to public GCP buckets at well-known urls for the truncated release version string. The unique build staging identifier will subsequently be just “v1.16.0-alpha.1”, even though the staged build had an “alpha.0” in its name
+- This can be confusing. The v1.16.0-alpha.0 tag was created automatically in the past when the v1.15 branch was forked, but it wasn’t actually build.
 
 Note:
 > Any `./gcbmgr` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `gcbmgr` take any actual impact on the release process. All this mock building/releasing can help you verify that you have a working setup!
@@ -422,7 +428,7 @@ This takes place around week 6-7, as soon as the new [`release-x.y` branch is cr
     - `kubernetes/sig-release`
       - Update config for `master` to current milestone e.g., `v1.16`
 
-   **Known issues**
+   **Known issues:**
    - Once the handbook includes sections that explicitly dictate timeline, we need to mention that after Code Freeze we need to update the `kubernetes/kubernetes` config for `master` to next milestone e.g., `v1.17`.
 
 10. Update [kubernetes-versions.md](https://github.com/kubernetes/test-infra/blob/master/docs/kubernetes-versions.md)
@@ -436,15 +442,17 @@ This takes place around week 6-7, as soon as the new [`release-x.y` branch is cr
 12. Do a final check for configuration errors:
 
     ```shell
-   bazel test //config/... //testgrid/... //hack:verify-config
+    bazel test //config/... //testgrid/... //hack:verify-config
     ```
 
 13. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/13882))
 
-14. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs:
-    - https://testgrid.k8s.io/sig-release-1.16-all
-    - https://testgrid.k8s.io/sig-release-1.16-blocking
-    - https://testgrid.k8s.io/sig-release-1.16-informing
+14. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
+
+    Examples:
+    - [sig-release-1.16-all](https://testgrid.k8s.io/sig-release-1.16-all)
+    - [sig-release-1.16-blocking](https://testgrid.k8s.io/sig-release-1.16-blocking)
+    - [sig-release-1.16-informing](https://testgrid.k8s.io/sig-release-1.16-informing)
 
 15. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
 
@@ -485,7 +493,7 @@ Tide automate merges. Its configuration lives in `[config.yaml](https://github.c
     - needs-sig
 ```
 
-During code freeze, two queries are used instead of just one for the `kubernetes/kubernetes` repo. One query handles the `master `and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
+During code freeze, two queries are used instead of just one for the `kubernetes/kubernetes` repo. One query handles the `master` and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
 
 ### Code Freeze
 
@@ -493,7 +501,7 @@ Code freeze is when merge requirements for the `master` and current release bran
 
 We only add additional merge requirements for PRs to these two branches for code freeze:
 
-* PRs must be in the GitHub milestone for the current release.
+- PRs must be in the GitHub milestone for the current release.
 
 Milestone requirements are configured by adding e.g. `milestone: v1.16` to a query config.
 
@@ -547,14 +555,17 @@ Code thaw removes the release cycle merge restrictions and replaces the two quer
 ### Branch Fast Forward
 
 Prior to running `./branchff`, you will need:
+
 - permission to write to the `/usr/local/` directory
 - permission to run under `root` privileges
 - membership in the [Release Managers GitHub Group](https://github.com/orgs/kubernetes/teams/release-managers)
 
 Command invocation:
-```bash
+
+```shell
 ./branchff release-x.y
 ```
+
 Where `X.Y` is the is release cycle version e.g. `1.16`
 
 This is done daily as soon as the `release-x.y` branch has been cut (which happens after `beta.0` is released).
@@ -567,7 +578,8 @@ The exact time for pulling in the changes from `master` to the release branch mi
 - We should run [`branchff`] sooner, before `$bigFeature` so we have a signal in the release branch before that feature was brought in
 - We should run [`branchff`] later, after `$theOtherFeature` has been merged, so we get signal on that feature from both the master and the release branch
 
-The first time the [`branchff`] executes, it will
+The first time the [`branchff`] executes, it will:
+
 - do a clone of `kubernetes/kubernetes` to a temporary directory i.e. `/tmp/branchff.random/branchff-release-x.y/src/k8s.io/kubernetes`
 - run a git merge-base
 - run a few cleanup scripts to ensure the branch’s generated API bits are in order
@@ -576,7 +588,8 @@ The first time the [`branchff`] executes, it will
 - push to the GitHub remote release branch
 
 It is highly recommended to run the following `git` commands as shown below:
-```
+
+```shell
 Go look around in /tmp/branchff.5mpBAx/branchff-release-1.16/src/k8s.io/kubernetes to make sure things look ok:
 # Any files left uncommitted?
 * git status -s
@@ -592,7 +605,7 @@ OK to push now? (y/n):
 
 You should see something like this when running `git show`:
 
-```bash
+```shell
 commit d17cd2356993283316b10491a4beaad0931bbff3
 Merge: 35a287caa6 6348200c92
 Author: Yang Li <idealhack@gmail.com>
@@ -600,10 +613,12 @@ Date:   Tue Sep 10 03:47:38 2019 +0000
 
     Merge remote-tracking branch 'origin/master' into release-1.16
 ```
+
 Sometimes the commit may or may not delete a Changelog.
 
 It is critically important to run the following during code freeze. Look through the git log via:
-```
+
+```shell
 git log origin/release-x.y..HEAD
 ```
 
@@ -676,7 +691,7 @@ Logs from `branchff`, `gcbmgr`, etc are stored in the `/tmp` directory and can p
 
 For example, you might see on your terminal that the execution of`./branchdff release-x.y` fails:
 
-```bash
+```shell
 Merging origin/master into release-1.16 branch: OK
 Ensure etcd is up to date: OK
 Run 'useful' (the list may be out of date) hack/update* scripts...
@@ -690,9 +705,10 @@ Traceback (line function script):
 
 Exiting...
 ```
+
 The above unsuccessful run did not provide the full reason for the interrupted exit above, to find out more, `cd` into `/tmp` and inspect the contents of `branchff.log`:
 
-```bash
+```shell
 Detected go version: go version go1.11.10 linux/amd64
 Kubernetes requires go1.12.1 or greater.
 Please install go1.12.1 or later.
@@ -709,54 +725,71 @@ Exiting with status 1
 branchff::common::trapclean(): Signal ERR caught!
 branchff::common::trapclean(): Traceback (line function script) : branchff::exit(): Exiting...
 ```
+
 The logs reveals a lot more information than what's printed out on the terminal. If necessary, you can also inspect the logs on the Google Cloud console or the output that appears when running `./gcbmgr tail`.
 
 ## References
 
 A README on tools e.g. `gcbmgr`, `branchff` used in this handbook:
 
-* [Release Tools Documentation](https://github.com/kubernetes/release/blob/master/README.md)
+- [Release Tools Documentation](https://github.com/kubernetes/release/blob/master/README.md)
 
 An overview of steps outlining the stage and release process:
 
-* [Generic Release Steps](https://docs.google.com/document/d/1x-GQDZpKk3WajtSnO0axDazE9Xs2mOSVgjziIuTWNO0/edit)
+- [Generic Release Steps](https://docs.google.com/document/d/1x-GQDZpKk3WajtSnO0axDazE9Xs2mOSVgjziIuTWNO0/edit)
 
 A more detailed overview of staging and cutting a release e.g. alpha.2 (reference for any release cycle):
 
-* [Cutting v1.15.0-alpha.2](https://docs.google.com/document/d/1Xv5w_eNvLvD-nNinMNqQAh0qlzee8btqAyHyFFMz3z4/edit?usp=sharing)
+- [Cutting v1.15.0-alpha.2](https://docs.google.com/document/d/1Xv5w_eNvLvD-nNinMNqQAh0qlzee8btqAyHyFFMz3z4/edit?usp=sharing)
 
-* If you refer a video walkthrough, see [cutting release candidate v1.15.0-rc.1](https://youtu.be/ldYt1elShD4).
+- If you refer a video walkthrough, see [cutting release candidate v1.15.0-rc.1](https://youtu.be/ldYt1elShD4).
 
-Test Infra Specific references:
+### Test Infra references
 
 Concerns and questions can be directed to [#testing-ops](https://kubernetes.slack.com/messages/C7J9RP96G) and [#sig-testing](https://kubernetes.slack.com/messages/C09QZ4DQB). For urgent matters, please contact the user group [@test-infra-oncall](https://get.slack.help/hc/en-us/articles/212906697-Create-a-user-group#browse-user-groups-and-view-members) on Slack.
 
-| Dashboards/Tools    | Useful Links  |
-| ------------------- | ------------- |
-| [Prow](https://github.com/kubernetes/test-infra/tree/master/prow) <br/> Kubernetes based CI/CD system. | <ul><li><a href="https://prow.k8s.io/pr">PR Status</a></li><li><a href="https://prow.k8s.io/tide">Tide Status</a></li></ul> |
-| [Gubernator](https://github.com/kubernetes/test-infra/tree/master/gubernator) <br/> Displays Kubernetes test results stored in Google Cloud Storage(GCS). | <ul><li><a href="https://gubernator.k8s.io/pr">PR Dashboard</a></li></ul> |
-| [Velodrome](http://velodrome.k8s.io) <br/> Displays Kubernetes Developer Productivity. | <ul><li><a href="http://velodrome.k8s.io/">http://velodrome.k8s.io/</a></li></ul> |
-| Kubernetes Codebase Search | <ul><li><a href="https://cs.k8s.io/">https://cs.k8s.io/</a></li></ul> |
-| Kubernetes [Devstats](https://devstats.cncf.io/) <br/> Toolset to visualize GitHub archives using Postgres databases and Grafana dashboards. | <ul><li><a href="https://k8s.devstats.cncf.io/">https://k8s.devstats.cncf.io/</a></li></ul> |
-| [Kubernetes OnCall Rotation](https://console.cloud.google.com/storage/browser/_details/test-infra-oncall/oncall.html)<br/> Displays the current test infra person on call. | <ul><li><a href="https://go.k8s.io/oncall">https://go.k8s.io/oncall</a></li></ul> |
-| [APISnoop](https://github.com/cncf/apisnoop) <br/> Snooping on the Kubernetes OpenAPI communications. | <ul><li><a href="https://apisnoop.cncf.io/">https://apisnoop.cncf.io/</a></li></ul> |
-| [TestGrid](https://github.com/kubernetes/test-infra/tree/master/testgrid) <br/> Displays Kubernetes CI tests results in grids. | <ul><li><a href="https://testgrid.k8s.io/">https://testgrid.k8s.io/</a></li><li><a href="https://docs.google.com/document/d/1lGvP89_DdeNO84I86BVAU4qY3h2VCRll45tGrpyx90A/edit#heading=h.x9snb54sjlu9">Displaying Kubernetes Conformance Results with Testgrid</a></li></ul> |
-| Triage Dashboard <br/> Displays Kubernetes aggregated failures. | <ul><li><a href="https://storage.googleapis.com/k8s-gubernator/triage/index.html">https://storage.googleapis.com/k8s-gubernator/triage/index.html</a></li></ul> |
+**[Prow](https://github.com/kubernetes/test-infra/tree/master/prow) - Kubernetes-based CI/CD system**
+
+- [PR Status](https://prow.k8s.io/pr)
+- [Tide Status](https://prow.k8s.io/tide)
+
+**[Gubernator](https://github.com/kubernetes/test-infra/tree/master/gubernator) - Displays Kubernetes test results stored in Google Cloud Storage (GCS)**
+
+- [PR Dashboard](https://gubernator.k8s.io/pr)
+
+**[Velodrome](http://velodrome.k8s.io) - Toolset to visualize GitHub archives using Postgres databases and Grafana dashboards**
+
+**[Hound](https://cs.k8s.io/) - Kubernetes Codebase Search**
+
+**[Kubernetes DevStats](https://k8s.devstats.cncf.io/) - Displays Kubernetes Developer Productivity**
+
+**[Kubernetes On-call Rotation](https://go.k8s.io/oncall) - Displays the current Test Infra person on call**
+
+**[APISnoop](https://apisnoop.cncf.io/) - Snooping on the Kubernetes OpenAPI communications**
+
+- [Source](https://github.com/cncf/apisnoop)
+
+**[TestGrid](https://testgrid.k8s.io/) - Displays Kubernetes CI tests results in grids**
+
+- [Source](https://github.com/GoogleCloudPlatform/testgrid)
+- [TestGrid Open-sourcing Planning](https://github.com/kubernetes/test-infra/issues/10409)
+- [Displaying Kubernetes Conformance Results with Testgrid](https://docs.google.com/document/d/1lGvP89_DdeNO84I86BVAU4qY3h2VCRll45tGrpyx90A/edit)
+
+**[Triage Dashboard](https://storage.googleapis.com/k8s-gubernator/triage/index.html) - Displays Kubernetes aggregated failures**
 
 ## Background information
 
 You may have noticed that there are prompts to use `./anago` when cutting releases but there's no mention of using `anago` in this handbook, see:
 
-* [Summary of discussion with Caleb about moving from `anago` to `gcbmgr`](https://groups.google.com/d/topic/kubernetes-milestone-burndown/YdHa51d95VI/discussion)
+- [Summary of discussion with Caleb about moving from `anago` to `gcbmgr`](https://groups.google.com/d/topic/kubernetes-milestone-burndown/YdHa51d95VI/discussion)
 
-> Note: To access this forum, you will need to join the [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) Google group.
+  Note: To access this forum, you will need to join the [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) Google group.
 
 See the branch management process prior to v1.12 when `anago` was still used.
 
-* [Branch Management Playbook](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
+- [Branch Management Playbook](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
 
-> Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
-
+  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
 
 [kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
