@@ -12,14 +12,13 @@
     - [Alpha Stage](#alpha-stage)
     - [Alpha Release](#alpha-release)
   - [Beta Releases](#beta-releases)
-    - [`beta.0` and Branch Creation](#beta0-and-branch-creation)
-    - [`beta.1` and Other Beta Releases](#beta1-and-other-beta-releases)
   - [Release Candidates](#release-candidates)
   - [Official Releases](#official-releases)
     - [Post-release Activities](#post-release-activities)
       - [Debian and RPM Packaging](#debian-and-rpm-packaging)
       - [Release Validation](#release-validation)
 - [Branch Management](#branch-management)
+  - [Branch Creation](#branch-creation)
   - [Create CI/Presubmit jobs](#create-cipresubmit-jobs)
   - [Configure Merge Automation](#configure-merge-automation)
   - [Tide](#tide)
@@ -207,43 +206,15 @@ Builds against the `master` branch are implicitly the next alpha. `gcbmgr` and `
 
 ### Beta Releases
 
-#### `beta.0` and Branch Creation
-
-During a `beta.0` release e.g., `1.16.0-beta.0`, our release tooling creates a new release branch named `release-x.y`, where `x` and `y` are the major and minor versions of the next release, respectively.
-
-Behind the scenes `anago` is doing a git branch create and git push.
-
-`prow`’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs [every hour at 54 minutes past the hour](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/test-infra/test-infra-trusted.yaml#L867) and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo.
-
-New release branch creation (for example: `release-1.16`) also automatically triggers an alpha.0 build for the subsequent release (for example: [`v1.17.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.17.0-alpha.0)).
-
-**n.b.** This means that the staging step will take about twice as long, as it will stage both versions `v1.16.0-beta.0` and `v1.17.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
-
-#### `beta.1` and Other Beta Releases
-
 Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `anago` automatically find and increment the current build number. The command example below is to stage a build for a beta release:
 
 `./gcbmgr stage release-1.16 --build-at-head --nomock`
-
-This being the first build from the newly created release branch, the publication of this build does not send out the typical changelog detail notification, but rather will only send a shorter message with subject line "[k8s release-1.16 branch has been created](https://groups.google.com/d/msg/kubernetes-announce/BqN8x2Y2bMY/GFTzt1usEAAJ)".
 
 To publish (release) the build artifacts from staging beta for example, run:
 
 `./gcbmgr release release-1.16 --buildversion=v1.16.0-alpha.3.N+commit-hash --nomock`
 
-When the new `release-x.y` branch is created, it marks the beginning of another stage in the release process.
-
-The following tasks should take place as soon as possible:
-
-1. Update the [Slack branch whitelist](https://github.com/kubernetes/test-infra/blob/16cb8d25c7a01d3ab90a8502e45ea6f26492cdba/config/prow/plugins.yaml#L209-L240) ([example PR](https://github.com/kubernetes/test-infra/pull/13869)):
-   - Find the current branch whitelist ([`config/prow/plugins.yaml`](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml), grep for `branch_whitelist:`)
-   - Remove the oldest release branch block e.g., `release-1.12`
-   - Add an entry for the newest release branch e.g., `release-1.16`
-   - Add all current [Patch Release Team members](/release-managers.md#patch-release-team) to all `kubernetes/kubernetes` release branches
-   - Remove [Branch Managers](/release-managers.md#branch-managers) from any previous release branches
-   - Add all current [Branch Managers](/release-managers.md#branch-managers)
-2. [Create CI/Presubmit jobs for the new release](#create-cipresubmit-jobs)
-3. [Run `./branchff` approximately a day after the branch has been created]((#branch-fast-forward))
+**n.b. If this is a `beta.0` release, there are additional tasks to complete. Please review them in the [Branch Creation section](#branch-creation).**
 
 ### Release Candidates
 
@@ -322,6 +293,34 @@ The following are some ways to determine if the release process was successful:
 ## Branch Management
 
 This section discusses the methods in managing commits on the `release-x.y` branch.
+
+### Branch Creation
+
+During a `beta.0` release e.g., `1.16.0-beta.0`, our release tooling creates a new release branch named `release-x.y`, where `x` and `y` are the major and minor versions of the next release, respectively.
+
+Behind the scenes `anago` is doing a git branch create and git push.
+
+`prow`’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs [every hour at 54 minutes past the hour](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/test-infra/test-infra-trusted.yaml#L867) and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo.
+
+New release branch creation (for example: `release-1.16`) also automatically triggers an alpha.0 build for the subsequent release (for example: [`v1.17.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.17.0-alpha.0)).
+
+This means that the staging step will take about twice as long, as it will stage both versions `v1.16.0-beta.0` and `v1.17.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
+
+This being the first build from the newly created release branch, the publication of this build does not send out the typical changelog detail notification, but rather will only send a shorter message with subject line "[k8s release-1.16 branch has been created](https://groups.google.com/d/msg/kubernetes-announce/BqN8x2Y2bMY/GFTzt1usEAAJ)".
+
+When the new `release-x.y` branch is created, it marks the beginning of another stage in the release process.
+
+The following tasks should take place as soon as possible:
+
+1. Update the [Slack branch whitelist](https://github.com/kubernetes/test-infra/blob/16cb8d25c7a01d3ab90a8502e45ea6f26492cdba/config/prow/plugins.yaml#L209-L240) ([example PR](https://github.com/kubernetes/test-infra/pull/13869)):
+   - Find the current branch whitelist ([`config/prow/plugins.yaml`](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml), grep for `branch_whitelist:`)
+   - Remove the oldest release branch block e.g., `release-1.12`
+   - Add an entry for the newest release branch e.g., `release-1.16`
+   - Add all current [Patch Release Team members](/release-managers.md#patch-release-team) to all `kubernetes/kubernetes` release branches
+   - Remove [Branch Managers](/release-managers.md#branch-managers) from any previous release branches
+   - Add all current [Branch Managers](/release-managers.md#branch-managers)
+2. [Create CI/Presubmit jobs for the new release](#create-cipresubmit-jobs)
+3. [Run `./branchff` approximately a day after the branch has been created](#branch-fast-forward)
 
 ### Create CI/Presubmit jobs
 
