@@ -480,48 +480,39 @@ Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15015).
    bazel run //experiment:prepare_release_branch
    ```
 
-2. Search for and update jobs that must be manually bumped
+2. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/15023/commits/cad8a3ce8ef3537568b12619634dff702b16cda7))
+   - Remove the oldest release `sig-release-<version>-{blocking,informing}` dashboards
+   - Add dashboards for the current release e.g., `sig-release-1.17-{blocking,informing}`
 
-   `grep` for [`manual-release-bump-required`](https://github.com/kubernetes/test-infra/search?q=manual-release-bump-required&unscoped_q=manual-release-bump-required) in [test-infra](https://github.com/kubernetes/test-infra) and duplicate block entries appropriately
-
-3. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/8aad58b09ae718139b44c70512d2d133d094ed82))
-   - Remove the oldest release `sig-release-<version>-{master,informing,all}` dashboards e.g., `sig-release-1.12-all`
-   - Add dashboards for the current release e.g., `sig-release-1.16-{master,informing,all}`
-
-4. Check for and resolve configuration errors ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/867e9ee0329228c6c79399dc67097d0f94814f8f)):
+3. Check for and resolve configuration errors:
 
    ```shell
    bazel test //config/... //testgrid/... //hack:verify-config
    ```
 
-   **Known issues**
-   - [`pull-kubernetes-{dependencies,verify}` jobs need to be manually forked](https://github.com/kubernetes/test-infra/issues/13886) ([example PR](https://github.com/kubernetes/test-infra/pull/13885))
-   - [Several gke/gce/gci jobs are misconfigured for sig-release-x.y-all dashboards](https://github.com/kubernetes/test-infra/issues/13883)
-
-5. Regenerate job configs:
+4. Regenerate job configs:
 
     ```shell
     hack/update-config.sh
     ```
 
-6. Do a final check for configuration errors:
+5. Do a final check for configuration errors:
 
     ```shell
     bazel test //config/... //testgrid/... //hack:verify-config
     ```
 
-7. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/13882))
+6. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/15023))
 
-8. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
+7. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
 
     Examples:
-    - [sig-release-1.16-all](https://testgrid.k8s.io/sig-release-1.16-all)
-    - [sig-release-1.16-blocking](https://testgrid.k8s.io/sig-release-1.16-blocking)
-    - [sig-release-1.16-informing](https://testgrid.k8s.io/sig-release-1.16-informing)
+    - [sig-release-1.17-blocking](https://testgrid.k8s.io/sig-release-1.17-blocking)
+    - [sig-release-1.17-informing](https://testgrid.k8s.io/sig-release-1.17-informing)
 
-9. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
+8. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
 
-[sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.16-blocking
+[sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
 [`branchff`]: https://git.k8s.io/release/branchff
 
 #### Update Kubernetes versions document
