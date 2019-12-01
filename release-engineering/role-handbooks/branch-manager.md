@@ -1,6 +1,8 @@
 # Branch Manager Handbook <!-- omit in toc -->
 
 - [Overview](#overview)
+  - [Conventions](#conventions)
+  - [Responsibilities](#responsibilities)
   - [Minimum Skills and Requirements](#minimum-skills-and-requirements)
   - [Associates Expectations](#associates-expectations)
 - [Prerequisite](#prerequisite)
@@ -46,6 +48,30 @@
 - [Background information](#background-information)
 
 ## Overview
+
+### Conventions
+
+In this handbook, we will make several references to Kubernetes releases, milestones, and [semantic versioning](http://semver.org/).
+
+For the purposes of this handbook, we'll assume that:
+
+- the current release in development is Kubernetes 1.17
+- the previous release is Kubernetes 1.16
+- the next release is Kubernetes 1.18
+- the release no longer in support is Kubernetes 1.13
+
+To simplify certain instructions, we will make the following connections:
+
+| Text | SemVer | Reference Release |
+|---|---|---|
+| "current release", "current milestone", "in development" | `x.y` | Kubernetes 1.17 |
+| "previous release", "previous milestone" | `x.y-1` | Kubernetes 1.16 |
+| "next release", "next milestone" | `x.y+1` | Kubernetes 1.18 |
+| "release no longer in support" | `x.y-4` | Kubernetes 1.13 |
+
+**As an editor of this content, Branch Managers should periodically update these conventions and the examples contained within this handbook.**
+
+### Responsibilities
 
 The release branch manager is responsible for cutting a version of [Kubernetes]. Each release is a three month cycle where as branch manager:
 
