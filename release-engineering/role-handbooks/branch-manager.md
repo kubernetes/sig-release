@@ -19,7 +19,12 @@
       - [Release Validation](#release-validation)
 - [Branch Management](#branch-management)
   - [Branch Creation](#branch-creation)
-  - [Create CI/Presubmit jobs](#create-cipresubmit-jobs)
+  - [Update test-infra configurations](#update-test-infra-configurations)
+    - [Update Slack branch whitelists](#update-slack-branch-whitelists)
+    - [Update milestone appliers](#update-milestone-appliers)
+    - [Update e2e variants](#update-e2e-variants)
+    - [Generate release branch jobs](#generate-release-branch-jobs)
+    - [Update Kubernetes versions document](#update-kubernetes-versions-document)
   - [Configure Merge Automation](#configure-merge-automation)
   - [Tide](#tide)
   - [Code Freeze](#code-freeze)
@@ -318,95 +323,134 @@ When the new `release-x.y` branch is created, it marks the beginning of another 
 
 The following tasks should take place as soon as possible:
 
-1. Update the [Slack branch whitelist](https://github.com/kubernetes/test-infra/blob/16cb8d25c7a01d3ab90a8502e45ea6f26492cdba/config/prow/plugins.yaml#L209-L240) ([example PR](https://github.com/kubernetes/test-infra/pull/13869)):
-   - Find the current branch whitelist ([`config/prow/plugins.yaml`](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml), grep for `branch_whitelist:`)
-   - Remove the oldest release branch block e.g., `release-1.12`
-   - Add an entry for the newest release branch e.g., `release-1.16`
-   - Add all current [Patch Release Team members](/release-managers.md#patch-release-team) to all `kubernetes/kubernetes` release branches
-   - Remove [Branch Managers](/release-managers.md#branch-managers) from any previous release branches
-   - Add all current [Branch Managers](/release-managers.md#branch-managers)
-2. [Create CI/Presubmit jobs for the new release](#create-cipresubmit-jobs)
-3. [Run `./branchff` approximately a day after the branch has been created](#branch-fast-forward)
+- [Update test-infra configurations](#update-test-infra-configurations)
+  - [Update Slack branch whitelists](#update-slack-branch-whitelists)
+  - [Update milestone appliers](#update-milestone-appliers)
+  - [Update e2e variants](#update-e2e-variants)
+  - [Generate release branch jobs](#generate-release-branch-jobs)
+  - [Update Kubernetes versions document](#update-kubernetes-versions-document)
+- [Run `./branchff` approximately a day after the branch has been created](#branch-fast-forward)
 
-### Create CI/Presubmit jobs
+### Update test-infra configurations
 
 This takes place around week 6-7, as soon as the new [`release-x.y` branch is created](#branch-creation).
 
-1. Clone the [test-infra repository](https://github.com/kubernetes/test-infra) e.g., `git clone git@github.com:kubernetes/test-infra.git`
+Before getting started, Branch Managers should:
 
-2. [Install Bazel](https://docs.bazel.build/versions/master/install.html)
+- Fork the [test-infra repository](https://github.com/kubernetes/test-infra)
+- Clone their fork of `kubernetes/test-infra`:
 
-3. Update [`images/kubekins-e2e/variants.yaml`](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e/variants.yaml). ([example PR](https://github.com/kubernetes/test-infra/pull/13876))
+  ```shell
+  git clone git@github.com:<username>/test-infra.git
+  ```
 
-   (The `variants.yaml` allows us to target various branches or branch combinations during CI tests. The `K8S_VERSION` variable maps to the version marker files viewable in the [`kubernetes-release` GCS bucket](https://gcsweb.k8s.io/gcs/kubernetes-release/release/) e.g., [`latest-1.16.txt`](https://storage.googleapis.com/kubernetes-release/release/latest-1.16.txt))
+- [Install Bazel](https://docs.bazel.build/versions/master/install.html)
 
-   - Remove the oldest release variant e.g., `'1.12'`
-   - Add an entry for the newest release variant e.g., `'1.16'`
-   - Ensure the following:
-     - The `K8S_RELEASE` marker for `experimental` matches `master`
-     - The `K8S_RELEASE` marker for the newest release variant is `latest-x.y`
-     - The `K8S_RELEASE` marker for every other release variant is `stable-x.y`
+#### Update Slack branch whitelists
 
-   Here's an example of a correct (as of time of writing (`1.16.0-beta.0`)) [`variants.yaml` for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml):
+[Slack branch whitelist](https://github.com/kubernetes/test-infra/blob/16cb8d25c7a01d3ab90a8502e45ea6f26492cdba/config/prow/plugins.yaml#L209-L240) ([example PR](https://github.com/kubernetes/test-infra/pull/13869)):
 
-   ```yaml
-   variants:
-      experimental:
-         CONFIG: experimental
-         GO_VERSION: 1.12.7
-         K8S_RELEASE: stable
-         BAZEL_VERSION: 0.28.1
-         UPGRADE_DOCKER: 'true'
-      master:
-         CONFIG: master
-         GO_VERSION: 1.12.7
-         K8S_RELEASE: stable
-         BAZEL_VERSION: 0.23.2
-      '1.16':
-         CONFIG: '1.16'
-         GO_VERSION: 1.12.7
-         K8S_RELEASE: latest-1.16
-         BAZEL_VERSION: 0.23.2
-      '1.15':
-         CONFIG: '1.15'
-         GO_VERSION: 1.12.7
-         K8S_RELEASE: stable-1.15
-         BAZEL_VERSION: 0.23.2
-      '1.14':
-         CONFIG: '1.14'
-         GO_VERSION: 1.12.5
-         K8S_RELEASE: stable-1.14
-         BAZEL_VERSION: 0.21.0
-      '1.13':
-         CONFIG: '1.13'
-         GO_VERSION: 1.11.5
-         K8S_RELEASE: stable-1.13
-         BAZEL_VERSION: 0.18.1
+- Find the current branch whitelist ([`config/prow/plugins.yaml`](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml), grep for `branch_whitelist:`)
+- Remove the oldest release branch block e.g., `release-1.12`
+- Add an entry for the newest release branch e.g., `release-1.16`
+- Add all current [Patch Release Team members](/release-managers.md#patch-release-team) to all `kubernetes/kubernetes` release branches
+- Remove [Branch Managers](/release-managers.md#branch-managers) from any previous release branches
+- Add all current [Branch Managers](/release-managers.md#branch-managers)
 
-   # Note that the last block i.e., the `1.12` block was removed
-   ```
+#### Update milestone appliers
 
-4. Create a PR with this change and wait for it to be merged. ([example PR](https://github.com/kubernetes/test-infra/pull/13876))
+Enable/update the `milestoneapplier` plugin configs for the following repos ([example PR](https://github.com/kubernetes/test-infra/pull/13888)):
 
-   **Wait for the `test-infra-push-kubekins-e2e` presubmit to finish (you can [check on prow](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e)).**
+- `kubernetes/enhancements`
+  - Update config for `master` to current milestone e.g., `v1.16`
+- `kubernetes/kubernetes`
+  - Remove config oldest release branch
+  - Add config for the current release branch
+  - Update config for `master` to current milestone e.g., `v1.16`
+- `kubernetes/release`
+  - Update config for `master` to current milestone e.g., `v1.16`
+- `kubernetes/sig-release`
+  - Update config for `master` to current milestone e.g., `v1.16`
 
-   **Pull latest from `master` before continuing.**
+**Known issues:**
 
-5. Generate the new release branch jobs:
+- Once the handbook includes sections that explicitly dictate timeline, we need to mention that after Code Freeze we need to update the `kubernetes/kubernetes` config for `master` to next milestone e.g., `v1.17`.
+
+#### Update e2e variants
+
+[`images/kubekins-e2e/variants.yaml`](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e/variants.yaml). ([example PR](https://github.com/kubernetes/test-infra/pull/13876))
+
+(The `variants.yaml` allows us to target various branches or branch combinations during CI tests. The `K8S_VERSION` variable maps to the version marker files viewable in the [`kubernetes-release` GCS bucket](https://gcsweb.k8s.io/gcs/kubernetes-release/release/) e.g., [`latest-1.16.txt`](https://storage.googleapis.com/kubernetes-release/release/latest-1.16.txt))
+
+- Remove the oldest release variant e.g., `'1.12'`
+- Add an entry for the newest release variant e.g., `'1.16'`
+- Ensure the following:
+  - The `K8S_RELEASE` marker for `experimental` matches `master`
+  - The `K8S_RELEASE` marker for the newest release variant is `latest-x.y`
+  - The `K8S_RELEASE` marker for every other release variant is `stable-x.y`
+
+Here's an example of a correct (as of time of writing (`1.16.0-beta.0`)) [`variants.yaml` for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml):
+
+```yaml
+variants:
+  experimental:
+      CONFIG: experimental
+      GO_VERSION: 1.12.7
+      K8S_RELEASE: stable
+      BAZEL_VERSION: 0.28.1
+      UPGRADE_DOCKER: 'true'
+  master:
+      CONFIG: master
+      GO_VERSION: 1.12.7
+      K8S_RELEASE: stable
+      BAZEL_VERSION: 0.23.2
+  '1.16':
+      CONFIG: '1.16'
+      GO_VERSION: 1.12.7
+      K8S_RELEASE: latest-1.16
+      BAZEL_VERSION: 0.23.2
+  '1.15':
+      CONFIG: '1.15'
+      GO_VERSION: 1.12.7
+      K8S_RELEASE: stable-1.15
+      BAZEL_VERSION: 0.23.2
+  '1.14':
+      CONFIG: '1.14'
+      GO_VERSION: 1.12.5
+      K8S_RELEASE: stable-1.14
+      BAZEL_VERSION: 0.21.0
+  '1.13':
+      CONFIG: '1.13'
+      GO_VERSION: 1.11.5
+      K8S_RELEASE: stable-1.13
+      BAZEL_VERSION: 0.18.1
+
+# Note that the last block i.e., the `1.12` block was removed
+```
+
+Create a PR with this change and wait for it to be merged. ([example PR](https://github.com/kubernetes/test-infra/pull/13876))
+
+**Wait for the `test-infra-push-kubekins-e2e` presubmit to finish (you can [check on prow](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e)).**
+
+**Pull latest from `master` before continuing.**
+
+#### Generate release branch jobs
+
+1. Generate the new release branch jobs:
 
    ```shell
    bazel run //experiment:prepare_release_branch
    ```
 
-6. Search for and update jobs that must be manually bumped
+2. Search for and update jobs that must be manually bumped
 
    `grep` for [`manual-release-bump-required`](https://github.com/kubernetes/test-infra/search?q=manual-release-bump-required&unscoped_q=manual-release-bump-required) in [test-infra](https://github.com/kubernetes/test-infra) and duplicate block entries appropriately
 
-7. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/8aad58b09ae718139b44c70512d2d133d094ed82))
+3. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/8aad58b09ae718139b44c70512d2d133d094ed82))
    - Remove the oldest release `sig-release-<version>-{master,informing,all}` dashboards e.g., `sig-release-1.12-all`
    - Add dashboards for the current release e.g., `sig-release-1.16-{master,informing,all}`
 
-8. Check for and resolve configuration errors ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/867e9ee0329228c6c79399dc67097d0f94814f8f)):
+4. Check for and resolve configuration errors ([example commit](https://github.com/kubernetes/test-infra/pull/13882/commits/867e9ee0329228c6c79399dc67097d0f94814f8f)):
 
    ```shell
    bazel test //config/... //testgrid/... //hack:verify-config
@@ -416,48 +460,35 @@ This takes place around week 6-7, as soon as the new [`release-x.y` branch is cr
    - [`pull-kubernetes-{dependencies,verify}` jobs need to be manually forked](https://github.com/kubernetes/test-infra/issues/13886) ([example PR](https://github.com/kubernetes/test-infra/pull/13885))
    - [Several gke/gce/gci jobs are misconfigured for sig-release-x.y-all dashboards](https://github.com/kubernetes/test-infra/issues/13883)
 
-9. Enable/update the `milestoneapplier` plugin configs for the following repos ([example PR](https://github.com/kubernetes/test-infra/pull/13888)):
-    - `kubernetes/enhancements`
-      - Update config for `master` to current milestone e.g., `v1.16`
-    - `kubernetes/kubernetes`
-      - Remove config oldest release branch
-      - Add config for the current release branch
-      - Update config for `master` to current milestone e.g., `v1.16`
-    - `kubernetes/release`
-      - Update config for `master` to current milestone e.g., `v1.16`
-    - `kubernetes/sig-release`
-      - Update config for `master` to current milestone e.g., `v1.16`
-
-   **Known issues:**
-   - Once the handbook includes sections that explicitly dictate timeline, we need to mention that after Code Freeze we need to update the `kubernetes/kubernetes` config for `master` to next milestone e.g., `v1.17`.
-
-10. Update [kubernetes-versions.md](https://github.com/kubernetes/test-infra/blob/master/docs/kubernetes-versions.md)
-
-11. Regenerate job configs:
+5. Regenerate job configs:
 
     ```shell
     hack/update-config.sh
     ```
 
-12. Do a final check for configuration errors:
+6. Do a final check for configuration errors:
 
     ```shell
     bazel test //config/... //testgrid/... //hack:verify-config
     ```
 
-13. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/13882))
+7. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/13882))
 
-14. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
+8. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
 
     Examples:
     - [sig-release-1.16-all](https://testgrid.k8s.io/sig-release-1.16-all)
     - [sig-release-1.16-blocking](https://testgrid.k8s.io/sig-release-1.16-blocking)
     - [sig-release-1.16-informing](https://testgrid.k8s.io/sig-release-1.16-informing)
 
-15. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
+9. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
 
 [sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.16-blocking
 [`branchff`]: https://git.k8s.io/release/branchff
+
+#### Update Kubernetes versions document
+
+Update [kubernetes-versions.md](https://github.com/kubernetes/test-infra/blob/master/docs/kubernetes-versions.md)
 
 ### Configure Merge Automation
 
@@ -626,7 +657,7 @@ Each and every commit ought to be something the release team has visibility into
 
 **The release team and the branch manager are the final safety guard on the release content.**
 
-Upon a successful mock execution of `./brachff`, proceed with:
+Upon a successful mock execution of `./branchff`, proceed with:
 `./branchff release-x.y --nomock`
 
 Subsequent runs will simply be merging in changes from `master` to the branch, keeping the previous API fixup commits on the branch.
