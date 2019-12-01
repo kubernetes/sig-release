@@ -452,57 +452,21 @@ Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15017).
 
 #### Update e2e variants
 
-[`images/kubekins-e2e/variants.yaml`](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e/variants.yaml). ([example PR](https://github.com/kubernetes/test-infra/pull/13876))
+Images used in Kubernetes E2E tests are generated via our [GCB Builder tool](https://github.com/kubernetes/test-infra/blob/master/images/builder/README.md).
 
-(The `variants.yaml` allows us to target various branches or branch combinations during CI tests. The `K8S_VERSION` variable maps to the version marker files viewable in the [`kubernetes-release` GCS bucket](https://gcsweb.k8s.io/gcs/kubernetes-release/release/) e.g., [`latest-1.16.txt`](https://storage.googleapis.com/kubernetes-release/release/latest-1.16.txt))
+The `variants.yaml` config file, used in conjunction with the GCB Builder, allows us to target various branches or branch combinations during CI tests. The `K8S_VERSION` variable maps to the version marker files viewable in the [`kubernetes-release` GCS bucket](https://gcsweb.k8s.io/gcs/kubernetes-release/release/) e.g., [`latest-1.17.txt`](https://storage.googleapis.com/kubernetes-release/release/latest-1.17.txt).
 
-- Remove the oldest release variant e.g., `'1.12'`
-- Add an entry for the newest release variant e.g., `'1.16'`
+We need to update the [variants for the `kubekins-e2e` image](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e/variants.yaml).
+
+- Remove the oldest release variant e.g., `'1.13'`
+- Add an entry for the newest release variant e.g., `'1.17'`
 - Ensure the following:
   - The `K8S_RELEASE` marker for `experimental` matches `master`
   - The `K8S_RELEASE` marker for the newest release variant is `latest-x.y`
   - The `K8S_RELEASE` marker for every other release variant is `stable-x.y`
 
-Here's an example of a correct (as of time of writing (`1.16.0-beta.0`)) [`variants.yaml` for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml):
-
-```yaml
-variants:
-  experimental:
-      CONFIG: experimental
-      GO_VERSION: 1.12.7
-      K8S_RELEASE: stable
-      BAZEL_VERSION: 0.28.1
-      UPGRADE_DOCKER: 'true'
-  master:
-      CONFIG: master
-      GO_VERSION: 1.12.7
-      K8S_RELEASE: stable
-      BAZEL_VERSION: 0.23.2
-  '1.16':
-      CONFIG: '1.16'
-      GO_VERSION: 1.12.7
-      K8S_RELEASE: latest-1.16
-      BAZEL_VERSION: 0.23.2
-  '1.15':
-      CONFIG: '1.15'
-      GO_VERSION: 1.12.7
-      K8S_RELEASE: stable-1.15
-      BAZEL_VERSION: 0.23.2
-  '1.14':
-      CONFIG: '1.14'
-      GO_VERSION: 1.12.5
-      K8S_RELEASE: stable-1.14
-      BAZEL_VERSION: 0.21.0
-  '1.13':
-      CONFIG: '1.13'
-      GO_VERSION: 1.11.5
-      K8S_RELEASE: stable-1.13
-      BAZEL_VERSION: 0.18.1
-
-# Note that the last block i.e., the `1.12` block was removed
-```
-
-Create a PR with this change and wait for it to be merged. ([example PR](https://github.com/kubernetes/test-infra/pull/13876))
+Create a PR with this change and wait for it to be merged.
+Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15015).
 
 **Wait for the `test-infra-push-kubekins-e2e` presubmit to finish (you can [check on prow](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e)).**
 
