@@ -10,7 +10,12 @@
 - [Releases Management](#releases-management)
   - [Alpha Releases](#alpha-releases)
     - [Alpha Stage](#alpha-stage)
+      - [gcbmgr stage](#gcbmgr-stage)
+      - [gcbmgr list](#gcbmgr-list)
+      - [gcbmgr tail](#gcbmgr-tail)
     - [Alpha Release](#alpha-release)
+      - [gcbmgr release](#gcbmgr-release)
+      - [Mock vs nomock](#mock-vs-nomock)
   - [Beta Releases](#beta-releases)
   - [Release Candidates](#release-candidates)
   - [Official Releases](#official-releases)
@@ -124,9 +129,11 @@ A list of To Do(s) to get started as Branch Manager:
 
 The following command can help verify that your clone of the [release tools] are up-to-date, that your setup is fully configured, and your `gcloud` identity is authorized for the release builds:
 
-`./gcbmgr`
+```shell
+./gcbmgr
+```
 
-- should run successfully and even show some green colored "OK" words
+This command should run successfully and even show some green colored "OK" words
 
 ## Releases Management
 
@@ -166,27 +173,41 @@ After having thoroughly read the section on cutting a release version of the han
 
 #### Alpha Stage
 
+##### gcbmgr stage
+
 Start staging a build by running:
 
-`./gcbmgr stage master`
+```shell
+./gcbmgr stage master
+```
 
-- returns relatively quick
-- provides a link to GCP where you can track the process of the build
+This command should return relatively quickly and provide a link to GCP where you can track the process of the build.
 
 Early in the release cycle, it is likely that the build might fail. By default the `gcbmgr stage master` command automatically looks for a place where [release master blocking tests](https://k8s-testgrid.appspot.com/sig-release-master-blocking) have green results, which traditionally has not happened in Kubernetes on an ongoing basis.
 
 WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. But in the meantime, acknowledging today especially for an early alpha or beta release, it is possible to just build via:
 
-`./gcbmgr stage master --build-at-head`
+```shell
+./gcbmgr stage master --build-at-head
+```
 
-- Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from HEAD (the last commit on the current branch).
-- This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
+Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from HEAD (the last commit on the current branch).
 
-`./gcbmgr list`
+This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
 
-- You should now see your new job running.
+##### gcbmgr list
 
-`./gcbmgr tail`
+```shell
+./gcbmgr list
+```
+
+You should now see your new job running.
+
+##### gcbmgr tail
+
+```shell
+./gcbmgr tail
+```
 
 - To observe the output log for the build (same as on Google Cloud Console).
 - Scan output for failures and warnings.
@@ -198,22 +219,28 @@ For more information on the usage of `./gcbmgr` run `./gcbmgr --help` or inspect
 
 After staging comes the actual releasing, but this may be intentionally delayed. For example, the branch manager may stage a build from the head of the release branch late in the release cycle, doing so in the morning so that it is fully build and would be releasable in the afternoon (pending CI tests will results from the head of the branch). If the results are good and the release team gives the go ahead, you can initiate the publishing portion of the release process. If staging the build only happened after the receipt of clean CI tests results, this will delay completing the entire release process for a release version (alpha,beta,rc,...). This of course presumes reproducible builds and that CI builds and tests are meaningful relative to the release builds. There is always a risk that these diverge, and this needs managed broadly by the project and the release team.
 
+##### gcbmgr release
+
 Use the `--buildversion=` as specified in the output when `gcbmgr` is done with the stage command.
 
-`./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash`
+```shell
+./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash
+```
 
 - This copies the staged build to public GCP buckets at well-known urls for the truncated release version string. The unique build staging identifier will subsequently be just “v1.16.0-alpha.1”, even though the staged build had an “alpha.0” in its name
 - This can be confusing. The v1.16.0-alpha.0 tag was created automatically in the past when the v1.15 branch was forked, but it wasn’t actually build.
 
-Note:
-> Any `./gcbmgr` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `gcbmgr` take any actual impact on the release process. All this mock building/releasing can help you verify that you have a working setup!
+##### Mock vs nomock
+
+Any `./gcbmgr` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `gcbmgr` take any actual impact on the release process. All this mock building/releasing can help you verify that you have a working setup!
 
 For example, to execute an actual run:
 
-`./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash --nomock`
+```shell
+./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash --nomock
+```
 
-Note:
-> This run may fail. Mock builds can only be mock released. A nomock release requires a nomock build to be staged.
+**n.b. This run may fail. Mock builds can only be mock released. A nomock release requires a nomock build to be staged.**
 
 Builds against the `master` branch are implicitly the next alpha. `gcbmgr` and `anago` automatically finds and increments the current build number.
 
@@ -225,19 +252,27 @@ Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `
 
 The command example below is to stage a build for a beta release:
 
-`./gcbmgr stage release-1.16 --build-at-head --nomock`
+```shell
+./gcbmgr stage release-1.16 --build-at-head --nomock
+```
 
 To publish (release) the build artifacts from staging beta for example, run:
 
-`./gcbmgr release release-1.16 --buildversion=v1.16.0-alpha.3.N+commit-hash --nomock`
+```shell
+./gcbmgr release release-1.16 --buildversion=v1.16.0-alpha.3.N+commit-hash --nomock
+```
 
 **n.b. If this is a `beta.0` release, there are additional tasks to complete after the release branch is cut. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation).**
 
 ### Release Candidates
 
-Adding the `--rc` flag switches behavior on to building release candidates. Again `gcbmgr` and `anago` automatically finds and increments the current build number. For example:
+Adding the `--rc` flag switches behavior on to building release candidates. Again `gcbmgr` and `anago` automatically finds and increments the current build number.
 
-`./gcbmgr stage release-1.16 --rc --build-at-head --nomock`
+For example:
+
+```shell
+./gcbmgr stage release-1.16 --rc --build-at-head --nomock
+```
 
 To publish the build artifacts (release), as usual use the `--buildversion=` number as specified in the output when `gcbmgr` is done with the stage command.
 
@@ -274,7 +309,9 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 
 To initiate staging the build for the official release, the `--official` flag is used. For example:
 
-`./gcbmgr stage release-1.16 --official --build-at-head --nomock`
+```shell
+./gcbmgr stage release-1.16 --official --build-at-head --nomock
+```
 
 In addition to `v1.16.n` this will also build and stage the subsequent patch's
 `beta.0`, in this example `v1.16.(n+1)-beta.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
