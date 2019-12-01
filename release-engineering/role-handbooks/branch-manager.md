@@ -422,14 +422,20 @@ Before getting started, Branch Managers should:
 
 #### Update Slack branch whitelists
 
-[Slack branch whitelist](https://github.com/kubernetes/test-infra/blob/16cb8d25c7a01d3ab90a8502e45ea6f26492cdba/config/prow/plugins.yaml#L209-L240) ([example PR](https://github.com/kubernetes/test-infra/pull/13869)):
+The Slack branch whitelist reports potentially dangerous or unexpected changes to repos to Slack channels, like unauthorized pushes, rewrites, branch creations/deletions.
 
-- Find the current branch whitelist ([`config/prow/plugins.yaml`](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml), grep for `branch_whitelist:`)
-- Remove the oldest release branch block e.g., `release-1.12`
-- Add an entry for the newest release branch e.g., `release-1.16`
+It is part of the [Slack events Prow plugin](https://git.k8s.io/test-infra/prow/plugins/slackevents/slackevents.go).
+
+Update the Slack branch whitelists:
+
+- Find the current branch whitelist ([`config/prow/plugins.yaml`](https://git.k8s.io/test-infra/config/prow/plugins.yaml), grep for `branch_whitelist:`)
+- Remove the oldest release branch block
+- Add an entry for the newest release branch
 - Add all current [Patch Release Team members](/release-managers.md#patch-release-team) to all `kubernetes/kubernetes` release branches
 - Remove [Branch Managers](/release-managers.md#branch-managers) from any previous release branches
 - Add all current [Branch Managers](/release-managers.md#branch-managers)
+
+Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15014).
 
 #### Update milestone appliers
 
