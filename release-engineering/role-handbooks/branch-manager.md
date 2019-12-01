@@ -19,6 +19,8 @@
       - [Release Validation](#release-validation)
 - [Branch Management](#branch-management)
   - [Branch Creation](#branch-creation)
+    - [During staging](#during-staging)
+    - [After release branch creation](#after-release-branch-creation)
   - [Update test-infra configurations](#update-test-infra-configurations)
     - [Update Slack branch whitelists](#update-slack-branch-whitelists)
     - [Update milestone appliers](#update-milestone-appliers)
@@ -217,7 +219,11 @@ Builds against the `master` branch are implicitly the next alpha. `gcbmgr` and `
 
 ### Beta Releases
 
-Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `anago` automatically find and increment the current build number. The command example below is to stage a build for a beta release:
+Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `anago` automatically find and increment the current build number.
+
+**n.b. If this is a `beta.0` release, there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
+
+The command example below is to stage a build for a beta release:
 
 `./gcbmgr stage release-1.16 --build-at-head --nomock`
 
@@ -225,7 +231,7 @@ To publish (release) the build artifacts from staging beta for example, run:
 
 `./gcbmgr release release-1.16 --buildversion=v1.16.0-alpha.3.N+commit-hash --nomock`
 
-**n.b. If this is a `beta.0` release, there are additional tasks to complete. Please review them in the [Branch Creation section](#branch-creation).**
+**n.b. If this is a `beta.0` release, there are additional tasks to complete after the release branch is cut. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation).**
 
 ### Release Candidates
 
@@ -317,18 +323,23 @@ New release branch creation (for example: `release-1.16`) also automatically tri
 
 This means that the staging step will take about twice as long, as it will stage both versions `v1.16.0-beta.0` and `v1.17.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
 
-This being the first build from the newly created release branch, the publication of this build does not send out the typical changelog detail notification, but rather will only send a shorter message with subject line "[k8s release-1.16 branch has been created](https://groups.google.com/d/msg/kubernetes-announce/BqN8x2Y2bMY/GFTzt1usEAAJ)".
+#### During staging
 
-When the new `release-x.y` branch is created, it marks the beginning of another stage in the release process.
-
-The following tasks should take place as soon as possible:
+While the staging job is in progress, run through the following tasks, **_putting an explicit hold_** on any PRs (to be removed once the release branch has been created):
 
 - [Update test-infra configurations](#update-test-infra-configurations)
   - [Update Slack branch whitelists](#update-slack-branch-whitelists)
   - [Update milestone appliers](#update-milestone-appliers)
   - [Update e2e variants](#update-e2e-variants)
-  - [Generate release branch jobs](#generate-release-branch-jobs)
-  - [Update Kubernetes versions document](#update-kubernetes-versions-document)
+
+#### After release branch creation
+
+This being the first build from the newly created release branch, the publication of this build does not send out the typical changelog detail notification, but rather will only send a shorter message with subject line "[k8s release-1.16 branch has been created](https://groups.google.com/d/msg/kubernetes-announce/BqN8x2Y2bMY/GFTzt1usEAAJ)".
+
+Once the new `release-x.y` branch is created, the following tasks should take place as soon as possible:
+
+- [Generate release branch jobs](#generate-release-branch-jobs)
+- [Update Kubernetes versions document](#update-kubernetes-versions-document)
 - [Run `./branchff` approximately a day after the branch has been created](#branch-fast-forward)
 
 ### Update test-infra configurations
