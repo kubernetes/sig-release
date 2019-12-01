@@ -433,22 +433,16 @@ Before getting started, Branch Managers should:
 
 #### Update milestone appliers
 
-Enable/update the `milestoneapplier` plugin configs for the following repos ([example PR](https://github.com/kubernetes/test-infra/pull/13888)):
+The [milestone applier plugin](https://git.k8s.io/test-infra/prow/plugins/milestoneapplier/milestoneapplier.go) automatically applies a GitHub milestone to pull requests after they have merged.
 
-- `kubernetes/enhancements`
-  - Update config for `master` to current milestone e.g., `v1.16`
-- `kubernetes/kubernetes`
-  - Remove config oldest release branch
-  - Add config for the current release branch
-  - Update config for `master` to current milestone e.g., `v1.16`
-- `kubernetes/release`
-  - Update config for `master` to current milestone e.g., `v1.16`
-- `kubernetes/sig-release`
-  - Update config for `master` to current milestone e.g., `v1.16`
+This only applies to repos that have the milestone applier configured and for pull requests that do not already have a milestone.
 
-**Known issues:**
+Update the `milestoneapplier` plugin configs for `kubernetes/kubernetes`:
 
-- Once the handbook includes sections that explicitly dictate timeline, we need to mention that after Code Freeze we need to update the `kubernetes/kubernetes` config for `master` to next milestone e.g., `v1.17`.
+- Remove config for the oldest release branch
+- Add config for the current release branch
+
+Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15017).
 
 #### Update e2e variants
 
@@ -642,7 +636,7 @@ It is also helpful to remind [#sig-testing](https://kubernetes.slack.com/message
 
 ### Code Thaw
 
-Code thaw removes the release cycle merge restrictions and replaces the two queries with one single query. We remain in this state until the next code freeze.
+Code Thaw removes the release cycle merge restrictions and replaces the two queries with one single query. We remain in this state until the next Code Freeze.
 
 ```yaml
   - repos:
@@ -656,6 +650,19 @@ Code thaw removes the release cycle merge restrictions and replaces the two quer
     .
     .
 ```
+
+Update the `milestoneapplier` plugin configs for the following repos to the **_next_** milestone:
+
+- `kubernetes/enhancements`
+- `kubernetes/kubernetes`
+- `kubernetes/release`
+- `kubernetes/sig-release`
+- `kubernetes/test-infra`
+
+Example PRs:
+
+- [1.17, part one](https://github.com/kubernetes/test-infra/pull/15369)
+- [1.17, part two](https://github.com/kubernetes/test-infra/pull/15019)
 
 ### Branch Fast Forward
 
