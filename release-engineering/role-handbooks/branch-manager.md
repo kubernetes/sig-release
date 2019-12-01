@@ -5,7 +5,7 @@
   - [Responsibilities](#responsibilities)
   - [Minimum Skills and Requirements](#minimum-skills-and-requirements)
   - [Associates Expectations](#associates-expectations)
-- [Prerequisite](#prerequisite)
+- [Prerequisites](#prerequisites)
   - [Release Team Onboarding](#release-team-onboarding)
   - [Branch Management Onboarding](#branch-management-onboarding)
   - [Safety Check](#safety-check)
@@ -116,9 +116,9 @@ This is not a rigid list of obligations from Associates under branch management,
 1. Question the content of this handbook. *“The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.”*
 1. Be curious, and try to make the most out of this opportunity.
 
-## Prerequisite
+## Prerequisites
 
-This is a collection of requirements and conditions to fulfil when taking on the role as branch manager.
+This is a collection of requirements and conditions to fulfill when taking on the role as branch manager.
 
 ### Release Team Onboarding
 
