@@ -15,7 +15,7 @@ aliases:
     - feiskyer # Patch Release Team
     - hoegaarden # Patch Release Team
     - idealhack # Patch Release Team
-    - justaugustus # subproject owner
+    - justaugustus # subproject owner / Patch Release Team
     - tpepper # subproject owner / Patch Release Team
   release-team:
     - aishsundar # 1.13 RT Lead
@@ -27,8 +27,8 @@ aliases:
     - spiffxp # 1.14 RT Lead
     - tpepper # subproject owner / 1.12 RT Lead
   branch-managers:
-    - bubblemelon
-    - justaugustus
+    - cpanato
+    - saschagrunert
   build-admins:
     - aleksandra-malinowska
     - listx
