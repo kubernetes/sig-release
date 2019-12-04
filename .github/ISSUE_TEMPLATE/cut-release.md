@@ -11,8 +11,11 @@ labels: sig/release, area/release-eng
 - Post bumps or issues encountered along the way
 -->
 
-- [ ] Screenshot unhealthy `master` branch testgrid boards and add them as a comment
-<!-- see template below, example: https://github.com/kubernetes/sig-release/issues/842#issuecomment-547453821 -->
+- [ ] Screenshot unhealthy release branch testgrid boards and add them as a comment
+<!--
+Screenshot `master` branch for releases <= `x.y.z-beta.0` OR the `release-x.y` branch for releases > x.y.z-beta.0.
+see template below, example: https://github.com/kubernetes/sig-release/issues/842#issuecomment-547453821
+-->
 - [ ] Stage & release
   - [ ] Notify [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y): [see notification](https://link-to-slack-message)
   <!-- e.g. https://kubernetes.slack.com/archives/CJH2GBF7Y/p1572365803088800 -->
