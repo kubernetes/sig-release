@@ -128,10 +128,7 @@ This is a collection of requirements and conditions to fulfill when taking on th
 
 A list of To Do(s) to get started as Branch Manager:
 
-- Contact the [Release Managers Google Group][release-managers-group] to identify yourself as the incoming release branch manager for the current release team and request to be added to the special privilege group for the `kubernetes-release-test` GCP project that's used to build the releases
-  - Similar access later in the cycle should be granted to the associates depending on how they progress and what actions they prove able to step up to exercise during the cycle.
-- Request permission to post on [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
-  - If you haven't received access after 24 hrs, contact the [Release Team][kubernetes-release-team].
+- Open a [Release Manager onboarding issue](https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng&template=release-manager.md&title=Release+Manager+access+for+%3CGH-handle%3E) in this repo
 - Machine setup:
   - Linux OS
     - MacOS/Windows are not supported by [release tools] today. However, running inside a Linux container on MacOS via Docker works well.
@@ -142,10 +139,6 @@ A list of To Do(s) to get started as Branch Manager:
   - `git clone git@github.com:kubernetes/release.git`
   - ability to run `sendmail` from local Unix command line
     - You may send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: [`Buckets/kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`](https://console.cloud.google.com/storage/browser/kubernetes-release/archive/?project=kubernetes-release-test)
-- Join these mailing lists to stay current:
-  - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-  - [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team)
-  - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
