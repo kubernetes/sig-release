@@ -7,7 +7,7 @@
 | CI Signal | Nikolaos Moraitis / ([@droslean](https://github.com/droslean) / Slack: `@droslean`) |  |
 | Bug Triage | Silvia Pina / ([@smourapina](https://github.com/smourapina) / Slack: `@smourapina`) |  |
 | Docs | Vineeth Pothulapati ([@VineethReddy02](https://github.com/VineethReddy02) / Slack: `@Vineeth`) |  |
-| Release Notes | Eddie Villalba ([@Evillgenius75](https://github.com/Evillgenius75) / Slack: `Evill_genius`) |  |
+| Release Notes | Eddie Villalba ([@Evillgenius75](https://github.com/Evillgenius75) / Slack: `@Evill_genius`) |  |
 | Communications | Karen Chu ([@karenhchu](https://github.com/karenhchu) / Slack: `@karenhchu`) |  |
 | Emeritus Adviser | Lachlan Evenson ([@lachie83](https://github.com/lachie83)) / Slack: `@lachie83`) | -- |
 
