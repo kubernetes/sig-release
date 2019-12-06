@@ -513,7 +513,7 @@ Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15015).
    bazel run //experiment:prepare_release_branch
    ```
 
-2. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/15023/commits/cad8a3ce8ef3537568b12619634dff702b16cda7))
+2. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/kubernetes/sig-release/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/15023/commits/cad8a3ce8ef3537568b12619634dff702b16cda7))
    - Remove the oldest release `sig-release-<version>-{blocking,informing}` dashboards
    - Add dashboards for the current release e.g., `sig-release-1.17-{blocking,informing}`
 
