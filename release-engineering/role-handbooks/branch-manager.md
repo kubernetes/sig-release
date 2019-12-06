@@ -39,9 +39,9 @@
     - [Generate release branch jobs](#generate-release-branch-jobs)
     - [Update Kubernetes versions document](#update-kubernetes-versions-document)
   - [Configure Merge Automation](#configure-merge-automation)
-  - [Tide](#tide)
-  - [Code Freeze](#code-freeze)
-  - [Code Thaw](#code-thaw)
+    - [Tide](#tide)
+    - [Code Freeze](#code-freeze)
+    - [Code Thaw](#code-thaw)
   - [Branch Fast Forward](#branch-fast-forward)
   - [Reverts](#reverts)
   - [Cherry Picks](#cherry-picks)
@@ -562,7 +562,7 @@ Code freeze initiates additional merge requirements, while Code thaw marks the s
 
 As Branch Manager, coordinate with the Release Lead on checking whichever config changes are required to enable and disable merge restrictions.
 
-### Tide
+#### Tide
 
 Tide automate merges. Its configuration lives in `[config.yaml](https://github.com/kubernetes/test-infra/blob/master/prow/config.yaml)`. Tide identifies PRs that are mergeable using GitHub queries that correspond to the entries in the queries field. Here is an example of what the query config for `kubernetes/kubernetes` looks like without additional constraints related to the release cycle:
 
@@ -588,7 +588,7 @@ Tide automate merges. Its configuration lives in `[config.yaml](https://github.c
 
 During code freeze, two queries are used instead of just one for the `kubernetes/kubernetes` repo. One query handles the `master` and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
 
-### Code Freeze
+#### Code Freeze
 
 Code freeze is when merge requirements for the `master` and current release branch diverge from the requirements for the other branches so this is when the `kubernetes/kubernetes` Tide query splits into two queries.
 
@@ -628,7 +628,7 @@ It is also helpful to remind [#sig-testing](https://kubernetes.slack.com/message
       .
 ```
 
-### Code Thaw
+#### Code Thaw
 
 Code Thaw removes the release cycle merge restrictions and replaces the two queries with one single query. We remain in this state until the next Code Freeze.
 
