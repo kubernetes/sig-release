@@ -47,7 +47,7 @@ GitHub Mentions: [@kubernetes/patch-release-team](https://github.com/orgs/kubern
 Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working in close conjunction with the [Release Team](/release-team/README.md) through each release cycle.
 
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
-- Sascha Grunert ([saschagrunert](https://github.com/saschagrunert))
+- Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
 
 ## Associates
 
