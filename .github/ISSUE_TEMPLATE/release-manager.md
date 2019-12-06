@@ -38,7 +38,7 @@ e.g., permanent, temporary
     - [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF)
     - [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y)
   - [ ] Is a [Kubernetes GitHub org member](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
-- [ ] Update [Release Managers](/release-managers.md) page to include the new Release Manager
+- [ ] Update [Release Managers](https://git.k8s.io/sig-release/release-managers.md) page to include the new Release Manager
 
 <!-- 
 Uncomment the appropriate checklist for the Release Manager role the new candidate will hold.
