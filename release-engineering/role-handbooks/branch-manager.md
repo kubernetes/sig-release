@@ -6,7 +6,6 @@
   - [Minimum Skills and Requirements](#minimum-skills-and-requirements)
   - [Associates Expectations](#associates-expectations)
 - [Prerequisites](#prerequisites)
-  - [Release Team Onboarding](#release-team-onboarding)
   - [Branch Management Onboarding](#branch-management-onboarding)
   - [Safety Check](#safety-check)
 - [Releases Management](#releases-management)
@@ -120,15 +119,10 @@ This is not a rigid list of obligations from Associates under branch management,
 
 This is a collection of requirements and conditions to fulfill when taking on the role as branch manager.
 
-### Release Team Onboarding
-
-**Please review and work through the tasks in the [Release Team Onboarding Guide](https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-onboarding.md) first, before proceeding with the section specific to branch management below.**
-
 ### Branch Management Onboarding
 
-A list of To Do(s) to get started as Branch Manager:
+**Before we can grant Release Manager access to new Branch Managers, a [Release Manager onboarding issue](https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng&template=release-manager.md&title=Release+Manager+access+for+%3CGH-handle%3E) _MUST_ be opened in this repo. Please take a moment to do that before executing the tasks contained in the this handbook.**
 
-- Open a [Release Manager onboarding issue](https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng&template=release-manager.md&title=Release+Manager+access+for+%3CGH-handle%3E) in this repo
 - Machine setup:
   - Linux OS
     - MacOS/Windows are not supported by [release tools] today. However, running inside a Linux container on MacOS via Docker works well.
