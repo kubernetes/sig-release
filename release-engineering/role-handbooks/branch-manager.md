@@ -7,6 +7,11 @@
   - [Associates Expectations](#associates-expectations)
 - [Prerequisites](#prerequisites)
   - [Branch Management Onboarding](#branch-management-onboarding)
+  - [Machine setup](#machine-setup)
+    - [Operating System](#operating-system)
+    - [Release tooling](#release-tooling)
+    - [Google Cloud SDK](#google-cloud-sdk)
+    - [Sending mail](#sending-mail)
   - [Safety Check](#safety-check)
 - [Releases Management](#releases-management)
   - [Alpha Releases](#alpha-releases)
@@ -123,16 +128,57 @@ This is a collection of requirements and conditions to fulfill when taking on th
 
 **Before we can grant Release Manager access to new Branch Managers, a [Release Manager onboarding issue](https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng&template=release-manager.md&title=Release+Manager+access+for+%3CGH-handle%3E) _MUST_ be opened in this repo. Please take a moment to do that before executing the tasks contained in the this handbook.**
 
-- Machine setup:
-  - Linux OS
-    - MacOS/Windows are not supported by [release tools] today. However, running inside a Linux container on MacOS via Docker works well.
-    - See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Dockerfile.
-  - Setup SSH keys for GitHub (either static .ssh/config or ssh agent works)
-  - Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)
-  - Run `gcloud init` using the identity (i.e. email address) that you had authorized for the GCP project
-  - `git clone git@github.com:kubernetes/release.git`
-  - ability to run `sendmail` from local Unix command line
-    - You may send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: [`Buckets/kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`](https://console.cloud.google.com/storage/browser/kubernetes-release/archive/?project=kubernetes-release-test)
+### Machine setup
+
+#### Operating System
+
+We make a modicum of effort to ensure our [release tools] are supported on multiple platforms, please note that only the following systems are known to be supported:
+
+- Debian-like (Debian, Ubuntu)
+- Fedora-like (Fedora, RHEL, CentOS)
+- MacOS
+
+Windows is not supported by [release tools].
+
+While our tooling may not support every platform, you may find success running within a container image.
+
+See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Dockerfile.
+
+**If you notice that [release tools] are not working as expected, please be sure to file an issue in [kubernetes/release][release tools].**
+
+#### Release tooling
+
+To leverage/contribute to our [release tools], Release Managers will need to fork and clone the [kubernetes/release][release tools] repo.
+
+Release Managers primarily use SSH to authenticate to GitHub.
+
+GitHub has documentation to assist in:
+
+- [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+- [Forking a repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+
+Additionally, `kubernetes/community` has a great [overview of the GitHub workflow](https://git.k8s.io/community/contributors/guide/github-workflow.md) we use across several Kubernetes org repositories.
+
+Please take a moment to review that documentation before continuing.
+
+#### Google Cloud SDK
+
+[Kubernetes release artifacts](/release-engineering/artifacts.md) are stored on Google Cloud Platform (GCP).
+
+Release Managers will need to use the Google Cloud SDK to interact with release artifacts.
+
+Google Cloud has [documentation on installing and configuring the Google Cloud SDK CLI tools](https://cloud.google.com/sdk/docs/quickstarts).
+
+#### Sending mail
+
+At the end of a release, Release Managers will need to announce the new release to the community.
+
+This can be done in one of two ways:
+
+- The `./release-notify` tool -- `sendmail` will need to be configured correctly on your environment for this to work
+- Manually -- Send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: `gs://kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`:
+  - [Example subject](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement-subject.txt)
+  - [Example body](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement.html)
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
