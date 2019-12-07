@@ -30,7 +30,6 @@ The release team leader role is responsible for coordinating release activities,
   - [Week 13](#week-13)
   - [Week 14](#week-14)
 
-
 ## Authority and Responsibility
 
 The Release Team Lead should be an arbiter of decisions, and not the primary decision-maker. A lead should constantly search for the best-qualified people or SIGs to guide the decision, not "go it alone", unless it is a very specific concern within the release process itself. When decisions are made they must be weighted in favor of community concerns over those of individuals or specific companies. Leads must also relinquish any favoritism for the company they work for. If there is a conflict of interest, the lead must recuse themselves from that decision. Above all, the release lead is a servant leader to the team and the community.
@@ -110,13 +109,14 @@ Release Team selection should happen in accordance with the [Release Team select
 ## Release Milestone Activities
 
 ### Before Release Begins
-- Attend previous release retro to capture feedback and incorporate it into next release cycle 
+
+- Attend previous release retro to capture feedback and incorporate it into next release cycle
 - Plan release schedule and milestones. Gather feedback as needed.
-- Make sure you have your shadows confirmed 
+- Make sure you have your shadows confirmed
 - Have a handover meeting with SIG Chairs and the outgoing lead to get credentials to SIG Release Zoom and any other needed permissions
 - Request edit access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from the SIG Release Chairs
 
-### Week 1 
+### Week 1
 
 - Start the release cycle
 - Ensure you have joined the following Google Groups:
@@ -126,16 +126,16 @@ Release Team selection should happen in accordance with the [Release Team select
   - [kubernetes-release-managers][release-managers-group]
   - [kubernetes-sig-leads]
   - [release-managers-private]: Request membership for you and your shadow(s) from the [Release Managers group][release-managers-group]
-    
+
 - While the release team lead has always been a stakeholder in getting security fixes out the door, the Kubernetes security disclosures and response policy has evolved into something more formal. The documents linked below are required reading for an incoming release team lead, who must understand and abide by the embargo policy.
-    - [Security in the release process][security-release-process].
-    - [Private distributors and Embargo Policy][private-distributors-list]
+  - [Security in the release process][security-release-process]
+  - [Private distributors and Embargo Policy][private-distributors-list]
 - Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
 - Send an update to [kubernetes-dev] and [kubernetes-sig-leads] mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 - Create the retrospective document and corresponding bit.ly link
-- Begin meeting with SIGs to introduce yourself 
+- Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
 - Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions with the esception of release-managers-private.
 
@@ -172,10 +172,9 @@ Release Team selection should happen in accordance with the [Release Team select
 - Follow up with SIGs on release themes
 - Begin casual observation of [issues](https://git.k8s.io/sig-release/release-team/role-handbooks/bug-triage/README.md), CI signal, test flakes, and critical PRs
 
+---
 
----
-Release Halfway Point
----
+## Release Halfway Point
 
 ### Week 6
 
@@ -198,12 +197,13 @@ Release Halfway Point
 
 #### Code Freeze Day
 
-Code Freeze will typically fall around Weeks 8 or 9 depending on the length or release cycle.  As Code Freeze approaches here are some good practices 
+Code Freeze will typically fall around Weeks 8 or 9 depending on the length or release cycle.  As Code Freeze approaches here are some good practices
+
 - Monitor the enhancements spreadsheet to get an idea of how many PRs are still outstanding leading up to Code Freeze
-- Send a reminder email to [kubernetes-dev] 
+- Send a reminder email to [kubernetes-dev]
 - Monitor [Testgrid] and [Prow] to understand the stability of the release and PRs getting ready to merge. If Prow and Test grid are not in a good state consult folks from SIG Testing on delaying code freeze by a day if needed.  
 - LGTM / Approve and remove the hold on the PR for enabling code freeze. [Example from 1.15 here](https://github.com/kubernetes/test-infra/pull/12808)
-- As needed, assist the Bug Triage Lead and Enhancements Lead removing PRs and enhancements from the milestone that aren't merged in time 
+- As needed, assist the Bug Triage Lead and Enhancements Lead removing PRs and enhancements from the milestone that aren't merged in time
 
 ### Week 8
 
@@ -241,10 +241,9 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - Work with the CNCF, SIG PM, SIG Docs, and Communications Lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs.
 - Work with the incoming Release Team Lead to establish incoming Release Team.
 
+---
 
----
-Release Day
----
+## Release Day
 
 ### Week 12
 
@@ -280,7 +279,6 @@ Release Day
 ### Week 14
 
 - Help fill the any open positions for the next release milestone
-
 
 [branch-manager]: /release-managers.md#branch-managers
 [build-admins]: /release-managers.md#build-admins
