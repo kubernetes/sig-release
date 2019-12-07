@@ -123,9 +123,8 @@ Release Team selection should happen in accordance with the [Release Team select
   - [kubernetes-dev]
   - [kubernetes-sig-release]
   - [kubernetes-release-team]
-  - [kubernetes-release-managers][release-managers-group]
   - [kubernetes-sig-leads]
-  - [release-managers-private]: Request membership for you and your shadow(s) from the [Release Managers group][release-managers-group]
+  - [release-managers][release-managers-group]: Request membership for you and your shadow(s) from the [Release Managers group][release-managers-group]
 
 - While the release team lead has always been a stakeholder in getting security fixes out the door, the Kubernetes security disclosures and response policy has evolved into something more formal. The documents linked below are required reading for an incoming release team lead, who must understand and abide by the embargo policy.
   - [Security in the release process][security-release-process]
@@ -137,7 +136,7 @@ Release Team selection should happen in accordance with the [Release Team select
 - Create the retrospective document and corresponding bit.ly link
 - Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
-- Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions with the esception of release-managers-private.
+- Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
 
 ### Week 2
 
@@ -274,7 +273,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - Release Retrospective participation
 - Follow-up interviews with the media, the media roundtable.
 - Contact the [Release Managers Google Group][release-managers-group] to remove Release Team Lead and shadows authorization in GCP, as appropriate for Release Team turn over.
-- Ensure self and shadows are removed as members of [release-managers-private].
+- Ensure self and shadows are removed as members of [release-managers-group].
 
 ### Week 14
 
@@ -298,7 +297,6 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 [Prow]: https://prow.k8s.io/
 [release-blocking]: /release-blocking-jobs.md
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
-[release-managers-private]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers-private
 [selection]: /release-team/release-team-selection.md
 [Testgrid]: https://testgrid.k8s.io/
 [security-release-process]: https://github.com/kubernetes/security/blob/master/security-release-process.md
