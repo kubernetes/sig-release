@@ -25,6 +25,7 @@
   - [Beta Releases](#beta-releases)
   - [Release Candidates](#release-candidates)
   - [Official Releases](#official-releases)
+    - [Security fixes](#security-fixes)
     - [Post-release Activities](#post-release-activities)
       - [Debian and RPM Packaging](#debian-and-rpm-packaging)
       - [Release Validation](#release-validation)
@@ -380,6 +381,20 @@ When staging is done, you may use the command `./gcbmgr release` with the `--bui
 However, there is an embargo policy which requires the nomock release publication happens after 4 pm Pacific (see [Release Team Lead Handbook](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-team-lead#week-12) for details), make sure to coordinates with other roles and follow the timeline.
 
 To better prepare and see what to expect, this is a sequence of events that took place on past [official release days](https://docs.google.com/document/d/1K0B91lgeEiJTbT602VloA5arb6AkaTif-MLryaHmlYc/edit?usp=sharing).
+
+#### Security fixes
+
+The Product Security Committee (PSC) may contact you via the [Security Release Team][security-release-team]
+mailing list if there are security fixes needed on the release branch.
+
+Once the release has been confirmed to contain security fixes, the Branch Manager must inform the current
+Release Team Lead and Lead Shadows. Information pertaining to these fixes is considered need-to-know and should not be disseminated to anyone else on the Release Team.
+
+You must not make any public announcements regarding these fixes unless the PSC tells you to.
+
+See the [Security Release Process](https://git.k8s.io/security/security-release-process.md) doc for more details.
+
+[security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
 
 #### Post-release Activities
 

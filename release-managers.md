@@ -18,7 +18,8 @@ The responsibilities of each role are described below.
 | Mailing List | Slack | Visibility | Usage | Membership |
 |---|---|---|---|---|
 | [release-managers@kubernetes.io](mailto:release-managers@kubernetes.io) | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public | Public discussion for Release Managers | All Release Managers (Patch Release Team, Branch Managers, Associates, Build Admins, SIG Chairs) |
-| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io)| [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Patch Release Team, Build Admins, SIG Chairs |
+| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) | [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Patch Release Team, Branch Managers, SIG Chairs |
+| [security-release-team@kubernetes.io](mailto:security-release-team@kubernetes.io) | N/A | Private | Security release coordination with the Product Security Committee | [security@kubernetes.io](mailto:security@kubernetes.io), [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) |
 
 ## Handbooks
 
@@ -28,7 +29,9 @@ The responsibilities of each role are described below.
 
 ## Patch Release Team
 
-The Patch Release Team is responsible for coordinating patch releases (`x.y.z`, where `z` >= 0) of Kubernetes. This team at times works in close conjunction with the [Product Security Committee](https://git.k8s.io/community/committee-product-security/README.md) and therefore should abide by the guidelines set forth in the [Security Release Process](https://git.k8s.io/security/security-release-process.md). 
+The Patch Release Team is responsible for coordinating patch releases (`x.y.z`, where `z` > 0) of Kubernetes.
+
+This team at times works in close conjunction with the [Product Security Committee][psc] and therefore should abide by the guidelines set forth in the [Security Release Process][security-release-process].
 
 GitHub Access Controls: [@kubernetes/release-managers](https://github.com/orgs/kubernetes/teams/release-managers)
 
@@ -44,7 +47,9 @@ GitHub Mentions: [@kubernetes/patch-release-team](https://github.com/orgs/kubern
 
 ## Branch Managers
 
-Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working in close conjunction with the [Release Team](/release-team/README.md) through each release cycle.
+Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working with the [Release Team](/release-team/README.md) through each release cycle.
+
+This team at times works in close conjunction with the [Product Security Committee][psc] and therefore should abide by the guidelines set forth in the [Security Release Process][security-release-process].
 
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
 - Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
@@ -101,3 +106,6 @@ Mail to the groups below will be ignored. Please instead use the [contact groups
 
 Past Branch Managers, can be found in the [releases directory](/releases) within `release-x.y/release_team.md`.
 Example: [1.15 Release Team](/releases/release-1.15/release_team.md)
+
+[psc]: https://git.k8s.io/community/committee-product-security/README.md
+[security-release-process]: https://git.k8s.io/security/security-release-process.md

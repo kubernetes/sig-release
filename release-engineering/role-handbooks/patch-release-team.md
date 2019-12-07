@@ -15,10 +15,10 @@ for the newest Y on each of those two branches.
 - [Patch branch merge workflow and status tracking](#patch-branch-merge-workflow-and-status-tracking)
   - [Rationale](#rationale)
   - [Spreadsheets](#spreadsheets)
-    - [Time ordered rows](#time-ordered-rows)
+    - [Time Ordered Rows](#time-ordered-rows)
     - [Coloring](#coloring)
-    - [Row details](#row-details)
-  - [Tooling future work](#tooling-future-work)
+    - [Row Details](#row-details)
+  - [Future Work](#future-work)
 - [Branch health](#branch-health)
 - [Release timing](#release-timing)
 - [Release cut](#release-cut)
@@ -566,14 +566,16 @@ next patch release.
 
 ### Security release
 
-The Product Security Committee (PSC) will contact you if a security
-releases are needed on branches.
+The Product Security Committee (PSC) will contact you via the [Security Release Team][security-release-team]
+mailing list if security releases are needed on branches.
 
 In contrast to a normal release, you must not make any public announcements
-or push tags or release artifacts to public repositories until the PST tells you to.
+or push tags or release artifacts to public repositories until the PSC tells you to.
 
 See the [Security Release Process](https://git.k8s.io/security/security-release-process.md)
 doc for more details.
+
+[security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
 
 ## Release Commands Cheat Sheet
 
