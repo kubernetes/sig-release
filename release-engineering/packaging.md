@@ -50,7 +50,7 @@ Before starting the release process, check for following items in your system.
 
 ### Permissions
 
-Must be a member of mdb group - [mdb/cloud-kubernetes-release](mdb/cloud-kubernetes-release) to be able to perform the debs/rpms releases.
+Must be a member of mdb group - [mdb/cloud-kubernetes-release-owners](mdb/cloud-kubernetes-release-owners) to be able to perform the debs/rpms releases.
 
 
 ### Clone Release Repository
