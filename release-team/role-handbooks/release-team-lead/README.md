@@ -291,11 +291,11 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 [merge-labels]: https://git.k8s.io/community/contributors/devel/sig-release/release.md#tldr
 [milestone-maintainers]: /release-team/README.md#milestone-maintainers
 [onboarding]: /release-team/release-team-onboarding.md
+[private-distributors-list]: https://github.com/kubernetes/security/blob/master/private-distributors-list.md
 [Prow]: https://prow.k8s.io/
 [release-blocking]: /release-blocking-jobs.md
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
 [rtl-onboarding]: https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng%2C+area%2Frelease-team&template=release-team-lead.md&title=Release+Team+Lead+access+for+%3CGH-handle%3E
+[security-release-process]: https://github.com/kubernetes/security/blob/master/security-release-process.md
 [selection]: /release-team/release-team-selection.md
 [Testgrid]: https://testgrid.k8s.io/
-[security-release-process]: https://github.com/kubernetes/security/blob/master/security-release-process.md
-[private-distributors-list]: https://github.com/kubernetes/security/blob/master/private-distributors-list.md
