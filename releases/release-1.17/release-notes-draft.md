@@ -35,6 +35,13 @@ Prior to 1.17 and for existing nodes created by `kubeadm init` where kubelet cli
 #### Storage
 - All nodes need to be drained before upgrading Kubernetes cluster, because paths used for block volumes are changed in this release, so on-line upgrade of nodes aren't allowed. ([#74026](https://github.com/kubernetes/kubernetes/pull/74026), [@mkimuram](https://github.com/mkimuram))
 
+#### Windows
+- The Windows containers RunAsUsername feature is now beta. 
+- Windows worker nodes in a Kubernetes cluster now support Windows Server version 1903 in addition to the existing support for Windows Server 2019
+- The RuntimeClass scheduler can now simplify steering Linux or Windows pods to appropriate nodes
+- All Windows nodes now get the new label `node.kubernetes.io/windows-build` that reflects the Windows major, minor, and build number that are needed to match compatibility between Windows containers and Windows worker nodes.
+
+
 ## Deprecations and Removals
 - `kubeadm.k8s.io/v1beta1` has been deprecated, you should update your config to use newer non-deprecated API versions. ([#83276](https://github.com/kubernetes/kubernetes/pull/83276), [@Klaven](https://github.com/Klaven))
 - The deprecated feature gates GCERegionalPersistentDisk, EnableAggregatedDiscoveryTimeout and PersistentLocalVolumes are now unconditionally enabled and can no longer be specified in component invocations. ([#82472](https://github.com/kubernetes/kubernetes/pull/82472), [@draveness](https://github.com/draveness))
