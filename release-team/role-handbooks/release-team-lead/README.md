@@ -13,6 +13,7 @@ The release team leader role is responsible for coordinating release activities,
 - [Release Milestone Activities](#release-milestone-activities)
   - [Before Release Begins](#before-release-begins)
   - [Week 1](#week-1)
+    - [Starting the release cycle](#starting-the-release-cycle)
   - [Week 2](#week-2)
   - [Week 3](#week-3)
   - [Week 4](#week-4)
@@ -30,14 +31,13 @@ The release team leader role is responsible for coordinating release activities,
   - [Week 13](#week-13)
   - [Week 14](#week-14)
 
-
 ## Authority and Responsibility
 
 The Release Team Lead should be an arbiter of decisions, and not the primary decision-maker. A lead should constantly search for the best-qualified people or SIGs to guide the decision, not "go it alone", unless it is a very specific concern within the release process itself. When decisions are made they must be weighted in favor of community concerns over those of individuals or specific companies. Leads must also relinquish any favoritism for the company they work for. If there is a conflict of interest, the lead must recuse themselves from that decision. Above all, the release lead is a servant leader to the team and the community.
 
 ## Prerequisites
 
-**Before continuing on to the Release Lead specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide][onboarding].**
+**Before we can grant access to new Release Team Leads, a [Release Team Lead onboarding issue][rtl-onboarding] _MUST_ be opened in this repo. Please take a moment to do that before executing the tasks contained in this handbook.**
 
 ## Skills and Experience Required
 
@@ -110,34 +110,31 @@ Release Team selection should happen in accordance with the [Release Team select
 ## Release Milestone Activities
 
 ### Before Release Begins
-- Attend previous release retro to capture feedback and incorporate it into next release cycle 
+
+- Attend previous release retro to capture feedback and incorporate it into next release cycle
 - Plan release schedule and milestones. Gather feedback as needed.
-- Make sure you have your shadows confirmed 
+- Make sure you have your shadows confirmed
 - Have a handover meeting with SIG Chairs and the outgoing lead to get credentials to SIG Release Zoom and any other needed permissions
 - Request edit access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from the SIG Release Chairs
 
-### Week 1 
+### Week 1
 
-- Start the release cycle
-- Ensure you have joined the following Google Groups:
-  - [kubernetes-dev]
-  - [kubernetes-sig-release]
-  - [kubernetes-release-team]
-  - [kubernetes-release-managers][release-managers-group]
-  - [kubernetes-sig-leads]
-  - [release-managers-private]: Request membership for you and your shadow(s) from the [Release Managers group][release-managers-group]
-    
-- While the release team lead has always been a stakeholder in getting security fixes out the door, the Kubernetes security disclosures and response policy has evolved into something more formal. The documents linked below are required reading for an incoming release team lead, who must understand and abide by the embargo policy.
-    - [Security in the release process][security-release-process].
-    - [Private distributors and Embargo Policy][private-distributors-list]
+**While the Release Team Lead has always been a stakeholder in getting security fixes out the door, the Kubernetes security disclosures and response policy has evolved into something more formal. The documents linked below are required reading for an incoming Release Team Lead, who must understand and abide by the embargo policy.**
+
+- [Security Release Process][security-release-process]
+- [Private distributors and Embargo Policy][private-distributors-list]
+
+#### Starting the release cycle
+
+- Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
 - Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
 - Send an update to [kubernetes-dev] and [kubernetes-sig-leads] mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 - Create the retrospective document and corresponding bit.ly link
-- Begin meeting with SIGs to introduce yourself 
+- Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
-- Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions with the esception of release-managers-private.
+- Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
 
 ### Week 2
 
@@ -151,7 +148,7 @@ Release Team selection should happen in accordance with the [Release Team select
 ### Week 3
 
 - Create the release notes draft file in the release directory per the standard above
-- Prepare for x.y.0-alpha.0 "release", specifically that there is a [Branch Manager][branch-manager] available to support the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. But this synthetic notation is a point to review process with the [Branch Manager][branch-manager]. Optionally request read-only access to GCP for you and your shadow(s) through the [Release Managers Google Group][release-managers-group].
+- Prepare for x.y.0-alpha.0 "release", specifically that there is a [Branch Manager][branch-manager] available to support the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. This synthetic notation is a point to review process with the [Branch Manager][branch-manager].
 - Begin coordination with SIG Cluster Lifecycle for the kubeadm release (they may create an issue in the milestone to track release blocking issues)
 - Identify any other dependent ecosystem projects that need release coordination
 - Announce/email that the following week is Enhancements Freeze and what that means
@@ -172,10 +169,9 @@ Release Team selection should happen in accordance with the [Release Team select
 - Follow up with SIGs on release themes
 - Begin casual observation of [issues](https://git.k8s.io/sig-release/release-team/role-handbooks/bug-triage/README.md), CI signal, test flakes, and critical PRs
 
+---
 
----
-Release Halfway Point
----
+## Release Halfway Point
 
 ### Week 6
 
@@ -198,12 +194,13 @@ Release Halfway Point
 
 #### Code Freeze Day
 
-Code Freeze will typically fall around Weeks 8 or 9 depending on the length or release cycle.  As Code Freeze approaches here are some good practices 
+Code Freeze will typically fall around Weeks 8 or 9 depending on the length or release cycle.  As Code Freeze approaches here are some good practices
+
 - Monitor the enhancements spreadsheet to get an idea of how many PRs are still outstanding leading up to Code Freeze
-- Send a reminder email to [kubernetes-dev] 
+- Send a reminder email to [kubernetes-dev]
 - Monitor [Testgrid] and [Prow] to understand the stability of the release and PRs getting ready to merge. If Prow and Test grid are not in a good state consult folks from SIG Testing on delaying code freeze by a day if needed.  
 - LGTM / Approve and remove the hold on the PR for enabling code freeze. [Example from 1.15 here](https://github.com/kubernetes/test-infra/pull/12808)
-- As needed, assist the Bug Triage Lead and Enhancements Lead removing PRs and enhancements from the milestone that aren't merged in time 
+- As needed, assist the Bug Triage Lead and Enhancements Lead removing PRs and enhancements from the milestone that aren't merged in time
 
 ### Week 8
 
@@ -241,10 +238,9 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - Work with the CNCF, SIG PM, SIG Docs, and Communications Lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs.
 - Work with the incoming Release Team Lead to establish incoming Release Team.
 
+---
 
----
-Release Day
----
+## Release Day
 
 ### Week 12
 
@@ -273,14 +269,12 @@ Release Day
 ### Week 13
 
 - Release Retrospective participation
-- Follow-up interviews with the media, the media roundtable.
-- Contact the [Release Managers Google Group][release-managers-group] to remove Release Team Lead and shadows authorization in GCP, as appropriate for Release Team turn over.
-- Ensure self and shadows are removed as members of [release-managers-private].
+- Follow-up interviews with the media, the media roundtable
+- Contact the [Release Managers Google Group][release-managers-group] to complete the Release Team Lead & Lead Shadows offboarding tasks from the previously-opened onboarding issue
 
 ### Week 14
 
 - Help fill the any open positions for the next release milestone
-
 
 [branch-manager]: /release-managers.md#branch-managers
 [build-admins]: /release-managers.md#build-admins
@@ -297,11 +291,11 @@ Release Day
 [merge-labels]: https://git.k8s.io/community/contributors/devel/sig-release/release.md#tldr
 [milestone-maintainers]: /release-team/README.md#milestone-maintainers
 [onboarding]: /release-team/release-team-onboarding.md
+[private-distributors-list]: https://github.com/kubernetes/security/blob/master/private-distributors-list.md
 [Prow]: https://prow.k8s.io/
 [release-blocking]: /release-blocking-jobs.md
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
-[release-managers-private]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers-private
+[rtl-onboarding]: https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng%2C+area%2Frelease-team&template=release-team-lead.md&title=Release+Team+Lead+access+for+%3CGH-handle%3E
+[security-release-process]: https://github.com/kubernetes/security/blob/master/security-release-process.md
 [selection]: /release-team/release-team-selection.md
 [Testgrid]: https://testgrid.k8s.io/
-[security-release-process]: https://github.com/kubernetes/security/blob/master/security-release-process.md
-[private-distributors-list]: https://github.com/kubernetes/security/blob/master/private-distributors-list.md

@@ -52,11 +52,12 @@ As you work through the checklist, use the following PRs as guides:
 - k/community: https://github.com/kubernetes/community/pull/4284
 -->
 
-<!-- ### Patch Release Team
+<!--
+### Patch Release Team
 
-- [ ] Release Manager has agreed (on this issue) to abide by the guidelines set forth in the
-  [Security Release Process](https://git.k8s.io/security/security-release-process.md),
-  specifically the embargo on CVE communications
+- [ ] Release Manager has agreed to abide by the guidelines set forth in the
+  [Security Release Process](https://git.k8s.io/security/security-release-process.md), specifically the embargo on CVE communications.
+  This must be done as an issue comment by the incoming Release Manager.
 - [ ] Update GitHub teams [(`kubernetes/org`)](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
   - `milestone-maintainers`
   - `patch-release-team`
@@ -83,7 +84,8 @@ As you work through the checklist, use the following PRs as guides:
 - [ ] Manually add to the [#release-private](https://kubernetes.slack.com/archives/GKEA5EL67) Slack channel
 -->
 
-<!-- ### Branch Manager
+<!--
+### Branch Manager
 
 - [ ] Release Manager has agreed (on this issue) to abide by the guidelines set forth in the
   [Security Release Process](https://git.k8s.io/security/security-release-process.md),
@@ -104,12 +106,14 @@ As you work through the checklist, use the following PRs as guides:
   - `k8s-infra-release-editors@`
   - `k8s-infra-release-viewers@`
   - `release-managers@`
+  - `release-managers-private@`
 - [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
 - [ ] Manually add to the [Release Team Google Group](https://groups.google.com/forum/#!forum/kubernetes-release-team)
 - [ ] Update Slack `release-managers` User Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
 -->
 
-<!-- ### Release Manager Associate
+<!--
+### Release Manager Associate
 
 - [ ] Update GitHub teams [(`kubernetes/org`)](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
   - `release-engineering`
