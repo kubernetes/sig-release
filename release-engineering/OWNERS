@@ -2,7 +2,6 @@
 
 approvers:
   - release-engineering
-  - patch-release-team
 reviewers:
   - branch-managers
   - build-admins

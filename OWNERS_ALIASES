@@ -4,73 +4,67 @@ aliases:
     - justaugustus
     - tpepper
   licensing:
-    - dims
-    - justaugustus
-    - nikhita
-    - swinslow
+    - dims # subproject owner
+    - justaugustus # subproject owner
+    - nikhita # subproject owner
+    - swinslow # subproject owner
   release-engineering:
-    - aleksandra-malinowska
-    - calebamiles
-    - ixdy
-    - mikedanese
-    - tpepper
+    - aleksandra-malinowska # Patch Release Team
+    - calebamiles # subproject owner
+    - dougm # Patch Release Team
+    - feiskyer # Patch Release Team
+    - hoegaarden # Patch Release Team
+    - idealhack # Patch Release Team
+    - justaugustus # subproject owner / Patch Release Team
+    - tpepper # subproject owner / Patch Release Team
   release-team:
-    - aishsundar
-    - claurence
-    - jberkus
-    - justaugustus
-    - spiffxp
-    - tpepper
-  patch-release-team:
-    - aleksandra-malinowska
-    - feiskyer
-    - hoegaarden
-    - tpepper
+    - aishsundar # 1.13 RT Lead
+    - alejandrox1 # 1.18 RT Lead
+    - claurence # 1.15 RT Lead
+    - guineveresaenger # 1.17 RT Lead
+    - jberkus # 1.11 RT Lead
+    - justaugustus # subproject owner
+    - lachie83 # 1.16 RT Lead
+    - spiffxp # 1.14 RT Lead
+    - tpepper # subproject owner / 1.12 RT Lead
   branch-managers:
-    - bubblemelon
-    - idealhack
+    - cpanato
+    - saschagrunert
   build-admins:
     - aleksandra-malinowska
     - listx
+    - ps882
     - sumitranr
   release-team-lead-role:
-    - aishsundar # 1.13
-    - spiffxp # 1.14
     - claurence # 1.15
     - lachie83 # 1.16
+    - guineveresaenger # 1.17
+    - alejandrox1 # 1.18
   ci-signal-role:
-    - jberkus # 1.13
-    - mariantalla # 1.14
     - alejandrox1 # 1.16 / 1.15
+    - alenkacz # 1.17
+    - droslean # 1.18
   enhancements-role:
     - kacole2 # 1.16 / 1.15 / 1.13
-    - claurence # 1.14
-  test-infra-role:
-    - cjwagner # 1.13 / 1.12
-    - amwat # 1.14
-    - imkin # 1.15
+    - mrbobbytables # 1.17
+    - jeremyrickard # 1.18
   bug-triage-role:
-    - nikopen # 1.14 / 1.13
     - soggiest # 1.15
     - xmudrii # 1.16
+    - josiahbjorgaard # 1.17
+    - smourapina # 1.18
   docs-role:
-    - tfogo # 1.13
-    - jimangel # 1.14
     - MAKOSCAFEE # 1.15
     - simplytunde # 1.16
+    - daminisatya # 1.17
+    - VineethReddy02 # 1.18
   release-notes-role:
-    - marpaia # 1.13
-    - dstrebel # 1.14
     - onyiny-ang # 1.15
     - saschagrunert # 1.16
+    - cartyc # 1.17
+    - Evillgenius75 # 1.18
   communications-role:
-    - kbarnard10 # 1.13 / 1.12 / 1.11
-    - nwoods3 # 1.14
     - castrojo # 1.15
     - onlydole # 1.16
-  committee-product-security:
-    - philips
-    - cjcullen
-    - tallclair
-    - liggitt
-    - joelsmith
+    - rawkode # 1.17
+    - karenhchu # 1.18

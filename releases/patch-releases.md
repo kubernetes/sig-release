@@ -22,7 +22,8 @@ Please give us a business day to respond - we may be in a different timezone!
 In between releases the team is looking at incoming cherry-pick
 requests on a weekly basis.  The team will get in touch with
 submitters via GitHub PR, SIG channels in Slack, and direct messages
-in Slack and email if there are questions on the PR.
+in Slack and [email](mailto:release-managers-private@kubernetes.io)
+if there are questions on the PR.
 
 ## Cherry-Picks
 
@@ -40,49 +41,60 @@ for the next patch release.
 
 ## Timelines
 
+### 1.17
+
+Next patch release is **1.17.1**.
+
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.17.1 | 2020-01-10 | 2020-01-14 |
+
+### 1.16
+
+Next patch release is **1.16.5**.
+
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.16.5 | 2020-01-10 | 2020-01-14 |
+| 1.16.4 | 2019-12-06 | 2019-12-11 |
+| 1.16.3 | 2019-11-08 | 2019-11-13 |
+| 1.16.2 | 2019-10-11 | 2019-10-15 |
+| 1.16.1 | 2019-09-27 | 2019-10-02 |
+
 ### 1.15
 
-Next patch release is **1.15.1**.
+Next patch release is **1.15.8**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
-| 1.15.2 | TBD mid August | TBD mid August |
+| 1.15.8 | 2020-01-10 | 2020-01-14 |
+| 1.15.7 | 2019-12-06 | 2019-12-11 |
+| 1.15.6 | 2019-11-08 | 2019-11-13 |
+| 1.15.5 | 2019-10-11 | 2019-10-15 |
+| 1.15.4 | 2019-09-13 | 2019-09-18 |
+| 1.15.3 | 2019-08-15 | 2019-08-19 |
+| 1.15.2 | 2019-08-02 | 2019-08-05 |
 | 1.15.1 | 2019-07-15 | 2019-07-18 |
 
-
-### 1.14
-
-Next patch release is **1.14.5**.
-
-| Patch Release | Cherry-picks deadline | Target date |
-| --- | --- | --- |
-| 1.14.5 | TBD  | TBD |
-| 1.14.4 | 2019-07-02 | 2019-07-08 |
-| 1.14.3 | 2019-06-03 | 2019-06-06 |
-| 1.14.2 | 2019-05-10 | 2019-05-14 |
-| 1.14.1 | 2019-04-05 | 2019-04-08 |
-
-
-### 1.13
-
-Next patch release is **1.13.9**.
-
-| Patch Release | Cherry-picks deadline | Target date |
-| --- | --- | --- |
-| 1.13.9 | TBD | TBD |
-| 1.13.8 | 2019-07-02 | 2019-07-08 |
-| 1.13.7 | 2019-06-03 | 2019-06-06 |
-| 1.13.6 | 2019-05-06 | 2019-05-08 |
-| 1.13.5 | 2019-03-21 | 2019-03-25 |
-| 1.13.4 | 2019-02-26 | 2019-02-28 |
-| 1.13.3 | 2019-01-24 | 2019-02-01 |
-| 1.13.2 | 2019-01-08 | 2019-01-10 |
-| 1.13.1 | 2018-12-11 | 2018-12-13 |
-
-
-### 1.12 and older
+### 1.14 and older
 
 These releases are no longer supported.
+
+| Minor Version | Final Patch Release | EOL date |
+| --- | --- | --- |
+| 1.14 | 1.14.10 | 2019-12-11 |
+| 1.13 | 1.13.12 | 2019-10-15 |
+| 1.12 | 1.12.10 | 2019-07-08 |
+| 1.11 | 1.11.10 | 2019-05-01 |
+| 1.10 | 1.10.13 | 2019-02-13 |
+| 1.9  | 1.9.11  | 2018-09-29 |
+| 1.8  | 1.8.15  | 2018-07-12 |
+| 1.7  | 1.7.16  | 2018-04-04 |
+| 1.6  | 1.6.13  | 2017-11-23 |
+| 1.5  | 1.5.8   | 2017-10-01 |
+| 1.4  | 1.4.12  | 2017-04-21 |
+| 1.3  | 1.3.10  | 2016-11-01 |
+| 1.2  | 1.2.7   | 2016-10-23 |
 
 [cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md
 [release-managers]: /release-managers.md

@@ -1,128 +1,207 @@
 # Branch Manager Handbook <!-- omit in toc -->
 
-- [Overview](#Overview)
-  - [Minimum Skills and Requirements](#Minimum-Skills-and-Requirements)
-  - [Shadow Expectations](#Shadow-Expectations)
-- [Prerequisite](#Prerequisite)
-  - [Release Team Onboarding](#Release-Team-Onboarding)
-  - [Branch Management Onboarding](#Branch-Management-Onboarding)
-  - [Safety Check](#Safety-Check)
-- [The Release Process](#The-Release-Process)
-  - [Alpha Stage](#Alpha-Stage)
-  - [Alpha Release](#Alpha-Release)
-  - [Branch Creation](#Branch-Creation)
-  - [Beta Stage and Release](#Beta-Stage-and-Release)
-  - [Release Candidate Stage and Release](#Release-Candidate-Stage-and-Release)
-  - [Official Stage and Release](#Official-Stage-and-Release)
-    - [Debian and RPM Packaging](#Debian-and-RPM-Packaging)
-  - [Release Validation](#Release-Validation)
-- [Create CI/Presubmit jobs](#Create-CIPresubmit-jobs)
-- [Configure Merge Automation](#Configure-Merge-Automation)
-  - [Tide](#Tide)
-  - [Code Freeze](#Code-Freeze)
-  - [Code Thaw](#Code-Thaw)
-- [Branch Content Management](#Branch-Content-Management)
-  - [Branch Fast Forward](#Branch-Fast-Forward)
-  - [Reverts](#Reverts)
-  - [Cherry Picks](#Cherry-Picks)
-- [Staging Repositories](#Staging-Repositories)
-- [Debugging](#Debugging)
-- [References](#References)
-- [Background information](#Background-information)
+- [Overview](#overview)
+  - [Conventions](#conventions)
+  - [Responsibilities](#responsibilities)
+  - [Minimum Skills and Requirements](#minimum-skills-and-requirements)
+  - [Associates Expectations](#associates-expectations)
+- [Prerequisites](#prerequisites)
+  - [Branch Management Onboarding](#branch-management-onboarding)
+  - [Machine setup](#machine-setup)
+    - [Operating System](#operating-system)
+    - [Release tooling](#release-tooling)
+    - [Google Cloud SDK](#google-cloud-sdk)
+    - [Sending mail](#sending-mail)
+  - [Safety Check](#safety-check)
+- [Releases Management](#releases-management)
+  - [Alpha Releases](#alpha-releases)
+    - [Alpha Stage](#alpha-stage)
+      - [gcbmgr stage](#gcbmgr-stage)
+      - [gcbmgr list](#gcbmgr-list)
+      - [gcbmgr tail](#gcbmgr-tail)
+    - [Alpha Release](#alpha-release)
+      - [gcbmgr release](#gcbmgr-release)
+      - [Mock vs nomock](#mock-vs-nomock)
+  - [Beta Releases](#beta-releases)
+  - [Release Candidates](#release-candidates)
+  - [Official Releases](#official-releases)
+    - [Security fixes](#security-fixes)
+    - [Post-release Activities](#post-release-activities)
+      - [Debian and RPM Packaging](#debian-and-rpm-packaging)
+      - [Release Validation](#release-validation)
+- [Branch Management](#branch-management)
+  - [Branch Creation](#branch-creation)
+    - [During staging](#during-staging)
+    - [After release branch creation](#after-release-branch-creation)
+  - [Update test-infra configurations](#update-test-infra-configurations)
+    - [Update Slack branch whitelists](#update-slack-branch-whitelists)
+    - [Update milestone appliers](#update-milestone-appliers)
+    - [Update e2e variants](#update-e2e-variants)
+    - [Generate release branch jobs](#generate-release-branch-jobs)
+    - [Update Kubernetes versions document](#update-kubernetes-versions-document)
+  - [Configure Merge Automation](#configure-merge-automation)
+    - [Tide](#tide)
+    - [Code Freeze](#code-freeze)
+    - [Code Thaw](#code-thaw)
+  - [Branch Fast Forward](#branch-fast-forward)
+  - [Reverts](#reverts)
+  - [Cherry Picks](#cherry-picks)
+- [Staging Repositories](#staging-repositories)
+- [Debugging](#debugging)
+- [References](#references)
+  - [Test Infra references](#test-infra-references)
+- [Background information](#background-information)
 
-# Overview
+## Overview
+
+### Conventions
+
+In this handbook, we will make several references to Kubernetes releases, milestones, and [semantic versioning](http://semver.org/).
+
+For the purposes of this handbook, we'll assume that:
+
+- the current release in development is Kubernetes 1.17
+- the previous release is Kubernetes 1.16
+- the next release is Kubernetes 1.18
+- the release no longer in support is Kubernetes 1.13
+
+To simplify certain instructions, we will make the following connections:
+
+| Text | SemVer | Reference Release |
+|---|---|---|
+| "current release", "current milestone", "in development" | `x.y` | Kubernetes 1.17 |
+| "previous release", "previous milestone" | `x.y-1` | Kubernetes 1.16 |
+| "next release", "next milestone" | `x.y+1` | Kubernetes 1.18 |
+| "release no longer in support" | `x.y-4` | Kubernetes 1.13 |
+
+**As an editor of this content, Branch Managers should periodically update these conventions and the examples contained within this handbook.**
+
+### Responsibilities
 
 The release branch manager is responsible for cutting a version of [Kubernetes]. Each release is a three month cycle where as branch manager:
-1. You will cut releases for the vX.Y cycle as specified on the Timeline in `sig-release/releases/release-X.Y/README.md`.
-   - e.g. For cycle v1.15 you're expected to allocate time to cut releases on the dates detailed on [sig-release/releases/release-1.15/README.md][release-1.15].
+
+1. You will cut releases for the vX.Y cycle as specified on the Timeline in `sig-release/releases/release-x.y/README.md`.
+   - e.g. For cycle v1.16 you're expected to allocate time to cut releases on the dates detailed on [sig-release/releases/release-1.16/README.md][release-1.16].
    The bulk of your time commitment is during release cut days.
-1. You must allocate time to setup your system to run the release tools; eventually you'll have a routine going and become more familiar with the process.
-1. Participate in weekly one hour release team meetings.
-1. Run `./branchff` on a daily basis as soon as the release branch i.e. `release-X.Y` [is created](#branch-creation). (Less than 45mins)
-1. Your time commitment increases during code freeze (when approaching the official release), expect 3 or more 1 hour meetings in a week.
-1. Select shadows and guide them in preparation to become the section lead for the next cycle.
-1. Delegate tasks to shadows (where applicable), so that they may exercise the release process.
-1. Update this handbook where appropriate for the next release cycle.
-1. Have willingness to accommodate with different timezone esp. for the release team and your shadows.
-1. Participate in conversations that happen on [#sig-release] and [#release-management]
+2. You must allocate time to setup your system to run the release tools; eventually you'll have a routine going and become more familiar with the process.
+3. Participate in weekly one hour release team meetings.
+4. Run `./branchff` on a daily basis as soon as the release branch i.e. `release-x.y` [is created](#branch-creation). (Less than 45mins)
+5. Your time commitment increases during code freeze (when approaching the official release), expect 3 or more 1 hour meetings in a week.
+6. Select Associates and guide them in preparation to become the section lead for the next cycle.
+7. Delegate tasks to the Associates (where applicable), so that they may exercise the release process.
+8. Update this handbook where appropriate for the next release cycle.
+9. Have willingness to accommodate with different timezone esp. for the release team and your Associates.
+10. Participate in conversations that happen on [#sig-release] and [#release-management]
 
 To get a better overview of the time it takes to run the release tools, you can take a look at the collected metrics from each of these [release cut issues][release-cut-issues].
 
 [Branch Management diagram](https://docs.google.com/presentation/d/1usEbwHMSC8vR7HvbxHJBOj2ISdTkw9rmufQUq7fkIl4/edit?ts=5cc0de62#slide=id.g577153f745_1_405) illustrating the process over a 3 month [release lifecycle](https://docs.google.com/presentation/d/1usEbwHMSC8vR7HvbxHJBOj2ISdTkw9rmufQUq7fkIl4/edit?ts=5cc0de62#slide=id.g577153f745_3_0).
 
 [Kubernetes]: https://github.com/kubernetes/kubernetes/releases
-[release-1.15]: https://github.com/kubernetes/sig-release/tree/master/releases/release-1.15
+[release-1.16]: https://github.com/kubernetes/sig-release/tree/master/releases/release-1.16
 [#sig-release]: https://kubernetes.slack.com/messages/C2C40FMNF
 [#release-management]: https://kubernetes.slack.com/messages/CJH2GBF7Y
-[release-cut-issues]: https://github.com/kubernetes/sig-release/issues?utf8=%E2%9C%93&q=is%3Aissue+1.15.0+is%3Aclosed+
+[release-cut-issues]: https://github.com/kubernetes/sig-release/issues?utf8=%E2%9C%93&q=is%3Aissue+1.16.0+is%3Aclosed+
 
-## Minimum Skills and Requirements
+### Minimum Skills and Requirements
 
-* Familiarity with basic Unix commands and able to debug shell scripts.
-* Familiarity with branched source code workflows via `git` and associated `git` command line invocations.
-* General knowledge of Google Cloud (Cloud Build and Cloud Storage).
-* Open to seeking help and can communicating clearly.
-* [Kubernetes Community Membership](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
+- Familiarity with basic Unix commands and able to debug shell scripts.
+- Familiarity with branched source code workflows via `git` and associated `git` command line invocations.
+- General knowledge of Google Cloud (Cloud Build and Cloud Storage).
+- Open to seeking help and can communicating clearly.
+- [Kubernetes Community Membership](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
 
-## Shadow Expectations
+### Associates Expectations
 
-This is not a rigid list of obligations from shadows under branch management, treat this as a list of tasks that we would like to see shadows participate in.
+This is not a rigid list of obligations from Associates under branch management, treat this as a list of tasks that we would like to see the Associates participate in.
+
 1. Attend most of the release team meetings; you're highly encouraged to give suggestions, ask questions, voice thoughts, etc.
 1. Know the release dates from the [release cycle Timeline](https://github.com/kubernetes/sig-release/tree/master/releases) and offer help if possible.
 1. Find ways or make/participate in discussion to improve the [release tools].
 1. Question the content of this handbook. *“The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.”*
 1. Be curious, and try to make the most out of this opportunity.
 
-# Prerequisite
+## Prerequisites
 
-This is a collection of requirements and conditions to fulfil when taking on the role as branch manager.
+This is a collection of requirements and conditions to fulfill when taking on the role as branch manager.
 
-## Release Team Onboarding
+### Branch Management Onboarding
 
-**Please review and work through the tasks in the [Release Team Onboarding Guide](https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-onboarding.md) first, before proceeding with the section specific to branch management below.**
+**Before we can grant Release Manager access to new Branch Managers, a [Release Manager onboarding issue](https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng&template=release-manager.md&title=Release+Manager+access+for+%3CGH-handle%3E) _MUST_ be opened in this repo. Please take a moment to do that before executing the tasks contained in this handbook.**
 
-## Branch Management Onboarding
+### Machine setup
 
-A list of To Do(s) to get started as Branch Manager:
+#### Operating System
 
-- [ ] Contact the [Release Managers Google Group][release-managers-group] to identify yourself as the incoming release branch manager for the current release team and request to be added to the special privilege group for the `kubernetes-release-test` GCP project that's used to build the releases
-   * Similar access later in the cycle should be granted to shadows depending on how they progress and what actions they prove able to step up to exercise during the cycle.
-- [ ] Request permission to post on [kubernetes-announce][k-announce-list] via owner contact form [here][k-announce-request]
-   * If you haven't received access after 24 hrs, contact the [Release Team][kubernetes-release-team].
-- Machine setup:
-   - [ ] Linux OS
-      * MacOS/Windows are not supported by [release tools] today. However, running inside a Linux container on MacOS via Docker works well.
-      * See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Dockerfile.
-   - [ ] Setup SSH keys for GitHub (either static .ssh/config or ssh agent works)
-   - [ ] Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu)
-   - [ ] Run `gcloud init` using the identity (i.e. email address) that you had authorized for the GCP project
-   - [ ] `git clone git@github.com:kubernetes/release.git`
-   - [ ] ability to run `sendmail` from local Unix command line
-      * You may send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: [`Buckets/kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`](https://console.cloud.google.com/storage/browser/kubernetes-release/archive/?project=kubernetes-release-test)
-- Join these mailing lists to stay current:
-   - [ ] [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-   - [ ] [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team)
-   - [ ] [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
+We make a modicum of effort to ensure our [release tools] are supported on multiple platforms, please note that only the following systems are known to be supported:
 
+- Debian-like (Debian, Ubuntu)
+- Fedora-like (Fedora, RHEL, CentOS)
+- MacOS
+
+Windows is not supported by [release tools].
+
+While our tooling may not support every platform, you may find success running within a container image.
+
+See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Dockerfile.
+
+**If you notice that [release tools] are not working as expected, please be sure to file an issue in [kubernetes/release][release tools].**
+
+#### Release tooling
+
+To leverage/contribute to our [release tools], Release Managers will need to fork and clone the [kubernetes/release][release tools] repo.
+
+Release Managers primarily use SSH to authenticate to GitHub.
+
+GitHub has documentation to assist in:
+
+- [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+- [Forking a repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+
+Additionally, `kubernetes/community` has a great [overview of the GitHub workflow](https://git.k8s.io/community/contributors/guide/github-workflow.md) we use across several Kubernetes org repositories.
+
+Please take a moment to review that documentation before continuing.
+
+#### Google Cloud SDK
+
+[Kubernetes release artifacts](/release-engineering/artifacts.md) are stored on Google Cloud Platform (GCP).
+
+Release Managers will need to use the Google Cloud SDK to interact with release artifacts.
+
+Google Cloud has [documentation on installing and configuring the Google Cloud SDK CLI tools](https://cloud.google.com/sdk/docs/quickstarts).
+
+#### Sending mail
+
+At the end of a release, Release Managers will need to announce the new release to the community.
+
+This can be done in one of two ways:
+
+- The `./release-notify` tool -- `sendmail` will need to be configured correctly on your environment for this to work
+- Manually -- Send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: `gs://kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`:
+  - [Example subject](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement-subject.txt)
+  - [Example body](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement.html)
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
 [release tools]: https://github.com/kubernetes/release
 
-## Safety Check
+### Safety Check
 
 The following command can help verify that your clone of the [release tools] are up-to-date, that your setup is fully configured, and your `gcloud` identity is authorized for the release builds:
 
-`./gcbmgr`
-   * should run successfully and even show some green colored "OK" words
+```shell
+./gcbmgr
+```
 
-# The Release Process
+This command should run successfully and even show some green colored "OK" words
+
+## Releases Management
 
 **General overview**:
 
 Public build artifacts are published and an email notification goes out to the community. You will become very familiar with the following commands over the course of the 3 month release cycle:
 
-```bash
+```shell
 ./gcbmgr stage
 ./gcbmgr release ${{BRANCH_NAME}} --buildversion=${{VERSIONID}} --nomock
 # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds
@@ -146,92 +225,114 @@ You can make a copy of this spreadsheet to collect metrics of build times and in
 
 [Branch Management Log](https://docs.google.com/spreadsheets/d/1gbr2byg7AmGvVv6onZtgowa729KZcyYTyH82qn1czK8/edit?usp=sharing)
 
-A section of the log above is usually copied over as a comment on the issue. See [this thread](https://github.com/kubernetes/sig-release/issues/603#issuecomment-487735684) for cutting [1.15.0-alpha.2](https://github.com/kubernetes/sig-release/issues/603).
+A section of the log above is usually copied over as a comment on the issue. See [this thread](https://github.com/kubernetes/sig-release/issues/756#issuecomment-521065084) for cutting [1.16.0-beta.0](https://github.com/kubernetes/sig-release/issues/756).
 
 After having thoroughly read the section on cutting a release version of the handbook, and that all items on the checklist have completed (you may include notes on events that was unique to cutting that release version as comments), close the issue with `/close` as a comment the issue thread.
 
-## Alpha Stage
+### Alpha Releases
+
+#### Alpha Stage
+
+##### gcbmgr stage
 
 Start staging a build by running:
 
-`./gcbmgr stage master`
-   * returns relatively quick
-   * provides a link to GCP where you can track the process of the build
+```shell
+./gcbmgr stage master
+```
+
+This command should return relatively quickly and provide a link to GCP where you can track the process of the build.
 
 Early in the release cycle, it is likely that the build might fail. By default the `gcbmgr stage master` command automatically looks for a place where [release master blocking tests](https://k8s-testgrid.appspot.com/sig-release-master-blocking) have green results, which traditionally has not happened in Kubernetes on an ongoing basis.
 
 WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. But in the meantime, acknowledging today especially for an early alpha or beta release, it is possible to just build via:
 
-`./gcbmgr stage master --build-at-head`
-   * Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from HEAD (the last commit on the current branch).
-   * This takes time (approximately 1 hour is the current norm).  It’s building all the bits for a bunch of target operating systems and hardware architectures.
+```shell
+./gcbmgr stage master --build-at-head
+```
 
-`./gcbmgr list`
-   * You should now see your new job running.
+Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from HEAD (the last commit on the current branch).
 
-`./gcbmgr tail`
-   * To observe the output log for the build (same as on Google Cloud Console).
-   * Scan output for failures and warnings.
-   * Successful build information is displayed for your next steps, including a build version identifier for the staged build, for example `v1.12.0-alpha.0.2622+7ac32a4f7a7ecf`. This string is passed on to the release scripting, which is nicely displayed for you to copy and paste.
+This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
+
+##### gcbmgr list
+
+```shell
+./gcbmgr list
+```
+
+You should now see your new job running.
+
+##### gcbmgr tail
+
+```shell
+./gcbmgr tail
+```
+
+- To observe the output log for the build (same as on Google Cloud Console).
+- Scan output for failures and warnings.
+- Successful build information is displayed for your next steps, including a build version identifier for the staged build, like `vX.Y.0-alpha.0.N+commit-hash`. This string is passed on to the release scripting, which is nicely displayed for you to copy and paste.
 
 For more information on the usage of `./gcbmgr` run `./gcbmgr --help` or inspect the [`gcbmgr` script](https://github.com/kubernetes/release/blob/master/gcbmgr).
 
-## Alpha Release
+#### Alpha Release
 
-After staging comes the actual releasing, but this may be intentionally delayed. For example, the branch manager may stage a build from the head of the release branch late in the release cycle, doing so in the morning so that it is fully build and would be releasable in the afternoon (pending CI tests will results from the head of the branch). If the results are good and the release team gives the go ahead, you can initiate the publishing portion of the release process. If staging the build only happened after the receipt of clean CI tests results, this will delay completing the entire release process for a release version (alpha,beta,rc,...).  This of course presumes reproducible builds and that CI builds and tests are meaningful relative to the release builds. There is always a risk that these diverge, and this needs managed broadly by the project and the release team.
+After staging comes the actual releasing, but this may be intentionally delayed. For example, the branch manager may stage a build from the head of the release branch late in the release cycle, doing so in the morning so that it is fully build and would be releasable in the afternoon (pending CI tests will results from the head of the branch). If the results are good and the release team gives the go ahead, you can initiate the publishing portion of the release process. If staging the build only happened after the receipt of clean CI tests results, this will delay completing the entire release process for a release version (alpha,beta,rc,...). This of course presumes reproducible builds and that CI builds and tests are meaningful relative to the release builds. There is always a risk that these diverge, and this needs managed broadly by the project and the release team.
+
+##### gcbmgr release
 
 Use the `--buildversion=` as specified in the output when `gcbmgr` is done with the stage command.
 
-`./gcbmgr release master --buildversion=v1.12.0-alpha.0.N+commit-hash`
-   * This copies the staged build to public GCP buckets at well-known urls for the truncated release version string. The unique build staging identifier will subsequently be just “v1.12.0-alpha.1”, even though the staged build had an “alpha.0” in its name
-   * This can be confusing. The v1.12.0-alpha.0 tag was created automatically in the past when the v1.11 branch was forked, but it wasn’t actually build.
+```shell
+./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash
+```
 
-Note:
-> Any `./gcbmgr` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `gcbmgr` take any actual impact on the release process. All this mock building/releasing can help you verify that you have a working setup!
+- This copies the staged build to public GCP buckets at well-known urls for the truncated release version string. The unique build staging identifier will subsequently be just “v1.16.0-alpha.1”, even though the staged build had an “alpha.0” in its name
+- This can be confusing. The v1.16.0-alpha.0 tag was created automatically in the past when the v1.15 branch was forked, but it wasn’t actually build.
+
+##### Mock vs nomock
+
+Any `./gcbmgr` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `gcbmgr` take any actual impact on the release process. All this mock building/releasing can help you verify that you have a working setup!
 
 For example, to execute an actual run:
 
-`./gcbmgr release master --buildversion=v1.12.0-alpha.0.N+commit-hash --nomock`
+```shell
+./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash --nomock
+```
 
-Note:
-> This run may fail. Mock builds can only be mock released. A nomock release requires a nomock build to be staged.
+**n.b. This run may fail. Mock builds can only be mock released. A nomock release requires a nomock build to be staged.**
 
 Builds against the `master` branch are implicitly the next alpha. `gcbmgr` and `anago` automatically finds and increments the current build number.
 
-## Branch Creation
+### Beta Releases
 
-The first time a specific branch is mentioned for the release process instead of the `master` branch is when beta.0 is being cut, for example:
+Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `anago` automatically find and increment the current build number.
 
-`./gcbmgr stage release-1.12 --build-at-head --nomock`
+**n.b. If this is a `beta.0` release, there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
 
-Then behind the scenes `anago` will do a branch create and push.
-`prow`’s `branchprotector` [runs once per day](https://github.com/kubernetes/test-infra/blob/a362b01ca57be7c170f7ef51c2f14dfd98986669/prow/cluster/branchprotector_cronjob.yaml#L1-L6) and automatically adds branch protection to any new branch in the `k/k` repo.
+The command example below is to stage a build for a beta release:
 
-New release branch creation (for example: release-1.12) automatically also triggers an alpha.0 build for the subsequent release (for example: release-1.13). This means that the staging step will take about twice as long, as it will stage both versions `v1.12.0-beta.0` and `v1.13.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
-
-## Beta Stage and Release
-
-Builds against a release-X.Y branch are implicitly a next beta. `gcbmgr` and `anago` automatically finds and increments the current build number. The command example below is to stage a build for a beta release:
-
-`./gcbmgr stage release-1.15 --build-at-head --nomock`
-
-This being the first build from the newly created release branch, the publication of this build does not send out the typical changelog detail notification, but rather will only send a shorter message with subject line "[k8s release-1.15 branch has been created](https://groups.google.com/forum/#!topic/kubernetes-announce/Gu2JYa4BzAg)".
+```shell
+./gcbmgr stage release-1.16 --build-at-head --nomock
+```
 
 To publish (release) the build artifacts from staging beta for example, run:
 
-`./gcbmgr release release-1.15 --buildversion=v1.15.0-alpha.3.N+commit-hash --nomock`
+```shell
+./gcbmgr release release-1.16 --buildversion=v1.16.0-alpha.3.N+commit-hash --nomock
+```
 
-When the new `release-X.Y` branch is created, it marks the beginning of another stage in the release process. The following tasks should take place as soon as possible:
+**n.b. If this is a `beta.0` release, there are additional tasks to complete after the release branch is cut. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation).**
 
-1. Insert the patch release manager into the branch manager list in the prow configuration. For example in [`prow/plugins.yaml`](https://github.com/kubernetes/test-infra/blob/master/prow/plugins.yaml), grep for `branch_whitelist:` and add a new block for `release-X.Y`. You may need to remove the oldest `release-X.Y` block. See a pull request [example](https://github.com/kubernetes/test-infra/pull/12680) for this.
-2. [Create CI/Presubmit jobs for the new release](#Create-CIPresubmit-jobs)
-3. [Run `./branchff` approximately the day after the branch has been created]((#Branch-Fast-Forward))
+### Release Candidates
 
-## Release Candidate Stage and Release
+Adding the `--rc` flag switches behavior on to building release candidates. Again `gcbmgr` and `anago` automatically finds and increments the current build number.
 
-Adding the `--rc` flag switches behavior on to building release candidates. Again `gcbmgr` and `anago` automatically finds and increments the current build number. For example:
+For example:
 
-`./gcbmgr stage release-1.12 --rc --build-at-head --nomock`
+```shell
+./gcbmgr stage release-1.16 --rc --build-at-head --nomock
+```
 
 To publish the build artifacts (release), as usual use the `--buildversion=` number as specified in the output when `gcbmgr` is done with the stage command.
 
@@ -239,7 +340,7 @@ In an perfect world, `rc.1` and the official release are the same commit. To get
 
 1. PRs tagged with the release cycle milestone should have all merged onto the `master` branch:
 
-   For example, there should be no open PRs tagged with the v1.14 milestone, [`is:pr is:open milestone:v1.14`][pr-milestone-query] .
+   For example, there should be no open PRs tagged with the v1.16 milestone, [`is:pr is:open milestone:v1.16`][pr-milestone-query] .
 
    This means you and the release team should push for PRs to get merged before the code freeze is lifted or determine if the open PRs can be removed from the milestone and be merged in the next release cycle.
 
@@ -252,7 +353,7 @@ In an perfect world, `rc.1` and the official release are the same commit. To get
 3. Factors that determine if Code Freeze can be lifted:
 
    - Zero pending PRs and no open issues tagged with the release cycle milestone.
-   - No failing X.Y-blocking tests, for example the [sig-release-1.15-blocking](https://testgrid.k8s.io/sig-release-1.15-blocking) dashboard should not have any red failing test builds.
+   - No failing X.Y-blocking tests, for example the [sig-release-1.16-blocking](https://testgrid.k8s.io/sig-release-1.16-blocking) dashboard should not have any red failing test builds.
 
    Note:
    > If there are non-zero pending PRs, open issues or failing tests, there is high confidence that the issue is understood and the solution/PR can be [cherry picked](#cherry-picks) over to the release branch between the release candidate(s) and official release.
@@ -261,114 +362,222 @@ Technically we can keep code freeze in place after `rc.1` was cut. However, we s
 
 Otherwise we might have a mix of PRs against master, some have been merged in code freeze and for the milestone, just after `rc.1`, and others have been merged when code freeze has been lifted. We might miss this specific PR in the plethora of PRs that [tide] merges after code thaw, and we might miss that this PR actually needs to be cherry-picked into the release branch.
 
-[pr-milestone-query]: https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.14
+[pr-milestone-query]: https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.16
 [tide]: https://git.k8s.io/test-infra/prow/tide
 
-## Official Stage and Release
+### Official Releases
 
 To initiate staging the build for the official release, the `--official` flag is used. For example:
 
-`./gcbmgr stage release-1.12 --official --build-at-head --nomock`
+```shell
+./gcbmgr stage release-1.16 --official --build-at-head --nomock
+```
 
-In addition to `v1.12.n` this will also build and stage the subsequent patch's
-`beta.0`, in this example `v1.12.(n+1)-beta.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
+In addition to `v1.16.n` this will also build and stage the subsequent patch's
+`beta.0`, in this example `v1.16.(n+1)-beta.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
 release step will also take a couple of minutes more.
 
-When staging is done, as usual, use the command `./gcbmgr release` with the `--buildversion=` specified when `./gcbmgr stage` is done.
+When staging is done, you may use the command `./gcbmgr release` with the `--buildversion=` specified as usual when `./gcbmgr stage` is done.
+However, there is an embargo policy which requires the nomock release publication happens after 4 pm Pacific (see [Release Team Lead Handbook](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-team-lead#week-12) for details), make sure to coordinates with other roles and follow the timeline.
 
 To better prepare and see what to expect, this is a sequence of events that took place on past [official release days](https://docs.google.com/document/d/1K0B91lgeEiJTbT602VloA5arb6AkaTif-MLryaHmlYc/edit?usp=sharing).
 
-### Debian and RPM Packaging
+#### Security fixes
 
-[Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `./gcbmgr release --offical ...` has completed, **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
+The Product Security Committee (PSC) may contact you via the [Security Release Team][security-release-team]
+mailing list if there are security fixes needed on the release branch.
+
+Once the release has been confirmed to contain security fixes, the Branch Manager must inform the current
+Release Team Lead and Lead Shadows. Information pertaining to these fixes is considered need-to-know and should not be disseminated to anyone else on the Release Team.
+
+You must not make any public announcements regarding these fixes unless the PSC tells you to.
+
+See the [Security Release Process](https://git.k8s.io/security/security-release-process.md) doc for more details.
+
+[security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
+
+#### Post-release Activities
+
+- Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` in the [`variants.yaml` file for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml). ([reference PR review comment](https://github.com/kubernetes/test-infra/pull/13870#discussion_r313628808))
+
+##### Debian and RPM Packaging
+
+[Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `./gcbmgr release --official ...` has completed, **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
 
 The entire packaging process including the build and validation of the builds could take around 3-4 hours. It is preferable to have the DEB and RPM files ready prior to sending out the release notification email since, people worldwide will attempt to download the official release. Since packaging uses the release tag, it is important to [validate the release process](#release-validation).
 
-Once the .deb and .rpm packages are done building, you can `grep` for `X.Y` e.g. `1.15` in the [yum](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) repositories.
+Once the .deb and .rpm packages are done building, you can `grep` for `X.Y` e.g. `1.16` in the [yum](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) repositories.
 
-## Release Validation
+##### Release Validation
 
 The following are some ways to determine if the release process was successful:
 
 1. The build tag and release artifacts become [visible on GitHub at https://github.com/kubernetes/kubernetes/releases](https://github.com/kubernetes/kubernetes/releases)
 
-1. The release is logged automatically by [k8s-release-robot](https://github.com/k8s-release-robot) in [sig-release](https://github.com/k8s-release-robot/sig-release)
+2. The release is logged automatically by [k8s-release-robot](https://github.com/k8s-release-robot) in [k/sig-release](https://git.k8s.io/sig-release)
 
-1. CHANGELOG-X.Y.md is automatically loaded into the kubernetes/kubernetes repo: [https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md)
+3. CHANGELOG-X.Y.md is automatically loaded into the kubernetes/kubernetes repo: [https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md)
 
-# Create CI/Presubmit jobs
+## Branch Management
 
-This takes place around week 6-7, as soon as the new `release-X.Y` branch is created. This task is taken over from test-infra when the role was dissolved starting `v1.16`:
+This section discusses the methods in managing commits on the `release-x.y` branch.
 
-1. `git clone` [`git@github.com:kubernetes/test-infra.git`](https://github.com/kubernetes/test-infra)
+### Branch Creation
 
-1. [Install Bazel](https://docs.bazel.build/versions/master/install.html)
+During a `beta.0` release e.g., `1.16.0-beta.0`, our release tooling creates a new release branch named `release-x.y`, where `x` and `y` are the major and minor versions of the next release, respectively.
 
-1. Update [`images/kubekins-e2e/variants.yaml`](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e/variants.yaml) by deleting the oldest entry and copying the `master` block to create an entry using the latest version number. For example:
+Behind the scenes `anago` is doing a git branch create and git push.
 
-   ```yaml
-   variants:
-   experimental:
-      CONFIG: experimental
-      GO_VERSION: 1.12.1
-      K8S_RELEASE: stable
-      BAZEL_VERSION: 0.26.0
-      UPGRADE_DOCKER: 'true'
-   master:
-      CONFIG: master
-      GO_VERSION: 1.12.1
-      K8S_RELEASE: stable
-      BAZEL_VERSION: 0.23.2
-   '1.16':
-      CONFIG: '1.16'
-      GO_VERSION: 1.12.1
-      K8S_RELEASE: stable
-      BAZEL_VERSION: 0.23.2
-   '1.15':
-      CONFIG: '1.15'
-      GO_VERSION: 1.12.1
-      K8S_RELEASE: stable
-      BAZEL_VERSION: 0.23.2
-   '1.14':
-      CONFIG: '1.14'
-      GO_VERSION: 1.12.1
-      K8S_RELEASE: latest
-      BAZEL_VERSION: 0.21.0
-   '1.13':
-      CONFIG: '1.13'
-      GO_VERSION: 1.11.5
-      K8S_RELEASE: stable-1.13
-    BAZEL_VERSION: 0.18.1
+`prow`’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs [every hour at 54 minutes past the hour](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/test-infra/test-infra-trusted.yaml#L867) and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo.
 
-   # Note that the last block i.e. the `1.12` block was removed
+New release branch creation (for example: `release-1.16`) also automatically triggers an alpha.0 build for the subsequent release (for example: [`v1.17.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.17.0-alpha.0)).
+
+This means that the staging step will take about twice as long, as it will stage both versions `v1.16.0-beta.0` and `v1.17.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
+
+#### During staging
+
+While the staging job is in progress, run through the following tasks, **_putting an explicit hold_** on any PRs (to be removed once the release branch has been created):
+
+- [Update test-infra configurations](#update-test-infra-configurations)
+  - [Update Slack branch whitelists](#update-slack-branch-whitelists)
+  - [Update milestone appliers](#update-milestone-appliers)
+  - [Update e2e variants](#update-e2e-variants)
+
+#### After release branch creation
+
+This being the first build from the newly created release branch, the publication of this build does not send out the typical changelog detail notification, but rather will only send a shorter message with subject line "[k8s release-1.16 branch has been created](https://groups.google.com/d/msg/kubernetes-announce/BqN8x2Y2bMY/GFTzt1usEAAJ)".
+
+Once the new `release-x.y` branch is created, the following tasks should take place as soon as possible:
+
+- [Generate release branch jobs](#generate-release-branch-jobs)
+- [Update Kubernetes versions document](#update-kubernetes-versions-document)
+- [Run `./branchff` approximately a day after the branch has been created](#branch-fast-forward)
+
+### Update test-infra configurations
+
+This takes place around week 6-7, as soon as the new [`release-x.y` branch is created](#branch-creation).
+
+Before getting started, Branch Managers should:
+
+- Fork the [test-infra repository](https://github.com/kubernetes/test-infra)
+- Clone their fork of `kubernetes/test-infra`:
+
+  ```shell
+  git clone git@github.com:<username>/test-infra.git
+  ```
+
+- [Install Bazel](https://docs.bazel.build/versions/master/install.html)
+
+#### Update Slack branch whitelists
+
+The Slack branch whitelist reports potentially dangerous or unexpected changes to repos to Slack channels, like unauthorized pushes, rewrites, branch creations/deletions.
+
+It is part of the [Slack events Prow plugin](https://git.k8s.io/test-infra/prow/plugins/slackevents/slackevents.go).
+
+Update the Slack branch whitelists:
+
+- Find the current branch whitelist ([`config/prow/plugins.yaml`](https://git.k8s.io/test-infra/config/prow/plugins.yaml), grep for `branch_whitelist:`)
+- Remove the oldest release branch block
+- Add an entry for the newest release branch
+- Add all current [Patch Release Team members](/release-managers.md#patch-release-team) to all `kubernetes/kubernetes` release branches
+- Remove [Branch Managers](/release-managers.md#branch-managers) from any previous release branches
+- Add all current [Branch Managers](/release-managers.md#branch-managers)
+
+Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15014).
+
+#### Update milestone appliers
+
+The [milestone applier plugin](https://git.k8s.io/test-infra/prow/plugins/milestoneapplier/milestoneapplier.go) automatically applies a GitHub milestone to pull requests after they have merged.
+
+This only applies to repos that have the milestone applier configured and for pull requests that do not already have a milestone.
+
+Update the `milestoneapplier` plugin configs for `kubernetes/kubernetes`:
+
+- Remove config for the oldest release branch
+- Add config for the current release branch
+
+Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15017).
+
+#### Update e2e variants
+
+Images used in Kubernetes E2E tests are generated via our [GCB Builder tool](https://github.com/kubernetes/test-infra/blob/master/images/builder/README.md).
+
+The `variants.yaml` config file, used in conjunction with the GCB Builder, allows us to target various branches or branch combinations during CI tests. The `K8S_VERSION` variable maps to the version marker files viewable in the [`kubernetes-release` GCS bucket](https://gcsweb.k8s.io/gcs/kubernetes-release/release/) e.g., [`latest-1.17.txt`](https://storage.googleapis.com/kubernetes-release/release/latest-1.17.txt).
+
+We need to update the [variants for the `kubekins-e2e` image](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e/variants.yaml).
+
+- Remove the oldest release variant e.g., `'1.13'`
+- Add an entry for the newest release variant e.g., `'1.17'`
+- Ensure the following:
+  - The `K8S_RELEASE` marker for `experimental` matches `master`
+  - The `K8S_RELEASE` marker for the newest release variant is `latest-x.y`
+  - The `K8S_RELEASE` marker for every other release variant is `stable-x.y`
+
+Create a PR with this change and wait for it to be merged.
+Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15015).
+
+**Wait for the `test-infra-push-kubekins-e2e` presubmit to finish (you can [check on prow](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e)).**
+
+**Pull latest from `master` before continuing.**
+
+#### Generate release branch jobs
+
+1. Generate the new release branch jobs:
+
+   ```shell
+   bazel run //experiment:prepare_release_branch
    ```
 
-1.  Create a PR with this change and wait for it to be merged. Then wait for the `test-infra-push-kubekins-e2e` presubmit to finish (you can [check on prow](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e)). Pull latest from `master` before continuing.
+2. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/kubernetes/sig-release/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/15023/commits/cad8a3ce8ef3537568b12619634dff702b16cda7))
+   - Remove the oldest release `sig-release-<version>-{blocking,informing}` dashboards
+   - Add dashboards for the current release e.g., `sig-release-1.17-{blocking,informing}`
 
-1. Run `bazel run //experiment:prepare_release_branch`
+3. Check for and resolve configuration errors:
 
-1. `grep` for [`manual-release-bump-required`](https://github.com/kubernetes/test-infra/search?q=manual-release-bump-required&unscoped_q=manual-release-bump-required)` in [test-infra](https://github.com/kubernetes/test-infra) and duplicate block entries appropriately, i.e. in:
-   1. [`config/jobs/kubernetes/sig-gcp/gce-conformance.yaml`](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-gcp/gce-conformance.yaml)
-   1. [`testgrid/config.yaml`](https://github.com/kubernetes/test-infra/blob/master/testgrid/config.yaml)
+   ```shell
+   bazel test //config/... //testgrid/... //hack:verify-config
+   ```
 
-1. Verify that Testgrid is in a reasonable state. As of today, this means deleting the oldest `sig-release-<version>-{master,informing,all}` dashboards e.g. `sig-release-1.12-all` and making new `sig-release-<version>-{master,informing,all}` ones in [`testgrid/config.yaml`](https://github.com/kubernetes/test-infra/blob/master/testgrid/config.yaml). You can run `bazel test //testgrid/cmd/configurator/...` to make sure you are in a good state.
+4. Regenerate job configs:
 
-1.  Finally, update the [release target section](https://github.com/kubernetes/test-infra#release-branch-jobs--image-validation-jobs) of the README.
+    ```shell
+    hack/update-config.sh
+    ```
 
-[sig-release-1.Y-blocking]: https://testgrid.k8s.io/sig-release-1.15-blocking
+5. Do a final check for configuration errors:
+
+    ```shell
+    bazel test //config/... //testgrid/... //hack:verify-config
+    ```
+
+6. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/15023))
+
+7. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
+
+    Examples:
+    - [sig-release-1.17-blocking](https://testgrid.k8s.io/sig-release-1.17-blocking)
+    - [sig-release-1.17-informing](https://testgrid.k8s.io/sig-release-1.17-informing)
+
+8. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
+
+[sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
 [`branchff`]: https://git.k8s.io/release/branchff
 
-# Configure Merge Automation
+#### Update Kubernetes versions document
+
+Update [kubernetes-versions.md](https://github.com/kubernetes/test-infra/blob/master/docs/kubernetes-versions.md)
+
+### Configure Merge Automation
 
 Starting release cycle v1.16, branch management will take on duties from the Test Infra lead. Since the role was dissolved at the end of cycle v1.15. This section describes the added responsibility that branch management will partake:
 
-Between the Code Freeze and lifting Code Freeze (or Code Thaw) period, merging new code is restricted (focus is on fixing existing code and getting green test builds on Testgrid) and is implemented by a combination of prow plugins config, submit-queue config, and [tide]. The `master` and current release cycle branch i.e. release-X.Y are the only branches affected during this period.
+Between the Code Freeze and lifting Code Freeze (or Code Thaw) period, merging new code is restricted (focus is on fixing existing code and getting green test builds on Testgrid) and is implemented by config changes for [tide]. The `master` and current release cycle branch i.e. release-x.y are the only branches affected during this period.
 
 Code freeze initiates additional merge requirements, while Code thaw marks the switch back to the development phase. Look at the [release cycle timeline](https://github.com/kubernetes/sig-release/tree/master/releases) for the exact dates for code freeze and code thaw. Usually the the date for code thaw is flexible depending on pending PRs.
 
 As Branch Manager, coordinate with the Release Lead on checking whichever config changes are required to enable and disable merge restrictions.
 
-## Tide
+#### Tide
 
 Tide automate merges. Its configuration lives in `[config.yaml](https://github.com/kubernetes/test-infra/blob/master/prow/config.yaml)`. Tide identifies PRs that are mergeable using GitHub queries that correspond to the entries in the queries field. Here is an example of what the query config for `kubernetes/kubernetes` looks like without additional constraints related to the release cycle:
 
@@ -392,27 +601,27 @@ Tide automate merges. Its configuration lives in `[config.yaml](https://github.c
     - needs-sig
 ```
 
-During code freeze, two queries are used instead of just one for the `kubernetes/kubernetes` repo. One query handles the `master `and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
+During code freeze, two queries are used instead of just one for the `kubernetes/kubernetes` repo. One query handles the `master` and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
 
-## Code Freeze
+#### Code Freeze
 
 Code freeze is when merge requirements for the `master` and current release branch diverge from the requirements for the other branches so this is when the `kubernetes/kubernetes` Tide query splits into two queries.
 
 We only add additional merge requirements for PRs to these two branches for code freeze:
 
-* PRs must be in the GitHub milestone for the current release.
+- PRs must be in the GitHub milestone for the current release.
 
-Milestone requirements are configured by adding e.g. `milestone: v1.14` to a query config.
+Milestone requirements are configured by adding e.g. `milestone: v1.16` to a query config.
 
 It is also helpful to remind [#sig-testing](https://kubernetes.slack.com/messages/C09QZ4DQB) when code freeze starts so they know not to do anything too dangerous to the test infrastructure.
 
 ```yaml
   - repos:
     - kubernetes/kubernetes
-    milestone: v1.14
+    milestone: v1.16
     includedBranches:
     - master
-    - release-1.14
+    - release-1.16
     labels:
     - lgtm
     - approved
@@ -423,7 +632,7 @@ It is also helpful to remind [#sig-testing](https://kubernetes.slack.com/message
     - kubernetes/kubernetes
     excludedBranches:
     - master
-    - release-1.14
+    - release-1.16
     labels:
     - lgtm
     - approved
@@ -434,9 +643,9 @@ It is also helpful to remind [#sig-testing](https://kubernetes.slack.com/message
       .
 ```
 
-## Code Thaw
+#### Code Thaw
 
-Code thaw removes the release cycle merge restrictions and replaces the two queries with one single query. We remain in this state until the next code freeze.
+Code Thaw removes the release cycle merge restrictions and replaces the two queries with one single query. We remain in this state until the next Code Freeze.
 
 ```yaml
   - repos:
@@ -451,24 +660,36 @@ Code thaw removes the release cycle merge restrictions and replaces the two quer
     .
 ```
 
-# Branch Content Management
+Update the `milestoneapplier` plugin configs for the following repos to the **_next_** milestone:
 
-This section discusses the methods in managing commits on the `release-X.Y` branch.
+- `kubernetes/enhancements`
+- `kubernetes/kubernetes`
+- `kubernetes/release`
+- `kubernetes/sig-release`
+- `kubernetes/test-infra`
 
-## Branch Fast Forward
+Example PRs:
+
+- [1.17, part one](https://github.com/kubernetes/test-infra/pull/15369)
+- [1.17, part two](https://github.com/kubernetes/test-infra/pull/15019)
+
+### Branch Fast Forward
 
 Prior to running `./branchff`, you will need:
+
 - permission to write to the `/usr/local/` directory
 - permission to run under `root` privileges
 - membership in the [Release Managers GitHub Group](https://github.com/orgs/kubernetes/teams/release-managers)
 
 Command invocation:
-```bash
-./branchff release-X.Y
-```
-Where `X.Y` is the is release cycle version e.g. `1.12`
 
-This is done daily as soon as the `release-X.Y` branch has been cut (which happens after `beta.0` is released).
+```shell
+./branchff release-x.y
+```
+
+Where `X.Y` is the is release cycle version e.g. `1.16`
+
+This is done daily as soon as the `release-x.y` branch has been cut (which happens after `beta.0` is released).
 
 Earlier in the release the exact time of running [`branchff`] can be at the discretion of the branch manager, as agreed upon with the release lead.
 
@@ -478,8 +699,9 @@ The exact time for pulling in the changes from `master` to the release branch mi
 - We should run [`branchff`] sooner, before `$bigFeature` so we have a signal in the release branch before that feature was brought in
 - We should run [`branchff`] later, after `$theOtherFeature` has been merged, so we get signal on that feature from both the master and the release branch
 
-The first time the [`branchff`] executes, it will
-- do a clone of `kubernetes/kubernetes` to a temporary directory i.e. `/usr/local/google/nobody/branchff-release-X.Y/src/k8s.io/kubernetes`
+The first time the [`branchff`] executes, it will:
+
+- do a clone of `kubernetes/kubernetes` to a temporary directory i.e. `/tmp/branchff.random/branchff-release-x.y/src/k8s.io/kubernetes`
 - run a git merge-base
 - run a few cleanup scripts to ensure the branch’s generated API bits are in order
   (master branch content will move on toward version `n+1`, while release branch needs to stay at version `n`)
@@ -487,57 +709,60 @@ The first time the [`branchff`] executes, it will
 - push to the GitHub remote release branch
 
 It is highly recommended to run the following `git` commands as shown below:
-```
-Go look around in /usr/local/google/nobody/branchff-release-1.14/src/k8s.io/kubernetes to make sure things look ok:
+
+```shell
+Go look around in /tmp/branchff.5mpBAx/branchff-release-1.16/src/k8s.io/kubernetes to make sure things look ok:
 # Any files left uncommitted?
 * git status -s
 # What does the commit look like?
 * git show
 # What are the changes we just pulled in from master?
 #   will be available after push at:
-#   https://github.com/kubernetes/kubernetes/compare/641856db18...6ac5d02668
-* git log origin/release-1.14..HEAD
+#   https://github.com/kubernetes/kubernetes/compare/35a287caa6...d17cd23569
+* git log origin/release-1.16..HEAD
 
 OK to push now? (y/n):
 ```
 
 You should see something like this when running `git show`:
 
-```bash
-commit e0677859bbcaf681ea41d731534771a4e9843a17
-Merge: 104add02ef b49d429f64
-Author: bubblemelon <12985181+Bubblemelon@users.noreply.github.com>
-Date:   Tue May 28 13:24:16 2019 +0000
+```shell
+commit d17cd2356993283316b10491a4beaad0931bbff3
+Merge: 35a287caa6 6348200c92
+Author: Yang Li <idealhack@gmail.com>
+Date:   Tue Sep 10 03:47:38 2019 +0000
 
-    Merge remote-tracking branch 'origin/master' into release-1.15.  Deleting CHANGELOG-1.12.md
+    Merge remote-tracking branch 'origin/master' into release-1.16
 ```
+
 Sometimes the commit may or may not delete a Changelog.
 
 It is critically important to run the following during code freeze. Look through the git log via:
-```
-git log origin/release-1.Y..HEAD
+
+```shell
+git log origin/release-x.y..HEAD
 ```
 
-Each and every commit ought to be something the release team has visibility into.  Each merge commit indicates a PR number and owner. Invest time in researching these. If unexpected code was merged to master, use your judgement on whether to escalate to the release team and SIG leadership associated with PR to question whether the commit is truly targeted for the release.
+Each and every commit ought to be something the release team has visibility into. Each merge commit indicates a PR number and owner. Invest time in researching these. If unexpected code was merged to master, use your judgement on whether to escalate to the release team and SIG leadership associated with PR to question whether the commit is truly targeted for the release.
 
 **The release team and the branch manager are the final safety guard on the release content.**
 
-Upon a successful mock execution of `./brachff`, proceed with:
-`./branchff release-1.Y --nomock`
+Upon a successful mock execution of `./branchff`, proceed with:
+`./branchff release-x.y --nomock`
 
 Subsequent runs will simply be merging in changes from `master` to the branch, keeping the previous API fixup commits on the branch.
 
-Note that the merged commits from `branchff` e.g. with `e0677859b` from the above `git show` snippet will be tested against on Testgrid [sig-release-X.Y-blocking].
+Note that the merged commits from `branchff` e.g. with `d17cd23569` from the above `git show` snippet will be tested against on Testgrid [sig-release-x.y-blocking].
 
 Once code freeze is lifted (code thaw occurred), then there will be no need to `branchff` from `master` onto the release branch. Instead, PRs that need to be merged onto the release branch are cherry-picked over from `master`.
 
-## Reverts
+### Reverts
 
 During code freeze it is especially important to first look at the list of commits on `master` since the prior fast forward, scanning their content and issues/PRs to ensure they are changes expected for this milestone. **The merge-blocking mechanisms are relatively weak**. It is possible still for some people to write directly to the repo (bypassing blocking mechanisms), and as well as for unintentional milestone maintainers to approve a merge incorrectly. The branch manager is the last line of defense.
 
 If code incorrectly merges onto `master` it should be reverted in `master`. Alternatively, release branch management must go to all cherry picks, picking around the errant (incorrectly added) commit.
 
-## Cherry Picks
+### Cherry Picks
 
 Once code freeze is lifted, and for the post-release patch management process, commits are cherry picked from `master`.
 
@@ -547,7 +772,7 @@ The current documentation in the [contributor guide for cherry picks](https://gi
 
 The cherry pick script is also fairly self documenting in terms of how to invoke the command.
 
-In brief, running [cherry_pick_pull.sh](https://git.k8s.io/kubernetes/hack/cherry_pick_pull.sh) creates a cherry pick PR against the specified `release-X.Y` branch. The contents of this PR is taken from the PR that was made against `master`. Once the appropriate approval is given to the cherry pick PR and has met the requirements set by the [k8s-ci-robot](https://github.com/k8s-ci-robot), this will trigger test re-runs on the PR. As soon as these tests all pass, add the `cherry-pick-approved` label.
+In brief, running [cherry_pick_pull.sh](https://git.k8s.io/kubernetes/hack/cherry_pick_pull.sh) creates a cherry pick PR against the specified `release-x.y` branch. The contents of this PR is taken from the PR that was made against `master`. Once the appropriate approval is given to the cherry pick PR and has met the requirements set by the [k8s-ci-robot](https://github.com/k8s-ci-robot), this will trigger test re-runs on the PR. As soon as these tests all pass, add the `cherry-pick-approved` label.
 
 For example, [#79044](https://github.com/kubernetes/kubernetes/pull/79044) is the cherry pick PR of [#78999](https://github.com/kubernetes/kubernetes/pull/78999). Once [#79044](https://github.com/kubernetes/kubernetes/pull/79044) is tagged with the `cherry-pick-approved` label, Prow begins the merge onto the release branch.
 
@@ -556,7 +781,7 @@ There has been quite a bit of recent discussion (see: [1](https://github.com/kub
 After the official release has been published, the [patch release team](#../patch-release-manager/) will take over in handling cherry picks. In the time between code thaw and the official release, cherry picks are the responsibility of the branch management team. Consider the following when assessing the cherry-picks:
 
 - Check regularly if there are new cherry picks with
-  [`is:open is:pr base:release-1.14label:do-not-merge/cherry-pick-not-approved`][cherry-pick-query]
+  [`is:open is:pr base:release-1.16 label:do-not-merge/cherry-pick-not-approved`][cherry-pick-query]
 - Consider that each cherry-pick diverges the latest release candidate that has
   been cut from the bits to be released as the official release
 - Engage with the cherry pick requesters: How important is that cherry-pick,
@@ -567,28 +792,28 @@ After the official release has been published, the [patch release team](#../patc
   candidate, more time for the release candidate to soak (e.g. over the
   weekend)?
 
-[cherry-pick-query]: https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+base%3Arelease-1.14+label%3Ado-not-merge%2Fcherry-pick-not-approved
+[cherry-pick-query]: https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+base%3Arelease-1.16+label%3Ado-not-merge%2Fcherry-pick-not-approved
 
-# Staging Repositories
+## Staging Repositories
 
 The [publishing-bot](https://github.com/kubernetes/publishing-bot) is responsible for publishing the code in [staging](https://git.k8s.io/kubernetes/staging/src/k8s.io) to their own repositories.
 
-The bot also syncs the Kubernetes version tags to the published repos, prefixed with `kubernetes-`. For example, if you check out the `kubernetes-1.13.0` tag in client-go, the code you get is exactly the same as if you check out the `v1.13.0` tag in Kubernetes, and change the directory to `staging/src/k8s.io/client-go`.
+The bot also syncs the Kubernetes version tags to the published repos, prefixed with `kubernetes-`. For example, if you check out the `kubernetes-1.16.0` tag in client-go, the code you get is exactly the same as if you check out the `v1.16.0` tag in Kubernetes, and change the directory to `staging/src/k8s.io/client-go`.
 
 [client-go](https://github.com/kubernetes/client-go) follows [semver](http://semver.org/) and has its own release process. This release process and the publishing-bot are maintained by SIG API Machinery. In case of any questions related to the published staging repos, please ask someone listed in the following [OWNERS](https://git.k8s.io/publishing-bot/OWNERS) file.
 
 The bot runs every four hours, so it might take sometime for a new tag to appear on a published repository.
 
-The client-go major release (.e.g `v1.13.0`) is released manually a day after the main Kubernetes release.
+The client-go major release (e.g. `v1.13.0`) is released manually a day after the main Kubernetes release.
 
-# Debugging
+## Debugging
 
 Logs from `branchff`, `gcbmgr`, etc are stored in the `/tmp` directory and can provide more details as to why command executions are failing.
 
-For example, you might see on your terminal that the execution of`./branchdff release-1.X` fails:
+For example, you might see on your terminal that the execution of`./branchdff release-x.y` fails:
 
-```bash
-Merging origin/master into release-1.15 branch: OK
+```shell
+Merging origin/master into release-1.16 branch: OK
 Ensure etcd is up to date: OK
 Run 'useful' (the list may be out of date) hack/update* scripts...
 Running hack/update-openapi-spec.sh:
@@ -601,16 +826,17 @@ Traceback (line function script):
 
 Exiting...
 ```
+
 The above unsuccessful run did not provide the full reason for the interrupted exit above, to find out more, `cd` into `/tmp` and inspect the contents of `branchff.log`:
 
-```bash
+```shell
 Detected go version: go version go1.11.10 linux/amd64
 Kubernetes requires go1.12.1 or greater.
 Please install go1.12.1 or later.
 
 !!! [0519 03:02:18] Call tree:
 !!! [0519 03:02:18] 1; hack/update-openapi-sh: 29 kube::golang::setup_env(...)
- Error in /usr/local/google/branchff-release-l. 15/src/k8s.io/kubernetes/hack/lib/golang.sh:495 ' ( (1<3-1 ) ) ' exited with status 2
+ Error in /usr/local/google/branchff-release-1.15/src/k8s.io/kubernetes/hack/lib/golang.sh:495 ' ( (1<3-1 ) ) ' exited with status 2
  Call stack:
 1: /usr/local/google/branchff-release-1.15/src/k8s.io/kubernetes/
 hack/lib/golang.sh:495 kube::golang::setup_env(...)
@@ -620,54 +846,71 @@ Exiting with status 1
 branchff::common::trapclean(): Signal ERR caught!
 branchff::common::trapclean(): Traceback (line function script) : branchff::exit(): Exiting...
 ```
+
 The logs reveals a lot more information than what's printed out on the terminal. If necessary, you can also inspect the logs on the Google Cloud console or the output that appears when running `./gcbmgr tail`.
 
-# References
+## References
 
 A README on tools e.g. `gcbmgr`, `branchff` used in this handbook:
 
-* [Release Tools Documentation](https://github.com/kubernetes/release/blob/master/README.md)
+- [Release Tools Documentation](https://github.com/kubernetes/release/blob/master/README.md)
 
 An overview of steps outlining the stage and release process:
 
-* [Generic Release Steps](https://docs.google.com/document/d/1x-GQDZpKk3WajtSnO0axDazE9Xs2mOSVgjziIuTWNO0/edit)
+- [Generic Release Steps](https://docs.google.com/document/d/1x-GQDZpKk3WajtSnO0axDazE9Xs2mOSVgjziIuTWNO0/edit)
 
 A more detailed overview of staging and cutting a release e.g. alpha.2 (reference for any release cycle):
 
-* [Cutting v1.15.0-alpha.2](https://docs.google.com/document/d/1Xv5w_eNvLvD-nNinMNqQAh0qlzee8btqAyHyFFMz3z4/edit?usp=sharing)
+- [Cutting v1.15.0-alpha.2](https://docs.google.com/document/d/1Xv5w_eNvLvD-nNinMNqQAh0qlzee8btqAyHyFFMz3z4/edit?usp=sharing)
 
-* If you refer a video walkthrough, see [cutting release candidate v1.15.0-rc.1](https://youtu.be/ldYt1elShD4).
+- If you refer a video walkthrough, see [cutting release candidate v1.15.0-rc.1](https://youtu.be/ldYt1elShD4).
 
-Test Infra Specific references:
+### Test Infra references
 
 Concerns and questions can be directed to [#testing-ops](https://kubernetes.slack.com/messages/C7J9RP96G) and [#sig-testing](https://kubernetes.slack.com/messages/C09QZ4DQB). For urgent matters, please contact the user group [@test-infra-oncall](https://get.slack.help/hc/en-us/articles/212906697-Create-a-user-group#browse-user-groups-and-view-members) on Slack.
 
-| Dashboards/Tools    | Useful Links  |
-| ------------------- | ------------- |
-| [Prow](https://github.com/kubernetes/test-infra/tree/master/prow) <br/> Kubernetes based CI/CD system. | <ul><li><a href="https://prow.k8s.io/pr">PR Status</a></li><li><a href="https://prow.k8s.io/tide">Tide Status</a></li></ul> |
-| [Gubernator](https://github.com/kubernetes/test-infra/tree/master/gubernator) <br/> Displays Kubernetes test results stored in Google Cloud Storage(GCS). | <ul><li><a href="https://gubernator.k8s.io/pr">PR Dashboard</a></li></ul> |
-| [Velodrome](http://velodrome.k8s.io) <br/> Displays Kubernetes Developer Productivity. | <ul><li><a href="http://velodrome.k8s.io/">http://velodrome.k8s.io/</a></li></ul> |
-| Kubernetes Codebase Search | <ul><li><a href="https://cs.k8s.io/">https://cs.k8s.io/</a></li></ul> |
-| Kubernetes [Devstats](https://devstats.cncf.io/) <br/> Toolset to visualize GitHub archives using Postgres databases and Grafana dashboards. | <ul><li><a href="https://k8s.devstats.cncf.io/">https://k8s.devstats.cncf.io/</a></li></ul> |
-| [Kubernetes OnCall Rotation](https://console.cloud.google.com/storage/browser/_details/test-infra-oncall/oncall.html)<br/> Displays the current test infra person on call. | <ul><li><a href="https://go.k8s.io/oncall">https://go.k8s.io/oncall</a></li></ul> |
-| [APISnoop](https://github.com/cncf/apisnoop) <br/> Snooping on the Kubernetes OpenAPI communications. | <ul><li><a href="https://apisnoop.cncf.io/">https://apisnoop.cncf.io/</a></li></ul> |
-| [TestGrid](https://github.com/kubernetes/test-infra/tree/master/testgrid) <br/> Displays Kubernetes CI tests results in grids. | <ul><li><a href="https://testgrid.k8s.io/">https://testgrid.k8s.io/</a></li><li><a href="https://docs.google.com/document/d/1lGvP89_DdeNO84I86BVAU4qY3h2VCRll45tGrpyx90A/edit#heading=h.x9snb54sjlu9">Displaying Kubernetes Conformance Results with Testgrid</a></li></ul> |
-| Triage Dashboard <br/> Displays Kubernetes aggregated failures. | <ul><li><a href="https://storage.googleapis.com/k8s-gubernator/triage/index.html">https://storage.googleapis.com/k8s-gubernator/triage/index.html</a></li></ul> |
+**[Prow](https://github.com/kubernetes/test-infra/tree/master/prow) - Kubernetes-based CI/CD system**
 
-# Background information
+- [PR Status](https://prow.k8s.io/pr)
+- [Tide Status](https://prow.k8s.io/tide)
+
+**[Gubernator](https://github.com/kubernetes/test-infra/tree/master/gubernator) - Displays Kubernetes test results stored in Google Cloud Storage (GCS)**
+
+- [PR Dashboard](https://gubernator.k8s.io/pr)
+
+**[Velodrome](http://velodrome.k8s.io) - Toolset to visualize GitHub archives using Postgres databases and Grafana dashboards**
+
+**[Hound](https://cs.k8s.io/) - Kubernetes Codebase Search**
+
+**[Kubernetes DevStats](https://k8s.devstats.cncf.io/) - Displays Kubernetes Developer Productivity**
+
+**[Kubernetes On-call Rotation](https://go.k8s.io/oncall) - Displays the current Test Infra person on call**
+
+**[APISnoop](https://apisnoop.cncf.io/) - Snooping on the Kubernetes OpenAPI communications**
+
+- [Source](https://github.com/cncf/apisnoop)
+
+**[TestGrid](https://testgrid.k8s.io/) - Displays Kubernetes CI tests results in grids**
+
+- [Source](https://github.com/GoogleCloudPlatform/testgrid)
+- [TestGrid Open-sourcing Planning](https://github.com/kubernetes/test-infra/issues/10409)
+- [Displaying Kubernetes Conformance Results with Testgrid](https://docs.google.com/document/d/1lGvP89_DdeNO84I86BVAU4qY3h2VCRll45tGrpyx90A/edit)
+
+**[Triage Dashboard](https://storage.googleapis.com/k8s-gubernator/triage/index.html) - Displays Kubernetes aggregated failures**
+
+## Background information
 
 You may have noticed that there are prompts to use `./anago` when cutting releases but there's no mention of using `anago` in this handbook, see:
 
-* [Summary of discussion with Caleb about moving from `anago` to `gcbmgr`](https://groups.google.com/d/topic/kubernetes-milestone-burndown/YdHa51d95VI/discussion)
+- [Summary of discussion with Caleb about moving from `anago` to `gcbmgr`](https://groups.google.com/d/topic/kubernetes-milestone-burndown/YdHa51d95VI/discussion)
 
-> Note: To access this forum, you will need to join the [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) Google group.
+  Note: To access this forum, you will need to join the [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) Google group.
 
 See the branch management process prior to v1.12 when `anago` was still used.
 
-* [Branch Management Playbook](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
+- [Branch Management Playbook](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
 
-> Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
-
+  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
 
 [kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
-[release-managers-group]: https://groups.google.com/forum/#!forum/kubernetes-release-managers
+[release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers

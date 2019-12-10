@@ -38,9 +38,19 @@ Refer to the [Branch Manager handbook][branch-manager-build-and-release] for det
 
 See also the [rapture documentation][rapture-readme], which contains details on running `rapture` (Google internal packaging tool).
 
+### Dependecy Pre-checks
+
+Before starting the release process, check for following items in your system.
+1.  Docker should be installed (`docker -v`)
+2.  You should be able to run docker commands without sudo (`docker image ls` )
+3.  rpm should be installed (`rpm --version`)
+4.  rapture should be installed (`rapture --version`)
+5.  gsutil should be installed (`gsutil -v`)
+
+
 ### Permissions
 
-Must be a member of mdb group - [mdb/cloud-kubernetes-release](mdb/cloud-kubernetes-release) to be able to perform the debs/rpms releases.
+Must be a member of mdb group - [mdb/cloud-kubernetes-release-owners](mdb/cloud-kubernetes-release-owners) to be able to perform the debs/rpms releases.
 
 
 ### Clone Release Repository
@@ -56,6 +66,11 @@ mkdir -p $HOME/k8s-1.20.0
 cd $HOME/k8s-1.20.0
 git clone https://github.com/kubernetes/release.git
 cd release
+```
+**UPDATE**: There have been some refactoring on `master` branch, so the internal script won't work as expected. For now you can checkout the latest tag `v0.1.3` before moving to next steps.
+
+```shell
+git checkout v0.1.3
 ```
 
 ### Authenticate
@@ -86,12 +101,13 @@ The entire build process takes several hours. Once you are ready to begin, the d
 
 ### Validating packages
 
-Now that `rapture` has successfully complete, we need to verify the packages that were just created. This validation can be done on any instance where Kubernetes is not already installed.
+Now that `rapture` has successfully complete, we need to verify the packages that were just created. This validation can be done on any instance where Kubernetes is not already installed. (Ideally, you would want to spin up a new VM to test.)
 
 **If you are on a system with any of these packages are already installed, you must uninstall them first.**
 
 Follow the [kubeadm instructions][kubeadm-install] to install kubeadm, kubelet, and kubectl.
 
+To confirm Debian packages
 ```shell
 # <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
 version=
@@ -102,6 +118,24 @@ version=
     | sudo tee /etc/apt/sources.list.d/kubernetes.list \
     && sudo apt-get update -q \
     && sudo apt-get install -qy kubelet="${version}-00" kubectl="${version}-00" kubeadm="${version}-00"
+```
+To confirm Rhel packages
+```shell
+# <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
+version=
+if [[ -n "${version}" ]]; then
+cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOF
+
+sudo yum install -y kubelet-${version} kubeadm-${version} kubectl-${version} --disableexcludes=kubernetes
+fi
 ```
 
 ### Package verification tests
@@ -132,7 +166,7 @@ If there is continued test failure on this dashboard without intervention from t
 [rapture-readme]: https://g3doc.corp.google.com/cloud/kubernetes/g3doc/release/rapture.md?cl=head
 [release-engineering-dashboard]: https://testgrid.k8s.io/sig-release-misc
 [release-management-slack]: https://kubernetes.slack.com/messages/CJH2GBF7Y
-[release-managers-group]: https://groups.google.com/forum/#!forum/kubernetes-release-managers
+[release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
 [release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [security-release-process]: /security-release-process-documentation/security-release-process.md
 [test-infra-oncall]: https://go.k8s.io/oncall

@@ -32,7 +32,7 @@ Video [Link](https://youtu.be/dbh5RaKSXdQ)
 
             * CSI: 0.2.0;  from [here](https://github.com/kubernetes/kubernetes/blob/master/Godeps/Godeps.json#L456); last PR [60736](https://github.com/kubernetes/kubernetes/pull/60736) 
 
-            * Dashboard add-on: 1.8.3, from [here](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/dashboard/dashboard-controller.yaml#L33), last PR [57326](https://github.com/kubernetes/kubernetes/pull57326) 
+            * Dashboard add-on: 1.8.3, from [here](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/dashboard/dashboard-deployment.yaml#L33), last PR [57326](https://github.com/kubernetes/kubernetes/pull57326) 
 
             * Heapster: unchanged at 1.5.0 from [here](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/cluster-monitoring/google/heapster-controller.yaml) (note: changes in v1.11)
 

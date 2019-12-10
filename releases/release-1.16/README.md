@@ -1,16 +1,20 @@
-# Kubernetes 1.16
+# Kubernetes 1.16: Unlimited Breadsticks For All
+
+![1.16 Unlimited Breadsticks For All](116_unlimited_breadsticks_for_all.png)
+
+The Kubernetes 1.16 release crest was loosely inspired by the Apollo 16 mission crest. It represents the hard work of the release-team and the community alike and is an ode to the challenges and fun times we shared as a team throughout the release cycle.  Many thanks to [Ronan Flynn-Curran](https://github.com/flynnduism) of Microsoft for creating this magnificent piece.
 
 #### Links
 * [This document](https://git.k8s.io/sig-release/releases/release-1.16/README.md)
 * [Release Team](https://git.k8s.io/sig-release/releases/release-1.16/release_team.md)
-* [Meeting Minutes](http://bit.ly/k8s116-releasemtg) - TBD
+* [Meeting Minutes](http://bit.ly/k8s116-releasemtg)
 * [Kubernetes Release Calendar](https://bit.ly/k8s-release-cal)
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
 
 #### Tracking docs
 
 * [Enhancements Tracking Sheet](http://bit.ly/k8s116-enhancement-tracking)
-* Bug Triage Tracking Sheet
+* [Bug Triage Tracking Sheet](http://bit.ly/k8s116-bugtriage)
 * [CI Signal Report](http://bit.ly/k8s116-cisignal)
 * [Retrospective Document](http://bit.ly/k8s116-retro)
 * [kubernetes/kubernetes v1.16 milestone](https://github.com/kubernetes/kubernetes/milestone/45)
@@ -27,7 +31,7 @@ The 1.16 release cycle is proposed as follows:
 - **Tuesday, July 30, EOD PST** - Enhancements Freeze
 - **Thursday, August 29, EOD PST**  - Code Freeze
 - **Monday, September 9** - Docs must be completed and reviewed
-- **Monday, September 16** - Kubernetes 1.16.0 Released
+- **Wednesday, September 18** - Kubernetes 1.16.0 Released
 
 ## What will we do differently this release?
 * We have dissolved the test-infra role from the release team. The responsibilities of this role have been reallocated amongst other roles on the release team. This is the tracking [issue](https://github.com/kubernetes/sig-release/issues/631)
@@ -50,8 +54,8 @@ The 1.16 release cycle is proposed as follows:
 | **Begin [Enhancements Freeze][Enhancements Freeze** (EOD PST) | Enhancements Lead | Tue 30 | | | week 5 | [master-blocking], [master-upgrade] |
 | 1.16.0-alpha.2 released | Branch Manager | Tue 30 | | |  | |
 | 1.16.0-alpha.3 released | Branch Manager | | Tue 6 | | week 6 | |
-| release-1.12 jobs removed | Branch Manager | | Tue 6 | | | |
-| release-1.16 branch created | Branch Manager | | Tue 13 | | week 7 | |
+| release-1.12 jobs removed | Branch Manager | | Tue 13 | | week 7 | |
+| release-1.16 branch created | Branch Manager | | Tue 13 | | | |
 | 1.16.0-beta.0 released | Branch Manager | | Tue 13 | | | |
 | release-1.16 jobs created| Branch Manager | | Tue 13 | | | |
 | **Begin [Burndown]** (MWF meetings) | Lead | | Mon 19 | | week 8 | [1.16-blocking], [master-blocking], [master-upgrade] |
@@ -67,7 +71,8 @@ The 1.16 release cycle is proposed as follows:
 | **Begin [Code Thaw]** (EOD PST) | Branch Manager | | | Tue 10 |  | [1.16-blocking] |
 | 1.16.0-rc.1 released | Branch Manager | | | Tue 10 | | |
 | **Cherry Pick Deadline** (EOD PST) | Branch Manager | | | Thu 12 | | |
-| **v1.16.0 released** | Branch Manager | | | Mon 16 | week 12 | |
+| 1.16.0-rc.2 released | Branch Manager | | | Fri 13 | | |
+| **v1.16.0 released** | Branch Manager | | | Wed 18 | week 12 | |
 | Release retrospective | Community | | | Thu 19 | | | | |
 
 ## Phases
@@ -88,7 +93,7 @@ point we have a list of outstanding issues and PRs, and are actively working to
 burn that list down.  SIG representatives will be asked to attend if their SIG has
 specific outstanding issues that are blocking the release.
 
-Join [kubernetes-sig-release@] to get a calendar invite.  This meeting
+Please subscribe to the [Kubernetes Release Calendar][kubernetes-release-calendar] to see meeting events. Burndown meetings
 may conflict with other community meetings.  Please prioritize this meeting if
 a member of the release team asks you to attend.
 
@@ -183,7 +188,6 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
 [kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
-
 [kubernetes/kubernetes]: https://github.com/kubernetes/kubernetes
 [kubernetes/enhancements]: https://github.com/kubernetes/enhancements
 [kubernetes/website]: https://github.com/kubernetes/website

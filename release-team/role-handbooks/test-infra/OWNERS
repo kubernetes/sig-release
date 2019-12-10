@@ -1,6 +1,6 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
-  - test-infra-role
+  - release-engineering
 reviewers:
-  - test-infra-role
+  - release-engineering
