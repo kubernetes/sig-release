@@ -30,3 +30,13 @@
   - https://github.com/kubernetes/enhancements/pull/1322
   - https://github.com/kubernetes/kubernetes/pull/72046
   status: Approved
+
+# Code Freeze exception requests in 1.17
+- name: In-tree storage plugin to CSI Driver Migration
+  issue: 625
+  date_requested: 2019-11-15
+  date_reviewed: 2019-11-15
+  thread: https://groups.google.com/forum/#!topic/kubernetes-sig-release/9qYGo2Wh2nI
+  pull_requests:
+  - https://github.com/kubernetes/kubernetes/pull/85231
+  status: Approved
