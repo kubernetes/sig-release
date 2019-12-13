@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Emeritus Adviser (EA) is an experienced Release Team (RT) member who returns to the team in an advisory role.  
+The Emeritus Adviser (EA) is an experienced Release Team (RT) member who returns to the team in an advisory role.
 
 ### Requirements and Selection
 The EA should be an individual who has served on the Release Team, in a Lead capacity.  The primary selection pool should be former Release Team Leads (ideally from the previous 4 releases). However, if there are no available individuals the EA can be another former Role Lead, who has been an exemplary member of a previous Release Team or a SIG Release subproject owner e.g., Release Engineering.
