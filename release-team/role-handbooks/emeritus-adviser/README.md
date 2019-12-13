@@ -18,7 +18,7 @@ The EA for the next release team should be selected ahead of opening up nominati
 Due to the nature of the role, the EA has no shadows.  The job may, however, be split between more than one person.
 
 ## Responsibilities
-Responsibilities for the EA is to help enable the release team and lead.  Activities the EA is responsible for are 
+Responsibilities for the EA are to help enable the Release Team. Activities the EA is responsible for are 
 
 * Tracking the former release retrospective AIs 
 * Creating the incoming release shadow surveys 
