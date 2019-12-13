@@ -22,31 +22,27 @@ Compared to other release team roles, release notes is one of the least time
 intensive roles.
 #### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
 For the first few weeks, attending meetings and running the
-[release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
-as well as updating the
-[release-notes website](https://github.com/kubernetes-sigs/release-notes)
-weekly to create an early draft of the release notes is all that is absolutely
-required of the release team. The release lead will be responsible for introducing
-shadows to the team and the release notes tool and may ask shadows to run it
-and make the weekly update PR. The release notes lead should indicate pain
-points and known issues to the shadows (if there are any) and work on strategies
-for overcoming them to avoid their coalescence during the later weeks. If there
-are potential fixes to the issues indicated and team members are keen, this time
-can be used to address them. Fixes and automation of the process is very welcome
-but not expected.
+[release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes) as well as updating the [release-notes website](https://github.com/kubernetes-sigs/release-notes) weekly to create an early draft of the release notes is all that is absolutely required of the release team. 
+
+The release lead will be responsible for introducing shadows to the team and the release notes tool and may ask shadows to run it and make the weekly update PR. The release notes lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to avoid their coalescence during the later weeks. 
+
+If there are potential fixes to the issues indicated and team members are keen, this time
+can be used to address them. Fixes and automation of the process is very welcome but not expected.
 
 #### Late release cycle (weeks 9-12+) ~4-10 hours/week
 This period has an increase in release team  meetings each week and there is
 also significantly more work to do to ensure the release notes are in good
-working order for the release. Once code freeze begins, the release notes draft
+working order for the release. 
+
+Once code freeze begins, the release notes draft
 is transferred to a google doc which is made public to the Kubernetes community.
 The doc will be edited by SIG leads and SIG members but will also be edited for
-grammar and uniform style by the release notes team. The Release Notes team
-should use the [template](relnotes-template.md) to organize the raw generated release notes
-in the Google doc as best as possible and help to guide SIG leads and members in their further
-editing of the release notes. The final edited release notes should follow this
-template. The changelog must also be generated and the release notes tool must continue to be run on the release
-branch in order to pull in any outstanding PRs that are merged between the
+grammar and uniform style by the release notes team. 
+
+The Release Notes team should use the [template](relnotes-template.md) to organize the raw generated release notes in the Google doc as best as possible and help to guide SIG leads and members in their further editing of the release notes. The final edited release notes should follow this
+template. 
+
+The changelog must also be generated and the release notes tool must continue to be run on the release branch in order to pull in any outstanding PRs that are merged between the
 beginning of code freeze and the release. The same applies to the website, which
 should always represent the same state as the markdown document.
 
@@ -87,6 +83,7 @@ should always represent the same state as the markdown document.
 
 - [Release notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
 - [Release notes website](https://relnotes.k8s.io)
+- [go-modiff](https://github.com/saschagrunert/go-modiff)
 - [Hackmd](https://hackmd.io/)
 - [LWKD](http://lwkd.info) *(consider contributing to LWKD as part of your role)*
 
@@ -151,6 +148,7 @@ Update this section at the end of each release for the next Release Notes Team.
 - Release day
 - Copy notes from Google Doc to HackMD in markdown
 - Final version of release notes committed for release
+- Release Notes must be merged into master prior to the release. If this is not done the release will include the latest draft.
 
 ### Week 13
 
