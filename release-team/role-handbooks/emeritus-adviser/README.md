@@ -61,7 +61,7 @@ Occasionally, a role may not get enough qualified candidates, in which case it's
 
 Weeks: 1 to 12
 
-First, have a "shadow orientation" meeting sometime in week 2 or week 3, after all shadows are selected.  This meeting will likely have to be split for time zone reasons and held twice.  In this meeting, go over the information in the main Shadow docs, give information about the release team and SIG-Release, and then open things for questions or discussion. Make sure that Shadows know they can come to you if they have problems during their apprenticeship.
+First, have a "shadow orientation" meeting sometime in week 2 or week 3, after all shadows are selected.  This meeting will likely have to be split for time zone reasons and held twice.  In this meeting, go over the information in the main Shadow docs, give information about the release team and SIG Release, and then open things for questions or discussion. Make sure that Shadows know they can come to you if they have problems during their apprenticeship.
 
 For leads, ensure they have enough support for their role, and to be an effective mentor to their shadows.  
 
