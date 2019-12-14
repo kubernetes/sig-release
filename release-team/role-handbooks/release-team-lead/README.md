@@ -127,6 +127,7 @@ Release Team selection should happen in accordance with the [Release Team select
 - Attend previous release retro to capture feedback and incorporate it into next release cycle
 - Plan release schedule and milestones. Gather feedback as needed.
 - Make sure you have your shadows confirmed
+- Make sure everyone joining the team reads the [release team onboarding document][release-team-onboarding].
 
 ### Week 1
 
@@ -310,3 +311,4 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 [security-release-process]: https://github.com/kubernetes/security/blob/master/security-release-process.md
 [selection]: /release-team/release-team-selection.md
 [Testgrid]: https://testgrid.k8s.io/
+[release-team-onboarding]: /release-team/release-team-onboarding.md
