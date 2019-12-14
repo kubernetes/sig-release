@@ -146,12 +146,13 @@ Release Team selection should happen in accordance with the [Release Team select
 - Create the retrospective document and corresponding bit.ly link
 - Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
+- Meet your Shadows and create a communication channel with them. Establish expectations and share out work - delegate!
 - Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
 
 ### Week 2
 
 - Assist the Enhancements Lead in collecting planned work from SIGs
-- Schedule weekly Release Team meetings at 10 am Pacific time on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group. You will need to contact SIG Release leads to gain access to the SIG's Zoom account for hosting/recording/posting meeting videos.
+- Schedule weekly Release Team meetings on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group.
 - Poll Release Team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
 - Add key event dates to the [Kubernetes Release Calendar][kubernetes-release-calendar] during the cycle. Ensure major calendar events are set to send an email reminder one week in advance.
 - Begin reporting release status at the community meeting
