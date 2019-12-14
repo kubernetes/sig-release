@@ -108,7 +108,7 @@ Release Team selection should happen in accordance with the [Release Team select
   - Issues and PRs are added to the milestone by members of the milestone-maintainers GitHub team, which primarily includes SIG leads. Review the [milestone-maintainers] page for full criteria for membership to that team. The Release Team Lead is responsible for adding certain members of the Release Team to the group, and should check with and prune prior Release Team members who are no longer active.
   - Members of the Release Team should not be the primary contributors making the choice whether issues and PRs are in a milestone. This is the job of SIG Leads. However, the Release Team may apply milestones when doing housekeeping on tracked issues and PRs where the milestone label has clearly been forgotten.
 - The Release Team Lead is responsible for updating the [burndown template] ahead of the release (changing the milestone in links and anything else requested during the retrospective)
-- Release theme: There is no particular reason for this other than to have fun, and possibly provide a theme for Release Team gifts / shirts. As Release Team Lead, you get to pick a theme for the release.
+- Release theme: There is no particular reason for this other than to have fun, and possibly provide a theme for Release Team gifts. As Release Team Lead, you get to pick a theme for the release.
   - Kubernetes 1.8 to 1.10, had unofficial food-based code names.
     - 1.8 - "Burrito"
     - 1.9 - "Pumpkin"
@@ -119,6 +119,14 @@ Release Team selection should happen in accordance with the [Release Team select
   - Kubernetes 1.14: Caturnetes
   - Kubernetes 1.16: Unlimited Breadsticks For All
   - Kubernetes 1.17: The Chillest Release - Capynetes
+
+## Release theme gifts
+
+You cannot start too early on this!
+
+Once you have a release theme, there is a budget for you to create a release team gift as a thank you for each of your hard working team members.
+This gift can be a T-shirt, or a badge, but can be anything customizable within the budget, with a fun design of your choice and creation that relates to the release theme.
+Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as well as know the budget) to put in an order, and make sure everyone gets their release swag gift.
 
 ## Release Milestone Activities
 
