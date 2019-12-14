@@ -141,7 +141,7 @@ Release Team selection should happen in accordance with the [Release Team select
 - Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
 - Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
-- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
+- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md **Note: Do not ship the release on a Monday, to avoid preparing for the release on a weekend. Aim for Tuesday.**
 - Send an update to [kubernetes-dev] and [kubernetes-sig-leads] mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 - Create the retrospective document and corresponding bit.ly link
 - Begin meeting with SIGs to introduce yourself
@@ -192,7 +192,6 @@ Release Team selection should happen in accordance with the [Release Team select
 - Continue reviewing enhancement exceptions as needed
 - Release themes should be completed by now
 - Exception requests should be almost zero
-- The kubeadm and other dependent project issues should be created already
 - Check in with SIGs on their enhancement work to make sure they know Code Freeze is 3 weeks away, as well as emailing the [kubernetes-dev] list, and notifying the community at the weekly meeting
 - Adjust the enhancements repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered)
 - Remind Branch Manager that branch CI jobs will be needed next week.
@@ -235,8 +234,8 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - The Release Team needs to look at any in-flight PRs and ensure nothing is being jammed in at the last minute without proper tests, review, etc. This is something to watch extremely closely because it happens every release. Just watch what gets merged closely after Code Freeze. Incorrectly merged items need assessed and perhaps reverted. GitHub has a [query comparing a release branch and master](https://github.com/kubernetes/kubernetes/compare/release-1.15).
 - Assist the Documentation Leads in collecting missing docs PRs.
 - Schedule burndown meetings starting next week for every weekday until the Friday after release day. Make sure to invite the community calendar (`cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com`) and the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`).
-- Release notes, and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead, you may need to help assemble the notes.
-- Identify vacancies on the incoming Release Team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles. Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their Release Team role. Continue to improve and uphold the [Release Team Selection][selection] process.
+- Release notes and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead, you may need to help assemble the notes.
+- Identify potential vacancies on the incoming Release Team and begin asking team shadows and former team shadows to serve as Lead in the upcoming cycle. Continue to improve and uphold the [Release Team Selection][selection] process.
 - Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking are 100% green.  
 
 ### Week 11
@@ -251,6 +250,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - The release notes draft needs to be completely done and ready to consume by anago. Have SIG volunteers do a final proofread of their sections. Make sure people actually do this. You need to avoid having the release notes volunteers pull “all nighters” before the release.
 - Work with the CNCF, SIG PM, SIG Docs, and Communications Lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs.
 - Work with the incoming Release Team Lead to establish incoming Release Team.
+- Release Day is coming up! Make the day as fun as you can for the team. Plan ahead for this and do something nice.
 
 ---
 
@@ -262,15 +262,14 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - Every issue in the milestone is considered release blocking.
 - If you have to push the release date back, try to avoid Friday since it makes release publicity extremely difficult. Also, people seem to have patience with delay as long as the reasons are clear and openly communicated. This is your duty. You must over-communicate and ensure the team is also talking to their stakeholders (CNCF, community, press, etc.)
 - Confirm a facilitator for the Release Retrospective with SIG PM
-- Make release day as fun as you can for the team. Plan ahead for this and do something nice.
-- The following final actions should be ordered, with successful completion of each being the entry criteria to the next.
+- The following final actions **must occur in order**, with successful completion of each being the entry criteria to the next.
   - Release day morning:
     - Go / No-Go: should generally be clear a day or three ahead of release, but the day's burndown provides a final opportunity for the team to affirm things are ready.
     - Release Notes Lead PRs final draft release notes to sig-release, with Release Team Lead approving merge.
     - Branch Manager does mock release build.
     - Branch Manager does mock publication. Validates with Release Team lead and broader team the mock announcement email content.
     - Branch Manager does nomock release build.
-  - Starting approximately 4pm Pacific:
+  - Starting when ready:
     - Communications Lead begins staging blog post.
     - Branch Manager Lead does nomock publication.
     - Branch Manager coordinates the building and publishing of rpm/deb packages with [Build Admins][build-admins].
@@ -288,7 +287,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 
 ### Week 14
 
-- Help fill the any open positions for the next release milestone
+- Help fill any open positions for the next release milestone
 
 [branch-manager]: /release-managers.md#branch-managers
 [build-admins]: /release-managers.md#build-admins
