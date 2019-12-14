@@ -181,6 +181,14 @@ Questions to ask sig-<name>:
   - Escalation points are expected to be responsive within 24 hours, and to prioritize test failure issues over other issues.
     - If you don't see this happening, get in touch with them on slack or other means to ask for their support.
 
+### SIG-scalability report
+We've had to delay releases due to failing scalability tests in the past, as these take a while to run. It is therefore important to check in with SIG-scalability on the status of their tests weekly. Ask that a member of SIG-scalability should fill the "Weekly Scalability Report" section in the release team meeting notes with an update, once a week. Additionally, a representative of the Release Team (either a CI Signal team member or a Lead team member) should attend the SIG meeting once a month (beginning of the release, code freeze, and near end of release) and check in on the following things:
+  - Clearly communicate deadlines (code freeze, planned release date)
+  - Check in on outstanding issues:
+    - anything that may hold a release 
+    - anything that could prevent the upgrade of another dependency (I.e., go)
+    - whether there are any other tests they are running - they occasionally run scalability jobs on certain PRs, or on certain special configurations (run job with pinned Go version, alpha feature turned on, etc)
+
 ## Tips and Tricks of the game
 
 ### Checking test dashboards
