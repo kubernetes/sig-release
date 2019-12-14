@@ -57,7 +57,8 @@ Release Lead is a very time-consuming role, especially towards the end of the re
 
 - Weeks 1-4: 4-8 hours a week
 - Weeks 5-8: 6-12 hours a week
-- Weeks 9-13: 10 to 25 hours a week, including some after-hours and weekend work
+- Weeks 9-13: 10 to 25 hours a week
+- Release Day: Prepare to spend all day on release-related activities.
 
 Among the specific time commitments you have are:
 
