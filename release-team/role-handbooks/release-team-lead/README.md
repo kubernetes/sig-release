@@ -66,7 +66,17 @@ Among the specific time commitments you have are:
 - Burndown meetings three to five times a week during weeks 8-12.
 - Community meetings once a week.
 
-In addition to the absolute time commitment you make, you must also consider the relative burdens on yourself and your team when establishing meetings. This means scheduling meetings and release events compatible with global working hours and coordinating with a global set of team leads and shadows. You may hold the traditional 10am Pacific release team meeting, but also might schedule alternate time meetings and varying the final weeks' burndown meeting time slots to best accommodate the individuals, both release team and broader SIG representation on the issues of the day, whose presence and information is needed. You may also work to maximize asynchronous communications and reduce face to face meetings to where absolutely required. Time sacrifices may be necessary at times and the Release Team Lead should endeavor to spread this so as not to focus any inconvenience on specific individuals or specific geographies, for example considering major global holidays when planning the release timeline while also making sure the project is correctly moving forward.
+In addition to the absolute time commitment you make, you must also consider the relative burdens on yourself and your team when establishing meetings. This means scheduling meetings and release events compatible with global working hours and coordinating with a global set of team leads and shadows. 
+A few ways to accopmplish this goal are as follows (but please feel free to implement and add your own solution):
+
+- Create a poll amongst your Leads as to their preferred meeting time
+- Schedule duplicate meetings at alternate times (these can be run by Shadows in those time zones)
+- Encourage delegation of reports and meetings to Shadows 
+- Vary the final weeks' burndown meeting times
+- Work to maximize asynchronous communications and reduce face to face meetings to where absolutely required. 
+- Time sacrifices may be necessary at times and the Release Team Lead should endeavor to spread this so as not to focus any inconvenience on specific individuals or specific geographies, for example considering major global holidays and KubeCons when planning the release timeline while also making sure the project is correctly moving forward.
+
+Please lead by example and encourage everyone to work within their working hours as much as possible.
 
 ## Choosing a Release Team
 
