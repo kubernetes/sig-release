@@ -146,6 +146,7 @@ Release Team selection should happen in accordance with the [Release Team select
 - Create the retrospective document and corresponding bit.ly link
 - Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
+- Request, in coordination with CI Signal Lead, a representative from SIG-Scalability to give a weekly update on the release meeting notes. Prepare to have a release team representative attend SIG-scalability's meeting two or three times throughout the release.
 - Meet your Shadows and create a communication channel with them. Establish expectations and share out work - delegate!
 - Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
 
@@ -158,11 +159,11 @@ Release Team selection should happen in accordance with the [Release Team select
 - Begin reporting release status at the community meeting
 - Continue meeting with SIGs for introductions
 
+
 ### Week 3
 
 - Create the release notes draft file in the release directory per the standard above
 - Prepare for x.y.0-alpha.0 "release", specifically that there is a [Branch Manager][branch-manager] available to support the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. This synthetic notation is a point to review process with the [Branch Manager][branch-manager].
-- Begin coordination with SIG Cluster Lifecycle for the kubeadm release (they may create an issue in the milestone to track release blocking issues)
 - Identify any other dependent ecosystem projects that need release coordination
 - Announce/email that the following week is Enhancements Freeze and what that means
 
