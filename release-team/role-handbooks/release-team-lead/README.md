@@ -117,6 +117,8 @@ Release Team selection should happen in accordance with the [Release Team select
   - Kubernetes 1.11 had a Tolkien theme of "Eleventy-One: A Long-Expected Release"
   - Kubernetes 1.13: Angel Release
   - Kubernetes 1.14: Caturnetes
+  - Kubernetes 1.16: Unlimited Breadsticks For All
+  - Kubernetes 1.17: The Chillest Release - Capynetes
 
 ## Release Milestone Activities
 
