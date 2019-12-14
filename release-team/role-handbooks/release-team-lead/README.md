@@ -127,8 +127,6 @@ Release Team selection should happen in accordance with the [Release Team select
 - Attend previous release retro to capture feedback and incorporate it into next release cycle
 - Plan release schedule and milestones. Gather feedback as needed.
 - Make sure you have your shadows confirmed
-- Have a handover meeting with SIG Chairs and the outgoing lead to get credentials to SIG Release Zoom and any other needed permissions
-- Request edit access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from the SIG Release Chairs
 
 ### Week 1
 
