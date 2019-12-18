@@ -73,7 +73,7 @@ Then, throughout the release cycle, do what you can to make sure that the shadow
 
 Weeks: 9 to 12
 
-Have meetings, or private chats, with each Role Lead and each Shadow Team to talk about succession.  For the Shadows, ask them to think about what they want to do after the release.  This not only includes further RT roles, but other things they could do such as Release Engineering.
+Connect with each Role Lead and each Shadow Team to talk about succession.  For the Shadows, ask them to think about what they want to do after the release.  This not only includes further RT roles, but other things they could do such as Release Engineering.
 
 The EA also needs to pick the EA for the next release no later than Week 11 (pending confirmation by the incoming RT Lead), because they need to get started before final release.  
 
