@@ -20,13 +20,13 @@ Due to the nature of the role, the EA has no shadows.  The job may, however, be 
 ## Responsibilities
 Responsibilities for the EA are to help enable the Release Team. Activities the EA is responsible for are 
 
-* Tracking the former release retrospective AIs 
-* Creating the incoming release shadow surveys 
-* Assisting release role leads in shadow selection 
-* Running a general shadow orientation for folks, explaining the basics of the release team 
-* Checking in on leads and shadows throughout the release and offering support to them 
-* Conducting Shadow experience surveys throughout the release cycle and a lead/mentor questionaire at the end of the cycle
-* Helping facilitate the release retro (if no other facilitator can be found) 
+* Track the former release retrospective AIs 
+* Create the incoming release shadow surveys 
+* Assist release role leads in shadow selection 
+* Run a general shadow orientation for folks, explaining the basics of the release team 
+* Check in on leads and shadows throughout the release and offering support to them 
+* Conduct Shadow experience surveys throughout the release cycle and a lead/mentor questionaire at the end of the cycle
+* Facilitate the release retro at the end of the cycle 
 
 ## Requirements
 
