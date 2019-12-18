@@ -10,7 +10,7 @@ Additionally, there are specific deliverables that must come from the release pr
 
 **Before continuing on to the Communications specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
 
-### Skills and Experience Required:
+### Skills and Experience Required
 
 - Strong written and verbal communications skills
 - Experience with the Kubernetes release process enough to understand how communications milestones fit into the overall release
@@ -34,7 +34,7 @@ The expected time investment for both leads and shadows are as follows:
 
 There is a channel on the Kubernetes Slack workspace, `release-comms`, which is used by the communications release team to coordinate their efforts. If you're on the communications team, or applying to be, then it would be advantageous to follow along with the conversations.
 
-## Release Milestone Activities:
+## Release Milestone Activities
 
 ### Week 1
 
