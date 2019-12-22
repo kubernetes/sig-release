@@ -24,7 +24,7 @@ intensive roles.
 For the first few weeks, attending meetings and running the
 [release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes) as well as updating the [release-notes website](https://github.com/kubernetes-sigs/release-notes) weekly to create an early draft of the release notes is all that is absolutely required of the release team. 
 
-The release lead will be responsible for introducing shadows to the team and the release notes tool and may ask shadows to run it and make the weekly update PR. The release notes lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to avoid their coalescence during the later weeks. 
+The Release Notes Lead will be responsible for introducing shadows to the team and the release notes tool and may ask shadows to run it and make the weekly update PR. The Release Notes Lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to prevent the team from encountering them during the later weeks. 
 
 If there are potential fixes to the issues indicated and team members are keen, this time
 can be used to address them. Fixes and automation of the process is very welcome but not expected.
