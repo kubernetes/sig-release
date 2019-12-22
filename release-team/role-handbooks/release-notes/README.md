@@ -148,7 +148,8 @@ Update this section at the end of each release for the next Release Notes Team.
 - Release day
 - Copy notes from Google Doc to HackMD in markdown
 - Final version of release notes committed for release
-- Release Notes must be merged into master prior to the release. If this is not done the release will include the latest draft.
+
+**Release notes must be merged into the `master` branch of `kubernetes/sig-release`, prior to the staging of the `x.y.0` release. If this is not done, the release will NOT include the finalized version of the release notes. Please coordinate closely with the [Branch Managers](/release-managers.md#branch-managers) and Release Team Lead to ensure activities are aligned throughout the day.**
 
 ### Week 13
 
