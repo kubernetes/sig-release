@@ -34,7 +34,7 @@ This period has an increase in release team  meetings each week and there is
 also significantly more work to do to ensure the release notes are in good
 working order for the release. 
 
-Once code freeze begins, the release notes draft
+Once Code Freeze begins, the release notes draft
 is transferred to a google doc which is made public to the Kubernetes community.
 The doc will be edited by SIG leads and SIG members but will also be edited for
 grammar and uniform style by the release notes team. 
