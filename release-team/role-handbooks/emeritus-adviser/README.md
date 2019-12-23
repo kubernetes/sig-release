@@ -11,7 +11,7 @@ An ideal Emeritus Adviser is inherently suited to people management, has shown s
 
 Time commitments for the EA are relatively light, with the largest time commitment in the two-week period where Shadows are being selected.  However, the EA role starts 2-3 weeks before the release cycle officially begins, and continues for 1-2 weeks after it ends.
 
-EAs are not chosen as part of the regular RT selection process.  Instead, interested candidates should contact the outgoing EA and the incoming Release Lead 2 weeks before the final prior release.  Most of the time, the outgoing EA will solicit suitable candidates.
+EAs are not chosen as part of the regular RT selection process.  Instead, interested candidates should contact the outgoing EA and the incoming Release Lead 2 weeks before the final prior release.  Based on those interested in the EA role, the outgoing EA will choose 2-3 folks to nominate to the outgoing and incoming release leads who will select the individual to be EA for the next release cycle 
 
 The EA for the next release team should be selected ahead of opening up nominations for the next release cycle, and the incoming EA will be assigned that issue. 
 
