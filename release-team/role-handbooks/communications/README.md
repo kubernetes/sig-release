@@ -52,6 +52,7 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
 
 - Begin analyzing the release notes draft
 - Work with the enhancements lead to understand what might be delivered
+- Establish initial meeting with team to introduce everyone, collective tasks, and upcoming timelines
 
 ### Week 4
 
