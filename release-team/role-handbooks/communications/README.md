@@ -10,7 +10,7 @@ Additionally, there are specific deliverables that must come from the release pr
 
 **Before continuing on to the Communications specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
 
-### Skills and Experience Required:
+### Skills and Experience Required
 
 - Strong written and verbal communications skills
 - Experience with the Kubernetes release process enough to understand how communications milestones fit into the overall release
@@ -34,60 +34,57 @@ The expected time investment for both leads and shadows are as follows:
 
 There is a channel on the Kubernetes Slack workspace, `release-comms`, which is used by the communications release team to coordinate their efforts. If you're on the communications team, or applying to be, then it would be advantageous to follow along with the conversations.
 
-## Release Milestone Activities:
+## Release Milestone Activities
 
 ### Week 1
 
-- Former communications coordinator helps identify new leads and shadows
-- Help finalize communications milestones in the release timeline
-- Look for event CFP deadlines to submit release to appropriate event; submit accordingly
+- Select your shadows
+- Ensure yourself and your shadows are entered into the release contact sheet
+- Ensure yourself and your shadows are on the release team meeting invites
+- Check if there are any holidays or events (KubeCon!) that occur during this release
+  - This can/will affect your communication with the CNCF and SIG Chairs. Plan accordingly
 
 ### Week 2
 
-- Begin organizing content from SIGs into blog topics, and high-level deliverables for the release
-- Begin attending release team meetings
-- Finalize lead and shadow roles
+- N/A
 
 ### Week 3
 
-- Begin analyzing the release notes draft
 - Work with the enhancements lead to understand what might be delivered
+  - You should get access to the enhancements tracking sheet. You should check this regularly
 - Establish initial meeting with team to introduce everyone, collective tasks, and upcoming timelines
 
 ### Week 4
 
-- Continue analysis of planned enhancements
-- Begin attending SIG meetings where enhancements will be delivered from
+- This is enhancements freeze. The fun begins next week
 
 ### Week 5
 
-- Finalize release theme and messaging
-- Being working with the CNCF team to determine 5 blog series and schedule webinar
+- Work with enhancements and release note leads to determine which deliverables are most note worthy
+  - Approach SIG Chairs for said items and request a couple of paragraphs on each deliverable
+- Schedule release webinar with CNCF
 
 ### Week 6
 
-- Begin working with the CNCF communications team to schedule press and analyst pre-briefings and interviews
-- Work with the CNCF team to line up review blog post draft, discuss announcement timing and embargo release date, and discuss social posts
+- Schedule press and analyst pre-briefings and interviews for the release lead with CNCF
+- Schedule release blog and press embargo with CNCF
 
 ### Week 7
 
-No activities scheduled
+- N/A
 
 ### Week 8
 
-No activities scheduled
+- N/A
 
 ### Week 9
 
-- Begin attending burndown meetings
-- Start weekly meeting with the CNCF marketing team
-- Work with the CNCF communications team to schedule press and analyst pre-briefings and interviews; provide team draft blog to send to media under embargo
-- Begin organizing media roundtable event (if appropriate)
+- The burn-down meetings begin
+- Send release blog draft to CNCF
 
 ### Week 10
 
-- Begin finalizing the blog
-- Schedule social updates
+- Finalise the release blog
 - Work with the CNCF communications team to continue to schedule press and analyst pre-briefings and interviews
 
 ### Week 11
@@ -97,13 +94,11 @@ No activities scheduled
 
 ### Week 12
 
-- Release day
-- Continue managing release timing in case of delay
-- Publish the blog
-- Help identify release team and community members for media interview requests
+- This is release week!
+  - Keep CNCF in the loop with any potential delays to the release
+- Publish release blog
 
 ### Week 13
 
 - Release retrospective participation
-- Follow-up support with the media
-- Obtain media coverage report from the CNCF team
+- Update this document!
