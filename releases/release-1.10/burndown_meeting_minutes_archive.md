@@ -38,7 +38,7 @@ Video [Link](https://youtu.be/dbh5RaKSXdQ)
 
             * Cluster autoscaler: 1.1.2; from [here](https://github.com/kubernetes/kubernetes/blob/master/cluster/gce/manifests/cluster-autoscaler.manifest#L17); last PR [60842](https://github.com/kubernetes/kubernetes/pull/60842) [@mwielgus](https://github.com/mwielgus))
 
-            * Kube-dns: 1.14.8 from [here](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/dns/kube-dns.yaml.base#L98); last PR [58013](https://github.com/kubernetes/kubernetes/pull/58013) and [57918](https://github.com/kubernetes/kubernetes/pull/57918) 
+            * Kube-dns: 1.14.8 from [here](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/dns/kube-dns/kube-dns.yaml.base#L98); last PR [58013](https://github.com/kubernetes/kubernetes/pull/58013) and [57918](https://github.com/kubernetes/kubernetes/pull/57918) 
 
             * influxdb: v1.3.3 and grafana v4.4.3 (unchanged); from [here](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/cluster-monitoring/influxdb/influxdb-grafana-controller.yaml); last PR [53319](https://github.com/kubernetes/kubernetes/pull/53319) 
 
