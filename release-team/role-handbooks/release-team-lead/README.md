@@ -57,7 +57,8 @@ Release Lead is a very time-consuming role, especially towards the end of the re
 
 - Weeks 1-4: 4-8 hours a week
 - Weeks 5-8: 6-12 hours a week
-- Weeks 9-13: 10 to 25 hours a week, including some after-hours and weekend work
+- Weeks 9-13: 10 to 25 hours a week
+- Release Day: Prepare to spend all day on release-related activities. Given the choice between working after-hours or weekends, and having the release be later than the initial target, delaying the release is preferred.
 
 Among the specific time commitments you have are:
 
@@ -65,7 +66,17 @@ Among the specific time commitments you have are:
 - Burndown meetings three to five times a week during weeks 8-12.
 - Community meetings once a week.
 
-In addition to the absolute time commitment you make, you must also consider the relative burdens on yourself and your team when establishing meetings. This means scheduling meetings and release events compatible with global working hours and coordinating with a global set of team leads and shadows. You may hold the traditional 10am Pacific release team meeting, but also might schedule alternate time meetings and varying the final weeks' burndown meeting time slots to best accommodate the individuals, both release team and broader SIG representation on the issues of the day, whose presence and information is needed. You may also work to maximize asynchronous communications and reduce face to face meetings to where absolutely required. Time sacrifices may be necessary at times and the Release Team Lead should endeavor to spread this so as not to focus any inconvenience on specific individuals or specific geographies, for example considering major global holidays when planning the release timeline while also making sure the project is correctly moving forward.
+In addition to the absolute time commitment you make, you must also consider the relative burdens on yourself and your team when establishing meetings. This means scheduling meetings and release events compatible with global working hours and coordinating with a global set of team leads and shadows. 
+A few ways to accomplish this goal are as follows (but please feel free to implement and add your own solution):
+
+- Create a poll amongst your Leads as to their preferred meeting time
+- Schedule duplicate meetings at alternate times (these can be run by Shadows in those time zones)
+- Encourage delegation of reports and meetings to Shadows 
+- Vary the final weeks' burndown meeting times
+- Work to maximize asynchronous communications and reduce face to face meetings to where absolutely required. 
+- Time sacrifices may be necessary at times and the Release Team Lead should endeavor to spread this so as not to focus any inconvenience on specific individuals or specific geographies, for example considering major global holidays and KubeCons when planning the release timeline while also making sure the project is correctly moving forward.
+
+Please lead by example and encourage everyone to work within their working hours as much as possible.
 
 ## Choosing a Release Team
 
@@ -97,15 +108,27 @@ Release Team selection should happen in accordance with the [Release Team select
   - Issues and PRs are added to the milestone by members of the milestone-maintainers GitHub team, which primarily includes SIG leads. Review the [milestone-maintainers] page for full criteria for membership to that team. The Release Team Lead is responsible for adding certain members of the Release Team to the group, and should check with and prune prior Release Team members who are no longer active.
   - Members of the Release Team should not be the primary contributors making the choice whether issues and PRs are in a milestone. This is the job of SIG Leads. However, the Release Team may apply milestones when doing housekeeping on tracked issues and PRs where the milestone label has clearly been forgotten.
 - The Release Team Lead is responsible for updating the [burndown template] ahead of the release (changing the milestone in links and anything else requested during the retrospective)
-- Release theme: There is no particular reason for this other than to have fun, and possibly provide a theme for Release Team gifts / shirts. As Release Team Lead, you get to pick a theme for the release.
+- Release theme: There is no particular reason for this other than to have fun, and possibly provide a theme for Release Team gifts. As Release Team Lead, you get to pick a theme for the release.
   - Kubernetes 1.8 to 1.10, had unofficial food-based code names.
     - 1.8 - "Burrito"
     - 1.9 - "Pumpkin"
     - 1.10 - "Kiwi"
   - Kubernetes 1.10 had a late change to "Left Shark".
   - Kubernetes 1.11 had a Tolkien theme of "Eleventy-One: A Long-Expected Release"
+  - Kubernetes 1.12: Game of Life
   - Kubernetes 1.13: Angel Release
   - Kubernetes 1.14: Caturnetes
+  - Kubernetes 1.15: Game of Release/Thrones
+  - Kubernetes 1.16: Unlimited Breadsticks For All
+  - Kubernetes 1.17: The Chillest Release - Capynetes
+
+## Release theme gifts
+
+You cannot start too early on this!
+
+Once you have a release theme, there is a budget for you to create a release team gift as a thank you for each of your hard working team members.
+This gift can be a T-shirt, or a badge, but can be anything customizable within the budget, with a fun design of your choice and creation that relates to the release theme.
+Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as well as know the budget) to put in an order, and make sure everyone gets their release swag gift.
 
 ## Release Milestone Activities
 
@@ -114,8 +137,7 @@ Release Team selection should happen in accordance with the [Release Team select
 - Attend previous release retro to capture feedback and incorporate it into next release cycle
 - Plan release schedule and milestones. Gather feedback as needed.
 - Make sure you have your shadows confirmed
-- Have a handover meeting with SIG Chairs and the outgoing lead to get credentials to SIG Release Zoom and any other needed permissions
-- Request edit access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from the SIG Release Chairs
+- Make sure everyone joining the team reads the [release team onboarding document][release-team-onboarding].
 
 ### Week 1
 
@@ -129,27 +151,29 @@ Release Team selection should happen in accordance with the [Release Team select
 - Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
 - Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
-- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md
+- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md **Note: Do not ship the release on a Monday, to avoid preparing for the release on a weekend. Aim for Tuesday.**
 - Send an update to [kubernetes-dev] and [kubernetes-sig-leads] mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 - Create the retrospective document and corresponding bit.ly link
 - Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
+- Request, in coordination with CI Signal Lead, a representative from SIG-Scalability to give a weekly update on the release meeting notes. Prepare to have a release team representative attend SIG-scalability's meeting two or three times throughout the release.
+- Meet your Shadows and create a communication channel with them. Establish expectations and share out work - delegate!
 - Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
 
 ### Week 2
 
 - Assist the Enhancements Lead in collecting planned work from SIGs
-- Schedule weekly Release Team meetings at 10 am Pacific time on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group. You will need to contact SIG Release leads to gain access to the SIG's Zoom account for hosting/recording/posting meeting videos.
+- Schedule weekly Release Team meetings on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group.
 - Poll Release Team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
 - Add key event dates to the [Kubernetes Release Calendar][kubernetes-release-calendar] during the cycle. Ensure major calendar events are set to send an email reminder one week in advance.
 - Begin reporting release status at the community meeting
 - Continue meeting with SIGs for introductions
 
+
 ### Week 3
 
 - Create the release notes draft file in the release directory per the standard above
 - Prepare for x.y.0-alpha.0 "release", specifically that there is a [Branch Manager][branch-manager] available to support the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. This synthetic notation is a point to review process with the [Branch Manager][branch-manager].
-- Begin coordination with SIG Cluster Lifecycle for the kubeadm release (they may create an issue in the milestone to track release blocking issues)
 - Identify any other dependent ecosystem projects that need release coordination
 - Announce/email that the following week is Enhancements Freeze and what that means
 
@@ -178,7 +202,6 @@ Release Team selection should happen in accordance with the [Release Team select
 - Continue reviewing enhancement exceptions as needed
 - Release themes should be completed by now
 - Exception requests should be almost zero
-- The kubeadm and other dependent project issues should be created already
 - Check in with SIGs on their enhancement work to make sure they know Code Freeze is 3 weeks away, as well as emailing the [kubernetes-dev] list, and notifying the community at the weekly meeting
 - Adjust the enhancements repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered)
 - Remind Branch Manager that branch CI jobs will be needed next week.
@@ -221,8 +244,8 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - The Release Team needs to look at any in-flight PRs and ensure nothing is being jammed in at the last minute without proper tests, review, etc. This is something to watch extremely closely because it happens every release. Just watch what gets merged closely after Code Freeze. Incorrectly merged items need assessed and perhaps reverted. GitHub has a [query comparing a release branch and master](https://github.com/kubernetes/kubernetes/compare/release-1.15).
 - Assist the Documentation Leads in collecting missing docs PRs.
 - Schedule burndown meetings starting next week for every weekday until the Friday after release day. Make sure to invite the community calendar (`cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com`) and the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`).
-- Release notes, and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead, you may need to help assemble the notes.
-- Identify vacancies on the incoming Release Team and begin asking SIGs, the community, and CNCF-sponsor companies for volunteers to fill roles. Getting committed volunteers now means they are also more actively engaged in the final weeks of the release, leading to more opportunities for final mentoring before they assume their Release Team role. Continue to improve and uphold the [Release Team Selection][selection] process.
+- Release notes and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead, you may need to help assemble the notes.
+- Identify potential vacancies on the incoming Release Team and begin asking team shadows and former team shadows to serve as Lead in the upcoming cycle. Continue to improve and uphold the [Release Team Selection][selection] process.
 - Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking are 100% green.  
 
 ### Week 11
@@ -237,6 +260,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - The release notes draft needs to be completely done and ready to consume by anago. Have SIG volunteers do a final proofread of their sections. Make sure people actually do this. You need to avoid having the release notes volunteers pull “all nighters” before the release.
 - Work with the CNCF, SIG PM, SIG Docs, and Communications Lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs.
 - Work with the incoming Release Team Lead to establish incoming Release Team.
+- Release Day is coming up! Make the day as fun as you can for the team. Plan ahead for this and do something nice.
 
 ---
 
@@ -248,15 +272,14 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - Every issue in the milestone is considered release blocking.
 - If you have to push the release date back, try to avoid Friday since it makes release publicity extremely difficult. Also, people seem to have patience with delay as long as the reasons are clear and openly communicated. This is your duty. You must over-communicate and ensure the team is also talking to their stakeholders (CNCF, community, press, etc.)
 - Confirm a facilitator for the Release Retrospective with SIG PM
-- Make release day as fun as you can for the team. Plan ahead for this and do something nice.
-- The following final actions should be ordered, with successful completion of each being the entry criteria to the next.
+- The following final actions **must occur in order**, with successful completion of each being the entry criteria to the next.
   - Release day morning:
     - Go / No-Go: should generally be clear a day or three ahead of release, but the day's burndown provides a final opportunity for the team to affirm things are ready.
     - Release Notes Lead PRs final draft release notes to sig-release, with Release Team Lead approving merge.
     - Branch Manager does mock release build.
     - Branch Manager does mock publication. Validates with Release Team lead and broader team the mock announcement email content.
     - Branch Manager does nomock release build.
-  - Starting approximately 4pm Pacific:
+  - Starting when ready:
     - Communications Lead begins staging blog post.
     - Branch Manager Lead does nomock publication.
     - Branch Manager coordinates the building and publishing of rpm/deb packages with [Build Admins][build-admins].
@@ -274,7 +297,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 
 ### Week 14
 
-- Help fill the any open positions for the next release milestone
+- Help fill any open positions for the next release milestone
 
 [branch-manager]: /release-managers.md#branch-managers
 [build-admins]: /release-managers.md#build-admins
@@ -299,3 +322,4 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 [security-release-process]: https://github.com/kubernetes/security/blob/master/security-release-process.md
 [selection]: /release-team/release-team-selection.md
 [Testgrid]: https://testgrid.k8s.io/
+[release-team-onboarding]: /release-team/release-team-onboarding.md

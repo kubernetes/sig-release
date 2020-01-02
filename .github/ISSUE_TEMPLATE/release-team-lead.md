@@ -62,6 +62,8 @@ As you work through the checklist, use the following PRs as guides:
 - [ ] Manually grant access on the following Google Groups:
   - [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team) (Add as Manager)
   - [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads) (Add as Member)
+- [ ] Grant calendar access
+- [ ] Grant Zoom credentials (host key)
 
 ### Offboarding
 
