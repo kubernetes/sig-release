@@ -58,7 +58,7 @@ Release Lead is a very time-consuming role, especially towards the end of the re
 - Weeks 1-4: 4-8 hours a week
 - Weeks 5-8: 6-12 hours a week
 - Weeks 9-13: 10 to 25 hours a week
-- Release Day: Prepare to spend all day on release-related activities.
+- Release Day: Prepare to spend all day on release-related activities. Given the choice between working after-hours or weekends, and having the release be later than the initial target, delaying the release is preferred.
 
 Among the specific time commitments you have are:
 
@@ -67,7 +67,7 @@ Among the specific time commitments you have are:
 - Community meetings once a week.
 
 In addition to the absolute time commitment you make, you must also consider the relative burdens on yourself and your team when establishing meetings. This means scheduling meetings and release events compatible with global working hours and coordinating with a global set of team leads and shadows. 
-A few ways to accopmplish this goal are as follows (but please feel free to implement and add your own solution):
+A few ways to accomplish this goal are as follows (but please feel free to implement and add your own solution):
 
 - Create a poll amongst your Leads as to their preferred meeting time
 - Schedule duplicate meetings at alternate times (these can be run by Shadows in those time zones)
@@ -115,8 +115,10 @@ Release Team selection should happen in accordance with the [Release Team select
     - 1.10 - "Kiwi"
   - Kubernetes 1.10 had a late change to "Left Shark".
   - Kubernetes 1.11 had a Tolkien theme of "Eleventy-One: A Long-Expected Release"
+  - Kubernetes 1.12: Game of Life
   - Kubernetes 1.13: Angel Release
   - Kubernetes 1.14: Caturnetes
+  - Kubernetes 1.15: Game of Release/Thrones
   - Kubernetes 1.16: Unlimited Breadsticks For All
   - Kubernetes 1.17: The Chillest Release - Capynetes
 
