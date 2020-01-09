@@ -6,7 +6,7 @@
 | Enhancements | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard) / Slack: `@jerickar`) | Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`), Kirsten Garrison ( [@kikisdeliveryservice](https://github.com/kikisdeliveryservice) / Slack: `@oikiki`), John Belamaric ([@johnbelamaric](https://github.com/johnbelamaric) / Slack: `@johnbelamaric`), Heba Elayoty ([@helayoty](https://github.com/helayoty) / Slack: `@Heba`)  |
 | CI Signal | Nikolaos Moraitis / ([@droslean](https://github.com/droslean) / Slack: `@droslean`) |  |
 | Bug Triage | Silvia Pina / ([@smourapina](https://github.com/smourapina) / Slack: `@smourapina`) |  |
-| Docs | Vineeth Pothulapati ([@VineethReddy02](https://github.com/VineethReddy02) / Slack: `@Vineeth`) |  |
+| Docs | Vineeth Pothulapati ([@VineethReddy02](https://github.com/VineethReddy02) / Slack: `@Vineeth`) | Seth McCombs ([@sethmccombs](https://github.com/sethmccombs)  / Slack: `@sethmccombs`), Irvi Aini ([@irvifa](https://github.com/irvifa) / Slack: `@irvifa`), Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`), Chima Iheanyichukwu ([@iheanyi1](https://github.com/iheanyi1) / Slack: `@Chima Iheanyichukwu`) |
 | Release Notes | Eddie Villalba ([@Evillgenius75](https://github.com/Evillgenius75) / Slack: `@Evill_genius`) |  |
 | Communications | Karen Chu ([@karenhchu](https://github.com/karenhchu) / Slack: `@karenhchu`) |  |
 | Emeritus Adviser | Lachlan Evenson ([@lachie83](https://github.com/lachie83)) / Slack: `@lachie83`) | -- |
