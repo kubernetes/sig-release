@@ -8,7 +8,7 @@
 | Bug Triage | Silvia Pina / ([@smourapina](https://github.com/smourapina) / Slack: `@smourapina`) |  |
 | Docs | Vineeth Pothulapati ([@VineethReddy02](https://github.com/VineethReddy02) / Slack: `@Vineeth`) | Seth McCombs ([@sethmccombs](https://github.com/sethmccombs)  / Slack: `@sethmccombs`), Irvi Aini ([@irvifa](https://github.com/irvifa) / Slack: `@irvifa`), Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`), Chima Iheanyichukwu ([@iheanyi1](https://github.com/iheanyi1) / Slack: `@Chima Iheanyichukwu`) |
 | Release Notes | Eddie Villalba ([@Evillgenius75](https://github.com/Evillgenius75) / Slack: `@Evill_genius`) | Justin Luk ([@jluk](https://github.com/jluk) / Slack: `@jluk`), Reyann Lejano ([@reylejano-rxm](https://github.com/reylejano-rxm) / Slack: `@rey.lejano`), Adlofo Garcia ([@puerco](https://github.com/puerco) / Slack: `@puerco`), James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) / Slack: `@james.laverack`) |
-| Communications | Karen Chu ([@karenhchu](https://github.com/karenhchu) / Slack: `@karenhchu`) |  |
+| Communications | Karen Chu ([@karenhchu](https://github.com/karenhchu) / Slack: `@karenhchu`) | Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkoerbi`), Paul Burt ([@pgburt](https://github.com/pgburt) / Slack: `@paulb`), Claudia Nadolny ([@cnadolny](https://github.com/cnadolny)/ Slack: `@cnadolny`), Meenakshi Kaushik ([@mkhaas](https://github.com/mkhaas) / Slack: `@meenakshi`)|
 | Emeritus Adviser | Lachlan Evenson ([@lachie83](https://github.com/lachie83)) / Slack: `@lachie83`) | -- |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
