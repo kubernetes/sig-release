@@ -34,7 +34,7 @@ There are a few mailing lists that you should be aware of. Depending on your rel
 
 #### Release Team Mailing List
 
-All members of the current release team should be apart of this list. If you're on the Release Team, please join this list: https://groups.google.com/forum/#!forum/kubernetes-release-team
+All members of the current release team should be apart of this list. If you're on the Release Team and cannot access: https://groups.google.com/forum/#!forum/kubernetes-release-team, please tell your role lead or the Release Team lead that you need access. The Release Team Lead, as well as Lead Shadows, can manage list membership. 
 
 #### SIG Release Mailing List
 
