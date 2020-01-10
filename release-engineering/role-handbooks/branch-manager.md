@@ -525,7 +525,7 @@ Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15015).
 1. Generate the new release branch jobs:
 
    ```shell
-   bazel run //experiment:prepare_release_branch
+   bazel run //releng:prepare_release_branch
    ```
 
 2. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/kubernetes/sig-release/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/15023/commits/cad8a3ce8ef3537568b12619634dff702b16cda7))
@@ -535,30 +535,18 @@ Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15015).
 3. Check for and resolve configuration errors:
 
    ```shell
-   bazel test //config/... //testgrid/... //hack:verify-config
+   bazel test //config/... //hack:verify-all
    ```
 
-4. Regenerate job configs:
+4. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/15023))
 
-    ```shell
-    hack/update-config.sh
-    ```
-
-5. Do a final check for configuration errors:
-
-    ```shell
-    bazel test //config/... //testgrid/... //hack:verify-config
-    ```
-
-6. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/15023))
-
-7. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
+5. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
 
     Examples:
     - [sig-release-1.17-blocking](https://testgrid.k8s.io/sig-release-1.17-blocking)
     - [sig-release-1.17-informing](https://testgrid.k8s.io/sig-release-1.17-informing)
 
-8. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
+6. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
 
 [sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
 [`branchff`]: https://git.k8s.io/release/branchff
