@@ -43,11 +43,11 @@ The 1.18 release cycle is proposed as follows:
 | Start Enhancements Tracking | Enhancements Lead | Tue 7 | | | | | |
 | Schedule finalized | Lead | Fri 10 | | | | | |
 | Team finalized | Lead | Fri 17 | | | | week 2 | |
-| 1.18.0-alpha.2 released | Branch Manager | Tue 21 | | | | | |
+| 1.18.0-alpha.1 released | Branch Manager | Tue 21 | | | | | |
 | Start Release Notes Draft | Release Notes Lead | Tue 21 | | | | week 3 | |
 | **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | Tue 28 | | | | week 4 | [master-blocking], [master-informing] |
-| 1.18.0-alpha.3 released | Branch Manager | | Tue 4 | | | week 5 | |
-| 1.18.0-alpha.4 released | Branch Manager | | Tue 11 | | | week 6 | |
+| 1.18.0-alpha.2 released | Branch Manager | | Tue 4 | | | week 5 | |
+| 1.18.0-alpha.3 released | Branch Manager | | Tue 11 | | | week 6 | |
 | release-1.14 jobs removed | Branch Manager | | Tue 18 | | | week 7 | |
 | release-1.18 branch created | Branch Manager | | Tue 18 | | | | |
 | release-1.18 jobs created | Branch Manager | | Tue 18 | | | | |
