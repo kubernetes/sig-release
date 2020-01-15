@@ -8,7 +8,7 @@
 * [Meeting Minutes](http://bit.ly/k8s118-releasemtg) (join [kubernetes-sig-release@] to receive meeting invites)
 * [v1.18 Release Calendar][k8s118-calendar]
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
-* [Internal Contact Info]() (accessible only to members of [kubernetes-release-team@])
+* [Internal Contact Info][Internal Contact Info] (accessible only to members of [kubernetes-release-team@])
 
 #### Tracking docs
 
