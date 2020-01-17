@@ -22,60 +22,6 @@ feedback!
 
 ### (No, really, you MUST read this before you upgrade)
 
-#### API Machinery
-
-<!-- Add here -->
-
-#### Apps
-
-<!-- Add here -->
-
-#### Auth
-
-<!-- Add here -->
-
-#### Autoscaling
-
-<!-- Add here -->
-
-#### CLI
-
-<!-- Add here -->
-
-#### Cloud Provider
-
-<!-- Add here -->
-
-#### Cluster Lifecycle
-
-<!-- Add here -->
-
-#### Instrumentation
-
-<!-- Add here -->
-
-#### Network
-
-<!-- Add here -->
-
-#### Node
-
-<!-- Add here -->
-
-#### Release
-
-<!-- Add here -->
-
-#### Scheduling
-
-<!-- Add here -->
-
-#### Storage
-
-<!-- Add here -->
-
-#### Windows
-
 <!-- Add here -->
 
 ## Deprecations and Removals
@@ -88,107 +34,55 @@ feedback!
 
 -->
 
-## Metrics Changes
+## Metrics
 
 <!-- Add here -->
 
-### Added metrics
+### Added Metrics
 
 <!-- Add here -->
 
-### Removed metrics
+### Removed Metrics
 
 <!-- Add here -->
 
-### Deprecated/changed metrics
+### Deprecated/Changed Metrics
 
 <!-- Add here -->
 
-## Notable Features
+## Changes by Kind
 
-### Stable
+### API Change
 
-<!-- Add here -->
-
-### Beta
+#### Stable
 
 <!-- Add here -->
 
-### Alpha
+#### Beta
 
 <!-- Add here -->
 
-### Staging Repositories
+#### Alpha
 
 <!-- Add here -->
 
-### CLI Improvements
+### Feature
 
 <!-- Add here -->
 
-### Misc
+### Design
 
 <!-- Add here -->
 
-## API Changes
+### Documentation
 
 <!-- Add here -->
 
-## Other notable changes
-
-### API Machinery
+### Failing Test
 
 <!-- Add here -->
 
-### Apps
-
-<!-- Add here -->
-
-### Auth
-
-<!-- Add here -->
-
-### Autoscaling
-
-<!-- Add here -->
-
-### CLI
-
-<!-- Add here -->
-
-### Cloud Provider
-
-<!-- Add here -->
-
-### Cluster Lifecycle
-
-<!-- Add here -->
-
-### Instrumentation
-
-<!-- Add here -->
-
-### Network
-
-<!-- Add here -->
-
-### Node
-
-<!-- Add here -->
-
-### Release
-
-<!-- Add here -->
-
-### Scheduling
-
-<!-- Add here -->
-
-### Storage
-
-<!-- Add here -->
-
-### Windows
+### Other (Bug, Cleanup of Flake)
 
 <!-- Add here -->
 
