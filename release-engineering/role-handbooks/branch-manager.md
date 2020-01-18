@@ -253,13 +253,13 @@ WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. B
 ./gcbmgr stage master
 ```
 
-This will give you a suggested `--buildversion`.  Then:
+This will give you a suggested `--buildversion`.  Use this as:
 
 ```shell
-./gcbmgr stage master --buildversion=v1.14.11-beta.1.2+c8b135d0b49c44
+./gcbmgr stage master --buildversion=v1.16.0-alpha.0.1+704790e0412842
 ```
 
-Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from HEAD (the last commit on the current branch).
+Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from the last commit on the current branch.
 
 This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
 
@@ -321,7 +321,7 @@ Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `
 The command example below is to stage a build for a beta release:
 
 ```shell
-./gcbmgr stage release-1.16 --buildversion=v1.14.11-beta.1.2+c8b135d0b49c44 --nomock
+./gcbmgr stage release-1.16 --buildversion=v1.16.0-alpha.3.7+b3bde1fe32dd4a --nomock
 ```
 
 To publish (release) the build artifacts from staging beta for example, run:
@@ -339,7 +339,7 @@ Adding the `--rc` flag switches behavior on to building release candidates. Agai
 For example:
 
 ```shell
-./gcbmgr stage release-1.16 --rc --buildversion=v1.14.11-beta.1.2+c8b135d0b49c44 --nomock
+./gcbmgr stage release-1.16 --rc --buildversion=v1.16.0-beta.2.7+d17cd235699328 --nomock
 ```
 
 To publish the build artifacts (release), as usual use the `--buildversion=` number as specified in the output when `gcbmgr` is done with the stage command.
@@ -378,7 +378,7 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 To initiate staging the build for the official release, the `--official` flag is used. For example:
 
 ```shell
-./gcbmgr stage release-1.16 --official --buildversion=v1.14.11-beta.1.2+c8b135d0b49c44 --nomock
+./gcbmgr stage release-1.16 --official --buildversion=v1.16.0-rc.2.10+4cb51f0d2d8392 --nomock
 ```
 
 In addition to `v1.16.n` this will also build and stage the subsequent patch's
