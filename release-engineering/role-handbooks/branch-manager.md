@@ -248,7 +248,13 @@ Early in the release cycle, it is likely that the build might fail. By default t
 WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. But in the meantime, acknowledging today especially for an early alpha or beta release, it is possible to just build via:
 
 ```shell
-./gcbmgr stage master --build-at-head
+./gcbmgr stage master
+```
+
+This will give you a suggested `--buildversion`.  Then:
+
+```shell
+./gcbmgr stage master --buildversion=v1.14.11-beta.1.2+c8b135d0b49c44
 ```
 
 Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from HEAD (the last commit on the current branch).
@@ -313,7 +319,7 @@ Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `
 The command example below is to stage a build for a beta release:
 
 ```shell
-./gcbmgr stage release-1.16 --build-at-head --nomock
+./gcbmgr stage release-1.16 --buildversion=v1.14.11-beta.1.2+c8b135d0b49c44 --nomock
 ```
 
 To publish (release) the build artifacts from staging beta for example, run:
@@ -331,7 +337,7 @@ Adding the `--rc` flag switches behavior on to building release candidates. Agai
 For example:
 
 ```shell
-./gcbmgr stage release-1.16 --rc --build-at-head --nomock
+./gcbmgr stage release-1.16 --rc --buildversion=v1.14.11-beta.1.2+c8b135d0b49c44 --nomock
 ```
 
 To publish the build artifacts (release), as usual use the `--buildversion=` number as specified in the output when `gcbmgr` is done with the stage command.
@@ -370,7 +376,7 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 To initiate staging the build for the official release, the `--official` flag is used. For example:
 
 ```shell
-./gcbmgr stage release-1.16 --official --build-at-head --nomock
+./gcbmgr stage release-1.16 --official --buildversion=v1.14.11-beta.1.2+c8b135d0b49c44 --nomock
 ```
 
 In addition to `v1.16.n` this will also build and stage the subsequent patch's
