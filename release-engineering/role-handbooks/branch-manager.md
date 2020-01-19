@@ -29,6 +29,8 @@
     - [Debian and RPM Packaging](#debian-and-rpm-packaging)
     - [Release Validation](#release-validation)
   - [Post-release Activities](#post-release-activities)
+    - [Update kubekins-e2e variants](#update-kubekins-e2e-variants)
+    - [Cut next alpha](#cut-next-alpha)
 - [Branch Management](#branch-management)
   - [Branch Creation](#branch-creation)
     - [During staging](#during-staging)
@@ -422,7 +424,34 @@ The following are some ways to determine if the release process was successful:
 
 ### Post-release Activities
 
-- Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` in the [`variants.yaml` file for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml). ([reference PR review comment](https://github.com/kubernetes/test-infra/pull/13870#discussion_r313628808))
+#### Update kubekins-e2e variants
+
+Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` in the [`variants.yaml` file for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml). ([reference PR review comment](https://github.com/kubernetes/test-infra/pull/13870#discussion_r313628808))
+
+#### Cut next alpha
+
+Recall that an alpha.0 of the next minor release was created during [branch creation][#branch-creation].
+
+That alpha.0 is now several commits behind `master`.
+As an example, see the [comparison between the `v1.18.0-alpha.0` (after 1.17 branch creation) and `v1.18.0-alpha.1` (after 1.17.0 release) tags](https://github.com/kubernetes/kubernetes/compare/v1.18.0-alpha.0...v1.18.0-alpha.1).
+
+To assist downstream consumers of Kubernetes, a new alpha should be cut to bring our next release tag to the tip of `master`.
+
+Get the latest build version at `master`:
+
+```shell
+gsutil cat gs://kubernetes-release-dev/ci/latest.txt
+```
+
+Begin the release process:
+
+```shell
+./gcbmgr stage master --buildversion=<version-from-previous-step>
+```
+
+Proceed with the [alpha release steps][#alpha-releases].
+
+ref: https://github.com/kubernetes/sig-release/issues/928
 
 ## Branch Management
 
