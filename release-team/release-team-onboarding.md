@@ -58,8 +58,13 @@ The Release Lead (and most past Release Leads) are members of the `release-team-
 
 Similarly, you'll also need to be in a group by the same name in [k/sig-release](https://github.com/kubernetes/sig-release). PR yourself to the [`OWNERS_ALIASES`](https://github.com/kubernetes/sig-release/blob/32577773bd37f844860cdcc6c0a384007de4f34b/OWNERS_ALIASES#L17-L21) in that repo as well.
 
-### Zoom Meeting Owner Code
+### Everything Else...
 
-To start meetings scheduled for the SIG Release Zoom account, you'll need the owner code. Talk to the previous Release Lead for this key.
+Please complete a [Release Team Lead onboarding issue][rtl-onboarding]
 
+The onboarding issue will be the official checklist for Zoom meeting owner
+code, release team calendar access, etc.
+The issue will help you keep track of all the things you need in order to
+fulfill your role as lead and lead shadows.
 
+[rtl-onboarding]: https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng%2C+area%2Frelease-team&template=release-team-lead.md&title=Release+Team+Lead+access+for+%3CGH-handle%3E

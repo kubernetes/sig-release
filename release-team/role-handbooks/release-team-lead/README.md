@@ -138,6 +138,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Plan release schedule and milestones. Gather feedback as needed.
 - Make sure you have your shadows confirmed
 - Make sure everyone joining the team reads the [release team onboarding document][release-team-onboarding].
+- Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
 
 ### Week 1
 
@@ -148,8 +149,11 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 
 #### Starting the release cycle
 
-- Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
 - Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
+- Create an internal contact sheet and corresponding bit.ly link. Make sure to
+  only give access to the [kubernetes-release-team]. Communicate with section
+  leads to add their shadows so that you and your shadows can add them to the
+  [kubernetes-release-team].
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md **Note: Do not ship the release on a Monday, to avoid preparing for the release on a weekend. Aim for Tuesday.**
 - Send an update to [kubernetes-dev] and [kubernetes-sig-leads] mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
