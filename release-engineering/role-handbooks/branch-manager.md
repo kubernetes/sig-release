@@ -26,9 +26,11 @@
   - [Release Candidates](#release-candidates)
   - [Official Releases](#official-releases)
     - [Security fixes](#security-fixes)
-    - [Post-release Activities](#post-release-activities)
-      - [Debian and RPM Packaging](#debian-and-rpm-packaging)
-      - [Release Validation](#release-validation)
+    - [Debian and RPM Packaging](#debian-and-rpm-packaging)
+    - [Release Validation](#release-validation)
+  - [Post-release Activities](#post-release-activities)
+    - [Update kubekins-e2e variants](#update-kubekins-e2e-variants)
+    - [Cut next alpha](#cut-next-alpha)
 - [Branch Management](#branch-management)
   - [Branch Creation](#branch-creation)
     - [During staging](#during-staging)
@@ -402,11 +404,7 @@ See the [Security Release Process](https://git.k8s.io/security/security-release-
 
 [security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
 
-#### Post-release Activities
-
-- Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` in the [`variants.yaml` file for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml). ([reference PR review comment](https://github.com/kubernetes/test-infra/pull/13870#discussion_r313628808))
-
-##### Debian and RPM Packaging
+#### Debian and RPM Packaging
 
 [Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `./gcbmgr release --official ...` has completed, **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
 
@@ -414,7 +412,7 @@ The entire packaging process including the build and validation of the builds co
 
 Once the .deb and .rpm packages are done building, you can `grep` for `X.Y` e.g. `1.16` in the [yum](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) repositories.
 
-##### Release Validation
+#### Release Validation
 
 The following are some ways to determine if the release process was successful:
 
@@ -423,6 +421,37 @@ The following are some ways to determine if the release process was successful:
 2. The release is logged automatically by [k8s-release-robot](https://github.com/k8s-release-robot) in [k/sig-release](https://git.k8s.io/sig-release)
 
 3. CHANGELOG-X.Y.md is automatically loaded into the kubernetes/kubernetes repo: [https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md)
+
+### Post-release Activities
+
+#### Update kubekins-e2e variants
+
+Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` in the [`variants.yaml` file for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml). ([reference PR review comment](https://github.com/kubernetes/test-infra/pull/13870#discussion_r313628808))
+
+#### Cut next alpha
+
+Recall that an alpha.0 of the next minor release was created during [branch creation][#branch-creation].
+
+That alpha.0 is now several commits behind `master`.
+As an example, see the [comparison between the `v1.18.0-alpha.0` (after 1.17 branch creation) and `v1.18.0-alpha.1` (after 1.17.0 release) tags](https://github.com/kubernetes/kubernetes/compare/v1.18.0-alpha.0...v1.18.0-alpha.1).
+
+To assist downstream consumers of Kubernetes, a new alpha should be cut to bring our next release tag to the tip of `master`.
+
+Get the latest build version at `master`:
+
+```shell
+gsutil cat gs://kubernetes-release-dev/ci/latest.txt
+```
+
+Begin the release process:
+
+```shell
+./gcbmgr stage master --buildversion=<version-from-previous-step>
+```
+
+Proceed with the [alpha release steps][#alpha-releases].
+
+ref: https://github.com/kubernetes/sig-release/issues/928
 
 ## Branch Management
 
