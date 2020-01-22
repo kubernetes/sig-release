@@ -28,9 +28,9 @@ After you successfully run the Release Notes tool, make sure the resulting file 
 
 You'll need to update the Typescript file that filters notes per release -- just add the patch release entry to the list:
 
-Example: `'assets/release-notes-1.15.3.json'`
+Example: `'src/assets/release-notes-1.15.3.json'`
 
-[assets.ts](https://github.com/kubernetes-sigs/release-notes/blob/master/src/environments/assets.ts)
+[src/environments/assets.ts](https://github.com/kubernetes-sigs/release-notes/blob/master/src/environments/assets.ts)
 
 Lastly, prepare (prettify) the JSON file, using the following commands:
 
