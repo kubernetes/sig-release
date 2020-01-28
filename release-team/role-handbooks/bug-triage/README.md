@@ -122,6 +122,10 @@ This is the best stage to get involved with any automation work that can ease th
 - automation of notifications on relevant issues/PRs of the release cycle timeline.
 - automation of tracking/categorizing issues/PRs by responses to notifications of release cycle timeline.
 
+In order to make work at later stages easier, it can also be beneficial to start pinging stale or long-running issues / PRs, so that an early assessment can be made if these should be moved out of the current release cycle's milestone.
+
+It is also important to make sure all membership requirements and permissions needed for the Shadows are in place, for example that they have org access and are added as `milestone-maintainers`.
+
 #### Setting up the Bug Triage Spreadsheet
 
 The Bug Triage team is using a tracking spreadsheet to track the current status of all issues and PRs targeting the release, their priorities, and to distribute the work among the Bug Triage team.
