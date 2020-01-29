@@ -1,3 +1,9 @@
+---
+title: "Kubernetes 1.18 Release"
+weight: 98
+slug: "release" 
+---
+
 # Kubernetes 1.18
 
 
@@ -91,4 +97,3 @@ Please refer to the [release phases document](../release_phases.md).
 [kubernetes-release-team@]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
-
