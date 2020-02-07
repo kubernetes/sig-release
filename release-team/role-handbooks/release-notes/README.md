@@ -4,7 +4,7 @@
 
 The Release Notes role is responsible for collecting and fine-tuning release-notes from the many contributions to Kubernetes between release cycles. This role is likely to find that work during the first several weeks of the release cycle is very laid back with the bulk of the tasks being completed at the end, once the release is firmed up.
 
-The release lead will be responsible for introducing shadows to the team and the release notes tool and may ask shadows to run it and make the weekly update PR. The release notes lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to avoid their coalescence during the later weeks. 
+The release lead will be responsible for introducing shadows to the team and the release notes tool and may ask shadows to run it and make the update PR’s. The release notes lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to avoid their coalescence during the later weeks. 
 
 If there are potential fixes to the issues indicated and team members are keen, fixes and automation of the process is very welcome but not expected.
 
@@ -24,26 +24,26 @@ If there are potential fixes to the issues indicated and team members are keen, 
 
 Compared to other release team roles, release notes is one of the least time
 intensive roles.
+
 #### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
-In the first 8 weeks of the cycle, the Release Notes team should/must, attend weekly release meetings and run the [release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes) as well as update the [release-notes website](https://github.com/kubernetes-sigs/release-notes) weekly to create an early draft of the release notes. 
+
+In the first 8 weeks of the cycle, the Release Notes team should/must, attend weekly release meetings and run the [release-notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes) as well as update the [release-notes website](https://github.com/kubernetes-sigs/release-notes) for every `alpha`, `beta` and `rc` to create an early draft of the release notes. This ensures that the overall quality of the release notes can be verified from the beginning of the release cycle.
 
 #### Late release cycle (weeks 9-12+) ~4-10 hours/week
 This period has an increase in release team  meetings each week and there is
 also significantly more work to do to ensure the release notes are in good
-working order for the release. 
+working order for the release.
 
 Once code freeze begins, the release notes draft
-is transferred to a google doc which is made public to the Kubernetes community.
+is transferred to a Google Doc which is made public to the Kubernetes community.
 The doc will be edited by SIG leads and SIG members but will also be edited for
 grammar and uniform style by the release notes team. 
 
 The Release Notes team should use the [template](relnotes-template.md) to organize the raw generated release notes in the Google doc as best as possible and help to guide SIG leads and members in their further editing of the release notes. The final edited release notes should follow this
 template. 
 
-The changelog must also be generated and the release notes tool must continue to be run on the release branch in order to pull in any outstanding PRs that are merged between the
-beginning of code freeze and the release. The same applies to the website, which
-should always represent the same state as the markdown document.
-
+The release notes tool must continue to be run on the release branch (for `beta` and `rc` releases) in order to pull in any outstanding PRs that are merged between the
+beginning of code freeze and the release.
 
 ## Tasks
 
@@ -64,7 +64,7 @@ should always represent the same state as the markdown document.
 - If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberty in completing the notes
 - A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must be created by the release notes team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes.
 - The confirmed upon notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
-- An "External Dependencies" section should be currated which outlines how external dependency versions have changed since the last release
+- An "External Dependencies" section should be curated which outlines how external dependency versions have changed since the last release
   - See [the 1.12 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md#external-dependencies) for an example
 	- Note that there are [plans in the process to formalize and automate the process of aggregating the changes](https://github.com/kubernetes/community/issues/2234), but this is currently [a very manual process](https://github.com/kubernetes/sig-release/pull/398).
   - To update an entry in this section the following steps must be performed:
@@ -89,12 +89,7 @@ should always represent the same state as the markdown document.
 
 Update this section at the end of each release for the next Release Notes Team.
 
-### Post 1.16 TODOs
-
-#### High Priority
-- Investigate opportunities to improve release notes collection by changing the
-  PR boilerplate and/or creating new labels to indicate deprecations and
-  dependencies (as per [#668](https://github.com/kubernetes/sig-release/issues/668))
+### Post 1.17 TODOs
 
 #### If any team members have NLP experience:
 - Implement functionality in release-notes tool to automatically process language in generated release notes file
@@ -104,36 +99,34 @@ Update this section at the end of each release for the next Release Notes Team.
 
 ## Release Milestone Activities:
 
-### Week 1 - 2
+### Week 1
 
-- Begin running release-notes script for ongoing collection of release notes
+- Begin running release-notes tool for ongoing collection of release notes
+  with the first alpha release, which has been cut directly after the latest
+  minor.
     - Update the `release-notes-draft.md`
     - Update the website
 - Begin attending release team meetings
 - Informal intro meeting with release notes team to discuss contact information and logistics
 
-
-### Weeks 3 - 8
+### Weeks 2 - 8
 
 - Begin attending burndown meetings
-- Same as above
+- Same as above, but generate the notes for each `alpha` and `beta`
 
-
-### Week 9
+### Week 9 (Begin of Code Freeze)
 
 - Create Google Doc for generated release notes and share with release-notes team
 - Create [known issues issue](known-issues-bucket.md) in `kubernetes/kubernetes` to capture known issues for the release
 - Share created doc with release-team
-- Send [an email to sig leads](sig-leads-email.md) to capture major themes from their sig
-- Start determining major themes for release notes template to send to sig-leads
-
+- Send [an email to SIG-leads](sig-leads-email.md) to capture major themes from their SIG
+- Start determining major themes for release notes template to send to SIG-leads
 
 ### Week 10
 
 - Finalize lead and shadow roles for subsequent release
-- Work with sig-leads to finalize major themes for release-notes
+- Work with SIG-leads to finalize major themes for release-notes
 - Copy edit notes for spelling, grammar and uniform style
-
 
 ### Week 11
 
