@@ -140,6 +140,13 @@ Jobs on the master-informing and release-x.y-informing dashboards require more i
 
 For more detailed information about what's on these dashboards, see [Release Blocking Jobs](/release-blocking-jobs.md) documentation.
 
+## Detect flakiness on presubmit jobs
+
+Jobs that are running on each commit (presubmits) can fail because of a bad code in which this is normal. Therefore, there is no a good way to know if the job is flaky or not by looking at the job's history in testgrid ([presubmits-kubernetes-blocking](https://testgrid.k8s.io/presubmits-kubernetes-blocking)). For that reason, the best practice is to monitor the behavior of the job via different tools.
+- With [triage](https://storage.googleapis.com/k8s-gubernator/triage/index.html?ci=0&pr=1&job=pull-kubernetes-e2e-gce) you will be able to detect job failures searching by the error message and get a summary of the error frequency.
+- Velodrome [job-health-merge-blocking](http://velodrome.k8s.io/dashboard/db/job-health-merge-blocking) to acquire the job failure and flake rate.
+- K8s monitoring [tide-dashboard](https://monitoring.prow.k8s.io/d/d69a91f76d8110d3e72885ee5ce8038e/tide-dashboard?orgId=1) to determine merge rate and make sure that the pool is not blocked.
+
 ## Special high risk test categories to monitor
 
 Historically there are a couple of families of test that are hard to stabilize, regression prone and pose a high risk of delaying and/or derailing a release. As CI Signal lead it is highly recommended to pay close attention and extra caution when dealing with test failures in the following areas.
