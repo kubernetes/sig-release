@@ -30,6 +30,17 @@ The expected time investment for both leads and shadows are as follows:
 
 **NOTE:** These are estimates and your personal experience may vary. The more time you can spend working as a team and regularly communicating within your team, the better off your experience will be.
 
+### External Release Communication
+
+Please use the `release-comms@kubernetes.io` Google Group list for external release communications (communicating with the CNCF, etc.).
+
+The following groups should be members:
+* The current release cycle's Release Team Lead & Lead Shadows
+* The current release cycle's Communications Lead & Comms Shadows
+* SIG Release Chairs
+
+The list hast to be rotated/actively managed every cycle.
+
 ### Slack Channel
 
 There is a channel on the Kubernetes Slack workspace, `release-comms`, which is used by the communications release team to coordinate their efforts. If you're on the communications team, or applying to be, then it would be advantageous to follow along with the conversations.
@@ -46,7 +57,12 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
 
 ### Week 2
 
-- N/A
+- Update the `release-comms@kubernetes.io` Google Group to ensure the list **_only includes_**:
+  - The current release cycle's Release Team Lead & Lead Shadows
+  - The current release cycle's Communications Lead & Comms Shadows
+  - SIG Release Chairs
+
+  [Membership](https://git.k8s.io/k8s.io/groups/groups.yaml) for this group is defined in [kubernetes/k8s.io](https://git.k8s.io/k8s.io).
 
 ### Week 3
 
