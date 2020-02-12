@@ -5,16 +5,17 @@ _Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_
 _Original document: [Building debs/rpms for Kubernetes
 ](https://docs.google.com/document/d/1PAN5tVJO_NMfHZmnk8mDQTwAbFHPky7JBgWJgckNjro/edit?usp=sharing)_
 
-- [Introduction](#Introduction)
-- [Communication](#Communication)
-- [Release Steps](#Release-Steps)
-  - [Permissions](#Permissions)
-  - [Clone Release Repository](#Clone-Release-Repository)
-  - [Authenticate](#Authenticate)
-  - [Build the Debs & RPMs](#Build-the-Debs--RPMs)
-    - [Notes](#Notes)
-  - [Validating packages](#Validating-packages)
-  - [Package verification tests](#Package-verification-tests)
+- [Introduction](#introduction)
+- [Communication](#communication)
+- [Release Steps](#release-steps)
+  - [Dependecy Pre-checks](#dependecy-pre-checks)
+  - [Permissions](#permissions)
+  - [Clone Release Repository](#clone-release-repository)
+  - [Authenticate](#authenticate)
+  - [Build the Debs & RPMs](#build-the-debs--rpms)
+    - [Notes](#notes)
+  - [Validating packages](#validating-packages)
+  - [Package verification tests](#package-verification-tests)
 
 ## Introduction
 
@@ -67,10 +68,10 @@ cd $HOME/k8s-1.20.0
 git clone https://github.com/kubernetes/release.git
 cd release
 ```
-**UPDATE**: There have been some refactoring on `master` branch, so the internal script won't work as expected. For now you can checkout the latest tag `v0.1.3` before moving to next steps.
+**UPDATE**: There have been some refactoring on `master` branch, so the internal script won't work as expected. For now you can checkout the latest tag `v0.1.4` before moving to next steps.
 
 ```shell
-git checkout v0.1.3
+git checkout v0.1.4
 ```
 
 ### Authenticate
