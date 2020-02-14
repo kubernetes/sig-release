@@ -59,13 +59,13 @@ This team at times works in close conjunction with the [Product Security Committ
 Release Manager Associates are apprentices to the Branch Managers, formerly referred to as Branch Manager shadows.
 
 - Ace Eldeib ([@alexeldeib](https://github.com/alexeldeib))
-- Kendrick Coleman ([@kacole2](https://github.com/kacole2))
-- Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
-- Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
-- Taylor Dolezal ([@onlydole](https://github.com/onlydole))
-- Paul Bouwer ([@paulbouwer](https://github.com/paulbouwer))
-- Jim Angel ([@jimangel](https://github.com/jimangel))
 - Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
+- Jim Angel ([@jimangel](https://github.com/jimangel))
+- Kendrick Coleman ([@kacole2](https://github.com/kacole2))
+- Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
+- Paul Bouwer ([@paulbouwer](https://github.com/paulbouwer))
+- Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
+- Taylor Dolezal ([@onlydole](https://github.com/onlydole))
 
 ## Build Admins
 
