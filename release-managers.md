@@ -65,6 +65,7 @@ Release Manager Associates are apprentices to the Branch Managers, formerly refe
 - Taylor Dolezal ([@onlydole](https://github.com/onlydole))
 - Paul Bouwer ([@paulbouwer](https://github.com/paulbouwer))
 - Jim Angel ([@jimangel](https://github.com/jimangel))
+- Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
 
 ## Build Admins
 
