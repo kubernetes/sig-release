@@ -259,6 +259,12 @@ This will give you a suggested `--buildversion`.  Use this as:
 ./gcbmgr stage master --buildversion=v1.16.0-alpha.0.1+704790e0412842
 ```
 
+or can use using the file produced but the testing automation:
+
+```shell
+./gcbmgr stage master --buildversion=$(curl -Ls https://dl.k8s.io/ci/latest.txt)
+```
+
 Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from the last commit on the current branch.
 
 This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
@@ -324,6 +330,12 @@ The command example below is to stage a build for a beta release:
 ./gcbmgr stage release-1.16 --buildversion=v1.16.0-alpha.3.7+b3bde1fe32dd4a --nomock
 ```
 
+or
+
+```shell
+./gcbmgr stage release-1.16 --buildversion=$(curl -Ls https://dl.k8s.io/ci/latest.txt) --nomock
+```
+
 To publish (release) the build artifacts from staging beta for example, run:
 
 ```shell
@@ -340,6 +352,12 @@ For example:
 
 ```shell
 ./gcbmgr stage release-1.16 --rc --buildversion=v1.16.0-beta.2.7+d17cd235699328 --nomock
+```
+
+or
+
+```shell
+./gcbmgr stage release-1.16 --rc --buildversion=$(curl -Ls https://dl.k8s.io/ci/latest-1.16.txt) --nomock
 ```
 
 To publish the build artifacts (release), as usual use the `--buildversion=` number as specified in the output when `gcbmgr` is done with the stage command.
@@ -379,6 +397,12 @@ To initiate staging the build for the official release, the `--official` flag is
 
 ```shell
 ./gcbmgr stage release-1.16 --official --buildversion=v1.16.0-rc.2.10+4cb51f0d2d8392 --nomock
+```
+
+or
+
+```shell
+./gcbmgr stage release-1.16 --official --buildversion=$(curl -Ls https://dl.k8s.io/ci/latest-1.16.txt) --nomock
 ```
 
 In addition to `v1.16.n` this will also build and stage the subsequent patch's
