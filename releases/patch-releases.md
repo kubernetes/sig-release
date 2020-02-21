@@ -43,20 +43,22 @@ for the next patch release.
 
 ### 1.17
 
-Next patch release is **1.17.3**.
+Next patch release is **1.17.4**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.17.4 | 2020-03-09 | 2020-03-12 |
 | 1.17.3 | 2020-02-07 | 2020-02-11 |
 | 1.17.2 | [No-op release](https://groups.google.com/d/topic/kubernetes-dev/Mhpx-loSBns/discussion) | 2020-01-21 |
 | 1.17.1 | 2020-01-10 | 2020-01-14 |
 
 ### 1.16
 
-Next patch release is **1.16.7**.
+Next patch release is **1.16.8**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.16.8 | 2020-03-09 | 2020-03-12 |
 | 1.16.7 | 2020-02-07 | 2020-02-11 |
 | 1.16.6 | [No-op release](https://groups.google.com/d/topic/kubernetes-dev/Mhpx-loSBns/discussion) | 2020-01-21 |
 | 1.16.5 | 2020-01-10 | 2020-01-14 |
@@ -67,10 +69,11 @@ Next patch release is **1.16.7**.
 
 ### 1.15
 
-Next patch release is **1.15.10**.
+Next patch release is **1.15.11**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.15.11 | 2020-03-09 | 2020-03-12 |
 | 1.15.10 | 2020-02-07 | 2020-02-11 |
 | 1.15.9 | [No-op release](https://groups.google.com/d/topic/kubernetes-dev/Mhpx-loSBns/discussion) | 2020-01-21 |
 | 1.15.8 | 2020-01-10 | 2020-01-14 |
