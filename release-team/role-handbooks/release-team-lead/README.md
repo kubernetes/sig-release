@@ -296,6 +296,13 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 ### Week 13
 
 - Release Retrospective participation
+  - Make sure to confirm that the Emeritus Adviser can serve as facilitator. If Emeritus Adviser is unavailable then defer the responsibility as appropiate
+  - Make sure that the Release Retrospective invite shows up in the
+    [Kubernetes community calendar](https://calendar.google.com/calendar/embed?src=cgnt364vd8s86hr2phapfjc6uk%40group.calendar.google.com)
+    and invite the following teams as attendees
+    - kubernetes-release-team@googlegroups.com
+    - release-managers@kubernetes.io
+    - kubernetes-sig-release@googlegroups.com
 - Follow-up interviews with the media, the media roundtable
 - Contact the [Release Managers Google Group][release-managers-group] to complete the Release Team Lead & Lead Shadows offboarding tasks from the previously-opened onboarding issue
 
