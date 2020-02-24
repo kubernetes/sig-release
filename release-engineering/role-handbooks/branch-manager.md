@@ -87,7 +87,7 @@ The release branch manager is responsible for cutting a version of [Kubernetes].
    The bulk of your time commitment is during release cut days.
 2. You must allocate time to setup your system to run the release tools; eventually you'll have a routine going and become more familiar with the process.
 3. Participate in weekly one hour release team meetings.
-4. Run `./branchff` on a daily basis as soon as the release branch i.e. `release-x.y` [is created](#branch-creation). (Less than 45mins)
+4. Run `krel ff` on a daily basis as soon as the release branch i.e. `release-x.y` [is created](#branch-creation). (Less than 45mins)
 5. Your time commitment increases during code freeze (when approaching the official release), expect 3 or more 1 hour meetings in a week.
 6. Select Associates and guide them in preparation to become the section lead for the next cycle.
 7. Delegate tasks to the Associates (where applicable), so that they may exercise the release process.
@@ -372,7 +372,7 @@ In an perfect world, `rc.1` and the official release are the same commit. To get
 
 2. When to staged and release `rc.1`:
 
-   Make sure that all the changes that have been merged onto `master`, make it onto the release branch. Run [`./branchff`](#branch-fast-forward to see the state of the two branches and pull any remaining PRs from `master` onto the release branch.
+   Make sure that all the changes that have been merged onto `master`, make it onto the release branch. Run [`krel ff`](#branch-fast-forward) to see the state of the two branches and pull any remaining PRs from `master` onto the release branch.
 
    At this point in time, `master` and the release branch should have the same commits. Nothing new gets merged onto `master`, since code freeze is not lifted. Therefore, it is safe to cut the release candidate.
 
@@ -510,7 +510,7 @@ Once the new `release-x.y` branch is created, the following tasks should take pl
 
 - [Generate release branch jobs](#generate-release-branch-jobs)
 - [Update Kubernetes versions document](#update-kubernetes-versions-document)
-- [Run `./branchff` approximately a day after the branch has been created](#branch-fast-forward)
+- [Run `krel ff` approximately a day after the branch has been created](#branch-fast-forward)
 
 ### Update test-infra configurations
 
@@ -608,7 +608,7 @@ Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15015).
 6. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
 
 [sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
-[`branchff`]: https://git.k8s.io/release/branchff
+[`krel ff`]: https://git.k8s.io/release
 
 #### Update Kubernetes versions document
 
@@ -722,53 +722,57 @@ Example PRs:
 
 ### Branch Fast Forward
 
-Prior to running `./branchff`, you will need:
+Prior to running `krel ff`, you will need:
 
-- permission to write to the `/usr/local/` directory
-- permission to run under `root` privileges
 - membership in the [Release Managers GitHub Group](https://github.com/orgs/kubernetes/teams/release-managers)
+
+To compile `krel`, just install it from the [`git.k8s.io/release`](https://git.k8s.io/release) repository:
+
+```shell
+./compile-release-tools krel
+```
 
 Command invocation:
 
 ```shell
-./branchff release-x.y
+krel ff --branch release-x.y
 ```
 
 Where `X.Y` is the is release cycle version e.g. `1.16`
 
 This is done daily as soon as the `release-x.y` branch has been cut (which happens after `beta.0` is released).
 
-Earlier in the release the exact time of running [`branchff`] can be at the discretion of the branch manager, as agreed upon with the release lead.
+Earlier in the release the exact time of running [`krel ff`] can be at the discretion of the branch manager, as agreed upon with the release lead.
 
 Later in the release cycle, it will become more important to align with the release lead and the CI signal team (and probably other release team members).
 The exact time for pulling in the changes from `master` to the release branch might depend on the features that have or will be merged. Considerations could be:
 
-- We should run [`branchff`] sooner, before `$bigFeature` so we have a signal in the release branch before that feature was brought in
-- We should run [`branchff`] later, after `$theOtherFeature` has been merged, so we get signal on that feature from both the master and the release branch
+- We should run [`krel ff`] sooner, before `$bigFeature` so we have a signal in the release branch before that feature was brought in
+- We should run [`krel ff`] later, after `$theOtherFeature` has been merged, so we get signal on that feature from both the master and the release branch
 
-The first time the [`branchff`] executes, it will:
+The first time the [`krel ff`] executes, it will:
 
-- do a clone of `kubernetes/kubernetes` to a temporary directory i.e. `/tmp/branchff.random/branchff-release-x.y/src/k8s.io/kubernetes`
-- run a git merge-base
-- run a few cleanup scripts to ensure the branch’s generated API bits are in order
-  (master branch content will move on toward version `n+1`, while release branch needs to stay at version `n`)
-- commit the results of those scripts to the branch
-- push to the GitHub remote release branch
+- do a clone of `kubernetes/kubernetes` to a temporary directory i.e. `/tmp/k8s`
+- pre-check that the provided branch is a release branch and can be forwarded
+- merge the latest master ref into the release branch
+- push the results to the GitHub remote release branch
 
 It is highly recommended to run the following `git` commands as shown below:
 
 ```shell
-Go look around in /tmp/branchff.5mpBAx/branchff-release-1.16/src/k8s.io/kubernetes to make sure things look ok:
-# Any files left uncommitted?
-* git status -s
-# What does the commit look like?
-* git show
-# What are the changes we just pulled in from master?
-#   will be available after push at:
-#   https://github.com/kubernetes/kubernetes/compare/35a287caa6...d17cd23569
-* git log origin/release-1.16..HEAD
+Go look around in %s to make sure things look okay before pushing…
 
-OK to push now? (y/n):
+Check for files left uncommitted using:
+
+    git status -s
+
+Validate the fast-forward commit using:
+
+    git show
+
+Validate the changes pulled in from master using:
+
+    git log origin/release-1.16..HEAD
 ```
 
 You should see something like this when running `git show`:
@@ -794,14 +798,14 @@ Each and every commit ought to be something the release team has visibility into
 
 **The release team and the branch manager are the final safety guard on the release content.**
 
-Upon a successful mock execution of `./branchff`, proceed with:
-`./branchff release-x.y --nomock`
+Upon a successful mock execution of `krel ff`, proceed with:
+`krel ff --branch release-x.y --nomock`
 
 Subsequent runs will simply be merging in changes from `master` to the branch, keeping the previous API fixup commits on the branch.
 
-Note that the merged commits from `branchff` e.g. with `d17cd23569` from the above `git show` snippet will be tested against on Testgrid [sig-release-x.y-blocking].
+Note that the merged commits from `krel ff` e.g. with `d17cd23569` from the above `git show` snippet will be tested against on Testgrid [sig-release-x.y-blocking].
 
-Once code freeze is lifted (code thaw occurred), then there will be no need to `branchff` from `master` onto the release branch. Instead, PRs that need to be merged onto the release branch are cherry-picked over from `master`.
+Once code freeze is lifted (code thaw occurred), then there will be no need to `krel ff` from `master` onto the release branch. Instead, PRs that need to be merged onto the release branch are cherry-picked over from `master`.
 
 ### Reverts
 
@@ -855,50 +859,13 @@ The client-go major release (e.g. `v1.13.0`) is released manually a day after th
 
 ## Debugging
 
-Logs from `branchff`, `gcbmgr`, etc are stored in the `/tmp` directory and can provide more details as to why command executions are failing.
-
-For example, you might see on your terminal that the execution of`./branchdff release-x.y` fails:
-
-```shell
-Merging origin/master into release-1.16 branch: OK
-Ensure etcd is up to date: OK
-Run 'useful' (the list may be out of date) hack/update* scripts...
-Running hack/update-openapi-spec.sh:
-
-Signal ERR caught!
-
-Traceback (line function script):
-221 logrun /release/lib/common.sh
-208 main ./branchff
-
-Exiting...
-```
-
-The above unsuccessful run did not provide the full reason for the interrupted exit above, to find out more, `cd` into `/tmp` and inspect the contents of `branchff.log`:
-
-```shell
-Detected go version: go version go1.11.10 linux/amd64
-Kubernetes requires go1.12.1 or greater.
-Please install go1.12.1 or later.
-
-!!! [0519 03:02:18] Call tree:
-!!! [0519 03:02:18] 1; hack/update-openapi-sh: 29 kube::golang::setup_env(...)
- Error in /usr/local/google/branchff-release-1.15/src/k8s.io/kubernetes/hack/lib/golang.sh:495 ' ( (1<3-1 ) ) ' exited with status 2
- Call stack:
-1: /usr/local/google/branchff-release-1.15/src/k8s.io/kubernetes/
-hack/lib/golang.sh:495 kube::golang::setup_env(...)
-2: hack/update-openapi-spec.sh:29 main( ... )
-Exiting with status 1
-
-branchff::common::trapclean(): Signal ERR caught!
-branchff::common::trapclean(): Traceback (line function script) : branchff::exit(): Exiting...
-```
+Logs from `gcbmgr` etc are stored in the `/tmp` directory and can provide more details as to why command executions are failing.
 
 The logs reveals a lot more information than what's printed out on the terminal. If necessary, you can also inspect the logs on the Google Cloud console or the output that appears when running `./gcbmgr tail`.
 
 ## References
 
-A README on tools e.g. `gcbmgr`, `branchff` used in this handbook:
+A README on tools e.g. `gcbmgr`, used in this handbook:
 
 - [Release Tools Documentation](https://github.com/kubernetes/release/blob/master/README.md)
 

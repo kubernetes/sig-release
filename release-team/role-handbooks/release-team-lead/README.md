@@ -256,7 +256,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 
 - Begin daily burndown meetings
 - If the release branch, master branch and associated tests are stable, it’s time to lift code freeze. The bot will need to be updated.
-- The Branch Manager will perform one final branchff - make sure everything pending has been merged beforehand
+- The Branch Manager will perform one final branch fast-forward - make sure everything pending has been merged beforehand
 - Master branch is then opened for new pull requests on x.y (the next release). Remaining release activities will happen on the release-x.y branch via cherry picks from master.
 - Use all of the appropriate communications channels to announce the lifting of Code Freeze
 - The task is now to ensure the release branch is ready to go. This means there are zero pending PRs, no failing x.y-blocking tests, no open issues in the milestone. This will continue until release day.
