@@ -690,6 +690,11 @@ It is also helpful to remind [#sig-testing](https://kubernetes.slack.com/message
       .
 ```
 
+Example PR:
+
+ - [1.18](https://github.com/kubernetes/test-infra/pull/16603)
+ - [1.17](https://github.com/kubernetes/test-infra/pull/15301)
+
 #### Code Thaw
 
 Code Thaw removes the release cycle merge restrictions and replaces the two queries with one single query. We remain in this state until the next Code Freeze.
@@ -729,7 +734,7 @@ Prior to running `krel ff`, you will need:
 To compile `krel`, just install it from the [`git.k8s.io/release`](https://git.k8s.io/release) repository:
 
 ```shell
-./compile-release-tools krel
+make release-tools
 ```
 
 Command invocation:
