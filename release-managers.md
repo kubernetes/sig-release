@@ -11,7 +11,6 @@ The responsibilities of each role are described below.
 - [Associates](#associates)
 - [Build Admins](#build-admins)
 - [SIG Release Chairs](#sig-release-chairs)
-- [GCP IAM Groups](#gcp-iam-groups)
 
 ## Contact
 
@@ -90,18 +89,6 @@ GitHub team: [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes
 - Caleb Miles ([@calebamiles](https://github.com/calebamiles))
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Tim Pepper ([@tpepper](https://github.com/tpepper))
-
-## GCP IAM Groups
-
-The following kubernetes.io Google Groups exist to grant Release Managers access to k8s-infra GCP resources.
-
-Mail to the groups below will be ignored. Please instead use the [contact groups listed at the top of this document](#contact).
-
-- `k8s-infra-release-admins`
-- `k8s-infra-release-editors`
-- `k8s-infra-release-viewers`
-
-[Membership](https://git.k8s.io/k8s.io/groups/groups.yaml) and [permissions](https://git.k8s.io/k8s.io/infra/gcp/ensure-release-projects.sh) for each group is defined in [kubernetes/k8s.io](https://git.k8s.io/k8s.io).
 
 ---
 
