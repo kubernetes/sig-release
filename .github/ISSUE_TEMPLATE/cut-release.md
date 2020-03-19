@@ -6,8 +6,8 @@ labels: sig/release, area/release-eng
 ---
 ## Scheduled to happen: <!-- Tue, 2019-02-26 -->
 
-<!-- 
-- Add/Remove items of the checklist as you see fit 
+<!--
+- Add/Remove items of the checklist as you see fit
 - Post bumps or issues encountered along the way
 -->
 
@@ -27,10 +27,10 @@ see template below, example: https://github.com/kubernetes/sig-release/issues/84
 
 | Step | Command | Link | Start | Duration | Succeeded? |
 | --- | --- | --- | --- | --- | --- |
-| Mock stage | `./gcbmgr stage [arguments]` | <!-- link-to-MOCK-gcb-stage-run --> |  |  |  |
-| Mock release | `./gcbmgr release [arguments]` | <!-- link-to-MOCK-gcb-release-run --> |  |  |  |
-| Stage | `./gcbmgr stage [arguments]` | <!-- link-to-REAL-gcb-stage-run --> |  |  |  |
-| Release | `./gcbmgr release [arguments]` | <!-- link-to-REAL-gcb-release-run --> |  |  |  |
+| Mock stage | `krel gcbmgr --stage [arguments]` | <!-- link-to-MOCK-gcb-stage-run --> |  |  |  |
+| Mock release | `krel gcbmgr --release [arguments]` | <!-- link-to-MOCK-gcb-release-run --> |  |  |  |
+| Stage | `krel gcbmgr --stage [arguments]` | <!-- link-to-REAL-gcb-stage-run --> |  |  |  |
+| Release | `krel gcbmgr --release [arguments]` | <!-- link-to-REAL-gcb-release-run --> |  |  |  |
 | Cut packages <!-- not required for pre-releases (alpha, beta, rc) --> | -- | -- |  |  |  |
 | Notify | -- | <!-- link-to-kubernetes-announce-list-thread --> |  | -- |  |
 
