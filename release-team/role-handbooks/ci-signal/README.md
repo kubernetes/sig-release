@@ -5,6 +5,7 @@
 CI Signal lead assumes the responsibility of the quality gate for the release. This person is responsible for:
 - Continuously monitoring various e2e tests in sig-release dashboards ([master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking), [master-informing](https://k8s-testgrid.appspot.com/sig-release-master-informing), `release-x.y-blocking/informing` (x.y being the current release)) throughout the release cycle
 - Hunting flakes on presubmits that could potentially block the Kubernetes master branch ([presubmits-kubernetes-blocking](https://testgrid.k8s.io/presubmits-kubernetes-blocking))
+- Monitoring all the jobs in [sig-release-releng-blocking](https://testgrid.k8s.io/sig-release-releng-blocking) and [sig-release-releng-informing](sig-release-releng-informing) dashboards.
 - Providing early and ongoing signals on release and test health to both Release team and various SIGs
 - Ensuring that all release blocking tests provide a clear Go/No-Go signal for the release
 - Flagging regressions as close to source as possible i.e., as soon as the offending code was merged
