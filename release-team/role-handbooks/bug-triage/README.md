@@ -208,9 +208,9 @@ Your responsibility here is to actively watch for any new issues/PRs targeting t
 
 On the day of the Code Freeze, your responsibility is to try to help contributors to get the approval on their PRs and needed label. Check [How To Escalate](#how-to-escalate) part of the document for guide how to do this.
 
-Please note that code freeze is EOD Pacific Time (astronomical sun) on the day of. No items are to be removed from the milestone until the next day. 
+Please note that Code Freeze is EOD Pacific Time (astronomical sun) on the day of. No items are to be removed from the milestone until the next day. 
 
-The day after the code freeze has begun, the bug-triage team will wait to see if new exception requests are filed and approved (see [exception process](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) for more details), it is at this time you will remove the remaining issues / PRs that are not declined into the next milestone. It is important to ensure that the release lead has been informed during the burn down meeting, following code freeze, that items are being removed so they may provide any additional feedback
+The day after the Code Freeze has begun, the Bug Triage team will wait to see if new exception requests are filed and approved (see [exception process](/releases/EXCEPTIONS.md) for more details), it is at this time you will remove the remaining issues / PRs that are not approved into the next milestone. It is important to ensure that the Release Team Lead has been informed during the Burndown meetings following Code Freeze that items are being removed so they may provide any additional feedback.
 
 When the code freeze starts, the highest priority has the PRs which had `approved` and `lgtm` labels before the code freeze started and are in the milestones. Depending on the merge queue length, it might be proposed to hold PRs that have `approved` and `lgtm`, but are not in the milestone (using the following query [`is:pr is:open no:milestone label:approved label:lgtm`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+no%3Amilestone+label%3Aapproved+label%3Algtm)).
 
