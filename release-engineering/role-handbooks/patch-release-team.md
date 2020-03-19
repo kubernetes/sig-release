@@ -510,7 +510,7 @@ The freeze serves several purposes:
 1.  It allows slow test jobs like "serial", which has a period of many hours,
     to run several times at `HEAD` to ensure they pass consistently.
 
-On the day before the planned release, run a mock build with `gcbmgr`
+On the day before the planned release, run a mock build with [`gcbmgr`](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md)
 to make sure the tooling is ready as per the [Branch Manager
 Handbook](/release-engineering/role-handbooks/branch-manager.md).
 Also give the Google Debs/RPMs build staff notification that their
@@ -579,20 +579,21 @@ doc for more details.
 
 ## Release Commands Cheat Sheet
 
-| Action | Example flow for 1.13.3 |
+For more information in how to run `krel gcbmgr` please check the [command documentation page](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md)
+
+| Action | Example flow for 1.17.4 |
 | --- |--- |
 | Make sure you have latest release tooling | ```cd ~/go/src/k8s.io/release && git pull``` |
 | Configure branch | n/a |
-| Mock build staging | ```./gcbmgr stage release-1.13``` This may frequently fail. When the failure is due to lack of a green CI signal, the output will include a gives hint on a suggested ```--buildversion``` for explicit use. |
-| Mock build staging, optionally running on explicit commit (CI not green, looks like flake) | ```./gcbmgr stage release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail eaa329ae-b013-4feb-9194-68fe8597b497 ``` |
+| Mock build staging | For the command execution [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-stage). This may frequently fail. When the failure is due to lack of a green CI signal, the output will include a gives hint on a suggested ```--build-version``` for explicit use. |
 | Mock build staging success? | Visually confirm yes |
-| Mock release | ```./gcbmgr release release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail c2cfa733-de1a-4faa-a746-c4f018768ff8``` |
+| Mock release | For the command execution [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-release) |
 | Mock release success? | Visually confirm yes |
 | Mock email notify test | ```./release-notify v1.13.3-beta.1 --mailto=me@some.com``` |
 | Check mail arrives, list has expected commits? | manual/visual |
-| Official build staging | ```./gcbmgr stage --official --nomock release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail aae9f1e1-6a03-4848-ba48-c3c1f7e71f16 ``` |
+| Official build staging | For the command execution [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-stage). The only difference here is we are using the flag `--nomock` |
 | Official build staging success? | Visually confirm yes |
-| Official release | ```./gcbmgr release --official --nomock  release-1.13 --buildversion=v1.13.3-beta.0.37+721bfa751924da```  ```./gcbmgr tail bcd8809f-afd0-40fd-8498-561a596e7bbd ``` |
+| Official release | For the command execution [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-release). The only difference here is we are using the flag `--nomock` |
 | Official email notify test | ```./release-notify v1.13.3 --nomock --mailto=me@some.com``` |
 | Check mail arrives, list has expected commits? | manual/visual |
 | Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://git.k8s.io/sig-release/release-managers.md#build-admins) by name on Slack for package building |

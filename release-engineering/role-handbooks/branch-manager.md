@@ -16,11 +16,9 @@
 - [Releases Management](#releases-management)
   - [Alpha Releases](#alpha-releases)
     - [Alpha Stage](#alpha-stage)
-      - [gcbmgr stage](#gcbmgr-stage)
-      - [gcbmgr list](#gcbmgr-list)
-      - [gcbmgr tail](#gcbmgr-tail)
+      - [krel gcbmgr stage](#krel-gcbmgr-stage)
     - [Alpha Release](#alpha-release)
-      - [gcbmgr release](#gcbmgr-release)
+      - [krel gcbmgr release](#krel-gcbmgr-release)
       - [Mock vs nomock](#mock-vs-nomock)
   - [Beta Releases](#beta-releases)
   - [Release Candidates](#release-candidates)
@@ -187,25 +185,16 @@ This can be done in one of two ways:
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
 [release tools]: https://github.com/kubernetes/release
 
-### Safety Check
-
-The following command can help verify that your clone of the [release tools] are up-to-date, that your setup is fully configured, and your `gcloud` identity is authorized for the release builds:
-
-```shell
-./gcbmgr
-```
-
-This command should run successfully and even show some green colored "OK" words
-
 ## Releases Management
 
 **General overview**:
 
 Public build artifacts are published and an email notification goes out to the community. You will become very familiar with the following commands over the course of the 3 month release cycle:
 
+ - [gcbmgr](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md) Documentation
+ - `release-notify`
+
 ```shell
-./gcbmgr stage
-./gcbmgr release ${{BRANCH_NAME}} --buildversion=${{VERSIONID}} --nomock
 # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds
 ./release-notify vX.Y.0-{alpha,beta,rc}.Z
 ./release-notify vX.Y.0-{alpha,beta,rc}.Z --nomock --mailto=${{YOUREMAILADDRESS}}[a][b]
@@ -235,132 +224,69 @@ After having thoroughly read the section on cutting a release version of the han
 
 #### Alpha Stage
 
-##### gcbmgr stage
+##### krel gcbmgr stage
 
-Start staging a build by running:
-
-```shell
-./gcbmgr stage master
-```
+To run the gcbmgr to stage an Alpha release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#alpha-stage)
 
 This command should return relatively quickly and provide a link to GCP where you can track the process of the build.
+This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
+
+<!-- TODO: krel gcbmgr is not checking testgrid
 
 Early in the release cycle, it is likely that the build might fail. By default the `gcbmgr stage master` command automatically looks for a place where [release master blocking tests](https://k8s-testgrid.appspot.com/sig-release-master-blocking) have green results, which traditionally has not happened in Kubernetes on an ongoing basis.
 
 WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. But in the meantime, acknowledging today especially for an early alpha or beta release, it is possible to just build via:
 
-```shell
-./gcbmgr stage master
-```
-
-This will give you a suggested `--buildversion`.  Use this as:
-
-```shell
-./gcbmgr stage master --buildversion=v1.16.0-alpha.0.1+704790e0412842
-```
-
-or can use using the file produced but the testing automation:
-
-```shell
-./gcbmgr stage master --buildversion=$(curl -Ls https://dl.k8s.io/ci/latest.txt)
-```
-
 Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from the last commit on the current branch.
-
-This takes time (approximately 1 hour is the current norm). It’s building all the bits for a bunch of target operating systems and hardware architectures.
-
-##### gcbmgr list
-
-```shell
-./gcbmgr list
-```
-
-You should now see your new job running.
-
-##### gcbmgr tail
-
-```shell
-./gcbmgr tail
-```
-
-- To observe the output log for the build (same as on Google Cloud Console).
-- Scan output for failures and warnings.
-- Successful build information is displayed for your next steps, including a build version identifier for the staged build, like `vX.Y.0-alpha.0.N+commit-hash`. This string is passed on to the release scripting, which is nicely displayed for you to copy and paste.
-
-For more information on the usage of `./gcbmgr` run `./gcbmgr --help` or inspect the [`gcbmgr` script](https://github.com/kubernetes/release/blob/master/gcbmgr).
+-->
 
 #### Alpha Release
 
 After staging comes the actual releasing, but this may be intentionally delayed. For example, the branch manager may stage a build from the head of the release branch late in the release cycle, doing so in the morning so that it is fully build and would be releasable in the afternoon (pending CI tests will results from the head of the branch). If the results are good and the release team gives the go ahead, you can initiate the publishing portion of the release process. If staging the build only happened after the receipt of clean CI tests results, this will delay completing the entire release process for a release version (alpha,beta,rc,...). This of course presumes reproducible builds and that CI builds and tests are meaningful relative to the release builds. There is always a risk that these diverge, and this needs managed broadly by the project and the release team.
 
-##### gcbmgr release
+##### krel gcbmgr release
 
-Use the `--buildversion=` as specified in the output when `gcbmgr` is done with the stage command.
+Use the `--build-version=` as specified in the output when `krel gcbmgr` is done with the stage command.
 
-```shell
-./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash
-```
+To run the gcbmgr to release an Alpha release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#alpha-release)
 
 - This copies the staged build to public GCP buckets at well-known urls for the truncated release version string. The unique build staging identifier will subsequently be just “v1.16.0-alpha.1”, even though the staged build had an “alpha.0” in its name
 - This can be confusing. The v1.16.0-alpha.0 tag was created automatically in the past when the v1.15 branch was forked, but it wasn’t actually build.
 
 ##### Mock vs nomock
 
-Any `./gcbmgr` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `gcbmgr` take any actual impact on the release process. All this mock building/releasing can help you verify that you have a working setup!
+Any `krel gcbmgr` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `krel gcbmgr` take any actual impact on the release process. All this mock building/releasing can help you verify that you have a working setup!
 
-For example, to execute an actual run:
-
-```shell
-./gcbmgr release master --buildversion=v1.16.0-alpha.0.N+commit-hash --nomock
-```
+To get more information about this, please [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#important-notes)
 
 **n.b. This run may fail. Mock builds can only be mock released. A nomock release requires a nomock build to be staged.**
 
-Builds against the `master` branch are implicitly the next alpha. `gcbmgr` and `anago` automatically finds and increments the current build number.
+Builds against the `master` branch are implicitly the next alpha. `krel gcbmgr` and `anago` automatically finds and increments the current build number.
 
 ### Beta Releases
 
-Builds against a `release-x.y` branch are implicitly a next beta. `gcbmgr` and `anago` automatically find and increment the current build number.
+Builds against a `release-x.y` branch are implicitly a next beta. `krel gcbmgr` and `anago` automatically find and increment the current build number.
 
 **n.b. If this is a `beta.0` release, there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
 
 The command example below is to stage a build for a beta release:
 
-```shell
-./gcbmgr stage release-1.16 --buildversion=v1.16.0-alpha.3.7+b3bde1fe32dd4a --nomock
-```
 
-or
+To run the gcbmgr to stage a Beta release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-stage)
 
-```shell
-./gcbmgr stage release-1.16 --buildversion=$(curl -Ls https://dl.k8s.io/ci/latest.txt) --nomock
-```
-
-To publish (release) the build artifacts from staging beta for example, run:
-
-```shell
-./gcbmgr release release-1.16 --buildversion=v1.16.0-alpha.3.N+commit-hash --nomock
-```
+And to  run the gcbmgr to release a Beta release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-release)
 
 **n.b. If this is a `beta.0` release, there are additional tasks to complete after the release branch is cut. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation).**
 
 ### Release Candidates
 
-Adding the `--rc` flag switches behavior on to building release candidates. Again `gcbmgr` and `anago` automatically finds and increments the current build number.
+Adding the `--rc` flag switches behavior on to building release candidates. Again `krel gcbmgr` and `anago` automatically finds and increments the current build number.
 
-For example:
-
-```shell
-./gcbmgr stage release-1.16 --rc --buildversion=v1.16.0-beta.2.7+d17cd235699328 --nomock
-```
-
-or
-
-```shell
-./gcbmgr stage release-1.16 --rc --buildversion=$(curl -Ls https://dl.k8s.io/ci/latest-1.16.txt) --nomock
-```
+To run the gcbmgr to stage a Release Candidate [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#release-candidate-rc-stage)
 
 To publish the build artifacts (release), as usual use the `--buildversion=` number as specified in the output when `gcbmgr` is done with the stage command.
+
+To run the gcbmgr to release a Release Candidate [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#release-candidate-rc-release)
 
 In an perfect world, `rc.1` and the official release are the same commit. To get as close to that perfect state as we can, the following things should be considered:
 
@@ -393,17 +319,7 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 
 ### Official Releases
 
-To initiate staging the build for the official release, the `--official` flag is used. For example:
-
-```shell
-./gcbmgr stage release-1.16 --official --buildversion=v1.16.0-rc.2.10+4cb51f0d2d8392 --nomock
-```
-
-or
-
-```shell
-./gcbmgr stage release-1.16 --official --buildversion=$(curl -Ls https://dl.k8s.io/ci/latest-1.16.txt) --nomock
-```
+To run the gcbmgr to stage an Official Release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-stage) and after to release an Official Release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-release)
 
 In addition to `v1.16.n` this will also build and stage the subsequent patch's
 `beta.0`, in this example `v1.16.(n+1)-beta.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
@@ -470,7 +386,7 @@ gsutil cat gs://kubernetes-release-dev/ci/latest.txt
 Begin the release process:
 
 ```shell
-./gcbmgr stage master --buildversion=<version-from-previous-step>
+krel gcbmgr --stage --branch master --build-version=<version-from-previous-step>
 ```
 
 Proceed with the [alpha release steps][#alpha-releases].
@@ -722,8 +638,7 @@ Update the `milestoneapplier` plugin configs for the following repos to the **_n
 
 Example PRs:
 
-- [1.17, part one](https://github.com/kubernetes/test-infra/pull/15369)
-- [1.17, part two](https://github.com/kubernetes/test-infra/pull/15019)
+- [1.18](https://github.com/kubernetes/test-infra/pull/16821)
 
 ### Branch Fast Forward
 
@@ -864,13 +779,13 @@ The client-go major release (e.g. `v1.13.0`) is released manually a day after th
 
 ## Debugging
 
-Logs from `gcbmgr` etc are stored in the `/tmp` directory and can provide more details as to why command executions are failing.
+To debug `krel gcbmgr` you can set the log level to `debug` by doing `krel gcbmgr --log-level debug [args]`
 
-The logs reveals a lot more information than what's printed out on the terminal. If necessary, you can also inspect the logs on the Google Cloud console or the output that appears when running `./gcbmgr tail`.
+If necessary, you can also inspect the logs on the Google Cloud console.
 
 ## References
 
-A README on tools e.g. `gcbmgr`, used in this handbook:
+A README on tools e.g. `krel gcbmgr`, used in this handbook:
 
 - [Release Tools Documentation](https://github.com/kubernetes/release/blob/master/README.md)
 
