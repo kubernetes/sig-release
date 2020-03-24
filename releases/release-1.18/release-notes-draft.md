@@ -1,5 +1,3 @@
-## Changelog since v1.17.0
-
 A complete changelog for the release notes is now hosted in a customizable
 format at [https://relnotes.k8s.io][1]. Check it out and please give us your
 feedback!
