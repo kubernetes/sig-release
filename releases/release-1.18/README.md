@@ -4,7 +4,19 @@ weight: 98
 slug: "release" 
 ---
 
-# Kubernetes 1.18
+# Kubernetes 1.18 : A Bit Quarky
+
+<img src="large-kube-collider.png" height=600 width=auto>
+
+The Kubernetes 1.18 release logo was inspired by the Large Hadron Collider
+(LHC).
+
+**Why the LHC?**
+The LHC is the world’s largest and most powerful particle accelerator. It is the result of the collaboration of thousands of scientists from around the world, all for the advancement of science. In a similar manner, Kubernetes has been a project that has united thousands of contributors from hundreds of organizations – all to work towards the same goal of improving cloud computing in all aspects! “A Bit Quarky” as the release name is meant to remind us that unconventional ideas can bring about great change and keeping an open mind to diversity will lead help us innovate.
+
+**About the designer**
+Maru Lango is a designer currently based in Mexico City. While her area of expertise is Product Design, she also enjoys branding, illustration and visual experiments using CSS + JS and contributing to diversity efforts within the tech and design communities. You may find her in most social media as @marulango or check her website: https://marulango.com
+
 
 
 #### Links
