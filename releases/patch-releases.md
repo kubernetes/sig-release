@@ -41,6 +41,15 @@ for the next patch release.
 
 ## Timelines
 
+### 1.18
+
+Next patch release is **1.18.1**.
+
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.18.2 | 2020-04-13 | 2020-04-16 |
+| 1.18.1 | 2020-04-06 | 2020-04-08 |
+
 ### 1.17
 
 Next patch release is **1.17.5**.
