@@ -9,7 +9,6 @@ aliases:
     - nikhita # subproject owner
     - swinslow # subproject owner
   release-engineering:
-    - aleksandra-malinowska # Patch Release Team
     - calebamiles # subproject owner
     - dougm # Patch Release Team
     - feiskyer # Patch Release Team
