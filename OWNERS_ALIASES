@@ -28,6 +28,7 @@ aliases:
     - tpepper # subproject owner / 1.12 RT Lead
   branch-managers:
     - cpanato
+    - hasheddan
     - saschagrunert
   build-admins:
     - aleksandra-malinowska

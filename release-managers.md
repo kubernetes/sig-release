@@ -51,6 +51,7 @@ Branch Managers are responsible for minor releases (`x.y.z`, where `z` = 0) of K
 This team at times works in close conjunction with the [Product Security Committee][psc] and therefore should abide by the guidelines set forth in the [Security Release Process][security-release-process].
 
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
+- Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
 - Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
 
 ## Associates
@@ -58,7 +59,6 @@ This team at times works in close conjunction with the [Product Security Committ
 Release Manager Associates are apprentices to the Branch Managers, formerly referred to as Branch Manager shadows.
 
 - Ace Eldeib ([@alexeldeib](https://github.com/alexeldeib))
-- Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
 - Jim Angel ([@jimangel](https://github.com/jimangel))
 - Kendrick Coleman ([@kacole2](https://github.com/kacole2))
 - Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
