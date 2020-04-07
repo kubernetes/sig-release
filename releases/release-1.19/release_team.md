@@ -1,0 +1,16 @@
+# Kubernetes 1.19 Release Team
+
+| **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
+|---|---|---|
+| Lead | Taylor Dolezal ([@onlydole](https://github.com/onlydole) / Slack: `@onlydole`) | Bob Killen ([@mrbobbytables](https://github.com/mrbobbytables) / Slack: `@mrbobbytables`) |
+| Enhancements | Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`) | |
+| CI Signal | Daniel Mangum ([@hasheddan](https://github.com/hasheddan) / Slack: `@hasheddan`) | |
+| Bug Triage | Marky Jackson / ([@markyjackson-taulia](https://github.com/markyjackson-taulia) / Slack: `@markyjackson`) | |
+| Docs | Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`) | |
+| Release Notes | Adolfo García ([@puerco](https://github.com/puerco) / Slack: `@puerco`) | |
+| Communications | Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkoerbi`) | |
+| Emeritus Adviser | Tim Pepper ([@tpepper](https://github.com/tpepper)) / Slack: `@tpepper`) | -- |
+
+Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
+
+The schedule for all patch releases can be found at [Patch Releases page](/releases/patch-releases.md). It will be updated to include 1.19, once the 1.19 release cycle concludes.
