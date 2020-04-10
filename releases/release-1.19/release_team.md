@@ -2,7 +2,7 @@
 
 | **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |---|---|---|
-| Lead | Taylor Dolezal ([@onlydole](https://github.com/onlydole) / Slack: `@onlydole`) | Bob Killen ([@mrbobbytables](https://github.com/mrbobbytables) / Slack: `@mrbobbytables`) |
+| Lead | Taylor Dolezal ([@onlydole](https://github.com/onlydole) / Slack: `@onlydole`) | Bob Killen ([@mrbobbytables](https://github.com/mrbobbytables) / Slack: `@mrbobbytables`), Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard) / Slack: `@jerickar`) |
 | Enhancements | Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`) | |
 | CI Signal | Daniel Mangum ([@hasheddan](https://github.com/hasheddan) / Slack: `@hasheddan`) | |
 | Bug Triage | Marky Jackson / ([@markyjackson-taulia](https://github.com/markyjackson-taulia) / Slack: `@markyjackson`) | |
