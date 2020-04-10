@@ -54,6 +54,8 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
 - Ensure yourself and your shadows are on the release team meeting invites
 - Check if there are any holidays or events (KubeCon!) that occur during this release
   - This can/will affect your communication with the CNCF and SIG Chairs. Plan accordingly
+- Setup a communications plan aligned with the Release Calendar
+- Agree on participation together with Enhancements team lead at the next SIG Leads monthly meeting to align on expectations and communication possibilities
 
 ### Week 2
 
@@ -63,6 +65,7 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
   - SIG Release Chairs
 
   [Membership](https://git.k8s.io/k8s.io/groups/groups.yaml) for this group is defined in [kubernetes/k8s.io](https://git.k8s.io/k8s.io).
+- Organize a meeting with the SIG leads to align on the communications timeline and support for writing features posts
 
 ### Week 3
 
@@ -73,11 +76,13 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
 ### Week 4
 
 - This is enhancements freeze. The fun begins next week
+- Work with enhancements and release note leads to determine which deliverables are most note worthy
+  - Approach SIG Chairs for said items and request a couple of paragraphs on each deliverable
 
 ### Week 5
 
-- Work with enhancements and release note leads to determine which deliverables are most note worthy
-  - Approach SIG Chairs for said items and request a couple of paragraphs on each deliverable
+- Final agreement on note worthy enhancements
+  - Start feature blog drafts and share for each feature blog a document to contribute in
 - Schedule release webinar with CNCF
 
 ### Week 6
@@ -89,7 +94,7 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
 
 - N/A
 
-### Week 8
+### Week 8 
 
 - N/A
 
@@ -113,8 +118,10 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
 - This is release week!
   - Keep CNCF in the loop with any potential delays to the release
 - Publish release blog
+- Finalize feature blogs
 
 ### Week 13
 
 - Release retrospective participation
+- Publish feature blogs
 - Update this document!
