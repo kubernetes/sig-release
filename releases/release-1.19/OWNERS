@@ -7,7 +7,7 @@ approvers:
 reviewers:
   - palnabarun            # Enhancements
   - hasheddan             # CI Signal
-  - markyjackson-taulia   # Bug Triage
+  - gianarb               # Bug Triage
   - savitharaghunathan    # Docs
   - puerco                # Release Notes
   - mkorbi                # Communications
