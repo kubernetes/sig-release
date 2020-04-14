@@ -5,7 +5,7 @@
 | Lead | Taylor Dolezal ([@onlydole](https://github.com/onlydole) / Slack: `@onlydole`) | Bob Killen ([@mrbobbytables](https://github.com/mrbobbytables) / Slack: `@mrbobbytables`), Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard) / Slack: `@jerickar`) |
 | Enhancements | Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`) | |
 | CI Signal | Daniel Mangum ([@hasheddan](https://github.com/hasheddan) / Slack: `@hasheddan`) | |
-| Bug Triage | Marky Jackson / ([@markyjackson-taulia](https://github.com/markyjackson-taulia) / Slack: `@markyjackson`) | |
+| Bug Triage | Gianluca Arbezzano / ([@gianarb](https://github.com/gianarb) / Slack: `@gianarb`) | |
 | Docs | Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`) | |
 | Release Notes | Adolfo García ([@puerco](https://github.com/puerco) / Slack: `@puerco`) | |
 | Communications | Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkoerbi`) | |
