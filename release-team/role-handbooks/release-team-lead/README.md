@@ -122,6 +122,28 @@ Release Team selection should happen in accordance with the [Release Team select
   - Kubernetes 1.16: Unlimited Breadsticks For All
   - Kubernetes 1.17: The Chillest Release - Capynetes
 
+### Mailing List Standards
+
+Important communications and discussions should be posted in the Release Team
+mailing list [kubernetes-release-team].
+
+This list is owned by SIG Release and as such the SIG Release Chairs are owners
+of it.
+While SIG Release leads are owners of this list, the Release Team Lead and
+Release Team Lead shadows will serve as managers of the list for the duration of the cycle.
+
+The Release Team Lead and Release Team Lead shadows should periodically go through
+the Release Team mailing list and prune members from the last release who are
+no longer part of the Release Team.
+This should be done after shadows for the new release cycle have been chosen
+but before sending invites to the new members.
+
+The membership criteria is as follows:
+* All members of the Release Team must be part of the mailing list
+* All members of the [Branch Management Team](https://github.com/kubernetes/sig-release/blob/master/release-managers.md#branch-managers)
+  must be part of the mailing list
+* SIG Release Chairs must be part of the mailing list
+
 ## Release theme gifts
 
 You cannot start too early on this!
