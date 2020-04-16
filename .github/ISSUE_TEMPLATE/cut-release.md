@@ -25,6 +25,20 @@ see template below, example: https://github.com/kubernetes/sig-release/issues/84
 
 ## Release steps
 
+[krel](https://github.com/kubernetes/release/tree/master/docs/krel) version:
+<!-- 
+Replace with output of `krel version` then uncomment.
+```
+GitVersion:    v0.2.7
+GitCommit:     191ddd0b0b49af1adb04a98e45cebdd36cae9307
+GitTreeState:  clean
+BuildDate:     2020-04-16T09:45:37Z
+GoVersion:     go1.13.4
+Compiler:      gc
+Platform:      linux/amd64
+```
+-->
+
 | Step | Command | Link | Start | Duration | Succeeded? |
 | --- | --- | --- | --- | --- | --- |
 | Mock stage | `krel gcbmgr --stage [arguments]` | <!-- link-to-MOCK-gcb-stage-run --> |  |  |  |
