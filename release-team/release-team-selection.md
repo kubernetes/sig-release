@@ -77,7 +77,7 @@ Following submissions, the questionnaires will be reviewed by role leads of the 
 
 Volunteers that meet the requirements of the respective role will be contacted by those leads via some convenient mechanism (Slack, video chat, etc.) to further discuss.
 
-After vetting the volunteers for their roles, role leads should make a final decision on selected shadows with the incoming Release Team Lead.
+After vetting the volunteers for their roles, role leads should make a final decision on selected shadows with the incoming Release Team Lead. Once selections have been finalized, each role lead should submit a PR to the `release_team.md` file of the release to add the selected shadows. Please refer to [this PR](https://github.com/kubernetes/sig-release/pull/942) for an example. 
 
 
 ### Sample Questionnaire
