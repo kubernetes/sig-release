@@ -64,6 +64,7 @@ The 1.19 release cycle is proposed as follows:
 | 1.19.0-rc.3 released | Branch Manager | Tue, July 21 | week 15 | |
 | Burndown Meetings daily | Lead | Mon, July 27 | week 16 | |
 | **Cherry Pick Deadline** (EOD PST) | Branch Manager | Thu, July 30 | week 16 | |
+| **Test Freeze** (EOD PST) | Branch Manager | Thu, July 30 | week 16 | |
 | 1.19.0-rc.4 released | Branch Manager | Tue, August 4 | week 17 | |
 | **Release Blackout - KubeCon** | Community | Mon, August 10 - Fri, August 21 | week 18 - week 19 | |
 | **v1.19.0 released** | Branch Manager | Tue, August 25 | week 20 | |
