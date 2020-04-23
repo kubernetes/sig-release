@@ -6,7 +6,7 @@
 | Enhancements | Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`) | |
 | CI Signal | Daniel Mangum ([@hasheddan](https://github.com/hasheddan) / Slack: `@hasheddan`) | Hosam Kamel ([@hkamel](https://github.com/hkamel) / Slack: `@hkamel`), Robert Kielty ([@RobertKielty](https://github.com/RobertKielty) / Slack: `@RobKielty`), Sayan Chowdhury ([@sayanchowdhury](https://github.com/sayanchowdhury) / Slack: `@yudocaa`), Vineeth Pothulapati ([@VineethReddy02](https://github.com/VineethReddy02) / Slack: `@Vineeth`) |
 | Bug Triage | Gianluca Arbezzano / ([@gianarb](https://github.com/gianarb) / Slack: `@gianarb`) | |
-| Docs | Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`) | |
+| Docs | Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`) | Anna Jung ([@annajung](https://github.com/annajung) / Slack: `@annajung`), Mikael Johansson ([@mikejoh](https://github.com/mikejoh) / Slack: `@mikjoh`), Zachary Estrella ([@zestrells](https://github.com/zestrells) / Slack: `@zestrella`), Divya Mohan ([@divya-mohan0209](https://github.com/divya-mohan0209) / Slack: `@Divya Mohan`) | 
 | Release Notes | Adolfo García ([@puerco](https://github.com/puerco) / Slack: `@puerco`) | |
 | Communications | Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkoerbi`) | |
 | Emeritus Adviser | Tim Pepper ([@tpepper](https://github.com/tpepper)) / Slack: `@tpepper`) | -- |
