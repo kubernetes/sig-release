@@ -8,7 +8,7 @@
 | Bug Triage | Gianluca Arbezzano / ([@gianarb](https://github.com/gianarb) / Slack: `@gianarb`) | |
 | Docs | Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`) | Anna Jung ([@annajung](https://github.com/annajung) / Slack: `@annajung`), Mikael Johansson ([@mikejoh](https://github.com/mikejoh) / Slack: `@mikjoh`), Zachary Estrella ([@zestrells](https://github.com/zestrells) / Slack: `@zestrella`), Divya Mohan ([@divya-mohan0209](https://github.com/divya-mohan0209) / Slack: `@Divya Mohan`) | 
 | Release Notes | Adolfo García ([@puerco](https://github.com/puerco) / Slack: `@puerco`) | |
-| Communications | Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkoerbi`) | |
+| Communications | Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkoerbi`) | Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@sandoval`), Kendall Roden ([@kendallroden](https://github.com/kendallroden) / Slack: `@keroden`), Meenakshi Kaushik ([@mkhaas](https://github.com/mkhaas) / Slack: `@meenakshi`), Russel Cantwell ([@RCantw3ll](https://github.com/RCantw3ll) / Slack: `@RCantw3ll`) |
 | Emeritus Adviser | Tim Pepper ([@tpepper](https://github.com/tpepper)) / Slack: `@tpepper`) | -- |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
