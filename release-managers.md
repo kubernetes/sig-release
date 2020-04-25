@@ -36,7 +36,6 @@ GitHub Access Controls: [@kubernetes/release-managers](https://github.com/orgs/k
 
 GitHub Mentions: [@kubernetes/patch-release-team](https://github.com/orgs/kubernetes/teams/patch-release-team)
 
-- Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
 - Doug MacEachern ([@dougm](https://github.com/dougm))
 - Hannes Hörl ([@hoegaarden](https://github.com/hoegaarden))
 - Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
