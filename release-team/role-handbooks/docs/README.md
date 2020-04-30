@@ -254,7 +254,7 @@ This allows us to avoid merge conflicts on release day with `dev-[future release
 ```
 $ git remote add upstream https://github.com/kubernetes/website.git
 $ git fetch upstream
-$ git checkout upstream/release-[current release]
+$ git checkout --track upstream/release-[current release]
 $ git merge upstream/master
 $ git checkout -b merged-master-release-[current release]
 $ git commit -m "merged master into release-[current release] to keep in sync"
@@ -270,7 +270,7 @@ Submit a PR against upstream `release-[current release]`  from your fork  `merge
 ```
 $ git remote add upstream https://github.com/kubernetes/website.git
 $ git fetch upstream
-$ git checkout upstream/dev-[future release]
+$ git checkout --track upstream/dev-[future release]
 $ git merge upstream/master
 $ git checkout -b merged-master-dev-[future release]
 $ git commit -m "merged master into dev-[future release] to keep in sync"
