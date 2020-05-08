@@ -116,6 +116,7 @@ As you work through the checklist, use the following PRs as guides:
 ### Release Manager Associate
 
 - [ ] Update GitHub teams [(`kubernetes/org`)](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
+  - `milestone-maintainers`
   - `release-engineering`
   - `sig-release`
 - [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/groups.yaml)
