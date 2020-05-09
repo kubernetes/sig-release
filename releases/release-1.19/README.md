@@ -32,7 +32,7 @@ The 1.19 release cycle is proposed as follows:
 - **Thursday, June 25**: Week 11 - [Code Freeze]
 - **Thursday, July 9**: Week 14 - Docs must be completed and reviewed
 - **Tuesday, August 4**: Week 17 - Kubernetes v1.19.0 released
-- **Thursday, August 20**: Week 19 - Release Retrospective
+- **Thursday, August 13**: Week 18 - Release Retrospective
 
 
 ## Timeline
@@ -66,7 +66,7 @@ The 1.19 release cycle is proposed as follows:
 | **Cherry Pick Deadline** (EOD PST) | Branch Manager | Thu, July 30 | week 16 | |
 | **Test Freeze** (EOD PST) | Branch Manager | Thu, July 30 | week 16 | |
 | **v1.19.0 released** | Branch Manager | Tue, August 4 | week 17 | |
-| **Release Retrospective** | Community | Thu, August 20 | week 19 | |
+| **Release Retrospective** | Community | Thu, August 13 | week 18 | |
 
 ## Phases
 
