@@ -7,6 +7,7 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 - [Release images](#release-images)
   - [Release: `debian-base`](#release-debian-base)
   - [Release: `debian-iptables`](#release-debian-iptables)
+  - [Release: `go-runner`](#release-go-runner)
 - [Non-release images](#non-release-images)
 - [Non-org images](#non-org-images)
 
@@ -17,15 +18,20 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 | Image Name | Reasons for exception |
 |---|---|
 | [debian-iptables] | Needed to supported images that require `iptables` |
-| [kube-apiserver][core-images] | Causes performance regression, requires further investigation on klog when running 2000 nodes scalability test. OWNER:@yuwenma |
-| [kube-controller-manager][core-images] | Causes performance regression, requires further investigation on klog when running 2000 nodes scalability test. OWNER:@yuwenma |
-| [kube-scheduler][core-images] | Causes performance regression, requires further investigation on klog when running 2000 nodes scalability test. OWNER:@yuwenma |
+| [kube-controller-manager][core-images] | [Flexvolume master driver is blocking controller-manager from moving to distroless](https://github.com/kubernetes/kubernetes/issues/78737) |
 
 ### Release: `debian-iptables`
 
 | Image Name | Reasons for exception |
 |---|---|
 | [kube-proxy][core-images] | Requires `iptables` |
+
+### Release: `go-runner`
+
+| Image Name | Reasons for exception |
+|---|---|
+| [kube-apiserver][core-images] | `go-runner` (`distroless++`)[[1](https://github.com/kubernetes/kubernetes/pull/90804)][[2](https://github.com/kubernetes/kubernetes/pull/90674)] |
+| [kube-scheduler][core-images] | `go-runner` (`distroless++`)[[1](https://github.com/kubernetes/kubernetes/pull/90804)][[2](https://github.com/kubernetes/kubernetes/pull/90674)] |
 
 ## Non-release images
 
