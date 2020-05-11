@@ -243,25 +243,9 @@ Reach out to release notes team to see if there's anything that might need docs 
 
 > Hey :wave: Release Notes folks! I just wanted to touch base early in the cycle to introduce myself (Jim Angel, SIG Docs Lead for 1.14) and to ask that we stay in touch as you start drafting your release notes. This came up from previous SIG Docs Leads, who said they found things in the release notes that _probably needed docs_. Any questions?
 
-#### Maintain the current and upcoming `dev` / `release` branches
+#### Maintain the current and upcoming `dev` branch
 
-This allows us to avoid merge conflicts on release day with `dev-[future release]` and it allows us to easily sunset the current docs under it's new branch`release-[current release]` after we merge `dev-[future release]`.
-
-##### Periodically merge `master` into `release-[current release]`.
-
- ⚠️ To merge `master` into `release-[current release]` on your local fork:
-
-```
-$ git remote add upstream https://github.com/kubernetes/website.git
-$ git fetch upstream
-$ git checkout --track upstream/release-[current release]
-$ git merge upstream/master
-$ git checkout -b merged-master-release-[current release]
-$ git commit -m "merged master into release-[current release] to keep in sync"
-$ git push origin merged-master-release-[current release]
-```
-
-Submit a PR against upstream `release-[current release]`  from your fork  `merged-master-release-[current release]`.
+This allows us to avoid merge conflicts on release day with `dev-[future release]`.
 
 ##### Periodically merge `master` into `dev-[future release]`.
 
@@ -457,12 +441,50 @@ $ git push origin config-toml-1.14
 
 ---
 
+#### Create the release branch
+
+Creating the release branch lets you snapshot the current docs in a new branch, `release-[current release]`, after merging `dev-[future release]`. For example: if `master` represents `v1.20`, you would create `release-1.20`.
+
+> **Note:** Creating a branch requires someone with write access to `k/website`, such as a [SIG Docs co-chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership).
+
+- From [k/website](https://github.com/kubernetes/website) click on `master` branch.
+- Type the name of the release branch.
+- **click** Create branch release-x.xx from master
+
+![](pics/new-branch.png)
+
+> Note: if the release branch is created before the website is frozen you may need to merge in master to keep up-to-date
+
+To merge `master` into `release-[current release]` on your local fork:
+
+```
+$ git remote add upstream https://github.com/kubernetes/website.git
+$ git fetch upstream
+$ git checkout --track upstream/release-[current release]
+$ git merge upstream/master
+$ git checkout -b merged-master-release-[current release]
+$ git commit -m "merged master into release-[current release] to keep in sync"
+$ git push origin merged-master-release-[current release]
+```
+
+#### Update Netlify
+
+Update the Netlify configuration. (A [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with access):
+
+Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
+
+- Create a Netlify site that builds from `release-[future release]` branch. Even though the `[future release]` is currently `master` (e.g: https://kuberneteio), eventually `master` will be a newer k8s version and we'll use the `release-[future release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
+  - Taking the defaults here is mostly fine
+  - When in doubt, compare it to a working example
+  - e.g, site name: k8s-v1-20
+  - e.g, custom domain: v1-20.docs.kubernetes.io
+
 #### Freeze Kubernetes website
 
 24 hours before the release, freeze the repo. No PRs allowed to merge AT ALL until the release PR has successfully merged.
 
 - Submit an issue with `tide/merge-blocker` label.
-- Submit a freeze announcement following [our protocol](#COMUNICATE-ALL-3-MAJOR-DATES-AT-LEAST-A-WEEK-PRIOR-INCLUDING-THE-RELEASE-DATE-REPO-FREEZE-FOLLOWING-THE-BELOW-METHODS)
+- Submit a freeze announcement following [our protocol](#communicate-major-deadlines)
 
 #### Inform localization teams
 
@@ -569,15 +591,6 @@ git commit --allow-empty -m "initial commit"
 git push -u origin dev-1.15
 ```
 
-Create a new release-[future-release] (now "current release") to represent the "sunset branch" that will get merged next cycle.
-
-```
-git clone https://github.com/kubernetes/website.git
-git checkout -b release-1.14
-git commit --allow-empty -m "initial commit"
-git push -u origin release-1.14
-```
-
 Enable branch protection on the new `dev-` branch and deprecate the older one, e.g: https://github.com/kubernetes/test-infra/pull/11984
 
 #### Create milstone
@@ -586,24 +599,17 @@ Create milestone for NEW upcoming release. Depending on your permissions, you mi
 
 #### Update Netlify
 
-Update the Netlify (contact a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) if you do not have access and they can assist with this):
+Update  Netlify (contact a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) if you do not have access and they can assist with this):
 
 Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
 - Clean Up
   - Delete the oldest docs site (usually a deprecated version 5+ releases ago)
-
 - Update [vnext](https://app.netlify.com/sites/kubernetes-io-vnext-staging/settings) staging
   - Point at the new future dev-[future release]
   - Taking the defaults here is mostly fine
   - When in doubt, compare it to a working example
   - (check) build only production branch
-
-- Create a Netlify site that builds from `release-[future release]` branch. Even though the `[future release]` is currently `master` (e.g: https://kuberneteio), eventually `master` will be a newer k8s version and we'll use the `release-[future release]` branch to contain all prior changes - like a snapshot. (e.ghttps://v1-14.docs.kubernetes.io)
-  - Taking the defaults here is mostly fine
-  - When in doubt, compare it to a working example
-  - e.g, site name: k8s-v1-14
-  - e.g, custom domain: v1-14.docs.kubernetes.io
 
 - Save the change and verify that the change is live at [https://kubernetes-io-vnext-staging.netlify.com/](https://kubernetes-io-vnext-staging.netlify.com/).
 
