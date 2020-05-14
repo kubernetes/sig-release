@@ -79,7 +79,7 @@ Right after the CI signal release team is formed, CI signal lead is responsible 
 
 Here are some good early deliverables from the CI Signal lead between start of the release to enhancement freeze.
 - Start maintain the [CI signal project board](https://github.com/orgs/kubernetes/projects/11) and keep it up-to-date with issues tracking any test failure/flake
-- Copy over any open test issues from previous release and follow up on them with owners
+- Copy over any open test issues from previous release, assign a member of the CI signal team, and have that member follow up on the issue with owners
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
   - Make sure all issues are titled either:
     - For failing tests: `[Failing Test]: testgrid-tab-name (prow-job-name)`
@@ -90,9 +90,10 @@ Here are some good early deliverables from the CI Signal lead between start of t
   - If you are aware of the individual associated with the enhancement area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around
   - Add @kubernetes/sig-foo-test-failures to draw SIG-foo’s attention to the issue
   - CC @ci-signal github team on the issue to let rest of the team know about it, you might also CC the release lead and bug triage lead if the issue needs extra attention immediately
+  - Assign the issue to yourself or recruit another member of the CI signal team to own the issue. The CI signal team member assigned to an issue is responsible for driving it to resolution alongside the assignee from the appropriate SIG
   - Post the test failure in SIG’s Slack channel to get help in routing the issue to the rightful owner(s)
   - [Sample test failure issue](https://github.com/kubernetes/kubernetes/issues/81191)
-  - Add the issue to [CI signal board](https://github.com/orgs/kubernetes/projects/11) under "New"
+  - Add the issue to [CI signal board](https://github.com/orgs/kubernetes/projects/11) under "New". The CI signal team lead is responsible for making sure every issue on the CI signal board is assigned to a member of the CI signal team and is being actively driven to resolution
 - Build and maintain a document of area experts / owners across SIGs for future needs e.g.: Scalability experts, upgrade test experts etc
 
 #### **_Best Practice:_**
