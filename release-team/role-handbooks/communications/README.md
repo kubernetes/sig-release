@@ -47,81 +47,183 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
 
 ## Release Milestone Activities
 
-### Week 1
+<table>
+    <tr>
+        <td><h3><b>Release Week</h3></b></td>
+        <td><h3><b>RW 1.19</h3></b></td>
+        <td><h3><b>Milestones</h3></b></td>
+        <td><h3><b>Activities</h3></b></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td><b>Release Start</b></td>
+        <td>
+        <ul>
+        <li>Select your shadows
+        <li>Ensure yourself and your shadows are entered into the release contact sheet
+        <li>Ensure yourself and your shadows are on the release team meeting invites
+        <li>Check if there are any holidays or events (KubeCon!) that occur during this release
+        <ul>
+        <li>This can/will affect your communication with the CNCF and SIG Chairs. Plan accordingly
+        </ul>
+        <li>Setup a communications plan aligned with the Release Calendar
+        <li>Agree on participation together with Enhancements team lead at the next SIG Leads monthly meeting to align on expectations and communication possibilities
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>2</td>
+        <td></td>
+        <td>
+        <ul>
+        <li>Update the <code>release-comms@kubernetes.io</code> Google Group to ensure the list <b>only includes</b>:
+        <ul>
+        <li>The current release cycle's Release Team Lead & Lead Shadows
+        <li>The current release cycle's Communications Lead & Comms Shadows
+        <li>SIG Release Chairs 
+        </ul></ul>
+        <p><a href="https://git.k8s.io/k8s.io/groups/groups.yaml">Membership</a> for this group is defined in <a href="https://git.k8s.io/k8s.io">kubernetes/k8s.io</a>.</p>
+        <ul>
+        <li>Organize a meeting with the SIG leads to align on the communications timeline and support for writing features posts
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>3-5</td>
+        <td></td>
+        <td>
+        <ul>
+        <li>Work with the enhancements lead to understand what might be delivered
+        <li>You should get access to the enhancements tracking sheet. You should check this regularly
+        <ul>
+        <li>Establish initial meeting with team to introduce everyone, collective tasks, and upcoming timelines
+        </ul>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>6</td>
+        <td><b>Enhancements Freeze</b></td>
+        <td>
+        <ul>
+        <li>This is enhancements freeze. The fun begins next week
+        <li>Work with enhancements and release note leads to determine which deliverables are most note worthy
+        <ul>
+        <li>Approach SIG Chairs for said items and request a couple of paragraphs on each deliverable
+        </ul>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>7</td>
+        <td></td>
+        <td>
+        <ul>
+        <li>Final agreement on note worthy enhancements
+        <li>Start feature blog drafts and share for each feature blog a document to contribute in
+        <li>Schedule release webinar with CNCF
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>8</td>
+        <td></td>
+        <td>
+        <ul>
+        <li>Schedule press and analyst pre-briefings and interviews for the release lead with CNCF
+        <li>Schedule release blog and press embargo with CNCF
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>9</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>10</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>11</td>
+        <td><b>Code Freeze</b></td>
+        <td>
+        <ul>
+        <li>Send release blog draft to CNCF
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>12-14</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>15</td>
+        <td></td>
+        <td>
+        <ul>
+        <li>Finalise the release blog
+        <li>Work with the CNCF communications team to continue to schedule press and analyst pre-briefings and interviews
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>16</td>
+        <td><b>Cherry Pick Deadlines</b></td>
+        <td>
+        <ul>
+        <li>Finalize the blog, and adjust based on what was delivered
+        <li>Coordinate release timing with the CNCF, Media, Release team (not embargo for media stories may release this week)
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>17</td>
+        <td><b>Release</b></td>
+        <td>
+        <ul>
+        <li><b>This is release week!</b>
+        <ul>
+        <li>Keep CNCF in the loop with any potential delays to the release
+        </ul>
+        <li>Publish release blog
+        <li>Finalize feature blogs
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>18</td>
+        <td></td>
+        <td>KubeCon/CloudNativeCon Europe</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>19</td>
+        <td><b>Retrospective</b></td>
+        <td>
+        <ul>
+        <li>Release retrospective participation
+        <li>Publish feature blogs
+        <li>Update this document!
+        </ul>
+        </td>
+    </tr>
+</table>
 
-- Select your shadows
-- Ensure yourself and your shadows are entered into the release contact sheet
-- Ensure yourself and your shadows are on the release team meeting invites
-- Check if there are any holidays or events (KubeCon!) that occur during this release
-  - This can/will affect your communication with the CNCF and SIG Chairs. Plan accordingly
-- Setup a communications plan aligned with the Release Calendar
-- Agree on participation together with Enhancements team lead at the next SIG Leads monthly meeting to align on expectations and communication possibilities
 
-### Week 2
-
-- Update the `release-comms@kubernetes.io` Google Group to ensure the list **_only includes_**:
-  - The current release cycle's Release Team Lead & Lead Shadows
-  - The current release cycle's Communications Lead & Comms Shadows
-  - SIG Release Chairs
-
-  [Membership](https://git.k8s.io/k8s.io/groups/groups.yaml) for this group is defined in [kubernetes/k8s.io](https://git.k8s.io/k8s.io).
-- Organize a meeting with the SIG leads to align on the communications timeline and support for writing features posts
-
-### Week 3
-
-- Work with the enhancements lead to understand what might be delivered
-  - You should get access to the enhancements tracking sheet. You should check this regularly
-- Establish initial meeting with team to introduce everyone, collective tasks, and upcoming timelines
-
-### Week 4
-
-- This is enhancements freeze. The fun begins next week
-- Work with enhancements and release note leads to determine which deliverables are most note worthy
-  - Approach SIG Chairs for said items and request a couple of paragraphs on each deliverable
-
-### Week 5
-
-- Final agreement on note worthy enhancements
-  - Start feature blog drafts and share for each feature blog a document to contribute in
-- Schedule release webinar with CNCF
-
-### Week 6
-
-- Schedule press and analyst pre-briefings and interviews for the release lead with CNCF
-- Schedule release blog and press embargo with CNCF
-
-### Week 7
-
-- N/A
-
-### Week 8 
-
-- N/A
-
-### Week 9
-
-- The burn-down meetings begin
-- Send release blog draft to CNCF
-
-### Week 10
-
-- Finalise the release blog
-- Work with the CNCF communications team to continue to schedule press and analyst pre-briefings and interviews
-
-### Week 11
-
-- Finalize the blog, and adjust based on what was delivered
-- Coordinate release timing with the CNCF, Media, Release team (not embargo for media stories may release this week)
-
-### Week 12
-
-- This is release week!
-  - Keep CNCF in the loop with any potential delays to the release
-- Publish release blog
-- Finalize feature blogs
-
-### Week 13
-
-- Release retrospective participation
-- Publish feature blogs
-- Update this document!
