@@ -52,6 +52,7 @@ Once most of the Role Leads are selected, the EA should solicit candidates for S
 4. Close the Shadow Application around 7-10 days after the initial announcement.
 5. Chat with each of the incoming Role Leads about selecting their shadows, and make sure that they stay on schedule for it.
 6. Once all role leads select their shadows the EA will send out a notification to all applicants not selected for this release cycle 
+7. Ensure the outgoing EA or one of the SIG Release co-chairs has added you in as an owner of the [kubernetes-release-team-shadows](https://groups.google.com/forum/#!forum/kubernetes-release-team-shadows) Google Group.
 
 The most time-consuming part of this is helping the Role Leads select shadows.  In addition to the usual dilemmas of too many good candidates, the EA needs to give advice that makes sure that a diverse pool of shadows is selected, and that the Role Lead doesn't take on more shadows than they can effectively mentor.
 
@@ -61,7 +62,9 @@ Occasionally, a role may not get enough qualified candidates, in which case it's
 
 Weeks: 1 to 12
 
-First, have a "shadow orientation" meeting sometime in week 2 or week 3, after all shadows are selected.  This meeting will likely have to be split for time zone reasons and held twice.  In this meeting, go over the information in the main Shadow docs, give information about the release team and SIG Release, and then open things for questions or discussion. Make sure that Shadows know they can come to you if they have problems during their apprenticeship.
+Remove prior release shadows from the [kubernetes-release-team-shadows](https://groups.google.com/forum/#!forum/kubernetes-release-team-shadows) Google Group and add the current release shadows.  This list can facilitate easier communication between what at times is 2-3 dozen shadows.
+
+Poll the new shadows (eg: [Doodle](Doodle.com)) for their availability to have a "shadow orientation" meeting sometime in week 2 or week 3, after all shadows are selected.  This meeting will likely have to be split for time zone reasons and held twice.  In this meeting, go over the information in the main Shadow docs, give information about the release team and SIG Release, and then open things for questions or discussion. Make sure that Shadows know they can come to you if they have problems during their apprenticeship.
 
 **For leads, ensure they have enough support for their role, and to be an effective mentor to their shadows.**
 
