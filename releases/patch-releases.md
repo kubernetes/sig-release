@@ -43,20 +43,22 @@ for the next patch release.
 
 ### 1.18
 
-Next patch release is **1.18.3**.
+Next patch release is **1.18.4**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.18.4 | 2020-06-12 | 2020-06-17 |
 | 1.18.3 | 2020-05-15 | 2020-05-20 |
 | 1.18.2 | 2020-04-13 | 2020-04-16 |
 | 1.18.1 | 2020-04-06 | 2020-04-08 |
 
 ### 1.17
 
-Next patch release is **1.17.6**.
+Next patch release is **1.17.7**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.17.7 | 2020-06-12 | 2020-06-17 |
 | 1.17.6 | 2020-05-15 | 2020-05-20 |
 | 1.17.5 | 2020-04-13 | 2020-04-16 |
 | 1.17.4 | 2020-03-09 | 2020-03-12 |
@@ -66,10 +68,11 @@ Next patch release is **1.17.6**.
 
 ### 1.16
 
-Next patch release is **1.16.10**.
+Next patch release is **1.16.11**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.16.11 | 2020-06-12 | 2020-06-17 |
 | 1.16.10 | 2020-05-15 | 2020-05-20 |
 | 1.16.9 | 2020-04-13 | 2020-04-16 |
 | 1.16.8 | 2020-03-09 | 2020-03-12 |
