@@ -176,7 +176,7 @@ At the end of a release, Release Managers will need to announce the new release 
 
 This can be done in one of two ways:
 
-- The `./release-notify` tool -- `sendmail` will need to be configured correctly on your environment for this to work
+- The `krel announce` subcommand -- A [`SENDGRID_API_KEY`](https://sendgrid.com/docs/ui/account-and-settings/api-keys) will need to be configured correctly on your environment for this to work
 - Manually -- Send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: `gs://kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`:
   - [Example subject](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement-subject.txt)
   - [Example body](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement.html)
@@ -196,8 +196,8 @@ Public build artifacts are published and an email notification goes out to the c
 
 ```shell
 # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds
-./release-notify vX.Y.0-{alpha,beta,rc}.Z
-./release-notify vX.Y.0-{alpha,beta,rc}.Z --nomock --mailto=${{YOUREMAILADDRESS}}[a][b]
+export SENDGRID_API_KEY=<API_KEY>
+krel announce --tag vX.Y.0-{alpha,beta,rc}.Z
 ```
 
 There are more examples of the release process under the [References](#references) section.
