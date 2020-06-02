@@ -7,7 +7,7 @@ For general information about Kubernetes release cycle, see the
 
 ## Cadence
 
-The typical patch release cadence tends to be 3 to 4 weeks.  It is
+Our typical patch release cadence is monthly.  It is
 commonly a bit faster (1 to 2 weeks) for the earliest patch releases
 after a 1.X minor release.  Critical bug fixes may cause a more
 immediate release outside of the normal cadence.  We also aim to not make
@@ -39,7 +39,23 @@ of the actual release.
 Cherry-pick PRs which miss merge criteria will be carried over and tracked
 for the next patch release.
 
-## Timelines
+## Upcoming Monthly Releases
+
+Timelines may vary with the severity of bug fixes, but for easier planning we
+will target the following monthly release points.  Unplanned, critical
+releases may also occur in between these.
+
+| Monthly Patch Release | Target date |
+|----------------------|-------------|
+| June 2020 | 2020-06-17 |
+| July 2020 | 2020-07-15 |
+| August 2020 | 2020-08-12 |
+| September 2020 | 2020-09-16 |
+| October 2020 | 2020-10-14 |
+| November 2020 | 2020-11-11 |
+| December 2020 | 2020-12-09 |
+
+## Detailed Release History
 
 ### 1.18
 
