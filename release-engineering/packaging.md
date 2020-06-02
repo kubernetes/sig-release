@@ -1,7 +1,9 @@
 # Packaging Kubernetes <!-- omit in toc -->
 
 _Author(s): Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))_
+
 _Editor(s): Stephen Augustus ([@justaugustus](https://github.com/justaugustus))_
+
 _Original document: [Building debs/rpms for Kubernetes
 ](https://docs.google.com/document/d/1PAN5tVJO_NMfHZmnk8mDQTwAbFHPky7JBgWJgckNjro/edit?usp=sharing)_
 
@@ -42,17 +44,16 @@ See also the [rapture documentation][rapture-readme], which contains details on 
 ### Dependecy Pre-checks
 
 Before starting the release process, check for following items in your system.
-1.  Docker should be installed (`docker -v`)
-2.  You should be able to run docker commands without sudo (`docker image ls` )
-3.  rpm should be installed (`rpm --version`)
-4.  rapture should be installed (`rapture --version`)
-5.  gsutil should be installed (`gsutil -v`)
 
+- Docker should be installed (`docker -v`)
+- You should be able to run docker commands without sudo (`docker image ls` )
+- rpm should be installed (`rpm --version`)
+- rapture should be installed (`rapture --version`)
+- gsutil should be installed (`gsutil -v`)
 
 ### Permissions
 
 Must be a member of mdb group - [mdb/cloud-kubernetes-release-owners](mdb/cloud-kubernetes-release-owners) to be able to perform the debs/rpms releases.
-
 
 ### Clone Release Repository
 
@@ -81,7 +82,6 @@ git checkout v0.1.5
 
 Run the following commands to ensure that we are logged in and also the proper project context is setup.
 
-
 ```shell
 prodaccess
 gcloud auth login
@@ -99,9 +99,9 @@ The entire build process takes several hours. Once you are ready to begin, the d
 ```
 
 #### Notes
+
 - There are several points during the process where you will be prompted to answer “y/N” or your password.
 - There will be a warning about trusty. This can be ignored.
-
 
 ### Validating packages
 
@@ -112,6 +112,7 @@ Now that `rapture` has successfully complete, we need to verify the packages tha
 Follow the [kubeadm instructions][kubeadm-install] to install kubeadm, kubelet, and kubectl.
 
 To confirm Debian packages
+
 ```shell
 # <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
 version=
@@ -123,7 +124,9 @@ version=
     && sudo apt-get update -q \
     && sudo apt-get install -qy kubelet="${version}-00" kubectl="${version}-00" kubeadm="${version}-00"
 ```
+
 To confirm Rhel packages
+
 ```shell
 # <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
 version=
@@ -148,17 +151,16 @@ In addition to manual validation, we also have some periodic package verificatio
 
 See the [Release Engineering dashboard][release-engineering-dashboard] on Testgrid.
 The following jobs are currently configured to do some aspect of package validation:
+
 - https://testgrid.k8s.io/sig-release-misc#debian-unstable
 - https://testgrid.k8s.io/sig-release-misc#periodic-packages-pushed
 - https://testgrid.k8s.io/sig-release-misc#periodic-packages-install-deb
-
 
 **These tend to break when we are in the middle of a push.**
 
 If any of these tests are broken, the [Release Managers Google Group][release-managers-group] should receive an alert regarding the failure.
 
 If there is continued test failure on this dashboard without intervention from the Release Managers, escalate to the current [Release Team][release-team] and [test-infra on-call][test-infra-oncall].
-
 
 [branch-manager-handbook]: /release-engineering/role-handbooks/branch-manager.md
 [branch-manager-build-and-release]: /release-engineering/role-handbooks/branch-manager.md#build-and-release
