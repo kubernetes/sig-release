@@ -19,7 +19,12 @@ aliases:
   release-engineering-reviewers:
     - cpanato # Release Manager
     - hasheddan # Release Manager
+    - jimangel # Release Manager Associate
+    - markyjackson-taulia # Release Manager Associate
     - saschagrunert # Release Manager
+    - sethmccombs # Release Manager Associate
+    - verolop # Release Manager Associate
+    - xmudrii # Release Manager Associate
   release-team:
     - alejandrox1 # subproject owner / 1.18 RT Lead
     - claurence # subproject owner / 1.15 RT Lead
