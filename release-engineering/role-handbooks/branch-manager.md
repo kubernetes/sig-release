@@ -12,7 +12,6 @@
     - [Release tooling](#release-tooling)
     - [Google Cloud SDK](#google-cloud-sdk)
     - [Sending mail](#sending-mail)
-  - [Safety Check](#safety-check)
 - [Releases Management](#releases-management)
   - [Alpha Releases](#alpha-releases)
     - [Alpha Stage](#alpha-stage)
@@ -265,20 +264,15 @@ Builds against the `master` branch are implicitly the next alpha. `krel gcbmgr` 
 
 ### Beta Releases
 
-Builds against a `release-x.y` branch are implicitly a next beta. `krel gcbmgr` and `anago` automatically find and increment the current build number.
-
-**n.b. If this is a `beta.0` release, there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
-
-The command example below is to stage a build for a beta release:
-
-
 To run the gcbmgr to stage a Beta release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-stage)
 
-And to  run the gcbmgr to release a Beta release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-release)
-
-**n.b. If this is a `beta.0` release, there are additional tasks to complete after the release branch is cut. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation).**
+And to run the gcbmgr to release a Beta release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-release)
 
 ### Release Candidates
+
+Builds against a `release-x.y` branch are implicitly the next RC (release candidate). `krel gcbmgr` and `anago` automatically find and increment the current build number.
+
+**n.b. If this is a `rc.0` release, there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
 
 Adding the `--rc` flag switches behavior on to building release candidates. Again `krel gcbmgr` and `anago` automatically finds and increments the current build number.
 
@@ -287,6 +281,8 @@ To run the gcbmgr to stage a Release Candidate [see](https://github.com/kubernet
 To publish the build artifacts (release), as usual use the `--buildversion=` number as specified in the output when `gcbmgr` is done with the stage command.
 
 To run the gcbmgr to release a Release Candidate [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#release-candidate-rc-release)
+
+**n.b. If this is a `rc.0` release, there are additional tasks to complete after the release branch is cut. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation).**
 
 In an perfect world, `rc.1` and the official release are the same commit. To get as close to that perfect state as we can, the following things should be considered:
 
@@ -322,7 +318,7 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 To run the gcbmgr to stage an Official Release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-stage) and after to release an Official Release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-release)
 
 In addition to `v1.16.n` this will also build and stage the subsequent patch's
-`beta.0`, in this example `v1.16.(n+1)-beta.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
+`rc.0`, in this example `v1.16.(n+1)-rc.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
 release step will also take a couple of minutes more.
 
 When staging is done, you may use the command `./gcbmgr release` with the `--buildversion=` specified as usual when `./gcbmgr stage` is done.
@@ -399,7 +395,7 @@ This section discusses the methods in managing commits on the `release-x.y` bran
 
 ### Branch Creation
 
-During a `beta.0` release e.g., `1.16.0-beta.0`, our release tooling creates a new release branch named `release-x.y`, where `x` and `y` are the major and minor versions of the next release, respectively.
+During a `rc.0` release e.g., `1.16.0-rc.0`, our release tooling creates a new release branch named `release-x.y`, where `x` and `y` are the major and minor versions of the next release, respectively.
 
 Behind the scenes `anago` is doing a git branch create and git push.
 
@@ -407,7 +403,7 @@ Behind the scenes `anago` is doing a git branch create and git push.
 
 New release branch creation (for example: `release-1.16`) also automatically triggers an alpha.0 build for the subsequent release (for example: [`v1.17.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.17.0-alpha.0)).
 
-This means that the staging step will take about twice as long, as it will stage both versions `v1.16.0-beta.0` and `v1.17.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
+This means that the staging step will take about twice as long, as it will stage both versions `v1.16.0-rc.0` and `v1.17.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
 
 #### During staging
 
@@ -660,7 +656,7 @@ krel ff --branch release-x.y
 
 Where `X.Y` is the is release cycle version e.g. `1.16`
 
-This is done daily as soon as the `release-x.y` branch has been cut (which happens after `beta.0` is released).
+This is done daily as soon as the `release-x.y` branch has been cut (which happens after `rc.0` is released).
 
 Earlier in the release the exact time of running [`krel ff`] can be at the discretion of the branch manager, as agreed upon with the release lead.
 
