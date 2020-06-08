@@ -70,12 +70,10 @@ git clone https://github.com/kubernetes/release.git
 cd release
 ```
 
-**Google-internal scripts are not currently compatible with the `kubernetes/release` `master` branch. To successfully build deb/rpm packages today, you must checkout the latest `v0.1.x` tags, which is cut from the `build-admins` branch.**
-
-**IMPORTANT: You must checkout a `kubernetes/release` `v0.1.x` tag >= [`v0.1.5`](https://github.com/kubernetes/release/releases/tag/v0.1.5) to address a [CVE for CNI plugins](https://github.com/kubernetes/kubernetes/issues/91507).**
+**IMPORTANT: You must checkout a `kubernetes/release` tag >= [`v0.3.3`](https://github.com/kubernetes/release/releases/tag/v0.3.3) to address a [CVE for CNI plugins](https://github.com/kubernetes/kubernetes/issues/91507).**
 
 ```shell
-git checkout v0.1.5
+git checkout v0.3.3
 ```
 
 ### Authenticate
