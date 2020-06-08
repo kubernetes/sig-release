@@ -8,6 +8,7 @@ of support in terms of patches for bugfixes and ongoing CI insuring
 the branch's health and the ability to update from 1.X.Y to 1.(X+1).Y,
 for the newest Y on each of those two branches.
 
+- [Content Notice](#content-notice)
 - [Prerequisites for Patch Release Team members](#prerequisites-for-patch-release-team-members)
   - [General Requirements](#general-requirements)
 - [Getting started](#getting-started)
@@ -25,6 +26,19 @@ for the newest Y on each of those two branches.
   - [Hotfix release](#hotfix-release)
   - [Security release](#security-release)
 - [Release Commands Cheat Sheet](#release-commands-cheat-sheet)
+
+## Content Notice
+
+The Patch Release Team and Branch Manager roles have been consolidated into a
+single [Release Managers][release-managers] group.
+
+This means that several areas of this document may currently be out of date.
+While we work to update these documents, please reach out to
+[Release Managers][release-managers] directly for any clarifications on Release
+Engineering processes.
+
+**This notice will be removed when the documentation is no longer under
+construction.**
 
 ---
 

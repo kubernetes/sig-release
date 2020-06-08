@@ -10,7 +10,7 @@ _Original document: [Building debs/rpms for Kubernetes
 - [Introduction](#introduction)
 - [Communication](#communication)
 - [Release Steps](#release-steps)
-  - [Dependecy Pre-checks](#dependecy-pre-checks)
+  - [Dependency Pre-checks](#dependency-pre-checks)
   - [Permissions](#permissions)
   - [Clone Release Repository](#clone-release-repository)
   - [Authenticate](#authenticate)
@@ -27,9 +27,9 @@ This guide outlines the process of building debs/rpms for Kubernetes minor and p
 
 ## Communication
 
-The [Patch Release Team][patch-release-team] (patch releases) or [Branch Manager][branch-manager-handbook] (minor releases) will reach out to the [Kubernetes Build Admins][kubernetes-build-admins] via the [Release Managers Google Group][release-managers-group] or [`#release-management`][release-management-slack] (for more synchronous communication) requesting help to build the debs and rpms.
+[Release Managers][release-managers] will reach out to the [Kubernetes Build Admins][kubernetes-build-admins] via the [Release Managers Google Group][release-managers-group] or [`#release-management`][release-management-slack] (for more synchronous communication) requesting help to build the debs and rpms.
 
-Patch Release Team members or Branch Managers requesting debs/rpms should be sure to provide explicit details on the package name(s), version(s), and revision(s) they need built.
+Release Managers requesting debs/rpms should be sure to provide explicit details on the package name(s), version(s), and revision(s) they need built.
 
 **n.b. As much as possible, communications with the Kubernetes Build Admins should happen on public forums (email, Slack public channels), not direct messaging, except in instances where doing so would run contrary to our [security policies][security-release-process] e.g., building packages for a release which addresses an embargoed CVE.**
 
@@ -37,11 +37,11 @@ Patch Release Team members or Branch Managers requesting debs/rpms should be sur
 
 In this process, we are pulling the artifacts published by a Release Manager to the GCS bucket and building debs/rpms to be published to the rapture repository.
 
-Refer to the [Branch Manager handbook][branch-manager-build-and-release] for details on the artifacts that are built by the Branch Manager.
+Refer to the [Branch Manager handbook][branch-manager-handbook] for details on the artifacts that are built by Release Managers.
 
 See also the [rapture documentation][rapture-readme], which contains details on running `rapture` (Google internal packaging tool).
 
-### Dependecy Pre-checks
+### Dependency Pre-checks
 
 Before starting the release process, check for following items in your system.
 
@@ -161,15 +161,14 @@ If any of these tests are broken, the [Release Managers Google Group][release-ma
 If there is continued test failure on this dashboard without intervention from the Release Managers, escalate to the current [Release Team][release-team] and [test-infra on-call][test-infra-oncall].
 
 [branch-manager-handbook]: /release-engineering/role-handbooks/branch-manager.md
-[branch-manager-build-and-release]: /release-engineering/role-handbooks/branch-manager.md#build-and-release
 [kubeadm-install]: https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl
 [kubernetes/release]: https://git.k8s.io/release
 [kubernetes-build-admins]: /release-managers.md#build-admins
-[patch-release-team]: /release-managers.md#patch-release-team
 [rapture]: https://cs.corp.google.com/piper///depot/google3/experimental/users/mehdy/kubernetes/k8s-rapture.sh
 [rapture-readme]: https://g3doc.corp.google.com/cloud/kubernetes/g3doc/release/rapture.md?cl=head
 [release-engineering-dashboard]: https://testgrid.k8s.io/sig-release-misc
 [release-management-slack]: https://kubernetes.slack.com/messages/CJH2GBF7Y
+[release-managers]: /release-managers.md#release-managers
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
 [release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
 [security-release-process]: /security-release-process-documentation/security-release-process.md

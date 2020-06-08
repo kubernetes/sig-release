@@ -1,5 +1,6 @@
 # Branch Manager Handbook <!-- omit in toc -->
 
+- [Content Notice](#content-notice)
 - [Overview](#overview)
   - [Conventions](#conventions)
   - [Responsibilities](#responsibilities)
@@ -50,6 +51,19 @@
 - [References](#references)
   - [Test Infra references](#test-infra-references)
 - [Background information](#background-information)
+
+## Content Notice
+
+The Patch Release Team and Branch Manager roles have been consolidated into a
+single [Release Managers][release-managers] group.
+
+This means that several areas of this document may currently be out of date.
+While we work to update these documents, please reach out to
+[Release Managers][release-managers] directly for any clarifications on Release
+Engineering processes.
+
+**This notice will be removed when the documentation is no longer under
+construction.**
 
 ## Overview
 
@@ -450,9 +464,7 @@ Update the Slack branch whitelists:
 - Find the current branch whitelist ([`config/prow/plugins.yaml`](https://git.k8s.io/test-infra/config/prow/plugins.yaml), grep for `branch_whitelist:`)
 - Remove the oldest release branch block
 - Add an entry for the newest release branch
-- Add all current [Patch Release Team members](/release-managers.md#patch-release-team) to all `kubernetes/kubernetes` release branches
-- Remove [Branch Managers](/release-managers.md#branch-managers) from any previous release branches
-- Add all current [Branch Managers](/release-managers.md#branch-managers)
+- Ensure only current [Release Managers](/release-managers.md#release-managers) are whitelisted for all `kubernetes/kubernetes` release branches
 
 Here's an [example PR](https://github.com/kubernetes/test-infra/pull/15014).
 
@@ -843,4 +855,5 @@ See the branch management process prior to v1.12 when `anago` was still used.
   Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
 
 [kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
+[release-managers]: /release-managers.md#release-managers
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers

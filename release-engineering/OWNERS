@@ -1,9 +1,10 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
-  - release-engineering
+  - release-engineering-approvers
 reviewers:
-  - branch-managers
   - build-admins
+  - release-engineering-approvers
+  - release-engineering-reviewers
 labels:
   - area/release-eng
