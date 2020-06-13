@@ -456,7 +456,7 @@ Validate that SIG Cluster Lifecycle has all of the docs in place for the upcomin
 
 ##### Update 4 past config.toml's
 
-Create the updated `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch. ⚠️  **Make sure to update**  ```release-[current release]``` config.toml Chinese localization configuration with ```deprecated = false```. e.g [Chinese localization current](https://github.com/kubernetes/website/pull/16131)
+Create the updated `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch.
 
 See this for example (1.13 was the "future release"):
 * 1.9 https://github.com/kubernetes/website/pull/11493
