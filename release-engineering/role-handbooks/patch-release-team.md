@@ -323,7 +323,7 @@ of triaging one cherry pick, when it is part of a cluster of cherry
 picks on multiple branches pulling the same change from master, can
 be copy/pasted between spreadsheets.  This on average saves a lot
 of time and effort.  While we have settled into a roughly monthly
-release cadence and release udpates for all branches simultaneously
+release cadence and release updates for all branches simultaneously
 most of the time, on occasion the branches do diverge both on release
 timing and on state for a cluster of cherry picks of the same parent
 PR, and this divergent state needs tracked distinctly per branch.
@@ -340,7 +340,7 @@ specific cherry picks:
 
  * yellow - a cherry pick that is open and has no 'cherry-pick-approved' label
 
- * green - a cherry pick that has the 'cherry-pick-approvel' label
+ * green - a cherry pick that has the 'cherry-pick-approved' label
 
 Cells are colored with bright yellow or red to highlight special action
 required, eg:
