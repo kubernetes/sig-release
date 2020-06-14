@@ -1,3 +1,13 @@
+---
+title: "Kubernetes 1.19 Release Information"
+weight: 98
+slug: "release"
+aliases: [ "/release" ]
+description: |
+  Information regarding the current release cycle including important dates,
+  Release Team contact information, tracking spreadsheets and more!
+---
+
 # Kubernetes 1.19
 
 
