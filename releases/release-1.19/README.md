@@ -62,21 +62,23 @@ The 1.19 release cycle is proposed as follows:
 | **Call for [Exceptions][Exception]** | Lead | Mon, June 1 | week 8 | |
 | 1.19.0-beta.1 released | Branch Manager | Tue, June 2 | week 8 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon, June 8 | week 9 | |
-| Docs deadline - Open placeholder PRs | Docs Lead | Fri, June 12 | week 9 | |
 | 1.19.0-beta.2 released | Branch Manager | Tue, June 9 | week 9 | |
-| **Begin [Code Freeze]** (EOD PST) | Branch Manager | Thu, June 25 | week 11 | |
-| 1.19.0-rc.1 released | Branch Manager | Thu, June 25 | week 11 | |
-| release-1.19 branch created | Branch Manager | Thu, June 25 | week 11 | |
-| release-1.19 jobs created | Branch Manager | Thu, June 25 | week 11 | |
-| Docs deadline - PRs ready for review | Docs Lead | Mon, June 29 | week 12 | |
-| 1.19.0-rc.2 released | Branch Manager | Tue, July 7 | week 13 | |
-| Docs complete - All PRs reviewed and ready to merge | Docs Lead | Thu, July 9 | week 13 | |
+| Docs deadline - Open placeholder PRs | Docs Lead | Fri, June 19 | week 10 | |
+| Docs deadline - PRs ready for review | Docs Lead | Mon, July 6 | week 13 | |
+| **Begin [Code Freeze]** (EOD PST) | Branch Manager | Thu, July 9 | week 13 | |
+| 1.19.0-rc.1 released | Branch Manager | Thu, July 9 | week 13 | |
+| release-1.19 branch created | Branch Manager | Thu, July 9 | week 13 | |
+| release-1.19 jobs created | Branch Manager | Thu, July 9 | week 13 | |
+| 1.19.0-rc.2 released | Branch Manager | Tue, July 14 | week 14 | |
+| Docs complete - All PRs reviewed and ready to merge | Docs Lead | Thu, July 16 | week 14 | |
 | 1.19.0-rc.3 released | Branch Manager | Tue, July 21 | week 15 | |
-| Burndown Meetings daily | Lead | Mon, July 27 | week 16 | |
-| **Cherry Pick Deadline** (EOD PST) | Branch Manager | Thu, July 30 | week 16 | |
-| **Test Freeze** (EOD PST) | Branch Manager | Thu, July 30 | week 16 | |
-| **v1.19.0 released** | Branch Manager | Tue, August 4 | week 17 | |
-| **Release Retrospective** | Community | Thu, August 13 | week 18 | |
+| Burndown Meetings daily | Lead | Mon, August 3 | week 16 | |
+| **Cherry Pick Deadline** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
+| **Test Freeze** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
+| **KubeCon CloudNativeCon Europe  -  Break** | Community | Mon, August 10 | week 18 | |
+| **KubeCon CloudNativeCon Europe  - Resume**  | Community | Mon, August 24 | week 20 | |
+| **v1.19.0 released** | Branch Manager | Tue, August 25 | week 20 | |
+| **Release Retrospective** | Community | Thu, August 27 | week 20 | |
 
 ## Phases
 
