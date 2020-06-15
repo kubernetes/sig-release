@@ -39,10 +39,10 @@ The 1.19 release cycle is proposed as follows:
 
 - **Monday, April 13**: Week 1 - Release cycle begins
 - **Tuesday, May 19**: Week 6 - [Enhancements Freeze]
-- **Thursday, June 25**: Week 11 - [Code Freeze]
-- **Thursday, July 9**: Week 14 - Docs must be completed and reviewed
-- **Tuesday, August 4**: Week 17 - Kubernetes v1.19.0 released
-- **Thursday, August 13**: Week 18 - Release Retrospective
+- **Thursday, July 9th**: Week 13 - [Code Freeze]
+- **Thursday, July 16th**: Week 14 - Docs must be completed and reviewed
+- **Tuesday, August 25th**: Week 20 - Kubernetes v1.19.0 released
+- **Thursday, August 27th**: Week 20 - Release Retrospective
 
 
 ## Timeline
