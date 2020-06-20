@@ -3,8 +3,9 @@
 As the name implies, Patch Release Team members are responsible for
 managing patches against Kubernetes release branches and making the
 1.X.Y patch releases during the support period after each 1.X minor
-release.  Kubernetes 1.X releases receive approximately 9 months
-of support in terms of patches for bugfixes and ongoing CI insuring
+release.  Kubernetes 1.X releases receive approximately one year
+of support (for releases 1.19 and newer; release 1.18 and earlier received
+9 months of support) in terms of patches for bugfixes and ongoing CI insuring
 the branch's health and the ability to update from 1.X.Y to 1.(X+1).Y,
 for the newest Y on each of those two branches.
 
@@ -134,7 +135,7 @@ to find all un-triaged cherry-pick PRs for a branch.
 
 As an example of the kind of load to expect, there were close to
 300 cherry-pick PRs against the 1.10 milestone during its approximately
-9 month lifetime.
+one year lifetime.
 
 For each cherry-pick request:
 
