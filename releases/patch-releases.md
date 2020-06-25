@@ -55,7 +55,7 @@ releases may also occur in between these.
 | December 2020 | 2020-12-09 |
 | January 2021 | 2021-01-13 |
 
-## Detailed Release History
+## Detailed Release History for Active Branches
 
 ### 1.18
 
@@ -103,7 +103,7 @@ Next patch release is **1.16.12**.
 | 1.16.2 | 2019-10-11 | 2019-10-15 |
 | 1.16.1 | 2019-09-27 | 2019-10-02 |
 
-### 1.15 and older
+## Non-Active Branch History
 
 These releases are no longer supported.
 
