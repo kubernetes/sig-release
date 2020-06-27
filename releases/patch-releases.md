@@ -59,7 +59,7 @@ releases may also occur in between these.
 
 ### 1.18
 
-Next patch release is **1.18.5**.
+Next patch release is **1.18.6**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ Next patch release is **1.18.5**.
 
 ### 1.17
 
-Next patch release is **1.17.8**.
+Next patch release is **1.17.9**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
@@ -88,7 +88,7 @@ Next patch release is **1.17.8**.
 
 ### 1.16
 
-Next patch release is **1.16.12**.
+Next patch release is **1.16.13**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
