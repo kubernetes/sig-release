@@ -93,7 +93,7 @@ The entire build process takes several hours. Once you are ready to begin, the d
 `rapture` can be executed as follows:
 
 ```shell
-/google/src/head/depot/google3/experimental/users/mehdy/kubernetes/k8s-rapture.sh <version> # <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
+./hack/k8s-rapture.sh <version> # <version> should be the Kubernetes version we are building the debs/rpms for e.g., `1.20.0`
 ```
 
 #### Notes
