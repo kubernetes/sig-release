@@ -47,6 +47,7 @@
   - [Cherry Picks](#cherry-picks)
 - [Staging Repositories](#staging-repositories)
 - [Debugging](#debugging)
+- [Search past builds](#search-past-builds)
 - [References](#references)
   - [Test Infra references](#test-infra-references)
 - [Background information](#background-information)
@@ -783,6 +784,25 @@ The client-go major release (e.g. `v1.18.0`) is released manually a day after th
 To debug `krel gcbmgr` you can set the log level to `debug` by doing `krel gcbmgr --log-level debug [args]`
 
 You can also inspect the logs on the Google Cloud console.
+
+
+## Search past builds
+
+To search past `cloudbuilds` to make any kind of analysis and check metrics you can use the Google Cloud Console for that.
+You can access [Google Cloud Build History](https://console.cloud.google.com/cloud-build/builds?project=kubernetes-release-test)
+
+There you can see all the `cloudbuilds`  that already ran or if there is any one running in the moment you can see that as well.
+
+To filter for a specific build or set of builds you can use the `Filter Builds` textbox. When you click there it opens a dropdown box to you select which kind of keys you want to filter.
+
+For example you can select `Tags` and then add the tags you want to filter, like, `Tags: release-1.18 Status: Successful`. This query in the [Google Cloud Build](https://console.cloud.google.com/cloud-build/builds?project=kubernetes-release-test&pageState=(%22builds%22:(%22f%22:%22%255B%257B_22k_22_3A_22Tags_22_2C_22t_22_3A10_2C_22v_22_3A_22_5C_22release-1.18_5C_22_22_2C_22s_22_3Atrue_2C_22i_22_3A_22tags_22%257D_2C%257B_22k_22_3A_22Status_22_2C_22t_22_3A10_2C_22v_22_3A_22_5C_22Successful_5C_22_22_2C_22s_22_3Atrue_2C_22i_22_3A_22status_22%257D%255D%22)))
+
+
+#### Limitation
+
+Looks like in the Google Cloud Build History you cannot set more than one `tag` when using the `AND` operator. The query does not bring anything if you add, for example, `Tags: release-1.18 Tags: STAGE`.
+Besides the fact that exists.
+
 
 ## References
 
