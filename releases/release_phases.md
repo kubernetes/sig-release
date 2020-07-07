@@ -7,17 +7,18 @@ All enhancements wishing to be included in the current release must have
   * Including Graduation Criteria
 * An open issue in the Release Milestone
 
-If your enhancement does not meet these requirements, it will be removed from the milestone and will require an [Exception].
+If the enhancement does not meet these requirements, it will be removed from the
+milestone and will require an [Exception].
 
 ## Burndown
-One week prior to Code Freeze, we increase the cadence of release team meetings
-to begin tracking work more closely.  We call this Burndown, because at this
+Several weeks prior to [Code Freeze], we increase the cadence of release team meetings
+to begin tracking work more closely. We call this Burndown, because at this
 point we have a list of outstanding issues and PRs, and are actively working to
-burn that list down.  SIG representatives will be asked to attend if their SIG has
+burn that list down. SIG representatives will be asked to attend if their SIG has
 specific outstanding issues that are blocking the release.
 
-Please subscribe to the [Kubernetes Release Calendar][kubernetes-release-calendar] to see meeting events. Burndown meetings
-may conflict with other community meetings.  Please prioritize this meeting if
+Please subscribe to the [Kubernetes Release Calendar] to see meeting events. Burndown meetings
+may conflict with other community meetings. Please prioritize this meeting if
 a member of the release team asks you to attend.
 
 The intent of these meetings is to:
@@ -44,18 +45,21 @@ milestone.
 
 ## Code Thaw
 
-One week prior to release, it is expected that all but a handful of outstanding
-PRs for the relase of kubernetes have landed in the release branch. Assuming the
-release team agrees, Code Freeze will be lifted, and we enter Code Thaw.
-
-From this point forward, any PRs intended for the current release must be cherry picked to the
+Code Thaw specifies the end of [Code Freeze]. At this point it is expected that
+all outstanding PRs for the release of Kubernetes have been merged into the
+release branch. Assuming the release team agrees, [Code Freeze], will be lifted,
+and we enter Code Thaw. This means from a technical perspective, that now the
+`master` and `release-1.x` branch diverge, whereas both kept in sync during
+[Code Freeze]. After Code Thaw the `master` branch develops toward the next
+minor release and the release branch goes into maintenance mode. From this point
+forward, any PRs intended for the current release must be cherry-picked into the
 appropriate branch.
 
 ## Exceptions
 
-Starting at [Enhancements Freeze] the release team will solicit and rule on
+Starting at [Enhancements Freeze], the release team will solicit and rule on
 [Exception] requests for enhancements and test work that is unlikely to be done
-by Code Freeze. The exception approval is the responsibility of the SIG or SIGs
+by [Code Freeze]. The [Exception] approval is the responsibility of the SIG or SIGs
 labeled in the pull request. The release team may intervene or deny the request
 only if it poses a risk to release quality, or could negatively impact the overall
 timeline. Changes introduced at this point should be well-tested,
@@ -68,7 +72,7 @@ be accepted.
 
 Enhancements that are partially implemented and/or lack sufficient tests may be
 considered for pruning beginning after [Code Freeze], unless they've been
-granted an [Exception](./EXCEPTIONS.md).
+granted an [Exception].
 
 The release team will work with SIGs and enhancements owners to evaluate each
 case, but for example, pruning could include actions such as:
@@ -101,5 +105,7 @@ than basing from master. **Be sure to open your PR against the release branch**.
 * Add your PR to the current Release milestone.
 
 [kubernetes/website]: https://github.com/kubernetes/website
-[kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
+[Kubernetes Release Calendar]: https://bit.ly/k8s-release-cal
 [Exception]: ./EXCEPTIONS.md
+[Code Freeze]: #code-freeze
+[Enhancements Freeze]: #enhancements-freeze
