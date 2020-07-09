@@ -66,12 +66,12 @@ The 1.19 release cycle is proposed as follows:
 | Docs deadline - Open placeholder PRs | Docs Lead | Fri, June 19 | week 10 | |
 | Docs deadline - PRs ready for review | Docs Lead | Mon, July 6 | week 13 | |
 | **Begin [Code Freeze]** (EOD PST) | Branch Manager | Thu, July 9 | week 13 | |
-| 1.19.0-rc.1 released | Branch Manager | Thu, July 9 | week 13 | |
+| 1.19.0-rc.0 released | Branch Manager | Thu, July 9 | week 13 | |
 | release-1.19 branch created | Branch Manager | Thu, July 9 | week 13 | |
 | release-1.19 jobs created | Branch Manager | Thu, July 9 | week 13 | |
-| 1.19.0-rc.2 released | Branch Manager | Tue, July 14 | week 14 | |
+| 1.19.0-rc.1 released | Branch Manager | Tue, July 14 | week 14 | |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Thu, July 16 | week 14 | |
-| 1.19.0-rc.3 released | Branch Manager | Tue, July 21 | week 15 | |
+| 1.19.0-rc.2 released | Branch Manager | Tue, July 21 | week 15 | |
 | Burndown Meetings daily | Lead | Mon, August 3 | week 16 | |
 | **Cherry Pick Deadline** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
 | **Test Freeze** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
