@@ -1,7 +1,8 @@
 aliases:
   sig-release-leads:
-    - calebamiles
+    - alejandrox1
     - justaugustus
+    - saschagrunert
     - tpepper
   licensing:
     - dims # subproject owner
