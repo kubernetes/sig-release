@@ -226,4 +226,5 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
     </tr>
 </table>
 
-
+## Release Blog Outline & Template
+To support you in the creation of the release blog this [outline](/release-team/role-handbooks/communications/release-blog.md) summarize ideas for sections and gives you a template for easier release blog creation.
