@@ -47,22 +47,23 @@ releases may also occur in between these.
 
 | Monthly Patch Release | Target date |
 |----------------------|-------------|
-| July 2020 | 2020-07-15 |
 | August 2020 | 2020-08-12 |
 | September 2020 | 2020-09-16 |
 | October 2020 | 2020-10-14 |
 | November 2020 | 2020-11-11 |
 | December 2020 | 2020-12-09 |
 | January 2021 | 2021-01-13 |
+| February 2021 | 2021-02-17 |
 
 ## Detailed Release History for Active Branches
 
 ### 1.18
 
-Next patch release is **1.18.6**.
+Next patch release is **1.18.7**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.18.7 | 2020-08-07 | 2020-08-12 |
 | 1.18.6 | 2020-07-10 | 2020-07-15 |
 | 1.18.5 | 2020-06-25 | 2020-06-26 |
 | 1.18.4 | 2020-06-12 | 2020-06-17 |
@@ -72,10 +73,11 @@ Next patch release is **1.18.6**.
 
 ### 1.17
 
-Next patch release is **1.17.9**.
+Next patch release is **1.17.10**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.17.10 | 2020-08-07 | 2020-08-12 |
 | 1.17.9 | 2020-07-10 | 2020-07-15 |
 | 1.17.8 | 2020-06-25 | 2020-06-26 |
 | 1.17.7 | 2020-06-12 | 2020-06-17 |
@@ -88,10 +90,13 @@ Next patch release is **1.17.9**.
 
 ### 1.16
 
-Next patch release is **1.16.13**.
+Next patch release is **1.16.14**.
+
+This is likely the last patch release for the 1.16 branch before it is EOL.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.16.14 | 2020-08-07 | 2020-08-12 |
 | 1.16.13 | 2020-07-10 | 2020-07-15 |
 | 1.16.12 | 2020-06-25 | 2020-06-26 |
 | 1.16.11 | 2020-06-12 | 2020-06-17 |
