@@ -73,7 +73,7 @@ cd release
 **IMPORTANT: You must checkout a `kubernetes/release` tag >= [`v0.3.3`](https://github.com/kubernetes/release/releases/tag/v0.3.3) to address a [CVE for CNI plugins](https://github.com/kubernetes/kubernetes/issues/91507).**
 
 ```shell
-git checkout v0.3.3
+git checkout master
 ```
 
 ### Authenticate
