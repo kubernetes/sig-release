@@ -55,6 +55,8 @@ minor release and the release branch goes into maintenance mode. From this point
 forward, any PRs intended for the current release must be cherry-picked into the
 appropriate branch.
 
+![code-thaw-code-freeze](code-freeze-code-thaw.svg "Code Thaw vs Code Freeze")
+
 ## Exceptions
 
 Starting at [Enhancements Freeze], the release team will solicit and rule on
