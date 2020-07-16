@@ -70,7 +70,7 @@ git clone https://github.com/kubernetes/release.git
 cd release
 ```
 
-**IMPORTANT: You must checkout a `kubernetes/release` tag >= [`v0.3.3`](https://github.com/kubernetes/release/releases/tag/v0.3.3) to address a [CVE for CNI plugins](https://github.com/kubernetes/kubernetes/issues/91507).**
+You must checkout `kubernetes/release` -> [`master`](https://github.com/kubernetes/release.git)
 
 ```shell
 git checkout master
@@ -100,6 +100,7 @@ The entire build process takes several hours. Once you are ready to begin, the d
 
 - There are several points during the process where you will be prompted to answer “y/N” or your password.
 - There will be a warning about trusty. This can be ignored.
+- The Rpm signing process can not be done in parralel, but all other steps maybe be.
 
 ### Validating packages
 
@@ -143,6 +144,10 @@ sudo yum install -y kubelet-${version} kubeadm-${version} kubectl-${version} --d
 fi
 ```
 
+#### Notes
+- There will be a slight delay (< 5 min) after creating a fresh VM before you can start pulling the published packages.
+- Make sure you validate packages in accending order so that there are no conflicts with downgrade.
+
 ### Package verification tests
 
 In addition to manual validation, we also have some periodic package verification tests that run on prow.
@@ -164,7 +169,7 @@ If there is continued test failure on this dashboard without intervention from t
 [kubeadm-install]: https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl
 [kubernetes/release]: https://git.k8s.io/release
 [kubernetes-build-admins]: /release-managers.md#build-admins
-[rapture]: https://cs.corp.google.com/piper///depot/google3/experimental/users/mehdy/kubernetes/k8s-rapture.sh
+[rapture]: https://github.com/kubernetes/release/blob/master/hack/k8s-rapture.sh
 [rapture-readme]: https://g3doc.corp.google.com/cloud/kubernetes/g3doc/release/rapture.md?cl=head
 [release-engineering-dashboard]: https://testgrid.k8s.io/sig-release-misc
 [release-management-slack]: https://kubernetes.slack.com/messages/CJH2GBF7Y
