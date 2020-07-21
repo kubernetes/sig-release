@@ -75,7 +75,7 @@ The 1.19 release cycle is proposed as follows:
 | **[Code Thaw]** (EOD PST) | Branch Manager | Tue, July 21 | week 15 | |
 | Burndown Meetings daily | Lead | Mon, August 3 | week 16 | |
 | **Cherry Pick Deadline** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
-| **Test Freeze** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
+| **[Test Freeze]** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
 | **KubeCon CloudNativeCon Europe  -  Break** | Community | Mon, August 10 | week 18 | |
 | **KubeCon CloudNativeCon Europe  - Resume**  | Community | Mon, August 24 | week 20 | |
 | **v1.19.0 released** | Branch Manager | Tue, August 25 | week 20 | |
@@ -95,6 +95,7 @@ Please refer to the [release phases document](../release_phases.md).
 [Code Freeze]: ../release_phases.md#code-freeze
 [Exception]: ../release_phases.md#exceptions
 [Code Thaw]: ../release_phases.md#code-thaw
+[Test Freeze]: ../release_phases.md#test-freeze
 
 [master-blocking]: https://testgrid.k8s.io/sig-release-master-blocking#Summary
 [master-informing]: https://testgrid.k8s.io/sig-release-master-informing#Summary
