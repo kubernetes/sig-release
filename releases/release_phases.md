@@ -43,6 +43,13 @@ documentation work gets completed as quickly as possible.
 After this point, only release-blocking issues and PRs will be allowed in the
 milestone.
 
+## Test Freeze
+
+The date after which no more tests may be added or promoted to Conformance,
+unless there are release-blocking or other Exception-related reasons. Before
+this date, the goal should be to improve test coverage of existing code. After
+this date, the goal should be to fix, revert, or remove tests that are failing.
+
 ## Code Thaw
 
 Code Thaw specifies the end of [Code Freeze]. At this point it is expected that
