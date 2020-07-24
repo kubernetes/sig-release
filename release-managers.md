@@ -67,11 +67,10 @@ Build Admins are (currently) Google employees with the requisite access to Googl
 
 GitHub team: [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams/build-admins)
 
-- Aleksandra Malinowska ([@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
-- Linus Arver ([@listx](https://github.com/listx))
-- Premdeep Sharma ([@ps882](https://github.com/ps882))
-- Simon Yang ([@simony-gke](https://github.com/simony-gke))
-- Sumitran Raghunathan ([@sumitranr](https://github.com/sumitranr))
+- Aaron Crickenberger [@spiffxp](https://github.com/spiffxp)
+- Amit Watve [@amwat](https://github.com/amwat)
+- Benjamin Elder [@BenTheElder](https://github.com/BenTheElder)
+- Grant McCloskey [@MushuEE](https://github.com/MushuEE)
 
 ## SIG Release Chairs
 
