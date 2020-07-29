@@ -1,4 +1,4 @@
-# Release notes for v1.19.0-rc.2
+# Release notes for v1.19.0-rc.3
 
 [Documentation](https://docs.k8s.io/docs/home)
 # Changelog since v1.18.0-rc.1
@@ -53,6 +53,7 @@
 
 - A new alpha-level field, `SupportsFsGroup`, has been introduced for CSIDrivers to allow them to specify whether they support volume ownership and permission modifications. The `CSIVolumeSupportFSGroup` feature gate must be enabled to allow this field to be used. ([#92001](https://github.com/kubernetes/kubernetes/pull/92001), [@huffmanca](https://github.com/huffmanca)) [SIG API Machinery, CLI and Storage]
 - Added pod version skew strategy for seccomp profile to synchronize the deprecated annotations with the new API Server fields. Please see the corresponding section [in the KEP](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190717-seccomp-ga.mdversion-skew-strategy) for more detailed explanations. ([#91408](https://github.com/kubernetes/kubernetes/pull/91408), [@saschagrunert](https://github.com/saschagrunert)) [SIG Apps, Auth, CLI and Node]
+- Adds the ability to disable Accelerator/GPU metrics collected by Kubelet ([#91930](https://github.com/kubernetes/kubernetes/pull/91930), [@RenaudWasTaken](https://github.com/RenaudWasTaken)) [SIG Node]
 - Admission webhooks can now return warning messages that are surfaced to API clients, using the `.response.warnings` field in the admission review response. ([#92667](https://github.com/kubernetes/kubernetes/pull/92667), [@liggitt](https://github.com/liggitt)) [SIG API Machinery and Testing]
 - CertificateSigningRequest API conditions were updated:
   - a `status` field was added; this field defaults to `True`, and may only be set to `True` for `Approved`, `Denied`, and `Failed` conditions
@@ -74,6 +75,8 @@
 - Kubebuilder validation tags are set on metav1.Condition for CRD generation ([#92660](https://github.com/kubernetes/kubernetes/pull/92660), [@damemi](https://github.com/damemi)) [SIG API Machinery]
 - Kubelet's --runonce option is now also available in Kubelet's config file as `runOnce`. ([#89128](https://github.com/kubernetes/kubernetes/pull/89128), [@vincent178](https://github.com/vincent178)) [SIG Node]
 - Kubelet: add '--logging-format' flag to support structured logging ([#91532](https://github.com/kubernetes/kubernetes/pull/91532), [@afrouzMashaykhi](https://github.com/afrouzMashaykhi)) [SIG API Machinery, Cluster Lifecycle, Instrumentation and Node]
+- Kubernetes is now built with golang 1.15.0-rc.1.
+  - The deprecated, legacy behavior of treating the CommonName field on X.509 serving certificates as a host name when no Subject Alternative Names are present is now disabled by default. It can be temporarily re-enabled by adding the value x509ignoreCN=0 to the GODEBUG environment variable. ([#93264](https://github.com/kubernetes/kubernetes/pull/93264), [@justaugustus](https://github.com/justaugustus)) [SIG API Machinery, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Network, Node, Release, Scalability, Storage and Testing]
 - Promote Immutable Secrets/ConfigMaps feature to Beta and enable the feature by default.
   This allows to set `Immutable` field in Secrets or ConfigMap object to mark their contents as immutable. ([#89594](https://github.com/kubernetes/kubernetes/pull/89594), [@wojtek-t](https://github.com/wojtek-t)) [SIG Apps and Testing]
 - Remove `BindTimeoutSeconds` from schedule configuration `KubeSchedulerConfiguration` ([#91580](https://github.com/kubernetes/kubernetes/pull/91580), [@cofyc](https://github.com/cofyc)) [SIG Scheduling and Testing]
@@ -170,6 +173,8 @@
 - Audit events for API requests to deprecated API versions now include a `"k8s.io/deprecated": "true"` audit annotation. If a target removal release is identified, the audit event includes a `"k8s.io/removal-release": "<majorVersion>.<minorVersion>"` audit annotation as well. ([#92842](https://github.com/kubernetes/kubernetes/pull/92842), [@liggitt](https://github.com/liggitt)) [SIG API Machinery and Instrumentation]
 - Bump Dashboard to v2.0.1 ([#91526](https://github.com/kubernetes/kubernetes/pull/91526), [@maciaszczykm](https://github.com/maciaszczykm)) [SIG Cloud Provider]
 - Cloud node-controller use InstancesV2 ([#91319](https://github.com/kubernetes/kubernetes/pull/91319), [@gongguan](https://github.com/gongguan)) [SIG Apps, Cloud Provider, Scalability and Storage]
+- Deps: Update to Golang 1.13.9
+  - build: Remove kube-cross image building ([#89275](https://github.com/kubernetes/kubernetes/pull/89275), [@justaugustus](https://github.com/justaugustus)) [SIG Release and Testing]
 - Detailed scheduler scoring result can be printed at verbose level 10. ([#89384](https://github.com/kubernetes/kubernetes/pull/89384), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Scheduling]
 - E2e.test can print the list of conformance tests that need to pass for the cluster to be conformant. ([#88924](https://github.com/kubernetes/kubernetes/pull/88924), [@dims](https://github.com/dims)) [SIG Architecture and Testing]
 - Enable feature Gate DefaultPodTopologySpread to use PodTopologySpread plugin to do defaultspreading. In doing so, legacy DefaultPodTopologySpread plugin is disabled. ([#91793](https://github.com/kubernetes/kubernetes/pull/91793), [@alculquicondor](https://github.com/alculquicondor)) [SIG Scheduling]
@@ -245,7 +250,7 @@
   
   This change happens in `kube-apiserver`、`kube-scheduler`、`kube-proxy` and `kube-controller-manager`. ([#91805](https://github.com/kubernetes/kubernetes/pull/91805), [@RainbowMango](https://github.com/RainbowMango)) [SIG API Machinery, Cluster Lifecycle and Instrumentation]
 - Trace output in apiserver logs is more organized and comprehensive. Traces are nested, and for all non-long running request endpoints, the entire filter chain is instrumented (e.g. authentication check is included). ([#88936](https://github.com/kubernetes/kubernetes/pull/88936), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation and Scheduling]
-- Try to send watch bookmarks (if requested) periodically in addition to sending them right before timeout ([#90249](https://github.com/kubernetes/kubernetes/pull/90249), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery]
+- Try to send watch bookmarks (if requested) periodically in addition to sending them right before timeout ([#90560](https://github.com/kubernetes/kubernetes/pull/90560), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery]
 - Update cri-tools to v1.18.0 ([#89720](https://github.com/kubernetes/kubernetes/pull/89720), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider, Cluster Lifecycle, Release and Scalability]
 - Update etcd client side to v3.4.4 ([#89169](https://github.com/kubernetes/kubernetes/pull/89169), [@jingyih](https://github.com/jingyih)) [SIG API Machinery and Cloud Provider]
 - Update etcd client side to v3.4.7 ([#89822](https://github.com/kubernetes/kubernetes/pull/89822), [@jingyih](https://github.com/jingyih)) [SIG API Machinery and Cloud Provider]
@@ -257,8 +262,6 @@
 - `kubectl alpha debug` command now supports debugging pods by copy the original one. ([#90094](https://github.com/kubernetes/kubernetes/pull/90094), [@aylei](https://github.com/aylei)) [SIG CLI]
 - `kubectl alpha debug` now supports debugging nodes by creating a debugging container running in the node's host namespaces. ([#92310](https://github.com/kubernetes/kubernetes/pull/92310), [@verb](https://github.com/verb)) [SIG CLI]
 - `maxThreshold` of `ImageLocality` plugin is now scaled by the number of images in the pod, which helps to distinguish the node priorities for pod with several images. ([#91138](https://github.com/kubernetes/kubernetes/pull/91138), [@chendave](https://github.com/chendave)) [SIG Scheduling]
-- deps: Update to Golang 1.13.9
-  - build: Remove kube-cross image building ([#89275](https://github.com/kubernetes/kubernetes/pull/89275), [@justaugustus](https://github.com/justaugustus)) [SIG Release and Testing]
 
 ### Documentation
 
@@ -299,6 +302,7 @@
 - Eviction requests for pods that have a non-zero DeletionTimestamp will always succeed ([#91342](https://github.com/kubernetes/kubernetes/pull/91342), [@michaelgugino](https://github.com/michaelgugino)) [SIG Apps]
 - Explain CRDs whose resource name are the same as builtin objects ([#89505](https://github.com/kubernetes/kubernetes/pull/89505), [@knight42](https://github.com/knight42)) [SIG API Machinery, CLI and Testing]
 - Extend kube-apiserver /readyz with new "informer-sync" check ensuring that internal informers are synced. ([#92644](https://github.com/kubernetes/kubernetes/pull/92644), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery and Testing]
+- Extended DSR loadbalancer feature in winkernel kube-proxy to HNS versions 9.3-9.max, 10.2+ ([#93080](https://github.com/kubernetes/kubernetes/pull/93080), [@elweb9858](https://github.com/elweb9858)) [SIG Network]
 - First pod with required affinity terms can schedule only on nodes with matching topology keys. ([#91168](https://github.com/kubernetes/kubernetes/pull/91168), [@ahg-g](https://github.com/ahg-g)) [SIG Scheduling]
 - Fix AWS Loadbalancer VPC CIDR calculation when CIDR in disassociated state exists. ([#92227](https://github.com/kubernetes/kubernetes/pull/92227), [@M00nF1sh](https://github.com/M00nF1sh)) [SIG Cloud Provider]
 - Fix InstanceMetadataByProviderID for unmanaged nodes ([#92572](https://github.com/kubernetes/kubernetes/pull/92572), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]
@@ -315,6 +319,7 @@
 - Fix detection of image filesystem, disk metrics for devicemapper, detection of OOM Kills on 5.0+ linux kernels. ([#92919](https://github.com/kubernetes/kubernetes/pull/92919), [@dashpole](https://github.com/dashpole)) [SIG API Machinery, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation and Node]
 - Fix etcd version migration script in etcd image. ([#91925](https://github.com/kubernetes/kubernetes/pull/91925), [@wenjiaswe](https://github.com/wenjiaswe)) [SIG API Machinery]
 - Fix flaws in Azure File CSI translation ([#90162](https://github.com/kubernetes/kubernetes/pull/90162), [@rfranzke](https://github.com/rfranzke)) [SIG Release and Storage]
+- Fix instance not found issues when an Azure Node is recreated in a short time ([#93316](https://github.com/kubernetes/kubernetes/pull/93316), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]
 - Fix issues when supported huge page sizes changes ([#80831](https://github.com/kubernetes/kubernetes/pull/80831), [@odinuge](https://github.com/odinuge)) [SIG Node and Testing]
 - Fix kube-apiserver startup to wait for APIServices to be installed into the HTTP handler before reporting readiness. ([#89147](https://github.com/kubernetes/kubernetes/pull/89147), [@sttts](https://github.com/sttts)) [SIG API Machinery]
 - Fix kubectl create --dryrun client ignore namespace ([#90502](https://github.com/kubernetes/kubernetes/pull/90502), [@zhouya0](https://github.com/zhouya0)) [SIG CLI]
@@ -449,6 +454,7 @@
 - Resolves an issue using `kubectl certificate approve/deny` against a server serving the v1 CSR API ([#91691](https://github.com/kubernetes/kubernetes/pull/91691), [@liggitt](https://github.com/liggitt)) [SIG Auth and CLI]
 - Restore the ability to `kubectl apply --prune` without --namespace flag.  Since 1.17, `kubectl apply --prune` only prunes resources in the default namespace (or from kubeconfig) or explicitly specified in command line flag.  But this is s breaking change from kubectl 1.16, which can prune resources in all namespace in config file.  This patch restores the kubectl 1.16 behaviour. ([#89551](https://github.com/kubernetes/kubernetes/pull/89551), [@tatsuhiro-t](https://github.com/tatsuhiro-t)) [SIG CLI and Testing]
 - Restores priority of static control plane pods in the cluster/gce/manifests control-plane manifests ([#89970](https://github.com/kubernetes/kubernetes/pull/89970), [@liggitt](https://github.com/liggitt)) [SIG Cluster Lifecycle and Node]
+- Reverted devicemanager for Windows node added in 1.19rc1. ([#93263](https://github.com/kubernetes/kubernetes/pull/93263), [@liggitt](https://github.com/liggitt)) [SIG Node and Windows]
 - Scheduler v1 Policy config or algorithm-provider settings can now be passed alongside v1beta1 ComponentConfig to aid transition from Policy to CC ([#92531](https://github.com/kubernetes/kubernetes/pull/92531), [@damemi](https://github.com/damemi)) [SIG Scheduling]
 - Scheduling failures due to no nodes available are now reported as unschedulable under ```schedule_attempts_total``` metric. ([#90989](https://github.com/kubernetes/kubernetes/pull/90989), [@ahg-g](https://github.com/ahg-g)) [SIG Scheduling]
 - Service account tokens bound to pods can now be used during the pod deletion grace period. ([#89583](https://github.com/kubernetes/kubernetes/pull/89583), [@liggitt](https://github.com/liggitt)) [SIG Auth]
@@ -471,6 +477,8 @@
 - Add the ability to disable kubeconfig file lock through DISABLE_KUBECONFIG_LOCK env var ([#92513](https://github.com/kubernetes/kubernetes/pull/92513), [@soltysh](https://github.com/soltysh)) [SIG API Machinery and CLI]
 - Adds additional testing to ensure that udp pods conntrack are cleaned up ([#90180](https://github.com/kubernetes/kubernetes/pull/90180), [@JacobTanenbaum](https://github.com/JacobTanenbaum)) [SIG Architecture, Network and Testing]
 - Adjusts the fsType for cinder values to be `ext4` if no fsType is specified. ([#90608](https://github.com/kubernetes/kubernetes/pull/90608), [@huffmanca](https://github.com/huffmanca)) [SIG Storage]
+- Base-images: Use debian-base:v2.1.0 ([#90697](https://github.com/kubernetes/kubernetes/pull/90697), [@justaugustus](https://github.com/justaugustus)) [SIG API Machinery and Release]
+- Base-images: Use debian-iptables:v12.1.0 ([#90782](https://github.com/kubernetes/kubernetes/pull/90782), [@justaugustus](https://github.com/justaugustus)) [SIG Release]
 - Beta.kubernetes.io/arch is already deprecated since v1.14, are targeted for removal in v1.18 ([#89462](https://github.com/kubernetes/kubernetes/pull/89462), [@wawa0210](https://github.com/wawa0210)) [SIG Testing]
 - Change beta.kubernetes.io/os  to kubernetes.io/os ([#89460](https://github.com/kubernetes/kubernetes/pull/89460), [@wawa0210](https://github.com/wawa0210)) [SIG Testing and Windows]
 - Change beta.kubernetes.io/os to kubernetes.io/os ([#89461](https://github.com/kubernetes/kubernetes/pull/89461), [@wawa0210](https://github.com/wawa0210)) [SIG Cloud Provider and Cluster Lifecycle]
@@ -494,7 +502,7 @@
 - Kubeadm now forwards the IPv6DualStack feature gate using the kubelet component config, instead of the kubelet command line ([#90840](https://github.com/kubernetes/kubernetes/pull/90840), [@rosti](https://github.com/rosti)) [SIG Cluster Lifecycle]
 - Kubeadm: do not use a DaemonSet for the pre-pull of control-plane images during "kubeadm upgrade apply". Individual node upgrades now pull the required images using a preflight check. The flag "--image-pull-timeout" for "kubeadm upgrade apply" is now deprecated and will be removed in a future release following a GA deprecation policy. ([#90788](https://github.com/kubernetes/kubernetes/pull/90788), [@xlgao-zju](https://github.com/xlgao-zju)) [SIG Cluster Lifecycle]
 - Kubeadm: use two separate checks on /livez and /readyz for the kube-apiserver static Pod instead of using /healthz ([#90970](https://github.com/kubernetes/kubernetes/pull/90970), [@johscheuer](https://github.com/johscheuer)) [SIG Cluster Lifecycle]
-- NONE ([#90944](https://github.com/kubernetes/kubernetes/pull/90944), [@Riaankl](https://github.com/Riaankl)) [SIG Testing]
+- NONE ([#90880](https://github.com/kubernetes/kubernetes/pull/90880), [@Riaankl](https://github.com/Riaankl)) [SIG Apps and Testing]
 - None. ([#89367](https://github.com/kubernetes/kubernetes/pull/89367), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]
 - Openapi-controller: remove the trailing `1` character literal from the rate limiting metric `APIServiceOpenAPIAggregationControllerQueue1` and rename it to `open_api_aggregation_controller` to adhere to Prometheus best practices. ([#77979](https://github.com/kubernetes/kubernetes/pull/77979), [@s-urbaniak](https://github.com/s-urbaniak)) [SIG API Machinery]
 - People can see the more effective image log. ([#91945](https://github.com/kubernetes/kubernetes/pull/91945), [@zhipengzuo](https://github.com/zhipengzuo)) [SIG Node]
@@ -533,8 +541,6 @@
 - Update opencontainers/runtime-spec dependency to v1.0.2 ([#89644](https://github.com/kubernetes/kubernetes/pull/89644), [@saschagrunert](https://github.com/saschagrunert)) [SIG Node]
 - `beta.kubernetes.io/os` and `beta.kubernetes.io/arch` node labels are deprecated. Update node selectors to use `kubernetes.io/os` and `kubernetes.io/arch`. ([#91046](https://github.com/kubernetes/kubernetes/pull/91046), [@wawa0210](https://github.com/wawa0210)) [SIG Apps and Node]
 - `kubectl config view` now redacts bearer tokens by default, similar to client certificates. The `--raw` flag can still be used to output full content. ([#88985](https://github.com/kubernetes/kubernetes/pull/88985), [@brianpursley](https://github.com/brianpursley)) [SIG API Machinery and CLI]
-- base-images: Use debian-base:v2.1.0 ([#90697](https://github.com/kubernetes/kubernetes/pull/90697), [@justaugustus](https://github.com/justaugustus)) [SIG API Machinery and Release]
-- base-images: Use debian-iptables:v12.1.0 ([#90782](https://github.com/kubernetes/kubernetes/pull/90782), [@justaugustus](https://github.com/justaugustus)) [SIG Release]
 
 ## Dependencies
 
@@ -549,7 +555,7 @@
 - github.com/chzyer/logex: [v1.1.10](https://github.com/chzyer/logex/tree/v1.1.10)
 - github.com/chzyer/readline: [2972be2](https://github.com/chzyer/readline/tree/2972be2)
 - github.com/chzyer/test: [a1ea475](https://github.com/chzyer/test/tree/a1ea475)
-- github.com/containerd/cgroups: [bf292b2](https://github.com/containerd/cgroups/tree/bf292b2)
+- github.com/containerd/cgroups: [0dbf7f0](https://github.com/containerd/cgroups/tree/0dbf7f0)
 - github.com/containerd/continuity: [aaeac12](https://github.com/containerd/continuity/tree/aaeac12)
 - github.com/containerd/fifo: [a9fb20d](https://github.com/containerd/fifo/tree/a9fb20d)
 - github.com/containerd/go-runc: [5a6d9f3](https://github.com/containerd/go-runc/tree/5a6d9f3)
@@ -569,6 +575,7 @@
 - github.com/russross/blackfriday/v2: [v2.0.1](https://github.com/russross/blackfriday/v2/tree/v2.0.1)
 - github.com/shurcooL/sanitized_anchor_name: [v1.0.0](https://github.com/shurcooL/sanitized_anchor_name/tree/v1.0.0)
 - github.com/ugorji/go: [v1.1.4](https://github.com/ugorji/go/tree/v1.1.4)
+- github.com/yuin/goldmark: [v1.1.27](https://github.com/yuin/goldmark/tree/v1.1.27)
 - google.golang.org/protobuf: v1.24.0
 - gotest.tools/v3: v3.0.2
 - k8s.io/klog/v2: v2.2.0
@@ -582,7 +589,7 @@
 - github.com/Azure/go-autorest/autorest: [v0.9.0 → v0.9.6](https://github.com/Azure/go-autorest/autorest/compare/v0.9.0...v0.9.6)
 - github.com/GoogleCloudPlatform/k8s-cloud-provider: [27a4ced → 7901bc8](https://github.com/GoogleCloudPlatform/k8s-cloud-provider/compare/27a4ced...7901bc8)
 - github.com/Microsoft/go-winio: [v0.4.14 → fc70bd9](https://github.com/Microsoft/go-winio/compare/v0.4.14...fc70bd9)
-- github.com/Microsoft/hcsshim: [672e52e → v0.8.9](https://github.com/Microsoft/hcsshim/compare/672e52e...v0.8.9)
+- github.com/Microsoft/hcsshim: [672e52e → 5eafd15](https://github.com/Microsoft/hcsshim/compare/672e52e...5eafd15)
 - github.com/alecthomas/template: [a0175ee → fb15b89](https://github.com/alecthomas/template/compare/a0175ee...fb15b89)
 - github.com/alecthomas/units: [2efee85 → c3de453](https://github.com/alecthomas/units/compare/2efee85...c3de453)
 - github.com/beorn7/perks: [v1.0.0 → v1.0.1](https://github.com/beorn7/perks/compare/v1.0.0...v1.0.1)
@@ -600,7 +607,6 @@
 - github.com/go-kit/kit: [v0.8.0 → v0.9.0](https://github.com/go-kit/kit/compare/v0.8.0...v0.9.0)
 - github.com/go-logfmt/logfmt: [v0.3.0 → v0.4.0](https://github.com/go-logfmt/logfmt/compare/v0.3.0...v0.4.0)
 - github.com/go-logr/logr: [v0.1.0 → v0.2.0](https://github.com/go-logr/logr/compare/v0.1.0...v0.2.0)
-- github.com/godbus/dbus: [2ff6f7f → ade71ed](https://github.com/godbus/dbus/compare/2ff6f7f...ade71ed)
 - github.com/golang/groupcache: [02826c3 → 215e871](https://github.com/golang/groupcache/compare/02826c3...215e871)
 - github.com/golang/protobuf: [v1.3.2 → v1.4.2](https://github.com/golang/protobuf/compare/v1.3.2...v1.4.2)
 - github.com/google/cadvisor: [v0.35.0 → v0.37.0](https://github.com/google/cadvisor/compare/v0.35.0...v0.37.0)
@@ -629,24 +635,25 @@
 - github.com/spf13/cobra: [v0.0.5 → v1.0.0](https://github.com/spf13/cobra/compare/v0.0.5...v1.0.0)
 - github.com/spf13/viper: [v1.3.2 → v1.4.0](https://github.com/spf13/viper/compare/v1.3.2...v1.4.0)
 - github.com/tmc/grpc-websocket-proxy: [89b8d40 → 0ad062e](https://github.com/tmc/grpc-websocket-proxy/compare/89b8d40...0ad062e)
-- github.com/urfave/cli: [v1.20.0 → v1.22.1](https://github.com/urfave/cli/compare/v1.20.0...v1.22.1)
+- github.com/urfave/cli: [v1.20.0 → v1.22.2](https://github.com/urfave/cli/compare/v1.20.0...v1.22.2)
 - github.com/vishvananda/netlink: [v1.0.0 → v1.1.0](https://github.com/vishvananda/netlink/compare/v1.0.0...v1.1.0)
 - github.com/vishvananda/netns: [be1fbed → 52d707b](https://github.com/vishvananda/netns/compare/be1fbed...52d707b)
 - go.etcd.io/bbolt: v1.3.3 → v1.3.5
 - go.etcd.io/etcd: 3cf2f69 → 18dfb9c
 - go.opencensus.io: v0.21.0 → v0.22.2
 - go.uber.org/atomic: v1.3.2 → v1.4.0
+- golang.org/x/crypto: bac4c82 → 75b2880
 - golang.org/x/exp: 4b39c73 → da58074
 - golang.org/x/image: 0694c2d → cff245a
 - golang.org/x/lint: 959b441 → fdd1cda
 - golang.org/x/mobile: d3739f8 → d2bd2a2
-- golang.org/x/mod: 4bf6d31 → v0.1.0
-- golang.org/x/net: 13f9640 → d3edc99
+- golang.org/x/mod: 4bf6d31 → v0.3.0
+- golang.org/x/net: 13f9640 → ab34263
 - golang.org/x/oauth2: 0f29369 → 858c2ad
 - golang.org/x/sys: fde4db3 → ed371f2
 - golang.org/x/text: v0.3.2 → v0.3.3
 - golang.org/x/time: 9d24e82 → 555d28b
-- golang.org/x/tools: 65e3620 → c00d67e
+- golang.org/x/tools: 65e3620 → c1934b7
 - golang.org/x/xerrors: a985d34 → 9bdfabe
 - google.golang.org/api: 5213b80 → v0.15.1
 - google.golang.org/appengine: v1.5.0 → v1.6.5
@@ -690,6 +697,7 @@
 - github.com/go-toolsmith/strparse: [v1.0.0](https://github.com/go-toolsmith/strparse/tree/v1.0.0)
 - github.com/go-toolsmith/typep: [v1.0.0](https://github.com/go-toolsmith/typep/tree/v1.0.0)
 - github.com/gobwas/glob: [v0.2.3](https://github.com/gobwas/glob/tree/v0.2.3)
+- github.com/godbus/dbus: [2ff6f7f](https://github.com/godbus/dbus/tree/2ff6f7f)
 - github.com/golangci/check: [cfe4005](https://github.com/golangci/check/tree/cfe4005)
 - github.com/golangci/dupl: [3e9179a](https://github.com/golangci/dupl/tree/3e9179a)
 - github.com/golangci/errcheck: [ef45e06](https://github.com/golangci/errcheck/tree/ef45e06)
