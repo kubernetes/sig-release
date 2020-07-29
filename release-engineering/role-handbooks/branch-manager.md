@@ -284,6 +284,8 @@ Builds against the `master` branch are implicitly the next alpha. `krel gcbmgr` 
 
 ### Beta Releases
 
+Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
+
 To run `krel gcbmgr` to stage a Beta release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-stage)
 
 And to run `krel gcbmgr` to release a Beta release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-release)
@@ -293,6 +295,8 @@ And to run `krel gcbmgr` to release a Beta release [see](https://github.com/kube
 Builds against a `release-x.y` branch are implicitly the next RC (release candidate). `krel gcbmgr` and `anago` automatically find and increment the current build number.
 
 **Note: If this is the first release (`rc.0`), there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
+
+Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
 
 Adding the `--rc` flag switches behavior on to building release candidates. Again `krel gcbmgr` and `anago` automatically find and increment the current build number.
 
@@ -330,6 +334,8 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 [tide]: https://git.k8s.io/test-infra/prow/tide
 
 ### Official Releases
+
+Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
 
 To run `krel gcbmgr` to stage an Official Release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-stage) and to release an Official Release [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-release)
 
@@ -373,6 +379,8 @@ The following are some ways to determine if the release process was successful:
 2. The release is logged automatically by [k8s-release-robot](https://github.com/k8s-release-robot) in [k/sig-release](https://git.k8s.io/sig-release)
 
 3. CHANGELOG-X.Y.md is automatically loaded into the kubernetes/kubernetes repo: [https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md)
+
+
 
 ### Post-release Activities
 
