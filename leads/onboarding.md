@@ -72,10 +72,12 @@ Managers, which are:
 - Have the correct Google Groups/GCP IAM membership in kubernetes/k8s.io:
   https://git.k8s.io/k8s.io/groups/groups.yaml
 
-  - k8s-infra-release-editors@
-  - k8s-infra-release-viewers@
-  - release-managers@
-  - release-managers-private@
+  - leads (members)
+  - k8s-infra-release-admins (members)
+  - k8s-infra-release-editors (members)
+  - release-comms (owners)
+  - release-managers (owners)
+  - release-managers-private (owners)
 
 - Be part of the Slack release-managers and release-team-leads User Group in
   kubernetes/community:

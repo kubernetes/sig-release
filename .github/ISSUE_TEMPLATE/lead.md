@@ -75,10 +75,12 @@ As you work through the checklist, use the following PRs as guides:
   - [ ] `kubernetes/release`
   - [ ] `kubernetes/sig-release`
 - [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/groups.yaml)
-  - `k8s-infra-release-editors@`
-  - `k8s-infra-release-viewers@`
-  - `release-managers@`
-  - `release-managers-private@`
+  - `leads` (members)
+  - `k8s-infra-release-admins` (members)
+  - `k8s-infra-release-editors` (members)
+  - `release-comms` (owners)
+  - `release-managers` (owners)
+  - `release-managers-private` (owners)
 - [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
 - [ ] Manually add to the [Release Team Google Group](https://groups.google.com/forum/#!forum/kubernetes-release-team)
 - [ ] Update Slack `release-managers` and `release-team-leads` User Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
