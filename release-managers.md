@@ -13,11 +13,11 @@ The responsibilities of each role are described below.
 
 ## Contact
 
-| Mailing List | Slack | Visibility | Usage | Membership |
-|---|---|---|---|---|
-| [release-managers@kubernetes.io](mailto:release-managers@kubernetes.io) | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public | Public discussion for Release Managers | All Release Managers (including Associates, Build Admins, and SIG Chairs) |
-| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) | [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Patch Release Team, Branch Managers, SIG Chairs |
-| [security-release-team@kubernetes.io](mailto:security-release-team@kubernetes.io) | N/A | Private | Security release coordination with the Product Security Committee | [security-discuss-private@kubernetes.io](mailto:security-discuss-private@kubernetes.io), [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) |
+| Mailing List                                                                            | Slack                                                                                                             | Visibility | Usage                                                             | Membership                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [release-managers@kubernetes.io](mailto:release-managers@kubernetes.io)                 | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public     | Public discussion for Release Managers                            | All Release Managers (including Associates, Build Admins, and SIG Chairs)                                                                                                        |
+| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) | [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67)                                               | Private    | Private discussion for privileged Release Managers                | Patch Release Team, Branch Managers, SIG Chairs                                                                                                                                  |
+| [security-release-team@kubernetes.io](mailto:security-release-team@kubernetes.io)       | N/A                                                                                                               | Private    | Security release coordination with the Product Security Committee | [security-discuss-private@kubernetes.io](mailto:security-discuss-private@kubernetes.io), [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) |
 
 ## Handbooks
 
@@ -83,6 +83,16 @@ GitHub team: [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes
 - Caleb Miles ([@calebamiles](https://github.com/calebamiles))
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Tim Pepper ([@tpepper](https://github.com/tpepper))
+
+## SIG Release Technical Leads
+
+The Technical Leads of the SIG establish new subprojects, decommission existing
+subprojects, and resolve cross-subproject technical issues and decisions.
+
+GitHub team: [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes/teams/sig-release-admins)
+
+- Jorge Alarcon ([@alejandrox1](https://github.com/alejandrox1))
+- Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
 
 ---
 
