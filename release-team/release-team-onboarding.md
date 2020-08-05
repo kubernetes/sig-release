@@ -20,7 +20,7 @@ The Kubernetes Community [defines](https://github.com/kubernetes/community/blob/
 
 The requirements for becoming a member are enumerated in the [k/community repo documentation](https://github.com/kubernetes/community/blob/master/community-membership.md#member). Generally, you'll need a few public contributions and some existing community members to sponsor you. The Release Team is a great place to meet members of the community that might be able to meet sponsors!
 
-For new shadows, it's not always necessary to become a member of the GitHub organization right away. Talk to the lead for the Release Team role you're shadowing for the definitive answer. For some roles (Enhancements for example) it is important for Shadows to be members of the GitHub organization because they have to maintain milestones in the [k/enhancements](https://github.com/kubernetes/enhancements) repo. For other roles (Release Notes for example), it's less urgent for new Shadows to be members of the GitHub organization. Your mileage may vary, but you should try to become an official member of the Kubernetes Community as soon as possible.
+For new shadows, it's not always necessary to become a member of the GitHub organization right away. Talk to the lead for the Release Team role you're shadowing for the definitive answer. For some roles (Enhancements for example) it is important for Shadows to be members of the GitHub organization because they have to maintain milestones in the [k/enhancements](https://github.com/kubernetes/enhancements) repo. For other roles it's less urgent for new Shadows to be members of the GitHub organization. Your mileage may vary, but you should try to become an official member of the Kubernetes Community as soon as possible.
 
 ## All Members
 

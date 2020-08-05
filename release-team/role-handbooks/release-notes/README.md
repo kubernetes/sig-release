@@ -68,6 +68,10 @@ The Release Notes team should use the [template](relnotes-template.md) to organi
 
 The `release-notes` subcommand of `krel` must continue to be run on the release branch (for `beta` and `rc` releases) in order to pull in any outstanding PRs that are merged between the beginning of code freeze and the release.
 
+### GitHub Organization Membership
+
+As well as becoming a member of the kubernetes GitHub organization as discussed in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md), release notes members should ensure that they [become members of the kubernetes-sigs GitHub organization](https://github.com/kubernetes/community/blob/master/community-membership.md#kubernetes-ecosystem). The tooling used by the release notes team creates pull requests kubernetes and kubernetes-sigs repositories, so membership of both is needed to streamline reviews.
+
 ### Machine and GitHub Setup
 
 #### Setup krel
