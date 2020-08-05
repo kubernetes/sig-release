@@ -9,12 +9,13 @@ https://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-k
 
 #### What type of PR is this:
 
-> Uncomment only one `/kind <>` line, hit enter to put that in a new line, and remove leading whitespace from that line:
->
-> /kind cleanup
-> /kind design
-> /kind documentation
-> /kind feature
+<!--
+Add one of the following kinds:
+/kind cleanup
+/kind documentation
+/kind feature
+/kind design
+-->
 
 #### What this PR does / why we need it:
 
@@ -23,8 +24,10 @@ https://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-k
 <!--
 *Automatically closes linked issue when PR is merged.
 Usage: `Fixes #<issue number>`, or `Fixes (paste link of issue)`.
--->
 
 Fixes #
+or
+None
+-->
 
 #### Special notes for your reviewer:
