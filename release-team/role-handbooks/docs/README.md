@@ -18,6 +18,7 @@ This document covers the responsibilities, time commitments, and timeline for Do
 The Docs Lead is responsible for working with the Release Team to coordinate documentation updates for the next Kubernetes release.
 
 Responsibilities include:
+
 * Identifying and tracking new Kubernetes features and feature updates that require new content
 * Offering guidance to code contributors about where new feature and enhancements documentation should live
 * Working with contributors to modify existing docs to accurately represent any upcoming changes
@@ -237,7 +238,7 @@ On the "Feature Stats" tab, a table was created to track the Doc Stats and then 
 
 This is very helpful for weekly reports and managing deadlines
 
-#### Reach out to release notes team 
+#### Reach out to release notes team
 
 Reach out to release notes team to see if there's anything that might need docs that isn't already clearly known, e.g:
 
@@ -247,7 +248,7 @@ Reach out to release notes team to see if there's anything that might need docs 
 
 This allows us to avoid merge conflicts on release day with `dev-[future release]`.
 
-##### Periodically merge `master` into `dev-[future release]`.
+##### Periodically merge `master` into `dev-[future release]`
 
 ⚠️ To merge `master` into `dev-[future release]` on your local fork:
 
@@ -270,7 +271,7 @@ You may need to fix conflicts manually. If somebody has improved a page on maste
 
 If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
 
-#### Monitor PRs 
+#### Monitor PRs
 
 Monitor PRs raised against dev-[future release]
 
@@ -309,9 +310,10 @@ Example notice:
 
 #### Review PRs
 
-It is the Docs Lead and Shadows' responsibility to ensure the incomming docs meet our standards. It's impossible for us to understand every technical component,so it is important to get a **technical LGTM** too if you're unsure about technical accuracy.
+It is the Docs Lead and Shadows' responsibility to ensure the incomming docs meet our standards. It's impossible for us to understand every technical component, so it is important to get a **technical LGTM** too if you're unsure about technical accuracy.
 
 Also review each PR for:
+
 - Check that the PR is in the `[future release]` milestone
 - Check that the KEP / enhancement is likely to land in `[future release]`.
 - Review PR commit histories, and make sure that PR commit histories contain only changes to files. It's especially important to **avoid revert commits**.Encourage developers to rebase any PRs with complicated commit histories.
@@ -322,10 +324,10 @@ Style Guide Checklist (High to Low Level)
 
 The [style guide](https://kubernetes.io/docs/contribute/style/style-guide/) consists of guidelines, not rules.
 
-- Make sure new docs use the correct template.
-    - [Concept](https://kubernetes.io/docs/contribute/style/page-templates/#concept-template)
-    - [Task](https://kubernetes.io/docs/contribute/style/page-templates/#task-template)
-    - [Tutorial](https://kubernetes.io/docs/contribute/style/page-templates/#tutorial-template)
+- Make sure new docs use the correct page content type.
+    - [Concept](https://kubernetes.io/docs/contribute/style/page-content-types/#concept)
+    - [Task](https://kubernetes.io/docs/contribute/style/page-content-types/#task)
+    - [Tutorial](https://kubernetes.io/docs/contribute/style/page-content-types/#tutorial)
 - Make sure the page content renders correctly.
     - Numbered list
     - Code blocks
@@ -365,26 +367,29 @@ If no suitable candidates are available, you may choose to lead again or nominat
 ---
 
 The Docs Lead is responsible for updating the Kubernetes API reference, kubectl, and components documentation.
+If you need help in building the reference documentation, reach out on Slack #sig-docs.
 
-#### Update the generated documentation 
+#### Generate the reference documentation
 
-Update the generated documentation using a Python script ([Generating Reference Pages for Kubernetes Components and Tools](https://kubernetes.io/docs/contribute/generate-ref-docs/kubernetes-components/)). Before running the script, modify `reference.yml` to checkout the Kubernetes future release branch.
+The first step is to famialiarize yourself with the `website/updated-imported-docs/update-imported-docs.py` script
+and the instructions for ([Generating Reference Pages for Kubernetes Components and Tools](https://kubernetes.io/docs/contribute/generate-ref-docs/quickstart/)).
 
-![update kubernetes release branch](pics/reference-yaml.png)
+The reference documentation build depends upon a valid release tag.
+When a Kubernetes release candidate version tag such as `v1.19-rc.2` is created, you can consider building
+the reference documentation. Next:
 
-#### Update the api markdown
+- Create a branch for this work based off of the dev-<release_num> branch.
+- Run the `update-imported-docs.py` script providing the release tag to build the reference documentation.
+- Commit the generated files.
 
-Create the `static/docs/reference/generated/kubernetes-api/<MINOR_VERSION>` directory for the future release. Copy the current release directory and rename it.
+You can expect to maintain this branch with periodic updates to the reference documentation using the latest `rc` tag.
+Merge your branch to the dev-<release_num> branch just before the final release.
+When the release is complete, you should build the reference documentation again using the final release tag
+and merge to the master branch.
 
-   ![copy-rename-dir](pics/copy-rename-dir.png)
+Note: You should not have to build the reference documentation for every release candidate version.
 
-#### Update release links
-
-Add the future release link to `content/en/docs/reference/_index.md` and remove the oldest release link. The **API Reference** section should only contain five links.
-
-   ![add-remove-link](pics/add-remove-link.png)
-
-#### Update minor verisons in api
+#### Update minor verison in api index page
 
 Update the <MINOR_VERSION> in `content/en/docs/reference/kubernetes-api/api-index.md` for the future release.
 
@@ -397,13 +402,6 @@ Validate that sig-cluster-lifecycle has all of the docs in place for the upcomin
 #### Stage "Sunset" PRs
 
 ⚠️ Create the PRs needed to roll the docs to the new version on the dev branch
-
-##### Deprecate links
-
-- Deprecate the oldest API link in the reference docs, e.g: https://github.com/kubernetes/website/pull/13467
-- Update the index for the API reference docs, e.g: https://github.com/kubernetes/website/pull/14139
-
-> Note: These first two steps can be combined into one single PR. If done in a single PR, please update this handbook with examples.
 
 #####  Update 4 past config.toml's
 
