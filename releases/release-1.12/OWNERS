@@ -5,5 +5,5 @@ approvers:
   - AishSundar # RT Lead Shadow
 reviewers:
   - justaugustus
-  - nickchase
   - marpaia
+  # - nickchase (release notes lead)
