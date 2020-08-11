@@ -74,6 +74,7 @@ The 1.19 release cycle is proposed as follows:
 | 1.19.0-rc.2 released | Branch Manager | Tue, July 21 | week 15 | |
 | 1.19.0-rc.3 released | Branch Manager | Wed, July 29 | week 16 | |
 | Burndown Meetings daily | Lead | Mon, August 3 | week 17 | |
+| 1.19.0-rc.4 released | Branch Manager | Tue, August 4 | week 17 | |
 | **[Code Thaw]** (EOD PST) | Branch Manager | TBD | TBD | |
 | **Cherry Pick Deadline** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
 | **[Test Freeze]** (EOD PST) | Branch Manager | Thu, August 6 | week 17 | |
