@@ -46,23 +46,25 @@ will target the following monthly release points.  Unplanned, critical
 releases may also occur in between these.
 
 | Monthly Patch Release | Target date |
-|----------------------|-------------|
-| August 2020 | 2020-08-12 |
+| --- | --- |
 | September 2020 | 2020-09-16 |
 | October 2020 | 2020-10-14 |
 | November 2020 | 2020-11-11 |
 | December 2020 | 2020-12-09 |
 | January 2021 | 2021-01-13 |
 | February 2021 | 2021-02-17 |
+| March 2021 | 2021-03-17 |
 
 ## Detailed Release History for Active Branches
 
 ### 1.18
 
-Next patch release is **1.18.7**.
+Next patch release is **1.18.9**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.18.9 | 2020-09-11 | 2020-09-16 |
+| 1.18.8 | N/A | 2020-08-13 |
 | 1.18.7 | 2020-08-07 | 2020-08-12 |
 | 1.18.6 | 2020-07-10 | 2020-07-15 |
 | 1.18.5 | 2020-06-25 | 2020-06-26 |
@@ -73,10 +75,12 @@ Next patch release is **1.18.7**.
 
 ### 1.17
 
-Next patch release is **1.17.10**.
+Next patch release is **1.17.12**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.17.12 | 2020-09-11 | 2020-09-16 |
+| 1.17.11 | N/A | 2020-08-13 |
 | 1.17.10 | 2020-08-07 | 2020-08-12 |
 | 1.17.9 | 2020-07-10 | 2020-07-15 |
 | 1.17.8 | 2020-06-25 | 2020-06-26 |
@@ -90,7 +94,7 @@ Next patch release is **1.17.10**.
 
 ### 1.16
 
-Next patch release is **1.16.14**.
+The most recent patch release was **1.16.14**.
 
 This is likely the last patch release for the 1.16 branch before it is EOL.
 
