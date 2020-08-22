@@ -1,10 +1,19 @@
 schedules:
 - release: 1.18
-  next: 1.18.7
-  cherryPickDeadline: 2020-08-07
-  targetDate: 2020-08-12
+  next: 1.18.9
+  cherryPickDeadline: 2020-09-11
+  targetDate: 2020-09-16
   endOfLifeDate: TBD
   previousPatches:
+    - release: 1.18.9
+      cherryPickDeadline: 2020-09-11
+      targetDate: 2020-09-16
+    - release: 1.18.8
+      cherryPickDeadline: "N/A"
+      targetDate: 2020-08-13
+    - release: 1.18.7
+      cherryPickDeadline: 2020-08-07
+      targetDate: 2020-08-12
     - release: 1.18.6
       cherryPickDeadline: 2020-07-10
       targetDate: 2020-07-15
@@ -24,11 +33,20 @@ schedules:
       cherryPickDeadline: 2020-04-06
       targetDate: 2020-04-08
 - release: 1.17
-  next: 1.17.10
-  cherryPickDeadline: 2020-08-07
-  targetDate: 2020-08-12
+  next: 1.17.12
+  cherryPickDeadline: 2020-09-11
+  targetDate: 2020-09-16
   endOfLifeDate: TBD
   previousPatches:
+    - release: 1.17.12
+      cherryPickDeadline: 2020-09-11
+      targetDate: 2020-09-16
+    - release: 1.17.11
+      cherryPickDeadline: "N/A"
+      targetDate: 2020-08-13
+    - release: 1.17.10
+      cherryPickDeadline: 2020-08-07
+      targetDate: 2020-08-12
     - release: 1.17.9
       cherryPickDeadline: 2020-07-10
       targetDate: 2020-07-15
@@ -57,11 +75,17 @@ schedules:
       cherryPickDeadline: 2020-01-10
       targetDate: 2020-01-14
 - release: 1.16
-  next: 1.16.14
-  cherryPickDeadline: 2020-08-07
-  targetDate: 2020-08-12
-  endOfLifeDate: TBD
+  next: 1.16.15
+  cherryPickDeadline: 2020-08-28
+  targetDate: 2020-09-02
+  endOfLifeDate: 2020-09-02
   previousPatches:
+    - release: 1.16.15
+      cherryPickDeadline: 2020-08-28
+      targetDate: 2020-09-02
+    - release: 1.16.14
+      cherryPickDeadline: 2020-08-07
+      targetDate: 2020-08-12
     - release: 1.16.13
       cherryPickDeadline: 2020-07-10
       targetDate: 2020-07-15
