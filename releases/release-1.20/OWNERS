@@ -1,0 +1,12 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - jeremyrickard         # Release Team Lead
+
+reviewers:
+  - kikisdeliveryservice  # Enhancements
+  - robertkielty          # CI Signal
+  - bai                   # Bug Triage
+  - annajung              # Docs
+  - jameslaverack         # Release Notes
+  - jrsapi                # Communications
