@@ -94,12 +94,13 @@ Next patch release is **1.17.12**.
 
 ### 1.16
 
-The most recent patch release was **1.16.14**.
+The most recent patch release was **1.16.15**.
 
-This is likely the last patch release for the 1.16 branch before it is EOL.
+This is the last patch release for the 1.16 branch before it is EOL.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
+| 1.16.15 | 2020-08-28 | 2020-09-02 |
 | 1.16.14 | 2020-08-07 | 2020-08-12 |
 | 1.16.13 | 2020-07-10 | 2020-07-15 |
 | 1.16.12 | 2020-06-25 | 2020-06-26 |
