@@ -1,0 +1,4 @@
+pr: 90660
+releasenote:
+  text: Fix a racing issue where the scheduler may perform unnecessary scheduling
+    attempts.

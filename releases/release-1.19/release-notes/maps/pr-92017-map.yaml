@@ -1,0 +1,6 @@
+pr: 92017
+releasenote:
+  text: 'kubeadm: deprecate the feature `--experimental-kustomize` in favor of `--experimental-patches`.
+    The supported patch formats are the same as "kubectl patch". They are read as
+    files from a directory and can be applied to kubeadm components during init/join/upgrade.
+    Only patching of static Pods is supported for the time being.'
