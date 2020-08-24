@@ -1,0 +1,4 @@
+pr: 91748
+releasenote:
+  text: Resolve regression in `metadata.managedFields` handling in update/patch requests
+    submitted by older API clients

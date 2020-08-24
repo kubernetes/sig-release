@@ -1,0 +1,3 @@
+pr: 91562
+releasenote:
+  text: Support `kubectl create deployment` with replicas

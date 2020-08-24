@@ -1,0 +1,4 @@
+pr: 91097
+releasenote:
+  text: Fix `VirtualMachineScaleSets.virtualMachines.GET` not allowed issues when
+    customers have set VMSS orchestrationMode.

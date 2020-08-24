@@ -1,0 +1,3 @@
+pr: 91945
+releasenote:
+  text: Add `pod.Namespace` to the image log
