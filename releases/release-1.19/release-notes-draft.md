@@ -2,7 +2,11 @@
 
 ### Deprecation warnings
 
-SIG API Machinery implemented warning mechanisms when using deprecated APIs that are visible to API consumers and metrics visible to cluster administrators. Requests to a deprecated API are returned with a warning containing a target removal release and any replacement API.
+SIG API Machinery implemented [warnings when using deprecated APIs](https://kubernetes.io/docs/reference/using-api/deprecation-policy/#rest-resources-aka-api-objects)
+that are visible to `kubectl` users and API consumers, and metrics visible to cluster administrators.
+Requests to a deprecated API are returned with a warning containing a target removal release and any replacement API.
+Warnings can also be returned by [admission webhooks](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#admissionreview-response-warning),
+and specified for [deprecated versions of custom resources](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definition-versioning/#version-deprecation).
 
 ### Avoiding permanent beta
 
@@ -60,7 +64,7 @@ You can find more information about how to restrict container system calls with 
 
 As of Kuberenetes v1.19, Kubernetes container images are stored on a community-controlled storage bucket, 
 located at `{asia,eu,us}.gcr.io/k8s-artifacts-prod`. The `k8s.gcr.io` vanity domain has been updated 
-to this new bucket. This brings production artefacts under community control.
+to this new bucket. This brings production artifacts under community control.
 
 ### KubeSchedulerConfiguration graduates to Beta
 
@@ -133,18 +137,18 @@ The new storage capacity tracking alpha feature is known to be affected by a lim
  - The 'kubeadm config upload' command is finally removed after a full GA deprecation cycle. If you still use it, please, use 'kubeadm init phase upload-config' instead ([#92610](https://github.com/kubernetes/kubernetes/pull/92610), [@rosti](https://github.com/rosti)) [SIG Cluster Lifecycle]
  - Upgrade kubescheduler.config.k8s.io/v1alpha2 to kubescheduler.config.k8s.io/v1beta1
   
-  - `.bindTimeoutSeconds` was moved as part of plugin args for `VolumeBinding`,
-    which can be configured separately per [profile](&#35;profiles).
-  - `.extenders` are updated to satisfy API standards. In particular:
-    - `.extenders` decoding is case sensitive. All fields are affected.
-    - `.extenders[*].httpTimeout` is of type `metav1.Duration`.
-    - `.extenders[*].enableHttps` is renamed to `.extenders[*].enableHTTPS`.
-  - `RequestedToCapacityRatio` args decoding is case sensitive. All fields are affected.
-  - `DefaultPodTopologySpread` [plugin](&#35;scheduling-plugins) is renamed to `SelectorSpread`.
-  - `Unreserve` extension point is removed from Profile definition. All `Reserve`
-    plugins implement an `Unreserve` call.
-  - `.disablePreemption` was removed. Users can disable preemption by disabling the
-    "DefaultPreemption" PostFilter plugin. ([#91420](https://github.com/kubernetes/kubernetes/pull/91420), [@pancernik](https://github.com/pancernik)) [SIG Scheduling]
+   - `.bindTimeoutSeconds` was moved as part of plugin args for `VolumeBinding`,
+     which can be configured separately per [profile](&#35;profiles).
+   - `.extenders` are updated to satisfy API standards. In particular:
+     - `.extenders` decoding is case sensitive. All fields are affected.
+     - `.extenders[*].httpTimeout` is of type `metav1.Duration`.
+     - `.extenders[*].enableHttps` is renamed to `.extenders[*].enableHTTPS`.
+   - `RequestedToCapacityRatio` args decoding is case sensitive. All fields are affected.
+   - `DefaultPodTopologySpread` [plugin](&#35;scheduling-plugins) is renamed to `SelectorSpread`.
+   - `Unreserve` extension point is removed from Profile definition. All `Reserve`
+     plugins implement an `Unreserve` call.
+   - `.disablePreemption` was removed. Users can disable preemption by disabling the
+     "DefaultPreemption" PostFilter plugin. ([#91420](https://github.com/kubernetes/kubernetes/pull/91420), [@pancernik](https://github.com/pancernik)) [SIG Scheduling]
  
 ## Changes by Kind
 
