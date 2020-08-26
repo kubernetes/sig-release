@@ -82,7 +82,9 @@ to get these questions answered.
 
 /milestone <!-- v1.x e.g. v1.14 -->
 /assign <!-- @ the Release Manager responsible for this release -->
-<!-- cc: shadows (optional)-->
+/cc @kubernetes/release-managers
+/priority important-soon
+/kind documentation
 
 <!-- Example template for screenshots comment:
 
