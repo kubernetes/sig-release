@@ -8,8 +8,15 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.19
+# Kubernetes 1.19: Accentuate The Paw-sitive
 
+<img src="accentuate-the-pawsitive.png" height=400 width=auto>
+
+All of you inspired this Kubernetes 1.19 release logo! This release was a bit more of a marathon and a testament to when the world is a wild place, we can come together and do unbelievable things. 
+
+"Accentuate the Paw-sitive" was chosen as the release theme because it captures the positive outlook that the release team had, despite the state of the world. The characters pictured in the 1.19 logo represent everyone's personalities on our release team, from emo to peppy, and beyond! 
+
+About the designer: Hannabeth Lagerlöf is a Visual Designer based in Los Angeles, California, and she has an extensive background in Environments and Graphic Design. Hannabeth creates art and user experiences that inspire connection. You can find Hannabeth on Twitter as @emanate_design.
 
 #### Links
 
