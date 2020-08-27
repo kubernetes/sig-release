@@ -28,10 +28,8 @@ aliases:
     - xmudrii # Release Manager Associate
   release-team:
     - alejandrox1 # subproject owner / 1.18 RT Lead
-    - claurence # subproject owner / 1.15 RT Lead
     - guineveresaenger # subproject owner / 1.17 RT Lead
     - justaugustus # subproject owner
-    - lachie83 # subproject owner / 1.16 RT Lead
     - tpepper # subproject owner
     - jeremyrickard / 1.20 RT Lead
   build-admins:
@@ -40,8 +38,6 @@ aliases:
     - ps882
     - sumitranr
   release-team-lead-role:
-    - claurence # 1.15
-    - lachie83 # 1.16
     - guineveresaenger # 1.17
     - alejandrox1 # 1.18
     - onlydole # 1.19 RT Lead
