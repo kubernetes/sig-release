@@ -8,8 +8,8 @@
 | Bug Triage | Vlad Gorodetsky ([@bai](https://github.com/bai) / Slack: `@bai`) | |
 | Docs | Anna Jung ([@annajung](https://github.com/annajung) / Slack: `@annajung`) | |
 | Release Notes | James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) / Slack: `@james.laverack`) | |
-| Communications | Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@sandoval`) | |
-| Emeritus Adviser | TBD | |
+| Communications | Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@j-dawg`) | |
+| Emeritus Adviser | Lachlan Evenson ([@lachie83](https://github.com/lachie83) / Slack: `@lachie83`) | -- |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 

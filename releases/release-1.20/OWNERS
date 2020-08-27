@@ -2,6 +2,7 @@
 
 approvers:
   - jeremyrickard         # Release Team Lead
+  - lachie83              # Emeritus Adviser
 
 reviewers:
   - kikisdeliveryservice  # Enhancements
