@@ -33,6 +33,7 @@ aliases:
     - justaugustus # subproject owner
     - lachie83 # subproject owner / 1.16 RT Lead
     - tpepper # subproject owner
+    - jeremyrickard / 1.20 RT Lead
   build-admins:
     - aleksandra-malinowska
     - listx
@@ -45,6 +46,7 @@ aliases:
     - alejandrox1 # 1.18
     - onlydole # 1.19 RT Lead
     - tpepper # 1.19 Emeritus Adviser
+    - jeremyricakrd / 1.20 RT Lead
   ci-signal-role:
     - alejandrox1 # 1.16 / 1.15
     - alenkacz # 1.17

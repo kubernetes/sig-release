@@ -3,6 +3,9 @@
 approvers:
   - jeremyrickard         # Release Team Lead
   - lachie83              # Emeritus Adviser
+  - hasheddan             # Release Team Lead Shadow
+  - palnabarun            # Release Team Lead Shadow
+  - savitharaghunathan    # Release Team Lead Shadow
 
 reviewers:
   - kikisdeliveryservice  # Enhancements
