@@ -10,7 +10,7 @@ description: |
 
 # Kubernetes 1.19: Accentuate The Paw-sitive
 
-<img src="accentuate-the-pawsitive.png" height=400 width=auto>
+<img src="https://raw.githubusercontent.com/kubernetes/sig-release/master/releases/release-1.19/accentuate-the-pawsitive.png" height=400 width=auto>
 
 All of you inspired this Kubernetes 1.19 release logo! This release was a bit more of a marathon and a testament to when the world is a wild place, we can come together and do unbelievable things. 
 
