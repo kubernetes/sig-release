@@ -2,16 +2,13 @@
 
 ## Overview
 
-While the Enhancements Lead serves as a member of the Release Team (a subproject of [SIG Release][sig-release]), this role is also a liaison to [SIG PM][sig-pm] across the following subprojects:
-- Product Management
-- Program Management & Release
-- Release Marketing
+While the Enhancements Lead serves as a member of the Release Team (a subproject of [SIG Release][sig-release]), this role is also a liaison to [sig-arch-Enhancements][sig-arch-enhancements] subproject of [SIG Architecture][sig-arch-readme].
 
 ## Responsibilities
 
 An Enhancements Lead holds the following responsibilities:
 - Maintain the active status of Enhancements within [kubernetes/enhancements][k/enhancements]
-- Facilitate communication between Enhancement Owners, Product Management, and SIG leadership, as necessary
+- Facilitate communication between Enhancement Owners, and SIG leadership, as necessary
 - Collate the major themes of the release, including but not limited to:
   - new enhancements
   - long-awaited enhancements
@@ -37,7 +34,7 @@ An Enhancements Lead holds the following responsibilities:
 - MUST have served on the Release Team in a previous capacity, ideally as an Enhancements Shadow
 - MUST be a member of the [Release Team Google Group][rt-group]
 - MUST be a member of the [SIG Release Google Group][sig-release-group]
-- MUST be a member of the [SIG PM Google Group][sig-pm-group]
+- MUST be a member of the [SIG Architecture Google Group][sig-arch-group]
 
 Helpful characteristics of an Enhancements Lead include:
 - experience with the Kubernetes community, code layout, ecosystem projects, organizational norms, governance, SIG structure, architecture, and release process
@@ -64,16 +61,16 @@ The shadows should be selected keeping in mind that one of them may eventually b
 
 Ensure that the previous Enhancements Lead has given (or facilitated getting) you access to:
 - GitHub teams
-  - enhancements-maintainers
-  - kubernetes-milestone-maintainers
-- OWNERS_ALIASES (as `enhancements-maintainers` in [kubernetes/enhancements][k/enhancements] repo)
+  - enhancements
+  - milestone-maintainers
+- OWNERS_ALIASES (as `enhancements` in [kubernetes/enhancements][k/enhancements] repo)
 - Edit access to the Kubernetes x.y.0 Enhancements Tracking Sheet e.g., [Kubernetes 1.17 Enhancements Tracking][1.17-tracking]
 
 ## Process
 
 ### Standards
 
-As mentioned previously, the Enhancements Lead role encompasses several cross-functional responsibilities with [SIG PM][sig-pm].
+As mentioned previously, the Enhancements Lead role encompasses several cross-functional responsibilities with [sig-arch-Enhancements][sig-arch-enhancements] subproject of [SIG Architecture][sig-arch-readme].
 
 The process of maintaining an enhancement in Kubernetes is documented in the [kubernetes/enhancements][k/enhancements] repo. Any questions / concerns / suggestions for improvement to the Enhancements process should be raised as GitHub issues / PRs to k/enhancements.
 
@@ -201,12 +198,12 @@ Exception process is outlined [here](https://github.com/kubernetes/sig-release/b
 
 ### Succession
 
-- Select who will be the new enhancement lead for the next release.  Shadows should be the first source pool.  If none are available to lead then look externally through other release team members or members of #SIG-PM
+- Select who will be the new enhancement lead for the next release.  Shadows should be the first source pool.  If none are available to lead then look externally through other release team members or members of [SIG Architecture Enhancements Subproject](enhancements)
 - Generate new Enhancements Tracking sheet with enhancements that were removed from the current milestone
 - Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements
 - Continually work to improve Enhancements process
-- Review / update documentation as the release cycle
-- Close issues marked as stable that made it into the release
+- Review / update documentation as the release cycle ends
+- Close issues marked as stable that made it into the release, only after the corresponding KEPs have been marked `Implemented`
 - Close milestones that are complete
 - Cleanup old milestones
 
@@ -239,11 +236,12 @@ https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 [rt-group]: https://groups.google.com/a/kubernetes.io/g/release-team
 [rt-selection]: /README.md#release-team-selection
 [rt-requirements]: /release-team/release-team-onboarding.md
+[sig-arch-readme]: https://github.com/kubernetes/community/tree/master/sig-architecture/README.md
+[sig-arch-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-architecture
+[sig-arch-enhancements]: https://github.com/kubernetes/community/tree/master/sig-architecture#enhancements
 [sig-docs-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-docs
 [sig-leads-group]: https://groups.google.com/a/kubernetes.io/g/leads
-[sig-pm]: https://github.com/kubernetes/community/blob/master/sig-pm/README.md
-[sig-pm-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-pm
 [sig-release]: https://github.com/kubernetes/community/blob/master/sig-release/README.md
 [sig-release-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [1.17-announcement]: https://kubernetes.io/blog/2019/12/09/kubernetes-1-17-release-announcement/
-[1.12-tracking]: https://bit.ly/k8s117-enhancement-tracking
+[1.17-tracking]: https://bit.ly/k8s117-enhancement-tracking
