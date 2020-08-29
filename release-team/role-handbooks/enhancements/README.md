@@ -78,7 +78,7 @@ It is important that this process be followed and documentation remain up-to-dat
 
 ### Milestone Activities + Timing
 
-> Note: The week #n timings given below are tentative. There are special releases like Kubernetes 1.19 which may not strictly conform to that.
+> Note: The week #n timings given below are tentative. There are special releases like Kubernetes 1.19 or releases at the end of the year which may not strictly conform to that.
 
 #### Pre-Collection (Week 0)
 
@@ -124,7 +124,7 @@ It is important that this process be followed and documentation remain up-to-dat
 - Monitor issues that are At Risk closer, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward.
 
 
-#### Code Freeze
+#### Code Freeze (Week 10+)
 
 Start planning for the next release while assisting the Release Lead with anything relating to Analyst or Public Relation planning. Work with the Communications Lead to develop major themes for the official Kubernetes blog post.
 
