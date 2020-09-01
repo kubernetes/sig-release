@@ -100,36 +100,13 @@ Next patch release is **1.17.12**.
 | 1.17.2 | [No-op release](https://groups.google.com/d/topic/kubernetes-dev/Mhpx-loSBns/discussion) | 2020-01-21 |
 | 1.17.1 | 2020-01-10 | 2020-01-14 |
 
-### 1.16
-
-The most recent patch release was **1.16.14**.
-
-The pending 1.16.15 release will be the last patch release for the 1.16 branch before it is EOL.
-
-| Patch Release | Cherry-picks deadline | Target date |
-| --- | --- | --- |
-| 1.16.15 | 2020-08-28 | 2020-09-02 |
-| 1.16.14 | 2020-08-07 | 2020-08-12 |
-| 1.16.13 | 2020-07-10 | 2020-07-15 |
-| 1.16.12 | 2020-06-25 | 2020-06-26 |
-| 1.16.11 | 2020-06-12 | 2020-06-17 |
-| 1.16.10 | 2020-05-15 | 2020-05-20 |
-| 1.16.9 | 2020-04-13 | 2020-04-16 |
-| 1.16.8 | 2020-03-09 | 2020-03-12 |
-| 1.16.7 | 2020-02-07 | 2020-02-11 |
-| 1.16.6 | [No-op release](https://groups.google.com/d/topic/kubernetes-dev/Mhpx-loSBns/discussion) | 2020-01-21 |
-| 1.16.5 | 2020-01-10 | 2020-01-14 |
-| 1.16.4 | 2019-12-06 | 2019-12-11 |
-| 1.16.3 | 2019-11-08 | 2019-11-13 |
-| 1.16.2 | 2019-10-11 | 2019-10-15 |
-| 1.16.1 | 2019-09-27 | 2019-10-02 |
-
 ## Non-Active Branch History
 
 These releases are no longer supported.
 
 | Minor Version | Final Patch Release | EOL date |
 | --- | --- | --- |
+| 1.16 | 1.16.15 | 2020-09-02 |
 | 1.15 | 1.15.12 | 2020-05-06 |
 | 1.14 | 1.14.10 | 2019-12-11 |
 | 1.13 | 1.13.12 | 2019-10-15 |
