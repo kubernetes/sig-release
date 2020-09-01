@@ -94,9 +94,9 @@ Next patch release is **1.17.12**.
 
 ### 1.16
 
-The most recent patch release was **1.16.15**.
+The most recent patch release was **1.16.14**.
 
-This is the last patch release for the 1.16 branch before it is EOL.
+The pending 1.16.15 release will be the last patch release for the 1.16 branch before it is EOL.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
