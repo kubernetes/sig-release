@@ -57,6 +57,14 @@ releases may also occur in between these.
 
 ## Detailed Release History for Active Branches
 
+### 1.19
+
+Next patch release is **1.19.1**.
+
+| Patch Release | Cherry-picks deadline | Target date |
+| --- | --- | --- |
+| 1.19.1 | 2020-09-04 | 2020-09-09 |
+
 ### 1.18
 
 Next patch release is **1.18.9**.
