@@ -64,6 +64,7 @@ Docs Lead Shadows are people who are preparing to be a Docs Lead in the future. 
 - Be invested in becoming an org member within the release cycle. This can often be achieved during the release cycle with sponsorship from a role lead. See the [Release Team onboarding guide](/release-team/release-team-onboarding.md) for more details.
 - General knowledge of our SIG-Docs [areas of responsibility](https://github.com/kubernetes/community/tree/master/sig-docs#subprojects).
 - Experience with the general process involved with [contributing](https://kubernetes.io/docs/contribute/start/) to Kubernetes website.
+- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers)
 
 ## Release Timeline
 
@@ -104,8 +105,8 @@ Early in the release cycle, the Release Manager opens an enhancement tracking sp
 Read the release timeline and **make sure the timeline includes deadlines for documentation work**, e.g: [1.14 timeline](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.14#timeline):
 
 - Docs deadline - Open placeholder PRs (~3.5 weeks before release)
-- Docs deadline - PRs ready for review: (~2 weeks before release)
-- Docs complete - All PRs reviewed and ready to merge (~1 week before release
+- Docs deadline - PRs ready for review (~2 weeks before release)
+- Docs complete - All PRs reviewed and ready to merge (~1 week before release)
 
 If these deadlines aren't listed in the release timeline, request that the Release Lead add them.
 
@@ -170,7 +171,7 @@ Also send a Slack message to those that you didn't select, e.g:
 > The release team for sig-doc shadows has no additional availability, but please stick around help out with some of our other sigs (including sig-docs)!
 >
 > How can you help?
-> - Attend the sig release meetings (10AM PST every Monday - see #sig-release for more info).
+> - Attend the sig release meetings (07 30 AM PST Bi-weekly on Tuesdays - see #sig-release for more info).
 > - SIG-DOCs is always looking for new contributors, please go introduce yourself and we're happy to help! As a bonus, you will be preferred during the next release cycle as opposed to someone not involved with sig-docs.
      - Slack is full of other great SIGs that could always use your help!
 >
@@ -315,6 +316,10 @@ When you have completed resolving the differences manually, run `git merge --con
 
 ⚠️  **Ensure the PR is passing tests on GitHub**.
 
+Perform merge activity on a regular basis to ensure a smooth release. eg: once/week during intial weeks and increase the frequency if required closer to the end of the release cycle. 
+
+Report out the `dev-[future release]` branch health in Release Team meetings and sig-docs meetings. 
+
 #### Monitor PRs
 
 Make a query showing all PRs raised against dev-[future release] and monitor that regularly e.g., [1.14 search](https://github.com/kubernetes/website/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+base%3Adev-1.14+label%3Alanguage%2Fen)
@@ -352,7 +357,7 @@ Example notice:
 
 #### Review PRs
 
-It is the Docs Lead and Shadows' responsibility to ensure the incomming docs meet our standards. It's impossible for us to understand every technical component, so it is important to get a **technical LGTM** too if you're unsure about technical accuracy.
+It is the Docs Lead and Shadows' responsibility to ensure the incoming docs meet our standards. It's impossible for us to understand every technical component, so it is important to get a **technical LGTM** too if you're unsure about technical accuracy.
 
 Also review each PR for:
 
@@ -399,7 +404,7 @@ If you need help reviewing PRs, ask SIG Docs (#sig-docs channel on Slack) for he
 
 ⚠️ During Code Freeze, pick a successor who has demonstrated the ability and understanding of the process.
 
-**Usually this is a Docs Lead Shadow that has beenon the team for 2 releases with a desire to continue with the SIG Docs.**
+**Usually this is a Docs Lead Shadow that has been on the team for 2 releases with a desire to continue with the SIG Docs.**
 
 - Reach out to the person you have in mind and confirm they are able to commit the time and effort for a successful release.
 - Once confirmed, inform the Release Team and the SIG Docs Team.
@@ -428,16 +433,15 @@ The reference documentation build depends upon a valid release tag.
 When a Kubernetes release candidate version tag such as `v1.19-rc.2` is created, you can consider building
 the reference documentation. Next:
 
-- Create a branch for this work based off of the dev-[future branch].
+- Create a branch for this work based off of the `dev-[future release]` branch.
 - Run the `update-imported-docs.py` script providing the release tag to build the reference documentation.
 - Commit the generated files.
 
 ![Copy and rename screenshot](pics/copy-rename-dir.png)
 
 You can expect to maintain this branch with periodic updates to the reference documentation using the latest `rc` tag.
-Merge your branch to the dev-<release_num> branch just before the final release.
-When the release is complete, you should build the reference documentation again using the final release tag
-and merge to the master branch.
+Merge your branch to the `dev-[future release]` branch just before the final release.
+When the release is complete, you should build the reference documentation again using the final release tag and merge to the `master` branch.
 
 Note: You should not have to build the reference documentation for every release candidate version.
 
@@ -492,7 +496,19 @@ Creating the release branch lets you snapshot the current docs in a new branch, 
 
 ![](pics/new-branch.png)
 
-> Note: if the release branch is created before the website is frozen you may need to merge in master to keep up-to-date
+#### Update Netlify
+
+Update the Netlify configuration. (A [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with access):
+
+Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
+
+- Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `master` (e.g: https://kuberneteio), eventually `master` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
+  - Taking the defaults here is mostly fine
+  - When in doubt, compare it to a working example
+  - e.g, site name: k8s-v1-20
+  - e.g, custom domain: v1-20.docs.kubernetes.io
+
+> Note: if the `release-[current-branch]` is created before the website is frozen you may need to merge in master to keep up-to-date
 
 To merge `master` into `release-[current release]` on your local fork:
 
@@ -515,23 +531,12 @@ git push origin merged-master-release-[current release]
 
 Now create a pull request to merge the new branch you've made into the `release-[current-release]` branch on [k/website](https://github.com/kubernetes/website).
 
-#### Update Netlify
-
-Update the Netlify configuration. (A [SIG Docs Chair or Technical Lead](https://git.k8s.io/community/sig-docs#leadership) can assist you with access):
-
-Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
-
-- Create a Netlify site that builds from `release-[future release]` branch. Even though the `[future release]` is currently `master` (e.g: https://kuberneteio), eventually `master` will be a newer k8s version and we'll use the `release-[future release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
-  - Taking the defaults here is mostly fine
-  - When in doubt, compare it to a working example
-  - e.g, site name: k8s-v1-20
-  - e.g, custom domain: v1-20.docs.kubernetes.io
-
 #### Freeze Kubernetes website
 
 24 hours before the release, freeze the repo: ⚠️  no PRs should be allowed to merge AT ALL until the release PR has successfully merged.
 
-- Submit an issue with `tide/merge-blocker` label.
+- Request temporary write access to k/website. Any [SIG Docs co-chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) should be able to help with this. 
+- Submit an issue with `tide/merge-blocker` label. Depending upon your permissions, a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with adding the label.
 - Submit a freeze announcement following our [protocols](#communicate-major-deadlines)
 
 #### Inform localization teams
@@ -677,7 +682,9 @@ Announce that `[future release]` branch is open for new feature docs on slack #s
 
 #### Reassign issues
 
+- Clean Up
 ⚠️  Assign any issues / feature / PRs (that missed the release) to the new Docs Lead
+⚠️  Create a PR to remove shadows from [milestone maintainers](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers) 
 
 ### Celebrate! 🎉
 
@@ -692,6 +699,7 @@ Special thanks to contibutors to this document, including:
 * Jared Bhatti
 * Jennifer Rondeau
 * Misty Linville
+* Savitha Raghunathan
 * Tim Bannister
 * Tim Fogarty
 * Zach Arnold
