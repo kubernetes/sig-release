@@ -1,4 +1,16 @@
 schedules:
+- release: 1.19
+  next: 1.19.1
+  cherryPickDeadline: 2020-09-04
+  targetDate: 2020-09-09
+  endOfLifeDate: 2021-09-30
+  previousPatches:
+    - release: 1.19.2
+      cherryPickDeadline: 2020-09-11
+      targetDate: 2020-09-16
+    - release: 1.19.1
+      cherryPickDeadline: 2020-09-04
+      targetDate: 2020-09-09
 - release: 1.18
   next: 1.18.9
   cherryPickDeadline: 2020-09-11
@@ -74,54 +86,3 @@ schedules:
     - release: 1.17.1
       cherryPickDeadline: 2020-01-10
       targetDate: 2020-01-14
-- release: 1.16
-  next: 1.16.15
-  cherryPickDeadline: 2020-08-28
-  targetDate: 2020-09-02
-  endOfLifeDate: 2020-09-02
-  previousPatches:
-    - release: 1.16.15
-      cherryPickDeadline: 2020-08-28
-      targetDate: 2020-09-02
-    - release: 1.16.14
-      cherryPickDeadline: 2020-08-07
-      targetDate: 2020-08-12
-    - release: 1.16.13
-      cherryPickDeadline: 2020-07-10
-      targetDate: 2020-07-15
-    - release: 1.16.12
-      cherryPickDeadline: 2020-06-25
-      targetDate: 2020-06-26
-    - release: 1.16.11
-      cherryPickDeadline: 2020-06-12
-      targetDate: 2020-06-17
-    - release: 1.16.10
-      cherryPickDeadline: 2020-05-15
-      targetDate: 2020-05-20
-    - release: 1.16.9
-      cherryPickDeadline: 2020-04-13
-      targetDate: 2020-04-16
-    - release: 1.16.8
-      cherryPickDeadline: 2020-03-09
-      targetDate: 2020-03-12
-    - release: 1.16.7
-      cherryPickDeadline: 2020-02-07
-      targetDate: 2020-02-11
-    - release: 1.16.6
-      cherryPickDeadline: "No-op release https://groups.google.com/d/topic/kubernetes-dev/Mhpx-loSBns/discussion"
-      targetDate: 2020-01-21
-    - release: 1.16.5
-      cherryPickDeadline: 2020-01-10
-      targetDate: 2020-01-14
-    - release: 1.16.4
-      cherryPickDeadline: 2019-12-06
-      targetDate: 2019-12-11
-    - release: 1.16.3
-      cherryPickDeadline: 2019-11-08
-      targetDate: 2019-11-13
-    - release: 1.16.2
-      cherryPickDeadline: 2019-10-11
-      targetDate: 2019-10-15
-    - release: 1.16.1
-      cherryPickDeadline: 2019-09-27
-      targetDate: 2019-10-02
