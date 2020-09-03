@@ -42,9 +42,9 @@ Helpful characteristics of an Enhancements Lead include:
 - release management experience
 
 Approximate Time Commitments
-Beginning of the cycle through enhancement freeze: 3-6 hours a week fluctuating based on how many SIG meetings need to be attended
-Enhancement Freeze through Code Freeze: 4-7 hours a week
-Code Freeze through Release Day: 1-4 hours a week
+- Beginning of the cycle through enhancement freeze: 3-6 hours a week fluctuating based on how many SIG meetings need to be attended
+- Enhancement Freeze through Code Freeze: 4-7 hours a week
+- Code Freeze through Release Day: 1-4 hours a week
 
 ## Mentoring Shadows
 
@@ -61,10 +61,10 @@ The shadows should be selected keeping in mind that one of them may eventually b
 
 Ensure that the previous Enhancements Lead has given (or facilitated getting) you access to:
 - GitHub teams
-  - enhancements
+  - enhancements (This group should be used for Enhancement Subproject related pinging only and not for Release Team Enhancements Group)
   - milestone-maintainers
 - OWNERS_ALIASES (as `enhancements` in [kubernetes/enhancements][k/enhancements] repo)
-- Edit access to the Kubernetes x.y.0 Enhancements Tracking Sheet e.g., [Kubernetes 1.17 Enhancements Tracking][1.17-tracking]
+- Access to the previous Kubernetes Release Enhancements Tracking Sheet.
 
 ## Process
 
@@ -82,13 +82,12 @@ It is important that this process be followed and documentation remain up-to-dat
 
 #### Pre-Collection (Week 0)
 
-- Gather Shadows to have them read this handbook, watch the [k/enhancements][k/enhancements] repo to get notified on all issues, and give expectations on what the process looks like and their particular role.
 - Duplicate the previous enhancement collection spreadsheet into your own Google Drive and adjust it for the current milestone. Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements. Update the permissions on the sheet via the _Share_ settings available in the top right of the sheet: Enable anyone with the link to _view_ the sheet. Next, grant _Edit_ access to yourself, prior lead, release lead, shadows, and the [Kubernetes Release Team Google Group][rt-group] . Lastly, add _Comment_ access for the [SIG Release Google Group][sig-release-group], [SIG Docs Google Group][sig-docs-group], and [SIG Leads Google Group][sig-leads-group]. When complete, remove all currently tracked issues from both the `Enhancements` and `Docs` tabs.
 - Within the tracking sheet, filter the `data` tab to remove Issues that were completed in a previous release. Copy the `Issue Number` column to the `Enhancements` tab. The tab will auto-populate with a portion of the other relevant data. Once complete, set their `Enhancement Status` to `Pending Inclusion`. This will serve as the initial seed of Enhancements that need to be evaluated for the release.
 - Examine the `Removed From Milestone` tab and visit those issues to see if they have been added to the current milestone. These enhancements likely slipped because of docs or testing. Ping owners to make sure they are targeted for the current milestone. When complete, clear the issues from the tab.
 - Find Issues from previous milestone that have graduated to Stable. Remove `tracked/yes` or `tracked/no` labels. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
 - Clear out previous milestone issues. Ping owners to get them to drop milestone or add to the current milestone so it can be tracked. This can be a responsibility for shadow roles.
-- Close previous milestone.
+- Close previous milestone by ensuring that there are no open issues/PRs in that milestone.
 - Issues in the current milestone should have the `tracked/yes` label applied and their status in the tracking sheet set to `Tracked`. Ensure they provide the required information and labels to be accepted into the milestone. If they do not meet the requirements, let the Issue owner know. set it's status within the tracking sheet to `At Risk` and add a comment describing which requirements are missing.
 - Ping any owners on `lifecycle/frozen` label from all issues to see if there is any planned work or if the issue is no longer relevant to Kubernetes.
 - Send an email to the [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) mailing list with a call for enhancements. View prior examples for references ([1](https://groups.google.com/forum/#!msg/kubernetes-dev/vGSBzUUWp9g/bFa1re3ZAgAJ) [2](https://groups.google.com/forum/#!msg/kubernetes-dev/T-kIHtgS5J4/ZjKTsCf_AwAJ;context-place=msg/kubernetes-dev/vGSBzUUWp9g/bFa1re3ZAgAJ)).
@@ -96,6 +95,7 @@ It is important that this process be followed and documentation remain up-to-dat
 
 #### Pre-Enhancements Freeze (Week 1)
 
+- Gather Shadows to have them read this handbook, watch the [k/enhancements][k/enhancements] repo to get notified on all issues, and give expectations on what the process looks like and their particular role.
 - Go to every open issue that is marked with `tracked/no` and ping the owner to see if the enhancement should be included in the current milestone. If there is no graduation or major change, leave as-is. If the enhancement is graduating or undergoing a major change, remove the `tracked/no` label and add `tracked/yes`, add the issue to the current milestone, and set it's status to `Tracked` within the tracking sheet if it meets the requirements. If it is missing some  of the requirements (e.g. KEP in a provisional state), let the issue owner know and add it as `At Risk`. Another great task for shadow help or some automation.
 - Verify issues have k/k PRs associated so they can be referenced and easily tracked. This is going to be critical come Enhancement Freeze and Code Freeze to see the status of the code.
 - Work with the Release Lead to attend every SIG meeting over the span of 2-3 weeks. Take 2 minutes to introduce yourself, talk about release information, and relay information about issues that haven't been removed from the previous milestone or call out issues that may need some attention.
@@ -103,13 +103,11 @@ It is important that this process be followed and documentation remain up-to-dat
 - Weekly Release meetings require updates of current status. Use the `Feature stats` tab to update the release team on counts of enhancements in good and bad progress.
 - Start reminding Issue owners that KEPs are required for each enhancement and that KEPs must be in an implementable state by Enhancement Freeze.
 
-
 #### Collection Monitoring and Triage (Week 2-3)
 
 - Stay on top of comments in issues when owners respond. Apply correct labels, milestone information, update their status in the sheet if necessary.
 - Mark features as `At Risk` if there is no communication, active PRs on the issues, or it is missing other requirements coming into Enhancement Freeze.
 - Start syncing with Communications Team on giving an induction what's coming up for the release.
-
 
 #### Enhancements Freeze (Week 4)
 
@@ -117,12 +115,10 @@ It is important that this process be followed and documentation remain up-to-dat
 - Remove any enhancements that failed to meet the criteria by the Enhancement freeze deadline. Set their status in the sheet to `Removed from Milestone` and use the `Enhancements` -> `Remove Enhancements from Milestone` menu option to move them over to the `Removed from milestone` tab.
 - Any enhancements removed from the milestone will now require an exception.  As exception requests come in, discuss each with the Release Lead (and Shadows) to arrive at an approve/reject decision. Create an exception file in the Release for exceptions Example [1](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.14/exception.yaml). If a previously removed Enhancement has had their exception Approved, set their status to `Tracked` and use the `Enhancements` -> `Track Removed Enhancements` menu option to move it back to the `Enhancements` and `Docs` tabs.
 
-
 #### Post Enhancements Freeze (Week 5-10)
 
-- Stay on top of issues and continually monitor them twice a week and look at attached PRs. As Code Freeze gets closer, there are PRs that have not been merged, move the issue to At Risk. If there is no activity, ping issue owners on either the issue or the k/k PR.
-- Monitor issues that are At Risk closer, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward.
-
+- Stay on top of issues and continually monitor them twice a week and look at attached PRs. As Code Freeze gets closer, if there are PRs that have not been merged, move the issue to At Risk. If there is no activity, ping issue owners on either the issue or the k/k PR.
+- Monitor issues that are At Risk closely, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward.
 
 #### Code Freeze (Week 10+)
 
@@ -153,7 +149,6 @@ The Dashboard tab is intended to be an _at-a-glance_ view of the current
 Enhancement status from both the perspective of the Enhancements and Docs teams.
 It is 100% generated from the `Enhancements` and `Docs` tabs and should **NOT**
 be updated manually.
-
 
 #### Enhancement Signal
 
@@ -221,7 +216,7 @@ Exception process is outlined [here](https://github.com/kubernetes/sig-release/b
 
 ### Succession
 
-- Select who will be the new enhancement lead for the next release.  Shadows should be the first source pool.  If none are available to lead then look externally through other release team members or members of [SIG Architecture Enhancements Subproject](enhancements)
+- Select who will be the new enhancement lead for the next release. Shadows should be the first source pool. If none are available to lead then look externally through other release team members or members of [SIG Architecture Enhancements Subproject](enhancements)
 - Generate new Enhancements Tracking sheet with enhancements that were removed from the current milestone
 - Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements
 - Continually work to improve Enhancements process
