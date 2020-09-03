@@ -89,7 +89,6 @@ It is important that this process be followed and documentation remain up-to-dat
 - Clear out previous milestone issues. Ping owners to get them to drop milestone or add to the current milestone so it can be tracked. This can be a responsibility for shadow roles.
 - Close previous milestone by ensuring that there are no open issues/PRs in that milestone.
 - Issues in the current milestone should have the `tracked/yes` label applied and their status in the tracking sheet set to `Tracked`. Ensure they provide the required information and labels to be accepted into the milestone. If they do not meet the requirements, let the Issue owner know. set it's status within the tracking sheet to `At Risk` and add a comment describing which requirements are missing.
-- Ping any owners on `lifecycle/frozen` label from all issues to see if there is any planned work or if the issue is no longer relevant to Kubernetes.
 - Send an email to the [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) mailing list with a call for enhancements. View prior examples for references ([1](https://groups.google.com/forum/#!msg/kubernetes-dev/vGSBzUUWp9g/bFa1re3ZAgAJ) [2](https://groups.google.com/forum/#!msg/kubernetes-dev/T-kIHtgS5J4/ZjKTsCf_AwAJ;context-place=msg/kubernetes-dev/vGSBzUUWp9g/bFa1re3ZAgAJ)).
 
 
