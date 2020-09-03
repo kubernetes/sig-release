@@ -91,10 +91,9 @@ It is important that this process be followed and documentation remain up-to-dat
 - Issues in the current milestone should have the `tracked/yes` label applied and their status in the tracking sheet set to `Tracked`. Ensure they provide the required information and labels to be accepted into the milestone. If they do not meet the requirements, let the Issue owner know. set it's status within the tracking sheet to `At Risk` and add a comment describing which requirements are missing.
 - Send an email to the [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) mailing list with a call for enhancements. View prior examples for references ([1](https://groups.google.com/forum/#!msg/kubernetes-dev/vGSBzUUWp9g/bFa1re3ZAgAJ) [2](https://groups.google.com/forum/#!msg/kubernetes-dev/T-kIHtgS5J4/ZjKTsCf_AwAJ;context-place=msg/kubernetes-dev/vGSBzUUWp9g/bFa1re3ZAgAJ)).
 
-
 #### Pre-Enhancements Freeze (Week 1)
 
-- Gather Shadows to have them read this handbook, watch the [k/enhancements][k/enhancements] repo to get notified on all issues, and give expectations on what the process looks like and their particular role.
+- Gather Shadows to have them read this handbook, watch the [k/enhancements][k/enhancements] repo to get notified on all issues, and give expectations on what the process looks like and their particular role. If possible, try to schedule a call with the shadows to get them accustomed to the team. This helps as a great team building exercise.
 - Go to every open issue that is marked with `tracked/no` and ping the owner to see if the enhancement should be included in the current milestone. If there is no graduation or major change, leave as-is. If the enhancement is graduating or undergoing a major change, remove the `tracked/no` label and add `tracked/yes`, add the issue to the current milestone, and set it's status to `Tracked` within the tracking sheet if it meets the requirements. If it is missing some  of the requirements (e.g. KEP in a provisional state), let the issue owner know and add it as `At Risk`. Another great task for shadow help or some automation.
 - Verify issues have k/k PRs associated so they can be referenced and easily tracked. This is going to be critical come Enhancement Freeze and Code Freeze to see the status of the code.
 - Work with the Release Lead to attend every SIG meeting over the span of 2-3 weeks. Take 2 minutes to introduce yourself, talk about release information, and relay information about issues that haven't been removed from the previous milestone or call out issues that may need some attention.
@@ -198,6 +197,12 @@ the `Removed from Milestone` tab. Then use the `Enhancements` ->
 `Track Removed Enhancement` menu option to move it back to the `Dashboard`,
 `Enhancements`, and `Docs` tabs.
 
+#### Tips on judging Stage Status
+
+- If the feature is graduating to `Alpha`, the status can either be Net New/Major Change. But usually when features are introduced to Kubernetes, they are not Major Changes.
+- If the feature is graduating to `Beta/Stable`, almost always the state is Graduating/Major Change. One exception to that is some features directly jump the hoop to Beta, in that case, the status can be Net New for even a Beta feature.
+
+> Feel free to ask the previous enhancements leads about this when in doubt.
 
 ### Escalation / Handling Unresponsive Enhancement Owners
 
