@@ -40,6 +40,10 @@ All members of the current release team should be apart of this list. If you're 
 
 All members of the release team and anyone who attends Release Team meetings / keeps up with the release process should join the SIG Release group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 
+### Familiarize with Prow commands
+
+Kubernetes uses [Prow](https://git.k8s.io/test-infra/prow/README.md) to manage CI automation. Issues and PRs are categorized by applying suitable labels, which helps in prioritization of that specific issue/PR during the release cycle. Learn more about the available labels and prow commands from here: https://prow.k8s.io/command-help
+
 ## Role Leads
 
 The leads of each role need some access. If this is your first time as a lead, please go through the following list and make sure you have the required access.
