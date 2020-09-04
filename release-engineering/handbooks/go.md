@@ -59,9 +59,36 @@ Some broad requirements (which can be expanded as we get more people involved):
 
 ## kube-cross image
 
+- the image that we use within kubernetes/kubernetes that allows cross compilation builds
+- it has to have the same go version that we're intending to bump Kubernetes to
+Relevant files to create a PR:
+- https://github.com/kubernetes/release/blob/master/images/build/cross/
+  - Dockerfile
+  - variants.yaml: update KUBE_CROSS_VERSION, e.g. "KUBE_CROSS_VERSION: 'v1.14'"
+  - Makefile:
+        these values must default to the current version (or prevailing minor version)
+        *e.g.
+        CONFIG?=go1.14
+        KUBE_CROSS_VERSION?=v1.14*
+- Sending this PR will trigger kube-cross image building
+
 ### kube-cross image building
 
+Test Infra
+https://github.com/kubernetes/test-infra/blob/master/config/jobs/image-pushing/k8s-staging-build-image.yaml (don't have to change anything)
+
+- we use GCP builder
+- we only trigger these jobs on changes on the relevant directory (kubecross dir, in this case); images don't need to be built all the time
+- See Testgrid dashboard for job performance details, which lead to GCP(@ k8s-staging-build-image) (Note: a privileged account is needed to access the Execution Details)
+- Copy the docker image digest from GCP
+
 ### kube-cross image promotion
+
+- promote the image from staging to production, for it to be an official image
+- create PR in kubernetes/k8s.io
+  - Update the docker image digest and its version tag @ https://github.com/kubernetes/k8s.io/blob/master/k8s.gcr.io/images/k8s-staging-build-image/images.yaml
+  - indicate the image, a link to the staging run, signature ( e.g. "Signed off by : Stephen Augustus saugustus@example.com"), CC @kubernetes/release-engineering & relevant reviewers
+  - the structure of the file is structured by the digests' SHAs
 
 ## k8s-cloud-builder image
 
