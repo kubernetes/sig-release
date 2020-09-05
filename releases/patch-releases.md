@@ -59,7 +59,7 @@ releases may also occur in between these.
 
 ### 1.19
 
-Next patch release is **1.19.2**.
+Next patch release is **1.19.1**.
 
 | Patch Release | Cherry-picks deadline | Target date |
 | --- | --- | --- |
