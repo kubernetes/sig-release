@@ -186,7 +186,7 @@ Find .5-1 hour of time to meet with shadows and explain the release process. Wal
 
 1. Add contacts to the shadows release docs, e.g: [https://bit.ly/k8s114-contacts](https://docs.google.com/spreadsheets/d/1BiGSLuCqjglQS1bJvpKk6rKFMciebPkUndzgDRnJsns/edit?ts=5c3bd42a#gid=0)
 
-#### Ensure access is set yp
+#### Ensure access is set up
 
 1. Make sure all shadows have edit access to the enhancement spreadsheet.
 
@@ -194,7 +194,7 @@ Find .5-1 hour of time to meet with shadows and explain the release process. Wal
 
 1. You need push access to the Kubernetes website repo (contact a SIG Docs chair if you don't have it)
 
-   ⚠️ Open the [integration branch] by creating a pull request against `master` referencing the `dev-[future release]` branch. **This should be done by the Docs Lead**, e.g: the [Release 1.14](https://github.com/kubernetes/website/pull/13174) PR uses the branch `dev-1.14`.
+   ⚠️ (**This should be done by the Docs Lead**) Open the [integration branch] by creating a pull request against `master` referencing the `dev-[future release]` branch e.g., the [Release 1.14](https://github.com/kubernetes/website/pull/13174) PR uses the branch `dev-1.14`.
 
    This release pull request (also known as the [integration branch]) serves as the base for individual, component enhancement PRs of the release. A [integration branch] lets you bundle and merge multiple PRs simultaneously.
 
@@ -206,7 +206,7 @@ Find .5-1 hour of time to meet with shadows and explain the release process. Wal
 
 #### Update the website configuration ahead of the release
 
-Update the main `config.toml` based on the version in _master_, ready for the pending release. PR those changes it against `dev-[future release]` branch (which should already exist - this is a good check!)
+Update the main `config.toml` based on the version on the `master` branch. Open a PR for these changes against the `dev-[future release]` branch (which should already exist - this is a good check!)
 
 ```shell
 # Step 1
@@ -233,7 +233,7 @@ git remote -v
 git push origin config-toml-1.14
 ```
 
-Now create a pull request that targets the next release (here: _dev-1.14_) **not** _master_.
+Now create a pull request that targets the next release (here: `dev-1.14`) **not** `master`.
 
 ---
 
@@ -307,21 +307,21 @@ git commit -m "Merge master into dev-[future release] to keep in sync"
 git push origin merged-master-dev-[future release]
 ```
 
-Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-master-dev-[future release]`. e.g. [merge master into future release](https://github.com/kubernetes/website/pull/16225).
+Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-master-dev-[future release]`. e.g., [merge master into future release](https://github.com/kubernetes/website/pull/16225).
 
-You may need to fix conflicts manually. If somebody has improved a page on _master_, and at the same time it has been updated in the dev branch for the next release, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
+You may need to fix conflicts manually. If somebody has improved a page on `master`, and at the same time it has been updated in the dev branch for the next release, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
 
 When you have completed resolving the differences manually, run `git merge --continue` to complete the merge. Then carry on from step 5.
 
-⚠️  **Make sure that GitHub shows the PR passing tests**.
+⚠️  **Ensure the PR is passing tests on GitHub**.
 
 #### Monitor PRs
 
-Make a query showing all PRs raised against dev-[future release] and monitor that regularly, e.g: [1.14 search](https://github.com/kubernetes/website/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+base%3Adev-1.14+label%3Alanguage%2Fen)
+Make a query showing all PRs raised against dev-[future release] and monitor that regularly e.g., [1.14 search](https://github.com/kubernetes/website/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+base%3Adev-1.14+label%3Alanguage%2Fen)
 
 #### Enforce deadlines
 
-Enforce deadlines. Communicate with SIGs via Slack and email lists to keep up to date on status.
+Enforce deadlines. Communicate with SIGs via Slack and email lists to keep everyone up-to-date on status.
 
 #### Communicate major deadlines
 
@@ -402,7 +402,7 @@ If you need help reviewing PRs, ask SIG Docs (#sig-docs channel on Slack) for he
 **Usually this is a Docs Lead Shadow that has beenon the team for 2 releases with a desire to continue with the SIG Docs.**
 
 - Reach out to the person you have in mind and confirm they are able to commit the time and effort for a successful release.
-- Once confirmed, inform the Release Team and the SIG-Docs Team.
+- Once confirmed, inform the Release Team and the SIG Docs Team.
 
 If no suitable candidates are available, you may choose to lead again or nominate someone outside of the current release team (e.g: a recent Docs Lead).
 
@@ -428,7 +428,7 @@ The reference documentation build depends upon a valid release tag.
 When a Kubernetes release candidate version tag such as `v1.19-rc.2` is created, you can consider building
 the reference documentation. Next:
 
-- Create a branch for this work based off of the dev-\<release_num\> branch.
+- Create a branch for this work based off of the dev-[future branch].
 - Run the `update-imported-docs.py` script providing the release tag to build the reference documentation.
 - Commit the generated files.
 
@@ -441,9 +441,9 @@ and merge to the master branch.
 
 Note: You should not have to build the reference documentation for every release candidate version.
 
-#### Update minor verison in api index page
+#### Update minor version on API index page
 
-#### Update minor verisons in api
+#### Update minor versions in API
 
 Update the `<MINOR_VERSION>` in `content/en/docs/reference/kubernetes-api/api-index.md` for the future release.
 
@@ -454,7 +454,7 @@ Update the `<MINOR_VERSION>` in `content/en/docs/reference/kubernetes-api/api-in
 Validate that SIG Cluster Lifecycle has all of the docs in place for the upcoming release. These are mainly kubeadm docs (upgrading, installing, changes, etc). If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages/sig-cluster-lifecycle/) channel.
 
 
-##### Update 4 past config.toml's
+##### Update the `config.toml`s for the past four releases
 
 Create the updated `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch.
 
@@ -468,8 +468,8 @@ See this for example (1.13 was the "future release"):
 
 ##### Deprecate links
 
-- Deprecate the oldest API link in the reference docs, e.g: https://github.com/kubernetes/website/pull/13467
-- Update the index for the API reference docs, e.g: https://github.com/kubernetes/website/pull/14139
+- Deprecate the oldest API link in the reference docs e.g., https://github.com/kubernetes/website/pull/13467
+- Update the index for the API reference docs e.g., https://github.com/kubernetes/website/pull/14139
 
 > Note: These first two steps can be combined into one single PR. If done in a single PR, please update this handbook with examples.
 
@@ -488,7 +488,7 @@ Creating the release branch lets you snapshot the current docs in a new branch, 
 
 - From [k/website](https://github.com/kubernetes/website) click on `master` branch.
 - Type the name of the release branch.
-- **click** Create branch _release-x.xx_ from master
+- **click** Create branch `release-x.yy` from `master`
 
 ![](pics/new-branch.png)
 
@@ -513,11 +513,11 @@ git commit -m "Merge master into release-[current release] to keep in sync"
 git push origin merged-master-release-[current release]
 ```
 
-Now create a pull request to merge the new branch you've made into the _release-[current-release]_ branch on [k/website](https://github.com/kubernetes/website).
+Now create a pull request to merge the new branch you've made into the `release-[current-release]` branch on [k/website](https://github.com/kubernetes/website).
 
 #### Update Netlify
 
-Update the Netlify configuration. (A SIG Docs [chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) or tech lead can assist you with access):
+Update the Netlify configuration. (A [SIG Docs Chair or Technical Lead](https://git.k8s.io/community/sig-docs#leadership) can assist you with access):
 
 Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
@@ -529,10 +529,10 @@ Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
 #### Freeze Kubernetes website
 
-24 hours before the release, freeze the repo: ⚠️  no PRs allowed to merge AT ALL until the release PR has successfully merged.
+24 hours before the release, freeze the repo: ⚠️  no PRs should be allowed to merge AT ALL until the release PR has successfully merged.
 
 - Submit an issue with `tide/merge-blocker` label.
-- Submit a freeze announcement following our [protocol](#communicate-major-deadlines)
+- Submit a freeze announcement following our [protocols](#communicate-major-deadlines)
 
 #### Inform localization teams
 
@@ -553,7 +553,7 @@ Review milestone for completion and outstanding PRs. For PRs that won't make the
 
 This process takes approximately 4 hours.
 
-Coordinate with the Release team for the exact timing. Typically the release is 'officially' built, then you merge the docs, and then you approve the blog post to "make it official." For 1.14 we merged docs at 2:30 EST and the blog was approved at 3 EST - marking the release "complete".
+Coordinate with the Release Team for the exact timing. Typically the release is 'officially' built, then you merge the docs, and then you approve the blog post to "make it official". For 1.14, we merged docs at 2:30 EST and the blog was approved at 3 EST - marking the release "complete".
 
 #### Merge `master`
 
@@ -565,7 +565,7 @@ Coordinate with the Release team for the exact timing. Typically the release is 
 
 Tag the commit hash before the [integration branch] as the final commit for [current release].
 
-> Note: This can be done at any time post release.
+> Note: This can be done at any time post-release.
 
 ```shell
 git clone https://github.com/kubernetes/website/
@@ -657,7 +657,7 @@ Create a milestone for NEW upcoming release. Depending on your permissions, you 
 
 #### Update Netlify
 
-Update Netlify (contact a SIG Docs [chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) if you do not have access and they can assist with this):
+Update Netlify (contact a [SIG Docs Chair or Technical Lead](https://git.k8s.io/community/sig-docs#leadership) if you do not have access and they can assist with this):
 
 Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
