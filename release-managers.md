@@ -64,8 +64,12 @@ GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kuber
 Release Manager Associates are apprentices to the Branch Managers, formerly
 referred to as Branch Manager shadows.
 
+- Adolfo García Veytia ([@puerco](https://github.com/puerco))
+- Gianluca Arbezzano ([@gianarb](https://github.com/gianarb))
 - Jim Angel ([@jimangel](https://github.com/jimangel))
+- Max Körbächer ([@mkorbi](https://github.com/mkorbi))
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
+- Taylor Dolezal ([@onlydole](https://github.com/onlydole))
 - Verónica López ([@verolop](https://github.com/verolop))
 
 ## Build Admins
