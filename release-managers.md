@@ -65,7 +65,6 @@ Release Manager Associates are apprentices to the Branch Managers, formerly
 referred to as Branch Manager shadows.
 
 - Jim Angel ([@jimangel](https://github.com/jimangel))
-- Marky Jackson ([@markyjackson-taulia](https://github.com/markyjackson-taulia))
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
 - Verónica López ([@verolop](https://github.com/verolop))
 
