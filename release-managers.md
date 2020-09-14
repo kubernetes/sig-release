@@ -1,6 +1,8 @@
 # Release Managers <!-- omit in toc -->
 
-Release Managers is an umbrella term that encompasses the set of Kubernetes contributors responsible for maintaining release branches, tagging releases, and building/packaging Kubernetes.
+Release Managers is an umbrella term that encompasses the set of Kubernetes
+contributors responsible for maintaining release branches, tagging releases,
+and building/packaging Kubernetes.
 
 The responsibilities of each role are described below.
 
@@ -10,14 +12,15 @@ The responsibilities of each role are described below.
 - [Associates](#associates)
 - [Build Admins](#build-admins)
 - [SIG Release Chairs](#sig-release-chairs)
+- [SIG Release Technical Leads](#sig-release-technical-leads)
 
 ## Contact
 
-| Mailing List                                                                            | Slack                                                                                                             | Visibility | Usage                                                             | Membership                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [release-managers@kubernetes.io](mailto:release-managers@kubernetes.io)                 | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public     | Public discussion for Release Managers                            | All Release Managers (including Associates, Build Admins, and SIG Chairs)                                                                                                        |
-| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) | [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67)                                               | Private    | Private discussion for privileged Release Managers                | Patch Release Team, Branch Managers, SIG Chairs                                                                                                                                  |
-| [security-release-team@kubernetes.io](mailto:security-release-team@kubernetes.io)       | N/A                                                                                                               | Private    | Security release coordination with the Product Security Committee | [security-discuss-private@kubernetes.io](mailto:security-discuss-private@kubernetes.io), [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) |
+| Mailing List | Slack | Visibility | Usage | Membership |
+| --- | --- | --- | --- | --- |
+| [release-managers@kubernetes.io](mailto:release-managers@kubernetes.io) | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public | Public discussion for Release Managers | All Release Managers (including Associates, Build Admins, and SIG Chairs) |
+| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) | [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Patch Release Team, Branch Managers, SIG Chairs |
+| [security-release-team@kubernetes.io](mailto:security-release-team@kubernetes.io) | N/A | Private | Security release coordination with the Product Security Committee | [security-discuss-private@kubernetes.io](mailto:security-discuss-private@kubernetes.io), [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) |
 
 ## Handbooks
 
@@ -32,10 +35,13 @@ The responsibilities of each role are described below.
 Release Managers are responsible for:
 
 - Coordinating patch releases (`x.y.z`, where `z` > 0) of Kubernetes
-- Minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working with the [Release Team](/release-team/README.md) through each release cycle
+- Minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working with the
+  [Release Team](/release-team/README.md) through each release cycle
 - Mentorship of the [Release Manager Associates](#associates) group
 
-This team at times works in close conjunction with the [Product Security Committee][psc] and therefore should abide by the guidelines set forth in the [Security Release Process][security-release-process].
+This team at times works in close conjunction with the
+[Product Security Committee][psc] and therefore should abide by the guidelines
+set forth in the [Security Release Process][security-release-process].
 
 GitHub Access Controls: [@kubernetes/release-managers](https://github.com/orgs/kubernetes/teams/release-managers)
 
@@ -53,7 +59,8 @@ GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kuber
 
 ## Associates
 
-Release Manager Associates are apprentices to the Branch Managers, formerly referred to as Branch Manager shadows.
+Release Manager Associates are apprentices to the Branch Managers, formerly
+referred to as Branch Manager shadows.
 
 - Jim Angel ([@jimangel](https://github.com/jimangel))
 - Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
@@ -63,20 +70,25 @@ Release Manager Associates are apprentices to the Branch Managers, formerly refe
 
 ## Build Admins
 
-Build Admins are (currently) Google employees with the requisite access to Google build systems/tooling to publish deb/rpm packages on behalf of the Kubernetes project.
+Build Admins are (currently) Google employees with the requisite access to
+Google build systems/tooling to publish deb/rpm packages on behalf of the
+Kubernetes project.
 
 GitHub team: [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams/build-admins)
 
-- Aaron Crickenberger [@spiffxp](https://github.com/spiffxp)
-- Amit Watve [@amwat](https://github.com/amwat)
-- Benjamin Elder [@BenTheElder](https://github.com/BenTheElder)
-- Grant McCloskey [@MushuEE](https://github.com/MushuEE)
+- Aaron Crickenberger ([@spiffxp](https://github.com/spiffxp))
+- Amit Watve ([@amwat](https://github.com/amwat))
+- Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder))
+- Grant McCloskey ([@MushuEE](https://github.com/MushuEE))
 
 ## SIG Release Chairs
 
-SIG Release Chairs are responsible for the governance of SIG Release. They are mentioned explicitly here as they are owners of the various communications channels and permissions groups (GitHub teams, GCP access) for each role.
+SIG Release Chairs are responsible for the governance of SIG Release. They are
+mentioned explicitly here as they are owners of the various communications
+channels and permissions groups (GitHub teams, GCP access) for each role.
 
-As such, they are highly privileged community members and privy to some private communications, which can at times relate to Kubernetes security disclosures.
+As such, they are highly privileged community members and privy to some private
+communications, which can at times relate to Kubernetes security disclosures.
 
 GitHub team: [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes/teams/sig-release-admins)
 
