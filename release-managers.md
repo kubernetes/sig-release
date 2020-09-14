@@ -52,6 +52,7 @@ GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kuber
 - Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
 - Doug MacEachern ([@dougm](https://github.com/dougm))
 - Hannes Hörl ([@hoegaarden](https://github.com/hoegaarden))
+- Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
 - Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
 - Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
@@ -64,7 +65,6 @@ Release Manager Associates are apprentices to the Branch Managers, formerly
 referred to as Branch Manager shadows.
 
 - Jim Angel ([@jimangel](https://github.com/jimangel))
-- Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
 - Marky Jackson ([@markyjackson-taulia](https://github.com/markyjackson-taulia))
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
 - Verónica López ([@verolop](https://github.com/verolop))
