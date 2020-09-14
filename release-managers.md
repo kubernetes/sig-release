@@ -11,8 +11,9 @@ The responsibilities of each role are described below.
 - [Release Managers](#release-managers)
 - [Associates](#associates)
 - [Build Admins](#build-admins)
-- [SIG Release Chairs](#sig-release-chairs)
-- [SIG Release Technical Leads](#sig-release-technical-leads)
+- [SIG Release Leads](#sig-release-leads)
+  - [Chairs](#chairs)
+  - [Technical Leads](#technical-leads)
 
 ## Contact
 
@@ -81,27 +82,24 @@ GitHub team: [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams
 - Benjamin Elder ([@BenTheElder](https://github.com/BenTheElder))
 - Grant McCloskey ([@MushuEE](https://github.com/MushuEE))
 
-## SIG Release Chairs
+## SIG Release Leads
 
-SIG Release Chairs are responsible for the governance of SIG Release. They are
-mentioned explicitly here as they are owners of the various communications
-channels and permissions groups (GitHub teams, GCP access) for each role.
+SIG Release Chairs and Technical Leads are responsible for the governance of
+SIG Release. They are mentioned explicitly here as they are owners of the
+various communications channels and permissions groups (GitHub teams,
+GCP access) for each role.
 
 As such, they are highly privileged community members and privy to some private
 communications, which can at times relate to Kubernetes security disclosures.
 
-GitHub team: [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes/teams/sig-release-admins)
+GitHub team: [@kubernetes/sig-release-leads](https://github.com/orgs/kubernetes/teams/sig-release-leads)
 
-- Caleb Miles ([@calebamiles](https://github.com/calebamiles))
+### Chairs
+
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
 - Tim Pepper ([@tpepper](https://github.com/tpepper))
 
-## SIG Release Technical Leads
-
-The Technical Leads of the SIG establish new subprojects, decommission existing
-subprojects, and resolve cross-subproject technical issues and decisions.
-
-GitHub team: [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes/teams/sig-release-admins)
+### Technical Leads
 
 - Jorge Alarcon ([@alejandrox1](https://github.com/alejandrox1))
 - Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
