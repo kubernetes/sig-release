@@ -89,7 +89,7 @@ These steps take approximately one hour to complete, and should be completed imm
     - [kubernetes-sig-docs](https://groups.google.com/forum/#!forum/kubernetes-sig-docs)
     - [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown)
     - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
-    - [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team) # for enhancement google sheets access!
+    - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team) # for enhancement google sheets access!
 
 - Make sure you're included in the "official" release team file, e.g: [release 1.14](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.14/release_team.md). If not submit a PR and add yourself.
 

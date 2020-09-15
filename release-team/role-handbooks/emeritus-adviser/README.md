@@ -62,7 +62,7 @@ Occasionally, a role may not get enough qualified candidates, in which case it's
 
 Weeks: 1 to 12
 
-Remove prior release shadows from the [kubernetes-release-team-shadows](https://groups.google.com/forum/#!forum/kubernetes-release-team-shadows) Google Group and add the current release shadows.  This list can facilitate easier communication between what at times is 2-3 dozen shadows.
+Remove prior release shadows from the [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows) Google Group and add the current release shadows.  This list can facilitate easier communication between what at times is 2-3 dozen shadows.
 
 Poll the new shadows (eg: [Doodle](Doodle.com)) for their availability to have a "shadow orientation" meeting sometime in week 2 or week 3, after all shadows are selected.  This meeting will likely have to be split for time zone reasons and held twice.  In this meeting, go over the information in the main Shadow docs, give information about the release team and SIG Release, and then open things for questions or discussion. Make sure that Shadows know they can come to you if they have problems during their apprenticeship.
 

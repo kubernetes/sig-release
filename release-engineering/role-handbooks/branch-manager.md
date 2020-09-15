@@ -854,6 +854,6 @@ See the branch management process prior to v1.12 when `anago` was still used.
 
 >  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
 
-[kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
+[kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team
 [release-managers]: /release-managers.md#release-managers
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers

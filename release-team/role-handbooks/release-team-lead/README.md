@@ -178,7 +178,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
   [kubernetes-release-team].
 - Ensure SIG Release co-chairs replace the outgoing Emeritus Advisor with
   the new Emeritus Advisor as an owner of the
-  [kubernetes-release-team-shadows](https://groups.google.com/forum/#!forum/kubernetes-release-team-shadows)
+  [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows)
   Google Group.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md **Note: Do not ship the release on a Monday, to avoid preparing for the release on a weekend. Aim for Tuesday.**
@@ -343,7 +343,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 [discourse]: https://discuss.kubernetes.io/
 [k/enhancements]: https://git.k8s.io/enhancements
 [kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
-[kubernetes-release-team]: https://groups.google.com/forum/#!forum/kubernetes-release-team
+[kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team
 [kubernetes-sig-release]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [kubernetes-sig-leads]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads
 [kubernetes-dev]: https://groups.google.com/forum/#!forum/kubernetes-dev
