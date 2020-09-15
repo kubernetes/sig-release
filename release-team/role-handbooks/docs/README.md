@@ -145,7 +145,7 @@ Send a Slack message to those that you select, e.g:
 >
 > First off, check out the release team on-boarding guide: https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-onboarding.md
 >
->Make sure you join the following Slack channels: #sig-docs, #sig-release, #sig-docs-release
+>Make sure you join the following Slack channels: #sig-docs, #sig-release, #release-docs
 You'll then want to join these mailing lists if you haven't already:
 >- https://groups.google.com/forum/#!forum/kubernetes-sig-release
 >- https://groups.google.com/forum/#!forum/kubernetes-sig-docs
