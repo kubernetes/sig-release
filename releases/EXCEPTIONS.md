@@ -33,7 +33,7 @@ To file for an exception, please fill out the questions below:
 Email them to:
 
 - Your SIG's mailing list
-- kubernetes-release-team@googlegroups.com
+- release-team@kubernetes.io
 - kubernetes-sig-release@googlegroups.com
 
 [You should have *very high confidence* on the “additional time needed” number - we will not grant multiple exceptions for a enhancement.]

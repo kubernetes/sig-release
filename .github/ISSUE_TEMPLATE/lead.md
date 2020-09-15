@@ -23,7 +23,7 @@ hold and only released once approved by a SIG Release (subproject) owner.**
 - [ ] Ensure new Chair/Technical Lead:
   - [ ] Has joined the following mailing lists:
     - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-    - [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team)
+    - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team)
     - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
     - [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
     - [release-managers](https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers)
@@ -82,7 +82,7 @@ As you work through the checklist, use the following PRs as guides:
   - `release-managers` (owners)
   - `release-managers-private` (owners)
 - [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
-- [ ] Manually add to the [Release Team Google Group](https://groups.google.com/forum/#!forum/kubernetes-release-team)
+- [ ] Manually add to the [Release Team Google Group](https://groups.google.com/a/kubernetes.io/g/release-team)
 - [ ] Update Slack `release-managers` and `release-team-leads` User Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
 - [ ] Manually add to the [#release-private](https://kubernetes.slack.com/archives/GKEA5EL67) Slack channel
 -->

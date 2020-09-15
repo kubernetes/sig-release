@@ -184,7 +184,7 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [Code Thaw]: #code-thaw
 [Exception]: #exceptions
 
-[kubernetes-release-team@]: https://groups.google.com/forum/#!forum/kubernetes-release-team
+[kubernetes-release-team@]: https://groups.google.com/a/kubernetes.io/g/release-team
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
 [kubernetes-release-calendar]: https://bit.ly/k8s-release-cal

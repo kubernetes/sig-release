@@ -24,10 +24,10 @@ The first week should be used to get Shadows set up with all of the "paperwork" 
 * Apply to be an Org Member if they are not already (see below).
 * Join the [#sig-release slack channel](https://slack.k8s.io/).
 * Get added to the `kubernetes-release-team` group by the Release Lead.
-* Join the [sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release) and [release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team) Google Groups and calendars.
+* Join the [sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release) and [release-team](https://groups.google.com/a/kubernetes.io/g/release-team) Google Groups and calendars.
 * Add all contact information to their Release Team's contact sheet.
 * Get invited to the weekly Release Team Meeting and add the [sig-release calendar](https://calendar.google.com/calendar/embed?src=kipmnllvl17vl9m98jen6ujcrs%40group.calendar.google.com) to their calendar
-* Get added to the [kubernetes-release-team-shadows](https://groups.google.com/forum/#!forum/kubernetes-release-team-shadows) Google Group by the Emeritus Advisor.
+* Get added to the [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows) Google Group by the Emeritus Advisor.
 
 Becoming a Release Team Shadow is considered sufficient contribution to become a Kubernetes Org Member, and membership is needed for several tasks, especially having the Github bots obey the Shadow's commands. As such, each Shadow who is not already an org member should [apply to become one](https://github.com/kubernetes/community/blob/master/community-membership.md#member) with their mentoring role lead, the Release Lead, and/or the Emeritus Advisor as their sponsors.
 

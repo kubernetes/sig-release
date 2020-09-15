@@ -85,7 +85,7 @@ As you work through the checklist, use the following PRs as guides:
   - `release-managers@`
   - `release-managers-private@`
 - [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
-- [ ] Manually add to the [Release Team Google Group](https://groups.google.com/forum/#!forum/kubernetes-release-team)
+- [ ] Manually add to the [Release Team Google Group](https://groups.google.com/a/kubernetes.io/g/release-team)
 - [ ] Update Slack `release-managers` User Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
 - [ ] Manually add to the [#release-private](https://kubernetes.slack.com/archives/GKEA5EL67) Slack channel
 -->

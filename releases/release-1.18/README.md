@@ -106,6 +106,6 @@ Please refer to the [release phases document](../release_phases.md).
 [master-informing]: https://testgrid.k8s.io/sig-release-master-informing#Summary
 [1.18-blocking]: https://testgrid.k8s.io/sig-release-1.18-blocking#Summary
 
-[kubernetes-release-team@]: https://groups.google.com/forum/#!forum/kubernetes-release-team
+[kubernetes-release-team@]: https://groups.google.com/a/kubernetes.io/g/release-team
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/

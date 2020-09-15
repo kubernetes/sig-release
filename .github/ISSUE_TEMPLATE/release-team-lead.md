@@ -75,7 +75,7 @@ As you work through the checklist, use the following PRs as guides:
   - `k8s-infra-release-viewers@`
   - `release-managers@`
 - [ ] Manually remove from the following Google Groups:
-  - [kubernetes-release-team](https://groups.google.com/forum/#!forum/kubernetes-release-team) (Add as Manager)
+  - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team) (Add as Manager)
   - [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads) (Add as Member)
 
 cc: @kubernetes/release-engineering @kubernetes/release-team
