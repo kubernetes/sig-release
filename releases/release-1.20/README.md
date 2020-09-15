@@ -22,7 +22,7 @@ description: |
 
 #### Tracking docs
 
-* [Enhancements Tracking Sheet][http://bit.ly/k8s-1-20-enhancements]
+* [Enhancements Tracking Sheet](http://bit.ly/k8s-1-20-enhancements)
 * Bug Triage Tracking Sheet: TODO
 * CI Signal Report: TODO
 * [Retrospective Document][Retrospective Document]
