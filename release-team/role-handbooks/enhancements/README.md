@@ -240,7 +240,7 @@ https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 [rt-selection]: /README.md#release-team-selection
 [rt-requirements]: /release-team/release-team-onboarding.md
 [sig-docs-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-docs
-[sig-leads-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads
+[sig-leads-group]: https://groups.google.com/a/kubernetes.io/g/leads
 [sig-pm]: https://github.com/kubernetes/community/blob/master/sig-pm/README.md
 [sig-pm-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-pm
 [sig-release]: https://github.com/kubernetes/community/blob/master/sig-release/README.md
