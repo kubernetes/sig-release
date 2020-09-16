@@ -50,17 +50,17 @@ unless there are release-blocking or other Exception-related reasons. Before
 this date, it is acceptable to improve test coverage of existing code. After
 this date, the goal is to fix, revert, or remove tests that are failing.
 
-## Code Thaw
+## Thaw
 
-Code Thaw specifies the end of [Code Freeze]. At this point it is expected that
-all outstanding PRs for the release of Kubernetes have been merged into the
-release branch. Assuming the release team agrees, [Code Freeze], will be lifted,
-and we enter Code Thaw. This means from a technical perspective, that now the
-`master` and `release-1.x` branch diverge, whereas both kept in sync during
-[Code Freeze]. After Code Thaw the `master` branch develops toward the next
-minor release and the release branch goes into maintenance mode. From this point
-forward, any PRs intended for the current release must be cherry-picked into the
-appropriate branch.
+Thaw specifies the end of both [Code Freeze] and [Test Freeze]. At this point 
+it is expected that all outstanding PRs for the release of Kubernetes have been
+merged into the release branch. Assuming the release team agrees,
+[Code Freeze], will be lifted, and we enter Code Thaw. This means from a 
+technical perspective, that now the `master` and `release-1.x` branch diverge,
+whereas both kept in sync during [Code Freeze] and [Test Freze]. After Code 
+Thaw the `master` branch develops toward the next minor release and the release
+branch goes into maintenance mode. From this point forward, any PRs intended
+for the current release must be cherry-picked into the appropriate branch.
 
 ![code-thaw-code-freeze](code-freeze-code-thaw.svg "Code Thaw vs Code Freeze")
 
