@@ -45,10 +45,10 @@ milestone.
 
 ## Test Freeze
 
-The date after which no more tests may be added or promoted to Conformance,
+The date after which no more tests may be added (or promoted to Conformance),
 unless there are release-blocking or other Exception-related reasons. Before
-this date, the goal should be to improve test coverage of existing code. After
-this date, the goal should be to fix, revert, or remove tests that are failing.
+this date, it is acceptable to improve test coverage of existing code. After
+this date, the goal is to fix, revert, or remove tests that are failing.
 
 ## Code Thaw
 
