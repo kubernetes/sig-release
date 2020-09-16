@@ -52,11 +52,11 @@ The 1.20 release cycle is proposed as follows:
 | Start Enhancements Tracking | Enhancements Lead | Tue September 15 | | |
 | Schedule finalized | Lead | Wed September 16 | | |
 | Team finalized | Lead | Friday September 18 |  | |
-| 1.20.0-alpha.2 released | Branch Manager | Tue September 22 | week 2 | |
+| 1.20.0-alpha.1 released | Branch Manager | Tue September 22 | week 2 | |
 | Start Release Notes Draft | Release Notes Lead | Tue September 29 | week 3 | |
 | **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | Tue October 6 | week 4 | [master-blocking], [master-informing] |
-| 1.20.0-alpha.3 released | Branch Manager | Tue October 13 | week 5 | |
-| 1.20.0-alpha.4 released | Branch Manager | Tue October 20 | week 6 | |
+| 1.20.0-alpha.2 released | Branch Manager | Tue October 13 | week 5 | |
+| 1.20.0-alpha.3 released | Branch Manager | Tue October 20 | week 6 | |
 | release-1.20 branch created | Branch Manager | Tue October 27 | week 7 | |
 | release-1.20 jobs created | Branch Manager | Tue October 27| | |
 | 1.20.0-beta.0 released | Branch Manager | Tue October 27 | | |
