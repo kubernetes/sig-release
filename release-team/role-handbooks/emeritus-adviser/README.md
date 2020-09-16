@@ -52,7 +52,7 @@ Once most of the Role Leads are selected, the EA should solicit candidates for S
 4. Close the Shadow Application around 7-10 days after the initial announcement.
 5. Chat with each of the incoming Role Leads about selecting their shadows, and make sure that they stay on schedule for it.
 6. Once all role leads select their shadows the EA will send out a notification to all applicants not selected for this release cycle 
-7. Ensure the outgoing EA or one of the SIG Release co-chairs has added you in as an owner of the [kubernetes-release-team-shadows](https://groups.google.com/forum/#!forum/kubernetes-release-team-shadows) Google Group.
+7. Ensure the outgoing EA or one of the SIG Release co-chairs has added you in as an owner of the [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows) Google Group.
 
 The most time-consuming part of this is helping the Role Leads select shadows.  In addition to the usual dilemmas of too many good candidates, the EA needs to give advice that makes sure that a diverse pool of shadows is selected, and that the Role Lead doesn't take on more shadows than they can effectively mentor.
 
