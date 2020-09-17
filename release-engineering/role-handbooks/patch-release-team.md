@@ -618,3 +618,5 @@ For more information in how to run `krel gcbmgr` please check the [command docum
 | Official email notify | ```krel announce --tag v1.13.3 --nomock``` |
 | Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) got mail OK |
 | Completion | n/a |
+
+[release-managers]: /release-managers.md#release-managers
