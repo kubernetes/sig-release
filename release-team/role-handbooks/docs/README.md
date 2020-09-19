@@ -1,4 +1,64 @@
 # Kubernetes Docs Lead Handbook
+- [Overview](#overview)
+    - [Common Terms](#common-terms)
+- [Docs Lead Responsibilities](#docs-lead-responsibilities)
+- [Prerequisites for Docs Lead and Shadows](#prerequisites-for-docs-lead-and-shadows)
+    - [General Requirements](#general-requirements)
+    - [Time Requirements](#time-requirements)
+    - [Prerequisites for Docs Leads](#prerequisites-for-docs-leads)
+    - [Prerequisites for Shadows](#prerequisites-for-shadows)
+- [Release Timeline](#release-timeline)
+    - [Early Steps (Weeks 1-2)](#early-steps-weeks-1-2)
+        - [Connect with the release team through Slack and Google Groups](#connect-with-the-release-team-through-slack-and-google-groups)
+        - [Read the release timeline](#read-the-release-timeline)
+        - [Introduce yourself](#introduce-yourself)
+        - [Attend meetings](#attend-meetings)
+        - [Read up on the release team](#read-up-on-the-release-team)
+        - [Select Shadows](#select-shadows)
+        - [Contact volunteers](#contact-volunteers)
+        - [Meet with Shadows](#meet-with-shadows)
+        - [Ensure access is set up](#ensure-access-is-set-up)
+        - [Update the website configuration ahead of the release](#update-the-website-configuration-ahead-of-the-release)
+    - [Middle Steps (Weeks 3-8)](#middle-steps-weeks-3-8)
+        - [Track PRs](#track-prs)
+        - [Reach out to release notes team](#reach-out-to-release-notes-team)
+        - [Maintain the current and upcoming `dev` branch](#maintain-the-current-and-upcoming-dev-branch)
+        - [Periodically merge `master` into `dev-[future release]`](#-periodically-merge-master-into-dev-future-release)
+        - [Monitor PRs](#monitor-prs)
+        - [Enforce deadlines](#enforce-deadlines)
+        - [Communicate major deadlines](#communicate-major-deadlines)
+        - [Review PRs](#review-prs)
+        - [Style Guide Checklist (High to Low Level)](#style-guide-checklist-high-to-low-level)
+        - [Nominate a Docs Lead for the Next Release](#nominate-a-docs-lead-for-the-next-release)
+    - [Late Steps (Weeks 9-11) - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
+        - [Generate the reference documentation](#generate-the-reference-documentation)
+        - [Update minor version on API index page](#update-minor-version-on-api-index-page)
+        - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
+        - [Update the `config.toml`s for the past four releases](#update-the-configtomls-for-the-past-four-releases)
+        - [Deprecate links](#deprecate-links)
+    - [Release Week (Week 12)](#release-week-week-12)
+        - [Create the release branch](#create-the-release-branch)
+        - [Update Netlify](#update-netlify)
+        - [Freeze Kubernetes website](#freeze-kubernetes-website)
+        - [Inform localization teams](#inform-localization-teams)
+        - [Review milestones](#review-milestones)
+    - [Release Day](#release-day)
+        - [Merge `master`](#merge-master)
+        - [Create release with tag](#create-release-with-tag)
+        - [Unfreeze](#unfreeze)
+        - [Close the [future release] milestone](#close-the-future-release-milestone)
+    - [Post Release Verification, Cleanup, and Handoff](#post-release-verification-cleanup-and-handoff)
+        - [Update Release Notes Changelog](#update-release-notes-changelog)
+        - [Review Docs Process and Update Documentation](#review-docs-process-and-update-documentation)
+        - [Hold a docs-only burn down](#hold-a-docs-only-burn-down)
+    - [Prepare the Next Docs Lead for Success](#prepare-the-next-docs-lead-for-success)
+        - [Create branches](#create-branches)
+        - [Create milestone](#create-milestone)
+        - [Update Netlify](#update-netlify)
+        - [Update Slack](#update-slack)
+        - [Reassign issues](#reassign-issues)
+    - [Celebrate](#celebrate-)
+- [Doc Authors and Contributors](#doc-authors-and-contributors)
 
 ## Overview
 
@@ -53,8 +113,8 @@ General time requirements for leads and shadows are:
 
 In addition to the time requirements above, a Docs Lead must:
 
-- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers)
-- Have the ability to `/approve` PRs, so must be a member of [sig-docs-maintainers](https://github.com/orgs/kubernetes/teams/sig-docs-maintainers). Membership can be requested by creating a [PR](https://github.com/kubernetes/website/pull/20351) against master branch.
+- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/milestone-maintainers)
+- Have the ability to `/approve` PRs. Access can be requested by creating a [PR](https://github.com/kubernetes/website/pull/20351) against `master` branch.
 
 ### Prerequisites for Shadows
 
@@ -78,19 +138,20 @@ For each release, the schedule with deliverables is added to the release directo
 
 These steps take approximately one hour to complete, and should be completed immediately.
 
-#### Connect with the release team through Slack and Google Groups:
+#### Connect with the release team through Slack and Google Groups
 
 - Join the Kubernetes [#sig-release](https://kubernetes.slack.com/messages/sig-release) Slack channel. Introduce yourself as the Docs Lead for the [future release].
 
 - Send a Slack direct message to the [future release] lead to introduce yourself.
 
-- ⚠️ Join these Google groups:
+- ⚠️  Join these Google groups:
     - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-    - [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads)
     - [kubernetes-sig-docs](https://groups.google.com/forum/#!forum/kubernetes-sig-docs)
-    - [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown)
     - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
-    - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team) # for enhancement google sheets access!
+    - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team)
+        - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/master/groups/sig-release/groups.yaml) 
+    - [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows)
+        - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team-shadows` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/master/groups/sig-release/groups.yaml)
 
 - Make sure you're included in the "official" release team file, e.g: [release 1.14](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.14/release_team.md). If not submit a PR and add yourself.
 
@@ -112,15 +173,15 @@ If these deadlines aren't listed in the release timeline, request that the Relea
 
 #### Introduce yourself
 
-Introduce yourself to the current localization owners to sync up early on strategy (needs coordination for main release). e.g: https://github.com/kubernetes/website/issues/12396.
+Introduce yourself to the current localization owners to sync up early on strategy (needs coordination for main release). e.g: [Formalize docs release strategy with the different localization owners](https://github.com/kubernetes/website/issues/12396).
 
 #### Attend meetings
 
-⚠️ Attend the release team meeting outlined in the current release. If you cannot attend, a Shadow needs to attend in your place.
+⚠️  Attend the release team meeting outlined in the current release. If you cannot attend, a Shadow needs to attend in your place.
 
 #### Read up on the release team
 
-Read this to learn more about the entire release team and process: https://github.com/kubernetes/sig-release/tree/master/release-team
+Read this to learn more about the entire [release team and process](https://github.com/kubernetes/sig-release/tree/master/release-team)
 
 #### Select Shadows
 
@@ -150,7 +211,6 @@ Send a Slack message to those that you select, e.g:
 You'll then want to join these mailing lists if you haven't already:
 >- https://groups.google.com/forum/#!forum/kubernetes-sig-release
 >- https://groups.google.com/forum/#!forum/kubernetes-sig-docs
->- https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown
 >- https://groups.google.com/forum/#!forum/kubernetes-dev
 >
 >Access to google docs and calendar invites are often based on these mailing lists, so it's a good idea to subscribe.
@@ -164,7 +224,8 @@ You'll then want to join these mailing lists if you haven't already:
 >Please select your preferred time(s) Friday: https://doodle.com/<link-removed>
 
 
-Also send a Slack message to those that you didn't select, e.g:
+⚠️ Please coordinate with Emeritus Adviser for the release before taking this step.
+Send a Slack message to those that you didn't select, e.g:
 
 > Hey, I'm Jim Angel (Docs Lead for SIG Docs). Thanks for your interest in the SIG Docs 1.14 release team!
 >
@@ -180,6 +241,7 @@ Also send a Slack message to those that you didn't select, e.g:
 > Thanks again for your interest and time!
 >
 > Jim Angel
+
 
 #### Meet with Shadows
 
@@ -282,7 +344,7 @@ Reach out to release notes team to see if there's anything that might need docs 
 
 This allows us to avoid merge conflicts on release day with `dev-[future release]`.
 
-##### ⚠️  Periodically merge `master` into `dev-[future release]`.
+##### ⚠️ Periodically merge `master` into `dev-[future release]`
 
 To merge `master` into `dev-[future release]` on your local fork:
 
@@ -447,8 +509,6 @@ Note: You should not have to build the reference documentation for every release
 
 #### Update minor version on API index page
 
-#### Update minor versions in API
-
 Update the `<MINOR_VERSION>` in `content/en/docs/reference/kubernetes-api/api-index.md` for the future release.
 
    ![Update API index](pics/update-api-index.png)
@@ -610,7 +670,7 @@ After creating the tags, you can create a release based off of a tag very easily
 
 Unfreeze the repo as done earlier (remove the `tide/merge-blocker` label and close issue).
 
-#### Close the [future release] milestone.
+#### Close the [future release] milestone
 
 - Merge the 4 config.toml's created as part of the sunsetting docs.
 - Create a PR to update k/website's release notes
@@ -694,7 +754,7 @@ YOU MADE IT! Celebrate a job well done, keep an eye out for anything on fire, an
 
 **Authors:** [Jim Angel](https://github.com/jimangel) & [Cody Clark](https://github.com/cody-clark)
 
-Special thanks to contibutors to this document, including:
+Special thanks to contributors to this document, including:
 * Andrew Chen
 * Jared Bhatti
 * Jennifer Rondeau
