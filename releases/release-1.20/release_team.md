@@ -6,7 +6,7 @@
 | Enhancements | Kirsten Garrison ( [@kikisdeliveryservice](https://github.com/kikisdeliveryservice) / Slack: `@oikiki`) | |
 | CI Signal | Robert Kielty ([@RobertKielty](https://github.com/RobertKielty) / Slack: `@RobKielty`) | |
 | Bug Triage | Vlad Gorodetsky ([@bai](https://github.com/bai) / Slack: `@bai`) | |
-| Docs | Anna Jung ([@annajung](https://github.com/annajung) / Slack: `@annajung`) | |
+| Docs | Anna Jung ([@annajung](https://github.com/annajung) / Slack: `@annajung`) | Leslie-Alexandre Denis ([@eagleusb](https://github.com/eagleusb) / Slack: `@grumpycat`), Rey Lejano ([@reylejano-rxm](https://github.com/reylejano-rxm) / Slack: `@rey.lejano`), Kristin Martin ([@kcmartin](https://github.com/kcmartin) / Slack: `@kcmartin`), Somtochi Onyekwere ([@SomtochiAma](https://github.com/SomtochiAma) / Slack: `@SomtochiAma`)  |
 | Release Notes | James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) / Slack: `@james.laverack`) | |
 | Communications | Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@j-dawg`) | |
 | Emeritus Adviser | Lachlan Evenson ([@lachie83](https://github.com/lachie83) / Slack: `@lachie83`) | -- |
