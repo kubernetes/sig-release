@@ -4,7 +4,7 @@
 |---|---|---|
 | Lead | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard) / Slack: `@jerickar`) | Daniel Mangum ([@hasheddan](https://github.com/hasheddan) / Slack: `@hasheddan`), Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`), Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`) |
 | Enhancements | Kirsten Garrison ( [@kikisdeliveryservice](https://github.com/kikisdeliveryservice) / Slack: `@oikiki`) | |
-| CI Signal | Robert Kielty ([@RobertKielty](https://github.com/RobertKielty) / Slack: `@RobKielty`) | |
+| CI Signal | Robert Kielty ([@RobertKielty](https://github.com/RobertKielty) / Slack: `@RobKielty`) | Hosam Kamel ([@Hkamel](https://github.com/HKamel) / Slack:`@Hkamel`), Joyce Kung ([@thejoycekung](https://github.com/thejoycekung) / Slack: `@jk`), Prashant Sharma ([@ScrapCodes](https://github.com/ScrapCodes) / Slack:`@Prashant Sharma`), Eddie Zaneski ([@eddiezane](https://github.com/eddiezane) / Slack: `@eddiezane`) |
 | Bug Triage | Vlad Gorodetsky ([@bai](https://github.com/bai) / Slack: `@bai`) | |
 | Docs | Anna Jung ([@annajung](https://github.com/annajung) / Slack: `@annajung`) | Leslie-Alexandre Denis ([@eagleusb](https://github.com/eagleusb) / Slack: `@grumpycat`), Rey Lejano ([@reylejano-rxm](https://github.com/reylejano-rxm) / Slack: `@rey.lejano`), Kristin Martin ([@kcmartin](https://github.com/kcmartin) / Slack: `@kcmartin`), Somtochi Onyekwere ([@SomtochiAma](https://github.com/SomtochiAma) / Slack: `@SomtochiAma`)  |
 | Release Notes | James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) / Slack: `@james.laverack`) | |
