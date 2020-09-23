@@ -67,6 +67,7 @@ referred to as Branch Manager shadows.
 - Adolfo García Veytia ([@puerco](https://github.com/puerco))
 - Gianluca Arbezzano ([@gianarb](https://github.com/gianarb))
 - Jim Angel ([@jimangel](https://github.com/jimangel))
+- Marky Jackson ([@markyjackson-taulia](https://github.com/markyjackson-taulia))
 - Max Körbächer ([@mkorbi](https://github.com/mkorbi))
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
 - Taylor Dolezal ([@onlydole](https://github.com/onlydole))
