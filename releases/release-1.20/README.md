@@ -40,6 +40,7 @@ The 1.20 release cycle is proposed as follows:
 - **Monday, September 14th**: Week 1 - Release cycle begins
 - **Tuesday, Oct 6th**: Week 4 - [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Thursday, Nov 12th**: Week 9 - [Code Freeze](../release_phases.md#code-freeze)
+- **Monday, Nov 23rd**: Week 11 - [Test Freeze](../release_phases.md#test-freeze)
 - **Monday, Nov 30th**: Week 12 - Docs must be completed and reviewed
 - **Tuesday, Dec 8th**: Week 13 - Kubernetes v1.20.0 released
 - **Thursday, Dec 17th**: Week 14 - Release Retrospective
@@ -71,10 +72,11 @@ The 1.20 release cycle is proposed as follows:
 | **KubeCon CloudNativeCon North America Starts** | Community | Tue, November 17 |  | |
 | **KubeCon CloudNativeCon North America Ends** | Community | Friday, November 20 |  | |
 | Docs deadline - PRs ready for review | Docs Lead | Mon November 23 | week 11 | |
+| **[Test Freeze]** (EOD PST) | Branch Manager | Mon November 23 | |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Mon November 30 | week 12 | |
 | 1.20.0-rc.1 released | Branch Manager | Tue December 1 | | |
 | **v1.20.0 released** | Branch Manager | Tue December 8 | week 13 | |
-| **[Code Thaw]** | Branch Manager | Tue, December 8 | | |
+| **[Thaw]** | Branch Manager | Tue, December 8 | | |
 | Release retrospective | Community | Thu December 17 | week 14 | |
 
 ## Phases
@@ -89,7 +91,8 @@ Please refer to the [release phases document](../release_phases.md).
 [Burndown]: ../release_phases.md#burndown
 [Code Freeze]: ../release_phases.md#code-freeze
 [Exception]: ../release_phases.md#exceptions
-[Code Thaw]: ../release_phases.md#code-thaw
+[Thaw]: ../release_phases.md#thaw
+[Test Freeze]: ../release_phases.md#test-freeze
 
 [kubernetes-release-team@]: https://groups.google.com/a/kubernetes.io/g/release-team
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
