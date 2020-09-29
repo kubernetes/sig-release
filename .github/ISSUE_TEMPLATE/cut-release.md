@@ -44,6 +44,7 @@ Platform:      linux/amd64
 | Mock stage | `krel gcbmgr --stage [arguments]` | <!-- link-to-MOCK-gcb-stage-run --> |  |  |  |
 | Mock release | `krel gcbmgr --release [arguments]` | <!-- link-to-MOCK-gcb-release-run --> |  |  |  |
 | Stage | `krel gcbmgr --stage [arguments]` | <!-- link-to-REAL-gcb-stage-run --> |  |  |  |
+| Image Promotion | `krel promote-images -i --fork=[your-github-user] --tag=[version]` | <!-- link-to-k8s.io-PR --> |  |  |  |
 | Release | `krel gcbmgr --release [arguments]` | <!-- link-to-REAL-gcb-release-run --> |  |  |  |
 | Cut packages <!-- not required for pre-releases (alpha, beta, rc) --> | -- | -- |  |  |  |
 | Notify | -- | <!-- link-to-kubernetes-announce-list-thread --> |  | -- |  |
