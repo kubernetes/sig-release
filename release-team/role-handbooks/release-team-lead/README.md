@@ -158,7 +158,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 
 - Attend previous release retro to capture feedback and incorporate it into next release cycle
 - Plan release schedule and milestones. Gather feedback as needed.
-- Make sure you have your shadows confirmed
+- Make sure you have your shadows confirmed and schedule an initial group meeting to onboard and establish timeline and responsibilities.
 - Make sure everyone joining the team reads the [release team onboarding document][release-team-onboarding].
 - Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
 
