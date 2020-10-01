@@ -113,7 +113,7 @@ General time requirements for leads and shadows are:
 
 In addition to the time requirements above, a Docs Lead must:
 
-- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/milestone-maintainers)
+- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/). Access can be requested by creating a [PR](https://github.com/kubernetes/org/pull/2235) against `kubernetes/org` repo.
 - Have the ability to `/approve` PRs. Access can be requested by creating a [PR](https://github.com/kubernetes/website/pull/20351) against `master` branch.
 
 ### Prerequisites for Shadows
@@ -124,7 +124,7 @@ Docs Lead Shadows are people who are preparing to be a Docs Lead in the future. 
 - Be invested in becoming an org member within the release cycle. This can often be achieved during the release cycle with sponsorship from a role lead. See the [Release Team onboarding guide](/release-team/release-team-onboarding.md) for more details.
 - General knowledge of our SIG-Docs [areas of responsibility](https://github.com/kubernetes/community/tree/master/sig-docs#subprojects).
 - Experience with the general process involved with [contributing](https://kubernetes.io/docs/contribute/start/) to Kubernetes website.
-- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers)
+- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/). Access can be requested by creating a [PR](https://github.com/kubernetes/org/pull/2235) against `kubernetes/org` repo.
 
 ## Release Timeline
 
@@ -263,7 +263,7 @@ Find .5-1 hour of time to meet with shadows and explain the release process. Wal
 
    ⚠️ Add the label `do-not-merge/hold` to the PR.
 
-1. First PR in `dev-[future release]`: Update config.toml to show `[future release]` as the current version and add the `[future release]` entry to the drop-down, e.g: [config.toml diff](https://github.com/kubernetes/website/commit/851ef58fa8413e47bb18a15de53d9556be8c53dd#diff-618063036395fe9ee107f22b46c9eade)
+1. First PR in `dev-[future release]`: Update config.toml to show `[future release]` as the current version and add the `[future release]` entry to the drop-down, e.g: [config.toml diff](https://github.com/kubernetes/website/pull/20847)
 
     The intent is that your new branch should be showing as the current version IN the new branch...
 
@@ -312,7 +312,8 @@ Track PRs based on the enhancement (KEP) spreadsheet.
 
 Keep the enhancement tracking spreadsheet up to date with review progress and merge status for each documentation PR. For example: [Kubernetes Enhancements OSS tracking board (1.14 release)](https://docs.google.com/spreadsheets/d/116X6E-lmDJG5UZPlqDAFw8hN9vS6SNY4qRNZ9fKtsMU/edit#gid=0)
 
-⚠️ Assign the enhancements evenly across your Shadows.
+⚠️ Assign the enhancements evenly across your Shadows after the enhancement freeze. Assigning shadows before the
+ enhancement freeze will cause unexpected behavior in the tracking spreadsheet due to frequent updates to dynamic data.
   - You and your Shadows will be responsible for tracking whether the enhancement:
     - **has docs:** Actively has docs in place on Kubernetes website or in flight
     - **needs docs:** Actively needs docs to support the enhancement in the [future-release]
@@ -746,7 +747,8 @@ Announce that `[future release]` branch is open for new feature docs on slack #s
 
 - Clean Up
 ⚠️  Assign any issues / feature / PRs (that missed the release) to the new Docs Lead
-⚠️  Create a PR to remove shadows from [milestone maintainers](https://github.com/orgs/kubernetes/teams/kubernetes-milestone-maintainers) 
+⚠️  Create a PR to remove shadows from [milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/)
+    - The lead must stay in the list until the `[current release]` website version is officially supported
 
 ### Celebrate! 🎉
 
