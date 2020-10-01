@@ -352,7 +352,7 @@ To merge `master` into `dev-[future release]` on your local fork:
 # Step 0 (if you don't already have a remote called "upstream")
 git remote add upstream https://github.com/kubernetes/website.git
 # Step 1
-git fetch upstream master
+git fetch upstream #grab all branches from upstream repo
 # Step 2
 git checkout --track upstream/dev-[future release]
 # Step 3
