@@ -354,19 +354,21 @@ git remote add upstream https://github.com/kubernetes/website.git
 # Step 1
 git fetch upstream master
 # Step 2
-git checkout --track upstream/dev-[future release]
+git fetch upstream dev-[future release]
 # Step 3
+git checkout --track upstream/dev-[future release]
+# Step 4
 git pull --ff-only # make sure you're up to date
-# Step 4. You might see merge conflicts at this point.
+# Step 5 You might see merge conflicts at this point.
 git merge upstream/master
 ## if needed: https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
 ## git add ...
 ## git merge --continue
-# Step 5
+# Step 6
 git checkout -b merged-master-dev-[future release]
-# Step 6
+# Step 7
 git commit -m "Merge master into dev-[future release] to keep in sync"
-# Step 6
+# Step 8
 git push origin merged-master-dev-[future release]
 ```
 
