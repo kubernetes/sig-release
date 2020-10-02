@@ -31,7 +31,7 @@ aliases:
     - guineveresaenger # subproject owner / 1.17 RT Lead
     - justaugustus # subproject owner
     - tpepper # subproject owner
-    - jeremyrickard / 1.20 RT Lead
+    - jeremyrickard # 1.20 RT Lead
   build-admins:
     - aleksandra-malinowska
     - listx
@@ -41,39 +41,35 @@ aliases:
     - guineveresaenger # 1.17
     - alejandrox1 # 1.18
     - onlydole # 1.19 RT Lead
-    - tpepper # 1.19 Emeritus Adviser
-    - jeremyricakrd / 1.20 RT Lead
+    - lachie83 # 1.20 Emeritus Adviser
+    - jeremyrickard # 1.20 RT Lead
   ci-signal-role:
-    - alejandrox1 # 1.16 / 1.15
     - alenkacz # 1.17
     - droslean # 1.18
     - hasheddan # 1.19
+    - RobertKielty # 1.20
   enhancements-role:
-    - kacole2 # 1.16 / 1.15 / 1.13
     - mrbobbytables # 1.17
     - jeremyrickard # 1.18
     - palnabarun # 1.19
+    - kikisdeliveryservice # 1.20
   bug-triage-role:
-    - soggiest # 1.15
-    - xmudrii # 1.16
     - josiahbjorgaard # 1.17
     - smourapina # 1.18
     - markyjackson-taulia # 1.19
+    - bai # 1.20
   docs-role:
-    - MAKOSCAFEE # 1.15
-    - simplytunde # 1.16
     - daminisatya # 1.17
     - VineethReddy02 # 1.18
     - savitharaghunathan # 1.19
+    - annajung # 1.20
   release-notes-role:
-    - onyiny-ang # 1.15
-    - saschagrunert # 1.16
     - cartyc # 1.17
     - Evillgenius75 # 1.18
     - puerco # 1.19
+    - JamesLaverack # 1.20
   communications-role:
-    - castrojo # 1.15
-    - onlydole # 1.16
     - rawkode # 1.17
     - karenhchu # 1.18
     - mkorbi # 1.19
+    - jrsapi # 1.20
