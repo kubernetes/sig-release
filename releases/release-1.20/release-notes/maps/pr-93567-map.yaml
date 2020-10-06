@@ -1,0 +1,3 @@
+pr: 93567
+releasenote:
+  text: Fix calling AttachDisk on a previously attached EBS volume.

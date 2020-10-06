@@ -1,0 +1,3 @@
+pr: 93384
+releasenote:
+  text: Add foreground cascading deletion to kubectl with the new `kubectl delete foreground|background|orphan` option.

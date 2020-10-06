@@ -1,0 +1,3 @@
+pr: 93577
+releasenote:
+  text: Updated Cluster Autoscaler to 1.19.0.
