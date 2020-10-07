@@ -1,0 +1,3 @@
+pr: 93962
+releasenote:
+  text: Fix a bug where loadbalancer deletion gets stuck because of missing resource group.

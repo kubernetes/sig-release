@@ -1,0 +1,3 @@
+pr: 94171
+releasenote:
+  text: The EndpointSliceMirroring controller now mirrors Endpoints that do not have a Service associated with them.

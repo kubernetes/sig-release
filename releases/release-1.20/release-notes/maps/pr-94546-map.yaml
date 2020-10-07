@@ -1,0 +1,3 @@
+pr: 94546
+releasenote:
+  text: Configure AWS LoadBalancer health check protocol via service annotations.

@@ -1,0 +1,3 @@
+pr: 94580
+releasenote:
+  text: Fix a panic in `kubectl debug` when a pod has multiple init or ephemeral containers.

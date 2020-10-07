@@ -1,0 +1,6 @@
+pr: 93066
+releasenote:
+  text: |-
+    Add the following metrics:
+    - network_plugin_operations_total
+    - network_plugin_operations_errors_total
