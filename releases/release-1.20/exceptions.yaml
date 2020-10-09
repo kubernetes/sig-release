@@ -1,0 +1,45 @@
+# Exceptions requested in 1.20
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Jeremy Rickard ([@jeremyrickard](https://www.github.com/jeremyrickard))
+# Release Team Shadows: Daniel Mangum ([@hasheddan](https://www.github.com/hasheddan)) / Nabarun Pal ([@palnabarun](https://www.github.com/palnabarun)) / 
+# Savitha Raghunathan ([@savitharaghunathan] (https://www.github.com/savitharaghunathan))
+
+# Enhancements Freeze Exceptions requested in 1.20
+- name: "APIServer Tracing"
+  issue: 647
+  date_requested: 2020-10-08
+  date_reviewed: 2020-10-08
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/bpM9oCHdOkI"
+  pull_requests:
+  - "https://github.com/kubernetes/enhancements/pull/1458"
+  status: "approved"
+
+- name: "Different protocols in the same service definition with type=loadbalancer"
+  issue: 1435
+  date_requested: 2020-10-08
+  date_reviewed: 2020-10-08
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/nqT47EIdmDA"
+  pull_requests:
+  - "https://github.com/kubernetes/enhancements/pull/2058"
+  status: "approved"
+
+- name: "Use distroless/static for Kubernetes Core Images"
+  issue: 1729
+  date_requested: 2020-10-08
+  date_reviewed: 2020-10-08
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/mYGxI8ixeTI"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/issues/70249", 
+  - "https://github.com/kubernetes/kubernetes/issues/90698"
+  status: "approved"
+
+- name: "Pass cluster information to exec credential providers"
+  issue: 541
+  date_requested: 2020-10-08
+  date_reviewed: <TBD>
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/x75-HY7h7P4"
+  pull_requests:
+  - "https://github.com/kubernetes/enhancements/pull/2023"
+  status: "<TBD>"
+
+
