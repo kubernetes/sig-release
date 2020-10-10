@@ -31,6 +31,7 @@ e.g., Kubernetes 1.18
     - [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF)
     - [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y)
   - [ ] Is a [Kubernetes GitHub org member](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
+  - [ ] Has completed the [CNCF Inclusive Speaker Orientation](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/)
 
 ### Onboarding
 

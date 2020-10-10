@@ -160,6 +160,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Plan release schedule and milestones. Gather feedback as needed.
 - Make sure you have your shadows confirmed and schedule an initial group meeting to onboard and establish timeline and responsibilities.
 - Make sure everyone joining the team reads the [release team onboarding document][release-team-onboarding].
+- Complete the [CNCF Inclusive Speaker Orientation](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/).
 - Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
 
 ### Week 1
