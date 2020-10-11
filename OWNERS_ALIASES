@@ -17,6 +17,7 @@ aliases:
     - idealhack # Release Manager
     - justaugustus # subproject owner / Release Manager
     - tpepper # subproject owner / Release Manager
+    - xmudrii # Release Manager
   release-engineering-reviewers:
     - cpanato # Release Manager
     - hasheddan # Release Manager
@@ -25,7 +26,6 @@ aliases:
     - saschagrunert # Release Manager
     - sethmccombs # Release Manager Associate
     - verolop # Release Manager Associate
-    - xmudrii # Release Manager Associate
   release-team:
     - alejandrox1 # subproject owner / 1.18 RT Lead
     - guineveresaenger # subproject owner / 1.17 RT Lead
