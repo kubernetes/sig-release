@@ -164,17 +164,13 @@ See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Doc
 
 To leverage/contribute to our [release tools], Release Managers will need to fork and clone the [kubernetes/release] repo.
 
-Building and publishing releases require the latest revision of the release tools. The release tools can be compiled by running the following command from the [kubernetes/release] repository:
+Building and publishing releases requires the latest revision of the release tools. The release tools can be compiled by running the following command from the [kubernetes/release] repository:
 
 ```shell
 make release-tools
 ```
 
-Additionally, the Kubernetes Release Toolbox (krel) requires the `cip-mm` tool to be present in the PATH. The `cip-mm` tool is used for promoting images/manifest. It can be found in the [kubernetes-sigs/k8s-container-image-promoter] repository, and obtained using `go get` such as:
-
-```shell
-go get sigs.k8s.io/k8s-container-image-promoter/cmd/cip-mm@master
-```
+Additionally, the Kubernetes Release Toolbox (krel) requires the `cip-mm` tool to be present in the PATH. The `cip-mm` tool is used for promoting images/manifest. The instructions for installing it can be found in the [release image promotion document][image-promotion].
 
 Release Managers primarily use an SSH key to authenticate to GitHub.
 
@@ -186,6 +182,8 @@ GitHub has documentation to assist in:
 Additionally, `kubernetes/community` has a great [overview of the GitHub workflow](https://git.k8s.io/community/contributors/guide/github-workflow.md) we use across several Kubernetes org repositories.
 
 Please take a moment to review the above documentation before continuing.
+
+[image-promotion]: ./release-image-promotion.md
 
 #### Google Cloud SDK
 
