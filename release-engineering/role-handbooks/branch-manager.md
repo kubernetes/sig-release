@@ -48,6 +48,7 @@
 - [Staging Repositories](#staging-repositories)
 - [Debugging](#debugging)
 - [Search past builds](#search-past-builds)
+    - [Limitation](#limitation)
 - [References](#references)
   - [Test Infra references](#test-infra-references)
 - [Background information](#background-information)
@@ -163,6 +164,18 @@ See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Doc
 
 To leverage/contribute to our [release tools], Release Managers will need to fork and clone the [kubernetes/release] repo.
 
+Building and publishing releases require the latest revision of the release tools. The release tools can be compiled by running the following command from the [kubernetes/release] repository:
+
+```shell
+make release-tools
+```
+
+Additionally, the Kubernetes Release Toolbox (krel) requires the `cip-mm` tool to be present in the PATH. The `cip-mm` tool is used for promoting images/manifest. It can be found in the [kubernetes-sigs/k8s-container-image-promoter] repository, and obtained using `go get` such as:
+
+```shell
+go get sigs.k8s.io/k8s-container-image-promoter/cmd/cip-mm@master
+```
+
 Release Managers primarily use an SSH key to authenticate to GitHub.
 
 GitHub has documentation to assist in:
@@ -182,6 +195,16 @@ Release Managers will need to use the Google Cloud SDK to interact with release 
 
 Google Cloud has [documentation on installing and configuring the Google Cloud SDK CLI tools](https://cloud.google.com/sdk/docs/quickstarts).
 
+To authenticate the Google Cloud SDK tool with your GCP account, you can run:
+
+```shell
+gcloud auth login
+```
+
+It might ask you to define the default project, region, and similar settings. The project can be set to `kubernetes-release-test`, while other settings can be ignored.
+
+In addition to `gcloud,` `gsutil` is required as well. By default, it comes with Google Cloud SDK.
+
 #### Sending mail
 
 At the end of a release, Release Managers will need to announce the new release to the community.
@@ -197,6 +220,7 @@ This can be done in one of two ways:
 [k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
 [release tools]: https://github.com/kubernetes/release#tools
 [kubernetes/release]: https://github.com/kubernetes/release
+[kubernetes-sigs/k8s-container-image-promoter]: https://github.com/kubernetes-sigs/k8s-container-image-promoter/tree/master/cmd/cip-mm
 
 ## Releases Management
 
@@ -224,15 +248,43 @@ Prior to cutting a release version, [open a "Cut a Release" issue](https://githu
 
 On the issue template, there are comments describing the predefined items that need to be completed.
 
+For the item `Screenshot unhealthy release branch testgrid boards...`:
+
+You can use the `testgridshot` tool to create screenshots of unhealthy testgrid boards. `testgridshot` also takes care of uploading the screenshots to the `k8s-staging-releng` bucket, and generating the markdown table that you can post as a comment to the issue.
+
+`testgridshot` is a Bash script located in the [kubernetes/release] repository. By default, it takes a screenshots of **blocking** and **informing** testgrid boards that have jobs that are **failing**. If you want to customize this, open the script in your preferred text editor and see the comment at the beginning of the script for possible customizations.
+
+The script can be invoked in the following way:
+
+```shell
+./testgridshot <release>
+```
+
+`<release>` can be in form of `1.xy` (e.g. 1.19) or `master` (used when cutting alpha releases).
+
+Eventually, you may want to include **flaking** jobs in addition to the **failing** jobs. In that case, you can invoke `testgridshot` such as:
+
+```shell
+STATES='FAILING FLAKY' ./testgridshot <release>
+```
+
+Once the script generates the markdown table, post it as a comment on the created issue. You can take a look at the [following comment](https://github.com/kubernetes/sig-release/issues/1249#issuecomment-696702503) as an example.
+
 For the item `Collect metrics, links...`:
 
-You can make a copy of this spreadsheet to collect metrics of build times and include links to the GCP build console:
+You can post a thread in the [#release-management] Slack channel and include links to the GCP build console. You can take a look at the [following thread][example-release-thread] as an example.
 
-[Branch Management Log](https://docs.google.com/spreadsheets/d/1gbr2byg7AmGvVv6onZtgowa729KZcyYTyH82qn1czK8/edit?usp=sharing)
+After the release process has been completed, you can use the `krel gcbmgr history` command to generate a markdown table with commands used to run the jobs, links to the GCB logs, and the information about each job.
 
-A section of the log above is usually copied over as a comment on the issue. See this [example thread comment](https://github.com/kubernetes/sig-release/issues/756#issuecomment-521065084) for the issue opened to cut [1.16.0-beta.0](https://github.com/kubernetes/sig-release/issues/756).
+```shell
+krel gcbmgr history --branch release-1.xy --date-from <date-of-release>
+```
+
+The generated table is copied to the created issue, as it can be seen in the [following issue for the v1.20.0-alpha.1 release](https://github.com/kubernetes/sig-release/issues/1249#issue-705792603).
 
 After having thoroughly read the section on cutting a release version of the handbook, and that all items on the checklist have completed (you may include notes on events that was unique to cutting that release version as comments), close the issue with `/close` as a comment the issue thread.
+
+[example-release-thread]: https://kubernetes.slack.com/archives/CJH2GBF7Y/p1600247891103600
 
 ### Alpha Releases
 
@@ -263,6 +315,8 @@ If the CI results are good and the release team approves, you can initiate the p
 This presumes reproducible builds and that the CI tests are meaningful relative to the release builds. There is always a risk that these diverge, and this needs to be managed broadly by the project and the release team.
 
 ##### krel gcbmgr release
+
+Before running the release step, please refer to the [Image Promotion documentation](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/release-image-promotion.md).
 
 Use the `--build-version=` as specified in the output when `krel gcbmgr` is done with the stage command.
 
