@@ -172,6 +172,8 @@ make release-tools
 
 Additionally, the Kubernetes Release Toolbox (krel) requires the `cip-mm` tool to be present in the PATH. The `cip-mm` tool is used for promoting images/manifest. The instructions for installing it can be found in the [release image promotion document][image-promotion].
 
+<!-- TODO: Remove the cip-mm requirement once krel starts consuming it as a library. -->
+
 Release Managers primarily use an SSH key to authenticate to GitHub.
 
 GitHub has documentation to assist in:
