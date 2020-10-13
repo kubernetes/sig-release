@@ -36,10 +36,18 @@
 - name: "Pass cluster information to exec credential providers"
   issue: 541
   date_requested: 2020-10-08
-  date_reviewed: <TBD>
+  date_reviewed: 2020-10-12
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/x75-HY7h7P4"
   pull_requests:
   - "https://github.com/kubernetes/enhancements/pull/2023"
-  status: "<TBD>"
+  status: "approved"
 
+- name: "Expose metrics about resource requests and limits that represent the pod model"
+  issue: 1748
+  date_requested: 2020-10-13
+  date_reviewed: 2020-10-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/txi97KG-gg4"
+  pull_requests:
+  - "https://github.com/kubernetes/enhancements/pull/1916"
+  status: "approved"
 
