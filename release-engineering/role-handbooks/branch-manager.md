@@ -882,7 +882,6 @@ Concerns and questions can be directed to [#testing-ops](https://kubernetes.slac
   - [Tide Status](https://prow.k8s.io/tide)
 - [Gubernator](https://github.com/kubernetes/test-infra/tree/master/gubernator) displays Kubernetes test results stored in Google Cloud Storage (GCS)
 - [PR Dashboard](https://gubernator.k8s.io/pr)
-- [Velodrome](http://velodrome.k8s.io) a toolset to visualize GitHub archives using Postgres databases and Grafana dashboards
 - [Hound](https://cs.k8s.io/) a Kubernetes Codebase Search
 - [Kubernetes DevStats](https://k8s.devstats.cncf.io/) displays Kubernetes Developer Productivity
 - [Kubernetes On-call Rotation](https://go.k8s.io/oncall) displays the current Test Infra person on call
