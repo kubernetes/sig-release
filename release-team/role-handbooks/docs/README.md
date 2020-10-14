@@ -21,9 +21,13 @@
         - [Update the website configuration ahead of the release](#update-the-website-configuration-ahead-of-the-release)
     - [Middle Steps (Weeks 3-8)](#middle-steps-weeks-3-8)
         - [Track PRs](#track-prs)
+        - [Reach out to Enhancement Owners](#reach-out-to-enhancement-owners)
+            - [Before the Open placeholder PR Deadline](#before-the-open-placeholder-pr-deadline)
+            - [Before the PRs Ready for Review Deadline](#before-the-prs-ready-for-review-deadline)
+            - [Before the PRs Ready to Merge Deadline](#before-the-prs-ready-to-merge-deadline)
         - [Reach out to release notes team](#reach-out-to-release-notes-team)
         - [Maintain the current and upcoming `dev` branch](#maintain-the-current-and-upcoming-dev-branch)
-        - [Periodically merge `master` into `dev-[future release]`](#-periodically-merge-master-into-dev-future-release)
+            - [Periodically merge `master` into `dev-[future release]`](#-periodically-merge-master-into-dev-future-release)
         - [Monitor PRs](#monitor-prs)
         - [Enforce deadlines](#enforce-deadlines)
         - [Communicate major deadlines](#communicate-major-deadlines)
@@ -314,6 +318,7 @@ Keep the enhancement tracking spreadsheet up to date with review progress and me
 
 ⚠️ Assign the enhancements evenly across your Shadows after the enhancement freeze. Assigning shadows before the
  enhancement freeze will cause unexpected behavior in the tracking spreadsheet due to frequent updates to dynamic data.
+ (Tip: When assigning enhancements, try grouping enhancement owners and/or by SIGs)
   - You and your Shadows will be responsible for tracking whether the enhancement:
     - **has docs:** Actively has docs in place on Kubernetes website or in flight
     - **needs docs:** Actively needs docs to support the enhancement in the [future-release]
@@ -331,9 +336,41 @@ The spreadsheet can be used to track the current health of the docs for release.
 
 ![Sample spreadsheet](pics/enhancement-tracking.png)
 
-On the "Feature Stats" tab, a table was created to track the Doc Stats and then based on their category, in the other tab, assign a status "Green / Yellow /Red."
+On the "Enhancement Stats" tab, a table was created to track the Doc Stats and then based on their category, in the other tab, assign a status "Green / Yellow / Red."
 
 This is very helpful for weekly reports and managing deadlines
+
+#### Reach out to Enhancement Owners
+
+##### Before the Open placeholder PR Deadline
+After the Enhancement Freeze, reach out to all tracked enhancements to see if new docs or modification to existing docs
+are required, e.g:
+
+> Hello < tag enhancement owner(s) > :wave:, < future-release > Docs < Shadow/Lead > here.
+>
+> Does this enhancement work planned for < future-release > require any new docs or modification to existing docs?
+>
+> If so, please follows the steps [here](https://kubernetes.io/docs/contribute/new-content/new-features/#open-a-placeholder-pr)
+> to open a PR against `k/website` repo. This PR can be just a placeholder at this time and must be created before < docs placeholder deadline >
+>
+> Also, take a look at [Documenting for a release](https://kubernetes.io/docs/contribute/new-content/new-features/#for-developers-or-other-sig-members)
+> to get yourself familiarize with docs requirement for the release.
+>
+> Thank you!
+
+##### Before the PRs Ready for Review Deadline
+After the open placeholder PR deadline, reach out to all open/tracked doc PRs to remind the PR owners to get their
+doc ready to be reviewed, e.g:
+
+> Hello < tag doc owner(s) > :wave: please take a look at [Documenting for a release - PR Ready for Review](https://kubernetes.io/docs/contribute/new-content/new-features/#pr-ready-for-review)
+> to get your PR ready for review before < PR ready for review deadline >. Thank you!
+
+##### Before the PRs Ready to Merge Deadline
+After the PR ready for review deadline, reach out to all open/tracked doc PRs to remind the PR owners to get docs review
+and if needed, technical review, e.g:
+
+> Hello < tag doc owner(s) > :wave:, a friendly reminder that this PR needs both tech and doc review by < docs complete deadline >
+> to get this into the release. Please reach out to required SIGs to get their review. Thank you!
 
 #### Reach out to release notes team
 
