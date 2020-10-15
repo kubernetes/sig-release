@@ -71,9 +71,9 @@ referred to as Branch Manager shadows. They are responsible for:
 - Contributing to k/release: updating dependencies and getting used to the source codebase
 - Working on minor releases (x.y.z, where z = 0) 
 - With help from a release manager, working with the Release Team during the release cycle
-- Seek opportunities to help with prioritization and communication
-    - Send out pre-announcements and updates about patch releases
-    - Update the calendar
+- Seeking opportunities to help with prioritization and communication
+    - Sending out pre-announcements and updates about patch releases
+    - Updating the calendar
 
 Current Associates:
 
