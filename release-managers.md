@@ -38,7 +38,10 @@ Release Managers are responsible for:
 - Coordinating patch releases (`x.y.z`, where `z` > 0) of Kubernetes
 - Minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working with the
   [Release Team](/release-team/README.md) through each release cycle
-- Mentorship of the [Release Manager Associates](#associates) group
+- Mentoring the [Release Manager Associates](#associates) group
+- Actively developing features and maintaining the code in k/release
+- Supporting Release Manager Associates as they collaborate with and help the Release Team 
+during the release cycle
 
 This team at times works in close conjunction with the
 [Product Security Committee][psc] and therefore should abide by the guidelines
@@ -62,7 +65,17 @@ GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kuber
 ## Associates
 
 Release Manager Associates are apprentices to the Branch Managers, formerly
-referred to as Branch Manager shadows.
+referred to as Branch Manager shadows. They are responsible for:
+
+- Patch release work, cherry pick review
+- Contributing to k/release: updating dependencies and getting used to the source codebase
+- Working on minor releases (x.y.z, where z = 0) 
+- With help from a release manager, working with the Release Team during the release cycle
+- Seek opportunities to help with prioritization and communication
+    - Send out pre-announcements and updates about patch releases
+    - Update the calendar
+
+Current Associates:
 
 - Adolfo García Veytia ([@puerco](https://github.com/puerco))
 - Gianluca Arbezzano ([@gianarb](https://github.com/gianarb))
@@ -77,7 +90,11 @@ referred to as Branch Manager shadows.
 
 Build Admins are (currently) Google employees with the requisite access to
 Google build systems/tooling to publish deb/rpm packages on behalf of the
-Kubernetes project.
+Kubernetes project. They are responsible for:
+
+- Building, signing, and publishing the deb/rpm packages
+- Being the interlock with Release Managers (and Associates) on the final steps 
+of each minor (1.Y) and patch (1.Y.Z) release
 
 GitHub team: [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams/build-admins)
 
@@ -88,13 +105,16 @@ GitHub team: [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams
 
 ## SIG Release Leads
 
-SIG Release Chairs and Technical Leads are responsible for the governance of
-SIG Release. They are mentioned explicitly here as they are owners of the
-various communications channels and permissions groups (GitHub teams,
-GCP access) for each role.
+SIG Release Chairs and Technical Leads are responsible for:
 
-As such, they are highly privileged community members and privy to some private
-communications, which can at times relate to Kubernetes security disclosures.
+- The governance of SIG Release
+- Leading knowledge exchange sessions for Release Managers and Associates
+- Coaching on leadership and prioritization
+
+They are mentioned explicitly here as they are owners of the various communications 
+channels and permissions groups (GitHub teams, GCP access) for each role. As such, they 
+are highly privileged community members and privy to some private communications, which 
+can at times relate to Kubernetes security disclosures.
 
 GitHub team: [@kubernetes/sig-release-leads](https://github.com/orgs/kubernetes/teams/sig-release-leads)
 
