@@ -75,6 +75,8 @@ referred to as Branch Manager shadows. They are responsible for:
     - Send out pre-announcements and updates about patch releases
     - Update the calendar
 
+Associates:
+
 - Adolfo García Veytia ([@puerco](https://github.com/puerco))
 - Gianluca Arbezzano ([@gianarb](https://github.com/gianarb))
 - Jim Angel ([@jimangel](https://github.com/jimangel))
