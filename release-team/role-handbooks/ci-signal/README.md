@@ -146,7 +146,6 @@ For more detailed information about what's on these dashboards, see [Release Blo
 
 Jobs that are running on each commit (presubmits) can fail because of a bad code in which this is normal. Therefore, there is no a good way to know if the job is flaky or not by looking at the job's history in testgrid ([presubmits-kubernetes-blocking](https://testgrid.k8s.io/presubmits-kubernetes-blocking)). For that reason, the best practice is to monitor the behavior of the job via different tools.
 - With [triage](https://storage.googleapis.com/k8s-gubernator/triage/index.html?ci=0&pr=1&job=pull-kubernetes-e2e-gce) you will be able to detect job failures searching by the error message and get a summary of the error frequency.
-- Velodrome [job-health-merge-blocking](http://velodrome.k8s.io/dashboard/db/job-health-merge-blocking) to acquire the job failure and flake rate.
 - K8s monitoring [tide-dashboard](https://monitoring.prow.k8s.io/d/d69a91f76d8110d3e72885ee5ce8038e/tide-dashboard?orgId=1) to determine merge rate and make sure that the pool is not blocked.
 
 ## Special high risk test categories to monitor
@@ -210,9 +209,6 @@ We've had to delay releases due to failing scalability tests in the past, as the
 - with verify failures, try to infer the failure from the log. Otherwise find the owning SIG to help
 - if a test case is failing in one job consistently, but not others, both the job owner and test case owner are responsible for identifying why this combination is different
 - You can look at past history of the job/test (even as far back as multiple releases) by querying the [triage dashboard for specific job and/or test name](https://storage.googleapis.com/k8s-gubernator/triage/index.html)
-- You can gauge the overall health (failure/flake rate), duration, and
-  frequency of a release-blocking job by looking over
-  [Velodrome's release blocking job health dashboard](http://velodrome.k8s.io/dashboard/db/job-health-release-blocking?orgId=1)
 
 ### Priority Labels
 Issues you create for test failures and flakes must be assigned a `priority` label, that is compatible with the priorities described in the [Issue Triage contributor guide](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#define-priority).
