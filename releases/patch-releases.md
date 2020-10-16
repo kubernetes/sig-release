@@ -72,7 +72,7 @@ End of Life for **1.19** is **2021-09-30**
 
 Next patch release is **1.18.11**
 
-End of Life for **1.18** is **TBD**
+End of Life for **1.18** is **2021-04-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
@@ -92,7 +92,7 @@ End of Life for **1.18** is **TBD**
 
 Next patch release is **1.17.14**
 
-End of Life for **1.17** is **TBD**
+End of Life for **1.17** is **2021-01-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |

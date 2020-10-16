@@ -18,7 +18,7 @@ schedules:
   next: 1.18.11
   cherryPickDeadline: 2020-11-06
   targetDate: 2020-11-11
-  endOfLifeDate: TBD
+  endOfLifeDate: 2021-04-30
   previousPatches:
     - release: 1.18.10
       cherryPickDeadline: 2020-10-09
@@ -54,7 +54,7 @@ schedules:
   next: 1.17.14
   cherryPickDeadline: 2020-11-06
   targetDate: 2020-11-11
-  endOfLifeDate: TBD
+  endOfLifeDate: 2021-01-30
   previousPatches:
     - release: 1.17.13
       cherryPickDeadline: 2020-10-09
