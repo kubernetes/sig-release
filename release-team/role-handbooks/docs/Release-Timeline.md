@@ -265,10 +265,11 @@ are required, e.g:
 > Does this enhancement work planned for < future-release > require any new docs or modification to existing docs?
 >
 > If so, please follows the steps [here](https://kubernetes.io/docs/contribute/new-content/new-features/#open-a-placeholder-pr)
-> to open a PR against `k/website` repo. This PR can be just a placeholder at this time and must be created before < docs placeholder deadline >
+> to open a PR against `dev-[future release]` branch in the `k/website` repo. This PR can be just a placeholder at this
+> time and must be created before < docs placeholder deadline >
 >
 > Also, take a look at [Documenting for a release](https://kubernetes.io/docs/contribute/new-content/new-features/#for-developers-or-other-sig-members)
-> to get yourself familiarize with docs requirement for the release.
+> to get yourself familiarize with the docs requirement for the release.
 >
 > Thank you!
 
