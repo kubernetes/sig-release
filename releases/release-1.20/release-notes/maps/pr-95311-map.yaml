@@ -1,0 +1,3 @@
+pr: 95311
+releasenote:
+  text: Send GCE node startup scripts logs to console and journal.

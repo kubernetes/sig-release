@@ -1,0 +1,3 @@
+pr: 95184
+releasenote:
+  text: GPU metrics provided by kubelet are now disabled by default.

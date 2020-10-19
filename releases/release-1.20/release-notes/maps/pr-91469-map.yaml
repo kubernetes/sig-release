@@ -1,0 +1,3 @@
+pr: 91469
+releasenote:
+  text: Fix kubelet to properly log when a container is started. Previously, kubelet may log that container is dead and was restarted when it was actually started for the first time. This behavior only happened on pods with initContainers and regular containers.

@@ -1,0 +1,4 @@
+pr: 94871
+releasenote:
+  text: 'The deprecated flag --experimental-kustomize is now removed from kubeadm commands. Use --experimental-patches instead, which was introduced in 1.19. Migration infromation available in --help description for --exprimental-patches.'
+  action_required: true
