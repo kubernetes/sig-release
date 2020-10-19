@@ -1,0 +1,3 @@
+pr: 93108
+releasenote:
+  text: StreamWatcher now calls HandleCrash at appropriate sequence.
