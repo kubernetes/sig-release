@@ -58,9 +58,7 @@ The 1.20 release cycle is proposed as follows:
 | **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | Tue October 6 | week 4 | [master-blocking], [master-informing] |
 | 1.20.0-alpha.2 released | Branch Manager | Tue October 13 | week 5 | |
 | 1.20.0-alpha.3 released | Branch Manager | Tue October 20 | week 6 | |
-| release-1.20 branch created | Branch Manager | Tue October 27 | week 7 | |
-| release-1.20 jobs created | Branch Manager | Tue October 27| | |
-| 1.20.0-beta.0 released | Branch Manager | Tue October 27 | | |
+| 1.20.0-beta.0 released | Branch Manager | Tue October 27 | week 7 | |
 | **Begin [Burndown]** (MWF meetings) | Lead | Mon November 2 | week 8 | [1.20-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Mon November 2 | | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon November 2 | | |
@@ -74,7 +72,9 @@ The 1.20 release cycle is proposed as follows:
 | Docs deadline - PRs ready for review | Docs Lead | Mon November 23 | week 11 | |
 | **[Test Freeze]** (EOD PST) | Branch Manager | Mon November 23 | |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Mon November 30 | week 12 | |
-| 1.20.0-rc.1 released | Branch Manager | Tue December 1 | | |
+| release-1.20 branch created | Branch Manager | Tue December 1 | | |
+| release-1.20 jobs created | Branch Manager | Tue December 1 | | |
+| 1.20.0-rc.0 released | Branch Manager | Tue December 1 | | |
 | **v1.20.0 released** | Branch Manager | Tue December 8 | week 13 | |
 | **[Thaw]** | Branch Manager | Tue, December 8 | | |
 | Release retrospective | Community | Thu December 17 | week 14 | |
