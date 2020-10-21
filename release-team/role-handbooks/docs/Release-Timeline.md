@@ -304,7 +304,9 @@ Reach out to release notes team to see if there's anything that might need docs 
 
 This allows us to avoid merge conflicts on release day with `dev-[future release]`.
 
-#### ⚠️ Periodically merge `master` into `dev-[future release]`
+#### ⚠️ Periodically sync `master` into `dev-[future release]`
+
+> Merge Method
 
 To merge `master` into `dev-[future release]` on your local fork:
 
@@ -332,11 +334,36 @@ git commit -m "Merge master into dev-[future release] to keep in sync"
 git push origin merged-master-dev-[future release]
 ```
 
-Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-master-dev-[future release]`. e.g., [merge master into future release](https://github.com/kubernetes/website/pull/16225).
-
 You may need to fix conflicts manually. If somebody has improved a page on `master`, and at the same time it has been updated in the dev branch for the next release, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
 
 When you have completed resolving the differences manually, run `git merge --continue` to complete the merge. Then carry on from step 5.
+
+> Rebase Method
+
+To rebase `master` into `dev-[future release]` on your local fork:
+
+```bash
+# Step 0 (if you don't already have a remote called "upstream")
+git remote add upstream https://github.com/kubernetes/website.git
+# Step 1
+git fetch upstream master
+# Step 2
+git fetch upstream dev-[future release]
+# Step 3
+git switch --track upstream/dev-[future release]
+# Step 4
+git pull --ff-only # make sure you're up to date
+# Step 5 You might see merge conflicts at this point.
+git rebase upstream/master
+## git add ...
+## git rebase --continue
+# Step 6
+git switch -c rebased-master-dev-[future release]
+# Step 7
+git push origin rebased-master-dev-[future release]
+```
+
+Submit a PR against upstream `dev-[future release]` from your fork's branch `(merged|rebased)-master-dev-[future release]`. e.g., [merge master into future release](https://github.com/kubernetes/website/pull/16225).
 
 ⚠️ **Ensure the PR is passing tests on GitHub**.
 
