@@ -1,12 +1,13 @@
 # Kubernetes Docs Lead Handbook
+
 - [Overview](#overview)
-    - [Common Terms](#common-terms)
+  - [Common Terms](#common-terms)
 - [Docs Lead Responsibilities](#docs-lead-responsibilities)
 - [Prerequisites for Docs Lead and Shadows](#prerequisites-for-docs-lead-and-shadows)
-    - [General Requirements](#general-requirements)
-    - [Time Requirements](#time-requirements)
-    - [Prerequisites for Docs Leads](#prerequisites-for-docs-leads)
-    - [Prerequisites for Shadows](#prerequisites-for-shadows)
+  - [General Requirements](#general-requirements)
+  - [Time Requirements](#time-requirements)
+  - [Prerequisites for Docs Leads](#prerequisites-for-docs-leads)
+  - [Prerequisites for Shadows](#prerequisites-for-shadows)
 - [Release Timeline](#release-timeline)
 - [Doc Authors and Contributors](#doc-authors-and-contributors)
 
@@ -17,11 +18,11 @@ This document covers the responsibilities, time commitments, and timeline for Do
 ### Common Terms
 
 | Variable             | Explanation                                 | Example                                                  |
-|----------------------|---------------------------------------------|----------------------------------------------------------|
+| -------------------- | ------------------------------------------- | -------------------------------------------------------- |
 | [current release]    | Active Kubernetes release                   | 1.13                                                     |
 | [future release]     | Release that the team is actively composing | 1.14                                                     |
 | [integration branch] | A PR [WIP] merging dev branch into master   | [link](https://github.com/kubernetes/website/pull/11401) |
-|  ⚠️                   | Stresses extra importance                   |                                                          |
+| ⚠️                    | Stresses extra importance                   |                                                          |
 
 ## Docs Lead Responsibilities
 
@@ -29,15 +30,15 @@ The Docs Lead is responsible for working with the Release Team to coordinate doc
 
 Responsibilities include:
 
-* Identifying and tracking new Kubernetes features and feature updates that require new content
-* Offering guidance to code contributors about where new feature and enhancements documentation should live
-* Working with contributors to modify existing docs to accurately represent any upcoming changes
-* Providing weekly updates to the Release Team about the current state of release-bound docs
-* Introducing and mentoring Docs Lead Shadows to this process and empowering them with the knowledge needed to be future Docs Leads
-* Reviewing documentation PRs to ensure quality following the website [Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/)
-* Migrating the old website [version] documentation and updating it with the new release
-* Communicating changes with all of the localization branches in order to stay synced across repositories
-* Updating these instructions with each release
+- Identifying and tracking new Kubernetes features and feature updates that require new content
+- Offering guidance to code contributors about where new feature and enhancements documentation should live
+- Working with contributors to modify existing docs to accurately represent any upcoming changes
+- Providing weekly updates to the Release Team about the current state of release-bound docs
+- Introducing and mentoring Docs Lead Shadows to this process and empowering them with the knowledge needed to be future Docs Leads
+- Reviewing documentation PRs to ensure quality following the website [Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/)
+- Migrating the old website [version] documentation and updating it with the new release
+- Communicating changes with all of the localization branches in order to stay synced across repositories
+- Updating these instructions with each release
 
 ## Prerequisites for Docs Lead and Shadows
 
@@ -85,15 +86,16 @@ Reference the [release timeline documentation](Release-Timeline.md) for responsi
 **Authors:** [Jim Angel](https://github.com/jimangel) & [Cody Clark](https://github.com/cody-clark)
 
 Special thanks to contributors to this document, including:
-* Andrew Chen
-* Anna Jung
-* Jared Bhatti
-* Jennifer Rondeau
-* Misty Linville
-* Savitha Raghunathan
-* Tim Bannister
-* Tim Fogarty
-* Zach Arnold
-* Zach Corleissen
+
+- Andrew Chen
+- Anna Jung
+- Jared Bhatti
+- Jennifer Rondeau
+- Misty Linville
+- Savitha Raghunathan
+- Tim Bannister
+- Tim Fogarty
+- Zach Arnold
+- Zach Corleissen
 
 In addition, this document wouldn't be possible without the wonderful people in [#sig-docs](https://kubernetes.slack.com/messages/sig-docs)!
