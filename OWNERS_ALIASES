@@ -10,36 +10,40 @@ aliases:
     - nikhita # subproject owner
     - swinslow # subproject owner
   release-engineering-approvers:
-    - calebamiles # subproject owner
+    - cpanato # Release Manager
     - dougm # Release Manager
     - feiskyer # Release Manager
+    - hasheddan # Release Manager
     - hoegaarden # Release Manager
     - idealhack # Release Manager
+    - saschagrunert # subproject owner / Release Manager
     - justaugustus # subproject owner / Release Manager
     - tpepper # subproject owner / Release Manager
     - xmudrii # Release Manager
   release-engineering-reviewers:
-    - cpanato # Release Manager
-    - hasheddan # Release Manager
+    - gianarb # Release Manager Associate
     - jimangel # Release Manager Associate
     - markyjackson-taulia # Release Manager Associate
-    - saschagrunert # Release Manager
+    - mkorbi # Release Manager Associate
+    - onlydole # Release Manager Associate
+    - puerco # Release Manager Associate
     - sethmccombs # Release Manager Associate
     - verolop # Release Manager Associate
   release-team:
     - alejandrox1 # subproject owner / 1.18 RT Lead
     - guineveresaenger # subproject owner / 1.17 RT Lead
+    - jeremyrickard # subproject owner / 1.20 RT Lead
     - justaugustus # subproject owner
+    - onlydole # subproject owner / 1.19 RT Lead
     - tpepper # subproject owner
-    - jeremyrickard # 1.20 RT Lead
   build-admins:
-    - aleksandra-malinowska
-    - listx
-    - ps882
-    - sumitranr
+    - amwat
+    - BenTheElder
+    - MushuEE
+    - spiffxp
   release-team-lead-role:
-    - guineveresaenger # 1.17
-    - alejandrox1 # 1.18
+    - guineveresaenger # 1.17 RT Lead
+    - alejandrox1 # 1.18 RT Lead
     - onlydole # 1.19 RT Lead
     - lachie83 # 1.20 Emeritus Adviser
     - jeremyrickard # 1.20 RT Lead
