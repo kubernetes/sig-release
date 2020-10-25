@@ -33,10 +33,10 @@ aliases:
     - tpepper # subproject owner
     - jeremyrickard # 1.20 RT Lead
   build-admins:
-    - aleksandra-malinowska
-    - listx
-    - ps882
-    - sumitranr
+    - amwat
+    - BenTheElder
+    - MushuEE
+    - spiffxp
   release-team-lead-role:
     - guineveresaenger # 1.17
     - alejandrox1 # 1.18
