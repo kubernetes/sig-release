@@ -29,17 +29,18 @@ aliases:
   release-team:
     - alejandrox1 # subproject owner / 1.18 RT Lead
     - guineveresaenger # subproject owner / 1.17 RT Lead
+    - jeremyrickard # subproject owner / 1.20 RT Lead
     - justaugustus # subproject owner
+    - onlydole # subproject owner / 1.19 RT Lead
     - tpepper # subproject owner
-    - jeremyrickard # 1.20 RT Lead
   build-admins:
     - amwat
     - BenTheElder
     - MushuEE
     - spiffxp
   release-team-lead-role:
-    - guineveresaenger # 1.17
-    - alejandrox1 # 1.18
+    - guineveresaenger # 1.17 RT Lead
+    - alejandrox1 # 1.18 RT Lead
     - onlydole # 1.19 RT Lead
     - lachie83 # 1.20 Emeritus Adviser
     - jeremyrickard # 1.20 RT Lead
