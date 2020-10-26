@@ -42,7 +42,7 @@ Helpful characteristics of an Enhancements Lead include:
 - release management experience
 
 Approximate Time Commitments
-- Beginning of the cycle through enhancement freeze: 3-6 hours a week fluctuating based on how many SIG meetings need to be attended
+- Beginning of the cycle through enhancement freeze: 6-10 hours a week fluctuating based on how many SIG meetings need to be attended
 - Enhancement Freeze through Code Freeze: 4-7 hours a week
 - Code Freeze through Release Day: 1-4 hours a week
 
