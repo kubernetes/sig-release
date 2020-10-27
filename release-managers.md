@@ -75,7 +75,7 @@ referred to as Branch Manager shadows. They are responsible for:
     - Sending out pre-announcements and updates about patch releases
     - Updating the calendar
 
-Current Associates:
+GitHub Mentions: @kubernetes/release-engineering
 
 - Adolfo García Veytia ([@puerco](https://github.com/puerco))
 - Gianluca Arbezzano ([@gianarb](https://github.com/gianarb))
