@@ -74,6 +74,7 @@ Right after the CI signal release team is formed, CI signal lead is responsible 
 - adding write access to all new shadows for the [CI signal board](https://github.com/orgs/kubernetes/projects/11)
 - updating the [CI signal github team](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml)
 - adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml)
+- organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage
 
 ### Pre Enhancement Freeze
 
