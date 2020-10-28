@@ -1,6 +1,6 @@
 # Release Managers <!-- omit in toc -->
 
-Release Managers is an umbrella term that encompasses the set of Kubernetes
+"Release Managers" is an umbrella term that encompasses the set of Kubernetes
 contributors responsible for maintaining release branches, tagging releases,
 and building/packaging Kubernetes.
 
@@ -9,11 +9,13 @@ The responsibilities of each role are described below.
 - [Contact](#contact)
 - [Handbooks](#handbooks)
 - [Release Managers](#release-managers)
-- [Associates](#associates)
+  - [Becoming a Release Manager](#becoming-a-release-manager)
+- [Release Manager Associates](#release-manager-associates)
+  - [Becoming a Release Manager Associate](#becoming-a-release-manager-associate)
 - [Build Admins](#build-admins)
 - [SIG Release Leads](#sig-release-leads)
   - [Chairs](#chairs)
-  - [Technical Leads](#technical-leads)
+  - [Technical Leads](#technical-leads) 
 
 ## Contact
 
@@ -40,8 +42,9 @@ Release Managers are responsible for:
   [Release Team](/release-team/README.md) through each release cycle
 - Mentoring the [Release Manager Associates](#associates) group
 - Actively developing features and maintaining the code in k/release
-- Supporting Release Manager Associates as they collaborate with and help the Release Team 
-during the release cycle
+- Supporting Release Manager Associates and contributors through actively participating in the Buddy program
+  - Check in monthly with Associates and delegate tasks, empower them to cut releases, and mentor
+  - Being available to support Associates in onboarding new contributors—answering questions and suggesting appropriate work for them to do
 
 This team at times works in close conjunction with the
 [Product Security Committee][psc] and therefore should abide by the guidelines
@@ -62,10 +65,21 @@ GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kuber
 - Tim Pepper ([@tpepper](https://github.com/tpepper))
 - Yang Li ([@idealhack](https://github.com/idealhack))
 
-## Associates
+### Becoming a Release Manager
 
-Release Manager Associates are apprentices to the Branch Managers, formerly
-referred to as Branch Manager shadows. They are responsible for:
+To become a Release Manager, one must first serve as a Release Manager Associate. Associates graduate to Release Manager by actively working on releases over several cycles and:
+
+- demonstrating the willingness to lead
+- tag-teaming with Release Managers on patches, to eventually cut a release independently
+  - because releases have a limiting function, we also consider substantial contributions to image promotion and other core Release Engineering tasks
+- questioning how Associates work, suggesting improvements, gathering feedback, and driving change
+- being reliable and responsive
+- leaning into advanced work that requires Release Manager-level access and privileges to complete
+
+## Release Manager Associates
+
+Release Manager Associates are apprentices to the Release Managers, formerly
+referred to as Release Manager shadows. They are responsible for:
 
 - Patch release work, cherry pick review
 - Contributing to k/release: updating dependencies and getting used to the source codebase
@@ -74,6 +88,7 @@ referred to as Branch Manager shadows. They are responsible for:
 - Seeking opportunities to help with prioritization and communication
     - Sending out pre-announcements and updates about patch releases
     - Updating the calendar
+- Through the Buddy program, onboarding new contributors and pairing up with them on tasks
 
 GitHub Mentions: @kubernetes/release-engineering
 
@@ -85,6 +100,16 @@ GitHub Mentions: @kubernetes/release-engineering
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
 - Taylor Dolezal ([@onlydole](https://github.com/onlydole))
 - Verónica López ([@verolop](https://github.com/verolop))
+
+### Becoming a Release Manager Associate
+
+Contributors can become Associates by demonstrating the following:
+
+- consistent participation, including 6-12 months of active release engineering-related work
+- experience fulfilling a technical lead role on the Release Team during a release cycle
+    - this experience provides a solid baseline for understanding how SIG Release works overall—including our expectations regarding technical skills, communications/responsiveness, and reliability
+- working on k/release items that improve our interactions with Testgrid, cleaning up libraries, etc.
+    - these efforts require interacting and pairing with Release Managers and Associates
 
 ## Build Admins
 
