@@ -12,6 +12,7 @@
   - [Communicating Decisions on Pull Requests](#communicating-decisions-on-pull-requests)
   - [Communicating Your Availability: Quick Tips](#communicating-your-availability-quick-tips)
   - [Handing Over Work That You Can't Finish: Steps](#handing-over-work-that-you-cant-finish-steps)
+  - [Tracking Progress](#tracking-progress)
 - [Roles, Responsibilities, and Notes for Newcomers](#roles-responsibilities-and-notes-for-newcomers)
 - [Schedule of Recurring Work](#schedule-of-recurring-work)
   - [Weekly](#weekly)
@@ -110,6 +111,26 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 - Once someone claims the issue from you, unassign yourself from the GitHub issue.
 - If the matter is not urgent, you can raise it at the Release Engineering. This tends to be successful and increases visibility around the issue.
 - Please do not reassign work to others without some sort of communication first.
+
+### Tracking Progress
+
+- We use our [project board](https://github.com/orgs/kubernetes/projects/30) and try to review it during the Release Engineering meeting. 
+    - Note that project boards also exist for [SIG Release](https://github.com/orgs/kubernetes/projects/23) and the [Release Team](https://github.com/orgs/kubernetes/projects/29).
+- As of Autumn 2020 SIG Release is setting up an instance of Triage Party to accelerate and automate triaging issues.
+- We organize our work into sub-themes based on urgency and impact, and identify drivers of those topics.
+- We call out and celebrate achievements. Some suggested communication paths for amplifying:
+    - **First order**: role promotions, finishing a PR, etc.:
+      - Mention in Release Engineering meeting; also in Release Team meeting, if it affects the release
+      - Post in #release-management Slack channel
+    - **Bigger order**: completing a milestone, finishing a major docs effort, other “headline news":
+      - Post in #release-management and #sig-release Slack channels
+      - Mention in Release Engineering and SIG Release meetings; also in Release Team meeting, if it affects the release
+      - Post about individual and small-team efforts in the #shoutouts Slack channel
+    - **Biggest order**: forming a new subproject, shipping a release:
+      - Mentions in Release Engineering, SIG Release and Release Team meetings
+      - Post in #sig-release and #release-management Slack channels
+      - Post about individual and small-team efforts in the #shoutouts Slack channel
+      - Demo or mention at Monthly Community Meeting
 
 ## Roles, Responsibilities, and Notes for Newcomers
 
