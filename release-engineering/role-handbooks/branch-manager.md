@@ -619,9 +619,9 @@ Tide automates merges and is configured via a [config.yaml](https://github.com/k
     - do-not-merge/invalid-owners-file
     - do-not-merge/release-note-label-needed
     - do-not-merge/work-in-progress
-    - needs-kind
+    - do-not-merge/needs-kind
+    - do-not-merge/needs-sig
     - needs-rebase
-    - needs-sig
 ```
 
 During code freeze, two queries are used instead of just one for the `kubernetes/kubernetes` repo. One query handles the `master` and current release branches while the other query handles all other branches. The partition is achieved with the `includedBranches` and `excludedBranches` fields.
