@@ -13,6 +13,7 @@
     - [Release tooling](#release-tooling)
     - [Google Cloud SDK](#google-cloud-sdk)
     - [Sending mail](#sending-mail)
+    - [Skopeo](#skopeo)
 - [Releases Management](#releases-management)
   - [Alpha Releases](#alpha-releases)
     - [Alpha Stage](#alpha-stage)
@@ -224,6 +225,13 @@ This can be done in one of two ways:
 [release tools]: https://github.com/kubernetes/release#tools
 [kubernetes/release]: https://github.com/kubernetes/release
 [sendgrid-identity-verification]: https://sendgrid.com/docs/for-developers/sending-email/sender-identity/
+
+#### Skopeo
+
+[Skopeo][skopeo] is a command line utility that performs various operations on container images and image repositories. Skopeo is not required for performing branch management tasks (if needed, Docker and other relevant tools can be used instead), however, it might be referred to by other guides. If you want to install Skopeo, you can follow the [official installation guide][skopeo-install].
+
+[skopeo]: https://github.com/containers/skopeo
+[skopeo-install]: https://github.com/containers/skopeo/blob/master/install.md
 
 ## Releases Management
 
