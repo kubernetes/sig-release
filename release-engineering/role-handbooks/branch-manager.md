@@ -212,15 +212,18 @@ At the end of a release, Release Managers will need to announce the new release 
 This can be done in one of two ways:
 
 - The `krel announce` sub command -- A [`SENDGRID_API_KEY`](https://sendgrid.com/docs/ui/account-and-settings/api-keys) will need to be configured correctly on your environment for this to work
-- Manually -- Send the email notification manually to [kubernetes-announce][k-announce-list] by taking the contents from the Google Cloud Bucket: `gs://kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`:
+  - If you haven't used SendGrid before, SendGrid might require you to go through the [Sender Identity Verification process][sendgrid-identity-verification] before you can send emails/announcements
+- Manually -- Send the email notification manually to [kubernetes-announce][k-announce-list] and [kubernetes-dev][k-dev-list]. You can take contents of the announcement in one of the following ways:
+  - By taking the contents from the Google Cloud Bucket: `gs://kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`:
+  - By using `krel announce` command with the `--print-only` flag
   - [Example subject](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement-subject.txt)
   - [Example body](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement.html)
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
-[k-announce-request]: https://groups.google.com/forum/#!contactowner/kubernetes-announce
+[k-dev-list]: https://groups.google.com/forum/#!forum/kubernetes-dev
 [release tools]: https://github.com/kubernetes/release#tools
 [kubernetes/release]: https://github.com/kubernetes/release
-[kubernetes-sigs/k8s-container-image-promoter]: https://github.com/kubernetes-sigs/k8s-container-image-promoter/tree/master/cmd/cip-mm
+[sendgrid-identity-verification]: https://sendgrid.com/docs/for-developers/sending-email/sender-identity/
 
 ## Releases Management
 
