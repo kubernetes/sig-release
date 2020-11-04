@@ -56,6 +56,10 @@ If there are potential fixes to the issues indicated and team members are keen, 
 
 Compared to other release team roles, release notes is one of the least time intensive roles.
 
+#### Onboarding Session (week 1) ~1 hour
+
+In the first week of the release cycle, the Release Notes Lead will organize a onboarding session with the shadows to go over general responsibilities and expectations.
+
 #### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
 
 In the first 8 weeks of the cycle, the Release Notes team should/must, attend weekly release meetings and run the [release-notes subcommand of krel](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) as well as update the [release-notes website](https://github.com/kubernetes-sigs/release-notes) for every `alpha`, `beta` and `rc` to create an early draft of the release notes. This ensures that the overall quality of the release notes can be verified from the beginning of the release cycle.
