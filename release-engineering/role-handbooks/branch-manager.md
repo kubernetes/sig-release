@@ -283,6 +283,8 @@ After the release process has been completed, you can use the `krel gcbmgr histo
 krel gcbmgr history --branch release-1.xy --date-from <date-of-release>
 ```
 
+_note:_ `krel gcbmgr history` command might require additional `gcloud` authentication. If you see an error, follow the steps mentioned in the error message to authenticate, and then re-run the command.
+
 The generated table is copied to the created issue, as it can be seen in the [following issue for the v1.20.0-alpha.1 release](https://github.com/kubernetes/sig-release/issues/1249#issue-705792603).
 
 After having thoroughly read the section on cutting a release version of the handbook, and that all items on the checklist have completed (you may include notes on events that was unique to cutting that release version as comments), close the issue with `/close` as a comment the issue thread.
