@@ -81,20 +81,7 @@ Right after the CI signal release team is formed, CI signal lead is responsible 
 Here are some good early deliverables from the CI Signal lead between start of the release to enhancement freeze.
 - Start maintain the [CI signal project board](https://github.com/orgs/kubernetes/projects/11) and keep it up-to-date with issues tracking any test failure/flake
 - Copy over any open test issues from previous release, assign a member of the CI signal team, and have that member follow up on the issue with owners
-- Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues
-  - Make sure all issues are titled either:
-    - For failing tests: `[Failing Test]: testgrid-tab-name (prow-job-name)`
-    - For flaky tests: `[Flaky Test]: testgrid-tab-name (prow-job-name)`
-  - Make sure all open issues have a `priority/` label (see: [Priority Labels](#priority-labels)) and one of either the `kind/flake` or `kind/failing-test` label
-  - Make sure the issue is assigned against the current milestone 1.x, using /milestone
-  - Assign the issue to appropriate SIG using /sig label
-  - If you are aware of the individual associated with the enhancement area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around
-  - Add @kubernetes/sig-foo-test-failures to draw SIG-foo’s attention to the issue
-  - CC @ci-signal github team on the issue to let rest of the team know about it, you might also CC the release lead and bug triage lead if the issue needs extra attention immediately
-  - Assign the issue to yourself or recruit another member of the CI signal team to own the issue. The CI signal team member assigned to an issue is responsible for driving it to resolution alongside the assignee from the appropriate SIG
-  - Post the test failure in SIG’s Slack channel to get help in routing the issue to the rightful owner(s)
-  - [Sample test failure issue](https://github.com/kubernetes/kubernetes/issues/81191)
-  - Add the issue to [CI signal board](https://github.com/orgs/kubernetes/projects/11) under "New". The CI signal team lead is responsible for making sure every issue on the CI signal board is assigned to a member of the CI signal team and is being actively driven to resolution
+- Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues. See [Opening Issues](#opening-issues) for how to write an effective issue.
 - Build and maintain a document of area experts / owners across SIGs for future needs e.g.: Scalability experts, upgrade test experts etc
 
 #### **_Best Practice:_**
@@ -142,6 +129,39 @@ Jobs on the master-informing and release-x.y-informing dashboards require more i
 <!-- TODO: document procedure/criteria for tolerated failures in Informing -->
 
 For more detailed information about what's on these dashboards, see [Release Blocking Jobs](/release-blocking-jobs.md) documentation.
+
+## Opening Issues
+
+The appropriate response to a failing or flaking job on either a blocking or informing dashboard is to open an issue. The primary goal of opening an issue is to track the work that needs to be done to bring the job back to a healthy status while providing accurate signal. The format for a helpful and informative issue may vary depending on the type of job, the test(s) that are failing for the job, and the responsible parties for the job.
+
+The decision tree below can be followed to make sure that you are opening an issue that is most effective for triaging, tracking, and resolving a failing or flaking job.
+
+_All instances of "failing" below can be replaced with "flaking" when appropriate._
+
+1. If a single test is failing across multiple jobs, open a test-level issue with title `[Failing Test] [responsible-SIG] failing-test-name`.
+    - If you are unsure of the responsible SIG, you may omit `[responsible-SIG]`.
+    - If a short regex can be used to describe the jobs that are failing (example: `kind-*-parallel`), you may add it to the end of the title in parentheses.
+2. If one or more tests are failing for a single job that is owned by a single SIG (example: sig-node owns all tests in [node-kubelet-master](https://testgrid.k8s.io/sig-release-master-blocking#node-kubelet-master)), open a job-level issue with title: `[Failing Test] [responsible-SIG] failing-test-name (failing job name)`.
+    - If multiple tests are failing, you can pick one for the title if it reflects the root cause, or you can write a very succinct description in place of `failing-test-name`.
+3. If a job is failing for a reason that is unrelated to the test behavior or the functionality being tested, such as a failure to schedule the Pod or a timeout due to resource contention, open a job-level issue with title: `[Failing Test] failing-test-name (failing-job-name)`.
+    - If the failure is clearly related to a testing infrastructure issue, it may be appropriate to open the issue in [k/test-infra](https://github.com/kubernetes/test-infra) or [k/k8s.io](https://github.com/kubernetes/k8s.io).
+4. If one or more tests are failing for a single job that is not owned by a single SIG, open a separate issue for each failing test with title: `[Failing Test] [responsible-SIG] failing-test-name (failing-job-name)`.
+
+An issue should remain open until the appropriate fix has been made and the affected tests have returned to a healthy status. If an issue is closed prematurely, or the same test starts failing or flaking again, a new issue should be opened. Do not reopen closed issues.
+
+Once you have decided the number of issues to open an how to name them, it is important to provide appropriate information in the content of the issue such that the relevant parties are notified and have enough information to take action. For all opened issues:
+
+- Make sure all open issues have a `priority/` label (see: [Priority Labels](#priority-labels)) and one of either the `kind/flake` or `kind/failing-test` label.
+- Make sure the issue is assigned against the current milestone 1.x, using `/milestone`.
+- Assign the issue to appropriate SIG using `/sig` label.
+- If you are aware of the individual associated with the enhancement area or issue, @mention of individual(s) and SIG leads tends to result in faster turn around.
+- Add `@kubernetes/sig-foo-test-failures` to draw SIG-foo’s attention to the issue.
+- `/cc @ci-signal` github team on the issue to let rest of the team know about it, you might also `/cc` the release lead and bug triage lead if the issue needs extra attention immediately.
+- Assign the issue to yourself or recruit another member of the CI signal team to own the issue. The CI signal team member assigned to an issue is responsible for driving it to resolution alongside the assignee from the appropriate SIG.
+- Post the test failure in SIG’s Slack channel to get help in routing the issue to the rightful owner(s).
+- Add the issue to [CI signal board](https://github.com/orgs/kubernetes/projects/11) under "New". The CI signal team lead is responsible for making sure every issue on the CI signal board is assigned to a member of the CI signal team and is being actively driven to resolution.
+
+In addition to the steps above, make sure to fill in any additional information that is part of the [Failing Test](https://github.com/kubernetes/kubernetes/issues/new?labels=kind%2Ffailing-test&template=failing-test.md) or [Flaking Test](https://github.com/kubernetes/kubernetes/issues/new?labels=kind%2Fflake&template=flaking-test.md) issue template.
 
 ## Detect flakiness on presubmit jobs
 
@@ -239,37 +259,6 @@ To add an issue or PR to a milestone use the following Prow command:
 
 Near the end of the release cycle, if you still have open issues that are not
 release blocking, then feel free to move these to the next milestone.
-
-### Routing test issues to SIG/owner
-
-This can be done in 2 ways (i) including @kubernetes/sig-foo-test-failures teams in the issue files and (ii) going to the #sig-foo slack channel if you need help routing the failure to appropriate owner.
-
-
-If a test case is failing, file a v1.y milestone issue in kubernetes/kubernetes titled: `[Failing Test] testgrid-tab-name (prow-job-name)`
-```
-/priority critical-urgent
-/kind failing-test
-@kubernetes/sig-FOO-test-failures
-
-This test case has been failing [SINCE WHEN OR FOR HOW LONG] and affects [WHICH JOBS]: [triage report](LINK TO TRIAGE REPORT)
-
-This is affecting [WHICH JOBS] on the [sig-release-master-blocking dashboard](https://k8s-testgrid.appspot.com/sig-release-master-blocking),
-and prevents us from cutting [WHICH RELEASE] (kubernetes/sig-release#NNN). Is there work ongoing to bring this test back to green?
-
-...any additional debugging info I can offer...
-
-eg: if there's a really obvious single cluster / cause of failures
-[triage cluster 12345](LINK TO TRIAGE CLUSTER)
----
-the text from the triage cluster
----
-```
-
-If a test case is flaky, file a v1.y milestone issue in kubernetes/kubernetes titled: `[Flaky Test] testgrid-tab-name (prow-job-name)` and follow the same procedure as above.
-
-Examples:
-- [[Failing Test] aks-engine-azure-1-16-windows (ci-kubernetes-e2e-aks-engine-azure-1-16-windows)](https://github.com/kubernetes/kubernetes/issues/81191)
-- [[Flaky Test] kind-master-parallel (ci-kubernetes-kind-e2e-parallel) ](https://github.com/kubernetes/kubernetes/issues/83594)
 
 ### Monitoring Commits for test failure triangulation
 Yet another effective way for the signal team to stay on top of code churn and regression is by monitoring commits to master and specific branch periodically.
