@@ -661,6 +661,18 @@ Enable branch protection on the new `dev-` branch, and deprecate the older one; 
 
 Create a milestone for NEW upcoming release. Depending on your permissions, you might need to contact a SIG Docs maintainer. Move anything missed for the current release to the new milestone.
 
+### Modify prow config file
+
+Create a [pull request](https://github.com/kubernetes/test-infra/pull/19877) against [k/test-infra](https://github.com/kubernetes/test-infra)
+ to configure [prow](https://github.com/kubernetes/test-infra/tree/master/prow#) to automatically apply milestones to future release branch
+ and to remove the configuration for the last release.
+
+```diff
+kubernetes/website:
+-   dev-1.19: 1.19
++   dev-1.20: 1.20
+```
+
 ### Update Netlify
 
 Update Netlify (contact a [SIG Docs Chair or Technical Lead](https://git.k8s.io/community/sig-docs#leadership) if you do not have access and they can assist with this):
