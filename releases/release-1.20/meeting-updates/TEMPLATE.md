@@ -43,7 +43,7 @@ Additional Notes:
   - <!-- ANY ADDITIONAL UPDATE -->
 
 
-### Bug triage
+## Bug triage
 
 Author: Name / Slack Handle
 Current Status: Green | Yellow | Red
@@ -53,10 +53,12 @@ Query:
   - [open non-test/flake k/k issues for v1.20][bt-issue-1.20-open-kk-non-failing]:
   - [priority/critical-urgent issues][bt-issue-1.20-critical-urgent]:
   - [priority/important-soon issues][bt-issue-1.20-important-soon]:
+
 Query:
   - [open k/k PR’s for v1.20][bt-pr-1.20-open]:
   - [priority/critical-urgent PRs][bt-pr-1.20-critical-urgent]:
   - [priority/important-soon PRs][bt-pr-1.20-important-soon]:
+
 Query:
   - [ALL open k/k issues for v1.20][bt-issue-1.20-all] including [open non-test/flake k/k issues for v1.20][bt-issue-1.20-open-kk-non-failing]:
 
