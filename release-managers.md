@@ -60,13 +60,10 @@ GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kuber
 - Adolfo García Veytia ([@puerco](https://github.com/puerco))
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
 - Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
-- Doug MacEachern ([@dougm](https://github.com/dougm))
-- Hannes Hörl ([@hoegaarden](https://github.com/hoegaarden))
 - Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
 - Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
 - Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
-- Tim Pepper ([@tpepper](https://github.com/tpepper))
 - Yang Li ([@idealhack](https://github.com/idealhack))
 
 ### Becoming a Release Manager
