@@ -105,6 +105,7 @@ referred to as Release Manager shadows. They are responsible for:
 
 GitHub Mentions: @kubernetes/release-engineering
 
+- Arnaud Meukam ([@ameukam](https://github.com/ameukam))
 - Gianluca Arbezzano ([@gianarb](https://github.com/gianarb))
 - Jim Angel ([@jimangel](https://github.com/jimangel))
 - Marky Jackson ([@markyjackson-taulia](https://github.com/markyjackson-taulia))
