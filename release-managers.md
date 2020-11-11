@@ -15,7 +15,7 @@ The responsibilities of each role are described below.
 - [Build Admins](#build-admins)
 - [SIG Release Leads](#sig-release-leads)
   - [Chairs](#chairs)
-  - [Technical Leads](#technical-leads) 
+  - [Technical Leads](#technical-leads)
 
 ## Contact
 
@@ -145,13 +145,13 @@ GitHub team: [@kubernetes/sig-release-leads](https://github.com/orgs/kubernetes/
 
 ### Chairs
 
+- Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
-- Tim Pepper ([@tpepper](https://github.com/tpepper))
 
 ### Technical Leads
 
+- Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
 - Jorge Alarcon ([@alejandrox1](https://github.com/alejandrox1))
-- Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
 
 ---
 
