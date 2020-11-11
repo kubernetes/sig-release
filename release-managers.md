@@ -57,6 +57,7 @@ GitHub Access Controls: [@kubernetes/release-managers](https://github.com/orgs/k
 
 GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kubernetes/teams/release-engineering)
 
+- Adolfo García Veytia ([@puerco](https://github.com/puerco))
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
 - Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
 - Doug MacEachern ([@dougm](https://github.com/dougm))
@@ -104,7 +105,6 @@ referred to as Release Manager shadows. They are responsible for:
 
 GitHub Mentions: @kubernetes/release-engineering
 
-- Adolfo García Veytia ([@puerco](https://github.com/puerco))
 - Gianluca Arbezzano ([@gianarb](https://github.com/gianarb))
 - Jim Angel ([@jimangel](https://github.com/jimangel))
 - Marky Jackson ([@markyjackson-taulia](https://github.com/markyjackson-taulia))
