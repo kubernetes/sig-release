@@ -22,7 +22,7 @@ The responsibilities of each role are described below.
 | Mailing List | Slack | Visibility | Usage | Membership |
 | --- | --- | --- | --- | --- |
 | [release-managers@kubernetes.io](mailto:release-managers@kubernetes.io) | [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y) (channel) / @release-managers (user group) | Public | Public discussion for Release Managers | All Release Managers (including Associates, Build Admins, and SIG Chairs) |
-| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) | [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Patch Release Team, Branch Managers, SIG Chairs |
+| [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) | [#release-private](https://kubernetes.slack.com/messages/GKEA5EL67) | Private | Private discussion for privileged Release Managers | Release Managers, SIG Release leadership |
 | [security-release-team@kubernetes.io](mailto:security-release-team@kubernetes.io) | N/A | Private | Security release coordination with the Product Security Committee | [security-discuss-private@kubernetes.io](mailto:security-discuss-private@kubernetes.io), [release-managers-private@kubernetes.io](mailto:release-managers-private@kubernetes.io) |
 
 ## Handbooks
@@ -42,9 +42,12 @@ Release Managers are responsible for:
   [Release Team](/release-team/README.md) through each release cycle
 - Mentoring the [Release Manager Associates](#associates) group
 - Actively developing features and maintaining the code in k/release
-- Supporting Release Manager Associates and contributors through actively participating in the Buddy program
-  - Check in monthly with Associates and delegate tasks, empower them to cut releases, and mentor
-  - Being available to support Associates in onboarding new contributors—answering questions and suggesting appropriate work for them to do
+- Supporting Release Manager Associates and contributors through actively
+  participating in the Buddy program
+  - Check in monthly with Associates and delegate tasks, empower them to cut
+    releases, and mentor
+  - Being available to support Associates in onboarding new contributors e.g.,
+    answering questions and suggesting appropriate work for them to do
 
 This team at times works in close conjunction with the
 [Product Security Committee][psc] and therefore should abide by the guidelines
@@ -67,14 +70,20 @@ GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kuber
 
 ### Becoming a Release Manager
 
-To become a Release Manager, one must first serve as a Release Manager Associate. Associates graduate to Release Manager by actively working on releases over several cycles and:
+To become a Release Manager, one must first serve as a Release Manager
+Associate. Associates graduate to Release Manager by actively working on
+releases over several cycles and:
 
 - demonstrating the willingness to lead
-- tag-teaming with Release Managers on patches, to eventually cut a release independently
-  - because releases have a limiting function, we also consider substantial contributions to image promotion and other core Release Engineering tasks
-- questioning how Associates work, suggesting improvements, gathering feedback, and driving change
+- tag-teaming with Release Managers on patches, to eventually cut a release
+  independently
+  - because releases have a limiting function, we also consider substantial
+    contributions to image promotion and other core Release Engineering tasks
+- questioning how Associates work, suggesting improvements, gathering feedback,
+  and driving change
 - being reliable and responsive
-- leaning into advanced work that requires Release Manager-level access and privileges to complete
+- leaning into advanced work that requires Release Manager-level access and
+  privileges to complete
 
 ## Release Manager Associates
 
@@ -82,13 +91,16 @@ Release Manager Associates are apprentices to the Release Managers, formerly
 referred to as Release Manager shadows. They are responsible for:
 
 - Patch release work, cherry pick review
-- Contributing to k/release: updating dependencies and getting used to the source codebase
-- Working on minor releases (x.y.z, where z = 0) 
-- With help from a release manager, working with the Release Team during the release cycle
+- Contributing to k/release: updating dependencies and getting used to the
+  source codebase
+- Working on minor releases (x.y.z, where z = 0)
+- With help from a release manager, working with the Release Team during the
+  release cycle
 - Seeking opportunities to help with prioritization and communication
-    - Sending out pre-announcements and updates about patch releases
-    - Updating the calendar
-- Through the Buddy program, onboarding new contributors and pairing up with them on tasks
+  - Sending out pre-announcements and updates about patch releases
+  - Updating the calendar
+- Through the Buddy program, onboarding new contributors and pairing up with
+  them on tasks
 
 GitHub Mentions: @kubernetes/release-engineering
 
@@ -105,11 +117,17 @@ GitHub Mentions: @kubernetes/release-engineering
 
 Contributors can become Associates by demonstrating the following:
 
-- consistent participation, including 6-12 months of active release engineering-related work
-- experience fulfilling a technical lead role on the Release Team during a release cycle
-    - this experience provides a solid baseline for understanding how SIG Release works overall—including our expectations regarding technical skills, communications/responsiveness, and reliability
-- working on k/release items that improve our interactions with Testgrid, cleaning up libraries, etc.
-    - these efforts require interacting and pairing with Release Managers and Associates
+- consistent participation, including 6-12 months of active release
+  engineering-related work
+- experience fulfilling a technical lead role on the Release Team during a
+  release cycle
+  - this experience provides a solid baseline for understanding how SIG Release
+    works overall—including our expectations regarding technical skills,
+    communications/responsiveness, and reliability
+- working on k/release items that improve our interactions with Testgrid,
+  cleaning up libraries, etc.
+  - these efforts require interacting and pairing with Release Managers and
+    Associates
 
 ## Build Admins
 
@@ -118,7 +136,7 @@ Google build systems/tooling to publish deb/rpm packages on behalf of the
 Kubernetes project. They are responsible for:
 
 - Building, signing, and publishing the deb/rpm packages
-- Being the interlock with Release Managers (and Associates) on the final steps 
+- Being the interlock with Release Managers (and Associates) on the final steps
 of each minor (1.Y) and patch (1.Y.Z) release
 
 GitHub team: [@kubernetes/build-admins](https://github.com/orgs/kubernetes/teams/build-admins)
@@ -136,10 +154,11 @@ SIG Release Chairs and Technical Leads are responsible for:
 - Leading knowledge exchange sessions for Release Managers and Associates
 - Coaching on leadership and prioritization
 
-They are mentioned explicitly here as they are owners of the various communications 
-channels and permissions groups (GitHub teams, GCP access) for each role. As such, they 
-are highly privileged community members and privy to some private communications, which 
-can at times relate to Kubernetes security disclosures.
+They are mentioned explicitly here as they are owners of the various
+communications channels and permissions groups (GitHub teams, GCP access) for
+each role. As such, they are highly privileged community members and privy to
+some private communications, which can at times relate to Kubernetes security
+disclosures.
 
 GitHub team: [@kubernetes/sig-release-leads](https://github.com/orgs/kubernetes/teams/sig-release-leads)
 
@@ -155,7 +174,8 @@ GitHub team: [@kubernetes/sig-release-leads](https://github.com/orgs/kubernetes/
 
 ---
 
-Past Branch Managers, can be found in the [releases directory](/releases) within `release-x.y/release_team.md`.
+Past Branch Managers, can be found in the [releases directory](/releases)
+within `release-x.y/release_team.md`.
 Example: [1.15 Release Team](/releases/release-1.15/release_team.md)
 
 [psc]: https://git.k8s.io/community/committee-product-security/README.md
