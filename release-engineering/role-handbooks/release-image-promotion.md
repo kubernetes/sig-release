@@ -37,7 +37,7 @@ Examples:
  - [PR example 2](https://github.com/kubernetes/k8s.io/pull/1147)
  - [PR example 3](https://github.com/kubernetes/k8s.io/pull/1071)
 
- - After the Pull Request is approved and **before** start the `Official Release` step, we need to unhold the PR to get that merged  and watch the following [Prow Job](https://prow.k8s.io/?job=post-k8sio-cip) to succeed. When the latest master ran without errors, then we can continue with `Official Release`.
+ - After the Pull Request is approved and **before** start the `Official Release` step, we need to unhold the PR to get that merged  and watch the following [Prow Job](https://prow.k8s.io/?job=post-k8sio-image-promo) to succeed. When the latest master ran without errors, then we can continue with `Official Release`.
 
  - When the Prow job ran you should be able to get the image by running, for example:
 
