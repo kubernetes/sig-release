@@ -1,12 +1,15 @@
 # Meeting Updates YYYY-mm-dd
 
 Cutoff Time: YYYY-mm-dd HH:MM:SS (Times in a few other timezones as well)
+
 Repository sync responsibility: Name / Slack Handle
 
 ## Enhancements
 
 Author: Name / Slack Handle
+
 Current Status: Green | Yellow | Red
+
 Tracking Sheet: [Kubernetes 1.20 Enhancements][enhancements-tracking]
 
 Metrics: #
@@ -22,6 +25,7 @@ Additional Notes:
 ## CI Signal
 
 Author: Name / Slack Handle
+
 Current Status: Green | Yellow | Red
 
 Notable Events:
@@ -46,7 +50,9 @@ Additional Notes:
 ## Bug triage
 
 Author: Name / Slack Handle
+
 Current Status: Green | Yellow | Red
+
 Trends: Current count (diff since last mtg) (diff since last Monday)
 
 Query:
@@ -69,6 +75,7 @@ Additional Notes:
 ## Docs
 
 Author: Name / Slack Handle
+
 Current Status: Green | Yellow | Red
 
 Updates:
@@ -78,6 +85,7 @@ Updates:
 ## Release Notes
 
 Author: Name / Slack Handle
+
 Current Status: Green | Yellow | Red
 
 Updates:
@@ -87,6 +95,7 @@ Updates:
 ## Comms
 
 Author: Name / Slack Handle
+
 Current Status: Green | Yellow | Red
 
 Updates:
@@ -96,6 +105,7 @@ Updates:
 ## Release Branch Management
 
 Author: Name / Slack Handle
+
 Current Status: Green | Yellow | Red
 
 Updates:
@@ -123,12 +133,14 @@ Updates:
 ## SIG Scalability
 
 Author: @tosi3k ([On Call][scalability-oncall])
+
 Updates:
   - <!-- START HERE -->
 
 ## Program Management
 
 Author: Lauri Apple / @Lauri Apple
+
 Updates:
   - <!-- START HERE -->
 
