@@ -95,12 +95,11 @@ Updates:
 
 ## Release Branch Management
 
-Author: Marko Mudrinić / xmudrii
-Current Status: Green
+Author: Name / Slack Handle
+Current Status: Green | Yellow | Red
 
 Updates:
-  - beta.1 has been released
-  - Next: beta.2 is scheduled for Tuesday, November 17th
+  - <!-- START HERE -->
 
 
 ## Emeritus Lead
