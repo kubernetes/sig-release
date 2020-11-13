@@ -47,7 +47,6 @@ releases may also occur in between these.
 
 | Monthly Patch Release | Target date |
 | --- | --- |
-| November 2020 | 2020-11-11 |
 | December 2020 | 2020-12-09 |
 | January 2021 | 2021-01-13 |
 | February 2021 | 2021-02-17 |
@@ -57,12 +56,13 @@ releases may also occur in between these.
 
 ### 1.19
 
-Next patch release is **1.19.4**
+Next patch release is **1.19.5**
 
 End of Life for **1.19** is **2021-09-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
+| 1.19.5        | 2020-12-04           | 2020-12-09  |
 | 1.19.4        | 2020-11-06           | 2020-11-11  |
 | 1.19.3        | 2020-10-09           | 2020-10-14  |
 | 1.19.2        | 2020-09-11           | 2020-09-16  |
@@ -70,13 +70,15 @@ End of Life for **1.19** is **2021-09-30**
 
 ### 1.18
 
-Next patch release is **1.18.11**
+Next patch release is **1.18.13**
 
 End of Life for **1.18** is **2021-04-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
-| 1.18.11       | 2020-11-06           | 2020-11-11  |
+| 1.18.13       | 2020-12-04           | 2020-12-09  |
+| 1.18.12       | N/A                  | 2020-11-12  |
+| 1.18.11       | [No-op release](https://groups.google.com/g/kubernetes-dev/c/nJix1xLQvZE)  | 2020-11-11  |
 | 1.18.10       | 2020-10-09           | 2020-10-14  |
 | 1.18.9        | 2020-09-11           | 2020-09-16  |
 | 1.18.8        | N/A                  | 2020-08-13  |
@@ -90,12 +92,13 @@ End of Life for **1.18** is **2021-04-30**
 
 ### 1.17
 
-Next patch release is **1.17.14**
+Next patch release is **1.17.15**
 
 End of Life for **1.17** is **2021-01-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
+| 1.17.15       | 2020-12-04 | 2020-12-09  |
 | 1.17.14       | 2020-11-06 | 2020-11-11  |
 | 1.17.13       | 2020-10-09 | 2020-10-14  |
 | 1.17.12       | 2020-09-11 | 2020-09-16  |
