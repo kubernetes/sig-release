@@ -53,7 +53,7 @@ Author: Name / Slack Handle
 
 Current Status: Green | Yellow | Red
 
-Trends: Current count (diff since last mtg) (diff since last Monday)
+Trends: Current count (diff since last mtg) (diff since 1 week ago)
 
 Query:
   - [open non-test/flake k/k issues for v1.20][bt-issue-1.20-open-kk-non-failing]:
