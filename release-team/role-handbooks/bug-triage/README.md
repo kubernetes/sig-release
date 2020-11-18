@@ -107,6 +107,9 @@ Whenever you find an issue or PR that needs to be finished or kicked out of the 
 
 ## Timeline
 
+### Onboarding Session (week 1)
+In the first week of the release cycle, the Bug Triage Lead will organize a onboarding session with the shadows to go over general responsibilities and expectations. 
+
 ### Early Release
 
 This stage lasts about 6 weeks (from week 0 until week 6/mid-release cycle).
