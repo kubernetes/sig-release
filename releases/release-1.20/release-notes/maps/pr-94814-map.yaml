@@ -1,0 +1,3 @@
+pr: 94814
+releasenote:
+  text: Fewer candidates are enumerated for preemption to improve performance in large clusters.
