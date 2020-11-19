@@ -231,6 +231,8 @@ You can still use the queries from the previous section at this stage to monitor
 
 #### Week 1 of Code Freeze until Code Thaw starts
 
+> **_NOTE:_** When changing or removing milestones, be sure to communicate _why_ the change is being made to avoid confusion. The issue/PR author may not always be familiar with all the processes and deadlines surrounding code freeze, and we want contributing to be a friendly and transparent process. 
+
 At this stage, the Bug Triage team should start removing issues/PRs from the milestone. Before doing so, the Bug Triage Lead should confirm the intention with the Release Team Lead.
 
 If the issue/PR got confirmation that it's planned for the next milestone or there was recent activity, it should be moved to the next milestone using the `/milestone v1.xx` command.
