@@ -47,15 +47,15 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
 
 ## Release Milestone Activities
 
+This is a general example of what a release cycle might look like and the order of how tasks will flow.  Some tasks may take longer than their designated "release week".
+
 <table>
     <tr>
         <td><h3><b>Release Week</h3></b></td>
-        <td><h3><b>RW 1.19</h3></b></td>
         <td><h3><b>Milestones</h3></b></td>
         <td><h3><b>Activities</h3></b></td>
     </tr>
     <tr>
-        <td>1</td>
         <td>1</td>
         <td><b>Release Start</b></td>
         <td>
@@ -63,6 +63,7 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
         <li>Select your shadows
         <li>Ensure yourself and your shadows are entered into the release contact sheet
         <li>Ensure yourself and your shadows are on the release team meeting invites
+        <li>Establish initial meeting with team to introduce everyone, collective tasks, and upcoming timelines
         <li>Check if there are any holidays or events (KubeCon!) that occur during this release
         <ul>
         <li>This can/will affect your communication with the CNCF and SIG Chairs. Plan accordingly
@@ -73,7 +74,6 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
         </td>
     </tr>
     <tr>
-        <td>2</td>
         <td>2</td>
         <td></td>
         <td>
@@ -92,21 +92,16 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
     </tr>
     <tr>
         <td>3</td>
-        <td>3-5</td>
         <td></td>
         <td>
         <ul>
         <li>Work with the enhancements lead to understand what might be delivered
         <li>You should get access to the enhancements tracking sheet. You should check this regularly
-        <ul>
-        <li>Establish initial meeting with team to introduce everyone, collective tasks, and upcoming timelines
-        </ul>
         </ul>
         </td>
     </tr>
     <tr>
         <td>4</td>
-        <td>6</td>
         <td><b>Enhancements Freeze</b></td>
         <td>
         <ul>
@@ -120,7 +115,6 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
     </tr>
     <tr>
         <td>5</td>
-        <td>7</td>
         <td></td>
         <td>
         <ul>
@@ -132,7 +126,6 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
     </tr>
     <tr>
         <td>6</td>
-        <td>8</td>
         <td></td>
         <td>
         <ul>
@@ -143,19 +136,6 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
     </tr>
     <tr>
         <td>7</td>
-        <td>9</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td>10</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>9</td>
-        <td>11</td>
         <td><b>Code Freeze</b></td>
         <td>
         <ul>
@@ -164,14 +144,7 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
         </td>
     </tr>
     <tr>
-        <td></td>
-        <td>12-14</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>15</td>
+        <td>8</td>
         <td></td>
         <td>
         <ul>
@@ -181,8 +154,7 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
         </td>
     </tr>
     <tr>
-        <td>11</td>
-        <td>16</td>
+        <td>9</td>
         <td><b>Cherry Pick Deadlines</b></td>
         <td>
         <ul>
@@ -192,8 +164,7 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
         </td>
     </tr>
     <tr>
-        <td>12</td>
-        <td>17</td>
+        <td>10</td>
         <td><b>Release</b></td>
         <td>
         <ul>
@@ -207,14 +178,7 @@ There is a channel on the Kubernetes Slack workspace, `release-comms`, which is 
         </td>
     </tr>
     <tr>
-        <td></td>
-        <td>18</td>
-        <td></td>
-        <td>KubeCon/CloudNativeCon Europe</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>19</td>
+        <td>11</td>
         <td><b>Retrospective</b></td>
         <td>
         <ul>
