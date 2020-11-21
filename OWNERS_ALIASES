@@ -1,9 +1,10 @@
 aliases:
   sig-release-leads:
-    - alejandrox1
-    - justaugustus
-    - saschagrunert
-    - tpepper
+    - alejandrox1 # SIG Technical Lead
+    - hasheddan # SIG Technical Lead
+    - justaugustus # SIG Chair
+    - LappleApple # SIG Program Manager
+    - saschagrunert # SIG Chair
   licensing:
     - dims # subproject owner
     - justaugustus # subproject owner
@@ -11,27 +12,27 @@ aliases:
     - swinslow # subproject owner
   release-engineering-approvers:
     - cpanato # Release Manager
-    - dougm # Release Manager
     - feiskyer # Release Manager
-    - hasheddan # Release Manager
-    - hoegaarden # Release Manager
+    - hasheddan # subproject owner / Release Manager
     - idealhack # Release Manager
+    - puerco # Release Manager
     - saschagrunert # subproject owner / Release Manager
     - justaugustus # subproject owner / Release Manager
-    - tpepper # subproject owner / Release Manager
+    - tpepper # subproject owner
     - xmudrii # Release Manager
   release-engineering-reviewers:
+    - ameukam # Release Manager Associate
     - gianarb # Release Manager Associate
     - jimangel # Release Manager Associate
     - markyjackson-taulia # Release Manager Associate
     - mkorbi # Release Manager Associate
     - onlydole # Release Manager Associate
-    - puerco # Release Manager Associate
     - sethmccombs # Release Manager Associate
     - verolop # Release Manager Associate
   release-team:
     - alejandrox1 # subproject owner / 1.18 RT Lead
     - guineveresaenger # subproject owner / 1.17 RT Lead
+    - hasheddan # subproject owner
     - jeremyrickard # subproject owner / 1.20 RT Lead
     - justaugustus # subproject owner
     - onlydole # subproject owner / 1.19 RT Lead
