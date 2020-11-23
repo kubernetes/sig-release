@@ -1,46 +1,67 @@
-# Image Promotion
+# Image Promotion <!-- omit in toc -->
 
-We need to publishing images to the `k8s-staging-kubernetes` GCS Bucket and then promoting them to production. To do that we need to follow the steps:
+- [Preparing Environment](#preparing-environment)
+- [Promoting Images Using `krel promote-images`](#promoting-images-using-krel-promote-images)
+- [Completing the Image Promotion](#completing-the-image-promotion)
 
-This step should be done after `Official Stage` is completed and no errors.
+When cutting a new Kubernetes release, we need to publish images to the `k8s-staging-kubernetes` GCS Bucket and then promote them to the production.
 
- - Forking/cloning https://github.com/kubernetes-sigs/k8s-container-image-promoter
- - Forking/cloning https://github.com/kubernetes/k8s.io. If you already have that make sure you have an up-to-date copy of the repository.
- - From the root of `k8s-container-image-promoter` repository
+**The Image Promotion should be done after `Official Stage` is completed and there are no errors.**
 
-```shell
-go install ./cmd/cip-mm/... # Installs the manifest merge utility, cip-mm
-```
+## Preparing Environment
 
-- From the root of `k8s.io` repository
+First, take the following steps to prepare your environment for promoting images:
 
-```shell
-cip-mm --base_dir=$GOPATH/src/k8s.io/k8s.io/k8s.gcr.io --staging_repo=gcr.io/k8s-staging-kubernetes --filter_tag=v1.19.0-rc.2
-```
-
-When the release cut is not Alpha / Beta or RC we need to promote the next images as well, for example, if you are cutting `v1.19.0` you will need to promote the images for `1.19.1-rc.0` as well, so the commands will be something like:
+- Fork the [`kubernetes/k8s.io` repository](https://github.com/kubernetes/k8s.io)
+- Fork and clone the [`kubernetes/release` repository](https://github.com/kubernetes/release)
+- From the root of the `kubernetes/release` repository, run the following command to compile and install the release tools:
 
 ```shell
-cip-mm --base_dir=$GOPATH/src/k8s.io/k8s.io/k8s.gcr.io --staging_repo=gcr.io/k8s-staging-kubernetes --filter_tag=v1.19.0
-
-cip-mm --base_dir=$GOPATH/src/k8s.io/k8s.io/k8s.gcr.io --staging_repo=gcr.io/k8s-staging-kubernetes --filter_tag=v1.19.1-rc.0
+make release-tools
 ```
 
-_note_: If you clone the repo in another structure like `$GOPATH/src/github.com/kubernetes/k8s.io` you will nee to set the `--base_dir` as `--base_dir=$GOPATH/src/github.com/kubernetes/k8s.io/k8s.gcr.io`
-_note 2_: The `--filter_tag` you will add the release that you are working, like `v1.19.0-rc.3` / `v1.19.0-beta.1` / `v1.19.0`
+## Promoting Images Using `krel promote-images`
 
-- After the command ran you should see updates to the `k8s.gcr.io/images/k8s-staging-kubernetes/images.yaml`
-- Create a branch and open a Pull Request with the new digests to promote. Add the links for cloudbuild jobs for `Mock Stage` and `Mock Release` and tag `@kubernetes/release-engineering` and add a explict `/hold` to be lifted before we start the `Official Release` step.
+The images are promoted by using the `krel promote-images` command. This command takes the following parameters:
 
-Examples:
- - [PR example 1](https://github.com/kubernetes/k8s.io/pull/1106)
- - [PR example 2](https://github.com/kubernetes/k8s.io/pull/1147)
- - [PR example 3](https://github.com/kubernetes/k8s.io/pull/1071)
+- The `-i` flag runs the command in the interactive mode, so `krel` will ask you to confirm each step
+- The `--fork` flag takes the GitHub username and fork/repository name of your `kubernetes/k8s.io` fork that will be used to push the changes
+  - If your fork name is `k8s.io` you can just specify your GitHub username, such as `--fork=<your-github-username>`
+  - Otherwise, you can specify both GitHub username and fork name, such as `--fork=<your-github-username>/<k8s.io-fork-name>`
+- The `--tag` flag takes the version tag of the images that will be promoted. This flag can be specified multiple times if you're promoting images for multiple releases.
 
- - After the Pull Request is approved and **before** start the `Official Release` step, we need to unhold the PR to get that merged  and watch the following [Prow Job](https://prow.k8s.io/?job=post-k8sio-image-promo) to succeed. When the latest master ran without errors, then we can continue with `Official Release`.
+Depending on the release you're cutting, you need to run the following command:
 
- - When the Prow job ran you should be able to get the image by running, for example:
+- If you're cutting Alpha, Beta, or RC release, use the following `krel promote-images` command to promote images for the release you're cutting:
 
 ```shell
-skopeo inspect docker://us.gcr.io/k8s-artifacts-prod/kube-apiserver:v1.19.0-rc.4 --raw
+krel promote-images -i --fork=<your-github-username> --tag=v1.20.0-beta.1
 ```
+
+- If you're cutting a stable release (e.g. `v1.20.0`), you need to promote the images for the release you're cutting and for the next RC release (e.g. `v1.20.1-rc.0`). You can use the following command to do that:
+
+```shell
+krel promote-images -i --fork=<your-github-username> --tag=v1.20.0 --tag=v1.20.1-rc.0
+```
+
+The following steps are taken by the `krel promote-images` command:
+
+- Clone and update your `kubernetes/k8s.io` fork
+- Update the images manifest (`k8s.gcr.io/images/k8s-staging-kubernetes/images.yaml`) to add the image digests for specified releases/tags
+- Create a branch and push it to your fork
+- Create a PR in the `kubernetes/k8s.io` repository with an explicit `/hold`
+
+Example PRs:
+
+- [PR example 1](https://github.com/kubernetes/k8s.io/pull/1386)
+- [PR example 2](https://github.com/kubernetes/k8s.io/pull/1348)
+
+## Completing the Image Promotion
+
+Once the `krel promote-images` command is done take the following steps to complete image promotion and continue the release process:
+
+- Edit the PR description to add links for GCB jobs for `Mock Stage`, `Mock Release`, and `Official Stage` steps, or a link to the release tracking issue which includes the needed links
+- Once the PR is approved by Release Managers:
+  - If you're cutting Alpha, Beta, or RC release, lift the hold and proceed with the release process
+  - If you're cutting a stable release, ensure that a [Build Admin](https://git.k8s.io/sig-release/release-managers.md#build-admins) is available to cut the packages before lifting the hold and proceeding with the release
+- After the Pull Request is merged and **before** starting the `Official Release` step, we need to watch the following [Prow Job](https://prow.k8s.io/?job=post-k8sio-image-promo) to succeed. When the latest master ran without errors, then we can continue with `Official Release`.
