@@ -117,7 +117,7 @@ access to multiple build and release tools:
   [Pre-requirements](/release-team/role-handbooks/branch-manager#pre-requirements),
   [Safety Check](/release-team/role-handbooks/branch-manager#safety-check), and
   [Build and Release](/release-team/role-handbooks/branch-manager#build-and-release)
-  sections.  This outlines current requirements for running `gcbmgr` to do
+  sections.  This outlines current requirements for running `krel stage/release` to do
   builds.
 
 ## Cherry-pick requests
@@ -525,7 +525,7 @@ The freeze serves several purposes:
 1.  It allows slow test jobs like "serial", which has a period of many hours,
     to run several times at `HEAD` to ensure they pass consistently.
 
-On the day before the planned release, run a mock build with [`gcbmgr`](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md)
+On the day before the planned release, run a mock build with `krel stage/release`
 to make sure the tooling is ready as per the [Branch Manager
 Handbook](/release-engineering/role-handbooks/branch-manager.md).
 Also give the Google Debs/RPMs build staff notification that their
@@ -596,22 +596,23 @@ doc for more details.
 
 ## Release Commands Cheat Sheet
 
-For more information in how to run `krel gcbmgr` please check the [command documentation page](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md)
+For more information in how to run `krel stage/release` please check their
+corresponding command line help (`-h`) outputs.
 
-| Action | Example flow for 1.17.4 |
+| Action | Example |
 | --- |--- |
 | Make sure you have latest release tooling | ```cd ~/go/src/k8s.io/release && git pull``` |
 | Configure branch | n/a |
-| Mock build staging | For the command execution [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-stage). This may frequently fail. When the failure is due to lack of a green CI signal, the output will include a gives hint on a suggested ```--build-version``` for explicit use. |
+| Mock build staging | `krel stage --type=official --branch=release-x.y` |
 | Mock build staging success? | Visually confirm yes |
-| Mock release | For the command execution [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-release) |
+| Mock release | `krel release --type=official --branch=release.x.y --build-verison=…` (get the build-version from the Google Cloud console output of `krel stage`) |
 | Mock release success? | Visually confirm yes |
 | Mock email notify test | ```krel announce --tag v1.13.3-beta.1``` |
 | Check mail arrives, list has expected commits? | manual/visual |
-| Official build staging | For the command execution [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-stage). The only difference here is we are using the flag `--nomock` |
+| Official build staging | `krel stage --nomock --type=official --branch=release-x.y` |
 | Official build staging success? | Visually confirm yes |
-| Official release | For the command execution [see](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-release). The only difference here is we are using the flag `--nomock` |
-| Official email notify test | ```krel announce --tag v1.13.3 --nomock``` |
+| Official release | `krel release --nomock --type=official --branch=release.x.y --build-verison=…` |
+| Official email notify test | ```krel announce --tag vX.Y.Z --nomock``` |
 | Check mail arrives, list has expected commits? | manual/visual |
 | Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://git.k8s.io/sig-release/release-managers.md#build-admins) by name on Slack for package building |
 | Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVRs (Name-Version-Release) |
