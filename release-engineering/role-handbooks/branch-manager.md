@@ -17,9 +17,9 @@
 - [Releases Management](#releases-management)
   - [Alpha Releases](#alpha-releases)
     - [Alpha Stage](#alpha-stage)
-      - [krel gcbmgr stage](#krel-gcbmgr-stage)
+      - [krel stage](#krel-stage)
     - [Alpha Release](#alpha-release)
-      - [krel gcbmgr release](#krel-gcbmgr-release)
+      - [krel release](#krel-release)
       - [Mock vs nomock](#mock-vs-nomock)
   - [Beta Releases](#beta-releases)
   - [Release Candidates](#release-candidates)
@@ -239,9 +239,8 @@ This can be done in one of two ways:
 
 Public build artifacts are published and an email notification goes out to the community. You will become very familiar with the following commands over the course of the 3 month release cycle:
 
- - `krel gcbmgr` a krel wrapper around the `gcloud builds submit` command.
-   - [gcbmgr](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md) documentation
- - `krel announce` a krel command to send the announcement email notification.
+ - `krel stage/release` for creating releases
+ - `krel announce` to send the announcement email notification.
 
 ```shell
 # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds
@@ -285,13 +284,13 @@ For the item `Collect metrics, links...`:
 
 You can post a thread in the [#release-management] Slack channel and include links to the GCP build console. You can take a look at the [following thread][example-release-thread] as an example.
 
-After the release process has been completed, you can use the `krel gcbmgr history` command to generate a markdown table with commands used to run the jobs, links to the GCB logs, and the information about each job.
+After the release process has been completed, you can use the `krel history` command to generate a markdown table with commands used to run the jobs, links to the GCB logs, and the information about each job.
 
 ```shell
-krel gcbmgr history --branch release-1.xy --date-from <date-of-release>
+krel history --branch release-1.xy --date-from <date-of-release>
 ```
 
-_note:_ `krel gcbmgr history` command might require additional `gcloud` authentication. If you see an error, follow the steps mentioned in the error message to authenticate, and then re-run the command.
+_note:_ `krel history` command might require additional `gcloud` authentication. If you see an error, follow the steps mentioned in the error message to authenticate, and then re-run the command.
 
 The generated table is copied to the created issue, as it can be seen in the [following issue for the v1.20.0-alpha.1 release](https://github.com/kubernetes/sig-release/issues/1249#issue-705792603).
 
@@ -303,20 +302,23 @@ After having thoroughly read the section on cutting a release version of the han
 
 #### Alpha Stage
 
-##### krel gcbmgr stage
+##### krel stage
 
-To run `krel gcbmgr` to stage an Alpha release see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#alpha-stage).
+To stage a new alpha release, simply run `krel stage`. The default command line
+parameters will already default to the correct `--branch` and `--type`.
 
-This command should return relatively quickly and provide a link to GCP where you can track the progress of the build.
-This takes time (approximately 1 hour). `krel gcbmgr` is building all the bits for a bunch of target operating systems and hardware architectures.
+The output of the command should provide a link to GCP, where you can track the
+progress of the build. The build duration takes approximately 1 hour. `krel
+stage` is building all the bits for a bunch of target operating systems and
+hardware architectures.
 
-<!-- TODO: krel gcbmgr is not checking testgrid
+<!-- TODO: krel is not checking testgrid
 
-Early in the release cycle, it is likely that the build might fail. By default the `gcbmgr stage master` command automatically looks for a place where [release master blocking tests](https://k8s-testgrid.appspot.com/sig-release-master-blocking) have green results, which traditionally has not happened in Kubernetes on an ongoing basis.
+Early in the release cycle, it is likely that the build might fail. By default the `stage master` command automatically looks for a place where [release master blocking tests](https://k8s-testgrid.appspot.com/sig-release-master-blocking) have green results, which traditionally has not happened in Kubernetes on an ongoing basis.
 
 WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. But in the meantime, acknowledging today especially for an early alpha or beta release, it is possible to just build via:
 
-Rather than having `gcbmgr` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from the last commit on the current branch.
+Rather than having `krel stage` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from the last commit on the current branch.
 -->
 
 #### Alpha Release
@@ -327,13 +329,12 @@ If the CI results are good and the release team approves, you can initiate the p
 
 This presumes reproducible builds and that the CI tests are meaningful relative to the release builds. There is always a risk that these diverge, and this needs to be managed broadly by the project and the release team.
 
-##### krel gcbmgr release
+##### krel release
 
 Before running the release step, please refer to the [Image Promotion documentation](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/release-image-promotion.md).
 
-Use the `--build-version=` as specified in the output when `krel gcbmgr` is done with the stage command.
-
-To run `krel gcbmgr` to release an Alpha release see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#alpha-release).
+To finish the previously staged release, run `krel release --build-version=…`.
+Use the `--build-version=` as specified in the output when `krel stage` is done.
 
 This copies the staged build to public GCP buckets at well-known urls for the truncated release version string. The unique build staging identifier will subsequently be “v1.16.0-alpha.1”, even though the staged build had an “alpha.0” in its name.
 
@@ -341,37 +342,30 @@ This can be confusing. The v1.16.0-alpha.0 tag was created automatically in the 
 
 ##### Mock vs nomock
 
-Any `krel gcbmgr` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `krel gcbmgr` take any actual impact on the release process. Mock building/releasing can help you verify that you have a working setup!
+Any `krel stage/release` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `krel stage/release` take any actual impact on the release process. Mock building/releasing can help you verify that you have a working setup!
 
-To get more information on `krel gcbmgr` default behavior, please see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#important-notes).
+To get more information on `krel stage/release`, please refer to their
+corresponding help (`-h`) output.
 
 **Note: This run may fail. Mock builds can only be mock released. A nomock release requires a nomock build to be staged.**
-
-Builds against the `master` branch are implicitly the next alpha. `krel gcbmgr` and `anago` automatically find and increment the current build number.
 
 ### Beta Releases
 
 Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
 
-To run `krel gcbmgr` to stage a Beta release see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-stage).
-
-And to run `krel gcbmgr` to release a Beta release see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#beta-release).
+To stage a new beta release, simply run `krel stage --type=beta`. The same
+applies to `krel release --build-version=… --type=beta`.
 
 ### Release Candidates
 
-Builds against a `release-x.y` branch are implicitly the next RC (release candidate). `krel gcbmgr` and `anago` automatically find and increment the current build number.
+Builds against a `release-x.y` branch are implicitly the next RC (release candidate). `krel` automatically finds and increments the current build number.
 
 **Note: If this is the first release (`rc.0`), there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
 
 Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
 
-Adding the `--rc` flag switches behavior on to building release candidates. Again `krel gcbmgr` and `anago` automatically find and increment the current build number.
-
-To run `krel gcbmgr` to stage a Release Candidate see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#release-candidate-rc-stage).
-
-To publish the build artifacts (release), as usual use the `--buildversion=` number as specified in the output when `krel gcbmgr` is done with the stage command.
-
-To run `krel gcbmgr` to release a Release Candidate see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#release-candidate-rc-release).
+To stage a new RC release, simply run `krel stage --type=rc --branch=release-x.y`. The same
+applies to `krel release --build-version=… --type=rc --branch=release-x.y`.
 
 In a perfect world, `rc.1` and the official release are the same commit. To get as close to that perfect state as we can, the following things should be considered:
 
@@ -404,13 +398,14 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 
 Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
 
-To run `krel gcbmgr` to stage an Official Release see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-stage) and to release an Official Release see [here](https://github.com/kubernetes/release/blob/master/docs/krel/gcbmgr.md#official-release).
+To stage a new official release, simply run `krel stage --type=official
+--branch=release-x.y`. The same applies to `krel release --build-version=…
+--type=official --brancH=release-x.y`.
 
 In addition to `v1.18.n` this will also build and stage the subsequent patch's
 `rc.0`, in this example `v1.18.(n+1)-rc.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
 release step will also take a couple of minutes more.
 
-When staging is done, you may use the command `./gcbmgr release` with the `--buildversion=` specified as usual when `./gcbmgr stage` is done.
 However, there is an embargo policy which requires the nomock release publication happens after 4 pm Pacific (see [Release Team Lead Handbook](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-team-lead#week-12) for details), make sure to coordinates with other roles and follow the timeline.
 
 To better prepare and see what to expect, this is a sequence of events that took place on past [official release days](https://docs.google.com/document/d/1K0B91lgeEiJTbT602VloA5arb6AkaTif-MLryaHmlYc/edit?usp=sharing).
@@ -431,7 +426,7 @@ See the [Security Release Process](https://git.k8s.io/security/security-release-
 
 #### Debian and RPM Packaging
 
-[Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `./gcbmgr release --official ...` has completed, **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
+[Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `krel release --type=official …` has completed, **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
 
 The entire packaging process including the build and validation of the builds could take around 3-4 hours. It is preferable to have the DEB and RPM files ready prior to sending out the release notification email since, people worldwide will attempt to download the official release. Since packaging uses the release tag, it is important to [validate the release process](#release-validation).
 
@@ -464,16 +459,10 @@ As an example, see the [comparison between the `v1.18.0-alpha.0` (after 1.17 bra
 
 To assist downstream consumers of Kubernetes, a new alpha should be cut to bring our next release tag to the tip of `master`.
 
-Get the latest build version at `master`:
+Begin the release process with:
 
 ```shell
-gsutil cat gs://kubernetes-release-dev/ci/latest.txt
-```
-
-Begin the release process:
-
-```shell
-krel gcbmgr --stage --branch master --build-version=<version-from-previous-step>
+krel stage
 ```
 
 Proceed with the [alpha release steps](#alpha-releases).
@@ -856,10 +845,10 @@ The client-go major release (e.g. `v1.18.0`) is released manually a day after th
 
 ## Debugging
 
-To debug `krel gcbmgr` you can set the log level to `debug` by doing `krel gcbmgr --log-level debug [args]`
-
-You can also inspect the logs on the Google Cloud console.
-
+To debug `krel stage/release` you can set the log level to `debug` by doing
+`krel --log-level debug [args]`. There is also a `trace` log level for maximum
+output verbosity. The log level is passed correctly to the Google Cloud console
+and can be inspected there.
 
 ## Search past builds
 
