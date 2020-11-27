@@ -3,9 +3,6 @@
 - [Content Notice](#content-notice)
 - [Overview](#overview)
   - [Conventions](#conventions)
-  - [Minimum Requirements](#minimum-requirements)
-  - [Responsibilities](#responsibilities)
-  - [Associates Expectations](#associates-expectations)
 - [Prerequisites](#prerequisites)
   - [Branch Management Onboarding](#branch-management-onboarding)
   - [Machine setup](#machine-setup)
@@ -90,50 +87,6 @@ To simplify certain instructions, we will make the following connections:
 | "release no longer in support" | `x.y-4` | Kubernetes 1.14 |
 
 **As an editor of this content, Branch Managers should periodically update these conventions and the examples contained within this handbook.**
-
-### Minimum Requirements
-
-- Familiarity with basic Unix commands and able to debug shell scripts.
-- Familiarity with branched source code workflows via `git` and associated `git` command line invocations.
-- General knowledge of Google Cloud (Cloud Build and Cloud Storage).
-- Open to seeking help and communicating clearly.
-- [Kubernetes Community Membership](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
-
-### Responsibilities
-
-The release branch manager is responsible for cutting a version of [Kubernetes]. Each release is a three month cycle where as branch manager it's expected you:
-
-1. Cut releases for the next release cycle as specified on the timeline in `sig-release/releases/release-x.y/README.md`
-   - For example, during the v1.16 cycle you're expected to allocate time to cut releases on the dates detailed in [sig-release/releases/release-1.16/README.md][release-1.16]. The bulk of your time commitment is during release cut days.
-1. Allocate time to setup your system to run the release tools; eventually you'll become more familiar with the process.
-1. Participate in weekly one hour release team meetings.
-1. Run `krel ff` as soon as the release branch (`release-x.y`) [is created](#branch-creation) on a daily basis. (Takes less than 45 minutes)
-1. Dedicate additional time during [code freeze](#code-freeze) when approaching the official release (expect around three one hour meetings in a week).
-1. Select Associates and guide them in preparation to become the section lead for the next cycle.
-1. Delegate tasks to the Associates (where applicable), so they may participate during the release process.
-1. Update this handbook where appropriate for the next release cycle.
-1. Have willingness to accommodate with different time zones especially for the release team and Associates.
-1. Participate in conversations that happen on [#sig-release] and [#release-management]
-
-To get a better overview of the time it takes to run the release tools, you can take a look at the collected metrics from each of these [release cut issues][release-cut-issues].
-
-[Branch Management diagram](https://docs.google.com/presentation/d/1usEbwHMSC8vR7HvbxHJBOj2ISdTkw9rmufQUq7fkIl4/edit?ts=5cc0de62#slide=id.g577153f745_1_405) illustrating the process over a 3 month [release lifecycle](https://docs.google.com/presentation/d/1usEbwHMSC8vR7HvbxHJBOj2ISdTkw9rmufQUq7fkIl4/edit?ts=5cc0de62#slide=id.g577153f745_3_0).
-
-[Kubernetes]: https://github.com/kubernetes/kubernetes/releases
-[release-1.16]: https://github.com/kubernetes/sig-release/tree/master/releases/release-1.16
-[#sig-release]: https://kubernetes.slack.com/messages/C2C40FMNF
-[#release-management]: https://kubernetes.slack.com/messages/CJH2GBF7Y
-[release-cut-issues]: https://github.com/kubernetes/sig-release/issues?utf8=%E2%9C%93&q=is%3Aissue+1.18.0+is%3Aclosed+
-
-### Associates Expectations
-
-Release Manager Associates are apprentices to the Branch Managers, it's expected you:
-
-1. Attend most of the release team meetings; you're highly encouraged to give suggestions, ask questions, voice thoughts, etc.
-1. Know, and help with, the release dates from the [release cycle Timeline](https://github.com/kubernetes/sig-release/tree/master/releases).
-1. Participate in discussion to improve the [release tools].
-1. Question the content of this handbook. *“The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.”*
-1. Be curious and make the most out of this opportunity.
 
 ## Prerequisites
 

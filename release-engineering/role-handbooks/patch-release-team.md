@@ -43,28 +43,6 @@ construction.**
 
 ---
 
-Specific duties of the Patch Release Team include:
-
-- Ensuring the release branch (e.g. `release-1.13`) remains in a
-  healthy state as measured by the branch version specific release-blocking
-  CI (e.g. for version 1.13 it is [testgrid sig-release-1.13-blocking
-  board](https://testgrid.k8s.io/sig-release-1.13-blocking). If the
-  build breaks or any CI for the release branch becomes unhealthy due
-  to a bad merge or infrastructure issue, ensure that actions are
-  taken ASAP to bring it back to a healthy state.
-- Reviewing and approving [cherry
-  picks](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) to
-  the release branch.
-  - Patch releases should not contain new features, so ensure that
-    cherry-picks are for bug/security fixes only.
-  - Cherry picks should not destabilize the branch, so ensure that
-    either the PR has had time to stabilize in master or will have
-    time to stabilize in the release branch before the next patch
-    release is cut.
-- Setting the [schedule and cadence for patch
-  releases](/releases/patch-releases.md) and cutting the
-  [releases](https://github.com/kubernetes/kubernetes/releases).
-
 While this playbook is intended to guide Patch Release Team members,
 it largely consists of opinions and recommendations from former
 patch release managers.  Each Patch Release Team member is ultimately

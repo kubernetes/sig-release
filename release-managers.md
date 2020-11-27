@@ -35,11 +35,32 @@ The responsibilities of each role are described below.
 
 ## Release Managers
 
+**Note:** The documentation might refer to the Patch Release Team and the
+Branch Management role. Those two roles were consolidated into the
+Release Managers role.
+
+Minimum requirements for Release Managers and Release Manager Associates are:
+
+- Familiarity with basic Unix commands and able to debug shell scripts.
+- Familiarity with branched source code workflows via `git` and associated
+  `git` command line invocations.
+- General knowledge of Google Cloud (Cloud Build and Cloud Storage).
+- Open to seeking help and communicating clearly.
+- [Kubernetes Community Membership](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
+
 Release Managers are responsible for:
 
-- Coordinating patch releases (`x.y.z`, where `z` > 0) of Kubernetes
-- Minor releases (`x.y.z`, where `z` = 0) of Kubernetes, working with the
-  [Release Team](/release-team/README.md) through each release cycle
+- Coordinating and cutting Kubernetes releases:
+  - Patch releases (`x.y.z`, where `z` > 0)
+  - Minor releases (`x.y.z`, where `z` = 0)
+  - Pre-releases (alpha, beta, and release candidates)
+  - Working with the [Release Team](/release-team/README.md) through each
+  release cycle
+  - Setting the [schedule and cadence for patch releases](/releases/patch-releases.md)
+- Maintaining the release branches:
+  - Reviewing cherry picks
+  - Ensuring the release branch stays healthy and that no unintended patch
+    gets merged
 - Mentoring the [Release Manager Associates](#associates) group
 - Actively developing features and maintaining the code in k/release
 - Supporting Release Manager Associates and contributors through actively
@@ -91,12 +112,14 @@ referred to as Release Manager shadows. They are responsible for:
 - Patch release work, cherry pick review
 - Contributing to k/release: updating dependencies and getting used to the
   source codebase
-- Working on minor releases (x.y.z, where z = 0)
-- With help from a release manager, working with the Release Team during the
-  release cycle
+- Contributing to the documentation: maintaining the handbooks, ensuring that
+  release processes are documented
+- With help from a release manager: working with the Release Team during the
+  release cycle and cutting Kubernetes releases
 - Seeking opportunities to help with prioritization and communication
   - Sending out pre-announcements and updates about patch releases
-  - Updating the calendar
+  - Updating the calendar, helping with the release dates and milestones from
+  the [release cycle Timeline](https://github.com/kubernetes/sig-release/tree/master/releases)
 - Through the Buddy program, onboarding new contributors and pairing up with
   them on tasks
 
