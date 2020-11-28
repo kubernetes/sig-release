@@ -98,7 +98,7 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 
 ### Communicating Your Availability: Quick Tips
 
-- We don’t require people to work on nights and weekends. However, if they’re the times you want to dedicate to the project, feel free to do so. 
+- We don’t require people to work on nights and weekends. However, if they are the times you want to dedicate to the project, feel free to do so. It's also important to note that for some contributors the weekend starts on a Thursday, and that meetings scheduled on Friday are an inconvenience.
     - We don't cut releases on Mondays precisely to preserve everyone’s weekends.
 - Communicate honestly and openly about what you can and can’t do, and please ask for help. 
 - If you ever feel workload-related pressure, please reach out to the SIG Release Chairs, Tech Leads, and/or Release Managers.
