@@ -13,7 +13,7 @@ description: |
 
 #### Links
 
-* [This document](https://git.k8s.io/sig-release/blob/master/releases/release-1.20/README.md)
+* [This document](https://git.k8s.io/sig-release/releases/release-1.20/README.md)
 * [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.20/release-team.md)
 * [Meeting Minutes](http://bit.ly/k8s120-releasemtg) (join [kubernetes-sig-release@] to receive meeting invites)
 * [v1.20 Release Calendar][k8s120-calendar]
