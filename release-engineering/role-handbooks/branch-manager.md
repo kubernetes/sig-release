@@ -34,6 +34,7 @@
   - [Update test-infra configurations](#update-test-infra-configurations)
     - [Update Slack exempt_branches](#update-slack-exempt_branches)
     - [Update milestone appliers](#update-milestone-appliers)
+    - [Update milestone requirements](#update-milestone-requirements)
     - [Update e2e variants](#update-e2e-variants)
     - [Generate release branch jobs](#generate-release-branch-jobs)
   - [Configure Merge Automation](#configure-merge-automation)
@@ -445,6 +446,7 @@ Before the nomock release job is started, run through the following tasks, **_pu
 - [Update test-infra configurations](#update-test-infra-configurations)
   - [Update Slack branch whitelists](#update-slack-branch-whitelists)
   - [Update milestone appliers](#update-milestone-appliers)
+  - [Update milestone requirements](#update-milestone-requirements)
   - [Update e2e variants](#update-e2e-variants)
 
 #### After the release creation
@@ -488,6 +490,14 @@ Update the `milestoneapplier` plugin configs for `kubernetes/kubernetes`:
 - Add config for the current release branch
 
 Here's an [example PR](https://github.com/kubernetes/test-infra/pull/20075).
+
+#### Update milestone requirements
+
+If the [code freeze](#code-freeze) was enabled before creating the release branch, the milestone requirements wouldn't include the newest release branch.
+
+Find the query config for `kubernetes/kubernetes` (in [config.yaml](https://github.com/kubernetes/test-infra/blob/master/prow/config.yaml) file) with the code freeze enabled and add the newest release release branch.
+
+Here's an [example PR](https://github.com/kubernetes/test-infra/pull/20077).
 
 #### Update e2e variants
 
