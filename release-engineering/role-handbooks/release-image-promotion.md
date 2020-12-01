@@ -30,19 +30,18 @@ The images are promoted by using the `krel promote-images` command. This command
   - Otherwise, you can specify both GitHub username and fork name, such as `--fork=<your-github-username>/<k8s.io-fork-name>`
 - The `--tag` flag takes the version tag of the images that will be promoted. This flag can be specified multiple times if you're promoting images for multiple releases.
 
-Depending on the release you're cutting, you need to run the following command:
-
-- If you're cutting Alpha, Beta, or RC release, use the following `krel promote-images` command to promote images for the release you're cutting:
+Example command:
 
 ```shell
-krel promote-images -i --fork=<your-github-username> --tag=v1.20.0-beta.1
+krel promote-images -i --fork=<your-github-username> --tag=v1.20.0-rc.0 --tag=v1.21.0-alpha.0
 ```
 
-- If you're cutting a stable release (e.g. `v1.20.0`), you need to promote the images for the release you're cutting and for the next RC release (e.g. `v1.20.1-rc.0`). You can use the following command to do that:
+**Note:** The images that are promoted depend on the release you're cutting:
 
-```shell
-krel promote-images -i --fork=<your-github-username> --tag=v1.20.0 --tag=v1.20.1-rc.0
-```
+- Alpha or Beta release: promote the images for the release you're cutting (e.g. `v1.20.0-beta.1`)
+- The first RC (e.g. `v1.20.0-rc.0`): promote the images for the RC and for the next minor alpha release (e.g. `v1.21.0-alpha.0`)
+- The subsequent RCs (e.g. `v1.20.0-rc.1`): promote the images for the RC you're cutting (e.g. `v1.20.0-rc.0`)
+- A stable release (e.g. `v1.20.0`): promote the images for the release you're cutting and for the RC of the next patch release (e.g. `v1.20.1-rc.0`)
 
 The following steps are taken by the `krel promote-images` command:
 
