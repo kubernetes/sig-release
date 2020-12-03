@@ -10,27 +10,41 @@
 - A bug was fixed in kubelet where exec probe timeouts were not respected. Ensure that pods relying on this behavior are updated to correctly handle probe timeouts.
   
   This change in behavior may be unexpected for some clusters and can be disabled by turning off the ExecProbeTimeout feature gate. This gate will be locked and removed in future releases so that exec probe timeouts are always respected. ([#94115](https://github.com/kubernetes/kubernetes/pull/94115), [@andrewsykim](https://github.com/andrewsykim)) [SIG Node and Testing]
- - API priority and fairness graduated to beta. 1.19 servers with APF turned on should not be run in a multi-server cluster with 1.20+ servers. ([#96527](https://github.com/kubernetes/kubernetes/pull/96527), [@adtac](https://github.com/adtac)) [SIG API Machinery and Testing]
- - For CSI drivers, kubelet no longer creates the target_path for NodePublishVolume in accordance with the CSI spec. Kubelet also no longer checks if staging and target paths are mounts or corrupted. CSI drivers need to be idempotent and do any necessary mount verification. ([#88759](https://github.com/kubernetes/kubernetes/pull/88759), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage]
- - Kubeadm:
+- API priority and fairness graduated to beta. 1.19 servers with APF turned on should not be run in a multi-server cluster with 1.20+ servers. ([#96527](https://github.com/kubernetes/kubernetes/pull/96527), [@adtac](https://github.com/adtac)) [SIG API Machinery and Testing]
+- For CSI drivers, kubelet no longer creates the target_path for NodePublishVolume in accordance with the CSI spec. Kubelet also no longer checks if staging and target paths are mounts or corrupted. CSI drivers need to be idempotent and do any necessary mount verification. ([#88759](https://github.com/kubernetes/kubernetes/pull/88759), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage]
+- Kubeadm: http://git.k8s.io/enhancements/keps/sig-cluster-lifecycle/kubeadm/2067-rename-master-label-taint/README.md ([#95382](https://github.com/kubernetes/kubernetes/pull/95382), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]
   - The label applied to control-plane nodes "node-role.kubernetes.io/master" is now deprecated and will be removed in a future release after a GA deprecation period.
   - Introduce a new label "node-role.kubernetes.io/control-plane" that will be applied in parallel to "node-role.kubernetes.io/master" until the removal of the "node-role.kubernetes.io/master" label.
   - Make "kubeadm upgrade apply" add the "node-role.kubernetes.io/control-plane" label on existing nodes that only have the "node-role.kubernetes.io/master" label during upgrade.
   - Please adapt your tooling built on top of kubeadm to use the "node-role.kubernetes.io/control-plane" label.
-  
   - The taint applied to control-plane nodes "node-role.kubernetes.io/master:NoSchedule" is now deprecated and will be removed in a future release after a GA deprecation period.
   - Apply toleration for a new, future taint "node-role.kubernetes.io/control-plane:NoSchedule" to the kubeadm CoreDNS / kube-dns managed manifests. Note that this taint is not yet applied to kubeadm control-plane nodes.
   - Please adapt your workloads to tolerate the same future taint preemptively.
-  
-  For more details see: http://git.k8s.io/enhancements/keps/sig-cluster-lifecycle/kubeadm/2067-rename-master-label-taint/README.md ([#95382](https://github.com/kubernetes/kubernetes/pull/95382), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]
- - Kubeadm: improve the validation of serviceSubnet and podSubnet.
+    
+- Kubeadm: improve the validation of serviceSubnet and podSubnet.
   ServiceSubnet has to be limited in size, due to implementation details, and the mask can not allocate more than 20 bits.
   PodSubnet validates against the corresponding cluster "--node-cidr-mask-size" of the kube-controller-manager, it fail if the values are not compatible.
   kubeadm no longer sets the node-mask automatically on IPv6 deployments, you must check that your IPv6 service subnet mask is compatible with the default node mask /64 or set it accordenly. 
   Previously, for IPv6, if the podSubnet had a mask lower than /112, kubeadm calculated a node-mask to be multiple of eight and splitting the available bits to maximise the number used for nodes. ([#95723](https://github.com/kubernetes/kubernetes/pull/95723), [@aojea](https://github.com/aojea)) [SIG Cluster Lifecycle]
- - The deprecated flag --experimental-kustomize is now removed from kubeadm commands. Use --experimental-patches instead, which was introduced in 1.19. Migration infromation available in --help description for --exprimental-patches. ([#94871](https://github.com/kubernetes/kubernetes/pull/94871), [@neolit123](https://github.com/neolit123))
- - Windows hyper-v container featuregate is deprecated in 1.20 and will be removed in 1.21 ([#95505](https://github.com/kubernetes/kubernetes/pull/95505), [@wawa0210](https://github.com/wawa0210)) [SIG Node and Windows]
- 
+- The deprecated flag --experimental-kustomize is now removed from kubeadm commands. Use --experimental-patches instead, which was introduced in 1.19. Migration infromation available in --help description for --exprimental-patches. ([#94871](https://github.com/kubernetes/kubernetes/pull/94871), [@neolit123](https://github.com/neolit123))
+- Windows hyper-v container featuregate is deprecated in 1.20 and will be removed in 1.21 ([#95505](https://github.com/kubernetes/kubernetes/pull/95505), [@wawa0210](https://github.com/wawa0210)) [SIG Node and Windows]
+- The kube-apiserver ability to serve on an insecure port, deprecated since v1.10, has been removed. The insecure address flags `--address` and `--insecure-bind-address` have no effect in kube-apiserver and will be removed in v1.24. The insecure port flags `--port` and `--insecure-port` may only be set to 0 and will be removed in v1.24. ([#95856](https://github.com/kubernetes/kubernetes/pull/95856), [@knight42](https://github.com/knight42), [SIG API Machinery, Node, Testing])
+- Add dual-stack Services (alpha).  This is a BREAKING CHANGE to an alpha API.
+  It changes the dual-stack API wrt Service from a single ipFamily field to 3
+  fields: ipFamilyPolicy (SingleStack, PreferDualStack, RequireDualStack),
+  ipFamilies (a list of families assigned), and clusterIPs (inclusive of
+  clusterIP).  Most users do not need to set anything at all, defaulting will
+  handle it for them.  Services are single-stack unless the user asks for
+  dual-stack.  This is all gated by the "IPv6DualStack" feature gate. ([#91824](https://github.com/kubernetes/kubernetes/pull/91824), [@khenidak](https://github.com/khenidak)) [SIG API Machinery, Apps, CLI, Network, Node, Scheduling and Testing]
+- `TokenRequest` and `TokenRequestProjection` are now GA features. The following flags are required by the API server:
+  - `--service-account-issuer`, should be set to a URL identifying the API server that will be stable over the cluster lifetime.
+  - `--service-account-key-file`, set to one or more files containing one or more public keys used to verify tokens.
+  - `--service-account-signing-key-file`, set to a file containing a private key to use to sign service account tokens. Can be the same file given to `kube-controller-manager` with `--service-account-private-key-file`. ([#95896](https://github.com/kubernetes/kubernetes/pull/95896), [@zshihang](https://github.com/zshihang)) [SIG API Machinery, Auth, Cluster Lifecycle]
+- kubeadm: make the command "kubeadm alpha kubeconfig user" accept a "--config" flag and remove the following flags:
+  - apiserver-advertise-address / apiserver-bind-port: use either localAPIEndpoint from InitConfiguration or controlPlaneEndpoint from ClusterConfiguration.
+  - cluster-name: use clusterName from ClusterConfiguration
+  - cert-dir: use certificatesDir from ClusterConfiguration ([#94879](https://github.com/kubernetes/kubernetes/pull/94879), [@knight42](https://github.com/knight42)) [SIG Cluster Lifecycle]
+
 ## Changes by Kind
 
 ### Deprecation
@@ -47,14 +61,14 @@
 - Support 'controlplane' as a valid EgressSelection type in the EgressSelectorConfiguration API. 'Master' is deprecated and will be removed in v1.22. ([#95235](https://github.com/kubernetes/kubernetes/pull/95235), [@andrewsykim](https://github.com/andrewsykim)) [SIG API Machinery]
 - The v1alpha1 PodPreset API and admission plugin has been removed with no built-in replacement. Admission webhooks can be used to modify pods on creation. ([#94090](https://github.com/kubernetes/kubernetes/pull/94090), [@deads2k](https://github.com/deads2k)) [SIG API Machinery, Apps, CLI, Cloud Provider, Scalability and Testing]
 
+
 ### API Change
 
-- + `TokenRequest` and `TokenRequestProjection` features have been promoted to GA. This feature allows generating service account tokens that are not visible in Secret objects and are tied to the lifetime of a Pod object. See https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#service-account-token-volume-projection for details on configuring and using this feature. The `TokenRequest` and `TokenRequestProjection` feature gates will be removed in v1.21.
-  + kubeadm's kube-apiserver Pod manifest now includes the following flags by default "--service-account-key-file", "--service-account-signing-key-file", "--service-account-issuer". ([#93258](https://github.com/kubernetes/kubernetes/pull/93258), [@zshihang](https://github.com/zshihang)) [SIG API Machinery, Auth, Cluster Lifecycle, Storage and Testing]
+- `TokenRequest` and `TokenRequestProjection` features have been promoted to GA. This feature allows generating service account tokens that are not visible in Secret objects and are tied to the lifetime of a Pod object. See https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#service-account-token-volume-projection for details on configuring and using this feature. The `TokenRequest` and `TokenRequestProjection` feature gates will be removed in v1.21.
+  - kubeadm's kube-apiserver Pod manifest now includes the following flags by default "--service-account-key-file", "--service-account-signing-key-file", "--service-account-issuer". ([#93258](https://github.com/kubernetes/kubernetes/pull/93258), [@zshihang](https://github.com/zshihang)) [SIG API Machinery, Auth, Cluster Lifecycle, Storage and Testing]
 - A new `nofuzz` go build tag now disables gofuzz support. Release binaries enable this. ([#92491](https://github.com/kubernetes/kubernetes/pull/92491), [@BenTheElder](https://github.com/BenTheElder)) [SIG API Machinery]
 - Add WindowsContainerResources and Annotations to CRI-API UpdateContainerResourcesRequest ([#95741](https://github.com/kubernetes/kubernetes/pull/95741), [@katiewasnothere](https://github.com/katiewasnothere)) [SIG Node]
-- Add a 'serving' and `terminating` condition to the EndpointSlice API.
-  
+- Add a `serving` and `terminating` condition to the EndpointSlice API.
   `serving` tracks the readiness of endpoints regardless of their terminating state. This is distinct from `ready` since `ready` is only true when pods are not terminating. 
   `terminating` is true when an endpoint is terminating. For pods this is any endpoint with a deletion timestamp. ([#92968](https://github.com/kubernetes/kubernetes/pull/92968), [@andrewsykim](https://github.com/andrewsykim)) [SIG Apps and Network]
 - Add dual-stack Services (alpha).  This is a BREAKING CHANGE to an alpha API.
@@ -100,9 +114,7 @@
 - Services will now have a `clusterIPs` field to go with `clusterIP`.  `clusterIPs[0]` is a synonym for `clusterIP` and will be syncronized on create and update operations. ([#95894](https://github.com/kubernetes/kubernetes/pull/95894), [@thockin](https://github.com/thockin)) [SIG Network]
 - The ServiceAccountIssuerDiscovery feature gate is now Beta and enabled by default. ([#91921](https://github.com/kubernetes/kubernetes/pull/91921), [@mtaufen](https://github.com/mtaufen)) [SIG Auth]
 - The status of v1beta1 CRDs without "preserveUnknownFields:false" now shows a violation, "spec.preserveUnknownFields: Invalid value: true: must be false". ([#93078](https://github.com/kubernetes/kubernetes/pull/93078), [@vareti](https://github.com/vareti))
-- The usage of mixed protocol values in the same LoadBalancer Service is possible if the new feature gate MixedProtocolLBService is enabled.
-  "action required"
-  The feature gate is disabled by default. The user has to enable it for the API Server. ([#94028](https://github.com/kubernetes/kubernetes/pull/94028), [@janosi](https://github.com/janosi)) [SIG API Machinery and Apps]
+- The usage of mixed protocol values in the same LoadBalancer Service is possible if the new feature gate MixedProtocolLBService is enabled. The feature gate is disabled by default. The user has to enable it for the API Server. ([#94028](https://github.com/kubernetes/kubernetes/pull/94028), [@janosi](https://github.com/janosi)) [SIG API Machinery and Apps]
 - This PR will introduce a feature gate CSIServiceAccountToken with two additional fields in `CSIDriverSpec`. ([#93130](https://github.com/kubernetes/kubernetes/pull/93130), [@zshihang](https://github.com/zshihang)) [SIG API Machinery, Apps, Auth, CLI, Network, Node, Storage and Testing]
 - Users can try the cronjob controller v2 using the feature gate. This will be the default controller in future releases. ([#93370](https://github.com/kubernetes/kubernetes/pull/93370), [@alaypatel07](https://github.com/alaypatel07)) [SIG API Machinery, Apps, Auth and Testing]
 - VolumeSnapshotDataSource moves to GA in 1.20 release ([#95282](https://github.com/kubernetes/kubernetes/pull/95282), [@xing-yang](https://github.com/xing-yang)) [SIG Apps]
@@ -110,7 +122,7 @@
 
 ### Feature
 
-- **Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.**: ([#95896](https://github.com/kubernetes/kubernetes/pull/95896), [@zshihang](https://github.com/zshihang)) [SIG API Machinery and Cluster Lifecycle]
+- **Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.**:
 - A new metric `apiserver_request_filter_duration_seconds` has been introduced that 
   measures request filter latency in seconds. ([#95207](https://github.com/kubernetes/kubernetes/pull/95207), [@tkashem](https://github.com/tkashem)) [SIG API Machinery and Instrumentation]
 - A new set of alpha metrics are reported by the Kubernetes scheduler under the `/metrics/resources` endpoint that allow administrators to easily see the resource consumption (requests and limits for all resources on the pods) and compare it to actual pod usage or node capacity. ([#94866](https://github.com/kubernetes/kubernetes/pull/94866), [@smarterclayton](https://github.com/smarterclayton)) [SIG API Machinery, Instrumentation, Node and Scheduling]
@@ -450,9 +462,6 @@
 - Kubectl: the `generator` flag of `kubectl autoscale` has been deprecated and has no effect, it will be removed in a feature release ([#92998](https://github.com/kubernetes/kubernetes/pull/92998), [@SataQiu](https://github.com/SataQiu)) [SIG CLI]
 - Lock ExternalPolicyForExternalIP to default, this feature gate will be removed in 1.22. ([#94581](https://github.com/kubernetes/kubernetes/pull/94581), [@knabben](https://github.com/knabben)) [SIG Network]
 - Mask ceph RBD adminSecrets in logs when logLevel >= 4. ([#95245](https://github.com/kubernetes/kubernetes/pull/95245), [@sfowl](https://github.com/sfowl))
-- NONE ([#95098](https://github.com/kubernetes/kubernetes/pull/95098), [@phunziker](https://github.com/phunziker))
-- NONE ([#95412](https://github.com/kubernetes/kubernetes/pull/95412), [@saikat-royc](https://github.com/saikat-royc))
-- NONE ([#96179](https://github.com/kubernetes/kubernetes/pull/96179), [@bbyrne5](https://github.com/bbyrne5)) [SIG Network]
 - Remove offensive words from kubectl cluster-info command. ([#95202](https://github.com/kubernetes/kubernetes/pull/95202), [@rikatz](https://github.com/rikatz))
 - Remove support for "ci/k8s-master" version label in kubeadm, use "ci/latest" instead. See kubernetes/test-infra&#35;18517. ([#93626](https://github.com/kubernetes/kubernetes/pull/93626), [@vikkyomkar](https://github.com/vikkyomkar))
 - Remove the dependency of csi-translation-lib module on apiserver/cloud-provider/controller-manager ([#95543](https://github.com/kubernetes/kubernetes/pull/95543), [@wawa0210](https://github.com/wawa0210)) [SIG Release]
