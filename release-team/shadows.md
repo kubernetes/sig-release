@@ -10,7 +10,7 @@ The following guide is for both Release role leads and shadows so that everyone 
 
 In the last week of the prior release cycle, or the first week of the new one, the Emeritus Advisor and Release Lead will post a sign-up form for people who want to be Shadows.  Potential Shadows should fill out this form, which has a number of questions about their interests, availability, and experience; this is to judge who will be the most suitable and balance the team.  
 
-Please read the [Role Handbooks](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks) for those roles before filling out the form.  Some handbooks will have a specific Shadow section that addresses what background Shadows are expected to have and what tasks they do.
+Please read the [Role Handbooks](/release-team/role-handbooks) for those roles before filling out the form.  Some handbooks will have a specific Shadow section that addresses what background Shadows are expected to have and what tasks they do.
 
 Shadow is an apprenticeship position, so candidates are not expected to be that experienced in contributing to Kubernetes or working on releases.
 
