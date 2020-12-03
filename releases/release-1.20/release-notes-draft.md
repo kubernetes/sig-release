@@ -22,7 +22,9 @@ After being enabled-by-default for a year, SIG Node graduates PID Limits to GA o
 Initially introduced in 1.18, Kubernetes 1.20 now enables API Priority and Fairness (APF) by default. This allows `kube-apiserver` to [categorize incoming requests by priority levels](https://docs.k8s.io/concepts/cluster-administration/flow-control/).
 
 ### IPv4/IPv6 dual-stack
-IPv4/IPv6 dual-stack has been reimplemented to support dual-stack Services based on user and community feedback. This allows both IPv4 and IPv6 Service cluster-IP addresses to be assigned to a single service and also enables Service to be upgraded/downgraded from single stack to dual-stack and vice versa.
+IPv4/IPv6 dual-stack has been reimplemented for 1.20 to support dual-stack Services, based on user and community feedback. If your cluster has dual-stack enabled, you can create Services which can use IPv4, IPv6, or both, and you can change this setting for existing Services. Details are available in updated [IPv4/IPv6 dual-stack docs](https://docs.k8s.io/concepts/services-networking/dual-stack/), which cover the nuanced array of options.
+
+We expect this implementation to progress to beta and GA in coming releases, so we’re eager to have you comment about your dual-stack experiences in [#k8s-dual-stack](https://kubernetes.slack.com/messages/k8s-dual-stack) or in [enhancements #563](https://features.k8s.io/563). 
 
 ### CSI Volume Snapshot graduates to General Availability
 CSI Volume Snapshot moves to GA in the 1.20 release. This feature provides a standard way to trigger volume snapshot operations in Kubernetes and allows Kubernetes users to incorporate snapshot operations in a portable manner on any Kubernetes environment and supporting storage providers. 
@@ -61,7 +63,7 @@ Troubleshoot distroless containers by adding a new container with debugging tool
 Troubleshoot on a node by creating a container running in the host namespaces and with access to the host’s filesystem.
 Note that as a new builtin command, kubectl debug takes priority over any kubectl plugin named “debug”. You will need to rename the affected plugin.
 Invocations using kubectl alpha debug are now deprecated and will be removed in a subsequent release. Update your scripts to use kubectl debug instead of kubectl alpha debug!
-For more information about kubectl debug, see Debugging Running Pods on the Kubernetes website, kubectl help debug, or reach out to SIG CLI by visiting #sig-cli or commenting on enhancement [#1441](https://github.com/kubernetes/enhancements/issues/1441).
+For more information about kubectl debug, see Debugging Running Pods on the Kubernetes website, kubectl help debug, or reach out to SIG CLI by visiting #sig-cli or commenting on [enhancement #1441](https://features.k8s.io/1441).
 
 ### Removing deprecated flags in kubeadm
 kubeadm removes a significant number of deprecated flags in this release. The complete list of flags are available below on Urgent Upgrade Notes section.
