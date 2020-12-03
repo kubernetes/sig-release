@@ -10,13 +10,13 @@ Docker as an underlying runtime is being deprecated. Docker-produced images will
 The Kubernetes community [has written a blog post about this in detail](https://blog.k8s.io/2020/12/02/dont-panic-kubernetes-and-docker/) with [a dedicated FAQ page for it](https://blog.k8s.io/2020/12/02/dockershim-faq/).
 
 ### External credential provider for client-go
-With this release, client-go credential plugins can now be passed in the current cluster information via the KUBERNETES_EXEC_INFO environment variable. Learn more about this on [client-go credential plugins documentation](https://docs.k8s.io/reference/access-authn-authz/authentication/#client-go-credential-plugins/).
+The client-go credential plugins can now be passed in the current cluster information via the `KUBERNETES_EXEC_INFO` environment variable. Learn more about this on [client-go credential plugins documentation](https://docs.k8s.io/reference/access-authn-authz/authentication/#client-go-credential-plugins/).
 
 ### CronJob controller v2 is available through feature gate
-An alternative implementation of CronJob controller is now available as an alpha feature in this release, which has expermiental performance improvement by using informers instead of polling. While this will be the default behavior in the future, you can [try them in this release through a feature gate](https://docs.k8s.io/concepts/workloads/controllers/cron-jobs/).
+An alternative implementation of `CronJob` controller is now available as an alpha feature in this release, which has expermiental performance improvement by using informers instead of polling. While this will be the default behavior in the future, you can [try them in this release through a feature gate](https://docs.k8s.io/concepts/workloads/controllers/cron-jobs/).
 
 ### PID Limits graduates to General Availability
-After being enabled-by-default for a year, SIG Node graduates PID Limits to GA on both `SupportNodePidsLimit` (node-to-pod PID isolation) and `SupportPodPidsLimit` (ability to limit PIDs per pod).
+PID Limits features are now generally available on both `SupportNodePidsLimit` (node-to-pod PID isolation) and `SupportPodPidsLimit` (ability to limit PIDs per pod), after being enabled-by-default in beta stage for a year.
 
 ### API Priority and Fairness graduates to Beta
 Initially introduced in 1.18, Kubernetes 1.20 now enables API Priority and Fairness (APF) by default. This allows `kube-apiserver` to [categorize incoming requests by priority levels](https://docs.k8s.io/concepts/cluster-administration/flow-control/).
@@ -37,13 +37,13 @@ Additionally, these Kubernetes snapshot primitives act as basic building blocks 
 Note that snapshot support will require Kubernetes distributors to bundle the Snapshot controller, Snapshot CRDs, and validation webhook. In addition, a CSI driver supporting the snapshot functionality must also be deployed on the cluster.
 
 ### CSIDriver policy for FSGroup graduates to Beta
-The FSGroup's CSIDriver Policy is now beta in 1.20. This allows CSIDrivers to explicitly indicate if they want Kubernetes to manage permissions and ownership for their volumes via fsgroup. 
+The FSGroup's CSIDriver Policy is now beta in 1.20. This allows CSIDrivers to explicitly indicate if they want Kubernetes to manage permissions and ownership for their volumes via `fsgroup`. 
 
 ### Security Improvements for CSI Drivers (Alpha)
-In 1.20, we introduce a new alpha feature CSIServiceAccountToken. This feature allows CSI drivers to impersonate the pods that they mount the volumes for. This improves the security posture in the mounting process where the volumes are ACL’ed on the pods’ service account without handing out unnecessary permissions to the CSI drivers’ service account. This feature is especially important for secret-handling CSI drivers, such as the secrets-store-csi-driver. Since these tokens can be rotated and short-lived, this feature also provides a knob for CSI drivers to receive NodePublishVolume RPC calls periodically with the new token. This knob is also useful when volumes are short-lived, e.g. certificates.
+In 1.20, we introduce a new alpha feature `CSIServiceAccountToken`. This feature allows CSI drivers to impersonate the pods that they mount the volumes for. This improves the security posture in the mounting process where the volumes are ACL’ed on the pods’ service account without handing out unnecessary permissions to the CSI drivers’ service account. This feature is especially important for secret-handling CSI drivers, such as the secrets-store-csi-driver. Since these tokens can be rotated and short-lived, this feature also provides a knob for CSI drivers to receive `NodePublishVolume` RPC calls periodically with the new token. This knob is also useful when volumes are short-lived, e.g. certificates.
 
 ### Introducing Graceful Node Shutdown (Alpha)
-The GracefulNodeShutdown feature is now in Alpha. GracefulNodeShutdown makes the kubelet aware of node system shutdowns, enabling graceful termination of pods during a system shutdown. This feature can be [enabled through feature gate](https://docs.k8s.io/concepts/architecture/nodes/#graceful-node-shutdown).
+The `GracefulNodeShutdown` feature is now in Alpha. This allows kubelet to be aware of node system shutdowns, enabling graceful termination of pods during a system shutdown. This feature can be [enabled through feature gate](https://docs.k8s.io/concepts/architecture/nodes/#graceful-node-shutdown).
 
 ### Runtime log sanitation
 Logs can now be configured to use runtime protection from leaking sensitive data. [Details for this experimental feature is available in documentation](https://docs.k8s.io/concepts/cluster-administration/system-logs/#log-sanitization).
@@ -52,26 +52,26 @@ Logs can now be configured to use runtime protection from leaking sensitive data
 On-demand metrics calculation is now available through `/metrics/resources`. [When enabled](
 https://docs.k8s.io/concepts/cluster-administration/system-metrics#kube-scheduler-metrics), the endpoint will report the requested resources and the desired limits of all running pods.
 
-### Introducing RootCAConfigMap
+### Introducing `RootCAConfigMap`
 `RootCAConfigMap` graduates to Beta, seperating from `BoundServiceAccountTokenVolume`. The `kube-root-ca.crt` ConfigMap is now available to every namespace, by default. It contains the Certificate Authority bundle for verify kube-apiserver connections.
 
 ### kubectl debug graduates to Beta
-kubectl alpha debug graduates from alpha to beta in 1.20, becoming kubectl debug.
-kubectl debug provides support for common debugging workflows directly from kubectl. Troubleshooting scenarios supported in this release of kubectl include:
+`kubectl alpha debug` graduates from alpha to beta in 1.20, becoming `kubectl debug`.
+`kubectl debug` provides support for common debugging workflows directly from kubectl. Troubleshooting scenarios supported in this release of `kubectl` include:
 Troubleshoot workloads that crash on startup by creating a copy of the pod that uses a different container image or command.
 Troubleshoot distroless containers by adding a new container with debugging tools, either in a new copy of the pod or using an ephemeral container. (Ephemeral containers are an alpha feature that are not enabled by default.)
 Troubleshoot on a node by creating a container running in the host namespaces and with access to the host’s filesystem.
-Note that as a new builtin command, kubectl debug takes priority over any kubectl plugin named “debug”. You will need to rename the affected plugin.
-Invocations using kubectl alpha debug are now deprecated and will be removed in a subsequent release. Update your scripts to use kubectl debug instead of kubectl alpha debug!
+Note that as a new builtin command, `kubectl debug` takes priority over any `kubectl` plugin named “debug”. You will need to rename the affected plugin.
+Invocations using `kubectl alpha debug` are now deprecated and will be removed in a subsequent release. Update your scripts to use `kubectl debug` instead of `kubectl alpha debug`!
 For more information about kubectl debug, see Debugging Running Pods on the Kubernetes website, kubectl help debug, or reach out to SIG CLI by visiting #sig-cli or commenting on [enhancement #1441](https://features.k8s.io/1441).
 
 ### Removing deprecated flags in kubeadm
-kubeadm removes a significant number of deprecated flags in this release. The complete list of flags are available below on Urgent Upgrade Notes section.
+`kubeadm` removes a significant number of deprecated flags in this release. The complete list of flags are available below on Urgent Upgrade Notes section.
 
 ### Pod Hostname as FQDN graduates to Beta
 Previously introduced in 1.19 behind a feature gate, `SetHostnameAsFQDN` is now enabled by default. More details on this behavior is available in [documentation for DNS for Services and Pods](https://docs.k8s.io/concepts/services-networking/dns-pod-service/#pod-sethostnameasfqdn-field)
 
-### TokenRequest / TokenRequestProjection graduates to General Availability
+### `TokenRequest` / `TokenRequestProjection` graduates to General Availability
 Service account tokens bound to pod is now a stable feature. The feature gates will be removed in 1.21 release. For more information, refer to notes below on the changelogs.
 
 ## Urgent Upgrade Notes 
