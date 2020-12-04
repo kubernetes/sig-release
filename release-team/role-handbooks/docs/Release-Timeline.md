@@ -31,13 +31,13 @@ For each release, the schedule with deliverables is added to the release directo
     - [Generate the reference documentation](#generate-the-reference-documentation)
     - [Update minor version on API index page](#update-minor-version-on-api-index-page)
     - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
-    - [Update the `config.toml`s for the past four releases](#update-the-configtomls-for-the-past-four-releases)
-    - [Deprecate links](#deprecate-links)
 - [Release Week (Week 12)](#release-week-week-12)
     - [Create the release branch](#create-the-release-branch)
     - [Update Netlify](#update-netlify)
-    - [Freeze Kubernetes website](#freeze-kubernetes-website)
+    - [Update the site configuration files](#update-the-site-configuration-files)
     - [Inform localization teams](#inform-localization-teams)
+    - [Request for temporary write access to website repo](#request-for-temporary-write-access-to-website-repo)
+    - [Freeze Kubernetes website](#freeze-kubernetes-website)
     - [Review milestones](#review-milestones)
 - [Release Day](#release-day)
     - [Merge `master`](#merge-master)
@@ -54,7 +54,8 @@ For each release, the schedule with deliverables is added to the release directo
     - [Update Netlify](#update-netlify)
     - [Update Slack](#update-slack)
     - [Reassign issues](#reassign-issues)
-- [Celebrate](#celebrate-)
+    - [Remove the temporary write access to website repo](#remove-the-temporary-write-access-to-website-repo)
+- [Celebrate](#celebrate)
 
 
 ## Early Steps (Weeks 1-2)
@@ -435,26 +436,38 @@ If you need help in building the reference documentation, reach out on Slack #si
 
 ### Generate the reference documentation
 
-Update the generated documentation using a Python script ([Generating Reference Pages for Kubernetes Components and Tools](https://kubernetes.io/docs/contribute/generate-ref-docs/kubernetes-components/)). Before running the script, modify `reference.yml` to checkout the Kubernetes future release branch.
-
-![Update kubernetes release branch](pics/reference-yaml.png)
-
-The first step is to famialiarize yourself with the `website/updated-imported-docs/update-imported-docs.py` script
+The first step is to familiarize yourself with the `website/updated-imported-docs/update-imported-docs.py` script
 and the instructions for ([Generating Reference Pages for Kubernetes Components and Tools](https://kubernetes.io/docs/contribute/generate-ref-docs/quickstart/)).
 
-The reference documentation build depends upon a valid release tag.
+The reference documentation build depends upon a valid [release tag](https://github.com/kubernetes/kubernetes/tags).
 When a Kubernetes release candidate version tag such as `v1.19-rc.2` is created, you can consider building
 the reference documentation. Next:
 
 - Create a branch for this work based off of the `dev-[future release]` branch.
-- Run the `update-imported-docs.py` script providing the release tag to build the reference documentation.
-- Commit the generated files.
+```
+git checkout dev-[future-release]
+git fetch upstream dev-[future-release]
+git rebase upstream dev-[future-release]
+git checkbout -b dev-[future-release]-ref-doc
+```
+- Run the `update-imported-docs.py` script providing the build configuration file (`reference.yml`) and the release tag.
+```
+cd website/update-imported-docs/
+python update-imported-docs.py reference.yml 1.20.0-rc.0
+```
 
-![Copy and rename screenshot](pics/copy-rename-dir.png)
+- Commit the generated files.
+```
+git add .
+git commit -m "Generate reference doc for [release tag]"
+git push --set-upstream origin dev-[future-release]-ref-doc
+```
 
 You can expect to maintain this branch with periodic updates to the reference documentation using the latest `rc` tag.
-Merge your branch to the `dev-[future release]` branch just before the final release.
-When the release is complete, you should build the reference documentation again using the final release tag and merge to the `master` branch.
+Merge your branch `dev-[future-release]-ref-doc` to the `dev-[future release]` branch just before the final release.
+
+If the content has changed since the last build of the reference documentation, when the release is complete, you should
+build the reference documentation again using the final release tag and merge to the `master` branch.
 
 Note: You should not have to build the reference documentation for every release candidate version.
 
@@ -462,31 +475,22 @@ Note: You should not have to build the reference documentation for every release
 
 Update the `<MINOR_VERSION>` in `content/en/docs/reference/kubernetes-api/api-index.md` for the future release.
 
-   ![Update API index](pics/update-api-index.png)
+```diff
+---
+- title: v1.19
++ title: v1.20
+weight: 50
+---
+
+- [Kubernetes API v1.19](/docs/reference/generated/kubernetes-api/v1.19/)
++ [Kubernetes API v1.20](/docs/reference/generated/kubernetes-api/v1.20/)
+```
 
 ### Touch base with SIG Cluster Lifecycle (kubeadm)
 
-Validate that SIG Cluster Lifecycle has all of the docs in place for the upcoming release. These are mainly kubeadm docs (upgrading, installing, changes, etc). If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages/sig-cluster-lifecycle/) channel.
+Validate that SIG Cluster Lifecycle has all of the docs in place for the upcoming release. These are mainly kubeadm docs (upgrading, installing, changes, etc). If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages/sig-cluster-lifecycle/) channel, e.g:
 
-
-#### Update the `config.toml`s for the past four releases
-
-Create the updated `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch.
-
-See this for example (1.13 was the "future release"):
-* 1.9 https://github.com/kubernetes/website/pull/11493
-* 1.10 https://github.com/kubernetes/website/pull/11495
-* 1.11 https://github.com/kubernetes/website/pull/11496
-* 1.12 https://github.com/kubernetes/website/pull/11497
-
-⚠️  DO NOT MERGE **ANY** OF THE `config.toml` PULL REQUESTS FOR PREVIOUS UNTIL THE RELEASE IS CONFIRMED
-
-#### Deprecate links
-
-- Deprecate the oldest API link in the reference docs e.g., https://github.com/kubernetes/website/pull/13467
-- Update the index for the API reference docs e.g., https://github.com/kubernetes/website/pull/14139
-
-> Note: These first two steps can be combined into one single PR. If done in a single PR, please update this handbook with examples.
+> Hi Sig Cluster Lifecylce :wave:  1.20 Docs Lead here, can someone confirm that all docs are in place for the upcoming 1.20 release?
 
 
 ## Release Week (Week 12)
@@ -538,19 +542,42 @@ git push origin merged-master-release-[current release]
 
 Now create a pull request to merge the new branch you've made into the `release-[current-release]` branch on [k/website](https://github.com/kubernetes/website).
 
-### Freeze Kubernetes website
+### Update the site configuration files
 
-24 hours before the release, freeze the repo: ⚠️  no PRs should be allowed to merge AT ALL until the release PR has successfully merged.
+Update `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch.
+Use [path release](https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md) to determine the
+correct patch version of the past release when updating the `config.toml` file.
 
-- Request temporary write access to k/website. Any [SIG Docs co-chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) should be able to help with this. 
-- Submit an issue with `tide/merge-blocker` label. Depending upon your permissions, a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with adding the label.
-- Submit a freeze announcement following our [protocols](#communicate-major-deadlines)
+See this for example (1.20 was the "future release"):
+* 1.16 https://github.com/kubernetes/website/pull/25392
+* 1.17 https://github.com/kubernetes/website/pull/25391
+* 1.18 https://github.com/kubernetes/website/pull/25390
+* 1.19 https://github.com/kubernetes/website/pull/25394
+
+⚠️  DO NOT MERGE **ANY** OF THE CONFIGURATION PULL REQUESTS UNTIL THE RELEASE HAS OCCURRED
 
 ### Inform localization teams
 
 Let localization team know about freeze and next tentative timeline(s) for important dates
 
 > Hello localization team leads! We talked about docs in v1.14 here (https://github.com/kubernetes/website/issues/12396). I don't think any action is required from you, but I wanted to let you know that we are on track for the release (3/25/19) and all Kubernetes website branches are up to date (master, dev-1.14, release-1.13). Let me know if I can help with anything! Thanks!
+
+### Request for temporary write access to website repo
+
+Create a PR against [kubernetes/org](https://github.com/kubernetes/org) repo to add current Docs Lead to the
+[website-maintainers](https://github.com/orgs/kubernetes/teams/website-maintainers) team e.g.,
+[PR to org repo](https://github.com/kubernetes/org/pull/2364)
+
+Assign PR to current [Sig Docs chairs](https://github.com/kubernetes/community/tree/master/sig-docs#chairs) for approval.
+
+⚠️  write access is required to freeze the website repo and to complete tasks during the release day
+
+### Freeze Kubernetes website
+
+24 hours before the release, freeze the repo: ⚠️  no PRs should be allowed to merge AT ALL until the release PR has successfully merged.
+
+- Submit an issue with `tide/merge-blocker` label. Depending upon your permissions, a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with adding the label.
+- Submit a freeze announcement following our [protocols](#communicate-major-deadlines)
 
 ### Review milestones
 
@@ -621,7 +648,6 @@ Unfreeze the repo as done earlier (remove the `tide/merge-blocker` label and clo
   - ex: https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG-1.14.md will be merged into content/en/docs/setup/release/notes.md
   - ex PR: https://github.com/kubernetes/website/pull/13416
 - Find the open milestone for [future release] and close it.
-
 
 ## Post Release Verification, Cleanup, and Handoff
 These steps should be done after the launch. They require approximately 4 hours of work.
@@ -700,6 +726,10 @@ Announce that `[future release]` branch is open for new feature docs on slack #s
 ⚠️  Create a PR to remove shadows from [milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/)
     - The lead must stay in the list until the `[current release]` website version is officially supported
 
+### Remove the temporary write access to website repo
 
-## Celebrate! 🎉
-YOU MADE IT! Celebrate a job well done, keep an eye out for anything on fire, and begin to relax!
+Create a PR against [kubernetes/org](https://github.com/kubernetes/org) repo to **remove** current Docs Lead from the
+[website-maintainers](https://github.com/orgs/kubernetes/teams/website-maintainers) team.
+
+## Celebrate!
+YOU MADE IT! 🎉 Celebrate a job well done, keep an eye out for anything on fire, and begin to relax!
