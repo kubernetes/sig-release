@@ -55,7 +55,7 @@ https://docs.k8s.io/concepts/cluster-administration/system-metrics#kube-schedule
 ### Introducing `RootCAConfigMap`
 `RootCAConfigMap` graduates to Beta, seperating from `BoundServiceAccountTokenVolume`. The `kube-root-ca.crt` ConfigMap is now available to every namespace, by default. It contains the Certificate Authority bundle for verify kube-apiserver connections.
 
-### kubectl debug graduates to Beta
+### `kubectl debug` graduates to Beta
 `kubectl alpha debug` graduates from alpha to beta in 1.20, becoming `kubectl debug`.
 `kubectl debug` provides support for common debugging workflows directly from kubectl. Troubleshooting scenarios supported in this release of `kubectl` include:
 Troubleshoot workloads that crash on startup by creating a copy of the pod that uses a different container image or command.
@@ -78,7 +78,7 @@ Service account tokens bound to pod is now a stable feature. The feature gates w
 
 ### (No, really, you MUST read this before you upgrade)
 
-- A bug was fixed in kubelet where exec probe timeouts were not respected. This may result in unexpected behavior since the default timeout (if not specified) is `1s` which may be too small for some exec probes. Ensure that pods relying on this behavior are updated to correctly handle probe timeouts. See [configure probe](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes) section of the documentation for more details.
+- A bug was fixed in kubelet where exec probe timeouts were not respected. This may result in unexpected behavior since the default timeout (if not specified) is `1s` which may be too small for some exec probes. Ensure that pods relying on this behavior are updated to correctly handle probe timeouts. See [configure probe](https://docs.k8s.io/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes) section of the documentation for more details.
   
   This change in behavior may be unexpected for some clusters and can be disabled by turning off the `ExecProbeTimeout` feature gate. This gate will be locked and removed in future releases so that exec probe timeouts are always respected. ([#94115](https://github.com/kubernetes/kubernetes/pull/94115), [@andrewsykim](https://github.com/andrewsykim)) [SIG Node and Testing]
 - API priority and fairness graduated to beta. 1.19 servers with APF turned on should not be run in a multi-server cluster with 1.20+ servers. ([#96527](https://github.com/kubernetes/kubernetes/pull/96527), [@adtac](https://github.com/adtac)) [SIG API Machinery and Testing]
