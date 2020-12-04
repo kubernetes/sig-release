@@ -26,6 +26,9 @@ IPv4/IPv6 dual-stack has been reimplemented for 1.20 to support dual-stack Servi
 
 We expect this implementation to progress from alpha to beta and GA in coming releases, so we’re eager to have you comment about your dual-stack experiences in [#k8s-dual-stack](https://kubernetes.slack.com/messages/k8s-dual-stack) or in [enhancements #563](https://features.k8s.io/563). 
 
+### go1.15.2
+go1.15.2 has been integrated to Kubernets project as of this release, [including other infrastructure related updates on this effort](https://github.com/kubernetes/kubernetes/pull/94449).
+
 ### CSI Volume Snapshot graduates to General Availability
 CSI Volume Snapshot moves to GA in the 1.20 release. This feature provides a standard way to trigger volume snapshot operations in Kubernetes and allows Kubernetes users to incorporate snapshot operations in a portable manner on any Kubernetes environment and supporting storage providers. 
 Additionally, these Kubernetes snapshot primitives act as basic building blocks that unlock the ability to develop advanced, enterprise grade, storage administration features for Kubernetes: including application or cluster level backup solutions.
