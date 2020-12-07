@@ -57,7 +57,7 @@ it is expected that all outstanding PRs for the release of Kubernetes have been
 merged into the release branch. Assuming the release team agrees,
 [Code Freeze], will be lifted, and we enter Code Thaw. This means from a 
 technical perspective, that now the `master` and `release-1.x` branch diverge,
-whereas both kept in sync during [Code Freeze] and [Test Freze]. After Code 
+whereas both kept in sync during [Code Freeze] and [Test Freeze]. After Code 
 Thaw the `master` branch develops toward the next minor release and the release
 branch goes into maintenance mode. From this point forward, any PRs intended
 for the current release must be cherry-picked into the appropriate branch.
@@ -117,4 +117,5 @@ than basing from master. **Be sure to open your PR against the release branch**.
 [Kubernetes Release Calendar]: https://bit.ly/k8s-release-cal
 [Exception]: ./EXCEPTIONS.md
 [Code Freeze]: #code-freeze
+[Test Freeze]: #test-freeze
 [Enhancements Freeze]: #enhancements-freeze
