@@ -13,7 +13,7 @@ The Kubernetes community [has written a blog post about this in detail](https://
 The client-go credential plugins can now be passed in the current cluster information via the `KUBERNETES_EXEC_INFO` environment variable. Learn more about this on [client-go credential plugins documentation](https://docs.k8s.io/reference/access-authn-authz/authentication/#client-go-credential-plugins/).
 
 ### CronJob controller v2 is available through feature gate
-An alternative implementation of `CronJob` controller is now available as an alpha feature in this release, which has expermiental performance improvement by using informers instead of polling. While this will be the default behavior in the future, you can [try them in this release through a feature gate](https://docs.k8s.io/concepts/workloads/controllers/cron-jobs/).
+An alternative implementation of `CronJob` controller is now available as an alpha feature in this release, which has experimental performance improvement by using informers instead of polling. While this will be the default behavior in the future, you can [try them in this release through a feature gate](https://docs.k8s.io/concepts/workloads/controllers/cron-jobs/).
 
 ### PID Limits graduates to General Availability
 PID Limits features are now generally available on both `SupportNodePidsLimit` (node-to-pod PID isolation) and `SupportPodPidsLimit` (ability to limit PIDs per pod), after being enabled-by-default in beta stage for a year.
