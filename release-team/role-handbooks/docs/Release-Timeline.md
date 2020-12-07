@@ -34,7 +34,8 @@ For each release, the schedule with deliverables is added to the release directo
 - [Release Week (Week 12)](#release-week-week-12)
     - [Create the release branch](#create-the-release-branch)
     - [Update Netlify](#update-netlify)
-    - [Update the site configuration files](#update-the-site-configuration-files)
+    - [Update the site configuration files for previous releases](#update-the-site-configuration-files-for-previous-releases)
+    - [Update the site configuration files for future release](#update-the-site-configuration-files-for-future-release)
     - [Inform localization teams](#inform-localization-teams)
     - [Request for temporary write access to website repo](#request-for-temporary-write-access-to-website-repo)
     - [Freeze Kubernetes website](#freeze-kubernetes-website)
@@ -542,7 +543,7 @@ git push origin merged-master-release-[current release]
 
 Now create a pull request to merge the new branch you've made into the `release-[current-release]` branch on [k/website](https://github.com/kubernetes/website).
 
-### Update the site configuration files
+### Update the site configuration files for previous releases
 
 Update `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch.
 Use [path release](https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md) to determine the
@@ -555,6 +556,12 @@ See this for example (1.20 was the "future release"):
 * 1.19 https://github.com/kubernetes/website/pull/25394
 
 ⚠️  DO NOT MERGE **ANY** OF THE CONFIGURATION PULL REQUESTS UNTIL THE RELEASE HAS OCCURRED
+
+### Update the site configuration files for future release
+
+The future release branch site configuration also needs to be updated to reflect the latest patch versions of the past releases.
+Create a PR against the `dev-[future-release]` branch to update the `config.toml` file that matches the
+[PRs for previous releases](#update-the-site-configuration-files-for-previous-releases).
 
 ### Inform localization teams
 
@@ -571,6 +578,11 @@ Create a PR against [kubernetes/org](https://github.com/kubernetes/org) repo to 
 Assign PR to current [Sig Docs chairs](https://github.com/kubernetes/community/tree/master/sig-docs#chairs) for approval.
 
 ⚠️  write access is required to freeze the website repo and to complete tasks during the release day
+
+⚠️  With elevated access, make sure you are not accidentally pushing to upstream by disabling `git push` command against upstream repo.
+```
+git remote set-url --push upstream no_push
+```
 
 ### Freeze Kubernetes website
 
