@@ -100,6 +100,11 @@ Service account tokens bound to pod is now a stable feature. The feature gates w
 
 The `node.k8s.io` API groups are promoted from `v1beta1` to `v1`. `v1beta1` is now deprecated and will be removed in a future release, please start using `v1`. ([#95718](https://github.com/kubernetes/kubernetes/pull/95718), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG Apps, Auth, Node, Scheduling and Testing]
 
+## Known Issues
+
+### Summary API in kubelet doesn't have accelerator metrics
+Currently, cadvisor_stats_provider provides AcceleratorStats but cri_stats_provider does not. As a result, when using cri_stats_provider, kubelet's Summary API does not have accelerator metrics. [There is an open work in progress to fix this](https://github.com/kubernetes/kubernetes/pull/96873).
+
 ## Urgent Upgrade Notes 
 
 ### (No, really, you MUST read this before you upgrade)
