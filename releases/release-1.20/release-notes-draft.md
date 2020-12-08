@@ -100,6 +100,10 @@ Service account tokens bound to pod is now a stable feature. The feature gates w
 
 The `node.k8s.io` API groups are promoted from `v1beta1` to `v1`. `v1beta1` is now deprecated and will be removed in a future release, please start using `v1`. ([#95718](https://github.com/kubernetes/kubernetes/pull/95718), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG Apps, Auth, Node, Scheduling and Testing]
 
+### Cloud Controller Manager now exclusively shipped by Cloud Provider
+
+Kubernetes will no longer ship an instance of the Cloud Controller Manager binary. Each Cloud Provider is expected to ship their own instance of this binary. Details for a Cloud Provider to create an instance of such a binary can be found under [here](https://github.com/kubernetes/kubernetes/tree/master/staging/src/k8s.io/cloud-provider/sample). Anyone with questions on building a Cloud Controller Manager should reach out to SIG Cloud Provider. Questions about the Cloud Controller Manager on a Managed Kubernetes solution should go to the relevant Cloud Provider. Questions about the Cloud Controller Manager on a non managed solution can be brought up with SIG Cloud Provider.
+
 ## Known Issues
 
 ### Summary API in kubelet doesn't have accelerator metrics
