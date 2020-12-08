@@ -8,8 +8,15 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.20
+# Kubernetes 1.20: The Raddest Release
 
+<img src="blepurrnetes.png" height=400 width=auto>
+
+[raddest](https://www.dictionary.com/browse/rad): adjective, Slang. excellent; wonderful; cool:
+
+2020 has been a challenging year for many of us, but that didn't stop the community. Kubernetes contributors have delivered a record-breaking number of enhancements in this release and they did it during an end of the year release that overlapped with KubeCon + CloudNativeCon North America, various end of year holidays, and the general challenges of 2020. That is a great accomplishment and makes Kubernetes 1.20 one of the "raddest" releases yet. So as we end the year with a big accomplishment, we chose to add a little levity to the year and pay homage to releases past [Kubernetes 1.14 - Caturnetes](../releases/release-1.14) with a "rad" cat named Humphrey.
+
+Special thanks to [Henry Hsu](https://www.instagram.com/robotdancebattle/?hl=en) for the portrait of Humphrey. 
 
 #### Links
 
