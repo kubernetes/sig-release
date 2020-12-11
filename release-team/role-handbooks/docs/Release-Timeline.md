@@ -39,23 +39,23 @@ For each release, the schedule with deliverables is added to the release directo
     - [Inform localization teams](#inform-localization-teams)
     - [Request for temporary write access to website repo](#request-for-temporary-write-access-to-website-repo)
     - [Freeze Kubernetes website](#freeze-kubernetes-website)
+    - [Merge `master`](#merge-master)
     - [Review milestones](#review-milestones)
 - [Release Day](#release-day)
-    - [Merge `master`](#merge-master)
+    - [Merge the integration branch](#merge-the-integration-branch)
+    - [Publish the release blog post](#publish-the-release-blog-post)
     - [Create release with tag](#create-release-with-tag)
     - [Unfreeze](#unfreeze)
     - [Close the [future release] milestone](#close-the-future-release-milestone)
 - [Post Release Verification, Cleanup, and Handoff](#post-release-verification-cleanup-and-handoff)
-    - [Update Release Notes Changelog](#update-release-notes-changelog)
     - [Review Docs Process and Update Documentation](#review-docs-process-and-update-documentation)
-    - [Hold a docs-only burn down](#hold-a-docs-only-burn-down)
+    - [Hold a docs-only retro with Sig Docs](#hold-a-docs-only-retro-with-sig-docs)
 - [Prepare the Next Docs Lead for Success](#prepare-the-next-docs-lead-for-success)
     - [Create branches](#create-branches)
     - [Create milestone](#create-milestone)
     - [Update Netlify](#update-netlify)
     - [Update Slack](#update-slack)
-    - [Reassign issues](#reassign-issues)
-    - [Remove the temporary write access to website repo](#remove-the-temporary-write-access-to-website-repo)
+    - [Clean up access](#clean-up-access)
 - [Celebrate](#celebrate)
 
 
@@ -97,7 +97,12 @@ If these deadlines aren't listed in the release timeline, request that the Relea
 
 ### Introduce yourself
 
-Introduce yourself to the current localization owners to sync up early on strategy (needs coordination for main release). e.g: [Formalize docs release strategy with the different localization owners](https://github.com/kubernetes/website/issues/12396).
+Using the last release's [localization issue](https://github.com/kubernetes/website/issues/24009), determine the list
+of folks that needs to be contacted about the release. Create an issue to introduce yourself to the current localization
+owners and to sync up early on strategy (needs coordination for main release),
+e.g: [Formalize docs release strategy with the different localization owners](https://github.com/kubernetes/website/issues/24009).
+
+- Try to avoid tagging all localization owners using the `@kubernetes/sig-docs-xx-owners` until it becomes necessary.
 
 ### Attend meetings
 
@@ -493,6 +498,16 @@ Validate that SIG Cluster Lifecycle has all of the docs in place for the upcomin
 
 > Hi Sig Cluster Lifecylce :wave:  1.20 Docs Lead here, can someone confirm that all docs are in place for the upcoming 1.20 release?
 
+### Touch base with the release communications team
+
+Validate that comms team has all the blog posts (release and features) ready for the upcoming release.
+If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages/release-comms/) channel, e.g:
+
+> Hi comms team :wave: 1.20 Docs Lead here, can someone confirm that all blog posts PRs related to the release have been
+> opened and are being reviewed? Is there anything the docs team can do to help?
+
+The Docs Lead is responsible for publishing the release blog post during the release day. Therefore, it's important to
+follow the status of the blog posts created by the Comms team.
 
 ## Release Week (Week 12)
 
@@ -553,7 +568,7 @@ See this for example (1.20 was the "future release"):
 * 1.16 https://github.com/kubernetes/website/pull/25392
 * 1.17 https://github.com/kubernetes/website/pull/25391
 * 1.18 https://github.com/kubernetes/website/pull/25390
-* 1.19 https://github.com/kubernetes/website/pull/25394
+* 1.19 https://github.com/kubernetes/website/pull/25467
 
 ⚠️  DO NOT MERGE **ANY** OF THE CONFIGURATION PULL REQUESTS UNTIL THE RELEASE HAS OCCURRED
 
@@ -591,6 +606,17 @@ git remote set-url --push upstream no_push
 - Submit an issue with `tide/merge-blocker` label. Depending upon your permissions, a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with adding the label.
 - Submit a freeze announcement following our [protocols](#communicate-major-deadlines)
 
+### Merge `master`
+
+After the freeze, create a PR to merge `master` into both dev-[future-release] and release-[current-release] branches.
+After review from Sig Docs, both PRs will need to merge manually using the `Create a merge commit` method of merging.
+
+### Get Approvals for open PRs
+
+At this stage, [integration branch] PR and configuration PRs should be ready to be reviewed and approved by Sig Docs.
+Request a review for all open PRs, especially the [integration branch], to make sure it can be merged on time during the
+release day.
+
 ### Review milestones
 
 Review milestone for completion and outstanding PRs. For PRs that won't make the release, change their milestone and make sure everyone is clear.
@@ -603,11 +629,27 @@ This process takes approximately 4 hours.
 
 Coordinate with the Release Team for the exact timing. Typically the release is 'officially' built, then you merge the docs, and then you approve the blog post to "make it official". For 1.14, we merged docs at 2:30 EST and the blog was approved at 3 EST - marking the release "complete".
 
-### Merge `master`
+### Merge the integration branch
 
-- Merge master into [future release] again if any conflicts exist in the [integration branch].
-- Merge `master` back into the current release branch to keep them in sync.
-- Remove the hold from the on-hold integration PR when needed and merge into master.
+Once release management team has successfully cut the release, Docs Lead will merge the [integration branch] manually using
+the `Create a merge commit` method of merging.
+
+- Remove the hold from the on-hold integration PR when needed and merge into `master`.
+- Check the [Netlify build logs](https://app.netlify.com/sites/kubernetes-io-master-staging/deploys) to make sure the
+site builds successfully.
+- Once the site is up, validate the docs by checking the navigation, version dropdown, [generated APIs](https://kubernetes.io/docs/reference/),
+[documentation version](https://kubernetes.io/docs/home/supported-doc-versions/), and random clicks.
+
+### Publish the release blog post
+
+After validation, merge the blog post manually using the `Create a merge commit` method of merging.
+
+- Remove the hold from blog post when needed and merge into `master`.
+- Check the [Netlify build logs](https://app.netlify.com/sites/kubernetes-io-master-staging/deploys) to make sure the
+site builds successfully.
+- Navigate to the [blog page](https://kubernetes.io/blog/) to validate that release blog post is available.
+- Once confirmed, notify the release team with the link to the blog post. This will allow the Release Lead to send out
+a notification of the release to the Kubernetes Dev mailing list.
 
 ### Create release with tag
 
@@ -646,33 +688,36 @@ git push --tags origin master
 
 After creating the tags, you can create a release based off of a tag very easily. Follow the naming conventions as done before and update: https://github.com/kubernetes/website/releases
 
-- "Draft a new release"
-- Use new snapshot tag for release
+- Navigate to the [k/website releases page](https://github.com/kubernetes/website/releases)
+- Click "Draft a new release"
+- Enter the snapshot initial version tag in the "tag version" box
+- Enter "snapshot-initial-v1.20: Release 1.20" as release title and "Release 1.20 initial snapshot" as the description.
+- Click "Publish release"
+
+> Note: 1.20 should be replaced with the [future release]
 
 ### Unfreeze
 
 Unfreeze the repo as done earlier (remove the `tide/merge-blocker` label and close issue).
 
+Afterwards, submit an unfreeze announcement following our [protocols](#communicate-major-deadlines)
+
 ### Close the [future release] milestone
 
 - Merge the 4 config.toml's created as part of the sunsetting docs.
+  - Remove hold from the configuration PRs to allow merge automatically by Prow.
 - Create a PR to update k/website's release notes
-  - ex: https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG-1.14.md will be merged into content/en/docs/setup/release/notes.md
-  - ex PR: https://github.com/kubernetes/website/pull/13416
+  - ex: https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG/CHANGELOG-1.20.md will be merged into content/en/docs/setup/release/notes.md
+    - When copying the content, make sure to place it under `<!-- NEW RELEASE NOTES ENTRY -->` of notes.md and remove the `GENERATED_TOC` section from the changelog.
+  - ex PR: https://github.com/kubernetes/website/pull/25503
 - Find the open milestone for [future release] and close it.
 
 ## Post Release Verification, Cleanup, and Handoff
 These steps should be done after the launch. They require approximately 4 hours of work.
 
-### Update Release Notes Changelog
-
-Manually update the Kubernetes website release notes changelog from the actual [release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.14.md#v1140), e.g: https://github.com/kubernetes/website/pull/13416
-
-> Note: You need to wait until the release is cut to do this as it's included with the build process.
-
 ### Review Docs Process and Update Documentation
 
-### Hold a docs-only burn down
+### Hold a docs-only retro with Sig Docs
 
 - Can we improve process?
 - Can we improve playbook?
@@ -693,11 +738,11 @@ git commit --allow-empty -m "Tracking commit for v1.15 docs"
 git push -u origin dev-1.15
 ```
 
-Enable branch protection on the new `dev-` branch, and deprecate the older one; for an example, see: https://github.com/kubernetes/test-infra/pull/11984
+Enable branch protection on the new `dev-` branch, and deprecate the older one,
+e.g. [Add branch protection and milestone applier for k/website 1.21](https://github.com/kubernetes/test-infra/pull/20182/files)
 
-### Create milestone
-
-Create a milestone for NEW upcoming release. Depending on your permissions, you might need to contact a SIG Docs maintainer. Move anything missed for the current release to the new milestone.
+> Note: You can avoid creating two PRs against the `test-infra` repo by completing the
+> [Modify prow config file](#modify-prow-config-file) at the same time.
 
 ### Modify prow config file
 
@@ -710,6 +755,11 @@ kubernetes/website:
 -   dev-1.19: 1.19
 +   dev-1.20: 1.20
 ```
+
+
+### Create milestone
+
+Create a milestone for NEW upcoming release. Depending on your permissions, you might need to contact a SIG Docs maintainer. Move anything missed for the current release to the new milestone.
 
 ### Update Netlify
 
@@ -735,13 +785,16 @@ Announce that `[future release]` branch is open for new feature docs on slack #s
 
 - Clean Up
 ⚠️  Assign any issues / feature / PRs (that missed the release) to the new Docs Lead
-⚠️  Create a PR to remove shadows from [milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/)
-    - The lead must stay in the list until the `[current release]` website version is officially supported
 
-### Remove the temporary write access to website repo
+### Clean up access
 
-Create a PR against [kubernetes/org](https://github.com/kubernetes/org) repo to **remove** current Docs Lead from the
-[website-maintainers](https://github.com/orgs/kubernetes/teams/website-maintainers) team.
+⚠️  Create a PR against [kubernetes/org](https://github.com/kubernetes/org) repo to **remove** current Docs Lead from
+the [website-maintainers](https://github.com/orgs/kubernetes/teams/website-maintainers) team and to **remove** current
+Docs shadows from [milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/),
+e.g., [Remove 1.20 shadows from sig docs teams](https://github.com/kubernetes/org/pull/2377)
+
+- The current lead must stay in the milestone maintainers list until the `[current release]` website version is officially supported.
+- The future lead must stay in the milestone maintainers list to prepare for the next release.
 
 ## Celebrate!
 YOU MADE IT! 🎉 Celebrate a job well done, keep an eye out for anything on fire, and begin to relax!
