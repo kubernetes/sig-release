@@ -570,6 +570,13 @@ See this for example (1.20 was the "future release"):
 * 1.18 https://github.com/kubernetes/website/pull/25390
 * 1.19 https://github.com/kubernetes/website/pull/25467
 
+Changes required:
+- Set `latest` to the [future release] version
+- Update `fullversion` and `githubbranch` to the latest patched version of the corresponding release
+- Update the list of versions to include the [future release] and remove the oldest release
+- Set `deprecated` to `true`
+- For each previous release, update the patch version to the latest patch version available
+
 ⚠️  DO NOT MERGE **ANY** OF THE CONFIGURATION PULL REQUESTS UNTIL THE RELEASE HAS OCCURRED
 
 ### Update the site configuration files for future release
