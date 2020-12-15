@@ -31,6 +31,7 @@ For each release, the schedule with deliverables is added to the release directo
     - [Generate the reference documentation](#generate-the-reference-documentation)
     - [Update minor version on API index page](#update-minor-version-on-api-index-page)
     - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
+    - [Touch base with the release communications team](#touch-base-with-the-release-communications-team)
 - [Release Week (Week 12)](#release-week-week-12)
     - [Create the release branch](#create-the-release-branch)
     - [Update Netlify](#update-netlify)
@@ -52,6 +53,7 @@ For each release, the schedule with deliverables is added to the release directo
     - [Hold a docs-only retro with Sig Docs](#hold-a-docs-only-retro-with-sig-docs)
 - [Prepare the Next Docs Lead for Success](#prepare-the-next-docs-lead-for-success)
     - [Create branches](#create-branches)
+    - [Enable branch protection](#enable-branch-protection)
     - [Create milestone](#create-milestone)
     - [Update Netlify](#update-netlify)
     - [Update Slack](#update-slack)
@@ -745,8 +747,10 @@ git commit --allow-empty -m "Tracking commit for v1.15 docs"
 git push -u origin dev-1.15
 ```
 
-Enable branch protection on the new `dev-` branch, and deprecate the older one,
-e.g. [Add branch protection and milestone applier for k/website 1.21](https://github.com/kubernetes/test-infra/pull/20182/files)
+### Enable branch protection
+
+Enable branch protection on the new release branch, e.g.
+[Add branch protection and milestone applier for k/website 1.21](https://github.com/kubernetes/test-infra/pull/20182/files)
 
 > Note: You can avoid creating two PRs against the `test-infra` repo by completing the
 > [Modify prow config file](#modify-prow-config-file) at the same time.
