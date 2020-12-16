@@ -1050,7 +1050,7 @@ Continuous integration builds have used the following versions of external depen
 
         * Kernel crash with Aufs storage driver on Debian Jessie ([#27885](https://github.com/kubernetes/kubernetes/issues/27885)) which can be identified by the [node problem detector](https://kubernetes.io/docs/tasks/debug-application-cluster/monitor-node-health/)
 
-        * Leaked File descriptors ([#275](https://github.com/docker/containerd/issues/275))
+        * Leaked File descriptors ([#275](https://github.com/moby/moby/issues/275))
 
         * Additional memory overhead per container ([#21737](https://github.com/docker/docker/issues/21737))
 
