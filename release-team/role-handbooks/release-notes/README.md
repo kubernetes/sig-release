@@ -68,7 +68,7 @@ In the first 8 weeks of the cycle, the Release Notes team should/must, attend we
 
 This period has an increase in release team meetings each week and there is also significantly more work to do to ensure the release notes are in good working order for the release.
 
-Once code freeze begins, the release notes draft is transferred to a Google Doc which is made public to the Kubernetes community. The doc will be edited by SIG leads and SIG members but will also be edited for grammar and uniform style by the release notes team. 
+Once code freeze begins, the release notes draft is transferred to a Google Doc which is made public to the Kubernetes community. The doc will be edited by SIG leads and SIG members but the team will also ensure proper grammar and uniform style in accordance to the [Kuberentes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
 
 The Release Notes team should use the [template](relnotes-template.md) to organize the raw generated release notes in the Google doc as best as possible and help to guide SIG leads and members in their further editing of the release notes. The final edited release notes should follow this template. 
 
@@ -147,8 +147,7 @@ Around Code Freeze, the release notes team will get in touch with the SIG Leads 
 If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberty in completing the notes
 
 ### Clean up and edit the final document
-
-The confirmed notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used.
+The confirmed notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used. The team must make sure that the final document conforms to the [Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
 
 ### Curate the External Dependencies Section
 
@@ -224,6 +223,7 @@ Begin running release-notes tool for ongoing collection of release notes with th
 - [go-modiff](https://github.com/saschagrunert/go-modiff)
 - [Hackmd](https://hackmd.io/)
 - [LWKD](http://lwkd.info) *(consider contributing to LWKD as part of your role)*
+- [Kubernetes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/)
 
 ## TODOs
 
