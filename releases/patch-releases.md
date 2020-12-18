@@ -55,23 +55,25 @@ releases may also occur in between these.
 
 ### 1.20
 
-Next patch release is **1.20.1**
+Next patch release is **1.20.2**
 
 End of Life for **1.20** is **2021-12-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
-| 1.20.1        | 2021-01-08           | 2021-01-13  |
+| 1.20.2        | 2021-01-08           | 2021-01-13  |
+| 1.20.1        | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 
 ### 1.19
 
-Next patch release is **1.19.6**
+Next patch release is **1.19.7**
 
 End of Life for **1.19** is **2021-09-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
-| 1.19.6        | 2021-01-08           | 2021-01-13  |
+| 1.19.7        | 2021-01-08           | 2021-01-13  |
+| 1.19.6        | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 | 1.19.5        | 2020-12-04           | 2020-12-09  |
 | 1.19.4        | 2020-11-06           | 2020-11-11  |
 | 1.19.3        | 2020-10-09           | 2020-10-14  |
@@ -80,13 +82,14 @@ End of Life for **1.19** is **2021-09-30**
 
 ### 1.18
 
-Next patch release is **1.18.14**
+Next patch release is **1.18.15**
 
 End of Life for **1.18** is **2021-04-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
-| 1.18.14       | 2021-01-08           | 2021-01-13  |
+| 1.18.15       | 2021-01-08           | 2021-01-13  |
+| 1.18.14       | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 | 1.18.13       | 2020-12-04           | 2020-12-09  |
 | 1.18.12       | N/A                  | 2020-11-12  |
 | 1.18.11       | [No-op release](https://groups.google.com/g/kubernetes-dev/c/nJix1xLQvZE)  | 2020-11-11  |
@@ -103,13 +106,14 @@ End of Life for **1.18** is **2021-04-30**
 
 ### 1.17
 
-Next patch release is **1.17.16**
+Next patch release is **1.17.17**
 
 End of Life for **1.17** is **2021-01-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
-| 1.17.16       | 2021-01-08 | 2021-01-13  |
+| 1.17.17       | 2021-01-08 | 2021-01-13  |
+| 1.17.16       | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 | 1.17.15       | 2020-12-04 | 2020-12-09  |
 | 1.17.14       | 2020-11-06 | 2020-11-11  |
 | 1.17.13       | 2020-10-09 | 2020-10-14  |
