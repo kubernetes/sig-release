@@ -1,16 +1,22 @@
 schedules:
 - release: 1.20
-  next: 1.20.1
+  next: 1.20.2
   cherryPickDeadline: 2021-01-08
   targetDate: 2021-01-13
   endOfLifeDate: 2021-12-30
   previousPatches:
+    - release: 1.20.1
+      cherryPickDeadline: "Tagging Issue https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA"
+      targetDate: 2020-12-18
 - release: 1.19
-  next: 1.19.6
+  next: 1.19.7
   cherryPickDeadline: 2021-01-08
   targetDate: 2021-01-13
   endOfLifeDate: 2021-09-30
   previousPatches:
+    - release: 1.19.6
+      cherryPickDeadline: "Tagging Issue https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA"
+      targetDate: 2020-12-18
     - release: 1.19.5
       cherryPickDeadline: 2020-12-04
       targetDate: 2020-12-09
@@ -27,11 +33,14 @@ schedules:
       cherryPickDeadline: 2020-09-04
       targetDate: 2020-09-09
 - release: 1.18
-  next: 1.18.14
+  next: 1.18.15
   cherryPickDeadline: 2021-01-08
   targetDate: 2021-01-13
   endOfLifeDate: 2021-04-30
   previousPatches:
+    - release: 1.18.14
+      cherryPickDeadline: "Tagging Issue https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA"
+      targetDate: 2020-12-18
     - release: 1.18.13
       cherryPickDeadline: 2020-12-04
       targetDate: 2020-12-09
@@ -72,11 +81,14 @@ schedules:
       cherryPickDeadline: 2020-04-06
       targetDate: 2020-04-08
 - release: 1.17
-  next: 1.17.16
+  next: 1.17.17
   cherryPickDeadline: 2021-01-08
   targetDate: 2021-01-13
   endOfLifeDate: 2021-01-30
   previousPatches:
+    - release: 1.17.16
+      cherryPickDeadline: "Tagging Issue https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA"
+      targetDate: 2020-12-18
     - release: 1.17.15
       cherryPickDeadline: 2020-12-04
       targetDate: 2020-12-09
