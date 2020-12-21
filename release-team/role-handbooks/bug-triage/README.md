@@ -94,7 +94,7 @@ The Bug Triage role relates to both the Enhancements and CI Signal roles. Unders
 
 Before starting, the Bug Triage members should refer to the following guides to get familiar with used labels:
 - [the documentation for issue `kind` labels](https://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label)
-- [the documentation for defining priority and `priority` labels](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#define-priority).
+- [the documentation for defining priority and `priority` labels](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#step-three-define-priority).
 
 ### How to Escalate
 
