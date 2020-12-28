@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 1.20 Release Information"
-weight: 98
+weight: 10
 slug: "release"
 aliases: [ "/release" ]
 description: |
