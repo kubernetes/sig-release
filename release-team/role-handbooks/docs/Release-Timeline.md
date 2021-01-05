@@ -290,12 +290,16 @@ doc ready to be reviewed, e.g:
 > to get your PR ready for review before < PR ready for review deadline >. Thank you!
 
 #### Before the PRs Ready to Merge Deadline
-After the PR ready for review deadline, reach out to all open/tracked doc PRs to remind the PR owners to get docs review
-and if needed, technical review, e.g:
+After the PR ready for review deadline, reach out to all open/tracked doc PRs to remind the PR owners to get docs reviewed, e.g:
 
-> Hello < tag doc owner(s) > :wave:, a friendly reminder that this PR needs both tech and doc review by < docs complete deadline >
-> to get this into the release. Please reach out to required SIGs to get their review. Thank you!
+> Hello < tag doc owner(s) > :wave:, a friendly reminder that this PR needs a doc review by < docs complete deadline > to get this
+> into the release. Please reach out to required SIGs to get their review. Thank you!
 
+For a technical review, reach out to the KEP reviewers and approvers. KEP reviewers and approvers are usually listed in the
+[kep.yaml e.g.](https://github.com/kubernetes/enhancements/blob/master/keps/sig-architecture/1194-prod-readiness/kep.yaml)
+
+> Hello < tag KEP reviewer(s) / approver(s) > :wave: please provide a technical review for this PR by < docs complete deadline >
+> to get this into the release. Thank you!
 
 ### Reach out to release notes team
 Reach out to release notes team to see if there's anything that might need docs that isn't already clearly known, e.g:
@@ -334,11 +338,13 @@ git commit -m "Merge master into dev-[future release] to keep in sync"
 git push origin merged-master-dev-[future release]
 ```
 
-Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-master-dev-[future release]`. e.g., [merge master into future release](https://github.com/kubernetes/website/pull/16225).
-
 You may need to fix conflicts manually. If somebody has improved a page on `master`, and at the same time it has been updated in the dev branch for the next release, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
 
 When you have completed resolving the differences manually, run `git merge --continue` to complete the merge. Then carry on from step 5.
+
+Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-master-dev-[future release]` by changing the
+`base` to `dev-[future-release]` when creating the PR.
+e.g. [Merge master into future release](https://github.com/kubernetes/website/pull/16225).
 
 ⚠️  **Ensure the PR is passing tests on GitHub**.
 
@@ -391,6 +397,7 @@ Also review each PR for:
 - Check that the KEP / enhancement is likely to land in `[future release]`.
 - Review PR commit histories, and make sure that PR commit histories contain only changes to files. It's especially important to **avoid revert commits**. Encourage developers to rebase any PRs with complicated commit histories.
 - Check that the PR has a technical LGTM.
+- KEP reviewers and approvers can provide a technical review or delegate appropriatley. KEP reviewers and approvers are usually listed in the [kep.yaml e.g.](https://github.com/kubernetes/enhancements/blob/master/keps/sig-architecture/1194-prod-readiness/kep.yaml)
 - If no LGTM, assign `sig/*` labels (listed in the enhancement tracking spreadsheet) to help find technical reviewers.
 
 #### Style Guide Checklist (High to Low Level)
