@@ -36,6 +36,7 @@ aliases:
     - jeremyrickard # subproject owner / 1.20 RT Lead
     - justaugustus # subproject owner
     - onlydole # subproject owner / 1.19 RT Lead
+    - palnabarun # subproject owner / 1.21 RT Lead
     - tpepper # subproject owner
   build-admins:
     - amwat
@@ -45,36 +46,42 @@ aliases:
   release-team-lead-role:
     - guineveresaenger # 1.17 RT Lead
     - alejandrox1 # 1.18 RT Lead
-    - onlydole # 1.19 RT Lead
-    - lachie83 # 1.20 Emeritus Adviser
+    - onlydole # 1.19 RT Lead / 1.21 Emeritus Advisor
     - jeremyrickard # 1.20 RT Lead
+    - palnabarun # 1.21 RT Lead
   ci-signal-role:
     - alenkacz # 1.17
     - droslean # 1.18
     - hasheddan # 1.19
     - RobertKielty # 1.20
+    - thejoycekung # 1.21
   enhancements-role:
     - mrbobbytables # 1.17
     - jeremyrickard # 1.18
     - palnabarun # 1.19
     - kikisdeliveryservice # 1.20
+    - annajung # 1.21
   bug-triage-role:
     - josiahbjorgaard # 1.17
     - smourapina # 1.18
     - markyjackson-taulia # 1.19
     - bai # 1.20
+    - erismaster # 1.21
   docs-role:
     - daminisatya # 1.17
     - VineethReddy02 # 1.18
     - savitharaghunathan # 1.19
     - annajung # 1.20
+    - reylejano # 1.21
   release-notes-role:
     - cartyc # 1.17
     - Evillgenius75 # 1.18
     - puerco # 1.19
     - JamesLaverack # 1.20
+    - wilsonehusin # 1.21
   communications-role:
     - rawkode # 1.17
     - karenhchu # 1.18
     - mkorbi # 1.19
     - jrsapi # 1.20
+    - divya-mohan0209 # 1.21
