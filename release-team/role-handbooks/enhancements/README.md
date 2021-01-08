@@ -61,9 +61,8 @@ The shadows should be selected keeping in mind that one of them may eventually b
 
 Ensure that the previous Enhancements Lead has given (or facilitated getting) you access to:
 - GitHub teams
-  - enhancements (This group should be used for Enhancement Subproject related pinging only and not for Release Team Enhancements Group)
-  - milestone-maintainers
-- OWNERS_ALIASES (as `enhancements` in [kubernetes/enhancements][k/enhancements] repo)
+  - [enhancements](https://git.k8s.io/org/config/kubernetes/sig-architecture/teams.yaml) (This group should be used for Enhancement Subproject related pinging only and not for Release Team Enhancements Group)
+  - [milestone-maintainers](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
 - Access to the previous Kubernetes Release Enhancements Tracking Sheet.
 
 ## Process
