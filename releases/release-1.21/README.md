@@ -39,14 +39,12 @@ The 1.21 release cycle is proposed as follows:
 - **Monday, January 11th**: Week 1 - Release cycle begins
 - **Tuesday, February 9th**: Week 5 - [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Tuesday, March 9th**: Week 9 - [Code Freeze](../release_phases.md#code-freeze)
-- **TBC**: TBC - [Test Freeze](../release_phases.md#test-freeze)
-- **Wednesday, March 31st**: TBC - Docs must be completed and reviewed
+- **Wednesday, March 24**: Week 11 - [Test Freeze](../release_phases.md#test-freeze)
+- **Wednesday, March 31st**: Week 12 - Docs must be completed and reviewed
 - **Thursday, April 8th**: Week 13 - Kubernetes v1.21.0 released
-- **TBC**: TBC - Release Retrospective
+- **Thursday, April 15th**: Week 14 - Release Retrospective
 
 ## Timeline
-
-> The below schedule is tentative and would be finalized by Thursday, January 14.
 
 | **What** | **Who** | **When** | **WEEK** | **CI SIGNAL** |
 |---|---|---|---|---|
@@ -75,7 +73,7 @@ The 1.21 release cycle is proposed as follows:
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Wed March 31 | week 12 | |
 | **v1.21.0 released** | Branch Manager | Thu April 8 | week 13 | |
 | **[Thaw]** | Branch Manager | Thu April 8 | week 13 | |
-| Release retrospective | Community | TBC | TBC | |
+| Release retrospective | Community | Thu April 15 | Week 14 | |
 
 ## Phases
 
