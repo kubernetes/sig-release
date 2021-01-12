@@ -40,7 +40,7 @@ The 1.21 release cycle is proposed as follows:
 - **Tuesday, February 9th**: Week 5 - [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Tuesday, March 9th**: Week 9 - [Code Freeze](../release_phases.md#code-freeze)
 - **TBC**: TBC - [Test Freeze](../release_phases.md#test-freeze)
-- **TBC**: TBC - Docs must be completed and reviewed
+- **Wednesday, March 31st**: TBC - Docs must be completed and reviewed
 - **Thursday, April 8th**: Week 13 - Kubernetes v1.21.0 released
 - **TBC**: TBC - Release Retrospective
 
@@ -64,13 +64,13 @@ The 1.21 release cycle is proposed as follows:
 | **Call for [Exceptions][Exception]** | Lead | Mon March 1 | | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon March 1 | | |
 | 1.21.0-beta.1 released | Branch Manager | TBC | | |
-| Docs deadline - Open placeholder PRs | Docs Lead | TBC | | |
 | **Begin [Code Freeze]** (EOD PST) | Branch Manager | Tue March 9 | week 9 | |
 | Burndown Meetings daily| Lead | Mon March 15 | week 10 | |
+| Docs deadline - Open placeholder PRs | Docs Lead | Tuesday March 16 | Week 10 | |
 | 1.21.0-beta.2 released | Branch Manager | TBC | | |
-| Docs deadline - PRs ready for review | Docs Lead | TBC | TBC | |
+| Docs deadline - PRs ready for review | Docs Lead | Wednesday March 24 | Week 11 | |
 | **[Test Freeze]** (EOD PST) | Branch Manager | TBC | |
-| Docs complete - All PRs reviewed and ready to merge | Docs Lead | TBC | TBC | |
+| Docs complete - All PRs reviewed and ready to merge | Docs Lead | Wednesday March 31 | Week 12 | |
 | release-1.21 branch created | Branch Manager | TBC | | |
 | release-1.21 jobs created | Branch Manager | TBC | | |
 | 1.21.0-rc.0 released | Branch Manager | TBC | | |
