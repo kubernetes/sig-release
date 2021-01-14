@@ -1,56 +1,62 @@
-# Branch Manager Handbook <!-- omit in toc -->
+# Branch Manager Handbook
 
-- [Content Notice](#content-notice)
-- [Overview](#overview)
-  - [Conventions](#conventions)
-- [Prerequisites](#prerequisites)
-  - [Branch Management Onboarding](#branch-management-onboarding)
-  - [Machine setup](#machine-setup)
-    - [Operating System](#operating-system)
-    - [Release tooling](#release-tooling)
-    - [Google Cloud SDK](#google-cloud-sdk)
-    - [Sending mail](#sending-mail)
-    - [Skopeo](#skopeo)
-- [Releases Management](#releases-management)
-  - [Alpha Releases](#alpha-releases)
-    - [Alpha Stage](#alpha-stage)
-      - [krel stage](#krel-stage)
-    - [Alpha Release](#alpha-release)
-      - [krel release](#krel-release)
-      - [Mock vs nomock](#mock-vs-nomock)
-  - [Beta Releases](#beta-releases)
-  - [Release Candidates](#release-candidates)
-  - [Official Releases](#official-releases)
-    - [Security fixes](#security-fixes)
-    - [Debian and RPM Packaging](#debian-and-rpm-packaging)
-    - [Release Validation](#release-validation)
-  - [Post-release Activities](#post-release-activities)
-    - [Update kubekins-e2e variants](#update-kubekins-e2e-variants)
-    - [Cut next alpha](#cut-next-alpha)
-- [Branch Management](#branch-management)
-  - [Branch Creation](#branch-creation)
-    - [During the release creation](#during-the-release-creation)
-    - [After the release creation](#after-the-release-creation)
-  - [Update test-infra configurations](#update-test-infra-configurations)
-    - [Update Slack exempt_branches](#update-slack-exempt_branches)
-    - [Update milestone appliers](#update-milestone-appliers)
-    - [Update milestone requirements](#update-milestone-requirements)
-    - [Update e2e variants](#update-e2e-variants)
-    - [Generate release branch jobs](#generate-release-branch-jobs)
-  - [Configure Merge Automation](#configure-merge-automation)
-    - [Tide](#tide)
-    - [Code Freeze](#code-freeze)
-    - [Code Thaw](#code-thaw)
-  - [Branch Fast Forward](#branch-fast-forward)
-  - [Reverts](#reverts)
-  - [Cherry Picks](#cherry-picks)
-- [Staging Repositories](#staging-repositories)
-- [Debugging](#debugging)
-- [Search past builds](#search-past-builds)
-    - [Limitation](#limitation)
-- [References](#references)
-  - [Test Infra references](#test-infra-references)
-- [Background information](#background-information)
+- [Branch Manager Handbook <!-- omit in toc -->](#branch-manager-handbook-)
+  - [Content Notice](#content-notice)
+  - [Overview](#overview)
+    - [Conventions](#conventions)
+  - [Prerequisites](#prerequisites)
+    - [Branch Management Onboarding](#branch-management-onboarding)
+    - [Machine setup](#machine-setup)
+      - [Operating System](#operating-system)
+      - [Release tooling](#release-tooling)
+      - [Google Cloud SDK](#google-cloud-sdk)
+      - [Sending mail](#sending-mail)
+      - [Skopeo](#skopeo)
+  - [Releases Management](#releases-management)
+    - [Creating and managing the Release Issue](#creating-and-managing-the-release-issue)
+      - [Testgrid Screenshots](#testgrid-screenshots)
+      - [Adding data about the Cloud Build Jobs](#adding-data-about-the-cloud-build-jobs)
+      - [Closing the Issue](#closing-the-issue)
+    - [Alpha Releases](#alpha-releases)
+      - [Alpha Stage](#alpha-stage)
+        - [krel stage](#krel-stage)
+      - [Alpha Release](#alpha-release)
+        - [krel release](#krel-release)
+        - [Mock vs nomock](#mock-vs-nomock)
+    - [Beta Releases](#beta-releases)
+    - [Release Candidates](#release-candidates)
+    - [Official Releases](#official-releases)
+      - [Security fixes](#security-fixes)
+      - [Debian and RPM Packaging](#debian-and-rpm-packaging)
+      - [Release Validation](#release-validation)
+    - [Post-release Activities](#post-release-activities)
+      - [Update kubekins-e2e variants](#update-kubekins-e2e-variants)
+      - [Cut next alpha](#cut-next-alpha)
+  - [Branch Management](#branch-management)
+    - [Branch Creation](#branch-creation)
+      - [During the release creation](#during-the-release-creation)
+      - [After the release creation](#after-the-release-creation)
+    - [Update test-infra configurations](#update-test-infra-configurations)
+      - [Update Slack exempt_branches](#update-slack-exempt_branches)
+      - [Update milestone appliers](#update-milestone-appliers)
+      - [Update milestone requirements](#update-milestone-requirements)
+      - [Update e2e variants](#update-e2e-variants)
+      - [Generate release branch jobs](#generate-release-branch-jobs)
+    - [Configure Merge Automation](#configure-merge-automation)
+      - [Tide](#tide)
+      - [Code Freeze](#code-freeze)
+      - [Code Thaw](#code-thaw)
+    - [Branch Fast Forward](#branch-fast-forward)
+    - [Reverts](#reverts)
+    - [Cherry Picks](#cherry-picks)
+  - [Staging Repositories](#staging-repositories)
+  - [Debugging](#debugging)
+  - [Search past builds](#search-past-builds)
+      - [Limitation](#limitation)
+  - [References](#references)
+    - [Test Infra references](#test-infra-references)
+  - [Background information](#background-information)
+
 
 ## Content Notice
 
@@ -124,10 +130,6 @@ Building and publishing releases requires the latest revision of the release too
 ```shell
 make release-tools
 ```
-
-Additionally, the Kubernetes Release Toolbox (krel) requires the `cip-mm` tool to be present in the PATH. The `cip-mm` tool is used for promoting images/manifest. The instructions for installing it can be found in the [release image promotion document][image-promotion].
-
-<!-- TODO: Remove the cip-mm requirement once krel starts consuming it as a library. -->
 
 Release Managers primarily use an SSH key to authenticate to GitHub.
 
@@ -206,51 +208,83 @@ There are more examples of the release process under the [References](#reference
 
 It is also highly recommended to glance over the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/patch-release-team.md#release-commands-cheat-sheet).
 
-**General bookkeeping**:
+### Creating and managing the Release Issue
 
 Prior to cutting a release version, [open a "Cut a Release" issue](https://github.com/kubernetes/sig-release/issues/new?template=cut-release.md&title=Cut+1.x.y-%7Balpha%2Cbeta%2Crc%7D.z+release) on [kubernetes/sig-release](https://github.com/kubernetes/sig-release).
 
-On the issue template, there are comments describing the predefined items that need to be completed.
+On the issue template, there are comments describing the predefined items that 
+need to be completed.
+
+#### Testgrid Screenshots
 
 For the item `Screenshot unhealthy release branch testgrid boards...`:
 
-You can use the `testgridshot` tool to create screenshots of unhealthy testgrid boards. `testgridshot` also takes care of uploading the screenshots to the `k8s-staging-releng` bucket, and generating the markdown table that you can post as a comment to the issue.
+`krel testgridshot` takes care of generating screenshots of 
+[Testgrid](https://testgrid.k8s.io/) to keep as a reference of the state 
+it was in before cutting a release. This subcommand will generate images 
+of the boards and upload them to a Cloud Storage bucket, as well as the
+Markdown code.
 
-`testgridshot` is a Bash script located in the [kubernetes/release] repository. By default, it takes a screenshots of **blocking** and **informing** testgrid boards that have jobs that are **failing**. If you want to customize this, open the script in your preferred text editor and see the comment at the beginning of the script for possible customizations.
+To invoke the subcommand, run it with the branch you are working on:
 
-The script can be invoked in the following way:
-
-```shell
-./testgridshot <release>
+```
+krel testgridshot --branch 1.20
 ```
 
-`<release>` can be in form of `1.xy` (e.g. 1.19) or `master` (used when cutting alpha releases).
+You can include other testgrid states in the output and even have krel
+autocomment the issue for you:
 
-Eventually, you may want to include **flaking** jobs in addition to the **failing** jobs. In that case, you can invoke `testgridshot` such as:
-
-```shell
-STATES='FAILING FLAKY' ./testgridshot <release>
+```
+krel testgridshot --branch 1.20 --github-issue 12345 --states=FLAKY
 ```
 
-Once the script generates the markdown table, post it as a comment on the created issue. You can take a look at the [following comment](https://github.com/kubernetes/sig-release/issues/1249#issuecomment-696702503) as an example.
+Once the script generates the Markdown table, post it as a comment on the created issue. You can take a look at the [following comment](https://github.com/kubernetes/sig-release/issues/1249#issuecomment-696702503) as an example.
 
-For the item `Collect metrics, links...`:
+#### Adding data about the Cloud Build Jobs
 
-You can post a thread in the [#release-management] Slack channel and include links to the GCP build console. You can take a look at the [following thread][example-release-thread] as an example.
+When running a release cut, you should open a thread in the 
+[#release-management][release-management-url] Slack channel and include links
+to the GCP build console. You can take a look at the 
+[following thread][example-release-thread] as an example.
 
-After the release process has been completed, you can use the `krel history` command to generate a markdown table with commands used to run the jobs, links to the GCB logs, and the information about each job.
+[release-management-url]: https://app.slack.com/client/T09NY5SBT/CJH2GBF7Y
+[example-release-thread]: https://kubernetes.slack.com/archives/CJH2GBF7Y/p1600247891103600
+
+Once mock and nomock runs are complete, data about the jobs launched must be 
+collected in the issue. These are assembled in a table and correspond to the
+`Collect metrics, links...` check mark.
+
+After the release process has been completed, get the data table by using the 
+`krel history` subcommand. It will output a markdown table with the options used 
+to run the jobs, links to the GCB logs, and the result of each run.
 
 ```shell
 krel history --branch release-1.xy --date-from <date-of-release>
 ```
+The generated table is then appended to the release issue, as it can be seen in
+the [following issue for the v1.20.0-alpha.1 release](https://github.com/kubernetes/sig-release/issues/1249#issue-705792603).
 
-_note:_ `krel history` command might require additional `gcloud` authentication. If you see an error, follow the steps mentioned in the error message to authenticate, and then re-run the command.
 
-The generated table is copied to the created issue, as it can be seen in the [following issue for the v1.20.0-alpha.1 release](https://github.com/kubernetes/sig-release/issues/1249#issue-705792603).
+__Note:__ `krel history` works using the [Default Application 
+Credentials](https://cloud.google.com/sdk/gcloud/reference/auth/application-default) 
+set in your environment. While you may be logged as a user with one or more Google
+accounts in the GCP SDK (which are used in `gsutil`, `gcloud`, etc), you need to
+make sure your user identity is set as DAC as software using the Google Cloud
+libraries uses it to authenticate.
+
+If you have not set any Default Application Credentials previously, krel will notify
+you. If you have another user or a service account you will simply get an
+authentication error.
+
+Use the following command to start the authorization flow to set your default credentials:
+
+```shell
+gcloud auth application-default login
+```
+
+#### Closing the Issue
 
 After having thoroughly read the section on cutting a release version of the handbook, and that all items on the checklist have completed (you may include notes on events that was unique to cutting that release version as comments), close the issue with `/close` as a comment the issue thread.
-
-[example-release-thread]: https://kubernetes.slack.com/archives/CJH2GBF7Y/p1600247891103600
 
 ### Alpha Releases
 
