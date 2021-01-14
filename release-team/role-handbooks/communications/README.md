@@ -39,7 +39,7 @@ The following groups should be members:
 * The current release cycle's Communications Lead & Comms Shadows
 * SIG Release Chairs
 
-The list hast to be rotated/actively managed every cycle.
+The list has to be rotated/actively managed every cycle. Submit a PR to update [this document](https://git.k8s.io/k8s.io/groups/groups.yaml) per the milestone activities described below.
 
 ### Slack Channel
 
