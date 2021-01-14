@@ -47,31 +47,36 @@ releases may also occur in between these.
 
 | Monthly Patch Release | Target date |
 | --- | --- |
-| January 2021 | 2021-01-13 |
 | February 2021 | 2021-02-17 |
 | March 2021 | 2021-03-17 |
+| April 2021 | 2021-04-14 |
+| May 2021 | 2021-05-12 |
+| June 2021 | 2021-06-16 |
+| July 2021 | 2021-07-14 |
 
 ## Detailed Release History for Active Branches
 
 ### 1.20
 
-Next patch release is **1.20.2**
+Next patch release is **1.20.3**
 
 End of Life for **1.20** is **2021-12-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
+| 1.20.3        | 2021-02-12           | 2021-02-17  |
 | 1.20.2        | 2021-01-08           | 2021-01-13  |
 | 1.20.1        | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 
 ### 1.19
 
-Next patch release is **1.19.7**
+Next patch release is **1.19.8**
 
 End of Life for **1.19** is **2021-09-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
+| 1.19.8        | 2021-02-12           | 2021-02-17  |
 | 1.19.7        | 2021-01-08           | 2021-01-13  |
 | 1.19.6        | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 | 1.19.5        | 2020-12-04           | 2020-12-09  |
@@ -82,12 +87,13 @@ End of Life for **1.19** is **2021-09-30**
 
 ### 1.18
 
-Next patch release is **1.18.15**
+Next patch release is **1.18.16**
 
 End of Life for **1.18** is **2021-04-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
+| 1.18.16       | 2021-02-12           | 2021-02-17  |
 | 1.18.15       | 2021-01-08           | 2021-01-13  |
 | 1.18.14       | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 | 1.18.13       | 2020-12-04           | 2020-12-09  |
@@ -104,38 +110,13 @@ End of Life for **1.18** is **2021-04-30**
 | 1.18.2        | 2020-04-13           | 2020-04-16  |
 | 1.18.1        | 2020-04-06           | 2020-04-08  |
 
-### 1.17
-
-Next patch release is **1.17.17**
-
-End of Life for **1.17** is **2021-01-30**
-
-| PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
-|--- |--- |--- |
-| 1.17.17       | 2021-01-08 | 2021-01-13  |
-| 1.17.16       | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
-| 1.17.15       | 2020-12-04 | 2020-12-09  |
-| 1.17.14       | 2020-11-06 | 2020-11-11  |
-| 1.17.13       | 2020-10-09 | 2020-10-14  |
-| 1.17.12       | 2020-09-11 | 2020-09-16  |
-| 1.17.11       | N/A | 2020-08-13  |
-| 1.17.10       | 2020-08-07 | 2020-08-12  |
-| 1.17.9        | 2020-07-10 | 2020-07-15  |
-| 1.17.8        | 2020-06-25 | 2020-06-26  |
-| 1.17.7        | 2020-06-12 | 2020-06-17  |
-| 1.17.6        | 2020-05-15 | 2020-05-20  |
-| 1.17.5        | 2020-04-13 | 2020-04-16  |
-| 1.17.4        | 2020-03-09 | 2020-03-12  |
-| 1.17.3        | 2020-02-07 | 2020-02-11  |
-| 1.17.2        | [No-op release](https://groups.google.com/d/topic/kubernetes-dev/Mhpx-loSBns/discussion) | 2020-01-21  |
-| 1.17.1        | 2020-01-10 | 2020-01-14  |
-
 ## Non-Active Branch History
 
 These releases are no longer supported.
 
 | Minor Version | Final Patch Release | EOL date |
 | --- | --- | --- |
+| 1.17 | 1.17.17 | 2021-01-13 |
 | 1.16 | 1.16.15 | 2020-09-02 |
 | 1.15 | 1.15.12 | 2020-05-06 |
 | 1.14 | 1.14.10 | 2019-12-11 |
