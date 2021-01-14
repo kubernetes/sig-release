@@ -1,19 +1,25 @@
 schedules:
 - release: 1.20
-  next: 1.20.2
-  cherryPickDeadline: 2021-01-08
-  targetDate: 2021-01-13
+  next: 1.20.3
+  cherryPickDeadline: 2021-02-12
+  targetDate: 2021-02-17
   endOfLifeDate: 2021-12-30
   previousPatches:
+    - release: 1.20.2
+      cherryPickDeadline: 2021-01-08
+      targetDate: 2021-01-13
     - release: 1.20.1
       cherryPickDeadline: "Tagging Issue https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA"
       targetDate: 2020-12-18
 - release: 1.19
-  next: 1.19.7
-  cherryPickDeadline: 2021-01-08
-  targetDate: 2021-01-13
+  next: 1.19.8
+  cherryPickDeadline: 2021-02-12
+  targetDate: 2021-02-17
   endOfLifeDate: 2021-09-30
   previousPatches:
+    - release: 1.19.7
+      cherryPickDeadline: 2021-01-08
+      targetDate: 2021-01-13
     - release: 1.19.6
       cherryPickDeadline: "Tagging Issue https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA"
       targetDate: 2020-12-18
@@ -33,11 +39,14 @@ schedules:
       cherryPickDeadline: 2020-09-04
       targetDate: 2020-09-09
 - release: 1.18
-  next: 1.18.15
-  cherryPickDeadline: 2021-01-08
-  targetDate: 2021-01-13
+  next: 1.18.16
+  cherryPickDeadline: 2021-02-12
+  targetDate: 2021-02-17
   endOfLifeDate: 2021-04-30
   previousPatches:
+    - release: 1.18.15
+      cherryPickDeadline: 2021-01-08
+      targetDate: 2021-01-13
     - release: 1.18.14
       cherryPickDeadline: "Tagging Issue https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA"
       targetDate: 2020-12-18
@@ -80,57 +89,3 @@ schedules:
     - release: 1.18.1
       cherryPickDeadline: 2020-04-06
       targetDate: 2020-04-08
-- release: 1.17
-  next: 1.17.17
-  cherryPickDeadline: 2021-01-08
-  targetDate: 2021-01-13
-  endOfLifeDate: 2021-01-30
-  previousPatches:
-    - release: 1.17.16
-      cherryPickDeadline: "Tagging Issue https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA"
-      targetDate: 2020-12-18
-    - release: 1.17.15
-      cherryPickDeadline: 2020-12-04
-      targetDate: 2020-12-09
-    - release: 1.17.14
-      cherryPickDeadline: 2020-11-06
-      targetDate: 2020-11-11
-    - release: 1.17.13
-      cherryPickDeadline: 2020-10-09
-      targetDate: 2020-10-14
-    - release: 1.17.12
-      cherryPickDeadline: 2020-09-11
-      targetDate: 2020-09-16
-    - release: 1.17.11
-      cherryPickDeadline: "N/A"
-      targetDate: 2020-08-13
-    - release: 1.17.10
-      cherryPickDeadline: 2020-08-07
-      targetDate: 2020-08-12
-    - release: 1.17.9
-      cherryPickDeadline: 2020-07-10
-      targetDate: 2020-07-15
-    - release: 1.17.8
-      cherryPickDeadline: 2020-06-25
-      targetDate: 2020-06-26
-    - release: 1.17.7
-      cherryPickDeadline: 2020-06-12
-      targetDate: 2020-06-17
-    - release: 1.17.6
-      cherryPickDeadline: 2020-05-15
-      targetDate: 2020-05-20
-    - release: 1.17.5
-      cherryPickDeadline: 2020-04-13
-      targetDate: 2020-04-16
-    - release: 1.17.4
-      cherryPickDeadline: 2020-03-09
-      targetDate: 2020-03-12
-    - release: 1.17.3
-      cherryPickDeadline: 2020-02-07
-      targetDate: 2020-02-11
-    - release: 1.17.2
-      cherryPickDeadline: "No-op release https://groups.google.com/d/topic/kubernetes-dev/Mhpx-loSBns/discussion"
-      targetDate: 2020-01-21
-    - release: 1.17.1
-      cherryPickDeadline: 2020-01-10
-      targetDate: 2020-01-14
