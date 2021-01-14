@@ -33,8 +33,10 @@ An Enhancements Lead holds the following responsibilities:
 
 - MUST have served on the Release Team in a previous capacity, ideally as an Enhancements Shadow
 - MUST be a member of the [Release Team Google Group][rt-group]
+    - List of members for this group is managed in git. Create a [pull request](https://github.com/kubernetes/k8s.io/pull/1533) against [kuberenetes/k8s.io](https://github.com/kubernetes/k8s.io/) repo to include both Lead and Shadows under `release-team` group in [k8s.io/sig-release/group.yaml](https://github.com/kubernetes/k8s.io/blob/bd082f195599b8a86b76b0249e5f70f219f1d079/groups/sig-release/groups.yaml#L318)
 - MUST be a member of the [SIG Release Google Group][sig-release-group]
 - MUST be a member of the [SIG Architecture Google Group][sig-arch-group]
+- MUST be a member of the [Kubernetes Enhancements Google Group][enhancements-group]
 
 Helpful characteristics of an Enhancements Lead include:
 - experience with the Kubernetes community, code layout, ecosystem projects, organizational norms, governance, SIG structure, architecture, and release process
@@ -81,13 +83,20 @@ It is important that this process be followed and documentation remain up-to-dat
 
 #### Pre-Collection (Week 0)
 
-- Duplicate the previous enhancement collection spreadsheet into your own Google Drive and adjust it for the current milestone. Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements. Update the permissions on the sheet via the _Share_ settings available in the top right of the sheet: Enable anyone with the link to _view_ the sheet. Next, grant _Edit_ access to yourself, prior lead, release lead, shadows, and the [Kubernetes Release Team Google Group][rt-group] . Lastly, add _Comment_ access for the [SIG Release Google Group][sig-release-group], [SIG Docs Google Group][sig-docs-group], and [SIG Leads Google Group][sig-leads-group]. When complete, remove all currently tracked issues from both the `Enhancements` and `Docs` tabs.
-- Find Issues from previous milestone that have graduated to Stable. Remove `tracked/yes` or `tracked/no` labels. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
+- Duplicate the previous enhancement collection spreadsheet into your own Google Drive and adjust it for the current milestone. Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements. Create a free account on [bitly](https://bitly.com/) to create a shortlink for the new enhancement collection spreadsheet.
+- Clean up the spreadsheet by removing all currently tracked issues from both the `Enhancements` and `Docs` tabs
+- Update the permissions on the enhancement collection sheet
+    - Using the _Share_ settings available in the top right of the sheet, enable anyone with the link to _view_ the sheet
+    - Grant _Edit_ access to yourself (Current Enhancements lead), prior Enhancements lead, release lead, Enhancements shadows, and the [SIG Release Leads Google Group][sig-release-leads-group]
+    - Add _Comment_ access for the [SIG Release Google Group][sig-release-group], [SIG Docs Google Group][sig-docs-group], [Kubernetes Release Team Google Group][rt-group], and [SIG Leads Google Group][sig-leads-group].
+- Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking sheet to the current release page in [sig-release][sig-release]
+- Find [Issues][enhancements-issues] from previous milestone that have graduated to Stable. Remove `tracked/yes` or `tracked/no` labels. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
+- Find [Issues labeled `tracked/yes`](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+label%3Atracked%2Fyes) and change to `tracked/no` until the Enhancement is ready to be tracked for the upcoming release.
 - Close previous milestone by ensuring that there are no open issues/PRs in that milestone.
 
 #### Pre-Enhancements Freeze (Week 1)
 
-- Gather Shadows to have them read this handbook, watch the [k/enhancements][k/enhancements] repo to get notified on all issues, and give expectations on what the process looks like and their particular role. If possible, try to schedule a call with the shadows to get them accustomed to the team. This helps as a great team building exercise.
+- Gather Shadows to have them read this handbook and give expectations on what the process looks like and their particular role. If possible, try to schedule a call with the shadows to get them accustomed to the team. This helps as a great team building exercise.
 - Send an email to the [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) mailing list and a message to #chairs-and-techleads slack channel with a call for enhancements and how to opt-in to the release.
 - Verify issues have k/k PRs associated so they can be referenced and easily tracked. This is going to be critical come Enhancement Freeze and Code Freeze to see the status of the code.
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
@@ -247,7 +256,8 @@ Exception process is outlined [here](https://github.com/kubernetes/sig-release/b
 #### GitHub Notifications
 https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 
-
+[enhancements-group]: https://groups.google.com/forum/#!forum/kubernetes-keps
+[enhancements-issues]: https://github.com/kubernetes/enhancements/issues
 [k/enhancements]: https://github.com/kubernetes/enhancements
 [rt-group]: https://groups.google.com/a/kubernetes.io/g/release-team
 [rt-selection]: /README.md#release-team-selection
@@ -259,5 +269,6 @@ https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 [sig-leads-group]: https://groups.google.com/a/kubernetes.io/g/leads
 [sig-release]: https://github.com/kubernetes/community/blob/master/sig-release/README.md
 [sig-release-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+[sig-release-leads-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-release-leads
 [1.17-announcement]: https://kubernetes.io/blog/2019/12/09/kubernetes-1-17-release-announcement/
 [1.17-tracking]: https://bit.ly/k8s117-enhancement-tracking
