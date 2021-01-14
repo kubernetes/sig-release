@@ -8,7 +8,7 @@
 | Bug Triage | Derrik Campau ([@erismaster](https://github.com/erismaster) / Slack: `@dcampau`) | |
 | Docs | Rey Lejano ([@reylejano](https://github.com/reylejano) / Slack: `@rlejano`) | |
 | Release Notes | Wilson Husin ([@wilsonehusin](https://github.com/wilsonehusin) / Slack: `@wilsonehusin`) | |
-| Communications | Divya Mohan ([@divya-mohan0209](https://github.com/divya-mohan0209) / Slack: `@divya`) | |
+| Communications | Divya Mohan ([@divya-mohan0209](https://github.com/divya-mohan0209) / Slack: `@divya`) | Evelyn Cupil-Garcia ([@eve658](https://github.com/eve658) / Slack: `@Evelyn Cupil-Garcia`), Peeyush Gupta ([@pensu](https://github.com/pensu) / Slack: `@pensu91`), Justin Garrison ([@rothgar](https://github.com/rothgar) / Slack: `@rothgar`), Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`) |
 | Emeritus Adviser | Taylor Dolezal ([@onlydole](https://github.com/onlydole) / Slack: `@onlydole`) | |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
