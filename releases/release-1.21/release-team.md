@@ -3,7 +3,7 @@
 | **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
 | Lead | Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`) | Kirsten Garrison ( [@kikisdeliveryservice](https://github.com/kikisdeliveryservice) / Slack: `@oikiki`), Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan) / Slack: `@sraghunathan`), Vlad Gorodetsky ([@bai](https://github.com/bai) / Slack: `@bai`) |
-| Enhancements | Anna Jung ([@annajung](https://github.com/annajung) / Slack: `@annajung`) | |
+| Enhancements | Anna Jung ([@annajung](https://github.com/annajung) / Slack: `@annajung`) | Arun Krishnakumar ( [@arunmk](https://github.com/arunmk) / Slack: `@arunmk`), Kendall Roden ([@kendallroden](https://github.com/kendallroden) / Slack: `@keroden`), James Laverack ([@jameslaverack](https://github.com/jameslaverack) / Slack: `@james.laverack`), Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@j-dawg`) |
 | CI Signal | Joyce Kung ([@thejoycekung](https://github.com/thejoycekung) / Slack: `@jk`) | |
 | Bug Triage | Derrik Campau ([@erismaster](https://github.com/erismaster) / Slack: `@dcampau`) | |
 | Docs | Rey Lejano ([@reylejano](https://github.com/reylejano) / Slack: `@rlejano`) | |
