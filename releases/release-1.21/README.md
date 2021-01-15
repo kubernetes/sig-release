@@ -51,7 +51,6 @@ The 1.21 release cycle is proposed as follows:
 | Start of Release Cycle | Lead | Mon January 11 | week 1 | [master-blocking] |
 | Start Enhancements Tracking | Enhancements Lead | Tue January 12 | week 1 | |
 | 1.21.0-alpha.1 released | Branch Manager | Wed January 13  | week 1 | |
-| Start Release Notes Draft | Release Notes Lead | TBC | week 1 | |
 | Schedule finalized | Lead | Thurs January 14 | week 1 | |
 | Team finalized | Lead | Friday January 15 | week 1 | |
 | 1.21.0-alpha.2 released | Branch Manager | Tue January 26 | week 3 | |
@@ -70,7 +69,9 @@ The 1.21 release cycle is proposed as follows:
 | 1.21.0-rc.0 released | Branch Manager | Tue March 25 | week 11 | |
 | release-1.21 branch created | Branch Manager | Tue March 25 | week 11 | |
 | release-1.21 jobs created | Branch Manager | Tue March 25 | week 11 | |
+| Start final draft of Release Notes | Release Notes Lead | Tue March 25 | week 11 | |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Wed March 31 | week 12 | |
+| Release Notes complete - reviewed & merged to `k/sig-release` | Release Notes Lead | Mon April 5 | week 13 | |
 | **v1.21.0 released** | Branch Manager | Thu April 8 | week 13 | |
 | **[Thaw]** | Branch Manager | Thu April 8 | week 13 | |
 | Release retrospective | Community | Thu April 15 | Week 14 | |
