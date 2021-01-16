@@ -104,12 +104,33 @@ It looks like all staged files were copied to release directory, but please be a
 All contents listed below are artifacts of the [v1.20.0 release](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#v1200).
 
 ##### Content of `kubernetes-client-[system-arch].tar.gz` on example of `kubernetes-client-linux-386.tar.gz` (directories removed from list):
+
+*Summary*
+
+- Binary for `kubectl`
+
+<details><summary>Expand Contents</summary>
+<p>
+
 ```
 ➜ $ tar -ztvf kubernetes-client-linux-386.tar.gz
 -rwxr-xr-x root/root  35266560 2020-12-08 12:10 kubernetes/client/bin/kubectl
 ```
 
+</p>
+</details>
+
 ##### Content of `kubernetes-node-[system-arch].tar.gz` on example of `kubernetes-node-linux-amd64.tar.gz` (directories removed from list):
+
+*Summary*
+
+- Kubernetes source tarball
+- Binaries for `kubectl` / `kubeadm` / `kube-proxy` / `kubelet`
+- [LICENSES](https://github.com/kubernetes/kubernetes/tree/master/LICENSES)
+
+<details><summary>Expand Contents</summary>
+<p>
+
 ```
 ➜ $ tar -ztvf kubernetes-node-linux-amd64.tar.gz
 -rw-r--r-- root/root  35790270 2020-12-08 12:11 kubernetes/kubernetes-src.tar.gz
@@ -339,7 +360,22 @@ All contents listed below are artifacts of the [v1.20.0 release](https://github.
 -rw-r--r-- root/root     11463 2020-12-08 12:11 kubernetes/LICENSES/vendor/k8s.io/utils/LICENSE
 ```
 
+</p>
+</details>
+
 ##### Content of `kubernetes-server-[system-arch].tar.gz` on example of `kubernetes-server-linux-amd64.tar.gz` (directories removed from list):
+
+*Summary*
+
+- Kubernetes source tarball (`kubernetes-src.tar.gz`)
+- OCI image tarballs (`*.tar`) for `kube-proxy` / `kube-apiserver` / `kube-controller-manager` / `kube-scheduler`
+- Docker tags (`*.docker_tag`) for `kube-proxy` / `kube-apiserver` / `kube-controller-manager` / `kube-scheduler`
+- Binaries for `kube-proxy` / `kube-apiserver` / `kube-controller-manager` / `kube-scheduler` / `kubelet` / `kubeadm` / `mounter`
+- [LICENSES](https://github.com/kubernetes/kubernetes/tree/master/LICENSES)
+
+<details><summary>Expand Contents</summary>
+<p>
+
 ```
 ➜ $ tar -ztvf kubernetes-server-linux-amd64.tar.gz
 -rw-r--r-- root/root  35790270 2020-12-08 12:12 kubernetes/kubernetes-src.tar.gz
@@ -583,7 +619,16 @@ All contents listed below are artifacts of the [v1.20.0 release](https://github.
 -rw-r--r-- root/root     11463 2020-12-08 12:12 kubernetes/LICENSES/vendor/k8s.io/utils/LICENSE
 ```
 
+</p>
+</details>
+
 ##### Content of `kubernetes-test-[system-arch].tar.gz` on example of `kubernetes-test-linux-amd64.tar.gz` (directories removed from list):
+
+- Binaries for `genyaml` / `gendocs` / `e2e.test` / `go-runner` / `kubemark` / `genkubedocs` / `linkcheck` / `genswaggertypedocs` / `e2e_node.test` / `genman` / `ginkgo`
+
+<details><summary>Expand Contents</summary>
+<p>
+
 ```
 ➜ $ tar -ztvf kubernetes-test-linux-amd64.tar.gz
 -rwxr-xr-x root/root  39895040 2020-12-08 12:17 kubernetes/test/bin/genyaml
@@ -599,7 +644,18 @@ All contents listed below are artifacts of the [v1.20.0 release](https://github.
 -rwxr-xr-x root/root   7651328 2020-12-08 12:17 kubernetes/test/bin/ginkgo
 ```
 
+</p>
+</details>
+
 ##### Content of `kubernetes-manifests.tar.gz` (directories removed from list):
+
+*Summary*
+
+- `kube-system` manifests for Kubernetes distros, such as COS (see [cluster/gce/gci](https://github.com/kubernetes/kubernetes/tree/master/cluster/gce/gci) for more information)
+
+<details><summary>Expand Contents</summary>
+<p>
+
 ```
 ➜ $ tar -ztvf kubernetes-manifests.tar.gz
 -rw-r--r-- root/root      2845 2020-12-08 12:10 kubernetes/gci-trusty/glbc.manifest
@@ -742,7 +798,19 @@ All contents listed below are artifacts of the [v1.20.0 release](https://github.
 -rw-r--r-- root/root      2593 2020-12-08 11:50 kubernetes/gci-trusty/rbac/cluster-loadbalancing/glbc/roles.yaml
 ```
 
+</p>
+</details>
+
 ##### Content of `kubernetes.tar.gz` (directories removed from list):
+
+*Summary*
+
+- Various scripts, `README`'s, `OWNERS` files, `BUILD` files, `.gitignore` files, etc.
+- Source code for tools that live in `kubernetes/kubernetes`, but are not core components (e.g. binaries in `kubernetes-test` tarball)
+- [LICENSES](https://github.com/kubernetes/kubernetes/tree/master/LICENSES)
+
+<details><summary>Expand Contents</summary>
+<p>
 
 ```
 ➜ $ tar -ztvf kubernetes.tar.gz
@@ -1326,5 +1394,8 @@ lrwxrwxrwx root/root         0 2020-12-08 12:16 kubernetes/cluster/gce/cos -> gc
 -rw-r--r-- root/root     10382 2020-12-08 12:16 kubernetes/LICENSES/vendor/k8s.io/klog/v2/LICENSE
 -rw-r--r-- root/root     11463 2020-12-08 12:16 kubernetes/LICENSES/vendor/k8s.io/utils/LICENSE
 ```
+
+</p>
+</details>
 
 > Content of `kubernetes-test.tar.gz` and `kubernetes-src.tar.gz` are not present in this document because of the amount of information present inside. First contains content of https://github.com/kubernetes/kubernetes/tree/master/test + some helpers, and the second contains source code of kubernetes.
