@@ -2,9 +2,7 @@
 
 |                          	| 386 	| amd64 	| arm 	| arm64 	| ppc64le 	| s390x 	|
 |--------------------------	|:---:	|:-----:	|:---:	|:-----:	|:-------:	|:-----:	|
-| cloud-controller-manager 	|  ✅  	|   ✅   	|  ✅  	|   ✅   	|    ✅    	|   ✅   	|
 | conformance              	|  ✅  	|   ✅   	|  ✅  	|   ✅   	|    ✅    	|   ✅   	|
-| hyperkube                	|  ✅  	|   ✅   	|  ✅  	|   ✅   	|    ✅    	|   ✅   	|
 | kube-apiserver           	|  ✅  	|   ✅   	|  ✅  	|   ✅   	|    ✅    	|   ✅   	|
 | kube-controller-manager  	|  ✅  	|   ✅   	|  ✅  	|   ✅   	|    ✅    	|   ✅   	|
 | kube-proxy               	|  ✅  	|   ✅   	|  ✅  	|   ✅   	|    ✅    	|   ✅   	|
@@ -17,8 +15,6 @@
 |  | darwin/amd64 | linux/386 | linux/amd64 | linux/arm | linux/arm64 | linux/ppc64le | linux/s390x | windows/386 | windows/amd64 |
 |------------------------|------------|---------|-----------|---------|-----------|-------------|-----------|-----------|-------------|
 | apiextensions-apiserver |  |  | [binary_file]<br />sha256<br />sha512 | [binary_file]<br />sha256<br />sha512 | [binary_file]<br />sha256<br />sha512 | [binary_file]<br />sha256<br />sha512 | [binary_file]<br />sha256<br />sha512 |  |  |
-| cloud-controller-manager |  |  | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 |  |  |
-| hyperkube |  |  | [binary_file]<br />sha256<br />sha512 | [binary_file]<br />sha256<br />sha512 | [binary_file]<br />sha256<br />sha512 | [binary_file]<br />sha256<br />sha512 | [binary_file]<br />sha256<br />sha512 |  |  |
 | kube-apiserver |  |  | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 |  |  |
 | kube-controller-manager |  |  | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 |  |  |
 | kube-proxy |  |  | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 | [binary_file]<br />docker_tag<br />tar<br />sha256<br />sha512 |  | exe<br />sha256<br />sha512 |
