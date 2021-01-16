@@ -70,7 +70,7 @@ Comment: It looks like in the directory: **archive** we can find:
 - shallow copy of kubernetes repository
 
 Staged files
-It looks like all staged files vere copied to release directory, but please be aware there was no effort taken to compare them.
+It looks like all staged files were copied to release directory, but please be aware there was no effort taken to compare them.
 
 ## Packages
 
@@ -686,6 +686,4 @@ lrwxrwxrwx  0 root   root        0 Jul  5 16:37 kubernetes/cluster/gce/custom ->
 -rw-r--r--  0 root   root      146 Jul  5 16:37 kubernetes/client/README
 ```
 
-##### Content of `kubernetes-test.tar.gz` and `kubernetes-src.tar.gz` are not present in this document
-because of the amount of information present inside. First contains content of https://github.com/kubernetes/kubernetes/tree/master/test + some helpers,
-and the second contains source code of kubernetes.
+> Content of `kubernetes-test.tar.gz` and `kubernetes-src.tar.gz` are not present in this document because of the amount of information present inside. First contains content of https://github.com/kubernetes/kubernetes/tree/master/test + some helpers, and the second contains source code of kubernetes.
