@@ -1,0 +1,5 @@
+pr: 97336
+releasenote:
+  kinds:
+  - bug
+  - deprecation

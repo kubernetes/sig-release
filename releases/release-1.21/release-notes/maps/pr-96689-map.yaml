@@ -1,0 +1,3 @@
+pr: 96689
+releasenote:
+  text: Ensure all vSphere nodes are are tracked by volume attach-detach controller
