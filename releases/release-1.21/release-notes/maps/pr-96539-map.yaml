@@ -1,0 +1,4 @@
+pr: 96539
+releasenote:
+  text: The `AttachVolumeLimit` feature gate (GA since v1.17) has been removed and
+    now unconditionally enabled.

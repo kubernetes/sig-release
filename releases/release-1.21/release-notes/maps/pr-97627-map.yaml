@@ -1,0 +1,3 @@
+pr: 97627
+releasenote:
+  text: 'kubeadm: deprecated command "alpha selfhosting pivot" is now removed.'

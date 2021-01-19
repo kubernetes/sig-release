@@ -1,0 +1,3 @@
+pr: 94858
+releasenote:
+  text: Ensure empty string annotations are copied over in rollbacks.

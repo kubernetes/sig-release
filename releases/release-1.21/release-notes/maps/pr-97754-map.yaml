@@ -1,0 +1,3 @@
+pr: 97754
+releasenote:
+  text: Fix kubectl-convert failure on using known apiVersion.
