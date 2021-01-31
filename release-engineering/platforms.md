@@ -43,12 +43,14 @@ platform.
 
 ### Tier 3
 
-Tier 3 platforms are those which the Kubernetes codebase has functional support
-for, but which are not built or tested automatically. This means the binary
-artifacts may not work as intended.
+Tier 3 platforms are those that have been demonstrated to work and have a
+documented build process that is available to anyone in the community. There is
+no guarantee that builds will continue to work, and the platform may be dropped
+if documentation is not maintained.
 
 - Official builds are not available.
 - Automated testing is not setup.
+- Documentation on how to build for the platform is available.
 
 ## Currently available Kubernetes platforms
 
@@ -65,4 +67,3 @@ The following table defines the current setup of available Kubernetes platforms:
 | `s390x-linux`   |                    | :heavy_check_mark: |                    |
 | `386-windows`   |                    | :heavy_check_mark: |                    |
 | `amd64-windows` |                    | :heavy_check_mark: |                    |
-| otherwise       |                    |                    | :heavy_check_mark: |
