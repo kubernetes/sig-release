@@ -191,6 +191,7 @@ GitHub team: [@kubernetes/sig-release-leads](https://github.com/orgs/kubernetes/
 ### Technical Leads
 
 - Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
+- Jeremy Rickard )([@jeremyrickard](https://github.com/jeremyrickard))
 - Jorge Alarcon ([@alejandrox1](https://github.com/alejandrox1))
 
 ---
