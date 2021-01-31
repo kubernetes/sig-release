@@ -18,7 +18,6 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 | Image Name | Reasons for exception |
 |---|---|
 | [debian-iptables] | Needed to supported images that require `iptables` |
-| [kube-controller-manager][core-images] | [Flexvolume master driver is blocking controller-manager from moving to distroless](https://github.com/kubernetes/kubernetes/issues/78737) |
 
 ### Release: `debian-iptables`
 
