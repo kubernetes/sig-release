@@ -1,6 +1,6 @@
 pr: 97096
 releasenote:
-  text: Remove deprecated mixed procotol annotation on Azure provider. Use `MixedProtocolLBService`
+  text: Remove deprecated mixed protocol annotation on Azure provider. Use `MixedProtocolLBService`
     instead.
   kinds:
   - cleanup

@@ -1935,8 +1935,8 @@
   },
   "94728": {
     "commit": "28fc772d3609694aff8c0704a39185227c7ae939",
-    "text": "Fix regression on `kubectl portforward` when TCP and UCP services were configured on the same port.",
-    "markdown": "Fix regression on `kubectl portforward` when TCP and UCP services were configured on the same port. ([#94728](https://github.com/kubernetes/kubernetes/pull/94728), [@amorenoz](https://github.com/amorenoz))",
+    "text": "Fix regression on `kubectl port-forward` when TCP and UCP services were configured on the same port.",
+    "markdown": "Fix regression on `kubectl port-forward` when TCP and UCP services were configured on the same port. ([#94728](https://github.com/kubernetes/kubernetes/pull/94728), [@amorenoz](https://github.com/amorenoz))",
     "author": "amorenoz",
     "author_url": "https://github.com/amorenoz",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/94728",
@@ -2874,8 +2874,8 @@
   },
   "95505": {
     "commit": "0900340b981755ab253f191b2a7671f4601ad191",
-    "text": "Windows hyper-v container featuregate is deprecated in 1.20 and will be removed in 1.21",
-    "markdown": "Windows hyper-v container featuregate is deprecated in 1.20 and will be removed in 1.21 ([#95505](https://github.com/kubernetes/kubernetes/pull/95505), [@wawa0210](https://github.com/wawa0210)) [SIG Node and Windows]",
+    "text": "Windows hyper-v container feature gate is deprecated in 1.20 and will be removed in 1.21",
+    "markdown": "Windows hyper-v container feature gate is deprecated in 1.20 and will be removed in 1.21 ([#95505](https://github.com/kubernetes/kubernetes/pull/95505), [@wawa0210](https://github.com/wawa0210)) [SIG Node and Windows]",
     "author": "wawa0210",
     "author_url": "https://github.com/wawa0210",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/95505",

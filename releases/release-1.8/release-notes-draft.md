@@ -399,7 +399,7 @@ kind.
   spec with the `--serviceaccount` flag.
 
 - `kubectl proxy` now correctly handles the `exec`, `attach`, and
-  `portforward` commands.  You must pass `--disable-filter` to the command to allow these commands.
+  `port-forward` commands.  You must pass `--disable-filter` to the command to allow these commands.
 
 - Added `cronjobs.batch` to "all", so that `kubectl get all` returns them.
 
