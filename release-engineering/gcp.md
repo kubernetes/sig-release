@@ -38,6 +38,7 @@ Mail to the groups below will be ignored. Please instead use the [contact groups
 | `k8s-staging-release-test` | Deprecated | Kubernetes | Release Engineering | Test staging project for Release Engineering (K8s Infra) |
 | `k8s-staging-releng` | Active | Kubernetes | Release Engineering | Staging project for Release Engineering tooling (K8s Infra) |
 | `k8s-releng-prod` | Active | Kubernetes | Release Engineering | Production project for Release Engineering (K8s Infra) |
+| `k8s-staging-releng-test` | Active | Kubernetes | Release Engineering | Staging project for Release Engineering build images (K8s Infra) |
 
 ## KMS
 
