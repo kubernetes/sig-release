@@ -58,7 +58,7 @@ Compared to other release team roles, release notes is one of the least time int
 
 #### Onboarding Session (week 1) ~1 hour
 
-In the first week of the release cycle, the Release Notes Lead will organize a onboarding session with the shadows to go over general responsibilities and expectations.
+In the first week of the release cycle, the Release Notes Lead will organize an onboarding session with the shadows to go over general responsibilities and expectations.
 
 #### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
 
@@ -68,7 +68,7 @@ In the first 8 weeks of the cycle, the Release Notes team should/must, attend we
 
 This period has an increase in release team meetings each week and there is also significantly more work to do to ensure the release notes are in good working order for the release.
 
-Once code freeze begins, the release notes draft is transferred to a Google Doc which is made public to the Kubernetes community. The doc will be edited by SIG leads and SIG members but the team will also ensure proper grammar and uniform style in accordance to the [Kuberentes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
+Once code freeze begins, the release notes draft is transferred to a Google Doc which is made public to the Kubernetes community. The doc will be edited by SIG leads and SIG members but the team will also ensure proper grammar and uniform style in accordance with the [Kuberentes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
 
 The Release Notes team should use the [template](relnotes-template.md) to organize the raw generated release notes in the Google doc as best as possible and help to guide SIG leads and members in their further editing of the release notes. The final edited release notes should follow this template. 
 
@@ -82,7 +82,7 @@ As well as becoming a member of the kubernetes GitHub organization as discussed 
 
 #### Setup krel
 
-Install Go in your machine and follow the [instructions to build the release tools](https://github.com/kubernetes/release/tree/master/docs/krel#installation) in your machine. Check the system requirements in the krel documentation.   
+[Install Go](https://golang.org/doc/install) in your machine and follow the [instructions to build the release tools](https://github.com/kubernetes/release/tree/master/docs/krel#installation) in your machine. Check the system requirements in the krel documentation.   
 
 #### Get a GitHub token
 
@@ -109,16 +109,15 @@ The main task of the Release Notes team is the generation of the release notes d
 
 At least one member of the Release Notes Team should be responsible for [setting up](https://github.com/kubernetes/release/tree/master/docs/krel#installation) and [running](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) the release-notes subcommand of krel to generate both versions of the release notes after each Patch Release:
 
-1. Update the release notes draft, a markdown file which will become the final document which will encompass all release notes written by contributors during the current release cycle. See previous drafts for versions [v1.18](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.18/release-notes-draft.md), [v1.17](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.17/release-notes-draft.md) or [v1.16](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.16/release-notes-draft.md).
+1. Update the release notes draft, a markdown file which will become the final document which will encompass all release notes written by contributors during the current release cycle. See previous drafts for versions [v1.20](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.20/release-notes-draft.md), [v1.19](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.18/release-notes-draft.md) or [v1.18](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.19/release-notes-draft.md).
 
-2. The team is responsible for adding Patch Release (e.g. 1.15.1, etc.) notes to the release notes website at https://relnotes.k8s.io. The krel release notes subcommand will automatically generate the necessary JSON files and patch the release notes website source.
+2. The team is responsible for adding Patch Release (e.g. [1.20.1](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#v1201), etc.) notes to the release notes website at https://relnotes.k8s.io. The krel release notes subcommand will automatically generate the necessary JSON files and patch the release notes website source.
 
 Detailed instructions for generating the release notes bundles are in the [krel release-notes subcommand documentation](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
 
 ### Periodically review and fix new release notes
 
-The Release Notes team must make sure that the final document includes well written and 
-informative release notes. To achieve a high-quality document the team should review and edit the
+The Release Notes team must make sure that the final document includes well written and informative release notes. To achieve a high-quality document the team should review and edit the
 notes by running `krel release-notes --fix` weekly or as often as development pace
 demands.
 
@@ -133,7 +132,8 @@ The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetin
 
 ### Maintain the _Known Issues_ Issue
 
-A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must be created by the release notes team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes. See previous known issues for [v1.19](https://github.com/kubernetes/kubernetes/issues/90304), [v1.18](https://github.com/kubernetes/kubernetes/issues/86882), [v1.17](https://github.com/kubernetes/kubernetes/issues/83683) or [v1.16](https://github.com/kubernetes/kubernetes/issues/81930).
+A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must be created by the release notes team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes. See previous known issues for 
+[v1.21](https://github.com/kubernetes/kubernetes/issues/98232), [v1.19](https://github.com/kubernetes/kubernetes/issues/90304), [v1.18](https://github.com/kubernetes/kubernetes/issues/86882) or [v1.17](https://github.com/kubernetes/kubernetes/issues/83683).
 
 
 ### Ensure Major Themes are Reflected in the Notes
@@ -151,15 +151,15 @@ The confirmed notes are cleaned up and copy edited by the release-notes team to 
 
 ### Curate the External Dependencies Section
 
-An "External Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. See [the v1.12 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md#external-dependencies) for an example.
+An "External Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. See [the v1.14 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.14.md#external-dependencies) for an example. 
 
 Note that there are [plans in the process to formalize and automate the process of aggregating the changes](https://github.com/kubernetes/community/issues/2234), but this is currently [a very manual process](https://github.com/kubernetes/sig-release/pull/398).
 
 To update an entry in this section the following steps must be performed:
 
-- Pick an entry, for example "Default etcd server was updated to v3.2.24. (#68318)"
-- Open the linked PR 68318 and find which files and lines it modifies
-- Open the same files in the `kubernetes/kubernetes` master branch and see if the version changed from v3.2.24
+- Pick an entry, for example "Update default etcd server to 3.3.10 for kubernetes 1.14. ([#71615](https://github.com/kubernetes/kubernetes/pull/71615))"
+- Open the linked PR 71615 and find which files and lines it modifies
+- Open the same files in the `kubernetes/kubernetes` master branch and see if the version changed from v3.3.10
 - Look at the history of the file and find which commit / PR changed the version
 - Update the entry with the new version and PR URL
 - Update the entry message accordingly - if the version has changed or it has been preserved between versions
@@ -170,7 +170,7 @@ To update an entry in this section the following steps must be performed:
 
 ### Week 1
 
-Begin running release-notes tool for ongoing collection of release notes with the first alpha release, which has been cut directly after the latest minor.
+Begin running release-notes tool for the ongoing collection of release notes with the first alpha release, which has been cut directly after the latest minor.
     - Update the `release-notes-draft.md`
     - Update the website
 - Begin attending release team meetings
@@ -183,7 +183,7 @@ Begin running release-notes tool for ongoing collection of release notes with th
 
 ### Week 11 (Begin of Code Freeze)
 
-- Create Google Doc for generated release notes and share with release-notes team
+- Create Google Doc for generated release notes and share with the release-notes team
 - Create [known issues issue](known-issues-bucket.md) in `kubernetes/kubernetes` to capture known issues for the release.
 - Share created doc with release-team
 - Send [an email to SIG-leads](sig-leads-email.md) to capture major themes from their SIG.
@@ -191,8 +191,8 @@ Begin running release-notes tool for ongoing collection of release notes with th
 
 ### Weeks 13-16
 
-- Repeat previous tasks until final copy is complete
-- Ensure "known issues" section is incorporated into final document
+- Repeat previous tasks until the final copy is complete
+- Ensure "known issues" section is incorporated into a final document
 
 ### Week 15
 
