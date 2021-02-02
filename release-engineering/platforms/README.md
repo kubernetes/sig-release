@@ -1,7 +1,7 @@
 # Platform Builds
 
 The Kubernetes project's development process produces
-[artifacts](./artifacts.md) for different architectures and operating systems.
+[artifacts](../artifacts.md) for different architectures and operating systems.
 We consider the combination of architecture (`GOARCH`) and operating system
 (`GOOS`) as "platforms". Target of this document is to outline different
 categories of platforms as well as guiding through their graduation criteria.
