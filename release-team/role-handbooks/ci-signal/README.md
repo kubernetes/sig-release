@@ -221,6 +221,13 @@ We've had to delay releases due to failing scalability tests in the past, as the
 
 ## Tips and Tricks of the game
 
+### A Tour of CI on the Kubernetes Project
+
+[A guide to CI on Kubernetes with Rob Kielty (1.20 CI Signal lead) and Dan Magnum (1.19 CI Signal lead)](https://www.youtube.com/watch?v=bttEcArAjUw):
+Introduces the role of CI Signal members and walks through the tools and processes used for logging flaky/failing tests (as explained below).
+
+Notes to follow along: http://bit.ly/k8s-ci-signal
+
 ### Checking test dashboards
 
 - Quirk: if a job is listed as FAILING but doesn't have "Overall" as one of its ongoing failures, it's not actually failing. It might be "red" from some previous test runs failures and will clear up after a few "green" runs
