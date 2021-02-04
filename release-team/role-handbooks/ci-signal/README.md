@@ -223,7 +223,7 @@ We've had to delay releases due to failing scalability tests in the past, as the
 
 ### A Tour of CI on the Kubernetes Project
 
-[A guide to CI on Kubernetes with Rob Kielty (1.20 CI Signal lead) and Dan Magnum (1.19 CI Signal lead)](https://www.youtube.com/watch?v=bttEcArAjUw):\
+[A guide to CI on Kubernetes with Rob Kielty (1.20 CI Signal lead) and Dan Magnum (1.19 CI Signal lead)](https://www.youtube.com/watch?v=bttEcArAjUw):
 Introduces the role of CI Signal members and walks through the tools and processes used for logging flaky/failing tests (as explained below).
 
 Notes to follow along: http://bit.ly/k8s-ci-signal
