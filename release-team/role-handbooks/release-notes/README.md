@@ -68,6 +68,8 @@ In the first 8 weeks of the cycle, the Release Notes team should/must, attend we
 
 This period has an increase in release team meetings each week and there is also significantly more work to do to ensure the release notes are in good working order for the release.
 
+Once code freeze begins, the release notes draft is transferred to a Google Doc which is made public to the Kubernetes community. The doc will be edited by SIG leads and SIG members but the team will also ensure proper grammar and uniform style in accordance with the [Kuberentes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
+
 The Release Notes team should use the [template](relnotes-template.md) to organize the raw generated release notes in the Google doc as best as possible and help to guide SIG leads and members in their further editing of the release notes. The final edited release notes should follow this template. 
 
 The `release-notes` subcommand of `krel` must continue to be run on the release branch (for `beta` and `rc` releases) in order to pull in any outstanding PRs that are merged between the beginning of code freeze and the release.
@@ -132,6 +134,7 @@ The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetin
 
 A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must be created by the release notes team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes. See previous known issues for [v1.21](https://github.com/kubernetes/kubernetes/issues/98232), [v1.19](https://github.com/kubernetes/kubernetes/issues/90304), [v1.18](https://github.com/kubernetes/kubernetes/issues/86882) or [v1.17](https://github.com/kubernetes/kubernetes/issues/83683).
 
+
 ### Ensure Major Themes are Reflected in the Notes
 
 The Communications team will hold meetings to discuss blogposts and media releases regarding the release sometime before code freeze. Ensure that at least one person from the release notes team attends this meeting with the release lead and enhancements lead. The release notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the communications team, release lead or enhancements lead to ensure messaging around Major Themes is coordinated.
@@ -179,6 +182,7 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 
 ### Week 11 (Begin of Code Freeze)
 
+- Create Google Doc for generated release notes and share with the release-notes team
 - Create [known issues issue](known-issues-bucket.md) in `kubernetes/kubernetes` to capture known issues for the release.
 - Share created doc with release-team
 - Send [an email to SIG-leads](sig-leads-email.md) to capture major themes from their SIG.
