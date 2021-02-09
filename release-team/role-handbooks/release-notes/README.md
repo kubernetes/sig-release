@@ -110,6 +110,7 @@ At least one member of the Release Notes Team should be responsible for [setting
 1. Update the release notes draft, a markdown file which will become the final document which will encompass all release notes written by contributors during the current release cycle. See previous drafts for versions [v1.20](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.20/release-notes-draft.md), [v1.19](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.18/release-notes-draft.md) or [v1.18](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.19/release-notes-draft.md).
 
 2. The team is responsible for adding Patch Release (e.g. [1.20.1](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#v1201), etc.) notes to the release notes website at https://relnotes.k8s.io. The krel release notes subcommand will automatically generate the necessary JSON files and patch the release notes website source.
+Note that there are plans to improve the workflow [1087](https://github.com/kubernetes/release/issues/1087) 
 
 Detailed instructions for generating the release notes bundles are in the [krel release-notes subcommand documentation](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
 
