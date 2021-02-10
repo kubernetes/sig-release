@@ -141,41 +141,11 @@ If you're interested in learning more about how the Release Team is selected, as
 
 ## Milestone Maintainers
 
-Across release cycles, one of the best signals for [issue triage](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#milestones) is whether or not an issue or PR is actually targeted for the current milestone.
+The [milestone maintainers](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-release/release.md#milestone-maintainers) are responsible to add, adapt or remove a milestone, e.g. the next major Kubernetes release, at an enhancement, issue, PR.
 
-To maintain up-to-date status on milestone inclusion, we rely on a set of Milestone Maintainers (members of the `kubernetes-milestone-maintainers` GitHub team) to apply the appropriate labels to issues / PRs. This is facilitated by `/milestone` commands and bot automation.
+Across release cycles, a "/milestone" is one of the best signals for [issue triage](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#milestones) whether or not an issue or PR is actually targeted for the current release milestone.
 
-Each release cycle, the current Release Team Lead must update membership to the aforementioned GitHub team.
-
-Maintainers of the `kubernetes-milestone-maintainers` GitHub team are defined as follows:
-- SIG Release Chairs
-- Current Release Team Lead
-
-Members of the `kubernetes-milestone-maintainers` GitHub team can include:
-- SIG leadership (SIG Chairs / Technical Leads) from all SIGs
-- SIG milestone maintainers from all SIGs (in addition to SIG leadership)
-- Special code reviewers, as selected by SIG Release
-
-Maintainers of the GitHub team can, with justification, add or remove members at any time during release cycles.
-
-Members are expected to actively triage issues and PRs to retain membership in `kubernetes-milestone maintainers`. Members not fulfilling the duties of this role should be removed.
-
-Milestone maintainers also have write access to [kubernetes/enhancements][k/enhancements], which allows them to keep enhancement tracking issue descriptions up-to-date.
-
-To request membership to `kubernetes-milestone-maintainers` or update the team:
-- File a PR to [kubernetes/org][k/org] making changes to the `kubernetes-milestone-maintainers` team config [here](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml). In your PR, include the reason you're requesting access in the description, as well as a comment next to your username in the team config
-  e.g.,
-  ```
-  - justaugustus # Azure / PM / Release
-  - spiffxp # 1.14 RT Lead / Testing
-  ```
-- Assign an approver from the group you'll be maintaining issues/PRs for
-  i.e.,
-  - for SIGs: Request approval from a SIG Chair or Technical Lead
-  - for Release Team: Request approval from the current Release Team Lead or SIG Release Chairs
-  - for Special code reviewers: Request approval from SIG Release Chairs
-
-- Once your request is approved by the appropriate group, you can now assign to the PR to a SIG Release Chair for final approval.
+Each release cycle, the current Release Team Lead must update membership to the aforementioned GitHub team. 
 
 
 ---
