@@ -60,6 +60,7 @@ The 1.21 release cycle is proposed as follows:
 | **Begin [Burndown]** (MWF meetings) | Lead | Mon March 1 | week 8 | [1.21-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Mon March 1 | week 8 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon March 1 | week 8 | |
+| **Begin Feature blog freeze** | Comms Lead | Mon March 1 | week 8 | |
 | 1.21.0-beta.1 released | Branch Manager | Tue March 9 | week 9 | |
 | **Begin [Code Freeze]** (EOD PST) | Branch Manager | Tue March 9 | week 9 | |
 | Burndown Meetings daily| Lead | Mon March 15 | week 10 | |
@@ -70,9 +71,12 @@ The 1.21 release cycle is proposed as follows:
 | release-1.21 branch created | Branch Manager | Tue March 25 | week 11 | |
 | release-1.21 jobs created | Branch Manager | Tue March 25 | week 11 | |
 | Start final draft of Release Notes | Release Notes Lead | Tue March 25 | week 11 | |
+| Release blog ready to review | Comms / Docs | Tue March 25 | week 11 | |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Wed March 31 | week 12 | |
+| Feature blogs ready to review | Enhancement Owner / SIG Leads | Wed March 31 | week 12 | |
 | Release Notes complete - reviewed & merged to `k/sig-release` | Release Notes Lead | Mon April 5 | week 13 | |
 | **v1.21.0 released** | Branch Manager | Thu April 8 | week 13 | |
+| Release blog published | Comms | Thu April 8 | week 13 | |
 | **[Thaw]** | Branch Manager | Thu April 8 | week 13 | |
 | Release retrospective | Community | Thu April 15 | Week 14 | |
 

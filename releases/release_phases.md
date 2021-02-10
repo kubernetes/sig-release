@@ -77,6 +77,20 @@ factors should be considered in the approval process.  Enhancements on an
 feature branch with documentation, test cases, and passing CI are more likely to
 be accepted.
 
+## Feature Blog Freeze
+
+Feature blogs are an amazing way to showcase all the hard work you and your team
+have done with the enhancement. While providing technical depth in terms of content,
+they are also great avenues to attract newer contributors to the Kubernetes project.
+You can opt in to write a feature blog for your enhancement and this deadline is to
+freeze the collection phase for the ongoing cycle. Once the collection phase is
+completed, the Release Comms team will coordinate further with you to work out details
+around delivery & review.
+
+After the deadline passes if you haven't opted in & still would like to have a feature
+blog for your enhancement, please contact the current release communications lead on
+the #sig-release channel in Kubernetes Slack.
+
 ## Pruning
 
 Enhancements that are partially implemented and/or lack sufficient tests may be
