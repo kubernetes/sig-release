@@ -147,6 +147,8 @@ Across release cycles, a "/milestone" is one of the best signals for [issue tria
 
 Each release cycle, the current Release Team Lead must update membership to the aforementioned GitHub team. 
 
+The actual process of maintaining milestones is lived by the SIGs and special elected contributors. The SIG release team steers the enhancment through the release cycle and take care that only well maintained enhancements will make it up to a new major release.
+
 ---
 
 ## Filing exceptions
