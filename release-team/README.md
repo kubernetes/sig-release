@@ -141,7 +141,7 @@ If you're interested in learning more about how the Release Team is selected, as
 
 ## Milestone Maintainers
 
-The [milestone maintainers](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-release/release.md#milestone-maintainers) are responsible to add, adapt or remove a milestone, e.g. the next major Kubernetes release, at an enhancement, issue, PR.
+The [milestone maintainers](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-release/release.md#milestone-maintainers) are responsible for adding, adapting, or removing a milestone, e.g. the next major Kubernetes release, on an enhancement, issue, PR.
 
 Across release cycles, a "/milestone" is one of the best signals for [issue triage](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#milestones) whether or not an issue or PR is actually targeted for the current release milestone.
 
