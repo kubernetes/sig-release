@@ -40,7 +40,7 @@ Email them to:
 
 
 Exceptions after enhancements freeze:
-If your issue was removed during the enhancements freeze please file an exception at your earlierst convinence.  All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.  
+If your issue was removed during the enhancements freeze please file an exception at your earliest convenience.  All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.  
 
 Exceptions after code freeze: 
 Requests for exceptions must be submitted before the first milestone burn down meeting. All requests for exception will be reviewed and either approved or rejected during the first meeting. The release team will be responsible for approving or rejecting exceptions based on the questions above.
