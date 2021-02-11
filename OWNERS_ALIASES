@@ -6,11 +6,6 @@ aliases:
     - justaugustus # SIG Chair
     - LappleApple # SIG Program Manager
     - saschagrunert # SIG Chair
-  licensing:
-    - dims # subproject owner
-    - justaugustus # subproject owner
-    - nikhita # subproject owner
-    - swinslow # subproject owner
   release-engineering-approvers:
     - cpanato # Release Manager
     - feiskyer # Release Manager
