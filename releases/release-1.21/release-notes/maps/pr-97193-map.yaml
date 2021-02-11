@@ -1,0 +1,3 @@
+pr: 97193
+releasenote:
+  text: fix devicemanager TestDevicePluginReRegistrationProbeMode failed
