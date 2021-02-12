@@ -1,0 +1,4 @@
+pr: 98169
+releasenote:
+  text: Readjust `kubelet_containers_per_pod_count` buckets to only show metrics greater
+    than 1.
