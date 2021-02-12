@@ -1,0 +1,5 @@
+pr: 97935
+releasenote:
+  kinds:
+  - documentation
+  - deprecation

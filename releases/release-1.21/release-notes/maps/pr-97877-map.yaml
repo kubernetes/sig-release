@@ -1,0 +1,3 @@
+pr: 97877
+releasenote:
+  text: Fix Azure file migration e2e test failure when CSIMigration is turned on.
