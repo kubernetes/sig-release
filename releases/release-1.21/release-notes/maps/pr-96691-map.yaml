@@ -1,3 +1,4 @@
 pr: 96691
 releasenote:
   text: Increase timeout for pod lifecycle test to reach pod status=ready
+  do_not_publish: false
