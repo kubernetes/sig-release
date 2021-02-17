@@ -1,6 +1,3 @@
-# [This format is deprecated -- starting 1.21, this document will go to `release-notes/` directory](release-notes/)
-
-
 # Release notes for v1.20.0-rc.0
 
 [Documentation](https://docs.k8s.io/docs/home)
