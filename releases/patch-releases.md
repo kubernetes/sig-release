@@ -47,7 +47,6 @@ releases may also occur in between these.
 
 | Monthly Patch Release | Target date |
 | --- | --- |
-| February 2021 | 2021-02-17 |
 | March 2021 | 2021-03-17 |
 | April 2021 | 2021-04-14 |
 | May 2021 | 2021-05-12 |
@@ -64,7 +63,9 @@ End of Life for **1.20** is **2021-12-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
-| 1.20.3        | 2021-02-12           | 2021-02-17  |
+| 1.20.5        | 2021-03-12           | 2021-03-17  |
+| 1.20.4        | 2021-02-12           | 2021-02-18  |
+| 1.20.3        | [Conformance Tests Issue](https://groups.google.com/g/kubernetes-dev/c/oUpY9vWgzJo) | 2021-02-17  |
 | 1.20.2        | 2021-01-08           | 2021-01-13  |
 | 1.20.1        | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 
@@ -76,6 +77,7 @@ End of Life for **1.19** is **2021-09-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
+| 1.19.9        | 2021-03-12           | 2021-03-17  |
 | 1.19.8        | 2021-02-12           | 2021-02-17  |
 | 1.19.7        | 2021-01-08           | 2021-01-13  |
 | 1.19.6        | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
@@ -93,6 +95,7 @@ End of Life for **1.18** is **2021-04-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
+| 1.18.17       | 2021-03-12           | 2021-03-17  |
 | 1.18.16       | 2021-02-12           | 2021-02-17  |
 | 1.18.15       | 2021-01-08           | 2021-01-13  |
 | 1.18.14       | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
