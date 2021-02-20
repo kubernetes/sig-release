@@ -1,0 +1,3 @@
+pr: 98259
+releasenote:
+  text: Migrate `scheduler/taint_manager.go` structured logging
