@@ -2,8 +2,9 @@
 
 approvers:
   - tpepper # RT Lead
-  - AishSundar # RT Lead Shadow
 reviewers:
   - justaugustus
   - marpaia
   # - nickchase (release notes lead)
+emeritus_approvers:
+  - AishSundar # RT Lead Shadow

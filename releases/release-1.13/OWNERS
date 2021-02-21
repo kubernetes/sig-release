@@ -1,7 +1,6 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
-  - AishSundar # RT Lead
   - spiffxp # RT Lead Shadow
 reviewers:
   - kacole2
@@ -10,3 +9,5 @@ reviewers:
   - tfogo
   - marpaia
   - nikopen
+emeritus_approvers:
+  - AishSundar # RT Lead
