@@ -1658,8 +1658,8 @@
   },
   "97543": {
     "commit": "0300aa712e378373261effcfb4a7895e5356c43e",
-    "text": "remove LegacyNodeRoleBehavior and mv ServiceNodeExclusion to GA",
-    "markdown": "Remove LegacyNodeRoleBehavior and mv ServiceNodeExclusion to GA ([#97543](https://github.com/kubernetes/kubernetes/pull/97543), [@pacoxu](https://github.com/pacoxu))",
+    "text": "`ServiceNodeExclusion`, `NodeDisruptionExclusion` and `LegacyNodeRoleBehavior` features have been promoted to GA. `ServiceNodeExclusion` and `NodeDisruptionExclusion` are now unconditionally enabled, while `LegacyNodeRoleBehavior` is unconditionally disabled. To prevent control plane nodes from being added to load balancers automatically, upgrade users need to add \"node.kubernetes.io/exclude-from-external-load-balancers\" label to control plane nodes.",
+    "markdown": "`ServiceNodeExclusion`, `NodeDisruptionExclusion` and `LegacyNodeRoleBehavior` features have been promoted to GA. `ServiceNodeExclusion` and `NodeDisruptionExclusion` are now unconditionally enabled, while `LegacyNodeRoleBehavior` is unconditionally disabled. To prevent control plane nodes from being added to load balancers automatically, upgrade users need to add \"node.kubernetes.io/exclude-from-external-load-balancers\" label to control plane nodes. ([#97543](https://github.com/kubernetes/kubernetes/pull/97543), [@pacoxu](https://github.com/pacoxu))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2432,8 +2432,8 @@
   },
   "98203": {
     "commit": "e26570a96ecf3a908357b7fd3d99f803aece9ad2",
-    "text": "Add ignore-errors flag for drain, support none-break drain in group, and add depreacted warning message after now-deafult error interrupt between group drain:\nDEPRECATED WARNING: Aborting the drain command in a list of nodes will be deprecated.\nThe new behavior will make the drain command go through all nodes even if one or more nodes failed during the drain.\nFor now, users can try such experience via: --ignore-errors",
-    "markdown": "Add ignore-errors flag for drain, support none-break drain in group, and add depreacted warning message after now-deafult error interrupt between group drain:\n  DEPRECATED WARNING: Aborting the drain command in a list of nodes will be deprecated.\n  The new behavior will make the drain command go through all nodes even if one or more nodes failed during the drain.\n  For now, users can try such experience via: --ignore-errors ([#98203](https://github.com/kubernetes/kubernetes/pull/98203), [@yuzhiquan](https://github.com/yuzhiquan)) [SIG CLI]",
+    "text": "Aborting the drain command in a list of nodes will be deprecated. The new behavior will make the drain command go through all nodes even if one or more nodes failed during the drain. For now, users can try such experience by enabling --ignore-errors flag.",
+    "markdown": "Aborting the drain command in a list of nodes will be deprecated. The new behavior will make the drain command go through all nodes even if one or more nodes failed during the drain. For now, users can try such experience by enabling --ignore-errors flag. ([#98203](https://github.com/kubernetes/kubernetes/pull/98203), [@yuzhiquan](https://github.com/yuzhiquan))",
     "author": "yuzhiquan",
     "author_url": "https://github.com/yuzhiquan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98203",
@@ -2442,7 +2442,8 @@
       "kubectl"
     ],
     "kinds": [
-      "feature"
+      "feature",
+      "deprecation"
     ],
     "sigs": [
       "cli"
@@ -2887,8 +2888,8 @@
   },
   "98576": {
     "commit": "0a0490e34fb28ac91e147bafbd252a97df98a6b5",
-    "text": "Fixes using server-side apply with APIService resources",
-    "markdown": "Fixes using server-side apply with APIService resources ([#98576](https://github.com/kubernetes/kubernetes/pull/98576), [@kevindelgado](https://github.com/kevindelgado)) [SIG API Machinery, Apps and Testing]",
+    "text": "Fixes server-side apply for APIService resources.",
+    "markdown": "Fixes server-side apply for APIService resources. ([#98576](https://github.com/kubernetes/kubernetes/pull/98576), [@kevindelgado](https://github.com/kevindelgado))",
     "author": "kevindelgado",
     "author_url": "https://github.com/kevindelgado",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98576",
@@ -2969,8 +2970,8 @@
   },
   "98750": {
     "commit": "9273c3be128e19bdc75eadbfbde0eb6ba3b1f1d3",
-    "text": "Fixes problem where invalid selector on PDBs leads to a nil pointer dereference that causes the controller-manager to crash-loop.",
-    "markdown": "Fixes problem where invalid selector on PDBs leads to a nil pointer dereference that causes the controller-manager to crash-loop. ([#98750](https://github.com/kubernetes/kubernetes/pull/98750), [@mortent](https://github.com/mortent))",
+    "text": "Fixes problem where invalid selector on `PodDisruptionBudget` leads to a nil pointer dereference that causes the Controller manager to crash loop.",
+    "markdown": "Fixes problem where invalid selector on `PodDisruptionBudget` leads to a nil pointer dereference that causes the Controller manager to crash loop. ([#98750](https://github.com/kubernetes/kubernetes/pull/98750), [@mortent](https://github.com/mortent))",
     "author": "mortent",
     "author_url": "https://github.com/mortent",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98750",

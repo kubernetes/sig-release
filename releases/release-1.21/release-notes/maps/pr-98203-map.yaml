@@ -1,0 +1,9 @@
+pr: 98203
+releasenote:
+  text: Aborting the drain command in a list of nodes will be deprecated. The new
+    behavior will make the drain command go through all nodes even if one or more
+    nodes failed during the drain. For now, users can try such experience by enabling
+    --ignore-errors flag.
+  kinds:
+  - feature
+  - deprecation
