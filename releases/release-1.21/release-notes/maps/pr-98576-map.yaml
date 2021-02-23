@@ -1,0 +1,3 @@
+pr: 98576
+releasenote:
+  text: Fixes server-side apply for APIService resources.
