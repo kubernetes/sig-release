@@ -1,0 +1,4 @@
+pr: 98750
+releasenote:
+  text: Fixes problem where invalid selector on `PodDisruptionBudget` leads to a nil pointer dereference
+    that causes the Controller manager to crash loop.

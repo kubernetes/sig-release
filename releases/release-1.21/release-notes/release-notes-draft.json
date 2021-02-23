@@ -269,8 +269,8 @@
   },
   "96021": {
     "commit": "f5fb1c93dbaa512eb66090c5027435d3dee95ac7",
-    "text": "We will no longer automatically delete all data when a failure is detected during creation of the volume data file on a CSI volume. Now we will only remove the data file and volume path.",
-    "markdown": "We will no longer automatically delete all data when a failure is detected during creation of the volume data file on a CSI volume. Now we will only remove the data file and volume path. ([#96021](https://github.com/kubernetes/kubernetes/pull/96021), [@huffmanca](https://github.com/huffmanca)) [SIG Storage]",
+    "text": "We will no longer automatically delete all data, when a failure is detected during creation of the volume data file on a CSI volume. Now we will only remove the data file and `volumePath`.",
+    "markdown": "We will no longer automatically delete all data, when a failure is detected during creation of the volume data file on a CSI volume. Now we will only remove the data file and `volumePath`. ([#96021](https://github.com/kubernetes/kubernetes/pull/96021), [@huffmanca](https://github.com/huffmanca))",
     "author": "huffmanca",
     "author_url": "https://github.com/huffmanca",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/96021",
@@ -609,8 +609,8 @@
   },
   "96691": {
     "commit": "a107769005854608fe8cdfa2e274204d0fdb9240",
-    "text": "[It] should run through the lifecycle of Pods and PodStatus\n  /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/common/pods.go:887\nï¿½[1mSTEPï¿½[0m: creating a Pod with a static label\nï¿½[1mSTEPï¿½[0m: watching for Pod to be ready\nNov 18 13:28:04.312: INFO: observed Pod pod-test in namespace pods-5897 in phase Pending conditions []\nNov 18 13:28:04.360: INFO: observed Pod pod-test in namespace pods-5897 in phase Pending conditions [{PodScheduled True 0001-01-01 00:00:00 +0000 UTC 2020-11-18 13:28:04 +0000 UTC  }]\nNov 18 13:29:04.265: FAIL: failed to see Pod pod-test in namespace pods-5897 running\nUnexpected error:\n    \u003c*errors.errorString | 0xc0002781f0\u003e: {\n        s: \"timed out waiting for the condition\",\n    }\n    timed out waiting for the condition\noccurred",
-    "markdown": "[It] should run through the lifecycle of Pods and PodStatus\n    /go/src/k8s.io/kubernetes/_output/dockerized/go/src/k8s.io/kubernetes/test/e2e/common/pods.go:887\n  ï¿½[1mSTEPï¿½[0m: creating a Pod with a static label\n  ï¿½[1mSTEPï¿½[0m: watching for Pod to be ready\n  Nov 18 13:28:04.312: INFO: observed Pod pod-test in namespace pods-5897 in phase Pending conditions []\n  Nov 18 13:28:04.360: INFO: observed Pod pod-test in namespace pods-5897 in phase Pending conditions [{PodScheduled True 0001-01-01 00:00:00 +0000 UTC 2020-11-18 13:28:04 +0000 UTC  }]\n  Nov 18 13:29:04.265: FAIL: failed to see Pod pod-test in namespace pods-5897 running\n  Unexpected error:\n      \u003c*errors.errorString | 0xc0002781f0\u003e: {\n          s: \"timed out waiting for the condition\",\n      }\n      timed out waiting for the condition\n  occurred ([#96691](https://github.com/kubernetes/kubernetes/pull/96691), [@hh](https://github.com/hh)) [SIG Architecture and Testing]",
+    "text": "Increase timeout for pod lifecycle test to reach pod status=ready",
+    "markdown": "Increase timeout for pod lifecycle test to reach pod status=ready ([#96691](https://github.com/kubernetes/kubernetes/pull/96691), [@hh](https://github.com/hh))",
     "author": "hh",
     "author_url": "https://github.com/hh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/96691",
@@ -626,8 +626,7 @@
       "architecture",
       "testing"
     ],
-    "duplicate": true,
-    "do_not_publish": true
+    "duplicate": true
   },
   "96736": {
     "commit": "ddf3eb5a1877338da806c2be15b53f456b6342c9",
@@ -755,8 +754,8 @@
   },
   "96877": {
     "commit": "4fe132954f731db75934cbf04d499651fef079ab",
-    "text": "NONE",
-    "markdown": "NONE ([#96877](https://github.com/kubernetes/kubernetes/pull/96877), [@xeniumlee](https://github.com/xeniumlee)) [SIG Node]",
+    "text": "Fix privileged config of Pod Sandbox which was previously ignored.",
+    "markdown": "Fix privileged config of Pod Sandbox which was previously ignored. ([#96877](https://github.com/kubernetes/kubernetes/pull/96877), [@xeniumlee](https://github.com/xeniumlee))",
     "author": "xeniumlee",
     "author_url": "https://github.com/xeniumlee",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/96877",
@@ -769,8 +768,7 @@
     ],
     "sigs": [
       "node"
-    ],
-    "do_not_publish": true
+    ]
   },
   "96889": {
     "commit": "39483aa0957be65b04686173d2970b508b3974ca",
@@ -1164,8 +1162,8 @@
   },
   "97193": {
     "commit": "b37e9a440ea30336733793c4b9f97b87ac64b097",
-    "text": "go test -race -c ./pkg/kubelet/cm/devicemanager\nstress ./devicemanager.test -test.run TestDevicePluginReRegistrationProbeMode",
-    "markdown": "Go test -race -c ./pkg/kubelet/cm/devicemanager\n  stress ./devicemanager.test -test.run TestDevicePluginReRegistrationProbeMode ([#97193](https://github.com/kubernetes/kubernetes/pull/97193), [@JornShen](https://github.com/JornShen)) [SIG Node]",
+    "text": "fix flaky failure on devicemanager TestDevicePluginReRegistrationProbeMode",
+    "markdown": "Fix flaky failure on devicemanager TestDevicePluginReRegistrationProbeMode ([#97193](https://github.com/kubernetes/kubernetes/pull/97193), [@JornShen](https://github.com/JornShen))",
     "author": "JornShen",
     "author_url": "https://github.com/JornShen",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97193",
@@ -1406,8 +1404,8 @@
   },
   "97395": {
     "commit": "24f13032b3e3d4c7c5dfbe86c40be5d038e58614",
-    "text": "New admission controller \"denyserviceexternalips\" is available.  Clusters which do not *need- the Service \"externalIPs\" feature should enable this controller and be more secure.",
-    "markdown": "New admission controller \"denyserviceexternalips\" is available.  Clusters which do not *need- the Service \"externalIPs\" feature should enable this controller and be more secure. ([#97395](https://github.com/kubernetes/kubernetes/pull/97395), [@thockin](https://github.com/thockin)) [SIG API Machinery]",
+    "text": "New Admission Controller \"DenyServiceExternalIPs\" is made available. Clusters which do not need the service \"ExternalIPs\" feature should enable this controller.",
+    "markdown": "New Admission Controller \"DenyServiceExternalIPs\" is made available. Clusters which do not need the service \"ExternalIPs\" feature should enable this controller. ([#97395](https://github.com/kubernetes/kubernetes/pull/97395), [@thockin](https://github.com/thockin))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1660,8 +1658,8 @@
   },
   "97543": {
     "commit": "0300aa712e378373261effcfb4a7895e5356c43e",
-    "text": "`ServiceNodeExclusion`, `NodeDisruptionExclusion` and `LegacyNodeRoleBehavior`(locked to false) features have been promoted to GA. \nTo prevent control plane nodes from being added to load balancers automatically, upgrade users need to add \"node.kubernetes.io/exclude-from-external-load-balancers\"  label to control plane nodes.",
-    "markdown": "`ServiceNodeExclusion`, `NodeDisruptionExclusion` and `LegacyNodeRoleBehavior`(locked to false) features have been promoted to GA. \n  To prevent control plane nodes from being added to load balancers automatically, upgrade users need to add \"node.kubernetes.io/exclude-from-external-load-balancers\"  label to control plane nodes. ([#97543](https://github.com/kubernetes/kubernetes/pull/97543), [@pacoxu](https://github.com/pacoxu)) [SIG API Machinery, Apps, Cloud Provider and Network]",
+    "text": "remove LegacyNodeRoleBehavior and mv ServiceNodeExclusion to GA",
+    "markdown": "Remove LegacyNodeRoleBehavior and mv ServiceNodeExclusion to GA ([#97543](https://github.com/kubernetes/kubernetes/pull/97543), [@pacoxu](https://github.com/pacoxu))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2434,8 +2432,8 @@
   },
   "98203": {
     "commit": "e26570a96ecf3a908357b7fd3d99f803aece9ad2",
-    "text": "Add ignore-errors flag for drain, support none-break drain in group",
-    "markdown": "Add ignore-errors flag for drain, support none-break drain in group ([#98203](https://github.com/kubernetes/kubernetes/pull/98203), [@yuzhiquan](https://github.com/yuzhiquan)) [SIG CLI]",
+    "text": "Add ignore-errors flag for drain, support none-break drain in group, and add depreacted warning message after now-deafult error interrupt between group drain:\nDEPRECATED WARNING: Aborting the drain command in a list of nodes will be deprecated.\nThe new behavior will make the drain command go through all nodes even if one or more nodes failed during the drain.\nFor now, users can try such experience via: --ignore-errors",
+    "markdown": "Add ignore-errors flag for drain, support none-break drain in group, and add depreacted warning message after now-deafult error interrupt between group drain:\n  DEPRECATED WARNING: Aborting the drain command in a list of nodes will be deprecated.\n  The new behavior will make the drain command go through all nodes even if one or more nodes failed during the drain.\n  For now, users can try such experience via: --ignore-errors ([#98203](https://github.com/kubernetes/kubernetes/pull/98203), [@yuzhiquan](https://github.com/yuzhiquan)) [SIG CLI]",
     "author": "yuzhiquan",
     "author_url": "https://github.com/yuzhiquan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98203",
@@ -2453,8 +2451,8 @@
   },
   "98205": {
     "commit": "2b7c61b1bb1889770f8d8cbdf0119617c5228f6e",
-    "text": "pause image upgraded to 3.4.1 in kubelet and kubeadm for both Linux and Windows.",
-    "markdown": "Pause image upgraded to 3.4.1 in kubelet and kubeadm for both Linux and Windows. ([#98205](https://github.com/kubernetes/kubernetes/pull/98205), [@pacoxu](https://github.com/pacoxu)) [SIG CLI, Cloud Provider, Cluster Lifecycle, Node, Testing and Windows]",
+    "text": "The pause image upgraded to `v3.4.1` in kubelet and kubeadm for both Linux and Windows.",
+    "markdown": "The pause image upgraded to `v3.4.1` in kubelet and kubeadm for both Linux and Windows. ([#98205](https://github.com/kubernetes/kubernetes/pull/98205), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98205",
@@ -2484,8 +2482,8 @@
   },
   "98243": {
     "commit": "c04058418f7bb7df226d71d516ed4db918969288",
-    "text": "Remove alpha CSIMigrationXXComplete flag and add alpha InTreePluginXXUnregister flag. Deprecate CSIMigrationvSphereComplete flag and it will be removed in 1.22.",
-    "markdown": "Remove alpha CSIMigrationXXComplete flag and add alpha InTreePluginXXUnregister flag. Deprecate CSIMigrationvSphereComplete flag and it will be removed in 1.22. ([#98243](https://github.com/kubernetes/kubernetes/pull/98243), [@Jiawei0227](https://github.com/Jiawei0227)) [SIG Node and Storage]",
+    "text": "Remove alpha `CSIMigrationXXComplete` flag and add alpha `InTreePluginXXUnregister` flag. Deprecate `CSIMigrationvSphereComplete` flag and it will be removed in v1.22.",
+    "markdown": "Remove alpha `CSIMigrationXXComplete` flag and add alpha `InTreePluginXXUnregister` flag. Deprecate `CSIMigrationvSphereComplete` flag and it will be removed in v1.22. ([#98243](https://github.com/kubernetes/kubernetes/pull/98243), [@Jiawei0227](https://github.com/Jiawei0227))",
     "author": "Jiawei0227",
     "author_url": "https://github.com/Jiawei0227",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98243",
@@ -2494,7 +2492,8 @@
       "kubelet"
     ],
     "kinds": [
-      "feature"
+      "feature",
+      "deprecation"
     ],
     "sigs": [
       "node",
@@ -2560,8 +2559,8 @@
   },
   "98259": {
     "commit": "6dc0047396d3aad16928d346da8a5052d8a824fa",
-    "text": "migrate scheduler/taint_manager.go structured logging",
-    "markdown": "Migrate scheduler/taint_manager.go structured logging ([#98259](https://github.com/kubernetes/kubernetes/pull/98259), [@tanjing2020](https://github.com/tanjing2020)) [SIG Apps]",
+    "text": "Migrate `scheduler/taint_manager.go` structured logging",
+    "markdown": "Migrate `scheduler/taint_manager.go` structured logging ([#98259](https://github.com/kubernetes/kubernetes/pull/98259), [@tanjing2020](https://github.com/tanjing2020))",
     "author": "tanjing2020",
     "author_url": "https://github.com/tanjing2020",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98259",
@@ -2652,8 +2651,8 @@
   },
   "98324": {
     "commit": "27104f159557da6bec20cf8227b468b1f22cd884",
-    "text": "Export NewDebuggingRoundTripper function and DebugLevel options in the k8s.io/client-go/transport package.",
-    "markdown": "Export NewDebuggingRoundTripper function and DebugLevel options in the k8s.io/client-go/transport package. ([#98324](https://github.com/kubernetes/kubernetes/pull/98324), [@atosatto](https://github.com/atosatto)) [SIG API Machinery]",
+    "text": "Export `NewDebuggingRoundTripper` function and `DebugLevel` options in the k8s.io/client-go/transport package.",
+    "markdown": "Export `NewDebuggingRoundTripper` function and `DebugLevel` options in the k8s.io/client-go/transport package. ([#98324](https://github.com/kubernetes/kubernetes/pull/98324), [@atosatto](https://github.com/atosatto))",
     "author": "atosatto",
     "author_url": "https://github.com/atosatto",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98324",
@@ -2935,8 +2934,8 @@
   },
   "98715": {
     "commit": "3416b6b0a4e7b76cb38f6b1749766599b3fd2368",
-    "text": "truncates a message if it hits the NoteLengthLimit when the scheduler records an event for the pod that indicates the pod has failed to schedule.",
-    "markdown": "Truncates a message if it hits the NoteLengthLimit when the scheduler records an event for the pod that indicates the pod has failed to schedule. ([#98715](https://github.com/kubernetes/kubernetes/pull/98715), [@carlory](https://github.com/carlory)) [SIG Scheduling]",
+    "text": "Truncates a message if it hits the `NoteLengthLimit` when the scheduler records an event for the pod that indicates the pod has failed to schedule.",
+    "markdown": "Truncates a message if it hits the `NoteLengthLimit` when the scheduler records an event for the pod that indicates the pod has failed to schedule. ([#98715](https://github.com/kubernetes/kubernetes/pull/98715), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98715",
@@ -2970,8 +2969,8 @@
   },
   "98750": {
     "commit": "9273c3be128e19bdc75eadbfbde0eb6ba3b1f1d3",
-    "text": "Fixes a panic in the disruption budget controller for PDB objects with invalid selectors",
-    "markdown": "Fixes a panic in the disruption budget controller for PDB objects with invalid selectors ([#98750](https://github.com/kubernetes/kubernetes/pull/98750), [@mortent](https://github.com/mortent)) [SIG Apps]",
+    "text": "Fixes problem where invalid selector on PDBs leads to a nil pointer dereference that causes the controller-manager to crash-loop.",
+    "markdown": "Fixes problem where invalid selector on PDBs leads to a nil pointer dereference that causes the controller-manager to crash-loop. ([#98750](https://github.com/kubernetes/kubernetes/pull/98750), [@mortent](https://github.com/mortent))",
     "author": "mortent",
     "author_url": "https://github.com/mortent",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98750",
@@ -3098,8 +3097,8 @@
   },
   "98839": {
     "commit": "f266f60da9dadf3ee675c52ff388ffe767238666",
-    "text": "kubeadm: fix bad token placeholder text in \"config print *-defaults --help\"",
-    "markdown": "Kubeadm: fix bad token placeholder text in \"config print *-defaults --help\" ([#98839](https://github.com/kubernetes/kubernetes/pull/98839), [@Mattias-](https://github.com/Mattias-)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: fix bad token placeholder text in `config print *-defaults --help`",
+    "markdown": "Kubeadm: fix bad token placeholder text in `config print *-defaults --help` ([#98839](https://github.com/kubernetes/kubernetes/pull/98839), [@Mattias-](https://github.com/Mattias-))",
     "author": "Mattias-",
     "author_url": "https://github.com/Mattias-",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98839",

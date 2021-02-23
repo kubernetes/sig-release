@@ -1,0 +1,4 @@
+pr: 98324
+releasenote:
+  text: Export `NewDebuggingRoundTripper` function and `DebugLevel` options in the
+    k8s.io/client-go/transport package.
