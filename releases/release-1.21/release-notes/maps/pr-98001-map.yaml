@@ -1,0 +1,3 @@
+pr: 98001
+releasenote:
+  text: Migrate `proxy/winkernel/proxier.go` logs to structured logging

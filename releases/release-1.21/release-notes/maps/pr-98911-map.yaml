@@ -1,0 +1,3 @@
+pr: 98911
+releasenote:
+  text: Add missing `--kube-api-content-type` in kubemark hollow template

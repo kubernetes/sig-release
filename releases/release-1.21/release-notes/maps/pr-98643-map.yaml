@@ -1,0 +1,3 @@
+pr: 98643
+releasenote:
+  text: Migrate `pkg/kubelet/server` logs to structured logging

@@ -1,0 +1,6 @@
+pr: 93861
+releasenote:
+  text: Add --permit-address-sharing flag to `kube-apiserver` to listen with `SO_REUSEADDR`.
+    While allowing to listen on wildcard IPs like 0.0.0.0 and specific IPs in parallel,
+    it avoids waiting for the kernel to release socket in `TIME_WAIT` state, and hence,
+    considerably reducing `kube-apiserver` restart times under certain conditions.
