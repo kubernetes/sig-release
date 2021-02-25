@@ -1,0 +1,4 @@
+pr: 98730
+releasenote:
+  text: Several flags related to the deprecated dockershim which are present in the
+    kubelet command line are now showing warning about the future deprecation.

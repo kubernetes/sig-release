@@ -1,0 +1,3 @@
+pr: 99127
+releasenote:
+  text: Fixes spurious errors about IPv6 in `kube-proxy` logs on nodes with IPv6 disabled.

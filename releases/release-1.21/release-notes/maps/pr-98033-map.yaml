@@ -1,0 +1,4 @@
+pr: 98033
+releasenote:
+  text: The feature gate `RootCAConfigMap` graduated to GA in `v1.21` and will be
+    removed in `v1.22`

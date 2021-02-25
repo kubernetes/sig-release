@@ -1,0 +1,4 @@
+pr: 98931
+releasenote:
+  text: APIs for kubelet annotations and labels from `k8s.io/kubernetes/pkg/kubelet/apis`
+    are now moved under `k8s.io/kubelet/pkg/apis/`
