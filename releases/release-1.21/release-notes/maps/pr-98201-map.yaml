@@ -1,0 +1,3 @@
+pr: 98201
+releasenote:
+  text: Fixes a duplicate error messages when running `kubectl edit` on `ResourceQuota`

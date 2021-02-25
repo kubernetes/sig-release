@@ -1,0 +1,3 @@
+pr: 98358
+releasenote:
+  text: Migrate `scheduling_queue.go` to structured logging

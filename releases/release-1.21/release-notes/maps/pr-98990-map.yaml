@@ -1,0 +1,3 @@
+pr: 98990
+releasenote:
+  text: Migrate `pkg/kubelet/pod` and `pkg/kubelet/pleg` to structured logging

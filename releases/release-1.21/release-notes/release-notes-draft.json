@@ -1681,8 +1681,8 @@
   },
   "97431": {
     "commit": "f48972e671e5f338d0d6adfe6055aba4534569ad",
-    "text": "AWS cloudprovider supports auto-discovering subnets without any kubernetes.io/cluster/\u003cclusterName\u003e tags. It also supports additional service annotation service.beta.kubernetes.io/aws-load-balancer-subnets to manually configure the subnets.",
-    "markdown": "AWS cloudprovider supports auto-discovering subnets without any kubernetes.io/cluster/\u003cclusterName\u003e tags. It also supports additional service annotation service.beta.kubernetes.io/aws-load-balancer-subnets to manually configure the subnets. ([#97431](https://github.com/kubernetes/kubernetes/pull/97431), [@kishorj](https://github.com/kishorj)) [SIG Cloud Provider]",
+    "text": "AWS cloudprovider supports auto-discovering subnets without any `kubernetes.io/cluster/\u003cclusterName\u003e` tags. It also supports additional service annotation `service.beta.kubernetes.io/aws-load-balancer-subnets` to manually configure the subnets.",
+    "markdown": "AWS cloudprovider supports auto-discovering subnets without any `kubernetes.io/cluster/\u003cclusterName\u003e` tags. It also supports additional service annotation `service.beta.kubernetes.io/aws-load-balancer-subnets` to manually configure the subnets. ([#97431](https://github.com/kubernetes/kubernetes/pull/97431), [@kishorj](https://github.com/kishorj))",
     "author": "kishorj",
     "author_url": "https://github.com/kishorj",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97431",
@@ -2201,8 +2201,8 @@
   },
   "97888": {
     "commit": "d819199065b078df11cf933ac282f3ebbf6f32bb",
-    "text": "In the method that ensures that the docker and containerd are in the correct containers with the proper OOM score set up, fixed the bug of identifying containerd process.",
-    "markdown": "In the method that ensures that the docker and containerd are in the correct containers with the proper OOM score set up, fixed the bug of identifying containerd process. ([#97888](https://github.com/kubernetes/kubernetes/pull/97888), [@pacoxu](https://github.com/pacoxu)) [SIG Node]",
+    "text": "Fixes a bug of identifying the correct containerd process.",
+    "markdown": "Fixes a bug of identifying the correct containerd process. ([#97888](https://github.com/kubernetes/kubernetes/pull/97888), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97888",
@@ -2422,7 +2422,7 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98021",
     "pr_number": 98021,
     "kinds": [
-      "cleanup"
+      "deprecation"
     ],
     "sigs": [
       "storage"
@@ -2430,8 +2430,8 @@
   },
   "98033": {
     "commit": "54d48d2b806a298528bb22e6263112bf829222b8",
-    "text": "feature gate RootCAConfigMap is graduated to GA in 1.21 and will be removed in 1.22.",
-    "markdown": "Feature gate RootCAConfigMap is graduated to GA in 1.21 and will be removed in 1.22. ([#98033](https://github.com/kubernetes/kubernetes/pull/98033), [@zshihang](https://github.com/zshihang)) [SIG API Machinery and Auth]",
+    "text": "The feature gate `RootCAConfigMap` graduated to GA in `v1.21` and will be removed in `v1.22`",
+    "markdown": "The feature gate `RootCAConfigMap` graduated to GA in `v1.21` and will be removed in `v1.22` ([#98033](https://github.com/kubernetes/kubernetes/pull/98033), [@zshihang](https://github.com/zshihang))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2688,8 +2688,8 @@
   },
   "98201": {
     "commit": "3d8dd2517faa4062c52690fae77ddfd4b72246f3",
-    "text": "avoid duplicate error messages when runing kubectl edit quota",
-    "markdown": "Avoid duplicate error messages when runing kubectl edit quota ([#98201](https://github.com/kubernetes/kubernetes/pull/98201), [@pacoxu](https://github.com/pacoxu)) [SIG API Machinery and Apps]",
+    "text": "Fixes a duplicate error messages when runing kubectl edit on `ResourceQuota`",
+    "markdown": "Fixes a duplicate error messages when runing kubectl edit on `ResourceQuota` ([#98201](https://github.com/kubernetes/kubernetes/pull/98201), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98201",
@@ -2886,8 +2886,8 @@
   },
   "98301": {
     "commit": "25aa6cf0c58067656dd6e4c1e2c28efb259ab08c",
-    "text": "add bash-completion for comma separated list on `kubectl get`",
-    "markdown": "Add bash-completion for comma separated list on `kubectl get` ([#98301](https://github.com/kubernetes/kubernetes/pull/98301), [@phil9909](https://github.com/phil9909)) [SIG CLI]",
+    "text": "Add bash-completion for comma separated list on `kubectl get`",
+    "markdown": "Add bash-completion for comma separated list on `kubectl get` ([#98301](https://github.com/kubernetes/kubernetes/pull/98301), [@phil9909](https://github.com/phil9909))",
     "author": "phil9909",
     "author_url": "https://github.com/phil9909",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98301",
@@ -2905,8 +2905,8 @@
   },
   "98305": {
     "commit": "659b4dc4a8a210c912e8e663532517f919123771",
-    "text": "kube-proxy: fix a bug on UDP NodePort Services where stale conntrack entries may blackhole the traffic directed to the NodePort.",
-    "markdown": "Kube-proxy: fix a bug on UDP NodePort Services where stale conntrack entries may blackhole the traffic directed to the NodePort. ([#98305](https://github.com/kubernetes/kubernetes/pull/98305), [@aojea](https://github.com/aojea)) [SIG Network]",
+    "text": "kube-proxy: fix a bug on UDP `NodePort` Services where stale connection tracking entries may blackhole the traffic directed to the `NodePort`",
+    "markdown": "Kube-proxy: fix a bug on UDP `NodePort` Services where stale connection tracking entries may blackhole the traffic directed to the `NodePort` ([#98305](https://github.com/kubernetes/kubernetes/pull/98305), [@aojea](https://github.com/aojea))",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98305",
@@ -3028,8 +3028,8 @@
   },
   "98358": {
     "commit": "320aaf485924e87d406032f199a180771cd56c26",
-    "text": "migrate scheduling_queue.go to structured logging",
-    "markdown": "Migrate scheduling_queue.go to structured logging ([#98358](https://github.com/kubernetes/kubernetes/pull/98358), [@tanjing2020](https://github.com/tanjing2020)) [SIG Scheduling]",
+    "text": "Migrate `scheduling_queue.go` to structured logging",
+    "markdown": "Migrate `scheduling_queue.go` to structured logging ([#98358](https://github.com/kubernetes/kubernetes/pull/98358), [@tanjing2020](https://github.com/tanjing2020))",
     "author": "tanjing2020",
     "author_url": "https://github.com/tanjing2020",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98358",
@@ -3145,8 +3145,8 @@
   },
   "98458": {
     "commit": "d0a433fa4504e974c69a6c9a70af9f77c7a00112",
-    "text": "Cluster admins can now turn off /debug/pprof and /debug/flags/v endpoint in kubelet by setting enableProfilingHandler and enableDebugFlagsHandler to false in their kubelet configuration file. enableProfilingHandler and enableDebugFlagsHandler can be set to true only when enableDebuggingHandlers is also set to true.",
-    "markdown": "Cluster admins can now turn off /debug/pprof and /debug/flags/v endpoint in kubelet by setting enableProfilingHandler and enableDebugFlagsHandler to false in their kubelet configuration file. enableProfilingHandler and enableDebugFlagsHandler can be set to true only when enableDebuggingHandlers is also set to true. ([#98458](https://github.com/kubernetes/kubernetes/pull/98458), [@SaranBalaji90](https://github.com/SaranBalaji90)) [SIG Node]",
+    "text": "Cluster admins can now turn off `/debug/pprof` and `/debug/flags/v` endpoint in kubelet by setting `enableProfilingHandler` and `enableDebugFlagsHandler` to `false` in the Kubelet configuration file. Options `enableProfilingHandler` and `enableDebugFlagsHandler` can be set to `true` only when enableDebuggingHandlers is also set to `true`.",
+    "markdown": "Cluster admins can now turn off `/debug/pprof` and `/debug/flags/v` endpoint in kubelet by setting `enableProfilingHandler` and `enableDebugFlagsHandler` to `false` in the Kubelet configuration file. Options `enableProfilingHandler` and `enableDebugFlagsHandler` can be set to `true` only when enableDebuggingHandlers is also set to `true`. ([#98458](https://github.com/kubernetes/kubernetes/pull/98458), [@SaranBalaji90](https://github.com/SaranBalaji90))",
     "author": "SaranBalaji90",
     "author_url": "https://github.com/SaranBalaji90",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98458",
@@ -3344,8 +3344,8 @@
   },
   "98676": {
     "commit": "002fb9fc5e91805d53d61e7bd302341ef6ef66c6",
-    "text": "A new histogram metric to track the time it took to delete a job by the ttl-after-finished controller",
-    "markdown": "A new histogram metric to track the time it took to delete a job by the ttl-after-finished controller ([#98676](https://github.com/kubernetes/kubernetes/pull/98676), [@ahg-g](https://github.com/ahg-g)) [SIG Apps and Instrumentation]",
+    "text": "A new histogram metric to track the time it took to delete a job by the `TTLAfterFinished` controller",
+    "markdown": "A new histogram metric to track the time it took to delete a job by the `TTLAfterFinished` controller ([#98676](https://github.com/kubernetes/kubernetes/pull/98676), [@ahg-g](https://github.com/ahg-g))",
     "author": "ahg-g",
     "author_url": "https://github.com/ahg-g",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98676",
@@ -3362,8 +3362,8 @@
   },
   "98678": {
     "commit": "60a0740c958023d48ad5e3d19c65e18a7ec6a662",
-    "text": "TTLAfterFinished is now beta and enabled by default",
-    "markdown": "TTLAfterFinished is now beta and enabled by default ([#98678](https://github.com/kubernetes/kubernetes/pull/98678), [@ahg-g](https://github.com/ahg-g)) [SIG Apps and Auth]",
+    "text": "The `TTLAfterFinished` is now beta and enabled by default",
+    "markdown": "The `TTLAfterFinished` is now beta and enabled by default ([#98678](https://github.com/kubernetes/kubernetes/pull/98678), [@ahg-g](https://github.com/ahg-g))",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/592-ttl-after-finish",
@@ -3445,8 +3445,8 @@
   },
   "98730": {
     "commit": "a4b3d3167853f3cfd25a69949625f146c998c945",
-    "text": "Several flags related to the deprecated dockershim which are present in the kubelet command line are now deprecated.",
-    "markdown": "Several flags related to the deprecated dockershim which are present in the kubelet command line are now deprecated. ([#98730](https://github.com/kubernetes/kubernetes/pull/98730), [@dims](https://github.com/dims)) [SIG Node]",
+    "text": "Several flags related to the deprecated dockershim which are present in the kubelet command line are now showing warning about the future deprecation.",
+    "markdown": "Several flags related to the deprecated dockershim which are present in the kubelet command line are now showing warning about the future deprecation. ([#98730](https://github.com/kubernetes/kubernetes/pull/98730), [@dims](https://github.com/dims))",
     "author": "dims",
     "author_url": "https://github.com/dims",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98730",
@@ -3644,8 +3644,8 @@
   },
   "98878": {
     "commit": "bcfa3a0a36223a24891c7b49ff33dc51bde6ec31",
-    "text": "Turn CronJobControllerV2 on by default.",
-    "markdown": "Turn CronJobControllerV2 on by default. ([#98878](https://github.com/kubernetes/kubernetes/pull/98878), [@soltysh](https://github.com/soltysh)) [SIG Apps]",
+    "text": "Turn `CronJobControllerV2` on by default.",
+    "markdown": "Turn `CronJobControllerV2` on by default. ([#98878](https://github.com/kubernetes/kubernetes/pull/98878), [@soltysh](https://github.com/soltysh))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3705,8 +3705,8 @@
   },
   "98931": {
     "commit": "031f2afbba6a3bade6e729e1709a0e792a1e6637",
-    "text": "APIs for kubelet annotations and labels from k8s.io/kubernetes/pkg/kubelet/apis are now available under k8s.io/kubelet/pkg/apis/",
-    "markdown": "APIs for kubelet annotations and labels from k8s.io/kubernetes/pkg/kubelet/apis are now available under k8s.io/kubelet/pkg/apis/ ([#98931](https://github.com/kubernetes/kubernetes/pull/98931), [@michaelbeaumont](https://github.com/michaelbeaumont)) [SIG Apps, Auth and Node]",
+    "text": "APIs for kubelet annotations and labels from `k8s.io/kubernetes/pkg/kubelet/apis` are now moved under `k8s.io/kubelet/pkg/apis/`",
+    "markdown": "APIs for kubelet annotations and labels from `k8s.io/kubernetes/pkg/kubelet/apis` are now moved under `k8s.io/kubelet/pkg/apis/` ([#98931](https://github.com/kubernetes/kubernetes/pull/98931), [@michaelbeaumont](https://github.com/michaelbeaumont))",
     "author": "michaelbeaumont",
     "author_url": "https://github.com/michaelbeaumont",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98931",
@@ -3727,8 +3727,8 @@
   },
   "98969": {
     "commit": "2d153fe04ea10ea88df01584c80db569fdf3acb5",
-    "text": "Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. Clusters new and existing will not be affected until user starting adding secondary pod and service cidrs cli flags as described here: https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack",
-    "markdown": "Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. Clusters new and existing will not be affected until user starting adding secondary pod and service cidrs cli flags as described here: https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack ([#98969](https://github.com/kubernetes/kubernetes/pull/98969), [@khenidak](https://github.com/khenidak)) [SIG API Machinery, Apps, Cloud Provider, Network and Node]",
+    "text": "Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. New clusters or existing clusters are not be affected until an actor starting adding secondary pods and service cidrs cli flags as described here: [IPv4/IPv6 Dual-stack](https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack)",
+    "markdown": "Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. New clusters or existing clusters are not be affected until an actor starting adding secondary pods and service cidrs cli flags as described here: [IPv4/IPv6 Dual-stack](https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack) ([#98969](https://github.com/kubernetes/kubernetes/pull/98969), [@khenidak](https://github.com/khenidak))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3796,8 +3796,8 @@
   },
   "98990": {
     "commit": "c0841211fdafa032c717bdb6f4955fdcfc183464",
-    "text": "Migrate `pkg/kubelet/(pod, pleg)` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/(pod, pleg)` to structured logging ([#98990](https://github.com/kubernetes/kubernetes/pull/98990), [@gjkim42](https://github.com/gjkim42)) [SIG Instrumentation and Node]",
+    "text": "Migrate `pkg/kubelet/pod` and `pkg/kubelet/pleg` to structured logging",
+    "markdown": "Migrate `pkg/kubelet/pod` and `pkg/kubelet/pleg` to structured logging ([#98990](https://github.com/kubernetes/kubernetes/pull/98990), [@gjkim42](https://github.com/gjkim42))",
     "author": "gjkim42",
     "author_url": "https://github.com/gjkim42",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98990",
@@ -3816,8 +3816,8 @@
   },
   "99001": {
     "commit": "731fac3a55b120fd9d4cbddfefe6acf6bba29551",
-    "text": "Migrate pkg/kubelet/nodestatus to structured logging",
-    "markdown": "Migrate pkg/kubelet/nodestatus to structured logging ([#99001](https://github.com/kubernetes/kubernetes/pull/99001), [@QiWang19](https://github.com/QiWang19)) [SIG Node]",
+    "text": "Migrate `pkg/kubelet/nodestatus` to structured logging",
+    "markdown": "Migrate `pkg/kubelet/nodestatus` to structured logging ([#99001](https://github.com/kubernetes/kubernetes/pull/99001), [@QiWang19](https://github.com/QiWang19))",
     "author": "QiWang19",
     "author_url": "https://github.com/QiWang19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99001",
@@ -3906,8 +3906,8 @@
   },
   "99068": {
     "commit": "ecd1d8aed3b489c21291cc995d96f7885e001134",
-    "text": "Unable read directory \"/root/bin\" from your PATH: open /root/bin: no such file or directory. Skipping...\nerror: unable to find any kubectl plugins in your PATH",
-    "markdown": "Unable read directory \"/root/bin\" from your PATH: open /root/bin: no such file or directory. Skipping...\n  error: unable to find any kubectl plugins in your PATH ([#99068](https://github.com/kubernetes/kubernetes/pull/99068), [@syswu](https://github.com/syswu)) [SIG CLI]",
+    "text": "Unable read directory `/root/bin` from your PATH: open `/root/bin`: no such file or directory. Skipping...\nerror: unable to find any kubectl plugins in your PATH",
+    "markdown": "Unable read directory `/root/bin` from your PATH: open `/root/bin`: no such file or directory. Skipping...\n  error: unable to find any kubectl plugins in your PATH ([#99068](https://github.com/kubernetes/kubernetes/pull/99068), [@syswu](https://github.com/syswu))",
     "author": "syswu",
     "author_url": "https://github.com/syswu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99068",
@@ -3947,8 +3947,8 @@
   },
   "99127": {
     "commit": "9fb1aa92f2206c04ce77c0f9767e235f94d5f7ba",
-    "text": "Fixes spurious errors about IPv6 in kube-proxy logs on nodes with IPv6 disabled.",
-    "markdown": "Fixes spurious errors about IPv6 in kube-proxy logs on nodes with IPv6 disabled. ([#99127](https://github.com/kubernetes/kubernetes/pull/99127), [@danwinship](https://github.com/danwinship)) [SIG Network and Node]",
+    "text": "Fixes spurious errors about IPv6 in `kube-proxy` logs on nodes with IPv6 disabled.",
+    "markdown": "Fixes spurious errors about IPv6 in `kube-proxy` logs on nodes with IPv6 disabled. ([#99127](https://github.com/kubernetes/kubernetes/pull/99127), [@danwinship](https://github.com/danwinship))",
     "author": "danwinship",
     "author_url": "https://github.com/danwinship",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99127",
@@ -3988,8 +3988,8 @@
   },
   "99194": {
     "commit": "d475352bcbb82a45c01ad5557e81ecfde0b4f583",
-    "text": "kubeadm: during \"init\" and \"join\" perform preflight validation on the host / node name and throw warnings if a name is not compliant",
-    "markdown": "Kubeadm: during \"init\" and \"join\" perform preflight validation on the host / node name and throw warnings if a name is not compliant ([#99194](https://github.com/kubernetes/kubernetes/pull/99194), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "text": "During `kubeamd init` and `kubeamd join` a preflight check does a validation on the host/node name and throw warnings if a name is not compliant",
+    "markdown": "During `kubeamd init` and `kubeamd join` a preflight check does a validation on the host/node name and throw warnings if a name is not compliant ([#99194](https://github.com/kubernetes/kubernetes/pull/99194), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99194",
@@ -4007,8 +4007,8 @@
   },
   "99217": {
     "commit": "51919050fe8431591e5d36fdbf261bca401b4658",
-    "text": "Metrics can now be disabled explicitly via a command line flag (i.e. '--disabled-metrics=bad_metric1,bad_metric2')",
-    "markdown": "Metrics can now be disabled explicitly via a command line flag (i.e. '--disabled-metrics=bad_metric1,bad_metric2') ([#99217](https://github.com/kubernetes/kubernetes/pull/99217), [@logicalhan](https://github.com/logicalhan)) [SIG API Machinery, Cluster Lifecycle and Instrumentation]",
+    "text": "Metrics can now be disabled explicitly via a command line flag (i.e. '--disabled-metrics=metric1,metric2')",
+    "markdown": "Metrics can now be disabled explicitly via a command line flag (i.e. '--disabled-metrics=metric1,metric2') ([#99217](https://github.com/kubernetes/kubernetes/pull/99217), [@logicalhan](https://github.com/logicalhan))",
     "documentation": [
       {
         "description": "[KEP]",

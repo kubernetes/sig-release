@@ -1,0 +1,4 @@
+pr: 99194
+releasenote:
+  text: 'kubeadm: perform pre-flight validation on host/node name upon
+    `kubeadm init` and `kubeadm join`, showing warnings on non-compliant names'

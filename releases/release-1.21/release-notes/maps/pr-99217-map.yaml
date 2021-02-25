@@ -1,0 +1,3 @@
+pr: 99217
+releasenote:
+  text: Metrics can now be disabled explicitly via a command line flag (i.e. '--disabled-metrics=metric1,metric2')
