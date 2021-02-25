@@ -1,3 +1,3 @@
 pr: 98678
 releasenote:
-  text: The `TTLAfterFinished` is now beta and enabled by default
+  text: The `TTLAfterFinished` feature flag is now beta and enabled by default

@@ -1,4 +1,4 @@
 pr: 99194
 releasenote:
-  text: During `kubeamd init` and `kubeamd join` a preflight check does a validation
-    on the host/node name and throw warnings if a name is not compliant
+  text: 'kubeadm: perform pre-flight validation on host/node name upon
+    `kubeadm init` and `kubeadm join`, showing warnings on non-compliant names'

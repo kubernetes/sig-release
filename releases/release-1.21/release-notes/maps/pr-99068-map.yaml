@@ -1,5 +1,3 @@
 pr: 99068
 releasenote:
-  text: |-
-    Unable read directory `/root/bin` from your PATH: open `/root/bin`: no such file or directory. Skipping...
-    error: unable to find any kubectl plugins in your PATH
+  do_not_publish: true
