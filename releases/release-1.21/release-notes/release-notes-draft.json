@@ -2688,8 +2688,8 @@
   },
   "98201": {
     "commit": "3d8dd2517faa4062c52690fae77ddfd4b72246f3",
-    "text": "avoid duplicate error messages when runing kubectl edit quota",
-    "markdown": "Avoid duplicate error messages when runing kubectl edit quota ([#98201](https://github.com/kubernetes/kubernetes/pull/98201), [@pacoxu](https://github.com/pacoxu)) [SIG API Machinery and Apps]",
+    "text": "Avoid duplicate error messages when runing kubectl edit quota",
+    "markdown": "Avoid duplicate error messages when runing kubectl edit quota ([#98201](https://github.com/kubernetes/kubernetes/pull/98201), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98201",
@@ -2886,8 +2886,8 @@
   },
   "98301": {
     "commit": "25aa6cf0c58067656dd6e4c1e2c28efb259ab08c",
-    "text": "add bash-completion for comma separated list on `kubectl get`",
-    "markdown": "Add bash-completion for comma separated list on `kubectl get` ([#98301](https://github.com/kubernetes/kubernetes/pull/98301), [@phil9909](https://github.com/phil9909)) [SIG CLI]",
+    "text": "Add bash-completion for comma separated list on `kubectl get`",
+    "markdown": "Add bash-completion for comma separated list on `kubectl get` ([#98301](https://github.com/kubernetes/kubernetes/pull/98301), [@phil9909](https://github.com/phil9909))",
     "author": "phil9909",
     "author_url": "https://github.com/phil9909",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98301",
@@ -2905,8 +2905,8 @@
   },
   "98305": {
     "commit": "659b4dc4a8a210c912e8e663532517f919123771",
-    "text": "kube-proxy: fix a bug on UDP NodePort Services where stale conntrack entries may blackhole the traffic directed to the NodePort.",
-    "markdown": "Kube-proxy: fix a bug on UDP NodePort Services where stale conntrack entries may blackhole the traffic directed to the NodePort. ([#98305](https://github.com/kubernetes/kubernetes/pull/98305), [@aojea](https://github.com/aojea)) [SIG Network]",
+    "text": "`kube-proxy`: fix a bug on UDP NodePort Services where stale conntrack entries may blackhole the traffic directed to the NodePort.",
+    "markdown": "`kube-proxy`: fix a bug on UDP NodePort Services where stale conntrack entries may blackhole the traffic directed to the NodePort. ([#98305](https://github.com/kubernetes/kubernetes/pull/98305), [@aojea](https://github.com/aojea))",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98305",
@@ -3028,8 +3028,8 @@
   },
   "98358": {
     "commit": "320aaf485924e87d406032f199a180771cd56c26",
-    "text": "migrate scheduling_queue.go to structured logging",
-    "markdown": "Migrate scheduling_queue.go to structured logging ([#98358](https://github.com/kubernetes/kubernetes/pull/98358), [@tanjing2020](https://github.com/tanjing2020)) [SIG Scheduling]",
+    "text": "Migrate `scheduling_queue.go` to structured logging",
+    "markdown": "Migrate `scheduling_queue.go` to structured logging ([#98358](https://github.com/kubernetes/kubernetes/pull/98358), [@tanjing2020](https://github.com/tanjing2020))",
     "author": "tanjing2020",
     "author_url": "https://github.com/tanjing2020",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98358",
@@ -3145,8 +3145,8 @@
   },
   "98458": {
     "commit": "d0a433fa4504e974c69a6c9a70af9f77c7a00112",
-    "text": "Cluster admins can now turn off /debug/pprof and /debug/flags/v endpoint in kubelet by setting enableProfilingHandler and enableDebugFlagsHandler to false in their kubelet configuration file. enableProfilingHandler and enableDebugFlagsHandler can be set to true only when enableDebuggingHandlers is also set to true.",
-    "markdown": "Cluster admins can now turn off /debug/pprof and /debug/flags/v endpoint in kubelet by setting enableProfilingHandler and enableDebugFlagsHandler to false in their kubelet configuration file. enableProfilingHandler and enableDebugFlagsHandler can be set to true only when enableDebuggingHandlers is also set to true. ([#98458](https://github.com/kubernetes/kubernetes/pull/98458), [@SaranBalaji90](https://github.com/SaranBalaji90)) [SIG Node]",
+    "text": "Cluster admins can now turn off /debug/pprof and /debug/flags/v endpoint in kubelet by setting `enableProfilingHandler` and `enableDebugFlagsHandler` to false in their kubelet configuration file. `enableProfilingHandler` and `enableDebugFlagsHandler` can be set to true only when enableDebuggingHandlers is also set to true.",
+    "markdown": "Cluster admins can now turn off /debug/pprof and /debug/flags/v endpoint in kubelet by setting `enableProfilingHandler` and `enableDebugFlagsHandler` to false in their kubelet configuration file. `enableProfilingHandler` and `enableDebugFlagsHandler` can be set to true only when enableDebuggingHandlers is also set to true. ([#98458](https://github.com/kubernetes/kubernetes/pull/98458), [@SaranBalaji90](https://github.com/SaranBalaji90))",
     "author": "SaranBalaji90",
     "author_url": "https://github.com/SaranBalaji90",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98458",
@@ -3727,8 +3727,8 @@
   },
   "98969": {
     "commit": "2d153fe04ea10ea88df01584c80db569fdf3acb5",
-    "text": "Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. Clusters new and existing will not be affected until user starting adding secondary pod and service cidrs cli flags as described here: https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack",
-    "markdown": "Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. Clusters new and existing will not be affected until user starting adding secondary pod and service cidrs cli flags as described here: https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack ([#98969](https://github.com/kubernetes/kubernetes/pull/98969), [@khenidak](https://github.com/khenidak)) [SIG API Machinery, Apps, Cloud Provider, Network and Node]",
+    "text": "Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. Clusters new and existing will not be affected until user starts adding secondary pod and service cidrs cli flags as described here: https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack",
+    "markdown": "Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. Clusters new and existing will not be affected until user starts adding secondary pod and service cidrs cli flags as described here: https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack ([#98969](https://github.com/kubernetes/kubernetes/pull/98969), [@khenidak](https://github.com/khenidak))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3816,8 +3816,8 @@
   },
   "99001": {
     "commit": "731fac3a55b120fd9d4cbddfefe6acf6bba29551",
-    "text": "Migrate pkg/kubelet/nodestatus to structured logging",
-    "markdown": "Migrate pkg/kubelet/nodestatus to structured logging ([#99001](https://github.com/kubernetes/kubernetes/pull/99001), [@QiWang19](https://github.com/QiWang19)) [SIG Node]",
+    "text": "Migrate `pkg/kubelet/nodestatus` to structured logging",
+    "markdown": "Migrate `pkg/kubelet/nodestatus` to structured logging ([#99001](https://github.com/kubernetes/kubernetes/pull/99001), [@QiWang19](https://github.com/QiWang19))",
     "author": "QiWang19",
     "author_url": "https://github.com/QiWang19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99001",
@@ -3922,8 +3922,7 @@
     "sigs": [
       "cli"
     ],
-    "duplicate_kind": true,
-    "do_not_publish": true
+    "duplicate_kind": true
   },
   "99122": {
     "commit": "0f140bf1eeaf63c155f5eba1db8db9b5d52d5467",
