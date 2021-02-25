@@ -1,0 +1,6 @@
+pr: 98458
+releasenote:
+  text: Cluster admins can now turn off /debug/pprof and /debug/flags/v endpoint in
+    kubelet by setting `enableProfilingHandler` and `enableDebugFlagsHandler` to false
+    in their kubelet configuration file. `enableProfilingHandler` and `enableDebugFlagsHandler`
+    can be set to true only when enableDebuggingHandlers is also set to true.

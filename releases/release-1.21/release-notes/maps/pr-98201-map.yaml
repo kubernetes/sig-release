@@ -1,0 +1,3 @@
+pr: 98201
+releasenote:
+  text: Avoid duplicate error messages when runing kubectl edit quota

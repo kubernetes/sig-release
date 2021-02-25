@@ -1,0 +1,5 @@
+pr: 98969
+releasenote:
+  text: 'Upgrades `IPv6Dualstack` to `Beta` and turns it on by default. Clusters new
+    and existing will not be affected until user starts adding secondary pod and service
+    cidrs cli flags as described here: https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack'

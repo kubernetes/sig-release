@@ -1,0 +1,3 @@
+pr: 99001
+releasenote:
+  text: Migrate `pkg/kubelet/nodestatus` to structured logging
