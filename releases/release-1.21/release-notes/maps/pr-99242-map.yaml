@@ -1,0 +1,3 @@
+pr: 99242
+releasenote:
+  text: Added support for installing `arm64` node artifacts.
