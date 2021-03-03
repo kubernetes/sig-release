@@ -50,24 +50,24 @@ The 1.21 release cycle is proposed as follows:
 |---|---|---|---|---|
 | Start of Release Cycle | Lead | Mon January 11 | week 1 | [master-blocking] |
 | Start Enhancements Tracking | Enhancements Lead | Tue January 12 | week 1 | |
-| 1.21.0-alpha.1 released | Branch Manager | Wed January 13  | week 1 | |
+| 1.21.0-alpha.1 released | Branch Manager ([@puerco](https://github.com/puerco)) | Wed January 13  | week 1 | |
 | Schedule finalized | Lead | Thurs January 14 | week 1 | |
 | Team finalized | Lead | Friday January 15 | week 1 | |
-| 1.21.0-alpha.2 released | Branch Manager | Tue January 26 | week 3 | |
+| 1.21.0-alpha.2 released | Branch Manager ([@sethmccombs](https://github.com/sethmccombs)) | Tue January 26 | week 3 | |
 | **Begin [Enhancements Freeze]** (EOD PST) | Enhancements Lead | Tue February 9th | week 5 | [master-blocking], [master-informing] |
-| 1.21.0-alpha.3 released | Branch Manager | Tue February 9 | week 5 | |
-| 1.21.0-beta.0 released | Branch Manager | Tue February 23 | week 7 | |
+| 1.21.0-alpha.3 released | Branch Manager ([@ameukam](https://github.com/ameukam)) | Tue February 9 | week 5 | |
+| 1.21.0-beta.0 released | Branch Manager ([@onlydole](https://github.com/onlydole)) | Tue February 23 | week 7 | |
 | **Begin [Burndown]** (MWF meetings) | Lead | Mon March 1 | week 8 | [1.21-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Mon March 1 | week 8 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon March 1 | week 8 | |
 | **Begin Feature blog freeze** | Comms Lead | Mon March 1 | week 8 | |
-| 1.21.0-beta.1 released | Branch Manager | Tue March 9 | week 9 | |
+| 1.21.0-beta.1 released | Branch Manager ([@mkorbi](https://github.com/mkorbi)) | Tue March 9 | week 9 | |
 | **Begin [Code Freeze]** (EOD PST) | Branch Manager | Tue March 9 | week 9 | |
 | Burndown Meetings daily| Lead | Mon March 15 | week 10 | |
 | Docs deadline - Open placeholder PRs | Docs Lead | Tue March 16 | week 10 | |
 | Docs deadline - PRs ready for review | Docs Lead | Wed March 24 | week 11 | |
 | **[Test Freeze]** (EOD PST) | Branch Manager | Wed March 24 | week 11 | |
-| 1.21.0-rc.0 released | Branch Manager | Tue March 25 | week 11 | |
+| 1.21.0-rc.0 released | Branch Manager ([@puerco](https://github.com/puerco)) | Tue March 25 | week 11 | |
 | release-1.21 branch created | Branch Manager | Tue March 25 | week 11 | |
 | release-1.21 jobs created | Branch Manager | Tue March 25 | week 11 | |
 | Start final draft of Release Notes | Release Notes Lead | Tue March 25 | week 11 | |
@@ -75,7 +75,7 @@ The 1.21 release cycle is proposed as follows:
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Wed March 31 | week 12 | |
 | Feature blogs ready to review | Enhancement Owner / SIG Leads | Wed March 31 | week 12 | |
 | Release Notes complete - reviewed & merged to `k/sig-release` | Release Notes Lead | Mon April 5 | week 13 | |
-| **v1.21.0 released** | Branch Manager | Thu April 8 | week 13 | |
+| **v1.21.0 released** | Branch Manager ([@puerco](https://github.com/puerco)) | Thu April 8 | week 13 | |
 | Release blog published | Comms | Thu April 8 | week 13 | |
 | **[Thaw]** | Branch Manager | Thu April 8 | week 13 | |
 | Release retrospective | Community | Thu April 15 | Week 14 | |
