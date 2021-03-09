@@ -1,0 +1,3 @@
+pr: 97216
+releasenote:
+  text: Clarified `NetworkPolicy` policyTypes documentation.
