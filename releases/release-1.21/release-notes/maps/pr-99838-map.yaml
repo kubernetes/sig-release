@@ -1,0 +1,5 @@
+pr: 99838
+releasenote:
+  text: |-
+    Migrate pkg/kubelet/server logs to structured logging.
+    Exit code changed from 255 to 1

@@ -1,0 +1,5 @@
+pr: 99870
+releasenote:
+  text: The EndpointSlice Controllers are now GA. The `EndpointSliceController` will
+    not populate the `deprecatedTopology` field and will only provide topology information
+    through the `zone` and `nodeName` fields.

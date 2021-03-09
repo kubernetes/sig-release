@@ -1,0 +1,5 @@
+pr: 99585
+releasenote:
+  text: Return zero time (midnight on Jan. 1, 1970) instead of negative number when
+    reporting startedAt and finishedAt of the not started or a running Pod when using
+    `dockershim` as a runtime.

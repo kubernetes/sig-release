@@ -1,0 +1,4 @@
+pr: 99236
+releasenote:
+  text: Removes cAdvisor JSON metrics (/stats/container, /stats/<podname>/<containername>,
+    /stats/<namespace>/<podname>/<poduid>/<containername>) from the kubelet.

@@ -1,0 +1,5 @@
+pr: 99732
+releasenote:
+  text: |-
+    Remove deprecated `--generator, --replicas, --service-generator, --service-overrides, --schedule` from `kubectl run`
+    Deprecate `--serviceaccount, --hostport, --requests, --limits` in `kubectl run`

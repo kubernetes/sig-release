@@ -1,0 +1,4 @@
+pr: 83730
+releasenote:
+  text: When using `Containerd` on Windows, the `C:\Windows\System32\drivers\etc\hosts`
+    file will now be managed by kubelet.
