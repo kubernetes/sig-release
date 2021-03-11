@@ -51,3 +51,107 @@
   - "https://github.com/kubernetes/enhancements/pull/1916"
   status: "approved"
 
+- name: "Add Scope feature to Topology Manager"
+  issue: 693
+  date_requested: 2020-11-2
+  date_reviewed: 2020-11-3
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/otE2ymBKeMA"
+  pull_requests:
+  - "https://github.com/kubernetes/enhancements/pull/1950"
+  status: "approved"
+
+- name: "Improved service account tokens"
+  issue: 542
+  date_requested: 2020-11-2
+  date_reviewed: 2020-11-3
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/VLiE7Lsy6Es"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/95667"
+  - "https://github.com/kubernetes/website/pull/24823"
+  status: "approved"
+
+- name: "Kubelet Credential Provider "
+  issue: 2133
+  date_requested: 2020-11-6
+  date_reviewed: 2020-11-6
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/rYXqvvt4aDI"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/94196"
+  - "https://github.com/kubernetes/enhancements/pull/2151"
+  status: "approved"
+
+
+# Code Freeze Exceptions requested in 1.20
+- name: "Memory Manager"
+  issue: 1769
+  date_requested: 2020-11-11
+  date_reviewed: 2020-11-12
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/y327XGmo6-4"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/95479"
+  status: "approved"
+
+- name: "API Priority and Fairness"
+  issue: 1040
+  date_requested: 2020-11-13
+  date_reviewed: 2020-11-16
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/pD9jT9hh-tU"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/96527"
+  status: "approved"
+
+- name: "Built-in Defaults"
+  issue: 1929
+  date_requested: 2020-11-12
+  date_reviewed: 2020-11-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/eCk4Xyb58GQ"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/96317" 
+  - "https://github.com/kubernetes/kubernetes/pull/96480"
+  status: "approved"
+
+- name: "POD Resources concrete APIs"
+  issue: 2043
+  date_requested: 2020-11-12
+  date_reviewed: 2020-11-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/_OleZNw4J2c"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/95734" 
+  status: "denied"
+
+- name: "Controller Manager Leader Migration"
+  issue: 991
+  date_requested: 2020-11-13
+  date_reviewed: 2020-11-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/k1n29cyN1Z8"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/96226"
+  - "https://github.com/kubernetes/kubernetes/pull/96541"
+  status: "denied"
+
+- name: "Runtime Class"
+  issue: 585
+  date_requested: 2020-11-13
+  date_reviewed: 2020-11-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/0b5SQLz2tZg"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/96551"
+  status: "approved"
+
+- name: "Credential Provider Extraction"
+  issue: 2133
+  date_requested: 2020-11-13
+  date_reviewed: 2020-11-16
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/ZC-3ne1_LnY"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/95775"
+  status: "denied"
+
+- name: "Support for maxUnavailable in StatefulSet"
+  issue: 961
+  date_requested: 2020-11-14
+  date_reviewed: 2020-11-16
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/VCn0VuBTx5w"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/82162"
+  status: "denied"
