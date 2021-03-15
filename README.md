@@ -24,3 +24,4 @@ The following high-level descriptions of SIG Release processes should provide a
 general overview about the work we're doing:
 
 - [Release Notes](/release-engineering/release-notes.md)
+- [Versioning](/release-engineering/versioning.md)
