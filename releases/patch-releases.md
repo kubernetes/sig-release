@@ -57,8 +57,6 @@ releases may also occur in between these.
 
 ### 1.20
 
-Next patch release is **1.20.3**
-
 End of Life for **1.20** is **2021-12-30**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
@@ -70,8 +68,6 @@ End of Life for **1.20** is **2021-12-30**
 | 1.20.1        | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 
 ### 1.19
-
-Next patch release is **1.19.8**
 
 End of Life for **1.19** is **2021-09-30**
 
@@ -88,8 +84,6 @@ End of Life for **1.19** is **2021-09-30**
 | 1.19.1        | 2020-09-04           | 2020-09-09  |
 
 ### 1.18
-
-Next patch release is **1.18.16**
 
 End of Life for **1.18** is **2021-04-30**
 
