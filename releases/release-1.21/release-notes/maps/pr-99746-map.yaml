@@ -1,0 +1,4 @@
+pr: 99746
+releasenote:
+  text: EndpointSliceNodeName graduates to GA and thus will be unconditionally enabled
+    -- NodeName will always be available in the v1beta1 API.

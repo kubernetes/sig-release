@@ -1,0 +1,4 @@
+pr: 99658
+releasenote:
+  text: featuregate AllowInsecureBackendProxy graduates to GA and unconditionally
+    enabled.

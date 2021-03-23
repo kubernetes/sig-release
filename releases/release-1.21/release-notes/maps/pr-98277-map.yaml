@@ -1,0 +1,3 @@
+pr: 98277
+releasenote:
+  text: Services can specify loadBalancerClass to use a custom load balancer

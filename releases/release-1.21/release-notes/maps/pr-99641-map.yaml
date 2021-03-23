@@ -1,0 +1,5 @@
+pr: 99641
+releasenote:
+  text: storage capacity tracking (= the CSIStorageCapacity feature) graduates to
+    Beta and enabled by default, storage.k8s.io/v1alpha1/VolumeAttachment and storage.k8s.io/v1alpha1/CSIStorageCapacity
+    objects are deprecated

@@ -1,0 +1,3 @@
+pr: 99060
+releasenote:
+  text: Fixes `kubectl top pod` documentation which should not claim to show Storage.

@@ -1,0 +1,5 @@
+pr: 99341
+releasenote:
+  text: Adds two new metrics to cronjobs, a histogram to track the time difference
+    when a job is created and the expected time when it should be created, as well
+    as a gauge for the missed schedules of a cronjob
