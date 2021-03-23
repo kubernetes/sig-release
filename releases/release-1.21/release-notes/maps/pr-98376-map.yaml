@@ -1,0 +1,5 @@
+pr: 98376
+releasenote:
+  text: Pod status updates faster when reacting on probe results. The first readiness
+    probe will be called faster when startup probes succeeded, which will make Pod
+    status as ready faster.

@@ -1,0 +1,4 @@
+pr: 98968
+releasenote:
+  text: Fixes add-on manager leader election to use leases instead of endpoints, similar
+    to what kube-controller-manager does in 1.20

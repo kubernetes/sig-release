@@ -1,0 +1,3 @@
+pr: 99158
+releasenote:
+  text: Sysctls graduates to General Availability and thus unconditionally enabled.

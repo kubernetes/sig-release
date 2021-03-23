@@ -1,0 +1,3 @@
+pr: 98257
+releasenote:
+  text: Limits lease to have 1000 maximum attached objects.

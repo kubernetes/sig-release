@@ -387,8 +387,8 @@
   },
   "96293": {
     "commit": "d3fce91fdc581f94496f0c4417207f9d2745e02b",
-    "text": "feat: azure file migration go beta in 1.21. Feature gates CSIMigration to Beta (on by default) and CSIMigrationAzureFile to Beta (off by default since it requires installation of the AzureFile CSI Driver)\nThe in-tree AzureFile plugin \"kubernetes.io/azure-file\" is now deprecated and will be removed in 1.23. Users should enable CSIMigration + CSIMigrationAzureFile features and install the AzureFile CSI Driver (https://github.com/kubernetes-sigs/azurefile-csi-driver) to avoid disruption to existing Pod and PVC objects at that time.\nUsers should start using the AzureFile CSI Driver directly for any new volumes.\n\nAzure File CSI driver does not support using same persistent volume with different fsgroups, when CSI migration is enabled for azurefile driver, such case is not supported. (there is a case we support where volume is mounted with 0777 and then it readable/writable by everyone)",
-    "markdown": "Feat: azure file migration go beta in 1.21. Feature gates CSIMigration to Beta (on by default) and CSIMigrationAzureFile to Beta (off by default since it requires installation of the AzureFile CSI Driver)\n  The in-tree AzureFile plugin \"kubernetes.io/azure-file\" is now deprecated and will be removed in 1.23. Users should enable CSIMigration + CSIMigrationAzureFile features and install the AzureFile CSI Driver (https://github.com/kubernetes-sigs/azurefile-csi-driver) to avoid disruption to existing Pod and PVC objects at that time.\n  Users should start using the AzureFile CSI Driver directly for any new volumes.\n  \n  Azure File CSI driver does not support using same persistent volume with different fsgroups, when CSI migration is enabled for azurefile driver, such case is not supported. (there is a case we support where volume is mounted with 0777 and then it readable/writable by everyone) ([#96293](https://github.com/kubernetes/kubernetes/pull/96293), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider]",
+    "text": "Azure file migration graduates to beta, with CSIMigrationAzureFile flag off by default\nas it requires installation of AzureFile CSI Driver. Users should enable CSIMigration and\nCSIMigrationAzureFile features and install the [AzureFile CSI Driver](https://github.com/kubernetes-sigs/azurefile-csi-driver)\nto avoid disruption to existing Pod and PVC objects at that time. Azure File CSI driver does not support using same persistent\nvolume with different fsgroups. When CSI migration is enabled for azurefile driver, such case is not supported.\n(there is a case we support where volume is mounted with 0777 and then it readable/writable by everyone)",
+    "markdown": "Azure file migration graduates to beta, with CSIMigrationAzureFile flag off by default\n  as it requires installation of AzureFile CSI Driver. Users should enable CSIMigration and\n  CSIMigrationAzureFile features and install the [AzureFile CSI Driver](https://github.com/kubernetes-sigs/azurefile-csi-driver)\n  to avoid disruption to existing Pod and PVC objects at that time. Azure File CSI driver does not support using same persistent\n  volume with different fsgroups. When CSI migration is enabled for azurefile driver, such case is not supported.\n  (there is a case we support where volume is mounted with 0777 and then it readable/writable by everyone) ([#96293](https://github.com/kubernetes/kubernetes/pull/96293), [@andyzhangx](https://github.com/andyzhangx))",
     "documentation": [
       {
         "description": "The in-tree AzureFile plugin \"kubernetes.io/azure-file\" is now deprecated and will be removed in 1.23. Users should enable CSIMigration + CSIMigrationAzureFile features and install the AzureFile CSI Driver (",
@@ -2274,8 +2274,8 @@
   },
   "97686": {
     "commit": "bce5d7a0158444080ed95aae6a5684ce4dd9444b",
-    "text": "Fix --ignore-errors does not take effect if multiple logs are printed and unfollowed",
-    "markdown": "Fix --ignore-errors does not take effect if multiple logs are printed and unfollowed ([#97686](https://github.com/kubernetes/kubernetes/pull/97686), [@wzshiming](https://github.com/wzshiming)) [SIG CLI]",
+    "text": "Kubectl `--ignore-errors` is now honored by all containers, maintaining consistency with parallelConsumeRequest behavior -- fixes a bug where `kubectl logs` may terminate early on first error.",
+    "markdown": "Kubectl `--ignore-errors` is now honored by all containers, maintaining consistency with parallelConsumeRequest behavior -- fixes a bug where `kubectl logs` may terminate early on first error. ([#97686](https://github.com/kubernetes/kubernetes/pull/97686), [@wzshiming](https://github.com/wzshiming))",
     "author": "wzshiming",
     "author_url": "https://github.com/wzshiming",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97686",
@@ -3276,8 +3276,8 @@
   },
   "98257": {
     "commit": "f81220975e5736613ba7bcc8956fc6632a59a6ba",
-    "text": "A lease can only attach up to 10k objects.",
-    "markdown": "A lease can only attach up to 10k objects. ([#98257](https://github.com/kubernetes/kubernetes/pull/98257), [@lingsamuel](https://github.com/lingsamuel)) [SIG API Machinery]",
+    "text": "Limits lease to have 1000 maximum attached objects.",
+    "markdown": "Limits lease to have 1000 maximum attached objects. ([#98257](https://github.com/kubernetes/kubernetes/pull/98257), [@lingsamuel](https://github.com/lingsamuel))",
     "author": "lingsamuel",
     "author_url": "https://github.com/lingsamuel",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98257",
@@ -3286,12 +3286,11 @@
       "apiserver"
     ],
     "kinds": [
-      "feature"
+      "bug"
     ],
     "sigs": [
       "api-machinery"
-    ],
-    "feature": true
+    ]
   },
   "98259": {
     "commit": "6dc0047396d3aad16928d346da8a5052d8a824fa",
@@ -3354,8 +3353,8 @@
   },
   "98277": {
     "commit": "66cbf0196bd5ed0f06d7c40fccba887aae5405d8",
-    "text": "Setting loadBalancerClass in load balancer type of service is available with this PR. \nUsers who want to use a custom load balancer can specify loadBalancerClass to achieve it.",
-    "markdown": "Setting loadBalancerClass in load balancer type of service is available with this PR. \n  Users who want to use a custom load balancer can specify loadBalancerClass to achieve it. ([#98277](https://github.com/kubernetes/kubernetes/pull/98277), [@XudongLiuHarold](https://github.com/XudongLiuHarold)) [SIG API Machinery, Apps, Cloud Provider and Network]",
+    "text": "Services can specify loadBalancerClass to use a custom load balancer",
+    "markdown": "Services can specify loadBalancerClass to use a custom load balancer ([#98277](https://github.com/kubernetes/kubernetes/pull/98277), [@XudongLiuHarold](https://github.com/XudongLiuHarold))",
     "documentation": [
       {
         "description": "[KEP-1959]:\u003c",
@@ -3608,8 +3607,8 @@
   },
   "98376": {
     "commit": "c193c1b2347c2f9bfbdd4f5c4dd7f41fcd91a204",
-    "text": "Faster update the pod status reacting on probe results. Among other changes, the first readiness probe will be called faster when startup probes succeeded, which will make Pod status as ready faster.",
-    "markdown": "Faster update the pod status reacting on probe results. Among other changes, the first readiness probe will be called faster when startup probes succeeded, which will make Pod status as ready faster. ([#98376](https://github.com/kubernetes/kubernetes/pull/98376), [@matthyx](https://github.com/matthyx)) [SIG Node and Testing]",
+    "text": "Pod status updates faster when reacting on probe results. The first readiness probe will be called faster when startup probes succeeded, which will make Pod status as ready faster.",
+    "markdown": "Pod status updates faster when reacting on probe results. The first readiness probe will be called faster when startup probes succeeded, which will make Pod status as ready faster. ([#98376](https://github.com/kubernetes/kubernetes/pull/98376), [@matthyx](https://github.com/matthyx))",
     "author": "matthyx",
     "author_url": "https://github.com/matthyx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98376",
@@ -3850,8 +3849,8 @@
   },
   "98546": {
     "commit": "525e397a4817435d8b9cb1ca52dfa17b5bbbb4f6",
-    "text": "`diskformat` stroage class parameter for in-tree vSphere volume plugin is deprecated as of v1.21 release. Please consider updating storageclass and remove `diskformat` parameter. vSphere CSI Driver does not support diskformat storageclass parameter.\n\nvSphere releases less than 67u3 are deprecated as of v1.21. Please consider upgrading vSphere to 67u3 or above. vSphere CSI Driver requires minimum vSphere 67u3.\n\nVM Hardware version less than 15 is deprecated as of v1.21. Please consider upgrading the Node VM Hardware version to 15 or above. vSphere CSI Driver recommends Node VM's Hardware version set to at least vmx-15.\n\nMulti vCenter support is deprecated as of v1.21. If you have a Kubernetes cluster spanning across multiple vCenter servers, please consider moving all k8s nodes to a single vCenter Server. vSphere CSI Driver does not support Kubernetes deployment spanning across multiple vCenter servers.\n\nSupport for these deprecations will be available till Kubernetes v1.24.",
-    "markdown": "`diskformat` stroage class parameter for in-tree vSphere volume plugin is deprecated as of v1.21 release. Please consider updating storageclass and remove `diskformat` parameter. vSphere CSI Driver does not support diskformat storageclass parameter.\n  \n  vSphere releases less than 67u3 are deprecated as of v1.21. Please consider upgrading vSphere to 67u3 or above. vSphere CSI Driver requires minimum vSphere 67u3.\n  \n  VM Hardware version less than 15 is deprecated as of v1.21. Please consider upgrading the Node VM Hardware version to 15 or above. vSphere CSI Driver recommends Node VM's Hardware version set to at least vmx-15.\n  \n  Multi vCenter support is deprecated as of v1.21. If you have a Kubernetes cluster spanning across multiple vCenter servers, please consider moving all k8s nodes to a single vCenter Server. vSphere CSI Driver does not support Kubernetes deployment spanning across multiple vCenter servers.\n  \n  Support for these deprecations will be available till Kubernetes v1.24. ([#98546](https://github.com/kubernetes/kubernetes/pull/98546), [@divyenpatel](https://github.com/divyenpatel)) [SIG Cloud Provider and Storage]",
+    "text": "`diskformat` storage class parameter for in-tree vSphere volume plugin is deprecated as of v1.21 release. Please consider updating storageclass and remove `diskformat` parameter. vSphere CSI Driver does not support diskformat storageclass parameter.\n\nvSphere releases less than 67u3 are deprecated as of v1.21. Please consider upgrading vSphere to 67u3 or above. vSphere CSI Driver requires minimum vSphere 67u3.\n\nVM Hardware version less than 15 is deprecated as of v1.21. Please consider upgrading the Node VM Hardware version to 15 or above. vSphere CSI Driver recommends Node VM's Hardware version set to at least vmx-15.\n\nMulti vCenter support is deprecated as of v1.21. If you have a Kubernetes cluster spanning across multiple vCenter servers, please consider moving all k8s nodes to a single vCenter Server. vSphere CSI Driver does not support Kubernetes deployment spanning across multiple vCenter servers.\n\nSupport for these deprecations will be available till Kubernetes v1.24.",
+    "markdown": "`diskformat` storage class parameter for in-tree vSphere volume plugin is deprecated as of v1.21 release. Please consider updating storageclass and remove `diskformat` parameter. vSphere CSI Driver does not support diskformat storageclass parameter.\n  \n  vSphere releases less than 67u3 are deprecated as of v1.21. Please consider upgrading vSphere to 67u3 or above. vSphere CSI Driver requires minimum vSphere 67u3.\n  \n  VM Hardware version less than 15 is deprecated as of v1.21. Please consider upgrading the Node VM Hardware version to 15 or above. vSphere CSI Driver recommends Node VM's Hardware version set to at least vmx-15.\n  \n  Multi vCenter support is deprecated as of v1.21. If you have a Kubernetes cluster spanning across multiple vCenter servers, please consider moving all k8s nodes to a single vCenter Server. vSphere CSI Driver does not support Kubernetes deployment spanning across multiple vCenter servers.\n  \n  Support for these deprecations will be available till Kubernetes v1.24. ([#98546](https://github.com/kubernetes/kubernetes/pull/98546), [@divyenpatel](https://github.com/divyenpatel))",
     "author": "divyenpatel",
     "author_url": "https://github.com/divyenpatel",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98546",
@@ -4669,8 +4668,8 @@
   },
   "98952": {
     "commit": "85cb886f7e2911a14cc84acc32c20a5d0254d8b9",
-    "text": "Alpha implementation of Kubectl Command Headers: SIG CLI KEP 859 enabled when KUBECTL_COMMAND_HEADERS environment variable set on the client command line.\n- To enable: export KUBECTL_COMMAND_HEADERS=1; kubectl ...",
-    "markdown": "Alpha implementation of Kubectl Command Headers: SIG CLI KEP 859 enabled when KUBECTL_COMMAND_HEADERS environment variable set on the client command line.\n  - To enable: export KUBECTL_COMMAND_HEADERS=1; kubectl ... ([#98952](https://github.com/kubernetes/kubernetes/pull/98952), [@seans3](https://github.com/seans3)) [SIG API Machinery and CLI]",
+    "text": "Alpha implementation of Kubectl Command Headers: SIG CLI KEP 859 enabled when KUBECTL_COMMAND_HEADERS environment variable set on the client command line.",
+    "markdown": "Alpha implementation of Kubectl Command Headers: SIG CLI KEP 859 enabled when KUBECTL_COMMAND_HEADERS environment variable set on the client command line. ([#98952](https://github.com/kubernetes/kubernetes/pull/98952), [@seans3](https://github.com/seans3))",
     "author": "seans3",
     "author_url": "https://github.com/seans3",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98952",
@@ -4692,8 +4691,8 @@
   },
   "98968": {
     "commit": "a7147bb113dc5b7dd5a125664ea11fe8b53b2559",
-    "text": "Fixes add-on manager leader election",
-    "markdown": "Fixes add-on manager leader election ([#98968](https://github.com/kubernetes/kubernetes/pull/98968), [@liggitt](https://github.com/liggitt)) [SIG Cloud Provider]",
+    "text": "Fixes add-on manager leader election to use leases instead of endpoints, similar to what kube-controller-manager does in 1.20",
+    "markdown": "Fixes add-on manager leader election to use leases instead of endpoints, similar to what kube-controller-manager does in 1.20 ([#98968](https://github.com/kubernetes/kubernetes/pull/98968), [@liggitt](https://github.com/liggitt))",
     "author": "liggitt",
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98968",
@@ -4972,8 +4971,8 @@
   },
   "99060": {
     "commit": "b7613c4315c18592621ecae4d4959985ed497623",
-    "text": "Available Commands:\n  node        Display Resource (CPU/Memory/Storage) usage of nodes\n  pod         Display Resource (CPU/Memory/Storage) usage of pods",
-    "markdown": "Available Commands:\n    node        Display Resource (CPU/Memory/Storage) usage of nodes\n    pod         Display Resource (CPU/Memory/Storage) usage of pods ([#99060](https://github.com/kubernetes/kubernetes/pull/99060), [@syswu](https://github.com/syswu)) [SIG CLI]",
+    "text": "Fixes `kubectl top pod` documentation which should not claim to show Storage.",
+    "markdown": "Fixes `kubectl top pod` documentation which should not claim to show Storage. ([#99060](https://github.com/kubernetes/kubernetes/pull/99060), [@syswu](https://github.com/syswu))",
     "author": "syswu",
     "author_url": "https://github.com/syswu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99060",
@@ -5138,8 +5137,8 @@
   },
   "99158": {
     "commit": "739a72b9cce70666ef0512de188f39a2ce57cf3e",
-    "text": "sysctls is now GA and locked to default",
-    "markdown": "Sysctls is now GA and locked to default ([#99158](https://github.com/kubernetes/kubernetes/pull/99158), [@wgahnagl](https://github.com/wgahnagl)) [SIG Node]",
+    "text": "Sysctls graduates to General Availability and thus unconditionally enabled.",
+    "markdown": "Sysctls graduates to General Availability and thus unconditionally enabled. ([#99158](https://github.com/kubernetes/kubernetes/pull/99158), [@wgahnagl](https://github.com/wgahnagl))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5398,8 +5397,8 @@
   },
   "99275": {
     "commit": "4bf85032f3c391ff710390c41996642cd4134c40",
-    "text": "IngressClass resource can now reference a resource in a specific namespace \nfor implementation-specific configuration(previously only Cluster-level resources were allowed). \nThis feature can be enabled using the IngressClassNamespacedParams feature gate.",
-    "markdown": "IngressClass resource can now reference a resource in a specific namespace \n  for implementation-specific configuration(previously only Cluster-level resources were allowed). \n  This feature can be enabled using the IngressClassNamespacedParams feature gate. ([#99275](https://github.com/kubernetes/kubernetes/pull/99275), [@hbagdi](https://github.com/hbagdi)) [SIG API Machinery, CLI and Network]",
+    "text": "IngressClass resource can now reference a resource in a specific namespace \nfor implementation-specific configuration (previously only Cluster-level resources were allowed). \nThis feature can be enabled using the IngressClassNamespacedParams feature gate.",
+    "markdown": "IngressClass resource can now reference a resource in a specific namespace \n  for implementation-specific configuration (previously only Cluster-level resources were allowed). \n  This feature can be enabled using the IngressClassNamespacedParams feature gate. ([#99275](https://github.com/kubernetes/kubernetes/pull/99275), [@hbagdi](https://github.com/hbagdi))",
     "author": "hbagdi",
     "author_url": "https://github.com/hbagdi",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99275",
@@ -5422,8 +5421,8 @@
   },
   "99294": {
     "commit": "1ddc4afcf87789b1646320bc9cd19d37a5def098",
-    "text": "kubeadm: promote IPv6DualStack feature gate to Beta",
-    "markdown": "Kubeadm: promote IPv6DualStack feature gate to Beta ([#99294](https://github.com/kubernetes/kubernetes/pull/99294), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: IPv6DualStack feature gate graduates to Beta and enabled by default",
+    "markdown": "Kubeadm: IPv6DualStack feature gate graduates to Beta and enabled by default ([#99294](https://github.com/kubernetes/kubernetes/pull/99294), [@pacoxu](https://github.com/pacoxu))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5466,8 +5465,8 @@
   },
   "99341": {
     "commit": "94d5019369858851db5759748483f32f1986d56e",
-    "text": "Adds two new metrics to cronjobs, a  histogram to track the time difference when a job is created and the expected time when it should be created, and a gauge for the missed schedules of a cronjob",
-    "markdown": "Adds two new metrics to cronjobs, a  histogram to track the time difference when a job is created and the expected time when it should be created, and a gauge for the missed schedules of a cronjob ([#99341](https://github.com/kubernetes/kubernetes/pull/99341), [@alaypatel07](https://github.com/alaypatel07)) [SIG Apps and Instrumentation]",
+    "text": "Adds two new metrics to cronjobs, a histogram to track the time difference when a job is created and the expected time when it should be created, as well as a gauge for the missed schedules of a cronjob",
+    "markdown": "Adds two new metrics to cronjobs, a histogram to track the time difference when a job is created and the expected time when it should be created, as well as a gauge for the missed schedules of a cronjob ([#99341](https://github.com/kubernetes/kubernetes/pull/99341), [@alaypatel07](https://github.com/alaypatel07))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5754,8 +5753,8 @@
   },
   "99550": {
     "commit": "716a0547206a71ecc6e53f8b970728bc85063a60",
-    "text": "fix smb mount PermissionDenied issue on Windows",
-    "markdown": "Fix smb mount PermissionDenied issue on Windows ([#99550](https://github.com/kubernetes/kubernetes/pull/99550), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider, Storage and Windows]",
+    "text": "fix PermissionDenied issue on SMB mount for Windows",
+    "markdown": "Fix PermissionDenied issue on SMB mount for Windows ([#99550](https://github.com/kubernetes/kubernetes/pull/99550), [@andyzhangx](https://github.com/andyzhangx))",
     "author": "andyzhangx",
     "author_url": "https://github.com/andyzhangx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99550",
@@ -5871,8 +5870,8 @@
   },
   "99581": {
     "commit": "0121c51d81d7905448a925980ceb996dbaa2b318",
-    "text": "Users might specify the `kubectl.kubernetes.io/default-exec-container` annotation in a Pod to preselect container for kubectl commands.",
-    "markdown": "Users might specify the `kubectl.kubernetes.io/default-exec-container` annotation in a Pod to preselect container for kubectl commands. ([#99581](https://github.com/kubernetes/kubernetes/pull/99581), [@mengjiao-liu](https://github.com/mengjiao-liu)) [SIG CLI]",
+    "text": "Users might specify the `kubectl.kubernetes.io/default-container` annotation in a Pod to preselect container for kubectl commands.",
+    "markdown": "Users might specify the `kubectl.kubernetes.io/default-container` annotation in a Pod to preselect container for kubectl commands. ([#99581](https://github.com/kubernetes/kubernetes/pull/99581), [@mengjiao-liu](https://github.com/mengjiao-liu)) [SIG CLI]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5911,6 +5910,21 @@
     ],
     "sigs": [
       "node"
+    ]
+  },
+  "99595": {
+    "commit": "763514f43825e1b72cabcfce35c541e4b37f9892",
+    "text": "GCE L4 Loadbalancers now handle \u003e 5 ports in service spec correctly.",
+    "markdown": "GCE L4 Loadbalancers now handle \u003e 5 ports in service spec correctly. ([#99595](https://github.com/kubernetes/kubernetes/pull/99595), [@prameshj](https://github.com/prameshj)) [SIG Cloud Provider]",
+    "author": "prameshj",
+    "author_url": "https://github.com/prameshj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99595",
+    "pr_number": 99595,
+    "areas": [
+      "cloudprovider"
+    ],
+    "sigs": [
+      "cloud-provider"
     ]
   },
   "99607": {
@@ -5961,8 +5975,8 @@
   },
   "99641": {
     "commit": "14c25eed8d07acdfaf882674f58fd2aa4cc7afe6",
-    "text": "storage capacity tracking (= the CSIStorageCapacity feature) is beta, storage.k8s.io/v1alpha1/VolumeAttachment and storage.k8s.io/v1alpha1/CSIStorageCapacity objects are deprecated",
-    "markdown": "Storage capacity tracking (= the CSIStorageCapacity feature) is beta, storage.k8s.io/v1alpha1/VolumeAttachment and storage.k8s.io/v1alpha1/CSIStorageCapacity objects are deprecated ([#99641](https://github.com/kubernetes/kubernetes/pull/99641), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Auth, Scheduling, Storage and Testing]",
+    "text": "storage capacity tracking (= the CSIStorageCapacity feature) graduates to Beta and enabled by default, storage.k8s.io/v1alpha1/VolumeAttachment and storage.k8s.io/v1alpha1/CSIStorageCapacity objects are deprecated",
+    "markdown": "Storage capacity tracking (= the CSIStorageCapacity feature) graduates to Beta and enabled by default, storage.k8s.io/v1alpha1/VolumeAttachment and storage.k8s.io/v1alpha1/CSIStorageCapacity objects are deprecated ([#99641](https://github.com/kubernetes/kubernetes/pull/99641), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6022,8 +6036,8 @@
   },
   "99651": {
     "commit": "eb4dafb7f1e059a8a4eaf008937afcd4f12deaea",
-    "text": "Graduate CRIContainerLogRotation feature gate to GA.",
-    "markdown": "Graduate CRIContainerLogRotation feature gate to GA. ([#99651](https://github.com/kubernetes/kubernetes/pull/99651), [@umohnani8](https://github.com/umohnani8)) [SIG Node and Testing]",
+    "text": "CRIContainerLogRotation graduates to GA and unconditionally enabled.",
+    "markdown": "CRIContainerLogRotation graduates to GA and unconditionally enabled. ([#99651](https://github.com/kubernetes/kubernetes/pull/99651), [@umohnani8](https://github.com/umohnani8))",
     "documentation": [
       {
         "description": "KEP",
@@ -6069,8 +6083,8 @@
   },
   "99654": {
     "commit": "e2eb9f000528556cc7af2a3db4259a60b61a3f6f",
-    "text": "stdin is now only passed to client-go exec credential plugins when it is detected to be an interactive terminal. Previously, it was passed to client-go exec plugins when **stdout*- was detected to be an interactive terminal.",
-    "markdown": "Stdin is now only passed to client-go exec credential plugins when it is detected to be an interactive terminal. Previously, it was passed to client-go exec plugins when **stdout*- was detected to be an interactive terminal. ([#99654](https://github.com/kubernetes/kubernetes/pull/99654), [@ankeesler](https://github.com/ankeesler)) [SIG API Machinery and Auth]",
+    "text": "client-go exec credential plugins will pass stdin only when interactive terminal is detected on stdin. This fixes a bug where previously it was checking if **stdout** is an interactive terminal.",
+    "markdown": "Client-go exec credential plugins will pass stdin only when interactive terminal is detected on stdin. This fixes a bug where previously it was checking if **stdout** is an interactive terminal. ([#99654](https://github.com/kubernetes/kubernetes/pull/99654), [@ankeesler](https://github.com/ankeesler))",
     "author": "ankeesler",
     "author_url": "https://github.com/ankeesler",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99654",
@@ -6086,8 +6100,8 @@
   },
   "99658": {
     "commit": "f25f071af1847d7fceedc96f57fb0a6ddd4df497",
-    "text": "featuregate AllowInsecureBackendProxy is promoted to GA",
-    "markdown": "Featuregate AllowInsecureBackendProxy is promoted to GA ([#99658](https://github.com/kubernetes/kubernetes/pull/99658), [@deads2k](https://github.com/deads2k)) [SIG API Machinery]",
+    "text": "featuregate AllowInsecureBackendProxy graduates to GA and unconditionally enabled.",
+    "markdown": "Featuregate AllowInsecureBackendProxy graduates to GA and unconditionally enabled. ([#99658](https://github.com/kubernetes/kubernetes/pull/99658), [@deads2k](https://github.com/deads2k))",
     "author": "deads2k",
     "author_url": "https://github.com/deads2k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99658",
@@ -6179,8 +6193,8 @@
   },
   "99735": {
     "commit": "7125496e66e29a999ed6cfba5af6e5e0947bb36b",
-    "text": "Kubelet Graceful Node Shutdown feature is now beta.",
-    "markdown": "Kubelet Graceful Node Shutdown feature is now beta. ([#99735](https://github.com/kubernetes/kubernetes/pull/99735), [@bobbypage](https://github.com/bobbypage)) [SIG Node]",
+    "text": "Kubelet Graceful Node Shutdown feature graduates to Beta and enabled by default.",
+    "markdown": "Kubelet Graceful Node Shutdown feature graduates to Beta and enabled by default. ([#99735](https://github.com/kubernetes/kubernetes/pull/99735), [@bobbypage](https://github.com/bobbypage))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6233,8 +6247,8 @@
   },
   "99746": {
     "commit": "cc4bd511bbb27c5b90c01c0fc99a6005d7ac8a15",
-    "text": "EndpointSliceNodeName will always be enabled, so NodeName will always be available in the v1beta1 API.",
-    "markdown": "EndpointSliceNodeName will always be enabled, so NodeName will always be available in the v1beta1 API. ([#99746](https://github.com/kubernetes/kubernetes/pull/99746), [@swetharepakula](https://github.com/swetharepakula)) [SIG Apps and Network]",
+    "text": "EndpointSliceNodeName graduates to GA and thus will be unconditionally enabled -- NodeName will always be available in the v1beta1 API.",
+    "markdown": "EndpointSliceNodeName graduates to GA and thus will be unconditionally enabled -- NodeName will always be available in the v1beta1 API. ([#99746](https://github.com/kubernetes/kubernetes/pull/99746), [@swetharepakula](https://github.com/swetharepakula))",
     "author": "swetharepakula",
     "author_url": "https://github.com/swetharepakula",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99746",

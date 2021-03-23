@@ -1,0 +1,6 @@
+pr: 99275
+releasenote:
+  text: "IngressClass resource can now reference a resource in a specific namespace
+    \nfor implementation-specific configuration (previously only Cluster-level resources
+    were allowed). \nThis feature can be enabled using the IngressClassNamespacedParams
+    feature gate."
