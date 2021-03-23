@@ -67,11 +67,11 @@ The 1.21 release cycle is proposed as follows:
 | Docs deadline - Open placeholder PRs | Docs Lead | Tue March 16 | week 10 | |
 | Docs deadline - PRs ready for review | Docs Lead | Wed March 24 | week 11 | |
 | **[Test Freeze]** (EOD PST) | Branch Manager | Wed March 24 | week 11 | |
-| 1.21.0-rc.0 released | Branch Manager ([@puerco](https://github.com/puerco)) | Tue March 25 | week 11 | |
-| release-1.21 branch created | Branch Manager | Tue March 25 | week 11 | |
-| release-1.21 jobs created | Branch Manager | Tue March 25 | week 11 | |
-| Start final draft of Release Notes | Release Notes Lead | Tue March 25 | week 11 | |
-| Release blog ready to review | Comms / Docs | Tue March 25 | week 11 | |
+| 1.21.0-rc.0 released | Branch Manager ([@puerco](https://github.com/puerco)) | Thu March 25 | week 11 | |
+| release-1.21 branch created | Branch Manager | Thu March 25 | week 11 | |
+| release-1.21 jobs created | Branch Manager | Thu March 25 | week 11 | |
+| Start final draft of Release Notes | Release Notes Lead | Thu March 25 | week 11 | |
+| Release blog ready to review | Comms / Docs | Thu March 25 | week 11 | |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Wed March 31 | week 12 | |
 | Feature blogs ready to review | Enhancement Owner / SIG Leads | Wed March 31 | week 12 | |
 | Release Notes complete - reviewed & merged to `k/sig-release` | Release Notes Lead | Mon April 5 | week 13 | |
