@@ -20,6 +20,7 @@ see template below, example: https://github.com/kubernetes/sig-release/issues/84
   - [ ] Notify [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y): [see notification](https://link-to-slack-message)
   <!-- e.g. https://kubernetes.slack.com/archives/CJH2GBF7Y/p1572365803088800 -->
   - [ ] Collect metrics and add them to the `Release steps` table below
+<!-- ONLY FOR RC RELEASES - [ ] Update the publishing-bot rules to add rules for a new release branch -->
 <!-- ONLY FOR OFFICIAL RELEASES - [ ] Build & publish packages (debs & rpms) -->
 - [ ] Send notification [email](https://link-to-email-on-kubernetes-announce-google-group)
 
