@@ -1,0 +1,3 @@
+pr: 99563
+releasenote:
+  text: Migrate `pkg/kubelet/cm/cpumanager/state` to structured logging

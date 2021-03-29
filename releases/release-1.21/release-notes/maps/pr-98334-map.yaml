@@ -1,0 +1,3 @@
+pr: 98334
+releasenote:
+  text: Migrate `cmd/kubelet/app/server.go` to structured logging

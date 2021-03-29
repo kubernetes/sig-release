@@ -1,0 +1,3 @@
+pr: 100563
+releasenote:
+  text: Fixes issue on accessing AzureFile secrets from Pod's namespace.

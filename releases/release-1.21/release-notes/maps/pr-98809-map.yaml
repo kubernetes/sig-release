@@ -1,0 +1,4 @@
+pr: 98809
+releasenote:
+  text: Clients required to use go1.15.8+ or go1.16+ if kube-apiserver has the goaway
+    feature enabled to avoid unexpected data race condition.

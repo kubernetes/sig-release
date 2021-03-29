@@ -1,0 +1,4 @@
+pr: 100082
+releasenote:
+  text: '`apiserver_storage_objects` (a newer version of `etcd_object_counts`) is
+    promoted and marked as stable.'

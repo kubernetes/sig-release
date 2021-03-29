@@ -1,0 +1,3 @@
+pr: 99298
+releasenote:
+  text: CSIServiceAccountToken graduates to Beta and enabled by default.
