@@ -1,0 +1,3 @@
+pr: 99600
+releasenote:
+  text: ResourceQuota of an entity now inclusively calculate Pod overhead

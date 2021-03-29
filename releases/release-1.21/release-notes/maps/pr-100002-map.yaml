@@ -1,0 +1,3 @@
+pr: 100002
+releasenote:
+  text: Migrate `pkg/kubelet/config` to structured logging

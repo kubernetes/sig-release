@@ -1,0 +1,4 @@
+pr: 99944
+releasenote:
+  text: Fixed authentication_duration_seconds metric scope. Previously, it included
+    whole apiserver request duration which yields inaccurate results.

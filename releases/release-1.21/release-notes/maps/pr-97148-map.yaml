@@ -1,4 +1,0 @@
-pr: 97148
-releasenote:
-  text: TokenRequest and TokenRequestProjection feature gates are now unconditionally
-    enabled.

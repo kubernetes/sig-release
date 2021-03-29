@@ -1,0 +1,4 @@
+pr: 99994
+releasenote:
+  text: Migrate `cmd/kubelet/+` `pkg/kubelet/cadvisor/cadvisor_linux.go` + `pkg/kubelet/cri/remote/util/util_unix.go`
+    + `pkg/kubelet/images/image_manager.go` to structured logging

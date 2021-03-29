@@ -1,0 +1,3 @@
+pr: 99861
+releasenote:
+  text: Migrate `pkg/kubelet/kubelet.go` to structured logging
