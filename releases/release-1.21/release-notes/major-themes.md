@@ -6,7 +6,7 @@ PSP as an Admission controller resource is being deprecated. Deployed PodSecurit
 
 ## Kubernetes API Reference Documentation
 
-The API reference is now generated with [`gen-resourcesdocs`](https://github.com/kubernetes-sigs/reference-docs/tree/c96658d89fb21037b7d00d27e6dbbe6b32375837/gen-resourcesdocs) and it is moving to [Kubernetes API](https://kubernetes.io/docs/reference/kubernetes-api/)
+The API reference is now generated with [`gen-resourcesdocs`](https://github.com/kubernetes-sigs/reference-docs/tree/c96658d89fb21037b7d00d27e6dbbe6b32375837/gen-resourcesdocs) and it is moving to [Kubernetes API](https://docs.k8s.io/reference/kubernetes-api/)
 
 ## Kustomize Updates in Kubectl
 
