@@ -2,7 +2,7 @@
 
 ## PodIsolationPolicy over PodSecurityPolicy
 
-PSP as an Admission controller resource is being deprecated. Deployed PodSecurityPolicy's will keep working until version 1.25, their target removal from the codebase. A new feature called PodIsolationPolicy is being developed in KEP-2579, to learn more read the featured blog [here](Link to the larger blog)
+PSP as an Admission controller resource is being deprecated. Deployed PodSecurityPolicy's will keep working until version 1.25, their target removal from the codebase. A new feature called PodIsolationPolicy is being developed in [KEP-2579](https://features.k8s.io/2579), to learn more read the featured blog [here](Link to the larger blog)
 
 ## Kubernetes API Reference Documentation
 
@@ -14,7 +14,7 @@ The API reference is now generated with [`gen-resourcesdocs`](https://github.com
 
 ## Default Container Labels
 
-Pod with multiple containers can use `kubectl.kubernetes.io/default-container` label to have a container preselected for kubectl commands. More can be read in [KEP-2227](https://github.com/pacoxu/enhancements/blob/master/keps/sig-cli/2227-kubectl-default-container/README.md).
+Pod with multiple containers can use `kubectl.kubernetes.io/default-container` label to have a container preselected for kubectl commands. More can be read in [KEP-2227](https://github.com/kubernetes/enhancements/blob/master/keps/sig-cli/2227-kubectl-default-container/README.md).
 
 ## Immutable Secrets and ConfigMaps
 
