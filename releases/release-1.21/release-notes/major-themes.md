@@ -2,7 +2,7 @@
 
 ## PodIsolationPolicy over PodSecurityPolicy
 
-PSP as an Admission controller resource is being deprecated. Deployed PodSecurityPolicy's will keep working until version 1.25, their target removal from the codebase. A new feature called PodIsolationPolicy is being developed in [KEP-2579](https://features.k8s.io/2579), to learn more read the featured blog [here](Link to the larger blog)
+PSP as an Admission controller resource is being deprecated. Deployed PodSecurityPolicy's will keep working until version 1.25, their target removal from the codebase. A new feature called PodIsolationPolicy is being developed in [KEP-2579](https://features.k8s.io/2579), to learn more read the featured blog [here](https://blog.k8s.io/2021/04/08/podsecuritypolicy-past-present-and-future/)
 
 ## Kubernetes API Reference Documentation
 
