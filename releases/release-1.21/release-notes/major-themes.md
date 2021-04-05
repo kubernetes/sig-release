@@ -22,7 +22,7 @@ Immutable Secrets and ConfigMaps graduates to GA. This feature allows users to s
 
 ## Structured Logging in Kubelet
 
-Kubelet has adopted structured logging, thanks to community effort in accomplishing this within the release timeline. Structured logging in the project remains an ongoing effort -- for folks interested in participating, [keep an eye / chime in to the mailing list discussion](https://groups.google.com/g/kubernetes-dev/c/y4WIw-ntUR8).
+Kubelet has adopted [structured logging](https://kubernetes.io/docs/concepts/cluster-administration/system-logs/#structured-logging), thanks to community effort in accomplishing this within the release timeline. Structured logging in the project remains an ongoing effort -- for folks interested in participating, [keep an eye / chime in to the mailing list discussion](https://groups.google.com/g/kubernetes-dev/c/y4WIw-ntUR8).
 
 ## Storage Capacity Tracking
 
