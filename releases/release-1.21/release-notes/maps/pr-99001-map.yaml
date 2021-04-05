@@ -1,3 +1,4 @@
+---
 pr: 99001
 releasenote:
-  text: Migrate `pkg/kubelet/nodestatus` to structured logging
+  do_not_publish: true

@@ -1,0 +1,4 @@
+pr: 99833
+releasenote:
+  text: 'kubectl: a Pod can be preselected as default container using `kubectl.kubernetes.io/default-container`
+    annotation'
