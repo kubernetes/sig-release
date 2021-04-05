@@ -1,44 +1,4 @@
 {
-  "100001": {
-    "commit": "38fbecf0c8254418449d8df9bf264ffb24877582",
-    "text": "Migrate pkg/kubelet/cm/container_manager_linux.go and pkg/kubelet/cm/container_manager_stub.go to structured logging",
-    "markdown": "Migrate pkg/kubelet/cm/container_manager_linux.go and pkg/kubelet/cm/container_manager_stub.go to structured logging ([#100001](https://github.com/kubernetes/kubernetes/pull/100001), [@shiyajuan123](https://github.com/shiyajuan123)) [SIG Instrumentation and Node]",
-    "author": "shiyajuan123",
-    "author_url": "https://github.com/shiyajuan123",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/100001",
-    "pr_number": 100001,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
-  "100002": {
-    "commit": "f18caa8fb9848a077bddd54ef5c5584e173a1bca",
-    "text": "Migrate `pkg/kubelet/config` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/config` to structured logging ([#100002](https://github.com/kubernetes/kubernetes/pull/100002), [@AfrouzMashayekhi](https://github.com/AfrouzMashayekhi))",
-    "author": "AfrouzMashayekhi",
-    "author_url": "https://github.com/AfrouzMashayekhi",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/100002",
-    "pr_number": 100002,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
   "100054": {
     "commit": "9c4ffa7e11bb2d0beb25ef1cac6e0699acfc350a",
     "text": "Improve speed of vSphere PV provisioning and reduce number of API calls",
@@ -132,37 +92,10 @@
     "feature": true,
     "duplicate": true
   },
-  "100163": {
-    "commit": "1d4777b79875dd70398737d6ece7da1ff8ec958f",
-    "text": "Migrate `pkg/kubelet/cm/cpumanage/{topology/togit pology.go, policy_none.go, cpu_assignment.go}` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/cm/cpumanage/{topology/togit pology.go, policy_none.go, cpu_assignment.go}` to structured logging ([#100163](https://github.com/kubernetes/kubernetes/pull/100163), [@lala123912](https://github.com/lala123912))",
-    "documentation": [
-      {
-        "description": "[KEP]",
-        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/1602-structured-logging",
-        "type": "KEP"
-      }
-    ],
-    "author": "lala123912",
-    "author_url": "https://github.com/lala123912",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/100163",
-    "pr_number": 100163,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
   "100196": {
     "commit": "e082d845759ca6883d1e6d5b9a551016c0b6f5e0",
-    "text": "Migrate remaining kubelet files to structured logging",
-    "markdown": "Migrate remaining kubelet files to structured logging ([#100196](https://github.com/kubernetes/kubernetes/pull/100196), [@ehashman](https://github.com/ehashman)) [SIG Instrumentation and Node]",
+    "text": "kubelet: completed support for structured logging",
+    "markdown": "Kubelet: completed support for structured logging ([#100196](https://github.com/kubernetes/kubernetes/pull/100196), [@ehashman](https://github.com/ehashman))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -184,32 +117,8 @@
       "instrumentation",
       "node"
     ],
-    "duplicate": true
-  },
-  "100265": {
-    "commit": "045b5ddd0b8aa7f01e424a5a775b6e71b82f8a06",
-    "text": "Migrate pkg/kubelet/kubeletconfig to structured logging",
-    "markdown": "Migrate pkg/kubelet/kubeletconfig to structured logging ([#100265](https://github.com/kubernetes/kubernetes/pull/100265), [@ehashman](https://github.com/ehashman)) [SIG Node]",
-    "documentation": [
-      {
-        "description": "[KEP]",
-        "url": "https://github.com/kubernetes/enhancements/issues/1602",
-        "type": "KEP"
-      }
-    ],
-    "author": "ehashman",
-    "author_url": "https://github.com/ehashman",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/100265",
-    "pr_number": 100265,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ]
+    "duplicate": true,
+    "do_not_publish": true
   },
   "100319": {
     "commit": "2f8a2258f45b409481cd66be7d34a5b482db3899",
@@ -270,37 +179,10 @@
       "cli"
     ]
   },
-  "100537": {
-    "commit": "e34046c81dcad6f7e83959c092b298ed708f8068",
-    "text": "A new storage E2E testsuite covers CSIStorageCapacity publishing if a driver opts into the test.",
-    "markdown": "A new storage E2E testsuite covers CSIStorageCapacity publishing if a driver opts into the test. ([#100537](https://github.com/kubernetes/kubernetes/pull/100537), [@pohly](https://github.com/pohly)) [SIG Storage and Testing]",
-    "documentation": [
-      {
-        "description": "[KEP]",
-        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1472-storage-capacity-tracking",
-        "type": "KEP"
-      }
-    ],
-    "author": "pohly",
-    "author_url": "https://github.com/pohly",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/100537",
-    "pr_number": 100537,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "storage",
-      "testing"
-    ],
-    "duplicate": true
-  },
   "100563": {
     "commit": "01f7495b65585a7190ad1018125dad318de8301f",
-    "text": "Fixes issue on accessing AzureFile secrets from Pod's namespace.",
-    "markdown": "Fixes issue on accessing AzureFile secrets from Pod's namespace. ([#100563](https://github.com/kubernetes/kubernetes/pull/100563), [@msau42](https://github.com/msau42))",
+    "text": "Reverts breaking change to inline AzureFile volumes; referenced secrets are now searched for in the same namespace as the pod as in previous releases.",
+    "markdown": "Reverts breaking change to inline AzureFile volumes; referenced secrets are now searched for in the same namespace as the pod as in previous releases. ([#100563](https://github.com/kubernetes/kubernetes/pull/100563), [@msau42](https://github.com/msau42))",
     "author": "msau42",
     "author_url": "https://github.com/msau42",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100563",
@@ -1612,8 +1494,8 @@
   },
   "97096": {
     "commit": "42d19f9641270b06a68f805de7c5fc9fc2097e4f",
-    "text": "Remove deprecated mixed procotol annotation on Azure provider. Use `MixedProtocolLBService` instead.",
-    "markdown": "Remove deprecated mixed procotol annotation on Azure provider. Use `MixedProtocolLBService` instead. ([#97096](https://github.com/kubernetes/kubernetes/pull/97096), [@nilo19](https://github.com/nilo19))",
+    "text": "Delete deprecated `service.beta.kubernetes.io/azure-load-balancer-mixed-protocols` mixed procotol annotation in favor of the MixedProtocolLBService feature",
+    "markdown": "Delete deprecated `service.beta.kubernetes.io/azure-load-balancer-mixed-protocols` mixed procotol annotation in favor of the MixedProtocolLBService feature ([#97096](https://github.com/kubernetes/kubernetes/pull/97096), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
     "author": "nilo19",
     "author_url": "https://github.com/nilo19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97096",
@@ -1701,8 +1583,8 @@
   },
   "97148": {
     "commit": "8cefa493a8b5e4d4f81b7048092cd3c5e1bacb49",
-    "text": "TokenRequest and TokenRequestProjection feature gates are now unconditionally enabled.",
-    "markdown": "TokenRequest and TokenRequestProjection feature gates are now unconditionally enabled. ([#97148](https://github.com/kubernetes/kubernetes/pull/97148), [@wawa0210](https://github.com/wawa0210))",
+    "text": "The GA TokenRequest and TokenRequestProjection feature gates have been removed and are unconditionally enabled. Remove explicit use of those feature gates in CLI invocations.",
+    "markdown": "The GA TokenRequest and TokenRequestProjection feature gates have been removed and are unconditionally enabled. Remove explicit use of those feature gates in CLI invocations. ([#97148](https://github.com/kubernetes/kubernetes/pull/97148), [@wawa0210](https://github.com/wawa0210)) [SIG Node]",
     "author": "wawa0210",
     "author_url": "https://github.com/wawa0210",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97148",
@@ -1891,8 +1773,8 @@
   },
   "97336": {
     "commit": "ffe74b2cf14fbd6de99d65f707bc331c98eb83b1",
-    "text": "remove deprecated --cleanup-ipvs flag of kube-proxy, and make --cleanup flag always to flush IPVS",
-    "markdown": "Remove deprecated --cleanup-ipvs flag of kube-proxy, and make --cleanup flag always to flush IPVS ([#97336](https://github.com/kubernetes/kubernetes/pull/97336), [@maaoBit](https://github.com/maaoBit)) [SIG Network]",
+    "text": "kube-proxy: remove deprecated --cleanup-ipvs flag of kube-proxy, and make --cleanup flag always to flush IPVS",
+    "markdown": "Kube-proxy: remove deprecated --cleanup-ipvs flag of kube-proxy, and make --cleanup flag always to flush IPVS ([#97336](https://github.com/kubernetes/kubernetes/pull/97336), [@maaoBit](https://github.com/maaoBit)) [SIG Network]",
     "author": "maaoBit",
     "author_url": "https://github.com/maaoBit",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97336",
@@ -1906,21 +1788,6 @@
     ],
     "sigs": [
       "network"
-    ]
-  },
-  "97349": {
-    "commit": "94be86aaa242969bf20df91d68f9ac09619ecdb0",
-    "text": "Migrate some scheduler log messages to structured logging",
-    "markdown": "Migrate some scheduler log messages to structured logging ([#97349](https://github.com/kubernetes/kubernetes/pull/97349), [@aldudko](https://github.com/aldudko)) [SIG Scheduling]",
-    "author": "aldudko",
-    "author_url": "https://github.com/aldudko",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97349",
-    "pr_number": 97349,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
     ]
   },
   "97366": {
@@ -2003,27 +1870,10 @@
     ],
     "duplicate": true
   },
-  "97379": {
-    "commit": "eff5b075f19dbb981a06bcd9b093b93a163dc981",
-    "text": "Change the APIVersion proto name of BoundObjectRef from aPIVersion to apiVersion.",
-    "markdown": "Change the APIVersion proto name of BoundObjectRef from aPIVersion to apiVersion. ([#97379](https://github.com/kubernetes/kubernetes/pull/97379), [@kebe7jun](https://github.com/kebe7jun)) [SIG Auth]",
-    "author": "kebe7jun",
-    "author_url": "https://github.com/kebe7jun",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97379",
-    "pr_number": 97379,
-    "kinds": [
-      "api-change",
-      "bug"
-    ],
-    "sigs": [
-      "auth"
-    ],
-    "duplicate_kind": true
-  },
   "97395": {
     "commit": "24f13032b3e3d4c7c5dfbe86c40be5d038e58614",
-    "text": "New Admission Controller \"DenyServiceExternalIPs\" is made available. Clusters which do not need the service \"ExternalIPs\" feature should enable this controller.",
-    "markdown": "New Admission Controller \"DenyServiceExternalIPs\" is made available. Clusters which do not need the service \"ExternalIPs\" feature should enable this controller. ([#97395](https://github.com/kubernetes/kubernetes/pull/97395), [@thockin](https://github.com/thockin))",
+    "text": "New admission controller \"DenyServiceExternalIPs\" is available.  Clusters which do not *need* the Service \"externalIPs\" feature should enable this controller and be more secure.",
+    "markdown": "New admission controller \"DenyServiceExternalIPs\" is available.  Clusters which do not *need* the Service \"externalIPs\" feature should enable this controller and be more secure. ([#97395](https://github.com/kubernetes/kubernetes/pull/97395), [@thockin](https://github.com/thockin))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2103,24 +1953,6 @@
     ],
     "feature": true
   },
-  "97413": {
-    "commit": "6d76ece4d6e1ad01bad3e866279bc35065813ec7",
-    "text": "kubeadm: fix a whitespace issue in the output of the \"kubeadm join\" command shown as the output of \"kubeadm init\" and \"kubeadm token create --print-join-command\"",
-    "markdown": "Kubeadm: fix a whitespace issue in the output of the \"kubeadm join\" command shown as the output of \"kubeadm init\" and \"kubeadm token create --print-join-command\" ([#97413](https://github.com/kubernetes/kubernetes/pull/97413), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
-    "author": "SataQiu",
-    "author_url": "https://github.com/SataQiu",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97413",
-    "pr_number": 97413,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ]
-  },
   "97417": {
     "commit": "2490a797a28ba31c60d3f4c3deec8d2920a749d6",
     "text": "fix Azure file share not deleted issue when the namespace is deleted",
@@ -2179,26 +2011,6 @@
       "cloud-provider"
     ],
     "feature": true,
-    "duplicate_kind": true
-  },
-  "97440": {
-    "commit": "815d7769f32b10469b2aa9fd6a02e1efabb57d4c",
-    "text": "fix kubectl label error when local=true is set",
-    "markdown": "Fix kubectl label error when local=true is set ([#97440](https://github.com/kubernetes/kubernetes/pull/97440), [@pandaamanda](https://github.com/pandaamanda)) [SIG CLI]",
-    "author": "pandaamanda",
-    "author_url": "https://github.com/pandaamanda",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97440",
-    "pr_number": 97440,
-    "areas": [
-      "kubectl"
-    ],
-    "kinds": [
-      "bug",
-      "cleanup"
-    ],
-    "sigs": [
-      "cli"
-    ],
     "duplicate_kind": true
   },
   "97451": {
@@ -2308,36 +2120,6 @@
       "cli"
     ]
   },
-  "97507": {
-    "commit": "3ce93161fe57e25ada60589bae7bfac274db68a6",
-    "text": "Migrate deployment controller log messages to structured logging",
-    "markdown": "Migrate deployment controller log messages to structured logging ([#97507](https://github.com/kubernetes/kubernetes/pull/97507), [@aldudko](https://github.com/aldudko)) [SIG Apps]",
-    "author": "aldudko",
-    "author_url": "https://github.com/aldudko",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97507",
-    "pr_number": 97507,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "apps"
-    ]
-  },
-  "97509": {
-    "commit": "172cb33f3270d25bcdafbd084614523f5ca2dd13",
-    "text": "Migrate log messages in pkg/scheduler/{scheduler.go,factory.go} to structured logging",
-    "markdown": "Migrate log messages in pkg/scheduler/{scheduler.go,factory.go} to structured logging ([#97509](https://github.com/kubernetes/kubernetes/pull/97509), [@aldudko](https://github.com/aldudko)) [SIG Scheduling]",
-    "author": "aldudko",
-    "author_url": "https://github.com/aldudko",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97509",
-    "pr_number": 97509,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
-    ]
-  },
   "97543": {
     "commit": "0300aa712e378373261effcfb4a7895e5356c43e",
     "text": "`ServiceNodeExclusion`, `NodeDisruptionExclusion` and `LegacyNodeRoleBehavior` features have been promoted to GA. `ServiceNodeExclusion` and `NodeDisruptionExclusion` are now unconditionally enabled, while `LegacyNodeRoleBehavior` is unconditionally disabled. To prevent control plane nodes from being added to load balancers automatically, upgrade users need to add \"node.kubernetes.io/exclude-from-external-load-balancers\" label to control plane nodes.",
@@ -2391,8 +2173,8 @@
   },
   "97615": {
     "commit": "c5cc25d1cb075f84756db9bffecd3fafe12c5fab",
-    "text": "Promote Immutable Secrets/ConfigMaps feature to Stable.\nThis allows to set `Immutable` field in Secrets or ConfigMap object to mark their contents as immutable.",
-    "markdown": "Promote Immutable Secrets/ConfigMaps feature to Stable.\n  This allows to set `Immutable` field in Secrets or ConfigMap object to mark their contents as immutable. ([#97615](https://github.com/kubernetes/kubernetes/pull/97615), [@wojtek-t](https://github.com/wojtek-t)) [SIG Apps, Architecture, Node and Testing]",
+    "text": "Promote Immutable Secrets/ConfigMaps feature to Stable. This allows to set `immutable` field in Secret or ConfigMap object to mark their contents as immutable.",
+    "markdown": "Promote Immutable Secrets/ConfigMaps feature to Stable. This allows to set `immutable` field in Secret or ConfigMap object to mark their contents as immutable. ([#97615](https://github.com/kubernetes/kubernetes/pull/97615), [@wojtek-t](https://github.com/wojtek-t)) [SIG Apps, Architecture, Node and Testing]",
     "author": "wojtek-t",
     "author_url": "https://github.com/wojtek-t",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97615",
@@ -2435,8 +2217,8 @@
   },
   "97621": {
     "commit": "97a3e9e7e831a989f38c5830533b6e1b08a52a54",
-    "text": "The current version of the container image publicly exposed IP serving a /metrics endpoint to the Internet. The new version of the container image serves /metrics endpoint on a different port.",
-    "markdown": "The current version of the container image publicly exposed IP serving a /metrics endpoint to the Internet. The new version of the container image serves /metrics endpoint on a different port. ([#97621](https://github.com/kubernetes/kubernetes/pull/97621), [@vbannai](https://github.com/vbannai)) [SIG Cloud Provider]",
+    "text": "Updated k8s.gcr.io/ingress-gce-404-server-with-metrics-amd64 to a version that serves /metrics endpoint on a non-default port.",
+    "markdown": "Updated k8s.gcr.io/ingress-gce-404-server-with-metrics-amd64 to a version that serves /metrics endpoint on a non-default port. ([#97621](https://github.com/kubernetes/kubernetes/pull/97621), [@vbannai](https://github.com/vbannai)) [SIG Cloud Provider]",
     "author": "vbannai",
     "author_url": "https://github.com/vbannai",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97621",
@@ -2449,24 +2231,6 @@
     ],
     "sigs": [
       "cloud-provider"
-    ]
-  },
-  "97625": {
-    "commit": "43ce28b9954c0d0b8b43b02724f12dce795befec",
-    "text": "kubeadm: avoid detection of the container runtime for commands that do not need it",
-    "markdown": "Kubeadm: avoid detection of the container runtime for commands that do not need it ([#97625](https://github.com/kubernetes/kubernetes/pull/97625), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
-    "author": "pacoxu",
-    "author_url": "https://github.com/pacoxu",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97625",
-    "pr_number": 97625,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
     ]
   },
   "97627": {
@@ -2508,25 +2272,10 @@
       "cloud-provider"
     ]
   },
-  "97678": {
-    "commit": "466e2e3751c0cb515a7c6e85225cb981b8b9b985",
-    "text": "migrate proxy/iptables/proxier.go logs to structured logging",
-    "markdown": "Migrate proxy/iptables/proxier.go logs to structured logging ([#97678](https://github.com/kubernetes/kubernetes/pull/97678), [@JornShen](https://github.com/JornShen)) [SIG Network]",
-    "author": "JornShen",
-    "author_url": "https://github.com/JornShen",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97678",
-    "pr_number": 97678,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network"
-    ]
-  },
   "97686": {
     "commit": "bce5d7a0158444080ed95aae6a5684ce4dd9444b",
-    "text": "Kubectl `--ignore-errors` is now honored by all containers, maintaining consistency with parallelConsumeRequest behavior -- fixes a bug where `kubectl logs` may terminate early on first error.",
-    "markdown": "Kubectl `--ignore-errors` is now honored by all containers, maintaining consistency with parallelConsumeRequest behavior -- fixes a bug where `kubectl logs` may terminate early on first error. ([#97686](https://github.com/kubernetes/kubernetes/pull/97686), [@wzshiming](https://github.com/wzshiming))",
+    "text": "Kubectl logs: `--ignore-errors` is now honored by all containers, maintaining consistency with parallelConsumeRequest behavior.",
+    "markdown": "Kubectl logs: `--ignore-errors` is now honored by all containers, maintaining consistency with parallelConsumeRequest behavior. ([#97686](https://github.com/kubernetes/kubernetes/pull/97686), [@wzshiming](https://github.com/wzshiming))",
     "author": "wzshiming",
     "author_url": "https://github.com/wzshiming",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97686",
@@ -2543,8 +2292,8 @@
   },
   "97693": {
     "commit": "d1db90ba579e9c01194f92ba6daff852e3b4c6e7",
-    "text": "The OIDC authenticator no longer waits 10 seconds before attempting to fetch the metadata required to verify tokens.",
-    "markdown": "The OIDC authenticator no longer waits 10 seconds before attempting to fetch the metadata required to verify tokens. ([#97693](https://github.com/kubernetes/kubernetes/pull/97693), [@enj](https://github.com/enj)) [SIG API Machinery and Auth]",
+    "text": "kube-apiserver: The OIDC authenticator no longer waits 10 seconds before attempting to fetch the metadata required to verify tokens.",
+    "markdown": "Kube-apiserver: The OIDC authenticator no longer waits 10 seconds before attempting to fetch the metadata required to verify tokens. ([#97693](https://github.com/kubernetes/kubernetes/pull/97693), [@enj](https://github.com/enj)) [SIG API Machinery and Auth]",
     "author": "enj",
     "author_url": "https://github.com/enj",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97693",
@@ -2625,8 +2374,8 @@
   },
   "97754": {
     "commit": "db183c7e80815558f0bdd8166f24e4af555166a1",
-    "text": "Fix kubectl-convert failure on using known apiVersion.",
-    "markdown": "Fix kubectl-convert failure on using known apiVersion. ([#97754](https://github.com/kubernetes/kubernetes/pull/97754), [@wzshiming](https://github.com/wzshiming))",
+    "text": "kubectl-convert: Fix `no kind \"Ingress\" is registered for version` error",
+    "markdown": "Kubectl-convert: Fix `no kind \"Ingress\" is registered for version` error ([#97754](https://github.com/kubernetes/kubernetes/pull/97754), [@wzshiming](https://github.com/wzshiming))",
     "author": "wzshiming",
     "author_url": "https://github.com/wzshiming",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97754",
@@ -2641,26 +2390,6 @@
     "sigs": [
       "cli",
       "testing"
-    ],
-    "duplicate": true
-  },
-  "97764": {
-    "commit": "cff7d7ba0aa11b7455d860e9a30fcb404858411d",
-    "text": "kubelet should ignore cgroup driver check on Windows node.",
-    "markdown": "Kubelet should ignore cgroup driver check on Windows node. ([#97764](https://github.com/kubernetes/kubernetes/pull/97764), [@pacoxu](https://github.com/pacoxu)) [SIG Node and Windows]",
-    "author": "pacoxu",
-    "author_url": "https://github.com/pacoxu",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97764",
-    "pr_number": 97764,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node",
-      "windows"
     ],
     "duplicate": true
   },
@@ -2704,21 +2433,6 @@
       "network"
     ]
   },
-  "97837": {
-    "commit": "269d62d895c29743931bfaaec6e8d37ced43c35f",
-    "text": "migrate proxy/userspace/proxier.go logs to structured logging",
-    "markdown": "Migrate proxy/userspace/proxier.go logs to structured logging ([#97837](https://github.com/kubernetes/kubernetes/pull/97837), [@JornShen](https://github.com/JornShen)) [SIG Network]",
-    "author": "JornShen",
-    "author_url": "https://github.com/JornShen",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97837",
-    "pr_number": 97837,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network"
-    ]
-  },
   "97857": {
     "commit": "e9dba7a627520f89778b367fc0d955776f220638",
     "text": "Using exec auth plugins with kubectl no longer results in warnings about constructing many client instances from the same exec auth config.",
@@ -2738,8 +2452,8 @@
   },
   "97860": {
     "commit": "d9a26fb69bcb194c1b56a93eca0735a8fdf3bd63",
-    "text": "Performance regresssion #97685 has been fixed.",
-    "markdown": "Performance regresssion #97685 has been fixed. ([#97860](https://github.com/kubernetes/kubernetes/pull/97860), [@MikeSpreitzer](https://github.com/MikeSpreitzer)) [SIG API Machinery]",
+    "text": "Performance regression #97685 has been fixed.",
+    "markdown": "Performance regression #97685 has been fixed. ([#97860](https://github.com/kubernetes/kubernetes/pull/97860), [@MikeSpreitzer](https://github.com/MikeSpreitzer)) [SIG API Machinery]",
     "author": "MikeSpreitzer",
     "author_url": "https://github.com/MikeSpreitzer",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97860",
@@ -2869,57 +2583,6 @@
     ],
     "duplicate": true
   },
-  "97941": {
-    "commit": "0c91285ea6af804f8bc8831db7a82d44540f3172",
-    "text": "migrate proxy/winuserspace/proxier.go logs to structured logging",
-    "markdown": "Migrate proxy/winuserspace/proxier.go logs to structured logging ([#97941](https://github.com/kubernetes/kubernetes/pull/97941), [@JornShen](https://github.com/JornShen)) [SIG Network]",
-    "author": "JornShen",
-    "author_url": "https://github.com/JornShen",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97941",
-    "pr_number": 97941,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network"
-    ]
-  },
-  "97946": {
-    "commit": "8a8282044c7cf8a0f1c73b8c143ab9a8d1bb88d9",
-    "text": "Indentation of `Resource Quota` block in kubectl describe namespaces output gets correct.",
-    "markdown": "Indentation of `Resource Quota` block in kubectl describe namespaces output gets correct. ([#97946](https://github.com/kubernetes/kubernetes/pull/97946), [@dty1er](https://github.com/dty1er)) [SIG CLI]",
-    "author": "dty1er",
-    "author_url": "https://github.com/dty1er",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97946",
-    "pr_number": 97946,
-    "areas": [
-      "kubectl"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cli"
-    ]
-  },
-  "97950": {
-    "commit": "47ccae1e5c0d572e70b7050e3512970d24a1c83d",
-    "text": "Avoid systemd-logind loading configuration warning",
-    "markdown": "Avoid systemd-logind loading configuration warning ([#97950](https://github.com/kubernetes/kubernetes/pull/97950), [@wzshiming](https://github.com/wzshiming)) [SIG Node]",
-    "author": "wzshiming",
-    "author_url": "https://github.com/wzshiming",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97950",
-    "pr_number": 97950,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node"
-    ]
-  },
   "97963": {
     "commit": "2a26f276a8c8c13b2f45927ee5ece2063950dd1d",
     "text": "Update pause container to run as pseudo user and group `65535:65535`. This implies the release of version 3.5 of the container images.",
@@ -3006,23 +2669,6 @@
     "sigs": [
       "node"
     ]
-  },
-  "98001": {
-    "commit": "6b9379eae4bbfc15b03110a56727c5a8012fa7b5",
-    "text": "Migrate `proxy/winkernel/proxier.go` logs to structured logging",
-    "markdown": "Migrate `proxy/winkernel/proxier.go` logs to structured logging ([#98001](https://github.com/kubernetes/kubernetes/pull/98001), [@JornShen](https://github.com/JornShen))",
-    "author": "JornShen",
-    "author_url": "https://github.com/JornShen",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98001",
-    "pr_number": 98001,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network",
-      "windows"
-    ],
-    "duplicate": true
   },
   "98005": {
     "commit": "9ec1e23e41a84fdda4b88678d20c489cf381fa4f",
@@ -3145,8 +2791,8 @@
   },
   "98088": {
     "commit": "82ebcd171909c4cd6007007fc07b025d0950153d",
-    "text": "Fix repeatedly aquire the inhibit lock",
-    "markdown": "Fix repeatedly aquire the inhibit lock ([#98088](https://github.com/kubernetes/kubernetes/pull/98088), [@wzshiming](https://github.com/wzshiming)) [SIG Node]",
+    "text": "kubelet: Fix repeatedly acquiring the inhibit lock",
+    "markdown": "Kubelet: Fix repeatedly acquiring the inhibit lock ([#98088](https://github.com/kubernetes/kubernetes/pull/98088), [@wzshiming](https://github.com/wzshiming)) [SIG Node]",
     "author": "wzshiming",
     "author_url": "https://github.com/wzshiming",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98088",
@@ -3159,24 +2805,6 @@
     ],
     "sigs": [
       "node"
-    ]
-  },
-  "98093": {
-    "commit": "b99fc0bb3afbb431b0bf3cf93b6fa23f074f4c48",
-    "text": "migrate staging\\src\\k8s.io\\apiserver\\pkg\\endpoints logs to  structured logging",
-    "markdown": "Migrate staging\\src\\k8s.io\\apiserver\\pkg\\endpoints logs to  structured logging ([#98093](https://github.com/kubernetes/kubernetes/pull/98093), [@lala123912](https://github.com/lala123912)) [SIG API Machinery]",
-    "author": "lala123912",
-    "author_url": "https://github.com/lala123912",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98093",
-    "pr_number": 98093,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery"
     ]
   },
   "98096": {
@@ -3214,8 +2842,8 @@
   },
   "98111": {
     "commit": "055e8edfaea25bb104d6c444b0a21ca4e268b479",
-    "text": "The kubectl alpha debug command was scheduled to be removed in v1.21.",
-    "markdown": "The kubectl alpha debug command was scheduled to be removed in v1.21. ([#98111](https://github.com/kubernetes/kubernetes/pull/98111), [@pandaamanda](https://github.com/pandaamanda)) [SIG CLI]",
+    "text": "kubectl: The deprecated `kubectl alpha debug` command is removed. Use `kubectl debug` instead.",
+    "markdown": "Kubectl: The deprecated `kubectl alpha debug` command is removed. Use `kubectl debug` instead. ([#98111](https://github.com/kubernetes/kubernetes/pull/98111), [@pandaamanda](https://github.com/pandaamanda)) [SIG CLI]",
     "author": "pandaamanda",
     "author_url": "https://github.com/pandaamanda",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98111",
@@ -3224,7 +2852,8 @@
       "kubectl"
     ],
     "kinds": [
-      "cleanup"
+      "cleanup",
+      "deprecation"
     ],
     "sigs": [
       "cli"
@@ -3256,8 +2885,8 @@
   },
   "98127": {
     "commit": "7a4914014521369be9e5162b869476fdfc7ea2f9",
-    "text": "Introduce conditions for PodDisruptionBudget",
-    "markdown": "Introduce conditions for PodDisruptionBudget ([#98127](https://github.com/kubernetes/kubernetes/pull/98127), [@mortent](https://github.com/mortent)) [SIG API Machinery, Apps, Auth, CLI, Cloud Provider, Cluster Lifecycle and Instrumentation]",
+    "text": "PodDisruptionBudget API objects can now contain conditions in status.",
+    "markdown": "PodDisruptionBudget API objects can now contain conditions in status. ([#98127](https://github.com/kubernetes/kubernetes/pull/98127), [@mortent](https://github.com/mortent)) [SIG API Machinery, Apps, Auth, CLI, Cloud Provider, Cluster Lifecycle and Instrumentation]",
     "author": "mortent",
     "author_url": "https://github.com/mortent",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98127",
@@ -3285,22 +2914,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  "98128": {
-    "commit": "de9821c6d058331dca0b0d9d6e659a0e21b4b988",
-    "text": "Disruption controller only sends one event per PodDisruptionBudget if scale can't be computed",
-    "markdown": "Disruption controller only sends one event per PodDisruptionBudget if scale can't be computed ([#98128](https://github.com/kubernetes/kubernetes/pull/98128), [@mortent](https://github.com/mortent)) [SIG Apps]",
-    "author": "mortent",
-    "author_url": "https://github.com/mortent",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98128",
-    "pr_number": 98128,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "apps"
-    ],
-    "feature": true
-  },
   "98133": {
     "commit": "0a848a5d2c7ab9390a4fc10e4fd3c1d5350e63a8",
     "text": "Cleanup subnet in frontend IP configs to prevent huge subnet request bodies in some scenarios.",
@@ -3319,60 +2932,6 @@
     "sigs": [
       "cloud-provider"
     ]
-  },
-  "98134": {
-    "commit": "35871e49b7865f8f2174ccd135db30f2c45b35c0",
-    "text": "migrate generic_scheduler.go and types.go to structured logging.",
-    "markdown": "Migrate generic_scheduler.go and types.go to structured logging. ([#98134](https://github.com/kubernetes/kubernetes/pull/98134), [@tanjing2020](https://github.com/tanjing2020)) [SIG Scheduling]",
-    "author": "tanjing2020",
-    "author_url": "https://github.com/tanjing2020",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98134",
-    "pr_number": 98134,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
-    ]
-  },
-  "98138": {
-    "commit": "e0bba105cca88c897c60ad80d4aa0a54c984dbb5",
-    "text": "migrate staging/src/k8s.io/apiserver/pkg/admission logs to  structured logging",
-    "markdown": "Migrate staging/src/k8s.io/apiserver/pkg/admission logs to  structured logging ([#98138](https://github.com/kubernetes/kubernetes/pull/98138), [@lala123912](https://github.com/lala123912)) [SIG API Machinery]",
-    "author": "lala123912",
-    "author_url": "https://github.com/lala123912",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98138",
-    "pr_number": 98138,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery"
-    ]
-  },
-  "98154": {
-    "commit": "b5ba51b22be045d0c95e16816c1a3886e64f3877",
-    "text": "Migrate `pkg/kubelet/kubelet_node_status.go` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/kubelet_node_status.go` to structured logging ([#98154](https://github.com/kubernetes/kubernetes/pull/98154), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Node and Release]",
-    "author": "yangjunmyfm192085",
-    "author_url": "https://github.com/yangjunmyfm192085",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98154",
-    "pr_number": 98154,
-    "areas": [
-      "kubelet",
-      "release-eng"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node",
-      "release"
-    ],
-    "duplicate": true
   },
   "98158": {
     "commit": "ab21bdba898586e0e775637455f9837031ea89c2",
@@ -3414,8 +2973,8 @@
   },
   "98200": {
     "commit": "737858cd7c3924e546a8746a97702096e3a5b96d",
-    "text": "Fix kubelet from panic after getting the wrong signal",
-    "markdown": "Fix kubelet from panic after getting the wrong signal ([#98200](https://github.com/kubernetes/kubernetes/pull/98200), [@wzshiming](https://github.com/wzshiming)) [SIG Node]",
+    "text": "kubelet: Fix kubelet from panic after getting the wrong signal",
+    "markdown": "Kubelet: Fix kubelet from panic after getting the wrong signal ([#98200](https://github.com/kubernetes/kubernetes/pull/98200), [@wzshiming](https://github.com/wzshiming)) [SIG Node]",
     "author": "wzshiming",
     "author_url": "https://github.com/wzshiming",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98200",
@@ -3429,25 +2988,6 @@
     "sigs": [
       "node"
     ]
-  },
-  "98201": {
-    "commit": "3d8dd2517faa4062c52690fae77ddfd4b72246f3",
-    "text": "Fixes a duplicate error messages when running `kubectl edit` on `ResourceQuota`",
-    "markdown": "Fixes a duplicate error messages when running `kubectl edit` on `ResourceQuota` ([#98201](https://github.com/kubernetes/kubernetes/pull/98201), [@pacoxu](https://github.com/pacoxu))",
-    "author": "pacoxu",
-    "author_url": "https://github.com/pacoxu",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98201",
-    "pr_number": 98201,
-    "kinds": [
-      "bug",
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery",
-      "apps"
-    ],
-    "duplicate": true,
-    "duplicate_kind": true
   },
   "98203": {
     "commit": "e26570a96ecf3a908357b7fd3d99f803aece9ad2",
@@ -3542,41 +3082,6 @@
     ],
     "feature": true
   },
-  "98252": {
-    "commit": "5856883274a52c0d7db0a7f4fa81d55778b2c844",
-    "text": "migrate staging/src/k8s.io/apiserver/pkg/audit/policy/reader.go logs to structured logging.",
-    "markdown": "Migrate staging/src/k8s.io/apiserver/pkg/audit/policy/reader.go logs to structured logging. ([#98252](https://github.com/kubernetes/kubernetes/pull/98252), [@lala123912](https://github.com/lala123912)) [SIG API Machinery and Auth]",
-    "author": "lala123912",
-    "author_url": "https://github.com/lala123912",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98252",
-    "pr_number": 98252,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery",
-      "auth"
-    ],
-    "duplicate": true
-  },
-  "98254": {
-    "commit": "356ee4c83a83f63e747f22ee41c42aaac9cea932",
-    "text": "Fix the description of command line flags that can override --config",
-    "markdown": "Fix the description of command line flags that can override --config ([#98254](https://github.com/kubernetes/kubernetes/pull/98254), [@changshuchao](https://github.com/changshuchao)) [SIG Scheduling]",
-    "author": "changshuchao",
-    "author_url": "https://github.com/changshuchao",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98254",
-    "pr_number": 98254,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
-    ]
-  },
   "98257": {
     "commit": "f81220975e5736613ba7bcc8956fc6632a59a6ba",
     "text": "Limits lease to have 1000 maximum attached objects.",
@@ -3593,21 +3098,6 @@
     ],
     "sigs": [
       "api-machinery"
-    ]
-  },
-  "98259": {
-    "commit": "6dc0047396d3aad16928d346da8a5052d8a824fa",
-    "text": "Migrate `scheduler/taint_manager.go` structured logging",
-    "markdown": "Migrate `scheduler/taint_manager.go` structured logging ([#98259](https://github.com/kubernetes/kubernetes/pull/98259), [@tanjing2020](https://github.com/tanjing2020))",
-    "author": "tanjing2020",
-    "author_url": "https://github.com/tanjing2020",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98259",
-    "pr_number": 98259,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "apps"
     ]
   },
   "98261": {
@@ -3706,8 +3196,8 @@
   },
   "98301": {
     "commit": "25aa6cf0c58067656dd6e4c1e2c28efb259ab08c",
-    "text": "Add bash-completion for comma separated list on `kubectl get`",
-    "markdown": "Add bash-completion for comma separated list on `kubectl get` ([#98301](https://github.com/kubernetes/kubernetes/pull/98301), [@phil9909](https://github.com/phil9909))",
+    "text": "kubectl: add bash-completion for comma separated list on `kubectl get`",
+    "markdown": "Kubectl: add bash-completion for comma separated list on `kubectl get` ([#98301](https://github.com/kubernetes/kubernetes/pull/98301), [@phil9909](https://github.com/phil9909))",
     "author": "phil9909",
     "author_url": "https://github.com/phil9909",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98301",
@@ -3846,39 +3336,6 @@
     "duplicate": true,
     "action_required": true
   },
-  "98334": {
-    "commit": "1dce8985a7eb0b8680dd6b39ea8291c36b29c175",
-    "text": "Migrate `cmd/kubelet/app/server.go` to structured logging",
-    "markdown": "Migrate `cmd/kubelet/app/server.go` to structured logging ([#98334](https://github.com/kubernetes/kubernetes/pull/98334), [@wawa0210](https://github.com/wawa0210))",
-    "author": "wawa0210",
-    "author_url": "https://github.com/wawa0210",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98334",
-    "pr_number": 98334,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ]
-  },
-  "98358": {
-    "commit": "320aaf485924e87d406032f199a180771cd56c26",
-    "text": "Migrate `scheduling_queue.go` to structured logging",
-    "markdown": "Migrate `scheduling_queue.go` to structured logging ([#98358](https://github.com/kubernetes/kubernetes/pull/98358), [@tanjing2020](https://github.com/tanjing2020))",
-    "author": "tanjing2020",
-    "author_url": "https://github.com/tanjing2020",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98358",
-    "pr_number": 98358,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
-    ]
-  },
   "98363": {
     "commit": "35bf00acb1f5f2be22cdcb180c5e1227a72934fc",
     "text": "Kubernetes is now built using go1.15.7",
@@ -4009,8 +3466,8 @@
   },
   "98441": {
     "commit": "6059a67e49f04ea49120b113897d25286773a397",
-    "text": "Added `.spec.completionMode` field to Job, with accepted values `NonIndexed` (default) and `Indexed`",
-    "markdown": "Added `.spec.completionMode` field to Job, with accepted values `NonIndexed` (default) and `Indexed` ([#98441](https://github.com/kubernetes/kubernetes/pull/98441), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps and CLI]",
+    "text": "Added `.spec.completionMode` field to Job, with accepted values `NonIndexed` (default) and `Indexed`. This is an alpha field and is only honored by servers with the `IndexedJob` feature gate enabled.",
+    "markdown": "Added `.spec.completionMode` field to Job, with accepted values `NonIndexed` (default) and `Indexed`. This is an alpha field and is only honored by servers with the `IndexedJob` feature gate enabled. ([#98441](https://github.com/kubernetes/kubernetes/pull/98441), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps and CLI]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4098,8 +3555,8 @@
   },
   "98515": {
     "commit": "4e95e1df04a1aaf0ece5a3df947b49165ddd860c",
-    "text": "Limit the quest value of hugepage to integer multiple of page size.",
-    "markdown": "Limit the quest value of hugepage to integer multiple of page size. ([#98515](https://github.com/kubernetes/kubernetes/pull/98515), [@lala123912](https://github.com/lala123912)) [SIG Apps]",
+    "text": "hugepages request values are limited to integer multiples of the page size.",
+    "markdown": "Hugepages request values are limited to integer multiples of the page size. ([#98515](https://github.com/kubernetes/kubernetes/pull/98515), [@lala123912](https://github.com/lala123912)) [SIG Apps]",
     "author": "lala123912",
     "author_url": "https://github.com/lala123912",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98515",
@@ -4317,106 +3774,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  "98589": {
-    "commit": "da2f6385e9a0b5864c5af19eb3161051be511309",
-    "text": "migrate pkg/kubelet/cri/remote logs to structured logging",
-    "markdown": "Migrate pkg/kubelet/cri/remote logs to structured logging ([#98589](https://github.com/kubernetes/kubernetes/pull/98589), [@chenyw1990](https://github.com/chenyw1990)) [SIG Node]",
-    "author": "chenyw1990",
-    "author_url": "https://github.com/chenyw1990",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98589",
-    "pr_number": 98589,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ]
-  },
-  "98627": {
-    "commit": "62bb595cbe6f59041d187ddf035dda8aaa111339",
-    "text": "Migrate some kubelet/metrics log messages to structured logging",
-    "markdown": "Migrate some kubelet/metrics log messages to structured logging ([#98627](https://github.com/kubernetes/kubernetes/pull/98627), [@jialaijun](https://github.com/jialaijun)) [SIG Instrumentation and Node]",
-    "author": "jialaijun",
-    "author_url": "https://github.com/jialaijun",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98627",
-    "pr_number": 98627,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
-  "98639": {
-    "commit": "ab5a8c4af8afcc6157a52a36ed00edeb7f3b3c3c",
-    "text": "UDP protocol support for Agnhost connect subcommand",
-    "markdown": "UDP protocol support for Agnhost connect subcommand ([#98639](https://github.com/kubernetes/kubernetes/pull/98639), [@knabben](https://github.com/knabben)) [SIG Testing]",
-    "author": "knabben",
-    "author_url": "https://github.com/knabben",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98639",
-    "pr_number": 98639,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "testing"
-    ],
-    "feature": true
-  },
-  "98641": {
-    "commit": "0d598baa4aed2ccbc7c658100b45a0ab993044a4",
-    "text": "Fix ALPHA stability level reference link",
-    "markdown": "Fix ALPHA stability level reference link ([#98641](https://github.com/kubernetes/kubernetes/pull/98641), [@Jeffwan](https://github.com/Jeffwan)) [SIG Auth, Cloud Provider, Instrumentation and Storage]",
-    "author": "Jeffwan",
-    "author_url": "https://github.com/Jeffwan",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98641",
-    "pr_number": 98641,
-    "areas": [
-      "apiserver",
-      "cloudprovider"
-    ],
-    "kinds": [
-      "cleanup",
-      "documentation"
-    ],
-    "sigs": [
-      "auth",
-      "cloud-provider",
-      "instrumentation",
-      "storage"
-    ],
-    "duplicate": true,
-    "duplicate_kind": true
-  },
-  "98643": {
-    "commit": "071bdc344eac6c787b3c79f01331c3a364296116",
-    "text": "Migrate `pkg/kubelet/server` logs to structured logging",
-    "markdown": "Migrate `pkg/kubelet/server` logs to structured logging ([#98643](https://github.com/kubernetes/kubernetes/pull/98643), [@chenyw1990](https://github.com/chenyw1990))",
-    "author": "chenyw1990",
-    "author_url": "https://github.com/chenyw1990",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98643",
-    "pr_number": 98643,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ]
-  },
   "98676": {
     "commit": "002fb9fc5e91805d53d61e7bd302341ef6ef66c6",
     "text": "A new histogram metric to track the time it took to delete a job by the `TTLAfterFinished` controller",
@@ -4500,8 +3857,8 @@
   },
   "98727": {
     "commit": "a0341d7471c238acd03e1923161b4a2671a7fe2d",
-    "text": "Jobs API has a new .spec.suspend field that can be used to suspend and resume Jobs",
-    "markdown": "Jobs API has a new .spec.suspend field that can be used to suspend and resume Jobs ([#98727](https://github.com/kubernetes/kubernetes/pull/98727), [@adtac](https://github.com/adtac)) [SIG API Machinery, Apps, Node, Scheduling and Testing]",
+    "text": "Jobs API has a new `.spec.suspend` field that can be used to suspend and resume Jobs. This is an alpha field which is only honored by servers with the `SuspendJob` feature gate enabled.",
+    "markdown": "Jobs API has a new `.spec.suspend` field that can be used to suspend and resume Jobs. This is an alpha field which is only honored by servers with the `SuspendJob` feature gate enabled. ([#98727](https://github.com/kubernetes/kubernetes/pull/98727), [@adtac](https://github.com/adtac))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4604,8 +3961,8 @@
   },
   "98755": {
     "commit": "0faf0960410371d0c08173e331c4120cd6391d57",
-    "text": "kubelet: the HostPort implementation in dockershim was not taking into consideration the HostIP field, causing that the same HostPort can not be used with different IP addresses.\nThis bug causes the conformance test \"HostPort validates that there is no conflict between pods with same hostPort but different hostIP and protocol\" to fail.",
-    "markdown": "Kubelet: the HostPort implementation in dockershim was not taking into consideration the HostIP field, causing that the same HostPort can not be used with different IP addresses.\n  This bug causes the conformance test \"HostPort validates that there is no conflict between pods with same hostPort but different hostIP and protocol\" to fail. ([#98755](https://github.com/kubernetes/kubernetes/pull/98755), [@aojea](https://github.com/aojea)) [SIG Cloud Provider, Network and Node]",
+    "text": "kubelet: fixes a bug in the HostPort dockershim implementation that caused the conformance test \"HostPort validates that there is no conflict between pods with same hostPort but different hostIP and protocol\" to fail.",
+    "markdown": "Kubelet: fixes a bug in the HostPort dockershim implementation that caused the conformance test \"HostPort validates that there is no conflict between pods with same hostPort but different hostIP and protocol\" to fail. ([#98755](https://github.com/kubernetes/kubernetes/pull/98755), [@aojea](https://github.com/aojea)) [SIG Cloud Provider, Network and Node]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98755",
@@ -4784,60 +4141,6 @@
     ],
     "duplicate": true
   },
-  "98839": {
-    "commit": "f266f60da9dadf3ee675c52ff388ffe767238666",
-    "text": "kubeadm: fix bad token placeholder text in `config print *-defaults --help`",
-    "markdown": "Kubeadm: fix bad token placeholder text in `config print *-defaults --help` ([#98839](https://github.com/kubernetes/kubernetes/pull/98839), [@Mattias-](https://github.com/Mattias-))",
-    "author": "Mattias-",
-    "author_url": "https://github.com/Mattias-",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98839",
-    "pr_number": 98839,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ]
-  },
-  "98847": {
-    "commit": "7046e1d6892e6ae682f79a4ff73bab375753e77f",
-    "text": "Migrate `pkg/kubelet/(node, pod)` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/(node, pod)` to structured logging ([#98847](https://github.com/kubernetes/kubernetes/pull/98847), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Node]",
-    "author": "yangjunmyfm192085",
-    "author_url": "https://github.com/yangjunmyfm192085",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98847",
-    "pr_number": 98847,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ]
-  },
-  "98850": {
-    "commit": "b5c6434f6bb8b4ba3f9bcf38af4d773bf169925c",
-    "text": "Migrate `pkg/kubelet/(volume,container)` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/(volume,container)` to structured logging ([#98850](https://github.com/kubernetes/kubernetes/pull/98850), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Node]",
-    "author": "yangjunmyfm192085",
-    "author_url": "https://github.com/yangjunmyfm192085",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98850",
-    "pr_number": 98850,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ]
-  },
   "98858": {
     "commit": "5106581d232dbae76812676a56045e232d42d446",
     "text": "`audit.k8s.io/v1beta1` and `audit.k8s.io/v1alpha1` audit policy configuration and audit events are deprecated in favor of `audit.k8s.io/v1`, available since v1.13. kube-apiserver invocations that specify alpha or beta policy configurations with `--audit-policy-file`, or explicitly request alpha or beta audit events with `--audit-log-version` / `--audit-webhook-version` must update to use `audit.k8s.io/v1` and accept `audit.k8s.io/v1` events prior to v1.24.",
@@ -4936,47 +4239,6 @@
       "instrumentation"
     ],
     "feature": true,
-    "duplicate": true
-  },
-  "98900": {
-    "commit": "823fa75643bdc352a51cbbc83b55420734832eda",
-    "text": "Introduce a churn operator to scheduler perf testing framework.",
-    "markdown": "Introduce a churn operator to scheduler perf testing framework. ([#98900](https://github.com/kubernetes/kubernetes/pull/98900), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Scheduling and Testing]",
-    "author": "Huang-Wei",
-    "author_url": "https://github.com/Huang-Wei",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98900",
-    "pr_number": 98900,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "scheduling",
-      "testing"
-    ],
-    "feature": true,
-    "duplicate": true
-  },
-  "98911": {
-    "commit": "e25b0cb6dbe40bb6a5f37e3a61982d5fbba87539",
-    "text": "Add missing `--kube-api-content-type` in kubemark hollow template",
-    "markdown": "Add missing `--kube-api-content-type` in kubemark hollow template ([#98911](https://github.com/kubernetes/kubernetes/pull/98911), [@Jeffwan](https://github.com/Jeffwan))",
-    "author": "Jeffwan",
-    "author_url": "https://github.com/Jeffwan",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98911",
-    "pr_number": 98911,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "scalability",
-      "testing"
-    ],
     "duplicate": true
   },
   "98918": {
@@ -5232,8 +4494,8 @@
   },
   "98990": {
     "commit": "c0841211fdafa032c717bdb6f4955fdcfc183464",
-    "text": "Migrate `pkg/kubelet/pod` and `pkg/kubelet/pleg` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/pod` and `pkg/kubelet/pleg` to structured logging ([#98990](https://github.com/kubernetes/kubernetes/pull/98990), [@gjkim42](https://github.com/gjkim42))",
+    "text": "Migrate `pkg/kubelet/(pod, pleg)` to structured logging",
+    "markdown": "Migrate `pkg/kubelet/(pod, pleg)` to structured logging ([#98990](https://github.com/kubernetes/kubernetes/pull/98990), [@gjkim42](https://github.com/gjkim42)) [SIG Instrumentation and Node]",
     "author": "gjkim42",
     "author_url": "https://github.com/gjkim42",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98990",
@@ -5248,7 +4510,8 @@
       "instrumentation",
       "node"
     ],
-    "duplicate": true
+    "duplicate": true,
+    "do_not_publish": true
   },
   "98993": {
     "commit": "508a8839ad6ad9bde8d0a0ffc1c544018a4730c4",
@@ -5287,12 +4550,13 @@
     ],
     "sigs": [
       "node"
-    ]
+    ],
+    "do_not_publish": true
   },
   "99001": {
     "commit": "731fac3a55b120fd9d4cbddfefe6acf6bba29551",
-    "text": "Migrate `pkg/kubelet/nodestatus` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/nodestatus` to structured logging ([#99001](https://github.com/kubernetes/kubernetes/pull/99001), [@QiWang19](https://github.com/QiWang19))",
+    "text": "Migrate pkg/kubelet/nodestatus to structured logging",
+    "markdown": "Migrate pkg/kubelet/nodestatus to structured logging ([#99001](https://github.com/kubernetes/kubernetes/pull/99001), [@QiWang19](https://github.com/QiWang19)) [SIG Node]",
     "author": "QiWang19",
     "author_url": "https://github.com/QiWang19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99001",
@@ -5305,7 +4569,8 @@
     ],
     "sigs": [
       "node"
-    ]
+    ],
+    "do_not_publish": true
   },
   "99004": {
     "commit": "9cc3665bd3383c3683248f1bbb242670a04417ca",
@@ -5343,7 +4608,8 @@
     ],
     "sigs": [
       "node"
-    ]
+    ],
+    "do_not_publish": true
   },
   "99032": {
     "commit": "14abaa23c32e9aaea19a5d59f3b0d6db820db74b",
@@ -5361,7 +4627,8 @@
     ],
     "sigs": [
       "node"
-    ]
+    ],
+    "do_not_publish": true
   },
   "99045": {
     "commit": "6aab94eff924bd3fcc6af241327a5381d079b279",
@@ -5822,33 +5089,6 @@
     ],
     "do_not_publish": true
   },
-  "99264": {
-    "commit": "9a1b5bb255aead15b8a66ab735c8616a23e0ab05",
-    "text": "Migrate pkg/kubelet/token to structured logging",
-    "markdown": "Migrate pkg/kubelet/token to structured logging ([#99264](https://github.com/kubernetes/kubernetes/pull/99264), [@palnabarun](https://github.com/palnabarun)) [SIG Auth, Instrumentation and Node]",
-    "documentation": [
-      {
-        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/1602-structured-logging",
-        "type": "KEP"
-      }
-    ],
-    "author": "palnabarun",
-    "author_url": "https://github.com/palnabarun",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99264",
-    "pr_number": 99264,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "auth",
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
   "99275": {
     "commit": "4bf85032f3c391ff710390c41996642cd4134c40",
     "text": "IngressClass resource can now reference a resource in a specific namespace \nfor implementation-specific configuration (previously only Cluster-level resources were allowed). \nThis feature can be enabled using the IngressClassNamespacedParams feature gate.",
@@ -6302,26 +5542,6 @@
     ],
     "feature": true
   },
-  "99479": {
-    "commit": "bebb932bdfdfe4d10f361585a0b1509ec83846e2",
-    "text": "Migrate `pkg/kubelet/lifecycle,oom` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/lifecycle,oom` to structured logging ([#99479](https://github.com/kubernetes/kubernetes/pull/99479), [@mengjiao-liu](https://github.com/mengjiao-liu)) [SIG Instrumentation and Node]",
-    "author": "mengjiao-liu",
-    "author_url": "https://github.com/mengjiao-liu",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99479",
-    "pr_number": 99479,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
   "99514": {
     "commit": "9fa33ada4b4194c62b4361680048fcb5569f8556",
     "text": "Fix bug that would let the Horizontal Pod Autoscaler scale down despite at least one metric being unavailable/invalid",
@@ -6483,33 +5703,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  "99563": {
-    "commit": "a951e877befa6314e26f0bdb139fd45e7bb82bf2",
-    "text": "Migrate `pkg/kubelet/cm/cpumanager/state` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/cm/cpumanager/state` to structured logging ([#99563](https://github.com/kubernetes/kubernetes/pull/99563), [@jmguzik](https://github.com/jmguzik))",
-    "documentation": [
-      {
-        "description": "[KEP]",
-        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/1602-structured-logging",
-        "type": "KEP"
-      }
-    ],
-    "author": "jmguzik",
-    "author_url": "https://github.com/jmguzik",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99563",
-    "pr_number": 99563,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
   "99574": {
     "commit": "445cb0609d2cffbfea4bd67a50f90f3655704ad1",
     "text": "kubeadm: a warning to user as ipv6 site-local is deprecated",
@@ -6606,18 +5799,6 @@
       "node"
     ],
     "duplicate": true
-  },
-  "99607": {
-    "commit": "930ca8561371e71cfbff61c28994b7e85edd0a30",
-    "text": "Migrate `pkg/kubelet/stats` to structured logging.",
-    "markdown": "Migrate `pkg/kubelet/stats` to structured logging. ([#99607](https://github.com/kubernetes/kubernetes/pull/99607), [@krzysiekg](https://github.com/krzysiekg))",
-    "author": "krzysiekg",
-    "author_url": "https://github.com/krzysiekg",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99607",
-    "pr_number": 99607,
-    "sigs": [
-      "node"
-    ]
   },
   "99610": {
     "commit": "3022b3981709007977e052bc6c3c44ee715a1679",
@@ -7181,26 +6362,6 @@
     ],
     "duplicate_kind": true
   },
-  "99823": {
-    "commit": "b4f351329e05b25bb88f4e22261397e6981e4c30",
-    "text": "Migrate pkg/kubelet/util to structured logging",
-    "markdown": "Migrate pkg/kubelet/util to structured logging ([#99823](https://github.com/kubernetes/kubernetes/pull/99823), [@navidshaikh](https://github.com/navidshaikh)) [SIG Instrumentation and Node]",
-    "author": "navidshaikh",
-    "author_url": "https://github.com/navidshaikh",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99823",
-    "pr_number": 99823,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
   "99825": {
     "commit": "20bc36c34dbd4916392b929239b5a30d44f131cd",
     "text": "Ensure only one LoadBalancer rule is created when HA mode is enabled",
@@ -7220,30 +6381,10 @@
       "cloud-provider"
     ]
   },
-  "99830": {
-    "commit": "76b29c4cbb6a7c52374551528bb72611d8f3ecfa",
-    "text": "Migrate pkg/kubelet/prober to structured logging",
-    "markdown": "Migrate pkg/kubelet/prober to structured logging ([#99830](https://github.com/kubernetes/kubernetes/pull/99830), [@krzysiekg](https://github.com/krzysiekg)) [SIG Instrumentation and Node]",
-    "author": "krzysiekg",
-    "author_url": "https://github.com/krzysiekg",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99830",
-    "pr_number": 99830,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
   "99833": {
     "commit": "9132f871532d5ae5325a64a4f91090d54b81c43d",
-    "text": "Users might specify the `kubectl.kubernetes.io/default-exec-container` annotation in a Pod to preselect container for kubectl commands.",
-    "markdown": "Users might specify the `kubectl.kubernetes.io/default-exec-container` annotation in a Pod to preselect container for kubectl commands. ([#99833](https://github.com/kubernetes/kubernetes/pull/99833), [@mengjiao-liu](https://github.com/mengjiao-liu)) [SIG CLI]",
+    "text": "kubectl: a Pod can be preselected as default container using `kubectl.kubernetes.io/default-container` annotation",
+    "markdown": "Kubectl: a Pod can be preselected as default container using `kubectl.kubernetes.io/default-container` annotation ([#99833](https://github.com/kubernetes/kubernetes/pull/99833), [@mengjiao-liu](https://github.com/mengjiao-liu))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -7285,138 +6426,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  "99836": {
-    "commit": "3e5954a7e113e1d95b3ca36d4d1c0e2404520392",
-    "text": "Migrate pkg/kubelet/status to structured logging",
-    "markdown": "Migrate pkg/kubelet/status to structured logging ([#99836](https://github.com/kubernetes/kubernetes/pull/99836), [@navidshaikh](https://github.com/navidshaikh)) [SIG Instrumentation and Node]",
-    "author": "navidshaikh",
-    "author_url": "https://github.com/navidshaikh",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99836",
-    "pr_number": 99836,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
-  "99838": {
-    "commit": "449e2f1777351889b5b958154d1fe5d9bb36b411",
-    "text": "Migrate pkg/kubelet/server logs to structured logging.\nExit code changed from 255 to 1",
-    "markdown": "Migrate pkg/kubelet/server logs to structured logging.\n  Exit code changed from 255 to 1 ([#99838](https://github.com/kubernetes/kubernetes/pull/99838), [@adisky](https://github.com/adisky))",
-    "documentation": [
-      {
-        "description": "[KEP]: \u003clink\u003e KEP",
-        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/1602-structured-logging",
-        "type": "KEP"
-      }
-    ],
-    "author": "adisky",
-    "author_url": "https://github.com/adisky",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99838",
-    "pr_number": 99838,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ],
-    "action_required": true
-  },
-  "99841": {
-    "commit": "c22f099395bab603a1d365f472b86fc7bda2ca2f",
-    "text": "pkg/kubelet/kuberuntime/kuberuntime_manager.go migrated to structured logging\nExit code changed from 255 to 1",
-    "markdown": "Pkg/kubelet/kuberuntime/kuberuntime_manager.go migrated to structured logging\n  Exit code changed from 255 to 1 ([#99841](https://github.com/kubernetes/kubernetes/pull/99841), [@adisky](https://github.com/adisky)) [SIG Instrumentation and Node]",
-    "documentation": [
-      {
-        "description": "[KEP]: \u003clink\u003e KEP",
-        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/1602-structured-logging",
-        "type": "KEP"
-      }
-    ],
-    "author": "adisky",
-    "author_url": "https://github.com/adisky",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99841",
-    "pr_number": 99841,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true,
-    "action_required": true
-  },
-  "99848": {
-    "commit": "97f59e94311b7c23e2389d4b576fd3107ca0bd32",
-    "text": "Migrate  `pkg/kubelet/preemption/preemption.go` and `pkg/kubelet/logs/container_log_manager.go` to structured logging",
-    "markdown": "Migrate  `pkg/kubelet/preemption/preemption.go` and `pkg/kubelet/logs/container_log_manager.go` to structured logging ([#99848](https://github.com/kubernetes/kubernetes/pull/99848), [@qingwave](https://github.com/qingwave)) [SIG Node]",
-    "author": "qingwave",
-    "author_url": "https://github.com/qingwave",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99848",
-    "pr_number": 99848,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ]
-  },
-  "99855": {
-    "commit": "80ff14a47d583985acc21e7d450a62fee6da6b73",
-    "text": "Migrate pkg/kubelet/winstats to structured logging",
-    "markdown": "Migrate pkg/kubelet/winstats to structured logging ([#99855](https://github.com/kubernetes/kubernetes/pull/99855), [@hexxdump](https://github.com/hexxdump)) [SIG Instrumentation and Node]",
-    "author": "hexxdump",
-    "author_url": "https://github.com/hexxdump",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99855",
-    "pr_number": 99855,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
-  "99861": {
-    "commit": "e9632d93f7a100a2d0353d023523486c7513d15d",
-    "text": "Migrate `pkg/kubelet/kubelet.go` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/kubelet.go` to structured logging ([#99861](https://github.com/kubernetes/kubernetes/pull/99861), [@navidshaikh](https://github.com/navidshaikh))",
-    "author": "navidshaikh",
-    "author_url": "https://github.com/navidshaikh",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99861",
-    "pr_number": 99861,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
   "99870": {
     "commit": "d6a9061cb43ab98054f0f455115d87e1b20f7971",
     "text": "The EndpointSlice Controllers are now GA. The `EndpointSliceController` will not populate the `deprecatedTopology` field and will only provide topology information through the `zone` and `nodeName` fields.",
@@ -7443,24 +6452,6 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true
-  },
-  "99885": {
-    "commit": "0f1db5891d3df748f9cf4654158458d1be54b4f9",
-    "text": "Migrate  `pkg/kubelet/pluginmanager`  to structured logging",
-    "markdown": "Migrate  `pkg/kubelet/pluginmanager`  to structured logging ([#99885](https://github.com/kubernetes/kubernetes/pull/99885), [@qingwave](https://github.com/qingwave)) [SIG Node]",
-    "author": "qingwave",
-    "author_url": "https://github.com/qingwave",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99885",
-    "pr_number": 99885,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ]
   },
   "99925": {
     "commit": "72d92159bc11ce0bca5475461f72da842d0dbb9f",
@@ -7514,68 +6505,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  "99969": {
-    "commit": "81a1a793a19378b358d61a4df0a3b4a216b61ca3",
-    "text": "Migrated `pkg/kubelet/cm/topologymanager` to structure logging",
-    "markdown": "Migrated `pkg/kubelet/cm/topologymanager` to structure logging ([#99969](https://github.com/kubernetes/kubernetes/pull/99969), [@knabben](https://github.com/knabben))",
-    "author": "knabben",
-    "author_url": "https://github.com/knabben",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99969",
-    "pr_number": 99969,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "feature": true,
-    "duplicate": true
-  },
-  "99970": {
-    "commit": "862aa6d3a0d75825bacf40fb314f48d5814ad871",
-    "text": "Migrate `pkg/kubelet/kuberuntime` to structured logging",
-    "markdown": "Migrate `pkg/kubelet/kuberuntime` to structured logging ([#99970](https://github.com/kubernetes/kubernetes/pull/99970), [@krzysiekg](https://github.com/krzysiekg))",
-    "author": "krzysiekg",
-    "author_url": "https://github.com/krzysiekg",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99970",
-    "pr_number": 99970,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
-  },
-  "99974": {
-    "commit": "e5309efbdf329d890792b274cca57fdfb0844331",
-    "text": "Migrated pkg/kubelet/cm/memorymanager to structured logging",
-    "markdown": "Migrated pkg/kubelet/cm/memorymanager to structured logging ([#99974](https://github.com/kubernetes/kubernetes/pull/99974), [@knabben](https://github.com/knabben)) [SIG Instrumentation and Node]",
-    "author": "knabben",
-    "author_url": "https://github.com/knabben",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99974",
-    "pr_number": 99974,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "feature": true,
-    "duplicate": true
-  },
   "99975": {
     "commit": "05c4febbe7fea6579ee7013deef50873471352e5",
     "text": "The Endpoints controller will now set the `endpoints.kubernetes.io/over-capacity` annotation to \"warning\" when an Endpoints resource contains more than 1000 addresses. In a future release, the controller will truncate Endpoints that exceed this limit. The EndpointSlice API can be used to support significantly larger number of addresses.",
@@ -7596,46 +6525,5 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true
-  },
-  "99976": {
-    "commit": "51ea8de4873060b5c05a82bad83c5cfcaf6977cc",
-    "text": "Migrated pkg/kubelet/cm/devicemanager to structured logging",
-    "markdown": "Migrated pkg/kubelet/cm/devicemanager to structured logging ([#99976](https://github.com/kubernetes/kubernetes/pull/99976), [@knabben](https://github.com/knabben)) [SIG Instrumentation and Node]",
-    "author": "knabben",
-    "author_url": "https://github.com/knabben",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99976",
-    "pr_number": 99976,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "feature": true,
-    "duplicate": true
-  },
-  "99994": {
-    "commit": "5ead6af84ef907168d0cc5c82b112557a0dc62a4",
-    "text": "Migrate `cmd/kubelet/+` `pkg/kubelet/cadvisor/cadvisor_linux.go` + `pkg/kubelet/cri/remote/util/util_unix.go` + `pkg/kubelet/images/image_manager.go` to structured logging",
-    "markdown": "Migrate `cmd/kubelet/+` `pkg/kubelet/cadvisor/cadvisor_linux.go` + `pkg/kubelet/cri/remote/util/util_unix.go` + `pkg/kubelet/images/image_manager.go` to structured logging ([#99994](https://github.com/kubernetes/kubernetes/pull/99994), [@AfrouzMashayekhi](https://github.com/AfrouzMashayekhi))",
-    "author": "AfrouzMashayekhi",
-    "author_url": "https://github.com/AfrouzMashayekhi",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99994",
-    "pr_number": 99994,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
-    "duplicate": true
   }
 }

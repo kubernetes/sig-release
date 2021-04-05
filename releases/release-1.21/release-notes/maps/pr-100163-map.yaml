@@ -1,4 +1,4 @@
+---
 pr: 100163
 releasenote:
-  text: Migrate `pkg/kubelet/cm/cpumanage/{topology/togit pology.go, policy_none.go,
-    cpu_assignment.go}` to structured logging
+  do_not_publish: true

@@ -1,4 +1,5 @@
 pr: 97395
 releasenote:
-  text: New Admission Controller "DenyServiceExternalIPs" is made available. Clusters
-    which do not need the service "ExternalIPs" feature should enable this controller.
+  text: New admission controller `DenyServiceExternalIPs` is available.  Clusters
+    which do not *need* the Service `externalIPs` feature should enable this controller
+    and be more secure.

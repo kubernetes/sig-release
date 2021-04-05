@@ -1,3 +1,4 @@
 pr: 100563
 releasenote:
-  text: Fixes issue on accessing AzureFile secrets from Pod's namespace.
+  text: Reverts breaking change to inline AzureFile volumes; referenced secrets are
+    now searched for in the same namespace as the pod as in previous releases.
