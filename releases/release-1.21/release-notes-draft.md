@@ -46,6 +46,12 @@ CSI Service Account Token feature moves to Beta in 1.21. This feature improves t
 
 The CSI health monitoring feature is being released as a second Alpha in Kubernetes 1.21. This feature enables CSI Drivers to share abnormal volume conditions from the underlying storage systems with Kubernetes so that they can be reported as events on PVCs or Pods. This feature serves as a stepping stone towards programmatic detection and resolution of individual volume health issues by Kubernetes.
 
+## Known Issues
+
+### `TopologyAwareHints` feature falls back to default behavior
+
+The feature gate currently falls back to the default behavior in most cases. Enabling the feature gate will add hints to `EndpointSlices`, but functional differences are only observed in non-dual stack kube-proxy implementation. [The fix will be available in coming releases](https://github.com/kubernetes/kubernetes/pull/100804).
+
 ## Urgent Upgrade Notes 
 
 ### (No, really, you MUST read this before you upgrade)
