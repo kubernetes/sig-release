@@ -1,4 +1,10 @@
 schedules:
+- release: 1.21
+  next: 1.21.1
+  cherryPickDeadline: 2021-05-07
+  targetDate: 2021-05-12
+  endOfLifeDate: 2022-04-30
+  previousPatches:
 - release: 1.20
   next: 1.20.6
   cherryPickDeadline: 2021-04-09

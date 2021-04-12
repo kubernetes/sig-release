@@ -54,6 +54,14 @@ releases may also occur in between these.
 
 ## Detailed Release History for Active Branches
 
+### 1.21
+
+End of Life for **1.21** is **2022-04-30**
+
+| PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
+|--- |--- |--- |
+| 1.21.1        | 2021-05-07           | 2021-05-12  |
+
 ### 1.20
 
 End of Life for **1.20** is **2021-12-30**
