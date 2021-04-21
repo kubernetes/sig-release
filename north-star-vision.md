@@ -47,6 +47,8 @@ the following listing, all deliverables are sorted by their priority.
 
 1. **Enhance Kubernetes binary artifact management (Consumable)**
 
+   https://github.com/kubernetes/sig-release/issues/1372
+
    Outcome: Being able to promote files as artifacts and using this mechanism
    for Kubernetes releases.
 
@@ -74,7 +76,7 @@ the following listing, all deliverables are sorted by their priority.
    Kubernetes releases.
 
 1. **Establish Cluster API as first-class signal for upstream releases
-   (Secure)**
+   (Consumable)**
 
    Outcome: Cluster API provides a CI signal for blocking release test jobs.
 
@@ -83,27 +85,25 @@ the following listing, all deliverables are sorted by their priority.
    Outcome: Clear documentation about available version markers as well as their
    simplified automation.
 
-### Out of Scope
+1. **Moving deb/rpm package builds to community infrastructure (Consumable)**
 
-Topic size estimates are roughly: small (1 week or less), medium (2-3 weeks),
-large (4-5 weeks).
+   Outcome: Automated builds of `deb` and `rpm` Kubernetes packages within
+   community infrastructure.
 
-1. **Moving deb/rpm package builds to community infrastructure (large)**
-   - _What:_ The reb/rpm packages are built by the Google build admin, we should
-     move that to community infrastructure and build them automatically.
-   - _Why:_ It’s easier for us to fix issues independently that way and we have
-     more control about how the packages are being built.
-1. **Create a releases landing page (medium)**
-   - _What:_ Creating a releases website as a centralized and canonical place
-     for release related information.
-   - _Why:_ Finding consolidation options where information is right now spread
-     across different places. Helping people to find the latest patch release
-     and where to obtain its artifacts.
-1. **Signing of release artifacts (large)**
-   - _What:_ Being able to GPG sign release artifacts, which also includes
-     container images.
-   - _Why:_ This allows us to enhance the chain of trust between users of
-     Kubernetes artifacts.
+1. **Create releases landing page (Consumable)**
+
+   https://github.com/kubernetes/website/issues/20293
+
+   Outcome: A releases page that is up to date and acts as canonical place for
+   release related information, for example links to release notes and support
+   timelines.
+
+1. **Signing of release artifacts (Secure)**
+
+   https://github.com/kubernetes/release/issues/914
+
+   Outcome: Being able to GPG sign release artifacts, which also includes
+   container images.
 
 ### Known Risks
 
