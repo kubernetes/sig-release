@@ -87,6 +87,8 @@ the following listing, all deliverables are sorted by their priority.
 
 1. **Moving deb/rpm package builds to community infrastructure (Consumable)**
 
+   https://github.com/kubernetes/release/issues/281
+
    Outcome: Automated builds of `deb` and `rpm` Kubernetes packages within
    community infrastructure.
 
