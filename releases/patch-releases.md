@@ -39,6 +39,34 @@ of the actual release.
 Cherry-pick PRs which miss merge criteria will be carried over and tracked
 for the next patch release.
 
+## Support Period
+
+In accordance with the [yearly support KEP][yearly-support], the Kubernetes
+Community will support active patch release series for a period of roughly
+fourteen (14) months.
+
+The first twelve months of this timeframe will be considered the standard
+period.
+
+Towards the end of the twelve month, the following will happen:
+
+- [Release Managers][release-managers] will cut a release
+- The patch release series will enter maintenance mode
+
+During the two-month maintenance mode period, Release Managers may cut
+additional maintenance releases to resolve:
+
+- CVEs (under the advisement of the Product Security Committee)
+- dependency issues (including base image updates)
+- critical core component issues
+
+At the end of the two-month maintenance mode period, the patch release series
+will be considered EOL (end of life) and cherry picks to the associated branch
+are to be closed soon afterwards.
+
+Note that the 28th of the month was chosen for maintenance mode and EOL target
+dates for simplicity (every month has it).
+
 ## Upcoming Monthly Releases
 
 Timelines may vary with the severity of bug fixes, but for easier planning we
@@ -55,7 +83,9 @@ releases may also occur in between these.
 
 ### 1.21
 
-End of Life for **1.21** is **2022-04-30**
+**1.21** enters maintenance mode on **2022-04-28**
+
+End of Life for **1.21** is **2022-06-28**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
@@ -63,7 +93,9 @@ End of Life for **1.21** is **2022-04-30**
 
 ### 1.20
 
-End of Life for **1.20** is **2021-12-30**
+**1.20** enters maintenance mode on **2022-12-28**
+
+End of Life for **1.20** is **2022-02-28**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
@@ -77,7 +109,9 @@ End of Life for **1.20** is **2021-12-30**
 
 ### 1.19
 
-End of Life for **1.19** is **2021-09-30**
+**1.19** enters maintenance mode on **2021-08-28**
+
+End of Life for **1.19** is **2021-10-28**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
@@ -93,6 +127,33 @@ End of Life for **1.19** is **2021-09-30**
 | 1.19.2        | 2020-09-11           | 2020-09-16  |
 | 1.19.1        | 2020-09-04           | 2020-09-09  |
 
+### 1.18
+
+**1.18** enters maintenance mode on **2021-04-28**
+
+End of Life for **1.18** is **2021-05-12**
+
+| PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
+|--- |--- |--- |
+| 1.18.19       | 2021-05-07           | 2021-05-12  |
+| 1.18.18       | 2021-04-09           | 2021-04-14  |
+| 1.18.17       | 2021-03-12           | 2021-03-17  |
+| 1.18.16       | 2021-02-12           | 2021-02-17  |
+| 1.18.15       | 2021-01-08           | 2021-01-13  |
+| 1.18.14       | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
+| 1.18.13       | 2020-12-04           | 2020-12-09  |
+| 1.18.12       | N/A                  | 2020-11-12  |
+| 1.18.11       | [No-op release](https://groups.google.com/g/kubernetes-dev/c/nJix1xLQvZE) | 2020-11-11  |
+| 1.18.10       | 2020-10-09           | 2020-10-14  |
+| 1.18.9        | 2020-09-11           | 2020-09-16  |
+| 1.18.8        | N/A                  | 2020-08-13  |
+| 1.18.7        | 2020-08-07           | 2020-08-12  |
+| 1.18.6        | 2020-07-10           | 2020-07-15  |
+| 1.18.5        | 2020-06-25           | 2020-06-26  |
+| 1.18.4        | 2020-06-12           | 2020-06-17  |
+| 1.18.3        | 2020-05-15           | 2020-05-20  |
+| 1.18.2        | 2020-04-13           | 2020-04-16  |
+| 1.18.1        | 2020-04-06           | 2020-04-08  |
 
 ## Non-Active Branch History
 
@@ -100,7 +161,6 @@ These releases are no longer supported.
 
 | Minor Version | Final Patch Release | EOL date |
 | --- | --- | --- |
-| 1.18 | 1.18.18 | 2021-04-14 |
 | 1.17 | 1.17.17 | 2021-01-13 |
 | 1.16 | 1.16.15 | 2020-09-02 |
 | 1.15 | 1.15.12 | 2020-05-06 |
@@ -121,3 +181,4 @@ These releases are no longer supported.
 [cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md
 [release-managers]: /release-managers.md
 [release process description]: https://git.k8s.io/community/contributors/devel/sig-release/release.md
+[yearly-support]: https://git.k8s.io/enhancements/keps/sig-release/1498-kubernetes-yearly-support-period/README.md
