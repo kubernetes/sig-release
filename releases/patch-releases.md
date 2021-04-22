@@ -55,6 +55,8 @@ releases may also occur in between these.
 
 ### 1.21
 
+**1.21** enters maintenance mode on **2022-04-28**
+
 End of Life for **1.21** is **2022-06-28**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
@@ -62,6 +64,8 @@ End of Life for **1.21** is **2022-06-28**
 | 1.21.1        | 2021-05-07           | 2021-05-12  |
 
 ### 1.20
+
+**1.20** enters maintenance mode on **2022-12-28**
 
 End of Life for **1.20** is **2022-02-28**
 
@@ -76,6 +80,8 @@ End of Life for **1.20** is **2022-02-28**
 | 1.20.1        | [Tagging Issue](https://groups.google.com/g/kubernetes-dev/c/dNH2yknlCBA) | 2020-12-18  |
 
 ### 1.19
+
+**1.19** enters maintenance mode on **2021-08-28**
 
 End of Life for **1.19** is **2021-10-28**
 
@@ -94,6 +100,8 @@ End of Life for **1.19** is **2021-10-28**
 | 1.19.1        | 2020-09-04           | 2020-09-09  |
 
 ### 1.18
+
+**1.18** enters maintenance mode on **2021-04-28**
 
 End of Life for **1.18** is **2021-05-12**
 
