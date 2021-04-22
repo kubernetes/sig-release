@@ -20,7 +20,9 @@ publishing of Kubernetes related artifacts.
    companies like Google.
 1. **Introspectable**: It is clear for users at which point and how Kubernetes
    artifacts are being built. This includes the documentation of all
-   deliverables as well as clarifying what we do not support.
+   deliverables as well as clarifying what we do not support. All official
+   release artifacts will be built by a hermetic process that is impervious to
+   human interference.
 1. **Secure**: The artifacts we produce are verified for their integrity. This
    applies to their functionality (we know what we deliver) as well as their
    software security (we know when CVEs occur).
