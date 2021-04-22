@@ -39,6 +39,34 @@ of the actual release.
 Cherry-pick PRs which miss merge criteria will be carried over and tracked
 for the next patch release.
 
+## Support Period
+
+In accordance with the [yearly support KEP][yearly-support], the Kubernetes
+Community will support active patch release series for a period of roughly
+fourteen (14) months.
+
+The first twelve months of this timeframe will be considered the standard
+period.
+
+Towards the end of the twelve month, the following will happen:
+
+- [Release Managers][release-managers] will cut a release
+- The patch release series will enter maintenance mode
+
+During the two-month maintenance mode period, Release Managers may cut
+additional maintenance releases to resolve:
+
+- CVEs (under the advisement of the Product Security Committee)
+- dependency issues (including base image updates)
+- critical core component issues
+
+At the end of the two-month maintenance mode period, the patch release series
+will be considered EOL (end of life) and cherry picks to the associated branch
+are to be closed soon afterwards.
+
+Note that the 28th of the month was chosen for maintenance mode and EOL target
+dates for simplicity (every month has it).
+
 ## Upcoming Monthly Releases
 
 Timelines may vary with the severity of bug fixes, but for easier planning we
@@ -153,3 +181,4 @@ These releases are no longer supported.
 [cherry-pick process]: https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md
 [release-managers]: /release-managers.md
 [release process description]: https://git.k8s.io/community/contributors/devel/sig-release/release.md
+[yearly-support]: https://git.k8s.io/enhancements/keps/sig-release/1498-kubernetes-yearly-support-period/README.md
