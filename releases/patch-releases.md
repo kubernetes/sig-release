@@ -55,7 +55,7 @@ releases may also occur in between these.
 
 ### 1.21
 
-End of Life for **1.21** is **2022-04-30**
+End of Life for **1.21** is **2022-06-28**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
@@ -63,7 +63,7 @@ End of Life for **1.21** is **2022-04-30**
 
 ### 1.20
 
-End of Life for **1.20** is **2021-12-30**
+End of Life for **1.20** is **2022-02-28**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
@@ -77,7 +77,7 @@ End of Life for **1.20** is **2021-12-30**
 
 ### 1.19
 
-End of Life for **1.19** is **2021-09-30**
+End of Life for **1.19** is **2021-10-28**
 
 | PATCH RELEASE | CHERRY PICK DEADLINE | TARGET DATE |
 |--- |--- |--- |
