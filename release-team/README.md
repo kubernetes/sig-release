@@ -71,6 +71,8 @@ there are 3 types of Kubernetes releases:
 - Minor (x.x.0)
 - Patch (x.x.x)
 
+![release-team](release-team.svg "Release Team Diagram")
+
 | Role | Handbook |
 |---|---|
 | Release Team Lead | [Lead Handbook](role-handbooks/release-team-lead/README.md) |
