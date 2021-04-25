@@ -93,7 +93,7 @@ End of Life for **1.21** is **2022-06-28**
 
 ### 1.20
 
-**1.20** enters maintenance mode on **2022-12-28**
+**1.20** enters maintenance mode on **2021-12-28**
 
 End of Life for **1.20** is **2022-02-28**
 
