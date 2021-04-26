@@ -107,3 +107,7 @@ A: This happens frequently; usually the Shadow is simply dropped from the roster
 *Q: What if the Role Lead can't continue, and one of the Shadows needs to take over?*
 
 A: The Release Lead, the EA, and the outgoing Role Lead (if possible) will discuss the matter and select one of the Shadows to become the new Role Lead.  This is one of the reasons we have Shadows.
+
+*Q: How/When are Shadows selected?*
+
+A: The Release Leads work with the EA and are responsible for collecting shadow applications and selecting the Shadows. Generally this is one week into the release. [Relevant EA docs](./role-handbooks/emeritus-adviser#shadow-selection).
