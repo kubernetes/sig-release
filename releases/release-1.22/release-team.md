@@ -10,6 +10,7 @@
 | Release Notes | Pavel Malinov ([@pmmalinov01](https://github.com/pmmalinov01) / Slack: `@Pavel Malinov`) | |
 | Communications | Peeyush Gupta ([@pensu](https://github.com/pensu) / Slack: `@pensu91`) | |
 | Emeritus Adviser | Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger) / Slack: `@gsaenger`) | |
+| Branch Manager | Adolfo García Veytia ([@puerco](https://github.com/puerco) / Slack: `@puerco`) | |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
