@@ -50,7 +50,7 @@ The 1.22 release cycle is proposed as follows:
 |---|---|-------|---|---|
 | Start of Release Cycle | Lead | Mon April 26 | week 1 | [master-blocking] |
 | Start Enhancements Tracking | Enhancements Lead | Mon April 26 | week 1 | |
-| 1.22.0-alpha.1 released | Branch Manager (TBD) | TBD  | TBD | |
+| 1.22.0-alpha.1 released | Branch Manager (@puerco) | Wed April 28  | week 1 | |
 | Schedule finalized | Lead | Thur April 29 | week 1 | |
 | Team finalized | Lead | Fri April 30 | week 1 | |
 | 1.22.0-alpha.2 released | Branch Manager (TBD) | TBD | TBD | |
