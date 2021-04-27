@@ -18,7 +18,6 @@ aliases:
     - xmudrii # Release Manager
   release-engineering-reviewers:
     - ameukam # Release Manager Associate
-    - gianarb # Release Manager Associate
     - jimangel # Release Manager Associate
     - markyjackson-taulia # Release Manager Associate
     - mkorbi # Release Manager Associate
