@@ -1,6 +1,6 @@
 # Branch Manager Handbook
 
-- [Branch Manager Handbook <!-- omit in toc -->](#branch-manager-handbook-)
+- [Branch Manager Handbook](#branch-manager-handbook)
   - [Content Notice](#content-notice)
   - [Overview](#overview)
     - [Conventions](#conventions)
@@ -42,6 +42,7 @@
       - [Update milestone requirements](#update-milestone-requirements)
       - [Update e2e variants](#update-e2e-variants)
       - [Generate release branch jobs](#generate-release-branch-jobs)
+      - [Update publishing-bot rules](#update-publishing-bot-rules)
     - [Configure Merge Automation](#configure-merge-automation)
       - [Tide](#tide)
       - [Code Freeze](#code-freeze)
@@ -595,8 +596,23 @@ This task should be done after the release is complete and previous PRs are merg
 
 1. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
 
+#### Update publishing-bot rules
+
+The Kubernetes Publishing Bot is responsible for:
+
+* ensuring that the master and release branches in the staging repositories are in-sync with the appropriate branches in `kubernetes/kubernetes`
+* creating tags in the staging repositories for each Kubernetes release
+
+It's required to create appropriate publishing-bot rules for the publishing-bot to work with the release branches. Once a new release branch is created in `kubernetes/kubernetes`, the Release Manager should create a PR in `kubernetes/kubernetes` to add publishing-bot rules for a newly-created branch.
+
+The rules are located in the [`staging/publishing/rules.yaml`][publishing-bot-rules].
+For each repository (i.e. `destination`), a new `source` for a newly-created branch should be added. The easiest way to do that is to copy the rules for a previous release branch and change the branch name.
+
+Here's an [example PR](https://github.com/kubernetes/kubernetes/pull/100616).
+
 [sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
 [`krel ff`]: https://git.k8s.io/release
+[publishing-bot-rules]: https://git.k8s.io/kubernetes/staging/publishing/rules.yaml
 
 ### Configure Merge Automation
 
