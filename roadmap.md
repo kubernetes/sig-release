@@ -16,8 +16,8 @@ Kubernetes. As a supply chain we understand the defining, building and
 publishing of Kubernetes related artifacts.
 
 1. **Consumable**: Improving the usability of artifacts by making their
-   consumption easier. This includes being process independent from external
-   companies like Google.
+   consumption easier. This includes being process independent of vendor,
+   employer and individuals.
 1. **Introspectable**: It is clear for users at which point and how Kubernetes
    artifacts are being built. This includes the documentation of all
    deliverables as well as clarifying what we do not support. All official
