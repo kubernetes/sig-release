@@ -7,7 +7,7 @@
 | CI Signal | Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkorbi`) | |
 | Bug Triage | Menna Elmasry ([@monzelmasry](https://github.com/MonzElmasry) / Slack: `@Menna`) | |
 | Docs | Victor Palade ([@pi-victor](https://github.com/pi-victor)) / Slack: `@Victor PI`) | |
-| Release Notes | Pavel Malinov ([@pmmalinov01](https://github.com/pmmalinov01) / Slack: `@Pavel Malinov`) | |
+| Release Notes | Pavel Malinov ([@pmmalinov01](https://github.com/pmmalinov01) / Slack: `@Pavel Malinov`) | Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`), Daman Arora ([@Damans227](https://github.com/Damans227) / Slack: `@Daman Arora`), Sladyn Nunes ([@sladyn98](https://github.com/sladyn98) / Slack: `@Sladyn Nunes`), Simran Thind ([@simcard0000](https://github.com/simcard0000) / Slack: `@Sims`) |
 | Communications | Peeyush Gupta ([@pensu](https://github.com/pensu) / Slack: `@pensu91`) | |
 | Emeritus Adviser | Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger) / Slack: `@gsaenger`) | |
 | Branch Manager | Adolfo García Veytia ([@puerco](https://github.com/puerco) / Slack: `@puerco`) | |
