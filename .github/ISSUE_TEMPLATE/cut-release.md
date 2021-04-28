@@ -1,55 +1,106 @@
 ---
 name: Cut a release
 about: Create a tracking issue for a release cut
-title: Cut 1.x.y-{alpha,beta,rc}.z release
+title: Cut v1.x.y-{alpha,beta,rc}.z release
 labels: sig/release, area/release-eng
 ---
-## Scheduled to happen: <!-- Tue, 2019-02-26 -->
+## Scheduled to happen: <!-- Tue, 2021-MM-DD -->
+
+## Release Blocking Issues
+<!--
+
+Make a list of anything preventing the release to start
+(failing tests, pending image bumps, etc) and link them
+to the relevant GitHub issues:
+
+- [ ] Issue 1
+- [ ] Issue 2
+
+-->
 
 <!--
+
+Release Process Steps:
+======================
+
 - Add/Remove items of the checklist as you see fit
 - Post bumps or issues encountered along the way
+
+Hints and pointers to docs for each step of the release process:
+
+Screenshot Testgrid Boards:
+Use `krel testgridshot` to automatically create the screenshots
+http://bit.ly/relmanagers-handbook#testgrid-screenshots
+
+Stage and Release (mock and nomock):
+Use `krel stage` && `krel release` see the handbook for more:
+http://bit.ly/relmanagers-handbook#releases-management
+
+Image promotion:
+Use `krel promote images` to create a pull request
+http://bit.ly/k8s-image-promotion
+
+Notify #release-management on Slack:
+Announce the release in a message in the Channel and paste the link
+Direct link to slack: https://kubernetes.slack.com/messages/CJH2GBF7Y
+
+Build & publish packages:    ← Skip for prereleases
+Coordinate with @google-build-admin before starting. Once the 
+NoMock Release is done and **before sending the announcement**
+notify @google-build-admin to start building the packages.
+
+Send notification:
+Use `krel announce` using your Sendgrid token
+http://bit.ly/relmanagers-handbook#sending-mail
+
+Collect Metrics:
+Run krel history --branch release-1.mm --date-from 2021-mm-dd
+http://bit.ly/relmanagers-handbook#adding-data-about-the-cloud-build-jobs
+
+Help? Ring @release-managers on slack!
+
 -->
 
-- [ ] Screenshot unhealthy release branch testgrid boards and add them as a comment
-<!--
-Screenshot `master` branch for releases <= `x.y.z-beta.0` OR the `release-x.y` branch for releases > x.y.z-beta.0.
-see template below, example: https://github.com/kubernetes/sig-release/issues/842#issuecomment-547453821
--->
-- [ ] Stage & release
-  - [ ] Notify [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y): [see notification](https://link-to-slack-message)
-  <!-- e.g. https://kubernetes.slack.com/archives/CJH2GBF7Y/p1572365803088800 -->
-  - [ ] Collect metrics and add them to the `Release steps` table below
-<!-- ONLY FOR OFFICIAL RELEASES - [ ] Build & publish packages (debs & rpms) -->
-- [ ] Send notification [email](https://link-to-email-on-kubernetes-announce-google-group)
+## Release Steps
 
-## Release steps
+- [ ] Screenshot unhealthy release branch testgrid boards
+- Mock Run
+  - [ ] Stage
+  - [ ] Release
+- NoMock Run
+  - [ ] Stage
+  - [ ] Image Promotion: <!-- Paste Pull Request URL here -->
+  - [ ] Release
+- [ ] Build & publish packages (debs & rpms) <!-- REMOVE THIS STEP FOR PRE-RELEASES -->
+- [ ] Notify #release-management]: <!-- Paste link to slack -->
+- [ ] Send notification: <!-- Paste link to kubernetes-dev email -->
+- [ ] Collect metrics and add them to the `Release steps` table below
 
-[krel](https://github.com/kubernetes/release/tree/master/docs/krel) version:
-<!-- 
-Replace with output of `krel version` then uncomment.
+
+## Release Tools Version
+
+<!-- Replace with output of `krel version` -->
 ```
-GitVersion:    v0.2.7
+GitVersion:    vM.m.p
 GitCommit:     191ddd0b0b49af1adb04a98e45cebdd36cae9307
 GitTreeState:  clean
-BuildDate:     2020-04-16T09:45:37Z
-GoVersion:     go1.13.4
+BuildDate:     YYYY-MM-DDTHH:mm:ssZ
+GoVersion:     go1.16.3
 Compiler:      gc
 Platform:      linux/amd64
 ```
--->
 
+## Release Jobs History
+
+<!-- The following table can be automatically generated using krel --history  -->
 | Step | Command | Link | Start | Duration | Succeeded? |
 | --- | --- | --- | --- | --- | --- |
-| Mock stage | `krel stage [arguments]` | <!-- link-to-MOCK-gcb-stage-run --> |  |  |  |
-| Mock release | `krel release [arguments]` | <!-- link-to-MOCK-gcb-release-run --> |  |  |  |
-| Stage | `krel stage [arguments]` | <!-- link-to-REAL-gcb-stage-run --> |  |  |  |
-| Image Promotion | `krel promote-images -i --fork=[your-github-user] --tag=[version]` | <!-- link-to-k8s.io-PR --> |  |  |  |
-| Release | `krel release [arguments]` | <!-- link-to-REAL-gcb-release-run --> |  |  |  |
-| Cut packages <!-- not required for pre-releases (alpha, beta, rc) --> | -- | -- |  |  |  |
-| Notify | -- | <!-- link-to-kubernetes-announce-list-thread --> |  | -- |  |
+| Mock stage | `krel stage [arguments]` | | | | |
+| Mock release | `krel release [arguments]` | | | | |
+| Stage | `krel stage [arguments]` | | | | |
+| Release | `krel release [arguments]` | | | | |
 
-## Action items
+## Action Items
 
 <!--
 During the release, you may find a few things that require updates
@@ -57,24 +108,25 @@ During the release, you may find a few things that require updates
 
 Please list them here.
 
-It will be your responsibility to open issues/PRs to resolve these issues/improvements.
-Keep this issue open until these action items are complete.
+It will be your responsibility to open issues/PRs to resolve these
+issues/improvements. Keep this issue open until these action items
+are complete.
 
 - [ ] Item 1
 - [ ] Item 2
 - [ ] Item 3
 -->
 
-## Open questions
+## Open Questions
 
 <!--
-During the release, you may have a few questions that you can't answer yourself or may
-require group discussion.
+During the release, you may have a few questions that you can't
+answer yourself or may require group discussion.
 
 Please list them here.
 
-Follow up with Branch Managers/Patch Release Team/Release Engineering subproject owners
-to get these questions answered.
+Follow up with Branch Managers/Patch Release Team/Release Engineering
+subproject owners to get these questions answered.
 
 - [ ] Item 1
 - [ ] Item 2
@@ -86,28 +138,3 @@ to get these questions answered.
 /cc @kubernetes/release-managers
 /priority important-soon
 /kind documentation
-
-<!-- Example template for screenshots comment:
-
-----[ template ]----
-### Failing testgrid jobs
-
-#### sig-release-master-blocking
-
-<details><summary>`gce-cos-master-default`</summary></p>
-
-... paste image here ...
-</p></details>
-
-#### sig-release-master-informing
-
-<details><summary>`gce-new-master-upgrade-master`</summary><p>
-
-... paste image here ...
-... paste multiple images here ...
-</p></details>
-
-[screenshot capture tool](https://git.k8s.io/release/testgridshot)
-----[ template ]----
-
--->
