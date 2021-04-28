@@ -98,10 +98,10 @@ It is important that this process be followed and documentation remain up-to-dat
 - Clean up the spreadsheet by removing all currently tracked issues from all tabs.
 - Update the permissions on the enhancement collection sheet.
     - Using the _Share_ settings available in the top right of the sheet, enable anyone with the link to _view_ the sheet.
-    - Grant _Edit_ access to yourself (Current Enhancements lead), prior Enhancements lead, release lead, Enhancements shadows, and the [SIG Release Leads Google Group][sig-release-leads-group].
-    - Add _Comment_ access for the [SIG Release Google Group][sig-release-group], [SIG Docs Google Group][sig-docs-group], [Kubernetes Release Team Google Group][rt-group], and [SIG Leads Google Group][sig-leads-group].
+    - Grant _Edit_ access to yourself (Current Enhancements lead), prior Enhancements lead, release lead, Enhancements shadows, the [SIG Release Leads Google Group][sig-release-leads-group], and [SIG Leads Google Group][sig-leads-group].
+    - Add _Comment_ access for the [SIG Release Google Group][sig-release-group], [SIG Docs Google Group][sig-docs-group], [Kubernetes Release Team Google Group][rt-group].
 - Update the permission on the protected sheets on the enhancement collection sheet.
-    - For `KEP Collection` sheet, grant _Edit_ access to the [SIG Release Leads Google Group][sig-release-leads-group].
+    - For `KEP Collection` sheet, grant _Edit_ access to the [SIG Leads Google Group][sig-leads-group].
     - For `Docs` sheet, grant _Edit_ access to Docs Lead and Docs shadows.
 - Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking sheet to the current release page in [sig-release][sig-release]
 - Find [Issues][enhancements-issues] from previous milestone that have graduated to Stable. Remove `tracked/yes` or `tracked/no` labels. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
