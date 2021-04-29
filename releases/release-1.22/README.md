@@ -54,14 +54,14 @@ The 1.22 release cycle is proposed as follows:
 | Schedule finalized | Lead | Thur April 29 | week 1 | |
 | Team finalized | Lead | Fri April 30 | week 1 | |
 | KubeCon EU + Co-located events | | May 3-7 | | |
-| **Begin [Enhancements Freeze]** (Time TBD) | Enhancements Lead | Thur May 13 | week 3 | [master-blocking], [master-informing] |
+| **Begin [Enhancements Freeze]** (23:59 PDT) | Enhancements Lead | Thur May 13 | week 3 | [master-blocking], [master-informing] |
 | 1.22.0-alpha.2 released | Branch Manager (TBD) | Tue May 18 | week 4 | |
 | 1.22.0-alpha.3 released | Branch Manager (TBD) | Tue June 7 | week 7 | |
 | 1.22.0-beta.0 released | Branch Manager (TBD) | Tue June 21 | week 9 | |
 | **Begin [Burndown]** (MWF meetings) | Lead | Mon June 28 | week 10 | [1.22-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Mon June 28 | week 10 | |
-| Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | TBD | TBD | |
-| **Begin Feature blog freeze** | Comms Lead | TBD | TBD | |
+| Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon June 28 | week 10 | |
+| **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Mon June 28 | week 10 | |
 | 1.22.0-beta.1 released | Branch Manager (TBD) | Thu June 8 | week 11 | |
 | **Begin [Code Freeze]** (18:00 PDT) | Branch Manager | Thur July 8 | week 11 | |
 | Docs deadline - Open placeholder PRs | Docs Lead | Fri July 9 | week 11 | |
@@ -72,11 +72,11 @@ The 1.22 release cycle is proposed as follows:
 | 1.22.0-rc.0 released | Branch Manager (@puerco) | Tue July 20 | week 13 | |
 | release-1.22 branch created | Branch Manager | Tue July 20 | week 13 | |
 | release-1.22 jobs created | Branch Manager | Tue July 20 | week 13 | |
-| Start final draft of Release Notes | Release Notes Lead | TBD | TBD | |
-| Release blog ready to review | Comms / Docs | TBD | TBD | |
+| Start final draft of Release Notes | Release Notes Lead | Tue July 20 | week 13 | |
+| Release blog ready to review (23:59 PDT) | Comms / Docs | Web July 21 | Week 13 | |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Tue July 27 | week 14 | |
-| Feature blogs ready to review | Enhancement Owner / SIG Leads | TBD | TBD | |
-| Release Notes complete - reviewed & merged to `k/sig-release` | Release Notes Lead | TBD | TBD | |
+| Feature blogs ready to review (23:59 PDT)| Enhancement Owner / SIG Leads | Tue July 27 | week 14 | |
+| Release Notes complete - reviewed & merged to `k/sig-release` (23:59 PDT) | Release Notes Lead | Thur July 29 | week 14 | |
 | **v1.22.0 released** | Branch Manager (@puerco) | Wed August 4 | week 15 | |
 | Release blog published | Comms | Wed August 4 | week 15 | |
 | **[Thaw]** | Branch Manager | Wed August 4 | week 15 | |
