@@ -73,7 +73,7 @@ The 1.22 release cycle is proposed as follows:
 | release-1.22 branch created | Branch Manager | Tue July 20 | week 13 | |
 | release-1.22 jobs created | Branch Manager | Tue July 20 | week 13 | |
 | Start final draft of Release Notes | Release Notes Lead | Tue July 20 | week 13 | |
-| Release blog ready to review (23:59 PDT) | Comms / Docs | Web July 21 | Week 13 | |
+| Release blog ready to review (23:59 PDT) | Comms / Docs | Wed July 21 | Week 13 | |
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Tue July 27 | week 14 | |
 | Feature blogs ready to review (23:59 PDT)| Enhancement Owner / SIG Leads | Tue July 27 | week 14 | |
 | Release Notes complete - reviewed & merged to `k/sig-release` (23:59 PDT) | Release Notes Lead | Thur July 29 | week 14 | |
