@@ -1,0 +1,3 @@
+pr: 100267
+releasenote:
+  text: It adds two flags, `--max-pods` and `--extended-resources`.

@@ -1,0 +1,4 @@
+pr: 101271
+releasenote:
+  text: Logging for GCE Windows clusters will be more accurate and complete when using
+    Fluent bit.
