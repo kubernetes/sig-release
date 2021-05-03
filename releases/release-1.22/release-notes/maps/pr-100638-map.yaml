@@ -1,0 +1,3 @@
+pr: 100638
+releasenote:
+  text: Fixes a data race issue in the priority and fairness API server filter.

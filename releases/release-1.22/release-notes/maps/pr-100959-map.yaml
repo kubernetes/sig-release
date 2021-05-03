@@ -1,0 +1,5 @@
+pr: 100959
+releasenote:
+  text: Renames the timeout field for the `DelegatingAuthenticationOptions` to `TokenRequestTimeout`
+    and set the timeout only for the token review client. Previously the timeout was
+    also applied to watches making them reconnecting every 10 seconds.

@@ -1,0 +1,5 @@
+pr: 100148
+releasenote:
+  text: The new flag `--chunk-size=SIZE` for `kubectl drain` has been promoted to beta, and enabled by
+    default. This flag  may be used to alter the number of items or disable this feature
+    when `0` is passed.
