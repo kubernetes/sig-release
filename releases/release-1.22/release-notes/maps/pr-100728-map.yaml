@@ -1,0 +1,4 @@
+pr: 100728
+releasenote:
+  text: A value of `Auto` is now a valid for the `service.kubernetes.io/topology-aware-hints`
+    annotation.

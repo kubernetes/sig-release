@@ -1,0 +1,4 @@
+pr: 101411
+releasenote:
+  text: Official binaries now include the golang generated build ID `buildid` instead
+    of an empty string.
