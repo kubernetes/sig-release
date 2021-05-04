@@ -1,0 +1,3 @@
+pr: 101235
+releasenote:
+  text: 'Fix: Azure file inline volume namespace issue in CSI migration translation'

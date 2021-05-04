@@ -1,0 +1,6 @@
+pr: 100861
+releasenote:
+  text: 'Fix: Bug in `kube-proxy` latency metrics to calculate only the latency value
+    for the `Endpoints` that are created after it starts running. This is needed because
+    all the `Endpoints` objects are processed on restarts, independently when they
+    were.'
