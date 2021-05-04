@@ -1,3 +1,0 @@
-pr: 100907
-releasenote:
-  text: 'kubeadm: add `--validity-period` flag for `kubeadm kubeconfig user` command'

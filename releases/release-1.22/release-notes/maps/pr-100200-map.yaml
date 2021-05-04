@@ -1,4 +1,0 @@
-pr: 100200
-releasenote:
-  text: Ensures `ExecProbeTimeout=false` kubelet feature gate with dockershim is taken
-    into account, when the exec probe takes longer than `timeoutSeconds` configuration.

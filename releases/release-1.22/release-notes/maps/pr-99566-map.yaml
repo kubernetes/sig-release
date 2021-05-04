@@ -1,3 +1,0 @@
-pr: 99566
-releasenote:
-  text: Migrate some log messages to structured logging in `pkg/volume/volume_linux.go`.

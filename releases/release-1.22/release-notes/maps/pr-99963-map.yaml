@@ -1,4 +1,0 @@
-pr: 99963
-releasenote:
-  text: The job controller removes running pods when the number of completions is
-    achieved.

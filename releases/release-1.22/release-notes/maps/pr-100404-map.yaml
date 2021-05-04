@@ -1,3 +1,0 @@
-pr: 100404
-releasenote:
-  text: Limit vSphere volume name to 63 characters long.

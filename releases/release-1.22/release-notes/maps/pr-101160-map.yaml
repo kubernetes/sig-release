@@ -1,3 +1,0 @@
-pr: 101160
-releasenote:
-  text: 'Fix: display of Job completion mode in `kubectl describe`.'
