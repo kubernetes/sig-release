@@ -1,0 +1,3 @@
+pr: 100944
+releasenote:
+  text: Ensure service is deleted when the Azure resource group has been deleted.

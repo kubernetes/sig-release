@@ -1,0 +1,3 @@
+pr: 101436
+releasenote:
+  text: Output for `kubectl describe podsecuritypolicy` is now kind specific and cleaner

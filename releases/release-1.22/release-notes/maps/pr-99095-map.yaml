@@ -1,0 +1,3 @@
+pr: 99095
+releasenote:
+  text: Prevent Kubelet stuck in `DiskPressure` when `imagefs.minReclaim` is set

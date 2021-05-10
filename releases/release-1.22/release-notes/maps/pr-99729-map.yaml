@@ -1,0 +1,12 @@
+pr: 99729
+releasenote:
+  text: "A `system-cluster-critical` pod should not get a low OOM Score. \n\nAs of
+    now both `system-node-critical` and `system-cluster-critical` pods have -997 OOM
+    score, making them one of the last processes to be OOMKilled. By definition `system-cluster-critical`
+    pods can be scheduled elsewhere if there is a resource crunch on the node where
+    as `system-node-critical` pods cannot be rescheduled. This was the reason for
+    `system-node-critical` to have higher priority value than `system-cluster-critical`.
+    \ This change allows only `system-node-critical` priority class to have low OOMScore.\n\naction
+    required\nIf the user wants to have the pod to be OOMKilled last and the pod has
+    `system-cluster-critical` priority class, it has to be changed to `system-node-critical`
+    priority class to preserve the existing behavior"

@@ -1,0 +1,4 @@
+pr: 101076
+releasenote:
+  text: Chain the field manager creation calls in `newDefaultFieldManager` to be explicit
+    about the order of operations.

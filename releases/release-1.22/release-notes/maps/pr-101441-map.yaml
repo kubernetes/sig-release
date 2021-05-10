@@ -1,0 +1,4 @@
+pr: 101441
+releasenote:
+  text: Removal of the CSI `NodePublish` path by the kubelet is deprecated. This must
+    be done by the CSI plugin according to the CSI spec.
