@@ -62,7 +62,7 @@ The 1.22 release cycle is proposed as follows:
 | **Call for [Exceptions][Exception]** | Lead | Mon June 28 | week 10 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon June 28 | week 10 | |
 | **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Mon June 28 | week 10 | |
-| 1.22.0-beta.1 released | Branch Manager (TBD) | Thu June 8 | week 11 | |
+| 1.22.0-beta.1 released | Branch Manager (TBD) | Thu July 8 | week 11 | |
 | **Begin [Code Freeze]** (18:00 PDT) | Branch Manager | Thur July 8 | week 11 | |
 | Docs deadline - Open placeholder PRs | Docs Lead | Fri July 9 | week 11 | |
 | Burndown Meetings daily| Lead | Mon July 12 | week 12 | |
