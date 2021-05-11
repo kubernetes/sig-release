@@ -82,10 +82,8 @@ GitHub Mentions: [@kubernetes/release-engineering](https://github.com/orgs/kuber
 - Carlos Panato ([@cpanato](https://github.com/cpanato))
 - Daniel Mangum ([@hasheddan](https://github.com/hasheddan))
 - Marko Mudrinić ([@xmudrii](https://github.com/xmudrii))
-- Pengfei Ni ([@feiskyer](https://github.com/feiskyer))
 - Sascha Grunert ([@saschagrunert](https://github.com/saschagrunert))
 - Stephen Augustus ([@justaugustus](https://github.com/justaugustus))
-- Yang Li ([@idealhack](https://github.com/idealhack))
 
 ### Becoming a Release Manager
 
