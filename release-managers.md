@@ -125,8 +125,10 @@ GitHub Mentions: @kubernetes/release-engineering
 
 - Arnaud Meukam ([@ameukam](https://github.com/ameukam))
 - Jim Angel ([@jimangel](https://github.com/jimangel))
+- Joyce Kung ([@thejoycekung](https://github.com/thejoycekung))
 - Marky Jackson ([@markyjackson-taulia](https://github.com/markyjackson-taulia))
 - Max Körbächer ([@mkorbi](https://github.com/mkorbi))
+- Nabarun Pal ([@palnabarun](https://github.com/palnabarun))
 - Seth McCombs ([@sethmccombs](https://github.com/sethmccombs))
 - Taylor Dolezal ([@onlydole](https://github.com/onlydole))
 - Verónica López ([@verolop](https://github.com/verolop))
