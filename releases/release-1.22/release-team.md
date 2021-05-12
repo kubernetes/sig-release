@@ -10,7 +10,7 @@
 | Release Notes | Pavel Malinov ([@pmmalinov01](https://github.com/pmmalinov01) / Slack: `@Pavel Malinov`) | Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`), Daman Arora ([@Damans227](https://github.com/Damans227) / Slack: `@Daman Arora`), Sladyn Nunes ([@sladyn98](https://github.com/sladyn98) / Slack: `@Sladyn Nunes`), Simran Thind ([@simcard0000](https://github.com/simcard0000) / Slack: `@Sims`) |
 | Communications | Peeyush Gupta ([@pensu](https://github.com/pensu) / Slack: `@pensu91`) | Jesse Butler ([@jlbutler](https://github.com/jlbutler) / Slack: `@Jesse Butler`), Krishna Kilari ([@skrishna-unix](https://github.com/skrishna-unix) / Slack: `@Krishna Kilari`), Kunal Kushwaha ([@kunal-kushwaha](https://github.com/kunal-kushwaha) / Slack: `@Kunal Kushwaha`), Rajula Vineet Reddy ([@rajula96reddy](https://github.com/rajula96reddy) / Slack: `@rajula96reddy`)|
 | Emeritus Adviser | Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger) / Slack: `@gsaenger`) | |
-| Branch Manager | Adolfo García Veytia ([@puerco](https://github.com/puerco) / Slack: `@puerco`) | |
+| Branch Manager | Adolfo García Veytia ([@puerco](https://github.com/puerco) / Slack: `@puerco`) |  Joyce Kung ([@thejoycekung](https://github.com/thejoycekung) / Slack: `@jk`), Verónica López ([@verolop](https://github.com/verolop) / Slack: `@veronica`) |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel. When escalating release management issues, please make sure to include all Release Managers, not just the Branch Manager for the specified release cycle.
 
