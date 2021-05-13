@@ -1,6 +1,6 @@
 # Exceptions to Milestone Enhancement Complete dates
 
-For minor (1.x) milestones, the Kubernetes project has enhancement complete dates (hitting enhancement complete is all enhancement LGTMed and in submit queue with tests written) after which no new enhancements are accepted. Since minor releases come approximately quarterly, missing a enhancement complete date by just one day can mean that enhancement takes an additional 3 months to be released.
+For minor (1.x) milestones, the Kubernetes project has enhancement complete dates (hitting enhancement complete is all enhancement LGTMed and in submit queue with tests written) after which no new enhancements are accepted. Since minor releases come three times per year, missing a enhancement complete date by just one day can mean that enhancement takes an additional 4 months to be released.
 
 While the enhancement complete milestone dates are published well in advance, and the default is that missing the date means your enhancement will be part of the next milestone, there may be cases where an exception makes sense.
 
