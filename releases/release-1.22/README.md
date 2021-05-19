@@ -22,6 +22,7 @@ description: |
 #### Tracking docs
 
 * [Enhancements Tracking Sheet](https://bit.ly/k8s122-enhancements)
+* [Feature blog Tracking Sheet](http://bit.ly/k8s122-feature-blog)
 * Bug Triage Tracking Sheet: TODO
 * CI Signal Report: TODO
 * [Retrospective Document][Retrospective Document]
