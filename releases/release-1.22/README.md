@@ -23,7 +23,7 @@ description: |
 
 * [Enhancements Tracking Sheet](https://bit.ly/k8s122-enhancements)
 * [Feature blog Tracking Sheet](http://bit.ly/k8s122-feature-blog)
-* Bug Triage Tracking Sheet: TODO
+* [Bug Triage Tracking Sheet](https://bit.ly/1-22-bug-triage-tracking)
 * CI Signal Report: TODO
 * [Retrospective Document][Retrospective Document]
 * [kubernetes/sig-release v1.22 milestone](https://github.com/kubernetes/kubernetes/milestone/50)
