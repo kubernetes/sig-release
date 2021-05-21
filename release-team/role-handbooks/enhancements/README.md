@@ -140,7 +140,7 @@ It is important that this process be followed and documentation remain up-to-dat
 #### Enhancements Freeze (Week 3)
 
 - On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) that freeze has happened and upcoming key dates. Examples [1](https://groups.google.com/g/kubernetes-dev/c/JDM7bNKvhqQ/m/8S7BXtXPBQAJ).
-- Remove [SIG Release Leads Google Group][sig-release-leads-group]'s access to the `KEP Collection` sheets on the enhancement collection sheet.
+- Remove [SIG Leads Google Group][sig-leads-group]'s access to the `KEP Collection` sheets on the enhancement collection sheet.
 - Remove any enhancements that failed to meet the criteria by the Enhancement freeze deadline. 
     - Set their status in the sheet to `Removed from Milestone` and use the `Enhancements` -> `Remove Enhancements from Milestone` menu option to move them over to the `Removed from milestone` tab.
     - Remove the milestone and change `tracked/yes` label to `tracked/no` on the enhancement issue.
