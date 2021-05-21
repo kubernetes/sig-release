@@ -43,10 +43,17 @@ Helpful characteristics of an Enhancements Lead include:
 - product / project / program management experience
 - release management experience
 
-Approximate Time Commitments
-- Beginning of the cycle through enhancement freeze: 6-10 hours a week fluctuating based on how many SIG meetings need to be attended
-- Enhancement Freeze through Code Freeze: 4-7 hours a week
-- Code Freeze through Release Day: 1-4 hours a week
+### Time Commitments
+
+Enhancement is one of the most time-intensive areas of the release team, and especially so during the early parts of the release. An Enhancements Lead can expect to spend:
+- Beginning of the cycle through enhancement freeze: ~8–15 hours a week
+- Week of enhancements freeze: 20+ hours
+- Enhancement Freeze through Code Freeze: ~4–7 hours a week
+- Code Freeze through Release Day: ~1–4 hours a week
+
+Note that Enahncements Lead in particular will need to do work **during the week** during the early release, and will need to be available at least daily.
+
+Enhancements shadows have much lower time committments, but can still expect to spend 5+ hours a week during the early release, and ~1–4 hours a week after enhancements freeze. Unlike Enhancements Lead, shadows can expect to do their work largely on weekends if they desire.
 
 ## Mentoring Shadows
 
