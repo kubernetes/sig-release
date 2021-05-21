@@ -43,17 +43,10 @@ Helpful characteristics of an Enhancements Lead include:
 - product / project / program management experience
 - release management experience
 
-### Time Commitments
-
-Enhancement is one of the most time-intensive areas of the release team, and especially so during the early parts of the release. An Enhancements Lead can expect to spend:
-- Beginning of the cycle through enhancement freeze: ~8–15 hours a week
-- Week of enhancements freeze: 20+ hours
-- Enhancement Freeze through Code Freeze: ~4–7 hours a week
-- Code Freeze through Release Day: ~1–4 hours a week
-
-Note that Enahncements Lead in particular will need to do work **during the week** during the early release, and will need to be available at least daily.
-
-Enhancements shadows have much lower time committments, but can still expect to spend 5+ hours a week during the early release, and ~1–4 hours a week after enhancements freeze. Unlike Enhancements Lead, shadows can expect to do their work largely on weekends if they desire.
+Approximate Time Commitments
+- Beginning of the cycle through enhancement freeze: 6-10 hours a week fluctuating based on how many SIG meetings need to be attended
+- Enhancement Freeze through Code Freeze: 4-7 hours a week
+- Code Freeze through Release Day: 1-4 hours a week
 
 ## Mentoring Shadows
 
@@ -123,7 +116,7 @@ It is important that this process be followed and documentation remain up-to-dat
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
 - Weekly Release meetings require updates of current status. Use the `Feature stats` tab to update the release team on counts of enhancements in good and bad progress.
 
-#### Collection Monitoring and Triage (Week 2)
+#### Collection Monitoring and Triage (Week 2-3)
 
 - Monitor the `KEP Collection` tab regularly for new additions as SIGs opt-in KEPs into the release.
 - Move data from `KEP Collection` into the `data` tab to be tracked officially for the release.
@@ -137,10 +130,10 @@ It is important that this process be followed and documentation remain up-to-dat
 - Start syncing with Communications Team on giving an induction what's coming up for the release.
 - Send an email to [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
 
-#### Enhancements Freeze (Week 3)
+#### Enhancements Freeze (Week 4)
 
 - On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) that freeze has happened and upcoming key dates. Examples [1](https://groups.google.com/g/kubernetes-dev/c/JDM7bNKvhqQ/m/8S7BXtXPBQAJ).
-- Remove [SIG Leads Google Group][sig-leads-group]'s access to the `KEP Collection` sheets on the enhancement collection sheet.
+- Remove [SIG Release Leads Google Group][sig-release-leads-group]'s access to the `KEP Collection` sheets on the enhancement collection sheet.
 - Remove any enhancements that failed to meet the criteria by the Enhancement freeze deadline. 
     - Set their status in the sheet to `Removed from Milestone` and use the `Enhancements` -> `Remove Enhancements from Milestone` menu option to move them over to the `Removed from milestone` tab.
     - Remove the milestone and change `tracked/yes` label to `tracked/no` on the enhancement issue.
@@ -149,7 +142,7 @@ It is important that this process be followed and documentation remain up-to-dat
     - Create an exception file in the Release for exceptions Example [1](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.14/exception.yaml).
     - If a previously removed Enhancement has had their exception Approved, set their status to `Tracked` and use the `Enhancements` -> `Track Removed Enhancements` menu option to move it back to the `Enhancements` and `Docs` tabs.
 
-#### Post Enhancements Freeze (Week 4–10)
+#### Post Enhancements Freeze (Week 5-10)
 
 - Stay on top of issues and continually monitor them twice a week and look at attached PRs. As Code Freeze gets closer, if there are PRs that have not been merged, move the issue to `At Risk`. If there is no activity, ping issue owners on either the issue or the k/k PR.
 - Monitor issues that are `At Risk` closely, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward.
