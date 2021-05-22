@@ -8,7 +8,9 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.21
+# Kubernetes 1.21 : Power to the Community
+
+![Kubernetes 1.21 : Power to the Community](./logos/globe_250px.png)
 
 #### Links
 

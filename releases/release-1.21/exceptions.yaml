@@ -1,0 +1,119 @@
+# Exceptions requested in 1.21
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Nabarun Pal ([@palnabarun](https://github.com/palnabarun))
+# Release Team Shadows: Kirsten Garrison ([@kikisdeliveryservice](https://www.github.com/kikisdeliveryservice))
+# / Savitha Raghunathan ([@savitharaghunathan](https://www.github.com/savitharaghunathan))
+# / Vlad Gorodetsky ([@bai](https://github.com/bai))
+
+
+# Enhancements Freeze Exceptions requested in 1.21
+- name: "Support for Windows privileged containers"
+  issue: 1981
+  date_requested: 2021-02-10
+  date_reviewed: 2021-02-19
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/L3AGnsXKboI/m/9x03F0qbAAAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2288"
+  status: "approved"
+
+- name: "Use kubectl to view logs of system services on nodes"
+  issue: 2258
+  date_requested: 2021-02-10
+  date_reviewed: 2021-02-19
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/L3AGnsXKboI/m/9x03F0qbAAAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2271"
+  status: "denied"
+
+
+# Code Freeze Exceptions requested in 1.21
+- name: "Metrics Stability Enhancement"
+  issue: 1209
+  date_requested: 2021-03-10
+  date_reviewed: 2021-03-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/p9E6s14269M/m/iyOlVua4AwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/100082"
+  status: "approved"
+
+- name: "Add configurable grace period to probes"
+  issue: 2238
+  date_requested: 2021-03-10
+  date_reviewed: 2021-03-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/eOphdiRmK7k/m/ky4_ryScAgAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/99375"
+  status: "approved"
+
+- name: "Reject Invalid PVC DataSource"
+  issue: 2546
+  date_requested: 2021-03-08
+  date_reviewed: 2021-03-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/6humzS-PU84/m/HeVrAGA6AwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2552"
+  status: "denied"
+
+- name: "Structured Logging"
+  issue: 1602
+  date_requested: 2021-03-08
+  date_reviewed: 2021-03-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/shnk5YW5Yag/m/ICHY1R9BAwAJ"
+  pull_requests:
+    - "https://github.com/orgs/kubernetes/projects/53"
+  status: "approved"
+
+- name: "Service Account Token for CSI Drivers"
+  issue: 2047
+  date_requested: 2021-03-10
+  date_reviewed: 2021-03-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/xnR5k3nI6Dk/m/muycgQTLAwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/99298"
+  status: "approved"
+
+- name: "MaxUnavailable for StatefulSet"
+  issue: 961
+  date_requested: 2021-03-09
+  date_reviewed: 2021-03-12
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/Sht6SZxWf6s/m/dPIZVyxgAwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/82162"
+  status: "denied"
+
+- name: "Tracking Terminating Endpoints"
+  issue: 1672
+  date_requested: 2021-03-11
+  date_reviewed: 2021-03-12
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/F2HdzPMPyvs/m/x5Z-cgjiAgAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/97238"
+  status: "denied"
+
+- name: "Auto-remove PVCs created by StatefulSet"
+  issue: 1847
+  date_requested: 2021-03-10
+  date_reviewed: 2021-03-12
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/SOEQuqjgh48/m/oT-WqryrAgAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/99378"
+    - "https://github.com/kubernetes/kubernetes/pull/99728"
+  status: "denied"
+
+- name: "Windows Privileged Containers"
+  issue: 1981
+  date_requested: 2021-03-12
+  date_reviewed: 2021-03-16
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/etxmxKpCjzA/m/EEG9VP5TAwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/99576"
+  status: "denied"
+
+- name: "Support to size memory backed volumes"
+  issue: 1981
+  date_requested: 2021-03-16
+  date_reviewed: 2021-03-17
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/xh9JS-GbKsM/m/lCHbrOnxAAAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/100319"
+  status: "denied"

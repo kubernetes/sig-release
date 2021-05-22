@@ -1,0 +1,4 @@
+pr: 101186
+releasenote:
+  text: Fixed generic ephemeal volumes with `OwnerReferencesPermissionEnforcement`
+    admission plugin enabled.

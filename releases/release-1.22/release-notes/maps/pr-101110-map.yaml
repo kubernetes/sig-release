@@ -1,0 +1,4 @@
+pr: 101110
+releasenote:
+  text: 'kubeadm: enable `--experimental-patches` flag for `kubeadm join phase control-plane-join
+    all` command.'

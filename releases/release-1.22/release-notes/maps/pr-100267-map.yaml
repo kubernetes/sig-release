@@ -1,0 +1,3 @@
+pr: 100267
+releasenote:
+  text: Adds two kubemark flags, `--max-pods` and `--extended-resources`.

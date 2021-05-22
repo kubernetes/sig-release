@@ -1,0 +1,6 @@
+pr: 100976
+releasenote:
+  text: |-
+    Base images: Updated to
+    - debian-base:buster-v1.6.0
+    - debian-iptables:buster-v1.6.0

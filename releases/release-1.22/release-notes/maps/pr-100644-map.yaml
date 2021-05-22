@@ -1,0 +1,4 @@
+pr: 100644
+releasenote:
+  text: The kubeconfig is now exposed in `the kube-scheduler` framework handle. Out-of-tree
+    plugins can leverage that to build CRD informers easily.

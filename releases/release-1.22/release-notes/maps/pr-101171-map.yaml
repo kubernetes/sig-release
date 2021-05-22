@@ -1,0 +1,3 @@
+pr: 101171
+releasenote:
+  text: 'The new flag `--chunk-size=SIZE` has been added to `kubectl describe`. This flag may be used to alter the number of items or disable this feature when `0` is passed.'

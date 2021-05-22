@@ -8,23 +8,22 @@ aliases:
     - saschagrunert # SIG Chair
   release-engineering-approvers:
     - cpanato # Release Manager
-    - feiskyer # Release Manager
     - hasheddan # subproject owner / Release Manager
-    - idealhack # Release Manager
     - puerco # Release Manager
     - saschagrunert # subproject owner / Release Manager
     - justaugustus # subproject owner / Release Manager
-    - tpepper # subproject owner
     - xmudrii # Release Manager
   release-engineering-reviewers:
     - ameukam # Release Manager Associate
-    - gianarb # Release Manager Associate
     - jimangel # Release Manager Associate
     - markyjackson-taulia # Release Manager Associate
     - mkorbi # Release Manager Associate
+    - palnabarun # Release Manager Associate
     - onlydole # Release Manager Associate
     - sethmccombs # Release Manager Associate
+    - thejoycekung # Release Manager Associate
     - verolop # Release Manager Associate
+    - wilsonehusin # Release Manager Associate
   release-team:
     - alejandrox1 # subproject owner / 1.18 RT Lead
     - guineveresaenger # subproject owner / 1.17 RT Lead
@@ -33,6 +32,7 @@ aliases:
     - justaugustus # subproject owner
     - onlydole # subproject owner / 1.19 RT Lead
     - palnabarun # subproject owner / 1.21 RT Lead
+    - savitharaghunathan # 1.22 RT Lead 
     - tpepper # subproject owner
   build-admins:
     - amwat
@@ -40,44 +40,44 @@ aliases:
     - MushuEE
     - spiffxp
   release-team-lead-role:
-    - guineveresaenger # 1.17 RT Lead
     - alejandrox1 # 1.18 RT Lead
     - onlydole # 1.19 RT Lead / 1.21 Emeritus Advisor
     - jeremyrickard # 1.20 RT Lead
     - palnabarun # 1.21 RT Lead
+    - savitharaghunathan # 1.22 RT Lead
   ci-signal-role:
-    - alenkacz # 1.17
     - droslean # 1.18
     - hasheddan # 1.19
     - RobertKielty # 1.20
     - thejoycekung # 1.21
+    - mkorbi # 1.22
   enhancements-role:
-    - mrbobbytables # 1.17
     - jeremyrickard # 1.18
     - palnabarun # 1.19
     - kikisdeliveryservice # 1.20
     - annajung # 1.21
+    - jameslaverack # 1.22
   bug-triage-role:
-    - josiahbjorgaard # 1.17
     - smourapina # 1.18
     - markyjackson-taulia # 1.19
     - bai # 1.20
     - erismaster # 1.21
+    - monzelmasry # 1.22
   docs-role:
-    - daminisatya # 1.17
     - VineethReddy02 # 1.18
     - savitharaghunathan # 1.19
     - annajung # 1.20
     - reylejano # 1.21
+    - pi-victor # 1.22
   release-notes-role:
-    - cartyc # 1.17
     - Evillgenius75 # 1.18
     - puerco # 1.19
     - JamesLaverack # 1.20
     - wilsonehusin # 1.21
+    - pmmalinov01 # 1.22
   communications-role:
-    - rawkode # 1.17
     - karenhchu # 1.18
     - mkorbi # 1.19
     - jrsapi # 1.20
     - divya-mohan0209 # 1.21
+    - pensu # 1.22

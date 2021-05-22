@@ -1,0 +1,4 @@
+pr: 101377
+releasenote:
+  text: Fix panic when `kubectl create ingress` has annotation flag and an empty value
+    set.

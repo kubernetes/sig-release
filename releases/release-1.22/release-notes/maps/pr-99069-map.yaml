@@ -1,0 +1,3 @@
+pr: 99069
+releasenote:
+  text: Fix raw block mode CSI `NodePublishVolume` stage miss pod info.

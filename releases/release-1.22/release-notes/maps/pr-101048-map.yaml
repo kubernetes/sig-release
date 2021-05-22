@@ -1,0 +1,4 @@
+pr: 101048
+releasenote:
+  text: The `EmptyDir` memory backed volumes are sized as the the minimum of pod allocatable
+    memory on a host and an optional explicit user provided value.

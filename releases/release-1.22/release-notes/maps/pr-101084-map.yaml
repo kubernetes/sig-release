@@ -1,0 +1,3 @@
+pr: 101084
+releasenote:
+  text: The `EndpointSlice` IP validation now matches `Endpoints` IP validation.
