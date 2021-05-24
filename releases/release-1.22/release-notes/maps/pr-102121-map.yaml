@@ -1,0 +1,5 @@
+pr: 102121
+releasenote:
+  text: 'kubeadm: remove the deprecated flag `--insecure-port` from the kube-apiserver
+    manifest that kubeadm manages. The flag had no effect since 1.20, since the insecure
+    serving of the component was disabled in the same version.'

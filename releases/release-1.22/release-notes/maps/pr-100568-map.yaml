@@ -1,0 +1,3 @@
+pr: 100568
+releasenote:
+  text: Added BinaryData description to `kubectl describe` command.

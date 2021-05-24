@@ -1,0 +1,4 @@
+pr: 101496
+releasenote:
+  text: Pod Affinity `NamespaceSelector` and the associated `CrossNamespaceAffinity`
+    quota scope graduated to beta.
