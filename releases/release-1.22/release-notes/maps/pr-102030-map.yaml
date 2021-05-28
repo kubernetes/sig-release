@@ -1,0 +1,3 @@
+pr: 102030
+releasenote:
+  text: The ingress `v1beta1` has been deprecated.

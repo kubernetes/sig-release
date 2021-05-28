@@ -1,0 +1,4 @@
+pr: 101938
+releasenote:
+  text: 'kubeadm: Remove the deprecated command `kubeadm alpha kubeconfig`. Please
+    use `kubeadm kubeconfig` instead.'

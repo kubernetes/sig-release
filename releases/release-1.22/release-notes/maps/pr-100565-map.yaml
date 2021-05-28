@@ -1,0 +1,4 @@
+pr: 100565
+releasenote:
+  text: Parsing of cpuset information now properly detects more invalid input such
+    as `1--3` or `10-6`.

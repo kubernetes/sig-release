@@ -1,0 +1,3 @@
+pr: 100731
+releasenote:
+  text: 'azurefile: Normalize share name to not include the capital letters'

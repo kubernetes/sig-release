@@ -1,0 +1,3 @@
+pr: 97796
+releasenote:
+  text: Migrate `proxy/ipvs/proxier.go` logs to structured logging.

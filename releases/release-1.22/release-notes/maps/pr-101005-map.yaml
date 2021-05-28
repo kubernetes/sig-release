@@ -1,0 +1,3 @@
+pr: 101005
+releasenote:
+  text: The `kubectl create service` now respects the `namespace` flag.

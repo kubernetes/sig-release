@@ -1,0 +1,4 @@
+pr: 101688
+releasenote:
+  text: Warnings for the use of deprecated and known-bad values in pod specs are now
+    sent.
