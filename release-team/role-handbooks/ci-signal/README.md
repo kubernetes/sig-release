@@ -1,4 +1,34 @@
 # CI Signal Lead Playbook
+## Content
+
+- [Overview of CI Signal responsibilities](#overview-of-ci-signal-responsibilities)
+- [Requirements](#requirements)
+  - [Additional Requirements for Shadows](#additional-requirements-for-shadows)
+  - [Additional Requirements for Leads](#additional-requirements-for-shadows)
+- [Overview of tasks across release timeline](#overview-of-tasks-across-release-timeline)
+  - [Onboarding](#onboarding)
+  - [Pre Enhancement Freeze](#pre-enhancement-freeze)
+  - [Enhancement Freeze to Burndown](#enhancement-freeze-to-burndown)
+  - [Burndown to Code Freeze](#burndown-to-code-freeze)
+  - [During Code Freeze](#during-code-freeze)
+  - [Exit Code Freeze](#exit-code-freeze)
+  - [Release Cutting - Go or No-Go](#release-cutting---go-or-no-go)
+- [Blocking vs. Informing Dashboards](#blocking-vs-informing-dashboards)
+- [Opening Issues](#opening-issues)
+  - [Decision Tree](#decision-tree)
+  - [Closing Issues](#closing-issues)
+- [Detect flakiness on presubmit jobs](#detect-flakiness-on-presubmit-jobs)
+- [Special high risk test categories to monitor](#special-high-risk-test-categories-to-monitor)
+  - [Scalability tests](#scalability-tests)
+- [Working with SIGs outside sig-release](#working-with-sigs-outside-sig-release)
+  - [SIG-scalability report](#sig-scalability-report)
+- [Tips and Tricks of the game](#tips-and-tricks-of-the-game)
+  - [A Tour of CI on the Kubernetes Project](#a-tour-of-ci-on-the-kubernetes-project)
+  - [Checking test dashboards](#checking-test-dashboards)
+  - [Priority Labels](#priority-labels)
+  - [Milestones](#milestones)
+  - [Monitoring Commits for test failure triangulation](#monitoring-commits-for-test-failure-triangulation)
+- [Reporting Status](#reporting-status)
 
 ## Overview of CI Signal responsibilities
 
@@ -80,7 +110,7 @@ Right after the CI signal release team is formed, CI signal lead is responsible 
 
 Here are some good early deliverables from the CI Signal lead between start of the release to enhancement freeze.
 - Start maintain the [CI signal project board](https://github.com/orgs/kubernetes/projects/11) and keep it up-to-date with issues tracking any test failure/flake
-- Copy over any open test issues from previous release, assign a member of the CI signal team, and have that member follow up on the issue with owners
+- Assign the new milestone labels to the open issues from previous release, assign a member of the CI signal team, and have that member follow up on the issue with owners
 - Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues. See [Opening Issues](#opening-issues) for how to write an effective issue.
 - Build and maintain a document of area experts / owners across SIGs for future needs e.g.: Scalability experts, upgrade test experts etc
 
@@ -119,6 +149,14 @@ This is when things really begin to ramp up in the release cycle with active bug
   - you need not monitor master-blocking on a daily basis. It is, however, worth keeping an eye on master-blocking especially before risky cherry-picks make their way into the release branch
 - If tests have stabilized (they should have by now), you may stop sending the weekly CI report
 
+### Release Cutting - Go or No-Go
+
+Over the release cycle, the release engineering team will cut several releases (alpha, beta, rc), before it ends with a new major Kubernetes release. During the release cycle, tests fail and potentially prevent the cut of a new version. 
+
+Therefore, the key objective is to create a picture if the release branch manager can starting the release process or if there is a major failure that needs to be solved first. To avoid a last-minute No-Go, the assigned CI Signal member aligns at least 2-3 days before the day of the release cut with the [corresponding release branch manager]([https://github.com/kubernetes/sig-release/tree/master/releases](https://github.com/kubernetes/sig-release/tree/master/releases)). Potentially blocking tests have to be followed up with high priority and being driven to be solved until release day. Having a short daily alignment telling the Go/No-Go indication should give an idea if this is going in the right direction. If the CI Signal member decides on a No-Go, the issues have to be addressed. A short heads up about what is blocking, what are the current actions to resolve this and, if possible, an estimation of how long it will take to be solved should be given to the release lead, branch manager and to the test corresponding SIG leads.
+
+On the release day, indicate to the branch manager your availability and the current Go/No-Go status. Monitor the jobs and tests closely until the branch manager starts the release cut. In case that a test fails very close to the beginning of the release cut and the reason seems to be severe, align with the branch manager to postpone the cut until the next test runs or if you are familiar with how to test Kubernetes, if the failed test was just a flake.
+
 ## Blocking vs. Informing Dashboards
 
 Summary: failing Blocking jobs always block release.  Failing Informing jobs sometimes block release.
@@ -133,6 +171,8 @@ For more detailed information about what's on these dashboards, see [Release Blo
 ## Opening Issues
 
 The appropriate response to a failing or flaking job on either a blocking or informing dashboard is to open an issue. The primary goal of opening an issue is to track the work that needs to be done to bring the job back to a healthy status while providing accurate signal. The format for a helpful and informative issue may vary depending on the type of job, the test(s) that are failing for the job, and the responsible parties for the job.
+
+### Decision Tree
 
 The decision tree below can be followed to make sure that you are opening an issue that is most effective for triaging, tracking, and resolving a failing or flaking job.
 
@@ -162,6 +202,10 @@ Once you have decided the number of issues to open an how to name them, it is im
 - Add the issue to [CI signal board](https://github.com/orgs/kubernetes/projects/11) under "New". The CI signal team lead is responsible for making sure every issue on the CI signal board is assigned to a member of the CI signal team and is being actively driven to resolution.
 
 In addition to the steps above, make sure to fill in any additional information that is part of the [Failing Test](https://github.com/kubernetes/kubernetes/issues/new?labels=kind%2Ffailing-test&template=failing-test.md) or [Flaking Test](https://github.com/kubernetes/kubernetes/issues/new?labels=kind%2Fflake&template=flaking-test.md) issue template.
+
+### Closing Issues
+
+After a fix is applied to an issue, it often gets fast closed. Be aware that the issue's status (open/closed) is not the same as it is on the CI Signal board (New/under investigation/observing/resolved). For the same reasons, as explained earlier, we have to see if a flaky test got stable. When a fix is applied and it is expected, that this should solve the problem, the issue gets moved to Observing. After an appropriate amount of time, a big thumb rule would be two weeks, the issue can be moved to resolved. An issue should remain open until the appropriate fix has been made and the affected tests have returned to a healthy status. If an issue is closed prematurely, or the same test starts failing or flaking again, a new issue should be opened. Do not reopen closed issues.
 
 ## Detect flakiness on presubmit jobs
 
