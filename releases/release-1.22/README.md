@@ -57,8 +57,8 @@ The 1.22 release cycle is proposed as follows:
 | KubeCon EU + Co-located events | | May 3-7 | | |
 | **Begin [Enhancements Freeze]** (23:59 PDT) | Enhancements Lead | Thur May 13 | week 3 | [master-blocking], [master-informing] |
 | 1.22.0-alpha.2 released | Branch Manager ([@Verolop](https://github.com/Verolop)) | Tue May 18 | week 4 | |
-| 1.22.0-alpha.3 released | Branch Manager ([@wilsonehusin](https://github.com/wilsonehusin)) | Tue June 7 | week 7 | |
-| 1.22.0-beta.0 released | Branch Manager ([@onlydole](https://github.com/onlydole)) | Tue June 21 | week 9 | |
+| 1.22.0-alpha.3 released | Branch Manager ([@wilsonehusin](https://github.com/wilsonehusin)) | Tue June 8 | week 7 | |
+| 1.22.0-beta.0 released | Branch Manager ([@onlydole](https://github.com/onlydole)) | Tue June 22 | week 9 | |
 | **Begin [Burndown]** (MWF meetings) | Lead | Mon June 28 | week 10 | [1.22-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Mon June 28 | week 10 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon June 28 | week 10 | |
