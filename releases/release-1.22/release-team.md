@@ -17,5 +17,6 @@ Review the [Release Managers page](/release-managers.md) for up-to-date contact 
 The schedule for all patch releases can be found at [Patch Releases page](/releases/patch-releases.md). It will be updated to include 1.22, once the 1.22 release cycle concludes.
 
 ## In Memoriam
-[Peeyush Gupta](https://github.com/cncf/memorials/blob/main/peeyush-gupta.md)
-- [Peeyush Gupta: Family Education Fund](https://milaap.org/fundraisers/support-peeyush-gupta-family-education)
+- [Peeyush Gupta](https://github.com/cncf/memorials/blob/main/peeyush-gupta.md) (Emeritus Communications Lead)
+  
+  [Peeyush Gupta: Family Education Fund](https://milaap.org/fundraisers/support-peeyush-gupta-family-education)
