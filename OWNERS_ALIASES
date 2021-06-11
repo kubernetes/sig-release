@@ -1,6 +1,5 @@
 aliases:
   sig-release-leads:
-    - alejandrox1 # SIG Technical Lead
     - cpanato # SIG Technical Lead
     - hasheddan # SIG Technical Lead
     - jeremyrickard # SIG Technical Lead
