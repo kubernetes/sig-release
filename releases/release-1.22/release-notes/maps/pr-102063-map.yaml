@@ -1,0 +1,4 @@
+pr: 102063
+releasenote:
+  text: Fixed an issue blocking azure auth to prompt to device code authentication
+    flow when refresh token expires.

@@ -1,0 +1,4 @@
+pr: 102323
+releasenote:
+  text: Changed buildmode of non static Kubernetes binaries to produce position independent
+    executables (PIE).

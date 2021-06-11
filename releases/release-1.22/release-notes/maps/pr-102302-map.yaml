@@ -1,0 +1,6 @@
+pr: 102302
+releasenote:
+  text: |-
+    Update the Debian images to pick up CVE fixes in the base images:
+    - Update the `debian-base` image to v1.7.0
+    - Update the `debian-iptables` image to v1.6.1

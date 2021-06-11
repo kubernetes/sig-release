@@ -1,0 +1,3 @@
+pr: 102498
+releasenote:
+  text: Fix a bug that a preemptor pod may exist as a phantom in the scheduler.

@@ -1,0 +1,3 @@
+pr: 101394
+releasenote:
+  text: '`Scheduler` now registers event handlers dynamically.'

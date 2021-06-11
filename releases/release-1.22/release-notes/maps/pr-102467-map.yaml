@@ -1,0 +1,3 @@
+pr: 102467
+releasenote:
+  text: Fix nulls are handles of array's and objects in json patches.

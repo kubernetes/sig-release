@@ -1,0 +1,4 @@
+pr: 101082
+releasenote:
+  text: CSI migration of AWS EBS volumes requires AWS EBS CSI driver ver. 1.0 that
+    supports `allowAutoIOPSPerGBIncrease` parameter in StorageClass.

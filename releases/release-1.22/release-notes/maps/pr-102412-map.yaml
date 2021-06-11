@@ -1,0 +1,6 @@
+pr: 102412
+releasenote:
+  text: Remove support for the Service `topologyKeys` field (alpha) and the `kube-proxy`
+    implementation of it. This field was deprecated several cycles ago. This functionality
+    is replaced by the combination of automatic topology hints per-endpoint (alpha)
+    and the Service `internalTrafficPolicy` field (alpha).
