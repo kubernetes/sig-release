@@ -1,3 +1,0 @@
-pr: 101523
-releasenote:
-  text: Omit comparison with boolean constant.
