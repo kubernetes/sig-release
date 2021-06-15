@@ -1,4 +1,4 @@
 pr: 92739
 releasenote:
-  text: An audit log entry will be generated when a `validating admission webhook`
+  text: An audit log entry will be generated when a `ValidatingAdmissionWebhook`
     is failing open.
