@@ -1,0 +1,3 @@
+pr: 102529
+releasenote:
+  text: Promote `CronJobControllerV2` flag to GA, with removal in 1.23.

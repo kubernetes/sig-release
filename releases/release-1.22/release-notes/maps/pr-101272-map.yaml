@@ -1,0 +1,4 @@
+pr: 101272
+releasenote:
+  text: The `CSIMigrationVSphereComplete` feature flag is removed. `InTreePluginvSphereUnregister`
+    will be the way moving forward.

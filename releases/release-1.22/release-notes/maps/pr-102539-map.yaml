@@ -1,0 +1,4 @@
+pr: 102539
+releasenote:
+  text: Fixes issue with websocket-based watches of Service objects not closing correctly
+    on timeout.

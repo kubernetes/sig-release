@@ -1,0 +1,6 @@
+pr: 102133
+releasenote:
+  text: "kubeadm: during \"kubeadm init/join/upgrade\", always default the `cgroupDriver`
+    value in the `KubeletConfiguration` to `systemd`, unless the user was explicit about
+    the value. See [configure-cgroup-driver](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/configure-cgroup-driver/)
+    for more details."

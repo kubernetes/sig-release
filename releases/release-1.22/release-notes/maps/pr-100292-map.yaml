@@ -1,0 +1,6 @@
+pr: 100292
+releasenote:
+  text: Updated pause image to version 3.5, which now runs per default as pseudo user
+    and group `65535:65535`. This does not have any effect on remote container runtimes
+    like CRI-O and containerd, which setup the pod sandbox user and group on their
+    own.
