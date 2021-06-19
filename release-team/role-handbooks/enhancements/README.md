@@ -123,7 +123,7 @@ It is important that this process be followed and documentation remain up-to-dat
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
 - Weekly Release meetings require updates of current status. Use the `Feature stats` tab to update the release team on counts of enhancements in good and bad progress.
 
-#### Collection Monitoring and Triage (Week 2)
+#### Collection Monitoring and Triage (Week 1-2)
 
 - Monitor the `KEP Collection` tab regularly for new additions as SIGs opt-in KEPs into the release.
 - Move data from `KEP Collection` into the `data` tab to be tracked officially for the release.
