@@ -37,27 +37,27 @@ description: |
 
 The 1.23 release cycle is proposed as follows:
 
-- **Monday, August 23rd**: Week 1 - Release cycle begins
+- **Monday, August 23rd 2021**: Week 1 - Release cycle begins
 - **TBD**: TBD - [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **TBD**: TBD - [Code Freeze](../release_phases.md#code-freeze)
 - **TBD**: TBD - [Test Freeze](../release_phases.md#test-freeze)
 - **TBD**: TBD - Docs must be completed and reviewed
-- **Tuesday, December 7th**: Week 16 - Kubernetes v1.23.0 released
+- **Tuesday, December 7th 2021**: Week 16 - Kubernetes v1.23.0 released
 - **TBD**: Week 17 - Release Retrospective
 
 ## Timeline
 
 | **What** | **Who** | **When** | **WEEK** | **CI SIGNAL** |
 |---|---|-------|---|---|
-| Start of Release Cycle | Lead | Mon August 23rd | week 1 | [master-blocking] |
-| Start Enhancements Tracking | Enhancements Lead | Mon August 23rd | Week 1 | |
-| 1.230-alpha.1 released | Branch Manager ([TBD](TBD)) | Wed August 25  | Week 1 | |
-| Schedule finalized | Lead | Thur August 26 | week 1 | |
-| Team finalized | Lead | Fri August 27 | week 1 | |
+| Start of Release Cycle | Lead | Mon August 23rd 2021 | week 1 | [master-blocking] |
+| Start Enhancements Tracking | Enhancements Lead | Mon August 23rd 2021| Week 1 | |
+| 1.23.0-alpha.1 released | Branch Manager ([TBD](TBD)) | Wed August 25 2021 | Week 1 | |
+| Schedule finalized | Lead | Thur August 26 2021 | week 1 | |
+| Team finalized | Lead | Fri August 27 2021 | week 1 | |
 | **Begin [Enhancements Freeze]** (23:59 PDT) | Enhancements Lead | TBD | TBD | [master-blocking], [master-informing] |
 | 1.23.0-alpha.2 released | Branch Manager ([@TBD](TBD)) | TBD | TBD | |
 | 1.23.0-alpha.3 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
-| KubeCon NA + Co-located events | | Oct 11-15 | | Week 8 |
+| KubeCon NA + Co-located events | | Oct 11-15 2021 | | Week 8 |
 | 1.23.0-beta.0 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | **Begin [Burndown]** (MWF meetings) | Lead | TBD | TBD | [1.23-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | TBD | TBD | |
@@ -78,9 +78,9 @@ The 1.23 release cycle is proposed as follows:
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | TBD | TBD | |
 | Feature blogs ready to review (23:59 PDT)| Enhancement Owner / SIG Leads | TBD | TBD | |
 | Release Notes complete - reviewed & merged to `k/sig-release` (23:59 PDT) | Release Notes Lead | TBD | TBD | |
-| **v1.23.0 released** | Branch Manager ([TBD](TBD)) | Tues December 7 | Week 16 | |
-| Release blog published | Comms | Tues December 7 | Week 16 | |
-| **[Thaw]** | Branch Manager | Tues December 7 | Week 16 | |
+| **v1.23.0 released** | Branch Manager ([TBD](TBD)) | Tues December 7 2021 | Week 16 | |
+| Release blog published | Comms | Tues December 7 2021 | Week 16 | |
+| **[Thaw]** | Branch Manager | Tues December 7 2021 | Week 16 | |
 | Release retrospective | Community | TBD | Week 17 | |
 
 ## Phases
