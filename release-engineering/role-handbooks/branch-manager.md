@@ -529,7 +529,9 @@ Here's an [example PR](https://github.com/kubernetes/test-infra/pull/20075).
 
 If the [code freeze](#code-freeze) was enabled before creating the release branch, the milestone requirements wouldn't include the newest release branch.
 
-Find the query config for `kubernetes/kubernetes` (in [config.yaml](https://github.com/kubernetes/test-infra/blob/master/prow/config.yaml) file) with the code freeze enabled and add the newest release release branch.
+Find the query config for `kubernetes/kubernetes` (in [config.yaml][config.yaml] file) with the code freeze enabled and add the newest release release branch.
+
+[config.yaml]: https://github.com/kubernetes/test-infra/blob/3a6962d/config/prow/config.yaml
 
 Here's an [example PR](https://github.com/kubernetes/test-infra/pull/20077).
 
@@ -608,7 +610,7 @@ As Branch Manager, coordinate with the Release Lead on checking the exact config
 
 #### Tide
 
-Tide automates merges and is configured via a [config.yaml](https://github.com/kubernetes/test-infra/blob/master/prow/config.yaml) file. Tide identifies PRs that are mergeable using GitHub queries that correspond to the configuration. Here is an example of what the query config for `kubernetes/kubernetes` looks like without additional constraints related to the release cycle:
+Tide automates merges and is configured via a [config.yaml][config.yaml] file. Tide identifies PRs that are mergeable using GitHub queries that correspond to the configuration. Here is an example of what the query config for `kubernetes/kubernetes` looks like without additional constraints related to the release cycle:
 
 ```yaml
   - repos:
