@@ -1,0 +1,3 @@
+pr: 102083
+releasenote:
+  text: Applying fix so that deleting non-existing disk returns success.

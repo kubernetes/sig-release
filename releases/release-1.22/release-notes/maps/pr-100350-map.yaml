@@ -1,0 +1,5 @@
+pr: 100350
+releasenote:
+  text: 'For `kubeadm`: support for custom imagetags for etcd images which contain
+    build metadata, when imagetags are in the form of version_metadata. For instance,
+    if the etcd version is v3.4.13+patch.0, the supported imagetag would be v3.4.13_patch.0'

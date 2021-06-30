@@ -1,0 +1,9 @@
+pr: 101915
+releasenote:
+  text: 'For `kubeadm`: remove the ClusterStatus API from v1beta3 and its management
+    in the kube-system/kubeadm-config ConfigMap. This method of keeping track of what
+    API endpoints exists in the cluster was replaced (in a prior release) by a method
+    to annotate the etcd Pods that `kubeadm` creates in "stacked etcd" clusters. The
+    following CLI sub-phases are deprecated and are now a NO-OP: for `kubeadm join`:
+    "control-plane-join/update-status", for `kubeadm reset`: "update-cluster-status".
+    Unless you are using these phases explicitly, you should not be affected.'

@@ -1,3 +1,4 @@
 pr: 100694
 releasenote:
-  text: 'Fix: not deleting existing publich IP when service is deleted in Azure'
+  text: Applying fix for not deleting existing public IP when a service is deleted
+    in Azure.
