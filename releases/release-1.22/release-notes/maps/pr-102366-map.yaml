@@ -1,0 +1,4 @@
+pr: 102366
+releasenote:
+  text: Because of the implementation logic of `time.Format` in golang, the displayed
+    time zone is not consistent.

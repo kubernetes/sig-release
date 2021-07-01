@@ -1,0 +1,3 @@
+pr: 98287
+releasenote:
+  text: Migrate `staging/src/k8s.io/apiserver/pkg/registry` logs to structured logging.

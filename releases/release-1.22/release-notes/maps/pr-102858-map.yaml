@@ -1,0 +1,3 @@
+pr: 102858
+releasenote:
+  text: Aggregate write permissions on events to users with edit and admin role.

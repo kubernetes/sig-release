@@ -1,0 +1,5 @@
+pr: 101449
+releasenote:
+  text: 'kubeadm: allow passing the flag `--log-file` if `--config` is passed. If
+    you wish to log to a file you must also pass `--logtostderr=false` or `--alsologtostderr=true`.
+    Alternatively you can pipe to a file using "kubeadm ... | tee ...".'

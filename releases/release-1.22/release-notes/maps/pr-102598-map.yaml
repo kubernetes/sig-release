@@ -1,0 +1,5 @@
+pr: 102598
+releasenote:
+  text: 'e2e.test: removed the  `--viper-config` flag. If you were previously using
+    this to pass flags to `e2e.test` via a file, you will need to pass them directly
+    on the command line, e.g. `e2e.test --e2e-output-dir`.'

@@ -1,0 +1,5 @@
+pr: 99597
+releasenote:
+  text: |-
+    The `kube-scheduler` component config `v1beta2` API available
+    Three scheduler plugins deprecated (`NodeLabel`, `ServiceAffinity`, `NodePreferAvoidPods`).

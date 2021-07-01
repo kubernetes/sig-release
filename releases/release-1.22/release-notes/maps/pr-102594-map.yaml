@@ -1,0 +1,3 @@
+pr: 102594
+releasenote:
+  text: 'base-images: Update to `debian-base:buster-v1.7.1`'
