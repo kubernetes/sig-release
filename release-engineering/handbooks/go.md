@@ -86,7 +86,7 @@ https://github.com/kubernetes/test-infra/blob/master/config/jobs/image-pushing/k
 
 - promote the image from staging to production, for it to be an official image
 - create PR in kubernetes/k8s.io
-  - Update the docker image digest and its version tag @ https://github.com/kubernetes/k8s.io/blob/master/k8s.gcr.io/images/k8s-staging-build-image/images.yaml
+  - Update the docker image digest and its version tag @ https://github.com/kubernetes/k8s.io/blob/main/k8s.gcr.io/images/k8s-staging-build-image/images.yaml
   - indicate the image, a link to the staging run, signature ( e.g. "Signed off by : Stephen Augustus saugustus@example.com"), CC @kubernetes/release-engineering & relevant reviewers
   - the structure of the file is structured by the digests' SHAs
 

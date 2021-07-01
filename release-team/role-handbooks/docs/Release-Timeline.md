@@ -78,9 +78,9 @@ These steps take approximately one hour to complete, and should be completed imm
     - [kubernetes-sig-docs](https://groups.google.com/forum/#!forum/kubernetes-sig-docs)
     - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
     - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team)
-        - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/master/groups/sig-release/groups.yaml) 
+        - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml) 
     - [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows)
-        - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team-shadows` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/master/groups/sig-release/groups.yaml)
+        - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team-shadows` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
 
 - Make sure you're included in the "official" release team file, e.g: [release 1.21](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/release-team.md). If not submit a PR and add yourself.
 
