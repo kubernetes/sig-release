@@ -289,7 +289,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - The task is now to ensure the release branch is ready to go. This means there are zero pending PRs, no failing x.y-blocking tests, no open issues in the milestone. This will continue until release day.
 - Final documentation PRs are reviewed and ready to be merged. Likely, this is not true and some are outstanding, so you need to help convince SIG doc writers to get these in with urgency.
 - The release notes draft needs to be completely done and ready to consume by anago. Have SIG volunteers do a final proofread of their sections. Make sure people actually do this. You need to avoid having the release notes volunteers pull “all nighters” before the release.
-- Work with the CNCF, SIG PM, SIG Docs, and Communications Lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs.
+- Work with the CNCF, SIG Docs, and Communications Lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs.
 - Work with the incoming Release Team Lead to establish incoming Release Team.
 - Release Day is coming up! Make the day as fun as you can for the team. Plan ahead for this and do something nice.
 
@@ -302,7 +302,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - Note that release day can and should be postponed if any of the conditions outlined in week 11 are not satisfied.
 - Every issue in the milestone is considered release blocking.
 - If you have to push the release date back, try to avoid Friday since it makes release publicity extremely difficult. Also, people seem to have patience with delay as long as the reasons are clear and openly communicated. This is your duty. You must over-communicate and ensure the team is also talking to their stakeholders (CNCF, community, press, etc.)
-- Confirm a facilitator for the Release Retrospective with SIG PM
+- Confirm a facilitator for the Release Retrospective
 - The following final actions **must occur in order**, with successful completion of each being the entry criteria to the next.
   - Release day morning:
     - Go / No-Go: should generally be clear a day or three ahead of release, but the day's burndown provides a final opportunity for the team to affirm things are ready.

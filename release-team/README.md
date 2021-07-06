@@ -29,8 +29,8 @@ which shall be the discharged by the Release Team.
 
 ## Specific responsibilities
 
-- Support SIG PM by providing tooling and processes for the generation of release notes
-- Coordinate with SIG PM to communicate enhancement burndown progress during a release cycle
+- Generation of release notes
+- Communicate enhancement burndown progress during a release cycle
 - Manage repositories and tooling dedicated to releasing Kubernetes which at time of chartering these include:
   - kubernetes/release
   - deb/rpm packaging and hosting
@@ -56,7 +56,7 @@ which shall be the discharged by the Release Team.
 - Identifying owning individuals and SIGs for blocking issues
 - Working with SIGs and individuals to drive resolution of open issues
 - Building summary of release criteria and status and publish to the community on a regular basis throughout the release cycle
-- Manage the contents of `kubernetes/enhancements` along with SIG PM
+- Manage the contents of `kubernetes/enhancements`
 - Define burndown process
   - use of GitHub labels to signal release blocking status
   - use of GitHub milestones to communicate release blocking issues
@@ -127,8 +127,8 @@ During the code freeze period, fix any bugs discovered with your enhancement, an
 ## Other activities of the Release Team
 
 ### During "Major" releases
-To date no major release has been scheduled, however, SIG Release would be responsible for working closely with SIG PM
-and SIG Testing to coordinate this effort across SIGs. The precise work required to produce a major release (e.g. 2.0, 3.0)
+To date no major release has been scheduled, however, SIG Release would be responsible for working closely with SIG Testing
+to coordinate this effort across SIGs. The precise work required to produce a major release (e.g. 2.0, 3.0)
 is undefined.
 
 ### During "Security" releases
