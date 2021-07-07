@@ -81,7 +81,7 @@ The 1.22 release cycle is proposed as follows:
 | **v1.22.0 released** | Branch Manager ([@puerco](https://github.com/puerco)) | Wed August 4 | week 15 | [@mkorbi](https://github.com/mkorbi) |
 | Release blog published | Comms | Wed August 4 | week 15 | |
 | **[Thaw]** | Branch Manager | Wed August 4 | week 15 | |
-| Release retrospective | Community | TBD | Week 16 | |
+| Release retrospective 10:00am PDT | [Community Meeting](https://zoom.us/j/91768411674?pwd=MVpqL0ZHbGFYMnpXVXpybTBvalFRQT09) | Thu August 19 | Week 17 | |
 
 ## Phases
 
