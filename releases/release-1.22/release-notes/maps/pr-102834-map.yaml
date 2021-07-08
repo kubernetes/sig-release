@@ -1,0 +1,3 @@
+pr: 102834
+releasenote:
+  text: The `NetworkPolicyEndPort` is graduated to beta and is enabled by default.

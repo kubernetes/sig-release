@@ -1,0 +1,3 @@
+pr: 102441
+releasenote:
+  text: Update Azure Go SDK to v55.0.0.

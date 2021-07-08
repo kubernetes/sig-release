@@ -1,0 +1,4 @@
+pr: 99310
+releasenote:
+  text: Exec plugin authors can override default handling of standard input via new
+    `interactiveMode` kubeconfig field.

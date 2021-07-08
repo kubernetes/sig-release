@@ -1,0 +1,4 @@
+pr: 102934
+releasenote:
+  text: The `kube-apiserver` now reports the synthetic verb when logging requests,
+    better explaining the user intent and matching what is reported in the metrics.

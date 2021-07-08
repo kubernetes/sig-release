@@ -1,0 +1,4 @@
+pr: 101030
+releasenote:
+  text: The pod resource API will provide memory manager metrics in the case when
+    the memory manager feature gate is enabled, and the memory manager policy is static.
