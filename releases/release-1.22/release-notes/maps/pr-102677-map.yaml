@@ -1,0 +1,3 @@
+pr: 102677
+releasenote:
+  text: Deprecated warning message for `igonre-errors` flag.

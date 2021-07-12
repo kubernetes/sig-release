@@ -1218,8 +1218,8 @@
   },
   "100956": {
     "commit": "a96000311f5beca111debc8727018e42cbb5dc79",
-    "text": "Update cri-tools dependency to v1.21.0",
-    "markdown": "Update cri-tools dependency to v1.21.0 ([#100956](https://github.com/kubernetes/kubernetes/pull/100956), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider and Node]",
+    "text": "Update cri-tools dependency to `v1.21.0`.",
+    "markdown": "Update cri-tools dependency to `v1.21.0`. ([#100956](https://github.com/kubernetes/kubernetes/pull/100956), [@saschagrunert](https://github.com/saschagrunert))",
     "documentation": [
       {
         "description": "The release",
@@ -1878,8 +1878,8 @@
   },
   "101252": {
     "commit": "4f36038c0bc575cd33bc53017ed1e20184efae73",
-    "text": "The kubelet now reports distinguishes log messages about certificate rotation for its client cert and server cert separately to make debugging problems with one or the other easier.",
-    "markdown": "The kubelet now reports distinguishes log messages about certificate rotation for its client cert and server cert separately to make debugging problems with one or the other easier. ([#101252](https://github.com/kubernetes/kubernetes/pull/101252), [@smarterclayton](https://github.com/smarterclayton)) [SIG API Machinery and Auth]",
+    "text": "The `kubelet` now reports distinguishes log messages about certificate rotation for its client cert and server cert separately to make debugging problems with one or the other easier.",
+    "markdown": "The `kubelet` now reports distinguishes log messages about certificate rotation for its client cert and server cert separately to make debugging problems with one or the other easier. ([#101252](https://github.com/kubernetes/kubernetes/pull/101252), [@smarterclayton](https://github.com/smarterclayton))",
     "author": "smarterclayton",
     "author_url": "https://github.com/smarterclayton",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101252",
@@ -2314,8 +2314,8 @@
   },
   "101477": {
     "commit": "eec38190a0cea9154ecd8086d426e3beada9fa10",
-    "text": "Metrics Server updated to use 0.4.4 image that doesn't depend on deprecated authorization.k8s.io/v1beta1 subjectaccessreviews API version.",
-    "markdown": "Metrics Server updated to use 0.4.4 image that doesn't depend on deprecated authorization.k8s.io/v1beta1 subjectaccessreviews API version. ([#101477](https://github.com/kubernetes/kubernetes/pull/101477), [@x13n](https://github.com/x13n)) [SIG Cloud Provider and Instrumentation]",
+    "text": "Metrics Server updated to use `0.4.4` image that doesn't depend on deprecated `authorization.k8s.io/v1beta1` subjectaccessreviews API version.",
+    "markdown": "Metrics Server updated to use `0.4.4` image that doesn't depend on deprecated `authorization.k8s.io/v1beta1` subjectaccessreviews API version. ([#101477](https://github.com/kubernetes/kubernetes/pull/101477), [@x13n](https://github.com/x13n))",
     "author": "x13n",
     "author_url": "https://github.com/x13n",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101477",
@@ -2549,8 +2549,8 @@
   },
   "101578": {
     "commit": "545d595674c681e48209c6e1efa8d1371eea5780",
-    "text": "The deprecated CRIContainerLogRotation feature-gate has been removed, since the CRIContainerLogRotation feature graduated to GA in 1.21 and was unconditionally enabled.",
-    "markdown": "The deprecated CRIContainerLogRotation feature-gate has been removed, since the CRIContainerLogRotation feature graduated to GA in 1.21 and was unconditionally enabled. ([#101578](https://github.com/kubernetes/kubernetes/pull/101578), [@carlory](https://github.com/carlory)) [SIG Node]",
+    "text": "The deprecated `CRIContainerLogRotation` feature-gate has been removed, since the `CRIContainerLogRotatio`n feature graduated to GA in 1.21 and was unconditionally enabled.",
+    "markdown": "The deprecated `CRIContainerLogRotation` feature-gate has been removed, since the `CRIContainerLogRotatio`n feature graduated to GA in 1.21 and was unconditionally enabled. ([#101578](https://github.com/kubernetes/kubernetes/pull/101578), [@carlory](https://github.com/carlory))",
     "documentation": [
       {
         "description": "KEP",
@@ -2593,8 +2593,8 @@
   },
   "101581": {
     "commit": "de04c067ad6822532f64b75491ce773de7ff7d23",
-    "text": "The deprecated RunAsGroup feature-gate has been removed, since the RunAsGroup feature graduated to GA in 1.21.",
-    "markdown": "The deprecated RunAsGroup feature-gate has been removed, since the RunAsGroup feature graduated to GA in 1.21. ([#101581](https://github.com/kubernetes/kubernetes/pull/101581), [@carlory](https://github.com/carlory))",
+    "text": "The deprecated `runAsGroup` feature-gate has been removed, since the `runAsGroup` feature graduated to GA in 1.21.",
+    "markdown": "The deprecated `runAsGroup` feature-gate has been removed, since the `runAsGroup` feature graduated to GA in 1.21. ([#101581](https://github.com/kubernetes/kubernetes/pull/101581), [@carlory](https://github.com/carlory))",
     "documentation": [
       {
         "description": "KEP",
@@ -3073,8 +3073,8 @@
   },
   "101822": {
     "commit": "e0f66be1aa206131081d393aa80f89d986aef75a",
-    "text": "A new score extension for NodeResourcesFit plugin that merges the functionality of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio` plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins can still be used in v1beta1 but not at the same time with the score extension of NodeResourcesFit.",
-    "markdown": "A new score extension for NodeResourcesFit plugin that merges the functionality of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio` plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins can still be used in v1beta1 but not at the same time with the score extension of NodeResourcesFit. ([#101822](https://github.com/kubernetes/kubernetes/pull/101822), [@yuzhiquan](https://github.com/yuzhiquan))",
+    "text": "A new score extension for NodeResourcesFit plugin that merges the functionality of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio` plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins can still be used in v1beta1 but not at the same time with the score extension of `NodeResourcesFit`.",
+    "markdown": "A new score extension for NodeResourcesFit plugin that merges the functionality of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio` plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins can still be used in v1beta1 but not at the same time with the score extension of `NodeResourcesFit`. ([#101822](https://github.com/kubernetes/kubernetes/pull/101822), [@yuzhiquan](https://github.com/yuzhiquan))",
     "author": "yuzhiquan",
     "author_url": "https://github.com/yuzhiquan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101822",
@@ -4256,8 +4256,8 @@
   },
   "102414": {
     "commit": "7f4abd897ec4ec29cf88c200ea0044671b10d822",
-    "text": "Newly provisioned PVs by vSphere in-tree plugin will no longer have the beta FailureDomain label. vSphere volume plugin will start to have GA topology label instead.",
-    "markdown": "Newly provisioned PVs by vSphere in-tree plugin will no longer have the beta FailureDomain label. vSphere volume plugin will start to have GA topology label instead. ([#102414](https://github.com/kubernetes/kubernetes/pull/102414), [@divyenpatel](https://github.com/divyenpatel)) [SIG Cloud Provider, Storage and Testing]",
+    "text": "Newly provisioned PVs by vSphere in-tree plugin will no longer have the beta `FailureDomain` label. vSphere volume plugin will start to have GA topology label",
+    "markdown": "Newly provisioned PVs by vSphere in-tree plugin will no longer have the beta `FailureDomain` label. vSphere volume plugin will start to have GA topology label ([#102414](https://github.com/kubernetes/kubernetes/pull/102414), [@divyenpatel](https://github.com/divyenpatel))",
     "author": "divyenpatel",
     "author_url": "https://github.com/divyenpatel",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102414",
@@ -4758,8 +4758,8 @@
   },
   "102677": {
     "commit": "99f77725c88d1d9c0b7ac29c65d1595d9ded8169",
-    "text": "Deprecated warning message for igonre-errors flag.",
-    "markdown": "Deprecated warning message for igonre-errors flag. ([#102677](https://github.com/kubernetes/kubernetes/pull/102677), [@yuzhiquan](https://github.com/yuzhiquan)) [SIG CLI]",
+    "text": "Deprecated warning message for `igonre-errors` flag.",
+    "markdown": "Deprecated warning message for `igonre-errors` flag. ([#102677](https://github.com/kubernetes/kubernetes/pull/102677), [@yuzhiquan](https://github.com/yuzhiquan))",
     "author": "yuzhiquan",
     "author_url": "https://github.com/yuzhiquan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102677",
@@ -4999,8 +4999,8 @@
   },
   "102823": {
     "commit": "561959f6828c36cd3515718eb41bf7b33f450cce",
-    "text": "Alpha swap support can now be enabled on Kubernetes nodes with the NodeSwapEnabled feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details) for details.",
-    "markdown": "Alpha swap support can now be enabled on Kubernetes nodes with the NodeSwapEnabled feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details) for details. ([#102823](https://github.com/kubernetes/kubernetes/pull/102823), [@ehashman](https://github.com/ehashman))",
+    "text": "Alpha swap support can now be enabled on Kubernetes nodes with the `NodeSwapEnabled` feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details) for details.",
+    "markdown": "Alpha swap support can now be enabled on Kubernetes nodes with the `NodeSwapEnabled` feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details) for details. ([#102823](https://github.com/kubernetes/kubernetes/pull/102823), [@ehashman](https://github.com/ehashman))",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/",
@@ -5715,8 +5715,8 @@
   },
   "103244": {
     "commit": "15222a599fbef90566a4f988e0468e60f82588f5",
-    "text": "The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`, regardless of what other FSGroup policies are set, this is an alpha feature.",
-    "markdown": "The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`, regardless of what other FSGroup policies are set, this is an alpha feature. ([#103244](https://github.com/kubernetes/kubernetes/pull/103244), [@verult](https://github.com/verult))",
+    "text": "The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`, regardless of what other `FSGroup` policies are set, this is an alpha feature.",
+    "markdown": "The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`, regardless of what other `FSGroup` policies are set, this is an alpha feature. ([#103244](https://github.com/kubernetes/kubernetes/pull/103244), [@verult](https://github.com/verult))",
     "author": "verult",
     "author_url": "https://github.com/verult",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103244",
@@ -5733,8 +5733,8 @@
   },
   "103276": {
     "commit": "eaba61b4de9db615c73f868468ae2f816a4fe1c4",
-    "text": "Add DataSourceRef alpha field to PVC spec, which allows contents other than PVCs and VolumeSnapshots to be data sources.",
-    "markdown": "Add DataSourceRef alpha field to PVC spec, which allows contents other than PVCs and VolumeSnapshots to be data sources. ([#103276](https://github.com/kubernetes/kubernetes/pull/103276), [@bswartz](https://github.com/bswartz)) [SIG API Machinery, Apps and Storage]",
+    "text": "Add `DataSourceRef` alpha field to PVC spec, which allows contents other than `PVCs` and `VolumeSnapshots` to be data sources.",
+    "markdown": "Add `DataSourceRef` alpha field to PVC spec, which allows contents other than `PVCs` and `VolumeSnapshots` to be data sources. ([#103276](https://github.com/kubernetes/kubernetes/pull/103276), [@bswartz](https://github.com/bswartz))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5870,8 +5870,8 @@
   },
   "103326": {
     "commit": "b0af328e6eddc2bd645aa2e7339a435705818ddd",
-    "text": "Mark `net.ipv4.ip_unprivileged_port_start` as safe sysctl.",
-    "markdown": "Mark `net.ipv4.ip_unprivileged_port_start` as safe sysctl. ([#103326](https://github.com/kubernetes/kubernetes/pull/103326), [@pacoxu](https://github.com/pacoxu))",
+    "text": "Mark `net.ipv4.ip_unprivileged_port_start` as safe `sysctl`.",
+    "markdown": "Mark `net.ipv4.ip_unprivileged_port_start` as safe `sysctl`. ([#103326](https://github.com/kubernetes/kubernetes/pull/103326), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103326",
@@ -5890,8 +5890,8 @@
   },
   "103383": {
     "commit": "6ed98b60f09fb8219f53f3176219e5bf9c8e57f3",
-    "text": "Scheduler nows provides an option for plugin developers to move Pods to activeQ proactively.",
-    "markdown": "Scheduler nows provides an option for plugin developers to move Pods to activeQ proactively. ([#103383](https://github.com/kubernetes/kubernetes/pull/103383), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Scheduling and Testing]",
+    "text": "Scheduler nows provides an option for plugin developers to move `Pods` to activeQ.",
+    "markdown": "Scheduler nows provides an option for plugin developers to move `Pods` to activeQ. ([#103383](https://github.com/kubernetes/kubernetes/pull/103383), [@Huang-Wei](https://github.com/Huang-Wei))",
     "documentation": [
       {
         "description": "[Design doc]",
@@ -6357,8 +6357,8 @@
   },
   "96084": {
     "commit": "0cbf00ad018d5104e438b5693fde435fa06e30c9",
-    "text": "Secret values are now masked by default in kubectl diff output.",
-    "markdown": "Secret values are now masked by default in kubectl diff output. ([#96084](https://github.com/kubernetes/kubernetes/pull/96084), [@loozhengyuan](https://github.com/loozhengyuan)) [SIG CLI]",
+    "text": "Secret values are now masked by default in `kubectl diff` output.",
+    "markdown": "Secret values are now masked by default in `kubectl diff` output. ([#96084](https://github.com/kubernetes/kubernetes/pull/96084), [@loozhengyuan](https://github.com/loozhengyuan))",
     "author": "loozhengyuan",
     "author_url": "https://github.com/loozhengyuan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/96084",
@@ -7092,8 +7092,8 @@
   },
   "99829": {
     "commit": "044fd6fdf6a859683b291898f87433115e1ec3c0",
-    "text": "Replace go-bindata with //go:embed",
-    "markdown": "Replace go-bindata with //go:embed ([#99829](https://github.com/kubernetes/kubernetes/pull/99829), [@palnabarun](https://github.com/palnabarun)) [SIG Architecture, CLI, Node and Testing]",
+    "text": "Replace `go-bindata` with `//go:embed`.",
+    "markdown": "Replace `go-bindata` with `//go:embed`. ([#99829](https://github.com/kubernetes/kubernetes/pull/99829), [@palnabarun](https://github.com/palnabarun))",
     "author": "palnabarun",
     "author_url": "https://github.com/palnabarun",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99829",

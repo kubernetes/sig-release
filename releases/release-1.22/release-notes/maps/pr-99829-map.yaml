@@ -1,0 +1,3 @@
+pr: 99829
+releasenote:
+  text: Replace `go-bindata` with `//go:embed`.

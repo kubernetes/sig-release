@@ -1,0 +1,3 @@
+pr: 96084
+releasenote:
+  text: Secret values are now masked by default in `kubectl diff` output.

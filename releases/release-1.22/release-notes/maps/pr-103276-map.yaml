@@ -1,0 +1,4 @@
+pr: 103276
+releasenote:
+  text: Add `DataSourceRef` alpha field to PVC spec, which allows contents other than
+    `PVCs` and `VolumeSnapshots` to be data sources.
