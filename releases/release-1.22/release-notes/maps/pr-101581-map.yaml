@@ -1,0 +1,4 @@
+pr: 101581
+releasenote:
+  text: The deprecated RunAsGroup feature-gate has been removed, since the RunAsGroup
+    feature graduated to GA in 1.21.

@@ -1,0 +1,3 @@
+pr: 99378
+releasenote:
+  text: Add `PersistentVolumeClaimDeletePoilcy` to StatefulSet API.

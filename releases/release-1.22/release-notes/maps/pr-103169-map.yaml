@@ -1,0 +1,5 @@
+pr: 103169
+releasenote:
+  text: Extended resources defined in `LeastAllocated`, `MostAllocated` and `RequestedToCapacityRatio`
+    plugin argument are bypassed by the scheduler if the incoming Pod doesn't request
+    them in the pod spec.

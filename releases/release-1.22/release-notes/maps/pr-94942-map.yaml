@@ -1,0 +1,4 @@
+pr: 94942
+releasenote:
+  text: Add distributed tracing to the `kube-apiserver`. It is can be enabled with
+    the feature gate `APIServerTracing`

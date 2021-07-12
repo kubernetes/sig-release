@@ -1,0 +1,4 @@
+pr: 103307
+releasenote:
+  text: 'kubelet: the returned value for PodIPs is the same in the Downward API and
+    in the `pod.status.PodIPs` field'

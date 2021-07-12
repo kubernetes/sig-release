@@ -1,0 +1,3 @@
+pr: 103001
+releasenote:
+  text: The `CSIServiceAccountToken` graduates to Ga and is unconditionally enabled.

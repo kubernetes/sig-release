@@ -1,0 +1,3 @@
+pr: 103514
+releasenote:
+  text: The `kubectl get` now truncates multi-line strings to avoid breaking printing
