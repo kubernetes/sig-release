@@ -4,4 +4,4 @@ releasenote:
     of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio`
     plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins
     can still be used in v1beta1 but not at the same time with the score extension
-    of NodeResourcesFit.
+    of `NodeResourcesFit`.
