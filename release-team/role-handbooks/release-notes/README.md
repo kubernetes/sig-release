@@ -46,13 +46,13 @@ If there are potential fixes to the issues indicated and team members are keen, 
 
 **Before continuing on to the Release Notes specific requirements listed below, please review and work through the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).**
 
-### Skills and Experience Requirements:
+### Skills and Experience Requirements
 
-* Strong written and verbal communications skills
-* A working knowledge of Kubernetes concepts
-* Project management experience is helpful but not required
+- Strong written and verbal communications skills
+- A working knowledge of Kubernetes concepts
+- Project management experience is helpful but not required
 
-### Time Requirements:
+### Time Requirements
 
 Compared to other release team roles, release notes is one of the least time intensive roles.
 
@@ -80,7 +80,7 @@ As well as becoming a member of the kubernetes GitHub organization as discussed 
 
 #### Setup krel
 
-[Install Go](https://golang.org/doc/install) in your machine and follow the [instructions to build the release tools](https://github.com/kubernetes/release/tree/master/docs/krel#installation) in your machine. Check the system requirements in the krel documentation.   
+[Install Go](https://golang.org/doc/install) in your machine and follow the [instructions to build the release tools](https://github.com/kubernetes/release/tree/master/docs/krel#installation) in your machine. Check the system requirements in the krel documentation.
 
 #### Get a GitHub token
 
@@ -97,7 +97,7 @@ https://github.com/settings/tokens
 Fork the following repositories to your GitHub account, and clone them using SSH:
 
  - [`kubernetes/sig-release`](https://github.com/kubernetes/sig-release): This is where you will push regular PRs to keep the Release Notes draft up to date.
- - [`kubernetes-sigs/release-notes`](https://github.com/kubernetes-sigs/release-notes): This repo has the [release notes website](https://relnotes.k8s.io) sources. 
+ - [`kubernetes-sigs/release-notes`](https://github.com/kubernetes-sigs/release-notes): This repo has the [release notes website](https://relnotes.k8s.io) sources
 
 ## Tasks and Responsibilities
 
@@ -137,6 +137,10 @@ A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must b
 
 The Communications team will hold meetings to discuss blogposts and media releases regarding the release sometime before code freeze. Ensure that at least one person from the release notes team attends this meeting with the release lead and enhancements lead. The release notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the communications team, release lead or enhancements lead to ensure messaging around Major Themes is coordinated.
 
+Besides a meeting with the Communications team a GitHub Discussion must be open to invite all SIGs members and volunteers to update Major Themes with topics that can be discussed in collaborative way. The discussion must be open in kubernetes/sig-release under General Category, past discussions: [1.21](https://github.com/kubernetes/sig-release/discussions/1436), [1.22](https://github.com/kubernetes/sig-release/discussions/1575).
+
+In the case of still low reponse rate in the Github discussion each SIG can be ping via Slack as a reminder. To speed the proccess the an issue can be used to allow multiple people to reach out to different groups, just like: [1615](https://github.com/kubernetes/sig-release/issues/1615) and [1502](https://github.com/kubernetes/sig-release/pull/1502)
+
 ### Get feedback from SIG Leads
 
 Around Code Freeze, the release notes team will get in touch with the SIG Leads to capture the major themes of their SIGs. The team will also ensure that major issues captured in the release notes are confirmed by the SIG leads before release day.
@@ -144,11 +148,12 @@ Around Code Freeze, the release notes team will get in touch with the SIG Leads 
 If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberty in completing the notes
 
 ### Clean up and edit the final document
+
 The confirmed notes are cleaned up and copy edited by the release-notes team to ensure uniform language/style is used. The team must make sure that the final document conforms to the [Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
 
 ### Curate the External Dependencies Section
 
-An "External Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. See [the v1.14 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.14.md#external-dependencies) for an example. 
+An "External Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. See [the v1.14 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.14.md#external-dependencies) for an example.
 
 Note that there are [plans in the process to formalize and automate the process of aggregating the changes](https://github.com/kubernetes/community/issues/2234), but this is currently [a very manual process](https://github.com/kubernetes/sig-release/pull/398).
 
@@ -227,7 +232,8 @@ Update this section at the end of each release for the next Release Notes Team.
 
 ### Post 1.17 TODOs
 
-#### If any team members have NLP experience:
+#### If any team members have NLP experience
+
 Implement functionality in release-notes tool to automatically process language in generated release notes file
 
 Goals:
