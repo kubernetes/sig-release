@@ -2593,8 +2593,8 @@
   },
   "101581": {
     "commit": "de04c067ad6822532f64b75491ce773de7ff7d23",
-    "text": "The deprecated RunAsGroup feature-gate has been removed, since the RunAsGroup feature graduated to GA in 1.21.",
-    "markdown": "The deprecated RunAsGroup feature-gate has been removed, since the RunAsGroup feature graduated to GA in 1.21. ([#101581](https://github.com/kubernetes/kubernetes/pull/101581), [@carlory](https://github.com/carlory))",
+    "text": "The deprecated `runAsGroup` feature-gate has been removed, since the `runAsGroup` feature graduated to GA in 1.21.",
+    "markdown": "The deprecated `runAsGroup` feature-gate has been removed, since the `runAsGroup` feature graduated to GA in 1.21. ([#101581](https://github.com/kubernetes/kubernetes/pull/101581), [@carlory](https://github.com/carlory))",
     "documentation": [
       {
         "description": "KEP",
@@ -3073,8 +3073,8 @@
   },
   "101822": {
     "commit": "e0f66be1aa206131081d393aa80f89d986aef75a",
-    "text": "A new score extension for NodeResourcesFit plugin that merges the functionality of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio` plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins can still be used in v1beta1 but not at the same time with the score extension of NodeResourcesFit.",
-    "markdown": "A new score extension for NodeResourcesFit plugin that merges the functionality of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio` plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins can still be used in v1beta1 but not at the same time with the score extension of NodeResourcesFit. ([#101822](https://github.com/kubernetes/kubernetes/pull/101822), [@yuzhiquan](https://github.com/yuzhiquan))",
+    "text": "A new score extension for NodeResourcesFit plugin that merges the functionality of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio` plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins can still be used in v1beta1 but not at the same time with the score extension of `NodeResourcesFit`.",
+    "markdown": "A new score extension for NodeResourcesFit plugin that merges the functionality of `NodeResourcesLeastAllocated`, `NodeResourcesMostAllocated`, `RequestedToCapacityRatio` plugins, which are marked as deprecated as of v1beta2. In v1beta1, the three plugins can still be used in v1beta1 but not at the same time with the score extension of `NodeResourcesFit`. ([#101822](https://github.com/kubernetes/kubernetes/pull/101822), [@yuzhiquan](https://github.com/yuzhiquan))",
     "author": "yuzhiquan",
     "author_url": "https://github.com/yuzhiquan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101822",
@@ -4999,8 +4999,8 @@
   },
   "102823": {
     "commit": "561959f6828c36cd3515718eb41bf7b33f450cce",
-    "text": "Alpha swap support can now be enabled on Kubernetes nodes with the NodeSwapEnabled feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details) for details.",
-    "markdown": "Alpha swap support can now be enabled on Kubernetes nodes with the NodeSwapEnabled feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details) for details. ([#102823](https://github.com/kubernetes/kubernetes/pull/102823), [@ehashman](https://github.com/ehashman))",
+    "text": "Alpha swap support can now be enabled on Kubernetes nodes with the `NodeSwapEnabled` feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details) for details.",
+    "markdown": "Alpha swap support can now be enabled on Kubernetes nodes with the `NodeSwapEnabled` feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details) for details. ([#102823](https://github.com/kubernetes/kubernetes/pull/102823), [@ehashman](https://github.com/ehashman))",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/",
@@ -5715,8 +5715,8 @@
   },
   "103244": {
     "commit": "15222a599fbef90566a4f988e0468e60f82588f5",
-    "text": "The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`, regardless of what other FSGroup policies are set, this is an alpha feature.",
-    "markdown": "The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`, regardless of what other FSGroup policies are set, this is an alpha feature. ([#103244](https://github.com/kubernetes/kubernetes/pull/103244), [@verult](https://github.com/verult))",
+    "text": "The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`, regardless of what other `FSGroup` policies are set, this is an alpha feature.",
+    "markdown": "The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`, regardless of what other `FSGroup` policies are set, this is an alpha feature. ([#103244](https://github.com/kubernetes/kubernetes/pull/103244), [@verult](https://github.com/verult))",
     "author": "verult",
     "author_url": "https://github.com/verult",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103244",
@@ -5870,8 +5870,8 @@
   },
   "103326": {
     "commit": "b0af328e6eddc2bd645aa2e7339a435705818ddd",
-    "text": "Mark `net.ipv4.ip_unprivileged_port_start` as safe sysctl.",
-    "markdown": "Mark `net.ipv4.ip_unprivileged_port_start` as safe sysctl. ([#103326](https://github.com/kubernetes/kubernetes/pull/103326), [@pacoxu](https://github.com/pacoxu))",
+    "text": "Mark `net.ipv4.ip_unprivileged_port_start` as safe `sysctl`.",
+    "markdown": "Mark `net.ipv4.ip_unprivileged_port_start` as safe `sysctl`. ([#103326](https://github.com/kubernetes/kubernetes/pull/103326), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103326",
