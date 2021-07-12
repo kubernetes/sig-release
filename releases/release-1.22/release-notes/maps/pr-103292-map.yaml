@@ -1,0 +1,6 @@
+pr: 103292
+releasenote:
+  text: The `kubectl debug` is able to create ephemeral containers in pre-1.22 clusters
+    with the `EphemeralContainers` feature enabled. Note that versions of kubectl
+    prior to 1.22 are unable to create ephemeral containers in clusters version 1.22
+    and greater due to an API change.

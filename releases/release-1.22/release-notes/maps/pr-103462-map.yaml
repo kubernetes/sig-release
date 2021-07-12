@@ -1,0 +1,4 @@
+pr: 103462
+releasenote:
+  text: The `ServiceInternalTrafficPolicy` feature graduates to Beta and enable by
+    default, which enables the `internalTrafficPolicy` field of Service by default.

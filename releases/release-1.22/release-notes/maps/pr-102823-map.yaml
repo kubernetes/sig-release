@@ -1,0 +1,5 @@
+pr: 102823
+releasenote:
+  text: Alpha swap support can now be enabled on Kubernetes nodes with the `NodeSwapEnabled`
+    feature flag. See [KEP-2400](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/2400-node-swap/README.md#design-details)
+    for details.

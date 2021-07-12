@@ -1,0 +1,5 @@
+pr: 103451
+releasenote:
+  text: Features gates `EndpointSliceProxying` & `WindowsEndpointSliceProxying` graduates
+    to GA and are unconditionally enabled. Kube-proxy will use EndpointSlices for
+    endpoint information.

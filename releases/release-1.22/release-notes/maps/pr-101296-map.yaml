@@ -1,0 +1,4 @@
+pr: 101296
+releasenote:
+  text: The API documentation for the DaemonSet's `spec.updateStrategy.rollingUpdate.maxUnavailable`
+    field was corrected to state that the value is rounded up.

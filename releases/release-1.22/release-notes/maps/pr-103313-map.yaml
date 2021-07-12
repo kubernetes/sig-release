@@ -1,0 +1,5 @@
+pr: 103313
+releasenote:
+  text: 'kubeadm: fix a bug where `kubeadm join` for control plane nodes would download
+    certificates and keys from the cluster, but would not write publicly readable
+    certificates and public keys with mode `0644` and instead use mode `0600`.'

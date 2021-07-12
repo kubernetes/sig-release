@@ -1,0 +1,3 @@
+pr: 103190
+releasenote:
+  text: The `ServiceAppProtocol` feature gate has been removed. It reached GA in Kubernetes

@@ -1,0 +1,3 @@
+pr: 103326
+releasenote:
+  text: Mark `net.ipv4.ip_unprivileged_port_start` as safe `sysctl`.
