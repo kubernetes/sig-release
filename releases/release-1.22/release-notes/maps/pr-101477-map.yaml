@@ -1,0 +1,4 @@
+pr: 101477
+releasenote:
+  text: Metrics Server updated to use `0.4.4` image that doesn't depend on deprecated
+    `authorization.k8s.io/v1beta1` subjectaccessreviews API version.

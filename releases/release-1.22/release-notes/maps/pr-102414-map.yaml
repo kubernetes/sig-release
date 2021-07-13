@@ -1,0 +1,4 @@
+pr: 102414
+releasenote:
+  text: Newly provisioned PVs by vSphere in-tree plugin will no longer have the beta
+    `FailureDomain` label. vSphere volume plugin will start to have GA topology label
