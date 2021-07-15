@@ -139,7 +139,7 @@ The Communications team will hold meetings to discuss blogposts and media releas
 
 Besides a meeting with the Communications team a GitHub Discussion must be open to invite all SIGs members and volunteers to update Major Themes with topics that can be discussed in collaborative way. The discussion must be open in kubernetes/sig-release under General Category, past discussions: [1.21](https://github.com/kubernetes/sig-release/discussions/1436), [1.22](https://github.com/kubernetes/sig-release/discussions/1575).
 
-In the case of still low reponse rate in the Github discussion each SIG can be ping via Slack as a reminder. To speed the proccess the an issue can be used to allow multiple people to reach out to different groups, just like: [1615](https://github.com/kubernetes/sig-release/issues/1615) and [1502](https://github.com/kubernetes/sig-release/pull/1502)
+In the case of still low reponse rate in the Github discussion each SIG can be ping via Slack as a reminder. To speed up the proccess an issue can be raised to allow multiple people to reach out to different groups, just like: [1615](https://github.com/kubernetes/sig-release/issues/1615) and [1502](https://github.com/kubernetes/sig-release/pull/1502)
 
 ### Get feedback from SIG Leads
 
