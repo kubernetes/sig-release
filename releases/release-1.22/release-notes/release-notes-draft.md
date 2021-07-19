@@ -59,11 +59,8 @@
 - Add distributed tracing to the `kube-apiserver`. It is can be enabled with the feature gate `APIServerTracing` ([#94942](https://github.com/kubernetes/kubernetes/pull/94942), [@dashpole](https://github.com/dashpole))
 - Add three metrics to the job controller to monitor if a job works in healthy condition.
   `IndexedJob` has been promoted to Beta. ([#101292](https://github.com/kubernetes/kubernetes/pull/101292), [@AliceZhang2016](https://github.com/AliceZhang2016))
-- Added field .status.uncountedTerminatedPods to the Job resource. This field is used by the job controller to keep track of finished pods before adding them to the Job status counters.
-  
-  Pods created by the job controller get the finalizer batch.kubernetes.io/job-tracking
-  
-  Jobs that are tracked using this mechanism get the annotation batch.kubernetes.io/job-tracking. This is a temporary measure. Two releases after this feature graduates to beta, the annotation won't be added to Jobs anymore. ([#98817](https://github.com/kubernetes/kubernetes/pull/98817), [@alculquicondor](https://github.com/alculquicondor)) [SIG API Machinery, Apps, Auth and CLI]
+- Added field `.status.uncountedTerminatedPods` to the Job resource. This field is used by the job controller to keep track of finished pods before adding them to the Job status counters. Pods created by the job controller get the finalizer `batch.kubernetes.io/job-tracking`
+  Jobs that are tracked using this mechanism get the annotation `batch.kubernetes.io/job-tracking`. This is a temporary measure. Two releases after this feature graduates to beta, the annotation won't be added to Jobs anymore. ([#98817](https://github.com/kubernetes/kubernetes/pull/98817), [@alculquicondor](https://github.com/alculquicondor))
 - Added new kubelet alpha feature `SeccompDefault`. This feature enables falling back to
   the `RuntimeDefault` (former `runtime/default`) seccomp profile if nothing else is specified
   in the pod/container `SecurityContext` or the pod annotation level. To use the feature, enable
@@ -202,8 +199,8 @@
 - New metrics: `apiserver_kube_aggregator_x509_missing_san_total` and `apiserver_webhooks_x509_missing_san_total`. This metric measures a number of connections to webhooks/aggregated API servers that use certificates without Subject Alternative Names. It being non-zero is a warning sign that these connections will stop functioning in the future since Golang is going to deprecate x509 certificate subject Common Names for server hostname verification. ([#95396](https://github.com/kubernetes/kubernetes/pull/95396), [@stlaz](https://github.com/stlaz)) [SIG API Machinery, Auth and Instrumentation]
 - Node Problem Detector is now available for GCE Windows nodes. ([#101539](https://github.com/kubernetes/kubernetes/pull/101539), [@jeremyje](https://github.com/jeremyje)) [SIG Cloud Provider, Node and Windows]
 - Promote Cronjobs storage version to `batch/v1`. ([#102363](https://github.com/kubernetes/kubernetes/pull/102363), [@mengjiao-liu](https://github.com/mengjiao-liu))
-- Promote EndpointSliceTerminatingCondition to Beta. This enables the 'terminating' and 'serving' conditions for EndpointSlice by default. ([#103596](https://github.com/kubernetes/kubernetes/pull/103596), [@andrewsykim](https://github.com/andrewsykim)) [SIG Network and Testing]
 - Promote `CronJobControllerV2` flag to GA, with removal in 1.23. ([#102529](https://github.com/kubernetes/kubernetes/pull/102529), [@soltysh](https://github.com/soltysh))
+- Promote `EndpointSliceTerminatingCondition` to Beta. This enables the `terminating` and `serving` conditions for EndpointSlice by default. ([#103596](https://github.com/kubernetes/kubernetes/pull/103596), [@andrewsykim](https://github.com/andrewsykim))
 - Run etcd as non-root on GCE provider ([#100635](https://github.com/kubernetes/kubernetes/pull/100635), [@cindy52](https://github.com/cindy52))
 - Scheduler nows provides an option for plugin developers to move `Pods` to activeQ. ([#103383](https://github.com/kubernetes/kubernetes/pull/103383), [@Huang-Wei](https://github.com/Huang-Wei))
 - Secret values are now masked by default in `kubectl diff` output. ([#96084](https://github.com/kubernetes/kubernetes/pull/96084), [@loozhengyuan](https://github.com/loozhengyuan))
@@ -332,7 +329,7 @@
 - GCE Windows clusters have their TCP/IP parameters are set to GCE's recommended values. ([#103057](https://github.com/kubernetes/kubernetes/pull/103057), [@jeremyje](https://github.com/jeremyje)) [SIG Cloud Provider and Windows]
 - GCE Windows will no longer install Docker on containerd nodes. ([#101747](https://github.com/kubernetes/kubernetes/pull/101747), [@jeremyje](https://github.com/jeremyje)) [SIG Cloud Provider and Windows]
 - Generated OpenAPI now correctly specifies 201 as a possible response code for PATCH operations. ([#100141](https://github.com/kubernetes/kubernetes/pull/100141), [@brendandburns](https://github.com/brendandburns))
-- Graceful termination will now be honored when deleting a collection of pods. ([#100101](https://github.com/kubernetes/kubernetes/pull/100101), [@deads2k](https://github.com/deads2k)) [SIG API Machinery, Node and Testing]
+- Graceful termination will now be honored when deleting a collection of pods. ([#100101](https://github.com/kubernetes/kubernetes/pull/100101), [@deads2k](https://github.com/deads2k))
 - If `kube-proxy` mode  is userspace do not enable `EndpointSlices`. ([#100913](https://github.com/kubernetes/kubernetes/pull/100913), [@JornShen](https://github.com/JornShen))
 - Kubeadm: allow passing the flag `--log-file` if `--config` is passed. If you wish to log to a file you must also pass `--logtostderr=false` or `--alsologtostderr=true`. Alternatively you can pipe to a file using "kubeadm ... | tee ...". ([#101449](https://github.com/kubernetes/kubernetes/pull/101449), [@CaoDonghui123](https://github.com/CaoDonghui123))
 - Kubeadm: enable `--experimental-patches` flag for `kubeadm join phase control-plane-join all` command. ([#101110](https://github.com/kubernetes/kubernetes/pull/101110), [@SataQiu](https://github.com/SataQiu))

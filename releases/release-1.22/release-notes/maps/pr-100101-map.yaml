@@ -1,0 +1,3 @@
+pr: 100101
+releasenote:
+  text: Graceful termination will now be honored when deleting a collection of pods.
