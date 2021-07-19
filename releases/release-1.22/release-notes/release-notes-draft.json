@@ -53,8 +53,8 @@
   },
   "100101": {
     "commit": "3ccfe94563ab3eb95aacb56b691804fc098bc41c",
-    "text": "graceful termination will now be honored when deleting a collection of pods.",
-    "markdown": "Graceful termination will now be honored when deleting a collection of pods. ([#100101](https://github.com/kubernetes/kubernetes/pull/100101), [@deads2k](https://github.com/deads2k)) [SIG API Machinery, Node and Testing]",
+    "text": "Graceful termination will now be honored when deleting a collection of pods.",
+    "markdown": "Graceful termination will now be honored when deleting a collection of pods. ([#100101](https://github.com/kubernetes/kubernetes/pull/100101), [@deads2k](https://github.com/deads2k))",
     "author": "deads2k",
     "author_url": "https://github.com/deads2k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100101",
@@ -6384,8 +6384,8 @@
   },
   "103596": {
     "commit": "29652248ebe229a9dc6f64c3e37c9980cd755bfd",
-    "text": "Promote EndpointSliceTerminatingCondition to Beta. This enables the 'terminating' and 'serving' conditions for EndpointSlice by default.",
-    "markdown": "Promote EndpointSliceTerminatingCondition to Beta. This enables the 'terminating' and 'serving' conditions for EndpointSlice by default. ([#103596](https://github.com/kubernetes/kubernetes/pull/103596), [@andrewsykim](https://github.com/andrewsykim)) [SIG Network and Testing]",
+    "text": "Promote `EndpointSliceTerminatingCondition` to Beta. This enables the `terminating` and `serving` conditions for EndpointSlice by default.",
+    "markdown": "Promote `EndpointSliceTerminatingCondition` to Beta. This enables the `terminating` and `serving` conditions for EndpointSlice by default. ([#103596](https://github.com/kubernetes/kubernetes/pull/103596), [@andrewsykim](https://github.com/andrewsykim))",
     "author": "andrewsykim",
     "author_url": "https://github.com/andrewsykim",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103596",
@@ -7093,8 +7093,8 @@
   },
   "98817": {
     "commit": "b76549665070beb2cc1a0410a6c7f66d8007f76b",
-    "text": "Added field .status.uncountedTerminatedPods to the Job resource. This field is used by the job controller to keep track of finished pods before adding them to the Job status counters.\n\nPods created by the job controller get the finalizer batch.kubernetes.io/job-tracking\n\nJobs that are tracked using this mechanism get the annotation batch.kubernetes.io/job-tracking. This is a temporary measure. Two releases after this feature graduates to beta, the annotation won't be added to Jobs anymore.",
-    "markdown": "Added field .status.uncountedTerminatedPods to the Job resource. This field is used by the job controller to keep track of finished pods before adding them to the Job status counters.\n  \n  Pods created by the job controller get the finalizer batch.kubernetes.io/job-tracking\n  \n  Jobs that are tracked using this mechanism get the annotation batch.kubernetes.io/job-tracking. This is a temporary measure. Two releases after this feature graduates to beta, the annotation won't be added to Jobs anymore. ([#98817](https://github.com/kubernetes/kubernetes/pull/98817), [@alculquicondor](https://github.com/alculquicondor)) [SIG API Machinery, Apps, Auth and CLI]",
+    "text": "Added field `.status.uncountedTerminatedPods` to the Job resource. This field is used by the job controller to keep track of finished pods before adding them to the Job status counters. Pods created by the job controller get the finalizer `batch.kubernetes.io/job-tracking`\nJobs that are tracked using this mechanism get the annotation `batch.kubernetes.io/job-tracking`. This is a temporary measure. Two releases after this feature graduates to beta, the annotation won't be added to Jobs anymore.",
+    "markdown": "Added field `.status.uncountedTerminatedPods` to the Job resource. This field is used by the job controller to keep track of finished pods before adding them to the Job status counters. Pods created by the job controller get the finalizer `batch.kubernetes.io/job-tracking`\n  Jobs that are tracked using this mechanism get the annotation `batch.kubernetes.io/job-tracking`. This is a temporary measure. Two releases after this feature graduates to beta, the annotation won't be added to Jobs anymore. ([#98817](https://github.com/kubernetes/kubernetes/pull/98817), [@alculquicondor](https://github.com/alculquicondor))",
     "documentation": [
       {
         "description": "[Usage]",
