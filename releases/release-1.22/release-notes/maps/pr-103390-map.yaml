@@ -1,0 +1,4 @@
+pr: 103390
+releasenote:
+  text: Update the system-validators library to v1.5.0. Includes validation for `seccomp`
+    and fixes a stdout/stderr problem in the Docker validator.
