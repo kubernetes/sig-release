@@ -1,0 +1,5 @@
+pr: 103245
+releasenote:
+  text: If someone had the `ProbeTerminationGracePeriod` alpha feature enabled in
+    1.21, they should update/delete any workloads/pods with probe `terminationGracePeriods`
+    < 1 before upgrading

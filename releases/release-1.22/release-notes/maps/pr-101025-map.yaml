@@ -1,0 +1,3 @@
+pr: 101025
+releasenote:
+  text: Fix `EndpointSlice` describe panic when an Endpoint doesn't have zone.
