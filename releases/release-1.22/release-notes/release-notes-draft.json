@@ -2610,8 +2610,8 @@
   },
   "101579": {
     "commit": "ef9d6f8c934ccb89d763e2ff3d459205acbbcda0",
-    "text": "The deprecated `RootCAConfigMap` feature-gate has been removed, since the `RootCAConfigMap` feature graduated to GA in 1.21 and was unconditionally enabled.",
-    "markdown": "The deprecated `RootCAConfigMap` feature-gate has been removed, since the `RootCAConfigMap` feature graduated to GA in 1.21 and was unconditionally enabled. ([#101579](https://github.com/kubernetes/kubernetes/pull/101579), [@carlory](https://github.com/carlory))",
+    "text": "The deprecated `RootCAConfigMap` feature-gate has been removed, since the `RootCAConfigMap` feature graduated to GA in 1.21 and is unconditionally enabled.",
+    "markdown": "The deprecated `RootCAConfigMap` feature-gate has been removed, since the `RootCAConfigMap` feature graduated to GA in 1.21 and is unconditionally enabled. ([#101579](https://github.com/kubernetes/kubernetes/pull/101579), [@carlory](https://github.com/carlory))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3405,8 +3405,8 @@
   },
   "101977": {
     "commit": "2a106464d355d04f1c8931a883d265cf70612a30",
-    "text": "kubeadm: fix the bug that kubeadm only uses the first hash in `caCertHashes` to verify the root CA",
-    "markdown": "Kubeadm: fix the bug that kubeadm only uses the first hash in `caCertHashes` to verify the root CA ([#101977](https://github.com/kubernetes/kubernetes/pull/101977), [@SataQiu](https://github.com/SataQiu))",
+    "text": "kubeadm: fix the bug that `kubeadm` only uses the first hash in `caCertHashes` to verify the root CA.",
+    "markdown": "Kubeadm: fix the bug that `kubeadm` only uses the first hash in `caCertHashes` to verify the root CA. ([#101977](https://github.com/kubernetes/kubernetes/pull/101977), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101977",
@@ -5449,8 +5449,8 @@
   },
   "102970": {
     "commit": "a9d752686435f2088e460aaa162ee710d6c6b884",
-    "text": "Introducing `Memory QoS` support with `cgroups v2 (Alpha)`. The `MemoryQoS` feature is now in Alpha. This allows `kubelet` running with `cgroups v2` to set memory QoS at container, pod and QoS level to protect and guarantee better memory quality. This feature can be enabled through feature gate MemoryQoS.",
-    "markdown": "Introducing `Memory QoS` support with `cgroups v2 (Alpha)`. The `MemoryQoS` feature is now in Alpha. This allows `kubelet` running with `cgroups v2` to set memory QoS at container, pod and QoS level to protect and guarantee better memory quality. This feature can be enabled through feature gate MemoryQoS. ([#102970](https://github.com/kubernetes/kubernetes/pull/102970), [@borgerli](https://github.com/borgerli))",
+    "text": "Introducing Memory quality of service support with `cgroups v2 (Alpha)`. The `MemoryQoS` feature is now in Alpha. This allows `kubelet` running with `cgroups v2` to set memory QoS at container, pod and QoS level to protect and guarantee better memory quality. This feature can be enabled through feature gate Memory QoS.",
+    "markdown": "Introducing Memory quality of service support with `cgroups v2 (Alpha)`. The `MemoryQoS` feature is now in Alpha. This allows `kubelet` running with `cgroups v2` to set memory QoS at container, pod and QoS level to protect and guarantee better memory quality. This feature can be enabled through feature gate Memory QoS. ([#102970](https://github.com/kubernetes/kubernetes/pull/102970), [@borgerli](https://github.com/borgerli))",
     "author": "borgerli",
     "author_url": "https://github.com/borgerli",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102970",
@@ -6510,8 +6510,8 @@
   },
   "103747": {
     "commit": "7303b2ce4e0de8d97e677eee880fa12b4d4939c1",
-    "text": "Revert addition of Add `PersistentVolumeClaimDeletePoilcy` to `StatefulSet` API.",
-    "markdown": "Revert addition of Add `PersistentVolumeClaimDeletePoilcy` to `StatefulSet` API. ([#103747](https://github.com/kubernetes/kubernetes/pull/103747), [@mattcary](https://github.com/mattcary))",
+    "text": "Revert addition of Add `PersistentVolumeClaimDeletePoilcy` to `StatefulSet`API.",
+    "markdown": "Revert addition of Add `PersistentVolumeClaimDeletePoilcy` to `StatefulSet`API. ([#103747](https://github.com/kubernetes/kubernetes/pull/103747), [@mattcary](https://github.com/mattcary))",
     "author": "mattcary",
     "author_url": "https://github.com/mattcary",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103747",
@@ -7548,8 +7548,8 @@
   },
   "99582": {
     "commit": "7df432f78f3d9750045d86793765edf261e86bc2",
-    "text": "kube-scheduler: a plugin enabled in a v1beta2 configuration file takes precedence over the default configuration for that plugin; this simplifies enabling default plugins with custom configuration without needing to explicitly disable those default plugins.",
-    "markdown": "Kube-scheduler: a plugin enabled in a v1beta2 configuration file takes precedence over the default configuration for that plugin; this simplifies enabling default plugins with custom configuration without needing to explicitly disable those default plugins. ([#99582](https://github.com/kubernetes/kubernetes/pull/99582), [@chendave](https://github.com/chendave))",
+    "text": "kube-scheduler: a plugin enabled in a v1beta2 configuration file takes precedence over the default configuration for that plugin. This simplifies enabling default plugins with custom configuration without needing to explicitly disable those default plugins.",
+    "markdown": "Kube-scheduler: a plugin enabled in a v1beta2 configuration file takes precedence over the default configuration for that plugin. This simplifies enabling default plugins with custom configuration without needing to explicitly disable those default plugins. ([#99582](https://github.com/kubernetes/kubernetes/pull/99582), [@chendave](https://github.com/chendave))",
     "author": "chendave",
     "author_url": "https://github.com/chendave",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99582",
@@ -7725,8 +7725,8 @@
   },
   "99961": {
     "commit": "e1acbbd8fde3505423df6c336a4d852bfc50e49d",
-    "text": "Kube API server accepts Impersonate-Uid header to impersonate a user with a specific UID, in the same way that you can currently use `Impersonate-User`, `Impersonate-Group` and `Impersonate-Extra`.",
-    "markdown": "Kube API server accepts Impersonate-Uid header to impersonate a user with a specific UID, in the same way that you can currently use `Impersonate-User`, `Impersonate-Group` and `Impersonate-Extra`. ([#99961](https://github.com/kubernetes/kubernetes/pull/99961), [@margocrawf](https://github.com/margocrawf))",
+    "text": "Kube API server accepts `Impersonate-Uid` header to impersonate a user with a specific UID, in the same way that you can currently use `Impersonate-User`, `Impersonate-Group` and `Impersonate-Extra`.",
+    "markdown": "Kube API server accepts `Impersonate-Uid` header to impersonate a user with a specific UID, in the same way that you can currently use `Impersonate-User`, `Impersonate-Group` and `Impersonate-Extra`. ([#99961](https://github.com/kubernetes/kubernetes/pull/99961), [@margocrawf](https://github.com/margocrawf))",
     "author": "margocrawf",
     "author_url": "https://github.com/margocrawf",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99961",
