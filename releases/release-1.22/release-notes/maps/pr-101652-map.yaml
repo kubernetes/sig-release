@@ -1,4 +1,3 @@
 pr: 101652
 releasenote:
-  text: Added jitter factor to lease controller that better smears load on `kube-apiserver`
-    over time.
+  text: Added jitter factor to lease controller that better smears load on `kube-apiserver` over time.
