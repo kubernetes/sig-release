@@ -1,0 +1,4 @@
+pr: 103785
+releasenote:
+  text: The reason and message fields for `pod` status are no longer reset unless
+    the phase also changes.

@@ -91,6 +91,7 @@
   The flag was only available in the 1.22.0-beta.1 release, and the new flag should be used going forward. ([#103553](https://github.com/kubernetes/kubernetes/pull/103553), [@ehashman](https://github.com/ehashman)) [SIG Node]
 - Omit comparison with boolean constant ([#101523](https://github.com/kubernetes/kubernetes/pull/101523), [@chuntaochen](https://github.com/chuntaochen)) [SIG CLI and Cloud Provider]
 - Removed the feature flag for probe-level termination grace period from Kubelet. If a user wants to disable this feature on already created pods, they will have to delete and recreate the pods. ([#103168](https://github.com/kubernetes/kubernetes/pull/103168), [@raisaat](https://github.com/raisaat)) [SIG Apps and Node]
+- Revert addition of Add PersistentVolumeClaimDeletePoilcy to StatefulSet API. ([#103747](https://github.com/kubernetes/kubernetes/pull/103747), [@mattcary](https://github.com/mattcary)) [SIG API Machinery and Apps]
 - Scheduler could be configured  to consider new resources beside CPU and memory,  GPU for example, for the score plugin of `NodeResourcesBalancedAllocation`. ([#101946](https://github.com/kubernetes/kubernetes/pull/101946), [@chendave](https://github.com/chendave)) [SIG Scheduling]
 - Server Side Apply now treats all <Some>Selector fields as atomic (meaning the entire selector is managed by a single writer and updated together), since they contain interrelated and inseparable fields that do not merge in intuitive ways. ([#97989](https://github.com/kubernetes/kubernetes/pull/97989), [@Danil-Grigorev](https://github.com/Danil-Grigorev)) [SIG API Machinery]
 - Suspend Job feature graduated to beta
@@ -266,11 +267,12 @@
 
 ### Bug or Regression
 
-- Added jitter factor to lease controller that better smears load on kube-apiserver over time. ([#101652](https://github.com/kubernetes/kubernetes/pull/101652), [@marseel](https://github.com/marseel)) [SIG API Machinery and Scalability]
+- Added jitter factor to lease controller that better smears load on `kube-apiserver` over time. ([#101652](https://github.com/kubernetes/kubernetes/pull/101652), [@marseel](https://github.com/marseel))
 - Added privileges for `EndpointSlice` to the default view & edit RBAC roles. ([#101203](https://github.com/kubernetes/kubernetes/pull/101203), [@mtougeron](https://github.com/mtougeron))
 - After DBus restarts, make `GracefulNodeShutdown` work again ([#100369](https://github.com/kubernetes/kubernetes/pull/100369), [@wzshiming](https://github.com/wzshiming))
 - Aggregate errors when putting vmss. ([#98350](https://github.com/kubernetes/kubernetes/pull/98350), [@nilo19](https://github.com/nilo19))
 - Aggregate write permissions on events to users with edit and admin role. ([#102858](https://github.com/kubernetes/kubernetes/pull/102858), [@tumido](https://github.com/tumido))
+- Aggregated roles no longer include write access to EndpointSlices. This rolls back part of a change that was introduced earlier in the Kubernetes 1.22 cycle. ([#103703](https://github.com/kubernetes/kubernetes/pull/103703), [@robscott](https://github.com/robscott)) [SIG Auth and Network]
 - Applying fix for not deleting existing public IP when a service is deleted in Azure. ([#100694](https://github.com/kubernetes/kubernetes/pull/100694), [@nilo19](https://github.com/nilo19))
 - Applying fix for not tagging static public IP. ([#101752](https://github.com/kubernetes/kubernetes/pull/101752), [@nilo19](https://github.com/nilo19))
 - Applying fix so that deleting non-existing disk returns success. ([#102083](https://github.com/kubernetes/kubernetes/pull/102083), [@andyzhangx](https://github.com/andyzhangx))
@@ -302,6 +304,7 @@
 - Fix runtime container status for `PostStart` hook error. ([#100608](https://github.com/kubernetes/kubernetes/pull/100608), [@pacoxu](https://github.com/pacoxu))
 - Fix scoring for `NodeResourcesMostAllocated` and `NodeResourcesBalancedAllocation` plugins when nodes have containers with no requests. This was leaving to under-utilization of small nodes. ([#102925](https://github.com/kubernetes/kubernetes/pull/102925), [@alculquicondor](https://github.com/alculquicondor))
 - Fix the code is leaking the defaulting between unrelated pod instances. ([#103284](https://github.com/kubernetes/kubernetes/pull/103284), [@kebe7jun](https://github.com/kebe7jun)) [SIG CLI]
+- Fix winkernel kube-proxy to only use dual stack when host and networking supports it ([#101047](https://github.com/kubernetes/kubernetes/pull/101047), [@jsturtevant](https://github.com/jsturtevant)) [SIG Network and Windows]
 - Fix: Azure file inline volume namespace issue in CSI migration translation ([#101235](https://github.com/kubernetes/kubernetes/pull/101235), [@andyzhangx](https://github.com/andyzhangx))
 - Fix: Bug in `kube-proxy` latency metrics to calculate only the latency value for the `Endpoints` that are created after it starts running. This is needed because all the `Endpoints` objects are processed on restarts, independently when they were. ([#100861](https://github.com/kubernetes/kubernetes/pull/100861), [@aojea](https://github.com/aojea))
 - Fix: avoid nil-pointer panic when checking the frontend IP configuration ([#101739](https://github.com/kubernetes/kubernetes/pull/101739), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]
@@ -365,6 +368,7 @@
 - The `kubectl wait --for=delete` command now ignores the not found error correctly. ([#96702](https://github.com/kubernetes/kubernetes/pull/96702), [@lingsamuel](https://github.com/lingsamuel))
 - The `kubelet` now reports distinguishes log messages about certificate rotation for its client cert and server cert separately to make debugging problems with one or the other easier. ([#101252](https://github.com/kubernetes/kubernetes/pull/101252), [@smarterclayton](https://github.com/smarterclayton))
 - The `serviceOwnsFrontendIP` shouldn't report error when the public IP doesn't match. ([#102516](https://github.com/kubernetes/kubernetes/pull/102516), [@nilo19](https://github.com/nilo19))
+- The `system:aggregate-to-edit` role no longer includes write access to the Endpoints API. For new Kubernetes 1.22 clusters, the `edit` and `admin` roles will no longer include that access in newly created Kubernetes 1.22 clusters. This will have no affect on existing clusters upgrading to Kubernetes 1.22. To retain write access to Endpoints in the aggregated `edit` and `admin` roles for newly created 1.22 clusters, refer to https://github.com/kubernetes/website/pull/29025. ([#103704](https://github.com/kubernetes/kubernetes/pull/103704), [@robscott](https://github.com/robscott)) [SIG Auth and Network]
 - The conformance tests:
   - Services should serve multiport endpoints from pods
   - Services should serve a basic endpoint from pods
@@ -375,6 +379,7 @@
   
   This behavior will change to:
   - Services that have been set  IPFamilyPolicy = PreferDualstack will not be upgraded when the service object is updated. User can still change policy, type etc and existing behaviors remain the same. ([#102898](https://github.com/kubernetes/kubernetes/pull/102898), [@khenidak](https://github.com/khenidak)) [SIG Network and Testing]
+- The reason and message fields for `pod` status are no longer reset unless the phase also changes. ([#103785](https://github.com/kubernetes/kubernetes/pull/103785), [@smarterclayton](https://github.com/smarterclayton))
 - Treat VSphere "File (vmdk path here) was not found" errors as success during volume deletion ([#92372](https://github.com/kubernetes/kubernetes/pull/92372), [@breunigs](https://github.com/breunigs)) [SIG Cloud Provider and Storage]
 - Update `kube-proxy` base image `debian-iptables` to v1.6.2 to pickup [documentation](https://github.com/kubernetes/release/pull/2106)
   \n"- `debian-iptables`: select nft mode if ntf lines > legacy lines, matching [iptables-wrappers](https://github.com/kubernetes-sigs/iptables-wrappers/)" ([#102590](https://github.com/kubernetes/kubernetes/pull/102590), [@BenTheElder](https://github.com/BenTheElder))

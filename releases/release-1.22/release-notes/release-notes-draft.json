@@ -1400,6 +1400,23 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "101047": {
+    "commit": "76b09061362c789878fae5e7c3e0f65c82a40f50",
+    "text": "Fix winkernel kube-proxy to only use dual stack when host and networking supports it",
+    "markdown": "Fix winkernel kube-proxy to only use dual stack when host and networking supports it ([#101047](https://github.com/kubernetes/kubernetes/pull/101047), [@jsturtevant](https://github.com/jsturtevant)) [SIG Network and Windows]",
+    "author": "jsturtevant",
+    "author_url": "https://github.com/jsturtevant",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101047",
+    "pr_number": 101047,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "windows"
+    ],
+    "duplicate": true
+  },
   "101048": {
     "commit": "677210ba32e8d0181e374728d143bc38b9950e18",
     "text": "The `EmptyDir` memory backed volumes are sized as the the minimum of pod allocatable memory on a host and an optional explicit user provided value.",
@@ -2755,8 +2772,8 @@
   },
   "101652": {
     "commit": "f94e8ba908e42edab4b16970a0397e6ae2c3ad31",
-    "text": "Added jitter factor to lease controller that better smears load on kube-apiserver over time.",
-    "markdown": "Added jitter factor to lease controller that better smears load on kube-apiserver over time. ([#101652](https://github.com/kubernetes/kubernetes/pull/101652), [@marseel](https://github.com/marseel)) [SIG API Machinery and Scalability]",
+    "text": "Added jitter factor to lease controller that better smears load on `kube-apiserver` over time.",
+    "markdown": "Added jitter factor to lease controller that better smears load on `kube-apiserver` over time. ([#101652](https://github.com/kubernetes/kubernetes/pull/101652), [@marseel](https://github.com/marseel))",
     "author": "marseel",
     "author_url": "https://github.com/marseel",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101652",
@@ -6456,6 +6473,77 @@
     ],
     "feature": true,
     "duplicate": true
+  },
+  "103703": {
+    "commit": "7fd021ba6af9f7466acd1cc104e5d46bc7e6cd6f",
+    "text": "Aggregated roles no longer include write access to EndpointSlices. This rolls back part of a change that was introduced earlier in the Kubernetes 1.22 cycle.",
+    "markdown": "Aggregated roles no longer include write access to EndpointSlices. This rolls back part of a change that was introduced earlier in the Kubernetes 1.22 cycle. ([#103703](https://github.com/kubernetes/kubernetes/pull/103703), [@robscott](https://github.com/robscott)) [SIG Auth and Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103703",
+    "pr_number": 103703,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth",
+      "network"
+    ],
+    "duplicate": true
+  },
+  "103704": {
+    "commit": "e847b849c4d170b872d6020bfc2263d02c05e369",
+    "text": "The `system:aggregate-to-edit` role no longer includes write access to the Endpoints API. For new Kubernetes 1.22 clusters, the `edit` and `admin` roles will no longer include that access in newly created Kubernetes 1.22 clusters. This will have no affect on existing clusters upgrading to Kubernetes 1.22. To retain write access to Endpoints in the aggregated `edit` and `admin` roles for newly created 1.22 clusters, refer to https://github.com/kubernetes/website/pull/29025.",
+    "markdown": "The `system:aggregate-to-edit` role no longer includes write access to the Endpoints API. For new Kubernetes 1.22 clusters, the `edit` and `admin` roles will no longer include that access in newly created Kubernetes 1.22 clusters. This will have no affect on existing clusters upgrading to Kubernetes 1.22. To retain write access to Endpoints in the aggregated `edit` and `admin` roles for newly created 1.22 clusters, refer to https://github.com/kubernetes/website/pull/29025. ([#103704](https://github.com/kubernetes/kubernetes/pull/103704), [@robscott](https://github.com/robscott)) [SIG Auth and Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103704",
+    "pr_number": 103704,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth",
+      "network"
+    ],
+    "duplicate": true
+  },
+  "103747": {
+    "commit": "7303b2ce4e0de8d97e677eee880fa12b4d4939c1",
+    "text": "Revert addition of Add PersistentVolumeClaimDeletePoilcy to StatefulSet API.",
+    "markdown": "Revert addition of Add PersistentVolumeClaimDeletePoilcy to StatefulSet API. ([#103747](https://github.com/kubernetes/kubernetes/pull/103747), [@mattcary](https://github.com/mattcary)) [SIG API Machinery and Apps]",
+    "author": "mattcary",
+    "author_url": "https://github.com/mattcary",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103747",
+    "pr_number": 103747,
+    "kinds": [
+      "api-change",
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "103785": {
+    "commit": "9f47110aa29094ed2878cf1d85874cb59214664a",
+    "text": "The reason and message fields for `pod` status are no longer reset unless the phase also changes.",
+    "markdown": "The reason and message fields for `pod` status are no longer reset unless the phase also changes. ([#103785](https://github.com/kubernetes/kubernetes/pull/103785), [@smarterclayton](https://github.com/smarterclayton))",
+    "author": "smarterclayton",
+    "author_url": "https://github.com/smarterclayton",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103785",
+    "pr_number": 103785,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
   },
   "68004": {
     "commit": "d8f3794b83c20a0ebafa09a0742a53a76d2786c2",
