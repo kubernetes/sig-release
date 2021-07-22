@@ -1,0 +1,3 @@
+pr: 99839
+releasenote:
+  text: Fixed `port-forward` memory leak for long-running and heavily used connections.

@@ -1,0 +1,3 @@
+pr: 102022
+releasenote:
+  text: Suspend Job feature graduated to beta. Added the `action` label to Job controller sync metrics `job_sync_total` and `job_sync_duration_seconds`.

@@ -1,0 +1,6 @@
+pr: 99023
+releasenote:
+  text: Ephemeral containers are now allowed to configure a `securityContext` that
+    differs from that of the Pod. Cluster administrators should ensure that security
+    policy controllers support `EphemeralContainers` before enabling this feature
+    in clusters.

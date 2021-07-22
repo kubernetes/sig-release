@@ -1,0 +1,6 @@
+pr: 102158
+releasenote:
+  text: 'kubeadm: Add the `RootlessControlPlane` kubeadm specific feature gate (Alpha
+    in 1.22, disabled by default). It can be used to enable an experimental feature
+    that makes the control plane component static Pod containers for `kube-apiserver`,
+    `kube-controller-manager`, `kube-scheduler` and `etcd` to run as a non-root users.'

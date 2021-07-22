@@ -1,0 +1,5 @@
+pr: 103703
+releasenote:
+  text: Aggregated roles no longer include write access to `EndpointSlices`. This
+    rolls back part of a change that was introduced earlier in the Kubernetes 1.22
+    cycle.
