@@ -1,0 +1,4 @@
+pr: 98431
+releasenote:
+  text: Fix `kubectl` alpha debug node does not work on tainted(NoExecute) nodes and
+    tolerate everything.

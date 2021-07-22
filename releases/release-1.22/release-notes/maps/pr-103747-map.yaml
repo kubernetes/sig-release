@@ -1,0 +1,4 @@
+pr: 103747
+releasenote:
+  text: Revert addition of Add `PersistentVolumeClaimDeletePoilcy` to `StatefulSet`
+    API.

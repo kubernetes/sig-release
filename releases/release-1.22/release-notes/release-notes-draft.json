@@ -410,8 +410,8 @@
   },
   "100339": {
     "commit": "f962166f30688653e1f901f1b5d9920734a345d5",
-    "text": "adds metrics for the delegated authorizer used by extension APIs that delegate authorization logic to the Kube API server.",
-    "markdown": "Adds metrics for the delegated authorizer used by extension APIs that delegate authorization logic to the Kube API server. ([#100339](https://github.com/kubernetes/kubernetes/pull/100339), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery, Auth, Instrumentation and Node]",
+    "text": "Adds metrics for the delegated authorizer used by extension APIs that delegate authorization logic to the Kube API server.",
+    "markdown": "Adds metrics for the delegated authorizer used by extension APIs that delegate authorization logic to the Kube API server. ([#100339](https://github.com/kubernetes/kubernetes/pull/100339), [@p0lyn0mial](https://github.com/p0lyn0mial))",
     "author": "p0lyn0mial",
     "author_url": "https://github.com/p0lyn0mial",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100339",
@@ -1400,6 +1400,23 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "101047": {
+    "commit": "76b09061362c789878fae5e7c3e0f65c82a40f50",
+    "text": "Fix winkernel kube-proxy to only use dual stack when host and networking supports it",
+    "markdown": "Fix winkernel kube-proxy to only use dual stack when host and networking supports it ([#101047](https://github.com/kubernetes/kubernetes/pull/101047), [@jsturtevant](https://github.com/jsturtevant)) [SIG Network and Windows]",
+    "author": "jsturtevant",
+    "author_url": "https://github.com/jsturtevant",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101047",
+    "pr_number": 101047,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "windows"
+    ],
+    "duplicate": true
+  },
   "101048": {
     "commit": "677210ba32e8d0181e374728d143bc38b9950e18",
     "text": "The `EmptyDir` memory backed volumes are sized as the the minimum of pod allocatable memory on a host and an optional explicit user provided value.",
@@ -2237,8 +2254,8 @@
   },
   "101420": {
     "commit": "576f0eb0b4604855678df980cbeb3daeebc2b49b",
-    "text": "Improve logging of APIService availability changes in kube-apiserver.",
-    "markdown": "Improve logging of APIService availability changes in kube-apiserver. ([#101420](https://github.com/kubernetes/kubernetes/pull/101420), [@sttts](https://github.com/sttts)) [SIG API Machinery]",
+    "text": "Improve logging of `APIService` availability changes in kube-apiserver.",
+    "markdown": "Improve logging of `APIService` availability changes in kube-apiserver. ([#101420](https://github.com/kubernetes/kubernetes/pull/101420), [@sttts](https://github.com/sttts))",
     "author": "sttts",
     "author_url": "https://github.com/sttts",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101420",
@@ -2593,8 +2610,8 @@
   },
   "101579": {
     "commit": "ef9d6f8c934ccb89d763e2ff3d459205acbbcda0",
-    "text": "The deprecated RootCAConfigMap feature-gate has been removed, since the RootCAConfigMap feature graduated to GA in 1.21 and was unconditionally enabled.",
-    "markdown": "The deprecated RootCAConfigMap feature-gate has been removed, since the RootCAConfigMap feature graduated to GA in 1.21 and was unconditionally enabled. ([#101579](https://github.com/kubernetes/kubernetes/pull/101579), [@carlory](https://github.com/carlory)) [SIG Auth]",
+    "text": "The deprecated `RootCAConfigMap` feature-gate has been removed, since the `RootCAConfigMap` feature graduated to GA in 1.21 and was unconditionally enabled.",
+    "markdown": "The deprecated `RootCAConfigMap` feature-gate has been removed, since the `RootCAConfigMap` feature graduated to GA in 1.21 and was unconditionally enabled. ([#101579](https://github.com/kubernetes/kubernetes/pull/101579), [@carlory](https://github.com/carlory))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3388,8 +3405,8 @@
   },
   "101977": {
     "commit": "2a106464d355d04f1c8931a883d265cf70612a30",
-    "text": "kubeadm: fix the bug that kubeadm only uses the first hash in caCertHashes to verify the root CA",
-    "markdown": "Kubeadm: fix the bug that kubeadm only uses the first hash in caCertHashes to verify the root CA ([#101977](https://github.com/kubernetes/kubernetes/pull/101977), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: fix the bug that kubeadm only uses the first hash in `caCertHashes` to verify the root CA",
+    "markdown": "Kubeadm: fix the bug that kubeadm only uses the first hash in `caCertHashes` to verify the root CA ([#101977](https://github.com/kubernetes/kubernetes/pull/101977), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101977",
@@ -3454,8 +3471,8 @@
   },
   "102022": {
     "commit": "268cab5f444531d11a63d06872bf850c65f814fe",
-    "text": "Suspend Job feature graduated to beta\nAdded the \"action\" label to Job controller sync metrics job_sync_total and job_sync_duration_seconds",
-    "markdown": "Suspend Job feature graduated to beta\n  Added the \"action\" label to Job controller sync metrics job_sync_total and job_sync_duration_seconds ([#102022](https://github.com/kubernetes/kubernetes/pull/102022), [@adtac](https://github.com/adtac)) [SIG Apps, Instrumentation and Testing]",
+    "text": "Suspend Job feature graduated to beta. Added the `action` label to Job controller sync metrics `job_sync_total` and `job_sync_duration_seconds`.",
+    "markdown": "Suspend Job feature graduated to beta. Added the `action` label to Job controller sync metrics `job_sync_total` and `job_sync_duration_seconds`. ([#102022](https://github.com/kubernetes/kubernetes/pull/102022), [@adtac](https://github.com/adtac))",
     "author": "adtac",
     "author_url": "https://github.com/adtac",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102022",
@@ -3646,8 +3663,8 @@
   },
   "102071": {
     "commit": "f42a5dff629114df3302d16346909687298c3465",
-    "text": "kubeadm: remove the deprecated command 'kubeadm config view'. A replacement for this command is 'kubectl get cm -n kube-system kubeadm-config -o=jsonpath=\"{.data.ClusterConfiguration}\"'",
-    "markdown": "Kubeadm: remove the deprecated command 'kubeadm config view'. A replacement for this command is 'kubectl get cm -n kube-system kubeadm-config -o=jsonpath=\"{.data.ClusterConfiguration}\"' ([#102071](https://github.com/kubernetes/kubernetes/pull/102071), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: remove the deprecated command `kubeadm config view`. A replacement for this command is `kubectl get cm -n kube-system kubeadm-config -o=jsonpath=\"{.data.ClusterConfiguration}\"`",
+    "markdown": "Kubeadm: remove the deprecated command `kubeadm config view`. A replacement for this command is `kubectl get cm -n kube-system kubeadm-config -o=jsonpath=\"{.data.ClusterConfiguration}\"` ([#102071](https://github.com/kubernetes/kubernetes/pull/102071), [@neolit123](https://github.com/neolit123))",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102071",
@@ -3836,8 +3853,8 @@
   },
   "102158": {
     "commit": "7705b300e2085c3864bb1e49a7302bf17f080219",
-    "text": "kubeadm: add the RootlessControlPlane kubeadm specific feature gate (Alpha in 1.22, disabled by default).\nIt can be used to enable an experimental feature that makes the control plane component static Pod containers \nfor kube-apiserver, kube-controller-manager, kube-scheduler and etcd to run as a non-root users.",
-    "markdown": "Kubeadm: add the RootlessControlPlane kubeadm specific feature gate (Alpha in 1.22, disabled by default).\n  It can be used to enable an experimental feature that makes the control plane component static Pod containers \n  for kube-apiserver, kube-controller-manager, kube-scheduler and etcd to run as a non-root users. ([#102158](https://github.com/kubernetes/kubernetes/pull/102158), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: Add the `RootlessControlPlane` kubeadm specific feature gate (Alpha in 1.22, disabled by default). It can be used to enable an experimental feature that makes the control plane component static Pod containers for `kube-apiserver`, `kube-controller-manager`, `kube-scheduler` and `etcd` to run as a non-root users.",
+    "markdown": "Kubeadm: Add the `RootlessControlPlane` kubeadm specific feature gate (Alpha in 1.22, disabled by default). It can be used to enable an experimental feature that makes the control plane component static Pod containers for `kube-apiserver`, `kube-controller-manager`, `kube-scheduler` and `etcd` to run as a non-root users. ([#102158](https://github.com/kubernetes/kubernetes/pull/102158), [@vinayakankugoyal](https://github.com/vinayakankugoyal))",
     "documentation": [
       {
         "description": "[KEP-2568]",
@@ -4408,8 +4425,8 @@
   },
   "102444": {
     "commit": "062bc359cab31ce2ea9ce513f8bae73e44ce5df2",
-    "text": "Expose container start time as container_start_time_seconds in kubelet /metrics/resource endpoint",
-    "markdown": "Expose container start time as container_start_time_seconds in kubelet /metrics/resource endpoint ([#102444](https://github.com/kubernetes/kubernetes/pull/102444), [@sanwishe](https://github.com/sanwishe)) [SIG Instrumentation, Node and Testing]",
+    "text": "Expose container start time as `container_start_time_seconds` in the kubelet `/metrics/resource` endpoint.",
+    "markdown": "Expose container start time as `container_start_time_seconds` in the kubelet `/metrics/resource` endpoint. ([#102444](https://github.com/kubernetes/kubernetes/pull/102444), [@sanwishe](https://github.com/sanwishe))",
     "author": "sanwishe",
     "author_url": "https://github.com/sanwishe",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102444",
@@ -4664,8 +4681,8 @@
   },
   "102578": {
     "commit": "5f285e9eae9199eebebbf6d7fca3311412023faf",
-    "text": "Add unified map on CRI to support cgroup v2. Refer to https://github.com/opencontainers/runtime-spec/blob/master/config-linux.md#unified.",
-    "markdown": "Add unified map on CRI to support cgroup v2. Refer to https://github.com/opencontainers/runtime-spec/blob/master/config-linux.md#unified. ([#102578](https://github.com/kubernetes/kubernetes/pull/102578), [@payall4u](https://github.com/payall4u)) [SIG Node]",
+    "text": "Add unified map on CRI to support `cgroup v2`. Refer to https://github.com/opencontainers/runtime-spec/blob/master/config-linux.md#unified.",
+    "markdown": "Add unified map on CRI to support `cgroup v2`. Refer to https://github.com/opencontainers/runtime-spec/blob/master/config-linux.md#unified. ([#102578](https://github.com/kubernetes/kubernetes/pull/102578), [@payall4u](https://github.com/payall4u))",
     "author": "payall4u",
     "author_url": "https://github.com/payall4u",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102578",
@@ -5432,8 +5449,8 @@
   },
   "102970": {
     "commit": "a9d752686435f2088e460aaa162ee710d6c6b884",
-    "text": "Introducing Memory QoS support with cgroups v2 (Alpha)\nThe MemoryQoS feature is now in Alpha. This allows kubelet running with cgroups v2 to set memory QoS at container, pod and QoS level to protect and guarantee better memory quality. This feature can be enabled through feature gate MemoryQoS.",
-    "markdown": "Introducing Memory QoS support with cgroups v2 (Alpha)\n  The MemoryQoS feature is now in Alpha. This allows kubelet running with cgroups v2 to set memory QoS at container, pod and QoS level to protect and guarantee better memory quality. This feature can be enabled through feature gate MemoryQoS. ([#102970](https://github.com/kubernetes/kubernetes/pull/102970), [@borgerli](https://github.com/borgerli)) [SIG Node and Storage]",
+    "text": "Introducing `Memory QoS` support with `cgroups v2 (Alpha)`. The `MemoryQoS` feature is now in Alpha. This allows `kubelet` running with `cgroups v2` to set memory QoS at container, pod and QoS level to protect and guarantee better memory quality. This feature can be enabled through feature gate MemoryQoS.",
+    "markdown": "Introducing `Memory QoS` support with `cgroups v2 (Alpha)`. The `MemoryQoS` feature is now in Alpha. This allows `kubelet` running with `cgroups v2` to set memory QoS at container, pod and QoS level to protect and guarantee better memory quality. This feature can be enabled through feature gate MemoryQoS. ([#102970](https://github.com/kubernetes/kubernetes/pull/102970), [@borgerli](https://github.com/borgerli))",
     "author": "borgerli",
     "author_url": "https://github.com/borgerli",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102970",
@@ -6457,6 +6474,77 @@
     "feature": true,
     "duplicate": true
   },
+  "103703": {
+    "commit": "7fd021ba6af9f7466acd1cc104e5d46bc7e6cd6f",
+    "text": "Aggregated roles no longer include write access to `EndpointSlices`. This rolls back part of a change that was introduced earlier in the Kubernetes 1.22 cycle.",
+    "markdown": "Aggregated roles no longer include write access to `EndpointSlices`. This rolls back part of a change that was introduced earlier in the Kubernetes 1.22 cycle. ([#103703](https://github.com/kubernetes/kubernetes/pull/103703), [@robscott](https://github.com/robscott))",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103703",
+    "pr_number": 103703,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth",
+      "network"
+    ],
+    "duplicate": true
+  },
+  "103704": {
+    "commit": "e847b849c4d170b872d6020bfc2263d02c05e369",
+    "text": "The `system:aggregate-to-edit` role no longer includes write access to the Endpoints API. For new Kubernetes 1.22 clusters, the `edit` and `admin` roles will no longer include that access in newly created Kubernetes 1.22 clusters. This will have no affect on existing clusters upgrading to Kubernetes 1.22. To retain write access to Endpoints in the aggregated `edit` and `admin` roles for newly created 1.22 clusters, refer to https://github.com/kubernetes/website/pull/29025.",
+    "markdown": "The `system:aggregate-to-edit` role no longer includes write access to the Endpoints API. For new Kubernetes 1.22 clusters, the `edit` and `admin` roles will no longer include that access in newly created Kubernetes 1.22 clusters. This will have no affect on existing clusters upgrading to Kubernetes 1.22. To retain write access to Endpoints in the aggregated `edit` and `admin` roles for newly created 1.22 clusters, refer to https://github.com/kubernetes/website/pull/29025. ([#103704](https://github.com/kubernetes/kubernetes/pull/103704), [@robscott](https://github.com/robscott)) [SIG Auth and Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103704",
+    "pr_number": 103704,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth",
+      "network"
+    ],
+    "duplicate": true
+  },
+  "103747": {
+    "commit": "7303b2ce4e0de8d97e677eee880fa12b4d4939c1",
+    "text": "Revert addition of Add `PersistentVolumeClaimDeletePoilcy` to `StatefulSet` API.",
+    "markdown": "Revert addition of Add `PersistentVolumeClaimDeletePoilcy` to `StatefulSet` API. ([#103747](https://github.com/kubernetes/kubernetes/pull/103747), [@mattcary](https://github.com/mattcary))",
+    "author": "mattcary",
+    "author_url": "https://github.com/mattcary",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103747",
+    "pr_number": 103747,
+    "kinds": [
+      "api-change",
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "103785": {
+    "commit": "9f47110aa29094ed2878cf1d85874cb59214664a",
+    "text": "The reason and message fields for pod status are no longer reset unless the phase also changes.",
+    "markdown": "The reason and message fields for pod status are no longer reset unless the phase also changes. ([#103785](https://github.com/kubernetes/kubernetes/pull/103785), [@smarterclayton](https://github.com/smarterclayton)) [SIG Node]",
+    "author": "smarterclayton",
+    "author_url": "https://github.com/smarterclayton",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103785",
+    "pr_number": 103785,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
   "68004": {
     "commit": "d8f3794b83c20a0ebafa09a0742a53a76d2786c2",
     "text": "Fluentd: isolate logging resources in separate namespace `logging`",
@@ -7075,8 +7163,8 @@
   },
   "98431": {
     "commit": "1affd894cf5357559d64d6da7857b63ed760d3be",
-    "text": "fix kubectl alpha debug node does not work on tainted(NoExecute) nodes and tolerate everything.",
-    "markdown": "Fix kubectl alpha debug node does not work on tainted(NoExecute) nodes and tolerate everything. ([#98431](https://github.com/kubernetes/kubernetes/pull/98431), [@wawa0210](https://github.com/wawa0210)) [SIG CLI]",
+    "text": "Fix `kubectl` alpha debug node does not work on tainted(NoExecute) nodes and tolerate everything.",
+    "markdown": "Fix `kubectl` alpha debug node does not work on tainted(NoExecute) nodes and tolerate everything. ([#98431](https://github.com/kubernetes/kubernetes/pull/98431), [@wawa0210](https://github.com/wawa0210))",
     "author": "wawa0210",
     "author_url": "https://github.com/wawa0210",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98431",
@@ -7154,8 +7242,8 @@
   },
   "99023": {
     "commit": "e799d7b1912b57ae0e898cb79f93066c0c8f0142",
-    "text": "Ephemeral containers are now allowed to configure a securityContext that differs from that of the Pod.\n\nCluster administrators should ensure that security policy controllers support EphemeralContainers before enabling this feature in clusters.",
-    "markdown": "Ephemeral containers are now allowed to configure a securityContext that differs from that of the Pod.\n  \n  Cluster administrators should ensure that security policy controllers support EphemeralContainers before enabling this feature in clusters. ([#99023](https://github.com/kubernetes/kubernetes/pull/99023), [@verb](https://github.com/verb)) [SIG API Machinery, Apps, Auth and Node]",
+    "text": "Ephemeral containers are now allowed to configure a `securityContext` that differs from that of the Pod. Cluster administrators should ensure that security policy controllers support `EphemeralContainers` before enabling this feature in clusters.",
+    "markdown": "Ephemeral containers are now allowed to configure a `securityContext` that differs from that of the Pod. Cluster administrators should ensure that security policy controllers support `EphemeralContainers` before enabling this feature in clusters. ([#99023](https://github.com/kubernetes/kubernetes/pull/99023), [@verb](https://github.com/verb))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -7461,7 +7549,7 @@
   "99582": {
     "commit": "7df432f78f3d9750045d86793765edf261e86bc2",
     "text": "kube-scheduler: a plugin enabled in a v1beta2 configuration file takes precedence over the default configuration for that plugin; this simplifies enabling default plugins with custom configuration without needing to explicitly disable those default plugins.",
-    "markdown": "Kube-scheduler: a plugin enabled in a v1beta2 configuration file takes precedence over the default configuration for that plugin; this simplifies enabling default plugins with custom configuration without needing to explicitly disable those default plugins. ([#99582](https://github.com/kubernetes/kubernetes/pull/99582), [@chendave](https://github.com/chendave)) [SIG Scheduling]",
+    "markdown": "Kube-scheduler: a plugin enabled in a v1beta2 configuration file takes precedence over the default configuration for that plugin; this simplifies enabling default plugins with custom configuration without needing to explicitly disable those default plugins. ([#99582](https://github.com/kubernetes/kubernetes/pull/99582), [@chendave](https://github.com/chendave))",
     "author": "chendave",
     "author_url": "https://github.com/chendave",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99582",
@@ -7579,8 +7667,8 @@
   },
   "99839": {
     "commit": "4fae6ae5d211f1a45998c30d4ec765668a8361aa",
-    "text": "Fixed port-forward memory leak for long-running and heavily used connections.",
-    "markdown": "Fixed port-forward memory leak for long-running and heavily used connections. ([#99839](https://github.com/kubernetes/kubernetes/pull/99839), [@saschagrunert](https://github.com/saschagrunert)) [SIG API Machinery and Node]",
+    "text": "Fixed `port-forward` memory leak for long-running and heavily used connections.",
+    "markdown": "Fixed `port-forward` memory leak for long-running and heavily used connections. ([#99839](https://github.com/kubernetes/kubernetes/pull/99839), [@saschagrunert](https://github.com/saschagrunert))",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99839",
@@ -7637,8 +7725,8 @@
   },
   "99961": {
     "commit": "e1acbbd8fde3505423df6c336a4d852bfc50e49d",
-    "text": "Kube API server accepts Impersonate-Uid header to impersonate a user with a specific UID, in the same way that you can currently use Impersonate-User, Impersonate-Group and Impersonate-Extra",
-    "markdown": "Kube API server accepts Impersonate-Uid header to impersonate a user with a specific UID, in the same way that you can currently use Impersonate-User, Impersonate-Group and Impersonate-Extra ([#99961](https://github.com/kubernetes/kubernetes/pull/99961), [@margocrawf](https://github.com/margocrawf)) [SIG API Machinery, Auth and Testing]",
+    "text": "Kube API server accepts Impersonate-Uid header to impersonate a user with a specific UID, in the same way that you can currently use `Impersonate-User`, `Impersonate-Group` and `Impersonate-Extra`.",
+    "markdown": "Kube API server accepts Impersonate-Uid header to impersonate a user with a specific UID, in the same way that you can currently use `Impersonate-User`, `Impersonate-Group` and `Impersonate-Extra`. ([#99961](https://github.com/kubernetes/kubernetes/pull/99961), [@margocrawf](https://github.com/margocrawf))",
     "author": "margocrawf",
     "author_url": "https://github.com/margocrawf",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99961",
