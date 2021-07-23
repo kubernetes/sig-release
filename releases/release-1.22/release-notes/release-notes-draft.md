@@ -25,8 +25,7 @@ Server-side Apply is a new object merge algorithm, as well as tracking of field 
 
 CSI support for Windows nodes moves to GA in the 1.22 release. In Kubernetes v1.22, Windows privileged containers are only an alpha feature. To allow using CSI storage on Windows nodes, [CSIProxy](https://github.com/kubernetes-csi/csi-proxy) enables CSI node plugins to be deployed as unprivileged pods, using the proxy to perform privileged storage operations on the node.
 
-Another feature moving to GA in v1.22 is CSI Service Account Token support. This feature allows CSI drivers to use pods' [bound service account tokens](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#bound-service-account-token-volume) instead of a more privileged identity. It also provides control over to re-publishing these volumes, so that short-lived tokens can be refreshed. 
-
+Another feature moving to GA in v1.22 is CSI Service Account Token support. This feature allows CSI drivers to use pods' [bound service account tokens](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#bound-service-account-token-volume) instead of a more privileged identity. It also provides control over to re-publishing these volumes, so that short-lived tokens can be refreshed.
 
 ### SIG Windows development tools
 
@@ -49,7 +48,7 @@ Every system administrator or Kubernetes user has been in the same boat regardin
 
 ### Cluster-wide seccomp defaults
 
-A new alpha feature gate SeccompDefault has been added to the kubelet, together with a corresponding command line flag `--seccomp-default` and kubelet configuration. If both are enabled, then the kubelet's behavior changes for pods that don't explicitly set a seccomp profile.
+A new alpha feature gate `SeccompDefault` has been added to the kubelet, together with a corresponding command line flag `--seccomp-default` and kubelet configuration. If both are enabled, then the kubelet's behavior changes for pods that don't explicitly set a seccomp profile.
 With cluster-wide seccomp defaults, the kubelet uses the `RuntimeDefault` seccomp profile by default, rather than than `Unconfined`. This allows enhancing the default cluster wide workload security of the Kubernetes deployment. Security administrators will now sleep better knowing there is some security by default for the workloads.
 
 To learn more about the feature, please refer to the official [seccomp tutorial](https://kubernetes.io/docs/tutorials/clusters/seccomp/#enable-the-use-of-runtimedefault-as-the-default-seccomp-profile-for-all-workloads).
