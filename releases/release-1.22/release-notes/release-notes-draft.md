@@ -25,7 +25,7 @@ Server-side Apply is a new object merge algorithm, as well as tracking of field 
 
 CSI support for Windows nodes moves to GA in the 1.22 release. In Kubernetes v1.22, Windows privileged containers are only an alpha feature. To allow using CSI storage on Windows nodes, [CSIProxy](https://github.com/kubernetes-csi/csi-proxy) enables CSI node plugins to be deployed as unprivileged pods, using the proxy to perform privileged storage operations on the node.
 
-Another feature moving to GA in v1.22 is CSI Service Account Token support. This feature allows CSI drivers to use pods' [bound service account tokens](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#bound-service-account-token-volume) instead of a more privileged identity. It also provides control over to re-publishing these volumes, so that short-lived tokens can be refreshed.
+Another feature moving to GA in v1.22 is CSI Service Account Token support. This feature allows CSI drivers to use pods' [bound service account tokens](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#bound-service-account-token-volume) instead of a more privileged identity. It also provides control over to re-publishing these volumes, so that short-lived tokens can be refreshed. 
 
 
 ### SIG Windows development tools
@@ -41,19 +41,11 @@ A new [v1beta3 configuration API](https://github.com/kubernetes/kubeadm/issues/1
 
 ### etcd moves to version 3.5.0
 
-Kubernetes' default backend storage, etcd, has a new release 3.5.0 and the community embraced it. The new release comes with improvements to the Security, performance, monitoring and developer experience. There are numremains available and is not yet deprecated.
+Kubernetes' default backend storage, etcd, has a new release 3.5.0 and the community embraced it. The new release comes with improvements to the Security, performance, monitoring and developer experience. There are numerous bug fixes to lease objects causing memory leaks, and compact operation causing deadlocks and more. A couple of new features are also introduced like the migration to structured logging and build in log rotation. The release comes with a detailed future roadmap to implement a solution to traffic overload. A full and detailed list of changes can be read in the [3.5.0 release announcement](https://etcd.io/blog/2021/announcing-etcd-3.5/).
 
-### etcd moves to version 3.5.0
+### Kubernetes Node system swap support
 
-Kubernetes' default backend storage, etcd, has a new release 3.5.0 and the community embraced it. The new release comes with improvements to the Security, performance, monitoring and developer experience. There are numremains available and is not yet deprecated.
-
-### etcd moves to version 3.5.0
-
-Kubernetes' default backend storage, etcd, has a new release 3.5.0 and the community embraced it. The new release comes with improvements to the Security, performance, monitoring and developer experience. There are numremains available and is not yet deprecated.
-
-### etcd moves to version 3.5.0
-
-Kubernetes' default backend storage, etcd, has a newhange lets administrators opt in to configuring swap on Linux nodes, treating a portion of block storage as additional virtual memory.
+Every system administrator or Kubernetes user has been in the same boat regarding setting up and using Kubernetes: disable swap space. With the release of Kubernetes 1.22, *alpha* support is available to run nodes with swap memory. This change lets administrators opt in to configuring swap on Linux nodes, treating a portion of block storage as additional virtual memory.
 
 ### Cluster-wide seccomp defaults
 
@@ -75,7 +67,6 @@ The API used to create [Ephemeral Containers](https://kubernetes.io/docs/concept
 For stable features, the `kubectl` tool follows the Kubernetes [version skew policy](https://kubernetes.io/releases/version-skew-policy/);
 however, kubectl v1.21 and older do not support the new API for ephemeral containers.
 Users who create ephemeral containers using `kubectl debug` should note that kubectl version 1.22 will attempt to fall back to the old API; older versions of kubectl will not work with cluster versions of 1.22 or later. Please update kubectl to 1.22 if you wish to use `kubectl debug` with a mix of cluster versions.
-
 ## Urgent Upgrade Notes 
 
 ### (No, really, you MUST read this before you upgrade)
