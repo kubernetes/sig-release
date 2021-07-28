@@ -2541,12 +2541,13 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101542",
     "pr_number": 101542,
     "kinds": [
-      "bug"
+      "feature"
     ],
     "sigs": [
       "scheduling",
       "storage"
     ],
+    "feature": true,
     "duplicate": true,
     "action_required": true
   },
