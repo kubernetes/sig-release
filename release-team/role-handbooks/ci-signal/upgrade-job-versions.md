@@ -36,10 +36,10 @@ aka trust the CI
 - look for the `--extract=` flags
 - the version there corresponds to files in GCS buckets
 
-ci/foo versions live in kubernetes-release-dev:
+ci/foo versions live in k8s-release-dev:
 ```shell
 $ for suffix in beta stable1 stable2 stable3; do
-  echo ci/k8s-$suffix: $(gsutil cat gs://kubernetes-release-dev/ci/k8s-$suffix.txt);
+  echo ci/k8s-$suffix: $(gsutil cat gs://k8s-release-dev/ci/k8s-$suffix.txt);
 done
 
 ci/k8s-beta: v1.12.0-beta.1.129+1d58f1aebfe1e3
