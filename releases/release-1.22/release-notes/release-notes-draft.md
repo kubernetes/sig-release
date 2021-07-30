@@ -66,6 +66,13 @@ The API used to create [Ephemeral Containers](https://kubernetes.io/docs/concept
 For stable features, the `kubectl` tool follows the Kubernetes [version skew policy](https://kubernetes.io/releases/version-skew-policy/);
 however, kubectl v1.21 and older do not support the new API for ephemeral containers.
 Users who create ephemeral containers using `kubectl debug` should note that kubectl version 1.22 will attempt to fall back to the old API; older versions of kubectl will not work with cluster versions of 1.22 or later. Please update kubectl to 1.22 if you wish to use `kubectl debug` with a mix of cluster versions.
+
+## Know Issues
+
+### `CSIMigrationvSphere` feature gate has not migrated to new CRD APIs
+
+If CSIMigrationvSphere feature gate is enabled, user should not upgrade to Kubernetes v1.22. vSphere CSI Driver does not support Kubernetes v1.22 yet because it uses v1beta1 CRD APIs. Support for v1.22 will be added at a later release. Check the following document for supported Kubernetes releases for a given [vSphere CSI Driver version](https://vsphere-csi-driver.sigs.k8s.io/compatiblity_matrix.html#compatibility-matrix-for-vsphere-csi-driver)
+
 ## Urgent Upgrade Notes 
 
 ### (No, really, you MUST read this before you upgrade)
