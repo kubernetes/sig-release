@@ -59,16 +59,16 @@ The 1.23 release cycle is proposed as follows:
 | 1.23.0-alpha.2 released | Branch Manager ([@TBD](TBD)) | TBD | TBD | |
 | 1.23.0-alpha.3 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | KubeCon NA + Co-located events | | October 11-15, 2021 | week 8 | |
-| 1.23.0-beta.0 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
+| 1.23.0-alpha.4 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | **Begin [Burndown]** (MWF meetings) | Lead | Mon November 1, 2021 | week 11 | [1.23-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Mon November 1, 2021 | week 11 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon November 1, 2021 | week 11 | |
 | **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Tue November 2, 2021 | week 11 | |
-| 1.23.0-beta.1 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
-| **Begin [Code Freeze]** (18:00 PST) | Branch Manager | Thu November 11, 2021 | week 12 | |
-| Docs deadline - Open placeholder PRs | Docs Lead |Fri November 12, 2021 | week 12 | |
+| 1.23.0-beta.0 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | Burndown Meetings daily| Lead | Mon November 15, 2021 | week 13 | |
-| 1.23.0-beta.2 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
+| **Begin [Code Freeze]** (18:00 PST) | Branch Manager | Tue November 16, 2021 | week 13 | |
+| Docs deadline - Open placeholder PRs | Docs Lead | Thu November 18, 2021 | week 13 | |
+| 1.23.0-beta.1 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | **[Test Freeze]** (18:00 PST) | Branch Manager | Tue November 23, 2021 | week 14 | |
 | Docs deadline - PRs ready for review | Docs Lead | Tue November 23, 2021 | week 14 | |
 | 1.23.0-rc.0 released | Branch Manager ([TBD](TBD)) | Tue November 23, 2021 | week 14 | |
