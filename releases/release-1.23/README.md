@@ -64,9 +64,9 @@ The 1.23 release cycle is proposed as follows:
 | **Call for [Exceptions][Exception]** | Lead | Mon November 1, 2021 | week 11 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon November 1, 2021 | week 11 | |
 | **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Tue November 2, 2021 | week 11 | |
-| 1.23.0-beta.0 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | Burndown Meetings daily| Lead | Mon November 15, 2021 | week 13 | |
 | **Begin [Code Freeze]** (18:00 PST) | Branch Manager | Tue November 16, 2021 | week 13 | |
+| 1.23.0-beta.0 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | Docs deadline - Open placeholder PRs | Docs Lead | Thu November 18, 2021 | week 13 | |
 | 1.23.0-beta.1 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | **[Test Freeze]** (18:00 PST) | Branch Manager | Tue November 23, 2021 | week 14 | |
