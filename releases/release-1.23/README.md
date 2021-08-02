@@ -52,10 +52,10 @@ The 1.23 release cycle is proposed as follows:
 | Start of Release Cycle | Lead | Mon August 23, 2021 | week 1 | [master-blocking] |
 | Start Enhancements Tracking | Enhancements Lead | Mon August 23, 2021| week 1 | |
 | 1.23.0-alpha.1 released | Branch Manager ([TBD](TBD)) | Wed August 25, 2021 | week 1 | |
-| Schedule finalized | Lead | Thur August 26, 2021 | week 1 | |
+| Schedule finalized | Lead | Thu August 26, 2021 | week 1 | |
 | Team finalized | Lead | Fri August 27, 2021 | week 1 | |
-| Start Release Notes Draft | Release Notes Lead | Tues September 7, 2021 | week 3 | |
-| **Begin [Enhancements Freeze]** (23:59 PDT) | Enhancements Lead | Thur September 9, 2021 | week 3 | [master-blocking], [master-informing] |
+| Start Release Notes Draft | Release Notes Lead | Tue September 7, 2021 | week 3 | |
+| **Begin [Enhancements Freeze]** (23:59 PDT) | Enhancements Lead | Thu September 9, 2021 | week 3 | [master-blocking], [master-informing] |
 | 1.23.0-alpha.2 released | Branch Manager ([@TBD](TBD)) | TBD | TBD | |
 | 1.23.0-alpha.3 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | KubeCon NA + Co-located events | | October 11-15, 2021 | week 8 | |
@@ -63,25 +63,25 @@ The 1.23 release cycle is proposed as follows:
 | **Begin [Burndown]** (MWF meetings) | Lead | Mon November 1, 2021 | week 11 | [1.23-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Mon November 1, 2021 | week 11 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon November 1, 2021 | week 11 | |
-| **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Tues November 2, 2021 | week 11 | |
+| **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Tue November 2, 2021 | week 11 | |
 | 1.23.0-beta.1 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
-| **Begin [Code Freeze]** (18:00 PST) | Branch Manager | Thur November 11, 2021 | week 12 | |
+| **Begin [Code Freeze]** (18:00 PST) | Branch Manager | Thu November 11, 2021 | week 12 | |
 | Docs deadline - Open placeholder PRs | Docs Lead |Fri November 12, 2021 | week 12 | |
 | Burndown Meetings daily| Lead | Mon November 15, 2021 | week 13 | |
 | 1.23.0-beta.2 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
-| **[Test Freeze]** (18:00 PST) | Branch Manager | Thur November 18, 2021 | week 13 | |
-| Docs deadline - PRs ready for review | Docs Lead | Tues November 23, 2021 | week 14 | |
+| **[Test Freeze]** (18:00 PST) | Branch Manager | Thu November 18, 2021 | week 13 | |
+| Docs deadline - PRs ready for review | Docs Lead | Tue November 23, 2021 | week 14 | |
 | 1.23.0-rc.0 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | release-1.23 branch created | Branch Manager | TBD | TBD | |
 | release-1.23 jobs created | Branch Manager | TBD | TBD | |
-| Start final draft of Release Notes | Release Notes Lead | Tues November 23, 2021 | week 14 | |
-| Release blog ready to review (23:59 PST) | Comms / Docs | Tues November 23, 2021 | week 14 | |
-| Docs complete - All PRs reviewed and ready to merge | Docs Lead | Tues November 30, 2021 | week 15 | |
-| Feature blogs ready to review (23:59 PST)| Enhancement Owner / SIG Leads | Tues November 30, 2021 | week 15 | |
-| Release Notes complete - reviewed & merged to `k/sig-release` (23:59 PST) | Release Notes Lead | Thur December 2, 2021 | week 15 | |
-| **v1.23.0 released** | Branch Manager ([TBD](TBD)) | Tues December 7, 2021 | week 16 | |
-| Release blog published | Comms | Tues December 7, 2021 | week 16 | |
-| **[Thaw]** | Branch Manager | Tues December 7, 2021 | week 16 | |
+| Start final draft of Release Notes | Release Notes Lead | Tue November 23, 2021 | week 14 | |
+| Release blog ready to review (23:59 PST) | Comms / Docs | Tue November 23, 2021 | week 14 | |
+| Docs complete - All PRs reviewed and ready to merge | Docs Lead | Tue November 30, 2021 | week 15 | |
+| Feature blogs ready to review (23:59 PST)| Enhancement Owner / SIG Leads | Tue November 30, 2021 | week 15 | |
+| Release Notes complete - reviewed & merged to `k/sig-release` (23:59 PST) | Release Notes Lead | Thu December 2, 2021 | week 15 | |
+| **v1.23.0 released** | Branch Manager ([TBD](TBD)) | Tue December 7, 2021 | week 16 | |
+| Release blog published | Comms | Tue December 7, 2021 | week 16 | |
+| **[Thaw]** | Branch Manager | Tue December 7, 2021 | week 16 | |
 | Release retrospective | Community | TBD | week 17 | |
 
 ## Phases
