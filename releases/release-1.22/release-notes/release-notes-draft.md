@@ -71,7 +71,7 @@ Users who create ephemeral containers using `kubectl debug` should note that kub
 
 ### CPU and Memory manager are not working correctly for Guaranteed Pods with multiple containers
 
-A regression bug was found where Pods with multiple containers do not get properly set allocations for CPU and Memory. They can be also removed, despite being admitted. [The fix will be availability in coming releases](https://github.com/kubernetes/kubernetes/pull/103979).
+A regression bug was found where guaranteed Pods with multiple containers do not work properly with set allocations for CPU, Memory, and Device manager. [The fix will be availability in coming releases](https://github.com/kubernetes/kubernetes/pull/103979).
 
 ### `CSIMigrationvSphere` feature gate has not migrated to new CRD APIs
 
