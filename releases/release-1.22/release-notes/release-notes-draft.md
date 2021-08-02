@@ -69,6 +69,10 @@ Users who create ephemeral containers using `kubectl debug` should note that kub
 
 ## Known Issues
 
+### CPU and Memory manager are not working correctly for Guaranteed Pods with multiple containers
+
+A regression bug was found where Pods with multiple containers do not get properly set allocations for CPU and Memory. They can be also removed, despite being admitted. [The fix will be availability in coming releases](https://github.com/kubernetes/kubernetes/pull/103979).
+
 ### `CSIMigrationvSphere` feature gate has not migrated to new CRD APIs
 
 If CSIMigrationvSphere feature gate is enabled, user should not upgrade to Kubernetes v1.22. vSphere CSI Driver does not support Kubernetes v1.22 yet because it uses v1beta1 CRD APIs. Support for v1.22 will be added at a later release. Check the following document for supported Kubernetes releases for a given [vSphere CSI Driver version](https://vsphere-csi-driver.sigs.k8s.io/compatiblity_matrix.html#compatibility-matrix-for-vsphere-csi-driver).
