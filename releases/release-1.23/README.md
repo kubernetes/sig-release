@@ -39,8 +39,8 @@ The 1.23 release cycle is proposed as follows:
 
 - **Monday, August 23, 2021**: Week 1 - Release cycle begins
 - **Thursday, September 9, 2021**: Week 3 - [Enhancements Freeze](../release_phases.md#enhancements-freeze)
-- **Thursday, November 11, 2021**: Week 12 - [Code Freeze](../release_phases.md#code-freeze)
-- **Thursday, November 18, 2021**: Week 13 - [Test Freeze](../release_phases.md#test-freeze)
+- **Tuesday, November 16, 2021**: Week 13 - [Code Freeze](../release_phases.md#code-freeze)
+- **Tuesday, November 23, 2021**: Week 14 - [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday, November 30, 2021**: Week 15 - Docs must be completed and reviewed
 - **Tuesday, December 7, 2021**: Week 16 - Kubernetes v1.23.0 released
 - **TBD**: Week 17 - Release Retrospective
@@ -66,7 +66,7 @@ The 1.23 release cycle is proposed as follows:
 | **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Tue November 2, 2021 | week 11 | |
 | Burndown Meetings daily| Lead | Mon November 15, 2021 | week 13 | |
 | **Begin [Code Freeze]** (18:00 PST) | Branch Manager | Tue November 16, 2021 | week 13 | |
-| 1.23.0-beta.0 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
+| 1.23.0-beta.0 released | Branch Manager ([TBD](TBD)) | Tue November 16, 2021 | week 13 | |
 | Docs deadline - Open placeholder PRs | Docs Lead | Thu November 18, 2021 | week 13 | |
 | 1.23.0-beta.1 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
 | **[Test Freeze]** (18:00 PST) | Branch Manager | Tue November 23, 2021 | week 14 | |
