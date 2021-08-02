@@ -69,9 +69,9 @@ The 1.23 release cycle is proposed as follows:
 | Docs deadline - Open placeholder PRs | Docs Lead |Fri November 12, 2021 | week 12 | |
 | Burndown Meetings daily| Lead | Mon November 15, 2021 | week 13 | |
 | 1.23.0-beta.2 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
-| **[Test Freeze]** (18:00 PST) | Branch Manager | Thu November 18, 2021 | week 13 | |
+| **[Test Freeze]** (18:00 PST) | Branch Manager | Tue November 23, 2021 | week 14 | |
 | Docs deadline - PRs ready for review | Docs Lead | Tue November 23, 2021 | week 14 | |
-| 1.23.0-rc.0 released | Branch Manager ([TBD](TBD)) | TBD | TBD | |
+| 1.23.0-rc.0 released | Branch Manager ([TBD](TBD)) | Tue November 23, 2021 | week 14 | |
 | release-1.23 branch created | Branch Manager | TBD | TBD | |
 | release-1.23 jobs created | Branch Manager | TBD | TBD | |
 | Start final draft of Release Notes | Release Notes Lead | Tue November 23, 2021 | week 14 | |
