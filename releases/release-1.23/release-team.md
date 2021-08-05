@@ -2,14 +2,14 @@
 
 | **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
-| Lead |  |  |
-| Enhancements | | |
-| CI Signal | | |
-| Bug Triage | | |
-| Docs | | |
-| Release Notes | | |
-| Communications | | |
-| Emeritus Adviser | | |
+| Lead | Rey Lejano ([@reylejano](https://github.com/reylejano) / Slack: `@rlejano`) |  |
+| Enhancements | Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`) ) |
+| CI Signal | Hossein Salahi ([@encodedflush](https://github.com/encodedflush) / Slack: `@hsalahi`) | |
+| Bug Triage | Christoph Voigt ([@voigt](https://github.com/voigt) / Slack: `@Christoph Voigt`) | |
+| Docs | Jesse Butler ([@jlbutler](https://github.com/jlbutler) / Slack: `@Jesse Butler`) | |
+| Release Notes | Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`) | |
+| Communications | Karen Chu ([@karenhchu](https://github.com/karenhchu) / Slack: `@karenhchu`) | |
+| Emeritus Adviser | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard) / Slack: `@jerickar`) | |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
