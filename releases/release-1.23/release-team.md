@@ -2,7 +2,7 @@
 
 | **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
-| Lead | Rey Lejano ([@reylejano](https://github.com/reylejano)) / Slack: `@rlejano` |  |
+| Lead | Rey Lejano ([@reylejano](https://github.com/reylejano)) / Slack: `@rlejano` | James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) / Slack: `@james.laverack`), Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@Joseph`), Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkorbi`), Menna Elmasry ([@MonzElmasry](https://github.com/MonzElmasry) / Slack: `@Menna`) |
 | Enhancements | Xander Grzywinski ([@salaxander](https://github.com/salaxander)) / Slack: `@Xander` | |
 | CI Signal | Hossein Salahi ([@encodeflush](https://github.com/encodeflush)) / Slack: `@hsalahi` | |
 | Bug Triage | Christoph Voigt ([@voigt](https://github.com/voigt)) / Slack: `@Christoph Voigt` | |
