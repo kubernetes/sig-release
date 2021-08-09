@@ -43,7 +43,7 @@ The 1.22 release cycle is proposed as follows:
 - **Thursday, July 15th**: Week 12 - [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday, July 27th**: Week 14 - Docs must be completed and reviewed
 - **Wednesday, August 4th**: Week 15 - Kubernetes v1.22.0 released
-- **TBD**: Week 16 - Release Retrospective
+- **Thursday August 19**: Week 16 - [Release Retrospective](https://zoom.us/j/91768411674?pwd=MVpqL0ZHbGFYMnpXVXpybTBvalFRQT09) at 10:00 AM (PDT) at the Kubernetes Community Meeting
 
 ## Timeline
 
