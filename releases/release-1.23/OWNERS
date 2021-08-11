@@ -1,0 +1,17 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - jeremyrickard           # Emeritus Adviser
+  - reylejano               # Release Team Lead
+  - JamesLaverack           # Release Team Lead Shadow
+  - jrsapi                  # Release Team Lead Shadow
+  - mkorbi                  # Release Team Lead Shadow
+  - MonzElmasry             # Release Team Lead Shadow
+
+reviewers:
+  - salaxander            # Enhancements
+  - encodeflush           # CI Signal
+  - voigt                 # Bug Triage
+  - karenhchu             # Communications
+  - jlbutler              # Docs
+  - cici37                # Release Notes
