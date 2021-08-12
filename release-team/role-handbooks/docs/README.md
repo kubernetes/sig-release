@@ -20,7 +20,7 @@ This document covers the responsibilities, time commitments, and timeline for Do
 |----------------------|---------------------------------------------|----------------------------------------------------------|
 | [current release]    | Active Kubernetes release                   | 1.13                                                     |
 | [future release]     | Release that the team is actively composing | 1.14                                                     |
-| [integration branch] | A PR [WIP] merging dev branch into master   | [link](https://github.com/kubernetes/website/pull/11401) |
+| [integration branch] | A PR [WIP] merging dev branch into main   | [link](https://github.com/kubernetes/website/pull/11401) |
 |  ⚠️                   | Stresses extra importance                   |                                                          |
 
 ## Docs Lead Responsibilities
@@ -63,8 +63,9 @@ General time requirements for leads and shadows are:
 
 In addition to the time requirements above, a Docs Lead must:
 
-- Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/). Access can be requested by creating a [PR](https://github.com/kubernetes/org/pull/2235) against `kubernetes/org` repo.
-- Have the ability to `/approve` PRs. Access can be requested by creating a [PR](https://github.com/kubernetes/website/pull/20351) against `master` branch.
+- Have the ability to add a milestone to issues, so must be a member of the [website milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/). Access can be requested by creating a [PR](https://github.com/kubernetes/org/pull/2235) against `kubernetes/org` repo.
+> Note: access to see [website milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/) is restricted to Kubernetes GitHub org members
+- Have the ability to `/approve` PRs. Access can be requested by creating a [PR](https://github.com/kubernetes/website/pull/20351) against `main` branch.
 
 ### Prerequisites for Shadows
 
