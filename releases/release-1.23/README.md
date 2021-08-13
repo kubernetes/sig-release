@@ -38,6 +38,7 @@ description: |
 The 1.23 release cycle is proposed as follows:
 
 - **Monday, August 23, 2021**: Week 1 - Release cycle begins
+- **Thursday, September 2, 2021**: Week 2 - [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **Thursday, September 9, 2021**: Week 3 - [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Tuesday, November 16, 2021**: Week 13 - [Code Freeze](../release_phases.md#code-freeze)
 - **Tuesday, November 23, 2021**: Week 14 - [Test Freeze](../release_phases.md#test-freeze)
@@ -54,6 +55,7 @@ The 1.23 release cycle is proposed as follows:
 | 1.23.0-alpha.1 released | Branch Manager | Wed August 25, 2021 | week 1 | |
 | Schedule finalized | Lead | Thu August 26, 2021 | week 1 | |
 | Team finalized | Lead | Fri August 27, 2021 | week 1 | |
+| Production Readiness Soft Freeze | Enhancements Lead | Thu September 2, 2021 | week 2 | |
 | Start Release Notes Draft | Release Notes Lead | Tue September 7, 2021 | week 3 | |
 | **Begin [Enhancements Freeze]** (23:59 PDT) | Enhancements Lead | Thu September 9, 2021 | week 3 | [master-blocking], [master-informing] |
 | 1.23.0-alpha.2 released | Branch Manager | TBD | TBD | |
