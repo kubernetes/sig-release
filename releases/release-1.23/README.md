@@ -14,10 +14,10 @@ description: |
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.23/README.md)
 * [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.23/release-team.md)
-* [Meeting Minutes](http://bit.ly/k8s122-releasemtg) (join [kubernetes-sig-release@] to receive meeting invites)
+* [Meeting Minutes](http://bit.ly/k8s123-releasemtg) (join [kubernetes-sig-release@] to receive meeting invites)
 * [v1.23 Release Calendar][k8s123-calendar]
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
-* [Internal Contact Info][Internal Contact Info] (accessible only to members of [kubernetes-release-team@])
+* [Internal Contact Info][http://bit.ly/k8s123-contacts] (accessible only to members of [kubernetes-release-team@])
 
 #### Tracking docs
 
@@ -25,8 +25,8 @@ description: |
 * [Feature blog Tracking Sheet](TBD)
 * [Bug Triage Tracking Sheet](TBD)
 * CI Signal Report: TODO
-* [Retrospective Document][Retrospective Document]
-* [kubernetes/sig-release v1.23 milestone](https://github.com/kubernetes/kubernetes/milestone/51)
+* [Retrospective Document][http://bit.ly/k8s123-retro]
+* [kubernetes/sig-release v1.23 milestone](https://github.com/kubernetes/kubernetes/milestone/56)
 
 #### Guides
 
