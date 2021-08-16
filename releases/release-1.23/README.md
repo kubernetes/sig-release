@@ -17,7 +17,7 @@ description: |
 * [Meeting Minutes](http://bit.ly/k8s123-releasemtg) (join [kubernetes-sig-release@] to receive meeting invites)
 * [v1.23 Release Calendar][k8s123-calendar]
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
-* [Internal Contact Info][http://bit.ly/k8s123-contacts] (accessible only to members of [kubernetes-release-team@])
+* [Internal Contact Info][Internal Contact Info] (accessible only to members of [kubernetes-release-team@])
 
 #### Tracking docs
 
@@ -25,7 +25,7 @@ description: |
 * [Feature blog Tracking Sheet](TBD)
 * [Bug Triage Tracking Sheet](TBD)
 * CI Signal Report: TODO
-* [Retrospective Document][http://bit.ly/k8s123-retro]
+* [Retrospective Document][Retrospective Document]
 * [kubernetes/sig-release v1.23 milestone](https://github.com/kubernetes/kubernetes/milestone/56)
 
 #### Guides
@@ -90,8 +90,8 @@ The 1.23 release cycle is proposed as follows:
 Please refer to the [release phases document](../release_phases.md).
 
 [k8s123-calendar]: https://bit.ly/k8s-release-cal
-[Internal Contact Info]: TBD
-[Retrospective Document]: https://TBD
+[Internal Contact Info]: http://bit.ly/k8s123-contacts
+[Retrospective Document]: http://bit.ly/k8s123-retro
 
 [Enhancements Freeze]: ../release_phases.md#enhancements-freeze
 [Burndown]: ../release_phases.md#burndown
