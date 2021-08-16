@@ -62,7 +62,6 @@ As you work through the checklist, use the following PRs as guides:
   - `release-managers@`
 - [ ] Manually grant access on the following Google Groups:
   - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team) (Add as Manager)
-  - [kubernetes-sig-leads](https://groups.google.com/forum/#!forum/kubernetes-sig-leads) (Add as Member)
 - [ ] Grant calendar access
 - [ ] Grant Zoom credentials (host key)
 - [ ] Add incoming leads to `release-team-leads` Slack Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
