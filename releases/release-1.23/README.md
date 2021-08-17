@@ -100,7 +100,7 @@ Please refer to the [release phases document](../release_phases.md).
 [Thaw]: ../release_phases.md#thaw
 [Test Freeze]: ../release_phases.md#test-freeze
 
-[kubernetes-release-team@]: https://groups.google.com/a/kubernetes.io/g/release-team
+[release-team@]: https://groups.google.com/a/kubernetes.io/g/release-team
 [release-team@]: https://github.com/kubernetes/sig-release/blob/master/releases/release-1.23/release-team.md
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
