@@ -13,11 +13,11 @@ description: |
 #### Links
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.23/README.md)
-* [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.23/release-team.md)
-* [Meeting Minutes](http://bit.ly/k8s122-releasemtg) (join [kubernetes-sig-release@] to receive meeting invites)
+* [Release Team][release-team@]
+* [Meeting Minutes](http://bit.ly/k8s123-releasemtg) (join [kubernetes-sig-release@] to receive meeting invites)
 * [v1.23 Release Calendar][k8s123-calendar]
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
-* [Internal Contact Info][Internal Contact Info] (accessible only to members of [kubernetes-release-team@])
+* [Internal Contact Info] (accessible only to members of [release-team@])
 
 #### Tracking docs
 
@@ -26,7 +26,7 @@ description: |
 * [Bug Triage Tracking Sheet](TBD)
 * CI Signal Report: TODO
 * [Retrospective Document][Retrospective Document]
-* [kubernetes/sig-release v1.23 milestone](https://github.com/kubernetes/kubernetes/milestone/51)
+* [kubernetes/sig-release v1.23 milestone](https://github.com/kubernetes/kubernetes/milestone/56)
 
 #### Guides
 
@@ -90,8 +90,8 @@ The 1.23 release cycle is proposed as follows:
 Please refer to the [release phases document](../release_phases.md).
 
 [k8s123-calendar]: https://bit.ly/k8s-release-cal
-[Internal Contact Info]: TBD
-[Retrospective Document]: https://TBD
+[Internal Contact Info]: https://bit.ly/k8s123-contacts
+[Retrospective Document]: https://bit.ly/k8s123-retro
 
 [Enhancements Freeze]: ../release_phases.md#enhancements-freeze
 [Burndown]: ../release_phases.md#burndown
@@ -100,7 +100,7 @@ Please refer to the [release phases document](../release_phases.md).
 [Thaw]: ../release_phases.md#thaw
 [Test Freeze]: ../release_phases.md#test-freeze
 
-[kubernetes-release-team@]: https://groups.google.com/a/kubernetes.io/g/release-team
+[release-team@]: https://groups.google.com/a/kubernetes.io/g/release-team
 [kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
 [#sig-release]: https://kubernetes.slack.com/messages/sig-release/
 [kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
