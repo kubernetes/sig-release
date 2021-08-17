@@ -90,7 +90,7 @@ The 1.23 release cycle is proposed as follows:
 Please refer to the [release phases document](../release_phases.md).
 
 [k8s123-calendar]: https://bit.ly/k8s-release-cal
-[Internal Contact Info]: http://bit.ly/k8s123-contacts
+[Internal Contact Info]: https://bit.ly/k8s123-contacts
 [Retrospective Document]: http://bit.ly/k8s123-retro
 
 [Enhancements Freeze]: ../release_phases.md#enhancements-freeze
