@@ -17,7 +17,7 @@ description: |
 * [Meeting Minutes](http://bit.ly/k8s123-releasemtg) (join [kubernetes-sig-release@] to receive meeting invites)
 * [v1.23 Release Calendar][k8s123-calendar]
 * Contact: [#sig-release] on slack, [kubernetes-release-team@] on e-mail
-* [Internal Contact Info][Internal Contact Info] (accessible only to members of [kubernetes-release-team@]/[release-team@])
+* [Internal Contact Info] (accessible only to members of [release-team@])
 
 #### Tracking docs
 
