@@ -1,7 +1,6 @@
 aliases:
   sig-release-leads:
     - cpanato # SIG Technical Lead
-    - hasheddan # SIG Technical Lead
     - jeremyrickard # SIG Technical Lead
     - justaugustus # SIG Chair
     - LappleApple # SIG Program Manager
@@ -9,7 +8,6 @@ aliases:
     - saschagrunert # SIG Chair
   release-engineering-approvers:
     - cpanato # Release Manager
-    - hasheddan # subproject owner / Release Manager
     - puerco # Release Manager
     - saschagrunert # subproject owner / Release Manager
     - justaugustus # subproject owner / Release Manager
@@ -27,7 +25,6 @@ aliases:
     - wilsonehusin # Release Manager Associate
   release-team:
     - alejandrox1 # subproject owner / 1.18 RT Lead
-    - hasheddan # subproject owner
     - jeremyrickard # subproject owner / 1.20 RT Lead
     - justaugustus # subproject owner
     - onlydole # subproject owner / 1.19 RT Lead
@@ -47,7 +44,6 @@ aliases:
     - savitharaghunathan # 1.22 RT Lead
     - reylejano # 1.23 RT Lead
   ci-signal-role:
-    - hasheddan # 1.19
     - RobertKielty # 1.20
     - thejoycekung # 1.21
     - mkorbi # 1.22
