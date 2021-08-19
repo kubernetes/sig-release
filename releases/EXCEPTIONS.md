@@ -6,13 +6,15 @@ While the enhancement complete milestone dates are published well in advance, an
 
 ## Exception Criteria
 
-Exceptions will be granted on the basis of *risk* and *length of exception required*.
+Exceptions will be granted on the basis of *risk*, *length of exception required*, and *timeliness of exception request*.
 
 The enhancement coming in late should represent a **low risk to the Kubernetes system** - it should not risk other areas of the code, and it should itself be well contained and tested.
 
 An issue must be opened for the enhancement in the [enhancements repo](https://github.com/kubernetes/enhancements/issues).
 
 The length of exception needed should be on the order of days, not weeks. If there are 3 PRs in and 1 still waiting review, that's a much stronger case than a enhancement that doesn't have any PRs out yet.
+
+Exceptions should be filed at the earliest oppitunity, including before the deadline if it is likely to miss.
 
 ## Requesting an exception
 
