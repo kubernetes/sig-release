@@ -24,14 +24,12 @@ aliases:
     - verolop # Release Manager Associate
     - wilsonehusin # Release Manager Associate
   release-team:
-    - alejandrox1 # subproject owner / 1.18 RT Lead
     - jeremyrickard # subproject owner / 1.20 RT Lead
     - justaugustus # subproject owner
     - onlydole # subproject owner / 1.19 RT Lead
     - palnabarun # subproject owner / 1.21 RT Lead
     - reylejano # 1.23 RT Lead
     - savitharaghunathan # subproject owner / 1.22 RT Lead
-    - tpepper # subproject owner
   build-admins:
     - amwat
     - BenTheElder
