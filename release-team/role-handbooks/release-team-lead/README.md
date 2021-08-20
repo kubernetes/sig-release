@@ -184,7 +184,8 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md **Note: Do not ship the release on a Monday, to avoid preparing for the release on a weekend. Aim for Tuesday.**
 - Send an update to [kubernetes-dev] and [kubernetes-sig-leads] mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
-- Create the retrospective document and corresponding bit.ly link
+- Create the retrospective document and corresponding bit.ly link.  Insert this link in the list of retrospectives in the header of the
+  [kubernetes-community-meeting](Kubernetes Community Meeting Topics) document.
 - Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
 - Request, in coordination with CI Signal Lead, a representative from SIG-Scalability to give a weekly update on the release meeting notes. Prepare to have a release team representative attend SIG-scalability's meeting two or three times throughout the release.
@@ -343,6 +344,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 [ci-signal]: /release-team/role-handbooks/ci-signal/README.md
 [discourse]: https://discuss.kubernetes.io/
 [k/enhancements]: https://git.k8s.io/enhancements
+[kubernetes-community-meeting]: https://bit.ly/k8scommunity
 [kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
 [kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team
 [kubernetes-sig-release]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
