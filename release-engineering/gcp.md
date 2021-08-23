@@ -55,4 +55,4 @@ To date, the following projects have access to decrypt KMS assets:
 - `k8s-staging-kubernetes`
 - `k8s-staging-releng`
 
-[release-managers]: /release-managers.md
+[release-managers]: https://git.k8s.io/website/content/en/releases/release-managers.md

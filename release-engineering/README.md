@@ -20,6 +20,7 @@
   - [Monthly](#monthly)
   - [Ongoing](#ongoing)
   - [Ad Hoc/As Needed](#ad-hocas-needed)
+- [Handbooks](#handbooks)
 
 ## Communication Channels, and How We Use Them
 
@@ -32,7 +33,7 @@
 
 - We strongly encourage you to raise questions about our work in the [#release-management](https://kubernetes.slack.com/messages/release-management) channel and *not* via direct messages. This enables us to avoid duplicating conversations, and drives transparency and knowledge exchange.
 - To prompt a discussion thread, we post a question or issue in brief (1-3 lines) and use the spool-of-thread emoticon to draw attention to it.
-- To post several discussion topics or questions at one time, please post them individually in the channel. This helps us to keep discussion focused. 
+- To post several discussion topics or questions at one time, please post them individually in the channel. This helps us to keep discussion focused.
 
 ### Mailing List
 
@@ -40,16 +41,16 @@ We use the [kubernetes-sig-release@ mailing list](https://groups.google.com/foru
 
 ### GitHub Project Board
 
-Release Engineering's work involves several repositories in the project ecosystem, so we keep track of our backlog [here](https://github.com/orgs/kubernetes/projects/30). This is a great place to look if you're a newcomer looking to help out, as it includes unassigned, `help wanted` and `good first issue` cards. 
+Release Engineering's work involves several repositories in the project ecosystem, so we keep track of our backlog [here](https://github.com/orgs/kubernetes/projects/30). This is a great place to look if you're a newcomer looking to help out, as it includes unassigned, `help wanted` and `good first issue` cards.
 
 ### Meetings
 
-Release Engineering meetings take place every other Tuesday at 7:30am PT / 14:30 UTC and last 60 minutes. 
+Release Engineering meetings take place every other Tuesday at 7:30am PT / 14:30 UTC and last 60 minutes.
 
 - We set the core meeting agenda by the previous Friday, leaving time for open discussion/spontaneous topics. Topics come from group members.
-- Meetings are recorded and follow the Kubernetes Code of Conduct. 
+- Meetings are recorded and follow the Kubernetes Code of Conduct.
 - A SIG Release Chair facilitates.
-- A volunteer takes notes to create a decision log and call out questions and Action Items (AIs). 
+- A volunteer takes notes to create a decision log and call out questions and Action Items (AIs).
   - Notetakers shouldn’t feel obligated to transcribe discussions; we record meetings to eliminate this need.
 - Meetings cover critical Release Engineering deliverables, policies, and processes.
 - We aim to have at least three different people present topics per meeting, to drive inclusivity.
@@ -67,7 +68,7 @@ Sometimes group members hold small meetings to exchange knowledge. If you want t
 
 ## How We Discuss Work
 
-We’re biased toward asynchronous communication, but use our bimonthly meetings, Zoom calls, and Slack whenever questions arise that require discussion. 
+We’re biased toward asynchronous communication, but use our bimonthly meetings, Zoom calls, and Slack whenever questions arise that require discussion.
 
 For discussions related to work in progress, team priorities, policies and practices, and complex implementations:
 - We recommend starting a discussion via meetings and GitHub issues.
@@ -94,19 +95,19 @@ We follow this flow:
 
 If you’re making code changes and unsure about something, open the PR with a hold (`do-not-merge/hold`). This gives us time for discussion and collecting input from critical stakeholders.
 
-We do not bypass the “at least one reviewer” rule, so please wait for a review. 
+We do not bypass the “at least one reviewer” rule, so please wait for a review.
 
 ### Communicating Your Availability: Quick Tips
 
 - We don’t require people to work on nights and weekends. However, if they are the times you want to dedicate to the project, feel free to do so. It's also important to note that for some contributors the weekend starts on a Thursday, and that meetings scheduled on Friday are an inconvenience.
     - We don't cut releases on Mondays precisely to preserve everyone’s weekends.
-- Communicate honestly and openly about what you can and can’t do, and please ask for help. 
+- Communicate honestly and openly about what you can and can’t do, and please ask for help.
 - If you ever feel workload-related pressure, please reach out to the SIG Release Chairs, Tech Leads, and/or Release Managers.
 - When you're not sure what to work on, ping/@ the leads in the #release-management Slack channel. Doing this can inform others with the same question.
 
 ### Handing Over Work That You Can't Finish: Steps
 
-- First, bring it up in a Slack channel post that you can’t finish something. 
+- First, bring it up in a Slack channel post that you can’t finish something.
 - If no one responds within 2-3 days, cc @leads to raise awareness.
 - Once someone claims the issue from you, unassign yourself from the GitHub issue.
 - If the matter is not urgent, you can raise it at the Release Engineering. This tends to be successful and increases visibility around the issue.
@@ -114,7 +115,7 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 
 ### Tracking Progress
 
-- We use our [project board](https://github.com/orgs/kubernetes/projects/30) and try to review it during the Release Engineering meeting. 
+- We use our [project board](https://github.com/orgs/kubernetes/projects/30) and try to review it during the Release Engineering meeting.
     - Note that project boards also exist for [SIG Release](https://github.com/orgs/kubernetes/projects/23) and the [Release Team](https://github.com/orgs/kubernetes/projects/29).
 - As of Autumn 2020 SIG Release is setting up an instance of Triage Party to accelerate and automate triaging issues.
 - We organize our work into sub-themes based on urgency and impact, and identify drivers of those topics.
@@ -137,7 +138,7 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 [This page](https://github.com/kubernetes/sig-release/blob/master/release-managers.md) provides details about the different roles in Release Engineering, along with requirements for moving up the "career ladder."
 
 ### For Newcomers
-At Release Engineering meetings, we like to give newcomers a happy and warm welcome. We also give space for newcomers to introduce themselves and their motivations/interests for joining. However, if you prefer not to speak during your first meeting we'll respect that. 
+At Release Engineering meetings, we like to give newcomers a happy and warm welcome. We also give space for newcomers to introduce themselves and their motivations/interests for joining. However, if you prefer not to speak during your first meeting we'll respect that.
 
 As of Autumn 2020 we're developing a Buddy Program to improve our onboarding. Here's how it will work:
 
@@ -145,7 +146,7 @@ As of Autumn 2020 we're developing a Buddy Program to improve our onboarding. He
 - Newcomers can request a Buddy (a Release Manager), who will also be shadowed/supported by up to two Release Manager Associates.
 - Buddies will come from the same general time zone area and, as often as possible, share the same language.
 - Work-related conversations should take place in the Slack channel as much as possible to help other newcomers onboard.
- 
+
 More information about the Buddy Program is available [on this page](https://github.com/kubernetes/sig-release/blob/master/release-managers.md).
 
 ## Schedule of Recurring Work
@@ -156,12 +157,12 @@ These topics recur for release engineering during every release cycle. To keep t
 
 - Cherry pick triage and approval
 - Provide status updates at Release Team meetings
- 
+
 ### Bimonthly
 
 -  k/release updates
    - Go dependencies / go.mod updates
-     - We don’t deliver k/release binaries to users, but toolchain artifacts may leak into the actual 
+     - We don’t deliver k/release binaries to users, but toolchain artifacts may leak into the actual
 Kubernetes project delivered artifacts—making it important for these dependencies to be updated from a security perspective.
    - Push new semver tags to demarcate a release or preferred consumable instance of the release tooling.
 
@@ -171,7 +172,7 @@ Kubernetes project delivered artifacts—making it important for these dependenc
  - A week before each patch deadline, notify the community of the pending deadline.
  - A week before each patch deadline, generate an updated status report on all cherry picks and share it.
  - Cut the three most recent minor versions.
- - Communicate to the community ahead of the final release from a release branch, to ensure 
+ - Communicate to the community ahead of the final release from a release branch, to ensure
 that any final cherry-pick content is merged ahead of that last release.
  - Deprovision CI for the oldest release branch after its last release.
  - Golang versions in Kubernetes
@@ -195,7 +196,7 @@ that any final cherry-pick content is merged ahead of that last release.
 ### Ongoing
 
 - Cut prereleases (Alpha, Beta, Release Candidate) for the minor release in development.
- 
+
 ### Ad Hoc/As Needed
 
 - Update Golang versions in Kubernetes.
@@ -208,6 +209,13 @@ that any final cherry-pick content is merged ahead of that last release.
   - Publishing bot updates
     - The bot runs on a schedule but sometimes breaks, requiring ad hoc fixes.
   - Curation of the [base images exception list](https://github.com/kubernetes/sig-release/blob/master/release-engineering/baseimage-exception-list.md) (most of this list is complete; more info [here](https://github.com/kubernetes/enhancements/issues/1729)).
-  - Maintaining instructions on how to consume all above official artifacts, plus variations for how 
+  - Maintaining instructions on how to consume all above official artifacts, plus variations for how
 consumers can test pre-release Alpha/Beta/RC artifacts
   - push-build.sh maintenance, until it goes away
+
+### Handbooks
+
+- [Onboarding and Tooling](./handbooks/onboarding-and-tooling.md)
+- [Release Cycle Handbook](./handbooks/release-cycle-handbook.md)
+- [Patch Management Handbook](./handbooks/release-cycle-handbook.md#patch-release-handbook)
+- [Golang Updates/Upgrades Handbook](./handbooks/go-updates.md)
