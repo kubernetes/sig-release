@@ -1,0 +1,8 @@
+pr: 104119
+releasenote:
+  text: |-
+    The `apiserver` exposes 4 new metrics that allow to track the status of the Service CIDRs allocations:
+        - current number of available IPs per Service CIDR
+        - current number of used IPs per Service CIDR
+        - total number of allocation per Service CIDR
+        - total number of allocation errors per ServiceCIDR

@@ -1,0 +1,4 @@
+pr: 103796
+releasenote:
+  text: The `AllowInsecureBackendProxy` feature gate is removed. It reached GA in
+    Kubernetes 1.21.

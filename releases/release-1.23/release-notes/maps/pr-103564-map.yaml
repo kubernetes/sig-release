@@ -1,0 +1,4 @@
+pr: 103564
+releasenote:
+  text: Expose a `NewUnstructuredExtractor` from apply configurations `meta/v1` package
+    that enables extracting objects into unstructured apply configurations.

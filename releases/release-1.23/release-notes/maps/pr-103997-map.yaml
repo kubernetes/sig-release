@@ -1,0 +1,3 @@
+pr: 103997
+releasenote:
+  text: 'Fix: ignore non-VMSS error for VMAS nodes in `reconcileBackendPools`.'

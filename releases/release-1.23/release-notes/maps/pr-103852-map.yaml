@@ -1,0 +1,4 @@
+pr: 103852
+releasenote:
+  text: Fixed a bug which kubectl would emit duplicate warning messages for flag names
+    that contain an underscore and recommend using a nonexistent flag in some cases.

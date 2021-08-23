@@ -1,0 +1,4 @@
+pr: 103538
+releasenote:
+  text: The flag `--deployment-controller-sync-period` has been deprecated and will
+    be removed in v1.24.

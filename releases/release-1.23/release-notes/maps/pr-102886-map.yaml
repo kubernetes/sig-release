@@ -1,0 +1,3 @@
+pr: 102886
+releasenote:
+  text: Allow node expansion of local volumes.

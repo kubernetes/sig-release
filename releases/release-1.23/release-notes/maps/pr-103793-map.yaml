@@ -1,0 +1,4 @@
+pr: 103793
+releasenote:
+  text: Deprecate `apiserver_longrunning_gauge` and `apiserver_register_watchers`
+    in 1.23.0.

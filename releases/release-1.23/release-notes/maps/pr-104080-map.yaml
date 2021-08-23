@@ -1,0 +1,3 @@
+pr: 104080
+releasenote:
+  text: Surface warning when users don't set `propagationPolicy` for jobs while deleting.

@@ -1,0 +1,3 @@
+pr: 101789
+releasenote:
+  text: The `CSIDriver.Spec.StorageCapacity` can now be modified.

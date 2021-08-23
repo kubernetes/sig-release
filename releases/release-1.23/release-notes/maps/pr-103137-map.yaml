@@ -1,0 +1,4 @@
+pr: 103137
+releasenote:
+  text: Graceful node shutdown, allow the actual inhibit delay to be greater than
+    the expected inhibit delay.

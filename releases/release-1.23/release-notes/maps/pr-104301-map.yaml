@@ -1,0 +1,3 @@
+pr: 104301
+releasenote:
+  text: Update Go used to build migrate script in etcd image to v1.16.7.
