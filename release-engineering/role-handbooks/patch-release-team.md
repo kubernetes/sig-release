@@ -561,11 +561,11 @@ next patch release.
 
 ### Security release
 
-The Product Security Committee (PSC) will contact you via the [Security Release Team][security-release-team]
+The Security Response Committee (SRC) will contact you via the [Security Release Team][security-release-team]
 mailing list if security releases are needed on branches.
 
 In contrast to a normal release, you must not make any public announcements
-or push tags or release artifacts to public repositories until the PSC tells you to.
+or push tags or release artifacts to public repositories until the SRC tells you to.
 
 See the [Security Release Process](https://git.k8s.io/security/security-release-process.md)
 doc for more details.

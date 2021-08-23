@@ -211,16 +211,16 @@ It is also highly recommended to glance over the [Release Commands Cheat Sheet](
 
 Prior to cutting a release version, [open a "Cut a Release" issue](https://github.com/kubernetes/sig-release/issues/new?template=cut-release.md&title=Cut+1.x.y-%7Balpha%2Cbeta%2Crc%7D.z+release) on [kubernetes/sig-release](https://github.com/kubernetes/sig-release).
 
-On the issue template, there are comments describing the predefined items that 
+On the issue template, there are comments describing the predefined items that
 need to be completed.
 
 #### Testgrid Screenshots
 
 For the item `Screenshot unhealthy release branch testgrid boards...`:
 
-`krel testgridshot` takes care of generating screenshots of 
-[Testgrid](https://testgrid.k8s.io/) to keep as a reference of the state 
-it was in before cutting a release. This subcommand will generate images 
+`krel testgridshot` takes care of generating screenshots of
+[Testgrid](https://testgrid.k8s.io/) to keep as a reference of the state
+it was in before cutting a release. This subcommand will generate images
 of the boards and upload them to a Cloud Storage bucket, as well as the
 Markdown code.
 
@@ -241,20 +241,20 @@ Once the script generates the Markdown table, post it as a comment on the create
 
 #### Adding data about the Cloud Build Jobs
 
-When running a release cut, you should open a thread in the 
+When running a release cut, you should open a thread in the
 [#release-management][release-management-url] Slack channel and include links
-to the GCP build console. You can take a look at the 
+to the GCP build console. You can take a look at the
 [following thread][example-release-thread] as an example.
 
 [release-management-url]: https://app.slack.com/client/T09NY5SBT/CJH2GBF7Y
 [example-release-thread]: https://kubernetes.slack.com/archives/CJH2GBF7Y/p1600247891103600
 
-Once mock and nomock runs are complete, data about the jobs launched must be 
+Once mock and nomock runs are complete, data about the jobs launched must be
 collected in the issue. These are assembled in a table and correspond to the
 `Collect metrics, links...` check mark.
 
-After the release process has been completed, get the data table by using the 
-`krel history` subcommand. It will output a markdown table with the options used 
+After the release process has been completed, get the data table by using the
+`krel history` subcommand. It will output a markdown table with the options used
 to run the jobs, links to the GCB logs, and the result of each run.
 
 ```shell
@@ -264,8 +264,8 @@ The generated table is then appended to the release issue, as it can be seen in
 the [following issue for the v1.20.0-alpha.1 release](https://github.com/kubernetes/sig-release/issues/1249#issue-705792603).
 
 
-__Note:__ `krel history` works using the [Default Application 
-Credentials](https://cloud.google.com/sdk/gcloud/reference/auth/application-default) 
+__Note:__ `krel history` works using the [Default Application
+Credentials](https://cloud.google.com/sdk/gcloud/reference/auth/application-default)
 set in your environment. While you may be logged as a user with one or more Google
 accounts in the GCP SDK (which are used in `gsutil`, `gcloud`, etc), you need to
 make sure your user identity is set as DAC as software using the Google Cloud
@@ -399,13 +399,13 @@ To better prepare and see what to expect, this is a sequence of events that took
 
 #### Security fixes
 
-The Product Security Committee (PSC) may contact you via the [Security Release Team][security-release-team]
+The Security Response Committee (SRC) may contact you via the [Security Release Team][security-release-team]
 mailing list if there are security fixes needed on the release branch.
 
 Once the release has been confirmed to contain security fixes, the Branch Manager must inform the current
 Release Team Lead and Lead Shadows. Information pertaining to these fixes is considered need-to-know and should not be disseminated to anyone else on the Release Team.
 
-You must not make any public announcements regarding these fixes unless the PSC tells you to.
+You must not make any public announcements regarding these fixes unless the SRC tells you to.
 
 See the [Security Release Process](https://git.k8s.io/security/security-release-process.md) doc for more details.
 
