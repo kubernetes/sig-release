@@ -52,7 +52,6 @@ The 1.23 release cycle is proposed as follows:
 |---|---|-------|---|---|
 | Start of Release Cycle | Lead | Mon August 23, 2021 | week 1 | [master-blocking] |
 | Start Enhancements Tracking | Enhancements Lead | Mon August 23, 2021| week 1 | |
-| 1.23.0-alpha.1 released | Branch Manager | Wed August 25, 2021 | week 1 | |
 | Schedule finalized | Lead | Thu August 26, 2021 | week 1 | |
 | Team finalized | Lead | Fri August 27, 2021 | week 1 | |
 | Production Readiness Soft Freeze | Enhancements Lead | Thu September 2, 2021 | week 2 | |
