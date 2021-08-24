@@ -44,7 +44,9 @@ The 1.23 release cycle is proposed as follows:
 - **Tuesday, November 23, 2021**: Week 14 - [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday, November 30, 2021**: Week 15 - Docs must be completed and reviewed
 - **Tuesday, December 7, 2021**: Week 16 - Kubernetes v1.23.0 released
-- **TBD**: Week 17 - Release Retrospective
+- **Tuesday, December 14, 2021**: Week 17 - [Release Retrospective][Retrospective Document] part 1
+- **Wednesday, December 15, 2021**: Week 17 - [Release Retrospective][Retrospective Document] part 2
+- **Thursday, December 16, 2021**: Week 17 - [Release Retrospective][Retrospective Document] part 3
 
 ## Timeline
 
@@ -82,7 +84,9 @@ The 1.23 release cycle is proposed as follows:
 | **v1.23.0 released** | Branch Manager | Tue December 7, 2021 | week 16 | |
 | Release blog published | Comms | Tue December 7, 2021 | week 16 | |
 | **[Thaw]** | Branch Manager | Tue December 7, 2021 | week 16 | |
-| Release retrospective | Community | TBD | week 17 | |
+| Release retrospective part 1 (7:30am PST during the SIG Release meeting) | Community | Tue December 14, 2021 | week 17 | |
+| Release retrospective part 2 (10:00am PST) | Community | Wed December 15, 2021 | week 17 | |
+| Release retrospective part 3 (10:00am PST) | Community | Thu December 16, 2021 | week 17 | |
 
 ## Phases
 
