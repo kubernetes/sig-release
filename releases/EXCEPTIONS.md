@@ -14,7 +14,7 @@ An issue must be opened for the enhancement in the [enhancements repo](https://g
 
 The length of exception needed should be on the order of days, not weeks. If there are 3 PRs in and 1 still waiting review, that's a much stronger case than a enhancement that doesn't have any PRs out yet.
 
-Exceptions should be filed at the earliest oppitunity, including before the deadline if it is likely to miss.
+Exceptions should be filed at the earliest opportunity i.e., as soon as it's clear an enhancement may miss the deadline
 
 ## Requesting an exception
 
