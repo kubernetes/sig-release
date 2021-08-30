@@ -53,7 +53,7 @@ Enhancement is one of the most time-intensive areas of the release team, and esp
 
 Note that Enahncements Lead in particular will need to do work **during the week** during the early release, and will need to be available at least daily.
 
-Enhancements shadows have much lower time committments, but can still expect to spend 5+ hours a week during the early release, and ~1–4 hours a week after enhancements freeze. Unlike Enhancements Lead, shadows can expect to do their work largely on weekends if they desire.
+Enhancements shadows can expect to spend ~10–15 hours a week during the early release until enhancements freeze, and ~1–5 hours a week after enhancements freeze. Unlike Enhancements Lead, shadows can expect to do their work largely on weekends if they desire.
 
 ## Mentoring Shadows
 
