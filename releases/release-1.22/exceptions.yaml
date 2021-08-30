@@ -1,0 +1,165 @@
+# Exceptions requests in 1.22
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Savitha Raghunathan ([@savitharaghunathan](https://github.com/savitharaghunathan))
+# Release Team Shadows: Anna Jung ([@annajung](https://github.com/anajung))
+# / Derrik Campau ([@erismaster](https://github.com/erismaster))
+# / Divya Mohan ([@divia-mohan0209](https://github.com/divia-mohan0209))
+# / Kirsten Garrison ([@kikisdeliveryservice](https://github.com/kikisdeliveryservice))
+
+# Enhancements Freeze Exceptions requested in 1.22
+- name: "Volume Populators"
+  issue: 1495
+  date_requested: 2021-05-14
+  date_reviewed: 2021-05-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/bQvLB1youRg"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2742"
+  status: "approved"
+
+- name: "A Single Scoring Plugin for Node Resources"
+  issue: 2458
+  date_requested: 2021-05-14
+  date_reviewed: 2021-05-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/HGpHwSxPEX0"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2741"
+  status: "approved"
+
+- name: "kubectl Commands in Headers"
+  issue: 859
+  date_requested: 2021-05-14
+  date_reviewed: 2021-05-17
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/77-RzG3rcko"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2720"
+    - "https://github.com/kubernetes/enhancements/pull/2747"
+  status: "approved"
+
+- name: "Service Internal Traffic Policy"
+  issue: 2086
+  date_requested: 2021-05-17
+  date_reviewed: 2021-05-18
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/PTRqQTorb7c"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2733"
+  status: "approved"
+
+- name: "Kubelet-in-UserNS"
+  issue: 2033
+  date_requested: 2021-05-18
+  date_reviewed: 2021-05-21
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/eggXiBwlzw8"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/1371"
+  status: "approved"
+
+- name: "Prefer Nominated Node"
+  issue: 1923
+  date_requested: 2021-05-25
+  date_reviewed: 2021-05-25
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/jWgSnHeAf2k"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2764"
+  status: "approved"
+
+- name: "Ensure Secret Pulled Images"
+  issue: 2535
+  date_requested: 2021-05-19
+  date_reviewed: 2021-05-26
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/8uyqgU7TWoo"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/1608"
+  status: "denied"
+
+- name: "CronJobs"
+  issue: 19
+  date_requested: 2021-06-03
+  date_reviewed: 2021-06-04
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/LejSpoeCiWg"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/102529"
+  status: "approved"
+
+- name: "CSR Duration"
+  issue: 2784
+  date_requested: 2021-06-17
+  date_reviewed: 2021-06-22
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/UZUQAIfizkY"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2788"
+  status: "approved"
+
+# Code Freeze Exceptions requested in 1.22
+- name: "kube-scheduler Component Config"
+  issue: 785
+  date_requested: 2021-07-08
+  date_reviewed: 2021-07-08
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/2Zv7SZf-urE"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/99597"
+    - "https://github.com/kubernetes/kubernetes/pull/101822"
+  status: "approved"
+
+- name: "Pod Priority Based Node Graceful Shutdown"
+  issue: 2712
+  date_requested: 2021-07-09
+  date_reviewed: 2021-07-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/7hJL6IHQsYQ"
+  status: "denied"
+
+- name: "add gRPC prove to Pod.Spec.Container.{Liveness,Readiness,Startup}Probe"
+  issue: 2727
+  date_requested: 2021-07-09
+  date_reviewed: 2021-07-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/plpXrDCEMQY"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/102162"
+  status: "denied"
+
+- name: "cAdvisor-less, CRI-full Container and Pod stats"
+  issue: 2371
+  date_requested: 2021-07-09
+  date_reviewed: 2021-07-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/62L_g7_6djk"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/102789"
+    - "https://github.com/kubernetes/kubernetes/pull/103095"
+  status: "denied"
+
+- name: "Configurable Security Context in Ephemeral Containers"
+  issue: 277
+  date_requested: 2021-07-09
+  date_reviewed: 2021-07-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/1A49p2cGl_4"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/99023"
+  status: "approved"
+
+- name: "API Server Tracing"
+  issue: 647
+  date_requested: 2021-07-09
+  date_reviewed: 2021-07-12
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/MR1fdVZPNN8"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/103601"
+    - "https://github.com/kubernetes/kubernetes/pull/103234"
+  status: "approved"
+
+- name: "MaxUnavailable for StatefulSet"
+  issue: 961
+  date_requested: 2021-07-09
+  date_reviewed: 2021-07-12
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/Sht6SZxWf6s"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/82162"
+  status: "denied"
+
+- name: "Add Configurable Grace Period to Probes"
+  issue: 2238
+  date_requested: 2021-07-09
+  date_reviewed: 2021-07-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/2ddU0ur6NaU"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/103168"
+    - "https://github.com/kubernetes/kubernetes/pull/103245"
+  status: "approved"
