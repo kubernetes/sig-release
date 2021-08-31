@@ -59,17 +59,17 @@ The 1.23 release cycle is proposed as follows:
 | Production Readiness Soft Freeze | Enhancements Lead | Thu September 2, 2021 | week 2 | |
 | Start Release Notes Draft | Release Notes Lead | Tue September 7, 2021 | week 3 | |
 | **Begin [Enhancements Freeze]** (23:59 PDT) | Enhancements Lead | Thu September 9, 2021 | week 3 | [master-blocking], [master-informing] |
-| 1.23.0-alpha.2 released | Branch Manager | TBD | TBD | |
-| 1.23.0-alpha.3 released | Branch Manager | TBD | TBD | |
+| 1.23.0-alpha.2 released | Branch Manager | Tue September 14, 2021 | Week 4 | |
+| 1.23.0-alpha.3 released | Branch Manager | Tue September 28, 2021 | Week 6 | |
 | KubeCon NA + Co-located events | | October 11-15, 2021 | week 8 | |
-| 1.23.0-alpha.4 released | Branch Manager | TBD | TBD | |
 | **Begin [Burndown]** (MWF meetings) | Lead | Mon November 1, 2021 | week 11 | [1.23-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Mon November 1, 2021 | week 11 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon November 1, 2021 | week 11 | |
 | **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Tue November 2, 2021 | week 11 | |
+| 1.23.0-alpha.4 released | Branch Manager | Tue November 2, 2021 | Week 11 | |
 | Burndown Meetings daily| Lead | Mon November 15, 2021 | week 13 | |
 | **Begin [Code Freeze]** (18:00 PST) | Branch Manager | Tue November 16, 2021 | week 13 | |
-| 1.23.0-beta.0 released | Branch Manager | Tue November 16, 2021 | week 13 | |
+| 1.23.0-beta.0 released | Branch Manager | Wed November 17, 2021 | week 13 | |
 | Docs deadline - Open placeholder PRs | Docs Lead | Thu November 18, 2021 | week 13 | |
 | **[Test Freeze]** (18:00 PST) | Branch Manager | Tue November 23, 2021 | week 14 | |
 | Docs deadline - PRs ready for review | Docs Lead | Tue November 23, 2021 | week 14 | |
