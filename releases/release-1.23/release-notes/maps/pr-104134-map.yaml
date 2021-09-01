@@ -1,0 +1,7 @@
+pr: 104134
+releasenote:
+  text: 'kubeadm: When adding an etcd peer to an existing cluster, if an error is
+    returned indicating the peer has already been added, this is accepted and a `ListMembers`
+    call is used instead to return the existing cluster. This helps to diminish the
+    exponential backoff when the first AddMember call times out, while still retaining
+    a similar performance when the peer has already been added from a previous call.'

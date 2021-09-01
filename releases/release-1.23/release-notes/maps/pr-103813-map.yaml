@@ -1,0 +1,5 @@
+pr: 103813
+releasenote:
+  text: 'kubeadm: update references to legacy artifacts locations, the `ci-cross`
+    prefix has been removed from the version match as it does not exist in the new
+    `gs://k8s-release-dev` bucket.'

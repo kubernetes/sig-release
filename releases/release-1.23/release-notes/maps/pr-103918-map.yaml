@@ -1,0 +1,5 @@
+pr: 103918
+releasenote:
+  text: "`client-go` event library allows customizing spam filtering function. \nIt
+    is now possible to override `SpamKeyFunc`, which is used by event filtering to
+    detect spam in the events."

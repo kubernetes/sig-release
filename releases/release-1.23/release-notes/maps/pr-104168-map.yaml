@@ -1,0 +1,4 @@
+pr: 104168
+releasenote:
+  text: The `StartupProbe` feature gate that is GA since v1.20 is unconditionally
+    enabled, and can no longer be specified via the `--feature-gates` argument.

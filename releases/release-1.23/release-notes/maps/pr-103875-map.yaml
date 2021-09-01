@@ -1,0 +1,3 @@
+pr: 103875
+releasenote:
+  text: Fixed a regression setting `--audit-log-path=-` to log to stdout in 1.22 pre-release.

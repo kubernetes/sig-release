@@ -1,0 +1,4 @@
+pr: 104102
+releasenote:
+  text: CA, certificate and key bundles for the `generic-apiserver` based servers
+    will be reloaded immediately after the files are changed.

@@ -1,0 +1,3 @@
+pr: 103654
+releasenote:
+  text: The `constants/variables` from k8s.io for STABLE metrics is now supported.

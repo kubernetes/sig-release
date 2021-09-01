@@ -1,0 +1,7 @@
+pr: 103162
+releasenote:
+  text: 'Introduces a new metric: `admission_webhook_request_total` with the following
+    labels: name (string) - the webhook name, type (string) - the admission type,
+    operation (string) - the requested verb, code (int) - the HTTP status code, rejected
+    (bool) - whether the request was rejected, namespace (string) - the namespace
+    of the requested resource.'

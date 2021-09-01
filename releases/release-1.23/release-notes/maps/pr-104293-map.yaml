@@ -1,0 +1,3 @@
+pr: 104293
+releasenote:
+  text: 'Updated Cluster Autosaler to version `1.22.0`. Release notes: https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.22.0.'

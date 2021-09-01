@@ -1,0 +1,10 @@
+pr: 103801
+releasenote:
+  text: 'kubeadm: external etcd endpoints passed in the `ClusterConfiguration` that
+    have Unicode characters are no longer IDNA encoded (converted to Punycode). They
+    are now just URL encoded as per Go''s implementation of RFC-3986, have duplicate
+    "/" removed from the URL paths, and passed like that directly to the `kube-apiserver`
+    `--etcd-servers` flag. If you have etcd endpoints that have Unicode characters,
+    it is advisable to encode them in advance with tooling that is fully IDNA compliant.
+    If you don''t do that, the Go standard library (used in k8s and etcd) would do
+    it for you when making requests to the endpoints.'

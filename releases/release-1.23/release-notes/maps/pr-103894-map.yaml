@@ -1,0 +1,3 @@
+pr: 103894
+releasenote:
+  text: Display Labels when kubectl describe ingress.
