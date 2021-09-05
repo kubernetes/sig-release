@@ -7,7 +7,7 @@
 | CI Signal | Hossein Salahi ([@encodeflush](https://github.com/encodeflush)) / Slack: `@hsalahi` | |
 | Bug Triage | Christoph Voigt ([@voigt](https://github.com/voigt)) / Slack: `@Christoph Voigt` | |
 | Docs | Jesse Butler ([@jlbutler](https://github.com/jlbutler)) / Slack: `@Jesse Butler` | Meha Bhalodiya ([@mehabhalodiya](https://github.com/mehabhalodiya) / Slack: `@mehabhalodiya`), Chris Negus ([@chrisnegus](https://github.com/chrisnegus) / Slack: `@Chris Negus`), Rodolfo Martínez Vega ([@ramrodo](https://github.com/ramrodo) / Slack: `@ramrodo`), Nate Waddington ([@nate-double-u](https://github.com/nate-double-u) / Slack: `@nate-double-u`) |
-| Release Notes | Cici Huang ([@cici37](https://github.com/cici37)) / Slack: `@cici37` | Daman Arora ([@Damans227](https://github.com/Damans227) / Slack: `@Daman Arora`), Lucas Dwyer ([@AuraSinis](https://github.com/AuraSinis) / Slack: `@Lucas Dwyer`), Parul Sahoo ([@parul5sahoo](https://github.com/parul5sahoo) / Slack: `@parul_sahoo`), Sam Cogan ([@sam-cogan](https://github.com/sam-cogan) / Slack: `@samcogan`) |
+| Release Notes | Cici Huang ([@cici37](https://github.com/cici37)) / Slack: `@cici37` | Daman Arora ([@Damans227](https://github.com/Damans227) / Slack: `@Daman`), Lucas Dwyer ([@AuraSinis](https://github.com/AuraSinis) / Slack: `@Lucas Dwyer`), Parul Sahoo ([@parul5sahoo](https://github.com/parul5sahoo) / Slack: `@parul_sahoo`), Sam Cogan ([@sam-cogan](https://github.com/sam-cogan) / Slack: `@samcogan`) |
 | Communications | Karen Chu ([@karenhchu](https://github.com/karenhchu)) / Slack: `@karenhchu` | |
 | Emeritus Adviser | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)) / Slack: `@jerickar` | |
 
