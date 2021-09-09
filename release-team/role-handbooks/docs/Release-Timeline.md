@@ -20,7 +20,7 @@ For each release, the schedule with deliverables is added to the release directo
         - [Before the PRs Ready to Merge Deadline](#before-the-prs-ready-to-merge-deadline)
     - [Reach out to release notes team](#reach-out-to-release-notes-team)
     - [Maintain the current and upcoming `dev` branch](#maintain-the-current-and-upcoming-dev-branch)
-        - [Periodically merge `master` into `dev-[future release]`](#-periodically-merge-master-into-dev-future-release)
+        - [Periodically merge `main` into `dev-[future release]`](#-periodically-merge-main-into-dev-future-release)
     - [Monitor PRs](#monitor-prs)
     - [Enforce deadlines](#enforce-deadlines)
     - [Communicate major deadlines](#communicate-major-deadlines)
@@ -42,7 +42,7 @@ For each release, the schedule with deliverables is added to the release directo
         - [Create the release branch](#create-the-release-branch)
         - [Update Netlify](#update-netlify)
         - [Freeze Kubernetes website](#freeze-kubernetes-website)
-        - [Merge `master`](#merge-master)
+        - [Merge `main`](#merge-main)
         - [Get approvals for open PRs](#get-approvals-for-open-prs)
         - [Review milestone](#review-milestone)
     - [Release Day](#release-day)
@@ -62,6 +62,10 @@ For each release, the schedule with deliverables is added to the release directo
     - [Update Slack](#update-slack)
     - [Clean up access](#clean-up-access)
 - [Celebrate](#celebrate)
+
+
+> Note: The kubernetes/website repo changed from using a `master` branch to a `main` branch in 2021.
+> Be aware that several linked, example PRs uses the `master` branch.
 
 
 ## Early Steps (Weeks 1-2)
@@ -201,7 +205,7 @@ Find .5-1 hour of time to meet with shadows and explain the release process. Wal
 
 1. You need push access to the Kubernetes website repo (contact a SIG Docs chair if you don't have it)
 
-   ⚠️ (**This should be done by the Docs Lead**) Open the [integration branch] by creating a pull request against `master` referencing the `dev-[future release]` branch e.g., the [Release 1.21](https://github.com/kubernetes/website/pull/26153) PR uses the branch `dev-1.21`.
+   ⚠️ (**This should be done by the Docs Lead**) Open the [integration branch] by creating a pull request against `main` referencing the `dev-[future release]` branch e.g., the [Release 1.21](https://github.com/kubernetes/website/pull/26153) PR uses the branch `dev-1.21`.
 
    This release pull request (also known as the [integration branch]) serves as the base for individual, component enhancement PRs of the release. A [integration branch] lets you bundle and merge multiple PRs simultaneously.
 
@@ -213,7 +217,7 @@ Find .5-1 hour of time to meet with shadows and explain the release process. Wal
 
 ### Update the website configuration ahead of the release
 
-Update the main `config.toml` based on the version on the `master` branch. Open a PR for these changes against the `dev-[future release]` branch (which should already exist - this is a good check!)
+Update the main `config.toml` based on the version on the `main` branch. Open a PR for these changes against the `dev-[future release]` branch (which should already exist - this is a good check!)
 
 ```shell
 # Step 1
@@ -224,7 +228,7 @@ cd kubernetes-website
 # Step 2
 # Add the upstream repo as a remote
 git remote add upstream https://github.com/kubernetes/website.git
-git checkout --track master
+git checkout --track main
 git checkout -b config-toml-1.21 # change for the release you're making
 # Step 3
 # Edit config.toml to make the changes described above
@@ -240,7 +244,7 @@ git remote -v
 git push origin config-toml-1.21
 ```
 
-Now create a pull request that targets the next release (here: `dev-1.21`) **not** `master`.
+Now create a pull request that targets the next release (here: `dev-1.21`) **not** `main`.
 
 
 ## Middle Steps (Weeks 3-8)
@@ -358,15 +362,15 @@ Reach out to release notes team to see if there's anything that might need docs 
 
 This allows us to avoid merge conflicts on release day with `dev-[future release]`.
 
-#### ⚠️ Periodically merge `master` into `dev-[future release]`
+#### ⚠️ Periodically merge `main` into `dev-[future release]`
 
-To merge `master` into `dev-[future release]` on your local fork:
+To merge `main` into `dev-[future release]` on your local fork:
 
 ```bash
 # Step 0 (if you don't already have a remote called "upstream")
 git remote add upstream https://github.com/kubernetes/website.git
 # Step 1
-git fetch upstream master
+git fetch upstream main
 # Step 2
 git fetch upstream dev-[future release]
 # Step 3
@@ -374,25 +378,25 @@ git checkout --track upstream/dev-[future release]
 # Step 4
 git pull --ff-only # make sure you're up to date
 # Step 5 You might see merge conflicts at this point.
-git merge upstream/master
+git merge upstream/main
 ## if needed: https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
 ## git add ...
 ## git merge --continue
 # Step 6
-git checkout -b merged-master-dev-[future release]
+git checkout -b merged-main-dev-[future release]
 # Step 7
-git commit -m "Merge master into dev-[future release] to keep in sync"
+git commit -m "Merge main into dev-[future release] to keep in sync"
 # Step 8
-git push origin merged-master-dev-[future release]
+git push origin merged-main-dev-[future release]
 ```
 
-You may need to fix conflicts manually. If somebody has improved a page on `master`, and at the same time it has been updated in the dev branch for the next release, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
+You may need to fix conflicts manually. If somebody has improved a page on `main`, and at the same time it has been updated in the dev branch for the next release, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
 
 When you have completed resolving the differences manually, run `git merge --continue` to complete the merge. Then carry on from step 5.
 
-Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-master-dev-[future release]` by changing the
+Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-main-dev-[future release]` by changing the
 `base` to `dev-[future-release]` when creating the PR.
-e.g. [Merge master into future release](https://github.com/kubernetes/website/pull/16225).
+e.g. [Merge main into future release](https://github.com/kubernetes/website/pull/16225).
 
 ⚠️  **Ensure the PR is passing tests on GitHub**.
 
@@ -518,7 +522,7 @@ You can expect to maintain this branch with periodic updates to the reference do
 Merge your branch `dev-[future-release]-ref-doc` to the `dev-[future release]` branch just before the final release.
 
 If the content has changed since the last build of the reference documentation, when the release is complete, you should
-build the reference documentation again using the final release tag and merge to the `master` branch.
+build the reference documentation again using the final release tag and merge to the `main` branch.
 
 Note: You should not have to build the reference documentation for every release candidate version.
 
@@ -568,7 +572,7 @@ Create a PR against the `dev-[future-release]` branch to update the `config.toml
 
 Let localization teams know about the k/website repo freeze and the tentative timeline(s) for important dates with a comment to the GitHub discussion created earlier in the release cycle.
 
-> Hello localization team leads! I don't think any action is required from you, but I wanted to let you know that we are on track for the release on April 8, 2021 and all Kubernetes website branches are up to date (master, dev-1.21). Let me know if I can help with anything! Thanks!
+> Hello localization team leads! I don't think any action is required from you, but I wanted to let you know that we are on track for the release on April 8, 2021 and all Kubernetes website branches are up to date (main, dev-1.21). Let me know if I can help with anything! Thanks!
 
 ### Day before Release Day
 ⚠️  Everything in this section is important. It's OK to ask for advice if you're not sure.
@@ -591,13 +595,13 @@ git remote set-url --push upstream no_push
 
 #### Create the release branch
 
-Creating the release branch lets you snapshot the current docs in a new branch, `release-[current release]`, after merging `dev-[future release]`. For example: For the 1.21 release cycle where `master` represents `v1.20`, you would create `release-1.20`.
+Creating the release branch lets you snapshot the current docs in a new branch, `release-[current release]`, after merging `dev-[future release]`. For example: For the 1.21 release cycle where `main` represents `v1.20`, you would create `release-1.20`.
 
 > **Note:** Creating a branch requires someone with write access to `k/website`, such as a [SIG Docs co-chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership).
 
-- From [k/website](https://github.com/kubernetes/website) click on `master` branch.
+- From [k/website](https://github.com/kubernetes/website) click on `main` branch.
 - Type the name of the release branch.
-- **click** Create branch `release-x.yy` from `master`
+- **click** Create branch `release-x.yy` from `main`
 
 ![](pics/new-branch.png)
 
@@ -607,32 +611,32 @@ Update the Netlify configuration. (A [SIG Docs chair](https://github.com/kuberne
 
 Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
-- Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `master` (e.g: https://kuberneteio), eventually `master` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
+- Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `main` (e.g: https://kuberneteio), eventually `main` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
   - Taking the defaults here is mostly fine
   - When in doubt, compare it to a working example
   - e.g, site name: k8s-v1-20
   - e.g, custom domain: v1-20.docs.kubernetes.io
 
-> Note: if the `release-[current-branch]` is created before the website is frozen you may need to merge in master to keep up-to-date
+> Note: if the `release-[current-branch]` is created before the website is frozen you may need to merge in main to keep up-to-date
 > If you create the `release-[current-branch]` right before freezing the k/website repo, it is less likely you need to keep the `release-[current-branch] up-to-date but always verify with the following steps:
 
-To merge `master` into `release-[current release]` on your local fork:
+To merge `main` into `release-[current release]` on your local fork:
 
 ```shell
 # Step 0 (if you don't already have a remote called "upstream")
 git remote add upstream https://github.com/kubernetes/website.git
 # Step 1
-git fetch upstream master
+git fetch upstream main
 # Step 2
 git checkout --track upstream/release-[current release]
 # Step 3
-git merge upstream/master
+git merge upstream/main
 # Step 4
-git checkout -b merged-master-release-[current release]
+git checkout -b merged-main-release-[current release]
 # Step 5
-git commit -m "Merge master into release-[current release] to keep in sync"
+git commit -m "Merge main into release-[current release] to keep in sync"
 # Step 6
-git push origin merged-master-release-[current release]
+git push origin merged-main-release-[current release]
 ```
 
 Now create a pull request to merge the new branch you've made into the `release-[current-release]` branch on [k/website](https://github.com/kubernetes/website).
@@ -646,9 +650,9 @@ Now create a pull request to merge the new branch you've made into the `release-
 - Submit an issue with `tide/merge-blocker` label. Depending upon your permissions, a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with adding the label.
 - Submit a freeze announcement following our [protocols](#communicate-major-deadlines)
 
-#### Merge `master`
+#### Merge `main`
 
-After the freeze, create a PR to merge `master` into both dev-[future-release] and release-[current-release] branches.
+After the freeze, create a PR to merge `main` into both dev-[future-release] and release-[current-release] branches.
 After review from SIG Docs, both PRs will need to merge manually using the `Create a merge commit` method of merging.
 
 #### Get approvals for open PRs
@@ -674,7 +678,7 @@ Coordinate with the Release Team for the exact timing. Typically the release is 
 Once release management team has successfully cut the release, Docs Lead will merge the [integration branch] manually using
 the `Create a merge commit` method of merging.
 
-- Remove the hold from the on-hold integration PR when needed and merge into `master`.
+- Remove the hold from the on-hold integration PR when needed and merge into `main`.
 - Check the [Netlify build logs](https://app.netlify.com/sites/kubernetes-io-master-staging/deploys) to make sure the
 site builds successfully.
 - Once the site is up, validate the docs by checking the navigation, version dropdown, [generated APIs](https://kubernetes.io/docs/reference/),
@@ -685,7 +689,7 @@ site builds successfully.
 
 After validation, merge the blog post manually using the `Create a merge commit` method of merging.
 
-- Remove the hold from blog post when needed and merge into `master`.
+- Remove the hold from blog post when needed and merge into `main`.
 - Check the [Netlify build logs](https://app.netlify.com/sites/kubernetes-io-master-staging/deploys) to make sure the
 site builds successfully.
 - Navigate to the [blog page](https://kubernetes.io/blog/) to validate that release blog post is available.
@@ -703,11 +707,11 @@ a notification of the release to the Kubernetes Dev mailing list.
 ```shell
 git clone https://github.com/kubernetes/website/
 cd website
-git checkout master
+git checkout main
 ```
 ```
-Switched to branch 'master'
-Your branch is up to date with 'origin/master'.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
 ```
 Confirm the commit hash before the [integration branch]:
 ```shell
@@ -732,7 +736,7 @@ Proceed with tagging the commit hashes:
 ```shell
 git tag -a snapshot-final-v1.20 6d252624b -m "Release 1.20 final snapshot"
 git tag -a snapshot-initial-v1.21 969a3db92 -m "Release 1.21 initial snapshot"
-git push --tags origin master
+git push --tags origin main
 ```
 
 After creating the tags, you can create a release based off of a tag very easily. Follow the naming conventions as done before and update: https://github.com/kubernetes/website/releases
@@ -777,7 +781,7 @@ These steps should be done after the launch. They require approximately 4 hours 
 
 ### Create the dev-future-FUTURE branch
 
-⚠️ Create a working branch (Named `dev-[future FUTURE release]`, for example `dev-1.22`) locally, based on master. Push it to upstream.
+⚠️ Create a working branch (Named `dev-[future FUTURE release]`, for example `dev-1.22`) locally, based on `main`. Push it to upstream.
 
 ```shell
 # This example is for a future release version 1.22
