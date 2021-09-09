@@ -12,6 +12,7 @@
     - [Get a GitHub token](#get-a-github-token)
     - [Fork the kubernetes repositories](#fork-the-kubernetes-repositories)
 - [Tasks and Responsibilities](#tasks-and-responsibilities)
+  - [Manage permissions](#manage-permissions)
   - [Setup the Tools and Generate the Release Notes](#setup-the-tools-and-generate-the-release-notes)
   - [Periodically review and fix new release notes](#periodically-review-and-fix-new-release-notes)
   - [Attend Release Meetings and follow #sig-release](#attend-Release-Meetings-and-follow-sig-release)
@@ -100,6 +101,13 @@ Fork the following repositories to your GitHub account, and clone them using SSH
  - [`kubernetes-sigs/release-notes`](https://github.com/kubernetes-sigs/release-notes): This repo has the [release notes website](https://relnotes.k8s.io) sources
 
 ## Tasks and Responsibilities
+
+### Manage permissions
+
+Release Notes lead should be responsible for granting team members required access:
+1. Add OWNERS file into release notes directory. [Sample PR](https://github.com/kubernetes/sig-release/pull/1691) for v1.23 release.
+2. Add release notes team members for CHANGELOG review/approval. 
+   [Sample PR](https://github.com/kubernetes/kubernetes/pull/104759) for v1.23 release.
 
 ### Setup the Tools and Generate the Release Notes
 
