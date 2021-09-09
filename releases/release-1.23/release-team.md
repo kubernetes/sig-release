@@ -10,6 +10,7 @@
 | Release Notes | Cici Huang ([@cici37](https://github.com/cici37)) / Slack: `@cici37` | Daman Arora ([@Damans227](https://github.com/Damans227) / Slack: `@Daman`), Lucas Dwyer ([@AuraSinis](https://github.com/AuraSinis) / Slack: `@Lucas Dwyer`), Parul Sahoo ([@parul5sahoo](https://github.com/parul5sahoo) / Slack: `@parul_sahoo`), Sam Cogan ([@sam-cogan](https://github.com/sam-cogan) / Slack: `@samcogan`) |
 | Communications | Karen Chu ([@karenhchu](https://github.com/karenhchu)) / Slack: `@karenhchu` | Ciara Swann ([@cccswann](https://github.com/cccswann) / Slack: `@ciara`), Kaslin Fields ([@kaslin](https://github.com/kaslin) / Slack: `@kaslin`), Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`), Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@mickey`) |
 | Emeritus Adviser | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)) / Slack: `@jerickar` | |
+| Branch Manager | Verónica López ([@Verolop](https://github.com/Verolop)) /  Slack: `@veronica` | Nabarun Pal ([@palnabarun](https://github.com/palnabarun)) / Slack: `@palnabarun`  |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
