@@ -40,11 +40,11 @@ The 1.23 release cycle is proposed as follows:
 - **Monday, August 23, 2021**: Week 1 - Release cycle begins
 - **Thursday, September 2, 2021**: Week 2 - [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **Thursday, September 9, 2021**: Week 3 - [Enhancements Freeze](../release_phases.md#enhancements-freeze)
+- **Wednesday, November 3, 2021**: Week 11 - [Release Retrospective][Retrospective Document] part 1
 - **Tuesday, November 16, 2021**: Week 13 - [Code Freeze](../release_phases.md#code-freeze)
 - **Tuesday, November 23, 2021**: Week 14 - [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday, November 30, 2021**: Week 15 - Docs must be completed and reviewed
 - **Tuesday, December 7, 2021**: Week 16 - Kubernetes v1.23.0 released
-- **Tuesday, December 14, 2021**: Week 17 - [Release Retrospective][Retrospective Document] part 1
 - **Wednesday, December 15, 2021**: Week 17 - [Release Retrospective][Retrospective Document] part 2
 - **Thursday, December 16, 2021**: Week 17 - [Release Retrospective][Retrospective Document] part 3
 
@@ -67,6 +67,7 @@ The 1.23 release cycle is proposed as follows:
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Mon November 1, 2021 | week 11 | |
 | **Begin Feature blog freeze** (23:59 PDT) | Comms Lead | Tue November 2, 2021 | week 11 | |
 | 1.23.0-alpha.4 released | Branch Manager | Tue November 2, 2021 | Week 11 | |
+| Release retrospective part 1 (10:00am PDT) | Community | Wed November 3, 2021 | week 11 | |
 | Burndown Meetings daily| Lead | Mon November 15, 2021 | week 13 | |
 | **Begin [Code Freeze]** (18:00 PST) | Branch Manager | Tue November 16, 2021 | week 13 | |
 | 1.23.0-beta.0 released | Branch Manager | Wed November 17, 2021 | week 13 | |
@@ -84,7 +85,6 @@ The 1.23 release cycle is proposed as follows:
 | **v1.23.0 released** | Branch Manager | Tue December 7, 2021 | week 16 | |
 | Release blog published | Comms | Tue December 7, 2021 | week 16 | |
 | **[Thaw]** | Branch Manager | Tue December 7, 2021 | week 16 | |
-| Release retrospective part 1 (7:30am PST during the SIG Release meeting) | Community | Tue December 14, 2021 | week 17 | |
 | Release retrospective part 2 (10:00am PST) | Community | Wed December 15, 2021 | week 17 | |
 | Release retrospective part 3 (10:00am PST) | Community | Thu December 16, 2021 | week 17 | |
 
