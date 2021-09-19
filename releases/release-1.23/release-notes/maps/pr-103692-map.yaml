@@ -1,0 +1,3 @@
+pr: 103692
+releasenote:
+  text: Kubernetes is now built using go 1.17.

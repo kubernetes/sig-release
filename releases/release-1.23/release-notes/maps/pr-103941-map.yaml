@@ -1,0 +1,3 @@
+pr: 103941
+releasenote:
+  text: Removed deprecated `--seccomp-profile-root`/`seccompProfileRoot` config.

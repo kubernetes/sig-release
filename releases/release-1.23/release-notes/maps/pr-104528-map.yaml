@@ -1,0 +1,3 @@
+pr: 104528
+releasenote:
+  text: Fixed occasional pod cgroup freeze when using cgroup v1 and systemd driver.

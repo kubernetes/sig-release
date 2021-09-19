@@ -1,0 +1,3 @@
+pr: 104571
+releasenote:
+  text: Added support for setting controller-manager log level online.

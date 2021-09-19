@@ -1,0 +1,3 @@
+pr: 104970
+releasenote:
+  text: Updates `debian-iptables` to v1.6.7 to pick up CVE fixes.

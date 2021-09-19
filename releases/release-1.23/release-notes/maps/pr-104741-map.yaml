@@ -1,0 +1,3 @@
+pr: 104741
+releasenote:
+  text: More detailed logging has been added to the EndpointSlice controller for Topology.

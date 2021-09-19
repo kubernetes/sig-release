@@ -1,0 +1,4 @@
+pr: 104796
+releasenote:
+  text: Remove the deprecated flags `--csr-only` and `--csr-dir` from `kubeadm certs
+    renew`. Please use `kubeadm certs generate-csr` instead.

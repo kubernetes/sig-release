@@ -1,0 +1,8 @@
+pr: 96345
+releasenote:
+  text: |-
+    controller-manager: the following flags have no effect and would be removed in v1.24:
+    - `--port`
+    - `--address`
+    The insecure port flags `--port` may only be set to 0 now.
+    Also `metricsBindAddress` and `healthzBindAddress` fields from `kubescheduler.config.k8s.io/v1beta1` are no-op and expected to be empty. Removed in `kubescheduler.config.k8s.io/v1beta2` completely.

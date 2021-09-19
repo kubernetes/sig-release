@@ -1,0 +1,3 @@
+pr: 104705
+releasenote:
+  text: Ignore the case when comparing azure tags in service annotation.

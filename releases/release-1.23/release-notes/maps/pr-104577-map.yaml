@@ -1,0 +1,5 @@
+pr: 104577
+releasenote:
+  text: Fix a regression where the Kubelet failed to exclude already completed pods
+    from calculations about how many resources it was currently using when deciding
+    whether to allow more pods.

@@ -1,0 +1,3 @@
+pr: 92989
+releasenote:
+  text: Add fish shell completion to kubectl.

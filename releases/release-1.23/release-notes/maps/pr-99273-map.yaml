@@ -1,0 +1,3 @@
+pr: 99273
+releasenote:
+  text: Migrate `pkg/scheduler` to structured logging.
