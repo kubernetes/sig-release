@@ -1,0 +1,4 @@
+pr: 103751
+releasenote:
+  text: Scheduler resource metrics over fractional binary quantities (2.5Gi, 1.1Ki)
+    were incorrectly reported as very small values.

@@ -1,0 +1,3 @@
+pr: 104503
+releasenote:
+  text: kube-scheduler now doesn't print any usage message when unknown flag is specified.

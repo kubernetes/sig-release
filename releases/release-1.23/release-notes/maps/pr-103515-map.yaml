@@ -1,0 +1,6 @@
+pr: 103515
+releasenote:
+  text: |-
+    `kube-scheduler` now logs node and plugin scoring  even though --v<10
+    - scores of the top 3 plugins in the top 3 nodes are dumped if --v=4,5
+    - scores of all plugins in the top 6 nodes are dumped if --v=6,7,8,9

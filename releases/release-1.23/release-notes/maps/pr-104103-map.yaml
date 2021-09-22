@@ -1,0 +1,6 @@
+pr: 104103
+releasenote:
+  text: Users of `LogFormatRegistry` in component-base must update their code to use
+    the logr v1.0.0 API. The JSON log output now uses the format from go-logr/zapr
+    (no `v` field for error messages, additional information for invalid calls) and
+    has some fixes (correct source code location for warnings about invalid log calls).

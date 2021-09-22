@@ -1,0 +1,5 @@
+pr: 104590
+releasenote:
+  text: '`volume.kubernetes.io/storage-provisioner` annotation will be added to dynamic
+    provisioning required PVC. `volume.beta.kubernetes.io/storage-provisioner` annotation
+    is deprecated.'

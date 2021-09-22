@@ -1,0 +1,3 @@
+pr: 104667
+releasenote:
+  text: Health check of kube-controller-manager now includes each controller.

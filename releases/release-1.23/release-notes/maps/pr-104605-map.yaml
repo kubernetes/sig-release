@@ -1,0 +1,5 @@
+pr: 104605
+releasenote:
+  text: Better pod events ("waiting for ephemeral volume controller to create the
+    persistentvolumeclaim"" instead of "persistentvolumeclaim not found") when using
+    generic ephemeral volumes.
