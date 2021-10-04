@@ -1,0 +1,18 @@
+pr: 104483
+releasenote:
+  text: client-go impersonation config can specify a UID to pass impersonated uid
+    information through in requests.
+  documentation: []
+  author: margocrawf
+  areas:
+  - test
+  kinds:
+  - api-change
+  - feature
+  sigs:
+  - api-machinery
+  - auth
+  - testing
+  feature: true
+  action_required: false
+  do_not_publish: false
