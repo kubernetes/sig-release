@@ -1,0 +1,4 @@
+pr: 104483
+releasenote:
+  text: Client-go impersonation config can specify a UID to pass impersonated uid
+    information through in requests.

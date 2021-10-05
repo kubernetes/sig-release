@@ -1,0 +1,5 @@
+pr: 104923
+releasenote:
+  text: XFS-filesystems are now force-formatted (option `-f`) in order to avoid problems
+    being formatted due to detection of magic super-blocks. This aligns with the behaviour
+    of formatting of ext3/4 filesystems.

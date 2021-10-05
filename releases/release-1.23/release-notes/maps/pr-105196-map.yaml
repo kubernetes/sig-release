@@ -1,0 +1,4 @@
+pr: 105196
+releasenote:
+  text: Enhanced error message for nodes not selected by scheduler due to pod's PersistentVolumeClaim(s)
+    bound to PersistentVolume(s) that do not exist.

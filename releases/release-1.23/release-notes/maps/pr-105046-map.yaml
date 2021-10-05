@@ -1,0 +1,4 @@
+pr: 105046
+releasenote:
+  text: Fix system default topology spreading when nodes don't have zone labels. Pods
+    correctly spread by default now.

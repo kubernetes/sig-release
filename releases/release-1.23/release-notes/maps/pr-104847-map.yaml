@@ -1,0 +1,4 @@
+pr: 104847
+releasenote:
+  text: When a static pod file is deleted and recreated while using a fixed UID, the
+    pod was not properly restarted.
