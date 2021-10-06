@@ -26,7 +26,7 @@ Responsibilities for the EA are to help enable the Release Team. Activities the 
 * Run a general shadow orientation for folks, explaining the basics of the release team 
 * Check in on leads and shadows throughout the release and offering support to them 
 * Conduct Shadow experience surveys throughout the release cycle and a lead/mentor questionaire at the end of the cycle
-* Facilitate the release retro at the end of the cycle 
+* Facilitate the release retrospectives. The first retrospective is held during the cycle typically during the first week of M, W, F burndown meetings -- typically mid-week. The second and third (if necessary) retrospectives are at the end of the cycle
 
 ## Requirements
 
@@ -71,6 +71,11 @@ Poll the new shadows (eg: [Doodle](Doodle.com)) for their availability to have a
 During the first month or so of the release try to solicit feedback from shadows. This can be done in a survey (similar to the one sent at the end of the cycle).  
 
 Then, throughout the release cycle, do what you can to make sure that the shadows are participating in RT activities, particularly meetings. For example, each Shadow should deliver the Role update during a release meeting or burndown meeting at least once. If a Role Lead is absent from a meeting and no Shadow takes over, that often indicates a problem.
+
+### Retrospectives
+
+Verify availability to faciliate the retrospectives for the release. If unavailable, defer the responsibility as appropriate. The first retrospective is held during the release cycle during the first week of M, W, F burndown meetings -- typically mid-week. The second and third (if necessary) retrospectives are at the end of the cycle.
+
 
 ### Succession
 
