@@ -139,7 +139,7 @@ If you're interested in learning more about how the Release Team is selected, as
 
 ---
 
-**## Milestone Maintainers**
+## Milestone Maintainers
 
 The [milestone maintainers](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-release/release.md#milestone-maintainers) are responsible for adding, adapting, or removing a milestone, e.g. the next major Kubernetes release, on an enhancement, issue, PR.
 
@@ -147,7 +147,7 @@ Across release cycles, a "/milestone" is one of the best signals for [issue tria
 
 Each release cycle, the current Release Team Lead must update membership to the aforementioned GitHub team.
 
-The actual process of maintaining milestones is lived by the SIGs and special elected contributors. The SIG release team steers the enhancement through the release cycle and take care that only well maintained enhancements will make it up to a new major release.
+The actual process of maintaining milestones is owned by the SIGs and special elected contributors. The SIG release team steers the enhancement through the release cycle and take care that only well maintained enhancements will make it up to a new major release.
 ---
 
 ## Filing exceptions
