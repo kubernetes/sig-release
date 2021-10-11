@@ -2,9 +2,9 @@
 
 ## SIG Release Roadmap for 2021 and beyond
 
-This document contains the SIG Release Roadmap for 2021. The status tracking can
-be found at the bottom. More detailed information can be found on the [SIG
-Release][0] and [Release Engineering][1] project boards.
+This document contains the SIG Release Roadmap for 2021 and beyond. More
+detailed information can be found on the [SIG Release][0] and [Release
+Engineering][1] project boards.
 
 [0]: https://github.com/orgs/kubernetes/projects/23
 [1]: https://github.com/orgs/kubernetes/projects/30
@@ -32,20 +32,13 @@ publishing of Kubernetes related artifacts.
 The following deliverables are necessary to achieve the overall goal. Within
 the following listing, all deliverables are sorted by their priority.
 
-1. **Formalize supported release platforms (Introspectable)**
+1. **SLSA compliance in the Kubernetes Release Process**
 
-   https://github.com/kubernetes/sig-release/issues/1337
+   https://github.com/kubernetes/release/issues/2267
 
-   Outcome: Definition of the life cycle for currently supported Kubernetes
-   artifacts and a guideline for the community about how to add new platforms.
-
-1. **Implement a Bill of Materials (BOM) for release artifacts (Introspectable /
-   Secure)**
-
-   https://github.com/kubernetes/release/issues/1837
-
-   Outcome: An automated formal verification of produced release artifacts for
-   every future release.
+   Outcome: Ensure that our release process is [SLSA](https://slsa.dev)
+   compliant. We also intend to participate actively in the development of the
+   framework.
 
 1. **Enhance Kubernetes binary artifact management (Consumable)**
 
@@ -94,14 +87,6 @@ the following listing, all deliverables are sorted by their priority.
    Outcome: Automated builds of `deb` and `rpm` Kubernetes packages within
    community infrastructure.
 
-1. **Create releases landing page (Consumable)**
-
-   https://github.com/kubernetes/website/issues/20293
-
-   Outcome: A releases page that is up to date and acts as canonical place for
-   release related information, for example links to release notes and support
-   timelines.
-
 1. **Signing of release artifacts (Secure)**
 
    https://github.com/kubernetes/release/issues/914
@@ -123,6 +108,9 @@ the following listing, all deliverables are sorted by their priority.
    means that there is a risk of delaying because of investing more time in
    pre-research.
 
+1. SLSA framework is in earlier stages and changes to it can/may affect some of
+   the direction of roadmap items.
+
 ### Requests to Other Teams
 
 1. **SIG Architecture**
@@ -134,8 +122,27 @@ the following listing, all deliverables are sorted by their priority.
 
    To get input for making Cluster API a first-class signal for upstream releases.
 
-### Current Status
+### Done Deliverables
 
-| Topic | Lead | Status | Target Date | Links |
-| ----- | ---- | ------ | ----------- | ----- |
-|       |      |        |             |       |
+1. **Formalize supported release platforms (Introspectable)**
+
+   https://github.com/kubernetes/sig-release/issues/1337
+
+   Outcome: Definition of the life cycle for currently supported Kubernetes
+   artifacts and a guideline for the community about how to add new platforms.
+
+1. **Implement a Bill of Materials (BOM) for release artifacts (Introspectable /
+   Secure)**
+
+   https://github.com/kubernetes/release/issues/1837
+
+   Outcome: An automated formal verification of produced release artifacts for
+   every future release.
+
+1. **Create releases landing page (Consumable)**
+
+   https://github.com/kubernetes/website/issues/20293
+
+   Outcome: A releases page that is up to date and acts as canonical place for
+   release related information, for example links to release notes and support
+   timelines.
