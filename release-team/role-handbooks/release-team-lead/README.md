@@ -158,6 +158,10 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 
 - Attend previous release retro to capture feedback and incorporate it into next release cycle
 - Plan release schedule and milestones. Gather feedback as needed.
+  - Schedule three (3) retrospective dates:
+    - The first retrospective is held during the cycle in the first week of M, W, F burndown meetings -- typically mid-week.
+    - The second and third retrospectives are traditionally scheduled a week after the release.
+    - The third retrospective may not be needed and is scheduled if necessary.
 - Make sure you have your shadows confirmed and schedule an initial group meeting to onboard and establish timeline and responsibilities.
 - Make sure everyone joining the team reads the [release team onboarding document][release-team-onboarding].
 - Complete the [CNCF Inclusive Speaker Orientation](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/).
@@ -261,6 +265,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 
 - The code exception process is now in effect, meaning you will likely have to assemble decision makers on specific pending PRs to assess whether the risk of inclusion is acceptable or not. Remember this is not you making a decision, it’s you helping SIGs follow the process, and ensuring there’s consensus. In the event of a contentious PR, you should err on the side of risk aversion. In extreme cases, you can defer to the steering committee, but that is extremely unlikely.
 - If the release branch is not healthy, stable, and passing tests consistently, notify community through standard channels of need to rectify or code freeze will come early to force focus on stabilization.
+- The first retrospective meeting is scheduled for the first week of M, W, F burndown meetings, typically mid-week. Confirm the Emeritus Adviser can serve as facilitator. If Emeritus Adviser is unavailable then defer the responsibility as appropriate.
 
 ### Week 9
 
