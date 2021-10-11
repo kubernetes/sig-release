@@ -67,7 +67,7 @@ While there isn't a strict restriction on the amount of shadows, we've found thr
 
 If there are more contributors interested in shadowing once hitting that upper bound, we welcome them to sit in on Release Team meetings in preparation for shadowing in a future release cycle.
 
-In Kubernetes 1.14, we begun handling shadow selection using a questionnaire, as opposed to the first-come, first-served GitHub issue approach that we had adopted during previous release cycles ([1.12](https://github.com/kubernetes/sig-release/issues/167), [1.13](https://github.com/kubernetes/sig-release/issues/280).
+In Kubernetes 1.14, we begun handling shadow selection using a questionnaire, as opposed to the first-come, first-served GitHub issue approach that we had adopted during previous release cycles ([1.12](https://github.com/kubernetes/sig-release/issues/167), [1.13](https://github.com/kubernetes/sig-release/issues/280)).
 
 Moving to a [questionnaire](#sample-questionnaire) / survey format will allow us to capture more of the information required to vet potential shadows and well as begin to generate metrics around some of the Release Team processes.
 
