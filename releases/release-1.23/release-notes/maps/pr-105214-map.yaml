@@ -1,0 +1,4 @@
+pr: 105214
+releasenote:
+  text: 'Fix job controller syncs: In case of conflicts, ensure that the sync happens
+    with the most up to date information. Improves reliability of JobTrackingWithFinalizers.'

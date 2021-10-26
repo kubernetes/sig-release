@@ -1,0 +1,3 @@
+pr: 104928
+releasenote:
+  text: Migrate cmd/proxy/app and pkg/proxy/meta_proxier to structured logging

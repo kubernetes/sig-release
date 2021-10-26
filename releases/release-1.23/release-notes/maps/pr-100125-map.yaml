@@ -1,0 +1,5 @@
+pr: 100125
+releasenote:
+  text: 'kube-apiserver: events created via the `events.k8s.io` API group for cluster-scoped
+    objects are now permitted in the default namespace as well for compatibility with
+    events clients and the `v1` API'
