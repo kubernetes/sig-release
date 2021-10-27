@@ -78,7 +78,7 @@
   "101370": {
     "commit": "41fdc193ff28218f15bc30f2bdaa07b91a5008bc",
     "text": "Create HPA with follow：",
-    "markdown": "Create HPA with follow： ([#101370](https://github.com/kubernetes/kubernetes/pull/101370), [@RyanAoh](https://github.com/RyanAoh))",
+    "markdown": "Create HPA with follow： ([#101370](https://github.com/kubernetes/kubernetes/pull/101370), [@RyanAoh](https://github.com/RyanAoh)) [SIG Autoscaling]",
     "author": "RyanAoh",
     "author_url": "https://github.com/RyanAoh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101370",
@@ -113,7 +113,7 @@
   "101781": {
     "commit": "9c5cefb230241d74340ba530666212300cba8ff8",
     "text": "[Errno -2] Name or service not known",
-    "markdown": "[Errno -2] Name or service not known ([#101781](https://github.com/kubernetes/kubernetes/pull/101781), [@ptabor](https://github.com/ptabor))",
+    "markdown": "[Errno -2] Name or service not known ([#101781](https://github.com/kubernetes/kubernetes/pull/101781), [@ptabor](https://github.com/ptabor)) [SIG Cloud Provider]",
     "author": "ptabor",
     "author_url": "https://github.com/ptabor",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101781",
@@ -325,8 +325,8 @@
   },
   "103172": {
     "commit": "fed612c9f8e00cc2d228bbe7afa66f4623085916",
-    "text": "The deprecated --experimental-bootstrap-kubeconfig flag has been removed.\nThis can be set via --bootstrap-kubeconfig.",
-    "markdown": "The deprecated --experimental-bootstrap-kubeconfig flag has been removed.\n  This can be set via --bootstrap-kubeconfig. ([#103172](https://github.com/kubernetes/kubernetes/pull/103172), [@niulechuan](https://github.com/niulechuan))",
+    "text": "The deprecated `--experimental-bootstrap-kubeconfig` flag has been removed.\nThis can be set via `--bootstrap-kubeconfig`.",
+    "markdown": "The deprecated `--experimental-bootstrap-kubeconfig` flag has been removed.\n  This can be set via `--bootstrap-kubeconfig`. ([#103172](https://github.com/kubernetes/kubernetes/pull/103172), [@niulechuan](https://github.com/niulechuan))",
     "author": "niulechuan",
     "author_url": "https://github.com/niulechuan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103172",
@@ -343,8 +343,8 @@
   },
   "103174": {
     "commit": "16823fceb00fc19bbb15bbefd063bf07d66ee96a",
-    "text": "Changes behaviour of kube-proxy start; does not attempt to set specific sysctl values (which does not work in recent Kernel versions anymore in non-init namespaces), when the current sysctl values are already set higher.",
-    "markdown": "Changes behaviour of kube-proxy start; does not attempt to set specific sysctl values (which does not work in recent Kernel versions anymore in non-init namespaces), when the current sysctl values are already set higher. ([#103174](https://github.com/kubernetes/kubernetes/pull/103174), [@Napsty](https://github.com/Napsty))",
+    "text": "Changes behaviour of kube-proxy start; does not attempt to set specific `sysctl` values (which does not work in recent Kernel versions anymore in non-init namespaces), when the current sysctl values are already set higher.",
+    "markdown": "Changes behaviour of kube-proxy start; does not attempt to set specific `sysctl` values (which does not work in recent Kernel versions anymore in non-init namespaces), when the current sysctl values are already set higher. ([#103174](https://github.com/kubernetes/kubernetes/pull/103174), [@Napsty](https://github.com/Napsty))",
     "author": "Napsty",
     "author_url": "https://github.com/Napsty",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103174",
@@ -1228,13 +1228,11 @@
       "kubeadm"
     ],
     "kinds": [
-      "cleanup",
-      "deprecation"
+      "cleanup"
     ],
     "sigs": [
       "cluster-lifecycle"
-    ],
-    "duplicate_kind": true
+    ]
   },
   "104160": {
     "commit": "d5cf54937627dda28e809a480ae091b683cfac8e",
@@ -1753,7 +1751,7 @@
   },
   "104483": {
     "commit": "48d844ec64bd83a378418d420ba455fa28043cbc",
-    "text": "client-go impersonation config can specify a UID to pass impersonated uid information through in requests.",
+    "text": "Client-go impersonation config can specify a UID to pass impersonated uid information through in requests.",
     "markdown": "Client-go impersonation config can specify a UID to pass impersonated uid information through in requests. ([#104483](https://github.com/kubernetes/kubernetes/pull/104483), [@margocrawf](https://github.com/margocrawf))",
     "author": "margocrawf",
     "author_url": "https://github.com/margocrawf",
@@ -2084,7 +2082,7 @@
   },
   "104670": {
     "commit": "5d7ac70051f4e5e85834852c30d07c5b0cd3c6d0",
-    "text": "turn on CSIMigrationAzureDisk by default on 1.23",
+    "text": "Turn on CSIMigrationAzureDisk by default on 1.23",
     "markdown": "Turn on CSIMigrationAzureDisk by default on 1.23 ([#104670](https://github.com/kubernetes/kubernetes/pull/104670), [@andyzhangx](https://github.com/andyzhangx))",
     "author": "andyzhangx",
     "author_url": "https://github.com/andyzhangx",
@@ -2103,8 +2101,8 @@
   },
   "104691": {
     "commit": "a53e2eaeaba064309dceca2dc27f3ac09c6375b0",
-    "text": "IPv6DualStack feature moved to stable.\nController Manager flags for the node IPAM controller have slightly changed:\n1. When configuring a dual-stack cluster, the user must specify both --node-cidr-mask-size-ipv4 and --node-cidr-mask-size-ipv6 to set the per-node IP mask sizes, instead of the previous --node-cidr-mask-size flag.\n2. The --node-cidr-mask-size flag is mutually exclusive with --node-cidr-mask-size-ipv4 and --node-cidr-mask-size-ipv6.\n3. Single-stack clusters do not need to change, but may choose to use the more specific flags.  Users can use either the older --node-cidr-mask-size flag or one of the newer --node-cidr-mask-size-ipv4 or --node-cidr-mask-size-ipv6 flags to configure the per-node IP mask size, provided that the flag's IP family matches the cluster's IP family (--cluster-cidr).",
-    "markdown": "IPv6DualStack feature moved to stable.\n  Controller Manager flags for the node IPAM controller have slightly changed:\n  1. When configuring a dual-stack cluster, the user must specify both --node-cidr-mask-size-ipv4 and --node-cidr-mask-size-ipv6 to set the per-node IP mask sizes, instead of the previous --node-cidr-mask-size flag.\n  2. The --node-cidr-mask-size flag is mutually exclusive with --node-cidr-mask-size-ipv4 and --node-cidr-mask-size-ipv6.\n  3. Single-stack clusters do not need to change, but may choose to use the more specific flags.  Users can use either the older --node-cidr-mask-size flag or one of the newer --node-cidr-mask-size-ipv4 or --node-cidr-mask-size-ipv6 flags to configure the per-node IP mask size, provided that the flag's IP family matches the cluster's IP family (--cluster-cidr). ([#104691](https://github.com/kubernetes/kubernetes/pull/104691), [@khenidak](https://github.com/khenidak))",
+    "text": "Promote `IPv6DualStack` feature to stable.\nController Manager flags for the node IPAM controller have slightly changed:\n1. When configuring a dual-stack cluster, the user must specify both `--node-cidr-mask-size-ipv4` and `--node-cidr-mask-size-ipv6` to set the per-node IP mask sizes, instead of the previous `--node-cidr-mask-size` flag.\n2. The `--node-cidr-mask-size` flag is mutually exclusive with `--node-cidr-mask-size-ipv4` and `--node-cidr-mask-size-ipv6`.\n3. Single-stack clusters do not need to change, but may choose to use the more specific flags.  Users can use either the older `--node-cidr-mask-size` flag or one of the newer `--node-cidr-mask-size-ipv4` or `--node-cidr-mask-size-ipv6` flags to configure the per-node IP mask size, provided that the flag's IP family matches the cluster's IP family (--cluster-cidr).",
+    "markdown": "Promote `IPv6DualStack` feature to stable.\n  Controller Manager flags for the node IPAM controller have slightly changed:\n  1. When configuring a dual-stack cluster, the user must specify both `--node-cidr-mask-size-ipv4` and `--node-cidr-mask-size-ipv6` to set the per-node IP mask sizes, instead of the previous `--node-cidr-mask-size` flag.\n  2. The `--node-cidr-mask-size` flag is mutually exclusive with `--node-cidr-mask-size-ipv4` and `--node-cidr-mask-size-ipv6`.\n  3. Single-stack clusters do not need to change, but may choose to use the more specific flags.  Users can use either the older `--node-cidr-mask-size` flag or one of the newer `--node-cidr-mask-size-ipv4` or `--node-cidr-mask-size-ipv6` flags to configure the per-node IP mask size, provided that the flag's IP family matches the cluster's IP family (--cluster-cidr). ([#104691](https://github.com/kubernetes/kubernetes/pull/104691), [@khenidak](https://github.com/khenidak))",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack",
@@ -2170,8 +2168,8 @@
   },
   "104699": {
     "commit": "85b11ad24e996e2db4aa00a99e16f066544b22b0",
-    "text": "If a conflict occurs when creating an object with generateName, the server now returns an \"AlreadyExists\" error with a retry option.",
-    "markdown": "If a conflict occurs when creating an object with generateName, the server now returns an \"AlreadyExists\" error with a retry option. ([#104699](https://github.com/kubernetes/kubernetes/pull/104699), [@vincepri](https://github.com/vincepri))",
+    "text": "If a conflict occurs when creating an object with `generateName`, the server now returns an \"AlreadyExists\" error with a retry option.",
+    "markdown": "If a conflict occurs when creating an object with `generateName`, the server now returns an \"AlreadyExists\" error with a retry option. ([#104699](https://github.com/kubernetes/kubernetes/pull/104699), [@vincepri](https://github.com/vincepri))",
     "author": "vincepri",
     "author_url": "https://github.com/vincepri",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104699",
@@ -2348,7 +2346,7 @@
   "104853": {
     "commit": "dcfe8f5d5c9531e3196eb5036a86643c728eafe7",
     "text": "podInformer := NewPodInformer(kubeClient, 0)\n\tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n\tnodeInformer := informerFactory.Core().V1().Nodes()\n\t....\n\trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n\t// scheduled pod cache\n\tpodInformer.Informer().AddEventHandler(\n\t\tcache.FilteringResourceEventHandler{\n\t\t\tFilterFunc: func(obj interface{}) bool {\n\t\t\t\tswitch t := obj.(type) {\n\t\t\t\tcase *v1.Pod:\n\t\t\t\t\treturn assignedNonTerminatedPod(t)\n\t\t\t\tcase cache.DeletedFinalStateUnknown:\n\t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n\t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n\t\t\t\t\t}\n\t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n\t\t\t\t\treturn false\n\t\t\t\tdefault:\n\t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n\t\t\t\t\treturn false\n\t\t\t\t}\n\t\t\t},\n\t\t\tHandler: cache.ResourceEventHandlerFuncs{\n\t\t\t\tAddFunc:    rc.addPodToCache,\n\t\t\t\tUpdateFunc: rc.updatePodInCache,\n\t\t\t\tDeleteFunc: rc.deletePodFromCache,\n\t\t\t},\n\t\t},\n\t)\n\n\tnodeInformer.Informer().AddEventHandler(\n\t\tcache.ResourceEventHandlerFuncs{\n\t\t\tAddFunc:    rc.addNodeToCache,\n\t\t\tUpdateFunc: rc.updateNodeInCache,\n\t\t\tDeleteFunc: rc.deleteNodeFromCache,\n\t\t},\n\t)\n\n\trc.NodeLister = nodeInformer.Lister()\n\trc.PodLister = podInformer.Lister()\n\tgo podInformer.Informer().Run(stopCh)\n\tgo nodeInformer.Informer().Run(stopCh)\n\trc.InformerFactory.Start(stopCh)\n\t...",
-    "markdown": "PodInformer := NewPodInformer(kubeClient, 0)\n  \tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n  \tnodeInformer := informerFactory.Core().V1().Nodes()\n  \t....\n  \trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n  \t// scheduled pod cache\n  \tpodInformer.Informer().AddEventHandler(\n  \t\tcache.FilteringResourceEventHandler{\n  \t\t\tFilterFunc: func(obj interface{}) bool {\n  \t\t\t\tswitch t := obj.(type) {\n  \t\t\t\tcase *v1.Pod:\n  \t\t\t\t\treturn assignedNonTerminatedPod(t)\n  \t\t\t\tcase cache.DeletedFinalStateUnknown:\n  \t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n  \t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n  \t\t\t\t\t}\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n  \t\t\t\t\treturn false\n  \t\t\t\tdefault:\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n  \t\t\t\t\treturn false\n  \t\t\t\t}\n  \t\t\t},\n  \t\t\tHandler: cache.ResourceEventHandlerFuncs{\n  \t\t\t\tAddFunc:    rc.addPodToCache,\n  \t\t\t\tUpdateFunc: rc.updatePodInCache,\n  \t\t\t\tDeleteFunc: rc.deletePodFromCache,\n  \t\t\t},\n  \t\t},\n  \t)\n  \n  \tnodeInformer.Informer().AddEventHandler(\n  \t\tcache.ResourceEventHandlerFuncs{\n  \t\t\tAddFunc:    rc.addNodeToCache,\n  \t\t\tUpdateFunc: rc.updateNodeInCache,\n  \t\t\tDeleteFunc: rc.deleteNodeFromCache,\n  \t\t},\n  \t)\n  \n  \trc.NodeLister = nodeInformer.Lister()\n  \trc.PodLister = podInformer.Lister()\n  \tgo podInformer.Informer().Run(stopCh)\n  \tgo nodeInformer.Informer().Run(stopCh)\n  \trc.InformerFactory.Start(stopCh)\n  \t... ([#104853](https://github.com/kubernetes/kubernetes/pull/104853), [@kitianFresh](https://github.com/kitianFresh))",
+    "markdown": "PodInformer := NewPodInformer(kubeClient, 0)\n  \tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n  \tnodeInformer := informerFactory.Core().V1().Nodes()\n  \t....\n  \trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n  \t// scheduled pod cache\n  \tpodInformer.Informer().AddEventHandler(\n  \t\tcache.FilteringResourceEventHandler{\n  \t\t\tFilterFunc: func(obj interface{}) bool {\n  \t\t\t\tswitch t := obj.(type) {\n  \t\t\t\tcase *v1.Pod:\n  \t\t\t\t\treturn assignedNonTerminatedPod(t)\n  \t\t\t\tcase cache.DeletedFinalStateUnknown:\n  \t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n  \t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n  \t\t\t\t\t}\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n  \t\t\t\t\treturn false\n  \t\t\t\tdefault:\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n  \t\t\t\t\treturn false\n  \t\t\t\t}\n  \t\t\t},\n  \t\t\tHandler: cache.ResourceEventHandlerFuncs{\n  \t\t\t\tAddFunc:    rc.addPodToCache,\n  \t\t\t\tUpdateFunc: rc.updatePodInCache,\n  \t\t\t\tDeleteFunc: rc.deletePodFromCache,\n  \t\t\t},\n  \t\t},\n  \t)\n  \n  \tnodeInformer.Informer().AddEventHandler(\n  \t\tcache.ResourceEventHandlerFuncs{\n  \t\t\tAddFunc:    rc.addNodeToCache,\n  \t\t\tUpdateFunc: rc.updateNodeInCache,\n  \t\t\tDeleteFunc: rc.deleteNodeFromCache,\n  \t\t},\n  \t)\n  \n  \trc.NodeLister = nodeInformer.Lister()\n  \trc.PodLister = podInformer.Lister()\n  \tgo podInformer.Informer().Run(stopCh)\n  \tgo nodeInformer.Informer().Run(stopCh)\n  \trc.InformerFactory.Start(stopCh)\n  \t... ([#104853](https://github.com/kubernetes/kubernetes/pull/104853), [@kitianFresh](https://github.com/kitianFresh)) [SIG API Machinery]",
     "author": "kitianFresh",
     "author_url": "https://github.com/kitianFresh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104853",
@@ -2364,8 +2362,8 @@
   },
   "104854": {
     "commit": "91f820eee42a8126d95d1d706ae20740c9d57913",
-    "text": "kubeadm: switch the preflight check (called 'Swap') that verifies if swap is enabled on Linux hosts to report a warning instead of an error. This is related to the graduation of the NodeSwap feature gate in the kubelet to Beta and being enabled by default in 1.23 - allows swap support on Linux hosts. In the next release of kubeadm (1.24) the preflight check will be removed, thus we recommend that you stop using it - e.g. via --ignore-preflight-errors or the kubeadm config.",
-    "markdown": "Kubeadm: switch the preflight check (called 'Swap') that verifies if swap is enabled on Linux hosts to report a warning instead of an error. This is related to the graduation of the NodeSwap feature gate in the kubelet to Beta and being enabled by default in 1.23 - allows swap support on Linux hosts. In the next release of kubeadm (1.24) the preflight check will be removed, thus we recommend that you stop using it - e.g. via --ignore-preflight-errors or the kubeadm config. ([#104854](https://github.com/kubernetes/kubernetes/pull/104854), [@pacoxu](https://github.com/pacoxu))",
+    "text": "kubeadm: switch the preflight check (called 'Swap') that verifies if swap is enabled on Linux hosts to report a warning instead of an error. This is related to the graduation of the NodeSwap feature gate in the kubelet to Beta and being enabled by default in 1.23 - allows swap support on Linux hosts. In the next release of kubeadm (1.24) the preflight check will be removed, thus we recommend that you stop using it - e.g. via `--ignore-preflight-errors` or the kubeadm config.",
+    "markdown": "Kubeadm: switch the preflight check (called 'Swap') that verifies if swap is enabled on Linux hosts to report a warning instead of an error. This is related to the graduation of the NodeSwap feature gate in the kubelet to Beta and being enabled by default in 1.23 - allows swap support on Linux hosts. In the next release of kubeadm (1.24) the preflight check will be removed, thus we recommend that you stop using it - e.g. via `--ignore-preflight-errors` or the kubeadm config. ([#104854](https://github.com/kubernetes/kubernetes/pull/104854), [@pacoxu](https://github.com/pacoxu))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2417,8 +2415,8 @@
   },
   "104908": {
     "commit": "060f5b88d0d554fd8b38333ed25b8e73614ab630",
-    "text": "migrate pkg/proxy to structured logs",
-    "markdown": "Migrate pkg/proxy to structured logs ([#104908](https://github.com/kubernetes/kubernetes/pull/104908), [@CIPHERTron](https://github.com/CIPHERTron))",
+    "text": "Migrate pkg/proxy to structured logging",
+    "markdown": "Migrate pkg/proxy to structured logging ([#104908](https://github.com/kubernetes/kubernetes/pull/104908), [@CIPHERTron](https://github.com/CIPHERTron))",
     "author": "CIPHERTron",
     "author_url": "https://github.com/CIPHERTron",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104908",
@@ -2495,8 +2493,8 @@
   },
   "104942": {
     "commit": "8975906dfc87732e063bb30e36b181a031988a52",
-    "text": "kubeadm: do not check if the '/etc/kubernetes/manifests' folder is empty on joining worker nodes during preflight",
-    "markdown": "Kubeadm: do not check if the '/etc/kubernetes/manifests' folder is empty on joining worker nodes during preflight ([#104942](https://github.com/kubernetes/kubernetes/pull/104942), [@SataQiu](https://github.com/SataQiu))",
+    "text": "kubeadm: do not check if the `/etc/kubernetes/manifests` folder is empty on joining worker nodes during preflight",
+    "markdown": "Kubeadm: do not check if the `/etc/kubernetes/manifests` folder is empty on joining worker nodes during preflight ([#104942](https://github.com/kubernetes/kubernetes/pull/104942), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104942",
@@ -2617,8 +2615,8 @@
   },
   "105034": {
     "commit": "73d51a21dbe7504a00423877e272a279a21a115f",
-    "text": "kubeadm: remove the --port flag from the manifest for the kube-scheduler since the flag has been a NO-OP since 1.23 and insecure serving was removed for the component.",
-    "markdown": "Kubeadm: remove the --port flag from the manifest for the kube-scheduler since the flag has been a NO-OP since 1.23 and insecure serving was removed for the component. ([#105034](https://github.com/kubernetes/kubernetes/pull/105034), [@pacoxu](https://github.com/pacoxu))",
+    "text": "kubeadm: remove the `--port` flag from the manifest for the kube-scheduler since the flag has been a NO-OP since 1.23 and insecure serving was removed for the component.",
+    "markdown": "Kubeadm: remove the `--port` flag from the manifest for the kube-scheduler since the flag has been a NO-OP since 1.23 and insecure serving was removed for the component. ([#105034](https://github.com/kubernetes/kubernetes/pull/105034), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105034",
@@ -2635,7 +2633,7 @@
   },
   "105035": {
     "commit": "f06ce08d63db87da3d5cf6aaf8a50c858e5d8a35",
-    "text": "migrated pkg/proxy/winuserspace to structured logging",
+    "text": "Migrated pkg/proxy/winuserspace to structured logging",
     "markdown": "Migrated pkg/proxy/winuserspace to structured logging ([#105035](https://github.com/kubernetes/kubernetes/pull/105035), [@shivanshu1333](https://github.com/shivanshu1333))",
     "author": "shivanshu1333",
     "author_url": "https://github.com/shivanshu1333",
@@ -2668,8 +2666,8 @@
   },
   "105069": {
     "commit": "63e7ee43bb5394abd6dd5010be47ebcb22ec0ef8",
-    "text": "makes the etcd client (used by the API server) retry certain types of errors. The full list of retriable (codes.Unavailable) errors can be found at https://github.com/etcd-io/etcd/blob/main/api/v3rpc/rpctypes/error.go#L72",
-    "markdown": "Makes the etcd client (used by the API server) retry certain types of errors. The full list of retriable (codes.Unavailable) errors can be found at https://github.com/etcd-io/etcd/blob/main/api/v3rpc/rpctypes/error.go#L72 ([#105069](https://github.com/kubernetes/kubernetes/pull/105069), [@p0lyn0mial](https://github.com/p0lyn0mial))",
+    "text": "Make the etcd client (used by the API server) retry certain types of errors. The full list of retriable (codes.Unavailable) errors can be found at https://github.com/etcd-io/etcd/blob/main/api/v3rpc/rpctypes/error.go#L72",
+    "markdown": "Make the etcd client (used by the API server) retry certain types of errors. The full list of retriable (codes.Unavailable) errors can be found at https://github.com/etcd-io/etcd/blob/main/api/v3rpc/rpctypes/error.go#L72 ([#105069](https://github.com/kubernetes/kubernetes/pull/105069), [@p0lyn0mial](https://github.com/p0lyn0mial))",
     "author": "p0lyn0mial",
     "author_url": "https://github.com/p0lyn0mial",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105069",
