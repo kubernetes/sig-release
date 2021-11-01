@@ -22,9 +22,9 @@ description: |
 #### Tracking docs
 
 * [Enhancements Tracking Sheet](https://bit.ly/k8s123-enhancements)
-* [Feature blog Tracking Sheet](TBD)
-* [Bug Triage Tracking Sheet](TBD)
-* CI Signal Report: TODO
+* [Feature blog Tracking Sheet](http://bit.ly/k8s123-feature-blog)
+* [Bug Triage Tracking Sheet](https://bit.ly/123-bug-triage-tracking)
+* [CI Signal Project Board](https://github.com/orgs/kubernetes/projects/11)
 * [Retrospective Document][Retrospective Document]
 * [kubernetes/sig-release v1.23 milestone](https://github.com/kubernetes/kubernetes/milestone/56)
 
