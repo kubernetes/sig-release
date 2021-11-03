@@ -12,24 +12,27 @@ The release team leader role is responsible for coordinating release activities,
 - [Standards](#standards)
 - [Release Milestone Activities](#release-milestone-activities)
   - [Before Release Begins](#before-release-begins)
+  - [Week 0](#week-0)
   - [Week 1](#week-1)
     - [Starting the release cycle](#starting-the-release-cycle)
   - [Week 2](#week-2)
   - [Week 3](#week-3)
   - [Week 4](#week-4)
   - [Week 5](#week-5)
-- [Release Halfway Point](#release-halfway-point)
   - [Week 6](#week-6)
   - [Week 7](#week-7)
-    - [Code Freeze Day](#code-freeze-day)
+- [Release Halfway Point](#release-halfway-point)
   - [Week 8](#week-8)
   - [Week 9](#week-9)
   - [Week 10](#week-10)
   - [Week 11](#week-11)
-- [Release Day](#release-day)
+    - [Code Freeze Day](#code-freeze-day)
   - [Week 12](#week-12)
   - [Week 13](#week-13)
   - [Week 14](#week-14)
+- [Release Day](#release-day)
+  - [Week 15](#week-15)
+  - [Week 16](#week-16)
 
 ## Authority and Responsibility
 
@@ -53,18 +56,17 @@ In addition to the [Release Team Lead selection criteria][lead-criteria] you are
 
 ## Time Commitments
 
-Release Lead is a very time-consuming role, especially towards the end of the release cycle. Before you volunteer to be Release Lead, please make certain that your employer and your family are okay with you spending a lot of time on the release for the next three months. Here's a rough estimate of the time requirements by week:
+Release Lead is a very time-consuming role, especially towards the end of the release cycle. Before you volunteer to be Release Lead, please make certain that your employer and your family are okay with you spending a lot of time on the release for the next four months. Here's a rough estimate of the time requirements by week:
 
 - Weeks 1-4: 4-8 hours a week
-- Weeks 5-8: 6-12 hours a week
-- Weeks 9-13: 10 to 25 hours a week
+- Weeks 5-10: 6-12 hours a week
+- Weeks 11-15: 10 to 25 hours a week
 - Release Day: Prepare to spend all day on release-related activities. Given the choice between working after-hours or weekends, and having the release be later than the initial target, delaying the release is preferred.
 
 Among the specific time commitments you have are:
 
-- SIG-Release and Release Team meetings once a week during weeks 1-7.
-- Burndown meetings three to five times a week during weeks 8-12.
-- Community meetings once a week.
+- SIG Release and Release Team meetings once a week during weeks 1-10.
+- Burndown meetings three to five times a week during weeks 11-15.
 
 In addition to the absolute time commitment you make, you must also consider the relative burdens on yourself and your team when establishing meetings. This means scheduling meetings and release events compatible with global working hours and coordinating with a global set of team leads and shadows. 
 A few ways to accomplish this goal are as follows (but please feel free to implement and add your own solution):
@@ -167,6 +169,12 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Complete the [CNCF Inclusive Speaker Orientation](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/).
 - Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
 
+### Week 0
+
+- Send a "Release Sneak Peak" email to introduce yourself, lead shadows, role leads, and branch manager to 
+  [k-dev][kubernetes-dev], [SIG Leads][kubernetes-sig-leads], [SIG Release][kubernetes-sig-release], 
+  [Release Team][kubernetes-release-team]
+
 ### Week 1
 
 **While the Release Team Lead has always been a stakeholder in getting security fixes out the door, the Kubernetes security disclosures and response policy has evolved into something more formal. The documents linked below are required reading for an incoming Release Team Lead, who must understand and abide by the embargo policy.**
@@ -176,7 +184,8 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 
 #### Starting the release cycle
 
-- Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups.
+- Ensure the release team is fully filled, with members subscribed to the [kubernetes-release-team] and [kubernetes-sig-release] groups 
+  and to the [kubernetes-release-calendar].
 - Create an internal contact sheet and corresponding bit.ly link. Make sure to
   only give access to the [kubernetes-release-team]. Communicate with section
   leads to add their shadows so that you and your shadows can add them to the
@@ -186,30 +195,57 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
   [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows)
   Google Group.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
-- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: kubernetes/sig-release/releases/release-x.y/README.md **Note: Do not ship the release on a Monday, to avoid preparing for the release on a weekend. Aim for Tuesday.**
+- Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: 
+  kubernetes/sig-release/releases/release-x.y/README.md
+  **Note: Do not schedule any deadlines or milestones on a Monday or Friday, aim for Tuesday, Wednesday, or Thursday**
+  **Note: Do not ship the release on a Monday, to avoid preparing for the release on a weekend. Aim for Tuesday.**
 - Send an update to [kubernetes-dev] and [kubernetes-sig-leads] mailing list to announce the start of the release cycle, including any notable changes in the release process, key dates, and links to important documents
 - Create the retrospective document and corresponding bit.ly link.  Insert this link in the list of retrospectives in the header of the
   [kubernetes-community-meeting](Kubernetes Community Meeting Topics) document.
 - Begin meeting with SIGs to introduce yourself
 - Begin paying attention to [CI signal][ci-signal], as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
-- Request, in coordination with CI Signal Lead, a representative from SIG-Scalability to give a weekly update on the release meeting notes. Prepare to have a release team representative attend SIG-scalability's meeting two or three times throughout the release.
+- Request, in coordination with CI Signal Lead, a representative from SIG Scalability to give a weekly update on the release meeting notes. Prepare to have a release team representative attend SIG Scalability's meeting two or three times throughout the release.
+  - 48 hours before the weekly Release Team meeting, ping the Scalability oncall person listed on 
+    [go.k8s.io/oncall](https://go.k8s.io/oncall) on the 
+    [#release-ci-signal](https://kubernetes.slack.com/archives/CN0K3TE2C) Slack channel to add the scalability tests 
+    status on the Release Team meeting notes under SIG Scalability
 - Meet your Shadows and create a communication channel with them. Establish expectations and share out work - delegate!
 - Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
+- Update the SIG Release groups in the [k/k8s.io/groups/sig-release/groups.yaml](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml) with the following:
+  - Add Lead and Lead shadows to members of `k8s-infra-release-viewers`
+  - Add EA, Lead, Lead shadows, comms lead, comms shadows to members of `release-comms`
+  - Add EA, Lead and Lead shadows to members of `release-managers`
+  - Add EA, Lead and Lead shadows to managers of `release-team`
+  - Add Role Leads and Role shadows to members of `release-team`
+  - Add Role shadows and Lead shadows to members of `release-team-shadows`
+  - Add EA to manager of `release-team-shadows`, if EA is owner of `release-team-shadows` already then add Lead to manager of `release-team-shadows`
+  - Add Bug Triage Lead and shadows to `k8s-infra-rbac-triageparty-release`
+- Request access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from a 
+  [SIG Release Tech Lead](https://github.com/kubernetes/community/blob/master/sig-release/README.md#technical-leads) or 
+  the EA
+- At the end of each Release Team meeting, end the meeting recording and provide time for team members to be open with comments or questions
+- Create the release notes directory in the release directory
+- Prepare for x.y.0-alpha.1 release, specifically that there is a [Branch Manager][branch-manager] available to support the team, and that 
+  master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. This synthetic notation is a point to review process with the [Branch Manager][branch-manager].
+  - x.y.0-alpha.1 may be released before the release cycle begins.
 
 ### Week 2
 
 - Assist the Enhancements Lead in collecting planned work from SIGs
 - Schedule weekly Release Team meetings on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group.
 - Poll Release Team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
-- Add key event dates to the [Kubernetes Release Calendar][kubernetes-release-calendar] during the cycle. Ensure major calendar events are set to send an email reminder one week in advance.
-- Begin reporting release status at the community meeting
+- Add key event dates to the [Kubernetes Release Calendar][kubernetes-release-calendar] during the cycle. 
+  - Ensure major calendar events are set to send an email reminder one week in advance. 
+  - Invite the K8s Contributor Calendar (cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) to major calendar events.
+    - e.g. Enhancements Freeze, Code Freeze, etc
+    - Add a calendar entry for the time period before Enhancements Freeze with the title [1.xx] Enhancements Freeze coming on HH:mm PDT Month Day, Year
+    - When creating Google calendar entries, delete the Google Meet link which is created by default
+    - Be aware of the time zone when creating Google calendar entries as it will default to the last time zone used to create the last calendar entry
 - Continue meeting with SIGs for introductions
-
+- Prepare for x.y.0-alpha.2 release and that master-blocking tests are all green.
 
 ### Week 3
 
-- Create the release notes draft file in the release directory per the standard above
-- Prepare for x.y.0-alpha.0 "release", specifically that there is a [Branch Manager][branch-manager] available to support the team, and that master-blocking tests are all green. The alpha.0 artifacts were created already as a part of the prior release. This synthetic notation is a point to review process with the [Branch Manager][branch-manager].
 - Identify any other dependent ecosystem projects that need release coordination
 - Announce/email that the following week is Enhancements Freeze and what that means
 
@@ -223,37 +259,65 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 
 ### Week 5
 
-- Prepare for x.y.0-alpha.1 release ensuring that master-blocking tests are all green
-- Bring exceptions to the Release Team meetings, and make sure SIG representatives for the exception(s) know to attend and discuss if necessary
-- Check in with docs team on release notes progress
-- Follow up with SIGs on release themes
+- Bring exceptions to the [#sig-release Slack channel](https://kubernetes.slack.com/archives/C2C40FMNF) and to Release 
+  Team meetings, and make sure SIG representatives for the exception(s) know to attend and discuss if necessary.
 - Begin casual observation of [issues](https://git.k8s.io/sig-release/release-team/role-handbooks/bug-triage/README.md), CI signal, test flakes, and critical PRs
+- Prepare for x.y.0-alpha.3 release and that master-blocking tests are all green.
+
+### Week 6
+
+- Continue reviewing enhancement exceptions as needed
+- Prepare for x.y.0-alpha.4 release and that master-blocking tests are all green.
+- Check in with Release Notes team on release notes progress after the release notes for x.y.0-alpha.4 is generated.
+
+### Week 7
+
+- The burndown templates should be useful at this point since it starts asking about status relevant to each area now tracking (e.g. branch health, docs, communications, issues, etc.)
+- Most enhancement-oriented tasks should be completed at the end of this week
+- SIGs that have not completed release themes should be contacted again, with a focus on explaining why this matters to the community
 
 ---
 
 ## Release Halfway Point
 
-### Week 6
+### Week 8
 
-- Continue reviewing enhancement exceptions as needed
-- Release themes should be completed by now
-- Exception requests should be almost zero
+- Send a "Release Update / State of the Release" email with the number of enhancements tracked, retro dates, upcoming 
+  deadlines and solicit exceptions for Enhancements Freeze, feature blogs for the release, Doc PRs for new or updated 
+  docs associated with tracked enhancements, and release themes.
+
+### Week 9
+
+- Exception requests for Enhancements Freeze should be almost zero
 - Check in with SIGs on their enhancement work to make sure they know Code Freeze is 3 weeks away, as well as emailing the [kubernetes-dev] list, and notifying the community at the weekly meeting
+  - Verify with SIGs if there are any planned deprecations or removals targeting the release.
 - Adjust the enhancements repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered)
-- Remind Branch Manager that branch CI jobs will be needed next week.
 
-### Week 7
+### Week 10
 
-- Coordinate x.y.0-beta.0 release, ensuring master-blocking are 100% green if possible (this release is not an official beta, just an artifact of the release process), and any flakes are being actively worked by SIGs since this is a chance to look at CI signal. The release-x.y branch is created automatically as a part of the beta.0 release. The Branch Manager now begins daily fast-forwards.
-- The burndown templates should be useful at this point since it starts asking about status relevant to each area now tracking (e.g. branch health, docs, communications, issues, etc.)
-- Branch Manager has release branch CI created and added to Testgrid
-- Most enhancement-oriented tasks should be completed at the end of this week
-- SIGs that have not completed release themes should be contacted again, with a focus on explaining why this matters to the community
-- Ping role leads reminding them to start considering succession plans. If they are handing the role off to a successor, identifying them early gives more time for the committed volunteer to get targeted mentoring.
+- If there are any deprecations or removals, the Release Team should publish a Deprecations and Removals blog.
+  - The Enhancements team starts to communicate with the Comms team bout deprecations and removals targeting the release. 
+  - A Release Team representative (ideally from Comms) should attend the SIG Docs meeting to raise awareness about the 
+    Deprecations and Removals blog for reviews.
+- Ping role leads reminding them to start considering succession plans. If they are handing the role off to a successor, 
+  identifying them early gives more time for the committed volunteer to get targeted mentoring.
+
+### Week 11
+
+- The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be 
+  used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, 
+  and less for the other team members)
+- The first retrospective meeting is scheduled for the first week of M, W, F burndown meetings, typically mid-week. 
+  Confirm the Emeritus Adviser can serve as facilitator. If Emeritus Adviser is unavailable then defer the 
+  responsibility as appropriate.
+- Make sure everyone knows the Docs deadline (PRs ready for review) is coming the following week.
+- The Deprecations and Removals blog is scheduled for next week shortly after Code Freeze. A draft of the blog should 
+  be started as reviews and iterations will be needed before publication next week.
+- Follow up with SIGs on release themes.
 
 #### Code Freeze Day
 
-Code Freeze will typically fall around Weeks 8 or 9 depending on the length or release cycle.  As Code Freeze approaches here are some good practices
+Code Freeze will typically fall around Weeks 12 or 13 depending on the length or release cycle. As Code Freeze approaches here are some good practices
 
 - Monitor the enhancements spreadsheet to get an idea of how many PRs are still outstanding leading up to Code Freeze
 - Send a reminder email to [kubernetes-dev]
@@ -261,37 +325,45 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 - LGTM / Approve and remove the hold on the PR for enabling code freeze. [Example from 1.15 here](https://github.com/kubernetes/test-infra/pull/12808)
 - As needed, assist the Bug Triage Lead and Enhancements Lead removing PRs and enhancements from the milestone that aren't merged in time
 
-### Week 8
+### Week 12
 
-- The code exception process is now in effect, meaning you will likely have to assemble decision makers on specific pending PRs to assess whether the risk of inclusion is acceptable or not. Remember this is not you making a decision, it’s you helping SIGs follow the process, and ensuring there’s consensus. In the event of a contentious PR, you should err on the side of risk aversion. In extreme cases, you can defer to the steering committee, but that is extremely unlikely.
-- If the release branch is not healthy, stable, and passing tests consistently, notify community through standard channels of need to rectify or code freeze will come early to force focus on stabilization.
-- The first retrospective meeting is scheduled for the first week of M, W, F burndown meetings, typically mid-week. Confirm the Emeritus Adviser can serve as facilitator. If Emeritus Adviser is unavailable then defer the responsibility as appropriate.
+- Begin daily burndown meetings
+- [Code Freeze](https://github.com/kubernetes/sig-release/blob/de9e0a9821c4f73b83b4382df7a7dc837f91e18f/releases/release_phases.md#code-freeze) 
+  begins, and it’s now the home stretch of the release. SIGs will need to ensure all work moving forward is carefully 
+  curated with [required merge labels][merge-labels].
+- The code exception process is now in effect, meaning you will likely have to assemble decision makers on specific 
+  pending PRs to assess whether the risk of inclusion is acceptable or not. Remember this is not you making a decision, 
+  it’s you helping SIGs follow the process, and ensuring there’s consensus. In the event of a contentious PR, you should 
+  err on the side of risk aversion. In extreme cases, you can defer to the steering committee, but that is extremely 
+  unlikely.
+- If the release branch is not healthy, stable, and passing tests consistently, notify community through standard 
+  channels of need to rectify or code freeze will come early to force focus on stabilization.
+- Coordinate x.y.0-beta.0 release (~week 12, shortly after Code Freeze), ensuring master-blocking are 100% green if 
+  possible (this release is not an official beta, just an artifact of the release process), and any flakes are being 
+  actively worked by SIGs since this is a chance to look at CI signal. 
+- Shortly after Code Freeze, publish the Deprecations and Removals blog after appropriate reviews and `lgtm`, and 
+  `approve` labels from SIG Docs.
+- Remind Branch Manager that branch CI jobs will be needed next week.
 
-### Week 9
+### Week 13
 
+- [Test Freeze](https://github.com/kubernetes/sig-release/blob/de9e0a9821c4f73b83b4382df7a7dc837f91e18f/releases/release_phases.md#test-freeze) begins
+- The release-x.y branch is created automatically at the start of Test Freeze.
+  - PRs targeting the release must be cherry-picked into the release-x.y branch from master.
+- Branch Manager has release branch CI created and added to Testgrid
 - Branch Manager ensures automation is ready to enforce labeling and other release policies
-- The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, and less for the other team members)
-- Make sure everyone knows the Docs deadline (PRs ready for review) is coming the following Friday.
-- Prepare for x.y.0-beta.1 release (week 10), ensuring x.y-blocking, master-blocking are 100% green, or all failures have issues filed and are being actively worked.  
+- Prepare for x.y.0-rc.0 release (shortly after Test Freeze), ensuring x.y-blocking, master-blocking are 
+  100% green, or all failures have issues filed and are being actively worked.  
+- Release themes should be completed by now
 
-### Week 10
+### Week 14
 
-- Code Freeze begins, and it’s now the home stretch of the release. SIGs will need to ensure all work moving forward is carefully curated with [required merge labels][merge-labels].
 - Branch Manager ensures automation is actively enforcing merge blocking labeling and other release policies
 - The Release Team needs to look at any in-flight PRs and ensure nothing is being jammed in at the last minute without proper tests, review, etc. This is something to watch extremely closely because it happens every release. Just watch what gets merged closely after Code Freeze. Incorrectly merged items need assessed and perhaps reverted. GitHub has a [query comparing a release branch and master](https://github.com/kubernetes/kubernetes/compare/release-1.15).
 - Assist the Documentation Leads in collecting missing docs PRs.
 - Schedule burndown meetings starting next week for every weekday until the Friday after release day. Make sure to invite the community calendar (`cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com`) and the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`).
 - Release notes and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead, you may need to help assemble the notes.
 - Identify potential vacancies on the incoming Release Team and begin asking team shadows and former team shadows to serve as Lead in the upcoming cycle. Continue to improve and uphold the [Release Team Selection][selection] process.
-- Prepare for x.y.0-beta.2 release (week 11), ensuring x.y-blocking, master-blocking are 100% green.  
-
-### Week 11
-
-- Begin daily burndown meetings
-- If the release branch, master branch and associated tests are stable, it’s time to lift code freeze. The bot will need to be updated.
-- The Branch Manager will perform one final branch fast-forward - make sure everything pending has been merged beforehand
-- Master branch is then opened for new pull requests on x.y (the next release). Remaining release activities will happen on the release-x.y branch via cherry picks from master.
-- Use all of the appropriate communications channels to announce the lifting of Code Freeze
 - The task is now to ensure the release branch is ready to go. This means there are zero pending PRs, no failing x.y-blocking tests, no open issues in the milestone. This will continue until release day.
 - Final documentation PRs are reviewed and ready to be merged. Likely, this is not true and some are outstanding, so you need to help convince SIG doc writers to get these in with urgency.
 - The release notes draft needs to be completely done and ready to consume by anago. Have SIG volunteers do a final proofread of their sections. Make sure people actually do this. You need to avoid having the release notes volunteers pull “all nighters” before the release.
@@ -303,7 +375,7 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 
 ## Release Day
 
-### Week 12
+### Week 15
 
 - Note that release day can and should be postponed if any of the conditions outlined in week 11 are not satisfied.
 - Every issue in the milestone is considered release blocking.
@@ -324,9 +396,15 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
     - Docs Lead publishes release docs to website.
     - Branch Manager does release-notify.
   - Approximately 5pm Pacific: all work is complete and the release team
-    lead announces release to k-dev, SIG Leads lists, and discuss.k8s.io.
+    lead announces release to [k-dev][kubernetes-dev], [SIG Leads][kubernetes-sig-leads], and discuss.k8s.io.
+- After the release, it’s time to lift code freeze. The bot will need to be updated.
+  - [Thaw k/k](https://github.com/kubernetes/sig-release/blob/de9e0a9821c4f73b83b4382df7a7dc837f91e18f/releases/release_phases.md#thaw), 
+    master branch is then opened for new pull requests.
+- The Docs lead thaws k/website
+- Use all of the appropriate communications channels to announce the lifting of Code Freeze and thawing of 
+  k/website, this can part of the release announcement.
 
-### Week 13
+### Week 16
 
 - Release Retrospective participation
   - Make sure to confirm that the Emeritus Adviser can serve as facilitator. If Emeritus Adviser is unavailable then defer the responsibility as appropiate
@@ -338,8 +416,6 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
     - kubernetes-sig-release@googlegroups.com
 - Follow-up interviews with the media, the media roundtable
 - Contact the [Release Managers Google Group][release-managers-group] to complete the Release Team Lead & Lead Shadows offboarding tasks from the previously-opened onboarding issue
-
-### Week 14
 
 - Help fill any open positions for the next release milestone
 
@@ -353,8 +429,8 @@ Code Freeze will typically fall around Weeks 8 or 9 depending on the length or r
 [kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
 [kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team
 [kubernetes-sig-release]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
-[kubernetes-sig-leads]: https://groups.google.com/forum/#!forum/kubernetes-sig-leads
-[kubernetes-dev]: https://groups.google.com/forum/#!forum/kubernetes-dev
+[kubernetes-sig-leads]: https://groups.google.com/a/kubernetes.io/g/leads
+[kubernetes-dev]: https://groups.google.com/a/kubernetes.io/g/dev
 [lead-criteria]: /release-team/release-team-selection.md#release-team-lead
 [merge-labels]: https://git.k8s.io/community/contributors/devel/sig-release/release.md#tldr
 [milestone-maintainers]: /release-team/README.md#milestone-maintainers
