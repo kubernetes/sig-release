@@ -40,6 +40,11 @@ Weeks: -2 to 0
 
 At least 2 weeks before the new release cycle begins, the EA is responsible for posting the "Assemble the X.Y Release Team" issue in the SIG-Release repo ([example](https://github.com/kubernetes/sig-release/issues/776)).  They should then make sure that the new Release Lead is officially nominated and chosen, and then issue a call for nominations/volunteers for the other Role Leads.
 
+### Lead Onboarding
+
+1. Ensure the outgoing EA or one of the SIG Release co-chairs has added you in as an owner of the [Kubernetes Release Calendar](https://bit.ly/k8s-release-cal) Google calendar
+2. Grant the Lead permission to add calendar entries to the [Kubernetes Release Calendar](https://bit.ly/k8s-release-cal)
+
 ### Shadow Selection
 
 Weeks: -1 to 1
@@ -54,7 +59,12 @@ Once most of the Role Leads are selected, the EA should solicit candidates for S
 6. Once all role leads select their shadows the EA will send out a notification to all applicants not selected for this release cycle 
 7. Ensure the outgoing EA or one of the SIG Release co-chairs has added you in as an owner of the [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows) Google Group.
 
-The most time-consuming part of this is helping the Role Leads select shadows.  In addition to the usual dilemmas of too many good candidates, the EA needs to give advice that makes sure that a diverse pool of shadows is selected, and that the Role Lead doesn't take on more shadows than they can effectively mentor.
+The most time-consuming part of this is helping the Role Leads select shadows. In addition to the usual dilemmas of too 
+many good candidates, the EA needs to give advice that makes sure that a diverse pool of shadows is selected, and that 
+the Role Lead doesn't take on more shadows than they can effectively mentor. We have found that having two shadows with 
+prior Release Team experience has helped grow the shadows' contributions with the Release Team and a better experience 
+for each role team. In addition to two shadows with prior Release Team experience, having two new shadows helps grow the 
+Release Team pool and brings in new contributors.
 
 Occasionally, a role may not get enough qualified candidates, in which case it's the EA's job to work with the new Role Lead to find or solicit additional candidates.
 
