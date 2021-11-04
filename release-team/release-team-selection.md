@@ -63,7 +63,14 @@ Same as [Release Team Lead](#release-team-lead).
 
 Every Release Team role should seek to accommodate a set of role shadows. This creates a new avenue for code and non-code contributors alike to contribute to the project. Additionally, it seeds future release cycles with new leaders.
 
-While there isn't a strict restriction on the amount of shadows, we've found three shadows per role to be a reasonable upper bound. However, as shadowing is intended to be a mentor / mentee journey, it is important that role leads only accept an amount of shadows that they feel that can reasonably mentor within the scope of a release cycle.
+While there isn't a strict restriction on the amount of shadows, we've found four shadows per role to be a reasonable 
+upper bound. However, as shadowing is intended to be a mentor / mentee journey, it is important that role leads only 
+accept an amount of shadows that they feel that can reasonably mentor within the scope of a release cycle. As there is 
+tacit knowledge gained from Release Team experience, we've found that having two shadows with prior Release Team 
+experience has been helpful to seed and grow future release team leaders. In addition to two shadows with prior Release 
+Team experience, we have found that having two new shadows helps grow contributors to the Release Team. Having two 
+shadows with prior Release Team experience and two new shadows per Release Team role is not a requirement and is a 
+suggestion.
 
 If there are more contributors interested in shadowing once hitting that upper bound, we welcome them to sit in on Release Team meetings in preparation for shadowing in a future release cycle.
 
