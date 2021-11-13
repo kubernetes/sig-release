@@ -1,0 +1,4 @@
+pr: 105396
+releasenote:
+  text: Fixes the `should support building a client with a CSR` E2E test to work with
+    clusters configured with short certificate lifetimes

@@ -1,0 +1,3 @@
+pr: 105666
+releasenote:
+  text: 'Fix: skip `instance not found` when decoupling VMSSs from LB'

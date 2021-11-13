@@ -1,0 +1,4 @@
+pr: 105003
+releasenote:
+  text: Move the `GetAllocatableResources` Endpoint in PodResource API to the beta
+    that will make it enabled by default.

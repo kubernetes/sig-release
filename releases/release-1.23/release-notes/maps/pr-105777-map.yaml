@@ -1,0 +1,3 @@
+pr: 105777
+releasenote:
+  text: 'Fix: do not try to delete a LoadBalancer that does not exist'

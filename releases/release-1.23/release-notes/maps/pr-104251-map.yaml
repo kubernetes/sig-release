@@ -1,0 +1,8 @@
+pr: 104251
+releasenote:
+  text: "Introduce `v1beta3` API for scheduler. This version \n- increases the weight
+    of user specifiable priorities.\nThe weights of following priority plugins are
+    increased\n  - `TaintTolerations` to 3 - as leveraging node tainting to group
+    nodes in the cluster is becoming a widely-adopted practice\n  - `NodeAffinity`
+    to 2\n  - `InterPodAffinity` to 2\n\n- Won't have `HealthzBindAddress`, `MetricsBindAddress`
+    fields"

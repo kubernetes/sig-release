@@ -1,0 +1,6 @@
+pr: 105424
+releasenote:
+  text: The legacy scheduler policy config is removed in v1.23, the associated flags
+    `policy-config-file`, `policy-configmap`, `policy-configmap-namespace` and `use-legacy-policy-config`
+    are also removed. Migrate to Component Config instead, see https://kubernetes.io/docs/reference/scheduling/config/
+    for details.

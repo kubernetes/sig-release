@@ -1,0 +1,4 @@
+pr: 95128
+releasenote:
+  text: 'kube-apiserver: requests to node, Service, and Pod `/proxy` subresources
+    with no additional URL path now only automatically redirect GET and HEAD requests.'

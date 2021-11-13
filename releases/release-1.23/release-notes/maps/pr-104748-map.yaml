@@ -1,0 +1,6 @@
+pr: 104748
+releasenote:
+  text: Resolves a potential issue with GC and NS controllers which may delete objects
+    after getting a 404 response from the server during its startup. This PR ensures
+    that requests to aggregated APIs will get 503, not 404 while the APIServiceRegistrationController
+    hasn't finished its job.

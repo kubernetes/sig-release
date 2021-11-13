@@ -1,0 +1,3 @@
+pr: 105712
+releasenote:
+  text: The `--leader-elect*` CLI args are now honored in the scheduler.

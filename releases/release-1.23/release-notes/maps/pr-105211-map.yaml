@@ -1,0 +1,5 @@
+pr: 105211
+releasenote:
+  text: Fixed a bug that prevents a PersistentVolume that has a PersistentVolumeClaim
+    UID which doesn't exist in local cache but exists in etcd from being updated to
+    the Released phase.
