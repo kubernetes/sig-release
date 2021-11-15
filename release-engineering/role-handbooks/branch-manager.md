@@ -175,6 +175,14 @@ This can be done in one of two ways:
   - [Example subject](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement-subject.txt)
   - [Example body](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement.html)
 
+```shell
+# Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds and confirm with them whether Debian and RPM repositories have the packages before sending the email
+export SENDGRID_API_KEY=<API_KEY>
+krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Your Email ID>
+```
+
+See the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/patch-release-team.md#release-commands-cheat-sheet) for example commands.
+
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
 [k-dev-list]: https://groups.google.com/forum/#!forum/kubernetes-dev
 [release tools]: https://github.com/kubernetes/release#tools
@@ -196,12 +204,6 @@ Public build artifacts are published and an email notification goes out to the c
 
  - `krel stage/release` for creating releases
  - `krel announce` to send the announcement email notification.
-
-```shell
-# Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds
-export SENDGRID_API_KEY=<API_KEY>
-krel announce --tag vX.Y.0-{alpha,beta,rc}.Z
-```
 
 There are more examples of the release process under the [References](#references) section.
 

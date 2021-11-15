@@ -514,7 +514,7 @@ to yourself to visual confirm its content:
 ```bash
 ~$ cd src/k8s.io/release
 ~$ export SENDGRID_API_KEY=<API_KEY>
-~$ krel announce --tag v1.13.2 --nomock
+~$ krel announce send --tag v1.13.2 --nomock
 ```
 
 If the mock build and release goes well and CI tests show the branch
@@ -526,7 +526,7 @@ packages are successfully published.  Then announce the release:
 ```bash
 ~$ cd src/k8s.io/release
 ~$ export SENDGRID_API_KEY=<API_KEY>
-~$ krel announce --tag v1.13.2 --nomock
+~$ krel announce send --tag v1.13.2 --nomock
 ```
 
 This will automatically send the formatted announcement to the
@@ -585,16 +585,16 @@ corresponding command line help (`-h`) outputs.
 | Mock build staging success? | Visually confirm yes |
 | Mock release | `krel release --type=official --branch=release.x.y --build-verison=…` (get the build-version from the Google Cloud console output of `krel stage`) |
 | Mock release success? | Visually confirm yes |
-| Mock email notify test | ```krel announce --tag v1.13.3-beta.1``` |
+| Mock email notify test | ```krel announce send --tag v1.13.3-beta.1``` |
 | Check mail arrives, list has expected commits? | manual/visual |
 | Official build staging | `krel stage --nomock --type=official --branch=release-x.y` |
 | Official build staging success? | Visually confirm yes |
 | Official release | `krel release --nomock --type=official --branch=release.x.y --build-verison=…` |
-| Official email notify test | ```krel announce --tag vX.Y.Z --nomock``` |
+| Official email notify test | ```krel announce send --tag vX.Y.Z``` |
 | Check mail arrives, list has expected commits? | manual/visual |
 | Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://git.k8s.io/sig-release/release-managers.md#build-admins) by name on Slack for package building |
 | Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVRs (Name-Version-Release) |
-| Official email notify | ```krel announce --tag v1.13.3 --nomock``` |
+| Official email notify | ```krel announce send --tag v1.13.3 --nomock``` |
 | Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) got mail OK |
 | Completion | n/a |
 
