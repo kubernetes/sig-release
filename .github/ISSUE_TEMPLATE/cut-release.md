@@ -23,6 +23,11 @@ to the relevant GitHub issues:
 Release Process Steps:
 ======================
 
+Create a thread on #release-management on Slack to notify updates
+about the release. For example,
+- https://kubernetes.slack.com/archives/CJH2GBF7Y/p1635868822040300
+- https://kubernetes.slack.com/archives/CJH2GBF7Y/p1631606375087500
+
 - Add/Remove items of the checklist as you see fit
 - Post bumps or issues encountered along the way
 
@@ -45,7 +50,7 @@ Announce the release in a message in the Channel and paste the link
 Direct link to slack: https://kubernetes.slack.com/messages/CJH2GBF7Y
 
 Build & publish packages:    ← Skip for prereleases
-Coordinate with @google-build-admin before starting. Once the 
+Coordinate with @google-build-admin before starting. Once the
 NoMock Release is done and **before sending the announcement**
 notify @google-build-admin to start building the packages.
 
@@ -63,6 +68,7 @@ Help? Ring @release-managers on slack!
 
 ## Release Steps
 
+- [ ] Create a thread on #release-management: <!-- Paste link to slack -->
 - [ ] Screenshot unhealthy release branch testgrid boards
 - Mock Run
   - [ ] Stage
@@ -72,7 +78,7 @@ Help? Ring @release-managers on slack!
   - [ ] Image Promotion: <!-- Paste Pull Request URL here -->
   - [ ] Release
 - [ ] Build & publish packages (debs & rpms) <!-- REMOVE THIS STEP FOR PRE-RELEASES -->
-- [ ] Notify #release-management]: <!-- Paste link to slack -->
+- [ ] Notify #release-management: <!-- Paste link to slack -->
 - [ ] Send notification: <!-- Paste link to kubernetes-dev email -->
 - [ ] Collect metrics and add them to the `Release steps` table below
 
