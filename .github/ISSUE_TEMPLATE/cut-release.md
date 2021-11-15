@@ -23,6 +23,11 @@ to the relevant GitHub issues:
 Release Process Steps:
 ======================
 
+Create a thread on #release-management on Slack to notify updates
+about the release. For example,
+- https://kubernetes.slack.com/archives/CJH2GBF7Y/p1635868822040300
+- https://kubernetes.slack.com/archives/CJH2GBF7Y/p1631606375087500
+
 - Add/Remove items of the checklist as you see fit
 - Post bumps or issues encountered along the way
 
@@ -63,6 +68,7 @@ Help? Ring @release-managers on slack!
 
 ## Release Steps
 
+- [ ] Create a thread on #release-management: <!-- Paste link to slack -->
 - [ ] Screenshot unhealthy release branch testgrid boards
 - Mock Run
   - [ ] Stage
