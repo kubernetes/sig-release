@@ -30,9 +30,12 @@ The images are promoted by using the `krel promote-images` command. This command
   - Otherwise, you can specify both GitHub username and fork name, such as `--fork=<your-github-username>/<k8s.io-fork-name>`
 - The `--tag` flag takes the version tag of the images that will be promoted. This flag can be specified multiple times if you're promoting images for multiple releases.
 
+Promoting images would also require a GitHub Authentication Token in order to create a PR on your behalf. You need to get a create a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) having set scope to `public_repo`.
+
 Example command:
 
 ```shell
+export GITHUB_TOKEN=xxxxxx
 krel promote-images -i --fork=<your-github-username> --tag=v1.20.0-rc.0 --tag=v1.21.0-alpha.0
 ```
 
