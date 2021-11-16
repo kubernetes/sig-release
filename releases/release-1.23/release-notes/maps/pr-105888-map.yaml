@@ -1,0 +1,4 @@
+pr: 105888
+releasenote:
+  text: 'kubeadm: remove the deprecated / NO-OP phase `update-cluster-status` in `kubeadm
+    reset`'

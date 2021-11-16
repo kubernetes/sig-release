@@ -1,0 +1,4 @@
+pr: 104327
+releasenote:
+  text: 'The `client-go` dynamic client sets the header `Content-Type: application/json`
+    by default'

@@ -1,0 +1,4 @@
+pr: 105490
+releasenote:
+  text: client-go uses the same HTTP client for all the generated groups and versions,
+    allowing to share customized transports for multiple groups versions.

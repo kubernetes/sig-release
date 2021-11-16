@@ -1,0 +1,4 @@
+pr: 100482
+releasenote:
+  text: Handle Generic Ephemeral Volumes properly in the node limits
+    scheduler filter and the kubelet `hostPath` check.

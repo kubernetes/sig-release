@@ -1,0 +1,6 @@
+pr: 105197
+releasenote:
+  text: |-
+    When feature gate `JobTrackingWithFinalizers` is enabled:
+    - Limit the number of Pods tracked in a single Job sync to avoid starvation of small Jobs.
+    - The metric `job_pod_finished_total` counts the number of finished Pods tracked by the Job controller.

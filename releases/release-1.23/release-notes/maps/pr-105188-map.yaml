@@ -1,0 +1,5 @@
+pr: 105188
+releasenote:
+  text: |-
+    Fixed consolidate logs for `instance not found` error
+    Fixed skip `not found` nodes when reconciling LB backend address pools

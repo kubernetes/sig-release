@@ -1,0 +1,4 @@
+pr: 105845
+releasenote:
+  text: Fix scoring for `NodeResourcesBalancedAllocation` plugins when nodes have
+    containers with no requests.

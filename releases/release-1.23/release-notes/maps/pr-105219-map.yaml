@@ -1,0 +1,3 @@
+pr: 105219
+releasenote:
+  text: The `TTLAfterFinished` feature gate is now GA and enabled by default.
