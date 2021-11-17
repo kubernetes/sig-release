@@ -1,0 +1,5 @@
+pr: 104873
+releasenote:
+  text: JSON log output is configurable and now supports writing info messages to
+    stdout and error messages to stderr. Info messages can be buffered in memory.
+    The default is to write both to stdout without buffering, as before.

@@ -1,0 +1,4 @@
+pr: 104631
+releasenote:
+  text: A deprecation notice has been added when using the kube-proxy userspace proxier,
+    which will be removed in v1.25. (#103860)

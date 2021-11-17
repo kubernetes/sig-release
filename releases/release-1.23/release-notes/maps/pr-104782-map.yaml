@@ -1,0 +1,5 @@
+pr: 104782
+releasenote:
+  text: 'kube-scheduler: support for configuration file version `v1beta1` is removed.
+    Update configuration files to v1beta2(xref: https://github.com/kubernetes/enhancements/issues/2901)
+    or v1beta3 before upgrading to 1.23.'

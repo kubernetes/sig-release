@@ -1,0 +1,4 @@
+pr: 105012
+releasenote:
+  text: The CPUManager policy options are now enabled, and we introduce a graduation
+    path for the new CPU Manager policy options.

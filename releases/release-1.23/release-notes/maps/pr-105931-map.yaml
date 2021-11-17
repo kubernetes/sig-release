@@ -1,0 +1,4 @@
+pr: 105931
+releasenote:
+  text: Migrate `pkg/scheduler/framework/plugins/interpodaffinity/filtering.go`,`pkg/scheduler/framework/plugins/podtopologyspread/filtering.go`,
+    `pkg/scheduler/framework/plugins/volumezone/volume_zone.go` to structured logging

@@ -1,0 +1,3 @@
+pr: 102945
+releasenote:
+  text: 'client-go: pass `DeleteOptions` down to the fake client `Reactor`'

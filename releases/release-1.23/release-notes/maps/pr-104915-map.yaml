@@ -1,0 +1,4 @@
+pr: 104915
+releasenote:
+  text: Track the number of Pods with a Ready condition in Job status. The feature
+    is alpha and needs the feature gate JobReadyPods to be enabled.
