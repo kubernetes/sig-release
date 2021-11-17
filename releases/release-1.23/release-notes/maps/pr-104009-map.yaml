@@ -1,3 +1,4 @@
 pr: 104009
 releasenote:
-  text: 'kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP.'
+  text: 'kube-proxy: delete stale conntrack UDP entries for `LoadBalancer Ingress`
+    IP.'

@@ -22,8 +22,8 @@
   },
   "100482": {
     "commit": "e414cf764196a3753d7f8063827131fc4c8d771b",
-    "text": "Generic Ephemeral Volumes were not considered properly by the node limits scheduler filter and the kubelet `hostPath` check.",
-    "markdown": "Generic Ephemeral Volumes were not considered properly by the node limits scheduler filter and the kubelet `hostPath` check. ([#100482](https://github.com/kubernetes/kubernetes/pull/100482), [@pohly](https://github.com/pohly))",
+    "text": "Handle Generic Ephemeral Volumes properly in the node limits scheduler filter and the kubelet `hostPath` check.",
+    "markdown": "Handle Generic Ephemeral Volumes properly in the node limits scheduler filter and the kubelet `hostPath` check. ([#100482](https://github.com/kubernetes/kubernetes/pull/100482), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1031,8 +1031,8 @@
   },
   "104009": {
     "commit": "2c1c1b75465e93ecc49d0cd59efdfa1b0bdb3bbc",
-    "text": "kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP.",
-    "markdown": "Kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP. ([#104009](https://github.com/kubernetes/kubernetes/pull/104009), [@aojea](https://github.com/aojea))",
+    "text": "kube-proxy: delete stale conntrack UDP entries for `LoadBalancer Ingress` IP.",
+    "markdown": "Kube-proxy: delete stale conntrack UDP entries for `LoadBalancer Ingress` IP. ([#104009](https://github.com/kubernetes/kubernetes/pull/104009), [@aojea](https://github.com/aojea))",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104009",
@@ -1046,8 +1046,8 @@
   },
   "104011": {
     "commit": "94a55684a8ef2f0108b1f9f8bd15b3e31ac92c4d",
-    "text": "Updated json representation for a conflicted taint to `Key=Effect` when a conflicted taint occurs in kubectl taint.",
-    "markdown": "Updated json representation for a conflicted taint to `Key=Effect` when a conflicted taint occurs in kubectl taint. ([#104011](https://github.com/kubernetes/kubernetes/pull/104011), [@manugupt1](https://github.com/manugupt1))",
+    "text": "Updated JSON representation for a conflicted taint to `Key=Effect` when a conflicted taint occurs in `kubectl taint`.",
+    "markdown": "Updated JSON representation for a conflicted taint to `Key=Effect` when a conflicted taint occurs in `kubectl taint`. ([#104011](https://github.com/kubernetes/kubernetes/pull/104011), [@manugupt1](https://github.com/manugupt1))",
     "author": "manugupt1",
     "author_url": "https://github.com/manugupt1",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104011",
@@ -1428,8 +1428,8 @@
   },
   "104185": {
     "commit": "8c64743d73f206bf633828a7fa1dd014ce153209",
-    "text": "Allow to build kubernetes with a custom `kube-cross` image.",
-    "markdown": "Allow to build kubernetes with a custom `kube-cross` image. ([#104185](https://github.com/kubernetes/kubernetes/pull/104185), [@dims](https://github.com/dims))",
+    "text": "Add support to build kubernetes with a custom `kube-cross` image.",
+    "markdown": "Add support to build kubernetes with a custom `kube-cross` image. ([#104185](https://github.com/kubernetes/kubernetes/pull/104185), [@dims](https://github.com/dims))",
     "author": "dims",
     "author_url": "https://github.com/dims",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104185",
@@ -2826,8 +2826,8 @@
   },
   "104928": {
     "commit": "5449ce7c5c9c3ed0e96b8b078c6c07a346b2891f",
-    "text": "Migrate cmd/proxy/app and pkg/proxy/meta_proxier to structured logging",
-    "markdown": "Migrate cmd/proxy/app and pkg/proxy/meta_proxier to structured logging ([#104928](https://github.com/kubernetes/kubernetes/pull/104928), [@jyz0309](https://github.com/jyz0309))",
+    "text": "Migrate `cmd/proxy/app` and `pkg/proxy/meta_proxier` to structured logging.",
+    "markdown": "Migrate `cmd/proxy/app` and `pkg/proxy/meta_proxier` to structured logging. ([#104928](https://github.com/kubernetes/kubernetes/pull/104928), [@jyz0309](https://github.com/jyz0309))",
     "author": "jyz0309",
     "author_url": "https://github.com/jyz0309",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104928",
@@ -3262,8 +3262,8 @@
   },
   "105185": {
     "commit": "26365faf310dab52e5ec359158c7b91bc2aa5243",
-    "text": "Fix: ignore `not a vmss instance` error for VMAS nodes in `EnsureBackendPoolDeleted`.",
-    "markdown": "Fix: ignore `not a vmss instance` error for VMAS nodes in `EnsureBackendPoolDeleted`. ([#105185](https://github.com/kubernetes/kubernetes/pull/105185), [@ialidzhikov](https://github.com/ialidzhikov))",
+    "text": "Ignore `not a vmss instance` error for VMAS nodes in `EnsureBackendPoolDeleted`.",
+    "markdown": "Ignore `not a vmss instance` error for VMAS nodes in `EnsureBackendPoolDeleted`. ([#105185](https://github.com/kubernetes/kubernetes/pull/105185), [@ialidzhikov](https://github.com/ialidzhikov))",
     "author": "ialidzhikov",
     "author_url": "https://github.com/ialidzhikov",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105185",
@@ -3281,8 +3281,8 @@
   },
   "105188": {
     "commit": "1ad3e14f1fc4a5f6e6cd6f9ffc7d030cb3d6540d",
-    "text": "fix: consolidate logs for `instance not found` error\nfix: skip `not found` nodes when reconciling LB backend address pools",
-    "markdown": "Fix: consolidate logs for `instance not found` error\n  fix: skip `not found` nodes when reconciling LB backend address pools ([#105188](https://github.com/kubernetes/kubernetes/pull/105188), [@nilo19](https://github.com/nilo19))",
+    "text": "Fixed consolidate logs for `instance not found` error\nFixed skip `not found` nodes when reconciling LB backend address pools",
+    "markdown": "Fixed consolidate logs for `instance not found` error\n  Fixed skip `not found` nodes when reconciling LB backend address pools ([#105188](https://github.com/kubernetes/kubernetes/pull/105188), [@nilo19](https://github.com/nilo19))",
     "author": "nilo19",
     "author_url": "https://github.com/nilo19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105188",
@@ -4005,8 +4005,8 @@
   },
   "105673": {
     "commit": "655c04d9f530e5ebc2ec6f5feef76716c8a9db22",
-    "text": "support more than 100 disk mounts on Windows",
-    "markdown": "Support more than 100 disk mounts on Windows ([#105673](https://github.com/kubernetes/kubernetes/pull/105673), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage and Windows]",
+    "text": "Add support for more than 100 disk mounts on Windows.",
+    "markdown": "Add support for more than 100 disk mounts on Windows. ([#105673](https://github.com/kubernetes/kubernetes/pull/105673), [@andyzhangx](https://github.com/andyzhangx))",
     "author": "andyzhangx",
     "author_url": "https://github.com/andyzhangx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105673",
@@ -4039,8 +4039,8 @@
   },
   "105682": {
     "commit": "7fbb384e15e2fb8370513eab9443c5107df1b257",
-    "text": "Generic Ephemeral Volumes can be used also as raw block devices, but the Pod validation was refusing to create Pods with that combination.",
-    "markdown": "Generic Ephemeral Volumes can be used also as raw block devices, but the Pod validation was refusing to create Pods with that combination. ([#105682](https://github.com/kubernetes/kubernetes/pull/105682), [@pohly](https://github.com/pohly))",
+    "text": "Be able to create pod with Generic Ephemeral Volumes as raw block devices.",
+    "markdown": "Be able to create pod with Generic Ephemeral Volumes as raw block devices. ([#105682](https://github.com/kubernetes/kubernetes/pull/105682), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4567,8 +4567,8 @@
   },
   "96684": {
     "commit": "dd2d12f6dc0e654c15d5db57a5f9f6ba61192726",
-    "text": "The `Service.spec.ipFamilyPolicy` field is now *required* in order to create or update a Service as dual-stack.  This is a breaking change from the beta behavior.  Previously the server would try to infer the value of that field from either `ipFamilies` or `clusterIPs`, but that caused ambiguity on updates.  Users who want a dual-stack Service MUST specify `ipFamilyPolicy` as either \"PreferDualStack\" or \"RequireDualStack\".",
-    "markdown": "The `Service.spec.ipFamilyPolicy` field is now *required* in order to create or update a Service as dual-stack.  This is a breaking change from the beta behavior.  Previously the server would try to infer the value of that field from either `ipFamilies` or `clusterIPs`, but that caused ambiguity on updates.  Users who want a dual-stack Service MUST specify `ipFamilyPolicy` as either \"PreferDualStack\" or \"RequireDualStack\". ([#96684](https://github.com/kubernetes/kubernetes/pull/96684), [@thockin](https://github.com/thockin))",
+    "text": "The `Service.spec.ipFamilyPolicy` field is now *required* in order to create or update a Service as dual-stack.  This is a breaking change from the beta behavior. Previously the server would try to infer the value of that field from either `ipFamilies` or `clusterIPs`, but that caused ambiguity on updates.  Users who want a dual-stack Service MUST specify `ipFamilyPolicy` as either `PreferDualStack` or `RequireDualStack`.",
+    "markdown": "The `Service.spec.ipFamilyPolicy` field is now *required* in order to create or update a Service as dual-stack.  This is a breaking change from the beta behavior. Previously the server would try to infer the value of that field from either `ipFamilies` or `clusterIPs`, but that caused ambiguity on updates.  Users who want a dual-stack Service MUST specify `ipFamilyPolicy` as either `PreferDualStack` or `RequireDualStack`. ([#96684](https://github.com/kubernetes/kubernetes/pull/96684), [@thockin](https://github.com/thockin))",
     "author": "thockin",
     "author_url": "https://github.com/thockin",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/96684",
