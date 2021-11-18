@@ -1,0 +1,4 @@
+pr: 105107
+releasenote:
+  text: Added a new feature gate `CustomResourceValidationExpressions` to enable expression
+    validation for Custom Resource.

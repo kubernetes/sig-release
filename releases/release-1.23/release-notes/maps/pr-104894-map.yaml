@@ -1,0 +1,3 @@
+pr: 104894
+releasenote:
+  text: Add support to generate client-side binaries for windows/arm64 platform

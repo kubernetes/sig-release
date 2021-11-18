@@ -22,8 +22,8 @@
   },
   "100482": {
     "commit": "e414cf764196a3753d7f8063827131fc4c8d771b",
-    "text": "Generic Ephemeral Volumes were not considered properly by the node limits scheduler filter and the kubelet `hostPath` check.",
-    "markdown": "Generic Ephemeral Volumes were not considered properly by the node limits scheduler filter and the kubelet `hostPath` check. ([#100482](https://github.com/kubernetes/kubernetes/pull/100482), [@pohly](https://github.com/pohly))",
+    "text": "Handle Generic Ephemeral Volumes properly in the node limits scheduler filter and the kubelet `hostPath` check.",
+    "markdown": "Handle Generic Ephemeral Volumes properly in the node limits scheduler filter and the kubelet `hostPath` check. ([#100482](https://github.com/kubernetes/kubernetes/pull/100482), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -108,7 +108,7 @@
   "101370": {
     "commit": "41fdc193ff28218f15bc30f2bdaa07b91a5008bc",
     "text": "Create HPA with follow：",
-    "markdown": "Create HPA with follow： ([#101370](https://github.com/kubernetes/kubernetes/pull/101370), [@RyanAoh](https://github.com/RyanAoh)) [SIG Autoscaling]",
+    "markdown": "Create HPA with follow： ([#101370](https://github.com/kubernetes/kubernetes/pull/101370), [@RyanAoh](https://github.com/RyanAoh))",
     "author": "RyanAoh",
     "author_url": "https://github.com/RyanAoh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101370",
@@ -142,8 +142,8 @@
   },
   "101781": {
     "commit": "9c5cefb230241d74340ba530666212300cba8ff8",
-    "text": "[Errno -2] Name or service not known",
-    "markdown": "[Errno -2] Name or service not known ([#101781](https://github.com/kubernetes/kubernetes/pull/101781), [@ptabor](https://github.com/ptabor)) [SIG Cloud Provider]",
+    "text": "Fixed [Errno -2] Name or service not known",
+    "markdown": "Fixed [Errno -2] Name or service not known ([#101781](https://github.com/kubernetes/kubernetes/pull/101781), [@ptabor](https://github.com/ptabor))",
     "author": "ptabor",
     "author_url": "https://github.com/ptabor",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101781",
@@ -186,8 +186,8 @@
   },
   "101928": {
     "commit": "8ac95264750ad1d93ec92b58b9956cd8f6a0a738",
-    "text": "Added a `Processing` condition for the `workqueue` API.\nChanged `Shutdown` for the workqueue API to wait until the work queue finishes processing all in-flight items.",
-    "markdown": "Added a `Processing` condition for the `workqueue` API.\n  Changed `Shutdown` for the workqueue API to wait until the work queue finishes processing all in-flight items. ([#101928](https://github.com/kubernetes/kubernetes/pull/101928), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))",
+    "text": "Added a `Processing` condition for the `workqueue` API.\nChanged `Shutdown` for the `workqueue` API to wait until the work queue finishes processing all in-flight items.",
+    "markdown": "Added a `Processing` condition for the `workqueue` API.\n  Changed `Shutdown` for the `workqueue` API to wait until the work queue finishes processing all in-flight items. ([#101928](https://github.com/kubernetes/kubernetes/pull/101928), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))",
     "author": "alexanderConstantinescu",
     "author_url": "https://github.com/alexanderConstantinescu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101928",
@@ -205,7 +205,7 @@
   "102015": {
     "commit": "55e1d2f9a73a0c78fc0c266236c3e31261635b90",
     "text": "Support allocating whole NUMA nodes in the CPUManager when there is not a 1:1 mapping between socket and NUMA node",
-    "markdown": "Support allocating whole NUMA nodes in the CPUManager when there is not a 1:1 mapping between socket and NUMA node ([#102015](https://github.com/kubernetes/kubernetes/pull/102015), [@klueska](https://github.com/klueska)) [SIG Node]",
+    "markdown": "Support allocating whole NUMA nodes in the CPUManager when there is not a 1:1 mapping between socket and NUMA node ([#102015](https://github.com/kubernetes/kubernetes/pull/102015), [@klueska](https://github.com/klueska))",
     "author": "klueska",
     "author_url": "https://github.com/klueska",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102015",
@@ -296,7 +296,7 @@
   "102945": {
     "commit": "9be67806cdecc18a07750eacd796f7885644def1",
     "text": "client-go: pass `DeleteOptions` down to the fake client `Reactor`",
-    "markdown": "Client-go: pass `DeleteOptions` down to the fake client `Reactor` ([#102945](https://github.com/kubernetes/kubernetes/pull/102945), [@chenchun](https://github.com/chenchun)) [SIG API Machinery, Apps and Auth]",
+    "markdown": "Client-go: pass `DeleteOptions` down to the fake client `Reactor` ([#102945](https://github.com/kubernetes/kubernetes/pull/102945), [@chenchun](https://github.com/chenchun))",
     "author": "chenchun",
     "author_url": "https://github.com/chenchun",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102945",
@@ -650,8 +650,8 @@
   },
   "103724": {
     "commit": "98e526390da420db6d36c4a0d7203fcde74a1dd8",
-    "text": "The image `gcr.io/kubernetes-e2e-test-images` will no longer be used in E2E / CI testing, `k8s.gcr.io/e2e-test-images` will be used instead.",
-    "markdown": "The image `gcr.io/kubernetes-e2e-test-images` will no longer be used in E2E / CI testing, `k8s.gcr.io/e2e-test-images` will be used instead. ([#103724](https://github.com/kubernetes/kubernetes/pull/103724), [@claudiubelu](https://github.com/claudiubelu))",
+    "text": "The image gcr.io/kubernetes-e2e-test-images will no longer be used in E2E / CI testing, k8s.gcr.io/e2e-test-images will be used instead.",
+    "markdown": "The image gcr.io/kubernetes-e2e-test-images will no longer be used in E2E / CI testing, k8s.gcr.io/e2e-test-images will be used instead. ([#103724](https://github.com/kubernetes/kubernetes/pull/103724), [@claudiubelu](https://github.com/claudiubelu))",
     "author": "claudiubelu",
     "author_url": "https://github.com/claudiubelu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103724",
@@ -933,7 +933,7 @@
   },
   "103917": {
     "commit": "ec663ada4be14d0afd45e0414b8711d4380ec289",
-    "text": "troubleshooting: informers log handlers that take more than 100 milliseconds to process an object if the `DeltaFIFO` queue starts to grow beyond 10 elements.",
+    "text": "Troubleshooting: informers log handlers that take more than 100 milliseconds to process an object if the `DeltaFIFO` queue starts to grow beyond 10 elements.",
     "markdown": "Troubleshooting: informers log handlers that take more than 100 milliseconds to process an object if the `DeltaFIFO` queue starts to grow beyond 10 elements. ([#103917](https://github.com/kubernetes/kubernetes/pull/103917), [@aojea](https://github.com/aojea))",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
@@ -991,8 +991,8 @@
   },
   "103958": {
     "commit": "28990f766481c28d7b942a669eaac8b1191e0805",
-    "text": "kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and time to read the headers of incoming requests.",
-    "markdown": "Kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and time to read the headers of incoming requests. ([#103958](https://github.com/kubernetes/kubernetes/pull/103958), [@liggitt](https://github.com/liggitt))",
+    "text": "kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and the time to read the headers of incoming requests.",
+    "markdown": "Kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and the time to read the headers of incoming requests. ([#103958](https://github.com/kubernetes/kubernetes/pull/103958), [@liggitt](https://github.com/liggitt))",
     "author": "liggitt",
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103958",
@@ -1520,8 +1520,8 @@
   },
   "104251": {
     "commit": "9b45983d3c8c246948682e678caa721b6d0bed0c",
-    "text": "Introduce `v1beta3` API for scheduler. This version \n- increases the weight of user specifiable priorities.\nThe weights of following priority plugins are increased\n  - `TaintTolerations` to 3 - as leveraging node tainting to group nodes in the cluster is becoming a widely-adopted practice\n  - `NodeAffinity` to 2\n  - `InterPodAffinity` to 2\n\n- Won't have `HealthzBindAddress`, `MetricsBindAddress` fields",
-    "markdown": "Introduce `v1beta3` API for scheduler. This version \n  - increases the weight of user specifiable priorities.\n  The weights of following priority plugins are increased\n    - `TaintTolerations` to 3 - as leveraging node tainting to group nodes in the cluster is becoming a widely-adopted practice\n    - `NodeAffinity` to 2\n    - `InterPodAffinity` to 2\n  \n  - Won't have `HealthzBindAddress`, `MetricsBindAddress` fields ([#104251](https://github.com/kubernetes/kubernetes/pull/104251), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))",
+    "text": "Introduce v1beta3 API for scheduler. This version \n- increases the weight of user specifiable priorities.\nThe weights of following priority plugins are increased\n  - `TaintTolerations` to 3 - as leveraging node tainting to group nodes in the cluster is becoming a widely-adopted practice\n  - `NodeAffinity` to 2\n  - `InterPodAffinity` to 2\n\n- Won't have `HealthzBindAddress`, `MetricsBindAddress` fields",
+    "markdown": "Introduce v1beta3 API for scheduler. This version \n  - increases the weight of user specifiable priorities.\n  The weights of following priority plugins are increased\n    - `TaintTolerations` to 3 - as leveraging node tainting to group nodes in the cluster is becoming a widely-adopted practice\n    - `NodeAffinity` to 2\n    - `InterPodAffinity` to 2\n  \n  - Won't have `HealthzBindAddress`, `MetricsBindAddress` fields ([#104251](https://github.com/kubernetes/kubernetes/pull/104251), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))",
     "documentation": [
       {
         "description": "KEP",
@@ -1845,8 +1845,8 @@
   },
   "104482": {
     "commit": "c6935ad50e0809c1dc2d3ac9000abda0ecb49bcc",
-    "text": "Changed kubectl describe to compute age of an event using the `EventSeries.count` and `EventSeries.lastObservedTime`.",
-    "markdown": "Changed kubectl describe to compute age of an event using the `EventSeries.count` and `EventSeries.lastObservedTime`. ([#104482](https://github.com/kubernetes/kubernetes/pull/104482), [@harjas27](https://github.com/harjas27))",
+    "text": "Changed `kubectl describe` to compute age of an event using the `EventSeries.count` and `EventSeries.lastObservedTime`.",
+    "markdown": "Changed `kubectl describe` to compute age of an event using the `EventSeries.count` and `EventSeries.lastObservedTime`. ([#104482](https://github.com/kubernetes/kubernetes/pull/104482), [@harjas27](https://github.com/harjas27))",
     "author": "harjas27",
     "author_url": "https://github.com/harjas27",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104482",
@@ -2074,8 +2074,8 @@
   },
   "104601": {
     "commit": "bb9e89d430138725def3463b7f607e8dd52aed72",
-    "text": "A small regression in Service updates was fixed.  The circumstances are so unlikely that probably nobody would ever hit it.",
-    "markdown": "A small regression in Service updates was fixed.  The circumstances are so unlikely that probably nobody would ever hit it. ([#104601](https://github.com/kubernetes/kubernetes/pull/104601), [@thockin](https://github.com/thockin))",
+    "text": "A small regression in Service updates was fixed. The circumstances are so unlikely that probably nobody would ever hit it.",
+    "markdown": "A small regression in Service updates was fixed. The circumstances are so unlikely that probably nobody would ever hit it. ([#104601](https://github.com/kubernetes/kubernetes/pull/104601), [@thockin](https://github.com/thockin))",
     "author": "thockin",
     "author_url": "https://github.com/thockin",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104601",
@@ -2152,7 +2152,7 @@
   "104631": {
     "commit": "84027bc07d14bdc35e566d8f4933b43a447586a1",
     "text": "A deprecation notice has been added when using the kube-proxy Userspace proxier, which will be removed in v1.25. (#103860)",
-    "markdown": "A deprecation notice has been added when using the kube-proxy Userspace proxier, which will be removed in v1.25. (#103860) ([#104631](https://github.com/kubernetes/kubernetes/pull/104631), [@perithompson](https://github.com/perithompson)) [SIG Network]",
+    "markdown": "A deprecation notice has been added when using the kube-proxy Userspace proxier, which will be removed in v1.25. (#103860) ([#104631](https://github.com/kubernetes/kubernetes/pull/104631), [@perithompson](https://github.com/perithompson))",
     "author": "perithompson",
     "author_url": "https://github.com/perithompson",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104631",
@@ -2443,7 +2443,7 @@
   "104744": {
     "commit": "c54ed73f9a7fdf9f94f169cf5a00a6b1cb7abe3f",
     "text": "Topology Hints now excludes control plane notes from capacity calculations.",
-    "markdown": "Topology Hints now excludes control plane notes from capacity calculations. ([#104744](https://github.com/kubernetes/kubernetes/pull/104744), [@robscott](https://github.com/robscott)) [SIG Apps and Network]",
+    "markdown": "Topology Hints now excludes control plane notes from capacity calculations. ([#104744](https://github.com/kubernetes/kubernetes/pull/104744), [@robscott](https://github.com/robscott))",
     "author": "robscott",
     "author_url": "https://github.com/robscott",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104744",
@@ -2496,7 +2496,7 @@
   "104782": {
     "commit": "04f747d09fd2f8fb486c90a85122c0cb7b2df782",
     "text": "kube-scheduler: support for configuration file version `v1beta1` is removed. Update configuration files to v1beta2(xref: https://github.com/kubernetes/enhancements/issues/2901) or v1beta3 before upgrading to 1.23.",
-    "markdown": "Kube-scheduler: support for configuration file version `v1beta1` is removed. Update configuration files to v1beta2(xref: https://github.com/kubernetes/enhancements/issues/2901) or v1beta3 before upgrading to 1.23. ([#104782](https://github.com/kubernetes/kubernetes/pull/104782), [@kerthcet](https://github.com/kerthcet)) [SIG Scheduling and Testing]",
+    "markdown": "Kube-scheduler: support for configuration file version `v1beta1` is removed. Update configuration files to v1beta2(xref: https://github.com/kubernetes/enhancements/issues/2901) or v1beta3 before upgrading to 1.23. ([#104782](https://github.com/kubernetes/kubernetes/pull/104782), [@kerthcet](https://github.com/kerthcet))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2543,8 +2543,8 @@
   },
   "104817": {
     "commit": "1dcea5cb028a549e7a1c9f06ee0ae3a452231dbb",
-    "text": "A pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered.",
-    "markdown": "A pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered. ([#104817](https://github.com/kubernetes/kubernetes/pull/104817), [@smarterclayton](https://github.com/smarterclayton))",
+    "text": "A Pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered.",
+    "markdown": "A Pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered. ([#104817](https://github.com/kubernetes/kubernetes/pull/104817), [@smarterclayton](https://github.com/smarterclayton))",
     "author": "smarterclayton",
     "author_url": "https://github.com/smarterclayton",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104817",
@@ -2561,8 +2561,8 @@
   },
   "104847": {
     "commit": "51384aa77ea50bdff48d101a5b2b55436f18841e",
-    "text": "When a static pod file is deleted and recreated while using a fixed UID, the pod was not properly restarted.",
-    "markdown": "When a static pod file is deleted and recreated while using a fixed UID, the pod was not properly restarted. ([#104847](https://github.com/kubernetes/kubernetes/pull/104847), [@smarterclayton](https://github.com/smarterclayton))",
+    "text": "When a static Pod file is deleted and recreated while using a fixed UID, the Pod was not properly restarted.",
+    "markdown": "When a static Pod file is deleted and recreated while using a fixed UID, the Pod was not properly restarted. ([#104847](https://github.com/kubernetes/kubernetes/pull/104847), [@smarterclayton](https://github.com/smarterclayton))",
     "author": "smarterclayton",
     "author_url": "https://github.com/smarterclayton",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104847",
@@ -2583,7 +2583,7 @@
   "104853": {
     "commit": "dcfe8f5d5c9531e3196eb5036a86643c728eafe7",
     "text": "podInformer := NewPodInformer(kubeClient, 0)\n\tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n\tnodeInformer := informerFactory.Core().V1().Nodes()\n\t....\n\trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n\t// scheduled pod cache\n\tpodInformer.Informer().AddEventHandler(\n\t\tcache.FilteringResourceEventHandler{\n\t\t\tFilterFunc: func(obj interface{}) bool {\n\t\t\t\tswitch t := obj.(type) {\n\t\t\t\tcase *v1.Pod:\n\t\t\t\t\treturn assignedNonTerminatedPod(t)\n\t\t\t\tcase cache.DeletedFinalStateUnknown:\n\t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n\t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n\t\t\t\t\t}\n\t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n\t\t\t\t\treturn false\n\t\t\t\tdefault:\n\t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n\t\t\t\t\treturn false\n\t\t\t\t}\n\t\t\t},\n\t\t\tHandler: cache.ResourceEventHandlerFuncs{\n\t\t\t\tAddFunc:    rc.addPodToCache,\n\t\t\t\tUpdateFunc: rc.updatePodInCache,\n\t\t\t\tDeleteFunc: rc.deletePodFromCache,\n\t\t\t},\n\t\t},\n\t)\n\n\tnodeInformer.Informer().AddEventHandler(\n\t\tcache.ResourceEventHandlerFuncs{\n\t\t\tAddFunc:    rc.addNodeToCache,\n\t\t\tUpdateFunc: rc.updateNodeInCache,\n\t\t\tDeleteFunc: rc.deleteNodeFromCache,\n\t\t},\n\t)\n\n\trc.NodeLister = nodeInformer.Lister()\n\trc.PodLister = podInformer.Lister()\n\tgo podInformer.Informer().Run(stopCh)\n\tgo nodeInformer.Informer().Run(stopCh)\n\trc.InformerFactory.Start(stopCh)\n\t...",
-    "markdown": "PodInformer := NewPodInformer(kubeClient, 0)\n  \tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n  \tnodeInformer := informerFactory.Core().V1().Nodes()\n  \t....\n  \trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n  \t// scheduled pod cache\n  \tpodInformer.Informer().AddEventHandler(\n  \t\tcache.FilteringResourceEventHandler{\n  \t\t\tFilterFunc: func(obj interface{}) bool {\n  \t\t\t\tswitch t := obj.(type) {\n  \t\t\t\tcase *v1.Pod:\n  \t\t\t\t\treturn assignedNonTerminatedPod(t)\n  \t\t\t\tcase cache.DeletedFinalStateUnknown:\n  \t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n  \t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n  \t\t\t\t\t}\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n  \t\t\t\t\treturn false\n  \t\t\t\tdefault:\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n  \t\t\t\t\treturn false\n  \t\t\t\t}\n  \t\t\t},\n  \t\t\tHandler: cache.ResourceEventHandlerFuncs{\n  \t\t\t\tAddFunc:    rc.addPodToCache,\n  \t\t\t\tUpdateFunc: rc.updatePodInCache,\n  \t\t\t\tDeleteFunc: rc.deletePodFromCache,\n  \t\t\t},\n  \t\t},\n  \t)\n  \n  \tnodeInformer.Informer().AddEventHandler(\n  \t\tcache.ResourceEventHandlerFuncs{\n  \t\t\tAddFunc:    rc.addNodeToCache,\n  \t\t\tUpdateFunc: rc.updateNodeInCache,\n  \t\t\tDeleteFunc: rc.deleteNodeFromCache,\n  \t\t},\n  \t)\n  \n  \trc.NodeLister = nodeInformer.Lister()\n  \trc.PodLister = podInformer.Lister()\n  \tgo podInformer.Informer().Run(stopCh)\n  \tgo nodeInformer.Informer().Run(stopCh)\n  \trc.InformerFactory.Start(stopCh)\n  \t... ([#104853](https://github.com/kubernetes/kubernetes/pull/104853), [@kitianFresh](https://github.com/kitianFresh)) [SIG API Machinery]",
+    "markdown": "PodInformer := NewPodInformer(kubeClient, 0)\n  \tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n  \tnodeInformer := informerFactory.Core().V1().Nodes()\n  \t....\n  \trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n  \t// scheduled pod cache\n  \tpodInformer.Informer().AddEventHandler(\n  \t\tcache.FilteringResourceEventHandler{\n  \t\t\tFilterFunc: func(obj interface{}) bool {\n  \t\t\t\tswitch t := obj.(type) {\n  \t\t\t\tcase *v1.Pod:\n  \t\t\t\t\treturn assignedNonTerminatedPod(t)\n  \t\t\t\tcase cache.DeletedFinalStateUnknown:\n  \t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n  \t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n  \t\t\t\t\t}\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n  \t\t\t\t\treturn false\n  \t\t\t\tdefault:\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n  \t\t\t\t\treturn false\n  \t\t\t\t}\n  \t\t\t},\n  \t\t\tHandler: cache.ResourceEventHandlerFuncs{\n  \t\t\t\tAddFunc:    rc.addPodToCache,\n  \t\t\t\tUpdateFunc: rc.updatePodInCache,\n  \t\t\t\tDeleteFunc: rc.deletePodFromCache,\n  \t\t\t},\n  \t\t},\n  \t)\n  \n  \tnodeInformer.Informer().AddEventHandler(\n  \t\tcache.ResourceEventHandlerFuncs{\n  \t\t\tAddFunc:    rc.addNodeToCache,\n  \t\t\tUpdateFunc: rc.updateNodeInCache,\n  \t\t\tDeleteFunc: rc.deleteNodeFromCache,\n  \t\t},\n  \t)\n  \n  \trc.NodeLister = nodeInformer.Lister()\n  \trc.PodLister = podInformer.Lister()\n  \tgo podInformer.Informer().Run(stopCh)\n  \tgo nodeInformer.Informer().Run(stopCh)\n  \trc.InformerFactory.Start(stopCh)\n  \t... ([#104853](https://github.com/kubernetes/kubernetes/pull/104853), [@kitianFresh](https://github.com/kitianFresh))",
     "author": "kitianFresh",
     "author_url": "https://github.com/kitianFresh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104853",
@@ -2625,7 +2625,7 @@
   "104873": {
     "commit": "fb82a0d7eb252acacd9ef8b7cea63cf1cff535b3",
     "text": "JSON log output is configurable and now supports writing info messages to stdout and error messages to stderr. Info messages can be buffered in memory. The default is to write both to stdout without buffering, as before.",
-    "markdown": "JSON log output is configurable and now supports writing info messages to stdout and error messages to stderr. Info messages can be buffered in memory. The default is to write both to stdout without buffering, as before. ([#104873](https://github.com/kubernetes/kubernetes/pull/104873), [@pohly](https://github.com/pohly)) [SIG API Machinery, Architecture, CLI, Cluster Lifecycle, Instrumentation, Node and Scheduling]",
+    "markdown": "JSON log output is configurable and now supports writing info messages to stdout and error messages to stderr. Info messages can be buffered in memory. The default is to write both to stdout without buffering, as before. ([#104873](https://github.com/kubernetes/kubernetes/pull/104873), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2661,7 +2661,7 @@
   "104877": {
     "commit": "a5cd438b9fbf49e013453f4d6c9b2e935a78071c",
     "text": "Kubernetes object references (= name + namespace) were not logged as struct when using JSON as log output format.",
-    "markdown": "Kubernetes object references (= name + namespace) were not logged as struct when using JSON as log output format. ([#104877](https://github.com/kubernetes/kubernetes/pull/104877), [@pohly](https://github.com/pohly)) [SIG API Machinery, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation and Storage]",
+    "markdown": "Kubernetes object references (= name + namespace) were not logged as struct when using JSON as log output format. ([#104877](https://github.com/kubernetes/kubernetes/pull/104877), [@pohly](https://github.com/pohly))",
     "author": "pohly",
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104877",
@@ -2711,7 +2711,7 @@
   "104894": {
     "commit": "f31453fe5b37f8aa960fca06c02faba9c3bbc610",
     "text": "Add support to generate client-side binaries for windows/arm64 platform",
-    "markdown": "Add support to generate client-side binaries for windows/arm64 platform ([#104894](https://github.com/kubernetes/kubernetes/pull/104894), [@pacoxu](https://github.com/pacoxu)) [SIG CLI, Testing and Windows]",
+    "markdown": "Add support to generate client-side binaries for windows/arm64 platform ([#104894](https://github.com/kubernetes/kubernetes/pull/104894), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104894",
@@ -2760,8 +2760,8 @@
   },
   "104908": {
     "commit": "060f5b88d0d554fd8b38333ed25b8e73614ab630",
-    "text": "Migrate pkg/proxy to structured logging",
-    "markdown": "Migrate pkg/proxy to structured logging ([#104908](https://github.com/kubernetes/kubernetes/pull/104908), [@CIPHERTron](https://github.com/CIPHERTron))",
+    "text": "Migrate`pkg/prox` to structured logging",
+    "markdown": "Migrate`pkg/prox` to structured logging ([#104908](https://github.com/kubernetes/kubernetes/pull/104908), [@CIPHERTron](https://github.com/CIPHERTron))",
     "author": "CIPHERTron",
     "author_url": "https://github.com/CIPHERTron",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104908",
@@ -2779,7 +2779,7 @@
   "104915": {
     "commit": "6edcb60d9f854903d341dc5155a78ff8221ad64e",
     "text": "Track the number of Pods with a Ready condition in Job status. The feature is alpha and needs the feature gate JobReadyPods to be enabled.",
-    "markdown": "Track the number of Pods with a Ready condition in Job status. The feature is alpha and needs the feature gate JobReadyPods to be enabled. ([#104915](https://github.com/kubernetes/kubernetes/pull/104915), [@alculquicondor](https://github.com/alculquicondor)) [SIG API Machinery, Apps, CLI and Testing]",
+    "markdown": "Track the number of Pods with a Ready condition in Job status. The feature is alpha and needs the feature gate JobReadyPods to be enabled. ([#104915](https://github.com/kubernetes/kubernetes/pull/104915), [@alculquicondor](https://github.com/alculquicondor))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3041,7 +3041,7 @@
   "105012": {
     "commit": "63f66e6c99ab59a6143dcd377cf93b6dde318c59",
     "text": "The CPUManager policy options are now enabled, and we introduce a graduation path for the new CPU Manager policy options.",
-    "markdown": "The CPUManager policy options are now enabled, and we introduce a graduation path for the new CPU Manager policy options. ([#105012](https://github.com/kubernetes/kubernetes/pull/105012), [@fromanirh](https://github.com/fromanirh)) [SIG Node and Testing]",
+    "markdown": "The CPUManager policy options are now enabled, and we introduce a graduation path for the new CPU Manager policy options. ([#105012](https://github.com/kubernetes/kubernetes/pull/105012), [@fromanirh](https://github.com/fromanirh))",
     "author": "fromanirh",
     "author_url": "https://github.com/fromanirh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105012",
@@ -3098,8 +3098,8 @@
   },
   "105042": {
     "commit": "e4e2c51648e1ab12965800f71bc3f5baa9496a2f",
-    "text": "All klog flags except for `-v` and `-vmodule` are deprecated. Support for `-vmodule` is only guaranteed for the text log format.",
-    "markdown": "All klog flags except for `-v` and `-vmodule` are deprecated. Support for `-vmodule` is only guaranteed for the text log format. ([#105042](https://github.com/kubernetes/kubernetes/pull/105042), [@pohly](https://github.com/pohly)) [SIG API Machinery, Architecture, CLI, Cluster Lifecycle and Instrumentation]",
+    "text": "All `klog` flags except for `-v` and `-vmodule` are deprecated. Support for `-vmodule` is only guaranteed for the text log format.",
+    "markdown": "All `klog` flags except for `-v` and `-vmodule` are deprecated. Support for `-vmodule` is only guaranteed for the text log format. ([#105042](https://github.com/kubernetes/kubernetes/pull/105042), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3195,7 +3195,7 @@
   "105107": {
     "commit": "6f47878926f1aa51e0864821d882bf695558709a",
     "text": "Added a new feature gate `CustomResourceValidationExpressions` to enable expression validation for Custom Resource.",
-    "markdown": "Added a new feature gate `CustomResourceValidationExpressions` to enable expression validation for Custom Resource. ([#105107](https://github.com/kubernetes/kubernetes/pull/105107), [@cici37](https://github.com/cici37)) [SIG API Machinery]",
+    "markdown": "Added a new feature gate `CustomResourceValidationExpressions` to enable expression validation for Custom Resource. ([#105107](https://github.com/kubernetes/kubernetes/pull/105107), [@cici37](https://github.com/cici37))",
     "documentation": [
       {
         "description": "[KEP]:  \u003c",
@@ -3220,8 +3220,8 @@
   },
   "105156": {
     "commit": "b7da9ef49f82ac8b54d28931a5b3e1de30accfd3",
-    "text": "`client-go`, using log level 9, trace the following events of a HTTP request:\n    - DNS lookup\n    - TCP dialing\n    - TLS handshake\n    - Time to get a connection from the pool\n    - Time to process a request",
-    "markdown": "`client-go`, using log level 9, trace the following events of a HTTP request:\n      - DNS lookup\n      - TCP dialing\n      - TLS handshake\n      - Time to get a connection from the pool\n      - Time to process a request ([#105156](https://github.com/kubernetes/kubernetes/pull/105156), [@aojea](https://github.com/aojea))",
+    "text": "`client-go`, using log level 9, traces the following events of a HTTP request:\n    - DNS lookup\n    - TCP dialing\n    - TLS handshake\n    - Time to get a connection from the pool\n    - Time to process a request",
+    "markdown": "`client-go`, using log level 9, traces the following events of a HTTP request:\n      - DNS lookup\n      - TCP dialing\n      - TLS handshake\n      - Time to get a connection from the pool\n      - Time to process a request ([#105156](https://github.com/kubernetes/kubernetes/pull/105156), [@aojea](https://github.com/aojea))",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105156",
@@ -3262,8 +3262,8 @@
   },
   "105185": {
     "commit": "26365faf310dab52e5ec359158c7b91bc2aa5243",
-    "text": "Fix: ignore `not a vmss instance` error for VMAS nodes in `EnsureBackendPoolDeleted`.",
-    "markdown": "Fix: ignore `not a vmss instance` error for VMAS nodes in `EnsureBackendPoolDeleted`. ([#105185](https://github.com/kubernetes/kubernetes/pull/105185), [@ialidzhikov](https://github.com/ialidzhikov))",
+    "text": "Ignore `not a vmss instance` error for VMAS nodes in `EnsureBackendPoolDeleted`.",
+    "markdown": "Ignore `not a vmss instance` error for VMAS nodes in `EnsureBackendPoolDeleted`. ([#105185](https://github.com/kubernetes/kubernetes/pull/105185), [@ialidzhikov](https://github.com/ialidzhikov))",
     "author": "ialidzhikov",
     "author_url": "https://github.com/ialidzhikov",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105185",
@@ -3281,8 +3281,8 @@
   },
   "105188": {
     "commit": "1ad3e14f1fc4a5f6e6cd6f9ffc7d030cb3d6540d",
-    "text": "fix: consolidate logs for `instance not found` error\nfix: skip `not found` nodes when reconciling LB backend address pools",
-    "markdown": "Fix: consolidate logs for `instance not found` error\n  fix: skip `not found` nodes when reconciling LB backend address pools ([#105188](https://github.com/kubernetes/kubernetes/pull/105188), [@nilo19](https://github.com/nilo19))",
+    "text": "Fixed consolidate logs for `instance not found` error\nFixed skip `not found` nodes when reconciling LB backend address pools",
+    "markdown": "Fixed consolidate logs for `instance not found` error\n  Fixed skip `not found` nodes when reconciling LB backend address pools ([#105188](https://github.com/kubernetes/kubernetes/pull/105188), [@nilo19](https://github.com/nilo19))",
     "author": "nilo19",
     "author_url": "https://github.com/nilo19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105188",
@@ -3403,8 +3403,8 @@
   },
   "105215": {
     "commit": "a923852ba06e520c7b531e5cf102d78744dd6f53",
-    "text": "Kubelet's Graceful Nodee Shutdown will terminate probes when shutting down.",
-    "markdown": "Kubelet's Graceful Nodee Shutdown will terminate probes when shutting down. ([#105215](https://github.com/kubernetes/kubernetes/pull/105215), [@rphillips](https://github.com/rphillips))",
+    "text": "Kubelet's Graceful Node Shutdown will terminate probes when shutting down.",
+    "markdown": "Kubelet's Graceful Node Shutdown will terminate probes when shutting down. ([#105215](https://github.com/kubernetes/kubernetes/pull/105215), [@rphillips](https://github.com/rphillips))",
     "author": "rphillips",
     "author_url": "https://github.com/rphillips",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105215",
@@ -3488,7 +3488,7 @@
   "105253": {
     "commit": "763e528e5bf02218b9c69d07074b9361a917adbc",
     "text": "fix: leave the probe path empty for TCP probes",
-    "markdown": "Fix: leave the probe path empty for TCP probes ([#105253](https://github.com/kubernetes/kubernetes/pull/105253), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "markdown": "Fix: leave the probe path empty for TCP probes ([#105253](https://github.com/kubernetes/kubernetes/pull/105253), [@nilo19](https://github.com/nilo19))",
     "author": "nilo19",
     "author_url": "https://github.com/nilo19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105253",
@@ -3507,7 +3507,7 @@
   "105267": {
     "commit": "598a8829c1b6c1cdf79733de9f9ae104c9ce717d",
     "text": "Fixes a bug that could result in the EndpointSlice controller unnecessarily updating EndpointSlices associated with a Service that had Topology Aware Hints enabled.",
-    "markdown": "Fixes a bug that could result in the EndpointSlice controller unnecessarily updating EndpointSlices associated with a Service that had Topology Aware Hints enabled. ([#105267](https://github.com/kubernetes/kubernetes/pull/105267), [@llhuii](https://github.com/llhuii)) [SIG Apps and Network]",
+    "markdown": "Fixes a bug that could result in the EndpointSlice controller unnecessarily updating EndpointSlices associated with a Service that had Topology Aware Hints enabled. ([#105267](https://github.com/kubernetes/kubernetes/pull/105267), [@llhuii](https://github.com/llhuii))",
     "author": "llhuii",
     "author_url": "https://github.com/llhuii",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105267",
@@ -3555,7 +3555,7 @@
   "105352": {
     "commit": "e1b94fdac9cf217b3ddf6ff0c18023e43120779a",
     "text": "Revert building binaries with PIE mode.",
-    "markdown": "Revert building binaries with PIE mode. ([#105352](https://github.com/kubernetes/kubernetes/pull/105352), [@ehashman](https://github.com/ehashman)) [SIG Node, Release and Security]",
+    "markdown": "Revert building binaries with PIE mode. ([#105352](https://github.com/kubernetes/kubernetes/pull/105352), [@ehashman](https://github.com/ehashman))",
     "author": "ehashman",
     "author_url": "https://github.com/ehashman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105352",
@@ -3593,7 +3593,7 @@
   "105405": {
     "commit": "18104ecf1f57362ae6b33f01ce6413d7fec4f715",
     "text": "Ephemeral containers have reached beta maturity and are now available by default.",
-    "markdown": "Ephemeral containers have reached beta maturity and are now available by default. ([#105405](https://github.com/kubernetes/kubernetes/pull/105405), [@verb](https://github.com/verb)) [SIG API Machinery, Apps, Node and Testing]",
+    "markdown": "Ephemeral containers have reached beta maturity and are now available by default. ([#105405](https://github.com/kubernetes/kubernetes/pull/105405), [@verb](https://github.com/verb))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3661,7 +3661,7 @@
   "105445": {
     "commit": "e054181e517b48a3c862207537092c28604aaad9",
     "text": "Change `kubectl diff --invalid-arg` status code from 1 to 2 to match docs",
-    "markdown": "Change `kubectl diff --invalid-arg` status code from 1 to 2 to match docs ([#105445](https://github.com/kubernetes/kubernetes/pull/105445), [@ardaguclu](https://github.com/ardaguclu)) [SIG CLI]",
+    "markdown": "Change `kubectl diff --invalid-arg` status code from 1 to 2 to match docs ([#105445](https://github.com/kubernetes/kubernetes/pull/105445), [@ardaguclu](https://github.com/ardaguclu))",
     "author": "ardaguclu",
     "author_url": "https://github.com/ardaguclu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105445",
@@ -3715,7 +3715,7 @@
   "105474": {
     "commit": "a8bda48abeccf3daaafb0a95e9e86eccd30b389e",
     "text": "Feature-gate VolumeSubpath has been deprecated and cannot be disabled. It will be completely removed in 1.25",
-    "markdown": "Feature-gate VolumeSubpath has been deprecated and cannot be disabled. It will be completely removed in 1.25 ([#105474](https://github.com/kubernetes/kubernetes/pull/105474), [@mauriciopoppe](https://github.com/mauriciopoppe)) [SIG Storage]",
+    "markdown": "Feature-gate VolumeSubpath has been deprecated and cannot be disabled. It will be completely removed in 1.25 ([#105474](https://github.com/kubernetes/kubernetes/pull/105474), [@mauriciopoppe](https://github.com/mauriciopoppe))",
     "author": "mauriciopoppe",
     "author_url": "https://github.com/mauriciopoppe",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105474",
@@ -3759,7 +3759,7 @@
   "105484": {
     "commit": "9cb0c403df65defb3844e87e9d0a09495a231120",
     "text": "Fixed architecture within manifest for non `amd64` etcd images.",
-    "markdown": "Fixed architecture within manifest for non `amd64` etcd images. ([#105484](https://github.com/kubernetes/kubernetes/pull/105484), [@saschagrunert](https://github.com/saschagrunert)) [SIG API Machinery]",
+    "markdown": "Fixed architecture within manifest for non `amd64` etcd images. ([#105484](https://github.com/kubernetes/kubernetes/pull/105484), [@saschagrunert](https://github.com/saschagrunert))",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105484",
@@ -3838,7 +3838,7 @@
   "105563": {
     "commit": "d09ce7be1c3b98afabaab1e01494546a2f4a95c5",
     "text": "Kubernetes is now built with Golang 1.17.2",
-    "markdown": "Kubernetes is now built with Golang 1.17.2 ([#105563](https://github.com/kubernetes/kubernetes/pull/105563), [@mengjiao-liu](https://github.com/mengjiao-liu)) [SIG API Machinery, Cloud Provider, Instrumentation, Release and Testing]",
+    "markdown": "Kubernetes is now built with Golang 1.17.2 ([#105563](https://github.com/kubernetes/kubernetes/pull/105563), [@mengjiao-liu](https://github.com/mengjiao-liu))",
     "author": "mengjiao-liu",
     "author_url": "https://github.com/mengjiao-liu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105563",
@@ -3907,7 +3907,7 @@
   "105609": {
     "commit": "c592bd40f2df941aa4ea364592ce92fd5c669bfc",
     "text": "The \"Generic Ephemeral Volume\" feature graduates to GA. It is now enabled unconditionally.",
-    "markdown": "The \"Generic Ephemeral Volume\" feature graduates to GA. It is now enabled unconditionally. ([#105609](https://github.com/kubernetes/kubernetes/pull/105609), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Auth, Node, Scheduling, Storage and Testing]",
+    "markdown": "The \"Generic Ephemeral Volume\" feature graduates to GA. It is now enabled unconditionally. ([#105609](https://github.com/kubernetes/kubernetes/pull/105609), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3943,7 +3943,7 @@
   "105631": {
     "commit": "b2c4269992498d3a44f1b79a20eb14b8dc61b380",
     "text": "Add a new `distribute-cpus-across-numa` option to the static `CPUManager` policy. When enabled, this will trigger the `CPUManager` to evenly distribute CPUs across NUMA nodes in cases where more than one NUMA node is required to satisfy the allocation.",
-    "markdown": "Add a new `distribute-cpus-across-numa` option to the static `CPUManager` policy. When enabled, this will trigger the `CPUManager` to evenly distribute CPUs across NUMA nodes in cases where more than one NUMA node is required to satisfy the allocation. ([#105631](https://github.com/kubernetes/kubernetes/pull/105631), [@klueska](https://github.com/klueska)) [SIG Node]",
+    "markdown": "Add a new `distribute-cpus-across-numa` option to the static `CPUManager` policy. When enabled, this will trigger the `CPUManager` to evenly distribute CPUs across NUMA nodes in cases where more than one NUMA node is required to satisfy the allocation. ([#105631](https://github.com/kubernetes/kubernetes/pull/105631), [@klueska](https://github.com/klueska))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4006,7 +4006,7 @@
   "105673": {
     "commit": "655c04d9f530e5ebc2ec6f5feef76716c8a9db22",
     "text": "support more than 100 disk mounts on Windows",
-    "markdown": "Support more than 100 disk mounts on Windows ([#105673](https://github.com/kubernetes/kubernetes/pull/105673), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage and Windows]",
+    "markdown": "Support more than 100 disk mounts on Windows ([#105673](https://github.com/kubernetes/kubernetes/pull/105673), [@andyzhangx](https://github.com/andyzhangx))",
     "author": "andyzhangx",
     "author_url": "https://github.com/andyzhangx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105673",
@@ -4039,8 +4039,8 @@
   },
   "105682": {
     "commit": "7fbb384e15e2fb8370513eab9443c5107df1b257",
-    "text": "Generic Ephemeral Volumes can be used also as raw block devices, but the Pod validation was refusing to create Pods with that combination.",
-    "markdown": "Generic Ephemeral Volumes can be used also as raw block devices, but the Pod validation was refusing to create Pods with that combination. ([#105682](https://github.com/kubernetes/kubernetes/pull/105682), [@pohly](https://github.com/pohly))",
+    "text": "Be able to create a Pod with Generic Ephemeral Volumes as raw block devices.",
+    "markdown": "Be able to create a Pod with Generic Ephemeral Volumes as raw block devices. ([#105682](https://github.com/kubernetes/kubernetes/pull/105682), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4068,7 +4068,7 @@
   "105687": {
     "commit": "c733594040f697efbf570bef79df5678b513b1c6",
     "text": "JobTrackingWithFinalizers graduates to beta. Feature is enabled by default.",
-    "markdown": "JobTrackingWithFinalizers graduates to beta. Feature is enabled by default. ([#105687](https://github.com/kubernetes/kubernetes/pull/105687), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps and Testing]",
+    "markdown": "JobTrackingWithFinalizers graduates to beta. Feature is enabled by default. ([#105687](https://github.com/kubernetes/kubernetes/pull/105687), [@alculquicondor](https://github.com/alculquicondor))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4136,8 +4136,8 @@
   },
   "105734": {
     "commit": "afff019fbc90373127020693cdb056a968468f04",
-    "text": "Fix concurrent map access causing panics when logging timed-out API calls.",
-    "markdown": "Fix concurrent map access causing panics when logging timed-out API calls. ([#105734](https://github.com/kubernetes/kubernetes/pull/105734), [@marseel](https://github.com/marseel)) [SIG API Machinery]",
+    "text": "Fixed concurrent map access causing panics when logging timed-out API calls.",
+    "markdown": "Fixed concurrent map access causing panics when logging timed-out API calls. ([#105734](https://github.com/kubernetes/kubernetes/pull/105734), [@marseel](https://github.com/marseel))",
     "author": "marseel",
     "author_url": "https://github.com/marseel",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105734",
@@ -4174,7 +4174,7 @@
   "105839": {
     "commit": "aa6bb481bacd00c25076b73cefed6f8b61fd2788",
     "text": "fix: remove VMSS and VMSS instances from SLB backend pool only when necessary",
-    "markdown": "Fix: remove VMSS and VMSS instances from SLB backend pool only when necessary ([#105839](https://github.com/kubernetes/kubernetes/pull/105839), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "markdown": "Fix: remove VMSS and VMSS instances from SLB backend pool only when necessary ([#105839](https://github.com/kubernetes/kubernetes/pull/105839), [@nilo19](https://github.com/nilo19))",
     "author": "nilo19",
     "author_url": "https://github.com/nilo19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105839",
@@ -4227,7 +4227,7 @@
   "105855": {
     "commit": "3c87c43ceff6122637c8d8070601f7271026360e",
     "text": "Migrated `cmd/kube-scheduler/app/server.go`, `pkg/scheduler/framework/plugins/nodelabel/node_label.go`, `pkg/scheduler/framework/plugins/nodevolumelimits/csi.go`, `pkg/scheduler/framework/plugins/nodevolumelimits/non_csi.go` to structured logging",
-    "markdown": "Migrated `cmd/kube-scheduler/app/server.go`, `pkg/scheduler/framework/plugins/nodelabel/node_label.go`, `pkg/scheduler/framework/plugins/nodevolumelimits/csi.go`, `pkg/scheduler/framework/plugins/nodevolumelimits/non_csi.go` to structured logging ([#105855](https://github.com/kubernetes/kubernetes/pull/105855), [@shivanshu1333](https://github.com/shivanshu1333)) [SIG Instrumentation and Scheduling]",
+    "markdown": "Migrated `cmd/kube-scheduler/app/server.go`, `pkg/scheduler/framework/plugins/nodelabel/node_label.go`, `pkg/scheduler/framework/plugins/nodevolumelimits/csi.go`, `pkg/scheduler/framework/plugins/nodevolumelimits/non_csi.go` to structured logging ([#105855](https://github.com/kubernetes/kubernetes/pull/105855), [@shivanshu1333](https://github.com/shivanshu1333))",
     "author": "shivanshu1333",
     "author_url": "https://github.com/shivanshu1333",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105855",
@@ -4395,7 +4395,7 @@
   "105931": {
     "commit": "adff4a75ad99b5c2805fa8952368220dbbf44172",
     "text": "Migrate `pkg/scheduler/framework/plugins/interpodaffinity/filtering.go`,`pkg/scheduler/framework/plugins/podtopologyspread/filtering.go`, `pkg/scheduler/framework/plugins/volumezone/volume_zone.go` to structured logging",
-    "markdown": "Migrate `pkg/scheduler/framework/plugins/interpodaffinity/filtering.go`,`pkg/scheduler/framework/plugins/podtopologyspread/filtering.go`, `pkg/scheduler/framework/plugins/volumezone/volume_zone.go` to structured logging ([#105931](https://github.com/kubernetes/kubernetes/pull/105931), [@mengjiao-liu](https://github.com/mengjiao-liu)) [SIG Instrumentation and Scheduling]",
+    "markdown": "Migrate `pkg/scheduler/framework/plugins/interpodaffinity/filtering.go`,`pkg/scheduler/framework/plugins/podtopologyspread/filtering.go`, `pkg/scheduler/framework/plugins/volumezone/volume_zone.go` to structured logging ([#105931](https://github.com/kubernetes/kubernetes/pull/105931), [@mengjiao-liu](https://github.com/mengjiao-liu))",
     "author": "mengjiao-liu",
     "author_url": "https://github.com/mengjiao-liu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105931",
@@ -4459,7 +4459,7 @@
   "92433": {
     "commit": "819b021ada3090a8f520277291c6974283a42dbc",
     "text": "The etcd container image now supports Windows.",
-    "markdown": "The etcd container image now supports Windows. ([#92433](https://github.com/kubernetes/kubernetes/pull/92433), [@claudiubelu](https://github.com/claudiubelu)) [SIG API Machinery and Windows]",
+    "markdown": "The etcd container image now supports Windows. ([#92433](https://github.com/kubernetes/kubernetes/pull/92433), [@claudiubelu](https://github.com/claudiubelu))",
     "author": "claudiubelu",
     "author_url": "https://github.com/claudiubelu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/92433",

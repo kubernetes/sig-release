@@ -1,0 +1,4 @@
+pr: 104877
+releasenote:
+  text: Migrated kubernetes object references (= name + namespace) to structured
+    logging when using JSON as log output format
