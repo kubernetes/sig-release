@@ -1,0 +1,4 @@
+pr: 105997
+releasenote:
+  text: The `EndpointSlice` mirroring controller now cleans up managed `EndpointSlices`
+    when a service selector is added.

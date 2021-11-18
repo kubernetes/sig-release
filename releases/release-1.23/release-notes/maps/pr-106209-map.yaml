@@ -1,0 +1,3 @@
+pr: 106209
+releasenote:
+  text: Kubernetes is now built with Golang `1.17.3`.

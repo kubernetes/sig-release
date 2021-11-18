@@ -1,0 +1,5 @@
+pr: 105885
+releasenote:
+  text: |-
+    Move `ConfigurableFSGroupPolicy` to GA.
+    Rename metric `volume_fsgroup_recursive_apply` to `volume_apply_access_control`.

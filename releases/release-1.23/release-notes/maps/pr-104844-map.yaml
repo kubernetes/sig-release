@@ -1,0 +1,5 @@
+pr: 104844
+releasenote:
+  text: |-
+    Don't use a custom dialer for the kubelet if is not rotating certificates, so we can reuse TCP connections and have only one between the apiserver and the kubelet.
+    If users experiment problems with stale connections  using `HTTP1.1`, they can force the previous behavior of the kubelet by setting the environment variable `DISABLE_HTTP2`.

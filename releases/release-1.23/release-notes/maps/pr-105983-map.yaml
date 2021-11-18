@@ -1,0 +1,4 @@
+pr: 105983
+releasenote:
+  text: 'kube-apiserver: when merging lists, server side spply now prefers the order
+    of the submitted request instead of the existing persisted object'

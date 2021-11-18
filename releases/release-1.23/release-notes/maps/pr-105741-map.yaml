@@ -1,0 +1,12 @@
+pr: 105741
+releasenote:
+  text: 'kubeadm: add the kubeadm specific, Alpha (disabled by default) feature gate
+    `UnversionedKubeletConfigMap`. When this feature is enabled kubeadm will start
+    using a new naming format for the `ConfigMap` where it stores the `KubeletConfiguration`
+    structure. The old format included the Kubernetes version - "kube-system/kubelet-config-1.22",
+    while the new format does not - "kube-system/kubelet-config". A similar formatting
+    change is done for the related RBAC rules. The old format is now DEPRECATED and
+    will be removed after the feature graduates to GA. When writing the `ConfigMap`
+    kubeadm (init, upgrade apply) will respect the value of `UnversionedKubeletConfigMap`,
+    while when reading it (join, reset, upgrade), it would attempt to use new format
+    first and fallback to the legacy format if needed.'

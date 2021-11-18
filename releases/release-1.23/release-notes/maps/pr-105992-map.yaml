@@ -1,0 +1,5 @@
+pr: 105992
+releasenote:
+  text: 'kubeadm: Fix a bug on Windows worker nodes, where the downloaded `KubeletConfiguration`
+    from the cluster can contain Linux paths that do not work on Windows and can trip
+    the kubelet binary.'

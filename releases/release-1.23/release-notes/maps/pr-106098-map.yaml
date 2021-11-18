@@ -1,0 +1,4 @@
+pr: 106098
+releasenote:
+  text: Changed feature `CSIMigrationAWS` to on by default. This feature requires
+    the AWS EBS CSI driver to be installed.
