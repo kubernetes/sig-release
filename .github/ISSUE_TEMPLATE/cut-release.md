@@ -62,6 +62,10 @@ Collect Metrics:
 Run krel history --branch release-1.mm --date-from 2021-mm-dd
 http://bit.ly/relmanagers-handbook#adding-data-about-the-cloud-build-jobs
 
+Finish post-release branch creation tasks:    ← Only for rc.0 release
+See the Branch Creation section of the handbook for more details:
+http://bit.ly/relmanagers-handbook#branch-creation
+
 Help? Ring @release-managers on slack!
 
 -->
@@ -81,7 +85,7 @@ Help? Ring @release-managers on slack!
 - [ ] Notify #release-management: <!-- Paste link to slack -->
 - [ ] Send notification: <!-- Paste link to kubernetes-dev email -->
 - [ ] Collect metrics and add them to the `Release steps` table below
-
+<!-- ONLY FOR RC.0 RELEASE - [ ] Finish post-release branch creation tasks -->
 
 ## Release Tools Version
 
