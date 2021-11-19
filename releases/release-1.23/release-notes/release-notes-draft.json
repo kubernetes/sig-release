@@ -108,7 +108,7 @@
   "101370": {
     "commit": "41fdc193ff28218f15bc30f2bdaa07b91a5008bc",
     "text": "Create HPA with follow：",
-    "markdown": "Create HPA with follow： ([#101370](https://github.com/kubernetes/kubernetes/pull/101370), [@RyanAoh](https://github.com/RyanAoh))",
+    "markdown": "Create HPA with follow： ([#101370](https://github.com/kubernetes/kubernetes/pull/101370), [@RyanAoh](https://github.com/RyanAoh)) [SIG Autoscaling]",
     "author": "RyanAoh",
     "author_url": "https://github.com/RyanAoh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101370",
@@ -142,8 +142,8 @@
   },
   "101781": {
     "commit": "9c5cefb230241d74340ba530666212300cba8ff8",
-    "text": "Fixed [Errno -2] Name or service not known",
-    "markdown": "Fixed [Errno -2] Name or service not known ([#101781](https://github.com/kubernetes/kubernetes/pull/101781), [@ptabor](https://github.com/ptabor))",
+    "text": "[Errno -2] Name or service not known",
+    "markdown": "[Errno -2] Name or service not known ([#101781](https://github.com/kubernetes/kubernetes/pull/101781), [@ptabor](https://github.com/ptabor)) [SIG Cloud Provider]",
     "author": "ptabor",
     "author_url": "https://github.com/ptabor",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101781",
@@ -650,8 +650,8 @@
   },
   "103724": {
     "commit": "98e526390da420db6d36c4a0d7203fcde74a1dd8",
-    "text": "The image gcr.io/kubernetes-e2e-test-images will no longer be used in E2E / CI testing, k8s.gcr.io/e2e-test-images will be used instead.",
-    "markdown": "The image gcr.io/kubernetes-e2e-test-images will no longer be used in E2E / CI testing, k8s.gcr.io/e2e-test-images will be used instead. ([#103724](https://github.com/kubernetes/kubernetes/pull/103724), [@claudiubelu](https://github.com/claudiubelu))",
+    "text": "The image `gcr.io/kubernetes-e2e-test-images` will no longer be used in E2E / CI testing, `k8s.gcr.io/e2e-test-images` will be used instead.",
+    "markdown": "The image `gcr.io/kubernetes-e2e-test-images` will no longer be used in E2E / CI testing, `k8s.gcr.io/e2e-test-images` will be used instead. ([#103724](https://github.com/kubernetes/kubernetes/pull/103724), [@claudiubelu](https://github.com/claudiubelu))",
     "author": "claudiubelu",
     "author_url": "https://github.com/claudiubelu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103724",
@@ -1520,8 +1520,8 @@
   },
   "104251": {
     "commit": "9b45983d3c8c246948682e678caa721b6d0bed0c",
-    "text": "Introduce v1beta3 API for scheduler. This version \n- increases the weight of user specifiable priorities.\nThe weights of following priority plugins are increased\n  - `TaintTolerations` to 3 - as leveraging node tainting to group nodes in the cluster is becoming a widely-adopted practice\n  - `NodeAffinity` to 2\n  - `InterPodAffinity` to 2\n\n- Won't have `HealthzBindAddress`, `MetricsBindAddress` fields",
-    "markdown": "Introduce v1beta3 API for scheduler. This version \n  - increases the weight of user specifiable priorities.\n  The weights of following priority plugins are increased\n    - `TaintTolerations` to 3 - as leveraging node tainting to group nodes in the cluster is becoming a widely-adopted practice\n    - `NodeAffinity` to 2\n    - `InterPodAffinity` to 2\n  \n  - Won't have `HealthzBindAddress`, `MetricsBindAddress` fields ([#104251](https://github.com/kubernetes/kubernetes/pull/104251), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))",
+    "text": "Introduce `v1beta3` API for scheduler. This version \n- increases the weight of user specifiable priorities.\nThe weights of following priority plugins are increased\n  - `TaintTolerations` to 3 - as leveraging node tainting to group nodes in the cluster is becoming a widely-adopted practice\n  - `NodeAffinity` to 2\n  - `InterPodAffinity` to 2\n\n- Won't have `HealthzBindAddress`, `MetricsBindAddress` fields",
+    "markdown": "Introduce `v1beta3` API for scheduler. This version \n  - increases the weight of user specifiable priorities.\n  The weights of following priority plugins are increased\n    - `TaintTolerations` to 3 - as leveraging node tainting to group nodes in the cluster is becoming a widely-adopted practice\n    - `NodeAffinity` to 2\n    - `InterPodAffinity` to 2\n  \n  - Won't have `HealthzBindAddress`, `MetricsBindAddress` fields ([#104251](https://github.com/kubernetes/kubernetes/pull/104251), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))",
     "documentation": [
       {
         "description": "KEP",
@@ -1845,8 +1845,8 @@
   },
   "104482": {
     "commit": "c6935ad50e0809c1dc2d3ac9000abda0ecb49bcc",
-    "text": "Changed `kubectl describe` to compute age of an event using the `EventSeries.count` and `EventSeries.lastObservedTime`.",
-    "markdown": "Changed `kubectl describe` to compute age of an event using the `EventSeries.count` and `EventSeries.lastObservedTime`. ([#104482](https://github.com/kubernetes/kubernetes/pull/104482), [@harjas27](https://github.com/harjas27))",
+    "text": "Changed kubectl describe to compute age of an event using the `EventSeries.count` and `EventSeries.lastObservedTime`.",
+    "markdown": "Changed kubectl describe to compute age of an event using the `EventSeries.count` and `EventSeries.lastObservedTime`. ([#104482](https://github.com/kubernetes/kubernetes/pull/104482), [@harjas27](https://github.com/harjas27))",
     "author": "harjas27",
     "author_url": "https://github.com/harjas27",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104482",
@@ -2151,8 +2151,8 @@
   },
   "104631": {
     "commit": "84027bc07d14bdc35e566d8f4933b43a447586a1",
-    "text": "A deprecation notice has been added when using the kube-proxy Userspace proxier, which will be removed in v1.25. (#103860)",
-    "markdown": "A deprecation notice has been added when using the kube-proxy Userspace proxier, which will be removed in v1.25. (#103860) ([#104631](https://github.com/kubernetes/kubernetes/pull/104631), [@perithompson](https://github.com/perithompson))",
+    "text": "A deprecation notice has been added when using the kube-proxy userspace proxier, which will be removed in v1.25. (#103860)",
+    "markdown": "A deprecation notice has been added when using the kube-proxy userspace proxier, which will be removed in v1.25. (#103860) ([#104631](https://github.com/kubernetes/kubernetes/pull/104631), [@perithompson](https://github.com/perithompson))",
     "author": "perithompson",
     "author_url": "https://github.com/perithompson",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104631",
@@ -2543,8 +2543,8 @@
   },
   "104817": {
     "commit": "1dcea5cb028a549e7a1c9f06ee0ae3a452231dbb",
-    "text": "A Pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered.",
-    "markdown": "A Pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered. ([#104817](https://github.com/kubernetes/kubernetes/pull/104817), [@smarterclayton](https://github.com/smarterclayton))",
+    "text": "A pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered.",
+    "markdown": "A pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered. ([#104817](https://github.com/kubernetes/kubernetes/pull/104817), [@smarterclayton](https://github.com/smarterclayton))",
     "author": "smarterclayton",
     "author_url": "https://github.com/smarterclayton",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104817",
@@ -2561,8 +2561,8 @@
   },
   "104847": {
     "commit": "51384aa77ea50bdff48d101a5b2b55436f18841e",
-    "text": "When a static Pod file is deleted and recreated while using a fixed UID, the Pod was not properly restarted.",
-    "markdown": "When a static Pod file is deleted and recreated while using a fixed UID, the Pod was not properly restarted. ([#104847](https://github.com/kubernetes/kubernetes/pull/104847), [@smarterclayton](https://github.com/smarterclayton))",
+    "text": "When a static pod file is deleted and recreated while using a fixed UID, the pod was not properly restarted.",
+    "markdown": "When a static pod file is deleted and recreated while using a fixed UID, the pod was not properly restarted. ([#104847](https://github.com/kubernetes/kubernetes/pull/104847), [@smarterclayton](https://github.com/smarterclayton))",
     "author": "smarterclayton",
     "author_url": "https://github.com/smarterclayton",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104847",
@@ -2583,7 +2583,7 @@
   "104853": {
     "commit": "dcfe8f5d5c9531e3196eb5036a86643c728eafe7",
     "text": "podInformer := NewPodInformer(kubeClient, 0)\n\tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n\tnodeInformer := informerFactory.Core().V1().Nodes()\n\t....\n\trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n\t// scheduled pod cache\n\tpodInformer.Informer().AddEventHandler(\n\t\tcache.FilteringResourceEventHandler{\n\t\t\tFilterFunc: func(obj interface{}) bool {\n\t\t\t\tswitch t := obj.(type) {\n\t\t\t\tcase *v1.Pod:\n\t\t\t\t\treturn assignedNonTerminatedPod(t)\n\t\t\t\tcase cache.DeletedFinalStateUnknown:\n\t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n\t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n\t\t\t\t\t}\n\t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n\t\t\t\t\treturn false\n\t\t\t\tdefault:\n\t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n\t\t\t\t\treturn false\n\t\t\t\t}\n\t\t\t},\n\t\t\tHandler: cache.ResourceEventHandlerFuncs{\n\t\t\t\tAddFunc:    rc.addPodToCache,\n\t\t\t\tUpdateFunc: rc.updatePodInCache,\n\t\t\t\tDeleteFunc: rc.deletePodFromCache,\n\t\t\t},\n\t\t},\n\t)\n\n\tnodeInformer.Informer().AddEventHandler(\n\t\tcache.ResourceEventHandlerFuncs{\n\t\t\tAddFunc:    rc.addNodeToCache,\n\t\t\tUpdateFunc: rc.updateNodeInCache,\n\t\t\tDeleteFunc: rc.deleteNodeFromCache,\n\t\t},\n\t)\n\n\trc.NodeLister = nodeInformer.Lister()\n\trc.PodLister = podInformer.Lister()\n\tgo podInformer.Informer().Run(stopCh)\n\tgo nodeInformer.Informer().Run(stopCh)\n\trc.InformerFactory.Start(stopCh)\n\t...",
-    "markdown": "PodInformer := NewPodInformer(kubeClient, 0)\n  \tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n  \tnodeInformer := informerFactory.Core().V1().Nodes()\n  \t....\n  \trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n  \t// scheduled pod cache\n  \tpodInformer.Informer().AddEventHandler(\n  \t\tcache.FilteringResourceEventHandler{\n  \t\t\tFilterFunc: func(obj interface{}) bool {\n  \t\t\t\tswitch t := obj.(type) {\n  \t\t\t\tcase *v1.Pod:\n  \t\t\t\t\treturn assignedNonTerminatedPod(t)\n  \t\t\t\tcase cache.DeletedFinalStateUnknown:\n  \t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n  \t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n  \t\t\t\t\t}\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n  \t\t\t\t\treturn false\n  \t\t\t\tdefault:\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n  \t\t\t\t\treturn false\n  \t\t\t\t}\n  \t\t\t},\n  \t\t\tHandler: cache.ResourceEventHandlerFuncs{\n  \t\t\t\tAddFunc:    rc.addPodToCache,\n  \t\t\t\tUpdateFunc: rc.updatePodInCache,\n  \t\t\t\tDeleteFunc: rc.deletePodFromCache,\n  \t\t\t},\n  \t\t},\n  \t)\n  \n  \tnodeInformer.Informer().AddEventHandler(\n  \t\tcache.ResourceEventHandlerFuncs{\n  \t\t\tAddFunc:    rc.addNodeToCache,\n  \t\t\tUpdateFunc: rc.updateNodeInCache,\n  \t\t\tDeleteFunc: rc.deleteNodeFromCache,\n  \t\t},\n  \t)\n  \n  \trc.NodeLister = nodeInformer.Lister()\n  \trc.PodLister = podInformer.Lister()\n  \tgo podInformer.Informer().Run(stopCh)\n  \tgo nodeInformer.Informer().Run(stopCh)\n  \trc.InformerFactory.Start(stopCh)\n  \t... ([#104853](https://github.com/kubernetes/kubernetes/pull/104853), [@kitianFresh](https://github.com/kitianFresh))",
+    "markdown": "PodInformer := NewPodInformer(kubeClient, 0)\n  \tinformerFactory := informers.NewSharedInformerFactory(kubeClient, 0)\n  \tnodeInformer := informerFactory.Core().V1().Nodes()\n  \t....\n  \trc.ScheduledPodsHasSynced = podInformer.Informer().HasSynced\n  \t// scheduled pod cache\n  \tpodInformer.Informer().AddEventHandler(\n  \t\tcache.FilteringResourceEventHandler{\n  \t\t\tFilterFunc: func(obj interface{}) bool {\n  \t\t\t\tswitch t := obj.(type) {\n  \t\t\t\tcase *v1.Pod:\n  \t\t\t\t\treturn assignedNonTerminatedPod(t)\n  \t\t\t\tcase cache.DeletedFinalStateUnknown:\n  \t\t\t\t\tif pod, ok := t.Obj.(*v1.Pod); ok {\n  \t\t\t\t\t\treturn assignedNonTerminatedPod(pod)\n  \t\t\t\t\t}\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to convert object %T to *v1.Pod in %T\", obj, rc))\n  \t\t\t\t\treturn false\n  \t\t\t\tdefault:\n  \t\t\t\t\truntime.HandleError(fmt.Errorf(\"unable to handle object in %T: %T\", rc, obj))\n  \t\t\t\t\treturn false\n  \t\t\t\t}\n  \t\t\t},\n  \t\t\tHandler: cache.ResourceEventHandlerFuncs{\n  \t\t\t\tAddFunc:    rc.addPodToCache,\n  \t\t\t\tUpdateFunc: rc.updatePodInCache,\n  \t\t\t\tDeleteFunc: rc.deletePodFromCache,\n  \t\t\t},\n  \t\t},\n  \t)\n  \n  \tnodeInformer.Informer().AddEventHandler(\n  \t\tcache.ResourceEventHandlerFuncs{\n  \t\t\tAddFunc:    rc.addNodeToCache,\n  \t\t\tUpdateFunc: rc.updateNodeInCache,\n  \t\t\tDeleteFunc: rc.deleteNodeFromCache,\n  \t\t},\n  \t)\n  \n  \trc.NodeLister = nodeInformer.Lister()\n  \trc.PodLister = podInformer.Lister()\n  \tgo podInformer.Informer().Run(stopCh)\n  \tgo nodeInformer.Informer().Run(stopCh)\n  \trc.InformerFactory.Start(stopCh)\n  \t... ([#104853](https://github.com/kubernetes/kubernetes/pull/104853), [@kitianFresh](https://github.com/kitianFresh)) [SIG API Machinery]",
     "author": "kitianFresh",
     "author_url": "https://github.com/kitianFresh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104853",
@@ -2660,8 +2660,8 @@
   },
   "104877": {
     "commit": "a5cd438b9fbf49e013453f4d6c9b2e935a78071c",
-    "text": "Kubernetes object references (= name + namespace) were not logged as struct when using JSON as log output format.",
-    "markdown": "Kubernetes object references (= name + namespace) were not logged as struct when using JSON as log output format. ([#104877](https://github.com/kubernetes/kubernetes/pull/104877), [@pohly](https://github.com/pohly))",
+    "text": "Migrated kubernetes object references (= name + namespace) to structured logging when using JSON as log output format",
+    "markdown": "Migrated kubernetes object references (= name + namespace) to structured logging when using JSON as log output format ([#104877](https://github.com/kubernetes/kubernetes/pull/104877), [@pohly](https://github.com/pohly))",
     "author": "pohly",
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104877",
@@ -2760,8 +2760,8 @@
   },
   "104908": {
     "commit": "060f5b88d0d554fd8b38333ed25b8e73614ab630",
-    "text": "Migrate`pkg/prox` to structured logging",
-    "markdown": "Migrate`pkg/prox` to structured logging ([#104908](https://github.com/kubernetes/kubernetes/pull/104908), [@CIPHERTron](https://github.com/CIPHERTron))",
+    "text": "Migrate `pkg/proxy` to structured logging",
+    "markdown": "Migrate `pkg/proxy` to structured logging ([#104908](https://github.com/kubernetes/kubernetes/pull/104908), [@CIPHERTron](https://github.com/CIPHERTron))",
     "author": "CIPHERTron",
     "author_url": "https://github.com/CIPHERTron",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104908",
@@ -3403,8 +3403,8 @@
   },
   "105215": {
     "commit": "a923852ba06e520c7b531e5cf102d78744dd6f53",
-    "text": "Kubelet's Graceful Node Shutdown will terminate probes when shutting down.",
-    "markdown": "Kubelet's Graceful Node Shutdown will terminate probes when shutting down. ([#105215](https://github.com/kubernetes/kubernetes/pull/105215), [@rphillips](https://github.com/rphillips))",
+    "text": "Kubelet's Node Grace Shutdown will terminate probes when shutting down",
+    "markdown": "Kubelet's Node Grace Shutdown will terminate probes when shutting down ([#105215](https://github.com/kubernetes/kubernetes/pull/105215), [@rphillips](https://github.com/rphillips))",
     "author": "rphillips",
     "author_url": "https://github.com/rphillips",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105215",
@@ -3592,8 +3592,8 @@
   },
   "105405": {
     "commit": "18104ecf1f57362ae6b33f01ce6413d7fec4f715",
-    "text": "Ephemeral containers have reached beta maturity and are now available by default.",
-    "markdown": "Ephemeral containers have reached beta maturity and are now available by default. ([#105405](https://github.com/kubernetes/kubernetes/pull/105405), [@verb](https://github.com/verb))",
+    "text": "Ephemeral containers graduated to beta and are now available by default.",
+    "markdown": "Ephemeral containers graduated to beta and are now available by default. ([#105405](https://github.com/kubernetes/kubernetes/pull/105405), [@verb](https://github.com/verb))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3714,8 +3714,8 @@
   },
   "105474": {
     "commit": "a8bda48abeccf3daaafb0a95e9e86eccd30b389e",
-    "text": "Feature-gate VolumeSubpath has been deprecated and cannot be disabled. It will be completely removed in 1.25",
-    "markdown": "Feature-gate VolumeSubpath has been deprecated and cannot be disabled. It will be completely removed in 1.25 ([#105474](https://github.com/kubernetes/kubernetes/pull/105474), [@mauriciopoppe](https://github.com/mauriciopoppe))",
+    "text": "Feature-gate `VolumeSubpath` has been deprecated and cannot be disabled. It will be completely removed in 1.25",
+    "markdown": "Feature-gate `VolumeSubpath` has been deprecated and cannot be disabled. It will be completely removed in 1.25 ([#105474](https://github.com/kubernetes/kubernetes/pull/105474), [@mauriciopoppe](https://github.com/mauriciopoppe))",
     "author": "mauriciopoppe",
     "author_url": "https://github.com/mauriciopoppe",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105474",
@@ -4005,7 +4005,7 @@
   },
   "105673": {
     "commit": "655c04d9f530e5ebc2ec6f5feef76716c8a9db22",
-    "text": "support more than 100 disk mounts on Windows",
+    "text": "Support more than 100 disk mounts on Windows",
     "markdown": "Support more than 100 disk mounts on Windows ([#105673](https://github.com/kubernetes/kubernetes/pull/105673), [@andyzhangx](https://github.com/andyzhangx))",
     "author": "andyzhangx",
     "author_url": "https://github.com/andyzhangx",
