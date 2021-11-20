@@ -1,0 +1,4 @@
+pr: 105773
+releasenote:
+  text: Ensures that volume is deleted from the storage backend when the user tries
+    to delete the PV object manually and the PV `ReclaimPolicy` is set to `Delete`.

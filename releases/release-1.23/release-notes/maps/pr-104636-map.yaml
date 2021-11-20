@@ -1,0 +1,3 @@
+pr: 104636
+releasenote:
+  text: The `IngressClass.Spec.Parameters.Namespace` field is now GA.

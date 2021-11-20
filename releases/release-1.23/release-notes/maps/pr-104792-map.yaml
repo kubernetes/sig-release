@@ -1,0 +1,4 @@
+pr: 104792
+releasenote:
+  text: Adding option for `kubectl cp` to resume on network errors until completion,
+    requires tar in addition to tail inside the container image

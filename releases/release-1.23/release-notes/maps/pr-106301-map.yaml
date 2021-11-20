@@ -1,0 +1,4 @@
+pr: 106301
+releasenote:
+  text: The kube-proxy image contains `/go-runner` as a replacement for deprecated
+    klog flags.

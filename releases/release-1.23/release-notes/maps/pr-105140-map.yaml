@@ -1,0 +1,5 @@
+pr: 105140
+releasenote:
+  text: Added the ability to specify whether to use an RFC7396 JSON Merge Patch, an
+    RFC6902 JSON Patch, or a Strategic Merge Patch to perform an override of the resources
+    created by `kubectl run` and `kubectl expose`.

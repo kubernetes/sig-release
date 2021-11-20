@@ -1,0 +1,6 @@
+pr: 105295
+releasenote:
+  text: 'kubeadm: add a new `output/v1alpha2` API that is identical to the `output/v1alpha1`,
+    but attempts to resolve some internal dependencies with the `kubeadm/v1beta2`
+    API. The `output/v1alpha1` API is now deprecated and will be removed in a future
+    release.'

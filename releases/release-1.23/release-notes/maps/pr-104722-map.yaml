@@ -1,0 +1,3 @@
+pr: 104722
+releasenote:
+  text: The `CSIMigrationGCE` feature flag is turned `ON` by default
