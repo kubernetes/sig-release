@@ -1,0 +1,3 @@
+pr: 105940
+releasenote:
+  text: The `CSIVolumeFSGroupPolicy` feature has moved from beta to GA.
