@@ -1,7 +1,7 @@
 # Image Promotion <!-- omit in toc -->
 
 - [Preparing Environment](#preparing-environment)
-- [Promoting Images Using `krel promote-images`](#promoting-images-using-krel-promote-images)
+- [Promoting Images](#promoting-images)
 - [Completing the Image Promotion](#completing-the-image-promotion)
 
 When cutting a new Kubernetes release, we need to publish images to the `k8s-staging-kubernetes` GCS Bucket and then promote them to the production.
@@ -12,31 +12,56 @@ When cutting a new Kubernetes release, we need to publish images to the `k8s-sta
 
 First, take the following steps to prepare your environment for promoting images:
 
-- Fork the [`kubernetes/k8s.io` repository](https://github.com/kubernetes/k8s.io)
-- Fork and clone the [`kubernetes/release` repository](https://github.com/kubernetes/release)
-- From the root of the `kubernetes/release` repository, run the following command to compile and install the release tools:
+- Ensure a recent (supported) version of Golang is installed.
+  Installation instructions can be found [here](https://go.dev/doc/install).
+- Install the [promotion tooling](https://sigs.k8s.io/promo-tools):
 
-```shell
-make release-tools
+  ```shell
+  go install sigs.k8s.io/promo-tools/v3/cmd/kpromo@v3.3.0-beta.2
+  ```
+
+  _NOTE: At the time of writing, `v3.3.0-beta.2` is the tag that includes the
+  image promotion PR functionality. When `sigs.k8s.io/promo-tools` has a new minor
+  release, this document should be updated to instead use:
+  `go install sigs.k8s.io/promo-tools/v3/cmd/kpromo@latest`._
+- Promoting images will require a GitHub Personal Access Token in order to
+  create a PR on your behalf.
+
+  If you have not already created a token, you can do so by following these
+  [instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+  and using the appropriate token scopes:
+  - `public_repo`
+
+  Once you have a personal access token, make it available to your environment:
+
+  ```shell
+   export GITHUB_TOKEN="ghp-xxxxxxxxxxxxxxxxxxx"
+  ```
+
+  _Note the whitespace preceding the `export` command (which will prevent the
+  token from being logged in your terminal's history.)_
+
+## Promoting Images
+
+The images are promoted by using the `kpromo pr` command.
+
+```console
+Usage:
+  kpromo pr [flags]
+
+Flags:
+      --fork string        the user's fork of kubernetes/k8s.io
+  -h, --help               help for pr
+  -i, --interactive        interactive mode, asks before every step
+      --project string     the name of the project to promote images for (default "kubernetes")
+      --reviewers string   the list of GitHub users or teams to assign to the PR (default "@kubernetes/release-engineering")
+  -t, --tag strings        version tag of the images we will promote
 ```
 
-## Promoting Images Using `krel promote-images`
-
-The images are promoted by using the `krel promote-images` command. This command takes the following parameters:
-
-- The `-i` flag runs the command in the interactive mode, so `krel` will ask you to confirm each step
-- The `--fork` flag takes the GitHub username and fork/repository name of your `kubernetes/k8s.io` fork that will be used to push the changes
-  - If your fork name is `k8s.io` you can just specify your GitHub username, such as `--fork=<your-github-username>`
-  - Otherwise, you can specify both GitHub username and fork name, such as `--fork=<your-github-username>/<k8s.io-fork-name>`
-- The `--tag` flag takes the version tag of the images that will be promoted. This flag can be specified multiple times if you're promoting images for multiple releases.
-
-Promoting images would also require a GitHub Authentication Token in order to create a PR on your behalf. You need to get a create a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) having set scope to `public_repo`.
-
-Example command:
+Example:
 
 ```shell
-export GITHUB_TOKEN=xxxxxx
-krel promote-images -i --fork=<your-github-username> --tag=v1.20.0-rc.0 --tag=v1.21.0-alpha.0
+kpromo pr -i --fork=<your-github-username> --tag=v1.20.0-rc.0 --tag=v1.21.0-alpha.0
 ```
 
 **Note:** The images that are promoted depend on the release you're cutting:
@@ -46,7 +71,7 @@ krel promote-images -i --fork=<your-github-username> --tag=v1.20.0-rc.0 --tag=v1
 - The subsequent RCs (e.g. `v1.20.0-rc.1`): promote the images for the RC you're cutting (e.g. `v1.20.0-rc.0`)
 - A stable release (e.g. `v1.20.0`): promote the images for the release you're cutting and for the RC of the next patch release (e.g. `v1.20.1-rc.0`)
 
-The following steps are taken by the `krel promote-images` command:
+The following steps are taken by the `kpromo pr` command:
 
 - Clone and update your `kubernetes/k8s.io` fork
 - Update the images manifest (`k8s.gcr.io/images/k8s-staging-kubernetes/images.yaml`) to add the image digests for specified releases/tags
@@ -60,7 +85,7 @@ Example PRs:
 
 ## Completing the Image Promotion
 
-Once the `krel promote-images` command is done take the following steps to complete image promotion and continue the release process:
+Once the `kpromo pr` command is done take the following steps to complete image promotion and continue the release process:
 
 - Edit the PR description to add links for GCB jobs for `Mock Stage`, `Mock Release`, and `Official Stage` steps, or a link to the release tracking issue which includes the needed links
 - Once the PR is approved by Release Managers:
