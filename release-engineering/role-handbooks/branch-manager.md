@@ -141,8 +141,6 @@ Additionally, `kubernetes/community` has a great [overview of the GitHub workflo
 
 Please take a moment to review the above documentation before continuing.
 
-[image-promotion]: ./release-image-promotion.md
-
 #### Google Cloud SDK
 
 [Kubernetes release artifacts](/release-engineering/artifacts.md) are stored on Google Cloud Platform (GCP).
@@ -320,7 +318,7 @@ This presumes reproducible builds and that the CI tests are meaningful relative 
 
 ##### krel release
 
-Before running the release step, please refer to the [Image Promotion documentation](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/release-image-promotion.md).
+Before running the release step, please refer to the [Image Promotion documentation][image-promotion].
 
 To finish the previously staged release, run `krel release --build-version=…`.
 Use the `--build-version=` as specified in the output when `krel stage` is done.
@@ -340,7 +338,7 @@ corresponding help (`-h`) output.
 
 ### Beta Releases
 
-Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
+Before run the `official release step` please refer to the [Image Promotion documentation][image-promotion].
 
 To stage a new beta release, simply run `krel stage --type=beta`. The same
 applies to `krel release --build-version=… --type=beta`.
@@ -351,7 +349,7 @@ Builds against a `release-x.y` branch are implicitly the next RC (release candid
 
 **Note: If this is the first release (`rc.0`), there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
 
-Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
+Before run the `official release step` please refer to the [Image Promotion documentation][image-promotion].
 
 To stage a new RC release, simply run `krel stage --type=rc --branch=release-x.y`. The same
 applies to `krel release --build-version=… --type=rc --branch=release-x.y`.
@@ -385,7 +383,7 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 
 ### Official Releases
 
-Before run the `official release step` please refer to the [Image Promotion documentation](./release-image-promotion.md).
+Before run the `official release step` please refer to the [Image Promotion documentation][image-promotion].
 
 To stage a new official release, simply run `krel stage --type=official
 --branch=release-x.y`. The same applies to `krel release --build-version=…
@@ -905,6 +903,7 @@ See the branch management process prior to v1.12 when `anago` was still used.
 
 >  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
 
+[image-promotion]: https://sigs.k8s.io/promo-tools/docs/promotion-pull-requests.md
 [kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team
 [release-managers]: /release-managers.md#release-managers
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
