@@ -1,0 +1,4 @@
+pr: 106507
+releasenote:
+  text: The `kube-Proxy` now correctly filters out unready endpoints for Services
+    with Topology.
