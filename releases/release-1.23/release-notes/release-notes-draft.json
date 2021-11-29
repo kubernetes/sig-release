@@ -105,6 +105,60 @@
       "api-machinery"
     ]
   },
+  "101370": {
+    "commit": "41fdc193ff28218f15bc30f2bdaa07b91a5008bc",
+    "text": "Create HPA with follow：",
+    "markdown": "Create HPA with follow： ([#101370](https://github.com/kubernetes/kubernetes/pull/101370), [@RyanAoh](https://github.com/RyanAoh)) [SIG Autoscaling]",
+    "author": "RyanAoh",
+    "author_url": "https://github.com/RyanAoh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101370",
+    "pr_number": 101370,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "autoscaling"
+    ],
+    "do_not_publish": true
+  },
+  "101646": {
+    "commit": "0d997019e9b8e825c75547bbcbb1bab65d9e4bdf",
+    "text": "Adding support for multiple `--from-env-file` flags.",
+    "markdown": "Adding support for multiple `--from-env-file` flags. ([#101646](https://github.com/kubernetes/kubernetes/pull/101646), [@lauchokyip](https://github.com/lauchokyip))",
+    "author": "lauchokyip",
+    "author_url": "https://github.com/lauchokyip",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101646",
+    "pr_number": 101646,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "feature": true
+  },
+  "101781": {
+    "commit": "9c5cefb230241d74340ba530666212300cba8ff8",
+    "text": "[Errno -2] Name or service not known",
+    "markdown": "[Errno -2] Name or service not known ([#101781](https://github.com/kubernetes/kubernetes/pull/101781), [@ptabor](https://github.com/ptabor)) [SIG Cloud Provider]",
+    "author": "ptabor",
+    "author_url": "https://github.com/ptabor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101781",
+    "pr_number": 101781,
+    "areas": [
+      "provider/gcp"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "do_not_publish": true
+  },
   "101789": {
     "commit": "7ee94f2f4fc4c8e0444ea89ef828eb452d0ba908",
     "text": "The `CSIDriver.Spec.StorageCapacity` can now be modified.",
@@ -527,6 +581,23 @@
     "feature": true,
     "duplicate": true
   },
+  "103231": {
+    "commit": "d1479ea431cddda2a432dc0edbaa465923d5f5f2",
+    "text": "Fixed an issue which didn't append OS's environment variables with the one provided in Credential Provider Config file, which may fail execution of external credential provider binary. \nSee https://github.com/kubernetes/kubernetes/issues/102750.",
+    "markdown": "Fixed an issue which didn't append OS's environment variables with the one provided in Credential Provider Config file, which may fail execution of external credential provider binary. \n  See https://github.com/kubernetes/kubernetes/issues/102750. ([#103231](https://github.com/kubernetes/kubernetes/pull/103231), [@n4j](https://github.com/n4j))",
+    "author": "n4j",
+    "author_url": "https://github.com/n4j",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103231",
+    "pr_number": 103231,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "auth"
+    ],
+    "duplicate": true
+  },
   "103299": {
     "commit": "0473cab82327ce51d9ef824d4836c3912c357d05",
     "text": "allows users to prevent garbage collection on pinned images",
@@ -552,6 +623,33 @@
       "node"
     ],
     "feature": true
+  },
+  "103439": {
+    "commit": "dadecb2c8932fd28de9dfb94edbc7bdac7d0d28f",
+    "text": "Fixed azure disk translation issue due to lower case `managed` kind.",
+    "markdown": "Fixed azure disk translation issue due to lower case `managed` kind. ([#103439](https://github.com/kubernetes/kubernetes/pull/103439), [@andyzhangx](https://github.com/andyzhangx))",
+    "documentation": [
+      {
+        "description": "follow guide",
+        "url": "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/convert-unmanaged-to-managed-disks",
+        "type": "external"
+      }
+    ],
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103439",
+    "pr_number": 103439,
+    "areas": [
+      "provider/azure"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "cloud-provider"
+    ],
+    "duplicate": true
   },
   "103447": {
     "commit": "8d9e424f73287eecc4c680f30cf3f95f021ca220",
@@ -611,6 +709,48 @@
       "scheduling"
     ],
     "feature": true
+  },
+  "103538": {
+    "commit": "f1c817614d28ca1127a6217fce9032f37a4eec72",
+    "text": "The flag `--deployment-controller-sync-period` has been deprecated and will be removed in v1.24.",
+    "markdown": "The flag `--deployment-controller-sync-period` has been deprecated and will be removed in v1.24. ([#103538](https://github.com/kubernetes/kubernetes/pull/103538), [@Pingan2017](https://github.com/Pingan2017))",
+    "author": "Pingan2017",
+    "author_url": "https://github.com/Pingan2017",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103538",
+    "pr_number": 103538,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "apps"
+    ]
+  },
+  "103564": {
+    "commit": "0a704f9e1f6685f3ae39114435d23593a900e74c",
+    "text": "Expose a `NewUnstructuredExtractor` from apply configurations `meta/v1` package that enables extracting objects into unstructured apply configurations.",
+    "markdown": "Expose a `NewUnstructuredExtractor` from apply configurations `meta/v1` package that enables extracting objects into unstructured apply configurations. ([#103564](https://github.com/kubernetes/kubernetes/pull/103564), [@kevindelgado](https://github.com/kevindelgado))",
+    "author": "kevindelgado",
+    "author_url": "https://github.com/kevindelgado",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103564",
+    "pr_number": 103564,
+    "areas": [
+      "test",
+      "apiserver",
+      "release-eng",
+      "kubeadm",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cluster-lifecycle",
+      "testing",
+      "release"
+    ],
+    "feature": true,
+    "duplicate": true
   },
   "103654": {
     "commit": "a87838481b240652c2dd29ced38a386a33517439",
@@ -767,6 +907,46 @@
     ],
     "feature": true
   },
+  "103793": {
+    "commit": "644228091e41cf33c97d576676ea8630c7bb97b1",
+    "text": "Deprecate `apiserver_longrunning_gauge` and `apiserver_register_watchers` in 1.23.0.",
+    "markdown": "Deprecate `apiserver_longrunning_gauge` and `apiserver_register_watchers` in 1.23.0. ([#103793](https://github.com/kubernetes/kubernetes/pull/103793), [@yan-lgtm](https://github.com/yan-lgtm))",
+    "author": "yan-lgtm",
+    "author_url": "https://github.com/yan-lgtm",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103793",
+    "pr_number": 103793,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cluster-lifecycle",
+      "instrumentation"
+    ],
+    "duplicate": true
+  },
+  "103794": {
+    "commit": "b3027706602546d486b7869998886e7c81317707",
+    "text": "Provide IPv6 support for internal load balancer.",
+    "markdown": "Provide IPv6 support for internal load balancer. ([#103794](https://github.com/kubernetes/kubernetes/pull/103794), [@nilo19](https://github.com/nilo19))",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103794",
+    "pr_number": 103794,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ]
+  },
   "103796": {
     "commit": "2dc4f7be17e797a03eaee4577156faf00fd00a13",
     "text": "The `AllowInsecureBackendProxy` feature gate is removed. It reached GA in Kubernetes 1.21.",
@@ -825,6 +1005,77 @@
       "cluster-lifecycle"
     ]
   },
+  "103813": {
+    "commit": "90ac41bd77d6c5f768ff3a21c072c2ec18ff67b7",
+    "text": "kubeadm: update references to legacy artifacts locations, the `ci-cross` prefix has been removed from the version match as it does not exist in the new `gs://k8s-release-dev` bucket.",
+    "markdown": "Kubeadm: update references to legacy artifacts locations, the `ci-cross` prefix has been removed from the version match as it does not exist in the new `gs://k8s-release-dev` bucket. ([#103813](https://github.com/kubernetes/kubernetes/pull/103813), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103813",
+    "pr_number": 103813,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "103823": {
+    "commit": "1a9ae3454993b2362503db3efe1d7e48307bf3ff",
+    "text": "Fix an issue in cleaning up `CertificateSigningRequest` objects with an unparseable `status.certificate` field.",
+    "markdown": "Fix an issue in cleaning up `CertificateSigningRequest` objects with an unparseable `status.certificate` field. ([#103823](https://github.com/kubernetes/kubernetes/pull/103823), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103823",
+    "pr_number": 103823,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "auth",
+      "apps"
+    ],
+    "duplicate": true
+  },
+  "103831": {
+    "commit": "9b84e473b28f0e63fd27df420791e2089fc09b30",
+    "text": "Disable aufs module for gce clusters.",
+    "markdown": "Disable aufs module for gce clusters. ([#103831](https://github.com/kubernetes/kubernetes/pull/103831), [@lizhuqi](https://github.com/lizhuqi))",
+    "author": "lizhuqi",
+    "author_url": "https://github.com/lizhuqi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103831",
+    "pr_number": 103831,
+    "areas": [
+      "provider/gcp"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ]
+  },
+  "103843": {
+    "commit": "488292100207b246bdb658d68742eca3cb11cf4a",
+    "text": "Update description of `--audit-log-maxbackup` to describe behavior when `value = 0`.",
+    "markdown": "Update description of `--audit-log-maxbackup` to describe behavior when `value = 0`. ([#103843](https://github.com/kubernetes/kubernetes/pull/103843), [@Arkessler](https://github.com/Arkessler))",
+    "author": "Arkessler",
+    "author_url": "https://github.com/Arkessler",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103843",
+    "pr_number": 103843,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "documentation"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
   "103852": {
     "commit": "3945e35f1cfac9d489242607ddbba8c74c452ec3",
     "text": "Fixed a bug which kubectl would emit duplicate warning messages for flag names that contain an underscore and recommend using a nonexistent flag in some cases.",
@@ -841,6 +1092,28 @@
       "cli"
     ],
     "duplicate": true
+  },
+  "103875": {
+    "commit": "ee5df7cbcfffaddece66944a528fccb07430d29a",
+    "text": "Fixed a regression setting `--audit-log-path=-` to log to stdout in 1.22 pre-release.",
+    "markdown": "Fixed a regression setting `--audit-log-path=-` to log to stdout in 1.22 pre-release. ([#103875](https://github.com/kubernetes/kubernetes/pull/103875), [@andrewrynhard](https://github.com/andrewrynhard))",
+    "author": "andrewrynhard",
+    "author_url": "https://github.com/andrewrynhard",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103875",
+    "pr_number": 103875,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
   },
   "103894": {
     "commit": "6a7a527f8e56323f3615790c0794f01274c74b18",
@@ -991,6 +1264,28 @@
     "sigs": [
       "cli"
     ]
+  },
+  "104033": {
+    "commit": "026fb3bf35915c9b4e2029ce162724648854a291",
+    "text": "Reverts adding namespace label to admission metrics (and histogram exansion) due to cardinality issues.",
+    "markdown": "Reverts adding namespace label to admission metrics (and histogram exansion) due to cardinality issues. ([#104033](https://github.com/kubernetes/kubernetes/pull/104033), [@s-urbaniak](https://github.com/s-urbaniak))",
+    "author": "s-urbaniak",
+    "author_url": "https://github.com/s-urbaniak",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104033",
+    "pr_number": 104033,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
   },
   "104045": {
     "commit": "62a6df9e0b8ed3fe9fad96c8a9a0bde4a3224f35",
