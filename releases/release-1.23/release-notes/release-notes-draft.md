@@ -16,7 +16,7 @@ Users of FlexVolume should move their workloads to CSI driver.
 To simplify the code base, several [logging flags got marked as deprecated](https://kubernetes.io/docs/concepts/cluster-administration/system-logs/#klog) in Kubernetes 1.23. 
 The code which implements them will be removed in a future release, so users of those need to start replacing the deprecated flags with some alternative solutions.
 
-### SLSA Level 1 Compliance in the Kubernetes Release Process
+### Software Supply Chain SLSA Level 1 Compliance in the Kubernetes Release Process
 
 Kubernetes releases are now generating provenance attestation files describing the staging and release phases of the release process and artifacts are verified as they are handed over from one phase to the next. 
 This final piece completes the work needed to comply with Level 1 of the [SLSA security framework](https://slsa.dev/) (Supply-chain Levels for Software Artifacts).
