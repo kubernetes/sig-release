@@ -1,6 +1,6 @@
 ## What's New (Major Themes)
 
-### The HPA v2beta2 API is deprecated
+### The HPA v2beta2 API is deprecated. The HPA v2 API is GA.
 
 The HPA v2beta2 API is deprecated. The HPA v2 (stable) API is available.
 
