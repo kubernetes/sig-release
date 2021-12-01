@@ -80,29 +80,6 @@ After migration, Kubernetes users may continue to rely on all the functionality 
 - CSI Migration feature is turned on by default but stays in Beta for GCE PD, AWS EBS, and Azure Disk in 1.23.
 - CSI Migration is introduced as an Alpha feature for Ceph RBD and Portworx in 1.23.
 
-### Expression language validation for CRD is alpha
-
-Expression language validation for CRD is in alpha since 1.23.
-If the `CustomResourceValidationExpressions` feature gate is enabled, custom resources will be validated by validation rules using the [Common Expression Language (CEL)](https://github.com/google/cel-spec).
-
-### Server Side Field Validation is Alpha
-
-If the `ServerSideFieldValidation` feature gate is enabled starting 1.23, users will receive warnings from the server when they send kubernetes objects in the request that contain unknown or duplicate fields. 
-Previously unknown fields and all but the last duplicate fields would be dropped by the server.
-
-With the feature gate enabled we also introduce the `fieldValidation` query parameter so that users can specify the desired behavior of the server on a per request basis. 
-Valid values for the `fieldValidation` query parameter are:
-
-- Ignore (default when feature gate is disabled, same as pre-1.23 behavior of dropping/ignoring unkonwn fields)
-- Warn (default when feature gate is enabled).
-- Strict (this will fail the request with an Invalid Request error)
-
-### OpenAPI v3 is Alpha
-
-If the `OpenAPIV3` feature gate is enabled starting 1.23, users will be able to request the OpenAPI v3.0 spec for all Kubernetes types. 
-OpenAPI v3 aims to be fully transparent and includes support for a set of fields that are dropped when publishing OpenAPI v2: `default`, `nullable`, `oneOf`, `anyOf`. 
-A separate spec is published per Kubernetes group version (at the `$cluster/openapi/v3/apis/<group>/<version>` endpoint) for improved performance and discovery, for all group versions can be found at the `$cluster/openapi/v3` path.
-
 ## Urgent Upgrade Notes 
 
 ### (No, really, you MUST read this before you upgrade)
