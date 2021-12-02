@@ -1,9 +1,5 @@
 ## What's New (Major Themes)
 
-### The HPA v2beta2 API is deprecated. The HPA v2 API is GA.
-
-The HPA v2beta2 API is deprecated. The HPA v2 (stable) API is available.
-
 ### Deprecation of FlexVolume
 
 FlexVolume is deprecated. Out-of-tree CSI driver is the recommended way to write volume drivers in Kubernetes. 
@@ -29,6 +25,12 @@ In 1.23, the `IPv6DualStack` feature gate is removed.
 The use of dual-stack networking is not mandatory. 
 Although clusters are enabled to support dual-stack networking, Pods and Services continue to default to single-stack. 
 To use dual-stack networking: Kubernetes nodes have routable IPv4/IPv6 network interfaces, a dual-stack capable CNI network plugin is used, Pods are configured to be dual-stack and Services have their `.spec.ipFamilyPolicy` field set to either `PreferDualStack` or `RequireDualStack`.
+
+### HorizontalPodAutoscaler v2 graduates to GA
+
+Version 2 of the HorizontalPodAutoscalerAPI graduates to stable in the 1.23 release. The HorizontalPodAutoscaler `autoscaling/v2beta2` API is deprecated in favor of the new `autoscaling/v2` API, which the Kubernetes project recommends for all use cases.
+
+This release does *not* deprecate the v1 HorizontalPodAutoscaler API.
 
 ### Generic Ephemeral Volume feature graduates to GA
 
