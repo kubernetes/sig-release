@@ -25,6 +25,7 @@ description: |
 * [Feature blog Tracking Sheet](http://bit.ly/k8s123-feature-blog)
 * [Bug Triage Tracking Sheet](https://bit.ly/123-bug-triage-tracking)
 * [CI Signal Project Board](https://github.com/orgs/kubernetes/projects/11)
+* [CI Signal Tracking Log](https://docs.google.com/spreadsheets/d/1ns94ZAH4PIvzhpwU1SGPyl9ek_p4-_Be/)
 * [Retrospective Document][Retrospective Document]
 * [kubernetes/sig-release v1.23 milestone](https://github.com/kubernetes/kubernetes/milestone/56)
 
@@ -82,6 +83,7 @@ The 1.23 release cycle is proposed as follows:
 | Docs complete - All PRs reviewed and ready to merge | Docs Lead | Tue November 30, 2021 | week 15 | |
 | Feature blogs ready to review (23:59 PST)| Enhancement Owner / SIG Leads | Tue November 30, 2021 | week 15 | |
 | Release Notes complete - reviewed & merged to `k/sig-release` (23:59 PST) | Release Notes Lead | Thu December 2, 2021 | week 15 | |
+| 1.23.0-rc.1 released | Branch Manager | Fri December 3, 2021 | week 15 | |
 | **v1.23.0 released** | Branch Manager | Tue December 7, 2021 | week 16 | |
 | Release blog published | Comms | Tue December 7, 2021 | week 16 | |
 | **[Thaw]** | Branch Manager | Tue December 7, 2021 | week 16 | |
