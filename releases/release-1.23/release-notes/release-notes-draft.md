@@ -28,7 +28,7 @@ To use dual-stack networking: Kubernetes nodes have routable IPv4/IPv6 network i
 
 ### HorizontalPodAutoscaler v2 graduates to GA
 
-Version 2 of the HorizontalPodAutoscalerAPI graduates to stable in the 1.23 release. The HorizontalPodAutoscaler `autoscaling/v2beta2` API is deprecated in favor of the new `autoscaling/v2` API, which the Kubernetes project recommends for all use cases.
+Version 2 of the HorizontalPodAutoscaler API graduates to stable in the 1.23 release. The HorizontalPodAutoscaler `autoscaling/v2beta2` API is deprecated in favor of the new `autoscaling/v2` API, which the Kubernetes project recommends for all use cases.
 
 This release does *not* deprecate the v1 HorizontalPodAutoscaler API.
 
