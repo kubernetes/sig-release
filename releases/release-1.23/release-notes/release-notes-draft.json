@@ -6335,6 +6335,57 @@
       "node"
     ]
   },
+  "106661": {
+    "commit": "724289524084f6edbbe53e31d2c6e636343fdebb",
+    "text": "kube-apiserver: Server Side Apply merge order is reverted to match v1.22 behavior until `http://issue.k8s.io/104641` is resolved.",
+    "markdown": "Kube-apiserver: Server Side Apply merge order is reverted to match v1.22 behavior until `http://issue.k8s.io/104641` is resolved. ([#106661](https://github.com/kubernetes/kubernetes/pull/106661), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106661",
+    "pr_number": 106661,
+    "areas": [
+      "test",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "regression"
+    ],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "106808": {
+    "commit": "88207ce3b8599fa7bebf4e017f0c178770354fa9",
+    "text": "Reverts the CRI API version surfaced by dockershim to `v1alpha2`.",
+    "markdown": "Reverts the CRI API version surfaced by dockershim to `v1alpha2`. ([#106808](https://github.com/kubernetes/kubernetes/pull/106808), [@saschagrunert](https://github.com/saschagrunert))",
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106808",
+    "pr_number": 106808,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "node"
+    ],
+    "duplicate": true
+  },
   "92433": {
     "commit": "819b021ada3090a8f520277291c6974283a42dbc",
     "text": "The etcd container image now supports Windows.",
