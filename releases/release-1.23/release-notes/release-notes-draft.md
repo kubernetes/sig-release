@@ -1,3 +1,87 @@
+## What's New (Major Themes)
+
+### Deprecation of FlexVolume
+
+FlexVolume is deprecated. Out-of-tree CSI driver is the recommended way to write volume drivers in Kubernetes.
+See [this doc](https://github.com/kubernetes/community/blob/master/sig-storage/volume-plugin-faq.md#kubernetes-volume-plugin-faq-for-storage-vendors) for more information.
+Maintainers of FlexVolume drivers should implement a CSI driver and move users of FlexVolume to CSI.
+Users of FlexVolume should move their workloads to CSI driver.
+
+### Deprecation of klog specific flags
+
+To simplify the code base, several [logging flags got marked as deprecated](https://kubernetes.io/docs/concepts/cluster-administration/system-logs/#klog) in Kubernetes 1.23.
+The code which implements them will be removed in a future release, so users of those need to start replacing the deprecated flags with some alternative solutions.
+
+### Software Supply Chain SLSA Level 1 Compliance in the Kubernetes Release Process
+
+Kubernetes releases are now generating provenance attestation files describing the staging and release phases of the release process and artifacts are verified as they are handed over from one phase to the next.
+This final piece completes the work needed to comply with Level 1 of the [SLSA security framework](https://slsa.dev/) (Supply-chain Levels for Software Artifacts).
+
+### IPv4/IPv6 Dual-stack Networking graduates to GA
+
+[IPv4/IPv6 dual-stack networking](https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack) graduates to GA.
+Since 1.21, Kubernetes clusters are enabled to support dual-stack networking by default.
+In 1.23, the `IPv6DualStack` feature gate is removed.
+The use of dual-stack networking is not mandatory.
+Although clusters are enabled to support dual-stack networking, Pods and Services continue to default to single-stack.
+To use dual-stack networking: Kubernetes nodes have routable IPv4/IPv6 network interfaces, a dual-stack capable CNI network plugin is used, Pods are configured to be dual-stack and Services have their `.spec.ipFamilyPolicy` field set to either `PreferDualStack` or `RequireDualStack`.
+
+### HorizontalPodAutoscaler v2 graduates to GA
+
+Version 2 of the HorizontalPodAutoscaler API graduates to stable in the 1.23 release. The HorizontalPodAutoscaler `autoscaling/v2beta2` API is deprecated in favor of the new `autoscaling/v2` API, which the Kubernetes project recommends for all use cases.
+
+This release does *not* deprecate the v1 HorizontalPodAutoscaler API.
+
+### Generic Ephemeral Volume feature graduates to GA
+
+The generic ephemeral volume feature moved to GA in 1.23.
+This feature allows any existing storage driver that supports dynamic provisioning to be used as an ephemeral volume with the volume’s lifecycle bound to the Pod.
+All StorageClass parameters for volume provisioning and all features supported with PersistentVolumeClaims are supported.
+
+### Skip Volume Ownership change graduates to GA
+
+The feature to configure volume permission and ownership change policy for Pods moved to GA in 1.23.
+This allows users to skip recursive permission changes on mount and speeds up the pod start up time.
+
+### Allow CSI drivers to opt-in to volume ownership and permission change graduates to GA
+
+The feature to allow CSI Drivers to declare support for fsGroup based permissions graduates to GA in 1.23.
+
+### PodSecurity graduates to Beta
+
+[PodSecurity](https://kubernetes.io/docs/concepts/security/pod-security-admission/) moves to Beta.
+`PodSecurity` replaces the deprecated `PodSecurityPolicy` admission controller.
+`PodSecurity` is an admission controller that enforces Pod Security Standards on Pods in a Namespace based on specific namespace labels that set the enforcement level.
+In 1.23, the `PodSecurity` feature gate is enabled by default.
+
+### Container Runtime Interface (CRI) v1 is default
+
+The Kubelet now supports the CRI `v1` API, which is now the project-wide default.
+If a container runtime does not support the `v1` API, Kubernetes will fall back to the `v1alpha2` implementation.
+There is no intermediate action required by end-users, because `v1` and `v1alpha2` do not differ in their implementation.
+It is likely that `v1alpha2` will be removed in one of the future Kubernetes releases to be able to develop `v1`.
+
+### Structured logging graduate to Beta
+
+Structured logging reached its Beta milestone. Most log messages from kubelet and kube-scheduler have been converted. Users are encouraged to try out JSON output or parsing of the structured text format and provide feedback on possible solutions for the open issues, such as handling of multi-line strings in log values.
+
+### Simplified Multi-point plugin configuration for scheduler
+
+The kube-scheduler is adding a new, simplified config field for Plugins to allow multiple extension points to be enabled in one spot.
+The new `multiPoint` plugin field is intended to simplify most scheduler setups for administrators.
+Plugins that are enabled via `multiPoint` will automatically be registered for each individual extension point that they implement.
+For example, a plugin that implements Score and Filter extensions can be simultaneously enabled for both.
+This means entire plugins can be enabled and disabled without having to manually edit individual extension point settings.
+These extension points can now be abstracted away due to their irrelevance for most users.
+
+### CSI Migration updates
+
+CSI Migration enables the replacement of existing in-tree storage plugins such as `kubernetes.io/gce-pd` or `kubernetes.io/aws-ebs` with a corresponding CSI driver.
+If CSI Migration is working properly, Kubernetes end users shouldn’t notice a difference.
+After migration, Kubernetes users may continue to rely on all the functionality of in-tree storage plugins using the existing interface.
+- CSI Migration feature is turned on by default but stays in Beta for GCE PD, AWS EBS, and Azure Disk in 1.23.
+- CSI Migration is introduced as an Alpha feature for Ceph RBD and Portworx in 1.23.
+
 ## Urgent Upgrade Notes 
 
 ### (No, really, you MUST read this before you upgrade)
