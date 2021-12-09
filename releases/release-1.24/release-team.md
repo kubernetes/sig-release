@@ -1,4 +1,4 @@
-# Kubernetes 1.23 Release Team
+# Kubernetes 1.24 Release Team
 
 | **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
@@ -14,4 +14,4 @@
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
-The schedule for all patch releases can be found at [Patch Releases page](/releases/patch-releases.md). It will be updated to include 1.23, once the 1.23 release cycle concludes.
+The schedule for all patch releases can be found at [Patch Releases page](/releases/patch-releases.md). It will be updated to include 1.24, once the 1.24 release cycle concludes.
