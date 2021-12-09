@@ -8,7 +8,9 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.23
+# Kubernetes 1.23: The Next Frontier
+
+![Kubernetes 1.23 : The Next Frontier](./kubernetes-1.23-the-next-frontier-500px.png)
 
 #### Links
 
