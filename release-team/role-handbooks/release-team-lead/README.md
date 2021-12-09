@@ -45,7 +45,7 @@ This role requires a tremendous amount of experience with the Kubernetes communi
 
 In addition to the [Release Team Lead selection criteria][lead-criteria] you are required to fulfill, there are some additional aspirations we have for a Release Team Lead.
 
-- The Release Team is a global volunteer group, as is the Kubernetes project, so the Lead must be prepared to schedule and attend meetings that may be very late or very early in his or her time zone, in order to include as many of the team as possible.
+- The Release Team is a global volunteer group, as is the Kubernetes project, so the Lead must be prepared to schedule and attend meetings that may be very late or very early in their time zone, in order to include as many of the team as possible.
 - Project management experience is highly desirable
 - Strong written and verbal communications skills are required
 - As the public face of the community during release time, you must do so with a very high level of professionalism
