@@ -163,6 +163,8 @@ In addition to `gcloud,` `gsutil` is required as well. By default, it comes with
 
 At the end of a release, Release Managers will need to announce the new release to the community.
 
+> NOTE: ALL OF THE FOLLOWING `krel` COMMANDS RUN AS MOCK (NO CHANGES) BY DEFAULT. No mock (`--nomock`) must be specified for command to execute / take action. This is clear in the output based on the targeted email test groups, but not obvious before running the command.
+
 This can be done in one of two ways:
 
 - The `krel announce` sub command -- A [`SENDGRID_API_KEY`](https://sendgrid.com/docs/ui/account-and-settings/api-keys) will need to be configured correctly on your environment for this to work
@@ -176,7 +178,7 @@ This can be done in one of two ways:
 ```shell
 # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds and confirm with them whether Debian and RPM repositories have the packages before sending the email
 export SENDGRID_API_KEY=<API_KEY>
-krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Your Email ID>
+krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Your Email Address>
 ```
 
 See the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/patch-release-team.md#release-commands-cheat-sheet) for example commands.
