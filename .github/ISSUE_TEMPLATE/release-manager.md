@@ -58,11 +58,15 @@ As you work through the checklist, use the following PRs as guides:
 - [ ] Release Manager has agreed to abide by the guidelines set forth in the
   [Security Release Process](https://git.k8s.io/security/security-release-process.md), specifically the embargo on CVE communications.
   (This must be done as an issue comment by the incoming Release Manager.)
-- [ ] Update GitHub teams [(`kubernetes/org`)](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
-  - `milestone-maintainers`
-  - `release-engineering`
-  - `release-managers`
-- [ ] Update `OWNERS`
+- [ ] Update GitHub configurations in [(`kubernetes/org`)](https://git.k8s.io/org/config)
+  - [ ] [`kubernetes` org teams](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
+    - `milestone-maintainers`
+    - `publishing-bot-maintainers`
+    - `release-engineering`
+    - `release-managers`
+  - [ ] [`kubernetes-nightly` org teams](https://git.k8s.io/org/config/kubernetes-nightly/sig-release/teams.yaml)
+    - `publishing-bot-maintainers`
+- [ ] Update `OWNERS` and Google Groups/GCP IAM memberships
   - [ ] `kubernetes/sig-release` `OWNERS_ALIASES`
     - Add entry in the `release-engineering-reviewers` section
       (only if they are not already in the `release-engineering-reviewers`
@@ -72,18 +76,27 @@ As you work through the checklist, use the following PRs as guides:
       (only if they are not already in the `release-engineering-reviewers`
       or `release-engineering-approvers` section)
   - [ ] `kubernetes/test-infra` `OWNERS_ALIASES`
-    - Add entry in the `release-engineering-reviewers` section
-      (only if they are not already in the `release-engineering-reviewers`
-      or `release-engineering-approvers` section)
-  - [ ] `kubernetes/kubernetes` `OWNERS_ALIASES`
-    - Add entry in the `release-engineering-reviewers` section
-      (only if they are not already in the `release-engineering-reviewers`
-      or `release-engineering-approvers` section)
-- [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/groups.yaml)
-  - `k8s-infra-release-editors@`
-  - `k8s-infra-release-viewers@`
-  - `release-managers@`
-  - `release-managers-private@`
+    - Add entries in the following sections:
+      - `release-engineering-reviewers`
+      - `release-engineering-approvers`
+      - `publishing-bot-reviewers`
+  - [ ] `kubernetes/kubernetes`
+    - [ ] `OWNERS_ALIASES`
+      - Add entry in the `release-engineering-reviewers` section
+    - [ ] `staging/publishing/OWNERS`
+      - Add entry in the `reviewers` sectionpublishing-bot-reviewers
+  - [ ] `kubernetes/k8s.io`
+    - [ ] `OWNERS_ALIASES`
+      - Add entries in the following sections:
+        - `release-engineering-approvers`
+        - `publishing-bot-reviewers`
+    - [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/groups.yaml)
+      - `k8s-infra-release-editors@`
+      - `k8s-infra-release-viewers@`
+      - `release-managers@`
+      - `release-managers-private@`
+  - [ ] `kubernetes/publishing-bot` `OWNERS_ALIASES`
+    - Add entry in the `release-engineering-approvers` section
 - [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
 - [ ] Manually add to the [Release Team Google Group](https://groups.google.com/a/kubernetes.io/g/release-team)
 - [ ] Update Slack `release-managers` User Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
