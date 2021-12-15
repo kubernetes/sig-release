@@ -38,16 +38,16 @@ description: |
 
 The 1.24 release cycle is proposed as follows:
 
-- **Monday 3rd January 2022**: Week 1 - Release cycle begins
+- **Monday 10th January 2022**: Week 1 - Release cycle begins
 - **TBC**: Week 2 - [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **TBC**: Week 3 - [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **TBC**: Week 11 - [Release Retrospective][Retrospective Document] part 1
 - **TBC**: Week 13 - [Code Freeze](../release_phases.md#code-freeze)
 - **TBC**: Week 14 - [Test Freeze](../release_phases.md#test-freeze)
 - **TBC**: Week 15 - Docs must be completed and reviewed
-- **Tuesday 12th April 2022**: Week 16 - Kubernetes v1.24.0 released
-- **TBC**: Week 17 - [Release Retrospective][Retrospective Document] part 2
-- **TBC**: Week 17 - [Release Retrospective][Retrospective Document] part 3
+- **Tuesday 19th April 2022**: Week 15 - Kubernetes v1.24.0 released
+- **TBC**: Week 16 - [Release Retrospective][Retrospective Document] part 2
+- **TBC**: Week 16 - [Release Retrospective][Retrospective Document] part 3
 
 ## Timeline
 
