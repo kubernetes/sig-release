@@ -10,7 +10,7 @@
 | Release Notes | Lucas Dwyer ([@AuraSinis](https://github.com/AuraSinis) / Slack: `@Lucas Dwyer`) | |
 | Communications | Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@mickey`) | |
 | Emeritus Adviser | Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@Joseph`) | |
-| Branch Manager | | |
+| Branch Manager | Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`) | |
 
 Review the [Release Managers page](/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
