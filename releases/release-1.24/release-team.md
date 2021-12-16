@@ -2,7 +2,7 @@
 
 | **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
-| Lead | James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) / Slack: `@james.laverack`) | |
+| Lead | James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) / Slack: `@james.laverack`) | Jesse Butler ([@jlbutler](https://github.com/jlbutler) / Slack: `@Jesse Butler`), Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`), Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`), Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkorbi`) |
 | Enhancements | | |
 | CI Signal | | |
 | Bug Triage | | |
