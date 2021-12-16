@@ -3,12 +3,12 @@
 | **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
 | Lead | James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) / Slack: `@james.laverack`) | Jesse Butler ([@jlbutler](https://github.com/jlbutler) / Slack: `@Jesse Butler`), Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`), Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`), Max Körbächer ([@mkorbi](https://github.com/mkorbi) / Slack: `@mkorbi`) |
-| Enhancements | | |
-| CI Signal | | |
-| Bug Triage | | |
-| Docs | | |
-| Release Notes | | |
-| Communications | | |
+| Enhancements | Grace Nguyen ([@gracenng](https://github.com/gracenng) / Slack: `@Grace Nguyen`) | |
+| CI Signal | Leonard Vincent Simon Pahlke ([@leonardpahlke](https://github.com/leonardpahlke) / Slack: `@lvspahlke`) | |
+| Bug Triage | Jyoti Mahapatra ([@jyotimahapatra](https://github.com/jyotimahapatra) / Slack: `@Jyoti Mahapatra`) | |
+| Docs | Nate Waddington ([@nate-double-u](https://github.com/nate-double-u) / Slack: `@nate-double-u`) | |
+| Release Notes | Lucas Dwyer ([@AuraSinis](https://github.com/AuraSinis) / Slack: `@Lucas Dwyer`) | |
+| Communications | Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@mickey`) | |
 | Emeritus Adviser | Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@Joseph`) | |
 | Branch Manager | | |
 

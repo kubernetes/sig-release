@@ -9,4 +9,9 @@ approvers:
   - mkorbi                # Release Team Lead Shadow
 
 reviewers:
-# TODO 1.24 release team role leads
+  - gracenng              # Enhancements
+  - leonardpahlke         # CI Signal
+  - jyotimahapatra        # Bug Triage
+  - nate-double-u         # Docs
+  - AuraSinis             # Release Notes
+  - mickeyboxell          # Communications
