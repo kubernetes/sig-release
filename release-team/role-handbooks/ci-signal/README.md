@@ -107,7 +107,7 @@ For any release, its schedule and activities/deliverable for each week will be p
 
 Right after the CI signal release team is formed, CI signal lead is responsible for following onboarding actions:
 
--   adding write access to all new shadows for the [CI signal board](https://github.com/orgs/kubernetes/projects/11)
+-   adding write access to all new shadows for the [CI signal board](https://github.com/orgs/kubernetes/projects/68)
 -   updating the [CI signal github team](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml)
 -   adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml)
 -   organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage
@@ -117,7 +117,7 @@ Right after the CI signal release team is formed, CI signal lead is responsible 
 
 Here are some good early deliverables from the CI Signal lead between start of the release to enhancement freeze.
 
--   Start maintain the [CI signal project board](https://github.com/orgs/kubernetes/projects/11) and keep it up-to-date with issues tracking any test failure/flake
+-   Start maintain the [CI signal project board](https://github.com/orgs/kubernetes/projects/68) and keep it up-to-date with issues tracking any test failure/flake
 -   Assign the new milestone labels to the open issues from previous release, assign a member of the CI signal team, and have that member follow up on the issue with owners
 -   Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues. See [Opening Issues](#opening-issues) for how to write an effective issue.
 -   Build and maintain a document of area experts / owners across SIGs for future needs e.g.: Scalability experts, upgrade test experts etc
@@ -227,7 +227,7 @@ Once you have decided the number of issues to open an how to name them, it is im
 -   `/cc @ci-signal` github team on the issue to let rest of the team know about it, you might also `/cc` the release lead and bug triage lead if the issue needs extra attention immediately.
 -   Assign the issue to yourself or recruit another member of the CI signal team to own the issue. The CI signal team member assigned to an issue is responsible for driving it to resolution alongside the assignee from the appropriate SIG.
 -   Post the test failure in SIG’s Slack channel to get help in routing the issue to the rightful owner(s).
--   Add the issue to [CI signal board](https://github.com/orgs/kubernetes/projects/11) under "New". The CI signal team lead is responsible for making sure every issue on the CI signal board is assigned to a member of the CI signal team and is being actively driven to resolution.
+-   Add the issue to [CI signal board](https://github.com/orgs/kubernetes/projects/68) under "New". The CI signal team lead is responsible for making sure every issue on the CI signal board is assigned to a member of the CI signal team and is being actively driven to resolution.
 
 In addition to the steps above, make sure to fill in any additional information that is part of the [Failing Test](https://github.com/kubernetes/kubernetes/issues/new?labels=kind%2Ffailing-test&template=failing-test.md) or [Flaking Test](https://github.com/kubernetes/kubernetes/issues/new?labels=kind%2Fflake&template=flaking-test.md) issue template.
 
