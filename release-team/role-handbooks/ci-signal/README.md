@@ -87,7 +87,7 @@ Additionally, the following qualifications make a candidate more suitable for th
 
 -   Prior involvement with SIG Testing and the Test Infrastructure team.
 -   Experience with automated testing, CI/CD, quality engineering, and/or quality assurance.
--   Experience with Golang, as the CI Signal team reviews the [CI Signal reporting tool](#reporting-status) written in Golang.
+-   A basic understanding of Golang to review and improve the [CI Signal reporting tool](#reporting-status).
 
 ### Additional Requirements for Leads
 
@@ -387,7 +387,7 @@ Early and continuous reporting of test health proved greatly effective in rallyi
 During the 1.23 release cycle, a reporting tool was [donated](https://github.com/kubernetes/release/pull/2309) and enhanced to improve the weekly ci signal report. Furthermore, a new dashboard was built.
 Features are tracked on the [ci signal report 2.0 project board](https://github.com/orgs/kubernetes/projects/65). New feature requests can be added as notes to the "Under Discussion" column and discussed at a release engineering meeting.
 
-The tool is consists of two parts:
+The tool consists of two parts:
 
 1. CI Signal report CLI, which can be found under [kubernetes/release](https://github.com/kubernetes/release) in the folder [cmd/ci-reporter](https://github.com/kubernetes/release/tree/master/cmd/ci-reporter). The CLI is used to create reports.
 2. CI Signal dashboard, which has not yet been committed to kubernetes, but will summarize the current status of the test network. Based on the current status, alerts are triggered and automatically sent to Slack.
