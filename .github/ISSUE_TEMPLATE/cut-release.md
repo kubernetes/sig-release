@@ -43,7 +43,7 @@ http://bit.ly/relmanagers-handbook#releases-management
 
 Image promotion:
 Use `krel promote images` to create a pull request
-https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md
+https://sigs.k8s.io/promo-tools/docs/promotion-pull-requests.md
 
 Notify #release-management on Slack:
 Announce the release in a message in the Channel and paste the link
