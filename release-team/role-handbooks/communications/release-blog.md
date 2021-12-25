@@ -12,6 +12,12 @@ This outline can be used as reference for writing up the release blog. The follo
         * This is the vision and brand new thing you can do in-production right now.
     * Blog posts should highlight the main features and include mention of the 5-day blog series.
     * Everything else is included in the release notes.
+* Major changes
+    * List major changes not covered in themes
+    * Call out important API deprecations and removals
+    * When possible, link upstream docs or KEP docs (past blogs link k/enhancement issues)
+* Known Issues
+    * Optional section to call out specific known issues and workarounds, if applicable.
 * Release notes
     * Release notes are always included in the blog announcement.
 * Availability of release
@@ -44,9 +50,9 @@ This outline can be used as reference for writing up the release blog. The follo
     * Kubernetes blog
 
 ## Latest Release Blogs as Reference
-* [Kubernetes 1.18: Fit & Finish](https://kubernetes.io/blog/2020/03/25/kubernetes-1-18-release-announcement/)
-* [Kubernetes 1.17: Stability](https://kubernetes.io/blog/2019/12/09/kubernetes-1-17-release-announcement/)
-* [Kubernetes 1.16: Custom Resources, Overhauled Metrics, and Volume Extensions](https://kubernetes.io/blog/2019/09/18/kubernetes-1-16-release-announcement/)
+* [Kubernetes 1.23: The Next Frontier](https://kubernetes.io/blog/2021/12/07/kubernetes-1-23-release-announcement/)
+* [Kubernetes 1.22: Reaching New Peaks](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/)
+* [Kubernetes 1.21: Power to the Community](https://kubernetes.io/blog/2021/04/08/kubernetes-1-21-release-announcement/)
 
 ## Release Blog Template
 
@@ -56,14 +62,13 @@ The template should give you some boilerplate. However, each release has its own
 ---
 layout: blog
 title: 'Kubernetes 1.XX: <Release Name>'
-date: 2020-03-25
+date: 202n-mm-dd
 slug: kubernetes-1-XX-release-announcement
 ---
 
 **Authors:** [Kubernetes 1.XX Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/release_team.md)
 
 <INTRO>
-
 
 ## Major Themes
 
@@ -81,13 +86,17 @@ slug: kubernetes-1-XX-release-announcement
 
 ### Graduated to Stable
 
-- [<Enhancement Name>](<LINKE TO ENHANCEMENT>)
+- [<Enhancement Name>](<LINK TO KEP OR DOCS>)
 - [...](...)
 
 ### Major Changes
 
-- [<Enhancement Name>](<LINKE TO ENHANCEMENT>)
+- [<Enhancement Name>](<LINK TO KEP OR DOCS>)
 - [...](...)
+
+### Major Changes
+
+Callouts for specific known issues worthy of note. Links to issues, docs, and related content.
 
 ### Release Notes
 
