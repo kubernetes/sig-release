@@ -68,26 +68,27 @@ The 1.24 release cycle is proposed as follows:
 | **Begin Feature blog freeze** (**Time TBC**) | Comms Lead | **TBC** | week 11 | |
 | 1.24.0-alpha.4 released | Branch Manager | **TBC** | Week 11 | |
 | Release retrospective part 1 (**Time TBC**) | Community | **TBC** | week 11 | |
-| Burndown Meetings daily| Lead | **TBC** | week 13 | |
-| **Begin [Code Freeze]** (**Time TBC**) | Branch Manager | **TBC** | week 13 | |
-| 1.24.0-beta.0 released | Branch Manager | **TBC** | week 13 | |
-| Docs deadline - Open placeholder PRs | Docs Lead | **TBC** | week 13 | |
-| **[Test Freeze]** (**Time TBC**) | Branch Manager | **TBC** | week 14 | |
-| Docs deadline - PRs ready for review | Docs Lead | **TBC** | week 14 | |
-| 1.24.0-rc.0 released | Branch Manager | **TBC** | week 14 | |
-| release-1.24 branch created | Branch Manager | **TBC** | week 14 | |
-| release-1.24 jobs created | Branch Manager | **TBC** | week 14 | |
-| Start final draft of Release Notes | Release Notes Lead | **TBC** | week 14 | |
-| Release blog ready to review (**Time TBC**) | Comms / Docs | **TBC** | week 14 | |
-| Docs complete - All PRs reviewed and ready to merge | Docs Lead | **TBC** | week 15 | |
-| Feature blogs ready to review (**Time TBC**)| Enhancement Owner / SIG Leads | **TBC** | week 15 | |
-| Release Notes complete - reviewed & merged to `k/sig-release` (**Time TBC**) | Release Notes Lead | **TBC** | week 15 | |
-| 1.24.0-rc.1 released | Branch Manager | **TBC** | week 15 | |
-| **v1.24.0 released** | Branch Manager | **TBC** | week 16 | |
-| Release blog published | Comms | **TBC** | week 16 | |
-| **[Thaw]** | Branch Manager | **TBC** | week 16 | |
-| Release retrospective part 2 (**TBC**) | Community | **TBC** | week 17 | |
-| Release retrospective part 3 (**TBC**) | Community | **TBC** | week 17 | |
+| Burndown Meetings daily| Lead | **TBC** | week 12 | |
+| **Begin [Code Freeze]** (**Time TBC**) | Branch Manager | **TBC** | week 12 | |
+| 1.24.0-beta.0 released | Branch Manager | **TBC** | week 12 | |
+| Docs deadline - Open placeholder PRs | Docs Lead | **TBC** | week 12 | |
+| Deprecations and Removals blog published | Comms | **TBC** | week 12 | |
+| **[Test Freeze]** (**Time TBC**) | Branch Manager | **TBC** | week 13 | |
+| Docs deadline - PRs ready for review | Docs Lead | **TBC** | week 13 | |
+| 1.24.0-rc.0 released | Branch Manager | **TBC** | week 13 | |
+| release-1.24 branch created | Branch Manager | **TBC** | week 13 | |
+| release-1.24 jobs created | Branch Manager | **TBC** | week 13 | |
+| Start final draft of Release Notes | Release Notes Lead | **TBC** | week 13 | |
+| Release blog ready to review (**Time TBC**) | Comms / Docs | **TBC** | week 13 | |
+| Docs complete - All PRs reviewed and ready to merge | Docs Lead | **TBC** | week 14 | |
+| Feature blogs ready to review (**Time TBC**)| Enhancement Owner / SIG Leads | **TBC** | week 14 | |
+| Release Notes complete - reviewed & merged to `k/sig-release` (**Time TBC**) | Release Notes Lead | **TBC** | week 14 | |
+| 1.24.0-rc.1 released | Branch Manager | **TBC** | week 14 | |
+| **v1.24.0 released** | Branch Manager | **TBC** | week 15 | |
+| Release blog published | Comms | **TBC** | week 15 | |
+| **[Thaw]** | Branch Manager | **TBC** | week 15 | |
+| Release retrospective part 2 (**TBC**) | Community | **TBC** | week 16 | |
+| Release retrospective part 3 (**TBC**) | Community | **TBC** | week 16 | |
 
 ## Phases
 
