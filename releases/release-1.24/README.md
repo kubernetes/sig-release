@@ -66,25 +66,25 @@ The 1.24 release cycle is as follows:
 | **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead | Monday 21st March 2022 | week 11 | [1.24-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Monday 21st March 2022 | week 11 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Monday 21st March 2022 | week 11 | |
-| **Begin Feature blog freeze** (**Time TBC**) | Comms Lead | Tuesday 22nd March 2022 | week 11 | |
+| **Begin Feature blog freeze** | Comms Lead | 01:00 UTC Wednesday 23rd March 2022 / 18:00 PDT Tuesday 22nd March 2022 | week 11 | |
 | 1.24.0-alpha.4 released | Branch Manager | Tuesday 22nd March 2022 | Week 11 | |
 | Release retrospective part 1 (**Time TBC**) | Community | Wednesday 23rd March 2022 | week 11 | |
 | (most of) Europe enters Daylight Savings Time | | Sunday 27th March 2022 | | |
 | Burndown Meetings daily | Lead | Monday 28th March 2022 | week 12 | |
-| **Begin [Code Freeze]** (**Time TBC**) | Branch Manager | Tuesday 29th March 2022 | week 12 | |
+| **Begin [Code Freeze]** | Branch Manager | 01:00 UTC Wednesday 30th March 2022 / 02:00 BST Wednesday 30th March 2022 / 18:00 PDT Tuesday 29th March 2022 | week 12 | |
 | 1.24.0-beta.0 released | Branch Manager | Wednesday 30th March 2022 | week 12 | |
 | Docs deadline — Open placeholder PRs | Docs Lead | Thursday 31st March 2022 | week 12 | |
 | Deprecations and Removals blog published | Comms | Thursday 31st March 2022 | week 12 | |
-| **[Test Freeze]** (**Time TBC**) | Branch Manager | Tuesday 5th April 2022 | week 13 | |
+| **[Test Freeze]** | Branch Manager | 01:00 UTC Wednesday 6th April 2022 / 02:00 BST Wednesday 6th April 2022 / 18:00 PDT Tuesday 5th April 2022 | week 13 | |
 | Docs deadline — PRs ready for review | Docs Lead | Tuesday 5th April 2022 | week 13 | |
 | 1.24.0-rc.0 released | Branch Manager | Tuesday 5th April 2022 | week 13 | |
 | release-1.24 branch created | Branch Manager | Tuesday 5th April 2022 | week 13 | |
 | release-1.24 jobs created | Branch Manager | Tuesday 5th April 2022 | week 13 | |
 | Start final draft of Release Notes | Release Notes Lead | Tuesday 5th April 2022 | week 13 | |
-| Release blog ready to review (**Time TBC**) | Comms / Docs | Tuesday 5th April 2022 | week 13 | |
+| Release blog ready to review | Comms / Docs | 01:00 UTC Wednesday 6th April 2022 / 02:00 BST Wednesday 6th April 2022 / 18:00 PDT Tuesday 5th April 2022 | week 13 | |
 | Docs complete — All PRs reviewed and ready to merge | Docs Lead |  Tuesday 12th April 2022 | week 14 | |
-| Feature blogs ready to review (**Time TBC**)| Enhancement Owner / SIG Leads |  Tuesday 12th April 2022 | week 14 | |
-| Release Notes complete — reviewed & merged to `k/sig-release` (**Time TBC**) | Release Notes Lead | Thursday 14th April 2022 | week 14 | |
+| Feature blogs ready to review | Enhancement Owner / SIG Leads |  Tuesday 12th April 2022 | week 14 | |
+| Release Notes complete — reviewed & merged to `k/sig-release` | Release Notes Lead | 01:00 UTC Friday 15th April 2022 / 02:00 BST Friday 15th April 2022 / 18:00 PDT Thursday 14th April 2022 | week 14 | |
 | 1.24.0-rc.1 released | Branch Manager | Friday 15th April 2022 | week 14 | |
 | **v1.24.0 released** | Branch Manager | Tuesday 19th April 2022 | week 15 | |
 | Release blog published | Comms | Tuesday 19th April 2022 | week 15 | |
