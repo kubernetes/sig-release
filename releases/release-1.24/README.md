@@ -39,8 +39,8 @@ description: |
 The 1.24 release cycle is as follows:
 
 - **Monday 10th January 2022**: Week 1 — Release cycle begins
-- **Thursday 20th January 2022**: Week 2 — [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
-- **02:00 UTC Friday 28th January 2022** / **18:00 PST Thursday 27th January 2022** : Week 3 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
+- **Thursday 27th January 2022**: Week 3 — [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
+- **02:00 UTC Friday 4th February 2022** / **18:00 PST Thursday 3rd February 2022** : Week 4 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Wednesday 23rd March 2022**: Week 11 — [Release Retrospective][Retrospective Document] part 1
 - **Tuesday 29th March 2022**: Week 13 — [Code Freeze](../release_phases.md#code-freeze)
 - **Tuesday 5th April 2022**: Week 14 — [Test Freeze](../release_phases.md#test-freeze)
@@ -57,10 +57,10 @@ The 1.24 release cycle is as follows:
 | Start Enhancements Tracking | Enhancements Lead | Monday 10th January 2022 | week 1 | |
 | Schedule finalized | Lead | Friday 14th January 2022 | week 1 | |
 | Team finalized | Lead | Friday 14th January 2022 | week 1 | |
-| Production Readiness Soft Freeze | Enhancements Lead | Thursday 20th January 2022 | week 2 | |
 | Start Release Notes Draft | Release Notes Lead | Tuesday 25th January 2022 | week 3 | |
-| **Begin [Enhancements Freeze]** | Enhancements Lead | 02:00 UTC Friday 28th January 2020 / 18:00 PST Thursday 27th January 2022 | week 3 | [master-blocking], [master-informing] |
+| Production Readiness Soft Freeze | Enhancements Lead | Thursday 27th January 2022 | week 3 | |
 | 1.24.0-alpha.2 released | Branch Manager | Tuesday 1st February 2022 | Week 4 | |
+| **Begin [Enhancements Freeze]** | Enhancements Lead | 02:00 UTC Friday 4th February 2020 / 18:00 PST Thursday 3rd February 2022 | week 4 | [master-blocking], [master-informing] |
 | 1.24.0-alpha.3 released | Branch Manager | Tuesday 15th February 2022 | Week 6 | |
 | **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead | Monday 21st March 2022 | week 11 | [1.24-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Monday 21st March 2022 | week 11 | |
