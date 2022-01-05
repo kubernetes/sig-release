@@ -77,7 +77,7 @@ The following requirements are all things that Leads should already have, and Sh
 
 -   Have signed the contributor CLA for Kubernetes.
 -   Become a Kubernetes org member. In many cases, this will be done with the sponsorship of the CI Signal Lead or Release Lead in the first week of the cycle.
-    -   The process to become one of these is in [our community membership ladder](https://github.com/kubernetes/community/blob/master/community-membership.md#requirements-for-outside-collaborators)
+    -   The process to become an org member is in [our community membership ladder](https://github.com/kubernetes/community/blob/master/community-membership.md#requirements-for-outside-collaborators)
 -   General familiarity with our [test boards](https://testgrid.k8s.io/) and examining test results from automated tests.
 -   Willingness and ability to follow-up with contributors about test failures, on Slack, email, Discuss, and SIG meetings, as appropriate.
 -   Ability to file well-crafted Kubernetes issues, including labelling.
