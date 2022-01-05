@@ -72,7 +72,7 @@ The 1.24 release cycle is as follows:
 | **Begin [Code Freeze]** (**Time TBC**) | Branch Manager | Tuesday 29th March 2022 | week 12 | |
 | 1.24.0-beta.0 released | Branch Manager | Wednesday 30th March 2022 | week 12 | |
 | Docs deadline — Open placeholder PRs | Docs Lead | Thursday 31st March 2022 | week 12 | |
-| Deprecations and Removals blog published | Comms | Thursday 21st March 2022 | week 12 | |
+| Deprecations and Removals blog published | Comms | Thursday 31st March 2022 | week 12 | |
 | **[Test Freeze]** (**Time TBC**) | Branch Manager | Tuesday 5th April 2022 | week 13 | |
 | Docs deadline — PRs ready for review | Docs Lead | Tuesday 5th April 2022 | week 13 | |
 | 1.24.0-rc.0 released | Branch Manager | Tuesday 5th April 2022 | week 13 | |
