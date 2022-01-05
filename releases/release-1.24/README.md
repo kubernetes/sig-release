@@ -62,12 +62,14 @@ The 1.24 release cycle is as follows:
 | 1.24.0-alpha.2 released | Branch Manager | Tuesday 1st February 2022 | Week 4 | |
 | **Begin [Enhancements Freeze]** | Enhancements Lead | 02:00 UTC Friday 4th February 2020 / 18:00 PST Thursday 3rd February 2022 | week 4 | [master-blocking], [master-informing] |
 | 1.24.0-alpha.3 released | Branch Manager | Tuesday 15th February 2022 | Week 6 | |
+| (most of) North America enters Daylight Savings Time | | Sunday 13th March 2022 | | |
 | **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead | Monday 21st March 2022 | week 11 | [1.24-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Monday 21st March 2022 | week 11 | |
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Monday 21st March 2022 | week 11 | |
 | **Begin Feature blog freeze** (**Time TBC**) | Comms Lead | Tuesday 22nd March 2022 | week 11 | |
 | 1.24.0-alpha.4 released | Branch Manager | Tuesday 22nd March 2022 | Week 11 | |
 | Release retrospective part 1 (**Time TBC**) | Community | Wednesday 23rd March 2022 | week 11 | |
+| (most of) Europe enters Daylight Savings Time | | Sunday 27th March 2022 | | |
 | Burndown Meetings daily | Lead | Monday 28th March 2022 | week 12 | |
 | **Begin [Code Freeze]** (**Time TBC**) | Branch Manager | Tuesday 29th March 2022 | week 12 | |
 | 1.24.0-beta.0 released | Branch Manager | Wednesday 30th March 2022 | week 12 | |
