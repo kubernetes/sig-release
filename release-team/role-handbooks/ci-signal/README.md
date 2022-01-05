@@ -96,8 +96,8 @@ In addition to the above requirements for Shadows, most of which become prerequi
 -   Have the ability to add a milestone to issues, so must be a member of the [milestone maintainers](https://github.com/orgs/kubernetes/teams/milestone-maintainers)
 -   Have a working knowledge of our various test infrastructure tools, such as Testgrid, Triage, Spyglass, gubernator, Prow, and Tide.
 -   Signal lead needs to understand what tests matter and generally how our testing infra is wired together.
-    -   He/she can ask previous CI Signal leads for advice
-    -   He/she can ask SIG-Testing for guidance
+    -   They can ask previous CI Signal leads for advice
+    -   They can ask SIG-Testing for guidance
 
 ## Overview of tasks across release timeline
 
