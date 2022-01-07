@@ -7,7 +7,7 @@
 | CI Signal | Leonard Vincent Simon Pahlke ([@leonardpahlke](https://github.com/leonardpahlke) / Slack: `@lvspahlke`) | |
 | Bug Triage | Jyoti Mahapatra ([@jyotimahapatra](https://github.com/jyotimahapatra) / Slack: `@Jyoti Mahapatra`) | |
 | Docs | Nate Waddington ([@nate-double-u](https://github.com/nate-double-u) / Slack: `@nate-double-u`) | Chris Negus ([@chrisnegus](https://github.com/chrisnegus) / Slack: `@Chris Negus`), Edidiong Asikpo ([@didicodes](https://github.com/didicodes) / Slack: `@Didicodes`), Meha Bhalodiya ([@mehabhalodiya](https://github.com/mehabhalodiya) / Slack: `@Meha Bhalodiya`), Victor Palade ([@pi-victor](https://github.com/pi-victor) / Slack: `@pi-victor` ) |
-| Release Notes | Lucas Dwyer ([@AuraSinis](https://github.com/AuraSinis) / Slack: `@Lucas Dwyer`) | |
+| Release Notes | Lucas Dwyer ([@AuraSinis](https://github.com/AuraSinis) / Slack: `@Lucas Dwyer`) |  Parul Sahoo ([@parul5sahoo](https://github.com/parul5sahoo) / Slack: `@parul_sahoo`), Arsh Sharma ([@RinkiyaKeDad](https://github.com/RinkiyaKeDad) / Slack: `@arsh`), François Le Pape ([@Lp-Francois](https://github.com/Lp-Francois) / Slack: `@François LP`), Carlos Santana ([@csantanapr](https://github.com/csantanapr) / Slack: `@csantanapr`) |
 | Communications | Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@mickey`) | |
 | Emeritus Adviser | Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@Joseph`) | |
 | Branch Manager | Nabarun Pal ([@palnabarun](https://github.com/palnabarun) / Slack: `@palnabarun`) | |
