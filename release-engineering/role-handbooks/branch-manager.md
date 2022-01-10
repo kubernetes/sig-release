@@ -915,7 +915,7 @@ See the branch management process prior to v1.12 when `anago` was still used.
 
 - [Branch Management Playbook](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
 
->  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/group/dev) Google group.
+>  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) Google group.
 
 [image-promotion]: https://sigs.k8s.io/promo-tools/docs/promotion-pull-requests.md
 [kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team

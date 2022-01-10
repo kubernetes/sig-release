@@ -24,7 +24,7 @@ hold and only released once approved by a SIG Release (subproject) owner.**
   - [ ] Has joined the following mailing lists:
     - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
     - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team)
-    - [kubernetes-dev](https://groups.google.com/a/kubernetes.io/group/dev)
+    - [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev)
     - [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
     - [release-managers](https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers)
     - [release-managers-private](https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers-private)
