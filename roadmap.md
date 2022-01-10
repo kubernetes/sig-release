@@ -40,6 +40,17 @@ the following listing, all deliverables are sorted by their priority.
    compliant. We also intend to participate actively in the development of the
    framework.
 
+   Enhancement: https://github.com/kubernetes/enhancements/issues/3027
+
+1. **Signing of release artifacts (Secure)**
+
+   https://github.com/kubernetes/release/issues/914
+
+   Outcome: Being able to sign release artifacts, which also includes container
+   images.
+
+   Enhancement: https://github.com/kubernetes/enhancements/issues/3031
+
 1. **Enhance Kubernetes binary artifact management (Consumable)**
 
    https://github.com/kubernetes/sig-release/issues/1372
@@ -86,13 +97,6 @@ the following listing, all deliverables are sorted by their priority.
 
    Outcome: Automated builds of `deb` and `rpm` Kubernetes packages within
    community infrastructure.
-
-1. **Signing of release artifacts (Secure)**
-
-   https://github.com/kubernetes/release/issues/914
-
-   Outcome: Being able to GPG sign release artifacts, which also includes
-   container images.
 
 ### Known Risks
 
