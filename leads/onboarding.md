@@ -15,7 +15,7 @@ To ensure quality communication SIG Release Chairs and Technical Leads should:
   - kubernetes-release-team:
     https://groups.google.com/a/kubernetes.io/g/release-team
   - kubernetes-dev:
-    https://groups.google.com/a/kubernetes.io/group/dev
+    https://groups.google.com/a/kubernetes.io/g/dev
   - kubernetes-announce:
     https://groups.google.com/forum/#!forum/kubernetes-announce
   - release-managers:

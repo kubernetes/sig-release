@@ -185,7 +185,7 @@ krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Y
 See the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/patch-release-team.md#release-commands-cheat-sheet) for example commands.
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
-[k-dev-list]: https://groups.google.com/a/kubernetes.io/group/dev
+[k-dev-list]: https://groups.google.com/a/kubernetes.io/g/dev
 [release tools]: https://github.com/kubernetes/release#tools
 [kubernetes/release]: https://github.com/kubernetes/release
 [sendgrid-identity-verification]: https://sendgrid.com/docs/for-developers/sending-email/sender-identity/

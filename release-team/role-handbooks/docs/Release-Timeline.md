@@ -155,7 +155,7 @@ Send a Slack message to those that you select, e.g:
 You'll then want to join these mailing lists if you haven't already:
 >- https://groups.google.com/forum/#!forum/kubernetes-sig-release
 >- https://groups.google.com/forum/#!forum/kubernetes-sig-docs
->- https://groups.google.com/a/kubernetes.io/group/dev
+>- https://groups.google.com/a/kubernetes.io/g/dev
 >
 >Access to Google docs and calendar invites are often based on these mailing lists, so it's a good idea to subscribe.
 >
