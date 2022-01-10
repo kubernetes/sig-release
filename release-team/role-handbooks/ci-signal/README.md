@@ -101,15 +101,14 @@ In addition to the above requirements for Shadows, most of which become prerequi
 
 ## Overview of tasks across release timeline
 
-For any release, its schedule and activities/deliverable for each week will be published in the release directory, e.g: [1.16 schedule](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.16#timeline). This section talks about specific CI Signal lead deliverable for each milestone in the release cycle.
+For any release, its schedule and activities/deliverable for each week will be published in the release directory, e.g: [1.24 schedule](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.24#timeline). This section talks about specific CI Signal lead deliverable for each milestone in the release cycle.
 
 ### Onboarding
 
 Right after the CI signal release team is formed, CI signal lead is responsible for following onboarding actions:
 
--   adding write access to all new shadows for the [CI signal board](https://github.com/orgs/kubernetes/projects/68)
--   updating the [CI signal github team](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml)
--   adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml)
+-   update the [ci signal team in the teams.yaml](https://github.com/kubernetes/org/blob/main/config/kubernetes/sig-release/teams.yaml) which grants access to the [ci signal project board](https://github.com/orgs/kubernetes/projects/68/). _Coordinate with the release lead to make multiple changes to this file in one PR._
+-   adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml). _Coordinate with the release lead to make multiple changes to this file in one PR._
 -   organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage
 -   Add the CI Signal team as reviewer for the ci signal report tool. Replace the previous CI Signal team members from `ci-signal-reporter-reviewers` with the new CI Signal team in the file [OWNERS_ALIASES](https://github.com/kubernetes/release/blob/master/OWNERS_ALIASES) of the [k/release](https://github.com/kubernetes/release) repository.
 
