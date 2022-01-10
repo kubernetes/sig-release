@@ -33,7 +33,7 @@ e.g., permanent, temporary
 - [ ] Ensure new Release Manager:
   - [ ] Has joined the following mailing lists:
     - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-    - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
+    - [kubernetes-dev](https://groups.google.com/a/kubernetes.io/group/dev)
   - [ ] Has joined the following Slack channels:
     - [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF)
     - [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y)

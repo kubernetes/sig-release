@@ -185,7 +185,7 @@ krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Y
 See the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/patch-release-team.md#release-commands-cheat-sheet) for example commands.
 
 [k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
-[k-dev-list]: https://groups.google.com/forum/#!forum/kubernetes-dev
+[k-dev-list]: https://groups.google.com/a/kubernetes.io/group/dev
 [release tools]: https://github.com/kubernetes/release#tools
 [kubernetes/release]: https://github.com/kubernetes/release
 [sendgrid-identity-verification]: https://sendgrid.com/docs/for-developers/sending-email/sender-identity/
@@ -915,7 +915,7 @@ See the branch management process prior to v1.12 when `anago` was still used.
 
 - [Branch Management Playbook](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
 
->  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) Google group.
+>  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/group/dev) Google group.
 
 [image-promotion]: https://sigs.k8s.io/promo-tools/docs/promotion-pull-requests.md
 [kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team

@@ -464,7 +464,7 @@ whenever possible to give updates on activity in your release branch
 When you have a plan for the next patch release, send an announcement
 ([example](https://groups.google.com/forum/#!topic/kubernetes-dev-announce/HGYsjOFtcdU)):
 
-* TO: [kubernetes-dev@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-dev)
+* TO: [kubernetes-dev@googlegroups.com](https://groups.google.com/a/kubernetes.io/group/dev)
 * *BCC*: [kubernetes-dev-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-dev-announce)
 
 several working days in advance, including a release notes preview.  Also
@@ -595,7 +595,7 @@ corresponding command line help (`-h`) outputs.
 | Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://git.k8s.io/sig-release/release-managers.md#build-admins) by name on Slack for package building |
 | Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVRs (Name-Version-Release) |
 | Official email notify | ```krel announce send --tag v1.13.3 --nomock``` |
-| Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/forum/#!forum/kubernetes-dev) got mail OK |
+| Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/a/kubernetes.io/group/dev) got mail OK |
 | Completion | n/a |
 
 [release-managers]: /release-managers.md#release-managers
