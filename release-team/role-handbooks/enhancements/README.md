@@ -118,7 +118,7 @@ It is important that this process be followed and documentation remain up-to-dat
 
 #### Pre-Enhancements Freeze (Week 1)
 
-- Send an email to the [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) mailing list and a message to #chairs-and-techleads slack channel with a call for enhancements and how to opt-in to the release.
+- Send an email to the [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to #chairs-and-techleads slack channel with a call for enhancements and how to opt-in to the release.
 - Verify issues have k/k PRs associated so they can be referenced and easily tracked. This is going to be critical come Enhancement Freeze and Code Freeze to see the status of the code.
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
 - Weekly Release meetings require updates of current status. Use the `Feature stats` tab to update the release team on counts of enhancements in good and bad progress.
@@ -135,11 +135,11 @@ It is important that this process be followed and documentation remain up-to-dat
 - Stay on top of comments in issues when owners respond and update their status in the sheet if necessary.
 - Mark features as `At Risk` if there is no communication, active PRs on the issues, or it is missing other requirements coming into Enhancement Freeze.
 - Start syncing with Communications Team on giving an induction what's coming up for the release.
-- Send an email to [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
+- Send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
 
 #### Enhancements Freeze (Week 3)
 
-- On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/forum/#!forum/kubernetes-dev) that freeze has happened and upcoming key dates. Examples [1](https://groups.google.com/g/kubernetes-dev/c/JDM7bNKvhqQ/m/8S7BXtXPBQAJ).
+- On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that freeze has happened and upcoming key dates. Examples [1](https://groups.google.com/g/kubernetes-dev/c/JDM7bNKvhqQ/m/8S7BXtXPBQAJ).
 - Remove [SIG Leads Google Group][sig-leads-group]'s access to the `KEP Collection` sheets on the enhancement collection sheet.
 - Remove any enhancements that failed to meet the criteria by the Enhancement freeze deadline. 
     - Set their status in the sheet to `Removed from Milestone` and use the `Enhancements` -> `Remove Enhancements from Milestone` menu option to move them over to the `Removed from milestone` tab.

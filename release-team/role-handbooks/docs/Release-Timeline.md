@@ -80,7 +80,7 @@ These steps take approximately one hour to complete, and should be completed imm
 - ⚠️  Join these Google groups:
     - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
     - [kubernetes-sig-docs](https://groups.google.com/forum/#!forum/kubernetes-sig-docs)
-    - [kubernetes-dev](https://groups.google.com/forum/#!forum/kubernetes-dev)
+    - [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev)
     - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team)
         - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml) 
     - [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows)
@@ -155,7 +155,7 @@ Send a Slack message to those that you select, e.g:
 You'll then want to join these mailing lists if you haven't already:
 >- https://groups.google.com/forum/#!forum/kubernetes-sig-release
 >- https://groups.google.com/forum/#!forum/kubernetes-sig-docs
->- https://groups.google.com/forum/#!forum/kubernetes-dev
+>- https://groups.google.com/a/kubernetes.io/g/dev
 >
 >Access to Google docs and calendar invites are often based on these mailing lists, so it's a good idea to subscribe.
 >
@@ -282,7 +282,7 @@ This is very helpful for weekly reports and managing deadlines
 
 ### Communicate major deadlines
 
-The Release Lead and Enhancements Lead will send announcements to the [Kubernetes Dev Group](https://groups.google.com/forum/#!forum/kubernetes-dev) periodically during the release cycle.
+The Release Lead and Enhancements Lead will send announcements to the [Kubernetes Dev Group](https://groups.google.com/a/kubernetes.io/g/dev) periodically during the release cycle.
 Communicate with the Release Lead and Enhancements Lead to include the Doc Placeholder PR, Doc PR Ready-for-Review, and Docs Complete deadlines in their announccements.
 
 COMMUNICATE ALL 3 MAJOR DATES AT LEAST A WEEK PRIOR, INCLUDING THE RELEASE DATE REPO FREEZE, FOLLOWING THE BELOW METHODS:
