@@ -115,9 +115,9 @@ The main task of the Release Notes team is the generation of the release notes d
 
 At least one member of the Release Notes Team should be responsible for [setting up](https://github.com/kubernetes/release/tree/master/docs/krel#installation) and [running](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) the release-notes subcommand of krel to generate both versions of the release notes after each Patch Release:
 
-1. Update the release notes draft, a markdown file which will become the final document which will encompass all release notes written by contributors during the current release cycle. See previous drafts for versions [v1.20](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.20/release-notes-draft.md), [v1.19](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.18/release-notes-draft.md) or [v1.18](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.19/release-notes-draft.md).
+1. Update the release notes draft, a markdown file which will become the final document which will encompass all release notes written by contributors during the current release cycle. See previous drafts for versions [v1.23](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.23/release-notes/release-notes-draft.md), [v1.22](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.22/release-notes/release-notes-draft.md) or [v1.21](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/release-notes/release-notes-draft.md).
 
-2. The team is responsible for adding Patch Release (e.g. [1.20.1](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#v1201), etc.) notes to the release notes website at https://relnotes.k8s.io. The krel release notes subcommand will automatically generate the necessary JSON files and patch the release notes website source.
+2. The team is responsible for adding Patch Release (e.g. [1.22.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md#v1225), etc.) notes to the release notes website at https://relnotes.k8s.io. The krel release notes subcommand will automatically generate the necessary JSON files and patch the release notes website source.
 Note that there are plans to improve the workflow [1087](https://github.com/kubernetes/release/issues/1087) 
 
 Detailed instructions for generating the release notes bundles are in the [krel release-notes subcommand documentation](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
@@ -139,13 +139,13 @@ The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetin
 
 ### Maintain the _Known Issues_ Issue
 
-A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must be created by the release notes team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes. See previous known issues for [v1.21](https://github.com/kubernetes/kubernetes/issues/98232), [v1.19](https://github.com/kubernetes/kubernetes/issues/90304), [v1.18](https://github.com/kubernetes/kubernetes/issues/86882) or [v1.17](https://github.com/kubernetes/kubernetes/issues/83683).
+A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must be created by the release notes team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes. See previous known issues for [v1.23](https://github.com/kubernetes/kubernetes/issues/104885), [v1.22](https://github.com/kubernetes/kubernetes/issues/101728), [v1.21](https://github.com/kubernetes/kubernetes/issues/98232), [v1.19](https://github.com/kubernetes/kubernetes/issues/90304), [v1.18](https://github.com/kubernetes/kubernetes/issues/86882) or [v1.17](https://github.com/kubernetes/kubernetes/issues/83683).
 
 ### Ensure Major Themes are Reflected in the Notes
 
 The Communications team will hold meetings to discuss blogposts and media releases regarding the release sometime before code freeze. Ensure that at least one person from the release notes team attends this meeting with the release lead and enhancements lead. The release notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the communications team, release lead or enhancements lead to ensure messaging around Major Themes is coordinated.
 
-Besides a meeting with the Communications team a GitHub Discussion must be open to invite all SIGs members and volunteers to update Major Themes with topics that can be discussed in collaborative way. The discussion must be open in kubernetes/sig-release under General Category, past discussions: [1.21](https://github.com/kubernetes/sig-release/discussions/1436), [1.22](https://github.com/kubernetes/sig-release/discussions/1575).
+Besides a meeting with the Communications team a GitHub Discussion must be open to invite all SIGs members and volunteers to update Major Themes with topics that can be discussed in collaborative way. The discussion must be open in kubernetes/sig-release under General Category, past discussions: [1.23](https://github.com/kubernetes/sig-release/discussions/1709), [1.22](https://github.com/kubernetes/sig-release/discussions/1575), [1.21](https://github.com/kubernetes/sig-release/discussions/1436).
 
 In the case of still low reponse rate in the Github discussion each SIG can be ping via Slack as a reminder. To speed up the proccess an issue can be raised to allow multiple people to reach out to different groups, just like: [1615](https://github.com/kubernetes/sig-release/issues/1615) and [1502](https://github.com/kubernetes/sig-release/pull/1502)
 
@@ -161,7 +161,7 @@ The confirmed notes are cleaned up and copy edited by the release-notes team to 
 
 ### Curate the External Dependencies Section
 
-An "External Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. See [the v1.14 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.14.md#external-dependencies) for an example.
+An "External Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. See [the v1.23 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#dependencies-5) for an example.
 
 Note that there are [plans in the process to formalize and automate the process of aggregating the changes](https://github.com/kubernetes/community/issues/2234), but this is currently [a very manual process](https://github.com/kubernetes/sig-release/pull/398).
 
