@@ -24,55 +24,52 @@ aliases:
     - thejoycekung # Release Manager Associate
     - wilsonehusin # Release Manager Associate
   release-team:
-    - jeremyrickard # subproject owner / 1.20 RT Lead
-    - justaugustus # subproject owner
-    - onlydole # subproject owner / 1.19 RT Lead
-    - palnabarun # subproject owner / 1.21 RT Lead
-    - reylejano # 1.23 RT Lead
-    - savitharaghunathan # subproject owner / 1.22 RT Lead
+    - justaugustus # SIG Release Chair
+    - saschagrunert # SIG Release Chair
+    - cpanato # SIG Release Technical Lead
+    - jeremyrickard # SIG Release Technical Lead
+    - puerco # SIG Release Technical Lead
+    - palnabarun # Kubernetes 1.21 Release Lead
+    - savitharaghunathan # Kubernetes 1.22 Release Lead
+    - reylejano # Kubernetes 1.23 Release Lead
+    - jameslaverack # Kubernetes 1.24 Release Lead
   build-admins:
     - amwat
     - BenTheElder
     - MushuEE
     - spiffxp
   release-team-lead-role:
-    - onlydole # 1.19 RT Lead / 1.21 Emeritus Advisor
-    - jeremyrickard # 1.20 RT Lead
-    - palnabarun # 1.21 RT Lead
-    - savitharaghunathan # 1.22 RT Lead
-    - reylejano # 1.23 RT Lead
+    - palnabarun # Kubernetes 1.21 Release Lead
+    - savitharaghunathan # Kubernetes 1.22 Release Lead
+    - reylejano # Kubernetes 1.23 Release Lead
+    - jameslaverack # Kubernetes 1.24 Release Lead
   ci-signal-role:
-    - RobertKielty # 1.20
     - thejoycekung # 1.21
     - mkorbi # 1.22
     - encodeflush # 1.23
+    - leonardpahlke # 1.24
   enhancements-role:
-    - palnabarun # 1.19
-    - kikisdeliveryservice # 1.20
     - annajung # 1.21
     - jameslaverack # 1.22
     - salaxander # 1.23
+    - gracenng # 1.24
   bug-triage-role:
-    - markyjackson-taulia # 1.19
-    - bai # 1.20
     - erismaster # 1.21
     - monzelmasry # 1.22
     - voigt # 1.23
+    - jyotimahapatra # 1.24
   docs-role:
-    - savitharaghunathan # 1.19
-    - annajung # 1.20
     - reylejano # 1.21
     - pi-victor # 1.22
     - jlbutler # 1.23
+    - nate-double-u # 1.24
   release-notes-role:
-    - puerco # 1.19
-    - JamesLaverack # 1.20
     - wilsonehusin # 1.21
     - pmmalinov01 # 1.22
     - cici37 # 1.23
+    - AuraSinis # 1.24
   communications-role:
-    - mkorbi # 1.19
-    - jrsapi # 1.20
     - divya-mohan0209 # 1.21
     - pensu # 1.22
     - karenhchu # 1.23
+    - mickeyboxell # 1.24
