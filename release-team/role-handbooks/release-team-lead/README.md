@@ -123,6 +123,12 @@ Release Team selection should happen in accordance with the [Release Team select
   - Kubernetes 1.15: Game of Release/Thrones
   - Kubernetes 1.16: Unlimited Breadsticks For All
   - Kubernetes 1.17: The Chillest Release - Capynetes
+  - Kubernetes 1.18: A Bit Quarky
+  - Kubernetes 1.19: Accentuate the Paw-sitive
+  - Kubernetes 1.20: The Raddest Release
+  - Kubernetes 1.21: Power to the Community
+  - Kubernetes 1.22: Reaching New Peaks
+  - Kubernetes 1.23: The Next Frontier
 
 ### Mailing List Standards
 
