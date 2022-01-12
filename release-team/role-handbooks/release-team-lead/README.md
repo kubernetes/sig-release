@@ -101,6 +101,7 @@ Release Team selection should happen in accordance with the [Release Team select
   - Burndown/Meeting Minutes: `https://bit.ly/k8sXYY-burndown`
   - Enhancements tracking spreadsheet: `https://bit.ly/k8sXYY-enhancement-tracking`
   - Merged PRs with release notes: `https://bit.ly/k8sXYY-relnotes`
+  - Release Team contacts sheet: `https://bit.ly/k8sXYY-contacts`
   - Use the same conventions for additional documents
 - Burndown meetings happen at 10AM Pacific Time, and you invite the community calendar (`cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com`) and the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`) to them.
 - Burndown communications happen on the [kubernetes-sig-release] mailing list.
@@ -202,6 +203,11 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
   [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows)
   Google Group.
 - Ensure top-level OWNERS_ALIASES only includes Release Team personnel from four (4) releases, including the current one.
+  - Update `release-team-lead-role`, `ci-signal-role`, `enhancements-role`, `bug-triage-role`, `docs-role`,
+    `release-notes-role`, and `communications` role. These should include the relevant leads from all support releases
+    (as of the time of writing this is the last three) and the current in-development release.
+  - Update `release-team` to include the release leads for the all supporrted releases, the lead for the current
+    in-development release, and all SIG Release chairs and technical leads.
 - Create and finalize the release schedule, blocking test gates, and role assignments as a pull request in: 
   kubernetes/sig-release/releases/release-x.y/README.md
   **Note: Do not schedule any deadlines or milestones on a Monday or Friday, aim for Tuesday, Wednesday, or Thursday**
