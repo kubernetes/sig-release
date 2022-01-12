@@ -59,7 +59,7 @@ The 1.24 release cycle is as follows:
 | Start Release Notes Draft | Release Notes Lead | Tuesday 25th January 2022 | week 3 | |
 | Production Readiness Soft Freeze | Enhancements Lead | Thursday 27th January 2022 | week 3 | |
 | 1.24.0-alpha.2 released | Branch Manager | Tuesday 1st February 2022 | Week 4 | |
-| **Begin [Enhancements Freeze]** | Enhancements Lead | 02:00 UTC Friday 4th February 2020 / 18:00 PST Thursday 3rd February 2022 | week 4 | [master-blocking], [master-informing] |
+| **Begin [Enhancements Freeze]** | Enhancements Lead | 02:00 UTC Friday 4th February 2022 / 18:00 PST Thursday 3rd February 2022 | week 4 | [master-blocking], [master-informing] |
 | 1.24.0-alpha.3 released | Branch Manager | Tuesday 15th February 2022 | Week 6 | |
 | (most of) North America enters Daylight Savings Time | | Sunday 13th March 2022 | | |
 | **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead | Monday 21st March 2022 | week 11 | [1.24-blocking], [master-blocking], [master-informing] |
@@ -88,8 +88,8 @@ The 1.24 release cycle is as follows:
 | **v1.24.0 released** | Branch Manager | Tuesday 19th April 2022 | week 15 | |
 | Release blog published | Comms | Tuesday 19th April 2022 | week 15 | |
 | **[Thaw]** | Branch Manager | Tuesday 19th April 2022 | week 15 | |
-| Release retrospective part 2 (**Time TBC**) | Community | Wednesday 27th April 2020 | week 16 | |
-| Release retrospective part 3 (**Time TBC**) | Community | Thursday 28th April 2020 | week 16 | |
+| Release retrospective part 2 (**Time TBC**) | Community | Wednesday 27th April 2022 | week 16 | |
+| Release retrospective part 3 (**Time TBC**) | Community | Thursday 28th April 2022 | week 16 | |
 
 ## Phases
 
