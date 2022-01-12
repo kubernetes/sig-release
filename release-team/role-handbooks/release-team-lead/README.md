@@ -224,7 +224,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
   - Add EA, Lead and Lead shadows to members of `release-managers`
   - Add EA, Lead and Lead shadows to managers of `release-team`
   - Add Role Leads and Role shadows to members of `release-team`
-  - Add Role shadows and Lead shadows to members of `release-team-shadows`
+  - Add Role shadows, Lead, and Lead shadows to members of `release-team-shadows`
   - Add EA to manager of `release-team-shadows`, if EA is owner of `release-team-shadows` already then add Lead to manager of `release-team-shadows`
   - Add Bug Triage Lead and shadows to `k8s-infra-rbac-triageparty-release`
 - Request access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from a 
