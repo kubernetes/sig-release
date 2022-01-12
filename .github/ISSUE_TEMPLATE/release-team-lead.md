@@ -62,7 +62,7 @@ As you work through the checklist, use the following PRs as guides:
   - `release-managers@`
   - `release-team@`
 - [ ] Grant calendar access
-- [ ] Grant Zoom credentials (host key)
+- [ ] Regenerate and re-issue Zoom host key to the Release Lead and Lead Shadows.
 - [ ] Add incoming leads to `release-team-leads` Slack Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
   - Add slack ID(s) to [`users.yaml`](https://git.k8s.io/community/communication/slack-config/users.yaml), if they are not yet in the file
   - Add username(s) to [`usergroups.yaml`](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)

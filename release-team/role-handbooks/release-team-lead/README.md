@@ -174,6 +174,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Make sure everyone joining the team reads the [release team onboarding document][release-team-onboarding].
 - Complete the [CNCF Inclusive Speaker Orientation](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/).
 - Complete a [Release Team Lead onboarding issue][rtl-onboarding] for the Lead and RT Lead Shadows
+- Have the SIG Release leads regenerate the Zoom host key and distribute it to the Release Lead and Release Lead Shadows
 
 ### Week 0
 
