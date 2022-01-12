@@ -94,13 +94,13 @@ Release Team selection should happen in accordance with the [Release Team select
       - README.md (release schedule)
       - release-notes-draft.md (consumed by the automated release process)
       - release_team.md
-- Short links are handled with [http://bit.ly](http://bit.ly). Each release should have the following documents (replacing XYY with the release version number minus dots):
-  - Retro doc: `http://bit.ly/k8sXYYretro`
-  - Release Schedule overview: `http://bit.ly/k8sXYY-release-info`
-  - Zoom link: `http://bit.ly/k8sXYY-zoom`
-  - Burndown/Meeting Minutes: `http://bit.ly/k8sXYY-burndown`
-  - Enhancements tracking spreadsheet: `http://bit.ly/k8sXYY-enhancement-tracking`
-  - Merged PRs with release notes: `http://bit.ly/k8sXYY-relnotes`
+- Short links are handled with [https://bit.ly](https://bit.ly). Each release should have the following documents (replacing XYY with the release version number minus dots):
+  - Retro doc: `https://bit.ly/k8sXYYretro`
+  - Release Schedule overview: `https://bit.ly/k8sXYY-release-info`
+  - Zoom link: `https://bit.ly/k8sXYY-zoom`
+  - Burndown/Meeting Minutes: `https://bit.ly/k8sXYY-burndown`
+  - Enhancements tracking spreadsheet: `https://bit.ly/k8sXYY-enhancement-tracking`
+  - Merged PRs with release notes: `https://bit.ly/k8sXYY-relnotes`
   - Use the same conventions for additional documents
 - Burndown meetings happen at 10AM Pacific Time, and you invite the community calendar (`cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com`) and the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`) to them.
 - Burndown communications happen on the [kubernetes-sig-release] mailing list.
