@@ -24,52 +24,52 @@ aliases:
     - thejoycekung # Release Manager Associate
     - wilsonehusin # Release Manager Associate
   release-team:
-    - justaugustus # SIG Release Chair
-    - saschagrunert # SIG Release Chair
-    - cpanato # SIG Release Technical Lead
-    - jeremyrickard # SIG Release Technical Lead
-    - puerco # SIG Release Technical Lead
-    - palnabarun # Kubernetes 1.21 Release Lead
-    - savitharaghunathan # Kubernetes 1.22 Release Lead
-    - reylejano # Kubernetes 1.23 Release Lead
-    - jameslaverack # Kubernetes 1.24 Release Lead
+    - cpanato # subproject owner
+    - jameslaverack # subproject owner / 1.24 Release Team Lead
+    - jeremyrickard # subproject owner / 1.20 Release Team Lead
+    - justaugustus # subproject owner
+    - palnabarun # subproject owner / 1.21 Release Team Lead
+    - puerco # subproject owner
+    - reylejano # subproject owner / 1.23 Release Team Lead
+    - saschagrunert # subproject owner
+    - savitharaghunathan # subproject owner / 1.22 Release Team Lead
   build-admins:
     - amwat
     - BenTheElder
     - MushuEE
     - spiffxp
   release-team-lead-role:
-    - palnabarun # Kubernetes 1.21 Release Lead
-    - savitharaghunathan # Kubernetes 1.22 Release Lead
-    - reylejano # Kubernetes 1.23 Release Lead
     - jameslaverack # Kubernetes 1.24 Release Lead
+    - palnabarun # Kubernetes 1.21 Release Lead
+    - reylejano # Kubernetes 1.23 Release Lead
+    - savitharaghunathan # Kubernetes 1.22 Release Lead
   ci-signal-role:
-    - thejoycekung # 1.21
-    - mkorbi # 1.22
     - encodeflush # 1.23
     - leonardpahlke # 1.24
+    - mkorbi # 1.22
+    - thejoycekung # 1.21
   enhancements-role:
     - annajung # 1.21
+    - gracenng # 1.24
     - jameslaverack # 1.22
     - salaxander # 1.23
-    - gracenng # 1.24
   bug-triage-role:
     - erismaster # 1.21
+    - jyotimahapatra # 1.24
     - monzelmasry # 1.22
     - voigt # 1.23
-    - jyotimahapatra # 1.24
   docs-role:
-    - reylejano # 1.21
-    - pi-victor # 1.22
     - jlbutler # 1.23
     - nate-double-u # 1.24
+    - pi-victor # 1.22
+    - reylejano # 1.21
   release-notes-role:
-    - wilsonehusin # 1.21
-    - pmmalinov01 # 1.22
-    - cici37 # 1.23
     - AuraSinis # 1.24
+    - cici37 # 1.23
+    - pmmalinov01 # 1.22
+    - wilsonehusin # 1.21
   communications-role:
     - divya-mohan0209 # 1.21
-    - pensu # 1.22
     - karenhchu # 1.23
     - mickeyboxell # 1.24
+    - pensu # 1.22
