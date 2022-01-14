@@ -233,6 +233,16 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
   - Add Role shadows, Lead, and Lead shadows to members of `release-team-shadows`
   - Add EA to manager of `release-team-shadows`, if EA is owner of `release-team-shadows` already then add Lead to manager of `release-team-shadows`
   - Add Bug Triage Lead and shadows to `k8s-infra-rbac-triageparty-release`
+- Update GitHub team membership (`config/kubernetes/sig-release/teams.yaml` in
+  [k/org](https://github.com/kubernetes/org)) for the release team. This may need to be done in multiple phases as new
+  shadows are added to the organisation.
+  - Add RT Lead to sig-release, don't remove the previous release lead.
+  - Update sig-release/release-team to: RT Lead, EA, RT Lead shadows, Role Leads, Role Shadows, and existing members
+    marked as "subproject owner". The incoming RT lead should be marked as a "subproject owner".
+  - Add RT Lead, EA, RT Lead shadows, Role Leads, Enhancements shadows, and Bug Triage shadows to milestone-mantainers.
+    Remove any previous release staff who are not otherwise eligable to be on that list.
+  - Replace current sig-release/release-team/release-team-leads members with RT Lead, EA, RT Lead Shadows.
+  - Replace sig-release/release-team/ci-signal with CI Signal Lead and CI Signal Shadows.
 - Request access to the [Kubernetes Release Calendar][kubernetes-release-calendar] from a 
   [SIG Release Tech Lead](https://github.com/kubernetes/community/blob/master/sig-release/README.md#technical-leads) or 
   the EA
