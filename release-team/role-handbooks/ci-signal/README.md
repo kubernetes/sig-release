@@ -2,35 +2,40 @@
 
 ## Content
 
--   [Overview of CI Signal responsibilities](#overview-of-ci-signal-responsibilities)
--   [Requirements](#requirements)
-    -   [Additional Requirements for Shadows](#additional-requirements-for-shadows)
-    -   [Additional Requirements for Leads](#additional-requirements-for-shadows)
--   [Overview of tasks across release timeline](#overview-of-tasks-across-release-timeline)
-    -   [Onboarding](#onboarding)
-    -   [Pre Enhancement Freeze](#pre-enhancement-freeze)
-    -   [Enhancement Freeze to Burndown](#enhancement-freeze-to-burndown)
-    -   [Burndown to Code Freeze](#burndown-to-code-freeze)
-    -   [During Code Freeze](#during-code-freeze)
-    -   [Exit Code Freeze](#exit-code-freeze)
-    -   [Release Cutting - Go or No-Go](#release-cutting---go-or-no-go)
--   [Blocking vs. Informing Dashboards](#blocking-vs-informing-dashboards)
--   [Opening Issues](#opening-issues)
-    -   [Decision Tree](#decision-tree)
-    -   [Closing Issues](#closing-issues)
--   [Detect flakiness on presubmit jobs](#detect-flakiness-on-presubmit-jobs)
--   [Special high risk test categories to monitor](#special-high-risk-test-categories-to-monitor)
-    -   [Scalability tests](#scalability-tests)
--   [Working with SIGs outside sig-release](#working-with-sigs-outside-sig-release)
-    -   [SIG-scalability report](#sig-scalability-report)
--   [Tips and Tricks of the game](#tips-and-tricks-of-the-game)
-    -   [A Tour of CI on the Kubernetes Project](#a-tour-of-ci-on-the-kubernetes-project)
-    -   [Checking test dashboards](#checking-test-dashboards)
-    -   [Priority Labels](#priority-labels)
-    -   [Milestones](#milestones)
-    -   [Monitoring Commits for test failure triangulation](#monitoring-commits-for-test-failure-triangulation)
--   [Reporting Status](#reporting-status)
-    -   [CI signal reporting tool](#ci-signal-reporting-tool)
+- [CI Signal Lead Playbook](#ci-signal-lead-playbook)
+  - [Content](#content)
+  - [Overview of CI Signal responsibilities](#overview-of-ci-signal-responsibilities)
+    - [Explicit detail is important:](#explicit-detail-is-important)
+  - [Requirements](#requirements)
+    - [Time Requirements](#time-requirements)
+    - [Additional Requirements for Shadows](#additional-requirements-for-shadows)
+    - [Additional Requirements for Leads](#additional-requirements-for-leads)
+  - [Overview of tasks across release timeline](#overview-of-tasks-across-release-timeline)
+    - [Onboarding](#onboarding)
+    - [Pre Enhancement Freeze](#pre-enhancement-freeze)
+      - [**_Best Practice:_**](#best-practice)
+    - [Enhancement Freeze to Burndown](#enhancement-freeze-to-burndown)
+    - [Burndown to Code Freeze](#burndown-to-code-freeze)
+    - [During Code Freeze](#during-code-freeze)
+    - [Exit Code Freeze](#exit-code-freeze)
+    - [Release Cutting - Go or No-Go](#release-cutting---go-or-no-go)
+  - [Blocking vs. Informing Dashboards](#blocking-vs-informing-dashboards)
+  - [Opening Issues](#opening-issues)
+    - [Decision Tree](#decision-tree)
+    - [Closing Issues](#closing-issues)
+  - [Detect flakiness on presubmit jobs](#detect-flakiness-on-presubmit-jobs)
+  - [Special high risk test categories to monitor](#special-high-risk-test-categories-to-monitor)
+    - [Scalability tests](#scalability-tests)
+  - [Working with SIGs outside sig-release](#working-with-sigs-outside-sig-release)
+    - [SIG-scalability report](#sig-scalability-report)
+  - [Tips and Tricks of the game](#tips-and-tricks-of-the-game)
+    - [A Tour of CI on the Kubernetes Project](#a-tour-of-ci-on-the-kubernetes-project)
+    - [Checking test dashboards](#checking-test-dashboards)
+    - [Priority Labels](#priority-labels)
+    - [Milestones](#milestones)
+    - [Monitoring Commits for test failure triangulation](#monitoring-commits-for-test-failure-triangulation)
+  - [Reporting Status](#reporting-status)
+    - [CI signal reporting tool](#ci-signal-reporting-tool)
 
 ## Overview of CI Signal responsibilities
 
@@ -107,10 +112,12 @@ For any release, its schedule and activities/deliverable for each week will be p
 
 Right after the CI signal release team is formed, CI signal lead is responsible for following onboarding actions:
 
--   update the [ci signal team in the teams.yaml](https://github.com/kubernetes/org/blob/main/config/kubernetes/sig-release/teams.yaml) which grants access to the [ci signal project board](https://github.com/orgs/kubernetes/projects/68/). _Coordinate with the release lead to make multiple changes to this file in one PR._
--   adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml). _Coordinate with the release lead to make multiple changes to this file in one PR._
--   organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage
+-   Update the [ci signal team in the teams.yaml](https://github.com/kubernetes/org/blob/main/config/kubernetes/sig-release/teams.yaml) which grants access to the [ci signal project board](https://github.com/orgs/kubernetes/projects/68/). _Coordinate with the release lead to make multiple changes to this file in one PR._
+-   Adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml). _Coordinate with the release lead to make multiple changes to this file in one PR._
 -   Add the CI Signal team as reviewer for the ci signal report tool. Replace the previous CI Signal team members from `ci-signal-reporter-reviewers` with the new CI Signal team in the file [OWNERS_ALIASES](https://github.com/kubernetes/release/blob/master/OWNERS_ALIASES) of the [k/release](https://github.com/kubernetes/release) repository.
+-   Plan release support and status reporting. In the past this has been done by sharing a excel sheet with the shadows and give the community read writes. The [template excel](./template-ci-signal-X.XX-release-support-and-status-reporting.xlsx) file can be found here. 
+-   CI Signal Shadows must be a member of the Kubernetes organization and therefore apply for membership by opening an issue on [kubernets/org](https://github.com/kubernetes/org) (see [Issue template](https://github.com/kubernetes/org/issues/new?assignees=&labels=area%2Fgithub-membership&template=membership.yml&title=REQUEST%3A+New+membership+for+%3Cyour-GH-handle%3E)).  
+-   Organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage. See [ci signal shadow onboarding agenda template](./template-ci-signal-shadow-onboarding-agenda.md).
 
 ### Pre Enhancement Freeze
 
@@ -371,9 +378,8 @@ Since 1.11 we started curating and broadcasting a weekly CI Signal report to the
 
 Every week, the CI Signal Lead should publish the [CI Signal Report](#ci-signal-reporting-tool) to the google group [kubernetes-dev](https://groups.google.com/g/kubernetes-dev) and in the CI Signal Slack Channel to inform the community about the current status. Usually, the report is published on Wednesdays.
 
--   [Link to the previous reports (old report tool in use)](https://docs.google.com/document/d/1Xesru5QkBxxl8WOirNcWI4ho3exqfQBGz6mYJeXOi3U/edit#heading=h.qs3772g2kexl)
+-   [Weekly ci signal report template](./template-weekly-ci-signal-report.md)
 -   CCing individual SIGs (kubernetes-sig-foo@googlegroups.com) that own failing tests help in getting their attention
--   [Sample Weekly CI Signal Report (old report tool in use)](https://groups.google.com/d/msg/kubernetes-dev/nO8aKz3tavE/-aBpStu4CQAJ)
 
 Early and continuous reporting of test health proved greatly effective in rallying SIG attention to test failures and stabilizing the release much early in the release cycle.
 
