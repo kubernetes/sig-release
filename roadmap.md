@@ -58,6 +58,13 @@ the following listing, all deliverables are sorted by their priority.
    Outcome: Being able to promote files as artifacts and using this mechanism
    for Kubernetes releases.
 
+1. **Distribute the load of Kubernetes artifacts between vendors (Consumable)**
+
+   Outcome: A policy and procedure for use by SIG Release to promote container
+   images and release binaries to multiple registries and mirrors.
+
+   Enhancements: https://github.com/kubernetes/enhancements/issues/3055
+
 1. **Define and collect metrics about Kubernetes releases (Introspectable)**
 
    https://github.com/kubernetes/sig-release/issues/1527
@@ -125,6 +132,10 @@ the following listing, all deliverables are sorted by their priority.
 1. **SIG Cluster Lifecycle**
 
    To get input for making Cluster API a first-class signal for upstream releases.
+
+1. **SIG K8s Infra**
+
+   For general infrastructure support we rely on.
 
 ### Done Deliverables
 
