@@ -132,6 +132,7 @@ It is important that this process be followed and documentation remain up-to-dat
   - Fill out rest of the column manually based on current status of the KEP.
 - For the opted in issues, apply the correct milestone, `tracked/yes` label, and `stage/xxx` label.
 - Start reminding opted in Issue owners that KEPs are required for each enhancement and that KEPs must meet the acceptance criteria (implementable state, graduation criteria, test plan, and production readiness review) by Enhancement Freeze.
+**Note:** KEPs for kubeadm do not require a production readiness review because the tool is considered out-of-tree.
 - Stay on top of comments in issues when owners respond and update their status in the sheet if necessary.
 - Mark features as `At Risk` if there is no communication, active PRs on the issues, or it is missing other requirements coming into Enhancement Freeze.
 - Start syncing with Communications Team on giving an induction what's coming up for the release.
@@ -141,7 +142,7 @@ It is important that this process be followed and documentation remain up-to-dat
 
 - On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that freeze has happened and upcoming key dates. Examples [1](https://groups.google.com/g/kubernetes-dev/c/JDM7bNKvhqQ/m/8S7BXtXPBQAJ).
 - Remove [SIG Leads Google Group][sig-leads-group]'s access to the `KEP Collection` sheets on the enhancement collection sheet.
-- Remove any enhancements that failed to meet the criteria by the Enhancement freeze deadline. 
+- Remove any enhancements that failed to meet the criteria by the Enhancement freeze deadline.
     - Set their status in the sheet to `Removed from Milestone` and use the `Enhancements` -> `Remove Enhancements from Milestone` menu option to move them over to the `Removed from milestone` tab.
     - Remove the milestone and change `tracked/yes` label to `tracked/no` on the enhancement issue.
 - Clean up Enhancements issues by removing milestone from the enhancements that have not opted-in and make sure that number of in-tree open issues with current milestone matches number of opted-in enhancements.
