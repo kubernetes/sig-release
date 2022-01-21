@@ -34,8 +34,8 @@ aliases:
     - saschagrunert # subproject owner
     - savitharaghunathan # subproject owner / 1.22 Release Team Lead
   build-admins:
-    - amwat
     - BenTheElder
+    - juanfescobar
     - MushuEE
     - spiffxp
   release-team-lead-role:
