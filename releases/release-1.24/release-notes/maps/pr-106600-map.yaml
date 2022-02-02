@@ -1,0 +1,3 @@
+pr: 106600
+releasenote:
+  text: Added an example for the `kubectl plugin list` command.

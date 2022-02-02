@@ -1,0 +1,3 @@
+pr: 106803
+releasenote:
+  text: Reverts the CRI API version surfaced by dockershim to v1alpha2
