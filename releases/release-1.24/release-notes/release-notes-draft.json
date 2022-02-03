@@ -1,0 +1,389 @@
+{
+  "101719": {
+    "commit": "f356ae4ad977bc9bf2baf3e90451f9b74a9dbba9",
+    "text": "The deprecated flag `--really-crash-for-testing` is removed.",
+    "markdown": "The deprecated flag `--really-crash-for-testing` is removed. ([#101719](https://github.com/kubernetes/kubernetes/pull/101719), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev))",
+    "author": "SergeyKanzhelev",
+    "author_url": "https://github.com/SergeyKanzhelev",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101719",
+    "pr_number": 101719,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver"
+    ],
+    "kinds": [
+      "bug",
+      "cleanup"
+    ],
+    "sigs": [
+      "network",
+      "node",
+      "api-machinery",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "105360": {
+    "commit": "b685b3982d729ad8695f7ec0ad9286dd6e4fbdd1",
+    "text": "Kubelet config validation error messages are updated",
+    "markdown": "Kubelet config validation error messages are updated ([#105360](https://github.com/kubernetes/kubernetes/pull/105360), [@shuheiktgw](https://github.com/shuheiktgw))",
+    "author": "shuheiktgw",
+    "author_url": "https://github.com/shuheiktgw",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105360",
+    "pr_number": 105360,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "106153": {
+    "commit": "e9fc46750f6da84d9434a8066d7d2ba1531c5d67",
+    "text": "NONE",
+    "markdown": "NONE ([#106153](https://github.com/kubernetes/kubernetes/pull/106153), [@hyschumi](https://github.com/hyschumi)) [SIG API Machinery]",
+    "author": "hyschumi",
+    "author_url": "https://github.com/hyschumi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106153",
+    "pr_number": 106153,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "do_not_publish": true
+  },
+  "106179": {
+    "commit": "a90f31f85ad0e0fa927f852ec0dee77a670d1586",
+    "text": "Fix bug in error messaging for basic-auth and ssh secret validations.",
+    "markdown": "Fix bug in error messaging for basic-auth and ssh secret validations. ([#106179](https://github.com/kubernetes/kubernetes/pull/106179), [@vivek-koppuru](https://github.com/vivek-koppuru))",
+    "author": "vivek-koppuru",
+    "author_url": "https://github.com/vivek-koppuru",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106179",
+    "pr_number": 106179,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth",
+      "apps"
+    ],
+    "duplicate": true
+  },
+  "106322": {
+    "commit": "19fe56cb393f41720cab92fbaa4c438ac83ee481",
+    "text": "NONE",
+    "markdown": "NONE ([#106322](https://github.com/kubernetes/kubernetes/pull/106322), [@amacaskill](https://github.com/amacaskill)) [SIG Storage and Testing]",
+    "author": "amacaskill",
+    "author_url": "https://github.com/amacaskill",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106322",
+    "pr_number": 106322,
+    "areas": [
+      "test",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "failing-test"
+    ],
+    "sigs": [
+      "storage",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "106447": {
+    "commit": "75109026d0aa24dd600e71da67a16db8a5320886",
+    "text": "#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:",
+    "markdown": "#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.: ([#106447](https://github.com/kubernetes/kubernetes/pull/106447), [@hyschumi](https://github.com/hyschumi)) [SIG Scheduling]",
+    "author": "hyschumi",
+    "author_url": "https://github.com/hyschumi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106447",
+    "pr_number": 106447,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "do_not_publish": true
+  },
+  "106492": {
+    "commit": "2bfd0ef278b4f30e9b102539d7326dc712c7263a",
+    "text": "Metrics Server image bumped to v0.5.2",
+    "markdown": "Metrics Server image bumped to v0.5.2 ([#106492](https://github.com/kubernetes/kubernetes/pull/106492), [@serathius](https://github.com/serathius))",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106492",
+    "pr_number": 106492,
+    "areas": [
+      "provider/gcp"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "instrumentation",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "106581": {
+    "commit": "68b53cf9401a3a08ffcfd1cf4a6eb43b78db2e32",
+    "text": "Publishing kube-proxy metrics for Windows kernel-mode",
+    "markdown": "Publishing kube-proxy metrics for Windows kernel-mode ([#106581](https://github.com/kubernetes/kubernetes/pull/106581), [@knabben](https://github.com/knabben))",
+    "author": "knabben",
+    "author_url": "https://github.com/knabben",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106581",
+    "pr_number": 106581,
+    "areas": [
+      "ipvs"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "windows",
+      "instrumentation"
+    ],
+    "duplicate": true
+  },
+  "106584": {
+    "commit": "32a244552e4caa0922d481d3ed8988b99ab142e1",
+    "text": "after",
+    "markdown": "After ([#106584](https://github.com/kubernetes/kubernetes/pull/106584), [@jonyhy96](https://github.com/jonyhy96)) [SIG Cloud Provider]",
+    "author": "jonyhy96",
+    "author_url": "https://github.com/jonyhy96",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106584",
+    "pr_number": 106584,
+    "areas": [
+      "cloudprovider"
+    ],
+    "kinds": [
+      "cleanup",
+      "flake",
+      "failing-test"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "duplicate_kind": true,
+    "do_not_publish": true
+  },
+  "106588": {
+    "commit": "9cbe01e5a1cecd8aab4498c6989831f44bc85057",
+    "text": "NONE",
+    "markdown": "NONE ([#106588](https://github.com/kubernetes/kubernetes/pull/106588), [@victory460](https://github.com/victory460)) [SIG API Machinery, Cloud Provider and Instrumentation]",
+    "author": "victory460",
+    "author_url": "https://github.com/victory460",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106588",
+    "pr_number": 106588,
+    "areas": [
+      "provider/gcp",
+      "release-eng"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation",
+      "cloud-provider"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "106600": {
+    "commit": "d22c82413a1774342f473d003e3ce65b4e4700db",
+    "text": "Added an example for the `kubectl plugin list` command.",
+    "markdown": "Added an example for the `kubectl plugin list` command. ([#106600](https://github.com/kubernetes/kubernetes/pull/106600), [@bergerhoffer](https://github.com/bergerhoffer))",
+    "author": "bergerhoffer",
+    "author_url": "https://github.com/bergerhoffer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106600",
+    "pr_number": 106600,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cli"
+    ]
+  },
+  "106660": {
+    "commit": "aff056d8a197f6a404ad5e02210ca662d16c3dbe",
+    "text": "kube-apiserver: Server Side Apply merge order is reverted to match v1.22 behavior until http://issue.k8s.io/104641 is resolved.",
+    "markdown": "Kube-apiserver: Server Side Apply merge order is reverted to match v1.22 behavior until http://issue.k8s.io/104641 is resolved. ([#106660](https://github.com/kubernetes/kubernetes/pull/106660), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106660",
+    "pr_number": 106660,
+    "areas": [
+      "test",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "106803": {
+    "commit": "ea644ad9be9f8d6f9405191ea2ead84731b3dbf7",
+    "text": "Reverts the CRI API version surfaced by dockershim to v1alpha2",
+    "markdown": "Reverts the CRI API version surfaced by dockershim to v1alpha2 ([#106803](https://github.com/kubernetes/kubernetes/pull/106803), [@saschagrunert](https://github.com/saschagrunert))",
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106803",
+    "pr_number": 106803,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "network",
+      "node"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "106833": {
+    "commit": "68bd9994aea41012cd1dc93f6f7856a18cf3942d",
+    "text": "Kubernetes is now built with Golang 1.17.4",
+    "markdown": "Kubernetes is now built with Golang 1.17.4 ([#106833](https://github.com/kubernetes/kubernetes/pull/106833), [@cpanato](https://github.com/cpanato))",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106833",
+    "pr_number": 106833,
+    "areas": [
+      "test",
+      "security",
+      "provider/gcp",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "106838": {
+    "commit": "2daa3415eca55d0ce0e6f81fc33737b3336ddd1e",
+    "text": "The `NamespaceDefaultLabelName` feature gate, GA since v1.22, is now removed.",
+    "markdown": "The `NamespaceDefaultLabelName` feature gate, GA since v1.22, is now removed. ([#106838](https://github.com/kubernetes/kubernetes/pull/106838), [@mengjiao-liu](https://github.com/mengjiao-liu))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/2161-apiserver-default-labels",
+        "type": "KEP"
+      }
+    ],
+    "author": "mengjiao-liu",
+    "author_url": "https://github.com/mengjiao-liu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106838",
+    "pr_number": 106838,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "apps"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "106854": {
+    "commit": "89f53538ffb5d45599c73a3f245a747ccdabdf3b",
+    "text": "kubeadm: allow the `certs check-expiration` command to not require the existence of the cluster CA key (ca.key file) when checking the expiration of managed certificates in kubeconfig files.",
+    "markdown": "Kubeadm: allow the `certs check-expiration` command to not require the existence of the cluster CA key (ca.key file) when checking the expiration of managed certificates in kubeconfig files. ([#106854](https://github.com/kubernetes/kubernetes/pull/106854), [@neolit123](https://github.com/neolit123))",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106854",
+    "pr_number": 106854,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "106878": {
+    "commit": "8f91d09865b7adb641a5e890d8b9b6053078b81a",
+    "text": "#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#106878](https://github.com/kubernetes/kubernetes/pull/106878), [@humblec](https://github.com/humblec)) [SIG Storage]",
+    "author": "humblec",
+    "author_url": "https://github.com/humblec",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106878",
+    "pr_number": 106878,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage"
+    ],
+    "do_not_publish": true
+  },
+  "97252": {
+    "commit": "cdf3ad823a33733dbbfcec45b368be8ed9690c5b",
+    "text": "Docker runtime support using dockershim in the kubelet is now completely removed in 1.24. The kubelet used to have a module called dockershim which implements CRI support for Docker and it has seen maintenance issues in the Kubernetes community. From 1.24 onwards, please move to a container runtime that is a full-fledged implementation of CRI (v1alpha1 or v1 compliant) as they become available.",
+    "markdown": "Docker runtime support using dockershim in the kubelet is now completely removed in 1.24. The kubelet used to have a module called dockershim which implements CRI support for Docker and it has seen maintenance issues in the Kubernetes community. From 1.24 onwards, please move to a container runtime that is a full-fledged implementation of CRI (v1alpha1 or v1 compliant) as they become available. ([#97252](https://github.com/kubernetes/kubernetes/pull/97252), [@dims](https://github.com/dims))",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97252",
+    "pr_number": 97252,
+    "areas": [
+      "test",
+      "kubelet",
+      "cloudprovider",
+      "e2e-test-framework",
+      "dependency"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network",
+      "node",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
+    ],
+    "duplicate": true,
+    "action_required": true
+  }
+}
