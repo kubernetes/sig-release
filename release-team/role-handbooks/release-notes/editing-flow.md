@@ -17,6 +17,10 @@ Ensuring the production of a document comprised of well written and
 informative release notes is one of the responsibilities of the 
 Release Team each cycle. 
 
+A good introduction talk is the "[Lightning Talk: Kubernetes Release Notes Tips & Tricks](https://www.youtube.com/watch?v=n62oPohOyYs)" 
+where you can find some general guidelines about the release notes 
+(wording, grammar, labels, etc).
+
 Release Engineering has developed various tools to help the Team 
 complete its duties. One of them is `krel` — the [Kubernetes Release
 Toolbox](https://github.com/kubernetes/release/tree/master/docs/krel).
