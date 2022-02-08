@@ -14,9 +14,9 @@ description: |
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.24/README.md)
 * [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.24/release-team.md)
-* [Meeting Minutes](http://bit.ly/k8s124-releasemtg) (join [release-team@] to receive meeting invites)
+* [Meeting Minutes](http://bit.ly/k8s124-releasemtg) (members of [release-team@] receive meeting invites)
 * [v1.24 Release Calendar][k8s124-calendar]
-* Contact: [#sig-release] on slack, [release-team@] on e-mail
+* Contact: [#sig-release] on slack, [release-team](mailto://release-team@kubernetes.io) on e-mail
 * [Internal Contact Info] (accessible only to members of [release-team@])
 
 #### Tracking docs
