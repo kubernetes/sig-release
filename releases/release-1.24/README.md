@@ -23,7 +23,7 @@ description: |
 
 * [Enhancements Tracking Sheet](https://bit.ly/k8s124-enhancements)
 * [Feature blog Tracking Sheet](http://bit.ly/k8s124-feature-blog)
-* [Bug Triage Tracking Sheet](https://bit.ly/124-bug-triage-tracking)
+* [Bug Triage Tracking Sheet](https://bit.ly/k8s124-bug-triage-tracking)
 * [CI Signal Project Board & Issue Tracking](https://github.com/orgs/kubernetes/projects/68)
 * [Retrospective Document][Retrospective Document]
 * [kubernetes/sig-release v1.24 milestone](https://github.com/kubernetes/kubernetes/milestone/56)
