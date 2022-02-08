@@ -1,0 +1,5 @@
+pr: 106882
+releasenote:
+  text: Refactor kubelet command line for enabling features and "drop `RuntimeClass` feature gate"
+    if present. Note that this feature has been on by default since 1.14 and was GA'ed
+    in 1.20.

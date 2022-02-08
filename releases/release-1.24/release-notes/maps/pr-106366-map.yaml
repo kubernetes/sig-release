@@ -1,0 +1,5 @@
+pr: 106366
+releasenote:
+  text: Renamed metrics `evictions_number` to `evictions_total` and mark it as stable.
+    The original `evictions_number` metrics name is marked as "Deprecated" and has
+    been removed in kubernetes 1.23 .

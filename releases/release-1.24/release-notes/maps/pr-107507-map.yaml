@@ -1,0 +1,4 @@
+pr: 107507
+releasenote:
+  text: Added `SetTransform` to `SharedInformer` to allow users to transform objects
+    before they are stored.

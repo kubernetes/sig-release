@@ -1,0 +1,3 @@
+pr: 107467
+releasenote:
+  text: 'kubeadm: all warning messages are printed to stderr instead of stdout.'

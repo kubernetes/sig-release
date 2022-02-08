@@ -1,0 +1,5 @@
+pr: 107327
+releasenote:
+  text: 'kubeadm: removed the restriction that the `ca.crt` can only contain one certificate.
+    If there is more than one certificate in the `ca.crt` file, kubeadm will pick the
+    first one by default.'

@@ -1,0 +1,4 @@
+pr: 107311
+releasenote:
+  text: 'client-go: fixed the paged list calls with `ResourceVersionMatch` set would
+    fail once paging is kicked in.'

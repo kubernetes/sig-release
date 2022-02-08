@@ -1,0 +1,5 @@
+pr: 107847
+releasenote:
+  text: 'Fixed a regression in 1.23 where update requests to previously persisted
+    `Service` objects that have not been modified since 1.19 can be rejected with
+    an incorrect `spec.clusterIPs: Required value` error.'

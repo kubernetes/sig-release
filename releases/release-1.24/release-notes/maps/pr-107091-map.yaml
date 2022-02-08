@@ -1,0 +1,5 @@
+pr: 107091
+releasenote:
+  text: An inefficient lock in EndpointSlice controller metrics cache has been reworked.
+    Network programming latency may be significantly reduced in certain scenarios,
+    especially in clusters with a large number of Services.

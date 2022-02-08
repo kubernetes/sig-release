@@ -1,0 +1,4 @@
+pr: 106313
+releasenote:
+  text: Added a test to guarantee that conformance clusters require at least 2 untainted
+    nodes.

@@ -1,0 +1,5 @@
+pr: 107103
+releasenote:
+  text: In text format, log messages that previously used quoting to prevent multi-line
+    output (for example, text="some \"quotation\", a\nline break") will now be printed
+    with more readable multi-line output without the escape sequences.

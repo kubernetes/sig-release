@@ -1,0 +1,4 @@
+pr: 105632
+releasenote:
+  text: Added support for kubectl commands (`kubectl exec` and `kubectl port-forward`)
+    via a SOCKS5 proxy.

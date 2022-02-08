@@ -1,0 +1,4 @@
+pr: 106875
+releasenote:
+  text: Updated the error message to not use the `--max-resource-write-bytes` & `--json-patch-max-copy-bytes`
+    string.

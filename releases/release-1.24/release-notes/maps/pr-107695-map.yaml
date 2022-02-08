@@ -1,0 +1,3 @@
+pr: 107695
+releasenote:
+  text: Fixed static pod add and removes restarts in certain cases.

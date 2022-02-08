@@ -1,0 +1,4 @@
+pr: 104837
+releasenote:
+  text: Fixed regression in CPUManager that it will release exclusive CPUs in app
+    containers inherited from init containers when the init containers were removed.

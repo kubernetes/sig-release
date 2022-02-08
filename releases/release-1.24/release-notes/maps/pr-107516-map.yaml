@@ -1,0 +1,4 @@
+pr: 107516
+releasenote:
+  text: Alowed useful inclusion of `-args $prog_args` in KUBE_TEST_ARGS, when doing
+    `make test-integration`.

@@ -1,0 +1,4 @@
+pr: 107027
+releasenote:
+  text: The `ServiceLBNodePortControl` feature has graduated to GA. The feature gate will
+    be removed in 1.26.

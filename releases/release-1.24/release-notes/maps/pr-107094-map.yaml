@@ -1,0 +1,4 @@
+pr: 107094
+releasenote:
+  text: The `--container-runtime` kubelet flag is deprecated and will be removed in
+    future releases.

@@ -1,0 +1,5 @@
+pr: 105517
+releasenote:
+  text: 'Added a new label `type` to `apiserver_flowcontrol_request_execution_seconds`
+    metric - it has the following values: - ''regular'': indicates that it is a non
+    long running request - ''watch'': indicates that it is a watch request.'

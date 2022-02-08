@@ -1,0 +1,3 @@
+pr: 99758
+releasenote:
+  text: Added label selector flag to all `kubectl rollout` commands.

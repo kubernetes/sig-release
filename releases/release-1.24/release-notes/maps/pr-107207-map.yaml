@@ -1,0 +1,4 @@
+pr: 107207
+releasenote:
+  text: The experimental dynamic log sanitization feature has been deprecated and
+    removed in the 1.24 release. The feature is no longer available for use.

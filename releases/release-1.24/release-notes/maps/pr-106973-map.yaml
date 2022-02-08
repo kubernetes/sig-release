@@ -1,0 +1,10 @@
+pr: 106973
+releasenote:
+  text: 'kubeadm: handled the removal of dockershim related flags for new kubeadm
+    clusters. If kubelet <1.24 is on the host, kubeadm >=1.24 can continue using the
+    built-in dockershim in the kubelet if the user passes the `{Init|Join}Configuration.nodeRegistration.criSocket`
+    value in the kubeadm configuration to be equal to `unix:///var/run/dockershim.sock`
+    on Unix or `npipe:////./pipe/dockershim` on Windows. If kubelet version >=1.24
+    is on the host, kubeadm >=1.24 will treat all container runtimes as "remote" using
+    the kubelet flags `--container-runtime=remote --container-runtime-endpoint=scheme://some/path`.
+    The special management for kubelet <1.24 will be removed in kubeadm 1.25.'

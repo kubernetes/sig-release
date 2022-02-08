@@ -1,0 +1,8 @@
+pr: 107009
+releasenote:
+  text: |-
+    The calculations for Pod topology spread skew now exclude nodes that
+    don't match the node affinity/selector. This may lead to unschedulable pods if you previously had pods
+    matching the spreading selector on those excluded nodes (not matching the node affinity/selector),
+    especially when the `topologyKey` is not node-level. Revisit the node affinity and/or pod selector in the
+    topology spread constraints to avoid this scenario.

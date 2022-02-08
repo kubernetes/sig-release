@@ -1,0 +1,4 @@
+pr: 107413
+releasenote:
+  text: Fixed duplicate port opening in kube-proxy when `--nodeport-addresses` is
+    empty.

@@ -1,0 +1,5 @@
+pr: 106629
+releasenote:
+  text: Added a new Priority and Fairness metric `apiserver_flowcontrol_request_dispatch_no_accommodation_total`
+    to track the number of times a request dispatch attempt results in a no-accommodation
+    status due to lack of available seats.
