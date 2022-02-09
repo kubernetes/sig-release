@@ -1,0 +1,3 @@
+pr: 107775
+releasenote:
+  text: Added details about preemption in the event for scheduling failed.

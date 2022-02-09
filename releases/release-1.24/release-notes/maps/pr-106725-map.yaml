@@ -1,0 +1,4 @@
+pr: 106725
+releasenote:
+  text: Updated the default API priority-and-fairness config to avoid endpoint/configmaps
+    operations from controller-manager to all match leader-election priority level.

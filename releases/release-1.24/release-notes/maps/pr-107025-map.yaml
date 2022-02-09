@@ -1,0 +1,3 @@
+pr: 107025
+releasenote:
+  text: Fixed detaching CSI volumes from nodes when a CSI driver name has prefix "csi-".

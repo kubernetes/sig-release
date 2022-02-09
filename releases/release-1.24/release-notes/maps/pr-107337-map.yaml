@@ -1,0 +1,5 @@
+pr: 107337
+releasenote:
+  text: Fixed a bug where vSphere client connections where not being closed during
+    testing. Leaked vSphere client sessions were causing resource exhaustion during
+    automated testing.

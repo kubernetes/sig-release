@@ -1,0 +1,4 @@
+pr: 106850
+releasenote:
+  text: Deprecated types in `k8s.io/apimachinery/util/clock`. Please use `k8s.io/utils/clock`
+    instead.

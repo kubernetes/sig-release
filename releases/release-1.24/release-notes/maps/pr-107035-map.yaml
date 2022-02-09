@@ -1,0 +1,4 @@
+pr: 107035
+releasenote:
+  text: Fixed performance regression in JSON logging caused by syncing stdout every
+    time error was logged.

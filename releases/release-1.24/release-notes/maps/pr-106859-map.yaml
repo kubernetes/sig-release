@@ -1,0 +1,4 @@
+pr: 106859
+releasenote:
+  text: 'kube-apiserver: the insecure address flags `--address`, `--insecure-bind-address`,
+    `--port` and `--insecure-port` (inert since 1.20) are removed'

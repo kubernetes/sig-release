@@ -1,0 +1,4 @@
+pr: 106860
+releasenote:
+  text: The insecure address flags `--address` and `--port` in kube-controller-manager
+    have had no effect since v1.20 and are removed in v1.24.

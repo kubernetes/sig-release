@@ -1,0 +1,4 @@
+pr: 107789
+releasenote:
+  text: Improved handling of unmount failures when device may be in-use by another
+    container/process.

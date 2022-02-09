@@ -1,0 +1,4 @@
+pr: 106865
+releasenote:
+  text: Removed kube-scheduler insecure flags. You can use `--bind-address` and `--secure-port`
+    instead.

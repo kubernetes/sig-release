@@ -1,0 +1,5 @@
+pr: 104846
+releasenote:
+  text: The Service field `spec.internalTrafficPolicy` is no longer defaulted for
+    Services when the type is `ExternalName`. The field is also dropped on read when
+    the Service type is `ExternalName`.

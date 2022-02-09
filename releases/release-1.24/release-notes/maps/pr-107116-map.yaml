@@ -1,0 +1,3 @@
+pr: 107116
+releasenote:
+  text: Added more message for no PodSandbox container.

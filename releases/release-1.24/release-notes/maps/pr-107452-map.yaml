@@ -1,0 +1,3 @@
+pr: 107452
+releasenote:
+  text: Fixed a rare race condition handling requests that timeout.

@@ -1,0 +1,3 @@
+pr: 107221
+releasenote:
+  text: Fixed a panic when using invalid output format in kubectl create secret command.

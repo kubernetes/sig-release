@@ -1,0 +1,3 @@
+pr: 107131
+releasenote:
+  text: Fixed default config flags for `NewDefaultKubectlCommand`.

@@ -1,0 +1,3 @@
+pr: 99441
+releasenote:
+  text: Migrate `volume/csi/csi-client.go` logs to structured logging.

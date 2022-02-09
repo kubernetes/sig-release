@@ -1,0 +1,3 @@
+pr: 107406
+releasenote:
+  text: 'Fixed: deleted a non-existent Azure disk issue.'

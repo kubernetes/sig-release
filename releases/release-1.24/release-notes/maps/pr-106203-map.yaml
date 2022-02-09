@@ -1,0 +1,4 @@
+pr: 106203
+releasenote:
+  text: Added test cases for `scheduler/PriorityQueue.Activate`, to change the `assert`
+    way from `assert.Equal(t, a, b, "fail msg")` to a more clear way.
