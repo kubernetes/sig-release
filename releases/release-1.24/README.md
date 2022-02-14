@@ -67,7 +67,7 @@ The 1.24 release cycle is as follows:
 | Brace Yourself, Code Freeze is Coming | Comms / Bug Triage | Monday 21st March 2022 | week 11 | |
 | **Begin Feature blog freeze** | Comms Lead | 01:00 UTC Wednesday 23rd March 2022 / 18:00 PDT Tuesday 22nd March 2022 | week 11 | |
 | 1.24.0-alpha.4 released | Branch Manager | Tuesday 22nd March 2022 | Week 11 | |
-| Release retrospective part 1 (**Time TBC**) | Community | Wednesday 23rd March 2022 | week 11 | |
+| Release retrospective part 1 | Community | 17:00 UTC Wednesday 23rd March 2022 / 10:00 PDT Wednesday 23rd March 2022 | week 11 | |
 | (most of) Europe enters Daylight Savings Time | | Sunday 27th March 2022 | | |
 | Burndown Meetings daily | Lead | Monday 28th March 2022 | week 12 | |
 | **Begin [Code Freeze]** | Branch Manager | 01:00 UTC Wednesday 30th March 2022 / 02:00 BST Wednesday 30th March 2022 / 18:00 PDT Tuesday 29th March 2022 | week 12 | |
