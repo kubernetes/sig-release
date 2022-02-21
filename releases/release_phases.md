@@ -50,6 +50,16 @@ unless there are release-blocking or other exceptional reasons. Before
 this date, it is acceptable to improve test coverage of existing code. After
 this date, the goal is to fix, revert, or remove tests that are failing.
 
+Every merged PR, which is part of the current milestone and therefore merged into
+the master branch, has to be manually cherry-picked to the corresponding release
+branch. 
+
+_Note: SIG Release is working on automating away this manual cherry-pick by
+using a [periodic release branch fast forward
+job](https://testgrid.k8s.io/sig-release-releng-informing#git-repo-kubernetes-fast-forward)
+in prow. For now the job runs in mocked mode, but it is planned to activate it
+with the beginning of the v1.25 release cycle._
+
 ## Thaw
 
 Thaw specifies the end of both [Code Freeze] and [Test Freeze]. At this point 
