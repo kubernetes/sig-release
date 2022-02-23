@@ -1,0 +1,4 @@
+pr: 108020
+releasenote:
+  text: Remove `tolerate-unready-endpoints` annotation in Service deprecated from
+    1.11, use `Service.spec.publishNotReadyAddresses` instead.

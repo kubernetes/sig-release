@@ -1,0 +1,5 @@
+pr: 107880
+releasenote:
+  text: '`kubectl create token` can now be used to request a service account token,
+    and permission to request service account tokens is added to the `edit` and `admin`
+    RBAC roles'

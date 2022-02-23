@@ -1,0 +1,4 @@
+pr: 107921
+releasenote:
+  text: The output of `kubectl describe ingress` now includes an IngressClass name
+    if available.

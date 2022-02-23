@@ -1,0 +1,5 @@
+pr: 107527
+releasenote:
+  text: 'kube-apiserver: the `metadata.selfLink` field can no longer be populated
+    by kube-apiserver; it was deprecated in 1.16 and has not been populated by default
+    since 1.20+.'

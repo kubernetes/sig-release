@@ -1,0 +1,3 @@
+pr: 108038
+releasenote:
+  text: Removed feature gate `SetHostnameAsFQDN`.

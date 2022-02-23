@@ -1,0 +1,4 @@
+pr: 107982
+releasenote:
+  text: 'kubeadm: fixed the bug that `kubeadm certs generate-csr` command does not
+    remove duplicated SANs'
