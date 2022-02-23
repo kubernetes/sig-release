@@ -46,8 +46,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "storage"
+      "storage",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -60,15 +60,15 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100101",
     "pr_number": 100101,
     "areas": [
-      "apiserver",
-      "test"
+      "test",
+      "apiserver"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
-      "api-machinery",
       "node",
+      "api-machinery",
       "testing"
     ],
     "duplicate": true
@@ -108,19 +108,19 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100136",
     "pr_number": 100136,
     "areas": [
+      "kubelet",
       "apiserver",
       "cloudprovider",
-      "dependency",
-      "kubelet"
+      "dependency"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
+      "node",
       "api-machinery",
-      "cloud-provider",
       "instrumentation",
-      "node"
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -187,8 +187,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100148",
     "pr_number": 100148,
     "areas": [
-      "kubectl",
-      "test"
+      "test",
+      "kubectl"
     ],
     "kinds": [
       "feature"
@@ -209,15 +209,15 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100183",
     "pr_number": 100183,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
-      "node",
       "storage",
+      "node",
       "testing"
     ],
     "duplicate": true
@@ -231,8 +231,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100200",
     "pr_number": 100200,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "bug"
@@ -252,8 +252,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100206",
     "pr_number": 100206,
     "areas": [
-      "kubectl",
-      "test"
+      "test",
+      "kubectl"
     ],
     "kinds": [
       "bug",
@@ -306,8 +306,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100262",
     "pr_number": 100262,
     "areas": [
-      "conformance",
-      "test"
+      "test",
+      "conformance"
     ],
     "kinds": [
       "bug",
@@ -336,8 +336,8 @@
       "feature"
     ],
     "sigs": [
-      "node",
-      "scalability"
+      "scalability",
+      "node"
     ],
     "feature": true,
     "duplicate": true
@@ -351,21 +351,21 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100292",
     "pr_number": 100292,
     "areas": [
-      "kubeadm",
-      "kubectl",
+      "test",
       "kubelet",
+      "kubectl",
       "provider/gcp",
-      "test"
+      "kubeadm"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
-      "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
       "node",
-      "testing"
+      "cluster-lifecycle",
+      "cli",
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -417,17 +417,17 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100339",
     "pr_number": 100339,
     "areas": [
-      "apiserver",
-      "kubelet"
+      "kubelet",
+      "apiserver"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
+      "node",
       "api-machinery",
       "auth",
-      "instrumentation",
-      "node"
+      "instrumentation"
     ],
     "feature": true,
     "duplicate": true
@@ -459,8 +459,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100369",
     "pr_number": 100369,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "bug"
@@ -495,18 +495,18 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100412",
     "pr_number": 100412,
     "areas": [
-      "conformance",
-      "test"
+      "test",
+      "conformance"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
+      "network",
       "api-machinery",
       "apps",
-      "architecture",
-      "network",
-      "testing"
+      "testing",
+      "architecture"
     ],
     "feature": true,
     "duplicate": true
@@ -520,8 +520,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100435",
     "pr_number": 100435,
     "areas": [
-      "kubectl",
-      "test"
+      "test",
+      "kubectl"
     ],
     "kinds": [
       "bug"
@@ -560,28 +560,28 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100488",
     "pr_number": 100488,
     "areas": [
-      "apiserver",
-      "cloudprovider",
-      "code-generation",
-      "dependency",
-      "kubeadm",
-      "kubectl",
+      "test",
       "kubelet",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
       "release-eng",
-      "test"
+      "kubeadm",
+      "code-generation",
+      "dependency"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
-      "api-machinery",
-      "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
-      "instrumentation",
-      "node",
       "storage",
-      "testing"
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -700,16 +700,16 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100612",
     "pr_number": 100612,
     "areas": [
-      "kubeadm",
-      "provider/gcp"
+      "provider/gcp",
+      "kubeadm"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
       "api-machinery",
-      "cloud-provider",
-      "cluster-lifecycle"
+      "cluster-lifecycle",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -767,8 +767,8 @@
       "feature"
     ],
     "sigs": [
-      "apps",
       "scheduling",
+      "apps",
       "testing"
     ],
     "feature": true,
@@ -796,9 +796,9 @@
       "feature"
     ],
     "sigs": [
-      "apps",
       "network",
-      "node"
+      "node",
+      "apps"
     ],
     "feature": true,
     "duplicate": true
@@ -812,8 +812,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100678",
     "pr_number": 100678,
     "kinds": [
-      "api-change",
-      "bug"
+      "bug",
+      "api-change"
     ],
     "sigs": [
       "api-machinery"
@@ -836,9 +836,9 @@
       "failing-test"
     ],
     "sigs": [
-      "architecture",
       "auth",
-      "testing"
+      "testing",
+      "architecture"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -855,14 +855,14 @@
       "code-generation"
     ],
     "kinds": [
-      "api-change",
-      "cleanup"
+      "cleanup",
+      "api-change"
     ],
     "sigs": [
-      "api-machinery",
-      "auth",
+      "storage",
       "node",
-      "storage"
+      "api-machinery",
+      "auth"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -934,23 +934,23 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100724",
     "pr_number": 100724,
     "areas": [
+      "test",
       "apiserver",
-      "conformance",
       "kubectl",
-      "test"
+      "conformance"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
-      "api-machinery",
-      "apps",
-      "architecture",
-      "auth",
-      "cli",
       "storage",
-      "testing"
+      "api-machinery",
+      "auth",
+      "apps",
+      "cli",
+      "testing",
+      "architecture"
     ],
     "feature": true,
     "duplicate": true,
@@ -965,13 +965,13 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100728",
     "pr_number": 100728,
     "kinds": [
-      "api-change",
-      "bug"
+      "bug",
+      "api-change"
     ],
     "sigs": [
+      "network",
       "apps",
-      "instrumentation",
-      "network"
+      "instrumentation"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -991,8 +991,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "storage"
+      "storage",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -1012,8 +1012,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100754",
     "pr_number": 100754,
     "areas": [
-      "apiserver",
-      "test"
+      "test",
+      "apiserver"
     ],
     "kinds": [
       "feature"
@@ -1036,21 +1036,21 @@
     "pr_number": 100784,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
+      "storage",
       "api-machinery",
-      "cli",
-      "cloud-provider",
       "cluster-lifecycle",
+      "cli",
       "instrumentation",
-      "storage"
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -1075,9 +1075,9 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100842",
     "pr_number": 100842,
     "areas": [
+      "test",
       "apiserver",
-      "code-generation",
-      "test"
+      "code-generation"
     ],
     "kinds": [
       "api-change"
@@ -1104,8 +1104,8 @@
       "bug"
     ],
     "sigs": [
-      "instrumentation",
-      "network"
+      "network",
+      "instrumentation"
     ],
     "duplicate": true
   },
@@ -1260,8 +1260,8 @@
       "cleanup"
     ],
     "sigs": [
-      "cloud-provider",
-      "node"
+      "node",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -1296,15 +1296,15 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100976",
     "pr_number": 100976,
     "areas": [
-      "release-eng",
-      "test"
+      "test",
+      "release-eng"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
-      "release",
-      "testing"
+      "testing",
+      "release"
     ],
     "feature": true,
     "duplicate": true
@@ -1354,8 +1354,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101030",
     "pr_number": 101030,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "feature"
@@ -1383,16 +1383,16 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101034",
     "pr_number": 101034,
     "areas": [
-      "kubectl",
-      "test"
+      "test",
+      "kubectl"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
-      "apps",
       "auth",
+      "apps",
       "cli",
       "testing"
     ],
@@ -1563,8 +1563,8 @@
       "cleanup"
     ],
     "sigs": [
-      "apps",
-      "network"
+      "network",
+      "apps"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -1636,20 +1636,20 @@
     "pr_number": 101120,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
       "api-machinery",
-      "cli",
-      "cloud-provider",
       "cluster-lifecycle",
-      "instrumentation"
+      "cli",
+      "instrumentation",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -1672,8 +1672,8 @@
       "kubeadm"
     ],
     "kinds": [
-      "deprecation",
-      "feature"
+      "feature",
+      "deprecation"
     ],
     "sigs": [
       "cluster-lifecycle"
@@ -1716,17 +1716,17 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101155",
     "pr_number": 101155,
     "areas": [
-      "apiserver",
-      "test"
+      "test",
+      "apiserver"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
+      "node",
       "api-machinery",
       "auth",
-      "node",
       "testing"
     ],
     "feature": true,
@@ -1762,8 +1762,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101171",
     "pr_number": 101171,
     "areas": [
-      "kubectl",
-      "test"
+      "test",
+      "kubectl"
     ],
     "kinds": [
       "feature"
@@ -1804,8 +1804,8 @@
       "failing-test"
     ],
     "sigs": [
-      "auth",
-      "storage"
+      "storage",
+      "auth"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -1854,19 +1854,19 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101206",
     "pr_number": 101206,
     "areas": [
-      "dependency",
+      "test",
       "provider/gcp",
       "release-eng",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
       "instrumentation",
+      "testing",
       "release",
-      "testing"
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -1908,10 +1908,10 @@
       "bug"
     ],
     "sigs": [
-      "apps",
-      "cloud-provider",
+      "storage",
       "node",
-      "storage"
+      "apps",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -1964,8 +1964,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "windows"
+      "windows",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -1984,9 +1984,9 @@
       "cleanup"
     ],
     "sigs": [
-      "api-machinery",
+      "storage",
       "node",
-      "storage"
+      "api-machinery"
     ],
     "duplicate": true,
     "action_required": true
@@ -2057,8 +2057,8 @@
       "kubectl"
     ],
     "kinds": [
-      "api-change",
-      "documentation"
+      "documentation",
+      "api-change"
     ],
     "sigs": [
       "apps",
@@ -2135,21 +2135,21 @@
     "pr_number": 101357,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl",
-      "provider/azure"
+      "provider/azure",
+      "dependency"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
       "api-machinery",
-      "cli",
-      "cloud-provider",
       "cluster-lifecycle",
-      "instrumentation"
+      "cli",
+      "instrumentation",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -2214,8 +2214,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "storage"
+      "storage",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -2345,8 +2345,8 @@
       "failing-test"
     ],
     "sigs": [
-      "cloud-provider",
-      "testing"
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true,
     "do_not_publish": true
@@ -2366,8 +2366,8 @@
       "cleanup"
     ],
     "sigs": [
-      "cloud-provider",
-      "instrumentation"
+      "instrumentation",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -2422,12 +2422,12 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101523",
     "pr_number": 101523,
     "areas": [
-      "cloudprovider",
-      "kubectl"
+      "kubectl",
+      "cloudprovider"
     ],
     "kinds": [
-      "api-change",
-      "cleanup"
+      "cleanup",
+      "api-change"
     ],
     "sigs": [
       "cli",
@@ -2466,8 +2466,8 @@
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
-      "storage"
+      "storage",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true,
@@ -2525,9 +2525,9 @@
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
       "node",
-      "windows"
+      "windows",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -2541,12 +2541,13 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101542",
     "pr_number": 101542,
     "kinds": [
-      "bug"
+      "feature"
     ],
     "sigs": [
       "scheduling",
       "storage"
     ],
+    "feature": true,
     "duplicate": true,
     "action_required": true
   },
@@ -2652,8 +2653,8 @@
       "cleanup"
     ],
     "sigs": [
-      "api-machinery",
-      "node"
+      "node",
+      "api-machinery"
     ],
     "duplicate": true
   },
@@ -2666,17 +2667,17 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101587",
     "pr_number": 101587,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "bug",
       "feature"
     ],
     "sigs": [
-      "instrumentation",
-      "node",
       "storage",
+      "node",
+      "instrumentation",
       "testing"
     ],
     "feature": true,
@@ -2764,8 +2765,8 @@
       "cleanup"
     ],
     "sigs": [
-      "api-machinery",
-      "node"
+      "node",
+      "api-machinery"
     ],
     "duplicate": true,
     "action_required": true
@@ -2782,8 +2783,8 @@
       "bug"
     ],
     "sigs": [
-      "api-machinery",
-      "scalability"
+      "scalability",
+      "api-machinery"
     ],
     "duplicate": true
   },
@@ -2814,16 +2815,16 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101685",
     "pr_number": 101685,
     "areas": [
-      "dependency",
-      "kubelet"
+      "kubelet",
+      "dependency"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
-      "api-machinery",
+      "storage",
       "node",
-      "storage"
+      "api-machinery"
     ],
     "duplicate": true,
     "action_required": true
@@ -2901,8 +2902,8 @@
       "cleanup"
     ],
     "sigs": [
-      "instrumentation",
-      "node"
+      "node",
+      "instrumentation"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -2919,8 +2920,8 @@
       "bug"
     ],
     "sigs": [
-      "apps",
-      "storage"
+      "storage",
+      "apps"
     ],
     "duplicate": true
   },
@@ -2981,8 +2982,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "windows"
+      "windows",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -3039,8 +3040,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101773",
     "pr_number": 101773,
     "kinds": [
-      "deprecation",
-      "documentation"
+      "documentation",
+      "deprecation"
     ],
     "sigs": [
       "storage"
@@ -3074,20 +3075,20 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101809",
     "pr_number": 101809,
     "areas": [
-      "dependency",
+      "test",
+      "security",
       "provider/gcp",
       "release-eng",
-      "security",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
       "instrumentation",
+      "testing",
       "release",
-      "testing"
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -3104,8 +3105,8 @@
       "feature"
     ],
     "sigs": [
-      "api-machinery",
-      "scalability"
+      "scalability",
+      "api-machinery"
     ],
     "feature": true,
     "duplicate": true
@@ -3119,27 +3120,27 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101822",
     "pr_number": 101822,
     "areas": [
+      "test",
+      "kubelet",
       "apiserver",
       "cloudprovider",
-      "dependency",
       "e2e-test-framework",
-      "kubelet",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
-      "api-machinery",
-      "apps",
-      "auth",
-      "cloud-provider",
-      "instrumentation",
-      "node",
       "scheduling",
       "storage",
-      "testing"
+      "node",
+      "api-machinery",
+      "auth",
+      "apps",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true,
@@ -3190,8 +3191,8 @@
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
-      "instrumentation"
+      "instrumentation",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -3235,8 +3236,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/101916",
     "pr_number": 101916,
     "kinds": [
-      "api-change",
-      "documentation"
+      "documentation",
+      "api-change"
     ],
     "sigs": [
       "apps"
@@ -3444,8 +3445,8 @@
     ],
     "sigs": [
       "auth",
-      "cloud-provider",
-      "testing"
+      "testing",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -3506,20 +3507,20 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102028",
     "pr_number": 102028,
     "areas": [
-      "dependency",
+      "kubelet",
       "kubectl",
-      "kubelet"
+      "dependency"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
-      "apps",
-      "cli",
-      "node",
       "scheduling",
-      "storage"
+      "storage",
+      "node",
+      "apps",
+      "cli"
     ],
     "feature": true,
     "duplicate": true,
@@ -3534,19 +3535,19 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102030",
     "pr_number": 102030,
     "areas": [
-      "e2e-test-framework",
+      "test",
       "kubectl",
-      "test"
+      "e2e-test-framework"
     ],
     "kinds": [
-      "api-change",
       "cleanup",
-      "deprecation",
-      "failing-test"
+      "api-change",
+      "failing-test",
+      "deprecation"
     ],
     "sigs": [
-      "cli",
       "network",
+      "cli",
       "testing"
     ],
     "duplicate": true,
@@ -3581,21 +3582,21 @@
     "pr_number": 102059,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
+      "storage",
       "api-machinery",
-      "cli",
-      "cloud-provider",
       "cluster-lifecycle",
+      "cli",
       "instrumentation",
-      "storage"
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -3608,20 +3609,20 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102062",
     "pr_number": 102062,
     "areas": [
-      "e2e-test-framework",
-      "kubeadm",
+      "test",
       "provider/gcp",
       "release-eng",
-      "test"
+      "kubeadm",
+      "e2e-test-framework"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
       "api-machinery",
-      "cloud-provider",
       "cluster-lifecycle",
-      "testing"
+      "testing",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -3809,26 +3810,26 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102147",
     "pr_number": 102147,
     "areas": [
+      "test",
+      "kubelet",
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl",
-      "kubelet",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
-      "api-machinery",
-      "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
-      "instrumentation",
-      "node",
       "storage",
-      "testing"
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -3899,8 +3900,8 @@
       "api-change"
     ],
     "sigs": [
-      "apps",
-      "node"
+      "node",
+      "apps"
     ],
     "duplicate": true
   },
@@ -3935,8 +3936,8 @@
       "bug"
     ],
     "sigs": [
-      "apps",
-      "storage"
+      "storage",
+      "apps"
     ],
     "duplicate": true
   },
@@ -3993,8 +3994,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102188",
     "pr_number": 102188,
     "kinds": [
-      "api-change",
-      "bug"
+      "bug",
+      "api-change"
     ],
     "sigs": [
       "api-machinery"
@@ -4010,8 +4011,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102193",
     "pr_number": 102193,
     "areas": [
-      "dependency",
-      "kubectl"
+      "kubectl",
+      "dependency"
     ],
     "kinds": [
       "cleanup"
@@ -4055,13 +4056,13 @@
       "provider/gcp"
     ],
     "kinds": [
-      "api-change",
       "cleanup",
+      "api-change",
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
-      "scheduling"
+      "scheduling",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true,
@@ -4076,18 +4077,18 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102297",
     "pr_number": 102297,
     "areas": [
+      "test",
       "apiserver",
-      "provider/gcp",
-      "test"
+      "provider/gcp"
     ],
     "kinds": [
-      "api-change",
-      "cleanup"
+      "cleanup",
+      "api-change"
     ],
     "sigs": [
       "api-machinery",
-      "cloud-provider",
-      "testing"
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -4101,18 +4102,18 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102302",
     "pr_number": 102302,
     "areas": [
-      "dependency",
-      "release-eng",
+      "test",
       "security",
-      "test"
+      "release-eng",
+      "dependency"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
       "api-machinery",
-      "release",
-      "testing"
+      "testing",
+      "release"
     ],
     "feature": true,
     "duplicate": true
@@ -4146,17 +4147,17 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102328",
     "pr_number": 102328,
     "areas": [
-      "provider/gcp",
-      "test"
+      "test",
+      "provider/gcp"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
-      "cloud-provider",
       "network",
       "node",
-      "testing"
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -4170,21 +4171,21 @@
     "pr_number": 102332,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
+      "storage",
       "api-machinery",
-      "cli",
-      "cloud-provider",
       "cluster-lifecycle",
+      "cli",
       "instrumentation",
-      "storage"
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -4197,17 +4198,17 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102344",
     "pr_number": 102344,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "bug",
       "flake"
     ],
     "sigs": [
-      "apps",
-      "node",
       "storage",
+      "node",
+      "apps",
       "testing"
     ],
     "duplicate": true,
@@ -4229,8 +4230,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102363",
     "pr_number": 102363,
     "areas": [
-      "apiserver",
-      "test"
+      "test",
+      "apiserver"
     ],
     "kinds": [
       "feature"
@@ -4251,26 +4252,26 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102366",
     "pr_number": 102366,
     "areas": [
-      "apiserver",
-      "e2e-test-framework",
-      "kubeadm",
-      "kubectl",
+      "test",
       "kubelet",
-      "test"
+      "apiserver",
+      "kubectl",
+      "kubeadm",
+      "e2e-test-framework"
     ],
     "kinds": [
-      "api-change",
-      "bug"
+      "bug",
+      "api-change"
     ],
     "sigs": [
-      "apps",
-      "auth",
-      "autoscaling",
-      "cli",
-      "cluster-lifecycle",
-      "instrumentation",
       "network",
       "node",
+      "cluster-lifecycle",
+      "autoscaling",
+      "auth",
+      "apps",
+      "cli",
+      "instrumentation",
       "testing"
     ],
     "duplicate": true,
@@ -4285,8 +4286,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102377",
     "pr_number": 102377,
     "areas": [
-      "dependency",
-      "release-eng"
+      "release-eng",
+      "dependency"
     ],
     "kinds": [
       "feature"
@@ -4314,6 +4315,35 @@
       "cloud-provider"
     ]
   },
+  "102409": {
+    "commit": "e0cb30170415cc122226360f722126930b451f88",
+    "text": "Updates golang.org/x/text to v0.3.6 to fix CVE-2020-28852",
+    "markdown": "Updates golang.org/x/text to v0.3.6 to fix CVE-2020-28852 ([#102409](https://github.com/kubernetes/kubernetes/pull/102409), [@dims](https://github.com/dims)) [SIG API Machinery, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Node and Storage]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102409",
+    "pr_number": 102409,
+    "areas": [
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "cli",
+      "instrumentation",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
   "102412": {
     "commit": "7ed2ed1b454fe8f09adf729c6cb814611634fea1",
     "text": "Remove support for the Service `topologyKeys` field (alpha) and the `kube-proxy` implementation of it. This field was deprecated several cycles ago. This functionality is replaced by the combination of automatic topology hints per-endpoint (alpha) and the Service `internalTrafficPolicy` field (alpha).",
@@ -4323,14 +4353,14 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102412",
     "pr_number": 102412,
     "kinds": [
-      "api-change",
       "cleanup",
+      "api-change",
       "deprecation"
     ],
     "sigs": [
+      "network",
       "api-machinery",
-      "apps",
-      "network"
+      "apps"
     ],
     "duplicate": true,
     "duplicate_kind": true,
@@ -4345,17 +4375,17 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102414",
     "pr_number": 102414,
     "areas": [
-      "cloudprovider",
-      "test"
+      "test",
+      "cloudprovider"
     ],
     "kinds": [
       "bug",
       "deprecation"
     ],
     "sigs": [
-      "cloud-provider",
       "storage",
-      "testing"
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true,
     "duplicate_kind": true,
@@ -4389,22 +4419,22 @@
     "pr_number": 102441,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
-      "api-machinery",
-      "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
-      "instrumentation",
+      "storage",
       "node",
-      "storage"
+      "api-machinery",
+      "cluster-lifecycle",
+      "cli",
+      "instrumentation",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -4432,15 +4462,15 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102444",
     "pr_number": 102444,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
-      "instrumentation",
       "node",
+      "instrumentation",
       "testing"
     ],
     "feature": true,
@@ -4449,7 +4479,7 @@
   "102455": {
     "commit": "e154a6d63706b955188daf2ce31254b07bb284e0",
     "text": "“NONE”",
-    "markdown": "Â\ufffd\ufffdNONE” ([#102455](https://github.com/kubernetes/kubernetes/pull/102455), [@lunhuijie](https://github.com/lunhuijie)) [SIG Node]",
+    "markdown": "“NONE” ([#102455](https://github.com/kubernetes/kubernetes/pull/102455), [@lunhuijie](https://github.com/lunhuijie)) [SIG Node]",
     "author": "lunhuijie",
     "author_url": "https://github.com/lunhuijie",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102455",
@@ -4480,8 +4510,8 @@
       "cleanup"
     ],
     "sigs": [
-      "api-machinery",
-      "node"
+      "node",
+      "api-machinery"
     ],
     "duplicate": true
   },
@@ -4515,27 +4545,27 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102467",
     "pr_number": 102467,
     "areas": [
+      "test",
       "apiserver",
-      "cloudprovider",
-      "code-generation",
-      "dependency",
-      "kubeadm",
       "kubectl",
+      "cloudprovider",
       "provider/gcp",
-      "test"
+      "kubeadm",
+      "code-generation",
+      "dependency"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
+      "storage",
       "api-machinery",
+      "cluster-lifecycle",
       "apps",
       "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
       "instrumentation",
-      "storage",
-      "testing"
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -4552,8 +4582,8 @@
       "regression"
     ],
     "sigs": [
-      "api-machinery",
-      "node"
+      "node",
+      "api-machinery"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -4605,8 +4635,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102509",
     "pr_number": 102509,
     "areas": [
-      "network-policy",
-      "test"
+      "test",
+      "network-policy"
     ],
     "kinds": [
       "cleanup"
@@ -4667,8 +4697,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102539",
     "pr_number": 102539,
     "areas": [
-      "apiserver",
-      "test"
+      "test",
+      "apiserver"
     ],
     "kinds": [
       "bug"
@@ -4748,8 +4778,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102598",
     "pr_number": 102598,
     "areas": [
-      "dependency",
-      "test"
+      "test",
+      "dependency"
     ],
     "kinds": [
       "cleanup",
@@ -4869,8 +4899,8 @@
       "bug"
     ],
     "sigs": [
-      "apps",
-      "network"
+      "network",
+      "apps"
     ],
     "duplicate": true
   },
@@ -4883,20 +4913,20 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102689",
     "pr_number": 102689,
     "areas": [
-      "dependency",
+      "test",
+      "security",
       "provider/gcp",
       "release-eng",
-      "security",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
       "instrumentation",
+      "testing",
       "release",
-      "testing"
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -4961,27 +4991,27 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102731",
     "pr_number": 102731,
     "areas": [
+      "test",
       "apiserver",
       "cloudprovider",
-      "e2e-test-framework",
-      "ipvs",
       "provider/gcp",
       "release-eng",
-      "test"
+      "ipvs",
+      "e2e-test-framework"
     ],
     "kinds": [
-      "api-change",
-      "bug"
+      "bug",
+      "api-change"
     ],
     "sigs": [
-      "api-machinery",
-      "apps",
-      "cloud-provider",
       "network",
-      "release",
       "scheduling",
       "storage",
-      "testing"
+      "api-machinery",
+      "apps",
+      "testing",
+      "release",
+      "cloud-provider"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -4995,16 +5025,16 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102783",
     "pr_number": 102783,
     "areas": [
+      "test",
       "code-generation",
-      "dependency",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
-      "architecture",
-      "testing"
+      "testing",
+      "architecture"
     ],
     "duplicate": true
   },
@@ -5116,18 +5146,18 @@
     "pr_number": 102825,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "bug"
     ],
     "sigs": [
       "api-machinery",
+      "cluster-lifecycle",
       "cli",
-      "cloud-provider",
-      "cluster-lifecycle"
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -5159,9 +5189,9 @@
   "102840": {
     "commit": "2d7a20fcd67e1a22fa6d5cba0e1772ab48b5c6d7",
     "text": "Updated the Graceful Node Shutdown Pod termination reason and message.\nUpdated the Graceful Node Shutdown Pod rejection reason and message.",
-    "markdown": "Updated the Graceful Node Shutdown Pod termination reason and message.\n  Updated the Graceful Node Shutdown Pod rejection reason and message. ([#102840](https://github.com/kubernetes/kubernetes/pull/102840), [@Kissy](https://github.com/Kissy))",
-    "author": "Kissy",
-    "author_url": "https://github.com/Kissy",
+    "markdown": "Updated the Graceful Node Shutdown Pod termination reason and message.\n  Updated the Graceful Node Shutdown Pod rejection reason and message. ([#102840](https://github.com/kubernetes/kubernetes/pull/102840), [@glebiller](https://github.com/glebiller))",
+    "author": "glebiller",
+    "author_url": "https://github.com/glebiller",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102840",
     "pr_number": 102840,
     "areas": [
@@ -5283,8 +5313,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "storage"
+      "storage",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -5416,8 +5446,8 @@
       "bug"
     ],
     "sigs": [
-      "testing",
-      "windows"
+      "windows",
+      "testing"
     ],
     "duplicate": true
   },
@@ -5434,15 +5464,15 @@
       "provider/gcp"
     ],
     "kinds": [
-      "api-change",
+      "documentation",
       "cleanup",
-      "deprecation",
-      "documentation"
+      "api-change",
+      "deprecation"
     ],
     "sigs": [
-      "cloud-provider",
+      "node",
       "instrumentation",
-      "node"
+      "cloud-provider"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -5463,8 +5493,8 @@
       "feature"
     ],
     "sigs": [
-      "node",
-      "storage"
+      "storage",
+      "node"
     ],
     "feature": true,
     "duplicate": true,
@@ -5490,8 +5520,8 @@
       "feature"
     ],
     "sigs": [
-      "auth",
-      "storage"
+      "storage",
+      "auth"
     ],
     "feature": true,
     "duplicate": true,
@@ -5527,8 +5557,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "windows"
+      "windows",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -5580,19 +5610,19 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103082",
     "pr_number": 103082,
     "areas": [
-      "kubectl",
-      "kubelet"
+      "kubelet",
+      "kubectl"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
-      "apps",
-      "cli",
-      "node",
       "scheduling",
-      "storage"
+      "storage",
+      "node",
+      "apps",
+      "cli"
     ],
     "feature": true,
     "duplicate": true,
@@ -5614,10 +5644,10 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103099",
     "pr_number": 103099,
     "areas": [
+      "test",
       "apiserver",
-      "dependency",
       "release-eng",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "feature"
@@ -5626,9 +5656,9 @@
       "api-machinery",
       "auth",
       "instrumentation",
+      "testing",
       "release",
-      "security",
-      "testing"
+      "security"
     ],
     "feature": true,
     "duplicate": true
@@ -5693,8 +5723,8 @@
       "bug"
     ],
     "sigs": [
-      "node",
-      "storage"
+      "storage",
+      "node"
     ],
     "duplicate": true
   },
@@ -5721,8 +5751,8 @@
       "feature"
     ],
     "sigs": [
-      "apps",
-      "node"
+      "node",
+      "apps"
     ],
     "feature": true,
     "duplicate": true,
@@ -5755,22 +5785,22 @@
     "pr_number": 103176,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
+      "storage",
+      "node",
       "api-machinery",
+      "cluster-lifecycle",
       "auth",
       "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
-      "node",
-      "storage"
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -5783,8 +5813,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103190",
     "pr_number": 103190,
     "kinds": [
-      "api-change",
-      "cleanup"
+      "cleanup",
+      "api-change"
     ],
     "sigs": [
       "network"
@@ -5816,8 +5846,8 @@
     ],
     "sigs": [
       "api-machinery",
-      "cloud-provider",
-      "instrumentation"
+      "instrumentation",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -5839,19 +5869,19 @@
     "pr_number": 103218,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
       "api-machinery",
-      "cli",
-      "cloud-provider",
       "cluster-lifecycle",
-      "instrumentation"
+      "cli",
+      "instrumentation",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -5865,18 +5895,18 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103235",
     "pr_number": 103235,
     "areas": [
-      "dependency",
-      "release-eng",
+      "test",
       "security",
-      "test"
+      "release-eng",
+      "dependency"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
       "api-machinery",
-      "release",
-      "testing"
+      "testing",
+      "release"
     ],
     "feature": true,
     "duplicate": true
@@ -5912,8 +5942,8 @@
       "feature"
     ],
     "sigs": [
-      "apps",
-      "storage"
+      "storage",
+      "apps"
     ],
     "feature": true,
     "duplicate": true
@@ -5931,8 +5961,8 @@
       "feature"
     ],
     "sigs": [
-      "apps",
-      "node"
+      "node",
+      "apps"
     ],
     "feature": true,
     "duplicate": true,
@@ -5959,9 +5989,9 @@
       "feature"
     ],
     "sigs": [
+      "storage",
       "api-machinery",
-      "apps",
-      "storage"
+      "apps"
     ],
     "feature": true,
     "duplicate": true,
@@ -6073,23 +6103,23 @@
     "pr_number": 103318,
     "areas": [
       "apiserver",
+      "kubectl",
       "cloudprovider",
       "code-generation",
-      "dependency",
-      "kubectl"
+      "dependency"
     ],
     "kinds": [
       "bug",
       "regression"
     ],
     "sigs": [
+      "storage",
       "api-machinery",
+      "cluster-lifecycle",
       "auth",
       "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
       "instrumentation",
-      "storage"
+      "cloud-provider"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -6106,9 +6136,9 @@
       "feature"
     ],
     "sigs": [
-      "auth",
       "network",
       "node",
+      "auth",
       "security"
     ],
     "feature": true,
@@ -6192,8 +6222,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103419",
     "pr_number": 103419,
     "areas": [
-      "dependency",
-      "kubectl"
+      "kubectl",
+      "dependency"
     ],
     "kinds": [
       "bug"
@@ -6253,8 +6283,8 @@
       "feature"
     ],
     "sigs": [
-      "apps",
-      "network"
+      "network",
+      "apps"
     ],
     "feature": true,
     "duplicate": true
@@ -6307,8 +6337,8 @@
       "feature"
     ],
     "sigs": [
-      "apps",
-      "network"
+      "network",
+      "apps"
     ],
     "feature": true,
     "duplicate": true
@@ -6373,8 +6403,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "instrumentation"
+      "instrumentation",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -6390,8 +6420,8 @@
       "kubelet"
     ],
     "kinds": [
-      "api-change",
-      "cleanup"
+      "cleanup",
+      "api-change"
     ],
     "sigs": [
       "node"
@@ -6456,20 +6486,20 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103669",
     "pr_number": 103669,
     "areas": [
-      "dependency",
+      "test",
+      "security",
       "provider/gcp",
       "release-eng",
-      "security",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
       "instrumentation",
+      "testing",
       "release",
-      "testing"
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -6486,8 +6516,8 @@
       "bug"
     ],
     "sigs": [
-      "auth",
-      "network"
+      "network",
+      "auth"
     ],
     "duplicate": true
   },
@@ -6503,8 +6533,8 @@
       "bug"
     ],
     "sigs": [
-      "auth",
-      "network"
+      "network",
+      "auth"
     ],
     "duplicate": true
   },
@@ -6517,8 +6547,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103747",
     "pr_number": 103747,
     "kinds": [
-      "api-change",
-      "bug"
+      "bug",
+      "api-change"
     ],
     "sigs": [
       "api-machinery",
@@ -6545,6 +6575,1089 @@
       "node"
     ]
   },
+  "103878": {
+    "commit": "8ac1ce7ad2e621f129d6a05fecffb2a4ecc74bd0",
+    "text": "Fixes a regression setting --audit-log-path=- to log to stdout in 1.22 pre-release builds",
+    "markdown": "Fixes a regression setting --audit-log-path=- to log to stdout in 1.22 pre-release builds ([#103878](https://github.com/kubernetes/kubernetes/pull/103878), [@andrewrynhard](https://github.com/andrewrynhard)) [SIG API Machinery]",
+    "author": "andrewrynhard",
+    "author_url": "https://github.com/andrewrynhard",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103878",
+    "pr_number": 103878,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate_kind": true
+  },
+  "103882": {
+    "commit": "f9ff52553fd60bd63bd95a522fb12fa1b900d0a9",
+    "text": "Bump runc to 1.0.1",
+    "markdown": "Bump runc to 1.0.1 ([#103882](https://github.com/kubernetes/kubernetes/pull/103882), [@rphillips](https://github.com/rphillips)) [SIG API Machinery, Auth, Cloud Provider and Node]",
+    "author": "rphillips",
+    "author_url": "https://github.com/rphillips",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103882",
+    "pr_number": 103882,
+    "areas": [
+      "kubelet",
+      "apiserver",
+      "cloudprovider",
+      "dependency"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "api-machinery",
+      "auth",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "103947": {
+    "commit": "c02244d362b764150be02b5fc4c33c16deb17a80",
+    "text": "Fixes an issue cleaning up CertificateSigningRequest objects with an unparseable `status.certificate` field",
+    "markdown": "Fixes an issue cleaning up CertificateSigningRequest objects with an unparseable `status.certificate` field ([#103947](https://github.com/kubernetes/kubernetes/pull/103947), [@liggitt](https://github.com/liggitt)) [SIG Apps and Auth]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103947",
+    "pr_number": 103947,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth",
+      "apps"
+    ],
+    "duplicate": true
+  },
+  "104149": {
+    "commit": "807ed8ece4e4eb71f1fe29e1113544de34fabcae",
+    "text": "kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP.",
+    "markdown": "Kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP. ([#104149](https://github.com/kubernetes/kubernetes/pull/104149), [@aojea](https://github.com/aojea)) [SIG Network]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104149",
+    "pr_number": 104149,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network"
+    ]
+  },
+  "104188": {
+    "commit": "9d000bed3f62eb783b4a4f844b2ee3b17fa8323a",
+    "text": "Fix kube-apiserver metric reporting for the deprecated watch path of /api/\u003cversion\u003e/watch/...",
+    "markdown": "Fix kube-apiserver metric reporting for the deprecated watch path of /api/\u003cversion\u003e/watch/... ([#104188](https://github.com/kubernetes/kubernetes/pull/104188), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery and Instrumentation]",
+    "author": "wojtek-t",
+    "author_url": "https://github.com/wojtek-t",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104188",
+    "pr_number": 104188,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation"
+    ],
+    "duplicate": true
+  },
+  "104200": {
+    "commit": "3ff0102c224ddd1ca576f2ef8296ba351dba6f57",
+    "text": "Kubernetes is now built with Golang 1.16.7",
+    "markdown": "Kubernetes is now built with Golang 1.16.7 ([#104200](https://github.com/kubernetes/kubernetes/pull/104200), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104200",
+    "pr_number": 104200,
+    "areas": [
+      "test",
+      "provider/gcp",
+      "release-eng"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "104346": {
+    "commit": "f304aa4eb5628a75c280583156fc97f6397e8684",
+    "text": "Pass additional flags to subpath mount to avoid flakes in certain conditions",
+    "markdown": "Pass additional flags to subpath mount to avoid flakes in certain conditions ([#104346](https://github.com/kubernetes/kubernetes/pull/104346), [@mauriciopoppe](https://github.com/mauriciopoppe)) [SIG Storage]",
+    "author": "mauriciopoppe",
+    "author_url": "https://github.com/mauriciopoppe",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104346",
+    "pr_number": 104346,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage"
+    ]
+  },
+  "104446": {
+    "commit": "c44c96afc3452b8055de9d374e72e38ea6b8126d",
+    "text": "fix: skip case sensitivity when checking Azure NSG rules\nfix: ensure InstanceShutdownByProviderID return false for creating Azure VMs",
+    "markdown": "Fix: skip case sensitivity when checking Azure NSG rules\n  fix: ensure InstanceShutdownByProviderID return false for creating Azure VMs ([#104446](https://github.com/kubernetes/kubernetes/pull/104446), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]",
+    "author": "feiskyer",
+    "author_url": "https://github.com/feiskyer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104446",
+    "pr_number": 104446,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ]
+  },
+  "104469": {
+    "commit": "a2e12354edefc420e829973721030c5cb2a4270d",
+    "text": "Fixes a regression that could cause panics in LRU caches in controller-manager, kubelet, kube-apiserver, or client-go EventSourceObjectSpamFilter",
+    "markdown": "Fixes a regression that could cause panics in LRU caches in controller-manager, kubelet, kube-apiserver, or client-go EventSourceObjectSpamFilter ([#104469](https://github.com/kubernetes/kubernetes/pull/104469), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation and Storage]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104469",
+    "pr_number": 104469,
+    "areas": [
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "cloud-provider"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "104529": {
+    "commit": "745f2be7dde73a2639eff0ccdc459bce3ed776ef",
+    "text": "Fixed occasional pod cgroup freeze when using cgroup v1 and systemd driver.",
+    "markdown": "Fixed occasional pod cgroup freeze when using cgroup v1 and systemd driver. ([#104529](https://github.com/kubernetes/kubernetes/pull/104529), [@kolyshkin](https://github.com/kolyshkin)) [SIG Node]",
+    "author": "kolyshkin",
+    "author_url": "https://github.com/kolyshkin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104529",
+    "pr_number": 104529,
+    "areas": [
+      "kubelet",
+      "dependency"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "104672": {
+    "commit": "1636b5ece6fe1a150f7197bacf1507cfb5b230c8",
+    "text": "When using `kubectl replace` (or the equivalent API call) on a Service, the caller no longer needs to do a read-modify-write cycle to fetch the allocated values for `.spec.clusterIP` and `.spec.ports[].nodePort`.  Instead the API server will automatically carry these forward from the original object when the new object does not specify them.",
+    "markdown": "When using `kubectl replace` (or the equivalent API call) on a Service, the caller no longer needs to do a read-modify-write cycle to fetch the allocated values for `.spec.clusterIP` and `.spec.ports[].nodePort`.  Instead the API server will automatically carry these forward from the original object when the new object does not specify them. ([#104672](https://github.com/kubernetes/kubernetes/pull/104672), [@thockin](https://github.com/thockin)) [SIG Network]",
+    "author": "thockin",
+    "author_url": "https://github.com/thockin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104672",
+    "pr_number": 104672,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network"
+    ]
+  },
+  "104876": {
+    "commit": "b68064208b29e5956cdff79a94831b52dc50d89a",
+    "text": "Fix Job tracking with finalizers for more than 500 pods, ensuring all finalizers are removed before counting the Pod.",
+    "markdown": "Fix Job tracking with finalizers for more than 500 pods, ensuring all finalizers are removed before counting the Pod. ([#104876](https://github.com/kubernetes/kubernetes/pull/104876), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104876",
+    "pr_number": 104876,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps"
+    ]
+  },
+  "104905": {
+    "commit": "4193f7fe6b30bca6cf30741a6460c6c532c2dc42",
+    "text": "Kubernetes is now built with Golang 1.16.8",
+    "markdown": "Kubernetes is now built with Golang 1.16.8 ([#104905](https://github.com/kubernetes/kubernetes/pull/104905), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104905",
+    "pr_number": 104905,
+    "areas": [
+      "test",
+      "security",
+      "provider/gcp",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "104918": {
+    "commit": "be40a1f6b1d8ed0beac8254005e1ecec4e861454",
+    "text": "A pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered.",
+    "markdown": "A pod that the Kubelet rejects was still considered as being accepted for a brief period of time after rejection, which might cause some pods to be rejected briefly that could fit on the node.  A pod that is still terminating (but has status indicating it has failed) may also still be consuming resources and so should also be considered. ([#104918](https://github.com/kubernetes/kubernetes/pull/104918), [@ehashman](https://github.com/ehashman)) [SIG Node]",
+    "author": "ehashman",
+    "author_url": "https://github.com/ehashman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104918",
+    "pr_number": 104918,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "104988": {
+    "commit": "39a3dc822461a2d2d9457af383ce7dfba23e726c",
+    "text": "kube-apiserver: Fixes handling of CRD schemas containing literal null values in enums",
+    "markdown": "Kube-apiserver: Fixes handling of CRD schemas containing literal null values in enums ([#104988](https://github.com/kubernetes/kubernetes/pull/104988), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Apps and Network]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104988",
+    "pr_number": 104988,
+    "kinds": [
+      "api-change"
+    ],
+    "sigs": [
+      "network",
+      "api-machinery",
+      "apps"
+    ],
+    "duplicate": true
+  },
+  "105075": {
+    "commit": "917b68da1f2c339b3efcf594f23a27157302c76f",
+    "text": "Fixes the kubelet's ability to restart static pods",
+    "markdown": "Fixes the kubelet's ability to restart static pods ([#105075](https://github.com/kubernetes/kubernetes/pull/105075), [@rphillips](https://github.com/rphillips)) [SIG Node and Testing]",
+    "author": "rphillips",
+    "author_url": "https://github.com/rphillips",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105075",
+    "pr_number": 105075,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "105366": {
+    "commit": "3bd2daab88339b1cd9d5d248ae1233808a3f4804",
+    "text": "fix: consolidate logs for instance not found error",
+    "markdown": "Fix: consolidate logs for instance not found error ([#105366](https://github.com/kubernetes/kubernetes/pull/105366), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105366",
+    "pr_number": 105366,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ]
+  },
+  "105400": {
+    "commit": "9292d2907b7aecbb9e0ac34a55070d0dea67b132",
+    "text": "Fix: ignore not a VMSS error for VMAS nodes in EnsureBackendPoolDeleted.",
+    "markdown": "Fix: ignore not a VMSS error for VMAS nodes in EnsureBackendPoolDeleted. ([#105400](https://github.com/kubernetes/kubernetes/pull/105400), [@ialidzhikov](https://github.com/ialidzhikov)) [SIG Cloud Provider]",
+    "author": "ialidzhikov",
+    "author_url": "https://github.com/ialidzhikov",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105400",
+    "pr_number": 105400,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ]
+  },
+  "105452": {
+    "commit": "cb648617fa28fa78bddad1f5069073f354a249cd",
+    "text": "Fixes kubelet memory regression in 1.22",
+    "markdown": "Fixes kubelet memory regression in 1.22 ([#105452](https://github.com/kubernetes/kubernetes/pull/105452), [@liggitt](https://github.com/liggitt)) [SIG Node]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105452",
+    "pr_number": 105452,
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "duplicate_kind": true
+  },
+  "105560": {
+    "commit": "67ff66a849e67593e18b50e43209a48373b49647",
+    "text": "Fixes a regression on Kubelet restart and pod statuses.",
+    "markdown": "Fixes a regression on Kubelet restart and pod statuses. ([#105560](https://github.com/kubernetes/kubernetes/pull/105560), [@rphillips](https://github.com/rphillips)) [SIG Node and Testing]",
+    "author": "rphillips",
+    "author_url": "https://github.com/rphillips",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105560",
+    "pr_number": 105560,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "105650": {
+    "commit": "d5a7179ea882c135955a94f82e04a6368c2a10d9",
+    "text": "kube-proxy(ipvs mode) : delete stale conntrack UDP entries for loadbalancer ingress IP.",
+    "markdown": "Kube-proxy(ipvs mode) : delete stale conntrack UDP entries for loadbalancer ingress IP. ([#105650](https://github.com/kubernetes/kubernetes/pull/105650), [@VivekThrivikraman-est](https://github.com/VivekThrivikraman-est)) [SIG Network]",
+    "author": "VivekThrivikraman-est",
+    "author_url": "https://github.com/VivekThrivikraman-est",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105650",
+    "pr_number": 105650,
+    "areas": [
+      "ipvs"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network"
+    ]
+  },
+  "105671": {
+    "commit": "b7086bebbcfbaed7fe63aff1447b04c99c14f933",
+    "text": "Kubernetes is now built with Golang 1.16.9",
+    "markdown": "Kubernetes is now built with Golang 1.16.9 ([#105671](https://github.com/kubernetes/kubernetes/pull/105671), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105671",
+    "pr_number": 105671,
+    "areas": [
+      "test",
+      "security",
+      "provider/gcp",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "105786": {
+    "commit": "6315226e7bb18b1822ce54625f1f609208cfec49",
+    "text": "Fixes hostpath storage e2e tests within SELinux enabled env",
+    "markdown": "Fixes hostpath storage e2e tests within SELinux enabled env ([#105786](https://github.com/kubernetes/kubernetes/pull/105786), [@Elbehery](https://github.com/Elbehery)) [SIG Testing]",
+    "author": "Elbehery",
+    "author_url": "https://github.com/Elbehery",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105786",
+    "pr_number": 105786,
+    "areas": [
+      "test",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "bug",
+      "failing-test"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "duplicate_kind": true
+  },
+  "105793": {
+    "commit": "604ac4a373f0697d0cbe5bd1eab7e2eb0bebc367",
+    "text": "Fix a bug that `--disabled-metrics` doesn't function well.",
+    "markdown": "Fix a bug that `--disabled-metrics` doesn't function well. ([#105793](https://github.com/kubernetes/kubernetes/pull/105793), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG API Machinery, Cluster Lifecycle and Instrumentation]",
+    "author": "Huang-Wei",
+    "author_url": "https://github.com/Huang-Wei",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105793",
+    "pr_number": 105793,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cluster-lifecycle",
+      "instrumentation"
+    ],
+    "duplicate": true
+  },
+  "105827": {
+    "commit": "d2d17d39eee7893c83b90bc9c849ef4bfc068352",
+    "text": "Watch requests that are delegated to aggregated apiservers no longer reserve concurrency units (seats) in the API Priority and Fairness dispatcher for their entire duration.",
+    "markdown": "Watch requests that are delegated to aggregated apiservers no longer reserve concurrency units (seats) in the API Priority and Fairness dispatcher for their entire duration. ([#105827](https://github.com/kubernetes/kubernetes/pull/105827), [@benluddy](https://github.com/benluddy)) [SIG API Machinery]",
+    "author": "benluddy",
+    "author_url": "https://github.com/benluddy",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105827",
+    "pr_number": 105827,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "105836": {
+    "commit": "ebe30df0ef2f066544a21a484e9e6645dbff3d75",
+    "text": "fix: skip instance not found when decoupling vmss from lb",
+    "markdown": "Fix: skip instance not found when decoupling vmss from lb ([#105836](https://github.com/kubernetes/kubernetes/pull/105836), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105836",
+    "pr_number": 105836,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ]
+  },
+  "106081": {
+    "commit": "7a274d6b6363f780081f3b3020c7649054a00f0f",
+    "text": "Fix scoring for NodeResourcesBalancedAllocation plugins when nodes have containers with no requests.",
+    "markdown": "Fix scoring for NodeResourcesBalancedAllocation plugins when nodes have containers with no requests. ([#106081](https://github.com/kubernetes/kubernetes/pull/106081), [@ahmad-diaa](https://github.com/ahmad-diaa)) [SIG Scheduling]",
+    "author": "ahmad-diaa",
+    "author_url": "https://github.com/ahmad-diaa",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106081",
+    "pr_number": 106081,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "scheduling"
+    ]
+  },
+  "106112": {
+    "commit": "e091d57a462f8d9fa9a2b36dd61a91e2b78bcceb",
+    "text": "Fix concurrent map access causing panics when logging timed-out API calls.",
+    "markdown": "Fix concurrent map access causing panics when logging timed-out API calls. ([#106112](https://github.com/kubernetes/kubernetes/pull/106112), [@marseel](https://github.com/marseel)) [SIG API Machinery]",
+    "author": "marseel",
+    "author_url": "https://github.com/marseel",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106112",
+    "pr_number": 106112,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "106130": {
+    "commit": "714321c6b1b5f8b7964b9eb17d48f2746545f615",
+    "text": "The --leader-elect* CLI args are now honored correctly in scheduler.",
+    "markdown": "The --leader-elect* CLI args are now honored correctly in scheduler. ([#106130](https://github.com/kubernetes/kubernetes/pull/106130), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Scheduling]",
+    "author": "Huang-Wei",
+    "author_url": "https://github.com/Huang-Wei",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106130",
+    "pr_number": 106130,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "scheduling"
+    ]
+  },
+  "106132": {
+    "commit": "4968d1af97e916ce96d4b3b6c2ba0d2794b80a0b",
+    "text": "EndpointSlice Mirroring controller now cleans up managed EndpointSlices when a Service selector is added",
+    "markdown": "EndpointSlice Mirroring controller now cleans up managed EndpointSlices when a Service selector is added ([#106132](https://github.com/kubernetes/kubernetes/pull/106132), [@robscott](https://github.com/robscott)) [SIG Apps, Network and Testing]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106132",
+    "pr_number": 106132,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "apps",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "106143": {
+    "commit": "f3e8a2e146a889098ffc49e29fea83fb56d2a9b6",
+    "text": "Update debian-base, debian-iptables, setcap images to pick up CVE fixes\n- Debian-base to v1.9.0\n- Debian-iptables to v1.6.7\n- setcap to v2.0.4",
+    "markdown": "Update debian-base, debian-iptables, setcap images to pick up CVE fixes\n  - Debian-base to v1.9.0\n  - Debian-iptables to v1.6.7\n  - setcap to v2.0.4 ([#106143](https://github.com/kubernetes/kubernetes/pull/106143), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106143",
+    "pr_number": 106143,
+    "areas": [
+      "test",
+      "security",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "testing",
+      "release"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "106223": {
+    "commit": "a82c1e722590eb1b94f9c7dcba51be67bf37a4e2",
+    "text": "Kubernetes is now built with Golang 1.16.10",
+    "markdown": "Kubernetes is now built with Golang 1.16.10 ([#106223](https://github.com/kubernetes/kubernetes/pull/106223), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106223",
+    "pr_number": 106223,
+    "areas": [
+      "test",
+      "security",
+      "provider/gcp",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "106239": {
+    "commit": "e8768d7aa6223bb2882855027465434354c52c48",
+    "text": "fix kube-proxy regression on UDP services because the logic to detect stale connections was not considering if the endpoint was ready.",
+    "markdown": "Fix kube-proxy regression on UDP services because the logic to detect stale connections was not considering if the endpoint was ready. ([#106239](https://github.com/kubernetes/kubernetes/pull/106239), [@aojea](https://github.com/aojea)) [SIG Network and Testing]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106239",
+    "pr_number": 106239,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "network",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "106356": {
+    "commit": "d09a985e76aedcd4ab70a548b28e5498ca489208",
+    "text": "Fix a panic in kubectl when creating secrets with an improper output type",
+    "markdown": "Fix a panic in kubectl when creating secrets with an improper output type ([#106356](https://github.com/kubernetes/kubernetes/pull/106356), [@lauchokyip](https://github.com/lauchokyip)) [SIG CLI]",
+    "author": "lauchokyip",
+    "author_url": "https://github.com/lauchokyip",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106356",
+    "pr_number": 106356,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli"
+    ]
+  },
+  "106373": {
+    "commit": "5e9932f7488505c040dcd38e9bf2925d016b1d0d",
+    "text": "The kube-proxy sync_proxy_rules_iptables_total metric now gives\nthe correct number of rules, rather than being off by one.\n\nFixed multiple iptables proxy regressions introduced in 1.22:\n\n  - When using Services with SessionAffinity, client affinity for an\n    endpoint now gets broken when that endpoint becomes non-ready\n    (rather than continuing until the endpoint is fully deleted).\n\n  - Traffic to a service IP now starts getting rejected (as opposed to\n    merely dropped) as soon as there are no longer any *usable*\n    endpoints, rather than waiting until all of the terminating\n    endpoints have terminated even when those terminating endpoints\n    were not being used.\n\n  - Chains for endpoints that won't be used are no longer output to\n    iptables, saving a bit of memory/time/cpu.",
+    "markdown": "The kube-proxy sync_proxy_rules_iptables_total metric now gives\n  the correct number of rules, rather than being off by one.\n  \n  Fixed multiple iptables proxy regressions introduced in 1.22:\n  \n    - When using Services with SessionAffinity, client affinity for an\n      endpoint now gets broken when that endpoint becomes non-ready\n      (rather than continuing until the endpoint is fully deleted).\n  \n    - Traffic to a service IP now starts getting rejected (as opposed to\n      merely dropped) as soon as there are no longer any *usable*\n      endpoints, rather than waiting until all of the terminating\n      endpoints have terminated even when those terminating endpoints\n      were not being used.\n  \n    - Chains for endpoints that won't be used are no longer output to\n      iptables, saving a bit of memory/time/cpu. ([#106373](https://github.com/kubernetes/kubernetes/pull/106373), [@aojea](https://github.com/aojea)) [SIG Network]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106373",
+    "pr_number": 106373,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network"
+    ]
+  },
+  "106394": {
+    "commit": "da503883d697bb971ed3bf3592538fe6faf75aa1",
+    "text": "Respect grace period when updating static pods.",
+    "markdown": "Respect grace period when updating static pods. ([#106394](https://github.com/kubernetes/kubernetes/pull/106394), [@gjkim42](https://github.com/gjkim42)) [SIG Node and Testing]",
+    "author": "gjkim42",
+    "author_url": "https://github.com/gjkim42",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106394",
+    "pr_number": 106394,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "106633": {
+    "commit": "125966aa7f1e07469576548c850330f278a0b0b1",
+    "text": "Scheduler's assumed pods have 2min instead of 30s to receive nodeName pod updates",
+    "markdown": "Scheduler's assumed pods have 2min instead of 30s to receive nodeName pod updates ([#106633](https://github.com/kubernetes/kubernetes/pull/106633), [@ahg-g](https://github.com/ahg-g)) [SIG Scheduling]",
+    "author": "ahg-g",
+    "author_url": "https://github.com/ahg-g",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106633",
+    "pr_number": 106633,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "scheduling"
+    ]
+  },
+  "106837": {
+    "commit": "c6ca334bda934130c6866ab7f3f3306d52c68fcb",
+    "text": "Kubernetes is now built with Golang 1.16.11",
+    "markdown": "Kubernetes is now built with Golang 1.16.11 ([#106837](https://github.com/kubernetes/kubernetes/pull/106837), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106837",
+    "pr_number": 106837,
+    "areas": [
+      "test",
+      "security",
+      "provider/gcp",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "106899": {
+    "commit": "9697f6b27e23659e46a9b31e6502c48df8b4ea61",
+    "text": "Reverts graceful node shutdown to match 1.21 behavior of setting pods that have not yet successfully completed to \"Failed\" phase if the GracefulNodeShutdown feature is enabled in kubelet. The GracefulNodeShutdown feature is beta and must be explicitly configured via kubelet config to be enabled in 1.21+. This changes 1.22 and 1.23 behavior on node shutdown to match 1.21. If you do not want pods to be marked terminated on node shutdown in 1.22 and 1.23, disable the GracefulNodeShutdown feature.",
+    "markdown": "Reverts graceful node shutdown to match 1.21 behavior of setting pods that have not yet successfully completed to \"Failed\" phase if the GracefulNodeShutdown feature is enabled in kubelet. The GracefulNodeShutdown feature is beta and must be explicitly configured via kubelet config to be enabled in 1.21+. This changes 1.22 and 1.23 behavior on node shutdown to match 1.21. If you do not want pods to be marked terminated on node shutdown in 1.22 and 1.23, disable the GracefulNodeShutdown feature. ([#106899](https://github.com/kubernetes/kubernetes/pull/106899), [@bobbypage](https://github.com/bobbypage)) [SIG Node]",
+    "author": "bobbypage",
+    "author_url": "https://github.com/bobbypage",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106899",
+    "pr_number": 106899,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "duplicate_kind": true
+  },
+  "106925": {
+    "commit": "13fe78d2c9df0ec862ccb374998943a793a5efa0",
+    "text": "kubeadm: during execution of the \"check expiration\" command, treat the etcd CA as external if there is a missing etcd CA key file (etcd/ca.key) and perform the proper validation on certificates signed by the etcd CA. Additionally, make sure that the CA for all entries in the output table is included - for both certificates on disk and in kubeconfig files.",
+    "markdown": "Kubeadm: during execution of the \"check expiration\" command, treat the etcd CA as external if there is a missing etcd CA key file (etcd/ca.key) and perform the proper validation on certificates signed by the etcd CA. Additionally, make sure that the CA for all entries in the output table is included - for both certificates on disk and in kubeconfig files. ([#106925](https://github.com/kubernetes/kubernetes/pull/106925), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106925",
+    "pr_number": 106925,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "106930": {
+    "commit": "ee4feba4d39dfa04e27e8c46fe1cf430de3ab82e",
+    "text": "kubeadm: allow the \"certs check-expiration\" command to not require the existence of the cluster CA key (ca.key file) when checking the expiration of managed certificates in kubeconfig files.",
+    "markdown": "Kubeadm: allow the \"certs check-expiration\" command to not require the existence of the cluster CA key (ca.key file) when checking the expiration of managed certificates in kubeconfig files. ([#106930](https://github.com/kubernetes/kubernetes/pull/106930), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106930",
+    "pr_number": 106930,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "106960": {
+    "commit": "603c0de6ea0aae0f9c52013702f0a005a2582a13",
+    "text": "Update golang.org/x/net to v0.0.0-20211209124913-491a49abca63",
+    "markdown": "Update golang.org/x/net to v0.0.0-20211209124913-491a49abca63 ([#106960](https://github.com/kubernetes/kubernetes/pull/106960), [@cpanato](https://github.com/cpanato)) [SIG API Machinery, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Node and Storage]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106960",
+    "pr_number": 106960,
+    "areas": [
+      "security",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "release-eng",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "106982": {
+    "commit": "d0b51ca86905104e52e6530ba35f9140ddf699b9",
+    "text": "Kubernetes is now built with Golang 1.16.12",
+    "markdown": "Kubernetes is now built with Golang 1.16.12 ([#106982](https://github.com/kubernetes/kubernetes/pull/106982), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106982",
+    "pr_number": 106982,
+    "areas": [
+      "test",
+      "security",
+      "provider/gcp",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "107039": {
+    "commit": "e54a0546dd8e59394e127b80050f6868692db277",
+    "text": "mount-utils: Detect potential stale file handle",
+    "markdown": "Mount-utils: Detect potential stale file handle ([#107039](https://github.com/kubernetes/kubernetes/pull/107039), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107039",
+    "pr_number": 107039,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage"
+    ]
+  },
+  "107168": {
+    "commit": "0e38221aacb7d3e5704d80afa5279ea14c153552",
+    "text": "An inefficient lock in EndpointSlice controller metrics cache has been reworked. Network programming latency may be significantly reduced in certain scenarios, especially in clusters with a large number of Services.",
+    "markdown": "An inefficient lock in EndpointSlice controller metrics cache has been reworked. Network programming latency may be significantly reduced in certain scenarios, especially in clusters with a large number of Services. ([#107168](https://github.com/kubernetes/kubernetes/pull/107168), [@robscott](https://github.com/robscott)) [SIG Apps and Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107168",
+    "pr_number": 107168,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "apps"
+    ],
+    "duplicate": true
+  },
+  "107187": {
+    "commit": "87283720644ae101c267fcfd82eaaf7e3361067f",
+    "text": "Updates konnectivity-network-proxy to v0.0.27. This includes a memory leak fix for the network proxy",
+    "markdown": "Updates konnectivity-network-proxy to v0.0.27. This includes a memory leak fix for the network proxy ([#107187](https://github.com/kubernetes/kubernetes/pull/107187), [@rata](https://github.com/rata)) [SIG API Machinery, Auth and Cloud Provider]",
+    "author": "rata",
+    "author_url": "https://github.com/rata",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107187",
+    "pr_number": 107187,
+    "areas": [
+      "apiserver",
+      "cloudprovider",
+      "provider/gcp",
+      "dependency"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "107335": {
+    "commit": "7ae06380be3782c228a4f6ca44d5af5975f286c5",
+    "text": "client-go: fix that paged list calls with ResourceVersionMatch set would fail once paging kicked in.",
+    "markdown": "Client-go: fix that paged list calls with ResourceVersionMatch set would fail once paging kicked in. ([#107335](https://github.com/kubernetes/kubernetes/pull/107335), [@fasaxc](https://github.com/fasaxc)) [SIG API Machinery]",
+    "author": "fasaxc",
+    "author_url": "https://github.com/fasaxc",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107335",
+    "pr_number": 107335,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "107346": {
+    "commit": "ab94b2a364206d3467df2e7941ce732f7e2a5494",
+    "text": "Fix a panic when using invalid output format in kubectl create secret command",
+    "markdown": "Fix a panic when using invalid output format in kubectl create secret command ([#107346](https://github.com/kubernetes/kubernetes/pull/107346), [@rikatz](https://github.com/rikatz)) [SIG CLI]",
+    "author": "rikatz",
+    "author_url": "https://github.com/rikatz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107346",
+    "pr_number": 107346,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli"
+    ]
+  },
+  "107459": {
+    "commit": "85369eb77e093fc5cb07fdf5f4b9d2b0bc808490",
+    "text": "Fixes a rare race condition handling requests that timeout",
+    "markdown": "Fixes a rare race condition handling requests that timeout ([#107459](https://github.com/kubernetes/kubernetes/pull/107459), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107459",
+    "pr_number": 107459,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "107568": {
+    "commit": "487eef699dc8ad07106876e7fb045962606035ec",
+    "text": "kube-apiserver: when merging lists, Server Side Apply now prefers the order of the submitted request instead of the existing persisted object",
+    "markdown": "Kube-apiserver: when merging lists, Server Side Apply now prefers the order of the submitted request instead of the existing persisted object ([#107568](https://github.com/kubernetes/kubernetes/pull/107568), [@jiahuif](https://github.com/jiahuif)) [SIG API Machinery, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Storage and Testing]",
+    "author": "jiahuif",
+    "author_url": "https://github.com/jiahuif",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107568",
+    "pr_number": 107568,
+    "areas": [
+      "test",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "107580": {
+    "commit": "de17b6fef92b8525bf05656672db96b5607499b1",
+    "text": "fix: ignore the case when comparing azure tags in service annotation (azure)",
+    "markdown": "Fix: ignore the case when comparing azure tags in service annotation (azure) ([#107580](https://github.com/kubernetes/kubernetes/pull/107580), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107580",
+    "pr_number": 107580,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ]
+  },
+  "107614": {
+    "commit": "85219d685340a0a21870303a4354e3c4039e245a",
+    "text": "Kubernetes is now built with Golang 1.16.13",
+    "markdown": "Kubernetes is now built with Golang 1.16.13 ([#107614](https://github.com/kubernetes/kubernetes/pull/107614), [@palnabarun](https://github.com/palnabarun)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "palnabarun",
+    "author_url": "https://github.com/palnabarun",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107614",
+    "pr_number": 107614,
+    "areas": [
+      "test",
+      "provider/gcp",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "108101": {
+    "commit": "0660a41e8ebdbee45229003a9dc856c9ffdf73cd",
+    "text": "Kubernetes is now built with Golang 1.16.14",
+    "markdown": "Kubernetes is now built with Golang 1.16.14 ([#108101](https://github.com/kubernetes/kubernetes/pull/108101), [@xmudrii](https://github.com/xmudrii)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "xmudrii",
+    "author_url": "https://github.com/xmudrii",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/108101",
+    "pr_number": 108101,
+    "areas": [
+      "test",
+      "provider/gcp",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "testing",
+      "release",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
   "68004": {
     "commit": "d8f3794b83c20a0ebafa09a0742a53a76d2786c2",
     "text": "Fluentd: isolate logging resources in separate namespace `logging`",
@@ -6560,8 +7673,8 @@
       "feature"
     ],
     "sigs": [
-      "cloud-provider",
-      "instrumentation"
+      "instrumentation",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true
@@ -6575,19 +7688,19 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/90368",
     "pr_number": 90368,
     "areas": [
-      "dependency",
-      "provider/gcp"
+      "provider/gcp",
+      "dependency"
     ],
     "kinds": [
-      "api-change",
-      "cleanup"
+      "cleanup",
+      "api-change"
     ],
     "sigs": [
       "api-machinery",
-      "apps",
       "autoscaling",
-      "cloud-provider",
-      "instrumentation"
+      "apps",
+      "instrumentation",
+      "cloud-provider"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -6613,8 +7726,8 @@
       "bug"
     ],
     "sigs": [
-      "cloud-provider",
-      "storage"
+      "storage",
+      "cloud-provider"
     ],
     "duplicate": true
   },
@@ -6653,8 +7766,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/92863",
     "pr_number": 92863,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "feature"
@@ -6698,27 +7811,27 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/94942",
     "pr_number": 94942,
     "areas": [
+      "test",
       "apiserver",
-      "cloudprovider",
-      "code-generation",
-      "dependency",
       "kubectl",
+      "cloudprovider",
       "provider/gcp",
-      "test"
+      "code-generation",
+      "dependency"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
-      "api-machinery",
-      "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
-      "instrumentation",
-      "node",
       "storage",
-      "testing"
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
     ],
     "feature": true,
     "duplicate": true,
@@ -6733,20 +7846,20 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/95286",
     "pr_number": 95286,
     "areas": [
-      "kubectl",
-      "test"
+      "test",
+      "kubectl"
     ],
     "kinds": [
-      "api-change",
       "cleanup",
+      "api-change",
       "deprecation"
     ],
     "sigs": [
+      "network",
+      "storage",
+      "node",
       "apps",
       "cli",
-      "network",
-      "node",
-      "storage",
       "testing"
     ],
     "duplicate": true,
@@ -6854,9 +7967,9 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/96216",
     "pr_number": 96216,
     "areas": [
-      "e2e-test-framework",
+      "test",
       "provider/gcp",
-      "test"
+      "e2e-test-framework"
     ],
     "kinds": [
       "cleanup",
@@ -6864,9 +7977,9 @@
     ],
     "sigs": [
       "api-machinery",
-      "cloud-provider",
       "instrumentation",
-      "testing"
+      "testing",
+      "cloud-provider"
     ],
     "duplicate": true,
     "duplicate_kind": true,
@@ -6881,8 +7994,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/96702",
     "pr_number": 96702,
     "areas": [
-      "kubectl",
-      "test"
+      "test",
+      "kubectl"
     ],
     "kinds": [
       "bug"
@@ -6917,8 +8030,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/97028",
     "pr_number": 97028,
     "areas": [
-      "e2e-test-framework",
-      "test"
+      "test",
+      "e2e-test-framework"
     ],
     "kinds": [
       "feature"
@@ -7002,8 +8115,8 @@
       "apiserver"
     ],
     "kinds": [
-      "api-change",
-      "bug"
+      "bug",
+      "api-change"
     ],
     "sigs": [
       "api-machinery"
@@ -7035,16 +8148,16 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98077",
     "pr_number": 98077,
     "areas": [
+      "test",
       "e2e-test-framework",
-      "network-policy",
-      "test"
+      "network-policy"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
-      "auth",
       "network",
+      "auth",
       "testing"
     ],
     "feature": true,
@@ -7074,8 +8187,8 @@
     ],
     "sigs": [
       "api-machinery",
-      "apps",
       "auth",
+      "apps",
       "testing"
     ],
     "feature": true,
@@ -7144,10 +8257,10 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98377",
     "pr_number": 98377,
     "areas": [
+      "test",
       "apiserver",
       "code-generation",
-      "dependency",
-      "test"
+      "dependency"
     ],
     "kinds": [
       "api-change",
@@ -7205,8 +8318,8 @@
     ],
     "sigs": [
       "api-machinery",
-      "apps",
       "auth",
+      "apps",
       "cli"
     ],
     "feature": true,
@@ -7222,18 +8335,18 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/98866",
     "pr_number": 98866,
     "areas": [
-      "apiserver",
-      "kubelet"
+      "kubelet",
+      "apiserver"
     ],
     "kinds": [
-      "api-change",
       "bug",
+      "api-change",
       "feature"
     ],
     "sigs": [
+      "node",
       "api-machinery",
-      "apps",
-      "node"
+      "apps"
     ],
     "feature": true,
     "duplicate": true,
@@ -7260,10 +8373,10 @@
       "feature"
     ],
     "sigs": [
+      "node",
       "api-machinery",
-      "apps",
       "auth",
-      "node"
+      "apps"
     ],
     "feature": true,
     "duplicate": true,
@@ -7318,9 +8431,9 @@
       "feature"
     ],
     "sigs": [
-      "apps",
+      "storage",
       "node",
-      "storage"
+      "apps"
     ],
     "feature": true,
     "duplicate": true
@@ -7334,15 +8447,15 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99178",
     "pr_number": 99178,
     "areas": [
-      "conformance",
-      "release-eng"
+      "release-eng",
+      "conformance"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
-      "release",
-      "testing"
+      "testing",
+      "release"
     ],
     "duplicate": true,
     "action_required": true
@@ -7356,12 +8469,12 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99310",
     "pr_number": 99310,
     "areas": [
-      "kubectl",
-      "test"
+      "test",
+      "kubectl"
     ],
     "kinds": [
-      "api-change",
       "bug",
+      "api-change",
       "feature"
     ],
     "sigs": [
@@ -7416,17 +8529,17 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99364",
     "pr_number": 99364,
     "areas": [
-      "apiserver",
-      "kubelet"
+      "kubelet",
+      "apiserver"
     ],
     "kinds": [
       "feature"
     ],
     "sigs": [
+      "node",
       "api-machinery",
       "auth",
-      "instrumentation",
-      "node"
+      "instrumentation"
     ],
     "feature": true,
     "duplicate": true
@@ -7472,24 +8585,24 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99494",
     "pr_number": 99494,
     "areas": [
-      "apiserver",
-      "kubectl",
+      "test",
       "kubelet",
-      "test"
+      "apiserver",
+      "kubectl"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
+      "node",
       "api-machinery",
-      "apps",
       "auth",
+      "apps",
       "cli",
       "instrumentation",
-      "node",
-      "security",
-      "testing"
+      "testing",
+      "security"
     ],
     "feature": true,
     "duplicate": true,
@@ -7507,8 +8620,8 @@
       "cleanup"
     ],
     "sigs": [
-      "instrumentation",
-      "storage"
+      "storage",
+      "instrumentation"
     ],
     "duplicate": true
   },
@@ -7528,19 +8641,19 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99576",
     "pr_number": 99576,
     "areas": [
-      "kubelet",
-      "test"
+      "test",
+      "kubelet"
     ],
     "kinds": [
       "api-change",
       "feature"
     ],
     "sigs": [
+      "node",
       "api-machinery",
       "apps",
-      "node",
-      "testing",
-      "windows"
+      "windows",
+      "testing"
     ],
     "feature": true,
     "duplicate": true,
@@ -7647,21 +8760,21 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99829",
     "pr_number": 99829,
     "areas": [
-      "code-organization",
-      "conformance",
-      "dependency",
-      "e2e-test-framework",
+      "test",
       "kubectl",
-      "test"
+      "conformance",
+      "e2e-test-framework",
+      "dependency",
+      "code-organization"
     ],
     "kinds": [
       "cleanup"
     ],
     "sigs": [
-      "architecture",
-      "cli",
       "node",
-      "testing"
+      "cli",
+      "testing",
+      "architecture"
     ],
     "duplicate": true
   },
@@ -7681,8 +8794,8 @@
       "cleanup"
     ],
     "sigs": [
-      "api-machinery",
-      "node"
+      "node",
+      "api-machinery"
     ],
     "duplicate": true,
     "duplicate_kind": true
@@ -7732,8 +8845,8 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/99961",
     "pr_number": 99961,
     "areas": [
-      "apiserver",
-      "test"
+      "test",
+      "apiserver"
     ],
     "kinds": [
       "api-change",
