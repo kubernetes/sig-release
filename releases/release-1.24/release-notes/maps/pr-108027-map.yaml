@@ -1,0 +1,11 @@
+pr: 108027
+releasenote:
+  text: 'kubeadm: graduated the `UnversionedKubeletConfigMap` feature gate to Beta
+    and enabled the feature by default. This implies that 1) for new clusters kubeadm
+    will start using the `kube-system/kubelet-config` naming scheme for the kubelet
+    ConfigMap and RBAC rules, instead of the legacy `kubelet-config-x.yy` naming.
+    2) during upgrade, kubeadm will only write the new scheme ConfigMap and RBAC objects.
+    To disable the feature you can pass `UnversionedKubeletConfigMap: false` in the
+    kubeadm config for new clusters. For upgrade on existing clusters you can also
+    override the behavior by patching the ClusterConfiguration object in `kube-system/kubeadm-config`.
+    More details in the associated KEP.'

@@ -1,0 +1,3 @@
+pr: 107970
+releasenote:
+  text: Fixed OpenAPI serialization of the x-kubernetes-validations field
