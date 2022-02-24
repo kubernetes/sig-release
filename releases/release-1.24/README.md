@@ -61,6 +61,7 @@ The 1.24 release cycle is as follows:
 | 1.24.0-alpha.2 released | Branch Manager | Tuesday 1st February 2022 | Week 4 | |
 | **Begin [Enhancements Freeze]** | Enhancements Lead | 02:00 UTC Friday 4th February 2022 / 18:00 PST Thursday 3rd February 2022 | week 4 | [master-blocking], [master-informing] |
 | 1.24.0-alpha.3 released | Branch Manager | Tuesday 15th February 2022 | Week 6 | |
+| Begin Friday APAC-friendly meetings | Lead | Friday 25th February 2022 | Week 7 | |
 | (most of) North America enters Daylight Savings Time | | Sunday 13th March 2022 | | |
 | **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead | Monday 21st March 2022 | week 11 | [1.24-blocking], [master-blocking], [master-informing] |
 | **Call for [Exceptions][Exception]** | Lead | Monday 21st March 2022 | week 11 | |
