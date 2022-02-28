@@ -90,7 +90,7 @@ the folks who will be spelunking the codebase in the months and years to come.
 Ensure each of your commits is signed-off by using `git commit -s`. SIG Release
 members highly values readable, idiomatic Go code. Familiarize yourself with
 the [Coding Style](#coding-style) section below and try to preempt any comments
-your reviewers would otherwise leave. Most repos will contain `Makefiles`s or
+your reviewers would otherwise leave. Most repos will contain `Makefile`s or
 [`mage`][mage] targets that will help you build/test/lint/verify your changes.
 If you don't see a target for your use case, maybe that could be your first
 contribution!
