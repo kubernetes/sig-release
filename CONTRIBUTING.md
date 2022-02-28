@@ -44,7 +44,7 @@ If your repo has certain guidelines for contribution, put them here ahead of the
 
 ## Contributing Code
 
-To contribute bug fixes or features to Crossplane:
+To contribute bug fixes or features to SIG Release repositories:
 
 1. Communicate your intent.
 1. Make your changes.
