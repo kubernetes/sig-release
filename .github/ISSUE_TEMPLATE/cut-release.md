@@ -42,7 +42,7 @@ Use `krel stage` && `krel release` see the handbook for more:
 http://bit.ly/relmanagers-handbook#releases-management
 
 Image promotion:
-Use `krel promote images` to create a pull request
+Use `kpromo pr` to create a pull request
 https://sigs.k8s.io/promo-tools/docs/promotion-pull-requests.md
 
 Notify #release-management on Slack:
