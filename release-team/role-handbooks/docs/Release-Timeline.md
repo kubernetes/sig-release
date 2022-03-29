@@ -845,13 +845,14 @@ Announce that `[dev-future FUTURE release]` branch is open for new feature docs 
 
 ### Clean up access
 
-⚠️  Create a PR against [kubernetes/org](https://github.com/kubernetes/org) repo to **remove** current Docs Lead from
+- ⚠️  Create a PR against the **[kubernetes/org](https://github.com/kubernetes/org) repo** to **remove** the current Docs Lead from
 the [website-maintainers](https://github.com/orgs/kubernetes/teams/website-maintainers) team and to **remove** current
-Docs shadows from [milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/),
+Docs shadows from [website-milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/),
 e.g., [Remove 1.21 shadows from sig docs teams](https://github.com/kubernetes/org/pull/2624)
-
-- The current lead must stay in the milestone maintainers list until the `[current release]` website version is officially supported.
-- The future lead must stay in the milestone maintainers list to prepare for the next release.
+  - The current lead must stay in the website milestone maintainers list until the `[current release]` website version is officially supported.
+  - The future lead must stay in the website milestone maintainers list to prepare for the next release.
+- ⚠️  Create a PR against the **[kubernetes/website](https://github.com/kubernetes/website) repo** to **remove** the current Docs Lead from [sig-docs-en-owners](https://github.com/orgs/kubernetes/teams/sig-docs-en-owners)
+  
 
 ## Celebrate!
 YOU MADE IT! 🎉 Celebrate a job well done, keep an eye out for anything on fire, and begin to relax!
