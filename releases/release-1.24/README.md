@@ -77,11 +77,11 @@ The 1.24 release cycle is as follows:
 | Deprecations and Removals blog published | Comms | Thursday 31st March 2022 | week 12 | |
 | **[Test Freeze]** | Branch Manager | 01:00 UTC Wednesday 6th April 2022 / 02:00 BST Wednesday 6th April 2022 / 18:00 PDT Tuesday 5th April 2022 | week 13 | |
 | Docs deadline — PRs ready for review | Docs Lead | Tuesday 5th April 2022 | week 13 | |
-| 1.24.0-rc.0 released | Branch Manager | Tuesday 5th April 2022 | week 13 | |
-| release-1.24 branch created | Branch Manager | Tuesday 5th April 2022 | week 13 | |
-| release-1.24 jobs created | Branch Manager | Tuesday 5th April 2022 | week 13 | |
 | Start final draft of Release Notes | Release Notes Lead | Tuesday 5th April 2022 | week 13 | |
 | Release blog ready to review | Comms / Docs | 01:00 UTC Wednesday 6th April 2022 / 02:00 BST Wednesday 6th April 2022 / 18:00 PDT Tuesday 5th April 2022 | week 13 | |
+| 1.24.0-rc.0 released | Branch Manager | Monday 11th April 2022 | week 14 | |
+| release-1.24 branch created | Branch Manager | Monday 11th April 2022 | week 14 | |
+| release-1.24 jobs created | Branch Manager | Monday 11th April 2022 | week 14 | |
 | Docs complete — All PRs reviewed and ready to merge | Docs Lead |  Tuesday 12th April 2022 | week 14 | |
 | Feature blogs ready to review | Enhancement Owner / SIG Leads |  Tuesday 12th April 2022 | week 14 | |
 | Release Notes complete — reviewed & merged to `k/sig-release` | Release Notes Lead | 01:00 UTC Friday 15th April 2022 / 02:00 BST Friday 15th April 2022 / 18:00 PDT Thursday 14th April 2022 | week 14 | |
