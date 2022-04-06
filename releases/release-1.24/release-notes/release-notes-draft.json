@@ -3392,7 +3392,7 @@
   "107979": {
     "commit": "7cf5c02980404d12da4eedac4e72df6045e8a382",
     "text": "The .spec.loadBalancerClass field for Services is now generally available.",
-    "markdown": "The .spec.loadBalancerClass field for Services is now generally available. ([#107979](https://github.com/kubernetes/kubernetes/pull/107979), [@XudongLiuHarold](https://github.com/XudongLiuHarold)) [SIG Cloud Provider, Network and Testing]",
+    "markdown": "The `.spec.loadBalancerClass` field for Services is now generally available. ([#107979](https://github.com/kubernetes/kubernetes/pull/107979), [@XudongLiuHarold](https://github.com/XudongLiuHarold)) [SIG Cloud Provider, Network and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
