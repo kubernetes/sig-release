@@ -1,0 +1,5 @@
+pr: 108092
+releasenote:
+  text: 'kube-apiserver: `--audit-log-version` and `--audit-webhook-version` now only
+    support the default value of `audit.k8s.io/v1`. The v1alpha1 and v1beta1 audit
+    log versions, deprecated since 1.13, have been removed.'

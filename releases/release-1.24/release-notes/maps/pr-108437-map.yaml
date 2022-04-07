@@ -1,0 +1,5 @@
+pr: 108437
+releasenote:
+  text: bump `sigs.k8s.io/apiserver-network-proxy/konnectivity-client@v0.0.30` to
+    fix a goroutine leak in kube-apiserver when using egress selctor with the gRPC
+    mode.

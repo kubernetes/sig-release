@@ -1,0 +1,4 @@
+pr: 108013
+releasenote:
+  text: CRD writes will generate validation errors if a CEL validation rule references
+    the identifier `oldSelf` on a part of the schema that does not support it.

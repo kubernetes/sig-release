@@ -1,0 +1,5 @@
+pr: 108000
+releasenote:
+  text: Existing InTree AzureFile PVs which don't have a secret namespace defined
+    will now work properly after enabling CSI migration - the namespace will be obtained
+    from ClaimRef.

@@ -1,0 +1,3 @@
+pr: 108457
+releasenote:
+  text: API server's deprecated `--target-ram-mb` flag is now removed.

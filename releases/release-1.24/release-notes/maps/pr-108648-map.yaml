@@ -1,0 +1,4 @@
+pr: 108648
+releasenote:
+  text: PreFilter extension in the scheduler framework now returns not only status
+    but also PreFilterResult

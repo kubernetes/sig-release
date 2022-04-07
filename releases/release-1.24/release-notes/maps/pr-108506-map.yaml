@@ -1,0 +1,4 @@
+pr: 108506
+releasenote:
+  text: print `<default>` as the value in case kubectl describe ingress shows `default-backend:80`
+    when no default backend is present

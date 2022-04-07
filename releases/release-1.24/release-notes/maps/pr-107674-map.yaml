@@ -1,0 +1,4 @@
+pr: 107674
+releasenote:
+  text: '`topologySpreadConstraints` includes minDomains` field to limit the minimum
+    number of topology domains.'

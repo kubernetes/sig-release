@@ -1,0 +1,5 @@
+pr: 104732
+releasenote:
+  text: Remove the deprecated flag `--experimental-check-node-capabilities-before-mount`.
+    With CSI now GA, there is a better alternative. Remove any use of  `--experimental-check-node-capabilities-before-mount`
+    from your kubelet scripts or manifests.

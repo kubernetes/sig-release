@@ -1,0 +1,4 @@
+pr: 108129
+releasenote:
+  text: Suspend job to GA. The feature gate `SuspendJob` is locked and will be removed
+    in 1.26.

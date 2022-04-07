@@ -1,0 +1,3 @@
+pr: 108761
+releasenote:
+  text: Set `PodMaxUnschedulableQDuration` as 5 min.

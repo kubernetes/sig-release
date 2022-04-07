@@ -1,0 +1,6 @@
+pr: 108616
+releasenote:
+  text: The `client.authentication.k8s.io/v1alpha1` ExecCredential has been removed.
+    If you are using a client-go credential plugin that relies on the v1alpha1 API
+    please contact the distributor of your plugin for instructions on how to migrate
+    to the v1 API.
