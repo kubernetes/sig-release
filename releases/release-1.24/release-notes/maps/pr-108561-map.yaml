@@ -1,0 +1,3 @@
+pr: 108561
+releasenote:
+  text: Added support for `btrfs` resizing

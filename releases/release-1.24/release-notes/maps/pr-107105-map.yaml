@@ -1,0 +1,3 @@
+pr: 107105
+releasenote:
+  text: Kubernetes in now built with go1.18rc1

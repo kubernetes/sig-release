@@ -1,0 +1,4 @@
+pr: 107684
+releasenote:
+  text: kube-proxy doesn't set the sysctl `net.ipv4.conf.all.route_localnet=1` if
+    no IPv4 loopback address is selected by the `nodePortAddresses` configuration parameter.

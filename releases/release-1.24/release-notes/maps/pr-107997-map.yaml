@@ -1,0 +1,4 @@
+pr: 107997
+releasenote:
+  text: Fixes bug in CronJob Controller V2 where it would lose track of jobs upon
+    job template labels change.

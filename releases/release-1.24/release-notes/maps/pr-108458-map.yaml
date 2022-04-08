@@ -1,0 +1,4 @@
+pr: 108458
+releasenote:
+  text: When invoked with `-list-images`, the `e2e.test` binary now also lists the images
+    that might be needed for storage tests.

@@ -1,0 +1,3 @@
+pr: 108614
+releasenote:
+  text: Remove support for `node-expansion` between `node-stage` and `node-publish`

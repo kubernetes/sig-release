@@ -1,0 +1,4 @@
+pr: 108312
+releasenote:
+  text: 'CRD `x-kubernetes-validations` rules now support the CEL functions: `isSorted`,
+    `sum`, `min`, `max`, `indexOf`, `lastIndexOf`, `find` and `findAll`.'

@@ -1,0 +1,5 @@
+pr: 108450
+releasenote:
+  text: Endpoints and EndpointSlice controllers no longer populate [resourceVersion
+    of targetRef](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-reference/#ObjectReference)
+    in Endpoints and EndpointSlices

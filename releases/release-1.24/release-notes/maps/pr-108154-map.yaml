@@ -1,0 +1,3 @@
+pr: 108154
+releasenote:
+  text: Improved algorithm for selecting `best` non-preferred hint in the TopologyManager

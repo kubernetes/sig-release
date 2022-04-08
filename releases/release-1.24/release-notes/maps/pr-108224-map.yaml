@@ -1,0 +1,4 @@
+pr: 108224
+releasenote:
+  text: Kube-proxy in iptables mode now only logs the full iptables input at `-v=9`
+    rather than `-v=5`.

@@ -1,0 +1,3 @@
+pr: 107979
+releasenote:
+  text: The `.spec.loadBalancerClass` field for Services is now generally available.

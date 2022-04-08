@@ -1,0 +1,4 @@
+pr: 108045
+releasenote:
+  text: The `--pod-infra-container-image` kubelet flag is deprecated and will be removed
+    in future releases

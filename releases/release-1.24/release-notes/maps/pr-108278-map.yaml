@@ -1,0 +1,3 @@
+pr: 108278
+releasenote:
+  text: Feature of `DefaultPodTopologySpread` is graduated to GA

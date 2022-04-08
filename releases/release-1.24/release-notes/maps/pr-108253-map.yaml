@@ -1,0 +1,4 @@
+pr: 108253
+releasenote:
+  text: The `e2e.test` binary supports a new `--kubelet-root` parameter to override
+    the default `/var/lib/kubelet` path. CSI storage tests use this.

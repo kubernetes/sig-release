@@ -1,0 +1,9 @@
+pr: 99287
+releasenote:
+  text: Add 2 new options for kube-proxy running in winkernel mode. `--forward-healthcheck-vip`,
+    if specified as true, health check traffic whose destination is service VIP will
+    be forwarded to kube-proxy's healthcheck service. `--root-hnsendpoint-name` specifies
+    the name of the hns endpoint for the root network namespace. This option enables
+    the pass-through load balancers like Google's GCLB to correctly health check the
+    backend services. Without this change, the health check packets is dropped, and
+    Windows node will be considered to be unhealthy by those load balancers.
