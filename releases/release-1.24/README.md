@@ -44,9 +44,9 @@ The 1.24 release cycle is as follows:
 - **01:00 UTC Wednesday 30th March 2022** / **02:00 BST Wednesday 30th March 2022** / **18:00 PDT Tuesday 29th March 2022**: Week 12 — [Code Freeze](../release_phases.md#code-freeze)
 - **01:00 UTC Wednesday 6th April 2022** / **02:00 BST Wednesday 6th April 2022** / **18:00 PDT Tuesday 5th April 2022**: Week 13 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 12th April 2022**: Week 14 — Docs must be completed and reviewed
-- **Tuesday 19th April 2022**: Week 15 — Kubernetes v1.24.0 released
-- **Wednesday 27th April 2022**: Week 16 — [Release Retrospective][Retrospective Document] part 2
-- **Thursday 28th April 2022**: Week 16 — [Release Retrospective][Retrospective Document] part 3
+- **Tuesday 3rd May 2022**: Week 17 — Kubernetes v1.24.0 released
+- **TBC**: Week 18 — [Release Retrospective][Retrospective Document] part 2
+- **TBC**: Week 18 — [Release Retrospective][Retrospective Document] part 3
 
 ## Timeline
 
@@ -79,18 +79,18 @@ The 1.24 release cycle is as follows:
 | Docs deadline — PRs ready for review | Docs Lead | Tuesday 5th April 2022 | week 13 | |
 | Start final draft of Release Notes | Release Notes Lead | Tuesday 5th April 2022 | week 13 | |
 | Release blog ready to review | Comms / Docs | 01:00 UTC Wednesday 6th April 2022 / 02:00 BST Wednesday 6th April 2022 / 18:00 PDT Tuesday 5th April 2022 | week 13 | |
-| 1.24.0-rc.0 released | Branch Manager | Monday 11th April 2022 | week 14 | |
-| release-1.24 branch created | Branch Manager | Monday 11th April 2022 | week 14 | |
-| release-1.24 jobs created | Branch Manager | Monday 11th April 2022 | week 14 | |
 | Docs complete — All PRs reviewed and ready to merge | Docs Lead |  Tuesday 12th April 2022 | week 14 | |
 | Feature blogs ready to review | Enhancement Owner / SIG Leads |  Tuesday 12th April 2022 | week 14 | |
 | Release Notes complete — reviewed & merged to `k/sig-release` | Release Notes Lead | 01:00 UTC Friday 15th April 2022 / 02:00 BST Friday 15th April 2022 / 18:00 PDT Thursday 14th April 2022 | week 14 | |
-| 1.24.0-rc.1 released | Branch Manager | Friday 15th April 2022 | week 14 | |
-| **v1.24.0 released** | Branch Manager | Tuesday 19th April 2022 | week 15 | |
-| Release blog published | Comms | Tuesday 19th April 2022 | week 15 | |
-| **[Thaw]** | Branch Manager | Tuesday 19th April 2022 | week 15 | |
-| Release retrospective part 2 (**Time TBC**) | Community | Wednesday 27th April 2022 | week 16 | |
-| Release retrospective part 3 (**Time TBC**) | Community | Thursday 28th April 2022 | week 16 | |
+| 1.24.0-rc.0 released | Branch Manager | Tuesday 19th April 2022 | week 15 | |
+| release-1.24 branch created | Branch Manager | Tuesday 19th April 2022 | week 15 | |
+| release-1.24 jobs created | Branch Manager | Tuesday 19th April 2022 | week 15 | |
+| 1.24.0-rc.1 released | Branch Manager | Tuesday 26th April 2022 | week 16 | |
+| **v1.24.0 released** | Branch Manager | Tuesday 3rd May 2022 | week 17 | |
+| Release blog published | Comms | Tuesday 3rd May 2022 | week 17 | |
+| **[Thaw]** | Branch Manager | Tuesday 3rd May 2022 | week 17 | |
+| Release retrospective part 2 (**Time TBC**) | Community | TBC | week 18 | |
+| Release retrospective part 3 (**Time TBC**) | Community | TBC | week 18 | |
 
 ## Phases
 
