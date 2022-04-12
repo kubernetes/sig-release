@@ -86,7 +86,7 @@ The 1.24 release cycle is as follows:
 | Feature blogs ready to review | Enhancement Owner / SIG Leads |  Tuesday 12th April 2022 | week 14 | |
 | Release Notes complete — reviewed & merged to `k/sig-release` | Release Notes Lead | 01:00 UTC Friday 15th April 2022 / 02:00 BST Friday 15th April 2022 / 18:00 PDT Thursday 14th April 2022 | week 14 | |
 | 1.24.0-rc.1 released | Branch Manager | Friday 15th April 2022 | week 14 | |
-| **v1.24.0 released** | Branch Manager | Tuesday 19th April 2022 | week 15 | |
+| **v1.24.0 released** | Branch Manager | Tuesday 3rd May 2022 | week 15 | |
 | Release blog published | Comms | Tuesday 19th April 2022 | week 15 | |
 | **[Thaw]** | Branch Manager | Tuesday 19th April 2022 | week 15 | |
 | Release retrospective part 2 (**Time TBC**) | Community | Wednesday 27th April 2022 | week 16 | |
