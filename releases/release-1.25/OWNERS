@@ -1,0 +1,17 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - reylejano       # Emeritus Adviser
+  - cici37          # Release Team Lead
+  #-                 # Release Team Lead Shadow
+  #-                 # Release Team Lead Shadow
+  #-                 # Release Team Lead Shadow
+  #-                 # Release Team Lead Shadow
+
+reviewers:
+  - Priyankasaggu11929    # Enhancements
+  - RinkiyaKeDad          # CI Signal
+  - helayoty              # Bug Triage
+  - kcmartin              # Docs
+  - csantanapr            # Release Notes
+  - katcosgrove           # Communications
