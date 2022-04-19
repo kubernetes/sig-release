@@ -115,9 +115,9 @@ Right after the CI signal release team is formed, CI signal lead is responsible 
 -   Update the [ci signal team in the teams.yaml](https://github.com/kubernetes/org/blob/main/config/kubernetes/sig-release/teams.yaml) which grants access to the [ci signal project board](https://github.com/orgs/kubernetes/projects/68/). _Coordinate with the release lead to make multiple changes to this file in one PR._
 -   Adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml). _Coordinate with the release lead to make multiple changes to this file in one PR._
 -   Add the CI Signal team as reviewer for the ci signal report tool. Replace the previous CI Signal team members from `ci-signal-reporter-reviewers` with the new CI Signal team in the file [OWNERS_ALIASES](https://github.com/kubernetes/release/blob/master/OWNERS_ALIASES) of the [k/release](https://github.com/kubernetes/release) repository.
--   Plan release support and status reporting. In the past this has been done by sharing a excel sheet with the shadows and give the community read writes. The [template excel](./template-ci-signal-X.XX-release-support-and-status-reporting.xlsx) file can be found here. 
+-   Plan release support and status reporting. See [CI Signal GitHub Projects Board, view: 1.XX-reporting](https://github.com/orgs/kubernetes/projects/68). If the view of the current version does not yet exist, a view of a previous version can be duplicated and the filters adjusted.
 -   CI Signal Shadows must be a member of the Kubernetes organization and therefore apply for membership by opening an issue on [kubernets/org](https://github.com/kubernetes/org) (see [Issue template](https://github.com/kubernetes/org/issues/new?assignees=&labels=area%2Fgithub-membership&template=membership.yml&title=REQUEST%3A+New+membership+for+%3Cyour-GH-handle%3E)).  
--   Organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage. See [ci signal shadow onboarding agenda template](./template-ci-signal-shadow-onboarding-agenda.md).
+-   Organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage.
 
 ### Pre Enhancement Freeze
 
