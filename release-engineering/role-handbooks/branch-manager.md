@@ -550,43 +550,8 @@ Create a PR with this change and wait for it to be merged ([example PR](https://
 
 #### Generate release branch jobs
 
-This task should be done after the release is complete and previous PRs are merged. The following steps should be run from the test-infra repository's root.
-
-1. Generate the new release branch jobs:
-
-   ```shell
-   bazel run //releng:prepare_release_branch
-   ```
-
-   Alternatively, if you want to run Bazel in a container, you can use the command such as:
-
-   ```shell
-   docker run -it \
-      -v $PWD:/workspace/src/k8s.io/test-infra \
-      -v $HOME/.cache/bazel:/root/.cache/bazel \
-      -w /workspace/src/k8s.io/test-infra \
-      gcr.io/k8s-testimages/launcher.gcr.io/google/bazel:latest-test-infra run //releng:prepare_release_branch
-   ```
-
-1. Update release dashboards in the [Testgrid config](https://git.k8s.io/test-infra/config/testgrids/kubernetes/sig-release/config.yaml) ([example commit](https://github.com/kubernetes/test-infra/pull/15023/commits/cad8a3ce8ef3537568b12619634dff702b16cda7)).
-  - Remove the oldest release `sig-release-<version>-{blocking,informing}` dashboards
-  - Add dashboards for the current release e.g., `sig-release-1.17-{blocking,informing}`
-
-1. Check for and resolve configuration errors:
-
-   ```shell
-   bazel test //config/... //hack:verify-all
-   ```
-
-1. Issue a PR with the new release branch job configurations ([example PR](https://github.com/kubernetes/test-infra/pull/15023)).
-
-1. Once the PR has merged, verify that the new dashboards have been created and are populated with jobs
-
-    Examples:
-    - [sig-release-1.17-blocking](https://testgrid.k8s.io/sig-release-1.17-blocking)
-    - [sig-release-1.17-informing](https://testgrid.k8s.io/sig-release-1.17-informing)
-
-1. [Announce in #sig-release and #release-management](https://kubernetes.slack.com/archives/C2C40FMNF/p1565746110248300?thread_ts=1565701466.241200&cid=C2C40FMNF) that this work has been completed
+To minimize drift with tooling changes, this section has been moved to
+[kubernetes/test-infra][release-branch-job-creation].
 
 #### Update publishing-bot rules
 
@@ -919,5 +884,6 @@ See the branch management process prior to v1.12 when `anago` was still used.
 
 [image-promotion]: https://sigs.k8s.io/promo-tools/docs/promotion-pull-requests.md
 [kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team
+[release-branch-job-creation]: https://git.k8s.io/test-infra/releng/README.md
 [release-managers]: /release-managers.md#release-managers
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
