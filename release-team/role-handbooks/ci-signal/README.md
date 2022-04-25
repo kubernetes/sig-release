@@ -3,12 +3,15 @@
 ## Content
 
 -   [Overview of CI Signal responsibilities](#overview-of-ci-signal-responsibilities)
+    -   [Explicit detail is important:](#explicit-detail-is-important)
 -   [Requirements](#requirements)
+    -   [Time Requirements](#time-requirements)
     -   [Additional Requirements for Shadows](#additional-requirements-for-shadows)
-    -   [Additional Requirements for Leads](#additional-requirements-for-shadows)
+    -   [Additional Requirements for Leads](#additional-requirements-for-leads)
 -   [Overview of tasks across release timeline](#overview-of-tasks-across-release-timeline)
     -   [Onboarding](#onboarding)
     -   [Pre Enhancement Freeze](#pre-enhancement-freeze)
+        -   [**_Best Practice:_**](#best-practice)
     -   [Enhancement Freeze to Burndown](#enhancement-freeze-to-burndown)
     -   [Burndown to Code Freeze](#burndown-to-code-freeze)
     -   [During Code Freeze](#during-code-freeze)
@@ -107,10 +110,12 @@ For any release, its schedule and activities/deliverable for each week will be p
 
 Right after the CI signal release team is formed, CI signal lead is responsible for following onboarding actions:
 
--   update the [ci signal team in the teams.yaml](https://github.com/kubernetes/org/blob/main/config/kubernetes/sig-release/teams.yaml) which grants access to the [ci signal project board](https://github.com/orgs/kubernetes/projects/68/). _Coordinate with the release lead to make multiple changes to this file in one PR._
--   adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml). _Coordinate with the release lead to make multiple changes to this file in one PR._
--   organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage
+-   Update the [ci signal team in the teams.yaml](https://github.com/kubernetes/org/blob/main/config/kubernetes/sig-release/teams.yaml) which grants access to the [ci signal project board](https://github.com/orgs/kubernetes/projects/68/). _Coordinate with the release lead to make multiple changes to this file in one PR._
+-   Adding the lead and (more experienced) shadows as milestone maintainers in the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml). _Coordinate with the release lead to make multiple changes to this file in one PR._
 -   Add the CI Signal team as reviewer for the ci signal report tool. Replace the previous CI Signal team members from `ci-signal-reporter-reviewers` with the new CI Signal team in the file [OWNERS_ALIASES](https://github.com/kubernetes/release/blob/master/OWNERS_ALIASES) of the [k/release](https://github.com/kubernetes/release) repository.
+-   Plan release support and status reporting. See [CI Signal GitHub Projects Board, view: 1.XX-reporting](https://github.com/orgs/kubernetes/projects/68). If the view of the current version does not yet exist, a view of a previous version can be duplicated and the filters adjusted.
+-   CI Signal Shadows must be a member of the Kubernetes organization and therefore apply for membership by opening an issue on [kubernets/org](https://github.com/kubernetes/org) (see [Issue template](https://github.com/kubernetes/org/issues/new?assignees=&labels=area%2Fgithub-membership&template=membership.yml&title=REQUEST%3A+New+membership+for+%3Cyour-GH-handle%3E)).
+-   Organizing an onboarding meeting with shadows to walk through this handbook and useful tools like TestGrid, Spyglass, and Triage.
 
 ### Pre Enhancement Freeze
 
@@ -163,7 +168,7 @@ This is when things really begin to ramp up in the release cycle with active bug
 
 Over the release cycle, the release engineering team will cut several releases (alpha, beta, rc), before it ends with a new major Kubernetes release. During the release cycle, tests fail and potentially prevent the cut of a new version.
 
-Therefore, the key objective is to create a picture of whether the release branch manager can start the release process or there is a major failure that needs to be solved first. To avoid a last-minute No-Go, the assigned CI Signal member aligns at least 2-3 days before the day of the release cut with the [corresponding release branch manager]([https://github.com/kubernetes/sig-release/tree/master/releases](https://github.com/kubernetes/sig-release/tree/master/releases)). Potentially blocking tests have to be followed up with high priority and being driven to be solved until release day. Having a short daily alignment telling the Go/No-Go indication should give an idea if this is going in the right direction. If the CI Signal member decides on a No-Go, the issues have to be addressed. A short heads up about what is blocking, what are the current actions to resolve this and, if possible, an estimation of how long it will take to be solved should be given to the release lead, branch manager and to the test corresponding SIG leads.
+Therefore, the key objective is to create a picture of whether the release branch manager can start the release process or there is a major failure that needs to be solved first. To avoid a last-minute No-Go, the assigned CI Signal member aligns at least 2-3 days before the day of the release cut with the [corresponding release branch manager](<[https://github.com/kubernetes/sig-release/tree/master/releases](https://github.com/kubernetes/sig-release/tree/master/releases)>). Potentially blocking tests have to be followed up with high priority and being driven to be solved until release day. Having a short daily alignment telling the Go/No-Go indication should give an idea if this is going in the right direction. If the CI Signal member decides on a No-Go, the issues have to be addressed. A short heads up about what is blocking, what are the current actions to resolve this and, if possible, an estimation of how long it will take to be solved should be given to the release lead, branch manager and to the test corresponding SIG leads.
 
 On the release day, indicate to the branch manager your availability and the current Go/No-Go status. Monitor the jobs and tests closely until the branch manager starts the release cut. In case that a test fails very close to the beginning of the release cut and the reason seems to be severe, align with the branch manager to postpone the cut until the next test runs or if you are familiar with how to test Kubernetes, if the failed test was just a flake.
 
@@ -321,8 +326,8 @@ Issues you create for test failures and flakes must be assigned a `priority` lab
 
 In the CI signal context, we're using priority labels to mean:
 
-| priority                      | Description                                                                                                                                                                                | Expectation                                                                                                                                                                                                              |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| priority | Description | Expectation |
+| --- | --- | --- |
 | `priority/critical-urgent`    | Actively impacting release-blocking signal. Includes: consistently failing tests, frequently (more than 20% of the time) flaking tests in release-blocking dashboards.                     | Work with sigs for these to be worked on as soon as possible, prioritized over other work.                                                                                                                               |
 | `priority/important-soon`     | Negatively impacting release-blocking signal. Includes: Flakes (especially occurring >2% of the time) in release-blocking jobs, failures and flakes in release-informing jobs.             | Work with sigs to resolve them soon, ideally before the end of this release cycle.                                                                                                                                       |
 | `priority/important-longterm` | Painful, results in manual workarounds/toil, limits developer productivity, but is of lower urgency and importance than issues in `priority/critical-urgent` or `priority/important-soon`. | In reality, there's a high chance these won't be finished, or even started within the current release. Work with sigs to ensure they are on their radar, and help find ways they can be broken down into smaller chunks. |
@@ -371,9 +376,8 @@ Since 1.11 we started curating and broadcasting a weekly CI Signal report to the
 
 Every week, the CI Signal Lead should publish the [CI Signal Report](#ci-signal-reporting-tool) to the google group [kubernetes-dev](https://groups.google.com/g/kubernetes-dev) and in the CI Signal Slack Channel to inform the community about the current status. Usually, the report is published on Wednesdays.
 
--   [Link to the previous reports (old report tool in use)](https://docs.google.com/document/d/1Xesru5QkBxxl8WOirNcWI4ho3exqfQBGz6mYJeXOi3U/edit#heading=h.qs3772g2kexl)
+-   [Weekly ci signal report template](./template-weekly-ci-signal-report.md)
 -   CCing individual SIGs (kubernetes-sig-foo@googlegroups.com) that own failing tests help in getting their attention
--   [Sample Weekly CI Signal Report (old report tool in use)](https://groups.google.com/d/msg/kubernetes-dev/nO8aKz3tavE/-aBpStu4CQAJ)
 
 Early and continuous reporting of test health proved greatly effective in rallying SIG attention to test failures and stabilizing the release much early in the release cycle.
 
