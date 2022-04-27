@@ -1,0 +1,4 @@
+pr: 108995
+releasenote:
+  text: The infrastructure for contextual logging is complete (feature gate implemented,
+    JSON backend ready).

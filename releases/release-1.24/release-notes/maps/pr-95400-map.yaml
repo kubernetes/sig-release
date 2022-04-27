@@ -1,0 +1,5 @@
+pr: 95400
+releasenote:
+  text: Adds support for `InterfaceNamePrefix` and `BridgeInterface` as arguments
+    to `--detect-local-mode` option and also introduces a new optional `--pod-interface-name-prefix`
+    and `--pod-bridge-interface` flags to kube-proxy.

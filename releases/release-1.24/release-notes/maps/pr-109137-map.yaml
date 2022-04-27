@@ -1,0 +1,4 @@
+pr: 109137
+releasenote:
+  text: Fixed indexer bug that resulted in incorrect index updates if number of index
+    values for a given object was changing during update

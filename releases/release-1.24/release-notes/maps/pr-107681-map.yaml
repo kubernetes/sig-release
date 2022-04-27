@@ -1,0 +1,3 @@
+pr: 107681
+releasenote:
+  text: mark AzureDisk CSI migration as GA

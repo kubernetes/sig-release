@@ -1,0 +1,4 @@
+pr: 108073
+releasenote:
+  text: CEL CRD validation expressions may now reference existing object state using
+    the identifier `oldSelf`.

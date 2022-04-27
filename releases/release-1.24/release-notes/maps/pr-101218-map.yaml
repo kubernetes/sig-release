@@ -1,0 +1,4 @@
+pr: 101218
+releasenote:
+  text: Kubelet now checks "NoExecute" taint/toleration before accepting pods, except
+    for static pods.

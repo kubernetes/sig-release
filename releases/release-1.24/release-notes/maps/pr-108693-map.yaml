@@ -1,0 +1,3 @@
+pr: 108693
+releasenote:
+  text: Call `NodeExpand` on all nodes in case of RWX volumes

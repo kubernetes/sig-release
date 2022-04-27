@@ -1,0 +1,3 @@
+pr: 108486
+releasenote:
+  text: Non-graceful node shutdown handling is enabled for stateful workload failovers
