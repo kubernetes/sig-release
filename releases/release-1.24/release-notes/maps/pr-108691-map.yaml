@@ -1,0 +1,4 @@
+pr: 108691
+releasenote:
+  text: Apply ProxyTerminatingEndpoints to all traffic policies (external, internal,
+    cluster, local).

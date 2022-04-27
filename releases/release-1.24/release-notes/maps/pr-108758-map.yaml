@@ -1,0 +1,4 @@
+pr: 108758
+releasenote:
+  text: add one metrics(`kubelet_volume_stats_health_abnormal`) of volume health state
+    to kubelet

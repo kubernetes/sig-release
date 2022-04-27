@@ -1,0 +1,3 @@
+pr: 108701
+releasenote:
+  text: Added PreemptionPolicy in PriorityClass describe

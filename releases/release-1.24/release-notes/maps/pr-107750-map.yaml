@@ -1,0 +1,4 @@
+pr: 107750
+releasenote:
+  text: A node IP provided to kublet via `--node-ip` will now be preferred for when
+    determining the node's primary IP and using the external cloud provider (CCM).

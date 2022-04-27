@@ -1,0 +1,3 @@
+pr: 108505
+releasenote:
+  text: Re-adds response status and headers on verbose kubectl responses

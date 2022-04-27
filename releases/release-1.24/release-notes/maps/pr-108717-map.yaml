@@ -1,0 +1,6 @@
+pr: 108717
+releasenote:
+  text: The metadata.clusterName field is deprecated. This field has always been unwritable
+    and always blank, but its presence is confusing, so we will remove it next release.
+    Out of an abundance of caution, this release we have merely changed the name in
+    the go struct to ensure any accidental client uses are found before complete removal.

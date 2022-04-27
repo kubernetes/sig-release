@@ -1,0 +1,3 @@
+pr: 109031
+releasenote:
+  text: OpenAPI V3 is turned on by default

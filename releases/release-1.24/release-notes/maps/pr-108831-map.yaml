@@ -1,0 +1,3 @@
+pr: 108831
+releasenote:
+  text: Skip re-allocate logic if pod is already removed to avoid panic

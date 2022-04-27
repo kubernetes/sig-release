@@ -1,0 +1,5 @@
+pr: 109024
+releasenote:
+  text: Kubernetes 1.24 is built with go1.18, which will no longer validate certificates
+    signed with a SHA-1 hash algorithm by default. See https://golang.org/doc/go1.18#sha1
+    for more details. If you are using certificates like this in admission or conversion

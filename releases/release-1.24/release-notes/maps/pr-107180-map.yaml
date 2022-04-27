@@ -1,0 +1,5 @@
+pr: 107180
+releasenote:
+  text: ServerResources was deprecated in February 2019 (https://github.com/kubernetes/kubernetes/commit/618050e)
+    and now it's being removed and ServerGroupsAndResources is suggested to be used
+    instead

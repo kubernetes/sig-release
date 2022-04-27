@@ -1,0 +1,10 @@
+pr: 108870
+releasenote:
+  text: Kubernetes 1.24 bumped version of golang it is compiled with to go1.18, which
+    introduced significant changes to its garbage collection algorithm. As a result,
+    we observed an increase in memory usage for kube-apiserver in larger an heavily
+    loaded clusters up to ~25% (with the benefit of API call latencies drop by up
+    to 10x on 99th percentiles). If the memory increase is not acceptable for you
+    you can mitigate by setting GOGC env variable (for our tests using GOGC=63 brings
+    memory usage back to original value, although the exact value may depend on usage
+    patterns on your cluster).

@@ -1,0 +1,6 @@
+pr: 106497
+releasenote:
+  text: |-
+    Services with "internalTrafficPolicy: Local" now behave more like
+    "externalTrafficPolicy: Local". Also, "internalTrafficPolicy: Local,
+    externalTrafficPolicy: Cluster" is now implemented correctly.

@@ -1,0 +1,3 @@
+pr: 108898
+releasenote:
+  text: OpenAPI definitions served by kube-apiserver now include enum types by default.

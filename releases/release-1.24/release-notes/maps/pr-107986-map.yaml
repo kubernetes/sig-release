@@ -1,0 +1,3 @@
+pr: 107986
+releasenote:
+  text: Promoted graceful shutdown based on pod priority to beta

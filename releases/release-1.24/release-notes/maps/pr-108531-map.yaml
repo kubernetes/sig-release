@@ -1,0 +1,3 @@
+pr: 108531
+releasenote:
+  text: SPDY transport in client-go will no longer follow redirects.

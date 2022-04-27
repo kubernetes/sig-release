@@ -1,0 +1,4 @@
+pr: 109072
+releasenote:
+  text: Leader Migration is now GA. All new configuration files onwards should use
+    version v1.

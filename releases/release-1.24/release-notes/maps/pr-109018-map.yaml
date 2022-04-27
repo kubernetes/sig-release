@@ -1,0 +1,4 @@
+pr: 109018
+releasenote:
+  text: Deprecate apiserver_dropped_requests_total metric. The same data can be read
+    from apiserver_request_terminations_total metric.

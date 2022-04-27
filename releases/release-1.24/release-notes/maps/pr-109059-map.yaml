@@ -1,0 +1,8 @@
+pr: 109059
+releasenote:
+  text: |-
+    The kubelet now creates an iptables chain named `KUBE-IPTABLES-HINT` in
+    the `mangle` table. Containerized components that need to modify iptables
+    rules in the host network namespace can use the existence of this chain
+    to more-reliably determine whether the system is using iptables-legacy or
+    iptables-nft.

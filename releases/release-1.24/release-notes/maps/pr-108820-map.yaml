@@ -1,0 +1,4 @@
+pr: 108820
+releasenote:
+  text: Remove deprecated `--serviceaccount`, `--hostport`, `--requests` and `--limits`
+    from kubectl run.

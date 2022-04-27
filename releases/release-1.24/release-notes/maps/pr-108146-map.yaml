@@ -1,0 +1,4 @@
+pr: 108146
+releasenote:
+  text: Updating kubelet permissions check for Windows nodes to see if process is
+    elevated instead of checking if process owner is in Administrators group

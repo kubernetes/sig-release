@@ -1,0 +1,4 @@
+pr: 102265
+releasenote:
+  text: allow kubectl to manage resources by filename patterns without the shell expanding
+    it first

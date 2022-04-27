@@ -1,0 +1,3 @@
+pr: 108455
+releasenote:
+  text: Fix a race in the timeout handler that could lead to kube-apiserver crashes

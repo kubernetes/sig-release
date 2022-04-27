@@ -1,0 +1,4 @@
+pr: 99556
+releasenote:
+  text: An alpha flag `--subresource` is added to get, patch, edit replace kubectl
+    commands to fetch and update status and scale subresources.

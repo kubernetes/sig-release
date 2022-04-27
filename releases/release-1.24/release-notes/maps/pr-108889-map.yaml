@@ -1,0 +1,5 @@
+pr: 108889
+releasenote:
+  text: The `ServerSideFieldValidation` feature has graduated to beta and is now enabled
+    by default. Kubectl 1.24 and newer will use server-side validation instead of
+    client-side validation when writing to API servers with the feature enabled.
