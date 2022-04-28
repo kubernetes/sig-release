@@ -1,0 +1,3 @@
+pr: 109436
+releasenote:
+  text: Remove a v1alpha1 networking API for ClusterCIDRConfig

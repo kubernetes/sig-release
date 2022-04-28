@@ -1,0 +1,5 @@
+pr: 108016
+releasenote:
+  text: The `v1` version of `LeaderMigrationConfiguration` supports only `leases`
+    API for leader election. To use formerly supported mechanisms, please continue
+    using `v1beta1`.

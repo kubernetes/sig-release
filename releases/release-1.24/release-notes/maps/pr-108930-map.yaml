@@ -1,0 +1,5 @@
+pr: 108930
+releasenote:
+  text: Introduction of a new "sync_proxy_rules_no_local_endpoints_total" proxy metric.
+    This metric represents the number of services with no internal endpoints. The
+    "traffic_policy" label will contain both "internal" or "external".

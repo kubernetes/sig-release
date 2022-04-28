@@ -1,0 +1,3 @@
+pr: 107631
+releasenote:
+  text: Fix the bug that the outdated services may be sent to the cloud provider
