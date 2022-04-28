@@ -1,0 +1,4 @@
+pr: 109050
+releasenote:
+  text: 'client-go: if resetting the body fails before a retry, an error is now surfaced
+    to the user.'

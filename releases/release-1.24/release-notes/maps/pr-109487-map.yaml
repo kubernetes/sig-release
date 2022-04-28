@@ -1,0 +1,4 @@
+pr: 109487
+releasenote:
+  text: Sets JobTrackingWithFinalizers, a beta feature, as disabled by default, due
+    to unresolved bug https://github.com/kubernetes/kubernetes/issues/109485

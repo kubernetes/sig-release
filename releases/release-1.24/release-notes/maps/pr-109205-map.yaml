@@ -1,0 +1,4 @@
+pr: 109205
+releasenote:
+  text: Adds PV deletion protection finalizer only when PV reclaimPolicy is Delete
+    for dynamically provisioned volumes.

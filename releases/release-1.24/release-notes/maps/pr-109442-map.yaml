@@ -1,0 +1,4 @@
+pr: 109442
+releasenote:
+  text: Correct event registration for multiple scheduler plugins; this fixes a potential
+    significant delay in re-queueing unschedulable pods.
