@@ -6869,8 +6869,8 @@
   },
   "109241": {
     "commit": "3024ddcfe2440b0cf5c3ace3100c6232d6a23df9",
-    "text": "Make STS available replicas optional again,",
-    "markdown": "Make STS available replicas optional again, ([#109241](https://github.com/kubernetes/kubernetes/pull/109241), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))",
+    "text": "Make STS available replicas optional again.",
+    "markdown": "Make STS available replicas optional again. ([#109241](https://github.com/kubernetes/kubernetes/pull/109241), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))",
     "author": "ravisantoshgudimetla",
     "author_url": "https://github.com/ravisantoshgudimetla",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/109241",
