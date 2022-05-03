@@ -44,10 +44,9 @@ the following listing, all deliverables are sorted by their priority.
 
 1. **Signing of release artifacts (Secure)**
 
-   https://github.com/kubernetes/release/issues/914
-
-   Outcome: Being able to sign release artifacts, which also includes container
-   images.
+   Outcome: Being able to ship signed release artifacts, which includes
+   container images in the first iteration as well as all artifacts following
+   on.
 
    Enhancement: https://github.com/kubernetes/enhancements/issues/3031
 
