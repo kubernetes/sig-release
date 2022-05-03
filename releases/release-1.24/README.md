@@ -11,7 +11,7 @@ description: |
 # Kubernetes 1.24 Stargazer
 
 <p align="center">
-  <img src="./logo/main-logo.png" height="241" width="250" alt="Kubernetes 1.24 Release Logo" />
+  <img src="./logo/main-logo.png" height="500" alt="Kubernetes 1.24 Release Logo" />
 </p>
 
 Kubernetes 1.24 is named *Stargazer*, for all those that would look to the night sky. ✨
