@@ -51,8 +51,8 @@ The 1.24 release cycle is as follows:
 - **01:00 UTC Wednesday 6th April 2022** / **02:00 BST Wednesday 6th April 2022** / **18:00 PDT Tuesday 5th April 2022**: Week 13 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 12th April 2022**: Week 14 — Docs must be completed and reviewed
 - **Tuesday 3rd May 2022**: Week 17 — Kubernetes v1.24.0 released
-- **TBC**: Week 18 — [Release Retrospective][Retrospective Document] part 2
-- **TBC**: Week 18 — [Release Retrospective][Retrospective Document] part 3
+- **Wednesday 11th May 2022**: Week 18 — [Release Retrospective][Retrospective Document] part 2
+- **Thursday 12th May 2022**: Week 18 — [Release Retrospective][Retrospective Document] part 3
 
 ## Timeline
 
@@ -95,8 +95,8 @@ The 1.24 release cycle is as follows:
 | **v1.24.0 released** | Branch Manager | Tuesday 3rd May 2022 | week 17 | |
 | Release blog published | Comms | Tuesday 3rd May 2022 | week 17 | |
 | **[Thaw]** | Branch Manager | Tuesday 3rd May 2022 | week 17 | |
-| Release retrospective part 2 (**Time TBC**) | Community | TBC | week 18 | |
-| Release retrospective part 3 (**Time TBC**) | Community | TBC | week 18 | |
+| Release retrospective part 2 (16:00 UTC) | Community | Wednesday 11th May 2022 | week 18 | |
+| Release retrospective part 3 (16:00 UTC) | Community | Thursday 12th May 2022 | week 18 | |
 
 ## Phases
 
