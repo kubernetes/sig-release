@@ -41,8 +41,8 @@ The 1.25 release cycle is as follows:
 - **Thursday 9th June 2022**: Week 3 — [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **02:00 UTC Friday 17th June 2022** / **18:00 PST Thursday 16th June 2022** : Week 4 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Wednesday 27th July 2022**: Week 10 — [Release Retrospective][Retrospective Document] part 1
-- **01:00 UTC Wednesday 27th July 2022** / **02:00 BST Wednesday 3rd August 2022** / **18:00 PDT Tuesday 2nd August 2022**: Week 11 — [Code Freeze](../release_phases.md#code-freeze)
-- **01:00 UTC Wednesday 3rd August 2022** / **02:00 BST Wednesday 10th August 2022** / **18:00 PDT Tuesday 9th August 2022**: Week 12 — [Test Freeze](../release_phases.md#test-freeze)
+- **01:00 UTC Wednesday 3rd August 2022** / **02:00 BST Wednesday 3rd August 2022** / **18:00 PDT Tuesday 2nd August 2022**: Week 11 — [Code Freeze](../release_phases.md#code-freeze)
+- **01:00 UTC Wednesday 10th August 2022** / **02:00 BST Wednesday 10th August 2022** / **18:00 PDT Tuesday 9th August 2022**: Week 12 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 16th August 2022**: Week 13 — Docs must be completed and reviewed
 - **Tuesday 23rd August 2022**: Week 14 — Kubernetes v1.25.0 released
 - **TBC**: Week 16 — [Release Retrospective][Retrospective Document] part 2
