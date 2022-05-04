@@ -3,10 +3,10 @@
 approvers:
   - reylejano       # Emeritus Adviser
   - cici37          # Release Team Lead
-  #-                 # Release Team Lead Shadow
-  #-                 # Release Team Lead Shadow
-  #-                 # Release Team Lead Shadow
-  #-                 # Release Team Lead Shadow
+  - jlbutler        # Release Team Lead Shadow
+  - salaxander      # Release Team Lead Shadow
+  - gracenng        # Release Team Lead Shadow
+  - leonardpahlke   # Release Team Lead Shadow
 
 reviewers:
   - Priyankasaggu11929    # Enhancements
