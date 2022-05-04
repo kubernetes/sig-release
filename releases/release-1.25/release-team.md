@@ -2,7 +2,7 @@
 
 | **Role** | **Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
-| Lead | Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`) |
+| Lead | Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`) | Jesse Butler ([@jlbutler](https://github.com/jlbutler) / Slack: `@Jesse Butler`), Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`), Grace Nguyen ([@gracenng](https://github.com/gracenng) / Slack: `@Grace Nguyen`), Leonard Vincent Simon Pahlke ([@leonardpahlke](https://github.com/leonardpahlke) / Slack: `@leonardpahlke`) | 
 | Enhancements | Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929) / Slack: `@psaggu`) |
 | CI Signal | Arsh Sharma ([@RinkiyaKeDad](https://github.com/RinkiyaKeDad) / Slack: `@arsh`) |
 | Bug Triage | Heba Elayoty ([@helayoty](https://github.com/helayoty) / Slack: `@helayoty`) |
