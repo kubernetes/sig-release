@@ -286,7 +286,7 @@ https://groups.google.com/forum/#!topic/kubernetes-dev/5qU8irU7_tE
 [enhancements-issues]: https://github.com/kubernetes/enhancements/issues
 [k/enhancements]: https://github.com/kubernetes/enhancements
 [rt-group]: https://groups.google.com/a/kubernetes.io/g/release-team
-[rt-selection]: /README.md#release-team-selection
+[rt-selection]: /release-team/release-team-selection.md
 [rt-requirements]: /release-team/release-team-onboarding.md
 [sig-arch-readme]: https://github.com/kubernetes/community/tree/master/sig-architecture/README.md
 [sig-arch-group]: https://groups.google.com/forum/#!forum/kubernetes-sig-architecture
