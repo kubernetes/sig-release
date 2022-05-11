@@ -1,6 +1,6 @@
 # Release Team Onboarding Guide
 
-When joining the Release Team or taking on a new role on the Release Team, there are various lists and groups you'll need to be apart of, various permissions that you'll need to have, keys you may need to know, etc. For roles ranging from someone new to the Kubernetes Community to the incoming Release Lead, this document aims to enumerate the access that you'll need to ensure you have to various repos and tools.
+When joining the Release Team or taking on a new role on the Release Team, there are various lists and groups you'll need to be a part of, various permissions that you'll need to have, keys you may need to know, etc. For roles ranging from someone new to the Kubernetes Community to the incoming Release Lead, this document aims to enumerate the access that you'll need to ensure you have to various repos and tools.
 
 ## New Members
 
@@ -18,7 +18,7 @@ The Kubernetes Community [defines](https://github.com/kubernetes/community/blob/
 >
 > Defined by: Member of the Kubernetes GitHub organization
 
-The requirements for becoming a member are enumerated in the [k/community repo documentation](https://github.com/kubernetes/community/blob/master/community-membership.md#member). Generally, you'll need a few public contributions and some existing community members to sponsor you. The Release Team is a great place to meet members of the community that might be able to meet sponsors!
+The requirements for becoming a member are enumerated in the [k/community repo documentation](https://github.com/kubernetes/community/blob/master/community-membership.md#member). Generally, you'll need a few public contributions and some existing community members to sponsor you. The Release Team is a great place to meet members of the community that might be able to sponsor you!
 
 For new shadows, it's not always necessary to become a member of the GitHub organization right away. Talk to the lead for the Release Team role you're shadowing for the definitive answer. For some roles (Enhancements for example) it is important for Shadows to be members of the GitHub organization because they have to maintain milestones in the [k/enhancements](https://github.com/kubernetes/enhancements) repo. For other roles it's less urgent for new Shadows to be members of the GitHub organization. Your mileage may vary, but you should try to become an official member of the Kubernetes Community as soon as possible.
 
@@ -34,7 +34,7 @@ There are a few mailing lists that you should be aware of. Depending on your rel
 
 #### Release Team Mailing List
 
-All members of the current release team should be apart of this list. If you're on the Release Team and cannot access: https://groups.google.com/a/kubernetes.io/g/release-team, please tell your role lead or the Release Team lead that you need access. The Release Lead, as well as Relase Lead shadows, can manage list membership.
+All members of the current release team should be a part of this list. If you're on the Release Team and cannot access: https://groups.google.com/a/kubernetes.io/g/release-team, please tell your role lead or the Release Team lead that you need access. The Release Lead, as well as Relase Lead shadows, can manage list membership.
 
 #### SIG Release Mailing List
 
