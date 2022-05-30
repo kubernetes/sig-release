@@ -71,13 +71,6 @@ the following listing, all deliverables are sorted by their priority.
    Outcome: Being able to measure and interpret a set of defined metrics about
    Kubernetes releases to associate actions with those.
 
-1. **Define and implement the release cadence survey (Introspectable)**
-
-   https://github.com/kubernetes/sig-release/issues/1526
-
-   Outcome: A regular survey evaluating the user experience of the current
-   release cadence.
-
 1. **Simplify CVE process for release management (Secure)**
 
    https://github.com/kubernetes/sig-release/issues/896
@@ -99,7 +92,7 @@ the following listing, all deliverables are sorted by their priority.
 
 1. **Moving deb/rpm package builds to community infrastructure (Consumable)**
 
-   https://github.com/kubernetes/release/issues/281
+   https://github.com/kubernetes/release/issues/913
 
    Outcome: Automated builds of `deb` and `rpm` Kubernetes packages within
    community infrastructure.
@@ -160,3 +153,10 @@ the following listing, all deliverables are sorted by their priority.
    Outcome: A releases page that is up to date and acts as canonical place for
    release related information, for example links to release notes and support
    timelines.
+
+1. **Define and implement the release cadence survey (Introspectable)**
+
+   https://github.com/kubernetes/sig-release/issues/1526
+
+   Outcome: A regular survey evaluating the user experience of the current
+   release cadence.
