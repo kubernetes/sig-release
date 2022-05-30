@@ -8,7 +8,7 @@
 | Bug Triage | Heba Elayoty ([@helayoty](https://github.com/helayoty) / Slack: `@helayoty`) |
 | Docs | Kristin Martin ([@kcmartin](https://github.com/kcmartin) / Slack: `@kcmartin`) |
 | Release Notes | Carlos Santana ([@csantanapr](https://github.com/csantanapr) / Slack: `@csantanapr`) |
-| Communications | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) |
+| Communications | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) | Debabrata Panigrahi ([@Debanitrkl](https://github.com/Debanitrkl) / Slack: `@deba`), Ana Margarita Medina ([@AnaMMedina21](https://github.com/AnaMMedina21) / Slack: `@Ana Margarita Medina`), Garima Negi ([@Garima-Negi](https://github.com/Garima-Negi) / Slack: `@garima negi`), Frederico Serrano Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsm` ) |
 | Emeritus Adviser | Rey Lejano ([@reylejano](https://github.com/reylejano)) / Slack: `@rlejano` | |
 | Branch Manager |  |
 
