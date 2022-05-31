@@ -10,6 +10,8 @@ The release team leader role is responsible for coordinating release activities,
 - [Time Commitments](#time-commitments)
 - [Choosing a Release Team](#choosing-a-release-team)
 - [Standards](#standards)
+  - [Mailing List Standards](#mailing-list-standards)
+- [Release theme gifts](#release-theme-gifts)
 - [Release Milestone Activities](#release-milestone-activities)
   - [Before Release Begins](#before-release-begins)
   - [Week 0](#week-0)
@@ -370,6 +372,7 @@ Code Freeze will typically fall around Weeks 12 or 13 depending on the length or
 - Work with the CNCF, SIG Docs, and Communications Lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs.
 - Work with the incoming Release Team Lead to establish incoming Release Team.
 - Release Day is coming up! Make the day as fun as you can for the team. Plan ahead for this and do something nice.
+- Prepare [release team gifts](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-team-lead#release-theme-gifts) as a thank you.
 
 ---
 
