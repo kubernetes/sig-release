@@ -37,6 +37,7 @@ An Enhancements Lead holds the following responsibilities:
 - MUST be a member of the [SIG Release Google Group][sig-release-group]
 - MUST be a member of the [SIG Architecture Google Group][sig-arch-group]
 - MUST be a member of the [Kubernetes Enhancements Google Group][enhancements-group]
+- The enhancements lead should take the [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/) training course
 
 Helpful characteristics of an Enhancements Lead include:
 - experience with the Kubernetes community, code layout, ecosystem projects, organizational norms, governance, SIG structure, architecture, and release process

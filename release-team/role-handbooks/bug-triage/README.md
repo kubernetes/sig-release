@@ -83,6 +83,7 @@ In addition to the above requirements for Shadows, most of which become prerequi
 - Have the ability to add a milestone to issues/PRs, so must be a member of the [milestone maintainers team](/release-team/README.md#milestone-maintainers)
 - Have a working knowledge of GitHub labeling and labels used by the project. Bug Triage leads must be able to identify relevant issues and PRs for a given milestone.
 - Have an understanding of what defines a Release Blocking issue or PR, or know who to contact to determine that information.
+- The bug triage lead should take the [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/) training course
 
 ## Getting Started
 

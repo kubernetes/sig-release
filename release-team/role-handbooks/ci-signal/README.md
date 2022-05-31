@@ -101,6 +101,7 @@ In addition to the above requirements for Shadows, most of which become prerequi
 -   Signal lead needs to understand what tests matter and generally how our testing infra is wired together.
     -   They can ask previous CI Signal leads for advice
     -   They can ask SIG-Testing for guidance
+- The CI Signal lead should take the [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/) training course
 
 ## Overview of tasks across release timeline
 
