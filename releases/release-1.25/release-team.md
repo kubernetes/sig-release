@@ -7,7 +7,7 @@
 | CI Signal | Arsh Sharma ([@RinkiyaKeDad](https://github.com/RinkiyaKeDad) / Slack: `@arsh`) |
 | Bug Triage | Heba Elayoty ([@helayoty](https://github.com/helayoty) / Slack: `@helayoty`) |Harshita Sao ([@harshitasao](https://github.com/harshitasao) / Slack: `@harshitasao`), Hosam Kamel ([@hkamel](https://github.com/hkamel) / Slack: `@hkamel`), Marky Jckson ([@markyjackson-taulia](https://github.com/markyjackson-taulia) / Slack: `@markyjackson`), Justin Chizer ([@Justin-chizer](https://github.com/justin-chizer) / Slack: `@justin chizer`) |
 | Docs | Kristin Martin ([@kcmartin](https://github.com/kcmartin) / Slack: `@kcmartin`) |
-| Release Notes | Carlos Santana ([@csantanapr](https://github.com/csantanapr) / Slack: `@csantanapr`) |
+| Release Notes | Carlos Santana ([@csantanapr](https://github.com/csantanapr) / Slack: `@csantanapr`) | Senthil Kumaran ([@orsenthil](https://github.com/orsenthil) / Slack: `Senthil Kumaran`), Divya Rani ([@Divya063](https://github.com/Divya063) / Slack: `Divya`), Rodolfo Martínez Vega ([@ramrodo](https://github.com/ramrodo) / Slack: `ramrodo`), Dipto Chakrabarty ([@DiptoChakrabarty](https://github.com/DiptoChakrabarty) / Slack: `Dipto`)|
 | Communications | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) | Debabrata Panigrahi ([@Debanitrkl](https://github.com/Debanitrkl) / Slack: `@deba`), Ana Margarita Medina ([@AnaMMedina21](https://github.com/AnaMMedina21) / Slack: `@Ana Margarita Medina`), Garima Negi ([@Garima-Negi](https://github.com/Garima-Negi) / Slack: `@garima negi`), Frederico Serrano Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsm` ) |
 | Emeritus Adviser | Rey Lejano ([@reylejano](https://github.com/reylejano)) / Slack: `@rlejano` | |
 | Branch Manager |  |
