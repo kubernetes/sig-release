@@ -52,6 +52,7 @@ If there are potential fixes to the issues indicated and team members are keen, 
 - Strong written and verbal communications skills
 - A working knowledge of Kubernetes concepts
 - Project management experience is helpful but not required
+- The release notes lead should take the [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/) training course
 
 ### Time Requirements
 

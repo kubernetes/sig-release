@@ -18,6 +18,7 @@ Communications deliverables that come from the release process include a release
 - Experience with the Kubernetes release process enough to understand how communications milestones fit into the overall release
 - Project management experience is helpful
 - Existing relationships with the CNCF, relevant media personnel and outlets, Kubernetes project managers, and vendor stakeholders is helpful
+- The communications lead should take the [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/) training course
 
 ### Expected Time Investment
 
