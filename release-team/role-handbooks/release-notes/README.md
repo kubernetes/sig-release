@@ -31,13 +31,13 @@
   - [Week 17](#week-17)
   - [Week 19](#week-19)
 - [Tools](#tools)
-- [TODOs](#todos)  
+- [TODOs](#todos)
 
 ## Overview:
 
 The Release Notes role is responsible for collecting and fine-tuning release-notes from the many contributions to Kubernetes between release cycles. This role is likely to find that work during the first several weeks of the release cycle is very laid back with the bulk of the tasks being completed at the end, once the release is firmed up.
 
-The release lead will be responsible for introducing shadows to the team and the release notes subcommand in [krel](https://github.com/kubernetes/release/tree/master/docs/krel) and may ask shadows to run it and make the update PR’s. The release notes lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to avoid their coalescence during the later weeks. 
+The release lead will be responsible for introducing shadows to the team and the release notes subcommand in [krel](https://github.com/kubernetes/release/tree/master/docs/krel) and may ask shadows to run it and make the update PR’s. The release notes lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to avoid their coalescence during the later weeks.
 
 If there are potential fixes to the issues indicated and team members are keen, fixes and automation of the process is very welcome but not expected.
 
@@ -119,7 +119,7 @@ At least one member of the Release Notes Team should be responsible for [setting
 1. Update the release notes draft, a markdown file which will become the final document which will encompass all release notes written by contributors during the current release cycle. See previous drafts for versions [1.24](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.24/release-notes/release-notes-draft.md), [v1.23](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.23/release-notes/release-notes-draft.md) or [v1.22](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.22/release-notes/release-notes-draft.md).
 
 2. The team is responsible for adding Patch Release (e.g. [1.22.10](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md#v12210), etc.) notes to the release notes website at <https://relnotes.k8s.io>. The krel release notes subcommand will automatically generate the necessary JSON files and patch the release notes website source.
-Note that there are plans to improve the workflow [1087](https://github.com/kubernetes/release/issues/1087) 
+Note that there are plans to improve the workflow [1087](https://github.com/kubernetes/release/issues/1087)
 
 Detailed instructions for generating the release notes bundles are in the [krel release-notes subcommand documentation](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
 
@@ -134,7 +134,7 @@ It is recommended that the team splits the work among all members and runs the e
 on a weekly or biweekly basis. More information about the editing flow can be found in
 a separate document detailing the [editing process and tooling](editing-flow.md).
 
-### Attend Release Meetings and follow #sig-release 
+### Attend Release Meetings and follow #sig-release
 
 The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetings and follow the [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF) Slack channel for relevant information throughout the release cycle.
 
