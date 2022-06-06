@@ -111,7 +111,8 @@ It is important that this process be followed and documentation remain up-to-dat
 - Update the permission on the protected sheets on the enhancement collection sheet.
     - For `KEP Collection` sheet, grant _Edit_ access to the [SIG Leads Google Group][sig-leads-group].
     - For `Docs` sheet, grant _Edit_ access to Docs Lead and Docs shadows.
-- Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking sheet to the current release page in [sig-release][sig-release]
+- Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking sheet to the current release page in [sig-release][sig-release].
+- Make a pull request to add the shortlinked Enhancement Tracking sheet to [kubernetes/enhancements README page](https://github.com/kubernetes/enhancements/blob/master/README.md#enhancements-tracking-spreadsheet).
 - Find [Issues][enhancements-issues] from previous milestone that have graduated to Stable. Remove `tracked/yes` or `tracked/no` labels. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
 - Find [Issues labeled `tracked/yes`](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+label%3Atracked%2Fyes) and change to `tracked/no` until the Enhancement is ready to be tracked for the upcoming release.
 - Close previous milestone by ensuring that there are no open issues/PRs in that milestone.
