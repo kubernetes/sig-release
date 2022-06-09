@@ -7,7 +7,7 @@
 - [Release Team Selection][release-team-selection]
 - [Milestone Maintainers][milestone-maintainers]
 - [Filing exceptions][filing-exceptions]
-- [Visual Release Path][visual-release-path]
+- [Visual Release Path](#visual-release-path)
 
 ## Overview
 
