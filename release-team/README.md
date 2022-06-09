@@ -239,7 +239,7 @@ graph LR
     class MONITOR,OPEN,CF,ESCALATE,EAARB,TEST k8s;
 ```
 
-The diagram below shows a high level overview of the KEP process during a release cycle. 
+The diagram below provides an overview of the work done by KEP authors during the release process and how it relates to release deadlines.
 ```mermaid
 graph TD
     KEP_AUTHOR([KEP AUTHOR]) --> DISCUSS
