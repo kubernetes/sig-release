@@ -7,6 +7,7 @@
 - [Release Team Selection][release-team-selection]
 - [Milestone Maintainers][milestone-maintainers]
 - [Filing exceptions][filing-exceptions]
+- [Visual Release Path][visual-release-path]
 
 ## Overview
 
@@ -169,3 +170,161 @@ The process for filing an enhancement exception can be found [here][exceptions].
 [exceptions]: /releases/EXCEPTIONS.md
 [k/enhancements]: https://git.k8s.io/enhancements
 [k/org]: https://git.k8s.io/org
+
+## Visual Release Path
+
+The diagram below shows a high level overview of tasks of the release team sub teams (CI Signal, Bug Triage, Enhancements, Docs, Comms, Release Notes) during a release cycle.
+```mermaid
+graph LR
+    START([Start of Release Cycle])
+    START --> SET
+    START --> MONITOR
+    EF --> FBOD
+    EF --> CMT
+    EIP --> CF
+    CF --> DPD
+    TF --> FDRN
+
+    END((Release Day))
+    TEST --> END
+    EAARB --> END
+    DCF --> END
+    FBRD --> END
+    RNC --> END
+
+    subgraph Enhancements
+        SET[Start Enhancements Tracking] --> EF[Enhancements Freeze]
+        EF --> CF[Code Freeze]
+        CF --> TF[Test Freeze]
+    end
+
+    subgraph Docs
+        DPD[Docs Placeholder Deadline] --> DRD[Docs Ready For Review Deadline]
+        DRD --> DCF[Docs Complete Deadline]
+    end
+
+    subgraph Comms
+        FBOD[Feature Blog Opt-in Deadline] --> RBRD[Release Blog Ready For Review Deadline]
+        RBRD --> FBRD[Feature Blogs Ready For Review Deadline]
+    end
+
+    subgraph Release Notes
+        CMT[Start Collecting Major Themes] --> FDRN[Start Final Draft of Release Notes]
+        FDRN --> RNC[Release Note Complete]
+    end
+
+    subgraph Bug Triage
+        TA[Track All Issues and PRs] --> EIP[Escalate Issues and PRs]
+        TF --> EAARB[Ensure Attention on Any Release-Blocking and Major Bug Fix PRs]
+    end
+
+    subgraph CI Signal
+        MONITOR[Monitor E2E Tests and All Jobs In SIG Release Dashboards]
+        MONITOR --> OPEN[Open Issues For Failing Or Flaking Jobs]
+        CF --> ESCALATE[Escalate Any New Failures]
+        OPEN --> ESCALATE
+        EAARB --> TEST[Ensure Tests have Stabilized]
+        ESCALATE --> TEST
+    end
+
+    classDef cluster fill:#fff,stroke:#bbb,stroke-width:2px,color:#326ce5;
+    classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
+    classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
+    class START,END plain;
+    class SET,EF k8s;
+    class DPD,DRD,DCF k8s;
+    class FBOD,RBRD,FBRD k8s;
+    class CMT,FDRN,RNC k8s;
+    class TA,EIP,TF k8s;
+    class MONITOR,OPEN,CF,ESCALATE,EAARB,TEST k8s;
+```
+
+The diagram below shows a high level overview of the KEP process during a release cycle. 
+```mermaid
+graph TD
+    KEP_AUTHOR([KEP AUTHOR]) --> DISCUSS
+
+    subgraph Release Team Schedule
+        START[Start of Release Cycle]
+        START_ENHANCEMENTS_TRACKING[Start Enhancements Tracking]
+        ENHANCEMENTS_FREEZE[Enhancements Freeze]
+        FEATURE_BLOG_FREEZE[Feature Blog Freeze]
+        CODE_FREEZE[Code Freeze]
+        DOCS_PLACEHOLDER_FREEZE[Docs Placeholder PR Deadline]
+        TEST_FREEZE[Test Freeze]
+        DOCS_READY_FOR_REVIEW[Docs PR Ready For Review Deadline]
+        FEATURE_BLOG_READY_FOR_REVIEW[Feature Blog PR Ready For Review Deadline]
+        DOCS_FREEZE[Docs Freeze]
+        END[Release Day]
+
+        START --> START_ENHANCEMENTS_TRACKING
+        START_ENHANCEMENTS_TRACKING --> ENHANCEMENTS_FREEZE
+        ENHANCEMENTS_FREEZE --> FEATURE_BLOG_FREEZE
+        FEATURE_BLOG_FREEZE --> CODE_FREEZE
+        CODE_FREEZE --> DOCS_PLACEHOLDER_FREEZE
+        DOCS_PLACEHOLDER_FREEZE --> TEST_FREEZE
+        TEST_FREEZE --> DOCS_READY_FOR_REVIEW
+        DOCS_READY_FOR_REVIEW --> DOCS_FREEZE
+        DOCS_FREEZE --> FEATURE_BLOG_READY_FOR_REVIEW
+        FEATURE_BLOG_READY_FOR_REVIEW --> END
+    end
+
+    subgraph Before the Release
+        DISCUSS[Introduce and discuss your enhancements with sponsoring and participating SIGs]
+        ISSUE[Create or Update Enhancement Issue]
+        KEP[Create or Update Kubernetes Enhancements Proposal]
+
+        DISCUSS --> ISSUE
+        ISSUE --> KEP
+    end
+
+    subgraph During the Release
+        OPT_IN[Opt-in to the Release]
+        KEP_DONE[KEP Approved and Merged]
+    
+        CODE_COMPLETE[All k/k PRs Merged]
+        TEST_COMPLETE[All Test PRs Merged]
+        
+        FEATURE_BLOG_OPT_IN[Opt-in for Feature Blog]
+        FEATURE_BLOG_POST_COMPLETE[Complete Feature Blog]
+
+        DOCS_PLACEHOLDER_COMPLETE[Docs Placeholder PR Created]
+        DOCS_READY_TO_REVIEW_COMPLETE[Docs Finished, PR Ready for Review]
+        DOCS_COMPLETE[k/website PR Merged]
+
+        KEP --> OPT_IN
+        OPT_IN --> |Work On KEP| KEP_DONE
+        
+        KEP_DONE --> |Work On Code| CODE_COMPLETE
+        KEP_DONE --> |Work On Draft Doc| DOCS_PLACEHOLDER_COMPLETE
+        KEP_DONE --> |Work On Test| TEST_COMPLETE
+
+        KEP_DONE --> | Optional | FEATURE_BLOG_OPT_IN 
+        FEATURE_BLOG_OPT_IN --------> |Work On Blog Post| FEATURE_BLOG_POST_COMPLETE
+
+        DOCS_PLACEHOLDER_COMPLETE --> |Complete Doc| DOCS_READY_TO_REVIEW_COMPLETE
+        DOCS_READY_TO_REVIEW_COMPLETE ---> |Address Feedback From Reviewers | DOCS_COMPLETE
+    end
+
+    subgraph After the Release
+        END --> FEATURE_BLOG_PUBLISHED[Feature Blogs Published]
+    end
+
+    OPT_IN -.- START_ENHANCEMENTS_TRACKING
+    KEP_DONE -.- ENHANCEMENTS_FREEZE
+    CODE_COMPLETE -.- CODE_FREEZE
+    TEST_COMPLETE -.- TEST_FREEZE
+    DOCS_PLACEHOLDER_COMPLETE -.- DOCS_PLACEHOLDER_FREEZE
+    DOCS_READY_TO_REVIEW_COMPLETE -.- DOCS_READY_FOR_REVIEW
+    DOCS_COMPLETE -.- DOCS_FREEZE
+    FEATURE_BLOG_OPT_IN -.- FEATURE_BLOG_FREEZE
+    FEATURE_BLOG_POST_COMPLETE -.- FEATURE_BLOG_READY_FOR_REVIEW
+
+    classDef cluster fill:#fff,stroke:#bbb,stroke-width:2px,color:#326ce5;
+    classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
+    classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
+    class KEP_AUTHOR plain;
+    class START,ENHANCEMENTS_FREEZE,FEATURE_BLOG_FREEZE,CODE_FREEZE,DOCS_PLACEHOLDER_FREEZE,TEST_FREEZE,START_ENHANCEMENTS_TRACKING,DOCS_READY_FOR_REVIEW,FEATURE_BLOG_READY_FOR_REVIEW,DOCS_FREEZE,END,FEATURE_BLOG_PUBLISHED k8s;
+    class DISCUSS,ISSUE,KEP k8s;
+    class OPT_IN,KEP_DONE,CODE_COMPLETE,TEST_COMPLETE,DOCS_PLACEHOLDER_COMPLETE,DOCS_READY_TO_REVIEW_COMPLETE,DOCS_COMPLETE,FEATURE_BLOG_OPT_IN,FEATURE_BLOG_POST_COMPLETE k8s;
+```
