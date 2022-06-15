@@ -58,7 +58,6 @@ The 1.25 release cycle is as follows:
 | Team finalized                                                | Lead | Friday 27th May 2022                                                                                            | week 1   | |
 | Start Release Notes Draft                                     | Release Notes Lead | Tuesday 7th June 2022                                                                                           | week 3   | |
 | 1.25.0-alpha.1 released                                       | Branch Manager | Wednesday 15th June 2022                                                                                             | Week 4   | |
-
 | Production Readiness Soft Freeze                              | Enhancements Lead | Thursday 16th June 2022                                                                                         | week 4   | |
 | **Begin [Enhancements Freeze]**                               | Enhancements Lead | 02:00 UTC Friday 24th June 2022 / 18:00 PST Thursday 23rd June 2022                                             | week 5   | [master-blocking], [master-informing] |
 | 1.25.0-alpha.2 released                                       | Branch Manager | Tuesday 28th June 2022                                                                                                             | Week 6   | |
