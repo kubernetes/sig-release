@@ -84,6 +84,7 @@ The 1.25 release cycle is as follows:
 | Major Themes complete                                         | Release Notes Lead | Tuesday 16th August 2022                                                                                        | week 13  | |
 | Docs complete — All PRs reviewed and ready to merge           | Docs Lead | Tuesday 16th August 2022                                                                                        | week 13  | |
 | Feature blogs ready to review                                 | Enhancement Owner / SIG Leads | Tuesday 16th August 2022                                                                                        | week 13  | |
+| 1.25.0-rc.1 released                                          | Branch Manager | Tuesday 16th August 2022                                                                                                      | week 13  | |
 | Release Notes complete — reviewed & merged to `k/sig-release` | Release Notes Lead | 01:00 UTC Friday 19th August 2022 / 02:00 BST Friday 19th August 2022 / 18:00 PDT Thursday 18th August 2022     | week 13  | |
 | **v1.25.0 released**                                          | Branch Manager | Tuesday 23rd August 2022                                                                                        | week 14  | |
 | Release blog published                                        | Comms | Tuesday 23rd August 2022                                                                                        | week 14  | |
