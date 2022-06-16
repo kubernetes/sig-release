@@ -1,0 +1,3 @@
+pr: 110489
+releasenote:
+  text: 'kubeadm: Update CoreDNS to v1.9.3.'
