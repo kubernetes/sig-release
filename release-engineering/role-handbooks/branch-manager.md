@@ -896,10 +896,22 @@ The diagram below shows the actions needed to cut a Kubernetes release
 
 ```mermaid
 flowchart TD
-    Start --> issue["Create a release cut issue on GitHub"] -->|"update along the way"| issue
+    Start(["Start"]) --> issue["Create a release cut issue on GitHub"] -->|"update along the way"| issue
     issue --> thread["Create a Slack Thread in #release-management \n and cc release-managers"] -->|"update along the way"| thread
-    thread --> mock["Mock Release Cut"]
-    mock --> staging["Kick off Release"]
-    staging --> artifact_promotion["Promote and Sign Artifacts"]
-    artifact_promotion --> release["Release New Kubernetes Version"]
+    thread --> build_admins["Contact Google Build Admins \n for their availability to plan when to cut the release"]
+    build_admins --> mock["Mock run (stage and release)"]
+    mock --> staging["Nomock stage"]
+    staging --> artifact_promotion["Image promotion"]
+    artifact_promotion --> release["Nomock release"]
+    release --> cut_pkgs["Contact Google Build Admins to cut the deps/rpms"]
+    cut_pkgs --> announcement_chat["Notify Slack channel #release-management \n about the new release"]
+    announcement_chat --> announcement_email["Notify Community by Email \n using Krel"]
+    announcement_email --> close["Close release cut GitHub Issue"]
+    close --> done(["End"])
+
+    classDef cluster fill:#fff,stroke:#bbb,stroke-width:2px,color:#326ce5;
+    classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
+    classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
+    class Start,done plain;
+    class issue,thread,build_admins,mock,staging,artifact_promotion,release,cut_pkgs,announcement_chat,announcement_email,close k8s;
 ```
