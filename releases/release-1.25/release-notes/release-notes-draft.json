@@ -169,8 +169,8 @@
   },
   "108492": {
     "commit": "cc6619857027c634918a6d2cca9bab072c46f71f",
-    "text": "Introduce NodeInclusionPolicies to specify nodeAffinity/nodeTaint strategy when calculating pod topology spread skew.",
-    "markdown": "Introduce NodeInclusionPolicies to specify nodeAffinity/nodeTaint strategy when calculating pod topology spread skew. ([#108492](https://github.com/kubernetes/kubernetes/pull/108492), [@kerthcet](https://github.com/kerthcet)) [SIG API Machinery, Apps, Scheduling and Testing]",
+    "text": "Add `NodeInclusionPolicy` to `TopologySpreadConstraints` in PodSpec.",
+    "markdown": "Add `NodeInclusionPolicy` to `TopologySpreadConstraints` in PodSpec. ([#108492](https://github.com/kubernetes/kubernetes/pull/108492), [@kerthcet](https://github.com/kerthcet))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -804,8 +804,8 @@
   },
   "109764": {
     "commit": "77c37da7fc589df3f09194298ef928c88f6f12c2",
-    "text": "honor the framework delete timeout for pv",
-    "markdown": "Honor the framework delete timeout for pv ([#109764](https://github.com/kubernetes/kubernetes/pull/109764), [@saikat-royc](https://github.com/saikat-royc)) [SIG Storage and Testing]",
+    "text": "Change PV framework delete timeout to 5 minutes as documented",
+    "markdown": "Change PV framework delete timeout to 5 minutes as documented ([#109764](https://github.com/kubernetes/kubernetes/pull/109764), [@saikat-royc](https://github.com/saikat-royc))",
     "author": "saikat-royc",
     "author_url": "https://github.com/saikat-royc",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/109764",
@@ -1279,8 +1279,8 @@
   },
   "110095": {
     "commit": "84c8afeba39ec9ebbb231c67daf9862077299e01",
-    "text": "kubeadm: stop applying the \"node-role.kubernetes.io/master:NoSchedule\" taint to control plane nodes for new clusters. Remove the taint from existing control plane nodes during \"kubeadm upgrade apply\"",
-    "markdown": "Kubeadm: stop applying the \"node-role.kubernetes.io/master:NoSchedule\" taint to control plane nodes for new clusters. Remove the taint from existing control plane nodes during \"kubeadm upgrade apply\" ([#110095](https://github.com/kubernetes/kubernetes/pull/110095), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle and Testing]",
+    "text": "kubeadm: stop applying the `node-role.kubernetes.io/master:NoSchedule` taint to control plane nodes for new clusters. Remove the taint from existing control plane nodes during \"kubeadm upgrade apply\"",
+    "markdown": "Kubeadm: stop applying the `node-role.kubernetes.io/master:NoSchedule` taint to control plane nodes for new clusters. Remove the taint from existing control plane nodes during \"kubeadm upgrade apply\" ([#110095](https://github.com/kubernetes/kubernetes/pull/110095), [@neolit123](https://github.com/neolit123))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1608,8 +1608,8 @@
   },
   "110343": {
     "commit": "da813852d0d4d89de03358d587822cf149318b62",
-    "text": "kubeadm: during \"upgrade apply/diff/node\", in case the \"ClusterConfiguration.imageRepository\" stored in the \"kubeadm-config\" ConfigMap contains the legacy \"k8s.gcr.io\" repository, modify it to the new default \"registry.k8s.io\". Reflect the change in the in-cluster ConfigMap only during \"upgrade apply\".",
-    "markdown": "Kubeadm: during \"upgrade apply/diff/node\", in case the \"ClusterConfiguration.imageRepository\" stored in the \"kubeadm-config\" ConfigMap contains the legacy \"k8s.gcr.io\" repository, modify it to the new default \"registry.k8s.io\". Reflect the change in the in-cluster ConfigMap only during \"upgrade apply\". ([#110343](https://github.com/kubernetes/kubernetes/pull/110343), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: during \"upgrade apply/diff/node\", in case the `ClusterConfiguration.imageRepository` stored in the \"kubeadm-config\" `ConfigMap` contains the legacy \"k8s.gcr.io\" repository, modify it to the new default \"registry.k8s.io\". Reflect the change in the in-cluster `ConfigMap` only during \"upgrade apply\".",
+    "markdown": "Kubeadm: during \"upgrade apply/diff/node\", in case the `ClusterConfiguration.imageRepository` stored in the \"kubeadm-config\" `ConfigMap` contains the legacy \"k8s.gcr.io\" repository, modify it to the new default \"registry.k8s.io\". Reflect the change in the in-cluster `ConfigMap` only during \"upgrade apply\". ([#110343](https://github.com/kubernetes/kubernetes/pull/110343), [@neolit123](https://github.com/neolit123))",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/110343",
