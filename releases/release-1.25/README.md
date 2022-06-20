@@ -39,7 +39,7 @@ The 1.25 release cycle is as follows:
 
 - **Monday 23rd May 2022**: Week 1 — Release cycle begins
 - **Thursday 16th June 2022**: Week 4 — [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
-- **02:00 UTC Friday 24th June 2022** / **18:00 PST Thursday 23rd June 2022** : Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
+- **01:00 UTC Friday 24th June 2022** / **18:00 PDT Thursday 23rd June 2022** : Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Wednesday 27th July 2022**: Week 10 — [Release Retrospective][Retrospective Document] part 1
 - **01:00 UTC Wednesday 3rd August 2022** / **02:00 BST Wednesday 3rd August 2022** / **18:00 PDT Tuesday 2nd August 2022**: Week 11 — [Code Freeze](../release_phases.md#code-freeze)
 - **01:00 UTC Wednesday 10th August 2022** / **02:00 BST Wednesday 10th August 2022** / **18:00 PDT Tuesday 9th August 2022**: Week 12 — [Test Freeze](../release_phases.md#test-freeze)
@@ -59,7 +59,7 @@ The 1.25 release cycle is as follows:
 | Start Release Notes Draft                                     | Release Notes Lead | Tuesday 7th June 2022                                                                                           | week 3   | |
 | 1.25.0-alpha.1 released                                       | Branch Manager | Wednesday 15th June 2022                                                                                             | Week 4   | |
 | Production Readiness Soft Freeze                              | Enhancements Lead | Thursday 16th June 2022                                                                                         | week 4   | |
-| **Begin [Enhancements Freeze]**                               | Enhancements Lead | 02:00 UTC Friday 24th June 2022 / 18:00 PST Thursday 23rd June 2022                                             | week 5   | [master-blocking], [master-informing] |
+| **Begin [Enhancements Freeze]**                               | Enhancements Lead | 01:00 UTC Friday 24th June 2022 / 18:00 PDT Thursday 23rd June 2022                                             | week 5   | [master-blocking], [master-informing] |
 | 1.25.0-alpha.2 released                                       | Branch Manager | Tuesday 28th June 2022                                                                                                             | Week 6   | |
 | Begin Friday APAC-friendly meetings                           | Lead | Friday 8th July 2022                                                                                            | Week 7   | |
 | 1.25.0-alpha.3 released                                       | Branch Manager | Tuesday 9th July 2022                                                                                               | Week 9   | |
