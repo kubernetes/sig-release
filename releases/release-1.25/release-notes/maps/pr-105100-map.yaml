@@ -1,0 +1,3 @@
+pr: 105100
+releasenote:
+  text: Added sum feature to `kubectl top pod`
