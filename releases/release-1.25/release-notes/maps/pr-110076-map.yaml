@@ -1,0 +1,4 @@
+pr: 110076
+releasenote:
+  text: Informer/reflector callers can now catch and unwrap specific API errors by
+    type.
