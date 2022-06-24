@@ -1,0 +1,3 @@
+pr: 110491
+releasenote:
+  text: Lock CSIMigrationAzureDisk feature gate to default.

@@ -1,0 +1,5 @@
+pr: 109840
+releasenote:
+  text: 'kubeadm: only taint control plane nodes when the legacy "master" taint is
+    present. This avoids the bug where "kubeadm upgrade" will re-taint a control plane  node
+    with the new "control plane" taint even if the user explicitly untainted the node.'

@@ -1,0 +1,6 @@
+pr: 109798
+releasenote:
+  text: The beta `PodSecurityPolicy` admission plugin, deprecated since 1.21, is removed.
+    Follow the instructions at https://kubernetes.io/docs/tasks/configure-pod-container/migrate-from-psp/
+    to migrate to the built-in PodSecurity admission plugin (or to another third-party  policy
+    webhook) prior to upgrading to v1.25.

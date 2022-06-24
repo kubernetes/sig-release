@@ -1,0 +1,3 @@
+pr: 108777
+releasenote:
+  text: 'kubectl: support multiple resources for kubectl rollout status.'

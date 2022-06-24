@@ -1,0 +1,7 @@
+pr: 109435
+releasenote:
+  text: 'Feature gates that graduated to GA in 1.23 or earlier and were unconditionally
+    enabled have been removed: CSIServiceAccountToken, ConfigurableFSGroupPolicy,
+    EndpointSlice, EndpointSliceNodeName, EndpointSliceProxying, GenericEphemeralVolume,
+    IPv6DualStack, IngressClassNamespacedParams, StorageObjectInUseProtection, TTLAfterFinished,
+    VolumeSubpath, WindowsEndpointSliceProxying.'

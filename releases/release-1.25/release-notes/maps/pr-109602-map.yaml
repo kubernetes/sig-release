@@ -1,0 +1,4 @@
+pr: 109602
+releasenote:
+  text: The `metadata.clusterName` field is completely removed. This should not have
+    any user-visible impact.
