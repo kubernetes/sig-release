@@ -1,0 +1,4 @@
+pr: 109563
+releasenote:
+  text: The TopologySpreadConstraints will be shown in describe command for pods,
+    deployments, daemonsets, etc.

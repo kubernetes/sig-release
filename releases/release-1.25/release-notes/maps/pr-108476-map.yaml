@@ -1,0 +1,5 @@
+pr: 108476
+releasenote:
+  text: The kube-controller-manager's deprecated `--experimental-cluster-signing-duration`
+    flag is now removed. Adapt your machinery to use the `--cluster-signing-duration`
+    flag that is available since v1.19.

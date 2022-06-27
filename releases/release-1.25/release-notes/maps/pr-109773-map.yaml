@@ -1,0 +1,3 @@
+pr: 109773
+releasenote:
+  text: Add missing powershell option to kubectl completion command short description.

@@ -1,0 +1,4 @@
+pr: 109709
+releasenote:
+  text: When using the OpenStack legacy cloud provider, kubelet and KCM will ignore
+    unknown configuration directives rather than failing to start.

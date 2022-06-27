@@ -1,0 +1,3 @@
+pr: 110027
+releasenote:
+  text: Fix the bug that reported incorrect metrics for the cluster IP allocator.

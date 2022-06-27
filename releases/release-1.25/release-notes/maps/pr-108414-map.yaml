@@ -1,0 +1,5 @@
+pr: 108414
+releasenote:
+  text: 'kube-apiserver: Get, GetList and Watch requests that should be served by
+    the apiserver cacher during shutdown will be rejected to avoid a deadlock situation
+    leaving requests hanging.'
