@@ -31,7 +31,7 @@
 
 - Added sum feature to `kubectl top pod` ([#105100](https://github.com/kubernetes/kubernetes/pull/105100), [@lauchokyip](https://github.com/lauchokyip)) [SIG CLI]
 - Adds the `Apply` and `ApplyStatus` methods to the dynamic `ResourceInterface` ([#109443](https://github.com/kubernetes/kubernetes/pull/109443), [@kevindelgado](https://github.com/kevindelgado)) [SIG API Machinery and Testing]
-- Feature gate `CSIMigration` is locked to enabled. CSIMigration is GA now. The feature gate will be removed in 1.27 ([#110410](https://github.com/kubernetes/kubernetes/pull/110410), [@Jiawei0227](https://github.com/Jiawei0227)) [SIG Apps, Auth, Scheduling, Storage and Testing]
+- Feature gate `CSIMigration` is locked to enabled. CSIMigration is GA now. The feature gate will be removed in 1.27. ([#110410](https://github.com/kubernetes/kubernetes/pull/110410), [@Jiawei0227](https://github.com/Jiawei0227)) [SIG Apps, Auth, Scheduling, Storage and Testing]
 - Graduate ServiceIPStaticSubrange feature to beta (disabled by default) ([#110419](https://github.com/kubernetes/kubernetes/pull/110419), [@aojea](https://github.com/aojea)) [SIG Network]
 - Kube-up now includes CoreDNS version v1.9.3 ([#110488](https://github.com/kubernetes/kubernetes/pull/110488), [@mzaian](https://github.com/mzaian)) [SIG Cloud Provider]
 - Kubeadm: Added support for additional authentication strategies in `kubeadm join` with discovery/kubeconfig file: client-go authentication plugins (`exec`), `tokenFile`, and `authProvider` ([#110553](https://github.com/kubernetes/kubernetes/pull/110553), [@tallaxes](https://github.com/tallaxes)) [SIG Cluster Lifecycle]
