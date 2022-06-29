@@ -84,16 +84,6 @@ As well as becoming a member of the kubernetes GitHub organization as discussed 
 
 [Install Go](https://golang.org/doc/install) in your machine and follow the [instructions to build the release tools](https://github.com/kubernetes/release/tree/master/docs/krel#installation) in your machine. Check the system requirements in the krel documentation.
 
-#### Get a GitHub token
-
-4. Obtain a GitHub Personal Access Token with the repo scope:
-https://github.com/settings/tokens
-- [X] repo
-    - [X] repo: status
-    - [X] repo_deployment
-    - [X] public_repo
-    - [X] repo:invite
-
 #### Fork the kubernetes repositories
 
 Fork the following repositories to your GitHub account, and clone them using SSH:
