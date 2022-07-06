@@ -1,0 +1,4 @@
+pr: 110410
+releasenote:
+  text: Feature gate `CSIMigration` is locked to enabled. CSIMigration is GA now.The
+    feature gate will be removed in 1.27.

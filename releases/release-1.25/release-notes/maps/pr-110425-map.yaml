@@ -1,0 +1,4 @@
+pr: 110425
+releasenote:
+  text: 'client-go: fix an error in the fake client when create API requests are submitted
+    to subresources like pods/eviction'

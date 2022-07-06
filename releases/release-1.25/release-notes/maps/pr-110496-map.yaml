@@ -1,0 +1,3 @@
+pr: 110496
+releasenote:
+  text: 'Fix "dbus: connection closed by user" error after dbus daemon restart.'

@@ -1,0 +1,3 @@
+pr: 110764
+releasenote:
+  text: Improve kubectl run and debug attach problems error.

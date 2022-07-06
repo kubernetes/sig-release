@@ -1,0 +1,3 @@
+pr: 109250
+releasenote:
+  text: Fix scheduling of cronjobs with @every X schedules.

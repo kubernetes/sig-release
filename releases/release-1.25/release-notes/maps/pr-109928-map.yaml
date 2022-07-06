@@ -1,0 +1,4 @@
+pr: 109928
+releasenote:
+  text: Fix the bug that a ServiceIPStaticSubrange enabled cluster assigns duplicate
+    IP addresses when dynamic block is exhausted.
