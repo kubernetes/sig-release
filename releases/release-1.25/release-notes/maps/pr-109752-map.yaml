@@ -1,4 +1,3 @@
 pr: 109752
 releasenote:
-  text: 'apimachinery/clock: This deletes the apimachinery/clock package. Please use
-    k8s.io/utils/clock instead.'
+  text: Deleted the `apimachinery/clock` package. Please use `k8s.io/utils/clock` package instead.
