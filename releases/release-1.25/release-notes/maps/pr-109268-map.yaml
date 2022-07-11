@@ -1,4 +1,4 @@
 pr: 109268
 releasenote:
-  text: Fix strict server-side field validation treating metadata fields as unknown
+  text: Fixed strict server-side field validation treating metadata fields as unknown.
     fields.
