@@ -1,4 +1,4 @@
 pr: 109124
 releasenote:
-  text: Reduce time taken to sync proxy rules on Windows kube-proxy with kernelspace
+  text: Reduced time taken to sync proxy rules on Windows kube-proxy with kernelspace
     mode.
