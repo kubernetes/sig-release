@@ -1,0 +1,3 @@
+pr: 110656
+releasenote:
+  text: 'Kubeadm: Fixed duplicate `unix://` prefix in node annotation.'

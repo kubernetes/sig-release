@@ -1,0 +1,3 @@
+pr: 110668
+releasenote:
+  text: Removed unused flags from `kubectl run` command.

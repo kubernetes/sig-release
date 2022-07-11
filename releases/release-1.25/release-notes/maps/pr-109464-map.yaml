@@ -1,0 +1,3 @@
+pr: 109464
+releasenote:
+  text: Kubernetes binaries are now built-in `module` mode instead of `GOPATH` mode.

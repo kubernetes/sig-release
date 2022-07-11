@@ -1,0 +1,3 @@
+pr: 110411
+releasenote:
+  text: Promoted the `CSIMigrationPortworx` feature gate to Beta.

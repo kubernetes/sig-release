@@ -1,0 +1,3 @@
+pr: 110764
+releasenote:
+  text: Improved `kubectl run` and `kubectl debug` error messages upon attaching failures.

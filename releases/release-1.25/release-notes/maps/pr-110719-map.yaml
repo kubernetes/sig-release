@@ -1,0 +1,4 @@
+pr: 110719
+releasenote:
+  text: FibreChannel volume plugin may match the wrong device and wrong associated
+    devicemapper parent. This may cause a disater that pods attach wrong disks.

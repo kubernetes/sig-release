@@ -1,0 +1,4 @@
+pr: 110652
+releasenote:
+  text: Fixed a bug in `kubectl` that caused the wrong result length when using `--chunk-size` and
+    `--selector` together.

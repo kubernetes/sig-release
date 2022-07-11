@@ -1,0 +1,3 @@
+pr: 109721
+releasenote:
+  text: Fixed `NeedResize` build failure on Windows.

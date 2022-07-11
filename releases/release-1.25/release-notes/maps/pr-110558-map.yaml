@@ -1,0 +1,7 @@
+pr: 110558
+releasenote:
+  text: |-
+    Updated debian-base, debian-iptables, and setcap images:
+    - debian-base:bullseye-v1.3.0
+    - debian-iptables:bullseye-v1.4.0
+    - setcap:bullseye-v1.3.0

@@ -1,0 +1,9 @@
+pr: 110179
+releasenote:
+  text: |-
+    OpenAPI will no longer duplicate these schemas:
+    - `io.k8s.apimachinery.pkg.apis.meta.v1.DeleteOptions_v2`
+    - `io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta_v2`
+    - `io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference_v2`
+    - `io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails_v2`
+    - `io.k8s.apimachinery.pkg.apis.meta.v1.Status_v2`

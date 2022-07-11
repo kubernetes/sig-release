@@ -1,0 +1,4 @@
+pr: 110214
+releasenote:
+  text: 'E2e tests: fixed bug in the e2e image `agnhost:2.38` which hangs instead of exiting
+    if a `SIGTERM` signal is received and the `shutdown-delay` option is `0`.'

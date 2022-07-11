@@ -1,0 +1,9 @@
+pr: 110327
+releasenote:
+  text: 'Kubeadm: graduated the kubeadm specific feature gate `UnversionedKubeletConfigMap`
+    to GA and locked it to `true` by default. The kubelet related ConfigMap and RBAC
+    rules are now locked to have a simplified naming `*kubelet-config` instead of
+    the legacy naming `*kubelet-config-x.yy`, where `x.yy` was the version of the
+    control plane. If you have previously used the old naming format with `UnversionedKubeletConfigMap=false`,
+    you must manually copy the config map from `kube-system/kubelet-config-x.yy` to
+    `kube-system/kubelet-config` before upgrading to `v1.25`.'

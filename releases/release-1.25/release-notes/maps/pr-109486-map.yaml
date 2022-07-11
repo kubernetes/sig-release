@@ -1,0 +1,7 @@
+pr: 109486
+releasenote:
+  text: |-
+    Fixed `JobTrackingWithFinalizers` that:
+    - was declaring a job finished before counting all the created pods in the status
+    - was leaving pods with finalizers, blocking pod and job deletions
+     `JobTrackingWithFinalizers` is still disabled by default.

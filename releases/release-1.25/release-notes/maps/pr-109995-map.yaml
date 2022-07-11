@@ -1,0 +1,6 @@
+pr: 109995
+releasenote:
+  text: 'Kubeadm: added support for the flag `--print-manifest` to the addon phases
+    `kube-proxy` and `coredns` of `kubeadm init phase addon`. If this flag is `usedkubeadm`
+    will not apply a given addon and instead print to the terminal the API objects
+    that will be applied.'

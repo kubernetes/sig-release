@@ -1,0 +1,3 @@
+pr: 109124
+releasenote:
+  text: Reduced duration to sync proxy rules on Windows `kube-proxy` when using `kernelspace` mode.
