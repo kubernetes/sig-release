@@ -1,4 +1,4 @@
 pr: 110709
 releasenote:
-  text: '`kubeadm certs renew` and `kubeadm certs check-expiration`  now honor the
-    `cert-dir` on a working kubernetes cluster.'
+  text: The commands `kubeadm certs renew` and `kubeadm certs check-expiration` now honor the
+    `cert-dir` flag on a running Kubernetes cluster.
