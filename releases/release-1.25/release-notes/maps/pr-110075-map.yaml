@@ -1,4 +1,4 @@
 pr: 110075
 releasenote:
-  text: 'kubelet: add retry of checking Unix domain sockets on Windows nodes for the
-    plugin registration mechanism'
+  text: 'Kubelet: added retry of checking Unix domain sockets on Windows nodes for the
+    plugin registration mechanism.'
