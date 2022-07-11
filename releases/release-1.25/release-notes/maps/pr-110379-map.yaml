@@ -1,5 +1,5 @@
 pr: 110379
 releasenote:
-  text: Update base image for Windows pause container images to one built on Windows
+  text: Updated base image for Windows pause container images to one built on Windows
     machines to address limitations of building Windows container images on Linux
     machines.
