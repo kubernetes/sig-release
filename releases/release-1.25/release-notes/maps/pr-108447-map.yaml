@@ -1,4 +1,4 @@
 pr: 108447
 releasenote:
-  text: 'kubeadm: support experimental JSON/YAML output for "kubeadm upgrade plan"
-    with the "--output" flag'
+  text: 'Kubeadm: support experimental JSON/YAML output for `kubeadm upgrade plan`
+    with the `--output` flag.'
