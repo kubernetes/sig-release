@@ -1,3 +1,3 @@
 pr: 110145
 releasenote:
-  text: 'apiserver: fix audit of loading more than one webhooks.'
+  text: 'Apiserver: fixed audit of loading more than one webhooks.'
