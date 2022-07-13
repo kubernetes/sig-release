@@ -10,7 +10,7 @@
 | Release Notes | Carlos Santana ([@csantanapr](https://github.com/csantanapr) / Slack: `@csantanapr`) | Senthil Kumaran ([@orsenthil](https://github.com/orsenthil) / Slack: `Senthil Kumaran`), Divya Rani ([@Divya063](https://github.com/Divya063) / Slack: `Divya`), Rodolfo Martínez Vega ([@ramrodo](https://github.com/ramrodo) / Slack: `ramrodo`), Dipto Chakrabarty ([@DiptoChakrabarty](https://github.com/DiptoChakrabarty) / Slack: `Dipto`)|
 | Communications | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) | Debabrata Panigrahi ([@Debanitrkl](https://github.com/Debanitrkl) / Slack: `@deba`), Ana Margarita Medina ([@AnaMMedina21](https://github.com/AnaMMedina21) / Slack: `@Ana Margarita Medina`), Garima Negi ([@Garima-Negi](https://github.com/Garima-Negi) / Slack: `@garima negi`), Frederico Serrano Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsm` ) |
 | Emeritus Adviser | Rey Lejano ([@reylejano](https://github.com/reylejano)) / Slack: `@rlejano` | |
-| Branch Manager | Verónica López ([@Verolop](https://github.com/Verolop)) / Slack: `@veronica` | |
+| Branch Manager | Verónica López ([@Verolop](https://github.com/Verolop)) / Slack: `@veronica` | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)) / Slack: `@jerickar`, Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) / Slack: `@Joseph`) |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
