@@ -38,7 +38,7 @@ e.g., permanent, temporary
     - [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF)
     - [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y)
   - [ ] Is a [Kubernetes GitHub org member](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
-- [ ] Update [Release Managers](https://git.k8s.io/sig-release/release-managers.md) page to include the new Release Manager
+- [ ] Update [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md) page to include the new Release Manager
 
 <!-- 
 Uncomment the appropriate checklist for the Release Manager role the new candidate will hold.
@@ -100,7 +100,6 @@ As you work through the checklist, use the following PRs as guides:
 - [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
 - [ ] Manually add to the [Release Team Google Group](https://groups.google.com/a/kubernetes.io/g/release-team)
 - [ ] Update Slack `release-managers` User Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
-- [ ] Manually add to the [#release-private](https://kubernetes.slack.com/archives/GKEA5EL67) Slack channel
 -->
 
 <!--
