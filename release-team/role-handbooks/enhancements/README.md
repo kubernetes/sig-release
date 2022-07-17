@@ -139,7 +139,7 @@ It is important that this process be followed and documentation remain up-to-dat
 - Stay on top of comments in issues when owners respond and update their status in the sheet if necessary.
 - Mark features as `At Risk` if there is no communication, active PRs on the issues, or it is missing other requirements coming into Enhancement Freeze.
 - Start syncing with Communications Team on giving an induction what's coming up for the release.
-- Reach out to each [SIG on Slack](https://github.com/kubernetes/community/blob/master/sig-list.md) to communicate the Enhancements statuses
+- Reach out to each [SIG on Slack](https://github.com/kubernetes/community/blob/master/sig-list.md) tagging one or more chairs or technical leads to communicate the Enhancements statuses
   - For participating SIGs, mention the total number of Enhancements on the tracking spreadsheet for that SIG and the number of Enhancements that are `At Risk`
   - For non-participating SIGs, mention the process and deadline for adding Enhancements to the `KEP Collection` tab on the tracking spreadsheet
 - Send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
