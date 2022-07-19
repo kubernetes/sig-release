@@ -140,8 +140,14 @@ It is important that this process be followed and documentation remain up-to-dat
 - Mark features as `At Risk` if there is no communication, active PRs on the issues, or it is missing other requirements coming into Enhancement Freeze.
 - Start syncing with Communications Team on giving an induction what's coming up for the release.
 - Reach out to each [SIG on Slack](https://github.com/kubernetes/community/blob/master/sig-list.md) tagging one or more chairs or technical leads to communicate the Enhancements statuses
-  - For participating SIGs, mention the total number of Enhancements on the tracking spreadsheet for that SIG and the number of Enhancements that are `At Risk`
-  - For non-participating SIGs, mention the process and deadline for adding Enhancements to the `KEP Collection` tab on the tracking spreadsheet
+  - For participating SIGs, mention the total number of Enhancements on the tracking spreadsheet for that SIG and the number of Enhancements that are `At Risk`.  An example outreach on Slack could be structured as follows:
+
+    >    Hello sig-{{ SIG_NAME }}. Enhancements team here.  Just checking in as we approach enhancements freeze at {{ FREEZE_DATETIME }}. Your SIG has submitted {{ X }} enhancements for the {{ CYCLE }} cycle, and {{ Y }} enhancements are currently `At Risk`. Refer to the [announcement here](https://groups.google.com/a/kubernetes.io/g/dev/c/slwAhtVqjXk/m/zz-eeXdFBgAJ) for the list of review requirements. If your SIG still plans to submit any more enhancement, follow the [instructions here](https://groups.google.com/a/kubernetes.io/g/dev/c/slwAhtVqjXk/m/zz-eeXdFBgAJ) so the enhancements team can begin tracking. Please plan to make KEP updates to meet all of the requirements before enhancement freeze. Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
+
+  - For non-participating SIGs, mention the process and deadline for adding Enhancements to the `KEP Collection` tab on the tracking spreadsheet.  An example outreach on Slack could be structured as follows:
+
+    > Hello sig-{{ SIG_NAME }}. Enhancements team here.  Just checking in as we approach enhancements freeze at {{ FREEZE_DATETIME }}. Your SIG has not submitted any enhancements for the {{ CYCLE }} cycle. If your SIG still plans to submit an enhancement, follow the [instructions here](https://groups.google.com/a/kubernetes.io/g/dev/c/slwAhtVqjXk/m/zz-eeXdFBgAJ) so the enhancements team can begin tracking. If your SIG is not planning to submit an enhancement, please reply to this message to confirm. Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
+
 - Send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
 
 #### Enhancements Freeze (Week 3)
