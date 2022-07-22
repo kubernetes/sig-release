@@ -440,7 +440,8 @@ The following playbook can be used for reference to structure the meeting, you d
 2. Make sure to get the **host key**, otherwise you wont be able to claim host share the screen and start the recording
 
 ### Pre-Meeting
-1. Announce the release team meeting about an hour before in the sig-release slack channel.
+1. Add a new blank agenda entry to the meeting notes by copying the template and editing the details accordingly.
+2. Announce the release team meeting about an hour before in the sig-release slack channel.
 
 ```txt
 Hi folks! The release meeting takes place 1 hour from now
@@ -457,7 +458,7 @@ If anyone has anything they’d like to discuss, please add to the notes.
 3. *turn on the camera*
 4. *say hello to everyone* **"Hello all, let's wait a few minutes for everyone to join"**
 5. *post the meeting notes to the meeting chat* 
-6. *claim host* (you can claim host by opening the attendees window and clicking claim host)
+6. *claim host* (you can claim host by opening the attendees window and clicking claim host and inserting the host key)
 
 ***wait until 3 minutes past***
 
@@ -469,7 +470,7 @@ If anyone has anything they’d like to discuss, please add to the notes.
 ### During-Recording
 1. *start recording* record to the cloud, the automation will 'automagically' upload the recording to YouTube.
 2. *say hello to everyone* **"Hello everyone, my name is 'Alice' and I will be the host for this Kubernetes 'X.XX' release team meeting. Today is 'May' the '4th' and we are in week 'X' of the release cycle.**
-3. *code of conduct* **"Please be aware that this is a Kubernetes community meeting which falls under the Kubernetes code of conduce, which can be summarized to be excellent to each other, thank you all!"** 
+3. *code of conduct* **"Please be aware that this is a Kubernetes community meeting which falls under the Kubernetes code of conduct, which can be summarized to be excellent to each other, thank you all!"** 
 4. *open discussion items*: If something is on the list, you can read it out loud and wait for the person to respond. If there is nothing on the open discussion list, you can say something like: **"There is nothing in the open discussion section in the meeting notes. Is there anything to discuss before we get into the team updates?"** wait a few seconds - **"Okay, let's move on"** 
 5. *team updates*: **"Lets start with the team updates"** Call the person giving the update and wait for the update. If no one from the team gives the update, then you can review the last update given in a previous meeting, read it aloud, and then move to the next team. 
 
