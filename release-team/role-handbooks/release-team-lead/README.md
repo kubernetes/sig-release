@@ -435,9 +435,9 @@ Code Freeze will typically fall around Weeks 12 or 13 depending on the length or
 To coordinate and discuss each release the release lead with support of the shadows are hosting release team meetings (see the section X above).
 The following playbook can be used for reference to structure the meeting, you don't need to stick step by step (word by word), it should give guidance how a meeting usually is structured. 
 
-### Requirements to host the meeting as release team release lead / lead shadow
+### Requirements to host the meeting as Release Team Lead / Lead Shadow
 1. Install Zoom and check your settings (especially the audio)
-2. Make sure to get the **host key**, otherwise you wont be able to claim host share the screen and start the recording
+2. Make sure to get the **host key** from the Emeritus Adviser or Release Lead , otherwise you wont be able to claim host share the screen and start the recording
 
 ### Pre-Meeting
 1. Add a new blank agenda entry to the meeting notes by copying the template and editing the details accordingly.
