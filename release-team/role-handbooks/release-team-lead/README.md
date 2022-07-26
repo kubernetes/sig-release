@@ -471,8 +471,9 @@ If anyone has anything they’d like to discuss, please add to the notes.
 1. *start recording* record to the cloud, the automation will 'automagically' upload the recording to YouTube.
 2. *say hello to everyone* **"Hello everyone, my name is 'Alice' and I will be the host for this Kubernetes 'X.XX' release team meeting. Today is 'May' the '4th' and we are in week 'X' of the release cycle.**
 3. *code of conduct* **"Please be aware that this is a Kubernetes community meeting which falls under the Kubernetes code of conduct, which can be summarized to be excellent to each other, thank you all!"** 
-4. *open discussion items*: If something is on the list, you can read it out loud and wait for the person to respond. If there is nothing on the open discussion list, you can say something like: **"There is nothing in the open discussion section in the meeting notes. Is there anything to discuss before we get into the team updates?"** wait a few seconds - **"Okay, let's move on"** 
-5. *team updates*: **"Lets start with the team updates"** Call the person giving the update and wait for the update. If no one from the team gives the update, then you can review the last update given in a previous meeting, read it aloud, and then move to the next team. 
+4. *recording warning* **"This meeting is recorded and will be publicly posted to YouTube so please be mindful what you say is being recorded."**
+5. *open discussion items*: If something is on the list, you can read it out loud and wait for the person to respond. If there is nothing on the open discussion list, you can say something like: **"There is nothing in the open discussion section in the meeting notes. Is there anything to discuss before we get into the team updates?"** wait a few seconds - **"Okay, let's move on"** 
+6. *team updates*: **"Lets start with the team updates"** Call the person giving the update and wait for the update. Ask if there are any comments or questions for the team. If no one from the team gives the update, then you can review the last update given in a previous meeting, read it aloud, and then move to the next team. 
 
 ### Post-Recording
 1. *Off record discussions* **"I stopped the recording, is there anything you like to discuss off record?"** wait a few seconds
