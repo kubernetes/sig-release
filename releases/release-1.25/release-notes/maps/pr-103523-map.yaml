@@ -1,0 +1,4 @@
+pr: 103523
+releasenote:
+  text: |
+    `CSIMigrationvSphere` feature is now enabled by default.
