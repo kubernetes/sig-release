@@ -70,7 +70,7 @@ The 1.25 release cycle is as follows:
 | Release retrospective part 1                                  | Community | 17:00 UTC Wednesday 27th July 2022 / 10:00 PDT Wednesday 27th July 2022                                         | week 10  | |
 | Burndown Meetings daily                                       | Lead | Monday 1st August 2022                                                                                          | week 11  | |
 | **Begin [Code Freeze]**                                       | Branch Manager | 01:00 UTC Wednesday 3rd August 2022 / 02:00 BST Wednesday 3rd August 2022 / 18:00 PDT Tuesday 2nd August 2022   | week 11  | |
-| 1.25.0-beta.0 released                                        | Branch Manager | Wednesday 4th August 2022                                                                                              | week 11  | |
+| 1.25.0-beta.0 released                                        | Branch Manager | Thursday 4th August 2022                                                                                              | week 11  | |
 | Docs deadline — Open placeholder PRs                          | Docs Lead | Thursday 4th August 2022                                                                                        | week 11  | |
 | Deprecations and Removals blog published                      | Comms | Thursday 4th August 2022                                                                                        | week 11  | |
 | **[Test Freeze]**                                             | Branch Manager | 01:00 UTC Wednesday 10th August 2022 / 02:00 BST Wednesday 10th August 2022 / 18:00 PDT Tuesday 9th August 2022 | week 12  | |
