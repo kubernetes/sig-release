@@ -4,6 +4,8 @@ For minor (1.x) milestones, the Kubernetes project has enhancement complete date
 
 While the enhancement complete milestone dates are published well in advance, and the default is that missing the date means your enhancement will be part of the next milestone, there may be cases where an exception makes sense.
 
+Note that the exception process only applies to enhancements, not bugs managed by the Bugs Triage team.
+
 ## Exception Criteria
 
 Exceptions will be granted on the basis of *risk*, *length of exception required*, and *timeliness of exception request*.
@@ -38,8 +40,7 @@ Email them to:
 - release-team@kubernetes.io
 - kubernetes-sig-release@googlegroups.com
 
-[You should have *very high confidence* on the “additional time needed” number - we will not grant multiple exceptions for a enhancement.]
-
+[You should have *very high confidence* on the “additional time needed” number - we will not grant multiple exceptions for a enhancement. The same goes for over-estimating on the time needed. If the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.]
 
 Exceptions after enhancements freeze:
 If your issue was removed during the enhancements freeze please file an exception at your earliest convenience.  All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.  
