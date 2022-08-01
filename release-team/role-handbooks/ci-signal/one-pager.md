@@ -17,6 +17,7 @@ Always update the [CI Signal project board](https://github.com/kubernetes/sig-re
 
 **Onboarding**
 
+- 2022 [CI Signal Onboarding Clips](https://www.youtube.com/playlist?list=PL69nYSiGNLP2Lzsjir9W7S8u0UsQeeW71)
 - 2021 [CI Signal Onboarding](https://youtu.be/bttEcArAjUw)
 
 **Flaky tests**
