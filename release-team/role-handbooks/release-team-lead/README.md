@@ -432,7 +432,7 @@ Code Freeze will typically fall around Weeks 12 or 13 depending on the length or
 
 ## Release Team Meeting Host Playbook
 
-Release Team meetings are held to coordinate and discuss release-related activities. The Release Lead and Lead Shadows host Release Team meetings (see the section X above) throughout the release cycle.
+Release Team meetings are held to coordinate and discuss release-related activities. The Release Lead and Lead Shadows host Release Team meetings throughout the release cycle.
 The following playbook can be used for reference to structure the meeting, you don't need to stick step by step (word by word), it should give guidance how a meeting usually is structured. 
 
 ### Requirements to host the meeting as Release Team Lead / Lead Shadow
