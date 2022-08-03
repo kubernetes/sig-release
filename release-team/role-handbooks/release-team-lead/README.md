@@ -35,6 +35,12 @@ The release team leader role is responsible for coordinating release activities,
 - [Release Day](#release-day)
   - [Week 15](#week-15)
   - [Week 16](#week-16)
+- [Release Team Meeting Host Playbook](#release-team-meeting-host-playbook)
+  - [Requirements to host the meeting as release team release lead / lead shadow](#requirements-to-host-the-meeting-as-release-team-release-lead--lead-shadow)
+  - [Pre-Meeting](#pre-meeting)
+  - [Pre-Recording](#pre-recording)
+  - [During-Recording](#during-recording)
+  - [Post-Recording](#post-recording)
 
 ## Authority and Responsibility
 
@@ -421,6 +427,59 @@ Code Freeze will typically fall around Weeks 12 or 13 depending on the length or
 - Contact the [Release Managers Google Group][release-managers-group] to complete the Release Team Lead & Lead Shadows offboarding tasks from the previously-opened onboarding issue
 
 - Help fill any open positions for the next release milestone
+
+---
+
+## Release Team Meeting Host Playbook
+
+Release Team meetings are held to coordinate and discuss release-related activities. The Release Lead and Lead Shadows host Release Team meetings throughout the release cycle.
+The following playbook can be used for reference to structure the meeting, you don't need to stick step by step (word by word), it should give guidance how a meeting usually is structured. 
+
+### Requirements to host the meeting as Release Team Lead / Lead Shadow
+1. Install Zoom and check your settings (especially the audio)
+2. Make sure to get the **host key** from the Emeritus Adviser or Release Lead , otherwise you wont be able to claim host share the screen and start the recording
+
+### Pre-Meeting
+1. Add a new blank agenda entry to the meeting notes by copying the template and editing the details accordingly.
+2. Announce the release team meeting about an hour before in the sig-release slack channel.
+
+```txt
+Hi folks! The release meeting takes place 1 hour from now
+Links:
+* Agenda & Minutes: https://bit.ly/k8s125-releasemtg
+* Zoom Link: https://zoom.us/j/406805785?pwd=elQ1aVc0THZ, passcode 77777
+
+If anyone has anything they’d like to discuss, please add to the notes.
+```
+
+### Pre-Recording
+1. *Slack reminder (thread)* **"The meeting start now!"**
+2. *join the meeting*
+3. *turn on the camera*
+4. *say hello to everyone* **"Hello all, let's wait a few minutes for everyone to join"**
+5. *post the meeting notes to the meeting chat* 
+6. *claim host* (you can claim host by opening the attendees window and clicking claim host and inserting the host key)
+
+***wait until 3 minutes past***
+
+7. *post the meeting notes link to the meeting chat* **"I posted the meeting notes link to chat, please add yourself to the attendees list, thank you!"**
+8. **"Since it is now 3 minutes past, we will get started"**
+9. **"If you rather not get recorded, you can now turn off your video"**
+10. *open meeting notes and share screen* (NOTE: on Linux you might need to share the entire screen, a single window does not work sometimes)
+
+### During-Recording
+1. *start recording* record to the cloud, the automation will 'automagically' upload the recording to YouTube.
+2. *say hello to everyone* **"Hello everyone, my name is 'Alice' and I will be the host for this Kubernetes 'X.XX' release team meeting. Today is 'May' the '4th' and we are in week 'X' of the release cycle.**
+3. *code of conduct* **"Please be aware that this is a Kubernetes community meeting which falls under the Kubernetes code of conduct, which can be summarized to be excellent to each other, thank you all!"** 
+4. *recording warning* **"This meeting is recorded and will be publicly posted to YouTube so please be mindful what you say is being recorded."**
+5. *open discussion items*: If something is on the list, you can read it out loud and wait for the person to respond. If there is nothing on the open discussion list, you can say something like: **"There is nothing in the open discussion section in the meeting notes. Is there anything to discuss before we get into the team updates?"** wait a few seconds - **"Okay, let's move on"** 
+6. *team updates*: **"Lets start with the team updates"** Call the person giving the update and wait for the update. Ask if there are any comments or questions for the team. If no one from the team gives the update, then you can review the last update given in a previous meeting, read it aloud, and then move to the next team. 
+
+### Post-Recording
+1. *Off record discussions* **"I stopped the recording, is there anything you like to discuss off record?"** wait a few seconds
+2. *Thank all for joining the meeting* **"Thank you all again for joining the meeting, see you in the next one!"**
+
+---
 
 [branch-manager]: /release-managers.md#branch-managers
 [build-admins]: /release-managers.md#build-admins
