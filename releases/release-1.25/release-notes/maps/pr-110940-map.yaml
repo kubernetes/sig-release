@@ -1,0 +1,4 @@
+pr: 110940
+releasenote:
+  text: The kubelet no longer supports collecting accelerator metrics through cAdvisor.
+    The feature gate `DisableAcceleratorUsageMetrics` is now GA and cannot be disabled.

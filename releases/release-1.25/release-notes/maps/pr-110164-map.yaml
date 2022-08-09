@@ -1,0 +1,5 @@
+pr: 110164
+releasenote:
+  text: |-
+    The `priority_level_request_utilization` metric histogram is adjusted so that for the cases where `phase=waiting` the denominator is the cumulative capacity of all of the priority level's queues.
+     The `read_vs_write_current_requests` metric histogram is adjusted, in the case of using API Priority and Fairness instead of max-in-flight, to divide by the relevant limit: sum of queue capacities for waiting requests, sum of seat limits for executing requests.

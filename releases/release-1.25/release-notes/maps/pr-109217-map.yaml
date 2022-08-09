@@ -1,0 +1,5 @@
+pr: 109217
+releasenote:
+  text: Faster mount detection for linux kernel 5.10+ using openat2 speeding up pod
+    churn rates. On Kernel versions less 5.10, it will fallback to using the original
+    way of detecting mount points i.e by parsing /proc/mounts.

@@ -1,0 +1,3 @@
+pr: 111618
+releasenote:
+  text: The intree volume plugin flocker support was completely removed from Kubernetes.

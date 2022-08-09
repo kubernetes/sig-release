@@ -1,0 +1,4 @@
+pr: 111278
+releasenote:
+  text: Added a new `align-by-socket` policy option to cpu manager `static` policy.  When
+    enabled CPU's to be aligned at socket boundary rather than NUMA boundary.

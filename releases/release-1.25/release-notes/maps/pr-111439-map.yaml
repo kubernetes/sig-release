@@ -1,0 +1,3 @@
+pr: 111439
+releasenote:
+  text: Windows kubelet plugin Watcher now working as intended.

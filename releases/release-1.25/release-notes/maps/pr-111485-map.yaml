@@ -1,0 +1,4 @@
+pr: 111485
+releasenote:
+  text: GlusterFS provisioner (`kubernetes.io/glusterfs`) has been deprecated in this
+    release.

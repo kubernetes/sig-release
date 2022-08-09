@@ -1,4 +1,3 @@
 pr: 110292
 releasenote:
-  text: A change of a failed job condition status to `False` does not result in duplicate
-    conditions.
+  text: A change of a failed job condition status to `False` does not result in duplicate  conditions.

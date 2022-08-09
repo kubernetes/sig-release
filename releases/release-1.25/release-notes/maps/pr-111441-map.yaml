@@ -1,0 +1,3 @@
+pr: 111441
+releasenote:
+  text: Respect PodTopologySpread after rolling upgrades.

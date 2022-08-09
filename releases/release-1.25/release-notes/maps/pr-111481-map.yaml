@@ -1,0 +1,4 @@
+pr: 111481
+releasenote:
+  text: Added e2e test flag to specify which volume drivers should be installed. This  deprecated
+    the ENABLE_STORAGE_GCE_PD_DRIVER environment variable.

@@ -1,0 +1,3 @@
+pr: 110691
+releasenote:
+  text: Run kubelet, when there is an error exit, print the error log.

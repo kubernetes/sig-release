@@ -1,0 +1,3 @@
+pr: 111406
+releasenote:
+  text: Updated max azure data disk count map with new VM types.

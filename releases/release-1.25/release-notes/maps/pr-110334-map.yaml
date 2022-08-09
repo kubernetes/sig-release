@@ -1,0 +1,11 @@
+pr: 110334
+releasenote:
+  text: |-
+    In "large" clusters, kube-proxy in iptables mode will now sometimes
+    leave unused rules in iptables for a while (up to `--iptables-sync-period`)
+    before deleting them. This improves performance by not requiring it to
+    check for stale rules on every sync. (In smaller clusters, it will still
+    remove unused rules immediately once they are no longer used.)
+
+    (The threshold for "large" used here is currently "1000 endpoints" but
+    this is subject to change.)

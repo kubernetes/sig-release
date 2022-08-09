@@ -1,0 +1,3 @@
+pr: 109070
+releasenote:
+  text: Shell completion is now provided for the "--subresource" flag.
