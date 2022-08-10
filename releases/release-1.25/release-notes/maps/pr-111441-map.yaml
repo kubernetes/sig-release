@@ -1,3 +1,3 @@
 pr: 111441
 releasenote:
-  text: Respect PodTopologySpread after rolling upgrades.
+  text: The PodTopologySpread is respected after rolling upgrades.
