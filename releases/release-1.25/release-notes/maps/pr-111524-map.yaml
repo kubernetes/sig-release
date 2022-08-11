@@ -1,0 +1,4 @@
+pr: 111524
+releasenote:
+  text: Graduated `CustomResourceValidationExpressions` to `beta`. The `CustomResourceValidationExpressions`
+    feature gate is now enabled by default.

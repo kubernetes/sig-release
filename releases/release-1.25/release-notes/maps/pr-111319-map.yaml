@@ -1,0 +1,5 @@
+pr: 111319
+releasenote:
+  text: The `kubectl diff` changed to ignore managed fields by default, and a new
+    --show-managed-fields flag has been added to allow you to include managed fields
+    in the diff.

@@ -1,0 +1,3 @@
+pr: 104484
+releasenote:
+  text: Added container probe duration metrics.

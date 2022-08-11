@@ -1,0 +1,5 @@
+pr: 111467
+releasenote:
+  text: PersistentVolumeClaim objects are no longer left with storage class set to
+    `nil` forever, but will be updated retroactively once any StorageClass is set
+    or created as default.

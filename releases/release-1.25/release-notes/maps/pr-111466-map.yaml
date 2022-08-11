@@ -1,0 +1,4 @@
+pr: 111466
+releasenote:
+  text: Metric `running_managed_controllers` is enabled for Node IPAM controller in
+    KCM.

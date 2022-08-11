@@ -1,0 +1,3 @@
+pr: 111435
+releasenote:
+  text: Promoted CronJob's TimeZone support to beta.

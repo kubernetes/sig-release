@@ -1,7 +1,7 @@
 pr: 109938
 releasenote:
-  text: There is a new OCI image registry (`registry.k8s.io`) that can be used to pull
-    Kubernetes images. The old registry (`k8s.gcr.io`) will continue to be supported
+  text: There is a new OCI image registry (`registry.k8s.io`) that can be used to
+    pull Kubernetes images. The old registry (`k8s.gcr.io`) will continue to be supported
     for the foreseeable future, but the new name should perform better because it
     frontends equivalent mirrors in other clouds.  Please point your clusters to the
     new registry going forward. \n\nAdmission/Policy integrations that have an allowlist

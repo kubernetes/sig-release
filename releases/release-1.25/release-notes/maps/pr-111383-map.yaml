@@ -1,0 +1,5 @@
+pr: 111383
+releasenote:
+  text: 'kubeadm: enabled the --experimental-watch-progress-notify-interval flag for
+    etcd and set it to 5s. The flag specifies an interval at which etcd sends watch
+    data to the kube-apiserver.'

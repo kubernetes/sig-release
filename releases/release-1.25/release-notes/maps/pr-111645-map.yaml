@@ -1,0 +1,5 @@
+pr: 111645
+releasenote:
+  text: |-
+    Extended ContainerStatus CRI API to allow runtime response with container resource requests and limits that are in effect.
+    - UpdateContainerResources CRI API now supports both Linux and Windows.

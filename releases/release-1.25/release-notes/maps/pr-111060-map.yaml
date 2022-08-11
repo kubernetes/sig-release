@@ -1,0 +1,4 @@
+pr: 111060
+releasenote:
+  text: For Linux, `kube-proxy` uses a new “distroless” container image, instead of
+    an image based on Debian.

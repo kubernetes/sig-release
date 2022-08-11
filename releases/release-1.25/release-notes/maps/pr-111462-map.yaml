@@ -1,0 +1,4 @@
+pr: 111462
+releasenote:
+  text: Metric `running_managed_controllers` is enabled for Route,Service and Cloud
+    Node controllers in KCM and CCM.

@@ -1,0 +1,4 @@
+pr: 109263
+releasenote:
+  text: 'kubelet: added validation for labels provided with --node-labels. Malformed
+    labels will result in errors.'

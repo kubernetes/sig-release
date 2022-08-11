@@ -1,0 +1,4 @@
+pr: 111646
+releasenote:
+  text: Fixed JobTrackingWithFinalizers when a pod succeeds after the job is considered
+    failed, which led to API conflicts that blocked finishing the job.

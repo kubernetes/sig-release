@@ -1,0 +1,8 @@
+pr: 110959
+releasenote:
+  text: |-
+    Introduction of the `DisruptionTarget` pod condition type. Its `reason` field indicates the reason for pod termination:
+    - PreemptionByKubeScheduler (Pod preempted by kube-scheduler)
+    - DeletionByTaintManager (Pod deleted by taint manager due to NoExecute taint)
+    - EvictionByEvictionAPI (Pod evicted by Eviction API)
+    - DeletionByPodGC (an orphaned Pod deleted by PodGC)

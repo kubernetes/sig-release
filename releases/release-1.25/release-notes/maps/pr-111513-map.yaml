@@ -1,0 +1,6 @@
+pr: 111513
+releasenote:
+  text: Local Storage Capacity Isolation feature is GA in 1.25 release. For systems
+    (rootless) that cannot check root file system, please use kubelet config --local-storage-capacity-isolation=false
+    to disable this feature. Once disabled, pod cannot set local ephemeral storage
+    request/limit, and emptyDir sizeLimit niether.
