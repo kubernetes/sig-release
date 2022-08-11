@@ -300,8 +300,8 @@
   },
   "107490": {
     "commit": "cc69f8f65def3874e46941c3df0393db0e29b058",
-    "text": "kubelet: add log for volume metric collection taking too long",
-    "markdown": "Kubelet: add log for volume metric collection taking too long ([#107490](https://github.com/kubernetes/kubernetes/pull/107490), [@pacoxu](https://github.com/pacoxu))",
+    "text": "kubelet: added log for volume metric collection taking too long",
+    "markdown": "Kubelet: added log for volume metric collection taking too long ([#107490](https://github.com/kubernetes/kubernetes/pull/107490), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/107490",
@@ -467,10 +467,34 @@
     ],
     "feature": true
   },
+  "108554": {
+    "commit": "9ef16e7908e022d21c9bc02ca076662cbc7a6d4b",
+    "text": "Added a deprecated warning for node beta label usage in PV/SC/RC and CSI Storage Capacity",
+    "markdown": "Added a deprecated warning for node beta label usage in PV/SC/RC and CSI Storage Capacity ([#108554](https://github.com/kubernetes/kubernetes/pull/108554), [@pacoxu](https://github.com/pacoxu))",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/108554",
+    "pr_number": 108554,
+    "areas": [
+      "test",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "108624": {
     "commit": "3051cb2ba11a1bc581ecd83c74dae27bd00202f2",
-    "text": "API server's deprecated `--service-account-api-audiences` flag is now removed.  Use `--api-audiences` instead.",
-    "markdown": "API server's deprecated `--service-account-api-audiences` flag is now removed.  Use `--api-audiences` instead. ([#108624](https://github.com/kubernetes/kubernetes/pull/108624), [@ialidzhikov](https://github.com/ialidzhikov))",
+    "text": "API server's deprecated `--service-account-api-audiences` flag was removed.  Use `--api-audiences` instead.",
+    "markdown": "API server's deprecated `--service-account-api-audiences` flag was removed.  Use `--api-audiences` instead. ([#108624](https://github.com/kubernetes/kubernetes/pull/108624), [@ialidzhikov](https://github.com/ialidzhikov))",
     "author": "ialidzhikov",
     "author_url": "https://github.com/ialidzhikov",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/108624",
@@ -625,6 +649,45 @@
       "cli"
     ]
   },
+  "109090": {
+    "commit": "759785ea147bc13945d521eaba4a6592cbc0675f",
+    "text": "Introduced NodeIPAM support for multiple ClusterCIDRs (https://github.com/kubernetes/enhancements/issues/2593) as an alpha feature.\nSet feature gate `MultiCIDRRangeAllocator=true`, determines whether the `MultiCIDRRangeAllocator` controller can be used, while the kube-controller-manager flag below will pick the active controller.\nEnabled the `MultiCIDRRangeAllocator` by setting `--cidr-allocator-type=MultiCIDRRangeAllocator` flag in kube-controller-manager.",
+    "markdown": "Introduced NodeIPAM support for multiple ClusterCIDRs (https://github.com/kubernetes/enhancements/issues/2593) as an alpha feature.\n  Set feature gate `MultiCIDRRangeAllocator=true`, determines whether the `MultiCIDRRangeAllocator` controller can be used, while the kube-controller-manager flag below will pick the active controller.\n  Enabled the `MultiCIDRRangeAllocator` by setting `--cidr-allocator-type=MultiCIDRRangeAllocator` flag in kube-controller-manager. ([#109090](https://github.com/kubernetes/kubernetes/pull/109090), [@sarveshr7](https://github.com/sarveshr7))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/2593",
+        "type": "KEP"
+      }
+    ],
+    "author": "sarveshr7",
+    "author_url": "https://github.com/sarveshr7",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/109090",
+    "pr_number": 109090,
+    "areas": [
+      "test",
+      "apiserver",
+      "kubectl",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "api-machinery",
+      "auth",
+      "apps",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "109101": {
     "commit": "2d9d7287c11f04e067dd9b776716bd3725d8034f",
     "text": "None",
@@ -714,8 +777,8 @@
   },
   "109141": {
     "commit": "5ac563c507cd75c9382a2a23a3c8e3452138a021",
-    "text": "Default burst limit for the discovery client is now 300.",
-    "markdown": "Default burst limit for the discovery client is now 300. ([#109141](https://github.com/kubernetes/kubernetes/pull/109141), [@ulucinar](https://github.com/ulucinar))",
+    "text": "Default burst limit for the discovery client set to 300.",
+    "markdown": "Default burst limit for the discovery client set to 300. ([#109141](https://github.com/kubernetes/kubernetes/pull/109141), [@ulucinar](https://github.com/ulucinar))",
     "author": "ulucinar",
     "author_url": "https://github.com/ulucinar",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/109141",
@@ -835,8 +898,8 @@
   },
   "109263": {
     "commit": "451c00cc70a6d3a7062950b3969d3d9bb694fafa",
-    "text": "kubelet: add validation for labels provided with --node-labels. Malformed labels will result in errors.",
-    "markdown": "Kubelet: add validation for labels provided with --node-labels. Malformed labels will result in errors. ([#109263](https://github.com/kubernetes/kubernetes/pull/109263), [@FeLvi-zzz](https://github.com/FeLvi-zzz))",
+    "text": "kubelet: added validation for labels provided with --node-labels. Malformed labels will result in errors.",
+    "markdown": "Kubelet: added validation for labels provided with --node-labels. Malformed labels will result in errors. ([#109263](https://github.com/kubernetes/kubernetes/pull/109263), [@FeLvi-zzz](https://github.com/FeLvi-zzz))",
     "author": "FeLvi-zzz",
     "author_url": "https://github.com/FeLvi-zzz",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/109263",
@@ -2772,8 +2835,8 @@
   },
   "110495": {
     "commit": "a0e702763e01d246ce13a5d7608407204094748a",
-    "text": "Changes ownership semantics of PersistentVolume's spec.claimRef from `atomic` to `granular`.",
-    "markdown": "Changes ownership semantics of PersistentVolume's spec.claimRef from `atomic` to `granular`. ([#110495](https://github.com/kubernetes/kubernetes/pull/110495), [@alexzielenski](https://github.com/alexzielenski))",
+    "text": "Changed ownership semantics of PersistentVolume's spec.claimRef from `atomic` to `granular`.",
+    "markdown": "Changed ownership semantics of PersistentVolume's spec.claimRef from `atomic` to `granular`. ([#110495](https://github.com/kubernetes/kubernetes/pull/110495), [@alexzielenski](https://github.com/alexzielenski))",
     "author": "alexzielenski",
     "author_url": "https://github.com/alexzielenski",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/110495",
@@ -3111,8 +3174,8 @@
   },
   "110670": {
     "commit": "9ad4c5c0a09489976f0e3cba792705016555fbbc",
-    "text": "Unmount volumes correctly for reconstructed volumes even if mount operation fails after kubelet restart.",
-    "markdown": "Unmount volumes correctly for reconstructed volumes even if mount operation fails after kubelet restart. ([#110670](https://github.com/kubernetes/kubernetes/pull/110670), [@gnufied](https://github.com/gnufied))",
+    "text": "Unmounted volumes correctly for reconstructed volumes even if mount operation fails after kubelet restart.",
+    "markdown": "Unmounted volumes correctly for reconstructed volumes even if mount operation fails after kubelet restart. ([#110670](https://github.com/kubernetes/kubernetes/pull/110670), [@gnufied](https://github.com/gnufied))",
     "author": "gnufied",
     "author_url": "https://github.com/gnufied",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/110670",
@@ -3452,8 +3515,8 @@
   },
   "110868": {
     "commit": "bd2776e0c930ab149d8c0656e83f979fb017ce0a",
-    "text": "The endPort field in Network Policy is now promoted to GA\n\nNetwork Policy providers that support endPort field now can use it to specify a range of ports to apply a Network Policy.\n\nPreviously, each Network Policy could only target a single port.\n\nPlease be aware that endPort field MUST BE SUPPORTED by the Network Policy provider. In case your provider does not support endPort and this field is specified in a Network Policy, the Network Policy will be created covering only the port field (single port).",
-    "markdown": "The endPort field in Network Policy is now promoted to GA\n  \n  Network Policy providers that support endPort field now can use it to specify a range of ports to apply a Network Policy.\n  \n  Previously, each Network Policy could only target a single port.\n  \n  Please be aware that endPort field MUST BE SUPPORTED by the Network Policy provider. In case your provider does not support endPort and this field is specified in a Network Policy, the Network Policy will be created covering only the port field (single port). ([#110868](https://github.com/kubernetes/kubernetes/pull/110868), [@rikatz](https://github.com/rikatz))",
+    "text": "The `endPort` field in Network Policy is now promoted to GA\n\nNetwork Policy providers that support `endPort` field now can use it to specify a range of ports to apply a Network Policy.\n\nPreviously, each Network Policy could only target a single port.\n\nPlease be aware that `endPort` field MUST BE SUPPORTED by the Network Policy provider. In case your provider does not support `endPort` and this field is specified in a Network Policy, the Network Policy will be created covering only the port field (single port).",
+    "markdown": "The `endPort` field in Network Policy is now promoted to GA\n  \n  Network Policy providers that support `endPort` field now can use it to specify a range of ports to apply a Network Policy.\n  \n  Previously, each Network Policy could only target a single port.\n  \n  Please be aware that `endPort` field MUST BE SUPPORTED by the Network Policy provider. In case your provider does not support `endPort` and this field is specified in a Network Policy, the Network Policy will be created covering only the port field (single port). ([#110868](https://github.com/kubernetes/kubernetes/pull/110868), [@rikatz](https://github.com/rikatz))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3580,8 +3643,8 @@
   },
   "110948": {
     "commit": "6b6558a4639b556f2723dea8df62bcaa7f9846ed",
-    "text": "JobTrackingWithFinalizers enabled by default. This feature allows to keep track of the Job progress without relying on Pods staying in the apiserver.",
-    "markdown": "JobTrackingWithFinalizers enabled by default. This feature allows to keep track of the Job progress without relying on Pods staying in the apiserver. ([#110948](https://github.com/kubernetes/kubernetes/pull/110948), [@alculquicondor](https://github.com/alculquicondor))",
+    "text": "` JobTrackingWithFinalizers` enabled by default. This feature allows to keep track of the Job progress without relying on Pods staying in the apiserver.\n",
+    "markdown": "` JobTrackingWithFinalizers` enabled by default. This feature allows to keep track of the Job progress without relying on Pods staying in the apiserver.\n   ([#110948](https://github.com/kubernetes/kubernetes/pull/110948), [@alculquicondor](https://github.com/alculquicondor))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3629,8 +3692,8 @@
   },
   "110957": {
     "commit": "7d72ccf9a80e799a09dbcd5dab39dd00c9840aad",
-    "text": "Windows winkernel Kube-proxy no longer supports Windows HNS v1 APIs.",
-    "markdown": "Windows winkernel Kube-proxy no longer supports Windows HNS v1 APIs. ([#110957](https://github.com/kubernetes/kubernetes/pull/110957), [@papagalu](https://github.com/papagalu))",
+    "text": "Windows winkernel kube-proxy no longer supports Windows HNS v1 APIs.",
+    "markdown": "Windows winkernel kube-proxy no longer supports Windows HNS v1 APIs. ([#110957](https://github.com/kubernetes/kubernetes/pull/110957), [@papagalu](https://github.com/papagalu))",
     "author": "papagalu",
     "author_url": "https://github.com/papagalu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/110957",
@@ -3816,8 +3879,8 @@
   },
   "111061": {
     "commit": "cb41d5002ccde5f457989f157dd9e047e5bacdb6",
-    "text": "Make usage of key encipherment optional in API validation.",
-    "markdown": "Make usage of key encipherment optional in API validation. ([#111061](https://github.com/kubernetes/kubernetes/pull/111061), [@pacoxu](https://github.com/pacoxu))",
+    "text": "Made usage of key encipherment optional in API validation.",
+    "markdown": "Made usage of key encipherment optional in API validation. ([#111061](https://github.com/kubernetes/kubernetes/pull/111061), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111061",
@@ -3894,10 +3957,44 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "111113": {
+    "commit": "eefcf6aa801c5db48b564d0464470d623b8bfb79",
+    "text": "Introduced support for handling pod failures with respect to the configured pod failure policy rules.",
+    "markdown": "Introduced support for handling pod failures with respect to the configured pod failure policy rules. ([#111113](https://github.com/kubernetes/kubernetes/pull/111113), [@mimowo](https://github.com/mimowo))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3329-retriable-and-non-retriable-failures",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111113",
+    "pr_number": 111113,
+    "areas": [
+      "test",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "api-machinery",
+      "auth",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "111119": {
     "commit": "cdc60112a676010dbc0ba5650732386e2dedebd0",
-    "text": "Encrypt data with DEK using AES-GCM instead of AES-CBC for kms data encryption. No user action required. Reads with AES-GCM and AES-CBC will continue to be allowed.",
-    "markdown": "Encrypt data with DEK using AES-GCM instead of AES-CBC for kms data encryption. No user action required. Reads with AES-GCM and AES-CBC will continue to be allowed. ([#111119](https://github.com/kubernetes/kubernetes/pull/111119), [@aramase](https://github.com/aramase))",
+    "text": "Encrypted data with DEK using AES-GCM instead of AES-CBC for kms data encryption. No user action required. Reads with AES-GCM and AES-CBC will continue to be allowed.",
+    "markdown": "Encrypted data with DEK using AES-GCM instead of AES-CBC for kms data encryption. No user action required. Reads with AES-GCM and AES-CBC will continue to be allowed. ([#111119](https://github.com/kubernetes/kubernetes/pull/111119), [@aramase](https://github.com/aramase))",
     "documentation": [
       {
         "url": "https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/",
@@ -3980,8 +4077,8 @@
   },
   "111186": {
     "commit": "42786afae01328b9110a0e35c2cd7f31415373ca",
-    "text": "Fixed the gce firewall update when the destination IPs are changing so that firewalls reflect the IP updates of the LBs.",
-    "markdown": "Fixed the gce firewall update when the destination IPs are changing so that firewalls reflect the IP updates of the LBs. ([#111186](https://github.com/kubernetes/kubernetes/pull/111186), [@sugangli](https://github.com/sugangli))",
+    "text": "Fixed the GCE firewall update when the destination IPs are changing so that firewalls reflect the IP updates of the LBs.",
+    "markdown": "Fixed the GCE firewall update when the destination IPs are changing so that firewalls reflect the IP updates of the LBs. ([#111186](https://github.com/kubernetes/kubernetes/pull/111186), [@sugangli](https://github.com/sugangli))",
     "author": "sugangli",
     "author_url": "https://github.com/sugangli",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111186",
@@ -4017,8 +4114,8 @@
   },
   "111194": {
     "commit": "7156c96e5d8f4fe58a36000ff53af7e21743f49b",
-    "text": "Promote DaemonSet MaxSurge to GA. This means `--feature-gates=DaemonSetUpdateSurge=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation .",
-    "markdown": "Promote DaemonSet MaxSurge to GA. This means `--feature-gates=DaemonSetUpdateSurge=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation . ([#111194](https://github.com/kubernetes/kubernetes/pull/111194), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))",
+    "text": "Promoted DaemonSet MaxSurge to GA. This means `--feature-gates=DaemonSetUpdateSurge=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation .",
+    "markdown": "Promoted DaemonSet MaxSurge to GA. This means `--feature-gates=DaemonSetUpdateSurge=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation . ([#111194](https://github.com/kubernetes/kubernetes/pull/111194), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4055,8 +4152,8 @@
   },
   "111206": {
     "commit": "2ae27c89baa8caf2ce30d32c1dc79b89b4473a8b",
-    "text": "scheduler: include supported ScoringStrategyType list in error message for NodeResourcesFit plugin",
-    "markdown": "Scheduler: include supported ScoringStrategyType list in error message for NodeResourcesFit plugin ([#111206](https://github.com/kubernetes/kubernetes/pull/111206), [@SataQiu](https://github.com/SataQiu))",
+    "text": "scheduler: included supported ScoringStrategyType list in error message for NodeResourcesFit plugin",
+    "markdown": "Scheduler: included supported ScoringStrategyType list in error message for NodeResourcesFit plugin ([#111206](https://github.com/kubernetes/kubernetes/pull/111206), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111206",
@@ -4110,8 +4207,8 @@
   },
   "111254": {
     "commit": "3ffdfbe286ebcea5d75617da6accaf67f815e0cf",
-    "text": "For v1.25, Kubernetes will be using golang 1.19, In this PR we update to 1.19rc2 as GA is not yet available.",
-    "markdown": "For v1.25, Kubernetes will be using golang 1.19, In this PR we update to 1.19rc2 as GA is not yet available. ([#111254](https://github.com/kubernetes/kubernetes/pull/111254), [@dims](https://github.com/dims))",
+    "text": "For v1.25, Kubernetes will be using golang 1.19, In this PR the version is updated to 1.19rc2 as GA is not yet available.",
+    "markdown": "For v1.25, Kubernetes will be using golang 1.19, In this PR the version is updated to 1.19rc2 as GA is not yet available. ([#111254](https://github.com/kubernetes/kubernetes/pull/111254), [@dims](https://github.com/dims))",
     "author": "dims",
     "author_url": "https://github.com/dims",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111254",
@@ -4173,6 +4270,34 @@
     "duplicate_kind": true,
     "action_required": true
   },
+  "111258": {
+    "commit": "64ed9145452d2d1d324d2437566f1ea1ce76f226",
+    "text": "The `CSIInlineVolume` feature has moved from beta to GA.",
+    "markdown": "The `CSIInlineVolume` feature has moved from beta to GA. ([#111258](https://github.com/kubernetes/kubernetes/pull/111258), [@dobsonj](https://github.com/dobsonj))",
+    "author": "dobsonj",
+    "author_url": "https://github.com/dobsonj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111258",
+    "pr_number": 111258,
+    "areas": [
+      "test",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "auth",
+      "apps",
+      "instrumentation",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "111278": {
     "commit": "9fb1f67af784c0f6490a1ed35caf70c4368c9846",
     "text": "Added a new `align-by-socket` policy option to cpu manager `static` policy.  When enabled CPU's to be aligned at socket boundary rather than NUMA boundary.",
@@ -4201,8 +4326,8 @@
   },
   "111301": {
     "commit": "369a465fae0fb08f6064f59e746beb8d40d9bc16",
-    "text": "CSIMigrationGCE upgraded to GA and locked to true.",
-    "markdown": "CSIMigrationGCE upgraded to GA and locked to true. ([#111301](https://github.com/kubernetes/kubernetes/pull/111301), [@mattcary](https://github.com/mattcary))",
+    "text": "`CSIMigrationGCE` upgraded to GA and locked to true.\n",
+    "markdown": "`CSIMigrationGCE` upgraded to GA and locked to true.\n   ([#111301](https://github.com/kubernetes/kubernetes/pull/111301), [@mattcary](https://github.com/mattcary))",
     "author": "mattcary",
     "author_url": "https://github.com/mattcary",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111301",
@@ -4268,8 +4393,8 @@
   },
   "111383": {
     "commit": "bc974c8ab99fa53dc1dd0894f400efd76e5f8042",
-    "text": "kubeadm: enable the --experimental-watch-progress-notify-interval flag for etcd and set it to 5s. The flag specifies an interval at which etcd sends watch data to the kube-apiserver.",
-    "markdown": "Kubeadm: enable the --experimental-watch-progress-notify-interval flag for etcd and set it to 5s. The flag specifies an interval at which etcd sends watch data to the kube-apiserver. ([#111383](https://github.com/kubernetes/kubernetes/pull/111383), [@p0lyn0mial](https://github.com/p0lyn0mial))",
+    "text": "kubeadm: enabled the --experimental-watch-progress-notify-interval flag for etcd and set it to 5s. The flag specifies an interval at which etcd sends watch data to the kube-apiserver.",
+    "markdown": "Kubeadm: enabled the --experimental-watch-progress-notify-interval flag for etcd and set it to 5s. The flag specifies an interval at which etcd sends watch data to the kube-apiserver. ([#111383](https://github.com/kubernetes/kubernetes/pull/111383), [@p0lyn0mial](https://github.com/p0lyn0mial))",
     "author": "p0lyn0mial",
     "author_url": "https://github.com/p0lyn0mial",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111383",
@@ -4306,8 +4431,8 @@
   },
   "111402": {
     "commit": "cf2800b812807a14b11087a87f0656c4f4d132a3",
-    "text": "[Ephemeral Containers](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/) are now generally available. The `EphemeralContainers` feature gate is always enabled and should be removed from `--feature-gates` flag on the kube-apiserver and the kubelet command lines. The `EphemeralContainers` feature gate is [deprecated and scheduled for removal](https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation)  in a future release.",
-    "markdown": "[Ephemeral Containers](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/) are now generally available. The `EphemeralContainers` feature gate is always enabled and should be removed from `--feature-gates` flag on the kube-apiserver and the kubelet command lines. The `EphemeralContainers` feature gate is [deprecated and scheduled for removal](https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation)  in a future release. ([#111402](https://github.com/kubernetes/kubernetes/pull/111402), [@verb](https://github.com/verb))",
+    "text": "[Ephemeral Containers](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/) are now generally available (GA). The `EphemeralContainers` feature gate is always enabled and should be removed from `--feature-gates` flag on the kube-apiserver and the kubelet command lines. The `EphemeralContainers` feature gate is [deprecated and scheduled for removal](https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation)  in a future release.",
+    "markdown": "[Ephemeral Containers](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/) are now generally available (GA). The `EphemeralContainers` feature gate is always enabled and should be removed from `--feature-gates` flag on the kube-apiserver and the kubelet command lines. The `EphemeralContainers` feature gate is [deprecated and scheduled for removal](https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation)  in a future release. ([#111402](https://github.com/kubernetes/kubernetes/pull/111402), [@verb](https://github.com/verb))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4477,8 +4602,8 @@
   },
   "111441": {
     "commit": "3902a534197b3e4b7ca7a026f5027cfe0a3cc3aa",
-    "text": "Respect PodTopologySpread after rolling upgrades.",
-    "markdown": "Respect PodTopologySpread after rolling upgrades. ([#111441](https://github.com/kubernetes/kubernetes/pull/111441), [@denkensk](https://github.com/denkensk))",
+    "text": "The PodTopologySpread is respected after rolling upgrades.",
+    "markdown": "The PodTopologySpread is respected after rolling upgrades. ([#111441](https://github.com/kubernetes/kubernetes/pull/111441), [@denkensk](https://github.com/denkensk))",
     "author": "denkensk",
     "author_url": "https://github.com/denkensk",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111441",
@@ -4619,8 +4744,8 @@
   },
   "111479": {
     "commit": "1e18ff5b37674bc5abfc6438be563f275390a486",
-    "text": "CSIMigrationAWS upgraded to GA and locked to true.",
-    "markdown": "CSIMigrationAWS upgraded to GA and locked to true. ([#111479](https://github.com/kubernetes/kubernetes/pull/111479), [@wongma7](https://github.com/wongma7))",
+    "text": "`CSIMigrationAWS` upgraded to GA and locked to true.\n",
+    "markdown": "`CSIMigrationAWS` upgraded to GA and locked to true.\n   ([#111479](https://github.com/kubernetes/kubernetes/pull/111479), [@wongma7](https://github.com/wongma7))",
     "author": "wongma7",
     "author_url": "https://github.com/wongma7",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111479",
@@ -4828,8 +4953,8 @@
   },
   "111557": {
     "commit": "22eab136f6c85f83e56ff71ec6346ffd7cc5e977",
-    "text": "Fixed performance issue when creating large objects using SSA with fully unspecified schemas (preserveUnknownFields).",
-    "markdown": "Fixed performance issue when creating large objects using SSA with fully unspecified schemas (preserveUnknownFields). ([#111557](https://github.com/kubernetes/kubernetes/pull/111557), [@alexzielenski](https://github.com/alexzielenski))",
+    "text": "Fixed performance issue when creating large objects using SSA with fully unspecified schemas ( preserveUnknownFields ).",
+    "markdown": "Fixed performance issue when creating large objects using SSA with fully unspecified schemas ( preserveUnknownFields ). ([#111557](https://github.com/kubernetes/kubernetes/pull/111557), [@alexzielenski](https://github.com/alexzielenski))",
     "author": "alexzielenski",
     "author_url": "https://github.com/alexzielenski",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111557",
@@ -5012,8 +5137,8 @@
   },
   "111645": {
     "commit": "aea9f9887d08922378b9e7da0e81a46e733f2995",
-    "text": "Extends ContainerStatus CRI API to allow runtime response with container resource requests and limits that are in effect.\n- UpdateContainerResources CRI API now supports both Linux and Windows.\n\n  #     For details, see KEPs below.",
-    "markdown": "Extends ContainerStatus CRI API to allow runtime response with container resource requests and limits that are in effect.\n  - UpdateContainerResources CRI API now supports both Linux and Windows.\n  \n    #     For details, see KEPs below. ([#111645](https://github.com/kubernetes/kubernetes/pull/111645), [@vinaykul](https://github.com/vinaykul))",
+    "text": "Extended ContainerStatus CRI API to allow runtime response with container resource requests and limits that are in effect.\n- UpdateContainerResources CRI API now supports both Linux and Windows.",
+    "markdown": "Extended ContainerStatus CRI API to allow runtime response with container resource requests and limits that are in effect.\n  - UpdateContainerResources CRI API now supports both Linux and Windows. ([#111645](https://github.com/kubernetes/kubernetes/pull/111645), [@vinaykul](https://github.com/vinaykul))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5101,6 +5226,45 @@
     ],
     "feature": true,
     "duplicate": true
+  },
+  "111691": {
+    "commit": "d0c92aedbab1bd448a5271496689ae2a3f11debd",
+    "text": "Removed the recently re-introduced schedulability predicate (by PR: https://github.com/kubernetes/kubernetes/pull/109706) as to not have unschedulable nodes removed from load balancers back-end pools.",
+    "markdown": "Removed the recently re-introduced schedulability predicate (by PR: https://github.com/kubernetes/kubernetes/pull/109706) as to not have unschedulable nodes removed from load balancers back-end pools. ([#111691](https://github.com/kubernetes/kubernetes/pull/111691), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))",
+    "author": "alexanderConstantinescu",
+    "author_url": "https://github.com/alexanderConstantinescu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111691",
+    "pr_number": 111691,
+    "areas": [
+      "cloudprovider"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "network",
+      "cloud-provider"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111721": {
+    "commit": "137439194d8e27f34081218a7e8cfb1e31e74a69",
+    "text": "Fixed memory leak in the job controller related to `JobTrackingWithFinalizers`.",
+    "markdown": "Fixed memory leak in the job controller related to `JobTrackingWithFinalizers`. ([#111721](https://github.com/kubernetes/kubernetes/pull/111721), [@alculquicondor](https://github.com/alculquicondor))",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111721",
+    "pr_number": 111721,
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "apps"
+    ],
+    "duplicate_kind": true
   },
   "99685": {
     "commit": "ea7c57b2ee5be6a853421ebbca409b2b0fd3b1ee",

@@ -1,0 +1,4 @@
+pr: 111691
+releasenote:
+  text: 'Removed the recently re-introduced schedulability predicate (by PR: https://github.com/kubernetes/kubernetes/pull/109706)
+    as to not have unschedulable nodes removed from load balancers back-end pools.'

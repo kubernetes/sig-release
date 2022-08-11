@@ -1,0 +1,3 @@
+pr: 111721
+releasenote:
+  text: Fixed memory leak in the job controller related to `JobTrackingWithFinalizers`.

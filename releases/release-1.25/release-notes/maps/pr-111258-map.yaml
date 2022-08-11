@@ -1,0 +1,3 @@
+pr: 111258
+releasenote:
+  text: The `CSIInlineVolume` feature has moved from beta to GA.
