@@ -1,0 +1,4 @@
+pr: 111113
+releasenote:
+  text: Introduced support for handling pod failures with respect to the configured
+    pod failure policy rules.

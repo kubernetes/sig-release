@@ -3,7 +3,7 @@
 ### (No, really, you MUST read this before you upgrade)
 
 - Deprecated beta APIs scheduled for removal in 1.25 are no longer served. See https://kubernetes.io/docs/reference/using-api/deprecation-guide/#v1-25 for more information. ([#108797](https://github.com/kubernetes/kubernetes/pull/108797), [@deads2k](https://github.com/deads2k)) [SIG API Machinery, Instrumentation and Testing]
- - Encrypt data with DEK using AES-GCM instead of AES-CBC for kms data encryption. No user action required. Reads with AES-GCM and AES-CBC will continue to be allowed. ([#111119](https://github.com/kubernetes/kubernetes/pull/111119), [@aramase](https://github.com/aramase))
+ - Encrypted data with DEK using AES-GCM instead of AES-CBC for kms data encryption. No user action required. Reads with AES-GCM and AES-CBC will continue to be allowed. ([#111119](https://github.com/kubernetes/kubernetes/pull/111119), [@aramase](https://github.com/aramase))
  - End-to-end testing has been migrated from Ginkgo v1 to v2.
   
   When running test/e2e via the Ginkgo CLI, the v2 CLI must be used and `-timeout=24h` (or some other, suitable value) must be passed because the default timeout was reduced from 24h to 1h. When running it via `go test`, the corresponding `-args` parameter is `-ginkgo.timeout=24h`. To build the CLI in the Kubernetes repo, use `make all WHAT=github.com/onsi/ginkgo/v2/ginkgo`.
@@ -18,7 +18,7 @@
 
 ### Deprecation
 
-- API server's deprecated `--service-account-api-audiences` flag is now removed.  Use `--api-audiences` instead. ([#108624](https://github.com/kubernetes/kubernetes/pull/108624), [@ialidzhikov](https://github.com/ialidzhikov))
+- API server's deprecated `--service-account-api-audiences` flag was removed.  Use `--api-audiences` instead. ([#108624](https://github.com/kubernetes/kubernetes/pull/108624), [@ialidzhikov](https://github.com/ialidzhikov))
 - Ginkgo.Measure has been deprecated in Ginkgo V2, switch to use gomega/gmeasure instead ([#111065](https://github.com/kubernetes/kubernetes/pull/111065), [@chendave](https://github.com/chendave)) [SIG Autoscaling and Testing]
 - Kube-controller-manager: Removed flags  `deleting-pods-qps`, `deleting-pods-burst`, and `register-retry-count`. ([#109612](https://github.com/kubernetes/kubernetes/pull/109612), [@pandaamanda](https://github.com/pandaamanda))
 - Kubeadm: during "upgrade apply/diff/node", in case the `ClusterConfiguration.imageRepository` stored in the "kubeadm-config" `ConfigMap` contains the legacy "k8s.gcr.io" repository, modify it to the new default "registry.k8s.io". Reflect the change in the in-cluster `ConfigMap` only during "upgrade apply". ([#110343](https://github.com/kubernetes/kubernetes/pull/110343), [@neolit123](https://github.com/neolit123))
@@ -28,22 +28,25 @@
 - The `gcp` and `azure` auth plugins have been removed from client-go and kubectl. See https://github.com/Azure/kubelogin and https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke ([#110013](https://github.com/kubernetes/kubernetes/pull/110013), [@enj](https://github.com/enj))
 - The beta `PodSecurityPolicy` admission plugin, deprecated since 1.21, is removed. Follow the instructions at https://kubernetes.io/docs/tasks/configure-pod-container/migrate-from-psp/ to migrate to the built-in PodSecurity admission plugin (or to another third-party  policy webhook) prior to upgrading to v1.25. ([#109798](https://github.com/kubernetes/kubernetes/pull/109798), [@liggitt](https://github.com/liggitt))
 - VSphere releases less than 7.0u2 are not supported for in-tree vSphere volume  as of Kubernetes v1.25. Please consider upgrading vSphere (both ESXi and vCenter)  to 7.0u2 or above. ([#111255](https://github.com/kubernetes/kubernetes/pull/111255), [@divyenpatel](https://github.com/divyenpatel))
-- Windows winkernel Kube-proxy no longer supports Windows HNS v1 APIs. ([#110957](https://github.com/kubernetes/kubernetes/pull/110957), [@papagalu](https://github.com/papagalu))
+- Windows winkernel kube-proxy no longer supports Windows HNS v1 APIs. ([#110957](https://github.com/kubernetes/kubernetes/pull/110957), [@papagalu](https://github.com/papagalu))
 
 ### API Change
 
 - Add `NodeInclusionPolicy` to `TopologySpreadConstraints` in PodSpec. ([#108492](https://github.com/kubernetes/kubernetes/pull/108492), [@kerthcet](https://github.com/kerthcet))
 - Added KMS v2alpha1 support. ([#111126](https://github.com/kubernetes/kubernetes/pull/111126), [@aramase](https://github.com/aramase))
+- Added a deprecated warning for node beta label usage in PV/SC/RC and CSI Storage Capacity ([#108554](https://github.com/kubernetes/kubernetes/pull/108554), [@pacoxu](https://github.com/pacoxu))
 - Added a new feature gate `CheckpointRestore` to enable support to checkpoint containers. If enabled it is possible to checkpoint a container using the newly kubelet API (/checkpoint/{podNamespace}/{podName}/{containerName}). ([#104907](https://github.com/kubernetes/kubernetes/pull/104907), [@adrianreber](https://github.com/adrianreber)) [SIG Node and Testing]
 - Added alpha support for user namespaces in pods phase 1 (KEP 127, feature gate: UserNamespacesStatelessPodsSupport) ([#111090](https://github.com/kubernetes/kubernetes/pull/111090), [@rata](https://github.com/rata))
 - As of v1.25, the PodSecurity `restricted` level no longer requires pods that set .spec.os.name="windows" to also set Linux-specific securityContext fields. If a 1.25+ cluster has unsupported [out-of-skew](https://kubernetes.io/releases/version-skew-policy/#kubelet) nodes prior to v1.23 and wants to ensure namespaces enforcing the `restricted` policy continue to require Linux-specific securityContext fields on all pods, ensure a version of the `restricted` prior to v1.25 is selected by labeling the namespace (for example, `pod-security.kubernetes.io/enforce-version: v1.24`) ([#105919](https://github.com/kubernetes/kubernetes/pull/105919), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))
-- Changes ownership semantics of PersistentVolume's spec.claimRef from `atomic` to `granular`. ([#110495](https://github.com/kubernetes/kubernetes/pull/110495), [@alexzielenski](https://github.com/alexzielenski))
-- Extends ContainerStatus CRI API to allow runtime response with container resource requests and limits that are in effect.
-  - UpdateContainerResources CRI API now supports both Linux and Windows.
-  
-    #     For details, see KEPs below. ([#111645](https://github.com/kubernetes/kubernetes/pull/111645), [@vinaykul](https://github.com/vinaykul))
-- For v1.25, Kubernetes will be using golang 1.19, In this PR we update to 1.19rc2 as GA is not yet available. ([#111254](https://github.com/kubernetes/kubernetes/pull/111254), [@dims](https://github.com/dims))
+- Changed ownership semantics of PersistentVolume's spec.claimRef from `atomic` to `granular`. ([#110495](https://github.com/kubernetes/kubernetes/pull/110495), [@alexzielenski](https://github.com/alexzielenski))
+- Extended ContainerStatus CRI API to allow runtime response with container resource requests and limits that are in effect.
+  - UpdateContainerResources CRI API now supports both Linux and Windows. ([#111645](https://github.com/kubernetes/kubernetes/pull/111645), [@vinaykul](https://github.com/vinaykul))
+- For v1.25, Kubernetes will be using golang 1.19, In this PR the version is updated to 1.19rc2 as GA is not yet available. ([#111254](https://github.com/kubernetes/kubernetes/pull/111254), [@dims](https://github.com/dims))
+- Introduced NodeIPAM support for multiple ClusterCIDRs (https://github.com/kubernetes/enhancements/issues/2593) as an alpha feature.
+  Set feature gate `MultiCIDRRangeAllocator=true`, determines whether the `MultiCIDRRangeAllocator` controller can be used, while the kube-controller-manager flag below will pick the active controller.
+  Enabled the `MultiCIDRRangeAllocator` by setting `--cidr-allocator-type=MultiCIDRRangeAllocator` flag in kube-controller-manager. ([#109090](https://github.com/kubernetes/kubernetes/pull/109090), [@sarveshr7](https://github.com/sarveshr7))
 - Introduced PodHasNetwork condition for pods. ([#111358](https://github.com/kubernetes/kubernetes/pull/111358), [@ddebroy](https://github.com/ddebroy))
+- Introduced support for handling pod failures with respect to the configured pod failure policy rules. ([#111113](https://github.com/kubernetes/kubernetes/pull/111113), [@mimowo](https://github.com/mimowo))
 - Introduction of the `DisruptionTarget` pod condition type. Its `reason` field indicates the reason for pod termination:
   - PreemptionByKubeScheduler (Pod preempted by kube-scheduler)
   - DeletionByTaintManager (Pod deleted by taint manager due to NoExecute taint)
@@ -55,26 +58,27 @@
 - Make PodSpec.Ports' description clearer on how this information is only informational and how it can be incorrect. ([#110564](https://github.com/kubernetes/kubernetes/pull/110564), [@j4m3s-s](https://github.com/j4m3s-s)) [SIG API Machinery, Network and Node]
 - On compatible systems, a mounter's Unmount implementation is changed to not return an error when the specified target can be detected as not a mount point. On Linux, the behavior of detecting a mount point depends on `umount` command is validated when the mounter is created. Additionally, mount point checks will be skipped in CleanupMountPoint/CleanupMountWithForce if the mounter's Unmount having the changed behavior of not returning error when target is not a mount point. ([#109676](https://github.com/kubernetes/kubernetes/pull/109676), [@cartermckinnon](https://github.com/cartermckinnon)) [SIG Storage]
 - PersistentVolumeClaim objects are no longer left with storage class set to `nil` forever, but will be updated retroactively once any StorageClass is set or created as default. ([#111467](https://github.com/kubernetes/kubernetes/pull/111467), [@RomanBednar](https://github.com/RomanBednar))
-- Promote DaemonSet MaxSurge to GA. This means `--feature-gates=DaemonSetUpdateSurge=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation . ([#111194](https://github.com/kubernetes/kubernetes/pull/111194), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))
 - Promote StatefulSet minReadySeconds to GA. This means `--feature-gates=StatefulSetMinReadySeconds=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation ([#110896](https://github.com/kubernetes/kubernetes/pull/110896), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla)) [SIG API Machinery, Apps and Testing]
 - Promoted CronJob's TimeZone support to beta. ([#111435](https://github.com/kubernetes/kubernetes/pull/111435), [@soltysh](https://github.com/soltysh))
-- Respect PodTopologySpread after rolling upgrades. ([#111441](https://github.com/kubernetes/kubernetes/pull/111441), [@denkensk](https://github.com/denkensk))
-- Scheduler: include supported ScoringStrategyType list in error message for NodeResourcesFit plugin ([#111206](https://github.com/kubernetes/kubernetes/pull/111206), [@SataQiu](https://github.com/SataQiu))
+- Promoted DaemonSet MaxSurge to GA. This means `--feature-gates=DaemonSetUpdateSurge=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation . ([#111194](https://github.com/kubernetes/kubernetes/pull/111194), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))
+- Scheduler: included supported ScoringStrategyType list in error message for NodeResourcesFit plugin ([#111206](https://github.com/kubernetes/kubernetes/pull/111206), [@SataQiu](https://github.com/SataQiu))
 - The Go API for logging configuration in `k8s.io/component-base` was moved to `k8s.io/component-base/logs/api/v1`. The configuration file format and command line flags are the same as before. ([#105797](https://github.com/kubernetes/kubernetes/pull/105797), [@pohly](https://github.com/pohly))
 - The Pod `spec.podOS` field is promoted to GA. The `IdentifyPodOS` feature gate unconditionally enabled, and will no longer be accepted as a `--feature-gates` parameter in 1.27. ([#111229](https://github.com/kubernetes/kubernetes/pull/111229), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla))
+- The PodTopologySpread is respected after rolling upgrades. ([#111441](https://github.com/kubernetes/kubernetes/pull/111441), [@denkensk](https://github.com/denkensk))
+- The `CSIInlineVolume` feature has moved from beta to GA. ([#111258](https://github.com/kubernetes/kubernetes/pull/111258), [@dobsonj](https://github.com/dobsonj))
 - The `PodSecurity` admission plugin has graduated to GA and is enabled by default. The admission configuration version has been promoted to `pod-security.admission.config.k8s.io/v1`. ([#110459](https://github.com/kubernetes/kubernetes/pull/110459), [@wangyysde](https://github.com/wangyysde))
-- The `metadata.clusterName` field is completely removed. This should not have any user-visible impact. ([#109602](https://github.com/kubernetes/kubernetes/pull/109602), [@lavalamp](https://github.com/lavalamp))
-- The `minDomains` field in Pod Topology Spread is graduated to beta ([#110388](https://github.com/kubernetes/kubernetes/pull/110388), [@sanposhiho](https://github.com/sanposhiho)) [SIG API Machinery and Apps]
-- The command line flag `enable-taint-manager` for kube-controller-manager is deprecated and will be removed in 1.26. The feature that it supports, taint based eviction, is enabled by default and will continue to be implicitly enabled when the flag is removed. ([#111411](https://github.com/kubernetes/kubernetes/pull/111411), [@alculquicondor](https://github.com/alculquicondor))
-- The endPort field in Network Policy is now promoted to GA
+- The `endPort` field in Network Policy is now promoted to GA
   
-  Network Policy providers that support endPort field now can use it to specify a range of ports to apply a Network Policy.
+  Network Policy providers that support `endPort` field now can use it to specify a range of ports to apply a Network Policy.
   
   Previously, each Network Policy could only target a single port.
   
-  Please be aware that endPort field MUST BE SUPPORTED by the Network Policy provider. In case your provider does not support endPort and this field is specified in a Network Policy, the Network Policy will be created covering only the port field (single port). ([#110868](https://github.com/kubernetes/kubernetes/pull/110868), [@rikatz](https://github.com/rikatz))
+  Please be aware that `endPort` field MUST BE SUPPORTED by the Network Policy provider. In case your provider does not support `endPort` and this field is specified in a Network Policy, the Network Policy will be created covering only the port field (single port). ([#110868](https://github.com/kubernetes/kubernetes/pull/110868), [@rikatz](https://github.com/rikatz))
+- The `metadata.clusterName` field is completely removed. This should not have any user-visible impact. ([#109602](https://github.com/kubernetes/kubernetes/pull/109602), [@lavalamp](https://github.com/lavalamp))
+- The `minDomains` field in Pod Topology Spread is graduated to beta ([#110388](https://github.com/kubernetes/kubernetes/pull/110388), [@sanposhiho](https://github.com/sanposhiho)) [SIG API Machinery and Apps]
+- The command line flag `enable-taint-manager` for kube-controller-manager is deprecated and will be removed in 1.26. The feature that it supports, taint based eviction, is enabled by default and will continue to be implicitly enabled when the flag is removed. ([#111411](https://github.com/kubernetes/kubernetes/pull/111411), [@alculquicondor](https://github.com/alculquicondor))
 - This release added support for `NodeExpandSecret` for CSI driver client which enables the CSI drivers to make use of this secret while performing node expansion operation based on the user request. Previously there was no secret  provided as part of the `nodeexpansion` call, thus CSI drivers did not make use of the same while expanding the volume at the node side. ([#105963](https://github.com/kubernetes/kubernetes/pull/105963), [@zhucan](https://github.com/zhucan))
-- [Ephemeral Containers](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/) are now generally available. The `EphemeralContainers` feature gate is always enabled and should be removed from `--feature-gates` flag on the kube-apiserver and the kubelet command lines. The `EphemeralContainers` feature gate is [deprecated and scheduled for removal](https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation)  in a future release. ([#111402](https://github.com/kubernetes/kubernetes/pull/111402), [@verb](https://github.com/verb))
+- [Ephemeral Containers](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/) are now generally available (GA). The `EphemeralContainers` feature gate is always enabled and should be removed from `--feature-gates` flag on the kube-apiserver and the kubelet command lines. The `EphemeralContainers` feature gate is [deprecated and scheduled for removal](https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation)  in a future release. ([#111402](https://github.com/kubernetes/kubernetes/pull/111402), [@verb](https://github.com/verb))
 
 ### Feature
 
@@ -85,8 +89,6 @@
 - Added new flags into alpha events such as --output, --types, --no-headers. ([#110007](https://github.com/kubernetes/kubernetes/pull/110007), [@ardaguclu](https://github.com/ardaguclu))
 - Added sum feature to `kubectl top pod` ([#105100](https://github.com/kubernetes/kubernetes/pull/105100), [@lauchokyip](https://github.com/lauchokyip))
 - Added the `Apply` and `ApplyStatus` methods to the dynamic `ResourceInterface` ([#109443](https://github.com/kubernetes/kubernetes/pull/109443), [@kevindelgado](https://github.com/kevindelgado))
-- CSIMigrationAWS upgraded to GA and locked to true. ([#111479](https://github.com/kubernetes/kubernetes/pull/111479), [@wongma7](https://github.com/wongma7))
-- CSIMigrationGCE upgraded to GA and locked to true. ([#111301](https://github.com/kubernetes/kubernetes/pull/111301), [@mattcary](https://github.com/mattcary))
 - Feature gate `CSIMigration` was locked to enabled. `CSIMigration` is GA now. The feature gate will be removed in `v1.27`. ([#110410](https://github.com/kubernetes/kubernetes/pull/110410), [@Jiawei0227](https://github.com/Jiawei0227))
 - Feature gate `ProbeTerminationGracePeriod` is enabled by default. ([#108541](https://github.com/kubernetes/kubernetes/pull/108541), [@kerthcet](https://github.com/kerthcet))
 - Ginkgo: when e2e tests are invoked through ginkgo-e2e.sh, the default now is to use color escape sequences only when connected to a terminal. `GINKGO_NO_COLOR=y/n` can be used to override that default. ([#111633](https://github.com/kubernetes/kubernetes/pull/111633), [@pohly](https://github.com/pohly))
@@ -103,7 +105,6 @@
   
   (The threshold for "large" used here is currently "1000 endpoints" but
   this is subject to change.) ([#110334](https://github.com/kubernetes/kubernetes/pull/110334), [@danwinship](https://github.com/danwinship))
-- JobTrackingWithFinalizers enabled by default. This feature allows to keep track of the Job progress without relying on Pods staying in the apiserver. ([#110948](https://github.com/kubernetes/kubernetes/pull/110948), [@alculquicondor](https://github.com/alculquicondor))
 - Kube-up now includes CoreDNS version v1.9.3. ([#110488](https://github.com/kubernetes/kubernetes/pull/110488), [@mzaian](https://github.com/mzaian))
 - Kubeadm: Added support for additional authentication strategies in `kubeadm join` with discovery/kubeconfig file: client-go authentication plugins (`exec`), `tokenFile`, and `authProvider.` ([#110553](https://github.com/kubernetes/kubernetes/pull/110553), [@tallaxes](https://github.com/tallaxes))
 - Kubeadm: Update CoreDNS to v1.9.3. ([#110489](https://github.com/kubernetes/kubernetes/pull/110489), [@pacoxu](https://github.com/pacoxu))
@@ -139,6 +140,12 @@
   - debian-iptables:bullseye-v1.4.0
   - setcap:bullseye-v1.3.0 ([#110558](https://github.com/kubernetes/kubernetes/pull/110558), [@wespanther](https://github.com/wespanther))
 - When using the OpenStack legacy cloud provider, kubelet and KCM will ignore unknown configuration directives rather than failing to start. ([#109709](https://github.com/kubernetes/kubernetes/pull/109709), [@mdbooth](https://github.com/mdbooth))
+- ` JobTrackingWithFinalizers` enabled by default. This feature allows to keep track of the Job progress without relying on Pods staying in the apiserver.
+   ([#110948](https://github.com/kubernetes/kubernetes/pull/110948), [@alculquicondor](https://github.com/alculquicondor))
+- `CSIMigrationAWS` upgraded to GA and locked to true.
+   ([#111479](https://github.com/kubernetes/kubernetes/pull/111479), [@wongma7](https://github.com/wongma7))
+- `CSIMigrationGCE` upgraded to GA and locked to true.
+   ([#111301](https://github.com/kubernetes/kubernetes/pull/111301), [@mattcary](https://github.com/mattcary))
 - `CSIMigrationvSphere` feature is now enabled by default.
    ([#103523](https://github.com/kubernetes/kubernetes/pull/103523), [@divyenpatel](https://github.com/divyenpatel))
 - `MaxUnavailable` for `StatefulSets`, allows faster `RollingUpdate` by taking down more than 1 pod at a time. 
@@ -194,30 +201,31 @@
 - Fixed bug where CSI migration doesn't count inline volumes for attach limit. ([#107787](https://github.com/kubernetes/kubernetes/pull/107787), [@Jiawei0227](https://github.com/Jiawei0227))
 - Fixed error "dbus: connection closed by user" after dbus daemon restarts. ([#110496](https://github.com/kubernetes/kubernetes/pull/110496), [@kolyshkin](https://github.com/kolyshkin))
 - Fixed image pull failure when `IMDS` is unavailable in kubelet startup. ([#110523](https://github.com/kubernetes/kubernetes/pull/110523), [@andyzhangx](https://github.com/andyzhangx))
+- Fixed memory leak in the job controller related to `JobTrackingWithFinalizers`. ([#111721](https://github.com/kubernetes/kubernetes/pull/111721), [@alculquicondor](https://github.com/alculquicondor))
 - Fixed mounting of iSCSI volumes over IPv6 networks. ([#110688](https://github.com/kubernetes/kubernetes/pull/110688), [@jsafrane](https://github.com/jsafrane))
-- Fixed performance issue when creating large objects using SSA with fully unspecified schemas (preserveUnknownFields). ([#111557](https://github.com/kubernetes/kubernetes/pull/111557), [@alexzielenski](https://github.com/alexzielenski))
+- Fixed performance issue when creating large objects using SSA with fully unspecified schemas ( preserveUnknownFields ). ([#111557](https://github.com/kubernetes/kubernetes/pull/111557), [@alexzielenski](https://github.com/alexzielenski))
 - Fixed s.RuntimeCgroups error condition and Fixed possible wrong log print. ([#110648](https://github.com/kubernetes/kubernetes/pull/110648), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085))
 - Fixed scheduling of **CronJob** with `@every X` schedules. ([#109250](https://github.com/kubernetes/kubernetes/pull/109250), [@d-honeybadger](https://github.com/d-honeybadger))
 - Fixed strict server-side field validation treating `metadata` fields as unknown fields. ([#109268](https://github.com/kubernetes/kubernetes/pull/109268), [@liggitt](https://github.com/liggitt))
+- Fixed the GCE firewall update when the destination IPs are changing so that firewalls reflect the IP updates of the LBs. ([#111186](https://github.com/kubernetes/kubernetes/pull/111186), [@sugangli](https://github.com/sugangli))
 - Fixed the bug that a `ServiceIPStaticSubrange` enabled cluster assigns duplicate IP addresses when the dynamic block is exhausted. ([#109928](https://github.com/kubernetes/kubernetes/pull/109928), [@tksm](https://github.com/tksm))
-- Fixed the gce firewall update when the destination IPs are changing so that firewalls reflect the IP updates of the LBs. ([#111186](https://github.com/kubernetes/kubernetes/pull/111186), [@sugangli](https://github.com/sugangli))
 - For scheduler plugin developers: the scheduler framework's shared PodInformer is now initialized with empty indexers. This enables scheduler plugins to add their extra indexers. Note that only non-conflict indexers are allowed to be added. ([#110663](https://github.com/kubernetes/kubernetes/pull/110663), [@fromanirh](https://github.com/fromanirh)) [SIG Scheduling]
 - If the parent directory of the file specified in the `--audit-log-path` argument does not exist, Kubernetes now creates it. ([#110813](https://github.com/kubernetes/kubernetes/pull/110813), [@vpnachev](https://github.com/vpnachev)) [SIG Auth]
 - Informer/reflector callers can now catch and unwrap specific API errors by type. ([#110076](https://github.com/kubernetes/kubernetes/pull/110076), [@karlkfi](https://github.com/karlkfi))
 - Kube-apiserver: Get, GetList and Watch requests that should be served by the apiserver cacher during shutdown will be rejected to avoid a deadlock situation leaving requests hanging. ([#108414](https://github.com/kubernetes/kubernetes/pull/108414), [@aojea](https://github.com/aojea))
 - Kubeadm: Fixed duplicate `unix://` prefix in node annotation. ([#110656](https://github.com/kubernetes/kubernetes/pull/110656), [@pacoxu](https://github.com/pacoxu))
 - Kubeadm: a bug was fixed due to which configurable `KubernetesVersion` was not being respected during kubeadm join. ([#110791](https://github.com/kubernetes/kubernetes/pull/110791), [@SataQiu](https://github.com/SataQiu))
-- Kubeadm: enable the --experimental-watch-progress-notify-interval flag for etcd and set it to 5s. The flag specifies an interval at which etcd sends watch data to the kube-apiserver. ([#111383](https://github.com/kubernetes/kubernetes/pull/111383), [@p0lyn0mial](https://github.com/p0lyn0mial))
+- Kubeadm: enabled the --experimental-watch-progress-notify-interval flag for etcd and set it to 5s. The flag specifies an interval at which etcd sends watch data to the kube-apiserver. ([#111383](https://github.com/kubernetes/kubernetes/pull/111383), [@p0lyn0mial](https://github.com/p0lyn0mial))
 - Kubeadm: now sets the host `OS` environment variables when executing `crictl` during image pulls. This fixed a bug where `*PROXY` environment variables did not affect `crictl` internet connectivity. ([#110134](https://github.com/kubernetes/kubernetes/pull/110134), [@mk46](https://github.com/mk46))
 - Kubeadm: only taint control plane nodes when the legacy "master" taint is present. This avoids the bug where "kubeadm upgrade" will re-taint a control plane  node with the new "control plane" taint even if the user explicitly untainted the node. ([#109840](https://github.com/kubernetes/kubernetes/pull/109840), [@neolit123](https://github.com/neolit123))
 - Kubeadm: respect user specified image repository when using Kubernetes ci version ([#111017](https://github.com/kubernetes/kubernetes/pull/111017), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]
 - Kubeadm: support retry mechanism for removing container in reset phase ([#110837](https://github.com/kubernetes/kubernetes/pull/110837), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]
-- Kubelet: add log for volume metric collection taking too long ([#107490](https://github.com/kubernetes/kubernetes/pull/107490), [@pacoxu](https://github.com/pacoxu))
-- Kubelet: add validation for labels provided with --node-labels. Malformed labels will result in errors. ([#109263](https://github.com/kubernetes/kubernetes/pull/109263), [@FeLvi-zzz](https://github.com/FeLvi-zzz))
+- Kubelet: added log for volume metric collection taking too long ([#107490](https://github.com/kubernetes/kubernetes/pull/107490), [@pacoxu](https://github.com/pacoxu))
 - Kubelet: added retry of checking Unix domain sockets on Windows nodes for the plugin registration mechanism. ([#110075](https://github.com/kubernetes/kubernetes/pull/110075), [@luckerby](https://github.com/luckerby))
+- Kubelet: added validation for labels provided with --node-labels. Malformed labels will result in errors. ([#109263](https://github.com/kubernetes/kubernetes/pull/109263), [@FeLvi-zzz](https://github.com/FeLvi-zzz))
 - Kubelet: wait for node allocatable ephemeral-storage data. ([#101882](https://github.com/kubernetes/kubernetes/pull/101882), [@jackfrancis](https://github.com/jackfrancis))
 - Kubernetes now correctly handles "search ." in the host's resolv.conf file by preserving the "." entry in the "resolv.conf" that the kubelet writes to pods. ([#109441](https://github.com/kubernetes/kubernetes/pull/109441), [@Miciah](https://github.com/Miciah)) [SIG Network and Node]
-- Make usage of key encipherment optional in API validation. ([#111061](https://github.com/kubernetes/kubernetes/pull/111061), [@pacoxu](https://github.com/pacoxu))
+- Made usage of key encipherment optional in API validation. ([#111061](https://github.com/kubernetes/kubernetes/pull/111061), [@pacoxu](https://github.com/pacoxu))
 - ManagedFields time is correctly updated when the value of a managed field is modified. ([#110058](https://github.com/kubernetes/kubernetes/pull/110058), [@glebiller](https://github.com/glebiller))
 - OpenAPI will no longer duplicate these schemas:
   - `io.k8s.apimachinery.pkg.apis.meta.v1.DeleteOptions_v2`
@@ -229,6 +237,7 @@
 - Pods now post their `readiness` during termination. ([#110191](https://github.com/kubernetes/kubernetes/pull/110191), [@rphillips](https://github.com/rphillips))
 - Reduced duration to sync proxy rules on Windows `kube-proxy` when using `kernelspace` mode. ([#109124](https://github.com/kubernetes/kubernetes/pull/109124), [@daschott](https://github.com/daschott))
 - Reduced the number of cloud API calls and service downtime caused by excessive re-configurations of cluster LBs with externalTrafficPolicy=Local when node readiness changes (https://github.com/kubernetes/kubernetes/issues/111539). The service controller (in cloud-controller-manager) will avoid resyncing nodes which are transitioning between `Ready` / `NotReady` (only for for ETP=Local Services).  The LBs used for these services will solely rely on the health check probe defined by the `healthCheckNodePort` to determine if a particular node is to be used for traffic load balancing. ([#109706](https://github.com/kubernetes/kubernetes/pull/109706), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))
+- Removed the recently re-introduced schedulability predicate (by PR: https://github.com/kubernetes/kubernetes/pull/109706) as to not have unschedulable nodes removed from load balancers back-end pools. ([#111691](https://github.com/kubernetes/kubernetes/pull/111691), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))
 - Removed unused flags from `kubectl run` command. ([#110668](https://github.com/kubernetes/kubernetes/pull/110668), [@brianpursley](https://github.com/brianpursley))
 - Run kubelet, when there is an error exit, print the error log. ([#110691](https://github.com/kubernetes/kubernetes/pull/110691), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085))
 - The `priority_level_request_utilization` metric histogram is adjusted so that for the cases where `phase=waiting` the denominator is the cumulative capacity of all of the priority level's queues.
@@ -238,7 +247,7 @@
 - The namespace editors and admins can now create leases.coordination.k8s.io and should use this type for leaderelection instead of configmaps. ([#111472](https://github.com/kubernetes/kubernetes/pull/111472), [@deads2k](https://github.com/deads2k))
 - The node annotation alpha.kubernetes.io/provided-node-ip is no longer set ONLY when `--cloud-provider=external`.  Now, it is set on kubelet startup if the `--cloud-provider` flag is set at all, including the deprecated in-tree providers. ([#109794](https://github.com/kubernetes/kubernetes/pull/109794), [@mdbooth](https://github.com/mdbooth)) [SIG Network and Node]
 - The pod phase lifecycle guarantees that terminal Pods, those whose states are `Unready` or `Succeeded`, can not regress and will have all container stopped. Hence, terminal Pods will never be reachable and should not publish their IP addresses on the `Endpoints` or `EndpointSlices`, independently of the Service `TolerateUnready` option. ([#110255](https://github.com/kubernetes/kubernetes/pull/110255), [@robscott](https://github.com/robscott))
-- Unmount volumes correctly for reconstructed volumes even if mount operation fails after kubelet restart. ([#110670](https://github.com/kubernetes/kubernetes/pull/110670), [@gnufied](https://github.com/gnufied))
+- Unmounted volumes correctly for reconstructed volumes even if mount operation fails after kubelet restart. ([#110670](https://github.com/kubernetes/kubernetes/pull/110670), [@gnufied](https://github.com/gnufied))
 - Updated max azure data disk count map with new VM types. ([#111406](https://github.com/kubernetes/kubernetes/pull/111406), [@bennerv](https://github.com/bennerv))
 - Updated to cAdvisor v0.44.1 to fix an issue where metrics generated by kubelet for pod network stats were empty in some cases. ([#109658](https://github.com/kubernetes/kubernetes/pull/109658), [@bobbypage](https://github.com/bobbypage))
 - Upgraded Azure/go-autorest/autorest to v0.11.27. ([#110371](https://github.com/kubernetes/kubernetes/pull/110371), [@andyzhangx](https://github.com/andyzhangx))
@@ -256,7 +265,7 @@
 - Add missing powershell option to kubectl completion command short description. ([#109773](https://github.com/kubernetes/kubernetes/pull/109773), [@danielhelfand](https://github.com/danielhelfand))
 - Added e2e test flag to specify which volume drivers should be installed. This  deprecated the ENABLE_STORAGE_GCE_PD_DRIVER environment variable. ([#111481](https://github.com/kubernetes/kubernetes/pull/111481), [@mattcary](https://github.com/mattcary))
 - Changed PV framework delete timeout to 5 minutes as documented. ([#109764](https://github.com/kubernetes/kubernetes/pull/109764), [@saikat-royc](https://github.com/saikat-royc))
-- Default burst limit for the discovery client is now 300. ([#109141](https://github.com/kubernetes/kubernetes/pull/109141), [@ulucinar](https://github.com/ulucinar))
+- Default burst limit for the discovery client set to 300. ([#109141](https://github.com/kubernetes/kubernetes/pull/109141), [@ulucinar](https://github.com/ulucinar))
 - Deleted the `apimachinery/clock` package. Please use `k8s.io/utils/clock` package instead. ([#109752](https://github.com/kubernetes/kubernetes/pull/109752), [@MadhavJivrajani](https://github.com/MadhavJivrajani))
 - Feature gates that graduated to GA in 1.23 or earlier and were unconditionally enabled have been removed: CSIServiceAccountToken, ConfigurableFSGroupPolicy, EndpointSlice, EndpointSliceNodeName, EndpointSliceProxying, GenericEphemeralVolume, IPv6DualStack, IngressClassNamespacedParams, StorageObjectInUseProtection, TTLAfterFinished, VolumeSubpath, WindowsEndpointSliceProxying. ([#109435](https://github.com/kubernetes/kubernetes/pull/109435), [@pohly](https://github.com/pohly))
 - For Linux, `kube-proxy` uses a new “distroless” container image, instead of an image based on Debian. ([#111060](https://github.com/kubernetes/kubernetes/pull/111060), [@aojea](https://github.com/aojea))
