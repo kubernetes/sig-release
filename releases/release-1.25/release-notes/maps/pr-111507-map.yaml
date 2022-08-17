@@ -1,4 +1,0 @@
-pr: 111507
-releasenote:
-  text: New flag `--disable-compression-for-client-ips` can be used to control client
-    address ranges for which traffic shouldn't be compressed.

@@ -4854,25 +4854,6 @@
     ],
     "do_not_publish": true
   },
-  "111507": {
-    "commit": "c718f64b3f2ed9897bc9eaf6b36d99d17f38a57c",
-    "text": "New flag `--disable-compression-for-client-ips` can be used to control client address ranges for which traffic shouldn't be compressed.",
-    "markdown": "New flag `--disable-compression-for-client-ips` can be used to control client address ranges for which traffic shouldn't be compressed. ([#111507](https://github.com/kubernetes/kubernetes/pull/111507), [@mborsz](https://github.com/mborsz))",
-    "author": "mborsz",
-    "author_url": "https://github.com/mborsz",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111507",
-    "pr_number": 111507,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
-    "feature": true
-  },
   "111513": {
     "commit": "442574f3a7321ff0f34dec9bae67f28651dbabd2",
     "text": "Local Storage Capacity Isolation feature is GA in 1.25 release. For systems (rootless) that cannot check root file system, please use kubelet config --local-storage-capacity-isolation=false to disable this feature. Once disabled, pod cannot set local ephemeral storage request/limit, and emptyDir sizeLimit niether.",
