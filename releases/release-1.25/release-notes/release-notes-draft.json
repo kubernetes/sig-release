@@ -469,8 +469,8 @@
   },
   "108554": {
     "commit": "9ef16e7908e022d21c9bc02ca076662cbc7a6d4b",
-    "text": "Added a deprecated warning for node beta label usage in PV/SC/RC and CSI Storage Capacity",
-    "markdown": "Added a deprecated warning for node beta label usage in PV/SC/RC and CSI Storage Capacity ([#108554](https://github.com/kubernetes/kubernetes/pull/108554), [@pacoxu](https://github.com/pacoxu))",
+    "text": "Added a deprecated warning for node beta label usage in PV/SC/RC and CSI Storage Capacity.",
+    "markdown": "Added a deprecated warning for node beta label usage in PV/SC/RC and CSI Storage Capacity. ([#108554](https://github.com/kubernetes/kubernetes/pull/108554), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/108554",
@@ -651,8 +651,8 @@
   },
   "109090": {
     "commit": "759785ea147bc13945d521eaba4a6592cbc0675f",
-    "text": "Introduced NodeIPAM support for multiple ClusterCIDRs (https://github.com/kubernetes/enhancements/issues/2593) as an alpha feature.\nSet feature gate `MultiCIDRRangeAllocator=true`, determines whether the `MultiCIDRRangeAllocator` controller can be used, while the kube-controller-manager flag below will pick the active controller.\nEnabled the `MultiCIDRRangeAllocator` by setting `--cidr-allocator-type=MultiCIDRRangeAllocator` flag in kube-controller-manager.",
-    "markdown": "Introduced NodeIPAM support for multiple ClusterCIDRs (https://github.com/kubernetes/enhancements/issues/2593) as an alpha feature.\n  Set feature gate `MultiCIDRRangeAllocator=true`, determines whether the `MultiCIDRRangeAllocator` controller can be used, while the kube-controller-manager flag below will pick the active controller.\n  Enabled the `MultiCIDRRangeAllocator` by setting `--cidr-allocator-type=MultiCIDRRangeAllocator` flag in kube-controller-manager. ([#109090](https://github.com/kubernetes/kubernetes/pull/109090), [@sarveshr7](https://github.com/sarveshr7))",
+    "text": "Introduced NodeIPAM support for multiple ClusterCIDRs ([#2593](https://github.com/kubernetes/enhancements/issues/2593)) as an alpha feature.\nSet feature gate `MultiCIDRRangeAllocator=true`, determines whether the `MultiCIDRRangeAllocator` controller can be used, while the kube-controller-manager flag below will pick the active controller.\nEnabled the `MultiCIDRRangeAllocator` by setting `--cidr-allocator-type=MultiCIDRRangeAllocator` flag in kube-controller-manager.",
+    "markdown": "Introduced NodeIPAM support for multiple ClusterCIDRs ([#2593](https://github.com/kubernetes/enhancements/issues/2593)) as an alpha feature.\n  Set feature gate `MultiCIDRRangeAllocator=true`, determines whether the `MultiCIDRRangeAllocator` controller can be used, while the kube-controller-manager flag below will pick the active controller.\n  Enabled the `MultiCIDRRangeAllocator` by setting `--cidr-allocator-type=MultiCIDRRangeAllocator` flag in kube-controller-manager. ([#109090](https://github.com/kubernetes/kubernetes/pull/109090), [@sarveshr7](https://github.com/sarveshr7))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3513,6 +3513,21 @@
       "cluster-lifecycle"
     ]
   },
+  "110851": {
+    "commit": "8cecf183a659784b240d430e22b828b8e32c1c37",
+    "text": "Use checksums instead of fsyncs to ensure discovery cache integrity",
+    "markdown": "Use checksums instead of fsyncs to ensure discovery cache integrity ([#110851](https://github.com/kubernetes/kubernetes/pull/110851), [@negz](https://github.com/negz)) [SIG API Machinery]",
+    "author": "negz",
+    "author_url": "https://github.com/negz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110851",
+    "pr_number": 110851,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
   "110868": {
     "commit": "bd2776e0c930ab149d8c0656e83f979fb017ce0a",
     "text": "The `endPort` field in Network Policy is now promoted to GA\n\nNetwork Policy providers that support `endPort` field now can use it to specify a range of ports to apply a Network Policy.\n\nPreviously, each Network Policy could only target a single port.\n\nPlease be aware that `endPort` field MUST BE SUPPORTED by the Network Policy provider. In case your provider does not support `endPort` and this field is specified in a Network Policy, the Network Policy will be created covering only the port field (single port).",
@@ -5210,8 +5225,8 @@
   },
   "111691": {
     "commit": "d0c92aedbab1bd448a5271496689ae2a3f11debd",
-    "text": "Removed the recently re-introduced schedulability predicate (by PR: https://github.com/kubernetes/kubernetes/pull/109706) as to not have unschedulable nodes removed from load balancers back-end pools.",
-    "markdown": "Removed the recently re-introduced schedulability predicate (by PR: https://github.com/kubernetes/kubernetes/pull/109706) as to not have unschedulable nodes removed from load balancers back-end pools. ([#111691](https://github.com/kubernetes/kubernetes/pull/111691), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))",
+    "text": "Removed the recently re-introduced schedulability predicate ([#109706](https://github.com/kubernetes/kubernetes/pull/109706)) as to not have unschedulable nodes removed from load balancers back-end pools.",
+    "markdown": "Removed the recently re-introduced schedulability predicate ([#109706](https://github.com/kubernetes/kubernetes/pull/109706)) as to not have unschedulable nodes removed from load balancers back-end pools. ([#111691](https://github.com/kubernetes/kubernetes/pull/111691), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))",
     "author": "alexanderConstantinescu",
     "author_url": "https://github.com/alexanderConstantinescu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111691",
