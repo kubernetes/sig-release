@@ -8,7 +8,13 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.25
+# Kubernetes 1.25: Combiner
+
+<p align="center">
+  <img src="./logo/main-logo.png" height="500" alt="Kubernetes 1.25 Release Logo" />
+</p>
+
+Kubernetes 1.25 is named *Combiner*, to the combined force capable of changing the world!
 
 #### Links
 
