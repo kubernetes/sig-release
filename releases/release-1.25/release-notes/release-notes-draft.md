@@ -211,6 +211,7 @@ Introduce KMS v2alpha1 API to add performance, rotation, and observability impro
 - `MaxUnavailable` for `StatefulSets`, allows faster `RollingUpdate` by taking down more than 1 pod at a time. 
   The number of pods you want to take down during a `RollingUpdate` is configurable using `maxUnavailable` parameter.
    ([#109251](https://github.com/kubernetes/kubernetes/pull/109251), [@krmayankk](https://github.com/krmayankk))
+- The `gcp` and `azure` auth plugins have been restored to client-go and kubectl until https://issue.k8s.io/111911 is resolved in supported kubectl minor versions. ([#111918](https://github.com/kubernetes/kubernetes/pull/111918), [@liggitt](https://github.com/liggitt))
 
 ### Documentation
 
