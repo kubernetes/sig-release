@@ -9,7 +9,7 @@
 | Docs | Carolina Valencia ([@krol3](https://github.com/krol3) / Slack: `@krol`) |  |
 | Release Notes | Rodolfo Martínez Vega ([@ramrodo](https://github.com/ramrodo) / Slack: `ramrodo`) |  |
 | Communications | Frederico Serrano Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsm` ) |  |
-| Emeritus Adviser | Rey Lejano ([@reylejano](https://github.com/reylejano)) / Slack: `@rlejano` | |
+| Emeritus Adviser | Nabarun Pal ([@palnabarun](https://github.com/palnabarun)) / Slack: `@palnabarun` | |
 | Branch Manager | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)) / Slack: `@jerickar` |  |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
