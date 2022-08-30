@@ -3,10 +3,10 @@
 approvers:
   - palnabarun            # Emeritus Adviser
   - leonardpahlke         # Release Team Lead
-  #-                      # Release Team Lead Shadow
-  #-                      # Release Team Lead Shadow
-  #-                      # Release Team Lead Shadow
-  #-                      # Release Team Lead Shadow
+  - gracenng              # Release Team Lead Shadow
+  - katcosgrove           # Release Team Lead Shadow
+  - Priyankasaggu11929    # Release Team Lead Shadow
+  - nate-double-u         # Release Team Lead Shadow
 
 reviewers:
   - rhockenbury           # Enhancements
