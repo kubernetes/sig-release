@@ -41,9 +41,9 @@ The 1.26 release cycle is as follows:
 - **Thursday 29th September 2022**: Week 4 — [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **Friday 7th October 2022**: Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Monday 24th - Friday 28th October 2022**: Week 8 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
-- **Wednesday 9th November  2022**: Week 10 — [Release Retrospective][Retrospective Document] part 1
-- **Wednesday 16th November 2022**: Week 11 — [Code Freeze](../release_phases.md#code-freeze)
-- **Wednesday 23rd November 2022**: Week 12 — [Test Freeze](../release_phases.md#test-freeze)
+- **Wednesday 2th November  2022**: Week 10 — [Release Retrospective][Retrospective Document] part 1
+- **Wednesday 9th November 2022**: Week 10 — [Code Freeze](../release_phases.md#code-freeze)
+- **Wednesday 16rd November 2022**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 29th November 2022**: Week 13 — Docs must be completed and reviewed
 - **Tuesday 6th December 2022**: Week 14 — Kubernetes v1.26.0 released
 - **TBC**: Week 15 — [Release Retrospective][Retrospective Document] part 2
@@ -64,23 +64,23 @@ The 1.26 release cycle is as follows:
 | Begin Friday APAC-friendly meetings                           | Lead | Friday 21th October 2022                                                                                                          | Week 7   | |
 | KubeCon NA                                                    | | October 24-28 2022                                                                                                                     | week 8   | |
 | 1.26.0-alpha.3 released                                       | Branch Manager | Tuesday 1th November 2022                                                                                               | Week 9   | |
-| **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead | Monday 7th November 2022                                                                                                          | week 10  | [1.26-blocking], [master-blocking], [master-informing] |
-| **Call for [Exceptions][Exception]**                          | Lead | Monday 7th November 2022                                                                                                          | week 10  | |
-| Brace Yourself, Code Freeze is Coming                         | Comms / Bug Triage | Monday 7th November 2022                                                                                            | week 10  | |
-| **Begin Feature blog freeze**                                 | Comms Lead | 01:00 UTC Wednesday 9th November 2022 / 18:00 PDT Tuesday 8th November 2022                                                 | week 10  | |
-| Release retrospective part 1                                  | Community | 17:00 UTC Wednesday 9th November 2022 / 10:00 PDT Wednesday 9th November 2022                                                | week 10  | |
-| Burndown Meetings daily                                       | Lead | Monday 14st November 2022                                                                                                         | week 11  | |
-| **Begin [Code Freeze]**                                       | Branch Manager | 01:00 UTC Wednesday 16th November 2022 / 02:00 BST Wednesday 16th November 2022 / 18:00 PDT Tuesday 15th November 2022  | week 11  | |
-| 1.26.0-beta.0 released                                        | Branch Manager | Thursday 17th November 2022                                                                                             | week 11  | |
-| Docs deadline — Open placeholder PRs                          | Docs Lead | Thursday 17th November 2022                                                                                                  | week 11  | |
-| Deprecations and Removals blog published                      | Comms | Thursday 17th November 2022                                                                                                      | week 11  | |
-| **[Test Freeze]**                                             | Branch Manager | 01:00 UTC Wednesday 23rd November 2022 / 02:00 BST Wednesday 23rd November 2022 / 18:00 PDT Tuesday 22nd November 2022  | week 12  | |
-| Docs deadline — PRs ready for review                          | Docs Lead | Tuesday 22nd November 2022                                                                                                   | week 12  | |
-| 1.26.0-rc.0 released                                          | Branch Manager | Tuesday 22nd November 2022                                                                                              | week 12  | |
-| release-1.26 branch created                                   | Branch Manager | Tuesday 22nd November 2022                                                                                              | week 12  | |
-| release-1.26 jobs created                                     | Branch Manager | Tuesday 22nd November 2022                                                                                              | week 12  | |
-| Start final draft of Release Notes                            | Release Notes Lead | Tuesday 22nd November 2022                                                                                          | week 12  | |
-| Release blog ready to review                                  | Comms / Docs | 01:00 UTC Wednesday 23rd November 2022 / 02:00 BST Wednesday 23rd November 2022 / 18:00 PDT Tuesday 22nd November 2022    | week 12  | |
+| **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead | Monday 31st October 2022                                                                                                          | week 9   | [1.26-blocking], [master-blocking], [master-informing] |
+| **Call for [Exceptions][Exception]**                          | Lead | Monday 31st October 2022                                                                                                          | week 9   | |
+| Brace Yourself, Code Freeze is Coming                         | Comms / Bug Triage | Monday 31st October 2022                                                                                            | week 9   | |
+| **Begin Feature blog freeze**                                 | Comms Lead | 01:00 UTC Wednesday 2nd November 2022 / 18:00 PDT Tuesday 1st November 2022                                                 | week 9   | |
+| Release retrospective part 1                                  | Community | 17:00 UTC Wednesday 2nd November 2022 / 10:00 PDT Wednesday 2nd November 2022                                                | week 9   | |
+| Burndown Meetings daily                                       | Lead | Monday 7th November 2022                                                                                                          | week 10  | |
+| **Begin [Code Freeze]**                                       | Branch Manager | 01:00 UTC Wednesday 9th November 2022 / 02:00 BST Wednesday 9th November 2022 / 18:00 PDT Tuesday 8th November 2022     | week 10  | |
+| 1.26.0-beta.0 released                                        | Branch Manager | Thursday 10th November 2022                                                                                             | week 10  | |
+| Docs deadline — Open placeholder PRs                          | Docs Lead | Thursday 10th November 2022                                                                                                  | week 10  | |
+| Deprecations and Removals blog published                      | Comms | Thursday 10th November 2022                                                                                                      | week 10  | |
+| **[Test Freeze]**                                             | Branch Manager | 01:00 UTC Wednesday 16th November 2022 / 02:00 BST Wednesday 16th November 2022 / 18:00 PDT Tuesday 15th November 2022  | week 11  | |
+| Docs deadline — PRs ready for review                          | Docs Lead | Tuesday 15th November 2022                                                                                                   | week 11  | |
+| 1.26.0-rc.0 released                                          | Branch Manager | Tuesday 15th November 2022                                                                                              | week 11  | |
+| release-1.26 branch created                                   | Branch Manager | Tuesday 15th November 2022                                                                                              | week 11  | |
+| release-1.26 jobs created                                     | Branch Manager | Tuesday 15th November 2022                                                                                              | week 11  | |
+| Start final draft of Release Notes                            | Release Notes Lead | Tuesday 15th November 2022                                                                                          | week 11  | |
+| Release blog ready to review                                  | Comms / Docs | 01:00 UTC Wednesday 16th November 2022 / 02:00 BST Wednesday 16th November 2022 / 18:00 PDT Tuesday 15th November 2022    | week 11  | |
 | Major Themes complete                                         | Release Notes Lead | Tuesday 29th November 2022                                                                                          | week 13  | |
 | Docs complete — All PRs reviewed and ready to merge           | Docs Lead | Tuesday 29th November 2022                                                                                                   | week 13  | |
 | Feature blogs ready to review                                 | Enhancement Owner / SIG Leads | Tuesday 29th November 2022                                                                               | week 13  | |
