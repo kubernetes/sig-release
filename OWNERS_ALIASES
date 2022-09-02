@@ -29,11 +29,9 @@ aliases:
     - jeremyrickard # subproject owner
     - justaugustus # subproject owner
     - leonardpahlke # subproject owner / 1.26 Release Team Lead
-    - palnabarun # subproject owner / 1.21 Release Team Lead
     - puerco # subproject owner
     - reylejano # subproject owner / 1.23 Release Team Lead
     - saschagrunert # subproject owner
-    - savitharaghunathan # subproject owner / 1.22 Release Team Lead
   build-admins:
     - BenTheElder
     - juanfescobar
@@ -43,43 +41,34 @@ aliases:
     - cici37 # Kubernetes 1.25 Release Lead
     - jameslaverack # Kubernetes 1.24 Release Lead
     - leonardpahlke # Kubernetes 1.26 Release Lead 
-    - palnabarun # Kubernetes 1.21 Release Lead
     - reylejano # Kubernetes 1.23 Release Lead
-    - savitharaghunathan # Kubernetes 1.22 Release Lead
   ci-signal-role:
     - hosseinsalahi # 1.23
     - leonardpahlke # 1.24
     - Nivedita-coder # 1.26
-    - mkorbi # 1.22
     - RinkiyaKeDad # 1.25
   enhancements-role:
     - gracenng # 1.24
-    - jameslaverack # 1.22
     - Priyankasaggu11929 # 1.25
     - rhockenbury # 1,26
     - salaxander # 1.23
   bug-triage-role:
-    - erismaster # 1.21
     - helayoty # 1.25
     - hosseinsalahi # 1.26
     - jyotimahapatra # 1.24
-    - monzelmasry # 1.22
     - voigt # 1.23
   docs-role:
     - jlbutler # 1.23
     - kcmartin # 1.25
     - krol3 # 1.26
     - nate-double-u # 1.24
-    - pi-victor # 1.22
   release-notes-role:
     - AuraSinis # 1.24
     - cici37 # 1.23
     - csantanapr # 1.25
-    - pmmalinov01 # 1.22
     - ramrodo # 1.26
   communications-role:
     - fsmunoz # 1.26
     - karenhchu # 1.23
     - katcosgrove # 1.25
     - mickeyboxell # 1.24
-    - pensu # 1.22
