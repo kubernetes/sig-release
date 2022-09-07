@@ -145,7 +145,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
     </tr>
     <tr>
         <td>3</td>
-        <td><b>Production Readiness Soft Freeze</b></td>
+        <td><b>Production Readiness Freeze</b></td>
         <td>
         <ul>
         <li>Get access to the `Enhancements` and `Feature blog opt-in` tracking sheets and start following along
