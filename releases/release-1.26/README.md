@@ -38,7 +38,7 @@ description: |
 The 1.26 release cycle is as follows:
 
 - **Monday 5th September 2022**: Week 1 — Release cycle begins
-- **Thursday 29th September 2022**: Week 4 — [Production Readiness Soft Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
+- **Thursday 29th September 2022**: Week 4 — [Production Readiness Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **Friday 7th October 2022**: Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Monday 24th - Friday 28th October 2022**: Week 8 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
 - **Wednesday 2th November  2022**: Week 10 — [Release Retrospective][Retrospective Document] part 1
@@ -58,7 +58,7 @@ The 1.26 release cycle is as follows:
 | Team finalized                                                | Lead | Friday 9th September 2022                                                                                                         | week 1   | |
 | Start Release Notes Draft                                     | Release Notes Lead | Tuesday 20th September 2022                                                                                         | week 3   | |
 | 1.26.0-alpha.1 released                                       | Branch Manager | Wednesday 28th September 2022                                                                                           | Week 4   | |
-| Production Readiness Soft Freeze                              | Enhancements Lead | Thursday 29th September 2022                                                                                         | week 4   | |
+| Production Readiness Freeze                              | Enhancements Lead | Thursday 29th September 2022                                                                                         | week 4   | |
 | **Begin [Enhancements Freeze]**                               | Enhancements Lead | 01:00 UTC Friday 7th October 2022 / 18:00 PDT Thursday 6th October 2022                                              | week 5   | [master-blocking], [master-informing] |
 | 1.26.0-alpha.2 released                                       | Branch Manager | Tuesday 11th October 2022                                                                                               | Week 6   | |
 | Begin Friday APAC-friendly meetings                           | Lead | Friday 21th October 2022                                                                                                          | Week 7   | |
