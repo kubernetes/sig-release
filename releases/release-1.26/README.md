@@ -39,11 +39,11 @@ The 1.26 release cycle is as follows:
 
 - **Monday 5th September 2022**: Week 1 — Release cycle begins
 - **Thursday 29th September 2022**: Week 4 — [Production Readiness Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
-- **Friday 7th October 2022**: Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
+- **01:00 UTC Friday 7th October 2022 / 18:00 PDT Thursday 6th October**: Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Monday 24th - Friday 28th October 2022**: Week 8 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
 - **Wednesday 2th November  2022**: Week 10 — [Release Retrospective][Retrospective Document] part 1
-- **Wednesday 9th November 2022**: Week 10 — [Code Freeze](../release_phases.md#code-freeze)
-- **Wednesday 16rd November 2022**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
+- **01:00 UTC Wednesday 9th November 2022 / 02:00 BST Wednesday 9th November 2022 / 18:00 PDT Tuesday 8th November 2022**: Week 10 — [Code Freeze](../release_phases.md#code-freeze)
+- **01:00 UTC Wednesday 16th November 2022 / 02:00 BST Wednesday 16th November 2022 / 18:00 PDT Tuesday 15th November 2022**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 29th November 2022**: Week 13 — Docs must be completed and reviewed
 - **Tuesday 6th December 2022**: Week 14 — Kubernetes v1.26.0 released
 - **TBC**: Week 15 — [Release Retrospective][Retrospective Document] part 2
