@@ -8,7 +8,7 @@
 | Bug Triage | Hossein Salahi ([@hosseinsalahi](https://github.com/hosseinsalahi) / Slack: `@hosseinsalahi`) |  |
 | Docs | Carolina Valencia ([@krol3](https://github.com/krol3) / Slack: `@krol`) |  |
 | Release Notes | Rodolfo Martínez Vega ([@ramrodo](https://github.com/ramrodo) / Slack: `ramrodo`) |  |
-| Communications | Frederico Serrano Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsm` ) |  |
+| Communications | Frederico Serrano Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsm` ) | Harshita Sao ([@harshitasao](https://github.com/harshitasao) / Slack: `@Harshita Sao`), Brad McCoy ([@bradmccoydev](https://github.com/bradmccoydev) / Slack: `@Brad McCoy`), David Espejo ([@davidmirror](https://github.com/davidmirror-ops) / Slack:`@David Espejo`), Debabrata Panigrahi ([@Debanitrkl](https://github.com/Debanitrkl]) / Slack: `@Deba`) |
 | Emeritus Adviser | Nabarun Pal ([@palnabarun](https://github.com/palnabarun)) / Slack: `@palnabarun` | |
 | Branch Manager | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)) / Slack: `@jerickar` |  |
 
