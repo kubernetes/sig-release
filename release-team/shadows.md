@@ -24,7 +24,7 @@ The first week should be used to get Shadows set up with all of the "paperwork" 
 * Apply to be an Org Member if they are not already (see below).
 * Join the [#sig-release slack channel](https://slack.k8s.io/).
 * Get added to the `kubernetes-release-team` group by the Release Lead.
-* Join the [sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release) and [release-team](https://groups.google.com/a/kubernetes.io/g/release-team) Google Groups and calendars. For release-team group, you need to wait until you lead add you to the group to get access.
+* Join the [sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release) and [release-team](https://groups.google.com/a/kubernetes.io/g/release-team) Google Groups and calendars. For the release-team group, you need to wait until a lead adds you to the list to get access.
 * Add all contact information to their Release Team's contact sheet.
 * Get invited to the weekly Release Team Meeting and add the [sig-release calendar](https://calendar.google.com/calendar/embed?src=kipmnllvl17vl9m98jen6ujcrs%40group.calendar.google.com) to their calendar
 * Get added to the [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows) Google Group by the Emeritus Advisor.
