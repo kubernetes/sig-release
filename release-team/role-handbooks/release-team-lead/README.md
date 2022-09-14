@@ -36,7 +36,7 @@ The release team leader role is responsible for coordinating release activities,
   - [Week 15](#week-15)
   - [Week 16](#week-16)
 - [Release Team Meeting Host Playbook](#release-team-meeting-host-playbook)
-  - [Requirements to host the meeting as release team release lead / lead shadow](#requirements-to-host-the-meeting-as-release-team-release-lead--lead-shadow)
+  - [Requirements to host the meeting as Release Team Lead / Lead Shadow](#requirements-to-host-the-meeting-as-release-team-lead--lead-shadow)
   - [Pre-Meeting](#pre-meeting)
   - [Pre-Recording](#pre-recording)
   - [During-Recording](#during-recording)
@@ -245,10 +245,11 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Add key event dates to the [Kubernetes Release Calendar][kubernetes-release-calendar] during the cycle. 
   - Ensure major calendar events are set to send an email reminder one week in advance. 
   - Invite the K8s Contributor Calendar (cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) to major calendar events.
-    - e.g. Enhancements Freeze, Code Freeze, etc
+    - e.g. Enhancements Freeze, Code Freeze and Test Freeze
     - Add a calendar entry for the time period before Enhancements Freeze with the title [1.xx] Enhancements Freeze coming on HH:mm PDT Month Day, Year
     - When creating Google calendar entries, delete the Google Meet link which is created by default
     - Be aware of the time zone when creating Google calendar entries as it will default to the last time zone used to create the last calendar entry
+    - If you get the "Message blocked" response after creating a calendar invitation, don't worry the invitation will be sent anyway. The reason why this message is generated is various, for example, the change of employers, the change of company DNS can lead to this.
 - Continue meeting with SIGs for introductions
 - Prepare for x.y.0-alpha.2 release and that master-blocking tests are all green.
 
