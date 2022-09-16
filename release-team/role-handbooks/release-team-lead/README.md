@@ -110,7 +110,7 @@ Release Team selection should happen in accordance with the [Release Team select
   - Enhancements tracking spreadsheet: `http://bit.ly/k8sXYY-enhancement-tracking`
   - Merged PRs with release notes: `http://bit.ly/k8sXYY-relnotes`
   - Use the same conventions for additional documents
-- Burndown meetings happen at 10AM Pacific Time, and you invite the community calendar (`cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com`) and the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`) to them.
+- Burndown meetings happen at 10AM Pacific Time, and you invite the and the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`) to them.
 - Burndown communications happen on the [kubernetes-sig-release] mailing list.
 - Enhancement exceptions are to be reviewed by the owning SIG and brought to the Release Team for assessment of risk, especially across the project
 - General notification regarding the release should go to the [kubernetes-dev] and [kubernetes-sig-leads] lists, and this should automatically be captured into the [Kubernetes Discourse site][discourse].
@@ -243,8 +243,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Schedule weekly Release Team meetings on a day that is most acceptable to the team. These will eventually turn into burndown meetings and occur daily. Invite the [kubernetes-sig-release] group.
 - Poll Release Team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
 - Add key event dates to the [Kubernetes Release Calendar][kubernetes-release-calendar] during the cycle. 
-  - Ensure major calendar events are set to send an email reminder one week in advance. 
-  - Invite the K8s Contributor Calendar (cgnt364vd8s86hr2phapfjc6uk@group.calendar.google.com) to major calendar events.
+  - Ensure major calendar events are set to send an email reminder one week in advance.
     - e.g. Enhancements Freeze, Code Freeze and Test Freeze
     - Add a calendar entry for the time period before Enhancements Freeze with the title [1.xx] Enhancements Freeze coming on HH:mm PDT Month Day, Year
     - When creating Google calendar entries, delete the Google Meet link which is created by default
