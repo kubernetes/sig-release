@@ -58,9 +58,7 @@ The Release Lead needs some additional access. With great power comes great resp
 
 ### `OWNER` File Entries
 
-The Release Lead (and most past Release Leads) are members of the `release-team-lead-role` role in [k/release](https://github.com/kubernetes/release). When you become Release Lead, PR yourself to the [`OWNERS_ALIASES`](https://github.com/kubernetes/release/blob/78f68a268c6c3920d65c6642f9f19eb8277e897d/OWNERS_ALIASES#L23-L27) file.
-
-Similarly, you'll also need to be in a group by the same name in [k/sig-release](https://github.com/kubernetes/sig-release). PR yourself to the [`OWNERS_ALIASES`](https://github.com/kubernetes/sig-release/blob/32577773bd37f844860cdcc6c0a384007de4f34b/OWNERS_ALIASES#L17-L21) in that repo as well.
+The Release Lead (and most past Release Leads) are members of the `release-team-lead-role` role in [k/sig-release](https://github.com/kubernetes/sig-release). When you become Release Lead, PR yourself to the [`OWNERS_ALIASES`](https://github.com/kubernetes/sig-release/blob/master/OWNERS_ALIASES) file.
 
 ### Everything Else...
 

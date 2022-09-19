@@ -66,7 +66,7 @@ which shall be the discharged by the Release Team.
 
 ## Kubernetes Release Team roles
 
-As documented in the [Kubernetes Versioning doc](https://git.k8s.io/community/contributors/design-proposals/release/versioning.md),
+As documented in the [Kubernetes Versioning doc](../release-engineering/versioning.md),
 there are 3 types of Kubernetes releases:
 - Major (x.0.0)
 - Minor (x.x.0)
@@ -87,8 +87,8 @@ there are 3 types of Kubernetes releases:
 
 #### Retired Release Team roles
 
-- Patch Release Manager: moved to a role of [Release Managers][release-managers], which operates under the Release Engineering subproject.
-- Branch Manager: moved to a role of [Release Managers][release-managers], which operates under the Release Engineering subproject.
+- Patch Release Manager: moved to a role of [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md), which operates under the Release Engineering subproject.
+- Branch Manager: moved to a role of [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md), which operates under the Release Engineering subproject.
 - Test Infra: deprecated at the end of Kubernetes 1.15. Duties are now distributed to the [Branch Manager](/release-engineering/role-handbooks/branch-manager.md) and [Test Infra On-call (SIG Testing)](https://go.k8s.io/oncall) (#testing-ops and #sig-testing on Slack).
 
 ### Release Team Shadow
@@ -116,11 +116,11 @@ During the code freeze period, fix any bugs discovered with your enhancement, an
 
 ##### Write enhancement documentation
 
-1. Make sure your enhancement for the upcoming release is on the release tracking board (e.g. [link](https://docs.google.com/spreadsheets/d/1nspIeRVNjAQHRslHQD1-6gPv99OcYZLMezrBe3Pfhhg/edit#gid=0) for 1.6).
+1. Make sure your enhancement for the upcoming release is on the github release tracking board (e.g. [link](https://github.com/orgs/kubernetes/projects/98) for 1.26).
 2. Create a PR with documentation for your enhancement in the [documents repo](https://github.com/kubernetes/kubernetes.github.io).
     - **Your PR should target the release branch (e.g. [release-1.6](https://github.com/kubernetes/kubernetes.github.io/tree/release-1.6)), not the [`master`](https://github.com/kubernetes/kubernetes.github.io/tree/master) branch.**
       - Any changes to the master branch become live on https://kubernetes.io/docs/ as soon as they are merged, and for releases we do not want documentation to go live until the release is cut.
-3. Add link to your docs PR in the release tracking board, and notify the docs lead for the release (e.g. [Devin Donnelly](https://www.github.com/devin-donnelly) for 1.6).
+3. Add link to your docs PR in the release tracking board, and notify the docs lead for the release ( Release team details for each release can be found under the [releases](../releases) directory. E.g. [Docs lead](../releases/release-1.26/release-team.md) for 1.26).
 4. The docs lead will review your PR and give you feedback.
 5. Once approved, the docs lead will merge your PR into the release branch.
 6. When the release is cut, the docs lead will push the docs release branch to master, making your docs live on https://kubernetes.io/docs/.
