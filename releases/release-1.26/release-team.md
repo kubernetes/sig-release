@@ -10,7 +10,7 @@
 | Release Notes | Rodolfo Martínez Vega ([@ramrodo](https://github.com/ramrodo) / Slack: `ramrodo`) | Harsha Narayana ([@harshanarayana](https://github.com/harshanarayana) / Slack: `@Harsha Narayana`), Ana Margarita Medina ([@AnaMMedina21](https://github.com/AnaMMedina21) / Slack: `@Ana Margarita Medina`), Laxmikant Bhaskar Pandhare ([@laxmikantbpandhare](https://github.com/laxmikantbpandhare) / Slack: `@laxmikantbpandhare`), Sayantani Saha ([@sayantani11](https://github.com/sayantani11) / Slack: `@sayantani`) |
 | Communications | Frederico Serrano Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsm` ) | Harshita Sao ([@harshitasao](https://github.com/harshitasao) / Slack: `@Harshita Sao`), Brad McCoy ([@bradmccoydev](https://github.com/bradmccoydev) / Slack: `@Brad McCoy`), David Espejo ([@davidmirror](https://github.com/davidmirror-ops) / Slack:`@David Espejo`), Debabrata Panigrahi ([@Debanitrkl](https://github.com/Debanitrkl]) / Slack: `@Deba`) |
 | Emeritus Adviser | Nabarun Pal ([@palnabarun](https://github.com/palnabarun)) / Slack: `@palnabarun` | |
-| Branch Manager | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)) / Slack: `@jerickar` |  |
+| Branch Manager | Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)) / Slack: `@jerickar` |  Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`), Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`) |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
