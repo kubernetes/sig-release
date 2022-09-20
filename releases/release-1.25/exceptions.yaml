@@ -1,0 +1,138 @@
+# Exception requests in 1.25
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Cici Huang ([@cici37](https://github.com/cici37))
+# Release Team Shadows: Xander Grzywinski ([@Xander](https://github.com/salaxander) 
+# / Grace Nguyen([@Grace Nguyen](https://github.com/gracenng) 
+# / Leonard Vincent Simon Pahlke ([@leonardpahlke](https://github.com/leonardpahlke) 
+# / Jesse Butler ([@Jesse Butler](https://github.com/jlbutler)
+
+# Enhancements Freeze Exceptions requested in 1.25
+
+enhancementFreeze:
+- name: "Add configurable grace period to probes"
+  issue: 2238
+  date_requested: 2022-06-27 
+  date_reviewed: 2022-06-27
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/FExKoavieAM"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/3408"
+  status: "approved"
+
+
+# Code Freeze Exceptions requested in 1.25
+
+codeFreeze:
+- name: "Deprecate GlusterFS in-tree driver in 1.25 release"
+  issue: 3346
+  date_requested: 2022-07-29
+  date_reviewed: 2022-08-01
+  thread: "https://groups.google.com/a/kubernetes.io/g/release-team/c/7fDmeHqVcrs"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/111485"
+  status: "approved"
+
+- name: "In-place Update of Pod Resources"
+  issue: 1287
+  date_requested: 2022-07-30
+  date_reviewed: 2021-08-03
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/ztEx9R1M7qo"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/102884"
+  status: "denied"
+
+- name: "Retriable and non-retriable Pod failures for Jobs"
+  issue: 3329
+  date_requested: 2022-08-01
+  date_reviewed: 2022-08-02
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/EBdL_-Jhv_s"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/110959"
+    - "https://github.com/kubernetes/kubernetes/pull/111475"
+    - "https://github.com/kubernetes/kubernetes/pull/111113"
+  status: "approved"
+
+- name: "Retriable and non-retriable Pod failures for Jobs"
+  issue: 2133
+  date_requested: 2022-08-02
+  date_reviewed: 2022-08-02
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/QLSFDAaeU2I/m/4BXw9UysAwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/111616"
+    - "https://github.com/kubernetes/enhancements/pull/111495"
+  status: "denied"
+
+- name: "Add support for user namespaces"
+  issue: 127
+  date_requested: 2022-08-02
+  date_reviewed: 2022-08-04
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/ASWlhA-tIxE"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/111090"
+  status: "approved"
+  
+- name: "Kubelet Evented PLEG for Better Performance"
+  issue: 3386
+  date_requested: 2022-08-03
+  date_reviewed: 2022-08-04
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/sbazcyEswtw/m/XUxSokyNAgAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/111642"
+    - "https://github.com/kubernetes/enhancements/pull/111384"
+  status: "denied"
+
+- name: "Enhanced NodeIPAM to support Discontiguous Cluster CIDR"
+  issue: 2593
+  date_requested: 2022-08-03
+  date_reviewed: 2022-08-04
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/U8etwqKzy64"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/111123"
+    - "https://github.com/kubernetes/kubernetes/pull/109090"
+  status: "approved"
+
+- name: "SELinux volume relabeling using mounts"
+  issue: 1710
+  date_requested: 2022-08-03
+  date_reviewed: 2022-08-03
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/8ZSzWqZDr7U"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/108744"
+    - "https://github.com/kubernetes/kubernetes/pull/108692"
+  status: "approved"
+
+- name: "KMS v2"
+  issue: 3299
+  date_requested: 2022-08-03
+  date_reviewed: 2022-08-03
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/Mr4UI69F2cQ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/111126"
+  status: "approved"
+
+- name: "Add webhook hosting capability to CCM framework."
+  issue: 2699
+  date_requested: 2022-08-03
+  date_reviewed: 2022-08-04
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/j7h4NKkwJ2o"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/108838"
+  status: "denied"
+
+- name: "cAdvisor-less, CRI-full Container and Pod Stats"
+  issue: 2371
+  date_requested: 2022-08-03
+  date_reviewed: 2022-08-04
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/h0m6Ah7d1f0"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/3439"
+    - "https://github.com/kubernetes/kubernetes/pull/110754"
+  status: "denied"
+
+- name: "CSI Inline Volume Support"
+  issue: 596
+  date_requested: 2022-08-05
+  date_reviewed: 2022-08-05
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/3kmMHPHXrgk/m/md41QANHAQAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/111258"
+  status: "approved"
