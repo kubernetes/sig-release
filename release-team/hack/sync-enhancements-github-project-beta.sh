@@ -15,17 +15,20 @@
 # limitations under the License.
 
 # Usage: `sync-enhancements-github-project-beta.sh`
+# Pre-requisite: add a GITHUB_TOKEN as the environment variable (Ref: https://github.com/kubernetes/org/issues/3558)
 
 set -eu -o pipefail
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd )"
-TMPDIR="${TMPDIR:-${REPO_ROOT}/tmp}"
-
 
 ORGANIZATION='kubernetes'
 REPOSITORY='enhancements'
-PROJECT_NUMBER=${GITHUB_PROJECT_BETA_NUMBER}
+PROJECT_NUMBER=${GITHUB_PROJECT_BETA_NUMBER:-}
+
+if [ "$PROJECT_NUMBER" == "" ]; then
+      echo "[Error] Required environment variable \"GITHUB_PROJECT_BETA_NUMBER\" is not set."
+      exit 1
+fi
 
 milestone_issue_ids=()
 milestone_issue_numbers=()
