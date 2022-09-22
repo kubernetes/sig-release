@@ -1,0 +1,4 @@
+pr: 112526
+releasenote:
+  text: 'kube-apiserver: resolved a regression that treated `304 Not Modified` responses
+    from aggregated API servers as internal errors.'

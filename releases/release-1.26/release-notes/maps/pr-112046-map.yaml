@@ -1,0 +1,6 @@
+pr: 112046
+releasenote:
+  text: apiserver `/healthz/etcd` endpoint rate limits the number of forwarded health
+    check requests to the etcd backends, answering with the last known state if the
+    rate limit is exceeded. The rate limit is based on 1/2 of the timeout configured,
+    with no burst allowed.
