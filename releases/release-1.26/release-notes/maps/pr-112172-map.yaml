@@ -1,0 +1,4 @@
+pr: 112172
+releasenote:
+  text: 'kubeadm: added the "--cleanup-tmp-dir" flag for `kubeadm reset`. It will
+    cleanup the contents of `/etc/kubernetes/tmp`. The flag is off by default.'

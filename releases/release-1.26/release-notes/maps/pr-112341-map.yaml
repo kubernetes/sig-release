@@ -1,0 +1,6 @@
+pr: 112341
+releasenote:
+  text: The `gcp` and `azure` auth plugins have been removed from `client-go` and
+    `kubectl`. See [kubelogin](https://github.com/Azure/kubelogin) and [Kubectl Auth
+    Changes in GKE](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke)
+    for details about the cloud-specific replacements.

@@ -1,0 +1,4 @@
+pr: 112015
+releasenote:
+  text: '`GlusterFS` in-tree storage driver which was deprecated in kubernetes 1.25
+    release is now removed entirely in 1.26.'

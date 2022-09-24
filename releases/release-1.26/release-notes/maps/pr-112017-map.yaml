@@ -1,0 +1,5 @@
+pr: 112017
+releasenote:
+  text: Fixed an ephemeral port exhaustion bug caused by improper connection management
+    that occurred when a large number of objects were handled by `kubectl` while exec
+    auth was in use.

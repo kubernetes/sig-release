@@ -1,0 +1,3 @@
+pr: 112076
+releasenote:
+  text: Moved `LocalStorageCapacityIsolationFSQuotaMonitoring` back to Alpha.

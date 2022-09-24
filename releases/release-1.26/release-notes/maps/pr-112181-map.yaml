@@ -1,0 +1,4 @@
+pr: 112181
+releasenote:
+  text: callers using `DelegatingAuthenticationOptions` can now use `DisableAnonymous`
+    to disable Anonymous authentication.

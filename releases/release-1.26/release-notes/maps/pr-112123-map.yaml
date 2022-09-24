@@ -1,0 +1,4 @@
+pr: 112123
+releasenote:
+  text: Clarified the CFS quota as 100ms in the code comments and set the minimum
+    `cpuCFSQuotaPeriod` to 1ms to match Linux kernel expectations.
