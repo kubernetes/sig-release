@@ -190,7 +190,7 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 
 #### Week 4
 
-- With Enhancement freeze in effect, create an issue to start collecting the main themes of the publication, and reach out to all SIGs on and off over the next few weeks to ask for main themes and explain why this is important to the community.
+- With Enhancement freeze in effect, create a GitHub discussion ([example 1.26](https://github.com/kubernetes/sig-release/discussions/2047)) to start collecting the major themes of the release, and reach out to all SIGs on and off over the next few weeks to ask for major themes and explain why this is important to the community.
 
 #### Week 10
 
