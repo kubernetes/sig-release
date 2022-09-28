@@ -263,7 +263,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Remind the community about Enhancements Freeze
 - Make sure everything is in synch between the [enhancements repo][k/enhancements] and the enhancements tracking spreadsheet
 - If there are enhancements with questions or concerns, help coordinate those conversations between the team and the SIG/owners
-- Start collecting SIG release themes in the release notes draft, outlining what they are delivering this release milestone, and how it aligns with their mission statements - start with SIGs identifying enhancements in the enhancements repo, and focus on those since not every SIG will be delivering something
+- Assist Release Notes with the start of collecting major release themes
 
 ### Week 5
 
@@ -300,6 +300,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Check in with SIGs on their enhancement work to make sure they know Code Freeze is 3 weeks away, as well as emailing the [kubernetes-dev] list, and notifying the community at the weekly meeting
   - Verify with SIGs if there are any planned deprecations or removals targeting the release.
 - Adjust the enhancements repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered)
+- Check in with Release Notes and Release Comms the status of major themes of the release
 
 ### Week 10
 
@@ -321,7 +322,7 @@ Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as 
 - Make sure everyone knows the Docs deadline (PRs ready for review) is coming the following week.
 - The Deprecations and Removals blog is scheduled for next week shortly after Code Freeze. A draft of the blog should 
   be started as reviews and iterations will be needed before publication next week.
-- Follow up with SIGs on release themes.
+- Follow up with SIGs on major themes of the release.
 
 #### Code Freeze Day
 
