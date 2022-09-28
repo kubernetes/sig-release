@@ -190,7 +190,7 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 
 #### Week 4
 
-- Create an issue to start collecting the main themes of the publication, and reach out to all SIGs on and off over the next few weeks to ask for main themes and explain why this is important to the community.
+- With Enhancement freeze in effect, create an issue to start collecting the main themes of the publication, and reach out to all SIGs on and off over the next few weeks to ask for main themes and explain why this is important to the community.
 
 #### Week 10
 
