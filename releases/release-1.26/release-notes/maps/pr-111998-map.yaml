@@ -1,0 +1,7 @@
+pr: 111998
+releasenote:
+  text: 'e2e: tests can now register callbacks with `ginkgo.BeforeEach`, `ginkgo.AfterEach`
+    or `ginkgo.DeferCleanup` directly after creating a framework instance and are
+    guaranteed that their code is called after the framework is initialized and before
+    it gets cleaned up. `ginkgo.DeferCleanup` replaces `f.AddAfterEach` and `AddCleanupAction`
+    which got removed to simplify the framework.'

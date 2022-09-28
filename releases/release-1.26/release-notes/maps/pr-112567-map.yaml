@@ -1,0 +1,5 @@
+pr: 112567
+releasenote:
+  text: 'kube-scheduler: the `DefaultPodTopologySpread`, `NonPreemptingPriority`,
+    `PodAffinityNamespaceSelector` and `PreferNominatedNode` feature gates that graduated
+    to GA in v1.24 and were unconditionally enabled have been removed in v1.26.'

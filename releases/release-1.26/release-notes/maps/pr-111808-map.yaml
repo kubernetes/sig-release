@@ -1,0 +1,4 @@
+pr: 111808
+releasenote:
+  text: The errors in `k8s.io/apimachinery/pkg/api/meta` now support for the `stdlibs`
+    `errors.Is` matching, including when wrapped.

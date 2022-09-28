@@ -1,0 +1,5 @@
+pr: 111520
+releasenote:
+  text: 'kubelet: changed default value of `cpuCFSQuotaPeriod` from 100ms to 100µs
+    to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires
+    `customCPUCFSQuotaPeriod` flag to be set to work.'
