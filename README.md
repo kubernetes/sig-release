@@ -5,6 +5,9 @@
 The [charter] defines the scope and governance of the Release Special Interest Group.
 
 ## Join us!
+
+If you are new to the Kubernetes community and would like to start contributing, you can check out the ["Getting Started"](https://www.kubernetes.dev/docs/guide/) guide for Kubernetes contributors. Below are some more links specifically to sig-release to get in touch with us.
+
 - [Slack](https://kubernetes.slack.com/messages/sig-release)
 - [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
 - [Open Issues / PRs](https://github.com/search?q=org%3Akubernetes+org%3Akubernetes-client+org%3Akubernetes-csi+org%3Akubernetes-incubator+org%3Akubernetes-retired+org%3Akubernetes-sigs+is%3Aopen+label%3Asig%2Frelease)
