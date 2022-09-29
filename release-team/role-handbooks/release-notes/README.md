@@ -1,37 +1,43 @@
 # Kubernetes Release Team: Release Notes
 
-- [Overview](#overview)
-- [Prerequisites for Release Notes Lead and Shadows](#prerequisites-for-release-notes-lead-and-shadows)
-  - [General Requirements](#general-requirements)
-  - [Skills and Experience Requirements](#skills-and-experience-requirements)
-  - [Time Requirements](#general-requirements)
-    - [Early and mid release cycle (weeks 1-8)](#early-and-mid-release-cycle-weeks-1-8)
-    - [Late release cycle (weeks 9-12+)](#late-release-cycle-weeks-9-12)
-  - [Machine and GitHub Setup](#machine-and-github-setup)
-    - [Setup krel](#setup-krel)
-    - [Get a GitHub token](#get-a-github-token)
-    - [Fork the kubernetes repositories](#fork-the-kubernetes-repositories)
-- [Tasks and Responsibilities](#tasks-and-responsibilities)
-  - [Manage permissions](#manage-permissions)
-  - [Setup the Tools and Generate the Release Notes](#setup-the-tools-and-generate-the-release-notes)
-  - [Periodically review and fix new release notes](#periodically-review-and-fix-new-release-notes)
-  - [Attend Release Meetings and follow #sig-release](#attend-Release-Meetings-and-follow-sig-release)
-  - [Maintain the _Known Issues_ Issue](#maintain-the-known-issues-issue)
-  - [Ensure Major Themes are Reflected in the Notes](#ensure-major-themes-are-reflected-in-the-notes)
-  - [Get feedback from SIG Leads](#get-feedback-from-sig-leads)
-  - [Clean up and edit the final document](#clean-up-and-edit-the-final-document)
-  - [Curate the External Dependencies Section](#curate-the-external-dependencies-section)
-- [Release Milestone Activities](#release-milestone-activities)
-  - [Week 1](#week-1)
-  - [Weeks 2 - 10](#weeks-2-10)
-  - [Week 11 (Begin of Code Freeze)](#week-11-begin-of-code-freeze)
-  - [Week 13-16](#week-13-16)
-  - [Week 15](#week-15)
-  - [Week 16](#week-16)
-  - [Week 17](#week-17)
-  - [Week 19](#week-19)
-- [Tools](#tools)
-- [TODOs](#todos)
+- [Kubernetes Release Team: Release Notes](#kubernetes-release-team-release-notes)
+  - [Overview:](#overview)
+  - [Prerequisites for Release Notes Lead and Shadows](#prerequisites-for-release-notes-lead-and-shadows)
+    - [General Requirements](#general-requirements)
+    - [Skills and Experience Requirements](#skills-and-experience-requirements)
+    - [Time Requirements](#time-requirements)
+      - [Onboarding Session (week 1) ~1 hour](#onboarding-session-week-1-1-hour)
+      - [Early and mid release cycle (weeks 1-8) ~1-5 hours/week](#early-and-mid-release-cycle-weeks-1-8-1-5-hoursweek)
+      - [Late release cycle (weeks 9-12+) ~4-10 hours/week](#late-release-cycle-weeks-9-12-4-10-hoursweek)
+    - [GitHub Organization Membership](#github-organization-membership)
+    - [Machine and GitHub Setup](#machine-and-github-setup)
+      - [Setup krel](#setup-krel)
+      - [Fork the kubernetes repositories](#fork-the-kubernetes-repositories)
+  - [Tasks and Responsibilities](#tasks-and-responsibilities)
+    - [Manage permissions](#manage-permissions)
+    - [Setup the Tools and Generate the Release Notes](#setup-the-tools-and-generate-the-release-notes)
+    - [Periodically review and fix new release notes](#periodically-review-and-fix-new-release-notes)
+    - [Attend Release Meetings and follow #sig-release](#attend-release-meetings-and-follow-sig-release)
+    - [Maintain the _Known Issues_ Issue](#maintain-the-known-issues-issue)
+    - [Ensure Major Themes are Reflected in the Notes](#ensure-major-themes-are-reflected-in-the-notes)
+    - [Get feedback from SIG Leads](#get-feedback-from-sig-leads)
+    - [Clean up and edit the final document](#clean-up-and-edit-the-final-document)
+    - [Curate the External Dependencies Section](#curate-the-external-dependencies-section)
+  - [Release Cycle Milestone Activities:](#release-cycle-milestone-activities)
+    - [Week 1](#week-1)
+    - [Weeks 2 - 10](#weeks-2---10)
+      - [Week 4](#week-4)
+      - [Week 10](#week-10)
+    - [Week 11 (Begin of Code Freeze)](#week-11-begin-of-code-freeze)
+    - [Weeks 13-16](#weeks-13-16)
+    - [Week 15](#week-15)
+    - [Week 16](#week-16)
+    - [Week 17](#week-17)
+    - [Week 19](#week-19)
+  - [Tools](#tools)
+  - [TODOs](#todos)
+    - [Post 1.17 TODOs](#post-117-todos)
+      - [If any team members have NLP experience](#if-any-team-members-have-nlp-experience)
 
 ## Overview:
 
@@ -181,6 +187,14 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 
 - Begin attending burndown meetings
 - Same as above, but generate the notes for each `alpha` and `beta`
+
+#### Week 4
+
+- With Enhancement freeze in effect, create a GitHub discussion ([example 1.26](https://github.com/kubernetes/sig-release/discussions/2047)) to start collecting the major themes of the release, and reach out to all SIGs on and off over the next few weeks to ask for major themes and explain why this is important to the community.
+
+#### Week 10
+
+- Make sure major themes of the release are checked in before Code Freeze; reach out to SIGs and release leads if additional coordination is needed
 
 ### Week 11 (Begin of Code Freeze)
 
