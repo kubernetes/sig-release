@@ -105,6 +105,7 @@ Release Notes lead should be responsible for granting team members required acce
 1. Add OWNERS file into release notes directory. [Sample PR](https://github.com/kubernetes/sig-release/pull/1943) for v1.25 release.
 2. Add release notes team members for CHANGELOG review/approval.
    [Sample PR](https://github.com/kubernetes/kubernetes/pull/112045) for v1.25 release.
+3. Add release notes team members to the Kubernetes org as a GitHub team [Sample PR](https://github.com/kubernetes/org/pull/3735)
 
 ### Setup the Tools and Generate the Release Notes
 
