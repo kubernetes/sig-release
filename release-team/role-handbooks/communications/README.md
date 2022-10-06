@@ -77,7 +77,7 @@ For tech reviews, reach out to authors and the sponsoring SIG to organize at lea
 
 ### Mid-cycle deprecations and removals blog
 
-This blog is optional and will vary from release to release. Work with the rest of the release team ahead of the Code Freeze date to determine if a mid-cycle blog focused on feature deprecations and removals is warranted. If so, facilitate its creation and publication.
+This blog is optional and will vary from release to release. Work with the rest of the release team ahead of the Code Freeze date to determine if a mid-cycle blog focused on feature deprecations and removals is warranted. If so, facilitate its creation and publication. You can create a Slack thread on [#sig-release](https://kubernetes.slack.com/archives/C2C40FMNF) to discuss this.
 
 If the release will deprecate important and commonly-used features (or simply a large number of features will be deprecated), consider publishing this blog. Also consider this when commonly-used features that have been deprecated are removed in a release. ['Kubernetes API and Feature Removals in 1.22'](https://kubernetes.io/blog/2021/07/14/upcoming-changes-in-kubernetes-1-22/) and ['Deprecated APIs Removed in 1.16'](https://kubernetes.io/blog/2019/07/18/api-deprecations-in-1-16/) are great examples to work from.
 
