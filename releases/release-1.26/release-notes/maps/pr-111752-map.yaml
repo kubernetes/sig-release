@@ -1,0 +1,4 @@
+pr: 111752
+releasenote:
+  text: Reverted regression that prevented `client-go` latency metrics to be reported
+    with a template URL to avoid label cardinality.

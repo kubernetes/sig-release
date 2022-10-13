@@ -1,0 +1,4 @@
+pr: 112797
+releasenote:
+  text: 'kube-apiserver: the unused `--master-service-namespace` flag was deprecated
+    and will be removed in v1.27.'

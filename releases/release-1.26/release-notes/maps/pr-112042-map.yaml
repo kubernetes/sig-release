@@ -1,0 +1,5 @@
+pr: 112042
+releasenote:
+  text: The metrics `etcd_request_duration_seconds` and `etcd_bookmark_counts` now
+    differentiate by group resource instead of object type, allowing unique entries
+    per `CustomResourceDefinition`, instead of grouping them all under `*unstructured.Unstructured`.

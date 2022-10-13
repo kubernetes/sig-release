@@ -1,0 +1,4 @@
+pr: 112542
+releasenote:
+  text: Added validation for the `--container-runtime-endpoint` flag of kubelet to
+    be non-empty.

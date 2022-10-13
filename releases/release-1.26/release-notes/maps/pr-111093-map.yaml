@@ -1,0 +1,4 @@
+pr: 111093
+releasenote:
+  text: Fixed bug in `kubectl rollout history` where only the latest revision was
+    displayed when a specific revision was requested and an output format was specified.

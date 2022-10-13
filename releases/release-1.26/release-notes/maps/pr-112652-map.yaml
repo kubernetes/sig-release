@@ -1,0 +1,4 @@
+pr: 112652
+releasenote:
+  text: Added a `kubernetes_feature_enabled` metric which will tell you if a feature
+    is enabled.
