@@ -1,0 +1,3 @@
+pr: 112741
+releasenote:
+  text: Exposed health check SLI metrics on `metrics/slis` for apiserver.

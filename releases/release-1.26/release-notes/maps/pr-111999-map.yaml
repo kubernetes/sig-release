@@ -1,0 +1,4 @@
+pr: 111999
+releasenote:
+  text: Pod failed in scheduling due to expected error will be updated with the reason
+    of `SchedulerError` rather than `Unschedulable`.

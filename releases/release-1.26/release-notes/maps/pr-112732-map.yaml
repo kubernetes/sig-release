@@ -1,0 +1,3 @@
+pr: 112732
+releasenote:
+  text: 'kubeadm: now supports image repository format validation.'

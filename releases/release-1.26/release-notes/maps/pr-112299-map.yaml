@@ -1,0 +1,6 @@
+pr: 112299
+releasenote:
+  text: 'kube-apiserver: `gzip` compression switched from level 4 to level 1 to improve
+    large list call latencies in exchange for higher network bandwidth usage (10-50%
+    higher). This increases the headroom before very large unpaged list calls exceed
+    request timeout limits.'

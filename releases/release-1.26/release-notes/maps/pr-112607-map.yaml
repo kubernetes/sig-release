@@ -1,0 +1,3 @@
+pr: 112607
+releasenote:
+  text: volume mount cleanup now considers only plugin directory and not the entire kubelet root
