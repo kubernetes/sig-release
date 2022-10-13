@@ -51,6 +51,13 @@ state.
 
    Enhancement: https://github.com/kubernetes/enhancements/issues/3031
 
+1. **Moving deb/rpm package builds to community infrastructure (Consumable)**
+
+   Outcome: Automated builds of signed `deb` and `rpm` Kubernetes packages
+   within community infrastructure.
+
+   Enhancement: https://github.com/kubernetes/enhancements/issues/1731
+
 ### To be done (TODO)
 
 1. **Enhance Kubernetes binary artifact management (Consumable)**
@@ -84,15 +91,6 @@ state.
 
    Outcome: Clear documentation about available version markers as well as their
    simplified automation.
-
-1. **Moving deb/rpm package builds to community infrastructure (Consumable)**
-
-   https://github.com/kubernetes/release/issues/913
-
-   Enhancement: _none_
-
-   Outcome: Automated builds of `deb` and `rpm` Kubernetes packages within
-   community infrastructure.
 
 ### Known Risks
 
