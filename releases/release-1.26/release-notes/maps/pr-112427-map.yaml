@@ -1,0 +1,3 @@
+pr: 112427
+releasenote:
+  text: Allowed `Label` section in vSphere e2e cloud provider configuration.

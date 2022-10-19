@@ -1,0 +1,3 @@
+pr: 112157
+releasenote:
+  text: Avoided propagating hosts `search .` into containers in `/etc/resolv.conf`.
