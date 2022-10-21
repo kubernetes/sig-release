@@ -22,7 +22,7 @@ description: |
 #### Tracking docs
 
 * [Enhancements Tracking Sheet](https://bit.ly/k8s126-enhancements)
-* [Feature blog Tracking Sheet](http://bit.ly/k8s126-feature-blog)
+* [Feature blog Tracking Board](https://github.com/orgs/kubernetes/projects/98/views/11)
 * [Bug Triage Tracking Sheet](https://bit.ly/k8s126-bug-triage-tracking)
 * [CI Signal Project Board & Issue Tracking](https://github.com/orgs/kubernetes/projects/68)
 * [Retrospective Document][Retrospective Document]
