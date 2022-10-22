@@ -1,0 +1,3 @@
+pr: 112183
+releasenote:
+  text: Fixed spurious `field is immutable` errors validating updates to Event API
