@@ -79,6 +79,7 @@ The 1.26 release cycle is as follows:
 | 1.26.0-rc.0 released                                          | Branch Manager | Tuesday 15th November 2022                                                                                              | week 11  | |
 | release-1.26 branch created                                   | Branch Manager | Tuesday 15th November 2022                                                                                              | week 11  | |
 | release-1.26 jobs created                                     | Branch Manager | Tuesday 15th November 2022                                                                                              | week 11  | |
+| Major Themes deadline                                     | Comms | Tuesday 15th November 2022                                                                                              | week 11  | |
 | Start final draft of Release Notes                            | Release Notes Lead | Tuesday 15th November 2022                                                                                          | week 11  | |
 | Release blog ready to review                                  | Comms / Docs | [01:00 UTC Wednesday 16th November 2022 / 17:00 PDT Tuesday 15th November 2022](https://everytimezone.com/s/dc1d29cb)    | week 11  | |
 | Major Themes complete                                         | Release Notes Lead | Tuesday 29th November 2022                                                                                          | week 13  | |
