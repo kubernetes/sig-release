@@ -1,0 +1,5 @@
+pr: 108832
+releasenote:
+  text: Fixed relative CPU priority for pods where containers explicitly request zero
+    cpu by giving the lowest priority instead of falling back to the cpu limit to
+    avoid possible cpu starvation of other pods.
