@@ -418,11 +418,9 @@ See the [Security Release Process](https://git.k8s.io/security/security-release-
 
 #### Debian and RPM Packaging
 
-[Packaging the Official Release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `krel release --type=official …` has completed, **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the release is ready to be packaged.
+Publishing the [packages of the official release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `krel release --nomock --type=official …` has completed (which builds the packages into the production bucket), **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the packages are ready to be published.
 
-The entire packaging process including the build and validation of the builds could take around 3-4 hours. It is preferable to have the DEB and RPM files ready prior to sending out the release notification email since, people worldwide will attempt to download the official release. Since packaging uses the release tag, it is important to [validate the release process](#release-validation).
-
-Once the .deb and .rpm packages are done building, you can `grep` for `X.Y` e.g. `1.16` in the [yum](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) repositories.
+Once the .deb and .rpm packages are published, you can `grep` for `X.Y` e.g. `1.16` in the [yum](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) repositories.
 
 #### Release Validation
 
@@ -903,8 +901,8 @@ flowchart TD
     mock --> staging["Nomock stage"]
     staging --> artifact_promotion["Image promotion"]
     artifact_promotion --> release["Nomock release"]
-    release --> cut_pkgs["Contact Google Build Admins to cut the deps/rpms"]
-    cut_pkgs --> announcement_chat["Notify Slack channel #release-management \n about the new release"]
+    release --> publish_pkgs["Contact Google Build Admins to publish the deps/rpms"]
+    publish_pkgs --> announcement_chat["Notify Slack channel #release-management \n about the new release"]
     announcement_chat --> announcement_email["Notify Community by Email \n using Krel"]
     announcement_email --> close["Close release cut GitHub Issue"]
     close --> done(["End"])
@@ -913,5 +911,5 @@ flowchart TD
     classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
     classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
     class Start,done plain;
-    class issue,thread,build_admins,mock,staging,artifact_promotion,release,cut_pkgs,announcement_chat,announcement_email,close k8s;
+    class issue,thread,build_admins,mock,staging,artifact_promotion,release,publish_pkgs,announcement_chat,announcement_email,close k8s;
 ```
