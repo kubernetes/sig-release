@@ -49,10 +49,11 @@ Notify #release-management on Slack:
 Announce the release in a message in the Channel and paste the link
 Direct link to slack: https://kubernetes.slack.com/messages/CJH2GBF7Y
 
-Build & publish packages:    ← Skip for prereleases
+Publish packages (skip for prereleases):
 Coordinate with @google-build-admin before starting. Once the
-NoMock Release is done and **before sending the announcement**
-notify @google-build-admin to start building the packages.
+NoMock Release is done (which builds the packages to the production bucket) and
+**before sending the announcement** notify @google-build-admin to start
+publishing the packages.
 
 Send notification:
 Use `krel announce` using your Sendgrid token
@@ -81,7 +82,7 @@ Help? Ring @release-managers on slack!
   - [ ] Stage
   - [ ] Image Promotion: <!-- Paste Pull Request URL here -->
   - [ ] Release
-- [ ] Build & publish packages (debs & rpms) <!-- REMOVE THIS STEP FOR PRE-RELEASES -->
+- [ ] Publish packages (debs & rpms) <!-- REMOVE THIS STEP FOR PRE-RELEASES -->
 - [ ] Notify #release-management: <!-- Paste link to slack -->
 - [ ] Send notification: <!-- Paste link to kubernetes-dev email -->
 - [ ] Collect metrics and add them to the `Release steps` table below
