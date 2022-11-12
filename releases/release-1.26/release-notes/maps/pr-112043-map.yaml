@@ -1,0 +1,9 @@
+pr: 112043
+releasenote:
+  text: Refactored `test/e2e/framework` so that the core framework is smaller. Optional
+    functionality like resource monitoring, log size monitoring, metrics gathering
+    and debug information dumping must be imported by specific e2e test suites. Init
+    packages are provided which can be imported to re-enable the functionality that
+    traditionally was in the core framework. If you have code that no longer compiles
+    because of this PR, you can use the script [from a commit message](https://github.com/kubernetes/kubernetes/pull/112043/commits/dfdf88d4faafa6fd39988832ea0ef6d668f490e9)
+    to update that code.

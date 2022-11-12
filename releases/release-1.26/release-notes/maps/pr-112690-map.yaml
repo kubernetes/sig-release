@@ -1,0 +1,4 @@
+pr: 112690
+releasenote:
+  text: Added `kubernetes_feature_enabled` metric series to track whether each active
+    feature gate is enabled.

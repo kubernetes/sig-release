@@ -1,0 +1,4 @@
+pr: 113133
+releasenote:
+  text: 'kube-apiserver: `DELETECOLLECTION API` requests are now recorded in metrics
+    with the correct verb.'

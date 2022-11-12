@@ -1,0 +1,4 @@
+pr: 112979
+releasenote:
+  text: Fixed issue where the APIServer would panic on startup if an egress selector
+    without a controlplane configuration is specified when using APIServerTracing.

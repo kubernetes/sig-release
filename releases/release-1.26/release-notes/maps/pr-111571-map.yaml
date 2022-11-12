@@ -1,0 +1,4 @@
+pr: 111571
+releasenote:
+  text: Fixed bug where dry run message was not printed when running `kubectl label`
+    with `--dry-run` flag.

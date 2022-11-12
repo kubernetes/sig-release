@@ -1,0 +1,4 @@
+pr: 113015
+releasenote:
+  text: In `kube-apiserver`, custom resources can now be specified in the `--encryption-provider-config`
+    file and can be encrypted in etcd.

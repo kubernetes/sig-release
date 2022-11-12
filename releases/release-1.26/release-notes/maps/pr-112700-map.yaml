@@ -1,0 +1,3 @@
+pr: 112700
+releasenote:
+  text: 'kubectl: fixed a bug where `kubectl convert` did not pick the right API version'

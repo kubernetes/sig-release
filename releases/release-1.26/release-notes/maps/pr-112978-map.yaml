@@ -1,0 +1,4 @@
+pr: 112978
+releasenote:
+  text: When `ComponentSLIs` feature gate is enabled, then `/metrics/slis` becomes
+    available on kube-controller-manager, allowing you to scrape health check metrics.

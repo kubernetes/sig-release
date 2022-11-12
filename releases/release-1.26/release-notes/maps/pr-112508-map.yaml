@@ -1,0 +1,3 @@
+pr: 112508
+releasenote:
+  text: Added support for RSA and ECDSA format keys in preflight check on `kubeadm`.

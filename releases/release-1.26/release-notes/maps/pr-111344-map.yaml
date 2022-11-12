@@ -1,0 +1,4 @@
+pr: 111344
+releasenote:
+  text: Updated `kube-proxy` to restart in case it detects that the Node assigned
+    `pod.Spec.PodCIDRs` have changed.

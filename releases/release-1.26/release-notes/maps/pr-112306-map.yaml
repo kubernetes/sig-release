@@ -1,0 +1,6 @@
+pr: 112306
+releasenote:
+  text: |-
+    Introduce `v1beta3` for Priority and Fairness with the following changes to the API spec:
+    - rename 'assuredConcurrencyShares' (located under `spec.limited') to 'nominalConcurrencyShares'.
+    - apply strategic merge patch annotations to 'Conditions' of flowschemas and `prioritylevelconfigurations`.

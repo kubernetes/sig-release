@@ -1,0 +1,3 @@
+pr: 112163
+releasenote:
+  text: Graduate `ServiceIPStaticSubrange` feature to GA.

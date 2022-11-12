@@ -1,0 +1,4 @@
+pr: 108501
+releasenote:
+  text: Enabled `kube-controller-manager` to support '--concurrent-horizontal-pod-autoscaler-syncs'
+    flag to set the number of horizontal pod autoscaler controller workers.
