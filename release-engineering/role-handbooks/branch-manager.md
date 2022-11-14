@@ -28,6 +28,7 @@
     - [Release Candidates](#release-candidates)
     - [Official Releases](#official-releases)
       - [Security fixes](#security-fixes)
+      - [Announcing Security Fixes](#announcing-security-fixes)
       - [Debian and RPM Packaging](#debian-and-rpm-packaging)
       - [Release Validation](#release-validation)
     - [Post-release Activities](#post-release-activities)
@@ -415,6 +416,82 @@ You must not make any public announcements regarding these fixes unless the SRC 
 See the [Security Release Process](https://git.k8s.io/security/security-release-process.md) doc for more details.
 
 [security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
+
+#### Announcing Security Fixes
+
+The security fixes are usually announced upon publishing releases by:
+
+- including information about security fixes in the release announcement sent to kubernetes-announce and dev mailing lists
+- including information about security fixes in CHANGELOGs for affected releases
+- sending an email announcement for each security fix to the relevant mailing lists (done by the Security Response Committee)
+
+The first two are handled by Release Managers in coordination with the Security Response Committee (SRC). Before starting the release process, the Release Managers need to reach out to the SRC and ask them to provide a CVE data map that contains information about security fixes.
+
+CVE data map file is created for each CVE and it looks like this:
+
+```yaml
+---
+pr: <cherry-pick PR number>
+datafields:
+  cve:
+    id: CVE-2022-0000
+    title: "<title for given CVE>"
+    description: |
+      <description of vulnerability>
+​
+      **Affected Versions**:
+        - kube-apiserver v1.25.0
+        <list of affected versions>...
+​
+      **Fixed Versions**:
+        - kube-apiserver v1.25.1
+        <list of fixed versions>...
+​
+      <credits and acknowledgements (optional)>
+    trackingissue: "[https://github.com/kubernetes/kubernetes/issues/TODO](https://github.com/kubernetes/kubernetes/issues/TODO)"
+    vector: "<cvss vector string>"
+    score: <cvss score>
+    rating: "<CVE rating (Low/Medium/Critical)>"
+    linkedprs: []
+
+```
+
+The CVE data map can also be created by using `krel`. Running the following command will open a text editor with a sample data map. Populating and saving the data map will automatically upload it to the appropriate (private) bucket (this requires access to the said bucket, therefore only the Release Managers can use this command).
+
+```shell
+krel cve edit CVE-2022-0000
+```
+
+If multiple releases affected releases are affected by the same CVE, you must put a data map for each release in the **same data map file**, such as:
+
+```yaml
+---
+pr: <cherry-pick PR number for first release branch>
+datafields:
+  cve:
+    id: CVE-2022-0000
+    ...
+---
+pr: <cherry-pick PR number for second release branch>
+datafields:
+  cve:
+    id: CVE-2022-0000
+    ...
+---
+pr: <cherry-pick PR number for third release branch>
+datafields:
+  cve:
+    id: CVE-2022-0000
+    ...
+```
+
+If CVE data map YAML files are provided by the SRC (instead of using `krel cve` command), those files can be uploaded to the appropriate private bucket using `krel` such as:
+
+```shell
+krel cve edit CVE-2022-0000 -f ./path-to-data-map.yaml
+```
+
+This command will also take care of validating the provided data map file. Once the data maps are uploaded, `krel` will (automatically) take those data maps into account when generating the changelog and the release announcement emails.
 
 #### Debian and RPM Packaging
 
