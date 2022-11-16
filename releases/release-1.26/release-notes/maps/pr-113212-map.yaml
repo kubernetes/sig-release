@@ -1,0 +1,3 @@
+pr: 113212
+releasenote:
+  text: The `e2e.test` binary no longer emits JSON structs to document progress.

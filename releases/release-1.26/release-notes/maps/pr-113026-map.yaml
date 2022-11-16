@@ -1,0 +1,4 @@
+pr: 113026
+releasenote:
+  text: When `ComponentSLIs` feature gate is enabled, `/metrics/slis` becomes available
+    on kube-scheduler, allowing you to scrape health check metrics.

@@ -1,0 +1,3 @@
+pr: 112696
+releasenote:
+  text: Fixed Admission controllers that caused unnecessary significant load on `apiserver'.

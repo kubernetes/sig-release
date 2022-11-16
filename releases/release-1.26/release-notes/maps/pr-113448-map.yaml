@@ -1,0 +1,4 @@
+pr: 113448
+releasenote:
+  text: 'kubeadm: removed the `UnversionedKubeletConfigMap` feature gate. The feature
+    has been GA and locked to enabled since `v1.25`.'

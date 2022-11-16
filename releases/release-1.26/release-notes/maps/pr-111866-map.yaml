@@ -1,0 +1,4 @@
+pr: 111866
+releasenote:
+  text: In 'kube-apiserver`,`x-kubernetes-list-type` validation is now enforced when
+    updating status of custom resources.'

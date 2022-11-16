@@ -1,0 +1,5 @@
+pr: 112521
+releasenote:
+  text: Add `percentageOfNodesToScore` as a scheduler profile level parameter to API
+    version `v1`. When a profile `percentageOfNodesToScore` is set, it will override
+    global `percentageOfNodesToScore`.

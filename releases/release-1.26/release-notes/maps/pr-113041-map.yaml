@@ -1,0 +1,4 @@
+pr: 113041
+releasenote:
+  text: Fixed a bug where the kubelet choose the wrong container by its name when
+    running `kubectl exec`.

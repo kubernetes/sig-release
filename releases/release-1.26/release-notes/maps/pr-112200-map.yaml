@@ -1,0 +1,4 @@
+pr: 112200
+releasenote:
+  text: |
+    In 'client-go` `SharedInformerFactory` will now support waiting for goroutines during shutdown.

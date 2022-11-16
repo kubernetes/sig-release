@@ -1,0 +1,4 @@
+pr: 110559
+releasenote:
+  text: If more than one StorageClass is designated as default (via the "storageclass.kubernetes.io/is-default-class"
+    annotation), choose the newest one instead of throwing an error.'

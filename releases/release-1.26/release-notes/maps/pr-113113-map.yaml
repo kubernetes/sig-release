@@ -1,0 +1,4 @@
+pr: 113113
+releasenote:
+  text: "The time duration of a failed or unschedulable scheduling attempt will be
+    longer, it \nnow includes the time duration of the unreserve operation."

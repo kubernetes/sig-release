@@ -1,0 +1,4 @@
+pr: 112507
+releasenote:
+  text: Correct the calculating error in `podTopologySpread` plugin to avoid unexpected
+    scheduling results.

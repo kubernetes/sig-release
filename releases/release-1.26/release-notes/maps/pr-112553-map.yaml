@@ -1,0 +1,4 @@
+pr: 112553
+releasenote:
+  text: |
+    `kubectl` now escapes terminal special characters in output. This fixes CVE-2021-25743.

@@ -1,0 +1,3 @@
+pr: 112571
+releasenote:
+  text: Nested `MountPoints` are now grouped correctly on all cases.

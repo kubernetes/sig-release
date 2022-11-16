@@ -1,0 +1,4 @@
+pr: 111809
+releasenote:
+  text: Scheduler now retries updating a pod's status on `ServiceUnavailable` and
+    `InternalError` errors, in addition to `net.ConnectionRefused` error.

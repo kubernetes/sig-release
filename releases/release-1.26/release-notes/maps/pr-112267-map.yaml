@@ -1,0 +1,4 @@
+pr: 112267
+releasenote:
+  text: Updated creation of `LoadBalancer` services, for there to be fewer AWS security
+    group rules in most cases.

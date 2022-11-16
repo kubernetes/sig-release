@@ -1,0 +1,3 @@
+pr: 112989
+releasenote:
+  text: Updates `golang.org/x/text`` to `v0.3.8`` to fix CVE-2022-32149

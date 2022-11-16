@@ -1,0 +1,6 @@
+pr: 113323
+releasenote:
+  text: Metrics for `RetroactiveDefaultStorageClass` feature are now available. To
+    see an attempt count for updating PVC retroactively with a default StorageClass
+    see `retroactive_storageclass_total` metric and for total numer of errors see
+    `retroactive_storageclass_errors_total`.
