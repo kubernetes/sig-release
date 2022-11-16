@@ -557,7 +557,6 @@ This means that the staging step will take about twice as long, as it will stage
 Before the nomock release job is started, run through the following tasks, **_putting an explicit hold_** on any PRs (to be removed once the release branch has been created):
 
 - [Update test-infra configurations](#update-test-infra-configurations)
-  - [Update Slack branch whitelists](#update-slack-branch-whitelists)
   - [Update milestone appliers](#update-milestone-appliers)
   - [Update milestone requirements](#update-milestone-requirements)
   - [Update e2e variants](#update-e2e-variants)
@@ -642,7 +641,6 @@ It's required to create the appropriate publishing-bot rules for the publishing-
 Here's an [example PR](https://github.com/kubernetes/kubernetes/pull/100616).
 
 [sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
-[`krel ff`]: https://git.k8s.io/release
 
 ### Configure Merge Automation
 
