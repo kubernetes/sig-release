@@ -1,0 +1,4 @@
+pr: 111758
+releasenote:
+  text: 'component-base: Made the validation logic about LeaderElectionConfiguration
+    consistent between component-base and client-go.'
