@@ -66,6 +66,7 @@ For each release, the schedule with deliverables is added to the release directo
 
 > Note: The kubernetes/website repo changed from using a `master` branch to a `main` branch in 2021.
 > Be aware that several linked, example PRs uses the `master` branch.
+> For the end-of-year release, KubeCon NA and the US Thanksgiving holiday can be additional impediments to Docs-related deadlines. Please communicate to enhancement owners/contributors about upcoming deadlines earlier and more frequently.
 
 
 ## Early Steps (Weeks 1-2)
