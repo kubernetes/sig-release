@@ -71,16 +71,18 @@ For each release, the schedule with deliverables is added to the release directo
 
 Read the release timeline and **make sure the timeline includes deadlines for documentation work**, e.g: [1.21 timeline](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.21#timeline):
 
-- Docs deadline - Open placeholder PRs (~3.5 weeks before release)
+- Docs deadline - Open placeholder PRs (~3.5 weeks before release and shortly after Code Freeze)
 - Docs deadline - PRs ready for review (~2 weeks before release)
 - Docs complete - All PRs reviewed and ready to merge (~1 week before release)
 
 If these deadlines aren't listed in the release timeline, request that the Release Lead add them.
 Define deadlines clearly e.g. eod PST is not clear if eod is 5pm or 11:59am PST.
 
-Objetives of the Doc Team:
-- By default all the KEPs will `Need Docs`.
-- Track the doc-PR for the KEPs in the [website](https://github.com/kubernetes/website) project.
+Responsibilities of the Docs Team:
+- Same as [Docs Lead responsibilities](../docs#docs-lead-responsibilities)
+- Track Doc PRs for KEPs in the [website](https://github.com/kubernetes/website) project.
+- By default, all opted-in KEPs will `Need Docs`. Enhancement owners/contributors should confirm the enhancement does not need new or updated documentation.
+
 > Note: The blog-PR  is tracked by the Release-Comms Team.
 
 > Note: The kubernetes/website repo changed from using a `master` branch to a `main` branch in 2021.
@@ -109,15 +111,15 @@ Early in the release cycle, the Enhancements Lead opens a github project, e.g: [
 - Which enhancements we'll be tracking for this release
 - Feature owners (and their GitHub IDs)
 - Links to docs PRs opened for each enhancement - Docs PR
-- Docs Required? - By default Needs doc
+- Docs Required? - By default "Needs Docs"
 - PR Doc Status (No PR, Draft PR, Ready-for-Review PR, Merged PR)
 
 > Note: Until [1.25](https://tinyurl.com/k8s125-enhancements) was used tracking spreadsheet, e.g: [the 1.21 release spreadsheet](http://bit.ly/k8s121-enhancements).
 
 ⚠️ Tasks to DO:
-- [x] Make sure you're team is included in the "current" release team file, e.g: [release 1.21](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/release-team.md). **If not submit a PR see a sample for 1.21 [here](https://github.com/kubernetes/sig-release/pull/1432)**.
+- [x] Make sure your team is included in the "current" release team file, e.g: [release 1.21](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/release-team.md). **If not submit a PR see a sample for 1.21 [here](https://github.com/kubernetes/sig-release/pull/1432)**.
 - [x] Please create a PR against kuberenetes/sig-release repo to include the Team Docs email of this release under release-team group in [sig-release/group.yaml](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
-- [x] Open a PR to add the Docs Team in the release-1.xx. For example here the Release Team of [1.26](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.26/release-team.md)
+- [x] Open a PR to add the Docs Team in the release-1.xx. For example here is the Release Team of [1.26](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.26/release-team.md)
 
 ### Introduce yourself to docs localization teams
 
