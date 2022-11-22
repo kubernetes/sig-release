@@ -557,7 +557,6 @@ This means that the staging step will take about twice as long, as it will stage
 Before the nomock release job is started, run through the following tasks, **_putting an explicit hold_** on any PRs (to be removed once the release branch has been created):
 
 - [Update test-infra configurations](#update-test-infra-configurations)
-  - [Update Slack branch whitelists](#update-slack-branch-whitelists)
   - [Update milestone appliers](#update-milestone-appliers)
   - [Update milestone requirements](#update-milestone-requirements)
   - [Update e2e variants](#update-e2e-variants)
@@ -642,7 +641,6 @@ It's required to create the appropriate publishing-bot rules for the publishing-
 Here's an [example PR](https://github.com/kubernetes/kubernetes/pull/100616).
 
 [sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
-[`krel ff`]: https://git.k8s.io/release
 
 ### Configure Merge Automation
 
@@ -752,91 +750,11 @@ Example PRs:
 
 ### Branch Fast Forward
 
-Prior to running `krel ff`, you will need membership in the [Release Managers GitHub Group](https://github.com/orgs/kubernetes/teams/release-managers)
+We now run the branch fast forward automatically to even the branches. 
 
-To compile `krel`, just install it from the [`git.k8s.io/release`](https://git.k8s.io/release) repository:
+Noted that no need for manual cherry-pick against current release and the job would be promoted to [release-blocking](https://testgrid.k8s.io/sig-release-releng-blocking#git-repo-kubernetes-fast-forward).
 
-```shell
-make release-tools
-```
-
-Command invocation:
-
-```shell
-krel ff --branch release-x.y
-```
-
-Where `x.y` is the is release cycle version e.g. `1.18`
-
-This is done daily as soon as the `release-x.y` branch has been cut (which happens after `rc.0` is released).
-
-Earlier in the release cycle, the exact time of running [`krel ff`] can be at the discretion of the branch manager; as agreed upon with the release lead.
-
-Later in the release cycle, it will become more important to align with the release lead and the CI signal team.
-
-The exact time for pulling in the changes from `master` to the release branch might depend on the features that are merging. Considerations could be:
-
-- Run [`krel ff`] sooner, before `$bigFeature` so we have a signal in the release branch before that feature was brought in
-- Run [`krel ff`] later, after `$theOtherFeature` has been merged, so we get signal on that feature from both the master and the release branch
-
-The first time the [`krel ff`] executes, it will:
-
-- clone `kubernetes/kubernetes` to a temporary directory (`/tmp/k8s`)
-- precheck that the provided branch is a release branch and can be forwarded
-- merge the latest master ref into the release branch
-- push the results to the GitHub remote release branch
-
-It is highly recommended to run the following `git` commands as shown below:
-
-```shell
-Validate things look okay before pushing…
-
-Check for files left uncommitted using:
-
-    git status -s
-
-Validate the fast-forward commit using:
-
-    git show
-
-Validate the changes pulled in from master using:
-
-    git log origin/release-1.16..HEAD
-```
-
-You should see something like this when running `git show`:
-
-```shell
-commit d17cd2356993283316b10491a4beaad0931bbff3
-Merge: 35a287caa6 6348200c92
-Author: Yang Li <idealhack@gmail.com>
-Date:   Tue Sep 10 03:47:38 2019 +0000
-
-    Merge remote-tracking branch 'origin/master' into release-1.16
-```
-
-Sometimes the commit may or may not delete a Changelog.
-
-It is critically important to run the following during code freeze. Look through the git log via:
-
-```shell
-git log origin/release-x.y..HEAD
-```
-
-Each and every commit ought to be something the release team has visibility into. Each merge commit indicates a PR number and owner. Invest time in researching these.
-
-If unexpected code was merged to master, use your judgment on whether to escalate to the release team and SIG leadership associated with PR to question whether the commit is truly targeted for the release.
-
-**The release team and the branch manager are the final safety guard on the release content.**
-
-Upon a successful mock execution of `krel ff`, proceed with:
-`krel ff --branch release-x.y --nomock`
-
-Subsequent runs will simply be merging in changes from `master` to the branch, keeping the previous API fix-up commits on the branch.
-
-Note that the merged commits from `krel ff` e.g. with `d17cd23569` from the above `git show` snippet will be tested against on Testgrid [sig-release-x.y-blocking].
-
-Once code freeze is lifted ([code thaw](#code-thaw) occurred), then there will be no need to `krel ff` from `master` onto the release branch. Instead, PRs that need to be merged onto the release branch are cherry-picked over from `master`.
+Once code freeze is lifted ([code thaw](#code-thaw) occurred), PRs that need to be merged onto the release branch are cherry-picked over from `master`.
 
 ### Reverts
 
