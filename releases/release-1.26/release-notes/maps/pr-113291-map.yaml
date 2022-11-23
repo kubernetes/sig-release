@@ -1,0 +1,4 @@
+pr: 113291
+releasenote:
+  text: Fixed the `PodAndContainerStatsFromCRI` feature, instead of supplementing
+    with stats from cAdvisor.

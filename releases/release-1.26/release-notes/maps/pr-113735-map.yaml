@@ -1,0 +1,3 @@
+pr: 113735
+releasenote:
+  text: Renamed the feature gate for CEL in Admission Control to `ValidatingAdmissionPolicy`.

@@ -1,0 +1,4 @@
+pr: 113307
+releasenote:
+  text: Updated the Lease identity naming format for the `APIServerIdentity` feature
+    to use a persistent name.

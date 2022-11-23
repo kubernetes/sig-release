@@ -1,0 +1,6 @@
+pr: 113363
+releasenote:
+  text: The `ProxyTerminatingEndpoints` feature is now Beta and enabled by default.
+    When enabled, kube-proxy will attempt to route traffic to terminating pods when
+    the traffic policy is `Local` and there are only terminating pods remaining on
+    a node.

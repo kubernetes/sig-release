@@ -1,0 +1,3 @@
+pr: 113501
+releasenote:
+  text: 'kubelet: fixed nil pointer in reflector start for standalone mode.'

@@ -1,0 +1,4 @@
+pr: 113171
+releasenote:
+  text: Aggregated discovery will be alpha and can be toggled with the `AggregatedDiscoveryEndpoint`
+    feature flag.

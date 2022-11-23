@@ -1,0 +1,9 @@
+pr: 113510
+releasenote:
+  text: |-
+    'Graduated `JobTrackingWithFinalizers` to stable.
+    Jobs created before the feature was enabled are still tracked without finalizers.
+    Jobs tracked with finalizers have the annotation batch.kubernetes.io/job-tracking.
+    If the annotation is present and the user attempts to remove it, the control plane adds it back.
+    The annotation `batch.kubernetes.io/job-tracking` is now deprecated.
+    The control plane will ignore it and stop adding it for new Jobs in v1.27.'

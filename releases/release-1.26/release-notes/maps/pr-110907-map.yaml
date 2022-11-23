@@ -1,0 +1,5 @@
+pr: 110907
+releasenote:
+  text: 'kubectl apply: warning that kubectl will ignore no-namespaced resource `pv
+    & namespace` in a future release if the namespace is specified and allowlist is
+    not specified.'

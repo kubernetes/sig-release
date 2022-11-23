@@ -1,0 +1,5 @@
+pr: 113491
+releasenote:
+  text: |
+    'Pod Security admission: the pod-security `warn` level will now default to
+    the `enforce` level.'

@@ -1,0 +1,7 @@
+pr: 113629
+releasenote:
+  text: |
+    'Promoted the `APIServerIdentity` feature to Beta. By default, each `kube-apiserver`
+    will now create a Lease in the `kube-system` namespace. These lease objects can
+    be used to identify the number of active API servers in the cluster, and may also
+    be used for future features such as the Storage Version API.'

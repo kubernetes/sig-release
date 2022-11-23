@@ -1,0 +1,6 @@
+pr: 113336
+releasenote:
+  text: |
+    '`CSIMigrationvSphere` was upgraded to GA and locked to true. Do not upgrade to K8s
+    1.26 if you need Windows, or XFS, or raw block support until vSphere CSI Driver
+    adds support for them in a version post v2.7.x.'
