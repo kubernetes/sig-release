@@ -41,12 +41,13 @@ The 1.26 release cycle is as follows:
 - **Thursday 29th September 2022**: Week 4 — [Production Readiness Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **[01:00 UTC Friday 7th October 2022 / 18:00 PDT Thursday 6th October 2022](https://everytimezone.com/s/3a6f71b0)**: Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **Monday 24th - Friday 28th October 2022**: Week 8 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
-- **[17:00 UTC Wednesday 2nd November 2022 / 10:00 PDT Wednesday 2nd November 2022](https://everytimezone.com/s/bb5725f4)**: Week 10 — [Release Retrospective][Retrospective Document] part 1
+- **[17:00 UTC Wednesday 2nd November 2022 / 10:00 PDT Wednesday 2nd November 2022](https://everytimezone.com/s/bb5725f4)**: Week 10 — [Release Retrospective][Retrospective Document] Part 1 - Midcycle
 - **[01:00 UTC Wednesday 9th November 2022 / 17:00 PDT Tuesday 8th November 2022](https://everytimezone.com/s/d3187dcc)**: Week 10 — [Code Freeze](../release_phases.md#code-freeze)
 - **[01:00 UTC Wednesday 16th November 2022 / 17:00 PDT Tuesday 15th November 2022](https://everytimezone.com/s/dc1d29cb)**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 29th November 2022**: Week 13 — Docs must be completed and reviewed
 - **Tuesday 6th December 2022**: Week 14 — Kubernetes v1.26.0 released
-- **TBC**: Week 15 — [Release Retrospective][Retrospective Document] part 2
+- **Tuesday 13th December**: Week 15 — [Release Retrospective][Retrospective Document] Part 2
+- **Wednesday 14th December**: Week 15 — [Release Retrospective][Retrospective Document] Part 3 (Note: Only if items get spill over from Retro Part 2, we will have Part 3)
 
 ## Timeline
 
@@ -90,7 +91,8 @@ The 1.26 release cycle is as follows:
 | **v1.26.0 released**                                          | Branch Manager | Tuesday 6th December 2022                                                                                               | week 14  | |
 | Release blog published                                        | Comms | Tuesday 6th December 2022                                                                                                        | week 14  | |
 | **[Thaw]**                                                    | Branch Manager | Tuesday 6th December 2022                                                                                               | week 14  | |
-| Release retrospective part 2 (**Time TBC**)                   | Community | TBC                                                                                                                          | week 15  | |
+| Release retrospective Part 2                                  | Community | [17:00 UTC / 09:00 PDT Tuesday 13th December](https://everytimezone.com/s/5ec45da4)                                                                                                                          | week 15  | |
+| Release retrospective part 3 (Note: Only if items get spill over from Retro Part 2, we will have Part 3) | Community | [17:00 UTC / 09:00 PDT Wednesday 14th December](https://everytimezone.com/s/1cba3371)                                                                                                                          | week 15  | |
 
 ## Phases
 
