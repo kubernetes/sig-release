@@ -676,29 +676,6 @@
     "feature": true,
     "duplicate_kind": true
   },
-  "111520": {
-    "commit": "08aac4f0acbfb7ca2da2ced281fe694ddd29a4d7",
-    "text": "kubelet: changed default value of `cpuCFSQuotaPeriod` from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work.",
-    "markdown": "Kubelet: changed default value of `cpuCFSQuotaPeriod` from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work. ([#111520](https://github.com/kubernetes/kubernetes/pull/111520), [@paskal](https://github.com/paskal))",
-    "author": "paskal",
-    "author_url": "https://github.com/paskal",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111520",
-    "pr_number": 111520,
-    "areas": [
-      "kubelet",
-      "code-generation"
-    ],
-    "kinds": [
-      "documentation",
-      "api-change"
-    ],
-    "sigs": [
-      "node",
-      "api-machinery"
-    ],
-    "duplicate": true,
-    "duplicate_kind": true
-  },
   "111533": {
     "commit": "0d7e51b2e806543c245c70829510258c8a907c7c",
     "text": "NoneNone",
