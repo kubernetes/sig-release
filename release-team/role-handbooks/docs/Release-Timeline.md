@@ -229,20 +229,22 @@ cd kubernetes-website
 # Step 2
 # Add the upstream repo as a remote
 git remote add upstream https://github.com/kubernetes/website.git
-git checkout --track main
-git checkout -b config-toml-1.21 # change for the release you're making
+
+git fetch upstream dev-[future release]
+git checkout --track upstream/dev-[future release]
+git checkout -b config-toml-[future release] # change for the release you're making, for example config-toml-1.21
 # Step 3
 # Edit config.toml to make the changes described above
 # save your changes
 git add config.toml
-git commit -m "Updated config.toml for 1.21 release"
+git commit -m "Updated config.toml for [future release] release"
 # Step 4
 # Check things look right
 git status
 git remote -v
 # Step 5
 # Push this new branch to your fork
-git push origin config-toml-1.21
+git push origin config-toml-[future release]
 ```
 
 Now create a pull request that targets the next release (here: `dev-1.21`) **not** `main`.
@@ -368,8 +370,9 @@ This allows us to avoid merge conflicts on release day with `dev-[future release
 To merge `main` into `dev-[future release]` on your local fork:
 
 ```bash
+git clone git@github.com:{YOUR_USER}/website.git
 # Step 0 (if you don't already have a remote called "upstream")
-git remote add upstream https://github.com/kubernetes/website.git
+git remote add upstream https://github.com/kubernetes/website.git | git remote add upstream git@github.com:kubernetes/website.git
 # Step 1
 git fetch upstream main
 # Step 2
