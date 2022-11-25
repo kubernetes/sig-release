@@ -12,29 +12,8 @@ The release team leader role is responsible for coordinating release activities,
 - [Standards](#standards)
   - [Mailing List Standards](#mailing-list-standards)
 - [Release theme gifts](#release-theme-gifts)
-- [Release Milestone Activities](#release-milestone-activities)
-  - [Before Release Begins](#before-release-begins)
-  - [Week 0](#week-0)
-  - [Week 1](#week-1)
-    - [Starting the release cycle](#starting-the-release-cycle)
-  - [Week 2](#week-2)
-  - [Week 3](#week-3)
-  - [Week 4](#week-4)
-  - [Week 5](#week-5)
-  - [Week 6](#week-6)
-  - [Week 7](#week-7)
-- [Release Halfway Point](#release-halfway-point)
-  - [Week 8](#week-8)
-  - [Week 9](#week-9)
-  - [Week 10](#week-10)
-  - [Week 11](#week-11)
-    - [Code Freeze Day](#code-freeze-day)
-  - [Week 12](#week-12)
-  - [Week 13](#week-13)
-  - [Week 14](#week-14)
-- [Release Day](#release-day)
-  - [Week 15](#week-15)
-  - [Week 16](#week-16)
+- [Code Freeze](#code-freeze)
+- [Working with the Release Team Calendar](#working-with-the-release-team-calendar)
 - [Release Team Meeting Host Playbook](#release-team-meeting-host-playbook)
   - [Requirements to host the meeting as Release Team Lead / Lead Shadow](#requirements-to-host-the-meeting-as-release-team-lead--lead-shadow)
   - [Pre-Meeting](#pre-meeting)
@@ -162,8 +141,37 @@ Once you have a release theme, there is a budget for you to create a release tea
 This gift can be a T-shirt, or a badge, but can be anything customizable within the budget, with a fun design of your choice and creation that relates to the release theme.
 Coordinate with SIG-Release Chairs (who have access to the CNCF Service Desk as well as know the budget) to put in an order, and make sure everyone gets their release swag gift.
 
-## Release Milestone Activities
+<!-- ## Release Milestone Activities -->
 
+## Code Freeze
+
+Depending on the number of exceptions code freeze will be a very busy time.
+
+**To triage an exception request follow the following guidelines:**
+1. Open a slack thread in `#sig-release` to open the discussion. 
+Example message:
+
+```md
+`@exception-request-author` filed an exception request for [KEP: `name-of-the-kep`](`https://github.com/kubernetes/enhancements/issues/XXX`). This thread is intended for the discussion of this request ([criteria](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md#exception-criteria)). PRs: [`PR-NUMBER`](`https://github.com/kubernetes/kubernetes/pull/PR-NUMBER`)
+cc @release-team-leads
+```
+2. Collect input from responsible sig-leads and require ask for a green light
+3. Approved exception requests must be merged prior to the rc.0 cut; therefore, do not extend the deadline for an exception request if its after the rc.0 cut
+4. Give enough time to get consensus
+
+## Working with the Release Team Calendar
+
+To get access to the [release team calendar](https://calendar.google.com/calendar/embed?src=kipmnllvl17vl9m98jen6ujcrs%40group.calendar.google.com) reach out to a sig-release TL or chair.
+Its useful to add major events of the release cycle to the calendar e.g. Enhancements Freeze, Code Freeze and Test Freeze.
+
+**Additional tips:**    
+- Add a calendar entry for the time period before Enhancements Freeze with the title [1.xx] Enhancements Freeze coming on HH:mm PDT Month Day, Year
+- When creating Google calendar entries, delete the Google Meet link which is created by default
+- Be aware of the time zone when creating Google calendar entries as it will default to the last time zone used to create the last calendar entry
+- If you get the "Message blocked" response after creating a calendar invitation, don't worry the invitation will be sent anyway. The reason why this message is generated is various, for example, the change of employers, the change of company DNS can lead to this.
+- You can use [everytimezone.com](https://everytimezone.com/) or a similar tool to communicate deadlines easier
+
+<!-- 
 ### Before Release Begins
 
 - Attend previous release retro to capture feedback and incorporate it into next release cycle
@@ -427,7 +435,7 @@ Code Freeze will typically fall around Weeks 12 or 13 depending on the length or
 - Follow-up interviews with the media, the media roundtable
 - Contact the [Release Managers Google Group][release-managers-group] to complete the Release Team Lead & Lead Shadows offboarding tasks from the previously-opened onboarding issue
 
-- Help fill any open positions for the next release milestone
+- Help fill any open positions for the next release milestone -->
 
 ---
 
