@@ -1,5 +1,5 @@
 pr: 112360
 releasenote:
   text: |-
-    'Kubelet added the following Pod failure conditions:
+    'kubelet: Added the following Pod failure conditions:
     - `DisruptionTarget` (graceful node shutdown, node pressure eviction)'

@@ -1,4 +1,4 @@
 pr: 109505
 releasenote:
-  text: Removed of raising an error when setting an annotation with the same value,
+  text: Removed raising an error when setting an annotation with the same value,
     just ignore it.
