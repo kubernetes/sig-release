@@ -1,0 +1,4 @@
+pr: 113511
+releasenote:
+  text: |
+    '`NodeOutOfServiceVolumeDetach` is now beta.'

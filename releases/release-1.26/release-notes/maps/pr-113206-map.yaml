@@ -1,0 +1,4 @@
+pr: 113206
+releasenote:
+  text: Fixed cost estimation of token creation request for service account in Priority
+    and Fairness.

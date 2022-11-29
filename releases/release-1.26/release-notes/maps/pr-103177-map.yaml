@@ -1,0 +1,4 @@
+pr: 103177
+releasenote:
+  text: Added a method `StreamWithContext` to `remotecommand.Executor` to support
+    cancelable SPDY executor stream.

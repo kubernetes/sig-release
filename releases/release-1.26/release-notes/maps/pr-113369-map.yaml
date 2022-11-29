@@ -1,0 +1,4 @@
+pr: 113369
+releasenote:
+  text: The `ResourceVersion` returned in objects from delete responses is now consistent
+    with the `ResourceVersion` contained in the delete watch event.

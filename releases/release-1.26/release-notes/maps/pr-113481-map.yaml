@@ -1,0 +1,3 @@
+pr: 113481
+releasenote:
+  text: Pod logs using `--timestamps` are not broken up with timestamps anymore.

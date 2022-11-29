@@ -1,0 +1,3 @@
+pr: 112961
+releasenote:
+  text: Added alpha support for `WindowsHostNetworking` feature.

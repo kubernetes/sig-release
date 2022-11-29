@@ -1,0 +1,5 @@
+pr: 112679
+releasenote:
+  text: Deprecated the `apiserver_request_slo_duration_seconds` metric for v1.27 in
+    favor of `apiserver_request_sli_duration_seconds` for naming consistency purposes
+    with other SLI-specific metrics and to avoid any confusion between SLOs and SLIs.

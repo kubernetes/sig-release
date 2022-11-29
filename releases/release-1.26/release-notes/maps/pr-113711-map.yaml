@@ -1,0 +1,3 @@
+pr: 113711
+releasenote:
+  text: 'apiserver: used the correct error when logging errors updating managedFields.'

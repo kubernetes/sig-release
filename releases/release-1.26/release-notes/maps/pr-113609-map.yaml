@@ -1,0 +1,4 @@
+pr: 113609
+releasenote:
+  text: Added alpha support for returning container and pod metrics from CRI, instead
+    of cAdvsior.

@@ -1,0 +1,3 @@
+pr: 113819
+releasenote:
+  text: Promoted `kubectl alpha events` to `kubectl events`.

@@ -1,0 +1,4 @@
+pr: 113217
+releasenote:
+  text: API Server tracing now includes the latency of authorization, priorityandfairness,
+    impersonation, audit, and authentication filters.

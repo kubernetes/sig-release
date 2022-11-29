@@ -1,0 +1,3 @@
+pr: 112895
+releasenote:
+  text: Moved `MixedProtocolLBService` from beta to GA.

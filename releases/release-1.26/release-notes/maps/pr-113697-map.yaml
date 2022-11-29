@@ -1,0 +1,6 @@
+pr: 113697
+releasenote:
+  text: 'KMS: added validation for duplicate kms config name when auto reload is enabled.
+    If you enabled automatic reload of encryption configuration with API server flag
+    `--encryption-provider-config-automatic-reload`, ensure all the KMS provider names
+    (v1 and v2) in the encryption configuration are unique.'

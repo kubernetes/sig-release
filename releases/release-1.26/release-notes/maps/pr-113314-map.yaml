@@ -1,0 +1,6 @@
+pr: 113314
+releasenote:
+  text: 'Introduced `v1alpha1` API for validating admission policies, enabling extensible
+    admission control via CEL expressions (KEP  3488: CEL for Admission Control).
+    To use, enable the `ValidatingAdmissionPolicy` feature gate and the `admissionregistration.k8s.io/v1alpha1`
+    API via `--runtime-config`.'

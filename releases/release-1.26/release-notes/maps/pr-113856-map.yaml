@@ -1,0 +1,4 @@
+pr: 113856
+releasenote:
+  text: 'Known issue: Job field `.spec.podFailurePolicy.rules[*].onExitCode` might
+    be ignored if the Pod is deleted before it terminates.'

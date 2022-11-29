@@ -1,0 +1,6 @@
+pr: 112914
+releasenote:
+  text: Added a `--topology-manager-policy-options` flag to the kubelet to support
+    fine tuning the topology manager policies. The first policy option, `prefer-closest-numa-nodes`,
+    allows these policies to favor sets of NUMA nodes with shorter distance between
+    nodes when making admission decisions.

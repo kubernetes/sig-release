@@ -1,0 +1,5 @@
+pr: 113275
+releasenote:
+  text: |
+    'A new `preEnqueue` extension point was added to scheduler's component config
+    `v1beta2/v1beta3/v1`.'

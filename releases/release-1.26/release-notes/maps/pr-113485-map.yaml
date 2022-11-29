@@ -1,0 +1,20 @@
+pr: 113485
+releasenote:
+  text: |-
+    'Priority and Fairness has introduced a new feature called _borrowing_ that allows an API priority level
+    to borrow a number of seats from other priority level(s). As a cluster operator, you can enable borrowing
+    for a certain priority level configuration object via the two newly introduced fields `lendablePercent`, and
+    `borrowingLimitPercent` located under the `.spec.limited` field of the designated priority level.
+    This change added the following metrics:
+    - `apiserver_flowcontrol_nominal_limit_seats`: Nominal number of execution seats configured for each priority level
+    - `apiserver_flowcontrol_lower_limit_seats`: Configured lower bound on number of execution seats available to each priority level
+    - `apiserver_flowcontrol_upper_limit_seats`: Configured upper bound on number of execution seats available to each priority level
+    - `apiserver_flowcontrol_demand_seats`: Observations, at the end of every nanosecond, of (the number of seats each priority level could use) / (nominal number of seats for that level)
+    - `apiserver_flowcontrol_demand_seats_high_watermark`: High watermark, over last adjustment period, of demand_seats
+    - `apiserver_flowcontrol_demand_seats_average`: Time-weighted average, over last adjustment period, of demand_seats
+    - `apiserver_flowcontrol_demand_seats_stdev`: Time-weighted standard deviation, over last adjustment period, of demand_seats
+    - `apiserver_flowcontrol_demand_seats_smoothed`: Smoothed seat demands
+    - `apiserver_flowcontrol_target_seats`: Seat allocation targets
+    - `apiserver_flowcontrol_seat_fair_frac`: Fair fraction of server's concurrency to allocate to each priority level that can use it
+    - `apiserver_flowcontrol_current_limit_seats`: current derived number of execution seats available to each priority level
+    The possibility of borrowing means that the old metric `apiserver_flowcontrol_request_concurrency_limit` can no longer mean both the configured concurrency limit and the enforced concurrency limit. Henceforth it means the configured concurrency limit.'

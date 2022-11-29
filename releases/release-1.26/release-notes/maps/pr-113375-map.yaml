@@ -1,0 +1,8 @@
+pr: 113375
+releasenote:
+  text: |
+    '`PodDisruptionBudget` now adds an alpha `spec.unhealthyPodEvictionPolicy` field.
+    When the `PDBUnhealthyPodEvictionPolicy` feature-gate is enabled in `kube-apiserver`,
+    setting this field to `"AlwaysAllow"` allows pods to be evicted if they do not
+    have a ready condition, regardless of whether the PodDisruptionBudget is currently
+    healthy.'

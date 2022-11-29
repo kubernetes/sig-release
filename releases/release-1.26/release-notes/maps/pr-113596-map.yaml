@@ -1,0 +1,5 @@
+pr: 113596
+releasenote:
+  text: Added reconstruction of SELinux mount context after kubelet restart. Feature
+    `SELinuxMountReadWriteOncePod` is now fully implemented and kubelet does not lose
+    its cache of SELinux contexts after kubelet process restart.
