@@ -45,7 +45,7 @@ The 1.26 release cycle is as follows:
 - **[01:00 UTC Wednesday 9th November 2022 / 17:00 PDT Tuesday 8th November 2022](https://everytimezone.com/s/d3187dcc)**: Week 10 — [Code Freeze](../release_phases.md#code-freeze)
 - **[01:00 UTC Wednesday 16th November 2022 / 17:00 PDT Tuesday 15th November 2022](https://everytimezone.com/s/dc1d29cb)**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 29th November 2022**: Week 13 — Docs must be completed and reviewed
-- **Tuesday 6th December 2022**: Week 14 — Kubernetes v1.26.0 released
+- **Thursday 8th December 2022**: Week 14 — Kubernetes v1.26.0 released
 - **Tuesday 13th December**: Week 15 — [Release Retrospective][Retrospective Document] Part 2
 - **Wednesday 14th December**: Week 15 — [Release Retrospective][Retrospective Document] Part 3 (Note: Only if items get spill over from Retro Part 2, we will have Part 3)
 
@@ -87,10 +87,10 @@ The 1.26 release cycle is as follows:
 | Docs complete — All PRs reviewed and ready to merge           | Docs Lead | Tuesday 29th November 2022                                                                                                   | week 13  | |
 | Feature blogs ready to review                                 | Enhancement Owner / SIG Leads | Tuesday 29th November 2022                                                                               | week 13  | |
 | 1.26.0-rc.1 released                                          | Branch Manager | Tuesday 29th November 2022                                                                                              | week 13  | |
-| Release Notes complete — reviewed & merged to `k/k` | Release Notes Lead | [01:00 UTC Friday 2nd December 2022 / 17:00 PDT Thursday 1st December 2022](https://everytimezone.com/s/4496e96f)                | week 13  | |
-| **v1.26.0 released**                                          | Branch Manager | Tuesday 6th December 2022                                                                                               | week 14  | |
-| Release blog published                                        | Comms | Tuesday 6th December 2022                                                                                                        | week 14  | |
-| **[Thaw]**                                                    | Branch Manager | Tuesday 6th December 2022                                                                                               | week 14  | |
+| Release Notes complete — reviewed & merged to `k/k` | Release Notes Lead | Thursday 8th December | week 14  | |
+| **v1.26.0 released**                                          | Branch Manager | Thursday 8th December 2022                                                                                               | week 14  | |
+| Release blog published                                        | Comms | Thursday 8th December 2022                                                                                                        | week 14  | |
+| **[Thaw]**                                                    | Branch Manager | Thursday 8th December 2022                                                                                               | week 14  | |
 | Release retrospective Part 2                                  | Community | [17:00 UTC / 09:00 PDT Tuesday 13th December](https://everytimezone.com/s/5ec45da4)                                                                                                                          | week 15  | |
 | Release retrospective part 3 (Note: Only if items get spill over from Retro Part 2, we will have Part 3) | Community | [17:00 UTC / 09:00 PDT Wednesday 14th December](https://everytimezone.com/s/1cba3371)                                                                                                                          | week 15  | |
 
