@@ -87,7 +87,7 @@ The 1.26 release cycle is as follows:
 | Docs complete — All PRs reviewed and ready to merge           | Docs Lead | Tuesday 29th November 2022                                                                                                   | week 13  | |
 | Feature blogs ready to review                                 | Enhancement Owner / SIG Leads | Tuesday 29th November 2022                                                                               | week 13  | |
 | 1.26.0-rc.1 released                                          | Branch Manager | Tuesday 29th November 2022                                                                                              | week 13  | |
-| Release Notes complete — reviewed & merged to `k/k` | Release Notes Lead | [01:00 UTC Friday 2nd December 2022 / 17:00 PDT Thursday 1st December 2022](https://everytimezone.com/s/4496e96f)                | week 13  | |
+| Release Notes complete — reviewed & merged to `k/k` | Release Notes Lead | Thursday 8th December | week 14  | |
 | **v1.26.0 released**                                          | Branch Manager | Thursday 8th December 2022                                                                                               | week 14  | |
 | Release blog published                                        | Comms | Thursday 8th December 2022                                                                                                        | week 14  | |
 | **[Thaw]**                                                    | Branch Manager | Thursday 8th December 2022                                                                                               | week 14  | |
