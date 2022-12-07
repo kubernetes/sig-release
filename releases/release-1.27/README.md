@@ -44,6 +44,7 @@ The 1.27 release cycle is as follows:
 - **[01:00 UTC Wednesday 22nd March 2023 / 17:00 PDT Tuesday 21st March 2023](https://everytimezone.com/s/5d64ada0)**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 4th April 2023**: Week 13 — Docs must be completed and reviewed
 - **Thursday 13th April 2023**: Week 14 — Kubernetes v1.27.0 released
+- **Monday 17th April 2023**: Week 15 - [KubeCon EU](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/)
 
 ## Timeline
 

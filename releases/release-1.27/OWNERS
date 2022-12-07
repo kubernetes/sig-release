@@ -7,4 +7,8 @@ approvers:
     - helayoty # Lead Shadow
     - hosseinsalahi # Lead Shadow
     - Priyankasaggu11929 # Lead Shadow
+
+reviewers:
+    - marosset # Enhancements Lead
+    - harshanarayana # Release Notes Lead
  
