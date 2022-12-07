@@ -2,7 +2,7 @@
 
 | **Team/Role** | **Lead Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
-| Release Team Lead | Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`) | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) |
+| Release Team Lead | Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`) | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) | Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929) / Slack: `@psaggu`) |
 | Emeritus Adviser | James Laverack ([@jameslaverack](https://github.com/jameslaverack)) / Slack: `@james.laverack` | |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
