@@ -14,7 +14,7 @@ description: |
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.27/README.md)
 * [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.27/release-team.md)
-* [Meeting Minutes](http://bit.ly/k8s127-releasemtg) (members of [release-team@] receive meeting invites)
+* [Meeting Minutes](https://bit.ly/k8s127-releasemtg) (members of [release-team@] receive meeting invites)
 * [v1.27 Release Calendar][k8s127-calendar]
 * Contact: [#sig-release] on slack, [release-team](mailto://release-team@kubernetes.io) on e-mail
 * [Internal Contact Info] (accessible only to members of [release-team@])
