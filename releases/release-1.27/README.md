@@ -81,7 +81,7 @@ The 1.27 release cycle is as follows:
 | Docs complete — All PRs reviewed and ready to merge           | Docs Lead | Tuesday 4th April 2023                                                                                                   | week 13  | |
 | Feature blogs ready to review                                 | Enhancement Owner / SIG Leads | Tuesday 4th April 2023                                                                               | week 13  | |
 | 1.27.0-rc.1 released                                          | Branch Manager | Tuesday 4th April 2023                                                                                              | week 13  | |
-| Release Notes complete — reviewed & merged to `k/k` | Release Notes Lead | Thursday 13th April | week 14  | |
+| Release Notes complete — reviewed & merged to https://github.com/kubernetes/kubernetes | Release Notes Lead | Thursday 13th April | week 14  | |
 | **v1.27.0 released**                                          | Branch Manager | Thursday 13th April 2023                                                                                               | week 14  | |
 | Release blog published                                        | Comms | Thursday 13th April 2023                                                                                                        | week 14  | |
 | **[Thaw]**                                                    | Branch Manager | Thursday 13th April 2023                                                                                               | week 14  | |
