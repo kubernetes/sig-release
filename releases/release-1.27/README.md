@@ -82,7 +82,7 @@ The 1.27 release cycle is as follows:
 | Feature blogs ready to review                                 | Enhancement Owner / SIG Leads | Tuesday 4th April 2023                                                                               | week 13  | |
 | 1.27.0-rc.1 released                                          | Branch Manager | Tuesday 4th April 2023                                                                                              | week 13  | |
 | Release Notes complete — reviewed & merged to `k/k` | Release Notes Lead | Thursday 13th April | week 14  | |
-| **v1.26.0 released**                                          | Branch Manager | Thursday 13th April 2023                                                                                               | week 14  | |
+| **v1.27.0 released**                                          | Branch Manager | Thursday 13th April 2023                                                                                               | week 14  | |
 | Release blog published                                        | Comms | Thursday 13th April 2023                                                                                                        | week 14  | |
 | **[Thaw]**                                                    | Branch Manager | Thursday 13th April 2023                                                                                               | week 14  | |
 | [KubeCon EU](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/)  | | April 17-21 2023                                                                                                       | week 15   | |
