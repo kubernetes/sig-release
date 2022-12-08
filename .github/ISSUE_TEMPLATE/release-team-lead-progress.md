@@ -27,7 +27,7 @@ Additional information can be found in the [release team lead handbook](https://
 ### 1. Before the start of the Release Cycle (Week 0)
 
 - [ ] Captured feedback from previous release cycle retro and planned to incorporate it into the release cycle
-- [ ] Release folder added to [k/sig-release/releases](https://github.com/kubernetes/sig-release/tree/master/releases)
+- [ ] Release directory named `release-1.XX` added to [k/sig-release/releases](https://github.com/kubernetes/sig-release/tree/master/releases)
 - [ ] Started planning the release schedule by opening a thread in `#sig-release`
 <!-- - [ ] Schedule Release retrospective dates
   - The first retrospective is held during the cycle in the first week of M, W, F burndown meetings -- typically mid-week.
@@ -82,7 +82,7 @@ Additional information can be found in the [release team lead handbook](https://
 
 **One week before the start of the release cycle:**
 - [ ] "Release Sneak Peak" email to introduce yourself, lead shadows, role leads, and branch manager has been send out
-  - Send the email to [k-dev](https://groups.google.com/a/kubernetes.io/g/dev), [SIG Leads](https://groups.google.com/a/kubernetes.io/g/leads), [SIG Release](https://groups.google.com/forum/#!forum/kubernetes-sig-release), [Release Team](https://groups.google.com/a/kubernetes.io/g/release-team)
+  - Send the email to [k-dev](https://groups.google.com/a/kubernetes.io/g/dev), [SIG Leads](https://groups.google.com/a/kubernetes.io/g/leads), [SIG Release](https://groups.google.com/forum/#!forum/kubernetes-sig-release), and [Release Team](https://groups.google.com/a/kubernetes.io/g/release-team)
   - Example: [1.24 sneak peek](https://groups.google.com/a/kubernetes.io/g/release-team/c/hePU9eaoYEw), [1.25 sneak peek](https://groups.google.com/a/kubernetes.io/g/release-team/c/jwqlcrctFO0)
 
 ### 2. First weeks of the release cycle up to Enhancements Freeze (1-3 Weeks)
@@ -118,7 +118,7 @@ Additional information can be found in the [release team lead handbook](https://
 
 
 **A week before Enhancements Freeze:**
-- [ ] Remind the community about Enhancements Freeze reminder send out. Example email: [1.26](https://groups.google.com/a/kubernetes.io/g/dev/c/pJZC2cnkeJ8); It may also be useful to send a short version to the `#sig-release` and `#chairs-and-techleads` slack channels referencing to the k-dev email.
+- [ ] Remind the community about Enhancements Freeze reminder send out. Example email: [1.26](https://groups.google.com/a/kubernetes.io/g/dev/c/pJZC2cnkeJ8); It may also be useful to send a short version to the `#sig-release` and `#chairs-and-techleads` Slack channels referencing to the k-dev email.
 
 ### 3. Enhancements freeze up to Release Halfway Point (~Week 5 - 7)
 
@@ -132,12 +132,12 @@ Additional information can be found in the [release team lead handbook](https://
 <!-- - [ ] SIGs that have not completed release themes should be contacted again, with a focus on explaining why this matters to the community -->
 
 **Release Cut Alpha 3:**
-- [ ] Checked in with ci-signal and branch managers if x.y.0-alpha.3 is ok to be released and [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) tests are all green
-- [ ] Checked in with Release Notes team on release notes progress after the release notes for x.y.0-alpha.3 is generated
+- [ ] Checked in with ci-signal and branch managers if 1.XX.0-alpha.3 is ok to be released and [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) tests are all green
+- [ ] Checked in with Release Notes team on release notes progress after the release notes for 1.XX.0-alpha.3 is generated
 
 **Release Cut Alpha 4:**
-- [ ] Checked in with ci-signal and branch managers if x.y.0-alpha.4 is ok to be released and [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) tests are all green
-- [ ] Checked in with Release Notes team on release notes progress after the release notes for x.y.0-alpha.4 is generated
+- [ ] Checked in with ci-signal and branch managers if 1.XX.0-alpha.4 is ok to be released and [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) tests are all green
+- [ ] Checked in with Release Notes team on release notes progress after the release notes for 1.XX.0-alpha.4 is generated
 
 ### 4. Release Halfway Point up to Code Freeze (~Week 8 - 11)
 
@@ -146,9 +146,9 @@ Additional information can be found in the [release team lead handbook](https://
 <!-- - [ ] Exception requests for Enhancements Freeze should be almost zero -->
 - [ ] Notify SIGs and about upcoming Code Freeze Deadline by sending an email to the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) list
 <!-- - [ ] Adjust the enhancements repo/tracking spreadsheet as necessary (this may also require modifying themes that can’t be delivered) -->
-- [ ] The first retrospective meeting is scheduled for the first week of M, W, F burndown meetings, typically mid-week. Confirm the Emeritus Adviser can serve as facilitator. If Emeritus Adviser is unavailable then defer the responsibility as appropriate.
+- [ ] The first retrospective meeting is scheduled for the first week of Monday, Wednesday, and Friday burndown meetings, typically mid-week. Confirm the Emeritus Adviser can serve as facilitator. If Emeritus Adviser is unavailable then defer the responsibility as appropriate.
 - [ ] Make sure everyone knows the Docs deadline (PRs ready for review) is coming the following week.
-- [ ] Started release team meetings on Monday, Wednesday and Friday
+- [ ] Started release team meetings on Monday, Wednesday, and Friday
 <!-- - [ ] The once-weekly release meeting schedule now shifts to M, W, F and becomes burndown-specific (the template should be used from here forward and will need to be updated ahead of the meeting, which takes about 10 minutes for the lead, and less for the other team members) -->
 - [ ] Pinged role leads reminding them to start considering succession plans. If they are handing the role off to a successor, identifying them early gives more time for the committed volunteer to get targeted mentoring.
 
@@ -168,7 +168,7 @@ Additional information can be found in the [release team lead handbook](https://
 Defer to the [code freeze section](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-team-lead#standards) in the release-team-lead handbook.
 
 #### Shortly before Code freeze
-- Monitor the enhancements spreadsheet to get an idea of how many PRs are still outstanding leading up to Code Freeze
+- Monitor the enhancements GitHub project to get an idea of how many PRs are still outstanding leading up to Code Freeze
 - Monitor Testgrid and Prow to understand the stability of the release and PRs getting ready to merge. If Prow and Test grid are not in a good state consult folks from SIG Testing on delaying code freeze by a day if needed.
 - [ ] Reminded the Branch Manager that branch CI jobs will be needed next week
 - [ ] Send out a reminder email to [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev)
@@ -183,7 +183,7 @@ Defer to the [code freeze section](https://github.com/kubernetes/sig-release/tre
 
 #### After Code Freeze
 - Wait for exception requests and bring them to `#sig-release`
-- [ ] Verified that the [`release-x.y` branch](https://github.com/kubernetes/kubernetes/branches) has been automatically created at the start of Test Freeze
+- [ ] Verified that the [`release-1.XX` branch](https://github.com/kubernetes/kubernetes/branches) has been automatically created at the start of Test Freeze
 - [ ] Verified that the Branch Manager created the CI board on [Testgrid](https://testgrid.k8s.io/sig-release) for the release cycle (1.XX-blocking & 1.XX-informing)
 <!-- - [ ] Prepare for x.y.0-rc.0 release (shortly after Test Freeze), ensuring x.y-blocking, master-blocking are 100% green, or all failures have issues filed and are being actively worked. -->
 - [ ] Published the "Removals, Deprecations, and Major Changes blog"
@@ -198,7 +198,7 @@ Defer to the [code freeze section](https://github.com/kubernetes/sig-release/tre
 <!-- - [ ] Release notes and themes should be close to done if not completed. There is a script that gathers notes from PRs but it’s still in progress. As the lead, you may need to help assemble the notes. -->
 - [ ] Discussed Release Lead succession with the EA and sig-release leads
 <!-- - [ ] Identify potential vacancies on the incoming Release Team and begin asking team shadows and former team shadows to serve as Lead in the upcoming cycle. Continue to improve and uphold the Release Team Selection process. -->
-- [ ] The task is now to ensure the release branch is ready to go. This means there are zero pending PRs, no failing x.y-blocking tests, no open issues in the milestone. This will continue until release day.
+- [ ] The task is now to ensure the release branch is ready to go. This means there are zero pending PRs, no failing 1.XX-blocking tests, no open issues in the milestone. This will continue until release day.
 - [ ] Final documentation PRs are reviewed and ready to be merged. Likely, this is not true and some are outstanding, so you need to help convince SIG doc writers to get these in with urgency.
 <!-- - [ ] The release notes draft needs to be completely done and ready to consume by anago. Have SIG volunteers do a final proofread of their sections. Make sure people actually do this. You need to avoid having the release notes volunteers pull “all nighters” before the release. -->
 <!-- - [ ] Work with the CNCF, SIG Docs, and Communications Lead to start the Release Blog post pulling from SIG Themes, the enhancements repo, SIG members, and possibly release notes in specific PRs. -->

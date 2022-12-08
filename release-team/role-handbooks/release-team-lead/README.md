@@ -147,7 +147,7 @@ cc @release-team-leads
 
 ## Working with the Release Team Calendar
 
-To get access to the [release team calendar](https://calendar.google.com/calendar/embed?src=kipmnllvl17vl9m98jen6ujcrs%40group.calendar.google.com) reach out to a sig-release TL or chair.
+To get access to the [release team calendar](https://calendar.google.com/calendar/embed?src=kipmnllvl17vl9m98jen6ujcrs%40group.calendar.google.com) reach out to a SIG Release tech lead or chair.
 Its useful to add major events of the release cycle to the calendar e.g. Enhancements Freeze, Code Freeze and Test Freeze.
 
 **Additional tips:**    
