@@ -45,8 +45,9 @@ In addition to the [Release Team Lead selection criteria][lead-criteria] you are
 
 Release Lead is a very time-consuming role, especially towards the end of the release cycle. Before you volunteer to be Release Lead, please make certain that your employer and your family are okay with you spending a lot of time on the release for the next four months. Here's a rough estimate of the time requirements by week:
 
-- Weeks 1-4: 4-8 hours a week
+- Weeks 1-4: 6-12 hours a week
 - Weeks 5-10: 6-12 hours a week
+- Week after Code Freeze: Be prepared to spend a lot of time each day on release-related activities
 - Weeks 11-15: 10 to 25 hours a week
 - Release Day: Prepare to spend all day on release-related activities. Given the choice between working after-hours or weekends, and having the release be later than the initial target, delaying the release is preferred.
 
@@ -130,8 +131,9 @@ This gift can be a T-shirt, or a badge, but can be anything customizable within 
 Coordinate with [SIG-Release Chairs](https://github.com/kubernetes/community/tree/master/sig-release#chairs) (who have access to the CNCF Service Desk as well as know the budget) to put in an order, and make sure everyone gets their release swag gift.
 
 ## Code Freeze
+With code exception in effect, you will likely have to assemble decision makers on specific pending PRs to assess whether the risk of inclusion is acceptable or not. Remember this is not you making a decision, it’s you helping SIGs follow the process, and ensuring there’s consensus. In the event of a contentious PR, you should err on the side of risk aversion. In extreme cases, you can defer to the steering committee, but that is extremely unlikely.
 
-Depending on the number of exceptions code freeze will be a very busy time.
+Depending on the number of exceptions code freeze will be a **very busy time**. 
 
 **To triage an exception request follow the following guidelines:**
 1. Open a slack thread in `#sig-release` to open the discussion. 
@@ -141,9 +143,12 @@ Example message:
 `@exception-request-author` filed an exception request for [KEP: `name-of-the-kep`](`https://github.com/kubernetes/enhancements/issues/XXX`). This thread is intended for the discussion of this request ([criteria](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md#exception-criteria)). PRs: [`PR-NUMBER`](`https://github.com/kubernetes/kubernetes/pull/PR-NUMBER`)
 cc @release-team-leads
 ```
-2. Collect input from responsible sig-leads and require ask for a green light
-3. Approved exception requests must be merged prior to the rc.0 cut; therefore, do not extend the deadline for an exception request if its after the rc.0 cut
+
+2. Collect input from responsible sig-leads and require ask for a green light (if multiple sigs are involved reach out to all!)
+3. Approved exception requests must be merged prior to the rc.0 cut; therefore, do not extend the deadline for an exception request if its after the rc.0 cut!
 4. Give enough time to get consensus
+5. If the exception request got accepted add milestone and labels back to the KEP and related PRs
+6. Communicate your decision and explain it thoroughly
 
 ## Working with the Release Team Calendar
 
@@ -218,5 +223,6 @@ If anyone has anything they’d like to discuss, please add to the notes.
 [lead-criteria]: /release-team/release-team-selection.md#release-team-lead
 [milestone-maintainers]: /release-team/README.md#milestone-maintainers
 [release-blocking]: /release-blocking-jobs.md
-[rtl-onboarding]: https://github.com/kubernetes/sig-release/issues/new?labels=sig%2Frelease%2C+area%2Frelease-eng%2C+area%2Frelease-team&template=release-team-lead.md&title=Release+Team+Lead+access+for+%3CGH-handle%3E
+[rtl-onboarding]: https://github.com/kubernetes/sig-release/issues/new?assignees=&labels=sig%2Frelease%2C+area%2Frelease-eng%2C+area%2Frelease-team&template=release-team-lead-progress.md&title=[1.XX]+Release+Team+Lead+Cycle+Progress
+
 [selection]: /release-team/release-team-selection.md
