@@ -74,13 +74,15 @@ The shadows should be selected keeping in mind that one of them may eventually b
 
 Ensure that the previous Enhancements Lead has given you access to:
 
-- The previous Kubernetes Release Enhancements Tracking Sheet.
+- The previous Kubernetes release enhancements tracking board.
 
 Ensure that you and the shadows have been added to:
 
 - GitHub teams
   - [enhancements](https://git.k8s.io/org/config/kubernetes/sig-architecture/teams.yaml) (This group should be used for Enhancement Subproject related pinging only and not for Release Team Enhancements Group)
   - [milestone-maintainers](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
+  - [release-team](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
+  - [release-team-enhancements](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml) (For elevated access to tracking board)
 
 ### Slack
 
@@ -107,23 +109,38 @@ It is important that this process be followed and documentation remain up-to-dat
 
 #### Pre-Collection (Week 0)
 
-- Duplicate the previous enhancement collection spreadsheet into your own Google Drive and adjust it for the current milestone. Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements. Create a free account on [bitly](https://bitly.com/) to create a shortlink for the new enhancement collection spreadsheet.
-- Clean up the spreadsheet by removing all currently tracked issues from all tabs.
-- Update the permissions on the enhancement collection sheet.
-  - Using the _Share_ settings available in the top right of the sheet, enable anyone with the link to _view_ the sheet.
-  - Grant _Edit_ access to yourself (Current Enhancements lead), prior Enhancements lead, release lead, Enhancements shadows, the [SIG Release Leads Google Group][sig-release-leads-group], and [SIG Leads Google Group][sig-leads-group].
-  - Add _Comment_ access for the [SIG Release Google Group][sig-release-group], [SIG Docs Google Group][sig-docs-group], [Kubernetes Release Team Google Group][rt-group].
-- Update the permission on the protected tabs on the enhancement collection sheet.
-  - For `KEP Collection` tab, grant _Edit_ access to the [SIG Leads Google Group][sig-leads-group].
-  - For `Docs` tab, grant _Edit_ access to Docs Lead and Docs shadows.
-  - For `Enhancements` tab, grant _Edit_ access to the [Production Readiness Review](https://github.com/kubernetes/enhancements/tree/master/keps/prod-readiness) (PRR) reviewers, and the Enhancements Shadows (later).
-- Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking sheet to the current release page in [sig-release][sig-release].
-- Make a pull request to add the shortlinked Enhancement Tracking sheet to [kubernetes/enhancements README page](https://github.com/kubernetes/enhancements/blob/master/README.md#enhancements-tracking-spreadsheet).
+- Create the Enhancements Tracking Board for the current release
+  - Navigate to https://github.com/orgs/kubernetes/projects/, click the `New Project` button, select the `Table` template (default), and click the `Create` button.
+  - Update project settings by clicking `...` -> `Settings` from the project board
+    - Update the `Project name` to reflect the current release e.g, **1.27 Enhancements Tracking**
+    - Set the project's `Visibility` to **Public**
+  - Update project access by clicking `Manage Access` from the settings page
+    - Set the `Base role` access to **Read**
+    - Add the following github teams with **Admin** access
+      - @release-team-leads
+    - Add the following github teams with  **Write** access
+      - @production-readiness
+      - @release-team-comms
+      - @release-team-docs
+      - @release-team-enhancements
+  - Create all the Fields (columns) for the board
+    > Note: This is currently a manual process and  <https://github.com/orgs/community/discussions/41133> filed to help automate the process.
+    - Until this can be automated; manually create fields with the same `Field Name`, `Field type`, and `Option` values from the previous release's project board.
+  - Create all the Views for the board
+    > Note: This is also currently a manual process until github GraphQL APIs allow for manipulating Views
+    - Until this can be automated; manually create Views with the same Names and Fields from the previous release's project board.
+      Tip: You can easily view all the Fields present in each view by clicking the `v` next to the View's name an selecting `Configuration` -> `Fields`
+      Note: Remember to **save** each View. If there is a blue bubble next to the Views name there are unsaved changed for that view!
+- Create a shortlink for the Tracking Board
+  - Create a free account on [bitly](https://bitly.com/) to create a shortlink for the new Enhancement Tracking Board following the pattern `k8sxyy-enhancements` e.g., https://bit.ly/k8s127-enhancements.
+- Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking Board to the current release page in [sig-release][sig-release].
+- Make a pull request to add the shortlinked Enhancement Tracking Board to [kubernetes/enhancements README page](https://github.com/kubernetes/enhancements#enhancements-tracking-board).
 - Find [Issues][enhancements-issues] from previous milestone that have graduated to Stable. Remove `tracked/yes` or `tracked/no` labels. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
 - Find [Issues labeled `tracked/yes`](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+label%3Atracked%2Fyes) and change to `tracked/no` until the Enhancement is ready to be tracked for the upcoming release.
 - Close previous milestone by ensuring that there are no open issues/PRs in that milestone.
 - Gather Shadows to have them read this handbook and give expectations on what the process looks like and their particular role. If possible, try to schedule a call with the shadows to get them accustomed to the team. This helps as a great team building exercise.
-- Add Shadow information to the `Enhancements` tab of the Enhancements Tracking sheet.
+- Add Shaodws to the  `release-team` and `release-team-enhancements` GitHub teams. (See [access-required](#access-required))
+- Add Shadows to the `Enhancements Contact` Field of the Enhancements Tracking Board.
 
 #### Pre-Enhancements Freeze (Week 1)
 
