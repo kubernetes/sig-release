@@ -82,8 +82,8 @@ Additional information can be found in the [release team lead handbook](https://
 
 **One week before the start of the release cycle:**
 - [ ] "Release Sneak Peak" email to introduce yourself, lead shadows, role leads, and branch manager has been send out
-  - Send the email to [k-dev](https://groups.google.com/a/kubernetes.io/g/dev), [SIG Leads](https://groups.google.com/a/kubernetes.io/g/leads), [SIG Release](https://groups.google.com/forum/#!forum/kubernetes-sig-release), and [Release Team](https://groups.google.com/a/kubernetes.io/g/release-team)
-  - Example: [1.24 sneak peek](https://groups.google.com/a/kubernetes.io/g/release-team/c/hePU9eaoYEw), [1.25 sneak peek](https://groups.google.com/a/kubernetes.io/g/release-team/c/jwqlcrctFO0)
+  - Send the email to [k-dev](https://groups.google.com/a/kubernetes.io/g/dev), [SIG Leads](https://groups.google.com/a/kubernetes.io/g/leads), [SIG Release](https://groups.google.com/forum/#!forum/kubernetes-sig-release), [Release Team](https://groups.google.com/a/kubernetes.io/g/release-team)
+  - Example: [1.26 sneak peek](https://groups.google.com/a/kubernetes.io/g/dev/c/PVe1OG8yjHw/m/zZjnttXWAQAJ)
 
 ### 2. First weeks of the release cycle up to Enhancements Freeze (1-3 Weeks)
 
