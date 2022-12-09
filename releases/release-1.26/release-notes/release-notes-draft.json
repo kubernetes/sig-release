@@ -89,8 +89,8 @@
   },
   "108250": {
     "commit": "d86c013b0da0db4c0790270c4739c79d01ce1593",
-    "text": "Added a kube-proxy flag (`--iptables-localhost-nodeports`, default true) to allow disabling NodePort services on loopback addresses. Note: this only applies to iptables mode and ipv4.",
-    "markdown": "Added a kube-proxy flag (`--iptables-localhost-nodeports`, default true) to allow disabling NodePort services on loopback addresses. Note: this only applies to iptables mode and ipv4. ([#108250](https://github.com/kubernetes/kubernetes/pull/108250), [@cyclinder](https://github.com/cyclinder))",
+    "text": "Added a `kube-proxy` flag (`--iptables-localhost-nodeports`, default true) to allow disabling `NodePort` services on loopback addresses. Note: this only applies to iptables mode and ipv4.",
+    "markdown": "Added a `kube-proxy` flag (`--iptables-localhost-nodeports`, default true) to allow disabling `NodePort` services on loopback addresses. Note: this only applies to iptables mode and ipv4. ([#108250](https://github.com/kubernetes/kubernetes/pull/108250), [@cyclinder](https://github.com/cyclinder))",
     "author": "cyclinder",
     "author_url": "https://github.com/cyclinder",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/108250",
@@ -209,8 +209,8 @@
   },
   "109505": {
     "commit": "d96e052d981537ae9d2376ee6ac73f3ae6817f69",
-    "text": "Removed of raising an error when setting an annotation with the same value, just ignore it.",
-    "markdown": "Removed of raising an error when setting an annotation with the same value, just ignore it. ([#109505](https://github.com/kubernetes/kubernetes/pull/109505), [@zigarn](https://github.com/zigarn))",
+    "text": "Removed raising an error when setting an annotation with the same value, just ignore it.",
+    "markdown": "Removed raising an error when setting an annotation with the same value, just ignore it. ([#109505](https://github.com/kubernetes/kubernetes/pull/109505), [@zigarn](https://github.com/zigarn))",
     "author": "zigarn",
     "author_url": "https://github.com/zigarn",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/109505",
@@ -270,6 +270,25 @@
     "feature": true,
     "duplicate": true
   },
+  "110498": {
+    "commit": "cf4d2cc545f62fcfd748a084dff7744f9402bf57",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#110498](https://github.com/kubernetes/kubernetes/pull/110498), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Release]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110498",
+    "pr_number": 110498,
+    "areas": [
+      "release-eng"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "release"
+    ],
+    "do_not_publish": true
+  },
   "110559": {
     "commit": "962235c86a1a934fc759be1d3fd3a764fa2efa18",
     "text": "If more than one StorageClass is designated as default (via the \"storageclass.kubernetes.io/is-default-class\" annotation), choose the newest one instead of throwing an error.'",
@@ -308,10 +327,28 @@
     ],
     "duplicate": true
   },
+  "110695": {
+    "commit": "5ade6c833fdde89618791b130bd2e9cad9519842",
+    "text": "NONE",
+    "markdown": "NONE ([#110695](https://github.com/kubernetes/kubernetes/pull/110695), [@lokichoggio](https://github.com/lokichoggio)) [SIG Apps and Autoscaling]",
+    "author": "lokichoggio",
+    "author_url": "https://github.com/lokichoggio",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110695",
+    "pr_number": 110695,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "autoscaling",
+      "apps"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
   "110907": {
     "commit": "20a9f7786aa4ee0b6e1619c7974ea4562d2b2500",
-    "text": "kubectl apply: warning that kubectl will ignore no-namespaced resource `pv \u0026 namespace` in a future release if the namespace is specified and allowlist is not specified.",
-    "markdown": "Kubectl apply: warning that kubectl will ignore no-namespaced resource `pv \u0026 namespace` in a future release if the namespace is specified and allowlist is not specified. ([#110907](https://github.com/kubernetes/kubernetes/pull/110907), [@pacoxu](https://github.com/pacoxu))",
+    "text": "'`kubectl apply`: Added a warning that \"`kubectl apply` will no longer prune\nnon-namespaced resources by default when used with the --namespace flag in\na future release\".'\n",
+    "markdown": "'`kubectl apply`: Added a warning that \"`kubectl apply` will no longer prune\n  non-namespaced resources by default when used with the --namespace flag in\n  a future release\".'\n   ([#110907](https://github.com/kubernetes/kubernetes/pull/110907), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/110907",
@@ -522,6 +559,41 @@
       "network"
     ]
   },
+  "111379": {
+    "commit": "9efbe6eb9b648bfdf95ccf228175ff57f7ba8f43",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111379](https://github.com/kubernetes/kubernetes/pull/111379), [@muyangren2](https://github.com/muyangren2)) [SIG Network]",
+    "author": "muyangren2",
+    "author_url": "https://github.com/muyangren2",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111379",
+    "pr_number": 111379,
+    "areas": [
+      "ipvs"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "do_not_publish": true
+  },
+  "111381": {
+    "commit": "178f246bbc9e4b6bd56ef0605e94bb51dbe6d27a",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111381](https://github.com/kubernetes/kubernetes/pull/111381), [@muyangren2](https://github.com/muyangren2)) [SIG Storage]",
+    "author": "muyangren2",
+    "author_url": "https://github.com/muyangren2",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111381",
+    "pr_number": 111381,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "storage"
+    ],
+    "do_not_publish": true
+  },
   "111384": {
     "commit": "114594e1d265a90820683acd2ed2783513aac4c3",
     "text": "Added support for Evented PLEG feature gate.",
@@ -545,6 +617,44 @@
     "feature": true,
     "duplicate": true
   },
+  "111420": {
+    "commit": "b077a9ad87f7219782f12f6247447dad1197be33",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111420](https://github.com/kubernetes/kubernetes/pull/111420), [@muyangren2](https://github.com/muyangren2)) [SIG Cloud Provider]",
+    "author": "muyangren2",
+    "author_url": "https://github.com/muyangren2",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111420",
+    "pr_number": 111420,
+    "areas": [
+      "cloudprovider"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "do_not_publish": true
+  },
+  "111458": {
+    "commit": "8206c9d458e321d7ad22ea9fc2e21a890790fc09",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111458](https://github.com/kubernetes/kubernetes/pull/111458), [@muyangren2](https://github.com/muyangren2)) [SIG Cluster Lifecycle]",
+    "author": "muyangren2",
+    "author_url": "https://github.com/muyangren2",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111458",
+    "pr_number": 111458,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "do_not_publish": true
+  },
   "111512": {
     "commit": "065a761547fcb6cb4944abac1541c8a0b76a5fe1",
     "text": "kubeadm: added `show-join-command` as a new separate phase at the end of `kubeadm init`. You can skip printing the join information by using `kubeadm init --skip-phases=show-join-command`. Executing only this phase on demand will throw an error because the phase needs dependencies such as bootstrap tokens to be pre-populated.",
@@ -565,6 +675,47 @@
     ],
     "feature": true,
     "duplicate_kind": true
+  },
+  "111520": {
+    "commit": "08aac4f0acbfb7ca2da2ced281fe694ddd29a4d7",
+    "text": "[kubelet] Change default `cpuCFSQuotaPeriod` value with enabled `cpuCFSQuotaPeriod` flag from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work.",
+    "markdown": "[kubelet] Change default `cpuCFSQuotaPeriod` value with enabled `cpuCFSQuotaPeriod` flag from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work. ([#111520](https://github.com/kubernetes/kubernetes/pull/111520), [@paskal](https://github.com/paskal)) [SIG API Machinery and Node]",
+    "author": "paskal",
+    "author_url": "https://github.com/paskal",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111520",
+    "pr_number": 111520,
+    "areas": [
+      "kubelet",
+      "code-generation"
+    ],
+    "kinds": [
+      "documentation",
+      "api-change"
+    ],
+    "sigs": [
+      "node",
+      "api-machinery"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111533": {
+    "commit": "0d7e51b2e806543c245c70829510258c8a907c7c",
+    "text": "NoneNone",
+    "markdown": "NoneNone ([#111533](https://github.com/kubernetes/kubernetes/pull/111533), [@zhoumingcheng](https://github.com/zhoumingcheng)) [SIG CLI]",
+    "author": "zhoumingcheng",
+    "author_url": "https://github.com/zhoumingcheng",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111533",
+    "pr_number": 111533,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cli"
+    ]
   },
   "111554": {
     "commit": "2b5475b3fa5fefdb784f9b04bef3fab666ef19d7",
@@ -813,6 +964,25 @@
     "sigs": [
       "api-machinery"
     ]
+  },
+  "111879": {
+    "commit": "886da71e7588c198dcb9a6c7cccfedb478110e57",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111879](https://github.com/kubernetes/kubernetes/pull/111879), [@sanwishe](https://github.com/sanwishe)) [SIG API Machinery]",
+    "author": "sanwishe",
+    "author_url": "https://github.com/sanwishe",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111879",
+    "pr_number": 111879,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "do_not_publish": true
   },
   "111910": {
     "commit": "bf2e850b3a90bc941587a74b53a9dd47aca4fb66",
@@ -1274,8 +1444,8 @@
   },
   "112133": {
     "commit": "6705015101d9572157325ddf237ff65c5efb3cef",
-    "text": "In 'kube-proxy`: The \"userspace\" proxy mode (deprecated for over a year) is no\nlonger supported on either Linux or Windows. Users should use \"iptables\" or \"ipvs\"\non Linux, or \"kernelspace\" on Windows.\n",
-    "markdown": "In 'kube-proxy`: The \"userspace\" proxy mode (deprecated for over a year) is no\n  longer supported on either Linux or Windows. Users should use \"iptables\" or \"ipvs\"\n  on Linux, or \"kernelspace\" on Windows.\n   ([#112133](https://github.com/kubernetes/kubernetes/pull/112133), [@knabben](https://github.com/knabben))",
+    "text": "In `kube-proxy`: The \"userspace\" proxy mode (deprecated for over a year) is no\nlonger supported on either Linux or Windows. Users should use \"iptables\" or \"ipvs\"\non Linux, or \"kernelspace\" on Windows.\n",
+    "markdown": "In `kube-proxy`: The \"userspace\" proxy mode (deprecated for over a year) is no\n  longer supported on either Linux or Windows. Users should use \"iptables\" or \"ipvs\"\n  on Linux, or \"kernelspace\" on Windows.\n   ([#112133](https://github.com/kubernetes/kubernetes/pull/112133), [@knabben](https://github.com/knabben))",
     "author": "knabben",
     "author_url": "https://github.com/knabben",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112133",
@@ -1734,8 +1904,8 @@
   },
   "112360": {
     "commit": "47952e0917a26408ac0bdd450d09b0557e2294b7",
-    "text": "'Kubelet added the following Pod failure conditions:\n- `DisruptionTarget` (graceful node shutdown, node pressure eviction)'",
-    "markdown": "'Kubelet added the following Pod failure conditions:\n  - `DisruptionTarget` (graceful node shutdown, node pressure eviction)' ([#112360](https://github.com/kubernetes/kubernetes/pull/112360), [@mimowo](https://github.com/mimowo))",
+    "text": "'kubelet: Added the following Pod failure conditions:\n- `DisruptionTarget` (graceful node shutdown, node pressure eviction)'",
+    "markdown": "'kubelet: Added the following Pod failure conditions:\n  - `DisruptionTarget` (graceful node shutdown, node pressure eviction)' ([#112360](https://github.com/kubernetes/kubernetes/pull/112360), [@mimowo](https://github.com/mimowo))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1856,6 +2026,22 @@
       "testing"
     ],
     "duplicate": true
+  },
+  "112437": {
+    "commit": "21dfce2d7daa13e616107179acc11c05f20ecce1",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#112437](https://github.com/kubernetes/kubernetes/pull/112437), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Network]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112437",
+    "pr_number": 112437,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "do_not_publish": true
   },
   "112489": {
     "commit": "06fd0a07286faaef2008fd97c888debe0ca1d74a",
@@ -2301,6 +2487,40 @@
       "architecture"
     ],
     "duplicate": true
+  },
+  "112671": {
+    "commit": "7f129f1c9af62cc3cd4f6b754dacdf5932f39d5c",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#112671](https://github.com/kubernetes/kubernetes/pull/112671), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Instrumentation and Scalability]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112671",
+    "pr_number": 112671,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "scalability",
+      "instrumentation"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "112672": {
+    "commit": "0094662cbbca3d3f3e2e4fbb6ee4eb65f26d197a",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#112672](https://github.com/kubernetes/kubernetes/pull/112672), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Instrumentation]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112672",
+    "pr_number": 112672,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "instrumentation"
+    ],
+    "do_not_publish": true
   },
   "112679": {
     "commit": "7752c3a8e0fbf59739f40526b2235347ff78000e",
@@ -3706,8 +3926,8 @@
   },
   "113274": {
     "commit": "8c77820759cc28a5d82e9a68f3d335d1a27f4466",
-    "text": "New Pod API field `.spec.schedulingGates` is introduced to enable users to control when to mark a Pod as scheduling ready.",
-    "markdown": "New Pod API field `.spec.schedulingGates` is introduced to enable users to control when to mark a Pod as scheduling ready. ([#113274](https://github.com/kubernetes/kubernetes/pull/113274), [@Huang-Wei](https://github.com/Huang-Wei))",
+    "text": "New Pod API field `.spec.schedulingGates` was introduced to enable users to control when to mark a Pod as scheduling ready.",
+    "markdown": "New Pod API field `.spec.schedulingGates` was introduced to enable users to control when to mark a Pod as scheduling ready. ([#113274](https://github.com/kubernetes/kubernetes/pull/113274), [@Huang-Wei](https://github.com/Huang-Wei))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4054,8 +4274,8 @@
   },
   "113360": {
     "commit": "7e0e0c8ec3a6f68db0a9c259836a9ad8792fa67b",
-    "text": "Enable the \"Retriable and non-retriable pod failures for jobs\" feature into beta.",
-    "markdown": "Enable the \"Retriable and non-retriable pod failures for jobs\" feature into beta. ([#113360](https://github.com/kubernetes/kubernetes/pull/113360), [@mimowo](https://github.com/mimowo))",
+    "text": "Enabled the \"Retriable and non-retriable pod failures for jobs\" feature into beta.",
+    "markdown": "Enabled the \"Retriable and non-retriable pod failures for jobs\" feature into beta. ([#113360](https://github.com/kubernetes/kubernetes/pull/113360), [@mimowo](https://github.com/mimowo))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4230,8 +4450,8 @@
   },
   "113485": {
     "commit": "1193a9abcbd6c6ce6fc7d4ce38872f1933ef5159",
-    "text": "'Priority and Fairness has introduced a new feature called _borrowing_ that allows an API priority level\nto borrow a number of seats from other priority level(s). As a cluster operator, you can enable borrowing\nfor a certain priority level configuration object via the two newly introduced fields `lendablePercent`, and\n`borrowingLimitPercent` located under the `.spec.limited` field of the designated priority level.\nThis change added the following metrics:\n  - `apiserver_flowcontrol_nominal_limit_seats`: Nominal number of execution seats configured for each priority level\n  - `apiserver_flowcontrol_lower_limit_seats`: Configured lower bound on number of execution seats available to each priority level\n  - `apiserver_flowcontrol_upper_limit_seats`: Configured upper bound on number of execution seats available to each priority level\n  - `apiserver_flowcontrol_demand_seats`: Observations, at the end of every nanosecond, of (the number of seats each priority level could use) / (nominal number of seats for that level)\n  - `apiserver_flowcontrol_demand_seats_high_watermark`: High watermark, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_average`: Time-weighted average, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_stdev`: Time-weighted standard deviation, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_smoothed`: Smoothed seat demands\n  - `apiserver_flowcontrol_target_seats`: Seat allocation targets\n  - `apiserver_flowcontrol_seat_fair_frac`: Fair fraction of server's concurrency to allocate to each priority level that can use it\n  - `apiserver_flowcontrol_current_limit_seats`: current derived number of execution seats available to each priority level\nThe possibility of borrowing means that the old metric `apiserver_flowcontrol_request_concurrency_limit` can no longer mean both the configured concurrency limit and the enforced concurrency limit. Henceforth it means the configured concurrency limit.'",
-    "markdown": "'Priority and Fairness has introduced a new feature called _borrowing_ that allows an API priority level\n  to borrow a number of seats from other priority level(s). As a cluster operator, you can enable borrowing\n  for a certain priority level configuration object via the two newly introduced fields `lendablePercent`, and\n  `borrowingLimitPercent` located under the `.spec.limited` field of the designated priority level.\n  This change added the following metrics:\n    - `apiserver_flowcontrol_nominal_limit_seats`: Nominal number of execution seats configured for each priority level\n    - `apiserver_flowcontrol_lower_limit_seats`: Configured lower bound on number of execution seats available to each priority level\n    - `apiserver_flowcontrol_upper_limit_seats`: Configured upper bound on number of execution seats available to each priority level\n    - `apiserver_flowcontrol_demand_seats`: Observations, at the end of every nanosecond, of (the number of seats each priority level could use) / (nominal number of seats for that level)\n    - `apiserver_flowcontrol_demand_seats_high_watermark`: High watermark, over last adjustment period, of demand_seats\n    - `apiserver_flowcontrol_demand_seats_average`: Time-weighted average, over last adjustment period, of demand_seats\n    - `apiserver_flowcontrol_demand_seats_stdev`: Time-weighted standard deviation, over last adjustment period, of demand_seats\n    - `apiserver_flowcontrol_demand_seats_smoothed`: Smoothed seat demands\n    - `apiserver_flowcontrol_target_seats`: Seat allocation targets\n    - `apiserver_flowcontrol_seat_fair_frac`: Fair fraction of server's concurrency to allocate to each priority level that can use it\n    - `apiserver_flowcontrol_current_limit_seats`: current derived number of execution seats available to each priority level\n  The possibility of borrowing means that the old metric `apiserver_flowcontrol_request_concurrency_limit` can no longer mean both the configured concurrency limit and the enforced concurrency limit. Henceforth it means the configured concurrency limit.' ([#113485](https://github.com/kubernetes/kubernetes/pull/113485), [@MikeSpreitzer](https://github.com/MikeSpreitzer))",
+    "text": "'Priority and Fairness has introduced a new feature called _borrowing_ that allows an API priority level\nto borrow a number of seats from other priority level(s). As a cluster operator, you can enable borrowing\nfor a certain priority level configuration object via the two newly introduced fields `lendablePercent`, and\n`borrowingLimitPercent` located under the `.spec.limited` field of the designated priority level.\nThis change added the following metrics:\n- `apiserver_flowcontrol_nominal_limit_seats`: Nominal number of execution seats configured for each priority level\n- `apiserver_flowcontrol_lower_limit_seats`: Configured lower bound on number of execution seats available to each priority level\n- `apiserver_flowcontrol_upper_limit_seats`: Configured upper bound on number of execution seats available to each priority level\n- `apiserver_flowcontrol_demand_seats`: Observations, at the end of every nanosecond, of (the number of seats each priority level could use) / (nominal number of seats for that level)\n- `apiserver_flowcontrol_demand_seats_high_watermark`: High watermark, over last adjustment period, of demand_seats\n- `apiserver_flowcontrol_demand_seats_average`: Time-weighted average, over last adjustment period, of demand_seats\n- `apiserver_flowcontrol_demand_seats_stdev`: Time-weighted standard deviation, over last adjustment period, of demand_seats\n- `apiserver_flowcontrol_demand_seats_smoothed`: Smoothed seat demands\n- `apiserver_flowcontrol_target_seats`: Seat allocation targets\n- `apiserver_flowcontrol_seat_fair_frac`: Fair fraction of server's concurrency to allocate to each priority level that can use it\n- `apiserver_flowcontrol_current_limit_seats`: current derived number of execution seats available to each priority level\nThe possibility of borrowing means that the old metric `apiserver_flowcontrol_request_concurrency_limit` can no longer mean both the configured concurrency limit and the enforced concurrency limit. Henceforth it means the configured concurrency limit.'",
+    "markdown": "'Priority and Fairness has introduced a new feature called _borrowing_ that allows an API priority level\n  to borrow a number of seats from other priority level(s). As a cluster operator, you can enable borrowing\n  for a certain priority level configuration object via the two newly introduced fields `lendablePercent`, and\n  `borrowingLimitPercent` located under the `.spec.limited` field of the designated priority level.\n  This change added the following metrics:\n  - `apiserver_flowcontrol_nominal_limit_seats`: Nominal number of execution seats configured for each priority level\n  - `apiserver_flowcontrol_lower_limit_seats`: Configured lower bound on number of execution seats available to each priority level\n  - `apiserver_flowcontrol_upper_limit_seats`: Configured upper bound on number of execution seats available to each priority level\n  - `apiserver_flowcontrol_demand_seats`: Observations, at the end of every nanosecond, of (the number of seats each priority level could use) / (nominal number of seats for that level)\n  - `apiserver_flowcontrol_demand_seats_high_watermark`: High watermark, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_average`: Time-weighted average, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_stdev`: Time-weighted standard deviation, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_smoothed`: Smoothed seat demands\n  - `apiserver_flowcontrol_target_seats`: Seat allocation targets\n  - `apiserver_flowcontrol_seat_fair_frac`: Fair fraction of server's concurrency to allocate to each priority level that can use it\n  - `apiserver_flowcontrol_current_limit_seats`: current derived number of execution seats available to each priority level\n  The possibility of borrowing means that the old metric `apiserver_flowcontrol_request_concurrency_limit` can no longer mean both the configured concurrency limit and the enforced concurrency limit. Henceforth it means the configured concurrency limit.' ([#113485](https://github.com/kubernetes/kubernetes/pull/113485), [@MikeSpreitzer](https://github.com/MikeSpreitzer))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4489,8 +4709,8 @@
   },
   "113550": {
     "commit": "2acad1b8c4b5f9a4991885ef34de1dc771139628",
-    "text": "Kubernetes is now built with Go 1.19.3.",
-    "markdown": "Kubernetes is now built with Go 1.19.3. ([#113550](https://github.com/kubernetes/kubernetes/pull/113550), [@xmudrii](https://github.com/xmudrii))",
+    "text": "Kubernetes is now built with Go `1.19.3`.",
+    "markdown": "Kubernetes is now built with Go `1.19.3`. ([#113550](https://github.com/kubernetes/kubernetes/pull/113550), [@xmudrii](https://github.com/xmudrii))",
     "author": "xmudrii",
     "author_url": "https://github.com/xmudrii",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/113550",
@@ -4679,8 +4899,8 @@
   },
   "113710": {
     "commit": "e2b9fd760ddb3ab3215e71739b6845629ab533c0",
-    "text": "CLI flag `pod-eviction-timeout` is deprecated and will be removed together with `enable-taint-manager` in v1.27.",
-    "markdown": "CLI flag `pod-eviction-timeout` is deprecated and will be removed together with `enable-taint-manager` in v1.27. ([#113710](https://github.com/kubernetes/kubernetes/pull/113710), [@kerthcet](https://github.com/kerthcet))",
+    "text": "CLI flag `pod-eviction-timeout` is deprecated and will be removed together with `enable-taint-manager` in `v1.27`.",
+    "markdown": "CLI flag `pod-eviction-timeout` is deprecated and will be removed together with `enable-taint-manager` in `v1.27`. ([#113710](https://github.com/kubernetes/kubernetes/pull/113710), [@kerthcet](https://github.com/kerthcet))",
     "author": "kerthcet",
     "author_url": "https://github.com/kerthcet",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/113710",
@@ -4717,8 +4937,8 @@
   },
   "113719": {
     "commit": "e21438fca5f5e6988091bf0b39be51fcc19cfd8b",
-    "text": "bump runc to v1.1.4.",
-    "markdown": "Bump runc to v1.1.4. ([#113719](https://github.com/kubernetes/kubernetes/pull/113719), [@pacoxu](https://github.com/pacoxu))",
+    "text": "bumped `runc` to `v1.1.4`.",
+    "markdown": "Bumped `runc` to `v1.1.4`. ([#113719](https://github.com/kubernetes/kubernetes/pull/113719), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/113719",
@@ -4798,8 +5018,8 @@
   },
   "113769": {
     "commit": "37e73b419e455db34f5fe3e8d815418680ab23df",
-    "text": "Updated cAdvisor to v0.46.0.",
-    "markdown": "Updated cAdvisor to v0.46.0. ([#113769](https://github.com/kubernetes/kubernetes/pull/113769), [@bobbypage](https://github.com/bobbypage))",
+    "text": "Updated `cAdvisor` to `v0.46.0`.",
+    "markdown": "Updated `cAdvisor` to `v0.46.0`. ([#113769](https://github.com/kubernetes/kubernetes/pull/113769), [@bobbypage](https://github.com/bobbypage))",
     "author": "bobbypage",
     "author_url": "https://github.com/bobbypage",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/113769",
@@ -4955,6 +5175,7 @@
       "architecture"
     ],
     "duplicate": true,
-    "duplicate_kind": true
+    "duplicate_kind": true,
+    "action_required": true
   }
 }
