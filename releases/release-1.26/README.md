@@ -8,7 +8,13 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.26
+# Kubernetes 1.26: Electrifying
+
+<p align="center">
+  <img src="./logo/Electrifying_Logo.png" height="500" alt="Kubernetes 1.26 Release Logo" />
+</p>
+
+Kubernetes 1.26 is named *Electrifying* to raise awareness that Kubernetes orchestrates huge systems that consume a lot of energy and this is simply a problem. *Electrifying* also represents the increased automation we use in the release team and the fact that this community is simply electrifying.
 
 #### Links
 
