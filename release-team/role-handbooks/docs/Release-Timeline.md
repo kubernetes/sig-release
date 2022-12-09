@@ -506,7 +506,7 @@ the reference documentation. Next:
 ```
 git checkout dev-[future-release]
 git fetch upstream dev-[future-release]
-git rebase upstream dev-[future-release]
+git rebase upstream/dev-[future-release]
 git checkbout -b dev-[future-release]-ref-doc
 ```
 - Run the `update-imported-docs.py` script providing the build configuration file (`reference.yml`) and the release tag.
@@ -576,6 +576,16 @@ See this for example (1.21 was the "future release"):
 * 1.18 https://github.com/kubernetes/website/pull/27453
 * 1.19 https://github.com/kubernetes/website/pull/27454
 * 1.20 https://github.com/kubernetes/website/pull/27455
+
+Sample about update release 1.25-config.toml for the future release 1.26. Here the [PR](https://github.com/kubernetes/website/pull/38344)
+
+```
+git checkout release-1.25
+git checkout -b update-release-1.25-config.toml
+git add .
+git commit -m " update release-1.25 config.toml for release 1.26"
+git push origin update-release-1.25-config.toml
+```
 
 Changes required:
 - Set `latest` to the [future release] version
