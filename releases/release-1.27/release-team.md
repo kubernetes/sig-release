@@ -6,6 +6,7 @@
 | Emeritus Adviser | James Laverack ([@jameslaverack](https://github.com/jameslaverack) / Slack: `@james.laverack`) | |
 | Enhancements | Mark Rossetti ([@marosset](https://github.com/marosset) / Slack: `@Mark Rossetti`) | |
 | Release Notes | Harsha Narayana ([@harshanarayana](https://github.com/harshanarayana) / Slack: `@Harsha Narayana`) | |
+| Communications | Harshita Sao ([@harshitasao](https://github.com/harshitasao) / Slack: `@Harshita Sao` ) | |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
