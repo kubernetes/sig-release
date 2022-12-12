@@ -21,11 +21,11 @@ description: |
 
 #### Tracking docs
 
-* [Enhancements Tracking Sheet](https://bit.ly/k8s127-enhancements)
+* [Enhancements Tracking Board](https://bit.ly/k8s127-enhancements)
 * [Feature blog Tracking Board](#)
-* [Bug Triage Tracking Sheet](https://bit.ly/k8s127-bug-triage-tracking)
+* [Bug Triage Tracking Board](https://bit.ly/k8s127-bug-triage-tracking)
 * [CI Signal Project Board & Issue Tracking](#)
-* [Retrospective Document][Retrospective Document]
+* [Retrospective Document][https://bit.ly/k8s127-retro]
 * [kubernetes/sig-release v1.27 milestone](https://github.com/kubernetes/kubernetes/milestone/60)
 
 #### Guides
