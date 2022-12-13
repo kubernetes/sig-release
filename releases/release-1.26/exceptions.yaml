@@ -1,0 +1,126 @@
+# Exception requests in 1.26
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Leonard Vincent Simon Pahlke ([@leonardpahlke](https://github.com/leonardpahlke))
+# Release Team Shadows: Grace Nguyen ([@gracenng](https://github.com/gracenng))
+# / Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove))
+# / Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929))
+# / Nate Waddington ([@nate-double-u](https://github.com/nate-double-u))
+
+# Enhancements Freeze Exceptions requested in 1.26
+
+enhancementFreeze:
+
+- name: "CCM Webhook Framework"
+  issue: 2699
+  date_requested: 2022-10-07
+  date_reviewed: 2022-10-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/Uw3SpvyfGh0"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/108838"
+  status: "approved"
+
+- name: "Subsecond Probes"
+  issue: 3066
+  date_requested: 2022-10-07
+  date_reviewed: 2022-10-12
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/P9Uzf3oQaX8"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/3067"
+  status: "denied"
+
+- name: "Add AppArmor support"
+  issue: 24
+  date_requested: 2022-10-09
+  date_reviewed: 2022-10-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/ziUKliRqNFM"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/3298"
+  status: "approved"
+
+- name: "Dynamic Kubelet Configuration"
+  issue: 281
+  date_requested: 2022-10-10
+  date_reviewed: 2022-10-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/mSgvETUVYn0"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/112643"
+  status: "approved"
+
+# Code Freeze Exceptions requested in 1.26
+
+codeFreeze:
+
+- name: "Retriable and non-retriable Pod failures for Jobs"
+  issue: 3329
+  date_requested: 2022-11-04
+  date_reviewed: 2022-11-08
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/tZPjSWW_g30"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/112360"
+    - "https://github.com/kubernetes/kubernetes/pull/113360"
+  status: "approved"
+
+- name: "Pod Healthy Policy for PDBs"
+  issue: 3017
+  date_requested: 2022-11-07
+  date_reviewed: 2022-11-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/MbFd5YEqwOM"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/113375"
+    - "https://github.com/kubernetes/kubernetes/pull/113376"
+  status: "approved"
+
+- name: "StatefulSet Slice"
+  issue: 3335
+  date_requested: 2022-11-08
+  date_reviewed: 2022-11-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/pwb__uKXWjA"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/112744"
+  status: "approved"
+
+- name: "StatefulSet Autodelete PVC"
+  issue: 1847
+  date_requested: 2022-11-08
+  date_reviewed: 2022-11-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/pFlz9WF40BA"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/111300"
+  status: "approved"
+
+- name: "Introduce APIs to support CrossNamespaceSourceProvisioning"
+  issue: 3294
+  date_requested: 2022-11-09
+  date_reviewed: 2022-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/-9r-bul0GsM"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/113186"
+  status: "approved"
+
+- name: "Kubectl Events"
+  issue: 1440
+  date_requested: 2022-11-09
+  date_reviewed: 2022-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/4HZgxMk51P8"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/113819"
+  status: "approved"
+
+- name: "Dynamic Resource Allocation"
+  issue: 3063
+  date_requested: 2022-11-09
+  date_reviewed: 2022-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/BMxDP2BdJSA"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/111023"
+  status: "approved"
+
+- name: "In-Place Update of Pod Resources"
+  issue: 1287
+  date_requested: 2022-11-06
+  date_reviewed: 2022-11-08
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/2KikW5O1WyI"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/111946"
+    - "https://github.com/kubernetes/kubernetes/pull/102884"
+  status: "approved"
