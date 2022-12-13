@@ -6,6 +6,11 @@ labels: sig/release, area/release-eng
 ---
 ## Scheduled to happen: <!-- Tue, 2021-MM-DD -->
 
+_Note for v1.x.0 releases: Having this issue in open state will stop the
+periodic run of [`krel fast-forward`](https://testgrid.k8s.io/sig-release-releng-blocking#git-repo-kubernetes-fast-forward)
+to avoid conflicts with releases running in parallel. The fast-forward will
+automatically stop once the v1.x.0 tag is available._
+
 ## Release Blocking Issues
 <!--
 
