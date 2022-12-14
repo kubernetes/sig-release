@@ -44,7 +44,7 @@ Additional information can be found in the [release team lead handbook](https://
   - `sig-release`
 - [ ] Updated `kubernetes/sig-release` `OWNERS`
   - Release Team Lead and Shadows
-    - Add an `approvers` entry in `releases/release-x.y/OWNERS`
+    - Add an `approvers` entry in `releases/release-1.XX/OWNERS`
   - **Release Team Lead only**
     - In `OWNERS_ALIASES`, add an entry in the following sections:
       - `release-team`
@@ -100,13 +100,13 @@ Additional information can be found in the [release team lead handbook](https://
   - [ ] Add Role shadows and Lead shadows to members of `release-team-shadows`
   - [ ] Add EA to manager of release-team-shadows, if EA is owner of `release-team-shadows` already then add Lead to manager of `release-team-shadows`
   - [ ] Add Bug Triage Lead and shadows to `k8s-infra-rbac-triageparty-release`
-- [ ] Ensured that there is a branch manager available for cutting x.y.0-alpha.1
+- [ ] Ensured that there is a branch manager available for cutting 1.XX.0-alpha.1
 
 - Assist the Enhancements Lead in collecting planned work from SIGs
 - [ ] Discussed and scheduled a weekly Release Team meetings on a day that is most acceptable to the team. Invite the `kubernetes-sig-release` group.
 - [ ] Poll Release Team membership and schedule a weekly alternate meeting to better enable more attendance outside of the Americas.
 - [ ] Major release cycle events have been added to the Kubernetes Release Calendar with one week in advance reminders set. (defer to the [handbook for more information](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-team-lead#working-with-the-release-team-calendar))
-- [ ] Checked in with ci-signal and branch managers if x.y.0-alpha.2 is ok to be released and [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) tests are all green
+- [ ] Checked in with ci-signal and branch managers if 1.XX.0-alpha.2 is ok to be released and [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) tests are all green
 
 
 **A week before Enhancements Freeze:**
