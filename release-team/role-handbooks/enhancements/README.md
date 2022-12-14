@@ -203,7 +203,7 @@ It is important that this process be followed and documentation remain up-to-dat
 
 #### Enhancement Freeze Templates
 
-If the Enhancement Issue **does not** meet the criteria for inclusion in the current release use this template in PR comments:
+If the Enhancement Issue **does not** meet the criteria for inclusion in the current release use this template in Issue comments:
 
 ```markdown
 Hello {enhancement owner} 👋, Enhancements team here.
@@ -227,7 +227,7 @@ The status of this enhancement is marked as `at risk`. Please keep the issue des
 
 ```
 
-If the Enhancement Issue **does** meet the criteria for inclusing in the current release use this template in PR comments:
+If the Enhancement Issue **does** meet the criteria for inclusing in the current release use this template in Issue comments:
 
 ```markdown
 Hello {enhancement owner} 👋, Enhancements team here.
