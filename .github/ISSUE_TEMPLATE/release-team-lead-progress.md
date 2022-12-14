@@ -201,7 +201,8 @@ Code Freeze begins, and it’s now the home stretch of the release. SIGs will ne
     - [ ] Branch Manager Lead does nomock publication.
     - [ ] Branch Manager coordinates the building and publishing of rpm/deb packages with Google Build Admins.
     - [ ] Build Admins affirms build is complete.
-    - [ ] Docs Lead publishes release docs to website.
+    - [ ] Verify with the docs lead that the staging release website is in correct shape by verifying the blog posts, the release page, download page, etc.
+    - [ ] Docs Lead publishes release docs to website (ref [tasks todo](https://github.com/kubernetes/sig-release/blob/master/release-team/role-handbooks/docs/Release-Timeline.md#release-week-week-12))
     - [ ] Branch Manager does release-notify.
   - [ ] Approximately 5pm Pacific: all work is complete and the release team
     lead announces release to [k-dev](https://groups.google.com/a/kubernetes.io/g/dev), [SIG Leads](https://groups.google.com/a/kubernetes.io/g/leads), and discuss.k8s.io.
