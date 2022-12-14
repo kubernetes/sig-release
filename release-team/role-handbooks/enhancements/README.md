@@ -55,7 +55,7 @@ Enhancement is one of the most time-intensive areas of the release team, and esp
 - Enhancement Freeze through Code Freeze: ~4–7 hours a week
 - Code Freeze through Release Day: ~1–4 hours a week
 
-Note that Enahncements Lead in particular will need to do work **during the week** during the early release, and will need to be available at least daily.
+Note that Enhancements Lead in particular will need to do work **during the week** during the early release, and will need to be available at least daily.
 
 Enhancements shadows can expect to spend ~10–15 hours a week during the early release until enhancements freeze, and ~1–5 hours a week after enhancements freeze. Unlike Enhancements Lead, shadows can expect to do their work largely on weekends if they desire.
 
@@ -131,60 +131,58 @@ It is important that this process be followed and documentation remain up-to-dat
     - Until this can be automated; manually create Views with the same Names and Fields from the previous release's project board.
       Tip: You can easily view all the Fields present in each view by clicking the `v` next to the View's name an selecting `Configuration` -> `Fields`
       Note: Remember to **save** each View. If there is a blue bubble next to the Views name there are unsaved changed for that view!
+  - Update automation to add issues to the correct Enhancement Tracking Board
+    - TODO: Work in Progress
 - Create a shortlink for the Tracking Board
-  - Create a free account on [bitly](https://bitly.com/) to create a shortlink for the new Enhancement Tracking Board following the pattern `k8sxyy-enhancements` e.g., https://bit.ly/k8s127-enhancements.
+  - Create a free account on [bitly](https://bitly.com/) to create a shortlink for the new Enhancement Tracking Board following the pattern `k8sxyy-enhancements` e.g., <https://bit.ly/k8s127-enhancements>.
 - Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking Board to the current release page in [sig-release][sig-release].
 - Make a pull request to add the shortlinked Enhancement Tracking Board to [kubernetes/enhancements README page](https://github.com/kubernetes/enhancements#enhancements-tracking-board).
 - Find [Issues][enhancements-issues] from previous milestone that have graduated to Stable. Remove `tracked/yes` or `tracked/no` labels. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
 - Find [Issues labeled `tracked/yes`](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+label%3Atracked%2Fyes) and change to `tracked/no` until the Enhancement is ready to be tracked for the upcoming release.
+- Find [Issues labeled `lead-opted-in`](https://github.com/kubernetes/enhancements/issues?q=+is%3Aissue+label%3Alead-opted-in+) and remove the `lead-opted-in` label from all issues. Enhancements must be explicitly opted into each release.
 - Close previous milestone by ensuring that there are no open issues/PRs in that milestone.
 - Gather Shadows to have them read this handbook and give expectations on what the process looks like and their particular role. If possible, try to schedule a call with the shadows to get them accustomed to the team. This helps as a great team building exercise.
-- Add Shaodws to the  `release-team` and `release-team-enhancements` GitHub teams. (See [access-required](#access-required))
+- Add Shadows to the  `release-team` and `release-team-enhancements` GitHub teams. (See [access-required](#access-required))
 - Add Shadows to the `Enhancements Contact` Field of the Enhancements Tracking Board.
+- Create a Google Sheet to track who will give updates at release team meetings
+  - Access: : **restricted access**, edit rights shared with release team enhancements shadows individually
 
 #### Pre-Enhancements Freeze (Week 1)
 
-- Send an email to the [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to #chairs-and-techleads slack channel with a call for enhancements and how to opt-in to the release.
+- Send an email to the [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to #chairs-and-techleads slack channel with a call for enhancements and how to opt-in to the release. Previous communications can be used as a template.
+  - [1.26 call for enhancements](https://groups.google.com/a/kubernetes.io/g/dev/c/lnxXgZmOOMo/m/r6QNJIewBwAJ?utm_medium=email)
+  - 1.27 call for enhancements - WIP
 - Verify issues have k/k PRs associated so they can be referenced and easily tracked. This is going to be critical come Enhancement Freeze and Code Freeze to see the status of the code.
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
-- Weekly Release meetings require updates of current status. Use the `Feature stats` tab to update the release team on counts of enhancements in good and bad progress.
 
-#### Collection Monitoring and Triage (Week 1-2)
+#### Collection Monitoring and Triage (Weeks 1-4)
 
-- Monitor the `KEP Collection` tab regularly for new additions as SIGs opt-in KEPs into the release.
-- Move data from `KEP Collection` into the `data` tab to be tracked officially for the release.
-- Manually add the KEP issue number into the `Enhancements` tab and verify that the KEP is now included.
-  - Entering the KEP issue number will auto populate the Enhancement Name, SIG, KEP Assignee, Proposal, and KEP State.
-  - Fill out rest of the column manually based on current status of the KEP.
-- For the opted in issues, apply the correct milestone, `tracked/yes` label, and `stage/xxx` label.
-- Start reminding opted in Issue owners that KEPs are required for each enhancement and that KEPs must meet the acceptance criteria (implementable state, graduation criteria, test plan, and production readiness review) by Enhancement Freeze.
-- Stay on top of comments in issues when owners respond and update their status in the sheet if necessary.
-- Mark features as `At Risk` if there is no communication, active PRs on the issues, or it is missing other requirements coming into Enhancement Freeze.
+- Monitor the Enhancements Tracking Board for new additions as SIGs opt-in KEPs for the release and assign an enhancement contact to each Issue.
+- For opted in Issues periodically (at least once a week):
+  - Ensure Issue is in the current milestone
+  - Ensure Issue has correct labels (has `tracked/yes`, does not have `tracked/no`, `stage/xxx` is accurate, ...)
+  - Ensure Fields in the Enhancement Tracking Board are populated and accurate (Status, Stage, SIG, ...)
+  - Evaluate if the enhancement satisfies all of the requirements for inclusion in the current release.
+    - Comment on the Issue with a status updating using one of the [templates from below](#enhancement-freeze-templates)
+    - Update `Enhancement Status` field for this Enhancement in the Enhancement Tracking Board (`Tracked` or `At Risk`)
+- Reach out to each [SIG on Slack](https://github.com/kubernetes/community/blob/master/sig-list.md) tagging one or more chairs or technical leads to communicate the Enhancements statuses. Example [communication templates](#sig-outreach-templates) can be found below.
 - Start syncing with Communications Team on giving an induction what's coming up for the release.
-- Reach out to each [SIG on Slack](https://github.com/kubernetes/community/blob/master/sig-list.md) tagging one or more chairs or technical leads to communicate the Enhancements statuses
-  - For participating SIGs, mention the total number of Enhancements on the tracking spreadsheet for that SIG and the number of Enhancements that are `At Risk`.  An example outreach on Slack could be structured as follows:
-
-    >    Hello sig-{{ SIG_NAME }}. Enhancements team here.  Just checking in as we approach enhancements freeze at {{ FREEZE_DATETIME }}. Your SIG has submitted {{ X }} enhancements for the {{ CYCLE }} cycle, and {{ Y }} enhancements are currently `At Risk`. Refer to the [announcement here](https://groups.google.com/a/kubernetes.io/g/dev/c/slwAhtVqjXk/m/zz-eeXdFBgAJ) for the list of review requirements. If your SIG still plans to submit any more enhancement, follow the [instructions here](https://groups.google.com/a/kubernetes.io/g/dev/c/slwAhtVqjXk/m/zz-eeXdFBgAJ) so the enhancements team can begin tracking. Please plan to make KEP updates to meet all of the requirements before enhancement freeze. Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
-
-  - For non-participating SIGs, mention the process and deadline for adding Enhancements to the `KEP Collection` tab on the tracking spreadsheet.  An example outreach on Slack could be structured as follows:
-
-    > Hello sig-{{ SIG_NAME }}. Enhancements team here.  Just checking in as we approach enhancements freeze at {{ FREEZE_DATETIME }}. Your SIG has not submitted any enhancements for the {{ CYCLE }} cycle. If your SIG still plans to submit an enhancement, follow the [instructions here](https://groups.google.com/a/kubernetes.io/g/dev/c/slwAhtVqjXk/m/zz-eeXdFBgAJ) so the enhancements team can begin tracking. If your SIG is not planning to submit an enhancement, please reply to this message to confirm. Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
-
 - Send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
+- Provide updates during release team meetings
+  - Use the `KEPs by Stage` insight from the Enhancement Tracking Board ([example](https://github.com/orgs/kubernetes/projects/98/insights/3))
 
-#### Enhancements Freeze (Week 3)
+#### Enhancements Freeze (Week 5)
 
 - On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that freeze has happened and upcoming key dates. Examples [1](https://groups.google.com/g/kubernetes-dev/c/JDM7bNKvhqQ/m/8S7BXtXPBQAJ).
-- Remove [SIG Leads Google Group][sig-leads-group]'s access to the `KEP Collection` tab on the enhancement collection sheet.
-- Remove any enhancements that failed to meet the criteria by the Enhancement freeze deadline.
-  - Set their status in the sheet to `Removed from Milestone` and use the `Enhancements` -> `Remove Enhancements from Milestone` menu option to move them over to the `Removed from milestone` tab.
-  - Remove the milestone and change `tracked/yes` label to `tracked/no` on the enhancement issue.
+- Remove any Enhancements that failed to meet the criteria by the Enhancement freeze deadline.
+  - Set their **Enhancement Status** in the board to `Removed from Milestone`.
+  - Remove the milestone and change `tracked/yes` label to `tracked/no` on the Enhancement Issue.
 - Clean up Enhancements issues by removing milestone from the enhancements that have not opted-in and make sure that number of in-tree open issues with current milestone matches number of opted-in enhancements.
 - Any enhancements removed from the milestone will now require an exception. As exception requests come in, discuss each with the Release Lead (and Shadows) to arrive at an approve/reject decision.
   - Create an exception file in the Release for exceptions Example [1](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.14/exception.yaml).
-  - If a previously removed Enhancement has had their exception Approved, set their status to `Tracked` and use the `Enhancements` -> `Track Removed Enhancements` menu option to move it back to the `Enhancements` and `Docs` tabs.
+  - If a previously removed Enhancement has had their exception Approved, set their **Enhancement Status** to `Tracked` in the board.
 
-#### Post Enhancements Freeze (Week 4–10)
+#### Post Enhancements Freeze (Week 5–10)
 
 - Stay on top of issues and continually monitor them twice a week and look at attached PRs. As Code Freeze gets closer, if there are PRs that have not been merged, move the issue to `At Risk`. If there is no activity, ping issue owners on either the issue or the k/k PR.
 - Monitor issues that are `At Risk` closely, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward.
@@ -201,6 +199,80 @@ It is important that this process be followed and documentation remain up-to-dat
   - If a previously removed Enhancement has had their exception Approved, set their status back to `Tracked`
 - Start planning for the next release while assisting the Release Lead with anything relating to analytics or Public Relation planning of the release. Work with the Communications Lead to develop major themes for the official Kubernetes blog post.
 
+### Communication Templates
+
+#### Enhancement Freeze Templates
+
+If the Enhancement Issue **does not** meet the criteria for inclusion in the current release use this template in PR comments:
+
+```markdown
+Hello {enhancement owner} 👋, Enhancements team here.
+
+Just checking in as we approach **enhancements freeze on { FREEZE_DATETIME }**.
+
+This enhancement is targeting for stage `<insert-stage-here>` for {current release} (correct me, if otherwise)
+
+Here's where this enhancement currently stands:
+
+- [ ] KEP readme using the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template) has been merged into the k/enhancements repo.
+- [ ] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`
+- [ ] KEP readme has a [updated detailed test plan section](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/README.md?plain=1#L257-L328) filled out
+- [ ] KEP readme has up to date graduation criteria
+- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements.
+
+For this KEP, we would just need to update the following:
+- {insert list of action items}
+
+The status of this enhancement is marked as `at risk`. Please keep the issue description up-to-date with appropriate stages as well. Thank you!
+
+```
+
+If the Enhancement Issue **does** meet the criteria for inclusing in the current release use this template in PR comments:
+
+```markdown
+Hello {enhancement owner} 👋, Enhancements team here.
+
+Just checking in as we approach **enhancements freeze on { FREEZE_DATETIME }**.
+
+This enhancement is targeting for stage `<insert-stage-here>` for {current release} (correct me, if otherwise)
+
+Here’s where this enhancement currently stands:
+
+- [X] KEP readme using the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template) has been merged into the k/enhancements repo.
+- [X] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`
+- [X] KEP readme has a [updated detailed test plan section](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/README.md?plain=1#L257-L328) filled out
+- [X] KEP readme has up to date graduation criteria.
+- [X] KEP has a production readiness review that has been completed and merged into k/enhancements.
+
+With all the KEP requirements in place and merged into k/enhancements, this enhancement is all good for the upcoming enhancements freeze. 🚀
+
+The status of this enhancement is marked as `tracked`. Please keep the issue description up-to-date with appropriate stages as well. Thank you!
+```
+
+#### SIG Outreach Templates
+
+For SIGs which have opted to include Enhancements in the current release:
+
+```markdown
+Hello sig-{ SIG_NAME }. Enhancements team here.
+Just checking in as we approach enhancements freeze at { FREEZE_DATETIME }.
+Your SIG has submitted { X } enhancements for the { CURRENT_RELEASE } cycle, and { Y } enhancements are currently `At Risk`.
+Refer to the [announcement here]({link to announcement for current release cycle}) for the list of review requirements.
+If your SIG still plans to submit any more enhancement, follow the [instructions here]({link to announcement for current release cycle}) so the enhancements team can begin tracking.
+Please plan to make KEP updates to meet all of the requirements before enhancement freeze.
+Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
+```
+
+For SIGs which have not opted to include Enhancements in the current release:
+
+```markdown
+Hello sig-{{ SIG_NAME }}. Enhancements team here.
+Just checking in as we approach enhancements freeze at {{ FREEZE_DATETIME }}.
+Your SIG has not submitted any enhancements for the { CURRENT_RELEASE } cycle.
+If your SIG still plans to submit an enhancement, follow the [instructions here]({link to announcement for current release cycle}) so the enhancements team can begin tracking.
+If your SIG is not planning to submit an enhancement, please reply to this message to confirm.
+Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
+```
 
 ### Working with the Enhancement Tracking Sheet
 
@@ -284,7 +356,6 @@ Exception process is outlined [here](https://github.com/kubernetes/sig-release/b
 ### Succession
 
 - Select who will be the new enhancement lead for the next release. Shadows should be the first source pool. If none are available to lead then look externally through other release team members or members of [SIG Architecture Enhancements Subproject](enhancements)
-- Enhancements Tracking sheet is shortlinked with the pattern `k8sxyy-enhancements` e.g., http://bit.ly/k8s113-enhancements
 - Continually work to improve Enhancements process
 - Review / update documentation as the release cycle ends
 - Close issues marked as stable that made it into the release, only after the corresponding KEPs have been marked `Implemented`
