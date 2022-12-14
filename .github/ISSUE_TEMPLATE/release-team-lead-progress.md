@@ -121,11 +121,11 @@ Additional information can be found in the [release team lead handbook](https://
 
 **Release Cut Alpha 3:**
 - [ ] Checked in with ci-signal and branch managers if 1.XX.0-alpha.3 is ok to be released and [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) tests are all green
-- [ ] Checked in with Release Notes team on release notes progress after the release notes for 1.XX.0-alpha.3 is generated
+- [ ] Checked in with Release Notes team on release notes progress after the tag for 1.XX.0-alpha.3 is generated
 
 **Release Cut Alpha 4:**
 - [ ] Checked in with ci-signal and branch managers if 1.XX.0-alpha.4 is ok to be released and [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) tests are all green
-- [ ] Checked in with Release Notes team on release notes progress after the release notes for 1.XX.0-alpha.4 is generated
+- [ ] Checked in with Release Notes team on release notes progress after the tag for 1.XX.0-alpha.4 is generated
 
 ### 4. Release Halfway Point up to Code Freeze (~Week 8 - 11)
 
