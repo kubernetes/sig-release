@@ -151,7 +151,6 @@ It is important that this process be followed and documentation remain up-to-dat
 
 - Send an email to the [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to #chairs-and-techleads slack channel with a call for enhancements and how to opt-in to the release. Previous communications can be used as a template.
   - [1.26 call for enhancements](https://groups.google.com/a/kubernetes.io/g/dev/c/lnxXgZmOOMo/m/r6QNJIewBwAJ?utm_medium=email)
-  - 1.27 call for enhancements - WIP
 - Verify issues have k/k PRs associated so they can be referenced and easily tracked. This is going to be critical come Enhancement Freeze and Code Freeze to see the status of the code.
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
 
