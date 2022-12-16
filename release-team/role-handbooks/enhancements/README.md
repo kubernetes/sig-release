@@ -289,7 +289,7 @@ Please reach out to [#release-enhancements](https://kubernetes.slack.com/archive
 
 ### Working with the Enhancement Tracking Board
 
-The Enhancements Tracking Board is used by various release sub-teams.
+The Enhancements Tracking Board is used by the release-enhancements, release-docs, and release-comms teams.
 Information in this document will be focused on how the Enhancements team should interact with the project board.
 
 #### Enhancements View
