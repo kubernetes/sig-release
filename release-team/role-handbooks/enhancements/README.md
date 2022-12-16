@@ -329,7 +329,7 @@ Notes :
 
 ##### Status
 
-Status tracks how if the enhancement has met all the criteria for inclusion in the current release.
+The field `Status` tracks if the KEP has met all the criteria for inclusion in the current release.
 Refer to the [Enhancement Freeze Communications](#enhancement-freeze-templates) for detailed requirements.
 
 |                 Status | Description                                                                                                                                 |
