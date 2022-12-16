@@ -107,7 +107,7 @@ It is important that this process be followed and documentation remain up-to-dat
 
 > Note: The week #n timings given below are tentative. There are special releases like Kubernetes 1.19 or releases at the end of the year which may not strictly conform to that.
 
-#### Pre-Collection (Week 0)
+#### Week 0
 
 - Create the Enhancements Tracking Board for the current release
   - Navigate to https://github.com/orgs/kubernetes/projects/, click the `New Project` button, select the `Table` template (default), and click the `Create` button.
@@ -147,14 +147,14 @@ It is important that this process be followed and documentation remain up-to-dat
 - Create a Google Sheet to track who will give updates at release team meetings
   - Access: : **restricted access**, edit rights shared with release team enhancements shadows individually
 
-#### Pre-Enhancements Freeze (Week 1)
+#### Week 1
 
 - Send an email to the [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to #chairs-and-techleads slack channel with a call for enhancements and how to opt-in to the release. Previous communications can be used as a template.
   - [1.26 call for enhancements](https://groups.google.com/a/kubernetes.io/g/dev/c/lnxXgZmOOMo/m/r6QNJIewBwAJ?utm_medium=email)
 - Verify issues have k/k PRs associated so they can be referenced and easily tracked. This is going to be critical come Enhancement Freeze and Code Freeze to see the status of the code.
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
 
-#### Collection Monitoring and Triage (Weeks 1-4)
+#### Before Enhancements Freeze
 
 - Monitor the Enhancements Tracking Board for new additions as SIGs opt-in KEPs for the release and assign an enhancement contact to each Issue.
 - For opted in Issues periodically (at least once a week):
@@ -170,27 +170,41 @@ It is important that this process be followed and documentation remain up-to-dat
 - Provide updates during release team meetings
   - Use the `KEPs by Stage` insight from the Enhancement Tracking Board ([example](https://github.com/orgs/kubernetes/projects/98/insights/3))
 
-#### Enhancements Freeze (Week 5)
+#### Week of Enhancements Freeze
 
 - On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that freeze has happened and upcoming key dates. Examples [1](https://groups.google.com/g/kubernetes-dev/c/JDM7bNKvhqQ/m/8S7BXtXPBQAJ).
 - Remove any Enhancements that failed to meet the criteria by the Enhancement freeze deadline.
   - Set their **Enhancement Status** in the board to `Removed from Milestone`.
-  - Remove the milestone and change `tracked/yes` label to `tracked/no` on the Enhancement Issue.
+  - Remove the milestone and change `tracked/yes` label to `tracked/no` on the Enhancement Issue with the following comments
+
+    ```text
+    /remove-label tracked/yes
+    /label tracked/no
+    /milestone clear
+    ```
+
 - Clean up Enhancements issues by removing milestone from the enhancements that have not opted-in and make sure that number of in-tree open issues with current milestone matches number of opted-in enhancements.
 - Any enhancements removed from the milestone will now require an exception. As exception requests come in, discuss each with the Release Lead (and Shadows) to arrive at an approve/reject decision.
   - Create an exception file in the Release for exceptions Example [1](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.14/exception.yaml).
-  - If a previously removed Enhancement has had their exception Approved, set their **Enhancement Status** to `Tracked` in the board.
+  - If a previously removed Enhancement has had their exception Approved, set their **Enhancement Status** to `Tracked` in the Enhancement Tracking Board.
 
-#### Post Enhancements Freeze (Week 5–10)
+#### Post Enhancements Freeze
 
 - Stay on top of issues and continually monitor them twice a week and look at attached PRs. As Code Freeze gets closer, if there are PRs that have not been merged, move the issue to `At Risk`. If there is no activity, ping issue owners on either the issue or the k/k PR.
 - Monitor issues that are `At Risk` closely, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward.
 
-#### Code Freeze (Week 10+)
+#### Week of Code Freeze
 
 - Remove any enhancements that failed to merge their code by the Code freeze deadline.
   - Set their status in the sheet to `Removed from Milestone`.
-  - Remove the milestone and change `tracked/yes` label to `tracked/no` on the enhancement issue.
+  - Remove the milestone and change `tracked/yes` label to `tracked/no` on the Enhancement Issue with the following comments
+
+    ```text
+    /remove-label tracked/yes
+    /label tracked/no
+    /milestone clear
+    ```
+
   - Remove the milestone from all open `k/k` PRs related to the enhancement.
 - Any enhancements removed from the milestone will now require an exception. As exception requests come in, discuss each with the Release Lead (and Shadows) to arrive at an approve/reject decision.
   - Add a `/hold` label to `k/k` PRs associated with incoming exceptions to prevent from accidental merge.
@@ -226,7 +240,7 @@ The status of this enhancement is marked as `at risk`. Please keep the issue des
 
 ```
 
-If the Enhancement Issue **does** meet the criteria for inclusing in the current release use this template in Issue comments:
+If the Enhancement Issue **does** meet the criteria for inclusion in the current release use this template in Issue comments:
 
 ```markdown
 Hello {enhancement owner} 👋, Enhancements team here.
