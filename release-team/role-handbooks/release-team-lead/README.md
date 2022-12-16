@@ -135,7 +135,13 @@ With code exception in effect, you will likely have to assemble decision makers 
 
 Depending on the number of exceptions code freeze will be a **very busy time**. 
 
-**To triage an exception request follow the following guidelines:**
+**With Code Freeze in effect**
+- Clear milestones and labels from feature PRs in k/k
+- Wait for exception requests and bring them to `#sig-release`
+- Update exception requests in the enhancements project board view `Code Freeze exceptions`
+- Broadly discuss exception requests in the community
+
+**To triage a single exception request follow the following guidelines:**
 1. Open a slack thread in `#sig-release` to open the discussion. 
 Example message:
 

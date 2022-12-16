@@ -164,7 +164,6 @@ Code Freeze begins, and it’s now the home stretch of the release. SIGs will ne
 - As needed, assist the Bug Triage Lead and Enhancements Lead removing PRs and enhancements from the milestone that aren't merged in time `/milestone clear`
 
 #### After Code Freeze
-- Wait for exception requests and bring them to `#sig-release`
 - [ ] Verified that the [`release-1.XX` branch](https://github.com/kubernetes/kubernetes/branches) has been automatically created at the start of Test Freeze
 - [ ] Verified that the Branch Manager created the CI board on [Testgrid](https://testgrid.k8s.io/sig-release) for the release cycle (1.XX-blocking & 1.XX-informing)
 - [ ] Published the "Removals, Deprecations, and Major Changes blog"
@@ -180,6 +179,7 @@ Code Freeze begins, and it’s now the home stretch of the release. SIGs will ne
 - [ ] Planned something for Release Day. Make the day as fun as you can for the team. Plan ahead for this and do something nice
 - [ ] Prepared [Release Team gifts](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/release-team-lead#release-theme-gifts)
 - [ ] The Communications Lead contacts CNCF to gauge media interest, schedule the CNCF Kubernetes release workshop, and publish the release blog post. Stay in the loop for that. If there is media interest in the release, an interview between the journalist will be organized by the CNCF.
+- [ ] Check in with the docs lead and verify tasks that should happen before the release day are completed (ref [release-docs handbook](https://github.com/kubernetes/sig-release/blob/master/release-team/role-handbooks/docs/Release-Timeline.md#release-week-week-12))
 - [ ] The Release Team Retro part 2 and part 3 is scheduled shortly after the "Release Halfway Point" and a host / facilitator is available
 - [ ] Remind the release team to add items to the retro meeting agenda
 
