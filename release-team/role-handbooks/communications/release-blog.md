@@ -29,12 +29,10 @@ This outline can be used as reference for writing up the release blog. The follo
     * Mention efforts of community
     * Mention the growth of the community
     * List of contributors to the spec should go in the 5 Day blog series
-* User Highlights
 * Project Velocity
     * Growth since the last release
     * Number of companies involved in the release
     * Other relevant velocity numbers from DevStats
-* Ecosystem Updates
 * Event Updates
     * Relevant KubeCon dates and information
     * Conferences where the release will be discussed
@@ -110,14 +108,6 @@ Kubernetes 1.XX is available for download on [GitHub](https://github.com/kuberne
 
 <FIND AN INDIVIDUAL TEXT, EACH RELEASE TEAM HAS ITS OWN STORY, TELL IT!>
 
-### User Highlights
-
-<ADD RECENTLY/LAST 3 MONTHES PUBLISHED END USER USE CASES AND GIVE THEM SOME WORDS>
-
-### Ecosystem Updates
-
-<ADD LATEST SURVEY, CNCF COURSES/TRAININGS OR OTHER CNCF RELEVANT ANNOUNCEMENTS>
-
 ### Project Velocity
 
 <CHECKOUT THE DEVSTATS AND HIGHLIGHT SOME INTRESTING NUMBERS https://k8s.devstats.cncf.io/d/12/dashboards?orgId=1&refresh=15m>
@@ -145,4 +135,3 @@ The simplest way to get involved with Kubernetes is by joining one of the many [
 - Read more about what’s happening with Kubernetes on the [blog](https://kubernetes.io/blog/)
 - Learn more about the [Kubernetes Release Team](https://github.com/kubernetes/sig-release/tree/master/release-team)
 ```
-
