@@ -71,12 +71,12 @@ For each release, the schedule with deliverables is added to the release directo
 
 Read the release timeline and **make sure the timeline includes deadlines for documentation work**, e.g: [1.21 timeline](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.21#timeline):
 
-- Docs deadline - Open placeholder PRs (~3.5 weeks before release and shortly after Code Freeze)
-- Docs deadline - PRs ready for review (~2 weeks before release)
+- Docs deadline - Reminder for *Open placeholder PRs* in the respective KEPs (~3.5 weeks before release)
+- Docs deadline - Reminder for *PRs ready for review* in the respective KEPs (~2 weeks before release)
 - Docs complete - All PRs reviewed and ready to merge (~1 week before release)
 
 If these deadlines aren't listed in the release timeline, request that the Release Lead add them.
-Define deadlines clearly e.g. eod PST is not clear if eod is 5pm or 11:59am PST.
+Define deadlines clearly e.g. End of Day (EOD) PST is not clear if EOD is 5:00 PM or 11:59 AM PST.
 
 Responsibilities of the Docs Team:
 - Same as [Docs Lead responsibilities](../docs#docs-lead-responsibilities)
@@ -106,7 +106,7 @@ These steps take approximately one hour to complete, and should be completed imm
     - [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows)
         - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team-shadows` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
 
-Early in the release cycle, the Enhancements Lead opens a github project, e.g: [the 1.26 Enhancement Tracking](https://github.com/orgs/kubernetes/projects/98/views/1). Later in the release this spreadsheet will contain important information for docs, check the Docs view [here](https://github.com/orgs/kubernetes/projects/98/views/6):
+Early in the release cycle, the Enhancements Lead opens a Github Project, e.g: [the 1.26 Enhancement Tracking](https://github.com/orgs/kubernetes/projects/98/views/1). Later in the release this spreadsheet will contain important information for docs, check the Docs view [here](https://github.com/orgs/kubernetes/projects/98/views/6):
 
 - Which enhancements we'll be tracking for this release
 - Feature owners (and their GitHub IDs)
