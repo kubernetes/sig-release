@@ -61,6 +61,14 @@
     "author_url": "https://github.com/brianpursley",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111093",
     "pr_number": 111093,
+  "108250": {
+    "commit": "d86c013b0da0db4c0790270c4739c79d01ce1593",
+    "text": "Added a `kube-proxy` flag (`--iptables-localhost-nodeports`, default true) to allow disabling `NodePort` services on loopback addresses. Note: this only applies to iptables mode and ipv4.",
+    "markdown": "Added a `kube-proxy` flag (`--iptables-localhost-nodeports`, default true) to allow disabling `NodePort` services on loopback addresses. Note: this only applies to iptables mode and ipv4. ([#108250](https://github.com/kubernetes/kubernetes/pull/108250), [@cyclinder](https://github.com/cyclinder))",
+    "author": "cyclinder",
+    "author_url": "https://github.com/cyclinder",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/108250",
+    "pr_number": 108250,
     "areas": [
       "test",
       "kubectl"
@@ -196,6 +204,17 @@
     "author_url": "https://github.com/muyangren2",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111381",
     "pr_number": 111381,
+  "109505": {
+    "commit": "d96e052d981537ae9d2376ee6ac73f3ae6817f69",
+    "text": "Removed raising an error when setting an annotation with the same value, just ignore it.",
+    "markdown": "Removed raising an error when setting an annotation with the same value, just ignore it. ([#109505](https://github.com/kubernetes/kubernetes/pull/109505), [@zigarn](https://github.com/zigarn))",
+    "author": "zigarn",
+    "author_url": "https://github.com/zigarn",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/109505",
+    "pr_number": 109505,
+    "areas": [
+      "kubectl"
+    ],
     "kinds": [
       "cleanup"
     ],
@@ -253,6 +272,33 @@
     "areas": [
       "kubeadm"
     ],
+  "110498": {
+    "commit": "cf4d2cc545f62fcfd748a084dff7744f9402bf57",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#110498](https://github.com/kubernetes/kubernetes/pull/110498), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Release]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110498",
+    "pr_number": 110498,
+    "areas": [
+      "release-eng"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "release"
+    ],
+    "do_not_publish": true
+  },
+  "110559": {
+    "commit": "962235c86a1a934fc759be1d3fd3a764fa2efa18",
+    "text": "If more than one StorageClass is designated as default (via the \"storageclass.kubernetes.io/is-default-class\" annotation), choose the newest one instead of throwing an error.'",
+    "markdown": "If more than one StorageClass is designated as default (via the \"storageclass.kubernetes.io/is-default-class\" annotation), choose the newest one instead of throwing an error.' ([#110559](https://github.com/kubernetes/kubernetes/pull/110559), [@danishprakash](https://github.com/danishprakash))",
+    "author": "danishprakash",
+    "author_url": "https://github.com/danishprakash",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110559",
+    "pr_number": 110559,
     "kinds": [
       "bug",
       "feature"
@@ -267,6 +313,445 @@
     "commit": "08aac4f0acbfb7ca2da2ced281fe694ddd29a4d7",
     "text": "kubelet: changed default value of `cpuCFSQuotaPeriod` from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work.",
     "markdown": "Kubelet: changed default value of `cpuCFSQuotaPeriod` from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work. ([#111520](https://github.com/kubernetes/kubernetes/pull/111520), [@paskal](https://github.com/paskal))",
+    "author": "paskal",
+    "author_url": "https://github.com/paskal",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111520",
+    "pr_number": 111520,
+    "areas": [
+      "kubelet",
+      "code-generation"
+    ],
+    "kinds": [
+      "documentation",
+      "api-change"
+    ],
+    "sigs": [
+      "node",
+      "api-machinery"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111533": {
+    "commit": "0d7e51b2e806543c245c70829510258c8a907c7c",
+    "text": "NoneNone",
+    "markdown": "NoneNone ([#111533](https://github.com/kubernetes/kubernetes/pull/111533), [@zhoumingcheng](https://github.com/zhoumingcheng)) [SIG CLI]",
+    "author": "zhoumingcheng",
+    "author_url": "https://github.com/zhoumingcheng",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111533",
+    "pr_number": 111533,
+  "110695": {
+    "commit": "5ade6c833fdde89618791b130bd2e9cad9519842",
+    "text": "NONE",
+    "markdown": "NONE ([#110695](https://github.com/kubernetes/kubernetes/pull/110695), [@lokichoggio](https://github.com/lokichoggio)) [SIG Apps and Autoscaling]",
+    "author": "lokichoggio",
+    "author_url": "https://github.com/lokichoggio",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110695",
+    "pr_number": 110695,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "autoscaling",
+      "apps"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "110747": {
+    "commit": "98742f9d77a57aec44cc05b1daf721973fb029be",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#110747](https://github.com/kubernetes/kubernetes/pull/110747), [@harshanarayana](https://github.com/harshanarayana)) [SIG Apps, Architecture, Instrumentation and Node]",
+    "documentation": [
+      {
+        "description": "[Usage]",
+        "url": "https://github.com/kubernetes/community/pull/6719",
+        "type": "external"
+      }
+    ],
+    "author": "harshanarayana",
+    "author_url": "https://github.com/harshanarayana",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110747",
+    "pr_number": 110747,
+    "areas": [
+      "kubelet",
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "apps",
+      "instrumentation",
+      "architecture"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "110907": {
+    "commit": "20a9f7786aa4ee0b6e1619c7974ea4562d2b2500",
+    "text": "'`kubectl apply`: Added a warning that \"`kubectl apply` will no longer prune\nnon-namespaced resources by default when used with the --namespace flag in\na future release\".'\n",
+    "markdown": "'`kubectl apply`: Added a warning that \"`kubectl apply` will no longer prune\n  non-namespaced resources by default when used with the --namespace flag in\n  a future release\".'\n   ([#110907](https://github.com/kubernetes/kubernetes/pull/110907), [@pacoxu](https://github.com/pacoxu))",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110907",
+    "pr_number": 110907,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cli"
+    ]
+  },
+  "110972": {
+    "commit": "891cbede96ab4b64c48edf25f8bbd331d8731622",
+    "text": "Kubeadm will cleanup the stale data on best effort basis. Stale data will be removed when each reset phase are executed, default etcd data directory will be cleanup when the `remove-etcd-member` phase are executed.",
+    "markdown": "Kubeadm will cleanup the stale data on best effort basis. Stale data will be removed when each reset phase are executed, default etcd data directory will be cleanup when the `remove-etcd-member` phase are executed. ([#110972](https://github.com/kubernetes/kubernetes/pull/110972), [@chendave](https://github.com/chendave)) [SIG Cluster Lifecycle]",
+    "author": "chendave",
+    "author_url": "https://github.com/chendave",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110972",
+    "pr_number": 110972,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "111023": {
+    "commit": "d1c0171aed848900daa07212370c991c19c318b1",
+    "text": "'Added a `ResourceClaim` API (in the `resource.k8s.io/v1alpha1` API group and\nbehind the `DynamicResourceAllocation` feature gate).\nThe new API is now more flexible than the existing Device Plugins feature of Kubernetes because it\nallows Pods to request (claim) special kinds of resources, which can be available at node level, cluster\nlevel, or following any other model you implement.'",
+    "markdown": "'Added a `ResourceClaim` API (in the `resource.k8s.io/v1alpha1` API group and\n  behind the `DynamicResourceAllocation` feature gate).\n  The new API is now more flexible than the existing Device Plugins feature of Kubernetes because it\n  allows Pods to request (claim) special kinds of resources, which can be available at node level, cluster\n  level, or following any other model you implement.' ([#111023](https://github.com/kubernetes/kubernetes/pull/111023), [@pohly](https://github.com/pohly))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3063",
+        "type": "KEP"
+      }
+    ],
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111023",
+    "pr_number": 111023,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "provider/gcp",
+      "release-eng",
+      "code-generation",
+      "e2e-test-framework",
+      "dependency"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "apps",
+      "cli",
+      "instrumentation",
+      "testing",
+      "release",
+      "architecture",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111093": {
+    "commit": "8674ce53ff15e1dd9a375c182029cca8ecdb4a37",
+    "text": "Fixed bug in `kubectl rollout history` where only the latest revision was displayed when a specific revision was requested and an output format was specified.",
+    "markdown": "Fixed bug in `kubectl rollout history` where only the latest revision was displayed when a specific revision was requested and an output format was specified. ([#111093](https://github.com/kubernetes/kubernetes/pull/111093), [@brianpursley](https://github.com/brianpursley))",
+    "author": "brianpursley",
+    "author_url": "https://github.com/brianpursley",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111093",
+    "pr_number": 111093,
+    "areas": [
+      "test",
+      "kubectl"
+    ],
+    "kinds": [
+      "bug",
+      "cleanup"
+    ],
+    "sigs": [
+      "cli",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111096": {
+    "commit": "afbce897a9c7956fd3219b64abacf46fa5d3e6aa",
+    "text": "Added categories column to the `kubectl api-resources` command's wide output (`-o wide`).\nAdded `--categories` flag to the `kubectl api-resources` command, which can be used to filter the output to show only resources belonging to one or more categories.",
+    "markdown": "Added categories column to the `kubectl api-resources` command's wide output (`-o wide`).\n  Added `--categories` flag to the `kubectl api-resources` command, which can be used to filter the output to show only resources belonging to one or more categories. ([#111096](https://github.com/kubernetes/kubernetes/pull/111096), [@brianpursley](https://github.com/brianpursley)) [SIG CLI]",
+    "author": "brianpursley",
+    "author_url": "https://github.com/brianpursley",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111096",
+    "pr_number": 111096,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "cleanup",
+      "feature"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "feature": true,
+    "duplicate_kind": true
+  },
+  "111120": {
+    "commit": "6c0bab878c688fe89fee361e811dc30b518a60e2",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#111120](https://github.com/kubernetes/kubernetes/pull/111120), [@iXinqi](https://github.com/iXinqi)) [SIG Network and Testing]",
+    "documentation": [
+      {
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-windows/2578-windows-conformance#basic-networking",
+        "type": "KEP"
+      }
+    ],
+    "author": "iXinqi",
+    "author_url": "https://github.com/iXinqi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111120",
+    "pr_number": 111120,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "111277": {
+    "commit": "2b2be7fa6b69c7591a31475fc4fb1dcff362a128",
+    "text": "kubeadm: when a sub command is needed but not provided for a kubeadm command, print a help screen instead of showing a short message.",
+    "markdown": "Kubeadm: when a sub command is needed but not provided for a kubeadm command, print a help screen instead of showing a short message. ([#111277](https://github.com/kubernetes/kubernetes/pull/111277), [@chymy](https://github.com/chymy))",
+    "author": "chymy",
+    "author_url": "https://github.com/chymy",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111277",
+    "pr_number": 111277,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug",
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "duplicate_kind": true
+  },
+  "111333": {
+    "commit": "4e8b11d4411cefbe1a32cf9e54810d9e0bd7378e",
+    "text": "Add auth API to get self subject attributes (new selfsubjectreviews API is added). \nThe corresponding command for kubctl is provided - `kubectl auth whoami`.",
+    "markdown": "Add auth API to get self subject attributes (new selfsubjectreviews API is added). \n  The corresponding command for kubctl is provided - `kubectl auth whoami`. ([#111333](https://github.com/kubernetes/kubernetes/pull/111333), [@nabokihms](https://github.com/nabokihms)) [SIG API Machinery, Auth, CLI and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3325",
+        "type": "KEP"
+      },
+      {
+        "description": "[Docs]",
+        "url": "https://github.com/kubernetes/website/pull/35385",
+        "type": "external"
+      },
+      {
+        "description": "[e2e]",
+        "url": "https://github.com/kubernetes/test-infra/pull/26999",
+        "type": "external"
+      }
+    ],
+    "author": "nabokihms",
+    "author_url": "https://github.com/nabokihms",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111333",
+    "pr_number": 111333,
+    "areas": [
+      "test",
+      "apiserver",
+      "kubectl",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "cli",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111344": {
+    "commit": "5cb9622347d73a5d9715c9423aaf94cc0e4a5a40",
+    "text": "Updated `kube-proxy` to restart in case it detects that the Node assigned `pod.Spec.PodCIDRs` have changed.",
+    "markdown": "Updated `kube-proxy` to restart in case it detects that the Node assigned `pod.Spec.PodCIDRs` have changed. ([#111344](https://github.com/kubernetes/kubernetes/pull/111344), [@aojea](https://github.com/aojea))",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111344",
+    "pr_number": 111344,
+    "areas": [
+      "ipvs"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network"
+    ]
+  },
+  "111379": {
+    "commit": "9efbe6eb9b648bfdf95ccf228175ff57f7ba8f43",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111379](https://github.com/kubernetes/kubernetes/pull/111379), [@muyangren2](https://github.com/muyangren2)) [SIG Network]",
+    "author": "muyangren2",
+    "author_url": "https://github.com/muyangren2",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111379",
+    "pr_number": 111379,
+    "areas": [
+      "ipvs"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "do_not_publish": true
+  },
+  "111381": {
+    "commit": "178f246bbc9e4b6bd56ef0605e94bb51dbe6d27a",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111381](https://github.com/kubernetes/kubernetes/pull/111381), [@muyangren2](https://github.com/muyangren2)) [SIG Storage]",
+    "author": "muyangren2",
+    "author_url": "https://github.com/muyangren2",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111381",
+    "pr_number": 111381,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "storage"
+    ],
+    "do_not_publish": true
+  },
+  "111384": {
+    "commit": "114594e1d265a90820683acd2ed2783513aac4c3",
+    "text": "Added support for Evented PLEG feature gate.",
+    "markdown": "Added support for Evented PLEG feature gate. ([#111384](https://github.com/kubernetes/kubernetes/pull/111384), [@harche](https://github.com/harche))",
+    "author": "harche",
+    "author_url": "https://github.com/harche",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111384",
+    "pr_number": 111384,
+    "areas": [
+      "test",
+      "kubelet",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "111420": {
+    "commit": "b077a9ad87f7219782f12f6247447dad1197be33",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111420](https://github.com/kubernetes/kubernetes/pull/111420), [@muyangren2](https://github.com/muyangren2)) [SIG Cloud Provider]",
+    "author": "muyangren2",
+    "author_url": "https://github.com/muyangren2",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111420",
+    "pr_number": 111420,
+    "areas": [
+      "cloudprovider"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "do_not_publish": true
+  },
+  "111458": {
+    "commit": "8206c9d458e321d7ad22ea9fc2e21a890790fc09",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111458](https://github.com/kubernetes/kubernetes/pull/111458), [@muyangren2](https://github.com/muyangren2)) [SIG Cluster Lifecycle]",
+    "author": "muyangren2",
+    "author_url": "https://github.com/muyangren2",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111458",
+    "pr_number": 111458,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "do_not_publish": true
+  },
+  "111512": {
+    "commit": "065a761547fcb6cb4944abac1541c8a0b76a5fe1",
+    "text": "kubeadm: added `show-join-command` as a new separate phase at the end of `kubeadm init`. You can skip printing the join information by using `kubeadm init --skip-phases=show-join-command`. Executing only this phase on demand will throw an error because the phase needs dependencies such as bootstrap tokens to be pre-populated.",
+    "markdown": "Kubeadm: added `show-join-command` as a new separate phase at the end of `kubeadm init`. You can skip printing the join information by using `kubeadm init --skip-phases=show-join-command`. Executing only this phase on demand will throw an error because the phase needs dependencies such as bootstrap tokens to be pre-populated. ([#111512](https://github.com/kubernetes/kubernetes/pull/111512), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111512",
+    "pr_number": 111512,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug",
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true,
+    "duplicate_kind": true
+  },
+  "111520": {
+    "commit": "08aac4f0acbfb7ca2da2ced281fe694ddd29a4d7",
+    "text": "[kubelet] Change default `cpuCFSQuotaPeriod` value with enabled `cpuCFSQuotaPeriod` flag from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work.",
+    "markdown": "[kubelet] Change default `cpuCFSQuotaPeriod` value with enabled `cpuCFSQuotaPeriod` flag from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work. ([#111520](https://github.com/kubernetes/kubernetes/pull/111520), [@paskal](https://github.com/paskal)) [SIG API Machinery and Node]",
     "author": "paskal",
     "author_url": "https://github.com/paskal",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111520",
@@ -339,6 +824,25 @@
     "sigs": [
       "cli"
     ]
+  },
+  "111656": {
+    "commit": "94c70776ee2af797508806cf20f279801459f791",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#111656](https://github.com/kubernetes/kubernetes/pull/111656), [@Octopusjust](https://github.com/Octopusjust)) [SIG Cluster Lifecycle]",
+    "author": "Octopusjust",
+    "author_url": "https://github.com/Octopusjust",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111656",
+    "pr_number": 111656,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "do_not_publish": true
   },
   "111656": {
     "commit": "94c70776ee2af797508806cf20f279801459f791",
@@ -539,6 +1043,41 @@
     "sigs": [
       "api-machinery"
     ]
+  },
+  "111879": {
+    "commit": "886da71e7588c198dcb9a6c7cccfedb478110e57",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#111879](https://github.com/kubernetes/kubernetes/pull/111879), [@sanwishe](https://github.com/sanwishe)) [SIG API Machinery]",
+    "author": "sanwishe",
+    "author_url": "https://github.com/sanwishe",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111879",
+    "pr_number": 111879,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "do_not_publish": true
+  },
+  "111908": {
+    "commit": "d93ea2557fd349cc60b9ffe068ef34711282f165",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#111908](https://github.com/kubernetes/kubernetes/pull/111908), [@dengyufeng2206](https://github.com/dengyufeng2206)) [SIG Auth]",
+    "author": "dengyufeng2206",
+    "author_url": "https://github.com/dengyufeng2206",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111908",
+    "pr_number": 111908,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "auth"
+    ],
+    "do_not_publish": true
   },
   "111910": {
     "commit": "bf2e850b3a90bc941587a74b53a9dd47aca4fb66",
@@ -761,6 +1300,22 @@
       "cluster-lifecycle"
     ]
   },
+  "112028": {
+    "commit": "5fe1450ba7d3277b31ce7e5c165c6a5f412737e3",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112028](https://github.com/kubernetes/kubernetes/pull/112028), [@dengyufeng2206](https://github.com/dengyufeng2206)) [SIG Scheduling]",
+    "author": "dengyufeng2206",
+    "author_url": "https://github.com/dengyufeng2206",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112028",
+    "pr_number": 112028,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "do_not_publish": true
+  },
   "112042": {
     "commit": "a14fc3d7a201514d7796616c113c75863629a997",
     "text": "The metrics `etcd_request_duration_seconds` and `etcd_bookmark_counts` now differentiate by group resource instead of object type, allowing unique entries per `CustomResourceDefinition`, instead of grouping them all under `*unstructured.Unstructured`.",
@@ -817,6 +1372,29 @@
       "testing"
     ],
     "duplicate": true
+  },
+  "112122": {
+    "commit": "48c8183fc42f2e64ecfde0c9fa8b03f637392a10",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112122](https://github.com/kubernetes/kubernetes/pull/112122), [@Octopusjust](https://github.com/Octopusjust)) [SIG API Machinery, Architecture, Cluster Lifecycle and Instrumentation]",
+    "author": "Octopusjust",
+    "author_url": "https://github.com/Octopusjust",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112122",
+    "pr_number": 112122,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cluster-lifecycle",
+      "instrumentation",
+      "architecture"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
   },
   "112122": {
     "commit": "48c8183fc42f2e64ecfde0c9fa8b03f637392a10",
@@ -1097,6 +1675,23 @@
     "feature": true,
     "duplicate": true
   },
+  "112289": {
+    "commit": "d0a06a60a955dfc1fa687a2cb1d06cfe74d420a6",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112289](https://github.com/kubernetes/kubernetes/pull/112289), [@electrocucaracha](https://github.com/electrocucaracha)) [SIG Scheduling]",
+    "author": "electrocucaracha",
+    "author_url": "https://github.com/electrocucaracha",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112289",
+    "pr_number": 112289,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "feature": true,
+    "do_not_publish": true
+  },
   "112299": {
     "commit": "8287e21228e9b1c945d031581e2fc63920f46d56",
     "text": "kube-apiserver: `gzip` compression switched from level 4 to level 1 to improve large list call latencies in exchange for higher network bandwidth usage (10-50% higher). This increases the headroom before very large unpaged list calls exceed request timeout limits.",
@@ -1143,6 +1738,25 @@
     ],
     "feature": true,
     "duplicate": true
+  },
+  "112316": {
+    "commit": "efc306a12d716749022493b2e4771753b5756700",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112316](https://github.com/kubernetes/kubernetes/pull/112316), [@dengyufeng2206](https://github.com/dengyufeng2206)) [SIG Node]",
+    "author": "dengyufeng2206",
+    "author_url": "https://github.com/dengyufeng2206",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112316",
+    "pr_number": 112316,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "do_not_publish": true
   },
   "112341": {
     "commit": "d569886a234cb65cb1ec777b7ab2e5b9a35d7145",
@@ -1207,6 +1821,58 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "112360": {
+    "commit": "47952e0917a26408ac0bdd450d09b0557e2294b7",
+    "text": "'kubelet: Added the following Pod failure conditions:\n- `DisruptionTarget` (graceful node shutdown, node pressure eviction)'",
+    "markdown": "'kubelet: Added the following Pod failure conditions:\n  - `DisruptionTarget` (graceful node shutdown, node pressure eviction)' ([#112360](https://github.com/kubernetes/kubernetes/pull/112360), [@mimowo](https://github.com/mimowo))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3329-retriable-and-non-retriable-failures",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112360",
+    "pr_number": 112360,
+    "areas": [
+      "test",
+      "kubelet",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112374": {
+    "commit": "8fb8bb4e9ae2d2cb2b7cdb4c79c73be344fdc164",
+    "text": "Logs of requests that were timed out by a timeout handler no longer contain a `statusStack` and `logging error output` fields.",
+    "markdown": "Logs of requests that were timed out by a timeout handler no longer contain a `statusStack` and `logging error output` fields. ([#112374](https://github.com/kubernetes/kubernetes/pull/112374), [@Argh4k](https://github.com/Argh4k))",
+    "author": "Argh4k",
+    "author_url": "https://github.com/Argh4k",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112374",
+    "pr_number": 112374,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true
+  },
   "112383": {
     "commit": "b307321c0aebd0aa15df2978c2de0515e7ee1a46",
     "text": "",
@@ -1228,12 +1894,3170 @@
   },
   "112386": {
     "commit": "72f96d9c722961ddd27911a7dde2e464f9e44198",
+    "text": "`CSRDuration` feature gate that graduated to GA in 1.24 and is unconditionally\nenabled now removed in v1.26.\n",
+    "markdown": "`CSRDuration` feature gate that graduated to GA in 1.24 and is unconditionally\n  enabled now removed in v1.26.\n   ([#112386](https://github.com/kubernetes/kubernetes/pull/112386), [@Shubham82](https://github.com/Shubham82))",
+    "author": "Shubham82",
+    "author_url": "https://github.com/Shubham82",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112386",
+    "pr_number": 112386,
+    "kinds": [
+      "cleanup",
+      "feature"
+    ],
+    "sigs": [
+      "auth"
+    ],
+    "feature": true,
+    "duplicate_kind": true
+  },
+  "112403": {
+    "commit": "ea4c28c7f86372b82aa8a8a15c9cbdf07098c49a",
+    "text": "For raw block CSI volumes on Kubernetes, kubelet was incorrectly calling CSI `NodeStageVolume` for every single \"map\" (i.e. raw block \"mount\") operation for a volume already attached to the node. This change modified that behavior to ensure it is only called once per volume per node.",
+    "markdown": "For raw block CSI volumes on Kubernetes, kubelet was incorrectly calling CSI `NodeStageVolume` for every single \"map\" (i.e. raw block \"mount\") operation for a volume already attached to the node. This change modified that behavior to ensure it is only called once per volume per node. ([#112403](https://github.com/kubernetes/kubernetes/pull/112403), [@akankshakumari393](https://github.com/akankshakumari393))",
+    "author": "akankshakumari393",
+    "author_url": "https://github.com/akankshakumari393",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112403",
+    "pr_number": 112403,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage"
+    ]
+  },
+  "112414": {
+    "commit": "4276ed36282405d026d8072e0ebed4f1da49070d",
+    "text": "kubelet: when there are multi option lines in /etc/resolv.conf, merge all options into one line in a pod with the `Default` DNS policy.",
+    "markdown": "Kubelet: when there are multi option lines in /etc/resolv.conf, merge all options into one line in a pod with the `Default` DNS policy. ([#112414](https://github.com/kubernetes/kubernetes/pull/112414), [@pacoxu](https://github.com/pacoxu)) [SIG Network and Node]",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112414",
+    "pr_number": 112414,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "node"
+    ],
+    "duplicate": true
+  },
+  "112427": {
+    "commit": "148476eff1c9d48d513e725918601a7e85c69792",
+    "text": "Allowed `Label` section in vSphere e2e cloud provider configuration.",
+    "markdown": "Allowed `Label` section in vSphere e2e cloud provider configuration. ([#112427](https://github.com/kubernetes/kubernetes/pull/112427), [@gnufied](https://github.com/gnufied))",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112427",
+    "pr_number": 112427,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "112437": {
+    "commit": "21dfce2d7daa13e616107179acc11c05f20ecce1",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#112437](https://github.com/kubernetes/kubernetes/pull/112437), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Network]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112437",
+    "pr_number": 112437,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "do_not_publish": true
+  },
+  "112489": {
+    "commit": "06fd0a07286faaef2008fd97c888debe0ca1d74a",
+    "text": "etcd: Updated to v3.5.5.",
+    "markdown": "Etcd: Updated to v3.5.5. ([#112489](https://github.com/kubernetes/kubernetes/pull/112489), [@dims](https://github.com/dims))",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112489",
+    "pr_number": 112489,
+    "areas": [
+      "test",
+      "provider/gcp",
+      "release-eng",
+      "kubeadm",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "bug",
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cluster-lifecycle",
+      "testing",
+      "cloud-provider"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112507": {
+    "commit": "4fb2cf4b4b3dc0d1f14a4300939d4efe38db8fbc",
+    "text": "Correct the calculating error in `podTopologySpread` plugin to avoid unexpected scheduling results.",
+    "markdown": "Correct the calculating error in `podTopologySpread` plugin to avoid unexpected scheduling results. ([#112507](https://github.com/kubernetes/kubernetes/pull/112507), [@kerthcet](https://github.com/kerthcet))",
+    "author": "kerthcet",
+    "author_url": "https://github.com/kerthcet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112507",
+    "pr_number": 112507,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "scheduling"
+    ]
+  },
+  "112508": {
+    "commit": "cccfc0989b6f26226bac8ef90a8663928a3a8ad0",
+    "text": "Added support for RSA and ECDSA format keys in preflight check on `kubeadm`.",
+    "markdown": "Added support for RSA and ECDSA format keys in preflight check on `kubeadm`. ([#112508](https://github.com/kubernetes/kubernetes/pull/112508), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112508",
+    "pr_number": 112508,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "112518": {
+    "commit": "8f269d6df2a57544b73d5ca35e04451373ef334c",
+    "text": "fixed code to ensure that pods running on nodes tainted with `NoExecute` continue to run when the `PodDisruptionConditions` feature gate is enabled.",
+    "markdown": "Fixed code to ensure that pods running on nodes tainted with `NoExecute` continue to run when the `PodDisruptionConditions` feature gate is enabled. ([#112518](https://github.com/kubernetes/kubernetes/pull/112518), [@mimowo](https://github.com/mimowo))",
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112518",
+    "pr_number": 112518,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth",
+      "apps"
+    ],
+    "duplicate": true
+  },
+  "112521": {
+    "commit": "521fbd7e6a8eee04d1f641477fe7d87f2dbe3ed0",
+    "text": "Add `percentageOfNodesToScore` as a scheduler profile level parameter to API version `v1`. When a profile `percentageOfNodesToScore` is set, it will override global `percentageOfNodesToScore`.",
+    "markdown": "Add `percentageOfNodesToScore` as a scheduler profile level parameter to API version `v1`. When a profile `percentageOfNodesToScore` is set, it will override global `percentageOfNodesToScore`. ([#112521](https://github.com/kubernetes/kubernetes/pull/112521), [@yuanchen8911](https://github.com/yuanchen8911))",
+    "author": "yuanchen8911",
+    "author_url": "https://github.com/yuanchen8911",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112521",
+    "pr_number": 112521,
+    "areas": [
+      "test",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "api-machinery",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112526": {
+    "commit": "4ff13696417446ffc8e3d42103bc5f7b4f6f56e0",
+    "text": "kube-apiserver: resolved a regression that treated `304 Not Modified` responses from aggregated API servers as internal errors.",
+    "markdown": "Kube-apiserver: resolved a regression that treated `304 Not Modified` responses from aggregated API servers as internal errors. ([#112526](https://github.com/kubernetes/kubernetes/pull/112526), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112526",
+    "pr_number": 112526,
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate_kind": true
+  },
+  "112542": {
+    "commit": "02109414e8816ceefce775e8b627d67cad6ced85",
+    "text": "Added validation for the `--container-runtime-endpoint` flag of kubelet to be non-empty.",
+    "markdown": "Added validation for the `--container-runtime-endpoint` flag of kubelet to be non-empty. ([#112542](https://github.com/kubernetes/kubernetes/pull/112542), [@astraw99](https://github.com/astraw99))",
+    "author": "astraw99",
+    "author_url": "https://github.com/astraw99",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112542",
+    "pr_number": 112542,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "feature": true
+  },
+  "112545": {
+    "commit": "6820a383be4a1bbb5cd526eb3aeb9e6ade351498",
+    "text": "API Server tracing root span name for opentelemetry is changed from `KubernetesAPI` to `HTTP GET`.",
+    "markdown": "API Server tracing root span name for opentelemetry is changed from `KubernetesAPI` to `HTTP GET`. ([#112545](https://github.com/kubernetes/kubernetes/pull/112545), [@dims](https://github.com/dims))",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112545",
+    "pr_number": 112545,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "testing",
+      "architecture",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112553": {
+    "commit": "dad0e937c0f76344363eb691b2668490ffef8537",
+    "text": "`kubectl` now escapes terminal special characters in output. This fixes CVE-2021-25743.\n",
+    "markdown": "`kubectl` now escapes terminal special characters in output. This fixes CVE-2021-25743.\n   ([#112553](https://github.com/kubernetes/kubernetes/pull/112553), [@dgl](https://github.com/dgl))",
+    "author": "dgl",
+    "author_url": "https://github.com/dgl",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112553",
+    "pr_number": 112553,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli",
+      "security"
+    ],
+    "duplicate": true
+  },
+  "112556": {
+    "commit": "6ee3cbd931fd106dfd5b5f654cdf9c33435e557e",
+    "text": "Changed error message when resource is not supported by given patch type in `kubectl patch`.",
+    "markdown": "Changed error message when resource is not supported by given patch type in `kubectl patch`. ([#112556](https://github.com/kubernetes/kubernetes/pull/112556), [@ardaguclu](https://github.com/ardaguclu))",
+    "author": "ardaguclu",
+    "author_url": "https://github.com/ardaguclu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112556",
+    "pr_number": 112556,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli"
+    ]
+  },
+  "112557": {
+    "commit": "497e0dfd33b180fcc3855aad794d87f0e429c82c",
+    "text": "Fixed list cost estimation in Priority and Fairness for list requests with `metadata.name` specified.",
+    "markdown": "Fixed list cost estimation in Priority and Fairness for list requests with `metadata.name` specified. ([#112557](https://github.com/kubernetes/kubernetes/pull/112557), [@marseel](https://github.com/marseel))",
+    "author": "marseel",
+    "author_url": "https://github.com/marseel",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112557",
+    "pr_number": 112557,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "112567": {
+    "commit": "04ee339c7a4d36b4037ce3635993e2a9e395ebf3",
+    "text": "kube-scheduler: the `DefaultPodTopologySpread`, `NonPreemptingPriority`, `PodAffinityNamespaceSelector` and `PreferNominatedNode` feature gates that graduated to GA in v1.24 and were unconditionally enabled have been removed in v1.26.",
+    "markdown": "Kube-scheduler: the `DefaultPodTopologySpread`, `NonPreemptingPriority`, `PodAffinityNamespaceSelector` and `PreferNominatedNode` feature gates that graduated to GA in v1.24 and were unconditionally enabled have been removed in v1.26. ([#112567](https://github.com/kubernetes/kubernetes/pull/112567), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112567",
+    "pr_number": 112567,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "scheduling"
+    ]
+  },
+  "112571": {
+    "commit": "b6d89e756a706c8179f2829d612e1b24e68e9374",
+    "text": "Nested `MountPoints` are now grouped correctly on all cases.",
+    "markdown": "Nested `MountPoints` are now grouped correctly on all cases. ([#112571](https://github.com/kubernetes/kubernetes/pull/112571), [@claudiubelu](https://github.com/claudiubelu))",
+    "author": "claudiubelu",
+    "author_url": "https://github.com/claudiubelu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112571",
+    "pr_number": 112571,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "windows"
+    ],
+    "duplicate": true
+  },
+  "112577": {
+    "commit": "de693b5e2d165081ef52dda83cd3aa3398f263b0",
+    "text": "Removed feature gates `ServiceLoadBalancerClass` and `ServiceLBNodePortControl`. These feature gates were enabled (and locked) since `v1.24`.",
+    "markdown": "Removed feature gates `ServiceLoadBalancerClass` and `ServiceLBNodePortControl`. These feature gates were enabled (and locked) since `v1.24`. ([#112577](https://github.com/kubernetes/kubernetes/pull/112577), [@andrewsykim](https://github.com/andrewsykim))",
+    "author": "andrewsykim",
+    "author_url": "https://github.com/andrewsykim",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112577",
+    "pr_number": 112577,
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "apps"
+    ],
+    "duplicate_kind": true
+  },
+  "112579": {
+    "commit": "5ce4f98a76b6c87d0c652564cb7e7fb2dacd8c20",
+    "text": "Removed `PodOverhead` feature gate as the feature is in GA since `v1.24`.",
+    "markdown": "Removed `PodOverhead` feature gate as the feature is in GA since `v1.24`. ([#112579](https://github.com/kubernetes/kubernetes/pull/112579), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev))",
+    "author": "SergeyKanzhelev",
+    "author_url": "https://github.com/SergeyKanzhelev",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112579",
+    "pr_number": 112579,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "scheduling",
+      "node"
+    ],
+    "duplicate": true
+  },
+  "112580": {
+    "commit": "b8e740f2e551531b22684e4cf6cd57da11203b3d",
+    "text": "Added `--disable-compression` flag to `kubectl` (default = false). When true, it opts out of response compression for all requests to the `apiserver`. This can help improve list call latencies significantly when client-server network bandwidth is ample (\u003e30MB/s) or if the server is CPU-constrained.",
+    "markdown": "Added `--disable-compression` flag to `kubectl` (default = false). When true, it opts out of response compression for all requests to the `apiserver`. This can help improve list call latencies significantly when client-server network bandwidth is ample (\u003e30MB/s) or if the server is CPU-constrained. ([#112580](https://github.com/kubernetes/kubernetes/pull/112580), [@shyamjvs](https://github.com/shyamjvs))",
+    "author": "shyamjvs",
+    "author_url": "https://github.com/shyamjvs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112580",
+    "pr_number": 112580,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cli",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112587": {
+    "commit": "b9c2e53fbcb5f0cec5566ee96135e1c1f8e6f305",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112587](https://github.com/kubernetes/kubernetes/pull/112587), [@k1cn9ggtuc](https://github.com/k1cn9ggtuc)) [SIG Architecture and Testing]",
+    "author": "k1cn9ggtuc",
+    "author_url": "https://github.com/k1cn9ggtuc",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112587",
+    "pr_number": 112587,
+    "areas": [
+      "test",
+      "conformance"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "testing",
+      "architecture"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "112589": {
+    "commit": "9c9b29032f76e39b0e36200c88fe2f127389a9fe",
+    "text": "The `IndexedJob` and `SuspendJob` feature gates that graduated to GA in 1.24 and were unconditionally enabled have been removed in v1.26.",
+    "markdown": "The `IndexedJob` and `SuspendJob` feature gates that graduated to GA in 1.24 and were unconditionally enabled have been removed in v1.26. ([#112589](https://github.com/kubernetes/kubernetes/pull/112589), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112589",
+    "pr_number": 112589,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "apps"
+    ]
+  },
+  "112593": {
+    "commit": "0f8fb9f916d499137f16424c6891cf48547617b2",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112593](https://github.com/kubernetes/kubernetes/pull/112593), [@dashanji](https://github.com/dashanji)) [SIG API Machinery]",
+    "author": "dashanji",
+    "author_url": "https://github.com/dashanji",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112593",
+    "pr_number": 112593,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "do_not_publish": true
+  },
+  "112607": {
+    "commit": "91a9ce28ac2486c50222aeeec1f76e664155d769",
+    "text": "volume mount cleanup now considers only plugin directory and not the entire kubelet root",
+    "markdown": "Volume mount cleanup now considers only plugin directory and not the entire kubelet root ([#112607](https://github.com/kubernetes/kubernetes/pull/112607), [@mattcary](https://github.com/mattcary))",
+    "author": "mattcary",
+    "author_url": "https://github.com/mattcary",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112607",
+    "pr_number": 112607,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage"
+    ]
+  },
+  "112631": {
+    "commit": "ad64f9c4dc1b8b06da44df765b12de90f072a93a",
+    "text": "Reworded log message upon image garbage collection failure to be more clear.",
+    "markdown": "Reworded log message upon image garbage collection failure to be more clear. ([#112631](https://github.com/kubernetes/kubernetes/pull/112631), [@tzneal](https://github.com/tzneal)) [SIG Node]",
+    "author": "tzneal",
+    "author_url": "https://github.com/tzneal",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112631",
+    "pr_number": 112631,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "112641": {
+    "commit": "beb90b4b47dd1464cc93049a645c4c1e9fe5d0be",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112641](https://github.com/kubernetes/kubernetes/pull/112641), [@anstns](https://github.com/anstns)) [SIG Cluster Lifecycle]",
+    "author": "anstns",
+    "author_url": "https://github.com/anstns",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112641",
+    "pr_number": 112641,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "documentation"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "112643": {
+    "commit": "525280d285c4bb4970e571a1e13a601befd75434",
+    "text": "`DynamicKubeletConfig` feature gate has been removed from the API server.\nDynamic kubelet reconfiguration now can't be used even when older nodes are still\nattempting to rely on it. This is aligned with the Kubernetes version skew policy.\n",
+    "markdown": "`DynamicKubeletConfig` feature gate has been removed from the API server.\n  Dynamic kubelet reconfiguration now can't be used even when older nodes are still\n  attempting to rely on it. This is aligned with the Kubernetes version skew policy.\n   ([#112643](https://github.com/kubernetes/kubernetes/pull/112643), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev))",
+    "author": "SergeyKanzhelev",
+    "author_url": "https://github.com/SergeyKanzhelev",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112643",
+    "pr_number": 112643,
+    "areas": [
+      "test",
+      "kubelet",
+      "code-generation"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "node",
+      "api-machinery",
+      "auth",
+      "apps",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112644": {
+    "commit": "5579ddea8addfca5b4a632409bdbf4aa1af2d419",
+    "text": "The pod admission error message was improved for usability.",
+    "markdown": "The pod admission error message was improved for usability. ([#112644](https://github.com/kubernetes/kubernetes/pull/112644), [@vitorfhc](https://github.com/vitorfhc)) [SIG Node]",
+    "author": "vitorfhc",
+    "author_url": "https://github.com/vitorfhc",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112644",
+    "pr_number": 112644,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "112650": {
+    "commit": "cdbb15c80288947ab670e2419e22992e037f9361",
+    "text": "kubelet: fixed log spam from kubelet_getters.go `Path does not exist`.",
+    "markdown": "Kubelet: fixed log spam from kubelet_getters.go `Path does not exist`. ([#112650](https://github.com/kubernetes/kubernetes/pull/112650), [@rphillips](https://github.com/rphillips))",
+    "author": "rphillips",
+    "author_url": "https://github.com/rphillips",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112650",
+    "pr_number": 112650,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "112652": {
+    "commit": "8631b2cdf952f7039f2dadf74a7d4d6e0e3c75b2",
+    "text": "Added a `kubernetes_feature_enabled` metric which will tell you if a feature is enabled.",
+    "markdown": "Added a `kubernetes_feature_enabled` metric which will tell you if a feature is enabled. ([#112652](https://github.com/kubernetes/kubernetes/pull/112652), [@logicalhan](https://github.com/logicalhan))",
+    "author": "logicalhan",
+    "author_url": "https://github.com/logicalhan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112652",
+    "pr_number": 112652,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "instrumentation",
+      "architecture"
+    ],
+    "duplicate": true
+  },
+  "112671": {
+    "commit": "7f129f1c9af62cc3cd4f6b754dacdf5932f39d5c",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#112671](https://github.com/kubernetes/kubernetes/pull/112671), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Instrumentation and Scalability]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112671",
+    "pr_number": 112671,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "scalability",
+      "instrumentation"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "112672": {
+    "commit": "0094662cbbca3d3f3e2e4fbb6ee4eb65f26d197a",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#112672](https://github.com/kubernetes/kubernetes/pull/112672), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Instrumentation]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112672",
+    "pr_number": 112672,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "instrumentation"
+    ],
+    "do_not_publish": true
+  },
+  "112679": {
+    "commit": "7752c3a8e0fbf59739f40526b2235347ff78000e",
+    "text": "Deprecated the `apiserver_request_slo_duration_seconds` metric for v1.27 in favor of `apiserver_request_sli_duration_seconds` for naming consistency purposes with other SLI-specific metrics and to avoid any confusion between SLOs and SLIs.",
+    "markdown": "Deprecated the `apiserver_request_slo_duration_seconds` metric for v1.27 in favor of `apiserver_request_sli_duration_seconds` for naming consistency purposes with other SLI-specific metrics and to avoid any confusion between SLOs and SLIs. ([#112679](https://github.com/kubernetes/kubernetes/pull/112679), [@dgrisonnet](https://github.com/dgrisonnet))",
+    "author": "dgrisonnet",
+    "author_url": "https://github.com/dgrisonnet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112679",
+    "pr_number": 112679,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112690": {
+    "commit": "d2ae6fbeb10fe3c68f631b59a266e729688058a9",
+    "text": "Added `kubernetes_feature_enabled` metric series to track whether each active feature gate is enabled.",
+    "markdown": "Added `kubernetes_feature_enabled` metric series to track whether each active feature gate is enabled. ([#112690](https://github.com/kubernetes/kubernetes/pull/112690), [@logicalhan](https://github.com/logicalhan))",
+    "author": "logicalhan",
+    "author_url": "https://github.com/logicalhan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112690",
+    "pr_number": 112690,
+    "areas": [
+      "kubelet",
+      "apiserver",
+      "dependency"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "network",
+      "scheduling",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "instrumentation",
+      "architecture"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112693": {
+    "commit": "6cb473b6c4f1239d411e0a50a1cdf9c4c092c42a",
+    "text": "Bump `golang.org/x/net` to `v0.1.1-0.20221027164007-c63010009c80`.",
+    "markdown": "Bump `golang.org/x/net` to `v0.1.1-0.20221027164007-c63010009c80`. ([#112693](https://github.com/kubernetes/kubernetes/pull/112693), [@aimuz](https://github.com/aimuz))",
+    "author": "aimuz",
+    "author_url": "https://github.com/aimuz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112693",
+    "pr_number": 112693,
+    "areas": [
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "architecture",
+      "cloud-provider",
+      "security"
+    ],
+    "duplicate": true
+  },
+  "112696": {
+    "commit": "b932a3ac374d72c188b76bde70008cb58ddf3a68",
+    "text": "Fixed Admission controllers that caused unnecessary significant load on `apiserver'.",
+    "markdown": "Fixed Admission controllers that caused unnecessary significant load on `apiserver'. ([#112696](https://github.com/kubernetes/kubernetes/pull/112696), [@aimuz](https://github.com/aimuz))",
+    "author": "aimuz",
+    "author_url": "https://github.com/aimuz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112696",
+    "pr_number": 112696,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "scalability"
+    ]
+  },
+  "112700": {
+    "commit": "0207f7ae8627335cf5684fea40f5fcc5e2691a99",
+    "text": "kubectl: fixed a bug where `kubectl convert` did not pick the right API version",
+    "markdown": "Kubectl: fixed a bug where `kubectl convert` did not pick the right API version ([#112700](https://github.com/kubernetes/kubernetes/pull/112700), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112700",
+    "pr_number": 112700,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli"
+    ]
+  },
+  "112709": {
+    "commit": "98233be715f78c22c24caf1158e51c4beb1f8644",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]https://github.com/kubernetes/enhancements/pull/2832\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]https://github.com/kubernetes/enhancements/pull/2832\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112709](https://github.com/kubernetes/kubernetes/pull/112709), [@swagatbora90](https://github.com/swagatbora90)) [SIG Node and Testing]",
+    "author": "swagatbora90",
+    "author_url": "https://github.com/swagatbora90",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112709",
+    "pr_number": 112709,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "112731": {
+    "commit": "8d1ba6a0861d4c11336d2a9895c3800d9fc795c4",
+    "text": "Switched kubectl to use `github.com/russross/blackfriday/v2`",
+    "markdown": "Switched kubectl to use `github.com/russross/blackfriday/v2` ([#112731](https://github.com/kubernetes/kubernetes/pull/112731), [@pacoxu](https://github.com/pacoxu))",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112731",
+    "pr_number": 112731,
+    "areas": [
+      "kubectl",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "feature": true
+  },
+  "112732": {
+    "commit": "edd677694374fb8284b9ddd04caf0698eaf00de5",
+    "text": "kubeadm: now supports image repository format validation.",
+    "markdown": "Kubeadm: now supports image repository format validation. ([#112732](https://github.com/kubernetes/kubernetes/pull/112732), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112732",
+    "pr_number": 112732,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true
+  },
+  "112741": {
+    "commit": "e11f23eb9712c9b4bebf8dd85dcb04441b4fb705",
+    "text": "Exposed health check SLI metrics on `metrics/slis` for apiserver.",
+    "markdown": "Exposed health check SLI metrics on `metrics/slis` for apiserver. ([#112741](https://github.com/kubernetes/kubernetes/pull/112741), [@logicalhan](https://github.com/logicalhan))",
+    "author": "logicalhan",
+    "author_url": "https://github.com/logicalhan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112741",
+    "pr_number": 112741,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "instrumentation",
+      "architecture"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112744": {
+    "commit": "ff19efdf9bd2d1f4abece3229f1e36c1d58b96df",
+    "text": "Added a feature that allows a `StatefulSet` to start numbering replicas from an arbitrary non-negative ordinal, using the `.spec.ordinals.start` field.",
+    "markdown": "Added a feature that allows a `StatefulSet` to start numbering replicas from an arbitrary non-negative ordinal, using the `.spec.ordinals.start` field. ([#112744](https://github.com/kubernetes/kubernetes/pull/112744), [@pwschuurman](https://github.com/pwschuurman))",
+    "author": "pwschuurman",
+    "author_url": "https://github.com/pwschuurman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112744",
+    "pr_number": 112744,
+    "areas": [
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112748": {
+    "commit": "97d37c29552790384b0a8b8f6f05648f28e07c55",
+    "text": "Locked `ServerSideApply` feature gate to true with the feature already being GA.",
+    "markdown": "Locked `ServerSideApply` feature gate to true with the feature already being GA. ([#112748](https://github.com/kubernetes/kubernetes/pull/112748), [@wojtek-t](https://github.com/wojtek-t))",
+    "author": "wojtek-t",
+    "author_url": "https://github.com/wojtek-t",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112748",
+    "pr_number": 112748,
+    "areas": [
+      "test",
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps",
+      "instrumentation",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "112751": {
+    "commit": "e450d35bb303042830a8ebfaad2010908df61208",
+    "text": "kubeadm: fixed a bug when performing validation on `ClusterConfiguration` networking fields.",
+    "markdown": "Kubeadm: fixed a bug when performing validation on `ClusterConfiguration` networking fields. ([#112751](https://github.com/kubernetes/kubernetes/pull/112751), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112751",
+    "pr_number": 112751,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug",
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "duplicate_kind": true
+  },
+  "112772": {
+    "commit": "7c64250cd07172f10d6bafa763d336fe01a8f6b0",
+    "text": "kube-apiserver: redirects from backend API servers are no longer followed when checking availability with requests to `/apis/$group/$version`",
+    "markdown": "Kube-apiserver: redirects from backend API servers are no longer followed when checking availability with requests to `/apis/$group/$version` ([#112772](https://github.com/kubernetes/kubernetes/pull/112772), [@liggitt](https://github.com/liggitt)) [SIG API Machinery and Testing]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112772",
+    "pr_number": 112772,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "112785": {
+    "commit": "71ca3dad894c417b823de24b6d6d1ee411ef3dec",
+    "text": "Fixed a bug where a change in the `appProtocol` for a Service did not trigger a load balancer update.",
+    "markdown": "Fixed a bug where a change in the `appProtocol` for a Service did not trigger a load balancer update. ([#112785](https://github.com/kubernetes/kubernetes/pull/112785), [@MartinForReal](https://github.com/MartinForReal)) [SIG Cloud Provider and Network]",
+    "author": "MartinForReal",
+    "author_url": "https://github.com/MartinForReal",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112785",
+    "pr_number": 112785,
+    "areas": [
+      "cloudprovider"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "112792": {
+    "commit": "b4eec3c2ad8d0645a10b4e911738627b7ecb2809",
+    "text": "Added a new feature gate `CelValidatingAdmissionExtensibility` to enable expression validation for Admission Control.",
+    "markdown": "Added a new feature gate `CelValidatingAdmissionExtensibility` to enable expression validation for Admission Control. ([#112792](https://github.com/kubernetes/kubernetes/pull/112792), [@cici37](https://github.com/cici37)) [SIG API Machinery]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "http://kep.k8s.io/3488",
+        "type": "external"
+      }
+    ],
+    "author": "cici37",
+    "author_url": "https://github.com/cici37",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112792",
+    "pr_number": 112792,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true
+  },
+  "112797": {
+    "commit": "8ddbd892f24d895bd49563ddaa7614ef3c21f53f",
+    "text": "kube-apiserver: the unused `--master-service-namespace` flag was deprecated and will be removed in v1.27.",
+    "markdown": "Kube-apiserver: the unused `--master-service-namespace` flag was deprecated and will be removed in v1.27. ([#112797](https://github.com/kubernetes/kubernetes/pull/112797), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112797",
+    "pr_number": 112797,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "deprecation"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "112806": {
+    "commit": "c1602669a667a82b585389b3a70d44cf360b1389",
+    "text": "Service session affinity timeout tests are no longer required for Kubernetes network plugin conformance due to variations in existing implementations. New conformance tests will be developed to better express conformance in future releases.",
+    "markdown": "Service session affinity timeout tests are no longer required for Kubernetes network plugin conformance due to variations in existing implementations. New conformance tests will be developed to better express conformance in future releases. ([#112806](https://github.com/kubernetes/kubernetes/pull/112806), [@dcbw](https://github.com/dcbw)) [SIG Architecture, Network and Testing]",
+    "author": "dcbw",
+    "author_url": "https://github.com/dcbw",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112806",
+    "pr_number": 112806,
+    "areas": [
+      "test",
+      "conformance"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network",
+      "testing",
+      "architecture"
+    ],
+    "duplicate": true
+  },
+  "112824": {
+    "commit": "0ef0fa0e821fa6c64fb02b4a774d3b0fd38e466e",
+    "text": "The ExpandedDNSConfig feature has graduated to beta and is enabled by default. Note that this feature requires container runtime support.",
+    "markdown": "The ExpandedDNSConfig feature has graduated to beta and is enabled by default. Note that this feature requires container runtime support. ([#112824](https://github.com/kubernetes/kubernetes/pull/112824), [@gjkim42](https://github.com/gjkim42)) [SIG Network and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/2595-expanded-dns-config",
+        "type": "KEP"
+      }
+    ],
+    "author": "gjkim42",
+    "author_url": "https://github.com/gjkim42",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112824",
+    "pr_number": 112824,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112837": {
+    "commit": "3ef7784b75e0005d96f1d64d55b822f346f85fb5",
+    "text": "Fixed an issue in `winkernel` proxier that causes proxy rules to leak anytime service backends are modified.",
+    "markdown": "Fixed an issue in `winkernel` proxier that causes proxy rules to leak anytime service backends are modified. ([#112837](https://github.com/kubernetes/kubernetes/pull/112837), [@daschott](https://github.com/daschott))",
+    "author": "daschott",
+    "author_url": "https://github.com/daschott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112837",
+    "pr_number": 112837,
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "network",
+      "windows"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112838": {
+    "commit": "32ea818d21c64bc0f9ab65b131d763e0c4401f79",
+    "text": "The `LegacyServiceAccountTokenNoAutoGeneration` feature gate was promoted to GA.",
+    "markdown": "The `LegacyServiceAccountTokenNoAutoGeneration` feature gate was promoted to GA. ([#112838](https://github.com/kubernetes/kubernetes/pull/112838), [@zshihang](https://github.com/zshihang))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-auth/2799-reduction-of-secret-based-service-account-token",
+        "type": "KEP"
+      }
+    ],
+    "author": "zshihang",
+    "author_url": "https://github.com/zshihang",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112838",
+    "pr_number": 112838,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112855": {
+    "commit": "d0e86111ef91615f3a17f860a2e9e6aa0c6a259a",
+    "text": "Added kubelet metrics to track the cpumanager cpu allocation and pinning",
+    "markdown": "Added kubelet metrics to track the cpumanager cpu allocation and pinning ([#112855](https://github.com/kubernetes/kubernetes/pull/112855), [@fromanirh](https://github.com/fromanirh))",
+    "author": "fromanirh",
+    "author_url": "https://github.com/fromanirh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112855",
+    "pr_number": 112855,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "instrumentation",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112872": {
+    "commit": "4511da23c366983fd8c611cd00cd15935d0bf39d",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#112872](https://github.com/kubernetes/kubernetes/pull/112872), [@ameukam](https://github.com/ameukam)) [SIG Cloud Provider]",
+    "author": "ameukam",
+    "author_url": "https://github.com/ameukam",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112872",
+    "pr_number": 112872,
+    "areas": [
+      "provider/gcp"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "do_not_publish": true
+  },
+  "112884": {
+    "commit": "e11e226b23c0213021a6678002132ad102d488e7",
+    "text": "Introduce `ComponentSLIs` alpha feature-gate for component SLIs metrics endpoint.",
+    "markdown": "Introduce `ComponentSLIs` alpha feature-gate for component SLIs metrics endpoint. ([#112884](https://github.com/kubernetes/kubernetes/pull/112884), [@logicalhan](https://github.com/logicalhan)) [SIG API Machinery]",
+    "author": "logicalhan",
+    "author_url": "https://github.com/logicalhan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112884",
+    "pr_number": 112884,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "112895": {
+    "commit": "c98aef484d59dd92bb8bfc2cf02d4bc7c10f93c9",
+    "text": "Moved `MixedProtocolLBService` from beta to GA.",
+    "markdown": "Moved `MixedProtocolLBService` from beta to GA. ([#112895](https://github.com/kubernetes/kubernetes/pull/112895), [@janosi](https://github.com/janosi))",
+    "author": "janosi",
+    "author_url": "https://github.com/janosi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112895",
+    "pr_number": 112895,
+    "areas": [
+      "test",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112900": {
+    "commit": "8836d51e4331920883dd1a0e57c89bbdb64aa31e",
+    "text": "Kubernetes is now built with Go 1.19.2",
+    "markdown": "Kubernetes is now built with Go 1.19.2 ([#112900](https://github.com/kubernetes/kubernetes/pull/112900), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]",
+    "author": "xmudrii",
+    "author_url": "https://github.com/xmudrii",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112900",
+    "pr_number": 112900,
+    "areas": [
+      "test",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "testing",
+      "release"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112905": {
+    "commit": "2f837dc113ba35f84e7012a6d1b06b075b349353",
+    "text": "For `kubectl`, `--server-side` now migrates ownership of all fields used by client-side-apply to the specified `--fieldmanager`. This prevents fields previously specified using kubectl from being able to live outside of server-side-apply's management and become undeleteable.",
+    "markdown": "For `kubectl`, `--server-side` now migrates ownership of all fields used by client-side-apply to the specified `--fieldmanager`. This prevents fields previously specified using kubectl from being able to live outside of server-side-apply's management and become undeleteable. ([#112905](https://github.com/kubernetes/kubernetes/pull/112905), [@alexzielenski](https://github.com/alexzielenski))",
+    "documentation": [
+      {
+        "description": "[Discussion]",
+        "url": "https://github.com/kubernetes/enhancements/pull/3518#discussion_r984724392",
+        "type": "KEP"
+      }
+    ],
+    "author": "alexzielenski",
+    "author_url": "https://github.com/alexzielenski",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112905",
+    "pr_number": 112905,
+    "areas": [
+      "test",
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cli",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "112907": {
+    "commit": "609bf91c95bdaae1034dbee7ba82e41875915e32",
+    "text": "'`registered_metric_total` will now report the number of metrics broken down by\nstability level and deprecated version.'\n",
+    "markdown": "'`registered_metric_total` will now report the number of metrics broken down by\n  stability level and deprecated version.'\n   ([#112907](https://github.com/kubernetes/kubernetes/pull/112907), [@logicalhan](https://github.com/logicalhan))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://kep.k8s.io/3466",
+        "type": "external"
+      }
+    ],
+    "author": "logicalhan",
+    "author_url": "https://github.com/logicalhan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112907",
+    "pr_number": 112907,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "architecture"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112914": {
+    "commit": "243ba086e7f4cb73ea32bdd25d635d06cda26085",
+    "text": "Added a `--topology-manager-policy-options` flag to the kubelet to support fine tuning the topology manager policies. The first policy option, `prefer-closest-numa-nodes`, allows these policies to favor sets of NUMA nodes with shorter distance between nodes when making admission decisions.",
+    "markdown": "Added a `--topology-manager-policy-options` flag to the kubelet to support fine tuning the topology manager policies. The first policy option, `prefer-closest-numa-nodes`, allows these policies to favor sets of NUMA nodes with shorter distance between nodes when making admission decisions. ([#112914](https://github.com/kubernetes/kubernetes/pull/112914), [@PiotrProkop](https://github.com/PiotrProkop))",
+    "author": "PiotrProkop",
+    "author_url": "https://github.com/PiotrProkop",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112914",
+    "pr_number": 112914,
+    "areas": [
+      "kubelet",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "api-machinery"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112924": {
+    "commit": "b60176972182bc2a459e019bc039dfcffa2ff868",
+    "text": "Removing Windows Server, Version 20H2 flavors from various container images.",
+    "markdown": "Removing Windows Server, Version 20H2 flavors from various container images. ([#112924](https://github.com/kubernetes/kubernetes/pull/112924), [@marosset](https://github.com/marosset))",
+    "author": "marosset",
+    "author_url": "https://github.com/marosset",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112924",
+    "pr_number": 112924,
+    "areas": [
+      "test",
+      "release-eng"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "windows",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "112939": {
+    "commit": "040d7aaafa7c0ec8509b2405e70df2c1b7b350af",
+    "text": "Changed `preemption_victims` metric bucket from `LinearBuckets` to `ExponentialBuckets`.",
+    "markdown": "Changed `preemption_victims` metric bucket from `LinearBuckets` to `ExponentialBuckets`. ([#112939](https://github.com/kubernetes/kubernetes/pull/112939), [@lengrongfu](https://github.com/lengrongfu))",
+    "author": "lengrongfu",
+    "author_url": "https://github.com/lengrongfu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112939",
+    "pr_number": 112939,
+    "areas": [
+      "stable-metrics"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "instrumentation"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112945": {
+    "commit": "5301d921505971504867f88db9597c6d8e3e1957",
+    "text": "kubeadm: sub-phases are now able to support the dry-run mode, e.g. kubeadm reset phase cleanup-node --dry-run",
+    "markdown": "Kubeadm: sub-phases are now able to support the dry-run mode, e.g. kubeadm reset phase cleanup-node --dry-run ([#112945](https://github.com/kubernetes/kubernetes/pull/112945), [@chendave](https://github.com/chendave)) [SIG Cluster Lifecycle]",
+    "author": "chendave",
+    "author_url": "https://github.com/chendave",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112945",
+    "pr_number": 112945,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true
+  },
+  "112948": {
+    "commit": "9bedff1147837118e1892c262992ccef42ea4041",
+    "text": "Fixed the occasional double-counting of the `job_finished_total` metric.",
+    "markdown": "Fixed the occasional double-counting of the `job_finished_total` metric. ([#112948](https://github.com/kubernetes/kubernetes/pull/112948), [@mimowo](https://github.com/mimowo))",
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112948",
+    "pr_number": 112948,
+    "areas": [
+      "test",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps",
+      "instrumentation",
+      "testing",
+      "architecture"
+    ],
+    "duplicate": true
+  },
+  "112961": {
+    "commit": "2ef00038d331e781799939c50ebebcfd283d85b1",
+    "text": "Added alpha support for `WindowsHostNetworking` feature.",
+    "markdown": "Added alpha support for `WindowsHostNetworking` feature. ([#112961](https://github.com/kubernetes/kubernetes/pull/112961), [@marosset](https://github.com/marosset))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-windows/3503-host-network-support-for-windows-pods",
+        "type": "KEP"
+      }
+    ],
+    "author": "marosset",
+    "author_url": "https://github.com/marosset",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112961",
+    "pr_number": 112961,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "windows"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112978": {
+    "commit": "335fd41484a86bcd4d213924871eb1cabc6c6244",
+    "text": "When `ComponentSLIs` feature gate is enabled, then `/metrics/slis` becomes available on kube-controller-manager, allowing you to scrape health check metrics.",
+    "markdown": "When `ComponentSLIs` feature gate is enabled, then `/metrics/slis` becomes available on kube-controller-manager, allowing you to scrape health check metrics. ([#112978](https://github.com/kubernetes/kubernetes/pull/112978), [@logicalhan](https://github.com/logicalhan))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://kep.k8s.io/3466",
+        "type": "external"
+      }
+    ],
+    "author": "logicalhan",
+    "author_url": "https://github.com/logicalhan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112978",
+    "pr_number": 112978,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112979": {
+    "commit": "859ada198f51a73d2ce48fafdf7ab9153e653f3b",
+    "text": "Fixed issue where the APIServer would panic on startup if an egress selector without a controlplane configuration is specified when using APIServerTracing.",
+    "markdown": "Fixed issue where the APIServer would panic on startup if an egress selector without a controlplane configuration is specified when using APIServerTracing. ([#112979](https://github.com/kubernetes/kubernetes/pull/112979), [@dashpole](https://github.com/dashpole))",
+    "author": "dashpole",
+    "author_url": "https://github.com/dashpole",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112979",
+    "pr_number": 112979,
+    "areas": [
+      "test",
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "112980": {
+    "commit": "25dc4c4f320ecb75b936220c1c66741bce4b9014",
+    "text": "Graduated Kubelet Device Manager to GA.",
+    "markdown": "Graduated Kubelet Device Manager to GA. ([#112980](https://github.com/kubernetes/kubernetes/pull/112980), [@swatisehgal](https://github.com/swatisehgal))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/pull/3574",
+        "type": "KEP"
+      }
+    ],
+    "author": "swatisehgal",
+    "author_url": "https://github.com/swatisehgal",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112980",
+    "pr_number": 112980,
+    "areas": [
+      "kubelet",
+      "provider/gcp"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "112989": {
+    "commit": "054d86feb42b67bb13608d9aa9a7c986750da753",
+    "text": "Updates `golang.org/x/text`` to `v0.3.8`` to fix CVE-2022-32149",
+    "markdown": "Updates `golang.org/x/text`` to `v0.3.8`` to fix CVE-2022-32149 ([#112989](https://github.com/kubernetes/kubernetes/pull/112989), [@ameukam](https://github.com/ameukam))",
+    "author": "ameukam",
+    "author_url": "https://github.com/ameukam",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112989",
+    "pr_number": 112989,
+    "areas": [
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "architecture",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "113005": {
+    "commit": "3b8cfefaee7bd10487db8e1a53b372496bb32d95",
+    "text": "In `kubeadm`, command `kubeadm join phase control-plane-prepare certs` now supports to run with `dry-run` mode on it's own.",
+    "markdown": "In `kubeadm`, command `kubeadm join phase control-plane-prepare certs` now supports to run with `dry-run` mode on it's own. ([#113005](https://github.com/kubernetes/kubernetes/pull/113005), [@chendave](https://github.com/chendave))",
+    "author": "chendave",
+    "author_url": "https://github.com/chendave",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113005",
+    "pr_number": 113005,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true
+  },
+  "113008": {
+    "commit": "ead17f3dc806d54b1fa2dc6e7a95180b4b90460b",
+    "text": "'Promoted `cronjob_job_creation_skew` metric to stable to follow the cronjob v2 controller,\nthe following metrics had their name updated to match metrics API guidelines:\n  - `cronjob_job_creation_skew_duration_seconds` -\u003e `job_creation_skew_duration_seconds`.'",
+    "markdown": "'Promoted `cronjob_job_creation_skew` metric to stable to follow the cronjob v2 controller,\n  the following metrics had their name updated to match metrics API guidelines:\n    - `cronjob_job_creation_skew_duration_seconds` -\u003e `job_creation_skew_duration_seconds`.' ([#113008](https://github.com/kubernetes/kubernetes/pull/113008), [@soltysh](https://github.com/soltysh))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/19",
+        "type": "KEP"
+      }
+    ],
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113008",
+    "pr_number": 113008,
+    "areas": [
+      "stable-metrics"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "apps",
+      "instrumentation"
+    ],
+    "duplicate": true
+  },
+  "113010": {
+    "commit": "aef9a37df93b7207d7aac9fe4b8e19b6129f8c7a",
+    "text": "'Promoted job-related metrics to stable to follow IndexedJobs GA. The following metrics have their name updated to match metrics API guidelines:\n- `job_sync_total` -\u003e `job_syncs_total`\n- `job_finished_total` -\u003e `jobs_finished_total`'",
+    "markdown": "'Promoted job-related metrics to stable to follow IndexedJobs GA. The following metrics have their name updated to match metrics API guidelines:\n  - `job_sync_total` -\u003e `job_syncs_total`\n  - `job_finished_total` -\u003e `jobs_finished_total`' ([#113010](https://github.com/kubernetes/kubernetes/pull/113010), [@soltysh](https://github.com/soltysh))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/2214",
+        "type": "KEP"
+      }
+    ],
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113010",
+    "pr_number": 113010,
+    "areas": [
+      "stable-metrics"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "apps",
+      "instrumentation"
+    ],
+    "duplicate": true
+  },
+  "113012": {
+    "commit": "1e4e17973f80694f86fbc7a643b3653018283f80",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#113012](https://github.com/kubernetes/kubernetes/pull/113012), [@xmcqueen](https://github.com/xmcqueen)) [SIG Node and Testing]",
+    "author": "xmcqueen",
+    "author_url": "https://github.com/xmcqueen",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113012",
+    "pr_number": 113012,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "failing-test"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "113015": {
+    "commit": "52f5816b8b9ed030dd1ebc4baefc6527f74254ed",
+    "text": "In `kube-apiserver`, custom resources can now be specified in the `--encryption-provider-config` file and can be encrypted in etcd.",
+    "markdown": "In `kube-apiserver`, custom resources can now be specified in the `--encryption-provider-config` file and can be encrypted in etcd. ([#113015](https://github.com/kubernetes/kubernetes/pull/113015), [@ritazh](https://github.com/ritazh))",
+    "author": "ritazh",
+    "author_url": "https://github.com/ritazh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113015",
+    "pr_number": 113015,
+    "areas": [
+      "test",
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "113018": {
+    "commit": "433787d25ba51755bb913eb6a33d1b37e6444aeb",
+    "text": "Graduated Kubelet CPU Manager to GA.",
+    "markdown": "Graduated Kubelet CPU Manager to GA. ([#113018](https://github.com/kubernetes/kubernetes/pull/113018), [@fromanirh](https://github.com/fromanirh))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/pull/3570",
+        "type": "KEP"
+      }
+    ],
+    "author": "fromanirh",
+    "author_url": "https://github.com/fromanirh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113018",
+    "pr_number": 113018,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113021": {
+    "commit": "1a41cb898547683b73a6f91b6d731d439c84f48a",
+    "text": "kubelet: Fixed a startup crash in devicemanager.",
+    "markdown": "Kubelet: Fixed a startup crash in devicemanager. ([#113021](https://github.com/kubernetes/kubernetes/pull/113021), [@rphillips](https://github.com/rphillips))",
+    "author": "rphillips",
+    "author_url": "https://github.com/rphillips",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113021",
+    "pr_number": 113021,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "113026": {
+    "commit": "52b47dac4fe26644a91f44191ff7052b73c3afd7",
+    "text": "When `ComponentSLIs` feature gate is enabled, `/metrics/slis` becomes available on kube-scheduler, allowing you to scrape health check metrics.",
+    "markdown": "When `ComponentSLIs` feature gate is enabled, `/metrics/slis` becomes available on kube-scheduler, allowing you to scrape health check metrics. ([#113026](https://github.com/kubernetes/kubernetes/pull/113026), [@Richabanker](https://github.com/Richabanker))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://kep.k8s.io/3466",
+        "type": "external"
+      }
+    ],
+    "author": "Richabanker",
+    "author_url": "https://github.com/Richabanker",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113026",
+    "pr_number": 113026,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "feature": true
+  },
+  "113030": {
+    "commit": "a497c56c33aca254e69513fcd46c0c76c8fadcab",
+    "text": "If `ComponentSLIs` feature gate is enabled, then `/metrics/slis` becomes available on kubelet, allowing you to scrape health check metrics.",
+    "markdown": "If `ComponentSLIs` feature gate is enabled, then `/metrics/slis` becomes available on kubelet, allowing you to scrape health check metrics. ([#113030](https://github.com/kubernetes/kubernetes/pull/113030), [@Richabanker](https://github.com/Richabanker)) [SIG Node]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://kep.k8s.io/3466",
+        "type": "external"
+      }
+    ],
+    "author": "Richabanker",
+    "author_url": "https://github.com/Richabanker",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113030",
+    "pr_number": 113030,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "feature": true
+  },
+  "113041": {
+    "commit": "843ad71cac98bcfff9f367a8ad90246cbc57d71c",
+    "text": "Fixed a bug where the kubelet choose the wrong container by its name when running `kubectl exec`.",
+    "markdown": "Fixed a bug where the kubelet choose the wrong container by its name when running `kubectl exec`. ([#113041](https://github.com/kubernetes/kubernetes/pull/113041), [@saschagrunert](https://github.com/saschagrunert))",
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113041",
+    "pr_number": 113041,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "113057": {
+    "commit": "b6e8dfec61c4080f9db8667cec11ba6f4a3bf4bf",
+    "text": "When `ComponentSLIs` feature gate is enabled, then `/metrics/slis` becomes available on `kube-proxy` allowing you to scrape health check metrics.",
+    "markdown": "When `ComponentSLIs` feature gate is enabled, then `/metrics/slis` becomes available on `kube-proxy` allowing you to scrape health check metrics. ([#113057](https://github.com/kubernetes/kubernetes/pull/113057), [@Richabanker](https://github.com/Richabanker))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://kep.k8s.io/3466",
+        "type": "external"
+      }
+    ],
+    "author": "Richabanker",
+    "author_url": "https://github.com/Richabanker",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113057",
+    "pr_number": 113057,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "feature": true
+  },
+  "113107": {
+    "commit": "7c6821978da83bbb46412606b08871fb8665d12f",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#113107](https://github.com/kubernetes/kubernetes/pull/113107), [@dims](https://github.com/dims)) [SIG API Machinery]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113107",
+    "pr_number": 113107,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "do_not_publish": true
+  },
+  "113113": {
+    "commit": "2b6abb1b333737edbd8e44015de4e2867b6118c9",
+    "text": "The time duration of a failed or unschedulable scheduling attempt will be longer, it \nnow includes the time duration of the unreserve operation.",
+    "markdown": "The time duration of a failed or unschedulable scheduling attempt will be longer, it \n  now includes the time duration of the unreserve operation. ([#113113](https://github.com/kubernetes/kubernetes/pull/113113), [@kerthcet](https://github.com/kerthcet))",
+    "author": "kerthcet",
+    "author_url": "https://github.com/kerthcet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113113",
+    "pr_number": 113113,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "scheduling"
+    ]
+  },
+  "113116": {
+    "commit": "bbbb79712cb6b0a72b2695f21a95ad7bb4cc45e6",
+    "text": "Added a `--prune-allowlist` flag that can be used with `kubectl apply --prune`. This flag now replaces and functions the same as the `--prune-whitelist` flag, which has been deprecated.",
+    "markdown": "Added a `--prune-allowlist` flag that can be used with `kubectl apply --prune`. This flag now replaces and functions the same as the `--prune-whitelist` flag, which has been deprecated. ([#113116](https://github.com/kubernetes/kubernetes/pull/113116), [@brianpursley](https://github.com/brianpursley))",
+    "author": "brianpursley",
+    "author_url": "https://github.com/brianpursley",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113116",
+    "pr_number": 113116,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cli"
+    ]
+  },
+  "113132": {
+    "commit": "ceee3783ed963497db669504241af2ca6a11610f",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#113132](https://github.com/kubernetes/kubernetes/pull/113132), [@ruquanzhao](https://github.com/ruquanzhao)) [SIG Testing]",
+    "author": "ruquanzhao",
+    "author_url": "https://github.com/ruquanzhao",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113132",
+    "pr_number": 113132,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "do_not_publish": true
+  },
+  "113133": {
+    "commit": "615929ed889e7bf921798142ecdef9f87832da43",
+    "text": "kube-apiserver: `DELETECOLLECTION API` requests are now recorded in metrics with the correct verb.",
+    "markdown": "Kube-apiserver: `DELETECOLLECTION API` requests are now recorded in metrics with the correct verb. ([#113133](https://github.com/kubernetes/kubernetes/pull/113133), [@sxllwx](https://github.com/sxllwx))",
+    "author": "sxllwx",
+    "author_url": "https://github.com/sxllwx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113133",
+    "pr_number": 113133,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "113146": {
+    "commit": "b0cbf71f5c443460679052ca0cf4800e9d61ab5b",
+    "text": "Adds alpha --output plaintext protected by environment variable `KUBECTL_EXPLAIN_OPENAPIV3`",
+    "markdown": "Adds alpha --output plaintext protected by environment variable `KUBECTL_EXPLAIN_OPENAPIV3` ([#113146](https://github.com/kubernetes/kubernetes/pull/113146), [@alexzielenski](https://github.com/alexzielenski)) [SIG CLI]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-cli/3515-kubectl-explain-openapiv3",
+        "type": "KEP"
+      }
+    ],
+    "author": "alexzielenski",
+    "author_url": "https://github.com/alexzielenski",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113146",
+    "pr_number": 113146,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "feature": true
+  },
+  "113160": {
+    "commit": "7cd98dec08cbe3ac1ed7d5238bb179760103795d",
+    "text": "Azure File CSI migration is now GA.",
+    "markdown": "Azure File CSI migration is now GA. ([#113160](https://github.com/kubernetes/kubernetes/pull/113160), [@andyzhangx](https://github.com/andyzhangx))",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113160",
+    "pr_number": 113160,
+    "areas": [
+      "provider/azure"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "feature": true
+  },
+  "113171": {
+    "commit": "8058e8eff8ba8541ddd48cd54bbb19a3fce62c09",
+    "text": "Aggregated discovery will be alpha and can be toggled with the `AggregatedDiscoveryEndpoint` feature flag.",
+    "markdown": "Aggregated discovery will be alpha and can be toggled with the `AggregatedDiscoveryEndpoint` feature flag. ([#113171](https://github.com/kubernetes/kubernetes/pull/113171), [@Jefftree](https://github.com/Jefftree))",
+    "author": "Jefftree",
+    "author_url": "https://github.com/Jefftree",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113171",
+    "pr_number": 113171,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "provider/gcp",
+      "release-eng",
+      "kubeadm",
+      "conformance",
+      "code-generation",
+      "ipvs",
+      "e2e-test-framework",
+      "dependency",
+      "stable-metrics"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "scalability",
+      "scheduling",
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "autoscaling",
+      "auth",
+      "apps",
+      "cli",
+      "testing",
+      "release",
+      "architecture",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113172": {
+    "commit": "ae6dc598bd23c29480ce5ec426b75954dbd1b65b",
+    "text": "API Server Tracing now includes a variety of new spans and span events.",
+    "markdown": "API Server Tracing now includes a variety of new spans and span events. ([#113172](https://github.com/kubernetes/kubernetes/pull/113172), [@dashpole](https://github.com/dashpole)) [SIG API Machinery, Architecture, Auth, Instrumentation, Network, Node and Scheduling]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/1954332075e9df9b51e1b04eecbb22537308f102/keps/sig-instrumentation/647-apiserver-tracing",
+        "type": "KEP"
+      }
+    ],
+    "author": "dashpole",
+    "author_url": "https://github.com/dashpole",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113172",
+    "pr_number": 113172,
+    "areas": [
+      "kubelet",
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "scheduling",
+      "node",
+      "api-machinery",
+      "auth",
+      "instrumentation",
+      "architecture"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113176": {
+    "commit": "2313e2b8256000b3012d7bb4df2ecdf5fcf09604",
+    "text": "Added new metric `job_controller_terminated_pods_tracking_finalizer` which can be used to monitor whether the job controller is removing Pod finalizers from terminated Pods after accounting them in Job status.",
+    "markdown": "Added new metric `job_controller_terminated_pods_tracking_finalizer` which can be used to monitor whether the job controller is removing Pod finalizers from terminated Pods after accounting them in Job status. ([#113176](https://github.com/kubernetes/kubernetes/pull/113176), [@alculquicondor](https://github.com/alculquicondor))",
+    "documentation": [
+      {
+        "description": "[Usage]",
+        "url": "https://kubernetes.io/docs/concepts/workloads/controllers/job/#job-tracking-with-finalizers",
+        "type": "official"
+      }
+    ],
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113176",
+    "pr_number": 113176,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "apps",
+      "instrumentation",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113186": {
+    "commit": "d94261e904c90578e913c42c4d2a0fc8cb30937f",
+    "text": "Added a new namespace alpha field to `DataSourceRef` field in `PersistentVolumeClaim` API.",
+    "markdown": "Added a new namespace alpha field to `DataSourceRef` field in `PersistentVolumeClaim` API. ([#113186](https://github.com/kubernetes/kubernetes/pull/113186), [@ttakahashi21](https://github.com/ttakahashi21))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/3294-provision-volumes-from-cross-namespace-snapshots",
+        "type": "KEP"
+      }
+    ],
+    "author": "ttakahashi21",
+    "author_url": "https://github.com/ttakahashi21",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113186",
+    "pr_number": 113186,
+    "areas": [
+      "test",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113198": {
+    "commit": "3df170d1c49ed8a75df0a87ca4ba335cfa600145",
+    "text": "STEP: expect not showing any WARNING message 10/19/22 21:20:25.015\nOct 19 21:20:25.015: INFO: Running '/home/prow/go/src/k8s.io/kubernetes/_output/bin/kubectl --server=https://[::1]:34867 --kubeconfig=/root/.kube/kind-test-config --namespace=kubectl-6045 alpha events --types=WARNING --for=pod/e2e-test-httpd-pod'\nOct 19 21:20:25.114: INFO: stderr: \"\"\nOct 19 21:20:25.114: INFO: stdout: \"LAST SEEN           TYPE      REASON        OBJECT                   MESSAGE\\n27s (x2 over 29s)   Warning   FailedMount   Pod/e2e-test-httpd-pod   MountVolume.SetUp failed for volume \\\"kube-api-access-9gvsx\\\" : failed to sync configmap cache: timed out waiting for the condition\\n\"\nOct 19 21:20:25.114: FAIL: unexpected WARNING event fired",
+    "markdown": "STEP: expect not showing any WARNING message 10/19/22 21:20:25.015\n  Oct 19 21:20:25.015: INFO: Running '/home/prow/go/src/k8s.io/kubernetes/_output/bin/kubectl --server=https://[::1]:34867 --kubeconfig=/root/.kube/kind-test-config --namespace=kubectl-6045 alpha events --types=WARNING --for=pod/e2e-test-httpd-pod'\n  Oct 19 21:20:25.114: INFO: stderr: \"\"\n  Oct 19 21:20:25.114: INFO: stdout: \"LAST SEEN           TYPE      REASON        OBJECT                   MESSAGE\\n27s (x2 over 29s)   Warning   FailedMount   Pod/e2e-test-httpd-pod   MountVolume.SetUp failed for volume \\\"kube-api-access-9gvsx\\\" : failed to sync configmap cache: timed out waiting for the condition\\n\"\n  Oct 19 21:20:25.114: FAIL: unexpected WARNING event fired ([#113198](https://github.com/kubernetes/kubernetes/pull/113198), [@pacoxu](https://github.com/pacoxu)) [SIG CLI and Testing]",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113198",
+    "pr_number": 113198,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "flake"
+    ],
+    "sigs": [
+      "cli",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "113206": {
+    "commit": "b7f5de17aeef93481f32a4cb804a72cd9ed9c8f3",
+    "text": "Fixed cost estimation of token creation request for service account in Priority and Fairness.",
+    "markdown": "Fixed cost estimation of token creation request for service account in Priority and Fairness. ([#113206](https://github.com/kubernetes/kubernetes/pull/113206), [@marseel](https://github.com/marseel))",
+    "author": "marseel",
+    "author_url": "https://github.com/marseel",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113206",
+    "pr_number": 113206,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "113212": {
+    "commit": "dbb3b4f340d11ccc87a05a70af1c2f327b5f4815",
+    "text": "The `e2e.test` binary no longer emits JSON structs to document progress.",
+    "markdown": "The `e2e.test` binary no longer emits JSON structs to document progress. ([#113212](https://github.com/kubernetes/kubernetes/pull/113212), [@pohly](https://github.com/pohly))",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113212",
+    "pr_number": 113212,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "testing"
+    ]
+  },
+  "113217": {
+    "commit": "f522df5b49e3165f228fc6e3fd03df76c738bb72",
+    "text": "API Server tracing now includes the latency of authorization, priorityandfairness, impersonation, audit, and authentication filters.",
+    "markdown": "API Server tracing now includes the latency of authorization, priorityandfairness, impersonation, audit, and authentication filters. ([#113217](https://github.com/kubernetes/kubernetes/pull/113217), [@dashpole](https://github.com/dashpole))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/bddca24910fb349e2eb0ac1c822c77f0f32fe9c6/keps/sig-instrumentation/647-apiserver-tracing/README.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "dashpole",
+    "author_url": "https://github.com/dashpole",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113217",
+    "pr_number": 113217,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113225": {
+    "commit": "d3601a0f0625503993539809b1ef9f59c709a237",
+    "text": "'`DelegateFSGroupToCSIDriver` feature is GA.'\n",
+    "markdown": "'`DelegateFSGroupToCSIDriver` feature is GA.'\n   ([#113225](https://github.com/kubernetes/kubernetes/pull/113225), [@bertinatto](https://github.com/bertinatto))",
+    "author": "bertinatto",
+    "author_url": "https://github.com/bertinatto",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113225",
+    "pr_number": 113225,
+    "areas": [
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "architecture",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113274": {
+    "commit": "8c77820759cc28a5d82e9a68f3d335d1a27f4466",
+    "text": "New Pod API field `.spec.schedulingGates` was introduced to enable users to control when to mark a Pod as scheduling ready.",
+    "markdown": "New Pod API field `.spec.schedulingGates` was introduced to enable users to control when to mark a Pod as scheduling ready. ([#113274](https://github.com/kubernetes/kubernetes/pull/113274), [@Huang-Wei](https://github.com/Huang-Wei))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/3521-pod-scheduling-readiness",
+        "type": "KEP"
+      }
+    ],
+    "author": "Huang-Wei",
+    "author_url": "https://github.com/Huang-Wei",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113274",
+    "pr_number": 113274,
+    "areas": [
+      "test",
+      "code-generation",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113275": {
+    "commit": "95bd687a284f63535cbf48b0696d8ae57c9929ef",
+    "text": "'A new `preEnqueue` extension point was added to scheduler's component config\n`v1beta2/v1beta3/v1`.'\n",
+    "markdown": "'A new `preEnqueue` extension point was added to scheduler's component config\n  `v1beta2/v1beta3/v1`.'\n   ([#113275](https://github.com/kubernetes/kubernetes/pull/113275), [@Huang-Wei](https://github.com/Huang-Wei))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/3521-pod-scheduling-readiness",
+        "type": "KEP"
+      }
+    ],
+    "author": "Huang-Wei",
+    "author_url": "https://github.com/Huang-Wei",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113275",
+    "pr_number": 113275,
+    "areas": [
+      "test",
+      "code-generation",
+      "e2e-test-framework",
+      "stable-metrics"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "api-machinery",
+      "apps",
+      "instrumentation",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113291": {
+    "commit": "f328d3dc3d6d7b19045635372f2f7fabd385435e",
+    "text": "Fixed the `PodAndContainerStatsFromCRI` feature, instead of supplementing with stats from cAdvisor.",
+    "markdown": "Fixed the `PodAndContainerStatsFromCRI` feature, instead of supplementing with stats from cAdvisor. ([#113291](https://github.com/kubernetes/kubernetes/pull/113291), [@mengjiao-liu](https://github.com/mengjiao-liu))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/2371-cri-pod-container-stats#current-fulfiller-of-metrics-endpoints--future-proposal",
+        "type": "KEP"
+      }
+    ],
+    "author": "mengjiao-liu",
+    "author_url": "https://github.com/mengjiao-liu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113291",
+    "pr_number": 113291,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "instrumentation"
+    ],
+    "duplicate": true
+  },
+  "113304": {
+    "commit": "3c9928e4f87c1d023e595292e6139cbd8dfedd5c",
+    "text": "The `kube-scheduler` and `kube-controller-manager` now use server side apply to set conditions related to pod disruption.",
+    "markdown": "The `kube-scheduler` and `kube-controller-manager` now use server side apply to set conditions related to pod disruption. ([#113304](https://github.com/kubernetes/kubernetes/pull/113304), [@mimowo](https://github.com/mimowo)) [SIG API Machinery, Apps and Scheduling]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3329-retriable-and-non-retriable-failures",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113304",
+    "pr_number": 113304,
+    "kinds": [
+      "bug",
+      "cleanup"
+    ],
+    "sigs": [
+      "scheduling",
+      "api-machinery",
+      "apps"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113307": {
+    "commit": "c8a3657bde08fde0240cba2e8579b160e95bc459",
+    "text": "Updated the Lease identity naming format for the `APIServerIdentity` feature to use a persistent name.",
+    "markdown": "Updated the Lease identity naming format for the `APIServerIdentity` feature to use a persistent name. ([#113307](https://github.com/kubernetes/kubernetes/pull/113307), [@andrewsykim](https://github.com/andrewsykim))",
+    "author": "andrewsykim",
+    "author_url": "https://github.com/andrewsykim",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113307",
+    "pr_number": 113307,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "api-machinery",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113310": {
+    "commit": "19ab5b69108172a1c1725a23fdf4e30eba4ff629",
+    "text": "The metric `etcd_db_total_size_in_bytes` is renamed to `apiserver_storage_db_total_size_in_bytes`.",
+    "markdown": "The metric `etcd_db_total_size_in_bytes` is renamed to `apiserver_storage_db_total_size_in_bytes`. ([#113310](https://github.com/kubernetes/kubernetes/pull/113310), [@logicalhan](https://github.com/logicalhan)) [SIG API Machinery]",
+    "author": "logicalhan",
+    "author_url": "https://github.com/logicalhan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113310",
+    "pr_number": 113310,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "113314": {
+    "commit": "595ea324113580ae61f4a15ab3e5b22303a195cf",
+    "text": "Introduced `v1alpha1` API for validating admission policies, enabling extensible admission control via CEL expressions (KEP  3488: CEL for Admission Control). To use, enable the `ValidatingAdmissionPolicy` feature gate and the `admissionregistration.k8s.io/v1alpha1` API via `--runtime-config`.",
+    "markdown": "Introduced `v1alpha1` API for validating admission policies, enabling extensible admission control via CEL expressions (KEP  3488: CEL for Admission Control). To use, enable the `ValidatingAdmissionPolicy` feature gate and the `admissionregistration.k8s.io/v1alpha1` API via `--runtime-config`. ([#113314](https://github.com/kubernetes/kubernetes/pull/113314), [@cici37](https://github.com/cici37))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/3488-cel-admission-control",
+        "type": "KEP"
+      }
+    ],
+    "author": "cici37",
+    "author_url": "https://github.com/cici37",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113314",
+    "pr_number": 113314,
+    "areas": [
+      "test",
+      "apiserver",
+      "cloudprovider",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "testing",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113323": {
+    "commit": "ca03736670550056e74b1241790286e1d8a574f2",
+    "text": "Metrics for `RetroactiveDefaultStorageClass` feature are now available. To see an attempt count for updating PVC retroactively with a default StorageClass see `retroactive_storageclass_total` metric and for total numer of errors see `retroactive_storageclass_errors_total`.",
+    "markdown": "Metrics for `RetroactiveDefaultStorageClass` feature are now available. To see an attempt count for updating PVC retroactively with a default StorageClass see `retroactive_storageclass_total` metric and for total numer of errors see `retroactive_storageclass_errors_total`. ([#113323](https://github.com/kubernetes/kubernetes/pull/113323), [@RomanBednar](https://github.com/RomanBednar))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3333",
+        "type": "KEP"
+      }
+    ],
+    "author": "RomanBednar",
+    "author_url": "https://github.com/RomanBednar",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113323",
+    "pr_number": 113323,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "apps"
+    ],
+    "feature": true
+  },
+  "113324": {
+    "commit": "3628532311d9e4cd2cf269dd2a7591f5e3387fb0",
+    "text": "Extend the job `job_finished_total metric by new `reason` label and introduce a new job metric to count pod failures\nhandled by pod failure policy with respect to the action applied.",
+    "markdown": "Extend the job `job_finished_total metric by new `reason` label and introduce a new job metric to count pod failures\n  handled by pod failure policy with respect to the action applied. ([#113324](https://github.com/kubernetes/kubernetes/pull/113324), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3329-retriable-and-non-retriable-failures",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113324",
+    "pr_number": 113324,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113329": {
+    "commit": "06ba3835321b85419a2d444a7ac5e8847ba6ec79",
+    "text": "'`RetroactiveDefaultStorageClass` feature is now beta.'\n",
+    "markdown": "'`RetroactiveDefaultStorageClass` feature is now beta.'\n   ([#113329](https://github.com/kubernetes/kubernetes/pull/113329), [@RomanBednar](https://github.com/RomanBednar))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3333",
+        "type": "KEP"
+      }
+    ],
+    "author": "RomanBednar",
+    "author_url": "https://github.com/RomanBednar",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113329",
+    "pr_number": 113329,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113336": {
+    "commit": "ee640d775637bcb740f6af8f7f0ee03ef853b643",
+    "text": "'`CSIMigrationvSphere` was upgraded to GA and locked to true. Do not upgrade to K8s\n1.26 if you need Windows, or XFS, or raw block support until vSphere CSI Driver\nadds support for them in a version post v2.7.x.'\n",
+    "markdown": "'`CSIMigrationvSphere` was upgraded to GA and locked to true. Do not upgrade to K8s\n  1.26 if you need Windows, or XFS, or raw block support until vSphere CSI Driver\n  adds support for them in a version post v2.7.x.'\n   ([#113336](https://github.com/kubernetes/kubernetes/pull/113336), [@divyenpatel](https://github.com/divyenpatel))",
+    "author": "divyenpatel",
+    "author_url": "https://github.com/divyenpatel",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113336",
+    "pr_number": 113336,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "storage"
+    ],
+    "feature": true
+  },
+  "113340": {
+    "commit": "83fe3aae4b6dbde92c6b130ee059a28814300f52",
+    "text": "If `ComponentSLIs` feature gate is enabled, then `/metrics/slis` now becomes available on cloud-controller-manager allowing you to scrape health check metrics.",
+    "markdown": "If `ComponentSLIs` feature gate is enabled, then `/metrics/slis` now becomes available on cloud-controller-manager allowing you to scrape health check metrics. ([#113340](https://github.com/kubernetes/kubernetes/pull/113340), [@Richabanker](https://github.com/Richabanker))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://kep.k8s.io/3466",
+        "type": "external"
+      }
+    ],
+    "author": "Richabanker",
+    "author_url": "https://github.com/Richabanker",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113340",
+    "pr_number": 113340,
+    "areas": [
+      "cloudprovider"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "feature": true
+  },
+  "113351": {
+    "commit": "b20ddbd75acf7e917bd1462688ff2f91edaf4052",
+    "text": "The `EndpointSliceTerminatingCondition` feature gate was graduated to GA. The gate is now locked and will be removed in v1.28.",
+    "markdown": "The `EndpointSliceTerminatingCondition` feature gate was graduated to GA. The gate is now locked and will be removed in v1.28. ([#113351](https://github.com/kubernetes/kubernetes/pull/113351), [@andrewsykim](https://github.com/andrewsykim))",
+    "author": "andrewsykim",
+    "author_url": "https://github.com/andrewsykim",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113351",
+    "pr_number": 113351,
+    "areas": [
+      "test",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "api-machinery",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113355": {
+    "commit": "f3e6e05979812ad760308ad9401f4ffe1960fc9d",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#113355](https://github.com/kubernetes/kubernetes/pull/113355), [@chendave](https://github.com/chendave)) [SIG Cluster Lifecycle]",
+    "author": "chendave",
+    "author_url": "https://github.com/chendave",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113355",
+    "pr_number": 113355,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "do_not_publish": true
+  },
+  "113360": {
+    "commit": "7e0e0c8ec3a6f68db0a9c259836a9ad8792fa67b",
+    "text": "Enabled the \"Retriable and non-retriable pod failures for jobs\" feature into beta.",
+    "markdown": "Enabled the \"Retriable and non-retriable pod failures for jobs\" feature into beta. ([#113360](https://github.com/kubernetes/kubernetes/pull/113360), [@mimowo](https://github.com/mimowo))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3329-retriable-and-non-retriable-failures",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113360",
+    "pr_number": 113360,
+    "areas": [
+      "test",
+      "kubelet",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "node",
+      "auth",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113363": {
+    "commit": "fccd8b12d0ef817406fde33be8cc1b6b2f5ab718",
+    "text": "The `ProxyTerminatingEndpoints` feature is now Beta and enabled by default. When enabled, kube-proxy will attempt to route traffic to terminating pods when the traffic policy is `Local` and there are only terminating pods remaining on a node.",
+    "markdown": "The `ProxyTerminatingEndpoints` feature is now Beta and enabled by default. When enabled, kube-proxy will attempt to route traffic to terminating pods when the traffic policy is `Local` and there are only terminating pods remaining on a node. ([#113363](https://github.com/kubernetes/kubernetes/pull/113363), [@andrewsykim](https://github.com/andrewsykim))",
+    "author": "andrewsykim",
+    "author_url": "https://github.com/andrewsykim",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113363",
+    "pr_number": 113363,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "feature": true
+  },
+  "113369": {
+    "commit": "421213b7a17b4d2753b3a00b7332a4bec3aba127",
+    "text": "The `ResourceVersion` returned in objects from delete responses is now consistent with the `ResourceVersion` contained in the delete watch event.",
+    "markdown": "The `ResourceVersion` returned in objects from delete responses is now consistent with the `ResourceVersion` contained in the delete watch event. ([#113369](https://github.com/kubernetes/kubernetes/pull/113369), [@wojtek-t](https://github.com/wojtek-t))",
+    "author": "wojtek-t",
+    "author_url": "https://github.com/wojtek-t",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113369",
+    "pr_number": 113369,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "113375": {
+    "commit": "cc704f97784c3359db4690b97201ebfe6b481869",
+    "text": "'`PodDisruptionBudget` now adds an alpha `spec.unhealthyPodEvictionPolicy` field.\nWhen the `PDBUnhealthyPodEvictionPolicy` feature-gate is enabled in `kube-apiserver`,\nsetting this field to `\"AlwaysAllow\"` allows pods to be evicted if they do not\nhave a ready condition, regardless of whether the PodDisruptionBudget is currently\nhealthy.'\n",
+    "markdown": "'`PodDisruptionBudget` now adds an alpha `spec.unhealthyPodEvictionPolicy` field.\n  When the `PDBUnhealthyPodEvictionPolicy` feature-gate is enabled in `kube-apiserver`,\n  setting this field to `\"AlwaysAllow\"` allows pods to be evicted if they do not\n  have a ready condition, regardless of whether the PodDisruptionBudget is currently\n  healthy.'\n   ([#113375](https://github.com/kubernetes/kubernetes/pull/113375), [@atiratree](https://github.com/atiratree))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3017-pod-healthy-policy-for-pdb",
+        "type": "KEP"
+      }
+    ],
+    "author": "atiratree",
+    "author_url": "https://github.com/atiratree",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113375",
+    "pr_number": 113375,
+    "areas": [
+      "test",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113448": {
+    "commit": "ac59b03214807ef0319c052a02693f077ee88083",
+    "text": "kubeadm: removed the `UnversionedKubeletConfigMap` feature gate. The feature has been GA and locked to enabled since `v1.25`.",
+    "markdown": "Kubeadm: removed the `UnversionedKubeletConfigMap` feature gate. The feature has been GA and locked to enabled since `v1.25`. ([#113448](https://github.com/kubernetes/kubernetes/pull/113448), [@pacoxu](https://github.com/pacoxu))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://kep.k8s.io/2915",
+        "type": "external"
+      }
+    ],
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113448",
+    "pr_number": 113448,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "113458": {
+    "commit": "4d2128b5236ff3c1d621f6ceb6add16205ff3450",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#113458](https://github.com/kubernetes/kubernetes/pull/113458), [@CatherineF-dev](https://github.com/CatherineF-dev)) [SIG Architecture and Instrumentation]",
+    "author": "CatherineF-dev",
+    "author_url": "https://github.com/CatherineF-dev",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113458",
+    "pr_number": 113458,
+    "kinds": [
+      "documentation"
+    ],
+    "sigs": [
+      "instrumentation",
+      "architecture"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "113476": {
+    "commit": "9bbd0fbdb2bf7d9f6b21e268357316fa7c556f83",
+    "text": "Promoting `WindowsHostProcessContainers` to stable.",
+    "markdown": "Promoting `WindowsHostProcessContainers` to stable. ([#113476](https://github.com/kubernetes/kubernetes/pull/113476), [@marosset](https://github.com/marosset))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-windows/1981-windows-privileged-container-support",
+        "type": "KEP"
+      }
+    ],
+    "author": "marosset",
+    "author_url": "https://github.com/marosset",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113476",
+    "pr_number": 113476,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "apps",
+      "windows",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113481": {
+    "commit": "5899432f92d27a6acb9198336a7abcad51311c39",
+    "text": "Pod logs using `--timestamps` are not broken up with timestamps anymore.",
+    "markdown": "Pod logs using `--timestamps` are not broken up with timestamps anymore. ([#113481](https://github.com/kubernetes/kubernetes/pull/113481), [@rphillips](https://github.com/rphillips))",
+    "author": "rphillips",
+    "author_url": "https://github.com/rphillips",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113481",
+    "pr_number": 113481,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "113485": {
+    "commit": "1193a9abcbd6c6ce6fc7d4ce38872f1933ef5159",
+    "text": "'Priority and Fairness has introduced a new feature called _borrowing_ that allows an API priority level\nto borrow a number of seats from other priority level(s). As a cluster operator, you can enable borrowing\nfor a certain priority level configuration object via the two newly introduced fields `lendablePercent`, and\n`borrowingLimitPercent` located under the `.spec.limited` field of the designated priority level.\nThis change added the following metrics:\n- `apiserver_flowcontrol_nominal_limit_seats`: Nominal number of execution seats configured for each priority level\n- `apiserver_flowcontrol_lower_limit_seats`: Configured lower bound on number of execution seats available to each priority level\n- `apiserver_flowcontrol_upper_limit_seats`: Configured upper bound on number of execution seats available to each priority level\n- `apiserver_flowcontrol_demand_seats`: Observations, at the end of every nanosecond, of (the number of seats each priority level could use) / (nominal number of seats for that level)\n- `apiserver_flowcontrol_demand_seats_high_watermark`: High watermark, over last adjustment period, of demand_seats\n- `apiserver_flowcontrol_demand_seats_average`: Time-weighted average, over last adjustment period, of demand_seats\n- `apiserver_flowcontrol_demand_seats_stdev`: Time-weighted standard deviation, over last adjustment period, of demand_seats\n- `apiserver_flowcontrol_demand_seats_smoothed`: Smoothed seat demands\n- `apiserver_flowcontrol_target_seats`: Seat allocation targets\n- `apiserver_flowcontrol_seat_fair_frac`: Fair fraction of server's concurrency to allocate to each priority level that can use it\n- `apiserver_flowcontrol_current_limit_seats`: current derived number of execution seats available to each priority level\nThe possibility of borrowing means that the old metric `apiserver_flowcontrol_request_concurrency_limit` can no longer mean both the configured concurrency limit and the enforced concurrency limit. Henceforth it means the configured concurrency limit.'",
+    "markdown": "'Priority and Fairness has introduced a new feature called _borrowing_ that allows an API priority level\n  to borrow a number of seats from other priority level(s). As a cluster operator, you can enable borrowing\n  for a certain priority level configuration object via the two newly introduced fields `lendablePercent`, and\n  `borrowingLimitPercent` located under the `.spec.limited` field of the designated priority level.\n  This change added the following metrics:\n  - `apiserver_flowcontrol_nominal_limit_seats`: Nominal number of execution seats configured for each priority level\n  - `apiserver_flowcontrol_lower_limit_seats`: Configured lower bound on number of execution seats available to each priority level\n  - `apiserver_flowcontrol_upper_limit_seats`: Configured upper bound on number of execution seats available to each priority level\n  - `apiserver_flowcontrol_demand_seats`: Observations, at the end of every nanosecond, of (the number of seats each priority level could use) / (nominal number of seats for that level)\n  - `apiserver_flowcontrol_demand_seats_high_watermark`: High watermark, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_average`: Time-weighted average, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_stdev`: Time-weighted standard deviation, over last adjustment period, of demand_seats\n  - `apiserver_flowcontrol_demand_seats_smoothed`: Smoothed seat demands\n  - `apiserver_flowcontrol_target_seats`: Seat allocation targets\n  - `apiserver_flowcontrol_seat_fair_frac`: Fair fraction of server's concurrency to allocate to each priority level that can use it\n  - `apiserver_flowcontrol_current_limit_seats`: current derived number of execution seats available to each priority level\n  The possibility of borrowing means that the old metric `apiserver_flowcontrol_request_concurrency_limit` can no longer mean both the configured concurrency limit and the enforced concurrency limit. Henceforth it means the configured concurrency limit.' ([#113485](https://github.com/kubernetes/kubernetes/pull/113485), [@MikeSpreitzer](https://github.com/MikeSpreitzer))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/1040-priority-and-fairness#dispatching",
+        "type": "KEP"
+      }
+    ],
+    "author": "MikeSpreitzer",
+    "author_url": "https://github.com/MikeSpreitzer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113485",
+    "pr_number": 113485,
+    "areas": [
+      "test",
+      "apiserver",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113491": {
+    "commit": "3efd107eb235d06feee95f80e461319d1dda7793",
+    "text": "'Pod Security admission: the pod-security `warn` level will now default to\nthe `enforce` level.'\n",
+    "markdown": "'Pod Security admission: the pod-security `warn` level will now default to\n  the `enforce` level.'\n   ([#113491](https://github.com/kubernetes/kubernetes/pull/113491), [@tallclair](https://github.com/tallclair))",
+    "author": "tallclair",
+    "author_url": "https://github.com/tallclair",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113491",
+    "pr_number": 113491,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "auth",
+      "security"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113496": {
+    "commit": "7a465163694131e6d66fe95a7e91f2f8235306bf",
+    "text": "Graduated `ServiceInternalTrafficPolicy` feature to GA.",
+    "markdown": "Graduated `ServiceInternalTrafficPolicy` feature to GA. ([#113496](https://github.com/kubernetes/kubernetes/pull/113496), [@avoltz](https://github.com/avoltz))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/2086",
+        "type": "KEP"
+      }
+    ],
+    "author": "avoltz",
+    "author_url": "https://github.com/avoltz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113496",
+    "pr_number": 113496,
+    "areas": [
+      "ipvs"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "apps"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113500": {
+    "commit": "c326b2713f0d2d836209409bf4387d8e9e84af76",
+    "text": "'`NodeInclusionPolicy` in `podTopologySpread` plugin is now enabled by default.'\n",
+    "markdown": "'`NodeInclusionPolicy` in `podTopologySpread` plugin is now enabled by default.'\n   ([#113500](https://github.com/kubernetes/kubernetes/pull/113500), [@kerthcet](https://github.com/kerthcet))",
+    "documentation": [
+      {
+        "description": "KEP",
+        "url": "https://github.com/kubernetes/enhancements/issues/3094",
+        "type": "KEP"
+      }
+    ],
+    "author": "kerthcet",
+    "author_url": "https://github.com/kerthcet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113500",
+    "pr_number": 113500,
+    "areas": [
+      "test",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "api-machinery",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113501": {
+    "commit": "70263d55b281878121684337c0a7f205dabba5ec",
+    "text": "kubelet: fixed nil pointer in reflector start for standalone mode.",
+    "markdown": "Kubelet: fixed nil pointer in reflector start for standalone mode. ([#113501](https://github.com/kubernetes/kubernetes/pull/113501), [@pacoxu](https://github.com/pacoxu))",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113501",
+    "pr_number": 113501,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "113510": {
+    "commit": "ac95e5b701dff7acc994dcdf5192264e7f6fe02a",
+    "text": "'Graduated `JobTrackingWithFinalizers` to stable.\nJobs created before the feature was enabled are still tracked without finalizers.\nJobs tracked with finalizers have the annotation batch.kubernetes.io/job-tracking.\nIf the annotation is present and the user attempts to remove it, the control plane adds it back.\nThe annotation `batch.kubernetes.io/job-tracking` is now deprecated.\nThe control plane will ignore it and stop adding it for new Jobs in v1.27.'",
+    "markdown": "'Graduated `JobTrackingWithFinalizers` to stable.\n  Jobs created before the feature was enabled are still tracked without finalizers.\n  Jobs tracked with finalizers have the annotation batch.kubernetes.io/job-tracking.\n  If the annotation is present and the user attempts to remove it, the control plane adds it back.\n  The annotation `batch.kubernetes.io/job-tracking` is now deprecated.\n  The control plane will ignore it and stop adding it for new Jobs in v1.27.' ([#113510](https://github.com/kubernetes/kubernetes/pull/113510), [@alculquicondor](https://github.com/alculquicondor))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/a4b5f5c8e9aa857f9bf1f7df2a9a8b9ee660ed1e/keps/sig-apps/2307-job-tracking-without-lingering-pods#beta---ga-graduation",
+        "type": "KEP"
+      },
+      {
+        "description": "[Usage]",
+        "url": "https://kubernetes.io/docs/concepts/workloads/controllers/job/#job-tracking-with-finalizers",
+        "type": "official"
+      }
+    ],
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113510",
+    "pr_number": 113510,
+    "areas": [
+      "test",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113511": {
+    "commit": "d62cc3dc6d5c07fea79eafd866ac7e1217000ea8",
+    "text": "'`NodeOutOfServiceVolumeDetach` is now beta.'\n",
+    "markdown": "'`NodeOutOfServiceVolumeDetach` is now beta.'\n   ([#113511](https://github.com/kubernetes/kubernetes/pull/113511), [@xing-yang](https://github.com/xing-yang))",
+    "author": "xing-yang",
+    "author_url": "https://github.com/xing-yang",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113511",
+    "pr_number": 113511,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "node"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113519": {
+    "commit": "38bcc0c1537cdd0bf2e26968cf10f34002fc7db1",
+    "text": "Adds metrics `force_delete_pods_total` and `force_delete_pod_errors_total` in the Pod GC Controller.",
+    "markdown": "Adds metrics `force_delete_pods_total` and `force_delete_pod_errors_total` in the Pod GC Controller. ([#113519](https://github.com/kubernetes/kubernetes/pull/113519), [@xing-yang](https://github.com/xing-yang)) [SIG Apps]",
+    "author": "xing-yang",
+    "author_url": "https://github.com/xing-yang",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113519",
+    "pr_number": 113519,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "apps"
+    ],
+    "feature": true
+  },
+  "113521": {
+    "commit": "b60b0c74c91a2dc12436503f63d1a3b266eb02d4",
+    "text": "Resolved an issue that caused winkernel proxier to treat stale VIPs as valid.",
+    "markdown": "Resolved an issue that caused winkernel proxier to treat stale VIPs as valid. ([#113521](https://github.com/kubernetes/kubernetes/pull/113521), [@daschott](https://github.com/daschott))",
+    "author": "daschott",
+    "author_url": "https://github.com/daschott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113521",
+    "pr_number": 113521,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "windows"
+    ],
+    "duplicate": true
+  },
+  "113529": {
+    "commit": "b1dd1cd2f177ecf228cbbfb0db9327a276098be8",
+    "text": "A new API server flag `--encryption-provider-config-automatic-reload` was added to control when the encryption config should be automatically reloaded without needing to restart the server.  All KMS plugins are now merged into a single healthz check at `/healthz/kms-providers` when reload is enabled, or when only KMS v2 plugins are used.",
+    "markdown": "A new API server flag `--encryption-provider-config-automatic-reload` was added to control when the encryption config should be automatically reloaded without needing to restart the server.  All KMS plugins are now merged into a single healthz check at `/healthz/kms-providers` when reload is enabled, or when only KMS v2 plugins are used. ([#113529](https://github.com/kubernetes/kubernetes/pull/113529), [@enj](https://github.com/enj))",
+    "author": "enj",
+    "author_url": "https://github.com/enj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113529",
+    "pr_number": 113529,
+    "areas": [
+      "test",
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "113544": {
+    "commit": "0e530f44af57643f37ec87e22780becaf1567822",
+    "text": "Added publishing events when enabling/disabling `TopologyAwareHints`.",
+    "markdown": "Added publishing events when enabling/disabling `TopologyAwareHints`. ([#113544](https://github.com/kubernetes/kubernetes/pull/113544), [@LiorLieberman](https://github.com/LiorLieberman))",
+    "author": "LiorLieberman",
+    "author_url": "https://github.com/LiorLieberman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113544",
+    "pr_number": 113544,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "apps"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113550": {
+    "commit": "2acad1b8c4b5f9a4991885ef34de1dc771139628",
+    "text": "Kubernetes is now built with Go `1.19.3`.",
+    "markdown": "Kubernetes is now built with Go `1.19.3`. ([#113550](https://github.com/kubernetes/kubernetes/pull/113550), [@xmudrii](https://github.com/xmudrii))",
+    "author": "xmudrii",
+    "author_url": "https://github.com/xmudrii",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113550",
+    "pr_number": 113550,
+    "areas": [
+      "test",
+      "release-eng",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "testing",
+      "release"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113580": {
+    "commit": "208b2b7ca9f211c0d4a8df903bfb65fd6065d527",
+    "text": "Fixed that disruption controller used to change the status of a stale disruption condition after 2 min when the `PodDisruptionConditions` feature gate is enabled.",
+    "markdown": "Fixed that disruption controller used to change the status of a stale disruption condition after 2 min when the `PodDisruptionConditions` feature gate is enabled. ([#113580](https://github.com/kubernetes/kubernetes/pull/113580), [@mimowo](https://github.com/mimowo))",
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113580",
+    "pr_number": 113580,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth"
+    ]
+  },
+  "113596": {
+    "commit": "da735b541514f65ab4e693a28a3637fad7a288b3",
+    "text": "Added reconstruction of SELinux mount context after kubelet restart. Feature `SELinuxMountReadWriteOncePod` is now fully implemented and kubelet does not lose its cache of SELinux contexts after kubelet process restart.",
+    "markdown": "Added reconstruction of SELinux mount context after kubelet restart. Feature `SELinuxMountReadWriteOncePod` is now fully implemented and kubelet does not lose its cache of SELinux contexts after kubelet process restart. ([#113596](https://github.com/kubernetes/kubernetes/pull/113596), [@jsafrane](https://github.com/jsafrane))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1710-selinux-relabeling",
+        "type": "KEP"
+      }
+    ],
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113596",
+    "pr_number": 113596,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113609": {
+    "commit": "b4040b3b863737674a492f8fd415eff8503ba0b4",
+    "text": "Added alpha support for returning container and pod metrics from CRI, instead of cAdvsior.",
+    "markdown": "Added alpha support for returning container and pod metrics from CRI, instead of cAdvsior. ([#113609](https://github.com/kubernetes/kubernetes/pull/113609), [@haircommander](https://github.com/haircommander))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/2371",
+        "type": "KEP"
+      }
+    ],
+    "author": "haircommander",
+    "author_url": "https://github.com/haircommander",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113609",
+    "pr_number": 113609,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "instrumentation",
+      "architecture"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113629": {
+    "commit": "3a99a5954d6497b4238d011cec4d33422d3957a0",
+    "text": "'Promoted the `APIServerIdentity` feature to Beta. By default, each `kube-apiserver`\nwill now create a Lease in the `kube-system` namespace. These lease objects can\nbe used to identify the number of active API servers in the cluster, and may also\nbe used for future features such as the Storage Version API.'\n",
+    "markdown": "'Promoted the `APIServerIdentity` feature to Beta. By default, each `kube-apiserver`\n  will now create a Lease in the `kube-system` namespace. These lease objects can\n  be used to identify the number of active API servers in the cluster, and may also\n  be used for future features such as the Storage Version API.'\n   ([#113629](https://github.com/kubernetes/kubernetes/pull/113629), [@andrewsykim](https://github.com/andrewsykim))",
+    "author": "andrewsykim",
+    "author_url": "https://github.com/andrewsykim",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113629",
+    "pr_number": 113629,
+    "areas": [
+      "test",
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "113632": {
+    "commit": "b1e348f60debac7455ee2d0a740d90101c0ad171",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#113632](https://github.com/kubernetes/kubernetes/pull/113632), [@dims](https://github.com/dims)) [SIG Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113632",
+    "pr_number": 113632,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "do_not_publish": true
+  },
+  "113636": {
+    "commit": "56a0823730b9c4dafe06a18bd8de027b40d1971c",
+    "text": "kubectl shell completions for the bash shell now include descriptions.",
+    "markdown": "Kubectl shell completions for the bash shell now include descriptions. ([#113636](https://github.com/kubernetes/kubernetes/pull/113636), [@marckhouzam](https://github.com/marckhouzam))",
+    "author": "marckhouzam",
+    "author_url": "https://github.com/marckhouzam",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113636",
+    "pr_number": 113636,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "feature": true
+  },
+  "113697": {
+    "commit": "a236e4ca6f3860a5acbbfc62bb3fdd88ac7e2757",
+    "text": "KMS: added validation for duplicate kms config name when auto reload is enabled. If you enabled automatic reload of encryption configuration with API server flag `--encryption-provider-config-automatic-reload`, ensure all the KMS provider names (v1 and v2) in the encryption configuration are unique.",
+    "markdown": "KMS: added validation for duplicate kms config name when auto reload is enabled. If you enabled automatic reload of encryption configuration with API server flag `--encryption-provider-config-automatic-reload`, ensure all the KMS provider names (v1 and v2) in the encryption configuration are unique. ([#113697](https://github.com/kubernetes/kubernetes/pull/113697), [@aramase](https://github.com/aramase))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-auth/3299-kms-v2-improvements",
+        "type": "KEP"
+      }
+    ],
+    "author": "aramase",
+    "author_url": "https://github.com/aramase",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113697",
+    "pr_number": 113697,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "cleanup"
+    ],
+    "sigs": [
+      "scheduling",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "112383": {
+    "commit": "b307321c0aebd0aa15df2978c2de0515e7ee1a46",
+    "text": "",
+    "markdown": " ([#112383](https://github.com/kubernetes/kubernetes/pull/112383), [@aravindb26](https://github.com/aravindb26)) [SIG Cluster Lifecycle]",
+    "author": "aravindb26",
+    "author_url": "https://github.com/aravindb26",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112383",
+    "pr_number": 112383,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "do_not_publish": true
+  }.
+  "112386": {
+    "commit": "72f96d9c722961ddd27911a7dde2e464f9e44198",
     "text": "CSRDuration feature gate that graduated to GA in 1.24 and was unconditionally enabled removed in v1.26",
     "markdown": "CSRDuration feature gate that graduated to GA in 1.24 and was unconditionally enabled removed in v1.26 ([#112386](https://github.com/kubernetes/kubernetes/pull/112386), [@Shubham82](https://github.com/Shubham82))",
     "author": "Shubham82",
     "author_url": "https://github.com/Shubham82",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112386",
     "pr_number": 112386,
+  "113710": {
+    "commit": "e2b9fd760ddb3ab3215e71739b6845629ab533c0",
+    "text": "CLI flag `pod-eviction-timeout` is deprecated and will be removed together with `enable-taint-manager` in `v1.27`.",
+    "markdown": "CLI flag `pod-eviction-timeout` is deprecated and will be removed together with `enable-taint-manager` in `v1.27`. ([#113710](https://github.com/kubernetes/kubernetes/pull/113710), [@kerthcet](https://github.com/kerthcet))",
+    "author": "kerthcet",
+    "author_url": "https://github.com/kerthcet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113710",
+    "pr_number": 113710,
     "kinds": [
       "cleanup",
       "feature"
@@ -1267,6 +5091,14 @@
     "author_url": "https://github.com/gnufied",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112427",
     "pr_number": 112427,
+  "113719": {
+    "commit": "e21438fca5f5e6988091bf0b39be51fcc19cfd8b",
+    "text": "bumped `runc` to `v1.1.4`.",
+    "markdown": "Bumped `runc` to `v1.1.4`. ([#113719](https://github.com/kubernetes/kubernetes/pull/113719), [@pacoxu](https://github.com/pacoxu))",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113719",
+    "pr_number": 113719,
     "areas": [
       "test"
     ],
@@ -1373,6 +5205,7 @@
     ],
     "duplicate_kind": true
   },
+<<<<<<< HEAD
   "112545": {
     "commit": "6820a383be4a1bbb5cd526eb3aeb9e6ade351498",
     "text": "API Server tracing root span name for opentelemetry is changed from `KubernetesAPI` to `HTTP GET`.",
@@ -1381,6 +5214,15 @@
     "author_url": "https://github.com/dims",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112545",
     "pr_number": 112545,
+=======
+  "113769": {
+    "commit": "37e73b419e455db34f5fe3e8d815418680ab23df",
+    "text": "Updated `cAdvisor` to `v0.46.0`.",
+    "markdown": "Updated `cAdvisor` to `v0.46.0`. ([#113769](https://github.com/kubernetes/kubernetes/pull/113769), [@bobbypage](https://github.com/bobbypage))",
+    "author": "bobbypage",
+    "author_url": "https://github.com/bobbypage",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113769",
+    "pr_number": 113769,
     "areas": [
       "test",
       "kubelet",
