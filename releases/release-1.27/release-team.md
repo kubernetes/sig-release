@@ -8,8 +8,8 @@
 | Release Notes | Harsha Narayana ([@harshanarayana](https://github.com/harshanarayana) / Slack: `@Harsha Narayana`) | TBD |
 | Communications | Harshita Sao ([@harshitasao](https://github.com/harshitasao) / Slack: `@Harshita Sao` ) | TBD |
 | Bug Triage | Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos) / Slack: `@Angelos Kolaitis`) | TBD |
-| CI Signal | Laura Lorenz ([@lauralorenz](https://github.com/lauralorenz) / Slack:`@Laura Lorenz`) | TBD |
-| Docs | TBD | |
+| CI Signal | Laura Lorenz ([@lauralorenz](https://github.com/lauralorenz) / Slack: `@Laura Lorenz`) | TBD |
+| Docs | Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@Mickey`) | TBD |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
