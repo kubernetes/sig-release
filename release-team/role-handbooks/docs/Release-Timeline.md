@@ -1,7 +1,7 @@
 # Release Timeline
-For each release, the schedule with deliverables is added to the release directory. This section talks about specific Docs Lead deliverables for each milestone in the release timeline.
 
-- [Early Steps (Weeks 1-2)](#early-steps-weeks-1-2)
+- [Overview](#overview)
+- [Week 1-2: Early Steps](#early-steps-weeks-1-2)
     - [Connect with the release team through Slack and Google Groups](#connect-with-the-release-team-through-slack-and-google-groups)
     - [Read the release timeline](#read-the-release-timeline)
     - [Introduce yourself to docs localization teams](#introduce-yourself-to-docs-localization-teams)
@@ -12,7 +12,7 @@ For each release, the schedule with deliverables is added to the release directo
     - [Meet with Shadows](#meet-with-shadows)
     - [Ensure access is set up](#ensure-access-is-set-up)
     - [Update the website configuration ahead of the release](#update-the-website-configuration-ahead-of-the-release)
-- [Middle Steps (Weeks 3-8)](#middle-steps-weeks-3-8)
+- [Week 3-6: Middle Steps](#middle-steps-weeks-3-8)
     - [Track PRs](#track-prs)
     - [Reach out to Enhancement Owners](#reach-out-to-enhancement-owners)
         - [Before the Open placeholder PR Deadline](#before-the-open-placeholder-pr-deadline)
@@ -27,13 +27,13 @@ For each release, the schedule with deliverables is added to the release directo
     - [Review PRs](#review-prs)
     - [Style Guide Checklist (High to Low Level)](#style-guide-checklist-high-to-low-level)
     - [Nominate a Docs Lead for the Next Release](#nominate-a-docs-lead-for-the-next-release)
-- [Late-Middle Steps (Weeks 7-8) - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
-- [Late Steps (Weeks 9-11) - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
+- [Week 7-8: Late-Middle Steps - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
+- [Weeks 9-11: Late Steps - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
     - [Generate the reference documentation](#generate-the-reference-documentation)
     - [Update minor version on API index page](#update-minor-version-on-api-index-page)
     - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
     - [Touch base with the release communications team](#touch-base-with-the-release-communications-team)
-- [Release Week (Week 12)](#release-week-week-12)
+- [Week 12: Release Week](#release-week-week-12)
     - [Update the site configuration files for previous releases](#update-the-site-configuration-files-for-previous-releases)
     - [Update the site configuration files for future release](#update-the-site-configuration-files-for-future-release)
     - [Inform localization teams](#inform-localization-teams)
@@ -63,11 +63,31 @@ For each release, the schedule with deliverables is added to the release directo
     - [Clean up access](#clean-up-access)
 - [Celebrate](#celebrate)
 
+---
+
+## Overview
+
+For each release, the schedule with deliverables is added to the release directory. This section talks about specific Docs Lead deliverables for each milestone in the release timeline.
+
+Read the release timeline and **make sure the timeline includes deadlines for documentation work**, e.g: [1.21 timeline](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.21#timeline):
+
+- Docs deadline - Reminder for *Open placeholder PRs* in the respective KEPs (~3.5 weeks before release)
+- Docs deadline - Reminder for *PRs ready for review* in the respective KEPs (~2 weeks before release)
+- Docs complete - All PRs reviewed and ready to merge (~1 week before release)
+
+If these deadlines aren't listed in the release timeline, request that the Release Lead add them.
+Define deadlines clearly e.g. End of Day (EOD) PST is not clear if EOD is 5:00 PM or 11:59 AM PST.
+
+Responsibilities of the Docs Team:
+- Same as [Docs Lead responsibilities](../docs#docs-lead-responsibilities)
+- Track Doc PRs for KEPs in the [website](https://github.com/kubernetes/website) project.
+- By default, all opted-in KEPs will `Need Docs`. Enhancement owners/contributors should confirm the enhancement does not need new or updated documentation.
+
+> Note: The blog-PR  is tracked by the Release-Comms Team.
 
 > Note: The kubernetes/website repo changed from using a `master` branch to a `main` branch in 2021.
 > Be aware that several linked, example PRs uses the `master` branch.
 > For the end-of-year release, KubeCon NA and the US Thanksgiving holiday can be additional impediments to Docs-related deadlines. Please communicate to enhancement owners/contributors about upcoming deadlines earlier and more frequently.
-
 
 ## Early Steps (Weeks 1-2)
 These steps take approximately one hour to complete, and should be completed immediately.
@@ -87,28 +107,24 @@ These steps take approximately one hour to complete, and should be completed imm
     - [kubernetes-release-team-shadows](https://groups.google.com/a/kubernetes.io/g/release-team-shadows)
         - ⚠️  List of members for this group is managed in git. Please create a PR against `kuberenetes/sig-release` repo to include your email under `release-team-shadows` group in [`sig-release/group.yaml`](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
 
-- Make sure you're included in the "official" release team file, e.g: [release 1.21](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/release-team.md). If not submit a PR and add yourself.
-
-Early in the release cycle, the Enhancements Lead opens an enhancement tracking spreadsheet, e.g: [the 1.21 release spreadsheet](http://bit.ly/k8s121-enhancements). Later in the release this spreadsheet will contain important information for docs:
+Early in the release cycle, the Enhancements Lead opens a Github Project, e.g: [the 1.26 Enhancement Tracking](https://github.com/orgs/kubernetes/projects/98/views/1). Later in the release this spreadsheet will contain important information for docs, check the Docs view [here](https://github.com/orgs/kubernetes/projects/98/views/6):
 
 - Which enhancements we'll be tracking for this release
 - Feature owners (and their GitHub IDs)
-- Links to docs PRs opened for each enhancement
+- Links to docs PRs opened for each enhancement - Docs PR
+- Docs Required? - By default "Needs Docs"
+- PR Doc Status (No PR, Draft PR, Ready-for-Review PR, Merged PR)
 
-### Read the release timeline
+> Note: Until [1.25](https://tinyurl.com/k8s125-enhancements) was used tracking spreadsheet, e.g: [the 1.21 release spreadsheet](http://bit.ly/k8s121-enhancements).
 
-Read the release timeline and **make sure the timeline includes deadlines for documentation work**, e.g: [1.21 timeline](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.21#timeline):
-
-- Docs deadline - Open placeholder PRs (~3.5 weeks before release)
-- Docs deadline - PRs ready for review (~2 weeks before release)
-- Docs complete - All PRs reviewed and ready to merge (~1 week before release)
-
-If these deadlines aren't listed in the release timeline, request that the Release Lead add them.
-Define deadlines clearly e.g. eod PST is not clear if eod is 5pm or 11:59am PST.
+⚠️ Tasks to DO:
+- [x] Make sure your team is included in the "current" release team file, e.g: [release 1.21](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/release-team.md). **If not submit a PR see a sample for 1.21 [here](https://github.com/kubernetes/sig-release/pull/1432)**.
+- [x] Please create a PR against kuberenetes/sig-release repo to include the Team Docs email of this release under release-team group in [sig-release/group.yaml](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
+- [x] Open a PR to add the Docs Team in the release-1.xx. For example here is the Release Team of [1.26](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.26/release-team.md)
 
 ### Introduce yourself to docs localization teams
 
-Create a GitHub discussion in [k/sig-release](https://github.com/kubernetes/sig-release/discussions/) to introduce yourself to the current localization owners and to sync up early on the release timeline, e.g:
+- [x] Create a GitHub discussion in [k/sig-release](https://github.com/kubernetes/sig-release/discussions/) to introduce yourself to the current localization owners and to sync up early on the release timeline, e.g:
 > Title: K8s 1.21 - Formalize docs release strategy with docs localization owners
 >
 > Hello :wave:,
@@ -140,7 +156,7 @@ Verify the shadow selections with the release lead and the emeritus advisor on S
 
 ### Contact volunteers
 
-Send a Slack message to those that you select, e.g:
+- [x] Send a Slack message to those that you select, e.g:
 
 > Hey, you're officially on the SIG Docs 1.21 release team as a shadow! Let me know if there's any issues with being a shadow (as far as timing / availability / etc) and feel free to introduce yourself!
 >
@@ -196,9 +212,9 @@ Find .5-1 hour of time to meet with shadows and explain the release process. Wal
 
 ### Ensure access is set up
 
-1. Add shadows to the "official" release team file, e.g.: [1.21 release](https://github.com/kubernetes/sig-release/pull/1432)
+1. As a lead, make sure you are part of the [sig-docs-en-owners](https://github.com/orgs/kubernetes/teams/sig-docs-en-owners).
 
-1. As a lead, make sure you are part of the [sig-docs-en-owners](https://github.com/orgs/kubernetes/teams/sig-docs-en-owners), e.g: [1.21 release](https://github.com/kubernetes/website/pull/26114).
+1. As a lead, open a PR for approval permission in the [OWNERS_ALIASES](https://github.com/kubernetes/website/blob/main/OWNERS_ALIASES), e.g: [1.21 release](https://github.com/kubernetes/website/pull/26114).
 
 1. Add docs team to the `website-milestone-maintainers` group in k/org/config/kubernetes/sig-docs/teams.yaml and `release-team` group in k/org/kubernetes/sig-release/teams.yaml, e.g: [1.21 release](https://github.com/kubernetes/org/pull/2445).
 
