@@ -569,7 +569,7 @@ The following fields are required:
   - `next`: <1.xy.1>
   - `cherryPickDeadline`: <YYYY-MM-DD> # the Friday before `targetDate`
   - `targetDate`: <YYYY-MM-DD> # the 2nd Wednesday of the next month
-  - `endOfLifeDate`: <YYYY-MM-DD> # the last Friday of the month after 1 year and 2 months after the release
+  - `endOfLifeDate`: <YYYY-MM-DD> # the 28th of the month after 1 year and 2 months after the release
 
 To update https://kubernetes.io/releases/patch-releases, update https://github.com/kubernetes/website/blob/main/content/en/releases/patch-releases.md.
 Add a subsection for [future-release] under `Detailed Release History for Active Branches` using the existing subsections as an example.
