@@ -39,7 +39,7 @@ Kubernetes 1.26 is named *Electrifying* to raise awareness that Kubernetes orche
 * [Targeting Issues and PRs to This Milestone](https://git.k8s.io/community/contributors/devel/sig-release/release.md)
 * [Triaging and Escalating Test Failures](https://git.k8s.io/community/contributors/devel/sig-testing/testing.md#troubleshooting-a-failure)
 
-## Summary
+## Major release cycle events
 
 The 1.26 release cycle is as follows:
 

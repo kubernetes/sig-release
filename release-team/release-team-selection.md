@@ -59,6 +59,8 @@ _The new Release Team Lead can be selected via lazy consensus of the current Rel
 
 Same as [Release Team Lead](#release-team-lead).
 
+The release lead should reach out to all release lead shadows and release team leads directly from the previous cycle to gather input from people interested in helping shadowing the new release.
+
 ### <a name="shadows"></a>Shadows
 
 Every Release Team role should seek to accommodate a set of role shadows. This creates a new avenue for code and non-code contributors alike to contribute to the project. Additionally, it seeds future release cycles with new leaders.
