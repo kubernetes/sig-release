@@ -1,16 +1,25 @@
 # Release Phases
 
 ## Enhancements Freeze
+
 All enhancements wishing to be included in the current release must have
-* A KEP in an implementable state
-  * Including Testing Plans
-  * Including Graduation Criteria
-* An open issue in the Release Milestone
+
+* An [open issue in kubernetes/enhancements](https://github.com/kubernetes/enhancements/issues/)
+  * In the current Release Milestone
+  * Has the `lead-opted-in` label applied
+* A `kep.yaml` with
+  * [status](status: provisional|implementable|implemented|deferred|rejected|withdrawn|replaced) set to `implementable`
+  * [latest-milestone](latest-milestone: "v1.19") set to the current release
+* A `README.md`
+  * That uses the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template)
+  * That has a [updated detailed test plan section](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/README.md?plain=1#L257-L328) filled out
+* A completed [Production Readiness Review](https://github.com/kubernetes/enhancements/blob/master/docs/glossary.md#production-readiness-review-prr)
 
 If the enhancement does not meet these requirements, it will be removed from the
 milestone and will require an [Exception].
 
 ## Burndown
+
 Several weeks prior to [Code Freeze], we increase the cadence of release team meetings
 to begin tracking work more closely. We call this Burndown, because at this
 point we have a list of outstanding issues and PRs, and are actively working to
