@@ -161,7 +161,7 @@ It is important that this process be followed and documentation remain up-to-dat
   - Ensure Issue is in the current milestone
   - Ensure Issue has correct labels (has `tracked/yes`, does not have `tracked/no`, `stage/xxx` is accurate, ...)
   - Ensure Fields in the Enhancement Tracking Board are populated and accurate (Status, Stage, SIG, ...)
-  - Evaluate if the enhancement satisfies all of the requirements for inclusion in the current release.
+  - Evaluate if the enhancement satisfies all of the [requirements](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#enhancements-freeze) for inclusion in the current release.
     - Comment on the Issue with a status updating using one of the [templates from below](#enhancement-freeze-templates)
     - Update `Enhancement Status` field for this Enhancement in the Enhancement Tracking Board (`Tracked` or `At Risk`)
 - Reach out to each [SIG on Slack](https://github.com/kubernetes/community/blob/master/sig-list.md) tagging one or more chairs or technical leads to communicate the Enhancements statuses. Example [communication templates](#sig-outreach-templates) can be found below.
