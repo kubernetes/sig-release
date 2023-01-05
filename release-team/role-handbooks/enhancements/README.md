@@ -335,8 +335,6 @@ Refer to the [Enhancement Freeze Communications](#enhancement-freeze-templates) 
 |                 Status | Description                                                                                                                                 |
 |-----------------------:|---------------------------------------------------------------------------------------------------------------------------------------------|
 |                Tracked | Enhancement has met all requirements for inclusion into current release.                                                                    |
-|              Untracked | ??? (remove?)                                                                                                                               |
-|      Pending Inclusion | ??? (remove?)                                                                                                                               |
 |                At Risk | Enhancement does not currently meet requirements for inclusion into current release.                                                        |
 |     Exception Required | Enhancement did not meet requirements by enhancement / code freeze and deadlines for requesting an [exception](#exceptions) has not passed. |
 |               Deferred | Enhancement has been bumped to a future release by owning SIG.                                                                              |
