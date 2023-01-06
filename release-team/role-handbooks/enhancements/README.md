@@ -287,68 +287,63 @@ If your SIG is not planning to submit an enhancement, please reply to this messa
 Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
 ```
 
-### Working with the Enhancement Tracking Sheet
+### Working with the Enhancement Tracking Board
 
-#### Cross Release Enhancement Tracking
+The Enhancements Tracking Board is used by the release-enhancements, release-docs, and release-comms teams.
+Information in this document will be focused on how the Enhancements team should interact with the project board.
 
-The source of truth for Enhancements is the `data` tab within the tracking sheet. All other tabs are driven off the data in this tab.
-Any changes to the KEP Assignee, KEP owning SIG, KEP link, and KEP state should be done in the `data` tab.
+#### Enhancements View
 
-|               Column | Description                                                                           |
-|---------------------:|---------------------------------------------------------------------------------------|
-|                Issue | Enhancement Issue Number.                                                             |
-|                 Name | Enhancement Issue Name and link. Generated from Issue Number.                         |
-|            Responder | Last person to respond on behalf of an Enhancement.                                   |
-|                  SIG | Owning SIG. Generated from KEP path. If no KEP (PR in flight), requires manual entry. |
-|                  KEP | Link to KEP or KEP PR.                                                                |
-|            KEP State | KEP State (Pending, Implementable etc).                                               |
-| Completed in Release | The release in which the Enhancement graduated to stable.                             |
+The `Enhancements` view is the primary view for the project board and is owned by the Enhancements sub-team.
+This view is used source of truth for tracking the status of enhancements included in a given release.
 
-#### Dashboard
+> - **Do not** archive items from the board! Enhancements that are no longer being tracked for the current release are filtered out of the default View but should remain in the board for tracking purposes.
 
-The Dashboard tab is intended to be an _at-a-glance_ view of the current
-Enhancement status from both the perspective of the Enhancements and Docs teams.
-It is 100% generated from the `Enhancements` and `Docs` tabs and should **NOT**
-be updated manually.
+|                Field | Description                                                                       |
+|---------------------:|-----------------------------------------------------------------------------------|
+|                Title | Title of (and link to) the `Issue` in k/enhancements.                             |
+|            Assignees | Assignees for the `Issue` in k/enhancements.                                      |
+|                 Type | [Type](#type) of enhancement.                                                     |
+|                Stage | Target stage (Alpha, Beta, Stable) for the current release.                       |
+|               Status | [Status](#status) of the enhancement.                                             |
+| Enhancements Contact | Alias of the Enhancements team designated as primary contact for the enhancement. |
+|                  SIG | Owning SIG.                                                                       |
+|           PRR Status | Status of PRR review for the enhancement.                                         |
+|               Labels | Labels applied to the `Issue` in k/enhancements.                                  |
+|            Milestone | The milestone assigned to the `Issue` in k/enhancements.                          |
+|                 Note | Freeform notes added by the Enhancements team.                                    |
 
-#### Enhancement Signal
+##### Type
 
-Enhancements that are missing any criteria should be labeled as `At Risk`. To
-help make this easier for the Enhancement team to label. Proposals and KEP State
-are color coded indicating their current readiness state.
+|         Type | Description                                                                                                   |
+|-------------:|---------------------------------------------------------------------------------------------------------------|
+|      Net New | Enhancement is adding net-new work. Usually reserved for enhancements targeting their `Alpha` implementation. |
+| Major Change | Enhancement is staying at the current Stage, but major changes in functionality are being implemented.        |
+|   Graduating | Enhancement is graduating to `Beta` or `Stable`.                                                              |
+|  Deprecation | Enhancement is tracking a deprecations or removals.                                                           |
 
-- `Proposal`
-  - ![#B7E0CD](https://placehold.it/12/B7E0CD?text=+) KEP is merged
-  - ![#FCE8B2](https://placehold.it/12/FCE8B2?text=+) KEP PR in flight
-  - ![#F4C7C3](https://placehold.it/12/F4C7C3?text=+) No KEP or KEP PR found
-- `KEP State`
-  - ![#B7E0CD](https://placehold.it/12/B7E0CD?text=+) `Implementable` or `Implemented`
-  - ![#FCE8B2](https://placehold.it/12/FCE8B2?text=+) `Provisional`
-  - ![#F4C7C3](https://placehold.it/12/F4C7C3?text=+) `none` or `invalid`
+Notes :
 
-#### Removing Tracked Enhancements
+- If the feature is graduating to `Alpha`, the type can either be Net New/Major Change. But usually when features are introduced to Kubernetes, they are not Major Changes.
+- If the feature is graduating to `Beta/Stable`, almost always the type is Graduating/Major Change. One exception to that is some features directly jump the hoop to Beta, in that case, the type can be Net New for even a `Beta` feature.
 
-If the Enhancement is being bumped to a later release, set it's state to
-`Deferred`.
+##### Status
 
-If it is being removed due to missing criteria or lack of response
-after being included in the milestone, set its state to `Removed from Milestone`.
+The field `Status` tracks if the KEP has met all the criteria for inclusion in the current release.
+Refer to the [Enhancement Freeze Communications](#enhancement-freeze-templates) for detailed requirements.
 
-Once done, use the `Enhancements` -> `Remove Enhancements from Milestone` menu
-item to automatically to move it to the `Removed from Milestone` tab removing it
-from the `Dashboard`, `Enhancements` and `Docs` tabs.
+|                 Status | Description                                                                                                                                 |
+|-----------------------:|---------------------------------------------------------------------------------------------------------------------------------------------|
+|                Tracked | Enhancement has met all requirements for inclusion into current release.                                                                    |
+|                At Risk | Enhancement does not currently meet requirements for inclusion into current release.                                                        |
+|     Exception Required | Enhancement did not meet requirements by enhancement / code freeze and deadlines for requesting an [exception](#exceptions) has not passed. |
+|               Deferred | Enhancement has been bumped to a future release by owning SIG.                                                                              |
+| Removed From Milestone | Enhancement did not meet requirements by enhancement / code freeze for current release and an exception was not requested and/or approved.  |
 
-#### Moving a Removed Enhancement Back into the Milestone
+Notes:
 
-If a removed item has had an exception granted. Set it's status to `Tracked` in
-the `Removed from Milestone` tab. Then use the `Enhancements` ->
-`Track Removed Enhancement` menu option to move it back to the `Dashboard`,
-`Enhancements`, and `Docs` tabs.
-
-#### Tips on judging Stage Status
-
-- If the feature is graduating to `Alpha`, the status can either be Net New/Major Change. But usually when features are introduced to Kubernetes, they are not Major Changes.
-- If the feature is graduating to `Beta/Stable`, almost always the state is Graduating/Major Change. One exception to that is some features directly jump the hoop to Beta, in that case, the status can be Net New for even a Beta feature.
+- If the Enhancement is being bumped to a later release, set it's status to `Deferred`.
+- If it is being removed due to missing criteria or lack of response after being included in the milestone, set its status to `Removed from Milestone`.
 
 > Feel free to ask the previous enhancements leads about this when in doubt.
 
