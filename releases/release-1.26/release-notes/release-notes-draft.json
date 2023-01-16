@@ -1323,8 +1323,8 @@
   },
   "112058": {
     "commit": "ac868b17d638a427ca3f9510aa5ab9b6731a6e48",
-    "text": "Updated `cri-tools` to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0)",
-    "markdown": "Updated `cri-tools` to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0) ([#112058](https://github.com/kubernetes/kubernetes/pull/112058), [@saschagrunert](https://github.com/saschagrunert))",
+    "text": "`cri-tools` updated to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0)]\n",
+    "markdown": "`cri-tools` updated to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0)]\n   ([#112058](https://github.com/kubernetes/kubernetes/pull/112058), [@saschagrunert](https://github.com/saschagrunert))",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112058",
@@ -2952,9 +2952,9 @@
   "112855": {
     "commit": "d0e86111ef91615f3a17f860a2e9e6aa0c6a259a",
     "text": "Added kubelet metrics to track the cpumanager cpu allocation and pinning",
-    "markdown": "Added kubelet metrics to track the cpumanager cpu allocation and pinning ([#112855](https://github.com/kubernetes/kubernetes/pull/112855), [@fromanirh](https://github.com/fromanirh))",
-    "author": "fromanirh",
-    "author_url": "https://github.com/fromanirh",
+    "markdown": "Added kubelet metrics to track the cpumanager cpu allocation and pinning ([#112855](https://github.com/kubernetes/kubernetes/pull/112855), [@ffromani](https://github.com/ffromani))",
+    "author": "ffromani",
+    "author_url": "https://github.com/ffromani",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112855",
     "pr_number": 112855,
     "areas": [
@@ -3433,7 +3433,7 @@
   "113018": {
     "commit": "433787d25ba51755bb913eb6a33d1b37e6444aeb",
     "text": "Graduated Kubelet CPU Manager to GA.",
-    "markdown": "Graduated Kubelet CPU Manager to GA. ([#113018](https://github.com/kubernetes/kubernetes/pull/113018), [@fromanirh](https://github.com/fromanirh))",
+    "markdown": "Graduated Kubelet CPU Manager to GA. ([#113018](https://github.com/kubernetes/kubernetes/pull/113018), [@ffromani](https://github.com/ffromani))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3441,8 +3441,8 @@
         "type": "KEP"
       }
     ],
-    "author": "fromanirh",
-    "author_url": "https://github.com/fromanirh",
+    "author": "ffromani",
+    "author_url": "https://github.com/ffromani",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/113018",
     "pr_number": 113018,
     "areas": [

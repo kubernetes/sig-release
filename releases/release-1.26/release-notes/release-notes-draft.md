@@ -104,8 +104,8 @@
 - Protobuf serialization of metav1.MicroTime timestamps (used in `Lease` and `Event` API objects) has been corrected to truncate to microsecond precision, to match the documented behavior and JSON/YAML serialization. Any existing persisted data is truncated to microsecond when read from etcd. ([#111936](https://github.com/kubernetes/kubernetes/pull/111936), [@haoruan](https://github.com/haoruan))
 - Removed feature gates `ServiceLoadBalancerClass` and `ServiceLBNodePortControl`. These feature gates were enabled (and locked) since `v1.24`. ([#112577](https://github.com/kubernetes/kubernetes/pull/112577), [@andrewsykim](https://github.com/andrewsykim))
 - Reverted regression that prevented `client-go` latency metrics to be reported with a template URL to avoid label cardinality. ([#111752](https://github.com/kubernetes/kubernetes/pull/111752), [@aanm](https://github.com/aanm))
-- The `EndpointSliceTerminatingCondition` feature gate was graduated to GA. The gate is now locked and will be removed in `v1.28`. ([#113351](https://github.com/kubernetes/kubernetes/pull/113351), [@andrewsykim](https://github.com/andrewsykim))
-- [kubelet] Changed default `cpuCFSQuotaPeriod` value with enabled `cpuCFSQuotaPeriod` flag from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work. ([#111520](https://github.com/kubernetes/kubernetes/pull/111520), [@paskal](https://github.com/paskal)) [SIG API Machinery and Node]
+- The `EndpointSliceTerminatingCondition` feature gate was graduated to GA. The gate is now locked and will be removed in v1.28. ([#113351](https://github.com/kubernetes/kubernetes/pull/113351), [@andrewsykim](https://github.com/andrewsykim))
+- [kubelet] Change default `cpuCFSQuotaPeriod` value with enabled `cpuCFSQuotaPeriod` flag from 100ms to 100µs to match the Linux CFS and k8s defaults. `cpuCFSQuotaPeriod` of 100ms now requires `customCPUCFSQuotaPeriod` flag to be set to work. ([#111520](https://github.com/kubernetes/kubernetes/pull/111520), [@paskal](https://github.com/paskal)) [SIG API Machinery and Node]
 - `DynamicKubeletConfig` feature gate has been removed from the API server.
   Dynamic kubelet reconfiguration now can't be used even when older nodes are still
   attempting to rely on it. This is aligned with the Kubernetes version skew policy.
@@ -155,7 +155,7 @@
 - Added alpha support for returning container and pod metrics from CRI, instead of cAdvsior. ([#113609](https://github.com/kubernetes/kubernetes/pull/113609), [@haircommander](https://github.com/haircommander))
 - Added categories column to the `kubectl api-resources` command's wide output (`-o wide`).
   Added `--categories` flag to the `kubectl api-resources` command, which can be used to filter the output to show only resources belonging to one or more categories. ([#111096](https://github.com/kubernetes/kubernetes/pull/111096), [@brianpursley](https://github.com/brianpursley)) [SIG CLI]
-- Added kubelet metrics to track the cpumanager cpu allocation and pinning ([#112855](https://github.com/kubernetes/kubernetes/pull/112855), [@fromanirh](https://github.com/fromanirh))
+- Added kubelet metrics to track the cpumanager cpu allocation and pinning ([#112855](https://github.com/kubernetes/kubernetes/pull/112855), [@ffromani](https://github.com/ffromani))
 - Added new Golang runtime-related metrics to Kubernetes components:
   - go_gc_cycles_automatic_gc_cycles_total
   - go_gc_cycles_forced_gc_cycles_total
@@ -200,7 +200,7 @@
 - Extend the job `job_finished_total metric by new `reason` label and introduce a new job metric to count pod failures
   handled by pod failure policy with respect to the action applied. ([#113324](https://github.com/kubernetes/kubernetes/pull/113324), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]
 - Graduate `ServiceIPStaticSubrange` feature to GA. ([#112163](https://github.com/kubernetes/kubernetes/pull/112163), [@aojea](https://github.com/aojea))
-- Graduated Kubelet CPU Manager to GA. ([#113018](https://github.com/kubernetes/kubernetes/pull/113018), [@fromanirh](https://github.com/fromanirh))
+- Graduated Kubelet CPU Manager to GA. ([#113018](https://github.com/kubernetes/kubernetes/pull/113018), [@ffromani](https://github.com/ffromani))
 - Graduated Kubelet Device Manager to GA. ([#112980](https://github.com/kubernetes/kubernetes/pull/112980), [@swatisehgal](https://github.com/swatisehgal))
 - If `ComponentSLIs` feature gate is enabled, then `/metrics/slis` becomes available on kubelet, allowing you to scrape health check metrics. ([#113030](https://github.com/kubernetes/kubernetes/pull/113030), [@Richabanker](https://github.com/Richabanker)) [SIG Node]
 - If `ComponentSLIs` feature gate is enabled, then `/metrics/slis` now becomes available on cloud-controller-manager allowing you to scrape health check metrics. ([#113340](https://github.com/kubernetes/kubernetes/pull/113340), [@Richabanker](https://github.com/Richabanker))
@@ -214,9 +214,9 @@
 - Kubeadm: now supports image repository format validation. ([#112732](https://github.com/kubernetes/kubernetes/pull/112732), [@SataQiu](https://github.com/SataQiu))
 - Kubeadm: sub-phases are now able to support the dry-run mode, e.g. kubeadm reset phase cleanup-node --dry-run ([#112945](https://github.com/kubernetes/kubernetes/pull/112945), [@chendave](https://github.com/chendave)) [SIG Cluster Lifecycle]
 - Kubeadm: tried to load CA cert from external CertificateAuthority file when CertificateAuthorityData is empty for existing kubeconfig. ([#111783](https://github.com/kubernetes/kubernetes/pull/111783), [@SataQiu](https://github.com/SataQiu))
-- `Kubectl` shell completions for the bash shell now include descriptions. ([#113636](https://github.com/kubernetes/kubernetes/pull/113636), [@marckhouzam](https://github.com/marckhouzam))
-- Kubernetes is now built with Go `1.19.1` ([#112287](https://github.com/kubernetes/kubernetes/pull/112287), [@palnabarun](https://github.com/palnabarun)) [SIG Release and Testing]
-- Kubernetes is now built with Go `1.19.2` ([#112900](https://github.com/kubernetes/kubernetes/pull/112900), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]
+- Kubectl shell completions for the bash shell now include descriptions. ([#113636](https://github.com/kubernetes/kubernetes/pull/113636), [@marckhouzam](https://github.com/marckhouzam))
+- Kubernetes is now built with Go 1.19.1 ([#112287](https://github.com/kubernetes/kubernetes/pull/112287), [@palnabarun](https://github.com/palnabarun)) [SIG Release and Testing]
+- Kubernetes is now built with Go 1.19.2 ([#112900](https://github.com/kubernetes/kubernetes/pull/112900), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]
 - Kubernetes is now built with Go `1.19.3`. ([#113550](https://github.com/kubernetes/kubernetes/pull/113550), [@xmudrii](https://github.com/xmudrii))
 - Logs of requests that were timed out by a timeout handler no longer contain a `statusStack` and `logging error output` fields. ([#112374](https://github.com/kubernetes/kubernetes/pull/112374), [@Argh4k](https://github.com/Argh4k))
 - Metrics for `RetroactiveDefaultStorageClass` feature are now available. To see an attempt count for updating PVC retroactively with a default StorageClass see `retroactive_storageclass_total` metric and for total numer of errors see `retroactive_storageclass_errors_total`. ([#113323](https://github.com/kubernetes/kubernetes/pull/113323), [@RomanBednar](https://github.com/RomanBednar))
@@ -227,7 +227,7 @@
 - Switched kubectl to use `github.com/russross/blackfriday/v2` ([#112731](https://github.com/kubernetes/kubernetes/pull/112731), [@pacoxu](https://github.com/pacoxu))
 - The ExpandedDNSConfig feature has graduated to beta and is enabled by default. Note that this feature requires container runtime support. ([#112824](https://github.com/kubernetes/kubernetes/pull/112824), [@gjkim42](https://github.com/gjkim42)) [SIG Network and Testing]
 - The `LegacyServiceAccountTokenNoAutoGeneration` feature gate was promoted to GA. ([#112838](https://github.com/kubernetes/kubernetes/pull/112838), [@zshihang](https://github.com/zshihang))
-- The `ProxyTerminatingEndpoints` feature is now Beta and enabled by default. When enabled, `kube-proxy` will attempt to route traffic to terminating pods when the traffic policy is `Local` and there are only terminating pods remaining on a node. ([#113363](https://github.com/kubernetes/kubernetes/pull/113363), [@andrewsykim](https://github.com/andrewsykim))
+- The `ProxyTerminatingEndpoints` feature is now Beta and enabled by default. When enabled, kube-proxy will attempt to route traffic to terminating pods when the traffic policy is `Local` and there are only terminating pods remaining on a node. ([#113363](https://github.com/kubernetes/kubernetes/pull/113363), [@andrewsykim](https://github.com/andrewsykim))
 - The `goroutines` metric is newly added in the scheduler. 
   It replaces `scheduler_goroutines` metric and it counts the number of goroutine in more places than `scheduler_goroutine` does. ([#112003](https://github.com/kubernetes/kubernetes/pull/112003), [@sanposhiho](https://github.com/sanposhiho)) [SIG Instrumentation and Scheduling]
 - Updated `cAdvisor` to `v0.46.0`. ([#113769](https://github.com/kubernetes/kubernetes/pull/113769), [@bobbypage](https://github.com/bobbypage))
@@ -355,6 +355,7 @@
 - Kubeadm: removed the toleration for the `node-role.kubernetes.io/master` taint from the CoreDNS deployment of `kubeadm`. With the 1.25 release of kubeadm the taint `node-role.kubernetes.io/master` is no longer applied to control plane nodes and the toleration for it can be removed with the release of 1.26. You can also perform the same toleration removal from your own addon manifests. ([#112008](https://github.com/kubernetes/kubernetes/pull/112008), [@pacoxu](https://github.com/pacoxu))
 - Kubeadm: removed the usage of the `--container-runtime=remote` flag for the kubelet during kubeadm init/join/upgrade. The flag value `remote` had been the only possible value since `dockershim` was removed from the kubelet. ([#112000](https://github.com/kubernetes/kubernetes/pull/112000), [@pacoxu](https://github.com/pacoxu))
 - Locked `ServerSideApply` feature gate to true with the feature already being GA. ([#112748](https://github.com/kubernetes/kubernetes/pull/112748), [@wojtek-t](https://github.com/wojtek-t))
+- NoneNone ([#111533](https://github.com/kubernetes/kubernetes/pull/111533), [@zhoumingcheng](https://github.com/zhoumingcheng)) [SIG CLI]
 - Refactored `test/e2e/framework` so that the core framework is smaller. Optional functionality like resource monitoring, log size monitoring, metrics gathering and debug information dumping must be imported by specific e2e test suites. Init packages are provided which can be imported to re-enable the functionality that traditionally was in the core framework. If you have code that no longer compiles because of this PR, you can use the script [from a commit message](https://github.com/kubernetes/kubernetes/pull/112043/commits/dfdf88d4faafa6fd39988832ea0ef6d668f490e9) to update that code. ([#112043](https://github.com/kubernetes/kubernetes/pull/112043), [@pohly](https://github.com/pohly))
 - Release-note ([#111708](https://github.com/kubernetes/kubernetes/pull/111708), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Apps, Instrumentation and Network]
 - Removed `PodOverhead` feature gate as the feature is in GA since `v1.24`. ([#112579](https://github.com/kubernetes/kubernetes/pull/112579), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev))
@@ -367,5 +368,6 @@
 - The `e2e.test` binary no longer emits JSON structs to document progress. ([#113212](https://github.com/kubernetes/kubernetes/pull/113212), [@pohly](https://github.com/pohly))
 - The in-tree cloud provider for OpenStack (and the cinder volume provider) has been removed. Please use the external cloud provider and csi driver from [cloud-provider-openstack](https://github.com/kubernetes/cloud-provider-openstack) instead. ([#67782](https://github.com/kubernetes/kubernetes/pull/67782), [@dims](https://github.com/dims))
 - The metric `etcd_db_total_size_in_bytes` is renamed to `apiserver_storage_db_total_size_in_bytes`. ([#113310](https://github.com/kubernetes/kubernetes/pull/113310), [@logicalhan](https://github.com/logicalhan)) [SIG API Machinery]
-- Updated `cri-tools` to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0) ([#112058](https://github.com/kubernetes/kubernetes/pull/112058), [@saschagrunert](https://github.com/saschagrunert))
 - `GlusterFS` in-tree storage driver which was deprecated in kubernetes 1.25 release is now removed entirely in 1.26. ([#112015](https://github.com/kubernetes/kubernetes/pull/112015), [@humblec](https://github.com/humblec))
+- `cri-tools` updated to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0)]
+   ([#112058](https://github.com/kubernetes/kubernetes/pull/112058), [@saschagrunert](https://github.com/saschagrunert))
