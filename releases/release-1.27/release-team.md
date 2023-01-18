@@ -10,6 +10,7 @@
 | Bug Triage | Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos) / Slack: `@Angelos Kolaitis`) | TBD |
 | CI Signal | Laura Lorenz ([@lauralorenz](https://github.com/lauralorenz) / Slack: `@Laura Lorenz`) | TBD |
 | Docs | Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@Mickey`) | TBD |
+| Branch Manager | Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`) |  |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
