@@ -5,7 +5,7 @@
 | Release Team Lead | Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`) | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`), Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929) / Slack: `@psaggu`), Heba Elayoty ([@helayoty](https://github.com/helayoty) / Slack: `@helayoty`), Hossein Salahi ([@hosseinsalahi](https://github.com/hosseinsalahi) / Slack: `@hosseinsalahi`) |
 | Emeritus Adviser | James Laverack ([@jameslaverack](https://github.com/jameslaverack) / Slack: `@james.laverack`) | N/A |
 | Enhancements | Mark Rossetti ([@marosset](https://github.com/marosset) / Slack: `@Mark Rossetti`) | TBD |
-| Release Notes | Harsha Narayana ([@harshanarayana](https://github.com/harshanarayana) / Slack: `@Harsha Narayana`) | TBD |
+| Release Notes | Harsha Narayana ([@harshanarayana](https://github.com/harshanarayana) / Slack: `@Harsha Narayana`) | Ana Margarita Medina ([@AnaMMedina21](https://github.com/AnaMMedina21) / Slack: `@Ana Margarita Medina`), Richard Sadowski ([@rjsadow](https://github.com/rjsadow) / Slack: `@Ricky Sadowski`), Sanchita Mishra ([@sanchita-07](https://github.com/sanchita-07) / Slack: `@Sanchita Mishra`), Yash Raj Singh ([@yrs147](https://github.com/yrs147) / Slack: `@Yash Raj Singh`) |
 | Communications | Harshita Sao ([@harshitasao](https://github.com/harshitasao) / Slack: `@Harshita Sao` ) | TBD |
 | Bug Triage | Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos) / Slack: `@Angelos Kolaitis`) | TBD |
 | CI Signal | Laura Lorenz ([@lauralorenz](https://github.com/lauralorenz) / Slack: `@Laura Lorenz`) | TBD |
