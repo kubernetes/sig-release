@@ -25,7 +25,7 @@ description: |
 * [Feature blog Tracking Board](#)
 * [Bug Triage Tracking Board](https://bit.ly/k8s127-bug-triage-tracking)
 * [CI Signal Project Board & Issue Tracking](#)
-* [Retrospective Document][https://bit.ly/k8s127-retro]
+* [Retrospective Document](https://bit.ly/k8s127-retro)
 * [kubernetes/sig-release v1.27 milestone](https://github.com/kubernetes/kubernetes/milestone/60)
 
 #### Guides
