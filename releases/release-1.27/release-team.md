@@ -9,7 +9,7 @@
 | Communications | Harshita Sao ([@harshitasao](https://github.com/harshitasao) / Slack: `@Harshita Sao` ) | TBD |
 | Bug Triage | Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos) / Slack: `@Angelos Kolaitis`) | TBD |
 | CI Signal | Laura Lorenz ([@lauralorenz](https://github.com/lauralorenz) / Slack: `@Laura Lorenz`) | TBD |
-| Docs | Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@Mickey`) | TBD |
+| Docs | Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@Mickey`) | Jackline Mutua ([@katmutua](https://github.com/katmutua) / Slack: `@jacklinem`), Lukonde Mwila ([@LukeMwila](https://github.com/LukeMwila) / Slack: `@Lukonde Mwila`), Rishit Dagli ([@Rishit-dagli](https://github.com/Rishit-dagli) / Slack: `@Rishit Dagli`), Tania Duggal ([@taniaduggal](https://github.com/taniaduggal) / Slack: `@Tania Duggal`) |
 | Branch Manager | Cici Huang ([@cici37](https://github.com/cici37) / Slack: `@cici37`) |  |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
