@@ -1,0 +1,3 @@
+pr: 114814
+releasenote:
+  text: '`Service` of type `ExternalName` do not create an `Endpoint` anymore.'

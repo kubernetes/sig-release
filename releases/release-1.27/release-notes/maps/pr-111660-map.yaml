@@ -1,0 +1,4 @@
+pr: 111660
+releasenote:
+  text: Relaxed API validation for usage `key encipherment` and `kubelet` uses requested
+    usages accordingly

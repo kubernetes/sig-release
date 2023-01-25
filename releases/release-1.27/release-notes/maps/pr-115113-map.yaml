@@ -1,0 +1,6 @@
+pr: 115113
+releasenote:
+  text: Callers of `wait.ExponentialBackoffWithContext` now must pass a `ConditionWithContextFunc`
+    to be consistent with the signature and avoid creating a duplicate context. If
+    your condition does not need a context you can use the `ConditionFunc.WithContext()`
+    helper to ignore the context, or use `ExponentialBackoff` directly.

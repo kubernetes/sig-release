@@ -1,0 +1,5 @@
+pr: 114460
+releasenote:
+  text: |-
+    `kubectl port-forward` now exits with exit code 1 when remote connection is
+    lost

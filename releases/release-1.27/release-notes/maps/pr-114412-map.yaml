@@ -1,0 +1,4 @@
+pr: 114412
+releasenote:
+  text: Added warnings about workload resources (Pods, ReplicaSets, Deployments, Jobs,
+    CronJobs, or ReplicationControllers) whose names are not valid DNS labels.

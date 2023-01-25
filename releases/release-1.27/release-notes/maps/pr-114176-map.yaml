@@ -1,0 +1,4 @@
+pr: 114176
+releasenote:
+  text: 'kubeadm: improved retries when updating node information, in case `kube-apiserver`
+    is temporarily unavailable'

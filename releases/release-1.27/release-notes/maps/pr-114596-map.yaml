@@ -1,0 +1,5 @@
+pr: 114596
+releasenote:
+  text: |-
+    `kube-controller-manager` will not run nodeipam controller when allocator type
+    is `CloudAllocator` and the cloud provider is not enabled.

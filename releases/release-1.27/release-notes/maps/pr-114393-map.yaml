@@ -1,0 +1,9 @@
+pr: 114393
+releasenote:
+  text: |-
+    Added new option to the `InterPodAffinity` scheduler plugin to ignore existing
+    pods` preferred inter-pod affinities if the incoming pod has no preferred inter-pod
+    affinities. This option can be used as an optimization for higher scheduling throughput
+    (at the cost of an occasional pod being scheduled non-optimally/violating existing
+    pods preferred inter-pod affinities). To enable this scheduler option, set the
+    `InterPodAffinity` scheduler plugin arg `ignorePreferredTermsOfExistingPods: true`

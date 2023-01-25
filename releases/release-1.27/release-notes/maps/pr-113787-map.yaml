@@ -1,0 +1,3 @@
+pr: 113787
+releasenote:
+  text: Fixed `DaemonSet` to update the status even if it fails to create a pod.

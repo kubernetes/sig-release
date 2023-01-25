@@ -1,0 +1,4 @@
+pr: 114459
+releasenote:
+  text: fixed stuck apiserver if an aggregated apiservice returned `304 Not Modified`
+    for aggregated discovery information

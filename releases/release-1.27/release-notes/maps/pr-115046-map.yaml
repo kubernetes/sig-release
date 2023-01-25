@@ -1,0 +1,3 @@
+pr: 115046
+releasenote:
+  text: 'kubectl: added e2e test for default container annotation'

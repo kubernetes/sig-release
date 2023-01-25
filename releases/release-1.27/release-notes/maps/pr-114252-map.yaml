@@ -1,0 +1,4 @@
+pr: 114252
+releasenote:
+  text: Added (dry run) and (server dry run) suffixes to `kubectl scale` command when
+    `dry-run` is passed

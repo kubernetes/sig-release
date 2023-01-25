@@ -1,0 +1,6 @@
+pr: 114464
+releasenote:
+  text: Fixed file permission issues that happened during update of `Secret`/`ConfigMap`/`projected
+    volume` when `fsGroup` is used. The problem caused a race condition where application
+    gets intermittent permission denied error when reading files that were just updated,
+    before the correct permissions were applied.

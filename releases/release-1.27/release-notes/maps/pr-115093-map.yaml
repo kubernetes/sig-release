@@ -1,0 +1,4 @@
+pr: 115093
+releasenote:
+  text: Fixed bug in reflector that couldn't recover from `Too large resource version`
+    errors with API servers before 1.17.0.

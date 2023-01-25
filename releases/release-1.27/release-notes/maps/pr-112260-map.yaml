@@ -1,0 +1,4 @@
+pr: 112260
+releasenote:
+  text: node `ipam` controller now exposes metrics `cidrset_cidrs_max_total` and `multicidrset_cidrs_max_total`
+    with information about the max number of CIDRs that can be allocated.

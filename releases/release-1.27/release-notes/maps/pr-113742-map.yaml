@@ -1,0 +1,5 @@
+pr: 113742
+releasenote:
+  text: 'Fixed issue in `Winkernel` Proxier - Unexpected active TCP connection drops
+    while horizontally scaling the endpoints for a LoadBalancer Service with Internal
+    Traffic Policy: `Local`'

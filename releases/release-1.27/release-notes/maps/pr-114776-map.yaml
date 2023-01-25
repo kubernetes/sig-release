@@ -1,0 +1,3 @@
+pr: 114776
+releasenote:
+  text: Fixed CSI `PersistentVolumes` to allow Secrets names longer than 63 characters.

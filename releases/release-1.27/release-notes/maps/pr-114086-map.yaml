@@ -1,0 +1,4 @@
+pr: 114086
+releasenote:
+  text: If a user attempts to add an ephemeral container to a static pod, they will
+    now get a visible validation error.

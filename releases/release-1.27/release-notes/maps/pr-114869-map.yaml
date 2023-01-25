@@ -1,0 +1,4 @@
+pr: 114869
+releasenote:
+  text: Fixed panic validating custom resource definition schemas that set `multipleOf`
+    to 0

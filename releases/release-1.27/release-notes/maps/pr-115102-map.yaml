@@ -1,0 +1,4 @@
+pr: 115102
+releasenote:
+  text: kubelet startup now fails CRI connection if service or image endpoint is throwing
+    any error

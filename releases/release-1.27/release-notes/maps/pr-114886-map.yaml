@@ -1,0 +1,3 @@
+pr: 114886
+releasenote:
+  text: '`kubectl` now uses `HorizontalPodAutoscaler` `v2` by default.'

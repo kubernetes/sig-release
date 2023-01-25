@@ -1,0 +1,3 @@
+pr: 114980
+releasenote:
+  text: preemption evnet messages now do not include scheduler names
