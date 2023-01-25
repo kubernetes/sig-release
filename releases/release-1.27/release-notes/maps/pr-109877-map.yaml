@@ -1,0 +1,5 @@
+pr: 109877
+releasenote:
+  text: |-
+    scheduler volumebinding: leveraged `PreFilterResult` to reduce down to only
+    eligible node(s) for pod with bound claim(s) to local `PersistentVolume(s)`

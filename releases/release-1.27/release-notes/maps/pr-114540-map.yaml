@@ -1,0 +1,5 @@
+pr: 114540
+releasenote:
+  text: |-
+    kubeadm: removed the deprecated `v1beta2` API. kubeadm 1.26's `config migrate`
+    command can be used to migrate a `v1beta2` configuration file to `v1beta3`

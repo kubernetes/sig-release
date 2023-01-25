@@ -1,0 +1,4 @@
+pr: 112925
+releasenote:
+  text: Error message for Pods with requests exceeding limits will have a limit value
+    printed.

@@ -1,0 +1,4 @@
+pr: 114455
+releasenote:
+  text: 'kubeadm: fixed the bug where `kubeadm` always does CRI detection even if
+    it is not required by a phase subcommand'

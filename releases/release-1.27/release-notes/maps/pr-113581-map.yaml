@@ -1,0 +1,4 @@
+pr: 113581
+releasenote:
+  text: '`Secret` of `kubernetes.io/tls` type now verifies that the private key matches
+    the cert'

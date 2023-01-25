@@ -1,0 +1,4 @@
+pr: 114740
+releasenote:
+  text: Improved misleading message, in case of no metrics received for the `HPA`
+    controlled pods.

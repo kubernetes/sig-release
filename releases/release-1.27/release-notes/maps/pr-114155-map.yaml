@@ -1,0 +1,4 @@
+pr: 114155
+releasenote:
+  text: fixed a bug on the `EndpointSlice` mirroring controller that generated multiple
+    slices in some cases for custom endpoints in non canonical format.

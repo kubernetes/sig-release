@@ -1,0 +1,4 @@
+pr: 112365
+releasenote:
+  text: Fixed a bug where `events/v1` `Events` with similar event type and reporting
+    instance were not aggregated by `client-go`.

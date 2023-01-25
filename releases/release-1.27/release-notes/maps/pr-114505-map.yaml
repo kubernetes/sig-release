@@ -1,0 +1,6 @@
+pr: 114505
+releasenote:
+  text: |-
+    Added warnings to the Services API. Kubernetes now warns for Services in the case of:
+    - IPv4 addresses with leading zeros
+    - IPv6 address in non-canonical format (RFC 5952)

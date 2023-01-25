@@ -1,0 +1,3 @@
+pr: 114914
+releasenote:
+  text: messages of `DisruptionTarget` condition now excludes preemptor pod metadata

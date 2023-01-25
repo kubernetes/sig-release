@@ -1,0 +1,3 @@
+pr: 114518
+releasenote:
+  text: Fixed a regression that the scheduler always goes through all Filter plugins.

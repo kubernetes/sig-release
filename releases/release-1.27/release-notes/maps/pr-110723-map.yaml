@@ -1,0 +1,3 @@
+pr: 110723
+releasenote:
+  text: Fixed incorrect log information in the `iptables` utility.

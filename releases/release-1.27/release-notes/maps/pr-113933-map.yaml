@@ -1,0 +1,5 @@
+pr: 113933
+releasenote:
+  text: 'client-go: fixed potential data races retrying requests using a custom `io.Reader`
+    body; with this fix, only requests with no body or with `string` / `[]byte` /
+    `runtime.Object` bodies can be retried'

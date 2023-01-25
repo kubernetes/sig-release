@@ -1,0 +1,5 @@
+pr: 115140
+releasenote:
+  text: |-
+    `wait.ContextForChannel()` now implements the context.Context interface and
+    does not return a cancellation function.

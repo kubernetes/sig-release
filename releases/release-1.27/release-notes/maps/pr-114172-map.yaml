@@ -1,0 +1,7 @@
+pr: 114172
+releasenote:
+  text: |-
+    `StatefulSet` names must be DNS labels, rather than subdomains. Any `StatefulSet`
+    which took advantage of subdomain validation (by having dots in the name) can't
+    possibly have worked, because we eventually set `pod.spec.hostname` from the `StatefulSetName`,
+    and that is validated as a DNS label.

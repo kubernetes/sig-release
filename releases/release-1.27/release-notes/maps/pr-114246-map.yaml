@@ -1,0 +1,4 @@
+pr: 114246
+releasenote:
+  text: made mounter interface exportable by making `CanSafelySkipMountPointCheck`
+    exportable function

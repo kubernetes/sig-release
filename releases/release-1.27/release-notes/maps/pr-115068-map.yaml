@@ -1,0 +1,3 @@
+pr: 115068
+releasenote:
+  text: Reverted `UpdateOrCreateToken` get secrets err handling optimization
