@@ -30,6 +30,13 @@ if [ "$PROJECT_NUMBER" == "" ]; then
       exit 1
 fi
 
+if [ "$GITHUB_TOKEN" == "" ]; then
+      echo "[Error] Required environment variable \"GITHUB_TOKEN\" is not set."
+      exit 1
+fi
+
+GITHUB_TOKEN="$(echo "$GITHUB_TOKEN" | tr -d '\n')"
+
 milestone_issue_ids=()
 milestone_issue_numbers=()
 
