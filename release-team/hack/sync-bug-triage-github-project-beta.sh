@@ -40,6 +40,8 @@ if [ "$MILESTONE" == "" ]; then
       exit 1
 fi
 
+GITHUB_TOKEN="$(echo "$GITHUB_TOKEN" | tr -d '\n')"
+
 milestone_issue_ids=()
 milestone_pr_ids=()
 
