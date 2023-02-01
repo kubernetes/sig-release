@@ -132,7 +132,7 @@ It is important that this process be followed and documentation remain up-to-dat
       Tip: You can easily view all the Fields present in each view by clicking the `v` next to the View's name an selecting `Configuration` -> `Fields`
       Note: Remember to **save** each View. If there is a blue bubble next to the Views name there are unsaved changed for that view!
   - Update automation to add issues to the correct Enhancement Tracking Board
-    - TODO: Work in Progress
+    - Open a PR into kubernetes/test-infra which to update the [`GITHUB_PROJECT_BETA_NUMBER`](https://github.com/kubernetes/test-infra/blob/3de59f96b327c87c6d23a7308abc785268931707/config/jobs/kubernetes/sig-k8s-infra/trusted/sig-release-release-team-jobs/release-team-periodics.yaml#L20-L21) variable used by automation to identity the enhancements tracking board for the current release.
 - Create a shortlink for the Tracking Board
   - Create a free account on [bitly](https://bitly.com/) to create a shortlink for the new Enhancement Tracking Board following the pattern `k8sxyy-enhancements` e.g., <https://bit.ly/k8s127-enhancements>.
 - Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking Board to the current release page in [sig-release][sig-release].
