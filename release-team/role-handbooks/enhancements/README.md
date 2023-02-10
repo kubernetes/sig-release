@@ -131,6 +131,9 @@ It is important that this process be followed and documentation remain up-to-dat
     - Until this can be automated; manually create Views with the same Names and Fields from the previous release's project board.
       Tip: You can easily view all the Fields present in each view by clicking the `v` next to the View's name an selecting `Configuration` -> `Fields`
       Note: Remember to **save** each View. If there is a blue bubble next to the Views name there are unsaved changed for that view!
+  - Disable all Workflows for the project
+    - Click `...` -> `Workflows`
+    - For each workflow that enabled (has a green circle next to it), click the workflow and slide the toggle to 'Off'
   - Update automation to add issues to the correct Enhancement Tracking Board
     - Open a PR into kubernetes/test-infra which to update the [`GITHUB_PROJECT_BETA_NUMBER`](https://github.com/kubernetes/test-infra/blob/3de59f96b327c87c6d23a7308abc785268931707/config/jobs/kubernetes/sig-k8s-infra/trusted/sig-release-release-team-jobs/release-team-periodics.yaml#L20-L21) variable used by automation to identity the enhancements tracking board for the current release.
 - Create a shortlink for the Tracking Board
