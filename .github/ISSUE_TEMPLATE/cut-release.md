@@ -80,6 +80,7 @@ Help? Ring @release-managers on slack!
 
 - [ ] Create a thread on #release-management: <!-- Paste link to slack -->
 - [ ] Screenshot unhealthy release branch testgrid boards
+- [ ] Check the health of the publishing-bot <!-- check if https://github.com/kubernetes/kubernetes/issues/56876 is closed  --> 
 - Mock Run
   - [ ] Stage
   - [ ] Release
