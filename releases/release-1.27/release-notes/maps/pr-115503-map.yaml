@@ -1,0 +1,4 @@
+pr: 115503
+releasenote:
+  text: 'Fixed issue with Winkernel Proxier - IPV6 load balancer policies were missing
+    when service was configured with `ipFamilyPolicy`: `RequireDualStack`'

@@ -1,0 +1,6 @@
+pr: 115354
+releasenote:
+  text: 'A fix in the `resource.k8s.io/v1alpha1/ResourceClaim` API avoids harmless
+    (?) ".status.reservedFor: element 0: associative list without keys has an element
+    that''s a map type" errors in the apiserver. Validation now rejects the incorrect
+    reuse of the same UID in different entries.'

@@ -1,0 +1,3 @@
+pr: 115569
+releasenote:
+  text: Enforce `nodeName` cannot be set along with non-empty `schedulingGates`
