@@ -1,0 +1,4 @@
+pr: 114731
+releasenote:
+  text: '`k8s.io/component-base/logs` now also supports adding command line flags
+    to a `flag.FlagSet`.'

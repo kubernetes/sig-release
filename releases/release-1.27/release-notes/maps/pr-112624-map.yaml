@@ -1,0 +1,4 @@
+pr: 112624
+releasenote:
+  text: 'kubelet: fixed a bug of stoping rendering configmap when enabling fsquota
+    monitoring'

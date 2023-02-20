@@ -1,0 +1,4 @@
+pr: 111453
+releasenote:
+  text: Added new -f flag into debug command to be used passing pod or node files
+    instead explicit names.

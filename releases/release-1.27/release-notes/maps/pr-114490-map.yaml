@@ -1,0 +1,4 @@
+pr: 114490
+releasenote:
+  text: Changed docs for `--contention-profiling` flag to reflect it performed block
+    profiling

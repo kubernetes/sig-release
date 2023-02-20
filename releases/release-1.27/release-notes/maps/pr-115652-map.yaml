@@ -1,0 +1,5 @@
+pr: 115652
+releasenote:
+  text: Scheduler doesn't run plugin's `Score` method when its `PreScore` method returned
+    a `Skip` status. In other words, your `PreScore/Score` plugin can return a `Skip`
+    status in `PreScore` if the plugin does nothing in `Score` for that Pod.

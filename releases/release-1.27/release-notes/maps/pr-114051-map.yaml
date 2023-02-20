@@ -1,0 +1,3 @@
+pr: 114051
+releasenote:
+  text: Added scheduler preemption support for pods using `ReadWriteOncePod` PVCs

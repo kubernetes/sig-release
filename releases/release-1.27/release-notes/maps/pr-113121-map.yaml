@@ -1,0 +1,3 @@
+pr: 113121
+releasenote:
+  text: cacheSize field in `EncryptionConfiguration` is not supported for KMSv2 provider
