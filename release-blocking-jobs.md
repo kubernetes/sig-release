@@ -118,26 +118,39 @@ based on the following considerations:
 ## Promoting or Demoting Jobs
 
 As described above, the thresholds and criteria given for jobs to be considered
-Blocking or Informing are at present aspirational. Having a
-formal, detailed process to promote or demote jobs is also aspirational.
+blocking or informing are aspirational. The same applies to having a formal,
+detailed process to promote or demote jobs. The key factor for such a process is
+to provide enough time for discussions and consensus within the Kubernetes
+community and all participating roles.
 
-Here is a sketch of a process to follow, we will iterate as we find areas to
-improve.
+The general process to promote or demote jobs follows these steps:
 
-- When opening a kubernetes/test-infra PR that promotes or demotes a job to/from
-  any of the sig-release boards, please ensure that you get lgtm/approval from
-  the appropriate individuals:
-  - patch release manager for release-1.y if you touch release-1.y dashboards
-  - current release team lead if you touch release-master dashboards or the
-    release-1.y dashboard for the current release cycle
-  - a representative from the sig that owns the job in question (if you are
-    that representative, then your authorship can be considered approval)
-- Provide links to data or reasoning that prove the job should be promoted or
-  demoted. The goal is to make your case, and do the legwork for your
-  audience, so that the PR can represent an auditable decision. eg:
-  - links to issues or this doc if a job is seen as not meeting criteria
-  - links to testgrid dashboards or summaries that show the job's performance
-  - links to triage that show the job's performance
-  - rationale for why this job is meaningful or necessary (or is no longer
-    meaningful or necessary)
-  - etc.
+1. Posting a note to the k-dev and kubernetes-sig-release mailing lists about
+   the overall plan, linking to a k/sig-release issue to leave room for
+   further discussions.
+
+1. In the issue, provide links to data or reasoning that prove the job should be
+   promoted or demoted. The goal is to make your case, and do the legwork for
+   your audience, so that the resulting test-infra PR can represent an auditable
+   decision. Examples for such data are:
+
+   - links to issues or this doc if a job is seen as not meeting criteria
+   - links to testgrid dashboards or summaries that show the job's performance
+   - links to triage that show the job's performance
+   - rationale for why this job is (no longer) meaningful or necessary
+
+1. Ensure approval from the job OWNERS, SIG Release Tech Leads or Chairs as well
+   as:
+
+   - the current Release Team Lead, CI Signal Lead and Release Manager if the
+     intention is to change a `sig-release-master-*` dashboard
+   - the Release Managers if the intention is to change a `sig-release-1.x-*`
+     dashboard
+
+1. Ensure that lazy consensus is reached in the issue by setting a deadline at
+   least 4 weeks after creation. If code freeze for a minor release is in place,
+   then the consensus deadline will automatically extend until the Kubernetes
+   `master` branch gets reopened.
+
+1. Open a kubernetes/test-infra PR that promotes or demotes the job to/from any
+   of the sig-release boards.
