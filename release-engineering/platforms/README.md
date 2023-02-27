@@ -6,6 +6,9 @@ We consider the combination of architecture (`GOARCH`) and operating system
 (`GOOS`) as "platforms". Target of this document is to outline different
 categories of platforms as well as guiding through their graduation criteria.
 
+How to introduce new supported architectures and operating systems is outline in
+the [platforms guide](guide.md).
+
 ## Tiers
 
 Build and release support for different platforms' artifacts are organized into

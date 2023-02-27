@@ -1,4 +1,9 @@
-# Shipping alternate platforms in Kubernetes release artifacts
+# Platforms Guide
+
+This document outlines the necessary steps to either add or remove supported
+platform builds in Kubernetes.
+
+## Adding supported platforms
 
 The default Kubernetes platform is `linux/amd64`. This platform is fully tested,
 where build and release systems initially supported only that. A while ago we
@@ -19,7 +24,7 @@ Target of this document is to provide a starting point for adding new platforms
 to Kubernetes from a SIG Architecture and SIG Release perspective. This does not
 include release mechanics or supportability in terms of functionality.
 
-## Step 1: Building
+### Step 1: Building
 
 The container image based build infrastructure should support this architecture.
 This implicitly requires the following:
@@ -36,7 +41,7 @@ documentation][1].
 
 [1]: https://github.com/kubernetes/kubernetes/tree/3f7c09e/build#building-kubernetes
 
-## Step 2: Testing
+### Step 2: Testing
 
 It is not enough for builds to work as it gets bit-rotted quickly when we vendor
 in new changes, update versions of things we use etc. So we need a good set of
@@ -61,7 +66,7 @@ tests.
 
 [4]: https://testgrid.k8s.io
 
-## Step 3: Releasing
+### Step 3: Releasing
 
 With the first 2 steps we have a reasonable expectation that there are people
 taking care of a supported platform and it works in a reproducible environment.
@@ -99,7 +104,7 @@ to testing and release.
 [2]: https://github.com/cncf/k8s-conformance
 [3]: https://bit.ly/sig-architecture-conformance
 
-## Step 4: Finishing
+### Step 4: Finishing
 
 If you got this far, you really have made it! You have a clear engagement with
 the community, you are working seamlessly with all the relevant SIGs, you have
@@ -107,7 +112,7 @@ your content in the Kubernetes release and get end users to adopt your
 architecture. Having achieved conformance, you will gain conditional use of the
 Kubernetes trademark relative to your offerings.
 
-## Generic rules to consider
+### Generic rules to consider
 
 - We should keep it easy for contributors to get into Step 1.
 - Step 1, by default things should not build and should be switched off.
@@ -127,3 +132,26 @@ Kubernetes trademark relative to your offerings.
   in Step 3 before we go to Step 4.
 - If at any stage things bit rot, we go back to a previous step, giving an
   opportunity for the community to step up.
+
+## Deprecating and removing supported platforms
+
+Supported platforms may be considered as deprecated for various reasons, for
+example if they are being replaced by new ones, are not actively used or
+maintained any more. Deprecating an already supported platform has to follow a
+couple of steps:
+
+1. The platform deprecation has been announced on k-dev and links to a k/k issue
+   for further discussions and consensus.
+
+1. The deprecation will be active immediately after consensus has been reached
+   at a set deadline. This incorporates approval from SIG Release and
+   Architecture.
+
+1. Removing the supported platform will be done in the beginning of the next
+   minor (v1.N+1.0) release cycle, which means to:
+   - Update the k/k build scripts to exclude the platform from all targets
+   - Update the k/sig-release repository to reflect the current set of supported
+     platforms.
+
+Please note that actively supported release branches are not affected by the
+removal. This ensures compatibility with existing artifact consumers.
