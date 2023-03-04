@@ -1,0 +1,7 @@
+pr: 114472
+releasenote:
+  text: |-
+    `Kubelet` no longer creates certain legacy iptables rules by default.
+    It is possible that this will cause problems with some third-party components
+    that improperly depended on those rules. If this affects you, you can run
+    `kubelet` with `--feature-gates=IPTablesOwnershipCleanup=false`, but a bug should also be filed against the third-party component.

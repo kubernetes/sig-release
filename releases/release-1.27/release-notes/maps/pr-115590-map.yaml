@@ -1,0 +1,4 @@
+pr: 115590
+releasenote:
+  text: Added kubelet Topology Manager metric to measure topology manager admission
+    latency.

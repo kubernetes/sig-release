@@ -1,0 +1,4 @@
+pr: 115346
+releasenote:
+  text: |-
+    `node_stage_path` is now set whenever available for expansion during mount

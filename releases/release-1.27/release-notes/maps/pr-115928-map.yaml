@@ -1,0 +1,4 @@
+pr: 115928
+releasenote:
+  text: '`volumes`: `resource.claims` is now cleared for PVC specs during create or
+    update of a pod spec with inline PVC template or of a PVC because it has no effect.'
