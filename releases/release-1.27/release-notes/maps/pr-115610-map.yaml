@@ -1,0 +1,4 @@
+pr: 115610
+releasenote:
+  text: '`kubeadm`: now shows a warning message when detecting that the sandbox image
+    of the container runtime is inconsistent with that used by kubeadm'

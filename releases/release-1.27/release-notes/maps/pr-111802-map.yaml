@@ -1,6 +1,5 @@
 pr: 111802
 releasenote:
-  text: |-
-    `LabelSelectors` specified in `topologySpreadConstraints` are now validated to
-    ensure that pod is scheduled as expected. Existing pods with invalid `LabelSelectors`
-    can be updated, but new pods are required to specify valid `LabelSelectors`.
+  text: '`LabelSelectors` specified in `topologySpreadConstraints` were validated
+    to ensure that pods are scheduled as expected. Existing pods with invalid `LabelSelectors`
+    could be updated, but new pods were required to specify valid `LabelSelectors`.'

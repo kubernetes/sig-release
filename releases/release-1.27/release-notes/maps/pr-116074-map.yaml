@@ -1,0 +1,4 @@
+pr: 116074
+releasenote:
+  text: 'kubeadm`: modified `--config` flag from required to optional for `kubeadm
+    kubeconfig user` command'

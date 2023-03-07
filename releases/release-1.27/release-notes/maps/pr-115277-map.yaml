@@ -1,0 +1,3 @@
+pr: 115277
+releasenote:
+  text: Performance improvements in `klog`

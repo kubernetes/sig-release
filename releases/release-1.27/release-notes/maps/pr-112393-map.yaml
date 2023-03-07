@@ -1,0 +1,5 @@
+pr: 112393
+releasenote:
+  text: 'Two changes to the `/debug/api_priority_and_fairness/dump_priority_levels`
+    endpoint of API Priority and Fairness: added total number of dispatched, timed-out,
+    rejected and cancelled requests; output now sorted by `PriorityLevelName`.'

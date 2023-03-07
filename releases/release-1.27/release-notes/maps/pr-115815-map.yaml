@@ -1,0 +1,3 @@
+pr: 115815
+releasenote:
+  text: '`PodSchedulingReadiness` is graduated to beta.'

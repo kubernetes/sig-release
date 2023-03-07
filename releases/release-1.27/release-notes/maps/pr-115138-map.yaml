@@ -1,0 +1,7 @@
+pr: 115138
+releasenote:
+  text: |-
+    A new feature was enabled to improve the performance of the iptables mode of `kube-proxy` in large clusters. No action was required, however:
+
+    1. If you experienced problems with Services not syncing to iptables correctly, you can disable the feature by passing `--feature-gates=MinimizeIPTablesRestore=false` to kube-proxy (and file a bug if this fixes it). (This might also be detected by seeing the value of kube-proxy's `sync_proxy_rules_iptables_partial_restore_failures_total` metric rising.)
+    2. If you were previously overriding the kube-proxy configuration for performance reasons, this may no longer be necessary. See https://kubernetes.io/docs/reference/networking/virtual-ips/#optimizing-iptables-mode-performance.

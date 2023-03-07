@@ -1,3 +1,3 @@
 pr: 114446
 releasenote:
-  text: removed flag `master-service-namespace` from `api-server` arguments
+  text: Removed flag `master-service-namespace` from `api-server` arguments

@@ -1,0 +1,4 @@
+pr: 114987
+releasenote:
+  text: Added the `applyconfiguration` generator to the code-generator script that generates
+    server-side apply configuration and client APIs

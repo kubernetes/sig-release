@@ -1,3 +1,3 @@
 pr: 114584
 releasenote:
-  text: describing the CRs now hides `.metadata.managedFields`
+  text: Describing the CRs will now hide `.metadata.managedFields`
