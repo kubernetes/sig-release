@@ -383,40 +383,49 @@ This allows us to avoid merge conflicts on release day with `dev-[future release
 
 #### ⚠️ Periodically merge `main` into `dev-[future release]`
 
-To merge `main` into `dev-[future release]` on your local fork:
+To merge `main` into `dev-[future release]` on **your local fork**:
 
 ```bash
 git clone git@github.com:{YOUR_USER}/website.git
+cd website
 # Step 0 (if you don't already have a remote called "upstream")
-git remote add upstream https://github.com/kubernetes/website.git | git remote add upstream git@github.com:kubernetes/website.git
+git remote add upstream https://github.com/kubernetes/website.git && git remote set-url --push upstream no_push
+# Check your origin and upstream
+git remote -v
+# expected output
+origin	git@github.com:{YOUR_USER}/website.git (fetch)
+origin	git@github.com:{YOUR_USER}/website.git (push)
+upstream	https://github.com/kubernetes/website.git (fetch)
+upstream	no_push (push)
 # Step 1
 git fetch upstream main
 # Step 2
 git fetch upstream dev-[future release]
 # Step 3
 git checkout --track upstream/dev-[future release]
-# Step 4
+# Step 4 Fetches fast-forwards only, fetches if there is no divergence
 git pull --ff-only # make sure you're up to date
-# Step 5 You might see merge conflicts at this point.
+# Step 5 Merge main into the dev-[future release] branch
+# You might see merge conflicts at this point.
 git merge upstream/main
-## if needed: https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
-## git add ...
-## git merge --continue
-# Step 6
+# If there is a merge conflict, resolve the conflict
+  # More on resolving merge conflicts: https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
+  # e.g. git add ... and git commit -m "Merge main into dev-[future release] to keep in sync"
+# If the merge has no conflict, git will open your editor (e.g. vi) and have you edit the merge commit
+  # Edit (in vi, enter <i> to enter insert mode) the commit message to "Merge main into dev-[future release] to keep in sync"
+  # Save the message (in vi, <esc> :wq)
+# Step 6 Create a new branch that has main merged into the dev-[future release] branch
 git checkout -b merged-main-dev-[future release]
-# Step 7
-git commit -m "Merge main into dev-[future release] to keep in sync"
-# Step 8
+# Step 7 Push the new branch to your local fork
 git push origin merged-main-dev-[future release]
+# Step 8 Create the PR
+Go to your fork in a browser: https://www.github.com/{YOUR_USER}/website
+Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-main-dev-[future release]` by changing the
+`base` from `main` to `dev-[future-release]` when creating the PR.
+e.g. [Merge main into future release](https://github.com/kubernetes/website/pull/16225).
 ```
 
 You may need to fix conflicts manually. If somebody has improved a page on `main`, and at the same time it has been updated in the dev branch for the next release, we may need to figure out how to make those changes work together. If something comes up which isn't obvious, you can always abort the merge and reach out to SIG Docs for help.
-
-When you have completed resolving the differences manually, run `git merge --continue` to complete the merge. Then carry on from step 5.
-
-Submit a PR against upstream `dev-[future release]` from your fork's branch `merged-main-dev-[future release]` by changing the
-`base` to `dev-[future-release]` when creating the PR.
-e.g. [Merge main into future release](https://github.com/kubernetes/website/pull/16225).
 
 ⚠️  **Ensure the PR is passing tests on GitHub**.
 
@@ -677,7 +686,7 @@ Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 > Note: if the `release-[current-branch]` is created before the website is frozen you may need to merge in main to keep up-to-date
 > If you create the `release-[current-branch]` right before freezing the k/website repo, it is less likely you need to keep the `release-[current-branch] up-to-date but always verify with the following steps:
 
-To merge `main` into `release-[current release]` on your local fork:
+To merge `main` into `release-[current release]` on **your local fork**:
 
 ```shell
 # Step 0 (if you don't already have a remote called "upstream")
