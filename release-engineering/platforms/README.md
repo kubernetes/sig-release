@@ -59,14 +59,26 @@ if documentation is not maintained.
 
 The following table defines the current setup of available Kubernetes platforms:
 
-| Platform        |       Tier 1       |       Tier 2       |       Tier 3       |
-| --------------- | :----------------: | :----------------: | :----------------: |
-| `amd64-linux`   | :heavy_check_mark: |                    |                    |
-| `arm64-linux`   |                    | :heavy_check_mark: |                    |
-| `arm-linux`     |                    | :heavy_check_mark: |                    |
-| `amd64-darwin`  |                    | :heavy_check_mark: |                    |
-| `386-linux`     |                    | :heavy_check_mark: |                    |
-| `ppc64le-linux` |                    | :heavy_check_mark: |                    |
-| `s390x-linux`   |                    | :heavy_check_mark: |                    |
-| `386-windows`   |                    | :heavy_check_mark: |                    |
-| `amd64-windows` |                    | :heavy_check_mark: |                    |
+| Platform        |       Tier 1       |       Tier 2       | Tier 3 |
+| --------------- | :----------------: | :----------------: | :----: |
+| `amd64-linux`   | :heavy_check_mark: |                    |        |
+| `arm64-linux`   |                    | :heavy_check_mark: |        |
+| `amd64-darwin`  |                    | :heavy_check_mark: |        |
+| `386-linux`     |                    | :heavy_check_mark: |        |
+| `ppc64le-linux` |                    | :heavy_check_mark: |        |
+| `s390x-linux`   |                    | :heavy_check_mark: |        |
+| `386-windows`   |                    | :heavy_check_mark: |        |
+| `amd64-windows` |                    | :heavy_check_mark: |        |
+
+## Removed platforms
+
+The following platforms have been removed from building officially in
+Kubernetes:
+
+- **Platform:** `arm-linux`
+  - **Reason:** Due to relocation problems on linking breaking the `build-master` job.
+  - **Resources:**
+    - https://github.com/kubernetes/kubernetes/pull/115742
+    - https://github.com/kubernetes/kubernetes/issues/116492
+    - https://github.com/kubernetes/kubernetes/issues/115738
+    - https://github.com/kubernetes/kubernetes/issues/115675
