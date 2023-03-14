@@ -629,6 +629,14 @@ Create a PR with this change and wait for it to be merged ([example PR](https://
 To minimize drift with tooling changes, this section has been moved to
 [kubernetes/test-infra][release-branch-job-creation].
 
+#### Add a new variant for the kube-cross image
+
+Once we have cut the branch, it is a good time to start producing a new kube-cross image. To do this, we first need to add the variant to kube-cross [variants.yaml](https://github.com/kubernetes/release/blob/master/images/build/cross/variants.yaml) file and update the [dependencies.yaml](https://github.com/kubernetes/release/blob/master/dependencies.yaml) file. Here is an [example PR](https://github.com/kubernetes/release/pull/2344/files).
+
+Once that is merged, wait for this [prow job](https://prow.k8s.io/view/gs/kubernetes-jenkins/logs/post-release-push-image-kube-cross) to complete and then do an image promotion PR. Here is an [example](https://github.com/kubernetes/k8s.io/pull/4412). 
+
+Once that has completed, we can bump the kube-cross builder image. Here is an [example PR](https://github.com/kubernetes/kubernetes/commit/242649ee7474f9d2d11add22e5747a8323221f4d).
+
 #### Update publishing-bot rules
 
 The Kubernetes Publishing Bot is responsible for:
@@ -636,9 +644,9 @@ The Kubernetes Publishing Bot is responsible for:
 * ensuring that the master and release branches in the staging repositories are in-sync with the appropriate branches in `kubernetes/kubernetes`
 * creating tags in the staging repositories for each Kubernetes release
 
-It's required to create the appropriate publishing-bot rules for the publishing-bot to work with the release branches. Once a new release branch is created in `kubernetes/kubernetes`, the Release Manager needs to update the publishing-bot rules as described in the [`k/publishing-bot` repository](https://git.k8s.io/publishing-bot#updating-rules).
+It's required to create the appropriate publishing-bot rules for the publishing-bot to work with the release branches. Once a new release branch is created in `kubernetes/kubernetes`, the Release Manager needs to update the publishing-bot rules as described in the [`k/publishing-bot` repository](https://git.k8s.io/publishing-bot#updating-rules). This best way to do this is by using the [update-rules](https://github.com/kubernetes/publishing-bot/blob/master/cmd/update-rules/README.md) CLI tool. 
 
-Here's an [example PR](https://github.com/kubernetes/kubernetes/pull/100616).
+Here's an [example PR](https://github.com/kubernetes/kubernetes/pull/100616), but please generate the changes with the `update-rules` tooling.
 
 [sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
 
