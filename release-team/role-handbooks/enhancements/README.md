@@ -265,6 +265,25 @@ With all the KEP requirements in place and merged into k/enhancements, this enha
 The status of this enhancement is marked as `tracked`. Please keep the issue description up-to-date with appropriate stages as well. Thank you!
 ```
 
+#### Code Freeze Templates
+
+```markdown
+Hey again {enhancement owner} 👋 Enhancements team here,
+
+Just checking in as we approach **code freeze at { FREEZE_DATETIME }** .
+
+Here's where this enhancement currently stands:
+
+[ ] All PRs to the Kubernetes repo that are related to your enhancement are linked in the above issue description (for tracking purposes).
+[ ] All PR/s are ready to be merged (they have `approved` and `lgtm` labels applied) by the code freeze deadline. This **includes** tests.
+
+For this enhancement, it looks like the following PRs are open and need to be merged before code freeze (and we need to update the Issue description to include all the related PRs of this KEP):
+- { list of PRs associated with this enhancement }
+
+Also please let me know if there are other PRs in k/k we should be tracking for this KEP.
+As always, we are here to help if any questions come up. Thanks!
+```
+
 #### SIG Outreach Templates
 
 For SIGs which have opted to include Enhancements in the current release:
