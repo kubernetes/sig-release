@@ -635,7 +635,9 @@ Once we have cut the branch, it is a good time to start producing a new kube-cro
 
 Once that is merged, wait for this [prow job](https://prow.k8s.io/view/gs/kubernetes-jenkins/logs/post-release-push-image-kube-cross) to complete and then do an image promotion PR. Here is an [example](https://github.com/kubernetes/k8s.io/pull/4412). 
 
-Once that has completed, we can bump the kube-cross builder image. Here is an [example PR](https://github.com/kubernetes/kubernetes/commit/242649ee7474f9d2d11add22e5747a8323221f4d).
+To create a new k8s-cloud-builder image with the new kube-cross image, a similar PR is created to update the variants.yaml for [k8s-cloud-builder](https://github.com/kubernetes/release/blob/master/images/k8s-cloud-builder/variants.yaml). Here is an older [example pr](https://github.com/kubernetes/release/commit/830da9f3fc51a6b581ea58df82cba4c3b805be99).
+
+Finally, we can bump the kube-cross builder image in kubernetes/kubernetes. Here is an [example PR](https://github.com/kubernetes/kubernetes/commit/242649ee7474f9d2d11add22e5747a8323221f4d).
 
 #### Update publishing-bot rules
 
