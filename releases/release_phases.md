@@ -41,16 +41,18 @@ The intent of these meetings is to:
 
 ## Code Freeze
 
-All enhancements going into the release must be code-complete, **including
-tests**, and have docs PRs open by the due date.
+All enhancements going into the release must be in a merge-ready state with
+`approved` and `lgtm` labels applied. This **includes**
+tests, and docs PRs opened by the due date. Due to the Prow queue, this may mean
+that approved PRs merge shortly after the deadline.
 
 The docs PRs don't have to be ready to merge, but it should be clear what the
 topic will be and who is responsible for writing it. This person will become the
 primary contact for the documentation lead. It’s incredibly important that
 documentation work gets completed as quickly as possible.
 
-At this point, only release-blocking issues and PRs within the milestone are
-allowed to be merged.
+At this point, the only PRs allowed to proceed with changes are those
+related to release-blocking issues within the milestone.
 
 ## Test Freeze
 
