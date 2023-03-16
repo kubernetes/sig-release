@@ -1,0 +1,78 @@
+# Exception requests in 1.27
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Xander Grzywinski ([@salaxander](https://github.com/salaxander))
+# Release Team Shadows : Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove))
+# / Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929))
+# / Heba Elayoty ([@helayoty](https://github.com/helayoty))
+# / Hossein Salahi ([@hosseinsalahi](https://github.com/hosseinsalahi))
+
+# Enhancements Freeze Exceptions requested in 1.27
+enhancementFreeze:
+
+# None!
+
+# Code Freeze Exceptions requested in 1.27
+
+codeFreeze:
+
+- name: "Retriable and non-retriable Pod failures for Jobs"
+  issue: 3329
+  date_requested: 2023-03-13
+  date_reviewed: 2023-03-13
+  thread: "https://groups.google.com/u/0/g/kubernetes-sig-release/c/8hY9EZRQjNk"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/115331"
+  status: "approved"
+
+- name: "In-place Update of Pod Resources"
+  issue: 1287
+  date_requested: 2023-03-14
+  date_reviewed: 2023-03-14
+  thread: "https://groups.google.com/u/0/g/kubernetes-sig-release/c/TAwJ6IijEoI"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/116504"
+    - "https://github.com/kubernetes/kubernetes/pull/116119"
+    - "https://github.com/kubernetes/kubernetes/pull/116628"
+    - "https://github.com/kubernetes/kubernetes/pull/116631"
+    - "https://github.com/kubernetes/kubernetes/pull/116575"
+  status: "approved"
+
+- name: "cloud dual-stack node IPs"
+  issue: 3705 
+  date_requested: 2023-03-15
+  date_reviewed: 2023-03-15
+  thread: "https://groups.google.com/u/0/g/kubernetes-sig-release/c/EJxmkws_SQ8"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/116305"
+  status: "approved"
+
+- name: "AdmissionWebhookMatchConditions"
+  issue: 3716
+  date_requested: 2023-03-14
+  date_reviewed: 2023-03-14
+  thread: "https://groups.google.com/u/0/g/kubernetes-sig-release/c/N2kwnN0kFBA"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/116261"
+    - "https://github.com/kubernetes/kubernetes/pull/116350"
+  status: "approved"
+
+  
+- name: "CELValidatingAdmission"
+  issue: 3488
+  date_requested: 2023-03-14
+  date_reviewed: 2023-03-14
+  thread: "https://groups.google.com/u/0/g/kubernetes-sig-release/c/N2kwnN0kFBA"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/116261"
+    - "https://github.com/kubernetes/kubernetes/pull/116350"
+  status: "approved"
+
+  
+- name: "ClusterTrustBundles"
+  issue: 3257
+  date_requested: 2023-03-16
+  date_reviewed: 2023-03-16
+  thread: "https://groups.google.com/u/0/g/kubernetes-sig-release/c/kkA4F4LvMrM"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/113218"
+  status: "approved"
