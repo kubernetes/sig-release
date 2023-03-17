@@ -84,17 +84,19 @@ Here's the common paths for Shadows after the release cycle ends:
 
 ## Leaving the shadow program before the release cycle ended
 
-As a release team shadow, you signed up to support one release cycle, the release team to build the next Kubernetes version.
+As a shadow, you have signed up for a release cycle to help the release team to ship the next Kubernetes version.
 You may not be able to fulfill the entire “term” due to various possible reasons.
-That's not a problem! Each team onboards usually 4–5 shadows and builds redundancy with that.
+That's not a problem!
+Each team onboards usually 4–5 shadows and builds redundancy with that.
 If you like to leave the release team early, please notify your responsible team lead, the release lead and the EA about that.
 
-If the team lead observes over an extended period of time that one of the shadows is not participating, this will be communicated to the release lead and the EA and, after careful consideration, may result in the removal of the shadow from the release-team.
+If the team lead observes over an extended period of time that one of the shadows is not participating, this should be communicated to the release lead and the EA and, after careful consideration, may result in the removal of the shadow from the release-team.
 Note that this has not really happened before.
-If communicated beforehand, It's not a concern at all if you take a week of vacation or are swamped with things at work and don't show up during that time!
+If you agree beforehand, it is no problem at all if you take some days of vacation or something else during the releases cycle and cannot support the community during this time.
 
 Especially the shadow roles are designed to get a feeling of how to work with the community and what the release team is like.
 This kind of work may not be for everyone.
+If you should leave because your experience wasn't good, please reach out to someone from the community (see [contributor-experience](https://github.com/kubernetes/community/tree/master/sig-contributor-experience#leadership)) over slack, so there is the opportunity for the release-team to improve.
 
 ## Q&A
 
