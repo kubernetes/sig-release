@@ -82,6 +82,20 @@ Here's the common paths for Shadows after the release cycle ends:
 
 **Another role in SIG-Release**: some Shadows go on to do something else within SIG-Release.  For example, they may join the Branch Managers as an Release Management Associate (RMA), or they may decide to take on a release-related project that's not directly tied to the release cycle.  If you are interested in the Branch Managers, wait for them to announce their next recruitment cycle, or ask in the SIG-Release Slack channel.
 
+## Leaving the shadow program before the release cycle ended
+
+As a release team shadow, you signed up to support one release cycle, the release team to build the next Kubernetes version.
+You may not be able to fulfill the entire “term” due to various possible reasons.
+That's not a problem! Each team onboards usually 4–5 shadows and builds redundancy with that.
+If you like to leave the release team early, please notify your responsible team lead, the release lead and the EA about that.
+
+If the team lead observes over an extended period of time that one of the shadows is not participating, this will be communicated to the release lead and the EA and, after careful consideration, may result in the removal of the shadow from the release-team.
+Note that this has not really happened before.
+If communicated beforehand, It's not a concern at all if you take a week of vacation or are swamped with things at work and don't show up during that time!
+
+Especially the shadow roles are designed to get a feeling of how to work with the community and what the release team is like.
+This kind of work may not be for everyone.
+
 ## Q&A
 
 *Q: I want to shadow, but I'm not able to work on Kubernetes during my workday.  Can I still do this?*
