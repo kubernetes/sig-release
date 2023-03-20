@@ -82,6 +82,22 @@ Here's the common paths for Shadows after the release cycle ends:
 
 **Another role in SIG-Release**: some Shadows go on to do something else within SIG-Release.  For example, they may join the Branch Managers as an Release Management Associate (RMA), or they may decide to take on a release-related project that's not directly tied to the release cycle.  If you are interested in the Branch Managers, wait for them to announce their next recruitment cycle, or ask in the SIG-Release Slack channel.
 
+## Leaving the shadow program before the release cycle ended
+
+As a shadow, you have signed up for a release cycle to help the release team to ship the next Kubernetes version.
+You may not be able to fulfill the entire “term” due to various possible reasons.
+That's not a problem!
+Each team onboards usually 4–5 shadows and builds redundancy with that.
+If you like to leave the release team early, please notify your responsible team lead, the release lead and the EA about that.
+
+If the team lead observes over an extended period of time that one of the shadows is not participating, this should be communicated to the release lead and the EA and, after careful consideration, may result in the removal of the shadow from the release-team.
+Note that this has not really happened before.
+If you agree beforehand, it is no problem at all if you take some days of vacation or something else during the releases cycle and cannot support the community during this time.
+
+Especially the shadow roles are designed to get a feeling of how to work with the community and what the release team is like.
+This kind of work may not be for everyone.
+If you should leave because your experience wasn't good, please reach out to someone from the community (see [contributor-experience](https://github.com/kubernetes/community/tree/master/sig-contributor-experience#leadership)) over slack, so there is the opportunity for the release-team to improve.
+
 ## Q&A
 
 *Q: I want to shadow, but I'm not able to work on Kubernetes during my workday.  Can I still do this?*
