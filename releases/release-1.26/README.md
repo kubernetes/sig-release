@@ -16,6 +16,12 @@ description: |
 
 Kubernetes 1.26 is named *Electrifying* to raise awareness that Kubernetes orchestrates huge systems that consume a lot of energy and this is simply a problem. *Electrifying* also represents the increased automation we use in the release team and the fact that this community is simply electrifying.
 
+<p align="center">
+  <img src="./logo/electrifying-wallpaper.png" alt="Kubernetes 1.26 Release Wallpaper" />
+</p>
+
+There is also a **live wallpaper** version for download see [link](https://drive.google.com/file/d/1nI3MnQv_fIX8X6ssVQTpU313y8B1FfyZ/view?usp=sharing).
+
 #### Links
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.26/README.md)
