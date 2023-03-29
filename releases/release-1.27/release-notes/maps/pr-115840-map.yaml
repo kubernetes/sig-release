@@ -1,0 +1,3 @@
+pr: 115840
+releasenote:
+  text: Remove deprecated `--enable-taint-manager` and `--pod-eviction-timeout` CLI

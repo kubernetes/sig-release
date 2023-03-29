@@ -1,0 +1,5 @@
+pr: 116332
+releasenote:
+  text: 'Introduced a breaking change to the `resource.k8s.io` API in its `AllocationResult`
+    struct. This change allows a kubelet plugin for the `DynamicResourceAllocation`
+    feature to service allocations from multiple resource driver controllers.'

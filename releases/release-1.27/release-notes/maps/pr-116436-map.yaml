@@ -1,0 +1,4 @@
+pr: 116436
+releasenote:
+  text: Fixed incorrect watch events when a watch is initialized simultanously with
+    a reinitializing watchcache.

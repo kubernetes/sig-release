@@ -1,0 +1,5 @@
+pr: 112670
+releasenote:
+  text: 'Migrated `pkg/controller/nodeipam/ipam/cloud_cidr_allocator.go, pkg/controller/nodeipam/ipam/multi_cidr_range_allocator.go
+    pkg/controller/nodeipam/ipam/range_allocator.go pkg/controller/nodelifecycle/node_lifecycle_controller.go`
+    to structured logging'

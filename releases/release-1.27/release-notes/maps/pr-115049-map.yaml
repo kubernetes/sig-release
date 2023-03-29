@@ -1,0 +1,3 @@
+pr: 115049
+releasenote:
+  text: Migrated controller helper functions to use contextual logging.

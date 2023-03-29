@@ -1,0 +1,5 @@
+pr: 115391
+releasenote:
+  text: PersistentVolume API objects which set NodeAffinities using beta Kubernetes
+    labels for OS, architecture, zone, region, and instance type may now be modified
+    to use the stable Kubernetes labels.

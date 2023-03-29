@@ -1,0 +1,3 @@
+pr: 116121
+releasenote:
+  text: Bump default API QPS limits for Kubelet.
