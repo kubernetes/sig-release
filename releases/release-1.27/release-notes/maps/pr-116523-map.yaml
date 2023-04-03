@@ -1,0 +1,4 @@
+pr: 116523
+releasenote:
+  text: storage.k8s.io/v1beta1 API version of `CSIStorageCapacity` will no longer
+    be served

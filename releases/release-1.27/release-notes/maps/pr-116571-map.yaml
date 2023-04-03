@@ -1,0 +1,3 @@
+pr: 116571
+releasenote:
+  text: Migrated the `defaultbinder scheduler` plugin to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).

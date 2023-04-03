@@ -1,0 +1,5 @@
+pr: 116172
+releasenote:
+  text: Fixed a rare race condition in `kube-apiserver` that could lead to missing
+    events when a watch API request was created at the same time `kube-apiserver`
+    was re-initializing its internal watch.

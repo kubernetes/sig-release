@@ -1,0 +1,5 @@
+pr: 113218
+releasenote:
+  text: |-
+    Added a new alpha API: `ClusterTrustBundle` (`certificates.k8s.io/v1alpha1`).
+    A `ClusterTrustBundle` may be used to distribute [X.509](https://www.itu.int/rec/T-REC-X.509) trust anchors to workloads within the cluster.

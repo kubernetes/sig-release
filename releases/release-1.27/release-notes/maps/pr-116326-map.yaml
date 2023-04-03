@@ -1,0 +1,5 @@
+pr: 116326
+releasenote:
+  text: "HPA controller exposes the following metrics from the `kube-controller-manager`.\n-
+    `metric_computation_duration_seconds`: Number of metric computations. \n- `metric_computation_total`:
+    The time(seconds) that the HPA controller takes to calculate one metric."

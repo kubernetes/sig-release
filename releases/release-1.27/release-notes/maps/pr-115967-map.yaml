@@ -1,0 +1,4 @@
+pr: 115967
+releasenote:
+  text: Graduated CRI Events driven Pod LifeCycle Event Generator (Evented PLEG) to
+    Beta

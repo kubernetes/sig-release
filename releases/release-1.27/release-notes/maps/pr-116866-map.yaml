@@ -1,0 +1,3 @@
+pr: 116866
+releasenote:
+  text: Removed `kubernetes.io/grpc` standard appProtocol

@@ -1,0 +1,5 @@
+pr: 111661
+releasenote:
+  text: 'Fixed #115825. `Kube-proxy` now includes the `healthz` state in its response
+    to the LB HC as to avoid indicating to the LB that it should use the node in question
+    when `Kube-proxy` is not healthy.'

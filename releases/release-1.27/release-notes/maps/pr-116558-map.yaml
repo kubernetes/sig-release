@@ -1,0 +1,4 @@
+pr: 116558
+releasenote:
+  text: We have removed support for the `v1alpha1` kubeletplugin API of `DynamicResourceManagement`.
+    All plugins must update to `v1alpha2` in order to function properly going forward.

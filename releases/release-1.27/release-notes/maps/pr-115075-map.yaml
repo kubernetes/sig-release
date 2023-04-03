@@ -1,0 +1,5 @@
+pr: 115075
+releasenote:
+  text: |-
+    - Added a new `IPAddress` object kind
+    - Added a new `ClusterIP` allocator. The new allocator removes previous Service CIDR block size limitations for IPv4, and limits IPv6 size to a /64

@@ -1,0 +1,4 @@
+pr: 116329
+releasenote:
+  text: Removed AWS `kubelet` credential provider. Please use the external `kubelet`
+    credential provider binary named `ecr-credential-provider` instead.

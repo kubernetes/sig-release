@@ -1,0 +1,5 @@
+pr: 116550
+releasenote:
+  text: |-
+    Fixed a regression in the pod binding subresource to honor the `metadata.uid` precondition.
+    This allows kube-scheduler to ensure it is assigns node names to the same instances of pods it made scheduling decisions for.

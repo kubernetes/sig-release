@@ -1,0 +1,3 @@
+pr: 114904
+releasenote:
+  text: '`kubelet`: fixed recording issue when pulling image did finish'

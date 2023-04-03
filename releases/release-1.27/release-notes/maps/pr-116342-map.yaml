@@ -1,0 +1,6 @@
+pr: 116342
+releasenote:
+  text: |-
+    Unlocked the `CSIMigrationvSphere` feature gate.
+    The change allow users to continue using the in-tree vSphere driver, pending a vSphere
+    CSI driver release that has with GA support for Windows, XFS, and raw block access.

@@ -1,0 +1,4 @@
+pr: 115966
+releasenote:
+  text: GCE did not support `LoadBalancer Services` with ports with different protocols
+    (TCP and UDP)

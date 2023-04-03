@@ -1,0 +1,3 @@
+pr: 114017
+releasenote:
+  text: '`kubelet`: removed deprecated flag `--container-runtime`'

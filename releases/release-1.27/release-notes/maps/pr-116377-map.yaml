@@ -1,0 +1,4 @@
+pr: 116377
+releasenote:
+  text: By enabling the `UserNamespacesStatelessPodsSupport` feature gate in `kubelet`,
+    stateless pod can be run in a separate user namespace

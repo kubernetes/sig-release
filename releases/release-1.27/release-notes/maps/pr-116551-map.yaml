@@ -1,0 +1,7 @@
+pr: 116551
+releasenote:
+  text: |-
+    Made test-e2e-node PARALLELISM=1 FOCUS="StandaloneMode" \
+    TEST_ARGS='\
+      --kubelet-flags="--fail-swap-on=false" \
+      --standalone-mode=true \'

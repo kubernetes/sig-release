@@ -1,0 +1,4 @@
+pr: 115433
+releasenote:
+  text: 'Updated: Redefined `AppProtocol` field description and added new standard
+    values'
