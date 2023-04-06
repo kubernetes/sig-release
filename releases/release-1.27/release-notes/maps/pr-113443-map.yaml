@@ -1,0 +1,4 @@
+pr: 113443
+releasenote:
+  text: Migrated the namespace controller (within `kube-controller-manager`) to support
+    [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).

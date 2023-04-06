@@ -1,0 +1,3 @@
+pr: 116535
+releasenote:
+  text: forbid to set matchLabelKeys when labelSelector is not set in topologySpreadConstraints

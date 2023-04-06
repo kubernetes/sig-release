@@ -1,0 +1,3 @@
+pr: 116015
+releasenote:
+  text: 'kubelet: the deprecated `--master-service-namespace` flag is removed in v1.27'

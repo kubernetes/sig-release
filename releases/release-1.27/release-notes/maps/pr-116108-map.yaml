@@ -1,0 +1,3 @@
+pr: 116108
+releasenote:
+  text: Promote aggregated discovery endpoint to beta and it will be enabled by default
