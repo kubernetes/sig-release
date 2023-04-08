@@ -1,0 +1,4 @@
+pr: 115769
+releasenote:
+  text: Fixed the problem Pod terminating stuck because of trying to umount not actual
+    mounted dir.

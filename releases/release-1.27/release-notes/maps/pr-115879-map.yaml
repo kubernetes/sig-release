@@ -1,0 +1,4 @@
+pr: 115879
+releasenote:
+  text: The `SecurityContextDeny` admission plugin is going deprecated and will be
+    removed in future versions.

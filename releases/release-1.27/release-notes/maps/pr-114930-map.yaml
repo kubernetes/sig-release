@@ -1,0 +1,5 @@
+pr: 114930
+releasenote:
+  text: |-
+    Pods owned by a Job now uses the labels `batch.kubernetes.io/job-name` and `batch.kubernetes.io/controller-uid`.
+    The legacy labels `job-name` and `controller-uid` are still added for compatibility.

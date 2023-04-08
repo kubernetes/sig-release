@@ -1,0 +1,7 @@
+pr: 115204
+releasenote:
+  text: '[KCCM - service controller]: enabled connection draining for terminating
+    pods upon node downscale by the cluster autoscaler. This is done by not reacting
+    to the taint used by the cluster autoscaler to indicate that the node is going
+    away soon, thus keeping the node referenced by the load balancer until the VM
+    has been completely deleted.'

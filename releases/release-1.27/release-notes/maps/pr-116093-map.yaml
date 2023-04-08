@@ -1,0 +1,3 @@
+pr: 116093
+releasenote:
+  text: Graduated `Kubelet Topology Manager` to GA.

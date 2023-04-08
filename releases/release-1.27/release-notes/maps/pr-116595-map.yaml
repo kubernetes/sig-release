@@ -1,0 +1,3 @@
+pr: 116595
+releasenote:
+  text: Changed kubectl `--subresource` flag to beta

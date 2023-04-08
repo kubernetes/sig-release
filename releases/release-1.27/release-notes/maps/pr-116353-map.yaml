@@ -1,0 +1,6 @@
+pr: 116353
+releasenote:
+  text: '[alpha: kubectl apply --prune --applyset] Enabled certain custom resources
+    (CRs) to be used as `ApplySet` parent objects. To enable this for a given CR,
+    apply the label `applyset.kubernetes.io/is-parent-type: true` to the CustomResourceDefinition
+    (CRD) that defines it.'
