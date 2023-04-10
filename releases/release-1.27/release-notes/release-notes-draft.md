@@ -298,6 +298,8 @@
 - `kube-scheduler`: Optimized implementation of null `labelSelector` in topology spreading. ([#116607](https://github.com/kubernetes/kubernetes/pull/116607), [@alculquicondor](https://github.com/alculquicondor))
 - `kubeadm`: now shows a warning message when detecting that the sandbox image of the container runtime is inconsistent with that used by kubeadm ([#115610](https://github.com/kubernetes/kubernetes/pull/115610), [@SataQiu](https://github.com/SataQiu))
 - `kubectl` now uses `HorizontalPodAutoscaler` `v2` by default. ([#114886](https://github.com/kubernetes/kubernetes/pull/114886), [@a7i](https://github.com/a7i))
+- Kubernetes is now built with Go 1.20.3 ([#117125](https://github.com/kubernetes/kubernetes/pull/117125), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]
+- Updated distroless iptables to use released image `registry.k8s.io/build-image/distroless-iptables:v0.2.3` ([#117126](https://github.com/kubernetes/kubernetes/pull/117126), [@xmudrii](https://github.com/xmudrii)) [SIG Testing]
 
 ### Documentation
 
@@ -428,6 +430,9 @@
 - `node_stage_path` is now set whenever available for expansion during mount ([#115346](https://github.com/kubernetes/kubernetes/pull/115346), [@gnufied](https://github.com/gnufied))
 - `statefulset` status will now be consistent on API errors ([#113834](https://github.com/kubernetes/kubernetes/pull/113834), [@atiratree](https://github.com/atiratree))
 - `tryUnmount` now respects `mounter.withSafeNotMountedBehavior` ([#114736](https://github.com/kubernetes/kubernetes/pull/114736), [@andyzhangx](https://github.com/andyzhangx))
+- The encryption response from KMS v2 plugins is now validated earlier at DEK generation time instead of waiting until an encryption is performed. ([#116877](https://github.com/kubernetes/kubernetes/pull/116877), [@enj](https://github.com/enj)) [SIG API Machinery and Auth]
+- Recreate DaemonSet pods completed with Succeeded phase ([#117073](https://github.com/kubernetes/kubernetes/pull/117073), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]
+
 
 ### Other (Cleanup or Flake)
 

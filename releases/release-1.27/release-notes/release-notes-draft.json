@@ -8720,5 +8720,88 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true
+  },
+  "116877": {
+    "commit": "f393e7da7fd201d96f8471a1769594bef47fba90",
+    "text": "The encryption response from KMS v2 plugins is now validated earlier at DEK generation time instead of waiting until an encryption is performed.",
+    "markdown": "The encryption response from KMS v2 plugins is now validated earlier at DEK generation time instead of waiting until an encryption is performed. ([#116877](https://github.com/kubernetes/kubernetes/pull/116877), [@enj](https://github.com/enj)) [SIG API Machinery and Auth]",
+    "author": "enj",
+    "author_url": "https://github.com/enj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116877",
+    "pr_number": 116877,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth"
+    ],
+    "duplicate": true
+  },
+  "117073": {
+    "commit": "e7e7532a054d2795c51a87543ed4e02691b10985",
+    "text": "Recreate DaemonSet pods completed with Succeeded phase",
+    "markdown": "Recreate DaemonSet pods completed with Succeeded phase ([#117073](https://github.com/kubernetes/kubernetes/pull/117073), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]",
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/117073",
+    "pr_number": 117073,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "apps",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "117125": {
+    "commit": "20fc8a939c3394bd31edd06a893b75d1c312e27c",
+    "text": "Kubernetes is now built with Go 1.20.3",
+    "markdown": "Kubernetes is now built with Go 1.20.3 ([#117125](https://github.com/kubernetes/kubernetes/pull/117125), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]",
+    "author": "xmudrii",
+    "author_url": "https://github.com/xmudrii",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/117125",
+    "pr_number": 117125,
+    "areas": [
+      "test",
+      "release-eng"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "testing",
+      "release"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "117126": {
+    "commit": "b19c362bf52b0121f75e113485d119412ba6715c",
+    "text": "Updated distroless iptables to use released image `registry.k8s.io/build-image/distroless-iptables:v0.2.3`",
+    "markdown": "Updated distroless iptables to use released image `registry.k8s.io/build-image/distroless-iptables:v0.2.3` ([#117126](https://github.com/kubernetes/kubernetes/pull/117126), [@xmudrii](https://github.com/xmudrii)) [SIG Testing]",
+    "author": "xmudrii",
+    "author_url": "https://github.com/xmudrii",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/117126",
+    "pr_number": 117126,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "feature": true
   }
 }
