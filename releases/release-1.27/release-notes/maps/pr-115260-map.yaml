@@ -1,0 +1,3 @@
+pr: 115260
+releasenote:
+  text: Enabled the `StatefulSetStartOrdinal` feature gate in beta

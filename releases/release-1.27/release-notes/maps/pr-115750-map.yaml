@@ -1,0 +1,4 @@
+pr: 115750
+releasenote:
+  text: Graduated `KubeletTracing` to beta, which means that the feature gate is now
+    enabled by default.

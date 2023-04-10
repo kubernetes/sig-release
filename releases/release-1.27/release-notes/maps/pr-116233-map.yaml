@@ -1,0 +1,5 @@
+pr: 116233
+releasenote:
+  text: gRPC probes are now a GA feature. `GRPCContainerProbe` feature gate was locked
+    to default value and will be removed in v1.29. If you were setting this feature
+    gate explicitly, please remove it now.

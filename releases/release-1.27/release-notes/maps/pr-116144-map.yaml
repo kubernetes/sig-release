@@ -1,0 +1,5 @@
+pr: 116144
+releasenote:
+  text: |-
+    `APIServerTracing` feature gate is now enabled by default. Tracing in the API
+    Server is still disabled by default, and requires a config file to enable.

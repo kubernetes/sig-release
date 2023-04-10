@@ -1,0 +1,3 @@
+pr: 116301
+releasenote:
+  text: Removed Azure disk in-tree storage plugin

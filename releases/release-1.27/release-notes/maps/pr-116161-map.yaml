@@ -1,0 +1,4 @@
+pr: 116161
+releasenote:
+  text: Relaxed API validation to allow pod node selector to be mutable for gated
+    pods (additions only, no deletions or mutations).

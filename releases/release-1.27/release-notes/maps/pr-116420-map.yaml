@@ -1,0 +1,4 @@
+pr: 116420
+releasenote:
+  text: Updated `kube-apiserver` SLO/SLI latency metrics to exclude priority & fairness
+    queue wait times

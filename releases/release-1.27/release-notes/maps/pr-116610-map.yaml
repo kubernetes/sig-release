@@ -1,0 +1,3 @@
+pr: 116610
+releasenote:
+  text: Locked `CSIMigrationvSphere` feature gate.

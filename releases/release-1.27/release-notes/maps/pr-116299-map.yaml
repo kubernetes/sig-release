@@ -1,0 +1,8 @@
+pr: 116299
+releasenote:
+  text: |-
+    `resource.k8s.io/v1alpha1` was replaced with `resource.k8s.io/v1alpha2`. Before
+    upgrading a cluster, all objects in resource.k8s.io/v1alpha1 (ResourceClaim, ResourceClaimTemplate,
+    ResourceClass, PodScheduling) must be deleted. The changes are internal, so
+    YAML files which create pods and resource claims don't need changes except for
+    the newer `apiVersion`.

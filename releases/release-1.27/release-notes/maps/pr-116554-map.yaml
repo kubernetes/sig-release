@@ -1,0 +1,6 @@
+pr: 116554
+releasenote:
+  text: |-
+    Fixed two regressions introduced by the `PodDisruptionConditions` feature (on by default in 1.26):
+    - pod eviction API calls returned spurious precondition errors and required a second evict API call to succeed
+    - dry-run eviction API calls persisted a DisruptionTarget condition into the pod being evicted

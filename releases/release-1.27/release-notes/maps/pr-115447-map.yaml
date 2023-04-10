@@ -1,0 +1,4 @@
+pr: 115447
+releasenote:
+  text: Ingress with `ingressClass` annotation and `IngressClassName` both set can
+    be created now.
