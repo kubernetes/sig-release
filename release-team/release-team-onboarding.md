@@ -42,7 +42,7 @@ All members of the release team and anyone who attends Release Team meetings / k
 
 ### Familiarize with Prow commands
 
-Kubernetes uses [Prow](https://git.k8s.io/test-infra/prow/README.md) to manage CI automation. Issues and PRs are categorized by applying suitable labels, which helps in prioritization of that specific issue/PR during the release cycle. Learn more about the available labels and prow commands from here: https://prow.k8s.io/command-help
+Kubernetes uses [Prow](https://docs.prow.k8s.io/docs/overview/) to manage CI automation. Issues and PRs are categorized by applying suitable labels, which helps in prioritization of that specific issue/PR during the release cycle. Learn more about the available labels and prow commands from here: https://prow.k8s.io/command-help
 
 ## Role Leads
 
