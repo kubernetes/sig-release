@@ -3,11 +3,7 @@
 ## SIG Release Roadmap for 2022 and beyond
 
 This document contains the SIG Release Roadmap for 2022 and beyond. More
-detailed information can be found on the [SIG Release][0] and [Release
-Engineering][1] project boards.
-
-[0]: https://github.com/orgs/kubernetes/projects/23
-[1]: https://github.com/orgs/kubernetes/projects/30
+detailed information can be found on the corresponding project boards.
 
 ### Primary Focus
 
@@ -43,13 +39,7 @@ state.
 
    Enhancement: https://github.com/kubernetes/enhancements/issues/3027
 
-1. **Signing of release artifacts (Secure)**
-
-   Outcome: Being able to ship signed release artifacts, which includes
-   container images in the first iteration as well as all artifacts following
-   on.
-
-   Enhancement: https://github.com/kubernetes/enhancements/issues/3031
+   Project board: https://github.com/orgs/kubernetes/projects/138
 
 1. **Moving deb/rpm package builds to community infrastructure (Consumable)**
 
@@ -57,6 +47,16 @@ state.
    within community infrastructure.
 
    Enhancement: https://github.com/kubernetes/enhancements/issues/1731
+
+   Project board: https://github.com/orgs/kubernetes/projects/137
+
+1. **Signing of release artifacts (Secure)**
+
+   Outcome: Being able to ship signed release artifacts, which includes
+   container images in the first iteration as well as all artifacts following
+   on.
+
+   Enhancement: https://github.com/kubernetes/enhancements/issues/3031
 
 ### To be done (TODO)
 
