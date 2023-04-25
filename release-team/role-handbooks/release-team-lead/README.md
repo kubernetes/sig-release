@@ -127,8 +127,7 @@ The membership criteria is as follows:
 You cannot start too early on this!
 
 Once you have a release theme, there is a budget for you to create a release team gift as a thank you for each of your hard working team members.
-This gift can be a T-shirt, or a badge, but can be anything customizable within the budget, with a fun design of your choice and creation that relates to the release theme.
-Coordinate with [SIG-Release Chairs](https://github.com/kubernetes/community/tree/master/sig-release#chairs) (who have access to the CNCF Service Desk as well as know the budget) to put in an order, and make sure everyone gets their release swag gift.
+This gift traditionally has been a t-shirt with a fun design of your choice and creation that relates to the release theme. Email [projects@cncf.io](mailto:projects@cncf.io) to kick the process off once you have a design and a list of all the t-shirt sizes required. The CNCF can also provide stickers of the release theme/logo, if explicitly requested.
 
 ## Code Freeze
 With code exception in effect, you will likely have to assemble decision makers on specific pending PRs to assess whether the risk of inclusion is acceptable or not. Remember this is not you making a decision, it’s you helping SIGs follow the process, and ensuring there’s consensus. In the event of a contentious PR, you should err on the side of risk aversion. In extreme cases, you can defer to the steering committee, but that is extremely unlikely.
