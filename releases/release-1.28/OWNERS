@@ -1,0 +1,18 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+    - leonardpahlke # Emeritus Advisor
+    - gracenng # Release Team Lead
+    - helayoty # Lead Shadow
+    - marosset # Lead Shadow
+    - mickeyboxell # Lead Shadow
+    - neoaggelos # Lead Shadow
+
+reviewers:
+    - Atharva-Shinde # Enhancements Lead
+    - sanchita-07 # Release Notes Lead
+    - bradmccoydev # Communications Lead
+    - furkatgofurov7 # Bug Triage Lead
+    - mehabhalodiya # CI Signal Lead
+    - Rishit-dagli # Docs Lead
+ 
