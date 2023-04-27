@@ -1,0 +1,13 @@
+# Exception requests in 1.28
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Grace Nguyen ([@gracenng](https://github.com/gracenng)
+# Release Team Shadows : Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos))
+# / Heba Elayoty ([@helayoty](https://github.com/helayoty))
+# / Mark Rossetti ([@marosset](https://github.com/marosset))
+# / Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell))
+
+# Enhancements Freeze Exceptions requested in 1.28
+enhancementFreeze:
+
+
+# Code Freeze Exceptions requested in 1.28
