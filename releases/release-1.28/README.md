@@ -90,9 +90,9 @@ The 1.28 release cycle is as follows:
 
 Please refer to the [release phases document](../release_phases.md).
 
-[k8s127-calendar]: https://bit.ly/k8s-release-cal
-[Internal Contact Info]: https://bit.ly/k8s127-contacts
-[Retrospective Document]: https://bit.ly/k8s127-retro
+[k8s128-calendar]: https://bit.ly/k8s-release-cal
+[Internal Contact Info]: https://bit.ly/k8s128-contacts
+[Retrospective Document]: https://bit.ly/k8s128-retro
 
 [Enhancements Freeze]: ../release_phases.md#enhancements-freeze
 [Burndown]: ../release_phases.md#burndown
