@@ -8,14 +8,14 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.27
+# Kubernetes 1.28
 
 #### Links
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.28/README.md)
 * [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.28/release-team.md)
 * [Meeting Minutes](https://bit.ly/k8s128-releasemtg) (members of [release-team@] receive meeting invites)
-* [v1.27 Release Calendar][k8s128-calendar]
+* [v1.28 Release Calendar][k8s128-calendar]
 * Contact: [#sig-release] on slack, [release-team](mailto://release-team@kubernetes.io) on e-mail
 * [Internal Contact Info] (accessible only to members of [release-team@])
 
@@ -109,7 +109,7 @@ Please refer to the [release phases document](../release_phases.md).
 
 [master-blocking]: https://testgrid.k8s.io/sig-release-master-blocking#Summary
 [master-informing]: https://testgrid.k8s.io/sig-release-master-informing#Summary
-[1.27-blocking]: https://testgrid.k8s.io/sig-release-1.27-blocking#Summary
+[1.28-blocking]: https://testgrid.k8s.io/sig-release-1.28-blocking#Summary
 
 [exception requests]: ../EXCEPTIONS.md
 [release phases document]: ../release_phases.md
