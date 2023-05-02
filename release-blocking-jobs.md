@@ -47,6 +47,7 @@ meet the below criteria completely due to technical debt.  Blocking jobs must:
 - Run at least every 3 hours
 - Be able to pass 3 times in a row against the same commit
 - Be Owned by a SIG, or other team, that is responsive to addressing failures, and whose alert email is configured in the job.
+- Depend on accounts and resources owned by The Kubernetes Project through SIG K8s Infra, so the project has visibility into funding and management of resources
 - Have passed 75% of all of its runs in a week, and have failed for no more than 10 runs in a row
 
 *In the case of failures, there must be an issue in kubernetes/kubernetes
