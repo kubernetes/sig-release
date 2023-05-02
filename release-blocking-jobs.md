@@ -155,3 +155,23 @@ The general process to promote or demote jobs follows these steps:
 
 1. Open a kubernetes/test-infra PR that promotes or demotes the job to/from any
    of the sig-release boards.
+
+## Pull Request Blocking Jobs
+
+Blocking contributor PRs from merging is a serious consideration 
+and running a job on every PR push is expensive and potentially disruptive for
+contributors.
+Only after a job has met release blocking status AND shown to frequently go red 
+from bad code changes in Kubernetes should a job also be added to required on 
+all Kubernetes Pull Requests.
+
+When doing so you should contact SIG Testing and Release leads to discuss and
+provide evidence of the issues we've root caused that should've been caught prior
+to merge, and why existing presubmit coverage is not sufficient including new
+test cases within existing PR-blocking jobs (e.g. new unit and integreation tests)
+to regression test these bugs.
+
+If we catch a breakage in release-blocking but not PR blocking at most
+a few times per release, release-blocking is working as intended.
+Only when something is so poorly covered by presubmit that it breaks frequently
+should we escalate to requiring another PR-blocking job.
