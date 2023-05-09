@@ -2,7 +2,7 @@
 
 | **Team/Role** | **Lead Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
-| Release Team Lead | Grace Nguyen ([@gracenng](https://github.com/gracenng) / Slack: `@Grace Nguyen`) | Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos)/ Slack: `@Angelos Kolaitis`), Heba Elayoty ([@helayoty](https://github.com/helayoty) / Slack: `@helayoty`), Mark Rossetti ([@marosset](https://github.com/marosset) / Slack: `@Mark Rossetti`), Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell))|
+| Release Team Lead | Grace Nguyen ([@gracenng](https://github.com/gracenng) / Slack: `@Grace Nguyen`) | Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos) / Slack: `@Angelos Kolaitis`), Heba Elayoty ([@helayoty](https://github.com/helayoty) / Slack: `@helayoty`), Mark Rossetti ([@marosset](https://github.com/marosset) / Slack: `@Mark Rossetti`), Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) /  Slack: `@Mickey`) |
 | Emeritus Adviser | Leonard Pahlke ([@leonardpahlke](https://github.com/leonardpahlke) / Slack: `@leonardpahlke`) | N/A |
 | Enhancements | Atharva Shinde ([@Atharva-Shinde](https://github.com/Atharva-Shinde) / Slack: `@Atharva-Shinde`) | |
 | Release Notes | Sanchita Mishra ([@sanchita-07](https://github.com/sanchita-07) / Slack: `@Sanchita Mishra`) | |
