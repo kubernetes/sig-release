@@ -7,7 +7,7 @@
 | Enhancements | Atharva Shinde ([@Atharva-Shinde](https://github.com/Atharva-Shinde) / Slack: `@Atharva-Shinde`) | |
 | Release Notes | Sanchita Mishra ([@sanchita-07](https://github.com/sanchita-07) / Slack: `@Sanchita Mishra`) | |
 | Communications | Brad McCoy ([@bradmccoydev](https://github.com/bradmccoydev) / Slack: `@Brad McCoy` ) | |
-| Bug Triage | Furkat Gofurov ([@furkatgofurov7](https://github.com/furkatgofurov7) / Slack: `@Furkat Gofurov`) | |
+| Bug Triage | Furkat Gofurov ([@furkatgofurov7](https://github.com/furkatgofurov7) / Slack: `@Furkat Gofurov`) | Anhelina Zelyk ([zelenushechka](https://github.com/zelenushechka) / Slack: `@Anhelina`), Mofi Rahman ([moficodes](https://github.com/moficodes) / Slack: `@mofi`), Parthvi Vala ([valaparthvi](https://github.com/valaparthvi) / Slack: `@valaparthvi`), Yigit Demirbas ([hailkomputer](https://github.com/hailkomputer) / Slack: `@Yigit Demirbas`) |
 | CI Signal | Meha Bhalodiya ([@mehabhalodiya](https://github.com/mehabhalodiya) / Slack: `@Meha Bhalodiya`) | |
 | Docs | Rishit Dagli ([@Rishit-dagli](https://github.com/Rishit-dagli) / Slack: `@Rishit Dagli`) | |
 | Branch Manager | | |
