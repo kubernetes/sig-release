@@ -90,6 +90,7 @@ Join the following Kubernetes Slack channels:
 
 - [#sig-release](https://kubernetes.slack.com/messages/sig-release)
 - [#enhancements](https://kubernetes.slack.com/messages/enhancements)
+- [#release-enhancements](https://kubernetes.slack.com/messages/release-enhancements)
 - (optional) [#prod-readiness](https://kubernetes.slack.com/messages/prod-readiness)
 - (optional) [#release-management](https://kubernetes.slack.com/messages/release-management)
 
@@ -196,6 +197,10 @@ It is important that this process be followed and documentation remain up-to-dat
 - Stay on top of issues and continually monitor them twice a week and look at attached PRs. As Code Freeze gets closer, if there are PRs that have not been merged, move the issue to `At Risk`. If there is no activity, ping issue owners on either the issue or the k/k PR.
 - Monitor issues that are `At Risk` closely, almost daily. Code Freeze means no new code and keeping tabs on the status of the k/k PR is critical to planning. Make decisions if the enhancement should be deferred and work with SIG Leads to determine the best path forward.
 
+#### Before Code Freeze
+
+All enhancements going into the release must have their code pull requests in a merge-ready state with approved and lgtm labels applied. This includes tests, and docs PRs opened by the due date. Due to the Prow queue, this may mean that approved PRs merge shortly after the deadline.
+
 #### Week of Code Freeze
 
 - Remove any enhancements that failed to merge their code by the Code freeze deadline.
@@ -284,7 +289,7 @@ Also please let me know if there are other PRs in k/k we should be tracking for 
 As always, we are here to help if any questions come up. Thanks!
 ```
 
-#### SIG Outreach Templates
+#### SIG Outreach Templates (optional)
 
 For SIGs which have opted to include Enhancements in the current release:
 
