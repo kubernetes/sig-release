@@ -10,7 +10,7 @@
 | Bug Triage | Furkat Gofurov ([@furkatgofurov7](https://github.com/furkatgofurov7) / Slack: `@Furkat Gofurov`) | Anhelina Zelyk ([zelenushechka](https://github.com/zelenushechka) / Slack: `@Anhelina`), Mofi Rahman ([moficodes](https://github.com/moficodes) / Slack: `@mofi`), Parthvi Vala ([valaparthvi](https://github.com/valaparthvi) / Slack: `@valaparthvi`), Yigit Demirbas ([hailkomputer](https://github.com/hailkomputer) / Slack: `@Yigit Demirbas`) |
 | CI Signal | Meha Bhalodiya ([@mehabhalodiya](https://github.com/mehabhalodiya) / Slack: `@Meha Bhalodiya`) | |
 | Docs | Rishit Dagli ([@Rishit-dagli](https://github.com/Rishit-dagli) / Slack: `@Rishit Dagli`) | |
-| Branch Manager | | |
+| Branch Manager | Arnaud Meukam ([@ameukam](https://github.com/ameukam) / Slack: `@Arnaud`) | |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
