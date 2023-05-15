@@ -48,6 +48,9 @@ This outline can be used as reference for writing up the release blog. The follo
     * Kubernetes blog
 
 ## Latest Release Blogs as Reference
+* [Kubernetes 1.26: Electrifying](https://kubernetes.io/blog/2022/12/09/kubernetes-v1-26-release/)
+* [Kubernetes 1.25: Combiner](https://kubernetes.io/blog/2022/08/23/kubernetes-v1-25-release/)
+* [Kubernetes 1.24: Stargazer](https://kubernetes.io/blog/2022/05/03/kubernetes-1-24-release-announcement/)
 * [Kubernetes 1.23: The Next Frontier](https://kubernetes.io/blog/2021/12/07/kubernetes-1-23-release-announcement/)
 * [Kubernetes 1.22: Reaching New Peaks](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/)
 * [Kubernetes 1.21: Power to the Community](https://kubernetes.io/blog/2021/04/08/kubernetes-1-21-release-announcement/)
