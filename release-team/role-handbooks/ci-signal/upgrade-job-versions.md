@@ -39,23 +39,23 @@ aka trust the CI
 ci/foo versions live in k8s-release-dev:
 ```shell
 $ for suffix in beta stable1 stable2 stable3; do
-  echo ci/k8s-$suffix: $(gsutil cat gs://k8s-release-dev/ci/k8s-$suffix.txt);
+  echo ci/k8s-$suffix: $(curl -sL https://dl.k8s.io/ci/k8s-$suffix.txt);
 done
 
-ci/k8s-beta: v1.12.0-beta.1.129+1d58f1aebfe1e3
-ci/k8s-stable1: v1.11.3-beta.0.71+a4529464e4629c
-ci/k8s-stable2: v1.10.8-beta.0.33+a963fce72fed31
-ci/k8s-stable3: v1.9.11-beta.0.36+06bf888123ca89
+ci/k8s-beta: v1.27.1-19+237d7362345728
+ci/k8s-stable1: v1.27.1-89+2555e0f90e80a1
+ci/k8s-stable2: v1.26.4-64+8b09b36478f65c
+ci/k8s-stable3: v1.25.9-45+0a7c2a9ad8e0c4
 ```
 
-release/foo versions live in kubernetes-release:
+release/foo versions live in kubernetes release:
 ```shell
 $ for prefix in latest stable; do
-  echo release/$prefix-1.11: $(gsutil cat gs://kubernetes-release/release/$prefix-1.11.txt)
-  done
+  echo release/$prefix-1.23: $(curl -sL https://dl.k8s.io/release/$prefix-1.23.txt)
+done
 
-release/latest-1.11: v1.11.4-beta.0
-release/stable-1.11: v1.11.3
+release/latest-1.26: v1.23.18-rc.0
+release/stable-1.26: v1.23.17
 ```
 references:
 - https://github.com/kubernetes/test-infra#release-branch-jobs--image-validation-jobs

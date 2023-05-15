@@ -174,10 +174,10 @@ This can be done in one of two ways:
 - The `krel announce` sub command -- A [`SENDGRID_API_KEY`](https://sendgrid.com/docs/ui/account-and-settings/api-keys) will need to be configured correctly on your environment for this to work
   - If you haven't used SendGrid before, SendGrid might require you to go through the [Sender Identity Verification process][sendgrid-identity-verification] before you can send emails/announcements
 - Manually -- Send the email notification manually to [kubernetes-announce][k-announce-list] and [kubernetes-dev][k-dev-list]. You can take contents of the announcement in one of the following ways:
-  - By taking the contents from the Google Cloud Bucket: `gs://kubernetes-release/archive/anago-vX.Y.0-{alpha,beta,rc}.z`:
+  - By taking the contents from the Release Cloud Bucket: `https://dl.k8s.io/archive/anago-vX.Y.0-{alpha,beta,rc}.z/{announcement-subject.txt,announcement.html}`:
   - By using `krel announce` command with the `--print-only` flag
-  - [Example subject](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement-subject.txt)
-  - [Example body](https://gcsweb.k8s.io/gcs/kubernetes-release/archive/anago-v1.17.0-rc.2/announcement.html)
+  - [Example subject](https://dl.k8s.io/archive/anago-v1.27.0-rc.1/announcement-subject.txt)
+  - [Example body](curl -L https://dl.k8s.io/archive/anago-v1.27.0-rc.1/announcement.html)
 
 ```shell
 # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds and confirm with them whether Debian and RPM repositories have the packages before sending the email
