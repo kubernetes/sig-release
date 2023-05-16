@@ -228,13 +228,13 @@ Find .5-1 hour of time to meet with shadows and explain the release process. Wal
 
    ⚠️ Add the label `do-not-merge/hold` to the PR.
 
-1. First PR in `dev-[future release]`: Update config.toml to show `[future release]` as the current version and add the `[future release]` entry to the drop-down, e.g: [config.toml diff](https://github.com/kubernetes/website/pull/27223)
+1. First PR in `dev-[future release]`: Update hugo.toml to show `[future release]` as the current version and add the `[future release]` entry to the drop-down, e.g: [hugo.toml diff](https://github.com/kubernetes/website/pull/40231)
 
     The intent is that your new branch should be showing as the current version IN the new branch...
 
 ### Update the website configuration ahead of the release
 
-Update the main `config.toml` based on the version on the `main` branch. Open a PR for these changes against the `dev-[future release]` branch (which should already exist - this is a good check!)
+Update the main `hugo.toml` based on the version on the `main` branch. Open a PR for these changes against the `dev-[future release]` branch (which should already exist - this is a good check!)
 
 ```shell
 # Step 1
@@ -250,10 +250,10 @@ git fetch upstream dev-[future release]
 git checkout --track upstream/dev-[future release]
 git checkout -b config-toml-[future release] # change for the release you're making, for example config-toml-1.21
 # Step 3
-# Edit config.toml to make the changes described above
+# Edit hugo.toml to make the changes described above
 # save your changes
-git add config.toml
-git commit -m "Updated config.toml for [future release] release"
+git add hugo.toml
+git commit -m "Updated hugo.toml for [future release] release"
 # Step 4
 # Check things look right
 git status
