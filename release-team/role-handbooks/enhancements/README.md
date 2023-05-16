@@ -178,7 +178,7 @@ It is important that this process be followed and documentation remain up-to-dat
 - On Freeze day, send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that freeze has happened and upcoming key dates. Examples [1](https://groups.google.com/g/kubernetes-dev/c/JDM7bNKvhqQ/m/8S7BXtXPBQAJ).
 - Remove any Enhancements that failed to meet the criteria by the Enhancement freeze deadline.
   - Set their **Enhancement Status** in the board to `Removed from Milestone`.
-
+  - Remove the milestone.
     ```text
     /milestone clear
     ```
@@ -197,11 +197,13 @@ It is important that this process be followed and documentation remain up-to-dat
 
 **All** enhancements going into the release must have their pull requests in a merge-ready state with approved and lgtm labels applied. This includes tests, and docs PRs opened by the due date. Due to the Prow queue, this may mean that approved PRs merge shortly after the deadline.
 
+Read https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#code-freeze for more information on the Code Freeze.
+
 #### Week of Code Freeze
 
 - Remove any enhancements that failed to merge their code by the Code freeze deadline.
   - Set their status in the sheet to `Removed from Milestone`.
-
+  - Remove the milestone.
     ```text
     /milestone clear
     ```
