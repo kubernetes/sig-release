@@ -177,7 +177,7 @@ This can be done in one of two ways:
   - By taking the contents from the Release Cloud Bucket: `https://dl.k8s.io/archive/anago-vX.Y.0-{alpha,beta,rc}.z/{announcement-subject.txt,announcement.html}`:
   - By using `krel announce` command with the `--print-only` flag
   - [Example subject](https://dl.k8s.io/archive/anago-v1.27.0-rc.1/announcement-subject.txt)
-  - [Example body](curl -L https://dl.k8s.io/archive/anago-v1.27.0-rc.1/announcement.html)
+  - [Example body](https://dl.k8s.io/archive/anago-v1.27.0-rc.1/announcement.html)
 
 ```shell
 # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds and confirm with them whether Debian and RPM repositories have the packages before sending the email
