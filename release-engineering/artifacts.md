@@ -7,6 +7,7 @@
 | kube-controller-manager | ✅  |  ✅   |  ✅   |   ✅    |  ✅   |
 | kube-proxy              | ✅  |  ✅   |  ✅   |   ✅    |  ✅   |
 | kube-scheduler          | ✅  |  ✅   |  ✅   |   ✅    |  ✅   |
+| kubectl                 | ✅  |  ✅   |  ✅   |   ✅    |  ✅   |
 
 ## Storage
 
