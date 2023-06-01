@@ -1,0 +1,4 @@
+pr: 117495
+releasenote:
+  text: Fixed a regression in `kubectl` and `client-go` discovery when configured
+    with a server URL other than the root of a server
