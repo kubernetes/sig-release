@@ -1,0 +1,4 @@
+pr: 117214
+releasenote:
+  text: A `v2-level` info log will be added, which will output the details of the
+    pod being preempted, including victim and preemptor

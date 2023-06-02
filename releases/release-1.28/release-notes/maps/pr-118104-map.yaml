@@ -1,0 +1,4 @@
+pr: 118104
+releasenote:
+  text: Fixed a bug at `kube-apiserver` start where `APIService` objects for custom
+    resources could be deleted and recreated.

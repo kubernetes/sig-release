@@ -1,0 +1,4 @@
+pr: 117448
+releasenote:
+  text: External credential provider plugins will now have their standard error output
+    logged by kubelet upon failures.
