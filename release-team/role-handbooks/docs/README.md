@@ -1,4 +1,4 @@
-# Kubernetes Docs Lead and Shadow Handbook
+# Kubernetes Docs Role Handbook
 - [Overview](#overview)
     - [Common Terms](#common-terms)
 - [Docs Lead Responsibilities](#docs-lead-responsibilities)
