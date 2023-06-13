@@ -1,0 +1,6 @@
+pr: 117930
+releasenote:
+  text: |-
+    The helping message of commands which have sub-commands is now clearer and more instructive. It will show the full command instead of `kubectl <command> --help ...`
+
+    Changed `kubectl create secret --help` description. There will be a short introduction to the three secret types and clearer guidance on how to use the command.

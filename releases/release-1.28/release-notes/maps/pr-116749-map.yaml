@@ -1,0 +1,4 @@
+pr: 116749
+releasenote:
+  text: Added additional validation for endpoint IP configuration while iterating
+    through queried endpoint list.

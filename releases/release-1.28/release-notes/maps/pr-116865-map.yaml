@@ -1,0 +1,3 @@
+pr: 116865
+releasenote:
+  text: 'Fixed `creationTimestamp: null` causing unnecessary writes to etcd.'

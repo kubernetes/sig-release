@@ -1,0 +1,5 @@
+pr: 118143
+releasenote:
+  text: CephFS volume plugin (`kubernetes.io/cephfs`) has been deprecated in this
+    release and will be removed in a subsequent release. The alternative is to use
+    the CephFS CSI driver (https://github.com/ceph/ceph-csi/) in your Kubernetes cluster.

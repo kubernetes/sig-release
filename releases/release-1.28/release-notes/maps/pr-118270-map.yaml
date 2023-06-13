@@ -1,0 +1,4 @@
+pr: 118270
+releasenote:
+  text: |-
+    `kubeadm`: will now throw warnings instead of errors for deprecated feature gates.

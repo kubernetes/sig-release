@@ -1,0 +1,4 @@
+pr: 117877
+releasenote:
+  text: Promoted `ServiceNodePortStaticSubrange` feature gate to beta, and it will be enabled by
+    default.

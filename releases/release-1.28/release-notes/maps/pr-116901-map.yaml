@@ -1,3 +1,3 @@
 pr: 116901
 releasenote:
-  text: Removed `GAed` feature gate `KubeletCredentialProviders`
+  text: Removed GA'ed feature gate `KubeletCredentialProviders`.

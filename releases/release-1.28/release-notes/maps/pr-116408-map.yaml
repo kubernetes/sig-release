@@ -1,0 +1,3 @@
+pr: 116408
+releasenote:
+  text: Kubelet will now skip pod resource checks when the request is zero.

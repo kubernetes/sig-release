@@ -1,0 +1,9 @@
+pr: 115554
+releasenote:
+  text: |-
+    `kube-controller-manager`: The `LegacyServiceAccountTokenCleanUp` feature gate
+    is now available as alpha (off by default). When enabled, the `legacy-service-account-token-cleaner`
+    controller loop removes service account token secrets that have not been used
+    in the time specified by `--legacy-service-account-token-clean-up-period` (defaulting
+    to one year), **and are** referenced from the `.secrets` list of a ServiceAccount
+    object, **and are not** referenced from pods.

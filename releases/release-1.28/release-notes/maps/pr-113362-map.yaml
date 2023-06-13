@@ -1,0 +1,5 @@
+pr: 113362
+releasenote:
+  text: |-
+    `client-go`: Improved memory use of reflector caches when watching large numbers
+    of objects which do not change frequently.

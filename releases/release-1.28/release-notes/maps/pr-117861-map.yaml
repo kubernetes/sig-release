@@ -1,4 +1,5 @@
 pr: 117861
 releasenote:
-  text: 'kubeadm: fixed a bug where file copy(backup) could not be executed correctly
-    on Windows platform during upgrade'
+  text: |-
+    `kubeadm`: fixed a bug where file copy(backup) could not be executed correctly
+    on Windows platform during upgrade.

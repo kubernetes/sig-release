@@ -1,0 +1,4 @@
+pr: 116208
+releasenote:
+  text: The short names `fs` and `plc` were introduced for the resources `flowschemas`
+    and `prioritylevelconfigurations`, respectively.

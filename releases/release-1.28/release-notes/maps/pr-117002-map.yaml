@@ -1,0 +1,5 @@
+pr: 117002
+releasenote:
+  text: Fixed issue where `kubectl-convert` would fail when encountering resources
+    that could not be converted to the specified api version. New behavior is to warn
+    the user of the failed conversions and continue to convert the remaining resources.

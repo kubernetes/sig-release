@@ -1,0 +1,8 @@
+pr: 117660
+releasenote:
+  text: |-
+    `kubeadm`: introduced a new feature gate `UpgradeAddonsBeforeControlPlane` to
+    fix a kube-proxy skew policy misalignment. Its default value is `false`. Upgrade
+    of the CoreDNS and kube-proxy addons will now trigger after all the control plane
+    instances have been upgraded, unless the fearure gate is set to true. This feature
+    gate will be removed in a future release.
