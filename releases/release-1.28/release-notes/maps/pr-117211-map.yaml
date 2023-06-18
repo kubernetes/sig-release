@@ -1,0 +1,5 @@
+pr: 117211
+releasenote:
+  text: |-
+    `kube-apiserver` added two new metrics `authorization_attempts_total` and `authorization_duration_seconds`
+    that allow users to monitor requests to authorization webhooks, split by result.

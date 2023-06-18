@@ -1,0 +1,4 @@
+pr: 117835
+releasenote:
+  text: |-
+    `kubeadm`: `crictl pull` should use `-i` to set the image service endpoint.

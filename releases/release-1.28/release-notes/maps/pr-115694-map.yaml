@@ -1,0 +1,3 @@
+pr: 115694
+releasenote:
+  text: Fixed bug where explain was not properly respecting jsonpaths.

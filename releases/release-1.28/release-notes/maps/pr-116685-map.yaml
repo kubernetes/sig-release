@@ -1,0 +1,5 @@
+pr: 116685
+releasenote:
+  text: |-
+    `kube-apiserver` will now always remove its endpoint from Kubernetes service during
+    graceful shutdown (even if it's the only/last one).

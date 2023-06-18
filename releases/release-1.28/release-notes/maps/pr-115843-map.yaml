@@ -1,0 +1,3 @@
+pr: 115843
+releasenote:
+  text: Removed withdrawn feature `NetworkPolicyStatus`.

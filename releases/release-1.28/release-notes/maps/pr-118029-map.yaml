@@ -1,0 +1,3 @@
+pr: 118029
+releasenote:
+  text: Code blocks in `kubectl {$COMMAND}--help` will move right by 3 indentation.

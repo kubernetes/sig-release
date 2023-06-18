@@ -1,0 +1,4 @@
+pr: 117687
+releasenote:
+  text: |-
+    `klog` text output now uses JSON as encoding for structs, maps and slices.

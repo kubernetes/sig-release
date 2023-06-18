@@ -1,0 +1,4 @@
+pr: 113209
+releasenote:
+  text: |-
+    `kubelet` will ensure /etc/hosts file is mode 0644 regardless of umask.
