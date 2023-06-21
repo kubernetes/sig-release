@@ -148,15 +148,15 @@ The bug triage board has a number of views to simplify issue management.
 
 Whenever you find an issue or PR that needs to be finished or kicked out of the release, try the following escalation path:
 
-1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months. Are you still expecting to complete it for 1.17?". It's helpful to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
-2. Send a message to relevant SIG Slack channel or mailing list about the problem: It's helpful to directly @ mention the relevant SIG Leads / Owners, and to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.17?"
+1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months. Are you still expecting to complete it for 1.28?". It's helpful to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` aliases, e.g. "@kubernetes/sig-node-bugs" or "@kubernetes/sig-network-pr-reviews".
+2. Send a message to relevant SIG Slack channel or mailing list about the problem: It's helpful to directly @ mention the relevant SIG Leads / Owners, and to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any attention, are they still valid for 1.28?"
 3. Message individual owners and reviewers directly via Slack. If owners and reviewers are unresponsive, you can reach out to the SIG leads using the `kubernetes-sig-${name}-leads@googlegroups.com` mailing lists.
 4. Escalate to the Release Team Lead with suggestions on what to do with non-responsive issues.
 
 ## Timeline
 
 ### Onboarding Session (week 1)
-In the first week of the release cycle, the Bug Triage Lead will organize a onboarding session with the shadows to go over general responsibilities and expectations.
+In the first week of the release cycle, the Bug Triage Lead will organize an onboarding session with the shadows to go over general responsibilities and expectations.
 
 ### Early Release
 
@@ -175,7 +175,7 @@ This is the best stage to get involved with any automation work that can ease th
 
 In order to make work at later stages easier, it can also be beneficial to start pinging stale or long-running issues / PRs, so that an early assessment can be made if these should be moved out of the current release cycle's milestone.
 
-It is also important to make sure all membership requirements and permissions needed for the Shadows are in place, for example that they have org access and are added as `milestone-maintainers`.
+It is also important to make sure all membership requirements and permissions needed for the members of the team are in place, for example that they all have org access and only Lead is added to `milestone-maintainers`.
 
 #### Setting up the Bug Triage Project Board
 
@@ -192,25 +192,25 @@ At the beginning of the cycle, the Bug Triage Lead should prepare the bug triage
 You can use the following queries to get yourself familiarized with issues/PRs targeting the release:
 
 * Issues which could require early intervention
-  - [Issues in the v1.17 milestone with the `priority/critical-urgent` label](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.17+label%3Apriority%2Fcritical-urgent): `is:open is:issue milestone:v1.17 label:priority/critical-urgent`
+  - [Issues in the v1.28 milestone with the `priority/critical-urgent` label](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.28+label%3Apriority%2Fcritical-urgent): `is:open is:issue milestone:v1.28 label:priority/critical-urgent`
 
-  - [PRs in the v1.17 milestone with the `priority/critical-urgent` label](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.17+label%3Apriority%2Fcritical-urgent): `is:open is:pr milestone:v1.17 label:priority/critical-urgent`
+  - [PRs in the v1.28 milestone with the `priority/critical-urgent` label](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.28+label%3Apriority%2Fcritical-urgent): `is:open is:pr milestone:v1.28 label:priority/critical-urgent`
 
-  - [Issues in the v1.17 milestone which haven't been updated since 2019-09-01](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.17+updated%3A%3C2019-09-01): `is:open is:issue milestone:v1.17 updated:<2019-09-01`
+  - [Issues in the v1.28 milestone which haven't been updated since 2023-06-01](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+milestone%3Av1.28+updated%3A%3C2023-06-01): `is:open is:issue milestone:v1.28 updated:<2023-06-01`
 
-  - [PRs in the v1.17 milestone which haven't been updated since 2019-09-01](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.17+updated%3A%3C2019-09-01): `is:open is:pr milestone:v1.17 updated:<2019-09-01`
+  - [PRs in the v1.28 milestone which haven't been updated since 2023-06-01](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+milestone%3Av1.28+updated%3A%3C2023-06-01): `is:open is:pr milestone:v1.28 updated:<2023-06-01`
 
 * Enhancements:
 
-  - [k/enhancements repo milestone enhancements](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.17) `is:issue is:open milestone:v1.17 repo:kubernetes/enhancements`
+  - [k/enhancements repo milestone enhancements](https://github.com/kubernetes/enhancements/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.28) `is:issue is:open milestone:v1.28 repo:kubernetes/enhancements`
 
-  - [k/k main repo milestone enhancements](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.17+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.17 label:kind/feature repo:kubernetes/kubernetes`
+  - [k/k main repo milestone enhancements](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.28+label%3Akind%2Ffeature)`is:issue is:open milestone:v1.28 label:kind/feature repo:kubernetes/kubernetes`
 
 #### Reports
 
 It is expected that at least one member in the Bug Triage role should be present for all release team meetings to provide the report. At this stage, the report should contain the number of `priority/critical-urgent` issues/PRs and what's their status.
 
-The status is usually going to be green or yellow depending on the number of `priority/critical-urgent` issues/PRs and are those going to be fixed in a timely manner. The number of issues/PRs is mostly irrelevant because it's changing rapidly.
+The status is usually going to be green, yellow or red depending on the number of `priority/critical-urgent` issues/PRs and are those going to be fixed in a timely manner. The number of issues/PRs is mostly irrelevant because it's changing rapidly.
 
 ### Mid-Release Cycle
 
@@ -219,33 +219,33 @@ This stage lasts from around week 6 until the code freeze starts (usually week 9
 There are three main tasks that should be done:
 
 - Ensure that issues and PRs targeting the release have a correct *milestone* and *priority* labels
-  - Linked issues and PRs should have the same `priority` and `kind` labels and the milestone
+  - Linked issues and PRs tracked in the current milestone should have the `priority` and `kind` labels
 - Ensure that `priority/critical-urgent` issues and PRs are not blocked
-  - If you find such `priority/critical-urgent` issue/PR you should ping the owner and owner SIGs, as well as, alert the release team leads.
-- Ping all issues and PRs to remind contributors and SIG leads that we are about one month away from the code freeze and what does it mean.
+  - If you find such `priority/critical-urgent` issue/PR, you should ping the owner and owner SIGs, as well as, alert the release team leads.
+- Ping all issues and PRs to remind contributors and SIG leads informing about code freeze approaching in a month or so.
   - You may want to ping issues at least two times to ensure deadlines are communicated correctly, usually once this stage starts and a couple of days before the code freeze starts.
 
-At the beginning, you should prioritize pinging issues/PRs that haven't been updated for a longer time. You can use the following queries: [`is:issue is:open milestone:v1.17 sort:updated-asc`](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.17+sort%3Aupdated-asc) and [`is:pr is:open milestone:v1.17 sort:updated-asc`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.17+sort%3Aupdated-asc).
+At the beginning, you should prioritize pinging issues/PRs that haven't been updated for a longer time. You can use the following queries: [`is:issue is:open milestone:v1.28 sort:updated-asc`](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.28+sort%3Aupdated-asc) and [`is:pr is:open milestone:v1.28 sort:updated-asc`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+sort%3Aupdated-asc).
 
 For pinging, the following template can be used:
 
 ```
 Hello! This <issue|PR> has not been updated for a long time, so I'd like to check what's the status. The code freeze is starting <insert date> (about <number of weeks> from now) and while there is still plenty of time, we want to ensure that each PR has a chance to be merged on time.
 
-As the PR is tagged for 1.17, is it still planned for this release?
+As the PR is tagged for 1.28, is it still planned for this release?
 ```
 
 #### Reports
 
 Beside the number of the `priority/critical-urgent` issues, you can start reporting the number of `priority/important-soon` issues and how good the response rate is for pinged issues.
 
-Similar to the early release phase, the status (green/yellow/red) depends on the number of release blocking issues/PRs. You might want to declare yellow or red if there are big number of release blocking/`priority/critical-urgent` issues and/or if they're being blocked for any reason.
+Similar to the early release phase, the status (green/yellow/red) depends on the number of release blocking `label:release-blocker` issues/PRs. You might want to declare yellow or red if there are big number of release blocking/`priority/critical-urgent` issues and/or if they're being blocked for any reason.
 
 ### Code Freeze
 
-One of the main purposes of Code Freeze is to ensure that the code base is stable and that most of tests are passing (CI Signal is green). At this point, only release-blocking issues and PRs (usually bug fixes/`kind/bug`) are considered to be merged.
+One of the main purposes of Code Freeze is to ensure that the code base is stable and that most of tests are passing (CI Signal is green). At this point, only release-blocking issues and PRs (usually bug fixes: `kind/bug`) are considered to be merged.
 
-Your responsibility here is to actively watch for any new issues/PRs targeting the milestone, monitor the status of existing issues/PRs, and filter the milestone by removing issues/PRs that are not needed for this release cycle.
+Your responsibility here is to actively watch for any new issues/PRs targeting the milestone, monitor the status of existing issues/PRs, and filter the milestone by removing issues/PRs that are out of this release cycle.
 
 #### Day Of The Code Freeze
 
@@ -258,10 +258,10 @@ The day after the Code Freeze has begun, the Bug Triage team will wait to see if
 When the code freeze starts, the highest priority has the PRs which had `approved` and `lgtm` labels before the code freeze started and are in the milestones. Depending on the merge queue length, it might be proposed to hold PRs that have `approved` and `lgtm`, but are not in the milestone (using the following query [`is:pr is:open no:milestone label:approved label:lgtm`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+no%3Amilestone+label%3Aapproved+label%3Algtm)).
 
 You can monitor PRs using the following queries:
-- [PRs supposed to be in the merge pool (`is:pr is:open milestone:v1.17 label:approved label:lgtm -label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.17+label%3Aapproved+label%3Algtm+-label%3Ado-not-merge%2Fhold)
-- [PRs that have `approved` and `lgtm`, but are on-hold (`is:pr is:open milestone:v1.17 label:approved label:lgtm label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.17+label%3Aapproved+label%3Algtm+label%3Ado-not-merge%2Fhold+)
-- [PRs that doesn't have `approved` but have `lgtm` (`is:pr is:open milestone:v1.17 -label:approved label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.17+-label%3Aapproved+label%3Algtm)
-- [PRs that doesn't have `lgtm` but have `approved` (`is:pr is:open milestone:v1.17 label:approved -label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.17+label%3Aapproved+-label%3Algtm+)
+- [PRs supposed to be in the merge pool (`is:pr is:open milestone:v1.28 label:approved label:lgtm -label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+label%3Algtm+-label%3Ado-not-merge%2Fhold)
+- [PRs that have `approved` and `lgtm`, but are on-hold (`is:pr is:open milestone:v1.28 label:approved label:lgtm label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+label%3Algtm+label%3Ado-not-merge%2Fhold+)
+- [PRs that doesn't have `approved` but have `lgtm` (`is:pr is:open milestone:v1.28 -label:approved label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+-label%3Aapproved+label%3Algtm)
+- [PRs that doesn't have `lgtm` but have `approved` (`is:pr is:open milestone:v1.28 label:approved -label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+-label%3Algtm+)
 
 #### Once the Code Freeze starts until one week later
 
@@ -273,7 +273,7 @@ You can still use the queries from the previous section at this stage to monitor
 
 > **_NOTE:_** When changing or removing milestones, be sure to communicate _why_ the change is being made to avoid confusion. The issue/PR author may not always be familiar with all the processes and deadlines surrounding code freeze, and we want contributing to be a friendly and transparent process.
 
-At this stage, the Bug Triage team should start removing issues/PRs from the milestone. Before doing so, the Bug Triage Lead should confirm the intention with the Release Team Lead.
+At this stage, the Bug Triage Lead should start removing issues/PRs from the milestone. Before doing so, the Bug Triage Lead should confirm the intention with the Release Team Lead.
 
 If the issue/PR got confirmation that it's planned for the next milestone or there was recent activity, it should be moved to the next milestone using the `/milestone v1.xx` command.
 
@@ -311,7 +311,7 @@ Most important query at this point is a plain `milestone:v1.xx`, which includes 
 Additionally for tracking recent changes to master and the release branch,
 eg:
 * [master branch commits](https://github.com/kubernetes/kubernetes/commits/master/)
-* [release-1.17 branch commits](https://github.com/kubernetes/kubernetes/commits/release-1.17)
+* [release-1.28 branch commits](https://github.com/kubernetes/kubernetes/commits/release-1.28)
 
 #### Reports
 
