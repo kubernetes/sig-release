@@ -1,0 +1,5 @@
+pr: 118460
+releasenote:
+  text: Fixed component status calling etcd health endpoint over http which exposed
+    kubernetes to the risk of complete watch starvation and is inconsistent with other
+    etcd probing done by `kube-apiserver`.
