@@ -360,7 +360,7 @@
   },
   "115835": {
     "commit": "6a79a8a57c0924343fba2ffe9aa6cad19a3e257a",
-    "text": "Fixed the preStop hook, will block the pod termination grace period",
+    "text": "Fixed the `preStop` hook. This will now block the pod termination grace period",
     "markdown": "Fixed the preStop hook, will block the pod termination grace period ([#115835](https://github.com/kubernetes/kubernetes/pull/115835), [@HirazawaUi](https://github.com/HirazawaUi))",
     "author": "HirazawaUi",
     "author_url": "https://github.com/HirazawaUi",
@@ -4011,25 +4011,6 @@
     ],
     "feature": true,
     "duplicate": true
-  },
-  "118342": {
-    "commit": "83d30f44631f8ef0e4b0d56c1789f540b5130571",
-    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e\n\n```",
-    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e\n  \n  ``` ([#118342](https://github.com/kubernetes/kubernetes/pull/118342), [@yt2985](https://github.com/yt2985))",
-    "author": "yt2985",
-    "author_url": "https://github.com/yt2985",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118342",
-    "pr_number": 118342,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "testing"
-    ],
-    "do_not_publish": true
   },
   "118384": {
     "commit": "bd0ac4cba33f40195b4ffab5463f2b5397216400",
