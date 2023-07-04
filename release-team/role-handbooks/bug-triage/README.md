@@ -8,11 +8,14 @@
     - [Additional Requirements for Shadows](#additional-requirements-for-shadows)
     - [Additional Requirements for Leads](#additional-requirements-for-leads)
   - [Getting Started](#getting-started)
+    - [Bug Triage Project Board](#bug-triage-project-board)
+      - [Information on the Bug Triage Board](#information-on-the-bug-triage-board)
+      - [Bug Triage Board Views](#bug-triage-board-views)
     - [How to Escalate](#how-to-escalate)
   - [Timeline](#timeline)
+    - [Onboarding Session (week 1)](#onboarding-session-week-1)
     - [Early Release](#early-release)
-      - [Setting up the Bug Triage Spreadsheet](#setting-up-the-bug-triage-spreadsheet)
-      - [Updating the Bug Triage Spreadsheet](#updating-the-bug-triage-spreadsheet)
+      - [Setting up the Bug Triage Project Board](#setting-up-the-bug-triage-project-board)
       - [Sample Searches](#sample-searches)
       - [Reports](#reports)
     - [Mid-Release Cycle](#mid-release-cycle)
@@ -97,6 +100,50 @@ Before starting, the Bug Triage members should refer to the following guides to 
 - [the documentation for issue `kind` labels](https://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label)
 - [the documentation for defining priority and `priority` labels](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#step-three-define-priority).
 
+### Bug Triage Project Board
+
+The Bug Triage team is using a [GitHub project board](https://github.com/orgs/kubernetes/projects/80) to track the current status of all issues and PRs targeting the release, their priorities, and to distribute the work among the Bug Triage team.
+
+Bug triage team members are expected to assign themselves as the `Responsible` person to track an issue to the extent of their time availability throughout the cycle. The bug triage team should keep an eye on the board for new issues/PRs and make sure they are tracked.
+
+The project board is public so that both the release team and anyone interested from the community can stay updated about the current status of issues and PRs that are targetting the release. Write access to the board is limited to members of [@kubernetes/release-team-bug-triage](https://github.com/orgs/kubernetes/teams/release-team-bug-triage).
+
+New issues and PRs that target the current release milestone are automatically added to the board with a [a prow job](https://prow.k8s.io/?job=periodic-sync-bug-triage-github-project-*). The prow job is defined in [kubernetes/test-infra](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-k8s-infra/trusted/sig-release-release-team-jobs/release-team-periodics.yaml) and the script can be found in [kubernetes/sig-release](https://github.com/kubernetes/sig-release/blob/master/release-team/hack/sync-bug-triage-github-project-beta.sh).
+
+#### Information on the Bug Triage Board
+
+For each board item, the following details are set and managed by the bug triage team:
+
+- `Responsible`: The bug triage team member that is responsible for tracking the progress on the issue/PR. This is not the same as the issue assignee
+- `Notes`: Short note by the bug triage team member regarding the issue/PR, e.g. `[6/3] No progress made since last comment; notified them about the code freeze`
+- `Status`: One of the following values:
+  - `Tracked`: a member of the bug triage team is actively tracking the issue
+  - `Pending inclusion`: the issue is not actively tracked by anyone yet
+  - `At Risk`: the issue is marked as `at-risk` and might not make the release
+  - `Release Blocker`: the issue is marked as a `release-blocker`
+  - `Done`: work on the issue is complete and all pull requests have been merged
+- `Priority`: This should match the `priority/*` label that is currently assigned to the issue or PR
+- `Fixes`: This should match the `kind/*` label that is currently assigned to the issue or PR
+
+The following details for each item can be seen on the board. Editing the fields below from the board should be avoided (and for some it might not even be possible):
+
+- `Title`: Issue/PR title
+- `Type`: Issue or Pull Request
+- `Milestone`: The milestone that the issue/PR is targetting. This should be the current release
+- `Labels`: Issue/PR labels, mostly useful to identify `kind` and `priority` of each item
+
+#### Bug Triage Board Views
+
+The bug triage board has a number of views to simplify issue management.
+
+- [Bug Triage](https://github.com/orgs/kubernetes/projects/80/views/1) shows all open issues and PRs for the current milestone
+- [Bug Triage (Filter by Responsible)](https://github.com/orgs/kubernetes/projects/80/views/19) shows all open issues and PRs, grouped by the bug triage team member that is responsible for them
+- [Issues](https://github.com/orgs/kubernetes/projects/80/views/12) shows all open issues for the current milestone
+- [PR](https://github.com/orgs/kubernetes/projects/80/views/13) shows all open PRs for the current milestone
+- [Release Blocker](https://github.com/orgs/kubernetes/projects/80/views/7) shows all issues and PRs that are marked as release blockers
+- [By Priority](https://github.com/orgs/kubernetes/projects/80/views/6) shows all open issues and PRs, grouped by priority
+- [ALL](https://github.com/orgs/kubernetes/projects/80/views/10) shows all issues and PRs on the board
+
 ### How to Escalate
 
 Whenever you find an issue or PR that needs to be finished or kicked out of the release, try the following escalation path:
@@ -109,7 +156,7 @@ Whenever you find an issue or PR that needs to be finished or kicked out of the 
 ## Timeline
 
 ### Onboarding Session (week 1)
-In the first week of the release cycle, the Bug Triage Lead will organize a onboarding session with the shadows to go over general responsibilities and expectations. 
+In the first week of the release cycle, the Bug Triage Lead will organize a onboarding session with the shadows to go over general responsibilities and expectations.
 
 ### Early Release
 
@@ -122,7 +169,7 @@ It is also a good time to interact with the Enhancements Lead and CI Signal Lead
 The major and potentially release-blocking PRs/issues in this stage should be identified and a strategy to distribute them among the team should be devised. It is also important to identify _priority/critical-urgent_ and _priority/important-soon_ PRs/issues early on which could become release blocking later in the cycle.
 
 This is the best stage to get involved with any automation work that can ease the workload of later stages. Some tasks include:
-- updating/extending scripts to populate spreadsheets with relevant issues/PRs, delegate them to Bug Triage team members, and track them.
+- updating/extending scripts that populate the Bug Triage project board with relevant issues/PRs, delegate them to Bug Triage team members, and track them.
 - automation of notifications on relevant issues/PRs of the release cycle timeline.
 - automation of tracking/categorizing issues/PRs by responses to notifications of release cycle timeline.
 
@@ -130,23 +177,15 @@ In order to make work at later stages easier, it can also be beneficial to start
 
 It is also important to make sure all membership requirements and permissions needed for the Shadows are in place, for example that they have org access and are added as `milestone-maintainers`.
 
-#### Setting up the Bug Triage Spreadsheet
+#### Setting up the Bug Triage Project Board
 
-The Bug Triage team is using a tracking spreadsheet to track the current status of all issues and PRs targeting the release, their priorities, and to distribute the work among the Bug Triage team.
+At the beginning of the cycle, the Bug Triage Lead should prepare the bug triage board for the ongoing release cycle. The following steps should be taken:
 
-At the beginning of the cycle, the Bug Triage Lead should communicate with the Release Team Lead to get the spreadsheet set up for the ongoing release cycle.
-
-Once the spreadsheet is created, the lead needs to update queries in the spreadsheet script to fetch issues and PRs for the correct milestone. To edit the script, choose Tools -> Script editor, and then replace the milestone in queries with the correct one.
-
-With this done, the lead needs to put the link to the spreadsheet in the relevant places, usually in the release team meeting notes and in the [release overview document](https://github.com/kubernetes/sig-release/tree/master/releases).
-
-#### Updating the Bug Triage Spreadsheet
-
-The Bug Triage Spreadsheet is updated manually. The spreadsheet has a dedicated `Kubernetes Github Commands` menu in the spreadsheet header that has commands for managing the data. Open the menu and first run the `Refresh Issues & PRs` command. After it is done, you can run other commands to populate issues/PRs metadata, such as `kind`, `priority` and SIGs. The menu and all commands are implemented as scripts that you can access by choosing Tools -> Script editor.
-
-**Note:** Due to bug in the `Refresh Issues & PRs` command, it is recommended to delete the issues/PRs from the spreadsheet and then run the command. Otherwise, it may happen that some issues are omitted or shown even if closed.
-
-At this stage of the release cycle, it is usually enough to update the spreadsheet once a week, before the release team meeting. At later stages, this is usually done 2-3 times a week and then daily.
+1. Edit bug triage board name for current cycle, e.g. `[sig-release] 1.xx bug-triage`
+2. Update the milestone for the periodic prow job. [Example PR from 1.28](https://github.com/kubernetes/test-infra/pull/29527)
+3. Edit the [Responsible](https://github.com/orgs/kubernetes/projects/80/settings/fields/2845019) field and add the new bug triage team members
+4. Update the milestone filter to `milestone:v1.xx` in all relevant views. You can do this by editing the filter and then clicking `Save`
+5. Set the `Status` field to `Pending inclusion` value for all open issues and PRs targeting the current milestone to indicate that no one is responsible yet at the beginning of the cycle. Later, any Bug Triage member picking up the issue/PR should set it to `Tracked`.
 
 #### Sample Searches
 
@@ -212,7 +251,7 @@ Your responsibility here is to actively watch for any new issues/PRs targeting t
 
 On the day of the Code Freeze, your responsibility is to try to help contributors to get the approval on their PRs and needed label. Check [How To Escalate](#how-to-escalate) part of the document for guide how to do this.
 
-Please note that Code Freeze is EOD Pacific Time (astronomical sun) on the day of. No items are to be removed from the milestone until the next day. 
+Please note that Code Freeze is EOD Pacific Time (astronomical sun) on the day of. No items are to be removed from the milestone until the next day.
 
 The day after the Code Freeze has begun, the Bug Triage team will wait to see if new exception requests are filed and approved (see [exception process](/releases/EXCEPTIONS.md) for more details), it is at this time you will remove the remaining issues / PRs that are not approved into the next milestone. It is important to ensure that the Release Team Lead has been informed during the Burndown meetings following Code Freeze that items are being removed so they may provide any additional feedback.
 
@@ -232,7 +271,7 @@ You can still use the queries from the previous section at this stage to monitor
 
 #### Week 1 of Code Freeze until Code Thaw starts
 
-> **_NOTE:_** When changing or removing milestones, be sure to communicate _why_ the change is being made to avoid confusion. The issue/PR author may not always be familiar with all the processes and deadlines surrounding code freeze, and we want contributing to be a friendly and transparent process. 
+> **_NOTE:_** When changing or removing milestones, be sure to communicate _why_ the change is being made to avoid confusion. The issue/PR author may not always be familiar with all the processes and deadlines surrounding code freeze, and we want contributing to be a friendly and transparent process.
 
 At this stage, the Bug Triage team should start removing issues/PRs from the milestone. Before doing so, the Bug Triage Lead should confirm the intention with the Release Team Lead.
 
