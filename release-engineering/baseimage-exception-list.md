@@ -31,6 +31,7 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 |---|---|
 | [kube-apiserver][core-images] | `go-runner` (`distroless++`)[[1](https://github.com/kubernetes/kubernetes/pull/90804)][[2](https://github.com/kubernetes/kubernetes/pull/90674)] |
 | [kube-scheduler][core-images] | `go-runner` (`distroless++`)[[1](https://github.com/kubernetes/kubernetes/pull/90804)][[2](https://github.com/kubernetes/kubernetes/pull/90674)] |
+| [kubectl][core-images] | `go-runner` (`distroless++`)[[1](https://github.com/kubernetes/kubernetes/pull/90804)][[2](https://github.com/kubernetes/kubernetes/pull/90674)] |
 
 ## Non-release images
 
@@ -54,9 +55,9 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 | [fluentd-gcp-scaler] | [debian-base] |  | U | Requires shell and kubectl |
 | [stackdriver-logging-agent] | `debian:buster` |  | U | Requires fluentd |
 
-[core-images]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/build/common.sh#L90-L110
-[debian-base]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/build/debian-base/Dockerfile.build
-[debian-iptables]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/build/debian-iptables/Dockerfile
+[core-images]: https://github.com/kubernetes/kubernetes/blob/75889ecec5d30cbe1dcb6636d5334b21b4378e9c/build/common.sh#L114-L133
+[debian-base]: https://github.com/kubernetes/release/blob/8227bf2da2223e69617dcccde85ff02719628d55/images/build/debian-base
+[debian-iptables]: https://github.com/kubernetes/release/tree/8227bf2da2223e69617dcccde85ff02719628d55/images/build/debian-iptables
 [etcd]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/cluster/images/etcd/Dockerfile
 [etcd-empty-dir-cleanup]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/cluster/images/etcd-empty-dir-cleanup/Dockerfile
 [fluentd-elasticsearch]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/cluster/addons/fluentd-elasticsearch/fluentd-es-image/Dockerfile
