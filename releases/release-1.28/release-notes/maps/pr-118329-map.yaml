@@ -1,0 +1,3 @@
+pr: 118329
+releasenote:
+  text: Fixed the alpha `CloudDualStackNodeIPs` feature.

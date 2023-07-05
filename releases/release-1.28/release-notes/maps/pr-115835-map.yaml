@@ -1,0 +1,3 @@
+pr: 115835
+releasenote:
+  text: Fixed the `preStop` hook. This will now block the pod termination grace period.
