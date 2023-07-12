@@ -6,7 +6,7 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 
 - [Release images](#release-images)
   - [Release: `debian-base`](#release-debian-base)
-  - [Release: `debian-iptables`](#release-debian-iptables)
+  - [Release: `distroless-iptables`](#release-distroless-iptables)
   - [Release: `go-runner`](#release-go-runner)
 - [Non-release images](#non-release-images)
 - [Non-org images](#non-org-images)
@@ -17,9 +17,9 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 
 | Image Name | Reasons for exception |
 |---|---|
-| [debian-iptables] | Needed to supported images that require `iptables` |
+| [distroless-iptables] | Needed to supported images that require `iptables` |
 
-### Release: `debian-iptables`
+### Release: `distroless-iptables`
 
 | Image Name | Reasons for exception |
 |---|---|
@@ -40,7 +40,7 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 | [etcd] | [debian-base] | https://github.com/kubernetes/kubernetes/blob/master/cluster/images/etcd/OWNERS | Y | Requires shell to do data migration |
 | [etcd-empty-dir-cleanup] | [debian-base] | https://github.com/kubernetes/kubernetes/blob/master/cluster/images/etcd-empty-dir-cleanup/OWNERS | U | Requires shell to do some cleanup |
 | [fluentd-elasticsearch] | `ruby:2.7-slim-buster` | https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/fluentd-elasticsearch/OWNERS | U | Requires shell to install fluentd via ruby |
-| [ip-masq-agent] | [debian-iptables] | https://github.com/kubernetes-sigs/ip-masq-agent/blob/master/OWNERS | U | Requires `iptables` |
+| [ip-masq-agent] | [distroless-iptables] | https://github.com/kubernetes-sigs/ip-masq-agent/blob/master/OWNERS | U | Requires `iptables` |
 | [k8s-dns-dnsmasq-nanny] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
 | [k8s-dns-kube-dns] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
 | [k8s-dns-node-cache] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
@@ -57,7 +57,7 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 
 [core-images]: https://github.com/kubernetes/kubernetes/blob/75889ecec5d30cbe1dcb6636d5334b21b4378e9c/build/common.sh#L114-L133
 [debian-base]: https://github.com/kubernetes/release/blob/8227bf2da2223e69617dcccde85ff02719628d55/images/build/debian-base
-[debian-iptables]: https://github.com/kubernetes/release/tree/8227bf2da2223e69617dcccde85ff02719628d55/images/build/debian-iptables
+[distroless-iptables]: https://github.com/kubernetes/release/tree/9a6bbeaf5012ea2540b7f198f4eeff337442ec36/images/build/distroless-iptables
 [etcd]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/cluster/images/etcd/Dockerfile
 [etcd-empty-dir-cleanup]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/cluster/images/etcd-empty-dir-cleanup/Dockerfile
 [fluentd-elasticsearch]: https://github.com/kubernetes/kubernetes/blob/d63d77dc4cae044702dac1fc5a97fafebebcbb0f/cluster/addons/fluentd-elasticsearch/fluentd-es-image/Dockerfile

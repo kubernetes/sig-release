@@ -203,7 +203,7 @@ that any final cherry-pick content is merged ahead of that last release.
   - CRI tools
   - CNI plugins
   - OS base images (example: debian-base)
-  - debian-iptables
+  - distroless-iptables
   - debian-hyperkube-base
   - Publishing bot updates
     - The bot runs on a schedule but sometimes breaks, requiring ad hoc fixes.
