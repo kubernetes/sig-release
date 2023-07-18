@@ -1,0 +1,6 @@
+pr: 118686
+releasenote:
+  text: |-
+    `wait.PollUntilContextTimeout` function, if immediate is true, the condition
+    will be invoked before waiting and guarantees that the condition is invoked at
+    least once, regardless of whether the context has been cancelled.

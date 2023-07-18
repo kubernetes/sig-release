@@ -1,0 +1,3 @@
+pr: 118102
+releasenote:
+  text: '`RetroactiveDefaultStorageClass` feature made stable and enabled by default.'

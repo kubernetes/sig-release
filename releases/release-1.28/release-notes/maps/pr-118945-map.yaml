@@ -1,0 +1,5 @@
+pr: 118945
+releasenote:
+  text: |-
+    - Updated apiserver metric `request_filter_duration_seconds` to include a 10s, 15s and 30s bucket.
+    - Updated apiserver metric `request_wait_duration_seconds` to include a 15s bucket.

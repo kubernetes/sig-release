@@ -1,0 +1,4 @@
+pr: 116729
+releasenote:
+  text: Scheduler now waits for handlers to finish syncing before the scheduling cycles
+    start.

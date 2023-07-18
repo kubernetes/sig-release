@@ -1,0 +1,3 @@
+pr: 118386
+releasenote:
+  text: Add `ServedVersions` field to `StorageVersion` API.
