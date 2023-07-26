@@ -1,4 +1,5 @@
 pr: 118763
 releasenote:
-  text: '`AdvancedAuditing` feature gate that graduated to GA in v1.12 and was unconditionally
-    enabled has been removed in v1.28.'
+  text: |-
+    The `AdvancedAuditing` feature gate that graduated to GA in `v1.12` (and was unconditionally
+    enabled) has been removed.
