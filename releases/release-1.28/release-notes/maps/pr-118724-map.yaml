@@ -1,0 +1,4 @@
+pr: 118724
+releasenote:
+  text: |-
+    Fixed cronjob controller handling of complex schedules, like `30 6-16/4 * * 1-5`, for example.

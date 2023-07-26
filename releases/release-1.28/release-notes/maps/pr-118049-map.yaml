@@ -1,0 +1,4 @@
+pr: 118049
+releasenote:
+  text: The `pod_scheduling_duration_seconds` metrics won't consider the time when
+    a pod fails `PreEnqueue` (like being gated).

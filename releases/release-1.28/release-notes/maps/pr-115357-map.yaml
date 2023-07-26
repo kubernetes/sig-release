@@ -1,0 +1,4 @@
+pr: 115357
+releasenote:
+  text: Allow to monitor client-go DNS resolver latencies via `rest_client_dns_resolution_duration_seconds`
+    Prometheus metric.

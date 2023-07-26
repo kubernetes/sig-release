@@ -1,0 +1,4 @@
+pr: 118876
+releasenote:
+  text: |-
+    `kubectl explain` should correctly work for all resources.

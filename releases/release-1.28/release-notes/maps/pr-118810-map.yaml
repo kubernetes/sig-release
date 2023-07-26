@@ -1,0 +1,4 @@
+pr: 118810
+releasenote:
+  text: Added `--concurrency` flag to configure the concurrency of `kubectl diff`
+    execution, defaults to 1

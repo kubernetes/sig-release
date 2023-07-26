@@ -1,0 +1,4 @@
+pr: 118915
+releasenote:
+  text: The `NetworkPolicyLegacy` test suite (deprecated in `v1.21`) has now officially
+    been removed in favor of the new table driven e2e tests.

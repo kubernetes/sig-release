@@ -1,0 +1,3 @@
+pr: 118774
+releasenote:
+  text: Updated cAdvisor to `v0.47.2` and fixed metrics in `cri-o` when a container restarts.

@@ -1,0 +1,5 @@
+pr: 118025
+releasenote:
+  text: |-
+    `plugin_evaluation_total` metric supports prescore/score extension point.
+    The metric doesn't get incremented when the prescore/score plugin has nothing to do with an incoming pod.

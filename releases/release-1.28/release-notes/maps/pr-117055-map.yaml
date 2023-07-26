@@ -1,0 +1,4 @@
+pr: 117055
+releasenote:
+  text: The feature gates `CSIMigrationGCE` is graduated to GA and were unconditionally
+    enabled have been removed in `v1.25`, and the entire `gcepd` package has been removed.

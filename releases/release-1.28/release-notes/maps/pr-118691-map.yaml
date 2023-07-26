@@ -1,0 +1,4 @@
+pr: 118691
+releasenote:
+  text: Enabled use of pods with volumes and user namespaces. The feature gate was
+    renamed from `UserNamespacesStatelessPodsSupport` to `UserNamespacesSupport`.
