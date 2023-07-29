@@ -1,0 +1,3 @@
+pr: 114307
+releasenote:
+  text: Graduated the `ProbeTerminationGracePeriod` feature gate to GA.

@@ -1,0 +1,6 @@
+pr: 116879
+releasenote:
+  text: '[Dual-stack] Fixed `generateAPIPodStatus()` of kubelet handling Secondary
+    IP. hostIPs order may not be consistent. If secondary IP is before primary one,
+    current logic adds primary IP twice into `PodIPs`, which leads to error: "may
+    specify no more than one IP for each IP family".'

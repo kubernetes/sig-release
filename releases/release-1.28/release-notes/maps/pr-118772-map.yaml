@@ -1,0 +1,3 @@
+pr: 118772
+releasenote:
+  text: Added handling for pods in podgc for `PodReplacementPolicy` or `PodDisruption`.

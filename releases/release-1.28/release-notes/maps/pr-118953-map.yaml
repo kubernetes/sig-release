@@ -1,0 +1,3 @@
+pr: 118953
+releasenote:
+  text: New staging repo has been created for the `EndpointSlice` reconciler.

@@ -1,0 +1,3 @@
+pr: 118973
+releasenote:
+  text: The `GetAllocatableResources` podresources API endpoint is now GA.

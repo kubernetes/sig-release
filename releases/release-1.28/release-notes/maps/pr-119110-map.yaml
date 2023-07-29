@@ -1,0 +1,4 @@
+pr: 119110
+releasenote:
+  text: "Promoted the following apiserver flowcontrol metrics to Beta:\n\napiserver_flowcontrol_request_wait_duration_seconds
+    \napiserver_flowcontrol_current_executing_seats\napiserver_flowcontrol_nominal_limit_seats\napiserver_flowcontrol_rejected_requests_total\napiserver_flowcontrol_dispatched_requests_total\napiserver_flowcontrol_current_inqueue_requests\napiserver_flowcontrol_current_executing_requests"

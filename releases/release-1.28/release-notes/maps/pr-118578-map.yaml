@@ -1,0 +1,4 @@
+pr: 118578
+releasenote:
+  text: 'Dynamic Resource Allocation: logged an error and submitted an event when
+    `Kubelet` failed to prepare dynamic resources.'

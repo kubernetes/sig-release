@@ -1,0 +1,3 @@
+pr: 119225
+releasenote:
+  text: Bumped cadvisor version to `v0.47.3`.

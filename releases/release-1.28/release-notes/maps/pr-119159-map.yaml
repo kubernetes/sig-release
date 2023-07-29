@@ -1,0 +1,4 @@
+pr: 119159
+releasenote:
+  text: Declare Job as finished only after removing all Pod finalizers to avoid orphan
+    Pods.

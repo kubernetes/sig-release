@@ -1,0 +1,3 @@
+pr: 119422
+releasenote:
+  text: Switched back to `debian-base` instead of distroless for conformance image.
