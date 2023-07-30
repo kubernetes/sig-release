@@ -3044,8 +3044,8 @@
   },
   "117570": {
     "commit": "46852cab7f1a0afce5ec45c294cedd0461311b38",
-    "text": "Removing WindowsHostProcessContainers feature-gate",
-    "markdown": "Removing WindowsHostProcessContainers feature-gate ([#117570](https://github.com/kubernetes/kubernetes/pull/117570), [@marosset](https://github.com/marosset)) [SIG API Machinery, Apps, Auth, Node and Windows]",
+    "text": "Removing `WindowsHostProcessContainers` feature-gate.",
+    "markdown": "Removing WindowsHostProcessContainers feature-gate. ([#117570](https://github.com/kubernetes/kubernetes/pull/117570), [@marosset](https://github.com/marosset)) [SIG API Machinery, Apps, Auth, Node and Windows]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3225,8 +3225,8 @@
   },
   "117633": {
     "commit": "7add692580fa499b516e944a1389ef07f44a2e35",
-    "text": "Remove tracking annotation from validation and defaulting.",
-    "markdown": "Remove tracking annotation from validation and defaulting. ([#117633](https://github.com/kubernetes/kubernetes/pull/117633), [@kannon92](https://github.com/kannon92))",
+    "text": "Removed tracking annotation from validation and defaulting.",
+    "markdown": "Removed tracking annotation from validation and defaulting. ([#117633](https://github.com/kubernetes/kubernetes/pull/117633), [@kannon92](https://github.com/kannon92))",
     "documentation": [
       {
         "description": "-[KEP]",
@@ -3296,8 +3296,8 @@
   },
   "117655": {
     "commit": "80c4abd02e6613ffcc3dac3f9b715c5e7ab7a916",
-    "text": "Remove GA'ed feature gate `DelegateFSGroupToCSIDriver`.",
-    "markdown": "Remove GA'ed feature gate `DelegateFSGroupToCSIDriver`. ([#117655](https://github.com/kubernetes/kubernetes/pull/117655), [@carlory](https://github.com/carlory))",
+    "text": "Removed GA'ed feature gate `DelegateFSGroupToCSIDriver`.",
+    "markdown": "Removed GA'ed feature gate `DelegateFSGroupToCSIDriver`. ([#117655](https://github.com/kubernetes/kubernetes/pull/117655), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/117655",
@@ -3311,8 +3311,8 @@
   },
   "117656": {
     "commit": "509c2c7c8820d5d546ee4c9b02c52ddaf8ad8ab7",
-    "text": "Remove GA'ed feature gate `DevicePlugins`.",
-    "markdown": "Remove GA'ed feature gate `DevicePlugins`. ([#117656](https://github.com/kubernetes/kubernetes/pull/117656), [@carlory](https://github.com/carlory))",
+    "text": "Removed GA'ed feature gate `DevicePlugins`.",
+    "markdown": "Removed GA'ed feature gate `DevicePlugins`. ([#117656](https://github.com/kubernetes/kubernetes/pull/117656), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/117656",
@@ -3344,8 +3344,8 @@
   },
   "117677": {
     "commit": "dea1312e03a0d6b7bc73ff21fa243cccea419c76",
-    "text": "Fix incorrect calculation for ResourceQuota with PriorityClass as its scope.",
-    "markdown": "Fix incorrect calculation for ResourceQuota with PriorityClass as its scope. ([#117677](https://github.com/kubernetes/kubernetes/pull/117677), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG API Machinery]",
+    "text": "Fixed incorrect calculation for `ResourceQuota` with `PriorityClass` as its scope.",
+    "markdown": "Fixed incorrect calculation for `ResourceQuota` with `PriorityClass` as its scope. ([#117677](https://github.com/kubernetes/kubernetes/pull/117677), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG API Machinery]",
     "author": "Huang-Wei",
     "author_url": "https://github.com/Huang-Wei",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/117677",
@@ -3714,8 +3714,8 @@
   },
   "117744": {
     "commit": "af79ecbd4b1a33d640522e6a7c7d5c69d6df0046",
-    "text": "Kubernetes is now built with Go 1.20.4",
-    "markdown": "Kubernetes is now built with Go 1.20.4 ([#117744](https://github.com/kubernetes/kubernetes/pull/117744), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]",
+    "text": "Kubernetes is now built with Go `1.20.4`.",
+    "markdown": "Kubernetes is now built with Go `1.20.4`. ([#117744](https://github.com/kubernetes/kubernetes/pull/117744), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]",
     "author": "xmudrii",
     "author_url": "https://github.com/xmudrii",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/117744",
@@ -3861,8 +3861,8 @@
   },
   "117793": {
     "commit": "86d786090ac9390d4b724a7294e8bb96825eeefe",
-    "text": "If using cgroups v2, then the cgroup aware OOM killer will be enabled for container cgroups via  `memory.oom.group` .  This causes processes within the cgroup to be treated as a unit and killed simultaneously in the event of an OOM kill on any process in the cgroup.",
-    "markdown": "If using cgroups v2, then the cgroup aware OOM killer will be enabled for container cgroups via  `memory.oom.group` .  This causes processes within the cgroup to be treated as a unit and killed simultaneously in the event of an OOM kill on any process in the cgroup. ([#117793](https://github.com/kubernetes/kubernetes/pull/117793), [@tzneal](https://github.com/tzneal)) [SIG Apps, Node and Testing]",
+    "text": "If using cgroups v2, then the cgroup aware OOM killer will be enabled for container cgroups via  `memory.oom.group`. This causes processes within the cgroup to be treated as a unit and killed simultaneously in the event of an OOM kill on any process in the cgroup.",
+    "markdown": "If using cgroups v2, then the cgroup aware OOM killer will be enabled for container cgroups via  `memory.oom.group`. This causes processes within the cgroup to be treated as a unit and killed simultaneously in the event of an OOM kill on any process in the cgroup. ([#117793](https://github.com/kubernetes/kubernetes/pull/117793), [@tzneal](https://github.com/tzneal)) [SIG Apps, Node and Testing]",
     "author": "tzneal",
     "author_url": "https://github.com/tzneal",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/117793",
@@ -3887,8 +3887,8 @@
   },
   "117794": {
     "commit": "7aea5a9b25696b043f470660c982199abb6fe3fa",
-    "text": "The scheduler skips the InterPodAffinity Score plugin when nothing to do with the Pod.\nIt will affect some metrics values related to the InterPodAffinity Score plugin.",
-    "markdown": "The scheduler skips the InterPodAffinity Score plugin when nothing to do with the Pod.\n  It will affect some metrics values related to the InterPodAffinity Score plugin. ([#117794](https://github.com/kubernetes/kubernetes/pull/117794), [@utam0k](https://github.com/utam0k)) [SIG Scheduling]",
+    "text": "The scheduler skips the `InterPodAffinity` Score plugin when nothing to do with the Pod.\nIt will affect some metrics values related to the InterPodAffinity Score plugin.",
+    "markdown": "The scheduler skips the `InterPodAffinity` Score plugin when nothing to do with the Pod.\n  It will affect some metrics values related to the InterPodAffinity Score plugin. ([#117794](https://github.com/kubernetes/kubernetes/pull/117794), [@utam0k](https://github.com/utam0k)) [SIG Scheduling]",
     "author": "utam0k",
     "author_url": "https://github.com/utam0k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/117794",
@@ -5083,8 +5083,8 @@
   },
   "118303": {
     "commit": "7472634bcb969db1d153ee4c7b451f8db5904a1d",
-    "text": "Deprecated support for CSI migration of Ceph RBD volumes.\n\nUsers who were relying on Kubernetes' ability to migrate to an out-of-tree storage driver should complete\nthat migration before the support for it is removed.",
-    "markdown": "Deprecated support for CSI migration of Ceph RBD volumes.\n  \n  Users who were relying on Kubernetes' ability to migrate to an out-of-tree storage driver should complete\n  that migration before the support for it is removed. ([#118303](https://github.com/kubernetes/kubernetes/pull/118303), [@carlory](https://github.com/carlory)) [SIG Storage]",
+    "text": "Deprecated support for CSI migration of Ceph RBD volumes.\nUsers who were relying on Kubernetes' ability to migrate to an out-of-tree storage driver should complete\nthat migration before the support for it is removed.",
+    "markdown": "Deprecated support for CSI migration of Ceph RBD volumes.\n  Users who were relying on Kubernetes' ability to migrate to an out-of-tree storage driver should complete\n  that migration before the support for it is removed. ([#118303](https://github.com/kubernetes/kubernetes/pull/118303), [@carlory](https://github.com/carlory)) [SIG Storage]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5212,8 +5212,8 @@
   },
   "118386": {
     "commit": "cd32adebd9d52ae46827054350c17de085a4eb23",
-    "text": "Add `ServedVersions` field to `StorageVersion` API.",
-    "markdown": "Add `ServedVersions` field to `StorageVersion` API. ([#118386](https://github.com/kubernetes/kubernetes/pull/118386), [@Richabanker](https://github.com/Richabanker))",
+    "text": "Added `ServedVersions` field to `StorageVersion` API.",
+    "markdown": "Added `ServedVersions` field to `StorageVersion` API. ([#118386](https://github.com/kubernetes/kubernetes/pull/118386), [@Richabanker](https://github.com/Richabanker))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5258,8 +5258,8 @@
   },
   "118420": {
     "commit": "b63700630231803967f85e83ff35d719db511baa",
-    "text": "ACTION_REQUIRED\nWhen an Indexed Job has a number of completions higher than 10^5 and parallelism higher than 10^4, and a big number of Indexes fail, Kubernetes might not be able to track the termination of the Job. Kubernetes now emits a warning, at Job creation, when the Job manifest exceeds both of these limits.",
-    "markdown": "ACTION_REQUIRED\n  When an Indexed Job has a number of completions higher than 10^5 and parallelism higher than 10^4, and a big number of Indexes fail, Kubernetes might not be able to track the termination of the Job. Kubernetes now emits a warning, at Job creation, when the Job manifest exceeds both of these limits. ([#118420](https://github.com/kubernetes/kubernetes/pull/118420), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
+    "text": "When an Indexed Job has a number of completions higher than 10^5 and parallelism higher than 10^4, and a big number of Indexes fail, Kubernetes might not be able to track the termination of the Job. Kubernetes now emits a warning, at Job creation, when the Job manifest exceeds both of these limits.",
+    "markdown": "When an Indexed Job has a number of completions higher than 10^5 and parallelism higher than 10^4, and a big number of Indexes fail, Kubernetes might not be able to track the termination of the Job. Kubernetes now emits a warning, at Job creation, when the Job manifest exceeds both of these limits. ([#118420](https://github.com/kubernetes/kubernetes/pull/118420), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
     "documentation": [
       {
         "description": "[Usage]",
@@ -6811,8 +6811,8 @@
   },
   "119110": {
     "commit": "4f60a8d493ab9571eb328b9d98da477a50bc7446",
-    "text": "Promoted the following apiserver flowcontrol metrics to Beta:\n\napiserver_flowcontrol_request_wait_duration_seconds \napiserver_flowcontrol_current_executing_seats\napiserver_flowcontrol_nominal_limit_seats\napiserver_flowcontrol_rejected_requests_total\napiserver_flowcontrol_dispatched_requests_total\napiserver_flowcontrol_current_inqueue_requests\napiserver_flowcontrol_current_executing_requests",
-    "markdown": "Promoted the following apiserver flowcontrol metrics to Beta:\n  \n  apiserver_flowcontrol_request_wait_duration_seconds \n  apiserver_flowcontrol_current_executing_seats\n  apiserver_flowcontrol_nominal_limit_seats\n  apiserver_flowcontrol_rejected_requests_total\n  apiserver_flowcontrol_dispatched_requests_total\n  apiserver_flowcontrol_current_inqueue_requests\n  apiserver_flowcontrol_current_executing_requests ([#119110](https://github.com/kubernetes/kubernetes/pull/119110), [@andrewsykim](https://github.com/andrewsykim))",
+    "text": "Promoted the following apiserver flowcontrol metrics to Beta:\n\n- apiserver_flowcontrol_request_wait_duration_seconds \n- apiserver_flowcontrol_current_executing_seats\n- apiserver_flowcontrol_nominal_limit_seats\napiserver_flowcontrol_rejected_requests_total\n- apiserver_flowcontrol_dispatched_requests_total\napiserver_flowcontrol_current_inqueue_requests\n- apiserver_flowcontrol_current_executing_requests",
+    "markdown": "Promoted the following apiserver flowcontrol metrics to Beta:\n  \n - apiserver_flowcontrol_request_wait_duration_seconds \n - apiserver_flowcontrol_current_executing_seats\n - apiserver_flowcontrol_nominal_limit_seats\n - apiserver_flowcontrol_rejected_requests_total\n - apiserver_flowcontrol_dispatched_requests_total\n - apiserver_flowcontrol_current_inqueue_requests\n - apiserver_flowcontrol_current_executing_requests ([#119110](https://github.com/kubernetes/kubernetes/pull/119110), [@andrewsykim](https://github.com/andrewsykim))",
     "author": "andrewsykim",
     "author_url": "https://github.com/andrewsykim",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119110",
