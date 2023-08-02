@@ -1,0 +1,4 @@
+pr: 113245
+releasenote:
+  text: Added warning for dup ports update/patching in pod's container ports and service
+    ports.

@@ -1,0 +1,3 @@
+pr: 119238
+releasenote:
+  text: 'CRI: exposed commit memory bytes in container stats specific to Windows'

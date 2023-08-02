@@ -1,0 +1,4 @@
+pr: 118508
+releasenote:
+  text: Added `ConsistentListFromCache` feature gate that allows apiserver to serve
+    consistent lists from cache.

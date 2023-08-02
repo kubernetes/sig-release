@@ -1,0 +1,6 @@
+pr: 118770
+releasenote:
+  text: |-
+    With the `KubeletCgroupDriverFromCRI` feature gate enabled and sufficiently new version of a container
+    runtime, kubelet automatically detects the cgroup driver config from the container runtime, eliminating
+    the need to specify the `cgroupDriver` configuration option (or `--cgroup-driver` flag) of kubelet.

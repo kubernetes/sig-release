@@ -1,0 +1,4 @@
+pr: 118480
+releasenote:
+  text: '`force_delete_pods_total` and `force_delete_pod_errors_total` metrics count
+    all pod deletion behaviors.'

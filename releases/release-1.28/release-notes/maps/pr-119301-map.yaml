@@ -1,0 +1,3 @@
+pr: 119301
+releasenote:
+  text: Added `podReplacementPolicy` and terminating field to job api.

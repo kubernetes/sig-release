@@ -1,0 +1,12 @@
+pr: 119008
+releasenote:
+  text: |-
+    New Metrics Added for Encryption Configuration Controller
+
+    This release adds new metrics to the Encryption Configuration Controller to help monitor the automatic reloading of encryption configuration. The new metrics include:
+
+    - `apiserver_encryption_config_controller_automatic_reload_failures_total`: Total number of failed automatic reloads of encryption configuration.
+    - `apiserver_encryption_config_controller_automatic_reload_success_total`: Total number of successful automatic reloads of encryption configuration.
+    - `apiserver_encryption_config_controller_automatic_reload_last_timestamp_seconds`: Timestamp of the last successful or failed automatic reload of encryption configuration.
+
+    These metrics can be used to monitor the health of the Encryption Configuration Controller and to troubleshoot any issues that may arise during automatic reloading of encryption configuration.

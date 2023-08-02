@@ -1,0 +1,4 @@
+pr: 119311
+releasenote:
+  text: Added `apiserver_admission_match_condition_evaluation_seconds` and `apiserver_admission_match_condition_exclusions_total`
+    metrics.

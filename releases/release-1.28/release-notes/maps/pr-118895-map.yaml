@@ -1,0 +1,3 @@
+pr: 118895
+releasenote:
+  text: Added IP mode field to loadbalancer status ingress.

@@ -1,0 +1,3 @@
+pr: 116755
+releasenote:
+  text: Migrated `pkg/controller/endpoint` to contextual logging.

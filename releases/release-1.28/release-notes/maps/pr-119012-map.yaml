@@ -1,0 +1,4 @@
+pr: 119012
+releasenote:
+  text: 'kubelet: plugins for dynamic resource allocation may use the `v1alpha3` API
+    instead of v1alpha2 if they want to do prepare/unprepare operations in batches.'
