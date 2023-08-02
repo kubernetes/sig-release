@@ -758,14 +758,6 @@ Example PRs:
 
 - [1.18](https://github.com/kubernetes/test-infra/pull/16821)
 
-### Branch Fast Forward
-
-We now run the branch fast forward automatically to even the branches. 
-
-Noted that no need for manual cherry-pick against current release and the job would be promoted to [release-blocking](https://testgrid.k8s.io/sig-release-releng-blocking#git-repo-kubernetes-fast-forward).
-
-Once code freeze is lifted ([code thaw](#code-thaw) occurred), PRs that need to be merged onto the release branch are cherry-picked over from `master`.
-
 ### Reverts
 
 During code freeze it is especially important to first look at the list of commits on `master` since the prior fast forward, scanning their content and issues/PRs to ensure they are changes expected for this milestone.
