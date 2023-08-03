@@ -1,0 +1,3 @@
+pr: 118879
+releasenote:
+  text: Fixed the discoverability of `apiregistration.k8s.io` in `openapi/v3`
