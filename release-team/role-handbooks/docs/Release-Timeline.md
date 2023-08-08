@@ -523,7 +523,7 @@ the reference documentation. Next:
 git checkout dev-[future-release]
 git fetch upstream dev-[future-release]
 git rebase upstream/dev-[future-release]
-git checkbout -b dev-[future-release]-ref-doc
+git checkout -b dev-[future-release]-ref-doc
 ```
 - Run the `update-imported-docs.py` script providing the build configuration file (`reference.yml`) and the release tag.
 ```
