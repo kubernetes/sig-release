@@ -1,0 +1,4 @@
+pr: 117015
+releasenote:
+  text: Added the implementation for `PodRecreationPolicy` to wait for the creation
+    of pods once the existing ones are fully terminated.
