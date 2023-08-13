@@ -19,6 +19,8 @@
   So, if you want to just keep the existing behavior, you can register `ClusterEventWithHint` with no `QueueingHintFn` in it. 
   But, registering appropriate `QueueingHintFn` is, of course, better from a scheduling performance perspective. ([#118551](https://github.com/kubernetes/kubernetes/pull/118551), [@sanposhiho](https://github.com/sanposhiho)) [SIG Node, Scheduling, Storage and Testing]
  - CephFS volume plugin (`kubernetes.io/cephfs`) has been deprecated in this release and will be removed in a subsequent release. The alternative is to use the CephFS CSI driver (https://github.com/ceph/ceph-csi/) in your Kubernetes cluster. ([#118143](https://github.com/kubernetes/kubernetes/pull/118143), [@humblec](https://github.com/humblec))
+ - Deprecated support for CSI migration of `Ceph RBD volumes`. Users who were relying on Kubernetes' ability
+  to migrate to an out-of-tree storage driver should complete that migration before the support for it is removed. ([#118303](https://github.com/kubernetes/kubernetes/pull/118303), [@carlory](https://github.com/carlory))
  - RBD volume plugin (`kubernetes.io/rbd`) has been deprecated in this release
   and will be removed in a subsequent release. Alternative is to use RBD CSI driver
   (https://github.com/ceph/ceph-csi/) in your Kubernetes Cluster. ([#118552](https://github.com/kubernetes/kubernetes/pull/118552), [@humblec](https://github.com/humblec))
@@ -29,10 +31,6 @@
 
 - Changed `kubectl version` default output to be identical to what `kubectl version --short` printed,
   and removed `--short` flag entirely. ([#116720](https://github.com/kubernetes/kubernetes/pull/116720), [@soltysh](https://github.com/soltysh))
-- Deprecated support for CSI migration of Ceph RBD volumes.
-  
-  Users who were relying on Kubernetes' ability to migrate to an out-of-tree storage driver should complete
-  that migration before the support for it is removed. ([#118303](https://github.com/kubernetes/kubernetes/pull/118303), [@carlory](https://github.com/carlory)) [SIG Storage]
 - Kube-controller-manager deprecate `--volume-host-cidr-denylist` and `--volume-host-allow-local-loopback` flags. ([#118128](https://github.com/kubernetes/kubernetes/pull/118128), [@carlory](https://github.com/carlory)) [SIG API Machinery, Apps, Network, Node, Storage and Testing]
 - Kubelet: The `--azure-container-registry-config` flag has been deprecated and will be removed in a future release, please use `--image-credential-provider-config` and `--image-credential-provider-bin-dir` to setup acr credential provider instead. ([#118596](https://github.com/kubernetes/kubernetes/pull/118596), [@SataQiu](https://github.com/SataQiu)) [SIG Node]
 - Remove tracking annotation from validation and defaulting. ([#117633](https://github.com/kubernetes/kubernetes/pull/117633), [@kannon92](https://github.com/kannon92))
@@ -58,7 +56,7 @@
 - Added new annotation `batch.kubernetes.io/cronjob-scheduled-timestamp` to Job objects scheduled from CronJobs. ([#118137](https://github.com/kubernetes/kubernetes/pull/118137), [@helayoty](https://github.com/helayoty))
 - Added new config option `delayCacheUntilActive` to `KubeSchedulerConfiguration` that can provide a tradeoff between memory efficiency and scheduling speed when their leadership is updated in `kube-scheduler` ([#115754](https://github.com/kubernetes/kubernetes/pull/115754), [@linxiulei](https://github.com/linxiulei)) [SIG API Machinery and Scheduling]
 - Changed how KMS v2 encryption at rest can generate data encryption keys.
-  When you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data.  This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce. ([#118828](https://github.com/kubernetes/kubernetes/pull/118828), [@enj](https://github.com/enj))
+  When you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data. This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce. ([#118828](https://github.com/kubernetes/kubernetes/pull/118828), [@enj](https://github.com/enj))
 - Exposed `rest.DefaultServerUrlFor` function ([#118055](https://github.com/kubernetes/kubernetes/pull/118055), [@timofurrer](https://github.com/timofurrer))
 - Extended the Job API for alpha version of `BackoffLimitPerIndex`. ([#119294](https://github.com/kubernetes/kubernetes/pull/119294), [@mimowo](https://github.com/mimowo))
 - Graduated `AdmissionWebhookMatchCondition` feature to beta. ([#119380](https://github.com/kubernetes/kubernetes/pull/119380), [@a-hilaly](https://github.com/a-hilaly))

@@ -1,0 +1,5 @@
+pr: 118303
+releasenote:
+  text: |-
+    Deprecated support for CSI migration of `Ceph RBD volumes`. Users who were relying on Kubernetes' ability
+    to migrate to an out-of-tree storage driver should complete that migration before the support for it is removed.

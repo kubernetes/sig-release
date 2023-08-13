@@ -5144,8 +5144,8 @@
   },
   "118303": {
     "commit": "7472634bcb969db1d153ee4c7b451f8db5904a1d",
-    "text": "Deprecated support for CSI migration of Ceph RBD volumes.\n\nUsers who were relying on Kubernetes' ability to migrate to an out-of-tree storage driver should complete\nthat migration before the support for it is removed.",
-    "markdown": "Deprecated support for CSI migration of Ceph RBD volumes.\n  \n  Users who were relying on Kubernetes' ability to migrate to an out-of-tree storage driver should complete\n  that migration before the support for it is removed. ([#118303](https://github.com/kubernetes/kubernetes/pull/118303), [@carlory](https://github.com/carlory)) [SIG Storage]",
+    "text": "Deprecated support for CSI migration of `Ceph RBD volumes`. Users who were relying on Kubernetes' ability\nto migrate to an out-of-tree storage driver should complete that migration before the support for it is removed.",
+    "markdown": "Deprecated support for CSI migration of `Ceph RBD volumes`. Users who were relying on Kubernetes' ability\n  to migrate to an out-of-tree storage driver should complete that migration before the support for it is removed. ([#118303](https://github.com/kubernetes/kubernetes/pull/118303), [@carlory](https://github.com/carlory))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5162,7 +5162,8 @@
     ],
     "sigs": [
       "storage"
-    ]
+    ],
+    "action_required": true
   },
   "118329": {
     "commit": "9d231f8ce77b4a8413b41130ea130d392ca860c7",
@@ -6188,8 +6189,8 @@
   },
   "118828": {
     "commit": "773a6b1e460360538ce4d85a7c0d009efed81836",
-    "text": "Changed how KMS v2 encryption at rest can generate data encryption keys.\nWhen you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data.  This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce.",
-    "markdown": "Changed how KMS v2 encryption at rest can generate data encryption keys.\n  When you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data.  This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce. ([#118828](https://github.com/kubernetes/kubernetes/pull/118828), [@enj](https://github.com/enj))",
+    "text": "Changed how KMS v2 encryption at rest can generate data encryption keys.\nWhen you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data. This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce.",
+    "markdown": "Changed how KMS v2 encryption at rest can generate data encryption keys.\n  When you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data. This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce. ([#118828](https://github.com/kubernetes/kubernetes/pull/118828), [@enj](https://github.com/enj))",
     "author": "enj",
     "author_url": "https://github.com/enj",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/118828",
