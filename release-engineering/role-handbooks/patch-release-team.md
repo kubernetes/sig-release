@@ -428,7 +428,7 @@ cell to indicate the uncertainty.
 
 Keep an eye on approved cherry-pick PRs to make sure they aren't getting blocked
 on presubmits that are failing across the whole branch.
-Also periodically check the [testgrid](https://k8s-testgrid.appspot.com)
+Also periodically check the [testgrid](https://testgrid.k8s.io)
 dashboard for your release branch to make sure the continuous jobs are healthy.
 
 Escalate to test owners,

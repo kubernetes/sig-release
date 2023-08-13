@@ -26,7 +26,7 @@
 * The Release Team will continue with the shortened Code Freeze, [see below](#conditionally-shortened-code-freeze).
 * The feature process is remaining as it has in prior releases.
 * Features that don't have complete code and tests by [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.12/release-1.12.md#code-freeze) may be disabled by the release team before cutting the first beta.
-* The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) failures to SIGs throughout the cycle, not just near release cuts.
+* The release team will escalate [release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) and [release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade) failures to SIGs throughout the cycle, not just near release cuts.
 * Key deliverables (e.g. initial release cuts) tend to be scheduled on Tuesdays to maintain context while ramping up and then responding to any problems.  The final release will also be on a Tuesday in keeping with prior practice.
 * The release cycle length is approximately 12 weeks.
 
@@ -78,7 +78,7 @@
 
 In an effort to make the Code Freeze period shorter, and allow more time for feature development, the 1.11 Release Team tested out a procedure for postponing it based on release stability and "clean signal".
 
-The goal is that all tests in [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) are passing and have been passing for a few days.
+The goal is that all tests in [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) and [master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade) are passing and have been passing for a few days.
 
 Based on the 1.11 outcome, the 1.12 Release Team has set the schedule with a shortened code freeze in line with the prior cycle.  The release team may need to inncrease the length of code slush and freeze to begin earlier if the project does not maintain a clean CI signal heading into the planned slush and freeze.  Any such changes will be communicated early and broadly.
 

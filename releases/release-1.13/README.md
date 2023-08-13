@@ -27,7 +27,7 @@ Angel Number 113 signifies new beginnings, transformation and end of a chapter t
 * The Release Team will continue with the shortened Code Freeze, [see below](#conditionally-shortened-code-freeze).
 * The Features process is remaining as it has in prior releases, except that it is being renamed from Features to Enhancements.
 * Enhancements that don't have complete code and tests by [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.13/release-1.13.md#code-freeze) may be disabled by the release team before cutting the first beta.
-* The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) failures to SIGs throughout the cycle, not just near release cuts.
+* The release team will escalate [release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) and [release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade) failures to SIGs throughout the cycle, not just near release cuts.
 * Unlike the previous cycles key deliverables, including the final release, do **not** fall on Tuesdays due to shortened release cycle.
 * The release cycle length is approximately only **10 weeks** long.
 
@@ -82,7 +82,7 @@ Angel Number 113 signifies new beginnings, transformation and end of a chapter t
 
 ### Conditionally Shortened Code Freeze
 
-In keeping with 1.11 and 1.12 release cycles, the 1.13 Release Team has set the schedule with a shortened code freeze. This is ofcourse contingent on all tests in [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) passing and have been passing for a few days leading to the code slush and freeze.
+In keeping with 1.11 and 1.12 release cycles, the 1.13 Release Team has set the schedule with a shortened code freeze. This is ofcourse contingent on all tests in [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) and [master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade) passing and have been passing for a few days leading to the code slush and freeze.
 
 The release team may need to shorten the length of code slush and increase length of freeze to begin earlier if the project does not maintain a clean CI signal heading into the planned slush and freeze. Any such changes will be communicated early and broadly.
 

@@ -36,7 +36,7 @@
 
 CI Signal lead assumes the responsibility of the quality gate for the release. This person is responsible for:
 
--   Continuously monitoring various e2e tests in sig-release dashboards ([master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking), [master-informing](https://k8s-testgrid.appspot.com/sig-release-master-informing), `release-x.y-blocking/informing` (x.y being the current release)) throughout the release cycle
+-   Continuously monitoring various e2e tests in sig-release dashboards ([master-blocking](https://testgrid.k8s.io/sig-release-master-blocking), [master-informing](https://testgrid.k8s.io/sig-release-master-informing), `release-x.y-blocking/informing` (x.y being the current release)) throughout the release cycle
 -   Providing early and ongoing signals on release and test health to both Release team and various SIGs
 -   Ensuring that all release blocking tests provide a clear Go/No-Go signal for the release
 -   Flagging regressions as close to source as possible i.e., as soon as the offending code was merged
@@ -117,7 +117,7 @@ Here are some good early deliverables from the CI Signal lead between start of t
 
 -   Start maintain the [CI signal project board](https://github.com/orgs/kubernetes/projects/68) and keep it up-to-date with issues tracking any test failure/flake
 -   Assign the new milestone labels to the open issues from previous release, assign a member of the CI signal team, and have that member follow up on the issue with owners
--   Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues. See [Opening Issues](#opening-issues) for how to write an effective issue.
+-   Monitor [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards **twice a week** and ensure all failures and flakes are tracked via open issues. See [Opening Issues](#opening-issues) for how to write an effective issue.
 -   Build and maintain a document of area experts / owners across SIGs for future needs e.g.: Scalability experts, upgrade test experts etc
 
 #### **_Best Practice:_**
@@ -128,8 +128,8 @@ The SLA and involvement of signal lead at this stage might vary from release to 
 
 Day to day tasks remain pretty much the same as before, with the following slight changes
 
--   Monitor [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) dashboard **daily**
--   Monitor [master-informing](https://k8s-testgrid.appspot.com/sig-release-master-informing) **every other day**
+-   Monitor [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) dashboard **daily**
+-   Monitor [master-informing](https://testgrid.k8s.io/sig-release-master-informing) **every other day**
 
 Increased attention on maintaining signal early in the release cycle goes a long way in reducing the risk of late-found issues destabilizing the release during code freeze.
 

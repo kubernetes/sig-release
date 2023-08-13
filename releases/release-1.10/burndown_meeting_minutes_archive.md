@@ -234,15 +234,15 @@ Video [Link](https://youtu.be/QLiym7j60f4)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [GREEN]
 
@@ -387,15 +387,15 @@ Video [Link](https://youtu.be/5NnZ1wuHo7Y)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [GREEN]
 
@@ -415,7 +415,7 @@ Video [Link](https://youtu.be/5NnZ1wuHo7Y)
 
     * Soak test looks bad?
 
-        * [https://k8s-testgrid.appspot.com/sig-release-1.10-all#gci-gce-soak-1.10](https://k8s-testgrid.appspot.com/sig-release-1.10-all#gci-gce-soak-1.10) 
+        * [https://testgrid.k8s.io/sig-release-1.10-all#gci-gce-soak-1.10](https://testgrid.k8s.io/sig-release-1.10-all#gci-gce-soak-1.10) 
 
         * Bumped timeout 2h but still timing out? Gonna bump again...
 
@@ -534,15 +534,15 @@ Video [Link](https://youtu.be/5NnZ1wuHo7Y)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [GREEN]
 
@@ -556,7 +556,7 @@ Video [Link](https://youtu.be/5NnZ1wuHo7Y)
 
     * Gke-1.10 need to enable dashboard addon
 
-        * [https://k8s-testgrid.appspot.com/sig-release-1.10-blocking#gke-1.10](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking#gke-1.10)
+        * [https://testgrid.k8s.io/sig-release-1.10-blocking#gke-1.10](https://testgrid.k8s.io/sig-release-1.10-blocking#gke-1.10)
 
         * Similar to [https://github.com/kubernetes/test-infra/pull/7217](https://github.com/kubernetes/test-infra/pull/7217), will do shortly
 
@@ -570,7 +570,7 @@ Video [Link](https://youtu.be/5NnZ1wuHo7Y)
 
     * Soak test looks bad?
 
-        * [https://k8s-testgrid.appspot.com/sig-release-1.10-all#gci-gce-soak-1.10](https://k8s-testgrid.appspot.com/sig-release-1.10-all#gci-gce-soak-1.10) 
+        * [https://testgrid.k8s.io/sig-release-1.10-all#gci-gce-soak-1.10](https://testgrid.k8s.io/sig-release-1.10-all#gci-gce-soak-1.10) 
 
     * Scalability performance:
 
@@ -668,7 +668,7 @@ Video [Link](https://youtu.be/BZ1jshT198E)
 
             * **@Wojtekt @shyam && SIG Scalability**
 
-        * **Need to look at ****[kubemark 5k node**s](https://k8s-testgrid.appspot.com/sig-scalability-kubemark)** test for comparison**
+        * **Need to look at ****[kubemark 5k node**s](https://testgrid.k8s.io/sig-scalability-kubemark)** test for comparison**
 
         * **[http://perf-dash.k8s.i**o](http://perf-dash.k8s.io)** **
 
@@ -730,15 +730,15 @@ Video [Link](https://youtu.be/BZ1jshT198E)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [GREEN]
 
@@ -974,15 +974,15 @@ Video [Link](https://youtu.be/Kiu4lUPxJig)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [GREEN]
 
@@ -1167,15 +1167,15 @@ Video [Link](https://youtu.be/gdW3a7PvBbs)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [GREEN]
 
@@ -1233,9 +1233,9 @@ Video [Link](https://youtu.be/gdW3a7PvBbs)
 
         * 1.9 fixes merged
 
-            * [http://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.9-master-upgrade-cluster](http://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.9-master-upgrade-cluster) has one last serial issue, same as [https://github.com/kubernetes/kubernetes/issues/60763](https://github.com/kubernetes/kubernetes/issues/60763) 
+            * [http://testgrid.k8s.io/sig-release-master-upgrade#gce-1.9-master-upgrade-cluster](http://testgrid.k8s.io/sig-release-master-upgrade#gce-1.9-master-upgrade-cluster) has one last serial issue, same as [https://github.com/kubernetes/kubernetes/issues/60763](https://github.com/kubernetes/kubernetes/issues/60763) 
 
-            * [http://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.9-master-upgrade-cluster-parallel](http://k8s-testgrid.appspot.com/sig-release-master-upgrade#gce-1.9-master-upgrade-cluster-parallel) looks like `Proxy version v1` is still an issue?
+            * [http://testgrid.k8s.io/sig-release-master-upgrade#gce-1.9-master-upgrade-cluster-parallel](http://testgrid.k8s.io/sig-release-master-upgrade#gce-1.9-master-upgrade-cluster-parallel) looks like `Proxy version v1` is still an issue?
 
                 * Reopened [https://github.com/kubernetes/kubernetes/issues/60769](https://github.com/kubernetes/kubernetes/issues/60769) 
 
@@ -1384,15 +1384,15 @@ Video [Link](https://youtu.be/p7Nlrub-dg4)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [GREEN]
 
@@ -1597,15 +1597,15 @@ test/e2e/framework/framework.go:318
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [GREEN]
 
@@ -1796,15 +1796,15 @@ Video [Link](https://youtu.be/kcKw57uEp20)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [RED/YELLOW/GREEN]
 
@@ -1973,15 +1973,15 @@ Attending:
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Branch Updates / Branch Health [No status]
 
@@ -2176,15 +2176,15 @@ Video [Link](https://youtu.be/JU8ZwLScA4Q)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Exception Requests [GREEN]
 
@@ -2232,7 +2232,7 @@ Video [Link](https://youtu.be/JU8ZwLScA4Q)
 
         * Rolling back etcd server:  (DONE) [https://github.com/kubernetes/kubernetes/pull/60891](https://github.com/kubernetes/kubernetes/pull/60891) 
 
-    * One sig-ui failure in [https://k8s-testgrid.appspot.com/sig-release-master-blocking#gci-gke](https://k8s-testgrid.appspot.com/sig-release-master-blocking#gci-gke) 
+    * One sig-ui failure in [https://testgrid.k8s.io/sig-release-master-blocking#gci-gke](https://testgrid.k8s.io/sig-release-master-blocking#gci-gke) 
 
 * Test Infra Updates [GREEN] (no update)
 
@@ -2307,15 +2307,15 @@ Video Link
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Exception Requests [GREEN]
 
@@ -2444,15 +2444,15 @@ Attending:
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Exception Requests [GREEN]
 
@@ -2583,15 +2583,15 @@ Video [Link](https://youtu.be/HeuMd3UDut8)
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Exception Requests [GREEN]
 
@@ -2824,15 +2824,15 @@ Attending:
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Issue review by SIG 
 [Bug Leaderboard](https://docs.google.com/spreadsheets/d/1SAl4YcsB6V9yrBVN88FGMoC9rUUykAepDq2sfKQAOfM/edit?usp=sharing)
@@ -2984,15 +2984,15 @@ Attending:
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Issue review by [SIG](https://docs.google.com/spreadsheets/d/1SAl4YcsB6V9yrBVN88FGMoC9rUUykAepDq2sfKQAOfM/edit#gid=161799236) 
 
@@ -3067,15 +3067,15 @@ Attending:
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Exception Requests [GREEN]
 
@@ -3311,15 +3311,15 @@ Attending:
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Issue review by SIG 
 
@@ -3568,15 +3568,15 @@ Attending:
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Issue review by SIG 
 [Issue Leaderboard](https://docs.google.com/spreadsheets/d/1SAl4YcsB6V9yrBVN88FGMoC9rUUykAepDq2sfKQAOfM/edit?usp=sharing)
@@ -3820,15 +3820,15 @@ Attending:
 
     * Testgrid dashboards
 
-        * [presubmits-kubernetes-blocking](http://k8s-testgrid.appspot.com/presubmits-kubernetes-blocking)
+        * [presubmits-kubernetes-blocking](http://testgrid.k8s.io/presubmits-kubernetes-blocking)
 
-        * [sig-release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+        * [sig-release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
 
-        * [sig-release-master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade)
+        * [sig-release-master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade)
 
-        * [sig-release-1.10-blocking](https://k8s-testgrid.appspot.com/sig-release-1.10-blocking)
+        * [sig-release-1.10-blocking](https://testgrid.k8s.io/sig-release-1.10-blocking)
 
-        * [sig-release-1.10-all](https://k8s-testgrid.appspot.com/sig-release-1.10-all)
+        * [sig-release-1.10-all](https://testgrid.k8s.io/sig-release-1.10-all)
 
 * Issue review by SIG 
 

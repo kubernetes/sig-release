@@ -51,7 +51,7 @@ which shall be the discharged by the Release Team.
   - Announcement of alpha, beta, release candidate availability
   - Announcement of release availability
 - Deriving signal from the following sources
-  - [test grid](https://k8s-testgrid.appspot.com/)
+  - [test grid](https://testgrid.k8s.io/)
   - GitHub [flake issues](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+label%3Akind%2Fflake)
   - GitHub [bug issues](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3Akind%2Fbug)
 - Identifying owning individuals and SIGs for blocking issues

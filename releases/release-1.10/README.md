@@ -15,7 +15,7 @@
 
 * The feature process is remaining as it has in prior releases. 
 * Features that don't have complete code and tests by [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.10/release-1.10.md#code-freeze) may be disabled by the release team before cutting the first beta.
-* The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) failures to SIGs throughout the cycle, not just near release cuts.
+* The release team will escalate [release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) failures to SIGs throughout the cycle, not just near release cuts.
 * Key deliverables (e.g. initial release cuts) tend to be scheduled on Tuesdays to maintain context while ramping up and then responding to any problems.  The final release will be on a Wednesday in keeping with prior practice.
 * The release length is nearly 12 weeks
 * Code name "*Left Shark*" because it's been my favorite meme of the release cycle (Thanks [Christoph](https://github.com/cblecker))
