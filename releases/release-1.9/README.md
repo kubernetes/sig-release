@@ -16,7 +16,7 @@ The 1.9 release cycle begins on Monday, October 2, 2017.
   need to have a reduced scope in order to meet the tight schedule.
 * Features that don't have complete code and tests by [Code Freeze](#code-freeze)
   **may be disabled by the release team** before cutting the first beta.
-* The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking)
+* The release team will escalate [release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
   failures to SIGs throughout the cycle, not just near release cuts.
 * Key deliverables (e.g. release cuts) tend to be scheduled on Wednesdays
   to maintain context while ramping up and then responding to any problems.

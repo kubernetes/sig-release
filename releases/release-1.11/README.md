@@ -24,7 +24,7 @@
 * We have changed [burndown times]() to make it easier for more contributors to attend.
 * The feature process is remaining as it has in prior releases.
 * Features that don't have complete code and tests by [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.11/release-1.11.md#code-freeze) may be disabled by the release team before cutting the first beta.
-* The release team will escalate [release-master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) failures to SIGs throughout the cycle, not just near release cuts.
+* The release team will escalate [release-master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) failures to SIGs throughout the cycle, not just near release cuts.
 * Key deliverables (e.g. initial release cuts) tend to be scheduled on Tuesdays to maintain context while ramping up and then responding to any problems.  The final release will be on a Wednesday in keeping with prior practice.
 * The release length is nearly 12 weeks
 
@@ -81,7 +81,7 @@
 
 In an effort to make the Code Freeze period shorter, and allow more time for feature development, the Release Team will be testing out a procedure for postponing it based on release stability.
 
-On **May 18th**, the Release Team will evaluate the stability of 1.11.  This stability will be primarily based on "clean signal", primarily that all tests in [master-blocking](https://k8s-testgrid.appspot.com/sig-release-master-blocking) and [master-upgrade](https://k8s-testgrid.appspot.com/sig-release-master-upgrade) are passing and have been passing for a few days.  If the tests boards are green, the release team will announce delaying the start of Code Slush and Code Freeze by one week each (to **May 29** and **June 5**) on that day.
+On **May 18th**, the Release Team will evaluate the stability of 1.11.  This stability will be primarily based on "clean signal", primarily that all tests in [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking) and [master-upgrade](https://testgrid.k8s.io/sig-release-master-upgrade) are passing and have been passing for a few days.  If the tests boards are green, the release team will announce delaying the start of Code Slush and Code Freeze by one week each (to **May 29** and **June 5**) on that day.
 
 If Code Freeze is not postponed on May 18th, then on **May 25** the Release Team will evaluate again.  This evaluation will be based primarily on the three test suites (master-blocking, master-upgrade, and 1.11-blocking), and if passed, Code Freeze will be postponed by one week, to **June 5th**.
 

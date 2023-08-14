@@ -28,7 +28,7 @@ modifications:
 ### July 5 - Sept 1
 - 8 week coding period
 - Release 1.8 alphas every 2 weeks
-  - Alphas only cut if [release-master-blocking](https://k8s-testgrid.appspot.com/release-master-blocking) are passing
+  - Alphas only cut if [release-master-blocking](https://testgrid.k8s.io/release-master-blocking) are passing
 - July 12th (Weds): v1.8.0-alpha.1
 - July 26th (Weds): v1.8.0-alpha.2
 - Aug 1st (Tues): Feature Freeze: all features going into release should
