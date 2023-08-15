@@ -672,7 +672,7 @@ Update the Netlify configuration. (A [SIG Docs chair](https://github.com/kuberne
 
 Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
-- Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `main` (e.g: https://kuberneteio), eventually `main` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
+- Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `main` (e.g: https://kubernetes.io), eventually `main` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
   - Taking the defaults here is mostly fine
   - When in doubt, compare it to a working example
   - e.g, site name: k8s-v1-20
