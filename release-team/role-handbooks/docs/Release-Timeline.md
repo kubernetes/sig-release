@@ -584,6 +584,7 @@ This PR can be merged on release day by the Docs lead.
 ### Update the site configuration files for previous releases
 
 Update `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch.
+You might require changing `hugo.toml` instead of `config.toml` starting from the 1.26 release.
 Use [path release](https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md) to determine the
 correct patch version of the past release when updating the `config.toml` or `hugo.toml` (starting for 1.26) file.
 
