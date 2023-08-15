@@ -585,7 +585,7 @@ This PR can be merged on release day by the Docs lead.
 
 Update `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch.
 You might require changing `hugo.toml` instead of `config.toml` starting from the 1.26 release.
-There would not be a `release-[previous-release]` branch so you should make the pull request updating the site configuration
+There would not be a `release-[previous-release]` branch, so you should make the pull request updating the site configuration
 for the previous release targeting `main`, and once you create the `release-[previous-release]` branch you should then change the
 base branch for the pull request to `release-[previous-release]`.
 Use [path release](https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md) to determine the
