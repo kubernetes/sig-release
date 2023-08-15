@@ -583,7 +583,11 @@ This PR can be merged on release day by the Docs lead.
 
 ### Update the site configuration files for previous releases
 
-Update `config.toml` files for the 4 previous releases. These need to be 4 separate PRs because each release has its own `release-` branch.
+Update the `config.toml` files for the 4 previous releases. You need to open 4 separate PRs, because each release has its own `release-` branch.
+You may need to change `hugo.toml`, instead of `config.toml`, starting from the 1.26 release.
+There would not be a `release-[previous-release]` branch, so you should make the pull request updating the site configuration
+for the previous release targeting `main`, and once you create the `release-[previous-release]` branch you should then change the
+base branch for the pull request to `release-[previous-release]`.
 Use [path release](https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md) to determine the
 correct patch version of the past release when updating the `config.toml` or `hugo.toml` (starting for 1.26) file.
 
@@ -648,7 +652,7 @@ git remote set-url --push upstream no_push
 24 hours before the release, freeze the [k/website](https://github.com/kubernetes/website) repo: ⚠️  no PRs should be allowed to merge **AT ALL** until the release PR has successfully merged. There is an exception for your release PRs, which will bypass that restriction.
 
 - Submit an issue with `tide/merge-blocker` label. Depending upon your permissions, a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with adding the label.
-- Submit a freeze announcement following our [protocols](#communicate-major-deadlines)
+- Submit a freeze announcement following our [protocols](#communicate-major-deadlines) to #sig-docs and #kubernetes-contributors
 
 #### Create the release branch
 
@@ -668,7 +672,7 @@ Update the Netlify configuration. (A [SIG Docs chair](https://github.com/kuberne
 
 Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
-- Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `main` (e.g: https://kuberneteio), eventually `main` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
+- Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `main` (e.g: https://kubernetes.io), eventually `main` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
   - Taking the defaults here is mostly fine
   - When in doubt, compare it to a working example
   - e.g, site name: k8s-v1-20
@@ -704,9 +708,9 @@ Now create a pull request to merge the new branch you've made into the `release-
 
 After the freeze, if the dev-[future-release] branch is behind `main`, create a PR to merge `main` into dev-[future-release].
 
-[Sync](#-periodically-merge-main-into-dev-future-release) `main` into the release-[current-release] branch the day before the release.
+[Sync](#%EF%B8%8F-periodically-merge-main-into-dev-future-release) `main` into the release-[current-release] branch the day before the release.
 
-After review from SIG Docs, both PRs will need to merge manually using the `Create a merge commit` method of merging.
+After review from SIG Docs, both PRs will need to be merged manually using the `Create a merge commit` method of merging.
 
 #### Get approvals for open PRs
 
@@ -732,6 +736,7 @@ Once release management team has successfully cut the release, Docs Lead will me
 the `Create a merge commit` method of merging.
 Do not delete the dev-[future-release] when GitHub asks.
 
+- Verify that the pull request has an `approved` and an `lgtm` label.
 - Remove the hold from the on-hold integration PR when needed and merge into `main`.
 - Check the [Netlify build logs](https://app.netlify.com/sites/kubernetes-io-main-staging/deploys) to make sure the
 site builds successfully.
@@ -739,10 +744,13 @@ site builds successfully.
 [documentation version](https://kubernetes.io/docs/home/supported-doc-versions/), and random clicks.
 > Note: Make a note of the commit hash of the integration branch merge
 
+> Note: In 1.28 the Docs Release Team had failing CLA checks while merging the integration branch, in which case they made a decision to not change history at all. Rather, they merged the integration branch even with failing CLA checks since the commit did pass CLA when it was merged to `dev-1.28`, and the docs team did not want to fix this by altering history due to the side effects of doing so.
+
 ### Publish the release blog post
 
 After validation, merge the blog post manually using the `Create a merge commit` method of merging.
 
+- Verify that the pull request has an `approved` and an `lgtm` label.
 - Remove the hold from blog post when needed and merge into `main`.
 - Check the [Netlify build logs](https://app.netlify.com/sites/kubernetes-io-main-staging/deploys) to make sure the
 site builds successfully.
