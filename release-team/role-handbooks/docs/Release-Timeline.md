@@ -732,6 +732,7 @@ Once release management team has successfully cut the release, Docs Lead will me
 the `Create a merge commit` method of merging.
 Do not delete the dev-[future-release] when GitHub asks.
 
+- Verify that the pull request has an `approved` and an `lgtm` label.
 - Remove the hold from the on-hold integration PR when needed and merge into `main`.
 - Check the [Netlify build logs](https://app.netlify.com/sites/kubernetes-io-main-staging/deploys) to make sure the
 site builds successfully.
@@ -745,6 +746,7 @@ site builds successfully.
 
 After validation, merge the blog post manually using the `Create a merge commit` method of merging.
 
+- Verify that the pull request has an `approved` and an `lgtm` label.
 - Remove the hold from blog post when needed and merge into `main`.
 - Check the [Netlify build logs](https://app.netlify.com/sites/kubernetes-io-main-staging/deploys) to make sure the
 site builds successfully.
