@@ -744,7 +744,7 @@ site builds successfully.
 [documentation version](https://kubernetes.io/docs/home/supported-doc-versions/), and random clicks.
 > Note: Make a note of the commit hash of the integration branch merge
 
-> Note: In 1.28 the Docs Release Team had failing CLA checks while merging the integration branch, in hwich case they made a decision to not change history at all. Rather they merged the integration branch even with failing CLA checks since the commit did pass CLA when it was merged to `dev-1.28` and the docs team did not want to fix this by altering history due to the side effects of doing so.
+> Note: In 1.28 the Docs Release Team had failing CLA checks while merging the integration branch, in which case they made a decision to not change history at all. Rather, they merged the integration branch even with failing CLA checks since the commit did pass CLA when it was merged to `dev-1.28`, and the docs team did not want to fix this by altering history due to the side effects of doing so.
 
 ### Publish the release blog post
 
