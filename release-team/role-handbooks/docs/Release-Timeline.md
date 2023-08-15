@@ -708,7 +708,7 @@ Now create a pull request to merge the new branch you've made into the `release-
 
 After the freeze, if the dev-[future-release] branch is behind `main`, create a PR to merge `main` into dev-[future-release].
 
-[Sync](#-periodically-merge-main-into-dev-future-release) `main` into the release-[current-release] branch the day before the release.
+[Sync](#%EF%B8%8F-periodically-merge-main-into-dev-future-release) `main` into the release-[current-release] branch the day before the release.
 
 After review from SIG Docs, both PRs will need to merge manually using the `Create a merge commit` method of merging.
 
