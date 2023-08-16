@@ -849,19 +849,11 @@ git commit --allow-empty -m "Tracking commit for v1.22 docs"
 git push -u origin dev-1.22
 ```
 
-### Enable branch protection
-
-> Note: You can avoid creating two PRs against the `test-infra` repo by completing the
-> [Modify prow config file](#modify-prow-config-file) at the same time.
-
-Enable branch protection on the new release branch, e.g.
-[Add branch protection to the `release-1.20` branch and milestone applier for k/website 1.22](https://github.com/kubernetes/test-infra/pull/20182/files) (https://github.com/kubernetes/test-infra/pull/20182/files)
-
 ### Modify prow config file
 
 Create a [pull request](https://github.com/kubernetes/test-infra/pull/21727) against [k/test-infra](https://github.com/kubernetes/test-infra)
  to configure [prow](https://github.com/kubernetes/test-infra/tree/master/prow#) to automatically apply milestones to future release branch
- and to remove the configuration for the last release.
+ and to remove the configuration for the last release e.g. [Add branch protection and milestone applier for k/website](https://github.com/kubernetes/test-infra/pull/30389).
 
 ```diff
 kubernetes/website:
