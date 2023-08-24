@@ -10,6 +10,10 @@ description: |
 
 # Kubernetes 1.28
 
+<p align="center">
+  <img width="300" heigth="300" src="https://github.com/Rajdeep1311/sig-release/assets/113296626/52515f7d-820f-4435-9877-b00fb48ace22">
+</p>
+
 #### Links
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.28/README.md)
