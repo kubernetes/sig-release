@@ -451,7 +451,7 @@ datafields:
     trackingissue: "[https://github.com/kubernetes/kubernetes/issues/TODO](https://github.com/kubernetes/kubernetes/issues/TODO)"
     vector: "<cvss vector string>"
     score: <cvss score>
-    rating: "<CVE rating (Low/Medium/Critical)>"
+    rating: "<CVE rating (Low/Medium/High/Critical)>"
     linkedprs: []
 
 ```
