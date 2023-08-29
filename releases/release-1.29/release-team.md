@@ -4,13 +4,13 @@
 |----------|----------------------------------|----------------------------------------|
 | Release Team Lead | Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929) / Slack: `@psaggu`) | |
 | Emeritus Adviser | Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`) | N/A |
-| Enhancements | | |
+| Enhancements | Nina Polshakova ([@npolshakova](https://github.com/npolshakova) / Slack: `@Nina Polshakova`) | |
 | Release Notes | Frederico Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsmunoz`) | |
-| Communications | Carol Valencia ((@krol3)[https://github.com/krol3] / Slack: `@krol`) | | 
-| Bug Triage | | |
-| CI Signal | | |
-| Docs | | |
-| Branch Manager | | |
+| Communications | Carol Valencia ([@krol3](https://github.com/krol3) / Slack: `@krol`) | | 
+| Bug Triage |  Yigit Demirbas ([@hailkomputer](https://github.com/hailkomputer) / Slack: `@Yigit Demirbas`) | |
+| CI Signal | Vyom Yadav ([@Vyom-Yadav](https://github.com/Vyom-Yadav) / Slack: `@Vyom Yadav` ) | | 
+| Docs | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@Kat Cosgrove`) | |
+| Branch Manager | | Mark Rossetti ([@marosset](https://github.com/marosset) / Slack: `@marosset`) |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 

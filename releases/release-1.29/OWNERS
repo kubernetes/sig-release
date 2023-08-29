@@ -3,15 +3,15 @@
 approvers:
     - Priyankasaggu11929   # 1.29 Release Team Lead
     - salaxander           # 1.29 Emeritus Advisor
-    #-                     # 1.29 Release Team Lead Shadow
-    #-                     # 1.29 Release Team Lead Shadow
-    #-                     # 1.29 Release Team Lead Shadow
-    #-                     # 1.29 Release Team Lead Shadow
+    - mehabhalodiya        # 1.29 Release Team Lead Shadow
+    - mickeyboxell         # 1.29 Release Team Lead Shadow
+    - neoaggelos           # 1.29 Release Team Lead Shadow
+    - ramrodo              # 1.29 Release Team Lead Shadow
 
 reviewers:
-    - fsmunoz      # 1.29 Release Notes Lead
-    - krol3        # 1.29 Communications Lead
-    #-             # 1.29 Enhancements Lead
-    #-             # 1.29 CI Signal Lead
-    #-             # 1.29 Bug Triage Lead
-    #-             # 1.29 Docs Lead
+    - fsmunoz       # 1.29 Release Notes Lead
+    - hailkomputer  # 1.29 Bug Triage Lead
+    - katcosgrove   # 1.29 Docs Lead
+    - krol3         # 1.29 Communications Lead
+    - npolshakova   # 1.29 Enhancements Lead
+    - Vyom-Yadav    # 1.29 CI Signal Lead
