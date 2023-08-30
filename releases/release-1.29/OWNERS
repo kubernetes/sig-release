@@ -1,0 +1,17 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+    - Priyankasaggu11929   # 1.29 Release Team Lead
+    - salaxander           # 1.29 Emeritus Advisor
+    - mehabhalodiya        # 1.29 Release Team Lead Shadow
+    - mickeyboxell         # 1.29 Release Team Lead Shadow
+    - neoaggelos           # 1.29 Release Team Lead Shadow
+    - ramrodo              # 1.29 Release Team Lead Shadow
+
+reviewers:
+    - fsmunoz       # 1.29 Release Notes Lead
+    - hailkomputer  # 1.29 Bug Triage Lead
+    - katcosgrove   # 1.29 Docs Lead
+    - krol3         # 1.29 Communications Lead
+    - npolshakova   # 1.29 Enhancements Lead
+    - Vyom-Yadav    # 1.29 CI Signal Lead
