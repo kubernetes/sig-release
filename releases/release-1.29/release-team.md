@@ -2,7 +2,7 @@
 
 | **Team/Role** | **Lead Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
-| Release Team Lead | Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929) / Slack: `@psaggu`) | |
+| Release Team Lead | Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929) / Slack: `@psaggu`) | Angelos Kolaitis ([@@neoaggelos](https://github.com/neoaggelos) / Slack: `@Angelos Kolaitis`), Meha Bhalodiya ([@mehabhalodiya](https://github.com/mehabhalodiya) / Slack: `@Meha Bhalodiya`), Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell), Slack: `@Mickey`), Rodolfo Martínez Vega ([@ramrodo](https://github.com/ramrodo), Slack: `@ramrodo`)|
 | Emeritus Adviser | Xander Grzywinski ([@salaxander](https://github.com/salaxander) / Slack: `@Xander`) | N/A |
 | Enhancements | Nina Polshakova ([@npolshakova](https://github.com/npolshakova) / Slack: `@Nina Polshakova`) | |
 | Release Notes | Frederico Muñoz ([@fsmunoz](https://github.com/fsmunoz) / Slack: `@fsmunoz`) | |
