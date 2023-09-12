@@ -34,7 +34,7 @@ Responsibilities include:
 * Offering guidance to contributors about how to contribute new feature and enhancements documentation and working with contributors to modify existing docs to accurately represent any upcoming changes 
 * Providing weekly updates to the Release Team about the current state of release-bound docs
 * Mentoring Docs Shadows throughout this process and empowering them with the knowledge needed to be future Docs Leads
-* Working with Shadows to review documentation related PRs according to the [style guide] of (https://kubernetes.io/docs/contribute/style/style-guide/) website to ensure quality 
+* Working with Shadows to review documentation related PRs according to the [style guide of website](https://kubernetes.io/docs/contribute/style/style-guide/) to ensure quality 
 * Working with SIG owners to ensure documentation is reviewed for technical accuracy
 * Working with Release Comms to review the Release Blog
 * Approving reviewed documentation to ensure its inclusion in the upcoming release
