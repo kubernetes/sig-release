@@ -178,6 +178,7 @@ To update an entry in this section the following steps must be performed:
 Begin running release-notes tool for the ongoing collection of release notes with the first alpha release, which has been cut directly after the latest minor.
 
 - Update the `release-notes-draft.md`
+- Verify release notes are available on (relnotes.k8s.io)[https://relnotes.k8s.io/]
 - Begin attending release team meetings
 - Informal intro meeting with release notes team to discuss contact information and logistics
 
