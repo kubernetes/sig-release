@@ -146,7 +146,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <li>SIG Release Chairs 
         </ul></ul>
         <ul>
-        <li>Start a communications with the SIG leads to align on the communications timeline and support for writing features posts
+        <li>Start communications with the SIG leads to align on the communications timeline and support for writing feature posts
         <li>Setup a communications plan aligned with the Release Calendar
         <li>Agree on participation together with Enhancements team lead at the next SIG Leads monthly meeting to align on expectations and communication possibilities
         </ul>
