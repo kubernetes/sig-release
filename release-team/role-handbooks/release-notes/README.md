@@ -70,7 +70,7 @@ In the first week of the release cycle, the Release Notes Lead will organize an 
 
 #### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
 
-In the first 8 weeks of the cycle, the Release Notes team should/must, attend weekly release meetings and run the [release-notes subcommand of krel](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) as well as update the [release-notes website](https://github.com/kubernetes-sigs/release-notes) for every `alpha`, `beta` and `rc` to create an early draft of the release notes. This ensures that the overall quality of the release notes can be verified from the beginning of the release cycle.
+In the first 8 weeks of the cycle, the Release Notes team should/must, attend weekly release meetings and run the [release-notes subcommand of krel](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) for every `alpha`, `beta` and `rc` to create an early draft of the release notes. This ensures that the overall quality of the release notes can be verified from the beginning of the release cycle.
 
 #### Late release cycle (weeks 9-12+) ~4-10 hours/week
 
@@ -111,14 +111,11 @@ Release Notes lead should be responsible for granting team members required acce
 
 The main task of the Release Notes team is the generation of the release notes during the release cycle.
 
-At least one member of the Release Notes Team should be responsible for [setting up](https://github.com/kubernetes/release/tree/master/docs/krel#installation) and [running](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) the release-notes subcommand of krel to generate both versions of the release notes after each Patch Release:
+At least one member of the Release Notes Team should be responsible for [setting up](https://github.com/kubernetes/release/tree/master/docs/krel#installation) and [running](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) the release-notes subcommand of krel to generate the release notes after each Patch Release:
 
 1. Update the release notes draft, a markdown file which will become the final document which will encompass all release notes written by contributors during the current release cycle. See previous drafts for versions [1.25](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.25/release-notes/release-notes-draft.md), [v1.24](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.24/release-notes/release-notes-draft.md) or [v1.23](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.23/release-notes/release-notes-draft.md).
 
-2. The team is responsible for adding Patch Release (e.g. [1.25.2](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1252), etc.) notes to the release notes website at <https://relnotes.k8s.io>. The krel release notes subcommand will automatically generate the necessary JSON files and patch the release notes website source.
-Note that there are plans to improve the workflow [1087](https://github.com/kubernetes/release/issues/1087)
-
-Detailed instructions for generating the release notes bundles are in the [krel release-notes subcommand documentation](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
+Detailed instructions for generating the release notes bundle is in the [krel release-notes subcommand documentation](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
 
 ### Periodically review and fix new release notes
 
@@ -179,8 +176,9 @@ To update an entry in this section the following steps must be performed:
 ### Week 1
 
 Begin running release-notes tool for the ongoing collection of release notes with the first alpha release, which has been cut directly after the latest minor.
-    - Update the `release-notes-draft.md`
-    - Update the website
+
+- Update the `release-notes-draft.md`
+- Verify release notes are available on (relnotes.k8s.io)[https://relnotes.k8s.io/]
 - Begin attending release team meetings
 - Informal intro meeting with release notes team to discuss contact information and logistics
 
