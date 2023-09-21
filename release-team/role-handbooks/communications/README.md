@@ -117,7 +117,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td>
         <ul>
         <li>Start attending the Release Team weekly meeting
-        <li>Join `#sig-release` and `#release-comms` Slack channels
+        <li>Join <code>#sig-release</code> and <code>#release-comms</code> Slack channels
         <li>Check if there are any holidays or events (e.g. KubeCon) that will occur during this release which may impact communication with the CNCF and SIG Chairs, plan accordingly
         <li>Select shadows for the team
         <li>Ensure shadows are all in the Kubernetes org on GitHub
@@ -152,7 +152,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td><b>Production Readiness Freeze</b></td>
         <td>
         <ul>
-        <li>Get access to the `Enhancements` and `Feature blog opt-in` tracking sheets and start following along
+        <li>Get access to the <code>Enhancements</code> and <code>Feature blog opt-in</code> tracking sheets and start following along
         </ul>
         </td>
     </tr>
@@ -162,7 +162,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td>
         <ul>
         <li>Work with the enhancements lead to understand big-ticket items to be included in the release
-        <li>Start monitoring the `Feature blog opt-in` sheet for new entries and use the `Assigment tab` sheet to assign and track status throughout the cycle (<a href="https://docs.google.com/spreadsheets/d/1hgFWig6YBSYORP3huwEyU0VlXGcYi6wMxjYW-swzCIY">for example</a>)
+        <li>Start monitoring the <code>Feature blog opt-in</code> sheet for new entries and use the <code>Assigment tab</code> sheet to assign and track status throughout the cycle (<a href="https://docs.google.com/spreadsheets/d/1hgFWig6YBSYORP3huwEyU0VlXGcYi6wMxjYW-swzCIY">for example</a>)
         <ul>
         </ul>
         </ul>
@@ -187,7 +187,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <ul>
         <li>Post reminders for the feature blog opt-in on the SIG slack channels (<a href="https://kubernetes.slack.com/archives/C0BP8PW9G/p1622556913118800">for example</a>)
         <li>Assign feature blog topics as they come in to team shadows for support and tracking efforts
-        <li>Join the `#sig-docs-blog` channel on Slack and attend the bi-weekly meetings. Share the current status of the Feature blog opt-in's and work with the team to establish review expectations and publication strategy.
+        <li>Join the <code>#sig-docs-blog</code> channel on Slack and attend the bi-weekly meetings. Share the current status of the Feature blog opt-in's and work with the team to establish review expectations and publication strategy.
         </ul>
         </td>
     </tr>
@@ -211,8 +211,8 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <li>Feature blog freeze is this week
         <li>Assign remaining feature blog topics
         <li>Establish feature blog post-release publication schedule, typically 2-3 posts per week.
-        <li>Post the feature blog publication schedule in `#sig-docs-blog` (<a href="https://kubernetes.slack.com/archives/CJDHVD54J/p1628649661040600">example post</a>)
-        <li>Establish a regular cadence status check-in with the `#sig-docs-blog` team and maintain the publication schedule post in Slack to keep everyone synced
+        <li>Post the feature blog publication schedule in <code>#sig-docs-blog</code> (<a href="https://kubernetes.slack.com/archives/CJDHVD54J/p1628649661040600">example post</a>)
+        <li>Establish a regular cadence status check-in with the <code>#sig-docs-blog</code> team and maintain the publication schedule post in Slack to keep everyone synced
         <li>Request placeholder PRs in k/website from all feature blog authors
         </ul>
         </td>
@@ -224,8 +224,8 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <ul>
         <li>Begin the release blog draft, if not yet started
         <li>Optional 'Deprecations and Removals' blog ready for review
-        <li>Schedule the release Live Webinar with CNCF by emailing `webinars@cncf.io`. You may be referred to <a href="https://calendly.com/cncfonlineprograms">Calendly</a>. The webinar is typically scheduled for 3-4 weeks after the release
-        <li>Schedule press and analyst pre-briefings and interviews for the release lead with CNCF by emailing `pr@cncf.io`
+        <li>Schedule the release Live Webinar with CNCF by emailing <code>webinars@cncf.io</code>. You may be referred to <a href="https://calendly.com/cncfonlineprograms">Calendly</a>. The webinar is typically scheduled for 3-4 weeks after the release
+        <li>Schedule press and analyst pre-briefings and interviews for the release lead with CNCF by emailing <code>pr@cncf.io</code>
         <li>Schedule release blog and press embargo with CNCF
         </ul>
         </td>
@@ -238,7 +238,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <li>Finalize and publish the 'Deprecations and Removals' blog once code freeze is in place.
         <li>Update release blog draft, post-Code Freeze
         <li>Check status with Release Notes lead on content for Major Themes and Known Issues sections of the release blog (short summaries to be included in the release blog)
-        <li>Check status on all feature blog PRs. Keep `#sig-docs-blog` up-to-date for editorial review, and establish tech reviewers are available 
+        <li>Check status on all feature blog PRs. Keep <code>#sig-docs-blog</code> up-to-date for editorial review, and establish tech reviewers are available 
         </ul>
         </td>
     </tr>
@@ -248,7 +248,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td>
         <ul>
         <li>Feature blog reviews start
-        <li>Continue to partner with `#sig-docs-blog` for editorial review, work to ensure tech reviews are moving forward from SIGs
+        <li>Continue to partner with <code>#sig-docs-blog</code> for editorial review, work to ensure tech reviews are moving forward from SIGs
         <li>Connect with Release Lead to ensure theme and release logo will be ready for release blog (not required for draft revisions)
         <li>Ensure that short one-to-two paragraph summaries of each Major Theme are available for the release blog from Release Notes lead or SIG Chairs
         <li>Finalize Release blog final draft and start reviews
