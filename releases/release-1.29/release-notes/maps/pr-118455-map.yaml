@@ -1,0 +1,4 @@
+pr: 118455
+releasenote:
+  text: Improved memory usage of `kube-controller-manager` by dropping the `.metadata.managedFields`
+    field that `kube-controller-manager` doesn't require.

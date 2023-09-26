@@ -1,0 +1,4 @@
+pr: 119105
+releasenote:
+  text: Added more accurate requeueing in scheduling queue for Pods rejected by the
+    temporal failure (e.g., temporal failure on `kube-apiserver`).

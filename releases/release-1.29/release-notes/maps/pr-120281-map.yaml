@@ -1,0 +1,4 @@
+pr: 120281
+releasenote:
+  text: Fixed a `v1.28` regression around restarting init containers in the right
+    order relative to normal containers.

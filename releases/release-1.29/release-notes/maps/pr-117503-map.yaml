@@ -1,0 +1,5 @@
+pr: 117503
+releasenote:
+  text: In-tree cloud providers are now switched off by default. Please use `DisableCloudProviders`
+    and `DisableKubeletCloudCredentialProvider` feature flags if you still need this
+    functionality.

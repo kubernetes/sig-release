@@ -1,0 +1,3 @@
+pr: 120352
+releasenote:
+  text: Updated `distroless-iptables` to use `registry.k8s.io/build-image/distroless-iptables:v0.3.1`.

@@ -1,0 +1,4 @@
+pr: 120398
+releasenote:
+  text: Fixed an issue where `StatefulSet` might not restart a pod after eviction
+    or node failure.

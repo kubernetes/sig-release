@@ -1,0 +1,5 @@
+pr: 119346
+releasenote:
+  text: |-
+    '`kubeadm`: printing the default component configs for `reset` and `join` is now
+    unsupported.'

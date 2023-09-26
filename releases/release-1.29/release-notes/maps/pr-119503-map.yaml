@@ -1,0 +1,3 @@
+pr: 119503
+releasenote:
+  text: Graduated API List chunking (aka pagination) feature to `stable`.

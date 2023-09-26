@@ -1,0 +1,4 @@
+pr: 119410
+releasenote:
+  text: '`kubectl` will not support the `/swagger-2.0.0.pb-v1` endpoint that has been
+    long deprecated.'

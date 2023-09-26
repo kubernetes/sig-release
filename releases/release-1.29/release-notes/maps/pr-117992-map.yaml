@@ -1,0 +1,4 @@
+pr: 117992
+releasenote:
+  text: Fixed an issue with the `garbagecollection` controller registering duplicate
+    event handlers if discovery requests failed.

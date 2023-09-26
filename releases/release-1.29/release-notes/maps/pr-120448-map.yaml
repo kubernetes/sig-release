@@ -1,0 +1,4 @@
+pr: 120448
+releasenote:
+  text: Changed behavior of `kube-proxy` by allowing to set `sysctl` values lower
+    than the existing one.

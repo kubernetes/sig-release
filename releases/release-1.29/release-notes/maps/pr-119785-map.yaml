@@ -1,0 +1,5 @@
+pr: 119785
+releasenote:
+  text: |-
+    In a scheduler with `Permit` plugins, when a Pod is rejected during `WaitOnPermit`, the scheduler records the plugin.
+    The scheduler will use the record to honor cluster events and queueing `hints registered` for the plugin, to inform whether to retry the pod.

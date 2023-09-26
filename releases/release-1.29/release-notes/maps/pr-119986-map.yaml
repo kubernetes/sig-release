@@ -1,0 +1,4 @@
+pr: 119986
+releasenote:
+  text: Fixed the bug where images that were pinned by the container runtime could
+    be garbage collected by `kubelet`.

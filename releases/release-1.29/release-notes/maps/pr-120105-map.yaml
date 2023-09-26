@@ -1,0 +1,3 @@
+pr: 120105
+releasenote:
+  text: Added mock framework support for unit tests for Windows in `kubeproxy`.

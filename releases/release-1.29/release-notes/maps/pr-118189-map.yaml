@@ -1,0 +1,3 @@
+pr: 118189
+releasenote:
+  text: Fixed a concurrent map access in `TopologyCache`'s `HasPopulatedHints` method.

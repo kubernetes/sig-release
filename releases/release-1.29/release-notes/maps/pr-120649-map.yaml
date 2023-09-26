@@ -1,0 +1,4 @@
+pr: 120649
+releasenote:
+  text: Fixed a bug in the cronjob controller where already created jobs might be
+    missing from the status.

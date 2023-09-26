@@ -1,0 +1,3 @@
+pr: 119796
+releasenote:
+  text: Added context to `caches populated` log messages.

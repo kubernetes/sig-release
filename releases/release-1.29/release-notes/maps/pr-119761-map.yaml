@@ -1,0 +1,3 @@
+pr: 119761
+releasenote:
+  text: '`Statefulset` now waits for new replicas in tests when removing `.start.ordinal`.'

@@ -1,0 +1,3 @@
+pr: 119150
+releasenote:
+  text: Allowed specifying `ExternalTrafficPolicy` for `Services` with `ExternalIPs`.

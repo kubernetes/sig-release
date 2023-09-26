@@ -1,0 +1,7 @@
+pr: 120275
+releasenote:
+  text: |-
+    The `CloudDualStackNodeIPs` feature is now `beta`, meaning that when using
+    an external cloud provider that has been updated to support the feature,
+    you can pass comma-separated dual-stack `--node-ips` to `kubelet` and have
+    the cloud provider take both IPs into account.

@@ -1,0 +1,5 @@
+pr: 120072
+releasenote:
+  text: |-
+    `kubeadm`: fixed the bug where `--image-repository` flag is missing for some init
+    phase sub-commands.

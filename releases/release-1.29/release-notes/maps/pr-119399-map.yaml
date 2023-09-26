@@ -1,0 +1,3 @@
+pr: 119399
+releasenote:
+  text: Optimized `NodeUnschedulable` Filter to avoid unnecessary calculations.

@@ -1,0 +1,4 @@
+pr: 118748
+releasenote:
+  text: Improved handling of jsonpath expressions for `kubectl wait --for`. It is
+    now possible to use simple filter expressions which match on a field's content.

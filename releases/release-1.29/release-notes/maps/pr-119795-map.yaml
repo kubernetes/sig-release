@@ -1,0 +1,3 @@
+pr: 119795
+releasenote:
+  text: Cleaned up `kube-apiserver` HTTP logs for impersonated requests.

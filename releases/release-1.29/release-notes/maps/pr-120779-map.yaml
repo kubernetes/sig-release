@@ -1,0 +1,4 @@
+pr: 120779
+releasenote:
+  text: No-op and GC related updates to cluster trust bundles no longer require attest
+    authorization when the `ClusterTrustBundleAttest` plugin is enabled.

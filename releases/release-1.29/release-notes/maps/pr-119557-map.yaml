@@ -1,0 +1,5 @@
+pr: 119557
+releasenote:
+  text: |-
+    Implemented API for streaming for the `etcd` store implementation.
+    When `sendInitialEvents ListOption` is set together with `watch=true`, it begins the watch stream with synthetic init events followed by a synthetic `Bookmark`, after which the server continues streaming events.

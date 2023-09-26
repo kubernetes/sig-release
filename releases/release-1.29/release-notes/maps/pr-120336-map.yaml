@@ -1,0 +1,4 @@
+pr: 120336
+releasenote:
+  text: Generated `ResourceClaim` names are now more readable because of an additional
+    hyphen before the random suffix (`<pod name>-<claim name>-<random suffix>`).

@@ -1,0 +1,3 @@
+pr: 120233
+releasenote:
+  text: Promoted `ServiceNodePortStaticSubrange` to stable and lock to default.

@@ -1,0 +1,4 @@
+pr: 120559
+releasenote:
+  text: 'e2e framework: retrying after intermittent `apiserver` failures was fixed
+    in `WaitForPodsResponding`'
