@@ -77,6 +77,11 @@ Work closely with the SIG Docs Blogs team (connecting on `#sig-docs-blogs` and b
 
 For tech reviews, reach out to authors and the sponsoring SIG to organize at least one tech review per blog post.
 
+Communicate the planned **publish date** to SIG Docs and the owner of the feature blog. 
+
+> Notify the author in the PR and Slack channels: `#sig-docs-blog`, `#sig-docs`. The communications team will assist in coordinating and publishing the feature blogs on schedule.
+> See example [here](https://github.com/kubernetes/website/pull/41924), "this article is scheduled for the 21th of August". 
+
 Work with SIG Contributor Experience (connecting on `#sig-contribex` and by attending meetings), to promote the feature blogs. 
 
 ### Mid-cycle deprecations and removals blog
@@ -134,14 +139,14 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td></td>
         <td>
         <ul>
-        <li>Update the <code>release-comms@kubernetes.io</code> Google Group. <a href="https://git.k8s.io/k8s.io/groups/groups.yaml">Membership</a> for this group is defined in <a href="https://git.k8s.io/k8s.io">kubernetes/k8s.io</a>. Ensure the list <b>only includes</b>:
+        <li>Update the <code>release-comms</code> Group. <a href="https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml">Membership</a> for this group is defined in <a href="https://git.k8s.io/k8s.io">kubernetes/k8s.io</a>. Ensure the list <b>only includes</b>:
         <ul>
         <li>The current release cycle's Release Team Lead & Lead Shadows
         <li>The current release cycle's Communications Lead & Comms Shadows
         <li>SIG Release Chairs 
         </ul></ul>
         <ul>
-        <li>Organize a meeting with the SIG leads to align on the communications timeline and support for writing features posts
+        <li>Start communications with the SIG leads to align on the communications timeline and support for writing feature posts
         <li>Setup a communications plan aligned with the Release Calendar
         <li>Agree on participation together with Enhancements team lead at the next SIG Leads monthly meeting to align on expectations and communication possibilities
         </ul>
