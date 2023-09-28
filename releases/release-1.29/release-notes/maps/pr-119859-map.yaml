@@ -1,0 +1,5 @@
+pr: 119859
+releasenote:
+  text: |-
+    '`kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`
+    certificate.'

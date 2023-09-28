@@ -1,0 +1,9 @@
+pr: 119789
+releasenote:
+  text: Setting the `status.loadBalancer` of a Service whose `spec.type` is not `LoadBalancer`
+    was previously allowed, but any update to the `metadata` or `spec` would wipe
+    that field. Setting this field is no longer permitted unless `spec.type` is  `LoadBalancer`.  In
+    the very unlikely event that this has unexpected impact, you can enable the `AllowServiceLBStatusOnNonLB`
+    feature gate, which will restore the previous behavior.  If you do need to set
+    this, please file an issue with the Kubernetes project to help contributors understand
+    why you need it.

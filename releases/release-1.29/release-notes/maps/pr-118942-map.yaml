@@ -1,0 +1,6 @@
+pr: 118942
+releasenote:
+  text: |-
+    `kubectl prune v2`: Switched annotation from `contains-group-resources` to `contains-group-kinds`,
+    because this is what we defined in the KEP and is clearer to end-users. Although the functionality is
+    in `alpha`, we will recognize the prior annotation. This migration support will be removed in `beta`/`GA`.

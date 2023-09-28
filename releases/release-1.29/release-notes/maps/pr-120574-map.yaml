@@ -1,0 +1,4 @@
+pr: 120574
+releasenote:
+  text: The metrics controlled by the `ComponentSLIs` feature-gate and served at `/metrics/slis`
+    are now GA and unconditionally enabled. The feature-gate will be removed in `v1.31`.

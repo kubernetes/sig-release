@@ -1,0 +1,3 @@
+pr: 120777
+releasenote:
+  text: Reintroduced `resourcequota.NewMonitor` constructor for other consumers.

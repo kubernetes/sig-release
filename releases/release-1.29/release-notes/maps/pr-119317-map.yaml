@@ -1,0 +1,5 @@
+pr: 119317
+releasenote:
+  text: Revised the logic for `DaemonSet` rolling update to exclude nodes if scheduling
+    constraints are not met. This eliminates the problem of rolling updates to a `DaemonSet`
+    getting stuck around tolerations.

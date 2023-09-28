@@ -1,0 +1,4 @@
+pr: 119944
+releasenote:
+  text: Added a redundant process to remove tracking finalizers from Pods that belong
+    to Jobs. The process kicks in after the control plane marks a Job as finished.

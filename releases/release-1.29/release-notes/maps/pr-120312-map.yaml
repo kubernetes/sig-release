@@ -1,0 +1,4 @@
+pr: 120312
+releasenote:
+  text: Added automatic download of the CNI binary in `local-up-cluster.sh`, facilitating
+    local debugging.

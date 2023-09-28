@@ -1,0 +1,8 @@
+pr: 120334
+releasenote:
+  text: Fixed a situation when, sometimes, the scheduler incorrectly placed a pod
+    in the `unschedulable` queue instead of the `backoff` queue. This happened when
+    some plugin previously declared the pod as `unschedulable` and then in a later
+    attempt encounters some other error. Scheduling of that pod then got delayed by
+    up to five minutes, after which periodic flushing moved the pod back into the
+    `active` queue.

@@ -1,0 +1,4 @@
+pr: 120723
+releasenote:
+  text: Fixed issue with incremental id generation for `loadbalancer` and `endpoint`
+    in `kubeproxy` mock test framework.

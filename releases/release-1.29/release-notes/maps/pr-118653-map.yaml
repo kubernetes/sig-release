@@ -1,0 +1,4 @@
+pr: 118653
+releasenote:
+  text: 'Go API: the `ResourceRequirements` struct was replaced with `VolumeResourceRequirements`
+    for use with volumes.'

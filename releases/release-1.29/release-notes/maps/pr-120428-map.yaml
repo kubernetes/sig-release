@@ -1,0 +1,5 @@
+pr: 120428
+releasenote:
+  text: 'DRA: when the scheduler had to deallocate a claim after a node became unsuitable
+    for a pod, it might have needed more attempts than really necessary. This was
+    fixed by first disabling allocations.'

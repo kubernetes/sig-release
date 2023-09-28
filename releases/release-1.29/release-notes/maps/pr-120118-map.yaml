@@ -1,0 +1,4 @@
+pr: 120118
+releasenote:
+  text: Added descriptions and examples for the situation of using `kubectl rollout
+    restart` without specifying a particular deployment.

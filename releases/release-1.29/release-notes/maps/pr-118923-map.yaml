@@ -1,0 +1,6 @@
+pr: 118923
+releasenote:
+  text: |-
+    The `volume_zone` plugin will consider `beta` labels as `GA` labels during the scheduling
+    process. Therefore, if the values of the labels are the same, PVs with `beta` labels
+    can also be scheduled to nodes with `GA` labels.

@@ -1,0 +1,4 @@
+pr: 119049
+releasenote:
+  text: Added a new scheduler metric, `pod_scheduling_sli_duration_seconds`, and started
+    the deprecation for `pod_scheduling_duration_seconds`.

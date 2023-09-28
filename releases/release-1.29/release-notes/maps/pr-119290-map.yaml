@@ -1,0 +1,6 @@
+pr: 119290
+releasenote:
+  text: |-
+    Added a return value to `QueueingHint` to indicate an error. If `QueueingHint` returns an error,
+    the scheduler logs it and treats the event as a `QueueAfterBackoff` so that
+    the Pod won't be stuck in the unschedulable pod pool.

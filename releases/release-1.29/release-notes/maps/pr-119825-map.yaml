@@ -1,0 +1,4 @@
+pr: 119825
+releasenote:
+  text: Fixed bug where `Adding GroupVersion` log line was constantly repeated without
+    any group version changes.

@@ -1,0 +1,4 @@
+pr: 120577
+releasenote:
+  text: Set the resolution for the `job_controller_job_sync_duration_seconds` metric
+    from `4ms` to `1min`.

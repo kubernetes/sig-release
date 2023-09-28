@@ -1,0 +1,5 @@
+pr: 120228
+releasenote:
+  text: |-
+    `kubeadm`: promoted feature gate `EtcdLearnerMode` to `beta`. Learner mode for
+    joining `etcd` members is now enabled by default.
