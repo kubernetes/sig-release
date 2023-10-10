@@ -29,7 +29,6 @@
     - [Official Releases](#official-releases)
       - [Security fixes](#security-fixes)
       - [Announcing Security Fixes](#announcing-security-fixes)
-      - [Debian and RPM Packaging](#debian-and-rpm-packaging)
       - [Release Validation](#release-validation)
     - [Post-release Activities](#post-release-activities)
       - [Update kubekins-e2e variants](#update-kubekins-e2e-variants)
@@ -492,12 +491,6 @@ krel cve edit CVE-2022-0000 -f ./path-to-data-map.yaml
 ```
 
 This command will also take care of validating the provided data map file. Once the data maps are uploaded, `krel` will (automatically) take those data maps into account when generating the changelog and the release announcement emails.
-
-#### Debian and RPM Packaging
-
-Publishing the [packages of the official release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/packaging.md) is by conducted by employees at Google. Once `krel release --nomock --type=official …` has completed (which builds the packages into the production bucket), **before sending out the email notification**, contact the [Release Managers Google Group][release-managers-group] to notify them that an official release for `vX.Y` is complete and the packages are ready to be published.
-
-Once the .deb and .rpm packages are published, you can `grep` for `X.Y` e.g. `1.16` in the [yum](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) repositories.
 
 #### Release Validation
 
