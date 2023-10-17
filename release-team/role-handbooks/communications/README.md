@@ -22,13 +22,16 @@ Communications deliverables that come from the release process include a release
 
 ### Expected Time Investment
 
-The Kubernetes release cycle spans 15 weeks, however it may run longer. The typical workload for the communications team is very light during the first few weeks of the release cycle. In the later weeks, the workload can become heavy, and will continue a few weeks after the release.
+The Kubernetes release cycle spans 15 weeks, however it may run longer. The typical workload for the communications team is very light during the first few weeks of the release cycle. In the later weeks, **the workload can become heavy, and will continue a few weeks after the release.**
 
 The expected time investment for both leads and shadows are as follows:
 
 - 30 minutes to 2 hours a day (depending upon week), requesting and reviewing incoming KEPs and blog PRs, working with other SIGs or the CNCF to manage the feature blog posts, and following Slack channels in order to keep pending content current.
 
-- 1 to 5 hours a week, attending Release Team (weekly) and Burndown meetings (daily during Code Freeze)
+- 1 to 5 hours a week, attending
+    - Release Team (weekly) 
+    - SIG-Docs Team (biweekly) and 
+    - Burndown meetings (daily during Code Freeze).
 
 **NOTE:** These are estimates and your personal experience may vary. The more time you spend working as a team and regularly communicating within your team, the better off your experience will be.
 
@@ -69,32 +72,48 @@ The release lead will drive the content for the release theme and logo.
 
 Tracking, facilitating, and organizing the publication of the Feature Blog series is a major deliverable of the Comms team. Feature blogs are opt-in for SIGs, and authored by enhancement developers and others close to the features. It helps to work with the release lead and use the respective SIG Slack channels to remind the SIGs about opting-in to feature blogs. 
 
-The first feature blog typically goes out on release day alongside or shortly after the release blog, and then are published one-at-a-time, typically at a rate of two to three posts weekly. The Comms team establishes the publication schedule. Note that blog PRs in k/website are dated, and automation will publish future-dated entries. This enables a PR process decoupled from blog publication date.
+**The first feature blog** typically goes out on release day alongside or shortly after the release blog, and then are published one-at-a-time, typically at a rate of two to three posts weekly. **The Comms team establishes the publication schedule.**
+> Note that blog PRs in k/website are dated, and automation will publish future-dated entries. This enables a PR process decoupled from blog publication date.
 
-As feature blogs are opted in, assign them to shadows and yourself for tracking and facilitation. The responsibility is to ensure the blog authors have the resources and information they need, including editorial and tech reviews once ready.
+**As feature blogs are opted in**, assign them to shadows and yourself for tracking and facilitation. The responsibility is to ensure the blog authors have the resources and information they need, including editorial and tech reviews once ready.
 
-Work closely with the SIG Docs Blogs team (connecting on `#sig-docs-blogs` and by attending meetings), as they are typically available for editorial reviews. Share with them the feature blog schedule and updates throughout the cycle.
+**Work closely with the SIG Docs Blogs team** (connecting on `#sig-docs-blogs` and by attending meetings), as they are typically available for editorial reviews. Share with them the feature blog schedule and updates throughout the cycle.
 
 For tech reviews, reach out to authors and the sponsoring SIG to organize at least one tech review per blog post.
 
-Communicate the planned **publish date** to SIG Docs and the owner of the feature blog. 
+**Communicate the planned publish date to SIG Docs and the owner of the feature blog**. 
 
 > Notify the author in the PR and Slack channels: `#sig-docs-blog`, `#sig-docs`. The communications team will assist in coordinating and publishing the feature blogs on schedule.
 > See example [here](https://github.com/kubernetes/website/pull/41924), "this article is scheduled for the 21th of August". 
 
-Work with SIG Contributor Experience (connecting on `#sig-contribex` and by attending meetings), to promote the feature blogs. 
+**Work with SIG Contributor Experience** (connecting on `#sig-contribex` and by attending meetings), to promote the feature blogs. 
+
+The suggested deadlines to be supported by the current Comms team:
+- Deadline - PRs blog place holder: Week 09.
+- Deadline - PRs ready for review: Week 11
+
+> Please note that the release team will support the blog publication after the release day too. 
 
 ### Mid-cycle deprecations and removals blog
 
-This blog is optional and will vary from release to release. Work with the rest of the release team ahead of the Code Freeze date to determine if a mid-cycle blog focused on feature deprecations and removals is warranted. If so, facilitate its creation and publication. You can create a Slack thread on [#sig-release](https://kubernetes.slack.com/archives/C2C40FMNF) to discuss this.
+This blog is optional and will vary from release to release. Work with the rest of the release team ahead of **the Code Freeze date to determine if a mid-cycle blog focused on feature deprecations and removals is warranted**.
 
-If the release will deprecate important and commonly-used features (or simply a large number of features will be deprecated), consider publishing this blog. Also consider this when commonly-used features that have been deprecated are removed in a release. ['Kubernetes API and Feature Removals in 1.22'](https://kubernetes.io/blog/2021/07/14/upcoming-changes-in-kubernetes-1-22/) and ['Deprecated APIs Removed in 1.16'](https://kubernetes.io/blog/2019/07/18/api-deprecations-in-1-16/) are great examples to work from.
+If so, facilitate its creation and publication. You can create a Slack thread on [#sig-release](https://kubernetes.slack.com/archives/C2C40FMNF) and `#sig-docs-blog` to discuss this.
 
-Publication should occur ahead of the release in order to inform the community and allow for preparation time. Start the discussion mid-cycle and well ahead of Code Freeze, and target publication for Code Freeze week.
+If the release will deprecate important and commonly-used features (or simply a large number of features will be deprecated), consider publishing this blog. 
+
+Also consider this when commonly-used features that have been deprecated are removed in a release. Follow these examples:
+- [Kubernetes API and Feature Removals in 1.22](https://kubernetes.io/blog/2021/07/14/upcoming-changes-in-kubernetes-1-22/)
+- [Deprecated APIs Removed in 1.16](https://kubernetes.io/blog/2019/07/18/api-deprecations-in-1-16/)
+- [Kubernetes Removals and Major Changes In 1.25](https://kubernetes.io/blog/2022/08/04/upcoming-changes-in-kubernetes-1-25/)
+
+> Publication should occur ahead of the release in order to inform the community and allow for preparation time. Start the discussion mid-cycle and well ahead of Code Freeze, and target publication for Code Freeze week.
 
 ### Press and release webinar
 
-This is a light but very important component of the Communications Coordinator role. Two sets of activities need to be scheduled with the CNCF, namely press release and interview scheduling around the release day and the release webinar after the release.
+This is a light but very important component of the Communications Coordinator role. Two sets of activities need to be scheduled with the CNCF:
+- press release and interview scheduling around the release day and
+- the release webinar after the release.
 
 You will be a liaison between the Release lead and the CNCF contacts to schedule the press briefings. Send an email to `pr@cncf.io` about a month ahead of the release and coordinate between the parties to get release day press events scheduled.
 
@@ -122,7 +141,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td>
         <ul>
         <li>Start attending the Release Team weekly meeting
-        <li>Join <code>#sig-release</code> and <code>#release-comms</code> Slack channels
+        <li> Join <code>#sig-release</code> and <code>#release-comms</code> Slack channels
         <li>Check if there are any holidays or events (e.g. KubeCon) that will occur during this release which may impact communication with the CNCF and SIG Chairs, plan accordingly
         <li>Select shadows for the team
         <li>Ensure shadows are all in the Kubernetes org on GitHub
@@ -180,7 +199,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <ul>
         <li>Work with Enhancements and Release Note leads to determine which deliverables are most noteworthy post-Enhancements Freeze
         <li>In the coming weeks, follow the progress of these enhancements, as they will roll into the Major Themes and be called out and described in the release blog
-        <li>Work with the Release Team and decide if the release warrants a mid-cycle 'Deprecations and Removals' blog
+        <li>Work with the Release Team and decide if the release warrants a mid-cycle 'Deprecations and Removals' blog. Generally, this is decided around a minimal of 2 deprecations and removals, or if there are significant deprecations and removals that will impact the community. 
         <li>If needed, solicit author(s) for a 'Deprecations and Removals' blog and get a placeholder PR in k/website for tracking
         </ul>
         </td>
