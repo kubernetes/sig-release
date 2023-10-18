@@ -1,0 +1,6 @@
+pr: 121008
+releasenote:
+  text: |-
+    Fixed a regression in `kube-proxy` where it might refuse to start if given
+    single-stack `IPv6` configuration options on a node that has both `IPv4` and
+    `IPv6` IPs.

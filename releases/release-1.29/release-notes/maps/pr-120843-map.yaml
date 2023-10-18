@@ -1,0 +1,4 @@
+pr: 120843
+releasenote:
+  text: The `kube-apiserver` will now expose four new metrics to inform about errors
+    on the clusterIP and nodePort allocation logic.

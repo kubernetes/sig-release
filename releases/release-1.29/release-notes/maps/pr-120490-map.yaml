@@ -1,0 +1,5 @@
+pr: 120490
+releasenote:
+  text: Added `apiserver_watch_list_duration_seconds` metrics which will measure response
+    latency distribution in seconds for watchlist requests broken by group, version,
+    resource and scope.

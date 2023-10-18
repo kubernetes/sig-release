@@ -1,0 +1,3 @@
+pr: 116803
+releasenote:
+  text: Migrated the `volumebinding scheduler plugins` to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).

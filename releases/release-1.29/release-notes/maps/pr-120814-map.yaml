@@ -1,0 +1,4 @@
+pr: 120814
+releasenote:
+  text: Fixed regression with adding aggregated `APIservices` panicking and affected
+    health check introduced in release `v1.28.0`.
