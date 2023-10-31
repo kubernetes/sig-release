@@ -1,0 +1,4 @@
+pr: 120784
+releasenote:
+  text: Fixed a bug where containers would not start on `cgroupv2` systems where `swap`
+    is disabled.

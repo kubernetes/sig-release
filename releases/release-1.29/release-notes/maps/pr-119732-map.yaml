@@ -1,0 +1,3 @@
+pr: 119732
+releasenote:
+  text: 'Fixed an issue related to not draining all the pods in a namespace when an empty selector, i.e., "{}," is specified in a Pod Disruption Budget (PDB).'

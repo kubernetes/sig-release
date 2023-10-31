@@ -36,6 +36,35 @@
     ],
     "feature": true
   },
+  "116803": {
+    "commit": "9c5698f5146bb335d312a802ec5a7baf2bfa6bf0",
+    "text": "Migrated the `volumebinding scheduler plugins` to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).",
+    "markdown": "Migrated the `volumebinding scheduler plugins` to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging). ([#116803](https://github.com/kubernetes/kubernetes/pull/116803), [@mengjiao-liu](https://github.com/mengjiao-liu))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/3077-contextual-logging",
+        "type": "KEP"
+      }
+    ],
+    "author": "mengjiao-liu",
+    "author_url": "https://github.com/mengjiao-liu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116803",
+    "pr_number": 116803,
+    "areas": [
+      "logging"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "scheduling",
+      "storage",
+      "instrumentation"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
   "116884": {
     "commit": "89b4153d4d697e02e3be954cc0df1011eb7f166a",
     "text": "Migrated the `nodevolumelimits` scheduler plugin to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).",
@@ -238,6 +267,34 @@
     ],
     "duplicate": true
   },
+  "118299": {
+    "commit": "3c94af73e1b08eb2a12208c94fe01ad22b08000e",
+    "text": "List of metric labels can now be configured by supplying a manifest using the `--allow-metric-labels-manifest` flag.",
+    "markdown": "List of metric labels can now be configured by supplying a manifest using the `--allow-metric-labels-manifest` flag. ([#118299](https://github.com/kubernetes/kubernetes/pull/118299), [@rexagod](https://github.com/rexagod))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/2305-metrics-cardinality-enforcement",
+        "type": "KEP"
+      }
+    ],
+    "author": "rexagod",
+    "author_url": "https://github.com/rexagod",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118299",
+    "pr_number": 118299,
+    "areas": [
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "instrumentation",
+      "architecture"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
   "118455": {
     "commit": "1acd489dca47a4be0301330cbfcf4e8f9d98f7c0",
     "text": "Improved memory usage of `kube-controller-manager` by dropping the `.metadata.managedFields` field that `kube-controller-manager` doesn't require.",
@@ -405,8 +462,8 @@
   },
   "118942": {
     "commit": "963400f1a2a1fc6c8650115c0372366ad3429b68",
-    "text": "`kubectl prune v2`: Switched annotation from `contains-group-resources` to `contains-group-kinds`,\nbecause this is what we defined in the KEP and is clearer to end-users.  Although the functionality is\nin `alpha`, we will recognize the prior annotation. This migration support will be removed in `beta`/`GA`.",
-    "markdown": "`kubectl prune v2`: Switched annotation from `contains-group-resources` to `contains-group-kinds`,\n  because this is what we defined in the KEP and is clearer to end-users.  Although the functionality is\n  in `alpha`, we will recognize the prior annotation. This migration support will be removed in `beta`/`GA`. ([#118942](https://github.com/kubernetes/kubernetes/pull/118942), [@justinsb](https://github.com/justinsb))",
+    "text": "`kubectl prune v2`: Switched annotation from `contains-group-resources` to `contains-group-kinds`,\nbecause this is what we defined in the KEP and is clearer to end-users. Although the functionality is\nin `alpha`, we will recognize the prior annotation. This migration support will be removed in `beta`/`GA`.",
+    "markdown": "`kubectl prune v2`: Switched annotation from `contains-group-resources` to `contains-group-kinds`,\n  because this is what we defined in the KEP and is clearer to end-users. Although the functionality is\n  in `alpha`, we will recognize the prior annotation. This migration support will be removed in `beta`/`GA`. ([#118942](https://github.com/kubernetes/kubernetes/pull/118942), [@justinsb](https://github.com/justinsb))",
     "author": "justinsb",
     "author_url": "https://github.com/justinsb",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/118942",
@@ -509,8 +566,8 @@
   },
   "119142": {
     "commit": "f68c66f96dc7efd86c43bc6ca34bfdaa552a0892",
-    "text": "`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`\nfiles. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`\nflags.",
-    "markdown": "`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`\n  files. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`\n  flags. ([#119142](https://github.com/kubernetes/kubernetes/pull/119142), [@aramase](https://github.com/aramase))",
+    "text": "'`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`\nfiles. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`\nflags.'",
+    "markdown": "'`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`\n  files. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`\n  flags.' ([#119142](https://github.com/kubernetes/kubernetes/pull/119142), [@aramase](https://github.com/aramase))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -610,8 +667,8 @@
   },
   "119346": {
     "commit": "3cf3702d1e638548ba9fcfd957ebae43e1a573cb",
-    "text": "`kubeadm`: printing the default component configs for `reset` and `join` is now\nunsupported.",
-    "markdown": "`kubeadm`: printing the default component configs for `reset` and `join` is now\n  unsupported. ([#119346](https://github.com/kubernetes/kubernetes/pull/119346), [@chendave](https://github.com/chendave))",
+    "text": "'`kubeadm`: printing the default component configs for `reset` and `join` is now\nunsupported.'",
+    "markdown": "'`kubeadm`: printing the default component configs for `reset` and `join` is now\n  unsupported.' ([#119346](https://github.com/kubernetes/kubernetes/pull/119346), [@chendave](https://github.com/chendave))",
     "author": "chendave",
     "author_url": "https://github.com/chendave",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119346",
@@ -630,8 +687,8 @@
   },
   "119385": {
     "commit": "338d68bbc2b5e69c18fed5eea11cc683e72dcbdf",
-    "text": "Introduced new apiserver metric `apiserver_flowcontrol_current_inqueue_seats`. This metric is analogous to `apiserver_flowcontrol_current_inqueue_requests`, but tracks totals seats as each request can take more than 1 seat.",
-    "markdown": "Introduced new apiserver metric `apiserver_flowcontrol_current_inqueue_seats`. This metric is analogous to `apiserver_flowcontrol_current_inqueue_requests`, but tracks totals seats as each request can take more than 1 seat. ([#119385](https://github.com/kubernetes/kubernetes/pull/119385), [@andrewsykim](https://github.com/andrewsykim))",
+    "text": "Introduced new apiserver metric `apiserver_flowcontrol_current_inqueue_seats`. This metric is analogous to `apiserver_flowcontrol_current_inqueue_requests`, but tracks the total number of seats, as each request can take more than one seat.",
+    "markdown": "Introduced new apiserver metric `apiserver_flowcontrol_current_inqueue_seats`. This metric is analogous to `apiserver_flowcontrol_current_inqueue_requests`, but tracks the total number of seats, as each request can take more than one seat. ([#119385](https://github.com/kubernetes/kubernetes/pull/119385), [@andrewsykim](https://github.com/andrewsykim))",
     "author": "andrewsykim",
     "author_url": "https://github.com/andrewsykim",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119385",
@@ -940,6 +997,43 @@
     "duplicate_kind": true,
     "do_not_publish": true
   },
+  "119732": {
+    "commit": "fd4109d5f6938547c9db068e016eed90b2876867",
+    "text": "Fixed an issue related to not draining all the pods in a namespace when an empty selector, i.e., \"{},\" is specified in a Pod Disruption Budget (PDB).",
+    "markdown": "Fixed an issue related to not draining all the pods in a namespace when an empty selector, i.e., \"{},\" is specified in a Pod Disruption Budget (PDB). ([#119732](https://github.com/kubernetes/kubernetes/pull/119732), [@sairameshv](https://github.com/sairameshv))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/85-Graduate-PDB-to-Stable",
+        "type": "KEP"
+      }
+    ],
+    "author": "sairameshv",
+    "author_url": "https://github.com/sairameshv",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119732",
+    "pr_number": 119732,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps"
+    ]
+  },
+  "119735": {
+    "commit": "c486a08b4188a16c07c5b22baa8ffc9e2b2e9ce0",
+    "text": "Volume attach or publish operation will not fail at kubelet if target path directory already exists on the node.",
+    "markdown": "Volume attach or publish operation will not fail at kubelet if target path directory already exists on the node. ([#119735](https://github.com/kubernetes/kubernetes/pull/119735), [@akankshapanse](https://github.com/akankshapanse))",
+    "author": "akankshapanse",
+    "author_url": "https://github.com/akankshapanse",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119735",
+    "pr_number": 119735,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage"
+    ]
+  },
   "119753": {
     "commit": "0491866c643e9c873942003f722e20c3ab5bab7f",
     "text": "`kubeadm`: fix `nil` pointer when `etcd` member is already removed.",
@@ -960,8 +1054,8 @@
   },
   "119761": {
     "commit": "55c3cd9a30e818c050c7ac78d49fcc1ac9691e46",
-    "text": "`Statefulset` should wait for new replicas in tests when removing `.start.ordinal`.",
-    "markdown": "`Statefulset` should wait for new replicas in tests when removing `.start.ordinal`. ([#119761](https://github.com/kubernetes/kubernetes/pull/119761), [@soltysh](https://github.com/soltysh))",
+    "text": "`Statefulset` now waits for new replicas in tests when removing `.start.ordinal`.",
+    "markdown": "`Statefulset` now waits for new replicas in tests when removing `.start.ordinal`. ([#119761](https://github.com/kubernetes/kubernetes/pull/119761), [@soltysh](https://github.com/soltysh))",
     "author": "soltysh",
     "author_url": "https://github.com/soltysh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119761",
@@ -1180,8 +1274,8 @@
   },
   "119859": {
     "commit": "85e018634ce0f38e671fbc5c78c4eefe066e04b9",
-    "text": "`kubeadm`: remove `system:masters` organization from `etcd/healthcheck-client`\ncertificate.",
-    "markdown": "`kubeadm`: remove `system:masters` organization from `etcd/healthcheck-client`\n  certificate. ([#119859](https://github.com/kubernetes/kubernetes/pull/119859), [@SataQiu](https://github.com/SataQiu))",
+    "text": "'`kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`\ncertificate.'",
+    "markdown": "'`kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`\n  certificate.' ([#119859](https://github.com/kubernetes/kubernetes/pull/119859), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119859",
@@ -1409,8 +1503,8 @@
   },
   "119994": {
     "commit": "10c622e99a6030d0e2ce398ec14a6267ad1e7967",
-    "text": "`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`\nis removed in `v1.29`. Migrate `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`.",
-    "markdown": "`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`\n  is removed in `v1.29`. Migrate `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`. ([#119994](https://github.com/kubernetes/kubernetes/pull/119994), [@SataQiu](https://github.com/SataQiu))",
+    "text": "'`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`\nis removed in `v1.29`. Migrate `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`.'",
+    "markdown": "'`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`\n  is removed in `v1.29`. Migrate `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`.' ([#119994](https://github.com/kubernetes/kubernetes/pull/119994), [@SataQiu](https://github.com/SataQiu))",
     "documentation": [
       {
         "description": "-[KEP]",
@@ -1502,8 +1596,8 @@
   },
   "120064": {
     "commit": "5b2167482d278c26836e99f9fefaf172b91da237",
-    "text": "`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex\nencoded AES key.",
-    "markdown": "`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex\n  encoded AES key. ([#120064](https://github.com/kubernetes/kubernetes/pull/120064), [@SataQiu](https://github.com/SataQiu))",
+    "text": "'`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex\nencoded AES key.'",
+    "markdown": "'`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex\n  encoded AES key.' ([#120064](https://github.com/kubernetes/kubernetes/pull/120064), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120064",
@@ -2126,6 +2220,28 @@
     ],
     "duplicate": true
   },
+  "120338": {
+    "commit": "2b5d2cf910fd376a42ba9de5e4b52a53b58f9397",
+    "text": "k8s.io/dynamic-resource-allocation/controller: `UnsuitableNodes` can now handle a mix of allocated and unallocated claims correctly.",
+    "markdown": "K8s.io/dynamic-resource-allocation/controller: `UnsuitableNodes` can now handle a mix of allocated and unallocated claims correctly. ([#120338](https://github.com/kubernetes/kubernetes/pull/120338), [@pohly](https://github.com/pohly))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3063",
+        "type": "KEP"
+      }
+    ],
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120338",
+    "pr_number": 120338,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
   "120352": {
     "commit": "9a0c389fd73fb32f834f91170c8c3894f9f0ca1a",
     "text": "Updated `distroless-iptables` to use `registry.k8s.io/build-image/distroless-iptables:v0.3.1`.",
@@ -2218,6 +2334,23 @@
     "sigs": [
       "apps"
     ]
+  },
+  "120400": {
+    "commit": "5ff79611d5cb4a55665ef907f346a34ab593b807",
+    "text": "cluster-bootstrap: improved the security of the functions responsible for generation and validation of bootstrap tokens",
+    "markdown": "Cluster-bootstrap: improved the security of the functions responsible for generation and validation of bootstrap tokens ([#120400](https://github.com/kubernetes/kubernetes/pull/120400), [@neolit123](https://github.com/neolit123))",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120400",
+    "pr_number": 120400,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle",
+      "security"
+    ],
+    "duplicate": true
   },
   "120412": {
     "commit": "abb74c7afa40c88e2ee043d2673533f482eb2df6",
@@ -2373,6 +2506,27 @@
       "network"
     ]
   },
+  "120490": {
+    "commit": "bdedc21fd9579d2838f1e330bb4a93d4cb8b5cbd",
+    "text": "Added `apiserver_watch_list_duration_seconds` metrics which will measure response latency distribution in seconds for watchlist requests broken by group, version, resource and scope.",
+    "markdown": "Added `apiserver_watch_list_duration_seconds` metrics which will measure response latency distribution in seconds for watchlist requests broken by group, version, resource and scope. ([#120490](https://github.com/kubernetes/kubernetes/pull/120490), [@p0lyn0mial](https://github.com/p0lyn0mial))",
+    "author": "p0lyn0mial",
+    "author_url": "https://github.com/p0lyn0mial",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120490",
+    "pr_number": 120490,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
   "120492": {
     "commit": "b8ef1a0791711f96e8dea05ad9ea026d351d67f3",
     "text": "Service Controller: update load balancer hosts after node's `ProviderID` is\nupdated.",
@@ -2506,6 +2660,23 @@
       "testing"
     ],
     "feature": true
+  },
+  "120542": {
+    "commit": "fe84992651335ba6dd66e16754e8e416e5144b59",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#120542](https://github.com/kubernetes/kubernetes/pull/120542), [@alvaroaleman](https://github.com/alvaroaleman)) [SIG API Machinery]",
+    "author": "alvaroaleman",
+    "author_url": "https://github.com/alvaroaleman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120542",
+    "pr_number": 120542,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true,
+    "do_not_publish": true
   },
   "120546": {
     "commit": "098d4c7b9ea1c5e6a10960a766c886e53b6e9712",
@@ -2644,6 +2815,41 @@
     "feature": true,
     "duplicate": true
   },
+  "120595": {
+    "commit": "d3559bf77f7f41249c20f27af2e3ec5f3b07ac55",
+    "text": "Fixed attaching volumes after detach errors. Now volumes that failed to detach are not treated as attached, Kubernetes will make sure they are fully attached before they can be used by pods.",
+    "markdown": "Fixed attaching volumes after detach errors. Now volumes that failed to detach are not treated as attached, Kubernetes will make sure they are fully attached before they can be used by pods. ([#120595](https://github.com/kubernetes/kubernetes/pull/120595), [@jsafrane](https://github.com/jsafrane)) [SIG Apps and Storage]",
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120595",
+    "pr_number": 120595,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "apps"
+    ],
+    "duplicate": true
+  },
+  "120599": {
+    "commit": "5f8fc30b2c01735d8aaa22ef5618b0b424c228e9",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#120599](https://github.com/kubernetes/kubernetes/pull/120599), [@srivastav-abhishek](https://github.com/srivastav-abhishek)) [SIG Apps]",
+    "author": "srivastav-abhishek",
+    "author_url": "https://github.com/srivastav-abhishek",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120599",
+    "pr_number": 120599,
+    "kinds": [
+      "bug",
+      "flake"
+    ],
+    "sigs": [
+      "apps"
+    ],
+    "duplicate_kind": true,
+    "do_not_publish": true
+  },
   "120623": {
     "commit": "716b8b9d83a463030d211b4363c9c760304653cb",
     "text": "Fixed a bug where `Services` using finalizers may hold onto `ClusterIP` and/or `NodePort` allocated resources for longer than expected if the finalizer is removed using the status subresource.",
@@ -2701,6 +2907,23 @@
     ],
     "duplicate": true
   },
+  "120729": {
+    "commit": "f936f69cf994146650c287a95fa436d1d7352835",
+    "text": "client-go: `k8s.io/client-go/tools` events and record packages now have new APIs for specifying a context and logger.",
+    "markdown": "Client-go: `k8s.io/client-go/tools` events and record packages now have new APIs for specifying a context and logger. ([#120729](https://github.com/kubernetes/kubernetes/pull/120729), [@pohly](https://github.com/pohly))",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120729",
+    "pr_number": 120729,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation"
+    ],
+    "duplicate": true
+  },
   "120736": {
     "commit": "b28622c3e6c51fe936a02503ddf4a49f7aae10aa",
     "text": "Fixed an issue where the `vsphere` cloud provider would not trust a certificate if:\n- The issuer of the certificate was unknown (`x509.UnknownAuthorityError`)\n- The requested name did not match the set of authorized names (`x509.HostnameError`)\n- The error surfaced after attempting a connection contained one of the substrings: \"certificate is not trusted\" or \"certificate signed by unknown authority\".",
@@ -2722,23 +2945,6 @@
     ],
     "duplicate": true
   },
-  "120777": {
-    "commit": "bf421d52f20f75cc13f1e6a2046e5adf1c575cb9",
-    "text": "Reintroduced `resourcequota.NewMonitor` constructor for other consumers.",
-    "markdown": "Reintroduced `resourcequota.NewMonitor` constructor for other consumers. ([#120777](https://github.com/kubernetes/kubernetes/pull/120777), [@atiratree](https://github.com/atiratree))",
-    "author": "atiratree",
-    "author_url": "https://github.com/atiratree",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120777",
-    "pr_number": 120777,
-    "kinds": [
-      "bug",
-      "regression"
-    ],
-    "sigs": [
-      "apps"
-    ],
-    "duplicate_kind": true
-  },
   "120779": {
     "commit": "824889c929eaca70fb8a2d5eb811a520170e333a",
     "text": "No-op and GC related updates to cluster trust bundles no longer require attest authorization when the `ClusterTrustBundleAttest` plugin is enabled.",
@@ -2752,6 +2958,66 @@
     ],
     "sigs": [
       "auth"
+    ]
+  },
+  "120784": {
+    "commit": "05f4099c5f0b2c9768b4b397214cdac4e65703a9",
+    "text": "Fixed a bug where containers would not start on `cgroupv2` systems where `swap` is disabled.",
+    "markdown": "Fixed a bug where containers would not start on `cgroupv2` systems where `swap` is disabled. ([#120784](https://github.com/kubernetes/kubernetes/pull/120784), [@elezar](https://github.com/elezar))",
+    "author": "elezar",
+    "author_url": "https://github.com/elezar",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120784",
+    "pr_number": 120784,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "duplicate_kind": true
+  },
+  "120814": {
+    "commit": "e339e03ff87b30c0521b20fbaa7f8da3d33d98a0",
+    "text": "Fixed regression with adding aggregated `APIservices` panicking and affected health check introduced in release `v1.28.0`.",
+    "markdown": "Fixed regression with adding aggregated `APIservices` panicking and affected health check introduced in release `v1.28.0`. ([#120814](https://github.com/kubernetes/kubernetes/pull/120814), [@Jefftree](https://github.com/Jefftree))",
+    "author": "Jefftree",
+    "author_url": "https://github.com/Jefftree",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120814",
+    "pr_number": 120814,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "api-machinery",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "120828": {
+    "commit": "bb06804e525090e5d85ceffa4d89c961c3dc7d33",
+    "text": "kubeadm: Fixed the bug that `kubeadm` always did CRI detection when `--config` is passed even if it is not required by the subcommand.",
+    "markdown": "Kubeadm: Fixed the bug that `kubeadm` always did CRI detection when `--config` is passed even if it is not required by the subcommand. ([#120828](https://github.com/kubernetes/kubernetes/pull/120828), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120828",
+    "pr_number": 120828,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
     ]
   },
   "120836": {
@@ -2779,6 +3045,26 @@
     "duplicate": true,
     "do_not_publish": true
   },
+  "120843": {
+    "commit": "e8abe1af8dcb36f65ef7aa7135d4664b3db90e89",
+    "text": "The `kube-apiserver` will now expose four new metrics to inform about errors on the clusterIP and nodePort allocation logic.",
+    "markdown": "The `kube-apiserver` will now expose four new metrics to inform about errors on the clusterIP and nodePort allocation logic. ([#120843](https://github.com/kubernetes/kubernetes/pull/120843), [@aojea](https://github.com/aojea))",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120843",
+    "pr_number": 120843,
+    "kinds": [
+      "documentation",
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "instrumentation"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "120854": {
     "commit": "3cbfa3e2cd7e756b1f51a5c7e014c415ecdb1253",
     "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
@@ -2797,5 +3083,169 @@
       "cloud-provider"
     ],
     "do_not_publish": true
+  },
+  "120871": {
+    "commit": "38c6bd810f04931b67a88421e8afafc979856c95",
+    "text": "k8s.io/dynamic-resource-allocation: can now handle a `selected` node which isn't listed\nas `potential` node.",
+    "markdown": "K8s.io/dynamic-resource-allocation: can now handle a `selected` node which isn't listed\n  as `potential` node. ([#120871](https://github.com/kubernetes/kubernetes/pull/120871), [@pohly](https://github.com/pohly))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3063",
+        "type": "KEP"
+      }
+    ],
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120871",
+    "pr_number": 120871,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "120877": {
+    "commit": "139fa6962026d1013d1d67e3f9f31d11da290199",
+    "text": "Fixed a regression (CLIENTSET_PKG: unbound variable) when invoking deprecated `generate-groups.sh` script.",
+    "markdown": "Fixed a regression (CLIENTSET_PKG: unbound variable) when invoking deprecated `generate-groups.sh` script. ([#120877](https://github.com/kubernetes/kubernetes/pull/120877), [@soltysh](https://github.com/soltysh))",
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120877",
+    "pr_number": 120877,
+    "areas": [
+      "code-generation"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate_kind": true
+  },
+  "120894": {
+    "commit": "c989473dc801688cabcb69e562eb09ebca16578c",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#120894](https://github.com/kubernetes/kubernetes/pull/120894), [@caoyingjunz](https://github.com/caoyingjunz)) [SIG Cluster Lifecycle]",
+    "author": "caoyingjunz",
+    "author_url": "https://github.com/caoyingjunz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120894",
+    "pr_number": 120894,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "do_not_publish": true
+  },
+  "120903": {
+    "commit": "26c3f66887d13efc8cd627b50beeeef060c2e39c",
+    "text": "Deprecated the `--cloud-provider` and `--cloud-config` CLI parameters in kube-apiserver.\nThese parameters will be removed in a future release.",
+    "markdown": "Deprecated the `--cloud-provider` and `--cloud-config` CLI parameters in kube-apiserver.\n  These parameters will be removed in a future release. ([#120903](https://github.com/kubernetes/kubernetes/pull/120903), [@dims](https://github.com/dims)) [SIG API Machinery]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120903",
+    "pr_number": 120903,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "121008": {
+    "commit": "3bfa9482fca675803c456ecbe4252b6525c9d021",
+    "text": "Fixed a regression in `kube-proxy` where it might refuse to start if given\nsingle-stack `IPv6` configuration options on a node that has both `IPv4` and\n`IPv6` IPs.",
+    "markdown": "Fixed a regression in `kube-proxy` where it might refuse to start if given\n  single-stack `IPv6` configuration options on a node that has both `IPv4` and\n  `IPv6` IPs. ([#121008](https://github.com/kubernetes/kubernetes/pull/121008), [@danwinship](https://github.com/danwinship))",
+    "author": "danwinship",
+    "author_url": "https://github.com/danwinship",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121008",
+    "pr_number": 121008,
+    "areas": [
+      "kube-proxy"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "duplicate_kind": true
+  },
+  "121021": {
+    "commit": "9bea6bda05873ad481822174a97892fc3e767ab6",
+    "text": "Kubernetes is now built with Go `1.21.2`.",
+    "markdown": "Kubernetes is now built with Go `1.21.2`. ([#121021](https://github.com/kubernetes/kubernetes/pull/121021), [@cpanato](https://github.com/cpanato))",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121021",
+    "pr_number": 121021,
+    "areas": [
+      "test",
+      "release-eng"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "testing",
+      "release"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "121028": {
+    "commit": "fc479f41b3d2130b18b83aa12b8cecb83d67a9c1",
+    "text": "`kubelet` , when using `--cloud-provider=external`, will now initialize the node addresses with the value of `--node-ip` , if it exists, or waits for the cloud provider to assign the addresses.",
+    "markdown": "`kubelet` , when using `--cloud-provider=external`, will now initialize the node addresses with the value of `--node-ip` , if it exists, or waits for the cloud provider to assign the addresses. ([#121028](https://github.com/kubernetes/kubernetes/pull/121028), [@aojea](https://github.com/aojea))",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121028",
+    "pr_number": 121028,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug",
+      "documentation",
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "121073": {
+    "commit": "246aba89128ed9f3236321baed8f0778cc8800cb",
+    "text": "Bumped `distroless-iptables` to `0.3.3` based on Go `1.21.2`.",
+    "markdown": "Bumped `distroless-iptables` to `0.3.3` based on Go `1.21.2`. ([#121073](https://github.com/kubernetes/kubernetes/pull/121073), [@cpanato](https://github.com/cpanato))",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121073",
+    "pr_number": 121073,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "feature": true
   }
 }
