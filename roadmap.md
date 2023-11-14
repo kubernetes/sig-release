@@ -58,6 +58,10 @@ state.
 
    Enhancement: https://github.com/kubernetes/enhancements/issues/3031
 
+1. **Migrate away from GCS bucket: gs://kubernetes-release**
+
+   Outcome: Ensure we migrate away from gs://kubernetes-release, use a community-owned Object Storage bucket for binaries releases, serve the binaries published through a CDN service.
+
 ### To be done (TODO)
 
 1. **Enhance Kubernetes binary artifact management (Consumable)**
