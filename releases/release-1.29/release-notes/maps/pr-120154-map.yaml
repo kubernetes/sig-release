@@ -1,0 +1,7 @@
+pr: 120154
+releasenote:
+  text: '`kube-apiserver`: added `--authorization-config` flag for reading a configuration
+    file containing an `apiserver.config.k8s.io/v1alpha1 AuthorizationConfiguration`
+    object. The `--authorization-config` flag is mutually exclusive with `--authorization-modes`
+    and `--authorization-webhook-*` flags. The `alpha` `StructuredAuthorizationConfiguration`
+    feature flag must be enabled for `--authorization-config` to be specified.'

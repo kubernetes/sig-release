@@ -1,0 +1,14 @@
+pr: 120682
+releasenote:
+  text: '`kube-controller-manager`: The `LegacyServiceAccountTokenCleanUp` feature
+    gate is now `beta` and enabled by default. When enabled, legacy auto-generated
+    service account token secrets are auto-labeled with a `kubernetes.io/legacy-token-invalid-since`
+    label if the credentials have not been used in the time specified by `--legacy-service-account-token-clean-up-period`
+    (defaulting to one year), **and** are referenced from the `.secrets` list of a
+    ServiceAccount object, **and**  are not referenced from pods. This label causes
+    the authentication layer to reject use of the credentials. After being labeled
+    as invalid, if the time specified by `--legacy-service-account-token-clean-up-period`
+    (defaulting to one year) passes without the credential being used, the secret
+    is automatically deleted. Secrets labeled as invalid which have not been auto-deleted
+    yet can be re-activated by removing the `kubernetes.io/legacy-token-invalid-since`
+    label.'

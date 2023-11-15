@@ -1,0 +1,3 @@
+pr: 120257
+releasenote:
+  text: Promoted `PodHostIPs` condition to `beta`.

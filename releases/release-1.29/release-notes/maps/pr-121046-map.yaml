@@ -1,0 +1,20 @@
+pr: 121046
+releasenote:
+  text: |-
+    `kube-proxy` now has a new nftables-based mode, available by running
+
+        `kube-proxy --feature-gates NFTablesProxyMode=true --proxy-mode nftables`
+
+    This is currently an alpha-level feature and while it probably will not
+    eat your data, it may nibble at it a bit. (It passes e2e testing but has
+    not yet seen real-world use.)
+
+    At this point it should be functionally mostly identical to the iptables
+    mode, except that it does not (and will not) support Service NodePorts on
+    127.0.0.1. (Also note that there are currently no command-line arguments
+    for the nftables-specific config; you will need to use a config file if
+    you want to set the equivalent of any of the `--iptables-xxx` options.)
+
+    As this code is still very new, it has not been heavily optimized yet;
+    while it is expected to _eventually_ have better performance than the
+    iptables backend, very little performance testing has been done so far.

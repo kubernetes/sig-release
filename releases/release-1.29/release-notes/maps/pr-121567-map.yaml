@@ -1,0 +1,3 @@
+pr: 121567
+releasenote:
+  text: '`etcd`: image is now based on `v3.5.9`.'

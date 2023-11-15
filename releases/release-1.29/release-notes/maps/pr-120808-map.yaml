@@ -1,0 +1,4 @@
+pr: 120808
+releasenote:
+  text: Added options for configuring `nf_conntrack_udp_timeout`, and `nf_conntrack_udp_timeout_stream`
+    variables of netfilter conntrack subsystem.

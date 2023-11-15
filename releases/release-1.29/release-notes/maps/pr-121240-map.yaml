@@ -1,0 +1,6 @@
+pr: 121240
+releasenote:
+  text: |-
+    `kubelet` allows pods to use the `net.ipv4.tcp_fin_timeout`, “net.ipv4.tcp_keepalive_intvl”
+    and “net.ipv4.tcp_keepalive_probes“ sysctl by default; Pod Security Admission
+    allows this sysctl in `v1.29+` versions of the baseline and restricted policies.

@@ -1,0 +1,4 @@
+pr: 116938
+releasenote:
+  text: Fixed inconsistency in the calculation of number of nodes that have an image,
+    which affect the scoring in the `ImageLocality` plugin.

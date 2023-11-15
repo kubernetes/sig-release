@@ -1,0 +1,4 @@
+pr: 116516
+releasenote:
+  text: Added a new `ServiceCIDR` type that allows to dynamically configure the cluster
+    range used to allocate `Service ClusterIPs` addresses.

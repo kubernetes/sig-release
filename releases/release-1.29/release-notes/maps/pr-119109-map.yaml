@@ -1,0 +1,4 @@
+pr: 119109
+releasenote:
+  text: '`ValidatingAdmissionPolicy` type checking now supports CRDs and API extensions
+    types.'

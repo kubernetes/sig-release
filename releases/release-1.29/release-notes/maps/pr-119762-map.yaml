@@ -1,0 +1,5 @@
+pr: 119762
+releasenote:
+  text: In the `wait.PollUntilContextTimeout` function, if `immediate` is true, the
+    condition will now be invoked before waiting, guaranteeing that the condition
+    is invoked at least once and then wait a interval before executing again.

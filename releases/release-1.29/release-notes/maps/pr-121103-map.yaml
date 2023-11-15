@@ -1,0 +1,7 @@
+pr: 121103
+releasenote:
+  text: |-
+    Fixed a regression in default configurations, which enabled `PodDisruptionConditions`
+    by default, that prevented the control plane's pod garbage collector from deleting
+    pods that contained duplicated field keys (environmental variables with repeated keys or
+    container ports).

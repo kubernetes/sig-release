@@ -1,0 +1,4 @@
+pr: 117615
+releasenote:
+  text: Empty values are no longer assigned to undefined resources (CPU or memory)
+    when storing the resources allocated to the pod in checkpoint.

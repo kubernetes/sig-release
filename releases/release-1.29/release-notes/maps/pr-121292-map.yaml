@@ -1,0 +1,4 @@
+pr: 121292
+releasenote:
+  text: Introduced the `job_finished_indexes_total` metric for the `BackoffLimitPerIndex`
+    feature.

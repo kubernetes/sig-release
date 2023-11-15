@@ -1,0 +1,4 @@
+pr: 120757
+releasenote:
+  text: 'Updated `kube-openapi` to remove invalid defaults: OpenAPI spec no longer
+    includes default of `{}` for certain fields where it did not make sense.'

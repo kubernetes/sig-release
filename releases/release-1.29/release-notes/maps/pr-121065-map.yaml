@@ -1,0 +1,5 @@
+pr: 121065
+releasenote:
+  text: '`k8s.io/dynamic-resource-allocation/controller`: `ResourceClaimParameters`
+    and `ResourceClassParameters` validation errors are now visible on `ResourceClaim`,
+    `ResourceClass` and `Pod`.'

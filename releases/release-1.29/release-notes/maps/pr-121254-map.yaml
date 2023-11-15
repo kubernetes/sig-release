@@ -1,0 +1,4 @@
+pr: 121254
+releasenote:
+  text: '`DevicePluginCDIDevices` feature has been graduated to `beta` and enabled
+    by default in the kubelet.'

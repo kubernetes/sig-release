@@ -1,0 +1,4 @@
+pr: 120735
+releasenote:
+  text: Certain `requestBody` parameters in the OpenAPI `v3` are now correctly marked
+    as required.

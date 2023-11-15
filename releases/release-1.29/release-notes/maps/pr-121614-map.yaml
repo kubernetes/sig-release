@@ -1,0 +1,3 @@
+pr: 121614
+releasenote:
+  text: Decoding etcd's response now respects the timeout context.

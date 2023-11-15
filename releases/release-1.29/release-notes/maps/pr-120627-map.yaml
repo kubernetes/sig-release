@@ -1,0 +1,3 @@
+pr: 120627
+releasenote:
+  text: '`PersistentVolumeLastPhaseTransitionTime` is now beta and enabled by default.'

@@ -1,0 +1,3 @@
+pr: 120678
+releasenote:
+  text: Fixed `systemLogQuery` service name matching.

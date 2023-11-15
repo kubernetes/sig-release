@@ -1,0 +1,4 @@
+pr: 121275
+releasenote:
+  text: Added `ImageMaximumGCAge` field to Kubelet configuration, which allows a user
+    to set the maximum age an image is unused before it's garbage collected.

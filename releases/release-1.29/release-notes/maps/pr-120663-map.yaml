@@ -1,0 +1,3 @@
+pr: 120663
+releasenote:
+  text: Promoted plugin subcommand resolution feature to `beta`.

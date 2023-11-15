@@ -1,0 +1,3 @@
+pr: 120503
+releasenote:
+  text: Renamed `apiserver_request_body_sizes` metric to `apiserver_request_body_size_bytes`.

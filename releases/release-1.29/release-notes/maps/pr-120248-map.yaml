@@ -1,0 +1,4 @@
+pr: 120248
+releasenote:
+  text: Removed the `GRPCContainerProbe` feature gate (the feature is stable and always
+    enabled).

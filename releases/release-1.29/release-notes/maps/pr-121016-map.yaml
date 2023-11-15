@@ -1,0 +1,4 @@
+pr: 121016
+releasenote:
+  text: '`CRDValidationRatcheting`: added support for ratcheting `x-kubernetes-validations`
+    in schema.'

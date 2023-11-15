@@ -1,0 +1,3 @@
+pr: 119208
+releasenote:
+  text: Decoupled `TaintManager` from `NodeLifeCycleController` (KEP-3902).
