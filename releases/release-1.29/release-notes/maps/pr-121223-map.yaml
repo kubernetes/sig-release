@@ -1,0 +1,4 @@
+pr: 121223
+releasenote:
+  text: Added support for CEL expressions to `v1alpha1 AuthorizationConfiguration`
+    webhook `matchConditions`.

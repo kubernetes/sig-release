@@ -1,0 +1,3 @@
+pr: 119100
+releasenote:
+  text: Removed `GA` feature gate for `JobTrackingWithFinalizers` in `v1.28`.

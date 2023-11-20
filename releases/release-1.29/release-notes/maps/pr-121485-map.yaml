@@ -1,0 +1,4 @@
+pr: 121485
+releasenote:
+  text: The KMSv2 features with feature gates `KMSv2` and `KMSv2KDF` are promoted
+    to `GA`.  The `KMSv1` feature gate is now disabled by default.

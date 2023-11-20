@@ -1,0 +1,4 @@
+pr: 118146
+releasenote:
+  text: '`kube-proxy` now reports its health more accurately in dual-stack clusters
+    when there are problems with only one IP family.'

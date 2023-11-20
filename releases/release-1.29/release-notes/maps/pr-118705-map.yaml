@@ -1,0 +1,4 @@
+pr: 118705
+releasenote:
+  text: Forbidden sysctls for pod sharing the respective namespaces with the host
+    are now checked when creating or updating pods without such sysctls.

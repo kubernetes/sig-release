@@ -1,0 +1,4 @@
+pr: 121628
+releasenote:
+  text: '`cluster/gce`: added webhook to replace `PersistentVolumeLabel` admission
+    controller.'

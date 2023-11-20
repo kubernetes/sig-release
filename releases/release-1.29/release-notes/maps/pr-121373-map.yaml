@@ -1,0 +1,4 @@
+pr: 121373
+releasenote:
+  text: The CRD validation rule with feature gate `CustomResourceValidationExpressions`
+    was promoted to `GA`.

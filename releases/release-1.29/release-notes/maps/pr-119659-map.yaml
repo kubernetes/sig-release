@@ -1,0 +1,3 @@
+pr: 119659
+releasenote:
+  text: Promoted `PodReadyToStartContainers` condition to `beta`.

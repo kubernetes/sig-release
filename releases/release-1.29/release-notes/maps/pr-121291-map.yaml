@@ -1,0 +1,3 @@
+pr: 121291
+releasenote:
+  text: Removed `GA` feature gate about `CSIMigrationvSphere`.

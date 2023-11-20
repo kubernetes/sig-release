@@ -1,0 +1,6 @@
+pr: 121303
+releasenote:
+  text: |-
+    `CSINodeExpandSecret` feature has been promoted to `GA` in this release and is enabled
+    by default. The CSI drivers can make use of the `secretRef` values passed in `NodeExpansion`
+    request optionally sent by the CSI Client from this release onwards.

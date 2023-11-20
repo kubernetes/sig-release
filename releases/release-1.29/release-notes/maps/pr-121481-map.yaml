@@ -1,0 +1,4 @@
+pr: 121481
+releasenote:
+  text: Added `job_pods_creation_total` metrics for tracking Pods created by the Job
+    controller labeled by events which triggered the Pod creation.

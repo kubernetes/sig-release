@@ -1,0 +1,4 @@
+pr: 118704
+releasenote:
+  text: Updated the CRI-O socket path, so users who configure kubelet to use a location
+    like `/run/crio/crio.sock` don't see strange behaviour from CRI stats provider.

@@ -1,0 +1,4 @@
+pr: 121638
+releasenote:
+  text: Priority and Fairness feature is now `stable`, the feature gate will be removed
+    in `v1.31`.

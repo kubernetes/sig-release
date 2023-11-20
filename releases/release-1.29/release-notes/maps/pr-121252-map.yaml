@@ -1,0 +1,3 @@
+pr: 121252
+releasenote:
+  text: Removed `GA`ed feature gate `TopologyManager`.

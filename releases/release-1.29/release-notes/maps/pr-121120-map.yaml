@@ -1,0 +1,13 @@
+pr: 121120
+releasenote:
+  text: Mitigated http/2 DOS vulnerabilities for `CVE-2023-44487` and `CVE-2023-39325`
+    for the API server when the client is unauthenticated. The mitigation may be disabled
+    by setting the `UnauthenticatedHTTP2DOSMitigation` feature gate to `false` (it
+    is enabled by default). An API server fronted by an L7 load balancer that already
+    mitigates these http/2 attacks may choose to disable the kube-apiserver mitigation
+    to avoid disrupting load balancer -> kube-apiserver connections if http/2 requests
+    from multiple clients share the same backend connection. An API server on a private
+    network may opt to disable the kube-apiserver mitigation to prevent performance
+    regressions for unauthenticated clients. Authenticated requests rely on the fix
+    in golang.org/x/net `v0.17.0` alone. https://issue.k8s.io/121197 tracks further
+    mitigation of http/2 attacks by authenticated clients.

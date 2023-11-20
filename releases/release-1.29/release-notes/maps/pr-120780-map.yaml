@@ -1,0 +1,7 @@
+pr: 120780
+releasenote:
+  text: |-
+    `kube-apiserver` added:
+    - `alpha` support (guarded by the `ServiceAccountTokenJTI` feature gate) for adding a `jti` (JWT ID) claim to service account tokens it issues, adding an `authentication.kubernetes.io/credential-id` audit annotation in audit logs when the tokens are issued, and `authentication.kubernetes.io/credential-id` entry in the extra user info when the token is used to authenticate.
+    - `alpha` support (guarded by the `ServiceAccountTokenPodNodeInfo` feature gate) for including the node name (and uid, if the node exists) as additional claims in service account tokens it issues which are bound to pods, and `authentication.kubernetes.io/node-name` and `authentication.kubernetes.io/node-uid` extra user info when the token is used to authenticate.
+    - `alpha` support (guarded by the `ServiceAccountTokenNodeBinding` feature gate) for allowing `TokenRequests` that bind tokens directly to nodes, and (guarded by the ServiceAccountTokenNodeBindingValidation feature gate) for validating the node name and uid still exist when the token is used.

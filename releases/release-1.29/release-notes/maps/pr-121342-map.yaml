@@ -1,0 +1,4 @@
+pr: 121342
+releasenote:
+  text: Fixed tracking of terminating Pods in the Job status. The field was not updated
+    unless there were other changes to apply.

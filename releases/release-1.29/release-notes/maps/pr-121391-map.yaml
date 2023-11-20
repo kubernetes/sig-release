@@ -1,0 +1,4 @@
+pr: 121391
+releasenote:
+  text: 'E2E storage tests: setting test tags like `[Slow]` via the `DriverInfo.FeatureTag`
+    field is no longer supported.'

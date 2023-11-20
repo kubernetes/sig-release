@@ -1,0 +1,4 @@
+pr: 121116
+releasenote:
+  text: 'Fixed [121094](https://github.com/kubernetes/kubernetes/issues/121094) by
+    re-introducing the readiness predicate for `externalTrafficPolicy: Local` services.'

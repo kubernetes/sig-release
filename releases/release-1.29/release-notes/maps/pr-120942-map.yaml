@@ -1,0 +1,4 @@
+pr: 120942
+releasenote:
+  text: Fixed a regression in the kubelet's behavior while creating a container when
+    the `EventedPLEG` feature gate is enabled.
