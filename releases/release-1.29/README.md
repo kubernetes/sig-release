@@ -22,9 +22,9 @@ description: |
 #### Tracking docs
 
 * [Enhancements Tracking Board](https://bit.ly/k8s129-enhancements)
-* [Feature blog Tracking Board](http://bit.ly/k8s129-feature-blog)
+* [Feature blog Tracking Board](https://github.com/orgs/kubernetes/projects/161/views/4)
 * [Bug Triage Tracking Board](https://bit.ly/k8s129-bug-triage-tracking)
-* [CI Signal Project Board & Issue Tracking](#)
+* [CI Signal Project Board & Issue Tracking](https://github.com/orgs/kubernetes/projects/68)
 * [Retrospective Document](https://bit.ly/k8s129-retro)
 * [kubernetes/sig-release v1.29 milestone](https://github.com/kubernetes/kubernetes/milestone/62)
 
