@@ -12,7 +12,7 @@ Reasons for removal could be including but not limited to:
 - Failure to attend 3 consecutive release meeting without communication to role lead
 - Failure to perform shadow tasks in due time, after 2 discussions with role lead about performance
 - Unresponsive on Slack to messages for more than 2 days during non-peak time and 24 hours during peak time, without prior notice of absence. Peak time is different depending on the team's responsibility
-- Violation of CNCF Code of Conduct
+- Violation of [CNCF Code of Conduct](http://cncf.io/conduct/)
 
 Note that communications ahead of time to inform the leads or find alternative arrangements are greatly preferred in these circumstances.
 ### Process
