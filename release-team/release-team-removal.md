@@ -32,7 +32,7 @@ Reasons for removal could be including but not limited to:
 - Failure to attend or send appropriate representation to 2 consecutive release meetings
 - Failure to perform tasks expected of a role lead
 - Unresponsive on Slack to messages for more than 2 days during non-peak time and 24 hours during peak time, without prior notice of absence. Peak time is different depending on team
-- Violation of CNCF Code of Conduct
+- Violation of [CNCF Code of Conduct](http://cncf.io/conduct/)
 
 ### Process
 - SIGs outside of SIG-release, shadows, leads, or contributors can express concern to release lead or EA.
