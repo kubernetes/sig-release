@@ -1,0 +1,4 @@
+pr: 121034
+releasenote:
+  text: Added `optionalOldSelf` to `x-kubernetes-validations` to support ratcheting
+    CRD schema constraints.

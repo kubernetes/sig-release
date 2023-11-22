@@ -1,0 +1,4 @@
+pr: 121091
+releasenote:
+  text: 'KCCM: fixed transient node addition and removal caused by #121090 while syncing
+    load balancers on large clusters with a lot of churn.'

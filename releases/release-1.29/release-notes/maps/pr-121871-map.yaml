@@ -1,0 +1,3 @@
+pr: 121871
+releasenote:
+  text: Bumped distroless-iptables to 0.4.1 based on Go `1.21.3`.

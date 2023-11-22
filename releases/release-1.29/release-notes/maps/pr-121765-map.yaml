@@ -1,0 +1,3 @@
+pr: 121765
+releasenote:
+  text: Fixed the API comments for the Job `Ready` field in status.
