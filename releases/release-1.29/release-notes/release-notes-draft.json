@@ -46,6 +46,43 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "113374": {
+    "commit": "9f319c32064f8b72d368df65fde4e37e250f8230",
+    "text": "Added support for projecting `certificates.k8s.io/v1alpha1` ClusterTrustBundle objects into pods.",
+    "markdown": "Added support for projecting `certificates.k8s.io/v1alpha1` ClusterTrustBundle objects into pods. ([#113374](https://github.com/kubernetes/kubernetes/pull/113374), [@ahmedtd](https://github.com/ahmedtd))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/bddca24910fb349e2eb0ac1c822c77f0f32fe9c6/keps/sig-auth/3257-trust-anchor-sets",
+        "type": "KEP"
+      }
+    ],
+    "author": "ahmedtd",
+    "author_url": "https://github.com/ahmedtd",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113374",
+    "pr_number": 113374,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "storage",
+      "node",
+      "api-machinery",
+      "auth",
+      "apps",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "114095": {
     "commit": "6cbc5dfac6581b1a067dd4caf005dba5ad495d9d",
     "text": "`scheduler`: Fixed missing field `apiVersion` from events reported by the taint\nmanager.",
@@ -66,8 +103,8 @@
   },
   "115702": {
     "commit": "4911aad4636ab177333db63297fb4a9a562a8f20",
-    "text": "Fixed the bug that kubelet could't output logs after log file rotated when `kubectl logs POD_NAME -f` is running.",
-    "markdown": "Fixed the bug that kubelet could't output logs after log file rotated when `kubectl logs POD_NAME -f` is running. ([#115702](https://github.com/kubernetes/kubernetes/pull/115702), [@xyz-li](https://github.com/xyz-li))",
+    "text": "Fixed the bug where kubelet couldn't output logs after log file rotated when `kubectl logs POD_NAME -f` is running.",
+    "markdown": "Fixed the bug where kubelet couldn't output logs after log file rotated when `kubectl logs POD_NAME -f` is running. ([#115702](https://github.com/kubernetes/kubernetes/pull/115702), [@xyz-li](https://github.com/xyz-li))",
     "author": "xyz-li",
     "author_url": "https://github.com/xyz-li",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115702",
@@ -4070,6 +4107,35 @@
     "duplicate_kind": true,
     "do_not_publish": true
   },
+  "120616": {
+    "commit": "6c64593ba17e6e1fe81f75a92d91705a41637f3b",
+    "text": "Added support for split image filesystem in kubelet.",
+    "markdown": "Added support for split image filesystem in kubelet. ([#120616](https://github.com/kubernetes/kubernetes/pull/120616), [@kannon92](https://github.com/kannon92))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/4191",
+        "type": "KEP"
+      }
+    ],
+    "author": "kannon92",
+    "author_url": "https://github.com/kannon92",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120616",
+    "pr_number": 120616,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
   "120620": {
     "commit": "ac6f7071554454eb34209753a30b418d4d9997bd",
     "text": "Sidecar termination is now serialized and each sidecar container will receive a `SIGTERM` after all main containers and later starting sidecar containers have terminated.",
@@ -5130,6 +5196,34 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "121034": {
+    "commit": "22866ca5eb343b3708177ee0d7d6ad9466ad321f",
+    "text": "Added `optionalOldSelf` to `x-kubernetes-validations` to support ratcheting CRD schema constraints.",
+    "markdown": "Added `optionalOldSelf` to `x-kubernetes-validations` to support ratcheting CRD schema constraints. ([#121034](https://github.com/kubernetes/kubernetes/pull/121034), [@alexzielenski](https://github.com/alexzielenski))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://kep.k8s.io/4008",
+        "type": "external"
+      }
+    ],
+    "author": "alexzielenski",
+    "author_url": "https://github.com/alexzielenski",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121034",
+    "pr_number": 121034,
+    "areas": [
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true,
+    "duplicate_kind": true
+  },
   "121041": {
     "commit": "de708905d8fadc49276098d7acb4eaf3b1df010a",
     "text": "`kubelet` now emits a metric for end-to-end pod startup latency, including image pull.",
@@ -5365,6 +5459,28 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "121091": {
+    "commit": "77d72a30e1eab39a0eab0a00544fcf08a6406fd1",
+    "text": "KCCM: fixed transient node addition and removal caused by #121090 while syncing load balancers on large clusters with a lot of churn.",
+    "markdown": "KCCM: fixed transient node addition and removal caused by #121090 while syncing load balancers on large clusters with a lot of churn. ([#121091](https://github.com/kubernetes/kubernetes/pull/121091), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))",
+    "author": "alexanderConstantinescu",
+    "author_url": "https://github.com/alexanderConstantinescu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121091",
+    "pr_number": 121091,
+    "areas": [
+      "test",
+      "cloudprovider"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network",
+      "testing",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
   "121095": {
     "commit": "ae603d5260a32d85e96a1e57caf61865f51cb29d",
     "text": "Enabled traces for KMSv2 encrypt/decrypt operations.",
@@ -5587,6 +5703,37 @@
     "duplicate": true,
     "do_not_publish": true
   },
+  "121193": {
+    "commit": "953afbb328939e748edc3c154bb1ab9248ff70e5",
+    "text": "Fixed overriding default `KubeletConfig` fields in drop-in configs if not set.",
+    "markdown": "Fixed overriding default `KubeletConfig` fields in drop-in configs if not set. ([#121193](https://github.com/kubernetes/kubernetes/pull/121193), [@sohankunkerkar](https://github.com/sohankunkerkar))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/3983-drop-in-configuration",
+        "type": "KEP"
+      }
+    ],
+    "author": "sohankunkerkar",
+    "author_url": "https://github.com/sohankunkerkar",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121193",
+    "pr_number": 121193,
+    "areas": [
+      "test",
+      "kubelet",
+      "e2e-test-framework",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
   "121216": {
     "commit": "89f124cd706b8f7c316034cabe7eb42ad8d6912d",
     "text": "Bumped `distroless-iptables` to `0.4.1` based on Go `1.21.3`.",
@@ -5638,8 +5785,8 @@
   },
   "121229": {
     "commit": "4d8a51acacaf0df9bfbaee8cd43f15dbdc85b146",
-    "text": "Remove the networking `alpha` API `ClusterCIDR`.",
-    "markdown": "Remove the networking `alpha` API `ClusterCIDR`. ([#121229](https://github.com/kubernetes/kubernetes/pull/121229), [@aojea](https://github.com/aojea))",
+    "text": "Removed the networking `alpha` API `ClusterCIDR`.",
+    "markdown": "Removed the networking `alpha` API `ClusterCIDR`. ([#121229](https://github.com/kubernetes/kubernetes/pull/121229), [@aojea](https://github.com/aojea))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6706,5 +6853,232 @@
     ],
     "feature": true,
     "duplicate": true
+  },
+  "121715": {
+    "commit": "263ab254ef6a847fdd3dc69250a2ac0b12c42eb3",
+    "text": "scheduler: in 1.29 pre-releases, enabling contextual logging slowed down pod scheduling.",
+    "markdown": "Scheduler: in 1.29 pre-releases, enabling contextual logging slowed down pod scheduling. ([#121715](https://github.com/kubernetes/kubernetes/pull/121715), [@pohly](https://github.com/pohly)) [SIG Instrumentation and Scheduling]",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121715",
+    "pr_number": 121715,
+    "areas": [
+      "logging"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "scheduling",
+      "instrumentation"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "121739": {
+    "commit": "56d7898510f2a973f92fda13c2ba3a5e756d9621",
+    "text": "Updated runc to `1.1.10`.",
+    "markdown": "Updated runc to `1.1.10`. ([#121739](https://github.com/kubernetes/kubernetes/pull/121739), [@ty-dc](https://github.com/ty-dc))",
+    "author": "ty-dc",
+    "author_url": "https://github.com/ty-dc",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121739",
+    "pr_number": 121739,
+    "areas": [
+      "dependency",
+      "code-organization"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node",
+      "architecture"
+    ],
+    "duplicate": true
+  },
+  "121764": {
+    "commit": "0193fae084e16031b37a14a979f02817d7fa79d0",
+    "text": "Fixed the API comments for the `FailIndex` Job pod failure policy action.",
+    "markdown": "Fixed the API comments for the `FailIndex` Job pod failure policy action. ([#121764](https://github.com/kubernetes/kubernetes/pull/121764), [@mimowo](https://github.com/mimowo))",
+    "documentation": [
+      {
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3850-backoff-limits-per-index-for-indexed-jobs",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121764",
+    "pr_number": 121764,
+    "areas": [
+      "code-generation"
+    ],
+    "kinds": [
+      "documentation",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "121765": {
+    "commit": "e4b74dd12fa8cb63c174091d5536a10b8ec19d34",
+    "text": "Fixed the API comments for the Job `Ready` field in status.",
+    "markdown": "Fixed the API comments for the Job `Ready` field in status. ([#121765](https://github.com/kubernetes/kubernetes/pull/121765), [@mimowo](https://github.com/mimowo))",
+    "documentation": [
+      {
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/2879-ready-pods-job-status",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121765",
+    "pr_number": 121765,
+    "areas": [
+      "code-generation"
+    ],
+    "kinds": [
+      "documentation",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "121808": {
+    "commit": "6ba7258a0f3f73629560fc30016b2e35c8e7ae9c",
+    "text": "Kubernetes is now built with Go `1.21.4`.",
+    "markdown": "Kubernetes is now built with Go `1.21.4`. ([#121808](https://github.com/kubernetes/kubernetes/pull/121808), [@cpanato](https://github.com/cpanato))",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121808",
+    "pr_number": 121808,
+    "areas": [
+      "test",
+      "kubelet",
+      "kube-proxy",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "release-eng",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "network",
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "testing",
+      "release",
+      "architecture",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "121837": {
+    "commit": "1f3256bbac668f120433990028ca1fe206e4117b",
+    "text": "kubeadm: changed the \"system:masters\" Group in the apiserver-kubelet-client.crt certificate Subject to be \"kubeadm:cluster-admins\" which is a less privileged Group.",
+    "markdown": "Kubeadm: changed the \"system:masters\" Group in the apiserver-kubelet-client.crt certificate Subject to be \"kubeadm:cluster-admins\" which is a less privileged Group. ([#121837](https://github.com/kubernetes/kubernetes/pull/121837), [@neolit123](https://github.com/neolit123))",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121837",
+    "pr_number": 121837,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ]
+  },
+  "121841": {
+    "commit": "930022cf267c2e0269fbd9be4be3fd83448e6419",
+    "text": "kubeadm: supported updating certificate organization during `kubeadm certs renew` operation.",
+    "markdown": "Kubeadm: supported updating certificate organization during `kubeadm certs renew` operation. ([#121841](https://github.com/kubernetes/kubernetes/pull/121841), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121841",
+    "pr_number": 121841,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug",
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true,
+    "duplicate_kind": true
+  },
+  "121851": {
+    "commit": "8509ab82b96caa2365552efa08c8ba8baf11c5ec",
+    "text": "Fixed statle SMB mount issue when SMB file share is deleted and then unmount.",
+    "markdown": "Fixed statle SMB mount issue when SMB file share is deleted and then unmount. ([#121851](https://github.com/kubernetes/kubernetes/pull/121851), [@andyzhangx](https://github.com/andyzhangx))",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121851",
+    "pr_number": 121851,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage"
+    ]
+  },
+  "121867": {
+    "commit": "94fe1b3b0c12e93691dccac21efbda9391679510",
+    "text": "A customizable `OrderedScoreFuncs()` function was introduced. Out-of-tree plugins \nthat used the scheduler's preemption interface could implement this function\nfor custom preemption preferences or return nil to keep the current behavior.",
+    "markdown": "A customizable `OrderedScoreFuncs()` function was introduced. Out-of-tree plugins \n  that used the scheduler's preemption interface could implement this function\n  for custom preemption preferences or return nil to keep the current behavior. ([#121867](https://github.com/kubernetes/kubernetes/pull/121867), [@lianghao208](https://github.com/lianghao208))",
+    "author": "lianghao208",
+    "author_url": "https://github.com/lianghao208",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121867",
+    "pr_number": 121867,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "feature": true
+  },
+  "121871": {
+    "commit": "9c56c5f350f5902309fa6a554da306ea4d38186e",
+    "text": "Bumped distroless-iptables to 0.4.1 based on Go `1.21.3`.",
+    "markdown": "Bumped distroless-iptables to 0.4.1 based on Go `1.21.3`. ([#121871](https://github.com/kubernetes/kubernetes/pull/121871), [@cpanato](https://github.com/cpanato))",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121871",
+    "pr_number": 121871,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "feature": true
   }
 }

@@ -1,0 +1,4 @@
+pr: 113374
+releasenote:
+  text: Added support for projecting `certificates.k8s.io/v1alpha1` ClusterTrustBundle
+    objects into pods.
