@@ -586,7 +586,7 @@ Validate that SIG Cluster Lifecycle has all of the docs in place for the upcomin
 
 ### Update Releases Page (the week before the release)
 
-Create a PR against the dev-[future-release] branch to add an entry for [future-release] on https://kubernetes.io/releases and add a section for [future-release] on https://kubernetes.io/releases/patch-releases.
+Create a PR against the dev-[future-release] branch to add an entry for [future-release] on https://kubernetes.io/releases.
 
 To update https://kubernetes.io/releases, update https://github.com/kubernetes/website/blob/main/data/releases/schedule.yaml.
 The following fields are required:
@@ -595,10 +595,8 @@ The following fields are required:
   - `next`: <1.xy.1>
   - `cherryPickDeadline`: <YYYY-MM-DD> # the Friday before `targetDate`
   - `targetDate`: <YYYY-MM-DD> # the 2nd Wednesday of the next month
+  - `maintenanceModeStartDate`: # 2 months before `endOfLifeDate`
   - `endOfLifeDate`: <YYYY-MM-DD> # the 28th of the month after 1 year and 2 months after the release
-
-To update https://kubernetes.io/releases/patch-releases, update https://github.com/kubernetes/website/blob/main/content/en/releases/patch-releases.md.
-Add a subsection for [future-release] under `Detailed Release History for Active Branches` using the existing subsections as an example.
 
 [Example PR for 1.25](https://github.com/kubernetes/website/pull/36174)
 Have a Release Manager lgtm the dates on the PR.
