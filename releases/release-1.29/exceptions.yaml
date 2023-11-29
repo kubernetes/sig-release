@@ -1,0 +1,25 @@
+# Exception requests in 1.29
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Nina Polshakova ([@npolshakova](https://github.com/npolshakova)
+# Release Team Shadows : Ana Margarita Medina ([@AnaMMedina21](https://github.com/AnaMMedina21))
+# / Mohammad Reza Saleh Sedghpour ([@salehsedghpour](https://github.com/salehsedghpour))
+# / Rayan Das ([@rayandas](https://github.com/rayandas))
+# / Sanchita Mishra ([@sanchita-07](https://github.com/@sanchita-07))
+# / Sreeram Venkitesh ([@sreeram-venkitesh](https://github.com/@sreeram-venkitesh))
+
+# Enhancements Freeze Exceptions requested in 1.29
+enhancementFreeze:
+
+- name: "Per-plugin callback functions for accurate requeueing in kube-scheduler"
+  issue: 4247
+  date_requested: 2023-10-06
+  date_reviewed: 2023-10-07
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/KRW9gg5wwS4/m/XW5v6ySwCwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4256"
+  status: approved
+
+# Code Freeze Exceptions requested in 1.29
+codeFreeze:
+
+
