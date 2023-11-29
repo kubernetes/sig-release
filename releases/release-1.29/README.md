@@ -8,7 +8,13 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.29
+# Kubernetes 1.29: Mandala (The Universe) ✨🌌
+
+![Kubernetes 1.29: Mandala (The Universe)](./logo/k8s129-mandala-512px.png)
+
+This release is inspired by the beautiful art form that is Mandala—a symbol of the universe in its perfection.
+
+In the spirit of Mandala’s transformative symbolism, Kubernetes 1.29 celebrates our project’s evolution. Like stars in the Kubernetes universe, each contributor, user, and supporter lights the way. Together, we create a universe of possibilities—one release at a time.
 
 #### Links
 
@@ -65,7 +71,7 @@ The 1.29 release cycle is as follows:
 | Brace Yourself, Code Freeze is Coming                                                  | Comms / Bug Triage            | Monday 23rd October 2023                                                                                              | week 8   |                                                        |
 | **Begin Feature blog freeze**                                                          | Comms Lead                    | [01:00 UTC Wednesday 25th October 2023 / 18:00 PDT Tuesday 24th October 2023](https://everytimezone.com/s/0fda3279)   | week 8   |                                                        |
 | **Begin [Code Freeze]**                                                                | Branch Manager                | [01:00 UTC Wednesday 1st November 2023 / 18:00 PDT Tuesday 31st October 2023](https://everytimezone.com/s/24b27b03)   | week 9   |                                                        |
-| 1.29.0-alpha.3 released                                                                | Branch Manager                | Thursday 2nd November 2023                                                                                            | Week 9   | [1.29-blocking], [master-blocking], [master-informing] |
+| 1.29.0-alpha.3 released                                                                | Branch Manager                | Thursday 2nd November 2023                                                                                            | Week 9   |                                                        |
 | Deprecations and Removals blog published                                               | Comms                         | Thursday 2nd November 2023                                                                                            | week 9   |                                                        |
 | **KubeCon NA**                                                                         |                               | Monday 6th - Thursday 9th November 2023                                                                               | week 10  |                                                        |
 | **Begin [Burndown]** (Monday, Wednesday, and Friday meetings)                          | Lead                          | Monday 13th November 2023                                                                                             | week 11  |                                                        |
@@ -78,7 +84,7 @@ The 1.29 release cycle is as follows:
 | 1.29.0-beta.0 released                                                                 | Branch Manager                | Thursday 16th November 2023                                                                                           | week 11  |                                                        |
 | Feature blogs ready to review                                                          | Enhancement Owner / SIG Leads | Friday 17th November 2023                                                                                             | week 11  |                                                        |
 | Burndown Meetings daily (Tuesday & Thursday over Slack)                                | Lead                          | Monday 20th November 2023                                                                                             | Week 12  |                                                        |
-| 1.29.0-rc.0 released                                                                   | Branch Manager                | Tuesday 21st November 2023                                                                                            | week 12  |                                                        |
+| 1.29.0-rc.0 released                                                                   | Branch Manager                | Tuesday 21st November 2023                                                                                            | week 12  | [1.29-blocking], [master-blocking], [master-informing] |
 | release-1.29 branch created                                                            | Branch Manager                | Tuesday 21st November 2023                                                                                            | week 12  |                                                        |
 | release-1.29 jobs created                                                              | Branch Manager                | Tuesday 21st November 2023                                                                                            | week 12  |                                                        |
 | Major Themes complete                                                                  | Release Notes Lead            | Tuesday 28th November 2023                                                                                            | week 13  |                                                        |
