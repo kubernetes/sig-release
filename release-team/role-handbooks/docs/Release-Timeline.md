@@ -29,7 +29,6 @@
     - [Nominate a Docs Lead for the Next Release](#nominate-a-docs-lead-for-the-next-release)
 - [Week 7-8: Late-Middle Steps - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
 - [Weeks 9-11: Late Steps - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
-    - [Generate the reference documentation](#generate-the-reference-documentation)
     - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
     - [Touch base with the release communications team](#touch-base-with-the-release-communications-team)
 - [Week 12: Release Week](#release-week-week-12)
@@ -530,54 +529,6 @@ Be congnizant of the status of the release blog post as merging and publishing t
 
 ## Late Steps (Weeks 9-11) - Prep for the release
 
-The Docs Lead is responsible for updating the Kubernetes API reference, kubectl, and components documentation.
-If you need help in building the reference documentation, reach out on Slack #sig-docs.
-
-### Generate the reference documentation
-
-> Note: For 1.20 and 1.21, the Docs team needed assistance from SIG Docs to generate the reference documentation 
-
-The first step is to familiarize yourself with the `website/updated-imported-docs/update-imported-docs.py` script
-and the instructions for ([Generating Reference Pages for Kubernetes Components and Tools](https://kubernetes.io/docs/contribute/generate-ref-docs/quickstart/)).
-
-The reference documentation build depends upon a valid [release tag](https://github.com/kubernetes/kubernetes/tags).
-When a Kubernetes release candidate version tag such as `v1.21-rc.0` is created, you can consider building
-the reference documentation. Next:
-
-- Create a branch for this work based off of the `dev-[future release]` branch.
-```
-git checkout dev-[future-release]
-git fetch upstream dev-[future-release]
-git rebase upstream/dev-[future-release]
-git checkout -b dev-[future-release]-ref-doc
-```
-- Run the `update-imported-docs.py` script providing the build configuration file (`reference.yml`) and the release tag.
-```
-cd website/update-imported-docs/
-python update-imported-docs.py reference.yml 1.20.0-rc.0
-```
-
-- Commit the generated files.
-```
-git add .
-git commit -m "Generate reference doc for [release tag]"
-git push --set-upstream origin dev-[future-release]-ref-doc
-```
-
-You can expect to maintain this branch with periodic updates to the reference documentation using the latest `rc` tag.
-Merge your branch `dev-[future-release]-ref-doc` to the `dev-[future release]` branch just before the final release.
-
-If the content has changed since the last build of the reference documentation, when the release is complete, you should
-build the reference documentation again using the final release tag and merge to the `main` branch.
-
-Note: You should not have to build the reference documentation for every release candidate version.
-
-In 1.20, there is a new API reference doc generation proccess.
-SIG Docs has generated the API reference docs for 1.20 and [1.21](https://github.com/kubernetes/website/pull/26413).
-Starting with the 1.22 release, follow the [building the API reference page instructions](https://github.com/kubernetes/website/blob/master/README.md#building-the-api-reference-pages) in the k/website README.md and in the [README of the generator](https://github.com/kubernetes-sigs/reference-docs/blob/master/gen-resourcesdocs/README.md).
-Refer to the [1.21 PR for more context](https://github.com/kubernetes/website/pull/26413#issuecomment-811040665).
-> Ask for assistance from SIG Docs to generate teh API reference docs
-
 ### Touch base with SIG Cluster Lifecycle (kubeadm)
 
 Validate that SIG Cluster Lifecycle has all of the docs in place for the upcoming release. These are mainly kubeadm docs (upgrading, installing, changes, etc). If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages/sig-cluster-lifecycle/) channel, e.g:
@@ -598,7 +549,7 @@ The following fields are required:
   - `maintenanceModeStartDate`: # 2 months before `endOfLifeDate`
   - `endOfLifeDate`: <YYYY-MM-DD> # the 28th of the month after 1 year and 2 months after the release
 
-[Example PR for 1.25](https://github.com/kubernetes/website/pull/36174)
+[Example PR for 1.29](https://github.com/kubernetes/website/pull/44135)
 Have a Release Manager lgtm the dates on the PR.
 This PR can be merged on release day by the Docs lead.
 
