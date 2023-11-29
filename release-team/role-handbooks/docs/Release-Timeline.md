@@ -30,7 +30,6 @@
 - [Week 7-8: Late-Middle Steps - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
 - [Weeks 9-11: Late Steps - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
     - [Generate the reference documentation](#generate-the-reference-documentation)
-    - [Update minor version on API index page](#update-minor-version-on-api-index-page)
     - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
     - [Touch base with the release communications team](#touch-base-with-the-release-communications-team)
 - [Week 12: Release Week](#release-week-week-12)
@@ -140,17 +139,29 @@ Early in the release cycle, the Enhancements Lead opens a Github Project, e.g: [
 ⚠️  Attend [SIG Docs meetings](https://github.com/kubernetes/community/tree/master/sig-docs#meetings) to provide a status update. 
 If you cannot attend, a Shadow needs to attend in your place and/or update the [SIG Docs meeting notes](https://docs.google.com/document/d/1emuO4nmaQq3K8JZ9-MQeIygtrCPO9kWv7U7RzTaW4F8/edit?usp=sharing) with the information necessary to keep the community informed (e.g. staffing updates, branch syncs, placeholder PR deadlines, etc).
 - Here is a checklist to guide the weekly status report. 
+
 _Note:_ SIG Docs prefers and welcomes a status of yellow or red on anything that needs attention, has the possiblity to miss deadlines or target dates, or requires follow-up from feature authors and SIGs that you're not receiving.
+
 [ ] Is the integration branch healthy (does not need rebase)?
+
 [ ] Has the weekly branch sync been done? (a lapse in 1-2 branch syncs indicates 'yellow' status, 3 or more lapses should be deemed red)
+
 [ ] Has the PR for the weekly branch sync merged or needs review? If assistance is needed to resolve merge conflicts, please flag others by communicating on the #release-docs Slack channel
+
 [ ] A week before the Docs PR Placeholder deadline, have 80% of the enhancements that opted in for docs created a placeholder PR? (anything below 60% opt-in for docs where placeholder PRs are needed should indicate yellow (or red) status, contingent on the amount)
+
 [ ] Three days before the Docs PR Placeholder deadline, have 90% of the enhancements that opted in for docs created a placeholder PR?
+
 [ ] A week before the Docs Ready for Review deadline, are 80% of the docs PRs ready for review? (anything below 60% should indicate yellow (or red) status, contingent on the amount)
+
 [ ] Three days before the Docs Ready for Review deadline, are 90% of the docs PRs ready for review?
+
 [ ] A week before the Docs Complete deadline, have 80% of the docs PRs merged? (anything below 60% should indicate yellow (or red) status, contingent on the amount)
+
 [ ] Three days before the Docs Complete deadline, have 90% of the docs PRs merged? (be sure to mention if you need the help of SIG Docs approvers/reviewers to meet your deadline)
+
 [ ] On the day before any deadline, are there any outstanding items or PRs?
+
 [ ] On the day of any deadline, are there any outstanding items or PRs?
 
 ### Read up on the release team
