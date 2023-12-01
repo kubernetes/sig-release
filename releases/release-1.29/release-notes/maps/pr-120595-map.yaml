@@ -1,0 +1,4 @@
+pr: 120595
+releasenote:
+  text: Fixed attaching volumes after detach errors. Now volumes that failed to detach
+    are not treated as attached. Kubernetes will make sure they are fully attached before they can be used by pods.
