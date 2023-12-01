@@ -16,6 +16,9 @@ This release is inspired by the beautiful art form that is Mandala—a symbol of
 
 In the spirit of Mandala’s transformative symbolism, Kubernetes 1.29 celebrates our project’s evolution. Like stars in the Kubernetes universe, each contributor, user, and supporter lights the way. Together, we create a universe of possibilities—one release at a time.
 
+The release logo, made by [Mario Jason Braganza](https://janusworx.com) (base Mandala art, courtesy - [Fibrel Ojalá](https://pixabay.com/users/fibrel-3502541/)), symbolizes the little universe that is the Kubernetes project and all its people.
+
+
 #### Links
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.29/README.md)
@@ -90,10 +93,11 @@ The 1.29 release cycle is as follows:
 | Major Themes complete                                                                  | Release Notes Lead            | Tuesday 28th November 2023                                                                                            | week 13  |                                                        |
 | Docs complete — All PRs reviewed and ready to merge                                    | Docs Lead                     | Tuesday 28th November 2023                                                                                            | week 13  |                                                        |
 | 1.29.0-rc.1 released                                                                   | Branch Manager                | Tuesday 28th November 2023                                                                                            | week 13  |                                                        |
-| Release Notes complete — reviewed & merged to https://github.com/kubernetes/kubernetes | Release Notes Lead            | Tuesday 5th December, 2023                                                                                            | week 14  |                                                        |
-| **v1.29.0 released**                                                                   | Branch Manager                | Tuesday 5th December 2023                                                                                             | week 14  |                                                        |
-| Release blog published                                                                 | Comms                         | Tuesday 5th December 2023                                                                                             | week 14  |                                                        |
-| **[Thaw]**                                                                             | Branch Manager                | Tuesday 5th December 2023                                                                                             | week 14  |                                                        |
+| 1.29.0-rc.2 released                                                                   | Branch Manager                | Thursday 7th December 2023                                                                                            | week 14  | [1.29-blocking], [master-blocking], [master-informing] |
+| Release Notes complete — reviewed & merged to https://github.com/kubernetes/kubernetes | Release Notes Lead            | Wednesday 13th December 2023                                                                                          | week 15  |                                                        |
+| **v1.29.0 released**                                                                   | Branch Manager                | Wednesday 13th December 2023                                                                                          | week 15  |                                                        |
+| Release blog published                                                                 | Comms                         | Wednesday 13th December 2023                                                                                          | week 15  |                                                        |
+| **[Thaw]**                                                                             | Branch Manager                | Wednesday 13th December 2023                                                                                          | week 15  |                                                        |
 
 ## Phases
 
