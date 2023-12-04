@@ -57,6 +57,7 @@ codeFreeze:
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/vkHqIH-hE5A/m/FANycyoLEQAJ"
   pull_requests: 
     - "https://github.com/kubernetes/kubernetes/pull/121034"
+    - "https://github.com/kubernetes/kubernetes/pull/121461"
   status: "approved"
 
 - name: "Allow replacement of Pods in a Job when fully terminated"
