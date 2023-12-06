@@ -53,7 +53,7 @@ The 1.29 release cycle is as follows:
 - **Monday 6th - Thursday 9th November 2023**: Week 10 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
 - **[01:00 UTC Wednesday 15th November 2023 / 18:00 PDT Tuesday 14th November 2023](https://everytimezone.com/s/b708fa7a)**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 28th November 2023**: Week 13 — Docs must be completed and reviewed
-- **Tuesday 5th December 2023**: Week 14 — Kubernetes v1.29.0 released
+- **Wednesday 13th December 2023**: Week 15 — Kubernetes v1.29.0 released
 
 ## Timeline
 
