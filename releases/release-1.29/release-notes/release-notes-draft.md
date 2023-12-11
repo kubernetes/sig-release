@@ -1,45 +1,46 @@
-## Urgent Upgrade Notes 
+## What's New (Major Themes)
+
+Major themes for Kubernetes v1.29 _Mandala (The Universe)_ have been published in the [release announcement](https://kubernetes.io/blog/2023/12/13/kubernetes-v1-29-release/), which also contains additional information on the release.
+
+## Known Issues
+
+### Evented PLEG beta feature (disabled by default) has a critical bug
+
+The Evented PLEG (Pod Lifecycle Event Generator ) feature is disabled by default, and additional care is recommended when enabling it: when enabled, a [bug](https://github.com/kubernetes/kubernetes/issues/121349) affecting pods (and especially static pods) can have a critical impact on cluster health.
+
+### Feature gate `SchedulerQueueingHints` is disabled by default
+
+[An issue was found](https://github.com/kubernetes/kubernetes/pull/122285) in the `beta` feature `SchedulingHint`, and to mitigate it the feature was changed to `disabled` by default in this release. It can be manually enabled, in which case it's possible that the identified behavior (pods pending for 5 minutes, even though the cluster can accomodate them) manifests itself.
+
+## Urgent Upgrade Notes
 
 ### (No, really, you MUST read this before you upgrade)
 
 - Stopped accepting component configuration for `kube-proxy` and `kubelet` during `kubeadm upgrade plan --config`. This was a legacy behavior that was not well supported for upgrades and could be used only at the plan stage to determine if the configuration for these components stored in the cluster needs manual version migration. In the future, `kubeadm` will attempt alternative component config migration approaches. ([#120788](https://github.com/kubernetes/kubernetes/pull/120788), [@chendave](https://github.com/chendave))
- - `kubeadm`: a separate "super-admin.conf" file is now deployed. The User in `admin.conf` is now bound to a new RBAC Group `kubeadm:cluster-admins` that has `cluster-admin` `ClusterRole` access. The User in `super-admin.conf` is now bound to the `system:masters` built-in super-powers / break-glass Group that can bypass RBAC. Before this change, the default `admin.conf` was bound to `system:masters` Group, which was undesired. Executing `kubeadm init phase kubeconfig all` or just `kubeadm init` will now generate the new `super-admin.conf` file. The cluster admin can then decide to keep the file present on a node host or move it to a safe location. `kubadm certs renew` will renew the certificate in `super-admin.conf` to one year if the file exists; if it does not exist a "MISSING" note will be printed. `kubeadm upgrade apply` for this release will migrate this particular node to the two file setup. Subsequent kubeadm releases will continue to optionally renew the certificate in `super-admin.conf` if the file exists on disk and if renew on upgrade is not disabled. `kubeadm join --control-plane` will now generate only an `admin.conf` file that has the less privileged User. ([#121305](https://github.com/kubernetes/kubernetes/pull/121305), [@neolit123](https://github.com/neolit123))
- 
+ - `kubeadm`: a separate `super-admin.conf` file is now deployed. The User in `admin.conf` is now bound to a new RBAC Group `kubeadm:cluster-admins` that has `cluster-admin` `ClusterRole` access. The User in `super-admin.conf` is now bound to the `system:masters` built-in super-powers / break-glass Group that can bypass RBAC. Before this change, the default `admin.conf` was bound to `system:masters` Group, which was undesired. Executing `kubeadm init phase kubeconfig all` or just `kubeadm init` will now generate the new `super-admin.conf` file. The cluster admin can then decide to keep the file present on a node host or move it to a safe location. `kubadm certs renew` will renew the certificate in `super-admin.conf` to one year if the file exists; if it does not exist a "MISSING" note will be printed. `kubeadm upgrade apply` for this release will migrate this particular node to the two file setup. Subsequent kubeadm releases will continue to optionally renew the certificate in `super-admin.conf` if the file exists on disk and if renew on upgrade is not disabled. `kubeadm join --control-plane` will now generate only an `admin.conf` file that has the less privileged User. ([#121305](https://github.com/kubernetes/kubernetes/pull/121305), [@neolit123](https://github.com/neolit123))
+- In-tree cloud provider integrations are now switched off by default. This change will require that users who are currently using in-tree cloud provider integrations (Azure, GCE, or vSphere) enable external cloud controller managers, or opt in to the legacy integration by setting the associated feature gates to  `false`. For more information about how to enable and run external cloud controller managers, read [Cloud Controller Manager Administration](https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/) and [Migrate Replicated Control Plane To Use Cloud Controller Manager](https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/). ([#117503](https://github.com/kubernetes/kubernetes/pull/117503), [@dims](https://github.com/dims))
+
 ## Changes by Kind
 
 ### Deprecation
 
 - #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
-  
-  <!--
-  This section can be blank if this pull request does not require a release note.
-  
-  When adding links which point to resources within git repositories, like
-  KEPs or supporting documentation, please reference a specific commit and avoid
-  linking directly to the master branch. This ensures that links reference a
-  specific point in time, rather than a document that may change over time.
-  
-  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files
-  
-  Please use the following format for linking documentation:
-  - [KEP]: <link>
-  - [Usage]: <link>
-  - [Other doc]: <link>
-  --> ([#119495](https://github.com/kubernetes/kubernetes/pull/119495), [@bzsuni](https://github.com/bzsuni)) [SIG API Machinery]
+
+- The `flowcontrol.apiserver.k8s.io/v1beta2` API version of `FlowSchema` and `PriorityLevelConfiguration` is no longer served in `v1.29`. Migrate manifests and API clients to use the `flowcontrol.apiserver.k8s.io/v1beta3` API version, available since `v1.26`. More information is at https://kubernetes.io/docs/reference/using-api/deprecation-guide/#flowcontrol-resources-v129. ([#119495](https://github.com/kubernetes/kubernetes/pull/119495), [@bzsuni](https://github.com/bzsuni))
 - Creation of new `CronJob` objects containing `TZ` or `CRON_TZ` in `.spec.schedule`, accidentally enabled in `v1.22`, is now disallowed. Use the `.spec.timeZone` field instead, supported in `v1.25+` clusters in default configurations. See https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#unsupported-timezone-specification for more information. ([#116252](https://github.com/kubernetes/kubernetes/pull/116252), [@soltysh](https://github.com/soltysh))
 - Removed the networking `alpha` API `ClusterCIDR`. ([#121229](https://github.com/kubernetes/kubernetes/pull/121229), [@aojea](https://github.com/aojea))
 
 ### API Change
 
-- '`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`
+- `kube-apiserver`: added `--authentication-config` flag for reading `AuthenticationConfiguration`
   files. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`
-  flags.' ([#119142](https://github.com/kubernetes/kubernetes/pull/119142), [@aramase](https://github.com/aramase))
-- '`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`
-  is removed in `v1.29`. Migrated `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`.' ([#119994](https://github.com/kubernetes/kubernetes/pull/119994), [@SataQiu](https://github.com/SataQiu))
+  flags. ([#119142](https://github.com/kubernetes/kubernetes/pull/119142), [@aramase](https://github.com/aramase))
+- `kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`
+  is removed in `v1.29`. Migrated `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`. ([#119994](https://github.com/kubernetes/kubernetes/pull/119994), [@SataQiu](https://github.com/SataQiu))
 - A new sleep action for the `PreStop` lifecycle hook was added, allowing containers to pause for a specified duration before termination. ([#119026](https://github.com/kubernetes/kubernetes/pull/119026), [@AxeZhan](https://github.com/AxeZhan))
 - Added CEL expressions to `v1alpha1 AuthenticationConfiguration`. ([#121078](https://github.com/kubernetes/kubernetes/pull/121078), [@aramase](https://github.com/aramase))
 - Added Windows support for InPlace Pod Vertical Scaling feature. ([#112599](https://github.com/kubernetes/kubernetes/pull/112599), [@fabi200123](https://github.com/fabi200123)) [SIG Autoscaling, Node, Scalability, Scheduling and Windows]
-- Added `ImageMaximumGCAge` field to Kubelet configuration, which allows a user to set the maximum age an image is unused before it's garbage collected. ([#121275](https://github.com/kubernetes/kubernetes/pull/121275), [@haircommander](https://github.com/haircommander))
+- Added `ImageMaximumGCAge` field to kubelet configuration, which allows a user to set the maximum age an image is unused before it's garbage collected. ([#121275](https://github.com/kubernetes/kubernetes/pull/121275), [@haircommander](https://github.com/haircommander))
 - Added `UserNamespacesPodSecurityStandards` feature gate to enable user namespace support for Pod Security Standards.
   Enabling this feature will modify all Pod Security Standard rules to allow setting: `spec[.*].securityContext.[runAsNonRoot,runAsUser]`.
   This feature gate should only be enabled if all nodes in the cluster support the user namespace feature and have it enabled.
@@ -60,6 +61,7 @@
 - Graduated `Job BackoffLimitPerIndex` feature to `beta`. ([#121356](https://github.com/kubernetes/kubernetes/pull/121356), [@mimowo](https://github.com/mimowo))
 - Marked the `onPodConditions` field as optional in `Job`'s pod failure policy. ([#120204](https://github.com/kubernetes/kubernetes/pull/120204), [@mimowo](https://github.com/mimowo))
 - Promoted `PodReadyToStartContainers` condition to `beta`. ([#119659](https://github.com/kubernetes/kubernetes/pull/119659), [@kannon92](https://github.com/kannon92))
+- `NodeStageVolume` calls will now be retried if the CSI node driver is not running. ([#120330](https://github.com/kubernetes/kubernetes/pull/120330), [@rohitssingh](https://github.com/rohitssingh))
 - The `flowcontrol.apiserver.k8s.io/v1beta3` `FlowSchema` and `PriorityLevelConfiguration` APIs has been promoted to `flowcontrol.apiserver.k8s.io/v1`, with the following changes:
   - `PriorityLevelConfiguration`: the `.spec.limited.nominalConcurrencyShares` field defaults to `30` only if the field is omitted (v1beta3 also defaulted an explicit `0` value to `30`). Specifying an explicit `0` value is not allowed in the `v1` version in v1.29 to ensure compatibility with `v1.28` API servers. In `v1.30`, explicit `0` values will be allowed in this field in the `v1` API.
   The `flowcontrol.apiserver.k8s.io/v1beta3` APIs are deprecated and will no longer be served in v1.32. All existing objects are available via the `v1` APIs. Transition clients and manifests to use the `v1` APIs before upgrading to `v1.32`. ([#121089](https://github.com/kubernetes/kubernetes/pull/121089), [@tkashem](https://github.com/tkashem))
@@ -77,46 +79,46 @@
 - `ValidatingAdmissionPolicy` type checking now supports CRDs and API extensions types. ([#119109](https://github.com/kubernetes/kubernetes/pull/119109), [@jiahuif](https://github.com/jiahuif))
 - `kube-apiserver`: added `--authorization-config` flag for reading a configuration file containing an `apiserver.config.k8s.io/v1alpha1 AuthorizationConfiguration` object. The `--authorization-config` flag is mutually exclusive with `--authorization-modes` and `--authorization-webhook-*` flags. The `alpha` `StructuredAuthorizationConfiguration` feature flag must be enabled for `--authorization-config` to be specified. ([#120154](https://github.com/kubernetes/kubernetes/pull/120154), [@palnabarun](https://github.com/palnabarun))
 - `kube-proxy` now has a new nftables-based mode, available by running
-  
+
       `kube-proxy --feature-gates NFTablesProxyMode=true --proxy-mode nftables`
-  
+
   This is currently an alpha-level feature and while it probably will not
   eat your data, it may nibble at it a bit. (It passes e2e testing but has
   not yet seen real-world use.)
-  
+
   At this point it should be functionally mostly identical to the iptables
   mode, except that it does not (and will not) support Service NodePorts on
   127.0.0.1. (Also note that there are currently no command-line arguments
   for the nftables-specific config; you will need to use a config file if
   you want to set the equivalent of any of the `--iptables-xxx` options.)
-  
+
   As this code is still very new, it has not been heavily optimized yet;
   while it is expected to _eventually_ have better performance than the
   iptables backend, very little performance testing has been done so far. ([#121046](https://github.com/kubernetes/kubernetes/pull/121046), [@danwinship](https://github.com/danwinship))
-- `kube-proxy`: Added an option/flag for configuring the `nf_conntrack_tcp_be_liberal` sysctl (in the kernel's netfilter conntrack subsystem).  When enabled, `kube-proxy` will not install the `DROP` rule for invalid conntrack states, which currently breaks users of asymmetric routing. ([#120354](https://github.com/kubernetes/kubernetes/pull/120354), [@aroradaman](https://github.com/aroradaman))
+- `kube-proxy`: Added an option/flag for configuring the `nf_conntrack_tcp_be_liberal` sysctl (in the kernel's netfilter conntrack subsystem). When enabled, `kube-proxy` will not install the `DROP` rule for invalid conntrack states, which currently breaks users of asymmetric routing. ([#120354](https://github.com/kubernetes/kubernetes/pull/120354), [@aroradaman](https://github.com/aroradaman))
 
 ### Feature
 
 - #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
-  
+
   <!--
   This section can be blank if this pull request does not require a release note.
-  
+
   When adding links which point to resources within git repositories, like
   KEPs or supporting documentation, please reference a specific commit and avoid
   linking directly to the master branch. This ensures that links reference a
   specific point in time, rather than a document that may change over time.
-  
+
   See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files
-  
+
   Please use the following format for linking documentation:
   - [KEP]: <link>
   - [Usage]: <link>
   - [Other doc]: <link>
   --> ([#119517](https://github.com/kubernetes/kubernetes/pull/119517), [@sanposhiho](https://github.com/sanposhiho)) [SIG Node, Scheduling and Testing]
-- '`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex
-  encoded AES key.' ([#120064](https://github.com/kubernetes/kubernetes/pull/120064), [@SataQiu](https://github.com/SataQiu))
-- A customizable `OrderedScoreFuncs()` function was introduced. Out-of-tree plugins 
+- `kubeadm`: added validation to verify that the `CertificateKey` is a valid hex
+  encoded AES key. ([#120064](https://github.com/kubernetes/kubernetes/pull/120064), [@SataQiu](https://github.com/SataQiu))
+- A customizable `OrderedScoreFuncs()` function was introduced. Out-of-tree plugins
   that used the scheduler's preemption interface could implement this function
   for custom preemption preferences or return nil to keep the current behavior. ([#121867](https://github.com/kubernetes/kubernetes/pull/121867), [@lianghao208](https://github.com/lianghao208))
 - Added `apiextensions_apiserver_update_ratcheting_time` metric for tracking time taken during requests by feature `CRDValidationRatcheting`. ([#121462](https://github.com/kubernetes/kubernetes/pull/121462), [@alexzielenski](https://github.com/alexzielenski))
@@ -132,9 +134,9 @@
 - Added a return value to `QueueingHint` to indicate an error. If `QueueingHint` returns an error,
   the scheduler logs it and treats the event as a `QueueAfterBackoff` so that
   the Pod won't be stuck in the unschedulable pod pool. ([#119290](https://github.com/kubernetes/kubernetes/pull/119290), [@carlory](https://github.com/carlory))
-- Added apiserver identity to the following metrics: 
+- Added apiserver identity to the following metrics:
   `apiserver_envelope_encryption_key_id_hash_total`, `apiserver_envelope_encryption_key_id_hash_last_timestamp_seconds`, `apiserver_envelope_encryption_key_id_hash_status_last_timestamp_seconds`, `apiserver_encryption_config_controller_automatic_reload_failures_total`, `apiserver_encryption_config_controller_automatic_reload_success_total`, `apiserver_encryption_config_controller_automatic_reload_last_timestamp_seconds`.
-  
+
   Fixed bug to surface events for the following metrics: `apiserver_encryption_config_controller_automatic_reload_failures_total`, `apiserver_encryption_config_controller_automatic_reload_last_timestamp_seconds`, `apiserver_encryption_config_controller_automatic_reload_success_total`. ([#120438](https://github.com/kubernetes/kubernetes/pull/120438), [@ritazh](https://github.com/ritazh))
 - Added container filesystem to the `ImageFsInfoResponse`. ([#120914](https://github.com/kubernetes/kubernetes/pull/120914), [@kannon92](https://github.com/kannon92))
 - Added multiplication functionality to `Quantity`. ([#117411](https://github.com/kubernetes/kubernetes/pull/117411), [@tenzen-y](https://github.com/tenzen-y))
@@ -147,7 +149,7 @@
 - Bumped `distroless-iptables` to `0.3.2` based on Go `1.21.1`. ([#120527](https://github.com/kubernetes/kubernetes/pull/120527), [@cpanato](https://github.com/cpanato))
 - Bumped `distroless-iptables` to `0.3.3` based on Go `1.21.2`. ([#121073](https://github.com/kubernetes/kubernetes/pull/121073), [@cpanato](https://github.com/cpanato))
 - Bumped `distroless-iptables` to `0.4.1` based on Go `1.21.3`. ([#121216](https://github.com/kubernetes/kubernetes/pull/121216), [@cpanato](https://github.com/cpanato))
-- Bumped distroless-iptables to 0.4.1 based on Go `1.21.3`. ([#121871](https://github.com/kubernetes/kubernetes/pull/121871), [@cpanato](https://github.com/cpanato))
+- Bumped `cel-go to` `v0.17.7` and introduced set ext library with new options. ([#121577](https://github.com/kubernetes/kubernetes/pull/121577), [@cici37](https://github.com/cici37))
 - CEL can now correctly handle a CRD `openAPIV3Schema` that has neither `Properties` nor `AdditionalProperties`. ([#121459](https://github.com/kubernetes/kubernetes/pull/121459), [@jiahuif](https://github.com/jiahuif))
 - CEL cost estimator no longer treats enums as unbounded strings when determining its length. Instead, the length is set to the longest possible enum value. ([#121085](https://github.com/kubernetes/kubernetes/pull/121085), [@jiahuif](https://github.com/jiahuif)) [SIG API Machinery]
 - CRI: image pull per runtime class is now supported. ([#121121](https://github.com/kubernetes/kubernetes/pull/121121), [@kiashok](https://github.com/kiashok))
@@ -175,7 +177,7 @@
   - `pod_cpu_usage_seconds_total`
   - `pod_memory_working_set_bytes`
   - `resource_scrape_error`
-  
+
   Deprecated (renamed) `scrape_error` in favor of `resource_scrape_error` ([#116897](https://github.com/kubernetes/kubernetes/pull/116897), [@Richabanker](https://github.com/Richabanker)) [SIG Architecture, Instrumentation, Node and Testing]
 - Implemented API for streaming for the `etcd` store implementation.
   When `sendInitialEvents ListOption` is set together with `watch=true`, it begins the watch stream with synthetic init events followed by a synthetic `Bookmark`, after which the server continues streaming events. ([#119557](https://github.com/kubernetes/kubernetes/pull/119557), [@p0lyn0mial](https://github.com/p0lyn0mial))
@@ -205,7 +207,7 @@
 - Restartable init containers resource in pod autoscaler are now calculated. ([#120001](https://github.com/kubernetes/kubernetes/pull/120001), [@qingwave](https://github.com/qingwave))
 - Sidecar termination is now serialized and each sidecar container will receive a `SIGTERM` after all main containers and later starting sidecar containers have terminated. ([#120620](https://github.com/kubernetes/kubernetes/pull/120620), [@tzneal](https://github.com/tzneal))
 - The CRD validation rule with feature gate `CustomResourceValidationExpressions` was promoted to `GA`. ([#121373](https://github.com/kubernetes/kubernetes/pull/121373), [@cici37](https://github.com/cici37))
-- The KMSv2 features with feature gates `KMSv2` and `KMSv2KDF` are promoted to `GA`.  The `KMSv1` feature gate is now disabled by default. ([#121485](https://github.com/kubernetes/kubernetes/pull/121485), [@ritazh](https://github.com/ritazh))
+- The KMSv2 features with feature gates `KMSv2` and `KMSv2KDF` are promoted to `GA`. The `KMSv1` feature gate is now disabled by default. ([#121485](https://github.com/kubernetes/kubernetes/pull/121485), [@ritazh](https://github.com/ritazh))
 - The `--interactive` flag in `kubectl delete` is now visible to all users by default. ([#120416](https://github.com/kubernetes/kubernetes/pull/120416), [@ardaguclu](https://github.com/ardaguclu))
 - The `CloudDualStackNodeIPs` feature is now `beta`, meaning that when using
   an external cloud provider that has been updated to support the feature,
@@ -232,23 +234,25 @@
   - `alpha` support (guarded by the `ServiceAccountTokenJTI` feature gate) for adding a `jti` (JWT ID) claim to service account tokens it issues, adding an `authentication.kubernetes.io/credential-id` audit annotation in audit logs when the tokens are issued, and `authentication.kubernetes.io/credential-id` entry in the extra user info when the token is used to authenticate.
   - `alpha` support (guarded by the `ServiceAccountTokenPodNodeInfo` feature gate) for including the node name (and uid, if the node exists) as additional claims in service account tokens it issues which are bound to pods, and `authentication.kubernetes.io/node-name` and `authentication.kubernetes.io/node-uid` extra user info when the token is used to authenticate.
   - `alpha` support (guarded by the `ServiceAccountTokenNodeBinding` feature gate) for allowing `TokenRequests` that bind tokens directly to nodes, and (guarded by the ServiceAccountTokenNodeBindingValidation feature gate) for validating the node name and uid still exist when the token is used. ([#120780](https://github.com/kubernetes/kubernetes/pull/120780), [@munnerz](https://github.com/munnerz))
-- `kube-controller-manager`: The `LegacyServiceAccountTokenCleanUp` feature gate is now `beta` and enabled by default. When enabled, legacy auto-generated service account token secrets are auto-labeled with a `kubernetes.io/legacy-token-invalid-since` label if the credentials have not been used in the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year), **and** are referenced from the `.secrets` list of a ServiceAccount object, **and**  are not referenced from pods. This label causes the authentication layer to reject use of the credentials. After being labeled as invalid, if the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year) passes without the credential being used, the secret is automatically deleted. Secrets labeled as invalid which have not been auto-deleted yet can be re-activated by removing the `kubernetes.io/legacy-token-invalid-since` label. ([#120682](https://github.com/kubernetes/kubernetes/pull/120682), [@yt2985](https://github.com/yt2985))
+- `kube-controller-manager`: The `LegacyServiceAccountTokenCleanUp` feature gate is now `beta` and enabled by default. When enabled, legacy auto-generated service account token secrets are auto-labeled with a `kubernetes.io/legacy-token-invalid-since` label if the credentials have not been used in the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year), **and** are referenced from the `.secrets` list of a ServiceAccount object, **and** are not referenced from pods. This label causes the authentication layer to reject use of the credentials. After being labeled as invalid, if the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year) passes without the credential being used, the secret is automatically deleted. Secrets labeled as invalid which have not been auto-deleted yet can be re-activated by removing the `kubernetes.io/legacy-token-invalid-since` label. ([#120682](https://github.com/kubernetes/kubernetes/pull/120682), [@yt2985](https://github.com/yt2985))
 - `kube-proxy` will only install the `DROP` rules for invalid `conntrack` states if
   the `nf_conntrack_tcp_be_liberal` is not set. ([#120412](https://github.com/kubernetes/kubernetes/pull/120412), [@aojea](https://github.com/aojea))
-- `kube-scheduler` implemented scheduling hints for the `NodeUnschedulable` plugin.
-  The scheduling hints allow the scheduler to only retry scheduling a `Pod`
-  that was previously rejected by the `NodeSchedulable` plugin if a new `Node` or a `Node` update sets `.spec.unschedulable` to false. ([#119396](https://github.com/kubernetes/kubernetes/pull/119396), [@wackxu](https://github.com/wackxu))
-- `kube-scheduler` implements scheduling hints for the `NodeAffinity` plugin.
+- `kube-scheduler` now implements scheduling hints for the `NodeAffinity` plugin.
   The scheduling hints allow the scheduler to only retry scheduling a `Pod`
   that was previously rejected by the `NodeAffinity` plugin if a new `Node` or a `Node` update matches the `Pod`'s node affinity. ([#119155](https://github.com/kubernetes/kubernetes/pull/119155), [@carlory](https://github.com/carlory))
+- `kube-scheduler` now implements scheduling hints for the `NodeUnschedulable` plugin.
+  The scheduling hints allow the scheduler to only retry scheduling a `Pod`
+  that was previously rejected by the `NodeSchedulable` plugin if a new `Node` or a `Node` update sets `.spec.unschedulable` to false. ([#119396](https://github.com/kubernetes/kubernetes/pull/119396), [@wackxu](https://github.com/wackxu))
+- `kubeadm`: deploying a kubelet that is 3 versions older than the version of `kubeadm` (N-3) is now allowed. This aligns with the recent change made by SIG Architecture that extends the support skew between the control plane and kubelets. Tolerate this new kubelet skew for the commands `init`, `join` and `upgrade`. Note that if the `kubeadm` user applies a control plane version that is older than the `kubeadm` version (N-1 maximum) then the skew between the kubelet and control plane would become a maximum of N-2. ([#120825](https://github.com/kubernetes/kubernetes/pull/120825), [@pacoxu](https://github.com/pacoxu))
 - `kubeadm`: promoted feature gate `EtcdLearnerMode` to `beta`. Learner mode for
   joining `etcd` members is now enabled by default. ([#120228](https://github.com/kubernetes/kubernetes/pull/120228), [@pacoxu](https://github.com/pacoxu))
 - `kubeadm`: turned on feature gate `MergeCLIArgumentsWithConfig` to merge the config from flag and config file, otherwise, if the flag `--ignore-preflight-errors` is set from the CLI, then the value from config file will be ignored. ([#119946](https://github.com/kubernetes/kubernetes/pull/119946), [@chendave](https://github.com/chendave))
 - `kubeadm`: will now allow deploying a kubelet that is 3 versions older than the version of `kubeadm` (N-3). This aligns with the recent change made by SIG Architecture that extends the support skew between the control plane and kubelets. Tolerate this new kubelet skew for the commands `init`, `join` and `upgrade`. Note that if the `kubeadm` user applies a control plane version that is older than the `kubeadm` version (N-1 maximum) then the skew between the kubelet and control plane would become a maximum of N-2. ([#120825](https://github.com/kubernetes/kubernetes/pull/120825), [@pacoxu](https://github.com/pacoxu))
 - `kubelet` , when using `--cloud-provider=external`, will now initialize the node addresses with the value of `--node-ip` , if it exists, or waits for the cloud provider to assign the addresses. ([#121028](https://github.com/kubernetes/kubernetes/pull/121028), [@aojea](https://github.com/aojea))
-- `kubelet` allows pods to use the `net.ipv4.tcp_fin_timeout`, “net.ipv4.tcp_keepalive_intvl”
+- `kubelet` will now allow pods to use the `net.ipv4.tcp_fin_timeout`, “net.ipv4.tcp_keepalive_intvl”
   and “net.ipv4.tcp_keepalive_probes“ sysctl by default; Pod Security Admission
   allows this sysctl in `v1.29+` versions of the baseline and restricted policies. ([#121240](https://github.com/kubernetes/kubernetes/pull/121240), [@HirazawaUi](https://github.com/HirazawaUi))
+- `kubelet` will now expose latency metrics of different stages of the node startup. ([#118568](https://github.com/kubernetes/kubernetes/pull/118568), [@qiutongs](https://github.com/qiutongs))
 - `kubelet` now allows pods to use the `net.ipv4.tcp_keepalive_time` sysctl by default
   and the minimal kernel version is 4.5; Pod Security Admission allows this sysctl
   in `v1.29+` versions of the baseline and restricted policies. ([#118846](https://github.com/kubernetes/kubernetes/pull/118846), [@cyclinder](https://github.com/cyclinder))
@@ -271,10 +275,10 @@
 
 ### Bug or Regression
 
-- '`kubeadm`: printing the default component configs for `reset` and `join` is now
-  unsupported.' ([#119346](https://github.com/kubernetes/kubernetes/pull/119346), [@chendave](https://github.com/chendave))
-- '`kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`
-  certificate.' ([#119859](https://github.com/kubernetes/kubernetes/pull/119859), [@SataQiu](https://github.com/SataQiu))
+- `kubeadm`: printing the default component configs for `reset` and `join` is now
+  unsupported. ([#119346](https://github.com/kubernetes/kubernetes/pull/119346), [@chendave](https://github.com/chendave))
+- `kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`
+  certificate. ([#119859](https://github.com/kubernetes/kubernetes/pull/119859), [@SataQiu](https://github.com/SataQiu))
 - Added `CAP_NET_RAW` to netadmin debug profile and removed privileges when debugging nodes. ([#118647](https://github.com/kubernetes/kubernetes/pull/118647), [@mochizuki875](https://github.com/mochizuki875))
 - Added a check on a user attempting to create a static pod via the `kubelet` without specifying a name. They will now get a visible validation error. ([#119522](https://github.com/kubernetes/kubernetes/pull/119522), [@YTGhost](https://github.com/YTGhost))
 - Added a redundant process to remove tracking finalizers from Pods that belong to Jobs. The process kicks in after the control plane marks a Job as finished. ([#119944](https://github.com/kubernetes/kubernetes/pull/119944), [@Sharpz7](https://github.com/Sharpz7))
@@ -313,9 +317,9 @@
   container ports). ([#121103](https://github.com/kubernetes/kubernetes/pull/121103), [@mimowo](https://github.com/mimowo))
 - Fixed a regression in the default `v1.27` configurations in `kube-apiserver`: fixed the `AggregatedDiscoveryEndpoint` feature (`beta` in `v1.27+`) to successfully fetch discovery information from aggregated API servers that do not check `Accept` headers when serving the `/apis` endpoint. ([#119870](https://github.com/kubernetes/kubernetes/pull/119870), [@Jefftree](https://github.com/Jefftree))
 - Fixed a regression in the kubelet's behavior while creating a container when the `EventedPLEG` feature gate is enabled. ([#120942](https://github.com/kubernetes/kubernetes/pull/120942), [@sairameshv](https://github.com/sairameshv))
-- Fixed a regression since `v1.27.0` in the scheduler framework when running score plugins. 
-  The `skippedScorePlugins` number might be greater than `enabledScorePlugins`, 
-  so when initializing a slice the `cap(len(skippedScorePlugins) - len(enabledScorePlugins))` is negative, 
+- Fixed a regression since `v1.27.0` in the scheduler framework when running score plugins.
+  The `skippedScorePlugins` number might be greater than `enabledScorePlugins`,
+  so when initializing a slice the `cap(len(skippedScorePlugins) - len(enabledScorePlugins))` is negative,
   which is not allowed. ([#121632](https://github.com/kubernetes/kubernetes/pull/121632), [@kerthcet](https://github.com/kerthcet))
 - Fixed a situation when, sometimes, the scheduler incorrectly placed a pod in the `unschedulable` queue instead of the `backoff` queue. This happened when some plugin previously declared the pod as `unschedulable` and then in a later attempt encounters some other error. Scheduling of that pod then got delayed by up to five minutes, after which periodic flushing moved the pod back into the `active` queue. ([#120334](https://github.com/kubernetes/kubernetes/pull/120334), [@pohly](https://github.com/pohly))
 - Fixed an issue related to not draining all the pods in a namespace when an empty selector, i.e., "{}," is specified in a Pod Disruption Budget (PDB). ([#119732](https://github.com/kubernetes/kubernetes/pull/119732), [@sairameshv](https://github.com/sairameshv))
@@ -337,21 +341,20 @@
 - Fixed the issue where pod with ordinal number lower than the rolling partitioning number was being deleted. It was coming up with updated image. ([#120731](https://github.com/kubernetes/kubernetes/pull/120731), [@adilGhaffarDev](https://github.com/adilGhaffarDev))
 - Fixed tracking of terminating Pods in the Job status. The field was not updated unless there were other changes to apply. ([#121342](https://github.com/kubernetes/kubernetes/pull/121342), [@dejanzele](https://github.com/dejanzele))
 - Forbidden sysctls for pod sharing the respective namespaces with the host are now checked when creating or updating pods without such sysctls. ([#118705](https://github.com/kubernetes/kubernetes/pull/118705), [@pacoxu](https://github.com/pacoxu))
-- If a watch with the `progressNotify` option set is to be created, and the registry hasn't provided a `newFunc`, return an error. ([#120212](https://github.com/kubernetes/kubernetes/pull/120212), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery]
+- If a watch with the `progressNotify` option set is to be created, and the registry hasn't provided a `newFunc`, an error is now returned. ([#120212](https://github.com/kubernetes/kubernetes/pull/120212), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery]
 - Improved handling of jsonpath expressions for `kubectl wait --for`. It is now possible to use simple filter expressions which match on a field's content. ([#118748](https://github.com/kubernetes/kubernetes/pull/118748), [@andreaskaris](https://github.com/andreaskaris))
 - In the `wait.PollUntilContextTimeout` function, if `immediate` is true, the condition will now be invoked before waiting, guaranteeing that the condition is invoked at least once and then wait a interval before executing again. ([#119762](https://github.com/kubernetes/kubernetes/pull/119762), [@AxeZhan](https://github.com/AxeZhan))
-- Incorporating feedback on PR #119341 ([#120087](https://github.com/kubernetes/kubernetes/pull/120087), [@divyasri537](https://github.com/divyasri537)) [SIG API Machinery]
 - KCCM: fixed transient node addition and removal caused by #121090 while syncing load balancers on large clusters with a lot of churn. ([#121091](https://github.com/kubernetes/kubernetes/pull/121091), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu))
 - Kubeadm: changed the "system:masters" Group in the apiserver-kubelet-client.crt certificate Subject to be "kubeadm:cluster-admins" which is a less privileged Group. ([#121837](https://github.com/kubernetes/kubernetes/pull/121837), [@neolit123](https://github.com/neolit123))
+- Incorporated feedback on PR #119341, on `failOpen` metric counting for mutate and validate webhooks ([#120087](https://github.com/kubernetes/kubernetes/pull/120087), [@divyasri537](https://github.com/divyasri537)) [SIG API Machinery]
 - Metric buckets for `pod_start_duration_seconds` were changed to `{0.5, 1, 2, 3, 4, 5, 6, 8, 10, 20, 30, 45, 60, 120, 180, 240, 300, 360, 480, 600, 900, 1200, 1800, 2700, 3600}`. ([#120680](https://github.com/kubernetes/kubernetes/pull/120680), [@ruiwen-zhao](https://github.com/ruiwen-zhao))
 - Mitigated http/2 DOS vulnerabilities for `CVE-2023-44487` and `CVE-2023-39325` for the API server when the client is unauthenticated. The mitigation may be disabled by setting the `UnauthenticatedHTTP2DOSMitigation` feature gate to `false` (it is enabled by default). An API server fronted by an L7 load balancer that already mitigates these http/2 attacks may choose to disable the kube-apiserver mitigation to avoid disrupting load balancer -> kube-apiserver connections if http/2 requests from multiple clients share the same backend connection. An API server on a private network may opt to disable the kube-apiserver mitigation to prevent performance regressions for unauthenticated clients. Authenticated requests rely on the fix in golang.org/x/net `v0.17.0` alone. https://issue.k8s.io/121197 tracks further mitigation of http/2 attacks by authenticated clients. ([#121120](https://github.com/kubernetes/kubernetes/pull/121120), [@enj](https://github.com/enj))
 - No-op and GC related updates to cluster trust bundles no longer require attest authorization when the `ClusterTrustBundleAttest` plugin is enabled. ([#120779](https://github.com/kubernetes/kubernetes/pull/120779), [@enj](https://github.com/enj))
 - Registered metric `apiserver_request_body_size_bytes` to track the size distribution of requests by `resource` and `verb`. ([#120474](https://github.com/kubernetes/kubernetes/pull/120474), [@YaoC](https://github.com/YaoC)) [SIG API Machinery and Instrumentation]
 - Revised the logic for `DaemonSet` rolling update to exclude nodes if scheduling constraints are not met. This eliminates the problem of rolling updates to a `DaemonSet` getting stuck around tolerations. ([#119317](https://github.com/kubernetes/kubernetes/pull/119317), [@mochizuki875](https://github.com/mochizuki875))
-- Scheduler: in 1.29 pre-releases, enabling contextual logging slowed down pod scheduling. ([#121715](https://github.com/kubernetes/kubernetes/pull/121715), [@pohly](https://github.com/pohly)) [SIG Instrumentation and Scheduling]
-- Service Controller: will now update load balancer hosts after node's `ProviderID` is
-  updated. ([#120492](https://github.com/kubernetes/kubernetes/pull/120492), [@cezarygerard](https://github.com/cezarygerard))
-- Setting the `status.loadBalancer` of a Service whose `spec.type` is not `LoadBalancer` was previously allowed, but any update to the `metadata` or `spec` would wipe that field. Setting this field is no longer permitted unless `spec.type` is  `LoadBalancer`.  In the very unlikely event that this has unexpected impact, you can enable the `AllowServiceLBStatusOnNonLB` feature gate, which will restore the previous behavior.  If you do need to set this, please file an issue with the Kubernetes project to help contributors understand why you need it. ([#119789](https://github.com/kubernetes/kubernetes/pull/119789), [@thockin](https://github.com/thockin))
+- Scheduler: in `v1.29` pre-releases, enabling contextual logging slowed down pod scheduling. ([#121715](https://github.com/kubernetes/kubernetes/pull/121715), [@pohly](https://github.com/pohly)) [SIG Instrumentation and Scheduling]
+- Service Controller: load balancer hosts will now update after node's `ProviderID` is updated. ([#120492](https://github.com/kubernetes/kubernetes/pull/120492), [@cezarygerard](https://github.com/cezarygerard))
+- Setting the `status.loadBalancer` of a Service whose `spec.type` is not `LoadBalancer` was previously allowed, but any update to the `metadata` or `spec` would wipe that field. Setting this field is no longer permitted unless `spec.type` is `LoadBalancer`. In the very unlikely event that this has unexpected impact, you can enable the `AllowServiceLBStatusOnNonLB` feature gate, which will restore the previous behavior. If you do need to set this, please file an issue with the Kubernetes project to help contributors understand why you need it. ([#119789](https://github.com/kubernetes/kubernetes/pull/119789), [@thockin](https://github.com/thockin))
 - The `--bind-address` parameter in kube-proxy is misleading, no port is opened with this address. Instead it is translated internally to "nodeIP". The nodeIPs for both families are now taken from the Node object if `--bind-address` is unspecified or set to the "any" address (0.0.0.0 or ::). It is recommended to leave `--bind-address` unspecified, and in particular avoid to set it to localhost (127.0.0.1 or ::1) ([#119525](https://github.com/kubernetes/kubernetes/pull/119525), [@uablrek](https://github.com/uablrek)) [SIG Network and Scalability]
 - Updated `kube-openapi` to remove invalid defaults: OpenAPI spec no longer includes default of `{}` for certain fields where it did not make sense. ([#120757](https://github.com/kubernetes/kubernetes/pull/120757), [@alexzielenski](https://github.com/alexzielenski))
 - Updated the CRI-O socket path, so users who configure kubelet to use a location like `/run/crio/crio.sock` don't see strange behaviour from CRI stats provider. ([#118704](https://github.com/kubernetes/kubernetes/pull/118704), [@dgl](https://github.com/dgl))
@@ -363,8 +366,9 @@
 - `k8s.io/dynamic-resource-allocation`: can now handle a `selected` node which isn't listed
   as `potential` node. ([#120871](https://github.com/kubernetes/kubernetes/pull/120871), [@pohly](https://github.com/pohly))
 - `kube-proxy` now reports its health more accurately in dual-stack clusters when there are problems with only one IP family. ([#118146](https://github.com/kubernetes/kubernetes/pull/118146), [@aroradaman](https://github.com/aroradaman))
-- `kubeadm`: Fixed the bug where it always did CRI detection when `--config` was passed, even if it is not required by the subcommand. ([#120828](https://github.com/kubernetes/kubernetes/pull/120828), [@SataQiu](https://github.com/SataQiu))
-- `kubeadm`: fixed `nil` pointer when `etcd` member is already removed. ([#119753](https://github.com/kubernetes/kubernetes/pull/119753), [@pacoxu](https://github.com/pacoxu))
+- `kubeadm`: fixed the bug where it always did CRI detection when `--config` was passed, even if it is not required by the subcommand. ([#120828](https://github.com/kubernetes/kubernetes/pull/120828), [@SataQiu](https://github.com/SataQiu))
+- `kubeadm`: use universal deserializer to decode static pod. ([#120549](https://github.com/kubernetes/kubernetes/pull/120549), [@pacoxu](https://github.com/pacoxu))
+- `kubeadm`: fix `nil` pointer when `etcd` member is already removed. ([#119753](https://github.com/kubernetes/kubernetes/pull/119753), [@pacoxu](https://github.com/pacoxu))
 - `kubeadm`: fixed the bug where `--image-repository` flag is missing for some init
   phase sub-commands. ([#120072](https://github.com/kubernetes/kubernetes/pull/120072), [@SataQiu](https://github.com/SataQiu))
 - `kubeadm`: improved the logic that checks whether a `systemd` service exists. ([#120514](https://github.com/kubernetes/kubernetes/pull/120514), [@fengxsong](https://github.com/fengxsong))
@@ -399,7 +403,7 @@
 - Makefile and scripts now respect `GOTOOLCHAIN` and otherwise ensure `./.go-version` is used. ([#120279](https://github.com/kubernetes/kubernetes/pull/120279), [@BenTheElder](https://github.com/BenTheElder))
 - Migrated the remainder of the scheduler to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging). ([#120933](https://github.com/kubernetes/kubernetes/pull/120933), [@mengjiao-liu](https://github.com/mengjiao-liu)) [SIG Instrumentation, Scheduling and Testing]
 - Optimized `NodeUnschedulable` Filter to avoid unnecessary calculations. ([#119399](https://github.com/kubernetes/kubernetes/pull/119399), [@wackxu](https://github.com/wackxu))
-- Previous versions of Kubernetes on Google Cloud required that workloads (e.g. Deployments, DaemonSets, etc.) which used `PersistentDisk` volumes were using them in read-only mode.  This validation provided very little value at relatively host implementation cost, and will no longer be validated.  If this is a problem for a specific use-case, please set the `SkipReadOnlyValidationGCE` gate to false to re-enable the validation, and file a Kubernetes bug with details. ([#121083](https://github.com/kubernetes/kubernetes/pull/121083), [@thockin](https://github.com/thockin))
+- Previous versions of Kubernetes on Google Cloud required that workloads (e.g., Deployments, DaemonSets, etc.) which used `PersistentDisk` volumes were using them in read-only mode. This validation provided very little value at relatively host implementation cost, and will no longer be validated. If this is a problem for a specific use-case, please set the `SkipReadOnlyValidationGCE` gate to false to re-enable the validation, and file a Kubernetes bug with details. ([#121083](https://github.com/kubernetes/kubernetes/pull/121083), [@thockin](https://github.com/thockin))
 - Previously, the pod name and namespace were eliminated in the event log message. This PR attempts to add the preemptor pod UID in the preemption event message logs for easier debugging and safer transparency. ([#119971](https://github.com/kubernetes/kubernetes/pull/119971), [@kwakubiney](https://github.com/kwakubiney)) [SIG Scheduling]
 - Promoted to conformance a test that verified that `Services` only forward traffic on the port and protocol specified. ([#120069](https://github.com/kubernetes/kubernetes/pull/120069), [@aojea](https://github.com/aojea))
 - Removed `GA` feature gate about `CSIMigrationvSphere`. ([#121291](https://github.com/kubernetes/kubernetes/pull/121291), [@bzsuni](https://github.com/bzsuni))

@@ -634,8 +634,8 @@
   },
   "118568": {
     "commit": "4fd8bd997501021627d44ec256b73446f732ad5e",
-    "text": "`kubelet` now exposes latency metrics of different stages of the node startup.",
-    "markdown": "`kubelet` now exposes latency metrics of different stages of the node startup. ([#118568](https://github.com/kubernetes/kubernetes/pull/118568), [@qiutongs](https://github.com/qiutongs))",
+    "text": "`kubelet` will now expose latency metrics of different stages of the node startup.",
+    "markdown": "`kubelet` will now expose latency metrics of different stages of the node startup. ([#118568](https://github.com/kubernetes/kubernetes/pull/118568), [@qiutongs](https://github.com/qiutongs))",
     "author": "qiutongs",
     "author_url": "https://github.com/qiutongs",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/118568",
@@ -1081,8 +1081,8 @@
   },
   "119142": {
     "commit": "f68c66f96dc7efd86c43bc6ca34bfdaa552a0892",
-    "text": "'`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`\nfiles. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`\nflags.'",
-    "markdown": "'`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`\n  files. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`\n  flags.' ([#119142](https://github.com/kubernetes/kubernetes/pull/119142), [@aramase](https://github.com/aramase))",
+    "text": "`kube-apiserver`: added `--authentication-config` flag for reading `AuthenticationConfiguration`\nfiles. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`\nflags.",
+    "markdown": "`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`\n  files. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`\n  flags. ([#119142](https://github.com/kubernetes/kubernetes/pull/119142), [@aramase](https://github.com/aramase))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1140,8 +1140,8 @@
   },
   "119155": {
     "commit": "ff4ba92b1c467b1cbd4c28bafe5e60dbba819447",
-    "text": "`kube-scheduler` implements scheduling hints for the `NodeAffinity` plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a `Pod`\nthat was previously rejected by the `NodeAffinity` plugin if a new `Node` or a `Node` update matches the `Pod`'s node affinity.",
-    "markdown": "`kube-scheduler` implements scheduling hints for the `NodeAffinity` plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a `Pod`\n  that was previously rejected by the `NodeAffinity` plugin if a new `Node` or a `Node` update matches the `Pod`'s node affinity. ([#119155](https://github.com/kubernetes/kubernetes/pull/119155), [@carlory](https://github.com/carlory))",
+    "text": "`kube-scheduler` now implements scheduling hints for the `NodeAffinity` plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a `Pod`\nthat was previously rejected by the `NodeAffinity` plugin if a new `Node` or a `Node` update matches the `Pod`'s node affinity.",
+    "markdown": "`kube-scheduler` now implements scheduling hints for the `NodeAffinity` plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a `Pod`\n  that was previously rejected by the `NodeAffinity` plugin if a new `Node` or a `Node` update matches the `Pod`'s node affinity. ([#119155](https://github.com/kubernetes/kubernetes/pull/119155), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119155",
@@ -1224,8 +1224,8 @@
   },
   "119346": {
     "commit": "3cf3702d1e638548ba9fcfd957ebae43e1a573cb",
-    "text": "'`kubeadm`: printing the default component configs for `reset` and `join` is now\nunsupported.'",
-    "markdown": "'`kubeadm`: printing the default component configs for `reset` and `join` is now\n  unsupported.' ([#119346](https://github.com/kubernetes/kubernetes/pull/119346), [@chendave](https://github.com/chendave))",
+    "text": "`kubeadm`: printing the default component configs for `reset` and `join` is now\nunsupported.",
+    "markdown": "`kubeadm`: printing the default component configs for `reset` and `join` is now\n  unsupported. ([#119346](https://github.com/kubernetes/kubernetes/pull/119346), [@chendave](https://github.com/chendave))",
     "author": "chendave",
     "author_url": "https://github.com/chendave",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119346",
@@ -1285,8 +1285,8 @@
   },
   "119396": {
     "commit": "fc786dcd1d2efcc241e0e2392086934f2806555d",
-    "text": "`kube-scheduler` implemented scheduling hints for the `NodeUnschedulable` plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a `Pod`\nthat was previously rejected by the `NodeSchedulable` plugin if a new `Node` or a `Node` update sets `.spec.unschedulable` to false.",
-    "markdown": "`kube-scheduler` implemented scheduling hints for the `NodeUnschedulable` plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a `Pod`\n  that was previously rejected by the `NodeSchedulable` plugin if a new `Node` or a `Node` update sets `.spec.unschedulable` to false. ([#119396](https://github.com/kubernetes/kubernetes/pull/119396), [@wackxu](https://github.com/wackxu))",
+    "text": "`kube-scheduler` now implements scheduling hints for the `NodeUnschedulable` plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a `Pod`\nthat was previously rejected by the `NodeSchedulable` plugin if a new `Node` or a `Node` update sets `.spec.unschedulable` to false.",
+    "markdown": "`kube-scheduler` now implements scheduling hints for the `NodeUnschedulable` plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a `Pod`\n  that was previously rejected by the `NodeSchedulable` plugin if a new `Node` or a `Node` update sets `.spec.unschedulable` to false. ([#119396](https://github.com/kubernetes/kubernetes/pull/119396), [@wackxu](https://github.com/wackxu))",
     "author": "wackxu",
     "author_url": "https://github.com/wackxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119396",
@@ -1359,8 +1359,8 @@
   },
   "119495": {
     "commit": "440eb7eadb6b14a22ea32a9176af601df10ec78f",
-    "text": "#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
-    "markdown": "#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#119495](https://github.com/kubernetes/kubernetes/pull/119495), [@bzsuni](https://github.com/bzsuni)) [SIG API Machinery]",
+      "text": "The `flowcontrol.apiserver.k8s.io/v1beta2` API version of `FlowSchema` and `PriorityLevelConfiguration` is no longer served in `v1.29`. Migrate manifests and API clients to use the `flowcontrol.apiserver.k8s.io/v1beta3` API version, available since `v1.26`. More information is at https://kubernetes.io/docs/reference/using-api/deprecation-guide/#flowcontrol-resources-v129.",
+      "markdown": "The `flowcontrol.apiserver.k8s.io/v1beta2` API version of `FlowSchema` and `PriorityLevelConfiguration` is no longer served in v1.29. Migrate manifests and API clients to use the `flowcontrol.apiserver.k8s.io/v1beta3` API version, available since v1.26. More information is at https://kubernetes.io/docs/reference/using-api/deprecation-guide/#flowcontrol-resources-v129. ([#119495](https://github.com/kubernetes/kubernetes/pull/119495), [@bzsuni](https://github.com/bzsuni))",
     "author": "bzsuni",
     "author_url": "https://github.com/bzsuni",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119495",
@@ -1879,8 +1879,8 @@
   },
   "119789": {
     "commit": "c0691f378424890b278768255b0f554679bea1f4",
-    "text": "Setting the `status.loadBalancer` of a Service whose `spec.type` is not `LoadBalancer` was previously allowed, but any update to the `metadata` or `spec` would wipe that field. Setting this field is no longer permitted unless `spec.type` is  `LoadBalancer`.  In the very unlikely event that this has unexpected impact, you can enable the `AllowServiceLBStatusOnNonLB` feature gate, which will restore the previous behavior.  If you do need to set this, please file an issue with the Kubernetes project to help contributors understand why you need it.",
-    "markdown": "Setting the `status.loadBalancer` of a Service whose `spec.type` is not `LoadBalancer` was previously allowed, but any update to the `metadata` or `spec` would wipe that field. Setting this field is no longer permitted unless `spec.type` is  `LoadBalancer`.  In the very unlikely event that this has unexpected impact, you can enable the `AllowServiceLBStatusOnNonLB` feature gate, which will restore the previous behavior.  If you do need to set this, please file an issue with the Kubernetes project to help contributors understand why you need it. ([#119789](https://github.com/kubernetes/kubernetes/pull/119789), [@thockin](https://github.com/thockin))",
+    "text": "Setting the `status.loadBalancer` of a Service whose `spec.type` is not `LoadBalancer` was previously allowed, but any update to the `metadata` or `spec` would wipe that field. Setting this field is no longer permitted unless `spec.type` is `LoadBalancer`. In the very unlikely event that this has unexpected impact, you can enable the `AllowServiceLBStatusOnNonLB` feature gate, which will restore the previous behavior. If you do need to set this, please file an issue with the Kubernetes project to help contributors understand why you need it.",
+    "markdown": "Setting the `status.loadBalancer` of a Service whose `spec.type` is not `LoadBalancer` was previously allowed, but any update to the `metadata` or `spec` would wipe that field. Setting this field is no longer permitted unless `spec.type` is `LoadBalancer`. In the very unlikely event that this has unexpected impact, you can enable the `AllowServiceLBStatusOnNonLB` feature gate, which will restore the previous behavior. If you do need to set this, please file an issue with the Kubernetes project to help contributors understand why you need it. ([#119789](https://github.com/kubernetes/kubernetes/pull/119789), [@thockin](https://github.com/thockin))",
     "author": "thockin",
     "author_url": "https://github.com/thockin",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119789",
@@ -2038,8 +2038,8 @@
   },
   "119859": {
     "commit": "85e018634ce0f38e671fbc5c78c4eefe066e04b9",
-    "text": "'`kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`\ncertificate.'",
-    "markdown": "'`kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`\n  certificate.' ([#119859](https://github.com/kubernetes/kubernetes/pull/119859), [@SataQiu](https://github.com/SataQiu))",
+    "text": "`kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`\ncertificate.",
+    "markdown": "`kubeadm`: removed `system:masters` organization from `etcd/healthcheck-client`\n  certificate. ([#119859](https://github.com/kubernetes/kubernetes/pull/119859), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/119859",
@@ -2286,8 +2286,8 @@
   },
   "119994": {
     "commit": "10c622e99a6030d0e2ce398ec14a6267ad1e7967",
-    "text": "'`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`\nis removed in `v1.29`. Migrated `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`.'",
-    "markdown": "'`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`\n  is removed in `v1.29`. Migrated `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`.' ([#119994](https://github.com/kubernetes/kubernetes/pull/119994), [@SataQiu](https://github.com/SataQiu))",
+    "text": "`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`\nis removed in `v1.29`. Migrated `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`.",
+    "markdown": "`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`\n  is removed in `v1.29`. Migrated `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`. ([#119994](https://github.com/kubernetes/kubernetes/pull/119994), [@SataQiu](https://github.com/SataQiu))",
     "documentation": [
       {
         "description": "-[KEP]",
@@ -2397,8 +2397,8 @@
   },
   "120064": {
     "commit": "5b2167482d278c26836e99f9fefaf172b91da237",
-    "text": "'`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex\nencoded AES key.'",
-    "markdown": "'`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex\n  encoded AES key.' ([#120064](https://github.com/kubernetes/kubernetes/pull/120064), [@SataQiu](https://github.com/SataQiu))",
+    "text": "`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex\nencoded AES key.",
+    "markdown": "`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex\n  encoded AES key. ([#120064](https://github.com/kubernetes/kubernetes/pull/120064), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120064",
@@ -2472,8 +2472,8 @@
   },
   "120087": {
     "commit": "8290c4c9c1904f160b8d297ffc052ce58222bc91",
-    "text": "Incorporating feedback on PR #119341",
-    "markdown": "Incorporating feedback on PR #119341 ([#120087](https://github.com/kubernetes/kubernetes/pull/120087), [@divyasri537](https://github.com/divyasri537)) [SIG API Machinery]",
+      "text": "Incorporated feedback on PR #119341,  on `failOpen` metric counting for mutate and validate webhooks.",
+      "markdown": "Incorporated feedback on PR #119341, on `failOpen` metric counting for mutate and validate webhooks. ([#120087](https://github.com/kubernetes/kubernetes/pull/120087), [@divyasri537](https://github.com/divyasri537)) [SIG API Machinery]",
     "author": "divyasri537",
     "author_url": "https://github.com/divyasri537",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120087",
@@ -2773,8 +2773,8 @@
   },
   "120212": {
     "commit": "6eca14208217ebb72fc4e690357b4c41ddd22436",
-    "text": "If a watch with the `progressNotify` option set is to be created, and the registry hasn't provided a `newFunc`, return an error.",
-    "markdown": "If a watch with the `progressNotify` option set is to be created, and the registry hasn't provided a `newFunc`, return an error. ([#120212](https://github.com/kubernetes/kubernetes/pull/120212), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery]",
+    "text": "If a watch with the `progressNotify` option set is to be created, and the registry hasn't provided a `newFunc`, an error is now returned.",
+    "markdown": "If a watch with the `progressNotify` option set is to be created, and the registry hasn't provided a `newFunc`, an error is now returned. ([#120212](https://github.com/kubernetes/kubernetes/pull/120212), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery]",
     "author": "p0lyn0mial",
     "author_url": "https://github.com/p0lyn0mial",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120212",
@@ -3280,8 +3280,8 @@
   },
   "120354": {
     "commit": "5d03ce7ae44a8dc9638b8b56c6aa552128f7c05f",
-    "text": "`kube-proxy`: Added an option/flag for configuring the `nf_conntrack_tcp_be_liberal` sysctl (in the kernel's netfilter conntrack subsystem).  When enabled, `kube-proxy` will not install the `DROP` rule for invalid conntrack states, which currently breaks users of asymmetric routing.",
-    "markdown": "`kube-proxy`: Added an option/flag for configuring the `nf_conntrack_tcp_be_liberal` sysctl (in the kernel's netfilter conntrack subsystem).  When enabled, `kube-proxy` will not install the `DROP` rule for invalid conntrack states, which currently breaks users of asymmetric routing. ([#120354](https://github.com/kubernetes/kubernetes/pull/120354), [@aroradaman](https://github.com/aroradaman))",
+    "text": "`kube-proxy`: Added an option/flag for configuring the `nf_conntrack_tcp_be_liberal` sysctl (in the kernel's netfilter conntrack subsystem). When enabled, `kube-proxy` will not install the `DROP` rule for invalid conntrack states, which currently breaks users of asymmetric routing.",
+    "markdown": "`kube-proxy`: Added an option/flag for configuring the `nf_conntrack_tcp_be_liberal` sysctl (in the kernel's netfilter conntrack subsystem). When enabled, `kube-proxy` will not install the `DROP` rule for invalid conntrack states, which currently breaks users of asymmetric routing. ([#120354](https://github.com/kubernetes/kubernetes/pull/120354), [@aroradaman](https://github.com/aroradaman))",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120354",
@@ -3700,8 +3700,8 @@
   },
   "120492": {
     "commit": "b8ef1a0791711f96e8dea05ad9ea026d351d67f3",
-    "text": "Service Controller: will now update load balancer hosts after node's `ProviderID` is\nupdated.",
-    "markdown": "Service Controller: will now update load balancer hosts after node's `ProviderID` is\n  updated. ([#120492](https://github.com/kubernetes/kubernetes/pull/120492), [@cezarygerard](https://github.com/cezarygerard))",
+    "text": "Service Controller: load balancer hosts will now update after node's `ProviderID` is\nupdated.",
+    "markdown": "Service Controller: load balancer hosts will now update after node's `ProviderID` is\n  updated. ([#120492](https://github.com/kubernetes/kubernetes/pull/120492), [@cezarygerard](https://github.com/cezarygerard))",
     "author": "cezarygerard",
     "author_url": "https://github.com/cezarygerard",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120492",
@@ -4308,8 +4308,8 @@
   },
   "120682": {
     "commit": "fe21e4d749392becd092bb68ed5f86e789138ba5",
-    "text": "`kube-controller-manager`: The `LegacyServiceAccountTokenCleanUp` feature gate is now `beta` and enabled by default. When enabled, legacy auto-generated service account token secrets are auto-labeled with a `kubernetes.io/legacy-token-invalid-since` label if the credentials have not been used in the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year), **and** are referenced from the `.secrets` list of a ServiceAccount object, **and**  are not referenced from pods. This label causes the authentication layer to reject use of the credentials. After being labeled as invalid, if the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year) passes without the credential being used, the secret is automatically deleted. Secrets labeled as invalid which have not been auto-deleted yet can be re-activated by removing the `kubernetes.io/legacy-token-invalid-since` label.",
-    "markdown": "`kube-controller-manager`: The `LegacyServiceAccountTokenCleanUp` feature gate is now `beta` and enabled by default. When enabled, legacy auto-generated service account token secrets are auto-labeled with a `kubernetes.io/legacy-token-invalid-since` label if the credentials have not been used in the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year), **and** are referenced from the `.secrets` list of a ServiceAccount object, **and**  are not referenced from pods. This label causes the authentication layer to reject use of the credentials. After being labeled as invalid, if the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year) passes without the credential being used, the secret is automatically deleted. Secrets labeled as invalid which have not been auto-deleted yet can be re-activated by removing the `kubernetes.io/legacy-token-invalid-since` label. ([#120682](https://github.com/kubernetes/kubernetes/pull/120682), [@yt2985](https://github.com/yt2985))",
+    "text": "`kube-controller-manager`: The `LegacyServiceAccountTokenCleanUp` feature gate is now `beta` and enabled by default. When enabled, legacy auto-generated service account token secrets are auto-labeled with a `kubernetes.io/legacy-token-invalid-since` label if the credentials have not been used in the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year), **and** are referenced from the `.secrets` list of a ServiceAccount object, **and** are not referenced from pods. This label causes the authentication layer to reject use of the credentials. After being labeled as invalid, if the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year) passes without the credential being used, the secret is automatically deleted. Secrets labeled as invalid which have not been auto-deleted yet can be re-activated by removing the `kubernetes.io/legacy-token-invalid-since` label.",
+    "markdown": "`kube-controller-manager`: The `LegacyServiceAccountTokenCleanUp` feature gate is now `beta` and enabled by default. When enabled, legacy auto-generated service account token secrets are auto-labeled with a `kubernetes.io/legacy-token-invalid-since` label if the credentials have not been used in the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year), **and** are referenced from the `.secrets` list of a ServiceAccount object, **and** are not referenced from pods. This label causes the authentication layer to reject use of the credentials. After being labeled as invalid, if the time specified by `--legacy-service-account-token-clean-up-period` (defaulting to one year) passes without the credential being used, the secret is automatically deleted. Secrets labeled as invalid which have not been auto-deleted yet can be re-activated by removing the `kubernetes.io/legacy-token-invalid-since` label. ([#120682](https://github.com/kubernetes/kubernetes/pull/120682), [@yt2985](https://github.com/yt2985))",
     "author": "yt2985",
     "author_url": "https://github.com/yt2985",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120682",
@@ -4688,8 +4688,8 @@
   },
   "120825": {
     "commit": "801932c012b300abdc3e938d89b3618f6e166f44",
-    "text": "`kubeadm`: will now allow deploying a kubelet that is 3 versions older than the version of `kubeadm` (N-3). This aligns with the recent change made by SIG Architecture that extends the support skew between the control plane and kubelets. Tolerate this new kubelet skew for the commands `init`, `join` and `upgrade`. Note that if the `kubeadm` user applies a control plane version that is older than the `kubeadm` version (N-1 maximum) then the skew between the kubelet and control plane would become a maximum of N-2.",
-    "markdown": "`kubeadm`: will now allow deploying a kubelet that is 3 versions older than the version of `kubeadm` (N-3). This aligns with the recent change made by SIG Architecture that extends the support skew between the control plane and kubelets. Tolerate this new kubelet skew for the commands `init`, `join` and `upgrade`. Note that if the `kubeadm` user applies a control plane version that is older than the `kubeadm` version (N-1 maximum) then the skew between the kubelet and control plane would become a maximum of N-2. ([#120825](https://github.com/kubernetes/kubernetes/pull/120825), [@pacoxu](https://github.com/pacoxu))",
+    "text": "`kubeadm`: deploying a kubelet that is 3 versions older than the version of `kubeadm` (N-3) is now allowed. This aligns with the recent change made by SIG Architecture that extends the support skew between the control plane and kubelets. Tolerate this new kubelet skew for the commands `init`, `join` and `upgrade`. Note that if the `kubeadm` user applies a control plane version that is older than the `kubeadm` version (N-1 maximum) then the skew between the kubelet and control plane would become a maximum of N-2.",
+    "markdown": "`kubeadm`: deploying a kubelet that is 3 versions older than the version of `kubeadm` (N-3) is now allowed. This aligns with the recent change made by SIG Architecture that extends the support skew between the control plane and kubelets. Tolerate this new kubelet skew for the commands `init`, `join` and `upgrade`. Note that if the `kubeadm` user applies a control plane version that is older than the `kubeadm` version (N-1 maximum) then the skew between the kubelet and control plane would become a maximum of N-2. ([#120825](https://github.com/kubernetes/kubernetes/pull/120825), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120825",
@@ -4729,8 +4729,8 @@
   },
   "120828": {
     "commit": "bb06804e525090e5d85ceffa4d89c961c3dc7d33",
-    "text": "`kubeadm`: Fixed the bug where it always did CRI detection when `--config` was passed, even if it is not required by the subcommand.",
-    "markdown": "`kubeadm`: Fixed the bug where it always did CRI detection when `--config` was passed, even if it is not required by the subcommand. ([#120828](https://github.com/kubernetes/kubernetes/pull/120828), [@SataQiu](https://github.com/SataQiu))",
+    "text": "`kubeadm`: fixed the bug where it always did CRI detection when `--config` was passed, even if it is not required by the subcommand.",
+    "markdown": "`kubeadm`: fixed the bug where it always did CRI detection when `--config` was passed, even if it is not required by the subcommand. ([#120828](https://github.com/kubernetes/kubernetes/pull/120828), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120828",
@@ -5400,8 +5400,8 @@
   },
   "121083": {
     "commit": "62643ca14513f81e9ff88d830475aae4570ecfa1",
-    "text": "Previous versions of Kubernetes on Google Cloud required that workloads (e.g. Deployments, DaemonSets, etc.) which used `PersistentDisk` volumes were using them in read-only mode.  This validation provided very little value at relatively host implementation cost, and will no longer be validated.  If this is a problem for a specific use-case, please set the `SkipReadOnlyValidationGCE` gate to false to re-enable the validation, and file a Kubernetes bug with details.",
-    "markdown": "Previous versions of Kubernetes on Google Cloud required that workloads (e.g. Deployments, DaemonSets, etc.) which used `PersistentDisk` volumes were using them in read-only mode.  This validation provided very little value at relatively host implementation cost, and will no longer be validated.  If this is a problem for a specific use-case, please set the `SkipReadOnlyValidationGCE` gate to false to re-enable the validation, and file a Kubernetes bug with details. ([#121083](https://github.com/kubernetes/kubernetes/pull/121083), [@thockin](https://github.com/thockin))",
+      "text": "Previous versions of Kubernetes on Google Cloud required that workloads (e.g., Deployments, DaemonSets, etc.) which used `PersistentDisk` volumes were using them in read-only mode. This validation provided very little value at relatively host implementation cost, and will no longer be validated. If this is a problem for a specific use-case, please set the `SkipReadOnlyValidationGCE` gate to false to re-enable the validation, and file a Kubernetes bug with details.",
+      "markdown": "Previous versions of Kubernetes on Google Cloud required that workloads (e.g., Deployments, DaemonSets, etc.) which used `PersistentDisk` volumes were using them in read-only mode. This validation provided very little value at relatively host implementation cost, and will no longer be validated. If this is a problem for a specific use-case, please set the `SkipReadOnlyValidationGCE` gate to false to re-enable the validation, and file a Kubernetes bug with details. ([#121083](https://github.com/kubernetes/kubernetes/pull/121083), [@thockin](https://github.com/thockin))",
     "author": "thockin",
     "author_url": "https://github.com/thockin",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/121083",
@@ -5828,8 +5828,8 @@
   },
   "121240": {
     "commit": "7aa89084a345016a43500443fb1cc9ea6984f235",
-    "text": "`kubelet` allows pods to use the `net.ipv4.tcp_fin_timeout`, “net.ipv4.tcp_keepalive_intvl”\nand “net.ipv4.tcp_keepalive_probes“ sysctl by default; Pod Security Admission\nallows this sysctl in `v1.29+` versions of the baseline and restricted policies.",
-    "markdown": "`kubelet` allows pods to use the `net.ipv4.tcp_fin_timeout`, “net.ipv4.tcp_keepalive_intvl”\n  and “net.ipv4.tcp_keepalive_probes“ sysctl by default; Pod Security Admission\n  allows this sysctl in `v1.29+` versions of the baseline and restricted policies. ([#121240](https://github.com/kubernetes/kubernetes/pull/121240), [@HirazawaUi](https://github.com/HirazawaUi))",
+    "text": "`kubelet` will now allow pods to use the `net.ipv4.tcp_fin_timeout`, “net.ipv4.tcp_keepalive_intvl”\nand “net.ipv4.tcp_keepalive_probes“ sysctl by default; Pod Security Admission\nallows this sysctl in `v1.29+` versions of the baseline and restricted policies.",
+    "markdown": "`kubelet` will now allow pods to use the `net.ipv4.tcp_fin_timeout`, “net.ipv4.tcp_keepalive_intvl”\n  and “net.ipv4.tcp_keepalive_probes“ sysctl by default; Pod Security Admission\n  allows this sysctl in `v1.29+` versions of the baseline and restricted policies. ([#121240](https://github.com/kubernetes/kubernetes/pull/121240), [@HirazawaUi](https://github.com/HirazawaUi))",
     "author": "HirazawaUi",
     "author_url": "https://github.com/HirazawaUi",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/121240",
@@ -5967,8 +5967,8 @@
   },
   "121275": {
     "commit": "12b01aff1b946eae5c6873b802ecdef913e4cf2b",
-    "text": "Added `ImageMaximumGCAge` field to Kubelet configuration, which allows a user to set the maximum age an image is unused before it's garbage collected.",
-    "markdown": "Added `ImageMaximumGCAge` field to Kubelet configuration, which allows a user to set the maximum age an image is unused before it's garbage collected. ([#121275](https://github.com/kubernetes/kubernetes/pull/121275), [@haircommander](https://github.com/haircommander))",
+    "text": "Added `ImageMaximumGCAge` field to kubelet configuration, which allows a user to set the maximum age an image is unused before it's garbage collected.",
+    "markdown": "Added `ImageMaximumGCAge` field to kubelet configuration, which allows a user to set the maximum age an image is unused before it's garbage collected. ([#121275](https://github.com/kubernetes/kubernetes/pull/121275), [@haircommander](https://github.com/haircommander))",
     "author": "haircommander",
     "author_url": "https://github.com/haircommander",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/121275",
@@ -6139,8 +6139,8 @@
   },
   "121305": {
     "commit": "c8125c40299513470c7b992169233edf086755da",
-    "text": "`kubeadm`: a separate \"super-admin.conf\" file is now deployed. The User in `admin.conf` is now bound to a new RBAC Group `kubeadm:cluster-admins` that has `cluster-admin` `ClusterRole` access. The User in `super-admin.conf` is now bound to the `system:masters` built-in super-powers / break-glass Group that can bypass RBAC. Before this change, the default `admin.conf` was bound to `system:masters` Group, which was undesired. Executing `kubeadm init phase kubeconfig all` or just `kubeadm init` will now generate the new `super-admin.conf` file. The cluster admin can then decide to keep the file present on a node host or move it to a safe location. `kubadm certs renew` will renew the certificate in `super-admin.conf` to one year if the file exists; if it does not exist a \"MISSING\" note will be printed. `kubeadm upgrade apply` for this release will migrate this particular node to the two file setup. Subsequent kubeadm releases will continue to optionally renew the certificate in `super-admin.conf` if the file exists on disk and if renew on upgrade is not disabled. `kubeadm join --control-plane` will now generate only an `admin.conf` file that has the less privileged User.",
-    "markdown": "`kubeadm`: a separate \"super-admin.conf\" file is now deployed. The User in `admin.conf` is now bound to a new RBAC Group `kubeadm:cluster-admins` that has `cluster-admin` `ClusterRole` access. The User in `super-admin.conf` is now bound to the `system:masters` built-in super-powers / break-glass Group that can bypass RBAC. Before this change, the default `admin.conf` was bound to `system:masters` Group, which was undesired. Executing `kubeadm init phase kubeconfig all` or just `kubeadm init` will now generate the new `super-admin.conf` file. The cluster admin can then decide to keep the file present on a node host or move it to a safe location. `kubadm certs renew` will renew the certificate in `super-admin.conf` to one year if the file exists; if it does not exist a \"MISSING\" note will be printed. `kubeadm upgrade apply` for this release will migrate this particular node to the two file setup. Subsequent kubeadm releases will continue to optionally renew the certificate in `super-admin.conf` if the file exists on disk and if renew on upgrade is not disabled. `kubeadm join --control-plane` will now generate only an `admin.conf` file that has the less privileged User. ([#121305](https://github.com/kubernetes/kubernetes/pull/121305), [@neolit123](https://github.com/neolit123))",
+    "text": "`kubeadm`: a separate `super-admin.conf` file is now deployed. The User in `admin.conf` is now bound to a new RBAC Group `kubeadm:cluster-admins` that has `cluster-admin` `ClusterRole` access. The User in `super-admin.conf` is now bound to the `system:masters` built-in super-powers / break-glass Group that can bypass RBAC. Before this change, the default `admin.conf` was bound to `system:masters` Group, which was undesired. Executing `kubeadm init phase kubeconfig all` or just `kubeadm init` will now generate the new `super-admin.conf` file. The cluster admin can then decide to keep the file present on a node host or move it to a safe location. `kubadm certs renew` will renew the certificate in `super-admin.conf` to one year if the file exists; if it does not exist a \"MISSING\" note will be printed. `kubeadm upgrade apply` for this release will migrate this particular node to the two file setup. Subsequent kubeadm releases will continue to optionally renew the certificate in `super-admin.conf` if the file exists on disk and if renew on upgrade is not disabled. `kubeadm join --control-plane` will now generate only an `admin.conf` file that has the less privileged User.",
+    "markdown": "`kubeadm`: a separate `super-admin.conf` file is now deployed. The User in `admin.conf` is now bound to a new RBAC Group `kubeadm:cluster-admins` that has `cluster-admin` `ClusterRole` access. The User in `super-admin.conf` is now bound to the `system:masters` built-in super-powers / break-glass Group that can bypass RBAC. Before this change, the default `admin.conf` was bound to `system:masters` Group, which was undesired. Executing `kubeadm init phase kubeconfig all` or just `kubeadm init` will now generate the new `super-admin.conf` file. The cluster admin can then decide to keep the file present on a node host or move it to a safe location. `kubadm certs renew` will renew the certificate in `super-admin.conf` to one year if the file exists; if it does not exist a \"MISSING\" note will be printed. `kubeadm upgrade apply` for this release will migrate this particular node to the two file setup. Subsequent kubeadm releases will continue to optionally renew the certificate in `super-admin.conf` if the file exists on disk and if renew on upgrade is not disabled. `kubeadm join --control-plane` will now generate only an `admin.conf` file that has the less privileged User. ([#121305](https://github.com/kubernetes/kubernetes/pull/121305), [@neolit123](https://github.com/neolit123))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6572,8 +6572,8 @@
   },
   "121485": {
     "commit": "ebf46ce1b45b8617d280b0aa12ebf6c18f25dea6",
-    "text": "The KMSv2 features with feature gates `KMSv2` and `KMSv2KDF` are promoted to `GA`.  The `KMSv1` feature gate is now disabled by default.",
-    "markdown": "The KMSv2 features with feature gates `KMSv2` and `KMSv2KDF` are promoted to `GA`.  The `KMSv1` feature gate is now disabled by default. ([#121485](https://github.com/kubernetes/kubernetes/pull/121485), [@ritazh](https://github.com/ritazh))",
+    "text": "The KMSv2 features with feature gates `KMSv2` and `KMSv2KDF` are promoted to `GA`. The `KMSv1` feature gate is now disabled by default.",
+    "markdown": "The KMSv2 features with feature gates `KMSv2` and `KMSv2KDF` are promoted to `GA`. The `KMSv1` feature gate is now disabled by default. ([#121485](https://github.com/kubernetes/kubernetes/pull/121485), [@ritazh](https://github.com/ritazh))",
     "documentation": [
       {
         "description": "[KEP]",
