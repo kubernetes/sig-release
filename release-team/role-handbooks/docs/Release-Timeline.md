@@ -558,36 +558,50 @@ This PR can be merged on release day by the Docs lead.
 
 ### Update the site configuration files for previous releases
 
-Update the `config.toml` files for the 4 previous releases. You need to open 4 separate PRs, because each release has its own `release-` branch.
-You may need to change `hugo.toml`, instead of `config.toml`, starting from the 1.26 release.
-There would not be a `release-[previous-release]` branch, so you should make the pull request updating the site configuration
-for the previous release targeting `main`, and once you create the `release-[previous-release]` branch you should then change the
-base branch for the pull request to `release-[previous-release]`.
-Use [path release](https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md) to determine the
-correct patch version of the past release when updating the `config.toml` or `hugo.toml` (starting for 1.26) file.
+Working from your fork of the `kubernetes/website` repository, update the `config.toml` files for the 4 previous releases. You need to open 4 separate PRs, because each release has its own `release-` branch.
 
-See this for example (1.21 was the "future release"):
-* 1.17 https://github.com/kubernetes/website/pull/27451
-* 1.18 https://github.com/kubernetes/website/pull/27453
-* 1.19 https://github.com/kubernetes/website/pull/27454
-* 1.20 https://github.com/kubernetes/website/pull/27455
+For the immediately previous release, there will not be a `release-[previous-release]` branch, so you should open the pull request updating the site configuration for the previous release targeting `main` and update the base branch to `release-[previous-release]` once you have created the `release-[previous-release]` branch.
 
-Sample about update release 1.25-config.toml for the future release 1.26. Here the [PR](https://github.com/kubernetes/website/pull/38344)
-
-```
-git checkout release-1.25
-git checkout -b update-release-1.25-config.toml
-git add .
-git commit -m " update release-1.25 config.toml for release 1.26"
-git push origin update-release-1.25-config.toml
-```
+See this for example (1.29 was the "future release"):
+* 1.25 https://github.com/kubernetes/website/pull/44302
+* 1.26 https://github.com/kubernetes/website/pull/44301
+* 1.27 https://github.com/kubernetes/website/pull/44299
+* 1.28 https://github.com/kubernetes/website/pull/44298
 
 Changes required:
 - Set `latest` to the [future release] version
-- Update `fullversion` and `githubbranch` to the latest patched version of the corresponding release
+- Update `githubbranch` and `fullversion` (if present) to the latest patched version of the corresponding release
 - Update the list of versions to include the [future release] and remove the oldest release
 - Set `deprecated` to `true`
 - For each previous release, update the patch version to the latest patch version available
+
+Here is an example of the steps taken to update the release 1.28 config.toml for the future release 1.29, as well as the [PR](https://github.com/kubernetes/website/pull/44298)
+
+```
+git remote add upstream https://github.com/kubernetes/website.git && git remote set-url --push upstream no_push
+git fetch upstream main
+git pull --ff-only
+# make necessary updates to hugo.toml at this point
+git checkout -b update-release-1.28-hugo.toml
+git add .
+git commit -m "Updates v1.28 hugo.toml for release v1.29"
+git push origin update-release-1.28-hugo.toml
+Go to your fork in a browser: https://www.github.com/{YOUR_USER}/website
+Submit a PR against upstream `main` from your fork's branch `update-release-[previous-release]-hugo.toml`. The day before the release, once you have created the `release-[previous-release]` branch, change the base branch for this PR from `main` to `release-[previous-release]`
+```
+
+Here is an example of the steps taken to update the release 1.27 config.toml for the future release v1.29, as well as the [PR](https://github.com/kubernetes/website/pull/44299)
+
+```
+git fetch upstream release-1.27
+git checkout --track upstream/release-1.27
+# make necessary updates to hugo.toml at this point
+git checkout -b update-release-1.27-hugo.toml
+git add .
+git commit -m "Updates v1.27 hugo.toml for release v1.29"
+git push origin update-release-1.27-hugo.toml
+In this case, a PR is submitted against `release-1.27` from the fork's branch `update-release-1.27-hugo.toml`. 
+```
 
 ⚠️  DO NOT MERGE **ANY** OF THE CONFIGURATION PULL REQUESTS UNTIL THE RELEASE HAS OCCURRED
 
