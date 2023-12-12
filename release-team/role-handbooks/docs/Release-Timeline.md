@@ -577,7 +577,7 @@ Changes required:
 
 Here is an example of the steps taken to update the release 1.28 config.toml for the future release 1.29, as well as the [PR](https://github.com/kubernetes/website/pull/44298)
 
-```
+```shell
 git remote add upstream https://github.com/kubernetes/website.git && git remote set-url --push upstream no_push
 git fetch upstream main
 git pull --ff-only
@@ -592,7 +592,7 @@ Submit a PR against upstream `main` from your fork's branch `update-release-[pre
 
 Here is an example of the steps taken to update the release 1.27 config.toml for the future release v1.29, as well as the [PR](https://github.com/kubernetes/website/pull/44299)
 
-```
+```shell
 git fetch upstream release-1.27
 git checkout --track upstream/release-1.27
 # make necessary updates to hugo.toml at this point
@@ -656,13 +656,13 @@ Creating the release branch lets you snapshot the current docs in a new branch, 
 
 ![](pics/new-branch.png)
 
-> **Note:** During the v1.29 release process, it was discovered that someone during the v1.28 release cycle had erroneously created and abandoned a `release-1.28` branch. This left the v1.29 Docs team with a release branch that was 2,330 commits behind `main`, rendering it unusuable as a release branch. Should this issue arise again, any repo admin or org admin has the necessary permissions to delete the branch. Reach out to the [SIG Docs chairs](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) to obtain their agreement that deletion is necessary. 
+> **Note:** During the v1.29 release process, it was discovered that someone during the v1.28 release cycle had erroneously created and abandoned a `release-1.28` branch. This left the v1.29 Docs team with a release branch that was 2,330 commits behind `main`, rendering it unusuable as a release branch. Should this issue arise again, any repo admin or org admin has the necessary permissions to delete the branch. Reach out to the [SIG Docs chairs](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) to obtain their agreement that deletion is necessary. You may also be able to simply fast-forward the branch.
 
 #### Update Netlify
 
-Update the Netlify configuration. (A [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with access):
+Update the Netlify configuration. You will need to work with a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) to have them complete this task for you.
 
-Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
+Log in to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
 - Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `main` (e.g: https://kubernetes.io), eventually `main` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
   - Taking the defaults here is mostly fine
@@ -670,10 +670,9 @@ Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
   - e.g, site name: k8s-v1-20
   - e.g, custom domain: v1-20.docs.kubernetes.io
 
-> Note: if the `release-[current-branch]` is created before the website is frozen you may need to merge in main to keep up-to-date
-> If you create the `release-[current-branch]` right before freezing the k/website repo, it is less likely you need to keep the `release-[current-branch] up-to-date but always verify with the following steps:
-
-To merge `main` into `release-[current release]` on your local fork:
+> Note: if the `release-[current-release]` is created before the website is frozen you may need to merge in main to keep up-to-date
+> If you create the `release-[current-release]` right before freezing the k/website repo, it is less likely you need to keep the `release-[current-release]` up-to-date but always verify with the following steps:
+To merge `main` into `release-[current-release]` on your local fork:
 
 ```shell
 # Step 0 (if you don't already have a remote called "upstream")
@@ -694,7 +693,7 @@ git push origin merged-main-release-[current release]
 
 Now create a pull request to merge the new branch you've made into the `release-[current-release]` branch on [k/website](https://github.com/kubernetes/website).
 
-> Note: Make a note of the commit hash of the last commit of the `release-current-release]` branch as it will be used to tag the commit as the last commit of as the final commit for the snapshot.
+> Note: Make a note of the commit hash of the last commit of the `release-current-release]` branch as it will be used to tag the commit as the final commit for the snapshot.
 
 #### Merge `main`
 
