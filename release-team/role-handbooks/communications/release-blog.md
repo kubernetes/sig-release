@@ -72,6 +72,9 @@ slug: kubernetes-1-XX-release-announcement
 
 <INTRO>
 
+## Release theme and logo
+<Logo image size is recommended as maximum 2160px>
+
 ## Major Themes
 
 ### <THEME 1>

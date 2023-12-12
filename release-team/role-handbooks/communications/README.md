@@ -117,9 +117,38 @@ This is a light but very important component of the Communications Coordinator r
 
 You will be a liaison between the Release lead and the CNCF contacts to schedule the press briefings. Send an email to `pr@cncf.io` about a month ahead of the release and coordinate between the parties to get release day press events scheduled.
 
+See the sample email for schedule press and pre-briefings for the release lead with CNCF by emailing pr@cncf.io
+
+```
+CC'd release-comms and the release lead.
+Title: Schedule interview for the release lead
+
+Hi there,
+
+I'm the comms lead for Kubernetes v1.xx (currently scheduled to release Tuesday 5th December 20xx), and I'm reaching out to get our release day and pre-release press handled. 
+
+Thanks,
+Communication Team 1.xx
+```
+
 To schedule the release webinar with the CNCF, start things with an email to `webinars@cncf.io`. You will likely use the Calendly link (below) to schedule a "live webinar". If things are tight on the schedule, CNCF will help find a spot.
 
 The webinar is typically scheduled for 3-4 weeks after the release and is primarily presented by the Release lead and Enhancements lead. Often the Comms lead will also join the webinar. The format is open, but primarily the team walks through the enhancements in the release and gives a sneak peek of what's coming in the next release.
+
+See the sample webinar email below for reference.
+
+```
+title: Scheduling the Kubernetes 1.xx Release Live Webinar
+
+Hi there! I'm the communication lead for Kubernetes v1.xx, XXXX, and I'm reaching out to schedule a live webinar for our release and enhancements leads. Could you help us to schedule in the Calendly: https://calendly.com/cncfonlineprograms/livewebinar
+
+This version is currently scheduled to land Tuesday 5th December 20xx, see the details here: https://www.kubernetes.dev/resources/release/ 
+
+Do you have availability sometime for 3-4 weeks after the release, maybe between x-x in December?
+
+Thanks,
+Comms Team 1.xx
+```
 
 Refer to the [slides](https://docs.google.com/presentation/d/10y65ptwXQrt_0P6sA3TSvRH_c7TGBc8DEHhXRNwi-10/) and [webinar](https://www.youtube.com/watch?v=BTPlVsgO_As) from the 1.22 release as an example.
 
