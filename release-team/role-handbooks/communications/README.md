@@ -199,7 +199,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <ul>
         <li>Work with Enhancements and Release Note leads to determine which deliverables are most noteworthy post-Enhancements Freeze
         <li>In the coming weeks, follow the progress of these enhancements, as they will roll into the Major Themes and be called out and described in the release blog
-        <li>Work with the Release Team and decide if the release warrants a mid-cycle 'Deprecations and Removals' blog. Generally, this is decided around a minimal of 2 deprecations and removals, or if there are significant deprecations and removals that will impact the community. 
+        <li>Work with the Release Team and decide if the release warrants a mid-cycle 'Deprecations and Removals' blog. Generally, this is decided at a minimum of two deprecations or removals, or if there are significant deprecations and removals that will impact the community. 
         <li>If needed, solicit author(s) for a 'Deprecations and Removals' blog and get a placeholder PR in k/website for tracking
         </ul>
         </td>
