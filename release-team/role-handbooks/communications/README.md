@@ -141,7 +141,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td>
         <ul>
         <li>Start attending the Release Team weekly meeting
-        <li> Join <code>#sig-release</code> and <code>#release-comms</code> Slack channels
+        <li>Join the following Slack channels: <code>#sig-release</code>, <code>#release-comms</code>, <code>#sig-docs</code>, and <code>#sig-docs-blog</code>.
         <li>Check if there are any holidays or events (e.g. KubeCon) that will occur during this release which may impact communication with the CNCF and SIG Chairs, plan accordingly
         <li>Select shadows for the team
         <li>Ensure shadows are all in the Kubernetes org on GitHub
