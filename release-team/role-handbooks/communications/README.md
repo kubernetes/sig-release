@@ -30,7 +30,7 @@ The expected time investment for both leads and shadows are as follows:
 
 - 1 to 5 hours a week, attending
     - Release Team (weekly) 
-    - SIG-Docs Team (biweekly) and 
+    - SIG Docs Team (biweekly) and 
     - Burndown meetings (daily during Code Freeze).
 
 **NOTE:** These are estimates and your personal experience may vary. The more time you spend working as a team and regularly communicating within your team, the better off your experience will be.
