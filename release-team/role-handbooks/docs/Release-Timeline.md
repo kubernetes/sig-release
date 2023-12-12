@@ -859,9 +859,9 @@ Create a milestone for NEW upcoming release. Depending on your permissions, you 
 
 ### Update Netlify
 
-Update Netlify (contact a [SIG Docs Chair or Technical Lead](https://git.k8s.io/community/sig-docs#leadership) if you do not have access and they can assist with this):
+You will need to work with a [SIG Docs Chair or Technical Lead](https://git.k8s.io/community/sig-docs#leadership) to have them complete this task for you.
 
-Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
+Log in to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
 - Clean Up
   - Delete the oldest docs site (usually a deprecated version 5+ releases ago)
@@ -882,7 +882,7 @@ Announce that `[dev-future FUTURE release]` branch is open for new feature docs 
 ### Reassign issues
 
 - Clean Up
-⚠️  Assign any issues / feature / PRs (that missed the release) to the new Docs Lead
+⚠️  Assign any issues / features / PRs (that missed the release) to the new Docs Lead
 
 ### Clean up access
 
