@@ -39,6 +39,7 @@ e.g., permanent, temporary
     - [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y)
   - [ ] Is a [Kubernetes GitHub org member](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
 - [ ] Update [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md) page to include the new Release Manager
+- [ ] Update the [`cherry_pick_approved` prow plugin configuration](https://github.com/kubernetes/test-infra/blob/ce9ca27/config/prow/plugins.yaml#L1104-L1115) section to contain the new approver.
 
 <!-- 
 Uncomment the appropriate checklist for the Release Manager role the new candidate will hold.
