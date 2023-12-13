@@ -244,8 +244,11 @@ For each cherry-pick request:
     Compared to non-cherry-pick PR's, a cherry-pick PR has one
     additional merge criteria:  The Patch Release Team members are
     entrusted with applying the `cherry-pick-approved` label.  This
-    is done manually directly through the GitHub UI, not through a
-    Prow command.  In response, the bot will remove the
+    is done directly through the GitHub review feature by approving the PR. The
+    [prow `cherrypickapproved` plugin](https://github.com/kubernetes/test-infra/tree/ce9ca27/prow/plugins/cherrypickapproved)
+    will take care of applying the label if the GitHub user
+    [is configured as privileged cherry-pick approver](https://github.com/kubernetes/test-infra/blob/ce9ca27/config/prow/plugins.yaml#L1104-L1115).
+    In addition, prow will also remove the
     `do-not-merge/cherry-pick-not-approved` label.
 
     Note that the PR will not actually merge until it meets all usual criteria
