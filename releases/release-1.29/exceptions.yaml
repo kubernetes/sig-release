@@ -18,7 +18,7 @@ enhancementFreeze:
   pull_requests:
     - "https://github.com/kubernetes/enhancements/pull/4266"
     - "https://github.com/kubernetes/enhancements/pull/4279"
-  status: approved
+  status: "approved"
 
 - name: "Per-plugin callback functions for accurate requeueing in kube-scheduler"
   issue: 4247
@@ -27,7 +27,7 @@ enhancementFreeze:
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/KRW9gg5wwS4/m/XW5v6ySwCwAJ"
   pull_requests:
     - "https://github.com/kubernetes/enhancements/pull/4256"
-  status: approved
+  status: "approved"
 
 - name: "Optionally Disable HealthCheck Ports for LoadBalancers with ExternalTrafficPolicy=Local"
   issue: 4144
@@ -36,12 +36,12 @@ enhancementFreeze:
   thread: "https://groups.google.com/g/kubernetes-sig-network/c/piRehSKuX3Y"
   pull_requests:
     - "https://github.com/kubernetes/enhancements/pull/4286"
-  status: denied
+  status: "denied"
 
 # Code Freeze Exceptions requested in 1.29
 codeFreeze:
 
-- name: "ClusterTrustBundles"
+- name: "ClusterTrustBundles (previously Trust Anchor Sets)"
   issue: 3257
   date_requested: 2023-11-01
   date_reviewed: 2023-11-01
@@ -60,7 +60,7 @@ codeFreeze:
     - "https://github.com/kubernetes/kubernetes/pull/121461"
   status: "approved"
 
-- name: "Allow replacement of Pods in a Job when fully terminated"
+- name: "Kubelet Support for Image Filesystem being split"
   issue: 4191
   date_requested: 2023-11-01
   date_reviewed: 2023-11-01
