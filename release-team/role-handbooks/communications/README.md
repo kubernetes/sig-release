@@ -33,7 +33,7 @@ The expected time investment for both leads and shadows are as follows:
     - SIG Docs Team (biweekly) and 
     - Burndown meetings (daily during Code Freeze).
 
-**NOTE:** These are estimates and your personal experience may vary. The more time you spend working as a team and regularly communicating within your team, the better off your experience will be.
+**NOTE:** These are estimates and your personal experience may vary. The keys to success in this role are collaboration with the team and maintaining regular communication within the team.
 
 ### External Release Communication
 
