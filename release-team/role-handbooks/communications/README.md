@@ -70,7 +70,7 @@ The release lead will drive the content for the release theme and logo.
 
 ### Feature blogs
 
-Tracking, facilitating, and organizing the publication of the Feature Blog series is a major deliverable of the Comms team. Feature blogs are opt-in for SIGs, and authored by enhancement developers and others close to the features. It helps to work with the release lead and use the respective SIG Slack channels to remind the SIGs about opting-in to feature blogs. 
+Tracking, facilitating, and organizing the publication of the Feature Blog series is a major deliverable of the Comms team. Feature blogs are opt-in for SIGs, and are authored by enhancement developers and others close to the features. We do, however, need to encourage owners of important enhancements to opt in to writing feature blogs. Examples of enhancements that warrant a feature blog might include: breaking changes, features and changes important to our users, features that have been in progress for a long time and are graduating, and features that are considered mandatory by the Release Lead. It helps to work closely with the Release Lead and use the respective SIG Slack channels to remind the SIGs about opting in to feature blogs and provide any necessary context to blog authors. 
 
 **The first feature blog** typically goes out on release day alongside or shortly after the release blog, and then are published one-at-a-time, typically at a rate of two to three posts weekly. **The Comms team establishes the publication schedule.**
 > Note that blog PRs in k/website are dated, and automation will publish future-dated entries. This enables a PR process decoupled from blog publication date.
