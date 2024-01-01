@@ -111,7 +111,7 @@ Also consider this when commonly-used features that have been deprecated are rem
 
 ### Press and release webinar
 
-This is a light but very important component of the Communications Coordinator role. Two sets of activities need to be scheduled with the CNCF:
+This is a simple but very important component of the Communications Coordinator role. Two sets of activities need to be scheduled with the CNCF:
 - press release and interview scheduling around the release day and
 - the release webinar after the release.
 
