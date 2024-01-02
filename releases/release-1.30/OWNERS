@@ -1,0 +1,12 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+    - katcosgrove          # 1.30 Release Team Lead
+    - gracenng             # 1.30 Emeritus Advisor
+
+reviewers:
+    - rashansmith    # 1.30 Release Notes Lead
+    - drewhagen      # 1.30 Docs Lead
+    - kcmartin       # 1.30 Communications Lead
+    - salehsedghpour # 1.30 Enhancements Lead
+    - pacoxu         # 1.30 Release Signal
