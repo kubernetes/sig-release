@@ -27,6 +27,7 @@ aliases:
     - gracenng # subproject owner / 1.28 Release Team Lead
     - jeremyrickard # subproject owner
     - justaugustus # subproject owner
+    - katcosgrove # 1.30 Release Lead
     - leonardpahlke # subproject owner / 1.26 Release Team Lead
     - Priyankasaggu11929 # subproject owner / Kubernetes 1.29 Release Lead
     - puerco # subproject owner
@@ -40,6 +41,7 @@ aliases:
   release-team-lead-role:
     - cici37 # Kubernetes 1.25 Release Lead
     - gracenng # Kubernetes 1.28 Release Lead
+    - katcosgrove # Kubernetes 1.30 Release Lead
     - leonardpahlke # Kubernetes 1.26 Release Lead
     - Priyankasaggu11929 # Kubernetes 1.29 Release Lead
     - salaxander # Kubernetes 1.27 Release Lead
