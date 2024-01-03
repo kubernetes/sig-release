@@ -17,7 +17,9 @@
     - [Reach out to Enhancement Owners](#reach-out-to-enhancement-owners)
         - [Before the Open placeholder PR Deadline](#before-the-open-placeholder-pr-deadline)
         - [Before the PRs Ready for Review Deadline](#before-the-prs-ready-for-review-deadline)
-        - [Before the PRs Ready to Merge Deadline](#before-the-prs-ready-to-merge-deadline)
+        - [Before the Docs Freeze Deadline](#before-the-docs-freeze-deadline)
+        - [Week of Docs Freeze](#week-of-docs-freeze)
+        - [After Docs Freeze](#after-docs-freeze)
     - [Reach out to release notes team](#reach-out-to-release-notes-team)
     - [Maintain the current and upcoming `dev` branch](#maintain-the-current-and-upcoming-dev-branch)
         - [Periodically merge `main` into `dev-[future release]`](#-periodically-merge-main-into-dev-future-release)
@@ -379,13 +381,12 @@ are required, e.g:
 > Thank you!
 
 #### Before the PRs Ready for Review Deadline
-After the Open Placeholder PR deadline, reach out to all open/tracked doc PRs to remind the PR owners to get their
-doc ready to be reviewed, e.g:
+After the Open Placeholder PR deadline, reach out to all open/tracked doc PRs to remind the PR owners to get their doc ready to be reviewed, e.g:
 
 > Hello < tag doc owner(s) > :wave: please take a look at [Documenting for a release - PR Ready for Review](https://kubernetes.io/docs/contribute/new-content/new-features/#pr-ready-for-review)
 > to get your PR ready for review before < PR Ready for Review deadline HH:MM timezone >. Thank you!
 
-#### Before the PRs Ready to Merge Deadline
+#### Before the Docs Freeze Deadline
 After the PR ready for review deadline, reach out to all open/tracked doc PRs to remind the PR owners to get docs reviewed, e.g:
 
 > Hello < tag doc owner(s) > :wave:, a friendly reminder that this PR needs a doc review by < Docs Complete Deadline HH:MM timezone > to get this
@@ -396,6 +397,27 @@ For a technical review, reach out to the KEP reviewers and approvers. KEP review
 
 > Hello < tag KEP reviewer(s) / approver(s) > :wave: please provide a technical review for this PR by < Docs Complete deadline HH:MM timezone >
 > to get this into the release. Thank you!
+
+#### Week of Docs Freeze
+
+Follow up with owners of all docs PRs that are not in a mergeable state via both a GitHub comment and a Slack DM. To be ready to merge, a PR requires both `/lgtm` and `/approve`, one of them from a technical reviewer, and comments and suggestions addressed. If the docs owner or KEP owners are unresponsive, you may reach out to the chairs and technical leads of the SIG that owns the associated KEP.
+
+Example:
+
+
+>Hello {doc/KEP owners} 👋! I'm reaching out from the Docs team.
+Just checking in as we approach **Docs Freeze on {date with timezone}**.
+This documentation appears to still be under review. To meet the Docs Freeze, this PR must have a technical review as well as `lgtm` and `approve` labels applied, without any unaddressed comments or concerns from SIG Docs. 
+The status of this enhancement is marked as `at risk for docs freeze`. Thank you!
+
+
+#### After Docs Freeze
+
+Once Docs Freeze has passed, if there are any docs PRs not marked "ready to merge," reach out in the PR with the following:
+
+>Hello 👋, {current release} Docs team here.
+This PR did not meet deadline for [docs freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#docs-freeze).
+Enhancements without required documentation may be removed from the current release. If you still wish to include this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request. Thanks!
 
 ### Reach out to release notes team
 Reach out to release notes team to see if there's anything that might need docs that isn't already clearly known, e.g:
