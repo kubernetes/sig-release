@@ -48,6 +48,9 @@ If your issue was removed during the enhancements freeze please file an exceptio
 Exceptions after code freeze: 
 Requests for exceptions must be submitted before the first milestone burn down meeting. All requests for exception will be reviewed and either approved or rejected during the first meeting. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
+Exceptions after docs freeze:
+As the docs freeze takes place close to the end of the release cycle, please file an exception request as soon as possible, ideally in advance of the deadline if you know you will miss it, or within 24 hours of missing the docs freeze deadline. All requests will be reviewed and approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above, with input from SIG Docs.
+
 
 Information about the current release can be found in the relevant release directory:
 - important dates e.g., [releases/release-1.14/README.md](/releases/release-1.14/README.md)
