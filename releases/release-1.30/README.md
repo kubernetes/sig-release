@@ -44,7 +44,7 @@ The 1.30 release cycle is as follows:
 - **[02:00 UTC Wednesday 6th March 2024 / 18:00 PDT Tuesday 5th March 2024](https://everytimezone.com/s/24b27b03)**: Week 9 — [Code Freeze](../release_phases.md#code-freeze)
 - **Tuesday 19th - Friday 22nd March 2024**: Week 11 - [KubeCon EU](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/)
 - **[01:00 UTC Wednesday 20th March 2024 / 18:00 PDT Tuesday 19th March 2024](https://everytimezone.com/s/b708fa7a)**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
-- **Tuesday 26th March 2024**: Week 12 — Docs must be completed and reviewed
+- **Tuesday 26th March 2024**: Week 12 — [Docs Freeze](../release_phases.md#docs-freeze)
 - **Wednesday 17th April 2024**: Week 15 — Kubernetes v1.30.0 released
 
 ## Timeline
@@ -82,7 +82,7 @@ The 1.30 release cycle is as follows:
 | Feature blogs ready to review                                                          | Enhancement Owner / SIG Leads | Friday 22nd March 2024                                                                                             | week 11  |                                                        |
 | Burndown Meetings daily (Tuesday & Thursday over Slack)                                | Lead                          | Monday 25th March 2024                                                                                             | Week 12  |                                                        |
 | 1.30.0-rc.0 released                                                                   | Branch Manager                | Tuesday 26th March 2024                                                                                            | week 12  | [1.30-blocking], [master-blocking], [master-informing] |
-| Docs complete — All PRs reviewed and ready to merge                                    | Docs Lead                     | Tuesday 26th March 2024                                                                                            | week 12  |                                                        |
+| **Docs Freeze**                                   | Docs Lead                     | Tuesday 26th March 2024                                                                                            | week 12  |                                                        |
 | Major Themes complete                                                                  | Release Notes Lead            | Tuesday 2nd April 2024                                                                                            | week 13  |                                                        |
 | 1.30.0-rc.1 released                                                                   | Branch Manager                | Tuesday 2nd April 2024                                                                                            | week 13  |                                                        |
 | 1.30.0-rc.2 released                                                                   | Branch Manager                | Thursday 11th April 2024                                                                                            | week 14  | [1.30-blocking], [master-blocking], [master-informing] |
@@ -100,6 +100,7 @@ Please refer to the [release phases document](../release_phases.md).
 [Retrospective Document]: https://bit.ly/k8s130-retro
 
 [Enhancements Freeze]: ../release_phases.md#enhancements-freeze
+[Docs Freeze]: ../release_phases.md#docs-freeze
 [Burndown]: ../release_phases.md#burndown
 [Code Freeze]: ../release_phases.md#code-freeze
 [Exception]: ../release_phases.md#exceptions
