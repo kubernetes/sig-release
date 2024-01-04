@@ -155,7 +155,7 @@ _Note:_ SIG Docs prefers and welcomes a status of yellow or red on anything that
 
 [ ] A week before the Docs Ready for Review deadline, are 80% of the docs PRs ready for review? (anything below 60% should indicate yellow (or red) status, contingent on the amount)
 
-[ ] Three days before the Docs Ready for Review deadline, are 90% of the docs PRs ready for review?
+[ ] Three days before the Docs Ready for Review deadline, are 90% of the docs PRs ready for review? (anything below 90% of placeholder PRs being ready for review should indicate yellow (or red) status, contingent on the amount)
 
 [ ] A week before the Docs Complete deadline, have 80% of the docs PRs merged? (anything below 60% should indicate yellow (or red) status, contingent on the amount)
 
