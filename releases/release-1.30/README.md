@@ -90,32 +90,3 @@ The 1.30 release cycle is as follows:
 | **v1.30.0 released**                                                                   | Branch Manager                | Wednesday 17th April 2024                                                                                          | week 15  |                                                        |
 | Release blog published                                                                 | Comms                         | Wednesday 17th April 2024                                                                                          | week 15  |                                                        |
 | **[Thaw]**                                                                             | Branch Manager                | Wednesday 17th April 2024                                                                                          | week 15  |                                                        |
-
-## Phases
-
-Please refer to the [release phases document](../release_phases.md).
-
-[k8s130-calendar]: https://bit.ly/k8s-release-cal
-[Internal Contact Info]: https://bit.ly/k8s130-contacts
-[Retrospective Document]: https://bit.ly/k8s130-retro
-
-[Enhancements Freeze]: ../release_phases.md#enhancements-freeze
-[Docs Freeze]: ../release_phases.md#docs-freeze
-[Burndown]: ../release_phases.md#burndown
-[Code Freeze]: ../release_phases.md#code-freeze
-[Exception]: ../release_phases.md#exceptions
-[Thaw]: ../release_phases.md#thaw
-[Test Freeze]: ../release_phases.md#test-freeze
-
-[release-team@]: https://groups.google.com/a/kubernetes.io/g/release-team
-[kubernetes-sig-release@]: https://groups.google.com/forum/#!forum/kubernetes-sig-release
-[#sig-release]: https://kubernetes.slack.com/messages/sig-release/
-[kubernetes-release-calendar]: https://bit.ly/k8s-release-cal
-[kubernetes/kubernetes]: https://github.com/kubernetes/kubernetes
-
-[master-blocking]: https://testgrid.k8s.io/sig-release-master-blocking#Summary
-[master-informing]: https://testgrid.k8s.io/sig-release-master-informing#Summary
-[1.30-blocking]: https://testgrid.k8s.io/sig-release-1.30-blocking#Summary
-
-[exception requests]: ../EXCEPTIONS.md
-[release phases document]: ../release_phases.md
