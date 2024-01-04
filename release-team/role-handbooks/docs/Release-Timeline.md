@@ -151,7 +151,7 @@ _Note:_ SIG Docs prefers and welcomes a status of yellow or red on anything that
 
 [ ] A week before the Docs PR Placeholder deadline, have 80% of the enhancements that opted in for docs created a placeholder PR? (anything below 60% opt-in for docs where placeholder PRs are needed should indicate yellow (or red) status, contingent on the amount)
 
-[ ] Three days before the Docs PR Placeholder deadline, have 90% of the enhancements that opted in for docs created a placeholder PR?
+[ ] Three days before the Docs PR Placeholder deadline, have 90% of the enhancements that opted in for docs created a placeholder PR? (anything below 90% of placeholder PRs being created by enhancements opted in for doc are needed should indicate yellow (or red) status, contingent on the amount)
 
 [ ] A week before the Docs Ready for Review deadline, are 80% of the docs PRs ready for review? (anything below 60% should indicate yellow (or red) status, contingent on the amount)
 
