@@ -17,7 +17,9 @@
     - [Reach out to Enhancement Owners](#reach-out-to-enhancement-owners)
         - [Before the Open placeholder PR Deadline](#before-the-open-placeholder-pr-deadline)
         - [Before the PRs Ready for Review Deadline](#before-the-prs-ready-for-review-deadline)
-        - [Before the PRs Ready to Merge Deadline](#before-the-prs-ready-to-merge-deadline)
+        - [Before the Docs Freeze Deadline](#before-the-docs-freeze-deadline)
+        - [Week of Docs Freeze](#week-of-docs-freeze)
+        - [After Docs Freeze](#after-docs-freeze)
     - [Reach out to release notes team](#reach-out-to-release-notes-team)
     - [Maintain the current and upcoming `dev` branch](#maintain-the-current-and-upcoming-dev-branch)
         - [Periodically merge `main` into `dev-[future release]`](#-periodically-merge-main-into-dev-future-release)
@@ -29,8 +31,6 @@
     - [Nominate a Docs Lead for the Next Release](#nominate-a-docs-lead-for-the-next-release)
 - [Week 7-8: Late-Middle Steps - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
 - [Weeks 9-11: Late Steps - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
-    - [Generate the reference documentation](#generate-the-reference-documentation)
-    - [Update minor version on API index page](#update-minor-version-on-api-index-page)
     - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
     - [Touch base with the release communications team](#touch-base-with-the-release-communications-team)
 - [Week 12: Release Week](#release-week-week-12)
@@ -140,17 +140,29 @@ Early in the release cycle, the Enhancements Lead opens a Github Project, e.g: [
 ⚠️  Attend [SIG Docs meetings](https://github.com/kubernetes/community/tree/master/sig-docs#meetings) to provide a status update. 
 If you cannot attend, a Shadow needs to attend in your place and/or update the [SIG Docs meeting notes](https://docs.google.com/document/d/1emuO4nmaQq3K8JZ9-MQeIygtrCPO9kWv7U7RzTaW4F8/edit?usp=sharing) with the information necessary to keep the community informed (e.g. staffing updates, branch syncs, placeholder PR deadlines, etc).
 - Here is a checklist to guide the weekly status report. 
+
 _Note:_ SIG Docs prefers and welcomes a status of yellow or red on anything that needs attention, has the possiblity to miss deadlines or target dates, or requires follow-up from feature authors and SIGs that you're not receiving.
+
 [ ] Is the integration branch healthy (does not need rebase)?
+
 [ ] Has the weekly branch sync been done? (a lapse in 1-2 branch syncs indicates 'yellow' status, 3 or more lapses should be deemed red)
-[ ] Has the PR for the weekly branch sync merged or needs review? If assistance is needed to resolve merge conflicts, please flag others by communicating on the #release-docs Slack channel
+
+[ ] Has the PR for the weekly branch sync merged or does it need review? If assistance is needed to resolve merge conflicts, please flag others by communicating on the #release-docs Slack channel
+
 [ ] A week before the Docs PR Placeholder deadline, have 80% of the enhancements that opted in for docs created a placeholder PR? (anything below 60% opt-in for docs where placeholder PRs are needed should indicate yellow (or red) status, contingent on the amount)
-[ ] Three days before the Docs PR Placeholder deadline, have 90% of the enhancements that opted in for docs created a placeholder PR?
+
+[ ] Three days before the Docs PR Placeholder deadline, have 90% of the enhancements that opted in for docs created a placeholder PR? (anything below 90% of placeholder PRs being created by enhancements opted in for doc are needed should indicate yellow (or red) status, contingent on the amount)
+
 [ ] A week before the Docs Ready for Review deadline, are 80% of the docs PRs ready for review? (anything below 60% should indicate yellow (or red) status, contingent on the amount)
-[ ] Three days before the Docs Ready for Review deadline, are 90% of the docs PRs ready for review?
+
+[ ] Three days before the Docs Ready for Review deadline, are 90% of the docs PRs ready for review? (anything below 90% of placeholder PRs being ready for review should indicate yellow (or red) status, contingent on the amount)
+
 [ ] A week before the Docs Complete deadline, have 80% of the docs PRs merged? (anything below 60% should indicate yellow (or red) status, contingent on the amount)
+
 [ ] Three days before the Docs Complete deadline, have 90% of the docs PRs merged? (be sure to mention if you need the help of SIG Docs approvers/reviewers to meet your deadline)
+
 [ ] On the day before any deadline, are there any outstanding items or PRs?
+
 [ ] On the day of any deadline, are there any outstanding items or PRs?
 
 ### Read up on the release team
@@ -369,13 +381,12 @@ are required, e.g:
 > Thank you!
 
 #### Before the PRs Ready for Review Deadline
-After the Open Placeholder PR deadline, reach out to all open/tracked doc PRs to remind the PR owners to get their
-doc ready to be reviewed, e.g:
+After the Open Placeholder PR deadline, reach out to all open/tracked doc PRs to remind the PR owners to get their doc ready to be reviewed, e.g:
 
 > Hello < tag doc owner(s) > :wave: please take a look at [Documenting for a release - PR Ready for Review](https://kubernetes.io/docs/contribute/new-content/new-features/#pr-ready-for-review)
 > to get your PR ready for review before < PR Ready for Review deadline HH:MM timezone >. Thank you!
 
-#### Before the PRs Ready to Merge Deadline
+#### Before the Docs Freeze Deadline
 After the PR ready for review deadline, reach out to all open/tracked doc PRs to remind the PR owners to get docs reviewed, e.g:
 
 > Hello < tag doc owner(s) > :wave:, a friendly reminder that this PR needs a doc review by < Docs Complete Deadline HH:MM timezone > to get this
@@ -386,6 +397,27 @@ For a technical review, reach out to the KEP reviewers and approvers. KEP review
 
 > Hello < tag KEP reviewer(s) / approver(s) > :wave: please provide a technical review for this PR by < Docs Complete deadline HH:MM timezone >
 > to get this into the release. Thank you!
+
+#### Week of Docs Freeze
+
+Follow up with owners of all docs PRs that are not in a mergeable state via both a GitHub comment and a Slack DM. To be ready to merge, a PR requires both `/lgtm` and `/approve`, one of them from a technical reviewer, and comments and suggestions addressed. If the docs owner or KEP owners are unresponsive, you may reach out to the chairs and technical leads of the SIG that owns the associated KEP.
+
+Example:
+
+
+>Hello {doc/KEP owners} 👋! I'm reaching out from the Docs team.
+Just checking in as we approach **Docs Freeze on {date with timezone}**.
+This documentation appears to still be under review. To meet the Docs Freeze, this PR must have a technical review as well as `lgtm` and `approve` labels applied, without any unaddressed comments or concerns from SIG Docs. 
+The status of this enhancement is marked as `at risk for docs freeze`. Thank you!
+
+
+#### After Docs Freeze
+
+Once Docs Freeze has passed, if there are any docs PRs not marked "ready to merge," reach out in the PR with the following:
+
+>Hello 👋, {current release} Docs team here.
+This PR did not meet deadline for [docs freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#docs-freeze).
+Enhancements without required documentation may be removed from the current release. If you still wish to include this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request. Thanks!
 
 ### Reach out to release notes team
 Reach out to release notes team to see if there's anything that might need docs that isn't already clearly known, e.g:
@@ -519,53 +551,9 @@ Be congnizant of the status of the release blog post as merging and publishing t
 
 ## Late Steps (Weeks 9-11) - Prep for the release
 
-The Docs Lead is responsible for updating the Kubernetes API reference, kubectl, and components documentation.
-If you need help in building the reference documentation, reach out on Slack #sig-docs.
+### Touch base with SIG Docs
 
-### Generate the reference documentation
-
-> Note: For 1.20 and 1.21, the Docs team needed assistance from SIG Docs to generate the reference documentation 
-
-The first step is to familiarize yourself with the `website/updated-imported-docs/update-imported-docs.py` script
-and the instructions for ([Generating Reference Pages for Kubernetes Components and Tools](https://kubernetes.io/docs/contribute/generate-ref-docs/quickstart/)).
-
-The reference documentation build depends upon a valid [release tag](https://github.com/kubernetes/kubernetes/tags).
-When a Kubernetes release candidate version tag such as `v1.21-rc.0` is created, you can consider building
-the reference documentation. Next:
-
-- Create a branch for this work based off of the `dev-[future release]` branch.
-```
-git checkout dev-[future-release]
-git fetch upstream dev-[future-release]
-git rebase upstream/dev-[future-release]
-git checkout -b dev-[future-release]-ref-doc
-```
-- Run the `update-imported-docs.py` script providing the build configuration file (`reference.yml`) and the release tag.
-```
-cd website/update-imported-docs/
-python update-imported-docs.py reference.yml 1.20.0-rc.0
-```
-
-- Commit the generated files.
-```
-git add .
-git commit -m "Generate reference doc for [release tag]"
-git push --set-upstream origin dev-[future-release]-ref-doc
-```
-
-You can expect to maintain this branch with periodic updates to the reference documentation using the latest `rc` tag.
-Merge your branch `dev-[future-release]-ref-doc` to the `dev-[future release]` branch just before the final release.
-
-If the content has changed since the last build of the reference documentation, when the release is complete, you should
-build the reference documentation again using the final release tag and merge to the `main` branch.
-
-Note: You should not have to build the reference documentation for every release candidate version.
-
-In 1.20, there is a new API reference doc generation proccess.
-SIG Docs has generated the API reference docs for 1.20 and [1.21](https://github.com/kubernetes/website/pull/26413).
-Starting with the 1.22 release, follow the [building the API reference page instructions](https://github.com/kubernetes/website/blob/master/README.md#building-the-api-reference-pages) in the k/website README.md and in the [README of the generator](https://github.com/kubernetes-sigs/reference-docs/blob/master/gen-resourcesdocs/README.md).
-Refer to the [1.21 PR for more context](https://github.com/kubernetes/website/pull/26413#issuecomment-811040665).
-> Ask for assistance from SIG Docs to generate teh API reference docs
+The Kubernetes API reference, kubectl, and components documentation are generated by a SIG Docs tech lead. Check in with SIG Docs with a brief reminder, and confirm that they have everything they need to generate these docs.
 
 ### Touch base with SIG Cluster Lifecycle (kubeadm)
 
@@ -575,7 +563,7 @@ Validate that SIG Cluster Lifecycle has all of the docs in place for the upcomin
 
 ### Update Releases Page (the week before the release)
 
-Create a PR against the dev-[future-release] branch to add an entry for [future-release] on https://kubernetes.io/releases and add a section for [future-release] on https://kubernetes.io/releases/patch-releases.
+Create a PR against the dev-[future-release] branch to add an entry for [future-release] on https://kubernetes.io/releases.
 
 To update https://kubernetes.io/releases, update https://github.com/kubernetes/website/blob/main/data/releases/schedule.yaml.
 The following fields are required:
@@ -584,12 +572,10 @@ The following fields are required:
   - `next`: <1.xy.1>
   - `cherryPickDeadline`: <YYYY-MM-DD> # the Friday before `targetDate`
   - `targetDate`: <YYYY-MM-DD> # the 2nd Wednesday of the next month
+  - `maintenanceModeStartDate`: # 2 months before `endOfLifeDate`
   - `endOfLifeDate`: <YYYY-MM-DD> # the 28th of the month after 1 year and 2 months after the release
 
-To update https://kubernetes.io/releases/patch-releases, update https://github.com/kubernetes/website/blob/main/content/en/releases/patch-releases.md.
-Add a subsection for [future-release] under `Detailed Release History for Active Branches` using the existing subsections as an example.
-
-[Example PR for 1.25](https://github.com/kubernetes/website/pull/36174)
+[Example PR for 1.29](https://github.com/kubernetes/website/pull/44135)
 Have a Release Manager lgtm the dates on the PR.
 This PR can be merged on release day by the Docs lead.
 
@@ -598,36 +584,50 @@ This PR can be merged on release day by the Docs lead.
 
 ### Update the site configuration files for previous releases
 
-Update the `config.toml` files for the 4 previous releases. You need to open 4 separate PRs, because each release has its own `release-` branch.
-You may need to change `hugo.toml`, instead of `config.toml`, starting from the 1.26 release.
-There would not be a `release-[previous-release]` branch, so you should make the pull request updating the site configuration
-for the previous release targeting `main`, and once you create the `release-[previous-release]` branch you should then change the
-base branch for the pull request to `release-[previous-release]`.
-Use [path release](https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md) to determine the
-correct patch version of the past release when updating the `config.toml` or `hugo.toml` (starting for 1.26) file.
+Working from your fork of the `kubernetes/website` repository, update the `config.toml` files for the 4 previous releases. You need to open 4 separate PRs, because each release has its own `release-` branch.
 
-See this for example (1.21 was the "future release"):
-* 1.17 https://github.com/kubernetes/website/pull/27451
-* 1.18 https://github.com/kubernetes/website/pull/27453
-* 1.19 https://github.com/kubernetes/website/pull/27454
-* 1.20 https://github.com/kubernetes/website/pull/27455
+For the immediately previous release, there will not be a `release-[previous-release]` branch, so you should open the pull request updating the site configuration for the previous release targeting `main` and update the base branch to `release-[previous-release]` once you have created the `release-[previous-release]` branch.
 
-Sample about update release 1.25-config.toml for the future release 1.26. Here the [PR](https://github.com/kubernetes/website/pull/38344)
-
-```
-git checkout release-1.25
-git checkout -b update-release-1.25-config.toml
-git add .
-git commit -m " update release-1.25 config.toml for release 1.26"
-git push origin update-release-1.25-config.toml
-```
+See this for example (1.29 was the "future release"):
+* 1.25 https://github.com/kubernetes/website/pull/44302
+* 1.26 https://github.com/kubernetes/website/pull/44301
+* 1.27 https://github.com/kubernetes/website/pull/44299
+* 1.28 https://github.com/kubernetes/website/pull/44298
 
 Changes required:
 - Set `latest` to the [future release] version
-- Update `fullversion` and `githubbranch` to the latest patched version of the corresponding release
+- Update `githubbranch` and `fullversion` (if present) to the latest patched version of the corresponding release
 - Update the list of versions to include the [future release] and remove the oldest release
 - Set `deprecated` to `true`
 - For each previous release, update the patch version to the latest patch version available
+
+Here is an example of the steps taken to update the release 1.28 config.toml for the future release 1.29, as well as the [PR](https://github.com/kubernetes/website/pull/44298)
+
+```shell
+git remote add upstream https://github.com/kubernetes/website.git && git remote set-url --push upstream no_push
+git fetch upstream main
+git pull --ff-only
+# make necessary updates to hugo.toml at this point
+git checkout -b update-release-1.28-hugo.toml
+git add .
+git commit -m "Updates v1.28 hugo.toml for release v1.29"
+git push origin update-release-1.28-hugo.toml
+Go to your fork in a browser: https://www.github.com/{YOUR_USER}/website
+Submit a PR against upstream `main` from your fork's branch `update-release-[previous-release]-hugo.toml`. The day before the release, once you have created the `release-[previous-release]` branch, change the base branch for this PR from `main` to `release-[previous-release]`
+```
+
+Here is an example of the steps taken to update the release 1.27 config.toml for the future release v1.29, as well as the [PR](https://github.com/kubernetes/website/pull/44299)
+
+```shell
+git fetch upstream release-1.27
+git checkout --track upstream/release-1.27
+# make necessary updates to hugo.toml at this point
+git checkout -b update-release-1.27-hugo.toml
+git add .
+git commit -m "Updates v1.27 hugo.toml for release v1.29"
+git push origin update-release-1.27-hugo.toml
+In this case, a PR is submitted against `release-1.27` from the fork's branch `update-release-1.27-hugo.toml`. 
+```
 
 ⚠️  DO NOT MERGE **ANY** OF THE CONFIGURATION PULL REQUESTS UNTIL THE RELEASE HAS OCCURRED
 
@@ -666,7 +666,8 @@ git remote set-url --push upstream no_push
 
 24 hours before the release, freeze the [k/website](https://github.com/kubernetes/website) repo: ⚠️  no PRs should be allowed to merge **AT ALL** until the release PR has successfully merged. There is an exception for your release PRs, which will bypass that restriction.
 
-- Submit an issue with `tide/merge-blocker` label. Depending upon your permissions, a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with adding the label.
+- Submit an issue with `tide/merge-blocker` label. Depending upon your permissions, a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with adding the label. You may need to add the label manually by selecting the gear icon in the labels section on the left-hand side of the issue after you have opened it, rather than using a `tide` command.
+
 - Submit a freeze announcement following our [protocols](#communicate-major-deadlines) to #sig-docs and #kubernetes-contributors
 
 #### Create the release branch
@@ -681,11 +682,13 @@ Creating the release branch lets you snapshot the current docs in a new branch, 
 
 ![](pics/new-branch.png)
 
+> **Note:** During the v1.29 release process, it was discovered that someone during the v1.28 release cycle had erroneously created and abandoned a `release-1.28` branch. This left the v1.29 Docs team with a release branch that was 2,330 commits behind `main`, rendering it unusuable as a release branch. Should this issue arise again, any repo admin or org admin has the necessary permissions to delete the branch. Reach out to the [SIG Docs chairs](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) to obtain their agreement that deletion is necessary. You may also be able to simply fast-forward the branch.
+
 #### Update Netlify
 
-Update the Netlify configuration. (A [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) can assist you with access):
+Update the Netlify configuration. You will need to work with a [SIG Docs chair](https://github.com/kubernetes/community/tree/master/sig-docs#leadership) to have them complete this task for you.
 
-Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
+Log in to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
 - Create a Netlify site that builds from `release-[current-release]` branch. Even though the `[current-release]` is currently `main` (e.g: https://kubernetes.io), eventually `main` will be a newer k8s version and we'll use the `release-[current-release]` branch to contain all prior changes - like a snapshot. (e.g https://v1-20.docs.kubernetes.io)
   - Taking the defaults here is mostly fine
@@ -693,10 +696,9 @@ Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
   - e.g, site name: k8s-v1-20
   - e.g, custom domain: v1-20.docs.kubernetes.io
 
-> Note: if the `release-[current-branch]` is created before the website is frozen you may need to merge in main to keep up-to-date
-> If you create the `release-[current-branch]` right before freezing the k/website repo, it is less likely you need to keep the `release-[current-branch] up-to-date but always verify with the following steps:
-
-To merge `main` into `release-[current release]` on your local fork:
+> Note: if the `release-[current-release]` is created before the website is frozen you may need to merge in main to keep up-to-date
+> If you create the `release-[current-release]` right before freezing the k/website repo, it is less likely you need to keep the `release-[current-release]` up-to-date but always verify with the following steps:
+To merge `main` into `release-[current-release]` on your local fork:
 
 ```shell
 # Step 0 (if you don't already have a remote called "upstream")
@@ -717,7 +719,7 @@ git push origin merged-main-release-[current release]
 
 Now create a pull request to merge the new branch you've made into the `release-[current-release]` branch on [k/website](https://github.com/kubernetes/website).
 
-> Note: Make a note of the commit hash of the last commit of the `release-current-release]` branch as it will be used to tag the commit as the last commit of as the final commit for the snapshot.
+> Note: Make a note of the commit hash of the last commit of the `release-current-release]` branch as it will be used to tag the commit as the final commit for the snapshot.
 
 #### Merge `main`
 
@@ -883,9 +885,9 @@ Create a milestone for NEW upcoming release. Depending on your permissions, you 
 
 ### Update Netlify
 
-Update Netlify (contact a [SIG Docs Chair or Technical Lead](https://git.k8s.io/community/sig-docs#leadership) if you do not have access and they can assist with this):
+You will need to work with a [SIG Docs Chair or Technical Lead](https://git.k8s.io/community/sig-docs#leadership) to have them complete this task for you.
 
-Login to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
+Log in to [Netlify](https://app.netlify.com/) and navigate to the Sites tab.
 
 - Clean Up
   - Delete the oldest docs site (usually a deprecated version 5+ releases ago)
@@ -906,7 +908,7 @@ Announce that `[dev-future FUTURE release]` branch is open for new feature docs 
 ### Reassign issues
 
 - Clean Up
-⚠️  Assign any issues / feature / PRs (that missed the release) to the new Docs Lead
+⚠️  Assign any issues / features / PRs (that missed the release) to the new Docs Lead
 
 ### Clean up access
 

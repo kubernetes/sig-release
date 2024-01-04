@@ -143,6 +143,12 @@ For documentation PRs:
 than basing from master. **Be sure to open your PR against the release branch**.
 * Add your PR to the current Release milestone.
 
+## Docs Freeze
+
+All enhancements that are determined to require documentation must have their docs PRs in a `ready to merge` state by the Docs Freeze deadline for the release. To be considered ready to merge, a PR must have a technical review as well as the `lgtm` and `approve` labels applied, with no outstanding comments or suggestions from SIG Docs.
+
+After Docs Freeze, the owners of any outstanding documentation PRs must file an exception request. The release team will work with SIG Docs and the SIG or SIGs labeled in the pull request to determine whether or not an exception can be granted. Authors and reviewers should prioritize getting the PR into a state where it is accurate and useful enough to be merged even if it isn't perfect, and then open a separate PR to continue work on that documentation post-release. 
+
 [kubernetes/website]: https://github.com/kubernetes/website
 [Kubernetes Release Calendar]: https://bit.ly/k8s-release-cal
 [Exception]: ./EXCEPTIONS.md
