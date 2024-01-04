@@ -147,7 +147,7 @@ _Note:_ SIG Docs prefers and welcomes a status of yellow or red on anything that
 
 [ ] Has the weekly branch sync been done? (a lapse in 1-2 branch syncs indicates 'yellow' status, 3 or more lapses should be deemed red)
 
-[ ] Has the PR for the weekly branch sync merged or needs review? If assistance is needed to resolve merge conflicts, please flag others by communicating on the #release-docs Slack channel
+[ ] Has the PR for the weekly branch sync merged or does it need review? If assistance is needed to resolve merge conflicts, please flag others by communicating on the #release-docs Slack channel
 
 [ ] A week before the Docs PR Placeholder deadline, have 80% of the enhancements that opted in for docs created a placeholder PR? (anything below 60% opt-in for docs where placeholder PRs are needed should indicate yellow (or red) status, contingent on the amount)
 
