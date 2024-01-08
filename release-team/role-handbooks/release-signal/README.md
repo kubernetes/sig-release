@@ -30,6 +30,7 @@
     * [A Tour of CI on the Kubernetes Project](#a-tour-of-ci-on-the-kubernetes-project)
     * [How to Escalate](#how-to-escalate)
     * [Checking test dashboards](#checking-test-dashboards)
+    * [Finding a Flaky Test](#finding-a-flaky-test)
     * [Priority Labels](#priority-labels)
     * [Milestones](#milestones)
 <!-- TOC -->
@@ -383,7 +384,7 @@ For all opened issues:
 - If you are aware of the individual associated with the enhancement area or issue, @mention of the individual(s) and SIG leads
   tends to result in a faster turnaround.
 - Add `@kubernetes/sig-foo-test-failures` to draw SIG-foo's attention to the issue.
-- `/cc @kubernetes/ci-signal` Github team on the issue to let the rest of the team know about it. You might also `/cc` the release
+- `/cc @kubernetes/release-team-release-signal` Github team on the issue to let the rest of the team know about it. You might also `/cc` the release
   lead if the issue needs extra attention immediately.
 - Assign the issue to yourself or recruit another member of the Release Signal team to own the issue. The Release Signal team
   member assigned to an issue is responsible for driving it to resolution alongside the assignee from the appropriate SIG.
