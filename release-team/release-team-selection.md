@@ -62,7 +62,7 @@ Bear in mind that these are suggestions based on precedent and a Release Team Le
 
 #### Selection Process
 
-At least 2 weeks before the new release cycle begins, the EA is responsible for
+At least 2 weeks before the end of the current release cycle, the EA is responsible for
 posting the "Assemble the X.Y Release Team" issue in the SIG Release repo
 ([example](https://github.com/kubernetes/sig-release/issues/776)). Before doing
 that, it's required to reach consensus with all [SIG Release Leads](https://git.k8s.io/community/sig-release/#leadership)
