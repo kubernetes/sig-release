@@ -44,16 +44,32 @@ Most importantly, strive for diversity in:
 
 ### Release Team Lead
 
-The incoming Release Team Lead _MUST_ have participated on the Release Team for two or more release cycles, acting in a lead (non-shadow) or Release Team Lead shadow capacity for at least one of those cycles
+Consensus must be reached about the next Release Team Lead (RT Lead) by:
+
+- [SIG Release Leads](https://git.k8s.io/community/sig-release/#leadership)
+- The current Release Team Lead
+- The current Emeritus Advisor
+
+The incoming Release Team Lead _MUST_ have participated on the Release Team for two or more release cycles, acting in a lead (non-shadow) or Release Team Lead shadow capacity for at least one of those cycles.
 
 Release Team Leads should be staffed, with this order of fall-through in mind:
+
 - the current pool of Release Team Lead shadows
 - the current pool of Release Team members
 - former Release Team members
 
 Bear in mind that these are suggestions based on precedent and a Release Team Lead may be nominated by any Release Team member, past or present.
 
-_The new Release Team Lead can be selected via lazy consensus of the current Release Team members._
+#### Selection Process
+
+At least 2 weeks before the end of the current release cycle, the EA is responsible for
+posting the "Assemble the X.Y Release Team" issue in the SIG Release repo
+([example](https://github.com/kubernetes/sig-release/issues/776)). Before doing
+that, it's required to reach consensus with all [SIG Release Leads](https://git.k8s.io/community/sig-release/#leadership)
+about the next Release Team Lead as well as EA, which can be done by using a
+Slack group DM or an email thread to sig-release-leads@kubernetes.io. If consensus has been reached, then the
+proposed Release Team can get nominated directly within that issue. After that,
+the issue can act as a call for nominations/volunteers for the other Role Leads.
 
 ### Release Team Lead Shadow
 

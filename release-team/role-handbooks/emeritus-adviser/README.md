@@ -38,7 +38,7 @@ Due to timing (see below)
 
 Weeks: -2 to 0
 
-At least 2 weeks before the new release cycle begins, the EA is responsible for posting the "Assemble the X.Y Release Team" issue in the SIG-Release repo ([example](https://github.com/kubernetes/sig-release/issues/776)).  They should then make sure that the new Release Lead is officially nominated and chosen, and then issue a call for nominations/volunteers for the other Role Leads.
+Please refer to the [Selection Process within the Release Team Selection documentation](/release-team/release-team-selection.md#selection-process).
 
 ### Lead Onboarding
 
