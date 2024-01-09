@@ -2,7 +2,7 @@
 
 | **Team/Role** | **Lead Name** (**GitHub / Slack ID**) | **Shadow Name(s) (GitHub / Slack ID)** |
 |----------|----------------------------------|----------------------------------------|
-| Release Team Lead | Kat Cosgrve ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) | 
+| Release Team Lead | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) | 
 | Emeritus Adviser | Grace Nguyen ([@gracenng](https://github.com/gracenng) / Slack: `@Grace Nguyen`) | N/A |
 | Enhancements | Mohammad Reza Saleh ([@salehsedghpour](https://github.com/salehsedghpour) / Slack: `@Mohammad Reza Saleh`) | 
 | Release Notes | Rashan Smith ([@rashansmith](https://github.com/rashansmith) / Slack: `@Rashan`) | 
