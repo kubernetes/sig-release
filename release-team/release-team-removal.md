@@ -34,19 +34,19 @@ A role lead has been selected by the previous team lead to supervise, perform th
 and mentor the shadows to be future leads. Failure to perform lead duties can have a lasting impact on the release team.
 Reasons for removal could include but are not limited to:
 - Failure to attend or send appropriate representation to 2 consecutive release meetings or relevant SIG meetings
-- Failure to perform tasks expected of a role lead
+- Failure to perform tasks expected of a Role Lead
 - Unresponsive on Slack to messages for more than 2 days during non-peak time and 24 hours during peak time, without prior notice of absence. Peak time is different depending on team
 - Violation of [CNCF Code of Conduct](http://cncf.io/conduct/)
 
 ### Process
-- SIGs outside of SIG Release, shadows, leads, or contributors can express concern to release lead or EA.
+- SIGs outside of SIG Release, shadows, leads, or contributors can express concern to the Release Lead or EA.
 - The Release Lead and the EA will have an initial discussion with the Role Lead
-- If the situation is not improved, the release lead and EA will have another discussion with role lead and begin to look for a replacement.
-- If deemed necessary by the release lead, EA and sig-release chairs, the role lead will be replaced with an experience shadow or someone who previously led the same role. EA will be responsible for finding backfill
+- If the situation is not improved, the Release Lead and EA will have another discussion with the Role Lead and begin to look for a replacement
+- If deemed necessary by the Release Lead, EA and SIG Release chairs, the Role Lead will be replaced with an experienced shadow or someone who previously led the same role. EA will be responsible for finding backfill
   
 ### Consequences
 - Removal of name in release-team document
 - Role lead will need to shadow again and demonstrate sufficient responsibility, and leading ability, before holding another leadership position on the release team
 
 ## Appeal
-If the release team member disagrees with their removal decision. They can escalate to SIG-Release chairs via private messaging on Slack.
+If the release team member disagrees with their removal decision. They can escalate to SIG-Release chairs by sending an email to sig-release-leads@kubernetes.io.
