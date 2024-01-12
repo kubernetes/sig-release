@@ -8,7 +8,7 @@
 | Release Notes | Rashan Smith ([@rashansmith](https://github.com/rashansmith) / Slack: `@Rashan`) |
 | Communications | Kristin Martin ([@kcmartin](https://github.com/kcmartin) / Slack: `@kcmartin`) |
 | Release Signal | Paco Xu ([@pacoxu](https://github.com/pacoxu) / Slack: `@pacoxu` ) |
-| Docs | Drew Hagen ([@drewhagen](https://github.com/drewhagen) / Slack: `@Drew Hagen`) |
+| Docs | Drew Hagen ([@drewhagen](https://github.com/drewhagen) / Slack: `@Drew Hagen`) | Vyom Yadav ([@Vyom-Yadav](https://github.com/Vyom-Yadav) / Slack: `@Vyom Yadav` ), Daniel Chan ([@chanieljdan](https://github.com/chanieljdan) / Slack : `@dchan`), Oluebube Princess Egbuna ([@Princesso](https://github.com/Princesso) / Slack: `@Bube`), Celeste Hogan ([@celestehorgan](https://github.com/celestehorgan) / Slack: `@Celeste Horgan`) |
 | Branch Manager |  |  |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
