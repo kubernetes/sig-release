@@ -4,7 +4,7 @@
 |---|---|---|
 | Release Team Lead | Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove) / Slack: `@katcosgrove`) |
 | Emeritus Adviser | Grace Nguyen ([@gracenng](https://github.com/gracenng) / Slack: `@Grace Nguyen`) | N/A |
-| Enhancements | Mohammad Reza Saleh ([@salehsedghpour](https://github.com/salehsedghpour) / Slack: `@Mohammad Reza Saleh`) |
+| Enhancements | Mohammad Reza Saleh Sedghpour([@salehsedghpour](https://github.com/salehsedghpour) / Slack: `@Mohammad Reza Saleh`) | Sreeram Venkitesh ([@sreeram-venkitesh](https://github.com/sreeram-venkitesh) / Slack: `@sreeram.venkitesh`),  Nigel Brown ([@pnbrown](https://github.com/pnbrown) / Slack: `@nigel`), Tyler Schade ([@tjons](https://github.com/tjons) / Slack: `@Tyler Schade`), Ana Margarita Medina ([@AnaMMedina21](https://github.com/AnaMMedina21) / Slack: `@Ana Margarita Medina`), Megan Wolf  ([@meganwolf0](https://github.com/meganwolf0) / Slack: `@Megan Wolf`), Mickey Boxell  ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@Mickey`) |
 | Release Notes | Rashan Smith ([@rashansmith](https://github.com/rashansmith) / Slack: `@Rashan`) |
 | Communications | Kristin Martin ([@kcmartin](https://github.com/kcmartin) / Slack: `@kcmartin`) |
 | Release Signal | Paco Xu ([@pacoxu](https://github.com/pacoxu) / Slack: `@pacoxu` ) |
