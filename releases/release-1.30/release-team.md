@@ -7,7 +7,7 @@
 | Enhancements | Mohammad Reza Saleh ([@salehsedghpour](https://github.com/salehsedghpour) / Slack: `@Mohammad Reza Saleh`) |
 | Release Notes | Rashan Smith ([@rashansmith](https://github.com/rashansmith) / Slack: `@Rashan`) |
 | Communications | Kristin Martin ([@kcmartin](https://github.com/kcmartin) / Slack: `@kcmartin`) |
-| Release Signal | Paco Xu ([@pacoxu](https://github.com/pacoxu) / Slack: `@pacoxu` ) |
+| Release Signal | Paco Xu ([@pacoxu](https://github.com/pacoxu) / Slack: `@pacoxu` ) | Anhelina Zelyk ([@zelenushechka](https://github.com/zelenushechka) / Slack: `@Anhelina`), Maryam Tavakkoli ([@MaryamTavakkoli](https://github.com/MaryamTavakkoli) / Slack: `@Maryam Tavakkoli`), Mofi Rahman ([@moficodes](https://github.com/moficodes) / Slack: `@Mofi`), Naman Lakhwani ([@Namanl2001](https://github.com/Namanl2001) / Slack: `Naman Lakhwani`), Subhasmita Swain ([@subhasmitasw](https://github.com/subhasmitasw) / Slack: `@subhasmita`) | 
 | Docs | Drew Hagen ([@drewhagen](https://github.com/drewhagen) / Slack: `@Drew Hagen`) | Vyom Yadav ([@Vyom-Yadav](https://github.com/Vyom-Yadav) / Slack: `@Vyom Yadav` ), Daniel Chan ([@chanieljdan](https://github.com/chanieljdan) / Slack : `@dchan`), Oluebube Princess Egbuna ([@Princesso](https://github.com/Princesso) / Slack: `@Bube`), Celeste Hogan ([@celestehorgan](https://github.com/celestehorgan) / Slack: `@Celeste Horgan`) |
 | Branch Manager |  |  |
 
