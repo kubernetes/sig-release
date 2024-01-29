@@ -14,13 +14,14 @@
 The Kubernetes Release Team is embedded within SIG Release and is responsible for the day to day work required to
 successfully release while the SIG at large is focused on the continued improvement of the release process. Historically
 the Release Manager (previously Release Czar)
-and later Release Team has assumed the following responsibilities
+and later Release Team have assumed the following responsibilities
 - Authority to build and publish releases at the published release date under the auspices of the CNCF
 - Authority to accept or reject cherrypick merge requests to the release branch
 - Authority to accept or reject PRs to the kubernetes/kubernetes master branch during code freeze period
 - Changing the release timeline as needed if keeping it would materially impact the stability or quality of the release
-these responsibilities will continue to be discharged by SIG release through the Release Team. This charter grants SIG 
-Release the following additional responsibilities
+
+These responsibilities will continue to be discharged by SIG release through the Release Team. This charter grants SIG 
+Release the following additional responsibilities:
 - Authority to revert code changes which imperil the ability to produce a release by the communicated date or otherwise 
   negatively impact the quality of the release (e.g. insufficient testing, lack of documentation)
 - Authority to guard code changes behind a feature flag which do not meet criteria for release
