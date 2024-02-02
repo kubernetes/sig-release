@@ -1,0 +1,4 @@
+pr: 122704
+releasenote:
+  text: If a pvc has an empty storageClassName, persistentvolume controller won't
+    try to assign a default StorageClass .

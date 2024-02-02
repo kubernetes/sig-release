@@ -1,0 +1,5 @@
+pr: 122555
+releasenote:
+  text: Introduced a feature gate mechanism to `client-go`. Depending on the actual
+    implementation, users can control features via environmental variables or command
+    line options.

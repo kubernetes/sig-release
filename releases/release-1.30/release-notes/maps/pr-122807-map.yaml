@@ -1,0 +1,4 @@
+pr: 122807
+releasenote:
+  text: "Fixed the following volume plugins may not create user visible files after
+    kubelet was restarted. \n- configmap \n- secret \n- projected\n- downwardapi"

@@ -1,0 +1,4 @@
+pr: 122729
+releasenote:
+  text: Added a rule on the `kube_codegen` tool to ignore vendor folder during the
+    code generation.

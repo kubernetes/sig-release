@@ -1,0 +1,3 @@
+pr: 122914
+releasenote:
+  text: Promoted `KubeProxyDrainingTerminatingNodes` to `Beta`.

@@ -1,0 +1,3 @@
+pr: 122640
+releasenote:
+  text: Printed more information when kubectl describe a VolumeAttributesClass

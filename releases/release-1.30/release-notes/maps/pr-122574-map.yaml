@@ -1,0 +1,4 @@
+pr: 122574
+releasenote:
+  text: Fixed a bug where `kubectl` drain would consider a pod as having been deleted
+    if an error occurs while calling the API.

@@ -1,0 +1,3 @@
+pr: 122225
+releasenote:
+  text: Migrated `client-go/metadata` to contextual logging.
