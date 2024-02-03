@@ -1,0 +1,4 @@
+pr: 119923
+releasenote:
+  text: 'fix: Mount point may become local without calling `NodePublishVolume` after
+    node rebooting.'

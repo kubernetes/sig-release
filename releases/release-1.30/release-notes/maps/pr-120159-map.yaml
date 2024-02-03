@@ -1,0 +1,3 @@
+pr: 120159
+releasenote:
+  text: Fixed delete pod declare no controllor note.

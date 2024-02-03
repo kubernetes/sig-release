@@ -1,0 +1,3 @@
+pr: 122435
+releasenote:
+  text: Improved scheduler performance when no scoring plugins are defined.

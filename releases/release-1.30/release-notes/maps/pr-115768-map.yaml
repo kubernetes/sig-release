@@ -1,0 +1,4 @@
+pr: 115768
+releasenote:
+  text: Implemented  `prescore` extension point for `volumeBinding` plugin. Return
+    skip if it doesn't do anything in Score.

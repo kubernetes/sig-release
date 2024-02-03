@@ -1,0 +1,8 @@
+pr: 121954
+releasenote:
+  text: |-
+    Updated some interfaces' signature in scheduler:
+
+    1. PluginsRunner: used NodeInfo in `RunPreScorePlugins` and `RunScorePlugins`.
+    2. PreScorePlugin: used NodeInfo in `PreScore`.
+    3. Extender: used NodeInfo in `Filter` and `Prioritize`.

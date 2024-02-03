@@ -1,0 +1,3 @@
+pr: 121834
+releasenote:
+  text: Added `imagefs.inodesfree` to default `EvictionHard` settings.

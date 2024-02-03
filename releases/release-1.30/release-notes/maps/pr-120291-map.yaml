@@ -1,0 +1,5 @@
+pr: 120291
+releasenote:
+  text: Fixed Windows credential provider, cannot find binary. Windows credential
+    provider binary path may have ".exe" suffix so it is better to use `LookPath()`
+    to support it flexibly.

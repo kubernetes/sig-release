@@ -1,0 +1,4 @@
+pr: 122023
+releasenote:
+  text: Added `exec-interactive-mode` and `exec-provide-cluster-info` flags in kubectl
+    config set-credentials command.

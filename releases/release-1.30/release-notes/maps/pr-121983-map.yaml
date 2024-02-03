@@ -1,0 +1,3 @@
+pr: 121983
+releasenote:
+  text: 'cleanup: removed getStorageAccountName warning messages'

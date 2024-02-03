@@ -1,0 +1,3 @@
+pr: 122339
+releasenote:
+  text: Added warning for `PV` on reclaim policy when it is `Recycle` .

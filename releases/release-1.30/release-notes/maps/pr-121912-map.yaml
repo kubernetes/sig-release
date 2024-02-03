@@ -1,0 +1,4 @@
+pr: 121912
+releasenote:
+  text: Added `CEL` library for IP Addresses and CIDRs. This will not be available
+    for use until 1.31.

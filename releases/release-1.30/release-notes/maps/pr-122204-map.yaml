@@ -1,0 +1,7 @@
+pr: 122204
+releasenote:
+  text: |-
+    Fixed a race condition in the iptables mode of kube-proxy in `1.27` and later
+    that could result in some updates getting lost (e.g., when a service gets a
+    new endpoint, the rules for the new endpoint might not be added until
+    much later).
