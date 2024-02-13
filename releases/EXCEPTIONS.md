@@ -6,6 +6,8 @@ While the enhancement complete milestone dates are published well in advance, an
 
 Note that the exception process only applies to enhancements, not bugs managed by the Bugs Triage team.
 
+If you have questions about the status of your enhancement, including the reasons for its removal from the milestone, please reach out to the enhancements lead in the `#release-enhancements` channel on Slack.  Some trivial "clerical errors", such as forgetting the set the milestone, can be remedied without a formal exception.
+
 ## Exception Criteria
 
 Exceptions will be granted on the basis of *risk*, *length of exception required*, and *timeliness of exception request*.
