@@ -12,6 +12,7 @@
       - [Release tooling](#release-tooling)
       - [Google Cloud SDK](#google-cloud-sdk)
       - [Sending mail](#sending-mail)
+        - [Mailing List Permissions](#mailing-list-permissions)
       - [Skopeo](#skopeo)
   - [Releases Management](#releases-management)
     - [Creating and managing the Release Issue](#creating-and-managing-the-release-issue)
@@ -191,6 +192,11 @@ See the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release
 [release tools]: https://github.com/kubernetes/release#tools
 [kubernetes/release]: https://github.com/kubernetes/release
 [sendgrid-identity-verification]: https://sendgrid.com/docs/for-developers/sending-email/sender-identity/
+
+##### Mailing List Permissions
+
+Permissions to send mail to the [kubernetes-announce](https://groups.google.com/g/kubernetes-announce) are managed in Google Groups. To request access please reach out to the [list owners](https://groups.google.com/g/kubernetes-announce/members?q=role%3Aowner) in slack.
+This is only needed if you plan on sending mails manually (not through sendgrid).
 
 #### Skopeo
 
