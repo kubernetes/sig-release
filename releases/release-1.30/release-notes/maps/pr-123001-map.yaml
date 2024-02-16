@@ -1,0 +1,3 @@
+pr: 123001
+releasenote:
+  text: The PriorityLevelConfiguration object now allows a zero value for the `nominalConcurrencyShares` field in both the `flowcontrol.apiserver.k8s.io/v1` and `flowcontrol.apiserver.k8s.io/v1beta3` APIs.

@@ -1,0 +1,4 @@
+pr: 123117
+releasenote:
+  text: Fixed a bug where registered wildcard cluster event sources didn't work in
+    scheduler requeueing.

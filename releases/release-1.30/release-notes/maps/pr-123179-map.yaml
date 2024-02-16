@@ -1,0 +1,9 @@
+pr: 123179
+releasenote:
+  text: |-
+    Added a new metric `apiserver_encryption_config_controller_automatic_reloads_total` 
+    to measure total number of API server encryption configuration reload successes and failures. 
+    This metric contains the `status` label with a value that is either `success` or `failure`.
+    Deprecated the metrics `apiserver_encryption_config_controller_automatic_reload_success_total`
+    and `apiserver_encryption_config_controller_automatic_reload_failure_total`. 
+    Use `apiserver_encryption_config_controller_automatic_reloads_total` instead.

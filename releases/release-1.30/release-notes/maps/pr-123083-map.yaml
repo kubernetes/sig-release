@@ -1,0 +1,4 @@
+pr: 123083
+releasenote:
+  text: '`ValidatingAdmissionPolicy` now supports type checking policies that make
+    use of `variables`.'
