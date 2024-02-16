@@ -3,6 +3,10 @@
 approvers:
     - katcosgrove          # 1.30 Release Team Lead
     - gracenng             # 1.30 Emeritus Advisor
+    - fsmunoz              # 1.30 RT Lead Shadow
+    - ramrodo              # 1.30 RT Lead Shadow
+    - sanchita-07          # 1.30 RT Lead Shadow
+    - neoaggelos           # 1.30 RT Lead Shadow
 
 reviewers:
     - rashansmith    # 1.30 Release Notes Lead
