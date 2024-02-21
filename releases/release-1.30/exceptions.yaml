@@ -1,0 +1,65 @@
+# Exception requests in 1.30
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Kat Cosgrove ([@katcosgrove](https://github.com/katcosgrove))
+# Release Team Shadows : Frederico Muñoz ([@fsmunoz](https://github.com/fsmunoz))
+# / Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos))
+# / Rodolfo Martinez Vega ([@ramrodo](https://github.com/ramrodo))
+# / Sanchita Mishra ([@sanchita-07](https://github.com/sanchita-07))
+ 
+# Enhancements Freeze Exceptions requested in 1.30
+
+enhancementFreeze:
+
+- name: "A Static Policy Option to spread hyperthreads across physical CPUs"
+  issue: 4176
+  date_requested: 2024-02-09
+  date_reviewed: 2024-02-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/-HDkmBYCKD4"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4177"
+  status: "approved"
+
+- name: "ClusterTrustBundles (previously Trust Anchor Sets)"
+  issue: 3257
+  date_requested: 2024-02-09
+  date_reviewed: 2024-02-09
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/VHJfrgYsy1c"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4512"
+  status: "approved"
+
+- name: "CEL-based admission webhook match conditions"
+  issue: 3716
+  date_requested: 2024-02-10
+  date_reviewed: 2024-02-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/jMljzaNwuY4"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4513"
+  status: "approved"
+
+- name: "Contextual logging"
+  issue: 3077
+  date_requested: 2024-02-13
+  date_reviewed: 2024-02-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/h0umhvLuH-E"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4519"
+  status: "approved"
+
+- name: "client-go: Add informer metrics"
+  issue: 4346
+  date_requested: 2024-02-09
+  date_reviewed: 2024-02-12
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/kLlFRgSr5uY"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4518"
+  status: "approved"
+
+- name: "Make Kubernetes aware of the LoadBalancer behaviour"
+  issue: 1860
+  date_requested: 2024-02-19
+  date_reviewed: 2024-02-20
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/QtG4XG5SPMM"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4509"
+  status: "approved"
