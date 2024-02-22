@@ -1,0 +1,3 @@
+pr: 122477
+releasenote:
+  text: `kubeadm completion` error message now displays supported shell types when an invalid shell was specified.

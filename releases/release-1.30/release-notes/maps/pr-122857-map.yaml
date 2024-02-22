@@ -1,0 +1,5 @@
+pr: 122857
+releasenote:
+  text: The in-tree cloud provider for Azure has now been removed. Please use the
+    external cloud provider and CSI driver from https://github.com/kubernetes/cloud-provider-azure
+    instead.

@@ -1,0 +1,3 @@
+pr: 122635
+releasenote:
+  text: Promoted feature-gate `LegacyServiceAccountTokenCleanUp` to GA and locked it to default.

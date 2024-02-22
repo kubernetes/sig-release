@@ -1,0 +1,4 @@
+pr: 123171
+releasenote:
+  text: 'kubeadm: the `kubelet-finalize` phase of `kubeadm init` no longer requires the kubelet
+    kubeconfig to have a specific authinfo.'

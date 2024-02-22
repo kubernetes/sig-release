@@ -1,0 +1,4 @@
+pr: 122618
+releasenote:
+  text: '`kubectl describe`: added Suspend to job, and Node-Selectors and Tolerations
+    to pod template output.'

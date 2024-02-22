@@ -1,0 +1,6 @@
+pr: 122612
+releasenote:
+  text: Removed the `SecurityContextDeny` admission plugin, deprecated since `v1.27`.
+    The Pod Security Admission plugin, available since v1.25, is recommended instead.
+    See https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#securitycontextdeny
+    for more information.

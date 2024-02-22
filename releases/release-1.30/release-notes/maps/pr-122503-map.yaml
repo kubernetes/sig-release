@@ -1,0 +1,3 @@
+pr: 122503
+releasenote:
+  text: Scheduler extender `ignorable` option now handles errors for both filter and bind phases.
