@@ -1,0 +1,6 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - release-signal-role
+reviewers:
+  - release-signal-role

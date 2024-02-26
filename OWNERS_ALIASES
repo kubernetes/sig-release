@@ -45,6 +45,12 @@ aliases:
     - leonardpahlke # Kubernetes 1.26 Release Lead
     - Priyankasaggu11929 # Kubernetes 1.29 Release Lead
     - salaxander # Kubernetes 1.27 Release Lead
+  release-signal-role:
+    - Vyom-Yadav # 1.29 CI Signal Lead
+    - pacoxu # 1.30 Release Signal Lead
+    - mehabhalodiya # 1.28 CI Signal Lead
+    - furkatgofurov7 # 1.28 Bug Triage Lead
+    - hailkomputer # 1.29 Bug Triage Lead
   ci-signal-role:
     - lauralorenz # 1.27
     - mehabhalodiya # 1.28
