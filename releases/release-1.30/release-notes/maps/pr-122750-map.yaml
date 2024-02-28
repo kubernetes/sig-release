@@ -1,3 +1,3 @@
 pr: 122750
 releasenote:
-  text: Added `process_start_time_seconds` to `/metrics/slis` endpoint of all components.
+  text: Added `process_start_time_seconds` to /metrics/slis endpoint of all components

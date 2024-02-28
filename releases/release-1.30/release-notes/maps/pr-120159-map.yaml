@@ -1,3 +1,3 @@
 pr: 120159
 releasenote:
-  text: Modified the error message of `unmanagedFatal` to enhance clarity while preserving grammatical consistency with `unmanagedWarning`. This improvement ensures a more understandable prompt for users.
+  text: Fixed delete pod declare no controllor note.

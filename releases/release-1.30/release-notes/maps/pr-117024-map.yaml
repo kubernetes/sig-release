@@ -1,6 +1,6 @@
 pr: 117024
 releasenote:
-  text: Scheduler skips `NodeAffinity Score` plugin when `NodeAffinity Score` plugin
-    has nothing to do with a Pod. You might notice an increase in the metric `plugin_execution_duration_seconds`
+  text: "Scheduler skips NodeAffinity Score plugin when NodeAffinity Score plugin
+    has nothing to do \nwith a Pod. You might notice an increase in the metric `plugin_execution_duration_seconds`
     for `extension_point=score` `plugin=NodeAffinity`, because the plugin will only
-    run when the plugin is relevant.
+    run when the plugin is relevant."

@@ -1,3 +1,3 @@
 pr: 122614
 releasenote:
-  text: 'kube-proxy: fixed `LoadBalancerSourceRanges` not working for `nftables` mode'.
+  text: 'kube-proxy: fixed `LoadBalancerSourceRanges` not working for nftables mode'

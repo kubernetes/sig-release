@@ -1,4 +1,4 @@
 pr: 122697
 releasenote:
-  text: Reverted the `EventedPLEG` feature (beta, but disabled by default) back to
-    alpha for a known issue.
+  text: Reverted the EventedPLEG feature (beta, but disabled by default) back to alpha
+    for a known issue.

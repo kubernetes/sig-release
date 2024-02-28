@@ -1,5 +1,5 @@
 pr: 122508
 releasenote:
-  text: Removed wrong warning event `FileSystemResizeFailed` during a pod creation
+  text: Removed wrong warning event (FileSystemResizeFailed) during a pod creation
     if it uses a readonly volume and the capacity of the volume is greater or equal
     to its request storage.
