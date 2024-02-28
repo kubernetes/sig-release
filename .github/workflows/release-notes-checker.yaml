@@ -1,0 +1,56 @@
+---
+name: Pull Request
+on:
+  pull_request:
+    paths:
+      - releases/**/release-notes/**
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+  merge_group: {}
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  spellcheck:
+    name: Release Notes Checks 👀
+    runs-on: ubuntu-22.04
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: Cancel Previous Actions
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40.2.0
+      # Spellcheck
+      - name: Codespell
+        uses: codespell-project/actions-codespell@v2
+        continue-on-error: true
+        with:
+          ignore_words_file: dictionary.txt
+          path: ${{ steps.changed-files.outputs.all_changed_files }}
+          skip: "releases/release-1.30/release-notes/release-notes-draft.json,releases/release-1.30/release-notes/release-notes-draft.md"
+      # Yaml lint
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yamllint
+      - name: Run yaml check
+        run: |
+          yamllint --strict releases/**/release-notes || true # TODO: break into separate jobs
+      # Tense analysis
+      - name: Run Tense Checks
+        run: |
+          # TODO: only run on changed files
+          pip install nltk
+          python .github/workflows/check-tense.py releases/release-1.30/release-notes/maps || true
+      # Check punctionation
+      - name:  Run Punctionation Check
+        run: |
+          python .github/workflows/check-period.py releases/release-1.30/release-notes/maps || true
