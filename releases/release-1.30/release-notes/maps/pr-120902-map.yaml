@@ -1,0 +1,4 @@
+pr: 120902
+releasenote:
+  text: 'Added an optimization to reduce stack memory usage for watch requests. It 
+  can be disabled with the feature gate: `APIServingWithRoutine=false`'

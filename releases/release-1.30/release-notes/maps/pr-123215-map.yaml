@@ -1,0 +1,3 @@
+pr: 123215
+releasenote:
+  text: 'Graduated "Forensic Container Checkpointing" (KEP #2008) from Alpha to Beta.'

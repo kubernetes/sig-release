@@ -1,0 +1,4 @@
+pr: 122883
+releasenote:
+  text: Fixed bug where health check could pass while APIServices are missing from
+    aggregated discovery.

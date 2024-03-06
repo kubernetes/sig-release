@@ -1,0 +1,4 @@
+pr: 123343
+releasenote:
+  text: Updated ImageGCMaxAge behavior in the kubelet to wait the MaxAge duration
+    after the kubelet has restarted before garbage collecting

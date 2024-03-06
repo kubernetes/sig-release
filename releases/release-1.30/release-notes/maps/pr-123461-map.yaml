@@ -1,0 +1,5 @@
+pr: 123461
+releasenote:
+  text: 'kubeadm: in the new output API "output.kubeadm.k8s.io/v1alpha3" modified
+    the UpgradePlan structure that is used when calling "kubeadm upgrade plan ...
+    -o yaml|json", to include a list of multiple available upgrades.'

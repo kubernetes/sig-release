@@ -1,0 +1,7 @@
+pr: 114301
+releasenote:
+  text: Enabled a mechanism for concurrent log rotatation via `kubelet` using a configuration
+    entity of `containerLogMaxWorkers` which controls the maximum number of concurrent
+    rotation that can be performed and an interval configuration of `containerLogMonitorInterval`
+    that can aid in configuring the monitoring duration to best suite your cluster's
+    log generation standards.

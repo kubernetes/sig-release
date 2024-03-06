@@ -1,0 +1,6 @@
+pr: 123464
+releasenote:
+  text: 'kubeadm: the `bridge-nf-call-iptables=1` and `bridge-nf-call-ip6tables=1`
+    preflight checks are removed since not all the network implementations require
+    this setting, network plugins are responsible for setting this correctly depending
+    on whether or not they connect containers to Linux bridges or use some other mechanism.'

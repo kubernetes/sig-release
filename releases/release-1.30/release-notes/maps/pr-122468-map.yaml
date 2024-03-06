@@ -1,3 +1,3 @@
 pr: 122468
 releasenote:
-  text: Removed GA featuregate `RemoveSelfLink`.
+  text: Removed GA feature gate `RemoveSelfLink`.

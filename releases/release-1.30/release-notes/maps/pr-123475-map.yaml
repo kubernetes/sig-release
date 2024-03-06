@@ -1,0 +1,5 @@
+pr: 123475
+releasenote:
+  text: Fixed bug where providing a FieldPath to a CRD Validation Rule would erroneously
+    affect the reported field path of other unrelated CRD Validation Rules on the
+    same schema.

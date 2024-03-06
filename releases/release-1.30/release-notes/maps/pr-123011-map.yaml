@@ -1,0 +1,5 @@
+pr: 123011
+releasenote:
+  text: Setting `--cidr-allocator-type` to `CloudAllocator` for `kube-controller-manager`
+    will be removed in a future release. Please switch to and explore the options
+    available in your external cloud provider.

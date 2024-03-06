@@ -1,0 +1,3 @@
+pr: 121778
+releasenote:
+  text: Added kubelet metrics to track the memory manager allocation and pinning.
