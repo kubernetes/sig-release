@@ -12,7 +12,7 @@ Legend:
 
 ### Minor version scheme and timeline
 
-- X.Y.0-{alpha,beta}.W, W > 0 (Branch: master)
+- X.Y.0-{alpha,beta}.W, W >= 0 (Branch: master)
   - Alpha and beta releases are created roughly every two weeks directly from
     the master branch.
   - Depending on the release schedule progress, the release team decides when to
