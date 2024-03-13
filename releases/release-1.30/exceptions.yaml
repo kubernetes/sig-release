@@ -63,3 +63,89 @@ enhancementFreeze:
   pull_requests:
     - "https://github.com/kubernetes/enhancements/pull/4509"
   status: "approved"
+
+# Code Freeze Exceptions requested in 1.30
+codeFreeze:
+
+- name: "Move Storage Version Migrator in-tree"
+  issue: 4192
+  date_requested: 2024-02-29
+  date_reviewed: 2024-03-05
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/1bqjH6lYlJc/m/C8JCnsx7AgAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/123344"
+  status: "approved"
+
+- name: "AppArmor support"
+  issue: 24
+  date_requested: 2024-03-06
+  date_reviewed: 2024-03-06
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/yphnn5acQRE/m/Jar4yEFsAgAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/123435"
+  status: "approved"
+
+- name: "DRA: structured parameters"
+  issue: 4381
+  date_requested: 2024-03-06
+  date_reviewed: 2024-03-06
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/J2zwqVdskYI/m/vWM3zP6HAgAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/123516"
+  status: "approved"
+
+- name: "Recursive Read-only (RRO) mounts"
+  issue: 3857
+  date_requested: 2024-03-06
+  date_reviewed: 2024-03-06
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/XrXHzMlyHWw/m/BB_AKYp9AgAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/123180"
+  status: "approved"
+
+- name: "Job success/completion policy"
+  issue: 3998
+  date_requested: 2024-03-05
+  date_reviewed: 2024-03-06
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/VE3aOaWK6pI/m/HprqZ_STBQAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/123412"
+  status: "approved"
+
+- name: "Structured authentication config"
+  issue: 3331
+  date_requested: 2024-03-04
+  date_reviewed: 2024-03-06
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/BdW7VFV5IpA/m/rop-hMlMBQAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/123431"
+  status: "approved"
+
+- name: "Container Resource based Pod Autoscaling"
+  issue: 1610
+  date_requested: 2024-03-06
+  date_reviewed: 2024-03-06
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/_58rHFLWtSc/m/4ZZQAYOwAgAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/123482"
+  status: "approved"
+
+- name: "Ensure secret pulled images"
+  issue: 2535
+  date_requested: 2024-03-06
+  date_reviewed: 2024-03-06
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/jrD06OyqiQ0/m/dGh_a6VuAgAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/114847"
+  status: "approved"
+
+- name: "add ProcMount option"
+  issue: 4265
+  date_requested: 2024-03-06
+  date_reviewed: 2024-03-07
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/rLCcv3Aoep0/m/5aeWHuqaAgAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/123520"
+  status: "approved"
+
+
