@@ -1,0 +1,3 @@
+pr: 123261
+releasenote:
+  text: Restored --verify-only function in code generation wrappers.

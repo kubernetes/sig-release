@@ -1,0 +1,6 @@
+pr: 121719
+releasenote:
+  text: A new kubelet metric `image_pull_duration_seconds` was added. The metric tracks
+    the duration (in seconds) it takes for an image to be pulled, including the time
+    spent in the waiting queue of image puller. The metric is broken down by bucketed
+    image size.

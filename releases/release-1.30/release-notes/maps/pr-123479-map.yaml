@@ -1,0 +1,3 @@
+pr: 123479
+releasenote:
+  text: sample-apiserver manifest example now has correct RBAC.

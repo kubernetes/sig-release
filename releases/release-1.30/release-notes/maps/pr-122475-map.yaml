@@ -1,3 +1,3 @@
 pr: 122475
 releasenote:
-  text: fixed panic of Evented PLEG during kubelet start-up.
+  text: Fixed panic of Evented PLEG during kubelet start-up.

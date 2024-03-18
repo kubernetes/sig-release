@@ -1,0 +1,5 @@
+pr: 122293
+releasenote:
+  text: "kube-controller-manager: increased the global level for broadcaster's
+    logging to 3 so that users can ignore event messages by lowering the logging
+    level. It reduces information noise."
