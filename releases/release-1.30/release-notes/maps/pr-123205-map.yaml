@@ -1,0 +1,4 @@
+pr: 123205
+releasenote:
+  text: Promoted the NodeLogQuery feature to beta. There have been no functional changes
+    from alpha.

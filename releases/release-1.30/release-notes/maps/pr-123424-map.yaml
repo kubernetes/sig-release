@@ -1,0 +1,3 @@
+pr: 123424
+releasenote:
+  text: Promoted ImageMaximumGCAge feature to beta.
