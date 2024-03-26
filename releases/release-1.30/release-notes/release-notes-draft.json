@@ -5012,8 +5012,8 @@
   },
   "123593": {
     "commit": "89cbd94e68ae80414dea7c14c1694e5e378a188d",
-    "text": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\n\n\nUser namespaces support is a Beta feature now.",
-    "markdown": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\n  \n  \n  User namespaces support is a Beta feature now. ([#123593](https://github.com/kubernetes/kubernetes/pull/123593), [@giuseppe](https://github.com/giuseppe)) [SIG Node]",
+    "text": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\nUser namespaces support is a Beta feature now.",
+    "markdown": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\n  User namespaces support is a Beta feature now. ([#123593](https://github.com/kubernetes/kubernetes/pull/123593), [@giuseppe](https://github.com/giuseppe)) [SIG Node]",
     "author": "giuseppe",
     "author_url": "https://github.com/giuseppe",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123593",
