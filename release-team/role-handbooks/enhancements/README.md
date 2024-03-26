@@ -124,6 +124,8 @@ It is important that this process be followed and documentation remain up-to-dat
       - @release-team-comms
       - @release-team-docs
       - @release-team-enhancements
+      - @prod-readiness-reviewers
+    - Add the @k8s-infra-ci-robot account to the board with **Write** access.
   - Create all the Fields (columns) for the board
     > Note: This is currently a manual process and  <https://github.com/orgs/community/discussions/41133> filed to help automate the process.
     - Until this can be automated; manually create fields with the same `Field Name`, `Field type`, and `Option` values from the previous release's project board.
