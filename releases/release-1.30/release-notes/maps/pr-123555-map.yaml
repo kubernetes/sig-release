@@ -1,0 +1,6 @@
+pr: 123555
+releasenote:
+  text: 'kubeadm: avoided uploading a defaulted flag value "--authorization-mode=Node,RBAC"
+    for the kube-apiserver in the ClusterConfiguration stored in the "kube-system/kubeadm-config"
+    ConfigMap. "Node,RBAC" are already the kubeadm defaults for this flag, so this
+    action is redundant.'

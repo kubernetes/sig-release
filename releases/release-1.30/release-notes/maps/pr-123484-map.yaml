@@ -1,0 +1,4 @@
+pr: 123484
+releasenote:
+  text: Added `client-go` support for upgrading subresource fields from client-side
+    to server-side management.

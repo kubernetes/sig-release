@@ -1,0 +1,3 @@
+pr: 123599
+releasenote:
+  text: Bumped cAdvisor to v0.49.0.
