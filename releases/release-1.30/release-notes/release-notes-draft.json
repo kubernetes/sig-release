@@ -178,6 +178,41 @@
     ],
     "feature": true
   },
+  "118389": {
+    "commit": "be77b0b82b01a3fc810118f095594ec8bdd3c3aa",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#118389](https://github.com/kubernetes/kubernetes/pull/118389), [@amewayne](https://github.com/amewayne)) [SIG Scheduling]",
+    "author": "amewayne",
+    "author_url": "https://github.com/amewayne",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118389",
+    "pr_number": 118389,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "feature": true,
+    "do_not_publish": true
+  },
+  "118756": {
+    "commit": "f12529c2f2347fc2284af3219e60088208b1f43b",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#118756](https://github.com/kubernetes/kubernetes/pull/118756), [@sxllwx](https://github.com/sxllwx)) [SIG API Machinery and Apps]",
+    "author": "sxllwx",
+    "author_url": "https://github.com/sxllwx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118756",
+    "pr_number": 118756,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
   "119177": {
     "commit": "195bb67d36c42faff8e99f97d2bad38587485989",
     "text": "kube-scheduler implemented scheduling hints for the `NodeResourceFit` plugin. The scheduling hints allowed the scheduler to only retry scheduling a Pod that had been previously rejected by the `NodeResourceFit` plugin if a new Node or a Node update matched the Pod's resource requirements or if an old pod update or delete matched the Pod's resource requirements.",
@@ -261,7 +296,7 @@
   },
   "120111": {
     "commit": "20b28312ea9278c7b93340d0eca71023c45a43b3",
-    "text": "Added the namespace when using 'kubectl logs \u003cpod-name\u003e' and the pod is not found. Previously the message returned would be 'Error from server (NotFound): pods \"my-pod-name\" not found'. This has been updated to reflect the namespace in the message as follows: 'Error from server (NotFound): pods \"my-pod-name\" not found in namespace \"default\"'",
+    "text": "Adds the namespace when using 'kubectl logs \u003cpod-name\u003e' and the pod is not found. Previously the message returned would be 'Error from server (NotFound): pods \"my-pod-name\" not found'. This has been updated to reflect the namespace in the message as follows: 'Error from server (NotFound): pods \"my-pod-name\" not found in namespace \"default\"'",
     "markdown": "Adds the namespace when using 'kubectl logs \u003cpod-name\u003e' and the pod is not found. Previously the message returned would be 'Error from server (NotFound): pods \"my-pod-name\" not found'. This has been updated to reflect the namespace in the message as follows: 'Error from server (NotFound): pods \"my-pod-name\" not found in namespace \"default\"' ([#120111](https://github.com/kubernetes/kubernetes/pull/120111), [@newtondev](https://github.com/newtondev)) [SIG CLI]",
     "author": "newtondev",
     "author_url": "https://github.com/newtondev",
@@ -317,6 +352,27 @@
     ],
     "duplicate": true,
     "duplicate_kind": true
+  },
+  "120251": {
+    "commit": "6409fde49f434cc1dc5ecef307a339a537ccc8f4",
+    "text": "NONE",
+    "markdown": "NONE ([#120251](https://github.com/kubernetes/kubernetes/pull/120251), [@liyuerich](https://github.com/liyuerich)) [SIG Apps and Testing]",
+    "author": "liyuerich",
+    "author_url": "https://github.com/liyuerich",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120251",
+    "pr_number": 120251,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "apps",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
   },
   "120291": {
     "commit": "2efed1f1cb33bf7e3f44bb5e74bdaa9f7a5092f1",
@@ -387,6 +443,32 @@
       "cli"
     ],
     "feature": true
+  },
+  "120631": {
+    "commit": "fb1aea9a289e155fa21a57e9512acd61ed1b786b",
+    "text": "NONE",
+    "markdown": "NONE ([#120631](https://github.com/kubernetes/kubernetes/pull/120631), [@liyuerich](https://github.com/liyuerich)) [SIG API Machinery, Apps, Cloud Provider, Network and Node]",
+    "author": "liyuerich",
+    "author_url": "https://github.com/liyuerich",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120631",
+    "pr_number": 120631,
+    "areas": [
+      "kube-proxy",
+      "apiserver",
+      "cloudprovider"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network",
+      "node",
+      "api-machinery",
+      "apps",
+      "cloud-provider"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
   },
   "120642": {
     "commit": "6d6398ef9266abce3518a4c9a3d4e4d8feeffdc1",
@@ -477,10 +559,26 @@
       "api-machinery"
     ]
   },
+  "121387": {
+    "commit": "e13f098c8e09103301c7cf70d575667b99a3b5cb",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#121387](https://github.com/kubernetes/kubernetes/pull/121387), [@KunWuLuan](https://github.com/KunWuLuan)) [SIG Scheduling]",
+    "author": "KunWuLuan",
+    "author_url": "https://github.com/KunWuLuan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121387",
+    "pr_number": 121387,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "do_not_publish": true
+  },
   "121413": {
     "commit": "e36fc426a71891a9c3b821225aed9f7ba2a92c0e",
-    "text": "NONE",
-    "markdown": "NONE ([#121413](https://github.com/kubernetes/kubernetes/pull/121413), [@humblec](https://github.com/humblec))",
+    "text": "```",
+    "markdown": "``` ([#121413](https://github.com/kubernetes/kubernetes/pull/121413), [@humblec](https://github.com/humblec)) [SIG Cloud Provider]",
     "author": "humblec",
     "author_url": "https://github.com/humblec",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/121413",
@@ -542,6 +640,27 @@
       "api-machinery"
     ],
     "feature": true
+  },
+  "121565": {
+    "commit": "014149d66e38360276b04f788b4da9a7f2ea5c4a",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#121565](https://github.com/kubernetes/kubernetes/pull/121565), [@srivastav-abhishek](https://github.com/srivastav-abhishek)) [SIG Node]",
+    "author": "srivastav-abhishek",
+    "author_url": "https://github.com/srivastav-abhishek",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121565",
+    "pr_number": 121565,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug",
+      "flake"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "duplicate_kind": true,
+    "do_not_publish": true
   },
   "121669": {
     "commit": "89c314ed8b71c0894167cab151414517f298668d",
@@ -750,6 +869,27 @@
     "feature": true,
     "duplicate_kind": true
   },
+  "121919": {
+    "commit": "8a9e0d936a7976680e2e6ff597721650f1ef809c",
+    "text": "Fixes a 1.26.0+ regression in kube-proxy to make externalIPs work with externalTrafficPolicy: Local",
+    "markdown": "Fixes a 1.26.0+ regression in kube-proxy to make externalIPs work with externalTrafficPolicy: Local ([#121919](https://github.com/kubernetes/kubernetes/pull/121919), [@uablrek](https://github.com/uablrek)) [SIG Network]",
+    "author": "uablrek",
+    "author_url": "https://github.com/uablrek",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121919",
+    "pr_number": 121919,
+    "areas": [
+      "kube-proxy",
+      "ipvs"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "duplicate_kind": true
+  },
   "121946": {
     "commit": "66d038d84d3d7da0394aca2720823fedadec0dee",
     "text": "kube-apiserver now reloads the `--authorization-config` file when it changes. Reloads increment the `apiserver_authorization_config_controller_automatic_reload_last_timestamp_seconds` timestamp metric, with `status=\"success\"` for successful reloads and `status=\"failed\"` for failed reloads. Failed reloads keep using the previously loaded authorization configuration.",
@@ -954,6 +1094,22 @@
       "testing"
     ],
     "duplicate": true
+  },
+  "122041": {
+    "commit": "b155d51f979f8ed8e6d3064bcc89f6a8a3dd1851",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n-\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  -\n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#122041](https://github.com/kubernetes/kubernetes/pull/122041), [@uniemimu](https://github.com/uniemimu)) [SIG Scheduling]",
+    "author": "uniemimu",
+    "author_url": "https://github.com/uniemimu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122041",
+    "pr_number": 122041,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "do_not_publish": true
   },
   "122056": {
     "commit": "180c6bdc2559478339710e6c5a79701044c12363",
@@ -1393,6 +1549,28 @@
       "scheduling"
     ]
   },
+  "122292": {
+    "commit": "aa73f3163a52e9a99df01b86f60eeed31abd54d9",
+    "text": "Currently, NodeAdded QueueingHint could not always be called because of the internal feature called preCheck.\nIt's definitely not something expected for plugin developers,\nand we're trying to eventually remove preCheck completely to fix this.\nUntil then we'll register UpdateNodeTaint event for plugins that have NodeAdded event, but don't have UpdateNodeTaint event.\nIt'd result in a bad impact on the requeuing efficiency though, a lot better than some Pods being stuck in the\nunschedulable pod pool.",
+    "markdown": "Currently, NodeAdded QueueingHint could not always be called because of the internal feature called preCheck.\n  It's definitely not something expected for plugin developers,\n  and we're trying to eventually remove preCheck completely to fix this.\n  Until then we'll register UpdateNodeTaint event for plugins that have NodeAdded event, but don't have UpdateNodeTaint event.\n  It'd result in a bad impact on the requeuing efficiency though, a lot better than some Pods being stuck in the\n  unschedulable pod pool. ([#122292](https://github.com/kubernetes/kubernetes/pull/122292), [@sanposhiho](https://github.com/sanposhiho)) [SIG Node, Scheduling, Storage and Testing]",
+    "author": "sanposhiho",
+    "author_url": "https://github.com/sanposhiho",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122292",
+    "pr_number": 122292,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "scheduling",
+      "storage",
+      "node",
+      "testing"
+    ],
+    "duplicate": true
+  },
   "122293": {
     "commit": "67a06c20568db0f7b3a3b48ec564929b625e875a",
     "text": "kube-controller-manager: increased the global level for broadcaster's logging to 3 so that users can ignore event messages by lowering the logging level. It reduces information noise.",
@@ -1518,8 +1696,8 @@
   },
   "122341": {
     "commit": "55f1e21fdc71ae47a51e2e78c2f72d6a5952491e",
-    "text": "Fixed migration of in-tree vSphere volumes to the CSI driver.",
-    "markdown": "Fixed migration of in-tree vSphere volumes to the CSI driver. ([#122341](https://github.com/kubernetes/kubernetes/pull/122341), [@jsafrane](https://github.com/jsafrane)) [SIG Storage]",
+    "text": "Fixed 1.29.0+ regression in migration of in-tree vSphere volumes to the CSI driver.",
+    "markdown": "Fixed 1.29.0+ regression in migration of in-tree vSphere volumes to the CSI driver. ([#122341](https://github.com/kubernetes/kubernetes/pull/122341), [@jsafrane](https://github.com/jsafrane)) [SIG Storage]",
     "author": "jsafrane",
     "author_url": "https://github.com/jsafrane",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/122341",
@@ -1541,9 +1719,6 @@
     "pr_number": 122346,
     "areas": [
       "kubectl"
-    ],
-    "kinds": [
-      "regression"
     ],
     "sigs": [
       "cli"
@@ -1644,6 +1819,26 @@
     "sigs": [
       "scheduling"
     ]
+  },
+  "122447": {
+    "commit": "5104e6566135e05b0b46eea1c068a07388c78044",
+    "text": "Fixes a 1.29.0 regression in kubectl that did not honor the --attach flag.",
+    "markdown": "Fixes a 1.29.0 regression in kubectl that did not honor the --attach flag. ([#122447](https://github.com/kubernetes/kubernetes/pull/122447), [@ardaguclu](https://github.com/ardaguclu)) [SIG CLI]",
+    "author": "ardaguclu",
+    "author_url": "https://github.com/ardaguclu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122447",
+    "pr_number": 122447,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "duplicate_kind": true
   },
   "122449": {
     "commit": "c015565db399b9cf1e8aebaecc390f6ecbaf24c3",
@@ -1813,6 +2008,25 @@
       "storage"
     ]
   },
+  "122523": {
+    "commit": "1e136ef8a0b2eaec6abe7a30bff6dc0abfd3f7dd",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#122523](https://github.com/kubernetes/kubernetes/pull/122523), [@yasindce1998](https://github.com/yasindce1998)) [SIG CLI]",
+    "author": "yasindce1998",
+    "author_url": "https://github.com/yasindce1998",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122523",
+    "pr_number": 122523,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "do_not_publish": true
+  },
   "122530": {
     "commit": "0598cec06a907ccc3252393b75cb33290214a869",
     "text": "kubeadm: added better handling of errors during unmount when calling \"kubeadm reset\". When failing to unmount directories under \"/var/run/kubelet\", kubeadm will now throw an error instead of showing a warning and continuing to cleanup said directory. In such situations it is better for you to inspect the problem and resolve it manually, then you can call \"kubeadm reset\" again to complete the cleanup.",
@@ -1857,6 +2071,27 @@
     ],
     "feature": true
   },
+  "122556": {
+    "commit": "ff4cd7b6f56c730aa3a6e3325ca41427483d6ffc",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#122556](https://github.com/kubernetes/kubernetes/pull/122556), [@dims](https://github.com/dims)) [SIG Storage and Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122556",
+    "pr_number": 122556,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "storage",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
   "122558": {
     "commit": "9bd0ef5f173de3cc2d1d629a4aee499d53690aee",
     "text": "Changed the API server so that for admission webhooks that have a URL matching the hostname `localhost`, or a loopback IP address, the connection supports HTTP/2 where it can be negotiated.",
@@ -1878,6 +2113,22 @@
       "testing"
     ],
     "duplicate": true
+  },
+  "122569": {
+    "commit": "2a44cb0ab352f97c419b31b592def50b4e98bc56",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#122569](https://github.com/kubernetes/kubernetes/pull/122569), [@IvoGoman](https://github.com/IvoGoman)) [SIG CLI]",
+    "author": "IvoGoman",
+    "author_url": "https://github.com/IvoGoman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122569",
+    "pr_number": 122569,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "do_not_publish": true
   },
   "122571": {
     "commit": "026a27e5eb431c553d1204817cbf09f1005eca9b",
@@ -2170,6 +2421,30 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "122692": {
+    "commit": "55f9657e076165ab92fecbc3a1eb83c2300870c4",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#122692](https://github.com/kubernetes/kubernetes/pull/122692), [@aroradaman](https://github.com/aroradaman)) [SIG Auth, Network, Scalability and Windows]",
+    "author": "aroradaman",
+    "author_url": "https://github.com/aroradaman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122692",
+    "pr_number": 122692,
+    "areas": [
+      "kube-proxy",
+      "ipvs"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "network",
+      "scalability",
+      "auth",
+      "windows"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
   "122697": {
     "commit": "7ca92fb0168dd033a892c296543ed30d06e6a267",
     "text": "Reverted the `EventedPLEG` feature (beta, but disabled by default) back to alpha for a known issue.",
@@ -2232,13 +2507,15 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/122704",
     "pr_number": 122704,
     "kinds": [
-      "bug"
+      "bug",
+      "regression"
     ],
     "sigs": [
       "storage",
       "apps"
     ],
-    "duplicate": true
+    "duplicate": true,
+    "duplicate_kind": true
   },
   "122705": {
     "commit": "773ad73b90c2836685358a0fafe285b9e4cdcc19",
@@ -2263,6 +2540,22 @@
     ],
     "feature": true,
     "duplicate": true
+  },
+  "122710": {
+    "commit": "9d86dbd0ad004783848c6b3f413a5680992d37f3",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#122710](https://github.com/kubernetes/kubernetes/pull/122710), [@dims](https://github.com/dims)) [SIG Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122710",
+    "pr_number": 122710,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "do_not_publish": true
   },
   "122717": {
     "commit": "a67973a45c4b48585e3331889eca09425caca7c2",
@@ -2690,6 +2983,25 @@
     "feature": true,
     "duplicate": true
   },
+  "122893": {
+    "commit": "a07b1aaa5b39b351ec8586de800baa5715304a3f",
+    "text": "--- FAIL: TestEnsureAdminClusterRoleBindingImpl (0.00s)\n    --- FAIL: TestEnsureAdminClusterRoleBindingImpl/admin.conf:_CRB_already_exists,_use_the_admin.conf_client (0.00s)\n        kubeconfig_test.go:938: expected error: true, got false, error: \u003cnil\u003e\nFAIL\nFAIL\tk8s.io/kubernetes/cmd/kubeadm/app/phases/kubeconfig\t0.103s\nFAIL",
+    "markdown": "--- FAIL: TestEnsureAdminClusterRoleBindingImpl (0.00s)\n      --- FAIL: TestEnsureAdminClusterRoleBindingImpl/admin.conf:_CRB_already_exists,_use_the_admin.conf_client (0.00s)\n          kubeconfig_test.go:938: expected error: true, got false, error: \u003cnil\u003e\n  FAIL\n  FAIL\tk8s.io/kubernetes/cmd/kubeadm/app/phases/kubeconfig\t0.103s\n  FAIL ([#122893](https://github.com/kubernetes/kubernetes/pull/122893), [@danwinship](https://github.com/danwinship)) [SIG Cluster Lifecycle]",
+    "author": "danwinship",
+    "author_url": "https://github.com/danwinship",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122893",
+    "pr_number": 122893,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "do_not_publish": true
+  },
   "122907": {
     "commit": "5fd38a8c7871c058e59e38645abe3df8024d52e2",
     "text": "Targeted drop-in kubelet configuration dir feature to Beta.",
@@ -2822,13 +3134,15 @@
       "kubelet"
     ],
     "kinds": [
-      "bug"
+      "bug",
+      "regression"
     ],
     "sigs": [
       "node",
       "windows"
     ],
-    "duplicate": true
+    "duplicate": true,
+    "duplicate_kind": true
   },
   "123001": {
     "commit": "862ff187baad9373d59d19e5d736dcda1e25e90d",
@@ -2942,6 +3256,27 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "123051": {
+    "commit": "7090b9d0980ab3aa625e431914a9c1b15892981f",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#123051](https://github.com/kubernetes/kubernetes/pull/123051), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Storage and Testing]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123051",
+    "pr_number": 123051,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
   "123052": {
     "commit": "77775d45469a3da6a7ce5e6e2221cff17c2d27fe",
     "text": "Fixed cleanup of Pod volume mounts when a file was used as a subpath.",
@@ -3018,6 +3353,27 @@
       "cluster-lifecycle"
     ]
   },
+  "123082": {
+    "commit": "d29f38efd83f5dcf18870c8772b9a0bb68c56097",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123082](https://github.com/kubernetes/kubernetes/pull/123082), [@alexzielenski](https://github.com/alexzielenski)) [SIG API Machinery and Testing]",
+    "author": "alexzielenski",
+    "author_url": "https://github.com/alexzielenski",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123082",
+    "pr_number": 123082,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "flake"
+    ],
+    "sigs": [
+      "api-machinery",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
   "123083": {
     "commit": "002b0f00033e3fd4650dd4da3717b9187b8621e1",
     "text": "`ValidatingAdmissionPolicy` now supports type checking policies that make use of `variables`.",
@@ -3039,8 +3395,8 @@
   },
   "123093": {
     "commit": "4a4f5dbc079e85e63f62178af962cb65bd60d987",
-    "text": "kubeadm: do not upload kubelet patch configuration into `kube-system/kubelet-config` ConfigMap",
-    "markdown": "Kubeadm: do not upload kubelet patch configuration into `kube-system/kubelet-config` ConfigMap ([#123093](https://github.com/kubernetes/kubernetes/pull/123093), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "text": "fixes a 1.27.0+ regression in kubeadm: do not upload kubelet patch configuration into `kube-system/kubelet-config` ConfigMap",
+    "markdown": "Fixes a 1.27.0+ regression in kubeadm: do not upload kubelet patch configuration into `kube-system/kubelet-config` ConfigMap ([#123093](https://github.com/kubernetes/kubernetes/pull/123093), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123093",
@@ -4060,37 +4416,6 @@
       "cluster-lifecycle"
     ]
   },
-  "123412": {
-    "commit": "364ef335dbd49bfa3d66dbc606c642481d283851",
-    "text": "Added alpha-level support for the SuccessPolicy in Jobs.",
-    "markdown": "Added alpha-level support for the SuccessPolicy in Jobs. ([#123412](https://github.com/kubernetes/kubernetes/pull/123412), [@tenzen-y](https://github.com/tenzen-y))",
-    "documentation": [
-      {
-        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3998-job-success-completion-policy",
-        "type": "KEP"
-      }
-    ],
-    "author": "tenzen-y",
-    "author_url": "https://github.com/tenzen-y",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123412",
-    "pr_number": 123412,
-    "areas": [
-      "test",
-      "code-generation"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "apps",
-      "testing"
-    ],
-    "feature": true,
-    "duplicate": true,
-    "duplicate_kind": true
-  },
   "123413": {
     "commit": "f745503112e06d6ff199e929d536c6a29825c01a",
     "text": "kubectl port-forward over websockets (tunneling SPDY) can be enabled using an `Alpha` feature flag environment variable: KUBECTL_PORT_FORWARD_WEBSOCKETS=true. The API Server being communicated to must *also* have an `Alpha` feature flag enabled: PortForwardWebsockets.",
@@ -4486,6 +4811,49 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true
+  },
+  "123488": {
+    "commit": "be4b7de02262c5f65e8c31d6a2dabaa240cc8f8a",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123488](https://github.com/kubernetes/kubernetes/pull/123488), [@dims](https://github.com/dims)) [SIG Autoscaling, Instrumentation and Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123488",
+    "pr_number": 123488,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup",
+      "failing-test"
+    ],
+    "sigs": [
+      "autoscaling",
+      "instrumentation",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "do_not_publish": true
+  },
+  "123490": {
+    "commit": "60e11e2c6ab7d4beab0dfa4b880d915a992c3427",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123490](https://github.com/kubernetes/kubernetes/pull/123490), [@dims](https://github.com/dims)) [SIG Cloud Provider]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123490",
+    "pr_number": 123490,
+    "areas": [
+      "provider/gcp"
+    ],
+    "kinds": [
+      "failing-test"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "do_not_publish": true
   },
   "123492": {
     "commit": "a58221c104903c8dfa7f373db219963661a46035",
@@ -4899,6 +5267,37 @@
     ],
     "duplicate": true
   },
+  "123564": {
+    "commit": "8b8d1337700cfc96419bf5de8de1680d540084fd",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123564](https://github.com/kubernetes/kubernetes/pull/123564), [@ivelichkovich](https://github.com/ivelichkovich)) [SIG API Machinery, Architecture and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]: [\u003clink\u003e](",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/3716-admission-webhook-match-conditions)",
+        "type": "KEP"
+      }
+    ],
+    "author": "ivelichkovich",
+    "author_url": "https://github.com/ivelichkovich",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123564",
+    "pr_number": 123564,
+    "areas": [
+      "test",
+      "conformance"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "testing",
+      "architecture"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "do_not_publish": true
+  },
   "123565": {
     "commit": "6f42da171b952cb502245a25bbba3c384df3aeb7",
     "text": "Accepted zero as a default value for kubectl create token duration.",
@@ -4993,8 +5392,8 @@
   },
   "123578": {
     "commit": "7c11cc9cfcdc54a7ca4efdc10609bf421bfa54d4",
-    "text": "kubeadm: printed all the kubelets and nodes that need to be upgraded on \"upgrade #     plan\".",
-    "markdown": "Kubeadm: printed all the kubelets and nodes that need to be upgraded on \"upgrade #     plan\". ([#123578](https://github.com/kubernetes/kubernetes/pull/123578), [@carlory](https://github.com/carlory))",
+    "text": "kubeadm: printed all the kubelets and nodes that need to be upgraded on \"upgrade plan\".",
+    "markdown": "Kubeadm: printed all the kubelets and nodes that need to be upgraded on \"upgrade plan\". ([#123578](https://github.com/kubernetes/kubernetes/pull/123578), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123578",
@@ -5012,8 +5411,8 @@
   },
   "123593": {
     "commit": "89cbd94e68ae80414dea7c14c1694e5e378a188d",
-    "text": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\nUser namespaces support is a Beta feature now.",
-    "markdown": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\n  User namespaces support is a Beta feature now. ([#123593](https://github.com/kubernetes/kubernetes/pull/123593), [@giuseppe](https://github.com/giuseppe)) [SIG Node]",
+    "text": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\n\n\nUser namespaces support is a Beta feature now.",
+    "markdown": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\n  \n  \n  User namespaces support is a Beta feature now. ([#123593](https://github.com/kubernetes/kubernetes/pull/123593), [@giuseppe](https://github.com/giuseppe)) [SIG Node]",
     "author": "giuseppe",
     "author_url": "https://github.com/giuseppe",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123593",
@@ -5078,6 +5477,25 @@
     "feature": true,
     "duplicate": true
   },
+  "123614": {
+    "commit": "3086d88dc6cada367c68f8d7dc0a75112599e69e",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123614](https://github.com/kubernetes/kubernetes/pull/123614), [@ameukam](https://github.com/ameukam)) [SIG Testing]",
+    "author": "ameukam",
+    "author_url": "https://github.com/ameukam",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123614",
+    "pr_number": 123614,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "do_not_publish": true
+  },
   "123639": {
     "commit": "46a2137c1ba017970c316c0ec10c074cb6450732",
     "text": "kube-apiserver: Authorization webhooks now report the following metrics:\n- apiserver_authorization_webhook_evaluations_total\n- apiserver_authorization_webhook_duration_seconds\n- apiserver_authorization_webhook_evaluations_fail_open_total",
@@ -5140,8 +5558,8 @@
   },
   "123641": {
     "commit": "699984f25a80a39bbb112e657f08d76779cdc3a0",
-    "text": "kube-apiserver: the StructuredAuthorizationConfiguration feature gate is promoted to beta and allows using the `--authorization-configuration` flag.",
-    "markdown": "Kube-apiserver: the StructuredAuthorizationConfiguration feature gate is promoted to beta and allows using the `--authorization-configuration` flag. ([#123641](https://github.com/kubernetes/kubernetes/pull/123641), [@liggitt](https://github.com/liggitt))",
+    "text": "kube-apiserver: the StructuredAuthorizationConfiguration feature gate was promoted to beta and now allows using the `--authorization-configuration` flag.",
+    "markdown": "Kube-apiserver: the StructuredAuthorizationConfiguration feature gate was promoted to beta and now allows using the `--authorization-configuration` flag. ([#123641](https://github.com/kubernetes/kubernetes/pull/123641), [@liggitt](https://github.com/liggitt))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5166,6 +5584,27 @@
     "feature": true,
     "duplicate": true
   },
+  "123652": {
+    "commit": "ccb5dd3b579c89a38a7d9fa3bab49187951f82fd",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123652](https://github.com/kubernetes/kubernetes/pull/123652), [@dims](https://github.com/dims)) [SIG Node and Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123652",
+    "pr_number": 123652,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
   "123654": {
     "commit": "e798fa67b510b857b3ec25c89a5bd6b06959f57a",
     "text": "[kubeadam][structured authz] avoided setting default `--authorization-mode` when `--authorization-config` is provided",
@@ -5183,6 +5622,48 @@
     "sigs": [
       "cluster-lifecycle"
     ]
+  },
+  "123657": {
+    "commit": "d45d803ac4e4e518f564da6be6bb07c1e78708c8",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123657](https://github.com/kubernetes/kubernetes/pull/123657), [@dims](https://github.com/dims)) [SIG Node and Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123657",
+    "pr_number": 123657,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "123659": {
+    "commit": "d756b0a1c09ac4c694dffff2de4debf4069758ff",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123659](https://github.com/kubernetes/kubernetes/pull/123659), [@dims](https://github.com/dims)) [SIG Node and Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123659",
+    "pr_number": 123659,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "do_not_publish": true
   },
   "123667": {
     "commit": "9043ce05c125091c0cb5519206fd90d311abd8c8",
@@ -5231,6 +5712,40 @@
     "sigs": [
       "api-machinery"
     ]
+  },
+  "123676": {
+    "commit": "89b1db79d75e367f567ea06c0528ef4b8f3fecb4",
+    "text": "Fix enabling consistent list from watch cache also works for resourceVersion=0",
+    "markdown": "Fix enabling consistent list from watch cache also works for resourceVersion=0 ([#123676](https://github.com/kubernetes/kubernetes/pull/123676), [@serathius](https://github.com/serathius)) [SIG API Machinery]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123676",
+    "pr_number": 123676,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "123684": {
+    "commit": "4369fcb00fc7c5bd623ddcc95d6d1d46092c804d",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123684](https://github.com/kubernetes/kubernetes/pull/123684), [@hakuna-matatah](https://github.com/hakuna-matatah)) [SIG API Machinery]",
+    "author": "hakuna-matatah",
+    "author_url": "https://github.com/hakuna-matatah",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123684",
+    "pr_number": 123684,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "do_not_publish": true
   },
   "123696": {
     "commit": "05cb0a55c88e0cdcfe2fb184328ad9be53e94d5c",
@@ -5427,6 +5942,29 @@
     ],
     "duplicate": true
   },
+  "123776": {
+    "commit": "bf7fcfdc7f1c0aac000e4edf38eaa59b3ce941d4",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123776](https://github.com/kubernetes/kubernetes/pull/123776), [@dims](https://github.com/dims)) [SIG Scheduling and Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123776",
+    "pr_number": 123776,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "failing-test"
+    ],
+    "sigs": [
+      "scheduling",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "do_not_publish": true
+  },
   "123793": {
     "commit": "09093f270aa811c2c49ea45868989ad5b6eb8a53",
     "text": "kube-apiserver: JWT authenticator now report the following metrics:\n- apiserver_authentication_config_controller_automatic_reloads_total\n- apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds",
@@ -5456,5 +5994,107 @@
     ],
     "feature": true,
     "duplicate": true
+  },
+  "123821": {
+    "commit": "74b2f4d976f5da08012e6f6606f0035110de9641",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123821](https://github.com/kubernetes/kubernetes/pull/123821), [@dims](https://github.com/dims)) [SIG Scheduling and Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123821",
+    "pr_number": 123821,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "failing-test"
+    ],
+    "sigs": [
+      "scheduling",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "do_not_publish": true
+  },
+  "123865": {
+    "commit": "016d8b11ae250ca933fe83de312bbe7c4945cd20",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123865](https://github.com/kubernetes/kubernetes/pull/123865), [@dims](https://github.com/dims)) [SIG Storage and Testing]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123865",
+    "pr_number": 123865,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup",
+      "failing-test"
+    ],
+    "sigs": [
+      "storage",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "do_not_publish": true
+  },
+  "123935": {
+    "commit": "a1605fb3dd2d45474751ec3de30633ac1ec15c41",
+    "text": "kube-apiserver: fixes a 1.27+ regression in watch stability by serving watch requests without a resourceVersion from the watch cache by default, as in \u003c1.27 (disabling the change in #115096 by default). This mitigates the impact of an etcd watch bug (https://github.com/etcd-io/etcd/pull/17555). If the 1.27 change in #115096 to serve these requests from underlying storage is still desired despite the impact on watch stability, it can be re-enabled with a `WatchFromStorageWithoutResourceVersion` feature gate.",
+    "markdown": "Kube-apiserver: fixes a 1.27+ regression in watch stability by serving watch requests without a resourceVersion from the watch cache by default, as in \u003c1.27 (disabling the change in #115096 by default). This mitigates the impact of an etcd watch bug (https://github.com/etcd-io/etcd/pull/17555). If the 1.27 change in #115096 to serve these requests from underlying storage is still desired despite the impact on watch stability, it can be re-enabled with a `WatchFromStorageWithoutResourceVersion` feature gate. ([#123935](https://github.com/kubernetes/kubernetes/pull/123935), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123935",
+    "pr_number": 123935,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "etcd"
+    ],
+    "duplicate": true
+  },
+  "123943": {
+    "commit": "9df98f3d393e204dd8db02322057ac2e7f3f6c28",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#123943](https://github.com/kubernetes/kubernetes/pull/123943), [@dims](https://github.com/dims)) [SIG Cloud Provider]",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123943",
+    "pr_number": 123943,
+    "areas": [
+      "provider/gcp"
+    ],
+    "kinds": [
+      "failing-test"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "do_not_publish": true
+  },
+  "124001": {
+    "commit": "a309fadbac3339bc8db9ae0a928a33b8e81ef10f",
+    "text": "Revert \"support sharing waitingPods across different scheduler profiles\"",
+    "markdown": "Revert \"support sharing waitingPods across different scheduler profiles\" ([#124001](https://github.com/kubernetes/kubernetes/pull/124001), [@kerthcet](https://github.com/kerthcet)) [SIG Scheduling]",
+    "author": "kerthcet",
+    "author_url": "https://github.com/kerthcet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/124001",
+    "pr_number": 124001,
+    "kinds": [
+      "flake",
+      "failing-test"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "duplicate_kind": true
   }
 }
