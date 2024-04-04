@@ -1,0 +1,3 @@
+pr: 123180
+releasenote:
+  text: Now Support Recursive Read-only (RRO) mounts  (KEP-3857)

@@ -1,0 +1,4 @@
+pr: 123216
+releasenote:
+  text: The Kubelet now  rejects creating the pod if `hostUserns=false` and the CRI
+    runtime does not support user namespaces.

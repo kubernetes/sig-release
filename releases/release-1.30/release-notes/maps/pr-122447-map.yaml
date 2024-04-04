@@ -1,0 +1,3 @@
+pr: 122447
+releasenote:
+  text: Fixed a 1.29.0 regression in kubectl that did not honor the `--attach` flag.
