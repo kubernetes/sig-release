@@ -1,4 +1,3 @@
 pr: 121919
 releasenote:
-  text: 'Fixed a 1.26.0+ regression in kube-proxy to make externalIPs work with externalTrafficPolicy:
-    Local'
+  text: "Fixed a `1.26.0+` regression in `kube-proxy` to make externalIPs work with externalTrafficPolicy: Local"
