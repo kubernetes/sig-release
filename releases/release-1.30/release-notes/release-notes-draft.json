@@ -2220,30 +2220,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  "122692": {
-    "commit": "55f9657e076165ab92fecbc3a1eb83c2300870c4",
-    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
-    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#122692](https://github.com/kubernetes/kubernetes/pull/122692), [@aroradaman](https://github.com/aroradaman)) [SIG Auth, Network, Scalability and Windows]",
-    "author": "aroradaman",
-    "author_url": "https://github.com/aroradaman",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122692",
-    "pr_number": 122692,
-    "areas": [
-      "kube-proxy",
-      "ipvs"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network",
-      "scalability",
-      "auth",
-      "windows"
-    ],
-    "duplicate": true,
-    "do_not_publish": true
-  },
   "122697": {
     "commit": "7ca92fb0168dd033a892c296543ed30d06e6a267",
     "text": "Reverted the `EventedPLEG` feature (beta, but disabled by default) back to alpha for a known issue.",
@@ -2340,7 +2316,6 @@
     "feature": true,
     "duplicate": true
   },
- 
   "122717": {
     "commit": "a67973a45c4b48585e3331889eca09425caca7c2",
     "text": "Added alpha support for field selectors on custom resources.\nProvided that the `CustomResourceFieldSelectors` feature gate is enabled, the CustomResourceDefinition\nAPI now lets you specify `selectableFields`. Listing a field there allows filtering custom resources for that\nCustomResourceDefinition in **list** or **watch** requests.",
