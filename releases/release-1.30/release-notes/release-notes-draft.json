@@ -319,7 +319,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  
   "120291": {
     "commit": "2efed1f1cb33bf7e3f44bb5e74bdaa9f7a5092f1",
     "text": "Fixed Windows credential provider, cannot find binary. Windows credential provider binary path may have \".exe\" suffix so it is better to use `LookPath()` to support it flexibly.",
@@ -390,7 +389,6 @@
     ],
     "feature": true
   },
-  
   "120642": {
     "commit": "6d6398ef9266abce3518a4c9a3d4e4d8feeffdc1",
     "text": "Added consistent vanity import to files and provided tooling for verifying and updating them.",
@@ -480,7 +478,6 @@
       "api-machinery"
     ]
   },
-  
   "121461": {
     "commit": "8e11104f0bec8abe62efd7acbb0afe6d908d195d",
     "text": "Promoted the `CRDValidationRatcheting` feature gate to beta, and made it enabled by default.",
@@ -1860,7 +1857,6 @@
       "storage"
     ]
   },
- 
   "122530": {
     "commit": "0598cec06a907ccc3252393b75cb33290214a869",
     "text": "kubeadm: added better handling of errors during unmount when calling \"kubeadm reset\". When failing to unmount directories under \"/var/run/kubelet\", kubeadm will now throw an error instead of showing a warning and continuing to cleanup said directory. In such situations it is better for you to inspect the problem and resolve it manually, then you can call \"kubeadm reset\" again to complete the cleanup.",
@@ -1905,7 +1901,6 @@
     ],
     "feature": true
   },
-  
   "122558": {
     "commit": "9bd0ef5f173de3cc2d1d629a4aee499d53690aee",
     "text": "Changed the API server so that for admission webhooks that have a URL matching the hostname `localhost`, or a loopback IP address, the connection supports HTTP/2 where it can be negotiated.",
@@ -2742,7 +2737,6 @@
     "feature": true,
     "duplicate": true
   },
- 
   "122907": {
     "commit": "5fd38a8c7871c058e59e38645abe3df8024d52e2",
     "text": "Targeted drop-in kubelet configuration dir feature to Beta.",
@@ -4523,8 +4517,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
- 
- 
   "123492": {
     "commit": "a58221c104903c8dfa7f373db219963661a46035",
     "text": "kubeadm: fixed a bug where \"kubeadm upgrade plan -o yaml|json\" includes unneeded output and was missing component config information.",
@@ -4937,7 +4929,6 @@
     ],
     "duplicate": true
   },
-  
   "123565": {
     "commit": "6f42da171b952cb502245a25bbba3c384df3aeb7",
     "text": "Accepted zero as a default value for kubectl create token duration.",
@@ -5117,7 +5108,6 @@
     "feature": true,
     "duplicate": true
   },
-  
   "123639": {
     "commit": "46a2137c1ba017970c316c0ec10c074cb6450732",
     "text": "kube-apiserver: Authorization webhooks now report the following metrics:\n- apiserver_authorization_webhook_evaluations_total\n- apiserver_authorization_webhook_duration_seconds\n- apiserver_authorization_webhook_evaluations_fail_open_total",
@@ -5206,7 +5196,6 @@
     "feature": true,
     "duplicate": true
   },
-  
   "123654": {
     "commit": "e798fa67b510b857b3ec25c89a5bd6b06959f57a",
     "text": "[kubeadam][structured authz] avoided setting default `--authorization-mode` when `--authorization-config` is provided",
@@ -5225,8 +5214,6 @@
       "cluster-lifecycle"
     ]
   },
-  
-
   "123667": {
     "commit": "9043ce05c125091c0cb5519206fd90d311abd8c8",
     "text": "Added `access_mode` label to `volume_manager_selinux_*` metrics.",
@@ -5293,7 +5280,6 @@
       "api-machinery"
     ]
   },
-  
   "123696": {
     "commit": "05cb0a55c88e0cdcfe2fb184328ad9be53e94d5c",
     "text": "kube-apiserver: the AuthenticationConfiguration type accepted in `--authentication-config` files has been promoted to `apiserver.config.k8s.io/v1beta1`.",
@@ -5489,7 +5475,6 @@
     ],
     "duplicate": true
   },
- 
   "123793": {
     "commit": "09093f270aa811c2c49ea45868989ad5b6eb8a53",
     "text": "kube-apiserver: JWT authenticator now report the following metrics:\n- apiserver_authentication_config_controller_automatic_reloads_total\n- apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds",
@@ -5520,7 +5505,6 @@
     "feature": true,
     "duplicate": true
   },
-  
   "123935": {
     "commit": "a1605fb3dd2d45474751ec3de30633ac1ec15c41",
     "text": "kube-apiserver: fixed a 1.27+ regression in watch stability by serving watch requests without a resourceVersion from the watch cache by default, as in \u003c1.27 (disabling the change in #115096 by default). This mitigates the impact of an etcd watch bug (https://github.com/etcd-io/etcd/pull/17555). If the 1.27 change in #115096 to serve these requests from underlying storage is still desired despite the impact on watch stability, it can be re-enabled with a `WatchFromStorageWithoutResourceVersion` feature gate.",
@@ -5541,7 +5525,6 @@
     ],
     "duplicate": true
   },
-  
   "124001": {
     "commit": "a309fadbac3339bc8db9ae0a928a33b8e81ef10f",
     "text": "Revert \"support sharing waitingPods across different scheduler profiles\"",
