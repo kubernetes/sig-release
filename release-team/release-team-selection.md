@@ -39,6 +39,7 @@ Most importantly, strive for diversity in:
 - nationality
 - locality
 - company affiliation
+- abilities and disabilities
 
 ## Selection Criteria
 
