@@ -126,6 +126,7 @@ It is important that this process be followed and documentation remain up-to-dat
       - @release-team-enhancements
   - Create all the Fields (columns) for the board
     > Note: This is currently a manual process and  <https://github.com/orgs/community/discussions/41133> filed to help automate the process.
+    > Note: Since `v1.30` an exceptions process for the Release Doc team is enfoced. The previous PR Ready for Review deadline has been replaced with a Docs Freeze phase. Make sure to add `At Risk for Docs Freeze` and `Tracked for Docs Freeze` to the options in `status` column. Moreover add `docs` to the options in `type` column.
     - Until this can be automated; manually create fields with the same `Field Name`, `Field type`, and `Option` values from the previous release's project board.
   - Create all the Views for the board
     > Note: This is also currently a manual process until GitHub GraphQL APIs allow for manipulating Views
