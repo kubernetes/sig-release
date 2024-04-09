@@ -1,0 +1,3 @@
+pr: 123676
+releasenote:
+  text: Fixed enabling consistent list from watch cache that used to work for resourceVersion=0

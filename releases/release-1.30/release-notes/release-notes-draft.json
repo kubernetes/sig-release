@@ -178,6 +178,7 @@
     ],
     "feature": true
   },
+  
   "119177": {
     "commit": "195bb67d36c42faff8e99f97d2bad38587485989",
     "text": "kube-scheduler implemented scheduling hints for the `NodeResourceFit` plugin. The scheduling hints allowed the scheduler to only retry scheduling a Pod that had been previously rejected by the `NodeResourceFit` plugin if a new Node or a Node update matched the Pod's resource requirements or if an old pod update or delete matched the Pod's resource requirements.",
@@ -262,7 +263,7 @@
   "120111": {
     "commit": "20b28312ea9278c7b93340d0eca71023c45a43b3",
     "text": "Added the namespace when using 'kubectl logs \u003cpod-name\u003e' and the pod is not found. Previously the message returned would be 'Error from server (NotFound): pods \"my-pod-name\" not found'. This has been updated to reflect the namespace in the message as follows: 'Error from server (NotFound): pods \"my-pod-name\" not found in namespace \"default\"'",
-    "markdown": "Adds the namespace when using 'kubectl logs \u003cpod-name\u003e' and the pod is not found. Previously the message returned would be 'Error from server (NotFound): pods \"my-pod-name\" not found'. This has been updated to reflect the namespace in the message as follows: 'Error from server (NotFound): pods \"my-pod-name\" not found in namespace \"default\"' ([#120111](https://github.com/kubernetes/kubernetes/pull/120111), [@newtondev](https://github.com/newtondev)) [SIG CLI]",
+    "markdown": "Added the namespace when using 'kubectl logs \u003cpod-name\u003e' and the pod is not found. Previously the message returned would be 'Error from server (NotFound): pods \"my-pod-name\" not found'. This has been updated to reflect the namespace in the message as follows: 'Error from server (NotFound): pods \"my-pod-name\" not found in namespace \"default\"' ([#120111](https://github.com/kubernetes/kubernetes/pull/120111), [@newtondev](https://github.com/newtondev))",
     "author": "newtondev",
     "author_url": "https://github.com/newtondev",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120111",
@@ -477,25 +478,6 @@
       "api-machinery"
     ]
   },
-  "121413": {
-    "commit": "e36fc426a71891a9c3b821225aed9f7ba2a92c0e",
-    "text": "NONE",
-    "markdown": "NONE ([#121413](https://github.com/kubernetes/kubernetes/pull/121413), [@humblec](https://github.com/humblec))",
-    "author": "humblec",
-    "author_url": "https://github.com/humblec",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121413",
-    "pr_number": 121413,
-    "areas": [
-      "provider/gcp"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
-    "do_not_publish": true
-  },
   "121461": {
     "commit": "8e11104f0bec8abe62efd7acbb0afe6d908d195d",
     "text": "Promoted the `CRDValidationRatcheting` feature gate to beta, and made it enabled by default.",
@@ -543,6 +525,7 @@
     ],
     "feature": true
   },
+  
   "121669": {
     "commit": "89c314ed8b71c0894167cab151414517f298668d",
     "text": "Fixed an issue to ignore unnecessary node events and improve daemonset controller performance.",
@@ -750,6 +733,27 @@
     "feature": true,
     "duplicate_kind": true
   },
+  "121919": {
+    "commit": "8a9e0d936a7976680e2e6ff597721650f1ef809c",
+    "text": "Fixed a 1.26.0+ regression in kube-proxy to make externalIPs work with externalTrafficPolicy: Local",
+    "markdown": "Fixed a 1.26.0+ regression in kube-proxy to make externalIPs work with externalTrafficPolicy: Local ([#121919](https://github.com/kubernetes/kubernetes/pull/121919), [@uablrek](https://github.com/uablrek))",
+    "author": "uablrek",
+    "author_url": "https://github.com/uablrek",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121919",
+    "pr_number": 121919,
+    "areas": [
+      "kube-proxy",
+      "ipvs"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "duplicate_kind": true
+  },
   "121946": {
     "commit": "66d038d84d3d7da0394aca2720823fedadec0dee",
     "text": "kube-apiserver now reloads the `--authorization-config` file when it changes. Reloads increment the `apiserver_authorization_config_controller_automatic_reload_last_timestamp_seconds` timestamp metric, with `status=\"success\"` for successful reloads and `status=\"failed\"` for failed reloads. Failed reloads keep using the previously loaded authorization configuration.",
@@ -775,8 +779,8 @@
   },
   "121952": {
     "commit": "e566bd7769cb3dd00e2401d85e5af6d542523d66",
-    "text": "The scheduler retries Pods, which are failed by nodevolumelimits due to not found PVCs, only when new PVCs are added.",
-    "markdown": "The scheduler retries Pods, which are failed by nodevolumelimits due to not found PVCs, only when new PVCs are added. ([#121952](https://github.com/kubernetes/kubernetes/pull/121952), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling and Storage]",
+    "text": "The scheduler now retries Pods, which are failed by nodevolumelimits due to not found PVCs, only when new PVCs are added.",
+    "markdown": "The scheduler now retries Pods, which are failed by nodevolumelimits due to not found PVCs, only when new PVCs are added. ([#121952](https://github.com/kubernetes/kubernetes/pull/121952), [@sanposhiho](https://github.com/sanposhiho))",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/121952",
@@ -955,6 +959,7 @@
     ],
     "duplicate": true
   },
+ 
   "122056": {
     "commit": "180c6bdc2559478339710e6c5a79701044c12363",
     "text": "Fixed the disruption controller's PDB status synchronization to maintain all PDB conditions during an update.",
@@ -1393,6 +1398,28 @@
       "scheduling"
     ]
   },
+  "122292": {
+    "commit": "aa73f3163a52e9a99df01b86f60eeed31abd54d9",
+    "text": "Currently, NodeAdded QueueingHint could not always be called because of the internal feature called preCheck.\nIt's definitely not something expected for plugin developers,\nand we're trying to eventually remove preCheck completely to fix this.\nUntil then we'll register UpdateNodeTaint event for plugins that have NodeAdded event, but don't have UpdateNodeTaint event.\nIt'd result in a bad impact on the requeuing efficiency though, a lot better than some Pods being stuck in the\nunschedulable pod pool.",
+    "markdown": "Currently, NodeAdded QueueingHint could not always be called because of the internal feature called preCheck.\n  It's definitely not something expected for plugin developers,\n  and we're trying to eventually remove preCheck completely to fix this.\n  Until then we'll register UpdateNodeTaint event for plugins that have NodeAdded event, but don't have UpdateNodeTaint event.\n  It'd result in a bad impact on the requeuing efficiency though, a lot better than some Pods being stuck in the\n  unschedulable pod pool. ([#122292](https://github.com/kubernetes/kubernetes/pull/122292), [@sanposhiho](https://github.com/sanposhiho)) [SIG Node, Scheduling, Storage and Testing]",
+    "author": "sanposhiho",
+    "author_url": "https://github.com/sanposhiho",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122292",
+    "pr_number": 122292,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "scheduling",
+      "storage",
+      "node",
+      "testing"
+    ],
+    "duplicate": true
+  },
   "122293": {
     "commit": "67a06c20568db0f7b3a3b48ec564929b625e875a",
     "text": "kube-controller-manager: increased the global level for broadcaster's logging to 3 so that users can ignore event messages by lowering the logging level. It reduces information noise.",
@@ -1518,8 +1545,8 @@
   },
   "122341": {
     "commit": "55f1e21fdc71ae47a51e2e78c2f72d6a5952491e",
-    "text": "Fixed migration of in-tree vSphere volumes to the CSI driver.",
-    "markdown": "Fixed migration of in-tree vSphere volumes to the CSI driver. ([#122341](https://github.com/kubernetes/kubernetes/pull/122341), [@jsafrane](https://github.com/jsafrane)) [SIG Storage]",
+    "text": "Fixed 1.29.0+ regression in migration of in-tree vSphere volumes to the CSI driver.",
+    "markdown": "Fixed 1.29.0+ regression in migration of in-tree vSphere volumes to the CSI driver. ([#122341](https://github.com/kubernetes/kubernetes/pull/122341), [@jsafrane](https://github.com/jsafrane)) [SIG Storage]",
     "author": "jsafrane",
     "author_url": "https://github.com/jsafrane",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/122341",
@@ -1541,9 +1568,6 @@
     "pr_number": 122346,
     "areas": [
       "kubectl"
-    ],
-    "kinds": [
-      "regression"
     ],
     "sigs": [
       "cli"
@@ -1644,6 +1668,26 @@
     "sigs": [
       "scheduling"
     ]
+  },
+  "122447": {
+    "commit": "5104e6566135e05b0b46eea1c068a07388c78044",
+    "text": "Fixed a 1.29.0 regression in kubectl that did not honor the `--attach` flag.",
+    "markdown": "Fixed a 1.29.0 regression in kubectl that did not honor the `--attach` flag. ([#122447](https://github.com/kubernetes/kubernetes/pull/122447), [@ardaguclu](https://github.com/ardaguclu))",
+    "author": "ardaguclu",
+    "author_url": "https://github.com/ardaguclu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122447",
+    "pr_number": 122447,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "duplicate_kind": true
   },
   "122449": {
     "commit": "c015565db399b9cf1e8aebaecc390f6ecbaf24c3",
@@ -1879,6 +1923,7 @@
     ],
     "duplicate": true
   },
+ 
   "122571": {
     "commit": "026a27e5eb431c553d1204817cbf09f1005eca9b",
     "text": "Added `WatchListClient` feature gate to `client-go`. When enabled it allows the client to get a stream of individual items instead of chunking from the server.",
@@ -2232,13 +2277,15 @@
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/122704",
     "pr_number": 122704,
     "kinds": [
-      "bug"
+      "bug",
+      "regression"
     ],
     "sigs": [
       "storage",
       "apps"
     ],
-    "duplicate": true
+    "duplicate": true,
+    "duplicate_kind": true
   },
   "122705": {
     "commit": "773ad73b90c2836685358a0fafe285b9e4cdcc19",
@@ -2768,8 +2815,8 @@
   },
   "122946": {
     "commit": "278ea691e0a951164ed0958d908b22098ab32165",
-    "text": "Users can traverse all the pods that are in the scheduler and waiting in the permit stage through method `IterateOverWaitingPods`. In other words,  all waitingPods in scheduler can be obtained from any profiles. Before this commit, each profile could only obtain waitingPods within that profile.",
-    "markdown": "Users can traverse all the pods that are in the scheduler and waiting in the permit stage through method `IterateOverWaitingPods`. In other words,  all waitingPods in scheduler can be obtained from any profiles. Before this commit, each profile could only obtain waitingPods within that profile. ([#122946](https://github.com/kubernetes/kubernetes/pull/122946), [@NoicFank](https://github.com/NoicFank)) [SIG Scheduling]",
+    "text": "Users can now traverse all the pods that are in the scheduler and waiting in the permit stage through method `IterateOverWaitingPods`. In other words,  all waitingPods in scheduler can be obtained from any profiles. Before this commit, each profile could only obtain waitingPods within that profile.",
+    "markdown": "Users can now traverse all the pods that are in the scheduler and waiting in the permit stage through method `IterateOverWaitingPods`. In other words,  all waitingPods in scheduler can be obtained from any profiles. Before this commit, each profile could only obtain waitingPods within that profile. ([#122946](https://github.com/kubernetes/kubernetes/pull/122946), [@NoicFank](https://github.com/NoicFank))",
     "author": "NoicFank",
     "author_url": "https://github.com/NoicFank",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/122946",
@@ -2822,13 +2869,15 @@
       "kubelet"
     ],
     "kinds": [
-      "bug"
+      "bug",
+      "regression"
     ],
     "sigs": [
       "node",
       "windows"
     ],
-    "duplicate": true
+    "duplicate": true,
+    "duplicate_kind": true
   },
   "123001": {
     "commit": "862ff187baad9373d59d19e5d736dcda1e25e90d",
@@ -2942,6 +2991,7 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  
   "123052": {
     "commit": "77775d45469a3da6a7ce5e6e2221cff17c2d27fe",
     "text": "Fixed cleanup of Pod volume mounts when a file was used as a subpath.",
@@ -3002,8 +3052,8 @@
   },
   "123077": {
     "commit": "173cf189209a2ad21cf251164275cd3cc5366b74",
-    "text": "kubeadm: fixed a bug where the --rootfs global flag does not work with \"kubeadm upgrade node\" for control plane nodes.",
-    "markdown": "Kubeadm: fixed a bug where the --rootfs global flag does not work with \"kubeadm upgrade node\" for control plane nodes. ([#123077](https://github.com/kubernetes/kubernetes/pull/123077), [@neolit123](https://github.com/neolit123))",
+    "text": "kubeadm: fixed a bug where the `--rootfs` global flag does not work with \"kubeadm upgrade node\" for control plane nodes.",
+    "markdown": "Kubeadm: fixed a bug where the `--rootfs` global flag does not work with \"kubeadm upgrade node\" for control plane nodes. ([#123077](https://github.com/kubernetes/kubernetes/pull/123077), [@neolit123](https://github.com/neolit123))",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123077",
@@ -3018,6 +3068,7 @@
       "cluster-lifecycle"
     ]
   },
+ 
   "123083": {
     "commit": "002b0f00033e3fd4650dd4da3717b9187b8621e1",
     "text": "`ValidatingAdmissionPolicy` now supports type checking policies that make use of `variables`.",
@@ -3039,8 +3090,8 @@
   },
   "123093": {
     "commit": "4a4f5dbc079e85e63f62178af962cb65bd60d987",
-    "text": "kubeadm: do not upload kubelet patch configuration into `kube-system/kubelet-config` ConfigMap",
-    "markdown": "Kubeadm: do not upload kubelet patch configuration into `kube-system/kubelet-config` ConfigMap ([#123093](https://github.com/kubernetes/kubernetes/pull/123093), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "text": "fixed a 1.27.0+ regression in kubeadm: do not upload kubelet patch configuration into `kube-system/kubelet-config` ConfigMap",
+    "markdown": "Fixed a 1.27.0+ regression in kubeadm: do not upload kubelet patch configuration into `kube-system/kubelet-config` ConfigMap ([#123093](https://github.com/kubernetes/kubernetes/pull/123093), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123093",
@@ -3184,8 +3235,8 @@
   },
   "123157": {
     "commit": "c53ac4cee4b16d020c218618d942096028a820a9",
-    "text": "New alpha feature gate `SELinuxMount` can be used to speed up SELinux relabeling of volumes.",
-    "markdown": "New alpha feature gate `SELinuxMount` can be used to speed up SELinux relabeling of volumes. ([#123157](https://github.com/kubernetes/kubernetes/pull/123157), [@jsafrane](https://github.com/jsafrane)) [SIG Node and Storage]",
+    "text": "New alpha feature gate `SELinuxMount` can be now used to speed up SELinux relabeling",
+    "markdown": "New alpha feature gate `SELinuxMount` can be now used to speed up SELinux relabeling ([#123157](https://github.com/kubernetes/kubernetes/pull/123157), [@jsafrane](https://github.com/jsafrane))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3315,8 +3366,8 @@
   },
   "123180": {
     "commit": "eafd2897e24b5b069bcdf83ac7a9b2c0b894dbb8",
-    "text": "Support Recursive Read-only (RRO) mounts  (KEP-3857)",
-    "markdown": "Support Recursive Read-only (RRO) mounts  (KEP-3857) ([#123180](https://github.com/kubernetes/kubernetes/pull/123180), [@AkihiroSuda](https://github.com/AkihiroSuda)) [SIG API Machinery, Apps, Node and Testing]",
+    "text": "Now Support Recursive Read-only (RRO) mounts  (KEP-3857)",
+    "markdown": "Now Support Recursive Read-only (RRO) mounts  (KEP-3857) ([#123180](https://github.com/kubernetes/kubernetes/pull/123180), [@AkihiroSuda](https://github.com/AkihiroSuda))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3448,8 +3499,8 @@
   },
   "123216": {
     "commit": "b63e991b5742ea86dd81b5a39b3369576d7d90da",
-    "text": "The Kubelet rejects creating the pod if hostUserns=false and the CRI runtime does not support user namespaces.",
-    "markdown": "The Kubelet rejects creating the pod if hostUserns=false and the CRI runtime does not support user namespaces. ([#123216](https://github.com/kubernetes/kubernetes/pull/123216), [@giuseppe](https://github.com/giuseppe)) [SIG Node]",
+    "text": "The Kubelet now  rejects creating the pod if `hostUserns=false` and the CRI runtime does not support user namespaces.",
+    "markdown": "The Kubelet now  rejects creating the pod if `hostUserns=false` and the CRI runtime does not support user namespaces. ([#123216](https://github.com/kubernetes/kubernetes/pull/123216), [@giuseppe](https://github.com/giuseppe))",
     "author": "giuseppe",
     "author_url": "https://github.com/giuseppe",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123216",
@@ -3936,8 +3987,8 @@
   },
   "123372": {
     "commit": "ec58e1f2fc3b56aa1e9c333598fdfab8d5aa66d1",
-    "text": "kubeadm: added support for machine readable output with \"-o yaml\" and \"-o json\" to the command \"kubeadm certs check-expiration\". This change is added in a new API \"kind\": \"CertificateExpirationInfo\",  \"apiVersion\": \"output.kubeadm.k8s.io/v1alpha3\". The existing non structured formatting is preserved. The output API version v1alpha2 is now deprecated and will be removed in a future release. Please migrate to using v1alpha3.",
-    "markdown": "Kubeadm: added support for machine readable output with \"-o yaml\" and \"-o json\" to the command \"kubeadm certs check-expiration\". This change is added in a new API \"kind\": \"CertificateExpirationInfo\",  \"apiVersion\": \"output.kubeadm.k8s.io/v1alpha3\". The existing non structured formatting is preserved. The output API version v1alpha2 is now deprecated and will be removed in a future release. Please migrate to using v1alpha3. ([#123372](https://github.com/kubernetes/kubernetes/pull/123372), [@carlory](https://github.com/carlory))",
+    "text": "kubeadm: added support for machine readable output with `-o yaml` and `-o json` to the command `kubeadm certs check-expiration`. This change is added in a new API \"kind\": \"CertificateExpirationInfo\",  \"apiVersion\": \"output.kubeadm.k8s.io/v1alpha3\". The existing non structured formatting is preserved. The output API version v1alpha2 is now deprecated and will be removed in a future release. Please migrate to using v1alpha3.",
+    "markdown": "Kubeadm: added support for machine readable output with `-o yaml` and `-o json` to the command `kubeadm certs check-expiration`. This change is added in a new API \"kind\": \"CertificateExpirationInfo\",  \"apiVersion\": \"output.kubeadm.k8s.io/v1alpha3\". The existing non structured formatting is preserved. The output API version v1alpha2 is now deprecated and will be removed in a future release. Please migrate to using v1alpha3. ([#123372](https://github.com/kubernetes/kubernetes/pull/123372), [@carlory](https://github.com/carlory))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4093,8 +4144,8 @@
   },
   "123413": {
     "commit": "f745503112e06d6ff199e929d536c6a29825c01a",
-    "text": "kubectl port-forward over websockets (tunneling SPDY) can be enabled using an `Alpha` feature flag environment variable: KUBECTL_PORT_FORWARD_WEBSOCKETS=true. The API Server being communicated to must *also* have an `Alpha` feature flag enabled: PortForwardWebsockets.",
-    "markdown": "Kubectl port-forward over websockets (tunneling SPDY) can be enabled using an `Alpha` feature flag environment variable: KUBECTL_PORT_FORWARD_WEBSOCKETS=true. The API Server being communicated to must *also* have an `Alpha` feature flag enabled: PortForwardWebsockets. ([#123413](https://github.com/kubernetes/kubernetes/pull/123413), [@seans3](https://github.com/seans3)) [SIG API Machinery, CLI, Node and Testing]",
+    "text": "kubectl port-forward over websockets (tunneling SPDY) can now be enabled using an `Alpha` feature flag environment variable: KUBECTL_PORT_FORWARD_WEBSOCKETS=true. The API Server being communicated to must *also* have an `Alpha` feature flag enabled: PortForwardWebsockets.",
+    "markdown": "Kubectl port-forward over websockets (tunneling SPDY) can now be enabled using an `Alpha` feature flag environment variable: KUBECTL_PORT_FORWARD_WEBSOCKETS=true. The API Server being communicated to must *also* have an `Alpha` feature flag enabled: PortForwardWebsockets. ([#123413](https://github.com/kubernetes/kubernetes/pull/123413), [@seans3](https://github.com/seans3))",
     "author": "seans3",
     "author_url": "https://github.com/seans3",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123413",
@@ -4252,28 +4303,7 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  "123438": {
-    "commit": "a823a842ecefa5391fe152c85ac99425120213b6",
-    "text": "NONE",
-    "markdown": "NONE ([#123438](https://github.com/kubernetes/kubernetes/pull/123438), [@yankay](https://github.com/yankay)) [SIG Architecture and Testing]",
-    "author": "yankay",
-    "author_url": "https://github.com/yankay",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123438",
-    "pr_number": 123438,
-    "areas": [
-      "apiserver",
-      "dependency"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "testing",
-      "architecture"
-    ],
-    "duplicate": true,
-    "do_not_publish": true
-  },
+  
   "123442": {
     "commit": "58bbf6991303fa97660beafc74d0d2d6e2c1c623",
     "text": "`NewVolumeManagerReconstruction` feature is now GA.",
@@ -4507,8 +4537,8 @@
   },
   "123504": {
     "commit": "cc5362ebc17e1376fa79b510f7f354dbffe7f92e",
-    "text": "Upgraded metrics server to v0.7.0.",
-    "markdown": "Upgraded metrics server to v0.7.0. ([#123504](https://github.com/kubernetes/kubernetes/pull/123504), [@pacoxu](https://github.com/pacoxu))",
+    "text": "Upgraded metrics server to `v0.7.0`.",
+    "markdown": "Upgraded metrics server to `v0.7.0`. ([#123504](https://github.com/kubernetes/kubernetes/pull/123504), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123504",
@@ -4823,8 +4853,8 @@
   },
   "123560": {
     "commit": "6cc77a577e56c68e4fde81865e022e05e8e02538",
-    "text": "Promoted AdmissionWebhookMatchConditions to GA. The feature is now stable and the feature gate is now locked to default.",
-    "markdown": "Promoted AdmissionWebhookMatchConditions to GA. The feature is now stable and the feature gate is now locked to default. ([#123560](https://github.com/kubernetes/kubernetes/pull/123560), [@ivelichkovich](https://github.com/ivelichkovich))",
+    "text": "Promoted \"AdmissionWebhookMatchConditions\" to GA. The feature is now stable and the feature gate is now locked to default.",
+    "markdown": "Promoted \"AdmissionWebhookMatchConditions\" to GA. The feature is now stable and the feature gate is now locked to default. ([#123560](https://github.com/kubernetes/kubernetes/pull/123560), [@ivelichkovich](https://github.com/ivelichkovich))",
     "documentation": [
       {
         "description": "[KEP]: [\u003clink\u003e](",
@@ -4993,8 +5023,8 @@
   },
   "123578": {
     "commit": "7c11cc9cfcdc54a7ca4efdc10609bf421bfa54d4",
-    "text": "kubeadm: printed all the kubelets and nodes that need to be upgraded on \"upgrade #     plan\".",
-    "markdown": "Kubeadm: printed all the kubelets and nodes that need to be upgraded on \"upgrade #     plan\". ([#123578](https://github.com/kubernetes/kubernetes/pull/123578), [@carlory](https://github.com/carlory))",
+    "text": "kubeadm: printed all the kubelets and nodes that need to be upgraded on \"upgrade plan\".",
+    "markdown": "Kubeadm: printed all the kubelets and nodes that need to be upgraded on \"upgrade plan\". ([#123578](https://github.com/kubernetes/kubernetes/pull/123578), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123578",
@@ -5012,8 +5042,8 @@
   },
   "123593": {
     "commit": "89cbd94e68ae80414dea7c14c1694e5e378a188d",
-    "text": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\nUser namespaces support is a Beta feature now.",
-    "markdown": "It is possible to configure the IDs that the Kubelet uses to create user namespaces.\n  User namespaces support is a Beta feature now. ([#123593](https://github.com/kubernetes/kubernetes/pull/123593), [@giuseppe](https://github.com/giuseppe)) [SIG Node]",
+    "text": "It is now  possible to configure the IDs that the Kubelet uses to create user namespaces.",
+    "markdown": "It is now  possible to configure the IDs that the Kubelet uses to create user namespaces. ([#123593](https://github.com/kubernetes/kubernetes/pull/123593), [@giuseppe](https://github.com/giuseppe))",
     "author": "giuseppe",
     "author_url": "https://github.com/giuseppe",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123593",
@@ -5031,8 +5061,8 @@
   },
   "123599": {
     "commit": "3df07e446b8c0befab3551c3001c71340710751c",
-    "text": "Bumped cAdvisor to v0.49.0.",
-    "markdown": "Bumped cAdvisor to v0.49.0. ([#123599](https://github.com/kubernetes/kubernetes/pull/123599), [@bobbypage](https://github.com/bobbypage))",
+    "text": "Bumped cAdvisor to `v0.49.0`.",
+    "markdown": "Bumped cAdvisor to `v0.49.0`. ([#123599](https://github.com/kubernetes/kubernetes/pull/123599), [@bobbypage](https://github.com/bobbypage))",
     "author": "bobbypage",
     "author_url": "https://github.com/bobbypage",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123599",
@@ -5140,8 +5170,8 @@
   },
   "123641": {
     "commit": "699984f25a80a39bbb112e657f08d76779cdc3a0",
-    "text": "kube-apiserver: the StructuredAuthorizationConfiguration feature gate is promoted to beta and allows using the `--authorization-configuration` flag.",
-    "markdown": "Kube-apiserver: the StructuredAuthorizationConfiguration feature gate is promoted to beta and allows using the `--authorization-configuration` flag. ([#123641](https://github.com/kubernetes/kubernetes/pull/123641), [@liggitt](https://github.com/liggitt))",
+    "text": "kube-apiserver: the StructuredAuthorizationConfiguration feature gate was promoted to beta and now allows using the `--authorization-configuration` flag.",
+    "markdown": "Kube-apiserver: the StructuredAuthorizationConfiguration feature gate was promoted to beta and now allows using the `--authorization-configuration` flag. ([#123641](https://github.com/kubernetes/kubernetes/pull/123641), [@liggitt](https://github.com/liggitt))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5232,6 +5262,24 @@
       "api-machinery"
     ]
   },
+  "123676": {
+    "commit": "89b1db79d75e367f567ea06c0528ef4b8f3fecb4",
+    "text": "Fixed enabling consistent list from watch cache also works for resourceVersion=0",
+    "markdown": "Fixed enabling consistent list from watch cache also works for resourceVersion=0 ([#123676](https://github.com/kubernetes/kubernetes/pull/123676), [@serathius](https://github.com/serathius))",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123676",
+    "pr_number": 123676,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
   "123696": {
     "commit": "05cb0a55c88e0cdcfe2fb184328ad9be53e94d5c",
     "text": "kube-apiserver: the AuthenticationConfiguration type accepted in `--authentication-config` files has been promoted to `apiserver.config.k8s.io/v1beta1`.",
@@ -5266,8 +5314,8 @@
   },
   "123713": {
     "commit": "751e3e9745e3e95016d0137e04c1dcaf60b78314",
-    "text": "The initialization of nodes using external cloud-providers now waits for the providerID value to be available before untainting it. This is required because , if there are communication errors with the cloud-provider on the cloud-controller-manager, nodes may have been declared Ready without having this field or the zone labels, and this information was never reconciled. The providerID and the zone labels are required for integrations like loadbalancers to work correctly. Cloud providers that does not implement the `GetInstanceProviderID` method will not require the providerID to be set and will not fail to initialize the node for backward compatibility issues.",
-    "markdown": "The initialization of nodes using external cloud-providers now waits for the providerID value to be available before untainting it. This is required because , if there are communication errors with the cloud-provider on the cloud-controller-manager, nodes may have been declared Ready without having this field or the zone labels, and this information was never reconciled. The providerID and the zone labels are required for integrations like loadbalancers to work correctly. Cloud providers that does not implement the `GetInstanceProviderID` method will not require the providerID to be set and will not fail to initialize the node for backward compatibility issues. ([#123713](https://github.com/kubernetes/kubernetes/pull/123713), [@aojea](https://github.com/aojea)) [SIG Cloud Provider]",
+    "text": "The initialization of nodes using external cloud-providers now waits for the providerID value to be available before untainting it. This is required because if there are communication errors with the cloud-provider on the cloud-controller-manager, nodes may have been declared Ready without having this field or the zone labels, and this information was never reconciled. The providerID and the zone labels are required for integrations like loadbalancers to work correctly. Cloud providers that does not implement the `GetInstanceProviderID` method will not require the providerID to be set and will not fail to initialize the node for backward compatibility issues.",
+    "markdown": "The initialization of nodes using external cloud-providers now waits for the providerID value to be available before untainting it. This is required because if there are communication errors with the cloud-provider on the cloud-controller-manager, nodes may have been declared Ready without having this field or the zone labels, and this information was never reconciled. The providerID and the zone labels are required for integrations like loadbalancers to work correctly. Cloud providers that does not implement the `GetInstanceProviderID` method will not require the providerID to be set and will not fail to initialize the node for backward compatibility issues. ([#123713](https://github.com/kubernetes/kubernetes/pull/123713), [@aojea](https://github.com/aojea))",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123713",
@@ -5394,8 +5442,8 @@
   },
   "123758": {
     "commit": "a5f5f44157c49fdfb6384862c7cb34c2ddbd4cce",
-    "text": "Updated google.golang.org/protobuf to v1.33.0 to resolve CVE-2024-24786.",
-    "markdown": "Updated google.golang.org/protobuf to v1.33.0 to resolve CVE-2024-24786. ([#123758](https://github.com/kubernetes/kubernetes/pull/123758), [@liggitt](https://github.com/liggitt))",
+    "text": "Updated google.golang.org/protobuf to `v1.33.0` to resolve `CVE-2024-24786`.",
+    "markdown": "Updated google.golang.org/protobuf to `v1.33.0` to resolve `CVE-2024-24786`. ([#123758](https://github.com/kubernetes/kubernetes/pull/123758), [@liggitt](https://github.com/liggitt))",
     "author": "liggitt",
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123758",
@@ -5456,5 +5504,42 @@
     ],
     "feature": true,
     "duplicate": true
+  },
+  "123935": {
+    "commit": "a1605fb3dd2d45474751ec3de30633ac1ec15c41",
+    "text": "kube-apiserver: fixed a 1.27+ regression in watch stability by serving watch requests without a resourceVersion from the watch cache by default, as in \u003c1.27 (disabling the change in #115096 by default). This mitigates the impact of an etcd watch bug (https://github.com/etcd-io/etcd/pull/17555). If the 1.27 change in #115096 to serve these requests from underlying storage is still desired despite the impact on watch stability, it can be re-enabled with a `WatchFromStorageWithoutResourceVersion` feature gate.",
+    "markdown": "Kube-apiserver: fixed a 1.27+ regression in watch stability by serving watch requests without a resourceVersion from the watch cache by default, as in \u003c1.27 (disabling the change in #115096 by default). This mitigates the impact of an etcd watch bug (https://github.com/etcd-io/etcd/pull/17555). If the 1.27 change in #115096 to serve these requests from underlying storage is still desired despite the impact on watch stability, it can be re-enabled with a `WatchFromStorageWithoutResourceVersion` feature gate. ([#123935](https://github.com/kubernetes/kubernetes/pull/123935), [@serathius](https://github.com/serathius))",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123935",
+    "pr_number": 123935,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "etcd"
+    ],
+    "duplicate": true
+  },
+  "124001": {
+    "commit": "a309fadbac3339bc8db9ae0a928a33b8e81ef10f",
+    "text": "Revert \"support sharing waitingPods across different scheduler profiles\"",
+    "markdown": "Revert \"support sharing waitingPods across different scheduler profiles\" ([#124001](https://github.com/kubernetes/kubernetes/pull/124001), [@kerthcet](https://github.com/kerthcet)) [SIG Scheduling]",
+    "author": "kerthcet",
+    "author_url": "https://github.com/kerthcet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/124001",
+    "pr_number": 124001,
+    "kinds": [
+      "flake",
+      "failing-test"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "duplicate_kind": true
   }
 }

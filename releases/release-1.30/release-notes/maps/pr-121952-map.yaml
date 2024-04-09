@@ -1,0 +1,3 @@
+pr: 121952
+releasenote:
+  text: "The scheduler now retries Pods, which are failed by `nodevolumelimits` due to not found PVCs, only when new PVCs are added."
