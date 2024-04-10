@@ -39,8 +39,8 @@
 
 The release signal team is responsible for making sure that **both** Issues (`is:issue`) and Pull Requests (PRs) (`is:pr`), which
 are targeted for the ongoing release cycle, are dealt with in a timely fashion. It also assumes the responsibility of the quality
-gate for the release, checking the health status of testgrid dashboards. This team is a combination of old [CI Signal](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/ci-signal) and [Bug
-Triage](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/bug-triage) sub-team. Further responsibilities are:
+gate for the release, checking the health status of testgrid dashboards. This team is a combination of old [CI Signal](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/archive/ci-signal) and [Bug
+Triage](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/archive/bug-triage) sub-team. Further responsibilities are:
 
 - Consistently monitor end-to-end (e2e) tests in sig-release
   dashboards ([master-blocking](https://testgrid.k8s.io/sig-release-master-blocking), [master-informing](https://testgrid.k8s.io/sig-release-master-informing), `release-x.y-blocking/informing` (
