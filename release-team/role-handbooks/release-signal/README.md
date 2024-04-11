@@ -1,6 +1,6 @@
 # Release Signal Role Handbook
 
-<!-- TOC -->
+<!-* TOC -->
 * [Release Signal Role Handbook](#release-signal-role-handbook)
   * [Overview](#overview)
   * [Requirements](#requirements)
@@ -14,10 +14,10 @@
     * [Mid-Release Cycle](#mid-release-cycle)
     * [Code Freeze](#code-freeze)
       * [Day Of The Code Freeze](#day-of-the-code-freeze)
-      * [Once the Code Freeze starts - one week later](#once-the-code-freeze-starts---one-week-later)
+      * [Once the Code Freeze starts \* one week later](#once-the-code-freeze-starts--one-week-later)
       * [Week 1 of Code Freeze until Code Thaw starts](#week-1-of-code-freeze-until-code-thaw-starts)
     * [Code Thaw](#code-thaw)
-  * [Release Cutting - Go or No-Go](#release-cutting---go-or-no-go)
+  * [Release Cutting \* Go or No-Go](#release-cutting--go-or-no-go)
   * [Judging State of Testgrid dashboards](#judging-state-of-testgrid-dashboards)
   * [Blocking vs. Informing Dashboards](#blocking-vs-informing-dashboards)
   * [Opening Issues](#opening-issues)
@@ -33,7 +33,6 @@
     * [Finding a Flaky Test](#finding-a-flaky-test)
     * [Priority Labels](#priority-labels)
     * [Milestones](#milestones)
-<!-- TOC -->
 
 ## Overview
 
@@ -42,16 +41,16 @@ are targeted for the ongoing release cycle, are dealt with in a timely fashion. 
 gate for the release, checking the health status of testgrid dashboards. This team is a combination of old [CI Signal](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/archive/ci-signal) and [Bug
 Triage](https://github.com/kubernetes/sig-release/tree/master/release-team/role-handbooks/archive/bug-triage) sub-team. Further responsibilities are:
 
-- Consistently monitor end-to-end (e2e) tests in sig-release
+* Consistently monitor end-to-end (e2e) tests in sig-release
   dashboards ([master-blocking](https://testgrid.k8s.io/sig-release-master-blocking), [master-informing](https://testgrid.k8s.io/sig-release-master-informing), `release-x.y-blocking/informing` (
   x.y being the current release)) throughout the release cycle and notify / signal the release team on the status of the tests and coordinate with the responsible SIG's to resolve unhealthy tests.
-  - Give a “Go” or “No-Go” Signal to the release team whenever a release is being cut.
-  - Flagging regressions as close to the source as possible, i.e., as soon as the offending code was merged
-  - Making recommendations to SIG-Release for promoting and demoting release blocking and merge blocking tests as per
+  * Give a “Go” or “No-Go” Signal to the release team whenever a release is being cut.
+  * Flagging regressions as close to the source as possible, i.e., as soon as the offending code was merged
+  * Making recommendations to SIG-Release for promoting and demoting release blocking and merge blocking tests as per
     the [Blocking Jobs Criteria](/release-blocking-jobs.md)
-- Tracking issues and PRs in the current milestone
-- Presenting summary reports at release team and burndown meetings
-- Maintaining the automation around tracking issues/PRs against the current milestone
+* Tracking issues and PRs in the current milestone
+* Presenting summary reports at release team and burndown meetings
+* Maintaining the automation around tracking issues/PRs against the current milestone
 
 Since the role was created by the merger of the CI Signal sub-team and the Bug Triage sub-team, two project boards must be
 maintained. Perhaps this can be unified down the road. Detailed information on project boards is
@@ -65,58 +64,57 @@ Check [How To Escalate](#how-to-escalate) on how to do it.
 
 Release Signal is one of the most time-intensive roles on the release team. General time requirements:
 
+* Availability to attend most of Release Team (weekly) and Burndown meetings (daily during Code Freeze), subject to time zone
+  appropriateness.
+* Ability to follow up on test fixes during Code Freeze at arbitrary times to ensure rapid turnaround.
+* The time commitment increases through the release cycle, peaking during Code Freeze. In the last week of Code Freeze, shadows
+  should expect to spend at least 10 hours and lead at least 20 hours per week.
+
 For Release Signal Lead:
 
-- 1/2 hour to 2 hours daily, every workday, checking and following up on failing/flaky tests, issues and PRs targeted for the
-  ongoing release cycle around week 6 (mid-release).
+* 1/2 hour to 2 hours daily, every workday, checking and following up on failing/flaky tests, issues and PRs targeted for the
+  ongoing release cycle since around week 6 (mid-release).
 
 For Release Signal Shadows:
 
-- 10 minutes daily, checking the state of testgrid, and tracking issues/PRs on the Bug Triage Board. 1/2 hour during assigned periods, where
+* 10 minutes daily, checking the state of testgrid, and tracking issues/PRs on the Bug Triage Board. 1/2 hour during assigned periods, where
   shadow is the prime testgrid observer (to create issues, investigate and follow up).
-
-For Both:
-
-- Availability to attend most of Release Team (weekly) and Burndown meetings (daily during Code Freeze), subject to time zone
-  appropriateness.
-- Ability to follow up on test fixes during Code Freeze at arbitrary times to ensure rapid turnaround.
-- The time commitment increases through the release cycle, peaking during Code Freeze. In the last week of Code Freeze, shadows
-  should expect to spend at least 10 hours and lead at least 20 hours per week.
+* knows the primary update(especially blockers) well in every week's the Release Team meeting
 
 ### Additional Requirements for Shadows
 
 The following requirements are all things that the lead should already have, and shadows should acquire, with coaching, within the
 first weeks of the release cycle:
 
-- Get [Kubernetes Community Membership](https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-onboarding.md#kubernetes-community-membership)
-- General familiarity with our [test boards](https://testgrid.k8s.io/) and examining test results from automated tests.
-- Willingness and ability to follow up with contributors about test failures on Slack, email, and SIG meetings, as
+* Get [Kubernetes Community Membership](https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-onboarding.md#kubernetes-community-membership)
+* General familiarity with our [test boards](https://testgrid.k8s.io/) and examining test results from automated tests.
+* Willingness and ability to follow up with contributors about test failures on Slack, email, and SIG meetings, as
   appropriate.
-- Ability to file well-crafted Kubernetes issues, including labelling.
-- General familiarity with GitHub labels and how to find issues/PRs for the current milestone.
-- General knowledge of our SIG system and SIGs' areas of responsibility.
+* Ability to file well-crafted Kubernetes issues, including labelling.
+* General familiarity with GitHub labels and how to find issues/PRs for the current milestone.
+* General knowledge of our SIG system and SIGs' areas of responsibility.
 
 #### Good To Have
 
-- Prior involvement with [SIG Testing](https://github.com/kubernetes/community/blob/master/sig-testing/README.md) and the [Test Infrastructure](https://github.com/kubernetes/community/blob/master/sig-k8s-infra/README.md) team.
-- Experience with automated testing, CI/CD, quality engineering, and/or quality assurance.
-- Experience with quality assurance and bug-tracking systems.
-- Experience with the GitHub automation.
+* Prior involvement with [SIG Testing](https://github.com/kubernetes/community/blob/master/sig-testing/README.md) and the [Test Infrastructure](https://github.com/kubernetes/community/blob/master/sig-k8s-infra/README.md) team.
+* Experience with automated testing, CI/CD, quality engineering, and/or quality assurance.
+* Experience with quality assurance and bug-tracking systems.
+* Experience with the GitHub automation.
 
 ### Additional Requirements for Leads
 
 In addition to the above requirements for shadows, most of which become prerequisites, Release Signal Leads must:
 
-- Have the ability to add a milestone to issues, so must be a member of
-  the [milestone maintainers](https://github.com/orgs/kubernetes/teams/milestone-maintainers). Reach out to the Release Add for the same.
-- Have a working knowledge of our various test infrastructure tools, such as [Testgrid](https://github.com/GoogleCloudPlatform/testgrid), [Triage](https://github.com/kubernetes/test-infra/tree/master/triage), [Spyglass](https://docs.prow.k8s.io/docs/spyglass/), [Prow](https://docs.prow.k8s.io/docs/), and [Tide](https://docs.prow.k8s.io/docs/components/core/tide/).
-- Have a working knowledge of GitHub labelling (using [prow](https://prow.k8s.io/command-help)) and labels (main: SIG, Area, Priority, Kind, Triage) used by the project. Release Signal leads must be able to identify
+* Have the ability to add a milestone to issues, so must be a member of
+  the [milestone maintainers](https://github.com/orgs/kubernetes/teams/milestone-maintainers). Reach out to the Release Lead for the same.
+* Have a working knowledge of our various test infrastructure tools, such as [Testgrid](https://github.com/GoogleCloudPlatform/testgrid), [Triage](https://github.com/kubernetes/test-infra/tree/master/triage), [Spyglass](https://docs.prow.k8s.io/docs/spyglass/), [Prow](https://docs.prow.k8s.io/docs/), and [Tide](https://docs.prow.k8s.io/docs/components/core/tide/).
+* Have a working knowledge of GitHub labelling (using [prow](https://prow.k8s.io/command-help)) and labels (main: SIG, Area, Priority, Kind, Triage) used by the project. Release Signal leads must be able to identify
   relevant issues and PRs for a given milestone.
-- Understand what defines a Release Blocking issue or PR, or know who to contact to determine that information.
-- Release Signal lead needs to understand what tests matter and how our testing infra is wired together.
-    - They can ask previous Release Signal leads for advice.
-    - They can ask SIG-Testing for guidance.
-- The Release Signal lead should take
+* Understand what defines a Release Blocking issue or PR, or know who to contact to determine that information.
+* Release Signal lead needs to understand what tests matter and how our testing infra is wired together.
+  * They can ask previous Release Signal leads for advice.
+  * They can ask SIG-Testing for guidance.
+* The Release Signal lead should take
   the [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/)
   training course.
 
@@ -130,38 +128,46 @@ stabilization phase.
 
 ### Onboarding
 
-- Update
+* Update
   the [release-signal team in the teams.yaml](https://github.com/kubernetes/org/blob/main/config/kubernetes/sig-release/teams.yaml)
   which grants access to the [ci signal project board](https://github.com/orgs/kubernetes/projects/68/) and the [bug triage project board](https://github.com/orgs/kubernetes/projects/80). _Coordinate with the
   release lead to make multiple changes to this file in one PR._
-- Adding the lead and (more experienced) shadows as milestone maintainers in
+* Adding the lead and (more experienced) shadows as milestone maintainers in
   the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml).
   _Coordinate with the release lead to make multiple changes to this file in one PR._
-- Plan release support and status reporting. Setup [CI-Signal project board](/release-team/role-handbooks/release-signal/project-boards.md#setting-up-the-ci-signal-project-board) and the [Bug Triage Project Board](/release-team/role-handbooks/release-signal/project-boards.md#setting-up-the-bug-triage-project-board).
-- Create an excel sheet to track various assignments during the release cycle. [Example](https://docs.google.com/spreadsheets/d/1lYbCOGvG9jD-AVT0Ajc3LoSLNKHC6xIIy1t6BJPlO7E/edit?usp=sharing)
-- Release Signal Shadows must be a member of the Kubernetes organization and, therefore, apply for membership by opening an issue
+* Plan release support and status reporting. Setup [CI Signal project board](/release-team/role-handbooks/release-signal/project-boards.md#setting-up-the-ci-signal-project-board) and the [Bug Triage Project Board](/release-team/role-handbooks/release-signal/project-boards.md#setting-up-the-bug-triage-project-board).
+* Create an excel sheet to track various assignments during the release cycle. [Example](https://docs.google.com/spreadsheets/d/1lYbCOGvG9jD-AVT0Ajc3LoSLNKHC6xIIy1t6BJPlO7E/edit?usp=sharing)
+* Release Signal Shadows must be a member of the Kubernetes organization and, therefore, apply for membership by opening an issue
   on [kubernetes/org](https://github.com/kubernetes/org) (
   see [Issue template](https://github.com/kubernetes/org/issues/new?assignees=&labels=area%2Fgithub-membership&template=membership.yml&title=REQUEST%3A+New+membership+for+%3Cyour-GH-handle%3E)).
-- Organizing an onboarding meeting with shadows to walk through this handbook and useful tools like [Testgrid](https://github.com/GoogleCloudPlatform/testgrid),
+* Organizing an onboarding meeting with shadows to walk through this handbook and useful tools like [Testgrid](https://github.com/GoogleCloudPlatform/testgrid),
   [Triage](https://github.com/kubernetes/test-infra/tree/master/triage), [Spyglass](https://docs.prow.k8s.io/docs/spyglass/), [Prow](https://docs.prow.k8s.io/docs/), and [Tide](https://docs.prow.k8s.io/docs/components/core/tide/).
 
 ### Early Release
 
 Once the onboarding meetings have been organized, the following tasks are good to begin with during the early release cycle (Week
-0 - Week 6)
+0 * Week 6)
 
-- Start maintaining the [CI signal project board](https://github.com/orgs/kubernetes/projects/68) and keep it up-to-date with
+* Start maintaining the [CI signal project board](https://github.com/orgs/kubernetes/projects/68) and keep it up-to-date with
   issues tracking any test failure/flake
-- Assign the new milestone labels to the open issues from the previous release, assign a member of the Release Signal team, and
+* Assign the new milestone labels to the open issues from the previous release, assign a member of the Release Signal team, and
   have that member follow up on the issue with the owners
-- Monitor [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
+* Monitor [master-blocking](https://testgrid.k8s.io/sig-release-master-blocking)
   and [master-informing](https://testgrid.k8s.io/sig-release-master-informing) dashboards daily and ensure all failures and flakes
   are tracked via open issues. See [Opening Issues](#opening-issues) for how to write an effective issue.
-- Updating/Extending scripts/actions that populate the Bug Triage and CI Signal project board with relevant issues/PRs.
-- Familiarize yourself with major enhancements and fixes planned by each SIG for this release so that you can have context in
+* Updating/Extending scripts/actions that populate the Bug Triage and CI Signal project board with relevant issues/PRs.
+* Familiarize yourself with major enhancements and fixes planned by each SIG for this release so that you can have context in
   advance of when you will need to identify incoming bugs as being associated with a work focus in the current release.
-- Start pinging stale or long-running issues / PRs so that an early assessment can be made if these should be moved out of the
+* Start pinging stale or long-running issues / PRs so that an early assessment can be made if these should be moved out of the
   current release cycle's milestone.
+
+Before next cycle, a retro meeting is suggested. At this point, every shadow is supposed to have a clear view on the daily work progress, issue/PR priority
+and team responsibilities. A general retro meeting can be started with below questions.
+
+* What should we continue doing?
+* What should we stop doing?
+* What should we start doing?
+* What actions can be taken?
 
 ### Mid-Release Cycle
 
@@ -171,14 +177,14 @@ release-x.y-blocking and release-x.y-informing dashboards are also added to the 
 
 The following are the major tasks:
 
-- Monitoring the master-blocking, master-informing, release-x.y-blocking and release-x.y-informing dashboards on a daily basis.
-- Closely working with SIGs/WGs and test owners to fix failing and flaky tests.
-- Ensure that issues and PRs targeting the release have the correct *milestone* and *priority* labels.
-    - Linked issues and PRs tracked in the current milestone should have `priority` and `kind` labels.
-- Ensure that `priority/critical-urgent` issues and PRs are not blocked.
-    - If such a `priority/critical-urgent` issue/PR is found, ping the owner and owner SIGs and alert the release team leads.
-- Ping all issues and PRs to remind contributors and SIG leads about the code freeze approaching in a month or so.
-    - You may want to ping issues at least two times to ensure deadlines are communicated correctly, usually once this stage
+* Monitoring the master-blocking, master-informing, release-x.y-blocking and release-x.y-informing dashboards on a daily basis.
+* Closely working with SIGs/WGs and test owners to fix failing and flaky tests.
+* Ensure that issues and PRs targeting the release have the correct *milestone* and *priority* labels.
+  * Linked issues and PRs tracked in the current milestone should have `priority` and `kind` labels.
+* Ensure that `priority/critical-urgent` issues and PRs are not blocked.
+  * If such a `priority/critical-urgent` issue/PR is found, ping the owner and owner SIGs and alert the release team leads.
+* Ping all issues and PRs to remind contributors and SIG leads about the code freeze approaching in a month or so.
+  * You may want to ping issues at least two times to ensure deadlines are communicated correctly, usually once this stage
       starts and a couple of days before the code freeze starts.
 
 Initially, you should prioritize pinging issues/PRs that haven't been updated for a longer time. You can use the following
@@ -222,12 +228,12 @@ query [`is:pr is:open no:milestone label:approved label:lgtm`](https://github.co
 
 You can monitor PRs using the following queries:
 
-- [PRs supposed to be in the merge pool (`is:pr is:open milestone:v1.28 label:approved label:lgtm -label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+label%3Algtm+-label%3Ado-not-merge%2Fhold)
-- [PRs that have `approved` and `lgtm`, but are on-hold (`is:pr is:open milestone:v1.28 label:approved label:lgtm label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+label%3Algtm+label%3Ado-not-merge%2Fhold+)
-- [PRs that doesn't have `approved` but have `lgtm` (`is:pr is:open milestone:v1.28 -label:approved label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+-label%3Aapproved+label%3Algtm)
-- [PRs that doesn't have `lgtm` but have `approved` (`is:pr is:open milestone:v1.28 label:approved -label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+-label%3Algtm+)
+* [PRs supposed to be in the merge pool (`is:pr is:open milestone:v1.28 label:approved label:lgtm -label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+label%3Algtm+-label%3Ado-not-merge%2Fhold)
+* [PRs that have `approved` and `lgtm`, but are on-hold (`is:pr is:open milestone:v1.28 label:approved label:lgtm label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+label%3Algtm+label%3Ado-not-merge%2Fhold+)
+* [PRs that doesn't have `approved` but have `lgtm` (`is:pr is:open milestone:v1.28 -label:approved label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+-label%3Aapproved+label%3Algtm)
+* [PRs that doesn't have `lgtm` but have `approved` (`is:pr is:open milestone:v1.28 label:approved -label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+-label%3Algtm+)
 
-#### Once the Code Freeze starts - one week later
+#### Once the Code Freeze starts * one week later
 
 Usually, the removal of issues/PRs doesn't start right once the code freeze starts. Depending on the testgrid state, the merge
 queue length, and the release team lead's decision, it might be decided to allow some more time for PRs to get merged. At this
@@ -274,7 +280,7 @@ especially in the final days of the release. On occasion, things will merge that
 possibility needs to be monitored, and when it happens, the commits need to be triaged for destabilizing risk and proper exception
 justification, tests, docs, etc.
 
-## Release Cutting - Go or No-Go
+## Release Cutting * Go or No-Go
 
 Over the release cycle, the release engineering team will cut several releases (alpha, beta, rc), before it ends with a new major
 Kubernetes release. During the release cycle, tests fail and potentially prevent the cut of a new version. The release signal team
@@ -287,6 +293,16 @@ the [#release-management](https://kubernetes.slack.com/archives/CJH2GBF7Y) slack
 
 See [Judging State of Testgrid dashboards](#judging-state-of-testgrid-dashboards) for the actual Go/No-Go signal for the release
 cut.
+
+To handling a flake/failure, it can be roughly spilted to 5 steps:
+
+1. Created: when we find the flake/failure, we create an issue and add it to the CI Signal board.
+2. Noticed the owner: we should notice relevant SIGs/owners in the issue and slack channels, including #release-ci-signal
+   * the CI/Job owner SIG and test owner SIG, and sometimes the root cause may be another SIG.
+   * Check if the test code was changed recently and find the PR related, and tag the PR author and reviewers/approvers in the issue or slack thread.
+3. Assigned: it means that someone is starting working on the issue.
+4. Work in progress: a PR is open for the issue and PR has updates.
+5. Fixed.
 
 ## Judging State of Testgrid dashboards
 
@@ -311,20 +327,20 @@ See [Blocking vs. Informing Dashboards](#blocking-vs-informing-dashboards) for t
 
 Key:
 
-- ❌ - Failing Test
-- ⚠️ - Flaking Test
-- ✅ - Passing Test
+* ❌ * Failing Test
+* ⚠️ * Flaking Test
+* ✅ * Passing Test
 
 **_Important Notes:_**
 
-- Red/Yellow Signals block a release cut, and it is not until the issue is resolved or someone from a related SIG/someone with
+* Red/Yellow Signals block a release cut, and it is not until the issue is resolved or someone from a related SIG/someone with
   technical expertise marks that issue as a non-blocker that the release is cut.
 
-- For reporting the testgrid status in the weekly meetings, the following factors come into play:
-    - Is someone from the responsible SIG working on that issue?
-    - How close are we to the next release cut?
-    - What is the estimated time to solve the issue? Would it take too long?
-    - Is the fix for that issue blocked by some other issue?
+* For reporting the testgrid status in the weekly meetings, the following factors come into play:
+  * Is someone from the responsible SIG working on that issue?
+  * How close are we to the next release cut?
+  * What is the estimated time to solve the issue? Would it take too long?
+  * Is the fix for that issue blocked by some other issues?
 
 All these questions contribute to the signal in the weekly meeting and are up to the release signal team's interpretation based on
 the situation. Red and Yellow indicate that we want attention to the issues or that the actual fix still needs to be implemented.
@@ -363,12 +379,12 @@ and resolving a failing or flaking job.
 
 _All instances of "failing" below can be replaced with "flaking" when appropriate._
 
-- The following pattern can be used to title a failure/flake while opening an issue:
-    - [Failing Test] [Responsible SIG]... (failing test name/failure description) (failing-job-name)
-    - The `...` used above is somewhat similar to variadic functions. You can tag as well as mention multiple SIGs if a test
+* The following pattern can be used to title a failure/flake while opening an issue:
+  * [Failing Test] [Responsible SIG]... (failing test name/failure description) (failing-job-name)
+  * The `...` used above is somewhat similar to variadic functions. You can tag as well as mention multiple SIGs if a test
       belongs to them, example: [Failing Test] [sig apps] [sig testing] (failing test name/failure description) (failing-job-name)
 
-- If the failure is clearly related to a testing infrastructure issue, it may be appropriate to open the issue
+* If the failure is clearly related to a testing infrastructure issue, it may be appropriate to open the issue
   in [k/test-infra](https://github.com/kubernetes/test-infra) or [k/k8s.io](https://github.com/kubernetes/k8s.io).
 
 An issue should remain open until the appropriate fix has been made and the affected tests have returned to a healthy status. If
@@ -377,19 +393,19 @@ closed issues.
 
 For all opened issues:
 
-- Make sure all open issues have a `priority/` label (see: [Priority Labels](#priority-labels)) and one of either the `kind/flake`
+* Make sure all open issues have a `priority/` label (see: [Priority Labels](#priority-labels)) and one of either the `kind/flake`
   or `kind/failing-test` label.
-- Make sure the issue is assigned against the current milestone 1.x, using `/milestone`.
-- Assign the issue to the appropriate SIG using the `/sig` label.
-- If you are aware of the individual associated with the enhancement area or issue, @mention of the individual(s) and SIG leads
+* Make sure the issue is assigned against the current milestone 1.x, using `/milestone`.
+* Assign the issue to the appropriate SIG using the `/sig` label.
+* If you are aware of the individual associated with the enhancement area or issue, @mention of the individual(s) and SIG leads
   tends to result in a faster turnaround.
-- Add `@kubernetes/sig-foo-test-failures` to draw SIG-foo's attention to the issue.
-- `/cc @kubernetes/release-team-release-signal` Github team on the issue to let the rest of the team know about it. You might also `/cc` the release
+* Add `@kubernetes/sig-foo-test-failures` to draw SIG-foo's attention to the issue.
+* `/cc @kubernetes/release-team-release-signal` Github team on the issue to let the rest of the team know about it. You might also `/cc` the release
   lead if the issue needs extra attention immediately.
-- Assign the issue to yourself or recruit another member of the Release Signal team to own the issue. The Release Signal team
+* Assign the issue to yourself or recruit another member of the Release Signal team to own the issue. The Release Signal team
   member assigned to an issue is responsible for driving it to resolution alongside the assignee from the appropriate SIG.
-- Post the test failure in SIG's Slack channel to get help in routing the issue to the rightful owner(s).
-- Add the issue to the [CI signal board](https://github.com/orgs/kubernetes/projects/68) under "New". The Release Signal team lead
+* Post the test failure in SIG's Slack channel to get help in routing the issue to the rightful owner(s).
+* Add the issue to the [CI signal board](https://github.com/orgs/kubernetes/projects/68) under "New". The Release Signal team lead
   is responsible for making sure every issue on the CI signal board is assigned to a member of the Release Signal team and is
   being actively driven to resolution.
 
@@ -420,17 +436,17 @@ when dealing with test failures in the following areas.
 
 Scalability testing is inherently challenging, and regressions in this area are potentially a huge project risk
 
-- Requires lots and lots of servers running tests, and hence expensive
-- Tests are long-running, so it is especially hard/expensive/slow to resolve issues via Git bisection
-- Examination of results is actually the bigger, more expensive part of the situation
+* Requires lots and lots of servers running tests, and hence expensive
+* Tests are long-running, so it is especially hard/expensive/slow to resolve issues via Git bisection
+* Examination of results is actually the bigger, more expensive part of the situation
 
 The following scalability jobs/tests could regress quite easily (due to seemingly unrelated PRs anywhere in the k8s codebase) and
 require constant manual monitoring/triaging and domain expertise to investigate and resolve.
 
-- [master-blocking gce-cos-master-scalability-100](https://testgrid.k8s.io/sig-release-master-blocking#gce-cos-master-scalability-100)
-- [master-informing gce-scale-correctness](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-correctness)
-- [master-informing gce-scale-performance](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-performance)
-- `release-x.y-blocking gce-cos-x.y-scalability-100`
+* [master-blocking gce-cos-master-scalability-100](https://testgrid.k8s.io/sig-release-master-blocking#gce-cos-master-scalability-100)
+* [master-informing gce-scale-correctness](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-correctness)
+* [master-informing gce-scale-performance](https://testgrid.k8s.io/sig-release-master-informing#gce-master-scale-performance)
+* `release-x.y-blocking gce-cos-x.y-scalability-100`
 
 Importantly, the expensive scalability jobs that run on master-informing do not run or appear on release-x.y-informing because we
 do not currently run them against the release branch as well as the master. In the event of a problem with these jobs, you then
@@ -439,11 +455,11 @@ the master.
 
 The Release Signal team should
 
-- Continuously monitor these tests early in the release cycle, ensure issues are filed and escalated to the Release team and right
+* Continuously monitor these tests early in the release cycle, ensure issues are filed and escalated to the Release team and right
   owners in [SIG-Scalability](https://github.com/kubernetes/community/tree/master/sig-scalability#chairs).
-- Work with SIG-Scalability to understand if the failure is a product regression versus a test issue (flake) and, in either case,
+* Work with SIG-Scalability to understand if the failure is a product regression versus a test issue (flake) and, in either case,
   follow-up closely on a fix.
-- Additionally, it might help to monitor SIG-Scalability's performance dashboard to flag if and when there is considerable
+* Additionally, it might help to monitor SIG-Scalability's performance dashboard to flag if and when there is considerable
   performance degradation.
 
 ## Reporting
@@ -452,18 +468,18 @@ A member of the Release Signal team should give status updates in every release 
 testgrid see [judging state of testgrid dashboards](#judging-state-of-testgrid-dashboards). For summarizing the issues and PRs
 being tracked for this release, the following template is to be used.
 
-- Release [blocking Issues](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+label%3Arelease-blocker) (#number)
-- Release [blocking PRs](https://github.com/kubernetes/kubernetes/pulls?q=is%3Apr+is%3Aopen+label%3Arelease-blocker+) (#number)
+* Release [blocking Issues](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+is%3Aissue+label%3Arelease-blocker) (#number)
+* Release [blocking PRs](https://github.com/kubernetes/kubernetes/pulls?q=is%3Apr+is%3Aopen+label%3Arelease-blocker+) (#number)
 
-- Query: [open non-test/flake k/k issues for v1.29](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+milestone%3Av1.29+is%3Aissue+sort%3Aupdated-asc+-label%3Akind%2Ffailing-test+-label%3Akind%2Fflake+) (#number)
-    -   [priority/critical-urgent issues](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+milestone%3Av1.29+label%3Apriority%2Fcritical-urgent+is%3Aissue+sort%3Aupdated-asc+-label%3Akind%2Ffailing-test+-label%3Akind%2Fflake+) (#number)
-    -   [priority/important-soon issues](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+milestone%3Av1.29+label%3Apriority%2Fimportant-soon+is%3Aissue+sort%3Aupdated-asc+-label%3Akind%2Ffailing-test+-label%3Akind%2Fflake+) (#number)
+* Query: [open non-test/flake k/k issues for v1.29](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+milestone%3Av1.29+is%3Aissue+sort%3Aupdated-asc+-label%3Akind%2Ffailing-test+-label%3Akind%2Fflake+) (#number)
+    *   [priority/critical-urgent issues](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+milestone%3Av1.29+label%3Apriority%2Fcritical-urgent+is%3Aissue+sort%3Aupdated-asc+-label%3Akind%2Ffailing-test+-label%3Akind%2Fflake+) (#number)
+    *   [priority/important-soon issues](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+milestone%3Av1.29+label%3Apriority%2Fimportant-soon+is%3Aissue+sort%3Aupdated-asc+-label%3Akind%2Ffailing-test+-label%3Akind%2Fflake+) (#number)
 
-- Query: open k/k [PR’s for v1.29](https://github.com/kubernetes/kubernetes/pulls?q=repo%3Akubernetes%2Fkubernetes+is%3Aopen+milestone%3Av1.29+is%3Apr+sort%3Aupdated-asc+) (#number)
-    -   [priority/critical-urgent PRs](https://github.com/kubernetes/kubernetes/pulls?q=repo%3Akubernetes%2Fkubernetes+is%3Aopen+milestone%3Av1.29+is%3Apr+sort%3Aupdated-asc+label%3Apriority%2Fcritical-urgent) (#number)
-    -   [priority/important-soon PRs](https://github.com/kubernetes/kubernetes/pulls?q=repo%3Akubernetes%2Fkubernetes+is%3Aopen+milestone%3Av1.29+label%3Apriority%2Fimportant-soon+is%3Apr+sort%3Aupdated-asc+) (#number)
+* Query: open k/k [PR’s for v1.29](https://github.com/kubernetes/kubernetes/pulls?q=repo%3Akubernetes%2Fkubernetes+is%3Aopen+milestone%3Av1.29+is%3Apr+sort%3Aupdated-asc+) (#number)
+    *   [priority/critical-urgent PRs](https://github.com/kubernetes/kubernetes/pulls?q=repo%3Akubernetes%2Fkubernetes+is%3Aopen+milestone%3Av1.29+is%3Apr+sort%3Aupdated-asc+label%3Apriority%2Fcritical-urgent) (#number)
+    *   [priority/important-soon PRs](https://github.com/kubernetes/kubernetes/pulls?q=repo%3Akubernetes%2Fkubernetes+is%3Aopen+milestone%3Av1.29+label%3Apriority%2Fimportant-soon+is%3Apr+sort%3Aupdated-asc+) (#number)
 
-- Query: ALL [open k/k issues for v1.29](https://github.com/kubernetes/kubernetes/issues?q=repo%3Akubernetes%2Fkubernetes+milestone%3Av1.29+is%3Aissue+is%3Aopen+sort%3Aupdated-asc+) (#number) (incl. [this query](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+milestone%3Av1.26+is%3Aissue+sort%3Aupdated-asc+-label%3Akind%2Ffailing-test+-label%3Akind%2Fflake) (#number))
+* Query: ALL [open k/k issues for v1.29](https://github.com/kubernetes/kubernetes/issues?q=repo%3Akubernetes%2Fkubernetes+milestone%3Av1.29+is%3Aissue+is%3Aopen+sort%3Aupdated-asc+) (#number) (incl. [this query](https://github.com/kubernetes/kubernetes/issues?q=is%3Aopen+milestone%3Av1.26+is%3Aissue+sort%3Aupdated-asc+-label%3Akind%2Ffailing-test+-label%3Akind%2Fflake) (#number))
 
 **Note:**
 
@@ -485,7 +501,7 @@ Notes to follow along: http://bit.ly/k8s-ci-signal
 This role consists of creating issues for failing and flaky tests on the testgrid and monitoring issues and PRs targeted for the
 current release cycle. The path of escalation is slightly different for both types of issues.
 
-- For tests failing/flaking on testgrid:
+* For tests failing/flaking on testgrid:
   1. Create an issue in the [k/k](https://github.com/kubernetes/kubernetes)
      or [k/test-infra](https://github.com/kubernetes/test-infra)
      or [k/k8s.io](https://github.com/kubernetes/k8s.io) (depending on the type of issue) repository and tag the appropriate SIG
@@ -497,7 +513,7 @@ current release cycle. The path of escalation is slightly different for both typ
      see [this](https://kubernetes.slack.com/archives/CN0K3TE2C/p1694239448798339) thread in
      the [#release-ci-signal](https://kubernetes.slack.com/archives/CN0K3TE2C) channel.
 
-- For issues and PRs targeted for the current release cycle:
+* For issues and PRs targeted for the current release cycle:
   1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months. Are you still expecting to complete
      it for 1.28?". It's helpful to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` alias, e.g.
      "@kubernetes/sig-node-bugs" or
@@ -513,16 +529,16 @@ non-responsive issues.
 
 ### Checking test dashboards
 
-- Quirk: If a job is listed as FAILING but doesn't have "Overall" as one of its ongoing failures, it's not actually failing. It
+* Quirk: If a job is listed as FAILING but doesn't have "Overall" as one of its ongoing failures, it's not actually failing. It
   might be "red" from some previous test run failures and will clear up after a few "green" runs.
-- if a job is failing in one of the meta-stages (Up, Down, DumpClusterLogs, etc.), find the owning SIG since it is a infra failure
-- If a job is failing because a specific test case is failing, and that test case has a [sig-foo] in its name, tag SIG-foo in the
+* if a job is failing in one of the meta-stages (Up, Down, DumpClusterLogs, etc.), find the owning SIG since it is a infra failure
+* If a job is failing because a specific test case is failing, and that test case has a [sig-foo] in its name, tag SIG-foo in the
   issue and find the appropriate owner within the SIG
-- With unit test case failures, try to infer the SIG from the path or OWNERS files in it. Otherwise, find the owning SIG to help.
-- With verify failures, try to infer the failure from the log. Otherwise, find the owning SIG to help
-- If a test case is failing in one job consistently but not others, both the job owner and test case owner are responsible for
+* With unit test case failures, try to infer the SIG from the path or OWNERS files in it. Otherwise, find the owning SIG to help.
+* With verify failures, try to infer the failure from the log. Otherwise, find the owning SIG to help
+* If a test case is failing in one job consistently but not others, both the job owner and test case owner are responsible for
   identifying why this combination is different.
-- You can look at the past history of the job/test (even as far back as multiple releases) by querying
+* You can look at the past history of the job/test (even as far back as multiple releases) by querying
   the [triage dashboard for specific job and/or test name](https://storage.googleapis.com/k8s-triage/index.html).
 
 ### Finding a Flaky Test
