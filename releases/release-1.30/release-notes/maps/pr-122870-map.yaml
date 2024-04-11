@@ -1,0 +1,7 @@
+pr: 122870
+releasenote:
+  text: |-
+    Promoted the `status.hostIPs` field for Pods to general availability.
+    The `PodHostIPs` feature gate no longer has any effect, and the
+    `status.hostIPs` field is always available within the Pod API.
+pr_body: ""

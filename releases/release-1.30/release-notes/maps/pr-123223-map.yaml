@@ -1,0 +1,5 @@
+pr: 123223
+releasenote:
+  text: |
+    Enhanced cloud provider integrations to support optional, per-Node custom labels that can be supplied and applied to Nodes by the node controller. These extra labels will only be applied where the cloud provider integration supports this feature.
+pr_body: ""

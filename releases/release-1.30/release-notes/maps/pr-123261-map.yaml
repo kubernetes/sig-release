@@ -1,3 +1,5 @@
 pr: 123261
 releasenote:
-  text: Restored --verify-only function in code generation wrappers.
+  text: |
+    "Restored the `--verify-only` function in code generation wrappers."
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 122292
+releasenote:
+  text: |
+    Improved the efficiency of NodeAdded QueueingHint by registering UpdateNodeTaint event for plugins that have NodeAdded event but don't have UpdateNodeTaint event. This ensures better requeuing efficiency and prevents Pods from being stuck in the unschedulable pod pool.
+pr_body: ""

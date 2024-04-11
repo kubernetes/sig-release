@@ -1,5 +1,7 @@
 pr: 123135
 releasenote:
-  text: |-
-    Embedded Node information into Pod-bound service account tokens as additional metadata.
-    Set the 'JTI' field in issued service account tokens, and embed this information as `authentication.kubernetes.io/credential-id` in user's ExtraInfo.
+  text: Node information is now embedded into Pod-bound service account tokens as
+    additional metadata. The 'JTI' field is set in issued service account tokens,
+    and this information is embedded as `authentication.kubernetes.io/credential-id`
+    in the user's ExtraInfo.
+pr_body: ""

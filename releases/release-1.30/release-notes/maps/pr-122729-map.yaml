@@ -1,4 +1,5 @@
 pr: 122729
 releasenote:
-  text: Added a rule on the `kube_codegen` tool to ignore vendor folder during the
-    code generation.
+  text: |
+    The `kube_codegen` tool now ignores the vendor folder during code generation.
+pr_body: ""

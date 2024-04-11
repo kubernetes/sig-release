@@ -1,0 +1,7 @@
+pr: 122717
+releasenote:
+  text: Alpha support for field selectors on custom resources has been added. With
+    the `CustomResourceFieldSelectors` feature gate enabled, the CustomResourceDefinition
+    API now allows specifying `selectableFields`. Listing a field there enables filtering
+    custom resources for that CustomResourceDefinition in list or watch requests.
+pr_body: ""

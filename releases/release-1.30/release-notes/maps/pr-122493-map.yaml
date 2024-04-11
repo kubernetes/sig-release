@@ -1,0 +1,5 @@
+pr: 122493
+releasenote:
+  text: |
+    "Fixed incorrect error logging for `syncCronJob`."
+pr_body: ""

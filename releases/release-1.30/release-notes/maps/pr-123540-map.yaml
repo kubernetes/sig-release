@@ -1,0 +1,6 @@
+pr: 123540
+releasenote:
+  text: JWTs used in service account and OIDC authentication are now strictly parsed
+    to confirm that they use compact serialization. Other encodings were not previously
+    accepted, but would result in different unspecific errors.
+pr_body: ""

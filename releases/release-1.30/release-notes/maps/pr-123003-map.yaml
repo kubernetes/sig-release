@@ -1,4 +1,5 @@
 pr: 123003
 releasenote:
-  text: Fixed a bug in `ValidatingAdmissionPolicy` that caused policies which were
-    using CRD parameters to fail to synchronize.
+  text: |
+    "Fixed a bug in `ValidatingAdmissionPolicy` that caused policies using CRD parameters to fail to synchronize."
+pr_body: ""

@@ -1,3 +1,4 @@
 pr: 123479
 releasenote:
-  text: sample-apiserver manifest example now has correct RBAC.
+  text: Updated the sample-apiserver manifest example to include correct RBAC configurations.
+pr_body: ""

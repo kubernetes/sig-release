@@ -1,4 +1,5 @@
 pr: 123578
 releasenote:
-  text: 'kubeadm: printed all the kubelets and nodes that need to be upgraded on "upgrade plan".'
-    #     plan".'
+  text: |
+    Kubeadm now prints all the kubelets and nodes that need to be upgraded when running "upgrade plan".
+pr_body: ""

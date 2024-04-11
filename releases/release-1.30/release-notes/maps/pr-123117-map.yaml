@@ -1,4 +1,5 @@
 pr: 123117
 releasenote:
-  text: Fixed a bug where registered wildcard cluster event sources didn't work in
-    scheduler requeueing.
+  text: Fixed a bug in scheduler requeueing where registered wildcard cluster event
+    sources didn't work.
+pr_body: ""

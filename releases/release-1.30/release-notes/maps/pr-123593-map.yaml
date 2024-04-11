@@ -1,4 +1,5 @@
 pr: 123593
 releasenote:
-  text: It is now  possible to configure the IDs that the Kubelet uses to create user
-    namespaces.
+  text: |
+    Kubelet now supports configuring the IDs used to create user namespaces.
+pr_body: ""

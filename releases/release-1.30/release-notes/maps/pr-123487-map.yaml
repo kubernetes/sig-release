@@ -1,0 +1,6 @@
+pr: 123487
+releasenote:
+  text: Added a new (alpha) field, `trafficDistribution`, to the Service `spec` to
+    express preferences for traffic distribution to endpoints. Enabled through the
+    `ServiceTrafficDistribution` feature gate.
+pr_body: ""

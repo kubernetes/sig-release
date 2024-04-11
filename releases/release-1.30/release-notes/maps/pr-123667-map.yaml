@@ -1,0 +1,4 @@
+pr: 123667
+releasenote:
+  text: Added the `access_mode` label to `volume_manager_selinux_*` metrics.
+pr_body: ""

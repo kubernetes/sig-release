@@ -1,3 +1,6 @@
 pr: 122195
 releasenote:
-  text: "kube-scheduler implemented scheduling hints for the `PodTopologySpread` plugin. The scheduling hints allow the scheduler to retry scheduling a Pod that had been previously rejected by the `PodTopologySpread` plugin if a related Pod was created/deleted/updated or if a node matched the `topologyKey`."
+  text: kube-scheduler now retries scheduling Pods rejected by the PodTopologySpread
+    plugin when related Pods are created, deleted, updated, or when a node matches
+    the specified topologyKey.
+pr_body: ""

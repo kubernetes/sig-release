@@ -1,0 +1,5 @@
+pr: 123516
+releasenote:
+  text: |
+    "Dynamic Resource Allocation: DRA drivers can now use "structured parameters" to let the scheduler handle claim allocation."
+pr_body: ""

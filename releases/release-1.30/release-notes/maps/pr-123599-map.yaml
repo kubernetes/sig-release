@@ -1,3 +1,5 @@
 pr: 123599
 releasenote:
-  text: Bumped cAdvisor to `v0.49.0`.
+  text: |
+    "Bumped cAdvisor to `v0.49.0`."
+pr_body: ""

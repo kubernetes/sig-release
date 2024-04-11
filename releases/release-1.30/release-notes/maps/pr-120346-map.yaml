@@ -1,4 +1,5 @@
 pr: 120346
 releasenote:
-  text: Added new flag, namely `custom`, in kubectl debug to let users customize pre-defined
-    profiles.
+  text: A new flag called `custom` has been introduced in `kubectl debug`, allowing
+    users to customize pre-defined profiles.
+pr_body: ""

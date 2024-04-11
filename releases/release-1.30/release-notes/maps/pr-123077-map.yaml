@@ -1,4 +1,5 @@
 pr: 123077
 releasenote:
-  text: 'kubeadm: fixed a bug where the `--rootfs` global flag does not work with
-    "kubeadm upgrade node" for control plane nodes.'
+  text: Fixed a bug in kubeadm where the `--rootfs` global flag didn't work with "kubeadm
+    upgrade node" for control plane nodes.
+pr_body: ""

@@ -1,0 +1,8 @@
+pr: 123639
+releasenote:
+  text: |-
+    kube-apiserver: Authorization webhooks now report the following metrics:
+    - apiserver_authorization_webhook_evaluations_total
+    - apiserver_authorization_webhook_duration_seconds
+    - apiserver_authorization_webhook_evaluations_fail_open_total
+pr_body: ""
