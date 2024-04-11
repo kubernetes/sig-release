@@ -105,10 +105,6 @@
    ([#123520](https://github.com/kubernetes/kubernetes/pull/123520), [@haircommander](https://github.com/haircommander))
 - "Informers now supports adding Indexers after the informer starts."
    ([#117046](https://github.com/kubernetes/kubernetes/pull/117046), [@howardjohn](https://github.com/howardjohn))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#118389](https://github.com/kubernetes/kubernetes/pull/118389), [@amewayne](https://github.com/amewayne))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123564](https://github.com/kubernetes/kubernetes/pull/123564), [@ivelichkovich](https://github.com/ivelichkovich))
 - "Printed more information when `kubectl describe` a `VolumeAttributesClass`."
    ([#122640](https://github.com/kubernetes/kubernetes/pull/122640), [@carlory](https://github.com/carlory))
 - "Promoted the `CRDValidationRatcheting` feature gate to beta and made it enabled by default."
@@ -230,18 +226,6 @@
 
 ### Failing Test
 
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123488](https://github.com/kubernetes/kubernetes/pull/123488), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123490](https://github.com/kubernetes/kubernetes/pull/123490), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123776](https://github.com/kubernetes/kubernetes/pull/123776), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123821](https://github.com/kubernetes/kubernetes/pull/123821), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123865](https://github.com/kubernetes/kubernetes/pull/123865), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123943](https://github.com/kubernetes/kubernetes/pull/123943), [@dims](https://github.com/dims))
 - Reverted the change to "support sharing waitingPods across different scheduler profiles". ([#124001](https://github.com/kubernetes/kubernetes/pull/124001), [@kerthcet](https://github.com/kerthcet))
 
 ### Bug or Regression
@@ -288,20 +272,6 @@
    ([#123461](https://github.com/kubernetes/kubernetes/pull/123461), [@carlory](https://github.com/carlory))
 - "Made decoding etcd's response respect the timeout context."
    ([#121815](https://github.com/kubernetes/kubernetes/pull/121815), [@HirazawaUi](https://github.com/HirazawaUi))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#121565](https://github.com/kubernetes/kubernetes/pull/121565), [@srivastav-abhishek](https://github.com/srivastav-abhishek))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#122523](https://github.com/kubernetes/kubernetes/pull/122523), [@yasindce1998](https://github.com/yasindce1998))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#122569](https://github.com/kubernetes/kubernetes/pull/122569), [@IvoGoman](https://github.com/IvoGoman))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123051](https://github.com/kubernetes/kubernetes/pull/123051), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123652](https://github.com/kubernetes/kubernetes/pull/123652), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123657](https://github.com/kubernetes/kubernetes/pull/123657), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123659](https://github.com/kubernetes/kubernetes/pull/123659), [@dims](https://github.com/dims))
 - "Previously, the scheduling queue didn't notice any extenders' failures, potentially resulting in missed cluster events and Pods rejected by Extenders being stuck in the unschedulable pod pool for up to 5 minutes in the worst-case scenario. Now, the scheduling queue notices extenders' failures and requeues Pods rejected by Extenders appropriately."
    ([#122022](https://github.com/kubernetes/kubernetes/pull/122022), [@sanposhiho](https://github.com/sanposhiho))
 - "QueueingHint implementation for `NodeAffinity` was reverted because potential scenarios were found where events that make Pods schedulable could be missed."
@@ -384,32 +354,6 @@
    ([#122578](https://github.com/kubernetes/kubernetes/pull/122578), [@carlory](https://github.com/carlory))
 - "Migrated `client-go/metadata` to contextual logging."
    ([#122225](https://github.com/kubernetes/kubernetes/pull/122225), [@ricardoapl](https://github.com/ricardoapl))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#118756](https://github.com/kubernetes/kubernetes/pull/118756), [@sxllwx](https://github.com/sxllwx))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#120251](https://github.com/kubernetes/kubernetes/pull/120251), [@liyuerich](https://github.com/liyuerich))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#120631](https://github.com/kubernetes/kubernetes/pull/120631), [@liyuerich](https://github.com/liyuerich))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#121387](https://github.com/kubernetes/kubernetes/pull/121387), [@KunWuLuan](https://github.com/KunWuLuan))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#121413](https://github.com/kubernetes/kubernetes/pull/121413), [@humblec](https://github.com/humblec))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#122041](https://github.com/kubernetes/kubernetes/pull/122041), [@uniemimu](https://github.com/uniemimu))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#122556](https://github.com/kubernetes/kubernetes/pull/122556), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#122692](https://github.com/kubernetes/kubernetes/pull/122692), [@aroradaman](https://github.com/aroradaman))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#122710](https://github.com/kubernetes/kubernetes/pull/122710), [@dims](https://github.com/dims))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123082](https://github.com/kubernetes/kubernetes/pull/123082), [@alexzielenski](https://github.com/alexzielenski))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123438](https://github.com/kubernetes/kubernetes/pull/123438), [@yankay](https://github.com/yankay))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123614](https://github.com/kubernetes/kubernetes/pull/123614), [@ameukam](https://github.com/ameukam))
-- "No user-facing changes or notable updates introduced by this pull request."
-   ([#123684](https://github.com/kubernetes/kubernetes/pull/123684), [@hakuna-matatah](https://github.com/hakuna-matatah))
 - "Removed the GA feature gate `RemoveSelfLink`."
    ([#122468](https://github.com/kubernetes/kubernetes/pull/122468), [@carlory](https://github.com/carlory))
 - "Removed the generally available feature gate `ExpandedDNSConfig`."

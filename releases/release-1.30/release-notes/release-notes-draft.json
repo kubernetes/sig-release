@@ -185,43 +185,6 @@
     "feature": true,
     "is_mapped": true
   },
-  "118389": {
-    "commit": "be77b0b82b01a3fc810118f095594ec8bdd3c3aa",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#118389](https://github.com/kubernetes/kubernetes/pull/118389), [@amewayne](https://github.com/amewayne))",
-    "author": "amewayne",
-    "author_url": "https://github.com/amewayne",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118389",
-    "pr_number": 118389,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
-    "feature": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
-  "118756": {
-    "commit": "f12529c2f2347fc2284af3219e60088208b1f43b",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#118756](https://github.com/kubernetes/kubernetes/pull/118756), [@sxllwx](https://github.com/sxllwx))",
-    "author": "sxllwx",
-    "author_url": "https://github.com/sxllwx",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118756",
-    "pr_number": 118756,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery",
-      "apps"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "119177": {
     "commit": "195bb67d36c42faff8e99f97d2bad38587485989",
     "text": "kube-scheduler implemented scheduling hints for the `NodeResourceFit` plugin. The scheduling hints allowed the scheduler to only retry scheduling a Pod that had been previously rejected by the `NodeResourceFit` plugin if a new Node or a Node update matched the Pod's resource requirements or if an old pod update or delete matched the Pod's resource requirements.",
@@ -369,28 +332,6 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
-  "120251": {
-    "commit": "6409fde49f434cc1dc5ecef307a339a537ccc8f4",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#120251](https://github.com/kubernetes/kubernetes/pull/120251), [@liyuerich](https://github.com/liyuerich))",
-    "author": "liyuerich",
-    "author_url": "https://github.com/liyuerich",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120251",
-    "pr_number": 120251,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "apps",
-      "testing"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "120291": {
     "commit": "2efed1f1cb33bf7e3f44bb5e74bdaa9f7a5092f1",
     "text": "Fixed Windows credential provider, cannot find binary. Windows credential provider binary path may have \".exe\" suffix so it is better to use `LookPath()` to support it flexibly.",
@@ -462,33 +403,6 @@
       "cli"
     ],
     "feature": true,
-    "is_mapped": true
-  },
-  "120631": {
-    "commit": "fb1aea9a289e155fa21a57e9512acd61ed1b786b",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#120631](https://github.com/kubernetes/kubernetes/pull/120631), [@liyuerich](https://github.com/liyuerich))",
-    "author": "liyuerich",
-    "author_url": "https://github.com/liyuerich",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/120631",
-    "pr_number": 120631,
-    "areas": [
-      "kube-proxy",
-      "apiserver",
-      "cloudprovider"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network",
-      "node",
-      "api-machinery",
-      "apps",
-      "cloud-provider"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
     "is_mapped": true
   },
   "120642": {
@@ -583,43 +497,6 @@
     ],
     "is_mapped": true
   },
-  "121387": {
-    "commit": "e13f098c8e09103301c7cf70d575667b99a3b5cb",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#121387](https://github.com/kubernetes/kubernetes/pull/121387), [@KunWuLuan](https://github.com/KunWuLuan))",
-    "author": "KunWuLuan",
-    "author_url": "https://github.com/KunWuLuan",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121387",
-    "pr_number": 121387,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
-    "do_not_publish": true,
-    "is_mapped": true
-  },
-  "121413": {
-    "commit": "e36fc426a71891a9c3b821225aed9f7ba2a92c0e",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#121413](https://github.com/kubernetes/kubernetes/pull/121413), [@humblec](https://github.com/humblec))",
-    "author": "humblec",
-    "author_url": "https://github.com/humblec",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121413",
-    "pr_number": 121413,
-    "areas": [
-      "provider/gcp"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "121461": {
     "commit": "8e11104f0bec8abe62efd7acbb0afe6d908d195d",
     "text": "\"Promoted the `CRDValidationRatcheting` feature gate to beta and made it enabled by default.\"\n",
@@ -667,28 +544,6 @@
       "api-machinery"
     ],
     "feature": true,
-    "is_mapped": true
-  },
-  "121565": {
-    "commit": "014149d66e38360276b04f788b4da9a7f2ea5c4a",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#121565](https://github.com/kubernetes/kubernetes/pull/121565), [@srivastav-abhishek](https://github.com/srivastav-abhishek))",
-    "author": "srivastav-abhishek",
-    "author_url": "https://github.com/srivastav-abhishek",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121565",
-    "pr_number": 121565,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "bug",
-      "flake"
-    ],
-    "sigs": [
-      "node"
-    ],
-    "duplicate_kind": true,
-    "do_not_publish": true,
     "is_mapped": true
   },
   "121669": {
@@ -1143,23 +998,6 @@
       "testing"
     ],
     "duplicate": true,
-    "is_mapped": true
-  },
-  "122041": {
-    "commit": "b155d51f979f8ed8e6d3064bcc89f6a8a3dd1851",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#122041](https://github.com/kubernetes/kubernetes/pull/122041), [@uniemimu](https://github.com/uniemimu))",
-    "author": "uniemimu",
-    "author_url": "https://github.com/uniemimu",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122041",
-    "pr_number": 122041,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
-    "do_not_publish": true,
     "is_mapped": true
   },
   "122056": {
@@ -2108,26 +1946,6 @@
     ],
     "is_mapped": true
   },
-  "122523": {
-    "commit": "1e136ef8a0b2eaec6abe7a30bff6dc0abfd3f7dd",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#122523](https://github.com/kubernetes/kubernetes/pull/122523), [@yasindce1998](https://github.com/yasindce1998))",
-    "author": "yasindce1998",
-    "author_url": "https://github.com/yasindce1998",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122523",
-    "pr_number": 122523,
-    "areas": [
-      "kubectl"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cli"
-    ],
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "122530": {
     "commit": "0598cec06a907ccc3252393b75cb33290214a869",
     "text": "\"kubeadm: Added better handling of errors during unmount when calling `kubeadm reset`. When failing to unmount directories under `/var/run/kubelet`, kubeadm will now throw an error instead of showing a warning and continuing to clean up said directory. In such situations, it is better for you to inspect the problem and resolve it manually. Then, you can call `kubeadm reset` again to complete the cleanup.\"\n",
@@ -2174,28 +1992,6 @@
     "feature": true,
     "is_mapped": true
   },
-  "122556": {
-    "commit": "ff4cd7b6f56c730aa3a6e3325ca41427483d6ffc",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#122556](https://github.com/kubernetes/kubernetes/pull/122556), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122556",
-    "pr_number": 122556,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "storage",
-      "testing"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "122558": {
     "commit": "9bd0ef5f173de3cc2d1d629a4aee499d53690aee",
     "text": "\"Changed the API server so that for admission webhooks that have a URL matching the hostname 'localhost' or a loopback IP address, the connection supports HTTP/2 where it could be negotiated.\"\n",
@@ -2217,23 +2013,6 @@
       "testing"
     ],
     "duplicate": true,
-    "is_mapped": true
-  },
-  "122569": {
-    "commit": "2a44cb0ab352f97c419b31b592def50b4e98bc56",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#122569](https://github.com/kubernetes/kubernetes/pull/122569), [@IvoGoman](https://github.com/IvoGoman))",
-    "author": "IvoGoman",
-    "author_url": "https://github.com/IvoGoman",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122569",
-    "pr_number": 122569,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cli"
-    ],
-    "do_not_publish": true,
     "is_mapped": true
   },
   "122571": {
@@ -2539,31 +2318,6 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
-  "122692": {
-    "commit": "55f9657e076165ab92fecbc3a1eb83c2300870c4",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#122692](https://github.com/kubernetes/kubernetes/pull/122692), [@aroradaman](https://github.com/aroradaman))",
-    "author": "aroradaman",
-    "author_url": "https://github.com/aroradaman",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122692",
-    "pr_number": 122692,
-    "areas": [
-      "kube-proxy",
-      "ipvs"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network",
-      "scalability",
-      "auth",
-      "windows"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "122697": {
     "commit": "7ca92fb0168dd033a892c296543ed30d06e6a267",
     "text": "\"Reverted the `EventedPLEG` feature (beta, but disabled by default) back to alpha due to a known issue.\"\n",
@@ -2662,23 +2416,6 @@
     ],
     "feature": true,
     "duplicate": true,
-    "is_mapped": true
-  },
-  "122710": {
-    "commit": "9d86dbd0ad004783848c6b3f413a5680992d37f3",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#122710](https://github.com/kubernetes/kubernetes/pull/122710), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/122710",
-    "pr_number": 122710,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "testing"
-    ],
-    "do_not_publish": true,
     "is_mapped": true
   },
   "122717": {
@@ -3411,28 +3148,6 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
-  "123051": {
-    "commit": "7090b9d0980ab3aa625e431914a9c1b15892981f",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123051](https://github.com/kubernetes/kubernetes/pull/123051), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085))",
-    "author": "yangjunmyfm192085",
-    "author_url": "https://github.com/yangjunmyfm192085",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123051",
-    "pr_number": 123051,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "storage",
-      "testing"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "123052": {
     "commit": "77775d45469a3da6a7ce5e6e2221cff17c2d27fe",
     "text": "\"Fixed cleanup of Pod volume mounts when a file was used as a subpath.\"\n",
@@ -3511,28 +3226,6 @@
     "sigs": [
       "cluster-lifecycle"
     ],
-    "is_mapped": true
-  },
-  "123082": {
-    "commit": "d29f38efd83f5dcf18870c8772b9a0bb68c56097",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123082](https://github.com/kubernetes/kubernetes/pull/123082), [@alexzielenski](https://github.com/alexzielenski))",
-    "author": "alexzielenski",
-    "author_url": "https://github.com/alexzielenski",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123082",
-    "pr_number": 123082,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "flake"
-    ],
-    "sigs": [
-      "api-machinery",
-      "testing"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
     "is_mapped": true
   },
   "123083": {
@@ -4817,29 +4510,6 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
-  "123438": {
-    "commit": "a823a842ecefa5391fe152c85ac99425120213b6",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123438](https://github.com/kubernetes/kubernetes/pull/123438), [@yankay](https://github.com/yankay))",
-    "author": "yankay",
-    "author_url": "https://github.com/yankay",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123438",
-    "pr_number": 123438,
-    "areas": [
-      "apiserver",
-      "dependency"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "testing",
-      "architecture"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "123442": {
     "commit": "58bbf6991303fa97660beafc74d0d2d6e2c1c623",
     "text": "\"`NewVolumeManagerReconstruction` feature is now GA.\"\n",
@@ -5060,51 +4730,6 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "is_mapped": true
-  },
-  "123488": {
-    "commit": "be4b7de02262c5f65e8c31d6a2dabaa240cc8f8a",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123488](https://github.com/kubernetes/kubernetes/pull/123488), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123488",
-    "pr_number": 123488,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup",
-      "failing-test"
-    ],
-    "sigs": [
-      "autoscaling",
-      "instrumentation",
-      "testing"
-    ],
-    "duplicate": true,
-    "duplicate_kind": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
-  "123490": {
-    "commit": "60e11e2c6ab7d4beab0dfa4b880d915a992c3427",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123490](https://github.com/kubernetes/kubernetes/pull/123490), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123490",
-    "pr_number": 123490,
-    "areas": [
-      "provider/gcp"
-    ],
-    "kinds": [
-      "failing-test"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
-    "do_not_publish": true,
     "is_mapped": true
   },
   "123492": {
@@ -5535,38 +5160,6 @@
     "duplicate": true,
     "is_mapped": true
   },
-  "123564": {
-    "commit": "8b8d1337700cfc96419bf5de8de1680d540084fd",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123564](https://github.com/kubernetes/kubernetes/pull/123564), [@ivelichkovich](https://github.com/ivelichkovich))",
-    "documentation": [
-      {
-        "description": "[KEP]: [\u003clink\u003e](",
-        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/3716-admission-webhook-match-conditions)",
-        "type": "KEP"
-      }
-    ],
-    "author": "ivelichkovich",
-    "author_url": "https://github.com/ivelichkovich",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123564",
-    "pr_number": 123564,
-    "areas": [
-      "test",
-      "conformance"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "testing",
-      "architecture"
-    ],
-    "feature": true,
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "123565": {
     "commit": "6f42da171b952cb502245a25bbba3c384df3aeb7",
     "text": "\"Accepted zero as a default value for `kubectl create` token duration.\"\n",
@@ -5754,26 +5347,6 @@
     "duplicate": true,
     "is_mapped": true
   },
-  "123614": {
-    "commit": "3086d88dc6cada367c68f8d7dc0a75112599e69e",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123614](https://github.com/kubernetes/kubernetes/pull/123614), [@ameukam](https://github.com/ameukam))",
-    "author": "ameukam",
-    "author_url": "https://github.com/ameukam",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123614",
-    "pr_number": 123614,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "testing"
-    ],
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "123639": {
     "commit": "46a2137c1ba017970c316c0ec10c074cb6450732",
     "text": "kube-apiserver: Authorization webhooks now report the following metrics:\n- apiserver_authorization_webhook_evaluations_total\n- apiserver_authorization_webhook_duration_seconds\n- apiserver_authorization_webhook_evaluations_fail_open_total",
@@ -5865,28 +5438,6 @@
     "duplicate": true,
     "is_mapped": true
   },
-  "123652": {
-    "commit": "ccb5dd3b579c89a38a7d9fa3bab49187951f82fd",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123652](https://github.com/kubernetes/kubernetes/pull/123652), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123652",
-    "pr_number": 123652,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node",
-      "testing"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "123654": {
     "commit": "e798fa67b510b857b3ec25c89a5bd6b06959f57a",
     "text": "[kubeadam][structured authz] avoided setting default `--authorization-mode` when `--authorization-config` is provided",
@@ -5904,50 +5455,6 @@
     "sigs": [
       "cluster-lifecycle"
     ],
-    "is_mapped": true
-  },
-  "123657": {
-    "commit": "d45d803ac4e4e518f564da6be6bb07c1e78708c8",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123657](https://github.com/kubernetes/kubernetes/pull/123657), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123657",
-    "pr_number": 123657,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node",
-      "testing"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
-  "123659": {
-    "commit": "d756b0a1c09ac4c694dffff2de4debf4069758ff",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123659](https://github.com/kubernetes/kubernetes/pull/123659), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123659",
-    "pr_number": 123659,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node",
-      "testing"
-    ],
-    "duplicate": true,
-    "do_not_publish": true,
     "is_mapped": true
   },
   "123667": {
@@ -6017,23 +5524,6 @@
     "sigs": [
       "api-machinery"
     ],
-    "is_mapped": true
-  },
-  "123684": {
-    "commit": "4369fcb00fc7c5bd623ddcc95d6d1d46092c804d",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123684](https://github.com/kubernetes/kubernetes/pull/123684), [@hakuna-matatah](https://github.com/hakuna-matatah))",
-    "author": "hakuna-matatah",
-    "author_url": "https://github.com/hakuna-matatah",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123684",
-    "pr_number": 123684,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
-    "do_not_publish": true,
     "is_mapped": true
   },
   "123696": {
@@ -6239,30 +5729,6 @@
     "duplicate": true,
     "is_mapped": true
   },
-  "123776": {
-    "commit": "bf7fcfdc7f1c0aac000e4edf38eaa59b3ce941d4",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123776](https://github.com/kubernetes/kubernetes/pull/123776), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123776",
-    "pr_number": 123776,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug",
-      "failing-test"
-    ],
-    "sigs": [
-      "scheduling",
-      "testing"
-    ],
-    "duplicate": true,
-    "duplicate_kind": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "123793": {
     "commit": "09093f270aa811c2c49ea45868989ad5b6eb8a53",
     "text": "\"kube-apiserver: JWT authenticator now reports the following metrics: - apiserver_authentication_config_controller_automatic_reloads_total - apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds\"\n",
@@ -6294,54 +5760,6 @@
     "duplicate": true,
     "is_mapped": true
   },
-  "123821": {
-    "commit": "74b2f4d976f5da08012e6f6606f0035110de9641",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123821](https://github.com/kubernetes/kubernetes/pull/123821), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123821",
-    "pr_number": 123821,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug",
-      "failing-test"
-    ],
-    "sigs": [
-      "scheduling",
-      "testing"
-    ],
-    "duplicate": true,
-    "duplicate_kind": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
-  "123865": {
-    "commit": "016d8b11ae250ca933fe83de312bbe7c4945cd20",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123865](https://github.com/kubernetes/kubernetes/pull/123865), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123865",
-    "pr_number": 123865,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup",
-      "failing-test"
-    ],
-    "sigs": [
-      "storage",
-      "testing"
-    ],
-    "duplicate": true,
-    "duplicate_kind": true,
-    "do_not_publish": true,
-    "is_mapped": true
-  },
   "123935": {
     "commit": "a1605fb3dd2d45474751ec3de30633ac1ec15c41",
     "text": "kube-apiserver: Fixed a `1.27`+ regression in watch stability by serving watch requests without a `resourceVersion` from the watch cache by default, as in \u003c`1.27` (disabling the change in PR 115096 by default). This mitigates the impact of an etcd watch bug (https://github.com/etcd-io/etcd/pull/17555). If the 1.27 change in PR 115096 to serve these requests from underlying storage is still desired despite the impact on watch stability, it can be re-enabled with a `WatchFromStorageWithoutResourceVersion` feature gate.",
@@ -6361,26 +5779,6 @@
       "etcd"
     ],
     "duplicate": true,
-    "is_mapped": true
-  },
-  "123943": {
-    "commit": "9df98f3d393e204dd8db02322057ac2e7f3f6c28",
-    "text": "\"No user-facing changes or notable updates introduced by this pull request.\"\n",
-    "markdown": "\"No user-facing changes or notable updates introduced by this pull request.\"\n   ([#123943](https://github.com/kubernetes/kubernetes/pull/123943), [@dims](https://github.com/dims))",
-    "author": "dims",
-    "author_url": "https://github.com/dims",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123943",
-    "pr_number": 123943,
-    "areas": [
-      "provider/gcp"
-    ],
-    "kinds": [
-      "failing-test"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
-    "do_not_publish": true,
     "is_mapped": true
   },
   "124001": {
