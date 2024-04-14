@@ -1,0 +1,10 @@
+pr: 119779
+releasenote:
+  text: When a PreFilterResult filters out certain Nodes, the scheduling framework
+    now categorizes them as rejected via `UnschedulableAndUnresolvable`. Consequently,
+    these nodes are excluded from the candidates for the preemption process. Additionally,
+    this update corrects how the scheduling framework handles the Unschedulable status
+    from PreFilter. Previously, if PreFilter returned `Unschedulable`, it could lead
+    to an unexpected abortion in the preemption process, which shouldn't occur in
+    the default scheduler but might occur in schedulers with custom plugins.
+pr_body: ""

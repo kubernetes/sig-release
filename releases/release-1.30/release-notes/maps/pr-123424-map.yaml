@@ -1,3 +1,4 @@
 pr: 123424
 releasenote:
-  text: Promoted ImageMaximumGCAge feature to beta.
+  text: Promoted the `ImageMaximumGCAge` feature to beta.
+pr_body: ""

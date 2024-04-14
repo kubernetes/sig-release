@@ -1,3 +1,5 @@
 pr: 123180
 releasenote:
-  text: "`readOnly` volumes now supports recursive read-only mounts for kernel >= 5.12."
+  text: |
+    "`readOnly` volumes now support recursive read-only mounts for kernel versions >= 5.12."
+pr_body: ""

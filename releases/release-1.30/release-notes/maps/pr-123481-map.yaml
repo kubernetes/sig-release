@@ -1,0 +1,7 @@
+pr: 123481
+releasenote:
+  text: |-
+    Graduated support for `minDomains` in pod topology spread constraints, to general availability.
+    The `MinDomainsInPodTopologySpread` feature gate no longer has any effect, and the field is
+    always available within the Pod and PodTemplate APIs.
+pr_body: ""

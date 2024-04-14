@@ -1,0 +1,6 @@
+pr: 123323
+releasenote:
+  text: Fixed a bug that an init container with containerRestartPolicy with `Always`
+    cannot update its state from terminated to non-terminated for the pod with restartPolicy
+    with `Never` or `OnFailure`.
+pr_body: ""

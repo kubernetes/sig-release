@@ -1,0 +1,7 @@
+pr: 122887
+releasenote:
+  text: |-
+    When the `RetryGenerateName` feature gate is enabled on the kube-apiserver,
+    create requests using generateName are retried automatically by the apiserver when the generated name conflicts with an existing resource name, up to a max limit of 7 retries.
+    This feature is in alpha.
+pr_body: ""

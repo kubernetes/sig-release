@@ -1,3 +1,5 @@
 pr: 117046
 releasenote:
-  text: Informers now support adding Indexers after the informer starts.
+  text: |
+    "Informers now supports adding Indexers after the informer starts."
+pr_body: ""

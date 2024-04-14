@@ -1,0 +1,5 @@
+pr: 122558
+releasenote:
+  text: |
+    "Changed the API server so that for admission webhooks that have a URL matching the hostname 'localhost' or a loopback IP address, the connection supports HTTP/2 where it could be negotiated."
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 123435
+releasenote:
+  text: AppArmor profiles can now be configured through fields on the `PodSecurityContext`
+    and container `SecurityContext`. The beta AppArmor annotations are deprecated,
+    and AppArmor status is no longer included in the node ready condition.
+pr_body: ""

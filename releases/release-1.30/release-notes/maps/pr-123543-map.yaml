@@ -1,0 +1,6 @@
+pr: 123543
+releasenote:
+  text: ValidatingAdmissionPolicy now exclude TokenReview, SelfSubjectReview, LocalSubjectAccessReview,
+    and SubjectAccessReview from all versions of authentication.k8s.io and authorization.k8s.io
+    group.
+pr_body: ""

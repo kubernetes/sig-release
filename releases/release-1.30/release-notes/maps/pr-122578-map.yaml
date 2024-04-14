@@ -1,3 +1,5 @@
 pr: 122578
 releasenote:
-  text: Locked GA feature-gate `ConsistentHTTPGetHandlers` to default.
+  text: |
+    "Locked the GA feature-gate `ConsistentHTTPGetHandlers` to default."
+pr_body: ""

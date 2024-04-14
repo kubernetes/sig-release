@@ -1,3 +1,4 @@
 pr: 122137
 releasenote:
-  text: Removed GA featuregate about `IPTablesOwnershipCleanup` in `1.30`.
+  text: Removed the GA feature gate for `IPTablesOwnershipCleanup` in version `1.30`.
+pr_body: ""

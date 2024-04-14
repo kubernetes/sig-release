@@ -1,0 +1,5 @@
+pr: 122136
+releasenote:
+  text: |
+    "Removed the generally available feature gate `MinimizeIPTablesRestore`."
+pr_body: ""

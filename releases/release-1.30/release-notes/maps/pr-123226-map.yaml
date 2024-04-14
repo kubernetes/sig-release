@@ -1,0 +1,5 @@
+pr: 123226
+releasenote:
+  text: |
+    "`kubectl get job` now displays the status for the listed jobs."
+pr_body: ""

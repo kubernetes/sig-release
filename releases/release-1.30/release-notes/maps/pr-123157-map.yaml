@@ -1,4 +1,5 @@
 pr: 123157
 releasenote:
-  text: New alpha feature gate `SELinuxMount` can be now used to speed up SELinux
-    relabeling
+  text: Introduced a new alpha feature gate, `SELinuxMount`, which can now be enabled
+    to accelerate SELinux relabeling.
+pr_body: ""

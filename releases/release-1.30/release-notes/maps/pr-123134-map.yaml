@@ -1,0 +1,6 @@
+pr: 123134
+releasenote:
+  text: Graduated support for passing dual-stack `kubelet --node-ip` values when using
+    a cloud provider. The feature is now GA, and the `CloudDualStackNodeIPs` feature
+    gate is always enabled.
+pr_body: ""

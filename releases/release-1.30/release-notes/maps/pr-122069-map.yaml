@@ -1,0 +1,5 @@
+pr: 122069
+releasenote:
+  text: |
+    "Client-go: Optimized leaders renewing leases by updating leader lock optimistically without getting the record from the API server first. Also, a new metric `leader_election_slowpath_total` was added to allow users to monitor how many leader elections are updated non-optimistically."
+pr_body: ""

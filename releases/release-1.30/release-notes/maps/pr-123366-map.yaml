@@ -1,0 +1,6 @@
+pr: 123366
+releasenote:
+  text: Revised node selection based on container image location. The kube-scheduler
+    now considers whether nodes have the required images available for init containers,
+    and for sidecar containers if the cluster has 'SidecarContainers' enabled.
+pr_body: ""

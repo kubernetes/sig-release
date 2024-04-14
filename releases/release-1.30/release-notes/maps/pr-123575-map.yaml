@@ -1,0 +1,7 @@
+pr: 123575
+releasenote:
+  text: |-
+    Graduated pod scheduling gates to general availability.
+    The `PodSchedulingReadiness` feature gate no longer has any effect, and the
+    `.spec.schedulingGates` field is always available within the Pod and PodTemplate APIs.
+pr_body: ""

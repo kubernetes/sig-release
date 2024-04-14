@@ -1,0 +1,5 @@
+pr: 122745
+releasenote:
+  text: |
+    In kubelet configuration, the `.memorySwap.swapBehavior` field now accepts a new value `NoSwap`, which becomes the default if unspecified. The previously accepted `UnlimitedSwap` value has been dropped.
+pr_body: ""

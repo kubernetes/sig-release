@@ -1,0 +1,8 @@
+pr: 123529
+releasenote:
+  text: The kubernetes repo now uses Go workspaces.  This should not impact end users
+    at all, but does have impact for developers of downstream projects.  Switching
+    to workspaces caused some breaking changes in the flags to the various k8s.io/code-generator
+    tools.  Downstream consumers should look at staging/src/k8s.io/code-generator/kube_codegen.sh
+    to see the changes.
+pr_body: ""

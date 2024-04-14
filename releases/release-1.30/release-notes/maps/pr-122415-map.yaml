@@ -1,0 +1,6 @@
+pr: 122415
+releasenote:
+  text: When using a claim with immediate allocation and a pod referencing that claim
+    couldn't get scheduled, the scheduler incorrectly may have tried to deallocate
+    that claim.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 122881
+releasenote:
+  text: Added a CBOR implementation of `runtime.Serializer`. Until CBOR graduates
+    to Alpha, API servers will refuse to start if configured with CBOR support.
+pr_body: ""

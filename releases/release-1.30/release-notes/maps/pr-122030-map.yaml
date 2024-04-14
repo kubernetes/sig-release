@@ -1,8 +1,9 @@
 pr: 122030
 releasenote:
-  text: For statically provisioned PVs, if its volume source is CSI type or it has
-    migrated annotation, when it's deleted, the PersisentVolume controller won't change
-    its phase to the Failed state. With this patch, the external provisioner can remove
-    the finalizer in the next reconcile loop. Unfortunately, if the previous existing pv
-    has the Failed state, this patch won't take effort. It requires users to remove
-    finalizer.
+  text: For statically provisioned PVs, if their volume source is of CSI type or they
+    have a migrated annotation, when they are deleted, the PersistentVolume controller
+    won't change their phase to the Failed state. With this patch, the external provisioner
+    can remove the finalizer in the next reconcile loop. Unfortunately, if a previously
+    existing PV has the Failed state, this patch won't take effect. Users are required
+    to remove the finalizer manually.
+pr_body: ""

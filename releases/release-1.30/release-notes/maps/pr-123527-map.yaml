@@ -1,0 +1,5 @@
+pr: 123527
+releasenote:
+  text: |
+    "Structured Authentication Configuration now supports `DiscoveryURL`. If specified, `discoveryURL` overrides the URL used to fetch discovery information. This is for scenarios where the well-known and jwks endpoints are hosted at a different location than the issuer (such as locally in the cluster)."
+pr_body: ""

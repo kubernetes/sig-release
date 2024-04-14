@@ -1,0 +1,5 @@
+pr: 122276
+releasenote:
+  text: |
+    "resource.k8s.io/ResourceClaim (alpha API): The strategic merge patch strategy for the `status.reservedFor` array was changed so that a strategic-merge-patch can now add individual entries. This change may break clients using strategic merge patch to update status, which rely on the previous behavior (replacing the entire array)."
+pr_body: ""

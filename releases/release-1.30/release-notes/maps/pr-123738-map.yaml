@@ -1,0 +1,5 @@
+pr: 123738
+releasenote:
+  text: |
+    "Kubelet would fail if NodeSwap was used with LimitedSwap and cgroupv1 node."
+pr_body: ""

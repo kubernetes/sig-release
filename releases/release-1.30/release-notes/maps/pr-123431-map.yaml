@@ -1,0 +1,6 @@
+pr: 123431
+releasenote:
+  text: Structured Authentication Configuration now supports configuring multiple
+    JWT authenticators. The maximum allowed JWT authenticators in the authentication
+    configuration is 64.
+pr_body: ""

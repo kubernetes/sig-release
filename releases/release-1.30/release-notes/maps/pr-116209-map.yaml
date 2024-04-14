@@ -1,3 +1,4 @@
 pr: 116209
 releasenote:
-  text: Allowed users to mutate `FSGroupPolicy` and `PodInfoOnMount` in `CSIDriver.Spec`.
+  text: Users are now allowed to mutate `FSGroupPolicy` and `PodInfoOnMount` in `CSIDriver.Spec`.
+pr_body: ""
