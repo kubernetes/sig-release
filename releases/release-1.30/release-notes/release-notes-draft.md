@@ -4,7 +4,7 @@
 
 - "kubectl: Removed the deprecated flag `prune-whitelist` for apply. Please use the flag `prune-allowlist` instead."
    ([#120246](https://github.com/kubernetes/kubernetes/pull/120246), [@pacoxu](https://github.com/pacoxu))
-- Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The Pod Security Admission plugin, available since v1.25, is now recommended instead. Refer to https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#securitycontextdeny for more information.
+- Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The [Pod Security Admission](https://k8s.io/docs/concepts/security/pod-security-admission/) plugin, available since v1.25, is now recommended instead. 
    ([#122612](https://github.com/kubernetes/kubernetes/pull/122612), [@mtardy](https://github.com/mtardy))
 
 ### API Change
@@ -395,6 +395,8 @@
 - Updated cni-plugins to version `v1.4.0`. ([#122178](https://github.com/kubernetes/kubernetes/pull/122178), [@saschagrunert](https://github.com/saschagrunert))
 - Updated kubedns and nodelocaldns to version `v1.23.0`. ([#123310](https://github.com/kubernetes/kubernetes/pull/123310), [@bzsuni](https://github.com/bzsuni))
 - `kube-proxy` nftables mode is now compatible with kernel `5.4`. ([#122296](https://github.com/kubernetes/kubernetes/pull/122296), [@tnqn](https://github.com/tnqn))
+- Bumped the stability level of `apiserver_storage_size_bytes` to STABLE ([#123342](https://github.com/kubernetes/kubernetes/pull/123342), [@logicalhan](https://github.com/logicalhan))
+- For `apiserver_storage_size_bytes` metric, we are renaming the label for etcd to be "storage_cluster_id" instead of "cluster" to to reduce conflict and be very specific. ([#124283](https://github.com/kubernetes/kubernetes/pull/124283), [@dims](https://github.com/dims))
 
 ### Uncategorized
 

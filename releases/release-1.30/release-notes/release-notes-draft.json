@@ -2019,8 +2019,8 @@
   },
   "122612": {
     "commit": "7bea14097b77219291c1fce17a2829be8f6b9adb",
-    "text": "Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The Pod Security Admission plugin, available since v1.25, is now recommended instead. Refer to https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#securitycontextdeny for more information.\n",
-    "markdown": "Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The Pod Security Admission plugin, available since v1.25, is now recommended instead. Refer to https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#securitycontextdeny for more information.\n   ([#122612](https://github.com/kubernetes/kubernetes/pull/122612), [@mtardy](https://github.com/mtardy))",
+    "text": "Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The [Pod Security Admission](https://k8s.io/docs/concepts/security/pod-security-admission/), available since v1.25, is now recommended instead. \n",
+    "markdown": "Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The [Pod Security Admission](https://k8s.io/docs/concepts/security/pod-security-admission/), available since v1.25, is now recommended instead.\n ([#122612](https://github.com/kubernetes/kubernetes/pull/122612), [@mtardy](https://github.com/mtardy))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5502,6 +5502,40 @@
     "author": "kerthcet",
     "author_url": "https://github.com/kerthcet",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124001",
+    "pr_number": 124001,
+    "kinds": [
+      "flake",
+      "failing-test"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "duplicate_kind": true
+  },
+  "123342": {
+    "commit": "a309fadbac3339bc8db9ae0a928a33b8e81ef10f",
+    "text": "Reverted the change to \"support sharing waitingPods across different scheduler profiles\".",
+    "markdown": "Reverted the change to \"support sharing waitingPods across different scheduler profiles\". ([#124001](https://github.com/kubernetes/kubernetes/pull/124001), [@kerthcet](https://github.com/kerthcet))",
+    "author": "kerthcet",
+    "author_url": "https://github.com/kerthcet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123342",
+    "pr_number": 124001,
+    "kinds": [
+      "flake",
+      "failing-test"
+    ],
+    "sigs": [
+      "scheduling"
+    ],
+    "duplicate_kind": true
+  },
+  "124283": {
+    "commit": "a309fadbac3339bc8db9ae0a928a33b8e81ef10f",
+    "text": "Reverted the change to \"support sharing waitingPods across different scheduler profiles\".",
+    "markdown": "Reverted the change to \"support sharing waitingPods across different scheduler profiles\". ([#124001](https://github.com/kubernetes/kubernetes/pull/124001), [@kerthcet](https://github.com/kerthcet))",
+    "author": "kerthcet",
+    "author_url": "https://github.com/kerthcet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/124283",
     "pr_number": 124001,
     "kinds": [
       "flake",
