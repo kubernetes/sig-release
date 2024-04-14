@@ -53,7 +53,6 @@
 - Added audienceMatchPolicy field to AuthenticationConfiguration and support for configuring multiple audiences.
   The "audienceMatchPolicy" can be empty (or unset) when a single audience is specified in the "audiences" field.
   The "audienceMatchPolicy" must be set to "MatchAny" when multiple audiences are specified in the "audiences" field. ([#123165](https://github.com/kubernetes/kubernetes/pull/123165), [@aramase](https://github.com/aramase))
-- Added consistent vanity import to files and provided tooling for verifying and updating them. ([#120642](https://github.com/kubernetes/kubernetes/pull/120642), [@jcchavezs](https://github.com/jcchavezs))
 - Added the `disable-force-detach` CLI option for `kube-controller-manager`. By default, it's set to `false`. When enabled, it prevents force detaching volumes based on maximum unmount time and node status. If activated, the non-graceful node shutdown feature must be used to recover from node failure. Additionally, if a pod needs to be forcibly terminated at the risk of corruption, the appropriate VolumeAttachment object must be deleted. ([#120344](https://github.com/kubernetes/kubernetes/pull/120344), [@rohitssingh](https://github.com/rohitssingh))
 - Added to `MutableFeatureGate` the ability to override the default setting of feature gates, to allow default-enabling a feature on a component-by-component basis instead of for all affected components simultaneously. ([#122647](https://github.com/kubernetes/kubernetes/pull/122647), [@benluddy](https://github.com/benluddy))
 - Aggregated discovery supports both `v2beta1` and v2 types and feature is promoted to GA. ([#122882](https://github.com/kubernetes/kubernetes/pull/122882), [@Jefftree](https://github.com/Jefftree))
@@ -76,7 +75,7 @@
 - Text logging in Kubernetes components now uses [textlogger](https://pkg.go.dev/k8s.io/klog/v2@v2.120.0/textlogger). The same split streams of info and error log entries with buffering of info entries is now also supported for text output (off by default, alpha feature). Previously, this was only supported for JSON. Performance is better also without split streams. ([#114672](https://github.com/kubernetes/kubernetes/pull/114672), [@pohly](https://github.com/pohly))
 - The API server now detects and fails on startup if there are conflicting issuers between JWT authenticators and service account configurations. Previously, such configurations would run but could be inconsistently effective depending on the credential. ([#123561](https://github.com/kubernetes/kubernetes/pull/123561), [@enj](https://github.com/enj))
 - The JWT authenticator configuration set via the `--authentication-config` flag is now dynamically reloaded as the file changes on disk. ([#123525](https://github.com/kubernetes/kubernetes/pull/123525), [@enj](https://github.com/enj))
-- The `StructuredAuthenticationConfiguration` feature is now beta and enabled ([#123719](https://github.com/kubernetes/kubernetes/pull/123719), [@enj](https://github.com/enj))
+- The `StructuredAuthenticationConfiguration` feature is now beta and enabled. ([#123719](https://github.com/kubernetes/kubernetes/pull/123719), [@enj](https://github.com/enj))
 - The `kube_codegen` tool now ignores the vendor folder during code generation.
    ([#122729](https://github.com/kubernetes/kubernetes/pull/122729), [@jparrill](https://github.com/jparrill))
 - The kubernetes repo now uses Go workspaces.  This should not impact end users at all, but does have impact for developers of downstream projects.  Switching to workspaces caused some breaking changes in the flags to the various k8s.io/code-generator tools.  Downstream consumers should look at staging/src/k8s.io/code-generator/kube_codegen.sh to see the changes. ([#123529](https://github.com/kubernetes/kubernetes/pull/123529), [@thockin](https://github.com/thockin))
@@ -129,7 +128,7 @@
    ([#122233](https://github.com/kubernetes/kubernetes/pull/122233), [@mzaian](https://github.com/mzaian))
 - "kube-apiserver now reloads the `--authorization-config` file when it changes. Reloads increment the `apiserver_authorization_config_controller_automatic_reload_last_timestamp_seconds` timestamp metric, with `status="success"` for successful reloads and `status="failed"` for failed reloads. Failed reloads keep using the previously loaded authorization configuration."
    ([#121946](https://github.com/kubernetes/kubernetes/pull/121946), [@liggitt](https://github.com/liggitt))
-- "kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name"
+- "kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name."
    ([#123611](https://github.com/kubernetes/kubernetes/pull/123611), [@ritazh](https://github.com/ritazh))
 - "kube-apiserver: JWT authenticator now reports the following metrics: - apiserver_authentication_config_controller_automatic_reloads_total - apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds"
    ([#123793](https://github.com/kubernetes/kubernetes/pull/123793), [@aramase](https://github.com/aramase))
@@ -220,7 +219,7 @@
 
 - "Added a new internal metric `kubelet_first_network_pod_start_sli_duration_second` in the kubelet that allowed developers to understand the source of the latency problems on node startups."
    ([#121720](https://github.com/kubernetes/kubernetes/pull/121720), [@aojea](https://github.com/aojea))
-- A deprecated flag `--pod-max-in-unschedulable-pods-duration` was initially planned to be removed in v1.26, but we have to change this plan. We found [an issue](https://github.com/kubernetes/kubernetes/issues/110175) in which Pods can be stuck in the unschedulable pod pool for 5 min, and using this flag is the only workaround for this issue. 
+- A deprecated flag `--pod-max-in-unschedulable-pods-duration` was initially planned to be removed in v1.26, but we had to change this plan. We found [an issue](https://github.com/kubernetes/kubernetes/issues/110175) in which Pods can be stuck in the unschedulable pod pool for 5 min, and using this flag is the only workaround for this issue. 
   This issue only could happen if you use custom plugins or if you change plugin set being used in your scheduler via the scheduler config. ([#122013](https://github.com/kubernetes/kubernetes/pull/122013), [@sanposhiho](https://github.com/sanposhiho))
 - Modified the error message of `unmanagedFatal` to enhance clarity while preserving grammatical consistency with `unmanagedWarning`. This improvement ensures a more understandable prompt for users. ([#120159](https://github.com/kubernetes/kubernetes/pull/120159), [@Ithrael](https://github.com/Ithrael))
 
@@ -254,8 +253,6 @@
    ([#119923](https://github.com/kubernetes/kubernetes/pull/119923), [@cvvz](https://github.com/cvvz))
 - "Fixed cleanup of Pod volume mounts when a file was used as a subpath."
    ([#123052](https://github.com/kubernetes/kubernetes/pull/123052), [@jsafrane](https://github.com/jsafrane))
-- "Fixed error handling in `EnsureAdminClusterRoleBindingImpl`."
-   ([#122893](https://github.com/kubernetes/kubernetes/pull/122893), [@danwinship](https://github.com/danwinship))
 - "Fixed incorrect error logging for `syncCronJob`."
    ([#122493](https://github.com/kubernetes/kubernetes/pull/122493), [@mengjiao-liu](https://github.com/mengjiao-liu))
 - "Fixed the deprecated version for `pod_scheduling_duration_seconds` that caused the metric to be hidden by default in `1.29`."
