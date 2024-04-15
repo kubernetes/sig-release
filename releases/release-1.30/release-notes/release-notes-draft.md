@@ -2,48 +2,48 @@
 
 ### Deprecation
 
-- "kubectl: Removed the deprecated flag `prune-whitelist` for apply. Please use the flag `prune-allowlist` instead."
+- kubectl: Removed the deprecated flag `prune-whitelist` for apply. Please use the flag `prune-allowlist` instead.
    ([#120246](https://github.com/kubernetes/kubernetes/pull/120246), [@pacoxu](https://github.com/pacoxu))
 - Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The [Pod Security Admission](https://k8s.io/docs/concepts/security/pod-security-admission/) plugin, available since v1.25, is now recommended instead. 
    ([#122612](https://github.com/kubernetes/kubernetes/pull/122612), [@mtardy](https://github.com/mtardy))
 
 ### API Change
 
-- "Added (alpha) support for the `managedBy` field on Jobs. Jobs with a custom value of this field - any value other than `kubernetes.io/job-controller` - were skipped by the job controller, and their reconciliation was delegated to an external controller, indicated by the value of the field. Jobs that didn't have this field at all, or where the field value was the reserved string `kubernetes.io/job-controller`, were reconciled by the built-in job controller."
+- Added (alpha) support for the `managedBy` field on Jobs. Jobs with a custom value of this field - any value other than `kubernetes.io/job-controller` - were skipped by the job controller, and their reconciliation was delegated to an external controller, indicated by the value of the field. Jobs that didn't have this field at all, or where the field value was the reserved string `kubernetes.io/job-controller`, were reconciled by the built-in job controller.
    ([#123273](https://github.com/kubernetes/kubernetes/pull/123273), [@mimowo](https://github.com/mimowo))
-- "Added alpha-level support for the SuccessPolicy in Jobs."
+- Added alpha-level support for the SuccessPolicy in Jobs.
    ([#123412](https://github.com/kubernetes/kubernetes/pull/123412), [@tenzen-y](https://github.com/tenzen-y))
-- "Added the `CEL` library for IP Addresses and CIDRs. This was made available for use starting from version `1.31`."
+- Added the `CEL` library for IP Addresses and CIDRs. This was made available for use starting from version `1.31`.
    ([#121912](https://github.com/kubernetes/kubernetes/pull/121912), [@JoelSpeed](https://github.com/JoelSpeed))
-- "Allowed container runtimes to fix an image garbage collection bug by adding an `image_id` field to the CRI Container message."
+- Allowed container runtimes to fix an image garbage collection bug by adding an `image_id` field to the CRI Container message.
    ([#123508](https://github.com/kubernetes/kubernetes/pull/123508), [@saschagrunert](https://github.com/saschagrunert))
-- "Dynamic Resource Allocation: DRA drivers can now use "structured parameters" to let the scheduler handle claim allocation."
+- Dynamic Resource Allocation: DRA drivers can now use "structured parameters" to let the scheduler handle claim allocation.
    ([#123516](https://github.com/kubernetes/kubernetes/pull/123516), [@pohly](https://github.com/pohly))
-- "Fixed accidental enablement of the new alpha `optionalOldSelf` API field in `CustomResourceDefinition` validation rules, which should only have been allowed to be set when the `CRDValidationRatcheting` feature gate is enabled."
+- Fixed accidental enablement of the new alpha `optionalOldSelf` API field in `CustomResourceDefinition` validation rules, which should only have been allowed to be set when the `CRDValidationRatcheting` feature gate is enabled.
    ([#122329](https://github.com/kubernetes/kubernetes/pull/122329), [@jpbetz](https://github.com/jpbetz))
-- "Implemented the `prescore` extension point for the `volumeBinding` plugin. It now returns skip if it doesn't do anything in Score."
+- Implemented the `prescore` extension point for the `volumeBinding` plugin. It now returns skip if it doesn't do anything in Score.
    ([#115768](https://github.com/kubernetes/kubernetes/pull/115768), [@AxeZhan](https://github.com/AxeZhan))
-- "Kubelet would fail if NodeSwap was used with LimitedSwap and cgroupv1 node."
+- Kubelet would fail if NodeSwap was used with LimitedSwap and cgroupv1 node.
    ([#123738](https://github.com/kubernetes/kubernetes/pull/123738), [@kannon92](https://github.com/kannon92))
-- "Promoted `AdmissionWebhookMatchConditions` to GA. The feature is now stable, and the feature gate is now locked to default."
+- Promoted `AdmissionWebhookMatchConditions` to GA. The feature is now stable, and the feature gate is now locked to default.
    ([#123560](https://github.com/kubernetes/kubernetes/pull/123560), [@ivelichkovich](https://github.com/ivelichkovich))
-- "Structured Authentication Configuration now supports `DiscoveryURL`. If specified, `discoveryURL` overrides the URL used to fetch discovery information. This is for scenarios where the well-known and jwks endpoints are hosted at a different location than the issuer (such as locally in the cluster)."
+- Structured Authentication Configuration now supports `DiscoveryURL`. If specified, `discoveryURL` overrides the URL used to fetch discovery information. This is for scenarios where the well-known and jwks endpoints are hosted at a different location than the issuer (such as locally in the cluster).
    ([#123527](https://github.com/kubernetes/kubernetes/pull/123527), [@aramase](https://github.com/aramase))
-- "The `StorageVersionMigration` API, previously available as a Custom Resource Definition (CRD), is now a built-in API in Kubernetes."
+- The `StorageVersionMigration` API, previously available as a Custom Resource Definition (CRD), is now a built-in API in Kubernetes.
    ([#123344](https://github.com/kubernetes/kubernetes/pull/123344), [@nilekhc](https://github.com/nilekhc))
-- "When configuring a JWT authenticator:
+- When configuring a JWT authenticator:
   
-  If `username.expression` used 'claims.email', then 'claims.email_verified' must have been used in `username.expression` or `extra[*].valueExpression` or `claimValidationRules[*].expression`. An example claim validation rule expression that matches the validation automatically applied when `username.claim` is set to 'email' is 'claims.?email_verified.orValue(true)'."
+  If `username.expression` used 'claims.email', then 'claims.email_verified' must have been used in `username.expression` or `extra[*].valueExpression` or `claimValidationRules[*].expression`. An example claim validation rule expression that matches the validation automatically applied when `username.claim` is set to 'email' is 'claims.?email_verified.orValue(true)'.
    ([#123737](https://github.com/kubernetes/kubernetes/pull/123737), [@enj](https://github.com/enj))
-- "`readOnly` volumes now support recursive read-only mounts for kernel versions >= 5.12."
+- `readOnly` volumes now support recursive read-only mounts for kernel versions >= 5.12.
    ([#123180](https://github.com/kubernetes/kubernetes/pull/123180), [@AkihiroSuda](https://github.com/AkihiroSuda))
-- "cri-api: Implemented KEP-3857: Recursive Read-only (RRO) mounts."
+- cri-api: Implemented KEP-3857: Recursive Read-only (RRO) mounts.
    ([#123272](https://github.com/kubernetes/kubernetes/pull/123272), [@AkihiroSuda](https://github.com/AkihiroSuda))
-- "kube-apiserver: the AuthenticationConfiguration type accepted in `--authentication-config` files has been promoted to `apiserver.config.k8s.io/v1beta1`."
+- kube-apiserver: the AuthenticationConfiguration type accepted in `--authentication-config` files has been promoted to `apiserver.config.k8s.io/v1beta1`.
    ([#123696](https://github.com/kubernetes/kubernetes/pull/123696), [@aramase](https://github.com/aramase))
-- "kubelet allowed specifying a custom root directory for pod logs (instead of the default /var/log/pods) using the `podLogsDir` key in kubelet configuration."
+- kubelet allowed specifying a custom root directory for pod logs (instead of the default /var/log/pods) using the `podLogsDir` key in kubelet configuration.
    ([#112957](https://github.com/kubernetes/kubernetes/pull/112957), [@mxpv](https://github.com/mxpv))
-- "resource.k8s.io/ResourceClaim (alpha API): The strategic merge patch strategy for the `status.reservedFor` array was changed so that a strategic-merge-patch can now add individual entries. This change may break clients using strategic merge patch to update status, which rely on the previous behavior (replacing the entire array)."
+- resource.k8s.io/ResourceClaim (alpha API): The strategic merge patch strategy for the `status.reservedFor` array was changed so that a strategic-merge-patch can now add individual entries. This change may break clients using strategic merge patch to update status, which rely on the previous behavior (replacing the entire array).
    ([#122276](https://github.com/kubernetes/kubernetes/pull/122276), [@pohly](https://github.com/pohly))
 - Added a CBOR implementation of `runtime.Serializer`. Until CBOR graduates to Alpha, API servers will refuse to start if configured with CBOR support. ([#122881](https://github.com/kubernetes/kubernetes/pull/122881), [@benluddy](https://github.com/benluddy))
 - Added a alpha feature, behind the `RelaxedEnvironmentVariableValidation` feature gate.
@@ -88,61 +88,61 @@
 
 ### Feature
 
-- "Added Timezone column in the output of the 'kubectl get cronjob' command."
+- Added Timezone column in the output of the 'kubectl get cronjob' command.
    ([#122231](https://github.com/kubernetes/kubernetes/pull/122231), [@ardaguclu](https://github.com/ardaguclu))
-- "Added `WatchListClient` feature gate to `client-go`. When enabled, it allows the client to receive a stream of individual items instead of chunking from the server."
+- Added `WatchListClient` feature gate to `client-go`. When enabled, it allows the client to receive a stream of individual items instead of chunking from the server.
    ([#122571](https://github.com/kubernetes/kubernetes/pull/122571), [@p0lyn0mial](https://github.com/p0lyn0mial))
-- "Added the `apiserver_watch_cache_read_wait` metric to measure the watch cache impact on request latency."
+- Added the `apiserver_watch_cache_read_wait` metric to measure the watch cache impact on request latency.
    ([#123190](https://github.com/kubernetes/kubernetes/pull/123190), [@padlar](https://github.com/padlar))
-- "Allowed scheduling framework plugins that implement `io.Closer` to be gracefully closed."
+- Allowed scheduling framework plugins that implement `io.Closer` to be gracefully closed.
    ([#122498](https://github.com/kubernetes/kubernetes/pull/122498), [@Gekko0114](https://github.com/Gekko0114))
-- "Bumped cAdvisor to `v0.49.0`."
+- Bumped cAdvisor to `v0.49.0`.
    ([#123599](https://github.com/kubernetes/kubernetes/pull/123599), [@bobbypage](https://github.com/bobbypage))
-- "Changed `--nodeport-addresses` behavior to default to "primary node IP(s) only" rather than "all node IPs"."
+- Changed `--nodeport-addresses` behavior to default to "primary node IP(s) only" rather than "all node IPs".
    ([#122724](https://github.com/kubernetes/kubernetes/pull/122724), [@nayihz](https://github.com/nayihz))
-- "In the Pod API, setting the alpha `procMount` field to `Unmasked` in a container now required setting `spec.hostUsers=false` as well."
+- In the Pod API, setting the alpha `procMount` field to `Unmasked` in a container now required setting `spec.hostUsers=false` as well.
    ([#123520](https://github.com/kubernetes/kubernetes/pull/123520), [@haircommander](https://github.com/haircommander))
-- "Informers now supports adding Indexers after the informer starts."
+- Informers now supports adding Indexers after the informer starts.
    ([#117046](https://github.com/kubernetes/kubernetes/pull/117046), [@howardjohn](https://github.com/howardjohn))
-- "Printed more information when `kubectl describe` a `VolumeAttributesClass`."
+- Printed more information when `kubectl describe` a `VolumeAttributesClass`.
    ([#122640](https://github.com/kubernetes/kubernetes/pull/122640), [@carlory](https://github.com/carlory))
-- "Promoted the `CRDValidationRatcheting` feature gate to beta and made it enabled by default."
+- Promoted the `CRDValidationRatcheting` feature gate to beta and made it enabled by default.
    ([#121461](https://github.com/kubernetes/kubernetes/pull/121461), [@alexzielenski](https://github.com/alexzielenski))
-- "Scheduler now skips the `NodeAffinity Score` plugin when it has nothing to do with a Pod. You might have noticed an increase in the metric `plugin_execution_duration_seconds` for `extension_point=score` and `plugin=NodeAffinity`, because the plugin only runs when it's relevant."
+- Scheduler now skips the `NodeAffinity Score` plugin when it has nothing to do with a Pod. You might have noticed an increase in the metric `plugin_execution_duration_seconds` for `extension_point=score` and `plugin=NodeAffinity`, because the plugin only runs when it's relevant.
    ([#117024](https://github.com/kubernetes/kubernetes/pull/117024), [@sanposhiho](https://github.com/sanposhiho))
-- "Some interfaces' signatures in the scheduler were updated: - PluginsRunner: used NodeInfo in `RunPreScorePlugins` and `RunScorePlugins`. - PreScorePlugin: used NodeInfo in `PreScore`. - Extender: used NodeInfo in `Filter` and `Prioritize`."
+- Some interfaces' signatures in the scheduler were updated: - PluginsRunner: used NodeInfo in `RunPreScorePlugins` and `RunScorePlugins`. - PreScorePlugin: used NodeInfo in `PreScore`. - Extender: used NodeInfo in `Filter` and `Prioritize`.
    ([#121954](https://github.com/kubernetes/kubernetes/pull/121954), [@AxeZhan](https://github.com/AxeZhan))
-- "The watch cache now waits until it is at least as fresh as the given requestedWatchRV if sendInitialEvents was requested."
+- The watch cache now waits until it is at least as fresh as the given requestedWatchRV if sendInitialEvents was requested.
    ([#122830](https://github.com/kubernetes/kubernetes/pull/122830), [@p0lyn0mial](https://github.com/p0lyn0mial))
-- "Updated `ImageGCMaxAge` behavior in the kubelet to wait the `MaxAge` duration after the kubelet has restarted before garbage collecting."
+- Updated `ImageGCMaxAge` behavior in the kubelet to wait the `MaxAge` duration after the kubelet has restarted before garbage collecting.
    ([#123343](https://github.com/kubernetes/kubernetes/pull/123343), [@haircommander](https://github.com/haircommander))
-- "Updated `distroless-iptables` to `v0.5.0`, debian-base to `bookworm-v1.0.1`, and setcap to `bookworm-v1.0.1`."
+- Updated `distroless-iptables` to `v0.5.0`, debian-base to `bookworm-v1.0.1`, and setcap to `bookworm-v1.0.1`.
    ([#123170](https://github.com/kubernetes/kubernetes/pull/123170), [@cpanato](https://github.com/cpanato))
-- "`NewVolumeManagerReconstruction` feature is now GA."
+- `NewVolumeManagerReconstruction` feature is now GA.
    ([#123442](https://github.com/kubernetes/kubernetes/pull/123442), [@jsafrane](https://github.com/jsafrane))
-- "`kubectl describe`: Added Suspend to job and Node-Selectors and Tolerations to pod template output."
+- `kubectl describe`: Added Suspend to job and Node-Selectors and Tolerations to pod template output.
    ([#122618](https://github.com/kubernetes/kubernetes/pull/122618), [@ivanvc](https://github.com/ivanvc))
-- "`kubectl get job` now displays the status for the listed jobs."
+- `kubectl get job` now displays the status for the listed jobs.
    ([#123226](https://github.com/kubernetes/kubernetes/pull/123226), [@ivanvc](https://github.com/ivanvc))
-- "etcd: Built image for `v3.5.11`."
+- etcd: Built image for `v3.5.11`.
    ([#122233](https://github.com/kubernetes/kubernetes/pull/122233), [@mzaian](https://github.com/mzaian))
-- "kube-apiserver now reloads the `--authorization-config` file when it changes. Reloads increment the `apiserver_authorization_config_controller_automatic_reload_last_timestamp_seconds` timestamp metric, with `status="success"` for successful reloads and `status="failed"` for failed reloads. Failed reloads keep using the previously loaded authorization configuration."
+- kube-apiserver now reloads the `--authorization-config` file when it changes. Reloads increment the `apiserver_authorization_config_controller_automatic_reload_last_timestamp_seconds` timestamp metric, with `status="success"` for successful reloads and `status="failed"` for failed reloads. Failed reloads keep using the previously loaded authorization configuration.
    ([#121946](https://github.com/kubernetes/kubernetes/pull/121946), [@liggitt](https://github.com/liggitt))
-- "kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name."
+- kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name.
    ([#123611](https://github.com/kubernetes/kubernetes/pull/123611), [@ritazh](https://github.com/ritazh))
-- "kube-apiserver: JWT authenticator now reports the following metrics: - apiserver_authentication_config_controller_automatic_reloads_total - apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds"
+- kube-apiserver: JWT authenticator now reports the following metrics: - apiserver_authentication_config_controller_automatic_reloads_total - apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds
    ([#123793](https://github.com/kubernetes/kubernetes/pull/123793), [@aramase](https://github.com/aramase))
-- "kube-apiserver: The StructuredAuthorizationConfiguration feature gate has been promoted to beta and now allows the use of the `--authorization-configuration` flag."
+- kube-apiserver: The StructuredAuthorizationConfiguration feature gate has been promoted to beta and now allows the use of the `--authorization-configuration` flag.
    ([#123641](https://github.com/kubernetes/kubernetes/pull/123641), [@liggitt](https://github.com/liggitt))
-- "kube-scheduler implemented scheduling hints for the `NodeUnschedulable` plugin. The scheduling hints allowed the scheduler to only retry scheduling a Pod that had been previously rejected by the `NodeSchedulable` plugin if a new Node or a Node update had set `.spec.unschedulable` to false."
+- kube-scheduler implemented scheduling hints for the `NodeUnschedulable` plugin. The scheduling hints allowed the scheduler to only retry scheduling a Pod that had been previously rejected by the `NodeSchedulable` plugin if a new Node or a Node update had set `.spec.unschedulable` to false.
    ([#122334](https://github.com/kubernetes/kubernetes/pull/122334), [@carlory](https://github.com/carlory))
-- "kubeadm: Added better handling of errors during unmount when calling `kubeadm reset`. When failing to unmount directories under `/var/run/kubelet`, kubeadm will now throw an error instead of showing a warning and continuing to clean up said directory. In such situations, it is better for you to inspect the problem and resolve it manually. Then, you can call `kubeadm reset` again to complete the cleanup."
+- kubeadm: Added better handling of errors during unmount when calling `kubeadm reset`. When failing to unmount directories under `/var/run/kubelet`, kubeadm will now throw an error instead of showing a warning and continuing to clean up said directory. In such situations, it is better for you to inspect the problem and resolve it manually. Then, you can call `kubeadm reset` again to complete the cleanup.
    ([#122530](https://github.com/kubernetes/kubernetes/pull/122530), [@neolit123](https://github.com/neolit123))
-- "kubeadm: Added support for machine-readable output with `-o yaml` and `-o json` to the command `kubeadm certs check-expiration`. This change is introduced in a new API: ``` kind: CertificateExpirationInfo apiVersion: output.kubeadm.k8s.io/v1alpha3 ``` The existing non-structured formatting is preserved. The output API version v1alpha2 is now deprecated and will be removed in a future release. Please migrate to using v1alpha3."
+- kubeadm: Added support for machine-readable output with `-o yaml` and `-o json` to the command `kubeadm certs check-expiration`. This change is introduced in a new API: ``` kind: CertificateExpirationInfo apiVersion: output.kubeadm.k8s.io/v1alpha3 ``` The existing non-structured formatting is preserved. The output API version v1alpha2 is now deprecated and will be removed in a future release. Please migrate to using v1alpha3.
    ([#123372](https://github.com/kubernetes/kubernetes/pull/123372), [@carlory](https://github.com/carlory))
-- "kubeadm: added the `WaitForAllControlPlaneComponents` feature gate. It could be used to tell kubeadm to wait for all control plane components to be ready when running "kubeadm init" or "kubeadm join --control-plane". Previously, kubeadm only waited for the kube-apiserver. The "kubeadm join" workflow now includes a new experimental phase called "wait-control-plane". This phase was marked as non-experimental when WaitForAllControlPlaneComponents became GA. Accordingly, a "kubeadm init" phase "wait-control-plane" was also available once WaitForAllControlPlaneComponents became GA. These phases could be skipped if the user preferred not to wait for the control plane components."
+- kubeadm: added the `WaitForAllControlPlaneComponents` feature gate. It could be used to tell kubeadm to wait for all control plane components to be ready when running "kubeadm init" or "kubeadm join --control-plane". Previously, kubeadm only waited for the kube-apiserver. The "kubeadm join" workflow now includes a new experimental phase called "wait-control-plane". This phase was marked as non-experimental when WaitForAllControlPlaneComponents became GA. Accordingly, a "kubeadm init" phase "wait-control-plane" was also available once WaitForAllControlPlaneComponents became GA. These phases could be skipped if the user preferred not to wait for the control plane components.
    ([#123341](https://github.com/kubernetes/kubernetes/pull/123341), [@neolit123](https://github.com/neolit123))
-- "kubectl `port-forward` over websockets (tunneling SPDY) can now be enabled using an `Alpha` feature flag environment variable: KUBECTL_PORT_FORWARD_WEBSOCKETS=true. The API Server being communicated to must *also* have an `Alpha` feature flag enabled: PortForwardWebsockets."
+- kubectl `port-forward` over websockets (tunneling SPDY) can now be enabled using an `Alpha` feature flag environment variable: KUBECTL_PORT_FORWARD_WEBSOCKETS=true. The API Server being communicated to must *also* have an `Alpha` feature flag enabled: PortForwardWebsockets.
    ([#123413](https://github.com/kubernetes/kubernetes/pull/123413), [@seans3](https://github.com/seans3))
 - A new flag called `custom` has been introduced in `kubectl debug`, allowing users to customize pre-defined profiles. ([#120346](https://github.com/kubernetes/kubernetes/pull/120346), [@ardaguclu](https://github.com/ardaguclu))
 - A new kubelet metric `image_pull_duration_seconds` was added. The metric tracks the duration (in seconds) it takes for an image to be pulled, including the time spent in the waiting queue of image puller. The metric is broken down by bucketed image size. ([#121719](https://github.com/kubernetes/kubernetes/pull/121719), [@ruiwen-zhao](https://github.com/ruiwen-zhao))
@@ -217,7 +217,7 @@
 
 ### Documentation
 
-- "Added a new internal metric `kubelet_first_network_pod_start_sli_duration_second` in the kubelet that allowed developers to understand the source of the latency problems on node startups."
+- Added a new internal metric `kubelet_first_network_pod_start_sli_duration_second` in the kubelet that allowed developers to understand the source of the latency problems on node startups.
    ([#121720](https://github.com/kubernetes/kubernetes/pull/121720), [@aojea](https://github.com/aojea))
 - A deprecated flag `--pod-max-in-unschedulable-pods-duration` was initially planned to be removed in v1.26, but we had to change this plan. We found [an issue](https://github.com/kubernetes/kubernetes/issues/110175) in which Pods can be stuck in the unschedulable pod pool for 5 min, and using this flag is the only workaround for this issue. 
   This issue only could happen if you use custom plugins or if you change plugin set being used in your scheduler via the scheduler config. ([#122013](https://github.com/kubernetes/kubernetes/pull/122013), [@sanposhiho](https://github.com/sanposhiho))
@@ -229,61 +229,61 @@
 
 ### Bug or Regression
 
-- "Added `imagefs.inodesfree` to default `EvictionHard` settings."
+- Added `imagefs.inodesfree` to default `EvictionHard` settings.
    ([#121834](https://github.com/kubernetes/kubernetes/pull/121834), [@vaibhav2107](https://github.com/vaibhav2107))
-- "Changed the API server so that for admission webhooks that have a URL matching the hostname 'localhost' or a loopback IP address, the connection supports HTTP/2 where it could be negotiated."
+- Changed the API server so that for admission webhooks that have a URL matching the hostname 'localhost' or a loopback IP address, the connection supports HTTP/2 where it could be negotiated.
    ([#122558](https://github.com/kubernetes/kubernetes/pull/122558), [@linxiulei](https://github.com/linxiulei))
-- "Fixed CEL estimated cost for expressions that perform operations on the result of `map()` operations (e.g., `.map(...).exists(...)` ) to have the correct estimated cost instead of an unbounded cost."
+- Fixed CEL estimated cost for expressions that perform operations on the result of `map()` operations (e.g., `.map(...).exists(...)` ) to have the correct estimated cost instead of an unbounded cost.
    ([#123562](https://github.com/kubernetes/kubernetes/pull/123562), [@jpbetz](https://github.com/jpbetz))
-- "Fixed a `1.27.0+` regression in kubeadm: The kubelet patch configuration will not be uploaded into the `kube-system/kubelet-config` ConfigMap anymore."
+- Fixed a `1.27.0+` regression in kubeadm: The kubelet patch configuration will not be uploaded into the `kube-system/kubelet-config` ConfigMap anymore.
    ([#123093](https://github.com/kubernetes/kubernetes/pull/123093), [@SataQiu](https://github.com/SataQiu))
-- "Fixed a bug in `ValidatingAdmissionPolicy` that caused policies using CRD parameters to fail to synchronize."
+- Fixed a bug in `ValidatingAdmissionPolicy` that caused policies using CRD parameters to fail to synchronize.
    ([#123003](https://github.com/kubernetes/kubernetes/pull/123003), [@alexzielenski](https://github.com/alexzielenski))
-- "Fixed a non-recursive list returning "resource version too high" error when consistent listing from cache is enabled."
+- Fixed a non-recursive list returning "resource version too high" error when consistent listing from cache is enabled.
    ([#123674](https://github.com/kubernetes/kubernetes/pull/123674), [@serathius](https://github.com/serathius))
-- "Fixed a regression in `kube-proxy` introduced in version `1.26.0+` to make externalIPs work with externalTrafficPolicy: Local."
+- Fixed a regression in `kube-proxy` introduced in version `1.26.0+` to make externalIPs work with externalTrafficPolicy: Local.
    ([#121919](https://github.com/kubernetes/kubernetes/pull/121919), [@uablrek](https://github.com/uablrek))
-- "Fixed a regression in migration of in-tree vSphere volumes to the CSI driver introduced in version `1.29.0`+."
+- Fixed a regression in migration of in-tree vSphere volumes to the CSI driver introduced in version `1.29.0`+.
    ([#122341](https://github.com/kubernetes/kubernetes/pull/122341), [@jsafrane](https://github.com/jsafrane))
-- "Fixed a regression since `1.24` in the scheduling framework when overriding MultiPoint plugins (e.g. default plugins). The incorrect loop logic might have led to a plugin being loaded multiple times, consequently preventing any Pod from being scheduled, which was unexpected."
+- Fixed a regression since `1.24` in the scheduling framework when overriding MultiPoint plugins (e.g. default plugins). The incorrect loop logic might have led to a plugin being loaded multiple times, consequently preventing any Pod from being scheduled, which was unexpected.
    ([#122068](https://github.com/kubernetes/kubernetes/pull/122068), [@caohe](https://github.com/caohe))
-- "Fixed an issue where `AvailableBytes` sometimes did not report correctly on WindowsNodes when the `PodAndContainerStatsFromCRI` feature was enabled."
+- Fixed an issue where `AvailableBytes` sometimes did not report correctly on WindowsNodes when the `PodAndContainerStatsFromCRI` feature was enabled.
    ([#122846](https://github.com/kubernetes/kubernetes/pull/122846), [@marosset](https://github.com/marosset))
-- "Fixed an issue where mount points could become local without calling `NodePublishVolume` after node rebooting."
+- Fixed an issue where mount points could become local without calling `NodePublishVolume` after node rebooting.
    ([#119923](https://github.com/kubernetes/kubernetes/pull/119923), [@cvvz](https://github.com/cvvz))
-- "Fixed cleanup of Pod volume mounts when a file was used as a subpath."
+- Fixed cleanup of Pod volume mounts when a file was used as a subpath.
    ([#123052](https://github.com/kubernetes/kubernetes/pull/123052), [@jsafrane](https://github.com/jsafrane))
-- "Fixed incorrect error logging for `syncCronJob`."
+- Fixed incorrect error logging for `syncCronJob`.
    ([#122493](https://github.com/kubernetes/kubernetes/pull/122493), [@mengjiao-liu](https://github.com/mengjiao-liu))
-- "Fixed the deprecated version for `pod_scheduling_duration_seconds` that caused the metric to be hidden by default in `1.29`."
+- Fixed the deprecated version for `pod_scheduling_duration_seconds` that caused the metric to be hidden by default in `1.29`.
    ([#123038](https://github.com/kubernetes/kubernetes/pull/123038), [@alculquicondor](https://github.com/alculquicondor))
-- "Fixed the disruption controller's PDB status synchronization to maintain all PDB conditions during an update."
+- Fixed the disruption controller's PDB status synchronization to maintain all PDB conditions during an update.
    ([#122056](https://github.com/kubernetes/kubernetes/pull/122056), [@dhenkel92](https://github.com/dhenkel92))
-- "Improved scheduler performance when no scoring plugins were defined."
+- Improved scheduler performance when no scoring plugins were defined.
    ([#122058](https://github.com/kubernetes/kubernetes/pull/122058), [@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
-- "Improved scheduler performance when no scoring plugins were defined."
+- Improved scheduler performance when no scoring plugins were defined.
    ([#122435](https://github.com/kubernetes/kubernetes/pull/122435), [@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
-- "Improved scheduler performance when no scoring plugins were defined."
+- Improved scheduler performance when no scoring plugins were defined.
    ([#123384](https://github.com/kubernetes/kubernetes/pull/123384), [@aleksandra-malinowska](https://github.com/aleksandra-malinowska))
-- "In kubeadm, in the new output API 'output.kubeadm.k8s.io/v1alpha3', the UpgradePlan structure that is used when calling 'kubeadm upgrade plan ... -o yaml|json' was modified to include a list of multiple available upgrades."
+- In kubeadm, in the new output API 'output.kubeadm.k8s.io/v1alpha3', the UpgradePlan structure that is used when calling 'kubeadm upgrade plan ... -o yaml|json' was modified to include a list of multiple available upgrades.
    ([#123461](https://github.com/kubernetes/kubernetes/pull/123461), [@carlory](https://github.com/carlory))
-- "Made decoding etcd's response respect the timeout context."
+- Made decoding etcd's response respect the timeout context.
    ([#121815](https://github.com/kubernetes/kubernetes/pull/121815), [@HirazawaUi](https://github.com/HirazawaUi))
-- "Previously, the scheduling queue didn't notice any extenders' failures, potentially resulting in missed cluster events and Pods rejected by Extenders being stuck in the unschedulable pod pool for up to 5 minutes in the worst-case scenario. Now, the scheduling queue notices extenders' failures and requeues Pods rejected by Extenders appropriately."
+- Previously, the scheduling queue didn't notice any extenders' failures, potentially resulting in missed cluster events and Pods rejected by Extenders being stuck in the unschedulable pod pool for up to 5 minutes in the worst-case scenario. Now, the scheduling queue notices extenders' failures and requeues Pods rejected by Extenders appropriately.
    ([#122022](https://github.com/kubernetes/kubernetes/pull/122022), [@sanposhiho](https://github.com/sanposhiho))
-- "QueueingHint implementation for `NodeAffinity` was reverted because potential scenarios were found where events that make Pods schedulable could be missed."
+- QueueingHint implementation for `NodeAffinity` was reverted because potential scenarios were found where events that make Pods schedulable could be missed.
    ([#122285](https://github.com/kubernetes/kubernetes/pull/122285), [@sanposhiho](https://github.com/sanposhiho))
-- "Removed the incorrect warning event `FileSystemResizeFailed` during pod creation if it uses a readonly volume and the capacity of the volume is greater than or equal to its requested storage."
+- Removed the incorrect warning event `FileSystemResizeFailed` during pod creation if it uses a readonly volume and the capacity of the volume is greater than or equal to its requested storage.
    ([#122508](https://github.com/kubernetes/kubernetes/pull/122508), [@carlory](https://github.com/carlory))
-- "Restored the `--verify-only` function in code generation wrappers."
+- Restored the `--verify-only` function in code generation wrappers.
    ([#123261](https://github.com/kubernetes/kubernetes/pull/123261), [@skitt](https://github.com/skitt))
-- "Reverted the `EventedPLEG` feature (beta, but disabled by default) back to alpha due to a known issue."
+- Reverted the `EventedPLEG` feature (beta, but disabled by default) back to alpha due to a known issue.
    ([#122697](https://github.com/kubernetes/kubernetes/pull/122697), [@pacoxu](https://github.com/pacoxu))
-- "Used `errors.Is()` to handle errors returned by `LookPath()`."
+- Used `errors.Is()` to handle errors returned by `LookPath()`.
    ([#122600](https://github.com/kubernetes/kubernetes/pull/122600), [@lzhecheng](https://github.com/lzhecheng))
-- "kube-proxy: Fixed `LoadBalancerSourceRanges` not working for `nftables` mode."
+- kube-proxy: Fixed `LoadBalancerSourceRanges` not working for `nftables` mode.
    ([#122614](https://github.com/kubernetes/kubernetes/pull/122614), [@tnqn](https://github.com/tnqn))
-- "kubeadm: fixed a bug where "kubeadm upgrade plan -o yaml|json" included unneeded output and was missing component config information."
+- kubeadm: fixed a bug where "kubeadm upgrade plan -o yaml|json" included unneeded output and was missing component config information.
    ([#123492](https://github.com/kubernetes/kubernetes/pull/123492), [@carlory](https://github.com/carlory))
 - Added metric name along with the utilization information when running `kubectl get hpa`. ([#122804](https://github.com/kubernetes/kubernetes/pull/122804), [@sreeram-venkitesh](https://github.com/sreeram-venkitesh))
 - Addressed an issue where a JWT authenticator set up via `--authentication-config` would encounter failures in verifying tokens not signed with RS256. ([#123282](https://github.com/kubernetes/kubernetes/pull/123282), [@enj](https://github.com/enj))
@@ -341,39 +341,39 @@
 
 ### Other (Cleanup or Flake)
 
-- "Accepted zero as a default value for `kubectl create` token duration."
+- Accepted zero as a default value for `kubectl create` token duration.
    ([#123565](https://github.com/kubernetes/kubernetes/pull/123565), [@ah8ad3](https://github.com/ah8ad3))
-- "Cleanup: removed `getStorageAccountName` warning messages."
+- Cleanup: removed `getStorageAccountName` warning messages.
    ([#121983](https://github.com/kubernetes/kubernetes/pull/121983), [@andyzhangx](https://github.com/andyzhangx))
-- "Client-go: Optimized leaders renewing leases by updating leader lock optimistically without getting the record from the API server first. Also, a new metric `leader_election_slowpath_total` was added to allow users to monitor how many leader elections are updated non-optimistically."
+- Client-go: Optimized leaders renewing leases by updating leader lock optimistically without getting the record from the API server first. Also, a new metric `leader_election_slowpath_total` was added to allow users to monitor how many leader elections are updated non-optimistically.
    ([#122069](https://github.com/kubernetes/kubernetes/pull/122069), [@linxiulei](https://github.com/linxiulei))
-- "Locked the GA feature-gate `ConsistentHTTPGetHandlers` to default."
+- Locked the GA feature-gate `ConsistentHTTPGetHandlers` to default."
    ([#122578](https://github.com/kubernetes/kubernetes/pull/122578), [@carlory](https://github.com/carlory))
-- "Migrated `client-go/metadata` to contextual logging."
+- "Migrated `client-go/metadata` to contextual logging.
    ([#122225](https://github.com/kubernetes/kubernetes/pull/122225), [@ricardoapl](https://github.com/ricardoapl))
-- "Removed the GA feature gate `RemoveSelfLink`."
+- Removed the GA feature gate `RemoveSelfLink`."
    ([#122468](https://github.com/kubernetes/kubernetes/pull/122468), [@carlory](https://github.com/carlory))
-- "Removed the generally available feature gate `ExpandedDNSConfig`."
+- "Removed the generally available feature gate `ExpandedDNSConfig`.
    ([#122086](https://github.com/kubernetes/kubernetes/pull/122086), [@bzsuni](https://github.com/bzsuni))
-- "Removed the generally available feature gate `KubeletPodResourcesGetAllocatable`."
+- Removed the generally available feature gate `KubeletPodResourcesGetAllocatable`.
    ([#122138](https://github.com/kubernetes/kubernetes/pull/122138), [@ii2day](https://github.com/ii2day))
-- "Removed the generally available feature gate `KubeletPodResources`."
+- Removed the generally available feature gate `KubeletPodResources`.
    ([#122139](https://github.com/kubernetes/kubernetes/pull/122139), [@bzsuni](https://github.com/bzsuni))
-- "Removed the generally available feature gate `MinimizeIPTablesRestore`."
+- Removed the generally available feature gate `MinimizeIPTablesRestore`.
    ([#122136](https://github.com/kubernetes/kubernetes/pull/122136), [@ty-dc](https://github.com/ty-dc))
-- "The GA feature-gate `APISelfSubjectReview` has been removed, and the feature is unconditionally enabled."
+- The GA feature-gate `APISelfSubjectReview` has been removed, and the feature is unconditionally enabled.
    ([#122032](https://github.com/kubernetes/kubernetes/pull/122032), [@carlory](https://github.com/carlory))
-- "Updated `etcd` to version `3.5.12`."
+- Updated `etcd` to version `3.5.12`.
    ([#123150](https://github.com/kubernetes/kubernetes/pull/123150), [@bzsuni](https://github.com/bzsuni))
-- "Updated cri-tools to `v1.29.0`."
+- Updated cri-tools to `v1.29.0`.
    ([#122271](https://github.com/kubernetes/kubernetes/pull/122271), [@saschagrunert](https://github.com/saschagrunert))
-- "Upgraded metrics server to `v0.7.0`."
+- Upgraded metrics server to `v0.7.0`.
    ([#123504](https://github.com/kubernetes/kubernetes/pull/123504), [@pacoxu](https://github.com/pacoxu))
-- "`kubeadm completion` error message now displayed supported shell types when an invalid shell was specified."
+- `kubeadm completion` error message now displayed supported shell types when an invalid shell was specified.
    ([#122477](https://github.com/kubernetes/kubernetes/pull/122477), [@SataQiu](https://github.com/SataQiu))
-- "kubeadm: ensured that a variety of API server requests were retried during "init", "join", "upgrade", "reset" workflows. Prior to this change, some API server requests, such as creating or updating ConfigMaps, were "one-shot" - i.e., they could fail if the API server dropped connectivity for a very short period of time."
+- kubeadm: ensured that a variety of API server requests were retried during "init", "join", "upgrade", "reset" workflows. Prior to this change, some API server requests, such as creating or updating ConfigMaps, were "one-shot" - i.e., they could fail if the API server dropped connectivity for a very short period of time.
    ([#123271](https://github.com/kubernetes/kubernetes/pull/123271), [@neolit123](https://github.com/neolit123))
-- "kubeadm: improved the overall logic, error handling, and output messages when waiting for the kubelet and API server `/healthz` endpoints to return `OK`. The kubelet and API server checks no longer ran in parallel, but one after another (in serial)."
+- kubeadm: improved the overall logic, error handling, and output messages when waiting for the kubelet and API server `/healthz` endpoints to return `OK`. The kubelet and API server checks no longer ran in parallel, but one after another (in serial).
    ([#121958](https://github.com/kubernetes/kubernetes/pull/121958), [@neolit123](https://github.com/neolit123))
 - Added an optimization to reduce stack memory usage for watch requests. It can be disabled with the feature gate: `APIServingWithRoutine=false` ([#120902](https://github.com/kubernetes/kubernetes/pull/120902), [@linxiulei](https://github.com/linxiulei))
 - Added warning for `PV` on reclaim policy when it is `Recycle`. ([#122339](https://github.com/kubernetes/kubernetes/pull/122339), [@carlory](https://github.com/carlory))
@@ -400,5 +400,5 @@
 
 ### Uncategorized
 
-- "Fixed an issue where `kubectl apply` could panic when imported as a library."
+- Fixed an issue where `kubectl apply` could panic when imported as a library.
    ([#122346](https://github.com/kubernetes/kubernetes/pull/122346), [@Jefftree](https://github.com/Jefftree))
