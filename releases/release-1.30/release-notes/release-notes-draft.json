@@ -497,6 +497,25 @@
     ],
     "is_mapped": true
   },
+  "121413": {
+    "commit": "e36fc426a71891a9c3b821225aed9f7ba2a92c0e",
+    "text": "```",
+    "markdown": "``` ([#121413](https://github.com/kubernetes/kubernetes/pull/121413), [@humblec](https://github.com/humblec)) [SIG Cloud Provider]",
+    "author": "humblec",
+    "author_url": "https://github.com/humblec",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/121413",
+    "pr_number": 121413,
+    "areas": [
+      "provider/gcp"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "do_not_publish": true
+  },
   "121461": {
     "commit": "8e11104f0bec8abe62efd7acbb0afe6d908d195d",
     "text": "\"Promoted the `CRDValidationRatcheting` feature gate to beta and made it enabled by default.\"\n",
@@ -897,8 +916,8 @@
   },
   "122013": {
     "commit": "040c59bb9d163a2d54dfb171bd602990cfead982",
-    "text": "A deprecated flag `--pod-max-in-unschedulable-pods-duration` was initially planned to be removed in v1.26, but we have to change this plan. We found [an issue](https://github.com/kubernetes/kubernetes/issues/110175) in which Pods can be stuck in the unschedulable pod pool for 5 min, and using this flag is the only workaround for this issue. \nThis issue only could happen if you use custom plugins or if you change plugin set being used in your scheduler via the scheduler config.",
-    "markdown": "A deprecated flag `--pod-max-in-unschedulable-pods-duration` was initially planned to be removed in v1.26, but we have to change this plan. We found [an issue](https://github.com/kubernetes/kubernetes/issues/110175) in which Pods can be stuck in the unschedulable pod pool for 5 min, and using this flag is the only workaround for this issue. \n  This issue only could happen if you use custom plugins or if you change plugin set being used in your scheduler via the scheduler config. ([#122013](https://github.com/kubernetes/kubernetes/pull/122013), [@sanposhiho](https://github.com/sanposhiho))",
+    "text": "A deprecated flag `--pod-max-in-unschedulable-pods-duration` was initially planned to be removed in v1.26, but we had to change this plan. We found [an issue](https://github.com/kubernetes/kubernetes/issues/110175) in which Pods can be stuck in the unschedulable pod pool for 5 min, and using this flag is the only workaround for this issue. \nThis issue only could happen if you use custom plugins or if you change plugin set being used in your scheduler via the scheduler config.",
+    "markdown": "A deprecated flag `--pod-max-in-unschedulable-pods-duration` was initially planned to be removed in v1.26, but we had to change this plan. We found [an issue](https://github.com/kubernetes/kubernetes/issues/110175) in which Pods can be stuck in the unschedulable pod pool for 5 min, and using this flag is the only workaround for this issue. \n  This issue only could happen if you use custom plugins or if you change plugin set being used in your scheduler via the scheduler config. ([#122013](https://github.com/kubernetes/kubernetes/pull/122013), [@sanposhiho](https://github.com/sanposhiho))",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/122013",
@@ -2162,8 +2181,8 @@
   },
   "122612": {
     "commit": "7bea14097b77219291c1fce17a2829be8f6b9adb",
-    "text": "Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The Pod Security Admission plugin, available since v1.25, is now recommended instead. Refer to https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#securitycontextdeny for more information.\n",
-    "markdown": "Removed the `SecurityContextDeny` admission plugin, which was deprecated since `v1.27`. The Pod Security Admission plugin, available since v1.25, is now recommended instead. Refer to https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#securitycontextdeny for more information.\n   ([#122612](https://github.com/kubernetes/kubernetes/pull/122612), [@mtardy](https://github.com/mtardy))",
+    "text": "The deprecated `SecurityContextDeny` admission plugin, which has been deprecated since `v1.27`, has been removed. It is recommended to use the Pod Security Admission plugin instead, which has been available since v1.25. Refer to the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#securitycontextdeny) for more information.\n",
+    "markdown": "The deprecated `SecurityContextDeny` admission plugin, which has been deprecated since `v1.27`, has been removed. It is recommended to use the Pod Security Admission plugin instead, which has been available since v1.25. Refer to the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#securitycontextdeny) for more information.\n   ([#122612](https://github.com/kubernetes/kubernetes/pull/122612), [@mtardy](https://github.com/mtardy))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5318,8 +5337,8 @@
   },
   "123611": {
     "commit": "3e1da218014b5a4e5c95ee79404093302104438b",
-    "text": "\"kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name\"\n",
-    "markdown": "\"kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name\"\n   ([#123611](https://github.com/kubernetes/kubernetes/pull/123611), [@ritazh](https://github.com/ritazh))",
+    "text": "\"kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name.\"\n",
+    "markdown": "\"kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name.\"\n   ([#123611](https://github.com/kubernetes/kubernetes/pull/123611), [@ritazh](https://github.com/ritazh))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5580,8 +5599,8 @@
   },
   "123719": {
     "commit": "8f80e0146726c42edefdfaeda6123872a5ec0981",
-    "text": "The `StructuredAuthenticationConfiguration` feature is now beta and enabled",
-    "markdown": "The `StructuredAuthenticationConfiguration` feature is now beta and enabled ([#123719](https://github.com/kubernetes/kubernetes/pull/123719), [@enj](https://github.com/enj))",
+    "text": "The `StructuredAuthenticationConfiguration` feature is now beta and enabled.",
+    "markdown": "The `StructuredAuthenticationConfiguration` feature is now beta and enabled. ([#123719](https://github.com/kubernetes/kubernetes/pull/123719), [@enj](https://github.com/enj))",
     "author": "enj",
     "author_url": "https://github.com/enj",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123719",
