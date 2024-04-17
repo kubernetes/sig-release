@@ -77,7 +77,7 @@ Tracking, facilitating, and organizing the publication of the Feature Blog serie
 
 **As feature blogs are opted in**, assign them to shadows and yourself for tracking and facilitation. The responsibility is to ensure the blog authors have the resources and information they need, including editorial and tech reviews once ready.
 
-**Work closely with the SIG Docs Blogs team** (Communicate with them via `#sig-docs-blogs` and by attending meetings), as they are typically available for editorial reviews. Share the feature blog schedule and updates with them throughout the cycle.
+**Work closely with the SIG Docs Blogs team** (Communicate with them via `#sig-docs-blogs` and by attending meetings), as they are typically available for editorial reviews. Share the feature blog schedule and relevant updates **on a regular basis** with their team throughout the release cycle.
 
 For tech reviews, reach out to authors and the sponsoring SIG to organize at least one tech review per blog post.
 
