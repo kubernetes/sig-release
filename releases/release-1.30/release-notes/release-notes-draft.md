@@ -1,3 +1,7 @@
+## What's New (Major Themes)
+
+Major themes for Kubernetes v1.30 _Uwubernetes_ have been published in the [release announcement](https://kubernetes.io/blog/2024/04/17/kubernetes-v1-30-release/), which also contains additional information on the release.
+
 ## Changes by Kind
 
 ### Deprecation
