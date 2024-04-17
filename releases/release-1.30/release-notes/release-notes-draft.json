@@ -5817,5 +5817,51 @@
     ],
     "duplicate_kind": true,
     "is_mapped": true
+  },
+  "124283": {
+    "commit": "fb5140f562289f3ffe596b4a3af4650b850a0941",
+    "text": "Renamed Label cluster to `storage_cluster_id` for `apiserver_storage_size_bytes metric`",
+    "markdown": "Renamed Label cluster to `storage_cluster_id` for `apiserver_storage_size_bytes metric`",
+    "author": "dims",
+    "author_url": "https://github.com/dims",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/124283",
+    "pr_number": 124283,
+    "areas": [
+      "apiserver",
+      "stable-metrics",
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "testing",
+      "instrumentation"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": false
+  },
+  "123342": {
+    "commit": "f38852768e312fe7b9775b92f7228371a0a96f90",
+    "text": "Bumped the stability level of apiserver_storage_size_bytes to `STABLE`",
+    "markdown": "Bumped the stability level of apiserver_storage_size_bytes to `STABLE`",
+    "author": "logicalhan",
+    "author_url": "https://github.com/logicalhan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/123342",
+    "pr_number": 123342,
+    "areas": [
+      "apiserver",
+      "stable-metrics"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": false
   }
 }
