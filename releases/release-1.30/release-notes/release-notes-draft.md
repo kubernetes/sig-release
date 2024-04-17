@@ -398,7 +398,7 @@
 - Updated cni-plugins to version `v1.4.0`. ([#122178](https://github.com/kubernetes/kubernetes/pull/122178), [@saschagrunert](https://github.com/saschagrunert))
 - Updated kubedns and nodelocaldns to version `v1.23.0`. ([#123310](https://github.com/kubernetes/kubernetes/pull/123310), [@bzsuni](https://github.com/bzsuni))
 - `kube-proxy` nftables mode is now compatible with kernel `5.4`. ([#122296](https://github.com/kubernetes/kubernetes/pull/122296), [@tnqn](https://github.com/tnqn))
-- Rename Label cluster to `storage_cluster_id` for `apiserver_storage_size_bytes metric` ([#124283](https://github.com/kubernetes/kubernetes/pull/124283), [dims](https://github.com/dims))
+- Renamed Label cluster to `storage_cluster_id` for `apiserver_storage_size_bytes metric` ([#124283](https://github.com/kubernetes/kubernetes/pull/124283), [dims](https://github.com/dims))
 - Bumped the stability level of apiserver_storage_size_bytes to `STABLE` ([#123342](https://github.com/kubernetes/kubernetes/pull/123342), [@logicalhan](https://github.com/logicalhan))
 
 ### Uncategorized
