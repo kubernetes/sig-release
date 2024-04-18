@@ -25,7 +25,6 @@
 
 - [Slack](https://kubernetes.slack.com/messages/release-management)
 - [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-- [GitHub Project board with open issues and pull requests](https://github.com/orgs/kubernetes/projects/30)
 - [Meeting agenda and notes](https://bit.ly/k8s-releng-meeting)
 
 ### Slack
@@ -38,9 +37,9 @@
 
 We use the [kubernetes-sig-release@ mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-release). Feel free to use it if you have a topic or question that, due to its complexity or need for brainstorming discussion, would be difficult to resolve over Slack or GitHub.
 
-### GitHub Project Board
+### Roadmap and Vision
 
-Release Engineering's work involves several repositories in the project ecosystem, so we keep track of our backlog [here](https://github.com/orgs/kubernetes/projects/30). This is a great place to look if you're a newcomer looking to help out, as it includes unassigned, `help wanted` and `good first issue` cards. 
+Please see the SIG Release Roadmap and Vision document [here](https://github.com/kubernetes/sig-release/blob/master/roadmap.md). This is a great place to look if you're a newcomer looking to help out. 
 
 ### Meetings
 
@@ -114,8 +113,7 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 
 ### Tracking Progress
 
-- We use our [project board](https://github.com/orgs/kubernetes/projects/30) and try to review it during the Release Engineering meeting. 
-    - Note that project boards also exist for [SIG Release](https://github.com/orgs/kubernetes/projects/23) and the [Release Team](https://github.com/orgs/kubernetes/projects/29).
+- We use project boards linked in the [Roadmap and Vision document](https://github.com/kubernetes/sig-release/blob/master/roadmap.md) and try to review them during the Release Engineering meeting.
 - As of Autumn 2020 SIG Release is setting up an instance of Triage Party to accelerate and automate triaging issues.
 - We organize our work into sub-themes based on urgency and impact, and identify drivers of those topics.
 - We call out and celebrate achievements. Some suggested communication paths for amplifying:
