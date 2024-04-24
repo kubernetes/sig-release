@@ -22,7 +22,7 @@ Note that communications ahead of time to inform the leads or find alternative a
 ### Process
 It is important to be kind and patient while trying to resolve the situation.
 - Upon a pattern of inactivity, the Role Lead will notify the EA and have an initial discussion with the shadow about their performance.
-- If the shadow is still not contributing to the team, the EA and the Release Lead will remove the shadow from the team, and find a replacement if appropriate. The EA will be responsible for finding backfill.
+- If the shadow is still not contributing to the team, the Release Team Subproject Leads or the Release Lead will remove the shadow from the team, and find a replacement if appropriate. The EA will be responsible for finding backfill.
 
 ### Consequences
 - If the current release is the reason the shadow has Kubernetes membership, membership should be revoked
@@ -39,14 +39,14 @@ Reasons for removal could include but are not limited to:
 - Violation of [CNCF Code of Conduct](http://cncf.io/conduct/)
 
 ### Process
-- SIGs outside of SIG Release, shadows, leads, or contributors can express concern to the Release Lead or EA.
+- SIGs outside of SIG Release, shadows, leads, or contributors can express concern to the Release Team Subproject Leads, Release Lead, or EA
 - The Release Lead and the EA will have an initial discussion with the Role Lead
 - If the situation is not improved, the Release Lead and EA will have another discussion with the Role Lead and begin to look for a replacement
-- If deemed necessary by the Release Lead, EA and SIG Release chairs, the Role Lead will be replaced with an experienced shadow or someone who previously led the same role. EA will be responsible for finding backfill
+- If deemed necessary by the Release Lead, EA and Release Team Subproject Leads, the Role Lead will be replaced with an experienced shadow or someone who previously led the same role. EA will be responsible for finding backfill
   
 ### Consequences
 - Removal of name in release-team document
 - Role lead will need to shadow again and demonstrate sufficient responsibility, and leading ability, before holding another leadership position on the release team
 
 ## Appeal
-If the release team member disagrees with their removal decision. They can escalate to SIG-Release chairs by sending an email to sig-release-leads@kubernetes.io.
+If the release team member disagrees with their removal decision. They can escalate to SIG Release chairs by sending an email to sig-release-leads@kubernetes.io.
