@@ -30,6 +30,7 @@
     * [A Tour of CI on the Kubernetes Project](#a-tour-of-ci-on-the-kubernetes-project)
     * [How to Escalate](#how-to-escalate)
     * [Checking test dashboards](#checking-test-dashboards)
+      * [Inferring Responsible SIG from the failure](#inferring-responsible-sig-from-the-failure)
     * [Finding a Flaky Test](#finding-a-flaky-test)
     * [Priority Labels](#priority-labels)
     * [Milestones](#milestones)
@@ -53,9 +54,7 @@ Triage](https://github.com/kubernetes/sig-release/tree/master/release-team/role-
 - Presenting summary reports at release team and burndown meetings
 - Maintaining the automation around tracking issues/PRs against the current milestone
 
-Since the role was created by the merger of the CI Signal sub-team and the Bug Triage sub-team, two project boards must be
-maintained. Perhaps this can be unified down the road. Detailed information on project boards is
-present [here](/release-team/role-handbooks/release-signal/project-boards.md). As a Release Signal Team member, it is not your
+Release Signal team maintains two GitHub project boards. Detailed information can be found [here](/release-team/role-handbooks/release-signal/project-boards.md). As a Release Signal Team member, it is not your
 responsibility to fix issues/create PRs; instead, you should get the assignees, owners, SIG leads, or contributors to do it.
 Check [How To Escalate](#how-to-escalate) on how to do it.
 
@@ -276,6 +275,21 @@ justification, tests, docs, etc.
 
 ## Release Cutting - Go or No-Go
 
+Basic idea behind giving go/no-go signal:
+
+```mermaid
+flowchart TD
+    A[Identify Failures/Flakes] -->|No Failures/Flakes| B[Go Signal]
+    A --> |Failures/Flakes Present| C[Get Blocking/Non-Blocking confirmation \n from responsible SIG/WG]
+    C --> |No Blockers| B
+    C --> |Blockers Present| D[No-Go Signal]
+    D --> |Summarize the status in \n #release-management \n and ping the release lead| E[Subject matter experts \n work on the blocker/s]
+    E --> F[Blocking issue resolved]
+    F --> B
+    style B fill:#008000
+    style D fill:#FF0000
+```
+
 Over the release cycle, the release engineering team will cut several releases (alpha, beta, rc), before it ends with a new major
 Kubernetes release. During the release cycle, tests fail and potentially prevent the cut of a new version. The release signal team
 is responsible for getting these failures resolved timely to prevent delaying a release cut.
@@ -485,6 +499,10 @@ Notes to follow along: http://bit.ly/k8s-ci-signal
 This role consists of creating issues for failing and flaky tests on the testgrid and monitoring issues and PRs targeted for the
 current release cycle. The path of escalation is slightly different for both types of issues.
 
+As a general rule of thumb:
+
+_**Always ping folks alongside posting to a Slack channel**_
+
 - For tests failing/flaking on testgrid:
   1. Create an issue in the [k/k](https://github.com/kubernetes/kubernetes)
      or [k/test-infra](https://github.com/kubernetes/test-infra)
@@ -516,14 +534,23 @@ non-responsive issues.
 - Quirk: If a job is listed as FAILING but doesn't have "Overall" as one of its ongoing failures, it's not actually failing. It
   might be "red" from some previous test run failures and will clear up after a few "green" runs.
 - if a job is failing in one of the meta-stages (Up, Down, DumpClusterLogs, etc.), find the owning SIG since it is a infra failure
+- You can look at the past history of the job/test (even as far back as multiple releases) by querying
+  the [triage dashboard for specific job and/or test name](https://storage.googleapis.com/k8s-triage/index.html).
+
+#### Inferring Responsible SIG from the failure
+
 - If a job is failing because a specific test case is failing, and that test case has a [sig-foo] in its name, tag SIG-foo in the
   issue and find the appropriate owner within the SIG
-- With unit test case failures, try to infer the SIG from the path or OWNERS files in it. Otherwise, find the owning SIG to help.
+- With unit test case failures, try to infer the SIG from the path or OWNERS files in it. Otherwise, find the owning SIG to help. OWNERS file is present in the same directry as a job's config file.
+
+<img alt="Prowjob Config File" src="img/prowjob-config-file.png" style="max-width: 800px; height: auto; "/>
+
 - With verify failures, try to infer the failure from the log. Otherwise, find the owning SIG to help
 - If a test case is failing in one job consistently but not others, both the job owner and test case owner are responsible for
   identifying why this combination is different.
-- You can look at the past history of the job/test (even as far back as multiple releases) by querying
-  the [triage dashboard for specific job and/or test name](https://storage.googleapis.com/k8s-triage/index.html).
+- [Triage](https://go.k8s.io/triage) also has the ability to infer the responsible SIG in some cases.
+
+<img alt="Triage inferring SIG" src="img/triage-inferring-sig.png" style="max-width: 800px; height: auto; "/>
 
 ### Finding a Flaky Test
 
