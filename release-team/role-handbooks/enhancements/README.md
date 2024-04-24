@@ -327,7 +327,9 @@ Here's where this enhancement currently stands:
 For this KEP, we would just need to update the following:
 - {insert list of action items}
 
-The status of this enhancement is marked as `at risk for enhancement freeze`. Please keep the issue description up-to-date with appropriate stages as well. Thank you!
+The status of this enhancement is marked as `at risk for enhancement freeze`. Please keep the issue description up-to-date with appropriate stages as well.
+
+If you anticipate missing enhancements freeze, you can file an [exception request](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) in advance. Thank you!
 
 ```
 
@@ -370,7 +372,7 @@ Hello 👋, {current release} Enhancements team here.
 
 Unfortunately, this enhancement did not meet requirements for [enhancements freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#enhancements-freeze).
 
-If you still wish to progress this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request. Thanks!
+If you still wish to progress this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request as soon as possible, within three days. If you have any questions, you can reach out in the #release-enhancements channel on Slack and we'll be happy to help. Thanks!
 ```
 
 #### Code Freeze Templates
@@ -387,6 +389,8 @@ Here's where this enhancement currently stands:
 
 For this enhancement, it looks like the following PRs are open and need to be merged before code freeze (and we need to update the Issue description to include all the related PRs of this KEP):
 - { list of PRs associated with this enhancement }
+
+If you anticipate missing code freeze, you can file an [exception request](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) in advance.
 
 Also, please let me know if there are other PRs in k/k we should be tracking for this KEP.
 As always, we are here to help if any questions come up. Thanks!
@@ -412,7 +416,7 @@ Hello {enhancement owner} 👋 Enhancements team here,
 
 Unfortunately, the implementation (code related) PR(s) associated with this enhancement is not in the merge-ready state by code-freeze and hence this enhancement is now removed from the {current release} milestone.
 
-If you still wish to progress this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request. Thanks!
+If you still wish to progress this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request as soon as possible, within three days. If you have any questions, you can reach out in the #release-enhancements channel on Slack and we'll be happy to help. Thanks!
 
 /milestone clear
 ```
@@ -422,11 +426,11 @@ If you still wish to progress this enhancement in {current release}, please file
 For SIGs which have opted to include Enhancements in the current release:
 
 ```markdown
-Hello sig-{ SIG_NAME }. Enhancements team here.
+Hello SIG { SIG_NAME }! Enhancements team here.
 Just checking in as we approach enhancements freeze at { FREEZE_DATETIME }.
 Your SIG has submitted { X } enhancements for the { CURRENT_RELEASE } cycle, and { Y } enhancements are currently `at risk for enhancement freeze`.
 Refer to the [announcement here]({link to announcement for current release cycle}) for the list of review requirements.
-If your SIG still plans to submit any more enhancement, follow the [instructions here]({link to announcement for current release cycle}) so the enhancements team can begin tracking.
+If your SIG still plans to submit more enhancements, follow the [instructions here]({link to announcement for current release cycle}) so the enhancements team can begin tracking.
 Please plan to make KEP updates to meet all the requirements before enhancement freeze.
 Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
 ```
@@ -434,7 +438,7 @@ Please reach out to [#release-enhancements](https://kubernetes.slack.com/archive
 For SIGs which have not opted to include Enhancements in the current release:
 
 ```markdown
-Hello sig-{{ SIG_NAME }}. Enhancements team here.
+Hello SIG {{ SIG_NAME }}. Enhancements team here.
 Just checking in as we approach enhancements freeze at {{ FREEZE_DATETIME }}.
 Your SIG has not submitted any enhancements for the { CURRENT_RELEASE } cycle.
 If your SIG still plans to submit an enhancement, follow the [instructions here]({link to announcement for current release cycle}) so the enhancements team can begin tracking.

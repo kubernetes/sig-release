@@ -93,6 +93,8 @@ factors should be considered in the approval process.  Enhancements on an
 feature branch with documentation, test cases, and passing CI are more likely to
 be accepted.
 
+*Exception requests must be received within three days of the relevant freeze deadline to be considered.*
+
 ## Feature Blog Freeze
 
 Feature blogs are an amazing way to showcase all the hard work you and your team
