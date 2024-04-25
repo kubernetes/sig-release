@@ -53,10 +53,19 @@ There is a channel on the Kubernetes Slack workspace, `#release-comms`, which is
 ## Release deliverables
 
 Throughout the release cycle, the main Communications deliverables include:
-* **Authoring the Kubernetes release blog.** The Communications team writes the release blog, which is the official announcement of the Kubernetes release.
+* **Collection of Major Themes.** The Communications team coordinates with SIG Leads to solicit Major Themes for the release, to be used in both the Release Blog and Release Notes.
+* **Authoring the Kubernetes release blog.** The Communications team writes the release blog, which is the official announcement of the Kubernetes release. This includes the Major Themes from SIG leads.
 * **Coordination and support of the feature blog series.** SIGs opt-in to author feature blogs for the release. These blogs are written by technical owners, and the Communications team supports authors from the early stages through facilitating editorial and tech reviews as well as publication.
 * **Coordination and support of an optional Deprecations and Removals blog.** Depending upon the content of a given release, it may be necessary to prepare the community for upcoming deprecations and removals. This is decided per release cycle around the time of Code Freeze.
 * **Scheduling press activities and the post-release webinar with the CNCF.** The Communications Coordinator works with the CNCF to schedule press release activities around the release, and to schedule the release webinar (typically scheduled 3-4 weeks post-release).
+
+### Collect Major Themes
+
+A GitHub Discussion must be open to invite all SIG leads and members to add Major Themes for inclusion in the Release Blog and Release Notes. The discussion must be opened in kubernetes/sig-release under General Category. Past discussions: [1.25](https://github.com/kubernetes/sig-release/pull/1987), [1.24](https://github.com/kubernetes/sig-release/discussions/1868), [1.23](https://github.com/kubernetes/sig-release/discussions/1709), [1.22](https://github.com/kubernetes/sig-release/discussions/1575), [1.21](https://github.com/kubernetes/sig-release/discussions/1436).
+
+In the case of a low reponse rate in the Github discussion, each SIG should be pinged via their individual Slack channels and the #chairs-and-techleads channel.
+
+The Communications team should hold a meeting to discuss Major Themes sometime around Code Freeze. Ensure that at least one person from the Release Notes team attends this meeting with the Release Lead and Enhancements Lead.
 
 ### Release blog
 
@@ -216,6 +225,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <ul>
         <li>Work with the enhancements lead to understand big-ticket items to be included in the release
         <li>Start monitoring the <code>Feature blog opt-in</code> sheet for new entries and use the <code>Assigment tab</code> sheet to assign and track status throughout the cycle (<a href="https://docs.google.com/spreadsheets/d/1hgFWig6YBSYORP3huwEyU0VlXGcYi6wMxjYW-swzCIY">for example</a>)
+        <li> With Enhancement freeze in effect, create a GitHub discussion (<a href="https://github.com/kubernetes/sig-release/discussions/2047">example v1.26</a>) to start collecting the major themes of the release, and reach out to all SIGs on and off over the next few weeks to ask for major themes and explain why this is important to the community.
         <ul>
         </ul>
         </ul>
@@ -251,6 +261,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <ul>
         <li>Send out final reminders for feature blog opt-in on the SIG slack channels
         <li>Facilitate or start writing the optional Deprecations and Removals blog
+        <li>Coordinate with Release Notes to ensure major themes are checked in before Code Freeze.
         </ul>
         </td>
     </tr>
@@ -276,6 +287,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td>
         <ul>
         <li>Begin the release blog draft, if not yet started
+        <li>Host a meeting with the Release Lead, Enhancements Lead, and Release Notes to discuss the Major Themes to be highlighted in the release blog and ensure consistency with Release Notes
         <li>Optional 'Deprecations and Removals' blog ready for review
         <li>Schedule the release Live Webinar with CNCF by emailing <code>webinars@cncf.io</code>. You may be referred to <a href="https://calendly.com/cncfonlineprograms">Calendly</a>. The webinar is typically scheduled for 3-4 weeks after the release
         <li>Schedule press and analyst pre-briefings and interviews for the release lead with CNCF by emailing <code>pr@cncf.io</code>
@@ -290,7 +302,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <ul>
         <li>Finalize and publish the 'Deprecations and Removals' blog once code freeze is in place.
         <li>Update release blog draft, post-Code Freeze
-        <li>Check status with Release Notes lead on content for Major Themes and Known Issues sections of the release blog (short summaries to be included in the release blog)
+        <li>Check status with Release Notes lead on content for the Known Issues section of the release blog
         <li>Check status on all feature blog PRs. Keep <code>#sig-docs-blog</code> up-to-date for editorial review, and establish tech reviewers are available 
         </ul>
         </td>
