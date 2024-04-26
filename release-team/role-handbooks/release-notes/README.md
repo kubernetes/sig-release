@@ -70,7 +70,7 @@ In the first week of the release cycle, the Release Notes Lead will organize an 
 
 #### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
 
-In the first 8 weeks of the cycle, the Release Notes team should/must, attend weekly release meetings and run the [release-notes subcommand of krel](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) for every `alpha`, `beta` and `rc` to create an early draft of the release notes. This ensures that the overall quality of the release notes can be verified from the beginning of the release cycle.
+In the first 8 weeks of the cycle, the Release Notes team must attend weekly release meetings and run the [release-notes subcommand of krel](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) for every `alpha`, `beta` and `rc` to create an early draft of the release notes. This ensures that the overall quality of the release notes can be verified from the beginning of the release cycle.
 
 #### Late release cycle (weeks 9-12+) ~4-10 hours/week
 
@@ -138,17 +138,13 @@ A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must b
 
 ### Ensure Major Themes are Reflected in the Notes
 
-The Communications team will hold meetings to discuss blogposts and media releases regarding the release sometime before code freeze. Ensure that at least one person from the release notes team attends this meeting with the release lead and enhancements lead. The release notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the communications team, release lead or enhancements lead to ensure messaging around Major Themes is coordinated.
-
-Besides a meeting with the Communications team a GitHub Discussion must be open to invite all SIGs members and volunteers to update Major Themes with topics that can be discussed in collaborative way. The discussion must be open in kubernetes/sig-release under General Category, past discussions: [1.25](https://github.com/kubernetes/sig-release/pull/1987), [1.24](https://github.com/kubernetes/sig-release/discussions/1868), [1.23](https://github.com/kubernetes/sig-release/discussions/1709), [1.22](https://github.com/kubernetes/sig-release/discussions/1575), [1.21](https://github.com/kubernetes/sig-release/discussions/1436).
-
-In the case of still low reponse rate in the Github discussion each SIG can be ping via Slack as a reminder. To speed up the proccess an issue can be raised to allow multiple people to reach out to different groups, just like: [1615](https://github.com/kubernetes/sig-release/issues/1615) and [1502](https://github.com/kubernetes/sig-release/pull/1502)
+The Communications team will hold a meeting to discuss Major Themes sometime around Code Freeze. Ensure that at least one person from the Release Notes team attends this meeting with the Release Lead and Enhancements Lead. The Release Notes team should ensure that the "Major Themes" identified in this meeting are reflected in the "Major Themes" section of the release notes. If no one is able to attend the meeting, reach out to the Communications team, Release Lead or Enhancements Lead to ensure messaging around Major Themes is coordinated.
 
 ### Get feedback from SIG Leads
 
-Around Code Freeze, the release notes team will get in touch with the SIG Leads to capture the major themes of their SIGs. The team will also ensure that major issues captured in the release notes are confirmed by the SIG leads before release day.
+Around Code Freeze, the Release Notes team will get in touch with the SIG Leads to ensure that the Release Notes accurately reflect the major themes for their SIGs. The team will also ensure that major issues captured in the release notes are confirmed by the SIG leads before release day.
 
-If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberty in completing the notes
+If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Release Notes Team can use a reasonable amount of creative liberty in completing the notes.
 
 ### Clean up and edit the final document
 
@@ -187,19 +183,15 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 - Begin attending burndown meetings
 - Same as above, but generate the notes for each `alpha` and `beta`
 
-#### Week 4
-
-- With Enhancement freeze in effect, create a GitHub discussion ([example 1.26](https://github.com/kubernetes/sig-release/discussions/2047)) to start collecting the major themes of the release, and reach out to all SIGs on and off over the next few weeks to ask for major themes and explain why this is important to the community.
-
 #### Week 10
 
-- Make sure major themes of the release are checked in before Code Freeze; reach out to SIGs and release leads if additional coordination is needed
+- Coordinate with Release Comms to ensure major themes of the release are checked in before Code Freeze; reach out to SIGs and release leads if additional coordination is needed.
 
-### Week 11 (Begin of Code Freeze)
+### Week 11 (Beginning of Code Freeze)
 
 - Create [known issues issue](known-issues-bucket.md) in `kubernetes/kubernetes` to capture known issues for the release.
 - Share created doc with release-team
-- Send [an email to SIG-leads](sig-leads-email.md) to capture major themes from their SIG.
+- Send [an email to SIG-leads](sig-leads-email.md) to ensure major changes for their SIGs are accurately reflected in the release notes
 - Start determining major themes for release notes template to send to SIG-leads
 
 ### Weeks 13-16
@@ -209,7 +201,7 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 
 ### Week 15
 
-- Finalize lead and shadow roles for subsequent release
+- Finalize subteam lead for subsequent release
 - Work with SIG-leads to finalize major themes for release-notes
 - Copy edit notes for spelling, grammar and uniform style
 
