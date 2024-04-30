@@ -1,9 +1,9 @@
 # Release Timeline
 
-- [Overview](#overview)
-- [Week 1-2: Early Steps](#early-steps-weeks-1-2)
+- [Release Timeline](#release-timeline)
+  - [Overview](#overview)
+  - [Early Steps (Weeks 1-2)](#early-steps-weeks-1-2)
     - [Connect with the release team through Slack and Google Groups](#connect-with-the-release-team-through-slack-and-google-groups)
-    - [Read the release timeline](#read-the-release-timeline)
     - [Introduce yourself to docs localization teams](#introduce-yourself-to-docs-localization-teams)
     - [Attend meetings](#attend-meetings)
     - [Read up on the release team](#read-up-on-the-release-team)
@@ -12,56 +12,58 @@
     - [Meet with Shadows](#meet-with-shadows)
     - [Ensure access is set up](#ensure-access-is-set-up)
     - [Update the website configuration ahead of the release](#update-the-website-configuration-ahead-of-the-release)
-- [Week 3-6: Middle Steps](#middle-steps-weeks-3-8)
+  - [Middle Steps (Weeks 3-8)](#middle-steps-weeks-3-8)
     - [Track PRs](#track-prs)
+    - [Communicate major deadlines](#communicate-major-deadlines)
     - [Reach out to Enhancement Owners](#reach-out-to-enhancement-owners)
-        - [Before the Open placeholder PR Deadline](#before-the-open-placeholder-pr-deadline)
-        - [Before the PRs Ready for Review Deadline](#before-the-prs-ready-for-review-deadline)
-        - [Before the Docs Freeze Deadline](#before-the-docs-freeze-deadline)
-        - [Week of Docs Freeze](#week-of-docs-freeze)
-        - [After Docs Freeze](#after-docs-freeze)
+      - [Before the Open Placeholder PR Deadline](#before-the-open-placeholder-pr-deadline)
+      - [Before the PRs Ready for Review Deadline](#before-the-prs-ready-for-review-deadline)
+      - [Before the Docs Freeze Deadline](#before-the-docs-freeze-deadline)
+      - [Week of Docs Freeze](#week-of-docs-freeze)
+      - [After Docs Freeze](#after-docs-freeze)
     - [Reach out to release notes team](#reach-out-to-release-notes-team)
     - [Maintain the current and upcoming `dev` branch](#maintain-the-current-and-upcoming-dev-branch)
-        - [Periodically merge `main` into `dev-[future release]`](#-periodically-merge-main-into-dev-future-release)
+      - [⚠️ Periodically merge `main` into `dev-[future release]`](#️-periodically-merge-main-into-dev-future-release)
     - [Monitor PRs](#monitor-prs)
     - [Enforce deadlines](#enforce-deadlines)
-    - [Communicate major deadlines](#communicate-major-deadlines)
     - [Review PRs](#review-prs)
-    - [Style Guide Checklist (High to Low Level)](#style-guide-checklist-high-to-low-level)
+      - [Style Guide Checklist (High to Low Level)](#style-guide-checklist-high-to-low-level)
     - [Nominate a Docs Lead for the Next Release](#nominate-a-docs-lead-for-the-next-release)
-- [Week 7-8: Late-Middle Steps - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
-- [Weeks 9-11: Late Steps - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
+  - [Late-Middle Steps (Weeks 7-8) - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
+  - [Late Steps (Weeks 9-11) - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
+    - [Touch base with SIG Docs](#touch-base-with-sig-docs)
     - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
-    - [Touch base with the release communications team](#touch-base-with-the-release-communications-team)
-- [Week 12: Release Week](#release-week-week-12)
+    - [Update Releases Page (the week before the release)](#update-releases-page-the-week-before-the-release)
+  - [Release Week (Week 12)](#release-week-week-12)
     - [Update the site configuration files for previous releases](#update-the-site-configuration-files-for-previous-releases)
     - [Update the site configuration files for future release](#update-the-site-configuration-files-for-future-release)
     - [Inform localization teams](#inform-localization-teams)
     - [Day before Release Day](#day-before-release-day)
-        - [Request for temporary write access to website repo](#request-for-temporary-write-access-to-website-repo)
-        - [Create the release branch](#create-the-release-branch)
-        - [Update Netlify](#update-netlify)
-        - [Freeze Kubernetes website](#freeze-kubernetes-website)
-        - [Merge `main`](#merge-main)
-        - [Get approvals for open PRs](#get-approvals-for-open-prs)
-        - [Review milestone](#review-milestone)
-    - [Release Day](#release-day)
-        - [Merge the integration branch](#merge-the-integration-branch)
-        - [Publish the release blog post](#publish-the-release-blog-post)
-        - [Create release with tag](#create-release-with-tag)
-        - [Unfreeze Kubernetes website](#unfreeze-kubernetes-website)
-        - [Close the [future release] milestone](#close-the-future-release-milestone)
-- [Post Release Verification, Cleanup, and Handoff](#post-release-verification-cleanup-and-handoff)
+      - [Request for temporary write access to the website repo](#request-for-temporary-write-access-to-the-website-repo)
+      - [Freeze Kubernetes website](#freeze-kubernetes-website)
+      - [Create the release branch](#create-the-release-branch)
+      - [Update Netlify](#update-netlify)
+      - [Merge `main`](#merge-main)
+      - [Get approvals for open PRs](#get-approvals-for-open-prs)
+      - [Review milestone](#review-milestone)
+  - [Release Day](#release-day)
+    - [Merge the integration branch](#merge-the-integration-branch)
+    - [Publish the release blog post](#publish-the-release-blog-post)
+    - [Create release with tag](#create-release-with-tag)
+    - [Unfreeze Kubernetes website](#unfreeze-kubernetes-website)
+    - [Close the \[future release\] milestone](#close-the-future-release-milestone)
+  - [Post Release Verification, Cleanup, and Handoff](#post-release-verification-cleanup-and-handoff)
     - [Review Docs Process and Update Documentation](#review-docs-process-and-update-documentation)
     - [Hold a docs-only retro with Sig Docs](#hold-a-docs-only-retro-with-sig-docs)
-- [Prepare the Next Docs Lead for Success](#prepare-the-next-docs-lead-for-success)
+  - [Prepare the Next Docs Lead for Success](#prepare-the-next-docs-lead-for-success)
     - [Create the dev-future-FUTURE branch](#create-the-dev-future-future-branch)
-    - [Enable branch protection](#enable-branch-protection)
+    - [Modify prow config file](#modify-prow-config-file)
     - [Create milestone](#create-milestone)
-    - [Update Netlify](#update-netlify)
+    - [Update Netlify](#update-netlify-1)
     - [Update Slack](#update-slack)
+    - [Reassign issues](#reassign-issues)
     - [Clean up access](#clean-up-access)
-- [Celebrate](#celebrate)
+  - [Celebrate!](#celebrate)
 
 ---
 
@@ -80,7 +82,7 @@ Define deadlines clearly e.g. End of Day (EOD) PST is not clear if EOD is 5:00 P
 
 Responsibilities of the Docs Team:
 - Same as [Docs Lead responsibilities](../docs#docs-lead-responsibilities)
-- Track Doc PRs for KEPs in the [website](https://github.com/kubernetes/website) project.
+- Track Doc PRs for KEPs in the [website](https://github.com/kubernetes/website) project, plus all Doc PRs for the dev-[future release] branch that may include general updates without a KEP.
 - By default, all opted-in KEPs will `Need Docs`. Enhancement owners/contributors should confirm the enhancement does not need new or updated documentation.
 
 > Note: The blog-PR  is tracked by the Release-Comms Team.
@@ -387,6 +389,11 @@ After the Open Placeholder PR deadline, reach out to all open/tracked doc PRs to
 > to get your PR ready for review before < PR Ready for Review deadline HH:MM timezone >. Thank you!
 
 #### Before the Docs Freeze Deadline
+
+1. **Coordinate a Plan with SIG Docs**:
+It is crucial for the Docs Lead to plan and coordinate with the SIG Docs leads, especially between the PR Ready for Review deadline and the Docs Freeze deadline. Establish a clear plan to address the review capacity and anticipate potential obstacles such as KubeCon or other events that might affect the availability of reviewers. Ask how Release Docs can help!
+
+2. **Communicate Docs Freeze at start of Review**
 After the PR ready for review deadline, reach out to all open/tracked doc PRs to remind the PR owners to get docs reviewed, e.g:
 
 > Hello < tag doc owner(s) > :wave:, a friendly reminder that this PR needs a doc review by < Docs Complete Deadline HH:MM timezone > to get this
