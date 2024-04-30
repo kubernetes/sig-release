@@ -22,12 +22,12 @@ description: |
 
 #### Tracking docs
 
-* [Enhancements Tracking Board](https://bit.ly/k8s130-enhancements)                                 <!-- TODO: replace with 1.31 board -->
-* [Feature blog Tracking Board](https://github.com/orgs/kubernetes/projects/161/views/4)            <!-- TODO: replace with 1.31 board -->
+* [Enhancements Tracking Board](https://github.com/orgs/kubernetes/projects/180/views/1)            <!-- TODO: replace with bitly link -->
+* [Feature blog Tracking Board](https://github.com/orgs/kubernetes/projects/180/views/5)            <!-- TODO: replace with bitly link -->
 * [Bug Triage Tracking Board](https://bit.ly/k8s131-bugtriage)
 * [CI Signal Project Board & Issue Tracking](https://bit.ly/k8s131-cisignal)
 * [Retrospective Document](https://bit.ly/k8s131-retro)
-* [kubernetes/sig-release v1.30 milestone](https://github.com/kubernetes/website/milestone/87)      <!-- TODO: replace with 1.31 milestone -->
+* [kubernetes/sig-release v1.31 milestone](https://github.com/kubernetes/kubernetes/milestone/64)
 
 #### Guides
 
