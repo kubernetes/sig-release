@@ -1,0 +1,12 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+    - neoaggelos            # 1.31 Release Team Lead
+    - Priyankasaggu11929    # 1.31 Emeritus Advisor
+
+reviewers:
+    - a-mccarthy            # 1.31 Communications Lead
+    - npolshakova           # 1.31 Release Notes Lead
+    - Princesso             # 1.31 Docs Lead
+    - sreeram-venkitesh     # 1.31 Enhancements Lead
+    - Vyom-Yadav            # 1.31 Release Signal Lead
