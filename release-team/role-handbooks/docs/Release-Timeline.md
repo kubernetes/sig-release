@@ -52,10 +52,10 @@
     - [Create release with tag](#create-release-with-tag)
     - [Unfreeze Kubernetes website](#unfreeze-kubernetes-website)
     - [Close the \[future release\] milestone](#close-the-future-release-milestone)
-  - [Post Release Verification, Cleanup, and Handoff](#post-release-verification-cleanup-and-handoff)
+  - [Same day or Day After Release - Verification, Cleanup, and Handoff](#same-day-or-day-after-release---verification-cleanup-and-handoff)
     - [Review Docs Process and Update Documentation](#review-docs-process-and-update-documentation)
     - [Hold a docs-only retro with Sig Docs](#hold-a-docs-only-retro-with-sig-docs)
-  - [Prepare the Next Docs Lead for Success](#prepare-the-next-docs-lead-for-success)
+  - [Day after Release - Prepare the Next Docs Lead for Success](#day-after-release---prepare-the-next-docs-lead-for-success)
     - [Create the dev-future-FUTURE branch](#create-the-dev-future-future-branch)
     - [Modify prow config file](#modify-prow-config-file)
     - [Create milestone](#create-milestone)
@@ -852,9 +852,9 @@ Afterwards, submit an unfreeze announcement following our [protocols](#communica
 
 - Merge the 4 config.toml's created as part of the sunsetting docs.
   - Remove hold from the configuration PRs to allow merge automatically by Prow.
-- Find the open milestone for [future release] and close it.
+- Find the open milestone for [future release] and close it. ⚠️ Be careful not to delete it.
 
-## Post Release Verification, Cleanup, and Handoff
+## Same day or Day After Release - Verification, Cleanup, and Handoff
 These steps should be done after the launch. They require approximately 4 hours of work.
 
 ### Review Docs Process and Update Documentation
@@ -866,7 +866,7 @@ These steps should be done after the launch. They require approximately 4 hours 
 - Can we add / **remove** stuff from playbook?
 
 
-## Prepare the Next Docs Lead for Success
+## Day after Release - Prepare the Next Docs Lead for Success
 
 ### Create the dev-future-FUTURE branch
 
