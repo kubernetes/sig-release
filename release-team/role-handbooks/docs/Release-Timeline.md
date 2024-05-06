@@ -5,7 +5,7 @@
   - [Early Steps (Weeks 1-2)](#early-steps-weeks-1-2)
     - [Connect with the release team through Slack and Google Groups](#connect-with-the-release-team-through-slack-and-google-groups)
     - [Introduce yourself to docs localization teams](#introduce-yourself-to-docs-localization-teams)
-    - [Attend meetings](#attend-meetings)
+    - [Attend meetings and provide updates](#attend-meetings-and-provide-updates)
     - [Read up on the release team](#read-up-on-the-release-team)
     - [Select Shadows](#select-shadows)
     - [Contact volunteers](#contact-volunteers)
@@ -136,11 +136,13 @@ Early in the release cycle, the Enhancements Lead opens a Github Project, e.g: [
 >
 > cc: @kubernetes/sig-docs-fr-owners @kubernetes/sig-docs-de-owners @kubernetes/sig-docs-hi-owners @kubernetes/sig-docs-id-owners @kubernetes/sig-docs-ja-owners @kubernetes/sig-docs-ru-owners @kubernetes/sig-docs-pl-owners @kubernetes/sig-docs-ko-owners @kubernetes/sig-docs-pt-owners @kubernetes/sig-docs-es-owners @kubernetes/sig-docs-zh-owners @kubernetes/sig-docs-vi-owners @kubernetes/sig-docs-uk-owners @kubernetes/sig-docs-it-owners
 
-### Attend meetings
+### Attend meetings and provide updates
 
 ⚠️  Attend the release team meeting outlined in the current release. If you cannot attend, a Shadow needs to attend in your place.
-⚠️  Attend [SIG Docs meetings](https://github.com/kubernetes/community/tree/master/sig-docs#meetings) to provide a status update. 
+⚠️  Attend [SIG Docs meetings](https://github.com/kubernetes/community/tree/master/sig-docs#meetings) to report a status update. 
 If you cannot attend, a Shadow needs to attend in your place and/or update the [SIG Docs meeting notes](https://docs.google.com/document/d/1emuO4nmaQq3K8JZ9-MQeIygtrCPO9kWv7U7RzTaW4F8/edit?usp=sharing) with the information necessary to keep the community informed (e.g. staffing updates, branch syncs, placeholder PR deadlines, etc).
+⚠️ The Docs Lead and Shadows must either attend all release team and SIG Docs meetings or communicate with the team if unable to attend. Every team member should have equal opportunities to provide verbal status updates in the meetings. The Docs Lead must ensure Shadows are well-informed on the status updates that release team and SIG Docs need, while Shadows must actively monitor progress to report on.
+
 - Here is a checklist to guide the weekly status report. 
 
 _Note:_ SIG Docs prefers and welcomes a status of yellow or red on anything that needs attention, has the possiblity to miss deadlines or target dates, or requires follow-up from feature authors and SIGs that you're not receiving.
@@ -390,10 +392,15 @@ After the Open Placeholder PR deadline, reach out to all open/tracked doc PRs to
 
 #### Before the Docs Freeze Deadline
 
-1. **Coordinate a Plan with SIG Docs**:
-It is crucial for the Docs Lead to plan and coordinate with the SIG Docs leads, especially between the PR Ready for Review deadline and the Docs Freeze deadline. Establish a clear plan to address the review capacity and anticipate potential obstacles such as KubeCon or other events that might affect the availability of reviewers. Ask how Release Docs can help!
+1. **Update the Enhancements board**
+  - You and your Shadows are also responsible for updating the Status of the enhancement as tracked or at risk for Docs Freeze:
+    - **Tracked for Docs Freeze:** Documentation is in an active review, will likely be merged by Doc Freeze deadline or has already been merged.
+    - **At Risk for Docs Freeze:** The Docs Freeze deadline is upcoming and the documentation looks to be at risk of making that deadline, risking an exception.
 
-2. **Communicate Docs Freeze at start of Review**
+2. **Coordinate a Plan with SIG Docs**:
+It is crucial for the Docs Lead to plan and coordinate with the SIG Docs leads, especially between the PR Ready for Review deadline and the Docs Freeze deadline. Establish a clear plan to address the available capacity of SIG Docs and Release Docs to review doc PRs and anticipate potential obstacles such as KubeCon or other events that might affect the availability of reviewers. Ask how Release Docs can help!
+
+3. **Communicate Docs Freeze at start of Review**
 After the PR ready for review deadline, reach out to all open/tracked doc PRs to remind the PR owners to get docs reviewed, e.g:
 
 > Hello < tag doc owner(s) > :wave:, a friendly reminder that this PR needs a doc review by < Docs Complete Deadline HH:MM timezone > to get this
@@ -488,7 +495,7 @@ Enforce deadlines the day after. Communicate with SIGs via Slack and email lists
 
 ### Review PRs
 
-It is the Docs Lead and Shadows' responsibility to ensure the incoming docs meet our standards. It's impossible for us to understand every technical component, so it is important to get a **technical LGTM** too if you're unsure about technical accuracy.
+It is the Docs Lead and Shadows' responsibility to ensure the incoming docs meet our standards. Considering SIG Docs has limited capacity, the Release Doc Lead and Shadows should actively engage in reviewing and providing feedback on documentation changes in each of their PRs. It's impossible for us to understand every technical component, so it is important to get a technical LGTM too if you're unsure about technical accuracy.
 
 Also review each PR for:
 
