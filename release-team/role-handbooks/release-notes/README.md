@@ -161,6 +161,29 @@ A "Dependencies" section should be curated which outlines how external dependenc
 
 ## Release Cycle Milestone Activities:
 
+### Week 0 
+
+Create an internal schedule for the release notes team to follow based on the release timeline. For example, for the 
+[v1.31 release](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.31), create a table to track
+Release, Branch Created Day, Week of Release, PR merge deadline, and Release Notes Assignee. 
+
+| **Release**                                                                               | **Branch Created Day**                       | **Week**                                                              | **PR merge deadline** | **Release Notes Assignee** |
+| -------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------- | ------- |----------------------------|
+| 1.31.0-alpha.1 released                                                                | Tuesday 4th June 2024                          | week 4                                               | Tuesday 11th June 2024  | <Release Notes Member>     |
+| 1.31.0-alpha.2 released                                                              | Tuesday 18th June 2024                         | week 6                                              | Tuesday 25th June 2024 | <Release Notes Member>     |
+| 1.31.0-alpha.3 released                                                               | Tuesday 2nd July 2024                         | week 8                                            | Tuesday 13th July 2024   | <Release Notes Member>     |
+| 1.31.0-beta.0 released                                                               | Tuesday 16th July 2024                       | week 10                                               | Tuesday 23rd July 2024  | <Release Notes Member>     |
+| Start final draft of Release Notes                                                              | Tuesday 23rd July 2024                         | week 11                                              | Tuesday 13th August 2024  | Release Notes Lead         |
+| 1.31.0-rc.0 released                                                             | Tuesday 30th July 2024                       | week 12                                         | Tuesday 6th August 2024 |          |
+| 1.31.0-rc.1 released                                                             | Tuesday 6th August 2024                        | week 13                                            | Tuesday 13th August 2024  |        |
+
+##### Release Team Meeting Updates
+
+For the release team meeting, provide a `status` based on the following criteria:
+- A `Red` on our release notes status means that something major is blocking our work when creating Release Notes pull requests. 
+- A `Yellow` status generally means that we are still in progress of creating the Release Notes pull request or we have some minor blockages that have caused a delay past the PR merge deadline.
+- A `Green` status means that everything looks good and done from Release Notes team side, i.e. the release notes pull requests are being created, reviewed and merged before the deadline. Everything is A-OK here.
+
 ### Week 1
 
 Begin running release-notes tool for the ongoing collection of release notes with the first alpha release, which has been cut directly after the latest minor.
