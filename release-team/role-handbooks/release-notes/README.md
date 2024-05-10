@@ -214,11 +214,13 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 - __Release day__
 - Copy notes from Google Doc to HackMD in markdown
 - Final version of release notes committed for release
+- Close the _Known Issues_ Issue is and make sure everything has been resolved
 - Release Notes must be merged into master prior to the release. If this is not done the release will include the latest draft.
 
 ### Week 19
 
 - Release retrospective participation
+- Update the TODOs section at the end of each release for the next Release Notes Team
 
 ## Tools
 - [krel](https://github.com/kubernetes/release/tree/master/docs/krel) The Kubernetes Release Toolbox
@@ -230,17 +232,35 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 - [LWKD](http://lwkd.info) *(consider contributing to LWKD as part of your role)*
 - [Kubernetes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/)
 
+## Debugging Tips
+
+If you are having trouble running the `krel` tool, here are some common issues and solutions:
+
+1. Try running with `--log-level=debug` or `--log-level=trace` to get more information about what is going wrong.
+
+Checkout the documentation for the [krel `release-notes` subcommand](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
+
 ## TODOs
 
-Update this section at the end of each release for the next Release Notes Team.
+As a Release Notes shadow, if you are interested in contributing to the improvement of the release notes process, consider the following
+areas of improvement:
 
-### Post 1.17 TODOs
+#### Github Workflow to Detect Common Release Note Issues
 
-#### If any team members have NLP experience
+- yaml linter to block invalid yaml merging in from manually edited release notes
+- spell check based on dictionary of common Kubernetes terms
+- check for correct punctuation in release notes
+- check for incorrect tense in release notes
 
-Implement functionality in release-notes tool to automatically process language in generated release notes file
+#### Release Notes tool to automatically process language
+
+If any team members have NLP experience, implement functionality in release-notes tool to automatically process language in generated release notes file
 
 Goals:
 
 - Generate uniform style across release notes (ie. past tense, formatting)
 - Decrease copy editing time
+
+#### Krel tool improvements 
+
+- Update krel tool to show progress of how many PRs to review are left and other bugs
