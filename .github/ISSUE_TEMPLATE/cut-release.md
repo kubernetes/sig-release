@@ -84,7 +84,7 @@ Help? Ring @release-managers on slack!
   - [ ] Release
 - [ ] Notify #release-management: <!-- Paste link to slack -->
 - [ ] Send notification: <!-- Paste link to kubernetes-dev email -->
-- [ ] Update [`schedule.yaml` file](https://github.com/kubernetes/website/blob/main/data/releases/schedule.yaml) with the latest release <!-- Paste Pull Request URL here -->
+- [ ] Update [`schedule.yaml` file](https://github.com/kubernetes/website/blob/main/data/releases/schedule.yaml) with the latest release using [`schedule-builder`](https://github.com/kubernetes/release/tree/master/cmd/schedule-builder) <!-- Paste Pull Request URL here -->
 - [ ] Collect metrics and add them to the `Release steps` table below
 <!-- ONLY FOR RC.0 RELEASE - [ ] Finish post-release branch creation tasks -->
 
