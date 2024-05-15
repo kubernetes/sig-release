@@ -42,8 +42,8 @@ The 1.31 release cycle is as follows:
 - **Thursday 6th June 2024**: Week 4 — [Production Readiness Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **02:00 UTC Friday 14th June 2024 / 19:00 PDT Thursday 13th June 2024**: Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
 - **02:00 UTC Wednesday 10th July 2024 / 19:00 PDT Tuesday 9th July 2024**: Week 9 — [Code Freeze](../release_phases.md#code-freeze)
-- **01:00 UTC Wednesday 31st July 2024 / 19:00 PDT Tuesday 30th July 2024**: Week 11 — [Test Freeze](../release_phases.md#test-freeze)
-- **Tuesday 30th July August 2024**: Week 12 — [Docs Freeze](../release_phases.md#docs-freeze)
+- **01:00 UTC Wednesday 31st July 2024 / 19:00 PDT Tuesday 30th July 2024**: Week 12 — [Test Freeze](../release_phases.md#test-freeze)
+- **Tuesday 30th July 2024**: Week 12 — [Docs Freeze](../release_phases.md#docs-freeze)
 - **Tuesday 13th August 2024**: Week 14 — Kubernetes v1.31.0 released
 
 ## Timeline
