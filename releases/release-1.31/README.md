@@ -22,7 +22,7 @@ description: |
 
 #### Tracking docs
 
-* [Enhancements Tracking Board](https://github.com/orgs/kubernetes/projects/180/views/1)            <!-- TODO: replace with bitly link -->
+* [Enhancements Tracking Board](https://bit.ly/k8s131-enhancements)
 * [Feature blog Tracking Board](https://github.com/orgs/kubernetes/projects/180/views/5)            <!-- TODO: replace with bitly link -->
 * [Bug Triage Tracking Board](https://bit.ly/k8s131-bugtriage)
 * [CI Signal Project Board & Issue Tracking](https://bit.ly/k8s131-cisignal)
