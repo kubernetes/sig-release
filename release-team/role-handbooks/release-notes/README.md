@@ -214,12 +214,13 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 - __Release day__
 - Copy notes from Google Doc to HackMD in markdown
 - Final version of release notes committed for release
-- Close the _Known Issues_ Issue is and make sure everything has been resolved
+- Close the _Known Issues_ Issue and make sure everything has been resolved
 - Release Notes must be merged into master prior to the release. If this is not done the release will include the latest draft.
 
 ### Week 19
 
 - Release retrospective participation
+- Update the Release Notes Team Handbook to include any tool documentation, debugging tips, etc. that were discovered during the release cycle
 - Update the TODOs section at the end of each release for the next Release Notes Team
 
 ## Tools
@@ -237,8 +238,27 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 If you are having trouble running the `krel` tool, here are some common issues and solutions:
 
 1. Try running with `--log-level=debug` or `--log-level=trace` to get more information about what is going wrong.
+2. A temp directory gets created at `/var/folders/7t/273pt80d51l70mj4rxznq_lm0000gn/T/<k8s-hash>` when the `krel` tool is called.
+If this data is stale, you can try clearing to remove old data with `rm -rf /var/folders/7t/273pt80d51l70mj4rxznq_lm0000gn/T/k8s`
 
 Checkout the documentation for the [krel `release-notes` subcommand](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
+
+## Release Notes File Structure
+
+All the release notes for a release are stored under the [releases](https://github.com/kubernetes/sig-release/tree/master/releases) 
+directory in the sig-release repo. 
+
+For each release there is a JSON and markdown file that contains the collected release notes across path releases. For example,
+the 1.30 release [markdown file](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.30/release-notes/release-notes-draft.md)
+contains all the correctly formatted release notes text for the 1.30 release. The [JSON file](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.30/release-notes/release-notes-draft.json)
+contains the release notes metadata that is used to generate the markdown file. 
+
+When a release notes team member runs the `krel release-notes` command, a new session is created so that you can pause and resume
+the editing process. For example the 1.30 release notes sessions are stored in the [sessions](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.30/release-notes/sessions)
+directory in the sig-release repo under `release-1.30`.
+
+If a release notes team member finds a mistake in the release notes, the edit will be saved as a map yaml file in the [maps](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.30/release-notes/maps)
+directory. These maps are used to generate the markdown file and JSON file with the correctly edited release note. 
 
 ## TODOs
 
@@ -247,10 +267,16 @@ areas of improvement:
 
 #### Github Workflow to Detect Common Release Note Issues
 
-- yaml linter to block invalid yaml merging in from manually edited release notes
-- spell check based on dictionary of common Kubernetes terms
-- check for correct punctuation in release notes
-- check for incorrect tense in release notes
+- YAML linter to block invalid yaml merging in from manually edited release notes. If suggestions are commited that have 
+invalid yaml, the krel tool will not be able to be run on the next release until the error is fixed in a separate pr. 
+See [example PR](https://github.com/kubernetes/sig-release/pull/2446) from the 1.30 release that unblocked the `v1.30.0-alpha.3` release.
+- Spell check based on dictionary of common Kubernetes terms.
+- Check for correct punctuation in release notes.
+- Check for incorrect tense in release notes.
+- Look into using [Vale.sh](https://vale.sh/) or the [Valve GitHub action](https://github.com/errata-ai/vale) to add editorial checks to the release notes PR
+
+Some initial work has been done in [this GitHub workflow](https://github.com/npolshakova/sig-release/blob/npolshak/workflow/.github/workflows/release-notes-checker.yaml) to introduce checks for common issues in release notes. 
+Here is an [example run of the workflow](https://github.com/rudrakshkarpe/sig-release/actions/runs/8073807523/job/22058097731) for the 1.30.0-alpha2 release. This is a good starting point for further improvements.
 
 #### Release Notes tool to automatically process language
 
@@ -258,9 +284,15 @@ If any team members have NLP experience, implement functionality in release-note
 
 Goals:
 
-- Generate uniform style across release notes (ie. past tense, formatting)
-- Decrease copy editing time
+- Generate uniform style across release notes (ie. past tense, formatting).
+- Decrease copy editing time.
+
+#### Release Notes Machine Learning Classifier
+
+The idea is to build a continuous release notes improvement process to train a machine learning model to classify.
+release notes as good or bad. The input for the model should be created continuously during the whole release cycle.
+by Release Notes Team of SIG Release. See the [issue](https://github.com/kubernetes/enhancements/issues/1833) for more details.
 
 #### Krel tool improvements 
 
-- Update krel tool to show progress of how many PRs to review are left and other bugs
+- Update krel tool to show progress of how many PRs to review are left and other bugs.
