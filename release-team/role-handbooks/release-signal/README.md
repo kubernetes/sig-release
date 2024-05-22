@@ -10,6 +10,7 @@
     * [Additional Requirements for Leads](#additional-requirements-for-leads)
   * [Timeline](#timeline)
     * [Onboarding](#onboarding)
+      * [Create Assignment Excel Sheet](#create-assignment-excel-sheet)
     * [Early Release](#early-release)
     * [Mid-Release Cycle](#mid-release-cycle)
     * [Code Freeze](#code-freeze)
@@ -137,18 +138,39 @@ stabilization phase.
   the [teams.yaml](https://github.com/kubernetes/org/blob/master/config/kubernetes/sig-release/teams.yaml).
   _Coordinate with the release lead to make multiple changes to this file in one PR._
 - Plan release support and status reporting. Setup [CI-Signal project board](/release-team/role-handbooks/release-signal/project-boards.md#setting-up-the-ci-signal-project-board) and the [Bug Triage Project Board](/release-team/role-handbooks/release-signal/project-boards.md#setting-up-the-bug-triage-project-board).
-- Create an excel sheet to track various assignments during the release cycle. [Example](https://docs.google.com/spreadsheets/d/1lYbCOGvG9jD-AVT0Ajc3LoSLNKHC6xIIy1t6BJPlO7E/edit?usp=sharing)
 - Release Signal Shadows must be a member of the Kubernetes organization and, therefore, apply for membership by opening an issue
   on [kubernetes/org](https://github.com/kubernetes/org) (
   see [Issue template](https://github.com/kubernetes/org/issues/new?assignees=&labels=area%2Fgithub-membership&template=membership.yml&title=REQUEST%3A+New+membership+for+%3Cyour-GH-handle%3E)).
 - Organizing an onboarding meeting with shadows to walk through this handbook and useful tools like [Testgrid](https://github.com/GoogleCloudPlatform/testgrid),
   [Triage](https://github.com/kubernetes/test-infra/tree/master/triage), [Spyglass](https://docs.prow.k8s.io/docs/spyglass/), [Prow](https://docs.prow.k8s.io/docs/), and [Tide](https://docs.prow.k8s.io/docs/components/core/tide/).
 
+#### Create Assignment Excel Sheet
+
+Create an excel sheet to track various assignments during the release cycle. [Example](https://docs.google.com/spreadsheets/d/1lYbCOGvG9jD-AVT0Ajc3LoSLNKHC6xIIy1t6BJPlO7E/edit?usp=sharing)
+
+Roles in the assignments excel sheet:
+
+1. **Primary Reporter:** The primary reporter assigned to a task is responsible for completing it, such as providing meeting updates, giving Go/No-Go signals, etc.
+2. **Main Coordinator:** Main coordinator is responsible for:
+    - Observing testgrid dashboards (along with other shadows).
+    - Creating issues for failing/flaking tests. 
+    - Following up with related SIGs/WGs to get the issue resolved.
+    - Close fixed issues after verifying the fix.
+    - _**Additionally the main coordinator has the authority to assign above mentioned tasks to other shadows explicitly.**_ <br>
+    eg:
+      - _Assigning other shadows to create issues for failures/flakes._
+      - _Assigning other shadows to observe a particular job._
+      - _Assigning other shadows to follou up on issues with related SIGs/WGs_
+      - _Assigning any other task that the main coordinator does._
+
+      <br>**_Note:_** The Release Signal Lead has the ensure that the assignments are fair and the work distribution during the cycle is even.
+
 ### Early Release
 
 Once the onboarding meetings have been organized, the following tasks are good to begin with during the early release cycle (Week
 0 - Week 6)
 
+- Ask shadows to fill the assignments excel sheet ([example](https://docs.google.com/spreadsheets/d/1lYbCOGvG9jD-AVT0Ajc3LoSLNKHC6xIIy1t6BJPlO7E/edit?usp=sharing)). Lead assigns the remaining spots (to themselves or to the shadows)
 - Start maintaining the [CI signal project board](https://github.com/orgs/kubernetes/projects/68) and keep it up-to-date with
   issues tracking any test failure/flake
 - Assign the new milestone labels to the open issues from the previous release, assign a member of the Release Signal team, and
