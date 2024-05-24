@@ -76,8 +76,6 @@ In the first 8 weeks of the cycle, the Release Notes team must attend weekly rel
 
 This period has an increase in release team meetings each week and there is also significantly more work to do to ensure the release notes are in good working order for the release.
 
-The Release Notes team should use the [template](relnotes-template.md) to organize the raw generated release notes in the Google doc as best as possible and help to guide SIG leads and members in their further editing of the release notes. The final edited release notes should follow this template. 
-
 The `release-notes` subcommand of `krel` must continue to be run on the release branch (for `beta` and `rc` releases) in order to pull in any outstanding PRs that are merged between the beginning of code freeze and the release.
 
 ### GitHub Organization Membership
@@ -128,6 +126,13 @@ It is recommended that the team splits the work among all members and runs the e
 on a weekly or biweekly basis. More information about the editing flow can be found in
 a separate document detailing the [editing process and tooling](editing-flow.md).
 
+The general style guide for release notes includes checking for:
+- Past tense: Release notes should be written in the past tense since the changes have already been implemented.
+- Technical jargon: While the notes are generally user-friendly, some technical terms like "VAC" or "scheduling hints" could be explained briefly with backticks or double quotes for users unfamiliar with them.
+- Additional context: In some cases, providing more context about the problem these changes address or the specific situations where they're relevant could be helpful for understanding their significance. You can find additional context referenced in the PR in k8s/k8s repo to check what the PR does for end users.
+
+Additional style guidelines can be found in the [Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
+
 ### Attend Release Meetings and follow #sig-release
 
 The Release Notes Lead and Shadows attend burn down meetings, SIG Release meetings and follow the [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF) Slack channel for relevant information throughout the release cycle.
@@ -152,20 +157,7 @@ The confirmed notes are cleaned up and copy edited by the release-notes team to 
 
 ### Curate the External Dependencies Section
 
-A "Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. See [the v1.25 release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#dependencies-1) for an example.
-
-Note that there are [plans in the process to formalize and automate the process of aggregating the changes](https://github.com/kubernetes/community/issues/2234), but this is currently [a very manual process](https://github.com/kubernetes/sig-release/pull/398).
-
-To update an entry in this section the following steps must be performed:
-
-- Pick an entry, for example "Update default etcd server to 3.3.10 for kubernetes 1.14. ([#71615](https://github.com/kubernetes/kubernetes/pull/71615))"
-- Open the linked PR 71615 and find which files and lines it modifies
-- Open the same files in the `kubernetes/kubernetes` master branch and see if the version changed from v3.3.10
-- Look at the history of the file and find which commit / PR changed the version
-- Update the entry with the new version and PR URL
-- Update the entry message accordingly - if the version has changed or it has been preserved between versions
-- The website [lwkd.info](http://lwkd.info/) has weekly Kubernetes updates that often include information about changes in dependencies under a "Version Updates" section
-- Kubernetes is released with the completed notes!
+A "Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. These changes are currently [automatically aggregated](https://github.com/kubernetes/community/issues/2234), but should still be manually validated for correct content and formatting.
 
 ## Release Cycle Milestone Activities:
 
@@ -181,7 +173,7 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 ### Weeks 2 - 10
 
 - Begin attending burndown meetings
-- Same as above, but generate the notes for each `alpha` and `beta`
+- Same as above, but generate the notes for each `alpha` and `beta`. Announce in the #release-notes channel when the release notes PR is ready for review. 
 
 #### Week 10
 
@@ -212,10 +204,10 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 ### Week 17
 
 - __Release day__
-- Copy notes from Google Doc to HackMD in markdown
 - Final version of release notes committed for release
 - Close the _Known Issues_ Issue and make sure everything has been resolved
 - Release Notes must be merged into master prior to the release. If this is not done the release will include the latest draft.
+- Keep an eye on the #release-notes channel for any requests for any questions, edits or missed release notes.
 
 ### Week 19
 
