@@ -150,7 +150,7 @@ Create an excel sheet to track various assignments during the release cycle. [Ex
 
 Roles in the assignments excel sheet:
 
-1. **Primary Reporter:** The primary reporter assigned to a task is responsible for completing it, such as providing meeting updates, giving Go/No-Go signals, etc.
+1. **Task Assignee:** Responsible for completing an assigned task, including providing team meeting updates and/or giving the Go/No-Go signal.
 2. **Main Coordinator:** Main coordinator is responsible for:
     - Observing testgrid dashboards (along with other shadows).
     - Creating issues for failing/flaking tests. 
@@ -164,6 +164,8 @@ Roles in the assignments excel sheet:
       - _Assigning any other task that the main coordinator does._
 
       <br>**_Note:_** The Release Signal Lead has the ensure that the assignments are fair and the work distribution during the cycle is even.
+
+**_Note:_** Shadows not having any of the above roles in any week are supposed to complete tasks assigned by the 'Main Coordinator' and regularly observe and report about failures/flakes on the testgrid dashboards.
 
 ### Early Release
 
@@ -510,11 +512,12 @@ feel should be brought to the attention of the release team.
 
 ### A Tour of CI on the Kubernetes Project
 
-[A guide to CI on Kubernetes with Rob Kielty (1.20 CI Signal lead) and Dan Magnum (1.19 CI Signal lead)](https://www.youtube.com/watch?v=bttEcArAjUw):
+- [A guide to CI on Kubernetes with Rob Kielty (1.20 CI Signal lead) and Dan Magnum (1.19 CI Signal lead)](https://www.youtube.com/watch?v=bttEcArAjUw):
 Introduces the role of CI Signal members and walks through the tools and processes used for logging flaky/failing tests (as
 explained below).
+<br> Notes to follow along: http://bit.ly/k8s-ci-signal
 
-Notes to follow along: http://bit.ly/k8s-ci-signal
+- The [Release Signal Walkthroughs Playlist](https://youtube.com/playlist?list=PL69nYSiGNLP2Lzsjir9W7S8u0UsQeeW71&si=mp8zpMyheVR1eI1i) contains short videos explaining some essential aspects of Release Signal. 
 
 ### How to Escalate
 
