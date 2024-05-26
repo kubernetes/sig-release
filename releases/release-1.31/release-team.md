@@ -4,7 +4,7 @@
 | ----------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------- |
 | Release Team Lead | Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos) / Slack : `@Angelos Kolaitis`)                |                                        |
 | Emeritus Adviser  | Priyanka Saggu ([@Priyankasaggu11929](https://github.com/Priyankasaggu11929) / Slack: `@psaggu`)             | N/A                                    |
-| Enhancements      | Sreeram Venkitesh ([@sreeram-venkitesh](https://github.com/sreeram-venkitesh) / Slack: `@sreeram.venkitesh`) |                                        |
+| Enhancements      | Sreeram Venkitesh ([@sreeram-venkitesh](https://github.com/sreeram-venkitesh) / Slack: `@sreeram.venkitesh`) | Arka Saha ([@ArkaSaha30](https://github.com/ArkaSaha30), Slack: `@Arka`) / Dipesh Rawat ([@dipesh-rawat](https://github.com/dipesh-rawat) / Slack: `@Dipesh`), Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell) / Slack: `@Mickey`), Prianna Ahsan ([@prianna](https://github.com/prianna) / Slack: `@prianna`), Tyler Schade ([@tjons](https://github.com/tjons) / Slack: `@Tyler Schade`) |
 | Release Notes     | Nina Polshakova ([@npolshakova](https://github.com/npolshakova) / Slack: `@Nina Polshakova` )                |                                        |
 | Communications    | Abigail McCarthy ([@a-mccarthy](https://github.com/a-mccarthy) / Slack: `@abbie`)                            |                                        |
 | Release Signal    | Vyom Yadav ([@Vyom-Yadav](https://github.com/Vyom-Yadav) / Slack: `@Vyom Yadav` )                            |                                        |
