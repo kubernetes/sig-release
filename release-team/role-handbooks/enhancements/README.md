@@ -177,6 +177,8 @@ It is important that this process be followed and documentation remain up-to-dat
 - Send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
 - Provide updates during release team meetings
   - Use the `KEPs by Stage` insight from the Enhancement Tracking Board ([example](https://github.com/orgs/kubernetes/projects/98/insights/3))
+- Notify folks in [#prod-readiness](https://kubernetes.slack.com/archives/CPNHUMN74) about KEPs waiting for PRR reviews with the project board filtered for KEPs missing PRR assignees.
+
 
 #### PRR Reviews 
 
@@ -223,6 +225,16 @@ beta:
 stable:
   approver: @<gh-handle-of-PRR-approver>
 ```
+
+##### PRR Freeze
+
+The PRR Freeze is a preliminary soft deadline, happening a week before the [Enhancements Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#enhancements-freeze).
+
+As described by the PRR team [here](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ):
+
+- By the PRR freeze date, KEP authors must have completed the PRR questionnaire for all opted-in enhancements (KEPs).
+- It is important to note that the PRR freeze **_does not_** mean that the KEPs need to have received an approval or even a review from the PRR team by this date.
+- To emphasize, the sole requirement is that all opted-in KEPs have their PRR questionnaires answered by the deadline, to ensure the PRR team has sufficient time to review them by Enhancements Freeze.
 
 ##### Enhancement KEP Status
 
@@ -327,7 +339,7 @@ Here's where this enhancement currently stands:
 - [ ] KEP readme using the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template) has been merged into the k/enhancements repo.
 - [ ] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`. KEPs targeting `stable` will need to be marked as `implemented` after code PRs are merged and the feature gates are removed.
 - [ ] KEP readme has up-to-date graduation criteria
-- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)).
+- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)). If your production readiness review is not completed yet, please make sure to fill the production readiness questionnaire in your KEP by the [PRR Freeze deadline](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ) so that the PRR team has enough time to review your KEP.
 
 For this KEP, we would just need to update the following:
 - {insert list of action items}
@@ -543,6 +555,7 @@ Exception process is outlined [here](https://github.com/kubernetes/sig-release/b
 - Close issues marked as stable that made it into the release, only after the corresponding KEPs have been marked `Implemented`
 - Close milestones that are complete
 - Cleanup old milestones
+- Open a pull request to add the exceptions.yaml file with all the KEPs which applied for an exception during enhancements freeze and code freeze. You can find an example of this exceptions.yaml file [here](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.29/exceptions.yaml).
 
 ### Limitations
 
