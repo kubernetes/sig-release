@@ -535,6 +535,12 @@ Proceed with the [alpha release steps](#alpha-releases).
 
 Example `1.18.0-alpha.1` release issue template: https://github.com/kubernetes/sig-release/issues/928
 
+#### Branching perf-tests
+
+Reach out to SIG Scalability to ensure a new branch is cut in [sigs.k8s.io/perf-tests](https://github.com/kubernetes/perf-tests/) repository. 
+
+In case the release branch is missing - we will end up with an issue we had for 1.30: https://github.com/kubernetes/kubernetes/issues/124119
+
 ## Branch Management
 
 This section discusses the methods in managing commits on the `release-x.y` branch.
