@@ -128,6 +128,7 @@ It is important that this process be followed and documentation remain up-to-dat
     - Add the @k8s-infra-ci-robot account to the board with **Write** access.
   - Create all the Fields (columns) for the board
     > Note: This is currently a manual process and  <https://github.com/orgs/community/discussions/41133> filed to help automate the process.
+    > Note: Since `v1.30` an exceptions process for the Release Doc team is enforced. The previous PR Ready for Review deadline has been replaced with a Docs Freeze phase. Make sure to add `At Risk for Docs Freeze` and `Tracked for Docs Freeze` to the options in `status` column. Moreover add `docs` to the options in `type` column.
     - Until this can be automated; manually create fields with the same `Field Name`, `Field type`, and `Option` values from the previous release's project board.
   - Create all the Views for the board
     > Note: This is also currently a manual process until GitHub GraphQL APIs allow for manipulating Views
@@ -485,7 +486,7 @@ This view is used source of truth for tracking the status of enhancements includ
 | Major Change | Enhancement is staying at the current Stage, but major changes in functionality are being implemented.        |
 |   Graduating | Enhancement is graduating to `Beta` or `Stable`.                                                              |
 |  Deprecation | Enhancement is tracking a deprecations or removals.                                                           |
-
+|         Docs | This is a PR for Docs that is being tracked by Docs team.                                                     |
 Notes :
 
 - If the feature is graduating to `Alpha`, the type can either be Net New/Major Change. But usually when features are introduced to Kubernetes, they are not Major Changes.
@@ -502,6 +503,8 @@ Refer to the [Enhancement Freeze Communications](#enhancement-freeze-templates) 
 |                At Risk For Enhancement Freeze | Enhancement does not currently meet requirements for inclusion into current release.                                                        |
 |                Tracked For Code Freeze | Enhancement has met all code freeze requirements for inclusion into current release.                                                                    |
 |                At Risk For Code Freeze | Enhancement does not currently meet requirements for inclusion into current release because code freeze requirements have not been met. |
+|                Tracked For Docs Freeze | Enhancement has met all docs freeze requirements for inclusion into current release.                                                                    |
+|                At Risk For Docs Freeze | Enhancement does not currently meet requirements for inclusion into current release because docs freeze requirements have not been met. |
 |     Exception Required | Enhancement did not meet requirements by enhancement / code freeze and deadlines for requesting an [exception](#exceptions) has not passed. | 
 |               Deferred | Enhancement has been bumped to a future release by owning SIG.                                                                              |
 | Removed From Milestone | Enhancement did not meet requirements by enhancement / code freeze for current release and an exception was not requested and/or approved.  |
