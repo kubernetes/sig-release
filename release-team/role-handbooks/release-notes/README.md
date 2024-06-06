@@ -161,6 +161,20 @@ A "Dependencies" section should be curated which outlines how external dependenc
 
 ## Release Cycle Milestone Activities:
 
+### Week 0 
+ 
+Create a table to track `Release`, `Branch Created Day`, `Week of Release`, `PR Merge Deadline`, `Release Notes Assignee`
+and `Release Notes Reviewer` based on the release timeline. This will serve as an internal schedule and signup sheet for
+the release notes team to follow. The schedule is used to track progress and give status updates during release team meetings. 
+
+##### Release Team Meeting Updates
+
+For the release team meeting, provide a `status` based on the following criteria:
+- A `Red` on our release notes status means that we are delayed past the deadline or there is a major blocker for our work to create Release Notes pull requests. 
+- A `Yellow` status generally means that we are still within the deadline of creating the Release Notes pull request, but 
+there are things (minor blockages, `krel` issues, etc.) that could cause a delay past the PR merge deadline.
+- A `Green` status means that everything looks good and done from Release Notes team side, i.e. the release notes pull requests are being created, reviewed and merged before the deadline. Everything is A-OK here.
+
 ### Week 1
 
 Begin running release-notes tool for the ongoing collection of release notes with the first alpha release, which has been cut directly after the latest minor.
