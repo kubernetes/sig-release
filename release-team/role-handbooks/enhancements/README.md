@@ -337,9 +337,9 @@ This enhancement is targeting for stage `<insert-stage-here>` for {current relea
 Here's where this enhancement currently stands:
 
 - [ ] KEP readme using the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template) has been merged into the k/enhancements repo.
-- [ ] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`. KEPs targeting `stable` will need to be marked as `implemented` after code PRs are merged and the feature gates are removed.
+- [ ] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`.
 - [ ] KEP readme has up-to-date graduation criteria
-- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)). If your production readiness review is not completed yet, please make sure to fill the production readiness questionnaire in your KEP by the [PRR Freeze deadline](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ) so that the PRR team has enough time to review your KEP.
+- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)). If your production readiness review is not completed yet, please make sure to fill the production readiness questionnaire in your KEP by the [PRR Freeze deadline](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ) on {{ PRR_FREEZE_DATETIME }} so that the PRR team has enough time to review your KEP.
 
 For this KEP, we would just need to update the following:
 - {insert list of action items}
@@ -424,6 +424,8 @@ With all the implementation(code related) PRs merged as per the issue descriptio
 - {insert list of code prs}
 
 This enhancement is now marked as `tracked for code freeze` for the {current release} Code Freeze!
+
+Please note that KEPs targeting `stable` need to have the `status` field marked as `implemented` in the kep.yaml file after code PRs are merged and the feature gates are removed.
 ```
 
 If the Enhancement Issue **does not** meet the code freeze criteria for inclusion in the current release use this template in Issue comments:
