@@ -1,0 +1,63 @@
+---
+name: Yaml Lint Release Notes Pull Request
+on:
+  pull_request:
+    paths:
+      - releases/**/release-notes/**.yaml
+  # Allow manual triggering
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  yaml-lint-checker:
+    name: Release Notes Check Yaml 👀
+    runs-on: ubuntu-22.04
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: Cancel Previous Actions
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+      - name: Validate YAML
+        id: validate_yaml
+        run: |
+            INVALID_FILES=""
+            # check diff for invalid yaml files
+            for file in $(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.ya?ml$'); do
+              echo "Validating $file"
+              ERROR=$(python -c "import yaml, sys; sys.stdout = sys.stderr; try: yaml.safe_load(open('$file')); print('Valid') except yaml.YAMLError as e: print(e)")
+              if [ "$ERROR" != "Valid" ]; then
+                INVALID_FILES="$INVALID_FILES\n$file:\n$ERROR\n"
+              fi
+            done
+            if [ -n "$INVALID_FILES" ]; then
+              # If there are invalid files, set the output variable and fail the job. GITHUB_ENV is a special file that 
+              # allows you to set env variables for subsequent steps in the same job
+              echo "invalid_files=$INVALID_FILES" >> $GITHUB_ENV
+              exit 1
+            fi
+      - name: Comment on PR if invalid yaml detected
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const invalidFiles = process.env.invalid_files.trim();
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `The following YAML files are invalid:\n\n${invalidFiles}`
+            })
+        
