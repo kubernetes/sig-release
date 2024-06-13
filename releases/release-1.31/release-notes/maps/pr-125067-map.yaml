@@ -1,0 +1,4 @@
+pr: 125067
+releasenote:
+  text: Added a -v flag to the Windows variant of the pause binary, which prints the
+    version of pause and exits. The Linux pause already has the flag.

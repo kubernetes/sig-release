@@ -1,0 +1,3 @@
+pr: 125112
+releasenote:
+  text: 'Dependencies: start using registry.k8s.io/pause:3.10.'
