@@ -1,0 +1,8 @@
+pr: 124820
+releasenote:
+  text: |-
+    'kubeadm: enhanced the "patches" functionality to be able to patch coredns
+    deployment. The new patch target is called "corednsdeployment" (e.g. patch file
+    "corednsdeployment+json.json"). This makes it possible to apply custom patches
+    to coredns deployment during "init" and "upgrade".'
+pr_body: ""

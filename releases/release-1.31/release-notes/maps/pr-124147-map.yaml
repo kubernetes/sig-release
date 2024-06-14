@@ -1,0 +1,4 @@
+pr: 124147
+releasenote:
+  text: 'Kubemark: added two flags, `--kube-api-qps` which indicates the maximum QPS to the apiserver, and `--kube-api-burst` which indicates maximum burst for throttle to the apiserver.'
+pr_body: ""

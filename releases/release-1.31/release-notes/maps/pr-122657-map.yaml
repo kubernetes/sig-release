@@ -1,0 +1,7 @@
+pr: 122657
+releasenote:
+  text: |-
+    Added the `WatchList` method to the `rest client` in `client-go`. When used,
+    it establishes a stream to obtain a consistent snapshot of data from the server.
+    This method is meant to be used by the generated client.
+pr_body: ""

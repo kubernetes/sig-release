@@ -1,0 +1,6 @@
+pr: 123905
+releasenote:
+  text: |-
+    Services implemented a field selector for the ClusterIP and Type fields.
+    The Kubelet uses this field selector to avoid monitoring Headless Services, which helps reduce memory consumption.
+pr_body: ""
