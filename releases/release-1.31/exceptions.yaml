@@ -1,0 +1,13 @@
+# Exceptions to Code Freeze requested in 1.31
+# Google Group: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown
+# Release Team Lead: Angelos Kolaitis (@neoaggelos)
+
+- name: 
+  issue: 
+  date_requested: 
+  date_reviewed: 
+  thread: 
+  pull_requests:
+  - 
+  status:
+  
