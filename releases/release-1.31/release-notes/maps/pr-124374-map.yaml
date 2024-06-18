@@ -1,0 +1,4 @@
+pr: 124374
+releasenote:
+  text: 'kubeadm: removed the EXPERIMENTAL tag from the phase "kubeadm join control-plane-prepare download-certs".'
+pr_body: ""

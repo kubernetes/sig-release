@@ -1,0 +1,6 @@
+pr: 124883
+releasenote:
+  text: |-
+    Dropped the additional rule requirement (cronjobs/finalizers) for roles
+    using kubectl create cronjobs to ensure backward compatibility.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 124344
+releasenote:
+  text: Fixed a race condition in the transforming informer that occurred when objects were accessed during the Resync operation.
+pr_body: ""

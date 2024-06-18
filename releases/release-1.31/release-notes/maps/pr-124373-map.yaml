@@ -1,0 +1,4 @@
+pr: 124373
+releasenote:
+  text: 'kubeadm: removed the deprecated and NO-OP "kubeadm join control-plane-join update-status" phase.'
+pr_body: ""

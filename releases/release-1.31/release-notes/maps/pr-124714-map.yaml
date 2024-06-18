@@ -1,0 +1,4 @@
+pr: 124714
+releasenote:
+  text: Fixed throughput when scheduling DaemonSet pods to reach 300 pods/s, if the configured QPS allows it.
+pr_body: ""

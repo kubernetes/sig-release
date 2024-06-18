@@ -1,0 +1,7 @@
+pr: 124063
+releasenote:
+  text: |-
+    Fixed a bug where hard evictions due to resource pressure allowed pods
+    to use the full termination grace period instead of shutting down instantly. 
+    This bug also affected force deleted pods. Both cases now receive a termination grace period of 1 second.
+pr_body: ""

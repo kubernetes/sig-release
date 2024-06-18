@@ -1,0 +1,4 @@
+pr: 124738
+releasenote:
+  text: Removed GA ServiceNodePortStaticSubrange feature gate.
+pr_body: ""

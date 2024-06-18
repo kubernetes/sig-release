@@ -1,0 +1,6 @@
+pr: 123919
+releasenote:
+  text: |-
+    Added apiserver.latency.k8s.io/apf-queue-wait annotation to the audit log
+    to record the time spent waiting in APF queue.
+pr_body: ""

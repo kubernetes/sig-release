@@ -1,0 +1,4 @@
+pr: 123572
+releasenote:
+  text: 'CEL: added name formats library.'
+pr_body: ""
