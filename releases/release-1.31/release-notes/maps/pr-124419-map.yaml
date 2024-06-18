@@ -1,0 +1,7 @@
+pr: 124419
+releasenote:
+  text: |-
+    'kubeadm: marked the sub-phase of ''init kubelet-finilize'' called ''experimental-cert-rotation''
+    as deprecated and print a warning if it is used directly; it will be removed in
+    a future release. Add a replacement sub-phase ''enable-client-cert-rotation''.'
+pr_body: ""

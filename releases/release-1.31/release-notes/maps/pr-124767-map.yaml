@@ -1,0 +1,4 @@
+pr: 124767
+releasenote:
+  text: Removed k8s.io/legacy-cloud-providers from staging.
+pr_body: ""

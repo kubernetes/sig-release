@@ -1,0 +1,7 @@
+pr: 124352
+releasenote:
+  text: |-
+    Fixed a race condition in kube-controller-manager and the scheduler, caused by
+    a bug in the transforming informer during the Resync operation, 
+    by making the transforming function idempotent.
+pr_body: ""

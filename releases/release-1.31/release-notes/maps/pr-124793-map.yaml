@@ -1,0 +1,4 @@
+pr: 124793
+releasenote:
+  text: Fixed the comment for the Job's managedBy field.
+pr_body: ""

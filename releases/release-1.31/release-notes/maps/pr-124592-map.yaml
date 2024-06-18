@@ -1,0 +1,4 @@
+pr: 124592
+releasenote:
+  text: Added completion for `kubectl set image`.
+pr_body: ""

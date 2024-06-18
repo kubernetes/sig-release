@@ -1,0 +1,4 @@
+pr: 123233
+releasenote:
+  text: Ensured daemonset controller counts old unhealthy pods towards max unavailable budget.
+pr_body: ""
