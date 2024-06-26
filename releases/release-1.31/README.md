@@ -23,7 +23,7 @@ description: |
 #### Tracking docs
 
 * [Enhancements Tracking Board](https://bit.ly/k8s131-enhancements)
-* [Feature blog Tracking Board](https://github.com/orgs/kubernetes/projects/183/views/6) 
+* [Feature blog Tracking Board](https://github.com/orgs/kubernetes/projects/183/views/6)
 * [Bug Triage Tracking Board](https://bit.ly/k8s131-bugtriage)
 * [CI Signal Project Board & Issue Tracking](https://bit.ly/k8s131-cisignal)
 * [Retrospective Document](https://bit.ly/k8s131-retro)
@@ -41,8 +41,8 @@ The 1.31 release cycle is as follows:
 - **Monday 13th May 2024**: Week 1 — Release cycle begins
 - **Thursday 6th June 2024**: Week 4 — [Production Readiness Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **02:00 UTC Friday 14th June 2024 / 19:00 PDT Thursday 13th June 2024**: Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
-- **02:00 UTC Wednesday 10th July 2024 / 19:00 PDT Tuesday 9th July 2024**: Week 9 — [Code Freeze](../release_phases.md#code-freeze)
-- **01:00 UTC Wednesday 31st July 2024 / 19:00 PDT Tuesday 30th July 2024**: Week 12 — [Test Freeze](../release_phases.md#test-freeze)
+- **02:00 UTC Wednesday 24th July 2024 / 19:00 PDT Tuesday 23rd July 2024**: Week 11 — [Code Freeze](../release_phases.md#code-freeze)
+- **02:00 UTC Wednesday 31st July 2024 / 19:00 PDT Tuesday 30th July 2024**: Week 12 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 30th July 2024**: Week 12 — [Docs Freeze](../release_phases.md#docs-freeze)
 - **Tuesday 13th August 2024**: Week 14 — Kubernetes v1.31.0 released
 
@@ -57,22 +57,22 @@ The 1.31 release cycle is as follows:
 | Start Release Notes Draft                                                              | Release Notes Lead            | Tuesday 28th May 2024                                                 | week 3   |                                                        |
 | 1.31.0-alpha.1 released                                                                | Branch Manager                | Tuesday 4th June 2024                                                 | week 4   |                                                        |
 | Production Readiness Freeze                                                            | Enhancements Lead             | Thursday 6th June 2024                                                | week 4   |                                                        |
+| Begin Friday APAC-friendly meetings                                                    | Lead                          | Wednesday 12th June 2024                                              | week 5   |                                                        |
 | **Begin [Enhancements Freeze]**                                                        | Enhancements Lead             | 02:00 UTC Friday 14th June 2024 / 19:00 PDT Thursday 13th June 2024   | week 5   | [master-blocking], [master-informing]                  |
 | 1.31.0-alpha.2 released                                                                | Branch Manager                | Tuesday 18th June 2024                                                | week 6   |                                                        |
 | Docs deadline — Open placeholder PRs                                                   | Docs Lead                     | Thursday 27th June 2024                                               | week 7   |                                                        |
-| Begin Friday APAC-friendly meetings                                                    | Lead                          | Friday 28th June 2024                                                 | week 7   |                                                        |
 | **Call for [Exceptions][Exception]**                                                   | Lead                          | Monday 1st July 2024                                                  | week 8   |                                                        |
 | Brace Yourself, Code Freeze is Coming                                                  | Comms / Release Signal        | Monday 1st July 2024                                                  | week 8   |                                                        |
 | 1.31.0-alpha.3 released                                                                | Branch Manager                | Tuesday 2nd July 2024                                                 | week 8   |                                                        |
 | **Begin Feature blog freeze**                                                          | Comms Lead                    | 02:00 UTC Wednesday 3rd July 2024 / 19:00 PDT Tuesday 2nd July 2024   | week 8   |                                                        |
-| **Begin [Code Freeze]**                                                                | Branch Manager                | 02:00 UTC Wednesday 10th July 2024 / 19:00 PDT Tuesday 9th July 2024  | week 9   |                                                        |
-| Deprecations and Removals blog published                                               | Comms                         | Thursday 11th July 2024                                               | week 9   |                                                        |
 | **Preparing for Feature blogs review — Initiating outreach**                           | Comms                         | Monday 15th July 2024                                                 | week 10  |                                                        |
 | 1.31.0-beta.0 released                                                                 | Branch Manager                | Tuesday 16th July 2024                                                | week 10  |                                                        |
 | Docs deadline — PRs ready for review                                                   | Docs Lead                     | Tuesday 16th July 2024                                                | week 10  |                                                        |
+| Deprecations and Removals blog published                                               | Comms                         | Thursday 18th July 2024                                               | week 10  |                                                        |
 | **Begin [Burndown]** (Monday, Wednesday, and Friday meetings)                          | Lead                          | Monday 22nd July 2024                                                 | week 11  |                                                        |
 | Major Themes deadline                                                                  | Comms                         | Tuesday 23rd July 2024                                                | week 11  |                                                        |
 | Start final draft of Release Notes                                                     | Release Notes Lead            | Tuesday 23rd July 2024                                                | week 11  |                                                        |
+| **Begin [Code Freeze]**                                                                | Branch Manager                | 02:00 UTC Wednesday 24th July 2024 / 19:00 PDT Tuesday 23rd July 2024 | week 11  |                                                        |
 | Release blog ready to review                                                           | Comms / Docs                  | 02:00 UTC Wednesday 24th July 2024 / 19:00 PDT Tuesday 23rd July 2024 | week 11  |                                                        |
 | Feature blogs ready to review                                                          | Enhancement Owner / SIG Leads | Friday 26th July 2024                                                 | week 11  |                                                        |
 | Burndown Meetings daily (Tuesday & Thursday over Slack)                                | Lead                          | Monday 29th July 2024                                                 | week 12  |                                                        |
