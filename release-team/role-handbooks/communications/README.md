@@ -86,7 +86,7 @@ Tracking, facilitating, and organizing the publication of the Feature Blog serie
 
 **As feature blogs are opted in**, assign them to shadows and yourself for tracking and facilitation. The responsibility is to ensure the blog authors have the resources and information they need, including editorial and tech reviews once ready.
 
-**Work closely with the SIG Docs Blogs team** (Communicate with them via `#sig-docs-blogs` and by attending meetings), as they are typically available for editorial reviews. Share the feature blog schedule and updates with them throughout the cycle.
+**Work closely with the SIG Docs Blogs team** (Communicate with them via `#sig-docs-blogs` and by attending meetings), as they are typically available for editorial reviews. Share the feature blog schedule and relevant updates **on a regular basis** with their team throughout the release cycle.
 
 For tech reviews, reach out to authors and the sponsoring SIG to organize at least one tech review per blog post.
 
@@ -115,6 +115,8 @@ Also consider this when commonly-used features that have been deprecated are rem
 - [Kubernetes API and Feature Removals in 1.22](https://kubernetes.io/blog/2021/07/14/upcoming-changes-in-kubernetes-1-22/)
 - [Deprecated APIs Removed in 1.16](https://kubernetes.io/blog/2019/07/18/api-deprecations-in-1-16/)
 - [Kubernetes Removals and Major Changes In 1.25](https://kubernetes.io/blog/2022/08/04/upcoming-changes-in-kubernetes-1-25/)
+
+Another option to consider for the Mid-Cycle blog--particularly if there are few deprecations in a given cycle--is to provide a "sneak peek" at some of the enhancements planned for the release. For an example of this, refer to the [1.30 Mid-Cycle Blog](https://kubernetes.io/blog/2024/03/12/kubernetes-1-30-upcoming-changes/).
 
 > Publication should occur ahead of the release in order to inform the community and allow for preparation time. Start the discussion mid-cycle and well ahead of Code Freeze, and target publication for Code Freeze week.
 
