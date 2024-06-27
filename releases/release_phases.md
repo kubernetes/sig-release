@@ -1,5 +1,15 @@
 # Release Phases
 
+## PRR Freeze
+
+The PRR freeze is a preliminary soft deadline, happening one week before the Enhancements Freeze.
+
+As described by the PRR team [here](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ):
+
+* By the PRR freeze date, KEP authors must have completed the PRR questionnaire for all opted-in enhancements (KEPs).
+* It is important to note that the PRR freeze **_does not_** mean that the KEPs need to have received an approval or even a review from the PRR team by this date.
+* To emphasize, the sole requirement is that all opted-in KEPs have their PRR questionnaires answered by the deadline, to ensure the PRR team has sufficient time to review them by Enhancements Freeze.
+
 ## Enhancements Freeze
 
 All enhancements wishing to be included in the current release must have
