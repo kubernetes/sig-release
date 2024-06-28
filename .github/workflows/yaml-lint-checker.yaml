@@ -41,7 +41,7 @@ jobs:
           echo "Current branch:"
           git branch
           echo "Latest commits on current branch:"
-          git log -5 --oneline
+          git log -10 
           echo "Remote branches:"
           git branch -r
           echo "Fetching details:"
