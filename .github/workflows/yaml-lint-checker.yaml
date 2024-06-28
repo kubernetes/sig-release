@@ -40,8 +40,9 @@ jobs:
           source lint-env/bin/activate
           echo "venv $VIRTUAL_ENV"
           pip list 
-          git diff --name-only --name-only $(git merge-base origin/master HEAD) -- releases/
-          CHANGED_FILES=$(git diff --name-only --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
+          git merge-base origin/master HEAD
+          git diff --name-only $(git merge-base origin/master HEAD) -- releases/
+          CHANGED_FILES=$(git diff --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
           echo "CHANGED_FILES $CHANGED_FILES"
           if [ -n "$CHANGED_FILES" ]; then
             echo "Validating yaml files $CHANGED_FILES"
