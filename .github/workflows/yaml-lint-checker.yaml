@@ -35,12 +35,22 @@ jobs:
         run: |
           #!/usr/bin/env bash
           set -Eeuo pipefail
-          git branch 
           python --version
           source lint-env/bin/activate
-          echo "venv $VIRTUAL_ENV"
-          RUN_MERGE_BASE=$(git merge-base origin/master HEAD)
-          echo $RUN_MERGE_BASE
+          
+          echo "Current branch:"
+          git branch
+          echo "Latest commits on current branch:"
+          git log -5 --oneline
+          echo "Remote branches:"
+          git branch -r
+          echo "Fetching details:"
+          git fetch origin
+          echo "Remote show origin:"
+          git remote show origin
+          echo "Trying git merge-base:"
+          git merge-base origin/master HEAD
+
           git diff --name-only $(git merge-base origin/master HEAD) -- releases/
           CHANGED_FILES=$(git diff --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
           echo "CHANGED_FILES $CHANGED_FILES"
