@@ -39,7 +39,8 @@ jobs:
           python --version
           source lint-env/bin/activate
           echo "venv $VIRTUAL_ENV"
-          git merge-base origin/master HEAD
+          RUN_MERGE_BASE=$(git merge-base origin/master HEAD)
+          echo $RUN_MERGE_BASE
           git diff --name-only $(git merge-base origin/master HEAD) -- releases/
           CHANGED_FILES=$(git diff --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
           echo "CHANGED_FILES $CHANGED_FILES"
