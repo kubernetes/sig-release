@@ -28,7 +28,8 @@ jobs:
       - name: Validate YAML
         id: validate_yaml
         run: |
-          CHANGED_FILES=$(git diff --name-only origin/master | grep -E '\.ya?ml$' || true)
+          git branch 
+          CHANGED_FILES=$(git diff --name-only --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
           if [ -n "$CHANGED_FILES" ]; then
             python .github/scripts/validate_yaml.py $CHANGED_FILES
           fi
