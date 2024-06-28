@@ -23,6 +23,8 @@ jobs:
           access_token: ${{ github.token }}
       - name: Check out code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
       - name: Fetch master branch
         run: git fetch origin master:master
       - name: Set up Python environment
@@ -41,7 +43,7 @@ jobs:
           echo "Current branch:"
           git branch
           echo "Latest commits on current branch:"
-          git log -10 
+          git log 
           echo "Remote branches:"
           git branch -r
           echo "Fetching details:"
