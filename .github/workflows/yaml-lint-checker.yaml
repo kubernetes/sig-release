@@ -29,7 +29,7 @@ jobs:
         run: |
           python3 -m venv lint-env
           source lint-env/bin/activate
-          pip install -r requirements.txt
+          pip install -r .github/scripts/requirements.txt
       - name: Validate YAML
         id: validate_yaml
         run: |
