@@ -39,7 +39,6 @@ jobs:
           python --version
           source lint-env/bin/activate
           echo "venv $VIRTUAL_ENV"
-          pip list 
           git merge-base origin/master HEAD
           git diff --name-only $(git merge-base origin/master HEAD) -- releases/
           CHANGED_FILES=$(git diff --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
