@@ -1,0 +1,33 @@
+---
+name: Yaml Lint Release Notes Pull Request
+on:
+  pull_request:
+    paths:
+      - releases/**/release-notes/**.yaml
+  # Allow manual triggering
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  yaml-lint-checker:
+    name: Release Notes Check Yaml 👀
+    runs-on: ubuntu-22.04
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: Cancel Previous Actions
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Fetch master branch
+        run: git fetch origin master:master
+      - name: Validate YAML
+        id: validate_yaml
+        run: |
+          CHANGED_FILES=$(git diff --name-only origin/master | grep -E '\.ya?ml$' || true)
+          if [ -n "$CHANGED_FILES" ]; then
+            python .github/scripts/validate_yaml.py $CHANGED_FILES
+          fi
