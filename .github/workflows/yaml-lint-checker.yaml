@@ -39,25 +39,9 @@ jobs:
           set -Eeuo pipefail
           python --version
           source lint-env/bin/activate
-          
-          echo "Current branch:"
-          git branch
-          echo "Latest commits on current branch:"
-          git log 
-          echo "Remote branches:"
-          git branch -r
-          echo "Fetching details:"
-          git fetch origin
-          echo "Remote show origin:"
-          git remote show origin
-          echo "Trying git merge-base:"
-          git merge-base origin/master HEAD
-
-          git diff --name-only $(git merge-base origin/master HEAD) -- releases/
           CHANGED_FILES=$(git diff --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
-          echo "CHANGED_FILES $CHANGED_FILES"
           if [ -n "$CHANGED_FILES" ]; then
-            echo "Validating yaml files $CHANGED_FILES"
+            echo "Validating yaml files: \n${CHANGED_FILES}"
             python .github/scripts/validate_yaml.py $CHANGED_FILES
           else 
             echo "No YAML files changed under /releases/*"
