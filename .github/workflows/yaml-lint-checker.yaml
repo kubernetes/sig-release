@@ -1,11 +1,12 @@
 ---
 name: Yaml Lint Release Notes Pull Request
 on:
-  pull_request:
-    paths:
-      - releases/**/release-notes/**.yaml
+  - push
+  # pull_request:
+  #   paths:
+  #     - releases/**/release-notes/**.yaml
   # Allow manual triggering
-  workflow_dispatch: {}
+  # workflow_dispatch: {}
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
