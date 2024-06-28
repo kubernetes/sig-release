@@ -37,9 +37,10 @@ jobs:
           set -Eeuo pipefail
           git branch 
           python --version
+          source lint-env/bin/activate
+          echo "venv $VIRTUAL_ENV"
           pip list 
           CHANGED_FILES=$(git diff --name-only --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
-          echo "venv $VIRTUAL_ENV"
           if [ -n "$CHANGED_FILES" ]; then
             echo "Validating yaml files $CHANGED_FILES"
             python .github/scripts/validate_yaml.py $CHANGED_FILES
