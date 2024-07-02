@@ -5,8 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"gopkg.in/yaml.v3"
-	// "sigs.k8s.io/yaml"
+	"sigs.k8s.io/yaml"
 )
 
 // validateYAML reads and parses the YAML file at the given path.
@@ -17,7 +16,7 @@ func validateYAML(filePath string) string {
 	}
 
 	var content interface{}
-	if err := yaml.Unmarshal(data, &content); err != nil {
+	if err := yaml.UnmarshalStrict(data, &content); err != nil {
 		return fmt.Sprintf("Error in %s:\n%w", filePath, err.Error())
 	}
 
