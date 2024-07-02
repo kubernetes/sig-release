@@ -1,0 +1,7 @@
+pr: 125218
+releasenote:
+  text: |-
+    DRA: Enhanced validation for the ResourceClaimParametersReference and ResourceClassParametersReference with the following rules:
+
+    " 1. `apiGroup`: If set, it must be a valid DNS subdomain (e.g. 'example.com')."
+    " 2. `kind` and `name`: It must be valid path segment name. It may not be '.' or '..' and it may not contain '/' and '%' characters."

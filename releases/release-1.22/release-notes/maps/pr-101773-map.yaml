@@ -1,0 +1,4 @@
+pr: 101773
+releasenote:
+  text: The `storageos`, `quobyte` and `flocker` storage volume plugins are deprecated
+    and will be removed in a later release.

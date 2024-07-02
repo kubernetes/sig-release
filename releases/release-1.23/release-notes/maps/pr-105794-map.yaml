@@ -1,0 +1,4 @@
+pr: 105794
+releasenote:
+  text: Adds `--as-uid` flag to `kubectl` to allow uid impersonation in the same way
+    as user and group impersonation.

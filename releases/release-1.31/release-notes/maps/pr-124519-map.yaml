@@ -1,0 +1,6 @@
+pr: 124519
+releasenote:
+  text: |-
+    Removed the last remaining in-tree gcp cloud provider and credential provider.
+    Please use the external cloud provider and credential provider from https://github.com/kubernetes/cloud-provider-gcp
+    instead.

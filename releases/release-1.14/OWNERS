@@ -1,0 +1,16 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - spiffxp     # release-team-lead
+  - BenTheElder #   shadow
+  - marpaia     #   shadow
+
+reviewers:
+  - claurence   # enhancements
+  - mariantalla # ci-signal
+  - amwat       # test-infra
+  - nikopen     # bug-triage
+  - hoegaarden  # branch-manager
+  - jimangel    # docs
+  - dstrebel    # release-notes
+  # - nwoods3   # communications (not yet a GitHub org member)

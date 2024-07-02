@@ -1,0 +1,5 @@
+pr: 109680
+releasenote:
+  text: |-
+    Return a warning when applying a `pod-security.kubernetes.io` label to a PodSecurity-exempted namespace.
+    Stop including the `pod-security.kubernetes.io/exempt=namespace` audit annotation on namespace requests.

@@ -1,0 +1,3 @@
+pr: 102005
+releasenote:
+  text: 'Azure: Avoid setting cached Sku when updating VMSS and VMSS instances.'

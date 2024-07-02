@@ -1,0 +1,6 @@
+pr: 123225
+releasenote:
+  text: kube-apiserver now reports latency metric for JWT authenticator authenticate
+    token decisions in the `apiserver_authentication_jwt_authenticator_latency_seconds`
+    metric, labeled by jwtIssuer hash and result.
+pr_body: ""

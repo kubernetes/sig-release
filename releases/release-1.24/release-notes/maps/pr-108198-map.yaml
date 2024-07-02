@@ -1,0 +1,4 @@
+pr: 108198
+releasenote:
+  text: Fixed a bug where a partial `EndpointSlice` update could cause node name information
+    to be dropped from endpoints that were not updated.

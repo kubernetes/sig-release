@@ -1,0 +1,6 @@
+pr: 121770
+releasenote:
+  text: |-
+    This PR added tracing support to the kubelet's read-only endpoint, which currently
+    does not have tracing. It makes use of the `WithPublicEndpoint` option to prevent callers
+    from influencing sampling decisions.

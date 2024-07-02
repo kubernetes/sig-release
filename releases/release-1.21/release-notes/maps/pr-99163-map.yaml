@@ -1,0 +1,6 @@
+pr: 99163
+releasenote:
+  text: The `controller.kubernetes.io/pod-deletion-cost` annotation can be set to
+    offer a hint on the cost of deleting a `Pod` compared to other pods belonging
+    to the same ReplicaSet. Pods with lower deletion cost are deleted first. This
+    is an alpha feature.

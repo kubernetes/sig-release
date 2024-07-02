@@ -1,0 +1,4 @@
+pr: 121193
+releasenote:
+  text: Fixed overriding default `KubeletConfig` fields in drop-in configs if not
+    set.

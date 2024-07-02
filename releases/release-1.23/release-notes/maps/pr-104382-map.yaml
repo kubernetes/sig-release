@@ -1,0 +1,3 @@
+pr: 104382
+releasenote:
+  text: Ensure `InstanceShutdownByProviderID` return false for creating Azure VMs.

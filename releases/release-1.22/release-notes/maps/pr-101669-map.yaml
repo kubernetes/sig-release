@@ -1,0 +1,3 @@
+pr: 101669
+releasenote:
+  text: Fix `kubectl set env` or `resources` not working for initcontainers.

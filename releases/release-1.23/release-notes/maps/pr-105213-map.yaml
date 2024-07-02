@@ -1,0 +1,4 @@
+pr: 105213
+releasenote:
+  text: Removed the error message label from the `kubelet_started_pods_errors_total`
+    metric

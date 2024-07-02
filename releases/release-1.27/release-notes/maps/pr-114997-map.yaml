@@ -1,0 +1,4 @@
+pr: 114997
+releasenote:
+  text: '`/metrics/slis` is now available for control plane components allowing you
+    to scrape health check metrics.'

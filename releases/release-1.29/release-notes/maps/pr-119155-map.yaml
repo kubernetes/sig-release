@@ -1,0 +1,6 @@
+pr: 119155
+releasenote:
+  text: |-
+    `kube-scheduler` implements scheduling hints for the `NodeAffinity` plugin.
+    The scheduling hints allow the scheduler to only retry scheduling a `Pod`
+    that was previously rejected by the `NodeAffinity` plugin if a new `Node` or a `Node` update matches the `Pod`'s node affinity.

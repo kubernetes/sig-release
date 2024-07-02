@@ -1,0 +1,3 @@
+pr: 102193
+releasenote:
+  text: Upgrade functionality of `kubectl kustomize` as described at [kustomize/v4.1.3](https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize%2Fv4.1.3).

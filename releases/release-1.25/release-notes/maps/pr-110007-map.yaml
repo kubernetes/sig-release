@@ -1,0 +1,3 @@
+pr: 110007
+releasenote:
+  text: Added new flags into alpha events such as --output, --types, --no-headers.

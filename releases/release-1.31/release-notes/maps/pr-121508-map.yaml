@@ -1,0 +1,5 @@
+pr: 121508
+releasenote:
+  text: |-
+    kube-scheduler: Implemented scheduling hints for the CSILimit plugin.
+    The scheduling hints allow the scheduler to retry scheduling a Pod that was previously rejected by the CSILimit plugin if a deleted pod has a PersistantVolumeClaim (PVC) from the same driver.

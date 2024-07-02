@@ -1,0 +1,4 @@
+pr: 102444
+releasenote:
+  text: Expose container start time as `container_start_time_seconds` in the kubelet
+    `/metrics/resource` endpoint.

@@ -1,0 +1,5 @@
+pr: 120521
+releasenote:
+  text: |-
+    `kubeadm`: removed `system:masters` organization from `apiserver-etcd-client`
+    certificate.

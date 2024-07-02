@@ -1,0 +1,4 @@
+pr: 114226
+releasenote:
+  text: Made `apiextensions-apiserver` binary linking static (also affects the deb
+    and rpm packages).

@@ -1,0 +1,4 @@
+pr: 124287
+releasenote:
+  text: The scheduler implemented QueueingHint in the TaintToleration plugin, enhancing
+    the throughput of scheduling.

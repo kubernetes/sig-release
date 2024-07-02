@@ -1,0 +1,3 @@
+pr: 118055
+releasenote:
+  text: Exposed `rest.DefaultServerUrlFor` function

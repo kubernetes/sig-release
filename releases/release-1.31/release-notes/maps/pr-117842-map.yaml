@@ -1,0 +1,7 @@
+pr: 117842
+releasenote:
+  text: |-
+    Supported fine-grained supplemental groups policy (KEP-3619), which enabled
+    fine-grained control for supplementary groups in the first container processes.
+    This allows you to choose whether to include groups defined in the container image (/etc/groups)
+    for the container's primary UID or not.

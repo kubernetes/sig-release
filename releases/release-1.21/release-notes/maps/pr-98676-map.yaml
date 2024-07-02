@@ -1,0 +1,4 @@
+pr: 98676
+releasenote:
+  text: A new histogram metric to track the time it took to delete a job by the `TTLAfterFinished`
+    controller

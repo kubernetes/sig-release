@@ -1,0 +1,3 @@
+pr: 107432
+releasenote:
+  text: Feature of `NonPreemptingPriority` is graduated to GA

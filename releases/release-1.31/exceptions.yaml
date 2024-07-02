@@ -1,0 +1,53 @@
+# Exceptions to Code Freeze requested in 1.31
+# Google Group: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown
+# Release Team Lead: Angelos Kolaitis (@neoaggelos)
+
+
+# Enhancements Freeze Exceptions requested in 1.31
+
+enhancementFreeze:
+
+- name: "Add a TopologyManager policy option for MaxAllowableNUMANodes"
+  issue: 4622
+  date_requested: 2024-06-13
+  date_reviewed: 2024-06-14
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/sRbVZntJDis
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4624
+  status: "approved"
+
+- name: "Multiple Service CIDRs"
+  issue: 1880
+  date_requested: 2024-06-15
+  date_reviewed: 2024-06-17
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/CVCUaMp_5WU
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4645
+  status: "approved"
+
+- name: "VolumeSource: OCI Artifact and/or Image"
+  issue: 4639
+  date_requested: 2024-06-15
+  date_reviewed: 2024-06-18
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/xuyC0F0hsio
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4642
+  status: "approved"
+
+- name: "Kube-Proxy component configuration graduation"
+  issue: 784
+  date_requested: 2024-06-15
+  date_reviewed: 2024-06-18
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/Gq7dCxV1IfM
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4732
+  status: "approved"
+
+- name: "Pod Level Resource Specifications"
+  issue: 2837
+  date_requested: 2024-06-18
+  date_reviewed: 2024-06-20
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/8y4BOM8RoUM
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4678
+  status: "rejected"

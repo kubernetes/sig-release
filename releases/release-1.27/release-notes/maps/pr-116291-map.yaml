@@ -1,0 +1,3 @@
+pr: 116291
+releasenote:
+  text: 'Graduated `matchLabelKeys` in `podTopologySpread` to Beta'

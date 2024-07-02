@@ -1,0 +1,5 @@
+pr: 111633
+releasenote:
+  text: 'ginkgo: when e2e tests are invoked through ginkgo-e2e.sh, the default now
+    is to use color escape sequences only when connected to a terminal. `GINKGO_NO_COLOR=y/n`
+    can be used to override that default.'

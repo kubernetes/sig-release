@@ -1,0 +1,4 @@
+pr: 112557
+releasenote:
+  text: Fixed list cost estimation in Priority and Fairness for list requests with
+    `metadata.name` specified.

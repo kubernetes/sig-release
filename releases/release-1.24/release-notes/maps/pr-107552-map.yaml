@@ -1,0 +1,6 @@
+pr: 107552
+releasenote:
+  text: Added an e2e test to verify that the cluster is not vulnerable to CVE-2021-29923
+    when using Services with IPs with leading zeros, note that this test is a necessary
+    but not sufficient condition, all the components in the clusters that consume
+    IPs addresses from the APIs MUST interpret them as decimal or discard them.

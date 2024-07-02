@@ -1,0 +1,4 @@
+pr: 118716
+releasenote:
+  text: The Daemonset controller creates replacements for terminal Pods, which can
+    appear during VM preemptions or when using Pod finalizers.

@@ -1,0 +1,3 @@
+pr: 125459
+releasenote:
+  text: LogarithmicScaleDown is now GA

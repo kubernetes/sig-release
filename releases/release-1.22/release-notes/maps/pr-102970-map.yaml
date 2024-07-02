@@ -1,0 +1,6 @@
+pr: 102970
+releasenote:
+  text: Introducing Memory quality of service support with `cgroups v2 (Alpha)`. The `MemoryQoS`
+    feature is now in Alpha. This allows `kubelet` running with `cgroups v2` to set
+    memory QoS at container, pod and QoS level to protect and guarantee better memory
+    quality. This feature can be enabled through feature gate Memory QoS.

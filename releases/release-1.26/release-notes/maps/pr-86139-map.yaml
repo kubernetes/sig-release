@@ -1,0 +1,14 @@
+pr: 86139
+releasenote:
+  text: |
+    'Container `preStop` and `postStart` lifecycle handlers using `httpGet` now
+    honor the specified `scheme` and `headers` fields. This enables setting custom
+    headers and changing the scheme to `HTTPS`, consistent with container
+    startup/readiness/liveness probe capabilities. Lifecycle handlers configured
+    with `scheme: HTTPS` that encounter errors indicating the endpoint is actually
+    using HTTP fall back to making the request over HTTP for compatibility with
+    previous releases. When this happens, a `LifecycleHTTPFallback` event is recorded
+    in the namespace of the pod and a `kubelet_lifecycle_handler_http_fallbacks_total`
+    metric in the kubelet is incremented. Cluster administrators can opt out of the
+    expanded lifecycle handler capabilities by setting
+    `--feature-gates=ConsistentHTTPGetHandlers=false` in `kubelet`.'

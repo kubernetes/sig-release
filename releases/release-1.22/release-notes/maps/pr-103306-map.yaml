@@ -1,0 +1,3 @@
+pr: 103306
+releasenote:
+  text: Kube-proxy uses V1 `EndpointSlices`.

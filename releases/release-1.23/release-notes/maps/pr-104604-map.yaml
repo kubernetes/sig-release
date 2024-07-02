@@ -1,0 +1,4 @@
+pr: 104604
+releasenote:
+  text: Don't prematurely close reflectors in case of slow initialization in watch
+    based manager to fix issues with inability to properly mount secrets/configmaps.

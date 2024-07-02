@@ -1,0 +1,6 @@
+pr: 118552
+releasenote:
+  text: |-
+    RBD volume plugin (`kubernetes.io/rbd`) has been deprecated in this release
+    and will be removed in a subsequent release. Alternative is to use RBD CSI driver
+    (https://github.com/ceph/ceph-csi/) in your Kubernetes Cluster.

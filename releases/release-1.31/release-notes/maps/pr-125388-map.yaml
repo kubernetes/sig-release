@@ -1,0 +1,4 @@
+pr: 125388
+releasenote:
+  text: 'kubeadm: fixed a bug where the PublicKeysECDSA feature gate was not respected
+    when generating kubeconfig files.'

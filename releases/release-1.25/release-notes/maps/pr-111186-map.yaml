@@ -1,0 +1,4 @@
+pr: 111186
+releasenote:
+  text: Fixed the GCE firewall update when the destination IPs are changing so that
+    firewalls reflect the IP updates of the LBs.

@@ -1,0 +1,3 @@
+pr: 112650
+releasenote:
+  text: 'kubelet: fixed log spam from kubelet_getters.go `Path does not exist`.'

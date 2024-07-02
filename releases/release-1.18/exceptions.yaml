@@ -1,0 +1,74 @@
+# Exceptions Requested in 1.18
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Jorge Alarcon ([@alejandrox1](https://github.com/alejandrox1))
+# Release Team Lead Shadows: Bob Killen ([@mrbobbytables](https://github.com/mrbobbytables)) / Taylor Dolezal ([@onlydole](https://github.com/onlydole))
+
+# Enhancement Freeze Exceptions Requested in 1.18
+
+enhancementFreeze:
+- name: "Adding AppProtocol to Services and Endpoints"
+  issue: 1507
+  date_requested: 2020-01-29
+  date_reviewed: 2020-01-29
+  thread: https://groups.google.com/forum/#!msg/kubernetes-release-team/9BoAzTyFP98/Sb7daSm_FQAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1525
+  status: Approved
+- name: "Pod Overhead: account resources tied to the sandbox, but not specific containers"
+  issue: 688
+  date_requested: 2020-01-29
+  date_reviewed: 2020-01-29
+  thread: https://groups.google.com/forum/#!msg/kubernetes-release-team/7UvTquSxrCs/2o0MgPnBFQAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1526
+  status: approved
+- name: "Topology Manager"
+  issue: 693
+  date_requested: 2020-01-29
+  date_reviewed: 2020-01-29
+  thread: https://groups.google.com/forum/#!msg/kubernetes-release-team/xFb1CbRxFTM/w9QT5vfGFQAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1527
+  - https://github.com/kubernetes/test-infra/pull/16062
+  - https://github.com/kubernetes/kubernetes/pull/86184
+  - https://github.com/kubernetes/kubernetes/pull/87645
+  - https://github.com/kubernetes/test-infra/pull/15599
+  - https://github.com/kubernetes/kubernetes/pull/86184
+  status: approved
+- name: "Allow users to recover from volume expansion failure"
+  issue: 1516
+  date_requested: 2020-01-29
+  date_reviewed: 2020-01-29
+  thread: https://groups.google.com/forum/#!msg/kubernetes-release-team/mTPPBQ6SwvI/AdY0mLLNFQAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1516 
+  status: denied
+- name: "Configurable scale up/down velocity for HPA"
+  issue: 853
+  date_requested: 2020-01-30
+  date_reviewed: 2020-01-30
+  thread: https://groups.google.com/forum/#!msg/kubernetes-release-team/A76BjjbVi1w/Zy0Lypf9EwAJ
+  pull_requests:
+  - https://github.com/kubernetes/kubernetes/pull/74525 
+  status: approved
+- name: "APIServer Dry Run"
+  issue: 576
+  date_requested: 2020-01-30
+  date_reviewed: 2020-01-30
+  thread: https://groups.google.com/forum/#!topic/kubernetes-release-team/XhKNP7te_i0
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1535
+  status: approved
+- name: Extending Hugepage Feature
+  issue: 1539
+  date_requested: 2020-02-06
+  date_reviewed: 2020-02-06
+  thread: https://groups.google.com/forum/#!msg/kubernetes-release-team/QpwEeqxbUG0/xFDcDLL-FgAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1540
+  - https://github.com/kubernetes/kubernetes/pull/84051 
+  status: approved
+
+
+# Code Freeze Exceptions Requested in 1.18
+codeFreeze:

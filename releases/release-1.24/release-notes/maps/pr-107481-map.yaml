@@ -1,0 +1,3 @@
+pr: 107481
+releasenote:
+  text: The cluster addon for dashboard was removed. To install dashboard, see [here](https://github.com/kubernetes/dashboard/blob/master/docs/user/README.md).

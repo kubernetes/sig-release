@@ -1,0 +1,4 @@
+pr: 111009
+releasenote:
+  text: UserName check for 'ContainerAdministrator' is now case-insensitive if runAsNonRoot
+    is set to true on Windows.

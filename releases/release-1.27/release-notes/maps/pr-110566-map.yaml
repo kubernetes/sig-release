@@ -1,0 +1,4 @@
+pr: 110566
+releasenote:
+  text: 'Setting the Kubelet config option `--resolv-conf=Host` on Windows will
+    now result in Kubelet applying the Pod DNS Policies as intended.'

@@ -1,0 +1,3 @@
+pr: 116167
+releasenote:
+  text: When GCing pods, `kube-controller-manager` will delete Evicted pods first.

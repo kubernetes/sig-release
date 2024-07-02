@@ -1,0 +1,3 @@
+pr: 108994
+releasenote:
+  text: Updates `kubectl kustomize` and `kubectl apply -k` to Kustomize v4.5.4

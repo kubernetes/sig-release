@@ -1,0 +1,3 @@
+pr: 100599
+releasenote:
+  text: Fire an event when failing to open `NodePort`.

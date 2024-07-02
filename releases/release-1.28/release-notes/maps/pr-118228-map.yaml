@@ -1,0 +1,3 @@
+pr: 118228
+releasenote:
+  text: Moved `non-graceful node` shutdown to GA.

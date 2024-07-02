@@ -1,0 +1,3 @@
+pr: 94180
+releasenote:
+  text: Azure armclient backoff step defaults to 1 (no retry).

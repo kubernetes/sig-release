@@ -1,0 +1,5 @@
+pr: 123809
+releasenote:
+  text: |-
+    The emission of RecreatingFailedPod and RecreatingTerminatedPod events has been
+    removed from the StatefulSet lifecycle.

@@ -1,0 +1,3 @@
+pr: 104593
+releasenote:
+  text: Ignore the case when updating Azure tags.

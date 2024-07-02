@@ -1,0 +1,4 @@
+pr: 100720
+releasenote:
+  text: 'Metrics changes: Fix exposed buckets of `scheduler_volume_scheduling_duration_seconds_bucket`
+    metric.'

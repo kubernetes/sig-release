@@ -1,0 +1,4 @@
+pr: 99358
+releasenote:
+  text: The `kube-controller-manager'` sets the upper-bound timeout limit for outgoing
+    requests to 70s. Previously

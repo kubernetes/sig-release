@@ -1,0 +1,4 @@
+pr: 111619
+releasenote:
+  text: The intree volume plugin quobyte support has been completely removed from
+    Kubernetes.

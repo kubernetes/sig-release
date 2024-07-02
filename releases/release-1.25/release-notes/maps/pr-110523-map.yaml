@@ -1,0 +1,3 @@
+pr: 110523
+releasenote:
+  text: Fixed image pull failure when `IMDS` is unavailable in kubelet startup.

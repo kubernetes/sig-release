@@ -1,0 +1,4 @@
+pr: 121460
+releasenote:
+  text: When updating a CRD, per-expression cost limit check are now skipped for `x-kubernetes-validations`
+    rules of versions that are not mutated.

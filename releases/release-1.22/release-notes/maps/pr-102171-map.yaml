@@ -1,0 +1,4 @@
+pr: 102171
+releasenote:
+  text: Watch requests are now handled throttled by priority and fairness filter in
+    `kube-apiserver`.

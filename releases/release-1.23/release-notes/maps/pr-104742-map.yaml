@@ -1,0 +1,7 @@
+pr: 104742
+releasenote:
+  text: kube-proxy health check ports used to listen to `:<port>` for each of the
+    services. This is not needed and opens ports in addresses the cluster user may
+    not have intended. The PR limits listening to all node address which are controlled
+    by `--nodeport-addresses` flag. if no addresses are provided then we default to
+    existing behavior by listening to `:<port>` for each service

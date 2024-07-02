@@ -1,0 +1,3 @@
+pr: 124864
+releasenote:
+  text: Reverted remove legacycloudproviders from staging.

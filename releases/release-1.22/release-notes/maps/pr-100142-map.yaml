@@ -1,0 +1,3 @@
+pr: 100142
+releasenote:
+  text: "kubectl: add `LAST RESTART` column to `kubectl get pods` output."

@@ -1,0 +1,3 @@
+pr: 107963
+releasenote:
+  text: Adds a new Status subresource in Network Policy objects

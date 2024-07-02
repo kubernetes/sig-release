@@ -1,0 +1,4 @@
+pr: 122475
+releasenote:
+  text: Fixed panic of Evented `PLEG` during kubelet start-up.
+pr_body: ""

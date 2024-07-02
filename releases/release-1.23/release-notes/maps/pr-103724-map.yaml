@@ -1,0 +1,4 @@
+pr: 103724
+releasenote:
+  text: The image `gcr.io/kubernetes-e2e-test-images` will no longer be used in E2E
+    / CI testing, `k8s.gcr.io/e2e-test-images` will be used instead.

@@ -1,0 +1,7 @@
+pr: 108350
+releasenote:
+  text: |-
+    Changes the kubectl `--validate` flag from a bool to a string that accepts the values {true, strict, warn, false, ignore}
+    - true/strict - perform validation and error the request on any invalid fields in the ojbect. It will attempt to perform server-side validation if it is enabled on the apiserver, otherwise it will fall back to client-side validation.
+    - warn - perform server-side validation and warn on any invalid fields (but ultimately let the request succeed by dropping any invalid fields from the object). If validation is not available on the server, perform no validation.
+    - false/ignore - perform no validation, silently dropping invalid fields from the object.

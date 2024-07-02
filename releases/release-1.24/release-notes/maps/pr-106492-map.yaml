@@ -1,0 +1,3 @@
+pr: 106492
+releasenote:
+  text: Metrics Server image bumped to v0.5.2

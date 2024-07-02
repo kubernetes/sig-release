@@ -1,0 +1,4 @@
+pr: 115096
+releasenote:
+  text: '`cacher`: If `ResourceVersion` is unset, the watch is now served from the underlying
+    storage as documented.'

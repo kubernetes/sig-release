@@ -1,0 +1,4 @@
+pr: 107439
+releasenote:
+  text: Fixed kubectl bug where bash completions don't work if `--context` flag is specified
+    with a value that contains a colon.

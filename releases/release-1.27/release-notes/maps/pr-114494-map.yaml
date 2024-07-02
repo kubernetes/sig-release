@@ -1,0 +1,3 @@
+pr: 114494
+releasenote:
+  text: The `ReadWriteOncePod` feature gate has been graduated to beta.

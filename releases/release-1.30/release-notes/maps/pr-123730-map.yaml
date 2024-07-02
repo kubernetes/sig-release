@@ -1,0 +1,5 @@
+pr: 123730
+releasenote:
+  text: 'DRA: ResourceClaim and PodSchedulingContext status updates no longer allow
+    changing object meta data.'
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 116607
+releasenote:
+  text: '`kube-scheduler`: Optimized implementation of null `labelSelector` in topology
+    spreading.'

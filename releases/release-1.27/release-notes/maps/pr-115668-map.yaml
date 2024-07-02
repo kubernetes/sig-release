@@ -1,0 +1,5 @@
+pr: 115668
+releasenote:
+  text: |-
+    `ValidatingAdmissionPolicy` now provides a status field that contains results of type checking the validation expression.
+    The type checking is fully informational, and the behavior of the policy is unchanged.

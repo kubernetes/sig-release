@@ -1,0 +1,3 @@
+pr: 102062
+releasenote:
+  text: Update etcd version to 3.5.0-beta.3.

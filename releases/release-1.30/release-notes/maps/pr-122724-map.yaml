@@ -1,0 +1,5 @@
+pr: 122724
+releasenote:
+  text: |
+    "Changed `--nodeport-addresses` behavior to default to "primary node IP(s) only" rather than "all node IPs"."
+pr_body: ""

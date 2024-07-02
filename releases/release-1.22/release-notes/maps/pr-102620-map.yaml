@@ -1,0 +1,3 @@
+pr: 102620
+releasenote:
+  text: Disable log sampling when using json logging format.

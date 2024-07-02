@@ -1,0 +1,3 @@
+pr: 109764
+releasenote:
+  text: Changed PV framework delete timeout to 5 minutes as documented.

@@ -1,0 +1,4 @@
+pr: 103823
+releasenote:
+  text: Fix an issue in cleaning up `CertificateSigningRequest` objects with an unparseable
+    `status.certificate` field.

@@ -1,0 +1,3 @@
+pr: 117656
+releasenote:
+  text: Remove GA'ed feature gate `DevicePlugins`.

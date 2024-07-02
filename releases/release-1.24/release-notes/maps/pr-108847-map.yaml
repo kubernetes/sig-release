@@ -1,0 +1,5 @@
+pr: 108847
+releasenote:
+  text: Kubelet external Credential Provider feature is moved to Beta. Credential
+    Provider Plugin and Credential Provider Config API's updated from v1alpha1 to
+    v1beta1 with no API changes.

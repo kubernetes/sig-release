@@ -1,0 +1,4 @@
+pr: 101857
+releasenote:
+  text: The `kube-proxy` log now shows the "Skipping topology aware endpoint filtering
+    since no hints were provided for zone" warning under the right conditions.

@@ -1,0 +1,8 @@
+pr: 121083
+releasenote:
+  text: Previous versions of Kubernetes on Google Cloud required that workloads (e.g.
+    Deployments, DaemonSets, etc.) which used `PersistentDisk` volumes were using
+    them in read-only mode.  This validation provided very little value at relatively
+    host implementation cost, and will no longer be validated.  If this is a problem
+    for a specific use-case, please set the `SkipReadOnlyValidationGCE` gate to false
+    to re-enable the validation, and file a Kubernetes bug with details.

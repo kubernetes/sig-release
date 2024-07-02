@@ -1,0 +1,5 @@
+pr: 125225
+releasenote:
+  text: The Service LoadBalancer controller was not correctly considering the service.Status
+    new IPMode field and excluding the Ports when comparing if the status has changed,
+    causing that changes in these fields may not update the service.Status correctly

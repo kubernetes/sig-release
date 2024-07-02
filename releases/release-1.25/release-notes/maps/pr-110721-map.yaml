@@ -1,0 +1,5 @@
+pr: 110721
+releasenote:
+  text: Volumes are no longer detached from healthy nodes after 6 minutes timeout. 6
+    minute force-detach timeout is used only for unhealthy nodes (`node.status.conditions["Ready"]!=
+    true`).

@@ -1,0 +1,5 @@
+pr: 115149
+releasenote:
+  text: Encryption of API Server at rest configuration now allows the use of wildcards
+    in the list of resources.  For example, *.* can be used to encrypt all resources,
+    including all current and future custom resources.

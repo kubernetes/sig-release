@@ -1,0 +1,3 @@
+pr: 121736
+releasenote:
+  text: Updated `kube-dns` to `v1.22.27`.

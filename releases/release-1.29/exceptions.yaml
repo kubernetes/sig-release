@@ -1,0 +1,80 @@
+# Exception requests in 1.29
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Nina Polshakova ([@npolshakova](https://github.com/npolshakova)
+# Release Team Shadows : Ana Margarita Medina ([@AnaMMedina21](https://github.com/AnaMMedina21))
+# / Mohammad Reza Saleh Sedghpour ([@salehsedghpour](https://github.com/salehsedghpour))
+# / Rayan Das ([@rayandas](https://github.com/rayandas))
+# / Sanchita Mishra ([@sanchita-07](https://github.com/@sanchita-07))
+# / Sreeram Venkitesh ([@sreeram-venkitesh](https://github.com/@sreeram-venkitesh))
+
+# Enhancements Freeze Exceptions requested in 1.29
+enhancementFreeze:
+
+- name: "add ProcMount option"
+  issue: 4265
+  date_requested: 2023-10-06
+  date_reviewed: 2023-10-07
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/emPOBgXxu0Q/m/EFYnxpOxCwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4266"
+    - "https://github.com/kubernetes/enhancements/pull/4279"
+  status: "approved"
+
+- name: "Per-plugin callback functions for accurate requeueing in kube-scheduler"
+  issue: 4247
+  date_requested: 2023-10-06
+  date_reviewed: 2023-10-07
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/KRW9gg5wwS4/m/XW5v6ySwCwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4256"
+  status: "approved"
+
+- name: "Optionally Disable HealthCheck Ports for LoadBalancers with ExternalTrafficPolicy=Local"
+  issue: 4144
+  date_requested: 2023-10-10
+  date_reviewed: 2023-10-11
+  thread: "https://groups.google.com/g/kubernetes-sig-network/c/piRehSKuX3Y"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4286"
+  status: "denied"
+
+# Code Freeze Exceptions requested in 1.29
+codeFreeze:
+
+- name: "ClusterTrustBundles (previously Trust Anchor Sets)"
+  issue: 3257
+  date_requested: 2023-11-01
+  date_reviewed: 2023-11-01
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/5eFxKKR-iks/m/QQZFEe0MEQAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/113374"
+  status: "approved"
+
+- name: "CRD Validation Ratcheting"
+  issue: 4008
+  date_requested: 2023-11-01
+  date_reviewed: 2023-11-02
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/vkHqIH-hE5A/m/FANycyoLEQAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/121034"
+    - "https://github.com/kubernetes/kubernetes/pull/121461"
+  status: "approved"
+
+- name: "Kubelet Support for Image Filesystem being split"
+  issue: 4191
+  date_requested: 2023-11-01
+  date_reviewed: 2023-11-01
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/z399yO5hjP0/m/5NA8tkILEQAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/120616"
+  status: "approved"
+
+- name: "Add support for a drop-in kubelet configuration directory"
+  issue: 3983
+  date_requested: 2023-11-01
+  date_reviewed: 2023-11-02
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/uvzNhRarf6w/m/MrmOXb2AAAAJ"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/121193"
+  status: "approved"
+

@@ -1,0 +1,6 @@
+pr: 109251
+releasenote: 
+  text: |
+      `MaxUnavailable` for `StatefulSets`, allows faster `RollingUpdate` by taking down more than 1 pod at a time. 
+      The number of pods you want to take down during a `RollingUpdate` is configurable using `maxUnavailable` parameter.
+

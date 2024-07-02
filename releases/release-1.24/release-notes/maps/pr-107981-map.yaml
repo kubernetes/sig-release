@@ -1,0 +1,5 @@
+pr: 107981
+releasenote:
+  text: |-
+    This code change fixes the bug that UDP services would trigger unnecessary LoadBalancer updates. The root cause is that a field not working for non-TCP protocols is considered.
+    ref: https://github.com/kubernetes-sigs/cloud-provider-azure/pull/1090

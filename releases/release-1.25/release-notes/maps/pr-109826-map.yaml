@@ -1,0 +1,4 @@
+pr: 109826
+releasenote:
+  text: Fixed a bug involving Services of type `LoadBalancer` with multiple IPs and a
+    `LoadBalancerSourceRanges` that overlaps the node IP.

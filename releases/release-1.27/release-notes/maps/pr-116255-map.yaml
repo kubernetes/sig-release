@@ -1,0 +1,7 @@
+pr: 116255
+releasenote:
+  text: |-
+    'The `IPv6DualStack` feature gate for external cloud providers was removed.
+    (The feature became GA in 1.23 and the gate was removed for all other
+    components several releases ago.) If you were still manually
+    enabling it you must stop now.'

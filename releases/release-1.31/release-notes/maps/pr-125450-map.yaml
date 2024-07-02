@@ -1,0 +1,4 @@
+pr: 125450
+releasenote:
+  text: pkg k8s.io/apiserver/pkg/storage/cacher, method (*Cacher) Wait(context.Context)
+    error

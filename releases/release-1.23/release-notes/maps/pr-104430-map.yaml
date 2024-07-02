@@ -1,0 +1,3 @@
+pr: 104430
+releasenote:
+  text: Update `cri-tools` dependency to v1.22.0.

@@ -1,0 +1,4 @@
+pr: 102783
+releasenote:
+  text: Update dep `google/gnostic` and `google/go-cmp` to v0.5.5 and updating transitive
+    dependencies `protobuf`.

@@ -1,0 +1,5 @@
+pr: 124001
+releasenote:
+  text: Reverted the change to "support sharing waitingPods across different scheduler
+    profiles".
+pr_body: ""

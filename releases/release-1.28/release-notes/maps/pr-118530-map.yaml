@@ -1,0 +1,3 @@
+pr: 118530
+releasenote:
+  text: Fixed Cronjob `status.lastSuccessfulTime` not populated by a manually triggered

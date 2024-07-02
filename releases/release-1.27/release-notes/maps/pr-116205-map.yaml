@@ -1,0 +1,14 @@
+pr: 116205
+releasenote:
+  text: Since Kubernetes v1.5, `kubectl apply` has had an alpha-stage `--prune` flag
+    to support deleting previously applied objects that have been removed from the
+    input manifest. This feature has remained in alpha ever since due to performance
+    and correctness issues inherent in its design. This PR exposes a second, independent
+    pruning alpha powered by a new standard named `ApplySets`. An `ApplySet` is a
+    server-side object (by default, a Secret; ConfigMaps are also allowed) that kubectl
+    can use to accurately and efficiently track set membership across `apply` operations.
+    The format used for `ApplySet` is set out in  [KEP 3659](https://github.com/kubernetes/enhancements/issues/3659)
+    as a low-level specification.  Other tools in the ecosystem can also build on
+    this specification for improved interoperability.  To try the ApplySet-based pruning
+    alpha, set `KUBECTL_APPLYSET=true` and use the flags `--prune --applyset=secret-name`
+    with `kubectl apply`.

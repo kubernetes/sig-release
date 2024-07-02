@@ -1,0 +1,7 @@
+pr: 123385
+releasenote:
+  text: |-
+    Added a alpha feature, behind the `RelaxedEnvironmentVariableValidation` feature gate.
+    When that gate is enabled, Kubernetes allows almost all printable ASCII characters to be used in the names
+    of environment variables for containers in Pods.
+pr_body: ""

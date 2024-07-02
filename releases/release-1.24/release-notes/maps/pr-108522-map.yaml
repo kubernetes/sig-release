@@ -1,0 +1,4 @@
+pr: 108522
+releasenote:
+  text: Support for gRPC probes is now in beta. GRPCContainerProbe feature gate is
+    enabled by default.

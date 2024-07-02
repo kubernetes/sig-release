@@ -1,0 +1,4 @@
+pr: 123620
+releasenote:
+  text: Fixed a bug in the JSON frame reader that could cause it to retain a reference
+    to the underlying array of the byte slice passed to Read.

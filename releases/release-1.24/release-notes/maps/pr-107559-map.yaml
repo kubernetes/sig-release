@@ -1,0 +1,3 @@
+pr: 107559
+releasenote:
+  text: Fixed handling of objects with invalid selectors.

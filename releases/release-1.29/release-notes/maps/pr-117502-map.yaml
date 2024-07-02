@@ -1,0 +1,7 @@
+pr: 117502
+releasenote:
+  text: |-
+    Added `kubectl node drain` helper callbacks `OnPodDeletionOrEvictionStarted`
+    and `OnPodDeletionOrEvictionFailed`; people extending `kubectl` can use these
+    new callbacks for more granularity. Deprecated the `OnPodDeletedOrEvicted`
+    node drain helper callback.

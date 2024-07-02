@@ -1,0 +1,4 @@
+pr: 89401
+releasenote:
+  text: Fixes v1.18.0-rc.1 regression in `kubectl port-forward` when specifying a
+    local and remote port

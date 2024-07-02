@@ -1,0 +1,5 @@
+pr: 96021
+releasenote:
+  text: All data is no longer automatically deleted when a failure is detected during
+    creation of the volume data file on a CSI volume. Now only the data file and volume
+    path is removed.

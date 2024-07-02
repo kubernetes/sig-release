@@ -1,0 +1,7 @@
+pr: 124685
+releasenote:
+  text: |-
+    kubeadm: Switched kubeadm to start using the CRI client library instead of shelling out of the `crictl` binary
+    for actions against a CRI endpoint. The kubeadm deb/rpm packages will continue to install the `cri-tools`
+    package for one more release, but in you must adapt your scripts to install `crictl` manually from
+    https://github.com/kubernetes-sigs/cri-tools/releases or a different location.

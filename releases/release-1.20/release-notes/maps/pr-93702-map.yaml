@@ -1,0 +1,3 @@
+pr: 93702
+releasenote:
+  text: kubeadm ensures "kubeadm reset" does not unmount the root "/var/lib/kubelet" directory if it is mounted by the user.

@@ -1,0 +1,18 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+    - jameslaverack # Emeritus Advisor
+    - salaxander # Release Team Lead
+    - katcosgrove # Lead Shadow
+    - helayoty # Lead Shadow
+    - hosseinsalahi # Lead Shadow
+    - Priyankasaggu11929 # Lead Shadow
+
+reviewers:
+    - marosset # Enhancements Lead
+    - harshanarayana # Release Notes Lead
+    - harshitasao # Communications Lead
+    - neoaggelos # Bug Triage Lead
+    - lauralorenz # CI Signal Lead
+    - mickeyboxell # Docs Lead
+ 

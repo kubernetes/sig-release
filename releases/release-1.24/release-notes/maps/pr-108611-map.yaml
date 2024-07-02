@@ -1,0 +1,3 @@
+pr: 108611
+releasenote:
+  text: topology translation of in-tree vSphere volume to vSphere CSI.

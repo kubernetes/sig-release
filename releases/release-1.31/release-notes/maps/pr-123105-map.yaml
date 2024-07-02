@@ -1,0 +1,12 @@
+pr: 123105
+releasenote:
+  text: |-
+    Added support to the kube-proxy nodePortAddresses / --nodeport-addresses option to
+    accept the value "primary", meaning to only listen for NodePort connections
+    on the node's primary IPv4 and/or IPv6 address (according to the Node object).
+    This is strongly recommended, if you were not previously using
+    --nodeport-addresses, to avoid surprising behavior.
+
+    (This behavior is enabled by default with the nftables backend; you would
+    need to explicitly request `--nodeport-addresses 0.0.0.0/0,::/0` there to get
+    the traditional "listen on all interfaces" behavior.)

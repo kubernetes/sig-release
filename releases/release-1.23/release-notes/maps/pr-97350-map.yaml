@@ -1,0 +1,4 @@
+pr: 97350
+releasenote:
+  text: Added a new flag `--append-server-path` to `kubectl proxy` that will automatically
+    append the kube context server path to each request.

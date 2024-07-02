@@ -1,0 +1,4 @@
+pr: 99728
+releasenote:
+  text: Added a feature gate `StatefulSetAutoDeletePVC`, which allows PVCs automatically
+    created for StatefulSet pods to be automatically deleted.

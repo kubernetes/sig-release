@@ -1,0 +1,4 @@
+pr: 114055
+releasenote:
+  text: Kubernetes components that perform leader election now only support using
+    `Leases` for this.

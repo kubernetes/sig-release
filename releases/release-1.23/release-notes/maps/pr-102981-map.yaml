@@ -1,0 +1,4 @@
+pr: 102981
+releasenote:
+  text: The `kube-controller-manager` supports `--concurrent-ephemeralvolume-syncs`
+    flag to set the number of ephemeral volume controller workers.

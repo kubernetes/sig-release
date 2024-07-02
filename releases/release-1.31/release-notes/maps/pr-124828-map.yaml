@@ -1,0 +1,3 @@
+pr: 124828
+releasenote:
+  text: Kubernetes was built with Go 1.22.3.

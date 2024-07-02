@@ -1,0 +1,5 @@
+pr: 123344
+releasenote:
+  text: |
+    "The `StorageVersionMigration` API, previously available as a Custom Resource Definition (CRD), is now a built-in API in Kubernetes."
+pr_body: ""

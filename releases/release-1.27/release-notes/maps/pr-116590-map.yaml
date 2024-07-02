@@ -1,0 +1,3 @@
+pr: 116590
+releasenote:
+  text: Added e2e tests for kubectl `--subresource` for beta graduation

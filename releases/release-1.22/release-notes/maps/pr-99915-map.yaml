@@ -1,0 +1,4 @@
+pr: 99915
+releasenote:
+  text: Remove the deprecated flag `--generator` from `kubectl create deployment`
+    command.

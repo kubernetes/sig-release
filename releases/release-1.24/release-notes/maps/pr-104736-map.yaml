@@ -1,0 +1,3 @@
+pr: 104736
+releasenote:
+  text: Improve kubectl's user help commands readability

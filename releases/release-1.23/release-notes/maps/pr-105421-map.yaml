@@ -1,0 +1,4 @@
+pr: 105421
+releasenote:
+  text: Fixed a bug where using `kubectl patch` with `$deleteFromPrimitiveList` on
+    a nonexistent or empty list would add the item to the list

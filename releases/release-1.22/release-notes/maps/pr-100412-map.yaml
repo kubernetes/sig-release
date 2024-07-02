@@ -1,0 +1,3 @@
+pr: 100412
+releasenote:
+  text: The `ServiceLBNodePortControl` graduates to Beta and is enabled by default.

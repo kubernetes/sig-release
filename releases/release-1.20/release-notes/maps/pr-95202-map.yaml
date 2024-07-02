@@ -1,0 +1,3 @@
+pr: 95202
+releasenote:
+  text: Remove offensive words from kubectl cluster-info command.

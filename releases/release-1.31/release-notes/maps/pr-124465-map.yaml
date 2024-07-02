@@ -1,0 +1,6 @@
+pr: 124465
+releasenote:
+  text: 'kubeadm: Switched to using the new etcd endpoints introduced in 3.5.11 - /livez
+    (for liveness probe) and /readyz (for readyness and startup probe). With this
+    change it is no longer possible to deploy a custom etcd version older than 3.5.11
+    with kubeadm 1.31. If so, please upgrade.'

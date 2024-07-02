@@ -1,0 +1,4 @@
+pr: 117720
+releasenote:
+  text: The `kube-scheduler` `selectorSpread` plugin has been removed, please use
+    the `podTopologySpread` plugin instead.

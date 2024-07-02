@@ -1,0 +1,3 @@
+pr: 100369
+releasenote:
+  text: After DBus restarts, make `GracefulNodeShutdown` work again

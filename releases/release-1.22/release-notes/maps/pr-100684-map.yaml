@@ -1,0 +1,4 @@
+pr: 100684
+releasenote:
+  text: The `Server Side Apply` treats certain structs as atomic. Meaning the entire
+    selector field is managed by a single writer and updated together.

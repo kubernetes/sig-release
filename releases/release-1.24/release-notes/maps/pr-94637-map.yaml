@@ -1,0 +1,6 @@
+pr: 94637
+releasenote:
+  text: 'kube-apiserver: ensures the namespace of objects sent to admission webhooks
+    matches the request namespace. Previously, objects without a namespace set would
+    have the request namespace populated after mutating admission, and objects with
+    a namespace that did not match the request namespace would be rejected after admission.'

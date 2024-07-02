@@ -1,0 +1,4 @@
+pr: 101579
+releasenote:
+  text: The deprecated `RootCAConfigMap` feature-gate has been removed, since the
+    `RootCAConfigMap` feature graduated to GA in 1.21 and is unconditionally enabled.

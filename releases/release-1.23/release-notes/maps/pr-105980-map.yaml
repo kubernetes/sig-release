@@ -1,0 +1,4 @@
+pr: 105980
+releasenote:
+  text: Pod template annotations and labels are now mutable for Jobs that are suspended
+    and have never been started

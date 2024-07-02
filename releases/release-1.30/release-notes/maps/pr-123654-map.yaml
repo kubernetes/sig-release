@@ -1,0 +1,4 @@
+pr: 123654
+releasenote:
+  text: '[kubeadam][structured authz] avoided setting default `--authorization-mode`
+    when `--authorization-config` is provided'

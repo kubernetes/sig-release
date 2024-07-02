@@ -1,0 +1,8 @@
+pr: 118013
+releasenote:
+  text: |-
+    `kubeadm`: added a new "kubeadm config validate" command that can be used to
+    validate any input config file. Use the `--config` flag to pass a config file
+    to it. See the command `--help` screen for more information. As a result of adding
+    this new command, enhance the validation capabilities of the existing "kubeadm
+    config migrate" command. For both commands unknown APIs or fields will throw errors.

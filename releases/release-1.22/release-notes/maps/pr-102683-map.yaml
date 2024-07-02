@@ -1,0 +1,4 @@
+pr: 102683
+releasenote:
+  text: Fix a bug on the `endpointslicemirroring` controller where endpoint `NotReadyAddresses`
+    were mirrored as Ready to the corresponding `EndpointSlice`.

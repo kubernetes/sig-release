@@ -1,0 +1,4 @@
+pr: 118619
+releasenote:
+  text: 'Dynamic resource allocation: will now avoid creating a new gRPC connection for every
+    call of prepare/unprepare resource(s).'

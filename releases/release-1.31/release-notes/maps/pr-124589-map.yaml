@@ -1,0 +1,4 @@
+pr: 124589
+releasenote:
+  text: 'Fixed the ResourceClaim controller forgetting to wait for `podSchedulingSynced`
+    and `templatesSynced`'

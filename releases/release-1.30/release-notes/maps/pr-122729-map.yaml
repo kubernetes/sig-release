@@ -1,0 +1,5 @@
+pr: 122729
+releasenote:
+  text: |
+    The `kube_codegen` tool now ignores the vendor folder during code generation.
+pr_body: ""

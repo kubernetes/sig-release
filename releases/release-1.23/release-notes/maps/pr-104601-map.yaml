@@ -1,0 +1,4 @@
+pr: 104601
+releasenote:
+  text: A small regression in Service updates was fixed. The circumstances are so
+    unlikely that probably nobody would ever hit it.

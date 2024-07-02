@@ -1,0 +1,5 @@
+pr: 122422
+releasenote:
+  text: Removed note that `hostAliases` are not supported on hostNetwork Pods from
+    the PodSpec API. The feature has been supported since v1.8.
+pr_body: ""

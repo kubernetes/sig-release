@@ -1,0 +1,10 @@
+pr: 97238
+releasenote:
+  text: |-
+    Services with `externalTrafficPolicy: Local` now support graceful termination when using
+    the iptables or ipvs mode of kube-proxy with `EndpointSlices` enabled. Specifically, if a
+    connection for such a service arrives on a node when there are no "Ready" endpoints
+    for the service, but there is at least one Terminating pod for that service on the node,
+    then kube-proxy will send the traffic to the Terminating pod rather than dropping it. This
+    patches up a race condition between when a pod is killed and when the external load
+    balancer notices that it has been killed.

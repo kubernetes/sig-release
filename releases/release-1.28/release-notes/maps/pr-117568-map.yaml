@@ -1,0 +1,4 @@
+pr: 117568
+releasenote:
+  text: Fixed bug that caused a resource to include patch directives when using strategic
+    merge patch against a non-existent field.

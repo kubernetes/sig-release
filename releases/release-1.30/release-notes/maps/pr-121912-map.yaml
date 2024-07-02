@@ -1,0 +1,5 @@
+pr: 121912
+releasenote:
+  text: |
+    "Added the `CEL` library for IP Addresses and CIDRs. This was made available for use starting from version `1.31`."
+pr_body: ""

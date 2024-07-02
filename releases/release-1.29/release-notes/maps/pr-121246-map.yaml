@@ -1,0 +1,3 @@
+pr: 121246
+releasenote:
+  text: Removed `GA`ed feature gates `SeccompDefault`.

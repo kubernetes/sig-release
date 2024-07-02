@@ -1,0 +1,4 @@
+pr: 124942
+releasenote:
+  text: The sidecars' finish time will now be accounted for when calculating the job's
+    finish time.

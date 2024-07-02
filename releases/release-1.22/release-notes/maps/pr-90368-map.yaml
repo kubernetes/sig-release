@@ -1,0 +1,5 @@
+pr: 90368
+releasenote:
+  text: "kube-controller-manager: the `--horizontal-pod-autoscaler-use-rest-clients`
+    flag and Heapster support in the horizontal pod autoscaler, deprecated since 1.12,
+    is removed."

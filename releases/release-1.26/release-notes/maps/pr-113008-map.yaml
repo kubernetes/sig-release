@@ -1,0 +1,6 @@
+pr: 113008
+releasenote:
+  text: |-
+    'Promoted `cronjob_job_creation_skew` metric to stable to follow the cronjob v2 controller,
+    the following metrics had their name updated to match metrics API guidelines:
+      - `cronjob_job_creation_skew_duration_seconds` -> `job_creation_skew_duration_seconds`.'

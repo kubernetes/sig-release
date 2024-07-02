@@ -1,0 +1,3 @@
+pr: 103439
+releasenote:
+  text: Fixed azure disk translation issue due to lower case `managed` kind.

@@ -1,0 +1,3 @@
+pr: 108541
+releasenote:
+  text: Feature gate `ProbeTerminationGracePeriod` is enabled by default.

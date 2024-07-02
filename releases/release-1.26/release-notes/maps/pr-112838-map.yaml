@@ -1,0 +1,4 @@
+pr: 112838
+releasenote:
+  text: The `LegacyServiceAccountTokenNoAutoGeneration` feature gate was promoted
+    to GA.

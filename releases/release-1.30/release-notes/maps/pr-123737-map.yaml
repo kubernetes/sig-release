@@ -1,0 +1,7 @@
+pr: 123737
+releasenote:
+  text: |
+    "When configuring a JWT authenticator:
+
+    If `username.expression` used 'claims.email', then 'claims.email_verified' must have been used in `username.expression` or `extra[*].valueExpression` or `claimValidationRules[*].expression`. An example claim validation rule expression that matches the validation automatically applied when `username.claim` is set to 'email' is 'claims.?email_verified.orValue(true)'."
+pr_body: ""

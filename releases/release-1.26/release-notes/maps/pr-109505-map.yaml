@@ -1,0 +1,4 @@
+pr: 109505
+releasenote:
+  text: Removed raising an error when setting an annotation with the same value,
+    just ignore it.

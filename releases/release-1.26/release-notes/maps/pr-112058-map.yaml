@@ -1,0 +1,3 @@
+pr: 112058
+releasenote:
+  text: Updated `cri-tools` to [v1.25.0](https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0).

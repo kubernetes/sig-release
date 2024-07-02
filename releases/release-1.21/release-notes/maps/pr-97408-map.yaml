@@ -1,0 +1,4 @@
+pr: 97408
+releasenote:
+  text: '`kubectl wait` ensures that observedGeneration >= generation to prevent stale
+    state reporting. An example scenario can be found on CRD updates.'

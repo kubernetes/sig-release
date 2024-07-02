@@ -1,0 +1,5 @@
+pr: 118990
+releasenote:
+  text: Added new `CRDValidationRatcheting` alpha feature. During a PATCH or UPDATE
+    Validation Ratcheting discards errors thrown by unchanged portions of the resource
+    from most OpenAPI schema validations.

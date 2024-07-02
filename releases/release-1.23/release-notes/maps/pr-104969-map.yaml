@@ -1,0 +1,4 @@
+pr: 104969
+releasenote:
+  text: 'kube-apiserver: Fixes handling of CRD schemas containing literal null values
+    in enums.'

@@ -1,0 +1,7 @@
+pr: 118936
+releasenote:
+  text: 'Dynamic resource allocation: when a claim uses "wait for first consumer"
+    allocation (the default), then it will now get deallocated after it was used by
+    a pod. That ensures that the next pod isn''t affected by previous scheduling decision
+    and that resources are not kept allocated unless really needed. If keeping a claim
+    allocated is desired, use "immediate allocation."'

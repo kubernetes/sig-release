@@ -1,0 +1,5 @@
+pr: 120213
+releasenote:
+  text: |-
+    `scheduler`: handling of unschedulable pods because a `ResourceClass` is missing
+    is a bit more efficient and no longer relies on periodic retries.

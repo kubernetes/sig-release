@@ -1,0 +1,3 @@
+pr: 104185
+releasenote:
+  text: Allow to build kubernetes with a custom `kube-cross` image.

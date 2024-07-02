@@ -1,0 +1,4 @@
+pr: 124464
+releasenote:
+  text: 'kubeadm: Used output/v1alpha3 to print structural output for the commands
+    "kubeadm config images list" and "kubeadm token list".'

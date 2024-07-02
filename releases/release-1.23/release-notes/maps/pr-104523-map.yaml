@@ -1,0 +1,5 @@
+pr: 104523
+releasenote:
+  text: Fixes an issue where an admission webhook can observe a v1 Pod object that
+    does not have the `defaultMode` field set in the injected service account token
+    volume in kube-api-server.

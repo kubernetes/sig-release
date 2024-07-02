@@ -1,0 +1,5 @@
+pr: 115620
+releasenote:
+  text: Fixed missing delete events on informer re-lists to ensure all delete events
+    were correctly emitted and using the latest known object state, so that all event
+    handlers and stores always reflect the actual apiserver state as best as possible

@@ -1,0 +1,3 @@
+pr: 101510
+releasenote:
+  text: Migrate some log messages to structured logging in `pkg/volume/plugins.go`.

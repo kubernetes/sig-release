@@ -1,0 +1,7 @@
+pr: 125528
+releasenote:
+  text: |-
+    Feature gates for PortForward (kubectl port-forward) over WebSockets are now enabled by default (Beta).
+    - "Server-side feature gate: PortForwardWebsocket"
+    - "Client-side (kubectl) feature gate: PORT_FORWARD_WEBSOCKETS environment variable"
+    - "To turn off PortForward over WebSockets for kubectl, the environment variable feature gate must be explicitly set - PORT_FORWARD_WEBSOCKETS=false"

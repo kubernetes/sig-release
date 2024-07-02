@@ -1,0 +1,4 @@
+pr: 110058
+releasenote:
+  text: ManagedFields time is correctly updated when the value of a managed field
+    is modified.

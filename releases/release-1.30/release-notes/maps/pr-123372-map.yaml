@@ -1,0 +1,5 @@
+pr: 123372
+releasenote:
+  text: |
+    "kubeadm: Added support for machine-readable output with `-o yaml` and `-o json` to the command `kubeadm certs check-expiration`. This change is introduced in a new API: ``` kind: CertificateExpirationInfo apiVersion: output.kubeadm.k8s.io/v1alpha3 ``` The existing non-structured formatting is preserved. The output API version v1alpha2 is now deprecated and will be removed in a future release. Please migrate to using v1alpha3."
+pr_body: ""

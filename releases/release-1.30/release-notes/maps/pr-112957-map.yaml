@@ -1,0 +1,5 @@
+pr: 112957
+releasenote:
+  text: |
+    "kubelet allowed specifying a custom root directory for pod logs (instead of the default /var/log/pods) using the `podLogsDir` key in kubelet configuration."
+pr_body: ""

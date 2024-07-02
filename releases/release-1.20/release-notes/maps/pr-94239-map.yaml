@@ -1,0 +1,3 @@
+pr: 94239
+releasenote:
+  text: Add network rule support in Azure account creation.

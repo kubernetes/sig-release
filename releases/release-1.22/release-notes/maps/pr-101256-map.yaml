@@ -1,0 +1,4 @@
+pr: 101256
+releasenote:
+  text: Increased `CSINodeIDMaxLength` from 128 bytes to 192 bytes. Prepare to increase
+    the length limit to 256 bytes in 1.23 release.

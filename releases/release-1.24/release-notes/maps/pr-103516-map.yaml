@@ -1,0 +1,4 @@
+pr: 103516
+releasenote:
+  text: 'kube-apiserver: Subresources such as `status` and `scale` now support tabular
+    output content types.'

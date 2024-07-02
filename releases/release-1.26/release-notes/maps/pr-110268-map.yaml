@@ -1,0 +1,5 @@
+pr: 110268
+releasenote:
+  text: |-
+    'The iptables kube-proxy backend now process service/endpoint changes
+    more efficiently in very large clusters.'

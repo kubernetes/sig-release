@@ -1,0 +1,5 @@
+pr: 123052
+releasenote:
+  text: |
+    "Fixed cleanup of Pod volume mounts when a file was used as a subpath."
+pr_body: ""

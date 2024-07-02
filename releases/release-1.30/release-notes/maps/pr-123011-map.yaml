@@ -1,0 +1,6 @@
+pr: 123011
+releasenote:
+  text: The `--cidr-allocator-type` option set to `CloudAllocator` for `kube-controller-manager`
+    will be deprecated and removed in a future release. Users are advised to transition
+    to and explore the available options provided by their external cloud provider.
+pr_body: ""

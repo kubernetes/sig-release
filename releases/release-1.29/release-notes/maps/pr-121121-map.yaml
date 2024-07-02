@@ -1,0 +1,3 @@
+pr: 121121
+releasenote:
+  text: 'CRI: image pull per runtime class is now supported.'

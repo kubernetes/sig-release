@@ -1,0 +1,6 @@
+pr: 122589
+releasenote:
+  text: Contextual logging is now in beta and enabled by default. Check out the [KEP](https://github.com/kubernetes/enhancements/issues/3077)
+    and [official documentation](https://kubernetes.io/docs/concepts/cluster-administration/system-logs/#contextual-logging)
+    for more details.
+pr_body: ""

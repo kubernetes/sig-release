@@ -1,0 +1,3 @@
+pr: 111033
+releasenote:
+  text: Metric `running_managed_controllers` is enabled for Cloud Node Lifecycle controller.

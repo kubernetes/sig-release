@@ -1,0 +1,5 @@
+pr: 123565
+releasenote:
+  text: |
+    "Accepted zero as a default value for `kubectl create` token duration."
+pr_body: ""

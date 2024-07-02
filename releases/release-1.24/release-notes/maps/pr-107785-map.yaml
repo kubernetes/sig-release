@@ -1,0 +1,4 @@
+pr: 107785
+releasenote:
+  text: 'kubeadm: fixed a bug related to a warning printed if the `KubeletConfiguration`
+    `resolvConf` field value does not match `/run/systemd/resolve/resolv.conf`'

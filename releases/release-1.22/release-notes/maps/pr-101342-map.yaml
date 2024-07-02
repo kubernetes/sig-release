@@ -1,0 +1,5 @@
+pr: 101342
+releasenote:
+  text: The `NamespaceDefaultLabelName` is promoted to GA in this release. All Namespace
+    API objects have a `kubernetes.io/metadata.name` label matching their `metadata.name`
+    field to allow selecting any `namespace` by its name using a label selector.

@@ -1,0 +1,5 @@
+pr: 122032
+releasenote:
+  text: |
+    "The GA feature-gate `APISelfSubjectReview` has been removed, and the feature is unconditionally enabled."
+pr_body: ""

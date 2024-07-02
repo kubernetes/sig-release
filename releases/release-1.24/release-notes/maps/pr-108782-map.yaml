@@ -1,0 +1,5 @@
+pr: 108782
+releasenote:
+  text: The CertificateSigningRequest `spec.expirationSeconds` API field has graduated
+    to GA. The `CSRDuration` feature gate for the field is now unconditionally enabled
+    and will be removed in 1.26.

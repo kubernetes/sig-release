@@ -1,0 +1,4 @@
+pr: 112545
+releasenote:
+  text: API Server tracing root span name for opentelemetry is changed from `KubernetesAPI`
+    to `HTTP GET`.

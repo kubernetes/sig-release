@@ -1,0 +1,4 @@
+pr: 67782
+releasenote:
+  text: The in-tree cloud provider for OpenStack (and the cinder volume provider)
+    has been removed. Please use the external cloud provider and csi driver from [cloud-provider-openstack](https://github.com/kubernetes/cloud-provider-openstack) instead.

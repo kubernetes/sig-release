@@ -1,0 +1,7 @@
+pr: 115143
+releasenote:
+  text: |-
+    Kubelet TCP and HTTP probes are now more effective using networking resources:
+    conntrack entries, sockets. This is achieved by reducing the `TIME-WAIT` state
+    of the connection to 1 second, instead of the defaults 60 seconds. This allows
+    kubelet to free the socket, and free conntrack entry and ephemeral port associated.

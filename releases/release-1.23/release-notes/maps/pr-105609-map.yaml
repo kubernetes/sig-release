@@ -1,0 +1,4 @@
+pr: 105609
+releasenote:
+  text: The "Generic Ephemeral Volume" feature graduates to GA. It is now enabled
+    unconditionally.

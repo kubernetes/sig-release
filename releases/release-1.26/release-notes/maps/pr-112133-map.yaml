@@ -1,0 +1,6 @@
+pr: 112133
+releasenote:
+  text: |
+    In `kube-proxy`: The "userspace" proxy mode (deprecated for over a year) is no
+    longer supported on either Linux or Windows. Users should use "iptables" or "ipvs"
+    on Linux, or "kernelspace" on Windows.

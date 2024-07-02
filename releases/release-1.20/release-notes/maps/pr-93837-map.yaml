@@ -1,0 +1,3 @@
+pr: 93837
+releasenote:
+  text: Add fine grained debugging to intra-pod conformance test to troubleshoot networking issues for potentially unhealthy nodes when running conformance or sonobuoy tests.

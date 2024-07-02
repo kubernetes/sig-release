@@ -1,0 +1,4 @@
+pr: 108772
+releasenote:
+  text: 'bug: client-go clientset was not defaulting to the user agent, and was using
+    the default golang agent for all the requests.'

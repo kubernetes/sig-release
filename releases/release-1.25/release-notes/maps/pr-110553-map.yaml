@@ -1,0 +1,5 @@
+pr: 110553
+releasenote:
+  text: 'Kubeadm: Added support for additional authentication strategies in `kubeadm
+    join` with discovery/kubeconfig file: client-go authentication plugins (`exec`),
+    `tokenFile`, and `authProvider.`'

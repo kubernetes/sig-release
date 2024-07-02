@@ -1,0 +1,4 @@
+pr: 97686
+releasenote:
+  text: 'Kubectl logs: `--ignore-errors` is now honored by all containers, maintaining
+    consistency with parallelConsumeRequest behavior.'

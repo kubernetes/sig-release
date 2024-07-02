@@ -1,0 +1,5 @@
+pr: 123272
+releasenote:
+  text: |
+    "cri-api: Implemented KEP-3857: Recursive Read-only (RRO) mounts."
+pr_body: ""

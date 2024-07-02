@@ -1,0 +1,7 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - release-team
+  - release-team-lead-role
+labels:
+  - area/release-team

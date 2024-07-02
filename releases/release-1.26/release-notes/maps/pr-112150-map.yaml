@@ -1,0 +1,3 @@
+pr: 112150
+releasenote:
+  text: Improved `kubectl` display of invalid request errors returned by the API server.

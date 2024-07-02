@@ -1,0 +1,9 @@
+pr: 101028
+releasenote:
+  text: Fixed bug with leads to Node goes `Not-ready` state when credentials for vCenter
+    stored in a secret and Zones feature is in use. Zone labels setup moved to KCM
+    component, kubelet skips this step during startup in such case. If credentials
+    stored in cloud-provider config file as plaintext current behaviour does not change
+    and no action required. For proper functioning `kube-system:vsphere-legacy-cloud-provider`
+    should be allowed to update node object if vCenter credentials stored in secret
+    and Zone feature used.

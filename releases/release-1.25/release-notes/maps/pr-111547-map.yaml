@@ -1,0 +1,3 @@
+pr: 111547
+releasenote:
+  text: The kube-scheduler ComponentConfig v1beta2 is deprecated in v1.25.

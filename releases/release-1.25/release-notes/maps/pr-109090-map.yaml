@@ -1,0 +1,6 @@
+pr: 109090
+releasenote:
+  text: |-
+    Introduced NodeIPAM support for multiple ClusterCIDRs ([#2593](https://github.com/kubernetes/enhancements/issues/2593)) as an alpha feature.
+    Set feature gate `MultiCIDRRangeAllocator=true`, determines whether the `MultiCIDRRangeAllocator` controller can be used, while the kube-controller-manager flag below will pick the active controller.
+    Enabled the `MultiCIDRRangeAllocator` by setting `--cidr-allocator-type=MultiCIDRRangeAllocator` flag in kube-controller-manager.

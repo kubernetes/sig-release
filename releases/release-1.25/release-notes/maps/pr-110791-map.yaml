@@ -1,0 +1,4 @@
+pr: 110791
+releasenote:
+  text: 'kubeadm: a bug was fixed due to which configurable `KubernetesVersion` was
+    not being respected during kubeadm join.'

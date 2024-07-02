@@ -1,0 +1,3 @@
+pr: 100635
+releasenote:
+  text: Run etcd as non-root on GCE provider

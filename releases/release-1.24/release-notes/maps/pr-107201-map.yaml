@@ -1,0 +1,4 @@
+pr: 107201
+releasenote:
+  text: 'kubelet: add `kubelet_volume_metric_collection_duration_seconds` metrics
+    for volume disk usage calculation duration'

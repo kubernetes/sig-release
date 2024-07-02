@@ -1,0 +1,3 @@
+pr: 102159
+releasenote:
+  text: The `v1.Node` and `.status.images[].names` are  now optional.

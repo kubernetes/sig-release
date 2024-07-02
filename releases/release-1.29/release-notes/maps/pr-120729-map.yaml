@@ -1,0 +1,4 @@
+pr: 120729
+releasenote:
+  text: '`client-go`: `k8s.io/client-go/tools` events and record packages now have new
+    APIs for specifying a context and logger.'

@@ -1,0 +1,3 @@
+pr: 98077
+releasenote:
+  text: NetworkPolicy validation framework support for windows.

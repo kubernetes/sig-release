@@ -1,0 +1,4 @@
+pr: 116065
+releasenote:
+  text: The `matchLabelKeys/mismatchLabelKeys` feature is introduced to the hard/soft
+    `PodAffinity/PodAntiAffinity`.

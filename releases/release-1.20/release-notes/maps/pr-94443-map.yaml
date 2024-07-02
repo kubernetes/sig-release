@@ -1,0 +1,3 @@
+pr: 94443
+releasenote:
+  text: Endpoint slice controller now mirrors parent's service label to its corresponding endpoint slices.

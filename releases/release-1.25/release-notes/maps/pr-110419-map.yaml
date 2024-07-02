@@ -1,0 +1,3 @@
+pr: 110419
+releasenote:
+  text: Graduated `ServiceIPStaticSubrange` feature to Beta (disabled by default).

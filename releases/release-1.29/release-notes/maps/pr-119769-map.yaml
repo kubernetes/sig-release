@@ -1,0 +1,4 @@
+pr: 119769
+releasenote:
+  text: Fixed a `1.27` scheduling regression that `PostFilter` plugin may not function
+    if previous `PreFilter` plugins return `Skip`.

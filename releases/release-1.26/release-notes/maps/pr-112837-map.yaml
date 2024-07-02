@@ -1,0 +1,4 @@
+pr: 112837
+releasenote:
+  text: Fixed an issue in `winkernel` proxier that causes proxy rules to leak anytime
+    service backends are modified.

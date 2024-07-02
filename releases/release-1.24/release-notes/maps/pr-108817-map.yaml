@@ -1,0 +1,3 @@
+pr: 108817
+releasenote:
+  text: '`kubectl version` now includes information on the embedded version of Kustomize'

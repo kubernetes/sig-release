@@ -1,0 +1,4 @@
+pr: 108631
+releasenote:
+  text: 'kube-apiserver: removed `apf_fd` from server logs which could contain data
+    identifying the requesting user'

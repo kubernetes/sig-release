@@ -1,0 +1,3 @@
+pr: 124598
+releasenote:
+  text: kubectl describe service and ingress will now use endpointslices instead of

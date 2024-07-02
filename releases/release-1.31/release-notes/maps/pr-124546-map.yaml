@@ -1,0 +1,8 @@
+pr: 124546
+releasenote:
+  text: CephRBD volume plugin ( `kubernetes.io/rbd`) was removed in this release.
+    And its csi migration support was also removed, so the `rbd` volume type became
+    non-functional. Alternative is to use RBD CSI driver (https://github.com/ceph/ceph-csi/)
+    in your Kubernetes Cluster. A re-deployment of your application is required to
+    use the new driver if you were using `kubernetes.io/rbd` volume plugin before
+    upgrading cluster version to 1.31+.

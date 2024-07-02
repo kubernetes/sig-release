@@ -1,0 +1,6 @@
+pr: 104664
+releasenote:
+  text: The test "[sig-network] EndpointSlice should have Endpoints and EndpointSlices
+    pointing to API Server [Conformance]" only requires that there is an EndpointSlice
+    that references the "kubernetes.default" service, it no longer requires that its
+    named "kubernetes".

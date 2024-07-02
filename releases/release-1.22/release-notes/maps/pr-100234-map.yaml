@@ -1,0 +1,4 @@
+pr: 100234
+releasenote:
+  text: 'kubeadm: Set the `seccompProfile` to `runtime/default` in the `PodSecurityContext`
+    of the control-plane components that run as static Pods.'

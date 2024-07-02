@@ -1,0 +1,5 @@
+pr: 110256
+releasenote:
+  text: Fixed a kubelet issue that could result in invalid pod status updates to be
+    sent to the api-server where pods would be reported in a terminal phase but also
+    report a ready condition of true in some cases.

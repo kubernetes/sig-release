@@ -1,0 +1,4 @@
+pr: 114699
+releasenote:
+  text: "scheduling cycle now terminates immediately when any scheduler plugin returns
+    an \n`unschedulableAndUnresolvable` status in `PostFilter`."

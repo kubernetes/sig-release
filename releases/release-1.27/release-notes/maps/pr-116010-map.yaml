@@ -1,0 +1,5 @@
+pr: 116010
+releasenote:
+  text: 'HPA controller starts to expose metrics from the kube-controller-manager.\n-
+    `reconciliations_total`: Number of reconciliation of HPA controller. \n- `reconciliation_duration_seconds`:
+    The time(seconds) that the HPA controller takes to reconcile once.'

@@ -1,0 +1,3 @@
+pr: 107142
+releasenote:
+  text: '`kubectl config delete-user` now supports completion'

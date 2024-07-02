@@ -1,0 +1,4 @@
+pr: 116219
+releasenote:
+  text: '`kube-controller-manager`: fixed a bug that the `kubeconfig` field of `kubecontrollermanager.config.k8s.io`
+    configuration is not populated correctly'

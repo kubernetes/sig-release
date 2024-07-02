@@ -1,0 +1,4 @@
+pr: 104466
+releasenote:
+  text: Fixes a regression that could cause panics in LRU caches in controller-manager,
+    kubelet, kube-apiserver, or client-go.

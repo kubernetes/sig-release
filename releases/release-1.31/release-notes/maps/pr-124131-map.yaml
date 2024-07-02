@@ -1,0 +1,4 @@
+pr: 124131
+releasenote:
+  text: Endpointslices mirrored from Endpoints by the EndpointSliceMirroring controller
+    were not reconciled if modified.

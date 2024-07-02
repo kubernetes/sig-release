@@ -1,0 +1,3 @@
+pr: 125113
+releasenote:
+  text: Updated CNI Plugins to v1.5.0.

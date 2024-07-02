@@ -1,0 +1,3 @@
+pr: 108748
+releasenote:
+  text: fixed `--retries` functionality for negative values in `kubectl cp`

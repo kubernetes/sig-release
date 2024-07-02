@@ -1,0 +1,3 @@
+pr: 111061
+releasenote:
+  text: Made usage of key encipherment optional in API validation.

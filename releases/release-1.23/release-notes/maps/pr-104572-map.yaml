@@ -1,0 +1,3 @@
+pr: 104572
+releasenote:
+  text: Fix detach disk issue on deleting vmss node.

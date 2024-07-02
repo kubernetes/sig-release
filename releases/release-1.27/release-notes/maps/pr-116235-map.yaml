@@ -1,0 +1,3 @@
+pr: 116235
+releasenote:
+  text: 'Promoted `OpenAPIV3` to GA'

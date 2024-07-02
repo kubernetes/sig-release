@@ -1,0 +1,4 @@
+pr: 125040
+releasenote:
+  text: Fixed an issue where kubelet on Windows would fail if a pod had a SecurityContext
+    with `RunAsUser`.

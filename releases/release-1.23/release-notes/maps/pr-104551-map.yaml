@@ -1,0 +1,3 @@
+pr: 104551
+releasenote:
+  text: Fixes hostPath storage E2E tests within SELinux enabled env

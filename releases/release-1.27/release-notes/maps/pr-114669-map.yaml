@@ -1,0 +1,5 @@
+pr: 114669
+releasenote:
+  text: |-
+    `kube-proxy` with `--proxy-mode=ipvs` can be used with statically linked kernels.
+    The reseved IPv4 range `TEST-NET-2` in `rfc5737` MUST NOT be used for `ClusterIP` or `loadBalancerIP` since address `198.51.100.0` is used for probing.

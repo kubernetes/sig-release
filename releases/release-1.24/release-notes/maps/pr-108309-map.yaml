@@ -1,0 +1,8 @@
+pr: 108309
+releasenote:
+  text: The `LegacyServiceAccountTokenNoAutoGeneration` feature gate is beta, and
+    enabled by default. When enabled, Secret API objects containing service account
+    tokens are no longer auto-generated for every ServiceAccount. Use the [TokenRequest](https://kubernetes.io/docs/reference/kubernetes-api/authentication-resources/token-request-v1/)
+    API to acquire service account tokens, or if a non-expiring token is required,
+    create a Secret API object for the token controller to populate with a service
+    account token by following this [guide](https://kubernetes.io/docs/concepts/configuration/secret/#service-account-token-secrets).

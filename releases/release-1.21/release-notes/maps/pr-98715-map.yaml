@@ -1,0 +1,4 @@
+pr: 98715
+releasenote:
+  text: Truncates a message if it hits the `NoteLengthLimit` when the scheduler records
+    an event for the pod that indicates the pod has failed to schedule.

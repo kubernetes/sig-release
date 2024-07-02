@@ -1,0 +1,4 @@
+pr: 124075
+releasenote:
+  text: 'DRA: client-side validation of a ResourceHandle would have accepted a missing
+    DriverName, whereas server-side validation then would have raised an error.'

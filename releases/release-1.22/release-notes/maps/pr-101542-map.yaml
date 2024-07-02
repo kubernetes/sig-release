@@ -1,0 +1,6 @@
+pr: 101542
+releasenote:
+  text: Scheduler's CycleState now embeds internal read/write locking inside its `Read()`
+    and `Write()` functions. Meanwhile, `Lock()` and `Unlock()` function are removed. Scheduler
+    plugin developers are now required to remove `CycleState#Lock()` and `CycleState#Unlock()`.
+    Just simply use `Read()` and `Write()` as they're natively thread-safe now.

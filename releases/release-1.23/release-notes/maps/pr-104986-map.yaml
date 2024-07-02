@@ -1,0 +1,5 @@
+pr: 104986
+releasenote:
+  text: Headless Services with no selector which were created without dual-stack enabled
+    will be defaulted to RequireDualStack instead of PreferDualStack.  This is consistent
+    with such Services which are created with dual-stack enabled.

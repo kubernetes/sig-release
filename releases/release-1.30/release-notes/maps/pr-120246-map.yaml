@@ -1,0 +1,5 @@
+pr: 120246
+releasenote:
+  text: |
+    "kubectl: Removed the deprecated flag `prune-whitelist` for apply. Please use the flag `prune-allowlist` instead."
+pr_body: ""

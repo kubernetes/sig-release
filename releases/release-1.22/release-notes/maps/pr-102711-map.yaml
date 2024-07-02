@@ -1,0 +1,4 @@
+pr: 102711
+releasenote:
+  text: The "Leader Migration" now support a wildcard component name and the default
+    value.

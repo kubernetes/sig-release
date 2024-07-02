@@ -1,0 +1,5 @@
+pr: 114889
+releasenote:
+  text: |-
+    Scheduler now skips `InterPodAffinity` Filter plugin when `InterPodAffinity` Filter plugin has nothing to do with a Pod.
+    It may affect some metrics values related to the `InterPodAffinity` Filter plugin.

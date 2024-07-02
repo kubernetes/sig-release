@@ -1,0 +1,4 @@
+pr: 122874
+releasenote:
+  text: Fixed node lifecycle controller panic when conditionType ready is been patch
+    `nil` by mistake.

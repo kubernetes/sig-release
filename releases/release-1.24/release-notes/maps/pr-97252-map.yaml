@@ -1,0 +1,7 @@
+pr: 97252
+releasenote:
+  text: Docker runtime support using dockershim in the kubelet is now completely removed
+    in 1.24. The kubelet used to have a module called dockershim, which implements
+    CRI support for Docker, and it has seen maintenance issues in the Kubernetes community.
+    From 1.24 onwards, please move to a container runtime that is a full-fledged implementation
+    of CRI (v1alpha1 or v1 compliant) as they become available.

@@ -1,0 +1,3 @@
+pr: 116529
+releasenote:
+  text: Migrated the main kube-controller-manager binary to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).

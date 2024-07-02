@@ -1,0 +1,6 @@
+pr: 103244
+releasenote:
+  text: The CSI driver supports the NodeServiceCapability `VOLUME_MOUNT_GROUP` and
+    the `DelegateFSGroupToCSIDriver` feature gate is enabled, kubelet will delegate
+    applying FSGroup to the driver by passing it to `NodeStageVolume` and `NodePublishVolume`,
+    regardless of what other `FSGroup` policies are set, this is an alpha feature.

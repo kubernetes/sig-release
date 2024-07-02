@@ -1,0 +1,3 @@
+pr: 116752
+releasenote:
+  text: Changed `kubectl help` to display basic details for subcommands from plugins.

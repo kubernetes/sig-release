@@ -1,0 +1,3 @@
+pr: 93626
+releasenote:
+  text: Remove support for "ci/k8s-master" version label in kubeadm, use "ci/latest" instead. See kubernetes/test-infra&#35;18517.

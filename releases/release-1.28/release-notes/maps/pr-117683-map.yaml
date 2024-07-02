@@ -1,0 +1,5 @@
+pr: 117683
+releasenote:
+  text: |-
+    The scheduler skips the `PodTopologySpread` Filter plugin if no spread constraints.
+    It will affect some metrics values related to the `PodTopologySpread` Filter plugin.

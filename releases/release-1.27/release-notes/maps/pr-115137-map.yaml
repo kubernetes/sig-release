@@ -1,0 +1,4 @@
+pr: 115137
+releasenote:
+  text: Added `kubelet` Topology Manager metrics to track admission requests processed
+    and occured admission errors.

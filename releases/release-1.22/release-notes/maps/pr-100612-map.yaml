@@ -1,0 +1,3 @@
+pr: 100612
+releasenote:
+  text: 'Upgrading etcd: `kubeadm` upgrade etcd to 3.4.13-3'

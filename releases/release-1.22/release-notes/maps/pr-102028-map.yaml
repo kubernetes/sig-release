@@ -1,0 +1,4 @@
+pr: 102028
+releasenote:
+  text: Adds the `ReadWriteOncePod` access mode for `PersistentVolumes` and `PersistentVolumeClaims`.
+    Restricts volume access to a single pod on a single node.

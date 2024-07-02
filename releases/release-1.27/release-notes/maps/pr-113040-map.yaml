@@ -1,0 +1,4 @@
+pr: 113040
+releasenote:
+  text: Changed the error message of `kubectl rollout restart` when subsequent `kubectl
+    rollout restart` commands are executed within a second

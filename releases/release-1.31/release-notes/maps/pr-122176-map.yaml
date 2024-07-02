@@ -1,0 +1,4 @@
+pr: 122176
+releasenote:
+  text: 'kube-apiserver: Added support to disable http/2 serving with a `--disable-http2-serving`
+    flag.'

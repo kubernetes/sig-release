@@ -1,0 +1,4 @@
+pr: 120731
+releasenote:
+  text: Fixed the issue where pod with ordinal number lower than the rolling partitioning
+    number was being deleted. It was coming up with updated image.

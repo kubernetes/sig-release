@@ -1,0 +1,5 @@
+pr: 122271
+releasenote:
+  text: |
+    "Updated cri-tools to `v1.29.0`."
+pr_body: ""

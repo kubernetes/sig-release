@@ -1,0 +1,4 @@
+pr: 102059
+releasenote:
+  text: Fixed very rare volume corruption when a pod is deleted while kubelet is
+    offline.

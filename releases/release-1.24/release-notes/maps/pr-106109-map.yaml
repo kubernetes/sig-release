@@ -1,0 +1,3 @@
+pr: 106109
+releasenote:
+  text: Migrate statefulset files to structured logging

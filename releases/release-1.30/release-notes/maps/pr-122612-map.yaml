@@ -1,0 +1,5 @@
+pr: 122612
+releasenote:
+  text: |
+    Removed the `SecurityContextDeny` admission plugin, deprecated since v1.27. The [Pod Security Admission](https://k8s.io/docs/concepts/security/pod-security-admission/) plugin, available since v1.25, is recommended instead.
+pr_body: ""

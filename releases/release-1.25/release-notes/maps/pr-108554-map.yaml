@@ -1,0 +1,3 @@
+pr: 108554
+releasenote:
+  text: Added a deprecated warning for node beta label usage in PV/SC/RC and CSI Storage Capacity.

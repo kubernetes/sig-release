@@ -1,0 +1,6 @@
+pr: 111194
+releasenote:
+  text: Promoted DaemonSet MaxSurge to GA. This means `--feature-gates=DaemonSetUpdateSurge=true`
+    are not needed on kube-apiserver and kube-controller-manager binaries and they'll
+    be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation
+    .

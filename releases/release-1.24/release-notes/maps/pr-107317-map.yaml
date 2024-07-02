@@ -1,0 +1,8 @@
+pr: 107317
+releasenote:
+  text: |-
+    kubeadm: default the kubeadm configuration to the containerd socket (Unix: `unix:///var/run/containerd/containerd.sock`, Windows: `npipe:////./pipe/containerd-containerd`) instead of the one for Docker. If the `Init|JoinConfiguration.nodeRegistration.criSocket` field is empty during cluster creation and multiple sockets are found on the host always throw an error and ask the user to specify which one to use by setting the value in the field. Make sure you update any kubeadm configuration files on disk, to not include the dockershim socket unless you are still using kubelet version < 1.24 with kubeadm >= 1.24.
+
+    Remove the DockerValidor and ServiceCheck for the `docker` service from kubeadm preflight. Docker is no longer special cased during host validation and ideally this task should be done in the now external cri-dockerd project where the importance of the compatibility matters.
+
+    Use `crictl` for all communication with CRI sockets for actions like pulling images and obtaining a list of running containers instead of using the docker CLI in the case of Docker.

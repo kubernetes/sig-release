@@ -1,0 +1,4 @@
+pr: 106661
+releasenote:
+  text: 'kube-apiserver: Server Side Apply merge order is reverted to match v1.22
+    behavior until `http://issue.k8s.io/104641` is resolved.'

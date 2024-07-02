@@ -1,0 +1,7 @@
+pr: 120018
+releasenote:
+  text: |-
+    `ValidatingAdmissionPolicy` and `ValidatingAdmissionPolicyBinding` objects are
+    persisted in `etcd` using the `v1beta1` version. Either remove alpha objects, or disable the
+    alpha `ValidatingAdmissionPolicy` feature in a `v1.27` server before upgrading to a
+    `v1.28` server with the beta feature and API enabled.

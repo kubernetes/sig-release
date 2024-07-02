@@ -1,0 +1,7 @@
+pr: 112008
+releasenote:
+  text: 'kubeadm: removed the toleration for the `node-role.kubernetes.io/master`
+    taint from the CoreDNS deployment of `kubeadm`. With the 1.25 release of kubeadm
+    the taint `node-role.kubernetes.io/master` is no longer applied to control plane
+    nodes and the toleration for it can be removed with the release of 1.26. You can
+    also perform the same toleration removal from your own addon manifests.'

@@ -1,0 +1,6 @@
+pr: 116252
+releasenote:
+  text: Creation of new `CronJob` objects containing `TZ` or `CRON_TZ` in `.spec.schedule`,
+    accidentally enabled in `v1.22`, is now disallowed. Use the `.spec.timeZone` field
+    instead, supported in `v1.25+` clusters in default configurations. See https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#unsupported-timezone-specification
+    for more information.

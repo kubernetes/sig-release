@@ -1,0 +1,4 @@
+pr: 100488
+releasenote:
+  text: The etcd client has been updated to 3.5.0; `github.com/golang/protobuf`, `google.golang.org/protobuf`,
+    and `google.golang.org/grpc` have been updated to current versions.

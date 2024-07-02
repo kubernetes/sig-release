@@ -1,0 +1,3 @@
+pr: 101080
+releasenote:
+  text: The `PodDeletionCost` feature has been promoted to beta, and enabled by default.

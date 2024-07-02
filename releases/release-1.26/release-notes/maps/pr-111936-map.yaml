@@ -1,0 +1,6 @@
+pr: 111936
+releasenote:
+  text: Protobuf serialization of metav1.MicroTime timestamps (used in `Lease` and
+    `Event` API objects) has been corrected to truncate to microsecond precision,
+    to match the documented behavior and JSON/YAML serialization. Any existing persisted
+    data is truncated to microsecond when read from etcd.

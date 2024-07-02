@@ -1,0 +1,7 @@
+pr: 112011
+releasenote:
+  text: |
+    'Added selector validation to `HorizontalPodAutoscaler`: when multiple HPAs
+    select the same set of Pods, scaling now will be disabled for those HPAs with
+    the reason `AmbiguousSelector`. This change also covers a case when multiple HPAs
+    point to the same deployment.'

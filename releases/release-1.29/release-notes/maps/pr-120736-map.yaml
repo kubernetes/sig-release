@@ -1,0 +1,7 @@
+pr: 120736
+releasenote:
+  text: |-
+    Fixed an issue where the `vsphere` cloud provider would not trust a certificate if:
+    - The issuer of the certificate was unknown (`x509.UnknownAuthorityError`)
+    - The requested name did not match the set of authorized names (`x509.HostnameError`)
+    - The error surfaced after attempting a connection contained one of the substrings: "certificate is not trusted" or "certificate signed by unknown authority".

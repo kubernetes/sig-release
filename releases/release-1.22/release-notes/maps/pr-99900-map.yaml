@@ -1,0 +1,3 @@
+pr: 99900
+releasenote:
+  text: Remove deprecated `--generator` flag from `kubectl autoscale`.

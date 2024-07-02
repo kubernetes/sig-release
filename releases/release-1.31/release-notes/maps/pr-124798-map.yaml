@@ -1,0 +1,6 @@
+pr: 124798
+releasenote:
+  text: |-
+    Do not remove the "batch.kubernetes.io/job-tracking" finalizer from a Pod, in a corner
+    case scenario, where the Pod is controlled by an API object that is not a batch Job 
+    (e.g. when the Pod is controlled by a custom CRD).

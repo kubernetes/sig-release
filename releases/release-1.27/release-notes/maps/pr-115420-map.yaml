@@ -1,0 +1,5 @@
+pr: 115420
+releasenote:
+  text: File content check for IPV4 is now enabled by default, and the check of IPV4
+    or IPV6 is done for `kubeadm init` or `kubeadm join` only in case the user intends
+    to create a cluster to support that kind of IP address family

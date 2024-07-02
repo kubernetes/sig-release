@@ -1,0 +1,6 @@
+pr: 114516
+releasenote:
+  text: Fixed an issue where failed pods associated with a job with `parallelism =
+    1` are recreated by the job controller honoring exponential backoff delay again.
+    However, for jobs with `parallelism > 1`, pods might be created without exponential
+    backoff delay.

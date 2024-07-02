@@ -1,0 +1,3 @@
+pr: 108059
+releasenote:
+  text: '[k8s.io/utils/clock]: IntervalClock is now deprecated in favour of SimpleIntervalClock'

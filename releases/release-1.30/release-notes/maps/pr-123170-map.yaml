@@ -1,0 +1,5 @@
+pr: 123170
+releasenote:
+  text: |
+    "Updated `distroless-iptables` to `v0.5.0`, debian-base to `bookworm-v1.0.1`, and setcap to `bookworm-v1.0.1`."
+pr_body: ""

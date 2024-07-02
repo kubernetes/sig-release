@@ -1,0 +1,4 @@
+pr: 120269
+releasenote:
+  text: Fixed a bug around restarting init containers in the right order relative
+    to normal containers with `SidecarContainers` feature enabled.

@@ -1,0 +1,3 @@
+pr: 98839
+releasenote:
+  text: 'kubeadm: fix bad token placeholder text in `config print *-defaults --help`'

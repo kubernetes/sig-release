@@ -1,0 +1,4 @@
+pr: 113284
+releasenote:
+  text: kubectl will now display `SeccompProfile` for pods, containers and ephemeral
+    containers, if values were set.

@@ -1,0 +1,9 @@
+pr: 120825
+releasenote:
+  text: '`kubeadm`: will now allow deploying a kubelet that is 3 versions older than the
+    version of `kubeadm` (N-3). This aligns with the recent change made by SIG Architecture
+    that extends the support skew between the control plane and kubelets. Tolerate
+    this new kubelet skew for the commands `init`, `join` and `upgrade`. Note that
+    if the `kubeadm` user applies a control plane version that is older than the `kubeadm`
+    version (N-1 maximum) then the skew between the kubelet and control plane would
+    become a maximum of N-2.'

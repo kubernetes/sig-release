@@ -1,0 +1,4 @@
+pr: 120954
+releasenote:
+  text: Added the `DisableNodeKubeProxyVersion` feature gate. If `DisableNodeKubeProxyVersion`
+    is enabled, the `kubeProxyVersion` field is not set.

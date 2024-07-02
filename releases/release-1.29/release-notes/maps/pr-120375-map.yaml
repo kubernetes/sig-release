@@ -1,0 +1,3 @@
+pr: 120375
+releasenote:
+  text: Fixed `kube-proxy` panicking on exit when the `Node` object changed its `PodCIDR`.

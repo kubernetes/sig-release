@@ -1,0 +1,5 @@
+pr: 114445
+releasenote:
+  text: |-
+    `MinDomainsInPodTopologySpread` feature gate is enabled by default as a
+    Beta feature in 1.27.

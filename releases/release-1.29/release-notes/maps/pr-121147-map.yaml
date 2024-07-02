@@ -1,0 +1,4 @@
+pr: 121147
+releasenote:
+  text: 'Fixed panic in Job controller when `podRecreationPolicy: Failed` is used,
+    and the number of terminating pods exceeds parallelism.'

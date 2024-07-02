@@ -1,0 +1,4 @@
+pr: 91592
+releasenote:
+  text: NetworkPolicy validation framework optimizations for rapidly verifying CNIs
+    work correctly across several pods and namespaces

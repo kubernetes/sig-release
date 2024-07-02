@@ -1,0 +1,3 @@
+pr: 123822
+releasenote:
+  text: Fixed a missing status prefix in custom resource validation error messages.

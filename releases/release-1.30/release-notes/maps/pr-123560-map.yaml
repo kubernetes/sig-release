@@ -1,0 +1,5 @@
+pr: 123560
+releasenote:
+  text: |
+    "Promoted `AdmissionWebhookMatchConditions` to GA. The feature is now stable, and the feature gate is now locked to default."
+pr_body: ""

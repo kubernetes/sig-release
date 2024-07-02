@@ -1,0 +1,4 @@
+pr: 119592
+releasenote:
+  text: The `Dockerfile` for the kubectl image has been updated with the addition
+    of a specific base image and essential utilities (bash and jq).

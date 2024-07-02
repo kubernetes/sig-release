@@ -1,0 +1,5 @@
+pr: 121958
+releasenote:
+  text: |
+    "kubeadm: improved the overall logic, error handling, and output messages when waiting for the kubelet and API server `/healthz` endpoints to return `OK`. The kubelet and API server checks no longer ran in parallel, but one after another (in serial)."
+pr_body: ""

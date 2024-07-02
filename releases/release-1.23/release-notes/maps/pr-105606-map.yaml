@@ -1,0 +1,3 @@
+pr: 105606
+releasenote:
+  text: 'kube-apiserver: fix a memory leak when deleting multiple objects with a `deletecollection`.'

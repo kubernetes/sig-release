@@ -1,0 +1,13 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - onlydole              # Release Team Lead
+  - tpepper               # Emeritus Adviser
+
+reviewers:
+  - palnabarun            # Enhancements
+  - hasheddan             # CI Signal
+  - gianarb               # Bug Triage
+  - savitharaghunathan    # Docs
+  - puerco                # Release Notes
+  - mkorbi                # Communications

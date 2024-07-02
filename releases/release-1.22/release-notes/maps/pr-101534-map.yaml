@@ -1,0 +1,4 @@
+pr: 101534
+releasenote:
+  text: Newly provisioned PVs by Azure disk will no longer have the beta `FailureDomain`
+    label. Azure disk volume plugin will start to have GA topology label instead.

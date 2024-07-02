@@ -1,0 +1,10 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - tpepper # RT Lead
+reviewers:
+  - justaugustus
+  - marpaia
+  # - nickchase (release notes lead)
+emeritus_approvers:
+  - AishSundar # RT Lead Shadow

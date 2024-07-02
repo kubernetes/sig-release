@@ -1,0 +1,5 @@
+pr: 102873
+releasenote:
+  text: Deprecate `--record` flag in `kubectl`. The `--record` flag is being replaced
+    with the [mechanism](https://github.com/kubernetes/enhancements/tree/master/keps/sig-cli/859-kubectl-headers)
+    which annotates HTTP requests with kubectl command details.

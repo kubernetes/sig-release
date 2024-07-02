@@ -1,0 +1,4 @@
+pr: 108315
+releasenote:
+  text: 'kubeadm: better surface errors during `kubeadm upgrade` when waiting for
+    the kubelet to restart static pods on control plane nodes'

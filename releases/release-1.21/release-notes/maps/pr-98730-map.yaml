@@ -1,0 +1,4 @@
+pr: 98730
+releasenote:
+  text: Kubelet command line flags related to dockershim are now showing deprecation 
+    message as they will be removed along with dockershim in future release.

@@ -1,0 +1,4 @@
+pr: 124886
+releasenote:
+  text: Legacy cloud provider integration code was removed (undoing a previous reverted
+    commit)

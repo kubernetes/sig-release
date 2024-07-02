@@ -1,0 +1,4 @@
+pr: 111206
+releasenote:
+  text: 'scheduler: included supported ScoringStrategyType list in error message for
+    NodeResourcesFit plugin'

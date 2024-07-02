@@ -1,0 +1,3 @@
+pr: 113496
+releasenote:
+  text: Graduated `ServiceInternalTrafficPolicy` feature to GA.

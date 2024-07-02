@@ -1,0 +1,4 @@
+pr: 118812
+releasenote:
+  text: Replaced `apiserver_storage_db_total_size_in_bytes` with `apiserver_storage_size_bytes`
+    metric.

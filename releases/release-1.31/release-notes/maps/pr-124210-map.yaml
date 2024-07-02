@@ -1,0 +1,5 @@
+pr: 124210
+releasenote:
+  text: The feature gate "SkipReadOnlyValidationGCE" has been removed.  This gate
+    has been active for "2" releases with no reports of issues (and was such a niche
+    thing, we didn't expect any).

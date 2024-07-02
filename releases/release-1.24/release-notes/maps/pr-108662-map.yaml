@@ -1,0 +1,3 @@
+pr: 108662
+releasenote:
+  text: Fix to allow `fsGroup` to be applied for CSI Inline Volumes

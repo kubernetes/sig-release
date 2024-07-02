@@ -1,0 +1,4 @@
+pr: 125175
+releasenote:
+  text: status.terminating field now gets tracked faster when active Pods are deleted,
+    specifically when Job is failed, gets suspended, or has too many active pods.

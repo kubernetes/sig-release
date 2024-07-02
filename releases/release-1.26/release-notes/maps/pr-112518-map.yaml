@@ -1,0 +1,4 @@
+pr: 112518
+releasenote:
+  text: fixed code to ensure that pods running on nodes tainted with `NoExecute` continue
+    to run when the `PodDisruptionConditions` feature gate is enabled.

@@ -1,0 +1,7 @@
+pr: 96684
+releasenote:
+  text: The `Service.spec.ipFamilyPolicy` field is now *required* in order to create
+    or update a Service as dual-stack.  This is a breaking change from the beta behavior.  Previously
+    the server would try to infer the value of that field from either `ipFamilies`
+    or `clusterIPs`, but that caused ambiguity on updates.  Users who want a dual-stack
+    Service MUST specify `ipFamilyPolicy` as either "PreferDualStack" or "RequireDualStack".

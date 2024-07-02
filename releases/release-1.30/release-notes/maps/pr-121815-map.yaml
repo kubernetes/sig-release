@@ -1,0 +1,5 @@
+pr: 121815
+releasenote:
+  text: |
+    "Made decoding etcd's response respect the timeout context."
+pr_body: ""

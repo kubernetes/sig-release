@@ -1,0 +1,5 @@
+pr: 122498
+releasenote:
+  text: |
+    "Allowed scheduling framework plugins that implement `io.Closer` to be gracefully closed."
+pr_body: ""

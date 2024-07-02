@@ -1,0 +1,3 @@
+pr: 109141
+releasenote:
+  text: Default burst limit for the discovery client set to 300.

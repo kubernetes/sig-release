@@ -1,0 +1,4 @@
+pr: 114953
+releasenote:
+  text: The `CSIMigrationAzureFile` feature gate (for the feature which graduated
+    to GA in v1.26) is now unconditionally enabled and will be removed in v1.28.

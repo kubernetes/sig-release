@@ -1,0 +1,4 @@
+pr: 124496
+releasenote:
+  text: 'kubeadm: Removed the deprecated output.kubeadm.k8s.io/v1alpha2 API for structured
+    output. Please use v1alpha3 instead.'

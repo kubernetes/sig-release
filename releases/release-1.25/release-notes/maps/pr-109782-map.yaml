@@ -1,0 +1,4 @@
+pr: 109782
+releasenote:
+  text: The kube-proxy `sync_proxy_rules_no_endpoints_total` metric now only counts
+    local-traffic-policy services which have remote endpoints but not local endpoints.

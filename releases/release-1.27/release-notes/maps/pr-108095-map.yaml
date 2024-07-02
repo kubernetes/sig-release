@@ -1,0 +1,3 @@
+pr: 108095
+releasenote:
+  text: Fixed Route controller to update routes when NodeIP changes

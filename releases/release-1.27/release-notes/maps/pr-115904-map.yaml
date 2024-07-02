@@ -1,0 +1,3 @@
+pr: 115904
+releasenote:
+  text: Promoted `CronJobTimeZone` feature to GA

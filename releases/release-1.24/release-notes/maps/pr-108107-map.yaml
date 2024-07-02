@@ -1,0 +1,6 @@
+pr: 108107
+releasenote:
+  text: The kubelet no longer forcefully closes active connections on heartbeat failures,
+    using the HTTP2 health check mechanism to detect broken connections. Users can
+    force the previous behavior of the kubelet by setting the environment variable
+    DISABLE_HTTP2.

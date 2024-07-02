@@ -1,0 +1,3 @@
+pr: 118759
+releasenote:
+  text: Reduced delay when processing jobs after a transient API error.

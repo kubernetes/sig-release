@@ -1,0 +1,4 @@
+pr: 124116
+releasenote:
+  text: Fixed a deep copy issue when retrieving the controller reference.
+pr_body: ""

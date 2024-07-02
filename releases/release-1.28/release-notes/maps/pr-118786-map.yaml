@@ -1,0 +1,4 @@
+pr: 118786
+releasenote:
+  text: As in Kubernetes `v1.26` and `v1.27`, resource claims do not get prepared by `kubelet`
+    when no container uses them. This was changed accidentally in [v1.28.0-alpha.1](https://github.com/kubernetes/kubernetes/releases/tag/v1.28.0-alpha.1).

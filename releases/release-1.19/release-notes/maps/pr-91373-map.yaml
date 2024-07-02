@@ -1,0 +1,4 @@
+pr: 91373
+releasenote:
+  text: The Kubelet's `--experimental-mounter-path` and `--experimental-check-node-capabilities-before-mount`
+    options are now marked as deprecated.

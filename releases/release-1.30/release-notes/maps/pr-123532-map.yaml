@@ -1,0 +1,5 @@
+pr: 123532
+releasenote:
+  text: Prevented watch cache starvation by moving its watch to separate RPC. Added
+    a `SeparateCacheWatchRPC` feature flag to disable this behavior.
+pr_body: ""

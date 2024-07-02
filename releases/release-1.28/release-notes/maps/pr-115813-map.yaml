@@ -1,0 +1,7 @@
+pr: 115813
+releasenote:
+  text: |-
+    `kube-controller-manager` and `cloud-controller-manager` have changed the
+    name of controllers that can be turned on/off that are passed to the `--controllers`
+    flag (e.g., `pod-garbage-collector-controller`). The old names (eg `podgc`) are
+    also accepted and aliased to the new names.

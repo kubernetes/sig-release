@@ -1,0 +1,4 @@
+pr: 121579
+releasenote:
+  text: The `SidecarContainers` feature has graduated to `beta` and is enabled by
+    default.

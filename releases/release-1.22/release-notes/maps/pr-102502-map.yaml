@@ -1,0 +1,9 @@
+pr: 102502
+releasenote:
+  text: "kubeadm: when using a custom image repository for CoreDNS kubeadm now will
+    append the `coredns` image name instead of `coredns/coredns`, thus restoring
+    the behaviour existing before the v1.21 release. Users who rely on nested folder
+    for the coredns image should set the `clusterConfiguration.dns.imageRepository`
+    value including the nested path name (e.g using `registry.company.xyz/coredns`
+    will force kubeadm to use `registry.company.xyz/coredns/coredns` image). No action
+    is needed if using the default registry (k8s.gcr.io)."

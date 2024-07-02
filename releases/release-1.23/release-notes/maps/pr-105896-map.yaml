@@ -1,0 +1,3 @@
+pr: 105896
+releasenote:
+  text: Support using negative array index in JSON patch replace operations.

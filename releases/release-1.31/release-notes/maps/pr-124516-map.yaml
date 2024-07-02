@@ -1,0 +1,5 @@
+pr: 124516
+releasenote:
+  text: |-
+    Fixed a regression where `kubelet --hostname-override` no longer worked
+    correctly with an external cloud provider.

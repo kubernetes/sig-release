@@ -1,0 +1,5 @@
+pr: 123038
+releasenote:
+  text: |
+    "Fixed the deprecated version for `pod_scheduling_duration_seconds` that caused the metric to be hidden by default in `1.29`."
+pr_body: ""

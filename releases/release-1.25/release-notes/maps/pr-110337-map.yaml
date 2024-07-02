@@ -1,0 +1,6 @@
+pr: 110337
+releasenote:
+  text: '`apiserver_dropped_requests` is dropped from this release since `apiserver_request_total`
+    can now be used to track dropped requests. `etcd_object_counts` is also removed
+    in favor of `apiserver_storage_objects`. `apiserver_registered_watchers` is also
+    removed in favor of `apiserver_longrunning_requests`.'

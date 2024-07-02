@@ -1,0 +1,3 @@
+pr: 107967
+releasenote:
+  text: '`kubectl version` now fails when given extra arguments.'

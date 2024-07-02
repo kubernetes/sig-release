@@ -1,0 +1,3 @@
+pr: 119753
+releasenote:
+  text: '`kubeadm`: fixed `nil` pointer when `etcd` member is already removed.'

@@ -1,0 +1,4 @@
+pr: 113710
+releasenote:
+  text: CLI flag `pod-eviction-timeout` is deprecated and will be removed together
+    with `enable-taint-manager` in `v1.27`.

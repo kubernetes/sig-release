@@ -1,0 +1,6 @@
+pr: 113010
+releasenote:
+  text: |-
+    'Promoted job-related metrics to stable to follow IndexedJobs GA. The following metrics have their name updated to match metrics API guidelines:
+    - `job_sync_total` -> `job_syncs_total`
+    - `job_finished_total` -> `jobs_finished_total`'

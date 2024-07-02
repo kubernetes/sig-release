@@ -1,0 +1,4 @@
+pr: 123310
+releasenote:
+  text: Updated kubedns and nodelocaldns to version `v1.23.0`.
+pr_body: ""

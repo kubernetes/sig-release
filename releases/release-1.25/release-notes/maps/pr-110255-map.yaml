@@ -1,0 +1,7 @@
+pr: 110255
+releasenote:
+  text: The pod phase lifecycle guarantees that terminal Pods, those whose states
+    are `Unready` or `Succeeded`, can not regress and will have all container stopped.
+    Hence, terminal Pods will never be reachable and should not publish their IP addresses
+    on the `Endpoints` or `EndpointSlices`, independently of the Service `TolerateUnready`
+    option.

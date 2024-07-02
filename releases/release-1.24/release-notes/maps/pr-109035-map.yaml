@@ -1,0 +1,3 @@
+pr: 109035
+releasenote:
+  text: Enabled beta feature HonorPVReclaimPolicy by default.

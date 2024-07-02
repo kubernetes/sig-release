@@ -1,0 +1,4 @@
+pr: 100694
+releasenote:
+  text: Applying fix for not deleting existing public IP when a service is deleted
+    in Azure.

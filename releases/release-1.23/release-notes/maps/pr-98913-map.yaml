@@ -1,0 +1,3 @@
+pr: 98913
+releasenote:
+  text: Update `migratecmd/kube-proxy/app` logs to structured logging.

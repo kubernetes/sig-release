@@ -1,0 +1,5 @@
+pr: 101578
+releasenote:
+  text: The deprecated `CRIContainerLogRotation` feature-gate has been removed, since
+    the `CRIContainerLogRotatio`n feature graduated to GA in 1.21 and was unconditionally
+    enabled.

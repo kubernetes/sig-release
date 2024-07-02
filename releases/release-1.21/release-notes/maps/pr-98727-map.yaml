@@ -1,0 +1,5 @@
+pr: 98727
+releasenote:
+  text: Jobs API has a new `.spec.suspend` field that can be used to suspend and resume
+    Jobs. This is an alpha field which is only honored by servers with the `SuspendJob`
+    feature gate enabled.

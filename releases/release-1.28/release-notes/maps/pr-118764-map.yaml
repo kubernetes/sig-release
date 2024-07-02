@@ -1,0 +1,15 @@
+pr: 118764
+releasenote:
+  text: |-
+    Added full cgroup v2 swap support for both `Limited` and `Unlimited` swap.
+
+    When `LimitedSwap` is enabled the swap limit would be automatically calculated for
+    Burstable QoS pods. For Best-Effort/Guaranteed QoS pods, swap would be disabled.
+
+    Containers with memory requests equal to their memory limits also won't have
+    swap access, and it is a way to opt-out of swap for a single container.
+
+    The formula for the swap limit for Burstable QoS pods is:
+    `(<memory-request>/<node-memory-capacity>)*<node-swap-capacity>`.
+
+    Support for `cgroup v1` is removed.

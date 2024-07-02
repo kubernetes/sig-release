@@ -1,0 +1,5 @@
+pr: 123077
+releasenote:
+  text: Fixed a bug in kubeadm where the `--rootfs` global flag didn't work with "kubeadm
+    upgrade node" for control plane nodes.
+pr_body: ""

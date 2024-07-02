@@ -1,0 +1,3 @@
+pr: 106058
+releasenote:
+  text: Moving `WindowsHostProcessContainers` feature to beta

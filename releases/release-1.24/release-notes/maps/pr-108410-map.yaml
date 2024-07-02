@@ -1,0 +1,4 @@
+pr: 108410
+releasenote:
+  text: 'kubeadm: fixed a bug when using `kubeadm init --dry-run` with certificate authority
+    files (`ca.key` / `ca.crt`) present in `/etc/kubernetes/pki`)'

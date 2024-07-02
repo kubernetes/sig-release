@@ -1,0 +1,4 @@
+pr: 107410
+releasenote:
+  text: Fixed a bug that caused credentials in an exec plugin to override the static
+    certificates set in a kubeconfig.

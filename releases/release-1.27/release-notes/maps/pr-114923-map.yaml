@@ -1,0 +1,3 @@
+pr: 114923
+releasenote:
+  text: Excluded preemptor pod metadata in the event message

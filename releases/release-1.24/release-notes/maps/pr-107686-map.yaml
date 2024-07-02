@@ -1,0 +1,5 @@
+pr: 107686
+releasenote:
+  text: 'NodeRestriction admission: nodes are now allowed to update PersistentVolumeClaim
+    status fields `resizeStatus` and `allocatedResources` when the `RecoverVolumeExpansionFailure`
+    feature is enabled.'

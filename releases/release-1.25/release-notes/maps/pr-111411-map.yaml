@@ -1,0 +1,6 @@
+pr: 111411
+releasenote:
+  text: The command line flag `enable-taint-manager` for kube-controller-manager is
+    deprecated and will be removed in 1.26. The feature that it supports, taint based
+    eviction, is enabled by default and will continue to be implicitly enabled when
+    the flag is removed.

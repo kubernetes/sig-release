@@ -1,0 +1,4 @@
+pr: 119185
+releasenote:
+  text: Added reason to metric `attachdetach_controller_forced_detaches` in the attach
+    detach controller.

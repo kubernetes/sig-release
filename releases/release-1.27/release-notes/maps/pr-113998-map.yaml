@@ -1,0 +1,3 @@
+pr: 113998
+releasenote:
+  text: '`kubeadm`: now respects user provided `kubeconfig` during discovery process'

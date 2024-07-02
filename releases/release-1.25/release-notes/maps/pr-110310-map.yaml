@@ -1,0 +1,5 @@
+pr: 110310
+releasenote:
+  text: |
+    `apiserver_longrunning_gauge` was removed from the codebase. Please use `apiserver_longrunning_requests`
+    instead.

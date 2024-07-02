@@ -1,0 +1,5 @@
+pr: 124997
+releasenote:
+  text: 'kubeadm: deprecated the kubeadm `RootlessControlPlane` feature gate (previously
+    alpha), given that the core K8s `UserNamespacesSupport` feature gate graduated
+    to Beta in 1.30.'

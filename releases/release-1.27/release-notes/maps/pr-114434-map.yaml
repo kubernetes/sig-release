@@ -1,0 +1,4 @@
+pr: 114434
+releasenote:
+  text: |-
+    `client-go`: `sharedInformerFactory` now waits for goroutines during shutdown for metadatainformer and dynamicinformer.

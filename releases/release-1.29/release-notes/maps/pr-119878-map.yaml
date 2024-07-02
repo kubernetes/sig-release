@@ -1,0 +1,4 @@
+pr: 119878
+releasenote:
+  text: Added `apiserver_envelope_encryption_dek_cache_filled` to measure number of
+    records in data encryption key (DEK) cache.

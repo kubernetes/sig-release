@@ -1,0 +1,6 @@
+pr: 122471
+releasenote:
+  text: |-
+    The kube-scheduler added scheduling hints for the InterPodAffinity plugin.
+    These hints allow the scheduler to retry scheduling a Pod
+    that was previously rejected by the InterPodAffinity plugin if there are changes (create, delete, or update) to a related Pod or a node that matches the pod affinity criteria.

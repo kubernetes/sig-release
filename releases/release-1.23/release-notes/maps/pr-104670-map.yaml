@@ -1,0 +1,3 @@
+pr: 104670
+releasenote:
+  text: Turn on CSIMigrationAzureDisk by default on 1.23

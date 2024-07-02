@@ -1,0 +1,4 @@
+pr: 124779
+releasenote:
+  text: Updated the CEL default compatibility environment version to "1.30", ensuring
+    that extended libraries added before version "1.30" are available for use.

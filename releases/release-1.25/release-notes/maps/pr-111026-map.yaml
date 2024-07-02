@@ -1,0 +1,4 @@
+pr: 111026
+releasenote:
+  text: A bug was fixed where a job sync was not retried in case of a transient ResourceQuota
+    conflict.

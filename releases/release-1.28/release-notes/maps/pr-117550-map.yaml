@@ -1,0 +1,4 @@
+pr: 117550
+releasenote:
+  text: Added '--concurrent-cron-job-syncs' flag for kube-controller-manager to set
+    the number of workers for cron job controller

@@ -1,0 +1,3 @@
+pr: 102467
+releasenote:
+  text: Fix how nulls are handled in array and objects in [json patches](https://github.com/evanphx/json-patch).

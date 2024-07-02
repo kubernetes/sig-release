@@ -1,0 +1,6 @@
+pr: 119374
+releasenote:
+  text: |-
+    The `IPTablesOwnershipCleanup` feature (KEP-3178) is now GA; kubelet no longer
+    creates the `KUBE-MARK-DROP` chain (which has been unused for several releases)
+    or the `KUBE-MARK-MASQ` chain (which is now only created by kube-proxy).

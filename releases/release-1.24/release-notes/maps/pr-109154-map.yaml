@@ -1,0 +1,4 @@
+pr: 109154
+releasenote:
+  text: Fixed CSI migration of Azure Disk in-tree StorageClasses with topology requirements
+    in Azure regions that do not have availability zones.

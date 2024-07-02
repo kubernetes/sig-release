@@ -1,0 +1,3 @@
+pr: 107974
+releasenote:
+  text: The scheduler prints info logs when the extender returned an error. (`--v>5`)

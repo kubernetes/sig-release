@@ -1,0 +1,4 @@
+pr: 118866
+releasenote:
+  text: '`kubeadm`: added the `--allow-experimental-api` flag to "kubeadm config migrate/validate"
+    commands. It can be used to migrate or validate WIP/experimental APIs in the future.'

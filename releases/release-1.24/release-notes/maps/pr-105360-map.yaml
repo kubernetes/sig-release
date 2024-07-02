@@ -1,0 +1,3 @@
+pr: 105360
+releasenote:
+  text: Kubelet config validation error messages are updated.

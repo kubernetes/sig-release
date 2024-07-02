@@ -1,0 +1,4 @@
+pr: 113351
+releasenote:
+  text: The `EndpointSliceTerminatingCondition` feature gate was graduated to GA.
+    The gate is now locked and will be removed in v1.28.

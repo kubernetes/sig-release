@@ -1,0 +1,6 @@
+pr: 108445
+releasenote:
+  text: 'CSIStorageCapacity.storage.k8s.io: The v1beta1 version of this API is deprecated
+    in favor of v1, and will be removed in v1.27. If a CSI driver supports storage
+    capacity tracking, then it must get deployed with a release of external-provisioner
+    that supports the v1 API.'

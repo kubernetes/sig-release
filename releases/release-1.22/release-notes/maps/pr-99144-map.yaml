@@ -1,0 +1,5 @@
+pr: 99144
+releasenote:
+  text: The `HugePageStorageMediumSize` feature graduates to GA and unconditionally
+    enabled. Allowing unconditional usage of multiple sizes huge page resources on
+    a container level.

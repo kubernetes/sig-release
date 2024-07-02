@@ -1,0 +1,5 @@
+pr: 122697
+releasenote:
+  text: |
+    "Reverted the `EventedPLEG` feature (beta, but disabled by default) back to alpha due to a known issue."
+pr_body: ""

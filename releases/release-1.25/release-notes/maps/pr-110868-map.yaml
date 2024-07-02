@@ -1,0 +1,10 @@
+pr: 110868
+releasenote:
+  text: |-
+    The `endPort` field in Network Policy is now promoted to GA
+
+    Network Policy providers that support `endPort` field now can use it to specify a range of ports to apply a Network Policy.
+
+    Previously, each Network Policy could only target a single port.
+
+    Please be aware that `endPort` field MUST BE SUPPORTED by the Network Policy provider. In case your provider does not support `endPort` and this field is specified in a Network Policy, the Network Policy will be created covering only the port field (single port).

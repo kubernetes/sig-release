@@ -1,0 +1,4 @@
+pr: 120861
+releasenote:
+  text: '`RetroactiveDefaultStorageClass` feature gate that graduated to GA in `v1.28`
+    and was unconditionally enabled has been removed in `v1.29`.'

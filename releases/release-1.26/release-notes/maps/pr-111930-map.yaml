@@ -1,0 +1,3 @@
+pr: 111930
+releasenote:
+  text: Added the metric `pod_start_sli_duration_seconds` to kubelet.

@@ -1,0 +1,4 @@
+pr: 97966
+releasenote:
+  text: Removed validation if AppArmor profiles are loaded on the local node. This
+    should be handled by the container runtime.

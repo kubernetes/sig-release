@@ -1,0 +1,4 @@
+pr: 112353
+releasenote:
+  text: Increased the maximum backoff delay of the endpointslice controller to match
+    the expected sequence of delays when syncing Services.

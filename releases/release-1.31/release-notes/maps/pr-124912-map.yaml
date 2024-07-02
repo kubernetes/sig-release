@@ -1,0 +1,9 @@
+pr: 124912
+releasenote:
+  text: 'kube-apiserver: the `--encryption-provider-config` file is now loaded with
+    strict deserialization, which fails if the config file contains duplicate or unknown
+    fields. This protects against accidentally running with config files that are
+    malformed, mis-indented, or have typos in field names, and getting unexpected
+    behavior. When `--encryption-provider-config-automatic-reload` is used, new encryption
+    config files that contain typos after the kube-apiserver is running are treated
+    as invalid and the last valid config is used.'

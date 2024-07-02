@@ -1,0 +1,5 @@
+pr: 105857
+releasenote:
+  text: 'PodSecurity: in 1.23+ restricted policy levels, Pods and containers which
+    set `runAsUser=0` are forbidden at admission-time; previously, they would be rejected
+    at runtime'

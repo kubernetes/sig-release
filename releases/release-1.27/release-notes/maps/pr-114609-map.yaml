@@ -1,0 +1,5 @@
+pr: 114609
+releasenote:
+  text: |-
+    Enabled usage of `kube-proxy`, `kube-scheduler` and `kubelet` HTTP APIs for changing the logging
+     verbosity at runtime for JSON output.

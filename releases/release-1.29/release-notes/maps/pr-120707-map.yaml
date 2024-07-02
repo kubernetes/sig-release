@@ -1,0 +1,3 @@
+pr: 120707
+releasenote:
+  text: Client-side apply will now use OpenAPI `v3` by default.

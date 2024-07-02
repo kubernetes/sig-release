@@ -1,0 +1,4 @@
+pr: 102892
+releasenote:
+  text: 'For vSphere: fix regression during attach disk if datastore is within a storage
+    folder or datastore cluster.'

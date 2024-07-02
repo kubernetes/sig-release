@@ -1,0 +1,5 @@
+pr: 116576
+releasenote:
+  text: 'api: validation of a `PodSpec` now rejects invalid `ResourceClaim` and `ResourceClaimTemplate`
+    names. For a pod, the name generated for the `ResourceClaim` when using a template
+    also must be valid.'

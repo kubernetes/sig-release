@@ -1,0 +1,5 @@
+pr: 107462
+releasenote:
+  text: OpenStack Cinder CSI migration is now GA and switched on by default, Cinder
+    CSI driver must be installed on clusters on OpenStack for Cinder volumes to work
+    (has been since v1.21).

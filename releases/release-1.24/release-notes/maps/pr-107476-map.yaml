@@ -1,0 +1,3 @@
+pr: 107476
+releasenote:
+  text: JobReadyPods graduates to Beta and it's enabled by default.

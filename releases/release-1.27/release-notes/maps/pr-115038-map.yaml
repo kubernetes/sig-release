@@ -1,0 +1,4 @@
+pr: 115038
+releasenote:
+  text: 'kubeadm: fixed an etcd learner-mode bug by preparing an etcd static pod manifest
+    before promoting'

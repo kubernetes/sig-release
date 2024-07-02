@@ -1,0 +1,4 @@
+pr: 114417
+releasenote:
+  text: total test spec is now available by `ProgressReporter`, it will be reported
+    before test suite got executed.

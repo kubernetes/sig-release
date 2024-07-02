@@ -1,0 +1,6 @@
+pr: 121867
+releasenote:
+  text: "A customizable `OrderedScoreFuncs()` function was introduced. Out-of-tree
+    plugins \nthat used the scheduler's preemption interface could implement this
+    function\nfor custom preemption preferences or return nil to keep the current
+    behavior."

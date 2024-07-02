@@ -1,0 +1,4 @@
+pr: 103383
+releasenote:
+  text: Scheduler nows provides an option for plugin developers to move `Pods` to
+    activeQ.

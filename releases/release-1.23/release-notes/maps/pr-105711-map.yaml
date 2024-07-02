@@ -1,0 +1,5 @@
+pr: 105711
+releasenote:
+  text: Shell completion now knows to continue suggesting resource names when the
+    command supports it.  For example `kubectl get pod pod1 <TAB>` will suggest more
+    Pod names.

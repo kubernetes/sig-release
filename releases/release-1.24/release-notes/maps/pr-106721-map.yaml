@@ -1,0 +1,5 @@
+pr: 106721
+releasenote:
+  text: '`apiserver`, if configured to reconcile the `kubernetes.default` service
+    endpoints, checks if the configured Service IP range matches the apiserver public
+    address IP family, and fails to start if not.'

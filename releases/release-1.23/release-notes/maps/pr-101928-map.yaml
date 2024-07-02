@@ -1,0 +1,5 @@
+pr: 101928
+releasenote:
+  text: |-
+    Added a `Processing` condition for the `workqueue` API.
+    Changed `Shutdown` for the `workqueue` API to wait until the work queue finishes processing all in-flight items.

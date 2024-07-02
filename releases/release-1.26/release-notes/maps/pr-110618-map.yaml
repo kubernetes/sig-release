@@ -1,0 +1,4 @@
+pr: 110618
+releasenote:
+  text: Dropped support for the Container Runtime Interface (CRI) version `v1alpha2`,
+    which means that container runtimes just have to implement `v1`.

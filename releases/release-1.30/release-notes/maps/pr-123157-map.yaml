@@ -1,0 +1,5 @@
+pr: 123157
+releasenote:
+  text: Introduced a new alpha feature gate, `SELinuxMount`, which can now be enabled
+    to accelerate SELinux relabeling.
+pr_body: ""

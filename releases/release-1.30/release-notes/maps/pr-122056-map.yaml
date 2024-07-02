@@ -1,0 +1,5 @@
+pr: 122056
+releasenote:
+  text: |
+    "Fixed the disruption controller's PDB status synchronization to maintain all PDB conditions during an update."
+pr_body: ""

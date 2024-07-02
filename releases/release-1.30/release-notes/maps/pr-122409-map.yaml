@@ -1,0 +1,5 @@
+pr: 122409
+releasenote:
+  text: The feature gate `LegacyServiceAccountTokenTracking` (GA since 1.28) is now
+    removed because the feature is unconditionally enabled.
+pr_body: ""

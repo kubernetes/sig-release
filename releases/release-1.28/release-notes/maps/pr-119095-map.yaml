@@ -1,0 +1,3 @@
+pr: 119095
+releasenote:
+  text: Updated debian-base image to `bookworm-v1.0.0`.

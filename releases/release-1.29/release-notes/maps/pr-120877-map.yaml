@@ -1,0 +1,4 @@
+pr: 120877
+releasenote:
+  text: 'Fixed a regression (`CLIENTSET_PKG: unbound variable`) when invoking deprecated
+    `generate-groups.sh` script.'

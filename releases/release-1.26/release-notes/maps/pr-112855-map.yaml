@@ -1,0 +1,3 @@
+pr: 112855
+releasenote:
+  text: Added kubelet metrics to track the cpumanager cpu allocation and pinning.

@@ -1,0 +1,3 @@
+pr: 108724
+releasenote:
+  text: CycleState is now optimized for "write once and read many times".

@@ -1,0 +1,5 @@
+pr: 103231
+releasenote:
+  text: "Fixed an issue which didn't append OS's environment variables with the one
+    provided in Credential Provider Config file, which may fail execution of external
+    credential provider binary. \nSee https://github.com/kubernetes/kubernetes/issues/102750."

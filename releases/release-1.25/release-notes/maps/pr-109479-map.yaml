@@ -1,0 +1,4 @@
+pr: 109479
+releasenote:
+  text: New `KUBECACHEDIR` environment variable was introduced to override default
+    discovery cache directory which is `$HOME/.kube/cache`.

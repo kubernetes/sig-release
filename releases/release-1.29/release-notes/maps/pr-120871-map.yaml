@@ -1,0 +1,6 @@
+pr: 120871
+releasenote:
+  text: |-
+    `k8s.io/dynamic-resource-allocation`: can now handle a `selected` node which isn't listed
+    as `potential` node.
+    

@@ -1,0 +1,4 @@
+pr: 114116
+releasenote:
+  text: Fixed `StatefulSetAutoDeletePVC` feature when `OwnerReferencesPermissionEnforcement`
+    admission plugin is enabled.

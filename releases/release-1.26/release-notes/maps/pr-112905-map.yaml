@@ -1,0 +1,6 @@
+pr: 112905
+releasenote:
+  text: For `kubectl`, `--server-side` now migrates ownership of all fields used by
+    client-side-apply to the specified `--fieldmanager`. This prevents fields previously
+    specified using kubectl from being able to live outside of server-side-apply's
+    management and become undeleteable.

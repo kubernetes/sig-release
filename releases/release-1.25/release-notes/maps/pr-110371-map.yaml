@@ -1,0 +1,3 @@
+pr: 110371
+releasenote:
+  text: Upgraded Azure/go-autorest/autorest to v0.11.27.

@@ -1,0 +1,4 @@
+pr: 104244
+releasenote:
+  text: Introduce policy to allow the HPA to consume the `external.metrics.k8s.io`
+    API group.

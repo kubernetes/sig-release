@@ -1,0 +1,4 @@
+pr: 124665
+releasenote:
+  text: "`kubeadm`: Improved the `IsPrivilegedUser` preflight check to not fail on certain Windows setups."
+pr_body: ""

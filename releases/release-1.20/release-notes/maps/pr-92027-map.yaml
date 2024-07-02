@@ -1,0 +1,3 @@
+pr: 92027
+releasenote:
+  text: Ceph RBD volume expansion now works even when ceph.conf was not provided.

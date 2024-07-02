@@ -1,0 +1,5 @@
+pr: 120583
+releasenote:
+  text: Removed `/livez` livezchecks for KMS v1 and v2 to ensure KMS health does not
+    cause `kube-apiserver` restart. KMS health checks are still in place as a healthz
+    and readiness checks.

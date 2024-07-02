@@ -1,0 +1,5 @@
+pr: 97431
+releasenote:
+  text: AWS cloud provider supports auto-discovering subnets without any `kubernetes.io/cluster/<clusterName>`
+    tags. It also supports additional service annotation `service.beta.kubernetes.io/aws-load-balancer-subnets`
+    to manually configure the subnets.

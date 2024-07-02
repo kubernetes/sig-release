@@ -1,0 +1,4 @@
+pr: 124505
+releasenote:
+  text: Removed admission plugin PersistentVolumeLabel. Please use https://github.com/kubernetes-sigs/cloud-pv-admission-labeler
+    instead if you need a similar functionality.

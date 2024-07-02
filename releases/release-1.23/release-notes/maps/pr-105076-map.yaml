@@ -1,0 +1,10 @@
+pr: 105076
+releasenote:
+  text: '`--log-flush-frequency` had no effect in several commands or was missing.
+    Help and warning texts were not always using the right format for a command (`add_dir_header`
+    instead of `add-dir-header`). Fixing this included cleaning up flag handling in
+    component-base/logs: that package no longer adds flags to the global flag sets.
+    Commands which want the klog and `--log-flush-frequency` flags must explicitly
+    call `logs.AddFlags`; the new `cli.Run` does that for commands. That helper function
+    also covers flag normalization and printing of usage and errors in a consistent
+    way (print usage text first if parsing failed, then the error).'

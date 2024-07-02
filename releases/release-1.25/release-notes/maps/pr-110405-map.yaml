@@ -1,0 +1,9 @@
+pr: 110405
+releasenote:
+  text: 'Kubeadm: enhanced the "patches" functionality to be able to patch kubelet
+    config files containing `v1beta1.KubeletConfiguration`. The new patch target is
+    called `kubeletconfiguration` (e.g. patch file `kubeletconfiguration+json.json`).This
+    makes it possible to apply node specific KubeletConfiguration options during `init`,
+    `join` and `upgrade`, while the main `KubeletConfiguration` that is passed to `init`
+    as part of the `--config` file can still act as the global stored in the cluster
+    `KubeletConfiguration`.'

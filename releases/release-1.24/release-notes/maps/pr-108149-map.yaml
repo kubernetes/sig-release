@@ -1,0 +1,4 @@
+pr: 108149
+releasenote:
+  text: 'fixed: do not return early in the node informer when there is no change of
+    the topology label.'

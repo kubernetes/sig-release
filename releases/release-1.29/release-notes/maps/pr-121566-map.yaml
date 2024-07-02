@@ -1,0 +1,3 @@
+pr: 121566
+releasenote:
+  text: '`etcd`: updated to `v3.5.10`.'

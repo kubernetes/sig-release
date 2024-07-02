@@ -1,0 +1,4 @@
+pr: 118018
+releasenote:
+  text: The feature gate `CSIStorageCapacity` have been removed and must no longer
+    be referenced in `--feature-gates` flags.

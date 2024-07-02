@@ -1,0 +1,3 @@
+pr: 124618
+releasenote:
+  text: Improved scheduling latency when many gated pods

@@ -1,0 +1,6 @@
+pr: 108493
+releasenote:
+  text: |-
+    kubectl now supports shell completion for the <type>/<name> format for specifying resources.
+    kubectl now provides shell completion for container names following the `--container/-c` flag of the `exec` command.
+    kubectl's shell completion now suggests resource types for commands that only apply to pods.

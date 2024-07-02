@@ -1,0 +1,6 @@
+pr: 123568
+releasenote:
+  text: OIDC authentication will now fail if the username asserted based on a CEL
+    expression config is the empty string.  Previously the request would be authenticated
+    with the username set to the empty string.
+pr_body: ""

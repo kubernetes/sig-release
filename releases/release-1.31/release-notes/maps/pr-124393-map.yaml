@@ -1,0 +1,8 @@
+pr: 124393
+releasenote:
+  text: |-
+    'kubeadm: marked the flag "--experimental-output'' as deprecated (it will
+    be removed in a future release) and added a new flag ''--output" that serves the
+    same purpose. Affected commands are - "kubeadm config images list", "kubeadm token
+    list", "kubeadm upgrade plan", "kubeadm certs check-expiration".'
+pr_body: ""

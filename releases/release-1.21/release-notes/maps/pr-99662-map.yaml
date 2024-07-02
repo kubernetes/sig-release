@@ -1,0 +1,6 @@
+pr: 99662
+releasenote:
+  text: The `EndpointSlice` API is now GA. The `EndpointSlice` topology field has
+    been removed from the GA API and will be replaced by a new per Endpoint Zone field.
+    If the topology field was previously used, it will be converted into an annotation
+    in the v1 Resource. The `discovery.k8s.io/v1alpha1` API is removed.

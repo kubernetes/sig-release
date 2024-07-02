@@ -1,0 +1,5 @@
+pr: 111616
+releasenote:
+  text: Kubelet external Credential Provider feature is moved to GA. Credential Provider
+    Plugin and Credential Provider Config APIs updated from `v1beta1` to `v1` with
+    no API changes.

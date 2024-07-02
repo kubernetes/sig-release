@@ -1,0 +1,3 @@
+pr: 112939
+releasenote:
+  text: Changed `preemption_victims` metric bucket from `LinearBuckets` to `ExponentialBuckets`.

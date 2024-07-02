@@ -1,0 +1,4 @@
+pr: 121459
+releasenote:
+  text: CEL can now correctly handle a CRD `openAPIV3Schema` that has neither `Properties`
+    nor `AdditionalProperties`.

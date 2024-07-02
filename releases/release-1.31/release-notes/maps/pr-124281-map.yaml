@@ -1,0 +1,3 @@
+pr: 124281
+releasenote:
+  text: Allowed parameter to be set along with proto file path

@@ -1,0 +1,5 @@
+pr: 123331
+releasenote:
+  text: |
+    When initializing nodes using external cloud-providers, the process now waits for the providerID value to be available before declaring the node ready. This ensures that nodes are not marked as Ready prematurely due to communication errors with the cloud-provider. The providerID and zone labels are necessary for integrations such as load balancers to function correctly. Users can choose to opt out of this behavior by setting the feature flag OptionalProviderID in the cloud-controller-manager.
+pr_body: ""

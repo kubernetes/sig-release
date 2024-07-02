@@ -1,0 +1,5 @@
+pr: 124735
+releasenote:
+  text: Scheduler changed its logic of calculating `evaluatedNodes` from "contains
+    the number of nodes that filtered out by PreFilterResult and Filter plugins" to
+    "the number of nodes filtered out by Filter plugins only".

@@ -1,0 +1,3 @@
+pr: 95245
+releasenote:
+  text: "Mask ceph RBD adminSecrets in logs when logLevel >= 4."

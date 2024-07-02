@@ -1,0 +1,6 @@
+pr: 119870
+releasenote:
+  text: 'Fixed a regression in the default `v1.27` configurations in `kube-apiserver`:
+    fixed the `AggregatedDiscoveryEndpoint` feature (`beta` in `v1.27+`) to successfully
+    fetch discovery information from aggregated API servers that do not check `Accept`
+    headers when serving the `/apis` endpoint.'

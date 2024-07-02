@@ -1,0 +1,3 @@
+pr: 97011
+releasenote:
+  text: Cluster Autoscaler version bump to v1.20.0

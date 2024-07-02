@@ -1,0 +1,4 @@
+pr: 108496
+releasenote:
+  text: kube-proxy will no longer hold service node ports open on the node. Users
+    are still advised not to run any listener on node ports range used by kube-proxy.

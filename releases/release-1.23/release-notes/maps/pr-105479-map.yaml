@@ -1,0 +1,4 @@
+pr: 105479
+releasenote:
+  text: Node affinity, Node selectors, and tolerations are now mutable for Jobs that
+    are suspended and have never been started

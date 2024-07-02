@@ -1,0 +1,5 @@
+pr: 121571
+releasenote:
+  text: |-
+    `EnqueueExtensions` from plugins other than `PreEnqueue`, `PreFilter`, `Filter`, `Reserve` and `Permit` are now ignored.
+    It reduces the number of kinds of cluster events the scheduler needs to subscribe/handle.

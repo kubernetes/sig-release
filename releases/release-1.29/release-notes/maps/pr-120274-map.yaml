@@ -1,0 +1,6 @@
+pr: 120274
+releasenote:
+  text: |-
+    The `kube-proxy` command-line documentation was updated to clarify that
+    `--bind-address` does not actually have anything to do with binding to an
+    address, and you probably don't actually want to be using it.

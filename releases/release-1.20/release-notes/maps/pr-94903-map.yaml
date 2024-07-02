@@ -1,0 +1,3 @@
+pr: 94903
+releasenote:
+  text: Both apiserver_request_duration_seconds metrics and RequestReceivedTimestamp fields of an audit event now take into account the time a request spends in the apiserver request filters.

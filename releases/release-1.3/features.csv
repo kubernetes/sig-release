@@ -1,0 +1,15 @@
+Item,Stage,Status,SIG,Proposal link,Dev Lead,Assignee,Entity,Docs,Docs ETA,PRs
+Cluster Federation,Alpha,In Progress,ControlPlane,https://github.com/kubernetes/kubernetes/labels/area%2Fcluster-federation,quinton-hhole,nikhiljindal,Google,In Progress,,
+Devicemapper container fs usage,Stable,Merged,Node,https://github.com/google/cadvisor/pull/1204,pmorie,vishh,Red Hat,N/A,-,-
+Init Containers,Alpha,Merged,Node,https://github.com/kubernetes/kubernetes/pull/23666,clayton,dchen1107,Red Hat,Done,,https://github.com/kubernetes/kubernetes.github.io/pull/679
+Master Metrics API,Stable,Merged,ControlPlane,https://github.com/kubernetes/kubernetes/issues/23376,piosz,piosz,Google,N/A,-,-
+Node Out-of-memory handling,Stable,Merged,Node,https://github.com/kubernetes/kubernetes/blob/master/docs/proposals/kubelet-eviction.md,dchen1107 ,derekwaynecarr,Google / Red Hat,In Progress,,
+OIDC client AuthProvider,Alpha,Merged,Auth,https://github.com/kubernetes/kubernetes/pull/25270,bobbyrullo,erictune,CoreOS,N/A,-,-
+OpenStack provider,Stable,Merged,ControlPlane,https://github.com/kubernetes/kubernetes/pull/21737,zreigz ,quinton-hoole,Fujitsu,Done,,
+Problem API,Beta,Merged,Node,https://github.com/kubernetes/kubernetes/issues/23028,dchen1107 ,Random-Liu,Google,Done,,https://github.com/kubernetes/kubernetes.github.io/pull/702
+Reapers (Cascading Deletion),Alpha,Merged,API ,https://github.com/kubernetes/kubernetes/pull/23656,caesarxuchao,lavalamp,Google,Done,6/23,https://github.com/kubernetes/kubernetes.github.io/pull/686
+Rktnetes 1.0,Stable,Merged,Node,https://github.com/kubernetes/kubernetes/issues?q=milestone%3Arktnetes-v1.0,yifan-gu,yifan-gu,CoreOS,Done,,
+Role-base access control,Alpha,Merged,Auth,https://github.com/kubernetes/kubernetes/issues/23396,ericchiang,erictune,CoreOS / RedHat,Waiting for LGTM,,
+Self-hosted Kubelet ,Alpha,Merged,Node,https://github.com/kubernetes/kubernetes/pull/23343,aaronlevy,vishh,CoreOS,N/A,-,-
+Single-node DevCluster,Alpha,In Progress,Node,https://github.com/kubernetes/minikube,vishh,bgrant0607,Google,Done,6/22,-
+Stateful services (PetSet),Alpha,Merged,Cluster,https://github.com/kubernetes/kubernetes/pull/18016,smarterclayton,thockin,Red Hat / Google,In Progress,6/20,https://github.com/kubernetes/kubernetes.github.io/pull/698/

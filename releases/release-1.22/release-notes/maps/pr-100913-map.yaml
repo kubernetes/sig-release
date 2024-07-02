@@ -1,0 +1,3 @@
+pr: 100913
+releasenote:
+  text: If `kube-proxy` mode  is userspace do not enable `EndpointSlices`.

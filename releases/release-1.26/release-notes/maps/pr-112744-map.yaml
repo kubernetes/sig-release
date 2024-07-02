@@ -1,0 +1,4 @@
+pr: 112744
+releasenote:
+  text: Added a feature that allows a `StatefulSet` to start numbering replicas from
+    an arbitrary non-negative ordinal, using the `.spec.ordinals.start` field.

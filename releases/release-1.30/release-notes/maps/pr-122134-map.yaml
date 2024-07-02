@@ -1,0 +1,4 @@
+pr: 122134
+releasenote:
+  text: Removed the generally available feature gate `ProxyTerminatingEndpoints`.
+pr_body: ""

@@ -1,0 +1,8 @@
+pr: 124480
+releasenote:
+  text: |-
+    'kubeadm: fixed a regression where the KubeletConfiguration is not properly
+    downloaded during "kubeadm upgrade" command from the kube-system/kubelet-config
+    ConfigMap, resulting in the local ''/var/lib/kubelet/config.yaml'' file being
+    written as a defaulted config.'
+pr_body: ""

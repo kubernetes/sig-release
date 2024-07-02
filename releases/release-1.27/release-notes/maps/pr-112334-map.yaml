@@ -1,0 +1,4 @@
+pr: 112334
+releasenote:
+  text: Updated the Event series starting count when emitting isomorphic events from
+    1 to 2.

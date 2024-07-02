@@ -1,0 +1,4 @@
+pr: 102516
+releasenote:
+  text: The `serviceOwnsFrontendIP` shouldn't report error when the public IP doesn't
+    match.

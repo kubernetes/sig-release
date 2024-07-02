@@ -1,0 +1,3 @@
+pr: 119380
+releasenote:
+  text: Graduated `AdmissionWebhookMatchCondition` feature to beta.

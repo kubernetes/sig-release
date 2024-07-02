@@ -1,0 +1,5 @@
+pr: 124509
+releasenote:
+  text: Introduced a new functionality to the client-go's `List` method, allowing
+    users to enable API streaming. To activate this feature, users can set the `client-go.WatchListClient`
+    feature gate.

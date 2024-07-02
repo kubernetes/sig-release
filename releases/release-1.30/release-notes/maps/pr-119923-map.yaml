@@ -1,0 +1,5 @@
+pr: 119923
+releasenote:
+  text: |
+    "Fixed an issue where mount points could become local without calling `NodePublishVolume` after node rebooting."
+pr_body: ""

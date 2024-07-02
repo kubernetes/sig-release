@@ -1,0 +1,4 @@
+pr: 118647
+releasenote:
+  text: Added `CAP_NET_RAW` to netadmin debug profile and removed privileges when
+    debugging nodes.

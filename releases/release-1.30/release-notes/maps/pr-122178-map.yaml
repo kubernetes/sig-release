@@ -1,0 +1,4 @@
+pr: 122178
+releasenote:
+  text: Updated cni-plugins to version `v1.4.0`.
+pr_body: ""

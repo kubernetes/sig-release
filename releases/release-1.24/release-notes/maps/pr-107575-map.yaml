@@ -1,0 +1,3 @@
+pr: 107575
+releasenote:
+  text: Fixed `azureFile` `volumeID` collision issue in CSI migration.

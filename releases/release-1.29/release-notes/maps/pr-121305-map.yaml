@@ -1,0 +1,17 @@
+pr: 121305
+releasenote:
+  text: '`kubeadm`: a separate "super-admin.conf" file is now deployed. The User in
+    `admin.conf` is now bound to a new RBAC Group `kubeadm:cluster-admins` that has
+    `cluster-admin` `ClusterRole` access. The User in `super-admin.conf` is now bound
+    to the `system:masters` built-in super-powers / break-glass Group that can bypass
+    RBAC. Before this change, the default `admin.conf` was bound to `system:masters`
+    Group, which was undesired. Executing `kubeadm init phase kubeconfig all` or just
+    `kubeadm init` will now generate the new `super-admin.conf` file. The cluster
+    admin can then decide to keep the file present on a node host or move it to a
+    safe location. `kubadm certs renew` will renew the certificate in `super-admin.conf`
+    to one year if the file exists; if it does not exist a "MISSING" note will be
+    printed. `kubeadm upgrade apply` for this release will migrate this particular
+    node to the two file setup. Subsequent kubeadm releases will continue to optionally
+    renew the certificate in `super-admin.conf` if the file exists on disk and if
+    renew on upgrade is not disabled. `kubeadm join --control-plane` will now generate
+    only an `admin.conf` file that has the less privileged User.'

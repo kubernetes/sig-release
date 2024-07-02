@@ -1,0 +1,5 @@
+pr: 106854
+releasenote:
+  text: 'kubeadm: allow the `certs check-expiration` command to not require the existence
+    of the cluster CA key (ca.key file) when checking the expiration of managed certificates
+    in kubeconfig files.'

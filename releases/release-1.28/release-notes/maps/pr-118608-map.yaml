@@ -1,0 +1,5 @@
+pr: 118608
+releasenote:
+  text: |-
+    The scheduler skips the `PodTopologySpread` Score plugin when nothing to do with the Pod.
+    It will affect some metrics values related to the PodTopologySpread Score plugin.

@@ -1,0 +1,6 @@
+pr: 124123
+releasenote:
+  text: |-
+    Enabled kubectl to find `kubectl-create-subcommand` plugins when positional
+    arguments exists, e.g. `kubectl create subcommand arg`.
+pr_body: ""

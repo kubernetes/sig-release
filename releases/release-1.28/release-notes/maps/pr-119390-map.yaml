@@ -1,0 +1,3 @@
+pr: 119390
+releasenote:
+  text: Implemented alpha support for a drop-in kubelet configuration directory.

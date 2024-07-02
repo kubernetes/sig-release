@@ -1,0 +1,9 @@
+pr: 105919
+releasenote:
+  text: 'As of v1.25, the PodSecurity `restricted` level no longer requires pods that
+    set .spec.os.name="windows" to also set Linux-specific securityContext fields.
+    If a 1.25+ cluster has unsupported [out-of-skew](https://kubernetes.io/releases/version-skew-policy/#kubelet)
+    nodes prior to v1.23 and wants to ensure namespaces enforcing the `restricted`
+    policy continue to require Linux-specific securityContext fields on all pods,
+    ensure a version of the `restricted` prior to v1.25 is selected by labeling the
+    namespace (for example, `pod-security.kubernetes.io/enforce-version: v1.24`)'

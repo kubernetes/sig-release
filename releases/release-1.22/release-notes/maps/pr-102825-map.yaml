@@ -1,0 +1,4 @@
+pr: 102825
+releasenote:
+  text: Fix an issue with `kubectl` on certain older version of Windows or when legacy
+    console mode is enabled on Windows 8 which causes `kubectl exec` to crash.

@@ -1,0 +1,7 @@
+pr: 121575
+releasenote:
+  text: |-
+    Fixed bugs in handling of server-side apply, create, and update API requests for objects containing duplicate items in keyed lists.
+    - A `create` or `update` API request with duplicate items in a keyed list no longer wipes out managedFields. Examples include env var entries with the same name, or port entries with the same containerPort in a pod spec.
+    - A server-side apply request that makes unrelated changes to an object which has duplicate items in a keyed list no longer fails, and leaves the existing duplicate items as-is.
+    - A server-side apply request that changes an object which has duplicate items in a keyed list, and modifies the duplicated item removes the duplicates and replaces them with the single item contained in the server-side apply request.

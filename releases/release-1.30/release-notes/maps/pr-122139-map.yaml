@@ -1,0 +1,5 @@
+pr: 122139
+releasenote:
+  text: |
+    "Removed the generally available feature gate `KubeletPodResources`."
+pr_body: ""

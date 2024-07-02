@@ -1,0 +1,3 @@
+pr: 110191
+releasenote:
+  text: Pods now post their `readiness` during termination.

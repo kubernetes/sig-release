@@ -1,0 +1,6 @@
+pr: 115209
+releasenote:
+  text: |-
+    Removed the following deprecated metrics:
+    - node_collector_evictions_number replaced by node_collector_evictions_total
+    - scheduler_e2e_scheduling_duration_seconds replaced by scheduler_scheduling_attempt_duration_seconds

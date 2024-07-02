@@ -1,0 +1,5 @@
+pr: 120680
+releasenote:
+  text: Metric buckets for `pod_start_duration_seconds` were changed to `{0.5, 1,
+    2, 3, 4, 5, 6, 8, 10, 20, 30, 45, 60, 120, 180, 240, 300, 360, 480, 600, 900,
+    1200, 1800, 2700, 3600}`.

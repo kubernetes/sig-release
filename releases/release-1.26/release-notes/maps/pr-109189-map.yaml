@@ -1,0 +1,4 @@
+pr: 109189
+releasenote:
+  text: '`kubectl config view` now automatically redacts any secret fields marked
+    with a `datapolicy` tag.'

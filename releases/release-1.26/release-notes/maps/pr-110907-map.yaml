@@ -1,0 +1,6 @@
+pr: 110907
+releasenote:
+  text: |
+    '`kubectl apply`: Added a warning that "`kubectl apply` will no longer prune
+    non-namespaced resources by default when used with the --namespace flag in
+    a future release".'

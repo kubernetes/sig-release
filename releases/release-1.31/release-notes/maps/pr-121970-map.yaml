@@ -1,0 +1,6 @@
+pr: 121969
+releasenote:
+  text: 'k8s.io/apimachinery/pkg/util/runtime: Added support for new calls to handle panics and
+    errors in the context where they occur. `PanicHandlers` and `ErrorHandlers` now
+    must accept a context parameter for that. Log output is structured instead of
+    unstructured.'

@@ -1,0 +1,3 @@
+pr: 112731
+releasenote:
+  text: Switched kubectl to use `github.com/russross/blackfriday/v2`

@@ -1,0 +1,4 @@
+pr: 109128
+releasenote:
+  text: apiextensions_openapi_v3_regeneration_count metric (alpha) will be emitted
+    for OpenAPI V3.

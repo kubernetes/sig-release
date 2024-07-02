@@ -1,0 +1,5 @@
+pr: 122231
+releasenote:
+  text: |
+    "Added Timezone column in the output of the 'kubectl get cronjob' command."
+pr_body: ""

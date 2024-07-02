@@ -1,0 +1,5 @@
+pr: 123492
+releasenote:
+  text: |
+    "kubeadm: fixed a bug where "kubeadm upgrade plan -o yaml|json" included unneeded output and was missing component config information."
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 116720
+releasenote:
+  text: |-
+    Changed `kubectl version` default output to be identical to what `kubectl version --short` printed,
+    and removed `--short` flag entirely.

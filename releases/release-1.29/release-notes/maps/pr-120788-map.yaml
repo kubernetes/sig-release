@@ -1,0 +1,8 @@
+pr: 120788
+releasenote:
+  text: Stopped accepting component configuration for `kube-proxy` and `kubelet` during
+    `kubeadm upgrade plan --config`. This was a legacy behavior that was not well
+    supported for upgrades and could be used only at the plan stage to determine if
+    the configuration for these components stored in the cluster needs manual version
+    migration. In the future, `kubeadm` will attempt alternative component config
+    migration approaches.

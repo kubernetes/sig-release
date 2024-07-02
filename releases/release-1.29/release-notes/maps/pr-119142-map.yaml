@@ -1,0 +1,6 @@
+pr: 119142
+releasenote:
+  text: |-
+    '`kube-apiserver`: adds `--authentication-config` flag for reading `AuthenticationConfiguration`
+    files. `--authentication-config` flag is mutually exclusive with the existing `--oidc-*`
+    flags.'

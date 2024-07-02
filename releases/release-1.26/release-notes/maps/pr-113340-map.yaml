@@ -1,0 +1,4 @@
+pr: 113340
+releasenote:
+  text: If `ComponentSLIs` feature gate is enabled, then `/metrics/slis` now becomes
+    available on cloud-controller-manager allowing you to scrape health check metrics.

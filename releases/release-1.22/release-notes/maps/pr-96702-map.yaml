@@ -1,0 +1,3 @@
+pr: 96702
+releasenote:
+  text: The `kubectl wait --for=delete` command now ignores the not found error correctly.

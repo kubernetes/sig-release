@@ -1,0 +1,4 @@
+pr: 111254
+releasenote:
+  text: For v1.25, Kubernetes will be using golang 1.19, In this PR the version is updated to 1.19rc2
+    as GA is not yet available.

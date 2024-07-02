@@ -1,0 +1,5 @@
+pr: 124553
+releasenote:
+  text: "Fixed a 1.30.0 regression in OpenAPI descriptions of the `imagePullSecrets`
+    and \n`hostAliases` fields to mark the fields used as keys in those lists as either
+    defaulted\nor required."

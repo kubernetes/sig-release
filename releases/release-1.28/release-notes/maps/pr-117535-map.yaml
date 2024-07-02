@@ -1,0 +1,4 @@
+pr: 117535
+releasenote:
+  text: The short names `vwc` and `mwc` were introduced for the resources `validatingwebhookconfigurations`
+    and `mutatingwebhookconfigurations`.

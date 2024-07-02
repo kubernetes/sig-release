@@ -1,0 +1,6 @@
+pr: 122946
+releasenote:
+  text: "Users can now traverse all the pods that are in the scheduler and waiting
+    in the permit stage through method `IterateOverWaitingPods`. In other words,  all
+    waitingPods in scheduler can be obtained from any profiles. Before this commit,
+    each profile could only obtain `waitingPods` within that profile"

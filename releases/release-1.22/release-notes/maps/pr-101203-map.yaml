@@ -1,0 +1,3 @@
+pr: 101203
+releasenote:
+  text: Added privileges for `EndpointSlice` to the default view & edit RBAC roles.

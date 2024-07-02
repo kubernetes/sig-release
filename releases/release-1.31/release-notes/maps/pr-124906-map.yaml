@@ -1,0 +1,4 @@
+pr: 124906
+releasenote:
+  text: 'kube-apiserver: fixed a 1.28 regression printing pods with invalid initContainer
+    status.'

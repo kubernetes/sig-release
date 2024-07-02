@@ -1,0 +1,3 @@
+pr: 113021
+releasenote:
+  text: 'kubelet: Fixed a startup crash in devicemanager.'

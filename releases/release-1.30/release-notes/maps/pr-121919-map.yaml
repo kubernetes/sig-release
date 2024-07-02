@@ -1,0 +1,5 @@
+pr: 121919
+releasenote:
+  text: |
+    "Fixed a regression in `kube-proxy` introduced in version `1.26.0+` to make externalIPs work with externalTrafficPolicy: Local."
+pr_body: ""

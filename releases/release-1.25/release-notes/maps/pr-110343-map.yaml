@@ -1,0 +1,6 @@
+pr: 110343
+releasenote:
+  text: 'kubeadm: during "upgrade apply/diff/node", in case the `ClusterConfiguration.imageRepository`
+    stored in the "kubeadm-config" `ConfigMap` contains the legacy "k8s.gcr.io" repository,
+    modify it to the new default "registry.k8s.io". Reflect the change in the in-cluster
+    `ConfigMap` only during "upgrade apply".'

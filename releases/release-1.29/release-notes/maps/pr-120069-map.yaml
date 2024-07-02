@@ -1,0 +1,4 @@
+pr: 120069
+releasenote:
+  text: Promoted to conformance a test that verified that `Services` only forward
+    traffic on the port and protocol specified.

@@ -1,0 +1,6 @@
+pr: 111512
+releasenote:
+  text: 'kubeadm: added `show-join-command` as a new separate phase at the end of
+    `kubeadm init`. You can skip printing the join information by using `kubeadm init
+    --skip-phases=show-join-command`. Executing only this phase on demand will throw
+    an error because the phase needs dependencies such as bootstrap tokens to be pre-populated.'

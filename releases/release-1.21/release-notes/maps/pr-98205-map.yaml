@@ -1,0 +1,4 @@
+pr: 98205
+releasenote:
+  text: The pause image upgraded to `v3.4.1` in kubelet and kubeadm for both Linux
+    and Windows.

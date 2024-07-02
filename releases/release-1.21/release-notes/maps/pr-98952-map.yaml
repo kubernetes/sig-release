@@ -1,0 +1,4 @@
+pr: 98952
+releasenote:
+  text: 'Alpha implementation of Kubectl Command Headers: SIG CLI KEP 859 enabled
+    when KUBECTL_COMMAND_HEADERS environment variable set on the client command line.'

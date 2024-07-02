@@ -1,0 +1,4 @@
+pr: 118148
+releasenote:
+  text: Exposed the kube-scheduler "/livez" and "/readz" endpoints for health checks that are
+    in compliance with https://kubernetes.io/docs/reference/using-api/health-checks/#api-endpoints-for-health

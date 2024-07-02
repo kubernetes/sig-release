@@ -1,0 +1,4 @@
+pr: 107065
+releasenote:
+  text: Changed node staging path for CSI driver to use a PV agnostic path. Nodes
+    must be drained before updating the kubelet with this change.

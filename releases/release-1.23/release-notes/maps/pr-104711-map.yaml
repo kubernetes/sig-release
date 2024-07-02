@@ -1,0 +1,3 @@
+pr: 104711
+releasenote:
+  text: Support for Windows Server 2022 was added to the `k8s.gcr.io/pause:3.6` image.

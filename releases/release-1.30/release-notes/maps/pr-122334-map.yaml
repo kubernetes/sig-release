@@ -1,0 +1,5 @@
+pr: 122334
+releasenote:
+  text: |
+    "kube-scheduler implemented scheduling hints for the `NodeUnschedulable` plugin. The scheduling hints allowed the scheduler to only retry scheduling a Pod that had been previously rejected by the `NodeSchedulable` plugin if a new Node or a Node update had set `.spec.unschedulable` to false."
+pr_body: ""

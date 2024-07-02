@@ -1,0 +1,5 @@
+pr: 104157
+releasenote:
+  text: 'kubeadm: remove the `--port` flag from the manifest for the `kube-controller-manager`
+    since the flag has been a NO-OP since 1.22 and insecure serving was removed for
+    the component.'

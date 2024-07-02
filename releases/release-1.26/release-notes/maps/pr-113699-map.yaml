@@ -1,0 +1,7 @@
+pr: 113699
+releasenote:
+  text: |
+    '`metav1.LabelSelectors` specified in API objects are now validated to ensure
+    they do not contain invalid label values that will error at time of use. Existing
+    invalid objects can be updated, but new objects are required to contain valid
+    label selectors.'

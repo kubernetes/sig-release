@@ -1,0 +1,4 @@
+pr: 123315
+releasenote:
+  text: Graduated support for CDI device IDs to general availability. The `DevicePluginCDIDevices`
+    feature gate is now enabled unconditionally.

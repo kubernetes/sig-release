@@ -1,0 +1,3 @@
+pr: 108984
+releasenote:
+  text: Added logging-format option to CCMs based on `k8s.io/cloud-provider`

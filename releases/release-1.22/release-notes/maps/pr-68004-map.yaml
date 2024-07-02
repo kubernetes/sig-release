@@ -1,0 +1,3 @@
+pr: 68004
+releasenote:
+  text: 'Fluentd: isolate logging resources in separate namespace `logging`'

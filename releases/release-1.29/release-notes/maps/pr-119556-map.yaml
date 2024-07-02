@@ -1,0 +1,4 @@
+pr: 119556
+releasenote:
+  text: Improved memory usage of `kube-scheduler` by dropping the `.metadata.managedFields`
+    field that `kube-scheduler` doesn't require.

@@ -1,0 +1,5 @@
+pr: 122341
+releasenote:
+  text: |
+    "Fixed a regression in migration of in-tree vSphere volumes to the CSI driver introduced in version `1.29.0`+."
+pr_body: ""

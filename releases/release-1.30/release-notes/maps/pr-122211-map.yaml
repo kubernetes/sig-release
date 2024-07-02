@@ -1,0 +1,4 @@
+pr: 122211
+releasenote:
+  text: Enabled deletion of pods that use raw block volumes on node reboot.
+pr_body: ""

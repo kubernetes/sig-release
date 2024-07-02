@@ -1,0 +1,6 @@
+pr: 118922
+releasenote:
+  text: |-
+    `kubeadm`: generate CA certificates with a start time that is offset 5
+    minutes in the past relative to the current system time to workaround cases of
+    clock desync.

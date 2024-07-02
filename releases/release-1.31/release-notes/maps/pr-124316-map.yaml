@@ -1,0 +1,4 @@
+pr: 124316
+releasenote:
+  text: 'ACTION-REQUIRED: DRA drivers using the v1alpha2 kubelet gRPC API are no longer
+    supported and need to be updated.'

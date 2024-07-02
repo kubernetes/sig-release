@@ -1,0 +1,3 @@
+pr: 81185
+releasenote:
+  text: Sync LB backend nodes for Service `Type=LoadBalancer` on Add/Delete node events.

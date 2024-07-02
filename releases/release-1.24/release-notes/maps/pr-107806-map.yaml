@@ -1,0 +1,4 @@
+pr: 107806
+releasenote:
+  text: 'Env var for additional cli flags used in the csi-proxy binary when a Windows
+    nodepool is created with `kube-up.sh`'

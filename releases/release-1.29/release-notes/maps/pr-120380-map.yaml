@@ -1,0 +1,5 @@
+pr: 120380
+releasenote:
+  text: |-
+    `kubectl` will not print events if `--show-events=false` argument is passed to
+    describe PVC subcommand.

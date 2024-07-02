@@ -1,0 +1,5 @@
+pr: 122530
+releasenote:
+  text: |
+    "kubeadm: Added better handling of errors during unmount when calling `kubeadm reset`. When failing to unmount directories under `/var/run/kubelet`, kubeadm will now throw an error instead of showing a warning and continuing to clean up said directory. In such situations, it is better for you to inspect the problem and resolve it manually. Then, you can call `kubeadm reset` again to complete the cleanup."
+pr_body: ""

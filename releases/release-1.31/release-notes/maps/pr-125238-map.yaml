@@ -1,0 +1,6 @@
+pr: 125238
+releasenote:
+  text: |-
+    Allow creating ServiceAccount tokens bound to Node objects.
+    This allows users to bind a service account token's validity to a named Node object, similar to Pod bound tokens.
+    Use with `kubectl create token <serviceaccount-name> --bound-object-kind=Node --bound-object-node=<node-name>`.

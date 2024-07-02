@@ -1,0 +1,4 @@
+pr: 121041
+releasenote:
+  text: '`kubelet` now emits a metric for end-to-end pod startup latency, including
+    image pull.'

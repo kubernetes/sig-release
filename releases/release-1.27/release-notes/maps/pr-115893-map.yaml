@@ -1,0 +1,3 @@
+pr: 115893
+releasenote:
+  text: Upgraded `go-jose` to `v2.6.0`

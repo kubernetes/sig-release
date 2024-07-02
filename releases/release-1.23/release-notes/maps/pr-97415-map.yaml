@@ -1,0 +1,3 @@
+pr: 97415
+releasenote:
+  text: PodResources interface was changed, now it returns only isolated CPUs

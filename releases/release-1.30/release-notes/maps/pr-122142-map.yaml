@@ -1,0 +1,5 @@
+pr: 122142
+releasenote:
+  text: When working with client-go events, it's now recommended to use `NewEventBroadcasterAdapterWithContext`
+    instead of `NewEventBroadcasterAdapter` if contextual logging support is needed.
+pr_body: ""

@@ -1,0 +1,3 @@
+pr: 125235
+releasenote:
+  text: Built etcd image v3.5.14.

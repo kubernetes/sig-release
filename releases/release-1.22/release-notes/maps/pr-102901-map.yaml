@@ -1,0 +1,7 @@
+pr: 102901
+releasenote:
+  text: 'kubeadm: add the `imagePullPolicy` field in the `nodeRegistration` section
+    of `InitConfiguration` and `JoinConfiguration` in `v1beta3`. This allows the user
+    to specify the image pull policy during "kubeadm init" and "kubeadm join". The
+    value of this field must be one of `Always`, `IfNotPresent` or `Never`. The default
+    behavior continues to be `IfNotPresent`.'

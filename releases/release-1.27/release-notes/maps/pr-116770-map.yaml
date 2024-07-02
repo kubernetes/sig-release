@@ -1,0 +1,5 @@
+pr: 116770
+releasenote:
+  text: Fixed bug in beta aggregated discovery endpoint which caused CRD discovery
+    information to be temporarily missing when an Aggregated APIService with the same
+    GroupVersion is deleted (and vice versa).

@@ -1,0 +1,4 @@
+pr: 114606
+releasenote:
+  text: Fixed a bug that unintentionally overrides custom Accept headers in http (live-/readiness)-probes
+    if the header is in lowercase.

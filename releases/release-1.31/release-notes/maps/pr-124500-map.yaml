@@ -1,0 +1,9 @@
+pr: 124500
+releasenote:
+  text: "kube-scheduler deprecated all non-csi volumelimit plugins and removed those
+    from defaults plugins. \n- AzureDiskLimits\n- CinderLimits\n- EBSLimits\n- GCEPDLimits\n\nThe
+    NodeVolumeLimits plugin can handle the same functionality as the above plugins
+    since the above volume types are migrated to CSI.\nPlease remove those plugins
+    and replace them with the NodeVolumeLimits plugin if you explicitly use those
+    plugins in the scheduler config.\nThose plugins will be removed in the release
+    1.32."

@@ -1,0 +1,5 @@
+pr: 111973
+releasenote:
+  text: Deprecated beta APIs scheduled for removal in `v1.26` are no longer served.
+    See https://kubernetes.io/docs/reference/using-api/deprecation-guide/#v1-26 for
+    more information.

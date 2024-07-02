@@ -1,0 +1,16 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - jeremyrickard         # Release Team Lead
+  - lachie83              # Emeritus Adviser
+  - hasheddan             # Release Team Lead Shadow
+  - palnabarun            # Release Team Lead Shadow
+  - savitharaghunathan    # Release Team Lead Shadow
+
+reviewers:
+  - kikisdeliveryservice  # Enhancements
+  - robertkielty          # CI Signal
+  - bai                   # Bug Triage
+  - annajung              # Docs
+  - jameslaverack         # Release Notes
+  - jrsapi                # Communications

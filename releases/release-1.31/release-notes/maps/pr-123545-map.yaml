@@ -1,0 +1,4 @@
+pr: 123545
+releasenote:
+  text: Updated description of default values for --healthz-bind-address and --metrics-bind-address
+    parameters.

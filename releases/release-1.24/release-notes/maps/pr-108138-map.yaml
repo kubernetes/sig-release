@@ -1,0 +1,8 @@
+pr: 108138
+releasenote:
+  text: Fixes a regression in v1beta1 PodDisruptionBudget handling of `strategic merge
+    patch`-type API requests for the `selector` field. Prior to 1.21, these requests
+    would merge `matchLabels` content and replace `matchExpressions` content. In 1.21,
+    patch requests touching the `selector` field started replacing the entire selector.
+    This is consistent with server-side apply and the v1 PodDisruptionBudget behavior,
+    but should not have been changed for v1beta1.

@@ -1,0 +1,3 @@
+pr: 112579
+releasenote:
+  text: Removed `PodOverhead` feature gate as the feature is in GA since `v1.24`.

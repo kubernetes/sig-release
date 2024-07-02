@@ -1,0 +1,4 @@
+pr: 98074
+releasenote:
+  text: The kube-apiserver now resets `managedFields` that got corrupted by a mutating
+    admission controller.

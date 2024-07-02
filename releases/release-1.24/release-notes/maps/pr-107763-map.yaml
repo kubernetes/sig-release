@@ -1,0 +1,5 @@
+pr: 107763
+releasenote:
+  text: e2e tests wait for `kube-root-ca.crt` to be populated in namespaces for use
+    with projected service account tokens, reducing delays starting those test pods
+    and errors in the logs.

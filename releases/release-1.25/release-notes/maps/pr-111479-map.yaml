@@ -1,0 +1,4 @@
+pr: 111479
+releasenote:
+  text: |
+          `CSIMigrationAWS` upgraded to GA and locked to true.

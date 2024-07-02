@@ -1,0 +1,5 @@
+pr: 123793
+releasenote:
+  text: |
+    "kube-apiserver: JWT authenticator now reports the following metrics: - apiserver_authentication_config_controller_automatic_reloads_total - apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds"
+pr_body: ""

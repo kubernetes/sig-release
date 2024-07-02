@@ -1,0 +1,5 @@
+pr: 115464
+releasenote:
+  text: |-
+    Fixed an issue where a CSI migrated volume may be prematurely detached when the CSI driver is not running on the node.
+    If CSI migration is enabled on the node, even the csi-driver is not up and ready, we will still add this volume to DSW.

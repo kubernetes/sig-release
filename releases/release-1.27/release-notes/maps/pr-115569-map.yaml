@@ -1,0 +1,3 @@
+pr: 115569
+releasenote:
+  text: '`nodeName` being set along with non-empty `schedulingGates` is now enforced.'

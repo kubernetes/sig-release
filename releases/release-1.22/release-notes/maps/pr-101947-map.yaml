@@ -1,0 +1,3 @@
+pr: 101947
+releasenote:
+  text: The Memory Manager feature graduates to Beta and it is enabled by default.

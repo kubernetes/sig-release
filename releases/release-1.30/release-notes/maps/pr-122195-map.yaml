@@ -1,0 +1,6 @@
+pr: 122195
+releasenote:
+  text: kube-scheduler now retries scheduling Pods rejected by the PodTopologySpread
+    plugin when related Pods are created, deleted, updated, or when a node matches
+    the specified topologyKey.
+pr_body: ""

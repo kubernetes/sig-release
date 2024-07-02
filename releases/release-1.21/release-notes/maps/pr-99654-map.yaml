@@ -1,0 +1,5 @@
+pr: 99654
+releasenote:
+  text: client-go exec credential plugins will pass stdin only when interactive terminal
+    is detected on stdin. This fixes a bug where previously it was checking if **stdout**
+    is an interactive terminal.

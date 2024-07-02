@@ -1,0 +1,5 @@
+pr: 105797
+releasenote:
+  text: The Go API for logging configuration in `k8s.io/component-base` was moved
+    to `k8s.io/component-base/logs/api/v1`. The configuration file format and command
+    line flags are the same as before.

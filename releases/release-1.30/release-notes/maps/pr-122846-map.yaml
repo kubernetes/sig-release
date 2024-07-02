@@ -1,0 +1,5 @@
+pr: 122846
+releasenote:
+  text: |
+    "Fixed an issue where `AvailableBytes` sometimes did not report correctly on WindowsNodes when the `PodAndContainerStatsFromCRI` feature was enabled."
+pr_body: ""

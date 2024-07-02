@@ -1,0 +1,4 @@
+pr: 100141
+releasenote:
+  text: Generated OpenAPI now correctly specifies 201 as a possible response code
+    for PATCH operations.

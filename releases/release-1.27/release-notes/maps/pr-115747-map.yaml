@@ -1,0 +1,8 @@
+pr: 115747
+releasenote:
+  text: |-
+    Added CEL runtime cost calculation into ValidatingAdmissionPolicy, matching the evaluation cost
+    restrictions that already apply to CustomResourceDefinition.
+    If rule evaluation uses more compute than the limit, the API server aborts the evaluation and the
+    admission check that was being performed is aborted; the `failurePolicy` for the ValidatingAdmissionPolicy
+    determines the outcome.

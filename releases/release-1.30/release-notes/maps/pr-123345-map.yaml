@@ -1,0 +1,5 @@
+pr: 123345
+releasenote:
+  text: |
+    Added a "reason" field to the "image_garbage_collected_total" metric, allowing administrators to differentiate between images that were collected for reasons "age" vs "space".
+pr_body: ""

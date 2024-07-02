@@ -1,0 +1,5 @@
+pr: 108250
+releasenote:
+  text: 'Added a `kube-proxy` flag (`--iptables-localhost-nodeports`, default true)
+    to allow disabling `NodePort` services on loopback addresses. Note: this only applies
+    to iptables mode and ipv4.'

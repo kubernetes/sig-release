@@ -1,0 +1,5 @@
+pr: 106792
+releasenote:
+  text: New feature gate, ServiceIPStaticSubrange, to enable the new strategy in the
+    Service IP allocators, so the IP range is subdivided and dynamic allocated ClusterIP
+    addresses for Services are allocated preferently from the upper range.

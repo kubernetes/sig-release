@@ -1,0 +1,6 @@
+pr: 124383
+releasenote:
+  text: |-
+    kube-proxy's nftables mode (--proxy-mode=nftables) is now beta and available by default.
+
+    FIXME ADD MORE HERE BEFORE THE RELEASE, DOCS LINKS AND STUFF

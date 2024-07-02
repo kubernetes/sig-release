@@ -1,0 +1,5 @@
+pr: 117034
+releasenote:
+  text: |-
+    `kubectl events --for` will also support fully qualified names such as replicasets.apps,
+    etc.

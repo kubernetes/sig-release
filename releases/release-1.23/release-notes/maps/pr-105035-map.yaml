@@ -1,0 +1,3 @@
+pr: 105035
+releasenote:
+  text: Migrated pkg/proxy/winuserspace to structured logging

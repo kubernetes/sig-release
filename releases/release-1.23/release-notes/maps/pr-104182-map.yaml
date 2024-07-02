@@ -1,0 +1,4 @@
+pr: 104182
+releasenote:
+  text: 'kube-apiserver: Avoid unnecessary repeated calls to `admission webhooks`
+    that reject an update or delete request.'

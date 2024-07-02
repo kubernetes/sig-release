@@ -1,0 +1,3 @@
+pr: 113521
+releasenote:
+  text: Resolved an issue that caused winkernel proxier to treat stale VIPs as valid.

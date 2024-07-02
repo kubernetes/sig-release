@@ -1,0 +1,7 @@
+pr: 112309
+releasenote:
+  text: A new `DisableCompression` field (default = `false`) has been added to
+    kubeconfig under cluster info. When set to `true`, clients using the kubeconfig
+    opt out of response compression for all requests to the apiserver. This can
+    help improve list call latencies significantly when client-server network
+    bandwidth is ample (>30MB/s) or if the server is CPU-constrained.

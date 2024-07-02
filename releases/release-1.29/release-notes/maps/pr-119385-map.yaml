@@ -1,0 +1,5 @@
+pr: 119385
+releasenote:
+  text: Introduced new apiserver metric `apiserver_flowcontrol_current_inqueue_seats`.
+    This metric is analogous to `apiserver_flowcontrol_current_inqueue_requests`,
+    but tracks the total number of seats, as each request can take more than one seat.

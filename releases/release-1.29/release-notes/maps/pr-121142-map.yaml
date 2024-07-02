@@ -1,0 +1,4 @@
+pr: 121142
+releasenote:
+  text: Fixed a `v1.28.0` regression where `kube-controller-manager` can crash when
+    `StatefulSet` with `Parallel` policy and PVC labels are scaled up.

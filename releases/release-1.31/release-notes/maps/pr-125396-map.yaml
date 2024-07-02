@@ -1,0 +1,4 @@
+pr: 125396
+releasenote:
+  text: '`kubeadm`: Allowed the `kubeadm init phase certs sa` command to accept the
+    `--config` flag.'

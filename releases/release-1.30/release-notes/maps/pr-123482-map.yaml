@@ -1,0 +1,4 @@
+pr: 123482
+releasenote:
+  text: Graduated HorizontalPodAutoscaler support for per-container metrics to stable.
+pr_body: ""

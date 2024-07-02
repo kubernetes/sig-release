@@ -1,0 +1,3 @@
+pr: 104744
+releasenote:
+  text: Topology Hints now excludes control plane notes from capacity calculations.

@@ -1,0 +1,3 @@
+pr: 101081
+releasenote:
+  text: Add Kubernetes Events to the `Kubelet Graceful Shutdown` feature.

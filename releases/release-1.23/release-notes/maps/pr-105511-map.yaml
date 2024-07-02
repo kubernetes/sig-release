@@ -1,0 +1,5 @@
+pr: 105511
+releasenote:
+  text: Watch requests that are delegated to aggregated API servers no longer reserve
+    concurrency units (seats) in the API Priority and Fairness dispatcher for their
+    entire duration.

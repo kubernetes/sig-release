@@ -1,0 +1,4 @@
+pr: 108752
+releasenote:
+  text: Fix issue where the job controller might not remove the job tracking finalizer
+    from pods when deleting a job, or when the pod is orphan

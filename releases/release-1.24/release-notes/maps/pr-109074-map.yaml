@@ -1,0 +1,4 @@
+pr: 109074
+releasenote:
+  text: 'kubeadm: added the flag `--experimental-initial-corrupt-check` to etcd static
+    Pod manifests to ensure etcd member data consistency'

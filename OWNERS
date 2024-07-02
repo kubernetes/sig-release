@@ -1,0 +1,18 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - sig-release-leads
+reviewers:
+  - release-engineering-approvers
+  - release-team
+  - release-team-lead-role
+labels:
+  - sig/release
+
+# Thanks for everything!
+emeritus_approvers:
+  - alejandrox1 # Emeritus Technical Lead
+  - calebamiles # Emeritus Chair
+  - hasheddan # Emeritus Technical Lead
+  - jdumars # Emeritus Chair
+  - tpepper # Emeritus Chair

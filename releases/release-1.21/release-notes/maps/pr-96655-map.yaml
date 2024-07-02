@@ -1,0 +1,3 @@
+pr: 96655
+releasenote:
+  text: 'kubectl: Add `--use-protocol-buffers` flag to kubectl top pods and nodes.'

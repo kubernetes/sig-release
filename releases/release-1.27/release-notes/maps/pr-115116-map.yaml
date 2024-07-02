@@ -1,0 +1,5 @@
+pr: 115116
+releasenote:
+  text: The `WaitFor` and `WaitForWithContext` functions in the wait package have
+    now been marked private. Callers should use the equivalent `Poll*` method with
+    a zero duration interval.

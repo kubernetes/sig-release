@@ -1,0 +1,13 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - spiffxp # RT Lead Shadow
+reviewers:
+  - kacole2
+  - jberkus
+  - dougm
+  - tfogo
+  - marpaia
+  - nikopen
+emeritus_approvers:
+  - AishSundar # RT Lead

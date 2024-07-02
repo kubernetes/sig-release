@@ -1,0 +1,3 @@
+pr: 116835
+releasenote:
+  text: Migrated `pkg/scheduler/framework/preemption` to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).

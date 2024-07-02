@@ -1,0 +1,5 @@
+pr: 123504
+releasenote:
+  text: |
+    "Upgraded metrics server to `v0.7.0`."
+pr_body: ""

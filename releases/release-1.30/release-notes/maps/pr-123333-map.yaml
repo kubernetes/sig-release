@@ -1,0 +1,5 @@
+pr: 123333
+releasenote:
+  text: kube-apiserver now reports metrics for authorization decisions in the `apiserver_authorization_decisions_total`
+    metric, labeled by authorizer type, name, and decision.
+pr_body: ""

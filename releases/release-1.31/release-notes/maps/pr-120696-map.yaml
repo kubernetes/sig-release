@@ -1,0 +1,4 @@
+pr: 120696
+releasenote:
+  text: 'component-base/logs: when compiled with Go >= 1.21, component-base will automatically
+    configure the slog default logger together with initializing klog.'

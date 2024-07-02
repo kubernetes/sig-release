@@ -1,0 +1,3 @@
+pr: 99969
+releasenote:
+  text: Migrated `pkg/kubelet/cm/topologymanager` to structure logging

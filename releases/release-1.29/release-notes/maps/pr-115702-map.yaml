@@ -1,0 +1,4 @@
+pr: 115702
+releasenote:
+  text: Fixed the bug where kubelet couldn't output logs after log file rotated when
+    `kubectl logs POD_NAME -f` is running.

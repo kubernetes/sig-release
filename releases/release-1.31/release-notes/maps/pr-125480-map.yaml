@@ -1,0 +1,4 @@
+pr: 125480
+releasenote:
+  text: 'kubeadm: fixed a regression where the JoinConfiguration.discovery.timeout
+    was no longer respected and the value was always hardcoded to "5m" (5 minutes).'

@@ -1,0 +1,7 @@
+pr: 117787
+releasenote:
+  text: |-
+    `kube-proxy` in iptables mode will now have separate `sync_full_proxy_rules_duration_seconds`\nand
+    `sync_partial_proxy_rules_duration_seconds` (in addition to the existing\n`sync_proxy_rules_duration_seconds`),
+    giving better information about the duration of each \nsync type, rather than
+    only giving a weighted average of the two sync types together.

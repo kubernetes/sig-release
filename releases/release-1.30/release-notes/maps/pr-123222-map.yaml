@@ -1,0 +1,4 @@
+pr: 123222
+releasenote:
+  text: Fixed a potential data race in DRA with no known real-world implications.
+pr_body: ""

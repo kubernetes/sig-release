@@ -1,0 +1,3 @@
+pr: 122999
+releasenote:
+  text: Fixed an issue calculating total CPU usage reported for Windows nodes.

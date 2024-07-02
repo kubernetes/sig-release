@@ -1,0 +1,4 @@
+pr: 106520
+releasenote:
+  text: 'kubelet: the printing of flags at the start of kubelet now uses the final
+    logging configuration.'

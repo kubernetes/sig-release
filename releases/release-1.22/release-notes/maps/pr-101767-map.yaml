@@ -1,0 +1,3 @@
+pr: 101767
+releasenote:
+  text: The `LogarithmicScaleDown` feature graduates to Beta and enabled by default.

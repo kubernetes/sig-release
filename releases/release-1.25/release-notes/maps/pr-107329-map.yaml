@@ -1,0 +1,3 @@
+pr: 107329
+releasenote:
+  text: Promoted LocalStorageCapacityIsolationFSQuotaMonitoring to beta.

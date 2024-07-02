@@ -1,0 +1,3 @@
+pr: 125150
+releasenote:
+  text: CSI spec support has been lifted to v1.9.0 in this release.

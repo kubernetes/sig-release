@@ -1,0 +1,4 @@
+pr: 122079
+releasenote:
+  text: 'kubeadm: used `ttlSecondsAfterFinished` to automatically clean up the `upgrade-health-check`
+    Job that runs during upgrade preflighting.'

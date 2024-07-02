@@ -1,0 +1,3 @@
+pr: 114872
+releasenote:
+  text: '`client-go`: fixed the wait time for trying to acquire the leader lease'

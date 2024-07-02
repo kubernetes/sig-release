@@ -1,0 +1,5 @@
+pr: 112907
+releasenote:
+  text: |
+    '`registered_metric_total` will now report the number of metrics broken down by
+    stability level and deprecated version.'

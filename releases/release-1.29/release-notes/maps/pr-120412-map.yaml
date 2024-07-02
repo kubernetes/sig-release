@@ -1,0 +1,5 @@
+pr: 120412
+releasenote:
+  text: |-
+    `kube-proxy` will only install the `DROP` rules for invalid `conntrack` states if
+    the `nf_conntrack_tcp_be_liberal` is not set.

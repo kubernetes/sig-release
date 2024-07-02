@@ -1,0 +1,4 @@
+pr: 125157
+releasenote:
+  text: "`kubeadm`: The `NodeSwap` check that kubeadm performs during preflight, has a new warning to verify if swap has been configured correctly."
+pr_body: ""

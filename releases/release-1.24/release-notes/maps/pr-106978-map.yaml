@@ -1,0 +1,4 @@
+pr: 106978
+releasenote:
+  text: Modified log messages that were logged with `"v":0` in JSON output although
+    they were debug messages with a higher verbosity.

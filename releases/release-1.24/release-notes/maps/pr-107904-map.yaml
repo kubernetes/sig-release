@@ -1,0 +1,5 @@
+pr: 107904
+releasenote:
+  text: The in-tree Azure plugin has been deprecated. The Azure kubelogin plugin serves
+    as an out-of-tree replacement via the kubectl/client-go credential plugin mechanism.  Users
+    will now see a warning in the logs regarding this deprecation.

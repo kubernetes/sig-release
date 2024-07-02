@@ -1,0 +1,4 @@
+pr: 125377
+releasenote:
+  text: Exposed the `apiserver_watch_cache_resource_version` metric to simplify debugging
+    problems with watchcache.

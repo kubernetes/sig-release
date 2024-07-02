@@ -1,0 +1,3 @@
+pr: 102363
+releasenote:
+  text: Promote Cronjobs storage version to `batch/v1`.

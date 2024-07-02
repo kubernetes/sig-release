@@ -1,0 +1,5 @@
+pr: 123384
+releasenote:
+  text: |
+    "Improved scheduler performance when no scoring plugins were defined."
+pr_body: ""

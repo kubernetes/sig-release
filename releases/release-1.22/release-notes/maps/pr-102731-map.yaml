@@ -1,0 +1,4 @@
+pr: 102731
+releasenote:
+  text: The `EndpointSlicen Mirroring controller` no longer mirrors the `last-applied-configuration`
+    annotation created by `kubectl` to update `EndpointSlices`.

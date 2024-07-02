@@ -1,0 +1,4 @@
+pr: 112104
+releasenote:
+  text: Fixed EDITOR/KUBE_EDITOR with double-quoted paths with spaces when on Windows
+    cmd.exe.

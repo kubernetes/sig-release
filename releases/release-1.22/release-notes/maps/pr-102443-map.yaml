@@ -1,0 +1,3 @@
+pr: 102443
+releasenote:
+  text: Remove balanced attached node volumes feature.

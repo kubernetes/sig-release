@@ -1,0 +1,5 @@
+pr: 108396
+releasenote:
+  text: "A new client side metric `rest_client_request_retries_total` has been added
+    that tracks the number of retries sent to the server, partitioned by status
+    code, verb and host"

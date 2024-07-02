@@ -1,0 +1,4 @@
+pr: 112357
+releasenote:
+  text: 'kube-scheduler: added taints filtering logic consistent with `TaintToleration`
+    plugin for `PodTopologySpread` plugin.'

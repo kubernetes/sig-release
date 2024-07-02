@@ -1,0 +1,4 @@
+pr: 106816
+releasenote:
+  text: Fixed a bug that a pod's `.status.nominatedNodeName` is not cleared properly,
+    and thus over-occupied system resources.

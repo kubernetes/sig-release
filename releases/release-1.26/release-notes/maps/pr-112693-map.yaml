@@ -1,0 +1,3 @@
+pr: 112693
+releasenote:
+  text: Bump `golang.org/x/net` to `v0.1.1-0.20221027164007-c63010009c80`.

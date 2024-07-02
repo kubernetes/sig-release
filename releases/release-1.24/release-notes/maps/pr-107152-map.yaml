@@ -1,0 +1,3 @@
+pr: 107152
+releasenote:
+  text: Removed the `ImmutableEphemeralVolumes` feature gate.

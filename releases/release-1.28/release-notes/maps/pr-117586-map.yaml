@@ -1,0 +1,4 @@
+pr: 117586
+releasenote:
+  text: Added `DisruptionTarget` condition to the pod preempted by kubelet to make
+    room for a critical pod.

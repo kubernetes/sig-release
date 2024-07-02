@@ -1,0 +1,6 @@
+pr: 120255
+releasenote:
+  text: |-
+    `--sync-frequency` will not affect the update interval of volumes that use `ConfigMaps`
+    or `Secrets` when the `configMapAndSecretChangeDetectionStrategy` is set to `Cache`.
+    The update interval is only affected by `node.alpha.kubernetes.io/ttl` node annotation."

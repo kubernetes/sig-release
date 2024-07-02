@@ -1,0 +1,3 @@
+pr: 107141
+releasenote:
+  text: Increase default value of discovery cache TTL for kubectl to 6 hours.

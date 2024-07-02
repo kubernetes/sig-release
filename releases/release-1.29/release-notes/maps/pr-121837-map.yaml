@@ -1,0 +1,5 @@
+pr: 121837
+releasenote:
+  text: 'kubeadm: changed the "system:masters" Group in the apiserver-kubelet-client.crt
+    certificate Subject to be "kubeadm:cluster-admins" which is a less privileged
+    Group.'

@@ -1,0 +1,4 @@
+pr: 115133
+releasenote:
+  text: Enabled the `node-local` kubelet podresources API endpoint on windows, alongside
+    unix.

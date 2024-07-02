@@ -1,0 +1,4 @@
+pr: 104482
+releasenote:
+  text: Changed kubectl describe to compute age of an event using the `EventSeries.count`
+    and `EventSeries.lastObservedTime`.

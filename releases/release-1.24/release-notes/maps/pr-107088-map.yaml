@@ -1,0 +1,4 @@
+pr: 107088
+releasenote:
+  text: 'Fixed a bug where unwanted fields were being returned from a `create --dry-run`:
+    uid and, if generateName was used, name.'

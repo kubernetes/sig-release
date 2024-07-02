@@ -1,0 +1,3 @@
+pr: 112980
+releasenote:
+  text: Graduated Kubelet Device Manager to GA.

@@ -1,0 +1,4 @@
+pr: 123719
+releasenote:
+  text: The `StructuredAuthenticationConfiguration` feature is now beta and enabled.
+pr_body: ""

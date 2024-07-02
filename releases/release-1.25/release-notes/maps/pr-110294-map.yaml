@@ -1,0 +1,4 @@
+pr: 110294
+releasenote:
+  text: Fix bug that prevented the job controller from enforcing activeDeadlineSeconds
+    when set.

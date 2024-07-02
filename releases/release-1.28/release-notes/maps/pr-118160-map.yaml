@@ -1,0 +1,7 @@
+pr: 118160
+releasenote:
+  text: |-
+    The "value" part in the `wait --for=jsonpath='{expression}'[=value]` is now
+    optional. If the value is not provided i.e., the command looks like `wait --for=jsonpath='{expression}'`
+    then the wait condition is interpreted as matched when the expression returns
+    *any* single JSON value like object or a literal.

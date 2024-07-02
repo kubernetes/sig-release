@@ -1,0 +1,4 @@
+pr: 102437
+releasenote:
+  text: JSON logging now supports having information about source code location in
+    the logging format, source code information is available under the key "caller".

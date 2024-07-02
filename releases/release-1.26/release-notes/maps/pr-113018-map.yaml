@@ -1,0 +1,3 @@
+pr: 113018
+releasenote:
+  text: Graduated Kubelet CPU Manager to GA.

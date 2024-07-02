@@ -1,0 +1,3 @@
+pr: 116530
+releasenote:
+  text: 'kubelet: un-deprecate `--provider-id` flag'

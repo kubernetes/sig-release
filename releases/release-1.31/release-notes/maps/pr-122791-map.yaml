@@ -1,0 +1,6 @@
+pr: 122791
+releasenote:
+  text: |-
+    Removed `ENABLE_CLIENT_GO_WATCH_LIST_ALPHA` environment variable from the reflector.
+    To activate the feature set `KUBE_FEATURE_WatchListClient` environment variable or a corresponding command line option (this works only with binaries that explicitly expose it).
+pr_body: ""

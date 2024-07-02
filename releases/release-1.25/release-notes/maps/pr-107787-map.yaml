@@ -1,0 +1,3 @@
+pr: 107787
+releasenote:
+  text: Fixed bug where CSI migration doesn't count inline volumes for attach limit.

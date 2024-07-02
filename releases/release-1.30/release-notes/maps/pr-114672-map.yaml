@@ -1,0 +1,7 @@
+pr: 114672
+releasenote:
+  text: Text logging in Kubernetes components now uses [textlogger](https://pkg.go.dev/k8s.io/klog/v2@v2.120.0/textlogger).
+    The same split streams of info and error log entries with buffering of info entries
+    is now also supported for text output (off by default, alpha feature). Previously,
+    this was only supported for JSON. Performance is better also without split streams.
+pr_body: ""

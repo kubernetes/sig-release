@@ -1,0 +1,3 @@
+pr: 124091
+releasenote:
+  text: Fixed kubelet so it would no longer crash when a DRA(Dynamic Resource Allocation) driver returns a nil as part of the Node(Un)PrepareResources response instead of an empty struct (Did not affect drivers written in Go, first showed up with a driver written in Rust).

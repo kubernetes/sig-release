@@ -1,0 +1,5 @@
+pr: 122329
+releasenote:
+  text: |
+    "Fixed accidental enablement of the new alpha `optionalOldSelf` API field in `CustomResourceDefinition` validation rules, which should only have been allowed to be set when the `CRDValidationRatcheting` feature gate is enabled."
+pr_body: ""

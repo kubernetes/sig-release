@@ -1,0 +1,5 @@
+pr: 122647
+releasenote:
+  text: Added to `MutableFeatureGate` the ability to override the default setting
+    of feature gates, to allow default-enabling a feature on a component-by-component
+    basis instead of for all affected components simultaneously.

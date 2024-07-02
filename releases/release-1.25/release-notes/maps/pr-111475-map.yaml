@@ -1,0 +1,4 @@
+pr: 111475
+releasenote:
+  text: If a Pod has a DisruptionTarget condition with status=True for more than 2
+    minutes without getting a DeletionTimestamp, the control plane resets it to status=False.

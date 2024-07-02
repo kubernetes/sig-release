@@ -1,0 +1,5 @@
+pr: 122600
+releasenote:
+  text: |
+    "Used `errors.Is()` to handle errors returned by `LookPath()`."
+pr_body: ""

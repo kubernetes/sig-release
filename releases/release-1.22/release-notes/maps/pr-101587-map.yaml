@@ -1,0 +1,8 @@
+pr: 101587
+releasenote:
+  text: Some of the in-tree storage drivers indicate support for the `MetricsProvider`
+    interface, but fail to configure this for BlockMode volumes. With a recent change,
+    `Kubelet` will call `GetMetrics()` for BlockMode volumes, and the in-tree drivers
+    that miss the support cause a Go panic. Now the in-tree storage drivers that support
+    BlockMode volumes, will return the Capacity of the volume in the `GetMetrics()`
+    call.

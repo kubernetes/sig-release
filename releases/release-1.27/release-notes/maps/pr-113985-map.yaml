@@ -1,0 +1,6 @@
+pr: 113985
+releasenote:
+  text: Shared informers now correctly propagate whether they are synced or not. Individual
+    informer handlers may now check if they are synced or not (new `HasSynced` method).
+    Library support is added to assist controllers in tracking whether their own work
+    is completed for items in the initial list (`AsyncTracker`).

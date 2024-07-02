@@ -1,0 +1,5 @@
+pr: 121059
+releasenote:
+  text: |-
+    When the kubelet fails to assign CPUs to a Pod because there less available CPUs than the Pod requests, the error message changed from
+    `not enough cpus available to satisfy request` to `not enough cpus available to satisfy request: <num_requested> requested, only <num_available> available`.

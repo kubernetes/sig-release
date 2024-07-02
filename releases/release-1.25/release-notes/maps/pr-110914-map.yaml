@@ -1,0 +1,3 @@
+pr: 110914
+releasenote:
+  text: '`pod.Spec.RuntimeClassName` field is now available in kubectl describe command.'

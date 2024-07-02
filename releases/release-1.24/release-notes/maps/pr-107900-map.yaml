@@ -1,0 +1,4 @@
+pr: 107900
+releasenote:
+  text: A static pod that is rapidly updated was failing to start until the Kubelet
+    was restarted.

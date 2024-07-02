@@ -1,0 +1,5 @@
+pr: 115322
+releasenote:
+  text: Fixed a bug that caused the `apiserver` to panic when trying to allocate a Service
+    with a dynamic `ClusterIP` and was configured with Service CIDRs with a /28 mask
+    for IPv4 and a /124 mask for IPv6

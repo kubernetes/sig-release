@@ -1,0 +1,3 @@
+pr: 110688
+releasenote:
+  text: Fixed mounting of iSCSI volumes over IPv6 networks.

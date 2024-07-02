@@ -1,0 +1,5 @@
+pr: 120620
+releasenote:
+  text: Sidecar termination is now serialized and each sidecar container will receive
+    a `SIGTERM` after all main containers and later starting sidecar containers have
+    terminated.

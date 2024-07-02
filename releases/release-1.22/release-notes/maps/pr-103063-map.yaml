@@ -1,0 +1,11 @@
+pr: 103063
+releasenote:
+  text: The flag `--experimental-patches` is now deprecated and will be removed in
+    a future release. You can migrate to using the new flag `--patches`. Add a new
+    field `{Init|Join}Configuration.patches.directory` that can be used for the same
+    purpose. For `init` and `join` it is now recommended that you migrate to configure
+    patches via `{Init|Join}Configuration.patches.directory`. For the time being,
+    these flags can be mixed with `--config`, but that might change in the future.
+    On a command line, the last *patches flag takes precedence over previous flags
+    and the value in config. `kubeadm upgrade --patches` will continue to be the only
+    available option, since `upgrade` does not support a configuration file yet.

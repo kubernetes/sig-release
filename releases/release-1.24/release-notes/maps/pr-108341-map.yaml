@@ -1,0 +1,3 @@
+pr: 108341
+releasenote:
+  text: '`kube-addon-manager` image version is bumped to 9.1.6'

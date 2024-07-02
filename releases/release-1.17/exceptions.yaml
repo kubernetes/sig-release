@@ -1,0 +1,42 @@
+# Exceptions to Enhancement Freeze requested in 1.17
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Guinevere Saenger ([@guineveresaenger](https://github.com/guineveresaenger)
+
+- name: Implement RuntimeClass on Windows
+  issue: 1301
+  date_requested: 2019-10-15
+  date_reviewed: 2019-10-16
+  thread: https://groups.google.com/d/msg/kubernetes-sig-release/D_Vl5fFFodo/dg6ao0LRCwAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1302
+  status: Approved
+
+- name: Immutable Fields API
+  issue: 1101
+  date_requested: 2019-10-16
+  date_reviewed: 2019-10-16
+  thread: https://groups.google.com/d/msg/kubernetes-sig-release/uwiy-V5Pz-U/kkxaxgETDQAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1265
+  - https://github.com/kubernetes/kubernetes/pull/83743
+  status: Approved
+
+- name: Topology aware routing of services
+  issue: 536
+  date_requested: 2019-10-17
+  date_reviewed: 2019-10-17
+  thread: https://groups.google.com/d/msg/kubernetes-sig-release/FLYvrsT9Qi8/WsyXLOF0DQAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1322
+  - https://github.com/kubernetes/kubernetes/pull/72046
+  status: Approved
+
+# Code Freeze exception requests in 1.17
+- name: In-tree storage plugin to CSI Driver Migration
+  issue: 625
+  date_requested: 2019-11-15
+  date_reviewed: 2019-11-15
+  thread: https://groups.google.com/forum/#!topic/kubernetes-sig-release/9qYGo2Wh2nI
+  pull_requests:
+  - https://github.com/kubernetes/kubernetes/pull/85231
+  status: Approved

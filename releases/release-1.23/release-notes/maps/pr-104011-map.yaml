@@ -1,0 +1,4 @@
+pr: 104011
+releasenote:
+  text: Updated json representation for a conflicted taint to `Key=Effect` when a
+    conflicted taint occurs in kubectl taint.

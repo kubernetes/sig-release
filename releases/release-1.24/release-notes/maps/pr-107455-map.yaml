@@ -1,0 +1,4 @@
+pr: 107455
+releasenote:
+  text: kubernetes e2e framework will use the url `invalid.registry.k8s.io/invalid`
+    instead `invalid.com/invalid` for test that use an invalid registry.

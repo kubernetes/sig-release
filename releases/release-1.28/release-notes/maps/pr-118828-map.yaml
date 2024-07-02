@@ -1,0 +1,5 @@
+pr: 118828
+releasenote:
+  text: |-
+    Changed how KMS v2 encryption at rest can generate data encryption keys.
+    When you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data. This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce.

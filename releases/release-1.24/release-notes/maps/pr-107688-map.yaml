@@ -1,0 +1,4 @@
+pr: 107688
+releasenote:
+  text: 'Fixed a regression in 1.23 that incorrectly pruned data from array items
+    of a custom resource that set `x-kubernetes-preserve-unknown-fields: true`.'

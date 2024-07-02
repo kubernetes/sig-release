@@ -1,0 +1,4 @@
+pr: 108987
+releasenote:
+  text: Deprecate kubectl version long output, will be replaced with kubectl version
+    ` --short`. Users requiring full output should use `--output=yaml|json` instead.

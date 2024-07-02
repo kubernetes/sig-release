@@ -1,0 +1,8 @@
+pr: 111402
+releasenote:
+  text: '[Ephemeral Containers](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/)
+    are now generally available (GA). The `EphemeralContainers` feature gate is always
+    enabled and should be removed from `--feature-gates` flag on the kube-apiserver
+    and the kubelet command lines. The `EphemeralContainers` feature gate is [deprecated
+    and scheduled for removal](https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation)  in
+    a future release.'

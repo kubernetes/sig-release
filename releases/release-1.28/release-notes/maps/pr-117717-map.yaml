@@ -1,0 +1,4 @@
+pr: 117717
+releasenote:
+  text: Allowed container runtimes to use `ErrSignatureValidationFailed` as possible
+    image pull failure.

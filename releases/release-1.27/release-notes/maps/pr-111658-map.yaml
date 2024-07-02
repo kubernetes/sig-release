@@ -1,0 +1,7 @@
+pr: 111658
+releasenote:
+  text: |-
+    Expanded the partial fix for https://github.com/kubernetes/kubernetes/issues/111539
+    which was already started in https://github.com/kubernetes/kubernetes/pull/109706
+    Specifically, we will now reduce the amount of syncs for `ETP=local` services even
+    further in the CCM and avoid re-configuring LBs to an even greater extent.

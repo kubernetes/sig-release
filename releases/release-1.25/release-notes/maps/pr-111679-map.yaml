@@ -1,0 +1,3 @@
+pr: 111679
+releasenote:
+  text: Kubernetes is now built with go 1.19.0.

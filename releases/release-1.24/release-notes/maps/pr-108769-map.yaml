@@ -1,0 +1,4 @@
+pr: 108769
+releasenote:
+  text: 'kubeadm: fixed a bug where Windows nodes fail to join an IPv6 cluster due to
+    preflight errors'

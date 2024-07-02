@@ -1,0 +1,5 @@
+pr: 112261
+releasenote:
+  text: 'Deprecated the following kubectl run flags, which are ignored if set: `--cascade`,
+    `--filename`, `--force`, `--grace-period`, `--kustomize`, `--recursive`, `--timeout`,
+    `--wait`.'

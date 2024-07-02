@@ -1,0 +1,3 @@
+pr: 122197
+releasenote:
+  text: Migrated the kube-proxy to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).

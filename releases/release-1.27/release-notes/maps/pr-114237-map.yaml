@@ -1,0 +1,4 @@
+pr: 114237
+releasenote:
+  text: Fixed a bug where when emitting similar Events consecutively, some were rejected
+    by the apiserver.

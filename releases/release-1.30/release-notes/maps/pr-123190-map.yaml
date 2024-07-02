@@ -1,0 +1,5 @@
+pr: 123190
+releasenote:
+  text: |
+    "Added the `apiserver_watch_cache_read_wait` metric to measure the watch cache impact on request latency."
+pr_body: ""

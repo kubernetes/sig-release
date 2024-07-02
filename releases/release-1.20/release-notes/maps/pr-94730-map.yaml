@@ -1,0 +1,3 @@
+pr: 94730
+releasenote:
+  text: Recreate EndpointSlices on rapid Service creation.
