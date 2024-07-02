@@ -1,0 +1,13 @@
+pr: 125029
+releasenote:
+  text: "kubeadm: enabled the v1beta4 API. For a complete changelog since v1beta3
+    please see https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta4/.
+    \n\nThe API does include a few breaking changes:\n- The \"extraArgs\" component
+    construct is now a list of \"name\"/\"value\" pairs instead of a string/string
+    map. This has been done to support duplicate args where needed.\n- The \"JoinConfiguration.discovery.timeout\"
+    field has been replaced by \"JoinConfiguration.timeouts.discovery\".\n- The \"ClusterConfiguration.timeoutForControlPlane\"
+    field has been replaced by \"{Init|Join}Configuration.timeouts.controlPlaneComponentHealthCheck\".\nPlease
+    use the command \"kubeadm config migrate\" to migrate your existing v1beta3 configuration
+    to v1beta4.\n\nv1beta3 is now marked as deprecated but will continue to be supported
+    until version 1.34 or later.\nThe storage configuration in the kube-system/kubeadm-config
+    ConfigMap is now a v1beta4 ClusterConfiguration."

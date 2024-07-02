@@ -1,0 +1,3 @@
+pr: 124618
+releasenote:
+  text: Improved scheduling latency when there are many gated pods and events that trigger requeueing from the unschedulable pool.

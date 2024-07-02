@@ -1,0 +1,4 @@
+pr: 125540
+releasenote:
+  text: Fixed incorrect "v1 Binding is deprecated in v1.6+" warning in kube-scheduler
+    log.

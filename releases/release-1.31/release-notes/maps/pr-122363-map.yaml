@@ -1,0 +1,4 @@
+pr: 122363
+releasenote:
+  text: Removed Kubelet flags `--iptables-masquerade-bit` and `--iptables-drop-bit` as they were deprecated in v1.28.
+    in v1.28 and have now been removed entirely.

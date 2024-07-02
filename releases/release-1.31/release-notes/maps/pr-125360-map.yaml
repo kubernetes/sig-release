@@ -1,0 +1,4 @@
+pr: 125360
+releasenote:
+  text: 'scheduler framework: Allowed PreBind implementations to return Pending
+    and Unschedulable status codes.'

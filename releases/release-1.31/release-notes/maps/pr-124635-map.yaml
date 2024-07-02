@@ -1,0 +1,4 @@
+pr: 124635
+releasenote:
+  text: 'client-go/tools/record.Broadcaster: Fixed automatic shutdown on WithContext
+    cancellation.'

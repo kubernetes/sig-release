@@ -1,0 +1,5 @@
+pr: 124557
+releasenote:
+  text: |-
+    Added metrics for the nftables kube-proxy mode rather than it reporting
+    metrics with "iptables" in their names.

@@ -1,0 +1,4 @@
+pr: 122082
+releasenote:
+  text: Kubelet flag `--keep-terminated-pod-volumes` was removed.  This flag was deprecated
+    in 2017.

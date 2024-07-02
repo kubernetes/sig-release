@@ -1,0 +1,4 @@
+pr: 122499
+releasenote:
+  text: StatefulSet autodelete respected controlling owners on PVC claims as described
+    in https://github.com/kubernetes/enhancements/pull/4375.

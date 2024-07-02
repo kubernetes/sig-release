@@ -1,0 +1,5 @@
+pr: 125225
+releasenote:
+  text: TFixed an issue where the Service LoadBalancer controller was not correctly considering the service.Status
+    new IPMode field and excluding the Ports when checking if the status was changed,
+    resulting in the changed field potentially not to update the service.Status correctly.
