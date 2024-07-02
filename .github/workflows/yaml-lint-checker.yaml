@@ -22,35 +22,52 @@ jobs:
           access_token: ${{ github.token }}
       - name: Check out code
         uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pyyaml
+          fetch-depth: '0'
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22.4' 
+      - name: Install go dependencies
+        run: go mod download
+      - name: Build go prog
+        run: go build -o validate_yaml .github/scripts/validate_yaml.go
       - name: Validate YAML
         id: validate_yaml
         run: |
             INVALID_FILES=""
             # check diff for invalid yaml files
-            for file in $(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.ya?ml$'); do
-              echo "Validating $file"
-              ERROR=$(python -c "import yaml, sys; sys.stdout = sys.stderr; try: yaml.safe_load(open('$file')); print('Valid') except yaml.YAMLError as e: print(e)")
-              if [ "$ERROR" != "Valid" ]; then
-                INVALID_FILES="$INVALID_FILES\n$file:\n$ERROR\n"
+            echo "original "
+            git diff --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true
+            echo "new"
+            echo "${{ github.event.pull_request.base.sha }}"
+            echo "${{ github.sha }}"
+            git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} -- releases/ | grep -E '\.ya?ml$'
+            # for file in $(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.ya?ml$'); do
+            #   echo "Validating $file"
+            #   ERROR=$(python -c "import yaml, sys; sys.stdout = sys.stderr; try: yaml.safe_load(open('$file')); print('Valid') except yaml.YAMLError as e: print(e)")
+            #   if [ "$ERROR" != "Valid" ]; then
+            #     INVALID_FILES="$INVALID_FILES\n$file:\n$ERROR\n"
+            #   fi
+            # done
+            CHANGED_FILES=$(git diff --name-only $(git merge-base origin/master HEAD) -- releases/ | grep -E '\.ya?ml$' || true)
+            if [ -n "$CHANGED_FILES" ]; then
+            echo "Validating yaml files: \n${CHANGED_FILES}"
+            OUTPUT=$(./validate_yaml $CHANGED_FILES)
+              if [[ "$OUTPUT" == *"YAML Validation Failed"* ]]; then
+                # If there are invalid files, set the output variable and fail the job. GITHUB_ENV is a special file that 
+                # allows you to set env variables for subsequent steps in the same job
+                echo "invalid_files<<EOF" >> $GITHUB_ENV
+                echo "$OUTPUT" >> $GITHUB_ENV
+                echo "EOF" >> $GITHUB_ENV
+                exit 1
               fi
-            done
-            if [ -n "$INVALID_FILES" ]; then
-              # If there are invalid files, set the output variable and fail the job. GITHUB_ENV is a special file that 
-              # allows you to set env variables for subsequent steps in the same job
-              echo "invalid_files=$INVALID_FILES" >> $GITHUB_ENV
-              exit 1
+            else 
+              echo "No YAML files changed under /releases/*"
             fi
       - name: Comment on PR if invalid yaml detected
         if: failure()
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const invalidFiles = process.env.invalid_files.trim();
