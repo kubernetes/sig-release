@@ -1,0 +1,18 @@
+pr: 122234
+releasenote:
+  text: "Added support to the scheduler to start using QueueingHint registered for Pod/Updated event
+    to determine whether unschedulable Pods update make them schedulable, when the
+    feature gate `SchedulerQueueingHints` is enabled.\nPreviously, when unschedulable
+    Pods are updated, the scheduler always put Pods back to activeQ/backoffQ. But,
+    actually not all updates to Pods make Pods schedulable, especially considering
+    many scheduling constraints nowadays are immutable.\nNow, when unschedulable Pods
+    are updated, the scheduling queue checks with QueueingHint(s) whether the update
+    may make the pods schedulable, and requeues them to activeQ/backoffQ **only when**
+    at least one QueueingHint(s) return Queue. \n\nAction required for custom scheduler
+    plugin developers:\nPlugins **have to** implement a QueueingHint for Pod/Update
+    event if the rejection from them could be resolved by updating unscheduled Pods
+    themselves.\nExample: suppose you develop a custom plugin that denies Pods that
+    have a `schedulable=false` label. \nGiven Pods with a `schedulable=false` label
+    will be schedulable if the `schedulable=false` label is removed, this plugin would
+    implement QueueingHint for Pod/Update event that returns Queue when such label
+    changes are made in unscheduled Pods."

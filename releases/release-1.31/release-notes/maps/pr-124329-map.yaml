@@ -1,0 +1,3 @@
+pr: 124329
+releasenote:
+  text: Removed generally available feature gate `ReadWriteOncePod`.

@@ -1,0 +1,3 @@
+pr: 124683
+releasenote:
+  text: Added ports autocompletion for kubectl port-foward command.

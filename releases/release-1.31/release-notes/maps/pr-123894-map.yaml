@@ -1,0 +1,3 @@
+pr: 123894
+releasenote:
+  text: Updated cni-plugins to v1.4.1.

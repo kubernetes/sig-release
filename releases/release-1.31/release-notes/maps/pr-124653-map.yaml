@@ -1,0 +1,4 @@
+pr: 124653
+releasenote:
+  text: Fixed the format of the error indicating that a user does not have permission
+    on the object referenced by paramRef in ValidatingAdmissionPolicyBinding.

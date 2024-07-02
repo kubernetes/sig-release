@@ -1,0 +1,4 @@
+pr: 123597
+releasenote:
+  text: Added an extra line between two different key value pairs under data when
+    running `kubectl describe configmap`.

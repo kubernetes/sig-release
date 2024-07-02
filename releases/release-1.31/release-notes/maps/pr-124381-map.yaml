@@ -1,0 +1,3 @@
+pr: 124381
+releasenote:
+  text: Added support for CEL(Common Expression Language) expressions and `additionalProperties` to be used under nested quantifiers in CRD schemas.

@@ -1,0 +1,3 @@
+pr: 124361
+releasenote:
+  text: 'kubeadm: Removed support for mounting /etc/pki as an additional Linux system CA location in kube-apisever and kube-controller-manager pods. Instead, it shifted to supporting the mounting of /etc/pki/ca-trust and /etc/pki/tls/certs. The locations /etc/ca-certificate, /usr/share/ca-certificates, /usr/local/share/ca-certificates, and /etc/ssl/certs continued to be supported.'.'

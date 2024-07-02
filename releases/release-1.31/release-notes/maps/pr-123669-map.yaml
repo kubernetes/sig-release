@@ -1,0 +1,3 @@
+pr: 123669
+releasenote:
+  text: 'cel: converting a quantity value into a quantity value failed.'

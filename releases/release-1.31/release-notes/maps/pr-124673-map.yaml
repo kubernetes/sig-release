@@ -1,0 +1,6 @@
+pr: 124673
+releasenote:
+  text: |-
+    Promoted `generateName` retries to beta, and made the `NameGenerationRetries` feature gate
+    enabled by default.
+    You can read https://kep.k8s.io/4420 for more details.

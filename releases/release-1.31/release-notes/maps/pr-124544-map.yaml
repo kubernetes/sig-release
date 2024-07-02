@@ -1,0 +1,7 @@
+pr: 124544
+releasenote:
+  text: CephFS volume plugin ( `kubernetes.io/cephfs`) was removed in this release
+    and the `cephfs` volume type became non-functional. Alternative is to use CephFS
+    CSI driver (https://github.com/ceph/ceph-csi/) in your Kubernetes Cluster. A re-deployment
+    of your application is required to use the new driver if you were using `kubernetes.io/cephfs`
+    volume plugin before upgrading cluster version to 1.31+.

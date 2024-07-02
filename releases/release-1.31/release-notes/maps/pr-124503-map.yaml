@@ -1,0 +1,3 @@
+pr: 124503
+releasenote:
+  text: 'kubeadm: Added support during the preflight check "CreateJob" of "kubeadm upgrade" to check if there are no nodes where a Pod can be scheduled. If there are none, show a warning and skip this preflight check. This can happen in single node clusters where the only node was drained.'

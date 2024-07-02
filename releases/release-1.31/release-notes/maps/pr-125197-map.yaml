@@ -1,0 +1,6 @@
+pr: 125197
+releasenote:
+  text: |-
+    Improved scheduling performance when many nodes, and prefilter returned 1-2 nodes (e.g. daemonset)
+
+    For developers of out-of-tree PostFilter plugins, note that the semantics of NodeToStatusMap are changing: A node with an absent value in the NodeToStatusMap should be interpreted as having an UnschedulableAndUnresolvable status.
