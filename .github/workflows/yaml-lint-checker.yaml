@@ -13,7 +13,7 @@ concurrency:
 jobs:
   yaml-lint-checker:
     name: Release Notes Check Yaml 👀
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     if: ${{ !github.event.pull_request.draft }}
     steps:
       - name: Cancel Previous Actions
