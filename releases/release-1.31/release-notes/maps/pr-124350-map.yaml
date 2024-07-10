@@ -1,0 +1,5 @@
+pr: 124350
+releasenote:
+  text: 'e2e.test and e2e_node.test: tests which depend on alpha or beta feature gates
+    now have `Feature:Alpha` or `Feature:Beta` as Ginkgo labels. The inline text is
+    `[Alpha]` or `[Beta]`, as before.'

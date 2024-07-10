@@ -1,0 +1,3 @@
+pr: 124462
+releasenote:
+  text: Removed generally available feature gate `CSINodeExpandSecret`.

@@ -1,0 +1,4 @@
+pr: 122038
+releasenote:
+  text: 'kubectl: Show the Pod phase in the STATUS column as ''Failed'' or ''Succeeded''
+    when the Pod is terminated'

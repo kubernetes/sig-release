@@ -1,0 +1,4 @@
+pr: 125265
+releasenote:
+  text: 'kubeadm: The healthz address:port configured in the KubeletConfiguration was used during kubelet health checks, instead of hardcoding localhost:10248.'
+  documentation: []

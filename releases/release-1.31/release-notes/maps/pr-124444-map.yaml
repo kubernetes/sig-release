@@ -1,0 +1,4 @@
+pr: 124444
+releasenote:
+  text: Fixed issue where following Windows container logs would prevent container
+    log rotation.

@@ -1,0 +1,4 @@
+pr: 124221
+releasenote:
+  text: Fixed a typo in the help text for the pod_scheduling_sli_duration_seconds
+    metric in kube-scheduler.

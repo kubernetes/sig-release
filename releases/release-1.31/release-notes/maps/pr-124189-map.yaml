@@ -1,0 +1,4 @@
+pr: 124189
+releasenote:
+  text: Fixed an issue that prevents the linking of trace spans for requests that
+    are proxied through kube-aggregator.

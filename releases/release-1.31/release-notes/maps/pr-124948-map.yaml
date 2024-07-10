@@ -1,0 +1,5 @@
+pr: 124948
+releasenote:
+  text: 'kube-controller-manager: the `horizontal-pod-autoscaler-upscale-delay` and
+    `horizontal-pod-autoscaler-downscale-delay` flags have been removed (deprecated
+    and non-functional since v1.12).'
