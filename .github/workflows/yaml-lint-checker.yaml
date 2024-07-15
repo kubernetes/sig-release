@@ -1,0 +1,80 @@
+---
+name: Yaml Lint Release Notes Pull Request
+on:
+  push:
+    paths:
+      - releases/**/release-notes/**.yaml
+  # Allow manual triggering
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  yaml-lint-checker:
+    name: Release Notes Check Yaml
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: Cancel Previous Actions
+        uses: styfle/cancel-workflow-action@85880fa0301c86cca9da44039ee3bb12d3bedbfa # v0.12.1
+        with:
+          access_token: ${{ github.token }}
+      - name: Check out code
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          fetch-depth: '0'
+      - name: Set up Go
+        uses: actions/setup-go@cdcb36043654635271a94b9a6d1392de5bb323a7 # v5.0.1
+        with:
+          go-version: '1.22'
+          check-latest: true 
+      - name: Install go dependencies
+        run: go mod download
+      - name: Build go prog
+        run: go build -o validate_yaml .github/scripts/validate_yaml.go
+      - name: Get the latest commit from the base branch
+        id: base_branch_commit
+        run: |
+          echo "commit=$(git rev-parse origin/master)" >> $GITHUB_OUTPUT
+      - name: Get all changed release files
+        id: changed-files
+        uses: tj-actions/changed-files@cc733854b1f224978ef800d29e4709d5ee2883e4 # v44.5.5
+        with:
+          base_sha: ${{ steps.base_branch_commit.outputs.commit }}
+          files: releases/**/*.yaml
+      - name: Run if releases YAML changes exist and validate the YAML
+        id: validate_releases_yaml
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          if [ -n "$CHANGED_FILES" ]; then
+          echo "validating base sha ${{ github.event.pull_request.base.sha }}"
+          # check diff for invalid yaml files
+          git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} -- releases/ | grep -E '\.ya?ml$'
+          echo "Validating yaml files: \n${CHANGED_FILES}"
+          OUTPUT=$(./validate_yaml $CHANGED_FILES)
+            if [[ "$OUTPUT" == *"YAML Validation Failed"* ]]; then
+              # If there are invalid files, set the output variable and fail the job. GITHUB_ENV is a special file that 
+              # allows you to set env variables for subsequent steps in the same job
+              echo "invalid_files<<EOF" >> $GITHUB_ENV
+              echo "$OUTPUT" >> $GITHUB_ENV
+              echo "EOF" >> $GITHUB_ENV
+              exit 1
+            fi
+          else 
+            echo "No YAML files changed under /releases/*"
+          fi
+      - name: Comment on PR if invalid yaml detected
+        if: failure()
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          script: |
+            const invalidFiles = process.env.invalid_files.trim();
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `The following YAML files are invalid:\n\n${invalidFiles}`
+            })
+        
