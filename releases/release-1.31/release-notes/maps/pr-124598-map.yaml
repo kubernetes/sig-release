@@ -1,4 +1,4 @@
 pr: 124598
 releasenote:
-  text: `kubectl describe service` and `kubectl describe ingress` will now use endpointslices instead of
-    endpoints.
+  text: |
+    "`kubectl describe service`" and "`kubectl describe ingress`" will now use endpointslices instead of endpoints.
