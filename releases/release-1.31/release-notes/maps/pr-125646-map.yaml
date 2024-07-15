@@ -1,0 +1,5 @@
+pr: 125646
+releasenote:
+  text: In the client-side apply on create, defining the null value as "delete the
+    key associated with this value".
+pr_body: ""

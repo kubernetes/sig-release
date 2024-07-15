@@ -1,0 +1,4 @@
+pr: 124025
+releasenote:
+  text: Continue streaming kubelet logs when the CRI server of the runtime is unavailable.
+pr_body: ""

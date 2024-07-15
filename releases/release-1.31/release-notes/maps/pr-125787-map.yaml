@@ -1,0 +1,6 @@
+pr: 125787
+releasenote:
+  text: 'kube-apiserver: the `--enable-logs-handler` flag and log-serving functionality
+    which was already deprecated is now switched off by default and scheduled to be
+    removed in v1.33.'
+pr_body: ""

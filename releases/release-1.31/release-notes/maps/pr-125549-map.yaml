@@ -1,0 +1,5 @@
+pr: 125549
+releasenote:
+  text: 'kube-apiserver: ControllerRevision objects are now verified to contain valid
+    JSON data in the `data` field.'
+pr_body: ""

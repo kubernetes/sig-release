@@ -1,0 +1,4 @@
+pr: 125437
+releasenote:
+  text: Removing deprecated kubectl exec [POD] [COMMAND]
+pr_body: ""

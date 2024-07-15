@@ -1,0 +1,6 @@
+pr: 124917
+releasenote:
+  text: When the featuregate AnonymousAuthConfigurableEndpoints is enabled users can
+    update the AuthenticationConfig file with endpoints for with anonymous requests
+    are alllowed.
+pr_body: ""

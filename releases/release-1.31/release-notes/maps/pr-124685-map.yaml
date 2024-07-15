@@ -8,3 +8,4 @@ releasenote:
 
     The `kubeadm` package will stop depending on the `cri-tools` package in Kubernetes 1.32, which means that
     installing `kubeadm` will no longer automatically ensure installation of `crictl`.
+pr_body: ""

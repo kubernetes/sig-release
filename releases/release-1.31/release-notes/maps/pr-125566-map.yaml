@@ -1,0 +1,5 @@
+pr: 125566
+releasenote:
+  text: 'kubeadm: Added `--yes` flag to the list of allowed flags so that it can be
+    mixed with `kubeadm upgrade apply --config`'
+pr_body: ""

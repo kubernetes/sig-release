@@ -1,0 +1,4 @@
+pr: 125475
+releasenote:
+  text: 'KEP-3857: promote RecursiveReadOnlyMounts feature to beta'
+pr_body: ""
