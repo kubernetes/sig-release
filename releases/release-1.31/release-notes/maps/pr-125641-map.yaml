@@ -1,0 +1,9 @@
+pr: 125641
+releasenote:
+  text: "$ kubectl ns -h\nView or set the current namespace\n\nUsage:\n  kubectl ns
+    [new-namespace] [flags]\n\nExamples:\n\n\t# view the current namespace in your
+    KUBECONFIG\n\tkubectl ns\n\n\t# view all of the namespaces in use by contexts
+    in your KUBECONFIG\n\tkubectl ns --list\n\n\t# switch your current-context to
+    one that contains the desired namespace\n\tkubectl ns foo\n\nFlags:\n  ...\n  -h,
+    --help                           help for kubectl ns"
+pr_body: ""

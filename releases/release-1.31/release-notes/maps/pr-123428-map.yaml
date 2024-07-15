@@ -1,0 +1,6 @@
+pr: 123428
+releasenote:
+  text: The PodDisruptionBudget `spec.unhealthyPodEvictionPolicy` field has graduated
+    to GA. This field may be set to `AlwaysAllow` to always allow unhealthy pods covered
+    by the PodDisruptionBudget to be evicted.
+pr_body: ""

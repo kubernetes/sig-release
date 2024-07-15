@@ -1,0 +1,4 @@
+pr: 125082
+releasenote:
+  text: Promoted the feature gate `KubeProxyDrainingTerminatingNodes` to stable
+pr_body: ""

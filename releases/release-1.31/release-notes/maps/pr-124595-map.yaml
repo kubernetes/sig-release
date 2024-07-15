@@ -1,0 +1,4 @@
+pr: 124595
+releasenote:
+  text: 'DRA: fix some small, unlikely race condition during pod scheduling'
+pr_body: ""

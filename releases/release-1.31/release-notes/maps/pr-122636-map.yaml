@@ -1,0 +1,4 @@
+pr: 122636
+releasenote:
+  text: Fixed null `lastTransitionTime` in Pod condition when setting the scheduling gate.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 125359
+releasenote:
+  text: 'Fix: during the kube-controller-manager restart, when the corresponding Endpoints
+    resource was manually deleted and recreated, causing the endpointslice to fail
+    to be created normally.'
+pr_body: ""

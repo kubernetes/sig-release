@@ -1,0 +1,8 @@
+pr: 125797
+releasenote:
+  text: 'kubeadm: the `--feature-gates` flag is deprecated and no-op for `kubeadm
+    upgrade apply/plan`, and it will be removed in a future release. The upgrade workflow
+    is not designed to reconfigure the cluster. Please edit the ''featureGates'' field
+    of ClusterConfiguration which is defined in the kube-system/kubeadm-config ConfigMap
+    instead.'
+pr_body: ""

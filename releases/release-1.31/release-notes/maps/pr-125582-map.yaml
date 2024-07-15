@@ -1,0 +1,13 @@
+pr: 125582
+releasenote:
+  text: 'kubeadm: added the ControlPlaneKubeletLocalMode feature gate. It can be used
+    to tell kubeadm to use the local kube-apiserver endpoint for the kubelet when
+    creating a cluster with "kubeadm init" or when joining control plane nodes with
+    "kubeadm join".  The "kubeadm join" workflow now includes two new experimental
+    phases called "control-plane-join-etcd" and "kubelet-wait-bootstrap" which will
+    be used when the feature gate is enabled. This phases will be marked as non-experimental
+    when ControlPlaneKubeletLocalMode becomes GA. During "kubeadm upgrade" commands,
+    if the feature gate is enabled, modify the "/etc/kubernetes/kubelet.conf " to
+    use the local kube-apiserver endpoint. This upgrade mechanism will be removed
+    once the feature gate goes GA and is hardcoded to true.'
+pr_body: ""

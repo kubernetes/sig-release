@@ -1,0 +1,6 @@
+pr: 125116
+releasenote:
+  text: 'DRA: in the `pod.spec.recourceClaims` array, the `source` indirection is
+    no longer necessary. Instead of e.g. `source: resourceClaimTemplateName: my-template`,
+    one can write `resourceClaimTemplateName: my-template`.'
+pr_body: ""

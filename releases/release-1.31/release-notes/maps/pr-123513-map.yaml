@@ -1,0 +1,4 @@
+pr: 123513
+releasenote:
+  text: Move ConsistentListFromCache feature flag to Beta and enable it by default
+pr_body: ""

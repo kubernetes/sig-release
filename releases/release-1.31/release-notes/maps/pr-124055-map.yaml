@@ -1,0 +1,4 @@
+pr: 124055
+releasenote:
+  text: Optimized log output to avoid printing out redundant information of the pod
+pr_body: ""

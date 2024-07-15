@@ -1,0 +1,5 @@
+pr: 124667
+releasenote:
+  text: Improved memory usage of kube-apiserver by dropping`.metadata.managedFields`
+    field that self-requested informers of kube-apiserver didn't need.
+pr_body: ""
