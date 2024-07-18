@@ -1,6 +1,6 @@
 pr: 125560
 releasenote:
   text: |-
-    Add field management support to the fake client-go typed client.
+    Added field management support to the fake client-go typed client.
     Use `fake.NewClientset()` instead of `fake.NewSimpleClientset()` to create a clientset with managed field support.
 pr_body: ""

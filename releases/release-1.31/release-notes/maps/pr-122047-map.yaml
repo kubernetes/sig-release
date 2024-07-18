@@ -4,5 +4,5 @@ releasenote:
     by default a dual-write strategy on the new ClusterIP allocators to avoid the
     problem of possible duplicate IPs allocated to Services when running skewed kube-apiservers
     using different allocators. They can opt-out of this behavior by enabled the feature
-    gate DisableAllocatorDualWrite'
+    gate DisableAllocatorDualWrite.'
 pr_body: ""

@@ -1,4 +1,4 @@
 pr: 125650
 releasenote:
-  text: Add Extra.DisableAvailableConditionController for Generic Control Plane setup
+  text: Added Extra.DisableAvailableConditionController for Generic Control Plane setup.
 pr_body: ""

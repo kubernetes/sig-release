@@ -1,5 +1,5 @@
 pr: 125117
 releasenote:
   text: '`kubectl describe service` now shows internal traffic policy and ip mode
-    of load balancer IP'
+    of load balancer IP.'
 pr_body: ""
