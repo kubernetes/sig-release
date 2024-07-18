@@ -1,6 +1,6 @@
 pr: 125779
 releasenote:
-  text: 'kubeadm: fix a bug where the path of the manifest can not be specified when
+  text: 'kubeadm: fixed a bug where the path of the manifest can not be specified when
     `kubeadm upgrade diff` specified a config file, and the `--api-server-manifest`,
     `--controller-manager-manifest` and `--scheduler-manifest` flags of `kubeadm upgrade
     diff` are marked as deprecated and will be removed in a future release.'

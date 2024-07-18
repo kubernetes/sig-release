@@ -1,6 +1,6 @@
 pr: 124931
 releasenote:
-  text: 'DRA: using structured parameters with a claim that gets reused between pods
+  text: 'Dynamic Resource Allocation (DRA): using structured parameters with a claim that gets reused between pods
     may have led to a claim with an invalid state (allocated without a finalizer)
     which then caused scheduling of pods using the claim to stop.'
 pr_body: ""

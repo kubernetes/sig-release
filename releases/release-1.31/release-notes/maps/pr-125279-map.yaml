@@ -1,6 +1,6 @@
 pr: 125279
 releasenote:
   text: |-
-    kube-scheduler implements scheduling hints for the VolumeRestriction plugin.
+    kube-scheduler implemented scheduling hints for the VolumeRestriction plugin.
     Scheduling hints allow the scheduler to retry scheduling Pods that were previously rejected by the VolumeRestriction plugin if the Pod is deleted and the deleted Pod conflicts with the existing volumes of the current Pod.
 pr_body: ""

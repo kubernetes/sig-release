@@ -1,4 +1,4 @@
 pr: 125162
 releasenote:
-  text: Fix code-generator client-gen to work with `api/v1`-like package structure.
+  text: Fixed code-generator client-gen to work with `api/v1`-like package structure.
 pr_body: ""

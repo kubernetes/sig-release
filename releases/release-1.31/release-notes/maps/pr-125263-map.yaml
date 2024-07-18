@@ -1,5 +1,5 @@
 pr: 125263
 releasenote:
-  text: Fix bug where Server Side Apply causes spurious resourceVersion bumps on no-op
+  text: Fixed bug where Server Side Apply causes spurious resourceVersion bumps on no-op
     patches to custom resources.
 pr_body: ""

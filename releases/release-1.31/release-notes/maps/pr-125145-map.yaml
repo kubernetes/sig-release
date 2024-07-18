@@ -1,6 +1,6 @@
 pr: 125145
 releasenote:
-  text: 'kube-apiserver: fixes a 1.27+ regression watching a single namespace via
+  text: 'kube-apiserver: fixed a 1.27+ regression watching a single namespace via
     the deprecated /api/v1/watch/namespaces/$name endpoint where watch events were
-    not delivered after the watch was established'
+    not delivered after the watch was established.'
 pr_body: ""
