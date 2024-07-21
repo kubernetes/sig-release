@@ -1,4 +1,4 @@
 pr: 123513
 releasenote:
-  text: Moved ConsistentListFromCache feature flag to beta and enable it by default.
+  text: Moved `ConsistentListFromCache` feature flag to beta and enabled it by default.
 pr_body: ""
