@@ -7,3 +7,4 @@ releasenote:
     and replace them with the NodeVolumeLimits plugin if you explicitly use those
     plugins in the scheduler config.\nThose plugins will be removed in the release
     1.32."
+pr_body: ""

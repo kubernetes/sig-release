@@ -1,0 +1,4 @@
+pr: 125776
+releasenote:
+  text: kubelet now hard rejects pods with AppArmor if the node does not have AppArmor.
+pr_body: ""

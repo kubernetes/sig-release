@@ -2,3 +2,4 @@ pr: 124614
 releasenote:
   text: 'client-go/reflector: warns when the bookmark event for initial events hasn''t
     been received'
+pr_body: ""

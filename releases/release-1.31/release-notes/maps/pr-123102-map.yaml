@@ -1,0 +1,7 @@
+pr: 123102
+releasenote:
+  text: 'kubeadm: during the validation of existing kubeconfig files on disk, handle
+    cases where the "ca.crt" is a bundle and has intermediate certificates. Find a
+    common trust anchor between the "ca.crt" bundle and the CA in the existing kubeconfig
+    on disk instead of treating "ca.crt" as a file containing a single CA.'
+pr_body: ""

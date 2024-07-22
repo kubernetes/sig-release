@@ -1,0 +1,5 @@
+pr: 124417
+releasenote:
+  text: The feature gate "DefaultHostNetworkHostPortsInPodTemplates" has been removed.  This
+    behavior was deprecated in v1.28, and has had no reports of issues since.
+pr_body: ""

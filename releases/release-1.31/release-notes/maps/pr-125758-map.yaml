@@ -1,0 +1,5 @@
+pr: 125758
+releasenote:
+  text: 'kubeadm: improved the warning/error messages of `validateSupportedVersion`
+    to include the checked resource kind name.'
+pr_body: ""

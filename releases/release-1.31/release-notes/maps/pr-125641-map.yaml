@@ -1,0 +1,4 @@
+pr: 125641
+releasenote:
+  text: "Fixed sample-cli-plugin help text to be consistent and always use `kubectl ns`."
+pr_body: ""

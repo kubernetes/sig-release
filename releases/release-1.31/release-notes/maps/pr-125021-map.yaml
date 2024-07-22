@@ -1,0 +1,6 @@
+pr: 125021
+releasenote:
+  text: Updated the feature MultiCIDRServiceAllocator to beta (disabled by default).
+    Users need to enable the feature gate and the networking v1beta1 group to be able
+    to use this new feature, that allows to dynamically reconfigure Service CIDR ranges.
+pr_body: ""

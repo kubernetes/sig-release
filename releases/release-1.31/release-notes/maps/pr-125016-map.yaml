@@ -1,0 +1,7 @@
+pr: 125016
+releasenote:
+  text: The feature-gate CSIMigrationPortworx was promoted to beta in Kubernetes 1.25,
+    but turned off by default. In 1.31, it was turned on by default. Before upgrading
+    to 1.31, please make sure that the corresponding portworx csi driver is installed
+    if you are using Portworx.
+pr_body: ""
