@@ -1,3 +1,4 @@
 pr: 125459
 releasenote:
   text: LogarithmicScaleDown is now GA.
+pr_body: ""

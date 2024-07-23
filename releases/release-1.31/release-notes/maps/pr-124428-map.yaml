@@ -1,0 +1,5 @@
+pr: 124428
+releasenote:
+  text: |-
+    Added a testcase to check hostname and hostNetwork.
+pr_body: ""

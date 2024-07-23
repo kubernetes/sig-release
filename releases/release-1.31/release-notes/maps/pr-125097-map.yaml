@@ -1,0 +1,5 @@
+pr: 125097
+releasenote:
+  text: The scheduler implements QueueingHint in VolumeBinding plugin's CSINode event,
+    which enhances the throughput of scheduling.
+pr_body: ""

@@ -1,0 +1,14 @@
+pr: 125510
+releasenote:
+  text: "Delay setting terminal Job conditions until all pods are terminal.\n\nAdditionally,
+    the FailureTarget condition is also added to the Job object in the first Job\nstatus
+    update as soon as the failure conditions are met (backoffLimit is exceeded, maxFailedIndexes,
+    \nor activeDeadlineSeconds is exceeded).\n\nSimilarly, the SuccessCriteriaMet
+    condition is added in the first update as soon as the expected number\nof pod
+    completions is reached.\n\nAlso, introduce the following validation rules for
+    Job status when JobManagedBy is enabled:\n1. the count of ready pods is less or
+    equal than active\n2. when transitioning to terminal phase for Job, the number
+    of terminating pods is 0\n3. terminal Job conditions (Failed and Complete) should
+    be preceded by adding the corresponding interim conditions: FailureTarget and
+    SuccessCriteriaMet"
+pr_body: ""

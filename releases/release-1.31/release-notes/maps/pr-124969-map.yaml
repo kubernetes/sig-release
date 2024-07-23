@@ -1,0 +1,4 @@
+pr: 124969
+releasenote:
+  text: PersistentVolumeLastPhaseTransitionTime feature is stable and enabled by default.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 124994
+releasenote:
+  text: Added namespace autocompletion for `kubectl config set-context` command.
+pr_body: ""

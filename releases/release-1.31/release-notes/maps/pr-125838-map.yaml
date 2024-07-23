@@ -1,0 +1,8 @@
+pr: 125838
+releasenote:
+  text: The Service trafficDistribution field has graduated to beta and is now available
+    for configuration by default, without the need to enable any feature flag. Services
+    that do not have the field configured will continue to operate with their existing
+    behavior. Refer to the documentation https://kubernetes.io/docs/concepts/services-networking/service/#traffic-distribution
+    for more details.
+pr_body: ""

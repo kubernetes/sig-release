@@ -1,3 +1,4 @@
 pr: 124574
 releasenote:
   text: Added the ability to the kubelet server to dynamically load certificate files.
+pr_body: ""
