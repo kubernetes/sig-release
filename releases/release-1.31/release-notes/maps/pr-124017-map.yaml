@@ -3,4 +3,4 @@ releasenote:
   text: |
     Removed deprecated command flags --volume-host-cidr-denylist
     and --volume-host-allow-local-loopback from kube-controller-manager.
-
+pr_body: ""

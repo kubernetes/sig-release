@@ -1,3 +1,4 @@
 pr: 123797
 releasenote:
   text: Added `cri-client` staging repository.
+pr_body: ""

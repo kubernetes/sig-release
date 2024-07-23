@@ -1,0 +1,31 @@
+pr: 124428
+releasenote:
+  text: |-
+    [sig-network] DNS should resolve hostname and hostNetwork for a Pod [Conformance] [sig-network, Conformance]
+    k8s.io/kubernetes/test/e2e/network/dns.go:132
+      STEP: Creating a kubernetes client @ 04/21/24 07:33:32.982
+      I0421 07:33:32.982058 3814322 util.go:506] >>> kubeConfig: /home/syash/.kube/kind-test-config
+      I0421 07:33:32.982505 3814322 util.go:515] >>> kubeContext: kind-kind
+      STEP: Building a namespace api object, basename dns @ 04/21/24 07:33:32.982
+      STEP: Waiting for a default service account to be provisioned in namespace @ 04/21/24 07:33:32.991
+      STEP: Waiting for kube-root-ca.crt to be provisioned in namespace @ 04/21/24 07:33:32.992
+      STEP: Creating a pod by setting hostname @ 04/21/24 07:33:32.994
+      I0421 07:33:32.994520 3814322 resource.go:361] Creating new exec pod
+      I0421 07:33:35.003946 3814322 dns.go:138] Setting up hostname to: dns-querier-1
+      I0421 07:33:35.004077 3814322 builder.go:121] Running '/usr/bin/kubectl --server=https://127.0.0.1:43529 --kubeconfig=/home/syash/.kube/kind-test-config --context=kind-kind --namespace=dns-319 exec dns-querier-1x
+    5hqm -- /bin/sh -x -c hostname'
+      I0421 07:33:35.109971 3814322 builder.go:146] stderr: "+ hostname\n"
+      I0421 07:33:35.110020 3814322 builder.go:147] stdout: "dns-querier-1x5hqm\n"
+      I0421 07:33:35.110042 3814322 dns.go:145] The spec.hostname is not same as container hostname, expected to contain: dns-querier-1, got: dns-querier-1x5hqm
+
+      STEP: Updating the pod spec.hostNetwork to true @ 04/21/24 07:33:35.11
+      I0421 07:33:35.110085 3814322 dns.go:149] Setting up hostNetwork to: true
+      I0421 07:33:35.110128 3814322 builder.go:121] Running '/usr/bin/kubectl --server=https://127.0.0.1:43529 --kubeconfig=/home/syash/.kube/kind-test-config --context=kind-kind --namespace=dns-319 exec dns-querier-1x
+    5hqm -- /bin/sh -x -c hostname'
+      I0421 07:33:35.222393 3814322 builder.go:146] stderr: "+ hostname\n"
+      I0421 07:33:35.222448 3814322 builder.go:147] stdout: "dns-querier-1x5hqm\n"
+      I0421 07:33:35.222472 3814322 dns.go:157] The hostname and pod metadata are same: dns-querier-1x5hqm, got: dns-querier-1x5hqm
+
+      I0421 07:33:35.222564 3814322 helper.go:121] Waiting up to 7m0s for all (but 0) nodes to be ready
+      STEP: Destroying namespace "dns-319" for this suite. @ 04/21/24 07:33:35.225     • [2.247 seconds]
+pr_body: ""

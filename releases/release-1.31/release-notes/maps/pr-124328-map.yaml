@@ -1,3 +1,5 @@
 pr: 124328
 releasenote:
-  text: The name of CEL(Common Expression Language) optional type has been changed from `optional` to `optional_type`.
+  text: The name of CEL(Common Expression Language) optional type has been changed
+    from `optional` to `optional_type`.
+pr_body: ""
