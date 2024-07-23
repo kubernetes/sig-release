@@ -1,4 +1,5 @@
 pr: 123638
 releasenote:
-  text: Graduated MatchLabelKeys/MismatchLabelKeys feature in PodAffinity/PodAntiAffinity to Beta.
+  text: Graduated MatchLabelKeys/MismatchLabelKeys feature in PodAffinity/PodAntiAffinity
+    to Beta.
 pr_body: ""

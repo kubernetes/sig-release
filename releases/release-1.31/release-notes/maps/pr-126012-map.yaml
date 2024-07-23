@@ -1,0 +1,4 @@
+pr: 126012
+releasenote:
+  text: Stopped using wmic on Windows to get uuid in the kubelet.
+pr_body: ""

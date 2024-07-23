@@ -1,0 +1,7 @@
+pr: 124996
+releasenote:
+  text: "kube-scheduler implements scheduling hints for the VolumeZone plugin.\nThe
+    scheduling hints allow the scheduler to only retry scheduling a Pod\nthat was
+    previously rejected by the VolemeZone plugin if  addition/update of node, \naddition/update
+    of PV, addition/update of PVC, or addition of SC matches pod's topology settings."
+pr_body: ""

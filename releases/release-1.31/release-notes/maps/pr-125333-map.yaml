@@ -1,0 +1,5 @@
+pr: 125333
+releasenote:
+  text: "`--custom` flag in `kubectl debug` will be enabled by default and yaml support
+    is added."
+pr_body: ""
