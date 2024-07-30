@@ -1,0 +1,5 @@
+pr: 126057
+releasenote:
+  text: Fixed a 1.30.0 regression in openapi descriptions of `PodIP.IP`  and `HostIP.IP`
+    fields to mark the fields used as keys in those lists as required.
+pr_body: ""

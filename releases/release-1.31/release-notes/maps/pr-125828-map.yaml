@@ -1,0 +1,6 @@
+pr: 125828
+releasenote:
+  text: Bump the KubeletCgroupDriverFromCRI feature gate to beta and true by default.
+    The kubelet will continue to use its KubeletConfiguration field as a fallback
+    if the CRI implementation doesn't support this feature.
+pr_body: ""

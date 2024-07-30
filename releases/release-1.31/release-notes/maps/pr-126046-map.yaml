@@ -1,0 +1,4 @@
+pr: 126046
+releasenote:
+  text: Use omitempty for optional Job Pod Failure Policy fields.
+pr_body: ""

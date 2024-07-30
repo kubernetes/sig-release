@@ -1,0 +1,4 @@
+pr: 125751
+releasenote:
+  text: "`ElasticIndexedJob` is graduated to GA."
+pr_body: ""

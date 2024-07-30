@@ -1,0 +1,6 @@
+pr: 125970
+releasenote:
+  text: Added `/sys/devices/virtual/powercap` to default masked paths. It avoids the
+    potential security risk that the ability to read these files may offer a power-based
+    sidechannel attack against any workloads running on the same kernel.
+pr_body: ""

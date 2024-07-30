@@ -1,3 +1,4 @@
 pr: 123587
 releasenote:
   text: Fixed "-kube-test-repo-list" e2e flag may not take effect.
+pr_body: ""

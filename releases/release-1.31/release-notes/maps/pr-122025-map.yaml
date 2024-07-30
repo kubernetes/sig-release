@@ -1,0 +1,4 @@
+pr: 122025
+releasenote:
+  text: "`lastSuccessfullTime` in cronjobs will now be set reliably."
+pr_body: ""
