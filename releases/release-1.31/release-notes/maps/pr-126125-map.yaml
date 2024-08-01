@@ -1,0 +1,4 @@
+pr: 126125
+releasenote:
+  text: Allowed calling Stop multiple times on RetryWatcher without panicking.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 126047
+releasenote:
+  text: Updated kubernetes to build with Go 1.23rc2.
+pr_body: ""

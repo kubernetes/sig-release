@@ -1,0 +1,9 @@
+pr: 126067
+releasenote:
+  text: |-
+    Graduated the Job `successPolicy` field to beta.
+
+    The new reason label, "SuccessPolicy" and "CompletionsReached" are added to the "jobs_finished_total" metric.
+    Additionally, if you enable the `JobSuccessPolicy` feature gate, the Job gets "CompletionsReached" reason for the "SuccessCriteriaMet" and "Complete" condition type
+    when the number of succeeded Job Pods (`.status.succeeded`) reached the desired completions (`.spec.completions`).
+pr_body: ""

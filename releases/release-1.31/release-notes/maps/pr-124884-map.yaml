@@ -1,0 +1,5 @@
+pr: 124884
+releasenote:
+  text: Added a feature to report an event about a Pod if kubelet observes a failed attach
+    operation, even if the kubelet is running with `--enable-controller-attach-detach=false`.
+pr_body: ""

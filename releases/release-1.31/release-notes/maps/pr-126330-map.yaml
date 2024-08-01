@@ -1,0 +1,4 @@
+pr: 126330
+releasenote:
+  text: Updated kubernetes to build with Go 1.22.5.
+pr_body: ""

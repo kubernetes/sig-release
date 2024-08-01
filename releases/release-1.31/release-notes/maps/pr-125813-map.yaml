@@ -1,0 +1,8 @@
+pr: 125813
+releasenote:
+  text: Enforced kubelet to request serving certificates only once it has at least
+    one IP address in the `.status.addresses` of its associated Node object. This
+    avoids requesting DNS-only serving certificates before externally set addresses
+    are in place. Until 1.33, the previous behavior can be opted back into by setting
+    the deprecated `AllowDNSOnlyNodeCSR` feature gate to true in the kubelet.
+pr_body: ""

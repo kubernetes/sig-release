@@ -1,0 +1,6 @@
+pr: 125163
+releasenote:
+  text: 'ACTION REQUIRED: The Dynamic Resource Allocation (DRA) driver's DaemonSet must be deployed
+    with a service account that enables writing ResourceSlice and reading ResourceClaim
+    objects.'
+pr_body: ""

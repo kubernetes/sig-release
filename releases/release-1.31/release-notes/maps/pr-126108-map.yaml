@@ -1,0 +1,10 @@
+pr: 126108
+releasenote:
+  text: |-
+    Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.
+
+ ACTION REQUIRED:  If you are using the `RecoverVolumeExpansionFailure` alpha feature gate
+ then after upgrading to this release, you need to update some objects.
+ For any existing PersistentVolumeClaimss with `status.allocatedResourceStatus` set to either
+ "ControllerResizeFailed" or "NodeResizeFailed", clear the `status.allocatedResourceStatus`.
+pr_body: ""

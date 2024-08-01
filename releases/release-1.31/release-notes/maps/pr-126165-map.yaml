@@ -1,0 +1,5 @@
+pr: 126165
+releasenote:
+  text: Starting in 1.31, `container_engine_t` was added to the list of allowed SELinux
+    types in the baseline Pod Security Standard.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 125661
+releasenote:
+  text: Cleaned deprecated `context.StopCh` in favor of ctx.
+pr_body: ""
