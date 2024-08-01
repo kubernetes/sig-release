@@ -1,0 +1,4 @@
+pr: 126174
+releasenote:
+  text: 'mount-utils: treated syscall.ENODEV as corrupted mount.'
+pr_body: ""

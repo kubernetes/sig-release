@@ -1,0 +1,5 @@
+pr: 126355
+releasenote:
+  text: Set `LocalStorageCapacityIsolationFSQuotaMonitoring` to false by default, to
+    match `UserNamespacesSupport` (which the feature relies on).
+pr_body: ""

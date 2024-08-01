@@ -1,0 +1,6 @@
+pr: 126163
+releasenote:
+  text: 'kube-apiserver: when the Alpha `UserNamespacesPodSecurityStandards` feature
+    gate is enabled, Pod Security Admission enforcement of the baseline policy now
+    allows `procMount: Unmasked` for user namespace pods that set `hostUsers: false`.'
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 124430
+releasenote:
+  text: Fixed node reporting "notReady" with the reason 'container runtime status check may
+    not have completed yet' after kubelet restart.
+pr_body: ""

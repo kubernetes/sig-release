@@ -1,0 +1,5 @@
+pr: 125656
+releasenote:
+  text: 'kubelet/stats: set INFO log level for stats not found in cadvisor memory
+    cache error.'
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 124819
+releasenote:
+  text: Added a warning when creating or updating a PersistentVolume (PV) with the
+    deprecated annotation `volume.beta.kubernetes.io/mount-options`.
+pr_body: ""

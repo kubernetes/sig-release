@@ -1,0 +1,4 @@
+pr: 126031
+releasenote:
+  text: Introduced a new boolean kubelet flag `--fail-cgroupv1`.
+pr_body: ""

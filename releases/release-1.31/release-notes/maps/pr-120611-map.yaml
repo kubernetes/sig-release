@@ -1,0 +1,6 @@
+pr: 120611
+releasenote:
+  text: 'Dynamic Resource Allocation (DRA): Added a feature so the number of ResourceClaim objects can be limited
+    per namespace and by the number of devices requested through a specific class
+    via the v1.ResourceQuota mechanism.'
+pr_body: ""

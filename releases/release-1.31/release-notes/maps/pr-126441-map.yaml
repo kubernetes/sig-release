@@ -1,0 +1,9 @@
+pr: 126441
+releasenote:
+  text: Ensured that the Node Admission plugin to reject CSR requests created by a
+    node identity for the signers `kubernetes.io/kubelet-serving` or `kubernetes.io/kube-apiserver-client-kubelet`
+    with a CN starting with `system:node:`, but where the CN is not `system:node:${node-name}`.
+    The feature gate `AllowInsecureKubeletCertificateSigningRequests` defaults to
+    `false`, but can be enabled to revert to the previous behavior. This feature gate
+    will be removed in Kubernetes v1.33.
+pr_body: ""

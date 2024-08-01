@@ -1,0 +1,7 @@
+pr: 125571
+releasenote:
+  text: |-
+    kube-apiserver: Added Alpha features to allow API server authz to check the context of requests:
+    - The `AuthorizeWithSelectors` feature gate enables including field and label selector information from requests in webhook authorization calls.
+    - The `AuthorizeNodeWithSelectors` feature gate changes node authorizer behavior to limit requests from node API clients, so that each Node can only get / list / watch its own Node API object, and can also only get / list / watch Pod API objects bound to that node. Clients using kubelet credentials to read other nodes or unrelated pods must change their authentication credentials (recommended), adjust their usage, or obtain broader read access independent of the node authorizer.
+pr_body: ""

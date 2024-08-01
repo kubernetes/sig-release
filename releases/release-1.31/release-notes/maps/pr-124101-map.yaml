@@ -1,0 +1,5 @@
+pr: 124101
+releasenote:
+  text: Fixed a bug where the Kubelet miscalculated the process usage of pods,
+    causing pods to never get evicted for PID usage.
+pr_body: ""
