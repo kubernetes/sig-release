@@ -1,0 +1,4 @@
+pr: 126034
+releasenote:
+  text: Added UserNamespaces field to NodeRuntimeHandlerFeatures
+pr_body: ""
