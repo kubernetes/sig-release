@@ -542,8 +542,8 @@
   },
   "122627": {
     "commit": "e48d42d81db347bdf7b1bd2489ea1e2783f0ffa6",
-    "text": "Fix a bug that when PodTopologySpread rejects Pods, they may be stuck in Pending state for 5 min in a worst case scenario.\nThe same problem could happen with custom plugins which have Pod/Add or Pod/Update in EventsToRegister,\nwhich is also solved with this PR, but only when the feature flag SchedulerQueueingHints is enabled.",
-    "markdown": "Fix a bug that when PodTopologySpread rejects Pods, they may be stuck in Pending state for 5 min in a worst case scenario.\n  The same problem could happen with custom plugins which have Pod/Add or Pod/Update in EventsToRegister,\n  which is also solved with this PR, but only when the feature flag SchedulerQueueingHints is enabled. ([#122627](https://github.com/kubernetes/kubernetes/pull/122627), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling and Testing]",
+    "text": "Fixed a bug that when PodTopologySpread rejects Pods, they may be stuck in Pending state for 5 min in a worst case scenario.\nThe same problem could happen with custom plugins which have Pod/Add or Pod/Update in EventsToRegister,\nwhich is also solved with this PR, but only when the feature flag SchedulerQueueingHints is enabled.",
+    "markdown": "Fixed a bug that when PodTopologySpread rejects Pods, they may be stuck in Pending state for 5 min in a worst case scenario.\n  The same problem could happen with custom plugins which have Pod/Add or Pod/Update in EventsToRegister,\n  which is also solved with this PR, but only when the feature flag SchedulerQueueingHints is enabled. ([#122627](https://github.com/kubernetes/kubernetes/pull/122627), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling and Testing]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/122627",
@@ -995,8 +995,8 @@
   },
   "123572": {
     "commit": "6f6ba4ae7fd77b2022970c796c6b6ef8fb915c68",
-    "text": "CEL: added name formats library.",
-    "markdown": "CEL: added name formats library. ([#123572](https://github.com/kubernetes/kubernetes/pull/123572), [@alexzielenski](https://github.com/alexzielenski)) [SIG API Machinery]",
+    "text": "CEL: Added name formats library.",
+    "markdown": "CEL: Added name formats library. ([#123572](https://github.com/kubernetes/kubernetes/pull/123572), [@alexzielenski](https://github.com/alexzielenski)) [SIG API Machinery]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1121,8 +1121,8 @@
   },
   "123669": {
     "commit": "35ffb484257f6fc8710baa657f438ad28707149f",
-    "text": "cel: converting a quantity value into a quantity value failed.",
-    "markdown": "Cel: converting a quantity value into a quantity value failed. ([#123669](https://github.com/kubernetes/kubernetes/pull/123669), [@pohly](https://github.com/pohly)) [SIG API Machinery]",
+    "text": "CEL (Common Expression Language): converting a quantity value into a quantity value failed.",
+    "markdown": "CEL (Common Expression Language): converting a quantity value into a quantity value failed. ([#123669](https://github.com/kubernetes/kubernetes/pull/123669), [@pohly](https://github.com/pohly)) [SIG API Machinery]",
     "author": "pohly",
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/123669",
@@ -1576,8 +1576,8 @@
   },
   "124091": {
     "commit": "bbfd2145dee670458d623800567facca13e27cc3",
-    "text": "Fixed kubelet so it would no longer crash when a DRA(Dynamic Resource Allocation) driver returns a nil as part of the Node(Un)PrepareResources response instead of an empty struct (Did not affect drivers written in Go, first showed up with a driver written in Rust). returns a nil as part of the Node(Un)PrepareResources response instead of an empty struct (did not affect drivers written in Go, first showed up with a driver written in Rust).",
-    "markdown": "Fixed kubelet so it would no longer crash when a DRA(Dynamic Resource Allocation) driver returns a nil as part of the Node(Un)PrepareResources response instead of an empty struct (Did not affect drivers written in Go, first showed up with a driver written in Rust). returns a nil as part of the Node(Un)PrepareResources response instead of an empty struct (did not affect drivers written in Go, first showed up with a driver written in Rust). ([#124091](https://github.com/kubernetes/kubernetes/pull/124091), [@bitoku](https://github.com/bitoku)) [SIG Node]",
+    "text": "Fixed kubelet so it would no longer crash when a DRA(Dynamic Resource Allocation) driver returns a nil as part of the Node(Un)PrepareResources response instead of an empty struct (Did not affect drivers written in Go, first showed up with a driver written in Rust).",
+    "markdown": "Fixed kubelet so it would no longer crash when a DRA(Dynamic Resource Allocation) driver returns a nil as part of the Node(Un)PrepareResources response instead of an empty struct (Did not affect drivers written in Go, first showed up with a driver written in Rust). ([#124091](https://github.com/kubernetes/kubernetes/pull/124091), [@bitoku](https://github.com/bitoku)) [SIG Node]",
     "author": "bitoku",
     "author_url": "https://github.com/bitoku",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124091",
@@ -2281,8 +2281,8 @@
   },
   "124419": {
     "commit": "ba05a8deb3cfcc52a9f80bf4e2303cd552fc582b",
-    "text": "'kubeadm: marked the sub-phase of ''init kubelet-finilize'' called ''experimental-cert-rotation''\nas deprecated and print a warning if it is used directly; it will be removed in\na future release. Add a replacement sub-phase ''enable-client-cert-rotation''.'",
-    "markdown": "'kubeadm: marked the sub-phase of ''init kubelet-finilize'' called ''experimental-cert-rotation''\n  as deprecated and print a warning if it is used directly; it will be removed in\n  a future release. Add a replacement sub-phase ''enable-client-cert-rotation''.' ([#124419](https://github.com/kubernetes/kubernetes/pull/124419), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "text": "'kubeadm: marked the sub-phase of ''init kubelet-finalize'' called ''experimental-cert-rotation''\nas deprecated and print a warning if it is used directly; it will be removed in\na future release. Added a replacement sub-phase ''enable-client-cert-rotation''.'",
+    "markdown": "'kubeadm: marked the sub-phase of ''init kubelet-finalize'' called ''experimental-cert-rotation''\n  as deprecated and print a warning if it is used directly; it will be removed in\n  a future release. Added a replacement sub-phase ''enable-client-cert-rotation''.' ([#124419](https://github.com/kubernetes/kubernetes/pull/124419), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124419",
@@ -2548,8 +2548,8 @@
   },
   "124509": {
     "commit": "6ac60160c5729ade462b041b170ec8ac0f1eb3bc",
-    "text": "Introduces new functionality to the client-go's `List` method, allowing users to enable API streaming. To activate this feature, users can set the `client-go.WatchListClient` feature gate.\n\nIt is important to note that the server must support streaming for this feature to function properly. If streaming is not supported by the server, client-go will revert to using the normal `LIST` method to obtain data.",
-    "markdown": "Introduces new functionality to the client-go's `List` method, allowing users to enable API streaming. To activate this feature, users can set the `client-go.WatchListClient` feature gate.\n  \n  It is important to note that the server must support streaming for this feature to function properly. If streaming is not supported by the server, client-go will revert to using the normal `LIST` method to obtain data. ([#124509](https://github.com/kubernetes/kubernetes/pull/124509), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery, Auth, Instrumentation and Testing]",
+    "text": "Introduced new functionality to the client-go's **list** verb, allowing users to enable API streaming. To activate this feature, users can set the `client-go.WatchListClient` feature gate.\n\nIt is important to note that the server must support streaming for this feature to function properly. If streaming is not supported by the server, client-go will revert to using the normal `LIST` method to obtain data.",
+    "markdown": "Introduced new functionality to the client-go's **list** verb, allowing users to enable API streaming. To activate this feature, users can set the `client-go.WatchListClient` feature gate.\n  \n  It is important to note that the server must support streaming for this feature to function properly. If streaming is not supported by the server, client-go will revert to using the normal `LIST` method to obtain data. ([#124509](https://github.com/kubernetes/kubernetes/pull/124509), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery, Auth, Instrumentation and Testing]",
     "author": "p0lyn0mial",
     "author_url": "https://github.com/p0lyn0mial",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124509",
@@ -3142,8 +3142,8 @@
   },
   "124683": {
     "commit": "5e1a1db960660194a00f4ae7d6c9195b3c1715a6",
-    "text": "Added ports autocompletion for kubectl port-foward command.",
-    "markdown": "Added ports autocompletion for kubectl port-foward command. ([#124683](https://github.com/kubernetes/kubernetes/pull/124683), [@TessaIO](https://github.com/TessaIO)) [SIG CLI]",
+    "text": "Added ports autocompletion for `kubectl port-forward` command.",
+    "markdown": "Added ports autocompletion for `kubectl port-forward` command. ([#124683](https://github.com/kubernetes/kubernetes/pull/124683), [@TessaIO](https://github.com/TessaIO)) [SIG CLI]",
     "author": "TessaIO",
     "author_url": "https://github.com/TessaIO",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124683",
@@ -3396,7 +3396,8 @@
     ],
     "sigs": [
       "storage"
-    ]
+    ],
+    "action_required": true
   },
   "124819": {
     "commit": "13d9d7c689b86939191c24f4096286c68549c3b7",
@@ -3461,8 +3462,8 @@
   },
   "124842": {
     "commit": "aeed1d0e1a61c7e0824fc65da5483931fc2976c1",
-    "text": "Promote HonorPVReclaimPolicy to beta and enable the feature-gate by default",
-    "markdown": "Promote HonorPVReclaimPolicy to beta and enable the feature-gate by default ([#124842](https://github.com/kubernetes/kubernetes/pull/124842), [@carlory](https://github.com/carlory)) [SIG Apps, Storage and Testing]",
+    "text": "Promoted HonorPVReclaimPolicy to beta and enable the feature-gate by default",
+    "markdown": "Promoted HonorPVReclaimPolicy to beta and enable the feature-gate by default ([#124842](https://github.com/kubernetes/kubernetes/pull/124842), [@carlory](https://github.com/carlory)) [SIG Apps, Storage and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3640,8 +3641,8 @@
   },
   "124917": {
     "commit": "522e2e50667f25b759a10183eec1bb7d4683ec27",
-    "text": "When the featuregate AnonymousAuthConfigurableEndpoints is enabled users can update the AuthenticationConfig file with endpoints for with anonymous requests are alllowed.",
-    "markdown": "When the featuregate AnonymousAuthConfigurableEndpoints is enabled users can update the AuthenticationConfig file with endpoints for with anonymous requests are alllowed. ([#124917](https://github.com/kubernetes/kubernetes/pull/124917), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG API Machinery, Auth, Cloud Provider, Node and Testing]",
+    "text": "When the feature gate AnonymousAuthConfigurableEndpoints is enabled users can update the AuthenticationConfig file with endpoints for with anonymous requests are allowed.",
+    "markdown": "When the feature gate AnonymousAuthConfigurableEndpoints is enabled users can update the AuthenticationConfig file with endpoints for with anonymous requests are allowed. ([#124917](https://github.com/kubernetes/kubernetes/pull/124917), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG API Machinery, Auth, Cloud Provider, Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3894,8 +3895,8 @@
   },
   "124996": {
     "commit": "7f23ebedc44565c0180898805011e61eb3f1226d",
-    "text": "kube-scheduler implements scheduling hints for the VolumeZone plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a Pod\nthat was previously rejected by the VolemeZone plugin if  addition/update of node, \naddition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings.",
-    "markdown": "Kube-scheduler implements scheduling hints for the VolumeZone plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a Pod\n  that was previously rejected by the VolemeZone plugin if  addition/update of node, \n  addition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings. ([#124996](https://github.com/kubernetes/kubernetes/pull/124996), [@Gekko0114](https://github.com/Gekko0114)) [SIG Scheduling and Storage]",
+    "text": "kube-scheduler implements scheduling hints for the VolumeZone plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a Pod\nthat was previously rejected by the VolumeZone plugin if  addition/update of node, \naddition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings.",
+    "markdown": "Kube-scheduler implements scheduling hints for the VolumeZone plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a Pod\n  that was previously rejected by the VolumeZone plugin if  addition/update of node, \n  addition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings. ([#124996](https://github.com/kubernetes/kubernetes/pull/124996), [@Gekko0114](https://github.com/Gekko0114)) [SIG Scheduling and Storage]",
     "author": "Gekko0114",
     "author_url": "https://github.com/Gekko0114",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124996",
@@ -3932,8 +3933,8 @@
   },
   "125000": {
     "commit": "5b49afa66b247485eeb1d111dde74f07e2cef13f",
-    "text": "kube-scheduler implements scheduling hints for the VolumeZone plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a Pod\nthat was previously rejected by the VolemeZone plugin if  addition/update of node, \naddition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings.",
-    "markdown": "Kube-scheduler implements scheduling hints for the VolumeZone plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a Pod\n  that was previously rejected by the VolemeZone plugin if  addition/update of node, \n  addition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings. ([#125000](https://github.com/kubernetes/kubernetes/pull/125000), [@Gekko0114](https://github.com/Gekko0114)) [SIG Scheduling and Storage]",
+    "text": "kube-scheduler implements scheduling hints for the VolumeZone plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a Pod\nthat was previously rejected by the VolumeZone plugin if  addition/update of node, \naddition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings.",
+    "markdown": "Kube-scheduler implements scheduling hints for the VolumeZone plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a Pod\n  that was previously rejected by the VolumeZone plugin if  addition/update of node, \n  addition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings. ([#125000](https://github.com/kubernetes/kubernetes/pull/125000), [@Gekko0114](https://github.com/Gekko0114)) [SIG Scheduling and Storage]",
     "author": "Gekko0114",
     "author_url": "https://github.com/Gekko0114",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125000",
@@ -3950,8 +3951,8 @@
   },
   "125001": {
     "commit": "52a622ad6d2648599b28eec29263518162f9fcf8",
-    "text": "kube-scheduler implements scheduling hints for the VolumeZone plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a Pod\nthat was previously rejected by the VolemeZone plugin if  addition/update of node, \naddition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings.",
-    "markdown": "Kube-scheduler implements scheduling hints for the VolumeZone plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a Pod\n  that was previously rejected by the VolemeZone plugin if  addition/update of node, \n  addition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings. ([#125001](https://github.com/kubernetes/kubernetes/pull/125001), [@Gekko0114](https://github.com/Gekko0114)) [SIG Scheduling and Storage]",
+    "text": "kube-scheduler implements scheduling hints for the VolumeZone plugin.\nThe scheduling hints allow the scheduler to only retry scheduling a Pod\nthat was previously rejected by the VolumeZone plugin if  addition/update of node, \naddition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings.",
+    "markdown": "Kube-scheduler implements scheduling hints for the VolumeZone plugin.\n  The scheduling hints allow the scheduler to only retry scheduling a Pod\n  that was previously rejected by the VolumeZone plugin if  addition/update of node, \n  addition/update of PV, addition/update of PVC, or addition of SC matches pod's topology settings. ([#125001](https://github.com/kubernetes/kubernetes/pull/125001), [@Gekko0114](https://github.com/Gekko0114)) [SIG Scheduling and Storage]",
     "author": "Gekko0114",
     "author_url": "https://github.com/Gekko0114",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125001",
@@ -3968,8 +3969,8 @@
   },
   "125015": {
     "commit": "e67f889edc4ab278028f6cffd2501bc90a0defcf",
-    "text": "The iptables mode of kube-proxy now tracks accepted packets that are destined for node-ports on localhost by introducing `kubeproxy_iptables_localhost_nodeports_accepted_packets_total` metric.\nThis will help users to identify if they rely on iptables.localhostNodePorts feature and ulitmately help them to migrate from iptables to nftables.",
-    "markdown": "The iptables mode of kube-proxy now tracks accepted packets that are destined for node-ports on localhost by introducing `kubeproxy_iptables_localhost_nodeports_accepted_packets_total` metric.\n  This will help users to identify if they rely on iptables.localhostNodePorts feature and ulitmately help them to migrate from iptables to nftables. ([#125015](https://github.com/kubernetes/kubernetes/pull/125015), [@aroradaman](https://github.com/aroradaman)) [SIG Instrumentation, Network and Testing]",
+    "text": "The iptables mode of kube-proxy now tracks accepted packets that are destined for node-ports on localhost by introducing `kubeproxy_iptables_localhost_nodeports_accepted_packets_total` metric.\nThis will help users to identify if they rely on iptables.localhostNodePorts feature and ultimately help them to migrate from iptables to nftables.",
+    "markdown": "The iptables mode of kube-proxy now tracks accepted packets that are destined for node-ports on localhost by introducing `kubeproxy_iptables_localhost_nodeports_accepted_packets_total` metric.\n  This will help users to identify if they rely on iptables.localhostNodePorts feature and ultimately help them to migrate from iptables to nftables. ([#125015](https://github.com/kubernetes/kubernetes/pull/125015), [@aroradaman](https://github.com/aroradaman)) [SIG Instrumentation, Network and Testing]",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125015",
@@ -4706,7 +4707,7 @@
       "testing"
     ],
     "do_not_publish": true,
-    "is_mapped": true
+    "is_mapped": false
   },
   "125277": {
     "commit": "f458a749e794de9169bbc7a7249afd4742f795cc",
@@ -4797,8 +4798,8 @@
   },
   "125317": {
     "commit": "d5dd5b13a577ffa19c38ad5651d6a072adf7f1fe",
-    "text": "Fix bug where Server Side Apply causing spurious resourceVersion bumps on no-op patches containing empty maps.",
-    "markdown": "Fix bug where Server Side Apply causing spurious resourceVersion bumps on no-op patches containing empty maps. ([#125317](https://github.com/kubernetes/kubernetes/pull/125317), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery and Testing]",
+    "text": "Fixed bug where Server Side Apply causing spurious resourceVersion bumps on no-op patches containing empty maps.",
+    "markdown": "Fixed bug where Server Side Apply causing spurious resourceVersion bumps on no-op patches containing empty maps. ([#125317](https://github.com/kubernetes/kubernetes/pull/125317), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery and Testing]",
     "author": "jpbetz",
     "author_url": "https://github.com/jpbetz",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125317",
@@ -4818,8 +4819,8 @@
   },
   "125328": {
     "commit": "5a99930ab57b2c7837960b21d2c92e958db8c377",
-    "text": "Added a warning log, an event for cgroup v1 usage and a metric for cgroup version.",
-    "markdown": "Added a warning log, an event for cgroup v1 usage and a metric for cgroup version. ([#125328](https://github.com/kubernetes/kubernetes/pull/125328), [@harche](https://github.com/harche)) [SIG Node]",
+    "text": "Added a warning log, an event for cgroup v1 usage and a metric for cgroup version. Running kubelet using cgroup v1 is in a maintenance mode: no new features will be added with the limited support for bug fixes. Please consider migrating to cgroup v2. See [KEP-4569: Moving cgroup v1 support into maintenance mode](https://github.com/kubernetes/enhancements/blob/7c97898249d1ec040610aead30d41bab18c3f9e4/keps/sig-node/4569-cgroup-v1-maintenance-mode/README.md#introduce-a-kubelet-flag-to-disable-cgroup-v1-support) for more info.",
+    "markdown": "Added a warning log, an event for cgroup v1 usage and a metric for cgroup version. Running kubelet using cgroup v1 is in a maintenance mode: no new features will be added with the limited support for bug fixes. Please consider migrating to cgroup v2. See [KEP-4569: Moving cgroup v1 support into maintenance mode](https://github.com/kubernetes/enhancements/blob/7c97898249d1ec040610aead30d41bab18c3f9e4/keps/sig-node/4569-cgroup-v1-maintenance-mode/README.md#introduce-a-kubelet-flag-to-disable-cgroup-v1-support) for more info. ([#125328](https://github.com/kubernetes/kubernetes/pull/125328), [@harche](https://github.com/harche)) [SIG Node]",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/4569-cgroup-v1-maintenance-mode#implementing-a-warning-log-and-an-event-for-cgroup-v1-usage",
@@ -5044,8 +5045,8 @@
   },
   "125404": {
     "commit": "5427708866b1913207d548a4ba2827e7ac60e580",
-    "text": "Fix the bug where PodIP field is temporarily removed for a terminal pod",
-    "markdown": "Fix the bug where PodIP field is temporarily removed for a terminal pod ([#125404](https://github.com/kubernetes/kubernetes/pull/125404), [@mimowo](https://github.com/mimowo)) [SIG Node and Testing]",
+    "text": "Fixed the bug where PodIP field is temporarily removed for a terminal pod",
+    "markdown": "Fixed the bug where PodIP field is temporarily removed for a terminal pod ([#125404](https://github.com/kubernetes/kubernetes/pull/125404), [@mimowo](https://github.com/mimowo)) [SIG Node and Testing]",
     "author": "mimowo",
     "author_url": "https://github.com/mimowo",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125404",
@@ -5201,8 +5202,8 @@
   },
   "125461": {
     "commit": "4a214f6ad966a4f5b22dc4446ef3c4e21de9a38e",
-    "text": "Graduate PodDisruptionConditions to GA and lock",
-    "markdown": "Graduate PodDisruptionConditions to GA and lock ([#125461](https://github.com/kubernetes/kubernetes/pull/125461), [@mimowo](https://github.com/mimowo)) [SIG Apps, Node, Scheduling and Testing]",
+    "text": "Graduated PodDisruptionConditions to GA and lock",
+    "markdown": "Graduated PodDisruptionConditions to GA and lock ([#125461](https://github.com/kubernetes/kubernetes/pull/125461), [@mimowo](https://github.com/mimowo)) [SIG Apps, Node, Scheduling and Testing]",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3329-retriable-and-non-retriable-failures",
@@ -5364,8 +5365,8 @@
   },
   "125510": {
     "commit": "0a3330d6c995a5d69cafa9e15b3ab2adf3e93b84",
-    "text": "Delay setting terminal Job conditions until all pods are terminal.\n\nAdditionally, the FailureTarget condition is also added to the Job object in the first Job\nstatus update as soon as the failure conditions are met (backoffLimit is exceeded, maxFailedIndexes, \nor activeDeadlineSeconds is exceeded).\n\nSimilarly, the SuccessCriteriaMet condition is added in the first update as soon as the expected number\nof pod completions is reached.\n\nAlso, introduce the following validation rules for Job status when JobManagedBy is enabled:\n1. the count of ready pods is less or equal than active\n2. when transitioning to terminal phase for Job, the number of terminating pods is 0\n3. terminal Job conditions (Failed and Complete) should be preceded by adding the corresponding interim conditions: FailureTarget and SuccessCriteriaMet",
-    "markdown": "Delay setting terminal Job conditions until all pods are terminal.\n  \n  Additionally, the FailureTarget condition is also added to the Job object in the first Job\n  status update as soon as the failure conditions are met (backoffLimit is exceeded, maxFailedIndexes, \n  or activeDeadlineSeconds is exceeded).\n  \n  Similarly, the SuccessCriteriaMet condition is added in the first update as soon as the expected number\n  of pod completions is reached.\n  \n  Also, introduce the following validation rules for Job status when JobManagedBy is enabled:\n  1. the count of ready pods is less or equal than active\n  2. when transitioning to terminal phase for Job, the number of terminating pods is 0\n  3. terminal Job conditions (Failed and Complete) should be preceded by adding the corresponding interim conditions: FailureTarget and SuccessCriteriaMet ([#125510](https://github.com/kubernetes/kubernetes/pull/125510), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]",
+    "text": "Delay setting terminal Job conditions until all pods are terminal.\n\nAdditionally, the FailureTarget condition is also added to the Job object in the first Job\nstatus update as soon as the failure conditions are met (backoffLimit is exceeded, maxFailedIndexes, \nor activeDeadlineSeconds is exceeded).\n\nSimilarly, the SuccessCriteriaMet condition is added in the first update as soon as the expected number\nof pod completions is reached.\n\nAlso, introduced the following validation rules for Job status when JobManagedBy is enabled:\n1. the count of ready pods is less or equal than active\n2. when transitioning to terminal phase for Job, the number of terminating pods is 0\n3. terminal Job conditions (Failed and Complete) should be preceded by adding the corresponding interim conditions: FailureTarget and SuccessCriteriaMet",
+    "markdown": "Delay setting terminal Job conditions until all pods are terminal.\n  \n  Additionally, the FailureTarget condition is also added to the Job object in the first Job\n  status update as soon as the failure conditions are met (backoffLimit is exceeded, maxFailedIndexes, \n  or activeDeadlineSeconds is exceeded).\n  \n  Similarly, the SuccessCriteriaMet condition is added in the first update as soon as the expected number\n  of pod completions is reached.\n  \n  Also, introduced the following validation rules for Job status when JobManagedBy is enabled:\n  1. the count of ready pods is less or equal than active\n  2. when transitioning to terminal phase for Job, the number of terminating pods is 0\n  3. terminal Job conditions (Failed and Complete) should be preceded by adding the corresponding interim conditions: FailureTarget and SuccessCriteriaMet ([#125510](https://github.com/kubernetes/kubernetes/pull/125510), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/4368-support-managed-by-for-batch-jobs",
@@ -5393,8 +5394,8 @@
   },
   "125527": {
     "commit": "8c508c5480844682eab8a4172526b6db3476fdc0",
-    "text": "Fixed a bug that Pods could stuck in the unschedulable pod pool \nif they're rejected by PreEnqueue plugins that could change its result by a change in resources apart from Pods.\n\nDRA plugin is the only plugin that meets the criteria of the bug in in-tree, \nand hence if you have `DynamicResourceAllocation` feature flag enabled, \nyour DRA Pods could be affected by this bug.",
-    "markdown": "Fixed a bug that Pods could stuck in the unschedulable pod pool \n  if they're rejected by PreEnqueue plugins that could change its result by a change in resources apart from Pods.\n  \n  DRA plugin is the only plugin that meets the criteria of the bug in in-tree, \n  and hence if you have `DynamicResourceAllocation` feature flag enabled, \n  your DRA Pods could be affected by this bug. ([#125527](https://github.com/kubernetes/kubernetes/pull/125527), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling and Testing]",
+    "text": "Fixed a bug where Pods could be stuck in the unschedulable pod pool \nif they're rejected by PreEnqueue plugins that could change its result by a change in resources apart from Pods.\n\nDRA plugin is the only plugin that meets the criteria of the bug in in-tree, \nand hence if you have `DynamicResourceAllocation` feature flag enabled, \nyour DRA Pods could be affected by this bug.",
+    "markdown": "Fixed a bug where Pods could be stuck in the unschedulable pod pool \n  if they're rejected by PreEnqueue plugins that could change its result by a change in resources apart from Pods.\n  \n  DRA plugin is the only plugin that meets the criteria of the bug in in-tree, \n  and hence if you have `DynamicResourceAllocation` feature flag enabled, \n  your DRA Pods could be affected by this bug. ([#125527](https://github.com/kubernetes/kubernetes/pull/125527), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling and Testing]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125527",
@@ -5854,8 +5855,8 @@
   },
   "125675": {
     "commit": "11c689b94587792185de1758fe3bd507c6b5dc29",
-    "text": "Fix endpoints status out-of-sync when the pod state changes rapidly",
-    "markdown": "Fix endpoints status out-of-sync when the pod state changes rapidly ([#125675](https://github.com/kubernetes/kubernetes/pull/125675), [@tnqn](https://github.com/tnqn)) [SIG Apps, Network and Testing]",
+    "text": "Fixed endpoints status out-of-sync when the pod state changes rapidly",
+    "markdown": "Fixed endpoints status out-of-sync when the pod state changes rapidly ([#125675](https://github.com/kubernetes/kubernetes/pull/125675), [@tnqn](https://github.com/tnqn)) [SIG Apps, Network and Testing]",
     "author": "tnqn",
     "author_url": "https://github.com/tnqn",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125675",
@@ -6239,8 +6240,8 @@
   },
   "125868": {
     "commit": "37f733a657ef71d66177d00f9b7d47ec507dedd3",
-    "text": "Add --for=create option to kubectl wait",
-    "markdown": "Add --for=create option to kubectl wait ([#125868](https://github.com/kubernetes/kubernetes/pull/125868), [@soltysh](https://github.com/soltysh)) [SIG CLI and Testing]",
+    "text": "Added --for=create option to kubectl wait",
+    "markdown": "Added --for=create option to kubectl wait ([#125868](https://github.com/kubernetes/kubernetes/pull/125868), [@soltysh](https://github.com/soltysh)) [SIG CLI and Testing]",
     "author": "soltysh",
     "author_url": "https://github.com/soltysh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125868",
@@ -6405,6 +6406,27 @@
     "duplicate": true,
     "is_mapped": true
   },
+  "126638": {
+    "commit": "099a88370d017dacf16e67306ebcdec8394fae83",
+    "text": "Fixed kubectl wait --for=jsonpath lowercasing in the condition part of the argument.",
+    "markdown": "Fixed kubectl wait --for=jsonpath lowercasing in the condition part of the argument. ([#126638](https://github.com/kubernetes/kubernetes/pull/126638)), [@soltysh](https://github.com/soltysh)) [SIG CLI and Testing]",
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/126638",
+    "pr_number": 126638,
+    "areas": [
+      "test",
+      "kubectl"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "cli",
+      "testing"
+    ]
+  },
   "126014": {
     "commit": "a4f9910c51ffd574736b548ac1c5771afcf928ae",
     "text": "Promoted `LocalStorageCapacityIsolation` to beta; the behaviour is enabled by default. Within the kubelet, storage capacity isolation is active if the feature gate is enabled and the specific Pod is using a user namespace.",
@@ -6440,8 +6462,8 @@
   },
   "126031": {
     "commit": "fbdfb9d8d90ac4d0a54f87c4944085d6727e25f4",
-    "text": "Introduced a new boolean kubelet flag `--fail-cgroupv1`.",
-    "markdown": "Introduced a new boolean kubelet flag `--fail-cgroupv1`. ([#126031](https://github.com/kubernetes/kubernetes/pull/126031), [@harche](https://github.com/harche)) [SIG API Machinery and Node]",
+    "text": "Introduced a new boolean kubelet flag `--fail-cgroupv1`. Running kubelet using cgroup v1 is in a maintenance mode: no new features will be added with the limited support for bug fixes. Please consider migrating to cgroup v2. See [KEP-4569: Moving cgroup v1 support into maintenance mode](https://github.com/kubernetes/enhancements/blob/7c97898249d1ec040610aead30d41bab18c3f9e4/keps/sig-node/4569-cgroup-v1-maintenance-mode/README.md#introduce-a-kubelet-flag-to-disable-cgroup-v1-support) for more info.",
+    "markdown": "Introduced a new boolean kubelet flag `--fail-cgroupv1`. Running kubelet using cgroup v1 is in a maintenance mode: no new features will be added with the limited support for bug fixes. Please consider migrating to cgroup v2. See [KEP-4569: Moving cgroup v1 support into maintenance mode](https://github.com/kubernetes/enhancements/blob/7c97898249d1ec040610aead30d41bab18c3f9e4/keps/sig-node/4569-cgroup-v1-maintenance-mode/README.md#introduce-a-kubelet-flag-to-disable-cgroup-v1-support) for more info. ([#126031](https://github.com/kubernetes/kubernetes/pull/126031), [@harche](https://github.com/harche)) [SIG API Machinery and Node]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6673,8 +6695,8 @@
   },
   "126108": {
     "commit": "107f6214626c2c6c42aa11141e4572c02e4daff7",
-    "text": "Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.\n\nACTION REQUIRED:  If you are using the `RecoverVolumeExpansionFailure` alpha feature gate\nthen after upgrading to this release, you need to update some objects.\nFor any existing PersistentVolumeClaimss with `status.allocatedResourceStatus` set to either\n\"ControllerResizeFailed\" or \"NodeResizeFailed\", clear the `status.allocatedResourceStatus`.",
-    "markdown": "Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.\n  \n  ACTION REQUIRED:  If you are using the `RecoverVolumeExpansionFailure` alpha feature gate\n  then after upgrading to this release, you need to update some objects.\n  For any existing PersistentVolumeClaimss with `status.allocatedResourceStatus` set to either\n  \"ControllerResizeFailed\" or \"NodeResizeFailed\", clear the `status.allocatedResourceStatus`. ([#126108](https://github.com/kubernetes/kubernetes/pull/126108), [@gnufied](https://github.com/gnufied)) [SIG Apps, Auth, Node, Storage and Testing]",
+    "text": "Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.\n\nACTION REQUIRED:  If you are using the `RecoverVolumeExpansionFailure` alpha feature gate\nthen after upgrading to this release, you need to update some objects.\nFor any existing PersistentVolumeClaims with `status.allocatedResourceStatus` set to either\n\"ControllerResizeFailed\" or \"NodeResizeFailed\", clear the `status.allocatedResourceStatus`.",
+    "markdown": "Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.\n  \n  ACTION REQUIRED:  If you are using the `RecoverVolumeExpansionFailure` alpha feature gate\n  then after upgrading to this release, you need to update some objects.\n  For any existing PersistentVolumeClaims with `status.allocatedResourceStatus` set to either\n  \"ControllerResizeFailed\" or \"NodeResizeFailed\", clear the `status.allocatedResourceStatus`. ([#126108](https://github.com/kubernetes/kubernetes/pull/126108), [@gnufied](https://github.com/gnufied)) [SIG Apps, Auth, Node, Storage and Testing]",
     "author": "gnufied",
     "author_url": "https://github.com/gnufied",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126108",
@@ -6993,8 +7015,8 @@
   },
   "126191": {
     "commit": "dda657b5982e8f9102b8df5931344262b0793163",
-    "text": "Reverted \"Graduates the `WatchList` feature gate to beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)\".",
-    "markdown": "Reverted \"Graduates the `WatchList` feature gate to beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)\". ([#126191](https://github.com/kubernetes/kubernetes/pull/126191), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery and Testing]",
+    "text": "Reverted \"Graduated the `WatchList` feature gate to beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)\".",
+    "markdown": "Reverted \"Graduated the `WatchList` feature gate to beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)\". ([#126191](https://github.com/kubernetes/kubernetes/pull/126191), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery and Testing]",
     "author": "p0lyn0mial",
     "author_url": "https://github.com/p0lyn0mial",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126191",
