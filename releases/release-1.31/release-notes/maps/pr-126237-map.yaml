@@ -1,0 +1,4 @@
+pr: 126237
+releasenote:
+  text: Promoted the metrics for both ValidatingAdmissionPolicy (VAP) and CustomResourceDefinition (CRD) validation rules to beta.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 126205
+releasenote:
+  text: The `KubeletSeparateDiskGC` feature gate is now beta. This split image filesystem feature enables kubelet to perform garbage collection of images (read-only layers) and/or containers (writeable layers) deployed on separate filesystems.
+        gate is now beta.
+pr_body: ""

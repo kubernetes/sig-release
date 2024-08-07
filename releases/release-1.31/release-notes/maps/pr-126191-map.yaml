@@ -1,0 +1,5 @@
+pr: 126191
+releasenote:
+  text: Reverted "Graduates the `WatchList` feature gate to beta for kube-apiserver
+    and enables `WatchListClient` for kube-controller-manager (KCM)".
+pr_body: ""

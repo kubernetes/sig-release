@@ -1,0 +1,6 @@
+pr: 124530
+releasenote:
+  text: Finished initial generic controlplane refactor of kube-apiserver, providing
+    a sample binary building a Kubernetes-like control plane, but without container orchestration
+    resources.
+pr_body: ""

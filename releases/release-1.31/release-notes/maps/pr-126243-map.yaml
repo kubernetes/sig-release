@@ -1,0 +1,5 @@
+pr: 126243
+releasenote:
+  text: Added an `allocatedResourcesStatus` to each container status to indicate the
+    health status of devices exposed by the device plugin.
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 124012
+releasenote:
+  text: Added Coordinated Leader Election as Alpha under the `CoordinatedLeaderElection`
+    feature gate. With the feature enabled, the control plane can use LeaseCandidate
+    objects (coordination.k8s.io/v1alpha1 API group) to participate in a leader election
+    and let the kube-apiserver select the best instance according to some strategy.
+pr_body: ""

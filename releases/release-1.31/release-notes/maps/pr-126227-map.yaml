@@ -1,0 +1,5 @@
+pr: 126227
+releasenote:
+  text: Implemented `queueing_hint_execution_duration_seconds` metric, which is the
+    time the QueueingHint function takes.
+pr_body: ""

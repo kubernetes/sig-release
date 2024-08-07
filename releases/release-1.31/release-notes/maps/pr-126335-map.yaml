@@ -1,0 +1,5 @@
+pr: 126335
+releasenote:
+  text: Fixed bug in kubelet if the `SplitImageFilesystem` feature gate is turned on but the container runtime is
+    not configured.
+pr_body: ""

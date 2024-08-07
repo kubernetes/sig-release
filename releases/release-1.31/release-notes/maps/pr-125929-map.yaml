@@ -1,0 +1,5 @@
+pr: 125929
+releasenote:
+  text: Implemented `event_handling_duration_seconds` metric, which is the time the
+    scheduler takes to handle each kind of events.
+pr_body: ""

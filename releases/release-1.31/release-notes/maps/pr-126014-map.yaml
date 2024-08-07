@@ -1,0 +1,6 @@
+pr: 126014
+releasenote:
+  text: Promoted `LocalStorageCapacityIsolation` to beta; the behaviour is enabled by default.
+        Within the kubelet, storage capacity isolation is active if the feature gate
+        is enabled and the specific Pod is using a user namespace.
+pr_body: ""

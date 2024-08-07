@@ -1,0 +1,5 @@
+pr: 126167
+releasenote:
+  text: 'kube-apiserver: fixed a potential crash serving CustomResourceDefinitions
+    that combine an invalid schema and CEL validation rules.'
+pr_body: ""

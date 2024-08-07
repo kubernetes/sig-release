@@ -1,0 +1,6 @@
+pr: 125782
+releasenote:
+  text: |-
+    Fixed the documentation for the default value of the `procMount` entry in `securityContext` within a Pod.
+    The documentation was previously using the name of the internal variable `DefaultProcMount`, rather than the actual value, "Default".
+pr_body: ""

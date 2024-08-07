@@ -1,0 +1,4 @@
+pr: 126139
+releasenote:
+  text: Reverted a [change](https://github.com/kubernetes/kubernetes/pull/123513) where `ConsistentListFromCache` was moved to beta and enabled by default.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 122628
+releasenote:
+  text: Implemented new cluster events UpdatePodScaleDown and UpdatePodLabel for scheduler
+    plugins.
+pr_body: ""

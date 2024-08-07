@@ -1,0 +1,5 @@
+pr: 125470
+releasenote:
+  text: Added a `.status.features.supplementalGroupsPolicy` field to Nodes. The field is
+    true when the feature is implemented in the CRI implementation (KEP-3619).
+pr_body: ""
