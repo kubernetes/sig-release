@@ -21,7 +21,7 @@
 
 - 'kubeadm: marked the sub-phase of ''init kubelet-finilize'' called ''experimental-cert-rotation''
   as deprecated and print a warning if it is used directly; it will be removed in
-  a future release. Add a replacement sub-phase ''enable-client-cert-rotation''.' ([#124419](https://github.com/kubernetes/kubernetes/pull/124419), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]
+  a future release. Added a replacement sub-phase ''enable-client-cert-rotation''.' ([#124419](https://github.com/kubernetes/kubernetes/pull/124419), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]
 - Added a warning when creating or updating a PersistentVolume (PV) with the deprecated annotation `volume.beta.kubernetes.io/mount-options`. ([#124819](https://github.com/kubernetes/kubernetes/pull/124819), [@carlory](https://github.com/carlory))
 - CephFS volume plugin ( `kubernetes.io/cephfs`) was removed in this release and the `cephfs` volume type became non-functional. Alternative is to use CephFS CSI driver (https://github.com/ceph/ceph-csi/) in your Kubernetes Cluster. A re-deployment of your application is required to use the new driver if you were using `kubernetes.io/cephfs` volume plugin before upgrading cluster version to 1.31+. ([#124544](https://github.com/kubernetes/kubernetes/pull/124544), [@carlory](https://github.com/carlory)) [SIG Node, Scalability, Storage and Testing]
 - CephRBD volume plugin ( `kubernetes.io/rbd`) was removed in this release. And its csi migration support was also removed, so the `rbd` volume type became non-functional. Alternative is to use RBD CSI driver (https://github.com/ceph/ceph-csi/) in your Kubernetes Cluster. A re-deployment of your application is required to use the new driver if you were using `kubernetes.io/rbd` volume plugin before upgrading cluster version to 1.31+. ([#124546](https://github.com/kubernetes/kubernetes/pull/124546), [@carlory](https://github.com/carlory)) [SIG Node, Scalability, Scheduling, Storage and Testing]
@@ -42,7 +42,7 @@
 
 ### API Change
 
-- Add UserNamespaces field to NodeRuntimeHandlerFeatures ([#126034](https://github.com/kubernetes/kubernetes/pull/126034), [@sohankunkerkar](https://github.com/sohankunkerkar)) [SIG API Machinery, Apps and Node]
+- Added UserNamespaces field to NodeRuntimeHandlerFeatures ([#126034](https://github.com/kubernetes/kubernetes/pull/126034), [@sohankunkerkar](https://github.com/sohankunkerkar)) [SIG API Machinery, Apps and Node]
 - Added Coordinated Leader Election as Alpha under the `CoordinatedLeaderElection` feature gate. With the feature enabled, the control plane can use LeaseCandidate objects (coordination.k8s.io/v1alpha1 API group) to participate in a leader election and let the kube-apiserver select the best instance according to some strategy. ([#124012](https://github.com/kubernetes/kubernetes/pull/124012), [@Jefftree](https://github.com/Jefftree)) [SIG API Machinery, Apps, Auth, Cloud Provider, Etcd, Node, Release, Scheduling and Testing]
 - Added Node.Status.Features.SupplementalGroupsPolicy field which is set to true when the feature is implemented in the CRI implementation (KEP-3619). ([#125470](https://github.com/kubernetes/kubernetes/pull/125470), [@everpeace](https://github.com/everpeace)) [SIG API Machinery, Apps, Node and Testing]
 - Added an AllocatedResourcesStatus to each container status to indicate the health status of devices exposed by the device plugin. ([#126243](https://github.com/kubernetes/kubernetes/pull/126243), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG API Machinery, Apps, Node and Testing]
@@ -75,7 +75,7 @@
 - Fixed the comment for the Job's managedBy field. ([#124793](https://github.com/kubernetes/kubernetes/pull/124793), [@mimowo](https://github.com/mimowo)) [SIG API Machinery and Apps]
 - Fixed the documentation for the default value of the procMount entry in the pod securityContext.
   The documentation was previously using the name of the internal variable 'DefaultProcMount' rather than the actual value 'Default'. ([#125782](https://github.com/kubernetes/kubernetes/pull/125782), [@aborrero](https://github.com/aborrero)) [SIG Apps and Node]
-- Graduate PodDisruptionConditions to GA and lock ([#125461](https://github.com/kubernetes/kubernetes/pull/125461), [@mimowo](https://github.com/mimowo)) [SIG Apps, Node, Scheduling and Testing]
+- Graduated PodDisruptionConditions to GA and lock ([#125461](https://github.com/kubernetes/kubernetes/pull/125461), [@mimowo](https://github.com/mimowo)) [SIG Apps, Node, Scheduling and Testing]
 - Graduated MatchLabelKeys/MismatchLabelKeys feature in PodAffinity/PodAntiAffinity to Beta. ([#123638](https://github.com/kubernetes/kubernetes/pull/123638), [@sanposhiho](https://github.com/sanposhiho)) [SIG API Machinery, Apps, Scheduling and Testing]
 - Graduated `JobPodFailurePolicy` to GA and locked it to it's default. ([#125442](https://github.com/kubernetes/kubernetes/pull/125442), [@mimowo](https://github.com/mimowo)) [SIG API Machinery, Apps, Scheduling and Testing]
 - Graduated the Job SuccessPolicy to Beta.
@@ -137,11 +137,11 @@
 - ACTION REQUIRED for custom scheduler plugin developers:
   `EventsToRegister` in the `EnqueueExtensions` interface gets `ctx` in the parameters and `error` in the return values.
   Please change your plugins' implementation accordingly. ([#126113](https://github.com/kubernetes/kubernetes/pull/126113), [@googs1025](https://github.com/googs1025)) [SIG Node, Scheduling, Storage and Testing]
-- Add --for=create option to kubectl wait ([#125868](https://github.com/kubernetes/kubernetes/pull/125868), [@soltysh](https://github.com/soltysh)) [SIG CLI and Testing]
-- Add a TopologyManager policy option: max-allowable-numa-nodes to configures maxAllowableNUMANodes for kubelet. ([#124148](https://github.com/kubernetes/kubernetes/pull/124148), [@cyclinder](https://github.com/cyclinder)) [SIG Node and Testing]
+- Added --for=create option to kubectl wait ([#125868](https://github.com/kubernetes/kubernetes/pull/125868), [@soltysh](https://github.com/soltysh)) [SIG CLI and Testing]
+- Added a TopologyManager policy option: max-allowable-numa-nodes to configures maxAllowableNUMANodes for kubelet. ([#124148](https://github.com/kubernetes/kubernetes/pull/124148), [@cyclinder](https://github.com/cyclinder)) [SIG Node and Testing]
 - Added Custom resource field selectors in beta and enabled them by default. Check out https://github.com/kubernetes/enhancements/issues/4358 for more details. ([#124681](https://github.com/kubernetes/kubernetes/pull/124681), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery, Auth and Testing]
 - Added Extra.DisableAvailableConditionController for Generic Control Plane setup. ([#125650](https://github.com/kubernetes/kubernetes/pull/125650), [@mjudeikis](https://github.com/mjudeikis)) [SIG API Machinery]
-- Added OCI VolumeSource Container Runtime Interface API fields and types. ([#125659](https://github.com/kubernetes/kubernetes/pull/125659), [@saschagrunert](https://github.com/saschagrunert)) [SIG Node]
+- Revised the Pod API with alpha support for volumes derived from OCI artifacts. This feature is behind the `ImageVolume` feature gate. ([#125659](https://github.com/kubernetes/kubernetes/pull/125659), [@saschagrunert](https://github.com/saschagrunert)) [SIG Node]
 - Added `--keep-*` flags to `kubectl debug`, which enables to control the removal
   of probes, labels, annotations and initContainers from copy pod. ([#123149](https://github.com/kubernetes/kubernetes/pull/123149), [@mochizuki875](https://github.com/mochizuki875)) [SIG CLI and Testing]
 - Added `cri-client` staging repository. ([#123797](https://github.com/kubernetes/kubernetes/pull/123797), [@saschagrunert](https://github.com/saschagrunert)) [SIG API Machinery, Node, Release and Testing]
@@ -173,8 +173,8 @@
 - Built Kubernetes with Go 1.22.3. ([#124828](https://github.com/kubernetes/kubernetes/pull/124828), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]
 - Built Kubernetes with Go 1.22.4. ([#125363](https://github.com/kubernetes/kubernetes/pull/125363), [@cpanato](https://github.com/cpanato)) [SIG Architecture, Cloud Provider, Release, Storage and Testing]
 - Built kubernetes with `Go 1.23rc2`. ([#126047](https://github.com/kubernetes/kubernetes/pull/126047), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]
-- Bump the KubeletCgroupDriverFromCRI feature gate to beta and true by default. The kubelet will continue to use its KubeletConfiguration field as a fallback if the CRI implementation doesn't support this feature. ([#125828](https://github.com/kubernetes/kubernetes/pull/125828), [@haircommander](https://github.com/haircommander)) [SIG Node]
-- CEL: added name formats library. ([#123572](https://github.com/kubernetes/kubernetes/pull/123572), [@alexzielenski](https://github.com/alexzielenski)) [SIG API Machinery]
+- Bumped the KubeletCgroupDriverFromCRI feature gate to beta and true by default. The kubelet will continue to use its KubeletConfiguration field as a fallback if the CRI implementation doesn't support this feature. ([#125828](https://github.com/kubernetes/kubernetes/pull/125828), [@haircommander](https://github.com/haircommander)) [SIG Node]
+- CEL: Added name formats library. ([#123572](https://github.com/kubernetes/kubernetes/pull/123572), [@alexzielenski](https://github.com/alexzielenski)) [SIG API Machinery]
 - Changed Linux swap handling to restrict access to swap for containers in high priority Pods.
   New Pods that have a node- or cluster-critical priority are prohibited from accessing swap on Linux,
   even if your cluster and node configuration could otherwise allow this. ([#125277](https://github.com/kubernetes/kubernetes/pull/125277), [@iholder101](https://github.com/iholder101)) [SIG Node and Testing]
@@ -209,7 +209,7 @@
 - Implemented new cluster events UpdatePodScaleDown and UpdatePodLabel for scheduler plugins. ([#122628](https://github.com/kubernetes/kubernetes/pull/122628), [@sanposhiho](https://github.com/sanposhiho))
 - Improved memory usage of kube-apiserver by dropping`.metadata.managedFields` field that self-requested informers of kube-apiserver didn't need. ([#124667](https://github.com/kubernetes/kubernetes/pull/124667), [@linxiulei](https://github.com/linxiulei)) [SIG API Machinery]
 - In the client-side apply on create, defining the null value as "delete the key associated with this value". ([#125646](https://github.com/kubernetes/kubernetes/pull/125646), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG API Machinery, CLI and Testing]
-- Introduces new functionality to the client-go's `List` method, allowing users to enable API streaming. To activate this feature, users can set the `client-go.WatchListClient` feature gate.
+- Introduced new functionality to the client-go's `List` method, allowing users to enable API streaming. To activate this feature, users can set the `client-go.WatchListClient` feature gate.
   
   It is important to note that the server must support streaming for this feature to function properly. If streaming is not supported by the server, client-go will revert to using the normal `LIST` method to obtain data. ([#124509](https://github.com/kubernetes/kubernetes/pull/124509), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery, Auth, Instrumentation and Testing]
 - Introduces new functionality to the dynamic client's `List` method, allowing users to enable API streaming. To activate this feature, users can set the `client-go.WatchListClient` feature gate.
@@ -351,12 +351,12 @@
 - Enabled kubectl to find `kubectl-create-subcommand` plugins when positional
   arguments exists, e.g. `kubectl create subcommand arg`. ([#124123](https://github.com/kubernetes/kubernetes/pull/124123), [@sttts](https://github.com/sttts))
 - Ensured daemonset controller counts old unhealthy pods towards max unavailable budget. ([#123233](https://github.com/kubernetes/kubernetes/pull/123233), [@marshallbrekka](https://github.com/marshallbrekka))
-- Fix a bug that when PodTopologySpread rejects Pods, they may be stuck in Pending state for 5 min in a worst case scenario.
+- Fixed a bug that when PodTopologySpread rejects Pods, they may be stuck in Pending state for 5 min in a worst case scenario.
   The same problem could happen with custom plugins which have Pod/Add or Pod/Update in EventsToRegister,
   which is also solved with this PR, but only when the feature flag SchedulerQueueingHints is enabled. ([#122627](https://github.com/kubernetes/kubernetes/pull/122627), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling and Testing]
-- Fix bug where Server Side Apply causing spurious resourceVersion bumps on no-op patches containing empty maps. ([#125317](https://github.com/kubernetes/kubernetes/pull/125317), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery and Testing]
-- Fix endpoints status out-of-sync when the pod state changes rapidly ([#125675](https://github.com/kubernetes/kubernetes/pull/125675), [@tnqn](https://github.com/tnqn)) [SIG Apps, Network and Testing]
-- Fix the bug where PodIP field is temporarily removed for a terminal pod ([#125404](https://github.com/kubernetes/kubernetes/pull/125404), [@mimowo](https://github.com/mimowo)) [SIG Node and Testing]
+- Fixed bug where Server Side Apply causing spurious resourceVersion bumps on no-op patches containing empty maps. ([#125317](https://github.com/kubernetes/kubernetes/pull/125317), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery and Testing]
+- Fixed endpoints status out-of-sync when the pod state changes rapidly ([#125675](https://github.com/kubernetes/kubernetes/pull/125675), [@tnqn](https://github.com/tnqn)) [SIG Apps, Network and Testing]
+- Fixed the bug where PodIP field is temporarily removed for a terminal pod ([#125404](https://github.com/kubernetes/kubernetes/pull/125404), [@mimowo](https://github.com/mimowo)) [SIG Node and Testing]
 - Fixed "-kube-test-repo-list" e2e flag may not take effect. ([#123587](https://github.com/kubernetes/kubernetes/pull/123587), [@huww98](https://github.com/huww98)) [SIG API Machinery, Apps, Autoscaling, CLI, Network, Node, Scheduling, Storage, Testing and Windows]
 - Fixed EDITOR/KUBE_EDITOR with double-quoted paths with spaces when on Windows cmd.exe. ([#112104](https://github.com/kubernetes/kubernetes/pull/112104), [@oldium](https://github.com/oldium)) [SIG CLI and Windows]
 - Fixed a bug in storage-version-migrator-controller that would cause migration attempts to fail if resources were deleted when the migration was in progress. ([#126107](https://github.com/kubernetes/kubernetes/pull/126107), [@enj](https://github.com/enj)) [SIG API Machinery, Apps, Auth and Testing]
@@ -424,7 +424,7 @@
 - Mount-utils: treated syscall.ENODEV as corrupted mount. ([#126174](https://github.com/kubernetes/kubernetes/pull/126174), [@dobsonj](https://github.com/dobsonj))
 - Now the .status.ready field is tracked faster when active Pods are deleted, specifically when Job is failed, gets suspended or has too many active pods. ([#125546](https://github.com/kubernetes/kubernetes/pull/125546), [@dejanzele](https://github.com/dejanzele))
 - Removed admission plugin `PersistentVolumeLabel`. Please use https://github.com/kubernetes-sigs/cloud-pv-admission-labeler instead if you need a similar functionality. ([#124505](https://github.com/kubernetes/kubernetes/pull/124505), [@jsafrane](https://github.com/jsafrane)) [SIG API Machinery, Auth and Storage]
-- Reverted `Graduates the `WatchList` feature gate to Beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)`. ([#126191](https://github.com/kubernetes/kubernetes/pull/126191), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery and Testing]
+- Reverted `Graduated the `WatchList` feature gate to beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)`. ([#126191](https://github.com/kubernetes/kubernetes/pull/126191), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery and Testing]
 - Set ProcMountType feature to disabled by default, to follow the lead of UserNamespacesSupport (which it relies on). ([#126291](https://github.com/kubernetes/kubernetes/pull/126291), [@haircommander](https://github.com/haircommander)) [SIG Node]
 - StatefulSet autodelete respected controlling owners on PVC claims as described in https://github.com/kubernetes/enhancements/pull/4375. ([#122499](https://github.com/kubernetes/kubernetes/pull/122499), [@mattcary](https://github.com/mattcary)) [SIG Apps and Testing]
 - Stopped using wmic on Windows to get uuid in the kubelet. ([#126012](https://github.com/kubernetes/kubernetes/pull/126012), [@marosset](https://github.com/marosset)) [SIG Node and Windows]
