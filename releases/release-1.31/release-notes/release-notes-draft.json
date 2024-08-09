@@ -114,8 +114,8 @@
   },
   "120611": {
     "commit": "05bb5f71f86428c07a94d50bdf2a9e26b29e1f6a",
-    "text": "DRA: Added a feature so the number of ResourceClaim objects can be limited per namespace and by the number of devices requested through a specific class via the v1.ResourceQuota mechanism.",
-    "markdown": "DRA: Added a feature so the number of ResourceClaim objects can be limited per namespace and by the number of devices requested through a specific class via the v1.ResourceQuota mechanism. ([#120611](https://github.com/kubernetes/kubernetes/pull/120611), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Auth, CLI, Etcd, Node, Release, Scheduling and Testing]",
+    "text": "Dynamic Resource Allocation (DRA): Added a feature so the number of ResourceClaim objects can be limited per namespace and by the number of devices requested through a specific class via the v1.ResourceQuota mechanism.",
+    "markdown": "Dynamic Resource Allocation (DRA): Added a feature so the number of ResourceClaim objects can be limited per namespace and by the number of devices requested through a specific class via the v1.ResourceQuota mechanism. ([#120611](https://github.com/kubernetes/kubernetes/pull/120611), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Auth, CLI, Etcd, Node, Release, Scheduling and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1617,8 +1617,8 @@
   },
   "124101": {
     "commit": "e9d9a82839bfe4f159e5bc101d39f7c568699f80",
-    "text": "Fixed a bug where the Kubelet didn't calculate the process usage of pods correctly, leading to pods never getting evicted for PID use.",
-    "markdown": "Fixed a bug where the Kubelet didn't calculate the process usage of pods correctly, leading to pods never getting evicted for PID use. ([#124101](https://github.com/kubernetes/kubernetes/pull/124101), [@haircommander](https://github.com/haircommander)) [SIG Node and Testing]",
+    "text": "Fixed a bug where the Kubelet miscalculated the process usage of pods, causing pods to never get evicted for PID usage.",
+    "markdown": "Fixed a bug where the Kubelet miscalculated the process usage of pods, causing pods to never get evicted for PID usage. ([#124101](https://github.com/kubernetes/kubernetes/pull/124101), [@haircommander](https://github.com/haircommander)) [SIG Node and Testing]",
     "author": "haircommander",
     "author_url": "https://github.com/haircommander",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124101",
@@ -2326,8 +2326,8 @@
   },
   "124430": {
     "commit": "57d197fb890a50a508c4e9e485da5076a6d1b055",
-    "text": "Fixed node report notReady with reason 'container runtime status check may not have completed yet' after kubelet restart.",
-    "markdown": "Fixed node report notReady with reason 'container runtime status check may not have completed yet' after kubelet restart. ([#124430](https://github.com/kubernetes/kubernetes/pull/124430), [@AllenXu93](https://github.com/AllenXu93))",
+    "text": "Fixed node reporting \"notReady\" with the reason 'container runtime status check may not have completed yet' after kubelet restart.",
+    "markdown": "Fixed node reporting \"notReady\" with the reason 'container runtime status check may not have completed yet' after kubelet restart. ([#124430](https://github.com/kubernetes/kubernetes/pull/124430), [@AllenXu93](https://github.com/AllenXu93))",
     "author": "AllenXu93",
     "author_url": "https://github.com/AllenXu93",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124430",
@@ -2574,7 +2574,7 @@
   "124514": {
     "commit": "f281a02d236d1112009c54062b99972ea6e4e731",
     "text": "Fixed bug where kubectl get with --sort-by flag does not sort strings alphanumerically.",
-    "markdown": "Fixed bug where kubectl get with --sort-by flag does not sort strings alphanumerically. ([#124514](https://github.com/kubernetes/kubernetes/pull/124514), [@brianpursley](https://github.com/brianpursley)) [SIG CLI]"",
+    "markdown": "Fixed bug where kubectl get with --sort-by flag does not sort strings alphanumerically. ([#124514](https://github.com/kubernetes/kubernetes/pull/124514), [@brianpursley](https://github.com/brianpursley)) [SIG CLI]",
     "author": "brianpursley",
     "author_url": "https://github.com/brianpursley",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124514",
@@ -2649,8 +2649,8 @@
   },
   "124530": {
     "commit": "e83fca8dd9bd6636d4956836082b250bbe939109",
-    "text": "Finished initial generic controlplane refactor of kube-apiserver, providing a sample binariy building a kube-like controlplane without contrainer orchestration resources.",
-    "markdown": "Finished initial generic controlplane refactor of kube-apiserver, providing a sample binariy building a kube-like controlplane without contrainer orchestration resources. ([#124530](https://github.com/kubernetes/kubernetes/pull/124530), [@sttts](https://github.com/sttts)) [SIG API Machinery, Apps, Cloud Provider, Network, Node and Testing]",
+    "text": "Finished initial generic controlplane refactor of kube-apiserver, providing a sample binary building a Kubernetes-like control plane, but without container orchestration resources.",
+    "markdown": "Finished initial generic controlplane refactor of kube-apiserver, providing a sample binary building a Kubernetes-like control plane, but without container orchestration resources. ([#124530](https://github.com/kubernetes/kubernetes/pull/124530), [@sttts](https://github.com/sttts)) [SIG API Machinery, Apps, Cloud Provider, Network, Node and Testing]",
     "author": "sttts",
     "author_url": "https://github.com/sttts",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124530",
@@ -3554,8 +3554,8 @@
   },
   "124884": {
     "commit": "d7194eb3700cf4f5f075e06ba53811924efb9509",
-    "text": "Added a feature to report an event to pod if kubelet does `attach operation failed` when kubelet is running with `--enable-controller-attach-detach=false`.",
-    "markdown": "Added a feature to report an event to pod if kubelet does `attach operation failed` when kubelet is running with `--enable-controller-attach-detach=false`. ([#124884](https://github.com/kubernetes/kubernetes/pull/124884), [@carlory](https://github.com/carlory))",
+    "text": "Added a feature to report an event about a Pod if kubelet observes a failed attach operation, even if the kubelet is running with `--enable-controller-attach-detach=false`.",
+    "markdown": "Added a feature to report an event about a Pod if kubelet observes a failed attach operation, even if the kubelet is running with `--enable-controller-attach-detach=false`. ([#124884](https://github.com/kubernetes/kubernetes/pull/124884), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124884",
@@ -3783,8 +3783,8 @@
   },
   "124958": {
     "commit": "89283e0219d5d2df8c22b0de01756a79c8c7790c",
-    "text": "kube-scheduler implementedscheduling hints for the VolumeBinding plugin.\nThe scheduling hints allow the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated.",
-    "markdown": "Kube-scheduler implementedscheduling hints for the VolumeBinding plugin.\n  The scheduling hints allow the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated. ([#124958](https://github.com/kubernetes/kubernetes/pull/124958), [@bells17](https://github.com/bells17)) [SIG Scheduling and Storage]",
+    "text": "The kube-scheduler added support for scheduling hints for the StorageClass resource within the VolumeBinding plugin.\nThe scheduling hints allowed the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated.",
+    "markdown": "The kube-scheduler added support for scheduling hints for the StorageClass resource within the VolumeBinding plugin.\n  The scheduling hints allowed the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated. ([#124958](https://github.com/kubernetes/kubernetes/pull/124958), [@bells17](https://github.com/bells17)) [SIG Scheduling and Storage]",
     "author": "bells17",
     "author_url": "https://github.com/bells17",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124958",
@@ -3802,8 +3802,8 @@
   },
   "124959": {
     "commit": "9247a21be6a0c1aa81d10dea4e2536eaaa66837b",
-    "text": "kube-scheduler implemented scheduling hints for the VolumeBinding plugin.\nThe scheduling hints allow the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated.",
-    "markdown": "Kube-scheduler implemented scheduling hints for the VolumeBinding plugin.\n  The scheduling hints allow the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated. ([#124959](https://github.com/kubernetes/kubernetes/pull/124959), [@bells17](https://github.com/bells17)) [SIG Scheduling and Storage]",
+    "text": "The kube-scheduler added support for scheduling hints for the PersistentVolumeClaim resource within the VolumeBinding plugin.\nThe scheduling hints allowed the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated.",
+    "markdown": "The kube-scheduler added support for scheduling hints for the PersistentVolumeClaim resource within the VolumeBinding plugin.\n  The scheduling hints allowed the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated. ([#124959](https://github.com/kubernetes/kubernetes/pull/124959), [@bells17](https://github.com/bells17)) [SIG Scheduling and Storage]",
     "author": "bells17",
     "author_url": "https://github.com/bells17",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124959",
@@ -3821,8 +3821,8 @@
   },
   "124961": {
     "commit": "e1aa8197eddd277fb82be0b8bbc2ba2b4ca67af7",
-    "text": "kube-scheduler implemented scheduling hints for the VolumeBinding plugin.\nThe scheduling hints allow the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated.",
-    "markdown": "Kube-scheduler implemented scheduling hints for the VolumeBinding plugin.\n  The scheduling hints allow the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated. ([#124961](https://github.com/kubernetes/kubernetes/pull/124961), [@bells17](https://github.com/bells17)) [SIG Scheduling and Storage]",
+    "text": "The kube-scheduler added support for scheduling hints for the CSIStorageCapacity resource within the VolumeBinding plugin.\nThe scheduling hints allowed the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated.",
+    "markdown": "The kube-scheduler added support for scheduling hints for the CSIStorageCapacity resource within the VolumeBinding plugin.\n  The scheduling hints allowed the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated. ([#124961](https://github.com/kubernetes/kubernetes/pull/124961), [@bells17](https://github.com/bells17)) [SIG Scheduling and Storage]",
     "author": "bells17",
     "author_url": "https://github.com/bells17",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124961",
@@ -4058,7 +4058,7 @@
   "125029": {
     "commit": "c142814f6c56f2f0a597699f61b0d85c9d9ce1e2",
     "text": "kubeadm: enabled the v1beta4 API. For a complete changelog since v1beta3 please see https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta4/. \n\nThe API does include a few breaking changes:\n- The \"extraArgs\" component construct is now a list of \"name\"/\"value\" pairs instead of a string/string map. This has been done to support duplicate args where needed.\n- The \"JoinConfiguration.discovery.timeout\" field has been replaced by \"JoinConfiguration.timeouts.discovery\".\n- The \"ClusterConfiguration.timeoutForControlPlane\" field has been replaced by \"{Init|Join}Configuration.timeouts.controlPlaneComponentHealthCheck\".\nPlease use the command \"kubeadm config migrate\" to migrate your existing v1beta3 configuration to v1beta4.\n\nv1beta3 is now marked as deprecated but will continue to be supported until version 1.34 or later.\nThe storage configuration in the kube-system/kubeadm-config ConfigMap is now a v1beta4 ClusterConfiguration.",
-    "markdown": "Kubeadm: enabled the v1beta4 API. For a complete changelog since v1beta3 please see https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta4/. \n  \n  The API does include a few breaking changes:\n  - The \"extraArgs\" component construct is now a list of \"name\"/\"value\" pairs instead of a string/string map. This has been done to support duplicate args where needed.\n  - The \"JoinConfiguration.discovery.timeout\" field has been replaced by \"JoinConfiguration.timeouts.discovery\".\n  - The \"ClusterConfiguration.timeoutForControlPlane\" field has been replaced by \"{Init|Join}Configuration.timeouts.controlPlaneComponentHealthCheck\".\n  Please use the command \"kubeadm config migrate\" to migrate your existing v1beta3 configuration to v1beta4.\n  \n  v1beta3 is now marked as deprecated but will continue to be supported until version 1.34 or later.\n  The storage configuration in the kube-system/kubeadm-config ConfigMap is now a v1beta4 ClusterConfiguration. ([#125029](https://github.com/kubernetes/kubernetes/pull/125029), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "markdown": "Kubeadm: enabled the v1beta4 API. For a complete changelog since v1beta3 please see https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta4/. \n  \n  The API does include a few breaking changes:\n  - The \"extraArgs\" component construct is now a list of \"name\"/\"value\" pairs instead of a string/string map. This has been done to support duplicate args where needed.\n  - The \"JoinConfiguration.discovery.timeout\" field has been replaced by \"JoinConfiguration.timeouts.discovery\".\n  - The \"ClusterConfiguration.timeoutForControlPlane\" field has been replaced by \"{Init|Join}Configuration.timeouts.controlPlaneComponentHealthCheck\".\n  Please use the command \"kubeadm config migrate\" to migrate your existing v1beta3 configuration to v1beta4.\n  \n  v1beta3 is now marked as deprecated but will continue to be supported until version 1.34 or later.\n  The storage configuration in the kube-system/kubeadm-config ConfigMap is now a v1beta4 ClusterConfiguration. ([#125029](https://github.com/kubernetes/kubernetes/pull/125029), [@neolit123](https://github.com/neolit123))",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125029",
@@ -4372,8 +4372,8 @@
   },
   "125163": {
     "commit": "f2428d66cc2256fcbe2a486b1403603530f46c6f",
-    "text": "DRA: The Dynamic Resource Allocation (DRA) driver's daemonset must be deployed with a service account that enables writing ResourceSlice and reading ResourceClaim objects.",
-    "markdown": "DRA: The Dynamic Resource Allocation (DRA) driver's daemonset must be deployed with a service account that enables writing ResourceSlice and reading ResourceClaim objects. ([#125163](https://github.com/kubernetes/kubernetes/pull/125163), [@pohly](https://github.com/pohly)) [SIG Auth, Node and Testing]",
+    "text": "'ACTION REQUIRED: The Dynamic Resource Allocation (DRA) driver's DaemonSet\nmust be deployed with a service account that enables writing ResourceSlice\nand reading ResourceClaim objects.'\n",
+    "markdown": "'ACTION REQUIRED: The Dynamic Resource Allocation (DRA) driver's DaemonSet\n  must be deployed with a service account that enables writing ResourceSlice\n  and reading ResourceClaim objects.'\n   ([#125163](https://github.com/kubernetes/kubernetes/pull/125163), [@pohly](https://github.com/pohly)) [SIG Auth, Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4605,8 +4605,8 @@
   },
   "125257": {
     "commit": "7590cb7adffb25b687e629d2c93dcb1eaa539301",
-    "text": "Graduated Kubernetes' support for AppArmor to GA.",
-    "markdown": "Graduated Kubernetes' support for AppArmor to GA. ([#125257](https://github.com/kubernetes/kubernetes/pull/125257), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG Apps, Node and Testing]",
+    "text": "Graduated Kubernetes' support for AppArmor to GA. You now cannot disable the `AppArmor` feature gate.",
+    "markdown": "Graduated Kubernetes' support for AppArmor to GA. You now cannot disable the `AppArmor` feature gate. ([#125257](https://github.com/kubernetes/kubernetes/pull/125257), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG Apps, Node and Testing]",
     "author": "vinayakankugoyal",
     "author_url": "https://github.com/vinayakankugoyal",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125257",
@@ -4628,8 +4628,8 @@
   },
   "125259": {
     "commit": "a8110d7174e062a26aee19d7d4e2db622779fab8",
-    "text": "Promoted ProcMountType feature to Beta.",
-    "markdown": "Promoted ProcMountType feature to Beta. ([#125259](https://github.com/kubernetes/kubernetes/pull/125259), [@sohankunkerkar](https://github.com/sohankunkerkar))",
+    "text": "Promoted the `ProcMountType` feature gate to beta.",
+    "markdown": "Promoted the `ProcMountType` feature gate to beta. ([#125259](https://github.com/kubernetes/kubernetes/pull/125259), [@sohankunkerkar](https://github.com/sohankunkerkar))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4959,8 +4959,8 @@
   },
   "125374": {
     "commit": "6e52e705d0c0a962fcfe0fc98b1015e517f16844",
-    "text": "Promoted StatefulSetStartOrdinal to stable. This means `--feature-gates=StatefulSetStartOrdinal=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation.",
-    "markdown": "Promoted StatefulSetStartOrdinal to stable. This means `--feature-gates=StatefulSetStartOrdinal=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation. ([#125374](https://github.com/kubernetes/kubernetes/pull/125374), [@pwschuurman](https://github.com/pwschuurman)) [SIG API Machinery, Apps and Testing]",
+    "text": "Promoted `StatefulSetStartOrdinal` to stable. This means `--feature-gates=StatefulSetStartOrdinal=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation.",
+    "markdown": "Promoted `StatefulSetStartOrdinal` to stable. This means `--feature-gates=StatefulSetStartOrdinal=true` are not needed on kube-apiserver and kube-controller-manager binaries and they'll be removed soon following policy at https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecation. ([#125374](https://github.com/kubernetes/kubernetes/pull/125374), [@pwschuurman](https://github.com/pwschuurman)) [SIG API Machinery, Apps and Testing]",
     "author": "pwschuurman",
     "author_url": "https://github.com/pwschuurman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125374",
@@ -5233,8 +5233,8 @@
   },
   "125470": {
     "commit": "fc3abdaf2dbb11c84033635b1d26f12fe12ef001",
-    "text": "Added Node.Status.Features.SupplementalGroupsPolicy field which is set to true when the feature is implemented in the CRI implementation (KEP-3619).",
-    "markdown": "Added Node.Status.Features.SupplementalGroupsPolicy field which is set to true when the feature is implemented in the CRI implementation (KEP-3619). ([#125470](https://github.com/kubernetes/kubernetes/pull/125470), [@everpeace](https://github.com/everpeace)) [SIG API Machinery, Apps, Node and Testing]",
+    "text": "Added a `.status.features.supplementalGroupsPolicy` field to Nodes. The field is true when the feature is implemented in the CRI implementation (KEP-3619).",
+    "markdown": "Added a `.status.features.supplementalGroupsPolicy` field to Nodes. The field is true when the feature is implemented in the CRI implementation (KEP-3619). ([#125470](https://github.com/kubernetes/kubernetes/pull/125470), [@everpeace](https://github.com/everpeace)) [SIG API Machinery, Apps, Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5318,8 +5318,8 @@
   },
   "125488": {
     "commit": "d21b17264e5a554724aa3ad032536630bcfd5b3f",
-    "text": "DRA: Added new API and several new features.",
-    "markdown": "DRA: Added new API and several new features. ([#125488](https://github.com/kubernetes/kubernetes/pull/125488), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Auth, CLI, Cluster Lifecycle, Etcd, Node, Release, Scheduling, Storage and Testing]",
+    "text": "Enhanced the Dynamic Resource Allocation (DRA) with an updated version of the resource.k8s.io API group. The primary user-facing type remains the ResourceClaim, however significant changes have been made, resulting in the new version, v1alpha3, which is not compatible with the previous version.",
+    "markdown": "Enhanced the Dynamic Resource Allocation (DRA) with an updated version of the resource.k8s.io API group. The primary user-facing type remains the ResourceClaim, however significant changes have been made, resulting in the new version, v1alpha3, which is not compatible with the previous version. ([#125488](https://github.com/kubernetes/kubernetes/pull/125488), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Auth, CLI, Cluster Lifecycle, Etcd, Node, Release, Scheduling, Storage and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5838,8 +5838,8 @@
   },
   "125661": {
     "commit": "bb350f711174670443e23aa3616606870a471bd7",
-    "text": "Cleaned deprecated context.StopCh in favor of ctx.",
-    "markdown": "Cleaned deprecated context.StopCh in favor of ctx. ([#125661](https://github.com/kubernetes/kubernetes/pull/125661), [@mjudeikis](https://github.com/mjudeikis))",
+    "text": "Cleaned deprecated `context.StopCh` in favor of ctx.",
+    "markdown": "Cleaned deprecated `context.StopCh` in favor of ctx. ([#125661](https://github.com/kubernetes/kubernetes/pull/125661), [@mjudeikis](https://github.com/mjudeikis))",
     "author": "mjudeikis",
     "author_url": "https://github.com/mjudeikis",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125661",
@@ -6008,8 +6008,8 @@
   },
   "125782": {
     "commit": "25935965c5774fadf3b9a06b811422503053c3dd",
-    "text": "Fixed the documentation for the default value of the procMount entry in the pod securityContext.\nThe documentation was previously using the name of the internal variable 'DefaultProcMount' rather than the actual value 'Default'.",
-    "markdown": "Fixed the documentation for the default value of the procMount entry in the pod securityContext.\n  The documentation was previously using the name of the internal variable 'DefaultProcMount' rather than the actual value 'Default'. ([#125782](https://github.com/kubernetes/kubernetes/pull/125782), [@aborrero](https://github.com/aborrero)) [SIG Apps and Node]",
+    "text": "Fixed the documentation for the default value of the `procMount` entry in `securityContext` within a Pod.\nThe documentation was previously using the name of the internal variable `DefaultProcMount`, rather than the actual value, \"Default\".",
+    "markdown": "Fixed the documentation for the default value of the `procMount` entry in `securityContext` within a Pod.\n  The documentation was previously using the name of the internal variable `DefaultProcMount`, rather than the actual value, \"Default\". ([#125782](https://github.com/kubernetes/kubernetes/pull/125782), [@aborrero](https://github.com/aborrero)) [SIG Apps and Node]",
     "author": "aborrero",
     "author_url": "https://github.com/aborrero",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125782",
@@ -6074,8 +6074,8 @@
   },
   "125813": {
     "commit": "fa7fcde5a4b1be2162b85191dcdfa646facaf95c",
-    "text": "Enforced kubelet to request serving certificates only once it has at least one IP address in the `.status.addresses` of its associated Node object. This avoids requesting DNS-only serving certificates before externally set addresses are in place. Until 1.33, the previous behavior can be opted back into by setting the deprecated AllowDNSOnlyNodeCSR feature gate to true in the kubelet.",
-    "markdown": "Enforced kubelet to request serving certificates only once it has at least one IP address in the `.status.addresses` of its associated Node object. This avoids requesting DNS-only serving certificates before externally set addresses are in place. Until 1.33, the previous behavior can be opted back into by setting the deprecated AllowDNSOnlyNodeCSR feature gate to true in the kubelet. ([#125813](https://github.com/kubernetes/kubernetes/pull/125813), [@aojea](https://github.com/aojea)) [SIG Auth, Cloud Provider and Node]",
+    "text": "Enforced kubelet to request serving certificates only once it has at least one IP address in the `.status.addresses` of its associated Node object. This avoids requesting DNS-only serving certificates before externally set addresses are in place. Until 1.33, the previous behavior can be opted back into by setting the deprecated `AllowDNSOnlyNodeCSR` feature gate to true in the kubelet.",
+    "markdown": "Enforced kubelet to request serving certificates only once it has at least one IP address in the `.status.addresses` of its associated Node object. This avoids requesting DNS-only serving certificates before externally set addresses are in place. Until 1.33, the previous behavior can be opted back into by setting the deprecated `AllowDNSOnlyNodeCSR` feature gate to true in the kubelet. ([#125813](https://github.com/kubernetes/kubernetes/pull/125813), [@aojea](https://github.com/aojea)) [SIG Auth, Cloud Provider and Node]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125813",
@@ -6100,8 +6100,8 @@
   },
   "125828": {
     "commit": "e785ef8d21a01f6a344096f3dbac3b0cc65101e5",
-    "text": "Bump the KubeletCgroupDriverFromCRI feature gate to beta and true by default. The kubelet will continue to use its KubeletConfiguration field as a fallback if the CRI implementation doesn't support this feature.",
-    "markdown": "Bump the KubeletCgroupDriverFromCRI feature gate to beta and true by default. The kubelet will continue to use its KubeletConfiguration field as a fallback if the CRI implementation doesn't support this feature. ([#125828](https://github.com/kubernetes/kubernetes/pull/125828), [@haircommander](https://github.com/haircommander)) [SIG Node]",
+    "text": "Promoted CRI communication of the cgroup driver mechanism to beta. The `KubeletCgroupDriverFromCRI` feature gate is now in beta and enabled by default. This allows the kubelet to query the container runtime using CRI to determine the mechanism for cgroup management. If the container runtime doesn't support this, the kubelet falls back to using the configuration file (you can also use the deprecated `--cgroup-driver` command line argument).",
+    "markdown": "Promoted CRI communication of the cgroup driver mechanism to beta. The `KubeletCgroupDriverFromCRI` feature gate is now in beta and enabled by default. This allows the kubelet to query the container runtime using CRI to determine the mechanism for cgroup management. If the container runtime doesn't support this, the kubelet falls back to using the configuration file (you can also use the deprecated `--cgroup-driver` command line argument). ([#125828](https://github.com/kubernetes/kubernetes/pull/125828), [@haircommander](https://github.com/haircommander)) [SIG Node]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6407,8 +6407,8 @@
   },
   "126014": {
     "commit": "a4f9910c51ffd574736b548ac1c5771afcf928ae",
-    "text": "Promoted LocalStorageCapacityIsolation to Beta and enable if user namespace is enabled for the pod.",
-    "markdown": "Promoted LocalStorageCapacityIsolation to Beta and enable if user namespace is enabled for the pod. ([#126014](https://github.com/kubernetes/kubernetes/pull/126014), [@PannagaRao](https://github.com/PannagaRao)) [SIG Apps, Autoscaling, Node, Storage and Testing]",
+    "text": "Promoted `LocalStorageCapacityIsolation` to beta; the behaviour is enabled by default. Within the kubelet, storage capacity isolation is active if the feature gate is enabled and the specific Pod is using a user namespace.",
+    "markdown": "Promoted `LocalStorageCapacityIsolation` to beta; the behaviour is enabled by default. Within the kubelet, storage capacity isolation is active if the feature gate is enabled and the specific Pod is using a user namespace. ([#126014](https://github.com/kubernetes/kubernetes/pull/126014), [@PannagaRao](https://github.com/PannagaRao)) [SIG Apps, Autoscaling, Node, Storage and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6528,8 +6528,8 @@
   },
   "126047": {
     "commit": "67c7e770441ab2ac2c7af28cb719d87aacad9f0d",
-    "text": "Built kubernetes with `Go 1.23rc2`.",
-    "markdown": "Built kubernetes with `Go 1.23rc2`. ([#126047](https://github.com/kubernetes/kubernetes/pull/126047), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "text": "Updated kubernetes to build with Go 1.23rc2.",
+    "markdown": "Updated kubernetes to build with Go 1.23rc2. ([#126047](https://github.com/kubernetes/kubernetes/pull/126047), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
     "author": "cpanato",
     "author_url": "https://github.com/cpanato",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126047",
@@ -6572,8 +6572,8 @@
   },
   "126067": {
     "commit": "1854839ff08eba7434ebfa98ab84de2d3a62d4ce",
-    "text": "Graduated the Job SuccessPolicy to Beta.\n\nThe new reason label, \"SuccessPolicy\" and \"CompletionsReached\" are added to the \"jobs_finished_total\" metric.\nAdditionally, If we enable the \"JobSuccessPolicy\" feature gate, the Job gets \"CompletionsReached\" reason for the \"SuccessCriteriaMet\" and \"Complete\" condition type\nwhen the number of succeeded Job Pods (\".status.succeeded\") reached the desired completions (\".spec.completions\").",
-    "markdown": "Graduated the Job SuccessPolicy to Beta.\n  \n  The new reason label, \"SuccessPolicy\" and \"CompletionsReached\" are added to the \"jobs_finished_total\" metric.\n  Additionally, If we enable the \"JobSuccessPolicy\" feature gate, the Job gets \"CompletionsReached\" reason for the \"SuccessCriteriaMet\" and \"Complete\" condition type\n  when the number of succeeded Job Pods (\".status.succeeded\") reached the desired completions (\".spec.completions\"). ([#126067](https://github.com/kubernetes/kubernetes/pull/126067), [@tenzen-y](https://github.com/tenzen-y)) [SIG API Machinery, Apps and Testing]",
+    "text": "Graduated the Job `successPolicy` field to beta.\n\nThe new reason label, \"SuccessPolicy\" and \"CompletionsReached\" are added to the \"jobs_finished_total\" metric.\nAdditionally, if you enable the `JobSuccessPolicy` feature gate, the Job gets \"CompletionsReached\" reason for the \"SuccessCriteriaMet\" and \"Complete\" condition type\nwhen the number of succeeded Job Pods (`.status.succeeded`) reached the desired completions (`.spec.completions`).",
+    "markdown": "Graduated the Job `successPolicy` field to beta.\n  \n  The new reason label, \"SuccessPolicy\" and \"CompletionsReached\" are added to the \"jobs_finished_total\" metric.\n  Additionally, if you enable the `JobSuccessPolicy` feature gate, the Job gets \"CompletionsReached\" reason for the \"SuccessCriteriaMet\" and \"Complete\" condition type\n  when the number of succeeded Job Pods (`.status.succeeded`) reached the desired completions (`.spec.completions`). ([#126067](https://github.com/kubernetes/kubernetes/pull/126067), [@tenzen-y](https://github.com/tenzen-y)) [SIG API Machinery, Apps and Testing]",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3998-job-success-completion-policy",
@@ -6605,8 +6605,8 @@
   },
   "126072": {
     "commit": "8aff9d31929deed906856fbfaae5744c1b9ba868",
-    "text": "Made kube-proxy Windows service control manager integration(--windows-service) configurable in v1alpha1 component configuration via `WindowsRunAsService` field.",
-    "markdown": "Made kube-proxy Windows service control manager integration(--windows-service) configurable in v1alpha1 component configuration via `WindowsRunAsService` field. ([#126072](https://github.com/kubernetes/kubernetes/pull/126072), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Scalability]",
+    "text": "Made kube-proxy Windows service control manager integration (`--windows-service`) configurable in v1alpha1 component configuration via `windowsRunAsService` field.",
+    "markdown": "Made kube-proxy Windows service control manager integration (`--windows-service`) configurable in v1alpha1 component configuration via `windowsRunAsService` field. ([#126072](https://github.com/kubernetes/kubernetes/pull/126072), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Scalability]",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126072",
@@ -6630,8 +6630,8 @@
   },
   "126073": {
     "commit": "d0545c8eb4ca5e8bb7704b5f51197b5082964e85",
-    "text": "Fixed fake clientset ApplyScale subresource from 'status' to 'scale'.",
-    "markdown": "Fixed fake clientset ApplyScale subresource from 'status' to 'scale'. ([#126073](https://github.com/kubernetes/kubernetes/pull/126073), [@a7i](https://github.com/a7i))",
+    "text": "Fixed fake clientset ApplyScale subresource from `status` to `scale`.",
+    "markdown": "Fixed fake clientset ApplyScale subresource from `status` to `scale`. ([#126073](https://github.com/kubernetes/kubernetes/pull/126073), [@a7i](https://github.com/a7i))",
     "author": "a7i",
     "author_url": "https://github.com/a7i",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126073",
@@ -6673,8 +6673,8 @@
   },
   "126108": {
     "commit": "107f6214626c2c6c42aa11141e4572c02e4daff7",
-    "text": "Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.\n\nIf you are using the RecoverVolumeExpansionFailure Alpha feature, after upgrading to this release, existing PVCs with status.allocatedResourceStatus set to \"ControllerResizeFailed\" or \"NodeResizeFailed\" should have their status.allocatedResourceStatus cleared.",
-    "markdown": "Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.\n  \n  If you are using the RecoverVolumeExpansionFailure Alpha feature, after upgrading to this release, existing PVCs with status.allocatedResourceStatus set to \"ControllerResizeFailed\" or \"NodeResizeFailed\" should have their status.allocatedResourceStatus cleared. ([#126108](https://github.com/kubernetes/kubernetes/pull/126108), [@gnufied](https://github.com/gnufied)) [SIG Apps, Auth, Node, Storage and Testing]",
+    "text": "Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.\n\nACTION REQUIRED:  If you are using the `RecoverVolumeExpansionFailure` alpha feature gate\nthen after upgrading to this release, you need to update some objects.\nFor any existing PersistentVolumeClaimss with `status.allocatedResourceStatus` set to either\n\"ControllerResizeFailed\" or \"NodeResizeFailed\", clear the `status.allocatedResourceStatus`.",
+    "markdown": "Reduced state change noise when volume expansion fails. Also mark certain failures as infeasible.\n  \n  ACTION REQUIRED:  If you are using the `RecoverVolumeExpansionFailure` alpha feature gate\n  then after upgrading to this release, you need to update some objects.\n  For any existing PersistentVolumeClaimss with `status.allocatedResourceStatus` set to either\n  \"ControllerResizeFailed\" or \"NodeResizeFailed\", clear the `status.allocatedResourceStatus`. ([#126108](https://github.com/kubernetes/kubernetes/pull/126108), [@gnufied](https://github.com/gnufied)) [SIG Apps, Auth, Node, Storage and Testing]",
     "author": "gnufied",
     "author_url": "https://github.com/gnufied",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126108",
@@ -6788,8 +6788,8 @@
   },
   "126139": {
     "commit": "c3bcd4fff06566886f36d6e59536b3d00a69a637",
-    "text": "Reverted \"Move ConsistentListFromCache feature flag to Beta and enable it by default\".",
-    "markdown": "Reverted \"Move ConsistentListFromCache feature flag to Beta and enable it by default\". ([#126139](https://github.com/kubernetes/kubernetes/pull/126139), [@enj](https://github.com/enj))",
+    "text": "Reverted a [change](https://github.com/kubernetes/kubernetes/pull/123513) where `ConsistentListFromCache` was moved to beta and enabled by default.",
+    "markdown": "Reverted a [change](https://github.com/kubernetes/kubernetes/pull/123513) where `ConsistentListFromCache` was moved to beta and enabled by default. ([#126139](https://github.com/kubernetes/kubernetes/pull/126139), [@enj](https://github.com/enj))",
     "author": "enj",
     "author_url": "https://github.com/enj",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126139",
@@ -6810,8 +6810,8 @@
   },
   "126145": {
     "commit": "c2fdeca4ab81336daf20c91b810c9685918c3d58",
-    "text": "Promoted feature-gate `VolumeAttributesClass` to Beta (disabled by default). Users need to enable the feature gate and the storage v1beta1 group to use this new feature.\n- Promoted API `VolumeAttributesClass` and `VolumeAttributesClassList` to `storage.k8s.io/v1beta1`.",
-    "markdown": "Promoted feature-gate `VolumeAttributesClass` to Beta (disabled by default). Users need to enable the feature gate and the storage v1beta1 group to use this new feature.\n  - Promoted API `VolumeAttributesClass` and `VolumeAttributesClassList` to `storage.k8s.io/v1beta1`. ([#126145](https://github.com/kubernetes/kubernetes/pull/126145), [@carlory](https://github.com/carlory)) [SIG API Machinery, Apps, CLI, Etcd, Storage and Testing]",
+    "text": "Promoted feature-gate `VolumeAttributesClass` to beta (disabled by default). Users need to enable the feature gate and the `storage.k8s.io/v1beta1` API group to use this feature.\nPromoted the VolumeAttributesClass API to beta.",
+    "markdown": "Promoted feature-gate `VolumeAttributesClass` to beta (disabled by default). Users need to enable the feature gate and the `storage.k8s.io/v1beta1` API group to use this feature.\n  Promoted the VolumeAttributesClass API to beta. ([#126145](https://github.com/kubernetes/kubernetes/pull/126145), [@carlory](https://github.com/carlory)) [SIG API Machinery, Apps, CLI, Etcd, Storage and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6848,8 +6848,8 @@
   },
   "126163": {
     "commit": "c01bc31fa2fb59c127c4c10215548033cd2e7a99",
-    "text": "kube-apiserver: when the Alpha `UserNamespacesPodSecurityStandards` feature gate is enabled, Pod Security Admission enforcement of the baseline policy now allows `procMount=Unmasked` for user namespace pods that set `hostUsers=false`.",
-    "markdown": "Kube-apiserver: when the Alpha `UserNamespacesPodSecurityStandards` feature gate is enabled, Pod Security Admission enforcement of the baseline policy now allows `procMount=Unmasked` for user namespace pods that set `hostUsers=false`. ([#126163](https://github.com/kubernetes/kubernetes/pull/126163), [@haircommander](https://github.com/haircommander))",
+    "text": "kube-apiserver: when the Alpha `UserNamespacesPodSecurityStandards` feature gate is enabled, Pod Security Admission enforcement of the baseline policy now allows `procMount: Unmasked` for user namespace pods that set `hostUsers: false`.",
+    "markdown": "Kube-apiserver: when the Alpha `UserNamespacesPodSecurityStandards` feature gate is enabled, Pod Security Admission enforcement of the baseline policy now allows `procMount: Unmasked` for user namespace pods that set `hostUsers: false`. ([#126163](https://github.com/kubernetes/kubernetes/pull/126163), [@haircommander](https://github.com/haircommander))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6872,8 +6872,8 @@
   },
   "126165": {
     "commit": "8e175c688e37e4baf70c4015346b8b5615a84328",
-    "text": "Starting in 1.31, `container_engine_t` was added to the list of allowed SELinux types in the baseline Pod Security Standards profile.",
-    "markdown": "Starting in 1.31, `container_engine_t` was added to the list of allowed SELinux types in the baseline Pod Security Standards profile. ([#126165](https://github.com/kubernetes/kubernetes/pull/126165), [@haircommander](https://github.com/haircommander))",
+    "text": "Starting in 1.31, `container_engine_t` was added to the list of allowed SELinux types in the baseline Pod Security Standard.",
+    "markdown": "Starting in 1.31, `container_engine_t` was added to the list of allowed SELinux types in the baseline Pod Security Standard. ([#126165](https://github.com/kubernetes/kubernetes/pull/126165), [@haircommander](https://github.com/haircommander))",
     "author": "haircommander",
     "author_url": "https://github.com/haircommander",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126165",
@@ -6993,8 +6993,8 @@
   },
   "126191": {
     "commit": "dda657b5982e8f9102b8df5931344262b0793163",
-    "text": "Reverted `Graduates the `WatchList` feature gate to Beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)`.",
-    "markdown": "Reverted `Graduates the `WatchList` feature gate to Beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)`. ([#126191](https://github.com/kubernetes/kubernetes/pull/126191), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery and Testing]",
+    "text": "Reverted \"Graduates the `WatchList` feature gate to beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)\".",
+    "markdown": "Reverted \"Graduates the `WatchList` feature gate to beta for kube-apiserver and enables `WatchListClient` for kube-controller-manager (KCM)\". ([#126191](https://github.com/kubernetes/kubernetes/pull/126191), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery and Testing]",
     "author": "p0lyn0mial",
     "author_url": "https://github.com/p0lyn0mial",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126191",
@@ -7015,8 +7015,8 @@
   },
   "126205": {
     "commit": "fe24ebfe3308750531ea0d7f8be83804bc53318d",
-    "text": "Promoted KEP-4191 \"Split Image Filesystem\" to Beta.",
-    "markdown": "Promoted KEP-4191 \"Split Image Filesystem\" to Beta. ([#126205](https://github.com/kubernetes/kubernetes/pull/126205), [@kwilczynski](https://github.com/kwilczynski))",
+    "text": "The `KubeletSeparateDiskGC` feature gate is now beta. This split image filesystem feature enables kubelet to perform garbage collection of images (read-only layers) and/or containers (writeable layers) deployed on separate filesystems. gate is now beta.",
+    "markdown": "The `KubeletSeparateDiskGC` feature gate is now beta. This split image filesystem feature enables kubelet to perform garbage collection of images (read-only layers) and/or containers (writeable layers) deployed on separate filesystems. gate is now beta. ([#126205](https://github.com/kubernetes/kubernetes/pull/126205), [@kwilczynski](https://github.com/kwilczynski))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -7094,8 +7094,8 @@
   },
   "126237": {
     "commit": "887def08b66c31b2f8bc260ea74d6c94671d474e",
-    "text": "Promoted the metrics for both VAP and CRD validation rules to Beta.",
-    "markdown": "Promoted the metrics for both VAP and CRD validation rules to Beta. ([#126237](https://github.com/kubernetes/kubernetes/pull/126237), [@cici37](https://github.com/cici37)) [SIG API Machinery and Instrumentation]",
+    "text": "Promoted the metrics for both ValidatingAdmissionPolicy (VAP) and CustomResourceDefinition (CRD) validation rules to beta.",
+    "markdown": "Promoted the metrics for both ValidatingAdmissionPolicy (VAP) and CustomResourceDefinition (CRD) validation rules to beta. ([#126237](https://github.com/kubernetes/kubernetes/pull/126237), [@cici37](https://github.com/cici37)) [SIG API Machinery and Instrumentation]",
     "author": "cici37",
     "author_url": "https://github.com/cici37",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126237",
@@ -7117,8 +7117,8 @@
   },
   "126243": {
     "commit": "5af1710d90d2396f6305c73fdf7df3a1be0c2fd0",
-    "text": "Added an AllocatedResourcesStatus to each container status to indicate the health status of devices exposed by the device plugin.",
-    "markdown": "Added an AllocatedResourcesStatus to each container status to indicate the health status of devices exposed by the device plugin. ([#126243](https://github.com/kubernetes/kubernetes/pull/126243), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG API Machinery, Apps, Node and Testing]",
+    "text": "Added an `allocatedResourcesStatus` to each container status to indicate the health status of devices exposed by the device plugin.",
+    "markdown": "Added an `allocatedResourcesStatus` to each container status to indicate the health status of devices exposed by the device plugin. ([#126243](https://github.com/kubernetes/kubernetes/pull/126243), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG API Machinery, Apps, Node and Testing]",
     "author": "SergeyKanzhelev",
     "author_url": "https://github.com/SergeyKanzhelev",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126243",
@@ -7186,8 +7186,8 @@
   },
   "126330": {
     "commit": "05934d6283a7f54ec9e4ef543d038ee479345c2f",
-    "text": "Built kubernetes with `Go 1.22.5`.",
-    "markdown": "Built kubernetes with `Go 1.22.5`. ([#126330](https://github.com/kubernetes/kubernetes/pull/126330), [@ArkaSaha30](https://github.com/ArkaSaha30)) [SIG Release and Testing]",
+    "text": "Updated kubernetes to build with Go 1.22.5.",
+    "markdown": "Updated kubernetes to build with Go 1.22.5. ([#126330](https://github.com/kubernetes/kubernetes/pull/126330), [@ArkaSaha30](https://github.com/ArkaSaha30)) [SIG Release and Testing]",
     "author": "ArkaSaha30",
     "author_url": "https://github.com/ArkaSaha30",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126330",
@@ -7208,8 +7208,8 @@
   },
   "126335": {
     "commit": "df69a528d5a50d03f5865d8aeb7f8400cf48296b",
-    "text": "Fixed bug in KEP-4191 if feature gate is turned on but container runtime is not configured.",
-    "markdown": "Fixed bug in KEP-4191 if feature gate is turned on but container runtime is not configured. ([#126335](https://github.com/kubernetes/kubernetes/pull/126335), [@kannon92](https://github.com/kannon92))",
+    "text": "Fixed bug in kubelet if the `SplitImageFilesystem` feature gate is turned on but the container runtime is not configured.",
+    "markdown": "Fixed bug in kubelet if the `SplitImageFilesystem` feature gate is turned on but the container runtime is not configured. ([#126335](https://github.com/kubernetes/kubernetes/pull/126335), [@kannon92](https://github.com/kannon92))",
     "author": "kannon92",
     "author_url": "https://github.com/kannon92",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126335",
@@ -7229,8 +7229,8 @@
   },
   "126355": {
     "commit": "c853ca49c3d104ad559c4d4bdc802106d27deb52",
-    "text": "Set LocalStorageCapacityIsolationFSQuotaMonitoring to false by default, to match UserNamespacesSupport (which the feature relies on).",
-    "markdown": "Set LocalStorageCapacityIsolationFSQuotaMonitoring to false by default, to match UserNamespacesSupport (which the feature relies on). ([#126355](https://github.com/kubernetes/kubernetes/pull/126355), [@haircommander](https://github.com/haircommander))",
+    "text": "Set `LocalStorageCapacityIsolationFSQuotaMonitoring` to false by default, to match `UserNamespacesSupport` (which the feature relies on).",
+    "markdown": "Set `LocalStorageCapacityIsolationFSQuotaMonitoring` to false by default, to match `UserNamespacesSupport` (which the feature relies on). ([#126355](https://github.com/kubernetes/kubernetes/pull/126355), [@haircommander](https://github.com/haircommander))",
     "author": "haircommander",
     "author_url": "https://github.com/haircommander",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126355",
