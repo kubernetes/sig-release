@@ -1,6 +1,9 @@
 pr: 125828
 releasenote:
-  text: Bump the KubeletCgroupDriverFromCRI feature gate to beta and true by default.
-    The kubelet will continue to use its KubeletConfiguration field as a fallback
-    if the CRI implementation doesn't support this feature.
+  text: Promoted CRI communication of the cgroup driver mechanism to beta.
+    The `KubeletCgroupDriverFromCRI` feature gate is now in beta and enabled by default.
+    This allows the kubelet to query the container runtime using CRI to determine the
+    mechanism for cgroup management. If the container runtime doesn't support this, the
+    kubelet falls back to using the configuration file (you can also use the deprecated
+    `--cgroup-driver` command line argument).
 pr_body: ""
