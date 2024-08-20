@@ -21,6 +21,8 @@ The release team leader role is responsible for coordinating release activities,
   - [During-Recording](#during-recording)
   - [Post-Recording](#post-recording)
 - [Media and Webinar](#media-and-webinar)
+  -  [Media Interviews](#media-interviews)
+  -  [Webinar](#webinar)
 
 ## Authority and Responsibility
 
