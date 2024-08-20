@@ -210,7 +210,7 @@ If anyone has anything they’d like to discuss, please add to the notes.
 10. *open meeting notes and share screen* (NOTE: on Linux you might need to share the entire screen, a single window does not work sometimes)
 
 ### During-Recording
-1. *start recording* record to the cloud, the automation will 'automatically' upload the recording to YouTube.
+1. *start recording* record to the cloud, the automation will automatically upload the recording to YouTube.
 2. *say hello to everyone* **"Hello everyone, my name is 'Alice' and I will be the host for this Kubernetes 'X.XX' release team meeting. Today is 'May' the '4th' and we are in week 'X' of the release cycle.**
 3. *code of conduct* **"Please be aware that this is a Kubernetes community meeting which falls under the Kubernetes code of conduct, which can be summarized to be excellent to each other, thank you all!"** 
 4. *recording warning* **"This meeting is recorded and will be publicly posted to YouTube so please be mindful what you say is being recorded."**
