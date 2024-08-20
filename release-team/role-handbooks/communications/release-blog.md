@@ -3,7 +3,7 @@ This outline can be used as reference for writing up the release blog. The follo
 
 * Introduction to release
     * The first paragraph of the release blog announcement introduces the release, its focus, and its importance.
-* Major Themes (Enhancements)
+* Release Highlights (Enhancements)
     * Order release features by impact, maturity, vision.
     * This section lists out the key features (even if they are not being recommended to be used in production or are alphas).
         * When we describe something in the alpha state, we are highlighting what is going on (in/to) the community.
@@ -75,7 +75,7 @@ slug: kubernetes-1-XX-release-announcement
 ## Release theme and logo
 <Logo image size is recommended to be no more than 2160px>
 
-## Major Themes
+## Release Highlights
 
 ### <THEME 1>
 
