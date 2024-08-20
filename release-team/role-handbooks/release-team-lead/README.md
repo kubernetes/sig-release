@@ -20,6 +20,7 @@ The release team leader role is responsible for coordinating release activities,
   - [Pre-Recording](#pre-recording)
   - [During-Recording](#during-recording)
   - [Post-Recording](#post-recording)
+- [Media and Webinar](#media-and-webinar)
 
 ## Authority and Responsibility
 
@@ -207,7 +208,7 @@ If anyone has anything they’d like to discuss, please add to the notes.
 10. *open meeting notes and share screen* (NOTE: on Linux you might need to share the entire screen, a single window does not work sometimes)
 
 ### During-Recording
-1. *start recording* record to the cloud, the automation will 'automagically' upload the recording to YouTube.
+1. *start recording* record to the cloud, the automation will 'automatically' upload the recording to YouTube.
 2. *say hello to everyone* **"Hello everyone, my name is 'Alice' and I will be the host for this Kubernetes 'X.XX' release team meeting. Today is 'May' the '4th' and we are in week 'X' of the release cycle.**
 3. *code of conduct* **"Please be aware that this is a Kubernetes community meeting which falls under the Kubernetes code of conduct, which can be summarized to be excellent to each other, thank you all!"** 
 4. *recording warning* **"This meeting is recorded and will be publicly posted to YouTube so please be mindful what you say is being recorded."**
@@ -217,6 +218,15 @@ If anyone has anything they’d like to discuss, please add to the notes.
 ### Post-Recording
 1. *Off record discussions* **"I stopped the recording, is there anything you like to discuss off record?"** wait a few seconds
 2. *Thank all for joining the meeting* **"Thank you all again for joining the meeting, see you in the next one!"**
+
+## Media and Webinar
+Towards the end of the release, you will work with the Comms lead and a CNCF staff to schedule press interviews and the CNCF webinar.
+
+### Media Interviews
+You will be asked to provide availabilities for interviews which could end up being articles or podcasts. You can expect 5-10 engagements per release. Preparing 2-3 major themes that you can talk in-depth about, any KEPs you are excited about, and any anecdotes about the release have been helpful to leads in the past.
+
+### Webinar
+After the release, the CNCF will schedule an official webinar that you, Enhancements Lead and Comms Lead will host together. The webinar will go over a [slide deck](https://docs.google.com/presentation/d/1Dbc-Vl7BwU4KeZ2_5_y9Tl0-jYRasDVvUk4b6FUEeLE/edit?usp=sharing) that summarizes the release and goes over all Major Themes.
 
 ---
 
