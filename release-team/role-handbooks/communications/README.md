@@ -35,7 +35,7 @@ The expected time investment for both leads and shadows are as follows:
 
 **NOTE:** These are estimates and your personal experience may vary. The keys to success in this role are collaboration with the team and maintaining regular communication within the team.
 
-### External Release Communication
+## External Release Communication
 
 Please use the `release-comms@kubernetes.io` Google Group list for external release communications (communicating with the CNCF, etc.).
 
@@ -50,6 +50,8 @@ The list must rotated/actively managed every cycle. Submit a PR to update [this 
 
 There is a channel on the Kubernetes Slack workspace, `#release-comms`, which is used by the communications release team to coordinate their efforts. If you're on the communications team, or applying to be, then it would be advantageous to follow along with the conversations. The Communications Coordinator (often referred to as the "Comms Lead") should post a status here at a regular cadence to keep release team members and other stakeholders informed.
 
+How a particular team communicates day-to-day is up to the Comms Lead and teams members, but usually they Slack DM on day-to-day coordination and post summary updates in `#release-comms`.  
+
 ## Release deliverables
 
 Throughout the release cycle, the main Communications deliverables include:
@@ -59,13 +61,15 @@ Throughout the release cycle, the main Communications deliverables include:
 * **Coordination and support of an optional Deprecations and Removals blog.** Depending upon the content of a given release, it may be necessary to prepare the community for upcoming deprecations and removals. This is decided per release cycle around the time of Code Freeze.
 * **Scheduling press activities and the post-release webinar with the CNCF.** The Communications Coordinator works with the CNCF to schedule press release activities around the release, and to schedule the release webinar (typically scheduled 3-4 weeks post-release).
 
+The release lead creates a schedule for all deadlines, including comms deadlines, early in the release cycle. The Communicaitons Lead should review and suggest updates to the calendar as early as possible in the release cycle.
+
 ### Collect Major Themes
 
 A GitHub Discussion must be open to invite all SIG leads and members to add Major Themes for inclusion in the Release Blog and Release Notes. The discussion must be opened in kubernetes/sig-release under General Category. Past discussions: [1.31](https://github.com/kubernetes/sig-release/discussions/2526), [1.25](https://github.com/kubernetes/sig-release/pull/1987), [1.24](https://github.com/kubernetes/sig-release/discussions/1868), [1.23](https://github.com/kubernetes/sig-release/discussions/1709), [1.22](https://github.com/kubernetes/sig-release/discussions/1575), [1.21](https://github.com/kubernetes/sig-release/discussions/1436). 
 
 Reach out to each SIG in their slack channels and  #chairs-and-techleads channel to bring attention to the Major Themes discussion around Enhancements Freeze. To help coordinate outreach to all the SIGs, you can use a issue in the kubernetes/sig-release repe. Past issues: [1.31](https://github.com/kubernetes/sig-release/issues/2527). In the case of a low reponse rate in the Github discussion, do a round of reminders in Slack about 2 weeks before the Major Themes deadline.
 
-The Communications team should hold a meeting to discuss Major Themes sometime around Code Freeze. Ensure that at least one person from the Release Notes team attends this meeting with the Release Lead and Enhancements Lead. 
+The Communications team should hold a meeting to discuss Major Themes sometime around Code Freeze. Ensure that at least one person from the Release Notes team attends this meeting with the Release Lead and Enhancements Lead. It may be easier to ask for Release Lead and Enhancements Lead to stay after a Release Team Meeting to discuss Major Themes than scheduling a separate meeting. 
 
 ### Release blog
 
@@ -79,7 +83,15 @@ The release lead will drive the content for the release theme and logo.
 
 ### Feature blogs
 
-Tracking, facilitating, and organizing the publication of the Feature Blog series is a major deliverable of the Comms team. Feature blogs are opt-in for SIGs, and are authored by enhancement developers and others close to the features. We do, however, need to encourage owners of important enhancements to opt in to writing feature blogs. Examples of enhancements that warrant a feature blog might include: breaking changes, features and changes important to our users, features that have been in progress for a long time and are graduating, and features that are considered mandatory by the Release Lead. It helps to work closely with the Release Lead and use the respective SIG Slack channels to remind the SIGs about opting in to feature blogs and provide any necessary context to blog authors. 
+Tracking, facilitating, and organizing the publication of the Feature Blog series is a major deliverable of the Comms team. Feature blogs are opt-in for SIGs, and are authored by enhancement developers and others close to the features. We do, however, need to encourage owners of important enhancements to opt in to writing feature blogs. 
+
+Examples of enhancements that warrant a feature blog might include: 
+* breaking changes 
+* features and changes important to our users 
+* features that have been in progress for a long time and are graduating 
+* features that are considered mandatory by the Release Lead.
+
+It helps to work closely with the Release Lead and use the respective SIG Slack channels to remind the SIGs about opting in to feature blogs and provide any necessary context to blog authors. 
 
 **Reach out in KEP issues to ask for feature blog opt-in.** Ask every KEP owner if they want to contribute a blog by reaching out in the KEP issue. Example messaging is below.
 
@@ -89,44 +101,65 @@ We'd love for you to consider writing a feature blog about your enhancement! Som
 
 To opt-in, let us know and open a Feature Blog placeholder PR against the [website repository](https://github.com/kubernetes/website) by **[BLOG PLACEHOLDER PR DEADLINE]**. For more information about writing a blog see the [blog contribution guidelines](https://kubernetes.io/docs/contribute/new-content/blogs-case-studies/#technical-considerations-for-submitting-a-blog-post).
 
-Note: In your placeholder PR, use `XX` characters for the blog `date` in the front matter and file name. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.```
+Note: In your placeholder PR, use `XX` characters for the blog `date` in the front matter and file name. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
+```
 
-Note that not every KEP needs a blog. Work with the KEP owners, Release Lead, and SIG Docs Blog team (though #sig-dcos-blog slack channel) to make sure all KEPs that opt-in really need a blog written. Alternatives for writing a full blog are including the KEP as a Major Theme, a smaller mention in release announcement
+NOT EVERY KEP NEEDS A BLOG. Work with the KEP owners, Release Lead, and SIG Docs Blog team (though #sig-dcos-blog slack channel) to make sure all KEPs that opt-in really need a blog written. If a feature is small, or new in Alpha it may not be ready for a blog. 
 
-**As feature blogs are opted in and placeholder PRs are created**, assign the blogs to shadows and yourself for tracking and facilitation. The responsibility is to ensure the blog authors have the resources and information they need, including editorial and tech reviews once ready.
+**As feature blogs are opted in and placeholder PRs are created**, assign the blogs to shadows and yourself for tracking and facilitation. The Comms team is responsible for making sure blog authors have the resources and information they need to write the blog, and tracking the blogs progress through editorial and tech reviews once the blog is ready. 
 
-Add a comment to each placeholder PR to add a `/hold` label and note that the PR is awaiting publication date from the Comms team. The `hold` label prevents the PR from merging until the `hold` label is removed, this will prevent a blog from accidently merging and publishing ahead of the release. [1.31 Example](https://github.com/kubernetes/website/pull/46911#issuecomment-2185024105).
+> Some features that opt-in to writing a blog may miss the code freeze deadline. Blog placeholder PRs for features that are no longer in the release should be closed.  
+
+When a placeholder PR is created, make sure the PR has been held using the `/hold` command. Feature blogs should not be merged **until after the release date and the comms team has assigned a publication date**. 
+
+Anyone can hold a PR by adding a comment with the `/hold` command, like the example below. This will to apply the `do-not-merge/hold` label to the PR and will prevents the PR from merging until the label is removed. This will stop a blog from accidently merging and publishing ahead of the release. [1.31 Example](https://github.com/kubernetes/website/pull/46911#issuecomment-2185024105).
 
 ```
 /hold
 
-Pending assignment of publication date (by release comms)
-
-We'll also keep this held until the vX.XX release has happened
+Pending assignment of publication date by release comms. This blog should be held until the vX.XX release has happened.
 ```
 
-**Work closely with the SIG Docs Blogs team** (Communicate with them via `#sig-docs-blogs` and by attending sig-docs meetings), as they are typically available for editorial reviews. Share the feature blog schedule and updates with them throughout the cycle.
+Once the release has happened, use the `/unhold` command to remove the `do-not-merge/hold`. 
 
-For tech reviews, reach out to authors and the sponsoring SIG to organize at least one tech review per blog post.
+#### Creating a blog publication schedule
 
-**The first feature blog** typically goes out on release day alongside or shortly after the release blog, and then are published one-at-a-time, typically at a rate of two to three posts weekly. **The Comms team establishes the publication schedule.**
-> Note that blog PRs in k/website are dated, and automation will publish future-dated entries. This enables a PR process decoupled from blog publication date.
+**The Comms team establishes the feature blog publication schedule.** Other members of the release team or blog reviewers may contribute ideas and feedback on the schedule, but ultimately the schedule is determined by the Comms team. 
 
-**Communicate the planned publish date to SIG Docs and the owner of the feature blog**. 
+Use the blog schedule field in the Feature Blog view on the tracking board to assign a publication date.
 
-> Notify the author in the PR and Slack channels: `#sig-docs-blog`, `#sig-docs`. The communications team will assist in coordinating and publishing the feature blogs on schedule.
-> See example [here](https://github.com/kubernetes/website/pull/41924), "this article is scheduled for the 21th of August". 
+Feature blog publication usually starts the day after the release. The release blog goes out on same day as the release and the first feature blog typically goes out the day after the release. The rest of the blogs are published one-at-a-time, typically at a rate of two to three posts weekly. Depending on how many feature blogs you have, you may want to publish one per day after the release. In general, all feature blogs should be published within month of the release day.
 
+> Note that blog PRs in k/website are dated, and automation will publish future-dated entries. This enables a PR process decoupled from blog publication date. Once a blog has passed the review process it can be merged and will be published on the date on the blog. 
 
-**Work with SIG Contributor Experience** (connecting on `#sig-contribex` and by attending meetings), to promote the feature blogs. 
+**Communicate the planned publish date to SIG Docs and the owner of the feature blog**. Notify the author in the PR and Slack channels: `#sig-docs-blog`, `#sig-docs` about the schedule. The communications team will assist in coordinating and publishing the feature blogs on schedule.
+> See example [here](https://github.com/kubernetes/website/pull/41924), "this article is scheduled for the 21th of August".
 
-The suggested deadlines to be supported by the current Comms team:
-- Deadline - PRs blog place holder: Week 09
-- Deadline - PRs ready for review: Week 11
+Please note that the release team will support the blog publication after the release day too. 
 
-Dates are typically selected by the release lead early in the release cycle. The Communicaitons Lead should review and suggest updates to the calendar as early as possible in the release cycle. 
+#### Feature blog reviews
 
-> Please note that the release team will support the blog publication after the release day too. 
+Also see the docs for [pull requests review process](https://kubernetes.io/docs/contribute/review/reviewing-prs/) and [reviewing a pull request](https://kubernetes.io/docs/contribute/review/for-approvers/#reviewing-a-pr).
+
+**Work closely with the [SIG Docs Blogs](https://github.com/kubernetes/community/tree/master/sig-docs/blog-subproject) team.** These are the folks responsible for editorial reviews (and sometimes tech reviews) of Kubernetes blogs. The Comms lead should plan to regulary share updates on blog status and review timelines with the blog reviewers via `#sig-docs-blogs` and during sig-docs meetings. 
+
+Each blog should pass 2 "official" reviews, an editorial review and tech review. Anyone is open to do an "informal" review on any blog and leave suggestions. As part of the comms team, it's encouraged (but not required) to help reviews blogs for both editorial and technical correctness if you have time. 
+
+An official review comes from someone with [permission to add the lgtm label](https://kubernetes.io/docs/contribute/review/for-approvers/#prow-commands-for-reviewing) to a pull request.
+* **Tech reviews** usually come from the sponsoring SIG. If you dont see a tech review on the blog, reach out to the author to make sure the PR has been flagged for review. You can also reach out in the SIG slack channel to ask for help with tech reviews. 
+* **Editorial reveiws** usually come from blog reviewers or SIG Docs reviewer. They make sure that the blog is readable and adheres to the [style guide](https://kubernetes.io/docs/contribute/style/style-guide/).
+
+Once a blog has the `lgtm` label assigned an [approver] can add the `aprove` label to get the PR merged. Note that reviews can still happen on blogs with a `lgtm` label 
+ 
+
+## Working with other teams and SIGs
+
+Throughout the release cycle the comms team works with lots of different teams within the Kubernetes community. As a Comms lead or member of the comms team, you should feel empowered to reach out and ask questions or as for help from SIGs and other Release team members to meet deadlines.
+
+Some groups you may need to contact include
+
+* SIG Contributor Experience in the `#sig-contribex`slack channel and by attending meetings. They can help promote the feature blogs through social media.
+* Chairs and Tech Leads of SIGs in the `#chairs-and-techleads` slcak channel. This can be a helpful place to post reminders about blog deadlines SIG leads to see.
 
 ### Mid-cycle deprecations and removals blog
 
@@ -188,9 +221,34 @@ Refer to the [slides](https://docs.google.com/presentation/d/10y65ptwXQrt_0P6sA3
 
 Note you'll need to send headshots and company/title information when you schedule the webinar and the slides should be sent for CNCF review at least one week ahead of the webinar.
 
+
+### Social posts
+
+The Release Communications team is **NOT** responsible for social posting. [SIG Contributor Experience](https://github.com/kubernetes/community/tree/master/sig-contributor-experience) (SIG Contribex) manages the official Kubernetes social accounts and is responsible for all posts to those accounts. SIG Contribex has created automation around blog posts, so once a blog is published to the Kubernetes website, social posts are created and posted according to their automation schedule. 
+
+If the Communications team and Release Lead determine a feature or other release communication needs a more detailed communications or calls to action, reach out to with SIG Contributor Experience for help making posts use the `@contributor-comms` tag in the `#sig-contribex` Slack channel. 
+
+### Tips and best practices
+
+#### Use the 2 week rule
+
+Try to give 2 weeks notice for all deadlines and requests for reviews. When planning to reach out for blog opt-in or asking for reviews on blog drafts, you should start posting messages or have blog drafts ready for review at least two weeks from the deadline. Especially when asking for blog reviews, as the blog team is understaffed, this will give reviewers enough time to do the review and you enough time to address any feedback. This is best effort, as the schedule does not always allow for this much lead time before a deadline.
+
+#### Reaching out to KEP owners, blog authors, and reviewers
+
+Post messages to GitHub or in SIG slack channels for the best visibility into ongoing work and to allow other contributors to help. Having messages in the KEPs, blog PRs, or SIG slack channels, can help centralize information about the work being done and any outstanding issues. If you need to escalate an issues to Release Leads or SIG Chairs, having public messages/records of conversations can make it easy to tag who you need to. 
+
+If you do use direct messages to contact someone during a release,  if you have been unable to get ahold of them through other public channels for example, post summaries of the conversation to PRs or SIG slack channels. This way everyone can stay up-to-date on the ongoing work.
+
+#### Deadlines
+
+As much as possible stick to the comms deadlines set in the release schedule for the mid-cycle blog and main release blog. This will ensure that no release-blocking issues come up and that these blogs go out when they need to.
+
+Feature blog deadlines are a little more flexible compared to other release deadlines. Because the feature blogs are published after the release, there is usually more time to review them if a deadline is missed. In general, as long as blog authors are responsive and blog content is getting added/reviewed, its OK to give authors extra time to finish their work. If you feel that a blog author is not responsive, progress has not been made, and the dealines have been stretched too far, escalate to the release or SIG chairs or cancel the blog. A blog can always been written outside of the release cycle. 
+
 ## Release Milestone Activities
 
-This is an example of a typical release cycle and the order of how tasks will flow for Comms.  Note that some tasks may take longer than their designated "release week".
+This is an example of a typical release cycle and the order of how tasks will flow for Comms. Note that some tasks may take longer than their designated "release week". Each release is a little different, the following guideline is only a suggestion. You should always refer to the specific release schedule for exact dates and deadlines in a release cycle. 
 
 <table>
     <tr>
