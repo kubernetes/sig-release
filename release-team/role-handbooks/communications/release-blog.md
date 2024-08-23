@@ -1,5 +1,5 @@
 # Outline for the Kubernetes Release Blog
-This outline can be used as reference for writing up the release blog. The following sections should give you an idea what can be consider for the blog, but for sure you don't/can't include all sections:
+This outline can be used as reference for writing up the release blog. The following sections should give you an idea what can be consider for the blog, but its not necessary to include every section. Include the ones that make sense for the features/annoucements in the release.
 
 * Introduction to release
     * The first paragraph of the release blog announcement introduces the release, its focus, and its importance.
@@ -10,9 +10,8 @@ This outline can be used as reference for writing up the release blog. The follo
         * Release cycles are so short, just because it is alpha right now, it will be stable soon. Position it as “this is what is coming.”
     * Include additional features and what's next section following the key release features.
         * This is the vision and brand new thing you can do in-production right now.
-    * Blog posts should highlight the main features and include mention of the 5-day blog series.
     * Everything else is included in the release notes.
-* Major changes
+* Changes in stable, beta, alpha
     * List major changes not covered in themes
     * Call out important API deprecations and removals
     * When possible, link upstream docs or KEP docs (past blogs link k/enhancement issues)
@@ -48,13 +47,13 @@ This outline can be used as reference for writing up the release blog. The follo
     * Kubernetes blog
 
 ## Latest Release Blogs as Reference
+* [Kubernetes 1.31: Elli](https://kubernetes.io/blog/2024/08/13/kubernetes-v1-31-release/)
+* [Kubernetes 1.30: Uwubernetes](https://kubernetes.io/blog/2024/04/17/kubernetes-v1-30-release/)
 * [Kubernetes 1.27: Chill Vibes](https://kubernetes.io/blog/2023/04/11/kubernetes-v1-27-release/)
 * [Kubernetes 1.26: Electrifying](https://kubernetes.io/blog/2022/12/09/kubernetes-v1-26-release/)
 * [Kubernetes 1.25: Combiner](https://kubernetes.io/blog/2022/08/23/kubernetes-v1-25-release/)
 * [Kubernetes 1.24: Stargazer](https://kubernetes.io/blog/2022/05/03/kubernetes-1-24-release-announcement/)
-* [Kubernetes 1.23: The Next Frontier](https://kubernetes.io/blog/2021/12/07/kubernetes-1-23-release-announcement/)
-* [Kubernetes 1.22: Reaching New Peaks](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/)
-* [Kubernetes 1.21: Power to the Community](https://kubernetes.io/blog/2021/04/08/kubernetes-1-21-release-announcement/)
+
 
 ## Release Blog Template
 
@@ -66,16 +65,27 @@ layout: blog
 title: 'Kubernetes 1.XX: <Release Name>'
 date: 202n-mm-dd
 slug: kubernetes-1-XX-release-announcement
+author: >
+  [Kubernetes v1.XX Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/release-team.md)
+---
 ---
 
-**Authors:** [Kubernetes 1.XX Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/release_team.md)
+**Editors:** [Comms teams members]
 
-<INTRO>
+Similar to previous releases, the release of Kubernetes v1.XX introduces new stable, beta, and alpha features. The consistent delivery of high-quality releases underscores the strength of our development cycle and the vibrant support from our community.
+
+This release consists of X enhancements.
+Of those enhancements, X have graduated to Stable, X are entering Beta, 
+and X have graduated to Alpha.
 
 ## Release theme and logo
 <Logo image size is recommended to be no more than 2160px>
+{{< figure src="/images/blog/YYYY-MM-DD-kubernetes-1.XX-release/k8s-1.XX.png" alt="Kubernetes v1.XX <release theme> logo" class="release-logo" >}}
 
-## Release Highlights
+
+## Release highlights
+
+<MESSAGE ABOUT THE HIGHLIGHTS BELOW AND WHY THEY WERE CHOSEN>
 
 ### <THEME 1>
 
@@ -87,44 +97,98 @@ slug: kubernetes-1-XX-release-announcement
 
 ### <THEME 5>
 
-## Other Updates
+## Features graduating to Stable
 
-### Graduated to Stable
+_This is a selection of some of the improvements that are now stable following the v1.XX release._
 
-- [<Enhancement Name>](<LINK TO KEP OR DOCS>)
-- [...](...)
+### <FEATURE TITLE>
 
-### Major Changes
+<1-2 PARAGRAPH DESCRIPTION OF CHANGE>
 
-- [<Enhancement Name>](<LINK TO KEP OR DOCS>)
-- [...](...)
+This work was done as part of [KEP #XXXX](https://github.com/kubernetes/enhancements/issues/XXXX) led by [SIG XXXX](https://github.com/kubernetes/community/tree/master/sig-XXXXX).
 
-### Major Changes
+## New features in Beta
 
-Callouts for specific known issues worthy of note. Links to issues, docs, and related content.
+_This is a selection of some of the improvements that are now beta following the v1.XX release._
 
-### Release Notes
+### <FEATURE TITLE>
+
+<1-2 PARAGRAPH DESCRIPTION OF CHANGE>
+
+This work was done as part of [KEP #XXXX](https://github.com/kubernetes/enhancements/issues/XXXX) led by [SIG XXXX](https://github.com/kubernetes/community/tree/master/sig-XXXXX).
+
+
+## New features in Alpha
+
+_This is a selection of some of the improvements that are now alpha following the v1.XX release._
+    
+### <FEATURE TITLE>
+
+<1-2 PARAGRAPH DESCRIPTION OF CHANGE>
+
+This work was done as part of [KEP #XXXX](https://github.com/kubernetes/enhancements/issues/XXXX) led by [SIG XXXX](https://github.com/kubernetes/community/tree/master/sig-XXXXX).
+
+
+## Graduations, deprecations, and removals in 1.XX
+
+### Graduations to stable
+
+This lists all the features that graduated to stable (also known as _general availability_). For a full list of updates including new features and graduations from alpha to beta, see the release notes.
+
+This release includes a total of X enhancements promoted to stable:
+* [KEP TITLE](https://github.com/kubernetes/enhancements/issues/XXXXXX)
+
+### Deprecations and removals 
+
+As Kubernetes develops and matures, features may be deprecated, removed, or replaced with better ones for the project's overall health. 
+See the Kubernetes [deprecation and removal policy](/docs/reference/using-api/deprecation-policy/) for more details on this process.
+Many of these deprecations and removals were announced in the [Deprecations and Removals blog](LINK TO MID-CYCLE BLOG)
+
+
+### Release notes
 
 Check out the full details of the Kubernetes 1.XX release in our [release notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.XX.md).
 
 ### Availability
 
-Kubernetes 1.XX is available for download on [GitHub](https://github.com/kubernetes/kubernetes/releases/tag/v1.XX.0). To get started with Kubernetes, check out these [interactive tutorials](https://kubernetes.io/docs/tutorials/) or run local Kubernetes clusters using [minikube](https://minikube.sigs.k8s.io/). You can also easily install 1.XX using [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/). 
+Kubernetes v1.XX is available for download on [GitHub](https://github.com/kubernetes/kubernetes/releases/tag/v1.XX.0) or on the [Kubernetes download page](/releases/download/). 
+
+To get started with Kubernetes, check out these [interactive tutorials](/docs/tutorials/) or run local Kubernetes clusters using [minikube](https://minikube.sigs.k8s.io/).
+You can also easily install v1.XX using [kubeadm](/docs/setup/independent/create-cluster-kubeadm/). 
 
 ### Release Team
 
-<FIND AN INDIVIDUAL TEXT, EACH RELEASE TEAM HAS ITS OWN STORY, TELL IT!>
+<FIND AN INDIVIDUAL TEXT, EACH RELEASE TEAM HAS ITS OWN STORY, TELL IT! BELOW IS AN EXAMPLE FROM PAST RELEASES>
+
+Kubernetes is only possible with the support, commitment, and hard work of its community. 
+Each release team is made up of dedicated community volunteers who work together to build the many pieces that make up the Kubernetes releases you rely on. 
+This requires the specialized skills of people from all corners of our community, from the code itself to its documentation and project management.
+
+We would like to thank the entire [release team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/release-team.md) for the hours spent hard at work to deliver the Kubernetes v1.31 release to our community. 
+The Release Team's membership ranges from first-time shadows to returning team leads with experience forged over several release cycles. 
+A very special thanks goes out our release lead, RELEASE LEAD, for supporting us through a successful release cycle, advocating for us, making sure that we could all contribute in the best way possible, and challenging us to improve the release process.
 
 ### Project Velocity
 
-<CHECKOUT THE DEVSTATS AND HIGHLIGHT SOME INTRESTING NUMBERS https://k8s.devstats.cncf.io/d/12/dashboards?orgId=1&refresh=15m>
+<CHECKOUT THE DEVSTATS AND HIGHLIGHT SOME INTRESTING NUMBERS https://k8s.devstats.cncf.io/d/12/dashboards?orgId=1&refresh=15m, INCLUDE ANY INTERESTED DATA YOU FIND FOR THE CYCLE>
 
-<AS EXAMPLE>
-This past quarter, 641 different companies and over 6,409 individuals contributed to Kubernetes. [Check out DevStats](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&var-period=m&var-repogroup_name=All) to learn more about the overall velocity of the Kubernetes project and community.
+The CNCF K8s [DevStats](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&var-period=m&var-repogroup_name=All) project aggregates a number of interesting data points related to the velocity of Kubernetes and various sub-projects. 
+This includes everything from individual contributions to the number of companies that are contributing and is an illustration of the depth and breadth of effort that goes into evolving this ecosystem.
+
+In the v1.XX release cycle, which ran for X weeks (START DATE to RELEASE DATE), we saw contributions to Kubernetes from X different companies and X individuals.
+
+Source for this data: 
+- [Companies contributing to Kubernetes](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&from=1715032800000&to=1723586399000&var-period=d28&var-repogroup_name=Kubernetes&var-repo_name=kubernetes%2Fkubernetes)
+- [Overall ecosystem contributions](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&from=1715032800000&to=1723586399000&var-period=d28&var-repogroup_name=All&var-repo_name=kubernetes%2Fkubernetes)
+
+By contribution we mean when someone makes a commit, code review, comment, creates an issue or PR, reviews a PR (including blogs and documentation) or comments on issues and PRs.
+
+If you are interested in contributing see our [getting started](https://www.kubernetes.dev/docs/guide/#getting-started) page. 
 
 ### Event Update
+Explore the upcoming Kubernetes events, featuring KubeCon, KCD, and other notable conferences worldwide.
 
-<THERE WILL BE ALWAYS A KUBECON/CLOUDNATIVECON AROUND, GIVE THE LATEST INFORMATION>
+<THERE WILL BE ALWAYS A KUBECON/CLOUDNATIVECON, PULL EVENTS FROM https://community.cncf.io/events/#/list, GIVE THE LATEST INFORMATION>
 
 ### Upcoming Release Webinar
 
@@ -132,9 +196,12 @@ This past quarter, 641 different companies and over 6,409 individuals contribute
 
 ### Get Involved
 <THIS COMMUNITY LIVES BY ITS GREAT COMMUNITY, GET THEM INVOLVED!>
-The simplest way to get involved with Kubernetes is by joining one of the many [Special Interest Groups](https://github.com/kubernetes/community/blob/master/sig-list.md) (SIGs) that align with your interests. Have something you’d like to broadcast to the Kubernetes community? Share your voice at our weekly [community meeting](https://github.com/kubernetes/community/tree/master/communication), and through the channels below. Thank you for your continued feedback and support.
+The simplest way to get involved with Kubernetes is by joining one of the many [Special Interest Groups](https://github.com/kubernetes/community/blob/master/sig-list.md) (SIGs) that align with your interests. 
+Have something you’d like to broadcast to the Kubernetes community? 
+Share your voice at our weekly [community meeting](https://github.com/kubernetes/community/tree/master/communication), and through the channels below. 
+Thank you for your continued feedback and support.
 
-- Follow us on Twitter [@Kubernetesio](https://twitter.com/kubernetesio) for latest updates
+- Follow us on X [@Kubernetesio](https://x.com/kubernetesio) for latest updates
 - Join the community discussion on [Discuss](https://discuss.kubernetes.io/)
 - Join the community on [Slack](http://slack.k8s.io/)
 - Post questions (or answer questions) on [Stack Overflow](http://stackoverflow.com/questions/tagged/kubernetes)
