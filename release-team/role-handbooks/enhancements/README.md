@@ -185,7 +185,7 @@ It is important that this process be followed and documentation remain up-to-dat
 
 The KEP template production readiness questionnaire should be filled out by the KEP authors, and reviewed by the SIG leads. 
 Once the leads are satisfied with both the overall KEP (i.e., it is ready to move to `implementable` state) and the PRR answers,
-the authors request a PRR approval. See [submitting a KEP for production readiness approval](#submitting-a-kep-for-production-readiness-approval) for more details.
+the authors request a PRR approval. See [submitting a KEP for production readiness approval](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval) for more details.
 
 When should a KEP owner request for a new PRR? 
 1. When the KEP is ready to move to `implementable` state from `provisional`. 
