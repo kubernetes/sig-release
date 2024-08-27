@@ -51,3 +51,61 @@ enhancementFreeze:
   pull_requests:
     - https://github.com/kubernetes/enhancements/pull/4678
   status: "rejected"
+
+
+# Code Freeze Exceptions requested in 1.31
+codeFreeze:
+
+- name: "Consider Terminating Pods in Deployments"
+  issue: 3973
+  date_requested: 2024-07-24
+  date_reviewed: 2024-07-28
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/SLTNXQvnOtM
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/123430
+  status: "rejected"
+
+- name: "Introduce compatibility version for Kubernetes control-plane upgrades"
+  issue: 4330
+  date_requested: 2024-07-24
+  date_reviewed: 2024-07-25
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/L6spvI-ddLA
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/125941
+  status: "approved"
+
+- name: "Coordinated Leader Election"
+  issue: 4355
+  date_requested: 2024-07-24
+  date_reviewed: 2024-07-25
+  thread: https://groups.google.com/a/kubernetes.io/g/release-team/c/BD7sfJavwoQ
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/124012
+  status: "approved"
+
+- name: "Kubelet support for Split Image Filesystem"
+  issue: 4191
+  date_requested: 2024-07-24
+  date_reviewed: 2024-07-25
+  thread: https://groups.google.com/a/kubernetes.io/g/release-team/c/yEQluTHHuQw
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/126205
+  status: "approved"
+
+- name: "Quotas for Ephemeral Storage"
+  issue: 1029
+  date_requested: 2024-07-25
+  date_reviewed: 2024-07-26
+  thread: https://groups.google.com/a/kubernetes.io/g/release-team/c/FeJPMwJDtsc
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/126355
+  status: "approved"
+
+- name: "Consistent Reads from Cache"
+  issue: 2340
+  date_requested: 2024-07-26
+  date_reviewed: 2024-07-28
+  thread: https://groups.google.com/a/kubernetes.io/g/release-team/c/6eJKzUxfNOM
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/126329
+  status: "approved"
