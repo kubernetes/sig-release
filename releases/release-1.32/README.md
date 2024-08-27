@@ -10,7 +10,6 @@ description: |
 
 # Kubernetes 1.32
 
-
 #### Links
 
 * [This document](https://git.k8s.io/sig-release/releases/release-1.32/README.md)
