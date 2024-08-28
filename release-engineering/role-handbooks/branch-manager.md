@@ -174,7 +174,6 @@ This can be done in one of two ways:
 - The `krel announce` sub command -- A [`SENDGRID_API_KEY`](https://sendgrid.com/docs/ui/account-and-settings/api-keys) will need to be configured correctly on your environment for this to work
   - If you haven't used SendGrid before, SendGrid might require you to go through the [Sender Identity Verification process][sendgrid-identity-verification] before you can send emails/announcements
   ```shell
-  # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds and confirm with them whether Debian and RPM repositories have the packages before sending the email
   export SENDGRID_API_KEY=<API_KEY>
   krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Your Email Address>
   ```
