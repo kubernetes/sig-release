@@ -173,17 +173,15 @@ This can be done in one of two ways:
 
 - The `krel announce` sub command -- A [`SENDGRID_API_KEY`](https://sendgrid.com/docs/ui/account-and-settings/api-keys) will need to be configured correctly on your environment for this to work
   - If you haven't used SendGrid before, SendGrid might require you to go through the [Sender Identity Verification process][sendgrid-identity-verification] before you can send emails/announcements
+  ```shell
+  # Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds and confirm with them whether Debian and RPM repositories have the packages before sending the email
+  export SENDGRID_API_KEY=<API_KEY>
+  krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Your Email Address>
+  ```
 - Manually -- Send the email notification manually to [kubernetes-announce][k-announce-list] and [kubernetes-dev][k-dev-list]. You can take contents of the announcement in one of the following ways:
-  - By taking the contents from the Release Cloud Bucket: `https://dl.k8s.io/archive/anago-vX.Y.0-{alpha,beta,rc}.z/{announcement-subject.txt,announcement.html}`:
+  - By taking the contents from the Release Cloud Bucket: `https://dl.k8s.io/release/v1.y.z/announcement.html` and using the subject "[kubernetes-announce] Kubernetes v1.y.z is live!", for example:
+    - https://dl.k8s.io/archive/v1.31.1/announcement.html
   - By using `krel announce` command with the `--print-only` flag
-  - [Example subject](https://dl.k8s.io/archive/anago-v1.27.0-rc.1/announcement-subject.txt)
-  - [Example body](https://dl.k8s.io/archive/anago-v1.27.0-rc.1/announcement.html)
-
-```shell
-# Only for the official release: Inform the Google team to complete the corresponding Deb and RPM builds and confirm with them whether Debian and RPM repositories have the packages before sending the email
-export SENDGRID_API_KEY=<API_KEY>
-krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Your Email Address>
-```
 
 See the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/patch-release-team.md#release-commands-cheat-sheet) for example commands.
 
