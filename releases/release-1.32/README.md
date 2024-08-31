@@ -40,6 +40,7 @@ The 1.32 release cycle is as follows:
 - **Monday 9th September 2024**: Week 1 — Release cycle begins
 - **Thursday 3rd October 2024**: Week 4 — [Production Readiness Freeze](https://groups.google.com/g/kubernetes-sig-architecture/c/a6_y81N49aQ)
 - **02:00 UTC Friday 11th October 2024 / 19:00 PDT Thursday 10th October 2024**: Week 5 — [Enhancements Freeze](../release_phases.md#enhancements-freeze)
+- **Tuesday 12th - Friday 15th November 2024**: Week 10 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
 - **02:00 UTC Wednesday 20th November 2024 / 19:00 PDT Tuesday 19th November 2024**: Week 11 — [Code Freeze](../release_phases.md#code-freeze)
 - **02:00 UTC Wednesday 27th November 2024 / 19:00 PDT Tuesday 26th November 2024**: Week 12 — [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 26th November 2024**: Week 12 — [Docs Freeze](../release_phases.md#docs-freeze)
