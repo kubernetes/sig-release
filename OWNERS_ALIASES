@@ -24,6 +24,7 @@ aliases:
   release-team:
     - cici37 # subproject owner/ 1.25 Release Team Lead
     - cpanato # subproject owner
+    - fsmunoz # 1.32 Release Lead
     - gracenng # subproject owner / 1.28 Release Team Lead
     - jeremyrickard # subproject owner
     - justaugustus # subproject owner
@@ -42,6 +43,7 @@ aliases:
   release-team-lead-role:
     - cici37 # Kubernetes 1.25 Release Lead
     - gracenng # Kubernetes 1.28 Release Lead
+    - fsmunoz # Kubernetes 1.32 Release Lead
     - katcosgrove # Kubernetes 1.30 Release Lead
     - leonardpahlke # Kubernetes 1.26 Release Lead
     - neoaggelos # Kubernetes 1.31 Release Lead
