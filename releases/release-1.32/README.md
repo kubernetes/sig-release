@@ -22,11 +22,11 @@ description: |
 #### Tracking docs
 
 * [Enhancements Tracking Board](https://bit.ly/k8s132-enhancements)
-* [Feature blog Tracking Board](FIXME)
+* [Feature blog Tracking Board](https://github.com/orgs/kubernetes/projects/195)
 * [Bug Triage Tracking Board](https://bit.ly/k8s132-bugtriage)
 * [CI Signal Project Board & Issue Tracking](https://bit.ly/k8s133-cisignal)
 * [Retrospective Document](https://bit.ly/k8s133-retro)
-* [kubernetes/sig-release v1.32 milestone](FIXME)
+* [kubernetes/sig-release v1.32 milestone](https://github.com/kubernetes/kubernetes/milestone/65)
 
 #### Guides
 
