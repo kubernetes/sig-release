@@ -138,15 +138,17 @@ It is important that this process be followed and documentation remain up-to-dat
   - Disable all Workflows for the project
     - Click `...` -> `Workflows`
     - For each workflow that enabled (has a green circle next to it), click the workflow and slide the toggle to 'Off'
+  - Find [Issues labeled `lead-opted-in`](https://github.com/kubernetes/enhancements/issues?q=+is%3Aissue+label%3Alead-opted-in+) and remove the `lead-opted-in` label from all issues. Enhancements must be explicitly opted into each release.
+    > **Make sure you remove the `lead-opted-in` labels from all the KEPs of the previous release before you turn on the `test-infra` job. Otherwise KEPs from the previous release will be added to the board.**
   - Update automation to add issues to the correct Enhancement Tracking Board. Open a PR into [kubernetes/test-infra](https://github.com/kubernetes/test-infra) with the following changes: 
     - Update the [`GITHUB_PROJECT_BETA_NUMBER`](https://github.com/kubernetes/test-infra/blob/3de59f96b327c87c6d23a7308abc785268931707/config/jobs/kubernetes/sig-k8s-infra/trusted/sig-release-release-team-jobs/release-team-periodics.yaml#L20-L21) variable used by automation to identity the enhancements tracking board for the current release.
-    - Enable the test-infra job that syncs enhancements to the GitHub project board based on the `lead-opt-in` label. Update the name of the [periodic-sync-enhancements-github-project](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-k8s-infra/trusted/sig-release-release-team-jobs/release-team-periodics.yaml#L2) cronjob with the version number of the release and enable the cronjob by commenting the impossible cron and uncommenting the `interval`. You can see how this was done for the v1.29 release cycle in [this commit](https://github.com/kubernetes/test-infra/pull/30528/files#diff-9d86ca0a46a2f74a2cf59fff3d18cbba57b5b3489ecc00c36b03f6b6a0c2ac3a).
+    - Enable the test-infra job that syncs enhancements to the GitHub project board based on the `lead-opted-in` label. Update the name of the [periodic-sync-enhancements-github-project](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-k8s-infra/trusted/sig-release-release-team-jobs/release-team-periodics.yaml#L2) cronjob with the version number of the release and enable the cronjob by commenting the impossible cron and uncommenting the `interval`. You can see how this was done for the v1.29 release cycle in [this commit](https://github.com/kubernetes/test-infra/pull/30528/files#diff-9d86ca0a46a2f74a2cf59fff3d18cbba57b5b3489ecc00c36b03f6b6a0c2ac3a).
+      > Note: Make sure you remove the `lead-opted-in` label from all the KEPs of the previous release before enabling the job. Otherwise KEPs from the previous cycle will be populated in the board.
 - Create a shortlink for the Tracking Board
   - Create a free account on [bitly](https://bitly.com/) to create a shortlink for the new Enhancement Tracking Board following the pattern `k8sxyy-enhancements`, e.g. <https://bit.ly/k8s127-enhancements>.
 - Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking Board to the current release page in [sig-release][sig-release].
 - Make a pull request to add the shortlinked Enhancement Tracking Board to [kubernetes/enhancements README page](https://github.com/kubernetes/enhancements#enhancements-tracking-board).
 - Find [Issues][enhancements-issues] from previous milestone that have graduated to Stable. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
-- Find [Issues labeled `lead-opted-in`](https://github.com/kubernetes/enhancements/issues?q=+is%3Aissue+label%3Alead-opted-in+) and remove the `lead-opted-in` label from all issues. Enhancements must be explicitly opted into each release.
 - Close previous milestone by ensuring that there are no open issues/PRs in that milestone.
 - Gather Shadows to have them read this handbook and give expectations on what the process looks like and their particular role. If possible, try to schedule a call with the shadows to get them accustomed to the team. This helps as a great team building exercise.
 - Add Shadows to the  `release-team` and `release-team-enhancements` GitHub teams. (See [access-required](#access-required))
@@ -178,12 +180,14 @@ It is important that this process be followed and documentation remain up-to-dat
 - Send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
 - Provide updates during release team meetings
   - Use the `KEPs by Stage` insight from the Enhancement Tracking Board ([example](https://github.com/orgs/kubernetes/projects/98/insights/3))
+- Notify folks in [#prod-readiness](https://kubernetes.slack.com/archives/CPNHUMN74) about KEPs waiting for PRR reviews with the project board filtered for KEPs missing PRR assignees.
+
 
 #### PRR Reviews 
 
 The KEP template production readiness questionnaire should be filled out by the KEP authors, and reviewed by the SIG leads. 
 Once the leads are satisfied with both the overall KEP (i.e., it is ready to move to `implementable` state) and the PRR answers,
-the authors request a PRR approval. See [submitting a KEP for production readiness approval](#submitting-a-kep-for-production-readiness-approval) for more details.
+the authors request a PRR approval. See [submitting a KEP for production readiness approval](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval) for more details.
 
 When should a KEP owner request for a new PRR? 
 1. When the KEP is ready to move to `implementable` state from `provisional`. 
@@ -224,6 +228,18 @@ beta:
 stable:
   approver: @<gh-handle-of-PRR-approver>
 ```
+
+##### PRR Freeze
+
+The PRR Freeze is a preliminary soft deadline, happening a week before the [Enhancements Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#enhancements-freeze).
+
+As described by the PRR team [here](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ):
+
+- By the PRR freeze date, KEP authors must have completed the PRR questionnaire for all opted-in enhancements (KEPs).
+- It is important to note that the PRR freeze **_does not_** mean that the KEPs need to have received an approval or even a review from the PRR team by this date.
+- To emphasize, the sole requirement is that all opted-in KEPs have their PRR questionnaires answered by the deadline, to ensure the PRR team has sufficient time to review them by Enhancements Freeze.
+
+> Note: KEPs that doesn't complete the PRR questionnaire and get back to the reviews from the PRR team are removed from the milestone during the enhancements freeze party. The PRR freeze deadline exists as a reminder for this.
 
 ##### Enhancement KEP Status
 
@@ -326,9 +342,9 @@ This enhancement is targeting for stage `<insert-stage-here>` for {current relea
 Here's where this enhancement currently stands:
 
 - [ ] KEP readme using the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template) has been merged into the k/enhancements repo.
-- [ ] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`. KEPs targeting `stable` will need to be marked as `implemented` after code PRs are merged and the feature gates are removed.
+- [ ] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`.
 - [ ] KEP readme has up-to-date graduation criteria
-- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)).
+- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)). If your production readiness review is not completed yet, please make sure to fill the production readiness questionnaire in your KEP by the [PRR Freeze deadline](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ) on {{ PRR_FREEZE_DATETIME }} so that the PRR team has enough time to review your KEP.
 
 For this KEP, we would just need to update the following:
 - {insert list of action items}
@@ -413,6 +429,8 @@ With all the implementation(code related) PRs merged as per the issue descriptio
 - {insert list of code prs}
 
 This enhancement is now marked as `tracked for code freeze` for the {current release} Code Freeze!
+
+Please note that KEPs targeting `stable` need to have the `status` field marked as `implemented` in the kep.yaml file after code PRs are merged and the feature gates are removed.
 ```
 
 If the Enhancement Issue **does not** meet the code freeze criteria for inclusion in the current release use this template in Issue comments:
@@ -546,6 +564,7 @@ Exception process is outlined [here](https://github.com/kubernetes/sig-release/b
 - Close issues marked as stable that made it into the release, only after the corresponding KEPs have been marked `Implemented`
 - Close milestones that are complete
 - Cleanup old milestones
+- Open a pull request to add the exceptions.yaml file with all the KEPs which applied for an exception during enhancements freeze and code freeze. You can find an example of this exceptions.yaml file [here](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.29/exceptions.yaml).
 
 ### Limitations
 
