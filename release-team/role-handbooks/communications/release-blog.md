@@ -1,5 +1,5 @@
 # Outline for the Kubernetes Release Blog
-This outline can be used as reference for writing up the release blog. The following sections should give you an idea what can be consider for the blog, but its not necessary to include every section. Include the ones that make sense for the features/annoucements in the release.
+This outline can be used as reference for writing up the release blog. The following sections should give you an idea what can be consider for the blog, but it's not necessary to include every section. Include the ones that make sense for the features/announcements in the release.
 
 * Introduction to release
     * The first paragraph of the release blog announcement introduces the release, its focus, and its importance.

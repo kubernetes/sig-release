@@ -77,7 +77,7 @@ The Communications Coordinator along with the Comms shadows are responsible for 
 
 Start the draft with the team around week 12, striking a balance between the enhancements being close to finalized and having enough to time author the blog and have it reviewed. Ahead of review, open a pull request on the [website repository](https://github.com/kubernetes/website) and assign the release lead and other stakeholders as reviewers.
 
-It's up to you and your team regarding how best to do this. Typically it works well to assign sections to different team members and have the lead pull it all together and manage the PR and reviews. You can work in a draft in Google Docs or Hackmd, then move into the PR when content is more finalized. Its also recommended to get KEP authors to provide 1-2 paragraph desciption of KEP changes as a starting point for the release blog. This is an easier starting point for putting the whoe release blog together. 
+It's up to you and your team regarding how best to do this. Typically it works well to assign sections to different team members and have the lead pull it all together and manage the PR and reviews. You can work in a draft in Google Docs or Hackmd, then move into the PR when content is more finalized. Its also recommended to get KEP authors to provide 1-2 paragraph descriptions of KEP changes as a starting point for the release blog. This is an easier starting point for putting the whole release blog together. 
 
 The release lead will drive the content for the release theme and logo. 
 
@@ -141,7 +141,7 @@ Please note that the release team will support the blog publication after the re
 
 Also see the docs for [pull requests review process](https://kubernetes.io/docs/contribute/review/reviewing-prs/) and [reviewing a pull request](https://kubernetes.io/docs/contribute/review/for-approvers/#reviewing-a-pr).
 
-**Work closely with the [SIG Docs Blogs](https://github.com/kubernetes/community/tree/master/sig-docs/blog-subproject) team.** These are the folks responsible for editorial reviews (and sometimes tech reviews) of Kubernetes blogs. The Comms lead should plan to regulary share updates on blog status and review timelines with the blog reviewers via `#sig-docs-blogs` and during sig-docs meetings.  
+**Work closely with the [SIG Docs Blogs](https://github.com/kubernetes/community/tree/master/sig-docs/blog-subproject) team.** These are the folks responsible for editorial reviews (and sometimes tech reviews) of Kubernetes blogs. The Comms lead should plan to regularly share updates on blog status and review timelines with the blog reviewers via `#sig-docs-blogs` and during sig-docs meetings.  
 
 Each blog should pass 2 official reviews, an editorial review and tech review. Anyone is open to do an "informal" review on any blog and leave suggestions. As part of the comms team, it's encouraged (but not required) to help reviews blogs for both editorial and technical correctness if you have time. 
 
