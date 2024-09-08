@@ -17,6 +17,7 @@
       * [Day Of The Code Freeze](#day-of-the-code-freeze)
       * [Once the Code Freeze starts - one week later](#once-the-code-freeze-starts---one-week-later)
       * [Week 1 of Code Freeze until Code Thaw starts](#week-1-of-code-freeze-until-code-thaw-starts)
+    * [Release Candidates](#release-candidates)
     * [Code Thaw](#code-thaw)
   * [Release Cutting - Go or No-Go](#release-cutting---go-or-no-go)
   * [Judging State of Testgrid dashboards](#judging-state-of-testgrid-dashboards)
@@ -38,6 +39,10 @@
 <!-- TOC -->
 
 ## Overview
+
+[**Quick Overview ~ _The One Pager_**](/release-team/role-handbooks/release-signal/one-pager.md)
+
+**_The One-Pager is just a brief summary and NOT A COMPREHENSIVE GUIDE_**
 
 The release signal team is responsible for making sure that **both** Issues (`is:issue`) and Pull Requests (PRs) (`is:pr`), which
 are targeted for the ongoing release cycle, are dealt with in a timely fashion. It also assumes the responsibility of the quality
@@ -73,7 +78,7 @@ For Release Signal Lead:
 For Release Signal Shadows:
 
 - 10 minutes daily, checking the state of testgrid, and tracking issues/PRs on the Bug Triage Board. 1/2 hour during assigned periods, where
-  shadow is the prime testgrid observer (to create issues, investigate and follow up).
+  shadow is the [main coordinator](#create-assignment-excel-sheet) (to create issues, investigate and follow up).
 
 For Both:
 
@@ -189,8 +194,7 @@ Once the onboarding meetings have been organized, the following tasks are good t
 ### Mid-Release Cycle
 
 This stage lasts from around week 6 until the code freeze starts (usually week 9). At this point, the Release Signal team should
-start [escalating issues/PRs](#how-to-escalate) and communicating deadlines with contributors and SIG leads. During this time, the
-release-x.y-blocking and release-x.y-informing dashboards are also added to the testgrid.
+start [escalating issues/PRs](#how-to-escalate) and communicating deadlines with contributors and SIG leads.
 
 The following are the major tasks:
 
@@ -278,6 +282,14 @@ burden on the next Release Signal team. This is done by using the `/milestone cl
 If the issue/PR has the `priority/critical-urgent` label, it should be coordinated with the owning SIG and the Release Team Lead
 to determine whether it should be allowed to stay or whether the priority should be decreased and the issue/PR moved to the next
 milestone.
+
+### Release Candidates
+
+After the rc.0 and rc.1 cuts, referred to as release candidates, no enhancements are allowed—only bug fixes and regression fixes.
+
+The branch manager sets up the release-x.y-informing and release-x.y-blocking dashboards after the rc.0 cut. 
+The Release Signal team should coordinate with the branch manager to ensure the dashboards are set up within the same week. 
+The Release Signal Lead and Shadows can assist with dashboard setup and resolving any job misconfigurations.
 
 ### Code Thaw
 
