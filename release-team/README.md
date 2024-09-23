@@ -75,15 +75,14 @@ there are 3 types of Kubernetes releases:
 
 ![release-team](release-team.svg "Release Team Diagram")
 
-| Role | Handbook |
-|---|---|
-| Release Team Lead | [Lead Handbook](role-handbooks/release-team-lead/README.md) |
-| Enhancements | [Enhancements Handbook](role-handbooks/enhancements/README.md) |
-| CI Signal | [CI Signal Handbook](role-handbooks/ci-signal/README.md) |
-| Bug Triage | [Bug Triage Handbook](role-handbooks/bug-triage/README.md) |
-| Docs | [Docs Handbook](role-handbooks/docs/README.md) |
-| Release Notes | [Release Notes Handbook](role-handbooks/release-notes/README.md) |
-| Communications | [Communications Handbook](role-handbooks/communications/README.md) |
+| Role              | Handbook                                                           |
+|-------------------|--------------------------------------------------------------------|
+| Release Team Lead | [Lead Handbook](role-handbooks/release-team-lead/README.md)        |
+| Enhancements      | [Enhancements Handbook](role-handbooks/enhancements/README.md)     |
+| Release Signal    | [Release Signal Handbook](role-handbooks/release-signal/README.md) |
+| Docs              | [Docs Handbook](role-handbooks/docs/README.md)                     |
+| Release Notes     | [Release Notes Handbook](role-handbooks/release-notes/README.md)   |
+| Communications    | [Communications Handbook](role-handbooks/communications/README.md) |
 
 
 #### Retired Release Team roles
