@@ -1,0 +1,5 @@
+pr: 127083
+releasenote:
+  text: Implemented new cluster events `UpdatePodSchedulingGatesEliminated` and `UpdatePodTolerations`
+    for scheduler plugins.
+pr_body: ""
