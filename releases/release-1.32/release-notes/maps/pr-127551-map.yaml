@@ -1,0 +1,6 @@
+pr: 127551
+releasenote:
+  text: Fixed the wrong hierarchical structure for both the child span and the parent span
+    (i.e. `SerializeObject` and `List`). In the past, some children's spans appeared
+    parallel to their parents.
+pr_body: ""

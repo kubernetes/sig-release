@@ -1,0 +1,6 @@
+pr: 125398
+releasenote:
+  text: Fixed a bug that occurred when the hostname label of a node did not match the node name,
+    pods bound to a PV with nodeAffinity using the hostname may be scheduled to the
+    wrong node or experience scheduling failures.
+pr_body: ""

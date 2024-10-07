@@ -1,0 +1,4 @@
+pr: 127378
+releasenote:
+  text: Improved performance of the job controller when handling job delete events.
+pr_body: ""

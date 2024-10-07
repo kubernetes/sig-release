@@ -1,0 +1,4 @@
+pr: 127058
+releasenote:
+  text: Removed the GAed feature gates for `ServerSideApply` and `ServerSideFieldValidation`.
+pr_body: ""

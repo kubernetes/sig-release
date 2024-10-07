@@ -1,0 +1,5 @@
+pr: 127016
+releasenote:
+  text: Fixed a potential memory leak in QueueingHint (alpha feature).
+  documentation: []
+pr_body: ""

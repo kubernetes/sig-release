@@ -1,0 +1,5 @@
+pr: 127417
+releasenote:
+  text: Fixed a bug in the endpoints controller that failed to reconcile the Endpoint
+    object after it was truncated (when it received more than 1000 endpoint addresses).
+pr_body: ""

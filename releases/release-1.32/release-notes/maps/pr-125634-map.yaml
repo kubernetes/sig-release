@@ -1,0 +1,5 @@
+pr: 125634
+releasenote:
+  text: X.509 client certificate authentication to the kube-apiserver now produces credential
+    IDs (derived from the certificate's signature) , for use in audit logging.
+pr_body: ""
