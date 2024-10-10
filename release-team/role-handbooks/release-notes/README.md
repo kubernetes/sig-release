@@ -230,13 +230,13 @@ Begin running release-notes tool for the ongoing collection of release notes wit
 - Update the TODOs section at the end of each release for the next Release Notes Team
 
 ## Tools
-- [krel](https://github.com/kubernetes/release/tree/master/docs/krel) The Kubernetes Release Toolbox
+- [krel](https://github.com/kubernetes/release/tree/master/docs/krel) The Kubernetes Release Toolbox *(note: always use the latest version of krel to ensure you have the latest fixes/patches)*
 - [The krel `release-notes` subcommand](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md)
 - [The old release notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
-- [Release notes website](https://relnotes.k8s.io)
+- [Release notes website](https://relnotes.k8s.io) *(note: release notes website is only required for the final release)*
 - [go-modiff](https://github.com/saschagrunert/go-modiff)
 - [Hackmd](https://hackmd.io/)
-- [LWKD](http://lwkd.info) *(consider contributing to LWKD as part of your role)*
+- [LWKD](http://lwkd.info) *(note: consider contributing to LWKD as part of your role)*
 - [Kubernetes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/)
 
 ## Debugging Tips
