@@ -1,0 +1,5 @@
+pr: 126997
+releasenote:
+  text: Optimized the code by filtering out empty strings for podUID when calling the`getPodAndContainerForDevice`
+    method.
+pr_body: ""

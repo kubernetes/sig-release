@@ -1,0 +1,4 @@
+pr: 127012
+releasenote:
+  text: Sent bookmark right now after sending all items in watchCache store.
+pr_body: ""

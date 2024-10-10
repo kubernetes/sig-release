@@ -1,0 +1,5 @@
+pr: 126727
+releasenote:
+  text: Fixed fake client to accept request without metadata.name to better emulate
+    behavior of actual client.
+pr_body: ""

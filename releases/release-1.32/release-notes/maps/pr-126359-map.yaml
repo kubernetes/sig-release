@@ -1,0 +1,5 @@
+pr: 126359
+releasenote:
+  text: Fixed the estimated cost in CEL for expressions that perform equality checks on IPs,
+    CIDRs, Quantities, Formats and URLs.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 126851
+releasenote:
+  text: Upgraded github.com/coredns/corefile-migration to v1.0.24.
+pr_body: ""

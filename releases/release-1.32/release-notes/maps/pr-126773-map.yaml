@@ -1,0 +1,4 @@
+pr: 126773
+releasenote:
+  text: Fixed a warning message about the gce in-tree cloud provider state.
+pr_body: ""
