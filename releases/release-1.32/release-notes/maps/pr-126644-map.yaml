@@ -1,0 +1,7 @@
+pr: 126644
+releasenote:
+  text: Fixed a scheduler preemption issue where the victim pod was not deleted due
+    to incorrect status patching. This issue occurred when the preemptor and victim
+    pods had different QoS classes in their status, causing the preemption to fail
+    entirely.
+pr_body: ""

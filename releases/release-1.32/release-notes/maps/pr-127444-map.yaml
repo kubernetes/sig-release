@@ -1,0 +1,5 @@
+pr: 127444
+releasenote:
+  text: Improved `Node QueueHint` in the `NodeAffinty` plugin by ignoring unrelated changes
+    that keep pods unschedulable.
+pr_body: ""

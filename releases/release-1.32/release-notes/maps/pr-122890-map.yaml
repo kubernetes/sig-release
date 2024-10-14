@@ -1,0 +1,8 @@
+pr: 122890
+releasenote:
+  text: Fixed the bug where `spec.terminationGracePeriodSeconds` of the pod will always
+    be overwritten by the MaxPodGracePeriodSeconds of the soft eviction, you can enable
+    the `AllowOverwriteTerminationGracePeriodSeconds` feature gate, which will restore
+    the previous behavior.  If you do need to set this, please file an issue with
+    the Kubernetes project to help contributors understand why you needed it.
+pr_body: ""

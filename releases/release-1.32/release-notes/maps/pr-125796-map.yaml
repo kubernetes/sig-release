@@ -1,0 +1,11 @@
+pr: 125796
+releasenote:
+  text: 'Fixed a bug in the garbage collector controller which could block indefinitely
+    due to a cache sync failure. This fix allows the garbage collector to eventually continue
+    garbage collecting other resources if a given resource cannot be listed or watched.
+    Any objects in the unsynced resource type with owner references with `blockOwnerDeletion:
+    true` will not be known to the garbage collector. Use of `blockOwnerDeletion`
+    has always been best-effort and racy on startup and object creation. With this
+    fix, it continues to be best-effort for resources that cannot be synced by the
+    garbage collector controller.'
+pr_body: ""

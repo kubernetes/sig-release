@@ -1,0 +1,5 @@
+pr: 126532
+releasenote:
+  text: Fixed a race condition in the kube-proxy initialization that could cause UDP
+    traffic to service VIP.
+pr_body: ""

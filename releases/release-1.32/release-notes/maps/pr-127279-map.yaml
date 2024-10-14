@@ -1,0 +1,4 @@
+pr: 127279
+releasenote:
+  text: Upgraded etcd client to v3.5.16.
+pr_body: ""

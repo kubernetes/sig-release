@@ -1,0 +1,5 @@
+pr: 125372
+releasenote:
+  text: Improved PVC Protection Controller's scalability by batch-processing PVCs
+    by namespace with lazy live pod listing.
+pr_body: ""

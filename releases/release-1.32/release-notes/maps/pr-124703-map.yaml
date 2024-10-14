@@ -1,0 +1,5 @@
+pr: 124703
+releasenote:
+  text: Implemented a queueing hint for PersistentVolumeClaim/Add event in `CSILimit`
+    plugin.
+pr_body: ""

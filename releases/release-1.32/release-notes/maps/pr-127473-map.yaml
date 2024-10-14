@@ -1,0 +1,5 @@
+pr: 127473
+releasenote:
+  text: Improved `Node QueueHint` in the `NodeResource Fit` plugin by ignoring unrelated
+    changes that keep pods unschedulable.
+pr_body: ""

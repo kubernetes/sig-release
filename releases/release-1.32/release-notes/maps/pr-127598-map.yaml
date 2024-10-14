@@ -1,0 +1,7 @@
+pr: 127598
+releasenote:
+  text: Fixed a bug with dual stack clusters using the beta feature MultiCIDRServiceAllocator
+    which could not create dual stack Services or Services with IPs in the secondary range.
+    Users who wanted to use this feature in version 1.30 with dual stack clusters could work around
+    the issue by setting the feature gate DisableAllocatorDualWrite to true.
+pr_body: ""
