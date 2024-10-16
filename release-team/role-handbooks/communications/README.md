@@ -222,7 +222,13 @@ Comms Team 1.xx
 
 Refer to the [slides](https://docs.google.com/presentation/d/10y65ptwXQrt_0P6sA3TSvRH_c7TGBc8DEHhXRNwi-10/) and [webinar](https://www.youtube.com/watch?v=BTPlVsgO_As) from the 1.22 release as an example.
 
-Note you'll need to send headshots and company/title information when you schedule the webinar and the slides should be sent for CNCF review at least one week ahead of the webinar.
+Note you'll need to send headshots and company/title information when you schedule the webinar and the slides should be ready at least one week ahead of the webinar.
+
+---
+Release lead is probably the best person to put together the slides, but it can also be something the lead, comms lead, and enhancement lead for a release can decided on the best way to pull the presentation together.
+For this release i asked the release and enhancement lead about creating slides 1 week before the webinar was scheduled. Lead put together the slides and we had a quick 10 minute meeting to talk about how to run through the slides on the webinar. Lead and Enhancements lead alternated on each slide and mostly just read out the content on the slides and maybe added a little more context. As a comms lead you dont have to talk on the presentation, but you can if you want to.
+The presentation isn't intended to be very technical. Just an overview of the changes. The listeners may have questions but its perfectly fine to direct them to read the KEP or asking in the sig-slack channel to get more information. So there is no need to be an expert on any of the changes. The CNCF has a moderator on the webinar with you to help with running the webinar, recording, and managing the chat. They don't need the slides ahead of time, you just show up with the slides to the webinar.
+---
 
 
 ### Social posts
@@ -310,7 +316,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <td>
         <ul>
         <li>Work with the enhancements lead to understand big-ticket items to be included in the release
-        <li>Start monitoring the <code>Feature blog opt-in</code> sheet for new entries and use the <code>Assigment tab</code> sheet to assign and track status throughout the cycle (<a href="https://docs.google.com/spreadsheets/d/1hgFWig6YBSYORP3huwEyU0VlXGcYi6wMxjYW-swzCIY">for example</a>)
+        <li>Start monitoring the <code>Feature blog opt-in</code> sheet for new entries and use the <code>Status field</code> to assign and track status throughout the cycle
         <li> With Enhancement freeze in effect, create a GitHub discussion (<a href="https://github.com/kubernetes/sig-release/discussions/2047">example v1.26</a>) to start collecting the Release Highlights of the release, and reach out to all SIGs on and off over the next few weeks to ask for Release Highlights and explain why this is important to the community.
         <ul>
         </ul>
