@@ -1,0 +1,25 @@
+# Exceptions to Code Freeze requested in 1.32
+# Release Team Lead: Frederico Muñoz (@fsmunoz)
+
+
+# Enhancements Freeze Exceptions requested in 1.32
+
+enhancementFreeze:
+
+- name: "Asynchronous preemption in the scheduler"
+  issue: 4832
+  date_requested: 2024-10-11
+  date_reviewed: 2024-10-14
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/Zte-yJGTsjc/m/HgM05gDjCAAJ
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4833
+  status: "approved"
+
+- name: "Multiple Service CIDRs"
+  issue: 2400
+  date_requested: 2024-10-10
+  date_reviewed: 2024-10-15
+  thread: https://groups.google.com/d/msgid/kubernetes-sig-node/CA%2BoyvWYSqK_0T%2BUQTYNWTX9rNRWE9iOBjVpXffMW8pAu4ESnXg%40mail.gmail.com
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4701
+  status: "removed"
