@@ -1,0 +1,7 @@
+pr: 127780
+releasenote:
+  text: |-
+    Fixed a regression introduced in v1.29 where conntrack entries for UDP connections
+    to deleted pods did not get cleaned up correctly, which could (among other things)
+    cause DNS problems when DNS pods were restarted.
+pr_body: ""

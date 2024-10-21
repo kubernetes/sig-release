@@ -1,0 +1,5 @@
+pr: 127634
+releasenote:
+  text: '`kubectl apply --server-side` now supports `--subresource` congruent to
+    `kubectl patch`.'
+pr_body: ""

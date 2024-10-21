@@ -1,0 +1,5 @@
+pr: 127787
+releasenote:
+  text: Removed the feature gate ComponentSLIs, which had been promoted to stable
+    since v1.29.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 127861
+releasenote:
+  text: Reverted Go version used to build Kubernetes to 1.23.0.
+pr_body: ""

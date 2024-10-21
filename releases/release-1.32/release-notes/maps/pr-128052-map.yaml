@@ -1,0 +1,4 @@
+pr: 128052
+releasenote:
+  text: CRI client now used the default timeout for `ImageFsInfo` RPC.
+pr_body: ""

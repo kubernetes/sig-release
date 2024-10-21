@@ -1,0 +1,7 @@
+pr: 128062
+releasenote:
+  text: 'kubelet: the `--image-credential-provider-config` file was loaded with strict
+    deserialization, which failed if the config file contained duplicate or unknown
+    fields. This protected against accidentally running with malformed config files,
+    unindented files, or typos in field names, and it prevented unexpected behavior.'
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 125171
+releasenote:
+  text: The scheduler implemented `QueueingHint` in VolumeBinding plugin's CSIDriver
+    event, which enhanced the throughput of scheduling.
+pr_body: ""

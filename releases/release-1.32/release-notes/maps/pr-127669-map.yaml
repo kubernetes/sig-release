@@ -1,0 +1,5 @@
+pr: 127669
+releasenote:
+  text: Fixed a race condition that could result in erroneous volume unmounts for
+    flex volume plugins during kubelet restart.
+pr_body: ""
