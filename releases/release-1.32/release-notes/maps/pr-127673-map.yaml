@@ -1,0 +1,6 @@
+pr: 127673
+releasenote:
+  text: Promoted `CustomResourceFieldSelectors` to stable; the feature was enabled
+    by default. The `--feature-gates=CustomResourceFieldSelectors=true` flag was no
+    longer needed on kube-apiserver binaries and would be removed in a future release.
+pr_body: ""

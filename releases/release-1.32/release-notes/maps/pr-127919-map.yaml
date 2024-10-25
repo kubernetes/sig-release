@@ -1,0 +1,4 @@
+pr: 127919
+releasenote:
+  text: Fixed data race in kubelet/volumemanager.
+pr_body: ""

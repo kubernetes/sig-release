@@ -1,0 +1,7 @@
+pr: 126776
+releasenote:
+  text: 'kubeadm: increased the verbosity of API client dry-run actions during the
+    subcommands "init", "join", "upgrade" and "reset". It also allowed dry-run on
+    ''kubeadm join'' even if there was no existing cluster by utilizing a faked, in-memory
+    cluster-info ConfigMap.'
+pr_body: ""

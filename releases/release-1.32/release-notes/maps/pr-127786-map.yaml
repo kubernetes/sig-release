@@ -1,0 +1,5 @@
+pr: 127786
+releasenote:
+  text: Added an option to enable leader election in local-up-cluster.sh via the LEADER_ELECT
+    CLI flag.
+pr_body: ""

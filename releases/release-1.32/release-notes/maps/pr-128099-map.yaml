@@ -1,0 +1,6 @@
+pr: 128099
+releasenote:
+  text: Fixed a bug in the `NestedNumberAsFloat64` Unstructured field accessor that
+    could have caused it to return rounded float64 values instead of errors when accessing
+    very large int64 values.
+pr_body: ""

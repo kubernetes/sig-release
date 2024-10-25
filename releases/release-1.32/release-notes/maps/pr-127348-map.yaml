@@ -1,0 +1,4 @@
+pr: 127348
+releasenote:
+  text: LoadBalancerIPMode feature was marked as GA.
+pr_body: ""

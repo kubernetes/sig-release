@@ -1,0 +1,13 @@
+pr: 126924
+releasenote:
+  text: |-
+    Removed attachable volume limits from the capacity of the node for the following
+    volume type when the kubelet was started, affecting the following volume types
+    when the corresponding csi driver was installed:
+    - `awsElasticBlockStore` for `ebs.csi.aws.com`
+    - `azureDisk` for `disk.csi.azure.com`
+    - `gcePersistentDisk` for `pd.csi.storage.googleapis.com`
+    - `cinder` for `cinder.csi.openstack.org`
+    - `csi`
+    However it was still enforced using a limit in CSINode objects.
+pr_body: ""

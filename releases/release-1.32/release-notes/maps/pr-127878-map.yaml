@@ -1,0 +1,5 @@
+pr: 127878
+releasenote:
+  text: The scheduler started considering the resource requests of existing sidecar
+    containers during the scoring process.
+pr_body: ""

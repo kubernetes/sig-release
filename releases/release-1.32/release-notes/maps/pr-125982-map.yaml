@@ -1,0 +1,5 @@
+pr: 125982
+releasenote:
+  text: Introduced compressible resource setting on system reserved and kube reserved
+    slices.
+pr_body: ""
