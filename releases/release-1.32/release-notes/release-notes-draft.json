@@ -70,7 +70,7 @@
   },
   "120586": {
     "commit": "bb2b52e6509b5f9d47078ade9cab2be69f27214b",
-    "text": "When SchedulerQueueingHints is enabled, clear events cached in the scheduling queue as soon as possible so that the scheduler consumes less memory.",
+    "text": "When `SchedulerQueueingHints` was enabled, cleared events cached in the scheduling queue as soon as possible to reduce memory consumption by the scheduler.",
     "markdown": "When SchedulerQueueingHints is enabled, clear events cached in the scheduling queue as soon as possible so that the scheduler consumes less memory. ([#120586](https://github.com/kubernetes/kubernetes/pull/120586), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
