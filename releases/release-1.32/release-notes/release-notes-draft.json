@@ -52,7 +52,7 @@
   },
   "119089": {
     "commit": "5fa794db46c3e6d13a58e20e11aa86367b9585b5",
-    "text": "Output a log as v4-level when probe is triggered and shift the periodic timer of ReadinessProbe after manual run.",
+    "text": "Outputted a log at the v4 level when the probe was triggered and shifted the periodic timer of the `ReadinessProbe` after the manual run.",
     "markdown": "Output a log as v4-level when probe is triggered and shift the periodic timer of ReadinessProbe after manual run. ([#119089](https://github.com/kubernetes/kubernetes/pull/119089), [@mochizuki875](https://github.com/mochizuki875)) [SIG Node]",
     "author": "mochizuki875",
     "author_url": "https://github.com/mochizuki875",
