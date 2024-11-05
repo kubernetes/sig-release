@@ -86,7 +86,7 @@
   },
   "122890": {
     "commit": "d6bb550b1079af165a1bba9485b8c026735de17f",
-    "text": "Fix the bug where spec.terminationGracePeriodSeconds of the pod will always be overwritten by the MaxPodGracePeriodSeconds of the soft eviction, you can enable the `AllowOverwriteTerminationGracePeriodSeconds` feature gate, which will restore the previous behavior.  If you do need to set this, please file an issue with the Kubernetes project to help contributors understand why you need it.",
+    "text": "Fixed the bug where `spec.terminationGracePeriodSeconds` of the pod was always overwritten by `MaxPodGracePeriodSeconds` during soft eviction. You can enable the `AllowOverwriteTerminationGracePeriodSeconds` feature gate to restore the previous behavior. If you need to set this, please file an issue with the Kubernetes project to help contributors understand your requirements.",
     "markdown": "Fix the bug where spec.terminationGracePeriodSeconds of the pod will always be overwritten by the MaxPodGracePeriodSeconds of the soft eviction, you can enable the `AllowOverwriteTerminationGracePeriodSeconds` feature gate, which will restore the previous behavior.  If you do need to set this, please file an issue with the Kubernetes project to help contributors understand why you need it. ([#122890](https://github.com/kubernetes/kubernetes/pull/122890), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG API Machinery, Architecture, Node and Testing]",
     "author": "HirazawaUi",
     "author_url": "https://github.com/HirazawaUi",
