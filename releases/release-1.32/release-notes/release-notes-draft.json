@@ -206,7 +206,7 @@
   },
   "124703": {
     "commit": "a7242fcff768658019f878cb691583dcbcfefb2d",
-    "text": "Implement a queueing hint for PersistentVolumeClaim/Add event in CSILimit plugin.",
+    "text": "Implemented a queuing hint for `PersistentVolumeClaim/Add` events in the `CSILimit` plugin.",
     "markdown": "Implement a queueing hint for PersistentVolumeClaim/Add event in CSILimit plugin. ([#124703](https://github.com/kubernetes/kubernetes/pull/124703), [@utam0k](https://github.com/utam0k)) [SIG Scheduling and Storage]",
     "author": "utam0k",
     "author_url": "https://github.com/utam0k",
