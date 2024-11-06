@@ -379,7 +379,7 @@
   },
   "125372": {
     "commit": "9d140b136c59ed2530a7b22502921bcf1aab4716",
-    "text": "Improve PVC Protection Controller's scalability by batch-processing PVCs by namespace with lazy live pod listing.",
+    "text": "Improved the scalability of the PVC Protection Controller by batch-processing PVCs within each namespace, using a lazy live pod listing approach.",
     "markdown": "Improve PVC Protection Controller's scalability by batch-processing PVCs by namespace with lazy live pod listing. ([#125372](https://github.com/kubernetes/kubernetes/pull/125372), [@hungnguyen243](https://github.com/hungnguyen243)) [SIG Apps, Node, Storage and Testing]",
     "author": "hungnguyen243",
     "author_url": "https://github.com/hungnguyen243",
