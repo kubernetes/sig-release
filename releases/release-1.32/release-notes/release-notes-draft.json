@@ -868,7 +868,7 @@
   },
   "126532": {
     "commit": "201bdaa2fe0f2af72c2f9880707a2ec13bcb63fc",
-    "text": "Fix race condition in kube-proxy initialization that could blackhole UDP traffic to service VIP.",
+    "text": "Fixed a race condition in kube-proxy initialization that could cause UDP traffic to the service VIP to be blackholed.",
     "markdown": "Fix race condition in kube-proxy initialization that could blackhole UDP traffic to service VIP. ([#126532](https://github.com/kubernetes/kubernetes/pull/126532), [@wedaly](https://github.com/wedaly)) [SIG Network]",
     "author": "wedaly",
     "author_url": "https://github.com/wedaly",
