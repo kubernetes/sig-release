@@ -1325,7 +1325,7 @@
   },
   "126727": {
     "commit": "45804907d2025747452ac2573a60d330cc930a49",
-    "text": "Fix fake client to accept request without metadata.name to better emulate behavior of actual client.",
+    "text": "Fixed the fake client to accept requests without metadata.name in order to better emulate the behavior of the actual client.",
     "markdown": "Fix fake client to accept request without metadata.name to better emulate behavior of actual client. ([#126727](https://github.com/kubernetes/kubernetes/pull/126727), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery]",
     "author": "jpbetz",
     "author_url": "https://github.com/jpbetz",
