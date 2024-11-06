@@ -1279,7 +1279,7 @@
   },
   "126706": {
     "commit": "ab26ad095029eb46ca2e938ac3a16cb6f164e657",
-    "text": "Fix kubectl doesn't print image volume when kubectl describe a pod with that volume",
+    "text": "Fixed an issue where kubectl didn't print the image volume when describing a pod that included that volume.",
     "markdown": "Fix kubectl doesn't print image volume when kubectl describe a pod with that volume ([#126706](https://github.com/kubernetes/kubernetes/pull/126706), [@carlory](https://github.com/carlory)) [SIG CLI]",
     "documentation": [
       {
