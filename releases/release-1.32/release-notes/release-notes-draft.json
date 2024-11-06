@@ -404,7 +404,7 @@
   },
   "125398": {
     "commit": "211d67a511f081623b5a0ac008fc3712452905b4",
-    "text": "Fix a bug when the hostname label of a node does not match the node name, pods bound to a PV with nodeAffinity using the hostname may be scheduled to the wrong node or experience scheduling failures.",
+    "text": "Fixed a bug where the hostname label of a node did not match the node name, causing pods bound to a PV with `nodeAffinity` using the hostname to be scheduled on the wrong node or experience scheduling failures.",
     "markdown": "Fix a bug when the hostname label of a node does not match the node name, pods bound to a PV with nodeAffinity using the hostname may be scheduled to the wrong node or experience scheduling failures. ([#125398](https://github.com/kubernetes/kubernetes/pull/125398), [@AxeZhan](https://github.com/AxeZhan)) [SIG Scheduling and Storage]",
     "author": "AxeZhan",
     "author_url": "https://github.com/AxeZhan",
