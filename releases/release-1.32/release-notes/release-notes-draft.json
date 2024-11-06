@@ -1165,7 +1165,7 @@
   },
   "126644": {
     "commit": "03e81540633ef6c7fcea152fa7d8f56617998070",
-    "text": "Fix a 1.29 scheduler preemption regression where the victim pod was not deleted due to incorrect status patching. This issue occurred when the preemptor and victim pods had different QoS classes in their status, causing the preemption to fail entirely.",
+    "text": "Fixed a 1.29 scheduler preemption regression where the victim pod was not deleted due to incorrect status patching. This issue occurred when the preemptor and victim pods had different QoS classes in their status, causing the preemption to fail entirely.",
     "markdown": "Fix a 1.29 scheduler preemption regression where the victim pod was not deleted due to incorrect status patching. This issue occurred when the preemptor and victim pods had different QoS classes in their status, causing the preemption to fail entirely. ([#126644](https://github.com/kubernetes/kubernetes/pull/126644), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Scheduling]",
     "author": "Huang-Wei",
     "author_url": "https://github.com/Huang-Wei",
