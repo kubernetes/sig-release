@@ -488,7 +488,7 @@
   },
   "125982": {
     "commit": "c923a61dddf4db8cf6f0f59062b5f3362fa593e2",
-    "text": "Introduce compressible resource setting on system reserved and kube reserved slices",
+    "text": "Introduced a compressible resource setting on system reserved and kube reserved slices.",
     "markdown": "Introduce compressible resource setting on system reserved and kube reserved slices ([#125982](https://github.com/kubernetes/kubernetes/pull/125982), [@harche](https://github.com/harche)) [SIG Node]",
     "author": "harche",
     "author_url": "https://github.com/harche",
