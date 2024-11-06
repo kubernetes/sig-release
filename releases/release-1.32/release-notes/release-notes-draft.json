@@ -265,7 +265,7 @@
   },
   "125070": {
     "commit": "e2c17c09a494f679e5a8fb46f2d5ca05363df0a8",
-    "text": "Node shutdown controller now makes a best effort to wait for CSI Drivers to complete the volume teardown process according to the pod priority groups.",
+    "text": "The Node Shutdown Controller now made a best effort to wait for CSI drivers to complete the volume teardown process according to pod priority groups.",
     "markdown": "Node shutdown controller now makes a best effort to wait for CSI Drivers to complete the volume teardown process according to the pod priority groups. ([#125070](https://github.com/kubernetes/kubernetes/pull/125070), [@torredil](https://github.com/torredil)) [SIG Node, Storage and Testing]",
     "author": "torredil",
     "author_url": "https://github.com/torredil",
