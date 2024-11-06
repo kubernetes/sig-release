@@ -828,7 +828,7 @@
   },
   "126512": {
     "commit": "77737c3eb37afaadbf40ec499a58c1593c9c7382",
-    "text": "transformation_operations_total metric will have additional resource label which can be used for resource specific validations for example handling of encryption config by the apiserver.",
+    "text": "The `transformation_operations_total metric` will now include an additional resource label, which can be used for resource-specific validations, such as handling encryption configurations by the API server.",
     "markdown": "Transformation_operations_total metric will have additional resource label which can be used for resource specific validations for example handling of encryption config by the apiserver. ([#126512](https://github.com/kubernetes/kubernetes/pull/126512), [@kmala](https://github.com/kmala)) [SIG API Machinery, Auth, Etcd and Testing]",
     "author": "kmala",
     "author_url": "https://github.com/kmala",
