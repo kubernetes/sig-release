@@ -1474,7 +1474,7 @@
   },
   "126773": {
     "commit": "352e33e040d0df758935b5152fbc50675f9c334c",
-    "text": "Fix a warning message about the gce in-tree cloud provider state",
+    "text": "Fixed a warning message related to the GCE in-tree cloud provider state.",
     "markdown": "Fix a warning message about the gce in-tree cloud provider state ([#126773](https://github.com/kubernetes/kubernetes/pull/126773), [@carlory](https://github.com/carlory)) [SIG Cloud Provider]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
