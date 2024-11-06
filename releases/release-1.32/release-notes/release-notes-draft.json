@@ -749,7 +749,7 @@
   },
   "126449": {
     "commit": "046c098a459db6482d64b949bb48fc8253043256",
-    "text": "upgrade coreDNS to v1.11.3",
+    "text": "Upgraded CoreDNS to v1.11.3.",
     "markdown": "Upgrade coreDNS to v1.11.3 ([#126449](https://github.com/kubernetes/kubernetes/pull/126449), [@BenTheElder](https://github.com/BenTheElder)) [SIG Cloud Provider and Cluster Lifecycle]",
     "author": "BenTheElder",
     "author_url": "https://github.com/BenTheElder",
