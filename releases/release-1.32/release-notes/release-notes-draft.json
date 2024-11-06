@@ -309,7 +309,7 @@
   },
   "125171": {
     "commit": "3de975b732ed40a586f3b0b979ff8b7170ba1ea1",
-    "text": "The scheduler implements QueueingHint in VolumeBinding plugin's CSIDriver event, which enhances the throughput of scheduling.",
+    "text": "The scheduler implemented `QueueingHint` in the VolumeBinding plugin's CSIDriver event, enhancing scheduling throughput.",
     "markdown": "The scheduler implements QueueingHint in VolumeBinding plugin's CSIDriver event, which enhances the throughput of scheduling. ([#125171](https://github.com/kubernetes/kubernetes/pull/125171), [@YamasouA](https://github.com/YamasouA)) [SIG Scheduling and Storage]",
     "documentation": [
       {
