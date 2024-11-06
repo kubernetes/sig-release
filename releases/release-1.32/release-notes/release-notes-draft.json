@@ -692,7 +692,7 @@
   },
   "126359": {
     "commit": "f88281768c52a5729d1dccee16164b472e794922",
-    "text": "Fix CEL estimated cost of expressions that perform equality checks of IPs, CIDRs, Quantities, Formats and URLs.",
+    "text": "Fixed the CEL estimated cost of expressions that perform equality checks on IPs, CIDRs, Quantities, Formats, and URLs.",
     "markdown": "Fix CEL estimated cost of expressions that perform equality checks of IPs, CIDRs, Quantities, Formats and URLs. ([#126359](https://github.com/kubernetes/kubernetes/pull/126359), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery]",
     "author": "jpbetz",
     "author_url": "https://github.com/jpbetz",
