@@ -2542,7 +2542,7 @@
   },
   "127228": {
     "commit": "60cbbdf4b36389b9994325abd8b2e924dcf84e24",
-    "text": "Improve performance of the job controller when handling job update events.",
+    "text": "Improved performance of the job controller when handling job update events.",
     "markdown": "Improve performance of the job controller when handling job update events. ([#127228](https://github.com/kubernetes/kubernetes/pull/127228), [@hakuna-matatah](https://github.com/hakuna-matatah)) [SIG Apps]",
     "author": "hakuna-matatah",
     "author_url": "https://github.com/hakuna-matatah",
