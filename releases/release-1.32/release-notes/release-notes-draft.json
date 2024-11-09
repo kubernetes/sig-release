@@ -4210,7 +4210,7 @@
   },
   "128244": {
     "commit": "71093a09c1d6d717b6927d1dfb7dca3753dc0bae",
-    "text": "Apply fsGroup policy for ReadWriteOncePod volumes",
+    "text": "Applied the fsGroup policy for ReadWriteOncePod volumes",
     "markdown": "Apply fsGroup policy for ReadWriteOncePod volumes ([#128244](https://github.com/kubernetes/kubernetes/pull/128244), [@gnufied](https://github.com/gnufied)) [SIG Storage and Testing]",
     "author": "gnufied",
     "author_url": "https://github.com/gnufied",
