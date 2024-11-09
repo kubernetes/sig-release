@@ -2196,7 +2196,7 @@
   },
   "127012": {
     "commit": "81ebfb3d0c6194c80aa8656c06ab6fcc64535e99",
-    "text": "send bookmark right now after sending all items in watchCache store",
+    "text": "sent bookmark right now after sending all items in watchCache store",
     "markdown": "Send bookmark right now after sending all items in watchCache store ([#127012](https://github.com/kubernetes/kubernetes/pull/127012), [@Chaunceyctx](https://github.com/Chaunceyctx)) [SIG API Machinery]",
     "author": "Chaunceyctx",
     "author_url": "https://github.com/Chaunceyctx",
