@@ -3349,7 +3349,7 @@
   },
   "127780": {
     "commit": "8539497010969a16ebbb52c2e965d2c4fd63bcb4",
-    "text": "Fixes a regression introduced in 1.29 where conntrack entries for UDP connections\nto deleted pods did not get cleaned up correctly, which could (among other things)\ncause DNS problems when DNS pods were restarted.",
+    "text": "Fixed a regression introduced in 1.29 where conntrack entries for UDP connections\nto deleted pods did not get cleaned up correctly, which could (among other things)\ncause DNS problems when DNS pods were restarted.",
     "markdown": "Fixes a regression introduced in 1.29 where conntrack entries for UDP connections\n  to deleted pods did not get cleaned up correctly, which could (among other things)\n  cause DNS problems when DNS pods were restarted. ([#127780](https://github.com/kubernetes/kubernetes/pull/127780), [@danwinship](https://github.com/danwinship)) [SIG Network]",
     "author": "danwinship",
     "author_url": "https://github.com/danwinship",
