@@ -3166,7 +3166,7 @@
   },
   "127598": {
     "commit": "e9cde03b915e8697d64d2908efae536dd339fc73",
-    "text": "fix a bug with dual stack clusters using the beta feature MultiCIDRServiceAllocator can not create dual stack Services or Services with IPs on the secondary range. User that want to use this feature in 1.30 with dual stack clusters can workaround the issue by setting the feature gate DisableAllocatorDualWrite to true",
+    "text": "Fixed a bug in dual-stack clusters using the beta feature `MultiCIDRServiceAllocator`, where it was unable to create dual-stack Services or Services with IPs on the secondary range. Users on version 1.30 who wish to use this feature in dual-stack clusters can work around the issue by setting the feature gate `DisableAllocatorDualWrite` to `true`.",
     "markdown": "Fix a bug with dual stack clusters using the beta feature MultiCIDRServiceAllocator can not create dual stack Services or Services with IPs on the secondary range. User that want to use this feature in 1.30 with dual stack clusters can workaround the issue by setting the feature gate DisableAllocatorDualWrite to true ([#127598](https://github.com/kubernetes/kubernetes/pull/127598), [@aojea](https://github.com/aojea)) [SIG Network and Testing]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
