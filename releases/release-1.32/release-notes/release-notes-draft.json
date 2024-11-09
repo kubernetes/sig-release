@@ -3229,7 +3229,7 @@
   },
   "127650": {
     "commit": "996e674ea7039a39afd21b479a9601d57cb49b8d",
-    "text": "kubeadm: fix wrong member list reported when removing an etcd member",
+    "text": "kubeadm: Fixed wrong member list reported when removing an etcd member",
     "markdown": "Kubeadm: fix wrong member list reported when removing an etcd member ([#127650](https://github.com/kubernetes/kubernetes/pull/127650), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
