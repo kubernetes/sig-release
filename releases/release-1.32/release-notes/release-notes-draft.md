@@ -54,7 +54,7 @@
 
 ### Feature
 
-- Add option to enable leader election in local-up-cluster.sh via the LEADER_ELECT cli flag. ([#127786](https://github.com/kubernetes/kubernetes/pull/127786), [@Jefftree](https://github.com/Jefftree)) [SIG API Machinery]
+- Added an option to enable leader election in local-up-cluster.sh via the LEADER_ELECT cli flag. ([#127786](https://github.com/kubernetes/kubernetes/pull/127786), [@Jefftree](https://github.com/Jefftree)) [SIG API Machinery]
 - Added a kubelet metric `container_aligned_compute_resources_count`  to report the count of containers getting aligned compute resources ([#127155](https://github.com/kubernetes/kubernetes/pull/127155), [@ffromani](https://github.com/ffromani)) [SIG Node and Testing]
 - Added kubelet support for systemd watchdog integration. With this enabled, systemd can automatically recover a hung kubelet. ([#127566](https://github.com/kubernetes/kubernetes/pull/127566), [@zhifei92](https://github.com/zhifei92)) [SIG Cloud Provider, Node and Testing]
 - Added new functionality into the Go client code (`client-go`) library. The `List()` method for the metadata client allows enabling API streaming when fetching collections; this improves performance when listing many objects.
