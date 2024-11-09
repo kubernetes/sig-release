@@ -2066,7 +2066,7 @@
   },
   "126997": {
     "commit": "f0f7ff989a948389247e628c4c5a43e915f51daa",
-    "text": "Optimize code, filter podUID is empty string when call this `getPodAndContainerForDevice` method.",
+    "text": "Optimized code, filter podUID is empty string when call this `getPodAndContainerForDevice` method.",
     "markdown": "Optimize code, filter podUID is empty string when call this `getPodAndContainerForDevice` method. ([#126997](https://github.com/kubernetes/kubernetes/pull/126997), [@lengrongfu](https://github.com/lengrongfu)) [SIG Node]",
     "author": "lengrongfu",
     "author_url": "https://github.com/lengrongfu",
