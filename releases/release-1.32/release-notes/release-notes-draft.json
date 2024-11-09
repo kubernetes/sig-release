@@ -2870,7 +2870,7 @@
   },
   "127444": {
     "commit": "960e3984b0f0b0254fc1f5a177ac3b4663937c48",
-    "text": "Improve Node QueueHint in the NodeAffinty plugin by ignoring unrelated changes that keep pods unschedulable.",
+    "text": "Improved Node QueueHint in the NodeAffinity plugin by ignoring unrelated changes that do not impact pod schedulability, preventing pods from remaining unschedulable due to irrelevant updates.",
     "markdown": "Improve Node QueueHint in the NodeAffinty plugin by ignoring unrelated changes that keep pods unschedulable. ([#127444](https://github.com/kubernetes/kubernetes/pull/127444), [@dom4ha](https://github.com/dom4ha)) [SIG Scheduling and Testing]",
     "author": "dom4ha",
     "author_url": "https://github.com/dom4ha",
