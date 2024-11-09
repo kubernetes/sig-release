@@ -4230,7 +4230,7 @@
   },
   "128259": {
     "commit": "d9b95ea94f41b942440adbdfdbe35fb78a2ed6f7",
-    "text": "The `build-tag` flag is reintroduced to conversion-gen and defaulter-gen which allow users to inject custom build tag during code generation process.",
+    "text": "The `build-tag` flag was reintroduced to conversion-gen and defaulter-gen which allow users to inject custom build tag during code generation process.",
     "markdown": "The `build-tag` flag is reintroduced to conversion-gen and defaulter-gen which allow users to inject custom build tag during code generation process. ([#128259](https://github.com/kubernetes/kubernetes/pull/128259), [@dinhxuanvu](https://github.com/dinhxuanvu)) [SIG API Machinery]",
     "author": "dinhxuanvu",
     "author_url": "https://github.com/dinhxuanvu",
