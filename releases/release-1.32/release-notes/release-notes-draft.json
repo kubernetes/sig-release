@@ -3369,7 +3369,7 @@
   },
   "127786": {
     "commit": "03f134461462f86239067ec20ec17a0ba892db52",
-    "text": "Add option to enable leader election in local-up-cluster.sh via the LEADER_ELECT cli flag.",
+    "text": "Added an option to enable leader election in local-up-cluster.sh via the LEADER_ELECT cli flag.",
     "markdown": "Add option to enable leader election in local-up-cluster.sh via the LEADER_ELECT cli flag. ([#127786](https://github.com/kubernetes/kubernetes/pull/127786), [@Jefftree](https://github.com/Jefftree)) [SIG API Machinery]",
     "author": "Jefftree",
     "author_url": "https://github.com/Jefftree",
