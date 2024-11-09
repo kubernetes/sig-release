@@ -1877,7 +1877,7 @@
   },
   "126957": {
     "commit": "3d65369f346d359bcabdc7f04addff5fdb2f194a",
-    "text": "Fixes a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing.",
+    "text": "Fixed a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing.",
     "markdown": "Fixes a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing. ([#126957](https://github.com/kubernetes/kubernetes/pull/126957), [@dashpole](https://github.com/dashpole)) [SIG API Machinery, Architecture, Instrumentation and Node]",
     "author": "dashpole",
     "author_url": "https://github.com/dashpole",
