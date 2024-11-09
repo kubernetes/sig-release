@@ -3058,7 +3058,7 @@
   },
   "127551": {
     "commit": "3d6c5b2e98afaaae1d17107e2d3d709c726be49d",
-    "text": "Fix the wrong hierarchical structure for the child span and the parent span (i.e. `SerializeObject` and `List`). In the past, some children's spans appeared parallel to their parents.",
+    "text": "Fixed the wrong hierarchical structure for the child span and the parent span (i.e. `SerializeObject` and `List`). In the past, some children's spans appeared parallel to their parents.",
     "markdown": "Fix the wrong hierarchical structure for the child span and the parent span (i.e. `SerializeObject` and `List`). In the past, some children's spans appeared parallel to their parents. ([#127551](https://github.com/kubernetes/kubernetes/pull/127551), [@carlory](https://github.com/carlory)) [SIG API Machinery and Instrumentation]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
