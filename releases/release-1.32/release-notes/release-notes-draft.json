@@ -2214,7 +2214,7 @@
   },
   "127016": {
     "commit": "dfb763b05ea4ecd2c9359edce36954a3a7da2948",
-    "text": "Fix a potential memory leak in QueueingHint (alpha feature)",
+    "text": "Fixed a potential memory leak in QueueingHint (alpha feature)",
     "markdown": "Fix a potential memory leak in QueueingHint (alpha feature) ([#127016](https://github.com/kubernetes/kubernetes/pull/127016), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
