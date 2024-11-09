@@ -3402,7 +3402,7 @@
   },
   "127861": {
     "commit": "2d31ec00273c34390ec77637fb4ff96234885bca",
-    "text": "Revert Go version used to build Kubernetes to 1.23.0",
+    "text": "Reverted Go version used to build Kubernetes to 1.23.0",
     "markdown": "Revert Go version used to build Kubernetes to 1.23.0 ([#127861](https://github.com/kubernetes/kubernetes/pull/127861), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]",
     "author": "xmudrii",
     "author_url": "https://github.com/xmudrii",
