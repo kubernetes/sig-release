@@ -3288,7 +3288,7 @@
   },
   "127669": {
     "commit": "3d00d6e42113db6fca88ec6a0d03970bc63d7bea",
-    "text": "Fixes a race condition that could result in erroneous volume unmounts for flex volume plugins on kubelet restart",
+    "text": "Fixed a race condition that could result in erroneous volume unmounts for flex volume plugins on kubelet restart",
     "markdown": "Fixes a race condition that could result in erroneous volume unmounts for flex volume plugins on kubelet restart ([#127669](https://github.com/kubernetes/kubernetes/pull/127669), [@olyazavr](https://github.com/olyazavr)) [SIG Storage]",
     "author": "olyazavr",
     "author_url": "https://github.com/olyazavr",
