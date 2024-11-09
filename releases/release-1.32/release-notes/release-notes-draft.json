@@ -2855,7 +2855,7 @@
   },
   "127427": {
     "commit": "04bba3c222bb2c5b1b1565713de4bf334ee7fbe4",
-    "text": "Fixes the bug in NodeUnschedulable that only happens with QHint enabled, \nwhich the scheduler might miss some updates for the Pods rejected by NodeUnschedulable plugin and put the Pods in the queue for a longer time than needed.",
+    "text": "Fixed a bug in NodeUnschedulable that occurred only when QHint was enabled, where the scheduler could miss some updates for pods rejected by the NodeUnschedulable plugin, causing these pods to remain in the queue longer than necessary.",
     "markdown": "Fixes the bug in NodeUnschedulable that only happens with QHint enabled, \n  which the scheduler might miss some updates for the Pods rejected by NodeUnschedulable plugin and put the Pods in the queue for a longer time than needed. ([#127427](https://github.com/kubernetes/kubernetes/pull/127427), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
