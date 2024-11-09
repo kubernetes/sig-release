@@ -3385,7 +3385,7 @@
   },
   "127787": {
     "commit": "bb97163ff7d6d496e4aeba68830f6e9cd089a39d",
-    "text": "Removes the feature gate ComponentSLIs, which has been promoted to stable since 1.29.",
+    "text": "Removed the feature gate ComponentSLIs, which has been promoted to stable since 1.29.",
     "markdown": "Removes the feature gate ComponentSLIs, which has been promoted to stable since 1.29. ([#127787](https://github.com/kubernetes/kubernetes/pull/127787), [@Jefftree](https://github.com/Jefftree)) [SIG Architecture and Instrumentation]",
     "author": "Jefftree",
     "author_url": "https://github.com/Jefftree",
