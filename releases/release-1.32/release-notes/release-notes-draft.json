@@ -2837,7 +2837,7 @@
   },
   "127421": {
     "commit": "dd820a13a28a6ed1a7dc5e556fd8c0a9493a2764",
-    "text": "Fixes the ability to set the `resolvConf` option in drop-in kubelet configuration files, validates that drop-in kubelet configuration files are in a supported version.",
+    "text": "Fixed the ability to set the resolvConf option in drop-in kubelet configuration files and added validation to ensure that these configuration files are in a supported version.",
     "markdown": "Fixes the ability to set the `resolvConf` option in drop-in kubelet configuration files, validates that drop-in kubelet configuration files are in a supported version. ([#127421](https://github.com/kubernetes/kubernetes/pull/127421), [@liggitt](https://github.com/liggitt)) [SIG Node]",
     "author": "liggitt",
     "author_url": "https://github.com/liggitt",
