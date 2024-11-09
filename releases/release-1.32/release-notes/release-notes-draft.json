@@ -4159,7 +4159,7 @@
   },
   "128182": {
     "commit": "442183a9298e37cb655b4a3f48462ee30e475069",
-    "text": "Fixes 1.31 regression that can crash kube-controller-manager's service-lb-controller loop",
+    "text": "Fixed 1.31 regression that can crash kube-controller-manager's service-lb-controller loop",
     "markdown": "Fixes 1.31 regression that can crash kube-controller-manager's service-lb-controller loop ([#128182](https://github.com/kubernetes/kubernetes/pull/128182), [@carlory](https://github.com/carlory)) [SIG API Machinery, Cloud Provider and Network]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
