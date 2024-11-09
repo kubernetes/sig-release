@@ -2300,7 +2300,7 @@
   },
   "127058": {
     "commit": "6b2a5b84e58413f1736b862bad972fd4acc02dc0",
-    "text": "Remove GAed feature gates ServerSideApply/ServerSideFieldValidation",
+    "text": "Removed GAed feature gates ServerSideApply/ServerSideFieldValidation",
     "markdown": "Remove GAed feature gates ServerSideApply/ServerSideFieldValidation ([#127058](https://github.com/kubernetes/kubernetes/pull/127058), [@carlory](https://github.com/carlory)) [SIG API Machinery]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
