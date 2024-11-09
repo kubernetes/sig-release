@@ -2005,7 +2005,7 @@
   },
   "126981": {
     "commit": "685b8b3ba17addf5a2ab5b452411c8be7d1e5dfd",
-    "text": "Promote SizeMemoryBackedVolumes to stable",
+    "text": "Promoted SizeMemoryBackedVolumes to stable",
     "markdown": "Promote SizeMemoryBackedVolumes to stable ([#126981](https://github.com/kubernetes/kubernetes/pull/126981), [@kannon92](https://github.com/kannon92)) [SIG Node, Storage and Testing]",
     "author": "kannon92",
     "author_url": "https://github.com/kannon92",
