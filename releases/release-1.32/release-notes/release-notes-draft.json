@@ -2814,7 +2814,7 @@
   },
   "127417": {
     "commit": "8e17456a01596f18bbfc6862e4987eb71e060beb",
-    "text": "Fix a bug on the endpoints controller that does not reconcile the Endpoint object after this is truncated (it gets more than 1000 endpoints addresses)",
+    "text": "Fixed a bug in the endpoints controller where the Endpoint object was not reconciled after being truncated (i.e., when it had more than 1000 endpoint addresses).",
     "markdown": "Fix a bug on the endpoints controller that does not reconcile the Endpoint object after this is truncated (it gets more than 1000 endpoints addresses) ([#127417](https://github.com/kubernetes/kubernetes/pull/127417), [@aojea](https://github.com/aojea)) [SIG Apps, Network and Testing]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
