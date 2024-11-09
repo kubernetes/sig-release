@@ -2340,7 +2340,7 @@
   },
   "127083": {
     "commit": "4bc6a11d78b0506bf7c20b71c9e12e695bcab737",
-    "text": "Implement new cluster events UpdatePodSchedulingGatesEliminated and UpdatePodTolerations for scheduler plugins.",
+    "text": "Implemented new cluster events UpdatePodSchedulingGatesEliminated and UpdatePodTolerations for scheduler plugins.",
     "markdown": "Implement new cluster events UpdatePodSchedulingGatesEliminated and UpdatePodTolerations for scheduler plugins. ([#127083](https://github.com/kubernetes/kubernetes/pull/127083), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
