@@ -1955,7 +1955,7 @@
   },
   "126976": {
     "commit": "14f2cab4deae393d5beb9f3ab66a31147feb8030",
-    "text": "Fixes a 1.31 regression starting kubelet on Windows: Revert \"fix: handle socket file detection on Windows\"",
+    "text": "Fixed a 1.31 regression starting kubelet on Windows: Revert \"fix: handle socket file detection on Windows\"",
     "markdown": "Fixes a 1.31 regression starting kubelet on Windows: Revert \"fix: handle socket file detection on Windows\" ([#126976](https://github.com/kubernetes/kubernetes/pull/126976), [@jsturtevant](https://github.com/jsturtevant)) [SIG Node]",
     "author": "jsturtevant",
     "author_url": "https://github.com/jsturtevant",
