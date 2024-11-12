@@ -80,9 +80,9 @@ Release Team selection should happen in accordance with the [Release Team select
 
 ### Lead Shadows
 
-Once you have selected your Lead Shadows, each Shadow should get assigned to support two teams. One should be a team they have previously led or have extensive experience in. The other will be a team they have had no exposure to prior. This will make sure that they are well-rounded to step up to lead, and the subteams will get timely support.
+Once you have selected your Lead Shadows, each Shadow should get assigned to support two teams. One should be a team they have previously led or have extensive experience in. The other will be a team they have had no exposure to prior. They will work closely with their subteams to provide timely support. This will make sure that they are well-rounded to step up to lead.
 
-In the event that a subteam loses a shadow, we might ask the paired Lead Shadow to step in as backup Shadow.
+In the event that a subteam loses a shadow, we might ask the paired Lead Shadow to step in as a backup Shadow.
 
 ## Standards
 
