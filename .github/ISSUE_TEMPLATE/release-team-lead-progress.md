@@ -90,6 +90,7 @@ Additional information can be found in the [release team lead handbook](https://
 - [ ] Release schedule finalized
 - [ ] Begin paying attention to CI signal, as it may begin degrading soon after the prior release is cut and any slips must be caught and rectified promptly.
 - [ ] Meet your Shadows and create a communication channel with them. Establish expectations and share out work - delegate!
+- [ ] Pair your Shadows to support two subteams for the duration of the release.
 - [ ] Request review of this document by the Release Team Lead shadow(s). The shadow(s) should also take all actions in this document around joining groups and requesting access permissions.
 - [ ] Update the SIG Release groups in the `k/k8s.io/groups/sig-release/groups.yaml` with the following:
   - [ ] Add Lead and Lead shadows to members of `k8s-infra-release-viewers`
