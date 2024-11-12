@@ -1,0 +1,4 @@
+pr: 128124
+releasenote:
+  text: TopologyManagerPolicyOptions feature-flag is promoted to GA
+pr_body: ""

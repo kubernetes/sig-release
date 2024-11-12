@@ -1,0 +1,4 @@
+pr: 127565
+releasenote:
+  text: 'DRA: fixed several issues related to "allocationMode: all"'
+pr_body: ""

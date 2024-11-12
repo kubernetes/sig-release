@@ -1,0 +1,4 @@
+pr: 128317
+releasenote:
+  text: '`ComponentSLIs` feature is marked as GA and locked'
+pr_body: ""

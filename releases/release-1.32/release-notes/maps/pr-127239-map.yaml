@@ -1,0 +1,5 @@
+pr: 127239
+releasenote:
+  text: Fixes a 1.31 regression with API emulation versioning honors cohabitating
+    resources
+pr_body: ""

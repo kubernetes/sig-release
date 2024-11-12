@@ -1,0 +1,5 @@
+pr: 126957
+releasenote:
+  text: Fixes a kubelet and kube-apiserver memory leak in default 1.29 configurations
+    related to tracing.
+pr_body: ""

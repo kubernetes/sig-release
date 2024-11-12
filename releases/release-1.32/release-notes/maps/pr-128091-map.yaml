@@ -1,0 +1,4 @@
+pr: 128091
+releasenote:
+  text: Updated cni-plugins to [v1.6.0](https://github.com/containernetworking/plugins/releases/tag/v1.6.0).
+pr_body: ""
