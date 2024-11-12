@@ -1,6 +1,7 @@
 pr: 125923
 releasenote:
-  text: 'Fixed a bug where the kubelet ephemerally failed with `failed to initialize
-    top level QOS containers: root container [kubepods] doesn't exist`, due to the
-    cpuset cgroup being deleted on cgroup v2 with systemd cgroup manager.'
+  text: >
+    Fixed a bug where the kubelet ephemerally failed with `failed to initialize top
+    level QOS containers: root container [kubepods] doesn't exist`, due to the cpuset
+    cgroup being deleted on cgroup v2 with systemd cgroup manager.
 pr_body: ""
