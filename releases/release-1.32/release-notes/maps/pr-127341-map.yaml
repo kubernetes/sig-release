@@ -1,4 +1,4 @@
 pr: 127341
 releasenote:
-  text: Fully remove PostStartHookContext.StopCh
+  text: Fully removed `PostStartHookContext.StopCh`.
 pr_body: ""
