@@ -1,5 +1,5 @@
 pr: 126976
 releasenote:
-  text: 'Fixes a 1.31 regression starting kubelet on Windows: Revert "fix: handle
-    socket file detection on Windows"'
+  text: 'Fixed a 1.31 regression starting kubelet on Windows: Revert "fix: handle
+    socket file detection on Windows".'
 pr_body: ""
