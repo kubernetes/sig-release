@@ -1,4 +1,4 @@
 pr: 127187
 releasenote:
-  text: Locking the feature custom profiling in kubectl debug to true.
+  text: Locked the feature custom profiling in kubectl debug to true.
 pr_body: ""
