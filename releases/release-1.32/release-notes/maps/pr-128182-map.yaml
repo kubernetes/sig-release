@@ -1,5 +1,5 @@
 pr: 128182
 releasenote:
-  text: Fixes 1.31 regression that can crash kube-controller-manager's service-lb-controller
-    loop
+  text: Fixed 1.31 regression that can crash kube-controller-manager's service-lb-controller
+    loop.
 pr_body: ""
