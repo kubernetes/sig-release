@@ -1,5 +1,5 @@
 pr: 127661
 releasenote:
-  text: 'DRA: the resource claim controller now maintains metrics about the total
+  text: 'DRA: The resource claim controller now maintains metrics about the total
     number of ResourceClaims and the number of allocated ResourceClaims.'
 pr_body: ""
