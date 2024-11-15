@@ -1,4 +1,4 @@
 pr: 124285
 releasenote:
-  text: 'CRI: Add field to support CPU affinity on Windows.'
+  text: 'CRI: Added a field to support CPU affinity on Windows.'
 pr_body: ""
