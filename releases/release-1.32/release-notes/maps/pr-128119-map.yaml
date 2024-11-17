@@ -1,0 +1,5 @@
+pr: 128119
+releasenote:
+  text: Clarified an API validation error for toleration if `operator` is `Exists`
+    and `value` is not empty.
+pr_body: ""

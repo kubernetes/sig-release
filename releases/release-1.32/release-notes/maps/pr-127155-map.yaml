@@ -1,0 +1,5 @@
+pr: 127155
+releasenote:
+  text: Added a kubelet metric `container_aligned_compute_resources_count`  to report
+    the count of containers getting aligned compute resources.
+pr_body: ""

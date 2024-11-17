@@ -1,0 +1,5 @@
+pr: 128259
+releasenote:
+  text: The `build-tag` flag is reintroduced to conversion-gen and defaulter-gen which
+    allow users to inject custom build tag during code generation process.
+pr_body: ""

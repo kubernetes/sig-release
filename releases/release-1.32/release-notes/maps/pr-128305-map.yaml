@@ -1,0 +1,4 @@
+pr: 128305
+releasenote:
+  text: Fixed a bug where `PodCIDR` was released before node was deleted.
+pr_body: ""

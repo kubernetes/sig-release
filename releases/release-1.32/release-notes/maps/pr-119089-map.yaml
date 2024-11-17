@@ -1,0 +1,5 @@
+pr: 119089
+releasenote:
+  text: Output a log as v4-level when probe is triggered and shift the periodic timer
+    of ReadinessProbe after manual run.
+pr_body: ""

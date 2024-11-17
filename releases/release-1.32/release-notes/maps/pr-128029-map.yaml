@@ -1,0 +1,6 @@
+pr: 128029
+releasenote:
+  text: 'Change OOM score adjustment calculation for sidecar container : the OOM adjustment
+    for these containers will match or fall below the OOM score adjustment of regular
+    containers in the Pod.'
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 126562
+releasenote:
+  text: |-
+    Fixed an issue in the kubelet that showed when writeable layers and read-only layers were at different paths within the same mount.
+    Kubernetes was previously detecting that the image filesystem was split, even when that was not really the case.
+pr_body: ""

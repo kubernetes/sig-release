@@ -1,0 +1,6 @@
+pr: 128172
+releasenote:
+  text: 'kube-apiserver: Promoted the `StructuredAuthorizationConfiguration` feature
+    gate to GA. The `--authorization-config` flag now accepts `AuthorizationConfiguration`
+    in version `apiserver.config.k8s.io/v1` (with no changes from `apiserver.config.k8s.io/v1beta1`).'
+pr_body: ""

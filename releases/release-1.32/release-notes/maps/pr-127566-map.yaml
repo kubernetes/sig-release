@@ -1,0 +1,5 @@
+pr: 127566
+releasenote:
+  text: Added kubelet support for systemd watchdog integration. With this enabled,
+    systemd can automatically recover a hung kubelet.
+pr_body: ""

@@ -1,0 +1,8 @@
+pr: 128179
+releasenote:
+  text: Fixes a bug in the `k8s.io/cloud-provider/service`  controller, it may panic
+    when a service is updated because the event recorder was used before it was initialized.
+    All cloud providers should using the `v1.31.0` cloud provider service controller
+    must ensure that the controllers is initialized before the informer start to process
+    events or update it to the version 1.32.0.
+pr_body: ""

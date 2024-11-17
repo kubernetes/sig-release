@@ -1,0 +1,4 @@
+pr: 126981
+releasenote:
+  text: Promoted `SizeMemoryBackedVolumes` to stable.
+pr_body: ""

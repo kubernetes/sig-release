@@ -1,0 +1,4 @@
+pr: 127402
+releasenote:
+  text: Graduate Job's `ManagedBy` field to beta.
+pr_body: ""
