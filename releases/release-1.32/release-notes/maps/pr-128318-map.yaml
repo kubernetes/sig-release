@@ -1,5 +1,5 @@
 pr: 128318
 releasenote:
   text: Reset streams when an error happens during port-forward allowing kubectl to
-    maintain port-forward connection open
+    maintain port-forward connection open.
 pr_body: ""
