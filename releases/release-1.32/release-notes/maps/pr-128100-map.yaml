@@ -1,5 +1,5 @@
 pr: 128100
 releasenote:
-  text: Disallowed label values will show up as "unexpected" in all system components
-    metrics
+  text: >
+    Disallowed label values will show up as "unexpected" in all system components' metrics.
 pr_body: ""
