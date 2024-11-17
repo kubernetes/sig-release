@@ -1,6 +1,6 @@
 pr: 126543
 releasenote:
-  text: Fixed a regression in default 1.29 configurations with the SidecarContainers
+  text: Fixed a regression in default 1.29 configurations with the `SidecarContainers`
     feature enabled, where init containers may fail to start due to a temporary container
     runtime failure.
 pr_body: ""
