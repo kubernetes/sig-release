@@ -100,7 +100,6 @@ Additional information can be found in the [release team lead handbook](https://
   - [ ] Add Role Leads and Role shadows to members of `release-team`
   - [ ] Add Role shadows and Lead shadows to members of `release-team-shadows`
   - [ ] Add EA to manager of release-team-shadows, if EA is owner of `release-team-shadows` already then add Lead to manager of `release-team-shadows`
-  - [ ] Add Bug Triage Lead and shadows to `k8s-infra-rbac-triageparty-release`
 - [ ] Ensured that there is a branch manager available for cutting 1.XX.0-alpha.1
 
 - Assist the Enhancements Lead in collecting planned work from SIGs
@@ -162,7 +161,7 @@ Code Freeze begins, and it’s now the home stretch of the release. SIGs will ne
 - [ ] Send out a reminder email to [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev)
 
 #### With Code Freeze
-- As needed, assist the Bug Triage Lead and Enhancements Lead removing PRs and enhancements from the milestone that aren't merged in time `/milestone clear`
+- As needed, assist the Release Signal Lead and Enhancements Lead removing PRs and enhancements from the milestone that aren't merged in time `/milestone clear`
 
 #### After Code Freeze
 - [ ] Verified that the [`release-1.XX` branch](https://github.com/kubernetes/kubernetes/branches) has been automatically created at the start of Test Freeze
