@@ -1,0 +1,4 @@
+pr: 126533
+releasenote:
+  text: Realigned line breaks from `kubectl explain` descriptions.
+pr_body: ""

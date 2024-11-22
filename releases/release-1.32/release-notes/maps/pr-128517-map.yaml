@@ -1,0 +1,4 @@
+pr: 128517
+releasenote:
+  text: Graduated Kubelet Memory Manager to GA.
+pr_body: ""

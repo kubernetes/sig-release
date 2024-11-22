@@ -1,0 +1,4 @@
+pr: 128444
+releasenote:
+  text: Added `--concurrent-daemonset-syncs` command line flag to kube-controller-manager.
+pr_body: ""

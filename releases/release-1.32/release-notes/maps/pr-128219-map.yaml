@@ -1,0 +1,7 @@
+pr: 128219
+releasenote:
+  text: 'kubelet: Fix - the volume manager didn''t check the device mount state in
+    the #     actual state of the world before marking the volume as detached. It
+    may cause #     a pod to be stuck in the Terminating state due to the above issue
+    when it was #     deleted.'
+pr_body: ""
