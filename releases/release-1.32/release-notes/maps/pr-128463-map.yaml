@@ -1,4 +1,4 @@
 pr: 128463
 releasenote:
-  text: ""
+  text: "Fixed the reporting of elapsed times during evaluation of ValidatingAdmissionPolicy decisions and annotations. The apiserver_validating_admission_policy_check_duration metrics will now show elapsed times and no longer be zero."
 pr_body: ""
