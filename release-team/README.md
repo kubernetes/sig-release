@@ -148,9 +148,11 @@ The [milestone maintainers](https://github.com/kubernetes/community/blob/master/
 
 Across release cycles, a "/milestone" is one of the best signals for [issue triage](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#milestones) whether or not an issue or PR is actually targeted for the current release milestone.
 
+Adding the in-progress release milestone to pull requests after the Code Freeze is strictly prohibited, as it can compromise the stability of the release. Prior to making such changes, approval must be obtained from both the Release Team Lead and the Emeritus Advisor(s).
+
 Each release cycle, the current Release Team Lead must update membership to the aforementioned GitHub team.
 
-The actual process of maintaining milestones is owned by the SIGs and special elected contributors. The SIG release team steers the enhancement through the release cycle and take care that only well maintained enhancements will make it up to a new major release.
+The actual process of maintaining milestones is owned by the SIGs and special elected contributors. The SIG Release team steers the enhancements through the release cycle and take care that only well-maintained enhancements will make it up to a new major release.
 ---
 
 ## Filing exceptions
