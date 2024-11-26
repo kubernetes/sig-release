@@ -1,4 +1,4 @@
 pr: 128444
 releasenote:
-  text: Added `--concurrent-daemonset-syncs` command line flag to kube-controller-manager.
+  text: Added `--concurrent-daemonset-syncs` command line flag to kube-controller-manager. This value sets the number of workers for the daemonset controller.
 pr_body: ""
