@@ -417,8 +417,8 @@
   },
   "125337": {
     "commit": "48f36acc7a13d37c357aa6abff55a01267eab8a9",
-    "text": "The kubelet, when using `--cloud-provider=external` can use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solve the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster.",
-    "markdown": "The kubelet, when using `--cloud-provider=external` can use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solve the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster. ([#125337](https://github.com/kubernetes/kubernetes/pull/125337), [@aojea](https://github.com/aojea)) [SIG Cloud Provider, Network, Node and Testing]",
+    "text": "The kubelet, when using `--cloud-provider=external` could use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solved the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster.",
+    "markdown": "The kubelet, when using `--cloud-provider=external` could use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solved the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster. ([#125337](https://github.com/kubernetes/kubernetes/pull/125337), [@aojea](https://github.com/aojea)) [SIG Cloud Provider, Network, Node and Testing]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125337",
@@ -2553,8 +2553,8 @@
   },
   "127094": {
     "commit": "b337f048db4c88c08af257951de2fc20cd7607f9",
-    "text": "Allows PreStop lifecycle handler's sleep action to have a zero value",
-    "markdown": "Allows PreStop lifecycle handler's sleep action to have a zero value ([#127094](https://github.com/kubernetes/kubernetes/pull/127094), [@sreeram-venkitesh](https://github.com/sreeram-venkitesh)) [SIG Apps, Node and Testing]",
+    "text": "Allowed PreStop lifecycle handler's sleep action to have a zero value",
+    "markdown": "Allowed PreStop lifecycle handler's sleep action to have a zero value ([#127094](https://github.com/kubernetes/kubernetes/pull/127094), [@sreeram-venkitesh](https://github.com/sreeram-venkitesh)) [SIG Apps, Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3431,8 +3431,8 @@
   },
   "127506": {
     "commit": "a339a36a368f315f440bfdb7ae1bbd48556441ae",
-    "text": "Added a kubelet metrics to report informations about the cpu pools managed by cpumanager when the static policy is in use.",
-    "markdown": "Added a kubelet metrics to report informations about the cpu pools managed by cpumanager when the static policy is in use. ([#127506](https://github.com/kubernetes/kubernetes/pull/127506), [@ffromani](https://github.com/ffromani)) [SIG Node and Testing]",
+    "text": "Added kubelet metrics to report information about the cpu pools managed by cpumanager when the static policy is in use.",
+    "markdown": "Added kubelet metrics to report information about the cpu pools managed by cpumanager when the static policy is in use. ([#127506](https://github.com/kubernetes/kubernetes/pull/127506), [@ffromani](https://github.com/ffromani)) [SIG Node and Testing]",
     "author": "ffromani",
     "author_url": "https://github.com/ffromani",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127506",
@@ -3792,8 +3792,8 @@
   },
   "127744": {
     "commit": "6bc0768c62b9dade91b22d1bfcc115edf1f0ccad",
-    "text": "Tighten validation on the qosClass field of pod status. This field is immutable but it would be populated with the old status by kube-apiserver if it is unset in the new status when updating this field via the status subsource.",
-    "markdown": "Tighten validation on the qosClass field of pod status. This field is immutable but it would be populated with the old status by kube-apiserver if it is unset in the new status when updating this field via the status subsource. ([#127744](https://github.com/kubernetes/kubernetes/pull/127744), [@carlory](https://github.com/carlory)) [SIG Apps, Instrumentation, Node, Storage and Testing]",
+    "text": "Tighten validation on the `qosClass` field of pod status. This field is immutable but it would be populated with the old status by kube-apiserver if it is unset in the new status when updating this field via the `/status` subresource.",
+    "markdown": "Tighten validation on the `qosClass` field of pod status. This field is immutable but it would be populated with the old status by kube-apiserver if it is unset in the new status when updating this field via the `/status` subresource. ([#127744](https://github.com/kubernetes/kubernetes/pull/127744), [@carlory](https://github.com/carlory)) [SIG Apps, Instrumentation, Node, Storage and Testing]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127744",
@@ -4075,8 +4075,8 @@
   },
   "127981": {
     "commit": "97c79df18f8552facf63682b23d9380253972d48",
-    "text": "Implemented a new, alpha `seLinuxChangePolicy` field within a Pod-level `securityContext`, under SELinuxChangePolicy feature gate. This field allows for opting out from mounting Pod volumes with SELinux label when SELinuxMount feature is enabled (it is alpha and disabled by default now).\nPlease see [the KEP](https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1710-selinux-relabeling#story-3-cluster-upgrade) how we expect to warn users before any SELinux behavior changes and how they can opt-out before. Note that this field and feature gate is useful only with clusters that run with SELinux enabled. No action is required on clusters without SELinux.",
-    "markdown": "Implemented a new, alpha `seLinuxChangePolicy` field within a Pod-level `securityContext`, under SELinuxChangePolicy feature gate. This field allows for opting out from mounting Pod volumes with SELinux label when SELinuxMount feature is enabled (it is alpha and disabled by default now).\n  Please see [the KEP](https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1710-selinux-relabeling#story-3-cluster-upgrade) how we expect to warn users before any SELinux behavior changes and how they can opt-out before. Note that this field and feature gate is useful only with clusters that run with SELinux enabled. No action is required on clusters without SELinux. ([#127981](https://github.com/kubernetes/kubernetes/pull/127981), [@jsafrane](https://github.com/jsafrane)) [SIG API Machinery, Apps, Architecture, Node, Storage and Testing]",
+    "text": "Implemented a new, alpha `seLinuxChangePolicy` field within a Pod-level `securityContext`, under `SELinuxChangePolicy` feature gate. This field allows for opting out from mounting Pod volumes with SELinux label when `SELinuxMount` feature is enabled (it is alpha and disabled by default now).\nPlease see [the KEP](https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1710-selinux-relabeling#story-3-cluster-upgrade) how we expect to warn users before any SELinux behavior changes and how they can opt-out before. Note that this field and feature gate is useful only with clusters that run with SELinux enabled. No action is required on clusters without SELinux.",
+    "markdown": "Implemented a new, alpha `seLinuxChangePolicy` field within a Pod-level `securityContext`, under `SELinuxChangePolicy` feature gate. This field allows for opting out from mounting Pod volumes with SELinux label when `SELinuxMount` feature is enabled (it is alpha and disabled by default now).\n  Please see [the KEP](https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1710-selinux-relabeling#story-3-cluster-upgrade) how we expect to warn users before any SELinux behavior changes and how they can opt-out before. Note that this field and feature gate is useful only with clusters that run with SELinux enabled. No action is required on clusters without SELinux. ([#127981](https://github.com/kubernetes/kubernetes/pull/127981), [@jsafrane](https://github.com/jsafrane)) [SIG API Machinery, Apps, Architecture, Node, Storage and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4263,8 +4263,8 @@
   },
   "128046": {
     "commit": "9fe41b6198a47d19a598b75eabee3d87b1d0fde1",
-    "text": "PodLifecycleSleepAction is graduated to GA",
-    "markdown": "PodLifecycleSleepAction is graduated to GA ([#128046](https://github.com/kubernetes/kubernetes/pull/128046), [@AxeZhan](https://github.com/AxeZhan)) [SIG Architecture, Node and Testing]",
+    "text": "`PodLifecycleSleepAction` feature-flag graduated to GA",
+    "markdown": "`PodLifecycleSleepAction` feature-flag graduated to GA ([#128046](https://github.com/kubernetes/kubernetes/pull/128046), [@AxeZhan](https://github.com/AxeZhan)) [SIG Architecture, Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
