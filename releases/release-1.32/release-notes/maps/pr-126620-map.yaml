@@ -1,0 +1,4 @@
+pr: 126620
+releasenote:
+  text: Fixed the bug of `InPlacePodVerticalScaling` state un-marshalling. State stored in `/var/lib/kubelet/pod_status_manager_state` now can always be read back after kubelet restart. Since the checkpoint format was changed to fix the issue, if you are using the feature `InPlacePodVerticalScaling`, please clean up the state file `/var/lib/kubelet/pod_status_manager_state` when upgrading the kubelet as failure to do it will lead to incompatible state formats and kubelet's failure to start.
+pr_body: ""
