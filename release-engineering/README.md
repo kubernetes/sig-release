@@ -114,7 +114,6 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 ### Tracking Progress
 
 - We use project boards linked in the [Roadmap and Vision document](https://github.com/kubernetes/sig-release/blob/master/roadmap.md) and try to review them during the Release Engineering meeting.
-- As of Autumn 2020 SIG Release is setting up an instance of Triage Party to accelerate and automate triaging issues.
 - We organize our work into sub-themes based on urgency and impact, and identify drivers of those topics.
 - We call out and celebrate achievements. Some suggested communication paths for amplifying:
     - **First order**: role promotions, finishing a PR, etc.:
