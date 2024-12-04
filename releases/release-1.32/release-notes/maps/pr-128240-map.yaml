@@ -1,0 +1,24 @@
+pr: 128240
+releasenote:
+  text: Added driver-owned fields in ResourceClaim.Status to report device status
+    data for each allocated device.
+  documentation:
+  - description: '[KEP]'
+    url: https://github.com/kubernetes/enhancements/issues/4817
+    type: KEP
+  author: LionelJouin
+  areas:
+  - test
+  - code-generation
+  kinds:
+  - api-change
+  - feature
+  sigs:
+  - api-machinery
+  - network
+  - node
+  - testing
+  feature: true
+  action_required: false
+  do_not_publish: false
+pr_body: ""

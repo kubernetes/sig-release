@@ -1,0 +1,20 @@
+pr: 124952
+releasenote:
+  text: The Job controller now considers sidecar container restart counts when removing
+    pods.
+  documentation:
+  - description: '[KEP]: <'
+    url: https://github.com/kubernetes/enhancements/issues/753>
+    type: KEP
+  author: AxeZhan
+  areas:
+  - kubectl
+  kinds:
+  - feature
+  sigs:
+  - apps
+  - cli
+  feature: true
+  action_required: false
+  do_not_publish: false
+pr_body: ""

@@ -1,0 +1,19 @@
+pr: 128503
+releasenote:
+  text: With the CBORServingAndStorage feature gate enabled, built-in APIs can now
+    be served in CBOR format for clients that request it.
+  documentation: []
+  author: benluddy
+  areas:
+  - test
+  - apiserver
+  kinds:
+  - cleanup
+  sigs:
+  - api-machinery
+  - etcd
+  - testing
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""

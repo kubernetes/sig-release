@@ -1,0 +1,23 @@
+pr: 126806
+releasenote:
+  text: "1. When the kubelet constructs the CRI mounts for the container which references
+    an `image` volume source type, it passes the missing mount attributes to the CRI
+    implementation, including `readOnly`, `propagation`, and `recursiveReadOnly`.
+    When the readOnly field of the containerMount is explicitly set to false, the
+    kubelet will now take the `readOnly`as true to the CRI implementation because
+    the image volume plugin requires the mount to be read-only. \n2. Fixed a bug where
+    the pod is unexpectedly running when the `image` volume source type is used and
+    mounted to `/etc/hosts` in the container."
+  documentation: []
+  author: carlory
+  areas:
+  - kubelet
+  kinds:
+  - bug
+  sigs:
+  - node
+  - storage
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""

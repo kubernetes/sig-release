@@ -1,0 +1,22 @@
+pr: 128646
+releasenote:
+  text: The alpha Dynamic Resource Allocation gRPC API is still available, but might
+    be removed in future releases. Driver authors should update their DRA drivers
+    to use the v1beta1 gRPC API.
+  documentation:
+  - description: '[KEP]'
+    url: https://github.com/kubernetes/enhancements/issues/4381
+    type: KEP
+  author: pohly
+  areas:
+  - test
+  - kubelet
+  kinds:
+  - cleanup
+  sigs:
+  - node
+  - testing
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""

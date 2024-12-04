@@ -1,0 +1,17 @@
+pr: 121206
+releasenote:
+  text: |-
+    `StartupProbe` is now stopped explicity when `successThrethold` is reached.
+    This eliminates the problem that `StartupProbe` is executed more than `successThreshold`.
+  documentation: []
+  author: mochizuki875
+  areas:
+  - kubelet
+  kinds:
+  - bug
+  sigs:
+  - node
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""

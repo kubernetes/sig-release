@@ -1,0 +1,16 @@
+pr: 128556
+releasenote:
+  text: Introduced a new metric kubelet_admission_rejections_total to track the number
+    of pods rejected during admission
+  documentation: []
+  author: AnishShah
+  areas:
+  - kubelet
+  kinds:
+  - feature
+  sigs:
+  - node
+  feature: true
+  action_required: false
+  do_not_publish: false
+pr_body: ""

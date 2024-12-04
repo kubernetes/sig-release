@@ -1,0 +1,42 @@
+pr: 128190
+releasenote:
+  text: Added support to the kube-apiserver for an alpha feature enabling external
+    signing of service account tokens and fetching of public verifying keys, by enabling
+    the alpha `ExternalServiceAccountTokenSigner` feature gate and specifying `--service-account-signing-endpoint`.
+    The flag value can either be the location of a Unix domain socket on a filesystem,
+    or be prefixed with an @ symbol and name a Unix domain socket in the abstract
+    socket namespace.
+  documentation:
+  - description: '[KEP]'
+    url: https://github.com/kubernetes/enhancements/tree/master/keps/sig-auth/740-service-account-external-signing
+    type: KEP
+  - description: '[Issue]'
+    url: https://github.com/kubernetes/enhancements/issues/740
+    type: KEP
+  - description: '[Discussion]'
+    url: https://docs.google.com/document/d/1QVtBX8J2Tk70toefDegXMXigMFzrdQfezjlhBrKR29Y/edit?tab=t.0
+    type: external
+  - description: '[Publish request]'
+    url: https://github.com/kubernetes/org/issues/5224
+    type: external
+  author: HarshalNeelkamal
+  areas:
+  - test
+  - apiserver
+  - release-eng
+  - dependency
+  kinds:
+  - feature
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - etcd
+  - instrumentation
+  - node
+  - release
+  - testing
+  feature: true
+  action_required: false
+  do_not_publish: false
+pr_body: ""
