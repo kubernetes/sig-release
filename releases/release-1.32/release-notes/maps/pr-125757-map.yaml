@@ -1,0 +1,15 @@
+pr: 125757
+releasenote:
+  text: ""
+  documentation: []
+  author: esotsal
+  areas:
+  - kubelet
+  kinds:
+  - bug
+  sigs:
+  - node
+  feature: false
+  action_required: false
+  do_not_publish: true
+pr_body: ""

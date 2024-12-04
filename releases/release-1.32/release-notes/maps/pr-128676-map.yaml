@@ -1,0 +1,19 @@
+pr: 128676
+releasenote:
+  text: ""
+  documentation:
+  - description: '[KEP]'
+    url: https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/1287-in-place-update-pod-resources
+    type: KEP
+  author: vivzbansal
+  areas:
+  - kubelet
+  kinds:
+  - cleanup
+  - feature
+  sigs:
+  - node
+  feature: true
+  action_required: false
+  do_not_publish: true
+pr_body: ""

@@ -1,0 +1,19 @@
+pr: 126653
+releasenote:
+  text: Fixed a bug where phase of pods with regular init containers was not pending
+    when the regular init container had not finished running after a node restart.
+  documentation: []
+  author: zhifei92
+  areas:
+  - test
+  - kubelet
+  - e2e-test-framework
+  kinds:
+  - bug
+  sigs:
+  - node
+  - testing
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""
