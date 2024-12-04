@@ -1,6 +1,6 @@
 pr: 128240
 releasenote:
-  text: Added driver-owned fields in ResourceClaim.Status to report device status
+  text: Added driver-owned fields in `ResourceClaim.Status` to report device status
     data for each allocated device.
   documentation:
   - description: '[KEP]'
