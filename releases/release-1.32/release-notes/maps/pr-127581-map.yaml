@@ -1,6 +1,6 @@
 pr: 127581
 releasenote:
-  text: Added a /flagz endpoint for kube-apiserver endpoint
+  text: Added a `/flagz` endpoint for kube-apiserver endpoint
   documentation: []
   author: richabanker
   areas:
