@@ -1,6 +1,6 @@
 pr: 128623
 releasenote:
-  text: Droped support for InPlacePodVerticalScaling feature in Windows.
+  text: Droped support for `InPlacePodVerticalScaling` feature in Windows.
   documentation:
   - description: KEP
     url: https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/1287-in-place-update-pod-resources
