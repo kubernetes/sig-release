@@ -1,6 +1,6 @@
 pr: 128640
 releasenote:
-  text: Added a one-time random duration of up to 50% of kubelet's nodeStatusReportFrequency
+  text: Added a one-time random duration of up to 50% of kubelet's `nodeStatusReportFrequency`
     to help spread the node status update load evenly over time.
   documentation: []
   author: mengqiy
