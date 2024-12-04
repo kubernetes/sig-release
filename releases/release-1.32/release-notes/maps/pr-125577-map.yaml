@@ -1,6 +1,6 @@
 pr: 125577
 releasenote:
-  text: Added a /statusz endpoint for kube-apiserver endpoint
+  text: Added a `/statusz` endpoint for kube-apiserver endpoint
   documentation: []
   author: richabanker
   areas:
