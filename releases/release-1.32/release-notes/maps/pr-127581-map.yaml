@@ -1,17 +1,17 @@
 pr: 127581
 releasenote:
-  text: Added a `/flagz` endpoint for kube-apiserver endpoint
+  text: Added a `/flagz` endpoint for kube-apiserver endpoint.
   documentation: []
   author: richabanker
   areas:
-  - apiserver
+    - apiserver
   kinds:
-  - api-change
+    - api-change
   sigs:
-  - api-machinery
-  - architecture
-  - auth
-  - instrumentation
+    - api-machinery
+    - architecture
+    - auth
+    - instrumentation
   feature: false
   action_required: false
   do_not_publish: false

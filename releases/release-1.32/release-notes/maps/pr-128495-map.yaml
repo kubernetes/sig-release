@@ -1,7 +1,7 @@
 pr: 128495
 releasenote:
   text: Fixed a race condition that could result in erroneous volume unmounts for
-    flex volume plugins on kubelet restart
+    flex volume plugins on kubelet restart.
   documentation: []
   author: olyazavr
   areas: []
