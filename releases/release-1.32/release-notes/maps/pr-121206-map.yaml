@@ -1,9 +1,9 @@
 pr: 121206
 releasenote:
   text: |-
-    `StartupProbe` was explicitly stopped when the `successThreshold` was reached.
-   This eliminated the problem of executing `StartupProbe` more times than 
- the `successThreshold`.
+     `StartupProbe` was explicitly stopped when the `successThreshold` was reached.
+     This eliminated the problem of executing `StartupProbe` more times than 
+     the `successThreshold`.
   documentation: []
   author: mochizuki875
   areas:

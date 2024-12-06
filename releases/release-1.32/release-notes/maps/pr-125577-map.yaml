@@ -1,30 +1,32 @@
 pr: 125577
 releasenote:
-  text: Added a `/statusz` endpoint for kube-apiserver endpoint
+  text: |-
+    Added a `/statusz` endpoint for the kube-apiserver endpoint.
   documentation: []
   author: richabanker
   areas:
-  - test
-  - kubelet
-  - kube-proxy
-  - apiserver
-  - kubectl
-  - provider/gcp
-  - dependency
+    - test
+    - kubelet
+    - kube-proxy
+    - apiserver
+    - kubectl
+    - provider/gcp
+    - dependency
   kinds:
-  - feature
+    - feature
   sigs:
-  - api-machinery
-  - apps
-  - architecture
-  - auth
-  - cli
-  - cloud-provider
-  - instrumentation
-  - network
-  - node
-  - testing
+    - api-machinery
+    - apps
+    - architecture
+    - auth
+    - cli
+    - cloud-provider
+    - instrumentation
+    - network
+    - node
+    - testing
   feature: true
   action_required: false
   do_not_publish: false
 pr_body: ""
+
