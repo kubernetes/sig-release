@@ -1,0 +1,16 @@
+pr: 121968
+releasenote:
+  text:
+    Added warnings for overlap paths in ConfigMap, Secret, DownwardAPI, Projected.
+    Added warning for cases when ProjectedVolume with sources is provided.
+  documentation: []
+  author: Peac36
+  areas: []
+  kinds:
+  - bug
+  sigs:
+  - auth
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""
