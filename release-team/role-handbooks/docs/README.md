@@ -22,7 +22,7 @@ This document covers the responsibilities, time commitments, and timeline for Do
 
 The Docs Lead will be responsible for introducing shadows to the team and the release notes subcommand in [krel](https://github.com/kubernetes/release/tree/master/docs/krel). Shadows should expect to perform this task at least once themselves. The Docs Lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to avoid their coalescence during the later weeks.
 
-If there are potential fixes to the issues indicated and team members are keen, fixes and automation of the process is very welcome but not expected.
+If there are potential fixes to the issues indicated and team members are keen, fixes and automation of the process are encouraged but not required.
 
 **Please refer to the Docs [Release Timeline](/release-team/role-handbooks/docs/Release-Timeline.md) for an exhaustive list of the responsibilities of the Docs Team.** 
 
@@ -108,7 +108,8 @@ Docs Lead Shadows are people who are preparing to be a Docs Lead in the future. 
 
 - Strong written and verbal communications skills
 - A working knowledge of Kubernetes concepts
-- Project management experience is helpful but not required
+- Familiarity with Git and command line tools.
+- Project management experience is helpful but not required.
 - Have signed the [contributor CLA](https://github.com/kubernetes/community/blob/master/CLA.md) for Kubernetes.
 - Be invested in becoming an org member within the release cycle. This can often be achieved during the release cycle with sponsorship from a role lead. See the [Release Team onboarding guide](/release-team/release-team-onboarding.md) for more details.
 - General knowledge of our SIG Docs [areas of responsibility](https://github.com/kubernetes/community/tree/master/sig-docs#subprojects).
@@ -136,7 +137,7 @@ Reference the Docs [Release Timeline](Release-Timeline.md) for key dates and res
 - [krel](https://github.com/kubernetes/release/tree/master/docs/krel) The Kubernetes Release Toolbox *(note: always use the latest version of krel to ensure you have the latest fixes/patches)*
 - [The krel `release-notes` subcommand](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md)
 - [The old release notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
-- [Release notes website](https://relnotes.k8s.io) *(note: release notes website is only required for the final release)*
+- [Release notes website](https://relnotes.k8s.io) *(note: release notes website is automatically updated)*
 - [go-modiff](https://github.com/saschagrunert/go-modiff)
 - [Hackmd](https://hackmd.io/)
 - [LWKD](http://lwkd.info) *(note: consider contributing to LWKD as part of your role)*
