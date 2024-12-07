@@ -87,8 +87,8 @@
   },
   "121206": {
     "commit": "2f3da71f99b607450687178273668542510b1043",
-    "text": "`StartupProbe` is now stopped explicity when `successThrethold` is reached.\nThis eliminates the problem that `StartupProbe` is executed more than `successThreshold`.",
-    "markdown": "`StartupProbe` is now stopped explicity when `successThrethold` is reached.\n  This eliminates the problem that `StartupProbe` is executed more than `successThreshold`. ([#121206](https://github.com/kubernetes/kubernetes/pull/121206), [@mochizuki875](https://github.com/mochizuki875))",
+    "text": "`StartupProbe` was explicitly stopped when the `successThreshold` was reached.\nThis eliminated the problem of executing `StartupProbe` more times than \nthe `successThreshold`.",
+    "markdown": "`StartupProbe` was explicitly stopped when the `successThreshold` was reached.\n  This eliminated the problem of executing `StartupProbe` more times than \n  the `successThreshold`. ([#121206](https://github.com/kubernetes/kubernetes/pull/121206), [@mochizuki875](https://github.com/mochizuki875))",
     "author": "mochizuki875",
     "author_url": "https://github.com/mochizuki875",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/121206",
@@ -106,8 +106,8 @@
   },
   "121968": {
     "commit": "a2a32fc31aa5b118d85ce7cc2587739ab005c8fd",
-    "text": "Added warnings for overlap paths in ConfigMap, Secret, DownwardAPI, Projected.\nAdded warning for cases when ProjectedVolume with sources is provided.",
-    "markdown": "Added warnings for overlap paths in ConfigMap, Secret, DownwardAPI, Projected.\n  Added warning for cases when ProjectedVolume with sources is provided. ([#121968](https://github.com/kubernetes/kubernetes/pull/121968), [@Peac36](https://github.com/Peac36))",
+    "text": "Added warnings for overlap paths in ConfigMap, Secret, DownwardAPI, Projected. Added warning for cases when ProjectedVolume with sources is provided.",
+    "markdown": "Added warnings for overlap paths in ConfigMap, Secret, DownwardAPI, Projected. Added warning for cases when ProjectedVolume with sources is provided. ([#121968](https://github.com/kubernetes/kubernetes/pull/121968), [@Peac36](https://github.com/Peac36))",
     "author": "Peac36",
     "author_url": "https://github.com/Peac36",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/121968",
@@ -577,8 +577,8 @@
   },
   "125577": {
     "commit": "60651eb17257356a2be70ac8d2c14218c1af0834",
-    "text": "Added a /statusz endpoint for kube-apiserver endpoint",
-    "markdown": "Added a /statusz endpoint for kube-apiserver endpoint ([#125577](https://github.com/kubernetes/kubernetes/pull/125577), [@richabanker](https://github.com/richabanker)) [SIG API Machinery, Apps, Architecture, Auth, CLI, Cloud Provider, Instrumentation, Network, Node and Testing]",
+    "text": "Added a `/statusz` endpoint for the kube-apiserver endpoint.",
+    "markdown": "Added a `/statusz` endpoint for the kube-apiserver endpoint. ([#125577](https://github.com/kubernetes/kubernetes/pull/125577), [@richabanker](https://github.com/richabanker)) [SIG API Machinery, Apps, Architecture, Auth, CLI, Cloud Provider, Instrumentation, Network, Node and Testing]",
     "author": "richabanker",
     "author_url": "https://github.com/richabanker",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125577",
@@ -3994,8 +3994,8 @@
   },
   "127581": {
     "commit": "4d91d502832ce55204343d7864fe28019d87b2bb",
-    "text": "Added a /flagz endpoint for kube-apiserver endpoint",
-    "markdown": "Added a /flagz endpoint for kube-apiserver endpoint ([#127581](https://github.com/kubernetes/kubernetes/pull/127581), [@richabanker](https://github.com/richabanker)) [SIG API Machinery, Architecture, Auth and Instrumentation]",
+    "text": "Added a `/flagz` endpoint for kube-apiserver endpoint.",
+    "markdown": "Added a `/flagz` endpoint for kube-apiserver endpoint. ([#127581](https://github.com/kubernetes/kubernetes/pull/127581), [@richabanker](https://github.com/richabanker)) [SIG API Machinery, Architecture, Auth and Instrumentation]",
     "author": "richabanker",
     "author_url": "https://github.com/richabanker",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127581",
@@ -4377,8 +4377,8 @@
   },
   "127874": {
     "commit": "ad9dad07a89acd183cf925a5726291de3798da2a",
-    "text": "Fixed an issue where eviction manager was not deleting unused images or containers",
-    "markdown": "Fixed an issue where eviction manager was not deleting unused images or containers ([#127874](https://github.com/kubernetes/kubernetes/pull/127874), [@AnishShah](https://github.com/AnishShah))",
+    "text": "Fixed an issue where eviction manager was not deleting unused images or containers.",
+    "markdown": "Fixed an issue where eviction manager was not deleting unused images or containers. ([#127874](https://github.com/kubernetes/kubernetes/pull/127874), [@AnishShah](https://github.com/AnishShah))",
     "author": "AnishShah",
     "author_url": "https://github.com/AnishShah",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127874",
@@ -5367,8 +5367,8 @@
   },
   "128190": {
     "commit": "6cc357046615410434b2fa99c5a229e5db2eb6d9",
-    "text": "Added support to the kube-apiserver for an alpha feature enabling external signing of service account tokens and fetching of public verifying keys, by enabling the alpha `ExternalServiceAccountTokenSigner` feature gate and specifying `--service-account-signing-endpoint`. The flag value can either be the location of a Unix domain socket on a filesystem, or be prefixed with an @ symbol and name a Unix domain socket in the abstract socket namespace.",
-    "markdown": "Added support to the kube-apiserver for an alpha feature enabling external signing of service account tokens and fetching of public verifying keys, by enabling the alpha `ExternalServiceAccountTokenSigner` feature gate and specifying `--service-account-signing-endpoint`. The flag value can either be the location of a Unix domain socket on a filesystem, or be prefixed with an @ symbol and name a Unix domain socket in the abstract socket namespace. ([#128190](https://github.com/kubernetes/kubernetes/pull/128190), [@HarshalNeelkamal](https://github.com/HarshalNeelkamal)) [SIG API Machinery, Apps, Auth, Etcd, Instrumentation, Node, Release and Testing]",
+    "text": "Added support to the kube-apiserver for an alpha feature enabling external signing of service account tokens and fetching of public verifying keys, by enabling the Alpha `ExternalServiceAccountTokenSigner` feature gate and specifying `--service-account-signing-endpoint`. The flag value can either be the location of a Unix domain socket on a filesystem, or be prefixed with an @ symbol and name a Unix domain socket in the abstract socket namespace.",
+    "markdown": "Added support to the kube-apiserver for an alpha feature enabling external signing of service account tokens and fetching of public verifying keys, by enabling the Alpha `ExternalServiceAccountTokenSigner` feature gate and specifying `--service-account-signing-endpoint`. The flag value can either be the location of a Unix domain socket on a filesystem, or be prefixed with an @ symbol and name a Unix domain socket in the abstract socket namespace. ([#128190](https://github.com/kubernetes/kubernetes/pull/128190), [@HarshalNeelkamal](https://github.com/HarshalNeelkamal)) [SIG API Machinery, Apps, Auth, Etcd, Instrumentation, Node, Release and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5470,8 +5470,8 @@
   },
   "128240": {
     "commit": "4cf2818f964d8862db4399cb548060f72bea4ded",
-    "text": "Added driver-owned fields in ResourceClaim.Status to report device status data for each allocated device.",
-    "markdown": "Added driver-owned fields in ResourceClaim.Status to report device status data for each allocated device. ([#128240](https://github.com/kubernetes/kubernetes/pull/128240), [@LionelJouin](https://github.com/LionelJouin)) [SIG API Machinery, Network, Node and Testing]",
+    "text": "Added driver-owned fields in `ResourceClaim.Status` to report device status data for each allocated device.",
+    "markdown": "Added driver-owned fields in `ResourceClaim.Status` to report device status data for each allocated device. ([#128240](https://github.com/kubernetes/kubernetes/pull/128240), [@LionelJouin](https://github.com/LionelJouin)) [SIG API Machinery, Network, Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6024,8 +6024,8 @@
   },
   "128430": {
     "commit": "e7bcf571713ce09c268b0e27e27c74eb03ab6314",
-    "text": "Made kubelet's /metrics/slis endpoint always available",
-    "markdown": "Made kubelet's /metrics/slis endpoint always available ([#128430](https://github.com/kubernetes/kubernetes/pull/128430), [@richabanker](https://github.com/richabanker)) [SIG Architecture, Instrumentation and Node]",
+    "text": "Made kubelet's /metrics/slis endpoint always available.",
+    "markdown": "Made kubelet's /metrics/slis endpoint always available. ([#128430](https://github.com/kubernetes/kubernetes/pull/128430), [@richabanker](https://github.com/richabanker)) [SIG Architecture, Instrumentation and Node]",
     "author": "richabanker",
     "author_url": "https://github.com/richabanker",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128430",
@@ -6140,8 +6140,8 @@
   },
   "128495": {
     "commit": "e30492f77aeb0a81f0916c8d7959ec9581e7cb34",
-    "text": "Fixed a race condition that could result in erroneous volume unmounts for flex volume plugins on kubelet restart",
-    "markdown": "Fixed a race condition that could result in erroneous volume unmounts for flex volume plugins on kubelet restart ([#128495](https://github.com/kubernetes/kubernetes/pull/128495), [@olyazavr](https://github.com/olyazavr))",
+    "text": "Fixed a race condition that could result in erroneous volume unmounts for flex volume plugins on kubelet restart.",
+    "markdown": "Fixed a race condition that could result in erroneous volume unmounts for flex volume plugins on kubelet restart. ([#128495](https://github.com/kubernetes/kubernetes/pull/128495), [@olyazavr](https://github.com/olyazavr))",
     "author": "olyazavr",
     "author_url": "https://github.com/olyazavr",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128495",
@@ -6185,8 +6185,8 @@
   },
   "128503": {
     "commit": "6399c32669c62cfbf7c33b14b77d6781ce1cce27",
-    "text": "With the CBORServingAndStorage feature gate enabled, built-in APIs can now be served in CBOR format for clients that request it.",
-    "markdown": "With the CBORServingAndStorage feature gate enabled, built-in APIs can now be served in CBOR format for clients that request it. ([#128503](https://github.com/kubernetes/kubernetes/pull/128503), [@benluddy](https://github.com/benluddy)) [SIG API Machinery, Etcd and Testing]",
+    "text": "Enabled `CBORServingAndStorage` feature gate – built-in APIs can now be served in CBOR format for clients that request it.",
+    "markdown": "Enabled `CBORServingAndStorage` feature gate – built-in APIs can now be served in CBOR format for clients that request it. ([#128503](https://github.com/kubernetes/kubernetes/pull/128503), [@benluddy](https://github.com/benluddy)) [SIG API Machinery, Etcd and Testing]",
     "author": "benluddy",
     "author_url": "https://github.com/benluddy",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128503",
@@ -6235,8 +6235,8 @@
   },
   "128533": {
     "commit": "cb31e42b85d0a1e2be6639ecd4f7b9414887552a",
-    "text": "vendor: updated system-validators to v1.9.1",
-    "markdown": "Vendor: updated system-validators to v1.9.1 ([#128533](https://github.com/kubernetes/kubernetes/pull/128533), [@neolit123](https://github.com/neolit123))",
+    "text": "Vendor: updated system-validators to v1.9.1.",
+    "markdown": "Vendor: updated system-validators to v1.9.1. ([#128533](https://github.com/kubernetes/kubernetes/pull/128533), [@neolit123](https://github.com/neolit123))",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128533",
@@ -6285,8 +6285,8 @@
   },
   "128556": {
     "commit": "099449954ea9629a898f5e8fc1f7aa8ae9d6eae7",
-    "text": "Introduced a new metric kubelet_admission_rejections_total to track the number of pods rejected during admission",
-    "markdown": "Introduced a new metric kubelet_admission_rejections_total to track the number of pods rejected during admission ([#128556](https://github.com/kubernetes/kubernetes/pull/128556), [@AnishShah](https://github.com/AnishShah))",
+    "text": "Introduced a new metric `kubelet_admission_rejections_total` to track the number of pods rejected during admission.",
+    "markdown": "Introduced a new metric `kubelet_admission_rejections_total` to track the number of pods rejected during admission. ([#128556](https://github.com/kubernetes/kubernetes/pull/128556), [@AnishShah](https://github.com/AnishShah))",
     "author": "AnishShah",
     "author_url": "https://github.com/AnishShah",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128556",
@@ -6371,8 +6371,8 @@
   },
   "128623": {
     "commit": "dff657a07c5795081821c53469ce5f18f6fc60f7",
-    "text": "Droped support for InPlacePodVerticalScaling feature in Windows.",
-    "markdown": "Droped support for InPlacePodVerticalScaling feature in Windows. ([#128623](https://github.com/kubernetes/kubernetes/pull/128623), [@AnishShah](https://github.com/AnishShah)) [SIG Apps and Node]",
+    "text": "Droped support for `InPlacePodVerticalScaling` feature in Windows.",
+    "markdown": "Droped support for `InPlacePodVerticalScaling` feature in Windows. ([#128623](https://github.com/kubernetes/kubernetes/pull/128623), [@AnishShah](https://github.com/AnishShah)) [SIG Apps and Node]",
     "documentation": [
       {
         "description": "KEP",
@@ -6423,8 +6423,8 @@
   },
   "128640": {
     "commit": "c9024e7ae628f1473a6cac28e7bd6cd8e64f872f",
-    "text": "Added a one-time random duration of up to 50% of kubelet's nodeStatusReportFrequency to help spread the node status update load evenly over time.",
-    "markdown": "Added a one-time random duration of up to 50% of kubelet's nodeStatusReportFrequency to help spread the node status update load evenly over time. ([#128640](https://github.com/kubernetes/kubernetes/pull/128640), [@mengqiy](https://github.com/mengqiy))",
+    "text": "Added a one-time random duration of up to 50% of kubelet's `nodeStatusReportFrequency` to help spread the node status update load evenly over time.",
+    "markdown": "Added a one-time random duration of up to 50% of kubelet's `nodeStatusReportFrequency` to help spread the node status update load evenly over time. ([#128640](https://github.com/kubernetes/kubernetes/pull/128640), [@mengqiy](https://github.com/mengqiy))",
     "author": "mengqiy",
     "author_url": "https://github.com/mengqiy",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128640",
@@ -6571,8 +6571,8 @@
   },
   "128852": {
     "commit": "35d098aaa0a912171c46345e2c0a7b54d6046ef4",
-    "text": "Kubernetes is now built with Go 1.23.3",
-    "markdown": "Kubernetes is now built with Go 1.23.3 ([#128852](https://github.com/kubernetes/kubernetes/pull/128852), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "text": "Kubernetes is now built with Go 1.23.3.",
+    "markdown": "Kubernetes is now built with Go 1.23.3. ([#128852](https://github.com/kubernetes/kubernetes/pull/128852), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
     "author": "cpanato",
     "author_url": "https://github.com/cpanato",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128852",
