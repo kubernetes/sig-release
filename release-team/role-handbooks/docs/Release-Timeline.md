@@ -10,18 +10,24 @@
     - [Select Shadows](#select-shadows)
     - [Contact volunteers](#contact-volunteers)
     - [Meet with Shadows](#meet-with-shadows)
+    - [Define schedule](#define-schedule)
     - [Ensure access is set up](#ensure-access-is-set-up)
     - [Update the website configuration ahead of the release](#update-the-website-configuration-ahead-of-the-release)
   - [Middle Steps (Weeks 3-8)](#middle-steps-weeks-3-8)
     - [Track PRs](#track-prs)
     - [Communicate major deadlines](#communicate-major-deadlines)
+    - [Begin Generating Release Notes](#begin-generating-release-notes)
+        - [Set up the Tools and Generate the Release Notes](#set-up-the-tools-and-generate-the-release-notes)
+        - [Periodically review and fix new release notes](#periodically-review-and-fix-new-release-notes)
+        - [Maintain Known Issues](#maintain-known-issues)
+        - [Ensure Release Highlights are Reflected in the Notes](#ensure-release-highlights-are-reflected-in-the-notes)
+        - [Get feedback from SIG Leads](#get-feedback-from-sig-leads)
     - [Reach out to Enhancement Owners](#reach-out-to-enhancement-owners)
       - [Before the Open Placeholder PR Deadline](#before-the-open-placeholder-pr-deadline)
       - [Before the PRs Ready for Review Deadline](#before-the-prs-ready-for-review-deadline)
       - [Before the Docs Freeze Deadline](#before-the-docs-freeze-deadline)
       - [Week of Docs Freeze](#week-of-docs-freeze)
       - [After Docs Freeze](#after-docs-freeze)
-    - [Reach out to release notes team](#reach-out-to-release-notes-team)
     - [Maintain the current and upcoming `dev` branch](#maintain-the-current-and-upcoming-dev-branch)
       - [⚠️ Periodically merge `main` into `dev-[future release]`](#️-periodically-merge-main-into-dev-future-release)
     - [Monitor PRs](#monitor-prs)
@@ -33,6 +39,8 @@
   - [Late Steps (Weeks 9-11) - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
     - [Touch base with SIG Docs](#touch-base-with-sig-docs)
     - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
+    - [Clean up and edit the final Release Notes](#clean-up-and-edit-the-final-release-notes)
+    - [Curate the External Dependencies section](#curate-the-external-dependencies-section)
     - [Update Releases Page (the week before the release)](#update-releases-page-the-week-before-the-release)
   - [Release Week (Week 12)](#release-week-week-12)
     - [Update the site configuration files for previous releases](#update-the-site-configuration-files-for-previous-releases)
@@ -47,6 +55,7 @@
       - [Get approvals for open PRs](#get-approvals-for-open-prs)
       - [Review milestone](#review-milestone)
   - [Release Day](#release-day)
+    - [Publish final Release Notes](#publish-final-release-notes)
     - [Merge the integration branch](#merge-the-integration-branch)
     - [Publish the release blog post](#publish-the-release-blog-post)
     - [Create release with tag](#create-release-with-tag)
@@ -85,7 +94,7 @@ Responsibilities of the Docs Team:
 - Track Doc PRs for KEPs in the [website](https://github.com/kubernetes/website) project, plus all Doc PRs for the dev-[future release] branch that may include general updates without a KEP.
 - By default, all opted-in KEPs will `Need Docs`. Enhancement owners/contributors should confirm the enhancement does not need new or updated documentation.
 
-> Note: The blog-PR  is tracked by the Release-Comms Team.
+> Note: The blog-PR  is tracked by the Release Comms Team.
 
 > Note: The kubernetes/website repo changed from using a `master` branch to a `main` branch in 2021.
 > Be aware that several linked, example PRs uses the `master` branch.
@@ -120,13 +129,13 @@ Early in the release cycle, the Enhancements Lead opens a Github Project, e.g: [
 > Note: Until [1.25](https://tinyurl.com/k8s125-enhancements) was used tracking spreadsheet, e.g: [the 1.21 release spreadsheet](http://bit.ly/k8s121-enhancements).
 
 ⚠️ Tasks to DO:
-- [x] Make sure your team is included in the "current" release team file, e.g: [release 1.21](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/release-team.md). **If not submit a PR see a sample for 1.21 [here](https://github.com/kubernetes/sig-release/pull/1432)**.
-- [x] Please create a PR against kuberenetes/sig-release repo to include the Team Docs email of this release under release-team group in [sig-release/group.yaml](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
-- [x] Open a PR to add the Docs Team in the release-1.xx. For example here is the Release Team of [1.26](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.26/release-team.md)
+- [ ] Make sure your team is included in the "current" release team file, e.g: [release 1.21](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/release-team.md). **If not submit a PR see a sample for 1.21 [here](https://github.com/kubernetes/sig-release/pull/1432)**.
+- [ ] Please create a PR against kuberenetes/sig-release repo to include the Team Docs email of this release under release-team group in [sig-release/group.yaml](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
+- [ ] Open a PR to add the Docs Team in the release-1.xx. For example here is the Release Team of [1.26](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.26/release-team.md)
 
 ### Introduce yourself to docs localization teams
 
-- [x] Create a GitHub discussion in [k/sig-release](https://github.com/kubernetes/sig-release/discussions/) to introduce yourself to the current localization owners and to sync up early on the release timeline, e.g:
+- [ ] Create a GitHub discussion in [k/sig-release](https://github.com/kubernetes/sig-release/discussions/) to introduce yourself to the current localization owners and to sync up early on the release timeline, e.g:
 > Title: K8s 1.21 - Formalize docs release strategy with docs localization owners
 >
 > Hello :wave:,
@@ -152,6 +161,10 @@ _Note:_ SIG Docs prefers and welcomes a status of yellow or red on anything that
 [ ] Has the weekly branch sync been done? (a lapse in 1-2 branch syncs indicates 'yellow' status, 3 or more lapses should be deemed red)
 
 [ ] Has the PR for the weekly branch sync merged or does it need review? If assistance is needed to resolve merge conflicts, please flag others by communicating on the #release-docs Slack channel
+
+[ ] Is the Release Notes PR open, reviewed, and merged within the deadline?
+
+[ ] Is the Release Notes PR late or blocked?
 
 [ ] A week before the Docs PR Placeholder deadline, have 80% of the enhancements that opted in for docs created a placeholder PR? (anything below 60% opt-in for docs where placeholder PRs are needed should indicate yellow (or red) status, contingent on the amount)
 
@@ -187,7 +200,7 @@ Verify the shadow selections with the release lead and the emeritus advisor on S
 
 ### Contact volunteers
 
-- [x] Send a Slack message to those that you select, e.g:
+- [ ] Send a Slack message to those that you select, e.g:
 
 > Hey, you're officially on the SIG Docs 1.21 release team as a shadow! Let me know if there's any issues with being a shadow (as far as timing / availability / etc) and feel free to introduce yourself!
 >
@@ -240,6 +253,12 @@ Send a Slack message to those that you didn't select, e.g:
 Find .5-1 hour of time to meet with shadows and explain the release process. Walk through this entire document and review the flow with them. It helps to set expectations that the mantra is "hurry up and wait" but then it gets very hectic at the end. If you have the ability to, please record the meeting and share it with your Shadows for future review.
 
 1. Add contacts to the shadows release docs, e.g: [https://bit.ly/k8s121-contacts](https://bit.ly/k8s121-contacts)
+    
+### Define schedule
+
+Create a table to track `Release`, `Branch Created Day`, `Week of Release`, `PR Merge Deadline`, `Release Notes Assignee`
+and `Release Notes Reviewer` based on the release timeline. This will serve as an internal schedule and signup sheet for
+the release notes team to follow. The schedule is used to track progress and give status updates during release team meetings. 
 
 ### Ensure access is set up
 
@@ -364,6 +383,52 @@ Example notice:
 > Thanks! Important dates for v1.21: https://github.com/kubernetes/sig-release/blob/master/releases/release-1.21/README.md#tldr
 >
 > ![Bring out your docs](pics/meme-deadline.jpg)
+    
+### Begin generating Release Notes
+Begin running release-notes tool for the ongoing collection of release notes with the first alpha release, which has been cut directly after the latest minor.
+
+- Update the `release-notes-draft.md`
+- Verify release notes are available on (relnotes.k8s.io)[https://relnotes.k8s.io/]
+- Informal intro meeting with release notes team to discuss contact information and logistics
+
+#### Set up the Tools and Generate the Release Notes
+
+The Docs team is responsible for the generation of the release notes during the release cycle.
+
+At least one member of the Docs Team should be responsible for [setting up](https://github.com/kubernetes/release/tree/master/docs/krel#installation) and [running](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) the release-notes subcommand of krel to generate the release notes after each Patch Release:
+
+1. Update the release notes draft, a markdown file which will become the final document which will encompass all release notes written by contributors during the current release cycle. See previous drafts for versions [1.25](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.25/release-notes/release-notes-draft.md), [v1.24](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.24/release-notes/release-notes-draft.md) or [v1.23](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.23/release-notes/release-notes-draft.md).
+
+Detailed instructions for generating the release notes bundle is in the [krel release-notes subcommand documentation](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
+
+#### Periodically review and fix new release notes
+
+The Docs team must make sure that the final document includes well-written and informative release notes. To achieve a high-quality document the team should review and edit the
+notes by running `krel release-notes --fix` weekly or as often as development pace
+demands.
+
+This command will enable the team to review each release note and edit the note's data. It is recommended that the team splits the work among all members and runs the editing flow on a weekly or biweekly basis. More information about the editing flow can be found in a separate document detailing the [editing process and tooling](editing-flow.md).
+
+The general style guide for release notes includes checking for:
+- Past tense: Release notes should be written in the past tense since the changes have already been implemented.
+- Technical jargon: While the notes are generally user-friendly, some technical terms like "VAC" or "scheduling hints" could be explained briefly with backticks or double quotes for users unfamiliar with them.
+- Additional context: In some cases, providing more context about the problem these changes address or the specific situations where they're relevant could be helpful for understanding their significance. You can find additional context referenced in the PR in k8s/k8s repo to check what the PR does for end users.
+
+Additional style guidelines can be found in the [Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
+
+#### Maintain Known Issues
+
+A ["Known Issues Umbrella Issue"](known-issues-bucket.md) for the release must be created by the Docs team in [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new) so issues can be collected for the "Known Issues" section of the release notes. See previous known issues for [1.25](https://github.com/kubernetes/kubernetes/issues/110336), [1.24](https://github.com/kubernetes/kubernetes/issues/109027), [v1.23](https://github.com/kubernetes/kubernetes/issues/104885), [v1.22](https://github.com/kubernetes/kubernetes/issues/101728), [v1.21](https://github.com/kubernetes/kubernetes/issues/98232), [v1.19](https://github.com/kubernetes/kubernetes/issues/90304), [v1.18](https://github.com/kubernetes/kubernetes/issues/86882) or [v1.17](https://github.com/kubernetes/kubernetes/issues/83683).
+
+#### Ensure Release Highlights are Reflected in the Notes
+
+The Communications team will hold a meeting to discuss Release Highlights sometime around Code Freeze. Ensure that at least one person from the Docs team attends this meeting with the Release Lead and Enhancements Lead. The Docs team should ensure that the "Release Highlights" identified in this meeting are reflected in the "Release Highlights" section of the release notes. If no one is able to attend the meeting, reach out to the Communications team, Release Lead or Enhancements Lead to ensure messaging around Release Highlights is coordinated.
+
+#### Get feedback from SIG Leads
+
+Around Code Freeze, the Docs team will get in touch with the SIG Leads to ensure that the Release Notes accurately reflect the major themes for their SIGs. The team will also ensure that major issues captured in the release notes are confirmed by the SIG leads before release day.
+
+If gentle nudging of SIG Leads is not effective in retrieving feedback/confirmation, the Docs Team can use a reasonable amount of creative liberty in completing the notes.
 
 ### Reach out to Enhancement Owners
 
@@ -432,11 +497,6 @@ Once Docs Freeze has passed, if there are any docs PRs not marked "ready to merg
 >Hello 👋, {current release} Docs team here.
 This PR did not meet deadline for [docs freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#docs-freeze).
 Enhancements without required documentation may be removed from the current release. If you still wish to include this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request. Thanks!
-
-### Reach out to release notes team
-Reach out to release notes team to see if there's anything that might need docs that isn't already clearly known, e.g:
-
-> Hey :wave: Release Notes folks! I just wanted to touch base early in the cycle to introduce myself (Jim Angel, SIG Docs Lead for 1.14) and to ask that we stay in touch as you start drafting your release notes. This came up from previous SIG Docs Leads, who said they found things in the release notes that _probably needed docs_. Any questions?
 
 ### Maintain the current and upcoming `dev` branch
 
@@ -574,6 +634,14 @@ The Kubernetes API reference, kubectl, and components documentation are generate
 Validate that SIG Cluster Lifecycle has all of the docs in place for the upcoming release. These are mainly kubeadm docs (upgrading, installing, changes, etc). If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages/sig-cluster-lifecycle/) channel, e.g:
 
 > Hi SIG Cluster Lifecylce :wave:  1.21 Docs Lead here, can someone confirm that all docs are in place for the upcoming 1.21 release?
+    
+### Clean up and edit the final Release Notes
+
+The confirmed release notes are cleaned up and copy edited by the Docs team to ensure uniform language/style is used. The team must make sure that the final document conforms to the [Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/).
+
+### Curate the External Dependencies section
+
+A "Dependencies" section should be curated which outlines how external dependency versions have changed since the last release. These changes are currently [automatically aggregated](https://github.com/kubernetes/community/issues/2234), but should still be manually validated for correct content and formatting.
 
 ### Update Releases Page (the week before the release)
 
@@ -760,6 +828,13 @@ Review milestone for completion and outstanding PRs. For PRs that won't make the
 This process takes approximately 4 hours.
 
 Coordinate with the Release Team for the exact timing. Typically the release is 'officially' built, then you merge the docs, and then you approve the blog post to "make it official". For 1.21, we merged docs at 11:00 am PDT and the blog was merged at 11:30 am PDT - marking the release "complete".
+    
+### Publish final Release Notes
+
+- Final version of release notes committed for release
+- Close the _Known Issues_ Issue and make sure everything has been resolved
+- Release Notes must be merged into master prior to the release. If this is not done the release will include the latest draft.
+- Keep an eye on the #release-notes channel for any requests for any questions, edits or missed release notes.
 
 ### Merge the integration branch
 
