@@ -43,7 +43,7 @@ The 1.32 release cycle is as follows:
 - **02:00 UTC Friday 8th November 2024 / 19:00 PDT Thursday 7th November 2024**: Week 9 — [Code Freeze](../release_phases.md#code-freeze) and [Test Freeze](../release_phases.md#test-freeze)
 - **Tuesday 12th - Friday 15th November 2024**: Week 10 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
 - **Tuesday 26th November 2024**: Week 12 — [Docs Freeze](../release_phases.md#docs-freeze)
-- **Tuesday 11th December 2024**: Week 14 — Kubernetes v1.32.0 released
+- **Wednesday 11th December 2024**: Week 14 — Kubernetes v1.32.0 released
 
 ## Timeline
 
