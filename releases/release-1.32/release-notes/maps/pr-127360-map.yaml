@@ -1,0 +1,30 @@
+pr: 127360
+releasenote:
+  text: |-
+    Added a `Stream` field to `PodLogOptions`, which allows clients to request certain log stream (stdout or stderr) of the container.
+    Please also note that the combination of a specific `Stream` and `TailLines` is not supported.
+  documentation:
+  - description: '[KEP]'
+    url: https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/3288-separate-stdout-from-stderr
+    type: KEP
+  author: knight42
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - release-eng
+  - code-generation
+  kinds:
+  - api-change
+  - feature
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - node
+  - release
+  - testing
+  feature: true
+  action_required: false
+  do_not_publish: false
+pr_body: ""

@@ -7,7 +7,7 @@ We consider the combination of architecture (`GOARCH`) and operating system
 categories of platforms as well as guiding through their graduation criteria.
 
 How to introduce new supported architectures and operating systems is outline in
-the [platforms guide](guide.md).
+the [platforms guide](https://github.com/kubernetes/community/blob/master/contributors/guide/platforms.md).
 
 ## Tiers
 

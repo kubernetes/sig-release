@@ -1,0 +1,20 @@
+pr: 126503
+releasenote:
+  text: Fake clientsets now use a common, generic implementation. The corresponding
+    structs are now private; callers must use the corresponding constructors.
+  documentation: []
+  author: skitt
+  areas:
+  - code-generation
+  - dependency
+  kinds:
+  - cleanup
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - instrumentation
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""

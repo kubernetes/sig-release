@@ -1,0 +1,17 @@
+pr: 128764
+releasenote:
+  text: For Dynamic Resource Allocation, the new "v1beta1" kubelet gPRC was renamed
+    so that the protobuf package name is unique.
+  documentation: []
+  author: pohly
+  areas:
+  - test
+  kinds:
+  - bug
+  sigs:
+  - node
+  - testing
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""

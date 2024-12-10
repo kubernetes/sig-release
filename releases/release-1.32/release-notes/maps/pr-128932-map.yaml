@@ -1,0 +1,19 @@
+pr: 128932
+releasenote:
+  text: For Dynamic Resource Allocartion, labels in node selectors now are validated.
+    Invalid labels already caused runtime errors before and are unlikely to occur
+    in practice.
+  documentation:
+  - description: '[KEP]'
+    url: https://github.com/kubernetes/enhancements/issues/4381
+    type: KEP
+  author: pohly
+  areas: []
+  kinds:
+  - bug
+  sigs:
+  - apps
+  feature: false
+  action_required: false
+  do_not_publish: false
+pr_body: ""
