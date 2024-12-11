@@ -3621,8 +3621,8 @@
   },
   "127447": {
     "commit": "a87215915f9b60a0c0d7d99da3e75aa0614698b8",
-    "text": "Fixes the bug in PodTopologySpread that only happens with QHint enabled, which the scheduler might miss some updates for the Pods rejected by PodTopologySpread plugin and put the Pods in the queue for a longer time than needed.",
-    "markdown": "Fixes the bug in PodTopologySpread that only happens with QHint enabled, which the scheduler might miss some updates for the Pods rejected by PodTopologySpread plugin and put the Pods in the queue for a longer time than needed. ([#127447](https://github.com/kubernetes/kubernetes/pull/127447), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]",
+    "text": "Fixed the bug in PodTopologySpread that only happens with QHint enabled, which the scheduler might miss some updates for the Pods rejected by PodTopologySpread plugin and put the Pods in the queue for a longer time than needed.",
+    "markdown": "Fixed the bug in PodTopologySpread that only happens with QHint enabled, which the scheduler might miss some updates for the Pods rejected by PodTopologySpread plugin and put the Pods in the queue for a longer time than needed. ([#127447](https://github.com/kubernetes/kubernetes/pull/127447), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127447",
@@ -5181,8 +5181,8 @@
   },
   "128169": {
     "commit": "7adcad3138f11c90922aecc8a8a0c92739bd6475",
-    "text": "Promotes the `ServiceAccountTokenJTI` feature to GA, which adds a `jti` claim to issued service account tokens and embeds the `jti` claim as a `authentication.kubernetes.io/credential-id=[\"JTI=...\"]` value in user extra info. Promotes the `ServiceAccountTokenPodNodeInfo` feature to GA, which adds the node name and uid as claims into service account tokens mounted into running pods, and embeds that information as `authentication.kubernetes.io/node-name` and `authentication.kubernetes.io/node-uid` user extra info when the token is used. Promotes the `ServiceAccountTokenNodeBindingValidation` feature to GA, which validates service account tokens bound directly to nodes.",
-    "markdown": "Promotes the `ServiceAccountTokenJTI` feature to GA, which adds a `jti` claim to issued service account tokens and embeds the `jti` claim as a `authentication.kubernetes.io/credential-id=[\"JTI=...\"]` value in user extra info. Promotes the `ServiceAccountTokenPodNodeInfo` feature to GA, which adds the node name and uid as claims into service account tokens mounted into running pods, and embeds that information as `authentication.kubernetes.io/node-name` and `authentication.kubernetes.io/node-uid` user extra info when the token is used. Promotes the `ServiceAccountTokenNodeBindingValidation` feature to GA, which validates service account tokens bound directly to nodes. ([#128169](https://github.com/kubernetes/kubernetes/pull/128169), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth and Testing]",
+    "text": "Promoted the `ServiceAccountTokenJTI` feature to GA, which adds a `jti` claim to issued service account tokens and embeds the `jti` claim as a `authentication.kubernetes.io/credential-id=[\"JTI=...\"]` value in user extra info. Promoted the `ServiceAccountTokenPodNodeInfo` feature to GA, which adds the node name and uid as claims into service account tokens mounted into running pods, and embeds that information as `authentication.kubernetes.io/node-name` and `authentication.kubernetes.io/node-uid` user extra info when the token is used. Promoted the `ServiceAccountTokenNodeBindingValidation` feature to GA, which validates service account tokens bound directly to nodes.",
+    "markdown": "Promoted the `ServiceAccountTokenJTI` feature to GA, which adds a `jti` claim to issued service account tokens and embeds the `jti` claim as a `authentication.kubernetes.io/credential-id=[\"JTI=...\"]` value in user extra info. Promoted the `ServiceAccountTokenPodNodeInfo` feature to GA, which adds the node name and uid as claims into service account tokens mounted into running pods, and embeds that information as `authentication.kubernetes.io/node-name` and `authentication.kubernetes.io/node-uid` user extra info when the token is used. Promoted the `ServiceAccountTokenNodeBindingValidation` feature to GA, which validates service account tokens bound directly to nodes. ([#128169](https://github.com/kubernetes/kubernetes/pull/128169), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5280,8 +5280,8 @@
   },
   "128179": {
     "commit": "3f27f970466f0f96c1bb532d72a24d8c3c58f85a",
-    "text": "Fixes a bug in the `k8s.io/cloud-provider/service` controller, which may panic when a service is updated because the event recorder was used before it was initialized. All cloud providers using the `v1.31.0` cloud provider service controller must ensure that the controller is initialized before the informer starts to process events or update it to version 1.32.0.",
-    "markdown": "Fixes a bug in the `k8s.io/cloud-provider/service` controller, which may panic when a service is updated because the event recorder was used before it was initialized. All cloud providers using the `v1.31.0` cloud provider service controller must ensure that the controller is initialized before the informer starts to process events or update it to version 1.32.0. ([#128179](https://github.com/kubernetes/kubernetes/pull/128179), [@carlory](https://github.com/carlory)) [SIG API Machinery, Cloud Provider, Network and Testing]",
+    "text": "Fixed a bug in the `k8s.io/cloud-provider/service` controller, which may panic when a service is updated because the event recorder was used before it was initialized. All cloud providers using the `v1.31.0` cloud provider service controller must ensure that the controller is initialized before the informer starts to process events or update it to version 1.32.0.",
+    "markdown": "Fixed a bug in the `k8s.io/cloud-provider/service` controller, which may panic when a service is updated because the event recorder was used before it was initialized. All cloud providers using the `v1.31.0` cloud provider service controller must ensure that the controller is initialized before the informer starts to process events or update it to version 1.32.0. ([#128179](https://github.com/kubernetes/kubernetes/pull/128179), [@carlory](https://github.com/carlory)) [SIG API Machinery, Cloud Provider, Network and Testing]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128179",
@@ -6644,8 +6644,8 @@
   },
   "12908": {
     "commit": "3878a3a6de64660e356a35f70471c27a09698090",
-    "text": "kubelet: fixes an issue mounting CSI volumes on Windows nodes in 1.32.0 release candidates",
-    "markdown": "kubelet: fixes an issue mounting CSI volumes on Windows nodes in 1.32.0 release candidates",
+    "text": "kubelet: fixed an issue mounting CSI volumes on Windows nodes in 1.32.0 release candidates",
+    "markdown": "kubelet: fixed an issue mounting CSI volumes on Windows nodes in 1.32.0 release candidates",
     "author": "liggitt",
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129083",

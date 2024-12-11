@@ -206,7 +206,7 @@
 - Fixed documentation for the `apiserver_admission_webhook_fail_open_count` and `apiserver_admission_webhook_request_total` metrics. The `type` label can have a value of "admit", not "mutating". ([#127898](https://github.com/kubernetes/kubernetes/pull/127898), [@modulitos](https://github.com/modulitos))
 - Kubeadm: fixed a misleading output (typo) about control-plane joining instructions when executing the "kubeadm init" command. ([#128118](https://github.com/kubernetes/kubernetes/pull/128118), [@amaddio](https://github.com/amaddio))
 - The kubelet, when using `--cloud-provider=external` can use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solve the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster. ([#125337](https://github.com/kubernetes/kubernetes/pull/125337), [@aojea](https://github.com/aojea)) [SIG Cloud Provider, Network, Node and Testing]
-- Request header UID propagation is gated behind an alpha RemoteRequestHeaderUID feature gate ([#129081](https://github.com/kubernetes/kubernetes/pull/129081), [@stalz](https://github.com/stlaz)) [SIG API SIG API Machinery, cluster lifecycle, testing]
+- Request header UID propagation is gated behind an Alpha `RemoteRequestHeaderUID` feature gate. ([#129081](https://github.com/kubernetes/kubernetes/pull/129081), [@stalz](https://github.com/stlaz)) [SIG API SIG API Machinery, cluster lifecycle, testing]
 
 ### Failing Test
 
@@ -386,4 +386,4 @@
   and https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize%2Fv5.5.0. ([#127965](https://github.com/kubernetes/kubernetes/pull/127965), [@koba1t](https://github.com/koba1t))
 - `ComponentSLIs` feature is marked as GA and locked. ([#128317](https://github.com/kubernetes/kubernetes/pull/128317), [@Jefftree](https://github.com/Jefftree)) [SIG Architecture and Instrumentation]
 - `kubectl apply --server-side` now supports `--subresource` congruent to `kubectl patch`. ([#127634](https://github.com/kubernetes/kubernetes/pull/127634), [@deads2k](https://github.com/deads2k)) [SIG CLI and Testing]
-- kubelet: fixes an issue mounting CSI volumes on Windows nodes in 1.32.0 release candidates. ([#129083](https://github.com/kubernetes/kubernetes/pull/129083) [liggitt](https://github.com/liggitt)) [SIG API Machinery, architecture, auth, cli, cloud-provider, cluster-lifecycle, instrumentation,network,node, release, storage, windows ]
+- kubelet: fixed an issue mounting CSI volumes on Windows nodes in 1.32.0 release candidates. ([#129083](https://github.com/kubernetes/kubernetes/pull/129083) [liggitt](https://github.com/liggitt)) [SIG API Machinery, architecture, auth, cli, cloud-provider, cluster-lifecycle, instrumentation,network,node, release, storage, windows ]
