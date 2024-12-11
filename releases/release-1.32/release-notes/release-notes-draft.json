@@ -1289,7 +1289,7 @@
   "126561": {
     "commit": "0ef48e611d81e926d5821bc769929eceba95a29e",
     "text": "kube-proxy initialization waits for all pre-sync events from node and serviceCIDR informers to be delivered.",
-    "markdown": "Kube-proxy initialization waits for all pre-sync events from node and serviceCIDR informers to be delivered. ([#126561](https://github.com/kubernetes/kubernetes/pull/126561), [@wedaly](https://github.com/wedaly)) [SIG Network]",
+    "markdown": "kube-proxy initialization waits for all pre-sync events from node and serviceCIDR informers to be delivered. ([#126561](https://github.com/kubernetes/kubernetes/pull/126561), [@wedaly](https://github.com/wedaly)) [SIG Network]",
     "author": "wedaly",
     "author_url": "https://github.com/wedaly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126561",
@@ -1818,8 +1818,8 @@
   },
   "126769": {
     "commit": "6ca629d46b1267a1b8b03416edcaa8832ffc62a8",
-    "text": "Kube-proxy uses  field-selector clusterIP!=None on Services to avoid watching for Headless Services, reduce  unnecessary network bandwidth",
-    "markdown": "Kube-proxy uses  field-selector clusterIP!=None on Services to avoid watching for Headless Services, reduce  unnecessary network bandwidth ([#126769](https://github.com/kubernetes/kubernetes/pull/126769), [@Sakuralbj](https://github.com/Sakuralbj)) [SIG Network]",
+    "text": "kube-proxy uses  field-selector clusterIP!=None on Services to avoid watching for Headless Services, reduce  unnecessary network bandwidth",
+    "markdown": "kube-proxy uses  field-selector clusterIP!=None on Services to avoid watching for Headless Services, reduce  unnecessary network bandwidth ([#126769](https://github.com/kubernetes/kubernetes/pull/126769), [@Sakuralbj](https://github.com/Sakuralbj)) [SIG Network]",
     "author": "Sakuralbj",
     "author_url": "https://github.com/Sakuralbj",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126769",
@@ -2048,8 +2048,8 @@
   },
   "126847": {
     "commit": "b83ec12c4337261156e4cda4d2f771d4db57ed96",
-    "text": "Kube-proxy will no longer depend on the conntrack binary for stale UDP connections cleanup.",
-    "markdown": "Kube-proxy will no longer depend on the conntrack binary for stale UDP connections cleanup. ([#126847](https://github.com/kubernetes/kubernetes/pull/126847), [@aroradaman](https://github.com/aroradaman)) [SIG Cluster Lifecycle, Network, and Testing]",
+    "text": "kube-proxy will no longer depend on the conntrack binary for stale UDP connections cleanup.",
+    "markdown": "kube-proxy will no longer depend on the conntrack binary for stale UDP connections cleanup. ([#126847](https://github.com/kubernetes/kubernetes/pull/126847), [@aroradaman](https://github.com/aroradaman)) [SIG Cluster Lifecycle, Network, and Testing]",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126847",
@@ -3272,7 +3272,7 @@
   "127318": {
     "commit": "ce6396175b2b9435bde6c6809e0ba70225ffd0a8",
     "text": "kube-proxy now reconciles Service/Endpoint changes with conntrack table and cleans up only stale UDP flow entries",
-    "markdown": "Kube-proxy now reconciles Service/Endpoint changes with conntrack table and cleans up only stale UDP flow entries ([#127318](https://github.com/kubernetes/kubernetes/pull/127318), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
+    "markdown": "kube-proxy now reconciles Service/Endpoint changes with conntrack table and cleans up only stale UDP flow entries ([#127318](https://github.com/kubernetes/kubernetes/pull/127318), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127318",
