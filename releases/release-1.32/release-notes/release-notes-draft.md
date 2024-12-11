@@ -2,6 +2,10 @@
 
 There are no urgent upgrade notes for the v1.32 release.
 
+## Known Issues
+
+- golang 1.23 has made many changes to filesystem and mount handling on Windows. The k8s.io/mount-utils package in 1.32 has not been validated with these changes. CSI driver developers and csi-proxy maintainers should set "godebug winsymlink=0" in their go.mod files to disable these changes. ([#129084](https://github.com/kubernetes/kubernetes/issues/129084))
+
 ## Changes by Kind
 
 ### Deprecation
