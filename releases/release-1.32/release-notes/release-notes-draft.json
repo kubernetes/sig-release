@@ -1,8 +1,8 @@
 {
   "114136": {
     "commit": "d14b0b0cb1455e0619a05144e760ce5741b7f988",
-    "text": "Kubelet Plugins are now re-registered properly  on Windows if the re-registration period is \u003c 15ms.",
-    "markdown": "Kubelet Plugins are now re-registered properly  on Windows if the re-registration period is \u003c 15ms. ([#114136](https://github.com/kubernetes/kubernetes/pull/114136), [@claudiubelu](https://github.com/claudiubelu)) [SIG Node, Storage, Testing and Windows]",
+    "text": "kubelet plugins are now re-registered properly  on Windows if the re-registration period is \u003c 15ms.",
+    "markdown": "kubelet plugins are now re-registered properly  on Windows if the re-registration period is \u003c 15ms. ([#114136](https://github.com/kubernetes/kubernetes/pull/114136), [@claudiubelu](https://github.com/claudiubelu)) [SIG Node, Storage, Testing and Windows]",
     "author": "claudiubelu",
     "author_url": "https://github.com/claudiubelu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/114136",
@@ -280,8 +280,8 @@
   },
   "124389": {
     "commit": "35b4695e5a7f597315e59a12472e657439c3bff5",
-    "text": "Added: Log Line for Debugging possible merge errors for Kubelet related Config requests.",
-    "markdown": "Added a log line to debug potential merge errors for Kubelet-related configuration requests. ([#124389](https://github.com/kubernetes/kubernetes/pull/124389), [@holgerson97](https://github.com/holgerson97))",
+    "text": "Added: Log Line for Debugging possible merge errors for kubelet related Config requests.",
+    "markdown": "Added a log line to debug potential merge errors for kubelet-related configuration requests. ([#124389](https://github.com/kubernetes/kubernetes/pull/124389), [@holgerson97](https://github.com/holgerson97))",
     "author": "holgerson97",
     "author_url": "https://github.com/holgerson97",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124389",
@@ -779,7 +779,7 @@
   "126032": {
     "commit": "d088d4c38720b977084860a167770c9f14f9eb90",
     "text": "kubeadm: `kubeadm upgrade apply` now supports phase sub-command, user can use `kubeadm upgrade apply phase \u003cphase-name\u003e` to execute the specified phase, or use `kubeadm upgrade apply --skip-phases \u003cphase-names\u003e` to skip some phases during cluster upgrade.",
-    "markdown": "Kubeadm: `kubeadm upgrade apply` now supports phase sub-command, user can use `kubeadm upgrade apply phase \u003cphase-name\u003e` to execute the specified phase, or use `kubeadm upgrade apply --skip-phases \u003cphase-names\u003e` to skip some phases during cluster upgrade. ([#126032](https://github.com/kubernetes/kubernetes/pull/126032), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: `kubeadm upgrade apply` now supports phase sub-command, user can use `kubeadm upgrade apply phase \u003cphase-name\u003e` to execute the specified phase, or use `kubeadm upgrade apply --skip-phases \u003cphase-names\u003e` to skip some phases during cluster upgrade. ([#126032](https://github.com/kubernetes/kubernetes/pull/126032), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126032",
@@ -865,8 +865,8 @@
   },
   "126318": {
     "commit": "36fafafdb06a8102739928dcb83517a6d1ae1f97",
-    "text": "Kubelet now attempts to retrieve an existing node if the request to create it fails with `StatusForbidden`.",
-    "markdown": "Kubelet now attempts to retrieve an existing node if the request to create it fails with `StatusForbidden`. ([#126318](https://github.com/kubernetes/kubernetes/pull/126318), [@hoskeri](https://github.com/hoskeri)) [SIG Node]",
+    "text": "kubelet now attempts to retrieve an existing node if the request to create it fails with `StatusForbidden`.",
+    "markdown": "kubelet now attempts to retrieve an existing node if the request to create it fails with `StatusForbidden`. ([#126318](https://github.com/kubernetes/kubernetes/pull/126318), [@hoskeri](https://github.com/hoskeri)) [SIG Node]",
     "author": "hoskeri",
     "author_url": "https://github.com/hoskeri",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126318",
@@ -924,8 +924,8 @@
 },
 "126347": {
     "commit": "f5ae0413cadb1d2d3d3d47857cdd65b4b6d194ba",
-    "text": "Revised the Kubelet API Authorization with new subresources that allow finer-grained authorization checks and access control for kubelet endpoints. Provided you enable the `KubeletFineGrainedAuthz` feature gate, you can access kubelet's `/healthz` endpoint by granting the caller `nodes/healthz` permission in RBAC. Similarly, you can access kubelet's `/pods` endpoint to fetch a list of Pods bound to that node by granting the caller `nodes/pods` permission in RBAC. Additionally, you can access kubelet's `/configz` endpoint to fetch its configuration by granting the caller `nodes/configz` permission in RBAC. Alternatively, granting `nodes/proxy` permission allows access to `/healthz`, `/pods`, and `/configz`, but also permits exec, run, and attach operations on containers on the nodes, violating the principle of least privilege.",
-    "markdown": "Revised the Kubelet API Authorization with new subresources that allow finer-grained authorization checks and access control for kubelet endpoints. Provided you enable the `KubeletFineGrainedAuthz` feature gate, you can access kubelet's `/healthz` endpoint by granting the caller `nodes/healthz` permission in RBAC. Similarly, you can access kubelet's `/pods` endpoint to fetch a list of Pods bound to that node by granting the caller `nodes/pods` permission in RBAC. Additionally, you can access kubelet's `/configz` endpoint to fetch its configuration by granting the caller `nodes/configz` permission in RBAC. Alternatively, granting `nodes/proxy` permission allows access to `/healthz`, `/pods`, and `/configz`, but also permits exec, run, and attach operations on containers on the nodes, violating the principle of least privilege. ([#126347](https://github.com/kubernetes/kubernetes/pull/126347), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG API Machinery, Auth, Cluster Lifecycle, and Node]",
+    "text": "Revised the kubelet API Authorization with new subresources that allow finer-grained authorization checks and access control for kubelet endpoints. Provided you enable the `KubeletFineGrainedAuthz` feature gate, you can access kubelet's `/healthz` endpoint by granting the caller `nodes/healthz` permission in RBAC. Similarly, you can access kubelet's `/pods` endpoint to fetch a list of Pods bound to that node by granting the caller `nodes/pods` permission in RBAC. Additionally, you can access kubelet's `/configz` endpoint to fetch its configuration by granting the caller `nodes/configz` permission in RBAC. Alternatively, granting `nodes/proxy` permission allows access to `/healthz`, `/pods`, and `/configz`, but also permits exec, run, and attach operations on containers on the nodes, violating the principle of least privilege.",
+    "markdown": "Revised the kubelet API Authorization with new subresources that allow finer-grained authorization checks and access control for kubelet endpoints. Provided you enable the `KubeletFineGrainedAuthz` feature gate, you can access kubelet's `/healthz` endpoint by granting the caller `nodes/healthz` permission in RBAC. Similarly, you can access kubelet's `/pods` endpoint to fetch a list of Pods bound to that node by granting the caller `nodes/pods` permission in RBAC. Additionally, you can access kubelet's `/configz` endpoint to fetch its configuration by granting the caller `nodes/configz` permission in RBAC. Alternatively, granting `nodes/proxy` permission allows access to `/healthz`, `/pods`, and `/configz`, but also permits exec, run, and attach operations on containers on the nodes, violating the principle of least privilege. ([#126347](https://github.com/kubernetes/kubernetes/pull/126347), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG API Machinery, Auth, Cluster Lifecycle, and Node]",
     "documentation": [
         {
             "description": "[KEP]",
@@ -1079,7 +1079,7 @@
   "126488": {
     "commit": "7ee17ce9b7c2a22e63e2bbd79d48d3fe349a9386",
     "text": "kubelet: use the CRI stats provider if `PodAndContainerStatsFromCRI` feature is enabled",
-    "markdown": "Kubelet: use the CRI stats provider if `PodAndContainerStatsFromCRI` feature is enabled ([#126488](https://github.com/kubernetes/kubernetes/pull/126488), [@haircommander](https://github.com/haircommander)) [SIG Node]",
+    "markdown": "kubelet: use the CRI stats provider if `PodAndContainerStatsFromCRI` feature is enabled ([#126488](https://github.com/kubernetes/kubernetes/pull/126488), [@haircommander](https://github.com/haircommander)) [SIG Node]",
     "author": "haircommander",
     "author_url": "https://github.com/haircommander",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126488",
@@ -1201,7 +1201,7 @@
   "126538": {
     "commit": "62cd87e8392c55cedf3b47f6b3203f0cb7dd483b",
     "text": "kubeadm: add a validation warning when the certificateValidityPeriod is more than the caCertificateValidityPeriod",
-    "markdown": "Kubeadm: add a validation warning when the certificateValidityPeriod is more than the caCertificateValidityPeriod ([#126538](https://github.com/kubernetes/kubernetes/pull/126538), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: add a validation warning when the certificateValidityPeriod is more than the caCertificateValidityPeriod ([#126538](https://github.com/kubernetes/kubernetes/pull/126538), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126538",
@@ -1384,8 +1384,8 @@
   },
   "126595": {
     "commit": "24a74f887abb0a917f5f1e93c61d58224d319f96",
-    "text": "Kubelet: add log and event for cgroup v2 with kernel older than 5.8.",
-    "markdown": "Kubelet: add log and event for cgroup v2 with kernel older than 5.8. ([#126595](https://github.com/kubernetes/kubernetes/pull/126595), [@pacoxu](https://github.com/pacoxu)) [SIG Node]",
+    "text": "kubelet: add log and event for cgroup v2 with kernel older than 5.8.",
+    "markdown": "kubelet: add log and event for cgroup v2 with kernel older than 5.8. ([#126595](https://github.com/kubernetes/kubernetes/pull/126595), [@pacoxu](https://github.com/pacoxu)) [SIG Node]",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126595",
@@ -1405,8 +1405,8 @@
   },
   "126596": {
     "commit": "e1b1d4ac7ba6afbf98e2874b1b681057c0ab5ac9",
-    "text": "Kubeadm: don't warn if `crictl` binary does not exist since kubeadm does not rely on `crictl` since v1.31.",
-    "markdown": "Kubeadm: don't warn if the `crictl` binary does not exist since kubeadm does not rely on `crictl` since v1.31. ([#126596](https://github.com/kubernetes/kubernetes/pull/126596), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: don't warn if `crictl` binary does not exist since kubeadm does not rely on `crictl` since v1.31.",
+    "markdown": "kubeadm: don't warn if the `crictl` binary does not exist since kubeadm does not rely on `crictl` since v1.31. ([#126596](https://github.com/kubernetes/kubernetes/pull/126596), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cluster Lifecycle]",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126596",
@@ -1520,8 +1520,8 @@
   },
   "126645": {
     "commit": "7b80cdb66a390f225d23cd612950144e3a39d1ae",
-    "text": "Removed feature gate `ValidatingAdmissionPolicy`.",
-    "markdown": "Removed feature gate `ValidatingAdmissionPolicy`. ([#126645](https://github.com/kubernetes/kubernetes/pull/126645), [@cici37](https://github.com/cici37)) [SIG API Machinery, Auth, and Testing]",
+    "text": "Removed generally available feature gate `ValidatingAdmissionPolicy`.",
+    "markdown": "Removed generally available feature gate `ValidatingAdmissionPolicy`. ([#126645](https://github.com/kubernetes/kubernetes/pull/126645), [@cici37](https://github.com/cici37)) [SIG API Machinery, Auth, and Testing]",
     "author": "cici37",
     "author_url": "https://github.com/cici37",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126645",
@@ -1720,8 +1720,8 @@
   },
   "126740": {
     "commit": "2f3e7f515f16d46c1ec7ab61d8d214986e157d09",
-    "text": "Kubeadm: allow mixing the `--config` flag with the special `--print-manifest` flag in the subphases of 'kubeadm init phase addon'.",
-    "markdown": "Kubeadm: allow mixing the `--config` flag with the special `--print-manifest` flag in the subphases of `kubeadm init phase addon`. ([#126740](https://github.com/kubernetes/kubernetes/pull/126740), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: allow mixing the `--config` flag with the special `--print-manifest` flag in the subphases of 'kubeadm init phase addon'.",
+    "markdown": "kubeadm: allow mixing the `--config` flag with the special `--print-manifest` flag in the subphases of `kubeadm init phase addon`. ([#126740](https://github.com/kubernetes/kubernetes/pull/126740), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126740",
@@ -1739,8 +1739,8 @@
   },
   "126743": {
     "commit": "385fd21d92d1e598f9ca6b68ccd1b6c5b2797f3e",
-    "text": "Kubeadm: ensure that extra environment variables written to a kubeadm-managed PodSpec are sorted alphanumerically by the environment variable name.",
-    "markdown": "Kubeadm: ensure that extra environment variables written to a kubeadm-managed PodSpec are sorted alphanumerically by the environment variable name. ([#126743](https://github.com/kubernetes/kubernetes/pull/126743), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: ensure that extra environment variables written to a kubeadm-managed PodSpec are sorted alphanumerically by the environment variable name.",
+    "markdown": "kubeadm: ensure that extra environment variables written to a kubeadm-managed PodSpec are sorted alphanumerically by the environment variable name. ([#126743](https://github.com/kubernetes/kubernetes/pull/126743), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126743",
@@ -1877,7 +1877,7 @@
   "126776": {
     "commit": "769695a218858682def602b980ff4113c0a0acf3",
     "text": "kubeadm: increased the verbosity of API client dry-run actions during the subcommands \"init\", \"join\", \"upgrade\" and \"reset\". It also allowed dry-run on 'kubeadm join' even if there was no existing cluster by utilizing a faked, in-memory cluster-info ConfigMap.",
-    "markdown": "Kubeadm: increased the verbosity of API client dry-run actions during the subcommands \"init\", \"join\", \"upgrade\" and \"reset\". It also allowed dry-run on 'kubeadm join' even if there was no existing cluster by utilizing a faked, in-memory cluster-info ConfigMap. ([#126776](https://github.com/kubernetes/kubernetes/pull/126776), [@neolit123](https://github.com/neolit123))",
+    "markdown": "kubeadm: increased the verbosity of API client dry-run actions during the subcommands \"init\", \"join\", \"upgrade\" and \"reset\". It also allowed dry-run on 'kubeadm join' even if there was no existing cluster by utilizing a faked, in-memory cluster-info ConfigMap. ([#126776](https://github.com/kubernetes/kubernetes/pull/126776), [@neolit123](https://github.com/neolit123))",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126776",
@@ -2199,7 +2199,7 @@
   "126913": {
     "commit": "7436ca32bc766ff202109a7541d2e7bb41ee7d13",
     "text": "kubeadm: remove the deprecated sub-phase of 'init kubelet-finilize' called `experimental-cert-rotation`, and use 'enable-client-cert-rotation' instead.",
-    "markdown": "Kubeadm: remove the deprecated sub-phase of 'init kubelet-finilize' called `experimental-cert-rotation`, and use 'enable-client-cert-rotation' instead. ([#126913](https://github.com/kubernetes/kubernetes/pull/126913), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: remove the deprecated sub-phase of 'init kubelet-finilize' called `experimental-cert-rotation`, and use 'enable-client-cert-rotation' instead. ([#126913](https://github.com/kubernetes/kubernetes/pull/126913), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126913",
@@ -2217,7 +2217,7 @@
   "126914": {
     "commit": "e9c9a27c97634c433dd9dad1118a98b7e4d519f8",
     "text": "kubeadm: removed the deprecated flag '--experimental-output'; please use the flag '--output' instead, as it serves the same purpose. Affected commands are: \"kubeadm config images list\", \"kubeadm token list\", \"kubeadm upgrade plan\", \"kubeadm certs check-expiration\".",
-    "markdown": "Kubeadm: removed the deprecated flag '--experimental-output'; please use the flag '--output' instead, as it serves the same purpose. Affected commands are: \"kubeadm config images list\", \"kubeadm token list\", \"kubeadm upgrade plan\", \"kubeadm certs check-expiration\". ([#126914](https://github.com/kubernetes/kubernetes/pull/126914), [@carlory](https://github.com/carlory)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: removed the deprecated flag '--experimental-output'; please use the flag '--output' instead, as it serves the same purpose. Affected commands are: \"kubeadm config images list\", \"kubeadm token list\", \"kubeadm upgrade plan\", \"kubeadm certs check-expiration\". ([#126914](https://github.com/kubernetes/kubernetes/pull/126914), [@carlory](https://github.com/carlory)) [SIG Cluster Lifecycle]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126914",
@@ -2272,7 +2272,7 @@
   "126945": {
     "commit": "85384fe273c97e07f6f7f073768d1d51452e6675",
     "text": "kubeadm: switched the kube-scheduler static Pod to use the endpoints /livez (for startup and liveness probes) and /readyz (for the readiness probe). Previously, /healthz was used for all probes, which is deprecated behavior for this component.",
-    "markdown": "Kubeadm: switched the kube-scheduler static Pod to use the endpoints /livez (for startup and liveness probes) and /readyz (for the readiness probe). Previously, /healthz was used for all probes, which is deprecated behavior for this component. ([#126945](https://github.com/kubernetes/kubernetes/pull/126945), [@liangyuanpeng](https://github.com/liangyuanpeng)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: switched the kube-scheduler static Pod to use the endpoints /livez (for startup and liveness probes) and /readyz (for the readiness probe). Previously, /healthz was used for all probes, which is deprecated behavior for this component. ([#126945](https://github.com/kubernetes/kubernetes/pull/126945), [@liangyuanpeng](https://github.com/liangyuanpeng)) [SIG Cluster Lifecycle]",
     "author": "liangyuanpeng",
     "author_url": "https://github.com/liangyuanpeng",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126945",
@@ -2290,7 +2290,7 @@
   "126953": {
     "commit": "6568b4bdb39b17105cd31b32899f687a346ce3d7",
     "text": "kubeadm: removed the preflight check for the existence of the conntrack binary, as conntrack is no longer a kube-proxy dependency in version 1.32 and newer.",
-    "markdown": "Kubeadm: removed the preflight check for the existence of the conntrack binary, as conntrack is no longer a kube-proxy dependency in version 1.32 and newer. ([#126953](https://github.com/kubernetes/kubernetes/pull/126953), [@aroradaman](https://github.com/aroradaman))",
+    "markdown": "kubeadm: removed the preflight check for the existence of the conntrack binary, as conntrack is no longer a kube-proxy dependency in version 1.32 and newer. ([#126953](https://github.com/kubernetes/kubernetes/pull/126953), [@aroradaman](https://github.com/aroradaman))",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126953",
@@ -2846,8 +2846,8 @@
   },
   "127096": {
     "commit": "d913914511c87dee288d1d72921c364a8331893f",
-    "text": "Kubeadm: if an unknown command name is passed to any parent command such as 'kubeadm init phase', return an error. If 'kubeadm init phase' or another command that has subcommands is called without a subcommand name, print the available commands and also return an error.",
-    "markdown": "Kubeadm: if an unknown command name is passed to any parent command such as 'kubeadm init phase', return an error. If 'kubeadm init phase' or another command that has subcommands is called without a subcommand name, print the available commands and also return an error. ([#127096](https://github.com/kubernetes/kubernetes/pull/127096), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: if an unknown command name is passed to any parent command such as 'kubeadm init phase', return an error. If 'kubeadm init phase' or another command that has subcommands is called without a subcommand name, print the available commands and also return an error.",
+    "markdown": "kubeadm: if an unknown command name is passed to any parent command such as 'kubeadm init phase', return an error. If 'kubeadm init phase' or another command that has subcommands is called without a subcommand name, print the available commands and also return an error. ([#127096](https://github.com/kubernetes/kubernetes/pull/127096), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127096",
@@ -2866,7 +2866,7 @@
   "127123": {
     "commit": "d62b797c16fdffa55a8e2fc95f04bf72c019be70",
     "text": "kubeadm: removed the deprecated and NO-OP flags `--feature-gates` for `kubeadm upgrade apply` and `--api-server-manifest`, `--controller-manager-manifest` and `--scheduler-manifest` for `kubeadm upgrade diff`.",
-    "markdown": "Kubeadm: removed the deprecated and NO-OP flags `--feature-gates` for `kubeadm upgrade apply` and `--api-server-manifest`, `--controller-manager-manifest` and `--scheduler-manifest` for `kubeadm upgrade diff`. ([#127123](https://github.com/kubernetes/kubernetes/pull/127123), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: removed the deprecated and NO-OP flags `--feature-gates` for `kubeadm upgrade apply` and `--api-server-manifest`, `--controller-manager-manifest` and `--scheduler-manifest` for `kubeadm upgrade diff`. ([#127123](https://github.com/kubernetes/kubernetes/pull/127123), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127123",
@@ -2937,7 +2937,7 @@
   "127151": {
     "commit": "3ebdb13c5e7987b3ecfdf4a4fc5ae83dbc6191c7",
     "text": "kubeadm: removed `socat` and `ebtables` from kubeadm preflight checks",
-    "markdown": "Kubeadm: removed `socat` and `ebtables` from kubeadm preflight checks ([#127151](https://github.com/kubernetes/kubernetes/pull/127151), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: removed `socat` and `ebtables` from kubeadm preflight checks ([#127151](https://github.com/kubernetes/kubernetes/pull/127151), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cluster Lifecycle]",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127151",
@@ -2995,8 +2995,8 @@
   },
   "127167": {
     "commit": "8e3adc4df64d5b382c8916610313ce25e0df8e28",
-    "text": "Allow Pod search domains to be a single dot \".\" or contain an underscore \"_\"",
-    "markdown": "Allow for Pod search domains to be a single dot \".\" or contain an underscore \"_\" ([#127167](https://github.com/kubernetes/kubernetes/pull/127167), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Apps, Network and Testing]",
+    "text": "Allow Pod search domains to be a single dot `.` or contain an underscore `_`",
+    "markdown": "Allow for Pod search domains to be a single dot `.` or contain an underscore `_` ([#127167](https://github.com/kubernetes/kubernetes/pull/127167), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Apps, Network and Testing]",
     "author": "adrianmoisey",
     "author_url": "https://github.com/adrianmoisey",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127167",
@@ -3131,7 +3131,7 @@
   "127242": {
     "commit": "e30d994129ea895a9b0180db350e1ad1e2495725",
     "text": "kubeadm: `kubeadm upgrade node` now supports `addon` and `post-upgrade` phases. Users can use `kubeadm upgrade node phase addon` to execute the addon upgrade, or use `kubeadm upgrade node --skip-phases addon` to skip the addon upgrade. Currently, the `post-upgrade` phase is no-op, and it is mainly used to handle some release-specific post-upgrade tasks.",
-    "markdown": "Kubeadm: `kubeadm upgrade node` now supports `addon` and `post-upgrade` phases. Users can use `kubeadm upgrade node phase addon` to execute the addon upgrade, or use `kubeadm upgrade node --skip-phases addon` to skip the addon upgrade. Currently, the `post-upgrade` phase is no-op, and it is mainly used to handle some release-specific post-upgrade tasks. ([#127242](https://github.com/kubernetes/kubernetes/pull/127242), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: `kubeadm upgrade node` now supports `addon` and `post-upgrade` phases. Users can use `kubeadm upgrade node phase addon` to execute the addon upgrade, or use `kubeadm upgrade node --skip-phases addon` to skip the addon upgrade. Currently, the `post-upgrade` phase is no-op, and it is mainly used to handle some release-specific post-upgrade tasks. ([#127242](https://github.com/kubernetes/kubernetes/pull/127242), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127242",
@@ -3346,7 +3346,7 @@
   "127333": {
     "commit": "19e8e59d06cbdd067a9b5c141b674b63a09d0e5c",
     "text": "kubeadm: ensure that Pods from the upgrade preflight check `CreateJob` are properly terminated after a timeout.",
-    "markdown": "Kubeadm: ensure that Pods from the upgrade preflight check `CreateJob` are properly terminated after a timeout. ([#127333](https://github.com/kubernetes/kubernetes/pull/127333), [@yuyabee](https://github.com/yuyabee)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: ensure that Pods from the upgrade preflight check `CreateJob` are properly terminated after a timeout. ([#127333](https://github.com/kubernetes/kubernetes/pull/127333), [@yuyabee](https://github.com/yuyabee)) [SIG Cluster Lifecycle]",
     "author": "yuyabee",
     "author_url": "https://github.com/yuyabee",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127333",
@@ -3738,7 +3738,7 @@
   "127491": {
     "commit": "99ff62e87a2d881f4839159d33519a49d6eee5d9",
     "text": "kubeadm: when adding new control plane nodes with `kubeadm join`, ensure that the etcd member addition is performed only if a given member URL does not already exist in the list of members. Similarly, on \"kubeadm reset\" only remove an etcd member if its ID exists.",
-    "markdown": "Kubeadm: when adding new control plane nodes with `kubeadm join`, ensure that the etcd member addition is performed only if a given member URL does not already exist in the list of members. Similarly, on \"kubeadm reset\" only remove an etcd member if its ID exists. ([#127491](https://github.com/kubernetes/kubernetes/pull/127491), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: when adding new control plane nodes with `kubeadm join`, ensure that the etcd member addition is performed only if a given member URL does not already exist in the list of members. Similarly, on \"kubeadm reset\" only remove an etcd member if its ID exists. ([#127491](https://github.com/kubernetes/kubernetes/pull/127491), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127491",
@@ -4107,8 +4107,8 @@
   },
   "127650": {
     "commit": "996e674ea7039a39afd21b479a9601d57cb49b8d",
-    "text": "Kubeadm: fixed an issue where the wrong member list was being reported when removing an etcd member.",
-    "markdown": "Kubeadm: fixed an issue where the wrong member list was being reported when removing an etcd member. ([#127650](https://github.com/kubernetes/kubernetes/pull/127650), [@SataQiu](https://github.com/SataQiu))",
+    "text": "kubeadm: fixed an issue where the wrong member list was being reported when removing an etcd member.",
+    "markdown": "kubeadm: fixed an issue where the wrong member list was being reported when removing an etcd member. ([#127650](https://github.com/kubernetes/kubernetes/pull/127650), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127650",
@@ -4696,7 +4696,7 @@
   "128031": {
     "commit": "983dd0776061be79ccdc3646ba5c43dd6ef85527",
     "text": "kubeadm: added the feature gate `NodeLocalCRISocket`. When the feature gate is enabled, kubeadm will generate the `/var/lib/kubelet/instance-config.yaml` file to customize the `containerRuntimeEndpoint` field in the kubelet configuration for each node and will not write the same CRI socket on the Node object as an annotation.",
-    "markdown": "Kubeadm: added the feature gate `NodeLocalCRISocket`. When the feature gate is enabled, kubeadm will generate the `/var/lib/kubelet/instance-config.yaml` file to customize the `containerRuntimeEndpoint` field in the kubelet configuration for each node and will not write the same CRI socket on the Node object as an annotation. ([#128031](https://github.com/kubernetes/kubernetes/pull/128031), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: added the feature gate `NodeLocalCRISocket`. When the feature gate is enabled, kubeadm will generate the `/var/lib/kubelet/instance-config.yaml` file to customize the `containerRuntimeEndpoint` field in the kubelet configuration for each node and will not write the same CRI socket on the Node object as an annotation. ([#128031](https://github.com/kubernetes/kubernetes/pull/128031), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG Cluster Lifecycle]",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-cluster-lifecycle/kubeadm/4656-add-kubelet-instance-configuration",
@@ -4829,7 +4829,7 @@
   "128062": {
     "commit": "55b83c92b3b69cd53d5bf22b8ccff859a005241a",
     "text": "kubelet: the `--image-credential-provider-config` file is now loaded with strict deserialization, which fails if the config file contains duplicate or unknown fields. This protects against accidentally running with malformed config files, unindented files, or typos in field names, and prevents unexpected behavior.",
-    "markdown": "Kubelet: the `--image-credential-provider-config` file is now loaded with strict deserialization, which fails if the config file contains duplicate or unknown fields. This protects against accidentally running with malformed config files, unindented files, or typos in field names, and prevents unexpected behavior. ([#128062](https://github.com/kubernetes/kubernetes/pull/128062), [@aramase](https://github.com/aramase)) [SIG Auth and Node]",
+    "markdown": "kubelet: the `--image-credential-provider-config` file is now loaded with strict deserialization, which fails if the config file contains duplicate or unknown fields. This protects against accidentally running with malformed config files, unindented files, or typos in field names, and prevents unexpected behavior. ([#128062](https://github.com/kubernetes/kubernetes/pull/128062), [@aramase](https://github.com/aramase)) [SIG Auth and Node]",
     "author": "aramase",
     "author_url": "https://github.com/aramase",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128062",
@@ -4917,8 +4917,8 @@
   },
   "128083": {
     "commit": "d7e5ff87e067be419ba97344349e90fdd9262cac",
-    "text": "Kubelet: Fixed a bug where the kubelet wrongly drops the QOSClass field of the Pod's status when it rejects a Pod.",
-    "markdown": "Kubelet: Fixed a bug where the kubelet wrongly drops the QOSClass field of the Pod's status when it rejects a Pod. ([#128083](https://github.com/kubernetes/kubernetes/pull/128083), [@carlory](https://github.com/carlory)) [SIG Node and Testing]",
+    "text": "kubelet: Fixed a bug where the kubelet wrongly drops the QOSClass field of the Pod's status when it rejects a Pod.",
+    "markdown": "kubelet: Fixed a bug where the kubelet wrongly drops the QOSClass field of the Pod's status when it rejects a Pod. ([#128083](https://github.com/kubernetes/kubernetes/pull/128083), [@carlory](https://github.com/carlory)) [SIG Node and Testing]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128083",
@@ -5053,8 +5053,8 @@
   },
   "128118": {
     "commit": "190eb057f4eaac1db47b54f0d8232eae6ebd1ff2",
-    "text": "Kubeadm: fixed a misleading output (typo) about control-plane joining instructions when executing the \"kubeadm init\" command.",
-    "markdown": "Kubeadm: fixed a misleading output (typo) about control-plane joining instructions when executing the \"kubeadm init\" command. ([#128118](https://github.com/kubernetes/kubernetes/pull/128118), [@amaddio](https://github.com/amaddio))",
+    "text": "kubeadm: fixed a misleading output (typo) about control-plane joining instructions when executing the \"kubeadm init\" command.",
+    "markdown": "kubeadm: fixed a misleading output (typo) about control-plane joining instructions when executing the \"kubeadm init\" command. ([#128118](https://github.com/kubernetes/kubernetes/pull/128118), [@amaddio](https://github.com/amaddio))",
     "author": "amaddio",
     "author_url": "https://github.com/amaddio",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128118",
@@ -5453,7 +5453,7 @@
   "128219": {
     "commit": "f8e64e1d6e44035b5fc0f1e3002e6fade0e6857c",
     "text": "kubelet: Fix - the volume manager didn't check the device mount state in the actual state of the world before marking the volume as detached. It may cause a pod to be stuck in the Terminating state due to the above issue when it was deleted.",
-    "markdown": "Kubelet: Fix - the volume manager didn't check the device mount state in the actual state of the world before marking the volume as detached. It may cause a pod to be stuck in the Terminating state due to the above issue when it was deleted. ([#128219](https://github.com/kubernetes/kubernetes/pull/128219), [@carlory](https://github.com/carlory))",
+    "markdown": "kubelet: Fix - the volume manager didn't check the device mount state in the actual state of the world before marking the volume as detached. It may cause a pod to be stuck in the Terminating state due to the above issue when it was deleted. ([#128219](https://github.com/kubernetes/kubernetes/pull/128219), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128219",
@@ -5807,7 +5807,7 @@
   "128359": {
     "commit": "db66e397d97410cf74b45d74d299b36ae704f4b8",
     "text": "kubeadm: added \"disable success\" and \"disable denial\" as parameters of the \"cache\" plugin in the Corefile managed by kubeadm. This is to prevent conflicting responses during CoreDNS cache updates.",
-    "markdown": "Kubeadm: added \"disable success\" and \"disable denial\" as parameters of the \"cache\" plugin in the Corefile managed by kubeadm. This is to prevent conflicting responses during CoreDNS cache updates. ([#128359](https://github.com/kubernetes/kubernetes/pull/128359), [@matteriben](https://github.com/matteriben)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: added \"disable success\" and \"disable denial\" as parameters of the \"cache\" plugin in the Corefile managed by kubeadm. This is to prevent conflicting responses during CoreDNS cache updates. ([#128359](https://github.com/kubernetes/kubernetes/pull/128359), [@matteriben](https://github.com/matteriben)) [SIG Cluster Lifecycle]",
     "author": "matteriben",
     "author_url": "https://github.com/matteriben",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128359",
@@ -6123,7 +6123,7 @@
   "128474": {
     "commit": "6fce566781b312bec7b52756d978f0c27ee15ced",
     "text": "kubeadm: consider --bind-address or --advertise-address and --secure-port for control plane components when the feature gate WaitForAllControlPlaneComponents is enabled. Use /livez for kube-apiserver and kube-scheduler, but continue using /healthz for kube-controller-manager until it supports /livez.",
-    "markdown": "Kubeadm: consider --bind-address or --advertise-address and --secure-port for control plane components when the feature gate WaitForAllControlPlaneComponents is enabled. Use /livez for kube-apiserver and kube-scheduler, but continue using /healthz for kube-controller-manager until it supports /livez. ([#128474](https://github.com/kubernetes/kubernetes/pull/128474), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "markdown": "kubeadm: consider --bind-address or --advertise-address and --secure-port for control plane components when the feature gate WaitForAllControlPlaneComponents is enabled. Use /livez for kube-apiserver and kube-scheduler, but continue using /healthz for kube-controller-manager until it supports /livez. ([#128474](https://github.com/kubernetes/kubernetes/pull/128474), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128474",
