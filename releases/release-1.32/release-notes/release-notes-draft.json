@@ -506,6 +506,33 @@
     "feature": true,
     "duplicate": true
   },
+  "128560": {
+    "commit": "4932adf80d9ac97e895d22ce822f80863d7cd1aa",
+    "text": "Added Windows support for the node memory manager.",
+    "markdown": "Added Windows support for the node memory manager.",
+    "documentation": [
+      {
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-windows/4885-windows-cpu-and-memory-affinity",
+        "type": "KEP"
+      }
+    ],
+    "author": "marosset",
+    "author_url": "https://github.com/marosset",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/128560",
+    "pr_number": 128560,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "windows"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
   "125337": {
     "commit": "48f36acc7a13d37c357aa6abff55a01267eab8a9",
     "text": "The kubelet, when using `--cloud-provider=external` can use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solve the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster.",
@@ -2308,8 +2335,8 @@
   },
   "126957": {
     "commit": "3d65369f346d359bcabdc7f04addff5fdb2f194a",
-    "text": "Fixes a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing.",
-    "markdown": "Fixes a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing. ([#126957](https://github.com/kubernetes/kubernetes/pull/126957), [@dashpole](https://github.com/dashpole)) [SIG API Machinery, Architecture, Instrumentation and Node]",
+    "text": "Fixed a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing.",
+    "markdown": "Fixed a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing. ([#126957](https://github.com/kubernetes/kubernetes/pull/126957), [@dashpole](https://github.com/dashpole)) [SIG API Machinery, Architecture, Instrumentation and Node]",
     "author": "dashpole",
     "author_url": "https://github.com/dashpole",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126957",
@@ -3599,8 +3626,8 @@
   },
   "127444": {
     "commit": "960e3984b0f0b0254fc1f5a177ac3b4663937c48",
-    "text": "Improved `Node QueueHint` in the `NodeAffinity` plugin by ignoring unrelated changes that keep pods unschedulable.",
-    "markdown": "Improved `Node QueueHint` in the `NodeAffinity` plugin by ignoring unrelated changes that keep pods unschedulable. ([#127444](https://github.com/kubernetes/kubernetes/pull/127444), [@dom4ha](https://github.com/dom4ha)) [SIG Scheduling and Testing]",
+    "text": "Improved `Node QueueingHint` in the `NodeAffinity` plugin by ignoring unrelated changes that keep pods unschedulable.",
+    "markdown": "Improved `Node QueueingHint` in the `NodeAffinity` plugin by ignoring unrelated changes that keep pods unschedulable. ([#127444](https://github.com/kubernetes/kubernetes/pull/127444), [@dom4ha](https://github.com/dom4ha)) [SIG Scheduling and Testing]",
     "author": "dom4ha",
     "author_url": "https://github.com/dom4ha",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127444",
@@ -3656,8 +3683,8 @@
   },
   "127473": {
     "commit": "421436a94c42576e9cc86d427924bc1d70096883",
-    "text": "Improved `Node QueueHint` in the `NodeResource Fit` plugin by ignoring unrelated changes that keep pods unschedulable.",
-    "markdown": "Improved `Node QueueHint` in the `NodeResource Fit` plugin by ignoring unrelated changes that keep pods unschedulable. ([#127473](https://github.com/kubernetes/kubernetes/pull/127473), [@dom4ha](https://github.com/dom4ha)) [SIG Scheduling and Testing]",
+    "text": "Improved `Node QueueingHint` in the `NodeResource Fit` plugin by ignoring unrelated changes that keep pods unschedulable.",
+    "markdown": "Improved `Node QueueingHint` in the `NodeResource Fit` plugin by ignoring unrelated changes that keep pods unschedulable. ([#127473](https://github.com/kubernetes/kubernetes/pull/127473), [@dom4ha](https://github.com/dom4ha)) [SIG Scheduling and Testing]",
     "author": "dom4ha",
     "author_url": "https://github.com/dom4ha",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127473",
@@ -4232,8 +4259,8 @@
   },
   "127744": {
     "commit": "6bc0768c62b9dade91b22d1bfcc115edf1f0ccad",
-    "text": "Tighten validation on the qosClass field of pod status. This field is immutable but it would be populated with the old status by kube-apiserver if it is unset in the new status when updating this field via the status subsource.",
-    "markdown": "Tighten validation on the qosClass field of pod status. This field is immutable but it would be populated with the old status by kube-apiserver if it is unset in the new status when updating this field via the status subsource. ([#127744](https://github.com/kubernetes/kubernetes/pull/127744), [@carlory](https://github.com/carlory)) [SIG Apps, Instrumentation, Node, Storage and Testing]",
+    "text": "Tighten validation on the qosClass field of pod status. This field is immutable, but it would be populated with the old status by kube-apiserver if it is unset in the new status when updating this field via the status subsource.",
+    "markdown": "Tighten validation on the qosClass field of pod status. This field is immutable, but it would be populated with the old status by kube-apiserver if it is unset in the new status when updating this field via the status subsource. ([#127744](https://github.com/kubernetes/kubernetes/pull/127744), [@carlory](https://github.com/carlory)) [SIG Apps, Instrumentation, Node, Storage and Testing]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127744",
@@ -5452,8 +5479,8 @@
   },
   "128219": {
     "commit": "f8e64e1d6e44035b5fc0f1e3002e6fade0e6857c",
-    "text": "kubelet: Fix - the volume manager didn't check the device mount state in the actual state of the world before marking the volume as detached. It may cause a pod to be stuck in the Terminating state due to the above issue when it was deleted.",
-    "markdown": "Kubelet: Fix - the volume manager didn't check the device mount state in the actual state of the world before marking the volume as detached. It may cause a pod to be stuck in the Terminating state due to the above issue when it was deleted. ([#128219](https://github.com/kubernetes/kubernetes/pull/128219), [@carlory](https://github.com/carlory))",
+    "text": "kubelet: Fixed the volume manager checking the device mount state in the actual state of the world before marking the volume as detached. It may cause a pod to be stuck in the Terminating state due to the above issue when it was deleted.",
+    "markdown": "Kubelet: Fixed the volume manager checking the device mount state in the actual state of the world before marking the volume as detached. It may cause a pod to be stuck in the Terminating state due to the above issue when it was deleted. ([#128219](https://github.com/kubernetes/kubernetes/pull/128219), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128219",
@@ -6374,8 +6401,8 @@
   },
   "128623": {
     "commit": "dff657a07c5795081821c53469ce5f18f6fc60f7",
-    "text": "Droped support for `InPlacePodVerticalScaling` feature in Windows.",
-    "markdown": "Droped support for `InPlacePodVerticalScaling` feature in Windows. ([#128623](https://github.com/kubernetes/kubernetes/pull/128623), [@AnishShah](https://github.com/AnishShah)) [SIG Apps and Node]",
+    "text": "Dropped support for `InPlacePodVerticalScaling` feature in Windows.",
+    "markdown": "Dropped support for `InPlacePodVerticalScaling` feature in Windows. ([#128623](https://github.com/kubernetes/kubernetes/pull/128623), [@AnishShah](https://github.com/AnishShah)) [SIG Apps and Node]",
     "documentation": [
       {
         "description": "KEP",
@@ -6504,8 +6531,8 @@
   },
   "128681": {
     "commit": "210deea063a5a778e8c3a8e32b8bc4c808b87835",
-    "text": "Revised error handling for port forwards to Pods. Added stream stream resets preventing port-forward from blockage.",
-    "markdown": "Revised error handling for port forwards to Pods. Added stream stream resets preventing port-forward from blockage. ([#128681](https://github.com/kubernetes/kubernetes/pull/128681), [@soltysh](https://github.com/soltysh)) [SIG API Machinery, CLI and Testing]",
+    "text": "Revised error handling for port forwards to Pods. Added stream resets preventing port-forward from blockage.",
+    "markdown": "Revised error handling for port forwards to Pods. Added stream resets preventing port-forward from blockage. ([#128681](https://github.com/kubernetes/kubernetes/pull/128681), [@soltysh](https://github.com/soltysh)) [SIG API Machinery, CLI and Testing]",
     "author": "soltysh",
     "author_url": "https://github.com/soltysh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128681",
@@ -6597,8 +6624,8 @@
   },
   "128932": {
     "commit": "e4c1f980b76fecece30c2f77885a7117192170a6",
-    "text": "For Dynamic Resource Allocartion, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice.",
-    "markdown": "For Dynamic Resource Allocartion, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice. ([#128932](https://github.com/kubernetes/kubernetes/pull/128932), [@pohly](https://github.com/pohly))",
+    "text": "For Dynamic Resource Allocation, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice.",
+    "markdown": "For Dynamic Resource Allocation, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice. ([#128932](https://github.com/kubernetes/kubernetes/pull/128932), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
