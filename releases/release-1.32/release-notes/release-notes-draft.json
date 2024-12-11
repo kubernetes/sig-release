@@ -6680,6 +6680,46 @@
     ],
     "feature": false,
     "is_mapped":false
+  },
+  "129103": {
+    "commit": "3046fe23d4fe4ba86713ffd61bf0e07156b2b7c3",
+    "text": "kubelet: on Windows, consistently resolve filesystem links to volume identifiers instead of inconsistently normalizing to drive letters.",
+    "markdown": "kubelet: on Windows, consistently resolve filesystem links to volume identifiers instead of inconsistently normalizing to drive letters. ([#129103](https://github.com/kubernetes/kubernetes/pull/129103), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Network, Node, Release, Storage and Windows]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129103",
+    "pr_number": 129103,
+    "areas": [
+      "apiserver",
+      "cloudprovider",
+      "code-generation",
+      "dependency",
+      "kube-proxy",
+      "kubectl",
+      "kubelet"
+    ],
+    "kinds": [
+      "cleanup",
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "architecture",
+      "auth",
+      "cli",
+      "cloud-provider",
+      "cluster-lifecycle",
+      "instrumentation",
+      "network",
+      "node",
+      "release",
+      "storage",
+      "windows"
+    ],
+    "feature": false,
+    "is_mapped":false,
+    "duplicate": false,
+    "duplicate_kind": false
   }
 
 }

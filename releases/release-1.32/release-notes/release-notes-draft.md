@@ -304,6 +304,7 @@ There are no urgent upgrade notes for the v1.32 release.
 - `StartupProbe` was explicitly stopped when the `successThreshold` was reached.
   This eliminated the problem of executing `StartupProbe` more times than 
   the `successThreshold`. ([#121206](https://github.com/kubernetes/kubernetes/pull/121206), [@mochizuki875](https://github.com/mochizuki875))
+- kubelet: on Windows, consistently resolve filesystem links to volume identifiers instead of inconsistently normalizing to drive letters. ([#129103](https://github.com/kubernetes/kubernetes/pull/129103), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Network, Node, Release, Storage and Windows]
 
 ### Other (Cleanup or Flake)
 
