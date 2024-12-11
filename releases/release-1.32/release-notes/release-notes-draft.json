@@ -26,7 +26,7 @@
   "115834": {
     "commit": "9f01cd7b28fdbc8a1ceb9ec371fd817551659ee5",
     "text": "kube-apiserver: a new `--requestheader-uid-headers` flag allows configuring request header authentication to obtain the authenticating user's UID from the specified headers. The suggested value for the new option is `X-Remote-Uid`. When specified, the `kube-system/extension-apiserver-authentication` configmap will include the value in its `.data[requestheader-uid-headers]` field.",
-    "markdown": "Kube-apiserver: a new `--requestheader-uid-headers` flag allows configuring request header authentication to obtain the authenticating user's UID from the specified headers. The suggested value for the new option is `X-Remote-Uid`. When specified, the `kube-system/extension-apiserver-authentication` configmap will include the value in its `.data[requestheader-uid-headers]` field. ([#115834](https://github.com/kubernetes/kubernetes/pull/115834), [@stlaz](https://github.com/stlaz)) [SIG API Machinery, Auth, Cloud Provider and Testing]",
+    "markdown": "kube-apiserver: a new `--requestheader-uid-headers` flag allows configuring request header authentication to obtain the authenticating user's UID from the specified headers. The suggested value for the new option is `X-Remote-Uid`. When specified, the `kube-system/extension-apiserver-authentication` configmap will include the value in its `.data[requestheader-uid-headers]` field. ([#115834](https://github.com/kubernetes/kubernetes/pull/115834), [@stlaz](https://github.com/stlaz)) [SIG API Machinery, Auth, Cloud Provider and Testing]",
     "author": "stlaz",
     "author_url": "https://github.com/stlaz",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115834",
@@ -4617,7 +4617,7 @@
   "128009": {
     "commit": "023cd33d23067908d08bd21affa43140fb5d7791",
     "text": "kube-controller-manager `--leader-migration-config` files were now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration would cause an error.",
-    "markdown": "Kube-controller-manager `--leader-migration-config` files were now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration would cause an error. ([#128009](https://github.com/kubernetes/kubernetes/pull/128009), [@seans3](https://github.com/seans3)) [SIG API Machinery and Cloud Provider]",
+    "markdown": "kube-controller-manager `--leader-migration-config` files were now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration would cause an error. ([#128009](https://github.com/kubernetes/kubernetes/pull/128009), [@seans3](https://github.com/seans3)) [SIG API Machinery and Cloud Provider]",
     "author": "seans3",
     "author_url": "https://github.com/seans3",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128009",
@@ -4634,8 +4634,8 @@
   },
   "128011": {
     "commit": "8b7b768ff78d73267e52c0828e1e0eb3f5328f28",
-    "text": "Kube-apiserver `--egress-selector-config-file` files were validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause an error.",
-    "markdown": "Kube-apiserver `--egress-selector-config-file` files were validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause an error. ([#128011](https://github.com/kubernetes/kubernetes/pull/128011), [@seans3](https://github.com/seans3)) [SIG API Machinery and Testing]",
+    "text": "kube-apiserver `--egress-selector-config-file` files were validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause an error.",
+    "markdown": "kube-apiserver `--egress-selector-config-file` files were validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause an error. ([#128011](https://github.com/kubernetes/kubernetes/pull/128011), [@seans3](https://github.com/seans3)) [SIG API Machinery and Testing]",
     "author": "seans3",
     "author_url": "https://github.com/seans3",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128011",
@@ -4657,7 +4657,7 @@
   "128013": {
     "commit": "eb5c8965befeefad027d0c1684fe6d34f6f31c19",
     "text": "kube-apiserver `--admission-control-config-file` files are now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause errors.",
-    "markdown": "Kube-apiserver `--admission-control-config-file` files are now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause errors. ([#128013](https://github.com/kubernetes/kubernetes/pull/128013), [@seans3](https://github.com/seans3))",
+    "markdown": "kube-apiserver `--admission-control-config-file` files are now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause errors. ([#128013](https://github.com/kubernetes/kubernetes/pull/128013), [@seans3](https://github.com/seans3))",
     "author": "seans3",
     "author_url": "https://github.com/seans3",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128013",
@@ -4737,7 +4737,7 @@
   "128038": {
     "commit": "510a7e76018189b49e8d7c1ba4ac639bdf4dba37",
     "text": "kube-apiserver `ResourceQuotaConfiguration` admission plugin subsection within `--admission-control-config-file` files is now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause errors.",
-    "markdown": "Kube-apiserver `ResourceQuotaConfiguration` admission plugin subsection within `--admission-control-config-file` files is now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause errors. ([#128038](https://github.com/kubernetes/kubernetes/pull/128038), [@seans3](https://github.com/seans3))",
+    "markdown": "kube-apiserver `ResourceQuotaConfiguration` admission plugin subsection within `--admission-control-config-file` files is now validated strictly (EnableStrict). Duplicate and unknown fields in the configuration will now cause errors. ([#128038](https://github.com/kubernetes/kubernetes/pull/128038), [@seans3](https://github.com/seans3))",
     "author": "seans3",
     "author_url": "https://github.com/seans3",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128038",
@@ -5151,7 +5151,7 @@
   "128168": {
     "commit": "d7bd7284035e7debd5406d375cd366b164cf358f",
     "text": "kube-apiserver: Promoted the `AuthorizeWithSelectors` feature to beta, which includes field and label selector information from requests in webhook authorization calls. Promoted the `AuthorizeNodeWithSelectors` feature to beta, which changes node authorizer behavior to limit requests from node API clients, so that each Node can only get / list / watch its own Node API object, and can also only get / list / watch Pod API objects bound to that node. Clients using kubelet credentials to read other nodes or unrelated pods must change their authentication credentials (recommended), adjust their usage, or obtain broader read access independent of the node authorizer.",
-    "markdown": "Kube-apiserver: Promoted the `AuthorizeWithSelectors` feature to beta, which includes field and label selector information from requests in webhook authorization calls. Promoted the `AuthorizeNodeWithSelectors` feature to beta, which changes node authorizer behavior to limit requests from node API clients, so that each Node can only get / list / watch its own Node API object, and can also only get / list / watch Pod API objects bound to that node. Clients using kubelet credentials to read other nodes or unrelated pods must change their authentication credentials (recommended), adjust their usage, or obtain broader read access independent of the node authorizer. ([#128168](https://github.com/kubernetes/kubernetes/pull/128168), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth and Testing]",
+    "markdown": "kube-apiserver: Promoted the `AuthorizeWithSelectors` feature to beta, which includes field and label selector information from requests in webhook authorization calls. Promoted the `AuthorizeNodeWithSelectors` feature to beta, which changes node authorizer behavior to limit requests from node API clients, so that each Node can only get / list / watch its own Node API object, and can also only get / list / watch Pod API objects bound to that node. Clients using kubelet credentials to read other nodes or unrelated pods must change their authentication credentials (recommended), adjust their usage, or obtain broader read access independent of the node authorizer. ([#128168](https://github.com/kubernetes/kubernetes/pull/128168), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5243,7 +5243,7 @@
   "128172": {
     "commit": "79cca2786e037d8c8ae7fe856c5ae158b100ce71",
     "text": "kube-apiserver: Promoted the `StructuredAuthorizationConfiguration` feature gate to GA. The `--authorization-config` flag now accepts `AuthorizationConfiguration` in version `apiserver.config.k8s.io/v1` (with no changes from `apiserver.config.k8s.io/v1beta1`).",
-    "markdown": "Kube-apiserver: Promoted the `StructuredAuthorizationConfiguration` feature gate to GA. The `--authorization-config` flag now accepts `AuthorizationConfiguration` in version `apiserver.config.k8s.io/v1` (with no changes from `apiserver.config.k8s.io/v1beta1`). ([#128172](https://github.com/kubernetes/kubernetes/pull/128172), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth and Testing]",
+    "markdown": "kube-apiserver: Promoted the `StructuredAuthorizationConfiguration` feature gate to GA. The `--authorization-config` flag now accepts `AuthorizationConfiguration` in version `apiserver.config.k8s.io/v1` (with no changes from `apiserver.config.k8s.io/v1beta1`). ([#128172](https://github.com/kubernetes/kubernetes/pull/128172), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
