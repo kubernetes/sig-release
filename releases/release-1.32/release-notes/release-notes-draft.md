@@ -1,8 +1,7 @@
-## Urgent Upgrade Notes 
+## Urgent Upgrade Notes
 
-### (No, really, you MUST read this before you upgrade)
+There are no urgent upgrade notes for the v1.32 release.
 
- 
 ## Changes by Kind
 
 ### Deprecation
