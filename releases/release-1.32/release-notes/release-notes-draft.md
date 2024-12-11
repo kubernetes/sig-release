@@ -15,17 +15,17 @@ There are no urgent upgrade notes for the v1.32 release.
   `PodEligibleToPreemptOthers` in the `preemption` interface now includes `ctx` in the parameters.
   Please update your plugins' implementation accordingly. ([#126465](https://github.com/kubernetes/kubernetes/pull/126465), [@googs1025](https://github.com/googs1025)) [SIG Scheduling]
 - Changed NodeToStatusMap from a map to a struct and exposed methods to access the entries. Added absentNodesStatus, which informs the status of nodes that are absent in the map. For developers of out-of-tree PostFilter plugins, ensure to update the usage of NodeToStatusMap. Additionally, NodeToStatusMap should eventually be renamed to NodeToStatusReader. ([#126022](https://github.com/kubernetes/kubernetes/pull/126022), [@macsko](https://github.com/macsko)) [SIG Node, Scheduling, and Testing]
- 
+
 - A new /resize subresource was added to request pod resource resizing. Update your k8s client code to utilize the /resize subresource for Pod resizing operations. ([#128266](https://github.com/kubernetes/kubernetes/pull/128266), [@AnishShah](https://github.com/AnishShah)) [SIG API Machinery, Apps, Node and Testing]
-- A new feature that allows unsafe deletion of corrupt resources has been added, it is disabled by default, 
-  and it can be enabled by setting the option `--feature-gates=AllowUnsafeMalformedObjectDeletion=true`. 
+- A new feature that allows unsafe deletion of corrupt resources has been added, it is disabled by default,
+  and it can be enabled by setting the option `--feature-gates=AllowUnsafeMalformedObjectDeletion=true`.
   It comes with an API change, a new delete option `ignoreStoreReadErrorWithClusterBreakingPotential` has
-  been introduced, it is not set by default, this maintains backward compatibility. 
+  been introduced, it is not set by default, this maintains backward compatibility.
   In order to perform an unsafe deletion of a corrupt resource, the user must enable the option for the delete
   request. A resource is considered corrupt if it can not be successfully retrieved from the storage due to
   a) transformation error e.g. decryption failure, or b) the object failed to decode. Normal deletion flow is
   attempted first, and if it fails with a corrupt resource error then it triggers unsafe delete.
-  In addition, when this feature is enabled, the 'details' field of 'Status' from the LIST response 
+  In addition, when this feature is enabled, the 'details' field of 'Status' from the LIST response
   includes information that identifies the corrupt object(s).
   NOTE: unsafe deletion ignores finalizer constraints, and skips precondition checks.
   WARNING: this may break the workload associated with the resource being unsafe-deleted, if it relies on
@@ -64,7 +64,7 @@ There are no urgent upgrade notes for the v1.32 release.
 - Promoted `CustomResourceFieldSelectors` to stable; the feature was enabled by default. The `--feature-gates=CustomResourceFieldSelectors=true` flag was no longer needed on kube-apiserver binaries and would be removed in a future release. ([#127673](https://github.com/kubernetes/kubernetes/pull/127673), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery and Testing]
 - Promoted feature gate `StatefulSetAutoDeletePVC` from beta to stable. ([#128247](https://github.com/kubernetes/kubernetes/pull/128247), [@mattcary](https://github.com/mattcary)) [SIG API Machinery, Apps, Auth and Testing]
 - Removed all support for _classic_ dynamic resource allocation (DRA). The `DRAControlPlaneController` feature gate, formerly alpha, is no longer available. Kubernetes now only uses the _structured parameters_ model (also alpha) for allocating dynamic resources to Pods.
-  
+
   if and only if classic DRA was enabled in a cluster, remove all workloads (pods, app deployments, etc. ) which depend on classic DRA and make sure that all PodSchedulingContext resources are gone before upgrading. PodSchedulingContext resources cannot be removed through the apiserver after an upgrade and workloads would not work properly. ([#128003](https://github.com/kubernetes/kubernetes/pull/128003), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Auth, Etcd, Node, Scheduling and Testing]
 - Removed generally available feature gate `HPAContainerMetrics` ([#126862](https://github.com/kubernetes/kubernetes/pull/126862), [@carlory](https://github.com/carlory)) [SIG API Machinery, Apps and Autoscaling]
 - Removed restrictions on subresource flag in kubectl commands ([#128296](https://github.com/kubernetes/kubernetes/pull/128296), [@AnishShah](https://github.com/AnishShah)) [SIG CLI]
@@ -190,7 +190,7 @@ There are no urgent upgrade notes for the v1.32 release.
 - When `SchedulerQueueingHint` is enabled,
   the scheduler's in-tree plugins now subscribe to specific node events to decide whether to requeue Pods.
   This allows the scheduler to handle cluster events faster with less memory.
-  
+
   Specific node events include updates to taints, tolerations or allocatable.
   In-tree plugins now ignore node updates that don't modify any of these fields. ([#127220](https://github.com/kubernetes/kubernetes/pull/127220), [@sanposhiho](https://github.com/sanposhiho)) [SIG Node, Scheduling and Storage]
 - When `SchedulerQueueingHints` is enabled, clear events cached in the scheduling queue as soon as possible so that the scheduler consumes less memory. ([#120586](https://github.com/kubernetes/kubernetes/pull/120586), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]
@@ -211,7 +211,7 @@ There are no urgent upgrade notes for the v1.32 release.
 
 ### Bug or Regression
 
-- 1. When the kubelet constructs the CRI mounts for the container which references an `image` volume source type, it passes the missing mount attributes to the CRI implementation, including `readOnly`, `propagation`, and `recursiveReadOnly`. When the readOnly field of the containerMount is explicitly set to false, the kubelet will now take the `readOnly`as true to the CRI implementation because the image volume plugin requires the mount to be read-only. 
+- 1. When the kubelet constructs the CRI mounts for the container which references an `image` volume source type, it passes the missing mount attributes to the CRI implementation, including `readOnly`, `propagation`, and `recursiveReadOnly`. When the readOnly field of the containerMount is explicitly set to false, the kubelet will now take the `readOnly`as true to the CRI implementation because the image volume plugin requires the mount to be read-only.
   2. Fixed a bug where the pod is unexpectedly running when the `image` volume source type is used and mounted to `/etc/hosts` in the container. ([#126806](https://github.com/kubernetes/kubernetes/pull/126806), [@carlory](https://github.com/carlory)) [SIG Node and Storage]
 - Added warnings for overlap paths in ConfigMap, Secret, DownwardAPI, Projected. Added warning for cases when ProjectedVolume with sources is provided. ([#121968](https://github.com/kubernetes/kubernetes/pull/121968), [@Peac36](https://github.com/Peac36))
 - Apiserver repair controller is resilient to etcd errors during bootstrap and retries during 30 seconds before failing. ([#126671](https://github.com/kubernetes/kubernetes/pull/126671), [@fusida](https://github.com/fusida)) [SIG Network]
@@ -266,7 +266,7 @@ There are no urgent upgrade notes for the v1.32 release.
 - Fixed: dynamic client-go can now handle subresources with an UnstructuredList response ([#126809](https://github.com/kubernetes/kubernetes/pull/126809), [@ryantxu](https://github.com/ryantxu)) [SIG API Machinery]
 - Fixed a bug where restartable and non-restartable init containers were not accounted for in the message and annotations of eviction event. ([#124947](https://github.com/kubernetes/kubernetes/pull/124947), [@toVersus](https://github.com/toVersus)) [SIG Node]
 - Fixed a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing. ([#126957](https://github.com/kubernetes/kubernetes/pull/126957), [@dashpole](https://github.com/dashpole)) [SIG API Machinery, Architecture, Instrumentation and Node]
-- Fixed the bug in PodTopologySpread that only happens with QHint enabled, 
+- Fixed the bug in PodTopologySpread that only happens with QHint enabled,
   which the scheduler might miss some updates for the Pods rejected by PodTopologySpread plugin and put the Pods in the queue for a longer time than needed. ([#127447](https://github.com/kubernetes/kubernetes/pull/127447), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]
 - For Dynamic Resource Allocation, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice. ([#128932](https://github.com/kubernetes/kubernetes/pull/128932), [@pohly](https://github.com/pohly))
 - For Dynamic Resource Allocation, the new "v1beta1" kubelet gPRC was renamed so that the protobuf package name is unique. ([#128764](https://github.com/kubernetes/kubernetes/pull/128764), [@pohly](https://github.com/pohly)) [SIG Node and Testing]
@@ -302,7 +302,7 @@ There are no urgent upgrade notes for the v1.32 release.
 - Use allocatedResources on PVC for node expansion in kubelet ([#126600](https://github.com/kubernetes/kubernetes/pull/126600), [@gnufied](https://github.com/gnufied)) [SIG Node, Storage and Testing]
 - When entering a value other than "external" to the "--cloud-provider" flag for the kubelet, kube-controller-manager, and kube-apiserver, the user will now receive a warning in the logs about the disablement of internal cloud providers, this is in contrast to the previous warnings about deprecation. ([#127711](https://github.com/kubernetes/kubernetes/pull/127711), [@elmiko](https://github.com/elmiko)) [SIG API Machinery, Cloud Provider and Node]
 - `StartupProbe` was explicitly stopped when the `successThreshold` was reached.
-  This eliminated the problem of executing `StartupProbe` more times than 
+  This eliminated the problem of executing `StartupProbe` more times than
   the `successThreshold`. ([#121206](https://github.com/kubernetes/kubernetes/pull/121206), [@mochizuki875](https://github.com/mochizuki875))
 - kubelet: on Windows, consistently resolve filesystem links to volume identifiers instead of inconsistently normalizing to drive letters. ([#129103](https://github.com/kubernetes/kubernetes/pull/129103), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Network, Node, Release, Storage and Windows]
 

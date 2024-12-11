@@ -4526,8 +4526,8 @@
   },
   "127976": {
     "commit": "c45f3ab813045e3988df0cefa21cb8547c226463",
-    "text": "Fixed problem with named ports not being available when specified in sidecar containers.",
-    "markdown": "Fixed problem with named ports not being available when specified in sidecar containers. ([#127976](https://github.com/kubernetes/kubernetes/pull/127976), [@chengjoey](https://github.com/chengjoey))",
+      "text": "Fixed problem with named ports missing from endpoints when they are specified in sidecar containers.",
+      "markdown": "Fixed problem with named ports missing from endpoints when they are specified in sidecar containers. ([#127976](https://github.com/kubernetes/kubernetes/pull/127976), [@chengjoey](https://github.com/chengjoey))",
     "author": "chengjoey",
     "author_url": "https://github.com/chengjoey",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127976",
