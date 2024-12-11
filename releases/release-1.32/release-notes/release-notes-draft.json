@@ -3656,8 +3656,8 @@
   },
   "127473": {
     "commit": "421436a94c42576e9cc86d427924bc1d70096883",
-    "text": "Improved `Node QueueHint` in the `NodeResource Fit` plugin by ignoring unrelated changes that keep pods unschedulable.",
-    "markdown": "Improved `Node QueueHint` in the `NodeResource Fit` plugin by ignoring unrelated changes that keep pods unschedulable. ([#127473](https://github.com/kubernetes/kubernetes/pull/127473), [@dom4ha](https://github.com/dom4ha)) [SIG Scheduling and Testing]",
+    "text": "Improved Node's QueueHint in the `NodeResourceFit` plugin by ignoring unrelated changes that keep pods unschedulable.",
+    "markdown": "Improved Node's QueueHint in the `NodeResourceFit` plugin by ignoring unrelated changes that keep pods unschedulable. ([#127473](https://github.com/kubernetes/kubernetes/pull/127473), [@dom4ha](https://github.com/dom4ha)) [SIG Scheduling and Testing]",
     "author": "dom4ha",
     "author_url": "https://github.com/dom4ha",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127473",
