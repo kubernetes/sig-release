@@ -1200,8 +1200,8 @@
   },
   "126538": {
     "commit": "62cd87e8392c55cedf3b47f6b3203f0cb7dd483b",
-    "text": "kubeadm: add a validation warning when the certificateValidityPeriod is more than the caCertificateValidityPeriod",
-    "markdown": "kubeadm: add a validation warning when the certificateValidityPeriod is more than the caCertificateValidityPeriod ([#126538](https://github.com/kubernetes/kubernetes/pull/126538), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: added a validation warning when the certificateValidityPeriod is more than the caCertificateValidityPeriod",
+    "markdown": "kubeadm: added a validation warning when the certificateValidityPeriod is more than the caCertificateValidityPeriod ([#126538](https://github.com/kubernetes/kubernetes/pull/126538), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126538",
@@ -1800,8 +1800,8 @@
   },
   "126762": {
     "commit": "963ebd8bd8c0f2c432b349f0837ab116a4dfe71e",
-    "text": "Unallowed label values will show up as \"unexpected\" in scheduler metrics",
-    "markdown": "Unallowed label values will show up as \"unexpected\" in scheduler metrics ([#126762](https://github.com/kubernetes/kubernetes/pull/126762), [@richabanker](https://github.com/richabanker)) [SIG Instrumentation and Scheduling]",
+    "text": "Unallowed label values will show up as \"unexpected\" in scheduler metrics.",
+    "markdown": "Unallowed label values will show up as \"unexpected\" in scheduler metrics. ([#126762](https://github.com/kubernetes/kubernetes/pull/126762), [@richabanker](https://github.com/richabanker)) [SIG Instrumentation and Scheduling]",
     "author": "richabanker",
     "author_url": "https://github.com/richabanker",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126762",
@@ -2308,8 +2308,8 @@
   },
   "126957": {
     "commit": "3d65369f346d359bcabdc7f04addff5fdb2f194a",
-    "text": "Fixes a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing.",
-    "markdown": "Fixes a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing. ([#126957](https://github.com/kubernetes/kubernetes/pull/126957), [@dashpole](https://github.com/dashpole)) [SIG API Machinery, Architecture, Instrumentation and Node]",
+    "text": "Fixed a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing.",
+    "markdown": "Fixed a kubelet and kube-apiserver memory leak in default 1.29 configurations related to tracing. ([#126957](https://github.com/kubernetes/kubernetes/pull/126957), [@dashpole](https://github.com/dashpole)) [SIG API Machinery, Architecture, Instrumentation and Node]",
     "author": "dashpole",
     "author_url": "https://github.com/dashpole",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126957",
@@ -2572,8 +2572,8 @@
   },
   "127009": {
     "commit": "8b664fd41431aed4c69e3d6e76a2f25b84cb9a32",
-    "text": "Graduate the AnonymousAuthConfigurableEndpoints feature gate to beta and enable it by default to allow configurable endpoints for anonymous authentication.",
-    "markdown": "Graduate the AnonymousAuthConfigurableEndpoints feature gate to beta and enable it by default to allow configurable endpoints for anonymous authentication. ([#127009](https://github.com/kubernetes/kubernetes/pull/127009), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG Auth]",
+    "text": "Graduated the AnonymousAuthConfigurableEndpoints feature gate to beta and enable it by default to allow configurable endpoints for anonymous authentication.",
+    "markdown": "Graduated the AnonymousAuthConfigurableEndpoints feature gate to beta and enable it by default to allow configurable endpoints for anonymous authentication. ([#127009](https://github.com/kubernetes/kubernetes/pull/127009), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG Auth]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3327,8 +3327,8 @@
   },
   "127327": {
     "commit": "88df7e307b755ea1a0c3223a85d881d9703f2cf7",
-    "text": "Documented the `--for=create` option to `kubectl wait`",
-    "markdown": "Documented the `--for=create` option to `kubectl wait` ([#127327](https://github.com/kubernetes/kubernetes/pull/127327), [@ryanwinter](https://github.com/ryanwinter)) [SIG CLI]",
+    "text": "Documented the `--for=create` option to `kubectl wait`.",
+    "markdown": "Documented the `--for=create` option to `kubectl wait`. ([#127327](https://github.com/kubernetes/kubernetes/pull/127327), [@ryanwinter](https://github.com/ryanwinter)) [SIG CLI]",
     "author": "ryanwinter",
     "author_url": "https://github.com/ryanwinter",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127327",
@@ -3484,8 +3484,8 @@
   },
   "127402": {
     "commit": "51f76febd7c2712a508ab68b402455f9a02c4e11",
-    "text": "Graduate Job's `ManagedBy` field to beta.",
-    "markdown": "Graduate Job's `ManagedBy` field to beta. ([#127402](https://github.com/kubernetes/kubernetes/pull/127402), [@mimowo](https://github.com/mimowo)) [SIG API Machinery, Apps and Testing]",
+    "text": "Graduated Job's `ManagedBy` field to beta.",
+    "markdown": "Graduated Job's `ManagedBy` field to beta. ([#127402](https://github.com/kubernetes/kubernetes/pull/127402), [@mimowo](https://github.com/mimowo)) [SIG API Machinery, Apps and Testing]",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/4368-support-managed-by-for-batch-jobs",
