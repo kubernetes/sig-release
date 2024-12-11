@@ -12,13 +12,14 @@
 
 ### API Change
 
-- ([#126620](https://github.com/kubernetes/kubernetes/pull/126620), [@yunwang0911](https://github.com/yunwang0911))
-- ACTION REQUIRED for custom scheduler plugin developers:
-  `PodEligibleToPreemptOthers` in the `preemption` interface now includes `ctx` in the parameters.
-  Please update your plugins' implementation accordingly. ([#126465](https://github.com/kubernetes/kubernetes/pull/126465), [@googs1025](https://github.com/googs1025)) [SIG Scheduling]
-- Changed NodeToStatusMap from a map to a struct and exposed methods to access the entries. Added absentNodesStatus, which informs the status of nodes that are absent in the map.
-- For developers of out-of-tree PostFilter plugins, ensure to update the usage of NodeToStatusMap. Additionally, NodeToStatusMap should eventually be renamed to NodeToStatusReader. ([#126022](https://github.com/kubernetes/kubernetes/pull/126022), [@macsko](https://github.com/macsko)) [SIG Node, Scheduling, and Testing]
- 
+- **ACTION REQUIRED** for custom scheduler plugin developers:
+  `PodEligibleToPreemptOthers` in the `preemption` interface gets `ctx` in the parameters.
+  Please change your plugins' implementation accordingly. ([#126465](https://github.com/kubernetes/kubernetes/pull/126465), [@googs1025](https://github.com/googs1025)) [SIG Scheduling]
+- Changed NodeToStatusMap from map to struct and exposed methods to access the entries. Added absentNodesStatus, which inform what is the status of nodes that are absent in the map.
+
+  For developers of out-of-tree PostFilter plugins, make sure to update usage of NodeToStatusMap. Additionally, NodeToStatusMap should be eventually renamed to NodeToStatusReader. ([#126022](https://github.com/kubernetes/kubernetes/pull/126022), [@macsko](https://github.com/macsko)) [SIG Node, Scheduling and Testing]
+- Fixed the bug of `InPlacePodVerticalScaling` state un-marshalling. State stored in `/var/lib/kubelet/pod_status_manager_state` now can always be read back after kubelet restart. Since the checkpoint format was changed to fix the issue, if you are using the feature `InPlacePodVerticalScaling`, please clean up the state file `/var/lib/kubelet/pod_status_manager_state` when upgrading the kubelet as failure to do it will lead to incompatible state formats and kubelet's failure to start. ([#126620](https://github.com/kubernetes/kubernetes/pull/126620), [@yunwang0911](https://github.com/yunwang0911))
+
 - A new /resize subresource was added to request pod resource resizing. Update your k8s client code to utilize the /resize subresource for Pod resizing operations. ([#128266](https://github.com/kubernetes/kubernetes/pull/128266), [@AnishShah](https://github.com/AnishShah)) [SIG API Machinery, Apps, Node and Testing]
 - A new feature that allows unsafe deletion of corrupt resources has been added, it is disabled by default, 
   and it can be enabled by setting the option `--feature-gates=AllowUnsafeMalformedObjectDeletion=true`. 
@@ -198,6 +199,7 @@
   In-tree plugins now ignore node updates that don't modify any of these fields. ([#127220](https://github.com/kubernetes/kubernetes/pull/127220), [@sanposhiho](https://github.com/sanposhiho)) [SIG Node, Scheduling and Storage]
 - When SchedulerQueueingHints is enabled, clear events cached in the scheduling queue as soon as possible so that the scheduler consumes less memory. ([#120586](https://github.com/kubernetes/kubernetes/pull/120586), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]
 - Windows: Support CPU and Topology manager on Windows ([#125296](https://github.com/kubernetes/kubernetes/pull/125296), [@jsturtevant](https://github.com/jsturtevant)) [SIG Node and Windows]
+- Added Windows support for the node memory manager. ([#128560)](https://github.com/kubernetes/kubernetes/pull/128560), [@marosset](https://github.com/marosset)) [SIG Node and Windows]
 
 ### Documentation
 
