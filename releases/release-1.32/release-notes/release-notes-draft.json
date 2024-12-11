@@ -508,8 +508,8 @@
   },
   "125337": {
     "commit": "48f36acc7a13d37c357aa6abff55a01267eab8a9",
-    "text": "The kubelet, when using `--cloud-provider=external` can use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solve the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster.",
-    "markdown": "The kubelet, when using `--cloud-provider=external` can use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solve the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster. ([#125337](https://github.com/kubernetes/kubernetes/pull/125337), [@aojea](https://github.com/aojea)) [SIG Cloud Provider, Network, Node and Testing]",
+    "text": "The kubelet, when using `--cloud-provider=external` can use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solves the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster.",
+    "markdown": "The kubelet, when using `--cloud-provider=external` can use the `--node-ip` flag with one of the unspecified addresses 0.0.0.0 or ::, to create the Node with the IP of the default gateway of the corresponding IP family and then delegating the responsibility to the external cloud provider. This solves the bootstrap problems of out of tree cloud providers that are deployed as Pods within the cluster. ([#125337](https://github.com/kubernetes/kubernetes/pull/125337), [@aojea](https://github.com/aojea)) [SIG Cloud Provider, Network, Node and Testing]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125337",
@@ -2198,8 +2198,8 @@
   },
   "126913": {
     "commit": "7436ca32bc766ff202109a7541d2e7bb41ee7d13",
-    "text": "kubeadm: remove the deprecated sub-phase of 'init kubelet-finilize' called `experimental-cert-rotation`, and use 'enable-client-cert-rotation' instead.",
-    "markdown": "kubeadm: remove the deprecated sub-phase of 'init kubelet-finilize' called `experimental-cert-rotation`, and use 'enable-client-cert-rotation' instead. ([#126913](https://github.com/kubernetes/kubernetes/pull/126913), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: removed the deprecated sub-phase of 'init kubelet-finilize' called `experimental-cert-rotation`, and use 'enable-client-cert-rotation' instead.",
+    "markdown": "kubeadm: removed the deprecated sub-phase of 'init kubelet-finilize' called `experimental-cert-rotation`, and use 'enable-client-cert-rotation' instead. ([#126913](https://github.com/kubernetes/kubernetes/pull/126913), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126913",
@@ -6374,8 +6374,8 @@
   },
   "128623": {
     "commit": "dff657a07c5795081821c53469ce5f18f6fc60f7",
-    "text": "Droped support for `InPlacePodVerticalScaling` feature in Windows.",
-    "markdown": "Droped support for `InPlacePodVerticalScaling` feature in Windows. ([#128623](https://github.com/kubernetes/kubernetes/pull/128623), [@AnishShah](https://github.com/AnishShah)) [SIG Apps and Node]",
+    "text": "Dropped support for `InPlacePodVerticalScaling` feature in Windows.",
+    "markdown": "Dropped support for `InPlacePodVerticalScaling` feature in Windows. ([#128623](https://github.com/kubernetes/kubernetes/pull/128623), [@AnishShah](https://github.com/AnishShah)) [SIG Apps and Node]",
     "documentation": [
       {
         "description": "KEP",
@@ -6504,8 +6504,8 @@
   },
   "128681": {
     "commit": "210deea063a5a778e8c3a8e32b8bc4c808b87835",
-    "text": "Revised error handling for port forwards to Pods. Added stream stream resets preventing port-forward from blockage.",
-    "markdown": "Revised error handling for port forwards to Pods. Added stream stream resets preventing port-forward from blockage. ([#128681](https://github.com/kubernetes/kubernetes/pull/128681), [@soltysh](https://github.com/soltysh)) [SIG API Machinery, CLI and Testing]",
+    "text": "Revised error handling for port forwards to Pods. Added stream resets preventing port-forward from blockage.",
+    "markdown": "Revised error handling for port forwards to Pods. Added stream resets preventing port-forward from blockage. ([#128681](https://github.com/kubernetes/kubernetes/pull/128681), [@soltysh](https://github.com/soltysh)) [SIG API Machinery, CLI and Testing]",
     "author": "soltysh",
     "author_url": "https://github.com/soltysh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128681",
@@ -6597,8 +6597,8 @@
   },
   "128932": {
     "commit": "e4c1f980b76fecece30c2f77885a7117192170a6",
-    "text": "For Dynamic Resource Allocartion, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice.",
-    "markdown": "For Dynamic Resource Allocartion, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice. ([#128932](https://github.com/kubernetes/kubernetes/pull/128932), [@pohly](https://github.com/pohly))",
+    "text": "For Dynamic Resource Allocation, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice.",
+    "markdown": "For Dynamic Resource Allocation, labels in node selectors now are validated. Invalid labels already caused runtime errors before and are unlikely to occur in practice. ([#128932](https://github.com/kubernetes/kubernetes/pull/128932), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
