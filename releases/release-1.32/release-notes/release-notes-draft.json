@@ -71,8 +71,8 @@
   },
   "120586": {
     "commit": "bb2b52e6509b5f9d47078ade9cab2be69f27214b",
-    "text": "When SchedulerQueueingHints is enabled, clear events cached in the scheduling queue as soon as possible so that the scheduler consumes less memory.",
-    "markdown": "When SchedulerQueueingHints is enabled, clear events cached in the scheduling queue as soon as possible so that the scheduler consumes less memory. ([#120586](https://github.com/kubernetes/kubernetes/pull/120586), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]",
+    "text": "When `SchedulerQueueingHints` is enabled, clear events cached in the scheduling queue as soon as possible so that the scheduler consumes less memory.",
+    "markdown": "When `SchedulerQueueingHints` is enabled, clear events cached in the scheduling queue as soon as possible so that the scheduler consumes less memory. ([#120586](https://github.com/kubernetes/kubernetes/pull/120586), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/120586",
@@ -176,8 +176,8 @@
   },
   "124003": {
     "commit": "0bcbc3b77a0b5358f53e81e8fa7605909bf8a2fe",
-    "text": "Kube-scheduler removed `AzureDiskLimits`, `CinderLimits`, `EBSLimits`, and `GCEPDLimits` plugins. With the corresponding CSI driver reporting how many volumes a node can handle in `NodeGetInfoResponse`, kubelet stores this limit in `CSINode`, enabling the scheduler to know the driver's limit on the node. Remove these plugins if explicitly enabled in the scheduler config.",
-    "markdown": "Kube-scheduler removed `AzureDiskLimits`, `CinderLimits`, `EBSLimits`, and `GCEPDLimits` plugins. With the corresponding CSI driver reporting how many volumes a node can handle in `NodeGetInfoResponse`, kubelet stores this limit in `CSINode`, enabling the scheduler to know the driver's limit on the node. Remove these plugins if explicitly enabled in the scheduler config. ([#124003](https://github.com/kubernetes/kubernetes/pull/124003), [@carlory](https://github.com/carlory)) [SIG Scheduling, Storage, and Testing]",
+    "text": "kube-scheduler removed `AzureDiskLimits`, `CinderLimits`, `EBSLimits`, and `GCEPDLimits` plugins. With the corresponding CSI driver reporting how many volumes a node can handle in `NodeGetInfoResponse`, kubelet stores this limit in CSINode, enabling the scheduler to know the driver's limit on the node. Remove these plugins if explicitly enabled in the scheduler config.",
+    "markdown": "kube-scheduler removed `AzureDiskLimits`, `CinderLimits`, `EBSLimits`, and `GCEPDLimits` plugins. With the corresponding CSI driver reporting how many volumes a node can handle in `NodeGetInfoResponse`, kubelet stores this limit in CSINode, enabling the scheduler to know the driver's limit on the node. Remove these plugins if explicitly enabled in the scheduler config. ([#124003](https://github.com/kubernetes/kubernetes/pull/124003), [@carlory](https://github.com/carlory)) [SIG Scheduling, Storage, and Testing]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/124003",
@@ -559,8 +559,8 @@
   },
   "125398": {
     "commit": "211d67a511f081623b5a0ac008fc3712452905b4",
-    "text": "Fixed a bug where pods bound to a PV with nodeAffinity using the hostname label could be scheduled to the wrong node or fail scheduling when the hostname label of a node did not match the node name.",
-    "markdown": "Fixed a bug where pods bound to a PV with nodeAffinity using the hostname label could be scheduled to the wrong node or fail scheduling when the hostname label of a node did not match the node name. ([#125398](https://github.com/kubernetes/kubernetes/pull/125398), [@AxeZhan](https://github.com/AxeZhan)) [SIG Scheduling and Storage]",
+    "text": "Fixed a bug where pods bound to a PersistentVolume with `nodeAffinity` using the hostname label could be scheduled to the wrong node or fail scheduling when the hostname label of a node did not match the node name.",
+    "markdown": "Fixed a bug where pods bound to a PersistentVolume with `nodeAffinity` using the hostname label could be scheduled to the wrong node or fail scheduling when the hostname label of a node did not match the node name. ([#125398](https://github.com/kubernetes/kubernetes/pull/125398), [@AxeZhan](https://github.com/AxeZhan)) [SIG Scheduling and Storage]",
     "author": "AxeZhan",
     "author_url": "https://github.com/AxeZhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/125398",
@@ -977,8 +977,8 @@
 },
 "126374": {
     "commit": "fc64d2abb0004b824b712c6440231c574d8493c9",
-    "text": "Kubeadm: promoted the feature gate `EtcdLearnerMode` to GA. Learner mode in etcd deployed by kubeadm is now locked to enabled by default.",
-    "markdown": "Kubeadm: promoted the feature gate `EtcdLearnerMode` to GA. Learner mode in etcd deployed by kubeadm is now locked to enabled by default. ([#126374](https://github.com/kubernetes/kubernetes/pull/126374), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: promoted the feature gate `EtcdLearnerMode` to GA. Learner mode in etcd deployed by kubeadm is now locked to enabled by default.",
+    "markdown": "kubeadm: promoted the feature gate `EtcdLearnerMode` to GA. Learner mode in etcd deployed by kubeadm is now locked to enabled by default. ([#126374](https://github.com/kubernetes/kubernetes/pull/126374), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126374",
@@ -1582,8 +1582,8 @@
   },
   "126665": {
     "commit": "69dbf2eee96f1c95c097370ddcb1d5c30f86bec8",
-    "text": "Kube-apiserver: Fixed a 1.31 regression that stopped honoring build ID overrides with the `--version` flag.",
-    "markdown": "Kube-apiserver: Fixed a 1.31 regression that stopped honoring build ID overrides with the `--version` flag. ([#126665](https://github.com/kubernetes/kubernetes/pull/126665), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
+    "text": "kube-apiserver: fixed a 1.31 regression that stopped honoring build ID overrides with the `--version` flag.",
+    "markdown": "kube-apiserver: fixed a 1.31 regression that stopped honoring build ID overrides with the `--version` flag. ([#126665](https://github.com/kubernetes/kubernetes/pull/126665), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
     "author": "liggitt",
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126665",
@@ -3049,8 +3049,8 @@
   },
   "127220": {
     "commit": "9134c17b265b70b305dab1f2370d8593a5b3f48c",
-    "text": "When SchedulerQueueingHint is enabled, the scheduler's in-tree plugins now subscribe to specific node events to decide whether to requeue Pods. This allows the scheduler to handle cluster events faster with less memory. Specific node events include updates to taints, tolerations, or allocatable. In-tree plugins now ignore node updates that don't modify any of these fields.",
-    "markdown": "When SchedulerQueueingHint is enabled, the scheduler's in-tree plugins now subscribe to specific node events to decide whether to requeue Pods. This allows the scheduler to handle cluster events faster with less memory. Specific node events include updates to taints, tolerations, or allocatable. In-tree plugins now ignore node updates that don't modify any of these fields. ([#127220](https://github.com/kubernetes/kubernetes/pull/127220), [@sanposhiho](https://github.com/sanposhiho)) [SIG Node, Scheduling and Storage]",
+    "text": "When `SchedulerQueueingHint` is enabled, the scheduler's in-tree plugins now subscribe to specific node events to decide whether to requeue Pods. This allows the scheduler to handle cluster events faster with less memory. Specific node events include updates to taints, tolerations, or allocatable. In-tree plugins now ignore node updates that don't modify any of these fields.",
+    "markdown": "When `SchedulerQueueingHint` is enabled, the scheduler's in-tree plugins now subscribe to specific node events to decide whether to requeue Pods. This allows the scheduler to handle cluster events faster with less memory. Specific node events include updates to taints, tolerations, or allocatable. In-tree plugins now ignore node updates that don't modify any of these fields. ([#127220](https://github.com/kubernetes/kubernetes/pull/127220), [@sanposhiho](https://github.com/sanposhiho)) [SIG Node, Scheduling and Storage]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127220",
@@ -3737,8 +3737,8 @@
   },
   "127491": {
     "commit": "99ff62e87a2d881f4839159d33519a49d6eee5d9",
-    "text": "kubeadm: when adding new control plane nodes with \"kubeadm join\", ensure that the etcd member addition is performed only if a given member URL does not already exist in the list of members. Similarly, on \"kubeadm reset\" only remove an etcd member if its ID exists.",
-    "markdown": "Kubeadm: when adding new control plane nodes with \"kubeadm join\", ensure that the etcd member addition is performed only if a given member URL does not already exist in the list of members. Similarly, on \"kubeadm reset\" only remove an etcd member if its ID exists. ([#127491](https://github.com/kubernetes/kubernetes/pull/127491), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: when adding new control plane nodes with `kubeadm join`, ensure that the etcd member addition is performed only if a given member URL does not already exist in the list of members. Similarly, on \"kubeadm reset\" only remove an etcd member if its ID exists.",
+    "markdown": "Kubeadm: when adding new control plane nodes with `kubeadm join`, ensure that the etcd member addition is performed only if a given member URL does not already exist in the list of members. Similarly, on \"kubeadm reset\" only remove an etcd member if its ID exists. ([#127491](https://github.com/kubernetes/kubernetes/pull/127491), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127491",
@@ -6211,8 +6211,8 @@
   },
   "128517": {
     "commit": "b4d91d1b8ae336ad85b59de0ce15b8b83fa6d710",
-    "text": "Graduated the Kubelet Memory Manager to GA.",
-    "markdown": "Graduated the Kubelet Memory Manager to GA. ([#128517](https://github.com/kubernetes/kubernetes/pull/128517), [@Tal-or](https://github.com/Tal-or))",
+    "text": "Graduated the kubelet memory manager to generally available (GA).",
+    "markdown": "Graduated the kubelet memory manager to generally available (GA). ([#128517](https://github.com/kubernetes/kubernetes/pull/128517), [@Tal-or](https://github.com/Tal-or))",
     "documentation": [
       {
         "description": "[KEP]",
