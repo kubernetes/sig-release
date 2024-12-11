@@ -1895,8 +1895,8 @@
   },
   "126784": {
     "commit": "e5e1b312a7c51696779b31d10c1ec0ab07583b69",
-    "text": "Clarified the kube-controller-manager documentation for --allocate-node-cidrs, --cluster-cidr, and --service-cluster-ip-range flags to accurately reflect their dependencies and usage conditions.",
-    "markdown": "Clarified the kube-controller-manager documentation for --allocate-node-cidrs, --cluster-cidr, and --service-cluster-ip-range flags to accurately reflect their dependencies and usage conditions. ([#126784](https://github.com/kubernetes/kubernetes/pull/126784), [@eminwux](https://github.com/eminwux)) [SIG API Machinery, Cloud Provider and Docs]",
+    "text": "Clarified the kube-controller-manager documentation for `--allocate-node-cidrs`, `--cluster-cidr`, and `--service-cluster-ip-range` flags to accurately reflect their dependencies and usage conditions.",
+    "markdown": "Clarified the kube-controller-manager documentation for `--allocate-node-cidrs`, `--cluster-cidr`, and `--service-cluster-ip-range` flags to accurately reflect their dependencies and usage conditions. ([#126784](https://github.com/kubernetes/kubernetes/pull/126784), [@eminwux](https://github.com/eminwux)) [SIG API Machinery, Cloud Provider and Docs]",
     "author": "eminwux",
     "author_url": "https://github.com/eminwux",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126784",
