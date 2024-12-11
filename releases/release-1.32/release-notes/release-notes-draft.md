@@ -198,7 +198,7 @@ There are no urgent upgrade notes for the v1.32 release.
 
 ### Documentation
 
-- Clarified the kube-controller-manager documentation for --allocate-node-cidrs, --cluster-cidr, and --service-cluster-ip-range flags to accurately reflect their dependencies and usage conditions. ([#126784](https://github.com/kubernetes/kubernetes/pull/126784), [@eminwux](https://github.com/eminwux)) [SIG API Machinery, Cloud Provider and Docs]
+- Clarified the kube-controller-manager documentation for `--allocate-node-cidrs`, `--cluster-cidr`, and `--service-cluster-ip-range` flags to accurately reflect their dependencies and usage conditions. ([#126784](https://github.com/kubernetes/kubernetes/pull/126784), [@eminwux](https://github.com/eminwux)) [SIG API Machinery, Cloud Provider and Docs]
 - Documented the `--for=create` option to `kubectl wait` ([#127327](https://github.com/kubernetes/kubernetes/pull/127327), [@ryanwinter](https://github.com/ryanwinter)) [SIG CLI]
 - Fixed documentation for the `apiserver_admission_webhook_fail_open_count` and `apiserver_admission_webhook_request_total` metrics. The `type` label can have a value of "admit", not "mutating". ([#127898](https://github.com/kubernetes/kubernetes/pull/127898), [@modulitos](https://github.com/modulitos))
 - Kubeadm: fixed a misleading output (typo) about control-plane joining instructions when executing the "kubeadm init" command. ([#128118](https://github.com/kubernetes/kubernetes/pull/128118), [@amaddio](https://github.com/amaddio))
