@@ -2462,8 +2462,8 @@
   },
   "126995": {
     "commit": "e95441591235032994666ff91cfcd77a13d8c7b2",
-    "text": "The percentage display in kubectl top node has been changed from % -> (%)",
-    "markdown": "The percentage display in kubectl top node has been changed from % -> (%) ([#126995](https://github.com/kubernetes/kubernetes/pull/126995), [@googs1025](https://github.com/googs1025)) [SIG CLI]",
+    "text": "Changed the percentage marker in `kubectl top node` from `%` to `(%)`.",
+    "markdown": "Changed the percentage marker in `kubectl top node` from `%` to `(%)` ([#126995](https://github.com/kubernetes/kubernetes/pull/126995), [@googs1025](https://github.com/googs1025)) [SIG CLI]",
     "author": "googs1025",
     "author_url": "https://github.com/googs1025",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126995",
@@ -3019,8 +3019,8 @@
   },
   "127187": {
     "commit": "1caf9a150b794a7c4a17e63a54b902ec0b0be570",
-    "text": "Locked the custom profiling feature in kubectl debug to true.",
-    "markdown": "Locked the custom profiling feature in kubectl debug to true. ([#127187](https://github.com/kubernetes/kubernetes/pull/127187), [@ardaguclu](https://github.com/ardaguclu)) [SIG CLI and Testing]",
+    "text": "Locked the custom profiling feature in `kubectl debug` to true.",
+    "markdown": "Locked the custom profiling feature in `kubectl debug` to true. ([#127187](https://github.com/kubernetes/kubernetes/pull/127187), [@ardaguclu](https://github.com/ardaguclu)) [SIG CLI and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3928,8 +3928,8 @@
   },
   "127565": {
     "commit": "cdf077da6fa5f610075c22068e3ab6b057247163",
-    "text": "DRA: Fixed several issues related to \"allocationMode: all\".",
-    "markdown": "DRA: Fixed several issues related to \"allocationMode: all\". ([#127565](https://github.com/kubernetes/kubernetes/pull/127565), [@pohly](https://github.com/pohly))",
+    "text": "DRA: Fixed several issues related to `allocationMode: all`.",
+    "markdown": "DRA: Fixed several issues related to `allocationMode: all`. ([#127565](https://github.com/kubernetes/kubernetes/pull/127565), [@pohly](https://github.com/pohly))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5672,8 +5672,8 @@
   },
   "128305": {
     "commit": "721d66780b1797b49c3d6119a92533b6ff58eec2",
-    "text": "Fixed a bug where `PodCIDR` was released before the node was deleted.",
-    "markdown": "Fixed a bug where `PodCIDR` was released before the node was deleted. ([#128305](https://github.com/kubernetes/kubernetes/pull/128305), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Apps and Network]",
+    "text": "Fixed a bug where `podCIDR` was released before the node was deleted.",
+    "markdown": "Fixed a bug where `podCIDR` was released before the node was deleted. ([#128305](https://github.com/kubernetes/kubernetes/pull/128305), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Apps and Network]",
     "author": "adrianmoisey",
     "author_url": "https://github.com/adrianmoisey",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128305",
@@ -6620,8 +6620,8 @@
   },
   "129081": {
     "commit": "779d76176afe96f7a8b83c14cb6370650c9464a4",
-    "text": "Request header UID propagation is gated behind an alpha RemoteRequestHeaderUID feature gate.",
-    "markdown": "Request header UID propagation is gated behind an alpha RemoteRequestHeaderUID feature gate.",
+    "text": "Added request header UID propagation, behind an alpha `RemoteRequestHeaderUID` feature gate.",
+    "markdown": "Added request header UID propagation, behind an alpha `RemoteRequestHeaderUID` feature gate.",
     "author":"stlaz",
     "author_url":"https://github.com/stlaz",
     "pr_url":"https://github.com/kubernetes/kubernetes/pull/129081",
