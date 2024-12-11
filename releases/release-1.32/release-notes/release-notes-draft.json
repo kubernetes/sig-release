@@ -1582,8 +1582,8 @@
   },
   "126665": {
     "commit": "69dbf2eee96f1c95c097370ddcb1d5c30f86bec8",
-    "text": "Kube-apiserver: Fixes a 1.31 regression that stopped honoring build ID overrides with the `--version` flag.",
-    "markdown": "Kube-apiserver: Fixes a 1.31 regression that stopped honoring build ID overrides with the `--version` flag. ([#126665](https://github.com/kubernetes/kubernetes/pull/126665), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
+    "text": "Kube-apiserver: Fixed a 1.31 regression that stopped honoring build ID overrides with the `--version` flag.",
+    "markdown": "Kube-apiserver: Fixed a 1.31 regression that stopped honoring build ID overrides with the `--version` flag. ([#126665](https://github.com/kubernetes/kubernetes/pull/126665), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
     "author": "liggitt",
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/126665",
