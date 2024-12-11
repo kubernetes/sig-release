@@ -334,8 +334,8 @@
   },
   "124947": {
     "commit": "2ade53e264b701c46fb11a13ad0c58dba13af1fd",
-    "text": "Fixes a bug where restartable and non-restartable init containers were not accounted for in the message and annotations of the eviction event.",
-    "markdown": "Fixes a bug where restartable and non-restartable init containers were not accounted for in the message and annotations of the eviction event. ([#124947](https://github.com/kubernetes/kubernetes/pull/124947), [@toVersus](https://github.com/toVersus)) [SIG Node]",
+    "text": "Fixed a bug where restartable and non-restartable init containers were not accounted for in the message and annotations of the eviction event.",
+    "markdown": "Fixed a bug where restartable and non-restartable init containers were not accounted for in the message and annotations of the eviction event. ([#124947](https://github.com/kubernetes/kubernetes/pull/124947), [@toVersus](https://github.com/toVersus)) [SIG Node]",
     "documentation": [
       {
         "description": "KEP",
