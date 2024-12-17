@@ -79,25 +79,30 @@ jobs:
       - name: Run if releases YAML changes exist and validate the YAML
         id: validate_releases_yaml
         env:
-          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
           KREL_PATH: ${{ steps.install-krel.outputs.krel-path }}
         run: |
+          # Get a list of changed YAML files based on git diff
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} -- releases/ | grep -E '\.ya?ml$')
+
           if [ -n "$CHANGED_FILES" ]; then
             echo "validating base sha ${{ github.event.pull_request.base.sha }}"
-            # check diff for invalid yaml files
-            git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} -- releases/ | grep -E '\.ya?ml$'
-            echo "Validating yaml files: \n${CHANGED_FILES}"
-            OUTPUT=$(${KREL_PATH}" release-notes validate --path-to-release-notes $CHANGED_FILES)
-            if [[ "$OUTPUT" == *"YAML Validation Failed"* ]]; then
-              # If there are invalid files, set the output variable and fail the job. GITHUB_ENV is a special file that 
-              # allows you to set env variables for subsequent steps in the same job
-              echo "invalid_files<<EOF" >> $GITHUB_ENV
-              echo "$OUTPUT" >> $GITHUB_ENV
-              echo "EOF" >> $GITHUB_ENV
-                 exit 1
-            fi
-          else 
-           echo "No YAML files changed under /releases/*"
+
+            # Loop through each changed YAML file and validate it
+            for file in $CHANGED_FILES; do
+              echo "Validating YAML file: $file"
+              OUTPUT=$(${KREL_PATH} release-notes validate --path-to-release-notes "$file")
+
+              # If validation fails for any file, set the output variable and fail the job
+              if [[ "$OUTPUT" == *"YAML Validation Failed"* ]]; then
+                echo "Invalid YAML file: $file"
+                echo "invalid_files<<EOF" >> $GITHUB_ENV
+                echo "$OUTPUT" >> $GITHUB_ENV
+                echo "EOF" >> $GITHUB_ENV
+                exit 1
+              fi
+            done
+          else
+            echo "No YAML files changed under /releases/*"
           fi
       - name: Comment on PR if invalid yaml detected
         if: failure()
