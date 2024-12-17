@@ -140,7 +140,7 @@ Reference the Docs [Release Timeline](Release-Timeline.md) for key dates and res
 - [Release notes website](https://relnotes.k8s.io) *(note: release notes website is automatically updated)*
 - [go-modiff](https://github.com/saschagrunert/go-modiff)
 - [Hackmd](https://hackmd.io/)
-- [LWKD](http://lwkd.info) *(note: consider contributing to LWKD as part of your role)*
+- [LWKD](http://lwkd.info) *(note: contributing to LWKD is not a requirement as part of the Docs shadow role, but might be of interest to shadows.)*
 - [Kubernetes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/)
 
 ## Debugging Tips
