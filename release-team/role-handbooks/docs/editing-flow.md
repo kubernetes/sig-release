@@ -74,6 +74,8 @@ and query GitHub for all pull requests filed during the specified range. Note th
 this process might take a long time, particularly at the end of the cycle when the
 branch has lots of commits.
 
+The `--fork` flag should be set to your GitHub user (the organization that owns your fork of k/sig-release). This is required to automatically create the release notes branch on your fork of sig-release.
+
 Since the note gatherer hits the GitHub API quite heavily, you will get rate limited.
 During a normal operation `krel` will handle them correctly, but you may find yourself
 forced to wait when doing several runs after one another. 
