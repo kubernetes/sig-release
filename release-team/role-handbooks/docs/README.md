@@ -69,6 +69,9 @@ General time requirements for leads and shadows are:
 - ½ hour to 2 hours a day, reviewing incoming enhancements, tracking documentation PRs, and monitoring Slack
 - Between 1 and 2 hours a week to attend the majority of Release Team (weekly) and Burndown meetings (daily during Code Freeze), subject to time zone appropriateness
 - Up to 1 hour weekly to attend [SIG Docs meetings](https://github.com/kubernetes/community/tree/master/sig-docs#meetings) for status reports
+- Create [known issues issue](https://github.com/kubernetes/sig-release/blob/master/release-team/role-handbooks/release-notes/known-issues-bucket.md) in kubernetes/kubernetes to capture known issues for the release
+- Send [an email to SIG-leads](https://github.com/kubernetes/sig-release/blob/master/release-team/role-handbooks/release-notes/sig-leads-email.md) to ensure major changes for their SIGs are accurately reflected in the release notes
+- Send a slack message to the sig channels to ensure major changes for the SIGs are accurately reflected in the release notes 
 
 #### Onboarding Session (week 1) ~1 hour
 
