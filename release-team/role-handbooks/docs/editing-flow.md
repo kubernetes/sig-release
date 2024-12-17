@@ -62,7 +62,7 @@ The `--fix` flag is available when invoking krel with the `--create-draft-pr` op
 This is an example invocation to edit the release notes for Kubernetes v1.19:
 
 ```bash
-krel release-notes --create-draft-pr --org=MyGitHubOrg --fix --tag=v1.19.0
+krel release-notes --create-draft-pr --org=MyGitHubOrg --fix --tag=v1.19.0 --fork=MyGitHubUsername
 ```
 As with all `krel release-notes` subcommands, a GitHub token must be exported in
 an environment variable called `GITHUB_TOKEN`. The user should supply their GitHub
