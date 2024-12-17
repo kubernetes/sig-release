@@ -87,20 +87,30 @@ jobs:
           if [ -n "$CHANGED_FILES" ]; then
             echo "validating base sha ${{ github.event.pull_request.base.sha }}"
 
+            # Initialize an empty string to collect invalid files
+            INVALID_FILES=""
+
             # Loop through each changed YAML file and validate it
             for file in $CHANGED_FILES; do
               echo "Validating YAML file: $file"
               OUTPUT=$(${KREL_PATH} release-notes validate --path-to-release-notes "$file")
 
-              # If validation fails for any file, set the output variable and fail the job
+              # If validation fails for any file, collect the invalid files
               if [[ "$OUTPUT" == *"YAML Validation Failed"* ]]; then
                 echo "Invalid YAML file: $file"
-                echo "invalid_files<<EOF" >> $GITHUB_ENV
-                echo "$OUTPUT" >> $GITHUB_ENV
-                echo "EOF" >> $GITHUB_ENV
-                exit 1
+                INVALID_FILES="$INVALID_FILES$file\n"
               fi
             done
+
+            # If there are any invalid files, set the output variable and fail the job
+            if [ -n "$INVALID_FILES" ]; then
+              echo "invalid_files<<EOF" >> $GITHUB_ENV
+              echo -e "$INVALID_FILES" >> $GITHUB_ENV
+              echo "EOF" >> $GITHUB_ENV
+              exit 1
+            else
+              echo "All YAML files are valid."
+            fi
           else
             echo "No YAML files changed under /releases/*"
           fi
@@ -117,3 +127,5 @@ jobs:
               issue_number: context.issue.number,
               body: `The following YAML files are invalid:\n\n${invalidFiles}`
             })
+        env:
+          invalid_files: ${{ env.invalid_files }}
