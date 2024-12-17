@@ -86,7 +86,7 @@ All members of the Docs subteam should participate in PR reviews as time allows.
 
 This period has an increase in release team meetings each week and there is also significantly more work to do to ensure the release notes and documentation are in good working order for the release.
 
-The `release-notes` subcommand of `krel` must continue to be run on the release branch (for `beta` and `rc` releases) in order to pull in any outstanding PRs that are merged between the beginning of code freeze and the release.
+The `release-notes` subcommand of `krel` must continue to be run on the release branch (for `alpha`, `beta` and `rc` releases) in order to pull in any outstanding PRs that are merged between the beginning of code freeze and the release.
 
 The Docs Lead will sync with the Comms team as well as SIG Docs and SIG Cluster-lifecycle, as well as begin prepping the website for the release day. On release day, the Docs Lead merges the documentation, publishes the release blog, and updates the website.
 
