@@ -1,3 +1,4 @@
+
 # Release Signal Role Handbook
 
 <!-- TOC -->
@@ -165,7 +166,7 @@ Roles in the assignments excel sheet:
     eg:
       - _Assigning other shadows to create issues for failures/flakes._
       - _Assigning other shadows to observe a particular job._
-      - _Assigning other shadows to follou up on issues with related SIGs/WGs_
+      - _Assigning other shadows to follow up on issues with related SIGs/WGs_
       - _Assigning any other task that the main coordinator does._
 
       <br>**_Note:_** The Release Signal Lead has the ensure that the assignments are fair and the work distribution during the cycle is even.
@@ -198,7 +199,7 @@ start [escalating issues/PRs](#how-to-escalate) and communicating deadlines with
 
 The following are the major tasks:
 
-- Monitoring the master-blocking, master-informing, release-x.y-blocking and release-x.y-informing dashboards on a daily basis.
+- Monitoring the master-blocking, master-informing dashboards on a daily basis.
 - Closely working with SIGs/WGs and test owners to fix failing and flaky tests.
 - Ensure that issues and PRs targeting the release have the correct *milestone* and *priority* labels.
     - Linked issues and PRs tracked in the current milestone should have `priority` and `kind` labels.
@@ -290,6 +291,8 @@ After the rc.0 and rc.1 cuts, referred to as release candidates, no enhancements
 The branch manager sets up the release-x.y-informing and release-x.y-blocking dashboards after the rc.0 cut. 
 The Release Signal team should coordinate with the branch manager to ensure the dashboards are set up within the same week. 
 The Release Signal Lead and Shadows can assist with dashboard setup and resolving any job misconfigurations.
+
+Once the release-x.y-blocking and release-x.y-informing dashboards are set up (typically around week 12), the Release Signal team should monitor these new dashboards alongside the existing master-blocking and master-informing dashboards on a daily basis until the final release cut.
 
 ### Code Thaw
 
