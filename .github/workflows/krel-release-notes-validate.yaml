@@ -104,9 +104,8 @@ jobs:
 
             # If there are any invalid files, set the output variable and fail the job
             if [ -n "$INVALID_FILES" ]; then
-              echo "invalid_files<<EOF" >> $GITHUB_ENV
-              echo -e "$INVALID_FILES" >> $GITHUB_ENV
-              echo "EOF" >> $GITHUB_ENV
+              echo "invalid_files=$INVALID_FILES" >> $GITHUB_ENV
+              echo "::set-output name=invalid_files::$(echo -n "$INVALID_FILES")"
               exit 1
             else
               echo "All YAML files are valid."
@@ -120,12 +119,10 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}  # Ensure this is provided for authentication
           script: |
-            const invalidFiles = process.env.invalid_files.trim();
+            const invalidFiles = '${{ steps.validate_releases_yaml.outputs.invalid_files }}'.trim();
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: `The following YAML files are invalid:\n\n${invalidFiles}`
             })
-        env:
-          invalid_files: ${{ env.invalid_files }}
