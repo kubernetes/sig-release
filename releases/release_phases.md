@@ -18,12 +18,14 @@ All enhancements wishing to be included in the current release must have
   * In the current Release Milestone
   * Has the `lead-opted-in` label applied
 * A `kep.yaml` with
-  * [status](status: provisional|implementable|implemented|deferred|rejected|withdrawn|replaced) set to `implementable`
-  * [latest-milestone](latest-milestone: "v1.19") set to the current release
+  * `status` (provisional|implementable|implemented|deferred|rejected|withdrawn|replaced) set to `implementable`
+  * `latest-milestone` set to the current release (e.g. `v1.32`)
 * A `README.md`
   * That uses the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template)
   * That has a [updated detailed test plan section](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/README.md?plain=1#L257-L328) filled out
 * A completed [Production Readiness Review](https://github.com/kubernetes/enhancements/blob/master/docs/glossary.md#production-readiness-review-prr)
+
+*Note*: For deprecations/removals, the `kep.yaml` status should be set to `withdrawn`, and the [Kubernetes Deprecation Policy](https://kubernetes.io/docs/reference/using-api/deprecation-policy/) should be followed.
 
 If the enhancement does not meet these requirements, it will be removed from the
 milestone and will require an [Exception].
