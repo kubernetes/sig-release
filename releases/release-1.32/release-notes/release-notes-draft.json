@@ -2131,26 +2131,6 @@
       "scheduling"
     ]
   },
-  "126889": {
-    "commit": "98657377dc1cbd6ee5291a1bb1d36cf4c1dcebfb",
-    "text": "The kube-proxy command line flags `--healthz-port` and `--metrics-port`, which were previously deprecated, have now been removed.",
-    "markdown": "The kube-proxy command line flags `--healthz-port` and `--metrics-port`, which were previously deprecated, have now been removed. ([#126889](https://github.com/kubernetes/kubernetes/pull/126889), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
-    "author": "aroradaman",
-    "author_url": "https://github.com/aroradaman",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/126889",
-    "pr_number": 126889,
-    "areas": [
-      "kube-proxy"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network",
-      "windows"
-    ],
-    "duplicate": true
-  },
   "126894": {
     "commit": "6a1a6fd85fb80fd9c4b3f823741853822a4270db",
     "text": "Removed generally available feature-gate `ZeroLimitedNominalConcurrencyShares`",
@@ -4482,27 +4462,6 @@
     ],
     "duplicate": true,
     "is_mapped": true
-  },
-  "127930": {
-    "commit": "4d32d7e5ad0be3d42bb63b3b5985ffff335b66cd",
-    "text": "The kube-proxy command line flags `--healthz-port` and `--metrics-port`, which were previously deprecated, have now been removed.",
-    "markdown": "The kube-proxy command line flags `--healthz-port` and `--metrics-port`, which were previously deprecated, have now been removed. ([#127930](https://github.com/kubernetes/kubernetes/pull/127930), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
-    "author": "aroradaman",
-    "author_url": "https://github.com/aroradaman",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/127930",
-    "pr_number": 127930,
-    "areas": [
-      "kube-proxy",
-      "ipvs"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "network",
-      "windows"
-    ],
-    "duplicate": true
   },
   "127965": {
     "commit": "e7bc45269d53da81d276efdde06dcbbeb4c286cc",
