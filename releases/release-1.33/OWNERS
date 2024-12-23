@@ -1,0 +1,11 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+    - npolshakova          # 1.33 Release Team Lead
+    - neoaggelos           # 1.33 Emeritus Advisor
+
+reviewers:
+    - rytswd               # 1.33 Communications Lead
+    - rayandas             # 1.33 Docs Lead
+    - dipesh-rawat         # 1.33 Enhancements Lead
+    - wendy-ha18           # 1.33 Release Signal Lead
