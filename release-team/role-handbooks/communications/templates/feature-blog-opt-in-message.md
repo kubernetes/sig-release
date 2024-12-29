@@ -20,7 +20,7 @@ Some timeline to keep in mind:
 - <insert feature blog ready for review here>: Feature blogs ready for review
 - You can find more in the [release document](https://github.com/kubernetes/sig-release/tree/master/releases/release-<version>#timeline)
 
-**Note**: In your placeholder PR, use `XX` characters for the blog `date` in the front matter and file name. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
+**Note**: In your placeholder PR, use the current scheduled overall release date for the blog `date` and add a `draft:true` to the front matter. This will help us to merging this ahead of the release date and scheduling it after the release date.
 
 If you have any questions or need help, please feel free to reach out to me or any of the Communications Team members. We are here to help you!
 ```
