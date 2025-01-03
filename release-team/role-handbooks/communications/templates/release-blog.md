@@ -47,13 +47,12 @@ This outline can be used as reference for writing up the release blog. The follo
     * Kubernetes blog
 
 ## Latest Release Blogs as Reference
+* [Kubernetes 1.32: Penelope](https://kubernetes.io/blog/2024/12/11/kubernetes-v1-32-release/)
 * [Kubernetes 1.31: Elli](https://kubernetes.io/blog/2024/08/13/kubernetes-v1-31-release/)
 * [Kubernetes 1.30: Uwubernetes](https://kubernetes.io/blog/2024/04/17/kubernetes-v1-30-release/)
 * [Kubernetes 1.27: Chill Vibes](https://kubernetes.io/blog/2023/04/11/kubernetes-v1-27-release/)
 * [Kubernetes 1.26: Electrifying](https://kubernetes.io/blog/2022/12/09/kubernetes-v1-26-release/)
 * [Kubernetes 1.25: Combiner](https://kubernetes.io/blog/2022/08/23/kubernetes-v1-25-release/)
-* [Kubernetes 1.24: Stargazer](https://kubernetes.io/blog/2022/05/03/kubernetes-1-24-release-announcement/)
-
 
 ## Release Blog Template
 
@@ -201,7 +200,7 @@ Have something you’d like to broadcast to the Kubernetes community?
 Share your voice at our weekly [community meeting](https://github.com/kubernetes/community/tree/master/communication), and through the channels below. 
 Thank you for your continued feedback and support.
 
-- Follow us on X [@Kubernetesio](https://x.com/kubernetesio) for latest updates
+- Follow us on Bluesky [@Kubernetesio](https://bsky.app/profile/kubernetes.io) for the latest updates
 - Join the community discussion on [Discuss](https://discuss.kubernetes.io/)
 - Join the community on [Slack](http://slack.k8s.io/)
 - Post questions (or answer questions) on [Stack Overflow](http://stackoverflow.com/questions/tagged/kubernetes)
