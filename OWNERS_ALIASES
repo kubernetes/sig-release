@@ -31,6 +31,7 @@ aliases:
     - katcosgrove # 1.30 Release Lead
     - leonardpahlke # subproject owner / 1.26 Release Team Lead
     - neoaggelos # 1.31 Release Lead
+    - npolshakova # 1.33 Release Lead
     - Priyankasaggu11929 # subproject owner / Kubernetes 1.29 Release Lead
     - puerco # subproject owner
     - salaxander # subproject owner / 1.27 Release Team Lead
@@ -47,6 +48,7 @@ aliases:
     - katcosgrove # Kubernetes 1.30 Release Lead
     - leonardpahlke # Kubernetes 1.26 Release Lead
     - neoaggelos # Kubernetes 1.31 Release Lead
+    - npolshakova # Kubernetes 1.33 Release Lead
     - Priyankasaggu11929 # Kubernetes 1.29 Release Lead
     - salaxander # Kubernetes 1.27 Release Lead
   release-signal-role:
