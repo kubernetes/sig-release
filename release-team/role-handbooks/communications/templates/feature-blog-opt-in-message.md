@@ -15,7 +15,7 @@ As you may be aware, feature blogs are a great way to communicate to users about
 
 To opt in to write a feature blog, could you please let us know and open a "Feature Blog placeholder PR" (which can be only a skeleton at first) against the [website repository](https://github.com/kubernetes/website) by **<insert deadline here>**? For more information about writing a blog, please find the [blog contribution guidelines](https://kubernetes.io/docs/contribute/new-content/blogs-case-studies/#technical-considerations-for-submitting-a-blog-post) 📚
 
-Some timeline to keep in mind:
+Some timelines to keep in mind:
 - <insert feature blog freeze deadline here>: Feature blog PR freeze
 - <insert feature blog ready for review here>: Feature blogs ready for review
 - You can find more in the [release document](https://github.com/kubernetes/sig-release/tree/master/releases/release-<version>#timeline)
