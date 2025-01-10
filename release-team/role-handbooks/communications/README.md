@@ -55,7 +55,7 @@ A good practice is to also update `#sig-docs` and `#sig-docs-blogs` channels wit
 
 ## Working with other teams and SIGs
 
-Throughout the release cycle the comms team works with lots of different teams within the Kubernetes community. As a Comms lead or member of the comms team, you should feel empowered to reach out and ask questions or as for help from SIGs and other Release team members to meet deadlines.
+Throughout the release cycle, the comms team works with lots of different teams within the Kubernetes community. As a Comms lead or member of the comms team, you should feel empowered to reach out and ask questions or ask for help from SIGs and other Release team members to meet deadlines.
 
 Some groups you may need to contact, on top of the already mentioned SIG Docs (Blog), include:
 
