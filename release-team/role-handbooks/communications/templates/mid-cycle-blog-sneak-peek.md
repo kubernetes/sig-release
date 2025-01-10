@@ -1,5 +1,5 @@
 # Outline for the release mid-cycle blog
-This outline can be used as reference for writing up the mid cycle release blog in case of sneak peek required. Deprecations and removal is required in case there are any.
+This outline can be used as a reference for writing up the mid cycle release blog in case of sneak peek is required. Deprecations and removal are required in case there are any.
 
 The following sections should give you an idea what can be considered for this mid-cycle blog, but it's not necessary to include every section. Include the ones that make sense for the features/announcements in the release.
 
