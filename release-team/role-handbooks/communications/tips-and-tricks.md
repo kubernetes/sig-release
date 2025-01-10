@@ -6,7 +6,7 @@ Try to give 2 weeks notice for all deadlines and requests for reviews. When plan
 
 #### Reaching out to KEP owners, blog authors, and reviewers
 
-Post messages to GitHub or in SIG slack channels for the best visibility into ongoing work and to allow other contributors to help. Having messages in the KEPs, blog PRs, or SIG slack channels, can help centralize information about the work being done and any outstanding issues. If you need to escalate an issues to Release Leads or SIG Chairs, having public messages/records of conversations can make it easy to tag who you need to. 
+Post messages to GitHub or in SIG slack channels for the best visibility into ongoing work and to allow other contributors to help. Having messages in the KEPs, blog PRs, or SIG slack channels, can help centralize information about the work being done and any outstanding issues. If you need to escalate an issue to Release Leads or SIG Chairs, having public messages/records of conversations can make it easy to tag who you need to. 
 
 If you do use direct messages to contact someone during a release, post summaries of the conversation to PRs or SIG slack channels. This way everyone can stay up-to-date on the ongoing work.
 
