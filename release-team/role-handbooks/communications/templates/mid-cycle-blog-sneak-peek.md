@@ -58,7 +58,7 @@ Here you can insert a note about a topic of the release or tangential to it. Thi
 ## Sneak peek of Kubernetes 1.xx
 
 ### KEP [#xxx](https://github.com/kubernetes/enhancements/issues/xxx) - Comms Owner
-<insert here a KEP explaination paragraph>
+<insert here a KEP explanation paragraph>
 - Repeat for every KEP that is interesting for the release
 
 ## Want to know more?
