@@ -59,7 +59,7 @@ Throughout the release cycle, the comms team works with lots of different teams 
 
 Some groups you may need to contact, on top of the already mentioned SIG Docs (Blog), include:
 
-* SIG Contributor Experience in the `#sig-contribex` slack channel and by attending meetings. They can help promote the feature blogs through social media. Also see the spcial posts section below.
+* SIG Contributor Experience in the `#sig-contribex` slack channel and by attending meetings. They can help promote the feature blogs through social media. Also, see the special posts section below.
 * Chairs and Tech Leads of SIGs in the `#chairs-and-techleads` Slack channel. This can be a helpful place to post reminders about blog deadlines SIG leads to see.
 
 ## Release deliverables
