@@ -88,7 +88,7 @@ The Communications Coordinator along with the Comms shadows are responsible for 
 
 Start the draft with the team around week 11, striking a balance between the enhancements being close to finalized and having enough to time author the blog and have it reviewed. Ahead of review, open a pull request on the [website repository](https://github.com/kubernetes/website) and assign the release lead and other stakeholders as reviewers.
 
-It's up to you and your team regarding how best to do this. Typically it works well to assign sections to different team members and have the lead pull it all together and manage the PR and reviews. You can work in a draft in Google Docs or [Hackmd](https://hackmd.io/), then move into the PR when content is more finalized. Its also recommended to get KEP authors or SIG Leads to provide 1-2 paragraph descriptions of KEP changes as a starting point for the release blog. This is an easier starting point for putting the whole release blog together. 
+It's up to you and your team regarding how best to do this. Typically it works well to assign sections to different team members and have the lead pull it all together and manage the PR and reviews. You can work on a draft in Google Docs or [Hackmd](https://hackmd.io/), then move into the PR when content is more finalized. It's also recommended to get KEP authors or SIG Leads to provide 1-2 paragraph descriptions of KEP changes as a starting point for the release blog. This is an easier starting point for putting the whole release blog together. 
 
 The release lead will drive the content for the release theme and logo. 
 
