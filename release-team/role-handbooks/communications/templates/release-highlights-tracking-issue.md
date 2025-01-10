@@ -23,7 +23,7 @@ A template message can be found [here](/release-team/role-handbooks/communicatio
 Following that message it is advised to ping the SIGs every 2 weeks to remind them about the release highlights.
 
 ### SIG groups
-The following are groups of SIGs we need to reach out to. The SIGs are groups together in a mix of those that have tracked enhacements for this release and those that do not. Please comment below with the group you'd like to reach out to.
+The following are groups of SIGs we need to reach out to. The SIGs are grouped together in a mix of those that have tracked enhancements for this release and those that do not. Please comment below with the group you'd like to reach out to.
 
 Group 1
 
