@@ -222,8 +222,8 @@ The Release Lead is probably the best person to put together the slides, but it 
 
 For the 1.31 release the release and enhancement lead created the slides 1 week before the webinar was scheduled. We then had a quick 10 minute meeting to talk about how to run through the slides on the webinar. Release Lead and Enhancements Lead alternated on each slide and mostly just read out the content on the slides and maybe added a little more context. 
 
-As a Comms Lead you dont have to talk on the presentation, but you can if you want to.
-The presentation isn't intended to be very technical. Just an overview of the changes. The listeners may have questions but its perfectly fine to direct them to read the KEP or asking in the sig-slack channel to get more information. So there is no need to be an expert on any of the changes. The CNCF has a moderator on the webinar with you to help with running it, recording, and managing the chat. They don't need the slides ahead of time, you just show up with the slides to the webinar.
+As a Comms Lead you don't have to talk on the presentation, but you can if you want to.
+The presentation isn't intended to be very technical. Just an overview of the changes. The listeners may have questions but it's perfectly fine to direct them to read the KEP or asking in the sig-slack channel to get more information. So there is no need to be an expert on any of the changes. The CNCF has a moderator on the webinar with you to help with running it, recording, and managing the chat. They don't need the slides ahead of time, you just show up with the slides to the webinar.
 
 ### Tips and tricks
 
