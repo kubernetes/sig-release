@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Initialize Variables
-YOUR_USER="chanieljdan"
+YOUR_USER=""
 AUTO_PUSH=false
 FUTURE_RELEASE=""
 
