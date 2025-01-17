@@ -18,13 +18,13 @@ flowchart TD
     B --> D["Add relevant details"]
     D --> A1["Add labels: </br> #8226; Priority </br> #8226; Milestone </br> #8226; SIG Label"]
     A1 --> E["Tag @kubernetes/release-team-release-signal"]
-    E --> F["Message #release-signal Slack channel"]
+    E --> F["Message #release-ci-signal Slack channel"]
     F --> G["Reach out to SIG on Slack"]
     G --> H["Ping SIG TLs/Chairs/Active Members"]
     H --> I["Ask if it's a blocker for upcoming release cut"]
     I -- Is a blocker --> J["Mark as blocker"]
     I -- Not a blocker --> K["Mark as non-blocker"]
-    J & K --> L["Add issue with Metadata (e.g. Links, Notes, etc.) \n to CI Signal Board"]
+    J & K --> L["Add issue with Metadata (e.g. Links, Notes, etc.) to CI Signal Board"]
     L --> A
     
     style H fill:#FFD700,color:#000000
