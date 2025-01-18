@@ -210,15 +210,15 @@ The following are the major tasks:
       starts and a couple of days before the code freeze starts.
 
 Initially, you should prioritize pinging issues/PRs that haven't been updated for a longer time. You can use the following
-queries: [`is:issue is:open milestone:v1.28 sort:updated-asc`](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.28+sort%3Aupdated-asc)
-and [`is:pr is:open milestone:v1.28 sort:updated-asc`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+sort%3Aupdated-asc).
+queries: [`is:issue is:open milestone:v1.33 sort:updated-asc`](https://github.com/kubernetes/kubernetes/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+milestone%3Av1.33+sort%3Aupdated-asc)
+and [`is:pr is:open milestone:v1.33 sort:updated-asc`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.33+sort%3Aupdated-asc).
 
 For pinging, the following template can be used:
 
 ```
 Hello! This <issue|PR> has not been updated for a long time, so I'd like to check what's the status. The code freeze is starting <insert date> (about <number of weeks> from now), and while there is still plenty of time, we want to ensure that each PR has a chance to be merged on time.
 
-As the PR is tagged for 1.28, is it still planned for this release?
+As the PR is tagged for 1.33, is it still planned for this release?
 ```
 
 ### Code Freeze
@@ -250,10 +250,10 @@ query [`is:pr is:open no:milestone label:approved label:lgtm`](https://github.co
 
 You can monitor PRs using the following queries:
 
-- [PRs supposed to be in the merge pool (`is:pr is:open milestone:v1.28 label:approved label:lgtm -label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+label%3Algtm+-label%3Ado-not-merge%2Fhold)
-- [PRs that have `approved` and `lgtm`, but are on-hold (`is:pr is:open milestone:v1.28 label:approved label:lgtm label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+label%3Algtm+label%3Ado-not-merge%2Fhold+)
-- [PRs that doesn't have `approved` but have `lgtm` (`is:pr is:open milestone:v1.28 -label:approved label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+-label%3Aapproved+label%3Algtm)
-- [PRs that doesn't have `lgtm` but have `approved` (`is:pr is:open milestone:v1.28 label:approved -label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.28+label%3Aapproved+-label%3Algtm+)
+- [PRs supposed to be in the merge pool (`is:pr is:open milestone:v1.33 label:approved label:lgtm -label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.33+label%3Aapproved+label%3Algtm+-label%3Ado-not-merge%2Fhold)
+- [PRs that have `approved` and `lgtm`, but are on-hold (`is:pr is:open milestone:v1.33 label:approved label:lgtm label:do-not-merge/hold`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.33+label%3Aapproved+label%3Algtm+label%3Ado-not-merge%2Fhold+)
+- [PRs that doesn't have `approved` but have `lgtm` (`is:pr is:open milestone:v1.33 -label:approved label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.33+-label%3Aapproved+label%3Algtm)
+- [PRs that doesn't have `lgtm` but have `approved` (`is:pr is:open milestone:v1.33 label:approved -label:lgtm`)](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+milestone%3Av1.33+label%3Aapproved+-label%3Algtm+)
 
 #### Once the Code Freeze starts - one week later
 
@@ -319,10 +319,10 @@ Basic idea behind giving go/no-go signal:
 ```mermaid
 flowchart TD
     A[Identify Failures/Flakes] -->|No Failures/Flakes| B[Go Signal]
-    A --> |Failures/Flakes Present| C[Get Blocking/Non-Blocking confirmation \n from responsible SIG/WG]
+    A --> |Failures/Flakes Present| C[Get Blocking/Non-Blocking confirmation from responsible SIG/WG]
     C --> |No Blockers| B
     C --> |Blockers Present| D[No-Go Signal]
-    D --> |Summarize the status in \n #release-management \n and ping the release lead| E[Subject matter experts \n work on the blocker/s]
+    D --> |Summarize the status in #release-management and ping the release lead| E[Subject matter experts work on the blocker/s]
     E --> F[Blocking issue resolved]
     F --> B
     style B fill:#008000
@@ -437,7 +437,7 @@ For all opened issues:
 - If you are aware of the individual associated with the enhancement area or issue, @mention of the individual(s) and SIG leads
   tends to result in a faster turnaround.
 - Add `@kubernetes/sig-foo-test-failures` to draw SIG-foo's attention to the issue.
-- `/cc @kubernetes/release-team-release-signal` Github team on the issue to let the rest of the team know about it. You might also `/cc` the release
+- `/cc @kubernetes/release-team-release-signal` GitHub team on the issue to let the rest of the team know about it. You might also `/cc` the release
   lead if the issue needs extra attention immediately.
 - Assign the issue to yourself or recruit another member of the Release Signal team to own the issue. The Release Signal team
   member assigned to an issue is responsible for driving it to resolution alongside the assignee from the appropriate SIG.
@@ -461,7 +461,7 @@ should remain open until the appropriate fix has been made and the affected test
 is closed prematurely, or the same test starts failing or flaking again, a new issue should be opened. Do not reopen closed
 issues.
 
-Closing flaky tests requires more investigation as the test may have passed on the informing and blocking dashboards but may be failing in other clusters with the same configuration. Always use [Traige](https://go.k8s.io/triage) to see whether the test health is stable across different jobs.
+Closing flaky tests requires more investigation as the test may have passed on the informing and blocking dashboards but may be failing in other clusters with the same configuration. Always use [Triage](https://go.k8s.io/triage) to see whether the test health is stable across different jobs.
 
 ## Special high risk test categories to monitor
 
@@ -471,7 +471,7 @@ when dealing with test failures in the following areas.
 
 ### Scalability tests
 
-Scalability testing is inherently challenging, and regressions in this area are potentially a huge project risk
+Scalability testing is inherently challenging, and regressions in this area are potentially a huge project risk.
 
 - Requires lots and lots of servers running tests, and hence expensive
 - Tests are long-running, so it is especially hard/expensive/slow to resolve issues via Git bisection
@@ -557,12 +557,12 @@ _**Always ping folks alongside posting to a Slack channel**_
 
 - For issues and PRs targeted for the current release cycle:
   1. Leave a comment on the GitHub issue or PR: "This issue hasn't been updated in 3 months. Are you still expecting to complete
-     it for 1.28?". It's helpful to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` alias, e.g.
+     it for 1.33?". It's helpful to @ mention individuals or SIG ```-bugs``` or ```-pr-reviews``` alias, e.g.
      "@kubernetes/sig-node-bugs" or
      "@kubernetes/sig-network-pr-reviews".
   2. Send a message to the relevant SIG Slack channel or mailing list about the problem: It's helpful to directly @ mention the
      relevant SIG Leads / Owners and to condense multiple issues into a list, e.g. "Hey, these three issues haven't seen any
-     attention, are they still valid for 1.28?"
+     attention, are they still valid for 1.33?"
   3. Message individual owners and reviewers directly via Slack. If owners and reviewers are unresponsive, you can reach out to
      the SIG leads using the `kubernetes-sig-${name}-leads@googlegroups.com` mailing lists.
 
@@ -573,7 +573,7 @@ non-responsive issues.
 
 - Quirk: If a job is listed as FAILING but doesn't have "Overall" as one of its ongoing failures, it's not actually failing. It
   might be "red" from some previous test run failures and will clear up after a few "green" runs.
-- if a job is failing in one of the meta-stages (Up, Down, DumpClusterLogs, etc.), find the owning SIG since it is a infra failure
+- If a job is failing in one of the meta-stages (Up, Down, DumpClusterLogs, etc.), find the owning SIG since it is a infra failure.
 - You can look at the past history of the job/test (even as far back as multiple releases) by querying
   the [triage dashboard for specific job and/or test name](https://storage.googleapis.com/k8s-triage/index.html).
 
@@ -594,9 +594,9 @@ non-responsive issues.
 
 ### Finding a Flaky Test
 
-A flaky test is a software test that yields both passing and failing results despite zero changes to the code or test. A test may flake for different reasons, including bad synchronization, environmental issues, race conditions, etc. Release Signal team members should, in general, keep an eye on overall top flakes using [Traige](https://go.k8s.io/triage).
+A flaky test is a software test that yields both passing and failing results despite zero changes to the code or test. A test may flake for different reasons, including bad synchronization, environmental issues, race conditions, etc. Release Signal team members should, in general, keep an eye on overall top flakes using [Triage](https://go.k8s.io/triage).
 
-If a test is suspected to be flaky and not enough evidence is present on the testgrid dashboard itself, search that test name in [Traige](https://go.k8s.io/triage) to see the test results across different jobs. Not all results may be accurate, as tests running in different jobs may have different configurations. But this, overall, gives a good picture of the test's health.
+If a test is suspected to be flaky and not enough evidence is present on the testgrid dashboard itself, search that test name in [Triage](https://go.k8s.io/triage) to see the test results across different jobs. Not all results may be accurate, as tests running in different jobs may have different configurations. But this, overall, gives a good picture of the test's health.
 
 ### Priority Labels
 
@@ -609,7 +609,7 @@ In the CI signal context, we use priority labels to mean:
 | priority                      | Description                                                                                                                                                                                | Expectation                                                                                                                                                                                                              |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `priority/critical-urgent`    | Actively impacting release-blocking signal. Includes: consistently failing tests, frequently (more than 20% of the time) flaking tests in release-blocking dashboards.                     | Work with SIGs for these to be worked on as soon as possible, prioritized over other work.                                                                                                                               |
-| `priority/important-soon`     | Negatively impacting release-blocking signal. Includes: Flakes (especially occurring >2% of the time) in release-blocking jobs, failures and flakes in release-informing jobs.             | work with sigs to resolve them soon, ideally before the end of this release cycle.                                                                                                                                       |
+| `priority/important-soon`     | Negatively impacting release-blocking signal. Includes: Flakes (especially occurring >2% of the time) in release-blocking jobs, failures and flakes in release-informing jobs.             | Work with SIGs to resolve them soon, ideally before the end of this release cycle.                                                                                                                                       |
 | `priority/important-longterm` | Painful, results in manual workarounds/toil, limits developer productivity, but is of lower urgency and importance than issues in `priority/critical-urgent` or `priority/important-soon`. | In reality, there's a high chance these won't be finished, or even started within the current release. Work with sigs to ensure they are on their radar, and help find ways they can be broken down into smaller chunks. |
 
 CI monitoring part is not currently using `priority/backlog` or `priority/awaiting-more-evidence`. If ever in doubt, label it
