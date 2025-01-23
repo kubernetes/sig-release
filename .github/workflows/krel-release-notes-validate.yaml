@@ -1,0 +1,126 @@
+# Copyright 2025 The Kubernetes Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Yaml Lint Release Notes
+on:
+  pull_request:
+    paths:
+      - releases/**/release-notes/**.yaml
+      - releases/**/release-notes/**.yml
+  # Allow manual triggering
+  workflow_dispatch: { }
+
+permissions: { }
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  krel_release_notes_validate_action:
+    name: Validate release notes with krel
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@41dfa10bad2bb2ae585af6ee5bb4d7d973ad74ed # v5.1.0
+        with:
+          go-version: '1.23'
+          check-latest: true
+      - uses: sigstore/cosign-installer@dc72c7d5c4d10cd6bcb8cf6e3fd625a9e5e537da # v3.7.0
+        with:
+          use-sudo: false
+      - id: install-krel
+        shell: bash
+        run: |
+          #!/bin/bash
+          set -euo pipefail
+          
+          # Get the latest release version from GitHub API
+          KREL_VERSION=$(curl -s https://api.github.com/repos/kubernetes/release/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
+          ARTIFACT_NAME=krel-amd64-linux
+          TEMP_DIR=$(mktemp -d)
+          cd "$TEMP_DIR"
+          
+          echo "Downloading latest krel version $KREL_VERSION..."
+          if ! curl -sL "https://github.com/kubernetes/release/releases/download/$KREL_VERSION/$ARTIFACT_NAME" -o krel; then
+              echo "Failed to download krel"
+              exit 1
+          fi
+          
+          KREL_CERT="https://github.com/kubernetes/release/releases/download/$KREL_VERSION/$ARTIFACT_NAME.pem"
+          KREL_SIG="https://github.com/kubernetes/release/releases/download/$KREL_VERSION/$ARTIFACT_NAME.sig"
+          
+          echo "Using cosign to verify signature of krel version $KREL_VERSION"
+          if ! cosign verify-blob --certificate "$KREL_CERT" --signature "$KREL_SIG" \
+              --certificate-identity "https://github.com/kubernetes/release/.github/workflows/release.yml@refs/tags/$KREL_VERSION" \
+              --certificate-oidc-issuer "https://token.actions.githubusercontent.com" krel; then
+              echo "Signature verification failed for krel version: '$KREL_VERSION'"
+              exit 1
+          fi
+          
+          chmod +x krel
+          mkdir -p "$HOME/.local/bin"
+          mv krel "$HOME/.local/bin/"
+          cd - > /dev/null
+          rm -rf "$TEMP_DIR"
+          
+          KREL_PATH="$HOME/.local/bin/krel"
+          echo "krel-path=$KREL_PATH" >> "$GITHUB_OUTPUT"
+          echo "Krel installed at: $KREL_PATH"
+      - name: Run if releases YAML changes exist and validate the YAML
+        id: validate_releases_yaml
+        env:
+          KREL_PATH: ${{ steps.install-krel.outputs.krel-path }}
+        run: |
+          # Get a list of changed YAML files based on git diff
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} -- releases/ | grep -E '\.ya?ml$' || true)
+
+          if [ -n "$CHANGED_FILES" ]; then
+            echo "### YAML Validation Results :mag:" >> $GITHUB_STEP_SUMMARY
+            echo "Validating files against base SHA: ${{ github.event.pull_request.base.sha }}" >> $GITHUB_STEP_SUMMARY
+
+            INVALID_FILES=""
+
+            while IFS= read -r file; do
+              echo "#### Validating: ${file##*/}" >> $GITHUB_STEP_SUMMARY
+              set +e
+              VALIDATION_OUTPUT=$("${KREL_PATH}" release-notes validate --path-to-release-notes "$file" 2>&1)
+              exit_code=$?
+              set -e
+          
+              if [ $exit_code -ne 0 ]; then
+                  INVALID_FILES="${INVALID_FILES}- ${file##*/}\n"
+                  echo "❌ Validation failed with the following errors:" >> $GITHUB_STEP_SUMMARY
+                  echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+                  echo "$VALIDATION_OUTPUT" >> $GITHUB_STEP_SUMMARY
+                  echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+              else
+                  echo "✅ File is valid" >> $GITHUB_STEP_SUMMARY
+              fi
+            done <<< "$CHANGED_FILES"
+          
+            if [ -n "$INVALID_FILES" ]; then
+              echo -e "\n### ❌ Validation Failed" >> $GITHUB_STEP_SUMMARY
+              echo "The following files contain invalid YAML:" >> $GITHUB_STEP_SUMMARY
+              echo -e "$INVALID_FILES" >> $GITHUB_STEP_SUMMARY
+              exit 1
+            fi
+          else
+            echo "### No YAML Changes Detected" >> $GITHUB_STEP_SUMMARY
+            echo "No YAML files were changed under /releases/*" >> $GITHUB_STEP_SUMMARY
+          fi
