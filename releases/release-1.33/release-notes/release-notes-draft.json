@@ -117,7 +117,7 @@
   "128086": {
     "commit": "5948c7b5a9f606644bb3d5eb2ea831d648c2aa1c",
     "text": "Fixed a storage bug around multipath. iSCSI and Fibre Channel devices attached to nodes via multipath now resolve correctly if partitioned.",
-    "markdown": "Fixed a storage bug around multipath. iSCSI and Fibre Channel devices attached to nodes via multipath now resolve correctly if partitioned. ([#128086](https://github.com/kubernetes/kubernetes/pull/128086), [@RomanBednar](https://github.com/RomanBednar)) [SIG Storage]",
+    "markdown": "Fixed a storage bug related to multipath. iSCSI and Fibre Channel devices attached to nodes via multipath resolved correctly when partitioned. ([#128086](https://github.com/kubernetes/kubernetes/pull/128086), [@RomanBednar](https://github.com/RomanBednar)) [SIG Storage]",
     "author": "RomanBednar",
     "author_url": "https://github.com/RomanBednar",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128086",
