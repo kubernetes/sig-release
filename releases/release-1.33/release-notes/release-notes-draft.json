@@ -656,7 +656,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129106": {
     "commit": "d1b702b0b83b7c4ea8d06b2dbd9d33e337117b9d",
-    "text": "Give example of set-based requirement for -l/--selector flag",
+    "text": "Added an example of set-based requirement for `-l/--selector` flag",
     "markdown": "Give example of set-based requirement for -l/--selector flag ([#129106](https://github.com/kubernetes/kubernetes/pull/129106), [@rotsix](https://github.com/rotsix)) [SIG CLI]",
     "author": "rotsix",
     "author_url": "https://github.com/rotsix",
