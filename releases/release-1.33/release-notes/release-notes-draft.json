@@ -257,7 +257,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "128818": {
     "commit": "438bc5d44e5b72cad99d6eb521d2eb3572c5b034",
-    "text": "Adds a /flagz endpoint for kube-scheduler endpoint",
+    "text": "Added a `/flagz` endpoint for kube-scheduler endpoint",
     "markdown": "Adds a /flagz endpoint for kube-scheduler endpoint ([#128818](https://github.com/kubernetes/kubernetes/pull/128818), [@yongruilin](https://github.com/yongruilin)) [SIG Architecture, Instrumentation, Scheduling and Testing]",
     "documentation": [
       {
