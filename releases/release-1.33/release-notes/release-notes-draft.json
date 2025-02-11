@@ -219,7 +219,8 @@
   },
   "128810": {
     "commit": "6c108faaf621f2fe807f6d634d43458cc545fe58",
-    "text": "Implemented scheduler_cache_size metric.\nAlso, scheduler_scheduler_cache_size metric is deprecated in favor of scheduler_cache_size, \nand will be removed at v1.34.",
+    "text": "Implemented the `scheduler_cache_size metric`.
+Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favor of `scheduler_cache_size` and will be removed in v1.34.",
     "markdown": "Implemented scheduler_cache_size metric.\n  Also, scheduler_scheduler_cache_size metric is deprecated in favor of scheduler_cache_size, \n  and will be removed at v1.34. ([#128810](https://github.com/kubernetes/kubernetes/pull/128810), [@googs1025](https://github.com/googs1025)) [SIG Scheduling]",
     "author": "googs1025",
     "author_url": "https://github.com/googs1025",
