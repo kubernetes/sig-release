@@ -621,7 +621,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129028": {
     "commit": "50fc400f178d2078d0ca46aee955ee26375fc437",
-    "text": "Add unit test helpers to validate CEL and patterns in CustomResourceDefinitions.",
+    "text": "Added unit test helpers to validate CEL and patterns in CustomResourceDefinitions.",
     "markdown": "Add unit test helpers to validate CEL and patterns in CustomResourceDefinitions. ([#129028](https://github.com/kubernetes/kubernetes/pull/129028), [@sttts](https://github.com/sttts)) [SIG API Machinery]",
     "author": "sttts",
     "author_url": "https://github.com/sttts",
