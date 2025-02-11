@@ -600,7 +600,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129023": {
     "commit": "078664b424ba58087e1422590c55f7fbc46bbffd",
-    "text": "Action required for custom plugin developers.\nThe `UpdatePodTolerations` action type is renamed to `UpdatePodToleration`, you have to follow the renaming if you're using it.",
+    "text": "Renamed `UpdatePodTolerations` action type to `UpdatePodToleration`. Action required for custom plugin developers to update their code to follow the rename.",
     "markdown": "Action required for custom plugin developers.\n  The `UpdatePodTolerations` action type is renamed to `UpdatePodToleration`, you have to follow the renaming if you're using it. ([#129023](https://github.com/kubernetes/kubernetes/pull/129023), [@zhifei92](https://github.com/zhifei92)) [SIG Scheduling and Testing]",
     "author": "zhifei92",
     "author_url": "https://github.com/zhifei92",
