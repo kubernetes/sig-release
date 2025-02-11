@@ -331,7 +331,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "128886": {
     "commit": "30ef6110a180395ad55d1afa5dc60c90a761ae64",
-    "text": "kube-proxy nftables logs the failed transactions and the full table when using log level 4 or higher. Logging is rate limited to one entry every 24 hours to avoid performance issues.",
+    "text": "Implemented logging for failed transactions and the full table in `kube-proxy` with `nftables` when using log level 4 or higher. Logging is rate-limited to one entry every 24 hours to avoid performance issues.",
     "markdown": "Kube-proxy nftables logs the failed transactions and the full table when using log level 4 or higher. Logging is rate limited to one entry every 24 hours to avoid performance issues. ([#128886](https://github.com/kubernetes/kubernetes/pull/128886), [@npinaeva](https://github.com/npinaeva)) [SIG Network]",
     "author": "npinaeva",
     "author_url": "https://github.com/npinaeva",
