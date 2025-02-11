@@ -235,7 +235,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "128811": {
     "commit": "3ec9c7f4d20be445af83d0bd5c4e77a9f22ab6cc",
-    "text": "Adds a /statusz endpoint for kubelet endpoint",
+    "text": "Added a `/statusz` endpoint for kubelet endpoint",
     "markdown": "Adds a /statusz endpoint for kubelet endpoint ([#128811](https://github.com/kubernetes/kubernetes/pull/128811), [@zhifei92](https://github.com/zhifei92)) [SIG Architecture, Instrumentation and Node]",
     "author": "zhifei92",
     "author_url": "https://github.com/zhifei92",
