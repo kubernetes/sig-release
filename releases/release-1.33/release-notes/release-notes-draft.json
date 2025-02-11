@@ -287,7 +287,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "128850": {
     "commit": "beeb1d2b847ba302406f3a4b9390afe0853968b9",
-    "text": "Fix the issue where the named ports exposed by restartable init containers (a.k.a. sidecar containers) cannot be accessed using a Service.",
+    "text": "Fixed the issue where the named ports exposed by restartable init containers (a.k.a. sidecar containers) cannot be accessed using a Service.",
     "markdown": "Fix the issue where the named ports exposed by restartable init containers (a.k.a. sidecar containers) cannot be accessed using a Service. ([#128850](https://github.com/kubernetes/kubernetes/pull/128850), [@toVersus](https://github.com/toVersus)) [SIG Network and Testing]",
     "documentation": [
       {
