@@ -349,7 +349,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "128906": {
     "commit": "9f2f7a084cc8b961f0a0b2d9c2cbd822418d7cff",
-    "text": "The deprecated pod_scheduling_duration_seconds metric is removed.\nYou can migrate to pod_scheduling_sli_duration_seconds.",
+    "text": "Removed the deprecated `pod_scheduling_duration_seconds metric`. Users need to migrate to `pod_scheduling_sli_duration_seconds`.",
     "markdown": "The deprecated pod_scheduling_duration_seconds metric is removed.\n  You can migrate to pod_scheduling_sli_duration_seconds. ([#128906](https://github.com/kubernetes/kubernetes/pull/128906), [@sanposhiho](https://github.com/sanposhiho)) [SIG Instrumentation and Scheduling]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
