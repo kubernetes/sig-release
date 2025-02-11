@@ -2,7 +2,7 @@
   "125901": {
     "commit": "f34d791b13accaf3b0a3f44a3ea9e8956f717794",
     "text": "Implemented logging and event recording for probe results with an `Unknown` status in the kubelet's prober module. This helped improve the diagnosis and monitoring of cases where container probes returned an `Unknown` result, enhancing the observability and reliability of health checks.",
-    "markdown": "Implemented logging and event recording for probe results with an `Unknown` status in the kubelet's prober module. This helps in better diagnosing and monitoring cases where container probes return an `Unknown` result, improving the observability and reliability of health checks. ([#125901](https://github.com/kubernetes/kubernetes/pull/125901), [@jralmaraz](https://github.com/jralmaraz)) [SIG Node]",
+    "markdown": "Implemented logging and event recording for probe results with an `Unknown` status in the kubelet's prober module. This helped improve the diagnosis and monitoring of cases where container probes returned an `Unknown` result, improving the observability and reliability of health checks. ([#125901](https://github.com/kubernetes/kubernetes/pull/125901), [@jralmaraz](https://github.com/jralmaraz)) [SIG Node]",
     "documentation": [
       {
         "description": "[Usage]: [Kubernetes Probes Documentation](",
