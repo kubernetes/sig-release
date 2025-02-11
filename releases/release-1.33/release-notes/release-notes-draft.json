@@ -131,7 +131,7 @@
   },
   "128212": {
     "commit": "3bec2450efd29787df0f27415de4e8049979654f",
-    "text": "kubenetes starts validating NodeSelectorRequirement's values when creating pods.",
+    "text": "Implemented validation for `NodeSelectorRequirement` values in Kubernetes when creating pods.",
     "markdown": "Kubenetes starts validating NodeSelectorRequirement's values when creating pods. ([#128212](https://github.com/kubernetes/kubernetes/pull/128212), [@AxeZhan](https://github.com/AxeZhan)) [SIG Apps and Scheduling]",
     "author": "AxeZhan",
     "author_url": "https://github.com/AxeZhan",
