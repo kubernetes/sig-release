@@ -674,7 +674,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129116": {
     "commit": "5ba2b78eae18645744b51d94d279582bdcccec23",
-    "text": "Updated cri-tools to v1.32.0.",
+    "text": "Updated cri-tools to `v1.32.0`.",
     "markdown": "Updated cri-tools to v1.32.0. ([#129116](https://github.com/kubernetes/kubernetes/pull/129116), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider]",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
