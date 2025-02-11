@@ -411,7 +411,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "128950": {
     "commit": "fc53d1b297e8b393855b06b993f1e712a24883b7",
-    "text": "upgrade autoscalingv1 to autoscalingv2 in kubectl autoscale cmd, The cmd will attempt to use the autoscaling/v2 API first. If the autoscaling/v2 API is not available or an error occurs, it will fall back to the autoscaling/v1 API.",
+    "text": "Upgraded autoscaling/v1 to autoscaling/v2 in the kubectl autoscale command. The command will attempt to use the autoscaling/v2 API first. If the autoscaling/v2 API is not available or an error occurs, it will fall back to the autoscaling/v1 API.",
     "markdown": "Upgrade autoscalingv1 to autoscalingv2 in kubectl autoscale cmd, The cmd will attempt to use the autoscaling/v2 API first. If the autoscaling/v2 API is not available or an error occurs, it will fall back to the autoscaling/v1 API. ([#128950](https://github.com/kubernetes/kubernetes/pull/128950), [@googs1025](https://github.com/googs1025)) [SIG Autoscaling and CLI]",
     "author": "googs1025",
     "author_url": "https://github.com/googs1025",
