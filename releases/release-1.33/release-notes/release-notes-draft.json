@@ -26,7 +26,7 @@
   },
   "127193": {
     "commit": "77749c21f628eae68001bfa79821c2ce8aa40cdc",
-    "text": "HPA's with ContainerResource metrics will no longer error when container metrics are missing, instead they will use the same logic Resource metrics are using to make calculations",
+    "text": "HPAs with ContainerResource metrics no longer errored when container metrics were missing. Instead, they use the same logic as Resource metrics to perform calculations.",
     "markdown": "HPA's with ContainerResource metrics will no longer error when container metrics are missing, instead they will use the same logic Resource metrics are using to make calculations ([#127193](https://github.com/kubernetes/kubernetes/pull/127193), [@DP19](https://github.com/DP19)) [SIG Apps and Autoscaling]",
     "author": "DP19",
     "author_url": "https://github.com/DP19",
