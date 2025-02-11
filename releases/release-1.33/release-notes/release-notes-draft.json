@@ -150,7 +150,7 @@
   },
   "128546": {
     "commit": "5aeea45357176e7224f908329fb7958d88a7eeac",
-    "text": "A new status field `.status.terminatingReplicas` is added to Deployments and ReplicaSets to allow tracking of terminating pods when the DeploymentPodReplacementPolicy feature-gate is enabled.",
+    "text": "Implemented a new status field, `.status.terminatingReplicas`, for Deployments and ReplicaSets to track terminating pods when the DeploymentPodReplacementPolicy feature gate is enabled.",
     "markdown": "A new status field `.status.terminatingReplicas` is added to Deployments and ReplicaSets to allow tracking of terminating pods when the DeploymentPodReplacementPolicy feature-gate is enabled. ([#128546](https://github.com/kubernetes/kubernetes/pull/128546), [@atiratree](https://github.com/atiratree)) [SIG API Machinery, Apps and Testing]",
     "author": "atiratree",
     "author_url": "https://github.com/atiratree",
