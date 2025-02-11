@@ -62,7 +62,7 @@
   },
   "127709": {
     "commit": "427cd18f726be3e3c4f657258dc17a97beca92d5",
-    "text": "client-go/rest: fully supports contextual logging. BackoffManagerWithContext should be used instead of BackoffManager to ensure that the caller can interrupt the sleep.",
+    "text": "Implemented full support for contextual logging in  `client-go/rest `.  `BackoffManagerWithContext ` was used instead of  `BackoffManager ` to ensure that the caller could interrupt the sleep.",
     "markdown": "Client-go/rest: fully supports contextual logging. BackoffManagerWithContext should be used instead of BackoffManager to ensure that the caller can interrupt the sleep. ([#127709](https://github.com/kubernetes/kubernetes/pull/127709), [@pohly](https://github.com/pohly)) [SIG API Machinery, Architecture, Auth, Cloud Provider, Instrumentation, Network and Node]",
     "author": "pohly",
     "author_url": "https://github.com/pohly",
