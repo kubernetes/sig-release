@@ -1149,7 +1149,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129486": {
     "commit": "f82439f53654a2f86797c1b949cd337e4e1ba9ce",
-    "text": "Bugfix: Ensure container-level swap metrics are collected",
+    "text": "Fixed a bug to ensure container-level swap metrics are collected",
     "markdown": "Bugfix: Ensure container-level swap metrics are collected ([#129486](https://github.com/kubernetes/kubernetes/pull/129486), [@iholder101](https://github.com/iholder101)) [SIG Node and Testing]",
     "documentation": [
       {
