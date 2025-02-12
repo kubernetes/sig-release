@@ -1,0 +1,4 @@
+pr: 128212
+releasenote:
+  text: Kubenetes starts validating NodeSelectorRequirement's values when creating
+pr_body: ""

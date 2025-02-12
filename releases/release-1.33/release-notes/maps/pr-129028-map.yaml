@@ -1,0 +1,4 @@
+pr: 129028
+releasenote:
+  text: Added unit test helpers to validate CEL and patterns in CustomResourceDefinitions.
+pr_body: ""
