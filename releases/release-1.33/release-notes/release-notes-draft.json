@@ -781,7 +781,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129173": {
     "commit": "efea0a0ed79df4d339bee432b442be11ef93c1aa",
-    "text": "kube-proxy extends the schema of its metrics/ endpoints to incorporate information about the corresponding IP family",
+    "text": "Extended the schema of kube-proxy's metrics / endpoints to incorporate information about the corresponding IP family",
     "markdown": "Kube-proxy extends the schema of its metrics/ endpoints to incorporate information about the corresponding IP family ([#129173](https://github.com/kubernetes/kubernetes/pull/129173), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
