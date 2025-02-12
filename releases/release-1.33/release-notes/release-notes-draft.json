@@ -877,7 +877,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129232": {
     "commit": "9709d36dda75ff82d1a8121edb23568a1d65ab82",
-    "text": "This renames some coredns metrics, see https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics.",
+    "text": "Renamed some coredns metrics, see https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics.",
     "markdown": "This renames some coredns metrics, see https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics. ([#129232](https://github.com/kubernetes/kubernetes/pull/129232), [@DamianSawicki](https://github.com/DamianSawicki)) [SIG Cloud Provider]",
     "author": "DamianSawicki",
     "author_url": "https://github.com/DamianSawicki",
