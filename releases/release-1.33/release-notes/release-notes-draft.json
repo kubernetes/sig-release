@@ -1072,7 +1072,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129422": {
     "commit": "bf403cb9e84e20826da8e654c8b32fe9d4889808",
-    "text": "Kubernetes is now built with go 1.23.4",
+    "text": "Kubernetes is now built with go `1.23.4`",
     "markdown": "Kubernetes is now built with go 1.23.4 ([#129422](https://github.com/kubernetes/kubernetes/pull/129422), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
     "author": "cpanato",
     "author_url": "https://github.com/cpanato",
