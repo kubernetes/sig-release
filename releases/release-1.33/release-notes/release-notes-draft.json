@@ -802,7 +802,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129174": {
     "commit": "7a504aa97bf3006848b1dc9281aa039ad180ae81",
-    "text": "Remove the limitation on exposing port 10250 externally in service.",
+    "text": "Removed the limitation on exposing port 10250 externally in service.",
     "markdown": "Remove the limitation on exposing port 10250 externally in service. ([#129174](https://github.com/kubernetes/kubernetes/pull/129174), [@RyanAoh](https://github.com/RyanAoh)) [SIG Apps and Network]",
     "author": "RyanAoh",
     "author_url": "https://github.com/RyanAoh",
