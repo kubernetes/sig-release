@@ -1203,7 +1203,7 @@ Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favo
   },
   "129506": {
     "commit": "728a4d2a484e0bf09a6f33e59230246a62d3cc11",
-    "text": "Enables ratcheting validation on status subresources for CustomResourceDefinitions",
+    "text": "Enabled ratcheting validation on status subresources for CustomResourceDefinitions",
     "markdown": "Enables ratcheting validation on status subresources for CustomResourceDefinitions ([#129506](https://github.com/kubernetes/kubernetes/pull/129506), [@JoelSpeed](https://github.com/JoelSpeed)) [SIG API Machinery]",
     "author": "JoelSpeed",
     "author_url": "https://github.com/JoelSpeed",
