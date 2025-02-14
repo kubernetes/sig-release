@@ -1,0 +1,5 @@
+pr: 128086
+releasenote:
+  text: Fixed a storage bug related to multipath. iSCSI and Fibre Channel devices
+    attached to nodes via multipath now resolve correctly when partitioned.
+pr_body: ""

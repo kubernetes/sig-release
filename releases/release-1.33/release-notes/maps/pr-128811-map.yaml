@@ -1,0 +1,4 @@
+pr: 128811
+releasenote:
+  text: Added a `/statusz` HTTP endpoint to the kubelet.
+pr_body: ""

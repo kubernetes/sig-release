@@ -1,0 +1,5 @@
+pr: 129301
+releasenote:
+  text: Fixed a panic in kube-controller-manager handling StatefulSet objects when
+    `revisionHistoryLimit` is negative.
+pr_body: ""

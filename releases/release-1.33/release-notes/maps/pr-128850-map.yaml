@@ -1,0 +1,6 @@
+pr: 128850
+releasenote:
+  text: "Fixed an issue with Kubernetes-style sidecar containers
+    (in other words: init containers with an Always restart policy) and Services. Before the fix,
+    named ports exposed by a sidecar could not be accessed using a Service."
+pr_body: ""

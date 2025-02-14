@@ -1,0 +1,5 @@
+pr: 128212
+releasenote:
+  text: Implemented validation for `NodeSelectorRequirement` values in Kubernetes
+    when creating pods.
+pr_body: ""

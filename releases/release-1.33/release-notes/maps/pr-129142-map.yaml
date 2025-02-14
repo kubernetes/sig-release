@@ -1,0 +1,5 @@
+pr: 129142
+releasenote:
+  text: Changed the signature of `PublishResources()` for ResourceSlices to accept a `resourceslice.DriverResources`
+    parameter instead of a `Resources` parameter.
+pr_body: ""

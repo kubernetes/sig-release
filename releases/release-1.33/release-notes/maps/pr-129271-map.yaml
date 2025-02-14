@@ -1,0 +1,5 @@
+pr: 129271
+releasenote:
+  text: Extended the schema of the kube-proxy `healthz` and `livez` HTTP endpoints to incorporate
+    information about the corresponding IP family.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 127709
+releasenote:
+  text: Implemented full support for contextual logging in  `client-go/rest`. `BackoffManagerWithContext`
+    was used instead of  `BackoffManager` to ensure that the caller could interrupt
+    the sleep.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 129452
+releasenote:
+  text: 'kubeadm: fixed a bug where the `node.skipPhases` in UpgradeConfiguration
+    is not respected by the `kubeadm upgrade node` subcommand.'
+pr_body: ""
