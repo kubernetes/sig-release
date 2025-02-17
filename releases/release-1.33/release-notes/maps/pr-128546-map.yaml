@@ -1,0 +1,6 @@
+pr: 128546
+releasenote:
+  text: Implemented a new status field, `.status.terminatingReplicas`, for Deployments
+    and ReplicaSets to track terminating pods. The new field is present when the `DeploymentPodReplacementPolicy`
+    feature gate is enabled.
+pr_body: ""

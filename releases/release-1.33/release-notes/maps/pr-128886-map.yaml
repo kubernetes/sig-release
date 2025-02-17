@@ -1,0 +1,6 @@
+pr: 128886
+releasenote:
+  text: Implemented logging for failed transactions and the full table in `kube-proxy`
+    with `nftables` when using log level 4 or higher. Logging is rate-limited to one
+    entry every 24 hours to avoid performance issues. 
+pr_body: ""

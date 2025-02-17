@@ -1,0 +1,4 @@
+pr: 128621
+releasenote:
+  text: Fixed CVE-2024-51744.
+pr_body: ""

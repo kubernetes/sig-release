@@ -1,0 +1,4 @@
+pr: 129072
+releasenote:
+  text: Added validation of `containerLogMaxFiles` within kubelet configuration files.
+pr_body: ""

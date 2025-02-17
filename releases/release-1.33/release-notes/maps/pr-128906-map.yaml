@@ -1,0 +1,6 @@
+pr: 128906
+releasenote:
+  text: |-
+    Removed the deprecated `pod_scheduling_duration_seconds` metric. Users need to
+    migrate to `pod_scheduling_sli_duration_seconds`.
+pr_body: ""

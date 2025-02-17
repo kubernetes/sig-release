@@ -1,0 +1,4 @@
+pr: 129174
+releasenote:
+  text: Removed the limitation on exposing port 10250 externally using a Service.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 129116
+releasenote:
+  text: Updated cri-tools to `v1.32.0`.
+pr_body: ""

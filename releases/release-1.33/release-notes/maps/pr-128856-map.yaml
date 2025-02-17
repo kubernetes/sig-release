@@ -1,0 +1,4 @@
+pr: 128856
+releasenote:
+  text: Fixed a linting issue in `TestNodeDeletionReleaseCIDR`.
+pr_body: ""

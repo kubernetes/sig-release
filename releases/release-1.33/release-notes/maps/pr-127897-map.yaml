@@ -1,0 +1,11 @@
+pr: 127897
+releasenote:
+  text: Kubernetes components that accepted X.509 client certificate
+    authentication now read the user UID from a certificate subject
+    name RDN with object ID `1.3.6.1.4.1.57683.2`. An RDN with this
+    object ID had to contain a string value and appear no more than
+    once in the certificate subject. Reading the user UID from this
+    RDN could be disabled by setting the beta feature gate
+    `AllowParsingUserUIDFromCertAuth` to `false`(until the feature
+    gate graduated to GA).
+pr_body: ""

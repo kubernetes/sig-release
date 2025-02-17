@@ -1,0 +1,4 @@
+pr: 128818
+releasenote:
+  text: Added a `/statusz` HTTP endpoint to the kube-scheduler.
+pr_body: ""

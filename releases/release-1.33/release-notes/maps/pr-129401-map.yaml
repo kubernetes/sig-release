@@ -1,0 +1,4 @@
+pr: 129401
+releasenote:
+  text: 'kubeadm: run kernel version and OS version preflight checks for `kubeadm upgrade`.'
+pr_body: ""
