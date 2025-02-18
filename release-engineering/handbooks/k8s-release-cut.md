@@ -4,11 +4,11 @@ A step by step guide for cutting Kubernetes patch releases. At a high-level:
 
 - Maintain GitHub release cut issue
 - Update tools (~15m)
-- Run `krel stage` (~2h)
+- Run `krel stage` (~1h 15m - up to 2h)
 - Run `krel release` (~15m)
-- Run `krel stage --no-mock` (~2h)
+- Run `krel stage --no-mock` (~1h 15m - up to 2h)
 - Run `kpromo pr` & merge PR
-- Wait for image promo job (~1h)
+- Wait for image promo prow job (~1h)
 - Run `krel release --no-mock` (~15m)
 - Send announcements (~30m)
 
