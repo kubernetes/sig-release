@@ -388,10 +388,18 @@ You might wanna ping @release-managers on Slack to speed this process up.
 
 If the job fails, look into the root cause and message the Slack thread. In many cases a rerun is fine (such as 429 too many requests).
 
+To check the logs, click on the spyglass eye icon.
+
 To Rerun, click the refresh icon button shown below:
 
 ![image](https://hackmd.io/_uploads/Bk6UOW5Kyg.png)
 
+The UI can be funky at times, if you click rerun and it forces you to log in - you might need to click it again. 
+In case it doesn't it should show a pop up:
+- if it says it didn’t run, retry
+- if it says it ran wait 30s and check again (takes a minute)
+
+If the job is stuck in "triggered" (empty clock yellow icon) //TODO
 
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after the image promotion step
