@@ -1,4 +1,38 @@
 {
+  "125230": {
+    "commit": "c7a90b670c40a315bea3667921302675008bc39c",
+    "text": "kubectl: Added alpha support for customizing `kubectl` behavior using preferences from a `kuberc` file, separate from `kubeconfig`.",
+    "markdown": "Kubectl: Added alpha support for customizing `kubectl` behavior using preferences from a `kuberc` file, separate from `kubeconfig`. ([#125230](https://github.com/kubernetes/kubernetes/pull/125230), [@ardaguclu](https://github.com/ardaguclu)) [SIG API Machinery, CLI and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-cli/3104-introduce-kuberc/README.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "ardaguclu",
+    "author_url": "https://github.com/ardaguclu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/125230",
+    "pr_number": 125230,
+    "areas": [
+      "test",
+      "kubectl",
+      "code-generation"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cli",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
   "125901": {
     "commit": "f34d791b13accaf3b0a3f44a3ea9e8956f717794",
     "text": "Implemented logging and event recording for probe results with an `Unknown` status in the kubelet's prober module. This helped improve the diagnosis and monitoring of cases where container probes returned an `Unknown` result, enhancing the observability and reliability of health checks.",
@@ -27,8 +61,8 @@
   },
   "127193": {
     "commit": "77749c21f628eae68001bfa79821c2ce8aa40cdc",
-    "text": "HPAs with ContainerResource metrics no longer errored when container metrics were missing. Instead, they used the same logic as Resource metrics to perform calculations.",
-    "markdown": "HPAs with ContainerResource metrics no longer errored when container metrics were missing. Instead they use the same logic as Resource metrics to perform calculations. ([#127193](https://github.com/kubernetes/kubernetes/pull/127193), [@DP19](https://github.com/DP19)) [SIG Apps and Autoscaling]",
+    "text": "Fixed a bug in HorizontalPodAutoscaler. HPAs with `ContainerResource` metrics no longer error when container metrics are missing. Instead they use the same logic as `Resource` metrics to perform calculations.",
+    "markdown": "Fixed a bug in HorizontalPodAutoscaler. HPAs with `ContainerResource` metrics no longer error when container metrics are missing. Instead they use the same logic as `Resource` metrics to perform calculations. ([#127193](https://github.com/kubernetes/kubernetes/pull/127193), [@DP19](https://github.com/DP19)) [SIG Apps and Autoscaling]",
     "author": "DP19",
     "author_url": "https://github.com/DP19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127193",
@@ -62,10 +96,31 @@
     ],
     "do_not_publish": true
   },
+  "127525": {
+    "commit": "cd2959b798e15b43dbca94c59bf307df798f3fdc",
+    "text": "When cpu-manager-policy=static is configured containers meeting the qualifications for static cpu assignment (i.e. Containers with integer CPU `requests` in pods with `Guaranteed` QOS) will not have cfs quota enforced. Because this fix changes a long-established behavior, users observing a regressions can use the DisableCPUQuotaWithExclusiveCPUs feature gate (default on) to restore the old behavior. Please file an issue if you encounter problems and have to use the Feature Gate.",
+    "markdown": "When cpu-manager-policy=static is configured containers meeting the qualifications for static cpu assignment (i.e. Containers with integer CPU `requests` in pods with `Guaranteed` QOS) will not have cfs quota enforced. Because this fix changes a long-established behavior, users observing a regressions can use the DisableCPUQuotaWithExclusiveCPUs feature gate (default on) to restore the old behavior. Please file an issue if you encounter problems and have to use the Feature Gate. ([#127525](https://github.com/kubernetes/kubernetes/pull/127525), [@scott-grimes](https://github.com/scott-grimes)) [SIG Node and Testing]",
+    "author": "scott-grimes",
+    "author_url": "https://github.com/scott-grimes",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/127525",
+    "pr_number": 127525,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true
+  },
   "127709": {
     "commit": "427cd18f726be3e3c4f657258dc17a97beca92d5",
-    "text": "Implemented full support for contextual logging in  `client-go/rest `. `BackoffManagerWithContext ` was used instead of  `BackoffManager ` to ensure that the caller could interrupt the sleep.",
-    "markdown": "Implemented full support for contextual logging in  `client-go/rest `. `BackoffManagerWithContext ` was used instead of  `BackoffManager ` to ensure that the caller could interrupt the sleep. ([#127709](https://github.com/kubernetes/kubernetes/pull/127709), [@pohly](https://github.com/pohly)) [SIG API Machinery, Architecture, Auth, Cloud Provider, Instrumentation, Network and Node]",
+    "text": "Implemented full support for contextual logging in  `client-go/rest`. `BackoffManagerWithContext` was used instead of  `BackoffManager` to ensure that the caller could interrupt the sleep.",
+    "markdown": "Implemented full support for contextual logging in  `client-go/rest`. `BackoffManagerWithContext` was used instead of  `BackoffManager` to ensure that the caller could interrupt the sleep. ([#127709](https://github.com/kubernetes/kubernetes/pull/127709), [@pohly](https://github.com/pohly)) [SIG API Machinery, Architecture, Auth, Cloud Provider, Instrumentation, Network and Node]",
     "author": "pohly",
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127709",
@@ -94,8 +149,8 @@
   },
   "127897": {
     "commit": "ed8999ed64d4f6e05859f83456f279949bac7907",
-    "text": "Kubernetes components that accepted x509 client certificate authentication now read the user UID from a certificate subject name RDN with object ID 1.3.6.1.4.1.57683.2. An RDN with this object ID had to contain a string value and appear no more than once in the certificate subject. Reading the user UID from this RDN could be disabled by setting the beta feature gate `AllowParsingUserUIDFromCertAuth` to `false`(until the feature gate graduated to GA).",
-    "markdown": "Kubernetes components that accept x509 client certificate authentication now read the user UID from a certificate subject name RDN with object id 1.3.6.1.4.1.57683.2. An RDN with this object id must contain a string value, and appear no more than once in the certificate subject. Reading the user UID from this RDN can be disabled by setting the beta feature gate `AllowParsingUserUIDFromCertAuth` to false (until the feature gate graduates to GA). ([#127897](https://github.com/kubernetes/kubernetes/pull/127897), [@modulitos](https://github.com/modulitos)) [SIG API Machinery, Auth and Testing]",
+    "text": "Kubernetes components that accepted X.509 client certificate authentication now read the user UID from a certificate subject name RDN with object ID `1.3.6.1.4.1.57683.2`. An RDN with this object ID had to contain a string value and appear no more than once in the certificate subject. Reading the user UID from this RDN could be disabled by setting the beta feature gate `AllowParsingUserUIDFromCertAuth` to `false`(until the feature gate graduated to GA).",
+    "markdown": "Kubernetes components that accepted X.509 client certificate authentication now read the user UID from a certificate subject name RDN with object ID `1.3.6.1.4.1.57683.2`. An RDN with this object ID had to contain a string value and appear no more than once in the certificate subject. Reading the user UID from this RDN could be disabled by setting the beta feature gate `AllowParsingUserUIDFromCertAuth` to `false`(until the feature gate graduated to GA). ([#127897](https://github.com/kubernetes/kubernetes/pull/127897), [@modulitos](https://github.com/modulitos)) [SIG API Machinery, Auth and Testing]",
     "author": "modulitos",
     "author_url": "https://github.com/modulitos",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/127897",
@@ -115,12 +170,13 @@
     ],
     "feature": true,
     "duplicate": true,
-    "duplicate_kind": true
+    "duplicate_kind": true,
+    "is_mapped": true
   },
   "128086": {
     "commit": "5948c7b5a9f606644bb3d5eb2ea831d648c2aa1c",
-    "text": "Fixed a storage bug related to multipath. iSCSI and Fibre Channel devices attached to nodes via multipath resolved correctly when partitioned.",
-    "markdown": "Fixed a storage bug related to multipath. iSCSI and Fibre Channel devices attached to nodes via multipath resolved correctly when partitioned. ([#128086](https://github.com/kubernetes/kubernetes/pull/128086), [@RomanBednar](https://github.com/RomanBednar))",
+    "text": "Fixed a storage bug related to multipath. iSCSI and Fibre Channel devices attached to nodes via multipath now resolve correctly when partitioned.",
+    "markdown": "Fixed a storage bug related to multipath. iSCSI and Fibre Channel devices attached to nodes via multipath now resolve correctly when partitioned. ([#128086](https://github.com/kubernetes/kubernetes/pull/128086), [@RomanBednar](https://github.com/RomanBednar))",
     "author": "RomanBednar",
     "author_url": "https://github.com/RomanBednar",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128086",
@@ -153,10 +209,44 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
+  "128367": {
+    "commit": "0634e21fb525743e68d677c53753b43a8b7471bc",
+    "text": "Added support for in-place vertical scaling of Pods with sidecars (containers defined within `initContainers` where the `restartPolicy` is Always).",
+    "markdown": "Added support for in-place vertical scaling of Pods with sidecars (containers defined within `initContainers` where the `restartPolicy` is Always). ([#128367](https://github.com/kubernetes/kubernetes/pull/128367), [@vivzbansal](https://github.com/vivzbansal)) [SIG API Machinery, Apps, CLI, Node, Scheduling and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/1287-in-place-update-pod-resources",
+        "type": "KEP"
+      }
+    ],
+    "author": "vivzbansal",
+    "author_url": "https://github.com/vivzbansal",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/128367",
+    "pr_number": 128367,
+    "areas": [
+      "test",
+      "kubelet",
+      "kubectl",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps",
+      "cli",
+      "node",
+      "scheduling",
+      "testing"
+    ],
+    "duplicate": true
+  },
   "128546": {
     "commit": "5aeea45357176e7224f908329fb7958d88a7eeac",
-    "text": "Implemented a new status field, `.status.terminatingReplicas`, for Deployments and ReplicaSets to track terminating pods when the DeploymentPodReplacementPolicy feature gate is enabled.",
-    "markdown": "Implemented a new status field, `.status.terminatingReplicas`, for Deployments and ReplicaSets to track terminating pods when the DeploymentPodReplacementPolicy feature gate is enabled. ([#128546](https://github.com/kubernetes/kubernetes/pull/128546), [@atiratree](https://github.com/atiratree)) [SIG API Machinery, Apps and Testing]",
+    "text": "Implemented a new status field, `.status.terminatingReplicas`, for Deployments and ReplicaSets to track terminating pods. The new field is present when the `DeploymentPodReplacementPolicy` feature gate is enabled.",
+    "markdown": "Implemented a new status field, `.status.terminatingReplicas`, for Deployments and ReplicaSets to track terminating pods. The new field is present when the `DeploymentPodReplacementPolicy` feature gate is enabled. ([#128546](https://github.com/kubernetes/kubernetes/pull/128546), [@atiratree](https://github.com/atiratree)) [SIG API Machinery, Apps and Testing]",
     "author": "atiratree",
     "author_url": "https://github.com/atiratree",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128546",
@@ -181,8 +271,8 @@
   },
   "128621": {
     "commit": "a892f0fd80c548c4caedc35933bb441572135c35",
-    "text": "Fixed CVE-2024-51744",
-    "markdown": "Fixed CVE-2024-51744 ([#128621](https://github.com/kubernetes/kubernetes/pull/128621), [@kmala](https://github.com/kmala)) [SIG Auth, Cloud Provider and Node]",
+    "text": "Addressed CVE-2024-51744, an issue related to unclear error handling in `ParseWithClaims`, which could lead to improper token validation. This was an indirect dependency from etcd and was not actively impacting Kubernetes, as the current error handling did not use `error.Is` in a way that would make it exploitable.",
+    "markdown": "Addressed CVE-2024-51744, an issue related to unclear error handling in `ParseWithClaims`, which could lead to improper token validation. This was an indirect dependency from etcd and was not actively impacting Kubernetes, as the current error handling did not use `error.Is` in a way that would make it exploitable. ([#128621](https://github.com/kubernetes/kubernetes/pull/128621), [@kmala](https://github.com/kmala)) [SIG Auth, Cloud Provider and Node]",
     "author": "kmala",
     "author_url": "https://github.com/kmala",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128621",
@@ -222,12 +312,13 @@
       "cli",
       "testing"
     ],
-    "duplicate": true
+    "duplicate": true,
+    "is_mapped": true
   },
   "128810": {
     "commit": "6c108faaf621f2fe807f6d634d43458cc545fe58",
-    "text": "Implemented the `scheduler_cache_size` metric. Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favor of `scheduler_cache_size` and will be removed in v1.34.",
-    "markdown": "Implemented the `scheduler_cache_size` metric. Additionally, the `scheduler_scheduler_cache_size` metric was deprecated in favor of `scheduler_cache_size` and will be removed in v1.34. ([#128810](https://github.com/kubernetes/kubernetes/pull/128810), [@googs1025](https://github.com/googs1025))",
+    "text": "Implemented the `scheduler_cache_size` metric. Additionally, the `scheduler_scheduler_cache_size` metric is now deprecated in favor of `scheduler_cache_size`, and will be removed in v1.34.",
+    "markdown": "Implemented the `scheduler_cache_size` metric. Additionally, the `scheduler_scheduler_cache_size` metric is now deprecated in favor of `scheduler_cache_size`, and will be removed in v1.34. ([#128810](https://github.com/kubernetes/kubernetes/pull/128810), [@googs1025](https://github.com/googs1025))",
     "author": "googs1025",
     "author_url": "https://github.com/googs1025",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128810",
@@ -242,8 +333,8 @@
   },
   "128811": {
     "commit": "3ec9c7f4d20be445af83d0bd5c4e77a9f22ab6cc",
-    "text": "Added a `/statusz` endpoint for kubelet endpoint",
-    "markdown": "Added a `/statusz` endpoint for kubelet endpoint ([#128811](https://github.com/kubernetes/kubernetes/pull/128811), [@zhifei92](https://github.com/zhifei92)) [SIG Architecture, Instrumentation and Node]",
+    "text": "Added a `/statusz` HTTP endpoint to the kubelet.",
+    "markdown": "Added a `/statusz` HTTP endpoint to the kubelet. ([#128811](https://github.com/kubernetes/kubernetes/pull/128811), [@zhifei92](https://github.com/zhifei92)) [SIG Architecture, Instrumentation and Node]",
     "author": "zhifei92",
     "author_url": "https://github.com/zhifei92",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128811",
@@ -265,8 +356,8 @@
   },
   "128818": {
     "commit": "438bc5d44e5b72cad99d6eb521d2eb3572c5b034",
-    "text": "Added a `/flagz` endpoint for kube-scheduler endpoint",
-    "markdown": "Added a `/flagz` endpoint for kube-scheduler endpoint ([#128818](https://github.com/kubernetes/kubernetes/pull/128818), [@yongruilin](https://github.com/yongruilin)) [SIG Architecture, Instrumentation, Scheduling and Testing]",
+    "text": "Added a `/statusz` HTTP endpoint to the kube-scheduler.",
+    "markdown": "Added a `/statusz` HTTP endpoint to the kube-scheduler. ([#128818](https://github.com/kubernetes/kubernetes/pull/128818), [@yongruilin](https://github.com/yongruilin)) [SIG Architecture, Instrumentation, Scheduling and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -296,8 +387,8 @@
   },
   "128850": {
     "commit": "beeb1d2b847ba302406f3a4b9390afe0853968b9",
-    "text": "Fixed the issue where the named ports exposed by restartable init containers (a.k.a. sidecar containers) cannot be accessed using a Service.",
-    "markdown": "Fixed the issue where the named ports exposed by restartable init containers (a.k.a. sidecar containers) cannot be accessed using a Service. ([#128850](https://github.com/kubernetes/kubernetes/pull/128850), [@toVersus](https://github.com/toVersus)) [SIG Network and Testing]",
+    "text": "Fixed an issue with Kubernetes-style sidecar containers (in other words: init containers with an Always restart policy) and Services. Before the fix, named ports exposed by a sidecar could not be accessed using a Service.",
+    "markdown": "Fixed an issue with Kubernetes-style sidecar containers (in other words: init containers with an Always restart policy) and Services. Before the fix, named ports exposed by a sidecar could not be accessed using a Service. ([#128850](https://github.com/kubernetes/kubernetes/pull/128850), [@toVersus](https://github.com/toVersus)) [SIG Network and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -324,8 +415,8 @@
   },
   "128856": {
     "commit": "62e469abb2be372b45a6c095f7716a185cb5e827",
-    "text": "Fixed a linting issue in `TestNodeDeletionReleaseCIDR`",
-    "markdown": "Fixed a linting issue in `TestNodeDeletionReleaseCIDR` ([#128856](https://github.com/kubernetes/kubernetes/pull/128856), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Apps and Network]",
+    "text": "Fixed a linting issue in `TestNodeDeletionReleaseCIDR`.",
+    "markdown": "Fixed a linting issue in `TestNodeDeletionReleaseCIDR`. ([#128856](https://github.com/kubernetes/kubernetes/pull/128856), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Apps and Network]",
     "author": "adrianmoisey",
     "author_url": "https://github.com/adrianmoisey",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128856",
@@ -342,8 +433,8 @@
   },
   "128886": {
     "commit": "30ef6110a180395ad55d1afa5dc60c90a761ae64",
-    "text": "Implemented logging for failed transactions and the full table in `kube-proxy` with `nftables` when using log level 4 or higher. Logging is rate-limited to one entry every 24 hours to",
-    "markdown": "Implemented logging for failed transactions and the full table in `kube-proxy` with `nftables` when using log level 4 or higher. Logging is rate-limited to one entry every 24 hours to ([#128886](https://github.com/kubernetes/kubernetes/pull/128886), [@npinaeva](https://github.com/npinaeva))",
+    "text": "Implemented logging for failed transactions and the full table in `kube-proxy` with `nftables` when using log level 4 or higher. Logging is rate-limited to one entry every 24 hours to avoid performance issues.",
+    "markdown": "Implemented logging for failed transactions and the full table in `kube-proxy` with `nftables` when using log level 4 or higher. Logging is rate-limited to one entry every 24 hours to avoid performance issues. ([#128886](https://github.com/kubernetes/kubernetes/pull/128886), [@npinaeva](https://github.com/npinaeva))",
     "author": "npinaeva",
     "author_url": "https://github.com/npinaeva",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128886",
@@ -361,8 +452,8 @@
   },
   "128906": {
     "commit": "9f2f7a084cc8b961f0a0b2d9c2cbd822418d7cff",
-    "text": "Removed the deprecated `pod_scheduling_duration_seconds` metric. User need to\nmigrate to `pod_scheduling_sli_duration_seconds`.",
-    "markdown": "Removed the deprecated `pod_scheduling_duration_seconds` metric. User need to\n  migrate to `pod_scheduling_sli_duration_seconds`. ([#128906](https://github.com/kubernetes/kubernetes/pull/128906), [@sanposhiho](https://github.com/sanposhiho)) [SIG Instrumentation and Scheduling]",
+    "text": "Removed the deprecated `pod_scheduling_duration_seconds` metric. Users need to\nmigrate to `pod_scheduling_sli_duration_seconds`.",
+    "markdown": "Removed the deprecated `pod_scheduling_duration_seconds` metric. Users need to\n  migrate to `pod_scheduling_sli_duration_seconds`. ([#128906](https://github.com/kubernetes/kubernetes/pull/128906), [@sanposhiho](https://github.com/sanposhiho)) [SIG Instrumentation and Scheduling]",
     "author": "sanposhiho",
     "author_url": "https://github.com/sanposhiho",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128906",
@@ -382,8 +473,8 @@
   },
   "128926": {
     "commit": "b733c4a620e36ebb9889b75655003564f230d8f3",
-    "text": "Upgraded CoreDNS to v1.12.0",
-    "markdown": "Upgraded CoreDNS to v1.12.0 ([#128926](https://github.com/kubernetes/kubernetes/pull/128926), [@bzsuni](https://github.com/bzsuni)) [SIG Cloud Provider and Cluster Lifecycle]",
+    "text": "Changed the dependency version for CoreDNS. Kubernetes tools now install CoreDNS `v1.12.0`.",
+    "markdown": "Changed the dependency version for CoreDNS. Kubernetes tools now install CoreDNS `v1.12.0`. ([#128926](https://github.com/kubernetes/kubernetes/pull/128926), [@bzsuni](https://github.com/bzsuni)) [SIG Cloud Provider and Cluster Lifecycle]",
     "author": "bzsuni",
     "author_url": "https://github.com/bzsuni",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128926",
@@ -406,7 +497,7 @@
   "128929": {
     "commit": "aa931aa63572f4d6d9a814a8ed9bb0d9d1662dc5",
     "text": "Fixed a bug where the kube-proxy `EndpointSliceCache` memory was leaked.",
-    "markdown": "Fixed: kube-proxy EndpointSliceCache memory is leaked ([#128929](https://github.com/kubernetes/kubernetes/pull/128929), [@orange30](https://github.com/orange30)) [SIG Network]",
+    "markdown": "Fixed a bug where the kube-proxy `EndpointSliceCache` memory was leaked. ([#128929](https://github.com/kubernetes/kubernetes/pull/128929), [@orange30](https://github.com/orange30))",
     "author": "orange30",
     "author_url": "https://github.com/orange30",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128929",
@@ -421,12 +512,13 @@
     ],
     "sigs": [
       "network"
-    ]
+    ],
+    "is_mapped": true
   },
   "128950": {
     "commit": "fc53d1b297e8b393855b06b993f1e712a24883b7",
-    "text": "Upgraded `autoscaling/v1` to `autoscaling/v2` in the kubectl autoscale command. The command now attempts to use the `autoscaling/v2` API first. If the `autoscaling/v2` API is unavailable or an error occurs, it falls back to the `autoscaling/v1` API.",
-    "markdown": "Upgraded autoscaling/v1 to autoscaling/v2 in kubectl autoscale command. The command will attempt to use the autoscaling/v2 API first. If the autoscaling/v2 API is not available or an error occurs, it will fall back to the autoscaling/v1 API. ([#128950](https://github.com/kubernetes/kubernetes/pull/128950), [@googs1025](https://github.com/googs1025)) [SIG Autoscaling and CLI]",
+    "text": "Upgraded the `kubectl autoscale` subcommand to use `autoscaling/v2` rather than `autoscaling/v1` APIs. The command now attempts to use the `autoscaling/v2` API first. If the `autoscaling/v2` API is unavailable or an error occurs, it falls fall back to the `autoscaling/v1` API.",
+    "markdown": "Upgraded the `kubectl autoscale` subcommand to use `autoscaling/v2` rather than `autoscaling/v1` APIs. The command now attempts to use the `autoscaling/v2` API first. If the `autoscaling/v2` API is unavailable or an error occurs, it falls fall back to the `autoscaling/v1` API. ([#128950](https://github.com/kubernetes/kubernetes/pull/128950), [@googs1025](https://github.com/googs1025)) [SIG Autoscaling and CLI]",
     "author": "googs1025",
     "author_url": "https://github.com/googs1025",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128950",
@@ -447,8 +539,8 @@
   },
   "128971": {
     "commit": "45d0fddaf1f24f7b559eb936308ce2aeb9871850",
-    "text": "Graduated `MultiCIDRServiceAllocator` to stable and `DisableAllocatorDualWrite` to beta (disabled by default).\nAction required for Kubernetes distributions that manage the cluster Service CIDR.\nThis feature allows users to define the cluster Service CIDR via a new API object: ServiceCIDR.\nDistributions or administrators of Kubernetes may want to control that new Service CIDRs added to the cluster does not overlap with other networks on the cluster, that only belong to a specific range of IPs or just simple retain the existing behavior of only having one ServiceCIDR per cluster.  An example of a Validation Admission Policy to achieve this is:\n\n---\napiVersion: admissionregistration.k8s.io/v1\nkind: ValidatingAdmissionPolicy\nmetadata:\n  name: \"servicecidrs.default\"\nspec:\n  failurePolicy: Fail\n  matchConstraints:\n    resourceRules:\n    - apiGroups:   [\"networking.k8s.io\"]\n      apiVersions: [\"v1\",\"v1beta1\"]\n      operations:  [\"CREATE\", \"UPDATE\"]\n      resources:   [\"servicecidrs\"]\n  matchConditions:\n  - name: 'exclude-default-servicecidr'\n    expression: \"object.metadata.name != 'kubernetes'\"\n  variables:\n  - name: allowed\n    expression: \"['10.96.0.0/16','2001:db8::/64']\"\n  validations:\n  - expression: \"object.spec.cidrs.all(i , variables.allowed.exists(j , cidr(j).containsCIDR(i)))\"\n---\napiVersion: admissionregistration.k8s.io/v1\nkind: ValidatingAdmissionPolicyBinding\nmetadata:\n  name: \"servicecidrs-binding\"\nspec:\n  policyName: \"servicecidrs.default\"\n  validationActions: [Deny,Audit]\n---",
-    "markdown": "Graduated `MultiCIDRServiceAllocator` to stable and `DisableAllocatorDualWrite` to beta (disabled by default).\n  Action required for Kubernetes distributions that manage the cluster Service CIDR.\n  This feature allows users to define the cluster Service CIDR via a new API object: ServiceCIDR.\n  Distributions or administrators of Kubernetes may want to control that new Service CIDRs added to the cluster does not overlap with other networks on the cluster, that only belong to a specific range of IPs or just simple retain the existing behavior of only having one ServiceCIDR per cluster.  An example of a Validation Admission Policy to achieve this is:\n  \n  ---\n  apiVersion: admissionregistration.k8s.io/v1\n  kind: ValidatingAdmissionPolicy\n  metadata:\n    name: \"servicecidrs.default\"\n  spec:\n    failurePolicy: Fail\n    matchConstraints:\n      resourceRules:\n      - apiGroups:   [\"networking.k8s.io\"]\n        apiVersions: [\"v1\",\"v1beta1\"]\n        operations:  [\"CREATE\", \"UPDATE\"]\n        resources:   [\"servicecidrs\"]\n    matchConditions:\n    - name: 'exclude-default-servicecidr'\n      expression: \"object.metadata.name != 'kubernetes'\"\n    variables:\n    - name: allowed\n      expression: \"['10.96.0.0/16','2001:db8::/64']\"\n    validations:\n    - expression: \"object.spec.cidrs.all(i , variables.allowed.exists(j , cidr(j).containsCIDR(i)))\"\n  ---\n  apiVersion: admissionregistration.k8s.io/v1\n  kind: ValidatingAdmissionPolicyBinding\n  metadata:\n    name: \"servicecidrs-binding\"\n  spec:\n    policyName: \"servicecidrs.default\"\n    validationActions: [Deny,Audit]\n  --- ([#128971](https://github.com/kubernetes/kubernetes/pull/128971), [@aojea](https://github.com/aojea)) [SIG Apps, Architecture, Auth, CLI, Etcd, Network, Release and Testing]",
+    "text": "TODO, as the current Rease Note is very big, we are keeping it for now to\nupdate it later (Before the final cut).",
+    "markdown": "TODO, as the current Rease Note is very big, we are keeping it for now to\n  update it later (Before the final cut). ([#128971](https://github.com/kubernetes/kubernetes/pull/128971), [@aojea](https://github.com/aojea)) [SIG Apps, Architecture, Auth, CLI, Etcd, Network, Release and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -581,10 +673,46 @@
     "feature": true,
     "duplicate": true
   },
+  "128991": {
+    "commit": "22f25efc2cf890e719c6059d282d85e59f3c7894",
+    "text": "Added a `/statusz` endpoint for kube-controller-manager",
+    "markdown": "Added a `/statusz` endpoint for kube-controller-manager ([#128991](https://github.com/kubernetes/kubernetes/pull/128991), [@Henrywu573](https://github.com/Henrywu573)) [SIG API Machinery, Cloud Provider, Instrumentation and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-instrumentation/4828-component-flagz/README.md",
+        "type": "KEP"
+      },
+      {
+        "description": "root@kind-control-plane:/etc/kubernetes/manifests# curl -k --cert /etc/kubernetes/pki/apiserver-kubelet-client.crt --key /etc/kubernetes/pki/apiserver-kubelet-client.key",
+        "url": "https://localhost:10257/statusz",
+        "type": "external"
+      }
+    ],
+    "author": "Henrywu573",
+    "author_url": "https://github.com/Henrywu573",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/128991",
+    "pr_number": 128991,
+    "areas": [
+      "test",
+      "cloudprovider"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cloud-provider",
+      "instrumentation",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
   "129006": {
     "commit": "1f415b4e13e631a8d840551a8bfc2380af61b452",
     "text": "kubeadm: Avoided loading the file passed to `--kubeconfig` during `kubeadm init` phases more than once.",
-    "markdown": "Kubeadm: avoid loading the file passed to `--kubeconfig` during `kubeadm init` phases more than once. ([#129006](https://github.com/kubernetes/kubernetes/pull/129006), [@kokes](https://github.com/kokes)) [SIG Cluster Lifecycle]",
+    "markdown": "Kubeadm: Avoided loading the file passed to `--kubeconfig` during `kubeadm init` phases more than once. ([#129006](https://github.com/kubernetes/kubernetes/pull/129006), [@kokes](https://github.com/kokes))",
     "author": "kokes",
     "author_url": "https://github.com/kokes",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129006",
@@ -597,12 +725,13 @@
     ],
     "sigs": [
       "cluster-lifecycle"
-    ]
+    ],
+    "is_mapped": true
   },
   "129017": {
     "commit": "7c887412c882afc130d78e4bb6efad056b0fe376",
-    "text": "Added a validation for the `revisionHistoryLimit` field in `statefulset.spec` to prevent it from being set to a negative value.",
-    "markdown": "Added a validation for the `revisionHistoryLimit` field in statefulset.spec to prevent it from being set to a negative value. ([#129017](https://github.com/kubernetes/kubernetes/pull/129017), [@ardaguclu](https://github.com/ardaguclu))",
+    "text": "Added a validation for the `revisionHistoryLimit` field in the `.spec` of a StatefulSet, to prevent it from being set to a negative value.",
+    "markdown": "Added a validation for the `revisionHistoryLimit` field in the `.spec` of a StatefulSet, to prevent it from being set to a negative value. ([#129017](https://github.com/kubernetes/kubernetes/pull/129017), [@ardaguclu](https://github.com/ardaguclu))",
     "author": "ardaguclu",
     "author_url": "https://github.com/ardaguclu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129017",
@@ -656,8 +785,8 @@
   },
   "129072": {
     "commit": "c3d00023039f7929171ae332afcc327ae0d09e13",
-    "text": "Added validation of ContainerLogMaxFiles in kubelet config validation",
-    "markdown": "Added validation of ContainerLogMaxFiles in kubelet config validation ([#129072](https://github.com/kubernetes/kubernetes/pull/129072), [@kannon92](https://github.com/kannon92))",
+    "text": "Added validation of `containerLogMaxFiles` within kubelet configuration files.",
+    "markdown": "Added validation of `containerLogMaxFiles` within kubelet configuration files. ([#129072](https://github.com/kubernetes/kubernetes/pull/129072), [@kannon92](https://github.com/kannon92))",
     "author": "kannon92",
     "author_url": "https://github.com/kannon92",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129072",
@@ -676,8 +805,8 @@
   },
   "129106": {
     "commit": "d1b702b0b83b7c4ea8d06b2dbd9d33e337117b9d",
-    "text": "Added an example of set-based requirement for -l/--selector flag",
-    "markdown": "Added an example of set-based requirement for -l/--selector flag ([#129106](https://github.com/kubernetes/kubernetes/pull/129106), [@rotsix](https://github.com/rotsix))",
+    "text": "Added an example of set-based requirements for the  `-l` / `--selector` command line option to `kubectl`.",
+    "markdown": "Added an example of set-based requirements for the  `-l` / `--selector` command line option to `kubectl`. ([#129106](https://github.com/kubernetes/kubernetes/pull/129106), [@rotsix](https://github.com/rotsix))",
     "author": "rotsix",
     "author_url": "https://github.com/rotsix",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129106",
@@ -748,8 +877,8 @@
   },
   "129142": {
     "commit": "bf2a52a57aa33b9761d1a77f60b1637888ac2251",
-    "text": "This PR changed the signature of the `PublishResources` to accept a `resourceslice.DriverResources` parameter instead of a `Resources` parameter.",
-    "markdown": "This PR changed the signature of the `PublishResources` to accept a `resourceslice.DriverResources` parameter instead of a `Resources` parameter. ([#129142](https://github.com/kubernetes/kubernetes/pull/129142), [@googs1025](https://github.com/googs1025)) [SIG Node and Testing]",
+    "text": "Changed the signature of `PublishResources()` for ResourceSlices to accept a `resourceslice.DriverResources` parameter instead of a `Resources` parameter.",
+    "markdown": "Changed the signature of `PublishResources()` for ResourceSlices to accept a `resourceslice.DriverResources` parameter instead of a `Resources` parameter. ([#129142](https://github.com/kubernetes/kubernetes/pull/129142), [@googs1025](https://github.com/googs1025)) [SIG Node and Testing]",
     "author": "googs1025",
     "author_url": "https://github.com/googs1025",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129142",
@@ -804,8 +933,8 @@
   },
   "129173": {
     "commit": "efea0a0ed79df4d339bee432b442be11ef93c1aa",
-    "text": "Extended the schema of kube-proxy's metrics / endpoints to incorporate information about the corresponding IP family",
-    "markdown": "Extended the schema of kube-proxy's metrics / endpoints to incorporate information about the corresponding IP family ([#129173](https://github.com/kubernetes/kubernetes/pull/129173), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
+    "text": "Extended the schema of kube-proxy's metrics / endpoints to incorporate information about the corresponding IP family.",
+    "markdown": "Extended the schema of kube-proxy's metrics / endpoints to incorporate information about the corresponding IP family. ([#129173](https://github.com/kubernetes/kubernetes/pull/129173), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129173",
@@ -826,8 +955,8 @@
   },
   "129174": {
     "commit": "7a504aa97bf3006848b1dc9281aa039ad180ae81",
-    "text": "Removed the limitation on exposing port 10250 externally in service.",
-    "markdown": "Removed the limitation on exposing port 10250 externally in service. ([#129174](https://github.com/kubernetes/kubernetes/pull/129174), [@RyanAoh](https://github.com/RyanAoh)) [SIG Apps and Network]",
+    "text": "Removed the limitation on exposing port 10250 externally using a Service.",
+    "markdown": "Removed the limitation on exposing port 10250 externally using a Service. ([#129174](https://github.com/kubernetes/kubernetes/pull/129174), [@RyanAoh](https://github.com/RyanAoh)) [SIG Apps and Network]",
     "author": "RyanAoh",
     "author_url": "https://github.com/RyanAoh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129174",
@@ -902,8 +1031,8 @@
   },
   "129232": {
     "commit": "9709d36dda75ff82d1a8121edb23568a1d65ab82",
-    "text": "This renamed some coredns metrics, see https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics.",
-    "markdown": "This renamed some coredns metrics, see https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics. ([#129232](https://github.com/kubernetes/kubernetes/pull/129232), [@DamianSawicki](https://github.com/DamianSawicki))",
+    "text": "Renamed some metrics related to CoreDNS, see the [README](https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics) for v1.11.0 of CoreDNS.",
+    "markdown": "Renamed some metrics related to CoreDNS, see the [README](https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics) for v1.11.0 of CoreDNS. ([#129232](https://github.com/kubernetes/kubernetes/pull/129232), [@DamianSawicki](https://github.com/DamianSawicki))",
     "author": "DamianSawicki",
     "author_url": "https://github.com/DamianSawicki",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129232",
@@ -938,8 +1067,8 @@
   },
   "129271": {
     "commit": "3a4c2a0bbbacfe875bae4664c5ca12fcb0fa2cf4",
-    "text": "kube-proxy extended the schema of its healthz/ and livez/ endpoints to incorporate information about the corresponding IP family",
-    "markdown": "Kube-proxy extended the schema of its healthz/ and livez/ endpoints to incorporate information about the corresponding IP family ([#129271](https://github.com/kubernetes/kubernetes/pull/129271), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
+    "text": "Extended the schema of the kube-proxy `healthz` and `livez` HTTP endpoints to incorporate information about the corresponding IP family.",
+    "markdown": "Extended the schema of the kube-proxy `healthz` and `livez` HTTP endpoints to incorporate information about the corresponding IP family. ([#129271](https://github.com/kubernetes/kubernetes/pull/129271), [@aroradaman](https://github.com/aroradaman)) [SIG Network and Windows]",
     "author": "aroradaman",
     "author_url": "https://github.com/aroradaman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129271",
@@ -961,8 +1090,8 @@
   },
   "129278": {
     "commit": "fab7593a29afcc6aa2baaf67320a45f35874882f",
-    "text": "kubeadm: if the `NodeLocalCRISocket` feature gate is enabled, remove the flag `--container-runtime-endpoint` from the `/var/lib/kubelet/kubeadm-flags.env` file on `kubeadm upgrade`.",
-    "markdown": "Kubeadm: if the `NodeLocalCRISocket` feature gate is enabled, remove the flag `--container-runtime-endpoint` from the `/var/lib/kubelet/kubeadm-flags.env` file on `kubeadm upgrade`. ([#129278](https://github.com/kubernetes/kubernetes/pull/129278), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: When the `NodeLocalCRISocket` feature gate is enabled, the `--container-runtime-endpoint` flag should be removed from the `/var/lib/kubelet/kubeadm-flags.env` file on `kubeadm upgrade`.",
+    "markdown": "Kubeadm: When the `NodeLocalCRISocket` feature gate is enabled, the `--container-runtime-endpoint` flag should be removed from the `/var/lib/kubelet/kubeadm-flags.env` file on `kubeadm upgrade`. ([#129278](https://github.com/kubernetes/kubernetes/pull/129278), [@HirazawaUi](https://github.com/HirazawaUi))",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-cluster-lifecycle/kubeadm/4656-add-kubelet-instance-configuration",
@@ -982,7 +1111,8 @@
     "sigs": [
       "cluster-lifecycle"
     ],
-    "feature": true
+    "feature": true,
+    "is_mapped": true
   },
   "129279": {
     "commit": "80379db5d5f4f9257a07627d5d4caec088db0c59",
@@ -1030,8 +1160,8 @@
   },
   "129301": {
     "commit": "a4b8a3b2e33a3b591884f69b64f439e6b880dc40",
-    "text": "Fixed a panic in kube-controller-manager handling StatefulSet objects when revisionHistoryLimit is negative",
-    "markdown": "Fixed a panic in kube-controller-manager handling StatefulSet objects when revisionHistoryLimit is negative ([#129301](https://github.com/kubernetes/kubernetes/pull/129301), [@ardaguclu](https://github.com/ardaguclu))",
+    "text": "Fixed a panic in kube-controller-manager handling StatefulSet objects when `revisionHistoryLimit` is negative.",
+    "markdown": "Fixed a panic in kube-controller-manager handling StatefulSet objects when `revisionHistoryLimit` is negative. ([#129301](https://github.com/kubernetes/kubernetes/pull/129301), [@ardaguclu](https://github.com/ardaguclu))",
     "author": "ardaguclu",
     "author_url": "https://github.com/ardaguclu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129301",
@@ -1062,10 +1192,27 @@
       "cluster-lifecycle"
     ]
   },
+  "129368": {
+    "commit": "80bf507facbd11711ef322f2c992c68994228785",
+    "text": "fix: adopt go1.23 behavior change in mount point parsing on Windows",
+    "markdown": "Fix: adopt go1.23 behavior change in mount point parsing on Windows ([#129368](https://github.com/kubernetes/kubernetes/pull/129368), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage and Windows]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129368",
+    "pr_number": 129368,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "storage",
+      "windows"
+    ],
+    "duplicate": true
+  },
   "129401": {
     "commit": "3c229949f992d9f798bcfd9f79dab88c21500c36",
-    "text": "kubeadm: ran kernel version and OS version preflight checks on `kubeadm upgrade`.",
-    "markdown": "Kubeadm: ran kernel version and OS version preflight checks on `kubeadm upgrade`. ([#129401](https://github.com/kubernetes/kubernetes/pull/129401), [@pacoxu](https://github.com/pacoxu))",
+    "text": "kubeadm: run kernel version and OS version preflight checks for `kubeadm upgrade`.",
+    "markdown": "Kubeadm: run kernel version and OS version preflight checks for `kubeadm upgrade`. ([#129401](https://github.com/kubernetes/kubernetes/pull/129401), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129401",
@@ -1101,8 +1248,8 @@
   },
   "129422": {
     "commit": "bf403cb9e84e20826da8e654c8b32fe9d4889808",
-    "text": "Kubernetes is now built with go `1.23.4`",
-    "markdown": "Kubernetes is now built with go `1.23.4` ([#129422](https://github.com/kubernetes/kubernetes/pull/129422), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "text": "Kubernetes is now built with go `1.23.4`.",
+    "markdown": "Kubernetes is now built with go `1.23.4`. ([#129422](https://github.com/kubernetes/kubernetes/pull/129422), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
     "author": "cpanato",
     "author_url": "https://github.com/cpanato",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129422",
@@ -1143,8 +1290,8 @@
   },
   "129452": {
     "commit": "87cf098f34b6782d20cbfaced2b4260a595ac066",
-    "text": "kubeadm: fixed a bug where the 'node.skipPhases' in UpgradeConfiguration is not respected by 'kubeadm upgrade node' command",
-    "markdown": "Kubeadm: fixed a bug where the 'node.skipPhases' in UpgradeConfiguration is not respected by 'kubeadm upgrade node' command ([#129452](https://github.com/kubernetes/kubernetes/pull/129452), [@SataQiu](https://github.com/SataQiu))",
+    "text": "kubeadm: fixed a bug where the `node.skipPhases` in UpgradeConfiguration is not respected by the `kubeadm upgrade node` subcommand.",
+    "markdown": "Kubeadm: fixed a bug where the `node.skipPhases` in UpgradeConfiguration is not respected by the `kubeadm upgrade node` subcommand. ([#129452](https://github.com/kubernetes/kubernetes/pull/129452), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129452",
@@ -1163,7 +1310,7 @@
   "129457": {
     "commit": "4114a9b4e45a4df96f0383d87b2649640a6ffbf1",
     "text": "[kubectl] Improved the describe output for projected volume sources to clearly indicate whether Secret and ConfigMap entries are optional.",
-    "markdown": "[kubectl] Improved the describe output for projected volume sources to clearly indicate whether Secret and ConfigMap entries are optional. ([#129457](https://github.com/kubernetes/kubernetes/pull/129457), [@gshaibi](https://github.com/gshaibi)) [SIG CLI]",
+    "markdown": "[kubectl] Improved the describe output for projected volume sources to clearly indicate whether Secret and ConfigMap entries are optional. ([#129457](https://github.com/kubernetes/kubernetes/pull/129457), [@gshaibi](https://github.com/gshaibi))",
     "author": "gshaibi",
     "author_url": "https://github.com/gshaibi",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129457",
@@ -1176,12 +1323,13 @@
     ],
     "sigs": [
       "cli"
-    ]
+    ],
+    "is_mapped": true
   },
   "129486": {
     "commit": "f82439f53654a2f86797c1b949cd337e4e1ba9ce",
-    "text": "Fixed a bug to ensure container-level swap metrics are collected",
-    "markdown": "Fixed a bug to ensure container-level swap metrics are collected ([#129486](https://github.com/kubernetes/kubernetes/pull/129486), [@iholder101](https://github.com/iholder101)) [SIG Node and Testing]",
+    "text": "Fixed a bug to ensure container-level swap metrics are collected.",
+    "markdown": "Fixed a bug to ensure container-level swap metrics are collected. ([#129486](https://github.com/kubernetes/kubernetes/pull/129486), [@iholder101](https://github.com/iholder101)) [SIG Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1235,8 +1383,8 @@
   },
   "129506": {
     "commit": "728a4d2a484e0bf09a6f33e59230246a62d3cc11",
-    "text": "Enabled ratcheting validation on status subresources for CustomResourceDefinitions",
-    "markdown": "Enabled ratcheting validation on status subresources for CustomResourceDefinitions ([#129506](https://github.com/kubernetes/kubernetes/pull/129506), [@JoelSpeed](https://github.com/JoelSpeed))",
+    "text": "Enabled ratcheting validation on `status` subresources for CustomResourceDefinitions.",
+    "markdown": "Enabled ratcheting validation on `status` subresources for CustomResourceDefinitions. ([#129506](https://github.com/kubernetes/kubernetes/pull/129506), [@JoelSpeed](https://github.com/JoelSpeed))",
     "author": "JoelSpeed",
     "author_url": "https://github.com/JoelSpeed",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129506",
@@ -1252,7 +1400,7 @@
   "129543": {
     "commit": "db1da72beed99f1fcb2955c2624c7dd3531384ea",
     "text": "DRA API: The maximum number of pods that can use the same ResourceClaim is now 256 instead of 32. Downgrading a cluster where this relaxed limit is in use to Kubernetes 1.32.0 is not supported, as version 1.32.0 would refuse to update ResourceClaims with more than 32 entries in the `status.reservedFor` field.",
-    "markdown": "DRA API: the maximum number of pods which can use the same ResourceClaim is now 256 instead of 32. Beware that downgrading a cluster where this relaxed limit is in use to Kubernetes 1.32.0 is not supported because 1.32.0 would refuse to update ResourceClaims with more than 32 entries in the status.reservedFor field. ([#129543](https://github.com/kubernetes/kubernetes/pull/129543), [@pohly](https://github.com/pohly)) [SIG API Machinery, Node and Testing]",
+    "markdown": "DRA API: The maximum number of pods that can use the same ResourceClaim is now 256 instead of 32. Downgrading a cluster where this relaxed limit is in use to Kubernetes 1.32.0 is not supported, as version 1.32.0 would refuse to update ResourceClaims with more than 32 entries in the `status.reservedFor` field. ([#129543](https://github.com/kubernetes/kubernetes/pull/129543), [@pohly](https://github.com/pohly)) [SIG API Machinery, Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1279,7 +1427,8 @@
     ],
     "feature": true,
     "duplicate": true,
-    "duplicate_kind": true
+    "duplicate_kind": true,
+    "is_mapped": true
   },
   "129545": {
     "commit": "5da75638ee9ebb58794b538293767a7aa0120603",
@@ -1450,8 +1599,8 @@
   },
   "129644": {
     "commit": "b92b3d33e2980d06bfc08883448c2151704d5011",
-    "text": "kubeadm: improved the `kubeadm reset` message for manual cleanups and referenced https://k8s.io/docs/reference/setup-tools/kubeadm/kubeadm-reset/.",
-    "markdown": "Kubeadm: improved the `kubeadm reset` message for manual cleanups and referenced https://k8s.io/docs/reference/setup-tools/kubeadm/kubeadm-reset/. ([#129644](https://github.com/kubernetes/kubernetes/pull/129644), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: Improved the `kubeadm reset` message for manual cleanups and referenced https://k8s.io/docs/reference/setup-tools/kubeadm/kubeadm-reset/, which contains the relevant instructions for manual cleanups.",
+    "markdown": "Kubeadm: Improved the `kubeadm reset` message for manual cleanups and referenced https://k8s.io/docs/reference/setup-tools/kubeadm/kubeadm-reset/, which contains the relevant instructions for manual cleanups. ([#129644](https://github.com/kubernetes/kubernetes/pull/129644), [@neolit123](https://github.com/neolit123))",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129644",
@@ -1464,7 +1613,36 @@
     ],
     "sigs": [
       "cluster-lifecycle"
-    ]
+    ],
+    "is_mapped": true
+  },
+  "129653": {
+    "commit": "d7774fce9a7fcec890d7c0beffacd6ae34152b01",
+    "text": "The nftables mode of kube-proxy is now GA. (The iptables mode remains the\ndefault; you can select the nftables mode by passing `--proxy-mode nftables`\nor using a config file with `mode: nftables`. See the kube-proxy documentation\nfor more details.)",
+    "markdown": "The nftables mode of kube-proxy is now GA. (The iptables mode remains the\n  default; you can select the nftables mode by passing `--proxy-mode nftables`\n  or using a config file with `mode: nftables`. See the kube-proxy documentation\n  for more details.) ([#129653](https://github.com/kubernetes/kubernetes/pull/129653), [@danwinship](https://github.com/danwinship)) [SIG Network]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-network/3866-nftables-proxy/README.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "danwinship",
+    "author_url": "https://github.com/danwinship",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129653",
+    "pr_number": 129653,
+    "areas": [
+      "kube-proxy"
+    ],
+    "kinds": [
+      "documentation",
+      "feature"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "feature": true,
+    "duplicate_kind": true
   },
   "129656": {
     "commit": "2bda5dd8c794d933145938affca30f012986e8fa",
@@ -1711,10 +1889,108 @@
       "cluster-lifecycle"
     ]
   },
+  "129929": {
+    "commit": "9a03243789677637762eb0f907e1b4e45a0136c1",
+    "text": "The SeparateCacheWatchRPC  feature gate is deprecated and disabled by default.",
+    "markdown": "The SeparateCacheWatchRPC  feature gate is deprecated and disabled by default. ([#129929](https://github.com/kubernetes/kubernetes/pull/129929), [@serathius](https://github.com/serathius)) [SIG API Machinery]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129929",
+    "pr_number": 129929,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ]
+  },
+  "129930": {
+    "commit": "925cf7db71c5e36072f99e8b7129523f659ee3a1",
+    "text": "The WatchFromStorageWithoutResourceVersion feature flag is deprecated and can no longer be enabled",
+    "markdown": "The WatchFromStorageWithoutResourceVersion feature flag is deprecated and can no longer be enabled ([#129930](https://github.com/kubernetes/kubernetes/pull/129930), [@serathius](https://github.com/serathius)) [SIG API Machinery]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129930",
+    "pr_number": 129930,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup",
+      "deprecation"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate_kind": true
+  },
+  "129933": {
+    "commit": "7a8a4c201ace91b95b1a25a17cf0d1ed7e4dd7d6",
+    "text": "Flip StorageNamespaceIndex feature gate to false and deprecate it",
+    "markdown": "Flip StorageNamespaceIndex feature gate to false and deprecate it ([#129933](https://github.com/kubernetes/kubernetes/pull/129933), [@serathius](https://github.com/serathius)) [SIG Node]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129933",
+    "pr_number": 129933,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node"
+    ]
+  },
+  "129934": {
+    "commit": "e2b0cfa3a1fb2c425a975b8c6ba0e9509bd35452",
+    "text": "Graduate BtreeWatchCache feature gate to GA",
+    "markdown": "Graduate BtreeWatchCache feature gate to GA ([#129934](https://github.com/kubernetes/kubernetes/pull/129934), [@serathius](https://github.com/serathius)) [SIG API Machinery]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129934",
+    "pr_number": 129934,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true
+  },
+  "129956": {
+    "commit": "d2ad0cc7c05ee8a9a713b7a48accf2b5593d0350",
+    "text": "kubeadm: promoted the feature gate `ControlPlaneKubeletLocalMode` to Beta. Kubeadm will per default use the local kube-apiserver endpoint for the kubelet when creating a cluster with \"kubeadm init\" or when joining control plane nodes with \"kubeadm join\". Enabling the feature gate also affects the `kubeadm init phase kubeconfig kubelet` phase, where the flag `--control-plane-endpoint` no longer affects the generated kubeconfig `Server` field, but the flag `--apiserver-advertise-address` can now be used for the same purpose.",
+    "markdown": "Kubeadm: promoted the feature gate `ControlPlaneKubeletLocalMode` to Beta. Kubeadm will per default use the local kube-apiserver endpoint for the kubelet when creating a cluster with \"kubeadm init\" or when joining control plane nodes with \"kubeadm join\". Enabling the feature gate also affects the `kubeadm init phase kubeconfig kubelet` phase, where the flag `--control-plane-endpoint` no longer affects the generated kubeconfig `Server` field, but the flag `--apiserver-advertise-address` can now be used for the same purpose. ([#129956](https://github.com/kubernetes/kubernetes/pull/129956), [@chrischdi](https://github.com/chrischdi)) [SIG Cluster Lifecycle]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/bcd6c468b88903b49d1784a9364516142a8e83f9/keps/sig-cluster-lifecycle/kubeadm/4471-cp-join-kubelet-local-apiserver/README.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "chrischdi",
+    "author_url": "https://github.com/chrischdi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129956",
+    "pr_number": 129956,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true
+  },
   "129962": {
     "commit": "8b1307894d06260f48877740550ac961077e0fa0",
-    "text": "Kubernetes is now built with go `1.23.5`",
-    "markdown": "Kubernetes is now built with go `1.23.5` ([#129962](https://github.com/kubernetes/kubernetes/pull/129962), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "text": "Changed the version of Go that Kubernetes builds against. Kubernetes is now built with Go `1.23.5`.",
+    "markdown": "Changed the version of Go that Kubernetes builds against. Kubernetes is now built with Go `1.23.5`. ([#129962](https://github.com/kubernetes/kubernetes/pull/129962), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
     "author": "cpanato",
     "author_url": "https://github.com/cpanato",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/129962",
@@ -1733,5 +2009,280 @@
     "feature": true,
     "duplicate": true,
     "is_mapped": true
+  },
+  "129993": {
+    "commit": "7b38ff48af860a0348c1db860636ed478ca63d3d",
+    "text": "Fixes a regression with the ServiceAccountNodeAudienceRestriction feature where `azureFile` volumes encounter \"failed to get service accoount token attributes\" errors",
+    "markdown": "Fixes a regression with the ServiceAccountNodeAudienceRestriction feature where `azureFile` volumes encounter \"failed to get service accoount token attributes\" errors ([#129993](https://github.com/kubernetes/kubernetes/pull/129993), [@aramase](https://github.com/aramase)) [SIG Auth and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-auth/4412-projected-service-account-tokens-for-kubelet-image-credential-providers/README.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "aramase",
+    "author_url": "https://github.com/aramase",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129993",
+    "pr_number": 129993,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "129996": {
+    "commit": "1e38c868936137a89c4f47075ed229e0b68f341e",
+    "text": "The response from kube-apiserver /flagz endpoint would respond correctly with parsed flags value.",
+    "markdown": "The response from kube-apiserver /flagz endpoint would respond correctly with parsed flags value. ([#129996](https://github.com/kubernetes/kubernetes/pull/129996), [@yongruilin](https://github.com/yongruilin)) [SIG API Machinery, Architecture, Instrumentation and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-instrumentation/4828-component-flagz/README.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "yongruilin",
+    "author_url": "https://github.com/yongruilin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129996",
+    "pr_number": 129996,
+    "areas": [
+      "test",
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "architecture",
+      "instrumentation",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "130017": {
+    "commit": "ee22760391bae28954a69dff499d1cead9a9fcf0",
+    "text": "NodeRestriction admission now validates the audience value that kubelet is requesting a service account token for is part of the pod spec volume. The kube-apiserver featuregate `ServiceAccountNodeAudienceRestriction` is enabled by default in 1.33.",
+    "markdown": "NodeRestriction admission now validates the audience value that kubelet is requesting a service account token for is part of the pod spec volume. The kube-apiserver featuregate `ServiceAccountNodeAudienceRestriction` is enabled by default in 1.33. ([#130017](https://github.com/kubernetes/kubernetes/pull/130017), [@aramase](https://github.com/aramase)) [SIG Auth]",
+    "author": "aramase",
+    "author_url": "https://github.com/aramase",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130017",
+    "pr_number": 130017,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "auth"
+    ],
+    "feature": true
+  },
+  "130023": {
+    "commit": "bd8532054c13d053eb2cbdc072e282459584c987",
+    "text": "kubeadm: 'kubeadm upgrade plan' now supports '--etcd-upgrade' flag to control whether the etcd upgrade plan should be displayed. Add an `EtcdUpgrade` field into `UpgradeConfiguration.Plan` for v1beta4.",
+    "markdown": "Kubeadm: 'kubeadm upgrade plan' now supports '--etcd-upgrade' flag to control whether the etcd upgrade plan should be displayed. Add an `EtcdUpgrade` field into `UpgradeConfiguration.Plan` for v1beta4. ([#130023](https://github.com/kubernetes/kubernetes/pull/130023), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130023",
+    "pr_number": 130023,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true
+  },
+  "130032": {
+    "commit": "994a46907fe09e03a01012e9439b9c1eeda21a6e",
+    "text": "kube-proxy: fixes a potential memory leak which can occur in clusters with high volume of UDP workflows",
+    "markdown": "Kube-proxy: fixes a potential memory leak which can occur in clusters with high volume of UDP workflows ([#130032](https://github.com/kubernetes/kubernetes/pull/130032), [@aroradaman](https://github.com/aroradaman)) [SIG Network]",
+    "author": "aroradaman",
+    "author_url": "https://github.com/aroradaman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130032",
+    "pr_number": 130032,
+    "areas": [
+      "kube-proxy",
+      "dependency"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "network"
+    ]
+  },
+  "130037": {
+    "commit": "d1126b66cb06e4f67cc1612ff32da51e8541e01b",
+    "text": "Fixed SELinuxWarningController defaults when running kube-controller-manager in a container.",
+    "markdown": "Fixed SELinuxWarningController defaults when running kube-controller-manager in a container. ([#130037](https://github.com/kubernetes/kubernetes/pull/130037), [@jsafrane](https://github.com/jsafrane)) [SIG Apps and Storage]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1710-selinux-relabeling",
+        "type": "KEP"
+      }
+    ],
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130037",
+    "pr_number": 130037,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "apps",
+      "storage"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "130040": {
+    "commit": "e30c8a3ddee009e7de2d21d69d12f159f74c2e16",
+    "text": "kubeadm: improved `kubeadm init` and `kubeadm join` to provide consistent error messages when the kubelet failed or when failed to wait for control plane components.",
+    "markdown": "Kubeadm: improved `kubeadm init` and `kubeadm join` to provide consistent error messages when the kubelet failed or when failed to wait for control plane components. ([#130040](https://github.com/kubernetes/kubernetes/pull/130040), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG Cluster Lifecycle]",
+    "author": "HirazawaUi",
+    "author_url": "https://github.com/HirazawaUi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130040",
+    "pr_number": 130040,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true
+  },
+  "130045": {
+    "commit": "3e4e2437e4f919421aa9919bbe1e3e38a2728408",
+    "text": "kubeadm: added preflight check for `cp` on Linux nodes and `xcopy` on Windows nodes. These binaries are required for kubeadm to work properly.",
+    "markdown": "Kubeadm: added preflight check for `cp` on Linux nodes and `xcopy` on Windows nodes. These binaries are required for kubeadm to work properly. ([#130045](https://github.com/kubernetes/kubernetes/pull/130045), [@carlory](https://github.com/carlory)) [SIG Cluster Lifecycle]",
+    "author": "carlory",
+    "author_url": "https://github.com/carlory",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130045",
+    "pr_number": 130045,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true
+  },
+  "130058": {
+    "commit": "fbdf8905ea251f15120426fa308596dedafbdee0",
+    "text": "Introduced the `LegacySidecarContainers` feature gate enabling the legacy code path that predates the `SidecarContainers` feature. This temporary feature gate is disabled by default, only available in v1.33, and will be removed in v1.34.",
+    "markdown": "Introduced the `LegacySidecarContainers` feature gate enabling the legacy code path that predates the `SidecarContainers` feature. This temporary feature gate is disabled by default, only available in v1.33, and will be removed in v1.34. ([#130058](https://github.com/kubernetes/kubernetes/pull/130058), [@gjkim42](https://github.com/gjkim42)) [SIG Node]",
+    "author": "gjkim42",
+    "author_url": "https://github.com/gjkim42",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130058",
+    "pr_number": 130058,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "cleanup",
+      "feature"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "feature": true,
+    "duplicate_kind": true
+  },
+  "130074": {
+    "commit": "77d7f6380071e5719345aa34461c3e4619e0efab",
+    "text": "Kubernetes is now built with go 1.23.6",
+    "markdown": "Kubernetes is now built with go 1.23.6 ([#130074](https://github.com/kubernetes/kubernetes/pull/130074), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130074",
+    "pr_number": 130074,
+    "areas": [
+      "test",
+      "release-eng"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "release",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "130113": {
+    "commit": "75909b89201386c8a555eadc79d14fb11f91747c",
+    "text": "Resolves a performance regression in default 1.31+ configurations, related to the ConsistentListFromCache feature, where rapid create / update API requests across different namespaces encounter increased latency.",
+    "markdown": "Resolves a performance regression in default 1.31+ configurations, related to the ConsistentListFromCache feature, where rapid create / update API requests across different namespaces encounter increased latency. ([#130113](https://github.com/kubernetes/kubernetes/pull/130113), [@AwesomePatrol](https://github.com/AwesomePatrol)) [SIG API Machinery]",
+    "author": "AwesomePatrol",
+    "author_url": "https://github.com/AwesomePatrol",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130113",
+    "pr_number": 130113,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate_kind": true
+  },
+  "130200": {
+    "commit": "05ab777e288d6c19bac46082a877727f1df253e1",
+    "text": "`kubeproxy_conntrack_reconciler_sync_duration_seconds` metric can be used to track conntrack reconciliation latency",
+    "markdown": "`kubeproxy_conntrack_reconciler_sync_duration_seconds` metric can be used to track conntrack reconciliation latency ([#130200](https://github.com/kubernetes/kubernetes/pull/130200), [@aroradaman](https://github.com/aroradaman)) [SIG Network]",
+    "author": "aroradaman",
+    "author_url": "https://github.com/aroradaman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130200",
+    "pr_number": 130200,
+    "areas": [
+      "kube-proxy"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "feature": true
+  },
+  "130204": {
+    "commit": "87fcae2bc765e4f752bcf7dfbd0c57f75ec751a3",
+    "text": "`kubeproxy_conntrack_reconciler_deleted_entries_total` metric can be used to track cumulative sum of conntrack flows cleared by reconciler",
+    "markdown": "`kubeproxy_conntrack_reconciler_deleted_entries_total` metric can be used to track cumulative sum of conntrack flows cleared by reconciler ([#130204](https://github.com/kubernetes/kubernetes/pull/130204), [@aroradaman](https://github.com/aroradaman)) [SIG Network]",
+    "author": "aroradaman",
+    "author_url": "https://github.com/aroradaman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130204",
+    "pr_number": 130204,
+    "areas": [
+      "kube-proxy"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "network"
+    ],
+    "feature": true
   }
 }

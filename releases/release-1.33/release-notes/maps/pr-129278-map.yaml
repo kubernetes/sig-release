@@ -1,0 +1,6 @@
+pr: 129278
+releasenote:
+  text: 'kubeadm: When the `NodeLocalCRISocket` feature gate is enabled, the `--container-runtime-endpoint`
+    flag should be removed from the `/var/lib/kubelet/kubeadm-flags.env` file on `kubeadm
+    upgrade`.'
+pr_body: ""

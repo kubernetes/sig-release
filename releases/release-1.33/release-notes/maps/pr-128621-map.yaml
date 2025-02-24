@@ -1,4 +1,7 @@
 pr: 128621
 releasenote:
-  text: Fixed CVE-2024-51744.
+  text: Addressed CVE-2024-51744, an issue related to unclear error handling in `ParseWithClaims`,
+    which could lead to improper token validation. This was an indirect dependency
+    from etcd and was not actively impacting Kubernetes, as the current error handling
+    did not use `error.Is` in a way that would make it exploitable.
 pr_body: ""
