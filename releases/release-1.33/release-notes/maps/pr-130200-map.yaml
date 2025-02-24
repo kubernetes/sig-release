@@ -1,0 +1,4 @@
+pr: 130200
+releasenote:
+  text: "`kubeproxy_conntrack_reconciler_sync_duration_seconds` metric can now be used to track conntrack reconciliation latency."
+pr_body: ""

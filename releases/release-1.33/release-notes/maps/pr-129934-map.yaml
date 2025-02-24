@@ -1,0 +1,4 @@
+pr: 129934
+releasenote:
+  text: Graduated `BtreeWatchCache` feature gate to GA.
+pr_body: ""
