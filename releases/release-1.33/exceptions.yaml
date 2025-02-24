@@ -1,0 +1,52 @@
+# Exception requests in 1.33
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Nina Polshakova ([@npolshakova](https://github.com/npolshakova) 
+ 
+# Enhancements Freeze Exceptions requested in 1.33
+
+enhancementFreeze:
+
+- name: "Declarative Validation Of Kubernetes Native Types With validation-gen"
+  issue: 5073
+  date_requested: 2025-02-14
+  date_reviewed: 2025-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/B4lxvGi-UVs"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5171"
+  status: "approved"
+
+- name: "Node memory swap support"
+  issue: 2400
+  date_requested: 2025-02-14
+  date_reviewed: 2025-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/7ksASRJFCEw"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5174"
+  status: "approved"
+
+- name: "Streaming Encoding for LIST Responses"
+  issue: 5116
+  date_requested: 2025-02-14
+  date_reviewed: 2025-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/fDI9FdlClnA"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5119"
+  status: "approved"
+
+- name: "Snapshottable API server cache"
+  issue: 4988
+  date_requested: 2025-02-14
+  date_reviewed: 2025-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/CVYYVtjOa78"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5175"
+  status: "approved"
+
+- name: "Take taints/tolerations into consideration when calculating PodTopologySpread skew"
+  issue: 3094
+  date_requested: 2025-02-15
+  date_reviewed: 2025-02-15
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/KzuhBzIJIU0"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5172"
+  status: "approved"
