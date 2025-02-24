@@ -1,0 +1,6 @@
+pr: 130113
+releasenote:
+  text: Resolved a performance regression in default 1.31+ configurations, related
+    to the ConsistentListFromCache feature, where rapid create/update API requests
+    across different namespaces encounter increased latency.
+pr_body: ""

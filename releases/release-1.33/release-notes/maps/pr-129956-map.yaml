@@ -1,0 +1,10 @@
+pr: 129956
+releasenote:
+  text: "kubeadm: Promoted the feature gate `ControlPlaneKubeletLocalMode` to Beta.
+    By default, Kubeadm will use the local kube-apiserver endpoint for the kubelet
+    when creating a cluster with `kubeadm init` or when joining control plane nodes
+    with `kubeadm join`. Enabling the feature gate also affects the `kubeadm init
+    phase kubeconfig kubelet` phase, where the flag `--control-plane-endpoint` no
+    longer affects the generated kubeconfig `Server` field, but the flag `--apiserver-advertise-address`
+    can now be used for the same purpose."
+pr_body: ""

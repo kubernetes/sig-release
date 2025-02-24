@@ -1,0 +1,4 @@
+pr: 130045
+releasenote:
+  text: "kubeadm: Added preflight check for `cp` on Linux nodes and `xcopy` on Windows nodes. These binaries are required for kubeadm to work properly."
+pr_body: ""

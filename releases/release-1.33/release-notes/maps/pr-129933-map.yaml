@@ -1,0 +1,4 @@
+pr: 129933
+releasenote:
+  text: Flipped `StorageNamespaceIndex` feature gate to `false` and deprecated it.
+pr_body: ""
