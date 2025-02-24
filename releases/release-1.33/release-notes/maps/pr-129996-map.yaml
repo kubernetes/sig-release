@@ -1,0 +1,5 @@
+pr: 129996
+releasenote:
+  text: The response from kube-apiserver's `/flagz` endpoint would respond correctly
+    with parsed flags value.
+pr_body: ""

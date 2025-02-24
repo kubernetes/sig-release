@@ -1,0 +1,6 @@
+pr: 129993
+releasenote:
+  text: Fixed a regression with the `ServiceAccountNodeAudienceRestriction` feature
+    where `azureFile` volumes encountered "failed to get service accoount token attributes"
+    errors
+pr_body: ""
