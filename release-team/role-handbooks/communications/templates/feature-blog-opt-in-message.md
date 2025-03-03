@@ -1,3 +1,5 @@
+# Initial Reach-out
+
 This is a message to send to enhancement owners to opt in to write a feature blog for their enhancement, it should be sent on the KEP issue.
 After this message is sent, the Comms team will follow up with the enhancement owner to help them keep in mind the timeline for the feature blog, every 1-2 weeks.
 
@@ -61,3 +63,30 @@ With this one, you'd need to update the following placeholders:
   - `<<BLOG_PLACEHOLDER_DEADLINE>> WEEKDAY, DAY MONTH`: Deadline for the placeholder PR, which is usually at 02:00 UTC on Wednesday (on week 8)
   - `<<BLOG_READY>> WEEKDAY, DAY MONTH`: Deadline for the Feature Blogs being ready for review, which is usually on week 13
 - `LINK`: Add a link to the release document, such as `https://github.com/kubernetes/sig-release/tree/master/releases/release-1.33#timeline`
+
+# Follow-up
+
+```
+Hi @xx 👋, x.yy Communications Team here again!
+
+This is a gentle reminder for the feature blog deadline mentioned above, which is **02:00 UTC <<BLOG_PLACEHOLDER_DEADLINE>> WEEKDAY, DAY MONTH**. To opt in, please let us know and open a Feature Blog placeholder PR against [`k/website`](https://github.com/kubernetes/website) by the deadline. If you have any questions, please feel free to reach out to us!
+
+> [!Tip]
+> Some timeline to keep in mind:
+> - **02:00 UTC <<BLOG_PLACEHOLDER_DEADLINE>> WEEKDAY, DAY MONTH**: Feature blog PR freeze
+> - **<<BLOG_READY>> WEEKDAY, DAY MONTH**: Feature blogs ready for review
+> - You can find more in the [release document](LINK)
+> 
+
+> [!Note]
+> In your placeholder PR, use `XX` characters for the blog `date` in the front matter and file name. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
+```
+
+With this one, you'd need to update the following placeholders:
+- `@xx`: Mention KEP's primary contact(s), assignee(s), and even potentially other members who are actively working on the KEP
+- `x.yy`: The upcoming Kubernetes version, such as 1.33, 1.34, etc.
+- Dates: There are 2 separate dates; one for the placeholder PR, and another for the blog ready for review
+  - `<<BLOG_PLACEHOLDER_DEADLINE>> WEEKDAY, DAY MONTH`: Deadline for the placeholder PR, which is usually at 02:00 UTC on Wednesday (on week 8)
+  - `<<BLOG_READY>> WEEKDAY, DAY MONTH`: Deadline for the Feature Blogs being ready for review, which is usually on week 13
+- `LINK`: Add a link to the release document, such as `https://github.com/kubernetes/sig-release/tree/master/releases/release-1.33#timeline`
+
