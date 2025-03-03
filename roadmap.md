@@ -1,21 +1,14 @@
 # Roadmap and Vision
 
-## SIG Release Roadmap for 2024 and beyond
+## SIG Release Roadmap for 2025 and beyond
 
-This document contains the SIG Release Roadmap for 2024 and beyond. More
+This document contains the SIG Release Roadmap for 2025 and beyond. More
 detailed information can be found on the corresponding project boards.
 
 ### Primary Focus
 
-Provide a more **robust**, **fast** and **flexible** release pipeline for
-Kubernetes.
-
-1. **Robust**: The process of creating release metadata should be consistent
-   across consecutive runs as well as resilient to infrastructure failures.
-1. **Fast**: The creation time of Kubernetes releases should be minimized.
-1. **Flexible**: Future enhancements to the process will be taken into
-   consideration from the beginning on, for example when thinking about
-   extending the release metadata.
+Decrease **technical debt** and provide a **sustainable foundation** for long
+term contributors of SIG Release.
 
 ### Deliverables
 
@@ -25,58 +18,26 @@ state.
 
 ### Work in progress (WIP)
 
-1. **Make artifact validation more robust**
+1. **Rewrite artifact promoter**
 
-   Outcome: Provide a fast and error-resistant workflow for artifact promotion
-   compliant with SLSA.
+   Outcome: Robust and fast artifact promotion tooling.
 
-   Enhancement: was https://github.com/kubernetes/enhancements/issues/3027
+   Enhancement: _none_
 
    Project board: https://github.com/orgs/kubernetes/projects/171
 
-1. **Making deb and rpm package builds more robust**
+1. **Rework supported platforms**
 
-   Outcome: Provide a fast and error-resistant workflow for building and
-   publishing packages to the community-owned infrastructure.
+   Outcome: Which platforms Kubernetes supports reflected in documentation and tooling.
 
-   Enhancement: https://github.com/kubernetes/enhancements/issues/1731
+   Enhancement: **TBD** ([Supported Platform Tiers](https://docs.google.com/document/d/1QnT2LJ1dNYFyvOCt_X6F8ry0KgAg8H2MjoZnt5Xgtog))
 
-   Project board: https://github.com/orgs/kubernetes/projects/137
+   Project board: _none_
 
-1. **Enable other Kubernetes subprojects to use our packages infrastructure**
-
-   Outcome: Building a CLI, library and documentation for Kubernetes related
-   projects to use the existing packaging infrastructure.
-
+1. **Improve SIG Release contributor ladder & sustainability**
+   Outcome: Up-to-date documentation and project boards for new and long term contributors.
    Enhancement: _none_
-
-   Project board: https://github.com/orgs/kubernetes/projects/137
-
-1. **Migrate away from GCS bucket: gs://kubernetes-release**
-
-   Outcome: Ensure we migrate away from gs://kubernetes-release, use a
-   community-owned Object Storage bucket for binaries releases, serve the
-   binaries published through a CDN service.
-
-   Enhancement: _none_
-
-### To be done (TODO)
-
-1. **Modernize and Extend Release Metadata**
-
-   Outcome: Providing release metadata compliant to the latest industry
-   standards.
-
-   Enhancement: _none_ (was https://github.com/kubernetes/enhancements/issues/3027)
-
-   Project board: https://github.com/orgs/kubernetes/projects/138
-
-1. **Make Kubernetes releases more flexible**
-
-   Outcome: Provide more possibilities for Kubernetes releases to be created in
-   custom infrastructure environments.
-
-   Enhancement: _none_
+   Project board: _none_
 
 ### Known Risks
 
@@ -107,7 +68,90 @@ state.
 
    For content which should be part of the release metadata.
 
+1. **SIG Contribex**
+
+   For getting input about sustainable contributor experience.
+
+### Other Priorities
+
+This section covers items from the past 2022 and 2024 roadmap which have not been
+started or became stale.
+
+1. **Make artifact validation more robust**
+
+   Outcome: Provide a fast and error-resistant workflow for artifact promotion compliant with SLSA.
+
+   Enhancement: was kubernetes/enhancements#3027
+
+   Project board: https://github.com/orgs/kubernetes/projects/171
+
+1. **Enable other Kubernetes subprojects to use our packages infrastructure**
+
+   Outcome: Building a CLI, library and documentation for Kubernetes related
+   projects to use the existing packaging infrastructure.
+
+   Enhancement: _none_
+
+   Project board: https://github.com/orgs/kubernetes/projects/137
+
+1. **Modernize and Extend Release Metadata**
+
+   Outcome: Providing release metadata compliant to the latest industry standards.
+
+   Enhancement: none (was kubernetes/enhancements#3027)
+
+   Project board: https://github.com/orgs/kubernetes/projects/138
+
+1. **Make Kubernetes releases more flexible**
+
+   Outcome: Provide more possibilities for Kubernetes releases to be created in
+   custom infrastructure environments.
+
+   Enhancement: none
+
+1. **Enhance Kubernetes binary artifact management (Consumable)**
+
+   https://github.com/kubernetes/sig-release/issues/1372
+
+   Enhancement: _none_
+
+   Outcome: Being able to promote files as artifacts and using this mechanism
+   for Kubernetes releases.
+
+1. **Define and collect metrics about Kubernetes releases (Introspectable)**
+
+   https://github.com/kubernetes/sig-release/issues/1527
+
+   Enhancement: _none_
+
+   Outcome: Being able to measure and interpret a set of defined metrics about
+   Kubernetes releases to associate actions with those.
+
+1. **Enhance and simplify Kubernetes version markers (Consumable)**
+
+   Enhancement: _none_
+
+   Outcome: Clear documentation about available version markers as well as their
+   simplified automation.
+
 ### Done Deliverables
+
+1. **Migrate away from GCS bucket: gs://kubernetes-release**
+
+   Outcome: Ensure we migrate away from gs://kubernetes-release, use a
+   community-owned Object Storage bucket for binary releases, serve the binaries
+   published through a CDN service.
+
+   Enhancement: none
+
+1. **Making deb and rpm package builds more robust**
+
+   Outcome: Provide a fast and error-resistant workflow for building and
+   publishing packages to the community-owned infrastructure.
+
+   Enhancement: kubernetes/enhancements#1731
+
+   Project board: https://github.com/orgs/kubernetes/projects/137
 
 1. **Moving deb/rpm package builds to community infrastructure (Consumable)**
 
@@ -170,40 +214,3 @@ state.
 
    Outcome: A documented and simple process for handling CVE information within
    Kubernetes releases.
-
-### Stale
-
-This section covers items from the past 2022 roadmap which have not been
-started or became stale.
-
-1. **Enhance Kubernetes binary artifact management (Consumable)**
-
-   https://github.com/kubernetes/sig-release/issues/1372
-
-   Enhancement: _none_
-
-   Outcome: Being able to promote files as artifacts and using this mechanism
-   for Kubernetes releases.
-
-1. **Define and collect metrics about Kubernetes releases (Introspectable)**
-
-   https://github.com/kubernetes/sig-release/issues/1527
-
-   Enhancement: _none_
-
-   Outcome: Being able to measure and interpret a set of defined metrics about
-   Kubernetes releases to associate actions with those.
-
-1. **Establish Cluster API as first-class signal for upstream releases
-   (Consumable)**
-
-   Enhancement: _none_
-
-   Outcome: Cluster API provides a CI signal for blocking release test jobs.
-
-1. **Enhance and simplify Kubernetes version markers (Consumable)**
-
-   Enhancement: _none_
-
-   Outcome: Clear documentation about available version markers as well as their
-   simplified automation.
