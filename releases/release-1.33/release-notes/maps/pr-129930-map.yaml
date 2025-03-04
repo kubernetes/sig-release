@@ -1,0 +1,5 @@
+pr: 129930
+releasenote:
+  text: The `WatchFromStorageWithoutResourceVersion` feature was deprecated and
+    can no longer be enabled.
+pr_body: ""

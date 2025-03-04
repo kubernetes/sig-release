@@ -1,0 +1,4 @@
+pr: 125230
+releasenote:
+  text: "kubectl: Added alpha support for customizing kubectl behavior using preferences from a `kuberc` file, separate from `kubeconfig`."
+pr_body: ""

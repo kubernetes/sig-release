@@ -1,0 +1,4 @@
+pr: 129368
+releasenote:
+  text: "fix: Adopted go1.23 behavior change in mount point parsing on Windows."
+pr_body: ""
