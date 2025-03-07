@@ -1,0 +1,6 @@
+pr: 130040
+releasenote:
+  text: "kubeadm: Improved `kubeadm init` and `kubeadm join` to provide consistent
+    error messages when the kubelet failed or when failed to wait for control plane
+    components."
+pr_body: ""

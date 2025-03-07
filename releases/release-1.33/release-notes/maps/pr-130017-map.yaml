@@ -1,0 +1,6 @@
+pr: 130017
+releasenote:
+  text: NodeRestriction admission now validates that the audience value, the kubelet
+    requested a service account token for, is part of the pod spec volume. The kube-apiserver
+    featuregate `ServiceAccountNodeAudienceRestriction` is enabled by default in 1.33.
+pr_body: ""
