@@ -1,0 +1,6 @@
+pr: 129450
+releasenote:
+  text: |-
+    kubeadm: removed preflight check for nsenter on Linux nodes
+    kubeadm: added preflight check for `losetup` on Linux nodes, which is required by kubelet for keeping a block device open.
+pr_body: ""

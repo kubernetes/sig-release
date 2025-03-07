@@ -1,5 +1,5 @@
 pr: 129173
 releasenote:
-  text: Extended the schema of kube-proxy's metrics / endpoints to incorporate information
+  text: Extended the schema of kube-proxy's metrics/endpoints to incorporate information
     about the corresponding IP family.
 pr_body: ""

@@ -1,5 +1,6 @@
 pr: 127193
 releasenote:
-  text: Fixed a bug in HorizontalPodAutoscaler. HPAs with `ContainerResource` metrics no longer error when container metrics
-    are missing. Instead they use the same logic as `Resource` metrics to perform calculations.
+  text: Fixed a bug in HorizontalPodAutoscaler where  HPAs with `ContainerResource`
+    metrics would  error when container metrics are missing. They now use the same
+    logic as `Resource` metrics for calculations.
 pr_body: ""

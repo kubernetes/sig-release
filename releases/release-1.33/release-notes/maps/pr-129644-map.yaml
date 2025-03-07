@@ -1,0 +1,5 @@
+pr: 129644
+releasenote:
+  text: 'kubeadm: Improved the `kubeadm reset` message for manual cleanups and referenced
+    https://k8s.io/docs/reference/setup-tools/kubeadm/kubeadm-reset/.'
+pr_body: ""

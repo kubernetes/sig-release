@@ -1,7 +1,7 @@
 pr: 125901
 releasenote:
   text: Implemented logging and event recording for probe results with an `Unknown`
-    status in the kubelet's prober module. This helped improve the diagnosis and monitoring
-    of cases where container probes returned an `Unknown` result, enhancing the observability
-    and reliability of health checks.
+    status in the kubelet's prober module. This improvement enhanced the diagnosis
+    and monitoring of cases where container probes returned an `Unknown` result, thereby
+    increasing the observability and reliability of health checks.
 pr_body: ""

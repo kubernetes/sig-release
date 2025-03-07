@@ -1,0 +1,6 @@
+pr: 129859
+releasenote:
+  text: 'kubeadm: fixed the bug where the v1beta4 Timeouts. EtcdAPICall field was
+    not     respected in etcd client operations, and the default timeout of 2 minutes
+    was always used.'
+pr_body: ""

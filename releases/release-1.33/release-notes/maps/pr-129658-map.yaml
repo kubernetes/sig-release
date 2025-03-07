@@ -1,5 +1,5 @@
 pr: 129658
 releasenote:
-  text: Provides an additional function argument to directly specify the version for
-    the tools that the consumers wished to use.
+  text: Added an additional function argument to allow consumers to directly specify
+    the version of the tools that they want to use.
 pr_body: ""

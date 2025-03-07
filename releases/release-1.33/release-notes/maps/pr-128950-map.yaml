@@ -1,7 +1,7 @@
 pr: 128950
 releasenote:
-  text: Upgraded the `kubectl autoscale` subcommand to use `autoscaling/v2` rather than `autoscaling/v1` APIs.
-    The command now attempts to use the `autoscaling/v2` API first. If the `autoscaling/v2`
-    API is unavailable or an error occurs, it falls fall back to the `autoscaling/v1`
-    API.
+  text: Upgraded the `kubectl autoscale` subcommand to use `autoscaling/v2` rather
+    than `autoscaling/v1` APIs. The command now attempts to use the `autoscaling/v2`
+    API first. If the `autoscaling/v2` API is unavailable or an error occurs, it falls
+    back to the `autoscaling/v1` API.
 pr_body: ""
