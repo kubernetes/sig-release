@@ -1,0 +1,6 @@
+pr: 129790
+releasenote:
+  text: Fixed the bug where Events failed to be created when the referenced object name
+    was not a valid Event name. Now, a UUID is used as the name instead of the referenced
+    object name and the timestamp suffix.
+pr_body: ""

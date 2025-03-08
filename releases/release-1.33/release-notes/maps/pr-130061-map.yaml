@@ -1,0 +1,4 @@
+pr: 130061
+releasenote:
+  text: Promoted the Job's JobBackoffLimitPerIndex feature-gate to stable.
+pr_body: ""

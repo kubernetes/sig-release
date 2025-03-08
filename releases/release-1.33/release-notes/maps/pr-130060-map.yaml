@@ -1,0 +1,7 @@
+pr: 130060
+releasenote:
+  text: 'kube-apiserver: Fixed a bug where the `ResourceQuota` admission plugin
+  did not respect any scope changes when a resource was updated, such as
+  setting or unsetting the `terminationGracePeriodSeconds` field of an
+  existing pod.'
+pr_body: ""
