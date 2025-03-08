@@ -1,0 +1,5 @@
+pr: 130348
+releasenote:
+  text: Fixed a 1.32 regression where nodes may fail to report status and renew serving
+    certificates after the kubelet restarts
+pr_body: ""
