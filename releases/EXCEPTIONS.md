@@ -4,7 +4,7 @@ For minor (1.x) milestones, the Kubernetes project has enhancement complete date
 
 While the enhancement complete milestone dates are published well in advance, and the default is that missing the date means your enhancement will be part of the next milestone, there may be cases where an exception makes sense.
 
-Note that the exception process only applies to enhancements, not bugs managed by the Bugs Triage team.
+Note that the exception process only applies to enhancements, not bugs managed by the Release Signal team.
 
 If you have questions about the status of your enhancement, including the reasons for its removal from the milestone, please reach out to the enhancements lead in the `#release-enhancements` channel on Slack.  Some trivial "clerical errors", such as forgetting the set the milestone, can be remedied without a formal exception.
 
