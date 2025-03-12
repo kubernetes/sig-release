@@ -1,0 +1,5 @@
+pr: 130128
+releasenote:
+  text: Promoted `RelaxedDNSSearchValidation` to beta, allowing for Pod search domains
+    to be a single dot "." or contain an underscore "_".
+pr_body: ""

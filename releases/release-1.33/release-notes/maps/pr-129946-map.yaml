@@ -1,0 +1,4 @@
+pr: 129946
+releasenote:
+  text: Fixed a regression in 1.32 that prevented pods with `postStart` hooks from starting.
+pr_body: ""

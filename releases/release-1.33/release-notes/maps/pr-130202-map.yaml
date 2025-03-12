@@ -1,0 +1,5 @@
+pr: 130202
+releasenote:
+  text: 'kubeadm: fixed panic when no UpgradeConfiguration was found in the config
+    file.'
+pr_body: ""

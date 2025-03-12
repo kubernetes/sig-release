@@ -1,0 +1,7 @@
+pr: 130401
+releasenote:
+  text: Fixed the behavior of the `KUBE_PROXY_NFTABLES_SKIP_KERNEL_VERSION_CHECK`
+    environment variable in the nftables proxier. The kernel version check is now skipped
+    only when this variable is explicitly set to a non-empty value. To skip the check, set the
+    `KUBE_PROXY_NFTABLES_SKIP_KERNEL_VERSION_CHECK` environment variable.
+pr_body: ""

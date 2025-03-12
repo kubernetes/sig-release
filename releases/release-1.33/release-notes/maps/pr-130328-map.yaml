@@ -1,0 +1,5 @@
+pr: 130328
+releasenote:
+  text: The `/flagz` endpoint in kube-apiserver now correctly returns parsed flag values
+    when the `ComponentFlagz` feature-gate is enabled.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 129498
+releasenote:
+  text: Removed the `JobPodFailurePolicy` feature gate, which graduated to GA in 1.31
+    and was unconditionally enabled.
+pr_body: ""

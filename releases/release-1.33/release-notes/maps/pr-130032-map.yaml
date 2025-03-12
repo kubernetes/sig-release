@@ -1,4 +1,5 @@
 pr: 130032
 releasenote:
-  text: "kube-proxy: Fixed a potential memory leak which can occur in clusters with high volume of UDP workflows."
+  text: 'kube-proxy: Fixed a potential memory leak that could occur in clusters with
+    a high volume of UDP workflows.'
 pr_body: ""

@@ -1,0 +1,4 @@
+pr: 130256
+releasenote:
+  text: Fixed rare and sporadic network issues that occurred when the host was under heavy load.
+pr_body: ""
