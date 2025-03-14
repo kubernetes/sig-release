@@ -15,6 +15,13 @@ A step by step guide for cutting Kubernetes patch releases. At a high-level:
 
 ## Prerequisites
 
+### Green Release Signal
+
+On the same day of the release, a green signal must've been given in the #release-management Slack channel. If in doubt, double check with the current Release Signal Team Lead.
+You can find the complete list of release signal team members at this link (substitute `1.xx` with the current release version):
+
+`https://github.com/kubernetes/sig-release/blob/master/releases/release-1.xx/release-team.md`
+
 ### Access to GCP
 
 You must be a member of [k8s-infra-release-editors](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml) on GitHub.
