@@ -1,0 +1,5 @@
+pr: 128586
+releasenote:
+  text: Added DRA support for a "one-of" prioritized list of selection criteria to
+    satisfy a device request in a resource claim.
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 130564
+releasenote:
+  text: |-
+    Endpoints resources created by the Endpoints controller now include a label indicating this.
+    Users who manually create Endpoints can also add this label, but they should consider
+    using `EndpointSlices` instead.
+pr_body: ""

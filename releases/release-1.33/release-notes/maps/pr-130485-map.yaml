@@ -1,0 +1,5 @@
+pr: 130485
+releasenote:
+  text: Allowed dynamic configuration of the service account name and audience that
+    the kubelet could request a token for, as part of the node audience restriction feature.
+pr_body: ""

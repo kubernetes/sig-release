@@ -1,0 +1,7 @@
+pr: 130243
+releasenote:
+  text: Removed a warning related to Linux user namespaces and kernel version. Previously,
+    if the feature gate `UserNamespacesSupport` was enabled, the kubelet warned when
+    detecting a Linux kernel version earlier than 6.3.0. While user namespace support
+    generally requires kernel 6.3 or newer, it can also work on older kernels.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 130335
+releasenote:
+  text: Fixed an issue where kubelet would unmount volumes of running pods upon restart
+    if the referenced PVC was being deleted by the user.
+pr_body: ""

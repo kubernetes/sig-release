@@ -1,0 +1,5 @@
+pr: 130475
+releasenote:
+  text: Added a mechanism that calculates a digest of etcd and the watch cache every
+    5 minutes and exposes it as the `apiserver_storage_digest` metric.
+pr_body: ""
