@@ -427,7 +427,11 @@ Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) 
 
 ## 8. Notify public dev Google group mailinglist
 
-> **NOTE from February 2025: Using manual is the preferred method given current issues with Sendgrid.**
+Ensure that you are a moderator of dev@kubernetes.io so you can send messages without passing by the moderation queue, and also an admin of [kubernetes-announce](https://groups.google.com/g/kubernetes-announce).
+In case you are not part of these groups as moderator/admin, ask to be added in #release-management. 
+Ideally this is a task that should be performed during onboarding and not on the day of the cut.
+
+> **NOTE as of February 2025: Using manual is the preferred method given the issues with Sendgrid.**
 
 ### Manually create release HTML announcements
 
