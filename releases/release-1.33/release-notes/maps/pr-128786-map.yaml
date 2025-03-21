@@ -1,0 +1,8 @@
+pr: 128786
+releasenote:
+  text: |-
+    The apiserver now returns warnings when objects are created with "invalid" IP
+    or CIDR values (e.g. 192.168.000.005", with extra zeros).
+    Non-standard formats may introduce security risks and are likely to be
+    forbidden in a future Kubernetes release.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 130559
+releasenote:
+  text: Fixed a bug in the exclusive assignment availability check for the `InPlacePodVerticalScalingExclusiveCPUs`
+    feature gate.
+pr_body: ""

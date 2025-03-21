@@ -1,0 +1,5 @@
+pr: 130655
+releasenote:
+  text: "e2e.test: [Feature:OffByDefault] was added to test names when specifying a
+    feature gate that is not enabled by default."
+pr_body: ""

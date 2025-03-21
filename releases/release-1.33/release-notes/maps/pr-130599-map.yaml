@@ -1,0 +1,5 @@
+pr: 130599
+releasenote:
+  text: Pod resource checkpointing is now tracked by the `allocated_pods_state` and
+    `actuated_pods_state` files, replacing the previously used `pod_status_manager_state`.
+pr_body: ""

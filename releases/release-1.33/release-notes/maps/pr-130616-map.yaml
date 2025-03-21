@@ -1,0 +1,8 @@
+pr: 130616
+releasenote:
+  text: |-
+    Fixed a test failure in `TestSetVolumeOwnershipOwner` for `fsGroup=3000` and
+    symlink cases in `volume_linux_test.go`. The tests were failing due to invalid
+    ownership verification and the issue has been resolved by adjusting file
+    permission change handling, ensuring correct behavior when run as root.
+pr_body: ""
