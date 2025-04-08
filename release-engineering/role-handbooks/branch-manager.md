@@ -35,9 +35,8 @@
       - [Update kubekins-e2e variants](#update-kubekins-e2e-variants)
       - [Cut next alpha](#cut-next-alpha)
   - [Branch Management](#branch-management)
-    - [Branch Creation](#branch-creation)
-      - [During the release creation](#during-the-release-creation)
-      - [After the release creation](#after-the-release-creation)
+    - [Branch Creation](#release-branch-creation)
+      - [Post release branch creation tasks](#post-release-branch-creation-tasks)
     - [Update test-infra configurations](#update-test-infra-configurations)
       - [Update milestone appliers](#update-milestone-appliers)
       - [Update milestone requirements](#update-milestone-requirements)
@@ -515,7 +514,7 @@ Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` whi
 
 #### Cut next alpha
 
-Recall that an alpha.0 of the next minor release was created during [branch creation](#branch-creation).
+Recall that an alpha.0 of the next minor release was created during [release branch creation](#release-branch-creation).
 
 The previously created alpha.0 is now several commits behind `master`.
 As an example, see the [comparison between the `v1.18.0-alpha.0` (after 1.17 branch creation) and `v1.18.0-alpha.1` (after 1.17.0 release) tags](https://github.com/kubernetes/kubernetes/compare/v1.18.0-alpha.0...v1.18.0-alpha.1).
@@ -542,31 +541,6 @@ In case the release branch is missing - we will end up with an issue we had for 
 
 This section discusses the methods in managing commits on the `release-x.y` branch.
 
-### Branch Creation
-
-During a `rc.0` release our release tooling creates a new release branch named `release-x.y`, where `x` and `y` are the major and minor versions of the next release, respectively.
-
-Behind the scenes `krel` is doing a git branch create and git push. The branch is created in the staging phase and is pushed to the repository in the release phase.
-
-`prow`’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo.
-
-New release branch creation (for example: `release-1.18`) also automatically triggers an alpha.0 build for the subsequent release (for example: [`v1.19.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.19.0-alpha.0)).
-
-This means that the staging step will take about twice as long, as it will stage both versions `v1.18.0-rc.0` and `v1.19.0-alpha.0`. The release step will also be extended, but not substantially longer in time.
-
-#### During the release creation
-
-Before the nomock release job is started, run through the following tasks, **_putting an explicit hold_** on any PRs (to be removed once the release branch has been created):
-
-- [Update test-infra configurations](#update-test-infra-configurations)
-  - [Update milestone appliers](#update-milestone-appliers)
-  - [Update milestone requirements](#update-milestone-requirements)
-  - [Update e2e variants](#update-e2e-variants)
-
-#### After the release creation
-
-Once the new `release-x.y` branch is created, the [release jobs and dashboards should be generated and merged](#generate-release-branch-jobs).
-
 ### Update test-infra configurations
 
 Before getting started, Branch Managers should:
@@ -578,25 +552,64 @@ Before getting started, Branch Managers should:
 git clone git@github.com:<username>/test-infra.git
 ```
 
-- [Install Bazel](https://docs.bazel.build/versions/master/install.html) or run Bazel inside a container
+- (optional) [Install Bazel](https://docs.bazel.build/versions/master/install.html) or run Bazel inside a container
   - Running Bazel in a container is recommended over installing Bazel locally, as Bazel has many dependencies
+
+### Release Branch Creation
+
+> [!IMPORTANT]  
+> The branch is created in the nomock staging phase and is pushed to the repository during the nomock release phase.
+
+During a `rc.0` release our release tooling creates a new release branch named `release-x.0`, where `x` is the major version of the next release.
+
+Behind the scenes `krel` is executing a `git branch create` command and `git push`. 
+
+At the same time Prow’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo, including the newly created one.
+No need to manually create the branch protection rule.
+
+New release branch creation (for example: `release-1.18`) also automatically triggers an alpha.0 build for the subsequent release (for example: [`v1.19.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.19.0-alpha.0)).
+
+> [!NOTE]  
+This means that the staging step will take about twice as long, as it will stage both versions `v1.18.0-rc.0` and `v1.19.0-alpha.0`. 
+The release step will also be extended, but not substantially longer in time.
+
+#### Post release branch creation tasks
+
+During the mock stage runs and before the nomock release job is started, run through the following tasks.
+
+> [!WARNING]  
+Rembember to put a `/hold` on all the PRs, they have to be lifted only once the nomock release phase is done and the branch is created.
+
+- [Update test-infra configurations](#update-test-infra-configurations)
+  - [Update milestone appliers](#update-milestone-appliers)
+  - [Update milestone requirements](#update-milestone-requirements) (this should have been already done as part of the Code Freeze routine)
+  - [Update e2e variants](#update-e2e-variants)
+
+After the rc.0 cut is done and you announced it, proceed with the following:
+
+- [Generate release branch jobs](#generate-release-branch-jobs)
+- [Add a new variant for the kube-cross image](#add-a-new-variant-for-the-kube-cross-image)
+- [Update publishing-bot rules](#update-publishing-bot-rules)
+
+Once the new `release-x.0` branch is created, the [release jobs and dashboards should be generated and merged](#generate-release-branch-jobs).
 
 #### Update milestone appliers
 
-The [milestone applier plugin](https://git.k8s.io/test-infra/prow/plugins/milestoneapplier/milestoneapplier.go) automatically applies a GitHub milestone to pull requests after they have merged.
+The [milestone applier plugin](https://github.com/kubernetes-sigs/prow/blob/main/pkg/plugins/milestoneapplier/milestoneapplier.go) automatically applies a GitHub milestone to pull requests after they have merged.
 
 This only applies to repos that have the milestone applier configured and for pull requests that do not already have a milestone.
 
 Update the `milestoneapplier` plugin configs for `kubernetes/kubernetes`:
 
-- Remove configs for the unsupported release branches, if present
+- Remove configs for the unsupported release branches, if present - _this is typically the oldest release in the list_
 - Add config for the current release branch
 
 Here's an [example PR](https://github.com/kubernetes/test-infra/pull/20075).
 
 #### Update milestone requirements
 
-If the [code freeze](#code-freeze) was enabled before creating the release branch, the milestone requirements wouldn't include the newest release branch.
+> [!NOTE]
+If the [code freeze](#code-freeze) was enabled before creating the release branch, there's nothing to do, as the milestone requirements would include the newest release branch already.
 
 Find the query config for `kubernetes/kubernetes` (in [config.yaml][config.yaml] file) with the code freeze enabled and add the newest release release branch.
 
@@ -653,6 +666,8 @@ It's required to create the appropriate publishing-bot rules for the publishing-
 Here's an [example PR](https://github.com/kubernetes/kubernetes/pull/100616), but please generate the changes with the `update-rules` tooling.
 
 [sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
+
+---
 
 ### Configure Merge Automation
 
