@@ -331,11 +331,14 @@ Promote the images (`alpha`, `beta` or `rc`) using `kpromo`. The tool will autom
 The images that need to be promoted depend on the release you're cutting:
 
 - **Alpha or Beta release:** just promote the images for the release you're cutting (e.g. v1.20.0-beta.1)
-- **The first RC (e.g. v1.20.0-rc.0):** promote the images for the RC and for the next minor alpha release (e.g. v1.21.0-alpha.0)
+- **The first RC (e.g. v1.20.0-rc.0):** promote the images for the RC and for the next minor alpha release (e.g. v1.21.0-alpha.0) in two separate kpromo commands/PRs
 - **The subsequent RCs (e.g. v1.20.0-rc.1):** promote the images for the RC you're cutting (e.g. v1.20.0-rc.0)
 - **A stable release (e.g. v1.20.0):** promote the images for the release you're cutting and for the RC of the next patch release (e.g. v1.20.1-rc.0)
 
 Some examples can be found below:
+
+> [!WARNING]
+Even if it's possible to open a single PR for multiple promos it is not recommended due to the extreme amount of resources used by the double promotion job. Promo one image at a time.
 
 ```
 kpromo pr --fork=jimangel --tag="v1.29.0-alpha.1"
