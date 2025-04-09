@@ -1,0 +1,4 @@
+pr: 130138
+releasenote:
+  text: Enabled user namespaces support (feature gate `UserNamespacesSupport`) by default.
+pr_body: ""

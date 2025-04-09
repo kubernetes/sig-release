@@ -1,0 +1,4 @@
+pr: 130345
+releasenote:
+  text: 'kubeadm: Used generic terminology in logs instead of directly mentioning YAML or JSON.'
+pr_body: ""

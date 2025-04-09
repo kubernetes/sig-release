@@ -1,0 +1,5 @@
+pr: 130035
+releasenote:
+  text: Added an alpha feature gate `OrderedNamespaceDeletion`. When enabled, the
+    pods resources are deleted before all other resources during namespace deletion.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 130902
+releasenote:
+  text: Errors that occur during pod resize actuation will now surface in the `PodResizeInProgress` condition.
+pr_body: ""
