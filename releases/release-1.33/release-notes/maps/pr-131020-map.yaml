@@ -1,0 +1,5 @@
+pr: 131020
+releasenote:
+  text: Fixed a bug where kube-apiserver could emit a subsequent watch event
+    even if the previous event failed to decrypt and was not emitted.
+pr_body: ""

@@ -1,5 +1,4 @@
 pr: 128929
 releasenote:
-  text: Fixed a bug where the kube-proxy `EndpointSliceCache` memory
-    was leaked.
+  text: Fixed a bug where the kube-proxy `EndpointSliceCache` memory experienced a leak.
 pr_body: ""

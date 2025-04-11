@@ -1,0 +1,4 @@
+pr: 128516
+releasenote:
+  text: Fixed an issue where pods did not correctly have a pending phase after the node reboot.
+pr_body: ""
