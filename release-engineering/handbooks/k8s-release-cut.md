@@ -291,7 +291,7 @@ If you are releasing an `alpha.1` you will have a command output that has a `bui
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after this step
 
-## 5. No-mock stage
+## 6. No-mock stage
 
 The following stages, called no-mock, create real artifacts that can be promoted for general use. The process should be near identical to the `no-mock` stages ran prior.
 
@@ -322,7 +322,7 @@ krel release --type=alpha|beta|official|release --branch=release-1.xx --build-ve
 > [!CAUTION]
 Do not run the command yet, just copy it somewhere and wait for the image promo to happen first (PR merged + prow job completed).
 
-## 6. Image promotion
+## 7. Image promotion
 
 Promote the images (`alpha`, `beta` or `rc`) using `kpromo`. The tool will automatically create / open a PR with the images and tags properly promoted.
 
@@ -417,7 +417,7 @@ If the job is stuck in "triggered" (empty clock yellow icon), especially after a
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after the image promotion step
 
-## 7.  No-mock release
+## 8.  No-mock release
 
 You should have copied the no mock release command output from the nomock stage previously, now you can run the release:
 
@@ -428,7 +428,7 @@ krel release --nomock --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after this no-mock release step.
 
-## 8. Notify public dev Google group mailinglist
+## 9. Notify public dev Google group mailinglist
 
 Ensure that you are a moderator of dev@kubernetes.io so you can send messages without passing by the moderation queue, and also an admin of [kubernetes-announce](https://groups.google.com/g/kubernetes-announce).
 In case you are not part of these groups as moderator/admin, ask to be added in #release-management. 
@@ -483,8 +483,6 @@ You could run in a reached max recipients quota, in such case communicate with #
 > [!TIP]
 Kubernetes-announce might require permissions to post, check you have them or ask your release-manager buddy to post the message for you.
 
-## 9. Notify stakeholders
-
 Post this message in release-management:
 
 ```
@@ -522,7 +520,7 @@ krel history --branch release-1.xx --date-from yyyy-mm-dd
 ## 10. Update schedule on k/website
 
 > [!NOTE]
-**Only for patch releases**
+**Only for patch releases, 1.x.y not for alpha, beta, rc, etc. **
 
 You need to update the release schedule on the official Kubernetes website through schedule-builder, here is how:
 
