@@ -299,6 +299,18 @@ See the sig-architecture Enhancements [KEP Template](https://github.com/kubernet
 
 **All** enhancements going into the release must have their pull requests in a merge-ready state with approved and lgtm labels applied. This includes tests, and docs PRs opened by the due date. Due to the Prow queue, this may mean that approved PRs merge shortly after the deadline.
 
+To avoid delays and ensure everything is in place for Code Freeze: 
+- **Coordinate with the Release Branch Manager**: Reach out to the Release Branch Manager to give them a heads-up about the upcoming Code Freeze. They are responsible for raising the PR that officially enforces the Code Freeze. Coordinating early helps minimize the risk of delays and last-minute blockers. For more details on their role and responsibilities, refer to the [Release Branch Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md)
+
+- **Ensure the Code Freeze PR is Ready to Merge**:  
+  The Code Freeze PR should be ready for merge (i.e., it has both `lgtm` and `approved` labels) **on or before the date of Code Freeze**.  
+  **Recommendation:** Work with the Release Branch Manager to get the PR created ahead of time and ensure all **required labels** (`lgtm`, `approved`) are in place. They can add a `/hold` to prevent the PR from merging early - then simply lift the hold in the Code Freeze Party.
+
+- **Reference Code Freeze PRs**: Below are examples of PRs used to enforce Code Freeze in previous releases:
+  - [PR Enforcing Code Freeze - v1.33](https://github.com/kubernetes/test-infra/pull/34532)
+  - [PR Enforcing Code Freeze - v1.32](https://github.com/kubernetes/test-infra/pull/33778)
+  - [PR Enforcing Code Freeze - v1.31](https://github.com/kubernetes/test-infra/pull/33049)
+
 Read https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#code-freeze for more information on the Code Freeze.
 
 #### Week of Code Freeze
@@ -432,6 +444,9 @@ Here's where this enhancement currently stands:
 
 For this enhancement, it looks like the following PRs need to be merged before code freeze (and we need to update the Issue description to include all the related PRs of this KEP):
 - { list of PRs associated with this enhancement }
+
+If the implementation work for this enhancement is occurring **out-of-tree** (i.e., outside of [`k/k`](https://github.com/kubernetes/kubernetes)), please link the relevant PRs in the issue description for visiblity.
+Alternativelty, if you're unable to provide specific PR links, a confirmation that **all out-of-tree implementation work is complete and merged** will help us finalize tracking and maintain accuracy.
 
 If you anticipate missing code freeze, you can file an [exception request](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) in advance.
 
