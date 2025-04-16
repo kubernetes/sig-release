@@ -588,8 +588,8 @@
   },
   "128516": {
     "commit": "e9eff7445ebbce978c8245e664dda88c19675c52",
-    "text": "Fixed an issue where pods did not correctly have a pending phase after the",
-    "markdown": "Fixed an issue where pods did not correctly have a pending phase after the ([#128516](https://github.com/kubernetes/kubernetes/pull/128516), [@gjkim42](https://github.com/gjkim42)) [SIG Node and Testing]",
+    "text": "Fixed an issue where pods did not correctly have a pending phase after the node reboot.",
+    "markdown": "Fixed an issue where pods did not correctly have a pending phase after the node reboot. ([#128516](https://github.com/kubernetes/kubernetes/pull/128516), [@gjkim42](https://github.com/gjkim42)) [SIG Node and Testing]",
     "author": "gjkim42",
     "author_url": "https://github.com/gjkim42",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/128516",
@@ -2884,8 +2884,8 @@
   },
   "129923": {
     "commit": "8de738e3365763a64b0dabe82fa91fb34ea856c8",
-    "text": "git-repo volume plugin has been disabled by default, with the option to turn it back",
-    "markdown": "Git-repo volume plugin has been disabled by default, with the option to turn it back ([#129923](https://github.com/kubernetes/kubernetes/pull/129923), [@vinayakankugoyal](https://github.com/vinayakankugoyal))",
+    "text": "Disabled the git-repo volume plugin by default, with the option to re-enable it.",
+    "markdown": "Disabled the git-repo volume plugin by default, with the option to re-enable it. ([#129923](https://github.com/kubernetes/kubernetes/pull/129923), [@vinayakankugoyal](https://github.com/vinayakankugoyal))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3053,8 +3053,7 @@
     ],
     "feature": true,
     "duplicate": true,
-    "duplicate_kind": true,
-    "is_mapped": true
+    "duplicate_kind": true
   },
   "129956": {
     "commit": "d2ad0cc7c05ee8a9a713b7a48accf2b5593d0350",
@@ -3311,8 +3310,8 @@
   },
   "130028": {
     "commit": "4467dd3d6c21e88258fd9eefe9b512a5e86829c2",
-    "text": "kubelet: added KubeletConfiguration.subidsPerPod",
-    "markdown": "Kubelet: added KubeletConfiguration.subidsPerPod ([#130028](https://github.com/kubernetes/kubernetes/pull/130028), [@AkihiroSuda](https://github.com/AkihiroSuda)) [SIG API Machinery and Node]",
+    "text": "kubelet: Added `KubeletConfiguration.subidsPerPod`.",
+    "markdown": "Kubelet: Added `KubeletConfiguration.subidsPerPod`. ([#130028](https://github.com/kubernetes/kubernetes/pull/130028), [@AkihiroSuda](https://github.com/AkihiroSuda)) [SIG API Machinery and Node]",
     "documentation": [
       {
         "description": "KEP",
@@ -3382,8 +3381,8 @@
   },
   "130035": {
     "commit": "b38bf6c312ae2bde2565060236901307accd8440",
-    "text": "Added an alpha feature gate `OrderedNamespaceDeletion`. When enabled, the pods",
-    "markdown": "Added an alpha feature gate `OrderedNamespaceDeletion`. When enabled, the pods ([#130035](https://github.com/kubernetes/kubernetes/pull/130035), [@cici37](https://github.com/cici37)) [SIG API Machinery, Apps and Testing]",
+    "text": "Added an alpha feature gate `OrderedNamespaceDeletion`. When enabled, the pods resources are deleted before all other resources during namespace deletion.",
+    "markdown": "Added an alpha feature gate `OrderedNamespaceDeletion`. When enabled, the pods resources are deleted before all other resources during namespace deletion. ([#130035](https://github.com/kubernetes/kubernetes/pull/130035), [@cici37](https://github.com/cici37)) [SIG API Machinery, Apps and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3794,8 +3793,8 @@
   },
   "130138": {
     "commit": "761f5646be17737c46ad870b81c854616b62fed9",
-    "text": "User namespaces support (feature gate UserNamespacesSupport) is now enabled by",
-    "markdown": "User namespaces support (feature gate UserNamespacesSupport) is now enabled by ([#130138](https://github.com/kubernetes/kubernetes/pull/130138), [@rata](https://github.com/rata)) [SIG Node and Testing]",
+    "text": "Enabled user namespaces support (feature gate `UserNamespacesSupport`) by default.",
+    "markdown": "Enabled user namespaces support (feature gate `UserNamespacesSupport`) by default. ([#130138](https://github.com/kubernetes/kubernetes/pull/130138), [@rata](https://github.com/rata)) [SIG Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4311,8 +4310,8 @@
   },
   "130345": {
     "commit": "eacb9beec194566226011a379c7b8ab0bfb1bc4b",
-    "text": "kubeadm: Use generic terminology in logs instead of direct mentions of YAML/JSON ",
-    "markdown": "Kubeadm: Use generic terminology in logs instead of direct mentions of YAML/JSON  ([#130345](https://github.com/kubernetes/kubernetes/pull/130345), [@HirazawaUi](https://github.com/HirazawaUi))",
+    "text": "kubeadm: Used generic terminology in logs instead of directly mentioning YAML or JSON.",
+    "markdown": "Kubeadm: Used generic terminology in logs instead of directly mentioning YAML or JSON. ([#130345](https://github.com/kubernetes/kubernetes/pull/130345), [@HirazawaUi](https://github.com/HirazawaUi))",
     "author": "HirazawaUi",
     "author_url": "https://github.com/HirazawaUi",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/130345",
@@ -5987,8 +5986,8 @@
   },
   "130902": {
     "commit": "16abcd78bd493c2694754e46f9227fef7976ed91",
-    "text": "Errors that occur during pod resize actuation surface in the `PodResizeInProgress`",
-    "markdown": "Errors that occur during pod resize actuation surface in the `PodResizeInProgress` ([#130902](https://github.com/kubernetes/kubernetes/pull/130902), [@natasha41575](https://github.com/natasha41575))",
+    "text": "Errors that occur during pod resize actuation will now surface in the `PodResizeInProgress` condition.",
+    "markdown": "Errors that occur during pod resize actuation will now surface in the `PodResizeInProgress` condition. ([#130902](https://github.com/kubernetes/kubernetes/pull/130902), [@natasha41575](https://github.com/natasha41575))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6106,8 +6105,8 @@
   },
   "131020": {
     "commit": "b4d139094698687043b36f1c378dfeb1b654198a",
-    "text": "Fixed a bug where kube-apiserver could emit a subsequent watch even if decryption failed for an earlier event and it was not emitted.",
-    "markdown": "Fixed a bug where kube-apiserver could emit a subsequent watch even if decryption failed for an earlier event and it was not emitted. ([#131020](https://github.com/kubernetes/kubernetes/pull/131020), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery and Etcd]",
+    "text": "Fixed a bug where kube-apiserver could emit a subsequent watch event even if the previous event failed to decrypt and was not emitted.",
+    "markdown": "Fixed a bug where kube-apiserver could emit a subsequent watch event even if the previous event failed to decrypt and was not emitted. ([#131020](https://github.com/kubernetes/kubernetes/pull/131020), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery and Etcd]",
     "author": "wojtek-t",
     "author_url": "https://github.com/wojtek-t",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/131020",
