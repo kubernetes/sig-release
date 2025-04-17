@@ -1,0 +1,4 @@
+pr: 129950
+releasenote:
+  text: Added metrics to expose the main known reasons for resource alignment errors.
+pr_body: ""

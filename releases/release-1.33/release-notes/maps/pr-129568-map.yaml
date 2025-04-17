@@ -1,0 +1,7 @@
+pr: 129568
+releasenote:
+  text: "`--feature-gate=InOrderInformers` (default on), causes informers to process
+    watch streams in order as opposed to grouping updates for the same item close
+    together.  Binaries embedding client-go, but not wiring the feature gates can disable
+    by setting the `KUBE_FEATURE_InOrderInformers=false`."
+pr_body: ""

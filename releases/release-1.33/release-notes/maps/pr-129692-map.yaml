@@ -1,0 +1,4 @@
+pr: 129692
+releasenote:
+  text: Removed generally available feature gate `KubeProxyDrainingTerminatingNodes`.
+pr_body: ""

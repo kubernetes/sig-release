@@ -1,0 +1,6 @@
+pr: 130058
+releasenote:
+  text: Introduced the `LegacySidecarContainers` feature gate enabling the legacy
+    code path that predates the `SidecarContainers` feature. This temporary feature
+    gate is disabled by default, only available in v1.33, and will be removed in v1.34.
+pr_body: ""

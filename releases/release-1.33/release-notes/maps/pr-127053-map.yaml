@@ -1,0 +1,5 @@
+pr: 127053
+releasenote:
+  text: Respect the incoming trace context for authenticated requests to the kube-apiserver
+    for APIServer tracing.
+pr_body: ""

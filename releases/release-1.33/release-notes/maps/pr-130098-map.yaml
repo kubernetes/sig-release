@@ -1,0 +1,5 @@
+pr: 130098
+releasenote:
+  text: The v1 Endpoints API is now officially deprecated (though still fully supported).
+    The API will not be removed, but all users should use the EndpointSlice API instead.
+pr_body: ""

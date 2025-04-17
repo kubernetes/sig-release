@@ -1,0 +1,4 @@
+pr: 130537
+releasenote:
+  text: Scheduling Framework exposes NodeInfo to the ScorePlugin.
+pr_body: ""

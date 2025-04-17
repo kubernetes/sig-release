@@ -1,0 +1,6 @@
+pr: 130162
+releasenote:
+  text: |-
+    1. kube-apiserver: removed the deprecated the `--cloud-provider` and `--cloud-config` CLI parameters.
+    2. removed generally available feature-gate `DisableCloudProviders` and `DisableKubeletCloudCredentialProviders`.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 130233
+releasenote:
+  text: |-
+    Validation now requires new StatefulSets with a `.spec.serviceName` field value to pass DNS1123 validation. Previously created StatefulSets with an invalid `.spec.serviceName` field value could not create any pods, and should be deleted.
+    - Published OpenAPI for the StatefulSet schema is corrected to indicate the `.spec.serviceName` is optional.
+pr_body: ""

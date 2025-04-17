@@ -1,0 +1,6 @@
+pr: 130023
+releasenote:
+  text: 'kubeadm: `kubeadm upgrade plan` now supports `--etcd-upgrade` flag to
+    control whether the etcd upgrade plan should be displayed. Add an `EtcdUpgrade`
+    field into `UpgradeConfiguration.Plan` for v1beta4.'
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 130484
+releasenote:
+  text: Fixed a 1.32 regression kube-proxy, when using a Service with External or
+    LoadBalancer IPs on UDP services , was consuming a large amount of CPU because
+    it was not filtering by the Service destination port and trying to delete all
+    the UDP entries associated to the service.
+pr_body: ""

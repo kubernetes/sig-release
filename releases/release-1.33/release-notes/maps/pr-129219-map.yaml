@@ -1,0 +1,6 @@
+pr: 129219
+releasenote:
+  text: |-
+    When using the Alpha `DRAResourceClaimDeviceStatus` feature, IP address values
+    in the `NetworkDeviceData` are now validated more strictly.
+pr_body: ""

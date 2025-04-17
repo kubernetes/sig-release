@@ -1,0 +1,8 @@
+pr: 129297
+releasenote:
+  text: Promoted the feature gate `CSIMigrationPortworx` to GA. If your applications
+    are using Portworx volumes, please make sure that the corresponding Portworx CSI
+    driver is installed on your cluster **before** upgrading to 1.31 or later because
+    all operations for the in-tree `portworxVolume` type are redirected to the pxd.portworx.com
+    CSI driver when the feature gate is enabled.
+pr_body: ""

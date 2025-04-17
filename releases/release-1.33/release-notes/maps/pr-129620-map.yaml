@@ -1,0 +1,7 @@
+pr: 129620
+releasenote:
+  text: 'kubeadm: graduated the `WaitForAllControlPlaneComponents` feature gate to Beta.
+    When checking the health status of a control plane component, make sure that the
+    address and port defined as arguments in the respective component''s static Pod
+    manifest are used.'
+pr_body: ""

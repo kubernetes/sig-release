@@ -1,0 +1,6 @@
+pr: 130738
+releasenote:
+  text: 'DRA: Starting Kubernetes 1.33, regular users with namespaced cluster `edit`
+    role assigned have `read` permission to `resourceclaims`, `resourceclaims/status`,`resourceclaimtemplates`.
+    And `write` permission for `resourceclaims`, `resourceclaimtemplates`.'
+pr_body: ""

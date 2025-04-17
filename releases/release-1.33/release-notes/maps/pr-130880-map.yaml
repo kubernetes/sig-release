@@ -1,0 +1,6 @@
+pr: 130880
+releasenote:
+  text: The feature gate `InPlacePodVerticalScalingAllocatedStatus` is deprecated and
+    no longer used. The `AllocatedResources` field in `ContainerStatus` is now guarded
+    by the `InPlacePodVerticalScaling` feature gate.
+pr_body: ""

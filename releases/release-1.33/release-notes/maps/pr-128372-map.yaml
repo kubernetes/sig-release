@@ -1,0 +1,10 @@
+pr: 128372
+releasenote:
+  text: Expanded the on-disk kubelet credential provider configuration to allow an
+    optional `tokenAttribute` field to be configured. When it is set, the Kubelet
+    will provision a token with the given audience bound to the current pod and its
+    service account. This KSA token along with required annotations on the KSA defined
+    in configuration will be sent to the credential provider plugin via its standard
+    input (along with the image information that is already sent today). The KSA annotations
+    to be sent are configurable in the kubelet credential provider configuration.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 130544
+releasenote:
+  text: SELinuxChangePolicy and SELinuxMount graduated to Beta. SELinuxMount stays
+    off by default.
+pr_body: ""

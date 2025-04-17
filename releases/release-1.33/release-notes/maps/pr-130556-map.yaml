@@ -1,0 +1,5 @@
+pr: 130556
+releasenote:
+  text: Added support for configuring custom stop signals with a new StopSignal container
+    lifecycle.
+pr_body: ""

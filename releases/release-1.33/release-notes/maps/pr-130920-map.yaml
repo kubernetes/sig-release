@@ -1,0 +1,4 @@
+pr: 130920
+releasenote:
+  text: Promoted `NodeInclusionPolicyInPodTopologySpread` to Stable in v1.33.
+pr_body: ""

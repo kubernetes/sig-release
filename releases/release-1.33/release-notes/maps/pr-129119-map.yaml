@@ -1,0 +1,4 @@
+pr: 129119
+releasenote:
+  text: Improved scheduling performance of pods with required topology spreading.
+pr_body: ""

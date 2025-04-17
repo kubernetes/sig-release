@@ -1,0 +1,5 @@
+pr: 129307
+releasenote:
+  text: Fixed an issue in register-gen where imports for k8s.io/apimachinery/pkg/runtime
+    and k8s.io/apimachinery/pkg/runtime/schema were missing.
+pr_body: ""

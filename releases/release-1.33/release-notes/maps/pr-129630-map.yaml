@@ -1,0 +1,7 @@
+pr: 129630
+releasenote:
+  text: Fixed in-tree to CSI migration for Portworx volumes, in clusters where Portworx
+    security feature is enabled (it's a Portworx feature, not Kubernetes feature).
+    It required secret data from the secret mentioned in-tree SC, to be passed in
+    CSI requests which was not happening before this fix.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 129497
+releasenote:
+  text: Removed generally available feature-gate `AppArmorFields`.
+pr_body: ""

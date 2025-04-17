@@ -1,0 +1,4 @@
+pr: 129375
+releasenote:
+  text: Removed general available feature-gate `AppArmor`.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 122646
+releasenote:
+  text: 'kube-apiserver: shortening the grace period during a pod deletion no longer
+    moves the `metadata.deletionTimestamp` into the past.'
+pr_body: ""

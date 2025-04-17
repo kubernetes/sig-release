@@ -1,0 +1,9 @@
+pr: 130844
+releasenote:
+  text: |-
+    When the `ImprovedTrafficDistribution` feature gate is enabled, a new
+    `trafficDistribution` value `PreferSameNode` is available, which attempts to
+    always route Service connections to an endpoint on the same node as
+    the client. Additionally, `PreferSameZone` is introduced as an alias for
+    `PreferClose`.
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 129832
+releasenote:
+  text: 'kubelet + DRA: For DRA driver plugins (and only for those!), the kubelet
+    now supports a rolling update with `maxSurge > 0` in the driver''s DaemonSet.
+    A DRA driver must support this, which can be done via the k8s.io/dynamic-resource-allocation/kubeletplugin
+    helper package.'
+pr_body: ""

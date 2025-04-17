@@ -1,0 +1,9 @@
+pr: 127092
+releasenote:
+  text: Automatically copy `topology.k8s.io/zone`, `topology.k8s.io/region` and `kubernetes.io/hostname`
+    labels from Node objects to Pods when they are scheduled to a node (via the `pods/binding`
+    endpoint) to allow applications that need to be explicitly aware of their assigned
+    node topology to access this information via the downward API, rather than requiring
+    permission to `get node` objects (exposing the entire API surface of the Node
+    object to otherwise unprivileged workloads).
+pr_body: ""

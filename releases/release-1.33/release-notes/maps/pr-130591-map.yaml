@@ -1,0 +1,6 @@
+pr: 130591
+releasenote:
+  text: Reduced log verbosity for high-frequency, low-value log entries in Job, IPAM,
+    and ReplicaSet controllers by adjusting them to V(2), V(4) and V(4) respectively.
+    This change minimizes log noise while maintaining access to these logs when needed.
+pr_body: ""

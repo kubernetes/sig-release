@@ -1,0 +1,8 @@
+pr: 130560
+releasenote:
+  text: The `RemoteRequestHeaderUID` feature moves to beta and is now enabled by default.
+    This makes the kube-apiserver propagate UIDs in the `X-Remote-Uid` header in requests
+    to the aggregated API servers. The header is not honored by default for incoming
+    requests, but that can be enabled by setting the `--requestheader-uid-headers`
+    flag explicitly.
+pr_body: ""

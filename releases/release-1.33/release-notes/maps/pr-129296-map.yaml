@@ -1,0 +1,4 @@
+pr: 129296
+releasenote:
+  text: Removed general available feature gate `CPUManager`.
+pr_body: ""

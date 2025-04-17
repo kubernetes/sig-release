@@ -1,0 +1,5 @@
+pr: 129186
+releasenote:
+  text: 'kube-apiserver: inactive serving code is removed for `authentication.k8s.io/v1alpha1`
+    APIs.'
+pr_body: ""

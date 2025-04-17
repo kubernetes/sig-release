@@ -1,0 +1,9 @@
+pr: 128184
+releasenote:
+  text: The `StorageCapacityScoring` feature gate was added to score nodes by available
+    storage capacity. It's in alpha and disabled by default. The `VolumeCapacityPriority`
+    alpha feature was replaced with this, and the default behavior was changed. The
+    `VolumeCapacityPriority` preferred a node with the least allocatable, but the
+    `StorageCapacityScoring` preferred a node with the maximum allocatable. See [KEP-4049](https://github.com/kubernetes/enhancements/blob/master/keps/sig-storage/4049-storage-capacity-scoring-of-nodes-for-dynamic-provisioning/README.md)
+    for details.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 129257
+releasenote:
+  text: '`kubectl apply` now coerces `null` values for labels and annotations in manifests
+    to empty string values, consistent with typed JSON metadata decoding, rather than
+    dropping all labels and annotations.' 
+pr_body: ""

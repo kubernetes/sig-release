@@ -1,0 +1,6 @@
+pr: 129151
+releasenote:
+  text: Improved reboot event reporting. The kubelet will only emit one reboot Event
+    when a server-level reboot is detected, even if the kubelet cannot write its status
+    to the associated Node (which triggers a retry).
+pr_body: ""

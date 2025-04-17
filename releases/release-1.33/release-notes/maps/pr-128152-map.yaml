@@ -1,0 +1,7 @@
+pr: 128152
+releasenote:
+  text: |-
+    New configuration is introduced to the kubelet that allows it to track container images and the list of authentication information that lead to their successful pulls . This data is persisted across reboots of the host and restarts of the kubelet.
+
+    The kubelet ensures any image requiring credential verification is always pulled if authentication information from an image pull is not yet present, thus enforcing authentication / re-authentication. This means an image pull might be attempted even in cases where a pod requests the `IfNotPresent` image pull policy, and might lead to the pod not starting if its pull policy is `Never` and is unable to present authentication information that lead to a previous successful pull of the image it is requesting.
+pr_body: ""

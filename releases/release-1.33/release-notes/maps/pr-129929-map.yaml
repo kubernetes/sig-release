@@ -1,0 +1,4 @@
+pr: 129929
+releasenote:
+  text: The `SeparateCacheWatchRPC` feature gate is deprecated and disabled by default.
+pr_body: ""

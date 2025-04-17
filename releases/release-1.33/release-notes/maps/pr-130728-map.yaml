@@ -1,0 +1,6 @@
+pr: 130728
+releasenote:
+  text: |-
+    The `DeclarativeValidation` feature gate is enabled by default. When enabled, mismatches with existing hand written validation is reported via metrics.
+    The `DeclarativeValidationTakeover` feature gate remains disabled by default.  While disabled, validation errors produced by hand written validation are always return to the caller.  To switch to declarative validation is primary source of errors for migrated fields, enable this feature gate.
+pr_body: ""

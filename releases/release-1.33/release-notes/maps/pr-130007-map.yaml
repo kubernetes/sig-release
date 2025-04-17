@@ -1,0 +1,7 @@
+pr: 130007
+releasenote:
+  text: |-
+    A new alpha feature gate, `MutableCSINodeAllocatableCount`, has been introduced.
+
+    When this feature gate is enabled, the `CSINode.Spec.Drivers[*].Allocatable.Count` field becomes mutable, and a new field, `NodeAllocatableUpdatePeriodSeconds`, is available in the `CSIDriver` object. This allows periodic updates to a node's reported allocatable volume capacity, preventing stateful pods from becoming stuck due to outdated information that kube-scheduler relies on.
+pr_body: ""

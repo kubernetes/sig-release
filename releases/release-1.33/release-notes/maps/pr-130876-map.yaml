@@ -1,0 +1,5 @@
+pr: 130876
+releasenote:
+  text: Graduated the `WinDSR` feature in the kube-proxy to beta. The `WinDSR` feature
+    gate is now enabled by default.
+pr_body: ""

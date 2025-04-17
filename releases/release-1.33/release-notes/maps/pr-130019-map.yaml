@@ -1,0 +1,5 @@
+pr: 130019
+releasenote:
+  text: Updated `/version` response to report binary version information separate from
+    compatibility version.
+pr_body: ""
