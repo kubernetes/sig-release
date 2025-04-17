@@ -538,7 +538,7 @@ Example `1.18.0-alpha.1` release issue template: https://github.com/kubernetes/s
 
 Reach out to SIG Scalability to ensure a new branch is cut in [sigs.k8s.io/perf-tests](https://github.com/kubernetes/perf-tests/) repository. 
 
-In case the release branch is missing - we will end up with an issue we had for 1.30: https://github.com/kubernetes/kubernetes/issues/124119
+In case the release branch is missing - we will end up with an issue we had for 1.30, see [#124119](https://github.com/kubernetes/kubernetes/issues/124119)
 
 ## Branch Management
 
@@ -648,7 +648,7 @@ Create a PR with this change and wait for it to be merged ([example PR](https://
 To minimize drift with tooling changes, this section has been moved to
 [kubernetes/test-infra][release-branch-job-creation].
 
-See (kubernetes/test-infra)[release-branch-job-creation#release-branch-jobs] for the exact steps to follow.
+See [kubernetes/test-infra](release-branch-job-creation#release-branch-jobs) for the exact steps to follow.
 
 #### Add a new variant for the kube-cross image
 
