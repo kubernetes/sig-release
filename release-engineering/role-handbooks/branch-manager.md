@@ -508,6 +508,9 @@ The following are some ways to determine if the release process was successful:
 
 ### Post-release Activities
 
+> [!IMPORTANT]  
+> These activities are needed after `rc.0` releases only
+
 #### Update kubekins-e2e variants
 
 Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` which was currently `latest-x.y` in the [`variants.yaml` file for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml). ([reference PR review comment](https://github.com/kubernetes/test-infra/pull/13870#discussion_r313628808))
