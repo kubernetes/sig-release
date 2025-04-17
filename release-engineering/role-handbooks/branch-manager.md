@@ -645,7 +645,7 @@ Create a PR with this change and wait for it to be merged ([example PR](https://
 To minimize drift with tooling changes, this section has been moved to
 [kubernetes/test-infra][release-branch-job-creation].
 
-See [kubernetes/test-infra][release-branch-job-creation#release-branch-jobs] for the exact steps to follow.
+See (kubernetes/test-infra)[release-branch-job-creation#release-branch-jobs] for the exact steps to follow.
 
 #### Add a new variant for the kube-cross image
 
