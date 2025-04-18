@@ -330,6 +330,7 @@ if necessary when pods with nominated node names got deleted or nominated on a d
   in the `NetworkDeviceData` are now validated more strictly. ([#129219](https://github.com/kubernetes/kubernetes/pull/129219), [@danwinship](https://github.com/danwinship)) [SIG Network]
 - YAML input that might previously have been misinterpreted as JSON is now correctly accepted. ([#130666](https://github.com/kubernetes/kubernetes/pull/130666), [@thockin](https://github.com/thockin))
 - [kubectl] Improved the describe output for projected volume sources to clearly indicate whether Secret and ConfigMap entries are optional. ([#129457](https://github.com/kubernetes/kubernetes/pull/129457), [@gshaibi](https://github.com/gshaibi)) [SIG CLI]
+- kube-apiserver: Fixes an issue updating the default ServiceCIDR API object and creating dual-stack Service API objects when `--service-cluster-ip-range` flag passed to kube-apiserver is changed from single-stack to dual-stack. ([#131263](https://github.com/kubernetes/kubernetes/pull/131263), [@aojea](https://github.com/aojea)) [SIG API Machinery, Network and Testing]
 
 ### Other (Cleanup or Flake)
 
@@ -374,3 +375,4 @@ kubelet and kube-proxy will continue to report `iptables` errors if its usage is
 - Updated CNI plugins to `v1.6.2`. ([#129776](https://github.com/kubernetes/kubernetes/pull/129776), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider, Node and Testing]
 - Updated cri-tools to `v1.32.0`. ([#129116](https://github.com/kubernetes/kubernetes/pull/129116), [@saschagrunert](https://github.com/saschagrunert))
 - Updated the etcd client library to `v3.5.21` ([#131103](https://github.com/kubernetes/kubernetes/pull/131103), [@ahrtr](https://github.com/ahrtr)) [SIG API Machinery, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Etcd, Instrumentation, Network, Node and Storage]
+- kube-apiserver disables the beta WatchList feature by default in 1.33 in favor of the `StreamingCollectionEncodingToJSON` and `StreamingCollectionEncodingToProtobuf` features.kube-controller-manager no longer opts into enabling the WatchListClient feature in 1.33. ([#131359](https://github.com/kubernetes/kubernetes/pull/131359), [@deads2k](https://github.com/deads2k)) [SIG API Machinery]

@@ -6330,5 +6330,47 @@
     ],
     "duplicate": true,
     "is_mapped": true
+  },
+  "131263": {
+    "commit": "0266d3bcb37f6a5e649ae0af7f1bf243938e4d56",
+    "text": "kube-apiserver: Fixes an issue updating the default ServiceCIDR API object and creating dual-stack Service API objects when `--service-cluster-ip-range` flag passed to kube-apiserver is changed from single-stack to dual-stack",
+    "markdown": "kube-apiserver: Fixes an issue updating the default ServiceCIDR API object and creating dual-stack Service API objects when `--service-cluster-ip-range` flag passed to kube-apiserver is changed from single-stack to dual-stack ([#131263](https://github.com/kubernetes/kubernetes/pull/131263), [@aojea](https://github.com/aojea)) [SIG API Machinery, Network and Testing]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/131263",
+    "pr_number": 131263,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "network",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "131359": {
+    "commit": "660df229bf3929741cf31659187060d0c651dcf9",
+    "text": "kube-apiserver disabled the beta WatchList feature by default in 1.33 in favor of the `StreamingCollectionEncodingToJSON` and `StreamingCollectionEncodingToProtobuf` features.\nkube-controller-manager no longer opts into enabling the WatchListClient feature in 1.33.",
+    "markdown": "kube-apiserver disabled the beta WatchList feature by default in 1.33 in favor of the `StreamingCollectionEncodingToJSON` and `StreamingCollectionEncodingToProtobuf` features.\nkube-controller-manager no longer opts into enabling the WatchListClient feature in 1.33. ([#131359](https://github.com/kubernetes/kubernetes/pull/131359), [@deads2k](https://github.com/deads2k)) [SIG API Machinery, Network and Testing]",
+    "author": "deads2k",
+    "author_url": "https://github.com/deads2k",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/131359",
+    "pr_number": 131359,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate": true,
+    "is_mapped": true
   }
 }
