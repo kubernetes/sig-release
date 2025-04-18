@@ -1,0 +1,14 @@
+pr: 130405
+releasenote:
+  text: |-
+    The following roles have had `Watch` added to them (prefixed with `system:controller:`):
+
+    - `cronjob-controller`.
+    - `endpoint-controller`.
+    - `endpointslice-controller`.
+    - `endpointslicemirroring-controller`.
+    - `horizontal-pod-autoscaler`.
+    - `node-controller`.
+    - `pod-garbage-collector`.
+    - `storage-version-migrator-controller`.
+pr_body: ""

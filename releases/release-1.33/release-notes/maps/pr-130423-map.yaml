@@ -1,0 +1,5 @@
+pr: 130423
+releasenote:
+  text: Added `ListFromCacheSnapshot` feature gate that allows apiserver to serve LISTs
+    with exact RV and continuations from cache.
+pr_body: ""

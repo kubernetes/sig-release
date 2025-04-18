@@ -1,0 +1,7 @@
+pr: 130725
+releasenote:
+  text: |-
+    The minimum value validation of ReplicationController's `replicas` and `minReadySeconds` fields have been migrated to declarative validation. The requiredness of both fields is also declaratively validated.
+    If the `DeclarativeValidation` feature gate is enabled, mismatches with existing validation are reported via metrics.
+    If the `DeclarativeValidationTakeover` feature gate is enabled, declarative validation is the primary source of errors for migrated fields.
+pr_body: ""

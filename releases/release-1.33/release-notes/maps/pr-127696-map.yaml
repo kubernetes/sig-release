@@ -1,0 +1,6 @@
+pr: 127696
+releasenote:
+  text: Implemented a warning message to inform users about the debug container's capabilities
+    granted by debugging profile may not work as expected if a non-root user is specified
+    in target Pod's `.Spec.SecurityContext.RunAsUser` field.
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 129131
+releasenote:
+  text: 'kubeadm: removed preflight check for `ip`, `iptables`, `ethtool` and `tc`
+    on Linux nodes. kubelet and kube-proxy will continue to report `iptables` errors
+    if its usage is required. The tools `ip`, `ethtool` and `tc` had legacy usage
+    in the kubelet but are no longer required.'
+pr_body: ""

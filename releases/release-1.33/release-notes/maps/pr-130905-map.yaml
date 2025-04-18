@@ -1,0 +1,5 @@
+pr: 130905
+releasenote:
+  text: Promoted in-place Pod vertical scaling to beta. The `InPlacePodVerticalScaling`
+    feature gate is now enabled by default.
+pr_body: ""

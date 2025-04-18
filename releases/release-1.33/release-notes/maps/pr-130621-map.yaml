@@ -1,0 +1,5 @@
+pr: 130621
+releasenote:
+  text: '`PodLifecycleSleepAction` is now turned on by default allowing users to create
+    containers with sleep lifecycle action with a duration of zero seconds.'
+pr_body: ""

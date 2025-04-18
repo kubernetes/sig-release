@@ -1,0 +1,8 @@
+pr: 130225
+releasenote:
+  text: 'DRA: Starting Kubernetes 1.33, only users with access to an admin namespace
+    with the `kubernetes.io/dra-admin-access` label are authorized to create ResourceClaim
+    or ResourceClaimTemplate objects with the `adminAccess` field in this admin namespace
+    if they want to and only they can reference these ResourceClaims or ResourceClaimTemplates
+    in their pod or deployment specs.'
+pr_body: ""

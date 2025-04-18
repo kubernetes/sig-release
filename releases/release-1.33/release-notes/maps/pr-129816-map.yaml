@@ -1,0 +1,7 @@
+pr: 129816
+releasenote:
+  text: "kube-apiserver: `--service-account-max-token-expiration` can now be used in
+    combination with an external token signer `--service-account-signing-endpoint`,
+    as long as the `--service-account-max-token-expiration` is not longer than the external
+    token signer's max expiration."
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 128857
+releasenote:
+  text: Added a `/flagz` endpoint for kubelet endpoint.
+pr_body: ""

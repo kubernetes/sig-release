@@ -1,0 +1,5 @@
+pr: 130573
+releasenote:
+  text: The kubelet will set the `observedGeneration` field on pod conditions when
+    the `PodObservedGenerationTracking` feature gate is set.
+pr_body: ""

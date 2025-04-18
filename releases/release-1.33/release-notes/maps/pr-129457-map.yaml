@@ -1,0 +1,5 @@
+pr: 129457
+releasenote:
+  text: '[kubectl] Improved the describe output for projected volume sources to clearly
+    indicate whether Secret and ConfigMap entries are optional.'
+pr_body: ""

@@ -1,0 +1,11 @@
+pr: 130711
+releasenote:
+  text: Added the ability to reduce both the initial delay and the maximum delay accrued
+    between container restarts for a node for containers in `CrashLoopBackOff` across
+    the cluster to the recommended values of `1s` initial delay and `60s` maximum
+    delay. To set this for a node, turn on the feature gate `ReduceDefaultCrashLoopBackOffDecay`.
+    If you are also using the feature gate `KubeletCrashLoopBackOffMax` with a configured
+    per-node `CrashLoopBackOff.MaxContainerRestartPeriod`, the effective kubelet configuration
+    will follow the conflict resolution policy described further in the documentation
+    [here](TODO:link).
+pr_body: ""

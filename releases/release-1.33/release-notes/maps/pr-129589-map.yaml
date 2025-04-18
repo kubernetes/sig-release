@@ -1,0 +1,5 @@
+pr: 129589
+releasenote:
+  text: 'kubeadm: removed the feature gate `EtcdLearnerMode` which graduated to GA in
+    1.32.'
+pr_body: ""

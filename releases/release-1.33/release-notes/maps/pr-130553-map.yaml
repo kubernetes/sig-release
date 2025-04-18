@@ -1,0 +1,7 @@
+pr: 130553
+releasenote:
+  text: 'kube-apiserver: the `StorageObjectInUseProtection` admission plugin added
+    the `kubernetes.io/vac-protection` finalizer to the given VolumeAttributesClass
+    object when it is created if the feature-gate `VolumeAttributesClass` is turned
+    on and `storage.k8s.io/v1beta1` is enabled.'
+pr_body: ""

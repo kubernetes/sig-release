@@ -1,0 +1,8 @@
+pr: 124360
+releasenote:
+  text: "It introduces a new scope name `VolumeAttributesClass`. \n\nIt matches all
+    PVC objects that have the volume attributes class mentioned. \n\nIf you want to
+    limit the count of PVCs that have a specific volume attributes class. In that
+    case, you can create a quota object with the scope name `VolumeAttributesClass`
+    and a `matchExpressions` that match the volume attributes class."
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 129370
+releasenote:
+  text: CSI drivers that calls `IsLikelyNotMountPoint` should not assume false means
+    that the path is a mount point. Each CSI driver needs to make sure correct usage
+    of return value of `IsLikelyNotMountPoint` because if the file is an irregular file
+    but not a mount point is acceptable.
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 130908
+releasenote:
+  text: 'e2e framework: `framework.WithFeatureGate` `[Alpha]`, `[Beta]` and `[Feature:OffByDefault]`
+    tags are now set 1:1 with `Alpha`,  `Beta`, `Feature:OffByDefault` Ginkgo labels,
+    replacing`Feature:Alpha` and `Feature:Beta` labels. `BetaOffByDefault` is also
+    added as a Ginkgo label only for off-by-default beta features.'
+pr_body: ""

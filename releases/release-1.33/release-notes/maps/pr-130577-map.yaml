@@ -1,0 +1,5 @@
+pr: 130577
+releasenote:
+  text: Changed the Pod API to support `hugepage resources` at `spec` level for pod-level
+    resources.
+pr_body: ""

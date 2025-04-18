@@ -1,0 +1,5 @@
+pr: 129661
+releasenote:
+  text: 'DRA: CEL expressions using attribute strings exceeded the cost limit because
+    their cost estimation was incomplete.'
+pr_body: ""

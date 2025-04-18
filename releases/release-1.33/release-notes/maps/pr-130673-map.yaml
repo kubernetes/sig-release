@@ -1,0 +1,9 @@
+pr: 130673
+releasenote:
+  text: |-
+    The Service `trafficDistribution` field, including the PreferClose option, has graduated
+    to GA. Services that do not have the field configured will continue to operate
+    with their existing behavior. Refer to the documentation
+    https://kubernetes.io/docs/concepts/services-networking/service/#traffic-distribution
+    for more details.
+pr_body: ""

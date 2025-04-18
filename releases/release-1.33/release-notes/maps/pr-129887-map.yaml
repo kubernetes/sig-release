@@ -1,0 +1,6 @@
+pr: 129887
+releasenote:
+  text: Changed the error message displayed when a pod is trying to attach a volume
+    that does not match the label/selector from "x node(s) had volume node affinity
+    conflict" to "x node(s) didn't match PersistentVolume's node affinity".
+pr_body: ""

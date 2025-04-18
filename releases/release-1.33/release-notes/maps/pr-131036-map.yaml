@@ -1,0 +1,6 @@
+pr: 131036
+releasenote:
+  text: 'kubeadm: make sure that it is possible to health check the kube-apiserver
+    when it has --anonymous-auth=false set and the WaitForAllControlPlaneComponents
+    feature gate is enabled.'
+pr_body: ""

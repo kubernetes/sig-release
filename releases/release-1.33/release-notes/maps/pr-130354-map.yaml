@@ -1,0 +1,6 @@
+pr: 130354
+releasenote:
+  text: |-
+    Added a new cli flag "--emulation-forward-compatible".
+    Added a new cli flag "--runtime-config-emulation-forward-compatible".
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 130183
+releasenote:
+  text: '`InPlacePodVerticalScaling`: Memory limits cannot be decreased unless the memory
+    resize restart policy is set to `RestartContainer`. Container resizePolicy is
+    no longer mutable.'
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 130550
+releasenote:
+  text: Graduate the asynchronous preemption feature in the scheduler to beta. \nNow
+    the feature flag (SchedulerAsyncPreemption) is enabled by default.
+pr_body: ""

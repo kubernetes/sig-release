@@ -1,0 +1,5 @@
+pr: 130626
+releasenote:
+  text: '`client-gen` now sorts input group/versions to ensure stable output generation
+    even with unsorted inputs.'
+pr_body: ""

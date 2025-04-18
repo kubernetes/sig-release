@@ -1,0 +1,5 @@
+pr: 129594
+releasenote:
+  text: 'kubeadm: fixed a bug where an image is not pulled if there is an error with
+    the sandbox image from CRI.'
+pr_body: ""

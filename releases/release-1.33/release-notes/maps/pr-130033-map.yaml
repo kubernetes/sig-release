@@ -1,0 +1,4 @@
+pr: 130033
+releasenote:
+  text: Added resource completion in kubectl debug command.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 130935
+releasenote:
+  text: Added Windows Server, Version 2025 for windows-servercore-cache test image.
+pr_body: ""

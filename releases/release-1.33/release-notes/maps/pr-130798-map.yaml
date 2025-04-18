@@ -1,0 +1,4 @@
+pr: 130798
+releasenote:
+  text: Bumped `ProcMountType` feature to on by default beta.
+pr_body: ""

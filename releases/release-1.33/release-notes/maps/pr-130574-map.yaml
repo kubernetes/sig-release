@@ -1,0 +1,5 @@
+pr: 130574
+releasenote:
+  text: For the `InPlacePodVerticalScaling` feature, the API server will no longer set
+    the resize status to `Proposed` upon receiving a resize request.
+pr_body: ""

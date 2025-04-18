@@ -1,4 +1,5 @@
 pr: 129106
 releasenote:
-  text: Added an example of set-based requirements for the  `-l` / `--selector` command line option to `kubectl`.
+  text: Added an example of set-based requirements for the  `-l` / `--selector` command
+    line option to `kubectl`.
 pr_body: ""

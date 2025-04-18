@@ -1,0 +1,4 @@
+pr: 129954
+releasenote:
+  text: Started reporting swap capacity as part of `node.status.nodeSystemInfo`.
+pr_body: ""

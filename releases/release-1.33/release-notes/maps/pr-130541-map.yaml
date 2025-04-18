@@ -1,0 +1,4 @@
+pr: 130541
+releasenote:
+  text: '`DistributeCPUsAcrossNUMA` policy option is promoted to Beta.'
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 128985
+releasenote:
+  text: Added a `/flagz` endpoint for kube-proxy.
+pr_body: ""

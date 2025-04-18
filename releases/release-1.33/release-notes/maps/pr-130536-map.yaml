@@ -1,0 +1,4 @@
+pr: 130536
+releasenote:
+  text: Promoted the `JobSuccessPolicy` to Stable.
+pr_body: ""

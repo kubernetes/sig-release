@@ -1,0 +1,4 @@
+pr: 130347
+releasenote:
+  text: '`apidiscovery.k8s.io/v2beta1` API group is disabled by default.'
+pr_body: ""

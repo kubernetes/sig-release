@@ -1,0 +1,5 @@
+pr: 130047
+releasenote:
+  text: Extended the kube-apiserver loopback client certificate validity to 14 months
+    to align with the updated Kubernetes support lifecycle.
+pr_body: ""

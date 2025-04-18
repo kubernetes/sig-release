@@ -1,0 +1,11 @@
+pr: 130875
+releasenote:
+  text: "Fixed the example validation rule in godoc:\n\nWhen configuring a JWT authenticator:\n\nIf
+    username.expression uses 'claims.email', then 'claims.email_verified' must be
+    used in\nusername.expression or extra[*].valueExpression or claimValidationRules[*].expression.\nAn
+    example claim validation rule expression that matches the validation automatically\napplied
+    when username.claim is set to 'email' is 'claims.?email_verified.orValue(true)
+    == true'. \nBy explicitly comparing the value to true, we let type-checking see
+    the result will be a boolean, \nand to make sure a non-boolean `email_verified`
+    claim will be caught at runtime."
+pr_body: ""

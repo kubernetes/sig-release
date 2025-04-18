@@ -1,0 +1,5 @@
+pr: 129418
+releasenote:
+  text: 'kubeadm: if an addon is disabled in the ClusterConfiguration, skip it during
+    upgrade.'
+pr_body: ""

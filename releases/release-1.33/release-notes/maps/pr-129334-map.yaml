@@ -1,0 +1,7 @@
+pr: 129334
+releasenote:
+  text: Improved how the API server responds to **list** requests where the response
+    format negotiates to JSON. List responses in JSON are marshalled one element at
+    the time, drastically reducing memory needed to serve large collections. Streaming
+    list responses can be disabled via the `StreamingJSONListEncoding` feature gate.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 130814
+releasenote:
+  text: DRAResourceClaimDeviceStatus is now turned on by default allowing DRA-Drivers
+    to report device status data for each allocated device.
+pr_body: ""

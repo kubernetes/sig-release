@@ -1,0 +1,5 @@
+pr: 129591
+releasenote:
+  text: 'kube-apiserver: Promoted the  `ServiceAccountTokenNodeBinding` feature gate
+    general availability. It is now locked to enabled.'
+pr_body: ""

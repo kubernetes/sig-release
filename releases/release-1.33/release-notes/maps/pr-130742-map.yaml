@@ -1,0 +1,7 @@
+pr: 130742
+releasenote:
+  text: The EndpointSlice `hints` field has graduated to GA. The beta annotation `service.kubernetes.io/topology-mode`
+    is now considered deprecated and will not graduate to GA. It remains operational
+    for backward compatibility. Users are encouraged to use the `spec.trafficDistribution`
+    field in the Service API for topology-aware routing configuration.
+pr_body: ""

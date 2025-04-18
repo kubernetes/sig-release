@@ -1,0 +1,6 @@
+pr: 130733
+releasenote:
+  text: 'The pod `status.resize` field is now deprecated and will no longer be set.
+    The status of a pod resize will be exposed under two new conditions: `PodResizeInProgress`
+    and `PodResizePending` instead.'
+pr_body: ""

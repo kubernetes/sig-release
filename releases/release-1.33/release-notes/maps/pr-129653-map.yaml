@@ -1,0 +1,8 @@
+pr: 129653
+releasenote:
+  text: |-
+    The nftables mode of kube-proxy is now GA. (The iptables mode remains the
+    default; you can select the nftables mode by passing `--proxy-mode nftables`
+    or using a config file with `mode: nftables`. See the kube-proxy documentation
+    for more details).
+pr_body: ""
