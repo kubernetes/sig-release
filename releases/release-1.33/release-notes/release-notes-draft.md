@@ -80,11 +80,10 @@
 - Removed general available feature gate `CPUManager`. ([#129296](https://github.com/kubernetes/kubernetes/pull/129296), [@carlory](https://github.com/carlory)) [SIG API Machinery, Node and Testing]
 - Removed general available feature-gate `PDBUnhealthyPodEvictionPolicy`. ([#129500](https://github.com/kubernetes/kubernetes/pull/129500), [@carlory](https://github.com/carlory)) [SIG API Machinery, Apps and Auth]
 - Start reporting swap capacity as part of `node.status.nodeSystemInfo`. ([#129954](https://github.com/kubernetes/kubernetes/pull/129954), [@iholder101](https://github.com/iholder101)) [SIG API Machinery, Apps and Node]
-- Graduated `MultiCIDRServiceAllocator` to stable and `DisableAllocatorDualWrite` to beta (disabled by default).
-Action required for Kubernetes distributions that manage the cluster Service CIDR.
-This feature allows users to define the cluster Service CIDR via a new API object: ServiceCIDR.
-Distributions or administrators of Kubernetes may want to control that new Service CIDRs added to the cluster
-does not overlap with other networks on the cluster, that only belong to a specific range of IPs or just simple retain the existing behavior of only having one ServiceCIDR per cluster.  An example of a Validation Admission Policy to achieve this is [here](https://raw.githubusercontent.com/kubernetes/website/refs/heads/main/content/en/examples/policy/service-cluster-cidr-address-range.yaml). ([#128971](https://github.com/kubernetes/kubernetes/pull/128971), [@aojea](https://github.com/aojea)) [SIG Apps, Architecture, Auth, CLI, Etcd, Network, Release and Testing]
+- Graduated the `MultiCIDRServiceAllocator` feature gate to stable, and the `DisableAllocatorDualWrite` feature gate to beta (disabled by default).
+**Action required** for Kubernetes cluster administrators and for distributions that manage the cluster Service CIDR.
+Kubernetes now allows users to define the cluster Service CIDR via an API object: ServiceCIDR.
+Distributions or administrators of Kubernetes may want to control that new Service CIDRs added to the cluster do not overlap with other networks on the cluster, that only belong to a specific range of IPs. Administrators may also prefer to retain the existing behavior of only having one ServiceCIDR per cluster. You can use `ValidatingAdmissionPolicy` to achieve this. ([#128971](https://github.com/kubernetes/kubernetes/pull/128971), [@aojea](https://github.com/aojea)) [SIG Apps, Architecture, Auth, CLI, Etcd, Network, Release and Testing]
 - The `ClusterTrustBundle` API is moving to `v1beta1`.
   In order for the `ClusterTrustBundleProjection` feature to work on the kubelet side, the `ClusterTrustBundle` API must be available at `v1beta1` version and the `ClusterTrustBundleProjection` feature gate must be enabled. If the API becomes later after kubelet started running, restart the kubelet to enable the feature. ([#128499](https://github.com/kubernetes/kubernetes/pull/128499), [@stlaz](https://github.com/stlaz)) [SIG API Machinery, Apps, Auth, Etcd, Node, Storage and Testing]
 - The Service trafficDistribution field, including the PreferClose option, has graduated
@@ -92,10 +91,6 @@ does not overlap with other networks on the cluster, that only belong to a speci
   with their existing behavior. Refer to the documentation
   https://kubernetes.io/docs/concepts/services-networking/service/#traffic-distribution
   for more details. ([#130673](https://github.com/kubernetes/kubernetes/pull/130673), [@gauravkghildiyal](https://github.com/gauravkghildiyal)) [SIG Apps, Network and Testing]
-- The apiserver now returns warnings when objects are created with "invalid" IP
-  or CIDR values (e.g. 192.168.000.005", with extra zeros).
-  Non-standard formats may introduce security risks and are likely to be
-  forbidden in a future Kubernetes release. ([#128786](https://github.com/kubernetes/kubernetes/pull/128786), [@danwinship](https://github.com/danwinship)) [SIG Apps, Network and Node]
 - The feature gate `InPlacePodVerticalScalingAllocatedStatus` is deprecated and no longer used. The `AllocatedResources` field in `ContainerStatus` is now guarded by the `InPlacePodVerticalScaling` feature gate. ([#130880](https://github.com/kubernetes/kubernetes/pull/130880), [@tallclair](https://github.com/tallclair)) [SIG CLI, Node and Scheduling]
 - The kube-controller-manager will set the `observedGeneration` field on pod conditions when the `PodObservedGenerationTracking` feature gate is set. ([#130650](https://github.com/kubernetes/kubernetes/pull/130650), [@natasha41575](https://github.com/natasha41575)) [SIG API Machinery, Apps, Node, Scheduling, Storage, Testing and Windows]
 - The kube-scheduler will set the `observedGeneration` field on pod conditions when the `PodObservedGenerationTracking` feature gate is set. ([#130649](https://github.com/kubernetes/kubernetes/pull/130649), [@natasha41575](https://github.com/natasha41575)) [SIG Node, Scheduling and Testing]
@@ -106,11 +101,7 @@ does not overlap with other networks on the cluster, that only belong to a speci
 - The `resource.k8s.io/v1beta1` API is deprecated and will be removed in 1.36. Use `v1beta2` instead. ([#129970](https://github.com/kubernetes/kubernetes/pull/129970), [@mortent](https://github.com/mortent)) [SIG API Machinery, Apps, Auth, Etcd, Node, Scheduling and Testing]
 - Validation now requires new StatefulSets with a `.spec.serviceName` field value to pass DNS1123 validation. Previously created StatefulSets with an invalid `.spec.serviceName` field value could not create any pods, and should be deleted.
   - Published OpenAPI for the StatefulSet schema is corrected to indicate the `.spec.serviceName` is optional. ([#130233](https://github.com/kubernetes/kubernetes/pull/130233), [@soltysh](https://github.com/soltysh)) [SIG API Machinery, Apps and Testing]
-- When the `ImprovedTrafficDistribution` feature gate is enabled, a new
-  `trafficDistribution` value `PreferSameNode` is available, which attempts to
-  always route Service connections to an endpoint on the same node as
-  the client. Additionally, `PreferSameZone` is introduced as an alias for
-  `PreferClose`. ([#130844](https://github.com/kubernetes/kubernetes/pull/130844), [@danwinship](https://github.com/danwinship)) [SIG API Machinery, Apps, Network and Windows]
+- When the `PreferSameTrafficDistribution` feature gate is enabled, a new `trafficDistribution` value `PreferSameNode` is available, which attempts to always route Service connections to an endpoint on the same node as the client. Additionally, `PreferSameZone` is introduced as an alias for `PreferClose`. ([#130844](https://github.com/kubernetes/kubernetes/pull/130844), [@danwinship](https://github.com/danwinship)) [SIG API Machinery, Apps, Network and Windows]
 - When the `PodObservedGenerationTracking` feature gate was set, the kubelet populated `status.observedGeneration` to reflect the latest `metadata.generation` it observed for the pod. ([#130352](https://github.com/kubernetes/kubernetes/pull/130352), [@natasha41575](https://github.com/natasha41575)) [SIG API Machinery, Apps, CLI, Node, Release, Scheduling, Storage, Testing and Windows]
 - When the `StrictIPCIDRValidation` feature gate is enabled, Kubernetes will be
   slightly stricter about what values will be accepted as IP addresses and network
@@ -128,7 +119,7 @@ does not overlap with other networks on the cluster, that only belong to a speci
   
   (When the feature gate is disabled, creating an object with such an invalid
   IP or CIDR value will result in a warning from the API server about the fact
-  that it will be rejected in the future.) ([#122550](https://github.com/kubernetes/kubernetes/pull/122550), [@danwinship](https://github.com/danwinship)) [SIG API Machinery, Apps, Network, Node, Scheduling and Testing]
+  that it will be rejected in the future.) ([#122550](https://github.com/kubernetes/kubernetes/pull/122550), [#128786](https://github.com/kubernetes/kubernetes/pull/128786), [@danwinship](https://github.com/danwinship)) [SIG API Machinery, Apps, Network, Node, Scheduling and Testing]
 - `apidiscovery.k8s.io/v2beta1` API group is disabled by default ([#130347](https://github.com/kubernetes/kubernetes/pull/130347), [@Jefftree](https://github.com/Jefftree)) [SIG API Machinery and Testing]
 - `kubectl apply` now coerces `null` values for labels and annotations in manifests to empty string values, 
 consistent with typed JSON metadata decoding, rather than dropping all labels and annotations ([#129257](https://github.com/kubernetes/kubernetes/pull/129257), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]

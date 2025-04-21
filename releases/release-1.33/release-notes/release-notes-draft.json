@@ -5987,8 +5987,8 @@
   },
   "130844": {
     "commit": "68ba091fca6927534e187d8b2595882352497f2f",
-    "text": "When the `ImprovedTrafficDistribution` feature gate is enabled, a new\n`trafficDistribution` value `PreferSameNode` is available, which attempts to\nalways route Service connections to an endpoint on the same node as\nthe client. Additionally, `PreferSameZone` is introduced as an alias for\n`PreferClose`.",
-    "markdown": "When the `ImprovedTrafficDistribution` feature gate is enabled, a new\n  `trafficDistribution` value `PreferSameNode` is available, which attempts to\n  always route Service connections to an endpoint on the same node as\n  the client. Additionally, `PreferSameZone` is introduced as an alias for\n  `PreferClose`. ([#130844](https://github.com/kubernetes/kubernetes/pull/130844), [@danwinship](https://github.com/danwinship)) [SIG API Machinery, Apps, Network and Windows]",
+    "text": "When the `PreferSameTrafficDistribution` feature gate is enabled, a new\n`trafficDistribution` value `PreferSameNode` is available, which attempts to\nalways route Service connections to an endpoint on the same node as\nthe client. Additionally, `PreferSameZone` is introduced as an alias for\n`PreferClose`.",
+    "markdown": "When the `PreferSameTrafficDistribution` feature gate is enabled, a new\n`trafficDistribution` value `PreferSameNode` is available, which attempts to\nalways route Service connections to an endpoint on the same node as\nthe client. Additionally, `PreferSameZone` is introduced as an alias for\n`PreferClose`. ([#130844](https://github.com/kubernetes/kubernetes/pull/130844), [@danwinship](https://github.com/danwinship)) [SIG API Machinery, Apps, Network and Windows]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6333,7 +6333,7 @@
   },
   "131263": {
     "commit": "0266d3bcb37f6a5e649ae0af7f1bf243938e4d56",
-    "text": "kube-apiserver: Fixes an issue updating the default ServiceCIDR API object and creating dual-stack Service API objects when `--service-cluster-ip-range` flag passed to kube-apiserver is changed from single-stack to dual-stack",
+    "text": "kube-apiserv r: Fixes an issue updating the default ServiceCIDR API object and creating dual-stack Service API objects when `--service-cluster-ip-range` flag passed to kube-apiserver is changed from single-stack to dual-stack",
     "markdown": "kube-apiserver: Fixes an issue updating the default ServiceCIDR API object and creating dual-stack Service API objects when `--service-cluster-ip-range` flag passed to kube-apiserver is changed from single-stack to dual-stack ([#131263](https://github.com/kubernetes/kubernetes/pull/131263), [@aojea](https://github.com/aojea)) [SIG API Machinery, Network and Testing]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
