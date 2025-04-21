@@ -8,7 +8,18 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes 1.33
+# Kubernetes v1.33: Octarine (The Color of Magic)
+
+![Kubernetes v1.33: Octarine (The Color of Magine)](./logo/k8s133-octarine.svg)
+
+The theme for Kubernetes v1.33 is Octarine: The Color of Magic, inspired by Terry Pratchett’s Discworld series. 
+This release highlights the open-source magic that Kubernetes enables across the ecosystem.
+
+Kubernetes v1.33 is a testament to the enduring power of open-source innovation, where hundreds of contributors from 
+around the world work together to create something truly extraordinary. Each release builds upon the other, 
+creating something greater than we could achieve alone.
+
+The release logo was made by [Nina Polshakova](https://www.linkedin.com/in/ninapolshakova/) and [Aaron Ray](https://github.com/GoldenZephyr) using [Inkscape](https://inkscape.org/), an open source vector graphics editor.
 
 #### Links
 
