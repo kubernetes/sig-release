@@ -71,8 +71,8 @@
 - `MergeDefaultEvictionSettings` indicates that defaults for the evictionHard, evictionSoft, evictionSoftGracePeriod, and evictionMinimumReclaim fields should be merged into values specified for those fields in this configuration. Signals specified in this configuration take precedence. Signals not specified in this configuration inherit their defaults. ([#127577](https://github.com/kubernetes/kubernetes/pull/127577), [@vaibhav2107](https://github.com/vaibhav2107)) [SIG API Machinery and Node]
 - New configuration is introduced to the kubelet that allows it to track container images and the list of authentication information that leads to their successful pulls. This data is persisted across reboots of the host and restarts of the kubelet.
   
-  The kubelet ensures any image requiring credential verification is always pulled if authentication information from an image pull is not yet present, thus enforcing authentication / re-authentication. This means an image pull might be attempted even in cases where a pod requests the `IfNotPresent` image pull policy, and might lead to the pod not starting if its pull policy is `Never` and is unable to present authentication information that lead to a previous successful pull of the image it is requesting. ([#128152](https://github.com/kubernetes/kubernetes/pull/128152), [@stlaz](https://github.com/stlaz)) [SIG API Machinery, Architecture, Auth, Node and Testing]
-- Promote JobSuccessPolicy E2E to Conformance ([#130658](https://github.com/kubernetes/kubernetes/pull/130658), [@tenzen-y](https://github.com/tenzen-y)) [SIG API Machinery, Apps, Architecture and Testing]
+  The kubelet ensures any image requiring credential verification is always pulled if authentication information from an image pull is not yet present, thus enforcing authentication / re-authentication. This means an image pull might be attempted even in cases where a pod requests the `IfNotPresent` image pull policy, and might lead to the pod not starting if its pull policy is `Never` and is unable to present authentication information that led to a previous successful pull of the image it is requesting. ([#128152](https://github.com/kubernetes/kubernetes/pull/128152), [@stlaz](https://github.com/stlaz)) [SIG API Machinery, Architecture, Auth, Node and Testing]
+- Promoted JobSuccessPolicy E2E to Conformance ([#130658](https://github.com/kubernetes/kubernetes/pull/130658), [@tenzen-y](https://github.com/tenzen-y)) [SIG API Machinery, Apps, Architecture and Testing]
 - Promoted `NodeInclusionPolicyInPodTopologySpread` to Stable in v1.33 ([#130920](https://github.com/kubernetes/kubernetes/pull/130920), [@kerthcet](https://github.com/kerthcet)) [SIG Apps, Node, Scheduling and Testing]
 - Promoted the `JobSuccessPolicy` to Stable. ([#130536](https://github.com/kubernetes/kubernetes/pull/130536), [@tenzen-y](https://github.com/tenzen-y)) [SIG API Machinery, Apps, Architecture and Testing]
 - Promoted the Job's `JobBackoffLimitPerIndex` feature-gate to stable. ([#130061](https://github.com/kubernetes/kubernetes/pull/130061), [@mimowo](https://github.com/mimowo)) [SIG API Machinery, Apps, Architecture and Testing]
@@ -113,7 +113,7 @@ Distributions or administrators of Kubernetes may want to control that new Servi
   components interpret the same string as referring to different IP addresses
   (as in CVE-2021-29923).
   
-  This tightening applies only to fields in build-in API kinds, and not to
+  This tightening applies only to fields in built-in API kinds, and not to
   custom resource kinds, values in Kubernetes configuration files, or
   command-line arguments.
   
@@ -142,7 +142,7 @@ consistent with typed JSON metadata decoding, rather than dropping all labels an
 - Added a `/statusz` endpoint for kube-scheduler ([#128987](https://github.com/kubernetes/kubernetes/pull/128987), [@Henrywu573](https://github.com/Henrywu573)) [SIG Instrumentation, Scheduling and Testing]
 - Added a mechanism that calculates a digest of etcd and the watch cache every 5 minutes and exposes it as the `apiserver_storage_digest` metric. ([#130475](https://github.com/kubernetes/kubernetes/pull/130475), [@serathius](https://github.com/serathius)) [SIG API Machinery, Instrumentation and Testing]
 - Added a new CLI flag `--emulation-forward-compatible`
-  Added a new cli CLI `--runtime-config-emulation-forward-compatible` ([#130354](https://github.com/kubernetes/kubernetes/pull/130354), [@siyuanfoundation](https://github.com/siyuanfoundation)) [SIG API Machinery, Etcd and Testing]
+  Added a new CLI `--runtime-config-emulation-forward-compatible` ([#130354](https://github.com/kubernetes/kubernetes/pull/130354), [@siyuanfoundation](https://github.com/siyuanfoundation)) [SIG API Machinery, Etcd and Testing]
 - Added a new option `strict-cpu-reservation` for CPU Manager static policy. When this option is enabled, CPU cores in `reservedSystemCPUs` will be strictly used for system daemons and interrupt processing no longer available for any workload. ([#130290](https://github.com/kubernetes/kubernetes/pull/130290), [@psasnal](https://github.com/psasnal)) [SIG Node and Testing]
 - Added an alpha feature gate `OrderedNamespaceDeletion`. When enabled, the pods resources are deleted before all other resources during namespace deletion. ([#130035](https://github.com/kubernetes/kubernetes/pull/130035), [@cici37](https://github.com/cici37)) [SIG API Machinery, Apps and Testing]
 - Added e2e tests for volume group snapshots. ([#128972](https://github.com/kubernetes/kubernetes/pull/128972), [@manishym](https://github.com/manishym)) [SIG Cloud Provider, Storage and Testing]
@@ -232,6 +232,7 @@ unavailable or an error occurs, it falls back to the `autoscaling/v1` API. ([#12
   ensure that they always write out the values in canonical form. ([#130101](https://github.com/kubernetes/kubernetes/pull/130101), [@danwinship](https://github.com/danwinship)) [SIG Apps, Network and Node]
 - `kubeproxy_conntrack_reconciler_deleted_entries_total` metric can be used to track cumulative sum of conntrack flows cleared by reconciler. ([#130204](https://github.com/kubernetes/kubernetes/pull/130204), [@aroradaman](https://github.com/aroradaman))
 - `kubeproxy_conntrack_reconciler_sync_duration_seconds` metric can now be used to track conntrack reconciliation latency. ([#130200](https://github.com/kubernetes/kubernetes/pull/130200), [@aroradaman](https://github.com/aroradaman))
+- The `StorageCapacityScoring` feature gate was added to score nodes by available storage capacity. It's in alpha and disabled by default. The `VolumeCapacityPriority` alpha feature was replaced with this, and the default behavior was changed. The `VolumeCapacityPriority` preferred a node with the least allocatable, but the `StorageCapacityScoring` preferred a node with the maximum allocatable. See [KEP-4049](https://github.com/kubernetes/enhancements/blob/master/keps/sig-storage/4049-storage-capacity-scoring-of-nodes-for-dynamic-provisioning/README.md) for details. ([#128184](https://github.com/kubernetes/kubernetes/pull/128184), [@cupnes](https://github.com/cupnes)) [SIG Scheduling, Storage and Testing]
 
 ### Documentation
 
