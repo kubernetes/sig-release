@@ -1991,29 +1991,6 @@
     ],
     "is_mapped": true
   },
-  "129422": {
-    "commit": "bf403cb9e84e20826da8e654c8b32fe9d4889808",
-    "text": "Kubernetes is now built with Go `1.23.4`.",
-    "markdown": "Kubernetes is now built with Go `1.23.4`. ([#129422](https://github.com/kubernetes/kubernetes/pull/129422), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
-    "author": "cpanato",
-    "author_url": "https://github.com/cpanato",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129422",
-    "pr_number": 129422,
-    "areas": [
-      "test",
-      "release-eng"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "release",
-      "testing"
-    ],
-    "feature": true,
-    "duplicate": true,
-    "is_mapped": true
-  },
   "129450": {
     "commit": "fcc1e9002af912ccfca0e5553bc8b7890b18115a",
     "text": "kubeadm: removed preflight check for nsenter on Linux nodes\nkubeadm: added preflight check for `losetup` on Linux nodes. It's required by kubelet for keeping a block device opened.",
@@ -3159,29 +3136,6 @@
     "feature": true,
     "is_mapped": true
   },
-  "129962": {
-    "commit": "8b1307894d06260f48877740550ac961077e0fa0",
-    "text": "Changed the version of Go that Kubernetes builds against. Kubernetes is now built with Go `1.23.5`.",
-    "markdown": "Changed the version of Go that Kubernetes builds against. Kubernetes is now built with Go `1.23.5`. ([#129962](https://github.com/kubernetes/kubernetes/pull/129962), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
-    "author": "cpanato",
-    "author_url": "https://github.com/cpanato",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129962",
-    "pr_number": 129962,
-    "areas": [
-      "test",
-      "release-eng"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "release",
-      "testing"
-    ],
-    "feature": true,
-    "duplicate": true,
-    "is_mapped": true
-  },
   "129970": {
     "commit": "070f0ad3bdfc17da90defdb45bb644aaf07dd43e",
     "text": "The `resource.k8s.io/v1beta1` API is deprecated and will be removed in 1.36. Use `v1beta2` instead.",
@@ -3665,29 +3619,6 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "is_mapped": true
-  },
-  "130074": {
-    "commit": "77d7f6380071e5719345aa34461c3e4619e0efab",
-    "text": "Kubernetes is now built with Go `1.23.6`",
-    "markdown": "Kubernetes is now built with Go `1.23.6` ([#130074](https://github.com/kubernetes/kubernetes/pull/130074), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
-    "author": "cpanato",
-    "author_url": "https://github.com/cpanato",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130074",
-    "pr_number": 130074,
-    "areas": [
-      "test",
-      "release-eng"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "release",
-      "testing"
-    ],
-    "feature": true,
-    "duplicate": true,
     "is_mapped": true
   },
   "130098": {
