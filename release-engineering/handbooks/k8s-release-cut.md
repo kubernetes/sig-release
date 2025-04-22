@@ -397,6 +397,7 @@ You might wanna ping @release-managers on Slack to speed this process up.
 **After** the Pull Request is merged and **before** starting the official nomock release step, watch [the following Prow Job](https://prow.k8s.io/?job=post-k8sio-image-promo) and wait for it to succeed.
 
 If the job fails, look into the root cause and message the Slack thread. In many cases a rerun is fine (such as 429 too many requests).
+A resolution to this problem is being discussed [here](https://docs.google.com/document/d/1S5NlwOdtXKEWXvdkGRvVTsNip6niyhb52FSNk8-uJiQ/edit?resourcekey=0-IRBLdEtrNfK9e7z1w4y9ng&tab=t.0).
 
 To check the logs after failure, click on the spyglass eye icon, otherwise you can look at the POD logs when the job is running by clicking on the paper icon.
 
