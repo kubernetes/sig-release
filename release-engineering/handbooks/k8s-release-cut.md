@@ -516,6 +516,9 @@ To valorize the release stats required in the release cut issue, run this comman
 krel history --branch master --date-from yyyy-mm-dd 
 
 krel history --branch release-1.xx --date-from yyyy-mm-dd
+
+#example
+krel history --branch release-1.33 --date-from 2025-04-23
 ```
 
 ## 10. Update schedule on k/website
