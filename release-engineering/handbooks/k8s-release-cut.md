@@ -1,4 +1,4 @@
-# Cutting a Kubernetes patch release
+# Cutting a Kubernetes release
 
 A step by step guide for cutting Kubernetes patch releases. At a high-level:
 
