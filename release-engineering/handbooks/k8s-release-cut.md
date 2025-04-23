@@ -248,7 +248,7 @@ If the issue is open you must stop the release process and inform #release-manag
 
 ## 5. Mock stage and Mock release
 
-Mock stages and releases are non-destructive and can be reran upon failure. To begin the mock stage, run the following `krel stage` command (replace the stage with the appropriate "type").
+Mock stages and mock releases are non-destructive and can be reran upon failure. To begin the mock stage, run the following `krel stage` command (replace the stage with the appropriate "type").
 
 Run the following command from within the release repo directory.
 
@@ -310,17 +310,10 @@ krel stage --type official --branch release-1.xx --nomock
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after this no-mock stage step
 
-This also takes about **2 hours**. Once passed, move on to the `kpromo` command
-
-```
-# take the output of the previous command from the logs and copy this command somewhere, do NOT execute this.
-
-# It should look like this:
-krel release --type=alpha|beta|official|release --branch=release-1.xx --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
-```
+This also takes about **2 hours**. Once passed, move on to the `kpromo` command.
 
 > [!CAUTION]
-Do not run the command yet, just copy it somewhere and wait for the image promo to happen first (PR merged + prow job completed).
+Do not run the release command yet, just copy it somewhere and wait for the image promo to happen first (which means the image promo PR gets merged and the prow job has to be completed).
 
 ## 7. Image promotion
 
@@ -332,8 +325,8 @@ The images that need to be promoted depend on the release you're cutting:
 
 - **Alpha or Beta release:** just promote the images for the release you're cutting (e.g. v1.20.0-beta.1)
 - **The first RC (e.g. v1.20.0-rc.0):** promote the images for the RC and for the next minor alpha release (e.g. v1.21.0-alpha.0) in two separate kpromo commands/PRs
-- **The subsequent RCs (e.g. v1.20.0-rc.1):** promote the images for the RC you're cutting (e.g. v1.20.0-rc.0)
-- **A stable release (e.g. v1.20.0):** promote the images for the release you're cutting and for the RC of the next patch release (e.g. v1.20.1-rc.0)
+- **The subsequent RCs (e.g. v1.20.0-rc.1):** promote the images for the RC you're cutting (e.g. v1.20.0-rc.1)
+- **A stable release (e.g. v1.33.0):** promote the images for the release you're cutting (e.g. v1.33.0)
 
 Some examples can be found below:
 
@@ -396,7 +389,7 @@ You might wanna ping @release-managers on Slack to speed this process up.
 > [!CAUTION]
 **After** the Pull Request is merged and **before** starting the official nomock release step, watch [the following Prow Job](https://prow.k8s.io/?job=post-k8sio-image-promo) and wait for it to succeed.
 
-If the job fails, look into the root cause and message the Slack thread. In many cases a rerun is fine (such as 429 too many requests).
+If the job fails, look into the root cause and message the Slack thread. In many cases a rerun is fine (such as 429 too many requests or limit quota exceeded).
 A resolution to this problem is being discussed [here](https://docs.google.com/document/d/1S5NlwOdtXKEWXvdkGRvVTsNip6niyhb52FSNk8-uJiQ/edit?resourcekey=0-IRBLdEtrNfK9e7z1w4y9ng&tab=t.0).
 
 To check the logs after failure, click on the spyglass eye icon, otherwise you can look at the POD logs when the job is running by clicking on the paper icon.
@@ -420,10 +413,10 @@ Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) 
 
 ## 8.  No-mock release
 
-You should have copied the no mock release command output from the nomock stage previously, now you can run the release:
+You should have copied the nomock release command output from the nomock stage previously run, now you can execute the release command as follows:
 
 ```
-krel release --nomock --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
+krel release --type=alpha|beta|official|release --branch=release-1.xx --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
 ```
 
 > [!NOTE]
