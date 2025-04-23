@@ -366,7 +366,7 @@ kpromo pr --fork=<your-username> --tag="v1.xx.yy-alpha|beta|rc-z" --interactive=
 `FATA growing manifest with image filter [] and tag [1.29.0-alpha.1]: no images survived filtering; double-check your --filter_* flag(s) for typos`
 means you forgot the letter "v" in the tag parameter.
 
-Once run the command its output should look like this:
+Once you've run the command its output should look like this:
 
 ```
 INFO Successfully created PR #xxxx                
