@@ -520,9 +520,14 @@ krel history --branch release-1.33 --date-from 2025-04-23
 
 See [here](post-rc0-release-tasks.md) for the complete list of post rc.0 release tasks.
 
-It resides in a different document to mainain bite-sized SRE style handbooks.
+Such list resides in a different document to mainain this one in a bite-sized SRE style format.
 
-### [Patch Releases only] Update schedule on k/website
+### [Stable only] Code Thaw
+
+Code thaw means you need to lift the code freeze, [here](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md#code-thaw) 
+are the docs on how to do it, with an example PR.
+
+### [Patch only] Update schedule on k/website
 
 > [!NOTE]
 Only for patch releases, 1.x.y not for alpha, beta, rc or official.
