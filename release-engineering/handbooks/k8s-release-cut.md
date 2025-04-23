@@ -411,7 +411,7 @@ If the job is stuck in "triggered" (empty clock yellow icon), especially after a
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after the image promotion step
 
-## 8.  No-mock release
+## 8. No-mock release
 
 You should have copied the nomock release command output from the nomock stage previously run, now you can execute the release command as follows:
 
@@ -514,10 +514,18 @@ krel history --branch release-1.xx --date-from yyyy-mm-dd
 krel history --branch release-1.33 --date-from 2025-04-23
 ```
 
-## 10. Update schedule on k/website
+## 10. Post release tasks
+
+### [RC.0 only] Post rc.0 release tasks
+
+See [here](post-rc0-release-tasks.md) for the complete list of post rc.0 release tasks.
+
+It resides in a different document to mainain bite-sized SRE style handbooks.
+
+### [Patch Releases only] Update schedule on k/website
 
 > [!NOTE]
-**Only for patch releases, 1.x.y not for alpha, beta, rc, etc. **
+Only for patch releases, 1.x.y not for alpha, beta, rc or official.
 
 You need to update the release schedule on the official Kubernetes website through schedule-builder, here is how:
 
