@@ -777,7 +777,7 @@ Update the `milestoneapplier` plugin configs for the following repos to the **_n
 
 Example PRs:
 
-- [1.18](https://github.com/kubernetes/test-infra/pull/16821)
+- [1.33](https://github.com/kubernetes/test-infra/pull/34693)
 
 ### Branch Fast Forward
 
