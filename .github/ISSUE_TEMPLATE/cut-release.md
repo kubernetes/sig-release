@@ -4,7 +4,7 @@ about: Create a tracking issue for a release cut
 title: Cut v1.x.y-{alpha,beta,rc}.z release
 labels: sig/release, area/release-eng
 ---
-## Scheduled to happen: <!-- Tue, 2021-MM-DD -->
+## Scheduled to happen: <!-- Tue, YYYY-MM-DD -->
 
 _Note for v1.x.0 releases: Having this issue in open state will stop the
 periodic run of [`krel fast-forward`](https://testgrid.k8s.io/sig-release-releng-blocking#git-repo-kubernetes-fast-forward)
@@ -81,13 +81,14 @@ Help? Ring @release-managers on slack!
   - [ ] Release
 - NoMock Run
   - [ ] Stage
-  - [ ] Image Promotion: <!-- Paste Pull Request URL here -->
+  - [ ] Image Promotion PR: <!-- Paste Pull Request URL here -->
   - [ ] Release
-- [ ] Notify #release-management: <!-- Paste link to slack -->
-- [ ] Send notification: <!-- Paste link to kubernetes-dev email -->
-- [ ] Update [`schedule.yaml` file](https://github.com/kubernetes/website/blob/main/data/releases/schedule.yaml) with the latest release using [`schedule-builder`](https://github.com/kubernetes/release/tree/master/cmd/schedule-builder) <!-- Paste Pull Request URL here -->
-- [ ] Collect metrics and add them to the `Release steps` table below
-<!-- ONLY FOR RC.0 RELEASE - [ ] Finish post-release branch creation tasks -->
+- [ ] Send email notification: <!-- Paste link to kubernetes-dev email -->
+- [ ] Notify #release-management on Slack: <!-- Paste link to slack -->
+- [ ] Update [`schedule.yaml` file](https://github.com/kubernetes/website/blob/main/data/releases/schedule.yaml) with the latest release using [`schedule-builder`](https://github.com/kubernetes/release/tree/master/cmd/schedule-builder) (_patch releases only_) <!-- Paste Pull Request URL here -->
+- [ ] Collect metrics and add them to the `Release steps` table below through `krel history --branch release-1.xx --date-from yyyy-mm-dd` (current date)
+<!-- ONLY FOR RC.0 RELEASES - [ ] Finish post-release branch creation tasks -->
+<!-- ONLY FOR STABLE RELEASES - [ ] Code Thaw PR merged -->
 
 ## Release Tools Version
 
