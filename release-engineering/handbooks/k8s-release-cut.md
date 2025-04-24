@@ -317,50 +317,7 @@ Do not run the release command yet, just copy it somewhere and wait for the imag
 
 ## 7. Image promotion
 
-Promote the images (`alpha`, `beta` or `rc`) using `kpromo`. The tool will automatically create / open a PR with the images and tags properly promoted.
-
-### Which image should be promoted?
-
-The images that need to be promoted depend on the release you're cutting:
-
-- **Alpha or Beta release:** just promote the images for the release you're cutting (e.g. v1.20.0-beta.1)
-- **The first RC (e.g. v1.20.0-rc.0):** promote the images for the RC and for the next minor alpha release (e.g. v1.21.0-alpha.0) in two separate kpromo commands/PRs
-- **The subsequent RCs (e.g. v1.20.0-rc.1):** promote the images for the RC you're cutting (e.g. v1.20.0-rc.1)
-- **A stable release (e.g. v1.33.0):** promote the images for the release you're cutting (e.g. v1.33.0)
-
-Some examples can be found below:
-
-> [!WARNING]
-Even if it's possible to open a single PR for multiple promos it is not recommended due to the extreme amount of resources used by the double promotion job. Promo one image at a time.
-
-```
-kpromo pr --fork=jimangel --tag="v1.29.0-alpha.1"
-
-# RC
-kpromo pr --fork=jimangel --tag="v1.32.0-rc.1"
-#or
-kpromo pr --fork=jimangel --tag="v1.29.0-rc.0" --tag="v1.30.0-alpha.0"
-```
-
-### Run kpromo (opens the PR)
-
-> [!IMPORTANT]
-If promoting the first release candidate (rc), include the next release alpha as follows.
-
-```
-kpromo pr --fork=<your-username> --tag="v1.xx.yy-rc-z" --tag="v1.xx+1.yy-alpha-0"
-```
-
-> [!TIP]
-Multiple tags can be specified with the `kpromo` pr command
-
-This is the standard command to be run ([source](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md#promoting-images)):
-
-```
-# --interactive=true asks confirmation before every step, highly recommended
-
-kpromo pr --fork=<your-username> --tag="v1.xx.yy-alpha|beta|rc-z" --interactive=true 
-```
+Complete docs can be found [here](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md)
 
  > [!WARNING]
 `FATA growing manifest with image filter [] and tag [1.29.0-alpha.1]: no images survived filtering; double-check your --filter_* flag(s) for typos`
@@ -373,12 +330,16 @@ INFO Successfully created PR #xxxx
 INFO Successfully created PR: https://github.com/kubernetes/k8s.io/pull/xxxx 
 ```
 
-### Merge PR
+### Merge promo PR
 
 Wait for the generated PR to be merged (after approval and LGTM).
 You might wanna ping @release-managers on Slack to speed this process up.
 
-**The PR is not blocked by anything but approvals / review.**
+**The PR has no dependencies outside of approvals / review.**
+
+> [!CAUTION]
+In case a blocking test goes red during the release cut, you should keep the PR held and reach a consesus with @release-managers that the promo can continue.
+e.g. if a test went red for infra flakyness "Node not ready" it's probably ok to continue, but it's always better to double check.
 
 > [Example PR](https://github.com/kubernetes/k8s.io/pull/3024).
 
@@ -555,5 +516,5 @@ git push -u origin schedule-updates-oct-2024
 
 ## Cleanup
 
-Close out related issues, open new issues if you find any, and ask Google admins to revoke your personal access to GCP if it is no longer required.
+Close the release cut issue and possibly related issues, open new issues if you find any docs or feature missing, and ask Google admins to revoke your personal access to GCP if it is no longer required.
 You might want to delete your GitHub access token too.
