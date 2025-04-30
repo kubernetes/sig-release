@@ -100,7 +100,7 @@ In the event that a subteam loses a shadow, we might ask the paired Lead Shadow 
   - Enhancements tracking spreadsheet: `http://bit.ly/k8sXYY-enhancement-tracking`
   - Merged PRs with release notes: `http://bit.ly/k8sXYY-relnotes`
   - Use the same conventions for additional documents
-- Burndown meetings happen at 10AM Pacific Time, and you invite the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`) to them.
+- Burndown meetings happen at 10AM Pacific Time, and you invite the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`) to them. Make sure to use UTC time for the meeting.
 - Burndown communications happen on the [kubernetes-sig-release] mailing list.
 - Enhancement exceptions are to be reviewed by the owning SIG and brought to the Release Team for assessment of risk, especially across the project
 - General notification regarding the release should go to the [kubernetes-dev] and [kubernetes-sig-leads] lists, and this should automatically be captured into the [Kubernetes Discourse site][discourse].
