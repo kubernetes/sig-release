@@ -168,7 +168,10 @@ cc @release-team-leads
 ## Working with the Release Team Calendar
 
 To get access to the [release team calendar](https://calendar.google.com/calendar/embed?src=kipmnllvl17vl9m98jen6ujcrs%40group.calendar.google.com) reach out to a SIG Release tech lead or chair.
-Its useful to add major events of the release cycle to the calendar e.g. Enhancements Freeze, Code Freeze and Test Freeze.
+It's useful to add major events of the release cycle to the calendar e.g. Enhancements Freeze, Code Freeze and Test Freeze.
+
+It is also useful to add estimated release cut dates to the calendar e.g. 1.XX.0-alpha.1. Cuts are typically scheduled for 
+Wednesdays, but can be moved to a different day if needed or based on the Branch Manager's availability.
 
 **Additional tips:**    
 - Add a calendar entry for the time period before Enhancements Freeze with the title [1.xx] Enhancements Freeze coming on HH:mm PDT Month Day, Year
