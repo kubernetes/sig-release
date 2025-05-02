@@ -100,7 +100,7 @@ In the event that a subteam loses a shadow, we might ask the paired Lead Shadow 
   - Enhancements tracking spreadsheet: `http://bit.ly/k8sXYY-enhancement-tracking`
   - Merged PRs with release notes: `http://bit.ly/k8sXYY-relnotes`
   - Use the same conventions for additional documents
-- Burndown meetings happen at 10AM Pacific Time, and you invite the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`) to them.
+- Burndown meetings happen at 10AM Pacific Time, and you invite the Kubernetes Release calendar (`agst.us_b07popf7t4avmt4km7eq5tk5ao@group.calendar.google.com`) to them. Make sure to use UTC time for the meeting.
 - Burndown communications happen on the [kubernetes-sig-release] mailing list.
 - Enhancement exceptions are to be reviewed by the owning SIG and brought to the Release Team for assessment of risk, especially across the project
 - General notification regarding the release should go to the [kubernetes-dev] and [kubernetes-sig-leads] lists, and this should automatically be captured into the [Kubernetes Discourse site][discourse].
@@ -168,7 +168,10 @@ cc @release-team-leads
 ## Working with the Release Team Calendar
 
 To get access to the [release team calendar](https://calendar.google.com/calendar/embed?src=kipmnllvl17vl9m98jen6ujcrs%40group.calendar.google.com) reach out to a SIG Release tech lead or chair.
-Its useful to add major events of the release cycle to the calendar e.g. Enhancements Freeze, Code Freeze and Test Freeze.
+It's useful to add major events of the release cycle to the calendar e.g. Enhancements Freeze, Code Freeze and Test Freeze.
+
+It is also useful to add estimated release cut dates to the calendar e.g. 1.XX.0-alpha.1. Cuts are typically scheduled for 
+Wednesdays, but can be moved to a different day if needed or based on the Branch Manager's availability.
 
 **Additional tips:**    
 - Add a calendar entry for the time period before Enhancements Freeze with the title [1.xx] Enhancements Freeze coming on HH:mm PDT Month Day, Year
