@@ -97,7 +97,7 @@ With this one, you'd need to update the following placeholders:
 ## "ready for review" deadline reminder
 This is a message to send Feature Blog authors in their Feature Blog PR if they haven't marked it as "ready for review" days before the deadline.
 ```
-Hi @xx 👋 -- this is YOURNAME (@your_github_id) from the x.yy Communications Team!
+Hi @xx 👋 -- this is YOURNAME (@your_github_id) from the vX.yy Communications Team!
 
 Just a friendly reminder that we are approaching the feature blog "ready for review" deadline: **<<BLOG_READY>> WEEKDAY, DAY MONTH**. By this deadline, your blog should be complete with all content finalized for review. If you are still working on it, please prioritize finishing it by the deadline mentioned above.
 
