@@ -107,5 +107,5 @@ In this template, you'd need to update the following placeholders:
 - `@xx`: Mention Feature Blog PR author(s)
 - `YOURNAME`: Your name, as you prefer
 - `your_github_id`: Your GitHub ID
-- `x.yy`: The upcoming Kubernetes version, such as 1.33, 1.34, etc.
+- `vX.yy`: The upcoming Kubernetes version, such as v1.33, v1.34, etc.
 - `<<BLOG_READY>> WEEKDAY, DAY MONTH`: Deadline for the Feature Blogs being ready for review, which is usually on week 13
