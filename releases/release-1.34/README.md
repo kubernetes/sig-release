@@ -39,9 +39,9 @@ description: |
 The v1.34 release cycle is as follows:
 
 - **Monday 19th May 2025**: Week 1 — Release cycle begins
-- **Thursday 12th June 2025**: Week
-  4 — [Production Readiness Freeze][Production Readiness Freeze]
-- **[02:00 UTC Friday 20th June 2025 / 19:00 PST Thursday 19th June 2025](https://everytimezone.com/s/37be6888)**:
+- **Thursday 12th June 2025**:
+  Week 4 — [Production Readiness Freeze][Production Readiness Freeze]
+- **[21:00 UTC Friday 20th June 2025 / 14:00 PST Friday 20th June 2025](https://everytimezone.com/s/a17d0bdd)**:
   Week 5 — [Enhancements Freeze][Enhancements Freeze]
 - **[02:00 UTC Friday 11th July 2025 / 19:00 PST Thursday 10th July 2025](https://everytimezone.com/s/dcc4aad9)**:
   Week 8 — [Feature blog freeze][Feature blog freeze]
@@ -62,7 +62,7 @@ The v1.34 release cycle is as follows:
 | Start Release Notes Draft                                                              | Docs Lead                     | Wednesday 4th June 2025                                                                                         | week 3   |                                                                          |
 | v1.34.0-alpha.1 released                                                               | Branch Manager                | Wednesday 11th June 2025                                                                                        | week 4   |                                                                          |
 | **Begin [Production Readiness Freeze]**                                                | Enhancements Lead             | Thursday 12th June 2025                                                                                         | week 4   |                                                                          |
-| **Begin [Enhancements Freeze]**                                                        | Enhancements Lead             | [02:00 UTC Friday 20th June 2025 / 19:00 PST Thursday 19th June 2025](https://everytimezone.com/s/37be6888)     | week 5   |                                                                          |
+| **Begin [Enhancements Freeze]**                                                        | Enhancements Lead             | [21:00 UTC Friday 20th June 2025 / 14:00 PST Friday 20th June 2025](https://everytimezone.com/s/a17d0bdd)       | week 5   |                                                                          |
 | v1.34.0-alpha.2 released                                                               | Branch Manager                | Wednesday 25th June 2025                                                                                        | week 6   |                                                                          |
 | Docs deadline — Open placeholder PRs                                                   | Docs Lead                     | Thursday 3rd July 2025                                                                                          | week 7   |                                                                          |
 | Call for [Exceptions][Exception]                                                       | Lead                          | Monday 7th July 2025                                                                                            | week 8   |                                                                          |
