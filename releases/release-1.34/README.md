@@ -88,6 +88,7 @@ The v1.34 release cycle is as follows:
 | **v1.34.0 released**                                                                   | Branch Manager                | Wednesday 27th August 2025                                                                                      | week 15  |                                                                          |
 | Release blog published                                                                 | Comms                         | Wednesday 27th August 2025                                                                                      | week 15  |                                                                          |
 | [Thaw]                                                                                 | Branch Manager                | Wednesday 27th August 2025                                                                                      | week 15  |                                                                          |
+| Feature blog publication starts                                                        | Comms                         | Thursday 28th August 2025                                                                                       | week 15  |                                                                          |
 
 ## Phases
 
