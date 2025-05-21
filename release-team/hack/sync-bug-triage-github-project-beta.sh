@@ -48,20 +48,8 @@ milestone_pr_ids=()
 
 ## Function definitions
 
-function get_field_ids_from_github_beta_project() {
-    if [ "$1" == "project-id" ]
-    then
-        query='.data.organization.projectV2.id'
-    elif [ "$1" == "type-id" ]
-    then
-        query='.data.organization.projectV2.fields.nodes[] | select(.name== "Type") | .id'
-    elif [ "$1" == "issue-id" ]
-    then
-        query='.data.organization.projectV2.fields.nodes[] | select(.name== "Type") | .options[] | select(.name== "Issue") | .id'
-    # for "pr-id"
-    else
-        query='.data.organization.projectV2.fields.nodes[] | select(.name== "Type") | .options[] | select(.name== "PR") | .id'
-    fi
+function get_project_id_from_github_beta_project() {
+    query='.data.organization.projectV2.id'
 
     ID="$( gh api graphql -f query='
                     query($org: String!, $number: Int!) {
@@ -88,30 +76,6 @@ function get_field_ids_from_github_beta_project() {
                     }
                     }' -f org="${ORGANIZATION}" -F number="${PROJECT_NUMBER}" --jq "$query")"
     echo "$ID"
-}
-
-
-function add_items_to_github_beta_project {
-    	    gh api graphql -f query='
-                    mutation (
-                        $project: ID!
-                        $item: ID!
-                        $type_field: ID!
-                        $option_id: String!
-                    ) {
-                        set_issue_type: updateProjectV2ItemFieldValue(input: {
-                            projectId: $project
-                            itemId: $item
-                            fieldId: $type_field
-                            value: {
-                                singleSelectOptionId: $option_id
-                            }
-                        }) {
-                            projectV2Item {
-                                id
-                            }
-                        }
-                    }' -f project="${PROJECT_ID}" -f item="${1}"  -f type_field="${TYPE_FIELD_ID}" -f option_id="${2}" --silent
 }
 
 
@@ -191,10 +155,7 @@ done
 ## Fetch Project metadata
 echo -e "[INFO] Getting metadata for the Bug Triage GitHub Beta Project with ID: ${PROJECT_NUMBER}"
 
-PROJECT_ID=$( get_field_ids_from_github_beta_project "project-id")
-TYPE_FIELD_ID=$( get_field_ids_from_github_beta_project "type-id")
-ISSUE_OPTION_ID=$( get_field_ids_from_github_beta_project "issue-id")
-PR_OPTION_ID=$( get_field_ids_from_github_beta_project "pr-id")
+PROJECT_ID=$( get_project_id_from_github_beta_project)
 
 
 ## Add data to the Project Board
@@ -212,8 +173,6 @@ do
                			}
               		}
             	}' -f project="${PROJECT_ID}" -f issue="${issue_id}" --jq '.data.addProjectV2ItemById.item.id')"
-
-    		add_items_to_github_beta_project "${item_id}" "${ISSUE_OPTION_ID}"
 	fi
 done
 
@@ -231,8 +190,6 @@ do
                		  	}
               		}
             	}' -f project="${PROJECT_ID}" -f pr="${pr_id}" --jq '.data.addProjectV2ItemById.item.id')"
-
-	    	add_items_to_github_beta_project "${item_id}" "${PR_OPTION_ID}"
 	fi
 done
 
