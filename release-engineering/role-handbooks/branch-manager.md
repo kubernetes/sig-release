@@ -394,7 +394,7 @@ Before run the `official release step` please refer to the [Image Promotion docu
 
 To stage a new official release, simply run `krel stage --type=official
 --branch=release-x.y`. The same applies to `krel release --build-version=…
---type=official --brancH=release-x.y`.
+--type=official --branch=release-x.y`.
 
 In addition to `v1.18.n` this will also build and stage the subsequent patch's
 `rc.0`, in this example `v1.18.(n+1)-rc.0`. Similar to [creating a new branch](#branch-creation), the staging step will take about twice as long, the
