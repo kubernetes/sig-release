@@ -1,0 +1,15 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+    - Vyom-Yadav            # v1.34 Release Team Lead
+    - fsmunoz               # v1.34 Emeritus Advisor
+    - rytswd                # v1.34 Release Team Lead Shadow
+    - wendy-ha18            # v1.34 Release Team Lead Shadow
+    - chanieljdan           # v1.34 Release Team Lead Shadow
+    - sreeram-venkitesh     # v1.34 Release Team Lead Shadow
+
+reviewers:
+    - aibarbetta            # v1.34 Communications Lead
+    - michellengnx          # v1.34 Docs Lead
+    - jenshu                # v1.34 Enhancements Lead
+    - Rajalakshmi-Girish    # v1.34 Release Signal Lead
