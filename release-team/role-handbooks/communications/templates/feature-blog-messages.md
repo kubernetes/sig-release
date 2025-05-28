@@ -1,4 +1,6 @@
-# Initial Reach-out
+# Feature Blog Opt-in
+
+## Initial Reach-out
 
 This is a message to send to enhancement owners to opt in to write a feature blog for their enhancement, it should be sent on the KEP issue.
 After this message is sent, the Comms team will follow up with the enhancement owner to help them keep in mind the timeline for the feature blog, every 1-2 weeks.
@@ -64,7 +66,7 @@ With this one, you'd need to update the following placeholders:
   - `<<BLOG_READY>> WEEKDAY, DAY MONTH`: Deadline for the Feature Blogs being ready for review, which is usually on week 13
 - `LINK`: Add a link to the release document, such as `https://github.com/kubernetes/sig-release/tree/master/releases/release-1.33#timeline`
 
-# Follow-up
+## Follow-up
 
 ```
 Hi @xx 👋, x.yy Communications Team here again!
@@ -90,3 +92,20 @@ With this one, you'd need to update the following placeholders:
   - `<<BLOG_READY>> WEEKDAY, DAY MONTH`: Deadline for the Feature Blogs being ready for review, which is usually on week 13
 - `LINK`: Add a link to the release document, such as `https://github.com/kubernetes/sig-release/tree/master/releases/release-1.33#timeline`
 
+# Feature Blog PR
+
+## "ready for review" deadline reminder
+This is a message to send Feature Blog authors in their Feature Blog PR if they haven't marked it as "ready for review" days before the deadline.
+```
+Hi @xx 👋 -- this is YOURNAME (@your_github_id) from the vX.yy Communications Team!
+
+Just a friendly reminder that we are approaching the feature blog "ready for review" deadline: **<<BLOG_READY>> WEEKDAY, DAY MONTH**. We ask you to have the blog in non-draft state, and all write-up to be complete, so that we can start the blog review from SIG Docs Blog team.
+
+If you have any questions or need help, please don't hesitate to reach out to me or any of the Communications Team members. We are here to help you!
+```
+In this template, you'd need to update the following placeholders:
+- `@xx`: Mention Feature Blog PR author(s)
+- `YOURNAME`: Your name, as you prefer
+- `your_github_id`: Your GitHub ID
+- `vX.yy`: The upcoming Kubernetes version, such as v1.33, v1.34, etc.
+- `<<BLOG_READY>> WEEKDAY, DAY MONTH`: Deadline for the Feature Blogs being ready for review, which is usually on week 13
