@@ -81,7 +81,6 @@ there are 3 types of Kubernetes releases:
 | Enhancements      | [Enhancements Handbook](role-handbooks/enhancements/README.md)     |
 | Release Signal    | [Release Signal Handbook](role-handbooks/release-signal/README.md) |
 | Docs              | [Docs Handbook](role-handbooks/docs/README.md)                     |
-| Release Notes     | [Release Notes Handbook](role-handbooks/release-notes/README.md)   |
 | Communications    | [Communications Handbook](role-handbooks/communications/README.md) |
 
 
