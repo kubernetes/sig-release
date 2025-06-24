@@ -1,0 +1,5 @@
+pr: 132236
+releasenote:
+  text: The validation-gen code generator generated validation code that supported
+    validation ratcheting.
+pr_body: ""

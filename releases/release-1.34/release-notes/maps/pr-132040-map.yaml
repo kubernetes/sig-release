@@ -1,0 +1,5 @@
+pr: 132040
+releasenote:
+  text: Extended the NodePorts scheduling plugin to consider hostPorts used by restartable
+    init containers.
+pr_body: ""

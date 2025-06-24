@@ -1,0 +1,6 @@
+pr: 131495
+releasenote:
+  text: 'kubelet: Fixed a bug that caused an unexpected `NodeResizeError` condition
+    to appear in the PVC status when the CSI driver did not support node volume expansion
+    and the PVC had the `ReadWriteMany` access mode.'
+pr_body: ""

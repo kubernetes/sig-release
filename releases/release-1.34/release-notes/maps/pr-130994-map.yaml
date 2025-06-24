@@ -1,0 +1,5 @@
+pr: 130994
+releasenote:
+  text: Removed an inaccurate statement about requiring ports when the Pod spec `hostNetwork`
+    field was set.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 131525
+releasenote:
+  text: 'kube-apiserver: Defaulted empty `spec.jobTemplate.spec.podFailurePolicy.rules[*].onPodConditions[*].status`
+    fields for CronJob objects as documented, avoiding validation failures during
+    write requests.'
+pr_body: ""

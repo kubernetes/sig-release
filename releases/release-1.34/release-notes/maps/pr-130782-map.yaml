@@ -1,0 +1,5 @@
+pr: 130782
+releasenote:
+  text: 'kubeadm: Fixed an issue where etcd member promotion failed with an error
+    indicating the member was already promoted.'
+pr_body: ""

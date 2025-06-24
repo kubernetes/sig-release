@@ -1,0 +1,5 @@
+pr: 132210
+releasenote:
+  text: By default, binaries like kube-apiserver were built with the `grpcnotrace`
+    tag enabled. Used the `DBG` flag to enable Golang tracing if needed.
+pr_body: ""

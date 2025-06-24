@@ -1,0 +1,4 @@
+pr: 128351
+releasenote:
+  text: Updated `kube-controller-manager` events to support contextual logging.
+pr_body: ""

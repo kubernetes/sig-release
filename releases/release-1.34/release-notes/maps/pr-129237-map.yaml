@@ -1,0 +1,8 @@
+pr: 129237
+releasenote:
+  text: 'kube-apiserver: Added support for disabling caching of authorization webhook
+    decisions in the `--authorization-config` file. The new fields `cacheAuthorizedRequests`
+    and `cacheUnauthorizedRequests` could be set to `false` to prevent caching for
+    authorized or unauthorized requests. See the https://kubernetes.io/docs/reference/access-authn-authz/authorization/#using-configuration-file-for-authorization
+    for more details.'
+pr_body: ""

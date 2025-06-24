@@ -1,0 +1,7 @@
+pr: 132007
+releasenote:
+  text: Updated the HPA controller so that it no longer emitted a `FailedRescale`
+    event if a scale operation initially failed due to a conflict but succeeded after
+    a retry; it now emitted a `SuccessfulRescale` event in this case. A `FailedRescale`
+    event was still emitted if all retries were exhausted.
+pr_body: ""

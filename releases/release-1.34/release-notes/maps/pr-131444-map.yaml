@@ -1,0 +1,4 @@
+pr: 131444
+releasenote:
+  text: 'Bumped the cel-go dependency to v0.25.0. The changeset is available at: https://github.com/google/cel-go/compare/v0.23.2...v0.25.0.'
+pr_body: ""

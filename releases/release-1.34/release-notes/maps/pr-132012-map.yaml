@@ -1,0 +1,4 @@
+pr: 132012
+releasenote:
+  text: Bumped kube-dns to v1.26.4.
+pr_body: ""

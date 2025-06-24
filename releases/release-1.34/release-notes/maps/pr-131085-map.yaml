@@ -1,0 +1,4 @@
+pr: 131085
+releasenote:
+  text: '[cloud-provider] Respected the `exclude-from-external-load-balancers=false` label.'
+pr_body: ""

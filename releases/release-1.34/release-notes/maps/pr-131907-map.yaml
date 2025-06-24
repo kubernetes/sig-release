@@ -1,0 +1,4 @@
+pr: 131907
+releasenote:
+  text: Stopped expanding PVCs annotated with node-expand-not-required.
+pr_body: ""

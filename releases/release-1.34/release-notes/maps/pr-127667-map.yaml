@@ -1,0 +1,7 @@
+pr: 127667
+releasenote:
+  text: 'kube-log-runner: Added the `-log-file-size` parameter to rotate log output
+    into a new file once it reached a certain size. Introduced `-log-file-age` to
+    enable automatic removal of old output files, and `-flush-interval` to support
+    periodic flushing.'
+pr_body: ""

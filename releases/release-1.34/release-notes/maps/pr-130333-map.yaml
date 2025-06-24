@@ -1,0 +1,5 @@
+pr: 130333
+releasenote:
+  text: Fixed a bug in the Job controller that could result in creating unnecessary
+    Pods for Jobs already marked as finished (either successful or failed).
+pr_body: ""

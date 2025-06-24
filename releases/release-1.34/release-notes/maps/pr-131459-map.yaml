@@ -1,0 +1,4 @@
+pr: 131459
+releasenote:
+  text: hack/update-codegen.sh now automatically ensured goimports and protoc.
+pr_body: ""

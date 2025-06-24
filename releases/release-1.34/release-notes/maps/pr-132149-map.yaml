@@ -1,0 +1,4 @@
+pr: 132149
+releasenote:
+  text: Removed support for API streaming from the metadata client’s `List() method`.
+pr_body: ""

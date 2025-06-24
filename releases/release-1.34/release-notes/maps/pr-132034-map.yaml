@@ -1,0 +1,5 @@
+pr: 132034
+releasenote:
+  text: Updated `IsDNS1123SubdomainWithUnderscore` so that, when it returned an error,
+    it also returned the correct regex information (`dns1123SubdomainFmtWithUnderscore`).
+pr_body: ""

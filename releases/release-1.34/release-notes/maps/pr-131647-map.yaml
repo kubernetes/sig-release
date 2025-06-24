@@ -1,0 +1,5 @@
+pr: 131647
+releasenote:
+  text: 'kubeadm: Exposed only the non-deprecated klog flags (-v and -vmodule), in
+    line with KEP https://features.k8s.io/2845.'
+pr_body: ""

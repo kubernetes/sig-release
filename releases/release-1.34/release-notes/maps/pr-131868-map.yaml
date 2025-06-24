@@ -1,0 +1,5 @@
+pr: 131868
+releasenote:
+  text: Stopped expanding the volume on the node if controller-side expansion was
+    already completed.
+pr_body: ""

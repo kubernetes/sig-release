@@ -1,0 +1,4 @@
+pr: 131979
+releasenote:
+  text: Graduated `ResilientWatchCacheInitialization` to GA.
+pr_body: ""

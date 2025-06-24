@@ -1,0 +1,6 @@
+pr: 131968
+releasenote:
+  text: 'DRA kubelet: Simplified recovery from mistakes like scheduling a Pod onto
+    a node where the required driver was not running, as the kubelet no longer unnecessarily
+    blocked Pod deletion.'
+pr_body: ""

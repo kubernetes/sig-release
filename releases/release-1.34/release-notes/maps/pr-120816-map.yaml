@@ -1,0 +1,5 @@
+pr: 120816
+releasenote:
+  text: Reduced the 5s delay before tainting `node.kubernetes.io/unreachable:NoExecute`
+    when a Node became unreachable.
+pr_body: ""

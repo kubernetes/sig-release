@@ -1,0 +1,8 @@
+pr: 131574
+releasenote:
+  text: Added support for CEL expressions with escaped names in the structured authentication
+    config. Using `[...]` to access claims or user data was recommended when names
+    contained characters that would otherwise need escaping. CEL optionals with `?`
+    could be used where has was not applicable — for example, `claims[?"kubernetes.io"]`
+    or `user.extra[?"domain.io/foo"]`.
+pr_body: ""

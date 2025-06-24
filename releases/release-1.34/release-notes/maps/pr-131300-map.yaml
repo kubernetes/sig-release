@@ -1,0 +1,9 @@
+pr: 131300
+releasenote:
+  text: 'kube-apiserver: Promoted the `ExternalServiceAccountTokenSigner` feature
+    to beta, which enabled external signing of service account tokens and fetching
+    of public verifying keys. This was accomplished by enabling the beta `ExternalServiceAccountTokenSigner`
+    feature gate and specifying the `--service-account-signing-endpoint` flag. The
+    flag value could either be the path to a Unix domain socket on the filesystem,
+    or be prefixed with @ to indicate a Unix domain socket in the abstract namespace.'
+pr_body: ""

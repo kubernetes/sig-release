@@ -1,0 +1,5 @@
+pr: 132096
+releasenote:
+  text: DRA kubelet- Updated logging to use `driverName` instead of `pluginName`,
+    aligning with the rest of the Kubernetes components.
+pr_body: ""
