@@ -1,0 +1,25 @@
+# Exception requests in v1.34
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Vyom Yadav ([@Vyom-Yadav](https://github.com/Vyom-Yadav) 
+
+# Enhancements Freeze Exceptions requested in v1.34
+
+enhancementFreeze:
+
+- name: "In-Place Update of Pod Resources"
+  issue: 1287
+  date_requested: 2025-06-20
+  date_reviewed: 2025-06-23
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/MbbxapG9drw"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5368"
+  status: "approved"
+
+- name: "In-Place Pod-Level Resources Resize"
+  issue: 5419
+  date_requested: 2025-06-20
+  date_reviewed: 2025-06-23
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/Bzq0oMkFhzE"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5423"
+  status: "approved"
