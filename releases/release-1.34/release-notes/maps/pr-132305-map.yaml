@@ -1,0 +1,4 @@
+pr: 132305
+releasenote:
+  text: Change Job controller to use the controller UID index for Pod lookups to improve performance.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 131354
+releasenote:
+  text: Corrected the documentation to clarify that `podSelector` is optional and
+    described its default behavior.
+pr_body: ""

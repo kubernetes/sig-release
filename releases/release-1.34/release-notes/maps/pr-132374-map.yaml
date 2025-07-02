@@ -1,0 +1,5 @@
+pr: 132374
+releasenote:
+  text: Fixed API response for `StorageClassList` queries to return a graceful error
+    message, if the provided `ResourceVersion` is too large.
+pr_body: ""
