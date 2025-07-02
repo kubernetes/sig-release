@@ -1,10 +1,4 @@
 pr: 131996
 releasenote:
-  text: |-
-    When adding links which point to resources within git repositories, like
-    KEPs or supporting documentation, please reference a specific commit and avoid
-    linking directly to the master branch. This ensures that links reference a
-    specific point in time, rather than a document that may change over time.
-
-    See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files.
+  text: 'DRA: Starting with Kubernetes 1.34, the alpha-level `resource.k8s.io/admin-access` label has been updated to `resource.kubernetes.io/admin-access`. Admins using the alpha feature and updating from 1.33 can set both labels, upgrade, then remove `resource.k8s.io/admin-access` when no downgrade is going to happen anymore.'
 pr_body: ""
