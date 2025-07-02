@@ -1,0 +1,4 @@
+pr: 132080
+releasenote:
+  text: 'kubeadm: Consistently prefixed errors with error: when printing them.'
+pr_body: ""

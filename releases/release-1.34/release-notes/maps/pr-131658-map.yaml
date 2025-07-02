@@ -1,0 +1,7 @@
+pr: 131658
+releasenote:
+  text: 'kubelet: Extended the `--image-credential-provider-config` flag to accept
+    a directory path in addition to a single file. When a directory was specified,
+    all .json, .yaml, and .yml files in that directory were loaded and merged in lexicographical
+    order.'
+pr_body: ""

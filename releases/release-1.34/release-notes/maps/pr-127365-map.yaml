@@ -1,0 +1,5 @@
+pr: 127365
+releasenote:
+  text: Added a flag to kubectl version to detect whether a client/server version
+    mismatch was outside the officially supported range.
+pr_body: ""

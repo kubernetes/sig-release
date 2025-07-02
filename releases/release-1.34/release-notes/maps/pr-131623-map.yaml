@@ -1,0 +1,5 @@
+pr: 131623
+releasenote:
+  text: Improved the error message shown when a Pod using user namespaces was created
+    on a runtime that did not support user namespaces.
+pr_body: ""

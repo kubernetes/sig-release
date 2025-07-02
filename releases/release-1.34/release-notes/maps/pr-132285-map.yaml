@@ -1,0 +1,4 @@
+pr: 132285
+releasenote:
+  text: Removed support for API streaming from the REST client.
+pr_body: ""

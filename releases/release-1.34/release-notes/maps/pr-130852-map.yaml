@@ -1,0 +1,4 @@
+pr: 130852
+releasenote:
+  text: Migrated `pkg/kubelet/status` to use contextual logging.
+pr_body: ""

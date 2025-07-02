@@ -1,0 +1,5 @@
+pr: 130720
+releasenote:
+  text: The Scheduling Framework exposed `NodeInfos` to the PreFilter plugins. The
+    PreFilter plugins now accepted the `NodeInfo` list from the arguments.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 131741
+releasenote:
+  text: Deprecated the `preferences` field in kubeconfig in favor of `kuberc`.
+pr_body: ""

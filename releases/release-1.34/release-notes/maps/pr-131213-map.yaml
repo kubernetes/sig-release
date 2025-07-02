@@ -1,0 +1,4 @@
+pr: 131213
+releasenote:
+  text: Fixed the `allocatedResourceStatuses` field name mismatch in PVC status validation.
+pr_body: ""

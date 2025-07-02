@@ -1,0 +1,5 @@
+pr: 131493
+releasenote:
+  text: 'kube-apiserver: Fixed OIDC discovery document publishing when external service
+    account token signing was enabled.'
+pr_body: ""

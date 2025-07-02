@@ -1,0 +1,6 @@
+pr: 131844
+releasenote:
+  text: 'kubelet: Closed a loophole that allowed static Pods to reference arbitrary
+    ResourceClaims. Even though these Pods failed to run due to a sanity check, such
+    references are now explicitly disallowed.'
+pr_body: ""

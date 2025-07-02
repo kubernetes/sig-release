@@ -1,0 +1,5 @@
+pr: 131418
+releasenote:
+  text: Checked for newer resize fields when deciding the recovery feature status
+    in the kubelet.
+pr_body: ""

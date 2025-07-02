@@ -1,0 +1,6 @@
+pr: 131818
+releasenote:
+  text: 'kubectl: Graduated kuberc support to beta. A `kuberc` configuration file provided
+    a mechanism for customizing `kubectl` behavior (distinct from kubeconfig, which
+    configures cluster access across different clients).'
+pr_body: ""

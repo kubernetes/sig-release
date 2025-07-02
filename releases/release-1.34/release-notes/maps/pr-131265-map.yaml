@@ -1,0 +1,4 @@
+pr: 131265
+releasenote:
+  text: 'kube-proxy: Checked whether IPv6 was available on Linux before using it.'
+pr_body: ""

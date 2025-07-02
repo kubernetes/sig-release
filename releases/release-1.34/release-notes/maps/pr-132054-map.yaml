@@ -1,0 +1,5 @@
+pr: 132054
+releasenote:
+  text: Promoted the `RelaxedEnvironmentVariableValidation` feature gate to GA and
+    locked it in the enabled state by default.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 131798
+releasenote:
+  text: Promoted the `apiserver_authentication_config_controller_automatic_reloads_total`
+    and `apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds`
+    metrics to BETA.
+pr_body: ""
