@@ -22,4 +22,5 @@ enhancementFreeze:
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/Bzq0oMkFhzE"
   pull_requests:
     - "https://github.com/kubernetes/enhancements/pull/5423"
+    - "https://github.com/kubernetes/enhancements/pull/5432"
   status: "approved"
