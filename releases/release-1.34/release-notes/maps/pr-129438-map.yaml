@@ -1,0 +1,7 @@
+pr: 129438
+releasenote:
+  text: 'kube-apiserver: Each unique set of etcd server overrides specified with `--etcd-servers-overrides`
+    surfaced health checks named `etcd-override-<index>` and `etcd-override-readiness-<index>`.
+    These checks were still excluded by the `?exclude=etcd` and `?exclude=etcd-readiness`
+    directives.'
+pr_body: ""

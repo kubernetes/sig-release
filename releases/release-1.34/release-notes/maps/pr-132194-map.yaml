@@ -1,0 +1,5 @@
+pr: 132194
+releasenote:
+  text: Added a `runtime.ApplyConfiguration` interface implemented by all generated
+    apply configuration types.
+pr_body: ""
