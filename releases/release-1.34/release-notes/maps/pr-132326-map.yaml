@@ -1,0 +1,5 @@
+pr: 132326
+releasenote:
+  text: Removed the `kubernetes.io/initial-events-list-blueprint` annotation from
+    the synthetic "Bookmark" event in watch stream requests.
+pr_body: ""

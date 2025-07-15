@@ -1,0 +1,7 @@
+pr: 130919
+releasenote:
+  text: Added a delay to node updates after kubelet startup. A random offset, based
+    on the configured `nodeStatusReportFrequency`, helped distribute traffic and load
+    from node status updates more evenly over time. The initial status update could
+    occur up to 50% earlier or later than the regular schedule.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 132352
+releasenote:
+  text: Removed the deprecated flag `--wait-interval` for the `ip6tables-legacy-restore`
+    binary.
+pr_body: ""

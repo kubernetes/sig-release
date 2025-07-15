@@ -1,0 +1,5 @@
+pr: 126619
+releasenote:
+  text: Included the namespace in the output of `kubectl delete` for better identification
+    of resources.
+pr_body: ""
