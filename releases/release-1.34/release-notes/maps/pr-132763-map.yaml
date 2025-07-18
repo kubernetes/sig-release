@@ -1,0 +1,5 @@
+pr: 132763
+releasenote:
+  text: Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr`
+    for ./test/e2e and ./test/utils.
+pr_body: ""

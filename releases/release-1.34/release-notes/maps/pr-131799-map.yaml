@@ -1,0 +1,5 @@
+pr: 131799
+releasenote:
+  text: Ensured objects are transformed prior to storage in `SharedInformers` if a
+    transformer is provided and `WatchList` is activated.
+pr_body: ""

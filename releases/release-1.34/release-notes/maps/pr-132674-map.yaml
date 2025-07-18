@@ -1,0 +1,5 @@
+pr: 132674
+releasenote:
+  text: 'Fixed e2e test "[Driver: csi-hostpath] [Testpattern: Dynamic PV (filesystem
+    volmode)] volumeLimits should support volume limits" not to leak Pods and namespaces.'
+pr_body: ""

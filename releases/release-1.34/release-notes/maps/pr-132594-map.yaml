@@ -1,0 +1,7 @@
+pr: 132594
+releasenote:
+  text: 'kubeadm: graduated the kubeadm specific feature gate `WaitForAllControlPlaneComponents`
+    to GA. The feature gate is was locked to always be enabled and on node initialization
+    kubeadm performed a health check for all control plane components and not only
+    the `kube-apiserver`.'
+pr_body: ""

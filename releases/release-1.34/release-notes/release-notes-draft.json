@@ -196,6 +196,34 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
+  "128653": {
+    "commit": "0fe23942fdeabb8f90a252a8eb241f9217177dca",
+    "text": "Removed deprecated gogo protocol definitions from `k8s.io/cri-api` in favor of `google.golang.org/protobuf`.",
+    "markdown": "Removed deprecated gogo protocol definitions from `k8s.io/cri-api` in favor of `google.golang.org/protobuf`. ([#128653](https://github.com/kubernetes/kubernetes/pull/128653), [@saschagrunert](https://github.com/saschagrunert)) [SIG API Machinery, Auth, Instrumentation, Node and Testing]",
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/128653",
+    "pr_number": 128653,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver",
+      "dependency"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "instrumentation",
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "128748": {
     "commit": "82db38a23c7820b1924d89f458fd368023f3980c",
     "text": "Ensured that non-scheduling related errors (e.g., network errors) did not lengthen the Pod scheduling backoff time.",
@@ -240,6 +268,26 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "129373": {
+    "commit": "3ce7034a7f321bdc8223850cc805f01dc9126621",
+    "text": "Added support for `--cpu`, `--memory` flag to `kubectl autoscale`, started deprecating `--cpu-precent`.",
+    "markdown": "Added support for `--cpu`, `--memory` flag to `kubectl autoscale`, started deprecating `--cpu-precent`. ([#129373](https://github.com/kubernetes/kubernetes/pull/129373), [@googs1025](https://github.com/googs1025))",
+    "author": "googs1025",
+    "author_url": "https://github.com/googs1025",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/129373",
+    "pr_number": 129373,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "feature": true,
     "is_mapped": true
   },
   "129438": {
@@ -491,6 +539,22 @@
     ],
     "sigs": [
       "node"
+    ],
+    "is_mapped": true
+  },
+  "130909": {
+    "commit": "66cf6286a8cbd9001d5a52f4db6ee870c0eb369e",
+    "text": "`Statefulset` respected `minReadySeconds`.",
+    "markdown": "`Statefulset` respected `minReadySeconds`. ([#130909](https://github.com/kubernetes/kubernetes/pull/130909), [@Edwinhr716](https://github.com/Edwinhr716))",
+    "author": "Edwinhr716",
+    "author_url": "https://github.com/Edwinhr716",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/130909",
+    "pr_number": 130909,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps"
     ],
     "is_mapped": true
   },
@@ -1372,6 +1436,31 @@
     "feature": true,
     "is_mapped": true
   },
+  "131641": {
+    "commit": "ee012e883f863a141cab35e5a76cbe5d378ad36f",
+    "text": "The new `dra_resource_claims_in_use` kubelet metrics reported active `ResourceClaims`, overall and by driver.",
+    "markdown": "The new `dra_resource_claims_in_use` kubelet metrics reported active `ResourceClaims`, overall and by driver. ([#131641](https://github.com/kubernetes/kubernetes/pull/131641), [@pohly](https://github.com/pohly)) [SIG Architecture, Instrumentation, Node and Testing]",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/131641",
+    "pr_number": 131641,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "architecture",
+      "instrumentation",
+      "node",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "is_mapped": true
+  },
   "131647": {
     "commit": "a02806d8cd5efbedb886285a314bd569b2fc828f",
     "text": "kubeadm: Exposed only the non-deprecated klog flags (-v and -vmodule), in line with KEP https://features.k8s.io/2845.",
@@ -1617,6 +1706,28 @@
     "duplicate": true,
     "is_mapped": true
   },
+  "131790": {
+    "commit": "a9841ca3b31886b51ba14b56ea88610709c752f1",
+    "text": "Added `podSpec` validation for creating `StatefulSet`",
+    "markdown": "Added `podSpec` validation for creating `StatefulSet` ([#131790](https://github.com/kubernetes/kubernetes/pull/131790), [@chengjoey](https://github.com/chengjoey)) [SIG Apps, Etcd and Testing]",
+    "author": "chengjoey",
+    "author_url": "https://github.com/chengjoey",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/131790",
+    "pr_number": 131790,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps",
+      "etcd",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
   "131798": {
     "commit": "d70229fac7c2aec4e6a69e0783fa0860a90e1144",
     "text": "Promoted the `apiserver_authentication_config_controller_automatic_reloads_total` and `apiserver_authentication_config_controller_automatic_reload_last_timestamp_seconds` metrics to BETA.",
@@ -1645,6 +1756,22 @@
       "instrumentation"
     ],
     "duplicate": true,
+    "is_mapped": true
+  },
+  "131799": {
+    "commit": "3f0a1c6c7f02f33649e58996408b1501fce3c0ee",
+    "text": "Ensured objects are transformed prior to storage in `SharedInformers` if a transformer is provided and `WatchList` is activated.",
+    "markdown": "Ensured objects are transformed prior to storage in `SharedInformers` if a transformer is provided and `WatchList` is activated. ([#131799](https://github.com/kubernetes/kubernetes/pull/131799), [@valerian-roche](https://github.com/valerian-roche))",
+    "author": "valerian-roche",
+    "author_url": "https://github.com/valerian-roche",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/131799",
+    "pr_number": 131799,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
     "is_mapped": true
   },
   "131818": {
@@ -1694,6 +1821,30 @@
     "sigs": [
       "apps"
     ],
+    "is_mapped": true
+  },
+  "131837": {
+    "commit": "b7c9333f5c050af2d48b08b369681ec863e5084c",
+    "text": "Static pods that reference API objects have been denied admission by the kubelet so that static pods would not be silently running even after the mirror pod creation fails.",
+    "markdown": "Static pods that reference API objects have been denied admission by the kubelet so that static pods would not be silently running even after the mirror pod creation fails. ([#131837](https://github.com/kubernetes/kubernetes/pull/131837), [@sreeram-venkitesh](https://github.com/sreeram-venkitesh)) [SIG Auth, Node and Testing]",
+    "author": "sreeram-venkitesh",
+    "author_url": "https://github.com/sreeram-venkitesh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/131837",
+    "pr_number": 131837,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "auth",
+      "node",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
     "is_mapped": true
   },
   "131842": {
@@ -2070,6 +2221,28 @@
     ],
     "feature": true
   },
+  "131992": {
+    "commit": "6720f62d828efc7ca55647c42e98079baa74dbb2",
+    "text": "Deprecated `StreamingConnectionIdleTimeout` field of the kubelet config.",
+    "markdown": "Deprecated `StreamingConnectionIdleTimeout` field of the kubelet config. ([#131992](https://github.com/kubernetes/kubernetes/pull/131992), [@lalitc375](https://github.com/lalitc375))",
+    "author": "lalitc375",
+    "author_url": "https://github.com/lalitc375",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/131992",
+    "pr_number": 131992,
+    "areas": [
+      "kubelet",
+      "code-generation"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
   "131996": {
     "commit": "0731167a993018340e893b17ff08fd41d11d2e1f",
     "text": "DRA: Starting with Kubernetes 1.34, the alpha-level `resource.k8s.io/admin-access` label has been updated to `resource.kubernetes.io/admin-access`. Admins using the alpha feature and updating from 1.33 can set both labels, upgrade, then remove `resource.k8s.io/admin-access` when no downgrade is going to happen anymore.",
@@ -2262,6 +2435,50 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
+  "132058": {
+    "commit": "dcefe0ef41113324a4e4e43606f868a0858c55a6",
+    "text": "DRA kubelet: Fixed the kubelet to also clean up `ResourceSlices` in some additional failure scenarios (driver was removed forcibly or crashed and did not restart).",
+    "markdown": "DRA kubelet: Fixed the kubelet to also clean up `ResourceSlices` in some additional failure scenarios (driver was removed forcibly or crashed and did not restart). ([#132058](https://github.com/kubernetes/kubernetes/pull/132058), [@pohly](https://github.com/pohly)) [SIG Node and Testing]",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132058",
+    "pr_number": 132058,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132065": {
+    "commit": "1e59323e60e9565098dfc4014cbdfb0e67ab5e11",
+    "text": "Fixed the bug when swap related metrics were not available in `/metrics/resource` endpoint.",
+    "markdown": "Fixed the bug when swap related metrics were not available in `/metrics/resource` endpoint. ([#132065](https://github.com/kubernetes/kubernetes/pull/132065), [@yuanwang04](https://github.com/yuanwang04)) [SIG Node and Testing]",
+    "author": "yuanwang04",
+    "author_url": "https://github.com/yuanwang04",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132065",
+    "pr_number": 132065,
+    "areas": [
+      "test",
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true
+  },
   "132080": {
     "commit": "08ee8bde594a42bc1a222c9fd25726352a1e6049",
     "text": "kubeadm: Consistently prefixed errors with error: when printing them.",
@@ -2281,6 +2498,29 @@
       "cluster-lifecycle"
     ],
     "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132087": {
+    "commit": "2ee568260ff50064a5b7e46bc53d216edff2c640",
+    "text": "Types: Code and Status moved from pkg/scheduler/framework to staging repo.\nUsers should update import path for these types from `k8s.io/kubernetes/pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework`",
+    "markdown": "Types: Code and Status moved from pkg/scheduler/framework to staging repo.\n  Users should update import path for these types from `k8s.io/kubernetes/pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework` ([#132087](https://github.com/kubernetes/kubernetes/pull/132087), [@ania-borowiec](https://github.com/ania-borowiec)) [SIG Node, Scheduling, Storage and Testing]",
+    "author": "ania-borowiec",
+    "author_url": "https://github.com/ania-borowiec",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132087",
+    "pr_number": 132087,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node",
+      "scheduling",
+      "storage",
+      "testing"
+    ],
+    "duplicate": true,
     "is_mapped": true
   },
   "132096": {
@@ -2479,6 +2719,29 @@
     "sigs": [
       "node"
     ]
+  },
+  "132190": {
+    "commit": "00d375050338df847285c0a12bbd90c328d0e707",
+    "text": "Types: `ClusterEvent`, `ActionType`, `EventResource`, `ClusterEventWithHint`, `QueueingHint` and `QueueingHintFn` moved from `pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework`.",
+    "markdown": "Types: `ClusterEvent`, `ActionType`, `EventResource`, `ClusterEventWithHint`, `QueueingHint` and `QueueingHintFn` moved from `pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework`. ([#132190](https://github.com/kubernetes/kubernetes/pull/132190), [@ania-borowiec](https://github.com/ania-borowiec)) [SIG Node, Scheduling, Storage and Testing]",
+    "author": "ania-borowiec",
+    "author_url": "https://github.com/ania-borowiec",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132190",
+    "pr_number": 132190,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node",
+      "scheduling",
+      "storage",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
   },
   "132194": {
     "commit": "7b04d7faefcc28a90fb092e789abda467b086403",
@@ -2700,6 +2963,32 @@
       "cluster-lifecycle"
     ]
   },
+  "132284": {
+    "commit": "c6539bc785f083e3770bc00e5124c9876c45a508",
+    "text": "Updated etcd version to v3.6.1",
+    "markdown": "Updated etcd version to v3.6.1 ([#132284](https://github.com/kubernetes/kubernetes/pull/132284), [@ArkaSaha30](https://github.com/ArkaSaha30)) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]",
+    "author": "ArkaSaha30",
+    "author_url": "https://github.com/ArkaSaha30",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132284",
+    "pr_number": 132284,
+    "areas": [
+      "test",
+      "provider/gcp",
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cloud-provider",
+      "cluster-lifecycle",
+      "etcd",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
   "132285": {
     "commit": "c6777da47d1f9e93585cf23363da5c393eb7011a",
     "text": "Removed support for API streaming from the REST client.",
@@ -2790,6 +3079,46 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
+  "132339": {
+    "commit": "9fbd2dae144d21181d441141fbd33fea02ef8f27",
+    "text": "When `RelaxedServiceNameValidation` feature gate is enabled, the \nnames of new Services names are validation with `NameIsDNSLabel()`,\nrelaxing the  pre-existing validation.",
+    "markdown": "When `RelaxedServiceNameValidation` feature gate is enabled, the \n  names of new Services names are validation with `NameIsDNSLabel()`,\n  relaxing the  pre-existing validation. ([#132339](https://github.com/kubernetes/kubernetes/pull/132339), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Apps, Network and Testing]",
+    "author": "adrianmoisey",
+    "author_url": "https://github.com/adrianmoisey",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132339",
+    "pr_number": 132339,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "apps",
+      "network",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "132351": {
+    "commit": "efd2a0d1f514be96a2f012fc3cb40f7c872b4e67",
+    "text": "HPA status displayed memory metrics using Ki",
+    "markdown": "HPA status displayed memory metrics using Ki ([#132351](https://github.com/kubernetes/kubernetes/pull/132351), [@googs1025](https://github.com/googs1025)) [SIG Apps and Autoscaling]",
+    "author": "googs1025",
+    "author_url": "https://github.com/googs1025",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132351",
+    "pr_number": 132351,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps",
+      "autoscaling"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
   "132352": {
     "commit": "211e58685c6df41ce4e87f2e805dd9f605626a06",
     "text": "Removed the deprecated flag `--wait-interval` for the `ip6tables-legacy-restore` binary.",
@@ -2804,6 +3133,28 @@
     "sigs": [
       "network"
     ],
+    "is_mapped": true
+  },
+  "132355": {
+    "commit": "025636181393cc95bf78a48238fff5c8b05d6404",
+    "text": "Added `SizeBasedListCostEstimate` feature gate that allowed apiserver to estimate sizes of objects to calculate cost of LIST requests",
+    "markdown": "Added `SizeBasedListCostEstimate` feature gate that allowed apiserver to estimate sizes of objects to calculate cost of LIST requests ([#132355](https://github.com/kubernetes/kubernetes/pull/132355), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132355",
+    "pr_number": 132355,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "etcd"
+    ],
+    "feature": true,
+    "duplicate": true,
     "is_mapped": true
   },
   "132374": {
@@ -2843,6 +3194,45 @@
     ],
     "is_mapped": true
   },
+  "132413": {
+    "commit": "65c12acf7d17bb5584ca086af33ef6d6be80fc24",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the components-helper of the apimachinery.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the components-helper of the apimachinery. ([#132413](https://github.com/kubernetes/kubernetes/pull/132413), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132413",
+    "pr_number": 132413,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "is_mapped": true
+  },
+  "132433": {
+    "commit": "201325e86913cfff34f5f2146f2ab4e496a2ef6f",
+    "text": "Added configurable flags to kube-apiserver for coordinated leader election.",
+    "markdown": "Added configurable flags to kube-apiserver for coordinated leader election. ([#132433](https://github.com/kubernetes/kubernetes/pull/132433), [@michaelasp](https://github.com/michaelasp)) [SIG API Machinery and Testing]",
+    "author": "michaelasp",
+    "author_url": "https://github.com/michaelasp",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132433",
+    "pr_number": 132433,
+    "areas": [
+      "test",
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "is_mapped": true
+  },
   "132467": {
     "commit": "ec80dcaf3892d0cf89e4fd7b1ea60300fb417d8a",
     "text": "Fixed an issue that allowed Custom Resources to be created using Server-Side Apply even when their `CustomResourceDefinition` was terminating.",
@@ -2857,6 +3247,55 @@
     "sigs": [
       "api-machinery"
     ],
+    "is_mapped": true
+  },
+  "132472": {
+    "commit": "eb1b603cda3b956e52bddf3b51748191e80a59a6",
+    "text": "Simplied validation error message for required fields by removing redundant messages.",
+    "markdown": "Simplied validation error message for required fields by removing redundant messages. ([#132472](https://github.com/kubernetes/kubernetes/pull/132472), [@xiaoweim](https://github.com/xiaoweim)) [SIG API Machinery, Apps, Architecture, Auth, Cloud Provider, Network, Node and Storage]",
+    "author": "xiaoweim",
+    "author_url": "https://github.com/xiaoweim",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132472",
+    "pr_number": 132472,
+    "areas": [
+      "kubelet",
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps",
+      "architecture",
+      "auth",
+      "cloud-provider",
+      "network",
+      "node",
+      "storage"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "132484": {
+    "commit": "17c5e753b204e6dd4e8f99082692c6baa8903c11",
+    "text": "Increased test coverage for kubelet package to 92.3%.",
+    "markdown": "Increased test coverage for kubelet package to 92.3%. ([#132484](https://github.com/kubernetes/kubernetes/pull/132484), [@ylink-lfs](https://github.com/ylink-lfs))",
+    "author": "ylink-lfs",
+    "author_url": "https://github.com/ylink-lfs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132484",
+    "pr_number": 132484,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "do_not_publish": true,
     "is_mapped": true
   },
   "132504": {
@@ -2896,5 +3335,814 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true
+  },
+  "132509": {
+    "commit": "ec1803cab8a318a358822d6d00a086d56375d0a0",
+    "text": "removed defunct `make vet` target, please use `make lint` instead",
+    "markdown": "Removed defunct `make vet` target, please use `make lint` instead ([#132509](https://github.com/kubernetes/kubernetes/pull/132509), [@yongruilin](https://github.com/yongruilin)) [SIG Testing]",
+    "author": "yongruilin",
+    "author_url": "https://github.com/yongruilin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132509",
+    "pr_number": 132509,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "testing"
+    ]
+  },
+  "132529": {
+    "commit": "5ba3235b1bba202efdf69ce7cbe0a4a9cf875446",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the kubeapiserver.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the kubeapiserver. ([#132529](https://github.com/kubernetes/kubernetes/pull/132529), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery and Architecture]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132529",
+    "pr_number": 132529,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "architecture"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132542": {
+    "commit": "a7e8a505c25965c074f2b10b1bf40230eca48a08",
+    "text": "Clarified help message of `--ignore-not-found` flag. Supported `--ignore-not-found` in `watch` operation.",
+    "markdown": "Clarified help message of `--ignore-not-found` flag. Supported `--ignore-not-found` in `watch` operation. ([#132542](https://github.com/kubernetes/kubernetes/pull/132542), [@gemmahou](https://github.com/gemmahou))",
+    "author": "gemmahou",
+    "author_url": "https://github.com/gemmahou",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132542",
+    "pr_number": 132542,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "is_mapped": true
+  },
+  "132551": {
+    "commit": "c6fef9752c2b8d184772b43e66371ee8034c2a35",
+    "text": "Fixed the problem of validation error when specifying resource requirements at the container level for a resource not supported at the pod level. It implicitly interpreted the pod-level value as 0.",
+    "markdown": "Fixed the problem of validation error when specifying resource requirements at the container level for a resource not supported at the pod level. It implicitly interpreted the pod-level value as 0. ([#132551](https://github.com/kubernetes/kubernetes/pull/132551), [@chao-liang](https://github.com/chao-liang)) [SIG Apps]",
+    "documentation": [
+      {
+        "description": "KEP",
+        "url": "https://github.com/kubernetes/enhancements/issues/2837",
+        "type": "KEP"
+      }
+    ],
+    "author": "chao-liang",
+    "author_url": "https://github.com/chao-liang",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132551",
+    "pr_number": 132551,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps"
+    ]
+  },
+  "132560": {
+    "commit": "b2f27c0649fc0f3d2a4a6dd29135ecc81781f7e4",
+    "text": "Fixed a bug that fails to create a replica set when a deployment name is too long.",
+    "markdown": "Fixed a bug that fails to create a replica set when a deployment name is too long. ([#132560](https://github.com/kubernetes/kubernetes/pull/132560), [@hdp617](https://github.com/hdp617)) [SIG API Machinery and Apps]",
+    "author": "hdp617",
+    "author_url": "https://github.com/hdp617",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132560",
+    "pr_number": 132560,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps"
+    ],
+    "duplicate": true
+  },
+  "132574": {
+    "commit": "e7b945737e9325f076844dfb5c11bb44dbc940f1",
+    "text": "DRA: removed support for the v1alpha4 kubelet gRPC API (added in 1.31, superseded in 1.32). DRA drivers using the helper package from Kubernetes  \u003e= 1.32 use the v1beta1 API and continue to be supported.",
+    "markdown": "DRA: removed support for the v1alpha4 kubelet gRPC API (added in 1.31, superseded in 1.32). DRA drivers using the helper package from Kubernetes  \u003e= 1.32 use the v1beta1 API and continue to be supported. ([#132574](https://github.com/kubernetes/kubernetes/pull/132574), [@pohly](https://github.com/pohly))",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132574",
+    "pr_number": 132574,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132594": {
+    "commit": "5a450884b127f7b8e477d48cf3967a2a5eca9126",
+    "text": "kubeadm: graduated the kubeadm specific feature gate `WaitForAllControlPlaneComponents` to GA. The feature gate is was locked to always be enabled and on node initialization kubeadm performed a health check for all control plane components and not only the `kube-apiserver`.",
+    "markdown": "Kubeadm: graduated the kubeadm specific feature gate `WaitForAllControlPlaneComponents` to GA. The feature gate is was locked to always be enabled and on node initialization kubeadm performed a health check for all control plane components and not only the `kube-apiserver`. ([#132594](https://github.com/kubernetes/kubernetes/pull/132594), [@neolit123](https://github.com/neolit123))",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132594",
+    "pr_number": 132594,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true,
+    "is_mapped": true
+  },
+  "132614": {
+    "commit": "d3296eac97e4f39ca39926555677b8d098fcf96d",
+    "text": "Fixed validation for Job with `suspend=true`, and `completions=0` to set the Complete condition.",
+    "markdown": "Fixed validation for Job with `suspend=true`, and `completions=0` to set the Complete condition. ([#132614](https://github.com/kubernetes/kubernetes/pull/132614), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]",
+    "documentation": [
+      {
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/4368-support-managed-by-for-batch-jobs",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132614",
+    "pr_number": 132614,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "apps",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132648": {
+    "commit": "20141c8a92a76900b0b207ca7c0fd4832bacaa55",
+    "text": "Graduated `StreamingCollectionEncodingToJSON` and `StreamingCollectionEncodingToProtobuf` to GA",
+    "markdown": "Graduated `StreamingCollectionEncodingToJSON` and `StreamingCollectionEncodingToProtobuf` to GA ([#132648](https://github.com/kubernetes/kubernetes/pull/132648), [@serathius](https://github.com/serathius))",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132648",
+    "pr_number": 132648,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true,
+    "is_mapped": true
+  },
+  "132674": {
+    "commit": "f93a8c58d7402ff00593aac71d9d0770f0b403c5",
+    "text": "Fixed e2e test \"[Driver: csi-hostpath] [Testpattern: Dynamic PV (filesystem volmode)] volumeLimits should support volume limits\" not to leak Pods and namespaces.",
+    "markdown": "Fixed e2e test \"[Driver: csi-hostpath] [Testpattern: Dynamic PV (filesystem volmode)] volumeLimits should support volume limits\" not to leak Pods and namespaces. ([#132674](https://github.com/kubernetes/kubernetes/pull/132674), [@jsafrane](https://github.com/jsafrane)) [SIG Storage and Testing]",
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132674",
+    "pr_number": 132674,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "failing-test"
+    ],
+    "sigs": [
+      "storage",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132683": {
+    "commit": "52787dd1d083d24fe33d3dd80f94afbb9cb9faa3",
+    "text": "DRA drivers: the resource slice controller sometimes didn't react properly when kubelet or someone else deleted a recently created ResourceSlice. It incorrectly assumed that the ResourceSlice still exists and didn't recreate it.",
+    "markdown": "DRA drivers: the resource slice controller sometimes didn't react properly when kubelet or someone else deleted a recently created ResourceSlice. It incorrectly assumed that the ResourceSlice still exists and didn't recreate it. ([#132683](https://github.com/kubernetes/kubernetes/pull/132683), [@pohly](https://github.com/pohly)) [SIG Apps, Node and Testing]",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132683",
+    "pr_number": 132683,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps",
+      "node",
+      "testing"
+    ],
+    "duplicate": true
+  },
+  "132698": {
+    "commit": "0ce9a03285b8d689e0072b06a42ffeae77fc416c",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the reflector.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the reflector. ([#132698](https://github.com/kubernetes/kubernetes/pull/132698), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132698",
+    "pr_number": 132698,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "is_mapped": true
+  },
+  "132699": {
+    "commit": "de74ab716ef1014206427622d2070482dc304cc6",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the csr.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the csr. ([#132699](https://github.com/kubernetes/kubernetes/pull/132699), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery and Auth]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132699",
+    "pr_number": 132699,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132701": {
+    "commit": "6ace4832c2c7f6cab4a59cce4022b638982a3286",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the kube-aggregator apiregistration.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the kube-aggregator apiregistration. ([#132701](https://github.com/kubernetes/kubernetes/pull/132701), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132701",
+    "pr_number": 132701,
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132720": {
+    "commit": "22f5e01a37c0bc6a5f494dec14dd4e3688ee1d55",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the cloud-provider.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the cloud-provider. ([#132720](https://github.com/kubernetes/kubernetes/pull/132720), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Cloud Provider and Network]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132720",
+    "pr_number": 132720,
+    "areas": [
+      "cloudprovider"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cloud-provider",
+      "network"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132721": {
+    "commit": "d79c1e7eaa29331793adb0caa47d802077a0f16e",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the apiextensions-apiservers integration tests.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the apiextensions-apiservers integration tests. ([#132721](https://github.com/kubernetes/kubernetes/pull/132721), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132721",
+    "pr_number": 132721,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "is_mapped": true
+  },
+  "132723": {
+    "commit": "87562da40ac762ad62476d6f8d0f466e9825985c",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the apiextensions-apiserver apiextensions.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the apiextensions-apiserver apiextensions. ([#132723](https://github.com/kubernetes/kubernetes/pull/132723), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132723",
+    "pr_number": 132723,
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132724": {
+    "commit": "f5e136df9d61300c518667cfa1d44461f30cf1ba",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions-apiserver pkg/controller.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions-apiserver pkg/controller. ([#132724](https://github.com/kubernetes/kubernetes/pull/132724), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132724",
+    "pr_number": 132724,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "is_mapped": true
+  },
+  "132725": {
+    "commit": "35fd91229aa95163520c2f9775e799f23fca746a",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions-apiserver pkg/registry.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions-apiserver pkg/registry. ([#132725](https://github.com/kubernetes/kubernetes/pull/132725), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132725",
+    "pr_number": 132725,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "is_mapped": true
+  },
+  "132726": {
+    "commit": "26135216e7c82d1d30b5725582d8db5c45cfe281",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions apiservers validation tests.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions apiservers validation tests. ([#132726](https://github.com/kubernetes/kubernetes/pull/132726), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132726",
+    "pr_number": 132726,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "is_mapped": true
+  },
+  "132741": {
+    "commit": "d9228cae970ed72ac374169796c76cddbc646eb5",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pod-security-admission tests.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pod-security-admission tests. ([#132741](https://github.com/kubernetes/kubernetes/pull/132741), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132741",
+    "pr_number": 132741,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "auth"
+    ],
+    "is_mapped": true
+  },
+  "132742": {
+    "commit": "95b18e4d427d9da903ba77c835700d0d8abbc248",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the pod-security-admission admissiontests.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the pod-security-admission admissiontests. ([#132742](https://github.com/kubernetes/kubernetes/pull/132742), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132742",
+    "pr_number": 132742,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "auth"
+    ],
+    "is_mapped": true
+  },
+  "132743": {
+    "commit": "38f534fc4c630140f876b71fe2262732c96963ea",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the pod-security-admission policy.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the pod-security-admission policy. ([#132743](https://github.com/kubernetes/kubernetes/pull/132743), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132743",
+    "pr_number": 132743,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "auth"
+    ],
+    "is_mapped": true
+  },
+  "132750": {
+    "commit": "f366e36ba24697a65dab16b692576f4ffe8ed08e",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the cli-runtime.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the cli-runtime. ([#132750](https://github.com/kubernetes/kubernetes/pull/132750), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG CLI and Release]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132750",
+    "pr_number": 132750,
+    "areas": [
+      "release-eng"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cli",
+      "release"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132751": {
+    "commit": "d7a06387fe7305df5d7b3ebbab998686fae84a63",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the apiserver (1/2).",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the apiserver (1/2). ([#132751](https://github.com/kubernetes/kubernetes/pull/132751), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery and Auth]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132751",
+    "pr_number": 132751,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132752": {
+    "commit": "116cfc0c5f38f37be05542d468943790cedde7c4",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the apiserver (2/2).",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the apiserver (2/2). ([#132752](https://github.com/kubernetes/kubernetes/pull/132752), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery and Auth]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132752",
+    "pr_number": 132752,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132753": {
+    "commit": "fb185e6aa871df744829ec9ea2fcd914697e5681",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the controller-manager.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the controller-manager. ([#132753](https://github.com/kubernetes/kubernetes/pull/132753), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery and Cloud Provider]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132753",
+    "pr_number": 132753,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cloud-provider"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132754": {
+    "commit": "e2afbf83f58f68f5c988f80f928dfccbea0ee8b3",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the component-base.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the component-base. ([#132754](https://github.com/kubernetes/kubernetes/pull/132754), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery, Architecture, Instrumentation and Scheduling]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132754",
+    "pr_number": 132754,
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "architecture",
+      "instrumentation",
+      "scheduling"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132755": {
+    "commit": "c4302e970383a4116dd3d0219792ddeae8b43259",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the e2e_node.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the e2e_node. ([#132755](https://github.com/kubernetes/kubernetes/pull/132755), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Node and Testing]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132755",
+    "pr_number": 132755,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132762": {
+    "commit": "0ea38349843beada197c2eeabc762d2ca4478c1a",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/integration",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/integration ([#132762](https://github.com/kubernetes/kubernetes/pull/132762), [@PatrickLaabs](https://github.com/PatrickLaabs))",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132762",
+    "pr_number": 132762,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "is_mapped": true
+  },
+  "132763": {
+    "commit": "9f3464dbbdf31310e0be82c8897d500e383d453f",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e and ./test/utils.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e and ./test/utils. ([#132763](https://github.com/kubernetes/kubernetes/pull/132763), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Autoscaling and Testing]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132763",
+    "pr_number": 132763,
+    "areas": [
+      "test",
+      "e2e-test-framework"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "autoscaling",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132764": {
+    "commit": "332816b2b29c3d94ad0ccd8878523199dbe97c33",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e. ([#132764](https://github.com/kubernetes/kubernetes/pull/132764), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Auth, Network, Node, Storage and Testing]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132764",
+    "pr_number": 132764,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "auth",
+      "network",
+      "node",
+      "storage",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132765": {
+    "commit": "3c1a7b68b484aad3da575237965428d0253d84e6",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e. ([#132765](https://github.com/kubernetes/kubernetes/pull/132765), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery, Apps, CLI and Testing]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132765",
+    "pr_number": 132765,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps",
+      "cli",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132772": {
+    "commit": "3aa0bb9725d7ccf692af9e171a98d521f35674e7",
+    "text": "Removed deprecated gogo protocol definitions from `k8s.io/externaljwt` in favor of `google.golang.org/protobuf`.",
+    "markdown": "Removed deprecated gogo protocol definitions from `k8s.io/externaljwt` in favor of `google.golang.org/protobuf`. ([#132772](https://github.com/kubernetes/kubernetes/pull/132772), [@saschagrunert](https://github.com/saschagrunert)) [SIG Auth]",
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132772",
+    "pr_number": 132772,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "auth"
+    ]
+  },
+  "132777": {
+    "commit": "3b12bcd546bfd36863778b92db7eb49acfef887b",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the pkg/security and plugin/pkg.",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the pkg/security and plugin/pkg. ([#132777](https://github.com/kubernetes/kubernetes/pull/132777), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Auth, Node and Release]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132777",
+    "pr_number": 132777,
+    "areas": [
+      "release-eng"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "auth",
+      "node",
+      "release"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132778": {
+    "commit": "4708b078a760cac3fecd7dd6f2a67f9249ba9c35",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pkg/apis (1/2).",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pkg/apis (1/2). ([#132778](https://github.com/kubernetes/kubernetes/pull/132778), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Apps and Network]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132778",
+    "pr_number": 132778,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "apps",
+      "network"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132779": {
+    "commit": "f41b45838d32ee614d088a06ad1bf8e1fa0d5019",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pkg/apis (2/2).",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pkg/apis (2/2). ([#132779](https://github.com/kubernetes/kubernetes/pull/132779), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Apps, Auth and Storage]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132779",
+    "pr_number": 132779,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "apps",
+      "auth",
+      "storage"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132781": {
+    "commit": "bedb915a4e7120c90fee1343693a9a403cb06d92",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pkg/controller (1/2).",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pkg/controller (1/2). ([#132781](https://github.com/kubernetes/kubernetes/pull/132781), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery, Apps and Network]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132781",
+    "pr_number": 132781,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps",
+      "network"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132784": {
+    "commit": "5f0e359619a38d3cac69f6a1db75fcb97151fab4",
+    "text": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pkg/controller (2/2).",
+    "markdown": "Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for pkg/controller (2/2). ([#132784](https://github.com/kubernetes/kubernetes/pull/132784), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery, Apps, Network, Node and Storage]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132784",
+    "pr_number": 132784,
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "apps",
+      "network",
+      "node",
+      "storage"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "132794": {
+    "commit": "5f34f9233b2e2f9714b71dc1e1a0dbf24548866c",
+    "text": "Replaced Boolean-pointer-helper functions with the `k8s.io/utils/ptr` implementations.",
+    "markdown": "Replaced Boolean-pointer-helper functions with the `k8s.io/utils/ptr` implementations. ([#132794](https://github.com/kubernetes/kubernetes/pull/132794), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery, Auth, CLI, Node and Testing]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132794",
+    "pr_number": 132794,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver"
+    ],
+    "kinds": [
+      "cleanup",
+      "api-change"
+    ],
+    "sigs": [
+      "api-machinery",
+      "auth",
+      "cli",
+      "node",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "132806": {
+    "commit": "b8450dc451f6cef3774f480b5f8053a6844c3b9c",
+    "text": "Replaced `toPtr` helper functions with the \"k8s.io/utils/ptr\" implementations.",
+    "markdown": "Replaced `toPtr` helper functions with the \"k8s.io/utils/ptr\" implementations. ([#132806](https://github.com/kubernetes/kubernetes/pull/132806), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Apps, Testing and Windows]",
+    "author": "PatrickLaabs",
+    "author_url": "https://github.com/PatrickLaabs",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132806",
+    "pr_number": 132806,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "apps",
+      "testing",
+      "windows"
+    ],
+    "duplicate": true,
+    "is_mapped": true
   }
 }

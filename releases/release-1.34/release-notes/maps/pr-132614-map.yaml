@@ -1,0 +1,5 @@
+pr: 132614
+releasenote:
+  text: Fixed validation for Job with `suspend=true`, and `completions=0` to set the
+    Complete condition.
+pr_body: ""

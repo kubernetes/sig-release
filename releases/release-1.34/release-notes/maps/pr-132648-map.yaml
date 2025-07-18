@@ -1,0 +1,5 @@
+pr: 132648
+releasenote:
+  text: Graduated `StreamingCollectionEncodingToJSON` and `StreamingCollectionEncodingToProtobuf`
+    to GA
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 131992
+releasenote:
+  text: Deprecated `StreamingConnectionIdleTimeout` field of the kubelet config.
+pr_body: ""

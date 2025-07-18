@@ -1,0 +1,5 @@
+pr: 132542
+releasenote:
+  text: Clarified help message of `--ignore-not-found` flag. Supported `--ignore-not-found`
+    in `watch` operation.
+pr_body: ""
