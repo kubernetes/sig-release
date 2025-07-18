@@ -1,0 +1,6 @@
+pr: 132087
+releasenote:
+  text: |-
+    Types: Code and Status moved from pkg/scheduler/framework to staging repo.
+    Users should update import path for these types from `k8s.io/kubernetes/pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework`
+pr_body: ""

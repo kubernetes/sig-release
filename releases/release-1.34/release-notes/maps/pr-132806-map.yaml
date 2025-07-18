@@ -1,0 +1,4 @@
+pr: 132806
+releasenote:
+  text: Replaced `toPtr` helper functions with the "k8s.io/utils/ptr" implementations.
+pr_body: ""

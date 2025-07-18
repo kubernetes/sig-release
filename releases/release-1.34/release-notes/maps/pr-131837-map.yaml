@@ -1,0 +1,6 @@
+pr: 131837
+releasenote:
+  text: Static pods that reference API objects have been denied admission by the kubelet
+    so that static pods would not be silently running even after the mirror pod creation
+    fails.
+pr_body: ""

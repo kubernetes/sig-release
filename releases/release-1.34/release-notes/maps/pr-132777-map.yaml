@@ -1,0 +1,5 @@
+pr: 132777
+releasenote:
+  text: Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr`
+    for the pkg/security and plugin/pkg.
+pr_body: ""

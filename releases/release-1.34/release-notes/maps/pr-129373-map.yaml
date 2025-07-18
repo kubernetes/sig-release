@@ -1,0 +1,5 @@
+pr: 129373
+releasenote:
+  text: Added support for `--cpu`, `--memory` flag to `kubectl autoscale`, started
+    deprecating `--cpu-precent`.
+pr_body: ""

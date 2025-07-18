@@ -1,0 +1,5 @@
+pr: 132778
+releasenote:
+  text: Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr`
+    for pkg/apis (1/2).
+pr_body: ""

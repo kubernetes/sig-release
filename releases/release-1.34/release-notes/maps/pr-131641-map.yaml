@@ -1,0 +1,5 @@
+pr: 131641
+releasenote:
+  text: The new `dra_resource_claims_in_use` kubelet metrics reported active `ResourceClaims`,
+    overall and by driver.
+pr_body: ""

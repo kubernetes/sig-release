@@ -1,0 +1,4 @@
+pr: 130909
+releasenote:
+  text: '`Statefulset` respected `minReadySeconds`.'
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 132351
+releasenote:
+  text: HPA status displayed memory metrics using Ki
+pr_body: ""

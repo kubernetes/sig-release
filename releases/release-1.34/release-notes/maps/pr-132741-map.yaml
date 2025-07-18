@@ -1,0 +1,5 @@
+pr: 132741
+releasenote:
+  text: Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr`
+    for pod-security-admission tests.
+pr_body: ""

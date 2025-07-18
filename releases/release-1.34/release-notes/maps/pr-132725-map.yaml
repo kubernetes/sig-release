@@ -1,0 +1,5 @@
+pr: 132725
+releasenote:
+  text: Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr`
+    for apiextensions-apiserver pkg/registry.
+pr_body: ""
