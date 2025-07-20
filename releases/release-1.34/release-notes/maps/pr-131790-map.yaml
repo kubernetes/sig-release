@@ -1,0 +1,4 @@
+pr: 131790
+releasenote:
+  text: Added `podSpec` validation for creating `StatefulSet`.
+pr_body: ""

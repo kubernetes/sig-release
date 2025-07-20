@@ -1,0 +1,5 @@
+pr: 132726
+releasenote:
+  text: Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr`
+    for apiextensions apiservers validation tests.
+pr_body: ""

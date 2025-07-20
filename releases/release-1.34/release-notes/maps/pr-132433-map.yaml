@@ -1,0 +1,4 @@
+pr: 132433
+releasenote:
+  text: Added configurable flags to kube-apiserver for coordinated leader election.
+pr_body: ""
