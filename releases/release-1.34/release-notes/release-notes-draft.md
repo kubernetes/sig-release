@@ -59,7 +59,7 @@
 ### Feature
 
 - Added Traffic Distribution field to `kubectl describe service` output ([#131491](https://github.com/kubernetes/kubernetes/pull/131491), [@tchap](https://github.com/tchap)) [SIG CLI]
-- Added `SizeBasedListCostEstimate` feature gate that allowed apiserver to estimate sizes of objects to calculate cost of LIST requests ([#132355](https://github.com/kubernetes/kubernetes/pull/132355), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]
+- Added `SizeBasedListCostEstimate` feature gate that allowed apiserver to estimate sizes of objects to calculate cost of LIST requests. ([#132355](https://github.com/kubernetes/kubernetes/pull/132355), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]
 - Added a `--show-swap` option to `kubectl top` subcommands ([#129458](https://github.com/kubernetes/kubernetes/pull/129458), [@iholder101](https://github.com/iholder101)) [SIG CLI]
 - Added a delay to node updates after kubelet startup. A random offset, based on the configured `nodeStatusReportFrequency`, helped distribute traffic and load from node status updates more evenly over time. The initial status update could occur up to 50% earlier or later than the regular schedule. ([#130919](https://github.com/kubernetes/kubernetes/pull/130919), [@mengqiy](https://github.com/mengqiy))
 - Added a flag to kubectl version to detect whether a client/server version mismatch was outside the officially supported range. ([#127365](https://github.com/kubernetes/kubernetes/pull/127365), [@omerap12](https://github.com/omerap12))
@@ -73,7 +73,7 @@
 - Enabled completion for aliases defined in `kubectlrc`. ([#131586](https://github.com/kubernetes/kubernetes/pull/131586), [@ardaguclu](https://github.com/ardaguclu))
 - Ensured that non-scheduling related errors (e.g., network errors) did not lengthen the Pod scheduling backoff time. ([#128748](https://github.com/kubernetes/kubernetes/pull/128748), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling and Testing]
 - Graduated `ResilientWatchCacheInitialization` to GA. ([#131979](https://github.com/kubernetes/kubernetes/pull/131979), [@serathius](https://github.com/serathius))
-- Graduated `StreamingCollectionEncodingToJSON` and `StreamingCollectionEncodingToProtobuf` to GA ([#132648](https://github.com/kubernetes/kubernetes/pull/132648), [@serathius](https://github.com/serathius))
+- Graduated `StreamingCollectionEncodingToJSON` and `StreamingCollectionEncodingToProtobuf` to GA. ([#132648](https://github.com/kubernetes/kubernetes/pull/132648), [@serathius](https://github.com/serathius))
 - Graduated configurable endpoints for anonymous authentication using the authentication configuration file to stable. ([#131654](https://github.com/kubernetes/kubernetes/pull/131654), [@vinayakankugoyal](https://github.com/vinayakankugoyal)) [SIG API Machinery and Testing]
 - Graduated relaxed DNS search string validation to GA. For the Pod API, `.spec.dnsConfig.searches`
   now allows an underscore (`_`) where a dash (`-`) would be allowed, and it allows search strings be a single dot `.`. ([#132036](https://github.com/kubernetes/kubernetes/pull/132036), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Network and Testing]
@@ -114,7 +114,7 @@
 
 ### Bug or Regression
 
-- Added `podSpec` validation for creating `StatefulSet` ([#131790](https://github.com/kubernetes/kubernetes/pull/131790), [@chengjoey](https://github.com/chengjoey)) [SIG Apps, Etcd and Testing]
+- Added `podSpec` validation for creating `StatefulSet`. ([#131790](https://github.com/kubernetes/kubernetes/pull/131790), [@chengjoey](https://github.com/chengjoey)) [SIG Apps, Etcd and Testing]
 - Checked for newer resize fields when deciding the recovery feature status in the kubelet. ([#131418](https://github.com/kubernetes/kubernetes/pull/131418), [@gnufied](https://github.com/gnufied))
 - Clarified help message of `--ignore-not-found` flag. Supported `--ignore-not-found` in `watch` operation. ([#132542](https://github.com/kubernetes/kubernetes/pull/132542), [@gemmahou](https://github.com/gemmahou))
 - DRA drivers: the resource slice controller sometimes didn't react properly when kubelet or someone else deleted a recently created ResourceSlice. It incorrectly assumed that the ResourceSlice still exists and didn't recreate it. ([#132683](https://github.com/kubernetes/kubernetes/pull/132683), [@pohly](https://github.com/pohly)) [SIG Apps, Node and Testing]
@@ -141,7 +141,7 @@
 - Fixed the bug when swap related metrics were not available in `/metrics/resource` endpoint. ([#132065](https://github.com/kubernetes/kubernetes/pull/132065), [@yuanwang04](https://github.com/yuanwang04)) [SIG Node and Testing]
 - Fixed the problem of validation error when specifying resource requirements at the container level for a resource not supported at the pod level. It implicitly interpreted the pod-level value as 0. ([#132551](https://github.com/kubernetes/kubernetes/pull/132551), [@chao-liang](https://github.com/chao-liang)) [SIG Apps]
 - Fixed validation for Job with `suspend=true`, and `completions=0` to set the Complete condition. ([#132614](https://github.com/kubernetes/kubernetes/pull/132614), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]
-- HPA status displayed memory metrics using Ki ([#132351](https://github.com/kubernetes/kubernetes/pull/132351), [@googs1025](https://github.com/googs1025)) [SIG Apps and Autoscaling]
+- HPA status displayed memory metrics using Ki. ([#132351](https://github.com/kubernetes/kubernetes/pull/132351), [@googs1025](https://github.com/googs1025)) [SIG Apps and Autoscaling]
 - Improved the error message shown when a Pod using user namespaces was created on a runtime that did not support user namespaces. ([#131623](https://github.com/kubernetes/kubernetes/pull/131623), [@rata](https://github.com/rata))
 - Kube-apiserver: Defaulted empty `spec.jobTemplate.spec.podFailurePolicy.rules[*].onPodConditions[*].status` fields for CronJob objects as documented, avoiding validation failures during write requests. ([#131525](https://github.com/kubernetes/kubernetes/pull/131525), [@carlory](https://github.com/carlory))
 - Kube-apiserver: Fixed OIDC discovery document publishing when external service account token signing was enabled. ([#131493](https://github.com/kubernetes/kubernetes/pull/131493), [@hoskeri](https://github.com/hoskeri)) [SIG API Machinery, Auth and Testing]
@@ -196,7 +196,7 @@
 - Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e and ./test/utils. ([#132763](https://github.com/kubernetes/kubernetes/pull/132763), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Autoscaling and Testing]
 - Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e. ([#132764](https://github.com/kubernetes/kubernetes/pull/132764), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG Auth, Network, Node, Storage and Testing]
 - Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/e2e. ([#132765](https://github.com/kubernetes/kubernetes/pull/132765), [@PatrickLaabs](https://github.com/PatrickLaabs)) [SIG API Machinery, Apps, CLI and Testing]
-- Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/integration ([#132762](https://github.com/kubernetes/kubernetes/pull/132762), [@PatrickLaabs](https://github.com/PatrickLaabs))
+- Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for ./test/integration. ([#132762](https://github.com/kubernetes/kubernetes/pull/132762), [@PatrickLaabs](https://github.com/PatrickLaabs))
 - Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions apiservers validation tests. ([#132726](https://github.com/kubernetes/kubernetes/pull/132726), [@PatrickLaabs](https://github.com/PatrickLaabs))
 - Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions-apiserver pkg/controller. ([#132724](https://github.com/kubernetes/kubernetes/pull/132724), [@PatrickLaabs](https://github.com/PatrickLaabs))
 - Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for apiextensions-apiserver pkg/registry. ([#132725](https://github.com/kubernetes/kubernetes/pull/132725), [@PatrickLaabs](https://github.com/PatrickLaabs))
@@ -219,12 +219,12 @@
 - Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the pod-security-admission policy. ([#132743](https://github.com/kubernetes/kubernetes/pull/132743), [@PatrickLaabs](https://github.com/PatrickLaabs))
 - Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr` for the reflector. ([#132698](https://github.com/kubernetes/kubernetes/pull/132698), [@PatrickLaabs](https://github.com/PatrickLaabs))
 - Types: Code and Status moved from pkg/scheduler/framework to staging repo.
-  Users should update import path for these types from `k8s.io/kubernetes/pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework` ([#132087](https://github.com/kubernetes/kubernetes/pull/132087), [@ania-borowiec](https://github.com/ania-borowiec)) [SIG Node, Scheduling, Storage and Testing]
+  Users should update import path for these types from `k8s.io/kubernetes/pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework`. ([#132087](https://github.com/kubernetes/kubernetes/pull/132087), [@ania-borowiec](https://github.com/ania-borowiec)) [SIG Node, Scheduling, Storage and Testing]
 - Types: CycleState, StateData, StateKey and ErrNotFound moved from pkg/scheduler/framework to k8s.io/kube-scheduler/framework.
   Type CycleState that is passed to each plugin in scheduler framework is changed to the new interface CycleState (in k8s.io/kube-scheduler/framework) ([#131887](https://github.com/kubernetes/kubernetes/pull/131887), [@ania-borowiec](https://github.com/ania-borowiec)) [SIG Node, Scheduling, Storage and Testing]
 - Types: `ClusterEvent`, `ActionType`, `EventResource`, `ClusterEventWithHint`, `QueueingHint` and `QueueingHintFn` moved from `pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework`. ([#132190](https://github.com/kubernetes/kubernetes/pull/132190), [@ania-borowiec](https://github.com/ania-borowiec)) [SIG Node, Scheduling, Storage and Testing]
 - Updated CNI plugins to v1.7.1 ([#131602](https://github.com/kubernetes/kubernetes/pull/131602), [@adrianmoisey](https://github.com/adrianmoisey)) [SIG Cloud Provider, Node and Testing]
 - Updated `conntrack` reconciler to consider a Service’s target port during cleanup of stale flow entries. ([#130542](https://github.com/kubernetes/kubernetes/pull/130542), [@aroradaman](https://github.com/aroradaman))
 - Updated cri-tools to v1.33.0. ([#131406](https://github.com/kubernetes/kubernetes/pull/131406), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider]
-- Updated etcd version to v3.6.1 ([#132284](https://github.com/kubernetes/kubernetes/pull/132284), [@ArkaSaha30](https://github.com/ArkaSaha30)) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]
+- Updated etcd version to v3.6.1. ([#132284](https://github.com/kubernetes/kubernetes/pull/132284), [@ArkaSaha30](https://github.com/ArkaSaha30)) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]
 - Upgraded CoreDNS to v1.12.1. ([#131151](https://github.com/kubernetes/kubernetes/pull/131151), [@yashsingh74](https://github.com/yashsingh74)) [SIG Cloud Provider and Cluster Lifecycle]
