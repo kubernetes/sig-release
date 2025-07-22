@@ -2874,8 +2874,8 @@
   },
   "132219": {
     "commit": "3bab7bccd39cf0161c1f832413146be1988438be",
-    "text": "Promoted the Ordered Namespace Deletion to Conformance",
-    "markdown": "Promoted the Ordered Namespace Deletion to Conformance ([#132219](https://github.com/kubernetes/kubernetes/pull/132219), [@BenTheElder](https://github.com/BenTheElder)) [SIG API Machinery, Architecture and Testing]",
+    "text": "Promoted the Ordered Namespace Deletion to Conformance.",
+    "markdown": "Promoted the Ordered Namespace Deletion to Conformance. ([#132219](https://github.com/kubernetes/kubernetes/pull/132219), [@BenTheElder](https://github.com/BenTheElder)) [SIG API Machinery, Architecture and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
