@@ -1,0 +1,5 @@
+pr: 132656
+releasenote:
+  text: Promoted the `AuthorizeWithSelectors` and `AuthorizeNodeWithSelectors` feature
+    gates to stable and locked on.
+pr_body: ""

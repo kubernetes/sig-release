@@ -1,0 +1,6 @@
+pr: 132342
+releasenote:
+  text: Implemented prioritization of resize requests based on `priorityClass` and
+    QoS class when node resources are insufficient to accommodate all pending resize
+    operations.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 132548
+releasenote:
+  text: Fixed a bug that caused duplicate validation to be triggered during `DaemonSet`
+    updates.
+pr_body: ""

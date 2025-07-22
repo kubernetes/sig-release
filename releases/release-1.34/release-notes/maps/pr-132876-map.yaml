@@ -1,0 +1,4 @@
+pr: 132876
+releasenote:
+  text: Enabled compact snapshots in the watch cache based on `etcd` compaction events.
+pr_body: ""

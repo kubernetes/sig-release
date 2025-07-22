@@ -1,0 +1,6 @@
+pr: 132617
+releasenote:
+  text: Updated the `v1` credential provider configuration to include the `tokenAttributes.cacheType`
+    field. This field is required and must be set to either `ServiceAccount` or `Token`
+    when configuring a provider that uses a service account to fetch registry credentials.
+pr_body: ""

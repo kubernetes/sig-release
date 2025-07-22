@@ -1,0 +1,4 @@
+pr: 132645
+releasenote:
+  text: Graduated the `ConsistentListFromCache` to GA
+pr_body: ""
