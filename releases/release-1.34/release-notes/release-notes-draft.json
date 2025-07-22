@@ -3840,8 +3840,8 @@
   },
   "132645": {
     "commit": "cb0b66a89f93952ea15c2f76fb878dd878e743a2",
-    "text": "Graduated the `ConsistentListFromCache` to GA",
-    "markdown": "Graduated the `ConsistentListFromCache` to GA ([#132645](https://github.com/kubernetes/kubernetes/pull/132645), [@serathius](https://github.com/serathius))",
+    "text": "Graduated the `ConsistentListFromCache` to GA.",
+    "markdown": "Graduated the `ConsistentListFromCache` to GA. ([#132645](https://github.com/kubernetes/kubernetes/pull/132645), [@serathius](https://github.com/serathius))",
     "author": "serathius",
     "author_url": "https://github.com/serathius",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132645",
