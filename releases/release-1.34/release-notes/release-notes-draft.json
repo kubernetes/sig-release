@@ -2874,8 +2874,8 @@
   },
   "132219": {
     "commit": "3bab7bccd39cf0161c1f832413146be1988438be",
-    "text": "Promoted the Ordered Namespace Deletion to Conformance.",
-    "markdown": "Promoted the Ordered Namespace Deletion to Conformance. ([#132219](https://github.com/kubernetes/kubernetes/pull/132219), [@BenTheElder](https://github.com/BenTheElder)) [SIG API Machinery, Architecture and Testing]",
+    "text": "Promoted the Ordered Namespace Deletion test to Conformance.",
+    "markdown": "Promoted the Ordered Namespace Deletion test to Conformance. ([#132219](https://github.com/kubernetes/kubernetes/pull/132219), [@BenTheElder](https://github.com/BenTheElder)) [SIG API Machinery, Architecture and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3681,8 +3681,8 @@
   },
   "132548": {
     "commit": "a76eddf60891963fea6ac486aa7acd5d3ec81b54",
-    "text": "Fixed a bug that caused duplicate validation to be triggered during `DaemonSet` updates.",
-    "markdown": "Fixed a bug that caused duplicate validation to be triggered during `DaemonSet` updates. ([#132548](https://github.com/kubernetes/kubernetes/pull/132548), [@gavinkflam](https://github.com/gavinkflam))",
+    "text": "Resolved a bug where DaemonSet updates unnecessarily triggered duplicate validation due to overlapping calls to `ValidateDaemonSet` and `ValidateDaemonSetUpdate`. This redundancy has been removed to prevent repeated validation runs.",
+    "markdown": "Resolved a bug where DaemonSet updates unnecessarily triggered duplicate validation due to overlapping calls to `ValidateDaemonSet` and `ValidateDaemonSetUpdate`. This redundancy has been removed to prevent repeated validation runs. ([#132548](https://github.com/kubernetes/kubernetes/pull/132548), [@gavinkflam](https://github.com/gavinkflam))",
     "author": "gavinkflam",
     "author_url": "https://github.com/gavinkflam",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132548",
