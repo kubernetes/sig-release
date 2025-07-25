@@ -1,0 +1,8 @@
+pr: 132768
+releasenote:
+  text: Added support for specifying `controlplane` or `cluster` egress selectors
+    in JWT authenticators via the `issuer.egressSelectorType` field in the `AuthenticationConfiguration.jwt`
+    array. If unset, the previous behavior of using no egress selector is preserved.
+    This functionality requires the `StructuredAuthenticationConfigurationEgressSelector`
+    beta feature gate (enabled by default).
+pr_body: ""

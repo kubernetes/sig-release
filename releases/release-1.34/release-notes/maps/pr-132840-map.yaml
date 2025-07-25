@@ -1,0 +1,5 @@
+pr: 132840
+releasenote:
+  text: Reduced excessive logging in the Volume Binding scheduler plugin by lowering
+    the verbosity of high-frequency messages from `V(4)` to `V(5)`.
+pr_body: ""

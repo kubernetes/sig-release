@@ -1,0 +1,7 @@
+pr: 132932
+releasenote:
+  text: Added the `SizeBasedListCostEstimate` feature gate (enabled by default), which
+    changes how APF seats are assigned to `LIST` requests. With this feature, one
+    seat is assigned per 100KB of data loaded into memory at once during a `LIST`
+    operation.
+pr_body: ""

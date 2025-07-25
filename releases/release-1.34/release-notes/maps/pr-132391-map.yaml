@@ -1,0 +1,6 @@
+pr: 132391
+releasenote:
+  text: Added a new `PreBindPreFlight` function to the `PreBindPlugin` interface.
+    All in-tree `PreBind` plugins have been updated to implement `PreBindPreFlight`
+    function.
+pr_body: ""

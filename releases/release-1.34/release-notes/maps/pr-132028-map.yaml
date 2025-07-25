@@ -1,0 +1,8 @@
+pr: 132028
+releasenote:
+  text: Modified the node-local `podresources` API endpoint to consider only active
+    pods. Since this changes long-standing behavior, the `KubeletPodResourcesListUseActivePods`
+    feature gate (enabled by default) can be disabled to restore the previous behavior.
+    Users encountering regressions are encouraged to file an issue if they rely on
+    the old behavior.
+pr_body: ""

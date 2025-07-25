@@ -1,0 +1,5 @@
+pr: 132456
+releasenote:
+  text: Updated `kube-proxy` with `nftables` to reject or drop traffic to services
+    with no endpoints from filter chains at priority 0 (`NF_IP_PRI_FILTER`).
+pr_body: ""

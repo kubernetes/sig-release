@@ -1,0 +1,5 @@
+pr: 131018
+releasenote:
+  text: Masked access to Linux thermal interrupt information exposed via `/proc` and
+    `/sys`.
+pr_body: ""

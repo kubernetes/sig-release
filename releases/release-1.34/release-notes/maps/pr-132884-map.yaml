@@ -1,0 +1,7 @@
+pr: 132884
+releasenote:
+  text: Added the `DetectCacheInconsistency` feature gate, allowing the API server
+    to periodically verify consistency between its `cache` and `etcd`. Detected inconsistencies
+    reported via the `apiserver_storage_consistency_checks_total` metric and trigger
+    purging of affected cache snapshots.
+pr_body: ""

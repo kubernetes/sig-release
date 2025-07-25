@@ -1,0 +1,7 @@
+pr: 132838
+releasenote:
+  text: Updated `kubeadm` to use the `InitialCorruptCheck=true` etcd feature gate
+    instead of the deprecated `--experimental-initial-corrupt-check` flag. Also replaced
+    the use of `--experimental-watch-progress-notify-interval` with its graduated
+    counterpart `--watch-progress-notify-interval`.
+pr_body: ""

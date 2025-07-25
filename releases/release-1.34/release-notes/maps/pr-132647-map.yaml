@@ -1,0 +1,5 @@
+pr: 132647
+releasenote:
+  text: Updated Windows `kube-proxy` to align with Linux behavior by correctly honoring
+    the port specified in `EndpointSlice` for internal traffic routing.
+pr_body: ""
