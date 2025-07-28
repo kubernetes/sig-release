@@ -1,0 +1,8 @@
+pr: 132803
+releasenote:
+  text: Fixed an issue where the kubelet token cache returned stale tokens when service
+    accounts were recreated with the same name. The cache is now UID-aware. Additionally,
+    the new `TokenRequestServiceAccountUIDValidation` feature gate (Beta, enabled
+    by default) ensures the `TokenRequest` UID matches the service account UID when
+    set.
+pr_body: ""

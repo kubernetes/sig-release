@@ -1,0 +1,4 @@
+pr: 132219
+releasenote:
+  text: Promoted the Ordered Namespace Deletion test to Conformance.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 131157
+releasenote:
+  text: Fixed the `observedGeneration` field in pod resize conditions to accurately
+    reflect the associated pod generation when both `InPlacePodVerticalScaling` and
+    `PodObservedGenerationTracking` feature gates are enabled.
+pr_body: ""

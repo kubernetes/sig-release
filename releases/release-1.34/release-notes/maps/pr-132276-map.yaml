@@ -1,0 +1,4 @@
+pr: 132276
+releasenote:
+  text: Added a warning when alpha metrics are used with emulated versions.
+pr_body: ""

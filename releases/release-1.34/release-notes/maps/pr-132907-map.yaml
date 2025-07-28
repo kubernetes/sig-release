@@ -1,0 +1,4 @@
+pr: 132907
+releasenote:
+  text: Replaced `boolPtrFn` helper functions with the "k8s.io/utils/ptr" implementation.
+pr_body: ""

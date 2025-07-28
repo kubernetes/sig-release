@@ -1,0 +1,5 @@
+pr: 132019
+releasenote:
+  text: Promoted two `EndpointSlice` tests to conformance to ensure that service proxy
+    implementations rely on `EndpointSlices` instead of `Endpoints`.
+pr_body: ""
