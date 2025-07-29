@@ -3,7 +3,7 @@
 This is a message to send to the owners of the Feature Blog placeholder PRs to assign them a writing buddy.
 
 ```
-Hi @xx @haircommander 👋 vx.yy Communications team here,
+Hi @xx 👋 vx.yy Communications team here,
 
 @BUDDY as author of #BUDDY-PR, I'd like you to be a writing buddy for @xx on this PR.
 
