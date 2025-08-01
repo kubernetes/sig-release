@@ -380,7 +380,7 @@ Generally speaking, update scripts and documentation as needed to ensure they ar
 
 ## Notes
 
-- The order of operations is important. Generally, update configuration files first, then generate tests, then create necessary branches.
+- The order of operations is important. Generally, update configuration files first, then generate files, check them and push on your fork before opening a PR.
 - Some tasks may be release-specific. Always check with the rest of release engineering and inform the release team if you're unsure about any step.
 - After completing these tasks, verify that CI jobs are running properly for the new release branch and that the dashboards reflect the new version.
 
