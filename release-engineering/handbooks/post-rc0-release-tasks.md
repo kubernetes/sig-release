@@ -385,6 +385,3 @@ Generally speaking, update scripts and documentation as needed to ensure they ar
 - After completing these tasks, verify that CI jobs are running properly for the new release branch and that the dashboards reflect the new version.
 
 ---
-
-TODO use these too https://hackmd.io/@jimangel/BJMUW6z01g
-TODO delete the parts of the handbook that are for post-rc0 release tasks as now this document is the handbook for that. Avoid duplication.
