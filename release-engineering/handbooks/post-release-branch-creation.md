@@ -1,7 +1,7 @@
-# Post-RC.0 release tasks
+# Post release branch creation
 
 This document details the tasks that need to be executed after cutting an rc.0 (release candidate 0) for a Kubernetes release. These tasks ensure proper configuration for the new release branch and testing infrastructure.
-They must be executed after the nomock release stage is completed, and the release branch is created, as stated in the [release branch creation chapter](../role-handbooks/branch-manager.md#release-branch-creation) of the branch management handbook.
+They must be executed after the nomock release stage is completed, and the release branch is created, as stated in the [branch creation chapter](k8s-release-cut.md#next-release-branch-creation) of the release cut handbook.
 
 Alternatively you can do the work beforehead but you got to remember to put a `/hold` on all the PRs, they have to be lifted only once the nomock release phase is done and the branch is created.
 
@@ -10,7 +10,7 @@ It is essential to follow these steps to maintain the integrity of the release p
 
 ## Checklist
 
-Open a new issue using [this template](https://github.com/kubernetes/sig-release/issues/new?template=post-rc-zero.md).
+Open a new issue using [this template](https://github.com/kubernetes/sig-release/issues/new?template=post-release-branch-creation.md).
 
 ### Remove EOL version jobs from test-infra (optional)
 
@@ -50,10 +50,10 @@ milestone_applier:
     # remove oldest version (e.g., release-1.29: v1.29)
 ```
 
-Check that the milestone requirements include the newest release branch.
+Check that the milestone requirements include the newest release branch and (optionally) remove the EOL version from the requirements, if agreed upon with the Release Managers.
 
 > [!NOTE]
-If the [code freeze](#code-freeze) was enabled before creating the release branch, which is usually the case, there's nothing to do, as the milestone requirements include the newest release branch already.
+If the [code freeze](#code-freeze) was enabled before creating the release branch, which is usually the case, there's nothing else to do, as the milestone requirements include the newest release branch already.
 
 ```bash
 # Example PR: https://github.com/kubernetes/test-infra/pull/35171
@@ -138,6 +138,9 @@ After running the make command you can now update the [release dashboards](https
 
 - Remove the deprecated release sig-release-1.30-{blocking,informing} dashboards
 - Add the new dashboards for the current release e.g., sig-release-1.34-{blocking,informing}
+- Pairing with the Release Signal lead, check that the new dashboards are working by visiting the TestGrid pages for the new dashboards and verifying that all the necessary jobs show up correctly.
+
+Note: Comparing the new jobs with previous version(s) might help to identify any missing jobs or misconfigurations.
 
 #### Run test generation script
 
@@ -164,7 +167,7 @@ Breaking down what the above command does:
 
 #### Submit the test-infra jobs PR
 
-You can finally issue a new PR as [this example](https://github.com/kubernetes/test-infra/pull/34668) one.
+You can finally issue a new PR as [this example](https://github.com/kubernetes/test-infra/pull/34668/files) one.
 
 Additionally update/check the following scripts, if you've found any issues with them:
 - `hack/run-in-python-container.sh`
@@ -246,11 +249,11 @@ The k8s-ci-builder needs to be updated in a similar fashion:
    - Add a new variant with the appropriate Go version that matches the release
 
    ```yaml
-  '1.34':
-    CONFIG: '1.34'
-    GO_VERSION: '1.24.5'
-    GO_VERSION_TOOLING: '1.24.5'
-    OS_CODENAME: 'bullseye'
+   '1.34':
+      CONFIG: '1.34'
+      GO_VERSION: '1.24.5'
+      GO_VERSION_TOOLING: '1.24.5'
+      OS_CODENAME: 'bullseye'
    ```
 
 2. This can be included in the same PR as the k8s-cloud-builder update
