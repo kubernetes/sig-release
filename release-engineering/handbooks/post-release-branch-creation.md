@@ -3,7 +3,7 @@
 This document details the tasks that need to be executed after cutting an rc.0 (release candidate 0) for a Kubernetes release. These tasks ensure proper configuration for the new release branch and testing infrastructure.
 They must be executed after the nomock release stage is completed, and the release branch is created, as stated in the [branch creation chapter](k8s-release-cut.md#next-release-branch-creation) of the release cut handbook.
 
-Alternatively you can do the work beforehead but you got to remember to put a `/hold` on all the PRs, they have to be lifted only once the nomock release phase is done and the branch is created.
+PR can be created beforehand (and this is recommended in order to get reviews in a timely manner) but you got to remember to put a `/hold` on all the PRs, they have to be lifted only once the `nomock` release phase is done and the branch is created.
 
 > [!WARNING]
 It is essential to follow these steps to maintain the integrity of the release process and ensure that all necessary components are updated accordingly, the examples provided are for illustrative purposes and need to be adapted to the specific release version, so please replace `1.30`, `1.33` and `1.34` with the actual version(s) you are deprecating, currently working on or preparing grounds for.

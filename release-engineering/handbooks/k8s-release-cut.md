@@ -482,15 +482,17 @@ krel history --branch release-1.33 --date-from 2025-04-23
 #### Next Release Branch Creation
 
 > [!IMPORTANT]  
-> The next release branch is created in the nomock staging phase and is pushed to the repository during the nomock release phase of an rc.0 cut.
+> The new release branch is created in the `nomock` staging phase and pushed to the repository during the `nomock` release phase of an rc.0 cut.
 
-During a `rc.0` release our release tooling creates a new release branch named `release-X.Y`, where `X.Y.0` is the version of the next release. 
+During a `rc.0` release our release tooling creates a new release branch named `release-X.Y`, where `X.Y.0` is the version of the upcoming release. 
 For example: `release-1.18` also automatically triggers an alpha.0 build for the subsequent release [`v1.19.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.19.0-alpha.0).
 
 Behind the scenes `krel` is executing a `git branch create` command and `git push`. 
 
 At the same time Prow’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo, including the newly created one.
 No need to manually create the branch protection rule.
+
+However, it is important to ensure that the branch is protected. We had cases where the branch was not protected and this was noticed very late.
 
 > [!NOTE]  
 This means that the staging step will take about twice as long, as it will stage both versions `vX.Y.0-rc.0` and `vX.{Y+1}.0-alpha.0`. 
