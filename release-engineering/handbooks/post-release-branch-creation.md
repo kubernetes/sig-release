@@ -1,6 +1,27 @@
 # Post release branch creation
 
-This document details the tasks that need to be executed after cutting an rc.0 (release candidate 0) for a Kubernetes release. These tasks ensure proper configuration for the new release branch and testing infrastructure.
+<!-- toc -->
+- [Post release branch creation](#post-release-branch-creation)
+  - [Checklist](#checklist)
+    - [Remove EOL version jobs from test-infra (optional)](#remove-eol-version-jobs-from-test-infra-optional)
+    - [Update milestone applier rules and check milestone requirements](#update-milestone-applier-rules-and-check-milestone-requirements)
+    - [Update Kubekins-e2e](#update-kubekins-e2e)
+    - [Update release branch jobs in kubernetes/test-infra for the new release](#update-release-branch-jobs-in-kubernetestest-infra-for-the-new-release)
+      - [Create the release dashboards](#create-the-release-dashboards)
+      - [Run test generation script](#run-test-generation-script)
+      - [Submit the PR for release branch jobs in kubernetes/test-infra](#submit-the-pr-for-release-branch-jobs-in-kubernetestest-infra)
+    - [Add new variant for kube-cross image](#add-new-variant-for-kube-cross-image)
+    - [Update k8s-cloud-builder and k8s-ci-builder](#update-k8s-cloud-builder-and-k8s-ci-builder)
+      - [Update k8s-cloud-builder and k8s-ci-builder images](#update-k8s-cloud-builder-and-k8s-ci-builder-images)
+    - [Update `kubernetes/kubernetes` references for the `kube-cross` image](#update-kuberneteskubernetes-references-for-the-kube-cross-image)
+    - [Update publishing bot rules](#update-publishing-bot-rules)
+    - [Create Performance Tests Branch](#create-performance-tests-branch)
+    - [Cut next alpha](#cut-next-alpha)
+    - [Check and eventually improve release scripts (optional)](#check-and-eventually-improve-release-scripts-optional)
+  - [Additional Resources](#additional-resources)
+  - [Notes](#notes)
+
+This document details the tasks that need to be executed after cutting a Kubernetes rc.0 release. These tasks ensure proper configuration for the new release branch and testing infrastructure.
 They must be executed after the nomock release stage is completed, and the release branch is created, as stated in the [branch creation chapter](k8s-release-cut.md#next-release-branch-creation) of the release cut handbook.
 
 PR can be created beforehand (and this is recommended in order to get reviews in a timely manner) but you got to remember to put a `/hold` on all the PRs, they have to be lifted only once the `nomock` release phase is done and the branch is created.
@@ -29,18 +50,25 @@ Consider removing jobs for versions that are going EOL. This is sometimes done b
 -    BAZEL_VERSION: 3.4.1
 ```
 
+Removing EOL jobs involves different steps, including deleting old configs from `config/jobs/kubernetes/sig-release/release-branch-jobs/` e.g. 1.29 EOL jobs removed in [this PR](https://github.com/kubernetes/test-infra/pull/34672).
+There could also be some other jobs living outside `config/jobs/kubernetes/sig-release/release-branch-jobs` that also needs to be removed.
+
 > [!NOTE]
-Note: This step may alternatively be performed as part of a patch release process. Consult with the release engineering team and test-infra people regarding the timing of this step.
+This step may alternatively be performed as part of a patch release process. It's mandatory to consult with the release engineering team regarding the timing of this step.
 
 ### Update milestone applier rules and check milestone requirements
 
 Create a PR to update the milestone applier rules to include the new version and remove the oldest version.
 
+> [!WARNING]
+Only remove the oldest version if it is already EOL and the release branch jobs have been already removed.
+
 ```yaml
 # Example PR: https://github.com/kubernetes/test-infra/pull/34650
 # Edit this file: config/prow/plugins.yaml
 
-# Add the new version and remove the oldest version in the kubernetes/kubernetes section:
+# Add the new version and remove the oldest version in the kubernetes/kubernetes section - if the oldest version is EOL:
+```yaml
 milestone_applier:
   kubernetes/kubernetes:
     master: v1.33
@@ -50,49 +78,13 @@ milestone_applier:
     # remove oldest version (e.g., release-1.29: v1.29)
 ```
 
-Check that the milestone requirements include the newest release branch and (optionally) remove the EOL version from the requirements, if agreed upon with the Release Managers.
-
 > [!NOTE]
-If the [code freeze](#code-freeze) was enabled before creating the release branch, which is usually the case, there's nothing else to do, as the milestone requirements include the newest release branch already.
-
-```bash
-# Example PR: https://github.com/kubernetes/test-infra/pull/35171
-# Changes would involve the new branch and code freeze: config/prow/config.yaml
-
-# Diff example:
-
-
-+    excludedBranches:
-+      - master
-+      - release-1.34
-+    labels:
-+      - lgtm
-+      - approved
-+      - "cncf-cla: yes"
-+    missingLabels:
-+      - do-not-merge
-+      - do-not-merge/blocked-paths
-+      - do-not-merge/cherry-pick-not-approved
-+      - do-not-merge/contains-merge-commits
-+      - do-not-merge/hold
-+      - do-not-merge/invalid-commit-message
-+      - do-not-merge/invalid-owners-file
-+      - do-not-merge/needs-kind
-+      - do-not-merge/needs-sig
-+      - do-not-merge/release-note-label-needed
-+      - do-not-merge/work-in-progress
-+      - needs-rebase
-+  - repos:
-+      - kubernetes/kubernetes
-+    milestone: v1.34
-+    includedBranches:
-+      - master
-+      - release-1.34
-```
+Look out for the code freeze config and ensure excluded and included branches include the upcoming release branch `release-1.xy`.
 
 ### Update Kubekins-e2e
 
-Create a PR to update the kubekins-e2e `variants.yaml` file with the new version's configuration.
+Create a PR to update the kubekins-e2e `kubekins-e2e-v2/variants.yaml` file with the new version's configuration.
+File can be found [here](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e-v2/variants.yaml).
 
 > [!WARNING]
 Remember to use the appropriate (updated) Go version for the release, coordinate with #release-management and @release-managers to ensure the correct version is used.
@@ -110,37 +102,45 @@ variants:
     BAZEL_VERSION: 3.4.1
 ```
 
-Wait for the `test-infra-push-kubekins-e2e` presubmit to finish. You can [check on prow](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
+Wait for the `post-test-infra-push-kubekins-e2e` postsubmit to finish. You can check the status on [the Prow Status page](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
 
-Note: Consider what has been pointed out in [this issue](https://github.com/kubernetes/test-infra/issues/34675).
+> [!NOTE]
+Consider what has been pointed out in [this issue](https://github.com/kubernetes/test-infra/issues/34675).
+When updating to new release image variants, you’ll need to update the jobs to use these new images. However, keep in mind that you can only update a job after the new image tag is available. If you attempt to update before the new image exists, the job may fail.
 
-### Update test-infra jobs for the new release
+### Update release branch jobs in kubernetes/test-infra for the new release
 
-Updating the test-infra jobs for the new release version involves some steps:
+Updating the release branch jobs in kubernetes/test-infra for the new release version involves some steps.
 
-First of all you need to modify the `releng/test_config.yaml` file to:
+First of all you need to modify the `releng/test_config.yaml` file ([here](https://github.com/jimangel/test-infra/blob/master/releng/test_config.yaml)) to:
 - Update version references
 - Rotate job configurations (n -> n+1)
 - Add new version as beta
-- Update stable versions sequentially
+- Update stable versions sequentially - _note: you should put config of stable1 to stable2, then repeat it until you get to the end._
 - Update configuration for all test suites
 
 > [!NOTE]
 Just shift "args" but not touch interval, sigowners or any other field.
 Remember that args are bound to a set of tests for a specific release, while intervals and everything else is bound to a release "status": stable1/2/3/4 or beta. An example of how to correctly rotate the jobs can be found [here](https://github.com/kubernetes/test-infra/pull/34668/commits/819c9d253ab873aff6626a5eaf7635560f7b769e).
+Keep in mind that jobs order might be different, e.g. stable1 and stable2 jobs might not be the same job, so remember to pay particular attention where you're copying from and to.
 
-The docs related to these steps are available in the [test-infra releng README](https://github.com/kubernetes/test-infra/blob/master/releng/README.md).
+The docs related to these steps are available in the [test-infra releng README](https://github.com/kubernetes/test-infra/blob/master/releng/README.md), they are to be used when you need to update the test configurations for the upcoming release branch and to generate the new Testgrid dashboards.
+
 Below is a more verbose breakdown of the steps.
 
 #### Create the release dashboards
 
-After running the make command you can now update the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
+> [!WARNING]
+Remember to updating all configs before running [this make command](https://github.com/kubernetes/test-infra/blob/master/releng/README.md#generate-jobs).
+
+After running the `make` command you can now update the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
 
 - Remove the deprecated release sig-release-1.30-{blocking,informing} dashboards
 - Add the new dashboards for the current release e.g., sig-release-1.34-{blocking,informing}
 - Pairing with the Release Signal lead, check that the new dashboards are working by visiting the TestGrid pages for the new dashboards and verifying that all the necessary jobs show up correctly.
 
-Note: Comparing the new jobs with previous version(s) might help to identify any missing jobs or misconfigurations.
+> [!NOTE]
+Comparing the new jobs with previous version(s) might help to identify any missing jobs or misconfigurations.
 
 #### Run test generation script
 
@@ -165,7 +165,7 @@ Breaking down what the above command does:
 - Runs the Python script `prepare_release_branch.py` inside a Python container
 - Passes the built tools and another Python script `generate_tests.py` as arguments to the main script
 
-#### Submit the test-infra jobs PR
+#### Submit the PR for release branch jobs in kubernetes/test-infra
 
 You can finally issue a new PR as [this example](https://github.com/kubernetes/test-infra/pull/34668/files) one.
 
@@ -182,13 +182,17 @@ This work on the kube-cross image could have been done as part of the Golang bum
 Before updating the builder images, you need to update the kube-cross image which they depend on:
 
 1. Create a PR to update the kube-cross variants.yaml file:
+   - Update the [dependencies.yaml](https://github.com/kubernetes/release/blob/master/dependencies.yaml) file
    - Edit [images/build/cross/variants.yaml](https://github.com/kubernetes/release/blob/master/images/build/cross/variants.yaml)
    - Add a new variant with the appropriate Go version for the current release
-   - Update the [dependencies.yaml](https://github.com/kubernetes/release/blob/master/dependencies.yaml) file
+
 
    Example PR: https://github.com/kubernetes/release/pull/3870/files
 
-   You should also edit the dependencies.yaml to bump to the stable version and the next candidate to the n+1 version of Kubernetes.
+   You should also edit the dependencies.yaml to update "Kubernetes version (next candidate.0)" to the upcoming minor. 
+   
+   > [!WARNING]
+   Bumping the stable version to the n+1 version of Kubernetes is done only when the official release is out.
 
     ```yaml
      - name: "Kubernetes version (stable.0)" # Update after the stable marker has been updated to stable.0
@@ -220,13 +224,14 @@ Before updating the builder images, you need to update the kube-cross image whic
 Part of this work on k8s-cloud-builder and k8s-ci-builder could have been done as part of the Golang bumps, but it is worth mentioning here as it is a common step.
 In any case you should always update the k8s-cloud-builder and k8s-ci-builder images to use the new kube-cross image.
 
-#### Update k8s-cloud-builder image
+#### Update k8s-cloud-builder and k8s-ci-builder images
 
 Once the kube-cross image is available:
 
-1. Create a PR to update the k8s-cloud-builder variants.yaml file:
+1. Update the k8s-cloud-builder variants.yaml file:
    - Edit [images/k8s-cloud-builder/variants.yaml](https://github.com/kubernetes/release/blob/master/images/k8s-cloud-builder/variants.yaml)
    - Add a new variant that references the new kube-cross image
+   - Update dependencies.yaml
 
    ```yaml
    v1.XX-cross1.XX.Y-Z: # Example addition to variants.yaml
@@ -234,19 +239,12 @@ Once the kube-cross image is available:
     KUBE_CROSS_VERSION: 'v1.XX.y-go1.XX.Y-Z' # Match with the kube-cross image you created
    ```
 
-2. Submit your PR and wait for review and merge
-   - Example PR (that also included the k8s-ci-builder Image update): https://github.com/kubernetes/release/pull/4065/files
-
-3. Monitor the build job in Prow:
-   - After merge, the image will be automatically built
-
-#### Update k8s-ci-builder image
-
 The k8s-ci-builder needs to be updated in a similar fashion:
 
-1. Create a PR to update the k8s-ci-builder variants.yaml file:
+2. Update the k8s-ci-builder variants.yaml file:
    - Edit [images/releng/k8s-ci-builder/variants.yaml](https://github.com/kubernetes/release/blob/master/images/releng/k8s-ci-builder/variants.yaml)
    - Add a new variant with the appropriate Go version that matches the release
+   - Update dependencies.yaml
 
    ```yaml
    '1.34':
@@ -256,11 +254,17 @@ The k8s-ci-builder needs to be updated in a similar fashion:
       OS_CODENAME: 'bullseye'
    ```
 
-2. This can be included in the same PR as the k8s-cloud-builder update
-   - If submitted separately, follow the same process as the k8s-cloud-builder update.
+3. Submit your PR and wait for review and merge
+   - Example PR (that also included the k8s-ci-builder Image update): https://github.com/kubernetes/release/pull/4065/files
 
+4. Monitor the build job in Prow:
+   - After merge, the image will be automatically built
 
-After all the above PRs are merged and prow jobs are successful, you can verify the images were built successfully:
+After the PR is merged, make sure the relevant ProwJobs are green.
+
+You can verify the images were built successfully by either pulling the images or using  `crane` to check their digest.
+
+Or you can use `gcloud` to list the tags of the images:
 
    ```bash
    # Check the kube-cross image
@@ -273,11 +277,11 @@ After all the above PRs are merged and prow jobs are successful, you can verify 
    gcloud container images list-tags gcr.io/k8s-staging-releng/k8s-ci-builder
    ```
 
-### Update k8s references for kube-cross image
+### Update `kubernetes/kubernetes` references for the `kube-cross` image
 
 Once the new builder images are available:
 
-Create a PR in kubernetes/kubernetes to reference the new kube-cross image in `build/build-image/cross/VERSION`:
+Create a PR in kubernetes/kubernetes to reference the new kube-cross image in `build/build-image/cross/VERSION` ([here](https://github.com/kubernetes/kubernetes/blob/master/build/build-image/cross/VERSION)):
    - Example PR: https://github.com/kubernetes/kubernetes/pull/132897/files
 
 ### Update publishing bot rules
@@ -297,7 +301,7 @@ You can also use the Docker image to run the tool, which is useful if you don't 
 docker run -t gcr.io/k8s-staging-publishing-bot/publishing-bot:latest /update-rules -branch release-1.34 -go 1.24.5 -rules ~/kubernetes/staging/publishing/rules.yaml -o /tmp/rules.yaml
 ```
 
-Recommended to set the release branch and the Go version as environment variables before running the command:
+It's recommended to set the release branch and the Go version as environment variables before running the command:
 
 ```bash
  # set release branch
@@ -335,6 +339,9 @@ Or, if you need to manually edit the rules file, you can do so, as follows:
     - staging/src/k8s.io/[repository-name]
 ```
 
+> [!WARNING]
+You should never really have to manually do this. If you have problems with the update-rules tool, those should be addressed as soon as possible.
+
 Once the rules are updated you can submit a PR similar to [this one](https://github.com/kubernetes/kubernetes/pull/131250), to the publishing-bot repository.
 
 ### Create Performance Tests Branch
@@ -344,7 +351,7 @@ Ensure a performance tests branch is created for the new version:
 ```bash
 # Example: https://github.com/kubernetes/perf-tests/issues/3290
 
-# A maintainer of the perf-tests repository should create:
+# A maintainer from SIG Scalability should create:
 https://github.com/kubernetes/perf-tests/tree/release-1.34
 
 # Verify the branch is working in CI:
@@ -376,8 +383,8 @@ Generally speaking, update scripts and documentation as needed to ensure they ar
 
 ## Additional Resources
 
-- [Branch Creation Handbook](http://bit.ly/relmanagers-handbook#release-branch-creation)
-- [Release Manager Handbook](http://bit.ly/relmanagers-handbook)
+- [Branch Creation Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md#release-branch-creation)
+- [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md)
 - [Example RC.0 Release Cut Issue](https://github.com/kubernetes/sig-release/issues/2755)
 - [Slack Discussion Thread for 1.33.0-rc.0](https://kubernetes.slack.com/archives/CJH2GBF7Y/p1744125003875769) - _do not rely on the Slack thread being long lived, if it got archived or the channel got deleted, you should just rely on the docs and the PRs linked in this document_
 

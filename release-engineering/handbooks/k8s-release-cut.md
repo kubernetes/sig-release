@@ -1,5 +1,38 @@
 # Cutting a Kubernetes release
 
+<!-- toc -->
+- [Cutting a Kubernetes release](#cutting-a-kubernetes-release)
+  - [Prerequisites](#prerequisites)
+    - [Green Release Signal](#green-release-signal)
+    - [Access to GCP](#access-to-gcp)
+    - [Install latest software (every time)](#install-latest-software-every-time)
+      - [Download or update `Go` to the latest available stable version:](#download-or-update-go-to-the-latest-available-stable-version)
+      - [Download or update the `gcloud` CLI to interact with GCP.](#download-or-update-the-gcloud-cli-to-interact-with-gcp)
+      - [Download or update `krel`](#download-or-update-krel)
+      - [Download or update the latest `kpromo` tool](#download-or-update-the-latest-kpromo-tool)
+      - [Download schedule-builder](#download-schedule-builder)
+    - [Configure GitHub Personal Access Token](#configure-github-personal-access-token)
+  - [1. Release cut issue](#1-release-cut-issue)
+  - [2. Create a thread on the `#release-management` Slack channel](#2-create-a-thread-on-the-release-management-slack-channel)
+  - [3. Generate testgrid screenshots](#3-generate-testgrid-screenshots)
+  - [4. Check publishing-bot status](#4-check-publishing-bot-status)
+  - [5. Mock stage and Mock release](#5-mock-stage-and-mock-release)
+  - [6. No-mock stage](#6-no-mock-stage)
+  - [7. Image promotion](#7-image-promotion)
+    - [Merge promo PR](#merge-promo-pr)
+    - [Wait on image promotion job](#wait-on-image-promotion-job)
+  - [8. No-mock release](#8-no-mock-release)
+  - [9. Notify public dev Google group mailinglist](#9-notify-public-dev-google-group-mailinglist)
+    - [Manually create release HTML announcements](#manually-create-release-html-announcements)
+      - [Legacy Sendgrid method:](#legacy-sendgrid-method)
+  - [10. Post release tasks](#10-post-release-tasks)
+    - [\[RC.0 only\] Considerations and post branch creation release tasks](#rc0-only-considerations-and-post-branch-creation-release-tasks)
+      - [Next Release Branch Creation](#next-release-branch-creation)
+      - [Post branch creation release tasks](#post-branch-creation-release-tasks)
+    - [\[Stable only\] Code Thaw](#stable-only-code-thaw)
+    - [\[Patch only\] Update schedule on k/website](#patch-only-update-schedule-on-kwebsite)
+  - [Cleanup](#cleanup)
+
 A step by step guide for cutting Kubernetes patch releases. At a high-level:
 
 - Maintain GitHub release cut issue
@@ -117,10 +150,18 @@ krel version
 
 #### Download or update the latest `kpromo` tool
 
-Run the following command ([source](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md#preparing-environment)):
+Run the following command ([source](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md#preparing-environment)) to get the latest release of `kpromo`:
 
 ```
 go install sigs.k8s.io/promo-tools/v4/cmd/kpromo@latest
+```
+
+or to get the latest version directly from main:
+
+```
+git clone https://github.com/kubernetes-sigs/promo-tools
+git pull origin main
+make kpromo
 ```
 
 Validate with:

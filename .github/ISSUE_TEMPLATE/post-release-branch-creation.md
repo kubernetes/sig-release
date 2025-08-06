@@ -1,7 +1,7 @@
 ---
 name: Post Release Branch Creation Tasks
-about: Tasks to perform after the release candidate 0 is cut
-title: Post Release Branch Creation Tasks for <version v1.x>
+about: Tasks to perform after the rc.0 is cut and the upcoming release branch is created
+title: Post Release Branch Creation Tasks for v1.x.y-rc.0
 labels: sig/release, area/release-eng
 ---
 
@@ -18,7 +18,7 @@ Help? Ring @release-managers on slack!
 -->
 
 - [ ] Create a thread in #release-management: <!-- Paste link to Slack thread -->
-- [ ] (optional) Remove EOL version jobs from test-infra, **only** if agreed upon with Release Managers 
+- [ ] (optional) Remove jobs for EOL versions, **only** if agreed upon with Release Managers
 <!--
 Branch Managers might not have a context on if it is "safe" to remove the EOL jobs. We try to be firm with the deadlines and stop cutting patches as soon as we reach the EOL date, but e.g. there might be a new patch needed because of some important security fix, in which case only Release Managers will know about that.
 
@@ -28,15 +28,15 @@ The trigger for removing such jobs should be solely the EOL date but we shouldn'
 -->
 - [ ] Update [`milestone_applier` rules](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml)
 - [ ] Update [`kubekins-e2e-v2/variants.yaml`](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e-v2/variants.yaml) with the new version config
-- [ ] Rotate test-infra jobs configuration for the new release
+- [ ] Rotate configuration of release branch jobs in kubernetes/test-infra for the upcoming release
+- [ ] Run test generation script
 - [ ] Create the new release dashboards
 - [ ] Monitor the new release dashboard with the Release Signal Lead for at least 48 hours - mainly for missing or misconfigured jobs
-- [ ] Run test generation script
 - [ ] Add a new variant for the `kube-cross` image (`kubernetes/release` repository) and ensure the image is built and pushed properly
 - [ ] Add new variants for `k8s-cloud-builder` and `k8s-ci-builder` images (`kubernetes/release` repository) and ensure images are build and pushed properly
 - [ ] Update references in `kubernetes/kubernetes` with the new kube-cross image
 - [ ] Update publishing-bot rules to include the new release branch
-- [ ] Ensure that a new [performance tests](https://github.com/kubernetes/perf-tests/) branch is created
+- [ ] Ensure that a new [performance tests](https://github.com/kubernetes/perf-tests/) branch is created by SIG Scalability maintainers
 - [ ] Coordinate the next alpha release cut - <!-- mention @release-managers nudging them to perform the propedeutic tasks for the next alpha (e.g. setting up the new OBS project) -->
 - [ ] Inform stakeholders about the post branch creation tasks being completed
 
