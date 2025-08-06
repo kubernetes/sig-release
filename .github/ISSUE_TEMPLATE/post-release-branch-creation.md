@@ -18,6 +18,7 @@ Help? Ring @release-managers on slack!
 -->
 
 - [ ] Create a thread in #release-management: <!-- Paste link to Slack thread -->
+- [ ] Coordinate the next alpha release cut - <!-- mention @release-managers nudging them to perform the propedeutic tasks for the next alpha (e.g. setting up the new OBS project) -->
 - [ ] (optional) Remove jobs for EOL versions, **only** if agreed upon with Release Managers
 <!--
 Branch Managers might not have a context on if it is "safe" to remove the EOL jobs. We try to be firm with the deadlines and stop cutting patches as soon as we reach the EOL date, but e.g. there might be a new patch needed because of some important security fix, in which case only Release Managers will know about that.
@@ -33,11 +34,10 @@ The trigger for removing such jobs should be solely the EOL date but we shouldn'
 - [ ] Create the new release dashboards
 - [ ] Monitor the new release dashboard with the Release Signal Lead for at least 48 hours - mainly for missing or misconfigured jobs
 - [ ] Add a new variant for the `kube-cross` image (`kubernetes/release` repository) and ensure the image is built and pushed properly
-- [ ] Add new variants for `k8s-cloud-builder` and `k8s-ci-builder` images (`kubernetes/release` repository) and ensure images are build and pushed properly
+- [ ] Add new variants for `k8s-cloud-builder` and `k8s-ci-builder` images (`kubernetes/release` repository) and ensure images are built and pushed properly
 - [ ] Update references in `kubernetes/kubernetes` with the new kube-cross image
 - [ ] Update publishing-bot rules to include the new release branch
 - [ ] Ensure that a new [performance tests](https://github.com/kubernetes/perf-tests/) branch is created by SIG Scalability maintainers
-- [ ] Coordinate the next alpha release cut - <!-- mention @release-managers nudging them to perform the propedeutic tasks for the next alpha (e.g. setting up the new OBS project) -->
 - [ ] Inform stakeholders about the post branch creation tasks being completed
 
 ## Action Items

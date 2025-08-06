@@ -3,9 +3,10 @@
 <!-- toc -->
 - [Post release branch creation](#post-release-branch-creation)
   - [Checklist](#checklist)
+    - [Cut next alpha](#cut-next-alpha)
     - [Remove EOL version jobs from test-infra (optional)](#remove-eol-version-jobs-from-test-infra-optional)
     - [Update milestone applier rules and check milestone requirements](#update-milestone-applier-rules-and-check-milestone-requirements)
-    - [Update Kubekins-e2e](#update-kubekins-e2e)
+    - [Update Kubekins-e2e v2 variants](#update-kubekins-e2e-v2-variants)
     - [Update release branch jobs in kubernetes/test-infra for the new release](#update-release-branch-jobs-in-kubernetestest-infra-for-the-new-release)
       - [Create the release dashboards](#create-the-release-dashboards)
       - [Run test generation script](#run-test-generation-script)
@@ -15,7 +16,6 @@
     - [Update `kubernetes/kubernetes` references for the `kube-cross` image](#update-kuberneteskubernetes-references-for-the-kube-cross-image)
     - [Update publishing bot rules](#update-publishing-bot-rules)
     - [Create Performance Tests Branch](#create-performance-tests-branch)
-    - [Cut next alpha](#cut-next-alpha)
     - [Check and eventually improve release scripts (optional)](#check-and-eventually-improve-release-scripts-optional)
   - [Additional Resources](#additional-resources)
   - [Notes](#notes)
@@ -31,6 +31,15 @@ It is essential to follow these steps to maintain the integrity of the release p
 ## Checklist
 
 Open a new issue using [this template](https://github.com/kubernetes/sig-release/issues/new?template=post-release-branch-creation.md).
+
+### Cut next alpha
+
+Recall that an alpha.0 of the next minor release was created during the rc.0 cut?
+
+To assist downstream consumers of Kubernetes, a new alpha must be cut to bring our next release tag to the tip of `master`.
+
+Begin the release process following the [release cut handbook](k8s-release-cut.md) following the instructions tailored for alpha releases.
+This needs to be done before the `nomock release` command is executed for the rc.0.
 
 ### Remove EOL version jobs from test-infra (optional)
 
@@ -81,7 +90,7 @@ milestone_applier:
 > [!NOTE]
 Look out for the code freeze config and ensure excluded and included branches include the upcoming release branch `release-1.xy`.
 
-### Update Kubekins-e2e
+### Update Kubekins-e2e v2 variants
 
 Create a PR to update the `kubekins-e2e-v2/variants.yaml` file with the new version's configuration.
 File can be found [here](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e-v2/variants.yaml).
@@ -102,7 +111,7 @@ variants:
     BAZEL_VERSION: 3.4.1
 ```
 
-Wait for the `post-test-infra-push-kubekins-e2e` postsubmit to finish. You can check the status on [the Prow Status page](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
+Before proceding with the next step, wait for the `post-test-infra-push-kubekins-e2e` postsubmit to finish. You can check the status on [the Prow Status page](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
 
 > [!NOTE]
 Consider what has been pointed out in [this issue](https://github.com/kubernetes/test-infra/issues/34675).
@@ -112,7 +121,7 @@ When updating to new release image variants, you’ll need to update the jobs to
 
 Updating the release branch jobs in kubernetes/test-infra for the new release version involves some steps.
 
-First of all you need to modify the `releng/test_config.yaml` file ([here](https://github.com/jimangel/test-infra/blob/master/releng/test_config.yaml)) to:
+First of all you need to modify the `releng/test_config.yaml` file ([here](https://github.com/kubernetes/test-infra/blob/master/releng/test_config.yaml)) to:
 - Update version references
 - Rotate job configurations (n -> n+1)
 - Add new version as beta
@@ -358,14 +367,6 @@ https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-kubemark-500-g
 ```
 
 Reach out to SIG Scalability to ensure a new branch is cut in the [sigs.k8s.io/perf-tests](https://github.com/kubernetes/perf-tests/) repo. 
-
-### Cut next alpha
-
-Recall that an alpha.0 of the next minor release was created during the rc.0 cut?
-
-To assist downstream consumers of Kubernetes, a new alpha should be cut to bring our next release tag to the tip of `master`.
-
-Begin the release process following the [release cut handbook](k8s-release-cut.md) following the instructions tailored for alpha releases.
 
 ### Check and eventually improve release scripts (optional)
 
