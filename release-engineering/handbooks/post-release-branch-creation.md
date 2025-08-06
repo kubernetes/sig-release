@@ -12,7 +12,6 @@
       - [Submit the PR for release branch jobs in kubernetes/test-infra](#submit-the-pr-for-release-branch-jobs-in-kubernetestest-infra)
     - [Add new variant for kube-cross image](#add-new-variant-for-kube-cross-image)
     - [Update k8s-cloud-builder and k8s-ci-builder](#update-k8s-cloud-builder-and-k8s-ci-builder)
-      - [Update k8s-cloud-builder and k8s-ci-builder images](#update-k8s-cloud-builder-and-k8s-ci-builder-images)
     - [Update `kubernetes/kubernetes` references for the `kube-cross` image](#update-kuberneteskubernetes-references-for-the-kube-cross-image)
     - [Update publishing bot rules](#update-publishing-bot-rules)
     - [Create Performance Tests Branch](#create-performance-tests-branch)
@@ -22,7 +21,7 @@
   - [Notes](#notes)
 
 This document details the tasks that need to be executed after cutting a Kubernetes rc.0 release. These tasks ensure proper configuration for the new release branch and testing infrastructure.
-They must be executed after the nomock release stage is completed, and the release branch is created, as stated in the [branch creation chapter](k8s-release-cut.md#next-release-branch-creation) of the release cut handbook.
+They must be executed after the `nomock release` is completed, and the release branch is created, as stated in the [branch creation chapter](k8s-release-cut.md#next-release-branch-creation) of the release cut handbook.
 
 PR can be created beforehand (and this is recommended in order to get reviews in a timely manner) but you got to remember to put a `/hold` on all the PRs, they have to be lifted only once the `nomock` release phase is done and the branch is created.
 
@@ -68,7 +67,6 @@ Only remove the oldest version if it is already EOL and the release branch jobs 
 # Edit this file: config/prow/plugins.yaml
 
 # Add the new version and remove the oldest version in the kubernetes/kubernetes section - if the oldest version is EOL:
-```yaml
 milestone_applier:
   kubernetes/kubernetes:
     master: v1.33
@@ -83,7 +81,7 @@ Look out for the code freeze config and ensure excluded and included branches in
 
 ### Update Kubekins-e2e
 
-Create a PR to update the kubekins-e2e `kubekins-e2e-v2/variants.yaml` file with the new version's configuration.
+Create a PR to update the `kubekins-e2e-v2/variants.yaml` file with the new version's configuration.
 File can be found [here](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e-v2/variants.yaml).
 
 > [!WARNING]
@@ -122,18 +120,13 @@ First of all you need to modify the `releng/test_config.yaml` file ([here](https
 > [!NOTE]
 Just shift "args" but not touch interval, sigowners or any other field.
 Remember that args are bound to a set of tests for a specific release, while intervals and everything else is bound to a release "status": stable1/2/3/4 or beta. An example of how to correctly rotate the jobs can be found [here](https://github.com/kubernetes/test-infra/pull/34668/commits/819c9d253ab873aff6626a5eaf7635560f7b769e).
-Keep in mind that jobs order might be different, e.g. stable1 and stable2 jobs might not be the same job, so remember to pay particular attention where you're copying from and to.
+Keep in mind that jobs order might be different, e.g. the first stable1 job and and the first stable2 job might not be the same type of the job, so remember to pay particular attention where you're copying from and to.
 
-The docs related to these steps are available in the [test-infra releng README](https://github.com/kubernetes/test-infra/blob/master/releng/README.md), they are to be used when you need to update the test configurations for the upcoming release branch and to generate the new Testgrid dashboards.
-
-Below is a more verbose breakdown of the steps.
+Remember to update all configs before running the [generation script](#run-test-generation-script) for the upcoming release branch jobs.
 
 #### Create the release dashboards
 
-> [!WARNING]
-Remember to updating all configs before running [this make command](https://github.com/kubernetes/test-infra/blob/master/releng/README.md#generate-jobs).
-
-After running the `make` command you can now update the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
+After configuring the jobs you can now update the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
 
 - Remove the deprecated release sig-release-1.30-{blocking,informing} dashboards
 - Add the new dashboards for the current release e.g., sig-release-1.34-{blocking,informing}
@@ -144,7 +137,7 @@ Comparing the new jobs with previous version(s) might help to identify any missi
 
 #### Run test generation script
 
-After updating the configurations you can run the following command from the root of your `test-infra` fork to generate the updated test configurations, remember to use the correct architecture and OS for your environment, e.g., `GOARCH=arm64 GOOS=darwin` for macOS on ARM:
+After updating the configurations you can run the following command from the root of your `test-infra` fork to generate the updated jobs configurations, remember to use the correct architecture and OS for your environment, e.g., `GOARCH=arm64 GOOS=darwin` for macOS on ARM:
 
 ```bash
 GOARCH=arm64 GOOS=darwin make -C releng prepare-release-branch
@@ -224,14 +217,12 @@ Before updating the builder images, you need to update the kube-cross image whic
 Part of this work on k8s-cloud-builder and k8s-ci-builder could have been done as part of the Golang bumps, but it is worth mentioning here as it is a common step.
 In any case you should always update the k8s-cloud-builder and k8s-ci-builder images to use the new kube-cross image.
 
-#### Update k8s-cloud-builder and k8s-ci-builder images
-
-Once the kube-cross image is available:
+Once the updated kube-cross image is available:
 
 1. Update the k8s-cloud-builder variants.yaml file:
+   - Update dependencies.yaml
    - Edit [images/k8s-cloud-builder/variants.yaml](https://github.com/kubernetes/release/blob/master/images/k8s-cloud-builder/variants.yaml)
    - Add a new variant that references the new kube-cross image
-   - Update dependencies.yaml
 
    ```yaml
    v1.XX-cross1.XX.Y-Z: # Example addition to variants.yaml
@@ -242,9 +233,9 @@ Once the kube-cross image is available:
 The k8s-ci-builder needs to be updated in a similar fashion:
 
 2. Update the k8s-ci-builder variants.yaml file:
+   - Update dependencies.yaml
    - Edit [images/releng/k8s-ci-builder/variants.yaml](https://github.com/kubernetes/release/blob/master/images/releng/k8s-ci-builder/variants.yaml)
    - Add a new variant with the appropriate Go version that matches the release
-   - Update dependencies.yaml
 
    ```yaml
    '1.34':
@@ -352,9 +343,15 @@ Ensure a performance tests branch is created for the new version:
 # Example: https://github.com/kubernetes/perf-tests/issues/3290
 
 # A maintainer from SIG Scalability should create:
+https://github.com/kubernetes/perf-tests/tree/release-1.xx
+
+# Example for 1.34:
 https://github.com/kubernetes/perf-tests/tree/release-1.34
 
 # Verify the branch is working in CI:
+https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-kubemark-500-gce-1-xx
+
+# Example for 1.34:
 https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-kubemark-500-gce-1-34
 ```
 

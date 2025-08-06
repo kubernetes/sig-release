@@ -153,14 +153,14 @@ krel version
 Run the following command ([source](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md#preparing-environment)) to get the latest release of `kpromo`:
 
 ```
-go install sigs.k8s.io/promo-tools/v4/cmd/kpromo@latest
+go install sigs.k8s.io/promo-tools/v4/cmd/kpromo@main
 ```
 
-or to get the latest version directly from main:
+or to build the latest version directly from a target branch:
 
 ```
 git clone https://github.com/kubernetes-sigs/promo-tools
-git pull origin main
+git pull origin <target-branch>
 make kpromo
 ```
 
@@ -526,7 +526,7 @@ krel history --branch release-1.33 --date-from 2025-04-23
 > The new release branch is created in the `nomock` staging phase and pushed to the repository during the `nomock` release phase of an rc.0 cut.
 
 During a `rc.0` release our release tooling creates a new release branch named `release-X.Y`, where `X.Y.0` is the version of the upcoming release. 
-For example: `release-1.18` also automatically triggers an alpha.0 build for the subsequent release [`v1.19.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.19.0-alpha.0).
+Additionally, the `rc.0` release automatically triggers an `alpha.0` build for the subsequent release (e.g. for `v1.34.0-rc.0`, `v1.35.0-alpha.0` is created automatically).
 
 Behind the scenes `krel` is executing a `git branch create` command and `git push`. 
 
