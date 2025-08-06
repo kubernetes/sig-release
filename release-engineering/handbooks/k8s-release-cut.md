@@ -520,6 +520,8 @@ krel history --branch release-1.33 --date-from 2025-04-23
 
 ### [RC.0 only] Considerations and post branch creation release tasks
 
+Remember that before launching the `nomock release` command for an rc.0, you need to ensure that the image promo job for the next alpha.0 has been completed successfully.
+
 #### Next Release Branch Creation
 
 > [!IMPORTANT]  
