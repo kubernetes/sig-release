@@ -36,6 +36,11 @@ Open a new issue using [this template](https://github.com/kubernetes/sig-release
 
 Consider removing jobs for versions that are going EOL. This is sometimes done before adding new jobs to avoid overwhelming the Prow cluster.
 
+Removing EOL jobs involves different steps, including deleting old configs from `config/jobs/kubernetes/sig-release/release-branch-jobs/` e.g. 1.29 EOL jobs removed in [this PR](https://github.com/kubernetes/test-infra/pull/34672).
+There could also be some other jobs living outside `config/jobs/kubernetes/sig-release/release-branch-jobs` that also needs to be removed.
+
+You should also remove the unused EOL jobs from the `kubekins-e2e-v2/variants.yaml` file ([here](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e-v2/variants.yaml)), for example:
+
 ```bash
 # Example PR: https://github.com/kubernetes/test-infra/pull/34674
 # Changes would involve removing the EOL version from: images/kubekins-e2e-v2/variants.yaml
@@ -48,9 +53,6 @@ Consider removing jobs for versions that are going EOL. This is sometimes done b
 -    K8S_RELEASE: latest-1.30
 -    BAZEL_VERSION: 3.4.1
 ```
-
-Removing EOL jobs involves different steps, including deleting old configs from `config/jobs/kubernetes/sig-release/release-branch-jobs/` e.g. 1.29 EOL jobs removed in [this PR](https://github.com/kubernetes/test-infra/pull/34672).
-There could also be some other jobs living outside `config/jobs/kubernetes/sig-release/release-branch-jobs` that also needs to be removed.
 
 > [!NOTE]
 This step may alternatively be performed as part of a patch release process. It's mandatory to consult with the release engineering team regarding the timing of this step.
