@@ -304,21 +304,22 @@ The Kubernetes Publishing Bot is responsible for:
 Update the publishing bot rules to include the new version. Use the update-rules CLI tool to generate the necessary changes as described [here](https://github.com/kubernetes/publishing-bot/blob/master/cmd/update-rules/README.md).
 
 You can install the tool on Linux with a simple `make build` command, similarly on MacOS by specifying your OS `GOOS=darwin make build`.
-By default the binary will be located in `_output/update-rules`.
+By default the binary will be located in `_output/update-rules`. This is the preferred way to run the tool.
 
-You can also use the Docker image to run the tool, which is useful if you don't want to build it locally (but you can also do that with make `make build-image`). The live Docker image is available at `gcr.io/k8s-staging-publishing-bot/publishing-bot:latest` and you can invoke the tool as follows:
+You can also use the Docker image to run the tool, which is useful if you don't want to build it locally (but you can also do that with make `make build-image`). The live Docker image is available at `gcr.io/k8s-staging-publishing-bot/publishing-bot:latest` and you can invoke the containerized tool as follows:
 
 ```bash
 docker run -t gcr.io/k8s-staging-publishing-bot/publishing-bot:latest /update-rules -branch release-1.34 -go 1.24.5 -rules ~/kubernetes/staging/publishing/rules.yaml -o /tmp/rules.yaml
 ```
 
-It's recommended to set the release branch and the Go version as environment variables before running the command:
+It's recommended to set the release branch, the Go version and the current publishing rules from kubernetes/kubernetes master branch as environment variables before running the command:
 
 ```bash
  # set release branch
  export K8S_REL_BRANCH=release-1.34
  # https://github.com/kubernetes/release/blob/master/images/build/cross/variants.yaml#L7
  export GO_VERSION=1.24.5
+ export CURRENT_K8S_MASTER_RULES_FILE=/kubernetes/staging/publishing/rules.yaml
 ```
 
 > [!WARNING]
@@ -327,10 +328,10 @@ Remember to use the appropriate (updated) Go version for the release, coordinate
 Basically you need to run the following command after having the `update-rules` tool installed.
 
 ```bash
-_output/update-rules -branch ${K8S_REL_BRANCH} -go ${GO_VERSION} -rules ~/kubernetes/staging/publishing/rules.yaml -o /tmp/rules.yaml
+_output/update-rules -branch ${K8S_REL_BRANCH} -go ${GO_VERSION} -rules ${CURRENT_K8S_MASTER_RULES_FILE} -o /tmp/rules.yaml
 ```
 
-Or, if you need to manually edit the rules file, you can do so, as follows:
+Or, if you ever need to manually edit the rules file, you can do so, as follows:
 
 ```yaml
 # Example PR: https://github.com/kubernetes/kubernetes/pull/131250
