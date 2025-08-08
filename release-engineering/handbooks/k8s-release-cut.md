@@ -1,5 +1,38 @@
 # Cutting a Kubernetes release
 
+<!-- toc -->
+- [Cutting a Kubernetes release](#cutting-a-kubernetes-release)
+  - [Prerequisites](#prerequisites)
+    - [Green Release Signal](#green-release-signal)
+    - [Access to GCP](#access-to-gcp)
+    - [Install latest software (every time)](#install-latest-software-every-time)
+      - [Download or update `Go` to the latest available stable version:](#download-or-update-go-to-the-latest-available-stable-version)
+      - [Download or update the `gcloud` CLI to interact with GCP.](#download-or-update-the-gcloud-cli-to-interact-with-gcp)
+      - [Download or update `krel`](#download-or-update-krel)
+      - [Download or update the latest `kpromo` tool](#download-or-update-the-latest-kpromo-tool)
+      - [Download schedule-builder](#download-schedule-builder)
+    - [Configure GitHub Personal Access Token](#configure-github-personal-access-token)
+  - [1. Release cut issue](#1-release-cut-issue)
+  - [2. Create a thread on the `#release-management` Slack channel](#2-create-a-thread-on-the-release-management-slack-channel)
+  - [3. Generate testgrid screenshots](#3-generate-testgrid-screenshots)
+  - [4. Check publishing-bot status](#4-check-publishing-bot-status)
+  - [5. Mock stage and Mock release](#5-mock-stage-and-mock-release)
+  - [6. No-mock stage](#6-no-mock-stage)
+  - [7. Image promotion](#7-image-promotion)
+    - [Merge promo PR](#merge-promo-pr)
+    - [Wait on image promotion job](#wait-on-image-promotion-job)
+  - [8. No-mock release](#8-no-mock-release)
+  - [9. Notify public dev Google group mailinglist](#9-notify-public-dev-google-group-mailinglist)
+    - [Manually create release HTML announcements](#manually-create-release-html-announcements)
+      - [Legacy Sendgrid method:](#legacy-sendgrid-method)
+  - [10. Post release tasks](#10-post-release-tasks)
+    - [\[RC.0 only\] Considerations and post branch creation release tasks](#rc0-only-considerations-and-post-branch-creation-release-tasks)
+      - [Next Release Branch Creation](#next-release-branch-creation)
+      - [Post branch creation release tasks](#post-branch-creation-release-tasks)
+    - [\[Stable only\] Code Thaw](#stable-only-code-thaw)
+    - [\[Patch only\] Update schedule on k/website](#patch-only-update-schedule-on-kwebsite)
+  - [Cleanup](#cleanup)
+
 A step by step guide for cutting Kubernetes patch releases. At a high-level:
 
 - Maintain GitHub release cut issue
@@ -117,10 +150,18 @@ krel version
 
 #### Download or update the latest `kpromo` tool
 
-Run the following command ([source](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md#preparing-environment)):
+Run the following command ([source](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md#preparing-environment)) to get the latest release of `kpromo`:
 
 ```
-go install sigs.k8s.io/promo-tools/v4/cmd/kpromo@latest
+go install sigs.k8s.io/promo-tools/v4/cmd/kpromo@main
+```
+
+or to build the latest version directly from a target branch:
+
+```
+git clone https://github.com/kubernetes-sigs/promo-tools
+git pull origin <target-branch>
+make kpromo
 ```
 
 Validate with:
@@ -477,11 +518,37 @@ krel history --branch release-1.33 --date-from 2025-04-23
 
 ## 10. Post release tasks
 
-### [RC.0 only] Post rc.0 release tasks
+### [RC.0 only] Considerations and post branch creation release tasks
 
-See [here](post-rc0-release-tasks.md) for the complete list of post rc.0 release tasks.
+Remember that before launching the `nomock release` command for an rc.0, you need to ensure that the image promo job for the next alpha.0 has been completed successfully.
+
+#### Next Release Branch Creation
+
+> [!IMPORTANT]  
+> The new release branch is created in the `nomock` staging phase and pushed to the repository during the `nomock` release phase of an rc.0 cut.
+
+During a `rc.0` release our release tooling creates a new release branch named `release-X.Y`, where `X.Y.0` is the version of the upcoming release. 
+Additionally, the `rc.0` release automatically triggers an `alpha.0` build for the subsequent release (e.g. for `v1.34.0-rc.0`, `v1.35.0-alpha.0` is created automatically).
+
+Behind the scenes `krel` is executing a `git branch create` command and `git push`. 
+
+At the same time Prow’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo, including the newly created one.
+No need to manually create the branch protection rule.
+
+However, it is important to ensure that the branch is protected. We had cases where the branch was not protected and this was noticed very late.
+
+> [!NOTE]  
+This means that the staging step will take about twice as long, as it will stage both versions `vX.Y.0-rc.0` and `vX.{Y+1}.0-alpha.0`. 
+The release step will also be extended, but not substantially longer in time.
+
+#### Post branch creation release tasks
+
+See [here](post-rc0-release-tasks.md) for the complete list of post branch creation release tasks.
 
 Such list resides in a different document to mainain this one in a bite-sized SRE style format.
+
+> [!WARNING]
+You will not be able to cut an rc.1 or any other cut against the new branch until the post branch creation tasks (post rc.0) are complete.
 
 ### [Stable only] Code Thaw
 
