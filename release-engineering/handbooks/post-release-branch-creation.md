@@ -120,6 +120,8 @@ When updating to new release image variants, you’ll need to update the jobs to
 ### Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards
 
 > [!CAUTION]
+Follow the guidelines below very carefully during the update process.
+
 - Do not remove old jobs while adding new jobs, just do not. Let Release Engineering handle it before or after the post branch creation tasks.
 - Do not segregate PRs, just separate auto-generated files from manually updated ones in two (or more) clearly documented commits.
 - Be super careful about `releng/test_config.yaml` epecially when commenting out `stable4`
@@ -200,12 +202,12 @@ Before updating the builder images, you need to update the kube-cross image whic
 
    Example PR: https://github.com/kubernetes/release/pull/3870/files
 
-   You should also edit the dependencies.yaml to update "Kubernetes version (next candidate.0)" to the upcoming minor. 
+   You also have to edit the dependencies.yaml to update "Kubernetes version (next candidate.0)" to the upcoming minor. 
    
-   > [!WARNING]
-   Bumping the stable version to the n+1 version of Kubernetes is done only when the official release is out.
+> [!WARNING]
+Bumping the stable version to the n+1 version of Kubernetes is done only when the official release is out.
 
-    ```yaml
+```yaml
      - name: "Kubernetes version (stable.0)" # Update after the stable marker has been updated to stable.0
        version: v1.34.0
        refPaths:
@@ -220,7 +222,7 @@ Before updating the builder images, you need to update the kube-cross image whic
        refPaths:
          - path: images/build/cross/variants.yaml
            match: "KUBERNETES_VERSION: 'v((([0-9]+)\\.([0-9]+)\\.([0-9]+)(?:-([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?)(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?)'"
-    ```
+```
 
 2. Wait for the Prow job to complete:
    - Monitor the [post-release-push-image-kube-cross](https://prow.k8s.io/view/gs/kubernetes-jenkins/logs/post-release-push-image-kube-cross) job
