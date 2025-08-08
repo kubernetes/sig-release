@@ -30,8 +30,7 @@ The trigger for removing such jobs should be solely the EOL date but we shouldn'
 - [ ] Update [`milestone_applier` rules](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml)
 - [ ] Update [`kubekins-e2e-v2/variants.yaml`](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e-v2/variants.yaml) with the new version config
 - [ ] Rotate configuration of release branch jobs in kubernetes/test-infra for the upcoming release
-- [ ] Run test generation script
-- [ ] Create the new release dashboards
+- [ ] Run test generation script, configure the new release dashboards and send a PR with both tests and dashboards config
 - [ ] Monitor the new release dashboard with the Release Signal Lead for at least 48 hours - mainly for missing or misconfigured jobs
 - [ ] Add a new variant for the `kube-cross` image (`kubernetes/release` repository) and ensure the image is built and pushed properly
 - [ ] Add new variants for `k8s-cloud-builder` and `k8s-ci-builder` images (`kubernetes/release` repository) and ensure images are built and pushed properly

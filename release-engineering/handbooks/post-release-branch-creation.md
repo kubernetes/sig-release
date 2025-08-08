@@ -7,10 +7,10 @@
     - [Remove EOL version jobs from test-infra (optional)](#remove-eol-version-jobs-from-test-infra-optional)
     - [Update milestone applier rules and check milestone requirements](#update-milestone-applier-rules-and-check-milestone-requirements)
     - [Update Kubekins-e2e v2 variants](#update-kubekins-e2e-v2-variants)
-    - [Update release branch jobs in kubernetes/test-infra for the new release](#update-release-branch-jobs-in-kubernetestest-infra-for-the-new-release)
+    - [Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards](#update-release-branch-jobs-in-kubernetestest-infra-for-the-new-release-and-create-the-dashboards)
       - [Create the release dashboards](#create-the-release-dashboards)
       - [Run test generation script](#run-test-generation-script)
-      - [Submit the PR for release branch jobs in kubernetes/test-infra](#submit-the-pr-for-release-branch-jobs-in-kubernetestest-infra)
+      - [Submit the PR for release branch jobs and dashboards in kubernetes/test-infra](#submit-the-pr-for-release-branch-jobs-and-dashboards-in-kubernetestest-infra)
     - [Add new variant for kube-cross image](#add-new-variant-for-kube-cross-image)
     - [Update k8s-cloud-builder and k8s-ci-builder](#update-k8s-cloud-builder-and-k8s-ci-builder)
     - [Update `kubernetes/kubernetes` references for the `kube-cross` image](#update-kuberneteskubernetes-references-for-the-kube-cross-image)
@@ -117,7 +117,7 @@ Before proceding with the next step, wait for the `post-test-infra-push-kubekins
 Consider what has been pointed out in [this issue](https://github.com/kubernetes/test-infra/issues/34675).
 When updating to new release image variants, you’ll need to update the jobs to use these new images. However, keep in mind that you can only update a job after the new image tag is available. If you attempt to update before the new image exists, the job may fail.
 
-### Update release branch jobs in kubernetes/test-infra for the new release
+### Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards
 
 Updating the release branch jobs in kubernetes/test-infra for the new release version involves some steps.
 
@@ -169,7 +169,7 @@ Breaking down what the above command does:
 - Runs the Python script `prepare_release_branch.py` inside a Python container
 - Passes the built tools and another Python script `generate_tests.py` as arguments to the main script
 
-#### Submit the PR for release branch jobs in kubernetes/test-infra
+#### Submit the PR for release branch jobs and dashboards in kubernetes/test-infra
 
 You can finally issue a new PR as [this example](https://github.com/kubernetes/test-infra/pull/34668/files) one.
 
