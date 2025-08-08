@@ -119,11 +119,18 @@ When updating to new release image variants, you’ll need to update the jobs to
 
 ### Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards
 
-Updating the release branch jobs in kubernetes/test-infra for the new release version involves some steps.
+> [!CAUTION]
+- Do not remove old jobs while adding new jobs, just do not. Let Release Engineering handle it before or after the post branch creation tasks.
+- Do not segregate PRs, just separate auto-generated files from manually updated ones in two (or more) clearly documented commits.
+- Be super careful about `releng/test_config.yaml` epecially when commenting out `stable4`
+- Do not hesitate to remove broken jobs, but let the interested SIG(s) know about it so they can re-add it.
+
+Updating the release branch jobs in `kubernetes/test-infra` for the new release version involves some steps, it is unpredictable work and requires manual intervention as not every job is generated.
+Some of them are added manually and live outside of the generated job tree.
 
 First of all you need to modify the `releng/test_config.yaml` file ([here](https://github.com/kubernetes/test-infra/blob/master/releng/test_config.yaml)) to:
 - Update version references
-- Rotate job configurations (n -> n+1)
+- Rotate stable job configurations (n -> n+1)
 - Add new version as beta
 - Update stable versions sequentially - _note: you should put config of stable1 to stable2, then repeat it until you get to the end._
 - Update configuration for all test suites
@@ -139,8 +146,8 @@ Remember to update all configs before running the [generation script](#run-test-
 
 After configuring the jobs you can now update the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
 
-- Remove the deprecated release sig-release-1.30-{blocking,informing} dashboards
-- Add the new dashboards for the current release e.g., sig-release-1.34-{blocking,informing}
+- Remove the deprecated release sig-release-1.xx-{blocking,informing} dashboards
+- Add the new dashboards for the current release e.g., sig-release-1.xx-{blocking,informing}
 - Pairing with the Release Signal lead, check that the new dashboards are working by visiting the TestGrid pages for the new dashboards and verifying that all the necessary jobs show up correctly.
 
 > [!NOTE]
@@ -173,7 +180,7 @@ Breaking down what the above command does:
 
 You can finally issue a new PR as [this example](https://github.com/kubernetes/test-infra/pull/34668/files) one.
 
-Additionally update/check the following scripts, if you've found any issues with them:
+Additionally update/fix the following scripts, if you've found any issues with or a way to improve them (they are fragile):
 - `hack/run-in-python-container.sh`
 - `releng/run.sh`
 - `releng/prepare_release_branch.py`
