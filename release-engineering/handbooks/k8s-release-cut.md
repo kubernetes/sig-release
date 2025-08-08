@@ -547,6 +547,9 @@ See [here](post-rc0-release-tasks.md) for the complete list of post branch creat
 
 Such list resides in a different document to mainain this one in a bite-sized SRE style format.
 
+> [!WARNING]
+You will not be able to cut an rc.1 or any other cut against the new branch until the post branch creation tasks (post rc.0) are complete.
+
 ### [Stable only] Code Thaw
 
 Code thaw means you need to lift the code freeze, [here](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md#code-thaw) 
