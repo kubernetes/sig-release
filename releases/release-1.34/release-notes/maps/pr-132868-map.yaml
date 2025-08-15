@@ -1,0 +1,5 @@
+pr: 132868
+releasenote:
+  text: 'Pods can''t mixed the usage of `user-namespaces` (`hostUsers: false`) and
+    `volumeDevices`. Kubernetes returned an error in this case.'
+pr_body: ""

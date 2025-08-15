@@ -1,0 +1,6 @@
+pr: 133012
+releasenote:
+  text: Memory limits could be decreased with a `NotRequired` resize restart policy.
+    When decreasing memory limits,a best-effort check was performed to prevent limits
+    from decreasing below usage and triggering an OOM-kill.
+pr_body: ""

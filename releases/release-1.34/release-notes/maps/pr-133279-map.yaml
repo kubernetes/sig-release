@@ -1,0 +1,6 @@
+pr: 133279
+releasenote:
+  text: Prevented any type of CPU/Memory alignment or hint generation with the Topology
+    Manager from the CPU or Memory Manager when pod-level resources were used in the
+    Pod spec.
+pr_body: ""

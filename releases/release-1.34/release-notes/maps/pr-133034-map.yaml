@@ -1,0 +1,4 @@
+pr: 133034
+releasenote:
+  text: Increased APF max seats to 100 for LIST requests.
+pr_body: ""

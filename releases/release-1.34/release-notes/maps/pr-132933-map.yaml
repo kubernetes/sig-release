@@ -1,0 +1,7 @@
+pr: 132933
+releasenote:
+  text: Kubelet detected terminal CSI volume mount failures due to exceeded attachment
+    limits on the node and marked the Stateful Pod as Failed, allowing its controller
+    to recreate it. This prevented Pods from getting stuck indefinitely in the `ContainerCreating`
+    state.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 132514
+releasenote:
+  text: 'kube-apiserver: Previously persisted `CustomResourceDefinition` objects with
+    an invalid whitespace-only `caBundle` could serve requests that did not require
+    conversion.'
+pr_body: ""

@@ -1,0 +1,8 @@
+pr: 133013
+releasenote:
+  text: "The `conditionType` is \"oneof\" approved/denied check of CertificateSigningRequest's
+    `.status.conditions` field was migrated to declarative validation. \nIf the `DeclarativeValidation`
+    feature gate was enabled, mismatches with existing validation are reported via
+    metrics.\nIf the `DeclarativeValidationTakeover` feature gate was enabled, declarative
+    validation was the primary source of errors for migrated fields."
+pr_body: ""

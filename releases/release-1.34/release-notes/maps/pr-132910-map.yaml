@@ -1,0 +1,5 @@
+pr: 132910
+releasenote:
+  text: Added memory tracking to scheduler performance tests to help detect memory
+    leaks and monitored memory usage patterns while running `scheduler_perf`.
+pr_body: ""

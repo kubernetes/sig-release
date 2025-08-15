@@ -1,0 +1,7 @@
+pr: 133021
+releasenote:
+  text: "If `PreBindPreFlight` returned `Skip`, the scheduler didn't run the plugin
+    at `PreBind`.\nIf any `PreBindPreFlight` returned `Success`, the scheduler put
+    NominatedNodeName to the pod \nso that other components (such as the cluster autoscaler)
+    could notice the pod was going to be bound to the node."
+pr_body: ""

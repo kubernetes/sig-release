@@ -1,0 +1,5 @@
+pr: 132999
+releasenote:
+  text: Graduated `PodLevelResources` feature to beta and have it on by default. This
+    feature allowed defining CPU and memory resources for an entire pod in `pod.spec.resources`.
+pr_body: ""

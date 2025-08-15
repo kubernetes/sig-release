@@ -1,0 +1,5 @@
+pr: 132965
+releasenote:
+  text: Deprecated `apiserver_storage_objects` and replace it with `apiserver_resource_objects`
+    metric using labels consistent with other metrics.
+pr_body: ""

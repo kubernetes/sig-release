@@ -1,0 +1,7 @@
+pr: 132462
+releasenote:
+  text: Fixed bug that prevented the alpha feature `PodTopologyLabelAdmission` from
+    working due to checking for the incorrect label key when copying topology labels.
+    This bug delayed the graduation of the feature to beta by an additional release
+    to allow time for meaningful feedback.
+pr_body: ""

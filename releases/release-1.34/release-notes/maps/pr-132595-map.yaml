@@ -1,0 +1,4 @@
+pr: 132595
+releasenote:
+  text: '`PodLifecycleSleepAction` was graduated to GA.'
+pr_body: ""

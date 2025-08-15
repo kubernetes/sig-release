@@ -1,0 +1,7 @@
+pr: 133068
+releasenote:
+  text: |-
+    The validation in the CertificateSigningRequest `/status` and `/approval` subresources was migrated to declarative validation.
+    If the `DeclarativeValidation` feature gate was enabled, mismatches with existing validation are reported via metrics.
+    If the `DeclarativeValidationTakeover` feature gate was enabled, declarative validation was the primary source of errors for migrated fields.
+pr_body: ""

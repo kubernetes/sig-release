@@ -1,0 +1,7 @@
+pr: 130653
+releasenote:
+  text: |-
+    Extended resources backed by DRA feature allowed cluster operator to specify `extendedResourceName` in `DeviceClass`, and application operator to continue using extended resources in pod's requests to request for DRA devices matching the DeviceClass.
+
+    `NodeResourcesFit` plugin scoring didn't work for extended resources backed by DRA.
+pr_body: ""

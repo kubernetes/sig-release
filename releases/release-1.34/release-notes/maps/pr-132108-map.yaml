@@ -1,0 +1,4 @@
+pr: 132108
+releasenote:
+  text: Graduated the WinDSR feature in the kube-proxy to GA. The `WinDSR` feature
+pr_body: ""

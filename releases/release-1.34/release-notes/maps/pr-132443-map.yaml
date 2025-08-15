@@ -1,0 +1,6 @@
+pr: 132443
+releasenote:
+  text: Whenever a pod was successfully bound to a node, the kube-apiserver  cleared
+    the pod's `nominatedNodeName` field. This prevented stale information from affecting
+    external scheduling components.
+pr_body: ""

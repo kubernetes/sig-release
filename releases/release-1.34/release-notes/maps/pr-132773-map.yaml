@@ -1,0 +1,5 @@
+pr: 132773
+releasenote:
+  text: Removed deprecated `gogo` protocol definitions from `k8s.io/kubelet/pkg/apis/pluginregistration`
+    in favor of `google.golang.org/protobuf`.
+pr_body: ""

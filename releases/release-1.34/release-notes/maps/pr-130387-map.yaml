@@ -1,0 +1,4 @@
+pr: 130387
+releasenote:
+  text: Added a detailed event for in-place pod vertical scaling completed, improving
+pr_body: ""

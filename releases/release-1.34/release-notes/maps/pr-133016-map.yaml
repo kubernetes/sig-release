@@ -1,0 +1,5 @@
+pr: 133016
+releasenote:
+  text: kubelet reported a hash of the credential provider configuration via the `kubelet_credential_provider_config_info`
+    metric. The hash was exposed in the `hash` label.
+pr_body: ""

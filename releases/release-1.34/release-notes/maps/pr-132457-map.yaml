@@ -1,0 +1,6 @@
+pr: 132457
+releasenote:
+  text: |-
+    Types: `NodeInfo`, `PodInfo`, `QueuedPodInfo`, `PodResource`, `AffinityTerm`, `WeightedAffinityTerm`, `Resource`, `ImageStateSummary`, `ProtocolPort` and `HostPortInfo` were moved from `pkg/scheduler/framework` to staging repo.
+    Users should update import path for these types from `k8s.io/kubernetes/pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework` and update use of fields (to use getter/setter functions instead) where needed.
+pr_body: ""

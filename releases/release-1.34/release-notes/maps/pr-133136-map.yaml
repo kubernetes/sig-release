@@ -1,0 +1,6 @@
+pr: 133136
+releasenote:
+  text: Changed handling of `CustomResourceDefinitions` with unrecognized formats.
+    Writing a schema with an unrecognized format now triggered a warning (the write
+    was still accepted).
+pr_body: ""

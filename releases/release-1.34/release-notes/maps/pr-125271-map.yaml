@@ -1,0 +1,5 @@
+pr: 125271
+releasenote:
+  text: The `baseline` and `restricted` pod security admission levels blocked setting
+    the `host` field on probe and lifecycle handlers.
+pr_body: ""

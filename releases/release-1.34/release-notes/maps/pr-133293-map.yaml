@@ -1,0 +1,5 @@
+pr: 133293
+releasenote:
+  text: Demoted KEP-5278 feature gates `ClearingNominatedNodeNameAfterBinding` and
+    `NominatedNodeNameForExpectation` to alpha from beta.
+pr_body: ""

@@ -1,0 +1,8 @@
+pr: 132912
+releasenote:
+  text: Graduated `PodObservedGenerationTracking` feature to beta and had it on by
+    default. This feature meant that the top level `status.observedGeneration` and
+    `status.conditions[].observedGeneration` fields in Pods were populated to reflect
+    the `metadata.generation` of the podspec at the time that the status or condition
+    was reported.
+pr_body: ""

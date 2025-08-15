@@ -1,0 +1,5 @@
+pr: 128010
+releasenote:
+  text: 'Enabled kube-apiserver support for `PodCertificateRequest` and `PodCertificate`
+    #     projected volumes (behind the `PodCertificateRequest` feature gate).'
+pr_body: ""

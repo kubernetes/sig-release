@@ -1,0 +1,5 @@
+pr: 132473
+releasenote:
+  text: 'Ensured memory resizing for Guaranteed QoS pods on static Memory policy configurations
+    #     is gated by `InPlacePodVerticalScalingExclusiveMemory` (defaults to `false`).'
+pr_body: ""

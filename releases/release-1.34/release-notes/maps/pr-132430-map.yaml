@@ -1,0 +1,6 @@
+pr: 132430
+releasenote:
+  text: Added HPA support to pod-level resource specifications. When the pod-level
+    resource feature was enabled, HPAs configured with `Resource` type metrics calculated
+    the pod resources from `pod.Spec.Resources` field, if specified.
+pr_body: ""

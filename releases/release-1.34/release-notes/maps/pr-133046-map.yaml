@@ -1,0 +1,7 @@
+pr: 133046
+releasenote:
+  text: Added validation to reject Pods using the `PodLevelResources` feature on Windows
+    OS due to lack of support. The API server rejected Pods with pod-level resources
+    and a `Pod.spec.os.name` targeting Windows. Kubelet on nodes running Windows also
+    rejected Pods with pod-level resources at the admission phase.
+pr_body: ""

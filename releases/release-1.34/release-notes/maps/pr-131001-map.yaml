@@ -1,0 +1,4 @@
+pr: 131001
+releasenote:
+  text: Migrated `pkg/kubelet/winstats` to contextual logging.
+pr_body: ""

@@ -1,0 +1,8 @@
+pr: 130606
+releasenote:
+  text: The Kubelet could monitor the health of devices allocated via Dynamic Resource
+    Allocation (DRA) and report it in the `pod.status.containerStatuses.allocatedResourcesStatus`
+    field. This required the DRA plugin to implement the new v1alpha1 `NodeHealth`
+    gRPC service. This feature was controlled by the `ResourceHealthStatus` feature
+    gate.
+pr_body: ""

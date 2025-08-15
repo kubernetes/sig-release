@@ -1,0 +1,5 @@
+pr: 132537
+releasenote:
+  text: APIVersion fields of the `HorizontalPodAutoscaler` API were validated to ensure
+    that created API objects function properly.
+pr_body: ""

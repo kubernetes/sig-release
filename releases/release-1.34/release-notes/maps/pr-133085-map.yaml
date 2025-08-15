@@ -1,0 +1,7 @@
+pr: 133085
+releasenote:
+  text: DRAAdminAccess was enabled by default allowing users to create `ResourceClaims`
+    and `ResourceClaimTemplates` in privileged mode to grant access to devices that
+    were in use by other users for admin tasks like monitoring health or status of
+    the device.
+pr_body: ""
