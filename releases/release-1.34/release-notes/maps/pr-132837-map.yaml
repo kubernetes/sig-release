@@ -1,5 +1,5 @@
 pr: 132837
 releasenote:
   text: Fixed runtime cost estimation for `x-int-or-string` custom resource schemas
-    with
+    with maximum lengths.
 pr_body: ""
