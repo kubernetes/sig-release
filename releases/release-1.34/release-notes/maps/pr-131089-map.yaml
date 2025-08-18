@@ -1,6 +1,6 @@
 pr: 131089
 releasenote:
   text: |-
-    Changed underlying logic to propagate pod-level hugepage cgroup to containers when they did not specify hugepage resources.
+    - Changed underlying logic to propagate pod-level hugepage cgroup to containers when they did not specify hugepage resources.
     - Added validation to enforce the hugepage aggregated container limits to be smaller than or equal to pod-level limits. This was already enforced with the defaulted requests from the specified limits, however it did not make it clear about both hugepage requests and limits.
 pr_body: ""

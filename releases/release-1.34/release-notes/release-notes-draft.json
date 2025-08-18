@@ -201,8 +201,8 @@
   },
   "128010": {
     "commit": "cc674e7470cc1e98145ce6f915469ff6f748f443",
-    "text": "Enabled kube-apiserver support for `PodCertificateRequest` and `PodCertificate` #     projected volumes (behind the `PodCertificateRequest` feature gate).",
-    "markdown": "Enabled kube-apiserver support for `PodCertificateRequest` and `PodCertificate` #     projected volumes (behind the `PodCertificateRequest` feature gate). ([#128010](https://github.com/kubernetes/kubernetes/pull/128010), [@ahmedtd](https://github.com/ahmedtd)) [SIG API Machinery, Apps, Auth, Cloud Provider, Etcd, Node, Storage and Testing]",
+    "text": "Enabled kube-apiserver support for `PodCertificateRequest` and `PodCertificate` projected volumes (behind the `PodCertificateRequest` feature gate).",
+    "markdown": "Enabled kube-apiserver support for `PodCertificateRequest` and `PodCertificate` projected volumes (behind the `PodCertificateRequest` feature gate). ([#128010](https://github.com/kubernetes/kubernetes/pull/128010), [@ahmedtd](https://github.com/ahmedtd)) [SIG API Machinery, Apps, Auth, Cloud Provider, Etcd, Node, Storage and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -575,8 +575,8 @@
   },
   "130387": {
     "commit": "5c219a727a65c679d6bfa54dc4d1070ac832c086",
-    "text": "Added a detailed event for in-place pod vertical scaling completed, improving",
-    "markdown": "Added a detailed event for in-place pod vertical scaling completed, improving ([#130387](https://github.com/kubernetes/kubernetes/pull/130387), [@shiya0705](https://github.com/shiya0705)) [SIG API Machinery, Apps, Autoscaling, Node, Scheduling and Testing]",
+    "text": "Added a detailed event for in-place pod vertical scaling completed, improving cluster management and debugging.",
+    "markdown": "Added a detailed event for in-place pod vertical scaling completed, improving cluster management and debugging. ([#130387](https://github.com/kubernetes/kubernetes/pull/130387), [@shiya0705](https://github.com/shiya0705)) [SIG API Machinery, Apps, Autoscaling, Node, Scheduling and Testing]",
     "author": "shiya0705",
     "author_url": "https://github.com/shiya0705",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/130387",
@@ -670,8 +670,8 @@
   },
   "130606": {
     "commit": "72f9a9260a676cb6553dd9a628a39a173bdb06f0",
-    "text": "The Kubelet could monitor the health of devices allocated via Dynamic Resource Allocation (DRA) and report it in the `pod.status.containerStatuses.allocatedResourcesStatus` field. This required the DRA plugin to implement the new v1alpha1 `NodeHealth` gRPC service. This feature was controlled by the `ResourceHealthStatus` feature gate.",
-    "markdown": "The Kubelet could monitor the health of devices allocated via Dynamic Resource Allocation (DRA) and report it in the `pod.status.containerStatuses.allocatedResourcesStatus` field. This required the DRA plugin to implement the new v1alpha1 `NodeHealth` gRPC service. This feature was controlled by the `ResourceHealthStatus` feature gate. ([#130606](https://github.com/kubernetes/kubernetes/pull/130606), [@Jpsassine](https://github.com/Jpsassine)) [SIG Apps, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Etcd, Network, Node, Release, Scheduling, Storage and Testing]",
+    "text": "Added support in the Kubelet for monitoring the health of devices allocated via Dynamic Resource Allocation (DRA) and report it in the `pod.status.containerStatuses.allocatedResourcesStatus` field. This required the DRA plugin to implement the new v1alpha1 `NodeHealth` gRPC service. This feature was controlled by the `ResourceHealthStatus` feature gate.",
+    "markdown": "Added support in the Kubelet for monitoring the health of devices allocated via Dynamic Resource Allocation (DRA) and report it in the `pod.status.containerStatuses.allocatedResourcesStatus` field. This required the DRA plugin to implement the new v1alpha1 `NodeHealth` gRPC service. This feature was controlled by the `ResourceHealthStatus` feature gate. ([#130606](https://github.com/kubernetes/kubernetes/pull/130606), [@Jpsassine](https://github.com/Jpsassine)) [SIG Apps, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Etcd, Network, Node, Release, Scheduling, Storage and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1055,8 +1055,8 @@
   },
   "131089": {
     "commit": "3fd125116581e75ebab22a3b37ddd73bcfdc4d0c",
-    "text": "Changed underlying logic to propagate pod-level hugepage cgroup to containers when they did not specify hugepage resources.\n- Added validation to enforce the hugepage aggregated container limits to be smaller than or equal to pod-level limits. This was already enforced with the defaulted requests from the specified limits, however it did not make it clear about both hugepage requests and limits.",
-    "markdown": "Changed underlying logic to propagate pod-level hugepage cgroup to containers when they did not specify hugepage resources.\n  - Added validation to enforce the hugepage aggregated container limits to be smaller than or equal to pod-level limits. This was already enforced with the defaulted requests from the specified limits, however it did not make it clear about both hugepage requests and limits. ([#131089](https://github.com/kubernetes/kubernetes/pull/131089), [@KevinTMtz](https://github.com/KevinTMtz)) [SIG Apps, Node and Testing]",
+    "text": "- Changed underlying logic to propagate pod-level hugepage cgroup to containers when they did not specify hugepage resources.\n- Added validation to enforce the hugepage aggregated container limits to be smaller than or equal to pod-level limits. This was already enforced with the defaulted requests from the specified limits, however it did not make it clear about both hugepage requests and limits.",
+    "markdown": "- Changed underlying logic to propagate pod-level hugepage cgroup to containers when they did not specify hugepage resources.\n  - Added validation to enforce the hugepage aggregated container limits to be smaller than or equal to pod-level limits. This was already enforced with the defaulted requests from the specified limits, however it did not make it clear about both hugepage requests and limits. ([#131089](https://github.com/kubernetes/kubernetes/pull/131089), [@KevinTMtz](https://github.com/KevinTMtz)) [SIG Apps, Node and Testing]",
     "documentation": [
       {
         "description": "[Other doc]",
@@ -2716,8 +2716,8 @@
   },
   "131989": {
     "commit": "963a9acb6d88cc37733140d140bffa8966f4d90d",
-    "text": "`AppArmor` profiled specified in the Pod or container `SecurityContext` were no longer copied to deprecated `AppArmor` annotations (prefix `container.apparmor.security.beta.kubernetes.io/`). Anything that inspected the deprecated annotations must be migrated to use the `SecurityContext` fields instead.",
-    "markdown": "`AppArmor` profiled specified in the Pod or container `SecurityContext` were no longer copied to deprecated `AppArmor` annotations (prefix `container.apparmor.security.beta.kubernetes.io/`). Anything that inspected the deprecated annotations must be migrated to use the `SecurityContext` fields instead. ([#131989](https://github.com/kubernetes/kubernetes/pull/131989), [@tallclair](https://github.com/tallclair))",
+    "text": "`AppArmor` profiles specified in the Pod or container `SecurityContext` were no longer copied to deprecated `AppArmor` annotations (prefix `container.apparmor.security.beta.kubernetes.io/`). Anything that inspected the deprecated annotations must be migrated to use the `SecurityContext` fields instead.",
+    "markdown": "`AppArmor` profiles specified in the Pod or container `SecurityContext` were no longer copied to deprecated `AppArmor` annotations (prefix `container.apparmor.security.beta.kubernetes.io/`). Anything that inspected the deprecated annotations must be migrated to use the `SecurityContext` fields instead. ([#131989](https://github.com/kubernetes/kubernetes/pull/131989), [@tallclair](https://github.com/tallclair))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3194,8 +3194,8 @@
   },
   "132108": {
     "commit": "52bc7515ca5387ab23cf5874324d12d300a4c443",
-    "text": "Graduated the WinDSR feature in the kube-proxy to GA. The `WinDSR` feature",
-    "markdown": "Graduated the WinDSR feature in the kube-proxy to GA. The `WinDSR` feature ([#132108](https://github.com/kubernetes/kubernetes/pull/132108), [@rzlink](https://github.com/rzlink)) [SIG Network and Windows]",
+    "text": "Graduated the `WinDSR` feature in the kube-proxy to GA. The `WinDSR` feature gate was enabled by default.",
+    "markdown": "Graduated the `WinDSR` feature in the kube-proxy to GA. The `WinDSR` feature gate was enabled by default. ([#132108](https://github.com/kubernetes/kubernetes/pull/132108), [@rzlink](https://github.com/rzlink)) [SIG Network and Windows]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4031,8 +4031,8 @@
   },
   "132348": {
     "commit": "8f312e6fbf7236fa6b48e178d18a90c892d41f4a",
-    "text": "Added a `container_swap_limit_bytes` metric to expose the swap limit assigned",
-    "markdown": "Added a `container_swap_limit_bytes` metric to expose the swap limit assigned ([#132348](https://github.com/kubernetes/kubernetes/pull/132348), [@iholder101](https://github.com/iholder101)) [SIG Node and Testing]",
+    "text": "Added a `container_swap_limit_bytes` metric to expose the swap limit assigned to containers under the `LimitedSwap` swap behavior.",
+    "markdown": "Added a `container_swap_limit_bytes` metric to expose the swap limit assigned to containers under the `LimitedSwap` swap behavior. ([#132348](https://github.com/kubernetes/kubernetes/pull/132348), [@iholder101](https://github.com/iholder101)) [SIG Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4439,8 +4439,8 @@
   },
   "132473": {
     "commit": "93844abbe2ec93ce25ab96ff20cc75e750957fe5",
-    "text": "Ensured memory resizing for Guaranteed QoS pods on static Memory policy configurations #     is gated by `InPlacePodVerticalScalingExclusiveMemory` (defaults to `false`).",
-    "markdown": "Ensured memory resizing for Guaranteed QoS pods on static Memory policy configurations #     is gated by `InPlacePodVerticalScalingExclusiveMemory` (defaults to `false`). ([#132473](https://github.com/kubernetes/kubernetes/pull/132473), [@pravk03](https://github.com/pravk03)) [SIG Node, Scheduling and Testing]",
+    "text": "Ensured memory resizing for Guaranteed QoS pods on static Memory policy configurations was gated by `InPlacePodVerticalScalingExclusiveMemory` (defaults: `false`).",
+    "markdown": "Ensured memory resizing for Guaranteed QoS pods on static Memory policy configurations was gated by `InPlacePodVerticalScalingExclusiveMemory` (defaults: `false`). ([#132473](https://github.com/kubernetes/kubernetes/pull/132473), [@pravk03](https://github.com/pravk03)) [SIG Node, Scheduling and Testing]",
     "author": "pravk03",
     "author_url": "https://github.com/pravk03",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132473",
@@ -4582,8 +4582,8 @@
   },
   "132522": {
     "commit": "a59ad8113513b2cd927097354924eafe4187c140",
-    "text": "Added driver-owned fields in `ResourceSlice` to mark whether the device was shareable among multiple resource claims (or requests) and to specify how each capacity could be shared between different requests.\n- Added user-owned fields in `ResourceClaim` to specify resource requirements against each device capacity.\n- Added scheduler-owned field in `ResourceClaim.Status` to specify how much device capacity is reserved for a specific request.\n- Added an additional identifier to `ResourceClaim.Status` for the device supports multiple allocations.\n- Added a new constraint type to enforce uniqueness of specified attributes across all allocated devices.",
-    "markdown": "Added driver-owned fields in `ResourceSlice` to mark whether the device was shareable among multiple resource claims (or requests) and to specify how each capacity could be shared between different requests.\n  - Added user-owned fields in `ResourceClaim` to specify resource requirements against each device capacity.\n  - Added scheduler-owned field in `ResourceClaim.Status` to specify how much device capacity is reserved for a specific request.\n  - Added an additional identifier to `ResourceClaim.Status` for the device supports multiple allocations.\n  - Added a new constraint type to enforce uniqueness of specified attributes across all allocated devices. ([#132522](https://github.com/kubernetes/kubernetes/pull/132522), [@sunya-ch](https://github.com/sunya-ch)) [SIG API Machinery, Apps, Architecture, CLI, Cluster Lifecycle, Network, Node, Release, Scheduling and Testing]",
+    "text": "- Added driver-owned fields in `ResourceSlice` to mark whether the device was shareable among multiple resource claims (or requests) and to specify how each capacity could be shared between different requests.\n- Added user-owned fields in `ResourceClaim` to specify resource requirements against each device capacity.\n- Added scheduler-owned field in `ResourceClaim.Status` to specify how much device capacity is reserved for a specific request.\n- Added an additional identifier to `ResourceClaim.Status` for the device supports multiple allocations.\n- Added a new constraint type to enforce uniqueness of specified attributes across all allocated devices.",
+    "markdown": "- Added driver-owned fields in `ResourceSlice` to mark whether the device was shareable among multiple resource claims (or requests) and to specify how each capacity could be shared between different requests.\n  - Added user-owned fields in `ResourceClaim` to specify resource requirements against each device capacity.\n  - Added scheduler-owned field in `ResourceClaim.Status` to specify how much device capacity is reserved for a specific request.\n  - Added an additional identifier to `ResourceClaim.Status` for the device supports multiple allocations.\n  - Added a new constraint type to enforce uniqueness of specified attributes across all allocated devices. ([#132522](https://github.com/kubernetes/kubernetes/pull/132522), [@sunya-ch](https://github.com/sunya-ch)) [SIG API Machinery, Apps, Architecture, CLI, Cluster Lifecycle, Network, Node, Release, Scheduling and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4648,8 +4648,8 @@
   },
   "132537": {
     "commit": "3e3f43f4b89a9a962f60ced47e50116250285c25",
-    "text": "APIVersion fields of the `HorizontalPodAutoscaler` API were validated to ensure that created API objects function properly.",
-    "markdown": "APIVersion fields of the `HorizontalPodAutoscaler` API were validated to ensure that created API objects function properly. ([#132537](https://github.com/kubernetes/kubernetes/pull/132537), [@lalitc375](https://github.com/lalitc375)) [SIG Etcd and Testing]",
+    "text": "Validated APIVersion fields of the `HorizontalPodAutoscaler` to ensure that API objects were created and functioned properly.",
+    "markdown": "Validated APIVersion fields of the `HorizontalPodAutoscaler` to ensure that API objects were created and functioned properly. ([#132537](https://github.com/kubernetes/kubernetes/pull/132537), [@lalitc375](https://github.com/lalitc375)) [SIG Etcd and Testing]",
     "author": "lalitc375",
     "author_url": "https://github.com/lalitc375",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132537",
@@ -5811,8 +5811,8 @@
   },
   "132767": {
     "commit": "1b3be1fde68dfac72fb829d22a8af35abe29804d",
-    "text": "`DRAPrioritizedList` was now turned on by default which made it possible to provide a prioritized list of subrequests in a `ResourceClaim`.",
-    "markdown": "`DRAPrioritizedList` was now turned on by default which made it possible to provide a prioritized list of subrequests in a `ResourceClaim`. ([#132767](https://github.com/kubernetes/kubernetes/pull/132767), [@mortent](https://github.com/mortent)) [SIG Node, Scheduling and Testing]",
+    "text": "`DRAPrioritizedList` was turned on by default which made it possible to provide a prioritized list of subrequests in a `ResourceClaim`.",
+    "markdown": "`DRAPrioritizedList` was turned on by default which made it possible to provide a prioritized list of subrequests in a `ResourceClaim`. ([#132767](https://github.com/kubernetes/kubernetes/pull/132767), [@mortent](https://github.com/mortent)) [SIG Node, Scheduling and Testing]",
     "author": "mortent",
     "author_url": "https://github.com/mortent",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132767",
@@ -5867,8 +5867,8 @@
   },
   "132771": {
     "commit": "1160ce69e1e43557313a5359c3873489c2eafe46",
-    "text": "The kubelet's image pull credential tracking supported service account-based verification. When an image was pulled using service account credentials via external credential providers, subsequent Pods using the same service account (UID, name, and namespace) could access the cached image without re-authentication for the lifetime of that service account.",
-    "markdown": "The kubelet's image pull credential tracking supported service account-based verification. When an image was pulled using service account credentials via external credential providers, subsequent Pods using the same service account (UID, name, and namespace) could access the cached image without re-authentication for the lifetime of that service account. ([#132771](https://github.com/kubernetes/kubernetes/pull/132771), [@aramase](https://github.com/aramase)) [SIG Auth, Node and Testing]",
+    "text": "Added support in the kubelet's image pull credential tracking for service account-based verification. When an image was pulled using service account credentials via external credential providers, subsequent Pods using the same service account (UID, name, and namespace) could access the cached image without re-authentication for the lifetime of that service account.",
+    "markdown": "Added support in the kubelet's image pull credential tracking for service account-based verification. When an image was pulled using service account credentials via external credential providers, subsequent Pods using the same service account (UID, name, and namespace) could access the cached image without re-authentication for the lifetime of that service account. ([#132771](https://github.com/kubernetes/kubernetes/pull/132771), [@aramase](https://github.com/aramase)) [SIG Auth, Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6260,8 +6260,8 @@
   },
   "132837": {
     "commit": "f9fde2dfbdfb73c25e0a17d675313748948cd78c",
-    "text": "Fixed runtime cost estimation for `x-int-or-string` custom resource schemas with",
-    "markdown": "Fixed runtime cost estimation for `x-int-or-string` custom resource schemas with ([#132837](https://github.com/kubernetes/kubernetes/pull/132837), [@JoelSpeed](https://github.com/JoelSpeed))",
+    "text": "Fixed runtime cost estimation for `x-int-or-string` custom resource schemas with maximum lengths.",
+    "markdown": "Fixed runtime cost estimation for `x-int-or-string` custom resource schemas with maximum lengths. ([#132837](https://github.com/kubernetes/kubernetes/pull/132837), [@JoelSpeed](https://github.com/JoelSpeed))",
     "author": "JoelSpeed",
     "author_url": "https://github.com/JoelSpeed",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132837",
@@ -6317,8 +6317,8 @@
   },
   "132868": {
     "commit": "2b2ea27250d97f7bf65fb2e08a71348307e08cbf",
-    "text": "Pods can't mixed the usage of `user-namespaces` (`hostUsers: false`) and `volumeDevices`. Kubernetes returned an error in this case.",
-    "markdown": "Pods can't mixed the usage of `user-namespaces` (`hostUsers: false`) and `volumeDevices`. Kubernetes returned an error in this case. ([#132868](https://github.com/kubernetes/kubernetes/pull/132868), [@rata](https://github.com/rata))",
+    "text": "Pods were not allowed to mix the usage of `user-namespaces` (`hostUsers: false`) and `volumeDevices`. Kubernetes returned an error in this case.",
+    "markdown": "Pods were not allowed to mix the usage of `user-namespaces` (`hostUsers: false`) and `volumeDevices`. Kubernetes returned an error in this case. ([#132868](https://github.com/kubernetes/kubernetes/pull/132868), [@rata](https://github.com/rata))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6388,8 +6388,8 @@
   },
   "132886": {
     "commit": "010e0a9b5b0687a41b0eda1813b444f476c9bdec",
-    "text": "API calls dispatched during pod scheduling were executed asynchronously if the `SchedulerAsyncAPICalls` feature gate was enabled.\nOut-of-tree plugins used `APIDispatcher` and `APICacher` from the framework to dispatch their own calls.",
-    "markdown": "API calls dispatched during pod scheduling were executed asynchronously if the `SchedulerAsyncAPICalls` feature gate was enabled.\n  Out-of-tree plugins used `APIDispatcher` and `APICacher` from the framework to dispatch their own calls. ([#132886](https://github.com/kubernetes/kubernetes/pull/132886), [@macsko](https://github.com/macsko)) [SIG Release, Scheduling and Testing]",
+    "text": "Executed API calls dispatched during pod scheduling asynchronously if the `SchedulerAsyncAPICalls` feature gate was enabled.\nOut-of-tree plugins used `APIDispatcher` and `APICacher` from the framework to dispatch their own calls.",
+    "markdown": "Executed API calls dispatched during pod scheduling asynchronously if the `SchedulerAsyncAPICalls` feature gate was enabled.\n  Out-of-tree plugins used `APIDispatcher` and `APICacher` from the framework to dispatch their own calls. ([#132886](https://github.com/kubernetes/kubernetes/pull/132886), [@macsko](https://github.com/macsko)) [SIG Release, Scheduling and Testing]",
     "author": "macsko",
     "author_url": "https://github.com/macsko",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132886",
@@ -6706,8 +6706,8 @@
   },
   "132940": {
     "commit": "ba9ba5f92ae86e8b666a54f5cb64bd27d4cbc1c6",
-    "text": "Promote the `KubeletPodResourcesDynamicResources` and `KubeletPodResourcesGet` feature gates to beta, which were enabled by default if DRA went to GA.",
-    "markdown": "Promote the `KubeletPodResourcesDynamicResources` and `KubeletPodResourcesGet` feature gates to beta, which were enabled by default if DRA went to GA. ([#132940](https://github.com/kubernetes/kubernetes/pull/132940), [@guptaNswati](https://github.com/guptaNswati))",
+    "text": "Promoted the `KubeletPodResourcesDynamicResources` and `KubeletPodResourcesGet` feature gates to beta, which were enabled by default if DRA went to GA.",
+    "markdown": "Promoted the `KubeletPodResourcesDynamicResources` and `KubeletPodResourcesGet` feature gates to beta, which were enabled by default if DRA went to GA. ([#132940](https://github.com/kubernetes/kubernetes/pull/132940), [@guptaNswati](https://github.com/guptaNswati))",
     "author": "guptaNswati",
     "author_url": "https://github.com/guptaNswati",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132940",
@@ -6760,7 +6760,7 @@
   "132965": {
     "commit": "356d0b9f1834c336abb190fda0033eb6adeb2726",
     "text": "Deprecated `apiserver_storage_objects` and replace it with `apiserver_resource_objects` metric using labels consistent with other metrics.",
-    "markdown": "Deprecated `apiserver_storage_objects` and replace it with `apiserver_resource_objects` metric using labels consistent with other metrics. ([#132965](https://github.com/kubernetes/kubernetes/pull/132965), [@serathius](https://github.com/serathius)) [SIG API Machinery, Etcd and Instrumentation]",
+    "markdown": "Deprecated `apiserver_storage_objects` and replaced it with `apiserver_resource_objects` metric using labels consistent with other metrics. ([#132965](https://github.com/kubernetes/kubernetes/pull/132965), [@serathius](https://github.com/serathius)) [SIG API Machinery, Etcd and Instrumentation]",
     "author": "serathius",
     "author_url": "https://github.com/serathius",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132965",
@@ -7227,8 +7227,8 @@
   },
   "133120": {
     "commit": "2a03dd1d5ecc66ca6a21fc9f526d4eedc9fef179",
-    "text": "Added 3 new metrics for monitoring async API calls in the scheduler when the `SchedulerAsyncAPICalls` feature gate was enabled:\n  - `scheduler_async_api_call_execution_total`: tracks executed API calls by call type and result (success/error)\n  - `scheduler_async_api_call_duration_seconds`: histogram of API call execution duration by call type and result\n  - `scheduler_pending_async_api_calls`: gauge showing current number of pending API calls in the queue",
-    "markdown": "Added 3 new metrics for monitoring async API calls in the scheduler when the `SchedulerAsyncAPICalls` feature gate was enabled:\n    - `scheduler_async_api_call_execution_total`: tracks executed API calls by call type and result (success/error)\n    - `scheduler_async_api_call_duration_seconds`: histogram of API call execution duration by call type and result\n    - `scheduler_pending_async_api_calls`: gauge showing current number of pending API calls in the queue ([#133120](https://github.com/kubernetes/kubernetes/pull/133120), [@utam0k](https://github.com/utam0k)) [SIG Release and Scheduling]",
+    "text": "Added 3 new metrics for monitoring async API calls in the scheduler when the `SchedulerAsyncAPICalls` feature gate was enabled:\n  - `scheduler_async_api_call_execution_total`: tracks executed API calls by call type and result (success/error)\n  - `scheduler_async_api_call_duration_seconds`: histogram of API call execution duration by call type and result\n  - `scheduler_pending_async_api_calls`: gauge showing current number of pending API calls in the queue.",
+    "markdown": "Added 3 new metrics for monitoring async API calls in the scheduler when the `SchedulerAsyncAPICalls` feature gate was enabled:\n    - `scheduler_async_api_call_execution_total`: tracks executed API calls by call type and result (success/error)\n    - `scheduler_async_api_call_duration_seconds`: histogram of API call execution duration by call type and result\n    - `scheduler_pending_async_api_calls`: gauge showing current number of pending API calls in the queue. ([#133120](https://github.com/kubernetes/kubernetes/pull/133120), [@utam0k](https://github.com/utam0k)) [SIG Release and Scheduling]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -7316,8 +7316,8 @@
   },
   "133164": {
     "commit": "24c896108d9d707195a53bc495ebbe8c2b11362e",
-    "text": "Use DRA API version to `v1` in `deviceattribute` package in `k8s.io/dynamic-resource-allocation`.",
-    "markdown": "Use DRA API version to `v1` in `deviceattribute` package in `k8s.io/dynamic-resource-allocation`. ([#133164](https://github.com/kubernetes/kubernetes/pull/133164), [@everpeace](https://github.com/everpeace))",
+    "text": "Bumped DRA API version to `v1` in `deviceattribute` package in `k8s.io/dynamic-resource-allocation`.",
+    "markdown": "Bumped DRA API version to `v1` in `deviceattribute` package in `k8s.io/dynamic-resource-allocation`. ([#133164](https://github.com/kubernetes/kubernetes/pull/133164), [@everpeace](https://github.com/everpeace))",
     "documentation": [
       {
         "description": "[KEP]",

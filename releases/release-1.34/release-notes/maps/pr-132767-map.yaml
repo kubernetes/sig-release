@@ -1,5 +1,5 @@
 pr: 132767
 releasenote:
-  text: '`DRAPrioritizedList` was now turned on by default which made it possible
+  text: '`DRAPrioritizedList` was turned on by default which made it possible
     to provide a prioritized list of subrequests in a `ResourceClaim`.'
 pr_body: ""

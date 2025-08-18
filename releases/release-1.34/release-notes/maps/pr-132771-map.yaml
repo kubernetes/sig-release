@@ -1,6 +1,6 @@
 pr: 132771
 releasenote:
-  text: The kubelet's image pull credential tracking supported service account-based
+  text: Added support in the kubelet's image pull credential tracking for service account-based
     verification. When an image was pulled using service account credentials via external
     credential providers, subsequent Pods using the same service account (UID, name,
     and namespace) could access the cached image without re-authentication for the

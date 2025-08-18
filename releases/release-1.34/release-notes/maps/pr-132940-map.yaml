@@ -1,5 +1,5 @@
 pr: 132940
 releasenote:
-  text: Promote the `KubeletPodResourcesDynamicResources` and `KubeletPodResourcesGet`
+  text: Promoted the `KubeletPodResourcesDynamicResources` and `KubeletPodResourcesGet`
     feature gates to beta, which were enabled by default if DRA went to GA.
 pr_body: ""
