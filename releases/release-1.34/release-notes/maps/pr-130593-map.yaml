@@ -1,0 +1,7 @@
+pr: 130593
+releasenote:
+  text: 'DRA: When the prioritized list feature was used in a request and the resulting
+    number of allocated devices exceeded the number of allowed devices per claim,
+    the scheduler aborted the attempt to allocate devices early. Previously, it tried
+    to many different combinations, which could take a long time.'
+pr_body: ""

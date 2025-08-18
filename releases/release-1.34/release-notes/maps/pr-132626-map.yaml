@@ -1,0 +1,7 @@
+pr: 132626
+releasenote:
+  text: |-
+    Added a new `FileKeyRef` field to containers, allowing them to load variables from files by setting this field.
+
+    Introduced the `EnvFiles` feature gate to govern activation of this functionality.
+pr_body: ""

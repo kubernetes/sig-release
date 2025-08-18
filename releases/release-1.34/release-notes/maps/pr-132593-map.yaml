@@ -1,0 +1,4 @@
+pr: 132593
+releasenote:
+  text: Upgraded functionality of `kubectl kustomize` as described at https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize%2Fv5.7.0.
+pr_body: ""

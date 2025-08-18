@@ -1,0 +1,4 @@
+pr: 131463
+releasenote:
+  text: The deprecated `LegacySidecarContainers` feature gate was completely removed.
+pr_body: ""

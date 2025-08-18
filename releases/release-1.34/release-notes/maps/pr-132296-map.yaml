@@ -1,0 +1,5 @@
+pr: 132296
+releasenote:
+  text: Introduced a method `GetPCIeRootAttributeByPCIBusID(pciBusID)` for third-party
+    DRA drivers to provide common logic for the standardized device attribute `resource.kubernetes.io/pcieRoot`.
+pr_body: ""

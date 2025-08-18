@@ -1,0 +1,6 @@
+pr: 132340
+releasenote:
+  text: Promoted the `APIServerTracing` feature gate to GA. The `--tracing-config-file`
+    flag accepted `TracingConfiguration` in version `apiserver.config.k8s.io/v1` (with
+    no changes from `apiserver.config.k8s.io/v1beta1`).
+pr_body: ""

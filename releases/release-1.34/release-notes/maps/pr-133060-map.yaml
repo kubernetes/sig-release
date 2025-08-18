@@ -1,0 +1,5 @@
+pr: 133060
+releasenote:
+  text: Fixed recording the `kubelet_container_resize_requests_total` metric to include
+    all resize-related updates.
+pr_body: ""

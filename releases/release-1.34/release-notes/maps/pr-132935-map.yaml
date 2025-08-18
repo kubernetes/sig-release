@@ -1,0 +1,6 @@
+pr: 132935
+releasenote:
+  text: Added support for encoding and decoding types that implement the standard
+    library interfaces `json.Marshaler`, `json.Unmarshaler`, `encoding.TextMarshaler`,
+    or `encoding.TextUnmarshaler` to and from CBOR by transcoding.
+pr_body: ""

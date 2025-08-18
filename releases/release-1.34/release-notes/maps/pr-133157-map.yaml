@@ -1,0 +1,5 @@
+pr: 133157
+releasenote:
+  text: Bumped `KubeletCgroupDriverFromCRI` to GA and add metric to track out-of-support
+    CRI implementations.
+pr_body: ""

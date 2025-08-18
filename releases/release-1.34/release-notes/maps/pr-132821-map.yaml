@@ -1,0 +1,9 @@
+pr: 132821
+releasenote:
+  text: "Introduced the `admissionregistration.k8s.io/v1beta1/MutatingAdmissionPolicy`
+    API type. To enable, enable the `MutatingAdmissionPolicy` feature gate (which
+    was off by default) and set `--runtime-config=admissionregistration.k8s.io/v1beta1=true`
+    on the kube-apiserver. \nNote that the default stored version remained alpha in
+    1.34, and whoever enabled beta during 1.34 needed to run a storage migration yourself
+    to ensure you don't depend on alpha data in etcd."
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 133062
+releasenote:
+  text: Promoted Windows graceful shutdown feature from alpha to beta.
+pr_body: ""

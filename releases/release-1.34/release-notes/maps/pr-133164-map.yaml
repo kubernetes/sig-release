@@ -1,0 +1,4 @@
+pr: 133164
+releasenote:
+  text: Bumped DRA API version to `v1` in `deviceattribute` package in `k8s.io/dynamic-resource-allocation`.
+pr_body: ""

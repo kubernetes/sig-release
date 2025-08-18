@@ -1,0 +1,4 @@
+pr: 130160
+releasenote:
+  text: Added new optional APIs in `ResouceSlice.Basic` and `ResourceClaim.Status.AllocatedDeviceStatus`.
+pr_body: ""

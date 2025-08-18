@@ -1,0 +1,4 @@
+pr: 132277
+releasenote:
+  text: Changed underlying logic for `Eviction Manager` helper functions.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 131318
+releasenote:
+  text: '`MultiCIDRServiceAllocator` was locked and enabled by default, `DisableAllocatorDualWrite`
+    was enabled by default.'
+pr_body: ""

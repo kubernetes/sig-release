@@ -1,0 +1,4 @@
+pr: 132083
+releasenote:
+  text: Removed general available feature-gate `DevicePluginCDIDevices`.
+pr_body: ""

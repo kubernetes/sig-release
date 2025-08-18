@@ -1,0 +1,5 @@
+pr: 132642
+releasenote:
+  text: 'Added a mechanism for configurable container restarts: _container-level restart
+    rules_. This was an alpha feature behind the `ContainerRestartRules` feature gate.'
+pr_body: ""

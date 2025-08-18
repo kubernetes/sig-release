@@ -1,0 +1,4 @@
+pr: 132893
+releasenote:
+  text: Added `apiserver_resource_size_estimate_bytes` metric to API server.
+pr_body: ""

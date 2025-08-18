@@ -1,0 +1,5 @@
+pr: 133023
+releasenote:
+  text: 'kubeadm: Fixed a bug where the default args for etcd were not correct when
+    a local etcd image was used and the etcd version was less than 3.6.0.'
+pr_body: ""

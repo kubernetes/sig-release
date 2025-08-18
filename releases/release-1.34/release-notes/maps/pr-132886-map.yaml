@@ -1,0 +1,6 @@
+pr: 132886
+releasenote:
+  text: |-
+    Executed API calls dispatched during pod scheduling asynchronously if the `SchedulerAsyncAPICalls` feature gate was enabled.
+    Out-of-tree plugins used `APIDispatcher` and `APICacher` from the framework to dispatch their own calls.
+pr_body: ""
