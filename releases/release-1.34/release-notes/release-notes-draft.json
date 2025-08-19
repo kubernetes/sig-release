@@ -6759,7 +6759,7 @@
   },
   "132965": {
     "commit": "356d0b9f1834c336abb190fda0033eb6adeb2726",
-    "text": "Deprecated `apiserver_storage_objects` and replace it with `apiserver_resource_objects` metric using labels consistent with other metrics.",
+    "text": "Deprecated `apiserver_storage_objects` and replaced it with `apiserver_resource_objects` metric using labels consistent with other metrics.",
     "markdown": "Deprecated `apiserver_storage_objects` and replaced it with `apiserver_resource_objects` metric using labels consistent with other metrics. ([#132965](https://github.com/kubernetes/kubernetes/pull/132965), [@serathius](https://github.com/serathius)) [SIG API Machinery, Etcd and Instrumentation]",
     "author": "serathius",
     "author_url": "https://github.com/serathius",
