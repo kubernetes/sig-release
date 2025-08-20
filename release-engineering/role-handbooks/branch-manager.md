@@ -614,6 +614,9 @@ Example PRs:
 
 - [1.33](https://github.com/kubernetes/test-infra/pull/34693)
 
+> [!IMPORTANT]
+After Code Thaw is performed, remind @release-managers to perform the propedeutic tasks for the next `alpha.1` cut, such as setting up the new OBS project.
+
 ### Branch Fast Forward
 
 We now run the branch fast forward automatically to even the branches. 

@@ -289,6 +289,9 @@ If the issue is open you must stop the release process and inform #release-manag
 
 ## 5. Mock stage and Mock release
 
+> [!WARNING]
+Before cutting `alpha.1` ideally some days before, ensure that @release-managers have performed the propedeutic tasks for the alpha cut (e.g. setting up the new OBS project)
+
 Mock stages and mock releases are non-destructive and can be reran upon failure. To begin the mock stage, run the following `krel stage` command (replace the stage with the appropriate "type").
 
 Run the following command from within the release repo directory.

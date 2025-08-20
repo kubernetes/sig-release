@@ -3,12 +3,12 @@
 <!-- toc -->
 - [Post release branch creation](#post-release-branch-creation)
   - [Checklist](#checklist)
-    - [Cut next alpha](#cut-next-alpha)
+    - [Promote the subsequent minor release alpha.0 image](#promote-the-subsequent-minor-release-alpha0-image)
     - [Remove EOL version jobs from test-infra (optional)](#remove-eol-version-jobs-from-test-infra-optional)
     - [Update milestone applier rules and check milestone requirements](#update-milestone-applier-rules-and-check-milestone-requirements)
     - [Update Kubekins-e2e v2 variants](#update-kubekins-e2e-v2-variants)
     - [Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards](#update-release-branch-jobs-in-kubernetestest-infra-for-the-new-release-and-create-the-dashboards)
-      - [Create the release dashboards](#create-the-release-dashboards)
+      - [Configure the release dashboards](#configure-the-release-dashboards)
       - [Run test generation script](#run-test-generation-script)
       - [Submit the PR for release branch jobs and dashboards in kubernetes/test-infra](#submit-the-pr-for-release-branch-jobs-and-dashboards-in-kubernetestest-infra)
     - [Add new variant for kube-cross image](#add-new-variant-for-kube-cross-image)
@@ -32,14 +32,11 @@ It is essential to follow these steps to maintain the integrity of the release p
 
 Open a new issue using [this template](https://github.com/kubernetes/sig-release/issues/new?template=post-release-branch-creation.md).
 
-### Cut next alpha
+### Promote the subsequent minor release alpha.0 image
 
-Recall that an alpha.0 of the next minor release was created during the rc.0 cut?
+Recall that an alpha.0 of the next minor release is created during the rc.0 cut?
 
-To assist downstream consumers of Kubernetes, a new alpha must be cut to bring our next release tag to the tip of `master`.
-
-Begin the release process following the [release cut handbook](k8s-release-cut.md) following the instructions tailored for alpha releases.
-This needs to be done before the `nomock release` command is executed for the rc.0.
+To assist downstream consumers of Kubernetes, this new alpha is automatically cut to bring our next release tag to the tip of `master`, what we need to do manually is [promoting](k8s-release-cut.md#7-image-promotion) the alpha.0 image, after the rc.0 image ProwJob is green.
 
 ### Remove EOL version jobs from test-infra (optional)
 
@@ -88,7 +85,7 @@ milestone_applier:
 ```
 
 > [!NOTE]
-Look out for the code freeze config and ensure excluded and included branches include the upcoming release branch `release-1.xy`.
+Look out for the code freeze config and ensure excluded and included branches include the newly created release branch `release-1.xy`.
 
 ### Update Kubekins-e2e v2 variants
 
@@ -118,7 +115,7 @@ Before proceding with the next step, wait for the `post-test-infra-push-kubekins
 > [!CAUTION]
 Follow the guidelines below very carefully during the update process.
 
-- Do not remove old jobs while adding new jobs, just do not. Let Release Engineering handle it before or after the post branch creation tasks.
+- Do not remove old jobs while adding new jobs in this phase, just do not. Handle it before or after the post branch creation tasks, or let release engineering take care of this.
 - Do not segregate PRs, just separate auto-generated files from manually updated ones in two (or more) clearly documented commits.
 - Be super careful about `releng/test_config.yaml` epecially when commenting out `stable4`
 - Do not hesitate to remove broken jobs, but let the interested SIG(s) know about it so they can re-add it.
@@ -128,9 +125,8 @@ Some of them are added manually and live outside of the generated job tree.
 
 First of all you need to modify the `releng/test_config.yaml` file ([here](https://github.com/kubernetes/test-infra/blob/master/releng/test_config.yaml)) to:
 - Update version references
-- Rotate stable job configurations (n -> n+1)
+- Rotate stable job configurations sequentially (n -> n+1) - _note: you should put config of stable1 to stable2, then repeat it until you get to the end._
 - Add new version as beta
-- Update stable versions sequentially - _note: you should put config of stable1 to stable2, then repeat it until you get to the end._
 - Update configuration for all test suites
 
 Just shift "args" but not touch interval, sigowners or any other field.
@@ -145,13 +141,12 @@ This is related to how the tags are managed and you should consider using `lates
 
 Remember to update all configs before running the [generation script](#run-test-generation-script) for the upcoming release branch jobs and to verify that the jobs are generated correctly.
 
-#### Create the release dashboards
+#### Configure the release dashboards
 
-After configuring the jobs you can now update the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
+After configuring the jobs you can now configure the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
 
 - Remove the deprecated release sig-release-1.xx-{blocking,informing} dashboards
 - Add the new dashboards for the current release e.g., sig-release-1.xx-{blocking,informing}
-- Pairing with the Release Signal lead, check that the new dashboards are working by visiting the TestGrid pages for the new dashboards and verifying that all the necessary jobs show up correctly.
 
 > [!NOTE]
 Comparing the new jobs with previous version(s) might help to identify any missing jobs or misconfigurations.
@@ -182,6 +177,8 @@ Breaking down what the above command does:
 #### Submit the PR for release branch jobs and dashboards in kubernetes/test-infra
 
 You can finally issue a new PR as [this example](https://github.com/kubernetes/test-infra/pull/34668/files) one.
+
+After this PR is merged, you will be pairing with the Release Signal lead, checking that the new dashboards are working by visiting the TestGrid pages for the new dashboards and verifying that all the necessary jobs show up correctly. This task should be considered completed within 48 hours after the dashboards are created.
 
 Additionally update/fix the following scripts, if you've found any issues with or a way to improve them (they are fragile):
 - `hack/run-in-python-container.sh`
@@ -394,15 +391,15 @@ Generally speaking, update scripts and documentation as needed to ensure they ar
 
 ## Additional Resources
 
-- [Branch Creation Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md#release-branch-creation)
 - [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md)
-- [Example RC.0 Release Cut Issue](https://github.com/kubernetes/sig-release/issues/2755)
+- [Example 1.34.0-rc.0 Release Cut Issue](https://github.com/kubernetes/sig-release/issues/2824)
+- [Example of post branch creation tasks issue for 1.34.0-rc.0](https://github.com/kubernetes/sig-release/issues/2826) _this also contains an example of each PR linkedin in the body of the issue_
 - [Slack Discussion Thread for 1.33.0-rc.0](https://kubernetes.slack.com/archives/CJH2GBF7Y/p1744125003875769) - _do not rely on the Slack thread being long lived, if it got archived or the channel got deleted, you should just rely on the docs and the PRs linked in this document_
 
 ## Notes
 
 - The order of operations is important. Generally, update configuration files first, then generate files, check them and push on your fork before opening a PR.
-- Some tasks may be release-specific. Always check with the rest of release engineering and inform the release team if you're unsure about any step.
+- Some tasks may be release-specific. Always check with the rest of release engineering and inform them if you're unsure about any step. Also remember to keep the Release Team informed as they are responsible for the success of the release as a whole.
 - After completing these tasks, verify that CI jobs are running properly for the new release branch and that the dashboards reflect the new version.
 
 ---
