@@ -113,10 +113,6 @@ variants:
 
 Before proceding with the next step, wait for the `post-test-infra-push-kubekins-e2e` postsubmit to finish. You can check the status on [the Prow Status page](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
 
-> [!NOTE]
-Consider what has been pointed out in [this issue](https://github.com/kubernetes/test-infra/issues/34675).
-When updating to new release image variants, you’ll need to update the jobs to use these new images. However, keep in mind that you can only update a job after the new image tag is available. If you attempt to update before the new image exists, the job may fail.
-
 ### Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards
 
 > [!CAUTION]
@@ -137,12 +133,17 @@ First of all you need to modify the `releng/test_config.yaml` file ([here](https
 - Update stable versions sequentially - _note: you should put config of stable1 to stable2, then repeat it until you get to the end._
 - Update configuration for all test suites
 
-> [!NOTE]
 Just shift "args" but not touch interval, sigowners or any other field.
 Remember that args are bound to a set of tests for a specific release, while intervals and everything else is bound to a release "status": stable1/2/3/4 or beta. An example of how to correctly rotate the jobs can be found [here](https://github.com/kubernetes/test-infra/pull/34668/commits/819c9d253ab873aff6626a5eaf7635560f7b769e).
+
 Keep in mind that jobs order might be different, e.g. the first stable1 job and and the first stable2 job might not be the same type of the job, so remember to pay particular attention where you're copying from and to.
 
-Remember to update all configs before running the [generation script](#run-test-generation-script) for the upcoming release branch jobs.
+> [!WARNING]
+Consider what has been pointed out in [this issue](https://github.com/kubernetes/test-infra/issues/34675).
+When updating to new release image variants, you’ll need to update the jobs to use these new images. However, keep in mind that you can only update a job after the new image tag is available. If you attempt to update before the new image exists, the job may fail.
+This is related to how the tags are managed and you should consider using `latest` images instead or you will find yourself opening PRs like [this](https://github.com/kubernetes/test-infra/pull/35288) to fix the image tags for some jobs.
+
+Remember to update all configs before running the [generation script](#run-test-generation-script) for the upcoming release branch jobs and to verify that the jobs are generated correctly.
 
 #### Create the release dashboards
 
@@ -233,7 +234,7 @@ Bumping the stable version to the n+1 version of Kubernetes is done only when th
 
 ### Update k8s-cloud-builder and k8s-ci-builder
 
-> [!Note]
+> [!NOTE]
 Part of this work on k8s-cloud-builder and k8s-ci-builder could have been done as part of the Golang bumps, but it is worth mentioning here as it is a common step.
 In any case you should always update the k8s-cloud-builder and k8s-ci-builder images to use the new kube-cross image.
 
