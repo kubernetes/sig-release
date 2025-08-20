@@ -3,7 +3,7 @@
 <!-- toc -->
 - [Cutting a Kubernetes release](#cutting-a-kubernetes-release)
   - [Prerequisites](#prerequisites)
-    - [Green Release Signal](#green-release-signal)
+    - [Green Release Signal (pre-releases only)](#green-release-signal-pre-releases-only)
     - [Access to GCP](#access-to-gcp)
     - [Install latest software (every time)](#install-latest-software-every-time)
       - [Download or update `Go` to the latest available stable version:](#download-or-update-go-to-the-latest-available-stable-version)
@@ -48,12 +48,16 @@ A step by step guide for cutting Kubernetes patch releases. At a high-level:
 
 ## Prerequisites
 
-### Green Release Signal
+### Green Release Signal (pre-releases only)
 
 On the same day of the release, a green signal must've been given in the #release-management Slack channel. If in doubt, double check with the current Release Signal Team Lead.
 You can find the complete list of release signal team members at this link (substitute `1.xx` with the current release version):
 
 `https://github.com/kubernetes/sig-release/blob/master/releases/release-1.xx/release-team.md`
+
+> [!NOTE]
+Ensure that there are no patch releases in progress, coordinating with @release-managers.
+These are typically scheduled on different days of the week, so there is usually no need to plan around them, but since they can sometimes overlap with other release activities, it's good to double-check.
 
 ### Access to GCP
 
