@@ -5,9 +5,7 @@ releasenote:
     `EndpointSlices` of the `service` indicated by the `APIServer`, rather than
     using Endpoints.
 
-    If you were using the aggregated API server feature, and you were writing out
-    the endpoints for it by hand (rather than letting kube-controller-manager
+    For users of the aggregated API server feature, who manually wrote out endpoints (rather than letting kube-controller-manager
     generate `Endpoints` and `EndpointSlices` for it automatically based on the
-    Service definition), then you should write out an EndpointSlice object rather
-    than (or in addition to) an `Endpoints` object.
+    Service definition), an endpoint slice was required instead of (or in addition to) an `Endpoints` object.
 pr_body: ""

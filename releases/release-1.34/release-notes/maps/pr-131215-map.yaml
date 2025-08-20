@@ -1,0 +1,7 @@
+pr: 131215
+releasenote:
+  text: Removed the "endpoint-controller" and "workload-leader-election" FlowSchemas
+    from the default APF configuration. Users should migrate workloads using leader
+    election to switch their lock type from `configmapsleases`/`endpointsleases` to
+    `leases`.
+pr_body: ""

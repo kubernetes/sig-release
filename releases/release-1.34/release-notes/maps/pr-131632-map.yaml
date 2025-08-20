@@ -1,5 +1,5 @@
 pr: 131632
 releasenote:
-  text: LeaseLocks could now have custom labels that different holders would overwrite
-    when they became the holder of the underlying lease.
+  text: LeaseLocks now support custom labels that are overwritten by new holders when
+    they acquire the underlying lease.
 pr_body: ""

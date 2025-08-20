@@ -421,8 +421,8 @@
   },
   "129837": {
     "commit": "c41cc0a144a8205b63289c440b813892eed790ae",
-    "text": "When proxying to an aggregated API server, kube-apiserver used the\n`EndpointSlices` of the `service` indicated by the `APIServer`, rather than\nusing Endpoints.\n\nIf you were using the aggregated API server feature, and you were writing out\nthe endpoints for it by hand (rather than letting kube-controller-manager\ngenerate `Endpoints` and `EndpointSlices` for it automatically based on the\nService definition), then you should write out an EndpointSlice object rather\nthan (or in addition to) an `Endpoints` object.",
-    "markdown": "When proxying to an aggregated API server, kube-apiserver used the\n  `EndpointSlices` of the `service` indicated by the `APIServer`, rather than\n  using Endpoints.\n  \n  If you were using the aggregated API server feature, and you were writing out\n  the endpoints for it by hand (rather than letting kube-controller-manager\n  generate `Endpoints` and `EndpointSlices` for it automatically based on the\n  Service definition), then you should write out an EndpointSlice object rather\n  than (or in addition to) an `Endpoints` object. ([#129837](https://github.com/kubernetes/kubernetes/pull/129837), [@danwinship](https://github.com/danwinship)) [SIG API Machinery, Network and Testing]",
+    "text": "When proxying to an aggregated API server, kube-apiserver used the\n`EndpointSlices` of the `service` indicated by the `APIServer`, rather than\nusing Endpoints.\n\nFor users of the aggregated API server feature, who manually wrote out endpoints (rather than letting kube-controller-manager\ngenerate `Endpoints` and `EndpointSlices` for it automatically based on the\nService definition), an endpoint slice was required instead of (or in addition to) an `Endpoints` object.",
+    "markdown": "When proxying to an aggregated API server, kube-apiserver used the\n  `EndpointSlices` of the `service` indicated by the `APIServer`, rather than\n  using Endpoints.\n  \n  For users of the aggregated API server feature, who manually wrote out endpoints (rather than letting kube-controller-manager\n  generate `Endpoints` and `EndpointSlices` for it automatically based on the\n  Service definition), an endpoint slice was required instead of (or in addition to) an `Endpoints` object. ([#129837](https://github.com/kubernetes/kubernetes/pull/129837), [@danwinship](https://github.com/danwinship)) [SIG API Machinery, Network and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -1160,8 +1160,8 @@
   },
   "131215": {
     "commit": "27de9a82b7de600fa40b4b2add081cefaec6cdc0",
-    "text": "Removed \"endpoint-controller\" and \"workload-leader-election\" FlowSchemas from the default APF configuration.\n\nmigrate the lock type used in the leader election in your workloads from configmapsleases/endpointsleases to leases.",
-    "markdown": "Removed \"endpoint-controller\" and \"workload-leader-election\" FlowSchemas from the default APF configuration.\n  \n  migrate the lock type used in the leader election in your workloads from configmapsleases/endpointsleases to leases. ([#131215](https://github.com/kubernetes/kubernetes/pull/131215), [@tosi3k](https://github.com/tosi3k)) [SIG API Machinery, Apps, Network, Scalability and Scheduling]",
+    "text": "Removed the \"endpoint-controller\" and \"workload-leader-election\" FlowSchemas from the default APF configuration. Users should migrate workloads using leader election to switch their lock type from `configmapsleases`/`endpointsleases` to `leases`.",
+    "markdown": "Removed the \"endpoint-controller\" and \"workload-leader-election\" FlowSchemas from the default APF configuration. Users should migrate workloads using leader election to switch their lock type from `configmapsleases`/`endpointsleases` to `leases`. ([#131215](https://github.com/kubernetes/kubernetes/pull/131215), [@tosi3k](https://github.com/tosi3k)) [SIG API Machinery, Apps, Network, Scalability and Scheduling]",
     "author": "tosi3k",
     "author_url": "https://github.com/tosi3k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/131215",
@@ -1180,7 +1180,8 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "action_required": true
+    "action_required": true,
+    "is_mapped": true
   },
   "131265": {
     "commit": "e73db626bdbeb388614e26cee42bdec356689754",
@@ -1913,8 +1914,8 @@
   },
   "131632": {
     "commit": "3eebe671eaccc63062e002ddc09fa24623ac30e6",
-    "text": "LeaseLocks could now have custom labels that different holders would overwrite when they became the holder of the underlying lease.",
-    "markdown": "LeaseLocks could now have custom labels that different holders would overwrite when they became the holder of the underlying lease. ([#131632](https://github.com/kubernetes/kubernetes/pull/131632), [@DerekFrank](https://github.com/DerekFrank))",
+    "text": "LeaseLocks now support custom labels that are overwritten by new holders when they acquire the underlying lease.",
+    "markdown": "LeaseLocks now support custom labels that are overwritten by new holders when they acquire the underlying lease. ([#131632](https://github.com/kubernetes/kubernetes/pull/131632), [@DerekFrank](https://github.com/DerekFrank))",
     "author": "DerekFrank",
     "author_url": "https://github.com/DerekFrank",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/131632",
@@ -4521,8 +4522,8 @@
   },
   "132509": {
     "commit": "ec1803cab8a318a358822d6d00a086d56375d0a0",
-    "text": "removed defunct `make vet` target, please use `make lint` instead",
-    "markdown": "Removed defunct `make vet` target, please use `make lint` instead ([#132509](https://github.com/kubernetes/kubernetes/pull/132509), [@yongruilin](https://github.com/yongruilin)) [SIG Testing]",
+    "text": "The defunct `make vet` target was removed and replaced by `make lint`.",
+    "markdown": "The defunct `make vet` target was removed and replaced by `make lint`. ([#132509](https://github.com/kubernetes/kubernetes/pull/132509), [@yongruilin](https://github.com/yongruilin))",
     "author": "yongruilin",
     "author_url": "https://github.com/yongruilin",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132509",
@@ -4532,7 +4533,8 @@
     ],
     "sigs": [
       "testing"
-    ]
+    ],
+    "is_mapped": true
   },
   "132513": {
     "commit": "9f97857669c94332f2695c6216885937e4e9556d",
@@ -6412,8 +6414,8 @@
   },
   "132890": {
     "commit": "bdb7a019460160bdf0f788ebc0eae80a09126e08",
-    "text": "NONW",
-    "markdown": "NONW ([#132890](https://github.com/kubernetes/kubernetes/pull/132890), [@atiratree](https://github.com/atiratree)) [SIG Apps]",
+    "text": "NONE",
+    "markdown": "NONE ([#132890](https://github.com/kubernetes/kubernetes/pull/132890), [@atiratree](https://github.com/atiratree))",
     "author": "atiratree",
     "author_url": "https://github.com/atiratree",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132890",
@@ -6423,7 +6425,8 @@
     ],
     "sigs": [
       "apps"
-    ]
+    ],
+    "is_mapped": true
   },
   "132893": {
     "commit": "81986595c87365f2155b20af1d361bf2fb96b544",
@@ -6759,7 +6762,7 @@
   },
   "132965": {
     "commit": "356d0b9f1834c336abb190fda0033eb6adeb2726",
-    "text": "Deprecated `apiserver_storage_objects` and replace it with `apiserver_resource_objects` metric using labels consistent with other metrics.",
+    "text": "Deprecated `apiserver_storage_objects` and replaced it with `apiserver_resource_objects` metric using labels consistent with other metrics.",
     "markdown": "Deprecated `apiserver_storage_objects` and replaced it with `apiserver_resource_objects` metric using labels consistent with other metrics. ([#132965](https://github.com/kubernetes/kubernetes/pull/132965), [@serathius](https://github.com/serathius)) [SIG API Machinery, Etcd and Instrumentation]",
     "author": "serathius",
     "author_url": "https://github.com/serathius",
