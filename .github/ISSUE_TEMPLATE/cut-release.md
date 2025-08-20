@@ -88,8 +88,7 @@ Help? Ring @release-managers on slack!
 - [ ] Update [`schedule.yaml` file](https://github.com/kubernetes/website/blob/main/data/releases/schedule.yaml) with the latest release using [`schedule-builder`](https://github.com/kubernetes/release/tree/master/cmd/schedule-builder) (_patch releases only_) <!-- Paste Pull Request URL here -->
 - [ ] Collect metrics and add them to the `Release steps` table below through `krel history --branch release-1.xx --date-from yyyy-mm-dd` (current date)
 <!-- ONLY FOR RC.0 RELEASES - [ ] Post-release branch creation tasks -->
-<!-- ONLY FOR RC.1 RELEASES - [ ] Ensure that the new OBS project is set -->
-<!-- ONLY FOR STABLE RELEASES - [ ] Code Thaw PR merged and mention @release-managers nudging them to perform the propedeutic tasks for the next alpha (e.g. setting up the new OBS project) -->
+<!-- ONLY FOR .0 RELEASE - [ ] Code Thaw PR merged and OBS project created for the new minor release -->
 
 ## Release Tools Version
 

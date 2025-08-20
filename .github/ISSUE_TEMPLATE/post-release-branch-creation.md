@@ -18,8 +18,7 @@ Help? Ring @release-managers on slack!
 -->
 
 - [ ] Create a thread in #release-management: <!-- Paste link to Slack thread -->
-- [ ] Promote the subsequent minor release alpha.0 image
-- [ ] (optional) Remove jobs for EOL versions, **only** if agreed upon with Release Managers and totally ok to delegate this to @release-managers
+- [ ] (optional) Remove jobs for EOL versions, **only** if agreed upon with Release Managers
 <!--
 Branch Managers might not have a context on if it is "safe" to remove the EOL jobs. We try to be firm with the deadlines and stop cutting patches as soon as we reach the EOL date, but e.g. there might be a new patch needed because of some important security fix, in which case only Release Managers will know about that.
 

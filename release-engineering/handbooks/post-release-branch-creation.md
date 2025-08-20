@@ -3,7 +3,6 @@
 <!-- toc -->
 - [Post release branch creation](#post-release-branch-creation)
   - [Checklist](#checklist)
-    - [Promote the subsequent minor release alpha.0 image](#promote-the-subsequent-minor-release-alpha0-image)
     - [Remove EOL version jobs from test-infra (optional)](#remove-eol-version-jobs-from-test-infra-optional)
     - [Update milestone applier rules and check milestone requirements](#update-milestone-applier-rules-and-check-milestone-requirements)
     - [Update Kubekins-e2e v2 variants](#update-kubekins-e2e-v2-variants)
@@ -31,12 +30,6 @@ It is essential to follow these steps to maintain the integrity of the release p
 ## Checklist
 
 Open a new issue using [this template](https://github.com/kubernetes/sig-release/issues/new?template=post-release-branch-creation.md).
-
-### Promote the subsequent minor release alpha.0 image
-
-Recall that an alpha.0 of the next minor release is created during the rc.0 cut?
-
-To assist downstream consumers of Kubernetes, this new alpha is automatically cut to bring our next release tag to the tip of `master`, what we need to do manually is [promoting](k8s-release-cut.md#7-image-promotion) the alpha.0 image, after the rc.0 image ProwJob is green.
 
 ### Remove EOL version jobs from test-infra (optional)
 
