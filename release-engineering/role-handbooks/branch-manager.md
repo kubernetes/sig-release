@@ -31,18 +31,9 @@
       - [Security fixes](#security-fixes)
       - [Announcing Security Fixes](#announcing-security-fixes)
       - [Release Validation](#release-validation)
-    - [Post-release Activities](#post-release-activities)
-      - [Update kubekins-e2e variants](#update-kubekins-e2e-variants)
-      - [Cut next alpha](#cut-next-alpha)
   - [Branch Management](#branch-management)
-    - [Branch Creation](#release-branch-creation)
-      - [Post release branch creation tasks](#post-release-branch-creation-tasks)
-    - [Update test-infra configurations](#update-test-infra-configurations)
-      - [Update milestone appliers](#update-milestone-appliers)
-      - [Update milestone requirements](#update-milestone-requirements)
-      - [Update e2e variants](#update-e2e-variants)
-      - [Generate release branch jobs](#generate-release-branch-jobs)
-      - [Update publishing-bot rules](#update-publishing-bot-rules)
+    - [Release Branch Creation](#release-branch-creation)
+      - [Post new release branch creation tasks](#post-new-release-branch-creation-tasks)
     - [Configure Merge Automation](#configure-merge-automation)
       - [Tide](#tide)
       - [Code Freeze](#code-freeze)
@@ -503,173 +494,17 @@ The following are some ways to determine if the release process was successful:
 3. CHANGELOG-X.Y.md is automatically loaded into the kubernetes/kubernetes repo: [https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md)
 
 
-
-### Post-release Activities
-
-> [!IMPORTANT]  
-> These activities are needed after `rc.0` releases only
-
-#### Update kubekins-e2e variants
-
-Set the `K8S_RELEASE` marker for the current release variant to `stable-x.y` which was currently `latest-x.y` in the [`variants.yaml` file for `kubekins-e2e`](https://github.com/kubernetes/test-infra/blob/fa43d4a7a6c88c0dedd0db83b250cec485b60736/images/kubekins-e2e/variants.yaml). ([reference PR review comment](https://github.com/kubernetes/test-infra/pull/13870#discussion_r313628808))
-
-#### Cut next alpha
-
-Recall that an alpha.0 of the next minor release was created during [release branch creation](#release-branch-creation).
-
-The previously created alpha.0 is now several commits behind `master`.
-As an example, see the [comparison between the `v1.18.0-alpha.0` (after 1.17 branch creation) and `v1.18.0-alpha.1` (after 1.17.0 release) tags](https://github.com/kubernetes/kubernetes/compare/v1.18.0-alpha.0...v1.18.0-alpha.1).
-
-To assist downstream consumers of Kubernetes, a new alpha should be cut to bring our next release tag to the tip of `master`.
-
-Begin the release process with:
-
-```shell
-krel stage
-```
-
-Proceed with the [alpha release steps](#alpha-releases).
-
-Example `1.18.0-alpha.1` release issue template: https://github.com/kubernetes/sig-release/issues/928
-
-#### Branching perf-tests
-
-Reach out to SIG Scalability to ensure a new branch is cut in [sigs.k8s.io/perf-tests](https://github.com/kubernetes/perf-tests/) repository. 
-
-In case the release branch is missing - we will end up with an issue we had for 1.30, see [#124119](https://github.com/kubernetes/kubernetes/issues/124119)
-
 ## Branch Management
 
 This section discusses the methods in managing commits on the `release-x.y` branch.
 
-### Update test-infra configurations
-
-Before getting started, Branch Managers should:
-
-- Fork the [test-infra repository](https://github.com/kubernetes/test-infra)
-- Clone their fork of `kubernetes/test-infra`:
-
-```shell
-git clone git@github.com:<username>/test-infra.git
-```
-
-- (optional) [Install Bazel](https://docs.bazel.build/versions/master/install.html) or run Bazel inside a container
-  - Running Bazel in a container is recommended over installing Bazel locally, as Bazel has many dependencies
-
 ### Release Branch Creation
 
-> [!IMPORTANT]  
-> The branch is created in the nomock staging phase and is pushed to the repository during the nomock release phase.
+See [this section](../handbooks/k8s-release-cut.md#next-release-branch-creation) of the release cut handbook for more info.
 
-During a `rc.0` release our release tooling creates a new release branch named `release-x.0`, where `x` is the major version of the next release.
+#### Post new release branch creation tasks
 
-Behind the scenes `krel` is executing a `git branch create` command and `git push`. 
-
-At the same time Prow’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo, including the newly created one.
-No need to manually create the branch protection rule.
-
-New release branch creation (for example: `release-1.18`) also automatically triggers an alpha.0 build for the subsequent release (for example: [`v1.19.0-alpha.0`](https://github.com/kubernetes/kubernetes/releases/tag/v1.19.0-alpha.0)).
-
-> [!NOTE]  
-This means that the staging step will take about twice as long, as it will stage both versions `v1.18.0-rc.0` and `v1.19.0-alpha.0`. 
-The release step will also be extended, but not substantially longer in time.
-
-#### Post release branch creation tasks
-
-During the mock stage runs and before the nomock release job is started, run through the following tasks.
-
-> [!WARNING]  
-Rembember to put a `/hold` on all the PRs, they have to be lifted only once the nomock release phase is done and the branch is created.
-
-- [Update test-infra configurations](#update-test-infra-configurations)
-  - [Update milestone appliers](#update-milestone-appliers)
-  - [Update milestone requirements](#update-milestone-requirements) (this should have been already done as part of the Code Freeze routine)
-  - [Update e2e variants](#update-e2e-variants)
-
-After the rc.0 cut is done and you announced it, proceed with the following:
-
-- [Generate release branch jobs](#generate-release-branch-jobs)
-- [Add a new variant for the kube-cross image](#add-a-new-variant-for-the-kube-cross-image)
-- [Update publishing-bot rules](#update-publishing-bot-rules)
-
-Once the new `release-x.0` branch is created, the [release jobs and dashboards should be generated and merged](#generate-release-branch-jobs).
-
-#### Update milestone appliers
-
-The [milestone applier plugin](https://github.com/kubernetes-sigs/prow/blob/main/pkg/plugins/milestoneapplier/milestoneapplier.go) automatically applies a GitHub milestone to pull requests after they have merged.
-
-This only applies to repos that have the milestone applier configured and for pull requests that do not already have a milestone.
-
-Update the `milestoneapplier` plugin configs for `kubernetes/kubernetes`:
-
-- Remove configs for the unsupported release branches, if present - _this is typically the oldest release in the list_
-- Add config for the current release branch
-
-Here's an [example PR](https://github.com/kubernetes/test-infra/pull/20075).
-
-#### Update milestone requirements
-
-> [!NOTE]
-If the [code freeze](#code-freeze) was enabled before creating the release branch, there's nothing to do, as the milestone requirements would include the newest release branch already.
-
-Find the query config for `kubernetes/kubernetes` (in [config.yaml][config.yaml] file) with the code freeze enabled and add the newest release release branch.
-
-[config.yaml]: https://github.com/kubernetes/test-infra/blob/3a6962d/config/prow/config.yaml
-
-Here's an [example PR](https://github.com/kubernetes/test-infra/pull/20077).
-
-#### Update e2e variants
-
-Images used in Kubernetes e2e tests are generated via our [GCB Builder tool](https://github.com/kubernetes/test-infra/blob/master/images/builder/README.md).
-
-The `variants.yaml` config file, used in conjunction with the GCB Builder, allows us to target various branches or branch combinations during CI tests. The `K8S_VERSION` variable maps to the version marker `latest-x.y.txt` file viewable in the [`kubernetes-release` GCS bucket](https://gcsweb.k8s.io/gcs/kubernetes-release/release/) for example, [`latest-1.17.txt`](https://dl.k8s.io/release/latest-1.17.txt).
-
-Update the [variants for the `kubekins-e2e` image](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e/variants.yaml).
-
-- Remove the release variants for the unsupported releases
-- Add an entry for the newest release variant
-- Copy the `master` variant, rename it to the newest release and ensure the following:
-  - The `K8S_RELEASE` marker for `experimental` matches `master`
-  - The `CONFIG` marker for the newest release matches the variant/release name
-  - The `K8S_RELEASE` marker for the newest release variant is `latest-x.y`
-  - The `K8S_RELEASE` marker for every other release variant is `stable-x.y`
-
-Create a PR with this change and wait for it to be merged ([example PR](https://github.com/kubernetes/test-infra/pull/20076)).
-
-**Wait for the `test-infra-push-kubekins-e2e` presubmit to finish (you can [check on prow](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e)).**
-
-**`git pull` latest from `master` before continuing.**
-
-#### Generate release branch jobs
-
-> [!CAUTION]
-To minimize drift with tooling changes, this section has been moved to
-[kubernetes/test-infra][release-branch-job-creation].
-
-See [kubernetes/test-infra](release-branch-job-creation#release-branch-jobs) for the exact steps to follow.
-
-#### Add a new variant for the kube-cross image
-
-Once we have cut the branch, it is a good time to start producing a new kube-cross image. To do this, we first need to add the variant to kube-cross [variants.yaml](https://github.com/kubernetes/release/blob/master/images/build/cross/variants.yaml) file and update the [dependencies.yaml](https://github.com/kubernetes/release/blob/master/dependencies.yaml) file. Here is an [example PR](https://github.com/kubernetes/release/pull/2344/files).
-
-Once that is merged, wait for this [prow job](https://prow.k8s.io/view/gs/kubernetes-jenkins/logs/post-release-push-image-kube-cross) to complete and then do an image promotion PR. Here is an [example](https://github.com/kubernetes/k8s.io/pull/4412). 
-
-To create a new k8s-cloud-builder image with the new kube-cross image, a similar PR is created to update the variants.yaml for [k8s-cloud-builder](https://github.com/kubernetes/release/blob/master/images/k8s-cloud-builder/variants.yaml). Here is an older [example pr](https://github.com/kubernetes/release/commit/830da9f3fc51a6b581ea58df82cba4c3b805be99).
-
-Finally, we can bump the kube-cross builder image in kubernetes/kubernetes. Here is an [example PR](https://github.com/kubernetes/kubernetes/commit/242649ee7474f9d2d11add22e5747a8323221f4d).
-
-#### Update publishing-bot rules
-
-The Kubernetes Publishing Bot is responsible for:
-
-* ensuring that the master and release branches in the staging repositories are in-sync with the appropriate branches in `kubernetes/kubernetes`
-* creating tags in the staging repositories for each Kubernetes release
-
-It's required to create the appropriate publishing-bot rules for the publishing-bot to work with the release branches. Once a new release branch is created in `kubernetes/kubernetes`, the Release Manager needs to update the publishing-bot rules as described in the [`k/publishing-bot` repository](https://git.k8s.io/publishing-bot#updating-rules). This best way to do this is by using the [update-rules](https://github.com/kubernetes/publishing-bot/blob/master/cmd/update-rules/README.md) CLI tool. 
-
-Here's an [example PR](https://github.com/kubernetes/kubernetes/pull/100616), but please generate the changes with the `update-rules` tooling.
-
-[sig-release-x.y-blocking]: https://testgrid.k8s.io/sig-release-1.17-blocking
+Run through the following tasks detailed [here](../handbooks/post-rc0-release-tasks.md) after the `rc.0` release is communicated and therefore the release branch has been created.
 
 ---
 
@@ -778,6 +613,9 @@ Update the `milestoneapplier` plugin configs for the following repos to the **_n
 Example PRs:
 
 - [1.33](https://github.com/kubernetes/test-infra/pull/34693)
+
+> [!IMPORTANT]
+After Code Thaw is performed, remind @release-managers to perform the propedeutic tasks for the next `alpha.1` cut, such as setting up the new OBS project.
 
 ### Branch Fast Forward
 
