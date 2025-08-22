@@ -3241,8 +3241,8 @@
   },
   "132117": {
     "commit": "8a95bb683337dd0d83154ea608c6cb2351620aa7",
-    "text": "❯ crane digest gcr.io/k8s-staging-e2e-test-images/agnhost:2.56\nsha256:352a050380078cb2a1c246357a0dfa2fcf243ee416b92ff28b44a01d1b4b0294",
-    "markdown": "❯ crane digest gcr.io/k8s-staging-e2e-test-images/agnhost:2.56\n  sha256:352a050380078cb2a1c246357a0dfa2fcf243ee416b92ff28b44a01d1b4b0294 ([#132117](https://github.com/kubernetes/kubernetes/pull/132117), [@yashsingh74](https://github.com/yashsingh74)) [SIG Network and Testing]",
+    "text": "crane digest gcr.io/k8s-staging-e2e-test-images/agnhost:2.56",
+    "markdown": "Crane digest gcr.io/k8s-staging-e2e-test-images/agnhost:2.56 ([#132117](https://github.com/kubernetes/kubernetes/pull/132117), [@yashsingh74](https://github.com/yashsingh74)) [SIG Network and Testing]",
     "author": "yashsingh74",
     "author_url": "https://github.com/yashsingh74",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132117",
@@ -3258,7 +3258,8 @@
       "testing"
     ],
     "duplicate": true,
-    "do_not_publish": true
+    "do_not_publish": true,
+    "is_mapped": true
   },
   "132121": {
     "commit": "d195722623824d68b244b80736a9d460bd714217",
@@ -6759,7 +6760,7 @@
   },
   "132965": {
     "commit": "356d0b9f1834c336abb190fda0033eb6adeb2726",
-    "text": "Deprecated `apiserver_storage_objects` and replace it with `apiserver_resource_objects` metric using labels consistent with other metrics.",
+    "text": "Deprecated `apiserver_storage_objects` and replaced it with `apiserver_resource_objects` metric using labels consistent with other metrics.",
     "markdown": "Deprecated `apiserver_storage_objects` and replaced it with `apiserver_resource_objects` metric using labels consistent with other metrics. ([#132965](https://github.com/kubernetes/kubernetes/pull/132965), [@serathius](https://github.com/serathius)) [SIG API Machinery, Etcd and Instrumentation]",
     "author": "serathius",
     "author_url": "https://github.com/serathius",

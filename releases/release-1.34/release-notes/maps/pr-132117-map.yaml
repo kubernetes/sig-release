@@ -1,0 +1,4 @@
+pr: 132117
+releasenote:
+  text: crane digest gcr.io/k8s-staging-e2e-test-images/agnhost:2.56
+pr_body: ""
