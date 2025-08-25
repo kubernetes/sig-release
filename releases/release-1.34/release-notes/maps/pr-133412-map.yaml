@@ -1,0 +1,4 @@
+pr: 133412
+releasenote:
+  text: Fixed an issue that caused kube-apiserver to panic in 1.34.0-rc.0.
+pr_body: ""
