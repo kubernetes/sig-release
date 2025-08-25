@@ -1,0 +1,6 @@
+pr: 132121
+releasenote:
+  text: ReplicaSets and Deployments should always counted `.status.availableReplicas`
+    at the correct time without a delay. This resulted in faster reconciliation of
+    Deployment conditions and faster, unblocked Deployment rollouts.
+pr_body: ""

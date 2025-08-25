@@ -560,8 +560,8 @@
   },
   "130161": {
     "commit": "2125fd6a94c968f22c3034ea2406ca2eb247fdd3",
-    "text": "kubelet:  removed the deprecated flag `--cloud-config` from the command line.",
-    "markdown": "Kubelet:  removed the deprecated flag `--cloud-config` from the command line. ([#130161](https://github.com/kubernetes/kubernetes/pull/130161), [@carlory](https://github.com/carlory)) [SIG Cloud Provider, Node and Scalability]",
+    "text": "kubelet:  Removed the deprecated flag `--cloud-config` from the command line.",
+    "markdown": "Kubelet:  Removed the deprecated flag `--cloud-config` from the command line. ([#130161](https://github.com/kubernetes/kubernetes/pull/130161), [@carlory](https://github.com/carlory))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -586,7 +586,8 @@
       "cloud-provider"
     ],
     "duplicate": true,
-    "action_required": true
+    "action_required": true,
+    "is_mapped": true
   },
   "130333": {
     "commit": "fe5afa919b36207e6f173dc5ff111a1138a0cf0e",
@@ -1915,8 +1916,8 @@
   },
   "131563": {
     "commit": "4a5aa2ffc248e3157917033aafc5418f2910691e",
-    "text": "kubeadm: fixed missing space when printing the warning about pause image mismatch.",
-    "markdown": "Kubeadm: fixed missing space when printing the warning about pause image mismatch. ([#131563](https://github.com/kubernetes/kubernetes/pull/131563), [@logica0419](https://github.com/logica0419)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: Fixed missing space when printing the warning about pause image #     mismatch.",
+    "markdown": "Kubeadm: Fixed missing space when printing the warning about pause image #     mismatch. ([#131563](https://github.com/kubernetes/kubernetes/pull/131563), [@logica0419](https://github.com/logica0419))",
     "author": "logica0419",
     "author_url": "https://github.com/logica0419",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/131563",
@@ -1929,7 +1930,8 @@
     ],
     "sigs": [
       "cluster-lifecycle"
-    ]
+    ],
+    "is_mapped": true
   },
   "131568": {
     "commit": "2ac0bdf360cf2529a3675c7012d0bf415e1051f3",
@@ -1998,8 +2000,8 @@
   },
   "131587": {
     "commit": "72ffb70d3ec0fff9b13b7871873cd16a25e27034",
-    "text": "kubeadm: made the coredns deployment manifest use named ports consistently for the liveness and readiness probes.",
-    "markdown": "Kubeadm: made the coredns deployment manifest use named ports consistently for the liveness and readiness probes. ([#131587](https://github.com/kubernetes/kubernetes/pull/131587), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: Made the coredns deployment manifest use named ports consistently #     for the liveness and readiness probes.",
+    "markdown": "Kubeadm: Made the coredns deployment manifest use named ports consistently #     for the liveness and readiness probes. ([#131587](https://github.com/kubernetes/kubernetes/pull/131587), [@neolit123](https://github.com/neolit123))",
     "author": "neolit123",
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/131587",
@@ -2012,7 +2014,8 @@
     ],
     "sigs": [
       "cluster-lifecycle"
-    ]
+    ],
+    "is_mapped": true
   },
   "131602": {
     "commit": "5bb3aa3604c97feb81372a410bed124222056cbb",
@@ -3549,8 +3552,8 @@
   },
   "132117": {
     "commit": "8a95bb683337dd0d83154ea608c6cb2351620aa7",
-    "text": "❯ crane digest gcr.io/k8s-staging-e2e-test-images/agnhost:2.56\nsha256:352a050380078cb2a1c246357a0dfa2fcf243ee416b92ff28b44a01d1b4b0294",
-    "markdown": "❯ crane digest gcr.io/k8s-staging-e2e-test-images/agnhost:2.56\n  sha256:352a050380078cb2a1c246357a0dfa2fcf243ee416b92ff28b44a01d1b4b0294 ([#132117](https://github.com/kubernetes/kubernetes/pull/132117), [@yashsingh74](https://github.com/yashsingh74)) [SIG Network and Testing]",
+    "text": "Promoted `agnhost` image version to 2.56 for Kubernetes e2e testing.\nVerified digest: sha256:352a050380078cb2a1c246357a0dfa2fcf243ee416b92ff28b44a01d1b4b0294",
+    "markdown": "Promoted `agnhost` image version to 2.56 for Kubernetes e2e testing.\n  Verified digest: sha256:352a050380078cb2a1c246357a0dfa2fcf243ee416b92ff28b44a01d1b4b0294 ([#132117](https://github.com/kubernetes/kubernetes/pull/132117), [@yashsingh74](https://github.com/yashsingh74))",
     "author": "yashsingh74",
     "author_url": "https://github.com/yashsingh74",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132117",
@@ -3566,12 +3569,13 @@
       "testing"
     ],
     "duplicate": true,
-    "do_not_publish": true
+    "do_not_publish": true,
+    "is_mapped": true
   },
   "132121": {
     "commit": "d195722623824d68b244b80736a9d460bd714217",
-    "text": "ReplicaSets and Deployments should always count `.status.availableReplicas` at the correct time without a delay. This results in faster reconciliation of Deployment conditions and faster, unblocked Deployment rollouts.",
-    "markdown": "ReplicaSets and Deployments should always count `.status.availableReplicas` at the correct time without a delay. This results in faster reconciliation of Deployment conditions and faster, unblocked Deployment rollouts. ([#132121](https://github.com/kubernetes/kubernetes/pull/132121), [@atiratree](https://github.com/atiratree)) [SIG Apps]",
+    "text": "ReplicaSets and Deployments should always counted `.status.availableReplicas` at the correct time without a delay. This resulted in faster reconciliation of Deployment conditions and faster, unblocked Deployment rollouts.",
+    "markdown": "ReplicaSets and Deployments should always counted `.status.availableReplicas` at the correct time without a delay. This resulted in faster reconciliation of Deployment conditions and faster, unblocked Deployment rollouts. ([#132121](https://github.com/kubernetes/kubernetes/pull/132121), [@atiratree](https://github.com/atiratree))",
     "author": "atiratree",
     "author_url": "https://github.com/atiratree",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132121",
@@ -3581,12 +3585,13 @@
     ],
     "sigs": [
       "apps"
-    ]
+    ],
+    "is_mapped": true
   },
   "132127": {
     "commit": "bf84dd0cc9a9496bb6ec025d916246b2274e05bd",
-    "text": "The PreferSameTrafficDistribution feature gate is now enabled by default,\nenabling the `PreferSameNode` traffic distribution value for Services.",
-    "markdown": "The PreferSameTrafficDistribution feature gate is now enabled by default,\n  enabling the `PreferSameNode` traffic distribution value for Services. ([#132127](https://github.com/kubernetes/kubernetes/pull/132127), [@danwinship](https://github.com/danwinship)) [SIG Apps and Network]",
+    "text": "Enabled the PreferSameTrafficDistribution feature gate by default,\nenabling the `PreferSameNode` traffic distribution value for Services.",
+    "markdown": "Enabled the PreferSameTrafficDistribution feature gate by default,\n  enabling the `PreferSameNode` traffic distribution value for Services. ([#132127](https://github.com/kubernetes/kubernetes/pull/132127), [@danwinship](https://github.com/danwinship))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3606,7 +3611,8 @@
       "apps"
     ],
     "feature": true,
-    "duplicate": true
+    "duplicate": true,
+    "is_mapped": true
   },
   "132149": {
     "commit": "3aa448625c2d2f10275c608f54b88074ef6aeafa",
@@ -4900,8 +4906,8 @@
   },
   "132509": {
     "commit": "ec1803cab8a318a358822d6d00a086d56375d0a0",
-    "text": "removed defunct `make vet` target, please use `make lint` instead",
-    "markdown": "Removed defunct `make vet` target, please use `make lint` instead ([#132509](https://github.com/kubernetes/kubernetes/pull/132509), [@yongruilin](https://github.com/yongruilin)) [SIG Testing]",
+    "text": "Removed defunct `make vet` target, please use `make lint` instead.",
+    "markdown": "Removed defunct `make vet` target, please use `make lint` instead. ([#132509](https://github.com/kubernetes/kubernetes/pull/132509), [@yongruilin](https://github.com/yongruilin))",
     "author": "yongruilin",
     "author_url": "https://github.com/yongruilin",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132509",
@@ -4911,12 +4917,13 @@
     ],
     "sigs": [
       "testing"
-    ]
+    ],
+    "is_mapped": true
   },
   "132513": {
     "commit": "9f97857669c94332f2695c6216885937e4e9556d",
-    "text": "Simplied validation error message for invalid fields by removing redundant field name.",
-    "markdown": "Simplied validation error message for invalid fields by removing redundant field name. ([#132513](https://github.com/kubernetes/kubernetes/pull/132513), [@xiaoweim](https://github.com/xiaoweim)) [SIG API Machinery, Apps, Auth, Node and Scheduling]",
+    "text": "Simplified validation error message for invalid fields by removing redundant field name.",
+    "markdown": "Simplified validation error message for invalid fields by removing redundant field name. ([#132513](https://github.com/kubernetes/kubernetes/pull/132513), [@xiaoweim](https://github.com/xiaoweim))",
     "author": "xiaoweim",
     "author_url": "https://github.com/xiaoweim",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132513",
@@ -4937,7 +4944,8 @@
       "apps"
     ],
     "duplicate": true,
-    "duplicate_kind": true
+    "duplicate_kind": true,
+    "is_mapped": true
   },
   "132514": {
     "commit": "a652896307ce8dd1412483ed18e61d6dd2ad36da",
@@ -6857,8 +6865,8 @@
   },
   "132890": {
     "commit": "bdb7a019460160bdf0f788ebc0eae80a09126e08",
-    "text": "NONW",
-    "markdown": "NONW ([#132890](https://github.com/kubernetes/kubernetes/pull/132890), [@atiratree](https://github.com/atiratree)) [SIG Apps]",
+    "text": "NONE",
+    "markdown": "NONE ([#132890](https://github.com/kubernetes/kubernetes/pull/132890), [@atiratree](https://github.com/atiratree))",
     "author": "atiratree",
     "author_url": "https://github.com/atiratree",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132890",
@@ -6868,7 +6876,8 @@
     ],
     "sigs": [
       "apps"
-    ]
+    ],
+    "is_mapped": true
   },
   "132893": {
     "commit": "81986595c87365f2155b20af1d361bf2fb96b544",
