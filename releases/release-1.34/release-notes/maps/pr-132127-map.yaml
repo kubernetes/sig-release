@@ -1,0 +1,6 @@
+pr: 132127
+releasenote:
+  text: |-
+    Enabled the PreferSameTrafficDistribution feature gate by default,
+    enabling the `PreferSameNode` traffic distribution value for Services.
+pr_body: ""

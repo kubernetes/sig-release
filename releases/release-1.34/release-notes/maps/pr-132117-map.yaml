@@ -1,0 +1,6 @@
+pr: 132117
+releasenote:
+  text: |-
+    Promoted `agnhost` image version to 2.56 for Kubernetes e2e testing.
+    Verified digest: sha256:352a050380078cb2a1c246357a0dfa2fcf243ee416b92ff28b44a01d1b4b0294
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 130161
+releasenote:
+  text: 'kubelet:  Removed the deprecated flag `--cloud-config` from the command line.'
+pr_body: ""
