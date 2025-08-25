@@ -1,5 +1,5 @@
 pr: 131587
 releasenote:
   text: 'kubeadm: Made the coredns deployment manifest use named ports consistently
-         for the liveness and readiness probes.'
+    for the liveness and readiness probes.'
 pr_body: ""
