@@ -1,0 +1,5 @@
+pr: 132472
+releasenote:
+  text: Simplified validation error message for required fields by removing redundant
+    messages.
+pr_body: ""

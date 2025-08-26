@@ -1,0 +1,5 @@
+pr: 131563
+releasenote:
+  text: 'kubeadm: Fixed missing space when printing the warning about pause image
+    mismatch.'
+pr_body: ""

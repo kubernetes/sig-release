@@ -1,0 +1,5 @@
+pr: 131425
+releasenote:
+  text: 'kube-scheduler: Removed the deprecated scheduler_scheduler_cache_size metric  in
+    favor of scheduler_cache_size'
+pr_body: ""

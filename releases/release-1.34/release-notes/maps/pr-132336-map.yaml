@@ -1,0 +1,5 @@
+pr: 132336
+releasenote:
+  text: "Fixed APIServerTracing test data race; ~/go/src/k8s.io/kubernetes/test/integration/apiserver/tracing$
+    go test ./... -race\nok  \tk8s.io/kubernetes/test/integration/apiserver/tracing\t68.825s"
+pr_body: ""

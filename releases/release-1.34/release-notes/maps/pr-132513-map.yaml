@@ -1,0 +1,5 @@
+pr: 132513
+releasenote:
+  text: Simplified validation error message for invalid fields by removing redundant
+    field name.
+pr_body: ""
