@@ -309,6 +309,7 @@
 - Updated the HPA controller so that it no longer emitted a `FailedRescale` event if a scale operation initially failed due to a conflict but succeeded after a retry; it now emitted a `SuccessfulRescale` event in this case. A `FailedRescale` event was still emitted if all retries were exhausted. ([#132007](https://github.com/kubernetes/kubernetes/pull/132007), [@AumPatel1](https://github.com/AumPatel1)) [SIG Apps and Autoscaling]
 - `Statefulset` respected `minReadySeconds`. ([#130909](https://github.com/kubernetes/kubernetes/pull/130909), [@Edwinhr716](https://github.com/Edwinhr716))
 - `kubectl create|delete|get|replace --raw` commands now honored the server root paths specified in the kubeconfig file. ([#131165](https://github.com/kubernetes/kubernetes/pull/131165), [@liggitt](https://github.com/liggitt))
+- Fixed an issue that caused `kube-apiserver` to panic in 1.34.0-rc.0. ([133412](https://github.com/kubernetes/kubernetes/pull/133412), [@richabanker](https://github.com/richabanker)) [SIG API Machinery and Etcd]
 
 ### Other (Cleanup or Flake)
 
