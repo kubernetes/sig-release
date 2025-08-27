@@ -6423,22 +6423,6 @@
     "duplicate": true,
     "is_mapped": true
   },
-  "132890": {
-    "commit": "bdb7a019460160bdf0f788ebc0eae80a09126e08",
-    "text": "NONE",
-    "markdown": "NONE ([#132890](https://github.com/kubernetes/kubernetes/pull/132890), [@atiratree](https://github.com/atiratree))",
-    "author": "atiratree",
-    "author_url": "https://github.com/atiratree",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/132890",
-    "pr_number": 132890,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "apps"
-    ],
-    "is_mapped": true
-  },
   "132893": {
     "commit": "81986595c87365f2155b20af1d361bf2fb96b544",
     "text": "Added `apiserver_resource_size_estimate_bytes` metric to API server.",
@@ -7505,6 +7489,114 @@
     "sigs": [
       "api-machinery",
       "etcd"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "133516": {
+    "commit": "9da4b7ecfb60ea484f8e6c89c42e63506571bc68",
+    "text": "Kubernetes is now built using Go 1.24.6",
+    "markdown": "Kubernetes is now built using Go 1.24.6. ([#133516](https://github.com/kubernetes/kubernetes/pull/133516), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/133516",
+    "pr_number": 133516,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "release",
+      "testing"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "133570": {
+    "commit": "8082e9ab157b280c740a623ae9d73679b9ee95a4",
+    "text": "Document how to contribute to staging repositories by redirecting to the main kubernetes repo",
+    "markdown": "Document how to contribute to staging repositories by redirecting to the main kubernetes repo ([#133570](https://github.com/kubernetes/kubernetes/pull/133570), [@BenTheElder](https://github.com/BenTheElder))",
+    "author": "BenTheElder",
+    "author_url": "https://github.com/BenTheElder",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/133570",
+    "pr_number": 133570,
+    "areas": [
+      "apiserver",
+      "cloudprovider",
+      "code-generation",
+      "kube-proxy",
+      "kubectl",
+      "kubelet"
+    ],
+    "kinds": [
+      "documentation"
+    ],
+    "sigs": [
+      "api-machinery",
+      "instrumentation",
+      "network",
+      "storage",
+      "node",
+      "scheduling",
+      "architecture",
+      "auth",
+      "cli",
+      "cloud-provider",
+      "cluster-lifecycle"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "133587": {
+    "commit": "b7706ef58b36dbd2cd41b161bd6e6e02e1a95601",
+    "text": "DRA: fixed a data race which, depending on timing, could have led to broken allocation of devices backing extended resources",
+    "markdown": "DRA: fixed a data race which, depending on timing, could have led to broken allocation of devices backing extended resources ([#133570](https://github.com/kubernetes/kubernetes/pull/133570), [@pohly](https://github.com/pohly)) [SIG Node]",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/133587",
+    "pr_number": 133587,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "133604": {
+    "commit": "4e8b192b66cc2a6952b8f1a5067e563c4019c276",
+    "text": "Fixed a regression in 1.34 release candidates where object storage count metrics could include all instances of all types instead of only the object count for a particular type",
+    "markdown": "Fixed a regression in 1.34 release candidates where object storage count metrics could include all instances of all types instead of only the object count for a particular type ([#133604](https://github.com/kubernetes/kubernetes/pull/133604), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/133604",
+    "pr_number": 133604,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "regression"
+    ],
+    "sigs": [
+      "api-machinery",
+      "etcd"
+    ],
+    "duplicate_kind": true,
+    "is_mapped": true
+  },
+  "133409": {
+    "commit": "ee065dfc80b5762d53c5d9d896a8cc4b1d9c6bd2",
+    "text": "Make `podcertificaterequestcleaner` role feature-gated",
+    "markdown": "Make `podcertificaterequestcleaner` role feature-gated ([#133409](https://github.com/kubernetes/kubernetes/pull/133409), [@carlory](https://github.com/carlory)) [SIG Auth]",
+    "author": "carlory",
+    "author_url": "https://github.com/carlory",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/133409",
+    "pr_number": 133409,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth"
     ],
     "duplicate_kind": true,
     "is_mapped": true
