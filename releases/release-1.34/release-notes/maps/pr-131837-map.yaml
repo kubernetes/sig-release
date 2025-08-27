@@ -1,6 +1,6 @@
 pr: 131837
 releasenote:
-  text: Static pods that reference API objects were denied admission by the kubelet
-    so that static pods would not be silently running even after the mirror pod creation
-    failed.
+  text: "Static pods that reference API objects are now denied admission by the kubelet so that static pods would not be silently running even after the mirror pod creation fails.
+    
+    ACTION REQUIRED: Prior to upgrade, ensure static pods are not referencing API objects such as ServiceAccounts, ConfigMaps, Secrets, ResourceClaims, CSIDrivers, PersistentVolumeClaims, or ClusterTrustBundles."
 pr_body: ""
