@@ -1160,8 +1160,8 @@
   },
   "131215": {
     "commit": "27de9a82b7de600fa40b4b2add081cefaec6cdc0",
-    "text": "Removed \"endpoint-controller\" and \"workload-leader-election\" FlowSchemas from the default APF configuration.\n\nMigrate the lock type used in the leader election in your workloads from configmapsleases/endpointsleases to leases.",
-    "markdown": "Removed \"endpoint-controller\" and \"workload-leader-election\" FlowSchemas from the default APF configuration.\n  \n  Migrate the lock type used in the leader election in your workloads from configmapsleases/endpointsleases to leases. ([#131215](https://github.com/kubernetes/kubernetes/pull/131215), [@tosi3k](https://github.com/tosi3k)) [SIG API Machinery, Apps, Network, Scalability and Scheduling]",
+    "text": "Removed \"endpoint-controller\" and \"workload-leader-election\" FlowSchemas from the default APF configuration.\n\nAction required: workloads using leader election were required to migrate their lock type from `configmapsleases` or `endpointsleases` to `leases`.",
+    "markdown": "Removed \"endpoint-controller\" and \"workload-leader-election\" FlowSchemas from the default APF configuration.\n  \n Action required: workloads using leader election were required to migrate their lock type from `configmapsleases` or `endpointsleases` to `leases`. ([#131215](https://github.com/kubernetes/kubernetes/pull/131215), [@tosi3k](https://github.com/tosi3k)) [SIG API Machinery, Apps, Network, Scalability and Scheduling]",
     "author": "tosi3k",
     "author_url": "https://github.com/tosi3k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/131215",
@@ -2322,8 +2322,8 @@
   },
   "131837": {
     "commit": "b7c9333f5c050af2d48b08b369681ec863e5084c",
-    "text": "Static pods that reference API objects were denied admission by the kubelet so that static pods would not be silently running even after the mirror pod creation failed.",
-    "markdown": "Static pods that reference API objects were denied admission by the kubelet so that static pods would not be silently running even after the mirror pod creation failed. ([#131837](https://github.com/kubernetes/kubernetes/pull/131837), [@sreeram-venkitesh](https://github.com/sreeram-venkitesh)) [SIG Auth, Node and Testing]",
+    "text": "Static pods that reference API objects are now denied admission by the kubelet so that static pods would not be silently running even after the mirror pod creation fails. ACTION REQUIRED: Prior to upgrade, ensure static pods are not referencing API objects such as ServiceAccounts, ConfigMaps, Secrets, ResourceClaims, CSIDrivers, PersistentVolumeClaims, or ClusterTrustBundles.",
+    "markdown": "Static pods that reference API objects are now denied admission by the kubelet so that static pods would not be silently running even after the mirror pod creation fails. ACTION REQUIRED: Prior to upgrade, ensure static pods are not referencing API objects such as ServiceAccounts, ConfigMaps, Secrets, ResourceClaims, CSIDrivers, PersistentVolumeClaims, or ClusterTrustBundles. ([#131837](https://github.com/kubernetes/kubernetes/pull/131837), [@sreeram-venkitesh](https://github.com/sreeram-venkitesh)) [SIG Auth, Node and Testing]",
     "author": "sreeram-venkitesh",
     "author_url": "https://github.com/sreeram-venkitesh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/131837",
