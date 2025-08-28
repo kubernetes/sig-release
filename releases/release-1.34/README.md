@@ -8,7 +8,17 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes v1.34
+# Kubernetes v1.34: Of Wind & Will (O' WaW)
+
+![Kubernetes v1.34: Of Wind & Will (O' WaW)](./logo/k8s134-owaw.png)
+
+A release powered by the wind around us — and the will within us.
+
+Every release cycle, we inherit winds that we don't really control — the state of our tooling, documentation, and the historical quirks of our project. Sometimes these winds fill our sails, sometimes they push us sideways or die down.
+
+What keeps Kubernetes moving isn't the perfect winds, but the will of our sailors who adjust the sails, man the helm, chart the courses and keep the ship steady. The release happens not because conditions are always ideal, but because of the people who build it, the people who release it, and the bears ^, cats, dogs, wizards, and curious minds who keep Kubernetes sailing strong — no matter which way the wind blows.
+
+This release, **Of Wind & Will (O' WaW)**, honors the winds that have shaped us, and the will that propels us forward.
 
 #### Links
 
