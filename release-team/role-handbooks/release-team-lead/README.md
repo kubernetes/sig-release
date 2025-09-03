@@ -110,7 +110,7 @@ In the event that a subteam loses a shadow, we might ask the paired Lead Shadow 
 - The Release Team Lead is responsible for updating the [burndown template] ahead of the release (changing the milestone in links and anything else requested during the retrospective)
 - Release theme: There is no particular reason for this other than to have fun, and possibly provide a theme for Release Team gifts. As Release Team Lead, you get to pick a theme for the release. Release themes can be browsed over [k/sig-release/releases/release-v1.XX](https://github.com/kubernetes/sig-release/tree/master/releases).
 
-### Mailing List Standards
+### Communications and Mailing List Standards
 
 Important communications and discussions should be posted in the Release Team
 mailing list [kubernetes-release-team].
@@ -131,6 +131,17 @@ The membership criteria is as follows:
 * All members of the [Branch Management Team](https://github.com/kubernetes/sig-release/blob/master/release-managers.md#branch-managers)
   must be part of the mailing list
 * SIG Release Chairs must be part of the mailing list
+
+In addition to the mailing list, [SIG Contributor
+Experience](https://github.com/kubernetes/community/tree/master/sig-contributor-experience),
+particularly through the [SIG Contribex
+Comms](https://github.com/kubernetes/community/blob/master/sig-contributor-experience/README.md#contributor-comms)
+subproject, is responsible for the social media accounts of the project: while there is some degree
+of automation in terms of broadcasting updates to the official blogs, there are circumstances where
+a more direct collaboration is useful. With that in mind, it's recommended that the Lead introduces
+themselves in the [sig-contribex-comms Slack
+channel](https://kubernetes.slack.com/archives/C03KT3SUJ20) during the start of the cycle so that
+the team can be ready to assist when needed.
 
 ## Release theme gifts
 
