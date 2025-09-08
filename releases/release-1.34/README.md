@@ -10,7 +10,7 @@ description: |
 
 # Kubernetes v1.34: Of Wind & Will (O' WaW)
 
-![Kubernetes v1.34: Of Wind & Will (O' WaW)](./logo/k8s134-owaw.png)
+![Kubernetes v1.34: Of Wind & Will (O' WaW)](./logo/k8s134-owaw.png?raw=true)
 
 A release powered by the wind around us — and the will within us.
 
