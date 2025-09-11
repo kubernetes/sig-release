@@ -47,6 +47,10 @@ The v1.35 release cycle is as follows:
 - **Tuesday 2nd December 2025**: Week 12 — [Docs Freeze][Docs Freeze]
 - **Wednesday 17th December 2025**: Week 14 — Kubernetes v1.35.0 released
 
+#### Note on AoE deadlines:
+Deadlines are expressed in “Anywhere on Earth” (AoE) time. This means the date ends when the calendar day finishes in the last timezone on Earth (UTC−12).
+Example: A deadline of Thursday, Oct 16 (AoE) gives contributors their full Thursday everywhere in the world. The cutoff for is Friday, Oct 17 at 12:00 UTC.
+
 ## Timeline
 
 | **What**                                                                               | **Who**                       | **When**                                                                    | **Week** | **Release Signal**                                                       |
