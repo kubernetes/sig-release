@@ -49,7 +49,7 @@ The v1.35 release cycle is as follows:
 
 #### Note on AoE deadlines:
 Deadlines are expressed in “Anywhere on Earth” (AoE) time. This means the date ends when the calendar day finishes in the last timezone on Earth (UTC−12).
-Example: A deadline of Thursday, Oct 16 (AoE) gives contributors their full Thursday everywhere in the world. The cutoff for is Friday, Oct 17 at 12:00 UTC.
+Example: A deadline of Thursday, Oct 16 (AoE) gives contributors their full Thursday everywhere in the world. The cutoff therefore would be Friday, Oct 17 at 12:00 UTC.
 
 ## Timeline
 
