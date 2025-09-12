@@ -41,7 +41,7 @@ The v1.35 release cycle is as follows:
 - **Monday 15th September 2025**: Week 1 — Release cycle begins
 - **Thursday 9th October 2025**: Week 4 — [Production Readiness Freeze][Production Readiness Freeze]
 - **Thursday 16th October 2025 (AoE) / Friday 17th October 2025, 12:00 UTC**: Week 5 — [Enhancements Freeze][Enhancements Freeze]
--  **Thursday 30th October 2025 (AoE) / Friday 31st October 2025, 12:00 UTC**: Week 7 — [Feature blog freeze][Feature blog freeze]
+- **Thursday 30th October 2025 (AoE) / Friday 31st October 2025, 12:00 UTC**: Week 7 — [Feature blog freeze][Feature blog freeze]
 - **Thursday 6th November 2025 (AoE) / Friday 7th November 2025, 12:00 UTC**: Week 8 — [Code Freeze][Code Freeze] and [Test Freeze][Test Freeze]
 - **Monday 10th - Thursday 13th November 2025**: Week 9 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
 - **Tuesday 2nd December 2025**: Week 12 — [Docs Freeze][Docs Freeze]
