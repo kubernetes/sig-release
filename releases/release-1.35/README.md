@@ -27,7 +27,7 @@ description: |
 * [Bug Triage Tracking Board](https://bit.ly/k8s135-bugtriage)
 * [CI Signal Project Board & Issue Tracking](https://bit.ly/k8s135-cisignal)
 * [Retrospective Document](https://bit.ly/k8s135-retro)
-* [kubernetes/kubernetes v1.35 milestone](https://github.com/kubernetes/kubernetes/milestone/67)
+* [kubernetes/kubernetes v1.35 milestone](https://github.com/kubernetes/kubernetes/milestone/68)
 
 #### Guides
 
