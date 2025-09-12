@@ -10,6 +10,9 @@ As described by the PRR team [here](https://groups.google.com/a/kubernetes.io/g/
 * It is important to note that the PRR freeze **_does not_** mean that the KEPs need to have received an approval or even a review from the PRR team by this date.
 * To emphasize, the sole requirement is that all opted-in KEPs have their PRR questionnaires answered by the deadline, to ensure the PRR team has sufficient time to review them by Enhancements Freeze.
 
+If the enhancement does not meet these requirements, it will be removed from the
+milestone and will require an [Exception].
+
 ## Enhancements Freeze
 
 All enhancements wishing to be included in the current release must have
