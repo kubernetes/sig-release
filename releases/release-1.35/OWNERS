@@ -2,6 +2,7 @@
 
 approvers:
     - drewhagen           # v1.35 Release Team Lead
+    - katcosgrove         # Release Subproject Owner
     - rytswd              # v1.35 Release Team Lead Shadow
     - dipesh-rawat        # v1.35 Release Team Lead Shadow
     - jenshu              # v1.35 Release Team Lead Shadow
