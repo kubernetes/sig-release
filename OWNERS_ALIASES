@@ -26,16 +26,14 @@ aliases:
 
   # Release Team subproject
   release-team-approvers:
-    - cpanato # subproject owner
-    - jeremyrickard # subproject owner
-    - justaugustus # subproject owner
-    - katcosgrove # 1.30 Release Lead
-    - puerco # subproject owner
-    - saschagrunert # subproject owner
-    - drewhagen # v1.35 Release Lead
-  release-team-lead:
     - katcosgrove # Release Team Subproject Lead
-    - drewhagen # Kubernetes v1.35 Release Team Lead
+  release-team-lead:
+    - drewhagen # v1.35
+  release-team-lead-shadows:
+    - rytswd # v1.35
+    - dipesh-rawat # v1.35
+    - jenshu # v1.35
+    - Rajalakshmi-Girish # v1.35
   communications-subteam-approvers:
     - graz-dev # v1.35
   docs-subteam-approvers:

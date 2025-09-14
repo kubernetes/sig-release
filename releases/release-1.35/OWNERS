@@ -2,10 +2,7 @@
 
 approvers:
   - release-team-lead
-  - rytswd              # v1.35 Release Team Lead Shadow
-  - dipesh-rawat        # v1.35 Release Team Lead Shadow
-  - jenshu              # v1.35 Release Team Lead Shadow
-  - Rajalakshmi-Girish  # v1.35 Release Team Lead Shadow
+  - release-team-lead-shadows
 
 reviewers:
   - communications-subteam-approvers
