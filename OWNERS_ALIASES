@@ -6,6 +6,8 @@ aliases:
     - puerco # SIG Technical Lead
     - saschagrunert # SIG Chair
     - Verolop # SIG Technical Lead
+
+  # Release Engineering subproject
   release-engineering-approvers:
     - cici37 # subproject owner / Release Manager
     - cpanato # subproject owner / Release Manager
@@ -21,80 +23,22 @@ aliases:
     - jimangel # Release Manager Associate
     - jrsapi # Release Manager Associate
     - salaxander # Release Manager Associate
-  release-team:
-    - cici37 # subproject owner/ 1.25 Release Team Lead
-    - cpanato # subproject owner
-    - fsmunoz # 1.32 Release Lead
-    - gracenng # subproject owner / 1.28 Release Team Lead
-    - jeremyrickard # subproject owner
-    - justaugustus # subproject owner
-    - katcosgrove # 1.30 Release Lead
-    - leonardpahlke # subproject owner / 1.26 Release Team Lead
-    - neoaggelos # 1.31 Release Lead
-    - npolshakova # 1.33 Release Lead
-    - Priyankasaggu11929 # subproject owner / Kubernetes 1.29 Release Lead
-    - puerco # subproject owner
-    - salaxander # subproject owner / 1.27 Release Team Lead
-    - saschagrunert # subproject owner
-    - Vyom-Yadav # v1.34 Release Lead
-    - drewhagen # v1.35 Release Lead
-  build-admins:
-    - BenTheElder
-    - juanfescobar
-    - MushuEE
-    - spiffxp
-  release-team-lead-role:
-    - cici37 # Kubernetes 1.25 Release Lead
-    - gracenng # Kubernetes 1.28 Release Lead
-    - fsmunoz # Kubernetes 1.32 Release Lead
-    - katcosgrove # Kubernetes 1.30 Release Lead
-    - leonardpahlke # Kubernetes 1.26 Release Lead
-    - neoaggelos # Kubernetes 1.31 Release Lead
-    - npolshakova # Kubernetes 1.33 Release Lead
-    - Priyankasaggu11929 # Kubernetes 1.29 Release Lead
-    - salaxander # Kubernetes 1.27 Release Lead
-    - Vyom-Yadav # Kubernetes v1.34 Release Lead
-    - drewhagen # Kubernetes v1.35 Release Lead
-  release-signal-role:
-    - Vyom-Yadav # 1.29 CI Signal Lead
-    - pacoxu # 1.30 Release Signal Lead
-    - mehabhalodiya # 1.28 CI Signal Lead
-    - furkatgofurov7 # 1.28 Bug Triage Lead
-    - hailkomputer # 1.29 Bug Triage Lead
-  ci-signal-role:
-    - lauralorenz # 1.27
-    - mehabhalodiya # 1.28
-    - Nivedita-coder # 1.26
-    - RinkiyaKeDad # 1.25
-    - Vyom-Yadav # 1.29
-  enhancements-role:
-    - Atharva-Shinde # 1.28
-    - marosset # 1.27
-    - npolshakova # 1.29
-    - Priyankasaggu11929 # 1.25
-    - rhockenbury # 1.26
-  bug-triage-role:
-    - furkatgofurov7 # 1.28
-    - hailkomputer # 1.29
-    - helayoty # 1.25
-    - hosseinsalahi # 1.26
-    - neoaggelos # 1.27
-  docs-role:
-    - katcosgrove # 1.29
-    - kcmartin # 1.25
-    - krol3 # 1.26
-    - mickeyboxell # 1.27
-    - Rishit-dagli # 1.28
-  release-notes-role:
-    - csantanapr # 1.25
-    - fsmunoz # 1.29
-    - harshanarayana # 1.27
-    - ramrodo # 1.26
-    - sanchita-07 # 1.28
-  communications-role:
-    - bradmccoydev # 1.28
-    - fsmunoz # 1.26
-    - harshitasao # 1.27
-    - mbianchidev # 1.32
-    - katcosgrove # 1.25
-    - krol3 # 1.29
+
+  # Release Team subproject
+  release-team-approvers:
+    - katcosgrove # Release Team Subproject Lead
+  release-team-lead:
+    - drewhagen # v1.35
+  release-team-lead-shadows:
+    - rytswd # v1.35
+    - dipesh-rawat # v1.35
+    - jenshu # v1.35
+    - Rajalakshmi-Girish # v1.35
+  communications-subteam-approvers:
+    - graz-dev # v1.35
+  docs-subteam-approvers:
+    - Urvashi0109 # v1.35
+  enhancements-subteam-approvers:
+    - rayandas # v1.35
+  release-signal-subteam-approvers:
+    - tico88612 # v1.35

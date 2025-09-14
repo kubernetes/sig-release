@@ -1,6 +1,6 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
-  - communications-role
+  - communications-subteam-approvers
 reviewers:
-  - communications-role
+  - communications-subteam-approvers
