@@ -3,5 +3,8 @@
 approvers:
   - release-team-approvers
   - release-team-lead
+reviewers:
+  - release-team-approvers
+  - release-team-lead
 labels:
   - area/release-team
