@@ -22,56 +22,22 @@ aliases:
     - jrsapi # Release Manager Associate
     - salaxander # Release Manager Associate
   release-team:
-    - cici37 # subproject owner/ 1.25 Release Team Lead
     - cpanato # subproject owner
-    - fsmunoz # 1.32 Release Lead
     - gracenng # subproject owner / 1.28 Release Team Lead
     - jeremyrickard # subproject owner
     - justaugustus # subproject owner
     - katcosgrove # 1.30 Release Lead
-    - leonardpahlke # subproject owner / 1.26 Release Team Lead
-    - neoaggelos # 1.31 Release Lead
-    - npolshakova # 1.33 Release Lead
-    - Priyankasaggu11929 # subproject owner / Kubernetes 1.29 Release Lead
     - puerco # subproject owner
-    - salaxander # subproject owner / 1.27 Release Team Lead
     - saschagrunert # subproject owner
-    - Vyom-Yadav # v1.34 Release Lead
     - drewhagen # v1.35 Release Lead
   release-team-lead-role:
-    - cici37 # Kubernetes 1.25 Release Lead
-    - gracenng # Kubernetes 1.28 Release Lead
-    - fsmunoz # Kubernetes 1.32 Release Lead
-    - katcosgrove # Kubernetes 1.30 Release Lead
-    - leonardpahlke # Kubernetes 1.26 Release Lead
-    - neoaggelos # Kubernetes 1.31 Release Lead
-    - npolshakova # Kubernetes 1.33 Release Lead
-    - Priyankasaggu11929 # Kubernetes 1.29 Release Lead
-    - salaxander # Kubernetes 1.27 Release Lead
-    - Vyom-Yadav # Kubernetes v1.34 Release Lead
-    - drewhagen # Kubernetes v1.35 Release Lead
+    - katcosgrove # Release Team Subproject Lead
+    - drewhagen # Kubernetes v1.35 Release Team Lead
   release-signal-role:
-    - Vyom-Yadav # 1.29 CI Signal Lead
-    - pacoxu # 1.30 Release Signal Lead
-    - mehabhalodiya # 1.28 CI Signal Lead
-    - furkatgofurov7 # 1.28 Bug Triage Lead
-    - hailkomputer # 1.29 Bug Triage Lead
+    - tico88612 # v1.35
   enhancements-role:
-    - Atharva-Shinde # 1.28
-    - marosset # 1.27
-    - npolshakova # 1.29
-    - Priyankasaggu11929 # 1.25
-    - rhockenbury # 1.26
+    - rayandas # v1.35
   docs-role:
-    - katcosgrove # 1.29
-    - kcmartin # 1.25
-    - krol3 # 1.26
-    - mickeyboxell # 1.27
-    - Rishit-dagli # 1.28
+    - Urvashi0109 # v1.35
   communications-role:
-    - bradmccoydev # 1.28
-    - fsmunoz # 1.26
-    - harshitasao # 1.27
-    - mbianchidev # 1.32
-    - katcosgrove # 1.25
-    - krol3 # 1.29
+    - graz-dev # v1.35
