@@ -1,0 +1,15 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+    - drewhagen           # v1.35 Release Team Lead
+    - katcosgrove         # Release Subproject Owner
+    - rytswd              # v1.35 Release Team Lead Shadow
+    - dipesh-rawat        # v1.35 Release Team Lead Shadow
+    - jenshu              # v1.35 Release Team Lead Shadow
+    - Rajalakshmi-Girish  # v1.35 Release Team Lead Shadow
+
+reviewers:
+    - graz-dev            # v1.35 Communications Lead
+    - Urvashi0109         # v1.35 Docs Lead
+    - rayandas            # v1.35 Enhancements Lead
+    - tico88612           # v1.35 Release Signal Lead

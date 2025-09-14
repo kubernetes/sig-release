@@ -37,6 +37,7 @@ aliases:
     - salaxander # subproject owner / 1.27 Release Team Lead
     - saschagrunert # subproject owner
     - Vyom-Yadav # v1.34 Release Lead
+    - drewhagen # v1.35 Release Lead
   build-admins:
     - BenTheElder
     - juanfescobar
@@ -53,6 +54,7 @@ aliases:
     - Priyankasaggu11929 # Kubernetes 1.29 Release Lead
     - salaxander # Kubernetes 1.27 Release Lead
     - Vyom-Yadav # Kubernetes v1.34 Release Lead
+    - drewhagen # Kubernetes v1.35 Release Lead
   release-signal-role:
     - Vyom-Yadav # 1.29 CI Signal Lead
     - pacoxu # 1.30 Release Signal Lead
