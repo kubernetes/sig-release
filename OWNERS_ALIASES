@@ -38,11 +38,6 @@ aliases:
     - saschagrunert # subproject owner
     - Vyom-Yadav # v1.34 Release Lead
     - drewhagen # v1.35 Release Lead
-  build-admins:
-    - BenTheElder
-    - juanfescobar
-    - MushuEE
-    - spiffxp
   release-team-lead-role:
     - cici37 # Kubernetes 1.25 Release Lead
     - gracenng # Kubernetes 1.28 Release Lead
@@ -61,36 +56,18 @@ aliases:
     - mehabhalodiya # 1.28 CI Signal Lead
     - furkatgofurov7 # 1.28 Bug Triage Lead
     - hailkomputer # 1.29 Bug Triage Lead
-  ci-signal-role:
-    - lauralorenz # 1.27
-    - mehabhalodiya # 1.28
-    - Nivedita-coder # 1.26
-    - RinkiyaKeDad # 1.25
-    - Vyom-Yadav # 1.29
   enhancements-role:
     - Atharva-Shinde # 1.28
     - marosset # 1.27
     - npolshakova # 1.29
     - Priyankasaggu11929 # 1.25
     - rhockenbury # 1.26
-  bug-triage-role:
-    - furkatgofurov7 # 1.28
-    - hailkomputer # 1.29
-    - helayoty # 1.25
-    - hosseinsalahi # 1.26
-    - neoaggelos # 1.27
   docs-role:
     - katcosgrove # 1.29
     - kcmartin # 1.25
     - krol3 # 1.26
     - mickeyboxell # 1.27
     - Rishit-dagli # 1.28
-  release-notes-role:
-    - csantanapr # 1.25
-    - fsmunoz # 1.29
-    - harshanarayana # 1.27
-    - ramrodo # 1.26
-    - sanchita-07 # 1.28
   communications-role:
     - bradmccoydev # 1.28
     - fsmunoz # 1.26

@@ -3,7 +3,6 @@
 approvers:
   - release-engineering-approvers
 reviewers:
-  - build-admins
   - release-engineering-approvers
   - release-engineering-reviewers
 labels:
