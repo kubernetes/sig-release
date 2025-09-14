@@ -719,8 +719,6 @@ Concerns and questions can be directed to [#testing-ops](https://kubernetes.slac
 - [Prow](https://github.com/kubernetes/test-infra/tree/master/prow) the Kubernetes-based CI/CD system
   - [PR Status](https://prow.k8s.io/pr)
   - [Tide Status](https://prow.k8s.io/tide)
-- [Gubernator](https://github.com/kubernetes/test-infra/tree/master/gubernator) displays Kubernetes test results stored in Google Cloud Storage (GCS)
-- [PR Dashboard](https://gubernator.k8s.io/pr)
 - [Hound](https://cs.k8s.io/) a Kubernetes Codebase Search
 - [Kubernetes DevStats](https://k8s.devstats.cncf.io/) displays Kubernetes Developer Productivity
 - [Kubernetes On-call Rotation](https://go.k8s.io/oncall) displays the current Test Infra person on call
@@ -730,7 +728,6 @@ Concerns and questions can be directed to [#testing-ops](https://kubernetes.slac
   - [Source](https://github.com/GoogleCloudPlatform/testgrid)
   - [TestGrid Open-sourcing Planning](https://github.com/kubernetes/test-infra/issues/10409)
   - [Displaying Kubernetes Conformance Results with Testgrid](https://docs.google.com/document/d/1lGvP89_DdeNO84I86BVAU4qY3h2VCRll45tGrpyx90A/edit)
-- [Triage Dashboard](https://storage.googleapis.com/k8s-gubernator/triage/index.html) displays Kubernetes aggregated failures
 
 ## Background information
 
