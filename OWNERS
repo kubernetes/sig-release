@@ -4,8 +4,8 @@ approvers:
   - sig-release-leads
 reviewers:
   - release-engineering-approvers
-  - release-team
-  - release-team-lead-role
+  - release-team-approvers
+  - release-team-lead
 labels:
   - sig/release
 

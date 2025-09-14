@@ -6,6 +6,8 @@ aliases:
     - puerco # SIG Technical Lead
     - saschagrunert # SIG Chair
     - Verolop # SIG Technical Lead
+
+  # Release Engineering subproject
   release-engineering-approvers:
     - cici37 # subproject owner / Release Manager
     - cpanato # subproject owner / Release Manager
@@ -21,7 +23,9 @@ aliases:
     - jimangel # Release Manager Associate
     - jrsapi # Release Manager Associate
     - salaxander # Release Manager Associate
-  release-team:
+
+  # Release Team subproject
+  release-team-approvers:
     - cpanato # subproject owner
     - jeremyrickard # subproject owner
     - justaugustus # subproject owner
@@ -29,14 +33,14 @@ aliases:
     - puerco # subproject owner
     - saschagrunert # subproject owner
     - drewhagen # v1.35 Release Lead
-  release-team-lead-role:
+  release-team-lead:
     - katcosgrove # Release Team Subproject Lead
     - drewhagen # Kubernetes v1.35 Release Team Lead
-  release-signal-role:
-    - tico88612 # v1.35
-  enhancements-role:
-    - rayandas # v1.35
-  docs-role:
-    - Urvashi0109 # v1.35
-  communications-role:
+  communications-subteam-approvers:
     - graz-dev # v1.35
+  docs-subteam-approvers:
+    - Urvashi0109 # v1.35
+  enhancements-subteam-approvers:
+    - rayandas # v1.35
+  release-signal-subteam-approvers:
+    - tico88612 # v1.35
