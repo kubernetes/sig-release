@@ -23,7 +23,6 @@ aliases:
     - salaxander # Release Manager Associate
   release-team:
     - cpanato # subproject owner
-    - gracenng # subproject owner / 1.28 Release Team Lead
     - jeremyrickard # subproject owner
     - justaugustus # subproject owner
     - katcosgrove # 1.30 Release Lead
