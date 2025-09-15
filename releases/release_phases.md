@@ -2,7 +2,7 @@
 
 ## PRR Freeze
 
-The PRR freeze is a preliminary soft deadline, happening one week before the Enhancements Freeze.
+The PRR freeze is a hard deadline happening one week before the Enhancements Freeze. KEPs that will miss this deadline require an [Exception] or they will be removed from the milestone.
 
 As described by the PRR team [here](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ):
 
@@ -94,7 +94,7 @@ branch.
 
 ## Exceptions
 
-Starting at [Enhancements Freeze], the release team will solicit and rule on
+Starting at [PRR Freeze], the release team will solicit and rule on
 [Exception] requests for enhancements and test work that is unlikely to be done
 by [Code Freeze]. The [Exception] approval is the responsibility of the SIG or SIGs
 labeled in the pull request. The release team may intervene or deny the request

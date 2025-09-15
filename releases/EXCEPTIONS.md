@@ -44,6 +44,9 @@ Email them to:
 
 [You should have *very high confidence* on the “additional time needed” number - we will not grant multiple exceptions for a enhancement. The same goes for over-estimating on the time needed. If the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.]
 
+Exceptions after PRR freeze:
+Due to the proximity to enhancements freeze, it is important to file an exception at your earliest convenience. You may file an exception request in advance if you know your KEP will miss the PRR freeze deadline. All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.  
+
 Exceptions after enhancements freeze:
 If your issue was removed during the enhancements freeze please file an exception at your earliest convenience.  All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.  
 
