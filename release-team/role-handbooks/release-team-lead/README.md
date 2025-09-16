@@ -117,6 +117,7 @@ In the event that a subteam loses a shadow, we might ask the paired Lead Shadow 
         - release-notes-draft.md (consumed by the automated release process)
         - release-notes-draft.json (json used by krel to generate release notes)
       - logos (folder for release logos)
+      - OWNERS (only for the current devel release)
 - Short links are handled with [http://bit.ly](http://bit.ly). Each release should have the following documents (replacing XYY with the release version number minus dots):
   - Retro doc: `http://bit.ly/k8sXYYretro`
   - Release Schedule overview: `http://bit.ly/k8sXYY-release-info`

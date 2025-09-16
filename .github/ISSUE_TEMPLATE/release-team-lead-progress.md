@@ -34,6 +34,7 @@ Additional information can be found in the [release team lead handbook](https://
 
 - [ ] Captured feedback from previous release cycle retro and planned to incorporate it into the release cycle
 - [ ] Release directory named `release-1.XX` added to [k/sig-release/releases](https://github.com/kubernetes/sig-release/tree/master/releases)
+- [ ] Pruned the OWNERS file from the previous release cycle in [k/sig-release/releases/release-1.XX](https://github.com/kubernetes/sig-release/tree/master/releases)
 - [ ] Started planning the release schedule by opening a thread in `#sig-release`
 - [ ] Release Lead Shadows are confirmed
 - [ ] Team leads notified that all release team members read the [release team onboarding document](https://github.com/kubernetes/sig-release/blob/master/release-team/release-team-onboarding.md)
@@ -49,13 +50,13 @@ Additional information can be found in the [release team lead handbook](https://
   - `release-team`
   - `release-team-leads`
   - `release-team-XX` (where XX is the release role, e.g. `release-team-enhancements`, `release-team-docs`, etc)
-- [ ] Updated `kubernetes/sig-release` `OWNERS`
-  - Release Team Lead and Shadows
-    - Add an `approvers` entry in `releases/release-1.XX/OWNERS`
-  - **Release Team Lead only**
-    - In `OWNERS_ALIASES`, add an entry in the following sections:
-      - `release-team`
-      - `release-team-lead-role`
+- [ ] Updated `kubernetes/sig-release` `OWNERS_ALIASES`
+  - `release-team-lead` - release lead
+  - `release-team-lead-shadows` - release lead shadows
+  - `communications-subteam-approvers` - communications lead
+  - `docs-subteam-approvers` - docs lead
+  - `enhancements-subteam-approvers` - enhancements lead
+  - `release-signal-subteam-approvers` - release signal lead
 - [ ] Updated Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/groups.yaml)
   - `k8s-infra-release-viewers@`
   - `release-comms@`
