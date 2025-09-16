@@ -39,12 +39,12 @@ description: |
 The v1.35 release cycle is as follows:
 
 - **Monday 15th September 2025**: Week 1 — Release cycle begins
-- **Thursday 9th October 2025**: Week 4 — [Production Readiness Freeze][Production Readiness Freeze]
+- **Thursday 9th October 2025 (AoE) / Friday 10th October 2025, 12:00 UTC**: Week 4 — [Production Readiness Freeze][Production Readiness Freeze]
 - **Thursday 16th October 2025 (AoE) / Friday 17th October 2025, 12:00 UTC**: Week 5 — [Enhancements Freeze][Enhancements Freeze]
 - **Thursday 30th October 2025 (AoE) / Friday 31st October 2025, 12:00 UTC**: Week 7 — [Feature blog freeze][Feature blog freeze]
 - **Thursday 6th November 2025 (AoE) / Friday 7th November 2025, 12:00 UTC**: Week 8 — [Code Freeze][Code Freeze] and [Test Freeze][Test Freeze]
 - **Monday 10th - Thursday 13th November 2025**: Week 9 - [KubeCon NA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
-- **Tuesday 2nd December 2025**: Week 12 — [Docs Freeze][Docs Freeze]
+- **Tuesday 2nd December 2025 (AoE) / Wednesday 3rd December 2025, 12:00 UTC**: Week 12 — [Docs Freeze][Docs Freeze]
 - **Wednesday 17th December 2025**: Week 14 — Kubernetes v1.35.0 released
 
 #### Note on AoE deadlines:
@@ -63,7 +63,7 @@ Example: A deadline of Thursday, Oct 16 (AoE) gives contributors their full Thur
 | Start Release Notes Draft                                                              | Docs Lead                     | Wednesday 1st October 2025                                                  | week 3   |                                                                          |
 | v1.35.0-alpha.1 released                                                               | Branch Manager                | Wednesday 8th October 2025                                                  | week 4   |                                                                          |
 | Call for PRR and Enhancement Freeze [Exceptions][Exception]                                                       | Lead                          | Thursday 2nd October 2025                                                   | week 3   |                                                                          |
-| **Begin [Production Readiness Freeze]**                                                | Enhancements Lead             | Thursday 9th October 2025                                                   | week 4   |                                                                          |
+| **Begin [Production Readiness Freeze]**                                                | Enhancements Lead             | Thursday 9th October 2025 (AoE) / Friday 10th October 2025, 12:00 UTC  | week 4   |                                                                          |
 | **Begin [Enhancements Freeze]**                                                        | Enhancements Lead             | Thursday 16th October 2025 (AoE) / Friday 17th October 2025, 12:00 UTC | week 5   |                                                                          |
 | v1.35.0-alpha.2 released                                                               | Branch Manager                | Wednesday 22nd October 2025                                                 | week 6   |                                                                          |
 | Brace Yourself, Code Freeze is Coming                                                  | Comms / Release Signal        | Monday 27th October 2025                                                    | week 7   |                                                                          |
@@ -84,7 +84,7 @@ Example: A deadline of Thursday, Oct 16 (AoE) gives contributors their full Thur
 | release-1.35 branch created                                                            | Branch Manager                | Tuesday 2nd December 2025                                                   | week 12  |                                                                          |
 | release-1.35 jobs created                                                              | Branch Manager                | Tuesday 2nd December 2025                                                   | week 12  |                                                                          |
 | Start final draft of Release Notes                                                     | Docs Lead                     | Tuesday 2nd December 2025                                                   | week 12  |                                                                          |
-| **[Docs Freeze]**                                                                      | Docs Lead                     | Tuesday 2nd December 2025                                                   | week 12  |                                                                          |
+| **[Docs Freeze]**                                                                      | Docs Lead                     | Tuesday 2nd December 2025 (AoE) / Wednesday 3rd December 2025, 12:00 UTC | week 12  |                                                                          |
 | v1.35.0-rc.0 released                                                                  | Branch Manager                | Tuesday 2nd December 2025                                                   | week 12  | [1.35-informing], [1.35-blocking], [master-blocking], [master-informing] |
 | Release Highlights complete                                                            | Docs Lead                     | Tuesday 9th December 2025                                                   | week 13  |                                                                          |
 | v1.35.0-rc.1 released                                                                  | Branch Manager                | Tuesday 9th December 2025                                                   | week 13  |                                                                          |
