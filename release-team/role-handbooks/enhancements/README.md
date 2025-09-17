@@ -523,8 +523,8 @@ Here's where this enhancement currently stands:
 For this enhancement, it looks like the following PRs need to be merged before code freeze (and we need to update the Issue description to include all the related PRs of this KEP):
 - { list of PRs associated with this enhancement }
 
-If the implementation work for this enhancement is occurring **out-of-tree** (i.e., outside of [`k/k`](https://github.com/kubernetes/kubernetes)), please link the relevant PRs in the issue description for visiblity.
-Alternativelty, if you're unable to provide specific PR links, a confirmation that **all out-of-tree implementation work is complete and merged** will help us finalize tracking and maintain accuracy.
+If the implementation work for this enhancement is occurring **out-of-tree** (i.e., outside of [`k/k`](https://github.com/kubernetes/kubernetes)), please link the relevant PRs in the issue description for visibility.
+Alternatively, if you're unable to provide specific PR links, a confirmation that **all out-of-tree implementation work is complete and merged** will help us finalize tracking and maintain accuracy.
 
 The status of this enhancement is marked as `At risk for code freeze`.
 
