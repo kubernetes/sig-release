@@ -219,7 +219,7 @@ graph LR
         TF --> EAARB[Ensure Attention on Any Release-Blocking and Major Bug Fix PRs]
     end
 
-    subgraph CI Signal
+    subgraph Release Signal
         MONITOR[Monitor E2E Tests and All Jobs In SIG Release Dashboards]
         MONITOR --> OPEN[Open Issues For Failing Or Flaking Jobs]
         CF --> ESCALATE[Escalate Any New Failures]
