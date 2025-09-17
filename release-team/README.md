@@ -214,15 +214,12 @@ graph LR
         FDRN --> RNC[Release Note Complete]
     end
 
-    subgraph Bug Triage
-        TA[Track All Issues and PRs] --> EIP[Escalate Issues and PRs]
-        TF --> EAARB[Ensure Attention on Any Release-Blocking and Major Bug Fix PRs]
-    end
-
     subgraph CI Signal
+        TA[Track All Issues and PRs] --> EIP[Escalate Issues and PRs]
         MONITOR[Monitor E2E Tests and All Jobs In SIG Release Dashboards]
         MONITOR --> OPEN[Open Issues For Failing Or Flaking Jobs]
         CF --> ESCALATE[Escalate Any New Failures]
+        TF --> EAARB[Ensure Attention on Any Release-Blocking and Major Bug Fix PRs]
         OPEN --> ESCALATE
         EAARB --> TEST[Ensure Tests have Stabilized]
         ESCALATE --> TEST
@@ -236,8 +233,7 @@ graph LR
     class DPD,DRD,DCF k8s;
     class FBOD,RBRD,FBRD k8s;
     class CMT,FDRN,RNC k8s;
-    class TA,EIP,TF k8s;
-    class MONITOR,OPEN,CF,ESCALATE,EAARB,TEST k8s;
+    class MONITOR,OPEN,CF,ESCALATE,EAARB,TEST,TA,EIP,TF k8s;
 ```
 
 The diagram below provides an overview of the work done by KEP authors during the release process and how it relates to release deadlines.
