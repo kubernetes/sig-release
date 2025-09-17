@@ -194,7 +194,7 @@ graph LR
     RNC --> END
 
     subgraph Enhancements
-        SET[Start Enhancements Tracking] --> PRRF[Production Readiness Freeze]
+        SET[Start Enhancements Tracking] --> PRRF[Production Readiness Review Freeze]
         PRRF --> EF[Enhancements Freeze]
         EF --> CF[Code Freeze]
         CF --> TF[Test Freeze]
