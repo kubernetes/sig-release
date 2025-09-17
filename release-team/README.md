@@ -174,7 +174,7 @@ The process for filing an enhancement exception can be found [here][exceptions].
 
 ## Visual Release Path
 
-The diagram below shows a high level overview of tasks of the release team sub teams (CI Signal, Bug Triage, Enhancements, Docs, Comms, Release Notes) during a release cycle.
+The diagram below shows a high level overview of tasks of the release team sub teams (Release Signal, Enhancements, Docs, Comms) during a release cycle.
 ```mermaid
 graph LR
     START([Start of Release Cycle])
@@ -194,7 +194,8 @@ graph LR
     RNC --> END
 
     subgraph Enhancements
-        SET[Start Enhancements Tracking] --> EF[Enhancements Freeze]
+        SET[Start Enhancements Tracking] --> PRRF[Production Readiness Freeze]
+        PRRF --> EF[Enhancements Freeze]
         EF --> CF[Code Freeze]
         CF --> TF[Test Freeze]
     end
@@ -202,6 +203,8 @@ graph LR
     subgraph Docs
         DPD[Docs Placeholder Deadline] --> DRD[Docs Ready For Review Deadline]
         DRD --> DCF[Docs Complete Deadline]
+        CMT[Start Collecting Major Themes] --> FDRN[Start Final Draft of Release Notes]
+        FDRN --> RNC[Release Note Complete]
     end
 
     subgraph Comms
@@ -209,12 +212,7 @@ graph LR
         RBRD --> FBRD[Feature Blogs Ready For Review Deadline]
     end
 
-    subgraph Release Notes
-        CMT[Start Collecting Major Themes] --> FDRN[Start Final Draft of Release Notes]
-        FDRN --> RNC[Release Note Complete]
-    end
-
-    subgraph CI Signal
+    subgraph Release Signal
         TA[Track All Issues and PRs] --> EIP[Escalate Issues and PRs]
         MONITOR[Monitor E2E Tests and All Jobs In SIG Release Dashboards]
         MONITOR --> OPEN[Open Issues For Failing Or Flaking Jobs]
@@ -229,7 +227,7 @@ graph LR
     classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
     classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
     class START,END plain;
-    class SET,EF k8s;
+    class SET,PRRF,EF k8s;
     class DPD,DRD,DCF k8s;
     class FBOD,RBRD,FBRD k8s;
     class CMT,FDRN,RNC k8s;
@@ -244,6 +242,7 @@ graph TD
     subgraph Release Team Schedule
         START[Start of Release Cycle]
         START_ENHANCEMENTS_TRACKING[Start Enhancements Tracking]
+        PRR_FREEZE[Production Readiness Review Freeze]
         ENHANCEMENTS_FREEZE[Enhancements Freeze]
         FEATURE_BLOG_FREEZE[Feature Blog Freeze]
         CODE_FREEZE[Code Freeze]
@@ -255,7 +254,8 @@ graph TD
         END[Release Day]
 
         START --> START_ENHANCEMENTS_TRACKING
-        START_ENHANCEMENTS_TRACKING --> ENHANCEMENTS_FREEZE
+        START_ENHANCEMENTS_TRACKING --> PRR_FREEZE
+        PRR_FREEZE --> ENHANCEMENTS_FREEZE
         ENHANCEMENTS_FREEZE --> FEATURE_BLOG_FREEZE
         FEATURE_BLOG_FREEZE --> CODE_FREEZE
         CODE_FREEZE --> DOCS_PLACEHOLDER_FREEZE
@@ -321,7 +321,7 @@ graph TD
     classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
     classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
     class KEP_AUTHOR plain;
-    class START,ENHANCEMENTS_FREEZE,FEATURE_BLOG_FREEZE,CODE_FREEZE,DOCS_PLACEHOLDER_FREEZE,TEST_FREEZE,START_ENHANCEMENTS_TRACKING,DOCS_READY_FOR_REVIEW,FEATURE_BLOG_READY_FOR_REVIEW,DOCS_FREEZE,END,FEATURE_BLOG_PUBLISHED k8s;
+    class START,PRR_FREEZE,ENHANCEMENTS_FREEZE,FEATURE_BLOG_FREEZE,CODE_FREEZE,DOCS_PLACEHOLDER_FREEZE,TEST_FREEZE,START_ENHANCEMENTS_TRACKING,DOCS_READY_FOR_REVIEW,FEATURE_BLOG_READY_FOR_REVIEW,DOCS_FREEZE,END,FEATURE_BLOG_PUBLISHED k8s;
     class DISCUSS,ISSUE,KEP k8s;
     class OPT_IN,KEP_DONE,CODE_COMPLETE,TEST_COMPLETE,DOCS_PLACEHOLDER_COMPLETE,DOCS_READY_TO_REVIEW_COMPLETE,DOCS_COMPLETE,FEATURE_BLOG_OPT_IN,FEATURE_BLOG_POST_COMPLETE k8s;
 ```
