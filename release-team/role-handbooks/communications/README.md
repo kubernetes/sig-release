@@ -114,6 +114,10 @@ It helps to work closely with the Release Lead and use the respective SIG Slack 
 
 When a placeholder PR is created, make sure the PR has been opened using a `draft:true` parameter in its metadata. Feature blogs should not be merged **until after the release date and the comms team has assigned a publication date**.
 
+Once the placeholder PRs are open, **assign a writing buddy to each PR as needed**. Select the writing buddy from the KEP authors of the other open placeholder PRs and pair them up. The writing buddy will act as a peer reviewer and provide support for the main author of the feature blog. Some feature blog PRs are written collaboratively within SIGs or are opened with the blog content already complete; these may not need a writing buddy.
+For more information about the writing buddy assignment process and their role, please refer to [this documentation page](https://kubernetes.io/docs/contribute/blog/writing-buddy/).
+Example messaging can be found [here](/release-team/role-handbooks/communications/templates/writing-buddy-assignment.md).
+
 #### Creating a blog publication schedule
 
 **The Comms team establishes the feature blog publication schedule.** Other members of the release team or blog reviewers may contribute ideas and feedback on the schedule, but ultimately the schedule is determined by the Comms team. 
