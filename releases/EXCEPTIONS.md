@@ -53,8 +53,8 @@ Email them to:
 - Requests for exceptions must be submitted within 3 days after enhancements freeze. You may file an exception request in advance if you know your KEP will miss the enhancements freeze deadline.
 - All requests will be reviewed and either approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
-#### Exceptions after code and test freeze:
-- Requests for exceptions must be submitted before the first milestone burn down meeting. You may file an exception request in advance if you know your KEP will miss the code freeze and test freeze deadline.
+#### Exceptions after code freeze and test freeze:
+- Requests for exceptions must be submitted within 3 days after code freeze and test freeze. You may file an exception request in advance if you know your KEP will miss the code freeze and test freeze deadline.
 - All requests for exception will be reviewed and either approved or rejected during the first meeting. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after docs freeze:
