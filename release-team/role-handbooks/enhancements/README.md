@@ -237,7 +237,7 @@ stable:
 
 ##### PRR Freeze
 
-The PRR Freeze is a preliminary soft deadline, happening a week before the [Enhancements Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#enhancements-freeze).
+The PRR freeze is a hard deadline happening one week before the [Enhancements Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#enhancements-freeze). KEPs that will miss this deadline require an [Exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) or they will be removed from the milestone.
 
 As described by the PRR team [here](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ):
 
