@@ -440,7 +440,7 @@ Here's where this enhancement currently stands:
 - [ ] KEP readme using the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template) has been merged into the k/enhancements repo.
 - [ ] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`.
 - [ ] KEP readme has up-to-date graduation criteria
-- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)). If your production readiness review is not completed yet, please make sure to fill the production readiness questionnaire in your KEP by the [PRR Freeze deadline](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ) on { PRR_FREEZE_DATETIME } so that the PRR team has enough time to review your KEP.
+- [ ] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)).
 
 For this KEP, we would just need to update the following:
 - {insert list of action items}
@@ -514,25 +514,23 @@ If the Enhancement Issue **does not** meet the code freeze criteria for inclusio
 ```markdown
 Hey again {enhancement owner} 👋, {current release} Enhancements team here,
 
-Just checking in as we approach **code freeze and test freeze at { CODE_FREEZE_DATETIME }** .
+Just checking in as we approach **code freeze and test freeze at { CODE_FREEZE_DATETIME }**.
 
 Here's where this enhancement currently stands:
 
 - [ ] All PRs to the Kubernetes repo that are related to your enhancement are linked in the above issue description (for tracking purposes).
 - [ ] All PRs are ready to be merged (they have `approved` and `lgtm` labels applied) by the code freeze deadline. This **includes** tests.
 
-For this enhancement, it looks like the following PRs need to be merged before code freeze (and we need to update the Issue description to include all the related PRs of this KEP):
+Per the issue description, these are all of the implementation (code-related) PRs for {current release}, some of which are not merged yet:
 - { list of PRs associated with this enhancement }
 
-If the implementation work for this enhancement is occurring **out-of-tree** (i.e., outside of [`k/k`](https://github.com/kubernetes/kubernetes)), please link the relevant PRs in the issue description for visibility.
-Alternatively, if you're unable to provide specific PR links, a confirmation that **all out-of-tree implementation work is complete and merged** will help us finalize tracking and maintain accuracy.
+Please let me know (and keep the issue description updated) if there are any other PRs in [`k/k`](https://github.com/kubernetes/kubernetes) that we should track for this KEP, so that we can maintain accurate status.
+
+If the implementation work for this enhancement is occurring **out-of-tree** (i.e., outside of `k/k`), please link the relevant PRs in the issue description for visibility. Alternatively, if you're unable to provide specific PR links, a confirmation that **all out-of-tree implementation work is complete and merged** will help us finalize tracking and maintain accuracy.
 
 The status of this enhancement is marked as `At risk for code freeze`.
 
 If you anticipate missing code freeze, you can file an [exception request](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) in advance.
-
-Also, please let me know if there are other PRs in k/k we should be tracking for this KEP.
-As always, we are here to help if any questions come up. Thanks!
 ```
 
 Then make sure the status of the enhancement is set to `At risk for code freeze`. 
@@ -540,16 +538,23 @@ Then make sure the status of the enhancement is set to `At risk for code freeze`
 If the Enhancement Issue **does** meet the code freeze criteria for inclusion in the current release use this template in Issue comments:
 
 ```markdown
-Hello {enhancement owner} 👋, {current release} Enhancements team here.
+Hey again {enhancement owner} 👋, {current release} Enhancements team here,
 
-Just checking in as we approach **code freeze and test freeze at { CODE_FREEZE_DATETIME }** .
+Just checking in as we approach **code freeze and test freeze at { CODE_FREEZE_DATETIME }**.
 
-With all the implementation (code-related) PRs merged per the issue description:
-- {insert list of code prs}
+Here's where this enhancement currently stands:
 
-This enhancement is now marked as `Tracked for code freeze` for the {current release} Code Freeze!
+- [x] All PRs to the Kubernetes repo that are related to your enhancement are linked in the above issue description (for tracking purposes).
+- [x] All PRs are ready to be merged (they have `approved` and `lgtm` labels applied) by the code freeze deadline. This **includes** tests.
 
-Additionally, please let me know if there are any other PRs in k/k that we should track for this KEP, so that we can maintain accurate status.
+Per the issue description, these are all of the implementation (code-related) PRs for {current release}:
+- { list of PRs associated with this enhancement }
+
+Please let me know (and keep the issue description updated) if there are any other PRs in [`k/k`](https://github.com/kubernetes/kubernetes) that we should track for this KEP, so that we can maintain accurate status.
+
+If the implementation work for this enhancement is occurring **out-of-tree** (i.e., outside of `k/k`), please link the relevant PRs in the issue description for visibility. Alternatively, if you're unable to provide specific PR links, a confirmation that **all out-of-tree implementation work is complete and merged** will help us finalize tracking and maintain accuracy.
+
+This enhancement is now marked as `Tracked for code freeze`!
 
 Please note that KEPs targeting `stable` need to have the `status` field marked as `implemented` in the kep.yaml file after code PRs are merged.
 
@@ -568,8 +573,7 @@ Hello {enhancement owner} 👋, {current release} Enhancements team here,
 Unfortunately, the implementation (code-related) PRs associated with this enhancement are not in the merge-ready state by code-freeze and hence this enhancement is now removed from the {current release} milestone.
 
 <!-- Use the following paragraph if not all implementation PRs for the KEP were merged before freeze deadline -->
-Additionally, if **any of the merged implementation PRs** for this enhancement include **user-facing changes**, please let us know. This will help us determine
-whether the changes should be documented or considered for rollback to maintain release integrity.
+Additionally, if **any of the merged implementation PRs** for this enhancement include **user-facing changes**, please let us know. This will help us determine whether the changes should be documented or considered for rollback to maintain release integrity.
 
 If you still wish to progress this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request as soon as possible, within three days. If you have any questions, you can reach out in the #release-enhancements channel on Slack and we'll be happy to help. Thanks!
 
