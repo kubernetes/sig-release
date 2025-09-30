@@ -44,17 +44,22 @@ Email them to:
 
 [You should have *very high confidence* on the “additional time needed” number - we will not grant multiple exceptions for a enhancement. The same goes for over-estimating on the time needed. If the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.]
 
-Exceptions after PRR freeze:
-Due to the proximity to enhancements freeze, it is important to file an exception at your earliest convenience. You may file an exception request in advance if you know your KEP will miss the PRR freeze deadline. All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.  
+#### Exceptions after PRR freeze:
+- Requests for exceptions must be submitted within 3 days after PRR freeze. You may file an exception request in advance if you know your KEP will miss the PRR freeze deadline.
+- Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request (please mention that the request is for both PRR freeze and enhancements freeze, and list the expected completion date of both combined).
+- All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
-Exceptions after enhancements freeze:
-If your issue was removed during the enhancements freeze please file an exception at your earliest convenience.  All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.  
+#### Exceptions after enhancements freeze:
+- Requests for exceptions must be submitted within 3 days after enhancements freeze. You may file an exception request in advance if you know your KEP will miss the enhancements freeze deadline.
+- All requests will be reviewed and either approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
-Exceptions after code freeze: 
-Requests for exceptions must be submitted before the first milestone burn down meeting. All requests for exception will be reviewed and either approved or rejected during the first meeting. The release team will be responsible for approving or rejecting exceptions based on the questions above.
+#### Exceptions after code freeze and test freeze:
+- Requests for exceptions must be submitted within 3 days after code freeze and test freeze. You may file an exception request in advance if you know your KEP will miss the code freeze and test freeze deadline.
+- All requests for exception will be reviewed and either approved or rejected during the first meeting. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
-Exceptions after docs freeze:
-As the docs freeze takes place close to the end of the release cycle, please file an exception request as soon as possible, ideally in advance of the deadline if you know you will miss it, or within 24 hours of missing the docs freeze deadline. All requests will be reviewed and approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above, with input from SIG Docs.
+#### Exceptions after docs freeze:
+- As the docs freeze takes place close to the end of the release cycle, please file an exception request as soon as possible, ideally in advance of the deadline if you know you will miss it, or within 24 hours of missing the docs freeze deadline.
+- All requests will be reviewed and approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above, with input from SIG Docs.
 
 
 Information about the current release can be found in the relevant release directory:
