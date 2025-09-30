@@ -760,6 +760,51 @@ If there is continued unresponsiveness on issues, remove them from the milestone
 
 Exception process is outlined [here](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md)
 
+#### Exceptions.yaml File Format
+
+When tracking exceptions for a release, create an `exceptions.yaml` file in the release directory (e.g., `releases/release-1.35/exceptions.yaml`). Here's the expected format:
+
+```yaml
+# Exception requests in v1.35
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: [Name] ([@github-handle](https://github.com/github-handle))
+
+# Enhancements Freeze Exceptions requested in v1.35
+
+enhancementFreeze:
+
+- name: "Feature Name"
+  issue: 1234
+  date_requested: 2025-01-15
+  date_reviewed: 2025-01-18
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/thread-id
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/5678
+  status: "approved"  # or "rejected"
+
+# Code Freeze Exceptions requested in v1.35
+
+codeFreeze:
+
+- name: "Another Feature Name"
+  issue: 5678
+  date_requested: 2025-02-15
+  date_reviewed: 2025-02-18
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/thread-id
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/123456
+  status: "approved"  # or "rejected"
+```
+
+**Field Descriptions:**
+- `name`: Human-readable name of the enhancement
+- `issue`: Enhancement issue number in kubernetes/enhancements
+- `date_requested`: Date when the exception was requested (YYYY-MM-DD format)
+- `date_reviewed`: Date when the exception was formally approved/rejected by the release team (YYYY-MM-DD format)
+- `thread`: Link to the Google Groups discussion thread
+- `pull_requests`: List of relevant PRs (enhancements PRs for enhancement freeze, k/k PRs for code freeze)
+- `status`: Either "approved" or "rejected"
+
 ### CNCF / Media Engagement
 
 - You may be called upon by the communications lead to help with media engagement near the end of the release cycle.  Please ensure that if there are any restrictions or training required by your company before engaging that you have completed those ahead of Code Thaw.
