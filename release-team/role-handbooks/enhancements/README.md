@@ -301,6 +301,8 @@ See the sig-architecture Enhancements [KEP Template](https://github.com/kubernet
 
 **All** enhancements going into the release must have their pull requests in a merge-ready state with approved and lgtm labels applied. This includes tests, and docs PRs opened by the due date. Due to the Prow queue, this may mean that approved PRs merge shortly after the deadline.
 
+> **Note**: KEPs that contain bug fixes as part of their implementation work (even if the primary work is fixing existing issues rather than adding new features) are perfectly acceptable to mark as `Tracked for code freeze` for the purposes of enhancements tracking. The key requirement is that all code changes are properly reviewed and approved, regardless of whether they introduce new functionality or fix existing issues.
+
 To avoid delays and ensure everything is in place for Code Freeze: 
 - **Coordinate with the Release Branch Manager**: Reach out to the Release Branch Manager to give them a heads-up about the upcoming Code Freeze. They are responsible for raising the PR that officially enforces the Code Freeze. Coordinating early helps minimize the risk of delays and last-minute blockers. For more details on their role and responsibilities, refer to the [Release Branch Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md)
 
@@ -561,6 +563,8 @@ With all the requirements fulfilled, this enhancement is now marked as tracked f
 Then make sure the status of the enhancement is set to `Tracked for enhancements freeze`.
 
 #### Code Freeze Templates
+
+> **Note**: KEPs containing bug fixes as part of their implementation work are acceptable for code freeze tracking as long as all code changes are properly reviewed and approved.
 
 If the Enhancement Issue **does not** meet the code freeze criteria for inclusion in the current release use this template in Issue comments:
 
