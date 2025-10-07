@@ -16,7 +16,7 @@ The enhancement coming in late should represent a **low risk to the Kubernetes s
 
 An issue must be opened for the enhancement in the [enhancements repo](https://github.com/kubernetes/enhancements/issues).
 
-The length of exception needed should be on the order of days, not weeks. If there are 3 PRs in and 1 still waiting review, that's a much stronger case than a enhancement that doesn't have any PRs out yet.
+The length of exception needed should be on the order of days, not weeks. If there are 3 PRs in and 1 still waiting review, that's a much stronger case than a enhancement that doesn't have any PRs out yet. Granted exception requests are due at the end of the last day [Anywhere on Earth (AoE) time](https://dateful.com/convert/aoe-anywhere-on-earth).
 
 Exceptions should be filed at the earliest opportunity i.e., as soon as it's clear an enhancement may miss the deadline.
 
@@ -31,7 +31,7 @@ To file for an exception, please fill out the questions below:
 - SIG:
 - k/enhancements repo issue #:
 - PR #’s:
-- Additional time needed (in days):
+- Additional time needed (in calendar days, due end of day AoE):
 - Reason this enhancement is critical for this milestone:
 - Risks from adding code late: (to k8s stability, testing, etc.)
 - Risks from cutting enhancement: (partial implementation, critical customer usecase, etc.)
