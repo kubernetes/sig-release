@@ -166,6 +166,23 @@ It is important that this process be followed and documentation remain up-to-dat
 #### Before Enhancements Freeze
 
 - Monitor the Enhancements Tracking Board for new additions as SIGs opt-in KEPs for the release and assign an enhancement contact to each Issue.
+
+##### What Changes Require Tracking
+
+A KEP may still be required to opt-in in order for the Enhancements subteam to monitor it, even if it is not graduating to a new stage.
+
+**Changes that typically do NOT require tracking by the Release Team:**
+- Improvements or refactors that do not affect behaviour (e.g., code cleanup, variable renaming, internal function reorganisation)
+- Bug fixes that preserve functionality while restoring the intended behaviour
+
+**Changes that typically DO require tracking by the Release Team:**
+- Refactors or enhancements that affect behaviour (e.g., altering the functionality of a feature, modulating error handling, or changing performance characteristics)
+- Any modifications that affect the user experience
+
+The team will collaborate with the KEP authors to ensure that any outstanding exception request deadlines are met in the event that a KEP is discovered to contain modifications that should have been monitored.  
+
+Please contact SIG Release on Slack if there is any uncertainty regarding whether the planned action meets the threshold for required tracking.
+
 - For opted in Issues periodically (at least once a week):
   - Ensure Issue is in the current milestone
   - Ensure Issue has correct labels (`stage/xxx` is accurate, etc.)
@@ -301,7 +318,7 @@ See the sig-architecture Enhancements [KEP Template](https://github.com/kubernet
 
 **All** enhancements going into the release must have their pull requests in a merge-ready state with approved and lgtm labels applied. This includes tests, and docs PRs opened by the due date. Due to the Prow queue, this may mean that approved PRs merge shortly after the deadline.
 
-> **Note**: KEPs that contain bug fixes as part of their implementation work (even if the primary work is fixing existing issues rather than adding new features) are perfectly acceptable to mark as `Tracked for code freeze` for the purposes of enhancements tracking. The key requirement is that all code changes are properly reviewed and approved, regardless of whether they introduce new functionality or fix existing issues.
+> **Note**: Refer to the [What Changes Require Tracking](#what-changes-require-tracking) section for guidance on whether your KEP needs to be tracked by the Release Team and marked as `Tracked for code freeze`.
 
 To avoid delays and ensure everything is in place for Code Freeze: 
 - **Coordinate with the Release Branch Manager**: Reach out to the Release Branch Manager to give them a heads-up about the upcoming Code Freeze. They are responsible for raising the PR that officially enforces the Code Freeze. Coordinating early helps minimize the risk of delays and last-minute blockers. For more details on their role and responsibilities, refer to the [Release Branch Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md)
@@ -564,7 +581,7 @@ Then make sure the status of the enhancement is set to `Tracked for enhancements
 
 #### Code Freeze Templates
 
-> **Note**: KEPs containing bug fixes as part of their implementation work are acceptable for code freeze tracking as long as all code changes are properly reviewed and approved.
+> **Note**: Refer to the [What Changes Require Tracking](#what-changes-require-tracking) section for guidance on whether your KEP needs to be tracked by the Release Team and marked as `Tracked for code freeze`.
 
 If the Enhancement Issue **does not** meet the code freeze criteria for inclusion in the current release use this template in Issue comments:
 
