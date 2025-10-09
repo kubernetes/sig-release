@@ -1,0 +1,6 @@
+pr: 134265
+releasenote:
+  text: 'kubeadm: Ensured waiting for `apiserver` uses a local client that doesn''t
+    reach to the control plane endpoint and instead reaches directly to the local
+    API server endpoint.'
+pr_body: ""

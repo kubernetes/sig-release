@@ -1,0 +1,4 @@
+pr: 133357
+releasenote:
+  text: Added `kubelet` stress test for pod cleanup when rejection due to `VolumeAttachmentLimitExceeded`.
+pr_body: ""

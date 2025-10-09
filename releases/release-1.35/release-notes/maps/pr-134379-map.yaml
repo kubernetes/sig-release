@@ -1,0 +1,5 @@
+pr: 134379
+releasenote:
+  text: 'kube-controller-manager: Fixed a possible data race in the garbage collection
+    controller.'
+pr_body: ""

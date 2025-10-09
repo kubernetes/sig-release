@@ -1,0 +1,5 @@
+pr: 133896
+releasenote:
+  text: 'kube-apiserver: Fixed a v1.34 regression in `CustomResourceDefinition` handling
+    that incorrectly warned about unrecognized formats on number and integer properties.'
+pr_body: ""

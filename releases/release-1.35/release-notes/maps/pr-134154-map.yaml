@@ -1,0 +1,5 @@
+pr: 134154
+releasenote:
+  text: Fixed a bug where high latency `kube-apiserver` caused scheduling throughput
+    degradation.
+pr_body: ""

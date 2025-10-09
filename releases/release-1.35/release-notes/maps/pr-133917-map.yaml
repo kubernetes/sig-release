@@ -1,0 +1,5 @@
+pr: 133917
+releasenote:
+  text: Fixed validation error when `ConfigFlags` has `CertFile` and (or) `KeyFile`
+    and original config also contains `CertFileData` and (or) `KeyFileData`.
+pr_body: ""

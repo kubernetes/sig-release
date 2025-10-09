@@ -1,0 +1,5 @@
+pr: 133883
+releasenote:
+  text: Upgraded the `PodObservedGenerationTracking` feature to beta in v1.34 and
+    removed the alpha version description from the OpenAPI specification.
+pr_body: ""

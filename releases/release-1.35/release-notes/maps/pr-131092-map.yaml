@@ -1,0 +1,4 @@
+pr: 131092
+releasenote:
+  text: 'metrics: Excluded `dryRun` requests from `apiserver_request_sli_duration_seconds`.'
+pr_body: ""

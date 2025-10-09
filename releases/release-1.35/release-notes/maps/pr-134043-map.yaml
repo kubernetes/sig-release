@@ -1,0 +1,4 @@
+pr: 134043
+releasenote:
+  text: Removed container name from messages for container created and started events.
+pr_body: ""
