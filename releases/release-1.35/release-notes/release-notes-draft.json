@@ -65,8 +65,8 @@
   },
   "130548": {
     "commit": "6b94b09f0e201bd0592e7a3863cecfa9bc4b4755",
-    "text": "Bumped addon manager to use `kubectl` v1.32.2.",
-    "markdown": "Bumped addon manager to use `kubectl` v1.32.2. ([#130548](https://github.com/kubernetes/kubernetes/pull/130548), [@Jefftree](https://github.com/Jefftree)) [SIG Cloud Provider, Scalability and Testing]",
+    "text": "Bumped addon manager to use `kubectl` `v1.32.2`.",
+    "markdown": "Bumped addon manager to use `kubectl` `v1.32.2`. ([#130548](https://github.com/kubernetes/kubernetes/pull/130548), [@Jefftree](https://github.com/Jefftree)) [SIG Cloud Provider, Scalability and Testing]",
     "author": "Jefftree",
     "author_url": "https://github.com/Jefftree",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/130548",
@@ -194,8 +194,8 @@
   },
   "132288": {
     "commit": "546519987d48d02e6a493a339c064dfd39be5e7f",
-    "text": "Upgraded CoreDNS to v1.12.3",
-    "markdown": "Upgraded CoreDNS to v1.12.3 ([#132288](https://github.com/kubernetes/kubernetes/pull/132288), [@thevilledev](https://github.com/thevilledev)) [SIG Cloud Provider and Cluster Lifecycle]",
+    "text": "Upgraded `CoreDNS` to `v1.12.3`",
+    "markdown": "Upgraded `CoreDNS` to `v1.12.3` ([#132288](https://github.com/kubernetes/kubernetes/pull/132288), [@thevilledev](https://github.com/thevilledev)) [SIG Cloud Provider and Cluster Lifecycle]",
     "author": "thevilledev",
     "author_url": "https://github.com/thevilledev",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132288",
@@ -249,8 +249,8 @@
   },
   "132578": {
     "commit": "c0d2bcdf718bfb2c529e14a086919f2e93aa8ddc",
-    "text": "Improved the `FreeDiskSpaceFailed` warning event to provide more actionable details when image garbage collection fails to free enough disk space. Example: `Insufficient free disk space on the node's image filesystem (95.0% of 10.0 GiB used). Failed to free sufficient space by deleting unused images. Consider resizing the disk or deleting unused files.`",
-    "markdown": "Improved the `FreeDiskSpaceFailed` warning event to provide more actionable details when image garbage collection fails to free enough disk space. Example: `Insufficient free disk space on the node's image filesystem (95.0% of 10.0 GiB used). Failed to free sufficient space by deleting unused images. Consider resizing the disk or deleting unused files.` ([#132578](https://github.com/kubernetes/kubernetes/pull/132578), [@drigz](https://github.com/drigz))",
+    "text": "Improved the `FreeDiskSpaceFailed` warning event to provide more actionable details when image garbage collection fails to free enough disk space. Example: `Insufficient free disk space on the node's image filesystem (95.0% of 10.0 GiB used). Failed to free sufficient space by deleting unused images. Consider resizing the disk or deleting unused files.`.",
+    "markdown": "Improved the `FreeDiskSpaceFailed` warning event to provide more actionable details when image garbage collection fails to free enough disk space. Example: `Insufficient free disk space on the node's image filesystem (95.0% of 10.0 GiB used). Failed to free sufficient space by deleting unused images. Consider resizing the disk or deleting unused files.`. ([#132578](https://github.com/kubernetes/kubernetes/pull/132578), [@drigz](https://github.com/drigz))",
     "author": "drigz",
     "author_url": "https://github.com/drigz",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132578",
@@ -268,8 +268,8 @@
   },
   "132606": {
     "commit": "08946ca255807f800722d24b4dd2414d9193e040",
-    "text": "Added paths section to scheduler `statusz` endpoint",
-    "markdown": "Added paths section to scheduler `statusz` endpoint ([#132606](https://github.com/kubernetes/kubernetes/pull/132606), [@Peac36](https://github.com/Peac36)) [SIG API Machinery, Architecture, Instrumentation, Network, Node, Scheduling and Testing]",
+    "text": "Added paths section to scheduler `statusz` endpoint.",
+    "markdown": "Added paths section to scheduler `statusz` endpoint. ([#132606](https://github.com/kubernetes/kubernetes/pull/132606), [@Peac36](https://github.com/Peac36)) [SIG API Machinery, Architecture, Instrumentation, Network, Node, Scheduling and Testing]",
     "author": "Peac36",
     "author_url": "https://github.com/Peac36",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132606",
@@ -728,8 +728,8 @@
   },
   "133436": {
     "commit": "61cfcd03fc413f1cbd6c95b5b0059d1e912652cb",
-    "text": "Deprecated metrics will be hidden as per the metrics deprecation policy. https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecating-a-metric",
-    "markdown": "Deprecated metrics will be hidden as per the metrics deprecation policy. https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecating-a-metric ([#133436](https://github.com/kubernetes/kubernetes/pull/133436), [@richabanker](https://github.com/richabanker)) [SIG Architecture, Instrumentation and Network]",
+    "text": "Deprecated metrics will be hidden as per the metrics deprecation policy. https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecating-a-metric .",
+    "markdown": "Deprecated metrics will be hidden as per the metrics deprecation policy. https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecating-a-metric . ([#133436](https://github.com/kubernetes/kubernetes/pull/133436), [@richabanker](https://github.com/richabanker)) [SIG Architecture, Instrumentation and Network]",
     "author": "richabanker",
     "author_url": "https://github.com/richabanker",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133436",
@@ -750,8 +750,8 @@
   },
   "133492": {
     "commit": "11ade2f7dd264c2f52a4a1342458abbbaa3cb2b1",
-    "text": "tests: Switched to https://go.dev/doc/go1.25#container-aware-gomaxprocs from `go.uber.org/automaxprocs`",
-    "markdown": "Tests: Switched to https://go.dev/doc/go1.25#container-aware-gomaxprocs from `go.uber.org/automaxprocs` ([#133492](https://github.com/kubernetes/kubernetes/pull/133492), [@BenTheElder](https://github.com/BenTheElder))",
+    "text": "tests: Switched to https://go.dev/doc/go1.25#container-aware-gomaxprocs from `go.uber.org/automaxprocs`.",
+    "markdown": "Tests: Switched to https://go.dev/doc/go1.25#container-aware-gomaxprocs from `go.uber.org/automaxprocs`. ([#133492](https://github.com/kubernetes/kubernetes/pull/133492), [@BenTheElder](https://github.com/BenTheElder))",
     "author": "BenTheElder",
     "author_url": "https://github.com/BenTheElder",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133492",
@@ -1015,8 +1015,8 @@
   },
   "133742": {
     "commit": "02e403f45d8c44cc5a9ba1a8f116d87b957cc9d4",
-    "text": "Removed the `ComponentSLIs` feature gate, which had been promoted to stable as part of the Kubernetes v1.32 release.",
-    "markdown": "Removed the `ComponentSLIs` feature gate, which had been promoted to stable as part of the Kubernetes v1.32 release. ([#133742](https://github.com/kubernetes/kubernetes/pull/133742), [@carlory](https://github.com/carlory)) [SIG Architecture and Instrumentation]",
+    "text": "Removed the `ComponentSLIs` feature gate, which had been promoted to stable as part of the Kubernetes `v1.32` release.",
+    "markdown": "Removed the `ComponentSLIs` feature gate, which had been promoted to stable as part of the Kubernetes `v1.32` release. ([#133742](https://github.com/kubernetes/kubernetes/pull/133742), [@carlory](https://github.com/carlory)) [SIG Architecture and Instrumentation]",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133742",
@@ -1072,8 +1072,8 @@
   },
   "133817": {
     "commit": "947a8ebfd14fe14b25222a50be28accae80fbd2c",
-    "text": "kube-apiserver: Fixed a v1.34 regression with spurious \"Error getting keys\" log messages.",
-    "markdown": "Kube-apiserver: Fixed a v1.34 regression with spurious \"Error getting keys\" log messages. ([#133817](https://github.com/kubernetes/kubernetes/pull/133817), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]",
+    "text": "kube-apiserver: Fixed a `v1.34` regression with spurious \"Error getting keys\" log messages.",
+    "markdown": "Kube-apiserver: Fixed a `v1.34` regression with spurious \"Error getting keys\" log messages. ([#133817](https://github.com/kubernetes/kubernetes/pull/133817), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]",
     "author": "serathius",
     "author_url": "https://github.com/serathius",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133817",
@@ -1137,8 +1137,8 @@
   },
   "133873": {
     "commit": "b00aba714e4bdc5d9d3b2f547d846563f544cbbd",
-    "text": "kube-apiserver: Fixed a possible v1.34 performance regression calculating object size statistics for resources not served from the watch cache, typically only `Events`.",
-    "markdown": "Kube-apiserver: Fixed a possible v1.34 performance regression calculating object size statistics for resources not served from the watch cache, typically only `Events`. ([#133873](https://github.com/kubernetes/kubernetes/pull/133873), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]",
+    "text": "kube-apiserver: Fixed a possible `v1.34` performance regression calculating object size statistics for resources not served from the watch cache, typically only `Events`.",
+    "markdown": "Kube-apiserver: Fixed a possible `v1.34` performance regression calculating object size statistics for resources not served from the watch cache, typically only `Events`. ([#133873](https://github.com/kubernetes/kubernetes/pull/133873), [@serathius](https://github.com/serathius)) [SIG API Machinery and Etcd]",
     "author": "serathius",
     "author_url": "https://github.com/serathius",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133873",
@@ -1180,8 +1180,8 @@
   },
   "133883": {
     "commit": "04096030a16f4933d897e1c3cbe4c1462f20064a",
-    "text": "Upgraded the `PodObservedGenerationTracking` feature to beta in v1.34 and removed the alpha version description from the OpenAPI specification.",
-    "markdown": "Upgraded the `PodObservedGenerationTracking` feature to beta in v1.34 and removed the alpha version description from the OpenAPI specification. ([#133883](https://github.com/kubernetes/kubernetes/pull/133883), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085))",
+    "text": "Upgraded the `PodObservedGenerationTracking` feature to beta in `v1.34` and removed the alpha version description from the OpenAPI specification.",
+    "markdown": "Upgraded the `PodObservedGenerationTracking` feature to beta in `v1.34` and removed the alpha version description from the OpenAPI specification. ([#133883](https://github.com/kubernetes/kubernetes/pull/133883), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085))",
     "author": "yangjunmyfm192085",
     "author_url": "https://github.com/yangjunmyfm192085",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133883",
@@ -1401,8 +1401,8 @@
   },
   "134007": {
     "commit": "a4981e1cf3c747b2224fc5d138e23f21f24cc0a5",
-    "text": "kubeadm: Fixed `KUBEADM_UPGRADE_DRYRUN_DIR` not honored in upgrade phase when writing kubelet config files",
-    "markdown": "Kubeadm: Fixed `KUBEADM_UPGRADE_DRYRUN_DIR` not honored in upgrade phase when writing kubelet config files ([#134007](https://github.com/kubernetes/kubernetes/pull/134007), [@carlory](https://github.com/carlory))",
+    "text": "kubeadm: Fixed `KUBEADM_UPGRADE_DRYRUN_DIR` not honored in upgrade phase when writing kubelet config files.",
+    "markdown": "Kubeadm: Fixed `KUBEADM_UPGRADE_DRYRUN_DIR` not honored in upgrade phase when writing kubelet config files. ([#134007](https://github.com/kubernetes/kubernetes/pull/134007), [@carlory](https://github.com/carlory))",
     "author": "carlory",
     "author_url": "https://github.com/carlory",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134007",
@@ -1439,8 +1439,8 @@
   },
   "134024": {
     "commit": "053267ad3646785234584deaf8d7690108d55cef",
-    "text": "Fixed a bug in kube-proxy nftables mode (GA as of v1.33) which fails to determine if traffic originates from a local source on the node. The issue was caused by using the wrong meta `iif` instead of `iifname` for name based matches.",
-    "markdown": "Fixed a bug in kube-proxy nftables mode (GA as of v1.33) which fails to determine if traffic originates from a local source on the node. The issue was caused by using the wrong meta `iif` instead of `iifname` for name based matches. ([#134024](https://github.com/kubernetes/kubernetes/pull/134024), [@jack4it](https://github.com/jack4it))",
+    "text": "Fixed a bug in `kube-proxy` `nftables` mode (GA as of `v1.33`) which fails to determine if traffic originates from a local source on the node. The issue was caused by using the wrong meta `iif` instead of `iifname` for name based matches.",
+    "markdown": "Fixed a bug in `kube-proxy` `nftables` mode (GA as of `v1.33`) which fails to determine if traffic originates from a local source on the node. The issue was caused by using the wrong meta `iif` instead of `iifname` for name based matches. ([#134024](https://github.com/kubernetes/kubernetes/pull/134024), [@jack4it](https://github.com/jack4it))",
     "author": "jack4it",
     "author_url": "https://github.com/jack4it",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134024",
@@ -1629,8 +1629,8 @@
   },
   "134130": {
     "commit": "5def66bc466ba1587f55b148110cd1ce17812ca1",
-    "text": "Removed the `KUBECTL_OPENAPIV3_PATCH` environment variable, as aggregated discovery has been stable since v1.30.",
-    "markdown": "Removed the `KUBECTL_OPENAPIV3_PATCH` environment variable, as aggregated discovery has been stable since v1.30. ([#134130](https://github.com/kubernetes/kubernetes/pull/134130), [@ardaguclu](https://github.com/ardaguclu))",
+    "text": "Removed the `KUBECTL_OPENAPIV3_PATCH` environment variable, as aggregated discovery has been stable since `v1.30`.",
+    "markdown": "Removed the `KUBECTL_OPENAPIV3_PATCH` environment variable, as aggregated discovery has been stable since `v1.30`. ([#134130](https://github.com/kubernetes/kubernetes/pull/134130), [@ardaguclu](https://github.com/ardaguclu))",
     "documentation": [
       {
         "description": "[KEP]",

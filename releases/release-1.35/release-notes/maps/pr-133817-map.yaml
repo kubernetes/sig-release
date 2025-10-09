@@ -1,5 +1,6 @@
 pr: 133817
 releasenote:
-  text: 'kube-apiserver: Fixed a v1.34 regression with spurious "Error getting keys"
+  text:
+    'kube-apiserver: Fixed a `v1.34` regression with spurious "Error getting keys"
     log messages.'
 pr_body: ""
