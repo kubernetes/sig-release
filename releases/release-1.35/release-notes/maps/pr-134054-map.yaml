@@ -1,5 +1,4 @@
 pr: 134054
 releasenote:
-  text: Removed an incorrect warning for `SessionAffinity` that was printed whenever
-    a headless service was created or updated.
+  text: Removed an incorrect `SessionAffinity` warning that appeared when a headless service was created or updated.
 pr_body: ""

@@ -1,6 +1,7 @@
 pr: 133873
 releasenote:
-  text: 'kube-apiserver: Fixed a possible v1.34 performance regression calculating
+  text:
+    "kube-apiserver: Fixed a possible `v1.34` performance regression calculating
     object size statistics for resources not served from the watch cache, typically
-    only `Events`.'
+    only `Events`."
 pr_body: ""

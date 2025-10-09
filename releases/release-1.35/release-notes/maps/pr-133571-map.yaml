@@ -1,5 +1,5 @@
 pr: 133571
 releasenote:
-  text: Fixed formatting of various Go API deprecations for `GoDoc`/`pkgsite` and
+  text: Fixed formatting of various Go API deprecations for `GoDoc` and `pkgsite`, and
     enabled a linter to detect misformatted deprecations.
 pr_body: ""

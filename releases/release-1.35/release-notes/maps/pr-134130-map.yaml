@@ -1,5 +1,6 @@
 pr: 134130
 releasenote:
-  text: Removed the `KUBECTL_OPENAPIV3_PATCH` environment variable, as aggregated
-    discovery has been stable since v1.30.
+  text:
+    Removed the `KUBECTL_OPENAPIV3_PATCH` environment variable, as aggregated
+    discovery has been stable since `v1.30`.
 pr_body: ""

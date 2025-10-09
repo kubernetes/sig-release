@@ -1,4 +1,4 @@
 pr: 130548
 releasenote:
-  text: Bumped addon manager to use `kubectl` v1.32.2.
+  text: Bumped addon manager to use `kubectl` version `v1.32.2`.
 pr_body: ""

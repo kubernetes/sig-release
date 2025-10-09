@@ -1,8 +1,9 @@
 pr: 132578
 releasenote:
-  text: 'Improved the `FreeDiskSpaceFailed` warning event to provide more actionable
+  text:
+    "Improved the `FreeDiskSpaceFailed` warning event to provide more actionable
     details when image garbage collection fails to free enough disk space. Example:
-    `Insufficient free disk space on the node''s image filesystem (95.0% of 10.0 GiB
+    `Insufficient free disk space on the node's image filesystem (95.0% of 10.0 GiB
     used). Failed to free sufficient space by deleting unused images. Consider resizing
-    the disk or deleting unused files.`'
+    the disk or deleting unused files.`."
 pr_body: ""

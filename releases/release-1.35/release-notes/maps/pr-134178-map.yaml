@@ -1,5 +1,4 @@
 pr: 134178
 releasenote:
-  text: 'kubeadm: Removed the `RootlessControlPlane` feature gate. User Namespaces
-    will now serve as its replacement.'
+  text: 'kubeadm: Removed the `RootlessControlPlane` feature gate. User Namespaces now serve as its replacement.'
 pr_body: ""

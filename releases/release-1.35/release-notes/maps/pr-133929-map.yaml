@@ -1,4 +1,4 @@
 pr: 133929
 releasenote:
-  text: Fixed occasional schedule delay when the static PV is created.
+  text: Fixed occasional schedule delays when a static `PersistentVolume` is created.
 pr_body: ""

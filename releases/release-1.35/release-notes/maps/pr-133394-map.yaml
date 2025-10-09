@@ -1,5 +1,4 @@
 pr: 133394
 releasenote:
-  text: Introduced e2e tests to verify component invariant metrics across the entire
-    suite run.
+  text: Introduced end-to-end tests to verify component invariant metrics across the entire test suite.
 pr_body: ""
