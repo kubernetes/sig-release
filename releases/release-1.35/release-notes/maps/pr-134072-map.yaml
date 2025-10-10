@@ -1,0 +1,7 @@
+pr: 134072
+releasenote:
+  text: |-
+    Migrated validation in `resource.k8s.io` to declarative validation.
+    When the `DeclarativeValidation` feature gate is enabled, mismatches with existing validation are reported via metrics.
+    when `DeclarativeValidationTakeover` feature gate is enabled, declarative validation becomes the primary source of errors for migrated fields.
+pr_body: ""

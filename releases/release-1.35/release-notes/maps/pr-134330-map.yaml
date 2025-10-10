@@ -1,0 +1,5 @@
+pr: 134330
+releasenote:
+  text: 'k8s.io/apimachinery: Introduced a helper function to compare `resourceVersion`
+    strings between two objects of the same resource.'
+pr_body: ""

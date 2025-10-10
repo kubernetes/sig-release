@@ -1,0 +1,4 @@
+pr: 133720
+releasenote:
+  text: Removed general available feature-gate `SizeMemoryBackedVolumes`.
+pr_body: ""

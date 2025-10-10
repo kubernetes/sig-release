@@ -1,0 +1,4 @@
+pr: 133904
+releasenote:
+  text: Changed `WaitForNamedCacheSync` to `WaitForNamedCacheSyncWithContext`.
+pr_body: ""

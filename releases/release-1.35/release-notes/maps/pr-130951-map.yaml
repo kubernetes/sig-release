@@ -1,0 +1,4 @@
+pr: 130951
+releasenote:
+  text: Added metrics for the `MaxUnavailable` feature in `StatefulSet`.
+pr_body: ""

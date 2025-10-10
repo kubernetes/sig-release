@@ -1,0 +1,4 @@
+pr: 133929
+releasenote:
+  text: Fixed occasional schedule delay when the static PV is created.
+pr_body: ""

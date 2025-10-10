@@ -1,0 +1,4 @@
+pr: 133327
+releasenote:
+  text: Enabled `kubectl get -o kyaml` by default. To disable it, set `KUBECTL_KYAML=false`.
+pr_body: ""

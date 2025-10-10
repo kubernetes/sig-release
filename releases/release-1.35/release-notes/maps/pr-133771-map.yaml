@@ -1,0 +1,4 @@
+pr: 133771
+releasenote:
+  text: Fixed broken shell completion for API resources.
+pr_body: ""

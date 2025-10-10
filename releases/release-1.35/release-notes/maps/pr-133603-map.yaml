@@ -1,0 +1,4 @@
+pr: 133603
+releasenote:
+  text: Fixed `nfacct` test cases on s390x.
+pr_body: ""

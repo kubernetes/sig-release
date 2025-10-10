@@ -1,0 +1,5 @@
+pr: 133540
+releasenote:
+  text: Added validation to ensure `log-flush-frequency` is a positive value, returning
+    an error instead of causing a panic.
+pr_body: ""

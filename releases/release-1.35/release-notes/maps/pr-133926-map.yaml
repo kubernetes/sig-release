@@ -1,0 +1,5 @@
+pr: 133926
+releasenote:
+  text: 'kubelet: Fixed an internal deadlock that caused the connection to a DRA driver
+    to become unusable after being idle for 30 minutes.'
+pr_body: ""

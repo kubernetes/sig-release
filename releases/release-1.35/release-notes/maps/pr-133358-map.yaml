@@ -1,0 +1,5 @@
+pr: 133358
+releasenote:
+  text: 'kube-apiserver: Fixed an issue where passing invalid `DeleteOptions` incorrectly
+    returned a 500 status instead of 400.'
+pr_body: ""

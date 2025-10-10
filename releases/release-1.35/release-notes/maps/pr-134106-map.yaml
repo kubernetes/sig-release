@@ -1,0 +1,10 @@
+pr: 134106
+releasenote:
+  text: 'kubeadm: Graduated the kubeadm-specific feature gate `ControlPlaneKubeletLocalMode`
+    to GA and locked it to enabled by default. To opt out, patch the `server` field
+    in `/etc/kubernetes/kubelet.conf`. Deprecated the subphase of `kubeadm join phase
+    control-plane-join` called `etcd`, which is now hidden and replaced by subphase
+    with identical functionality `etcd-join`. The `etcd` subphase will be removed
+    in a future release. The subphase `kubelet-wait-bootstrap` of `kubeadm join` is
+    no longer experimental and will now always run.'
+pr_body: ""

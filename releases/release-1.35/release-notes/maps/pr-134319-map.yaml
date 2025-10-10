@@ -1,0 +1,7 @@
+pr: 134319
+releasenote:
+  text: 'kubeadm: Fixed a bug where the node registration information for a given
+    node was not fetched correctly during `kubeadm upgrade node` and the node name
+    can end up being incorrect in cases where the node name is not the same as the
+    host name.'
+pr_body: ""

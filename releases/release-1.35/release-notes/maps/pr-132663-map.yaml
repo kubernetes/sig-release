@@ -1,0 +1,5 @@
+pr: 132663
+releasenote:
+  text: Updated `applyconfiguration-gen` to preserve struct and field comments from
+    source types in the generated code.
+pr_body: ""

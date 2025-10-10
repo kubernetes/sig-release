@@ -1,0 +1,6 @@
+pr: 134294
+releasenote:
+  text: Fixed incorrect behavior of preemptor pod when preemption of the victim takes
+    long to complete. The preemptor pod should not be circling in scheduling cycles
+    until preemption is finished.
+pr_body: ""

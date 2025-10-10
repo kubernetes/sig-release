@@ -1,0 +1,6 @@
+pr: 133513
+releasenote:
+  text: 'kubeadm: Fixed a bug where `ClusterConfiguration.APIServer.TimeoutForControlPlane`
+    from `v1beta3` was not respected in newer kubeadm versions where `v1beta4` is
+    the default.'
+pr_body: ""

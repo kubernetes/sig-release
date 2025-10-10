@@ -1,0 +1,4 @@
+pr: 133239
+releasenote:
+  text: Added paths section to kubelet `statusz` endpoint.
+pr_body: ""

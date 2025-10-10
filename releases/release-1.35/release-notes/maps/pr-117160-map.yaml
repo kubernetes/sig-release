@@ -1,0 +1,5 @@
+pr: 117160
+releasenote:
+  text: Updated `kubectl get` and `kubectl describe` human-readable output to no longer
+    show counts for referenced tokens and secrets.
+pr_body: ""

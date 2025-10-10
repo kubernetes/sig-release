@@ -1,0 +1,5 @@
+pr: 132550
+releasenote:
+  text: Fixed a bug that caused duplicate validation when updating `Role` and `RoleBinding`
+    resources.
+pr_body: ""

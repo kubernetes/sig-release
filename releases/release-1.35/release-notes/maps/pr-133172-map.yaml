@@ -1,0 +1,16 @@
+pr: 133172
+releasenote:
+  text: |-
+    Moved Types in `k/k/pkg/scheduler/framework`:
+    `Handle`,
+    `Plugin`,
+    `PreEnqueuePlugin`, `QueueSortPlugin`, `EnqueueExtensions`, `PreFilterExtensions`, `PreFilterPlugin`, `FilterPlugin`, `PostFilterPlugin`, `PreScorePlugin`, `ScorePlugin`, `ReservePlugin`, `PreBindPlugin`, `PostBindPlugin`, `PermitPlugin`, `BindPlugin`,
+    `PodActivator`, `PodNominator`, `PluginsRunner`,
+    `LessFunc`, `ScoreExtensions`, `NodeToStatusReader`, `NodeScoreList`, `NodeScore`, `NodePluginScores`, `PluginScore`, `NominatingMode`, `NominatingInfo`, `WaitingPod`, `PreFilterResult`, `PostFilterResult`,
+    `Extender`,
+    `NodeInfoLister`, `StorageInfoLister`, `SharedLister`, `ResourceSliceLister`, `DeviceClassLister`, `ResourceClaimTracker`, `SharedDRAManager`
+
+    to package `k8s.io/kube-scheduler/framework`. Users should update import paths. The interfaces don't change.
+
+    Type `Parallelizer` in `k/k/pkg/scheduler/framework/parallelism` has been split into interface `Parallelizer` (in `k8s.io/kube-scheduler/framework`) and `struct Parallelizer` (location unchanged in k/k). Plugin developers should update the import path to staging repo.
+pr_body: ""

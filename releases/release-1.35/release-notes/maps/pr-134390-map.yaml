@@ -1,0 +1,4 @@
+pr: 134390
+releasenote:
+  text: Fixed a possible data race during metrics registration.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 132798
+releasenote:
+  text: 'kube-apiserver: Improved validation error messages for custom resources with
+    CEL validation rules to include the value that failed validation.'
+pr_body: ""

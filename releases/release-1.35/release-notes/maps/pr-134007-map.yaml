@@ -1,0 +1,6 @@
+pr: 134007
+releasenote:
+  text:
+    "kubeadm: Fixed `KUBEADM_UPGRADE_DRYRUN_DIR` not honored in upgrade phase
+    when writing kubelet config files."
+pr_body: ""

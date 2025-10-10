@@ -1,0 +1,5 @@
+pr: 133097
+releasenote:
+  text: Added the correct error when eviction is blocked due to the failSafe mechanism
+    of the `DisruptionController`.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 133841
+releasenote:
+  text: Changed `kubectl exec` syntax to require `--` before the command. The form
+    `kubectl exec [POD] [COMMAND]` is no longer supported; use `kubectl exec [POD]
+    -- [COMMAND]` instead.
+pr_body: ""

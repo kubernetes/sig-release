@@ -1,0 +1,7 @@
+pr: 131755
+releasenote:
+  text: Generated OpenAPI model packages for API types into `zz_generated.model_name.go`
+    files, accessible via the `OpenAPIModelName()` function. This allows API authors
+    to declare desired OpenAPI model packages instead of relying on the Go package
+    path of API types.
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 133627
+releasenote:
+  text: 'Updated `kubectl describe pods` to include the involved object''s `fieldPath`
+    (e.g., container name) in event messages, providing better context for debugging
+    multi-container Pods. Note: This changes the previous message format for events
+    with a `fieldPath`.'
+pr_body: ""

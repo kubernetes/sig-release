@@ -1,0 +1,5 @@
+pr: 134279
+releasenote:
+  text: Introduced a new declarative validation tag `+k8s:customUnique` to control
+    listmap uniqueness.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 132665
+releasenote:
+  text: Updated `applyconfiguration-gen` to generate extract functions for all subresources.
+pr_body: ""

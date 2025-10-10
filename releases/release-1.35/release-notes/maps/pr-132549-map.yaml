@@ -1,0 +1,5 @@
+pr: 132549
+releasenote:
+  text: Fixed a bug that caused duplicate validation when updating `PersistentVolumeClaims`,
+    `VolumeAttachments` and `VolumeAttributesClasses`.
+pr_body: ""

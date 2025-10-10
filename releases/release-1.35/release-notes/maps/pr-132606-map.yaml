@@ -1,0 +1,4 @@
+pr: 132606
+releasenote:
+  text: Added paths section to scheduler `statusz` endpoint.
+pr_body: ""

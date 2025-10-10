@@ -1,0 +1,4 @@
+pr: 133715
+releasenote:
+  text: Updated storage version for `MutatingAdmissionPolicy` to v1beta1.
+pr_body: ""
