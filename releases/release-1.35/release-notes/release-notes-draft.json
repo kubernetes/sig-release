@@ -1671,25 +1671,6 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
-  "134178": {
-    "commit": "fce5a08b9247b608c73cdeacde939c7e4951bce3",
-    "text": "kubeadm: Removed the `RootlessControlPlane` feature gate. User Namespaces now serve as its replacement.",
-    "markdown": "Kubeadm: Removed the `RootlessControlPlane` feature gate. User Namespaces will now serve as its replacement. ([#134178](https://github.com/kubernetes/kubernetes/pull/134178), [@HirazawaUi](https://github.com/HirazawaUi))",
-    "author": "HirazawaUi",
-    "author_url": "https://github.com/HirazawaUi",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/134178",
-    "pr_number": 134178,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
-    "is_mapped": true
-  },
   "134245": {
     "commit": "c0b9ab3351622bec1d921690cbe9e2f4e86cddcd",
     "text": "Fixed a bug in `kube-scheduler` where pending pod preemption caused preemptor pods to be retried more frequently.",

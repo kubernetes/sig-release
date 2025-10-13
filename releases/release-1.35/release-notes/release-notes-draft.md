@@ -85,7 +85,6 @@
 - Improved HPA performance when using container-specific resource metrics by optimizing container lookup logic to exit early once the target container is found, reducing unnecessary iterations through all containers in a pod. ([#133415](https://github.com/kubernetes/kubernetes/pull/133415), [@AadiDev005](https://github.com/AadiDev005)) [SIG Apps and Autoscaling]
 - Increased the coverage to 89.8%. ([#132607](https://github.com/kubernetes/kubernetes/pull/132607), [@ylink-lfs](https://github.com/ylink-lfs))
 - Kube-apiserver: Fixed an issue where passing invalid `DeleteOptions` incorrectly returned a 500 status instead of 400. ([#133358](https://github.com/kubernetes/kubernetes/pull/133358), [@ostrain](https://github.com/ostrain))
-- Kubeadm: Removed the `RootlessControlPlane` feature gate. User Namespaces now serve as its replacement. ([#134178](https://github.com/kubernetes/kubernetes/pull/134178), [@HirazawaUi](https://github.com/HirazawaUi))
 - Moved Types in `k/k/pkg/scheduler/framework`:
   `Handle`,
   `Plugin`,
