@@ -204,6 +204,31 @@ Please contact SIG Release on Slack if there is any uncertainty regarding whethe
 - Provide updates during release team meetings
   - Use the `KEPs by Stage` insight from the Enhancement Tracking Board ([example](https://github.com/orgs/kubernetes/projects/98/insights/3))
 - Notify folks in [#prod-readiness](https://kubernetes.slack.com/archives/CPNHUMN74) about KEPs waiting for PRR reviews with the project board filtered for KEPs missing PRR assignees.
+  
+  **How to notify #prod-readiness about KEPs waiting for PRR reviews:**
+  
+  1. **Filter the project board** to show KEPs missing PRR assignees:
+     - Go to the Enhancements Tracking Board
+     - Apply filters: `PRR Status` = "Not Started" or "In Progress"
+     - This will show KEPs that need PRR attention
+     
+  2. **Timing**: Send notifications typically 1-2 weeks before PRR freeze to give PRR team sufficient time to review
+  
+  3. **Template message for #prod-readiness**:
+     ```
+     Hi PRR team! 👋 {current release} Enhancements team here.
+     
+     We're approaching PRR freeze on **{PRR_FREEZE_DATETIME}** and wanted to flag KEPs that may need PRR attention.
+     
+     Here are KEPs currently waiting for PRR reviews: [Link to filtered project board view]
+     
+     If any of these KEPs are missing PRR assignees or need expedited review, please let us know. 
+     We can help coordinate with KEP authors if needed.
+     
+     Thanks for your support! 🙏
+     ```
+     
+  4. **Follow up**: If KEPs remain without PRR assignees closer to enhancement freeze, send a reminder with specific KEP numbers that need attention
 
 #### PRR Reviews 
 
@@ -262,6 +287,26 @@ As described by the PRR team [here](https://groups.google.com/a/kubernetes.io/g/
 - To emphasize, the sole requirement is that all opted-in KEPs have their PRR questionnaires answered by the deadline, to ensure the PRR team has sufficient time to review them by Enhancements Freeze.
 
 > Note: KEPs that doesn't complete the PRR questionnaire and get back to the reviews from the PRR team are removed from the milestone during the enhancements freeze party. The PRR freeze deadline exists as a reminder for this.
+
+##### PRR Freeze Review Process
+
+As the PRR freeze approaches, the Enhancements team should systematically review all assigned KEPs on the tracking board. For each KEP, follow this process:
+
+1. **Check PRR Freeze Requirements**:
+   - The KEP is in the current Release Milestone (e.g., v1.35)
+   - The KEP has the `lead-opted-in` label applied
+   - A PR is open or merged with the KEP's PRR questionnaire filled out
+   - A PR is open or merged with `kep.yaml` updated with the `stage`, `latest-milestone`, and `milestone` struct filled out
+   - A PR is open or merged with a PRR approval file with the PRR approver mentioned for the stage the KEP is targeting
+
+2. **Post GitHub Comments**: For each assigned KEP, post a GitHub comment using the appropriate template (see [PRR Freeze Templates](#prr-freeze-templates) below) reminding them of the PRR Freeze deadline and mentioning the status of the KEP.
+
+3. **Update Board Status**: Update the status on the tracking board to either:
+   - `At risk for PRR freeze` - if the KEP does not meet the criteria
+   - `Tracked for PRR freeze` - if the KEP meets all criteria
+   - `Removed from Milestone` - if the KEP fails to meet PRR freeze requirements and is removed from the release
+
+4. **Follow Up**: Monitor KEPs marked as "At risk" and provide additional support or guidance as needed.
 
 ##### Enhancement KEP Status
 
@@ -333,6 +378,20 @@ To avoid delays and ensure everything is in place for Code Freeze:
   - [PR Enforcing Code Freeze - v1.31](https://github.com/kubernetes/test-infra/pull/33049)
 
 Read https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#code-freeze for more information on the Code Freeze.
+
+#### Understanding Test Freeze
+
+Test freeze occurs simultaneously with [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#test-freeze). For the Enhancements team, this means:
+
+- **What it means**: No new tests may be changed or promoted to Conformance unless there are release-blocking or other exceptional reasons
+- **For enhancements**: All test PRs related to tracked enhancements must be in a merge-ready state (with `approved` and `lgtm` labels) by the test freeze deadline
+- **Verification steps**: 
+  - Ensure all test PRs for tracked enhancements are linked in the enhancement issue description
+  - Verify test PRs have the required labels (`approved` and `lgtm`) applied
+  - Check that test PRs are either merged or ready to merge by the deadline
+- **Relationship to Code Freeze**: Both code freeze and test freeze requirements must be satisfied for an enhancement to be considered "Tracked for code freeze"
+
+> **Note**: The test freeze deadline is the same as code freeze. When checking enhancement readiness, verify both code and test PRs meet the merge-ready criteria.
 
 #### Pre-Freeze Check: Catching untracked feature changes
 
@@ -495,6 +554,24 @@ With all the PRR freeze requirements in place, this enhancement is now marked as
 ```
 
 Then make sure the status of the enhancement is set to `Tracked for PRR freeze`.
+
+If the Enhancement Issue **fails to meet PRR freeze requirements** and is removed from the milestone, use this template in Issue comments:
+
+```markdown
+Hello {enhancement owner} 👋, {current release} Enhancements team here.
+
+Unfortunately, this enhancement did not meet the requirements for [PRR freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#prr-freeze) and has been removed from the {current release} milestone.
+
+The following PRR freeze requirements were not met:
+- {list specific missing requirements}
+
+If you still wish to progress this enhancement in {current release}, please file an [exception request](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) as soon as possible, within three days. If you have any questions, you can reach out in the #release-enhancements channel on Slack and we'll be happy to help. Thanks!
+
+/label tracked/no
+/milestone clear
+```
+
+Then make sure the status of the enhancement is set to `Removed from Milestone`.
 
 #### Enhancement Freeze Templates
 
