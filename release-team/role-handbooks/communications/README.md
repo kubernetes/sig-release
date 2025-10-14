@@ -100,16 +100,17 @@ The release lead will drive the content for the release theme and logo.
 
 #### Process to publish the release blog
 
-1. Open a PR against [k/website](https://github.com/kubernetes/website) targeting the `main` branch, and adding a front matter with `draft: true`.
+1. Open a PR against [k/website](https://github.com/kubernetes/website) targeting the `main` branch, and adding a front matter with `draft: true`. This flag will ensure that the blog will not be published even if it passes the target publication date, but available from the CI build for PRs.
 
-2. The PR has to be reviewed by the SIG Docs Blog team, which will provide a content and style review. SIG's chairs and tech leads will provide a tech review. After lgtm and approve labels are applied, the blog will be merged in the `main` branch, in draft mode, so not visible on the Kubernetes blog.
+2. The PR has to be reviewed by the SIG Docs Blog team, which will provide a content and style review. SIG's chairs and tech leads will provide a tech review. After `lgtm` and `approve` labels are applied, the blog can be merged to the `main` branch. With the `draft: true` flag, this blog will not be published to the website.
 
 3. In a second PR opened (ideally) a week before the release day, the Comms Lead will:
 - remove the `draft: true` parameter
 - ensure the date parameter is set to the release date
 - add the release logo and theme to the final release blog
 
-Important: This PR will be merged by the Docs Lead, launching the `/unhold` command on the release day. The Comms Lead just has to make sure that the PR is ready for merge, having all the checks passed and required `lgtm` and `approve` labels applied.
+> [!IMPORTANT]  
+> Because of the merge freeze in place, this PR will need to be merged by the Docs Lead, triggering the `/unhold` command on the release day. The Comms Lead just has to make sure that the PR is ready for merge with all the checks passed and required `lgtm` and `approve` labels applied.
 
 An example of this final PR can be found [here](https://github.com/kubernetes/website/pull/51991/files).
 
