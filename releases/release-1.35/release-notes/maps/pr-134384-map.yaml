@@ -1,0 +1,5 @@
+pr: 134384
+releasenote:
+  text: Added the `-n` flag as a shorthand for `--namespace` in the `kubectl config
+    set-context` command.
+pr_body: ""

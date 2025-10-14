@@ -1,0 +1,4 @@
+pr: 133394
+releasenote:
+  text: Introduced end-to-end tests to verify component invariant metrics across the entire test suite.
+pr_body: ""

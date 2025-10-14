@@ -1,0 +1,4 @@
+pr: 133731
+releasenote:
+  text: Updated the `kubectl wait` command description by removing the `Experimental` prefix, as the command has been stable for a long time.
+pr_body: ""

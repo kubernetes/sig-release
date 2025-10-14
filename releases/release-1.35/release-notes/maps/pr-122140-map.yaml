@@ -1,0 +1,4 @@
+pr: 122140
+releasenote:
+  text: Added support for Pods to reference the same `PersistentVolumeClaim` across multiple volumes.
+pr_body: ""

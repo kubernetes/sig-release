@@ -1,0 +1,4 @@
+pr: 133890
+releasenote:
+  text: Fixed missing `kubelet_volume_stats_*` metrics.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 133363
+releasenote:
+  text: Introduced support for using an implicit extended resource name derived from
+    the device class (`deviceclass.resource.kubernetes.io/<device-class-name>`) to
+    request DRA devices matching that class.
+pr_body: ""

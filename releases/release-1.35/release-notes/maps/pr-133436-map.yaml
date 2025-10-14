@@ -1,0 +1,4 @@
+pr: 133436
+releasenote:
+  text: Deprecated metrics will be hidden as per the metrics deprecation policy. https://kubernetes.io/docs/reference/using-api/deprecation-policy/#deprecating-a-metric .
+pr_body: ""

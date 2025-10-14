@@ -1,0 +1,5 @@
+pr: 133323
+releasenote:
+  text: Updated `kubectl auth reconcile` to retry reconciliation when a conflict error
+    occurs.
+pr_body: ""

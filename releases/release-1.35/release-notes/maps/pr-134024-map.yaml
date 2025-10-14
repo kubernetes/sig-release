@@ -1,0 +1,7 @@
+pr: 134024
+releasenote:
+  text:
+    Fixed a bug in `kube-proxy` `nftables` mode (GA as of `v1.33`) which fails to determine
+    if traffic originates from a local source on the node. The issue was caused by
+    using the wrong meta `iif` instead of `iifname` for name based matches.
+pr_body: ""

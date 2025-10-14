@@ -1,0 +1,4 @@
+pr: 126979
+releasenote:
+  text: Fixed `replicaCount` calculation exceeding max `int32`.
+pr_body: ""

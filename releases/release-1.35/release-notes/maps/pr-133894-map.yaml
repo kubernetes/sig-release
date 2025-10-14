@@ -1,0 +1,5 @@
+pr: 133894
+releasenote:
+  text: Added `k8s-short-name` and `k8s-long-name` format validation tags to enforce
+    DNS label and DNS subdomain compliance.
+pr_body: ""

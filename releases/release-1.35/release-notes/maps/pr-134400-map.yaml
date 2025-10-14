@@ -1,0 +1,6 @@
+pr: 134400
+releasenote:
+  text: Disabled the `SchedulerAsyncAPICalls` feature gate to mitigate a bug where
+    its interaction with asynchronous preemption could degrade `kube-scheduler` performance,
+    especially under high `kube-apiserver` load.
+pr_body: ""

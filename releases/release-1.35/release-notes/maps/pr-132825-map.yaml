@@ -1,0 +1,4 @@
+pr: 132825
+releasenote:
+  text: Added `WithOrigin` within `apis/core/validation` with adjusted tests.
+pr_body: ""

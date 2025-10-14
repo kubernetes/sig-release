@@ -1,0 +1,4 @@
+pr: 134251
+releasenote:
+  text: Updated `etcd` to `v3.6.5`.
+pr_body: ""

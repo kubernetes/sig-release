@@ -1,0 +1,4 @@
+pr: 133615
+releasenote:
+  text: Promoted VAC API test to conformance.
+pr_body: ""

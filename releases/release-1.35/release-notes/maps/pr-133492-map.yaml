@@ -1,0 +1,6 @@
+pr: 133492
+releasenote:
+  text:
+    "tests: Switched to https://go.dev/doc/go1.25#container-aware-gomaxprocs from
+    `go.uber.org/automaxprocs`."
+pr_body: ""

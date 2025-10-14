@@ -1,0 +1,4 @@
+pr: 133948
+releasenote:
+  text: Added support for validating UUID format.
+pr_body: ""
