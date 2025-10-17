@@ -38,12 +38,12 @@ Hi @xx 👋 -- this is YOURNAME (@your_github_id) from the x.yy Communications T
 
 For the x.yy release, we are currently in the process of collecting and curating a list of potential feature blogs, and we'd love for you to consider writing one for your enhancement!
 
-As you may be aware, feature blogs are a great way to communicate to users about features which fall into (but not limited to) the following categories:
+**Please note that feature blogs are optional and not mandatory.** However, they are a great way to communicate to users about features which fall into (but not limited to) the following categories:
 - This introduces some breaking change(s)
 - This has significant impacts and/or implications to users
 - ...Or this is a long-awaited feature, which would go a long way to cover the journey more in detail 🎉 
 
-To opt in to write a feature blog, could you please let us know and open a "Feature Blog placeholder PR" (which can be only a skeleton at first) against the [website repository](https://github.com/kubernetes/website) by **<<BLOG_PLACEHOLDER_DEADLINE>> WEEKDAY, DAY MONTH**? For more information about writing a blog, please find the [blog contribution guidelines](https://kubernetes.io/docs/contribute/new-content/blogs-case-studies/#technical-considerations-for-submitting-a-blog-post) 📚
+To opt in to write a feature blog, could you please let us know and open a "Feature Blog placeholder PR" (which can be only a skeleton at first) against the [website repository](https://github.com/kubernetes/website) by **<<BLOG_PLACEHOLDER_DEADLINE>> WEEKDAY, DAY MONTH**? For more information about writing a blog, please find the [release communications guidelines](https://kubernetes.io/docs/contribute/blog/release-comms/) 📚
 
 > [!Tip]
 > Some timeline to keep in mind:
