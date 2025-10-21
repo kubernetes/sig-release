@@ -153,7 +153,7 @@ For v1.33, the Feature Blog freeze takes place on week 8. Also, the Mid Cycle Sn
 ### For Lead
 * [ ] Start drafting the mid cycle sneak peek blog
   - The initial draft can happen outside PR
-  - Previous Mid Cycle Blogs:: [v1.29](https://kubernetes.io/blog/2023/11/16/kubernetes-1-29-upcoming-changes/), [v1.30](https://kubernetes.io/blog/2024/03/12/kubernetes-1-30-upcoming-changes/), [v1.31](https://kubernetes.io/blog/2024/07/19/kubernetes-1-31-upcoming-changes/), [v1.32](https://kubernetes.io/blog/2024/11/08/kubernetes-1-32-upcoming-changes/)
+  - Previous Mid Cycle Blogs: [v1.29](https://kubernetes.io/blog/2023/11/16/kubernetes-1-29-upcoming-changes/), [v1.30](https://kubernetes.io/blog/2024/03/12/kubernetes-1-30-upcoming-changes/), [v1.31](https://kubernetes.io/blog/2024/07/19/kubernetes-1-31-upcoming-changes/), [v1.32](https://kubernetes.io/blog/2024/11/08/kubernetes-1-32-upcoming-changes/)
 
 ### For Lead and Shadows
 * [ ] Update and finalise the Feature Blog status in the Project Board
@@ -298,11 +298,12 @@ As the release coming up so near, we should be done with most of the actions by 
 
 - TBC
 
-## Week15: Release + Post Release Actions
+## Week 15: Release + Post Release Actions
 For v1.33, the release is planned on **Wednesday 23rd April 2025**. At this point, there shouldn't be too much that we need to handle other than last minute juggling...
 
 ### For Lead
 * [ ] Update the Release Announcement blog with the logo and release name!
+* [ ] Once the Release Announcement is published, post in #announcements
 * [ ] Continue to facilitate publication of remaining Feature Blogs, until all PRs are merged with the right publication date
 * [ ] Update the Comms handbook with what you've learnt as leader (example PR: [here](https://github.com/kubernetes/sig-release/pull/2624))
 * [ ] Organize the slides for the CNCF release webinar, and send to the CNCF for review at least one week ahead of the scheduled date. (see example slides [here](https://docs.google.com/presentation/d/1FPeZNnvAAkj7s0Xd9A_XyD6DdcITyg8I26GLFtcx13w/edit?usp=sharing))
