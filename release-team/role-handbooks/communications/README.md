@@ -75,12 +75,18 @@ Throughout the release cycle, the main Communications deliverables include:
 
 A GitHub Discussion must be open to invite all SIG leads and members to add Release Highlights for inclusion in the Release Blog and Release Notes. The discussion must be opened in kubernetes/sig-release under General Category. 
 
-Past discussions: [1.32](https://github.com/kubernetes/sig-release/discussions/2639), [1.25](https://github.com/kubernetes/sig-release/pull/1987), [1.24](https://github.com/kubernetes/sig-release/discussions/1868), [1.23](https://github.com/kubernetes/sig-release/discussions/1709), [1.22](https://github.com/kubernetes/sig-release/discussions/1575), [1.21](https://github.com/kubernetes/sig-release/discussions/1436).
+Past discussions: [1.34](https://github.com/kubernetes/sig-release/discussions/2806), [1.33](https://github.com/kubernetes/sig-release/discussions/2734), [1.32](https://github.com/kubernetes/sig-release/discussions/2639), [1.25](https://github.com/kubernetes/sig-release/pull/1987), [1.24](https://github.com/kubernetes/sig-release/discussions/1868), [1.23](https://github.com/kubernetes/sig-release/discussions/1709), [1.22](https://github.com/kubernetes/sig-release/discussions/1575), [1.21](https://github.com/kubernetes/sig-release/discussions/1436).
 
 Each SIG should be pinged via their individual Slack channels and the `#chairs-and-techleads` channel to solicit suggestions, and each KEP owner can be asked about inclusion as a Release Highlight at the same time Feature Blogs are being solicited.
 
+For each submission, SIG representatives should provide:
+- A link to KEP
+- The stage the feature is moving to
+- A brief description of KEP that will be used as an outline for the blog post content
+
 The Communications team should hold a meeting to discuss Release Highlights sometime around Code Freeze. Ensure that at least one person from the Docs/Release Notes team attends this meeting with the Release Lead and Enhancements Lead.
 
+**NOT EVERY KEP NEEDS A HIGHLIGHT**. Work with the SIGs owners and Release Team to make sure all highlights gathered in the discussion actually need a section in the release announcement blog.
 
 ### Release blog
 
@@ -91,6 +97,26 @@ Start the draft with the team around week 11, striking a balance between the enh
 It's up to you and your team regarding how best to do this. Typically it works well to assign sections to different team members and have the lead pull it all together and manage the PR and reviews. You can work on a draft in Google Docs or [Hackmd](https://hackmd.io/), then move into the PR when content is more finalized. It's also recommended to get KEP authors or SIG Leads to provide 1-2 paragraph descriptions of KEP changes as a starting point for the release blog. This is an easier starting point for putting the whole release blog together. 
 
 The release lead will drive the content for the release theme and logo. 
+
+#### Process to publish the release blog
+
+1. Open a PR against [k/website](https://github.com/kubernetes/website) targeting the `main` branch, and adding a front matter with `draft: true`. This flag will ensure that the blog will not be published even if it passes the target publication date, but available from the CI build for PRs.
+
+2. The PR has to be reviewed by the SIG Docs Blog team, which will provide a content and style review. SIG's chairs and tech leads will provide a tech review. After `lgtm` and `approve` labels are applied, the blog can be merged to the `main` branch. With the `draft: true` flag, this blog will not be published to the website.
+
+3. In a second PR opened (ideally) a week before the release day, the Comms Lead will:
+- remove the `draft: true` parameter
+- ensure the date parameter is set to the release date
+- add the release logo and theme to the final release blog
+
+> [!IMPORTANT]  
+> Because of the merge freeze in place, this PR will need to be merged by the Docs Lead, triggering the `/unhold` command on the release day. The Comms Lead just has to make sure that the PR is ready for merge with all the checks passed and required `lgtm` and `approve` labels applied.
+
+An example of this final PR can be found [here](https://github.com/kubernetes/website/pull/51991/files).
+
+4. The release blog will be published on the Kubernetes blog on the agreed date.
+
+5. Once the release blog is published, the Comms Lead should share the blog in `#announcements` ([example](https://kubernetes.slack.com/archives/C9T0QMNG4/p1756378122306569)) and `#release-comms` ([example](https://kubernetes.slack.com/archives/CNT9Y603D/p1756388540054189)) Slack channels. To get access to write in `#announcements`, please reach out Slack admins in #slack-admins.
 
 ### Feature blogs
 
@@ -106,17 +132,30 @@ It helps to work closely with the Release Lead and use the respective SIG Slack 
 
 **Reach out in KEP issues to ask for feature blog opt-in.** Ask every KEP owner if they want to contribute a blog by reaching out in the KEP issue. Example messaging can be found [here](/release-team/role-handbooks/communications/templates/feature-blog-opt-in-message.md).
 
-**NOT EVERY KEP NEEDS A BLOG**. Work with the KEP owners, Release Lead, and SIG Docs Blog team (though #sig-dcos-blog slack channel) to make sure all KEPs that opt-in really need a blog written. If a feature is small, or new in Alpha it may not be ready for a blog. You should also encourage important features to sign up to write a blog. 
+**NOT EVERY KEP NEEDS A BLOG**. Work with the KEP owners, Release Lead, and SIG Docs Blog team (though #sig-docs-blog slack channel) to make sure all KEPs that opt-in really need a blog written. If a feature is small, or new in Alpha it may not be ready for a blog. You should also encourage important features to sign up to write a blog. Try to limit the number of blogs to 15 or fewer.
 
-**As feature blogs are opted in and placeholder PRs are created**, assign the blogs to shadows and yourself for tracking and facilitation. The Comms team is responsible for making sure blog authors have the resources and information they need to write the blog, and tracking the blogs progress through editorial and tech reviews once the blog is ready. After a blog placeholder PR has been created, you should swtich to using the placeholder PR for contacting authors on GitHub instead of the KEP issue.
+**As feature blogs are opted in and placeholder PRs are created**, assign the blogs to shadows and yourself for tracking and facilitation. The Comms team is responsible for making sure blog authors have the resources and information they need to write the blog, and tracking the blogs progress through editorial and tech reviews once the blog is ready. After a blog placeholder PR has been created, you should switch to using the placeholder PR for contacting authors on GitHub instead of the KEP issue.
 
 > Some features that opt-in to writing a blog may miss the code freeze deadline. Blog placeholder PRs for features that are no longer in the release should be closed.  
 
-When a placeholder PR is created, make sure the PR has been opened using a `draft:true` parameter in its metadata. Feature blogs should not be merged **until after the release date and the comms team has assigned a publication date**.
+When a placeholder PR is created, make sure the PR has been opened using a `draft: true` parameter in its metadata.
 
 Once the placeholder PRs are open, **assign a writing buddy to each PR as needed**. Select the writing buddy from the KEP authors of the other open placeholder PRs and pair them up. The writing buddy will act as a peer reviewer and provide support for the main author of the feature blog. Some feature blog PRs are written collaboratively within SIGs or are opened with the blog content already complete; these may not need a writing buddy.
 For more information about the writing buddy assignment process and their role, please refer to [this documentation page](https://kubernetes.io/docs/contribute/blog/writing-buddy/).
 Example messaging can be found [here](/release-team/role-handbooks/communications/templates/writing-buddy-assignment.md).
+
+#### Feature blog PR instructions for authors
+
+The blog author has to open a PR against [k/website](https://github.com/kubernetes/website) targeting the `main` branch (**not dev branch**), and adding a front matter with `draft: true`. The following front matter is suggested, the `draft: true` parameter is required to keep the blog from being published before its ready:
+```yaml
+---
+layout: blog
+title: 'Kubernetes v1.<minor>: <title>'
+draft: true
+slug: kubernetes-v1-<minor>-<slug>
+author: <author>
+---
+```
 
 #### Creating a blog publication schedule
 
@@ -142,42 +181,25 @@ Each blog should pass 2 official reviews, an editorial review and tech review. A
 
 An official review comes from someone with [permission to add the lgtm label](https://kubernetes.io/docs/contribute/review/for-approvers/#prow-commands-for-reviewing) to a pull request.
 * **Tech reviews** usually come from the sponsoring SIG. If you dont see a tech review on the blog, reach out to the author to make sure the PR has been flagged for review. You can also reach out in the SIG slack channel to ask for help with tech reviews. 
-* **Editorial reveiws** usually come from blog reviewers or SIG Docs reviewers. They make sure that the blog is readable and adheres to the [style guide](https://kubernetes.io/docs/contribute/style/style-guide/). You can also reach out to the SIG Docs [PR wrangler](https://kubernetes.io/docs/contribute/participate/pr-wranglers/), for help getting reviews or approvals on PRs. See the [PR wrangler schedule](https://github.com/kubernetes/website/wiki/PR-Wranglers) for more details.
+* **Editorial reviews** usually come from blog reviewers or SIG Docs reviewers. They make sure that the blog is readable and adheres to the [style guide](https://kubernetes.io/docs/contribute/style/style-guide/). You can also reach out to the SIG Docs [PR wrangler](https://kubernetes.io/docs/contribute/participate/pr-wranglers/), for help getting reviews or approvals on PRs. See the [PR wrangler schedule](https://github.com/kubernetes/website/wiki/PR-Wranglers) for more details.
 
-Once a blog has the `lgtm` label assigned an [approver] can add the `aprove` label to get the PR merged. Note that reviews can still happen on blogs with a `lgtm` label. 
+Once a blog has the `lgtm` label added, an [approver] can add the `approve` label to get the PR merged. Note that reviews can still happen on blogs with a `lgtm` label.
 
-Aim to have all blogs reviewed and approved by release day. But note that its common for blog reviews to continue past the release day.
+Aim to have all blogs reviewed and approved (merged) by release day. But note that its common for some blog reviews to continue past the release day.
 
-#### Process to merge opt-in feature blogs
+#### Process to publish opt-in feature blogs
 
-1. The blog author (including the Comms Lead in case of the final release blog) has to open a PR against the Kubernetes website, targeting the `main` branch, marking the release date, and inserting a `draft: true` parameter in its metadata.
+1. The PRs with blog contents have to be reviewed by the SIG Docs Blog team, which will provide a content and style review. A tech review is mandatory and has to be performed by the SIG that owns that KEP. After these reviews, the blogs will be merged in the `main` branch, in draft mode, so not visible on the Kubernetes blog.
 
-```
----
-layout: blog
-title: 'Kubernetes v1.32: Penelope'
-date: 2024-12-11
-slug: kubernetes-v1-32-release
-author: >
-  [Kubernetes v1.32 Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.32/release-team.md)
-draft: true
----
-```
-
-Example metadata taken from [this PR](https://github.com/kubernetes/website/pull/48666/files).
-
-2. The PR has to be reviewed by the SIG Docs Blog team, which will provide a content and style review. A tech review is mandatory and has to be performed by the SIG that owns that KEP. After these the blog will be merged in the `main` branch, in draft mode, so not visible on the Kubernetes blog.
-
-3. In a second PR opened (ideally) a week before the release day, the Comms Lead will:
-- remove the `draft: true` parameter from the metadata of all release blogs (including the final release blog)
+2. All feature blogs will be scheduled for publication in a bulk PR opened (ideally) a week before the release day, the Comms team will:
+- remove the `draft: true` parameter from the metadata of all feature blogs
+- ensure the date parameter is set to the agreed publication date
 - rename all the files and folders to follow the date convention, according to the schedule agreed with SIG Docs Blog.
-- add the release logo and theme to the final release blog
+- ensure title and slug are correct
 
-Important: This PR will be merged by the Docs Lead, launching the `/unhold` command on the release day. The Comms Lead just has to make sure that the PR is ready for merge, having all the checks passed and required `lgtm` and `approve` labels applied.
+3. This publication PR has to be reviewed and approved by SIG Docs Blog team. After lgtm and approve labels are applied, the blog will be merged in the `main` branch.
 
-An example of this final PR can be found [here](https://github.com/kubernetes/website/pull/48962/files).
-
-4. The release blog will be published on the Kubernetes blog on the agreed date and the feature opt-in blogs will be published in the following days, according to the schedule.
+4. The feature blogs will be published in kubernetes.io/blog on the dates agreed in the schedule.
 
 _Note: content fixes are possible for feature blogs but handled by the author and SIG Docs blog, separately._
 
@@ -210,14 +232,14 @@ You will be a liaison between the Release lead and the CNCF contacts to schedule
 
 See the sample email [here](/release-team/role-handbooks/communications/templates/pr-email.md) for schedule press and pre-briefings for the release lead.
 
-To schedule the release webinar with the CNCF, start things with an email to `webinars@cncf.io`. 
+To schedule the release webinar with the CNCF, start a conversation with an email to `webinars@cncf.io`. 
 
 See the sample webinar email [here](/release-team/role-handbooks/communications/templates/webinar-email.md) for reference.
 
 You will likely use the Calendly link (below) to schedule a "live webinar". If things are tight on the schedule, CNCF will help find a spot.
 The webinar is typically scheduled for 3-4 weeks after the release and is primarily presented by the Release lead and Enhancements lead. Often the Comms lead will also join the webinar. The format is open, but primarily the team walks through the enhancements in the release and gives a sneak peek of what's coming in the next release.
 
-Refer to the [slides](https://docs.google.com/presentation/d/10y65ptwXQrt_0P6sA3TSvRH_c7TGBc8DEHhXRNwi-10/) and [webinar](https://www.youtube.com/watch?v=BTPlVsgO_As) from the 1.22 release as an example.
+Refer to past [slides](/releases/release-1.34/Kubernetes%20v1.34%20Release%20Webinar.pptx) and [webinars](https://www.youtube.com/live/1hOOplxu6g0?si=DqvJD9MpS3fr4vLh) as an example.
 
 _Note: you'll need to send headshots and company/title information when you schedule the webinar and the slides should be ready at least one week ahead of the webinar._
 
@@ -231,7 +253,7 @@ The presentation isn't intended to be very technical. Just an overview of the ch
 
 ### Tips and tricks
 
-See this file for some [tips and tricks](/release-team/role-handbooks/communications/tips-and-tricks.md) that may help you succeeding in this role.
+See this file for some [tips and tricks](/release-team/role-handbooks/communications/tips-and-tricks.md) that may help you succeed in this role.
 
 ### Social posts
 
@@ -432,10 +454,10 @@ To support you in the creation of the release blog this [outline](/release-team/
 
 There are other templates available in the [templates folder](/release-team/role-handbooks/communications/templates/), such as:
 - [Mid-cycle / deprecations and removal blog template](/release-team/role-handbooks/communications/templates/mid-cycle-blog-sneak-peek.md)
-- [Release Highlight Discussion](/release-team/role-handbooks/communications/templates/release-highlight-discussion.md)
+- [Release Highlight Discussion](/release-team/role-handbooks/communications/templates/release-highlights-discussion.md)
 - [Release Highlight Tracking Issue](/release-team/role-handbooks/communications/templates/release-highlights-tracking-issue.md)
 - [Release Highlight Message](/release-team/role-handbooks/communications/templates/release-highlight-message.md)
-- [Feature blog opt-in message](/release-team/role-handbooks/communications/templates/feature-blog-opt-in-message.md)
+- [Feature blog messages](/release-team/role-handbooks/communications/templates/feature-blog-messages.md)
 - [Mail for the CNCF webinar](/release-team/role-handbooks/communications/templates/webinar-email.md)
 - [Mail to coordinate the PR with the CNCF](/release-team/role-handbooks/communications/templates/pr-email.md)
 
