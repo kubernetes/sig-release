@@ -1,0 +1,4 @@
+pr: 134685
+releasenote:
+  text: Dropped support for policyv1beta1.PodDisruptionBudget in `kubectl`.
+pr_body: ""
