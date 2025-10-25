@@ -1,0 +1,5 @@
+pr: 133153
+releasenote:
+  text: Promoted the `MaxUnavailableStatefulSet` feature to beta and made it enabled
+    by default.
+pr_body: ""

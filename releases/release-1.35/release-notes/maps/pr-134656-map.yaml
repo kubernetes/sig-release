@@ -1,0 +1,4 @@
+pr: 134656
+releasenote:
+  text: Made `rsync` no longer required to build Kubernetes.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 134739
+releasenote:
+  text: Introduced pod queing in `endpoints/endpointslice` controllers. This greatly
+    enhances performance in the case where there are a large number of services in
+    a single namespace.
+pr_body: ""

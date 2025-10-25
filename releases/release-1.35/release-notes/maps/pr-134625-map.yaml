@@ -1,0 +1,5 @@
+pr: 134625
+releasenote:
+  text: Removed the `storage.k8s.io/v1alpha1 VolumeAttributesClass` API from being
+    served in 1.35.
+pr_body: ""

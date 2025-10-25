@@ -1,0 +1,6 @@
+pr: 133072
+releasenote:
+  text: Fixed a startup probe race condition that caused main containers to remain
+    stuck in "Initializing" state when sidecar containers with startup probes had
+    failed initially but succeeded on restart in pods with `restartPolicy=Never`.
+pr_body: ""

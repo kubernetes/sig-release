@@ -1,0 +1,5 @@
+pr: 132927
+releasenote:
+  text: 'DRA API: Fixed the `tolerations` field in exact and sub requests to drop
+    properly when the `DRADeviceTaints` API is disabled.'
+pr_body: ""
