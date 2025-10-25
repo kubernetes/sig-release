@@ -1,0 +1,5 @@
+pr: 133128
+releasenote:
+  text: Promoted HPA configurable tolerance to beta. The `HPAConfigurableTolerance`
+    feature gate is now enabled by default.
+pr_body: ""

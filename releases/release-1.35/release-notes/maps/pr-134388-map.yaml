@@ -1,0 +1,5 @@
+pr: 134388
+releasenote:
+  text: Moved the CPU Manager static policy option `strict-cpu-reservation` to the
+    GA version.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 134481
+releasenote:
+  text: Updated `--chunk-size` flag and dropped beta information, which makes this
+    flag officially stable. Kubectl describe, get, drain, and events have the ability
+    to set chunk-size using `--chunk-size` flag.
+pr_body: ""

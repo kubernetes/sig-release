@@ -1,0 +1,7 @@
+pr: 134577
+releasenote:
+  text: |-
+    kube-apiserver: Made the subresources `pods/exec`, `pods/attach`, and `pods/portforward` require `create` permission for both SPDY and Websocket API requests. Previously, SPDY requests required `create` permission, but Websocket requests only required `get` permission. This change is gated by the `AuthorizePodWebsocketUpgradeCreatePermission` feature-gate, which is enabled by default.
+
+    Before upgrading to 1.35, ensure any custom ClusterRoles and Roles intended to grant `pods/exec`, `pods/attach`, or `pods/portforward` permission include the `create` verb.
+pr_body: ""

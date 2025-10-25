@@ -1,0 +1,5 @@
+pr: 134433
+releasenote:
+  text: 'kubeadm: Added error printing during retries related to the `WaitForAllControlPlaneComponents`
+    functionality at verbosity level 5.'
+pr_body: ""

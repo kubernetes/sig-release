@@ -1,0 +1,5 @@
+pr: 134510
+releasenote:
+  text: Substantially simplified building Kubernetes by making the process run a pre-built
+    container image directly without running `rsyncd`.
+pr_body: ""

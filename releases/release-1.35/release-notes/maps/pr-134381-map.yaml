@@ -1,0 +1,5 @@
+pr: 134381
+releasenote:
+  text: Fixed a bug to prevent segmentation fault from occurring when updating deeply
+    nested JSON fields.
+pr_body: ""

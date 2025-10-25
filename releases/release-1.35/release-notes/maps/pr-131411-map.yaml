@@ -1,0 +1,7 @@
+pr: 131411
+releasenote:
+  text: 'kube-apiserver: Made sure that when `--requestheader-client-ca-file` and
+    `--client-ca-file` contain overlapping certificates, `--requestheader-allowed-names`
+    must be specified so that regular client certificates cannot set authenticating
+    proxy headers for arbitrary users.'
+pr_body: ""

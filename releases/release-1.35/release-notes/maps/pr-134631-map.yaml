@@ -1,0 +1,6 @@
+pr: 134631
+releasenote:
+  text: Enabled the feature gate `ContainerRestartRules` by default. The `ContainerRestartRules`
+    feature has been promoted to beta. Fixed a bug in this feature that caused probes
+    to continue to run even if the container has terminated and is not restartable.
+pr_body: ""
