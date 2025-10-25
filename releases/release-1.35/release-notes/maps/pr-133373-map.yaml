@@ -1,0 +1,5 @@
+pr: 133373
+releasenote:
+  text: Fixed the kubelet to honor the `userNamespaces.idsPerPod`
+    configuration, which was previously ignored.
+pr_body: ""

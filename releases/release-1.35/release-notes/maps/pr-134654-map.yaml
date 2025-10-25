@@ -1,0 +1,5 @@
+pr: 134654
+releasenote:
+  text: 'kube-controller-manager: Resolved potential issues handling pods with incorrect
+    uids in their `ownerReference`.'
+pr_body: ""

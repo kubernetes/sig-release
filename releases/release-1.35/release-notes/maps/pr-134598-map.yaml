@@ -1,0 +1,4 @@
+pr: 134598
+releasenote:
+  text: Updated the Go version of Kubernetes to `1.25.3`.
+pr_body: ""

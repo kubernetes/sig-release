@@ -1,0 +1,6 @@
+pr: 134739
+releasenote:
+  text: Improved performance of `Endpoint` and `EndpointSlice` controllers when
+    there are a large number of services in a single namespace by making pod-to-service
+    lookup asynchronous.
+pr_body: ""
