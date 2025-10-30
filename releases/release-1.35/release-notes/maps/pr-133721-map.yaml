@@ -1,0 +1,6 @@
+pr: 133721
+releasenote:
+  text: 'kube-apiserver: Fixed a possible panic validating a custom resource whose
+    `CustomResourceDefinition` indicates a status subresource exists, but which does
+    not define a `status` property in the `openAPIV3Schema`.'
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 134729
+releasenote:
+  text: Promoted the `HostnameOverride` feature gate to beta and enabled it by default.
+pr_body: ""

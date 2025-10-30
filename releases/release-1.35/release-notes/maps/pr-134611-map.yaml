@@ -1,0 +1,4 @@
+pr: 134611
+releasenote:
+  text: Updated underlying images and dependencies to be compatible with Go version`1.25.3`.
+pr_body: ""

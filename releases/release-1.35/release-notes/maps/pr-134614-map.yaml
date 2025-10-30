@@ -1,0 +1,5 @@
+pr: 134614
+releasenote:
+  text: Promoted the Topology Manager policy option `max-allowable-numa-nodes` to
+    GA version.
+pr_body: ""

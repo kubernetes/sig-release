@@ -1,0 +1,5 @@
+pr: 134588
+releasenote:
+  text: 'kubeadm: Fixed a preflight check that could fail hostname construction in IPv6
+    setups.'
+pr_body: ""

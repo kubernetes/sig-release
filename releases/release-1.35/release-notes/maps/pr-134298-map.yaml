@@ -1,0 +1,6 @@
+pr: 134298
+releasenote:
+  text: "ACTION REQUIRED: `failCgroupV1` will be set to true from 1.35. \nThis means that nodes
+    will not start on a cgroup v1 by default. This puts cgroup v1 into a deprecated
+    state."
+pr_body: ""

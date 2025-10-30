@@ -1,0 +1,6 @@
+pr: 134715
+releasenote:
+  text: 'kubeadm: Added missing cluster-info context validation to prevent panics
+    when the user has a malformed kubeconfig in the cluster-info ConfigMap that excludes
+    a valid current context.'
+pr_body: ""

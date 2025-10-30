@@ -1,0 +1,7 @@
+pr: 134479
+releasenote:
+  text: 'DRA Device Taints: Fixed toleration of `NoExecute`. Prior to this enhancement,
+    tolerating a `NoExecute` did not work because the scheduler did not inform the
+    eviction controller about the toleration, so the scheduled pod got evicted almost
+    immediately.'
+pr_body: ""

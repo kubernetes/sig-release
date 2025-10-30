@@ -1,0 +1,5 @@
+pr: 134193
+releasenote:
+  text: Fixed a bug where 64-bit IPv6 `ServiceCIDRs` allocated addresses outside the
+    subnet range.
+pr_body: ""

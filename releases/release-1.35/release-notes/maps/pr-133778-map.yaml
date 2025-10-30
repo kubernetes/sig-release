@@ -1,0 +1,7 @@
+pr: 133778
+releasenote:
+  text: 'kubeadm: stopped applying the `--pod-infra-container-image` flag for the
+    kubelet. The flag has been deprecated and no longer served a purpose in the kubelet
+    as the logic was migrated to CRI (Container Runtime Interface). During upgrade,
+    kubeadm will attempt to remove the flag from the file `/var/lib/kubelet/kubeadm-flags.env`.'
+pr_body: ""
