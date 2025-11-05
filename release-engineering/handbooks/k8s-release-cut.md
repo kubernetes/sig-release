@@ -444,7 +444,7 @@ Ideally this is a task that should be performed during onboarding and not on the
 Sometimes you might need to manually send the announcement, in which case you can run this command:
 
 ```
-krel announce send -p --tag v1.xx.yy-alpha|beta|rc-z --name "First Last" --email "your-email@gmail.com" > ~/Downloads/announce.html
+krel announce send -p --tag v1.xx.yy-alpha|beta|rc.z --name "First Last" --email "your-email@gmail.com" > ~/Downloads/announce.html
 ```
 
 And then send the email from your account as follows:
