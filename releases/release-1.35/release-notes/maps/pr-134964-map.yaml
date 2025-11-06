@@ -1,0 +1,5 @@
+pr: 134964
+releasenote:
+  text: Dropped `DeviceBindingConditions` fields when the `DRADeviceBindingConditions`
+    feature gate is not enabled and not in use.
+pr_body: ""

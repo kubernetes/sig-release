@@ -1,0 +1,5 @@
+pr: 135084
+releasenote:
+  text: Pod resize now only allows CPU and memory resources; other resource types
+    are forbidden.
+pr_body: ""

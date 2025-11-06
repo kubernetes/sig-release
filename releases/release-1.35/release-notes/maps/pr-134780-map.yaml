@@ -1,0 +1,4 @@
+pr: 134780
+releasenote:
+  text: Updated the etcd client library to `v3.6.5`.
+pr_body: ""

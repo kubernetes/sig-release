@@ -1,0 +1,5 @@
+pr: 134740
+releasenote:
+  text: '`kube-scheduler`: Pod statuses no longer include specific taint keys or values
+    when scheduling fails due to untolerated taints.'
+pr_body: ""

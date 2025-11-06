@@ -1,0 +1,6 @@
+pr: 132644
+releasenote:
+  text: Added a counter metric `kubelet_image_manager_ensure_image_requests_total{present_locally,
+    pull_policy, pull_required}` that exposes details about `kubelet` ensuring an
+    image exists on the node.
+pr_body: ""

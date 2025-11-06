@@ -1,0 +1,6 @@
+pr: 134875
+releasenote:
+  text: Fixed a bug where the health of a DRA resource was not reported in the Pod
+    status if the resource claim was generated from a template or used a different
+    local name in the Pod spec.
+pr_body: ""

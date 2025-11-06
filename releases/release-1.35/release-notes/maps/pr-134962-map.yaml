@@ -1,0 +1,5 @@
+pr: 134962
+releasenote:
+  text: Fixed an issue with setting `distinctAttribute=nil` when the `DRAConsumableCapacity`
+    feature gate is disabled.
+pr_body: ""

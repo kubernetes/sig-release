@@ -1,0 +1,6 @@
+pr: 134103
+releasenote:
+  text: Fixed a bug that prevented allocating the same device that was previously
+    consuming the `CounterSet` when both `DRAConsumableCapacity` and `DRAPartitionableDevices`
+    were enabled.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 134777
+releasenote:
+  text: Promoted `kubectl` command headers to stable.
+pr_body: ""

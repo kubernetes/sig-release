@@ -1,0 +1,4 @@
+pr: 134948
+releasenote:
+  text: Promoted `PodObservedGenerationTracking` to GA.
+pr_body: ""

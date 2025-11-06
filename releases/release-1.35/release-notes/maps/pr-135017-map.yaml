@@ -1,0 +1,7 @@
+pr: 135017
+releasenote:
+  text: '`kube-controller-manager`: Fixed a `v1.34` regression that triggered a spurious
+    rollout of existing StatefulSets when upgrading the control plane from `v1.33`
+    to `v1.34`. This fix is guarded by the `StatefulSetSemanticRevisionComparison`
+    feature gate, which is enabled by default.'
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 134906
+releasenote:
+  text: |-
+    `kubeadm`: Added a preflight check `ContainerRuntimeVersion` to validate if the installed container runtime supports the `RuntimeConfig` gRPC method. If unsupported, `kubeadm` prints a warning message.
+
+    Starting with Kubernetes `v1.36`, `kubelet` might refuse to start if the CRI runtime does not support this feature. More information can be found at the [Kubernetes blog](https://kubernetes.io/blog/2025/09/12/kubernetes-v1-34-cri-cgroup-driver-lookup-now-ga/).
+pr_body: ""

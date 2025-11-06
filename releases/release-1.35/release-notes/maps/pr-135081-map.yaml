@@ -1,0 +1,5 @@
+pr: 135081
+releasenote:
+  text: Reduced event spam during volume operation errors in the Portworx in-tree
+    driver.
+pr_body: ""

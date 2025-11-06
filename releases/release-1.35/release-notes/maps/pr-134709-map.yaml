@@ -1,0 +1,4 @@
+pr: 134709
+releasenote:
+  text: Added support for tracing in `kubectl` with the `--profile=trace` flag.
+pr_body: ""

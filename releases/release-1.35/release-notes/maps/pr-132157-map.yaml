@@ -1,0 +1,6 @@
+pr: 132157
+releasenote:
+  text: Removed the `UserNamespacesPodSecurityStandards` feature gate. The minimum
+    supported Kubernetes version for `kubelet` is now `v1.31`, so the gate is no longer
+    needed.
+pr_body: ""

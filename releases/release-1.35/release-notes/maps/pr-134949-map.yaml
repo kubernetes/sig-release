@@ -1,0 +1,4 @@
+pr: 134949
+releasenote:
+  text: Promoted `InPlacePodVerticalScaling` to GA.
+pr_body: ""

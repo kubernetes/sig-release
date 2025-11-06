@@ -1,0 +1,13 @@
+pr: 134744
+releasenote:
+  text: |-
+    ACTION REQUIRED:
+
+    vendor: Updated `k8s.io/system-validators` to `v1.12.1`. The cgroups validator now throws an error instead of a warning if cgroups v1 is detected on the host and the provided KubeletVersion is `v1.35` or newer.
+
+    kubeadm: Started using `k8s.io/system-validators` `v1.12.1` in `kubeadm` `v1.35`. During `kubeadm init`, `kubeadm join`, and `kubeadm upgrade`, the SystemVerification preflight check throws an error if cgroups v1 is detected and the detected `kubelet` version is `v1.35` or newer. For older versions of `kubelet`, a preflight warning is displayed.
+
+    To allow cgroups v1 with `kubeadm` and `kubelet` version `v1.35` or newer, you must:
+    - Ignore the error from the SystemVerification preflight check by `kubeadm`.
+    - Edit the `kube-system/kubelet-config` ConfigMap and add the `failCgroupV1: false` field before upgrading.
+pr_body: ""

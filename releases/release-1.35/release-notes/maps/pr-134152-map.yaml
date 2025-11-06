@@ -1,0 +1,8 @@
+pr: 134152
+releasenote:
+  text: 'DRA device taints: `DeviceTaintRule` status provides information about the
+    rule, including whether Pods still need to be evicted (`EvictionInProgress` condition).
+    The newly added `None` effect can be used to preview what a `DeviceTaintRule`
+    would do if it used the `NoExecute` effect and to taint devices (`device health`)
+    without immediately affecting scheduling or running Pods.'
+pr_body: ""

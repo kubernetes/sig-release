@@ -1,0 +1,5 @@
+pr: 134781
+releasenote:
+  text: '`kubeadm`: Removed the `WaitForAllControlPlaneComponents` feature gate, which
+    graduated to GA in `v1.34` and was locked to enabled by default.'
+pr_body: ""

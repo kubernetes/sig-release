@@ -1,0 +1,4 @@
+pr: 134803
+releasenote:
+  text: Implemented constrained impersonation as described in [KEP-5284](https://kep.k8s.io/5284).
+pr_body: ""

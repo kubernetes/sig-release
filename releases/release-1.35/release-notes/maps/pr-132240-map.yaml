@@ -1,0 +1,5 @@
+pr: 132240
+releasenote:
+  text: Improved throughput in the `real-FIFO` queue used by `informers` and `controllers`
+    by adding batch handling for processing watch events.
+pr_body: ""

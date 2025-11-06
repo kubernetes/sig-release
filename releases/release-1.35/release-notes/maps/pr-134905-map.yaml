@@ -1,0 +1,6 @@
+pr: 134905
+releasenote:
+  text: |-
+    Scheduler: Added the `bindingTimeout` argument to the DynamicResources plugin configuration, allowing customization of the wait duration in `PreBind` for device binding conditions.
+    Defaults to 10 minutes when `DRADeviceBindingConditions` and `DRAResourceClaimDeviceStatus` are both enabled.
+pr_body: ""

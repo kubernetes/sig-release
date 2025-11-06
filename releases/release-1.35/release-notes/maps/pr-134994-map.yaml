@@ -1,0 +1,5 @@
+pr: 134994
+releasenote:
+  text: Removed the `StrictCostEnforcementForVAP` and `StrictCostEnforcementForWebhooks`
+    feature gates, which were locked since `v1.32`.
+pr_body: ""
