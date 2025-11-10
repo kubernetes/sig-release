@@ -1,0 +1,5 @@
+pr: 135003
+releasenote:
+  text: Added `kubectl kuberc view` and `kubectl kuberc set` commands to perform operations
+    against the `kuberc` file.
+pr_body: ""

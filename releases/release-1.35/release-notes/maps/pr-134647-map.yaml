@@ -1,0 +1,4 @@
+pr: 134647
+releasenote:
+  text: Enabled the `MutableCSINodeAllocatableCount` feature gate by default in beta.
+pr_body: ""

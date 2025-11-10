@@ -1,0 +1,6 @@
+pr: 135007
+releasenote:
+  text: The scheduler now clears the `nominatedNodeName` field for Pods upon scheduling
+    or binding failure. External components, such as Cluster Autoscaler and Karpenter,
+    should not overwrite this field.
+pr_body: ""

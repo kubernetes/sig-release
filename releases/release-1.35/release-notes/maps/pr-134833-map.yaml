@@ -1,0 +1,5 @@
+pr: 134833
+releasenote:
+  text: Fixed a panic in `kubectl api-resources` that occurred when the Discovery
+    Client failed.
+pr_body: ""

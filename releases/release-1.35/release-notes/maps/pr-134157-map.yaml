@@ -1,0 +1,5 @@
+pr: 134157
+releasenote:
+  text: Fixed a bug where a deleted Pod in the binding phase continued to occupy space
+    on the node in `kube-scheduler`.
+pr_body: ""

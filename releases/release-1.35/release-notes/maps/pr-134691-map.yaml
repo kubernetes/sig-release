@@ -1,0 +1,8 @@
+pr: 134691
+releasenote:
+  text: The `SystemdWatchdog` feature gate has been locked to default and will be removed
+    in future release. The systemd watchdog functionality in `kubelet` can be enabled
+    via systemd without any feature gate configuration. See the [systemd watchdog
+    documentation](https://kubernetes.io/docs/reference/node/systemd-watchdog/) for
+    more information.
+pr_body: ""

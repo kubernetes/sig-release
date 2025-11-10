@@ -1,0 +1,5 @@
+pr: 134793
+releasenote:
+  text: Fixed an issue where requests for a config `FromClass` in the `ResourceClaim`
+    status were not referenced.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 134466
+releasenote:
+  text: 'Fixed a bug where `AllocationMode: All` would not succeed if a resource pool
+    contained `ResourceSlices` that were not targeting the current node.'
+pr_body: ""

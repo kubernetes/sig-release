@@ -1,0 +1,6 @@
+pr: 134523
+releasenote:
+  text: |-
+    Added a `source` label to the `resourceclaim_controller_resource_claims` metric.
+    Added the `scheduler_resourceclaim_creates_total` metric for `DRAExtendedResource`.
+pr_body: ""

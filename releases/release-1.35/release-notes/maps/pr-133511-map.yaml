@@ -1,0 +1,5 @@
+pr: 133511
+releasenote:
+  text: Eliminated and prevented future use of the `md5` algorithm in favor of more appropriate
+    hashing algorithms.
+pr_body: ""

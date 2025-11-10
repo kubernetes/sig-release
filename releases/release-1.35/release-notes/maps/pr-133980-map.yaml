@@ -1,0 +1,5 @@
+pr: 133980
+releasenote:
+  text: Added the `--min-compatibility-version` flag to `kube-apiserver`, `kube-controller-manager`,
+    and `kube-scheduler`.
+pr_body: ""

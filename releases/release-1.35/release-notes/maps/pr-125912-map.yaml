@@ -1,0 +1,4 @@
+pr: 125912
+releasenote:
+  text: Migrated the `CPUManager` to contextual logging.
+pr_body: ""

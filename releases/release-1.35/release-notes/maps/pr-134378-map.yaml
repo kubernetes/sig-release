@@ -1,0 +1,5 @@
+pr: 134378
+releasenote:
+  text: Introduced the `--as-user-extra` persistent flag in `kubectl`, which allows
+    passing extra arguments during impersonation.
+pr_body: ""

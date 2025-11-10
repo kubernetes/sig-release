@@ -1,0 +1,9 @@
+pr: 134624
+releasenote:
+  text: The Pod Certificates feature moved to beta. The `PodCertificateRequest` feature
+    gate is set disabled by default. To use the feature, users must enable the certificates
+    API groups in `v1beta1` and enable the `PodCertificateRequest` feature gate. The
+    `UserAnnotations` field was added to the `PodCertificateProjection` API and the
+    corresponding `UnverifiedUserAnnotations` field was added to the `PodCertificateRequest`
+    API.
+pr_body: ""

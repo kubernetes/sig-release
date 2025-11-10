@@ -1,0 +1,8 @@
+pr: 134457
+releasenote:
+  text: |-
+    The `PreferSameZone` and `PreferSameNode` values for the Service
+    `trafficDistribution` field graduated to general availability. The
+    `PreferClose` value is now deprecated in favor of the more explicit
+    `PreferSameZone`.
+pr_body: ""
