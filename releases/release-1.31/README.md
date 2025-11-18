@@ -13,12 +13,11 @@ description: |
 
 #### Links
 
-* [This document](https://git.k8s.io/sig-release/releases/release-1.31/README.md)
-* [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.31/release-team.md)
-* [Meeting Minutes](https://bit.ly/k8s131-releasemtg) (members of [release-team@] receive meeting invites)
+
+* [This document](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.31/README.md)
+* [Release Team](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.31/release-team.md)
+* [Meeting Minutes](https://bit.ly/k8s131-releasemtg) (members of release-team@ receive meeting invites)
 * [v1.31 Release Calendar](https://bit.ly/k8s-release-cal)
-* Contact: [#sig-release](https://kubernetes.slack.com/archives/C2C40FMNF) on slack, [release-team](mailto://release-team@kubernetes.io) on e-mail
-* [Internal Contact Info](https://bit.ly/k8s131-contacts) (accessible only to members of [release-team@])
 
 #### Tracking docs
 
