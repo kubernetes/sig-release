@@ -1,0 +1,8 @@
+pr: 132812
+releasenote:
+  text: |-
+    Introduced new kubelet metrics as part of the Ensure Secret Pulled Images KEP:
+        - `kubelet_imagemanager_ondisk_pullintents` - number of pull intent records currently stored on disk.
+        - `kubelet_imagemanager_ondisk_pulledrecords` - number of image pulled records currently stored on disk.
+        - `kubelet_imagemanager_image_mustpull_checks_total{result}` - number of times an image was checked against pull records, along with the results of those checks.
+pr_body: ""

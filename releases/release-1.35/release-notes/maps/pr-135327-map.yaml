@@ -1,0 +1,5 @@
+pr: 135327
+releasenote:
+  text: 'kube-apiserver: Fixed spurious warning log messages about enabled alpha APIs
+    that appeared during API server startup.'
+pr_body: ""

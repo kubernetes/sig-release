@@ -1,0 +1,4 @@
+pr: 134058
+releasenote:
+  text: Implemented scoring for DRA-backed extended resources
+pr_body: ""

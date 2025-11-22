@@ -1,0 +1,5 @@
+pr: 134893
+releasenote:
+  text: Added the `UserNamespacesHostNetworkSupport` feature gate, which is disabled
+    by default. When enabled, it allows `hostNetwork` Pods to run using a user namespace.
+pr_body: ""

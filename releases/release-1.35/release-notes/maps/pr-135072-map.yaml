@@ -1,0 +1,5 @@
+pr: 135072
+releasenote:
+  text: Updated the typed workqueue to clean up goroutines properly before shutting
+    down.
+pr_body: ""

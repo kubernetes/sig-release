@@ -1,0 +1,5 @@
+pr: 135037
+releasenote:
+  text: Updated extended resource handling to deterministically select a single device
+    class when multiple options are available.
+pr_body: ""

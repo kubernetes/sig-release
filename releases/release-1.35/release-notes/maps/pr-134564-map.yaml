@@ -1,0 +1,6 @@
+pr: 134564
+releasenote:
+  text: Introduced the `scheduling.k8s.io/v1alpha1` `Workload` API to enable expressing
+    workload-level scheduling requirements, allowing the kube-scheduler to act on
+    those higher-level constraints..
+pr_body: ""
