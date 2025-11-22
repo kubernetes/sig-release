@@ -1,0 +1,4 @@
+pr: 135195
+releasenote:
+  text: Graduated the image volume source feature to Beta and enabled it by default.
+pr_body: ""

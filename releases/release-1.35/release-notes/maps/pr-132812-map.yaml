@@ -1,0 +1,8 @@
+pr: 132812
+releasenote:
+  text: |-
+    Added new kubelet metrics for the Ensure Secret Pulled Images KEP, including:
+      - `kubelet_imagemanager_ondisk_pullintents` for tracking pull intent records on disk
+      - `kubelet_imagemanager_ondisk_pulledrecords` for tracking pulled image records on disk
+      - `kubelet_imagemanager_image_mustpull_checks_total{result}` for counting image must-pull verification checks.
+pr_body: ""

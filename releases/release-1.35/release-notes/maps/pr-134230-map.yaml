@@ -1,0 +1,5 @@
+pr: 134230
+releasenote:
+  text: The `AggregatedDiscoveryRemoveBetaType` feature gate was deprecated and locked
+    to `true`.
+pr_body: ""

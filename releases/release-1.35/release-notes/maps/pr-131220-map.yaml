@@ -1,0 +1,4 @@
+pr: 131220
+releasenote:
+  text: Added the `CloudControllerManagerWatchBasedRoutesReconciliation` feature gate.
+pr_body: ""

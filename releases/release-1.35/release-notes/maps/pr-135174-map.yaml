@@ -1,0 +1,6 @@
+pr: 135174
+releasenote:
+  text: 'kubelet: Fixed a concurrent map write error when creating a pod with an empty
+    volume while the `LocalStorageCapacityIsolationFSQuotaMonitoring` feature gate
+    is enabled.'
+pr_body: ""

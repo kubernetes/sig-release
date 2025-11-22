@@ -1,0 +1,4 @@
+pr: 134339
+releasenote:
+  text: Made PersistentVolume node affinity mutable.
+pr_body: ""
