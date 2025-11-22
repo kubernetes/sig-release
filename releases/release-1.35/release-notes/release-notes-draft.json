@@ -2031,8 +2031,8 @@
   },
   "133968": {
     "commit": "f38a61181cd4f73a22c688e4d5c0c73d707f6acb",
-    "text": "Upgraded CoreDNS to v1.12.4",
-    "markdown": "Upgraded CoreDNS to v1.12.4 ([#133968](https://github.com/kubernetes/kubernetes/pull/133968), [@yashsingh74](https://github.com/yashsingh74)) [SIG Cloud Provider and Cluster Lifecycle]",
+    "text": "Upgraded CoreDNS to v1.12.4.",
+    "markdown": "Upgraded CoreDNS to v1.12.4. ([#133968](https://github.com/kubernetes/kubernetes/pull/133968), [@yashsingh74](https://github.com/yashsingh74)) [SIG Cloud Provider and Cluster Lifecycle]",
     "author": "yashsingh74",
     "author_url": "https://github.com/yashsingh74",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133968",
