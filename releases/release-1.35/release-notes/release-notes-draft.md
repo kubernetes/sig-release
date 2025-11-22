@@ -109,7 +109,7 @@
 - Added new kubelet metrics for the Ensure Secret Pulled Images KEP, including:
     - `kubelet_imagemanager_ondisk_pullintents` for tracking pull intent records on disk
     - `kubelet_imagemanager_ondisk_pulledrecords` for tracking pulled image records on disk
-    - `kubelet_imagemanager_image_mustpull_checks_total{result}` for counting image must-pull verification checks ([#132812](https://github.com/kubernetes/kubernetes/pull/132812), [@stlaz](https://github.com/stlaz)) [SIG Auth and Node]
+    - `kubelet_imagemanager_image_mustpull_checks_total{result}` for counting image must-pull verification checks. ([#132812](https://github.com/kubernetes/kubernetes/pull/132812), [@stlaz](https://github.com/stlaz)) [SIG Auth and Node]
 - Added paths section to scheduler `statusz` endpoint. ([#132606](https://github.com/kubernetes/kubernetes/pull/132606), [@Peac36](https://github.com/Peac36)) [SIG API Machinery, Architecture, Instrumentation, Network, Node, Scheduling and Testing]
 - Added remote runtime and image `Close()` method to be able to close the connection. ([#133211](https://github.com/kubernetes/kubernetes/pull/133211), [@saschagrunert](https://github.com/saschagrunert)) [SIG Node]
 - Added support for tracing in `kubectl` with the `--profile=trace` flag. ([#134709](https://github.com/kubernetes/kubernetes/pull/134709), [@tchap](https://github.com/tchap))

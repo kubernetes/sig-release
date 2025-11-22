@@ -593,8 +593,8 @@
   },
   "132812": {
     "commit": "fc1def6e32bd8d205e24243948f735c7a50aba84",
-    "text": "Added new kubelet metrics for the Ensure Secret Pulled Images KEP, including:\n  - `kubelet_imagemanager_ondisk_pullintents` for tracking pull intent records on disk\n  - `kubelet_imagemanager_ondisk_pulledrecords` for tracking pulled image records on disk\n  - `kubelet_imagemanager_image_mustpull_checks_total{result}` for counting image must-pull verification checks",
-    "markdown": "Added new kubelet metrics for the Ensure Secret Pulled Images KEP, including:\n    - `kubelet_imagemanager_ondisk_pullintents` for tracking pull intent records on disk\n    - `kubelet_imagemanager_ondisk_pulledrecords` for tracking pulled image records on disk\n    - `kubelet_imagemanager_image_mustpull_checks_total{result}` for counting image must-pull verification checks ([#132812](https://github.com/kubernetes/kubernetes/pull/132812), [@stlaz](https://github.com/stlaz)) [SIG Auth and Node]",
+    "text": "Added new kubelet metrics for the Ensure Secret Pulled Images KEP, including:\n  - `kubelet_imagemanager_ondisk_pullintents` for tracking pull intent records on disk\n  - `kubelet_imagemanager_ondisk_pulledrecords` for tracking pulled image records on disk\n  - `kubelet_imagemanager_image_mustpull_checks_total{result}` for counting image must-pull verification checks.",
+    "markdown": "Added new kubelet metrics for the Ensure Secret Pulled Images KEP, including:\n    - `kubelet_imagemanager_ondisk_pullintents` for tracking pull intent records on disk\n    - `kubelet_imagemanager_ondisk_pulledrecords` for tracking pulled image records on disk\n    - `kubelet_imagemanager_image_mustpull_checks_total{result}` for counting image must-pull verification checks. ([#132812](https://github.com/kubernetes/kubernetes/pull/132812), [@stlaz](https://github.com/stlaz)) [SIG Auth and Node]",
     "documentation": [
       {
         "description": "[KEP]",
