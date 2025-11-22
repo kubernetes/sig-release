@@ -1,0 +1,7 @@
+pr: 134210
+releasenote:
+  text: |-
+    Updated `ResourceQuota` to count device class requests within a `ResourceClaim` as two additional quotas when the `DRAExtendedResource` feature is enabled:
+    - `requests.deviceclass.resource.k8s.io/<deviceclass>` is charged based on the worst-case number of devices requested.
+    - Device classes mapping to an extended resource now consume `requests.<extended resource name>`.
+pr_body: ""

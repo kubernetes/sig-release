@@ -1,0 +1,5 @@
+pr: 135197
+releasenote:
+  text: Fixed the replacement tag in APIs so it no longer acted as a selector for
+    storage version.
+pr_body: ""

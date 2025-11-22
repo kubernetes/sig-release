@@ -1,0 +1,6 @@
+pr: 132919
+releasenote:
+  text: "Enabled in-place resizing of pod-level resources.  \n- Added `Resources`
+    in `PodStatus` to capture resources set in the pod-level cgroup.  \n- Added `AllocatedResources`
+    in `PodStatus` to capture resources requested in the `PodSpec`."
+pr_body: ""

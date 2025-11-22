@@ -1,0 +1,5 @@
+pr: 135103
+releasenote:
+  text: Enabled the `NominatedNodeNameForExpectation` feature in kube-scheduler and
+    `ClearingNominatedNodeNameAfterBinding` in kube-apiserver by default.
+pr_body: ""

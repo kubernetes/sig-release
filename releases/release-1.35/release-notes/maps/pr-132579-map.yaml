@@ -1,0 +1,5 @@
+pr: 132579
+releasenote:
+  text: Moved the `ImagePullIntent` and `ImagePulledRecord` objects used by the kubelet
+    to track image pulls to the `v1beta1` API version.
+pr_body: ""

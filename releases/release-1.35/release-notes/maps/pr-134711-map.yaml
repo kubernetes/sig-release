@@ -1,0 +1,5 @@
+pr: 134711
+releasenote:
+  text: Added scoring for the prioritized list feature so nodes that best satisfy
+    the highest-ranked subrequests were chosen.
+pr_body: ""

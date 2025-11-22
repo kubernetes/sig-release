@@ -1,0 +1,5 @@
+pr: 134825
+releasenote:
+  text: Added additional event emissions during Pod resizing to provide clearer visibility
+    when a Pod’s resize status changes.
+pr_body: ""

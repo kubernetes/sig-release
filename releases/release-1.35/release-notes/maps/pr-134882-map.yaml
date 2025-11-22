@@ -1,0 +1,7 @@
+pr: 134882
+releasenote:
+  text: Extended resources requested by initContainers using an automatic `ResourceClaim`
+    now matched legacy device plugin behavior by reusing resources requested by later
+    sidecar initContainers or regular containers when possible, reducing the total
+    number of devices requested by a pod.
+pr_body: ""

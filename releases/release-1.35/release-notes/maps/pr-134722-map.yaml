@@ -1,0 +1,5 @@
+pr: 134722
+releasenote:
+  text: Introduced the GangScheduling kube-scheduler plugin to support "all-or-nothing"
+    scheduling using the `scheduling.k8s.io/v1alpha1` Workload API.
+pr_body: ""

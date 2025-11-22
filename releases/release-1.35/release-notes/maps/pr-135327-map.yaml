@@ -1,0 +1,5 @@
+pr: 135327
+releasenote:
+  text: 'kube-apiserver: Resolved an issue causing unnecessary warning log messages
+    about enabled alpha APIs during API server startup.'
+pr_body: ""

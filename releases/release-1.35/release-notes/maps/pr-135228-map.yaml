@@ -1,0 +1,5 @@
+pr: 135228
+releasenote:
+  text: The `KubeletEnsureSecretPulledImages` feature was promoted to Beta and enabled
+    by default.
+pr_body: ""

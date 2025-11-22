@@ -1,0 +1,5 @@
+pr: 135044
+releasenote:
+  text: Promoted the `KubeletCrashLoopBackOffMax` feature gate to beta and enabled
+    it by default.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 134058
+releasenote:
+  text: Implemented scoring for DRA-backed extended resources to improve scheduling
+    decisions.
+pr_body: ""

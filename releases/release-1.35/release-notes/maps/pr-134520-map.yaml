@@ -1,0 +1,5 @@
+pr: 134520
+releasenote:
+  text: Added support for the `ShareID` field of the `DRAConsumableCapacity` feature
+    in the Kubelet Plugin API.
+pr_body: ""
