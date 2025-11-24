@@ -1,0 +1,6 @@
+pr: 135158
+releasenote:
+  text: |-
+    Graduated the `PodTopologyLabelsAdmission` feature gate to Beta and enabled it by default.
+    Pods now receive `topology.kubernetes.io/zone` and `topology.kubernetes.io/region` labels automatically when their assigned Node has these labels.
+pr_body: ""

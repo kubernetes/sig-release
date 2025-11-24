@@ -1,0 +1,8 @@
+pr: 134890
+releasenote:
+  text: 'kubeadm: Added the `HTTPEndpoints` field to `ClusterConfiguration.Etcd.ExternalEtcd`
+    to configure HTTP endpoints for etcd communication in v1beta4. This separates
+    HTTP traffic (e.g., `/metrics`, `/health`) from gRPC traffic, improving access
+    control. Mirrors etcd’s `--listen-client-http-urls` behavior; if not set, the
+    `Endpoints` field handles both traffic types.'
+pr_body: ""

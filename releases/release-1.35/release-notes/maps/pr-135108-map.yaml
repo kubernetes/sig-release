@@ -1,0 +1,4 @@
+pr: 135108
+releasenote:
+  text: Dropped support for `networking/v1beta1` `Ingress` in `kubectl`.
+pr_body: ""

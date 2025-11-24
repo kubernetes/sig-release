@@ -1,0 +1,6 @@
+pr: 135153
+releasenote:
+  text: Slow container runtime initialization no longer causes the System WatchDog
+    to kill the kubelet. The Device Manager was treated as unhealthy until it began
+    listening on its port.
+pr_body: ""

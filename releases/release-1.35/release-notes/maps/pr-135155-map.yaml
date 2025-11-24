@@ -1,0 +1,5 @@
+pr: 135155
+releasenote:
+  text: 'Fixed a bug in `ValidatingAdmissionPolicy` where schemas with `additionalProperties:
+    true` could cause the kube-controller-manager to crash with a nil pointer exception.'
+pr_body: ""

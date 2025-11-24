@@ -1,0 +1,5 @@
+pr: 135037
+releasenote:
+  text: Selected a single device class deterministically when multiple device classes
+    were available for an extended resource.
+pr_body: ""

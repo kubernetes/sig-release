@@ -1,0 +1,8 @@
+pr: 134189
+releasenote:
+  text: Updated the Partitionable Devices feature to support referencing counter sets
+    across ResourceSlices within the same resource pool. Devices from incomplete pools
+    were no longer considered for allocation. This change introduced backwards-incompatible
+    updates to the alpha feature, requiring any ResourceSlices using it to be removed
+    before upgrading or downgrading between v1.34 and v1.35.
+pr_body: ""
