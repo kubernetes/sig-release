@@ -1,0 +1,5 @@
+pr: 94140
+releasenote:
+  text: |-
+    Promote SupportNodePidsLimit to GA to provide node-to-pod PID isolation.
+    Promote SupportPodPidsLimit to GA to provide ability to limit PIDs per pod.

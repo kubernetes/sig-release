@@ -1,0 +1,4 @@
+pr: 119351
+releasenote:
+  text: 'kubeadm: the limitation that the `ignorePreflightErrors` field can not be
+    set to `all` in kubeadm config file has been removed.'

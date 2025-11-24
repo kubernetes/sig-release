@@ -1,0 +1,5 @@
+pr: 103027
+releasenote:
+  text: 'kubeadm: add support for dry running `kubeadm join`. The new flag `kubeadm
+    join --dry-run` is similar to the existing flag for `kubeadm init/upgrade` and
+    allows you to see what changes would be applied.'

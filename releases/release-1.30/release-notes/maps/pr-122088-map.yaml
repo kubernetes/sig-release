@@ -1,0 +1,4 @@
+pr: 122088
+releasenote:
+  text: Removed GA featuregate about `ExperimentalHostUserNamespaceDefaultingGate`
+    in `1.30`.

@@ -1,0 +1,4 @@
+pr: 130507
+releasenote:
+  text: Enabled the `OrderedNamespaceDeletion` feature gate by default.
+pr_body: ""

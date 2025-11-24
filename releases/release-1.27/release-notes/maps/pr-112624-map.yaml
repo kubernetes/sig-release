@@ -1,0 +1,4 @@
+pr: 112624
+releasenote:
+  text: 'kubelet`: fixed a bug in `kubelet` that stopped rendering the `ConfigMaps`
+    when `fsquota` monitoring is enabled'

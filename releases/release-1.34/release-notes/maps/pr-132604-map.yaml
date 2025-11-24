@@ -1,0 +1,4 @@
+pr: 132604
+releasenote:
+  text: Added machine readable output options (JSON & YAML) to `kubectl api-resources`.
+pr_body: ""

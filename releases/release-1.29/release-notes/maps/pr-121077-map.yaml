@@ -1,0 +1,3 @@
+pr: 121077
+releasenote:
+  text: Graduated the `ReadWriteOncePod` feature gate to `GA`.

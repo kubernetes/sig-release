@@ -1,0 +1,5 @@
+pr: 101252
+releasenote:
+  text: The `kubelet` now reports distinguishes log messages about certificate rotation
+    for its client cert and server cert separately to make debugging problems with
+    one or the other easier.

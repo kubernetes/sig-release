@@ -1,0 +1,3 @@
+pr: 120108
+releasenote:
+  text: Fixed OpenAPI v3 not being cleaned up after deleting `APIServices`.

@@ -1,0 +1,6 @@
+pr: 128011
+releasenote:
+  text: Kube-apiserver `--egress-selector-config-file` files were validated strictly
+    (EnableStrict). Duplicate and unknown fields in the configuration will now cause
+    an error.
+pr_body: ""

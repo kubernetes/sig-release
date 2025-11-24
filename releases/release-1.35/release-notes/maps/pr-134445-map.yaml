@@ -1,0 +1,5 @@
+pr: 134445
+releasenote:
+  text: Fixed a long-standing issue where `kubelet` rejected Pods with `NodeAffinityFailed`
+    due to a stale informer cache.
+pr_body: ""

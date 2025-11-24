@@ -1,0 +1,4 @@
+pr: 109612
+releasenote:
+  text: 'Kube-controller-manager: Removed flags  `deleting-pods-qps`, `deleting-pods-burst`, and
+    `register-retry-count`.'

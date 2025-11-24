@@ -1,0 +1,51 @@
+Alpha,22,,,,,,,,,,
+Beta,13,,,,,,,,,,
+Stable,3,,,,,,,,,,
+TOTAL,38,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+Maintainer:,idvoretskyi (Ihor Dvoretskyi),,,,,,,,,,
+,,,,,,,,,,,
+Feature Name,Stage,SIG,Assignee,Needs Docs?,k8s.io Docs PR,additional PR,One Line Release Note Description,Needs Doc Review,Needs Tech Review,Merged,Notes
+Support paged LIST queries from the Kubernetes API,Beta,SIG-API-machinery,smarterclayton,yes,,,APIs can return large results in chunks rather than all at once.,,,,
+"CustomResourceDefinitions, née ThirdPartyResources",Beta,SIG-API-machinery,deads2k ,yes,https://github.com/kubernetes/website/pull/6066,,CRD validation moved to beta,Done,Done,Yes,
+Beta admission webhook,Beta,SIG-API-machinery,caesarxuchao,yes,https://github.com/kubernetes/website/pull/6368,,,Done,Done,Yes,
+CronJobs (previously ScheduledJobs),Beta,SIG-Apps,soltysh ,no,,,,,,,Bumped to 1.10
+Workload API,Stable,SIG-Apps,kow3ns,yes,"https://github.com/kubernetes/website/pull/6496
+https://github.com/kubernetes/website/pull/6494
+https://github.com/kubernetes/website/pull/6550
+https://github.com/kubernetes/website/pull/6553
+https://github.com/kubernetes/website/pull/6555",,,Done,Done,Yes,
+Encryption at rest KMS integration,Alpha,SIG-Auth,jcbsmpsn,no,,,,,,,No new features add over 1.9
+Kubelet Server TLS Certificate Rotation,Alpha,SIG-Auth,jcbsmpsn,no,,,,,,,No new features add over 1.9
+ClusterRole aggregation,Beta,SIG-Auth,deads2k ,yes,https://github.com/kubernetes/website/pull/6474,,,Done,Done,Yes,
+Support short circuit deny from authorizers ,Stable,SIG-Auth,mikedanese ,yes,https://github.com/kubernetes/website/pull/6536,,,Done,Done,Yes,
+Node Auto-Provisioning in Cluster Autoscaler,Alpha,SIG-Autoscaling,mwielgus,no,,,,,,,
+Kubectl Diff,Alpha,SIG-CLI,apelisse,no,,,,,,,
+Support out-of-process and out-of-tree cloud providers,Alpha,SIG-ClusterLifecycle,wlan0,no,,,,,,,
+"Support pod bootstrap ""checkpointing"" in the kubelet",Alpha,SIG-ClusterLifecycle,timothysc,no,,,,,,,
+Extensible configuration/invocation of `kubeadm`,Alpha,SIG-ClusterLifecycle,luxas ,yes,https://github.com/kubernetes/website/pull/6103,,,Done,Done,Yes,
+Integrate Cluster Bootstrap/Discovery with Kubenetes Core ,Beta,SIG-ClusterLifecycle,jbeda,no,,,,,,,
+Self-hosting support in kubeadm,Beta,SIG-ClusterLifecycle,luxas ,no,,,,,,,
+"Easy, automated upgrades with the `kubeadm upgrade` command",Beta,SIG-ClusterLifecycle,luxas ,yes,https://github.com/kubernetes/website/pull/6485,,,Done,Done,Yes,
+Dramatically Simplify Kubernetes Cluster Creation,Beta,SIG-ClusterLifecycle,luxas ,no,,,,,,,
+Monitoring support for Hardware Accelerators ,Alpha,SIG-Instrumentation,mindprince,no,,,,,,,
+API Audit Logging,Beta,SIG-Instrumentation,crassirostris,yes,https://github.com/kubernetes/website/pull/6427,,Auditing requests to Kubernetes API,Done,Done,Yes,
+IPv6 support added,Alpha,SIG-Network,danehans,yes,https://github.com/kubernetes/website/pull/6465,,,Done,Done,Yes,
+Switch default DNS plugin to CoreDNS,Alpha,SIG-Network,johnbelamaric,yes,https://github.com/kubernetes/website/pull/6463,,,Done,Done,Yes,
+Support AWS Network Load Balancer,Alpha,SIG-Network,justinsb,yes,https://github.com/kubernetes/website/pull/6260,,,Done,Done,Yes,
+Support configurable pod resolv.conf,Alpha,SIG-Network,MrHohn,yes,https://github.com/kubernetes/website/pull/6479,,,Done,Done,Yes,
+Implement IPVS-based in-cluster service load balancing,Beta,SIG-Network,m1093782566,yes,https://github.com/kubernetes/website/pull/6524,,,Done,Done,Yes,
+Dynamic Kubelet Configuration,Alpha,SIG-Node,mtaufen,no,,,,,,,
+Configurable per-pod PID Namespace Sharing,Alpha,SIG-Node,verb,no,,,,,,,
+Support for Hardware Accelerators,Alpha,SIG-Node,vishh ,no,,,,,,,
+Redesign Event API ,Beta,SIG-Scale,gmarek,no,,,,,,,
+Topology Aware Volume Scheduling ,Alpha,SIG-Scheduling,msau42,yes,https://github.com/kubernetes/website/pull/6392,,,Done,Done,Yes,
+Add support for resizing PVs,Alpha,SIG-Storage,gnufied ,yes,https://github.com/kubernetes/website/pull/6487,,,Done,Done,Yes,
+Containerized mounts,Alpha,SIG-Storage,jsafrane,no,,,,,,,It's for testing only and will be obsoleted by CSI in couple of releases
+Prevent deletion of Persistent Volume Claims that are used by a pod ,Alpha,SIG-Storage,pospispa,yes,https://github.com/kubernetes/website/pull/6415,,,Done,Done,Yes,
+Raw block device using persistent volume source,Alpha,SIG-Storage,erinboyd ,yes,https://github.com/kubernetes/website/pull/6554,,Native kubernetes support for raw block devices,Done,Done,Yes,
+Out-of-tree CSI Volume Plugins,Alpha,SIG-Storage,saad-ali,yes,https://github.com/kubernetes/website/pull/6504,,Container Storage Interface (CSI) support to make it easier to add new volume plugins to Kubernetes.,Done,Done,Yes,
+Durable (non-shared) local storage management,Alpha,SIG-Storage,msau42 ,no,,,,,,,
+Detailed storage metrics of internal state,Stable,SIG-Storage,gnufied,no,,,,,,,
+Support Windows Server Containers for K8s,Beta,SIG-Windows,michmike,yes,https://github.com/kubernetes/website/pull/6180,,,Done,Done,Yes,

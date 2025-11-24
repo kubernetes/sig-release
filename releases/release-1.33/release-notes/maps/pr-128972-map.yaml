@@ -1,0 +1,4 @@
+pr: 128972
+releasenote:
+  text: Added e2e tests for volume group snapshots.
+pr_body: ""

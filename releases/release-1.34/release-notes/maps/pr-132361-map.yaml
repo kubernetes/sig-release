@@ -1,0 +1,7 @@
+pr: 132361
+releasenote:
+  text: Migrated validation in `CertificateSigningRequest` to use declarative validation.
+    When the `DeclarativeValidation` feature gate is enabled, mismatches with existing
+    validation are reported via metrics. If `DeclarativeValidationTakeover` is enabled,
+    declarative validation becomes the primary source of errors for migrated fields.
+pr_body: ""

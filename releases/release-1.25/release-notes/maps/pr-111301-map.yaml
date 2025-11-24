@@ -1,0 +1,4 @@
+pr: 111301
+releasenote:
+  text: |
+          `CSIMigrationGCE` upgraded to GA and locked to true.

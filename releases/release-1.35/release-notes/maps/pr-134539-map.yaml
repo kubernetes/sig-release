@@ -1,0 +1,5 @@
+pr: 134539
+releasenote:
+  text: Marked `ipvs` mode in kube-proxy as deprecated, which will be removed in a future
+    version of Kubernetes. Users are encouraged to migrate to `nftables`.
+pr_body: ""

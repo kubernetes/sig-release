@@ -1,0 +1,5 @@
+pr: 129006
+releasenote:
+  text: "kubeadm: Avoided loading the file passed to `--kubeconfig`
+    during `kubeadm init` phases more than once."
+pr_body: ""

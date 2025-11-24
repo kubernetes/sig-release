@@ -1,0 +1,4 @@
+pr: 132903
+releasenote:
+  text: Started recording metrics for in-place Pod resize.
+pr_body: ""

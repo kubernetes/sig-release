@@ -1,0 +1,5 @@
+pr: 133706
+releasenote:
+  text: Fixed a bug that prevents scheduling the next pod when using the `DRAConsumableCapacity`
+    feature.
+pr_body: ""

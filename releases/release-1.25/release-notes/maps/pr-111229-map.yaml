@@ -1,0 +1,5 @@
+pr: 111229
+releasenote:
+  text: The Pod `spec.podOS` field is promoted to GA. The `IdentifyPodOS` feature
+    gate unconditionally enabled, and will no longer be accepted as a `--feature-gates`
+    parameter in 1.27.

@@ -1,0 +1,4 @@
+pr: 130116
+releasenote:
+  text: 'KEP-3857: Recursive Read-only (RRO) mounts: promote to GA.'
+pr_body: ""

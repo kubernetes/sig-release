@@ -1,0 +1,4 @@
+pr: 105569
+releasenote:
+  text: kubelet did not report `kubelet_volume_stats_*` metrics for Generic Ephemeral
+    Volumes.

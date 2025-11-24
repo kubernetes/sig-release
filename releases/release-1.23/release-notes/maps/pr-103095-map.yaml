@@ -1,0 +1,4 @@
+pr: 103095
+releasenote:
+  text: Added support for `PodAndContainerStatsFromCRI` feature gate, which allows
+    a user to specify their pod stats must also come from the CRI, not `cAdvisor`.

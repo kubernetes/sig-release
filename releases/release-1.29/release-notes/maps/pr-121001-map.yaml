@@ -1,0 +1,4 @@
+pr: 121001
+releasenote:
+  text: '`ValidatingAdmissionPolicy` now preserves types of composition variables,
+    and raises type-related errors early.'

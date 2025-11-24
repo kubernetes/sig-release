@@ -1,0 +1,3 @@
+pr: 112021
+releasenote:
+  text: Fixed `SELinux` label for host path volumes created by host path provisioner

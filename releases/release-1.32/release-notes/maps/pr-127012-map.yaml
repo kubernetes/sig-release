@@ -1,0 +1,4 @@
+pr: 127012
+releasenote:
+  text: Bookmark events are now sent immediately after all items in the watchCache store have been processed, improving consistency in client behavior.
+pr_body: ""

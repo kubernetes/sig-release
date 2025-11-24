@@ -1,0 +1,3 @@
+pr: 121739
+releasenote:
+  text: Updated runc to `1.1.10`.

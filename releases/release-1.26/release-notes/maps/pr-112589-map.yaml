@@ -1,0 +1,4 @@
+pr: 112589
+releasenote:
+  text: The `IndexedJob` and `SuspendJob` feature gates that graduated to GA in 1.24
+    and were unconditionally enabled have been removed in v1.26.

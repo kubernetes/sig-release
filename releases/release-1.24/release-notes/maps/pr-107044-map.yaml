@@ -1,0 +1,5 @@
+pr: 107044
+releasenote:
+  text: Modified command line errors (for example, `kubectl list` -> `unknown command`)
+    that were printed as log message with escaped line breaks instead of a multi-line
+    plain text, making the error hard to read.

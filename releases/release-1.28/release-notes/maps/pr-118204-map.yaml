@@ -1,0 +1,4 @@
+pr: 118204
+releasenote:
+  text: Shrank the OpenAPI v2 spec by more than 50%, especially for less CPU resource
+    consumption.

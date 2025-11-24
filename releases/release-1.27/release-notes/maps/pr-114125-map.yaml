@@ -1,0 +1,7 @@
+pr: 114125
+releasenote:
+  text: |-
+    Scheduler no longer runs the plugin's `Filter` method when its `PreFilter` method returned a Skip status.
+    In other words, your `PreFilter`/`Filter` plugin can return a Skip status in `PreFilter` if the plugin does nothing in Filter for that Pod.
+    Scheduler skips `NodeAffinity` Filter plugin when `NodeAffinity` Filter plugin has nothing to do with a Pod.
+    It may affect some metrics values related to the `NodeAffinity` Filter plugin.

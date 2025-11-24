@@ -1,0 +1,3 @@
+pr: 97543
+releasenote:
+  text: '`ServiceNodeExclusion`, `NodeDisruptionExclusion` and `LegacyNodeRoleBehavior` features have been promoted to GA. `ServiceNodeExclusion` and `NodeDisruptionExclusion` are now unconditionally enabled, while `LegacyNodeRoleBehavior` is unconditionally disabled. To prevent control plane nodes from being added to load balancers automatically, upgrade users need to add "node.kubernetes.io/exclude-from-external-load-balancers" label to control plane nodes.'

@@ -1,0 +1,4 @@
+pr: 107553
+releasenote:
+  text: The fluentd-elasticsearch addon is no longer included in the cluster directory.
+    It is available from https://github.com/kubernetes-sigs/instrumentation-addons/tree/master/fluentd-elasticsearch.

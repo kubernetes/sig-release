@@ -1,0 +1,3 @@
+pr: 93920
+releasenote:
+  text: Add limited lines to log on `--tail` option

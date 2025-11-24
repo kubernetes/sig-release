@@ -1,0 +1,4 @@
+pr: 104033
+releasenote:
+  text: Reverts adding namespace label to admission metrics (and histogram exansion)
+    due to cardinality issues.

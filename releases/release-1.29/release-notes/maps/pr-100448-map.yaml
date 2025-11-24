@@ -1,0 +1,4 @@
+pr: 100448
+releasenote:
+  text: Changed kubelet logs from `error` to `info` for uncached partitions when using
+    CRI stats provider.

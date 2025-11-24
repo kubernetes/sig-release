@@ -1,0 +1,5 @@
+pr: 132173
+releasenote:
+  text: Promoted Job Pod Replacement Policy to general availability. The `JobPodReplacementPolicy`
+    feature gate was locked to `true` and will be removed in a future Kubernetes release.
+pr_body: ""

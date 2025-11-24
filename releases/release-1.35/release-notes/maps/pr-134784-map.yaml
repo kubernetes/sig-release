@@ -1,0 +1,7 @@
+pr: 134784
+releasenote:
+  text: |-
+    Added the `StorageVersionMigration` `v1beta1` API and removed the `v1alpha1` API.
+
+    ACTION REQUIRED: The `v1alpha1` API is no longer supported. Users must remove any `v1alpha1` resources before upgrading.
+pr_body: ""

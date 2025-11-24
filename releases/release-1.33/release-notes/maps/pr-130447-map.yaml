@@ -1,0 +1,7 @@
+pr: 130447
+releasenote:
+  text: 'DRA: Device taints enable DRA drivers or admins to mark device as unusable,
+    which prevents allocating them. Pods may also get evicted at runtime if a device
+    becomes unusable, depending on the severity of the taint and whether the claim
+    tolerates the taint.'
+pr_body: ""

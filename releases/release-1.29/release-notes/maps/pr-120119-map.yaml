@@ -1,0 +1,4 @@
+pr: 120119
+releasenote:
+  text: Fixed `kubectl events` not filtering events by `GroupVersion` for resources
+    with a full name.

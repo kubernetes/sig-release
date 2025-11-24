@@ -1,0 +1,3 @@
+pr: 104756
+releasenote:
+  text: Fixed client IP preservation for NodePort service with protocol SCTP in ipvs.

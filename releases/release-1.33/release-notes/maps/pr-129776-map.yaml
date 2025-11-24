@@ -1,0 +1,4 @@
+pr: 129776
+releasenote:
+  text: Updated CNI plugins to `v1.6.2`.
+pr_body: ""

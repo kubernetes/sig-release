@@ -1,0 +1,5 @@
+pr: 130899
+releasenote:
+  text: Errors returned by apiserver from uninitialized cache will include last error
+    from etcd.
+pr_body: ""

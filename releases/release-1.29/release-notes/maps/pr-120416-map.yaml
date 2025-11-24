@@ -1,0 +1,4 @@
+pr: 120416
+releasenote:
+  text: The `--interactive` flag in `kubectl delete` is now visible to all users by
+    default.

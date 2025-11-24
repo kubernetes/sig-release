@@ -1,0 +1,3 @@
+pr: 119247
+releasenote:
+  text: Updated `setcap` image to debian bookworm v1.0.0.

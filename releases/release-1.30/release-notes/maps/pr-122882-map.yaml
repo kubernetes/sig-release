@@ -1,0 +1,5 @@
+pr: 122882
+releasenote:
+  text: Aggregated discovery supports both `v2beta1` and v2 types and feature is promoted
+    to GA.
+pr_body: ""

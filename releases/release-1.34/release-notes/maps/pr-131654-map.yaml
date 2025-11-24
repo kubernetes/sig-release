@@ -1,0 +1,5 @@
+pr: 131654
+releasenote:
+  text: Graduated configurable endpoints for anonymous authentication using the authentication
+    configuration file to stable.
+pr_body: ""

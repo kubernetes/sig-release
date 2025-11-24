@@ -1,0 +1,4 @@
+pr: 116350
+releasenote:
+  text: Added matchConditions field to ValidatingAdmissionPolicy and enabled support
+    for CEL based custom match criteria.

@@ -1,0 +1,5 @@
+pr: 98111
+releasenote:
+  kinds:
+  - cleanup
+  - deprecation

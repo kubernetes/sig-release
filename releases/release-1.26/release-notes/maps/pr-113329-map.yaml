@@ -1,0 +1,4 @@
+pr: 113329
+releasenote:
+  text: |
+    '`RetroactiveDefaultStorageClass` feature is now beta.'

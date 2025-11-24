@@ -1,0 +1,6 @@
+pr: 128038
+releasenote:
+  text: kube-apiserver `ResourceQuotaConfiguration` admission plugin subsection within
+    `--admission-control-config-file` files were validated strictly (EnableStrict).
+    Duplicate and unknown fields in the configuration would cause an error.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 135146
+releasenote:
+  text: Fixed a Windows kube-proxy (winkernel) issue where stale `RemoteEndpoints`
+    remained when a Deployment was referenced by multiple Services due to premature
+    clearing of the `terminatedEndpoints` map.
+pr_body: ""

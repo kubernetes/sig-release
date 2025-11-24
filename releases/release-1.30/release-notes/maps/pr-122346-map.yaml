@@ -1,0 +1,5 @@
+pr: 122346
+releasenote:
+  text: |
+    "Fixed an issue where `kubectl apply` could panic when imported as a library."
+pr_body: ""

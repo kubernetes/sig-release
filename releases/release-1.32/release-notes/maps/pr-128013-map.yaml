@@ -1,0 +1,6 @@
+pr: 128013
+releasenote:
+  text: kube-apiserver `--admission-control-config-file` files are now validated strictly
+    (EnableStrict). Duplicate and unknown fields in the configuration will now cause
+    an error.
+pr_body: ""

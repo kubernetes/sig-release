@@ -1,0 +1,4 @@
+pr: 101496
+releasenote:
+  text: "The `podAffinity`, `NamespaceSelector` and the associated `CrossNamespaceAffinity`
+    quota scope features graduate to Beta and they are now enabled by default."

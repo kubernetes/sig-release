@@ -1,0 +1,6 @@
+pr: 105631
+releasenote:
+  text: Add a new `distribute-cpus-across-numa` option to the static `CPUManager`
+    policy. When enabled, this will trigger the `CPUManager` to evenly distribute
+    CPUs across NUMA nodes in cases where more than one NUMA node is required to satisfy
+    the allocation.

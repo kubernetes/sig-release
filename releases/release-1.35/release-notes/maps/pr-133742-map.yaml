@@ -1,0 +1,5 @@
+pr: 133742
+releasenote:
+  text:
+    Removed the `ComponentSLIs` feature gate, as it was promoted to stable in the Kubernetes `v1.32` release.
+pr_body: ""

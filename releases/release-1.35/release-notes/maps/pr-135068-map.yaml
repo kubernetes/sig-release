@@ -1,0 +1,7 @@
+pr: 135068
+releasenote:
+  text: The DRA device taints and toleration feature received a separate feature gate,
+    `DRADeviceTaintRules`, which controlled support for `DeviceTaintRules`. This allowed
+    disabling it while keeping `DRADeviceTaints` enabled so that tainting via `ResourceSlices`
+    continued to work.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 123525
+releasenote:
+  text: The JWT authenticator configuration set via the `--authentication-config`
+    flag is now dynamically reloaded as the file changes on disk.
+pr_body: ""

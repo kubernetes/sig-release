@@ -1,0 +1,4 @@
+pr: 110534
+releasenote:
+  text: "Kube-Scheduler ComponentConfig is graduated to GA, `kubescheduler.config.k8s.io/v1`
+    is available now. \nPlugin `SelectorSpread` is removed in v1."

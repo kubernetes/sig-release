@@ -1,0 +1,4 @@
+pr: 101950
+releasenote:
+  text: Fixes the `should receive events on concurrent watches in same order` conformance
+    test to work properly on clusters that auto-create additional configmaps in namespaces.

@@ -1,0 +1,3 @@
+pr: 110957
+releasenote:
+  text: Windows winkernel kube-proxy no longer supports Windows HNS v1 APIs.

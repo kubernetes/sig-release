@@ -1,0 +1,3 @@
+pr: 98878
+releasenote:
+  text: The `CronJobControllerV2` feature flag graduates to Beta and set to be enabled by default.

@@ -1,0 +1,3 @@
+pr: 100939
+releasenote:
+  text: Support `FakeClientset` match subresource.

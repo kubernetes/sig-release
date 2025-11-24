@@ -1,0 +1,4 @@
+pr: 118299
+releasenote:
+  text: List of metric labels can now be configured by supplying a manifest using
+    the `--allow-metric-labels-manifest` flag.

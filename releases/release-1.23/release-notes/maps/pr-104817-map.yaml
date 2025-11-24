@@ -1,0 +1,7 @@
+pr: 104817
+releasenote:
+  text: A pod that the Kubelet rejects was still considered as being accepted for
+    a brief period of time after rejection, which might cause some pods to be rejected
+    briefly that could fit on the node.  A pod that is still terminating (but has
+    status indicating it has failed) may also still be consuming resources and so
+    should also be considered.

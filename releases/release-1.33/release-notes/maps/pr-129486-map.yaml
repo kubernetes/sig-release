@@ -1,0 +1,4 @@
+pr: 129486
+releasenote:
+  text: Fixed a bug to ensure container-level swap metrics are collected.
+pr_body: ""

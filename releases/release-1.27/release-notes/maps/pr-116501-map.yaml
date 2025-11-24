@@ -1,0 +1,3 @@
+pr: 116501
+releasenote:
+  text: '`StatefulSetAutoDeletePVC` feature gate promoted to beta.'

@@ -1,0 +1,6 @@
+pr: 128810
+releasenote:
+  text: Implemented the `scheduler_cache_size` metric. Additionally, the `scheduler_scheduler_cache_size`
+    metric is now deprecated in favor of `scheduler_cache_size`, and will be removed in
+    v1.34.
+pr_body: ""

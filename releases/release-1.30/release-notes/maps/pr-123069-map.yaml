@@ -1,0 +1,3 @@
+pr: 123069
+releasenote:
+  text: etcd image `v3.5.12` has been built.

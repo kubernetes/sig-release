@@ -1,0 +1,4 @@
+pr: 117079
+releasenote:
+  text: |-
+    `kubelet`: print sorted volumes message in events.

@@ -1,0 +1,7 @@
+pr: 132942
+releasenote:
+  text: Added support for a new kubectl output format, `kyaml`. KYAML was a strict
+    subset of YAML and should be accepted by any YAML processor. The formatting of
+    KYAML was halfway between JSON and YAML.  Because it was more explicit than the
+    default YAML style, it was less error-prone.
+pr_body: ""

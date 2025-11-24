@@ -1,0 +1,6 @@
+pr: 115402
+releasenote:
+  text: |-
+    Introduced API for streaming.
+
+    Added `SendInitialEvents` field to the `ListOptions`. When the new option is set together with `watch=true`, it begins the watch stream with synthetic init events followed by a synthetic "Bookmark" after which the server continues streaming events.

@@ -1,0 +1,7 @@
+pr: 98243
+releasenote:
+  text: Remove alpha `CSIMigrationXXComplete` flag and add alpha `InTreePluginXXUnregister`
+    flag. Deprecate `CSIMigrationvSphereComplete` flag and it will be removed in v1.22.
+  kinds:
+  - feature
+  - deprecation

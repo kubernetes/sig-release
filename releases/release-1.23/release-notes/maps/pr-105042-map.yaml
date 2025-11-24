@@ -1,0 +1,4 @@
+pr: 105042
+releasenote:
+  text: All `klog` flags except for `-v` and `-vmodule` are deprecated. Support for
+    `-vmodule` is only guaranteed for the text log format.

@@ -1,0 +1,5 @@
+pr: 113116
+releasenote:
+  text: Added a `--prune-allowlist` flag that can be used with `kubectl apply --prune`.
+    This flag now replaces and functions the same as the `--prune-whitelist` flag,
+    which has been deprecated.

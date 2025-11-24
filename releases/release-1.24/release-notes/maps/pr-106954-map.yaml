@@ -1,0 +1,4 @@
+pr: 106954
+releasenote:
+  text: Marked kubelet `--container-runtime-endpoint` and `--image-service-endpoint`
+    CLI flags as stable.

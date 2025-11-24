@@ -1,0 +1,5 @@
+pr: 130450
+releasenote:
+  text: Fixed an issue in the CEL CIDR library where subnets contained within another
+    CIDR were incorrectly rejected as not being contained.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 110948
+releasenote:
+  text: |
+         ` JobTrackingWithFinalizers` enabled by default. This feature allows to keep track of the Job progress without relying on Pods staying in the apiserver.

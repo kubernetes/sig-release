@@ -1,0 +1,5 @@
+pr: 105267
+releasenote:
+  text: Fixes a bug that could result in the EndpointSlice controller unnecessarily
+    updating EndpointSlices associated with a Service that had Topology Aware Hints
+    enabled.

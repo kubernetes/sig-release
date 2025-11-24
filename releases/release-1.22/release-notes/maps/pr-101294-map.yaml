@@ -1,0 +1,4 @@
+pr: 101294
+releasenote:
+  text: The `SetHostnameAsFQDN` graduates to GA and thus will be unconditionally
+    disabled.

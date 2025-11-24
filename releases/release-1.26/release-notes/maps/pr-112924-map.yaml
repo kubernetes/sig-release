@@ -1,0 +1,3 @@
+pr: 112924
+releasenote:
+  text: Removing Windows Server, Version 20H2 flavors from various container images.

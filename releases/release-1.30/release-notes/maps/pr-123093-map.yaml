@@ -1,0 +1,5 @@
+pr: 123093
+releasenote:
+  text: |
+    "Fixed a `1.27.0+` regression in kubeadm: The kubelet patch configuration will not be uploaded into the `kube-system/kubelet-config` ConfigMap anymore."
+pr_body: ""

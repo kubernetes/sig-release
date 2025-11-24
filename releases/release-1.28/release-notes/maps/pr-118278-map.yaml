@@ -1,0 +1,4 @@
+pr: 118278
+releasenote:
+  text: Updated the comment about the feature-gate level for `PodFailurePolicy` from
+    alpha to beta

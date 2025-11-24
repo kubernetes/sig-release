@@ -1,0 +1,3 @@
+pr: 108053
+releasenote:
+  text: kubectl stack traces now only print at verbose `-v=99` and not `-v=6`

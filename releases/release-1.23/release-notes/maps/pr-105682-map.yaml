@@ -1,0 +1,3 @@
+pr: 105682
+releasenote:
+  text: Be able to create a Pod with Generic Ephemeral Volumes as raw block devices.

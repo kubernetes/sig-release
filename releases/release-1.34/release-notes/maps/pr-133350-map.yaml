@@ -1,0 +1,4 @@
+pr: 133350
+releasenote:
+  text: Fixed prerelease lifecycle for `PodCertificateRequest`.
+pr_body: ""

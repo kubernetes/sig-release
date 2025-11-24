@@ -1,0 +1,5 @@
+pr: 123696
+releasenote:
+  text: |
+    "kube-apiserver: the AuthenticationConfiguration type accepted in `--authentication-config` files has been promoted to `apiserver.config.k8s.io/v1beta1`."
+pr_body: ""

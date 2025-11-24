@@ -1,0 +1,4 @@
+pr: 113005
+releasenote:
+  text: In `kubeadm`, command `kubeadm join phase control-plane-prepare certs` now
+    supports to run with `dry-run` mode on it's own.

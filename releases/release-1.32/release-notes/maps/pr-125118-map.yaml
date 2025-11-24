@@ -1,0 +1,8 @@
+pr: 125118
+releasenote:
+  text: |-
+    Output for the `ScalingReplicaSet` event has changed from:
+        Scaled <up|down> replica set <replica-set-name> to <new-value> from <old-value>
+    to:
+        Scaled <up|down> replica set <replica-set-name> from <old-value> to <new-value>.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 114497
+releasenote:
+  text: |-
+    Introduced new metrics removing the redundant subsystem in kube-apiserver pod logs metrics and deprecate the original ones:
+    - kube_apiserver_pod_logs_pods_logs_backend_tls_failure_total becomes kube_apiserver_pod_logs_backend_tls_failure_total
+    - kube_apiserver_pod_logs_pods_logs_insecure_backend_total becomes kube_apiserver_pod_logs_insecure_backend_total

@@ -1,0 +1,3 @@
+pr: 113476
+releasenote:
+  text: Promoting `WindowsHostProcessContainers` to stable.

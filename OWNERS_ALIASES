@@ -1,0 +1,44 @@
+aliases:
+  sig-release-leads:
+    - cpanato # SIG Technical Lead
+    - jeremyrickard # SIG Chair
+    - justaugustus # SIG Chair
+    - puerco # SIG Technical Lead
+    - saschagrunert # SIG Chair
+    - Verolop # SIG Technical Lead
+
+  # Release Engineering subproject
+  release-engineering-approvers:
+    - cici37 # subproject owner / Release Manager
+    - cpanato # subproject owner / Release Manager
+    - jeremyrickard # subproject owner / Release Manager
+    - justaugustus # subproject owner / Release Manager
+    - palnabarun # Release Manager
+    - puerco # subproject owner / Release Manager
+    - saschagrunert # subproject owner / Release Manager
+    - xmudrii # Release Manager
+    - Verolop # subproject owner / Release Manager
+  release-engineering-reviewers:
+    - ameukam # Release Manager Associate
+    - jimangel # Release Manager Associate
+    - jrsapi # Release Manager Associate
+    - salaxander # Release Manager Associate
+
+  # Release Team subproject
+  release-team-approvers:
+    - katcosgrove # Release Team Subproject Lead
+  release-team-lead:
+    - drewhagen # v1.35
+  release-team-lead-shadows:
+    - rytswd # v1.35
+    - dipesh-rawat # v1.35
+    - jenshu # v1.35
+    - Rajalakshmi-Girish # v1.35
+  communications-subteam-approvers:
+    - graz-dev # v1.35
+  docs-subteam-approvers:
+    - Urvashi0109 # v1.35
+  enhancements-subteam-approvers:
+    - rayandas # v1.35
+  release-signal-subteam-approvers:
+    - tico88612 # v1.35

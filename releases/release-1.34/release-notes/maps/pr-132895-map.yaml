@@ -1,0 +1,5 @@
+pr: 132895
+releasenote:
+  text: Fixed a 1.33 regression that causes a nil panic in kube-scheduler when aggregating
+    resource requested across container's spec and status.
+pr_body: ""

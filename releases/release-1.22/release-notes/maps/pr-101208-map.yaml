@@ -1,0 +1,5 @@
+pr: 101208
+releasenote:
+  text: |-
+    Add a namespace label for all `apiserver_admission_* metrics`.
+    Expand the histogram range to 0-10s for all `apiserver_admission_*_duration_seconds` metrics.

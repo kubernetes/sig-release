@@ -1,0 +1,3 @@
+pr: 105405
+releasenote:
+  text: Ephemeral containers graduated to beta and are now available by default.

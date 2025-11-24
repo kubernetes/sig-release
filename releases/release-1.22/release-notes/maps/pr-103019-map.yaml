@@ -1,0 +1,3 @@
+pr: 103019
+releasenote:
+  text: Fixed a bug that scheduler extenders are not called on preemptions.

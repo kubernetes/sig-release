@@ -1,0 +1,5 @@
+pr: 120623
+releasenote:
+  text: Fixed a bug where `Services` using finalizers may hold onto `ClusterIP` and/or
+    `NodePort` allocated resources for longer than expected if the finalizer is removed
+    using the status subresource.

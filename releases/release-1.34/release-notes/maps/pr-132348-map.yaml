@@ -1,0 +1,4 @@
+pr: 132348
+releasenote:
+  text: Added a `container_swap_limit_bytes` metric to expose the swap limit assigned to containers under the `LimitedSwap` swap behavior.
+pr_body: ""

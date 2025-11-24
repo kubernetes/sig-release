@@ -1,0 +1,3 @@
+pr: 108429
+releasenote:
+  text: Allow KUBE_TEST_REPO_LIST to be a remote url

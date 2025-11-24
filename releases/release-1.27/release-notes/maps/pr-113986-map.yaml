@@ -1,0 +1,4 @@
+pr: 113986
+releasenote:
+  text: '`StorageVersionGC` (within `kube-controller-manager`) to use [contextual
+    logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).'

@@ -1,0 +1,6 @@
+pr: 112643
+releasenote:
+  text: |
+    `DynamicKubeletConfig` feature gate has been removed from the API server.
+    Dynamic kubelet reconfiguration now can't be used even when older nodes are still
+    attempting to rely on it. This is aligned with the Kubernetes version skew policy.

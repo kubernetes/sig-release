@@ -1,0 +1,6 @@
+pr: 101129
+releasenote:
+  text: 'kubeadm: remove the deprecated kubeadm API `v1beta1`. Introduce a new kubeadm
+    API `v1beta3`. See [kubeadm/v1beta3](https://pkg.go.dev/k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1beta3)
+    for a list of changes since `v1beta2`. Note that `v1beta2` is not yet deprecated,
+    but will be in a future release.'

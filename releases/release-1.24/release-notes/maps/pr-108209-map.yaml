@@ -1,0 +1,3 @@
+pr: 108209
+releasenote:
+  text: Increase Azure ACR credential provider timeout

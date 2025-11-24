@@ -1,0 +1,4 @@
+pr: 130028
+releasenote:
+  text: 'kubelet: Added `KubeletConfiguration.subidsPerPod`.'
+pr_body: ""

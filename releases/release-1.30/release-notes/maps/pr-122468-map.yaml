@@ -1,0 +1,5 @@
+pr: 122468
+releasenote:
+  text: |
+    "Removed the GA feature gate `RemoveSelfLink`."
+pr_body: ""

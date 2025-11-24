@@ -1,0 +1,9 @@
+pr: 127525
+releasenote:
+  text: When `cpu-manager-policy=static` is configured, containers meeting the qualifications
+    for static cpu assignment (i.e. Containers with integer CPU `requests` in pods
+    with `Guaranteed` QOS) will not have cfs quota enforced. Because this fix changes
+    a long-established behavior, users observing a regressions can use the `DisableCPUQuotaWithExclusiveCPUs`
+    feature gate (enabled by default) to restore the previous behavior. Please file an issue if
+    you encounter problems and have to use the Feature Gate.
+pr_body: ""

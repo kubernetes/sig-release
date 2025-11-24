@@ -1,0 +1,4 @@
+pr: 113500
+releasenote:
+  text: |
+    '`NodeInclusionPolicy` in `podTopologySpread` plugin is now enabled by default.'

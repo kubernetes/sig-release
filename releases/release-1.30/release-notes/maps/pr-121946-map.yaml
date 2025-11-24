@@ -1,0 +1,5 @@
+pr: 121946
+releasenote:
+  text: |
+    "kube-apiserver now reloads the `--authorization-config` file when it changes. Reloads increment the `apiserver_authorization_config_controller_automatic_reload_last_timestamp_seconds` timestamp metric, with `status="success"` for successful reloads and `status="failed"` for failed reloads. Failed reloads keep using the previously loaded authorization configuration."
+pr_body: ""

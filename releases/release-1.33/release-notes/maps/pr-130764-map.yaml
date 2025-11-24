@@ -1,0 +1,5 @@
+pr: 130764
+releasenote:
+  text: Added feature gate `DRAPartitionableDevices`, when enabled, Dynamic Resource
+    Allocation support partitionable devices allocation.
+pr_body: ""

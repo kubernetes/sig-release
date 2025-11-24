@@ -1,0 +1,4 @@
+pr: 106648
+releasenote:
+  text: 'kubeadm: remove the `IPv6DualStack` feature gate. The feature has been GA
+    and locked to enabled since 1.23.'

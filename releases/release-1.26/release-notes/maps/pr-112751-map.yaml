@@ -1,0 +1,4 @@
+pr: 112751
+releasenote:
+  text: 'kubeadm: fixed a bug when performing validation on `ClusterConfiguration`
+    networking fields.'

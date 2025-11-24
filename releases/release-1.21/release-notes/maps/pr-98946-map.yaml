@@ -1,0 +1,7 @@
+pr: 98946
+releasenote:
+  text: |-
+    Updates the commands `
+     - kubectl kustomize {arg}
+     - kubectl apply -k {arg}
+    `to use same code as kustomize CLI [v4.0.5](https://github.com/kubernetes-sigs/kustomize/releases/tag/kustomize%2Fv4.0.5)

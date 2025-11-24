@@ -1,0 +1,4 @@
+pr: 132901
+releasenote:
+  text: Graduated `ListFromCacheSnapshot` to beta.
+pr_body: ""

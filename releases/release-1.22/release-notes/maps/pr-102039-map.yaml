@@ -1,0 +1,3 @@
+pr: 102039
+releasenote:
+  text: '`kubectl`: Enable using protocol buffers to request Metrics API.'

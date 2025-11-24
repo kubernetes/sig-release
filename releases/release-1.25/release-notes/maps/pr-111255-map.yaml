@@ -1,0 +1,5 @@
+pr: 111255
+releasenote:
+  text: vSphere releases less than 7.0u2 are not supported for in-tree vSphere volume  as
+    of Kubernetes v1.25. Please consider upgrading vSphere (both ESXi and vCenter)  to
+    7.0u2 or above.

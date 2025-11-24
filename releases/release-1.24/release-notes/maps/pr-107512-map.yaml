@@ -1,0 +1,5 @@
+pr: 107512
+releasenote:
+  text: 'kubeadm: added support for dry running `kubeadm reset`. The new flag `kubeadm
+    reset --dry-run` is similar to the existing flag for `kubeadm init/join/upgrade`
+    and allows you to see what changes would be applied.'

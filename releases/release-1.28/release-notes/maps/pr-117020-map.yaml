@@ -1,0 +1,4 @@
+pr: 117020
+releasenote:
+  text: Added error handling for seccomp localhost configurations that do not properly
+    set a `localhostProfile`.

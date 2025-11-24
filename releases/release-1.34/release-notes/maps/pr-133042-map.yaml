@@ -1,0 +1,5 @@
+pr: 133042
+releasenote:
+  text: Graduated the WinOverlay feature in the kube-proxy to GA. The **WinOverlay**
+    feature gate was enabled by default.
+pr_body: ""

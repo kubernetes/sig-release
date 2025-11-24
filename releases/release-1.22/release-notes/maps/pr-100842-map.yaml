@@ -1,0 +1,3 @@
+pr: 100842
+releasenote:
+  text: Introduce `minReadySeconds` api to the `StatefulSets`.

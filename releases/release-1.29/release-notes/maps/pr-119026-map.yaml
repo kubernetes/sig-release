@@ -1,0 +1,4 @@
+pr: 119026
+releasenote:
+  text: A new sleep action for the `PreStop` lifecycle hook was added, allowing containers
+    to pause for a specified duration before termination.

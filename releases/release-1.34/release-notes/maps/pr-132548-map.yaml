@@ -1,0 +1,4 @@
+pr: 132548
+releasenote:
+  text: Resolved a bug where DaemonSet updates unnecessarily triggered duplicate validation due to overlapping calls to `ValidateDaemonSet` and ValidateDaemonSetUpdate. This redundancy has been removed to prevent repeated validation runs.
+pr_body: ""

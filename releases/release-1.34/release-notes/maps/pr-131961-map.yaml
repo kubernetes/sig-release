@@ -1,0 +1,4 @@
+pr: 131961
+releasenote:
+  text: 'kube-proxy: Removed the iptables CLI wait interval flag.'
+pr_body: ""

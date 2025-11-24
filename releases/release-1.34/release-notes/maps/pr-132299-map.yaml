@@ -1,0 +1,9 @@
+pr: 132299
+releasenote:
+  text: |-
+    kube-apiserver reported the last configuration hash as a label in
+
+    - `apiserver_authentication_config_controller_last_config_info` metric after successfully loading the authentication configuration file.
+    - `apiserver_authorization_config_controller_last_config_info` metric after successfully loading the authorization configuration file.
+    - `apiserver_encryption_config_controller_last_config_info` metric after successfully loading the encryption configuration file.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 115371
+releasenote:
+  text: 'kubelet: changed `MemoryThrottlingFactor` default value to `0.9` and formulas
+    to calculate `memory.high`'

@@ -1,0 +1,4 @@
+pr: 119200
+releasenote:
+  text: kubectl debug now includes the sysadmin profile.
+pr_body: ""

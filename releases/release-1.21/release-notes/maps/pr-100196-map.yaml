@@ -1,0 +1,3 @@
+pr: 100196
+releasenote:
+  text: 'kubelet: completed support for structured logging'

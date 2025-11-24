@@ -1,0 +1,5 @@
+pr: 125660
+releasenote:
+  text: Revised the Pod API with Alpha support for volumes derived from OCI artifacts.
+    This feature is behind the `ImageVolume` feature gate.
+pr_body: ""

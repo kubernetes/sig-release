@@ -1,0 +1,4 @@
+pr: 101537
+releasenote:
+  text: 'kubeadm: Remove the deprecated hyperkube image support in `v1beta3`. This
+    implies removal of `ClusterConfiguration.UseHyperKubeImage.`'

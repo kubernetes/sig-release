@@ -1,0 +1,3 @@
+pr: 101420
+releasenote:
+  text: Improve logging of `APIService` availability changes in kube-apiserver.

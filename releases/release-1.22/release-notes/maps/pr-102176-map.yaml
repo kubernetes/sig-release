@@ -1,0 +1,4 @@
+pr: 102176
+releasenote:
+  text: Fixed `garbage collection` of dangling `VolumeAttachments` for `PersistentVolumes`
+    migrated to CSI on startup of `kube-controller-manager`.

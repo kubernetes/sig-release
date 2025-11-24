@@ -1,0 +1,5 @@
+pr: 102805
+releasenote:
+  text: The deprecated flag `--hard-pod-affinity-symmetric-weight` and `--scheduler-name`
+    have been removed from `kube-scheduler`. Use `ComponentConfig` instead to configure
+    those parameters.

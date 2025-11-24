@@ -1,0 +1,7 @@
+pr: 99178
+releasenote:
+  text: Conformance image is now built with Distroless. Users running Conformance
+    testing should rely on container entrypoint instead of manual invocation to `/run_e2e.sh`
+    or `/gorunner`, as they are now deprecated and will be removed in 1.25 release.
+    Invoking `ginkgo` and `e2e.test` are still supported through overriding entrypoint
+    (docker) or defining container `spec.command` (kubernetes).

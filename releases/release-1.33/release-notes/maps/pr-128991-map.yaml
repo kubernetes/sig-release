@@ -1,0 +1,4 @@
+pr: 128991
+releasenote:
+  text: Added a `/statusz` endpoint for kube-controller-manager.
+pr_body: ""

@@ -1,0 +1,3 @@
+pr: 112195
+releasenote:
+  text: Fixed race condition in GCE between containerized mounter setup in the kubelet.

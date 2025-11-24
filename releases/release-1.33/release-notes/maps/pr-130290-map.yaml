@@ -1,0 +1,6 @@
+pr: 130290
+releasenote:
+  text: Added a new option `strict-cpu-reservation` for CPU Manager static policy.
+    When this option is enabled, CPU cores in `reservedSystemCPUs` will be strictly
+    used for system daemons and interrupt processing no longer available for any workload.
+pr_body: ""

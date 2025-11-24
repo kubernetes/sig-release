@@ -1,0 +1,6 @@
+pr: 132058
+releasenote:
+  text: 'DRA kubelet: Fixed the kubelet to also clean up `ResourceSlices` in some
+    additional failure scenarios (driver was removed forcibly or crashed and did not
+    restart).'
+pr_body: ""

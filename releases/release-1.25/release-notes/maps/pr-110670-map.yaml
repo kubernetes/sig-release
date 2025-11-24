@@ -1,0 +1,4 @@
+pr: 110670
+releasenote:
+  text: Unmounted volumes correctly for reconstructed volumes even if mount operation
+    fails after kubelet restart.

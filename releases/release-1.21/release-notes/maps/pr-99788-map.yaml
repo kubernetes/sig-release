@@ -1,0 +1,6 @@
+pr: 99788
+releasenote:
+  text: The `apiserver_request_total` metric is promoted to stable status and no longer
+    has a content-type dimensions, so any alerts/charts which presume the existence
+    of this will fail. This is however, unlikely to be the case since it was effectively
+    an unbounded dimension in the first place.

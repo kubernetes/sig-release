@@ -1,0 +1,5 @@
+pr: 104167
+releasenote:
+  text: The `BoundServiceAccountTokenVolume` feature gate that is GA since v1.22 is
+    unconditionally enabled, and can no longer be specified via the `--feature-gates`
+    argument.

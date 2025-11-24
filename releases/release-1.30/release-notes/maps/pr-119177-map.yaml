@@ -1,0 +1,6 @@
+pr: 119177
+releasenote:
+  text: "kube-scheduler implemented scheduling hints for the `NodeResourceFit` plugin.
+    The scheduling hints allowed the scheduler to only retry scheduling a Pod that had 
+    been previously rejected by the `NodeResourceFit` plugin if a new Node or a Node update 
+    matched the Pod's resource requirements or if an old pod update or delete matched the Pod's resource requirements."

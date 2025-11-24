@@ -1,0 +1,7 @@
+pr: 127489
+releasenote:
+  text: |-
+    Pods were allowed to use the `net.ipv4.tcp_rmem` and `net.ipv4.tcp_wmem` sysctl by default
+    when the kernel version was 4.15 or higher. With the kernel 4.15 the sysctl became namespaced.
+    Pod Security admission allowed these sysctl in v1.32+ versions of the baseline and restricted policies.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 116469
+releasenote:
+  text: PersistentVolumes have a new `LastPhaseTransitionTime` field which holds a
+    timestamp of when the volume last transitioned its phase.

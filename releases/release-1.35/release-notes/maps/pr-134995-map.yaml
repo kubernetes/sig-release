@@ -1,0 +1,5 @@
+pr: 134995
+releasenote:
+  text: Introduced a structured and versioned `v1alpha1` response format for the `flagz`
+    endpoint.
+pr_body: ""

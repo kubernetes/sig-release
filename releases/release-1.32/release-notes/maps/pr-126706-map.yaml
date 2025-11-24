@@ -1,0 +1,5 @@
+pr: 126706
+releasenote:
+  text: Fixed an issue where kubectl doesn't print image volume when kubectl describe a pod with
+    that volume.
+pr_body: ""

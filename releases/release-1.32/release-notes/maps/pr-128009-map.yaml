@@ -1,0 +1,6 @@
+pr: 128009
+releasenote:
+  text: kube-controller-manager `--leader-migration-config` files were now validated
+    strictly (EnableStrict). Duplicate and unknown fields in the configuration would
+    cause an error.
+pr_body: ""

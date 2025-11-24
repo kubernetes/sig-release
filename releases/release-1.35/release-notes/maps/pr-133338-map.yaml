@@ -1,0 +1,5 @@
+pr: 133338
+releasenote:
+  text: Fixed an issue where the default `serviceCIDR` controller did not log events
+    because the event broadcaster was shutdown during initialization.
+pr_body: ""

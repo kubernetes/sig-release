@@ -1,0 +1,4 @@
+pr: 102071
+releasenote:
+  text: 'kubeadm: remove the deprecated command `kubeadm config view`. A replacement
+    for this command is `kubectl get cm -n kube-system kubeadm-config -o=jsonpath="{.data.ClusterConfiguration}"`'

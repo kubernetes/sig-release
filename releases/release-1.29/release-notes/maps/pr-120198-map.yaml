@@ -1,0 +1,6 @@
+pr: 120198
+releasenote:
+  text: |-
+    `kubeadm`: updated warning message when swap space is detected. When swap is
+    active on Linux, `kubeadm` explains that swap is supported for cgroup v2 only and
+    is beta but disabled by default.

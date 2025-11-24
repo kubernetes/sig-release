@@ -1,0 +1,4 @@
+pr: 118817
+releasenote:
+  text: When a pod is done or not going to run, then `ResourceClaims` for it can be
+    reused by other pods or deleted.

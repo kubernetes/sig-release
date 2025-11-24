@@ -1,0 +1,3 @@
+pr: 104384
+releasenote:
+  text: 'fix: skip case sensitivity when checking Azure NSG rules.'

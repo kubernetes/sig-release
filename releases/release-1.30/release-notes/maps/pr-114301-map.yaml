@@ -1,0 +1,6 @@
+pr: 114301
+releasenote:
+  text: Enabled concurrent log rotation in kubelet. You can now configure the maximum
+    number of concurrent rotations with the `containerLogMaxWorkers` setting, and
+    adjust the monitoring interval with `containerLogMonitorInterval`.
+pr_body: ""

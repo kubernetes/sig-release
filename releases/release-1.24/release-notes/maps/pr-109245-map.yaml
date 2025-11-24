@@ -1,0 +1,4 @@
+pr: 109245
+releasenote:
+  text: Prevent kube-scheduler from nominating a Pod that was already scheduled to
+    a node

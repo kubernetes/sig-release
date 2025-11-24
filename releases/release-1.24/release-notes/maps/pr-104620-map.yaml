@@ -1,0 +1,3 @@
+pr: 104620
+releasenote:
+  text: Added field `add_ambient_capabilities` to the Capabilities message in the CRI-API.

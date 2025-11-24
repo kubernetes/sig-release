@@ -1,0 +1,4 @@
+pr: 114228
+releasenote:
+  text: Made `kubectl-convert` binary linking static (also affects the deb and rpm
+    packages).

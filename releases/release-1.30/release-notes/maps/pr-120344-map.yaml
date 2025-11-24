@@ -1,0 +1,9 @@
+pr: 120344
+releasenote:
+  text: Added the `disable-force-detach` CLI option for `kube-controller-manager`.
+    By default, it's set to `false`. When enabled, it prevents force detaching volumes
+    based on maximum unmount time and node status. If activated, the non-graceful
+    node shutdown feature must be used to recover from node failure. Additionally,
+    if a pod needs to be forcibly terminated at the risk of corruption, the appropriate
+    VolumeAttachment object must be deleted.
+pr_body: ""

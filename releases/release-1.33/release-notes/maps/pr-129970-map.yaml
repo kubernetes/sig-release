@@ -1,0 +1,5 @@
+pr: 129970
+releasenote:
+  text: The resource.k8s.io/v1beta1 API is deprecated and will be removed in 1.36.
+    Use v1beta2 instead.
+pr_body: ""

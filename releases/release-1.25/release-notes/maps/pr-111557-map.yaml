@@ -1,0 +1,4 @@
+pr: 111557
+releasenote:
+  text: Fixed performance issue when creating large objects using SSA with fully unspecified
+    schemas ( preserveUnknownFields ).

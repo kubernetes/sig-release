@@ -1,0 +1,5 @@
+pr: 122288
+releasenote:
+  text: Reverted the `QueueingHint` implementation for `NodeUnschedulable` due to
+    potential scenarios where events that make Pods schedulable could be missed.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 128336
+releasenote:
+  text: Annotation `batch.kubernetes.io/cronjob-scheduled-timestamp` added to Job
+    objects scheduled from CronJobs is promoted to stable.
+pr_body: ""

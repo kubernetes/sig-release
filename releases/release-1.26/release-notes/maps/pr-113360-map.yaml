@@ -1,0 +1,4 @@
+pr: 113360
+releasenote:
+  text: Enabled the "Retriable and non-retriable pod failures for jobs" feature into
+    beta.

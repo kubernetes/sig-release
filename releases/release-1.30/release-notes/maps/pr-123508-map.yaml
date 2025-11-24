@@ -1,0 +1,5 @@
+pr: 123508
+releasenote:
+  text: |
+    "Allowed container runtimes to fix an image garbage collection bug by adding an `image_id` field to the CRI Container message."
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 132700
+releasenote:
+  text: 'DRA kubelet: gRPC API graduated to v1, v1beta1 was deprecated starting in
+    1.34. Updating DRA drivers to the `k8s.io/dynamic-resource-allocation/kubeletplugin`
+    helper from 1.34 added support for both API versions.'
+pr_body: ""

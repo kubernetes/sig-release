@@ -1,0 +1,3 @@
+pr: 121257
+releasenote:
+  text: Removed `GA` feature gate about `ProbeTerminationGracePeriod`.

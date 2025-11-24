@@ -1,0 +1,7 @@
+pr: 105963
+releasenote:
+  text: This release added support for `NodeExpandSecret` for CSI driver client which
+    enables the CSI drivers to make use of this secret while performing node expansion
+    operation based on the user request. Previously there was no secret  provided
+    as part of the `nodeexpansion` call, thus CSI drivers did not make use of the same
+    while expanding the volume at the node side.

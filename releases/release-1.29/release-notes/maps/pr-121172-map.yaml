@@ -1,0 +1,5 @@
+pr: 121172
+releasenote:
+  text: '`kubeadm`: removed leftover disclaimer that could be seen in the `kubeadm
+    init phase certs` command help screen, since the "certs" phase of "init" is no
+    longer alpha.'

@@ -1,0 +1,3 @@
+pr: 123418
+releasenote:
+  text: LoadBalancerIPMode feature is now marked as Beta.

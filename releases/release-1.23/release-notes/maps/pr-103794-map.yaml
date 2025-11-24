@@ -1,0 +1,3 @@
+pr: 103794
+releasenote:
+  text: Provide IPv6 support for internal load balancer.

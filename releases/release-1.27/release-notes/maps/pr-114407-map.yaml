@@ -1,0 +1,4 @@
+pr: 114407
+releasenote:
+  text: 'Optimized `LoadBalancer` creation with the help of attribute Internal Traffic
+    Policy: `Local`'

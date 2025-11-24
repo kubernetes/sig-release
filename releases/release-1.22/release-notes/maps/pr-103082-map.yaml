@@ -1,0 +1,3 @@
+pr: 103082
+releasenote:
+  text: Enforce the `ReadWriteOncePod` PVC access mode during scheduling

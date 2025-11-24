@@ -1,0 +1,6 @@
+pr: 130101
+releasenote:
+  text: |-
+    Various controllers that write out IP address or CIDR values to API objects now
+    ensure that they always write out the values in canonical form.
+pr_body: ""

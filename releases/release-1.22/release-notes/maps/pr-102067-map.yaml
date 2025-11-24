@@ -1,0 +1,5 @@
+pr: 102067
+releasenote:
+  text: We no longer allow the cluster operator to delete any suggested priority &
+    fairness bootstrap configuration object. If a cluster operator removes a suggested
+    configuration, it will be restored by the apiserver.

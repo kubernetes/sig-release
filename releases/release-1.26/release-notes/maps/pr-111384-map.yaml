@@ -1,0 +1,3 @@
+pr: 111384
+releasenote:
+  text: Added support for Evented PLEG feature gate.

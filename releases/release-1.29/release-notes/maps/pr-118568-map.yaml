@@ -1,0 +1,3 @@
+pr: 118568
+releasenote:
+  text: '`kubelet` now exposes latency metrics of different stages of the node startup.'

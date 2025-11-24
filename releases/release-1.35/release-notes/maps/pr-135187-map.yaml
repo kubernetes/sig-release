@@ -1,0 +1,4 @@
+pr: 135187
+releasenote:
+  text: Updated the Kubernetes build to use Go `1.25.4`.
+pr_body: ""

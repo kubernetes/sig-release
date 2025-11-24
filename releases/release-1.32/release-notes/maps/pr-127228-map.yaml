@@ -1,0 +1,4 @@
+pr: 127228
+releasenote:
+  text: Improved performance of the job controller when handling job update events.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 134779
+releasenote:
+  text: '`kubeadm`: Updated the supported etcd version to `v3.5.24` for control plane
+    versions `v1.32`, `v1.33`, and `v1.34`.'
+pr_body: ""

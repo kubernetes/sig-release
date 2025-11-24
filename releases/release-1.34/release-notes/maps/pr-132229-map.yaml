@@ -1,0 +1,4 @@
+pr: 132229
+releasenote:
+  text: Removed support for API streaming from the dynamic client’s `List() method`.
+pr_body: ""

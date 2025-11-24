@@ -1,0 +1,4 @@
+pr: 116968
+releasenote:
+  text: Allows users to specify Kubelet `PodAndContainerStatsFromCRI` feature gate
+    that will get Windows pod and container stats only from CRI.

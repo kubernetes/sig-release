@@ -1,0 +1,5 @@
+pr: 123406
+releasenote:
+  text: 'kubeadm: fixed a bug during kubeadm upgrade, where it is not possible to
+    mount a new device and create a symbolic link for /etc/kubernetes (or a sub-directory)
+    so that kubeadm stores its information on the mounted device.'

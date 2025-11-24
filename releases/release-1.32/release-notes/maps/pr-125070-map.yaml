@@ -1,0 +1,5 @@
+pr: 125070
+releasenote:
+  text: Node shutdown controller made a best effort to wait for CSI Drivers to complete
+    the volume teardown process according to the pod priority groups.
+pr_body: ""

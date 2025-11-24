@@ -1,0 +1,5 @@
+pr: 115919
+releasenote:
+  text: Fixed an issue with Winkernel Proxier - ClusterIP Loadbalancers missing if
+    the `ExternalTrafficPolicy` is set to Local and the available endpoints are all
+    `remoteEndpoints`.

@@ -1,0 +1,5 @@
+pr: 112386
+releasenote:
+  text: |
+      `CSRDuration` feature gate that graduated to GA in 1.24 and is unconditionally
+      enabled now removed in v1.26.

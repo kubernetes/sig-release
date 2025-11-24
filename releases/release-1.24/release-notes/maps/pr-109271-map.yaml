@@ -1,0 +1,3 @@
+pr: 109271
+releasenote:
+  text: The `ServerSideFieldValidation` feature has been reverted to alpha for 1.24.

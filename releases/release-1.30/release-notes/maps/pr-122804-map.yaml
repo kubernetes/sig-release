@@ -1,0 +1,4 @@
+pr: 122804
+releasenote:
+  text: Added metric name along with the utilization information when running `kubectl
+    get hpa`.

@@ -1,0 +1,5 @@
+pr: 115082
+releasenote:
+  text: 'New plugin_evaluation_total is added to the scheduler.This metric counts
+    how many times the specific plugin affects the scheduling result. The metric does
+    not get incremented when the plugin has nothing to do with an incoming Pod.'

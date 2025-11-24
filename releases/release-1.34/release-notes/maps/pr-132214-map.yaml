@@ -1,0 +1,5 @@
+pr: 132214
+releasenote:
+  text: Added warnings when creating headless service with set `loadBalancerIP`,`externalIPs`
+    and/or `SessionAffinity`.
+pr_body: ""

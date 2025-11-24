@@ -1,0 +1,4 @@
+pr: 120868
+releasenote:
+  text: '`k8s.io/dynamic-resource-allocation`: DRA drivers updating to this release
+    are compatible with Kubernetes `v1.27` and `v1.28`.'

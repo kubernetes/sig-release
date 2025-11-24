@@ -1,0 +1,4 @@
+pr: 108052
+releasenote:
+  text: Fixed bug in `TopologyManager` for ensuring aligned allocations on machines
+    with more than 2 NUMA nodes

@@ -1,0 +1,4 @@
+pr: 105327
+releasenote:
+  text: Removed `kubectl --dry-run` empty default value and boolean values. `kubectl
+    --dry-run` usage must be specified with `--dry-run=(server|client|none)`.

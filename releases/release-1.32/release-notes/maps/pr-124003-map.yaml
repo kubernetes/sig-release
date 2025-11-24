@@ -1,0 +1,9 @@
+pr: 124003
+releasenote:
+  text: 'Kube-scheduler removed `AzureDiskLimits` ,`CinderLimits` 
+    `EBSLimits` and `GCEPDLimits` plugin. Given the corresponding CSI driver reports how many
+    volumes a node can handle in NodeGetInfoResponse, the kubelet stores this limit
+    in CSINode and the scheduler then knows the limit of the driver on the node. Removed
+    plugins AzureDiskLimits, CinderLimits, EBSLimits and GCEPDLimits if you explicitly
+    enabled them in the scheduler config.'
+pr_body: ""

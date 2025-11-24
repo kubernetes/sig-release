@@ -1,0 +1,4 @@
+pr: 124732
+releasenote:
+  text: Added flag to `kubectl logs` called `--all-pods` to get all pods from a object
+    that uses a pod selector.

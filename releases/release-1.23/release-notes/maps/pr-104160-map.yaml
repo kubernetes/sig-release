@@ -1,0 +1,4 @@
+pr: 104160
+releasenote:
+  text: The maximum length of the `CSINode` id field has increased to 256 bytes to
+    match the CSI spec.

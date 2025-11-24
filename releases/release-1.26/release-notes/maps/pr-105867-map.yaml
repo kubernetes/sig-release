@@ -1,0 +1,4 @@
+pr: 105867
+releasenote:
+  text: Shell completion now shows plugin names when appropriate. Furthermore, shell
+    completion will work for plugins that provide such support.

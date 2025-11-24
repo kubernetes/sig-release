@@ -1,0 +1,4 @@
+pr: 123517
+releasenote:
+  text: Patched a leak of a discovery document that would occur when an Aggregated
+    APIService changed its Spec.Service field and did not change it back.

@@ -1,0 +1,4 @@
+pr: 91504
+releasenote:
+  text: '`local-up-cluster.sh` installs CSI snapshotter by default now, can be disabled
+    with `ENABLE_CSI_SNAPSHOTTER=false`.'

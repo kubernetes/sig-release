@@ -1,0 +1,4 @@
+pr: 133792
+releasenote:
+  text: Locked down the `AllowOverwriteTerminationGracePeriodSeconds` feature gate.
+pr_body: ""

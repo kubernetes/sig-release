@@ -1,0 +1,4 @@
+pr: 105495
+releasenote:
+  text: Feature gate `StorageObjectInUseProtection` has been deprecated and cannot
+    be disabled. It will be completely removed in 1.25

@@ -1,0 +1,5 @@
+pr: 128073
+releasenote:
+  text: The kube-apiserver `--tracing-config-file` is now validated strictly (EnableStrict).
+    Duplicate and unknown fields in the configuration will now result in an error.
+pr_body: ""

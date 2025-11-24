@@ -1,0 +1,3 @@
+pr: 116470
+releasenote:
+  text: '[Kube-proxy]: implemented connection draining for terminating nodes.'

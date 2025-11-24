@@ -1,0 +1,7 @@
+pr: 123561
+releasenote:
+  text: The API server now detects and fails on startup if there are conflicting issuers
+    between JWT authenticators and service account configurations. Previously, such
+    configurations would run but could be inconsistently effective depending on the
+    credential.
+pr_body: ""

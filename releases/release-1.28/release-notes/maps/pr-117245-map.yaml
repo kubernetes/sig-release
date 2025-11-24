@@ -1,0 +1,4 @@
+pr: 117245
+releasenote:
+  text: Fixed Topology Aware Hints not working when the `topology.kubernetes.io/zone`
+    label is added after Node creation.

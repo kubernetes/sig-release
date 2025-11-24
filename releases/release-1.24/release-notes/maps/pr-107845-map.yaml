@@ -1,0 +1,4 @@
+pr: 107845
+releasenote:
+  text: Failure to start a container cannot accidentally result in the pod being considered
+    "Succeeded" in the presence of deletion.

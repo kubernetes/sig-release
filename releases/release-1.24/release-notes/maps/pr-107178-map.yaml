@@ -1,0 +1,4 @@
+pr: 107178
+releasenote:
+  text: The deprecated kube-controller-manager flag '--deployment-controller-sync-period'
+    has been removed, it is not used by the deployment controller.

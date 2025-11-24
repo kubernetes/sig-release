@@ -1,0 +1,6 @@
+pr: 123165
+releasenote:
+  text: |-
+    Added audienceMatchPolicy field to AuthenticationConfiguration and support for configuring multiple audiences.
+    The "audienceMatchPolicy" can be empty (or unset) when a single audience is specified in the "audiences" field.
+    The "audienceMatchPolicy" must be set to "MatchAny" when multiple audiences are specified in the "audiences" field.

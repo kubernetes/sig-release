@@ -1,0 +1,4 @@
+pr: 134180
+releasenote:
+  text: Enabled the `WatchListClient` feature gate.
+pr_body: ""

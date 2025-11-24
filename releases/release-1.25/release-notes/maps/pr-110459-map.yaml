@@ -1,0 +1,4 @@
+pr: 110459
+releasenote:
+  text: The `PodSecurity` admission plugin has graduated to GA and is enabled by default.
+    The admission configuration version has been promoted to `pod-security.admission.config.k8s.io/v1`.

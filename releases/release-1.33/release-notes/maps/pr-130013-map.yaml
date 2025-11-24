@@ -1,0 +1,4 @@
+pr: 130013
+releasenote:
+  text: Promoted the `CRDValidationRatcheting` feature gate to GA in 1.33.
+pr_body: ""

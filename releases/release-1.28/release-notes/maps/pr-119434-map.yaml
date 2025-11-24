@@ -1,0 +1,4 @@
+pr: 119434
+releasenote:
+  text: Fixed computing backoff delay when using Job pod failure policy, by including
+    in the backoff delay calculation pod failures ignored from the backoffLimit counter.

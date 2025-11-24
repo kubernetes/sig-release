@@ -1,0 +1,9 @@
+pr: 129560
+releasenote:
+  text: 'DRA: when asking for "All" devices on a node, Kubernetes <= 1.32 proceeded
+    to schedule pods onto nodes with no devices by not allocating any devices for
+    those pods. Kubernetes 1.33 changes that to only picking nodes which have at least
+    one device. Users who want the "proceed with scheduling also without devices"
+    semantic can use the upcoming prioritized list feature with one sub-request for
+    "all" devices and a second alternative with "count: 0".'
+pr_body: ""

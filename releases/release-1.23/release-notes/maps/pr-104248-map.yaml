@@ -1,0 +1,5 @@
+pr: 104248
+releasenote:
+  text: 'kube-apiserver: The `rbac.authorization.k8s.io/v1alpha1` API version is removed;
+    use the `rbac.authorization.k8s.io/v1` API, available since v1.8. The `scheduling.k8s.io/v1alpha1`
+    API version is removed; use the `scheduling.k8s.io/v1` API, available since v1.14.'

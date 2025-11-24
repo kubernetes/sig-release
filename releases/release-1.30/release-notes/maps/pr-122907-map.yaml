@@ -1,0 +1,5 @@
+pr: 122907
+releasenote:
+  text: The drop-in kubelet configuration directory feature has been targeted for
+    Beta.
+pr_body: ""

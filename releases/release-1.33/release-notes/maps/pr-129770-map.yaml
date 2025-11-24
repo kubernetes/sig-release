@@ -1,0 +1,4 @@
+pr: 129770
+releasenote:
+  text: Promoted the feature gate `AnyVolumeDataSource` to GA.
+pr_body: ""

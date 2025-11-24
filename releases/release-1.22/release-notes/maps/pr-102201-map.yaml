@@ -1,0 +1,3 @@
+pr: 102201
+releasenote:
+  text: The prefer nominated node graduates to Beta and enabld by default.

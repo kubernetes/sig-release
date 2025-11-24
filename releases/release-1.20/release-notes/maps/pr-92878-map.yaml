@@ -1,0 +1,3 @@
+pr: 92878
+releasenote:
+  text: Decrease warning message frequency on setting volume ownership for configmap/secret.

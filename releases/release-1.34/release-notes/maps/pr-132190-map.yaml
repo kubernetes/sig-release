@@ -1,0 +1,5 @@
+pr: 132190
+releasenote:
+  text: 'Types: `ClusterEvent`, `ActionType`, `EventResource`, `ClusterEventWithHint`,
+    `QueueingHint` and `QueueingHintFn` moved from `pkg/scheduler/framework` to `k8s.io/kube-scheduler/framework`.'
+pr_body: ""

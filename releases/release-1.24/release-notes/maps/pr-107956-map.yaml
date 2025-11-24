@@ -1,0 +1,3 @@
+pr: 107956
+releasenote:
+  text: CRD deep copies should no longer contain shallow copies of `JSONSchemaProps.XValidations`.

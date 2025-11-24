@@ -1,0 +1,5 @@
+pr: 132632
+releasenote:
+  text: The garbage collection controller no longer raced with changes to `ownerReferences`
+    when deleting orphaned objects.
+pr_body: ""

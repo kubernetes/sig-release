@@ -1,0 +1,5 @@
+pr: 108747
+releasenote:
+  text: The `TopologyAwareHints` feature gate is now enabled by default. This will
+    allow users to opt-in to Topology Aware Hints by setting the `service.kubernetes.io/topology-aware-hints`
+    on a Service. This will not affect any Services without that annotation set.

@@ -1,0 +1,5 @@
+pr: 129656
+releasenote:
+  text: Graduated the `KubeletFineGrainedAuthz` feature gate to beta; the feature gate is
+    now enabled by default.
+pr_body: ""

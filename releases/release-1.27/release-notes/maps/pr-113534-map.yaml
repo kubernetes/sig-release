@@ -1,0 +1,4 @@
+pr: 113534
+releasenote:
+  text: The `ControllerManagerLeaderMigration` feature, GA since `1.24`, is now unconditionally
+    enabled and the feature gate option has been removed.

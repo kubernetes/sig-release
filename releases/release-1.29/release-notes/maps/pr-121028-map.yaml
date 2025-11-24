@@ -1,0 +1,5 @@
+pr: 121028
+releasenote:
+  text: '`kubelet` , when using `--cloud-provider=external`, will now initialize the
+    node addresses with the value of `--node-ip` , if it exists, or waits for the
+    cloud provider to assign the addresses.'

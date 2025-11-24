@@ -1,0 +1,5 @@
+pr: 114878
+releasenote:
+  text: 'IPVS: Any ipvs scheduler can now be configured. If a un-usable scheduler
+    is configured `kube-proxy` will re-start and the logs must be checked (same as
+    before but different log printouts).'

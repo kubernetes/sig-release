@@ -1,0 +1,4 @@
+pr: 103799
+releasenote:
+  text: Added `apiserver_longrunning_requests` metric to replace the soon to be deprecated
+    `apiserver_longrunning_gauge` metric.

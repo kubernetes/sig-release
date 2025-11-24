@@ -1,0 +1,5 @@
+pr: 118212
+releasenote:
+  text: Reduced CPU and memory consumption of `kube-apiserver` if OpenAPI V2 will
+    not be accessed by any client. Also improved performance of the apiserver on installation
+    of many CRDs.

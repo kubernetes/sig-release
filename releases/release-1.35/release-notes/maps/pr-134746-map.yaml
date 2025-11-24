@@ -1,0 +1,7 @@
+pr: 134746
+releasenote:
+  text: Added the `ChangeContainerStatusOnKubeletRestart` feature gate, which defaults
+    to disabled. When the feature gate is disabled, `kubelet` does not change the
+    Pod status upon restart, and Pods do not re-run startup probes after the `kubelet`
+    restarts.
+pr_body: ""

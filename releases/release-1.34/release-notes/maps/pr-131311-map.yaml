@@ -1,0 +1,5 @@
+pr: 131311
+releasenote:
+  text: Stopped removing the CSI JSON file if the volume was already mounted during
+    subsequent errors.
+pr_body: ""

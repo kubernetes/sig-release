@@ -1,0 +1,3 @@
+pr: 101882
+releasenote:
+  text: 'Kubelet: wait for node allocatable ephemeral-storage data.'

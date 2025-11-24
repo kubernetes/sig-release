@@ -1,0 +1,5 @@
+pr: 118499
+releasenote:
+  text: Fix a race condition in `kube-proxy` when using LocalModeNodeCIDR, to avoid
+    dropping Services traffic if the object node is recreated when `kube-proxy` is
+    starting.

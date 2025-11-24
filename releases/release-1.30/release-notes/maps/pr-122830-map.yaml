@@ -1,0 +1,5 @@
+pr: 122830
+releasenote:
+  text: |
+    "The watch cache now waits until it is at least as fresh as the given requestedWatchRV if sendInitialEvents was requested."
+pr_body: ""

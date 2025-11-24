@@ -1,0 +1,3 @@
+pr: 121073
+releasenote:
+  text: Bumped `distroless-iptables` to `0.3.3` based on Go `1.21.2`.

@@ -1,0 +1,5 @@
+pr: 125536
+releasenote:
+  text: Improved the documentation clarity for building Kubernetes in Docker Environment, making it more understandable
+    for new users and contributors.
+pr_body: ""

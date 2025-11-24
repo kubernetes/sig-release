@@ -1,0 +1,5 @@
+pr: 123341
+releasenote:
+  text: |
+    "kubeadm: added the `WaitForAllControlPlaneComponents` feature gate. It could be used to tell kubeadm to wait for all control plane components to be ready when running "kubeadm init" or "kubeadm join --control-plane". Previously, kubeadm only waited for the kube-apiserver. The "kubeadm join" workflow now includes a new experimental phase called "wait-control-plane". This phase was marked as non-experimental when WaitForAllControlPlaneComponents became GA. Accordingly, a "kubeadm init" phase "wait-control-plane" was also available once WaitForAllControlPlaneComponents became GA. These phases could be skipped if the user preferred not to wait for the control plane components."
+pr_body: ""

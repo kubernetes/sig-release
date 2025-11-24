@@ -1,0 +1,5 @@
+pr: 119994
+releasenote:
+  text: |-
+    '`kube-scheduler` component config (`KubeSchedulerConfiguration`) `kubescheduler.config.k8s.io/v1beta3`
+    is removed in `v1.29`. Migrated `kube-scheduler` configuration files to `kubescheduler.config.k8s.io/v1`.'

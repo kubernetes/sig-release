@@ -1,0 +1,3 @@
+pr: 104774
+releasenote:
+  text: Fixed failed flushing logs in defer function when kubelet cmd exit 1.

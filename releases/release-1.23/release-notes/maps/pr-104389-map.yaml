@@ -1,0 +1,6 @@
+pr: 104389
+releasenote:
+  text: Support for the seccomp annotations `seccomp.security.alpha.kubernetes.io/pod`
+    and `container.seccomp.security.alpha.kubernetes.io/[name]` has been deprecated
+    since 1.19, will be dropped in 1.25. Transition to using the `seccompProfile`
+    API field.

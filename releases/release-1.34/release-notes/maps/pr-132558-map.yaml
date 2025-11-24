@@ -1,0 +1,6 @@
+pr: 132558
+releasenote:
+  text: Allowed setting the `hostnameOverride` field in `PodSpec` to specify any RFC
+    1123 DNS subdomain as the pod's hostname. The `HostnameOverride` feature gate
+    was introduced to control enablement of this functionality.
+pr_body: ""

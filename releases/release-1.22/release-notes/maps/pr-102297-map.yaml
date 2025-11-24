@@ -1,0 +1,4 @@
+pr: 102297
+releasenote:
+  text: The options `--ssh-user` and `--ssh-key` are removed. They only functioned on
+    GCE, and only in-tree. Use the apiserver network proxy instead.

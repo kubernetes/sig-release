@@ -1,0 +1,5 @@
+pr: 129893
+releasenote:
+  text: Fixed compressed kubelet log file permissions to use uncompressed kubelet
+    log file permissions.
+pr_body: ""

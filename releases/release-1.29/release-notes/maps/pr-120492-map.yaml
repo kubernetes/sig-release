@@ -1,0 +1,5 @@
+pr: 120492
+releasenote:
+  text: |-
+    Service Controller: will now update load balancer hosts after node's `ProviderID` is
+    updated.

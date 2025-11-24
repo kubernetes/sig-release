@@ -1,0 +1,3 @@
+pr: 105839
+releasenote:
+  text: 'fix: remove VMSS and VMSS instances from SLB backend pool only when necessary'

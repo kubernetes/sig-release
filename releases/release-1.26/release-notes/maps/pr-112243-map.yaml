@@ -1,0 +1,4 @@
+pr: 112243
+releasenote:
+  text: Added back unused flags on `kubectl run` command, which did not go through
+    the required deprecation period before being removed.

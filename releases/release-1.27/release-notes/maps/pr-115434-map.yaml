@@ -1,0 +1,3 @@
+pr: 115434
+releasenote:
+  text: Updated API reference for Requests, specifying they must not exceed limits

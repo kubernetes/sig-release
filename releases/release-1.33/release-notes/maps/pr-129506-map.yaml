@@ -1,0 +1,4 @@
+pr: 129506
+releasenote:
+  text: Enabled ratcheting validation on `status` subresources for CustomResourceDefinitions.
+pr_body: ""

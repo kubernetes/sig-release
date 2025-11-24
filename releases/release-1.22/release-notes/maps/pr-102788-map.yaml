@@ -1,0 +1,4 @@
+pr: 102788
+releasenote:
+  text: 'client-go: reduce verbosity of `Starting/Stopping reflector` messages to
+    3 again.'

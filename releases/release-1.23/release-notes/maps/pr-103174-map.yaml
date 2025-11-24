@@ -1,0 +1,5 @@
+pr: 103174
+releasenote:
+  text: Changes behaviour of kube-proxy start; does not attempt to set specific `sysctl`
+    values (which does not work in recent Kernel versions anymore in non-init namespaces),
+    when the current sysctl values are already set higher.

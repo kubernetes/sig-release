@@ -1,0 +1,3 @@
+pr: 102665
+releasenote:
+  text: Allow CSI drivers to just run offline expansion tests.

@@ -1,0 +1,7 @@
+pr: 121456
+releasenote:
+  text: |-
+    Added new feature gate called `RuntimeClassInImageCriApi` to address `kubelet` changes needed for KEP 4216.
+    Noteable changes:
+    1. Populate new `RuntimeHandler` field in CRI's `ImageSpec` struct during image pulls from container runtimes.
+    2. Pass `runtimeHandler` field in `RemoveImage()` call to container runtime in `kubelet`'s image garbage collection.

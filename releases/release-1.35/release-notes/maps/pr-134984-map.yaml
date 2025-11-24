@@ -1,0 +1,4 @@
+pr: 134984
+releasenote:
+  text: Added `ObservedGeneration` to CustomResourceDefinition conditions.
+pr_body: ""

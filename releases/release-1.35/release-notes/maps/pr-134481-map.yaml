@@ -1,0 +1,5 @@
+pr: 134481
+releasenote:
+  text: Promoted the `--chunk-size` flag to stable. The kubectl `describe`, `get`,
+    `drain`, and `events` commands can use `--chunk-size` flag to set chunk size.
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 98866
+releasenote:
+  text: The `TerminationGracePeriodSeconds` on pod specs and container probes should
+    not be negative. Negative values of `TerminationGracePeriodSeconds` will be treated
+    as the value `1s` on the delete path. Immutable field validation will be relaxed
+    in order to update negative values. In a future release, negative values will
+    not be permitted.

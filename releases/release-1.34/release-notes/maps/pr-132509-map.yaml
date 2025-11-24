@@ -1,0 +1,4 @@
+pr: 132509
+releasenote:
+  text: Removed defunct `make vet` target, please use `make lint` instead.
+pr_body: ""

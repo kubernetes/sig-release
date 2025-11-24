@@ -1,0 +1,8 @@
+pr: 123281
+releasenote:
+  text: |
+    RemoteCommand feature gates for kubectl exec, cp, and attach over WebSockets are now enabled by default (Beta):
+    - Server-side feature gate: `TranslateStreamCloseWebsocketRequests`
+    - Client-side (kubectl) feature gate: `KUBECTL_REMOTE_COMMAND_WEBSOCKETS`
+    - To disable RemoteCommand over WebSockets for kubectl, the environment variable feature gate must be explicitly set to `false`: `KUBECTL_REMOTE_COMMAND_WEBSOCKETS=false`.
+pr_body: ""

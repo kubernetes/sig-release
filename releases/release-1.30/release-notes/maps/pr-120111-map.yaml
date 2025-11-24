@@ -1,0 +1,5 @@
+pr: 120111
+releasenote:
+  text: |
+    When using `kubectl logs <pod-name>` and the pod is not found, the error message now includes the namespace. Previously, the message would be "Error from server (NotFound): pods "my-pod-name" not found". Now, it reflects the namespace in the message as follows: "Error from server (NotFound): pods "my-pod-name" not found in namespace "default"".
+pr_body: ""

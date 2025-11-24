@@ -1,0 +1,5 @@
+pr: 128118
+releasenote:
+  text: 'Kubeadm: fixed a misleading output (typo) about control-plane joining instructions when executing the "kubeadm init"
+    command.'
+pr_body: ""

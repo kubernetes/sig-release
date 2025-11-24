@@ -1,0 +1,4 @@
+pr: 129295
+releasenote:
+  text: Removed general available feature gate `PersistentVolumeLastPhaseTransitionTime`.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 117108
+releasenote:
+  text: |-
+    `component-base/logs` is now stricter about not applying configurations multiple
+    times and will return an error when that is attempted. Can be overridden by binaries
+    which need to do that.

@@ -1,0 +1,4 @@
+pr: 130491
+releasenote:
+  text: Added metrics to capture CPU distribution across NUMA nodes.
+pr_body: ""

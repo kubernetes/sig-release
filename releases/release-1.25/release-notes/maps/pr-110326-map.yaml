@@ -1,0 +1,4 @@
+pr: 110326
+releasenote:
+  text: Added error message "dry-run can not be used when --force is set" when dry-run
+    and force flags are set in replace command.

@@ -1,0 +1,5 @@
+pr: 134782
+releasenote:
+  text: Dropped support for `certificates/v1beta1` `CertificateSigningRequest` in
+    `kubectl`.
+pr_body: ""

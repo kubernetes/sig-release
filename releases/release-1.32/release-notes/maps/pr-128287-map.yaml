@@ -1,0 +1,24 @@
+pr: 128287
+releasenote:
+  text: Ensured resizing for Guaranteed pods with integer CPU requests on nodes with
+    static CPU & Memory policy configured is not allowed for the beta release of in-place
+    resize. The feature gate `InPlacePodVerticalScalingExclusiveCPUs` defaults to
+    `false`, but can be enabled to unblock development on ([#127262](https://github.com/kubernetes/kubernetes/issues/127262),
+    [@tallclair](https://github.com/tallclair)) [SIG Node].
+  documentation: []
+  author: esotsal
+  areas:
+  - test
+  - kubelet
+  - release-eng
+  - e2e-test-framework
+  kinds:
+  - feature
+  sigs:
+  - node
+  - release
+  - testing
+  feature: true
+  action_required: false
+  do_not_publish: false
+pr_body: ""

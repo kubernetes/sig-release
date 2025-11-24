@@ -1,0 +1,5 @@
+pr: 123674
+releasenote:
+  text: |
+    "Fixed a non-recursive list returning "resource version too high" error when consistent listing from cache is enabled."
+pr_body: ""

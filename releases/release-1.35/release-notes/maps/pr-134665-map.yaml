@@ -1,0 +1,5 @@
+pr: 134665
+releasenote:
+  text: Extended `core/v1` `Toleration` to support numeric comparison operators (`Gt`,
+    `Lt`).
+pr_body: ""

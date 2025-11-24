@@ -1,0 +1,3 @@
+pr: 121302
+releasenote:
+  text: Graduated `JobReadyPods` to `stable`. The feature gate can no longer be disabled.

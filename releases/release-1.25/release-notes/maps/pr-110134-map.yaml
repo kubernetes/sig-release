@@ -1,0 +1,5 @@
+pr: 110134
+releasenote:
+  text: 'Kubeadm: now sets the host `OS` environment variables when executing `crictl` during
+    image pulls. This fixed a bug where `*PROXY` environment variables did not affect
+    `crictl` internet connectivity.'

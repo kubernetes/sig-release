@@ -1,0 +1,3 @@
+pr: 123055
+releasenote:
+  text: Fixed an error when trying to expand a volume that does not require node expansion.

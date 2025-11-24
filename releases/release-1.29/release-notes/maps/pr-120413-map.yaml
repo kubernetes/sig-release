@@ -1,0 +1,5 @@
+pr: 120413
+releasenote:
+  text: 'Fixed a `v1.28` regression in scheduler: a pod with concurrent events could
+    incorrectly get moved to the unschedulable queue where it could get stuck until
+    the next periodic purging after 5 minutes, if there was no other event for it.'

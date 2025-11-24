@@ -1,0 +1,3 @@
+pr: 109254
+releasenote:
+  text: Removed deprecated kubectl.kubernetes.io/default-logs-container support

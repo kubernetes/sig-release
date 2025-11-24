@@ -1,0 +1,5 @@
+pr: 123845
+releasenote:
+  text: Graduated the `DisableNodeKubeProxyVersion` feature gate to beta. By default,
+    the kubelet no longer attempts to set the `.status.kubeProxyVersion` field for
+    its associated Node.

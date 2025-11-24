@@ -1,0 +1,10 @@
+pr: 123713
+releasenote:
+  text: The initialization of nodes using external cloud providers now waits for the
+    providerID value to be available before untainting it. This ensures that nodes
+    are not declared Ready without necessary information such as the providerID and
+    zone labels, which are required for integrations like load balancers to function
+    correctly. Cloud providers that do not implement the GetInstanceProviderID method
+    will not require the providerID to be set and will not fail to initialize the
+    node for backward compatibility.
+pr_body: ""

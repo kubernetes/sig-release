@@ -1,0 +1,14 @@
+pr: 107533
+releasenote:
+  text: 'kubeadm: apply `second stage` of the plan to migrate kubeadm away from the
+    usage of the word `master` in labels and taints. For new clusters, the label `node-role.kubernetes.io/master`
+    will no longer be added to control plane nodes, only the label `node-role.kubernetes.io/control-plane`
+    will be added. For clusters that are being upgraded to 1.24 with `kubeadm upgrade
+    apply`, the command will remove the label `node-role.kubernetes.io/master` from
+    existing control plane nodes. For new clusters, both the old taint `node-role.kubernetes.io/master:NoSchedule`
+    and new taint `node-role.kubernetes.io/control-plane:NoSchedule` will be added
+    to control plane nodes. In release 1.20 (`first stage`), a release note instructed
+    to preemptively tolerate the new taint. For clusters that are being upgraded to
+    1.24 with `kubeadm upgrade apply`, the command will add the new taint `node-role.kubernetes.io/control-plane:NoSchedule`
+    to existing control plane nodes. Please adapt your infrastructure to these changes.
+    In 1.25 the old taint `node-role.kubernetes.io/master:NoSchedule` will be removed.'

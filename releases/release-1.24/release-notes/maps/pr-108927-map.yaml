@@ -1,0 +1,3 @@
+pr: 108927
+releasenote:
+  text: Record requests rejected with 429 in the apiserver_request_total metric

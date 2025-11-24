@@ -1,0 +1,4 @@
+pr: 123405
+releasenote:
+  text: ValidatingAdmissionPolicy was promoted to GA and will be `enabled` by default.
+pr_body: ""

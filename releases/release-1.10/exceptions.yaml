@@ -1,0 +1,38 @@
+# Exceptions to code freeze requested in 1.10
+# Google Group: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown
+# Release Team Lead: Jaice Singer DuMars (@jdumars)
+
+- name: "Initial implementation for ingress rate limiting"
+  issue: "https://github.com/kubernetes/kubernetes/issues/61305"
+  thread: "https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/nT-wHv4jq24"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/61302"
+  status: "approved"
+
+- name: "Schedule DaemonSet Pods by kube-scheduler"
+  issue: "https://github.com/kubernetes/kubernetes/pull/59862"
+  thread: "https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/sPvjpRMf5es"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/59862"
+  status: "reverted"
+
+- name: "GCE Regional Persistent Disk to beta"
+  issue: "https://github.com/kubernetes/kubernetes/issues/59988"
+  thread: "https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/pwI3QwuCYL4"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/60450"
+  status: "approved"
+
+- name: "RunAsGroup in pod and container SecurityContext"
+  issue: "https://github.com/kubernetes/features/issues/213"
+  thread: "https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/kq4zhEI_c-I"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/52077"
+  status: "approved"
+
+- name: "Advanced Audit Logging"
+  issue: "https://github.com/kubernetes/features/issues/22"
+  thread: "https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/FeOcIqdRmZQ"
+  pull_requests:
+  - "https://github.com/kubernetes/kubernetes/pull/60237"
+  status: "approved"

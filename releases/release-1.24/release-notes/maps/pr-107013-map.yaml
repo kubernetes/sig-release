@@ -1,0 +1,6 @@
+pr: 107013
+releasenote:
+  text: '`kubeadm.k8s.io/v1beta2` has been deprecated and will be removed in a future
+    release, possibly in 3 releases (one year). You should start using `kubeadm.k8s.io/v1beta3`
+    for new clusters. To migrate your old configuration files on disk you can use
+    the `kubeadm config migrate` command.'

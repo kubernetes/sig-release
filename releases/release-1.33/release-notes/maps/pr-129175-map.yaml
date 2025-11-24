@@ -1,0 +1,4 @@
+pr: 129175
+releasenote:
+  text: Renamed coredns metrics, see https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics.
+pr_body: ""

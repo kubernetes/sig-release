@@ -1,0 +1,3 @@
+pr: 102965
+releasenote:
+  text: Updates hostprocess tests to specify user.

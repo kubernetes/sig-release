@@ -1,0 +1,4 @@
+pr: 115621
+releasenote:
+  text: Graduated the `CSINodeExpandSecret` feature to Beta. This feature facilitates
+    passing secrets to CSI driver as part of Node Expansion CSI operation.

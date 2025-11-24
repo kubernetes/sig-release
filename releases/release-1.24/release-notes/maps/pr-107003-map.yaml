@@ -1,0 +1,4 @@
+pr: 107003
+releasenote:
+  text: 'kubectl: restored `--dry-run`, `--dry-run=true`, and `--dry-run=false` for
+    compatibility with pre-1.23 invocations.'

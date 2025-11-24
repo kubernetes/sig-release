@@ -1,0 +1,5 @@
+pr: 115652
+releasenote:
+  text: The Scheduler did not run the plugin Score method when its PreScore method
+    returned a Skip status. In other words, the PreScore/Score plugin could return
+    a Skip status in PreScore if the plugin did nothing in Score for that Pod.

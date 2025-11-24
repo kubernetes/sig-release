@@ -1,0 +1,4 @@
+pr: 106912
+releasenote:
+  text: 'Fix libct/cg/fs2: fixed GetStats for unsupported hugetlb error on Raspbian
+    Bullseye'

@@ -1,0 +1,3 @@
+pr: 108004
+releasenote:
+  text: Add the metric `container_oom_events_total` to kubelet's cAdvisor metric endpoint.

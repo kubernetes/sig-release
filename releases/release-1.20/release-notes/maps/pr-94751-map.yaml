@@ -1,0 +1,3 @@
+pr: 94751
+releasenote:
+  text: Fix race condition on timeCache locks.

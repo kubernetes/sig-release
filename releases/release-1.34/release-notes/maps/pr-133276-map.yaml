@@ -1,0 +1,6 @@
+pr: 133276
+releasenote:
+  text: The scheduler no longer cleared the `nominatedNodeName` field for Pods. External
+    components, such as Cluster Autoscaler and Karpenter, were responsible for managing
+    this field when needed.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 130649
+releasenote:
+  text: The kube-scheduler will set the `observedGeneration` field on pod conditions
+    when the `PodObservedGenerationTracking` feature gate is set.
+pr_body: ""

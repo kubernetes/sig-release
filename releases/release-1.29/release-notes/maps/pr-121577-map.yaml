@@ -1,0 +1,3 @@
+pr: 121577
+releasenote:
+  text: Bumped `cel-go` to `v0.17.7` and introduced set `ext` library with new options.

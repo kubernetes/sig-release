@@ -1,0 +1,4 @@
+pr: 111399
+releasenote:
+  text: The  new flag `etcd-ready-timeout` has been added. It configures a timeout
+    of an additional etcd check performed as part of readyz check.

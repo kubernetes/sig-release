@@ -1,0 +1,6 @@
+pr: 106089
+releasenote:
+  text: The `PodSecurity `admission plugin has graduated to `beta` and is enabled
+    by default. The admission configuration version has been promoted to `pod-security.admission.config.k8s.io/v1beta1`.
+    See https://kubernetes.io/docs/concepts/security/pod-security-admission/ for usage
+    guidelines.

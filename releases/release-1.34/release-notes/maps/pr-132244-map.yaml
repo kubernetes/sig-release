@@ -1,0 +1,5 @@
+pr: 132244
+releasenote:
+  text: Fixed a regression introduced in 1.33 where some paginated LIST calls fell
+    back to `etcd` instead of being served from cache.
+pr_body: ""

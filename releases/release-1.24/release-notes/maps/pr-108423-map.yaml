@@ -1,0 +1,5 @@
+pr: 108423
+releasenote:
+  text: API server's deprecated `--experimental-encryption-provider-config` flag is
+    now removed. Adapt your machinery to use the `--encryption-provider-config` flag
+    that is available since v1.13.

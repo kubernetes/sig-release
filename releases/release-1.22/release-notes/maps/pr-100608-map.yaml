@@ -1,0 +1,3 @@
+pr: 100608
+releasenote:
+  text: Fix runtime container status for `PostStart` hook error.

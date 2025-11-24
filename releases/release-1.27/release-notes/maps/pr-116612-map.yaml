@@ -1,0 +1,6 @@
+pr: 116612
+releasenote:
+  text: 'Added validation to ensure that if `service.kubernetes.io/topology-aware-hints`
+    and `service.kubernetes.io/topology-mode` annotations are both set, they are set
+    to the same value.Also Added deprecation warning if `service.kubernetes.io/topology-aware-hints`
+    annotation is used.'

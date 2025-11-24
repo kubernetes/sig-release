@@ -1,0 +1,4 @@
+pr: 111472
+releasenote:
+  text: The namespace editors and admins can now create leases.coordination.k8s.io
+    and should use this type for leaderelection instead of configmaps.

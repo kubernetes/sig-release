@@ -1,0 +1,4 @@
+pr: 113318
+releasenote:
+  text: 'kubeadm: added the experimental (alpha) feature gate `EtcdLearnerMode` that
+    allows etcd members to be joined as learner and only then promoted as voting members'

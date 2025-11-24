@@ -1,0 +1,5 @@
+pr: 107607
+releasenote:
+  text: |-
+    '`build/dependencies.yaml`: remove the dependency on Docker. With the dockershim removal, core Kubernetes no longer
+    has to track the latest validated version of Docker.'

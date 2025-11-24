@@ -1,0 +1,6 @@
+pr: 134743
+releasenote:
+  text: Fixed an issue where the `kubelet` `/configz` endpoint reported an incorrect
+    value for `kubeletconfig.cgroupDriver` when the cgroup driver setting was received
+    from the container runtime.
+pr_body: ""

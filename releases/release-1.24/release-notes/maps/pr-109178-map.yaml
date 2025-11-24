@@ -1,0 +1,6 @@
+pr: 109178
+releasenote:
+  text: Omit enum declarations from the static openapi file captured at https://git.k8s.io/kubernetes/api/openapi-spec.
+    This file is used to generate API clients, and use of enums in those generated
+    clients (rather than strings) can break forward compatibility with additional
+    future values in those fields. See https://issue.k8s.io/109177 for details.

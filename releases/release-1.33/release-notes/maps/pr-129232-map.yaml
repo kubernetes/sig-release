@@ -1,0 +1,4 @@
+pr: 129232
+releasenote:
+  text: Renamed some metrics related to CoreDNS, see the [README](https://github.com/coredns/coredns/blob/v1.11.0/plugin/forward/README.md#metrics) for v1.11.0 of CoreDNS.
+pr_body: ""

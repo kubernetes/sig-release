@@ -1,0 +1,5 @@
+pr: 129826
+releasenote:
+  text: kubelet no longer logs multiple errors when running on a system with no iptables
+    binaries installed.
+pr_body: ""

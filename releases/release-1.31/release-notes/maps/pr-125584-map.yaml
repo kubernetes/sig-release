@@ -1,0 +1,4 @@
+pr: 125584
+releasenote:
+  text: Fixed recursive LIST from watch cache returning object matching key.
+pr_body: ""

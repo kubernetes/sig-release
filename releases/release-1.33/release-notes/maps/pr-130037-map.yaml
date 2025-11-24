@@ -1,0 +1,5 @@
+pr: 130037
+releasenote:
+  text: Fixed `SELinuxWarningController` defaults when running kube-controller-manager
+    in a container.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 123442
+releasenote:
+  text: |
+    "`NewVolumeManagerReconstruction` feature is now GA."
+pr_body: ""

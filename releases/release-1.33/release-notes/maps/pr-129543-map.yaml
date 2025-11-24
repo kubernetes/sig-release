@@ -1,0 +1,8 @@
+pr: 129543
+releasenote:
+  text: "DRA API: The maximum number of pods that can use the same
+    ResourceClaim is now 256 instead of 32. Downgrading a cluster
+    where this relaxed limit is in use to Kubernetes 1.32.0 is not
+    supported, as version 1.32.0 would refuse to update ResourceClaims
+    with more than 32 entries in the `status.reservedFor` field."
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 116327
+releasenote:
+  text: |-
+    `kube-apiserver`: Improved memory use when performing GetList on the cache.

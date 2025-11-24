@@ -1,0 +1,6 @@
+pr: 99045
+releasenote:
+  text: The metric `storage_operation_errors_total` is not removed, but is marked
+    deprecated, and the metric `storage_operation_status_count` is marked deprecated.
+    In both cases the `storage_operation_duration_seconds` metric can be used to recover
+    equivalent counts (using `status=fail-unknown` in the case of `storage_operations_errors_total`).

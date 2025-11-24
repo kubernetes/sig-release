@@ -1,0 +1,3 @@
+pr: 104944
+releasenote:
+  text: Migrate `cmd/proxy/{config, healthcheck, winkernel}` to structured logging

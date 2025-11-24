@@ -1,0 +1,4 @@
+pr: 116018
+releasenote:
+  text: Fixed a log line in scheduler that inaccurately implies that volume binding
+    has finalized

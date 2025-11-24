@@ -1,0 +1,4 @@
+pr: 102239
+releasenote:
+  text: The deprecated flag `--algorithm-provider` has been removed from `kube-scheduler`.
+    Use instead `ComponentConfig` to configure the set of enabled plugins.

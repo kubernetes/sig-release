@@ -1,0 +1,6 @@
+pr: 126996
+releasenote:
+  text: |-
+    If a client makes an API streaming requests and specifies an `application/json;as=Table` content type, the API server now responds with a 406 (Not Acceptable) error.
+    This change helps to ensure that unsupported formats, such as `Table` representations are correctly rejected.
+pr_body: ""

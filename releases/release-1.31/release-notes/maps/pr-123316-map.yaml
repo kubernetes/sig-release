@@ -1,0 +1,5 @@
+pr: 123316
+releasenote:
+  text: |-
+    Fixed a bug where `kubectl describe` incorrectly displayed NetworkPolicy port ranges
+    (showing only the starting port).

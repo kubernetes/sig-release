@@ -1,0 +1,4 @@
+pr: 132222
+releasenote:
+  text: Built Kubernetes using Go 1.24.4.
+pr_body: ""

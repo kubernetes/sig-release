@@ -1,0 +1,4 @@
+pr: 115480
+releasenote:
+  text: Added `--output plaintext-openapiv2` argument to kubectl explain to use old
+    openapiv2 `explain` implementation.

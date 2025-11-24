@@ -1,0 +1,5 @@
+pr: 127421
+releasenote:
+  text: Fixed the ability to set the `resolvConf` option in drop-in kubelet configuration
+    files, which validates that drop-in kubelet configuration files are in a supported version.
+pr_body: ""

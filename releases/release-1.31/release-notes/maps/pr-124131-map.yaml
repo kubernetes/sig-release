@@ -1,0 +1,4 @@
+pr: 124131
+releasenote:
+  text: Fixed the bug where if Endpointslices mirrored from Endpoints by the EndpointSliceMirroring controller they would not reconcile if modified.
+    were not reconciled if modified

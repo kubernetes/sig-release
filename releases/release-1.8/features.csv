@@ -1,0 +1,57 @@
+Alpha,19,,,,,,,,,,
+Beta,16,,,,,,,,,,
+Stable,4,,,,,,,,,,
+TOTAL,39,,,,,,,,,,
+"Themes for release: Stability, Security, Simplicity",,,,,,,,,,,
+"Supporting features: (stability - storage, autoscaling, workloads)",,,,,,,,,,,
+"Supporting features: (security - #33,34,36,37,39)",,,,,,,,,,,
+"Supporting fetaures: (simplicity - #13, 29, 30) ",,,,,,,,,,,
+Feature Name,Stage,SIG,Assignee,Needs Docs?,k8s.io Docs PR,additional PR,One Line Release Note Description,Needs Doc Review,Needs Tech Review,Merged,Notes
+Failure policy for Jobs,Alpha,SIG-Apps,soltysh,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5319,,,,,,
+Federated Jobs feature,Alpha,SIG-Federation,quinton-hoole,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5485,,,,,,
+kubectl binary plugins,Alpha,SIG-CLI,fabianofranz,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5294,,,,,,
+Improve the multi-platform compatibility,Alpha,SIG-ClusterLifecycle,luxas,no,,,,,,,
+Extensible configuration/invocation of `kubeadm`,Alpha,SIG-ClusterLifecycle,luxas,yes,https://github.com/kubernetes/kubeadm/blob/master/docs/design/design_v1.8.md,,,,,,
+Self-hosting support in kubeadm,Alpha,SIG-ClusterLifecycle,luxas,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5497,,,,,,
+Federated Pod AutoScaler feature,Alpha,SIG-Federation,irfanurrehman,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5487,,,,,,
+Implement IPVS-based in-cluster service load balancing,Alpha,SIG-Network,haibinxie,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5571,,,,,,
+Hardware Device Plugins,Alpha,SIG-Node,jiayingz,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5261,,,,,,"just moving to beta, docs already present"
+Further differentiate performance characteristics associated with pod level QoS,Alpha,SIG-Node,sjenning,yes,https://github.com/kubernetes/kubernetes.github.io/pull/4950,,,,,,
+Priority/preemption,Alpha,SIG-Scheduling,bsalamat,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5328,,,,,,
+Represent node conditions that block scheduling using taints,Alpha,SIG-Scheduling,gmarek,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5352,,,,,,
+Add support for resizing PVs,Alpha,SIG-Storage,gnufied,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5528/files,,,,,,
+Storage Volume Snapshots,Alpha,SIG-Storage,jingxu97,no,"[JSD] Not part of the 1.8 release cadence, no docs needed",,,,,,
+Supports Storage as Allocatable Resource,Alpha,SIG-Storage,jingxu97,yes,"https://github.com/kubernetes/kubernetes.github.io/pull/5490
+https://github.com/kubernetes/kubernetes.github.io/pull/5522
+https://github.com/kubernetes/kubernetes.github.io/pull/5493",,,,,,
+Improve Flexvolume Deployment,Alpha,SIG-Storage,cxing,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5492,,,,,,
+Mount namespace propagation,Alpha,SIG-Storage,jsafrane,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5544,,"Enable a container to mount a volume rshared so that any mounts from inside the container are reflected in the host's mount namespace (this will enable, for example, containerization of volume plugins).
+",,,,
+Dynamic Kubelet Configuration,Alpha,SIG-Node,mtaufen,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5523,,,,,,
+Containerd CRI Integration,Alpha,SIG-Node,Random-Liu,no,,,,,,,
+"CustomResourceDefinitions, née Third Party Resources",Beta,SIG-API-machinery,deads2k,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5290,,,,,,
+Workload Controllers v1Beta2,Beta,SIG-Apps,kow3ns,yes,"kubernetes/kubernetes.github.io#5420
+kubernetes/kubernetes.github.io#5398
+kubernetes/kubernetes.github.io#5463
+kubernetes/kubernetes.github.io#5461
+kubernetes/kubernetes.github.io#5496
+kubernetes/kubernetes.github.io#5421",https://github.com/kubernetes/features/commit/b302cbdf03184148f6bd8f4259bd4e5a8c6649b7,,,,,
+CronJob to beta,Beta,SIG-Apps,soltysh,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5475,,,,,,
+Arbitrary/Custom Metrics in the Horizontal Pod Autoscaler,Beta,SIG-Autoscaling,DirectXMan12,no,,,,,,,
+Integrate Cluster Bootstrap/Discovery with Kubernetes Core,Beta,SIG-ClusterLifecycle,jbeda,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5440,,,,,,
+"Easy, automated upgrades with the `kubeadm upgrade` command",Beta,SIG-ClusterLifecycle,luxas,yes,https://github.com/kubernetes/kubernetes.github.io/pull/4770,,,,,,
+Metrics Server & Master Metrics API,Beta,SIG-Instrumentation,piosz,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5560,,,,,,
+NetworkPolicy CIDR support,Beta,SIG-Network,cmluciano,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5529,,,,,,
+NetworkPolicy Egress support,Beta,SIG-Network,cmluciano,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5529,,,,,,
+ReclaimPolicy in StorageClass,Beta,SIG-Storage,wongma7,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5171,,,,,,
+Expose Storage Usage Metrics,Beta,SIG-Storage,jingxu97,no,"This feature adds PVC reference to the volume stats in kubelet stats summary API. These volume usage metrics are also emitted in prometheus format.
+",,,,,,
+Kubelet client credential rotation,Beta,SIG-Auth,jcbsmpsn,no,,,,,,,
+HPA Status Conditions,Beta,SIG-Autoscaling,DirectXMan12,no,,,,,,,
+Monitoring Pipeline Metrics HPA API,Beta,SIG-Autoscaling,DirectXMan12,no,,,,,,,
+Allow API to return large lists in chunks to improve responsiveness,Beta,SIG-API-machinery,smarterclayton,no,,,,,,,
+Rules review API,Beta,SIG-Auth,ericchiang,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5549,,,,,,
+RBAC v1,Stable,SIG-Auth,liggitt,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5445,,,,,,
+AllowPrivilegeEscalation added to SecurityContext,Stable,SIG-Auth,jessfraz,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5448,,,,,,
+Add support for high level volume operation metrics,Stable,SIG-Storage,gnufied,no,,,,,,,
+Support Volume Mount Options,Stable,SIG-Storage,gnufied,yes,https://github.com/kubernetes/kubernetes.github.io/pull/5254,,,,,,

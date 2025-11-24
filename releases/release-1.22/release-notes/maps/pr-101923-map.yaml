@@ -1,0 +1,5 @@
+pr: 101923
+releasenote:
+  text: "kubeadm: add a new field `skipPhases` to `v1beta3` `InitConfiguration` and `JoinConfiguration`
+    that can contain a list of phases to skip during \"kubeadm init\" and \"kubeadm join\".
+    The flag \"--skip-phases\" takes precedence over this field."

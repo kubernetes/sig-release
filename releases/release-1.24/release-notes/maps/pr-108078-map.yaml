@@ -1,0 +1,4 @@
+pr: 108078
+releasenote:
+  text: Prevent unnecessary `Endpoints` and `EndpointSlice` updates caused by `Pod
+    ResourceVersion` change

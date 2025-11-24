@@ -1,0 +1,4 @@
+pr: 125442
+releasenote:
+  text: Graduated `JobPodFailurePolicy` to GA and locked it to it's default.
+pr_body: ""

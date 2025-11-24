@@ -1,0 +1,4 @@
+pr: 102821
+releasenote:
+  text: Pods that are known to the kubelet to have previously been Running should
+    not revert to Pending state, the kubelet will now infer a termination.

@@ -1,0 +1,5 @@
+pr: 123282
+releasenote:
+  text: Addressed an issue where a JWT authenticator set up via `--authentication-config`
+    would encounter failures in verifying tokens not signed with RS256.
+pr_body: ""

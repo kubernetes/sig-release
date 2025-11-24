@@ -1,0 +1,4 @@
+pr: 103526
+releasenote:
+  text: The `kubectl port-forward service` will now properly exit when the attached
+    pod dies

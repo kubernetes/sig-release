@@ -1,0 +1,4 @@
+pr: 130394
+releasenote:
+  text: Allowed `ImageVolume` for Restricted PSA profiles.
+pr_body: ""

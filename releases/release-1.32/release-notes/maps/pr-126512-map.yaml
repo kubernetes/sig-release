@@ -1,0 +1,6 @@
+pr: 126512
+releasenote:
+  text: Included an additional resource labeltransformati in on_operations_total metric
+    which could be used for resource specific validations for example handling of
+    encryption config by the apiserver.
+pr_body: ""

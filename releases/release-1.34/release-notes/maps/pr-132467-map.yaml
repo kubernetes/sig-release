@@ -1,0 +1,5 @@
+pr: 132467
+releasenote:
+  text: Fixed an issue that allowed Custom Resources to be created using Server-Side
+    Apply even when their `CustomResourceDefinition` was terminating.
+pr_body: ""

@@ -1,0 +1,9 @@
+pr: 123935
+releasenote:
+  text: 'kube-apiserver: Fixed a `1.27`+ regression in watch stability by serving watch
+    requests without a `resourceVersion` from the watch cache by default, as in <`1.27`
+    (disabling the change in PR 115096 by default). This mitigates the impact of an
+    etcd watch bug (https://github.com/etcd-io/etcd/pull/17555). If the 1.27 change
+    in PR 115096 to serve these requests from underlying storage is still desired despite
+    the impact on watch stability, it can be re-enabled with a `WatchFromStorageWithoutResourceVersion`
+    feature gate.'

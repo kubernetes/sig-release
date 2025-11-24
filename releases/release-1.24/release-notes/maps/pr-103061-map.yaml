@@ -1,0 +1,4 @@
+pr: 103061
+releasenote:
+  text: The `node.k8s.io/v1alpha1` RuntimeClass API is no longer served. Use the `node.k8s.io/v1`
+    API version, available since v1.20

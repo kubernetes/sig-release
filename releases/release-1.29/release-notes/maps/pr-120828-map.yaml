@@ -1,0 +1,4 @@
+pr: 120828
+releasenote:
+  text: '`kubeadm`: Fixed the bug where it always did CRI detection when `--config`
+    was passed, even if it is not required by the subcommand.'

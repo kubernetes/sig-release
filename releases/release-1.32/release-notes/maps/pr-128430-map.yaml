@@ -1,0 +1,4 @@
+pr: 128430
+releasenote:
+  text: Made kubelet's /metrics/slis endpoint always available.
+pr_body: ""

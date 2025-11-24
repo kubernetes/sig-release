@@ -1,0 +1,4 @@
+pr: 128824
+releasenote:
+  text: Added a `/flagz` endpoint for kube-controller-manager endpoint.
+pr_body: ""

@@ -1,0 +1,8 @@
+pr: 125437
+releasenote:
+ text: |
+   "Removed the ability to run `kubectl exec [POD] [COMMAND]` without a `--` separator.
+   The `--` separator has been recommended since the Kubernetes v1.18 release, which also deprecated the legacy way of invoking `kubectl exec`.
+
+   This change aligns with the deprecation of legacy `kubectl exec` command execution and enforces the use of `kubectl exec [POD] -- [COMMAND]` for improved compatibility and adherence to recommended practices."
+pr_body: ""

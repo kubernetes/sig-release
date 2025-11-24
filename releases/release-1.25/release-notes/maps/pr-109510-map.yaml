@@ -1,0 +1,6 @@
+pr: 109510
+releasenote:
+  text: Added the latest GCE pinhole firewall feature, which introduces `destination-ranges`
+    in the ingress `firewall-rules`. It restricts access to the backend IPs by allowing
+    traffic through `ILB` or `NetLB` only. This change does **NOT** change the existing
+    `ILB` or `NetLB` behavior.

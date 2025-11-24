@@ -1,0 +1,5 @@
+pr: 134730
+releasenote:
+  text: 'Fixed an issue in asynchronous preemption: Scheduler now checks if preemption
+    is ongoing for a Pod before initiating new preemption calls.'
+pr_body: ""

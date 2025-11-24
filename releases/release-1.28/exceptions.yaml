@@ -1,0 +1,98 @@
+# Exception requests in 1.28
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Grace Nguyen ([@gracenng](https://github.com/gracenng)
+# Release Team Shadows : Angelos Kolaitis ([@neoaggelos](https://github.com/neoaggelos))
+# / Heba Elayoty ([@helayoty](https://github.com/helayoty))
+# / Mark Rossetti ([@marosset](https://github.com/marosset))
+# / Mickey Boxell ([@mickeyboxell](https://github.com/mickeyboxell))
+
+# Enhancements Freeze Exceptions requested in 1.28
+enhancementFreeze:
+
+- name: "Add CDI devices to device plugin API"
+  issue: 4009
+  date_requested: 2023-06-15
+  date_reviewed: 2023-06-15
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/c9VcEVCfqVw"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4011"
+  status: "approved"
+
+- name: "Extend podresources API to report allocatable resources"
+  issue: 2403
+  date_requested: 2023-06-16
+  date_reviewed: 2023-06-16
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/4HnMj_RNQBs"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4045"
+  status: "approved"
+
+- name: "CRI image pulling with progress notification"
+  issue: 3542
+  date_requested: 2023-06-20
+  date_reviewed: 2023-06-20
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/cbnkrvfTZ1s"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/3547"
+  status: "denied"
+
+- name: "Recursive Read-only (RRO) mounts"
+  issue: 3857
+  date_requested: 2023-06-20
+  date_reviewed: 2023-06-20
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/hMtxyv_D0TE"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/3858"
+  status: "denied"
+
+# Code Freeze Exceptions requested in 1.28
+codeFreeze:
+
+- name: "KMS v2"
+  issue: 3299
+  date_requested: 2023-07-18
+  date_reviewed: 2023-07-19
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/N-mDGmax5Ao"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/118828"
+  status: "approved"
+
+- name: "PodReplacementPolicy for Jobs"
+  issue: 3939
+  date_requested: 2023-07-19
+  date_reviewed: 2023-07-19
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/8m9_MloKhoI"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/119301"
+    - "https://github.com/kubernetes/kubernetes/pull/118772"
+    - "https://github.com/kubernetes/kubernetes/pull/117015"
+  status: "approved"
+
+- name: "CEL for Admission Control"
+  issue: 3488
+  date_requested: 2023-07-19
+  date_reviewed: 2023-07-19
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/4yBLh6u8daw"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/119215"
+    - "https://github.com/kubernetes/kubernetes/pull/119109"
+    - "https://github.com/kubernetes/kubernetes/pull/118644"
+  status: "approved"
+
+- name: "Dynamic Cardinality Enforcement"
+  issue: 2305
+  date_requested: 2023-07-19
+  date_reviewed: 2023-07-19
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/E8X-L2ZPRQI"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/118299"
+  status: "approved"
+ 
+- name: "PersistentVolume last phase transition time"
+  issue: 3762
+  date_requested: 2023-07-20
+  date_reviewed: 2023-07-20
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/gw1a4brRgQw"
+  pull_requests: 
+    - "https://github.com/kubernetes/kubernetes/pull/116469"
+  status: "approved"

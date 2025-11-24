@@ -1,0 +1,5 @@
+pr: 108136
+releasenote:
+  text: pod affinity namespace selector and cross-namespace quota graduated to GA.
+    The feature gate `PodAffinityNamespaceSelector` is locked and will be removed
+    in 1.26.

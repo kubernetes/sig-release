@@ -1,0 +1,5 @@
+pr: 134313
+releasenote:
+  text: Introduced a structured and versioned `v1alpha1` response for the `statusz`
+    endpoint.
+pr_body: ""

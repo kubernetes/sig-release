@@ -1,0 +1,11 @@
+pr: 99647
+releasenote:
+  text: "kubeadm: remove the automatic detection and matching of cgroup drivers
+    for Docker. For new clusters if you have not configured the cgroup driver explicitly
+    you might get a failure in the `kubelet` on driver mismatch (kubeadm clusters
+    should be using the `systemd` driver). Also remove the `IsDockerSystemdCheck`
+    preflight check (warning) that checks if the Docker cgroup driver is set to `systemd`.
+    Ideally such detection / coordination should be on the side of CRI implementers
+    and the kubelet (tracked [here](https://github.com/kubernetes/kubernetes/issues/99808)).
+    Please see the [page](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/configure-cgroup-driver/) on how to configure cgroup drivers with kubeadm
+    manually"

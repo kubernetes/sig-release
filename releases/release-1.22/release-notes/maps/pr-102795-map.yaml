@@ -1,0 +1,5 @@
+pr: 102795
+releasenote:
+  text: |-
+    Added a new metric `apiserver_flowcontrol_request_concurrency_in_use` that shows the number of
+    seats (concurrency) occupied by the currently executing requests in the API Priority and Fairness system.

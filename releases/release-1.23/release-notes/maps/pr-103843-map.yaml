@@ -1,0 +1,4 @@
+pr: 103843
+releasenote:
+  text: Update description of `--audit-log-maxbackup` to describe behavior when `value
+    = 0`.

@@ -1,0 +1,5 @@
+pr: 135059
+releasenote:
+  text: After fixing regressions detected in `v1.34`, the `SchedulerAsyncAPICalls`
+    feature gate was re-enabled by default.
+pr_body: ""

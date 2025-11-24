@@ -1,0 +1,5 @@
+pr: 118069
+releasenote:
+  text: |-
+    `kubeadm:` fixed a bug where the static pod changes detection logic is inconsistent
+    with kubelet.

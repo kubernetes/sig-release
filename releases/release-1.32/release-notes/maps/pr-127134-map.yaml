@@ -1,0 +1,7 @@
+pr: 127134
+releasenote:
+  text: 'Introduced `v1alpha1` API for mutating admission policies, enabling extensible
+    #     admission control via CEL expressions (KEP  3962: Mutating Admission Policies).
+    #     To use, enable the `MutatingAdmissionPolicy` feature gate and the `admissionregistration.k8s.io/v1alpha1`
+    #     API via `--runtime-config`.'
+pr_body: ""

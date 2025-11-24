@@ -1,0 +1,5 @@
+pr: 130463
+releasenote:
+  text: Graduated the `MatchLabelKeys` (MismatchLabelKeys) feature in PodAffinity (PodAntiAffinity)
+    to GA.
+pr_body: ""

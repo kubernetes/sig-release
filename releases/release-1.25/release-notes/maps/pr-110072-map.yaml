@@ -1,0 +1,6 @@
+pr: 110072
+releasenote:
+  text: 'Kubeadm: modified the etcd static Pod `liveness` and `readiness` probes to use
+    a new etcd `v3.5.3+` HTTP(s) health check endpoint `/health?serializable=true` that
+    allows to track the health of individual etcd members and not fail all members
+    if a single member is not healthy in the etcd cluster.'

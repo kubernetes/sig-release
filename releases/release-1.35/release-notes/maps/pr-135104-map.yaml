@@ -1,0 +1,6 @@
+pr: 135104
+releasenote:
+  text: |-
+    Introduced the alpha `MutableSchedulingDirectivesForSuspendedJobs` feature gate (disabled by default), which allows mutating a Job's scheduling directives while the Job is suspended.
+    It also updates the Job controller to clears the `status.startTime` field for suspended Jobs.
+pr_body: ""

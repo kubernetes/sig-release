@@ -1,0 +1,6 @@
+pr: 113910
+releasenote:
+  text: 'Migrated the `ClusterRole` aggregation controller (within `kube-controller-manager`)
+    to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).'
+
+    

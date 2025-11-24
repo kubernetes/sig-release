@@ -1,0 +1,3 @@
+pr: 116046
+releasenote:
+  text: Graduated the container resource metrics feature on `HPA` to beta.

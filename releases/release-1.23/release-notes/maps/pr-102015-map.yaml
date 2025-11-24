@@ -1,0 +1,4 @@
+pr: 102015
+releasenote:
+  text: Support allocating whole NUMA nodes in the CPUManager when there is not a
+    1:1 mapping between socket and NUMA node

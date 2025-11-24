@@ -1,0 +1,3 @@
+pr: 103758
+releasenote:
+  text: Added PowerShell completion generation by running `kubectl completion powershell`.

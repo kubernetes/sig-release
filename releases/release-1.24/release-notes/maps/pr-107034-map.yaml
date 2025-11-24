@@ -1,0 +1,3 @@
+pr: 107034
+releasenote:
+  text: Fixed a bug that could cause panic when a `/healthz` request times out.

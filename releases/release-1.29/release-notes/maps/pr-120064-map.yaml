@@ -1,0 +1,5 @@
+pr: 120064
+releasenote:
+  text: |-
+    '`kubeadm`: added validation to verify that the `CertificateKey` is a valid hex
+    encoded AES key.'

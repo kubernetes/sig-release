@@ -1,0 +1,4 @@
+pr: 126073
+releasenote:
+  text: Fixed fake clientset ApplyScale subresource from `status` to `scale`.
+pr_body: ""

@@ -1,0 +1,3 @@
+pr: 96959
+releasenote:
+  text: Reorganized iptables rules to reduce rules in `KUBE-SERVICES` and `KUBE-NODEPORTS`.

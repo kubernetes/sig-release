@@ -1,0 +1,4 @@
+pr: 121841
+releasenote:
+  text: 'kubeadm: supported updating certificate organization during `kubeadm certs
+    renew` operation.'

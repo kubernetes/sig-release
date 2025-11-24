@@ -1,0 +1,5 @@
+pr: 131165
+releasenote:
+  text: '`kubectl create|delete|get|replace --raw` commands now honored the server
+    root paths specified in the kubeconfig file.'
+pr_body: ""

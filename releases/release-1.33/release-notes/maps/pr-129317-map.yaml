@@ -1,0 +1,4 @@
+pr: 129317
+releasenote:
+  text: 'kubeadm: removed preflight check for `touch` on Linux nodes.'
+pr_body: ""

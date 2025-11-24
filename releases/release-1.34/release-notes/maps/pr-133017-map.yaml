@@ -1,0 +1,5 @@
+pr: 133017
+releasenote:
+  text: The `KubeletServiceAccountTokenForCredentialProviders` feature was beta and
+    enabled by default.
+pr_body: ""

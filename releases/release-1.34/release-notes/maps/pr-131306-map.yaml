@@ -1,0 +1,4 @@
+pr: 131306
+releasenote:
+  text: Migrated `pkg/kubelet/volumemanager` to contextual logging.
+pr_body: ""

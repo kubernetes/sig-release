@@ -1,0 +1,4 @@
+pr: 103958
+releasenote:
+  text: 'kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections
+    and the time to read the headers of incoming requests.'

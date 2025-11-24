@@ -1,0 +1,4 @@
+pr: 108953
+releasenote:
+  text: Remove insecure serving configuration from cloud-provider package, which is
+    consumed by cloud-controller-managers.

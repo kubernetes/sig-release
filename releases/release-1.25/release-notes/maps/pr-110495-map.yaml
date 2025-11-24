@@ -1,0 +1,4 @@
+pr: 110495
+releasenote:
+  text: Changed ownership semantics of PersistentVolume's spec.claimRef from `atomic`
+    to `granular`.

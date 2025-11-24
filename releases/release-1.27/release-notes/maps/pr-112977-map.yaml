@@ -1,0 +1,4 @@
+pr: 112977
+releasenote:
+  text: Documented the reason field in CRI API to ensure it equals `OOMKilled` for the
+    containers terminated by OOM killer

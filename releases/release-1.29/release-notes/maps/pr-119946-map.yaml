@@ -1,0 +1,5 @@
+pr: 119946
+releasenote:
+  text: '`kubeadm`: turned on feature gate `MergeCLIArgumentsWithConfig` to merge
+    the config from flag and config file, otherwise, if the flag `--ignore-preflight-errors`
+    is set from the CLI, then the value from config file will be ignored.'

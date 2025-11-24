@@ -1,0 +1,6 @@
+pr: 99582
+releasenote:
+  text: 'kube-scheduler: a plugin enabled in a v1beta2 configuration file takes precedence
+    over the default configuration for that plugin. This simplifies enabling default
+    plugins with custom configuration without needing to explicitly disable those
+    default plugins.'

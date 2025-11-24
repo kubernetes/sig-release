@@ -1,0 +1,5 @@
+pr: 122893
+releasenote:
+  text: |
+    "Fixed error handling in `EnsureAdminClusterRoleBindingImpl`."
+pr_body: ""

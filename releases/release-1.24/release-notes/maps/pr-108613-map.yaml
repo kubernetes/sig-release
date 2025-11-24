@@ -1,0 +1,4 @@
+pr: 108613
+releasenote:
+  text: Fixed a bug that out-of-tree plugin is misplaced when using scheduler v1beta3
+    config

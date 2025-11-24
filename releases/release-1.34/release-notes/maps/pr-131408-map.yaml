@@ -1,0 +1,4 @@
+pr: 131408
+releasenote:
+  text: Stopped logging error events when waiting for expansion on the kubelet.
+pr_body: ""

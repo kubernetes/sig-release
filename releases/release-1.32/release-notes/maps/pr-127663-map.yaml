@@ -1,0 +1,5 @@
+pr: 127663
+releasenote:
+  text: The members name and typeDescription of the Reflector struct were exported
+    to allow for better user extensibility.
+pr_body: ""

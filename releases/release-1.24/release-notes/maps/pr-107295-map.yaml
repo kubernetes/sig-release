@@ -1,0 +1,12 @@
+pr: 107295
+releasenote:
+  text: "kubeadm: make sure that `kubeadm init/join` always use a URL scheme (unix://
+    on Linux and npipe:// on Windows) when passing a value to the `--container-runtime-endpoint`
+    kubelet flag. This flag's value is taken from the kubeadm configuration `criSocket`
+    field or the `--cri-socket` CLI flag. Automatically add a missing URL scheme to
+    the user configuration in memory, but warn them that they should also update their
+    configuration on disk manually. During `kubeadm upgrade apply/node` mutate the
+    `/var/lib/kubelet/kubeadm-flags.env` file on disk and the `kubeadm.alpha.kubernetes.io/cri-socket`
+    annotation Node object if needed. These automatic actions are temporary and will
+    be removed in a future release. In the future the kubelet may not support CRI
+    endpoints without an URL scheme."

@@ -1,0 +1,5 @@
+pr: 134452
+releasenote:
+  text: 'DRA: The `DynamicResourceAllocation` feature gate for the core functionality
+    (GA in `v1.34`) has now been locked to enabled-by-default and cannot be disabled anymore.'
+pr_body: ""

@@ -1,0 +1,7 @@
+pr: 132800
+releasenote:
+  text: |-
+    `kube-controller-manager` reported the following metrics for `ResourceClaims` with admin access:
+    - `resourceclaim_controller_creates_total` count metric with labels `admin_access` (true or false), `status` (failure or success) to track the total number of `ResourceClaims` creation requests
+    - `resourceclaim_controller_resource_claims` gauge metric with labels `admin_access` (true or false), `allocated` (true or false) to track the current number of `ResourceClaims`.
+pr_body: ""

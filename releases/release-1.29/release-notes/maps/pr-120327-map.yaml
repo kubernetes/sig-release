@@ -1,0 +1,3 @@
+pr: 120327
+releasenote:
+  text: Fixed a `v1.28` regression handling negative index json patches.

@@ -1,0 +1,4 @@
+pr: 101398
+releasenote:
+  text: 'Fix: set "host is down" as corrupted mount. When SMB server is down, there
+    is no way to terminate pod which is using SMB mount, would get an error.'

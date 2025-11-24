@@ -1,0 +1,3 @@
+pr: 113636
+releasenote:
+  text: kubectl shell completions for the bash shell now include descriptions.

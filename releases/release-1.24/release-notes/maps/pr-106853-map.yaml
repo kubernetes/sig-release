@@ -1,0 +1,4 @@
+pr: 106853
+releasenote:
+  text: Allowed attached volumes to be mounted quicker by skipping exponential backoff when
+    checking for reported-in-use volumes.

@@ -1,0 +1,3 @@
+pr: 121491
+releasenote:
+  text: Promoted `PodReplacementPolicy` to `beta`.

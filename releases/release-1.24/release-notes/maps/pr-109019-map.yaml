@@ -1,0 +1,4 @@
+pr: 109019
+releasenote:
+  text: Custom resource requests with `fieldValidation=Strict` consistently require
+    `apiVersion` and `kind`, matching non-strict requests

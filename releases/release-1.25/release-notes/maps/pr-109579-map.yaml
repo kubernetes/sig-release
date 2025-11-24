@@ -1,0 +1,3 @@
+pr: 109579
+releasenote:
+  text: Renamed `apiserver_watch_cache_watch_cache_initializations_total` to `apiserver_watch_cache_initializations_total`

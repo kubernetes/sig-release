@@ -1,0 +1,4 @@
+pr: 105853
+releasenote:
+  text: Restored `NumPDBViolations` info of nodes, when `HTTPExtender ProcessPreemption`.
+    This info will be used in subsequent filtering steps - `pickOneNodeForPreemption`

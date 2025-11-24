@@ -1,0 +1,4 @@
+pr: 133030
+releasenote:
+  text: Replaced timer ptr helper function with the `k8s.io/utils/ptr` implementations.
+pr_body: ""

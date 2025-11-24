@@ -1,0 +1,5 @@
+pr: 109120
+releasenote:
+  text: New "field_validation_request_duration_seconds" metric, measures how long
+    requests take, indicating the value of the fieldValidation query parameter and
+    whether or not server-side field validation is enabled on the apiserver

@@ -1,0 +1,3 @@
+pr: 105484
+releasenote:
+  text: Fixed architecture within manifest for non `amd64` etcd images.

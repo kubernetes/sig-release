@@ -1,0 +1,5 @@
+pr: 129017
+releasenote:
+  text: Added a validation for the `revisionHistoryLimit` field in the `.spec` of a StatefulSet,
+    to prevent it from being set to a negative value.
+pr_body: ""

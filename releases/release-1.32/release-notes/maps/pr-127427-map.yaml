@@ -1,0 +1,6 @@
+pr: 127427
+releasenote:
+  text: Fixed the bug in `NodeUnschedulable` that only happens with QHint enabled, which
+    the scheduler might miss some updates for the Pods rejected by NodeUnschedulable
+    plugin and put the Pods in the queue for a longer time than needed.
+pr_body: ""

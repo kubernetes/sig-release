@@ -1,0 +1,12 @@
+pr: 129874
+releasenote:
+  text: The Kubernetes API server merged selectors built from `matchLabelKeys` into
+    the `labelSelector` of `topologySpreadConstraints`, aligning Pod Topology Spread
+    behavior with Inter-Pod Affinity. To prevent breaking existing Pods using `matchLabelKeys`,
+    this scheduler behavior was preserved until v1.34. Upgrades from v1.32 to v1.34
+    should be done incrementally (v1.32 → v1.33 → v1.34), ensuring Pods created at
+    v1.32 with `matchLabelKeys` are scheduled before reaching v1.34. Controllers relying
+    on `matchLabelKeys` no longer need to handle them directly and can use `labelSelector`
+    instead. The new feature gate `MatchLabelKeysInPodTopologySpreadSelectorMerge`,
+    enabled by default, controls this behavior.
+pr_body: ""

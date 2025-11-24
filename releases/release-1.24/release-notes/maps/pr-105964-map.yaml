@@ -1,0 +1,4 @@
+pr: 105964
+releasenote:
+  text: The `kubectl logs` will now warn and default to the first container in a pod. This
+    new behavior brings it in line with `kubectl exec`.

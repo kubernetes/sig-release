@@ -1,0 +1,4 @@
+pr: 108017
+releasenote:
+  text: Add a deprecated cmd flag for the time interval between flushing pods from
+    unschedulable queue to active queue or backoff queue.

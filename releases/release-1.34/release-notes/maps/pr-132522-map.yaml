@@ -1,0 +1,9 @@
+pr: 132522
+releasenote:
+  text: |-
+    - Added driver-owned fields in `ResourceSlice` to mark whether the device was shareable among multiple resource claims (or requests) and to specify how each capacity could be shared between different requests.
+    - Added user-owned fields in `ResourceClaim` to specify resource requirements against each device capacity.
+    - Added scheduler-owned field in `ResourceClaim.Status` to specify how much device capacity is reserved for a specific request.
+    - Added an additional identifier to `ResourceClaim.Status` for the device supports multiple allocations.
+    - Added a new constraint type to enforce uniqueness of specified attributes across all allocated devices.
+pr_body: ""

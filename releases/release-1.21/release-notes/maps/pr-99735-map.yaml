@@ -1,0 +1,3 @@
+pr: 99735
+releasenote:
+  text: Kubelet Graceful Node Shutdown feature graduates to Beta and enabled by default.

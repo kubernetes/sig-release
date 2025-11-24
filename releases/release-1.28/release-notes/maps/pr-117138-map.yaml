@@ -1,0 +1,4 @@
+pr: 117138
+releasenote:
+  text: Added '--concurrent-job-syncs' flag for `kube-controller-manager` to set the
+    number of job controller workers.

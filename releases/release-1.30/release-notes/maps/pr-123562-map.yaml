@@ -1,0 +1,5 @@
+pr: 123562
+releasenote:
+  text: |
+    "Fixed CEL estimated cost for expressions that perform operations on the result of `map()` operations (e.g., `.map(...).exists(...)` ) to have the correct estimated cost instead of an unbounded cost."
+pr_body: ""

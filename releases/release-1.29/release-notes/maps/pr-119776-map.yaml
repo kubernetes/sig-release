@@ -1,0 +1,4 @@
+pr: 119776
+releasenote:
+  text: Fixed an issue where a `CronJob` could fail to clean up Jobs when the `ResourceQuota`
+    for `Jobs` had been reached.

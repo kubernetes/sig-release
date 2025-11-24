@@ -1,0 +1,3 @@
+pr: 100784
+releasenote:
+  text: Updates dependency `sigs.k8s.io/structured-merge-diff` to v4.1.1.

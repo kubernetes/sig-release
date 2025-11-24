@@ -1,0 +1,7 @@
+pr: 128169
+releasenote:
+  text: |-
+    Promotes the `ServiceAccountTokenJTI` feature to GA, which adds a `jti` claim to issued service account tokens and embeds the `jti` claim as a `authentication.kubernetes.io/credential-id=["JTI=..."]` value in user extra info
+    - Promotes the `ServiceAccountTokenPodNodeInfo` feature to GA, which adds the node name and uid as claims into service account tokens mounted into running pods, and embeds that information as `authentication.kubernetes.io/node-name` and `authentication.kubernetes.io/node-uid` user extra info when the token is used
+    - Promotes the `ServiceAccountTokenNodeBindingValidation` feature to GA, which validates service account tokens bound directly to nodes.
+pr_body: ""

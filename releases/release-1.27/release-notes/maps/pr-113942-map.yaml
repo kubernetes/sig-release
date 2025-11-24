@@ -1,0 +1,5 @@
+pr: 113942
+releasenote:
+  text: 'The following feature gates for volume expansion GA features have now been
+    removed and must no longer be referenced in `--feature-gates` flags: `ExpandCSIVolumes`,
+    `ExpandInUsePersistentVolumes`, `ExpandPersistentVolumes`'

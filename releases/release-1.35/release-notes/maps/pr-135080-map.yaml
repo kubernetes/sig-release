@@ -1,0 +1,5 @@
+pr: 135080
+releasenote:
+  text: Promoted the `JobManagedBy` feature to general availability. The `JobManagedBy`
+    feature gate was locked to `true` and will be removed in a future Kubernetes release.
+pr_body: ""

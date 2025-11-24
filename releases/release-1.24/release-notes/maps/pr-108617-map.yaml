@@ -1,0 +1,5 @@
+pr: 108617
+releasenote:
+  text: CEL regex patterns in x-kubernetes-valiation rules are compiled when CRDs
+    are created/updated if the pattern is provided as a string constant in the expression.
+    Any regex compile errors are reported as a CRD create/update validation error.

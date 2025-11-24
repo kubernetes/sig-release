@@ -1,0 +1,5 @@
+pr: 109541
+releasenote:
+  text: In-tree GCE PD test cases no longer run in Kubernetes testing harness anymore
+    (side effect of switching on CSI migration in 1.22). Please switch on the environment
+    variable `ENABLE_STORAGE_GCE_PD_DRIVER` to `yes` if you need to run these tests.

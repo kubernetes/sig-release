@@ -1,0 +1,4 @@
+pr: 113776
+releasenote:
+  text: Fixed issue with `Winkernel Proxier` - No ingress load balancer rules with
+    endpoints to support load balancing when all the endpoints are terminating.

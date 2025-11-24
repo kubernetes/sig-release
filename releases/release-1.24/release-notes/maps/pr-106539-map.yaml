@@ -1,0 +1,5 @@
+pr: 106539
+releasenote:
+  text: Replace the url label of `rest_client_request_duration_seconds` and `rest_client_rate_limiter_duration_seconds`
+    metrics with a host label to prevent cardinality explosions and keep only the
+    useful information. This is a breaking change required for security reasons.

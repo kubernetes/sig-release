@@ -1,0 +1,5 @@
+pr: 124886
+releasenote:
+  text: Removed legacy cloud provider integration code (undoing a previous reverted
+    commit).
+pr_body: ""

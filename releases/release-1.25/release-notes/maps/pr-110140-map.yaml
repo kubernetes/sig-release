@@ -1,0 +1,4 @@
+pr: 110140
+releasenote:
+  text: Fixed an issue on Windows nodes where `HostProcess` containers may not be
+    created as expected.

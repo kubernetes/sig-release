@@ -1,0 +1,6 @@
+pr: 126145
+releasenote:
+  text: |-
+    Promoted feature-gate `VolumeAttributesClass` to beta (disabled by default). Users need to enable the feature gate and the `storage.k8s.io/v1beta1` API group to use this feature.
+    Promoted the VolumeAttributesClass API to beta.
+pr_body: ""

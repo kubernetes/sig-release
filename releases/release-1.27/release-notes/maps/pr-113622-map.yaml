@@ -1,0 +1,4 @@
+pr: 113622
+releasenote:
+  text: Migrated the `DaemonSet` controller (within `kube-controller-manager`) to
+    use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging)

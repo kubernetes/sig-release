@@ -1,0 +1,4 @@
+pr: 115056
+releasenote:
+  text: '`PodGC` for pods which are in terminal phase now do not add the `DisruptionTarget`
+    condition.'

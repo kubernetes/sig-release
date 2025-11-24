@@ -1,0 +1,6 @@
+pr: 132902
+releasenote:
+  text: Added `started_user_namespaced_pods_total` and `started_user_namespaced_pods_errors_total`
+    for tracking the successes and failures in creating pods if a user namespace was
+    requested.
+pr_body: ""

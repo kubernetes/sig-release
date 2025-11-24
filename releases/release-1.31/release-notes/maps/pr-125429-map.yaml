@@ -1,0 +1,6 @@
+pr: 125429
+releasenote:
+  text: |-
+    `Job`: Fixed a bug where `SuccessCriteriaMet` could be added to the Job with
+    `successPolicy` regardless of the `featureGate` being enabled.
+pr_body: ""

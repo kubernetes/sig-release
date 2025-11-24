@@ -1,0 +1,4 @@
+pr: 109388
+releasenote:
+  text: kubelet's deprecated `--experimental-kernel-memcg-notification` flag is now
+    removed.  Use `--kernel-memcg-notification` instead.

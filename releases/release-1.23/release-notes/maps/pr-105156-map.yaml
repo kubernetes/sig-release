@@ -1,0 +1,9 @@
+pr: 105156
+releasenote:
+  text: |-
+    `client-go`, using log level 9, traces the following events of a HTTP request:
+        - DNS lookup
+        - TCP dialing
+        - TLS handshake
+        - Time to get a connection from the pool
+        - Time to process a request

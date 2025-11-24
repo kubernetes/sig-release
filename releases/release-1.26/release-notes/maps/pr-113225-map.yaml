@@ -1,0 +1,4 @@
+pr: 113225
+releasenote:
+  text: |
+    '`DelegateFSGroupToCSIDriver` feature is GA.'

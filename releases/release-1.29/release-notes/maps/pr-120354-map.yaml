@@ -1,0 +1,6 @@
+pr: 120354
+releasenote:
+  text: '`kube-proxy`: Added an option/flag for configuring the `nf_conntrack_tcp_be_liberal`
+    sysctl (in the kernel''s netfilter conntrack subsystem).  When enabled, `kube-proxy`
+    will not install the `DROP` rule for invalid conntrack states, which currently
+    breaks users of asymmetric routing.'

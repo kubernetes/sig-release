@@ -1,0 +1,6 @@
+pr: 115268
+releasenote:
+  text: Added `NewVolumeManagerReconstruction` feature gate and enabled it by default
+    to enable updated discovery of mounted volumes during kubelet startup. Please
+    watch for kubelet getting stuck at startup and / or not unmounting volumes from
+    deleted Pods and report any issues in this area.

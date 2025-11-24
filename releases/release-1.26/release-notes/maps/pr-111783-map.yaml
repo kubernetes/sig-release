@@ -1,0 +1,4 @@
+pr: 111783
+releasenote:
+  text: 'kubeadm: tried to load CA cert from external CertificateAuthority file when
+    CertificateAuthorityData is empty for existing kubeconfig.'

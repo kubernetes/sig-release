@@ -1,0 +1,5 @@
+pr: 123413
+releasenote:
+  text: |
+    "kubectl `port-forward` over websockets (tunneling SPDY) can now be enabled using an `Alpha` feature flag environment variable: KUBECTL_PORT_FORWARD_WEBSOCKETS=true. The API Server being communicated to must *also* have an `Alpha` feature flag enabled: PortForwardWebsockets."
+pr_body: ""

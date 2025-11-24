@@ -1,0 +1,4 @@
+pr: 119735
+releasenote:
+  text: Volume attach or publish operation will not fail at `kubelet` if target path
+    directory already exists on the node.

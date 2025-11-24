@@ -1,0 +1,5 @@
+pr: 129207
+releasenote:
+  text: Removed support for `v1alpha1` version of `ValidatingAdmissionPolicy` and `ValidatingAdmissionPolicyBinding`
+    API kinds.
+pr_body: ""

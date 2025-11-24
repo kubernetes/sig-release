@@ -1,0 +1,8 @@
+pr: 111023
+releasenote:
+  text: |-
+    'Added a `ResourceClaim` API (in the `resource.k8s.io/v1alpha1` API group and
+    behind the `DynamicResourceAllocation` feature gate).
+    The new API is now more flexible than the existing Device Plugins feature of Kubernetes because it
+    allows Pods to request (claim) special kinds of resources, which can be available at node level, cluster
+    level, or following any other model you implement.'

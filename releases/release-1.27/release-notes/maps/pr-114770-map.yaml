@@ -1,0 +1,5 @@
+pr: 114770
+releasenote:
+  text: Fixed clearing of rate-limiter for the queue of checks for cleaning stale
+    pod disruption conditions. The bug could result in the PDB synchronization updates
+    firing too often or the pod disruption cleanups taking too long to happen.

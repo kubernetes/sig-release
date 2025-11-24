@@ -1,0 +1,3 @@
+pr: 102489
+releasenote:
+  text: Fixed 'kubelet' runtime panic for timed-out portforward streams.

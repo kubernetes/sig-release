@@ -1,0 +1,6 @@
+pr: 118846
+releasenote:
+  text: |-
+    `kubelet` now allows pods to use the `net.ipv4.tcp_keepalive_time` sysctl by default
+    and the minimal kernel version is 4.5; Pod Security Admission allows this sysctl
+    in `v1.29+` versions of the baseline and restricted policies.

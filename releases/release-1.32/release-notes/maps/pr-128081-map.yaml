@@ -1,0 +1,4 @@
+pr: 128081
+releasenote:
+  text: Fixed spacing in `--validate flag` description in kubectl.
+pr_body: ""

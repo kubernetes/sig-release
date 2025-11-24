@@ -1,0 +1,5 @@
+pr: 115655
+releasenote:
+  text: |-
+    `NodeResourceFit` and `NodeResourcesBalancedAllocation` implement the `PreScore`
+    extension point for a more performant calculation.

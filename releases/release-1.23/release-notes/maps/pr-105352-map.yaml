@@ -1,0 +1,3 @@
+pr: 105352
+releasenote:
+  text: Revert building binaries with PIE mode.

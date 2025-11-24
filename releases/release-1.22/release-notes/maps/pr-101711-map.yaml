@@ -1,0 +1,5 @@
+pr: 101711
+releasenote:
+  text: The `IngressClassNamespacedParams` feature gate has graduated to beta and
+    is enabled by default. This means IngressClass resource will now have two new
+    fields - `spec.paramters.namespace` and `spec.parameters.scope`.

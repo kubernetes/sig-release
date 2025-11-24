@@ -1,0 +1,3 @@
+pr: 119078
+releasenote:
+  text: Faster scheduling when `ResourceClaims` are involved.

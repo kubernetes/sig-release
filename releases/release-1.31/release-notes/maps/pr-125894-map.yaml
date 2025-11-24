@@ -1,0 +1,4 @@
+pr: 125894
+releasenote:
+  text: Kubernetes is now built with go 1.22.5.
+pr_body: ""

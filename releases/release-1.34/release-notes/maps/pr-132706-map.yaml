@@ -1,0 +1,5 @@
+pr: 132706
+releasenote:
+  text: 'Dynamic Resource Allocation: Graduated core functionality to general availability
+    (GA). This newly stable feature uses the _structured parameters_ flavor of DRA.'
+pr_body: ""

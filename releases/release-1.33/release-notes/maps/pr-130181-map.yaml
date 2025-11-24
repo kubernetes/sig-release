@@ -1,0 +1,6 @@
+pr: 130181
+releasenote:
+  text: Changed metadata management for Pods to populate `.metadata.generation` on
+    writes. New pods will have a `metadata.generation` of 1; updates to mutable fields
+    in the Pod `.spec` will result in `metadata.generation` being incremented by 1.
+pr_body: ""

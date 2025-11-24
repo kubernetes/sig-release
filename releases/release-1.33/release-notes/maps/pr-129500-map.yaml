@@ -1,0 +1,4 @@
+pr: 129500
+releasenote:
+  text: Removed general available feature-gate `PDBUnhealthyPodEvictionPolicy`.
+pr_body: ""

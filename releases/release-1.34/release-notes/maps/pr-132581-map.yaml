@@ -1,0 +1,4 @@
+pr: 132581
+releasenote:
+  text: Added useful endpoints for kube-apiserver.
+pr_body: ""

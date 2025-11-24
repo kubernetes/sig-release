@@ -1,0 +1,3 @@
+pr: 107096
+releasenote:
+  text: Removed kubelet `--non-masquerade-cidr` deprecated CLI flag

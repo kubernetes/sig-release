@@ -1,0 +1,5 @@
+pr: 126072
+releasenote:
+  text: Made kube-proxy Windows service control manager integration (`--windows-service`)
+    configurable in v1alpha1 component configuration via `windowsRunAsService` field.
+pr_body: ""

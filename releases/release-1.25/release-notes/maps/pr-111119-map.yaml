@@ -1,0 +1,4 @@
+pr: 111119
+releasenote:
+  text: Encrypted data with DEK using AES-GCM instead of AES-CBC for kms data encryption.
+    No user action required. Reads with AES-GCM and AES-CBC will continue to be allowed.

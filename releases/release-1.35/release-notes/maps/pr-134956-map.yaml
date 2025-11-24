@@ -1,0 +1,5 @@
+pr: 134956
+releasenote:
+  text: Removed `BlockOwnerDeletion` from `ResourceClaim` created from
+    `ResourceClaimTemplate` and from `extendedResourceClaim` created by the `scheduler`.
+pr_body: ""

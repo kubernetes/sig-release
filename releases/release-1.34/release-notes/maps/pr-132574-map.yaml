@@ -1,0 +1,6 @@
+pr: 132574
+releasenote:
+  text: 'DRA: removed support for the v1alpha4 kubelet gRPC API (added in 1.31, superseded
+    in 1.32). DRA drivers using the helper package from Kubernetes  >= 1.32 use the
+    v1beta1 API and continue to be supported.'
+pr_body: ""

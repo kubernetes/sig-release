@@ -1,0 +1,8 @@
+pr: 134017
+releasenote:
+  text: 'Updated `kubectl scale` to return a consistent error message when a specified
+    resource is not found. Previously, it returned: `error: no objects passed to scale
+    <GroupResource> "<ResourceName>" not found`. It now matches the format used by
+    other commands (e.g., `kubectl get`): `Error from server (NotFound): <GroupResource>
+    "<ResourceName>" not found`.'
+pr_body: ""

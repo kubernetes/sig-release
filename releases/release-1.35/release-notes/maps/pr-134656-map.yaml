@@ -1,0 +1,4 @@
+pr: 134656
+releasenote:
+  text: Removed `rsync` as a dependency to build Kubernetes.
+pr_body: ""

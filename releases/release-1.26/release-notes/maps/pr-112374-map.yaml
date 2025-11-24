@@ -1,0 +1,4 @@
+pr: 112374
+releasenote:
+  text: Logs of requests that were timed out by a timeout handler no longer contain
+    a `statusStack` and `logging error output` fields.

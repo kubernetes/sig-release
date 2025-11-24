@@ -1,0 +1,6 @@
+pr: 127918
+releasenote:
+  text: |-
+    Append the image pull error for the pods `status.containerStatuses[*].state.waiting.message` when
+    in image pull back-off (`reason` is `ImagePullBackOff`) instead of the generic `Back-off pulling image…` message.
+pr_body: ""

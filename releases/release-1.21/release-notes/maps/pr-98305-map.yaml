@@ -1,0 +1,4 @@
+pr: 98305
+releasenote:
+  text: 'kube-proxy: fix a bug on UDP `NodePort` Services where stale connection tracking
+    entries may blackhole the traffic directed to the `NodePort`'

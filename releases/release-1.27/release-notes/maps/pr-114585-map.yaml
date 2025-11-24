@@ -1,0 +1,5 @@
+pr: 114585
+releasenote:
+  text: The list-type of the alpha `resourceClaims` field introduced to `Pods` in
+    `1.26.0` was modified from `set` to `map`, resolving an incompatibility with use
+    of this schema in `CustomResourceDefinitions` and with server-side apply.

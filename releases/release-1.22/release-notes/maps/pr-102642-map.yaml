@@ -1,0 +1,4 @@
+pr: 102642
+releasenote:
+  text: Fixed a bug due to which the controller was not populating the `lastSuccessfulTime`
+    field added to `cronjob.status` in `batch/v1`.

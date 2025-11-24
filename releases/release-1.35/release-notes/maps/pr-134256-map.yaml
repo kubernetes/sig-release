@@ -1,0 +1,10 @@
+pr: 134256
+releasenote:
+  text: Kubernetes API Go types removed runtime use of the `github.com/gogo/protobuf`
+    library, and are no longer registered into the global gogo type registry. Kubernetes
+    API Go types were not suitable for use with the `google.golang.org/protobuf` library,
+    and no longer implement `ProtoMessage()` by default to avoid accidental incompatible
+    use. If removal of these marker methods impacts your use, it can be re-enabled
+    for one more release with a `kubernetes_protomessage_one_more_release` build tag,
+    but will be removed in `v1.36`.
+pr_body: ""

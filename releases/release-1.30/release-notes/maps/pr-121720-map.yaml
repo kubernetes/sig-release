@@ -1,0 +1,5 @@
+pr: 121720
+releasenote:
+  text: |
+    "Added a new internal metric `kubelet_first_network_pod_start_sli_duration_second` in the kubelet that allowed developers to understand the source of the latency problems on node startups."
+pr_body: ""

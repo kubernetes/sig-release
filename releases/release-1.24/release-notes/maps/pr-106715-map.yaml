@@ -1,0 +1,4 @@
+pr: 106715
+releasenote:
+  text: 'CRI-API: IPs returned by `PodSandboxNetworkStatus`` are ignored by the kubelet
+    for host-network pods.'

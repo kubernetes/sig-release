@@ -1,0 +1,5 @@
+pr: 123640
+releasenote:
+  text: 'kube-apiserver: the AuthorizationConfiguration type accepted in `--authorization-config`
+    files has been promoted to `apiserver.config.k8s.io/v1beta1`.'
+pr_body: ""

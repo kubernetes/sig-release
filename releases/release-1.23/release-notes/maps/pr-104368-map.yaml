@@ -1,0 +1,8 @@
+pr: 104368
+releasenote:
+  text: |-
+    Since golang 1.17 both net.ParseIP and net.ParseCIDR rejects leading zeros in the dot-decimal notation of IPv4 addresses,
+    Kubernetes will keep allowing leading zeros on IPv4 address to not break the compatibility.
+    IMPORTANT: Kubernetes interprets leading zeros on IPv4 addresses as decimal, users must not rely on parser alignment to not being impacted by the associated security advisory:
+    CVE-2021-29923 golang standard library "net" - Improper Input Validation of octal literals in golang 1.16.2 and below standard library "net" results in indeterminate SSRF & RFI vulnerabilities.
+    Reference: https://nvd.nist.gov/vuln/detail/CVE-2021-29923

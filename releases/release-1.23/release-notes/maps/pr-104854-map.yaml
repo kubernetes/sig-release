@@ -1,0 +1,8 @@
+pr: 104854
+releasenote:
+  text: 'kubeadm: switch the preflight check (called ''Swap'') that verifies if swap
+    is enabled on Linux hosts to report a warning instead of an error. This is related
+    to the graduation of the NodeSwap feature gate in the kubelet to Beta and being
+    enabled by default in 1.23 - allows swap support on Linux hosts. In the next release
+    of kubeadm (1.24) the preflight check will be removed, thus we recommend that
+    you stop using it - e.g. via `--ignore-preflight-errors` or the kubeadm config.'

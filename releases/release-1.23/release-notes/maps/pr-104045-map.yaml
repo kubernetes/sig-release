@@ -1,0 +1,3 @@
+pr: 104045
+releasenote:
+  text: StatefulSet `minReadySeconds` is promoted to beta.

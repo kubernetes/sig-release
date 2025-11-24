@@ -1,0 +1,5 @@
+pr: 128748
+releasenote:
+  text: Ensured that non-scheduling related errors (e.g., network errors) did not
+    lengthen the Pod scheduling backoff time.
+pr_body: ""

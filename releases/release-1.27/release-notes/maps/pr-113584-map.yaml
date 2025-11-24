@@ -1,0 +1,6 @@
+pr: 113584
+releasenote:
+  text: |-
+    Migrated the volume attach/detach controller (within `kube-controller-manager`) to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).
+    Migrated the `PersistentVolumeClaim` protection controller (within `kube-controller-manager`) to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).
+    Migrated the `PersistentVolume` protection controller (within `kube-controller-manager`) to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).

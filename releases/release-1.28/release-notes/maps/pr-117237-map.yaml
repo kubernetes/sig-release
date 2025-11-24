@@ -1,0 +1,5 @@
+pr: 117237
+releasenote:
+  text: |-
+    Removed GA'ed feature gates: `MixedProtocolLBService`, `ServiceInternalTrafficPolicy`,
+    `ServiceIPStaticSubrange`, and `EndpointSliceTerminatingCondition`.

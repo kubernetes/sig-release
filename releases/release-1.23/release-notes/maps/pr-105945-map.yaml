@@ -1,0 +1,4 @@
+pr: 105945
+releasenote:
+  text: The `/openapi/v3` endpoint will be populated with OpenAPI v3 if the feature
+    flag is enabled

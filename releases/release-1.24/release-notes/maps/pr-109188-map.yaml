@@ -1,0 +1,4 @@
+pr: 109188
+releasenote:
+  text: Fix the overestimated cost of delegated API requests in kube-apiserver API
+    priority & fairness

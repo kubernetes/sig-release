@@ -1,0 +1,5 @@
+pr: 132529
+releasenote:
+  text: Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr`
+    for the kubeapiserver.
+pr_body: ""

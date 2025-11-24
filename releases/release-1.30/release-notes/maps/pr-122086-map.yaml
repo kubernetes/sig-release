@@ -1,0 +1,5 @@
+pr: 122086
+releasenote:
+  text: |
+    "Removed the generally available feature gate `ExpandedDNSConfig`."
+pr_body: ""

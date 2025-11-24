@@ -1,0 +1,3 @@
+pr: 113769
+releasenote:
+  text: Updated `cAdvisor` to `v0.46.0`.

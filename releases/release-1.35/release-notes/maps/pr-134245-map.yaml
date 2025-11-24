@@ -1,0 +1,5 @@
+pr: 134245
+releasenote:
+  text: Fixed a bug in `kube-scheduler` where pending pod preemption caused preemptor
+    pods to be retried more frequently.
+pr_body: ""

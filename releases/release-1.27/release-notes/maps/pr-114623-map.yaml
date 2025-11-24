@@ -1,0 +1,5 @@
+pr: 114623
+releasenote:
+  text: |-
+    A terminating pod on a node that is not caused by preemption no longer prevents `kube-scheduler` from preempting pods on that node
+    - Rename `PreemptionByKubeScheduler` to `PreemptionByScheduler`

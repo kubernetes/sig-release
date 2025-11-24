@@ -1,0 +1,4 @@
+pr: 112577
+releasenote:
+  text: Removed feature gates `ServiceLoadBalancerClass` and `ServiceLBNodePortControl`.
+    These feature gates were enabled (and locked) since `v1.24`.

@@ -1,0 +1,4 @@
+pr: 108992
+releasenote:
+  text: Adds `OpenAPIV3SchemaInterface` to `DiscoveryClient` and its variants for
+    fetching OpenAPI v3 schema documents.

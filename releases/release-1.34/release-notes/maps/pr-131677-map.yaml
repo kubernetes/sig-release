@@ -1,0 +1,5 @@
+pr: 131677
+releasenote:
+  text: 'kubeadm: Added support for ECDSA-P384 as an encryption algorithm type in
+    v1beta4.'
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 108296
+releasenote:
+  text: 'client-go: add new histogram metric to record the size of the requests and
+    responses.'

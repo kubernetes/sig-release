@@ -1,0 +1,4 @@
+pr: 133135
+releasenote:
+  text: CRI API had auth fields in image pulling marked as `debug_redact`.
+pr_body: ""

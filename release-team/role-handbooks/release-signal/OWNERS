@@ -1,0 +1,6 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - release-signal-subteam-approvers
+reviewers:
+  - release-signal-subteam-approvers

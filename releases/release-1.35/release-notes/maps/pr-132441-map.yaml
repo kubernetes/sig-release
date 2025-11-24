@@ -1,0 +1,5 @@
+pr: 132441
+releasenote:
+  text: 'KEP-5440: Enabled support for resizing resources while a Job is suspended.
+    This feature is alpha.'
+pr_body: ""

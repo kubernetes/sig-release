@@ -1,0 +1,4 @@
+pr: 130535
+releasenote:
+  text: CPUManager Policy Options support is GA.
+pr_body: ""

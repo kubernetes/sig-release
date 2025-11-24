@@ -1,0 +1,4 @@
+pr: 104699
+releasenote:
+  text: If a conflict occurs when creating an object with `generateName`, the server
+    now returns an "AlreadyExists" error with a retry option.

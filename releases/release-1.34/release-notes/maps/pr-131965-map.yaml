@@ -1,0 +1,5 @@
+pr: 131965
+releasenote:
+  text: Skipped pod backoff entirely when the `PodMaxBackoffDuration` kube-scheduler
+    option was set to zero and the `SchedulerPopFromBackoffQ` feature gate was enabled.
+pr_body: ""

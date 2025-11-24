@@ -1,0 +1,5 @@
+pr: 127650
+releasenote:
+  text: 'Kubeadm: fixed an issue where the wrong member list was being reported when removing
+    an etcd member.'
+pr_body: ""

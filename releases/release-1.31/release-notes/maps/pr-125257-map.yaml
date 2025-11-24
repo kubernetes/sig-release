@@ -1,0 +1,5 @@
+pr: 125257
+releasenote:
+  text: Graduated Kubernetes' support for AppArmor to GA. You now cannot disable the `AppArmor`
+    feature gate.
+pr_body: ""

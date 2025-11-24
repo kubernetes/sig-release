@@ -1,0 +1,8 @@
+pr: 134826
+releasenote:
+  text: 'CSI drivers can now opt in to receive service account tokens via the secrets
+    field instead of volume context by setting `spec.serviceAccountTokenInSecrets:
+    true` in the CSIDriver object. This prevents tokens from being exposed in logs
+    and other outputs. The feature is gated by the `CSIServiceAccountTokenSecrets`
+    feature gate (beta in `v1.35`).'
+pr_body: ""

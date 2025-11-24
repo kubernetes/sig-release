@@ -1,0 +1,4 @@
+pr: 107565
+releasenote:
+  text: 'kube-apiserver: when merging lists, Server Side Apply now prefers the order
+    of the submitted request instead of the existing persisted object.'

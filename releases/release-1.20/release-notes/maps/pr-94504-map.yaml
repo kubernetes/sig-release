@@ -1,0 +1,3 @@
+pr: 94504
+releasenote:
+  text: 'Kubeadm now prints warnings instead of throwing errors if the current system time is outside of the NotBefore and NotAfter bounds of a loaded certificate. '

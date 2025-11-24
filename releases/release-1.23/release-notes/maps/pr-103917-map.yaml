@@ -1,0 +1,4 @@
+pr: 103917
+releasenote:
+  text: 'Troubleshooting: informers log handlers that take more than 100 milliseconds
+    to process an object if the `DeltaFIFO` queue starts to grow beyond 10 elements.'

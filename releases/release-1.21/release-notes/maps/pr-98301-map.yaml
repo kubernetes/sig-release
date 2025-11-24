@@ -1,0 +1,3 @@
+pr: 98301
+releasenote:
+  text: 'kubectl: add bash-completion for comma separated list on `kubectl get`'

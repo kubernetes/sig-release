@@ -1,0 +1,4 @@
+pr: 115770
+releasenote:
+  text: Discovery document will correctly return the resources for aggregated apiservers
+    that do not implement aggregated disovery

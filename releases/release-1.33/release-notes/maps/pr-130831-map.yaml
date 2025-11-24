@@ -1,0 +1,5 @@
+pr: 130831
+releasenote:
+  text: Disabled InPlace Pod Resize for Swap enabled containers that does not have
+    memory ResizePolicy as RestartContainer.
+pr_body: ""

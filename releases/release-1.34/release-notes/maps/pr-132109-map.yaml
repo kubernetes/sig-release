@@ -1,0 +1,5 @@
+pr: 132109
+releasenote:
+  text: Fixed a bug that caused an unexpected delay in creating Pods for newly created
+    Jobs.
+pr_body: ""

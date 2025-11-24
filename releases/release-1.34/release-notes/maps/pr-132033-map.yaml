@@ -1,0 +1,7 @@
+pr: 132033
+releasenote:
+  text: 'DRA: The scheduler plugin prevented abnormal filter runtimes by timing out
+    after 10 seconds. This was configurable via the plugin configuration''s `FilterTimeout`.
+    Setting it to zero disabled the timeout and restored the behavior of Kubernetes
+    <= 1.33.'
+pr_body: ""

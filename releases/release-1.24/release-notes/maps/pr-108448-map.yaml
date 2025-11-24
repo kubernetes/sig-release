@@ -1,0 +1,3 @@
+pr: 108448
+releasenote:
+  text: The API server's deprecated `--deserialization-cache-size` flag is now removed.

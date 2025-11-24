@@ -1,0 +1,6 @@
+pr: 129731
+releasenote:
+  text: The `SidecarContainers` feature has graduated to GA. 'SidecarContainers' feature
+    gate was locked to default value and will be removed in v1.36. If you were setting
+    this feature gate explicitly, please remove it now.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 115575
+releasenote:
+  text: '`kubeadm`: fixed a bug where the uploaded kubelet configuration in `kube-system/kubelet-config`
+    `ConfigMap` does not respect user patch'

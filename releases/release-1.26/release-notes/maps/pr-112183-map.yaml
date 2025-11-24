@@ -1,0 +1,4 @@
+pr: 112183
+releasenote:
+  text: Fixed spurious `field is immutable` errors validating updates to Event API
+    objects via the `events.k8s.io/v1` API.

@@ -1,0 +1,4 @@
+pr: 101093
+releasenote:
+  text: Fixed a bug where `startupProbe` stopped working after a container's first
+    restart.

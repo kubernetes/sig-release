@@ -1,0 +1,5 @@
+pr: 102840
+releasenote:
+  text: |-
+    Updated the Graceful Node Shutdown Pod termination reason and message.
+    Updated the Graceful Node Shutdown Pod rejection reason and message.

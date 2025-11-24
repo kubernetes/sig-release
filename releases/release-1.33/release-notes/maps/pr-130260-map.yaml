@@ -1,0 +1,5 @@
+pr: 130260
+releasenote:
+  text: The `BalancedAllocation` plugin now skips all best-effort (zero-requested)
+    pods.
+pr_body: ""

@@ -1,0 +1,3 @@
+pr: 104693
+releasenote:
+  text: Introduce `OS` field in the PodSpec

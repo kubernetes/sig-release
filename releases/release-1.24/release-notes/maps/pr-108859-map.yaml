@@ -1,0 +1,4 @@
+pr: 108859
+releasenote:
+  text: Skip x-kubernetes-validations rules if having fundamental error against the
+    OpenAPIv3 schema.

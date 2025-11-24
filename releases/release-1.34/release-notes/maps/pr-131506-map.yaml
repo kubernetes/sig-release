@@ -1,0 +1,6 @@
+pr: 131506
+releasenote:
+  text: Fixed an issue where Windows kube-proxy’s `ModifyLoadBalancer` API updates
+    did not match the HNS state in version 15.4. Support for `ModifyLoadBalancer`
+    policy began with Kubernetes 1.31+.
+pr_body: ""

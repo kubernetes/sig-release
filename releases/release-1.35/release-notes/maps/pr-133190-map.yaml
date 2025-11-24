@@ -1,0 +1,5 @@
+pr: 133190
+releasenote:
+  text: Updated the `/statusz` page for `kube-proxy` to include a list of exposed
+    endpoints, making debugging and introspection easier.
+pr_body: ""

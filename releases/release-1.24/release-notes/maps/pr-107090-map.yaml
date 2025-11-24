@@ -1,0 +1,3 @@
+pr: 107090
+releasenote:
+  text: CEL validation failure returns object type instead of object.

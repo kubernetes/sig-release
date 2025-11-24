@@ -1,0 +1,3 @@
+pr: 101560
+releasenote:
+  text: Fixes a panic in `kube-scheduler` when accessing not existing pods while using `DefaultPreemption` plugin.

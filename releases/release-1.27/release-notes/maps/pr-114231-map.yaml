@@ -1,0 +1,4 @@
+pr: 114231
+releasenote:
+  text: Fixed issue on Windows when calculating cpu limits on nodes with more than
+    64 logical processors

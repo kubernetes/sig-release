@@ -1,0 +1,4 @@
+pr: 108482
+releasenote:
+  text: Added CEL runtime cost calculation into CustomerResource validation. CustomerResource
+    validation will fail if runtime cost exceeds the budget.

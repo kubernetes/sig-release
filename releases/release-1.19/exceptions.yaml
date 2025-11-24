@@ -1,0 +1,62 @@
+# Exceptions Requested in 1.19
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Taylor Dolezal ([@onlydole](https://github.com/onlydole)
+# Release Team Lead Shadows: Bob Killen ([@mrbobbytables](https://github.com/mrbobbytables)) / Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
+
+# Enhancement Freeze Exceptions Requested in 1.19
+
+enhancementFreeze:
+- name: "Configure FQDN as Hostname for Pods"
+  issue: 1797
+  date_requested: 2020-05-20
+  date_reviewed: 2020-05-21
+  thread: https://groups.google.com/g/kubernetes-release-team/c/1xiCWxchTEk/m/Ey-VGPkbAwAJ
+  pull_requests:
+  - https://github.com/kubernetes/enhancements/pull/1792
+  status: Approved
+- name: "Speed up recursive SELinux label change"
+  issue: 1710
+  date_requested: 2020-05-20
+  date_reviewed: 2020-05-22
+  thread: https://groups.google.com/g/kubernetes-release-team/c/TufU2Jc85nQ/m/mg_anZUbAwAJ
+  pull-requests:
+  - https://github.com/kubernetes/enhancements/pull/1621
+  status: Approved
+- name: "Increase Kubernetes support window to one year"
+  issue: 1498
+  date_requested: 2020-05-20
+  date_reviewed: 2020-05-22
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/yjEHnUVC1bo/m/idsHNOwHAgAJ
+  pull-requests:
+  - https://github.com/kubernetes/enhancements/pull/1782
+  status: Approved
+- name: "Clarify use of node-role labels within Kubernetes and migrate old components"
+  issue: 1143
+  date_requested: 2020-06-01
+  date_reviewed: 2020-06-02
+  thread: https://groups.google.com/g/kubernetes-release-team/c/7POHlgPCgpE/m/P4YgzMuUAAAJ
+  pull-requests:
+  - https://github.com/kubernetes/enhancements/pull/1806
+  status: Approved
+- name: "SCTP support for Services, Pod, Endpoint, and NetworkPolicy"
+  issue: 614
+  date_requested: 2020-06-02
+  date_reviewed: 2020-06-10
+  thread: https://groups.google.com/g/kubernetes-release-team/c/fJCot5af4cA/m/cOzXk3LZAAAJ
+  pull-requests:
+  - https://github.com/kubernetes/kubernetes/pull/88932
+  - https://github.com/kubernetes/kubernetes/pull/88196
+  - https://github.com/kubernetes/kubernetes/pull/87926
+  status: Approved
+
+# Code Freeze Exceptions Requested in 1.19
+
+codeFreeze:
+- name: "Disable AcceleratorUsage Metrics"
+  issue: 1867
+  date_requested: 2020-07-09
+  date_reviewed: 2020-07-22
+  thread: https://groups.google.com/g/kubernetes-release-team/c/Hd4Bgj8zd4c/m/E3TU29EDBwAJ
+  pull-requests:
+  - https://github.com/kubernetes/kubernetes/pull/91930
+  status: Approved

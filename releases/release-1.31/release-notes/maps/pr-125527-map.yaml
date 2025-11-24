@@ -1,0 +1,8 @@
+pr: 125527
+releasenote:
+  text: "Fixed a bug that Pods could stuck in the unschedulable pod pool \nif they're
+    rejected by PreEnqueue plugins that could change its result by a change in resources
+    apart from Pods.\n\nDRA plugin is the only plugin that meets the criteria of the
+    bug in in-tree, \nand hence if you have `DynamicResourceAllocation` feature flag
+    enabled, \nyour DRA Pods could be affected by this bug."
+pr_body: ""

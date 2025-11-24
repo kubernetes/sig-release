@@ -1,0 +1,4 @@
+pr: 107384
+releasenote:
+  text: Improved the rounding of `PodTopologySpread` scores to offer better scoring
+    when spreading a low number of pods.

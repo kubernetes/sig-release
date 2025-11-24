@@ -1,0 +1,5 @@
+pr: 131919
+releasenote:
+  text: 'kubeadm: Switched the validation check for Linux kernel version to throw
+    warnings instead of errors.'
+pr_body: ""

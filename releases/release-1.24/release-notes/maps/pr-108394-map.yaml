@@ -1,0 +1,4 @@
+pr: 108394
+releasenote:
+  text: The `WarningHeaders` feature gate that is GA since v1.22 is unconditionally
+    enabled, and can no longer be specified via the `--feature-gates` argument.

@@ -1,0 +1,3 @@
+pr: 121908
+releasenote:
+  text: Updated `kubedns` and `nodelocaldns` to release version `1.22.28`.

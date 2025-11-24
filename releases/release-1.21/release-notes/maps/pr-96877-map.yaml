@@ -1,0 +1,4 @@
+pr: 96877
+releasenote:
+  text: Fix privileged config of Pod Sandbox which was previously ignored.
+  do_not_publish: false

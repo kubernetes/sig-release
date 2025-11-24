@@ -1,0 +1,6 @@
+pr: 129279
+releasenote:
+  text: 'kubeadm: if the `NodeLocalCRISocket` feature gate is enabled, remove the
+    `kubeadm.alpha.kubernetes.io/cri-socket` annotation from a given node on `kubeadm
+    upgrade`.'
+pr_body: ""

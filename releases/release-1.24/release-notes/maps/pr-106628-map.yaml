@@ -1,0 +1,4 @@
+pr: 106628
+releasenote:
+  text: A new Priority and Fairness metric 'apiserver_flowcontrol_work_estimate_seats_samples'
+    has been added that tracks the estimated seats associated with a request.

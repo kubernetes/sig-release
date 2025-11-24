@@ -1,0 +1,4 @@
+pr: 104624
+releasenote:
+  text: 'kubelet: turn the KubeletConfiguration v1beta1 `ResolverConfig` field from
+    a `string` to `*string`.'

@@ -1,0 +1,6 @@
+pr: 112403
+releasenote:
+  text: For raw block CSI volumes on Kubernetes, kubelet was incorrectly calling CSI
+    `NodeStageVolume` for every single "map" (i.e. raw block "mount") operation for
+    a volume already attached to the node. This change modified that behavior to ensure
+    it is only called once per volume per node.

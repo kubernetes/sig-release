@@ -1,0 +1,5 @@
+pr: 106907
+releasenote:
+  text: 'kubelet: the following dockershim related flags are also removed along with dockershim
+    `--experimental-dockershim-root-directory`, `--docker-endpoint`, `--image-pull-progress-deadline`,
+    `--network-plugin`, `--cni-conf-dir`, `--cni-bin-dir`, `--cni-cache-dir`, `--network-plugin-mtu`.'

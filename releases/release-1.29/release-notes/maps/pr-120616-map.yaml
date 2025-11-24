@@ -1,0 +1,3 @@
+pr: 120616
+releasenote:
+  text: Added support for split image filesystem in kubelet.

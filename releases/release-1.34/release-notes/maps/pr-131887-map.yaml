@@ -1,0 +1,6 @@
+pr: 131887
+releasenote:
+  text: |-
+    Types: CycleState, StateData, StateKey and ErrNotFound moved from pkg/scheduler/framework to k8s.io/kube-scheduler/framework.
+    Type CycleState that was passed to each plugin in scheduler framework was changed to the new interface CycleState (in k8s.io/kube-scheduler/framework).
+pr_body: ""

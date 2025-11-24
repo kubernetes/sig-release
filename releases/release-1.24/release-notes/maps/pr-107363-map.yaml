@@ -1,0 +1,3 @@
+pr: 107363
+releasenote:
+  text: Improve error message when applying CRDs before the CRD exists in a cluster

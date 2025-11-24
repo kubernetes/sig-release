@@ -1,0 +1,5 @@
+pr: 120642
+releasenote:
+  text: Added consistent vanity import to files and provided tooling for verifying
+    and updating them.
+pr_body: ""

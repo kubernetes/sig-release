@@ -1,0 +1,5 @@
+pr: 131632
+releasenote:
+  text: LeaseLocks could now have custom labels that different holders would overwrite
+    when they became the holder of the underlying lease.
+pr_body: ""

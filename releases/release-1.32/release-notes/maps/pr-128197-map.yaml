@@ -1,0 +1,7 @@
+pr: 128197
+releasenote:
+  text: Removed legacy cloud provider integration code and the "service-lb-controller",
+    "cloud-node-lifecycle-controller" and the "node-route-controller" from kube-controller-manager.
+    You can now either set the `--cloud-provider` command line argument to "external",
+    or to the empty string. All other values are invalid.
+pr_body: ""

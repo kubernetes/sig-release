@@ -1,0 +1,5 @@
+pr: 130666
+releasenote:
+  text: YAML input that might previously have been misinterpreted as JSON is now correctly
+    accepted.
+pr_body: ""

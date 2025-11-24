@@ -1,0 +1,4 @@
+pr: 118137
+releasenote:
+  text: Added new annotation `batch.kubernetes.io/cronjob-scheduled-timestamp` to
+    Job objects scheduled from CronJobs.

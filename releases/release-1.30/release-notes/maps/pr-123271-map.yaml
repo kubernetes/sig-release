@@ -1,0 +1,5 @@
+pr: 123271
+releasenote:
+  text: |
+    "kubeadm: ensured that a variety of API server requests were retried during "init", "join", "upgrade", "reset" workflows. Prior to this change, some API server requests, such as creating or updating ConfigMaps, were "one-shot" - i.e., they could fail if the API server dropped connectivity for a very short period of time."
+pr_body: ""

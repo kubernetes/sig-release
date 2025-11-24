@@ -1,0 +1,9 @@
+pr: 96293
+releasenote:
+  text: |-
+    Azure file migration graduates to beta, with CSIMigrationAzureFile flag off by default
+    as it requires installation of AzureFile CSI Driver. Users should enable CSIMigration and
+    CSIMigrationAzureFile features and install the [AzureFile CSI Driver](https://github.com/kubernetes-sigs/azurefile-csi-driver)
+    to avoid disruption to existing Pod and PVC objects at that time. Azure File CSI driver does not support using same persistent
+    volume with different fsgroups. When CSI migration is enabled for azurefile driver, such case is not supported.
+    (there is a case we support where volume is mounted with 0777 and then it readable/writable by everyone)

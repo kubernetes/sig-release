@@ -1,0 +1,4 @@
+pr: 119778
+releasenote:
+  text: Fixed a `v1.26` regression scheduling bug by ensuring that preemption is skipped
+    when a `PreFilter` plugin returns `UnschedulableAndUnresolvable`.

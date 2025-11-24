@@ -1,0 +1,5 @@
+pr: 122456
+releasenote:
+  text: A new metric `lifecycle_handler_sleep_terminated_total` is added to record
+    how many times LifecycleHandler sleep got unexpectedly terminated.
+pr_body: ""

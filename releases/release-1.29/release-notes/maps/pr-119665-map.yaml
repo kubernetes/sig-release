@@ -1,0 +1,5 @@
+pr: 119665
+releasenote:
+  text: '`GetPodQOS(pod *core.Pod)` function now returns the stored value from `PodStatus.QOSClass`,
+    if set. To compute/evaluate the value of `QOSClass` from scratch, `ComputePodQOS(pod*core.Pod)`
+    must be used.'

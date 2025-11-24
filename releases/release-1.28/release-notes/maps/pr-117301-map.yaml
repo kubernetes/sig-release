@@ -1,0 +1,5 @@
+pr: 117301
+releasenote:
+  text: Fixed a regression in `1.27.0` that resulted in `missing metadata in converted
+    object` errors when modifying objects for multi-version custom resource definitions
+    with a conversion strategy of `None`.

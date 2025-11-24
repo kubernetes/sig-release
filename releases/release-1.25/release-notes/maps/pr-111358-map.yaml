@@ -1,0 +1,3 @@
+pr: 111358
+releasenote:
+  text: Introduced PodHasNetwork condition for pods.

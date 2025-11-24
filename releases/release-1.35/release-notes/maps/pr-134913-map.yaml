@@ -1,0 +1,4 @@
+pr: 134913
+releasenote:
+  text: Dropped support for `discovery/v1beta1` `EndpointSlice` in `kubectl`.
+pr_body: ""

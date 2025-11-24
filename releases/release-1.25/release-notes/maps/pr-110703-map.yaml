@@ -1,0 +1,3 @@
+pr: 110703
+releasenote:
+  text: The beta feature `ServiceIPStaticSubrange` is now enabled by default.

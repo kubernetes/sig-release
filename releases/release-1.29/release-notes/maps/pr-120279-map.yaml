@@ -1,0 +1,4 @@
+pr: 120279
+releasenote:
+  text: Makefile and scripts now respect `GOTOOLCHAIN` and otherwise ensure `./.go-version`
+    is used.

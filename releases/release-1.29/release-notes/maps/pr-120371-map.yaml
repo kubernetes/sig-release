@@ -1,0 +1,4 @@
+pr: 120371
+releasenote:
+  text: '`kube-controller-manager` help now includes controllers behind a feature
+    gate in `--controllers` flag.'

@@ -1,0 +1,3 @@
+pr: 94728
+releasenote:
+  text: Fix regression on `kubectl portforward` when TCP and UCP services were configured on the same port.

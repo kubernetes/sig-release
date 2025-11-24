@@ -1,0 +1,3 @@
+pr: 104908
+releasenote:
+  text: Migrate `pkg/proxy` to structured logging

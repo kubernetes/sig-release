@@ -1,0 +1,4 @@
+pr: 121327
+releasenote:
+  text: Fixed the calculation of the requeue time in the cronjob controller, resulting
+    in proper handling of failed/stuck jobs.

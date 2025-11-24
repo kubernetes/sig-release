@@ -1,0 +1,7 @@
+pr: 114418
+releasenote:
+  text: Added new feature gate `ServiceNodePortStaticSubrange`, to enable the new 
+    strategy in the `NodePort` Service port allocators, so the node port range is
+    subdivided and dynamic allocated `NodePort` port for Services are allocated 
+    preferentially from the upper range.
+  

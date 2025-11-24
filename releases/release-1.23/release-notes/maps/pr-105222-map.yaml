@@ -1,0 +1,4 @@
+pr: 105222
+releasenote:
+  text: Remove `NodeLease` feature gate that was graduated and locked to stable in
+    1.17 release.

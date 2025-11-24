@@ -1,0 +1,4 @@
+pr: 119522
+releasenote:
+  text: Added a check on a user attempting to create a static pod via the `kubelet`
+    without specifying a name. They will now get a visible validation error.

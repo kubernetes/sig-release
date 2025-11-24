@@ -1,0 +1,5 @@
+pr: 123641
+releasenote:
+  text: |
+    "kube-apiserver: The StructuredAuthorizationConfiguration feature gate has been promoted to beta and now allows the use of the `--authorization-configuration` flag."
+pr_body: ""

@@ -1,0 +1,3 @@
+pr: 117216
+releasenote:
+  text: Allowed Azure Disk e2es to use newer topology labels if available from nodes.

@@ -1,0 +1,7 @@
+pr: 106891
+releasenote:
+  text: 'kubeadm: during execution of the `certs check-expiration` command, treat the etcd
+    CA as external if there is a missing etcd CA key file (etcd/ca.key) and perform
+    the proper validation on certificates signed by the etcd CA. Additionally, make
+    sure that the CA for all entries in the output table is included - for both certificates
+    on disk and in kubeconfig files.'

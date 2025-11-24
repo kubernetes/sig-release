@@ -1,0 +1,7 @@
+pr: 130772
+releasenote:
+  text: Added SchedulerPopFromBackoffQ feature gate that is in beta and enabled by
+    default. Improved scheduling queue behavior by popping pods from the backoffQ
+    when the activeQ is empty. This allows to process potentially schedulable pods
+    ASAP, eliminating a penalty effect of the backoff queue.
+pr_body: ""

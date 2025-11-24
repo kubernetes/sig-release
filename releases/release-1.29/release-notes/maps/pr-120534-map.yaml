@@ -1,0 +1,4 @@
+pr: 120534
+releasenote:
+  text: '`dra`: the scheduler plugin now avoids additional scheduling attempts in
+    some cases by falling back to SSA after a conflict.'

@@ -1,0 +1,3 @@
+pr: 104518
+releasenote:
+  text: Removed deprecated metric `scheduler_volume_scheduling_duration_seconds`.

@@ -1,0 +1,3 @@
+pr: 113834
+releasenote:
+  text: '`statefulset` status will now be consistent on API errors'

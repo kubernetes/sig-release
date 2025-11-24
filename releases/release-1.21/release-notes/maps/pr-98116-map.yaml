@@ -1,0 +1,6 @@
+pr: 98116
+releasenote:
+  text: "The `EndpointSlice` mirroring controller mirrors endpoints annotations and
+    labels to the generated endpoint slices, it also ensures that updates on any of
+    these fields are mirrored. \nThe well-known annotation `endpoints.kubernetes.io/last-change-trigger-time`
+    is skipped and not mirrored."

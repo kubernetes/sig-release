@@ -1,0 +1,4 @@
+pr: 102722
+releasenote:
+  text: 'kubeadm: add the `--dry-run` flag to the `control-plane` phase of "kubeadm
+    init".'

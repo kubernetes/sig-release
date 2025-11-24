@@ -1,0 +1,108 @@
+# Exception requests in 1.23
+# Google Group: https://groups.google.com/forum/#!forum/kubernetes-sig-release
+# Release Team Lead: Rey Lejano ([@reylejano](https://github.com/reylejano))
+# Release Team Shadows: James Laverack ([@JamesLaverack](https://github.com/JamesLaverack) 
+# / Joseph Sandoval ([@jrsapi](https://github.com/jrsapi) 
+# / Max Körbächer ([@mkorbi](https://github.com/mkorbi) 
+# / Menna Elmasry ([@MonzElmasry](https://github.com/MonzElmasry)
+​
+# Enhancements Freeze Exceptions requested in 1.23
+- name: "Ceph RBD in-tree provisioner to CSI driver migration"
+  issue: 2923
+  date_requested: 2021-09-15
+  date_reviewed: 2021-09-15
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/aK9fKEfVeSg/m/16LMDTDpAgAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2963"
+  status: "approved"
+​
+- name: "Portworx File in-tree to CSI driver migration"
+  issue: 2589
+  date_requested: 2021-09-15
+  date_reviewed: 2021-09-15
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/0lG_i_9J_DU/m/uiLD9UnpAgAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/2964"
+  status: "approved"
+​
+- name: "AWS EBS in-tree to CSI migration"
+  issue: 1487
+  date_requested: 2021-11-12
+  date_reviewed: 2021-11-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/W1g-iAPu7p4/m/aF5RJUbnAQAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/106098"
+  status: "approved"
+​
+- name: "Azure Disk in-tree to CSI migration"
+  issue: 1490
+  date_requested: 2021-11-12
+  date_reviewed: 2021-11-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/W1g-iAPu7p4/m/aF5RJUbnAQAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/104670"
+  status: "approved"
+​
+- name: "AzureFile CSI migration"
+  issue: 1885
+  date_requested: 2021-11-12
+  date_reviewed: 2021-11-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/W1g-iAPu7p4/m/aF5RJUbnAQAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/105070"
+  status: "approved"
+​
+- name: "GCE PD to CSI migration"
+  issue: 1488
+  date_requested: 2021-11-12
+  date_reviewed: 2021-11-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/W1g-iAPu7p4/m/aF5RJUbnAQAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/104722"
+  status: "approved"
+​
+- name: "Structured logging"
+  issue: 1602
+  date_requested: 2021-11-18
+  date_reviewed: 2021-11-18
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/EK8ks5ucYN4/m/RUj6Lwt5AAAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/3052"
+  status: "approved"
+​
+# Code Freeze Exceptions requested in 1.23
+- name: "Pod Priority Based Node Graceful Shutdown"
+  issue: 2712
+  date_requested: 2021-11-15
+  date_reviewed: 2021-11-16
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/lt1R2cm-1Vk/m/eA4ajAzJAgAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/102915"
+  status: "approved"
+​
+- name: "Server Side Unknown Field Validation"
+  issue: 2885
+  date_requested: 2021-11-16
+  date_reviewed: 2021-11-16
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/PfOMIWQHAxc/m/242hAUQbAwAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/105916"
+  status: "approved"
+​
+- name: "Add gRPC probe to Pod.Spec.Container.{Liveness,Readiness,Startup}Probe"
+  issue: 2727
+  date_requested: 2021-11-17
+  date_reviewed: 2021-11-17
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/1sjsBwMVtKI/m/bGJswqciAAAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/106463"
+  status: "approved"
+​
+- name: "Kubelet CRI graduation"
+  issue: 2040
+  date_requested: 2021-11-17
+  date_reviewed: 2021-11-17
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/QPxSTjwzga4/m/pP9Cx-EoAAAJ"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/106501"
+  status: "approved"

@@ -1,0 +1,3 @@
+pr: 123023
+releasenote:
+  text: Fixed `kubectl explain` to show enum for field types if they were defined.

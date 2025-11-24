@@ -1,0 +1,5 @@
+pr: 108736
+releasenote:
+  text: The AnyVolumeDataSource feature is now beta, and the feature gate is enabled
+    by default. In order to provide user feedback on PVCs with data sources, deployers
+    must install the VolumePopulators CRD and the data-source-validator controller.

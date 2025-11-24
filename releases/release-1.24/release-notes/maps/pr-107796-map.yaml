@@ -1,0 +1,9 @@
+pr: 107796
+releasenote:
+  text: |-
+    Added a path `/header?key=` to `agnhost netexec` allowing one to view what the header value is of the incoming request.
+
+    Ex:
+
+    ```$ curl -H "X-Forwarded-For: something" 172.17.0.2:8080/header?key=X-Forwarded-For
+    something```

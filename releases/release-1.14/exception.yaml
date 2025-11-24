@@ -1,0 +1,79 @@
+# Exceptions to Code Freeze requested in 1.14
+# Google Group: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown
+# Release Team Lead: Aaron Crickenberger (@spiffxp)
+
+- name: 
+  issue: 
+  date_requested: 
+  date_reviewed: 
+  thread: 
+  pull_requests:
+  - 
+  status:
+  
+- name: Support Out-of-Tree vSphere Cloud Provider 
+  issue: 670
+  date_requested: 2019-01-30
+  date_reviewed: 2019-01-30
+  thread: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/psJ0VI-gt5U
+  pull_requests:
+  - 
+  status: Approved 
+  
+- name: Kubelet Resource Metrics Endpoint
+  issue: 727
+  date_requested: 2019-01-30
+  date_reviewed: 2019-01-31
+  thread: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/pFGpJkGlOZU
+  pull_requests: Will open after KEP merged 
+  - 
+  status: Approved 
+
+- name: Promote RunAsGroup  to beta
+  issue: 213 
+  date_requested: 2019-02-01
+  date_reviewed: 2019-02-04
+  thread: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/d7P6XjunEjg 
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/73007
+    - https://github.com/kubernetes/enhancements/pull/800
+    - https://github.com/kubernetes/website/pull/12297
+  - 
+  status: Approved
+ 
+- name: Promote HugePages to GA
+  issue: 750
+  date_requested: 2019-01-30
+  date_reviewed: 2019-01-31
+  thread: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/dap9gV230Do
+  pull_requests: https://github.com/kubernetes/kubernetes/issues/72651
+  - 
+  status: Approved
+  
+- name: Pid Limiting
+  issue: 757
+  date_requested: 2019-01-30
+  date_reviewed: 2019-01-31
+  thread: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/AdcWnQhlvdM
+  pull_requests:
+  - https://github.com/kubernetes/kubernetes/pull/72076
+  - 
+  status: Approved 
+  
+- name: Promote Node OS/Arch labels to GA
+  issue: 793
+  date_requested: 2019-01-30
+  date_reviewed: 2019-01-31
+  thread: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/6gYaVroafsM
+  pull_requests:
+  - 
+  status: Approved 
+  
+  - name: CSI raw block volumes to beta 
+  issue: 565
+  date_requested: 2019-01-31
+  date_reviewed: 2019-02-01
+  thread: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown/G7RlJsKvsOc
+  pull_requests: https://github.com/kubernetes/enhancements/pull/794
+  - 
+  status: Approved 

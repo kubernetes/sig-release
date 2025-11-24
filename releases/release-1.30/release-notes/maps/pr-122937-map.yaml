@@ -1,0 +1,6 @@
+pr: 122937
+releasenote:
+  text: The in-tree cloud provider for vSphere has been deprecated and removed. Users
+    are advised to utilize the external cloud provider and CSI driver available at
+    https://github.com/kubernetes/cloud-provider-vsphere.
+pr_body: ""

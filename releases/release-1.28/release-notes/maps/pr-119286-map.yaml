@@ -1,0 +1,3 @@
+pr: 119286
+releasenote:
+  text: Removed `KUBECTL_EXPLAIN_OPENAPIV3` which is already redundant.

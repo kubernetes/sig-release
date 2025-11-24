@@ -1,0 +1,4 @@
+pr: 104666
+releasenote:
+  text: Fix job tracking with finalizers for more than 500 pods, ensuring all finalizers
+    are removed before counting the Pod.

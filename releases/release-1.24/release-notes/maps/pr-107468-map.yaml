@@ -1,0 +1,5 @@
+pr: 107468
+releasenote:
+  text: 'kubeadm: removed the deprecated `output/v1alpha1` API used for machine readable
+    output by some kubeadm commands. In 1.23 kubeadm started using the newer version
+    `output/v1alpha2` for the same purpose.'

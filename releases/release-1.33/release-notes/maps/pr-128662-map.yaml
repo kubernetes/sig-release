@@ -1,0 +1,5 @@
+pr: 128662
+releasenote:
+  text: Fixed `kubectl wait --for=create` behavior with label selectors, to properly
+    wait for resources with matching labels to appear.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 114909
+releasenote:
+  text: |-
+    `kubectl expose` supports the creation of different protocol services on the same port.

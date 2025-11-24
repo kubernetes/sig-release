@@ -1,0 +1,4 @@
+pr: 112748
+releasenote:
+  text: Locked `ServerSideApply` feature gate to true with the feature already being
+    GA.

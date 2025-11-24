@@ -1,0 +1,5 @@
+pr: 123570
+releasenote:
+  text: OpenAPI V2 will no longer publish aggregated API server OpenAPI for group
+    versions that do not match the APIService specified group version.
+pr_body: ""

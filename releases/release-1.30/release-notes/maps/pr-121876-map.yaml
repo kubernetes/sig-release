@@ -1,0 +1,5 @@
+pr: 121876
+releasenote:
+  text: When scheduling a mix of pods using `ResourceClaims` and others that don't,
+    scheduling a pod with `ResourceClaims` has a lower impact on scheduling latency.
+pr_body: ""

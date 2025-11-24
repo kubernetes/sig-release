@@ -1,0 +1,4 @@
+pr: 92604
+releasenote:
+  text: Pods can now be considered for preemption after a previously nominated node
+    has become unschedulable and unresolvable.

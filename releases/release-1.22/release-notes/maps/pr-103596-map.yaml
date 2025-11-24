@@ -1,0 +1,4 @@
+pr: 103596
+releasenote:
+  text: Promote `EndpointSliceTerminatingCondition` to Beta. This enables the `terminating`
+    and `serving` conditions for EndpointSlice by default.

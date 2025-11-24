@@ -1,0 +1,4 @@
+pr: 132106
+releasenote:
+  text: Allowed `pvc.spec.VolumeAttributesClassName` to change from non-nil to nil.
+pr_body: ""

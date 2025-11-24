@@ -1,0 +1,6 @@
+pr: 129023
+releasenote:
+  text: |-
+    Renamed `UpdatePodTolerations` action type to `UpdatePodToleration`.
+    Action required for custom plugin developers to update their code to follow the rename.
+pr_body: ""

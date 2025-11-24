@@ -1,0 +1,5 @@
+pr: 113176
+releasenote:
+  text: Added new metric `job_controller_terminated_pods_tracking_finalizer` which
+    can be used to monitor whether the job controller is removing Pod finalizers from
+    terminated Pods after accounting them in Job status.

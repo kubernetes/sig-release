@@ -1,0 +1,4 @@
+pr: 132484
+releasenote:
+  text: Increased test coverage for kubelet package to 92.3%.
+pr_body: ""

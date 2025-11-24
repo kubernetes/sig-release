@@ -1,0 +1,3 @@
+pr: 94494
+releasenote:
+  text: Port mapping now allows the same `containerPort` of different containers to different `hostPort` without naming the mapping explicitly.

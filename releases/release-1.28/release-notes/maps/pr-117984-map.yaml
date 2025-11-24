@@ -1,0 +1,6 @@
+pr: 117984
+releasenote:
+  text: |-
+    `kubeadm`: speedup init by 0s or 20s. kubelet-start phase is now after etcd
+    and control-plane phases, removing a race condition between kubelet looking for
+    static pod manifests and kubeadm writing them.

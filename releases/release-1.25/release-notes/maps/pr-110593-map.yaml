@@ -1,0 +1,3 @@
+pr: 110593
+releasenote:
+  text: 'Kubeadm: the preferred pod anti-affinity for CoreDNS is now enabled by default.'

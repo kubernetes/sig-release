@@ -1,0 +1,3 @@
+pr: 103831
+releasenote:
+  text: Disable aufs module for gce clusters.

@@ -1,0 +1,4 @@
+pr: 114227
+releasenote:
+  text: Made `kube-aggregator` binary linking static (also affects the deb and rpm
+    packages).

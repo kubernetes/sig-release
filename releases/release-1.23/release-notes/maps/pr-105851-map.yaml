@@ -1,0 +1,3 @@
+pr: 105851
+releasenote:
+  text: kubectl will now provide shell completion choices for the `--output/-o` flag

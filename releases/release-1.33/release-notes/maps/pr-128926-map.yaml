@@ -1,0 +1,4 @@
+pr: 128926
+releasenote:
+  text: Changed the dependency version for CoreDNS. Kubernetes tools now install CoreDNS `v1.12.0`.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 108062
+releasenote:
+  text: 'kube-apiserver: the `--master-count` flag and `--endpoint-reconciler-type=master-count`
+    reconciler are deprecated in favor of the lease reconciler'

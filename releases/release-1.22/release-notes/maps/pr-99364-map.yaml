@@ -1,0 +1,4 @@
+pr: 99364
+releasenote:
+  text: Adds metrics for the delegated authenticator used by extension APIs that delegate
+    authentication logic to the Kube API server.

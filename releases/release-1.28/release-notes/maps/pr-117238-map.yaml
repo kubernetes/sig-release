@@ -1,0 +1,4 @@
+pr: 117238
+releasenote:
+  text: Structured logging of `NamespacedName` was inconsistent with `klog.KObj`.
+    Now both will use lower case field names and namespace is optional.

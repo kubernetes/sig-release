@@ -1,0 +1,111 @@
+# Exceptions to Code Freeze requested in 1.31
+# Google Group: https://groups.google.com/forum/#!topic/kubernetes-milestone-burndown
+# Release Team Lead: Angelos Kolaitis (@neoaggelos)
+
+
+# Enhancements Freeze Exceptions requested in 1.31
+
+enhancementFreeze:
+
+- name: "Add a TopologyManager policy option for MaxAllowableNUMANodes"
+  issue: 4622
+  date_requested: 2024-06-13
+  date_reviewed: 2024-06-14
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/sRbVZntJDis
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4624
+  status: "approved"
+
+- name: "Multiple Service CIDRs"
+  issue: 1880
+  date_requested: 2024-06-15
+  date_reviewed: 2024-06-17
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/CVCUaMp_5WU
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4645
+  status: "approved"
+
+- name: "VolumeSource: OCI Artifact and/or Image"
+  issue: 4639
+  date_requested: 2024-06-15
+  date_reviewed: 2024-06-18
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/xuyC0F0hsio
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4642
+  status: "approved"
+
+- name: "Kube-Proxy component configuration graduation"
+  issue: 784
+  date_requested: 2024-06-15
+  date_reviewed: 2024-06-18
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/Gq7dCxV1IfM
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4732
+  status: "approved"
+
+- name: "Pod Level Resource Specifications"
+  issue: 2837
+  date_requested: 2024-06-18
+  date_reviewed: 2024-06-20
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/8y4BOM8RoUM
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/4678
+  status: "rejected"
+
+
+# Code Freeze Exceptions requested in 1.31
+codeFreeze:
+
+- name: "Consider Terminating Pods in Deployments"
+  issue: 3973
+  date_requested: 2024-07-24
+  date_reviewed: 2024-07-28
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/SLTNXQvnOtM
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/123430
+  status: "rejected"
+
+- name: "Introduce compatibility version for Kubernetes control-plane upgrades"
+  issue: 4330
+  date_requested: 2024-07-24
+  date_reviewed: 2024-07-25
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/L6spvI-ddLA
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/125941
+  status: "approved"
+
+- name: "Coordinated Leader Election"
+  issue: 4355
+  date_requested: 2024-07-24
+  date_reviewed: 2024-07-25
+  thread: https://groups.google.com/a/kubernetes.io/g/release-team/c/BD7sfJavwoQ
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/124012
+  status: "approved"
+
+- name: "Kubelet support for Split Image Filesystem"
+  issue: 4191
+  date_requested: 2024-07-24
+  date_reviewed: 2024-07-25
+  thread: https://groups.google.com/a/kubernetes.io/g/release-team/c/yEQluTHHuQw
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/126205
+  status: "approved"
+
+- name: "Quotas for Ephemeral Storage"
+  issue: 1029
+  date_requested: 2024-07-25
+  date_reviewed: 2024-07-26
+  thread: https://groups.google.com/a/kubernetes.io/g/release-team/c/FeJPMwJDtsc
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/126355
+  status: "approved"
+
+- name: "Consistent Reads from Cache"
+  issue: 2340
+  date_requested: 2024-07-26
+  date_reviewed: 2024-07-28
+  thread: https://groups.google.com/a/kubernetes.io/g/release-team/c/6eJKzUxfNOM
+  pull_requests: 
+    - https://github.com/kubernetes/kubernetes/pull/126329
+  status: "approved"

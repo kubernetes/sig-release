@@ -1,0 +1,3 @@
+pr: 122449
+releasenote:
+  text: '`ValidateVolumeAttributesClassUpdate` also validates new VolumeAttributesClass object.'

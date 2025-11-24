@@ -1,0 +1,4 @@
+pr: 101992
+releasenote:
+  text: The `BoundServiceAccountTokenVolume` graduates to GA and thus will be
+    unconditionally enabled. The feature gate is going to be removed in 1.23.

@@ -1,0 +1,4 @@
+pr: 120461
+releasenote:
+  text: Fixed a bug where the device resources allocated to an init container, with
+    `containerRestartPolicy` of `Always`, were erroneously reused by a regular container.

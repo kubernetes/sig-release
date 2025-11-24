@@ -1,0 +1,4 @@
+pr: 115606
+releasenote:
+  text: Pods which have an invalid negative `spec.terminationGracePeriodSeconds` value
+    will now be treated as having a `terminationGracePeriodSeconds` of `1`

@@ -1,0 +1,3 @@
+pr: 114920
+releasenote:
+  text: Applied configurations can be generated for types with `non-builtin` map fields

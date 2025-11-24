@@ -1,0 +1,3 @@
+pr: 120204
+releasenote:
+  text: Marked the `onPodConditions` field as optional in `Job`'s pod failure policy.

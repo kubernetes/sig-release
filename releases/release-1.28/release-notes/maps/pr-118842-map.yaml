@@ -1,0 +1,3 @@
+pr: 118842
+releasenote:
+  text: Use table-driven test for `TestPerPodSchedulingMetrics`.

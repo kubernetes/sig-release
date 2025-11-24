@@ -1,0 +1,3 @@
+pr: 108400
+releasenote:
+  text: Support in-tree PV deletion protection finalizer.

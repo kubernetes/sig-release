@@ -1,0 +1,4 @@
+pr: 108167
+releasenote:
+  text: Fixed a bug in attachdetach controller that didn't properly handle kube-apiserver
+    errors leading to stuck attachments/detachments.

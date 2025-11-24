@@ -1,0 +1,7 @@
+pr: 130135
+releasenote:
+  text: |-
+    Graduated image volume sources to beta:
+      - Allowed `subPath`/`subPathExpr` for image volumes.
+      - Added kubelet metrics `kubelet_image_volume_requested_total`, `kubelet_image_volume_mounted_succeed_total` and `kubelet_image_volume_mounted_errors_total`.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 132750
+releasenote:
+  text: Replaced deprecated package `k8s.io/utils/pointer` with `k8s.io/utils/ptr`
+    for the cli-runtime.
+pr_body: ""

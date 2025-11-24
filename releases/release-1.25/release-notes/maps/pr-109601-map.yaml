@@ -1,0 +1,4 @@
+pr: 109601
+releasenote:
+  text: Fixed a bug which could have allowed an improperly annotated LoadBalancer
+    service to become active.

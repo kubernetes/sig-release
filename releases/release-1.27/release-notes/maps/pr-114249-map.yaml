@@ -1,0 +1,4 @@
+pr: 114249
+releasenote:
+  text: Changed the error message to `cannot exec into multiple objects at a time`
+    when file passed to `kubectl exec` contains multiple resources

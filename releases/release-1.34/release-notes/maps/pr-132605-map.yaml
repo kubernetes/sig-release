@@ -1,0 +1,6 @@
+pr: 132605
+releasenote:
+  text: 'The fallback behavior of the Downward API''s `resourceFieldRef` field was
+    updated to account for pod-level resources: if container-level limits were not
+    set, pod-level limits were now used before falling back to node allocatable resources.'
+pr_body: ""

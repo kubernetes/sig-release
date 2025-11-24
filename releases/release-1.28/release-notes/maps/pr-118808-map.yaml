@@ -1,0 +1,6 @@
+pr: 118808
+releasenote:
+  text: |-
+    Revised `OpenAPI v2` fetching for CustomResourceDefinitions. CRDs are now aggregated lazily,
+    which improves resource usage during installation of many CRDs. As a result, the first request
+    to fetch the OpenAPI may be slower.

@@ -1,0 +1,3 @@
+pr: 121095
+releasenote:
+  text: Enabled traces for KMSv2 encrypt/decrypt operations.

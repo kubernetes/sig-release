@@ -1,0 +1,4 @@
+pr: 130133
+releasenote:
+  text: Added metrics to track allocation of Uncore (aka last-level aka L3) Cache blocks.
+pr_body: ""

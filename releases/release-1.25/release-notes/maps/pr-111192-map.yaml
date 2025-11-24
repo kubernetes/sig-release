@@ -1,0 +1,3 @@
+pr: 111192
+releasenote:
+  text: Added Service Account field in the output of `kubectl describe pod` command.

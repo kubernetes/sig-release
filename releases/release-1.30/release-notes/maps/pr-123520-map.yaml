@@ -1,0 +1,5 @@
+pr: 123520
+releasenote:
+  text: |
+    "In the Pod API, setting the alpha `procMount` field to `Unmasked` in a container now required setting `spec.hostUsers=false` as well."
+pr_body: ""

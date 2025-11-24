@@ -1,0 +1,4 @@
+pr: 118865
+releasenote:
+  text: Added swap to stats to Summary API and Prometheus endpoints (stats/summary
+    and /metrics/resource).

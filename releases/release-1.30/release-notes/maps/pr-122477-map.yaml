@@ -1,0 +1,5 @@
+pr: 122477
+releasenote:
+  text: |
+    "`kubeadm completion` error message now displayed supported shell types when an invalid shell was specified."
+pr_body: ""

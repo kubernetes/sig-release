@@ -1,0 +1,10 @@
+pr: 109819
+releasenote:
+  text: Support for the alpha seccomp annotations `seccomp.security.alpha.kubernetes.io/pod`
+    and `container.seccomp.security.alpha.kubernetes.io`, deprecated since v1.19,
+    was partially removed. Kubelets no longer support the annotations, use of the
+    annotations in static pods is no longer supported, and the seccomp annotations
+    are no longer auto-populated when pods with seccomp fields are created. Auto-population
+    of the seccomp fields from the annotations is planned to be removed in 1.27. Pods  should
+    use the corresponding pod or container `securityContext.seccompProfile` field
+    instead.

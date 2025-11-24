@@ -1,0 +1,4 @@
+pr: 91357
+releasenote:
+  text: kube-proxy, in dual-stack mode, infers the service IP family from the ClusterIP
+    instead of using the `Service.Spec.IPFamily` field

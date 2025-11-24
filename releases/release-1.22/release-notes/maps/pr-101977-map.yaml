@@ -1,0 +1,3 @@
+pr: 101977
+releasenote:
+  text: 'kubeadm: fix the bug that `kubeadm` only uses the first hash in `caCertHashes` to verify the root CA.'

@@ -1,0 +1,4 @@
+pr: 121441
+releasenote:
+  text: Lower and upper case feature flag values are now allowed, but the name still
+    has to match.

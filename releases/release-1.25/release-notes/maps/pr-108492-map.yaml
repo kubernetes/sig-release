@@ -1,0 +1,3 @@
+pr: 108492
+releasenote:
+  text: Add `NodeInclusionPolicy` to `TopologySpreadConstraints` in PodSpec.

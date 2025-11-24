@@ -1,0 +1,3 @@
+pr: 109250
+releasenote:
+  text: Fixed scheduling of **CronJob** with `@every X` schedules.

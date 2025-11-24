@@ -1,0 +1,4 @@
+pr: 109525
+releasenote:
+  text: |
+    `kubectl wait` command with `jsonpath` flag will wait for target path until timeout.

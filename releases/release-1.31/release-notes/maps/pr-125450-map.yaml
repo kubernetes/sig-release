@@ -1,0 +1,3 @@
+pr: 125450
+releasenote:
+  text: Introduced `Wait(context.Context) error` method in pkg k8s.io/apiserver/pkg/storage/cacher to improve watch cache initialization resilience.

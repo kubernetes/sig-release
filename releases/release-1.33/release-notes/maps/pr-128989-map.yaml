@@ -1,0 +1,4 @@
+pr: 128989
+releasenote:
+  text: Added a `/status` endpoint for kube-proxy.
+pr_body: ""

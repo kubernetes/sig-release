@@ -1,0 +1,3 @@
+pr: 118236
+releasenote:
+  text: Removed the deprecated `azureFile` in-tree storage plugin.

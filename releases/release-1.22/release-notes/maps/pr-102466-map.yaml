@@ -1,0 +1,4 @@
+pr: 102466
+releasenote:
+  text: 'kubeadm: update `CoreDNS` to 1.8.4. Grant `CoreDNS` permissions to "list"
+    and "watch" `EndpointSlice` objects to accommodate dual-stack support.'

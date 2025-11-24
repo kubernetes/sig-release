@@ -1,0 +1,5 @@
+pr: 115233
+releasenote:
+  text: |-
+    `kube-proxy` now accepts the `ContextualLogging`, `LoggingAlphaOptions`,
+    `LoggingBetaOptions`

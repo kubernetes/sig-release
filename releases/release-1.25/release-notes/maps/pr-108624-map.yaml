@@ -1,0 +1,4 @@
+pr: 108624
+releasenote:
+  text: API server's deprecated `--service-account-api-audiences` flag was removed.  Use
+    `--api-audiences` instead.

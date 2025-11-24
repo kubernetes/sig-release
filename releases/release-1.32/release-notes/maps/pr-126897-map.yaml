@@ -1,0 +1,5 @@
+pr: 126897
+releasenote:
+  text: Promoted the `RelaxedEnvironmentVariableValidation` feature gate to beta and
+    is enabled by default.
+pr_body: ""

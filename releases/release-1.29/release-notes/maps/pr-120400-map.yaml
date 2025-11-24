@@ -1,0 +1,4 @@
+pr: 120400
+releasenote:
+  text: '`cluster-bootstrap`: improved the security of the functions responsible for
+    generation and validation of bootstrap tokens.'

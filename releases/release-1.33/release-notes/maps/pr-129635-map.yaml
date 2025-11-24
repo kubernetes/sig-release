@@ -1,0 +1,5 @@
+pr: 129635
+releasenote:
+  text: Calculated pod resources are now cached when adding pods to NodeInfo in the
+    scheduler framework, improving performance when processing unschedulable pods.
+pr_body: ""

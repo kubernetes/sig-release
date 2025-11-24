@@ -1,0 +1,4 @@
+pr: 128139
+releasenote:
+  text: Feature `AllowServiceLBStatusOnNonLB` remains deprecated and is now locked to false to support compatibility versions.
+pr_body: ""

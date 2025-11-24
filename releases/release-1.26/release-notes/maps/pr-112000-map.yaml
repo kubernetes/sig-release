@@ -1,0 +1,5 @@
+pr: 112000
+releasenote:
+  text: 'kubeadm: removed the usage of the `--container-runtime=remote` flag for the
+    kubelet during kubeadm init/join/upgrade. The flag value `remote` had been the
+    only possible value since `dockershim` was removed from the kubelet.'

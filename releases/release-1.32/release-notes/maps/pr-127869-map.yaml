@@ -1,0 +1,6 @@
+pr: 127869
+releasenote:
+  text: Added a short output format argument for `kubectl explain`. You could now
+    use `-o` as an abbreviation for `--output` in commands such as `kubectl explain
+    <resource> --output plaintext-openapiv2`.
+pr_body: ""

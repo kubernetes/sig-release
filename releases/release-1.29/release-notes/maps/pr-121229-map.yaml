@@ -1,0 +1,3 @@
+pr: 121229
+releasenote:
+  text: Removed the networking `alpha` API `ClusterCIDR`.

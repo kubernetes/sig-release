@@ -1,0 +1,92 @@
+# Exception requests in v1.33
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Nina Polshakova ([@npolshakova](https://github.com/npolshakova) 
+ 
+# Enhancements Freeze Exceptions requested in v1.33
+
+enhancementFreeze:
+
+- name: "Declarative Validation Of Kubernetes Native Types With validation-gen"
+  issue: 5073
+  date_requested: 2025-02-14
+  date_reviewed: 2025-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/B4lxvGi-UVs"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5171"
+  status: "approved"
+
+- name: "Node memory swap support"
+  issue: 2400
+  date_requested: 2025-02-14
+  date_reviewed: 2025-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/7ksASRJFCEw"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5174"
+  status: "approved"
+
+- name: "Streaming Encoding for LIST Responses"
+  issue: 5116
+  date_requested: 2025-02-14
+  date_reviewed: 2025-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/fDI9FdlClnA"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5119"
+  status: "approved"
+
+- name: "Snapshottable API server cache"
+  issue: 4988
+  date_requested: 2025-02-14
+  date_reviewed: 2025-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/CVYYVtjOa78"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5175"
+  status: "approved"
+
+- name: "Take taints/tolerations into consideration when calculating PodTopologySpread skew"
+  issue: 3094
+  date_requested: 2025-02-15
+  date_reviewed: 2025-02-15
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/KzuhBzIJIU0"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5172"
+  status: "approved"
+
+# Code Freeze Exceptions requested in v1.33
+
+codeFreeze:
+
+- name: "DRA: structured parameters"
+  issue: 4381
+  date_requested: 2025-03-20
+  date_reviewed: 2025-03-21
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/iHdoli5MTOA"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/129970"
+  status: "approved"
+
+- name: "Container Stop Signals"
+  issue: 4960
+  date_requested: 2025-03-20
+  date_reviewed: 2025-03-21
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/hBaNSMGXkq8"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/130556"
+  status: "approved"
+
+- name: "Configurable tolerance for Horizontal Pod Autoscalers"
+  issue: 4951
+  date_requested: 2025-03-20
+  date_reviewed: 2025-03-21
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/wgcvmhAK75I"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/130797"
+  status: "approved"
+
+- name: "Support PSI based on cgroupv2"
+  issue: 4205
+  date_requested: 2025-03-21
+  date_reviewed: 2025-03-21
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/GcC8516exjA"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/130701"
+  status: "approved"

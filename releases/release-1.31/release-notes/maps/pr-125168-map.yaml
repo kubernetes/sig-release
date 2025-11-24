@@ -1,0 +1,5 @@
+pr: 125168
+releasenote:
+  text: 'job-controller: the `JobReadyPods` feature flag has been removed (deprecated
+    since v1.31).'
+pr_body: ""

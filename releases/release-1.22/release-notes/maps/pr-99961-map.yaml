@@ -1,0 +1,5 @@
+pr: 99961
+releasenote:
+  text: Kube API server accepts `Impersonate-Uid` header to impersonate a user with
+    a specific UID, in the same way that you can currently use `Impersonate-User`,
+    `Impersonate-Group` and `Impersonate-Extra`.

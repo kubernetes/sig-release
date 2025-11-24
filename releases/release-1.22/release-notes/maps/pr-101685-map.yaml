@@ -1,0 +1,3 @@
+pr: 101685
+releasenote:
+  text: Intree volume plugin scaleIO support has been completely removed from Kubernetes.

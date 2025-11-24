@@ -1,0 +1,3 @@
+pr: 121851
+releasenote:
+  text: Fixed stale SMB mount issue when SMB file share is deleted and then unmounted.

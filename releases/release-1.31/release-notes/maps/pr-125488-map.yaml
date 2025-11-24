@@ -1,0 +1,4 @@
+pr: 125488
+releasenote:
+  text: 'Enhanced the Dynamic Resource Allocation (DRA) with an updated version of the resource.k8s.io API group. The primary user-facing type remains the ResourceClaim, however significant changes have been made, resulting in the new version, v1alpha3, which is not compatible with the previous version.'
+pr_body: ""

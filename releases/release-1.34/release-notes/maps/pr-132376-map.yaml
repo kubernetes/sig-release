@@ -1,0 +1,4 @@
+pr: 132376
+releasenote:
+  text: 'apimachinery: Deprecated `MessageCountMap` and `CreateAggregateFromMessageCountMap`.'
+pr_body: ""

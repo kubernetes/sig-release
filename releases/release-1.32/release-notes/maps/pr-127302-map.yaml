@@ -1,0 +1,4 @@
+pr: 127302
+releasenote:
+  text: Promoted the feature gates `StrictCostEnforcementForVAP` and `StrictCostEnforcementForWebhooks`.
+pr_body: ""

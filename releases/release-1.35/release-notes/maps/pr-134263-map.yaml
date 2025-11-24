@@ -1,0 +1,5 @@
+pr: 134263
+releasenote:
+  text: Namespace is now included in the `--dry-run=client` output for `HorizontalPodAutoscaler
+    (HPA)` objects.
+pr_body: ""

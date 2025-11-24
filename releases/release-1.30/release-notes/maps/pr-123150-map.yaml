@@ -1,0 +1,5 @@
+pr: 123150
+releasenote:
+  text: |
+    "Updated `etcd` to version `3.5.12`."
+pr_body: ""

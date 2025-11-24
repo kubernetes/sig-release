@@ -1,0 +1,3 @@
+pr: 115454
+releasenote:
+  text: Promoted pod resource `limit/request` metrics to stable.

@@ -1,0 +1,5 @@
+pr: 134028
+releasenote:
+  text: Specified the deprecated version of `apiserver_storage_objects` metric in
+    metrics docs.
+pr_body: ""

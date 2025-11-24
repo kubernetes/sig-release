@@ -1,0 +1,5 @@
+pr: 101600
+releasenote:
+  text: 'kubeadm: the flag `--cri-socket` is no longer allowed in a mixture with the
+    flag `--config`. Please use the kubeadm configuration for setting the CRI socket
+    for a node using `{Init|Join}Configuration.nodeRegistration.criSocket`.'

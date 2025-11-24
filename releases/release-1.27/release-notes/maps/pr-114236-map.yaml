@@ -1,0 +1,3 @@
+pr: 114236
+releasenote:
+  text: Fixed a data race when emitting similar Events consecutively

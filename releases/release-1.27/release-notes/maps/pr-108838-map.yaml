@@ -1,0 +1,3 @@
+pr: 108838
+releasenote:
+  text: Added the ability to host webhooks in the cloud controller manager.

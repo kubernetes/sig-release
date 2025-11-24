@@ -1,0 +1,7 @@
+pr: 131989
+releasenote:
+  text: '`AppArmor` profiles specified in the Pod or container `SecurityContext` were
+    no longer copied to deprecated `AppArmor` annotations (prefix `container.apparmor.security.beta.kubernetes.io/`).
+    Anything that inspected the deprecated annotations must be migrated to use the
+    `SecurityContext` fields instead.'
+pr_body: ""

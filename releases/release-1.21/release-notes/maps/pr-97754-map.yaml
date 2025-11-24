@@ -1,0 +1,3 @@
+pr: 97754
+releasenote:
+  text: 'kubectl-convert: Fix `no kind "Ingress" is registered for version` error'

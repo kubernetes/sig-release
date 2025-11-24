@@ -1,0 +1,5 @@
+pr: 121461
+releasenote:
+  text: |
+    "Promoted the `CRDValidationRatcheting` feature gate to beta and made it enabled by default."
+pr_body: ""

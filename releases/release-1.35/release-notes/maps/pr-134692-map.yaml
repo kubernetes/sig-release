@@ -1,0 +1,5 @@
+pr: 134692
+releasenote:
+  text: 'kubeadm: Updated the supported `etcd` version to `v3.5.23` for supported control
+    plane versions `v1.31`, `v1.32`, and `v1.33`.'
+pr_body: ""

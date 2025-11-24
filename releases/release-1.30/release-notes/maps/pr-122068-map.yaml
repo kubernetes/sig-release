@@ -1,0 +1,5 @@
+pr: 122068
+releasenote:
+  text: |
+    "Fixed a regression since `1.24` in the scheduling framework when overriding MultiPoint plugins (e.g. default plugins). The incorrect loop logic might have led to a plugin being loaded multiple times, consequently preventing any Pod from being scheduled, which was unexpected."
+pr_body: ""

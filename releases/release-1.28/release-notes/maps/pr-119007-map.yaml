@@ -1,0 +1,5 @@
+pr: 119007
+releasenote:
+  text: '`KMSv1` is deprecated and will only receive security updates going forward.
+    Use `KMSv2` instead. In a future release, Set `--feature-gates=KMSv1=true` to
+    use the deprecated KMSv1 feature.'

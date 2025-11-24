@@ -1,0 +1,5 @@
+pr: 103172
+releasenote:
+  text: |-
+    The deprecated `--experimental-bootstrap-kubeconfig` flag has been removed.
+    This can be set via `--bootstrap-kubeconfig`.

@@ -1,0 +1,4 @@
+pr: 99294
+releasenote:
+  text: 'kubeadm: IPv6DualStack feature gate graduates to Beta and enabled by
+    default'

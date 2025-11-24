@@ -1,0 +1,5 @@
+pr: 126953
+releasenote:
+  text: 'kubeadm: removed preflight check for existence of the conntrack binary, as
+    conntrack is no longer a kube-proxy dependency in version 1.32 and newer.'
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 103129
+releasenote:
+  text: Featuregate `ServiceLoadBalancerClass` graduates to Beta and is enables by
+    default.

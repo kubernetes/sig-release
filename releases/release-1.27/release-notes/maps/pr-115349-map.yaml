@@ -1,0 +1,5 @@
+pr: 115349
+releasenote:
+  text: The bug which caused the status of Indexed Jobs to only update when new indexes
+    were completed was fixed. Now, completed indexes are updated even if the `.status.completedIndexes`
+    values are outside the `[0, .spec.completions> range`.

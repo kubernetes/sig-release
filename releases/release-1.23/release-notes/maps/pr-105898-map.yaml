@@ -1,0 +1,4 @@
+pr: 105898
+releasenote:
+  text: 'Add Pod Security admission metrics: `pod_security_evaluations_total`, `pod_security_exemptions_total`,
+    `pod_security_errors_total`'

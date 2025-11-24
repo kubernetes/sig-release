@@ -1,0 +1,6 @@
+pr: 114857
+releasenote:
+  text: 'Fixed bug in CRD Validation Rules (beta) and `ValidatingAdmissionPolicy`
+    (alpha) where all admission requests could result in `internal error: runtime
+    error: index out of range [3] with length 3 evaluating rule: <rule name>` under
+    certain circumstances.'

@@ -1,0 +1,3 @@
+pr: 99557
+releasenote:
+  text: Adds new [alpha] command 'kubectl events'

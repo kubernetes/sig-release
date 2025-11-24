@@ -1,0 +1,5 @@
+pr: 116155
+releasenote:
+  text: The API server now re-uses data encryption keys while the kms v2 plugin key
+    ID is stable.  Data encryption keys are still randomly generated on server start
+    but an atomic counter is used to prevent nonce collisions.

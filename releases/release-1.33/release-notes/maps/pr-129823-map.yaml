@@ -1,0 +1,6 @@
+pr: 129823
+releasenote:
+  text: 'DRA: the explanation for why a pod which wasn''t using ResourceClaims was
+    unscheduleable included a useless "no new claims to deallocate" when it was unscheduleable
+    for some other reasons.'
+pr_body: ""

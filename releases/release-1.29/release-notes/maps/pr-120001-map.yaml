@@ -1,0 +1,3 @@
+pr: 120001
+releasenote:
+  text: Restartable init containers resource in pod autoscaler are now calculated.

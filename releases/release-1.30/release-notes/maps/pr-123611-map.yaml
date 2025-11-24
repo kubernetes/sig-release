@@ -1,0 +1,5 @@
+pr: 123611
+releasenote:
+  text: |
+    "kube-apiserver now reported the following metrics for authorization webhook match conditions: - `apiserver_authorization_match_condition_evaluation_errors_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_exclusions_total` counter metric labeled by authorizer type and name - `apiserver_authorization_match_condition_evaluation_seconds` histogram metric labeled by authorizer type and name."
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 114647
+releasenote:
+  text: The job controller now ignores the annotation `batch.kubernetes.io/job-tracking`.
+    The progress of all jobs is tracked using pod finalizers.

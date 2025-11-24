@@ -1,0 +1,6 @@
+pr: 102509
+releasenote:
+  text: |-
+    Clarified the description of a test in the e2e suite that mentions "SCTP" but is
+    actually intended to be testing the behavior of network plugins that don't
+    implement SCTP.

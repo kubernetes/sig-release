@@ -1,0 +1,4 @@
+pr: 100139
+releasenote:
+  text: The feature gate `SSA` graduated to GA in v1.22 and therefore is unconditionally
+    enabled.

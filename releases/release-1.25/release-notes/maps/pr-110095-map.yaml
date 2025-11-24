@@ -1,0 +1,5 @@
+pr: 110095
+releasenote:
+  text: 'kubeadm: stop applying the `node-role.kubernetes.io/master:NoSchedule` taint
+    to control plane nodes for new clusters. Remove the taint from existing control
+    plane nodes during "kubeadm upgrade apply"'

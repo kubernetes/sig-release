@@ -1,0 +1,5 @@
+pr: 132355
+releasenote:
+  text: Added `SizeBasedListCostEstimate` feature gate that allowed apiserver to estimate
+    sizes of objects to calculate cost of LIST requests.
+pr_body: ""

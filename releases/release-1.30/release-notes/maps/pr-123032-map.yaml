@@ -1,0 +1,4 @@
+pr: 123032
+releasenote:
+  text: Fixed Pod stuck in `Terminating` because of `GenerateUnmapVolumeFunc` missing
+    `globalUnmapPath` when kubelet tries to clean up all volumes that failed reconstruction.

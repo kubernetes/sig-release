@@ -1,0 +1,8 @@
+pr: 133120
+releasenote:
+  text: |-
+    Added 3 new metrics for monitoring async API calls in the scheduler when the `SchedulerAsyncAPICalls` feature gate was enabled:
+      - `scheduler_async_api_call_execution_total`: tracks executed API calls by call type and result (success/error)
+      - `scheduler_async_api_call_duration_seconds`: histogram of API call execution duration by call type and result
+      - `scheduler_pending_async_api_calls`: gauge showing current number of pending API calls in the queue.
+pr_body: ""

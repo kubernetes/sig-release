@@ -1,0 +1,4 @@
+pr: 100724
+releasenote:
+  text: The `pod/eviction` subresource now accepts `policy/v1` eviction requests in
+    addition to `policy/v1beta1` eviction requests

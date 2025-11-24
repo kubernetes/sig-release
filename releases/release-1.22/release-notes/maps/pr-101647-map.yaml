@@ -1,0 +1,6 @@
+pr: 101647
+releasenote:
+  text: Default `StreamingProxyRedirects` to disabled. If there is a >= 2 version
+    skew between master and nodes, and the old nodes were enabling `--redirect-container-streaming`,
+    this will break them. In this case, the `StreamingProxyRedirects` can still be
+    manually enabled.

@@ -1,0 +1,4 @@
+pr: 111090
+releasenote:
+  text: 'Added alpha support for user namespaces in pods phase 1 (KEP 127, feature
+    gate: UserNamespacesStatelessPodsSupport)'

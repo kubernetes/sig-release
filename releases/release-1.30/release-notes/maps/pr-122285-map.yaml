@@ -1,0 +1,5 @@
+pr: 122285
+releasenote:
+  text: |
+    "QueueingHint implementation for `NodeAffinity` was reverted because potential scenarios were found where events that make Pods schedulable could be missed."
+pr_body: ""

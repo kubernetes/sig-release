@@ -1,0 +1,6 @@
+pr: 123149
+releasenote:
+  text: |-
+    Added `--keep-*` flags to `kubectl debug`, which enables to control the removal
+    of probes, labels, annotations and initContainers from copy pod.
+pr_body: ""

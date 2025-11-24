@@ -1,0 +1,5 @@
+pr: 112136
+releasenote:
+  text: |-
+    `kubelet`: migrated `--container-runtime-endpoint` and `--image-service-endpoint`
+    to kubelet config

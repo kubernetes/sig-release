@@ -1,0 +1,3 @@
+pr: 116425
+releasenote:
+  text: '`SELinuxMountReadWriteOncePod` graduated to Beta.'

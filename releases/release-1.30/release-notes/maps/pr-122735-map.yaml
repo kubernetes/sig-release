@@ -1,0 +1,5 @@
+pr: 122735
+releasenote:
+  text: Fixed a regression in "kubeadm init" where a user-specified --kubeconfig file
+    was being ignored.
+pr_body: ""

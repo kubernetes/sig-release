@@ -1,0 +1,5 @@
+pr: 128083
+releasenote:
+  text: "kubelet: Fixed a bug where kubelet wrongly drops the QOSClass field of the Pod's status when it rejects a Pod."
+pr_body: ""
+

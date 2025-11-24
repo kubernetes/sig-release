@@ -1,0 +1,4 @@
+pr: 105649
+releasenote:
+  text: 'kubeadm: do not allow empty `--config` paths to be passed to `kubeadm kubeconfig
+    user`'

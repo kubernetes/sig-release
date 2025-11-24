@@ -1,0 +1,4 @@
+pr: 129844
+releasenote:
+  text: '`cel-go` has been bumped to `v0.23.2`.'
+pr_body: ""

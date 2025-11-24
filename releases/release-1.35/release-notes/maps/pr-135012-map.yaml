@@ -1,0 +1,4 @@
+pr: 135012
+releasenote:
+  text: Prevented Pods from being scheduled onto nodes that lack the required CSI driver.
+pr_body: ""

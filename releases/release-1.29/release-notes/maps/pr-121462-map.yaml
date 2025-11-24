@@ -1,0 +1,4 @@
+pr: 121462
+releasenote:
+  text: Added `apiextensions_apiserver_update_ratcheting_time` metric for tracking
+    time taken during requests by feature `CRDValidationRatcheting`.

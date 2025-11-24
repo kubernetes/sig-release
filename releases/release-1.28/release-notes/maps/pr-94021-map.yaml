@@ -1,0 +1,3 @@
+pr: 94021
+releasenote:
+  text: Supported specifying a custom retry period for cloud `load-balancer` operations.

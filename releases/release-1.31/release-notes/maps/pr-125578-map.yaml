@@ -1,0 +1,5 @@
+pr: 125578
+releasenote:
+  text: When schedulingQueueHint is enabled, the scheduling queue doesn't update Pods
+    being scheduled immediately.
+pr_body: ""

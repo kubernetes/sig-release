@@ -1,0 +1,4 @@
+pr: 130204
+releasenote:
+  text: "`kubeproxy_conntrack_reconciler_deleted_entries_total` metric can be used to track cumulative sum of conntrack flows cleared by reconciler."
+pr_body: ""

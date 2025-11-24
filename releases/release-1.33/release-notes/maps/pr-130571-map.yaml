@@ -1,0 +1,7 @@
+pr: 130571
+releasenote:
+  text: |-
+    Added `apiserver.latency.k8s.io/authentication` annotation to the audit log to record the
+    time spent authenticating slow requests. Also added `apiserver.latency.k8s.io/authorization`
+    annotation to record the time spent authorizing slow requests.
+pr_body: ""

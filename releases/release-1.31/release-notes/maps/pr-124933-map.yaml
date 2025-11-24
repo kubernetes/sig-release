@@ -1,0 +1,4 @@
+pr: 124933
+releasenote:
+  text: Fixed a bug in the scheduler where it would crash when prefilter returns a
+    non-existent node.

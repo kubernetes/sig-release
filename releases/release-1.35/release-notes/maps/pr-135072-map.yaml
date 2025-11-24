@@ -1,0 +1,4 @@
+pr: 135072
+releasenote:
+  text: Typed workqueues now cleans up goroutines before shutting down.
+pr_body: ""

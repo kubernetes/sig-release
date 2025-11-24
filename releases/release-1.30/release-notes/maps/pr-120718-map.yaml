@@ -1,0 +1,5 @@
+pr: 120718
+releasenote:
+  text: Node podresources API now includes init containers with containerRestartPolicy
+    of `Always` when `SidecarContainers` feature is enabled.
+pr_body: ""

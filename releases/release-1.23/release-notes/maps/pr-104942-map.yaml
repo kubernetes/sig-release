@@ -1,0 +1,4 @@
+pr: 104942
+releasenote:
+  text: "kubeadm: do not check if the `/etc/kubernetes/manifests` folder is empty
+    on joining worker nodes during preflight"

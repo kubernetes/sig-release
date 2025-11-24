@@ -1,0 +1,3 @@
+pr: 98526
+releasenote:
+  text: Fix kube-proxy container image architecture for non amd64 images.

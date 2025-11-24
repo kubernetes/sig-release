@@ -1,0 +1,6 @@
+pr: 134769
+releasenote:
+  text: |-
+    Fixed a bug where Job status updates fail after resuming a Job that was previously started and suspended.
+    The error message was: `status.startTime: Required value: startTime cannot be removed for unsuspended job`.
+pr_body: ""

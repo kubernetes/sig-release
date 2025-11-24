@@ -1,0 +1,4 @@
+pr: 99775
+releasenote:
+  text: Exposes `WithCustomRoundTripper` method for specifying a middleware function
+    for custom HTTP behaviour for the delegated auth clients.

@@ -1,0 +1,5 @@
+pr: 113754
+releasenote:
+  text: |
+    '`kubelet_kubelet_credential_provider_plugin_duration` was renamed to `kubelet_credential_provider_plugin_duration`
+    and `kubelet_kubelet_credential_provider_plugin_errors` was renamed to `kubelet_credential_provider_plugin_errors`.'

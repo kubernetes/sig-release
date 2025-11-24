@@ -1,0 +1,5 @@
+pr: 129170
+releasenote:
+  text: Fixed a data race that could occur when a single Go type was serialized to
+    CBOR concurrently for the first time within a program.
+pr_body: ""

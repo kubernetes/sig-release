@@ -1,0 +1,5 @@
+pr: 132338
+releasenote:
+  text: Added `omitempty` and `opt` tag to the API `v1beta2` AdminAccess type in the
+    `DeviceRequestAllocationResult` struct.
+pr_body: ""

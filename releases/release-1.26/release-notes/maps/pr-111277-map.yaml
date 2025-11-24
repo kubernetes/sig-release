@@ -1,0 +1,4 @@
+pr: 111277
+releasenote:
+  text: 'kubeadm: when a sub command is needed but not provided for a kubeadm command,
+    print a help screen instead of showing a short message.'

@@ -1,0 +1,5 @@
+pr: 122138
+releasenote:
+  text: |
+    "Removed the generally available feature gate `KubeletPodResourcesGetAllocatable`."
+pr_body: ""

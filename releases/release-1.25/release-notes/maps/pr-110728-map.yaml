@@ -1,0 +1,3 @@
+pr: 110728
+releasenote:
+  text: 'Kubelet: Silenced flag output on errors.'

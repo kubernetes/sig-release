@@ -1,0 +1,4 @@
+pr: 99336
+releasenote:
+  text: 'kubelet: improve the performance when waiting for a synchronization of the
+    node list with the `kube-apiserver`.'

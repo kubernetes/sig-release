@@ -1,0 +1,5 @@
+pr: 128035
+releasenote:
+  text: The getters for the field name and typeDescription of the Reflector struct
+    were renamed.
+pr_body: ""

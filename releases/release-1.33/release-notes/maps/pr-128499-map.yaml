@@ -1,0 +1,6 @@
+pr: 128499
+releasenote:
+  text: |-
+    The `ClusterTrustBundle` API is moving to v1beta1.
+    In order for the `ClusterTrustBundleProjection` feature to work on the kubelet side, the `ClusterTrustBundle` API must be available at v1beta1 version and the `ClusterTrustBundleProjection` feature gate must be enabled. If the API becomes later after kubelet started running, restart the kubelet to enable the feature.
+pr_body: ""

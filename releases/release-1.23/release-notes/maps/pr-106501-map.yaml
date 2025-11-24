@@ -1,0 +1,4 @@
+pr: 106501
+releasenote:
+  text: CRI v1 is now the project default. If a container runtime does not support
+    the v1 API, Kubernetes will fall back to the v1alpha2 implementation.

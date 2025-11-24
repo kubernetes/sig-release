@@ -1,0 +1,3 @@
+pr: 102461
+releasenote:
+  text: Improve func `ToSelectableFields`' performance for event.

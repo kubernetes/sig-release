@@ -1,0 +1,9 @@
+pr: 106901
+releasenote:
+  text: Reverted graceful node shutdown to match 1.21 behavior of setting pods that
+    have not yet successfully completed to "Failed" phase if the GracefulNodeShutdown
+    feature is enabled in kubelet. The GracefulNodeShutdown feature is beta and must
+    be explicitly configured via kubelet config to be enabled in 1.21+. This changes
+    1.22 and 1.23 behavior on node shutdown to match 1.21. If you do not want pods
+    to be marked terminated on node shutdown in 1.22 and 1.23, disable the GracefulNodeShutdown
+    feature.

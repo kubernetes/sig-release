@@ -1,0 +1,3 @@
+pr: 104161
+releasenote:
+  text: Fix `kube-apiserver` metric reporting for the deprecated watch path of `/api/<version>/watch/...`.

@@ -1,0 +1,7 @@
+pr: 130210
+releasenote:
+  text: 'KEP-3619: fined-grained supplemental groups policy is graduated to Beta.
+    Note that kubelet now rejects pods with `.spec.securityContext.supplementalGroupsPolicy:
+    Strict` when scheduled to the node that does not support the feature (`.status.features.supplementalGroupsPolicy:
+    false`).'
+pr_body: ""

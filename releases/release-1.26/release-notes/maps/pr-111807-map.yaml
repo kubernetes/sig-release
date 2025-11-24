@@ -1,0 +1,6 @@
+pr: 111807
+releasenote:
+  text: Log messages and metrics for the watch cache are now keyed by `<resource>.<group>`
+    instead of `go` struct type. This means e.g. that `*v1.Pod` becomes `pods`. Additionally,
+    resources that come from `CustomResourceDefinitions` are displayed as the correct
+    resource and group, instead of `*unstructured.Unstructured`.

@@ -1,0 +1,4 @@
+pr: 111620
+releasenote:
+  text: The intree volume plugin storageos support has been completely removed from
+    Kubernetes.

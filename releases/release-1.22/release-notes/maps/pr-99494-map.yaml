@@ -1,0 +1,7 @@
+pr: 99494
+releasenote:
+  text: The `CertificateSigningRequest.certificates.k8s.io` API supports an optional
+    expirationSeconds field to allow the client to request a particular duration for
+    the issued certificate.  The default signer implementations provided by the Kubernetes
+    controller manager will honor this field as long as it does not exceed the --cluster-signing-duration
+    flag.

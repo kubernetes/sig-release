@@ -1,0 +1,5 @@
+pr: 96120
+releasenote:
+  text: Adds feature gate `NodeLogQuery` which provides cluster administrators with
+    a streaming view of logs using kubectl without them having to implement a client
+    side reader or logging into the node.

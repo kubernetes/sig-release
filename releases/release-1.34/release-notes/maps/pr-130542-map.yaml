@@ -1,0 +1,5 @@
+pr: 130542
+releasenote:
+  text: Updated `conntrack` reconciler to consider a Service’s target port during
+    cleanup of stale flow entries.
+pr_body: ""

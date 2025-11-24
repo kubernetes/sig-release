@@ -1,0 +1,4 @@
+pr: 113274
+releasenote:
+  text: New Pod API field `.spec.schedulingGates` was introduced to enable users to
+    control when to mark a Pod as scheduling ready.

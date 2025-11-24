@@ -1,0 +1,4 @@
+pr: 120427
+releasenote:
+  text: Listed the pods using `<PVC>` as an ephemeral storage volume in "Used by:"
+    part of the output of `kubectl describe pvc <PVC>` command.

@@ -1,0 +1,5 @@
+pr: 116293
+releasenote:
+  text: Enable external plugins can be used as subcommands for kubectl create command
+    if subcommand does not exist as builtin only when KUBECTL_ENABLE_CMD_SHADOW environment
+    variable is exported.

@@ -1,0 +1,10 @@
+pr: 109706
+releasenote:
+  text: Reduced the number of cloud API calls and service downtime caused by excessive
+    re-configurations of cluster LBs with externalTrafficPolicy=Local when node readiness
+    changes (https://github.com/kubernetes/kubernetes/issues/111539). The service
+    controller (in cloud-controller-manager) will avoid resyncing nodes which are
+    transitioning between `Ready` / `NotReady` (only for for ETP=Local Services).  The
+    LBs used for these services will solely rely on the health check probe defined
+    by the `healthCheckNodePort` to determine if a particular node is to be used for
+    traffic load balancing.

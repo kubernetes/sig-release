@@ -1,0 +1,5 @@
+pr: 102925
+releasenote:
+  text: Fix scoring for `NodeResourcesMostAllocated` and `NodeResourcesBalancedAllocation`
+    plugins when nodes have containers with no requests. This was leaving to under-utilization
+    of small nodes.

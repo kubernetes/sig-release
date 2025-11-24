@@ -1,0 +1,10 @@
+pr: 107725
+releasenote:
+  text: 'kubeadm: improve the strict parsing of user YAML/JSON configuration files.
+    Next to printing warnings for unknown and duplicate fields (current state), also
+    print warnings for fields with incorrect case sensitivity - e.g. `controlPlaneEndpoint`
+    (valid), `ControlPlaneEndpoint` (invalid). Instead of only printing warnings during
+    `init` and `join` also print warnings when downloading the ClusterConfiguration,
+    KubeletConfiguration or KubeProxyConfiguration objects from the cluster. This
+    can be useful if the user has patched these objects in their respective ConfigMaps
+    with mistakes.'

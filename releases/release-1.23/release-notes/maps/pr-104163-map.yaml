@@ -1,0 +1,5 @@
+pr: 104163
+releasenote:
+  text: The `SupportPodPidsLimit` and  `SupportNodePidsLimit` feature gates that are
+    GA since v1.20 are unconditionally enabled, and can no longer be specified via
+    the `--feature-gates` argument.

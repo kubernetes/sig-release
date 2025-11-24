@@ -1,0 +1,4 @@
+pr: 132257
+releasenote:
+  text: Removed support for API streaming from the `List()` method of the typed client.
+pr_body: ""

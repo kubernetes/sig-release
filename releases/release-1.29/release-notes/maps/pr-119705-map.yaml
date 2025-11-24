@@ -1,0 +1,3 @@
+pr: 119705
+releasenote:
+  text: Removed `generatedfiles` from the Makefile.

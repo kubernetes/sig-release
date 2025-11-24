@@ -1,0 +1,6 @@
+pr: 124959
+releasenote:
+  text: |-
+    The kube-scheduler added support for scheduling hints for the PersistentVolumeClaim resource within the VolumeBinding plugin.
+    The scheduling hints allowed the scheduler to retry scheduling a Pod that was previously rejected by the VolumeBinding plugin only if a new resource referenced by the plugin was created or an existing resource referenced by the plugin was updated.
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 131514
+releasenote:
+  text: Promoted the feature `OrderedNamespaceDeletion` to GA.
+pr_body: ""

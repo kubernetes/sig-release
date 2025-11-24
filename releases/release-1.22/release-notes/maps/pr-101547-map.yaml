@@ -1,0 +1,4 @@
+pr: 101547
+releasenote:
+  text: 'kubeadm: Remove the field `ClusterConfiguration.DNS.Type` in v1beta3 since
+    CoreDNS is the only supported DNS type.'

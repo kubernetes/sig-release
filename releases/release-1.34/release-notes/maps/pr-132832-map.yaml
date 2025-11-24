@@ -1,0 +1,5 @@
+pr: 132832
+releasenote:
+  text: Updated `kubectl get job` to display the `SuccessCriteriaMet` status for listed
+    jobs.
+pr_body: ""

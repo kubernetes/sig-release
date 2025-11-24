@@ -1,0 +1,4 @@
+pr: 119537
+releasenote:
+  text: Removed ephemeral container legacy server support for the server versions
+    prior to `1.22`.

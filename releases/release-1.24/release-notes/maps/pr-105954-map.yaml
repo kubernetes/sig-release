@@ -1,0 +1,5 @@
+pr: 105954
+releasenote:
+  text: Only extend token lifetimes when `--service-account-extend-token-expiration`
+    is true and the requested token audiences are empty or exactly match all values
+    for `--api-audiences`.

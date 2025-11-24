@@ -1,0 +1,6 @@
+pr: 133076
+releasenote:
+  text: 'DRA driver helper: Fixed handling of apiserver restart when running on a
+    Kubernetes version which did not support the `resource.k8s.io` version used by
+    the DRA driver.'
+pr_body: ""

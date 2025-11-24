@@ -1,0 +1,6 @@
+pr: 129670
+releasenote:
+  text: Fixed a bug where adding an ephemeral container to a pod which references
+    a new secret or config map doesn't give the pod access to that new secret or config
+    map. (#114984, @cslink).
+pr_body: ""

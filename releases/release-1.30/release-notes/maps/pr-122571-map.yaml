@@ -1,0 +1,5 @@
+pr: 122571
+releasenote:
+  text: |
+    "Added `WatchListClient` feature gate to `client-go`. When enabled, it allows the client to receive a stream of individual items instead of chunking from the server."
+pr_body: ""

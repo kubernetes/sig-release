@@ -1,0 +1,4 @@
+pr: 114863
+releasenote:
+  text: 'kubectl: enabled usage of label selector for filtering out resources when
+    pruning for kubectl diff'

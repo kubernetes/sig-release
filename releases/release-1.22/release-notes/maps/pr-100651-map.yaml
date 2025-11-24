@@ -1,0 +1,4 @@
+pr: 100651
+releasenote:
+  text: New feature gate `ExpandedDNSConfig` is now available. This feature allows
+    Kubernetes to have expanded DNS configuration.

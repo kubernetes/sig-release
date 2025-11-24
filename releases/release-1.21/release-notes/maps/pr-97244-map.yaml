@@ -1,0 +1,3 @@
+pr: 97244
+releasenote:
+  text: kubeadm installs etcd v3.4.13 when creating cluster v1.19

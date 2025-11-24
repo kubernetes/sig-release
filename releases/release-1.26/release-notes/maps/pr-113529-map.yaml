@@ -1,0 +1,7 @@
+pr: 113529
+releasenote:
+  text: A new API server flag `--encryption-provider-config-automatic-reload` was
+    added to control when the encryption config should be automatically reloaded without
+    needing to restart the server.  All KMS plugins are now merged into a single healthz
+    check at `/healthz/kms-providers` when reload is enabled, or when only KMS v2
+    plugins are used.

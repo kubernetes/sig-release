@@ -1,0 +1,4 @@
+pr: 117594
+releasenote:
+  text: Fixed performance regression in scheduler caused by frequent metric lookup
+    on critical code path.

@@ -1,0 +1,5 @@
+pr: 128367
+releasenote:
+  text: Added support for in-place vertical scaling of Pods with sidecars (containers
+    defined within `initContainers` where the `restartPolicy` is set to `Always`).
+pr_body: ""

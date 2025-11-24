@@ -1,0 +1,3 @@
+pr: 105999
+releasenote:
+  text: Support to enable Hyper-V in GCE Windows Nodes created with `kube-up`

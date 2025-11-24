@@ -1,0 +1,3 @@
+pr: 100500
+releasenote:
+  text: 'Fix: using NVMe AWS EBS volumes partitions.'

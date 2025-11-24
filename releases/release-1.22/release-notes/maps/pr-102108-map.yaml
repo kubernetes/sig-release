@@ -1,0 +1,5 @@
+pr: 102108
+releasenote:
+  text: 'kubead: remove the deprecated `--csr-only` and `--csr-dir` flags from `kubeadm
+    init phase certs`. Deprecate the same flags under `kubeadm certs renew`.
+    In both the cases the command `kubeadm certs generate-csr` should be used instead.'

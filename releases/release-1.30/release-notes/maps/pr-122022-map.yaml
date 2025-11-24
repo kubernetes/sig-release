@@ -1,0 +1,5 @@
+pr: 122022
+releasenote:
+  text: |
+    "Previously, the scheduling queue didn't notice any extenders' failures, potentially resulting in missed cluster events and Pods rejected by Extenders being stuck in the unschedulable pod pool for up to 5 minutes in the worst-case scenario. Now, the scheduling queue notices extenders' failures and requeues Pods rejected by Extenders appropriately."
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 118601
+releasenote:
+  text: |-
+    Updated kube-apiserver's priority & fairness work estimator such that 'max seats' is MIN(0.15 x nominalCL, nominalCL / handSize)
+
+    This fixes a bug where clients with requests using hand size x max seats greater than the nominal concurrency limit can starve other requests in the same priority level.

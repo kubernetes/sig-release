@@ -1,0 +1,5 @@
+pr: 130797
+releasenote:
+  text: Added a new 'tolerance' field to HorizontalPodAutoscaler, overriding the cluster-wide
+    default. Enabled via the HPAConfigurableTolerance alpha feature gate.
+pr_body: ""

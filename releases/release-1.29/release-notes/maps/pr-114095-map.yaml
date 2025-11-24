@@ -1,0 +1,5 @@
+pr: 114095
+releasenote:
+  text: |-
+    `scheduler`: Fixed missing field `apiVersion` from events reported by the taint
+    manager.

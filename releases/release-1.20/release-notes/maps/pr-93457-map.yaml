@@ -1,0 +1,3 @@
+pr: 93457
+releasenote:
+  text: StatefulSet Controller now waits for PersistentVolumeClaim deletion before creating pods.

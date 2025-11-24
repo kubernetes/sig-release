@@ -1,0 +1,3 @@
+pr: 107429
+releasenote:
+  text: Fixed `azureDisk` parameter lowercase translation issue.

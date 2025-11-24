@@ -1,0 +1,6 @@
+pr: 129058
+releasenote:
+  text: Revised scheduling behavior to correctly handle nominated node changes. Trigger
+    rescheduling of pods if necessary when pods with nominated node names got deleted
+    or nominated on a different node.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 101292
+releasenote:
+  text: |-
+    Add three metrics to the job controller to monitor if a job works in healthy condition.
+    `IndexedJob` has been promoted to Beta.

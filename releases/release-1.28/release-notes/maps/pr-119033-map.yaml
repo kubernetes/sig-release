@@ -1,0 +1,3 @@
+pr: 119033
+releasenote:
+  text: Bumped kube-dns to `v1.22.23`.

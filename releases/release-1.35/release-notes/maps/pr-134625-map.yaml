@@ -1,0 +1,5 @@
+pr: 134625
+releasenote:
+  text: Removed the `VolumeAttributesClass` resource from the `storage.k8s.io/v1alpha1`
+     API in `v1.35`.
+pr_body: ""

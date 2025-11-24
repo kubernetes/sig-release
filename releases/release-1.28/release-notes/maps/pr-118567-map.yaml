@@ -1,0 +1,4 @@
+pr: 118567
+releasenote:
+  text: CI job `ci-kubernetes-node-arm64-ubuntu-serial` will test node e2e on arm64,
+    `use-dockerized-build` and `target-build-arch` are required to run this job.

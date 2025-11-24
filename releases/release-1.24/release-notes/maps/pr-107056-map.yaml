@@ -1,0 +1,4 @@
+pr: 107056
+releasenote:
+  text: Windows Pause no longer has support for SAC releases 1903, 1909, 2004. Windows
+    image support is now Ltcs 2019 (1809), 20H2, LTSC 2022

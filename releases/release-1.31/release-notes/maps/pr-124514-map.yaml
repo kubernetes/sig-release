@@ -1,0 +1,3 @@
+pr: 124514
+releasenote:
+  text: Fixed bug where kubectl get with --sort-by flag does not sort strings alphanumerically.

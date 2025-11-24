@@ -1,0 +1,35 @@
+{
+  "mail": "rodomar@outlook.com",
+  "name": "Rodolfo Martínez Vega",
+  "date": 1660239162,
+  "prs": [
+    {
+      "nr": 111061,
+      "hash": "2a4b99eb160bbe930fc9ce3afc446921b1268439"
+    },
+    {
+      "nr": 109090,
+      "hash": "8436f0d8bbd2c4276ac56624d971ec2049e8bb4c"
+    },
+    {
+      "nr": 111258,
+      "hash": "50541b1f92ac4e30698aa1c5ea1b20866f6d7261"
+    },
+    {
+      "nr": 111721,
+      "hash": "7edd0c9dd82132aae80712c48bc981e4381e8d37"
+    },
+    {
+      "nr": 111691,
+      "hash": "05f8f82ab448907819819f9ac2910e156114c8e3"
+    },
+    {
+      "nr": 108554,
+      "hash": "0b3b1b6f49abc483e5e48ab4599d3534b7af6b5d"
+    },
+    {
+      "nr": 111113,
+      "hash": "5089b04ab68d7cba28548ea19aff024976385fde"
+    }
+  ]
+}

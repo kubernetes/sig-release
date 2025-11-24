@@ -1,0 +1,6 @@
+pr: 130352
+releasenote:
+  text: When the `PodObservedGenerationTracking` feature gate was set, the kubelet
+    populated `status.observedGeneration` to reflect the latest `metadata.generation`
+    it observed for the pod.
+pr_body: ""

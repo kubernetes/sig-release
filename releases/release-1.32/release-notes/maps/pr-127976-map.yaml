@@ -1,0 +1,4 @@
+pr: 127976
+releasenote:
+  text: The name port of the sidecar was also allowed to be used.
+pr_body: ""

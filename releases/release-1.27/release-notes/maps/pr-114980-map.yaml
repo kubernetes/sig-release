@@ -1,0 +1,3 @@
+pr: 114980
+releasenote:
+  text: Removed scheduler names from preemption event messages. 

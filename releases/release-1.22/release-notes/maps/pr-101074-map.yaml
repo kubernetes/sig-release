@@ -1,0 +1,4 @@
+pr: 101074
+releasenote:
+  text: The command`kubectl debug` will now print a warning message when using the
+    `--target` option since many container runtimes do not support this yet.

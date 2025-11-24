@@ -1,0 +1,4 @@
+pr: 134312
+releasenote:
+  text: Fixed resource claims deallocation for extended resource when Pod completes.
+pr_body: ""

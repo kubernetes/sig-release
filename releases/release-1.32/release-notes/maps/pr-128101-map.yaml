@@ -1,0 +1,6 @@
+pr: 128101
+releasenote:
+  text: Added enforcement of an upper cost bound for DRA evaluations of CEL. The API
+    server and scheduler now enforce an upper bound on the cost and runtime steps
+    required for evaluating a CEL expression.
+pr_body: ""

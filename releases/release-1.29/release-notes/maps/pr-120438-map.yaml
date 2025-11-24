@@ -1,0 +1,9 @@
+pr: 120438
+releasenote:
+  text: "Added apiserver identity to the following metrics: \n`apiserver_envelope_encryption_key_id_hash_total`,
+    `apiserver_envelope_encryption_key_id_hash_last_timestamp_seconds`, `apiserver_envelope_encryption_key_id_hash_status_last_timestamp_seconds`,
+    `apiserver_encryption_config_controller_automatic_reload_failures_total`, `apiserver_encryption_config_controller_automatic_reload_success_total`,
+    `apiserver_encryption_config_controller_automatic_reload_last_timestamp_seconds`.\n\nFixed
+    bug to surface events for the following metrics: `apiserver_encryption_config_controller_automatic_reload_failures_total`,
+    `apiserver_encryption_config_controller_automatic_reload_last_timestamp_seconds`,
+    `apiserver_encryption_config_controller_automatic_reload_success_total`."

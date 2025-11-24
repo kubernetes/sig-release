@@ -1,0 +1,3 @@
+pr: 110488
+releasenote:
+  text: kube-up now includes CoreDNS version v1.9.3.

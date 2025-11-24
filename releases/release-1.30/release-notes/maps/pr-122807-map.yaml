@@ -1,0 +1,6 @@
+pr: 122807
+releasenote:
+  text: Fixed an issue where the `configmap`, `secret`, `projected`, and `downwardAPI`
+    volume types didn't create user-visible files after a kubelet restart. This fix
+    ensures data persistence and accessibility after restarts.
+pr_body: ""

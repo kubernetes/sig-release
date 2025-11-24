@@ -1,0 +1,3 @@
+pr: 109241
+releasenote:
+  text: Make STS available replicas optional again.

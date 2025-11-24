@@ -1,0 +1,4 @@
+pr: 112556
+releasenote:
+  text: Changed error message when resource is not supported by given patch type in
+    `kubectl patch`.

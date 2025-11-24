@@ -1,0 +1,6 @@
+pr: 121632
+releasenote:
+  text: "Fixed a regression since `v1.27.0` in the scheduler framework when running
+    score plugins. \nThe `skippedScorePlugins` number might be greater than `enabledScorePlugins`,
+    \nso when initializing a slice the `cap(len(skippedScorePlugins) - len(enabledScorePlugins))`
+    is negative, \nwhich is not allowed."

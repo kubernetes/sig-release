@@ -1,0 +1,4 @@
+pr: 108032
+releasenote:
+  text: This adds an optional `timeZone` field as part of the CronJob spec to support
+    running cron jobs in a specific time zone.

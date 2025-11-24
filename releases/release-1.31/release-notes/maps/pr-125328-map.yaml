@@ -1,0 +1,4 @@
+pr: 125328
+releasenote:
+  text: Added a warning log, an event for cgroup v1 usage and a metric for cgroup version.
+pr_body: ""

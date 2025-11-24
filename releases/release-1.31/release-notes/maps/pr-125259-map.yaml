@@ -1,0 +1,4 @@
+pr: 125259
+releasenote:
+  text: Promoted the `ProcMountType` feature gate to beta.
+pr_body: ""

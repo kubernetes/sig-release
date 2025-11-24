@@ -1,0 +1,5 @@
+pr: 118999
+releasenote:
+  text: kube-proxy service health returns http header `X-Load-Balancing-Endpoint-Weight`
+    with number of local endpoints. The same information is still available in response
+    body JSON `payload.LocalEndpoints`.

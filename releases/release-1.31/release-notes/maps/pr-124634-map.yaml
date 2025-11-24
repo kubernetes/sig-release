@@ -1,0 +1,4 @@
+pr: 124634
+releasenote:
+  text: Moved remote CRI implementation from kubelet to `k8s.io/cri-client` repository.
+pr_body: ""

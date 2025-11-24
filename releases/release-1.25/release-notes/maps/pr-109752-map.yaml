@@ -1,0 +1,3 @@
+pr: 109752
+releasenote:
+  text: Deleted the `apimachinery/clock` package. Please use `k8s.io/utils/clock` package instead.

@@ -1,0 +1,4 @@
+pr: 123425
+releasenote:
+  text: Added feature gate `MutatingAdmissionPolicy` for enabling mutation policy
+    in admission chain.

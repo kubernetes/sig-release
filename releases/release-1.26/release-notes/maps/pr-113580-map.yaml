@@ -1,0 +1,4 @@
+pr: 113580
+releasenote:
+  text: Fixed that disruption controller used to change the status of a stale disruption
+    condition after 2 min when the `PodDisruptionConditions` feature gate is enabled.

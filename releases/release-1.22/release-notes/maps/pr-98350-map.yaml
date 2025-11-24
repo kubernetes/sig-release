@@ -1,0 +1,3 @@
+pr: 98350
+releasenote:
+  text: Aggregate errors when putting vmss.

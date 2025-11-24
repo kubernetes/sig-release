@@ -1,0 +1,3 @@
+pr: 105445
+releasenote:
+  text: Change `kubectl diff --invalid-arg` status code from 1 to 2 to match docs

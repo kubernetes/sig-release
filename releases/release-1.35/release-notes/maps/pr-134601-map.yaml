@@ -1,0 +1,7 @@
+pr: 134601
+releasenote:
+  text: Made legacy watch calls (`ResourceVersion` = 0 or unset) that generate init-events weigh
+    higher in `API Priority and Fairness (APF)` seat usage. Properly accounting for their
+    cost protects the API server from CPU overload. Users might see increased
+    throttling of such calls as a result.
+pr_body: ""

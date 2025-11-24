@@ -1,0 +1,129 @@
+# Exception requests in v1.34
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Vyom Yadav ([@Vyom-Yadav](https://github.com/Vyom-Yadav) 
+
+# Enhancements Freeze Exceptions requested in v1.34
+
+enhancementFreeze:
+
+- name: "In-Place Update of Pod Resources"
+  issue: 1287
+  date_requested: 2025-06-20
+  date_reviewed: 2025-06-23
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/MbbxapG9drw
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/5368
+  status: "approved"
+
+- name: "In-Place Pod-Level Resources Resize"
+  issue: 5419
+  date_requested: 2025-06-20
+  date_reviewed: 2025-06-23
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/Bzq0oMkFhzE
+  pull_requests:
+    - https://github.com/kubernetes/enhancements/pull/5423
+    - https://github.com/kubernetes/enhancements/pull/5432
+  status: "approved"
+
+# Code Freeze Exceptions requested in v1.34
+
+codeFreeze:
+
+- name: "DRA: Handle extended resource requests via DRA Driver"
+  issue: 5004
+  date_requested: 2025-07-23
+  date_reviewed: 2025-07-26
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/NOPRgAz9fxI
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/130653
+  status: "approved"
+
+- name: "DRA: Consumable Capacity"
+  issue: 5075
+  date_requested: 2025-07-23
+  date_reviewed: 2025-07-25
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/uvnJHAWIyWA
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/132522
+  status: "approved"
+
+- name: "DRA: Device Binding Conditions"
+  issue: 5007
+  date_requested: 2025-07-24
+  date_reviewed: 2025-07-25
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/ae9ZTJyP17Y
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/130160
+  status: "approved"
+
+- name: "maxUnavailable for StatefulSets"
+  issue: 961
+  date_requested: 2025-07-24
+  date_reviewed: 2025-07-29
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/iRNNc_wpniA
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/130951
+    - https://github.com/kubernetes/kubernetes/pull/133153
+  status: "rejected"
+
+- name: "Pod level resources"
+  issue: 2837
+  date_requested: 2025-07-24
+  date_reviewed: 2025-07-28
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/WLVtwIEgiuQ
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/132999
+    - https://github.com/kubernetes/kubernetes/pull/132430
+    - https://github.com/kubernetes/kubernetes/pull/131089
+    - https://github.com/kubernetes/kubernetes/pull/133279
+  status: "approved"
+
+- name: "Asynchronous API calls during scheduling"
+  issue: 5229
+  date_requested: 2025-07-25
+  date_reviewed: 2025-07-28
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/_cgq2TEVqRM
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/132886
+    - https://github.com/kubernetes/kubernetes/pull/133120
+  status: "approved"
+
+- name: "Use NominatedNodeName to express the expected pod placement"
+  issue: 5278
+  date_requested: 2025-07-25
+  date_reviewed: 2025-07-28
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/5Xgb5gsO65k
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/133276
+    - https://github.com/kubernetes/kubernetes/pull/132443
+    - https://github.com/kubernetes/kubernetes/pull/133021
+    - https://github.com/kubernetes/kubernetes/pull/133213
+    - https://github.com/kubernetes/kubernetes/pull/133293
+  status: "approved"
+
+- name: "Support User Namespaces in pods"
+  issue: 127
+  date_requested: 2025-07-25
+  date_reviewed: 2025-07-28
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/ARroy9Z2JMg
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/132868
+  status: "approved"
+
+- name: "Allows setting any FQDN as the pod's hostname"
+  issue: 4762
+  date_requested: 2025-07-29
+  date_reviewed: 2025-07-29
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/ow5CcrYJjmo
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/133254
+  status: "approved"
+
+- name: "Pod Certificates"
+  issue: 4317
+  date_requested: 2025-07-29
+  date_reviewed: 2025-07-31
+  thread: https://groups.google.com/g/kubernetes-sig-release/c/mvbrRhJ8Im8
+  pull_requests:
+    - https://github.com/kubernetes/kubernetes/pull/133242
+  status: "approved"

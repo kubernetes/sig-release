@@ -1,0 +1,5 @@
+pr: 124675
+releasenote:
+  text: Added the feature gates `StrictCostEnforcementForVAP` and `StrictCostEnforcementForWebhooks`
+    to enforce the strict cost calculation for CEL extended libraries. It is strongly
+    recommended to turn on the feature gates as early as possible.

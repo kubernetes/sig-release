@@ -1,0 +1,4 @@
+pr: 100571
+releasenote:
+  text: Explicitly pass `KUBE_BUILD_CONFORMANCE=y` in `package-tarballs` to reenable
+    building the conformance tarballs.

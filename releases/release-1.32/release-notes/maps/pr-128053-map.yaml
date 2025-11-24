@@ -1,0 +1,5 @@
+pr: 128053
+releasenote:
+  text: Graduated the `WatchList` feature gate to Beta for kube-apiserver and enabled
+    `WatchListClient` for KCM.
+pr_body: ""

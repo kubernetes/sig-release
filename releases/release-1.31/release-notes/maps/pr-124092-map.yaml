@@ -1,0 +1,6 @@
+pr: 124092
+releasenote:
+  text: |-
+    - Windows Kubeproxy will use the update load balancer API for load balancer updates, instead of the previous delete and create APIs.
+    - Deletion of remote endpoints will be triggered only for terminated endpoints (those present in the old endpoints map but not in the new endpoints map), whereas previously it was also done for terminating endpoints.
+pr_body: ""

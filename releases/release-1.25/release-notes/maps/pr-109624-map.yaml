@@ -1,0 +1,3 @@
+pr: 109624
+releasenote:
+  text: EndpointSlices marked for deletion are now ignored during reconciliation.

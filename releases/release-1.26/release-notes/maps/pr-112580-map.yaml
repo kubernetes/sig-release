@@ -1,0 +1,6 @@
+pr: 112580
+releasenote:
+  text: Added `--disable-compression` flag to `kubectl` (default = false). When true,
+    it opts out of response compression for all requests to the `apiserver`. This
+    can help improve list call latencies significantly when client-server network
+    bandwidth is ample (>30MB/s) or if the server is CPU-constrained.

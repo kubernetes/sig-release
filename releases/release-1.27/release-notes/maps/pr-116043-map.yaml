@@ -1,0 +1,5 @@
+pr: 116043
+releasenote:
+  text: 'From now on, the HPA controller will return an error for the container resource
+    metrics when the feature gate `HPAContainerMetrics` is disabled. As a result,
+    HPA with a container resource metric performs no scale-down and performs only.'

@@ -1,0 +1,7 @@
+pr: 123642
+releasenote:
+  text: |-
+    The JWT authenticator in `kube-apiserver` now reports the following metrics when the `StructuredAuthenticationConfiguration` feature gate is enabled:
+    - `apiserver_authentication_jwt_authenticator_jwks_fetch_last_timestamp_seconds`
+    - `apiserver_authentication_jwt_authenticator_jwks_fetch_last_key_set_info`.
+pr_body: ""

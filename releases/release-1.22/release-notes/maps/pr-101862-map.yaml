@@ -1,0 +1,4 @@
+pr: 101862
+releasenote:
+  text: Retry `FibreChannel` devices cleanup after error to ensure `FibreChannel` device is detached
+    before it can be used on another node.

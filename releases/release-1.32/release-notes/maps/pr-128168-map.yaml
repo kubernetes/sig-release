@@ -1,0 +1,12 @@
+pr: 128168
+releasenote:
+  text: 'kube-apiserver: Promoted `AuthorizeWithSelectors` feature to beta, which
+    includes field and label selector information from requests in webhook authorization
+    calls. Promoted `AuthorizeNodeWithSelectors` feature to beta, which changes node
+    authorizer behavior to limit requests from node API clients, so that each Node
+    can only get / list / watch its own Node API object, and can also only get / list
+    / watch Pod API objects bound to that node. Clients using kubelet credentials
+    to read other nodes or unrelated pods must change their authentication credentials
+    (recommended), adjust their usage, or obtain broader read access independent of
+    the node authorizer.'
+pr_body: ""

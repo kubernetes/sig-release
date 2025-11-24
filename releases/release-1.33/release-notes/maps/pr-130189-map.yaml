@@ -1,0 +1,6 @@
+pr: 130189
+releasenote:
+  text: If scheduling fails on PreBind or Bind, scheduler will retry the failed pod
+    immediately after backoff time, regardless of the reason for failing. In this
+    case EventsToRegister (QHints) will not be taken into consideration before retry.
+pr_body: ""

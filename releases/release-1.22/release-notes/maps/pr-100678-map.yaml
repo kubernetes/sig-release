@@ -1,0 +1,4 @@
+pr: 100678
+releasenote:
+  text: Add a new Priority and Fairness rule that exempts all probes (`/readyz`, `/healthz`,
+    `/livez`) to prevent restarting of healthy `kube-apiserver` instance by kubelet.

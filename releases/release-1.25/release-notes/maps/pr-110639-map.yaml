@@ -1,0 +1,9 @@
+pr: 110639
+releasenote:
+  text: EndpointSlices with Pod referencing Nodes that don't exist couldn't be created
+    or updated. The behavior on the EndpointSlice controller has been modified to update
+    the EndpointSlice without the Pods that reference non-existing Nodes and keep
+    retrying until all Pods reference existing Nodes. However, if `service.Spec.PublishNotReadyAddresses`
+    is set, all the Pods are published without retrying. Fixed EndpointSlices metrics
+    to reflect correctly the number of desired EndpointSlices when no endpoints are
+    present.
