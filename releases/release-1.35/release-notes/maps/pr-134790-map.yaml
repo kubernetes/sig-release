@@ -1,0 +1,7 @@
+pr: 134790
+releasenote:
+  text: Moved the Pod Certificates feature to beta. Added `UserAnnotations` to the
+    `PodCertificateProjection` API and `UnverifiedUserAnnotations` to the `PodCertificateRequest`
+    API. The `PodCertificateRequest` feature gate remains disabled by default and
+    requires enabling the v1beta1 certificates API groups.
+pr_body: ""

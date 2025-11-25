@@ -1,0 +1,5 @@
+pr: 135231
+releasenote:
+  text: Implemented opportunistic batching (KEP-5598) to optimize scheduling for pods
+    with identical scheduling requirements.
+pr_body: ""

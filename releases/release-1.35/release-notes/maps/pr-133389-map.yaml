@@ -1,0 +1,9 @@
+pr: 133389
+releasenote:
+  text: |-
+    Introduced the Node Declared Features capability (alpha), which includes:
+    - A new `Node.Status.DeclaredFeatures` field for publishing node-specific features.
+    - A `component-helpers` library for feature registration and inference.
+    - A `NodeDeclaredFeatures` scheduler plugin to match pods with nodes that provide required features.
+    - A `NodeDeclaredFeatureValidator` admission plugin to validate pod updates against a node's declared features.
+pr_body: ""

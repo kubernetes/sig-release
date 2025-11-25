@@ -1,0 +1,4 @@
+pr: 133968
+releasenote:
+  text: Upgraded CoreDNS to v1.12.4.
+pr_body: ""

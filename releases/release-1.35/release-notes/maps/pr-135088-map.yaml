@@ -1,0 +1,4 @@
+pr: 135088
+releasenote:
+  text: Graduated the fine-grained supplemental groups policy (KEP-3619) to GA.
+pr_body: ""

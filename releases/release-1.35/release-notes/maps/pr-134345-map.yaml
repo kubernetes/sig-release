@@ -1,0 +1,5 @@
+pr: 134345
+releasenote:
+  text: All containers are restarted when a source container in a restart policy rule
+    exits. This alpha feature is gated behind `RestartAllContainersOnContainerExit`.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135031
+releasenote:
+  text: Fixed an issue that prevented restart policies and restart rules from being
+    applied to static pods.
+pr_body: ""
