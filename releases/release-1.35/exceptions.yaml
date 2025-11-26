@@ -1,0 +1,24 @@
+# Exception requests in v1.35
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Drew Hagen ([@drewhagen](https://github.com/drewhagen) )
+
+# Enhancements Freeze Exceptions requested in v1.35
+
+enhancementFreeze:
+- name: "Mutable CSINode Allocatable Property"
+  issue: 4876
+  date_requested: 2025-10-17
+  date_reviewed: 2025-10-19
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/EaXWtlSh5OE"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5628"
+  status: "approved"
+
+- name: "Device Attributes in Downward API"
+  issue: 5304
+  date_requested: 2025-10-17
+  date_reviewed: 2025-10-19
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/4xSmVHBOChM"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5606"
+  status: "approved"
