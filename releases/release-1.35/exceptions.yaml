@@ -22,3 +22,127 @@ enhancementFreeze:
   pull_requests:
     - "https://github.com/kubernetes/enhancements/pull/5606"
   status: "approved"
+
+# Code Freeze Exceptions requested in v1.35
+
+codeFreeze:
+- name: "Restart all containers on container exits"
+  issue: 5532
+  date_requested: 2025-11-08
+  date_reviewed: 2025-11-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/BN3cpxFiwWc"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/134345"
+  status: "approved"
+
+- name: "Pod Level Resource Managers"
+  issue: 5526
+  date_requested: 2025-11-06
+  date_reviewed: 2025-11-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/H7jUtSMZYKY"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/134768"
+  status: "rejected"
+
+- name: "Kubernetes VolumeAttributesClass ModifyVolume"
+  issue: 3751
+  date_requested: 2025-11-07
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/Viw10aZGL6Y"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/134556"
+  status: "rejected"
+
+- name: "Extended Toleration Operators for Threshold-Based Placement"
+  issue: 5471
+  date_requested: 2025-11-06
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/3bsLwjKEwtE"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/134665"
+  status: "approved"
+
+- name: "VolumeSource: OCI Artifact and/or Image"
+  issue: 4639
+  date_requested: 2025-11-07
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/iEWc4z2W4iU"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/135195"
+  status: "approved"
+
+- name: "Opportunistic batching"
+  issue: 5598
+  date_requested: 2025-11-10
+  date_reviewed: 2025-11-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/Hf2D6wmmYT8"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/135231"
+  status: "approved"
+
+- name: "Separate kubectl user preferences from cluster configs"
+  issue: 3104
+  date_requested: 2025-11-05
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/64BryeMArIY"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/134870"
+  status: "approved"
+
+- name: "Ensure secret pulled images"
+  issue: 2535
+  date_requested: 2025-11-05
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/XpnjCkXLCdk"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/133114"
+    - "https://github.com/kubernetes/kubernetes/pull/132812"
+    - "https://github.com/kubernetes/kubernetes/pull/134931"
+    - "https://github.com/kubernetes/kubernetes/pull/132579"
+    - "https://github.com/kubernetes/kubernetes/pull/134971"
+  status: "approved"
+
+- name: "Pod Level Resources Support With In Place Pod Vertical Scaling"
+  issue: 5419
+  date_requested: 2025-11-06
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/ONOtbpNPSQE"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/issues/5419"
+  status: "approved"
+
+- name: "sig-node: Kubelet-in-UserNS, aka Rootless mode"
+  issue: 2033
+  date_requested: 2025-11-06
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/ZDhjruzP8bE"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/134639"
+  status: "rejected"
+
+- name: "Add Resource Health Status to the Pod Status for Device Plugin and DRA"
+  issue: 4680
+  date_requested: 2025-11-07
+  date_reviewed: 2025-11-11
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/dmXnKYhZJxg"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/134506"
+  status: "rejected"
+
+- name: "KEP: New kubelet gRPC API with endpoint returning local pods information"
+  issue: 4188
+  date_requested: 2025-11-07
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/sT-IEHZ3v5k"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/134627"
+  status: "rejected"
+
+- name: "ImageVolume with an image digest"
+  issue: 5365
+  date_requested: 2025-11-07
+  date_reviewed: 2025-11-10
+  thread: "https://groups.google.com/g/kubernetes-sig-node/c/7onVCHG4-dY"
+  pull_requests:
+    - "https://github.com/kubernetes/kubernetes/pull/132807"
+  status: "rejected"
