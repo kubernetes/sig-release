@@ -3398,8 +3398,8 @@
   },
   "134545": {
     "commit": "501b768370037324c8ffd776dfa3d4d712624f1e",
-    "text": "Populated involvedObject.apiVersion on Events created for Nodes and Pods.",
-    "markdown": "Populated involvedObject.apiVersion on Events created for Nodes and Pods. ([#134545](https://github.com/kubernetes/kubernetes/pull/134545), [@novahe](https://github.com/novahe)) [SIG Cloud Provider, Network, Node, Scalability and Testing]",
+    "text": "Populated `involvedObject.apiVersion` on Events created for Nodes and Pods.",
+    "markdown": "Populated `involvedObject.apiVersion` on Events created for Nodes and Pods. ([#134545](https://github.com/kubernetes/kubernetes/pull/134545), [@novahe](https://github.com/novahe)) [SIG Cloud Provider, Network, Node, Scalability and Testing]",
     "author": "novahe",
     "author_url": "https://github.com/novahe",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134545",

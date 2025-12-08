@@ -1,4 +1,4 @@
 pr: 134545
 releasenote:
-  text: Populated involvedObject.apiVersion on Events created for Nodes and Pods.
+  text: Populated `involvedObject.apiVersion` on Events created for Nodes and Pods.
 pr_body: ""
