@@ -1631,11 +1631,13 @@
       "kubectl"
     ],
     "kinds": [
-      "bug"
+      "bug",
+      "regression"
     ],
     "sigs": [
       "cli"
     ],
+    "duplicate_kind": true,
     "is_mapped": true
   },
   "133778": {
@@ -3392,6 +3394,35 @@
     "sigs": [
       "network"
     ],
+    "is_mapped": true
+  },
+  "134545": {
+    "commit": "501b768370037324c8ffd776dfa3d4d712624f1e",
+    "text": "Populated involvedObject.apiVersion on Events created for Nodes and Pods.",
+    "markdown": "Populated involvedObject.apiVersion on Events created for Nodes and Pods. ([#134545](https://github.com/kubernetes/kubernetes/pull/134545), [@novahe](https://github.com/novahe)) [SIG Cloud Provider, Network, Node, Scalability and Testing]",
+    "author": "novahe",
+    "author_url": "https://github.com/novahe",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/134545",
+    "pr_number": 134545,
+    "areas": [
+      "test",
+      "kubelet",
+      "kube-proxy",
+      "cloudprovider"
+    ],
+    "kinds": [
+      "bug",
+      "cleanup"
+    ],
+    "sigs": [
+      "cloud-provider",
+      "network",
+      "node",
+      "scalability",
+      "testing"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true,
     "is_mapped": true
   },
   "134564": {
@@ -5623,5 +5654,46 @@
       "api-machinery"
     ],
     "is_mapped": true
+  },
+  "135359": {
+    "commit": "dd4d9fad24828f54ad48b5c6c413a6d073b19e90",
+    "text": "Fixed a spurious `namespace not found` error in default `v1.30+` configurations when using `ValidatingAdmissionPolicy` or `MutatingAdmissionPolicy` to intercept namespaced objects in newly-created namespaces.",
+    "markdown": "Fixed a spurious `namespace not found` error in default `v1.30+` configurations when using `ValidatingAdmissionPolicy` or `MutatingAdmissionPolicy` to intercept namespaced objects in newly-created namespaces. ([#135359](https://github.com/kubernetes/kubernetes/pull/135359), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/135359",
+    "pr_number": 135359,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "is_mapped": true
+  },
+  "135492": {
+    "commit": "cb689abdfbf27162a3938798cf021532d142a982",
+    "text": "Kubernetes is now built using Go 1.25.4",
+    "markdown": "Kubernetes is now built using Go 1.25.4 ([#135492](https://github.com/kubernetes/kubernetes/pull/135492), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/135492",
+    "pr_number": 135492,
+    "areas": [
+      "test",
+      "release-eng"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "release",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
   }
 }
