@@ -8,7 +8,7 @@ enhancementFreeze:
 - name: "Mutable CSINode Allocatable Property"
   issue: 4876
   date_requested: 2025-10-17
-  date_reviewed: 2025-10-19
+  date_reviewed: 2025-10-18
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/EaXWtlSh5OE"
   pull_requests:
     - "https://github.com/kubernetes/enhancements/pull/5628"
@@ -17,7 +17,7 @@ enhancementFreeze:
 - name: "Device Attributes in Downward API"
   issue: 5304
   date_requested: 2025-10-17
-  date_reviewed: 2025-10-19
+  date_reviewed: 2025-10-18
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/4xSmVHBOChM"
   pull_requests:
     - "https://github.com/kubernetes/enhancements/pull/5606"
@@ -28,8 +28,8 @@ enhancementFreeze:
 codeFreeze:
 - name: "Restart all containers on container exits"
   issue: 5532
-  date_requested: 2025-11-08
-  date_reviewed: 2025-11-11
+  date_requested: 2025-11-07
+  date_reviewed: 2025-11-10
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/BN3cpxFiwWc"
   pull_requests:
     - "https://github.com/kubernetes/kubernetes/pull/134345"
@@ -38,7 +38,7 @@ codeFreeze:
 - name: "Pod Level Resource Managers"
   issue: 5526
   date_requested: 2025-11-06
-  date_reviewed: 2025-11-11
+  date_reviewed: 2025-11-10
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/H7jUtSMZYKY"
   pull_requests:
     - "https://github.com/kubernetes/kubernetes/pull/134768"
@@ -47,7 +47,7 @@ codeFreeze:
 - name: "Kubernetes VolumeAttributesClass ModifyVolume"
   issue: 3751
   date_requested: 2025-11-07
-  date_reviewed: 2025-11-10
+  date_reviewed: 2025-11-09
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/Viw10aZGL6Y"
   pull_requests:
     - "https://github.com/kubernetes/kubernetes/pull/134556"
@@ -74,7 +74,7 @@ codeFreeze:
 - name: "Opportunistic batching"
   issue: 5598
   date_requested: 2025-11-10
-  date_reviewed: 2025-11-11
+  date_reviewed: 2025-11-10
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/Hf2D6wmmYT8"
   pull_requests:
     - "https://github.com/kubernetes/kubernetes/pull/135231"
@@ -105,7 +105,7 @@ codeFreeze:
 - name: "Pod Level Resources Support With In Place Pod Vertical Scaling"
   issue: 5419
   date_requested: 2025-11-06
-  date_reviewed: 2025-11-10
+  date_reviewed: 2025-11-09
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/ONOtbpNPSQE"
   pull_requests:
     - "https://github.com/kubernetes/enhancements/issues/5419"
@@ -122,8 +122,8 @@ codeFreeze:
 
 - name: "Add Resource Health Status to the Pod Status for Device Plugin and DRA"
   issue: 4680
-  date_requested: 2025-11-07
-  date_reviewed: 2025-11-11
+  date_requested: 2025-11-06
+  date_reviewed: 2025-11-10
   thread: "https://groups.google.com/g/kubernetes-sig-release/c/dmXnKYhZJxg"
   pull_requests:
     - "https://github.com/kubernetes/kubernetes/pull/134506"
@@ -140,8 +140,8 @@ codeFreeze:
 
 - name: "ImageVolume with an image digest"
   issue: 5365
-  date_requested: 2025-11-07
-  date_reviewed: 2025-11-10
+  date_requested: 2025-11-18
+  date_reviewed: 2025-11-18
   thread: "https://groups.google.com/g/kubernetes-sig-node/c/7onVCHG4-dY"
   pull_requests:
     - "https://github.com/kubernetes/kubernetes/pull/132807"
