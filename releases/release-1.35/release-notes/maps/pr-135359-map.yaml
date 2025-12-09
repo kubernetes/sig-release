@@ -1,0 +1,6 @@
+pr: 135359
+releasenote:
+  text: Fixed a spurious `namespace not found` error in default `v1.30+` configurations
+    when using `ValidatingAdmissionPolicy` or `MutatingAdmissionPolicy` to intercept
+    namespaced objects in newly-created namespaces.
+pr_body: ""
