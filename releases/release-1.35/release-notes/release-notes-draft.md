@@ -321,3 +321,4 @@
 - `kubeadm`: Removed the `WaitForAllControlPlaneComponents` feature gate, which graduated to GA in `v1.34` and was locked to enabled by default. ([#134781](https://github.com/kubernetes/kubernetes/pull/134781), [@neolit123](https://github.com/neolit123))
 - `kubeadm`: Updated the supported etcd version to `v3.5.24` for control plane versions `v1.32`, `v1.33`, and `v1.34`. ([#134779](https://github.com/kubernetes/kubernetes/pull/134779), [@joshjms](https://github.com/joshjms)) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]
 - `etcd: Update etcd to `v3.6.6`. (#135271, @bzsuni) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]
+- Fix a bug in the kube-apiserver where a malformed Service without name can cause high CPU usage. The bug is present on the new Cluster IP allocators enabled with the feature MultiCIDRServiceAllocator (enabled by default since 1.33)
