@@ -1,3 +1,3 @@
 pr: 135609
 releasenote:
-  text: 'Kubernetes is now built using Go 1.25.5'
+  text: 'Kubernetes is now built using Go `1.25.5`.'

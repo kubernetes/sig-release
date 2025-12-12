@@ -170,7 +170,7 @@
   
   Starting with Kubernetes `v1.36`, `kubelet` might refuse to start if the CRI runtime does not support this feature. More information can be found at the [Kubernetes blog](https://kubernetes.io/blog/2025/09/12/kubernetes-v1-34-cri-cgroup-driver-lookup-now-ga/). ([#134906](https://github.com/kubernetes/kubernetes/pull/134906), [@carlory](https://github.com/carlory))
 
-- Kubernetes is now built using Go 1.25.5 ([#135609](https://github.com/kubernetes/kubernetes/pull/135609), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]
+- Kubernetes is now built using Go `1.25.5`. ([#135609](https://github.com/kubernetes/kubernetes/pull/135609), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]
 
 ### Documentation
 
@@ -257,8 +257,8 @@
 - Updated `kubectl scale` to return a consistent error message when a specified resource is not found. Previously, it returned: `error: no objects passed to scale <GroupResource> "<ResourceName>" not found`. It now matches the format used by other commands (e.g., `kubectl get`): `Error from server (NotFound): <GroupResource> "<ResourceName>" not found`. ([#134017](https://github.com/kubernetes/kubernetes/pull/134017), [@mochizuki875](https://github.com/mochizuki875))
 - `kube-controller-manager`: Fixed a `v1.34` regression that triggered a spurious rollout of existing StatefulSets when upgrading the control plane from `v1.33` to `v1.34`. This fix is guarded by the `StatefulSetSemanticRevisionComparison` feature gate, which is enabled by default. ([#135017](https://github.com/kubernetes/kubernetes/pull/135017), [@liggitt](https://github.com/liggitt))
 - `kube-scheduler`: Pod statuses no longer include specific taint keys or values when scheduling fails due to untolerated taints. ([#134740](https://github.com/kubernetes/kubernetes/pull/134740), [@hoskeri](https://github.com/hoskeri))
-- Fixes a bug where MutatingAdmissionPolicy would fail to apply to objects with duplicate list items (like env vars). ([#135560](https://github.com/kubernetes/kubernetes/pull/135560), [@lalitc375](https://github.com/lalitc375) [SIG API Machinery]
-- K8s.io/client-go: Fixes a regression in 1.34+ which prevented informers from using configured Transformer functions ([#135580](https://github.com/kubernetes/kubernetes/pull/135580), [@serathius](https://github.com/serathius) [SIG API Machinery]
+- Fixes a bug where `MutatingAdmissionPolicy` would fail to apply to objects with duplicate list items (like env vars). ([#135560](https://github.com/kubernetes/kubernetes/pull/135560), [@lalitc375](https://github.com/lalitc375) [SIG API Machinery]
+- K8s.io/client-go: Fixes a regression in 1.34+ which prevented informers from using configured Transformer functions. ([#135580](https://github.com/kubernetes/kubernetes/pull/135580), [@serathius](https://github.com/serathius) [SIG API Machinery]
 
 ### Other (Cleanup or Flake)
 
@@ -320,4 +320,4 @@
 - Upgraded `CoreDNS` to `v1.12.3`. ([#132288](https://github.com/kubernetes/kubernetes/pull/132288), [@thevilledev](https://github.com/thevilledev)) [SIG Cloud Provider and Cluster Lifecycle]
 - `kubeadm`: Removed the `WaitForAllControlPlaneComponents` feature gate, which graduated to GA in `v1.34` and was locked to enabled by default. ([#134781](https://github.com/kubernetes/kubernetes/pull/134781), [@neolit123](https://github.com/neolit123))
 - `kubeadm`: Updated the supported etcd version to `v3.5.24` for control plane versions `v1.32`, `v1.33`, and `v1.34`. ([#134779](https://github.com/kubernetes/kubernetes/pull/134779), [@joshjms](https://github.com/joshjms)) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]
-- `kubeadm`: Update etcd to v3.6.6 (#135271, @bzsuni) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]
+- `etcd: Update etcd to `v3.6.6`. (#135271, @bzsuni) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]
