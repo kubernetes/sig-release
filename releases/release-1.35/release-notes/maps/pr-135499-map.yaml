@@ -1,0 +1,3 @@
+pr: 135499
+releasenote:
+  text: 'fix a bug in the kube-apiserver where a malformed Service without name can cause high CPU usage. The bug is present on the new Cluster IP allocators enabled with the feature MultiCIDRServiceAllocator (enabled by default since 1.33)'
