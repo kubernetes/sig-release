@@ -8,7 +8,17 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes v1.35
+# Timbernetes v1.35 - World Tree Release
+
+![Timbernetes v1.35 - World Tree Release](./logo/k8s135-timbernetes.png?raw=true)
+
+2025 began in the shimmer of Octarine: The Color of Magic (v1.33) and rode the gusts of Of Wind & Will (v1.34). With the v1.35 release, we close the year with our hands on the World Tree, inspired by Yggdrasil, the tree of life that binds many realms. Like any great tree, Kubernetes grows ring by ring and release by release, shaped by the care of a global community.
+
+At its center sits the Kubernetes wheel wrapped around the Earth, grounded by the resilient maintainers, contributors and users who keep showing up. Between day jobs, life changes, and steady open-source stewardship, they prune old APIs, graft new features and keep one of the world’s largest open source projects healthy.
+
+Three squirrels guard the tree: a wizard holding the LGTM scroll for reviewers, a warrior with an axe and Kubernetes shield for the release crews who cut new branches, and a rogue with a lantern for the triagers who bring light to dark issue queues.
+
+Together, they stand in for a much larger adventuring party. Kubernetes v1.35 adds another growth ring to the World Tree, a fresh cut shaped by many hands, many paths and a community whose branches reach higher as its roots grow deeper.
 
 #### Links
 
