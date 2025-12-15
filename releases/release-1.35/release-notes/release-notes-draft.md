@@ -153,8 +153,6 @@
 - Promoted the `EnvFiles` feature gate to beta and is enabled by default. Additionally, the syntax specification for environment variables has been restricted to a subset of POSIX shell syntax (all variable values must be wrapped in single quotes). ([#134414](https://github.com/kubernetes/kubernetes/pull/134414), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG Node and Testing]
 - Promoted the `HostnameOverride` feature gate to beta and enabled it by default. ([#134729](https://github.com/kubernetes/kubernetes/pull/134729), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG Network and Node]
 - Promoted the `KubeletCrashLoopBackOffMax` feature gate to beta and enabled it by default. ([#135044](https://github.com/kubernetes/kubernetes/pull/135044), [@hankfreund](https://github.com/hankfreund))
-- Promoted the `RelaxedServiceNameValidation` feature to beta (enabled by default).
-  New Service names are now validated with `NameIsDNSLabel()`, relaxing the pre-existing validation. ([#134493](https://github.com/kubernetes/kubernetes/pull/134493), [@adrianmoisey](https://github.com/adrianmoisey))
 - Selected a single device class deterministically when multiple device classes were available for an extended resource. ([#135037](https://github.com/kubernetes/kubernetes/pull/135037), [@yliaog](https://github.com/yliaog)) [SIG Node, Scheduling and Testing]
 - The JWT authenticator in `kube-apiserver` now reports the following metrics when the `StructuredAuthenticationConfiguration` feature gate is enabled:
   - `apiserver_authentication_jwt_authenticator_jwks_fetch_last_timestamp_seconds`

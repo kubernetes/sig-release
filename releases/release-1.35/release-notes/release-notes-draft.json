@@ -3284,30 +3284,6 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
-  "134493": {
-    "commit": "0b90cb5e5a8f36ff51ef64eeca002c44eb17e6b9",
-    "text": "Promoted the `RelaxedServiceNameValidation` feature to beta (enabled by default).\nNew Service names are now validated with `NameIsDNSLabel()`, relaxing the pre-existing validation.",
-    "markdown": "Promoted the `RelaxedServiceNameValidation` feature to beta (enabled by default).\n  New Service names are now validated with `NameIsDNSLabel()`, relaxing the pre-existing validation. ([#134493](https://github.com/kubernetes/kubernetes/pull/134493), [@adrianmoisey](https://github.com/adrianmoisey))",
-    "documentation": [
-      {
-        "description": "[KEP]",
-        "url": "https://github.com/kubernetes/enhancements/issues/5311",
-        "type": "KEP"
-      }
-    ],
-    "author": "adrianmoisey",
-    "author_url": "https://github.com/adrianmoisey",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/134493",
-    "pr_number": 134493,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "network"
-    ],
-    "feature": true,
-    "is_mapped": true
-  },
   "134510": {
     "commit": "9630ab9581afbac9835d53f9e620a1240a1d2d91",
     "text": "Substantially simplified building Kubernetes by making the process run a pre-built container image directly without running `rsyncd`.",
