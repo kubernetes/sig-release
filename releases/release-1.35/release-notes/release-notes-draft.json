@@ -3284,30 +3284,6 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
-  "134493": {
-    "commit": "0b90cb5e5a8f36ff51ef64eeca002c44eb17e6b9",
-    "text": "Promoted the `RelaxedServiceNameValidation` feature to beta (enabled by default).\nNew Service names are now validated with `NameIsDNSLabel()`, relaxing the pre-existing validation.",
-    "markdown": "Promoted the `RelaxedServiceNameValidation` feature to beta (enabled by default).\n  New Service names are now validated with `NameIsDNSLabel()`, relaxing the pre-existing validation. ([#134493](https://github.com/kubernetes/kubernetes/pull/134493), [@adrianmoisey](https://github.com/adrianmoisey))",
-    "documentation": [
-      {
-        "description": "[KEP]",
-        "url": "https://github.com/kubernetes/enhancements/issues/5311",
-        "type": "KEP"
-      }
-    ],
-    "author": "adrianmoisey",
-    "author_url": "https://github.com/adrianmoisey",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/134493",
-    "pr_number": 134493,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "network"
-    ],
-    "feature": true,
-    "is_mapped": true
-  },
   "134510": {
     "commit": "9630ab9581afbac9835d53f9e620a1240a1d2d91",
     "text": "Substantially simplified building Kubernetes by making the process run a pre-built container image directly without running `rsyncd`.",
@@ -5694,6 +5670,115 @@
       "testing"
     ],
     "feature": true,
+  },
+  "135609": {
+    "commit": "4e94e70dcad423e9f59f12ac5a048d2137d20e86",
+    "text": "Kubernetes is now built using Go `1.25.5`.",
+    "markdown": "Kubernetes is now built using Go `1.25.5`. ([#135609](https://github.com/kubernetes/kubernetes/pull/135609), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/135609",
+    "pr_number": 135609,
+    "areas": [
+      "test",
+      "release-eng"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "release",
+      "testing"
+    ],
+    "feature": true,
+    "is_mapped": true,
     "duplicate": true
+  },
+  "135271": {
+    "commit": "03e14cc9432975dec161de1e52d7010f9711a913",
+    "text": "Etcd: Update etcd to `v3.6.6`.",
+    "markdown": "Etcd: Update etcd to `v3.6.6`. ([#135271](https://github.com/kubernetes/kubernetes/pull/135271), [@bzsuni](https://github.com/bzsuni) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]",
+    "author": "bzsuno",
+    "author_url": "https://github.com/bzsuni",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/135271",
+    "pr_number": 135271,
+    "areas": [
+      "provider/gcp",
+      "test"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cloud-provider",
+      "cluster-lifecycle",
+      "etcd",
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "135560": {
+    "commit": "615ac0d2996f36fe4df7410e1168a8577e7045ba",
+    "text": "Fixes a bug where `MutatingAdmissionPolicy` would fail to apply to objects with duplicate list items (like env vars).",
+    "markdown": "Fixes a bug where `MutatingAdmissionPolicy` would fail to apply to objects with duplicate list items (like env vars). ([#135560](https://github.com/kubernetes/kubernetes/pull/135560), [@lalitc375](https://github.com/lalitc375) [SIG API Machinery]",
+    "author": "lalitc375",
+    "author_url": "https://github.com/lalitc375",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/135560",
+    "pr_number": 135560,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "135499": {
+    "commit": "2711e8cb53987ad7aca9eee21e1be3a4961fea39",
+    "text": "Fixes a bug in the kube-apiserver where a malformed Service without name can cause high CPU usage. The bug is present on the new Cluster IP allocators enabled with the feature `MultiCIDRServiceAllocator` (enabled by default since `1.33`).",
+    "markdown": "Fixes a bug in the kube-apiserver where a malformed Service without name can cause high CPU usage. The bug is present on the new Cluster IP allocators enabled with the feature `MultiCIDRServiceAllocator` (enabled by default since `1.33`). ([#135499](https://github.com/kubernetes/kubernetes/pull/135499), [@aojea](https://github.com/aojea) [SIG Testing]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/135499",
+    "pr_number": 135499,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
+  },
+  "135580": {
+    "commit": "2711e8cb53987ad7aca9eee21e1be3a4961fea39",
+    "text": "k8s.io/client-go: Fixes a regression in 1.34+ which prevented informers from using configured Transformer functions.",
+    "markdown": "K8s.io/client-go: Fixes a regression in 1.34+ which prevented informers from using configured Transformer functions. ([#135580](https://github.com/kubernetes/kubernetes/pull/135580), [@serathius](https://github.com/serathius) [SIG API Machinery]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/135580",
+    "pr_number": 135580,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug",
+      "regression"
+    ],
+    "sigs": [
+      "testing"
+    ],
+    "duplicate": true,
+    "is_mapped": true
   }
 }

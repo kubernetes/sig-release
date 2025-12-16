@@ -1,0 +1,3 @@
+pr: 135271
+releasenote:
+  text: 'etcd: Update etcd to `v3.6.6`.'
