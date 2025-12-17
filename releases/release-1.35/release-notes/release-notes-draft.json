@@ -331,8 +331,8 @@
   },
   "132288": {
     "commit": "546519987d48d02e6a493a339c064dfd39be5e7f",
-    "text": "Upgraded `CoreDNS` to `v1.12.3`.",
-    "markdown": "Upgraded `CoreDNS` to `v1.12.3`. ([#132288](https://github.com/kubernetes/kubernetes/pull/132288), [@thevilledev](https://github.com/thevilledev)) [SIG Cloud Provider and Cluster Lifecycle]",
+    "text": "Upgraded CoreDNS to `v1.12.3`.",
+    "markdown": "Upgraded CoreDNS to `v1.12.3`. ([#132288](https://github.com/kubernetes/kubernetes/pull/132288), [@thevilledev](https://github.com/thevilledev)) [SIG Cloud Provider and Cluster Lifecycle]",
     "author": "thevilledev",
     "author_url": "https://github.com/thevilledev",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132288",
@@ -354,8 +354,8 @@
   },
   "132441": {
     "commit": "36622966a86ed1ff890125298d97ba5d7376d083",
-    "text": "KEP-5440: Enabled support for resizing resources while a Job is suspended. This feature is alpha.",
-    "markdown": "KEP-5440: Enabled support for resizing resources while a Job is suspended. This feature is alpha. ([#132441](https://github.com/kubernetes/kubernetes/pull/132441), [@kannon92](https://github.com/kannon92)) [SIG Apps and Testing]",
+    "text": "Enabled support for resizing resources while a Job is suspended. This feature is alpha.",
+    "markdown": "Enabled support for resizing resources while a Job is suspended. This feature is alpha. ([#132441](https://github.com/kubernetes/kubernetes/pull/132441), [@kannon92](https://github.com/kannon92)) [SIG Apps and Testing]",
     "author": "kannon92",
     "author_url": "https://github.com/kannon92",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132441",
@@ -686,8 +686,8 @@
   },
   "132960": {
     "commit": "b86ff94014e02b31149f34159ae966bd4cbbdc12",
-    "text": "Fixed a bug that caused apiservers to send an inappropriate Content-Type request header to authorization, token authentication, imagepolicy admission, and audit webhooks when the alpha client-go feature gate \"ClientsPreferCBOR\" is enabled.",
-    "markdown": "Fixed a bug that caused apiservers to send an inappropriate Content-Type request header to authorization, token authentication, imagepolicy admission, and audit webhooks when the alpha client-go feature gate \"ClientsPreferCBOR\" is enabled. ([#132960](https://github.com/kubernetes/kubernetes/pull/132960), [@benluddy](https://github.com/benluddy)) [SIG API Machinery and Node]",
+    "text": "Fixed a bug that caused apiservers to send an inappropriate Content-Type request header to authorization, token authentication, imagepolicy admission, and audit webhooks when the alpha client-go feature gate `ClientsPreferCBOR` is enabled.",
+    "markdown": "Fixed a bug that caused apiservers to send an inappropriate Content-Type request header to authorization, token authentication, imagepolicy admission, and audit webhooks when the alpha client-go feature gate `ClientsPreferCBOR` is enabled. ([#132960](https://github.com/kubernetes/kubernetes/pull/132960), [@benluddy](https://github.com/benluddy)) [SIG API Machinery and Node]",
     "author": "benluddy",
     "author_url": "https://github.com/benluddy",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/132960",
@@ -1388,8 +1388,8 @@
   },
   "133636": {
     "commit": "7e871bc7bb084b3f64393598f1c2c54ccf1f7912",
-    "text": "Updated cri-tools to v1.34.0.",
-    "markdown": "Updated cri-tools to v1.34.0. ([#133636](https://github.com/kubernetes/kubernetes/pull/133636), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider]",
+    "text": "Updated cri-tools to `v1.34.0`.",
+    "markdown": "Updated cri-tools to `v1.34.0`. ([#133636](https://github.com/kubernetes/kubernetes/pull/133636), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider]",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133636",
@@ -1727,8 +1727,8 @@
   },
   "133837": {
     "commit": "5dff07fdf99de6c990afeab518e271631d286ae7",
-    "text": "Updated CNI plugins to v1.8.0.",
-    "markdown": "Updated CNI plugins to v1.8.0. ([#133837](https://github.com/kubernetes/kubernetes/pull/133837), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider, Node and Testing]",
+    "text": "Updated CNI plugins to `v1.8.0`.",
+    "markdown": "Updated CNI plugins to `v1.8.0`. ([#133837](https://github.com/kubernetes/kubernetes/pull/133837), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider, Node and Testing]",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133837",
@@ -1790,8 +1790,8 @@
   },
   "133876": {
     "commit": "3a53784ecbe4bed2aa0cbc159acbb56add05eef9",
-    "text": "DRA: the resource.k8s.io API now uses the v1 API version (introduced in 1.34) as default storage version. Downgrading to 1.33 is not supported.",
-    "markdown": "DRA: the resource.k8s.io API now uses the v1 API version (introduced in 1.34) as default storage version. Downgrading to 1.33 is not supported. ([#133876](https://github.com/kubernetes/kubernetes/pull/133876), [@kei01234kei](https://github.com/kei01234kei)) [SIG API Machinery, Etcd and Testing]",
+    "text": "DRA: the `resource.k8s.io` API now uses the `v1` API version (introduced in `1.34`) as default storage version. Downgrading to `1.33` is not supported.",
+    "markdown": "DRA: the `resource.k8s.io` API now uses the `v1` API version (introduced in `1.34`) as default storage version. Downgrading to `1.33` is not supported. ([#133876](https://github.com/kubernetes/kubernetes/pull/133876), [@kei01234kei](https://github.com/kei01234kei)) [SIG API Machinery, Etcd and Testing]",
     "author": "kei01234kei",
     "author_url": "https://github.com/kei01234kei",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133876",
@@ -2033,8 +2033,8 @@
   },
   "133968": {
     "commit": "f38a61181cd4f73a22c688e4d5c0c73d707f6acb",
-    "text": "Upgraded CoreDNS to v1.12.4.",
-    "markdown": "Upgraded CoreDNS to v1.12.4. ([#133968](https://github.com/kubernetes/kubernetes/pull/133968), [@yashsingh74](https://github.com/yashsingh74)) [SIG Cloud Provider and Cluster Lifecycle]",
+    "text": "Upgraded CoreDNS to `v1.12.4`.",
+    "markdown": "Upgraded CoreDNS to `v1.12.4`. ([#133968](https://github.com/kubernetes/kubernetes/pull/133968), [@yashsingh74](https://github.com/yashsingh74)) [SIG Cloud Provider and Cluster Lifecycle]",
     "author": "yashsingh74",
     "author_url": "https://github.com/yashsingh74",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/133968",
@@ -2230,8 +2230,8 @@
   },
   "134072": {
     "commit": "ec4e321f008b5c283e0848e5003fcb4e9bda0f34",
-    "text": "Migrated validation in `resource.k8s.io` to declarative validation.\nWhen the `DeclarativeValidation` feature gate is enabled, mismatches with existing validation are reported via metrics.\nwhen `DeclarativeValidationTakeover` feature gate is enabled, declarative validation becomes the primary source of errors for migrated fields.",
-    "markdown": "Migrated validation in `resource.k8s.io` to declarative validation.\n  When the `DeclarativeValidation` feature gate is enabled, mismatches with existing validation are reported via metrics.\n  when `DeclarativeValidationTakeover` feature gate is enabled, declarative validation becomes the primary source of errors for migrated fields. ([#134072](https://github.com/kubernetes/kubernetes/pull/134072), [@yongruilin](https://github.com/yongruilin)) [SIG API Machinery, Apps and Auth]",
+    "text": "Migrated validation in `resource.k8s.io` to declarative validation.\nWhen the `DeclarativeValidation` feature gate is enabled, mismatches with existing validation are reported via metrics.\nWhen `DeclarativeValidationTakeover` feature gate is enabled, declarative validation becomes the primary source of errors for migrated fields.",
+    "markdown": "Migrated validation in `resource.k8s.io` to declarative validation.\n  When the `DeclarativeValidation` feature gate is enabled, mismatches with existing validation are reported via metrics.\n  When `DeclarativeValidationTakeover` feature gate is enabled, declarative validation becomes the primary source of errors for migrated fields. ([#134072](https://github.com/kubernetes/kubernetes/pull/134072), [@yongruilin](https://github.com/yongruilin)) [SIG API Machinery, Apps and Auth]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2257,8 +2257,8 @@
   },
   "134095": {
     "commit": "ae5d650460493a32114861c856909f3614f031e0",
-    "text": "Kubernetes is now built using Go 1.25.1",
-    "markdown": "Kubernetes is now built using Go 1.25.1 ([#134095](https://github.com/kubernetes/kubernetes/pull/134095), [@dims](https://github.com/dims)) [SIG Release and Testing]",
+    "text": "Kubernetes is now built using Go `1.25.1`.",
+    "markdown": "Kubernetes is now built using Go `1.25.1`. ([#134095](https://github.com/kubernetes/kubernetes/pull/134095), [@dims](https://github.com/dims)) [SIG Release and Testing]",
     "author": "dims",
     "author_url": "https://github.com/dims",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134095",
@@ -2325,8 +2325,8 @@
   },
   "134120": {
     "commit": "0ca861d5ed67d944285ee5ea80cf520d11e8b755",
-    "text": "Kubernetes now uses Go Language Version 1.25, including https://go.dev/blog/container-aware-gomaxprocs",
-    "markdown": "Kubernetes now uses Go Language Version 1.25, including https://go.dev/blog/container-aware-gomaxprocs ([#134120](https://github.com/kubernetes/kubernetes/pull/134120), [@BenTheElder](https://github.com/BenTheElder)) [SIG API Machinery, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Network, Node, Release, Scheduling and Storage]",
+    "text": "Kubernetes is now built using Go `1.25`, including https://go.dev/blog/container-aware-gomaxprocs .",
+    "markdown": "Kubernetes is now built using Go `1.25`, including https://go.dev/blog/container-aware-gomaxprocs . ([#134120](https://github.com/kubernetes/kubernetes/pull/134120), [@BenTheElder](https://github.com/BenTheElder)) [SIG API Machinery, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Network, Node, Release, Scheduling and Storage]",
     "author": "BenTheElder",
     "author_url": "https://github.com/BenTheElder",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134120",
@@ -2489,8 +2489,8 @@
   },
   "134189": {
     "commit": "0cfbf89e709e2acbc0d4cfa46954e873236c5bb9",
-    "text": "Updated the Partitionable Devices feature to support referencing counter sets across ResourceSlices within the same resource pool. Devices from incomplete pools were no longer considered for allocation. This change introduced backwards-incompatible updates to the alpha feature, requiring any ResourceSlices using it to be removed before upgrading or downgrading between v1.34 and v1.35.",
-    "markdown": "Updated the Partitionable Devices feature to support referencing counter sets across ResourceSlices within the same resource pool. Devices from incomplete pools were no longer considered for allocation. This change introduced backwards-incompatible updates to the alpha feature, requiring any ResourceSlices using it to be removed before upgrading or downgrading between v1.34 and v1.35. ([#134189](https://github.com/kubernetes/kubernetes/pull/134189), [@mortent](https://github.com/mortent)) [SIG API Machinery, Node, Scheduling and Testing]",
+    "text": "Updated the Partitionable Devices feature to support referencing counter sets across ResourceSlices within the same resource pool. Devices from incomplete pools were no longer considered for allocation. This change introduced backwards-incompatible updates to the alpha feature, requiring any ResourceSlices using it to be removed before upgrading or downgrading between `v1.34` and `v1.35`.",
+    "markdown": "Updated the Partitionable Devices feature to support referencing counter sets across ResourceSlices within the same resource pool. Devices from incomplete pools were no longer considered for allocation. This change introduced backwards-incompatible updates to the alpha feature, requiring any ResourceSlices using it to be removed before upgrading or downgrading between `v1.34` and `v1.35`. ([#134189](https://github.com/kubernetes/kubernetes/pull/134189), [@mortent](https://github.com/mortent)) [SIG API Machinery, Node, Scheduling and Testing]",
     "author": "mortent",
     "author_url": "https://github.com/mortent",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134189",
@@ -2758,8 +2758,8 @@
   },
   "134298": {
     "commit": "d92afdefcb62ecf69de68653444b9eea70b9f7b7",
-    "text": "ACTION REQUIRED: `failCgroupV1` will be set to true from 1.35. \nThis means that nodes will not start on a cgroup v1 by default. This puts cgroup v1 into a deprecated state.",
-    "markdown": "ACTION REQUIRED: `failCgroupV1` will be set to true from 1.35. \n  This means that nodes will not start on a cgroup v1 by default. This puts cgroup v1 into a deprecated state. ([#134298](https://github.com/kubernetes/kubernetes/pull/134298), [@kannon92](https://github.com/kannon92))",
+    "text": "ACTION REQUIRED: `failCgroupV1` will be set to true from `v1.35`. \nThis means that nodes will not start on a cgroup v1 by default. This puts cgroup v1 into a deprecated state.",
+    "markdown": "ACTION REQUIRED: `failCgroupV1` will be set to true from `v1.35`. \n  This means that nodes will not start on a cgroup v1 by default. This puts cgroup v1 into a deprecated state. ([#134298](https://github.com/kubernetes/kubernetes/pull/134298), [@kannon92](https://github.com/kannon92))",
     "author": "kannon92",
     "author_url": "https://github.com/kannon92",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134298",
@@ -3304,8 +3304,8 @@
   },
   "134520": {
     "commit": "41fd1b51f6edf2514536eeacf1ffe1ca8791e574",
-    "text": "Added support for the `ShareID` field of the `DRAConsumableCapacity` feature in the Kubelet Plugin API.",
-    "markdown": "Added support for the `ShareID` field of the `DRAConsumableCapacity` feature in the Kubelet Plugin API. ([#134520](https://github.com/kubernetes/kubernetes/pull/134520), [@sunya-ch](https://github.com/sunya-ch)) [SIG Node and Testing]",
+    "text": "Added support for the `ShareID` field of the `DRAConsumableCapacity` feature in the kubelet Plugin API.",
+    "markdown": "Added support for the `ShareID` field of the `DRAConsumableCapacity` feature in the kubelet Plugin API. ([#134520](https://github.com/kubernetes/kubernetes/pull/134520), [@sunya-ch](https://github.com/sunya-ch)) [SIG Node and Testing]",
     "author": "sunya-ch",
     "author_url": "https://github.com/sunya-ch",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134520",
@@ -3327,8 +3327,8 @@
   },
   "134523": {
     "commit": "859e0e6d025b4c90eae9f18e4a4995269deae6d5",
-    "text": "Added a `source` label to the `resourceclaim_controller_resource_claims` metric.\nAdded the `scheduler_resourceclaim_creates_total` metric for `DRAExtendedResource`.",
-    "markdown": "Added a `source` label to the `resourceclaim_controller_resource_claims` metric.\n  Added the `scheduler_resourceclaim_creates_total` metric for `DRAExtendedResource`. ([#134523](https://github.com/kubernetes/kubernetes/pull/134523), [@bitoku](https://github.com/bitoku)) [SIG Apps, Instrumentation, Node and Scheduling]",
+    "text": "Added a `source` label to the `resourceclaim_controller_resource_claims` metric. Added the `scheduler_resourceclaim_creates_total` metric for `DRAExtendedResource`.",
+    "markdown": "Added a `source` label to the `resourceclaim_controller_resource_claims` metric. Added the `scheduler_resourceclaim_creates_total` metric for `DRAExtendedResource`. ([#134523](https://github.com/kubernetes/kubernetes/pull/134523), [@bitoku](https://github.com/bitoku)) [SIG Apps, Instrumentation, Node and Scheduling]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -3441,8 +3441,8 @@
   },
   "134577": {
     "commit": "5105b1d7913b9d333d6d480b8e5c57a8f16c0ec4",
-    "text": "kube-apiserver: Made the subresources `pods/exec`, `pods/attach`, and `pods/portforward` require `create` permission for both SPDY and Websocket API requests. Previously, SPDY requests required `create` permission, but Websocket requests only required `get` permission. This change is gated by the `AuthorizePodWebsocketUpgradeCreatePermission` feature-gate, which is enabled by default.\n\nBefore upgrading to 1.35, ensure any custom ClusterRoles and Roles intended to grant `pods/exec`, `pods/attach`, or `pods/portforward` permission include the `create` verb.",
-    "markdown": "Kube-apiserver: Made the subresources `pods/exec`, `pods/attach`, and `pods/portforward` require `create` permission for both SPDY and Websocket API requests. Previously, SPDY requests required `create` permission, but Websocket requests only required `get` permission. This change is gated by the `AuthorizePodWebsocketUpgradeCreatePermission` feature-gate, which is enabled by default.\n  \n  Before upgrading to 1.35, ensure any custom ClusterRoles and Roles intended to grant `pods/exec`, `pods/attach`, or `pods/portforward` permission include the `create` verb. ([#134577](https://github.com/kubernetes/kubernetes/pull/134577), [@seans3](https://github.com/seans3)) [SIG API Machinery, Auth, Node and Testing]",
+    "text": "kube-apiserver: Made the subresources `pods/exec`, `pods/attach`, and `pods/portforward` require `create` permission for both SPDY and Websocket API requests. Previously, SPDY requests required `create` permission, but Websocket requests only required `get` permission. This change is gated by the `AuthorizePodWebsocketUpgradeCreatePermission` feature-gate, which is enabled by default.\n\nBefore upgrading to `1.35`, ensure any custom ClusterRoles and Roles intended to grant `pods/exec`, `pods/attach`, or `pods/portforward` permission include the `create` verb.",
+    "markdown": "Kube-apiserver: Made the subresources `pods/exec`, `pods/attach`, and `pods/portforward` require `create` permission for both SPDY and Websocket API requests. Previously, SPDY requests required `create` permission, but Websocket requests only required `get` permission. This change is gated by the `AuthorizePodWebsocketUpgradeCreatePermission` feature-gate, which is enabled by default.\n  \n  Before upgrading to `1.35`, ensure any custom ClusterRoles and Roles intended to grant `pods/exec`, `pods/attach`, or `pods/portforward` permission include the `create` verb. ([#134577](https://github.com/kubernetes/kubernetes/pull/134577), [@seans3](https://github.com/seans3)) [SIG API Machinery, Auth, Node and Testing]",
     "author": "seans3",
     "author_url": "https://github.com/seans3",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134577",
@@ -3529,8 +3529,8 @@
   },
   "134611": {
     "commit": "4870d987d0a4aac2d9223d4c0b9f22858c0d1590",
-    "text": "Updated underlying images and dependencies to be compatible with Go version`1.25.3`.",
-    "markdown": "Updated underlying images and dependencies to be compatible with Go version`1.25.3`. ([#134611](https://github.com/kubernetes/kubernetes/pull/134611), [@cpanato](https://github.com/cpanato)) [SIG Architecture, Cloud Provider, Etcd, Release, Storage and Testing]",
+    "text": "Updated underlying images and dependencies to be compatible with Go version `1.25.3`.",
+    "markdown": "Updated underlying images and dependencies to be compatible with Go version `1.25.3`. ([#134611](https://github.com/kubernetes/kubernetes/pull/134611), [@cpanato](https://github.com/cpanato)) [SIG Architecture, Cloud Provider, Etcd, Release, Storage and Testing]",
     "author": "cpanato",
     "author_url": "https://github.com/cpanato",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134611",
@@ -4398,8 +4398,8 @@
   },
   "134803": {
     "commit": "3d595e369174450a4d81269ca8f97032cf0b4ab6",
-    "text": "Implemented constrained impersonation as described in [KEP-5284](https://kep.k8s.io/5284).",
-    "markdown": "Implemented constrained impersonation as described in [KEP-5284](https://kep.k8s.io/5284). ([#134803](https://github.com/kubernetes/kubernetes/pull/134803), [@enj](https://github.com/enj)) [SIG API Machinery, Auth and Testing]",
+    "text": "Implemented constrained impersonation as described in https://kep.k8s.io/5284 .",
+    "markdown": "Implemented constrained impersonation as described in https://kep.k8s.io/5284 . ([#134803](https://github.com/kubernetes/kubernetes/pull/134803), [@enj](https://github.com/enj)) [SIG API Machinery, Auth and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4505,8 +4505,8 @@
   },
   "134870": {
     "commit": "183892b2c96aa962118ccfc2ee1c971caf72b16b",
-    "text": "Changed kuberc configuration schema. Two new optional fields added to kuberc configuration, `credPluginPolicy` and `credPluginAllowlist`. This is documented in [KEP-3104](https://github.com/kubernetes/enhancements/blob/master/keps/sig-cli/3104-introduce-kuberc/README.md#allowlist-design-details) and documentation is added to the website by [kubernetes/website#52877](https://github.com/kubernetes/website/pull/52877)",
-    "markdown": "Changed kuberc configuration schema. Two new optional fields added to kuberc configuration, `credPluginPolicy` and `credPluginAllowlist`. This is documented in [KEP-3104](https://github.com/kubernetes/enhancements/blob/master/keps/sig-cli/3104-introduce-kuberc/README.md#allowlist-design-details) and documentation is added to the website by [kubernetes/website#52877](https://github.com/kubernetes/website/pull/52877) ([#134870](https://github.com/kubernetes/kubernetes/pull/134870), [@pmengelbert](https://github.com/pmengelbert)) [SIG API Machinery, Architecture, Auth, CLI, Instrumentation and Testing]",
+    "text": "Changed kuberc configuration schema. Two new optional fields added to kuberc configuration, `credPluginPolicy` and `credPluginAllowlist`. This is documented in [KEP-3104](https://github.com/kubernetes/enhancements/blob/master/keps/sig-cli/3104-introduce-kuberc/README.md#allowlist-design-details) and documentation is added to the website by [kubernetes/website#52877](https://github.com/kubernetes/website/pull/52877) .",
+    "markdown": "Changed kuberc configuration schema. Two new optional fields added to kuberc configuration, `credPluginPolicy` and `credPluginAllowlist`. This is documented in [KEP-3104](https://github.com/kubernetes/enhancements/blob/master/keps/sig-cli/3104-introduce-kuberc/README.md#allowlist-design-details) and documentation is added to the website by [kubernetes/website#52877](https://github.com/kubernetes/website/pull/52877) . ([#134870](https://github.com/kubernetes/kubernetes/pull/134870), [@pmengelbert](https://github.com/pmengelbert)) [SIG API Machinery, Architecture, Auth, CLI, Instrumentation and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -4577,8 +4577,8 @@
   },
   "134882": {
     "commit": "7537d52c2e67b26188090f73c9c2d609271ea2fb",
-    "text": "Extended resources requested by initContainers which are allocated using an automatic ResourceClaim now match the behavior of legacy device plugins, reusing the same resources requested by later sidecar initContainers or regular containers when possible, to minimize the total number of devices requested by the pod.",
-    "markdown": "Extended resources requested by initContainers which are allocated using an automatic ResourceClaim now match the behavior of legacy device plugins, reusing the same resources requested by later sidecar initContainers or regular containers when possible, to minimize the total number of devices requested by the pod. ([#134882](https://github.com/kubernetes/kubernetes/pull/134882), [@yliaog](https://github.com/yliaog)) [SIG Apps, CLI, Node, Scheduling and Testing]",
+    "text": "Extended resources requested by initContainers which are allocated using an automatic `ResourceClaim` now match the behavior of legacy device plugins, reusing the same resources requested by later sidecar initContainers or regular containers when possible, to minimize the total number of devices requested by the pod.",
+    "markdown": "Extended resources requested by initContainers which are allocated using an automatic `ResourceClaim` now match the behavior of legacy device plugins, reusing the same resources requested by later sidecar initContainers or regular containers when possible, to minimize the total number of devices requested by the pod. ([#134882](https://github.com/kubernetes/kubernetes/pull/134882), [@yliaog](https://github.com/yliaog)) [SIG Apps, CLI, Node, Scheduling and Testing]",
     "author": "yliaog",
     "author_url": "https://github.com/yliaog",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134882",
@@ -4652,8 +4652,8 @@
   },
   "134905": {
     "commit": "c30b578ee59ad0b1505009897a2a3d7766a6073e",
-    "text": "Scheduler: Added the `bindingTimeout` argument to the DynamicResources plugin configuration, allowing customization of the wait duration in `PreBind` for device binding conditions.\nDefaults to 10 minutes when `DRADeviceBindingConditions` and `DRAResourceClaimDeviceStatus` are both enabled.",
-    "markdown": "Scheduler: Added the `bindingTimeout` argument to the DynamicResources plugin configuration, allowing customization of the wait duration in `PreBind` for device binding conditions.\n  Defaults to 10 minutes when `DRADeviceBindingConditions` and `DRAResourceClaimDeviceStatus` are both enabled. ([#134905](https://github.com/kubernetes/kubernetes/pull/134905), [@fj-naji](https://github.com/fj-naji)) [SIG Node and Scheduling]",
+    "text": "Scheduler: Added the `bindingTimeout` argument to the DynamicResources plugin configuration, allowing customization of the wait duration in `PreBind` for device binding conditions. Defaults to 10 minutes when `DRADeviceBindingConditions` and `DRAResourceClaimDeviceStatus` are both enabled.",
+    "markdown": "Scheduler: Added the `bindingTimeout` argument to the DynamicResources plugin configuration, allowing customization of the wait duration in `PreBind` for device binding conditions. Defaults to 10 minutes when `DRADeviceBindingConditions` and `DRAResourceClaimDeviceStatus` are both enabled. ([#134905](https://github.com/kubernetes/kubernetes/pull/134905), [@fj-naji](https://github.com/fj-naji)) [SIG Node and Scheduling]",
     "author": "fj-naji",
     "author_url": "https://github.com/fj-naji",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134905",
@@ -5141,8 +5141,8 @@
   },
   "135072": {
     "commit": "26a2945d5de6c1dc0426aebe1ad36a32963aeb39",
-    "text": "Typed workqueue now cleans up goroutines before shutting down",
-    "markdown": "Typed workqueue now cleans up goroutines before shutting down ([#135072](https://github.com/kubernetes/kubernetes/pull/135072), [@Jefftree](https://github.com/Jefftree)) [SIG API Machinery]",
+    "text": "Typed workqueue now cleans up goroutines before shutting down.",
+    "markdown": "Typed workqueue now cleans up goroutines before shutting down. ([#135072](https://github.com/kubernetes/kubernetes/pull/135072), [@Jefftree](https://github.com/Jefftree)) [SIG API Machinery]",
     "author": "Jefftree",
     "author_url": "https://github.com/Jefftree",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135072",
@@ -5230,8 +5230,8 @@
   },
   "135088": {
     "commit": "c35cd162950c90ddf87ab7e753d5586775fab3ac",
-    "text": "Graduated the fine-grained supplemental groups policy (KEP-3619) to GA.",
-    "markdown": "Graduated the fine-grained supplemental groups policy (KEP-3619) to GA. ([#135088](https://github.com/kubernetes/kubernetes/pull/135088), [@everpeace](https://github.com/everpeace)) [SIG Node and Testing]",
+    "text": "Graduated the fine-grained supplemental groups policy to GA.",
+    "markdown": "Graduated the fine-grained supplemental groups policy to GA. ([#135088](https://github.com/kubernetes/kubernetes/pull/135088), [@everpeace](https://github.com/everpeace)) [SIG Node and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5311,8 +5311,8 @@
   },
   "135104": {
     "commit": "ca03752ee77755be3c681a0414fc50e72527edb5",
-    "text": "Introduced the alpha `MutableSchedulingDirectivesForSuspendedJobs` feature gate (disabled by default), which allows mutating a Job's scheduling directives while the Job is suspended. \nIt also updates the Job controller to clears the `status.startTime` field for suspended Jobs.",
-    "markdown": "Introduced the alpha `MutableSchedulingDirectivesForSuspendedJobs` feature gate (disabled by default), which allows mutating a Job's scheduling directives while the Job is suspended. \n  It also updates the Job controller to clears the `status.startTime` field for suspended Jobs. ([#135104](https://github.com/kubernetes/kubernetes/pull/135104), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]",
+    "text": "Introduced the alpha `MutableSchedulingDirectivesForSuspendedJobs` feature gate (disabled by default), which allows mutating a Job's scheduling directives while the Job is suspended. It also updates the Job controller to clear the `status.startTime` field for suspended Jobs.",
+    "markdown": "Introduced the alpha `MutableSchedulingDirectivesForSuspendedJobs` feature gate (disabled by default), which allows mutating a Job's scheduling directives while the Job is suspended. It also updates the Job controller to clear the `status.startTime` field for suspended Jobs. ([#135104](https://github.com/kubernetes/kubernetes/pull/135104), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-apps/5440-mutable-job-pod-resource-updates/README.md",
@@ -5341,8 +5341,8 @@
   },
   "135108": {
     "commit": "07faa17f8fa8daa803408ea9409410d198516708",
-    "text": "Dropped support for `networking/v1beta1` `Ingress` in `kubectl`.",
-    "markdown": "Dropped support for `networking/v1beta1` `Ingress` in `kubectl`. ([#135108](https://github.com/kubernetes/kubernetes/pull/135108), [@scaliby](https://github.com/scaliby))",
+    "text": "Dropped support for `networking/v1beta1` `IngressClass` in `kubectl`.",
+    "markdown": "Dropped support for `networking/v1beta1` `IngressClass` in `kubectl`. ([#135108](https://github.com/kubernetes/kubernetes/pull/135108), [@scaliby](https://github.com/scaliby))",
     "author": "scaliby",
     "author_url": "https://github.com/scaliby",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135108",
@@ -5360,8 +5360,8 @@
   },
   "135146": {
     "commit": "4ffafaea9cc040bdfa2dfa5f06df30b489a40ae3",
-    "text": "Fixed a Windows kube-proxy (winkernel) issue where stale `RemoteEndpoints`\nremained when a Deployment was referenced by multiple Services due to premature\nclearing of the `terminatedEndpoints` map.",
-    "markdown": "Fixed a Windows kube-proxy (winkernel) issue where stale `RemoteEndpoints`\n  remained when a Deployment was referenced by multiple Services due to premature\n  clearing of the `terminatedEndpoints` map. ([#135146](https://github.com/kubernetes/kubernetes/pull/135146), [@princepereira](https://github.com/princepereira)) [SIG Network and Windows]",
+    "text": "Fixed a Windows kube-proxy (winkernel) issue where stale `RemoteEndpoints` remained when a Deployment was referenced by multiple Services due to premature clearing of the `terminatedEndpoints` map.",
+    "markdown": "Fixed a Windows kube-proxy (winkernel) issue where stale `RemoteEndpoints` remained when a Deployment was referenced by multiple Services due to premature clearing of the `terminatedEndpoints` map. ([#135146](https://github.com/kubernetes/kubernetes/pull/135146), [@princepereira](https://github.com/princepereira)) [SIG Network and Windows]",
     "author": "princepereira",
     "author_url": "https://github.com/princepereira",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135146",
@@ -5438,8 +5438,8 @@
   },
   "135158": {
     "commit": "5ac53d43a76a2a94e450fb1f48b08604f12867fc",
-    "text": "Graduated the `PodTopologyLabelsAdmission` feature gate to Beta and enabled it by default.\nPods now receive `topology.kubernetes.io/zone` and `topology.kubernetes.io/region` labels automatically when their assigned Node has these labels.",
-    "markdown": "Graduated the `PodTopologyLabelsAdmission` feature gate to Beta and enabled it by default.\n  Pods now receive `topology.kubernetes.io/zone` and `topology.kubernetes.io/region` labels automatically when their assigned Node has these labels. ([#135158](https://github.com/kubernetes/kubernetes/pull/135158), [@andrewsykim](https://github.com/andrewsykim))",
+    "text": "Graduated the `PodTopologyLabelsAdmission` feature gate to Beta and enabled it by default. Pods now receive `topology.kubernetes.io/zone` and `topology.kubernetes.io/region` labels automatically when their assigned Node has these labels.",
+    "markdown": "Graduated the `PodTopologyLabelsAdmission` feature gate to Beta and enabled it by default. Pods now receive `topology.kubernetes.io/zone` and `topology.kubernetes.io/region` labels automatically when their assigned Node has these labels. ([#135158](https://github.com/kubernetes/kubernetes/pull/135158), [@andrewsykim](https://github.com/andrewsykim))",
     "author": "andrewsykim",
     "author_url": "https://github.com/andrewsykim",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135158",
@@ -5510,8 +5510,8 @@
   },
   "135195": {
     "commit": "d777de7741d36d1cc465162d94f39200e299070b",
-    "text": "Graduated the image volume source feature to Beta and enabled it by default.",
-    "markdown": "Graduated the image volume source feature to Beta and enabled it by default. ([#135195](https://github.com/kubernetes/kubernetes/pull/135195), [@haircommander](https://github.com/haircommander)) [SIG Apps, Instrumentation, Node and Testing]",
+    "text": "Graduated the image volume source feature to `beta` and enabled it by default.",
+    "markdown": "Graduated the image volume source feature to `beta` and enabled it by default. ([#135195](https://github.com/kubernetes/kubernetes/pull/135195), [@haircommander](https://github.com/haircommander)) [SIG Apps, Instrumentation, Node and Testing]",
     "documentation": [
       {
         "description": "KEP",
@@ -5652,8 +5652,8 @@
   },
   "135492": {
     "commit": "cb689abdfbf27162a3938798cf021532d142a982",
-    "text": "Kubernetes is now built using Go 1.25.4",
-    "markdown": "Kubernetes is now built using Go 1.25.4 ([#135492](https://github.com/kubernetes/kubernetes/pull/135492), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "text": "Kubernetes is now built using Go `1.25.4`.",
+    "markdown": "Kubernetes is now built using Go `1.25.4`. ([#135492](https://github.com/kubernetes/kubernetes/pull/135492), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
     "author": "cpanato",
     "author_url": "https://github.com/cpanato",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135492",
@@ -5669,7 +5669,7 @@
       "release",
       "testing"
     ],
-    "feature": true,
+    "feature": true
   },
   "135609": {
     "commit": "4e94e70dcad423e9f59f12ac5a048d2137d20e86",
@@ -5696,9 +5696,9 @@
   },
   "135271": {
     "commit": "03e14cc9432975dec161de1e52d7010f9711a913",
-    "text": "Etcd: Update etcd to `v3.6.6`.",
-    "markdown": "Etcd: Update etcd to `v3.6.6`. ([#135271](https://github.com/kubernetes/kubernetes/pull/135271), [@bzsuni](https://github.com/bzsuni) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]",
-    "author": "bzsuno",
+    "text": "Updated etcd to `v3.6.6`.",
+    "markdown": "Updated etcd to `v3.6.6`. ([#135271](https://github.com/kubernetes/kubernetes/pull/135271), [@bzsuni](https://github.com/bzsuni)) [SIG API Machinery, Cloud Provider, Cluster Lifecycle, Etcd and Testing]",
+    "author": "bzsuni",
     "author_url": "https://github.com/bzsuni",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135271",
     "pr_number": 135271,
@@ -5722,7 +5722,7 @@
   "135560": {
     "commit": "615ac0d2996f36fe4df7410e1168a8577e7045ba",
     "text": "Fixes a bug where `MutatingAdmissionPolicy` would fail to apply to objects with duplicate list items (like env vars).",
-    "markdown": "Fixes a bug where `MutatingAdmissionPolicy` would fail to apply to objects with duplicate list items (like env vars). ([#135560](https://github.com/kubernetes/kubernetes/pull/135560), [@lalitc375](https://github.com/lalitc375) [SIG API Machinery]",
+    "markdown": "Fixes a bug where `MutatingAdmissionPolicy` would fail to apply to objects with duplicate list items (like env vars). ([#135560](https://github.com/kubernetes/kubernetes/pull/135560), [@lalitc375](https://github.com/lalitc375)) [SIG API Machinery]",
     "author": "lalitc375",
     "author_url": "https://github.com/lalitc375",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135560",
@@ -5741,8 +5741,8 @@
   },
   "135499": {
     "commit": "2711e8cb53987ad7aca9eee21e1be3a4961fea39",
-    "text": "Fixes a bug in the kube-apiserver where a malformed Service without name can cause high CPU usage. The bug is present on the new Cluster IP allocators enabled with the feature `MultiCIDRServiceAllocator` (enabled by default since `1.33`).",
-    "markdown": "Fixes a bug in the kube-apiserver where a malformed Service without name can cause high CPU usage. The bug is present on the new Cluster IP allocators enabled with the feature `MultiCIDRServiceAllocator` (enabled by default since `1.33`). ([#135499](https://github.com/kubernetes/kubernetes/pull/135499), [@aojea](https://github.com/aojea) [SIG Testing]",
+    "text": "Fixed a bug in the `kube-apiserver` where a malformed `Service` without name can cause high CPU usage. The bug is present on the new Cluster IP allocators enabled with the feature `MultiCIDRServiceAllocator` (enabled by default since `1.33`).",
+    "markdown": "Fixed a bug in the `kube-apiserver` where a malformed `Service` without name can cause high CPU usage. The bug is present on the new Cluster IP allocators enabled with the feature `MultiCIDRServiceAllocator` (enabled by default since `1.33`). ([#135499](https://github.com/kubernetes/kubernetes/pull/135499), [@aojea](https://github.com/aojea)) [SIG Network and Testing]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135499",
@@ -5755,6 +5755,7 @@
       "regression"
     ],
     "sigs": [
+      "network",
       "testing"
     ],
     "duplicate": true,
@@ -5762,8 +5763,8 @@
   },
   "135580": {
     "commit": "2711e8cb53987ad7aca9eee21e1be3a4961fea39",
-    "text": "k8s.io/client-go: Fixes a regression in 1.34+ which prevented informers from using configured Transformer functions.",
-    "markdown": "K8s.io/client-go: Fixes a regression in 1.34+ which prevented informers from using configured Transformer functions. ([#135580](https://github.com/kubernetes/kubernetes/pull/135580), [@serathius](https://github.com/serathius) [SIG API Machinery]",
+    "text": "k8s.io/client-go: Fixes a regression in `1.34+` which prevented informers from using configured Transformer functions.",
+    "markdown": "K8s.io/client-go: Fixes a regression in `1.34+` which prevented informers from using configured Transformer functions. ([#135580](https://github.com/kubernetes/kubernetes/pull/135580), [@serathius](https://github.com/serathius)) [SIG API Machinery]",
     "author": "serathius",
     "author_url": "https://github.com/serathius",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135580",
