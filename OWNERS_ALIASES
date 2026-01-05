@@ -28,17 +28,17 @@ aliases:
   release-team-approvers:
     - katcosgrove # Release Team Subproject Lead
   release-team-lead:
-    - drewhagen # v1.35
+    - rytswd # v1.36
   release-team-lead-shadows:
-    - rytswd # v1.35
-    - dipesh-rawat # v1.35
-    - jenshu # v1.35
-    - Rajalakshmi-Girish # v1.35
+    - aibarbetta # v1.36
+    - dipesh-rawat # v1.36
+    - jenshu # v1.36
+    - rayandas # v1.36
   communications-subteam-approvers:
-    - graz-dev # v1.35
+    - chadmcrowell # v1.36
   docs-subteam-approvers:
-    - Urvashi0109 # v1.35
+    - sayanchowdhury # v1.36
   enhancements-subteam-approvers:
-    - rayandas # v1.35
+    - jmickey #v1.36
   release-signal-subteam-approvers:
-    - tico88612 # v1.35
+    - Prajyot-Parab # v1.36
