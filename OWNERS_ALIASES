@@ -29,6 +29,7 @@ aliases:
     - katcosgrove # Release Team Subproject Lead
   release-team-lead:
     - drewhagen # v1.35
+    - rytswd # v1.36
   release-team-lead-shadows:
     - rytswd # v1.35
     - dipesh-rawat # v1.35
