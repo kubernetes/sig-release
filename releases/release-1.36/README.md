@@ -15,7 +15,7 @@ description: |
 * [This document](https://git.k8s.io/sig-release/releases/release-1.36/README.md)
 * [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.36/release-team.md)
 * [Meeting Minutes](https://rel.k8s.io/v136/releasemtg) (members of [release-team@] receive meeting invites)
-* [v1.36 Release Calendar](https://bit.ly/k8s-release-cal)
+* [v1.36 Release Calendar](https://rel.k8s.io/k8s-release-cal)
 * Contact: [#sig-release](https://kubernetes.slack.com/archives/C2C40FMNF) on
   slack, [release-team](mailto:release-team@kubernetes.io) on e-mail
 * [Internal Contact Info](https://bit.ly/k8s136-contacts) (accessible only to members of [release-team@])
