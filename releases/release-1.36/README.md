@@ -39,8 +39,8 @@ description: |
 The v1.36 release cycle is as follows:
 
 - **Monday 12th January 2026**: Week 1 — Release cycle begins
-- **Wednesday 4th February 2026 (AoE) / Friday 5th February 2026, 12:00 UTC**: Week 4 — [Production Readiness Freeze][Production Readiness Freeze]
-- **Wednesday 11th February 2026 (AoE) / Friday 12th February 2026, 12:00 UTC**: Week 5 — [Enhancements Freeze][Enhancements Freeze]
+- **Wednesday 4th February 2026 (AoE) / Thursday 5th February 2026, 12:00 UTC**: Week 4 — [Production Readiness Freeze][Production Readiness Freeze]
+- **Wednesday 11th February 2026 (AoE) / Thursday 12th February 2026, 12:00 UTC**: Week 5 — [Enhancements Freeze][Enhancements Freeze]
 - **Thursday 26th February 2026 (AoE) / Friday 27th February 2026, 12:00 UTC**: Week 7 — [Feature blog freeze][Feature blog freeze]
 - **Thursday 5th March 2026 (AoE) / Friday 6th March 2026, 12:00 UTC**: Week 8 — [Code Freeze][Code Freeze] and [Test Freeze][Test Freeze]
 - **Monday 23rd - Thursday 26th March 2026**: Week 11 - [KubeCon EU](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/)
