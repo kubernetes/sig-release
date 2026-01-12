@@ -93,6 +93,115 @@ Example: A deadline of Thursday, Oct 16 (AoE) gives contributors their full Thur
 | [Thaw]                                                        | Branch Manager                | Thursday 23rd April 2026                                                    | week 15  |                                                                          |
 | Feature blog publication starts                               | Comms Lead                    | Thursday 23rd April 2026                                                    | week 15  |                                                                          |
 
+### Team focused view
+
+<details>
+<summary>Enhancements</summary>
+
+| **What**                                                      | **Who**                       | **When**                                                                    | **Week** |
+|---------------------------------------------------------------|-------------------------------|-----------------------------------------------------------------------------|----------|
+| Start of Release Cycle                                        | Lead                          | Monday 12th January 2026                                                    | week 1   |
+| Start Enhancements Tracking                                   | Enhancements Lead             | Monday 12th January 2026                                                    | week 1   |
+| Schedule finalized                                            | Lead                          | Friday 16th January 2026                                                    | week 1   |
+| Team finalized                                                | Lead                          | Friday 16th January 2026                                                    | week 1   |
+| Begin APAC-friendly meetings                                  | Lead                          | Wednesday 21st January 2026                                                 | week 2   |
+| Call for PRR and Enhancement Freeze [Exceptions][Exception]   | Lead                          | Thursday 29th January 2026                                                  | week 3   |
+| **Begin [Production Readiness Freeze]**                       | Enhancements Lead             | Wednesday 4th February 2026 (AoE) / Thursday 5th February 2026, 12:00 UTC   | week 4   |
+| **Begin [Enhancements Freeze]**                               | Enhancements Lead             | Wednesday 11th February 2026 (AoE) / Thursday 12th February 2026, 12:00 UTC | week 5   |
+| Brace Yourself, Code Freeze is Coming                         | Comms / Release Signal        | Monday 23rd February 2026                                                   | week 7   |
+| Call for Code Freeze [Exceptions][Exception]                  | Lead                          | Monday 2nd March 2026                                                       | week 8   |
+| **Begin [Code Freeze] and [Test Freeze]**                     | Branch Manager                | Thursday 19th March 2026 (AoE) / Friday 20th March 2026, 12:00 UTC          | week 10  |
+| **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead                          | Monday 23rd March 2026                                                      | week 11  |
+| **KubeCon EU**                                                |                               | Monday 23rd - Thursday 26th March 2026                                      | week 11  |
+| Burndown Meetings daily (Tuesday & Thursday over Slack)       | Lead                          | Monday 6th April 2026                                                       | week 13  |
+| **v1.36.0 released**                                          | Branch Manager                | Wednesday 22nd April 2026                                                   | week 15  |
+
+</details>
+
+<details>
+<summary>Docs</summary>
+
+| **What**                                                      | **Who**                       | **When**                                                                    | **Week** |
+|---------------------------------------------------------------|-------------------------------|-----------------------------------------------------------------------------|----------|
+| Start of Release Cycle                                        | Lead                          | Monday 12th January 2026                                                    | week 1   |
+| Schedule finalized                                            | Lead                          | Friday 16th January 2026                                                    | week 1   |
+| Team finalized                                                | Lead                          | Friday 16th January 2026                                                    | week 1   |
+| Begin APAC-friendly meetings                                  | Lead                          | Wednesday 21st January 2026                                                 | week 2   |
+| Start Release Notes Draft                                     | Docs Lead                     | Wednesday 28th January 2026                                                 | week 3   |
+| v1.36.0-alpha.1 released                                      | Branch Manager                | Wednesday 4th February 2026                                                 | week 4   |
+| **Begin [Enhancements Freeze]**                               | Enhancements Lead             | Wednesday 11th February 2026 (AoE) / Thursday 12th February 2026, 12:00 UTC | week 5   |
+| v1.36.0-alpha.2 released                                      | Branch Manager                | Wednesday 18th February 2026                                                | week 6   |
+| Docs deadline — Open placeholder PRs                          | Docs Lead                     | Thursday 19th February 2026                                                 | week 6   |
+| Brace Yourself, Code Freeze is Coming                         | Comms / Release Signal        | Monday 23rd February 2026                                                   | week 7   |
+| v1.36.0-alpha.3 released                                      | Branch Manager                | Wednesday 4th March 2026                                                    | week 8   |
+| v1.36.0-beta.0 released                                       | Branch Manager                | Wednesday 11th March 2026                                                   | week 9   |
+| **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead                          | Monday 23rd March 2026                                                      | week 11  |
+| **KubeCon EU**                                                |                               | Monday 23rd - Thursday 26th March 2026                                      | week 11  |
+| Docs deadline — PRs ready for review                          | Docs Lead                     | Tuesday 31st March 2026                                                     | week 12  |
+| Burndown Meetings daily (Tuesday & Thursday over Slack)       | Lead                          | Monday 6th April 2026                                                       | week 13  |
+| release-1.36 branch created                                   | Branch Manager                | Wednesday 8th April 2026                                                    | week 13  |
+| release-1.36 jobs created                                     | Branch Manager                | Wednesday 8th April 2026                                                    | week 13  |
+| v1.36.0-rc.0 released                                         | Branch Manager                | Wednesday 8th April 2026                                                    | week 13  |
+| Start final draft of Release Notes                            | Docs Lead                     | Wednesday 8th April 2026                                                    | week 13  |
+| **[Docs Freeze]**                                             | Docs Lead                     | Wednesday 8th April 2026 (AoE) / Thursday 9th April 2026, 12:00 UTC         | week 13  |
+| Release blog ready to review                                  | Comms / Docs                  | Thursday 9th April 2026 (AoE) / Friday 10th April 2026, 12:00 UTC           | week 13  |
+| v1.36.0-rc.1 released                                         | Branch Manager                | Tuesday 14th April 2026                                                     | week 14  |
+| Release Notes complete — reviewed & merged to [k/k][k/k] repo | Docs Lead                     | Wednesday 22nd April 2026                                                   | week 15  |
+| **v1.36.0 released**                                          | Branch Manager                | Wednesday 22nd April 2026                                                   | week 15  |
+
+</details>
+
+<details>
+<summary>Comms</summary>
+
+| **What**                                                      | **Who**                       | **When**                                                                    | **Week** |
+|---------------------------------------------------------------|-------------------------------|-----------------------------------------------------------------------------|----------|
+| Start of Release Cycle                                        | Lead                          | Monday 12th January 2026                                                    | week 1   |
+| Schedule finalized                                            | Lead                          | Friday 16th January 2026                                                    | week 1   |
+| Team finalized                                                | Lead                          | Friday 16th January 2026                                                    | week 1   |
+| Begin APAC-friendly meetings                                  | Lead                          | Wednesday 21st January 2026                                                 | week 2   |
+| **Begin [Enhancements Freeze]**                               | Enhancements Lead             | Wednesday 11th February 2026 (AoE) / Thursday 12th February 2026, 12:00 UTC | week 5   |
+| Brace Yourself, Code Freeze is Coming                         | Comms / Release Signal        | Monday 23rd February 2026                                                   | week 7   |
+| **Begin [Feature blog freeze] - Open placeholder PRs**        | Comms Lead                    | Thursday 26th February 2026 (AoE) / Friday 27th February 2026, 12:00 UTC    | week 7   |
+| **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead                          | Monday 23rd March 2026                                                      | week 11  |
+| **KubeCon EU**                                                |                               | Monday 23rd - Thursday 26th March 2026                                      | week 11  |
+| Deprecations and Removals blog published                      | Comms Lead                    | Monday 30th March 2026                                                      | week 12  |
+| Release Highlights deadline                                   | Comms Lead                    | Tuesday 31st March 2026                                                     | week 12  |
+| Feature blogs ready to review                                 | Enhancement Owner / SIG Leads | Monday 6th April 2026                                                       | week 13  |
+| Burndown Meetings daily (Tuesday & Thursday over Slack)       | Lead                          | Monday 6th April 2026                                                       | week 13  |
+| Release blog ready to review                                  | Comms / Docs                  | Thursday 9th April 2026 (AoE) / Friday 10th April 2026, 12:00 UTC           | week 13  |
+| **v1.36.0 released**                                          | Branch Manager                | Wednesday 22nd April 2026                                                   | week 15  |
+| Release blog published                                        | Comms Lead                    | Wednesday 22nd April 2026                                                   | week 15  |
+| Feature blog publication starts                               | Comms Lead                    | Thursday 23rd April 2026                                                    | week 15  |
+
+</details>
+
+<details>
+<summary>Release Signal & Branch Manager</summary>
+
+| **What**                                                      | **Who**           | **When**                                                                    | **Week** | **Release Signal**                                                       |
+|---------------------------------------------------------------|-------------------|-----------------------------------------------------------------------------|----------|--------------------------------------------------------------------------|
+| Start of Release Cycle                                        | Lead              | Monday 12th January 2026                                                    | week 1   | [master-blocking], [master-informing]                                    |
+| Schedule finalized                                            | Lead              | Friday 16th January 2026                                                    | week 1   |                                                                          |
+| Team finalized                                                | Lead              | Friday 16th January 2026                                                    | week 1   |                                                                          |
+| Begin APAC-friendly meetings                                  | Lead              | Wednesday 21st January 2026                                                 | week 2   |                                                                          |
+| v1.36.0-alpha.1 released                                      | Branch Manager    | Wednesday 4th February 2026                                                 | week 4   |                                                                          |
+| **Begin [Enhancements Freeze]**                               | Enhancements Lead | Wednesday 11th February 2026 (AoE) / Thursday 12th February 2026, 12:00 UTC | week 5   |                                                                          |
+| v1.36.0-alpha.2 released                                      | Branch Manager    | Wednesday 18th February 2026                                                | week 6   |                                                                          |
+| v1.36.0-alpha.3 released                                      | Branch Manager    | Wednesday 4th March 2026                                                    | week 8   |                                                                          |
+| v1.36.0-beta.0 released                                       | Branch Manager    | Wednesday 11th March 2026                                                   | week 9   |                                                                          |
+| **Begin [Code Freeze] and [Test Freeze]**                     | Branch Manager    | Thursday 19th March 2026 (AoE) / Friday 20th March 2026, 12:00 UTC          | week 10  |                                                                          |
+| **Begin [Burndown]** (Monday, Wednesday, and Friday meetings) | Lead              | Monday 23rd March 2026                                                      | week 11  |                                                                          |
+| **KubeCon EU**                                                |                   | Monday 23rd - Thursday 26th March 2026                                      | week 11  |                                                                          |
+| Burndown Meetings daily (Tuesday & Thursday over Slack)       | Lead              | Monday 6th April 2026                                                       | week 13  |                                                                          |
+| release-1.36 branch created                                   | Branch Manager    | Wednesday 8th April 2026                                                    | week 13  |                                                                          |
+| release-1.36 jobs created                                     | Branch Manager    | Wednesday 8th April 2026                                                    | week 13  |                                                                          |
+| v1.36.0-rc.0 released                                         | Branch Manager    | Wednesday 8th April 2026                                                    | week 13  | [1.36-informing], [1.36-blocking], [master-blocking], [master-informing] |
+| v1.36.0-rc.1 released                                         | Branch Manager    | Tuesday 14th April 2026                                                     | week 14  |                                                                          |
+| **v1.36.0 released**                                          | Branch Manager    | Wednesday 22nd April 2026                                                   | week 15  |                                                                          |
+| [Thaw]                                                        | Branch Manager    | Thursday 23rd April 2026                                                    | week 15  |                                                                          |
+
+</details>
 
 ## Phases
 
