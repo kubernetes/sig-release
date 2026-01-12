@@ -44,7 +44,7 @@ The v1.36 release cycle is as follows:
 - **Thursday 26th February 2026 (AoE) / Friday 27th February 2026, 12:00 UTC**: Week 7 — [Feature blog freeze][Feature blog freeze]
 - **Thursday 19th March 2026 (AoE) / Friday 20th March 2026, 12:00 UTC**: Week 10 — [Code Freeze][Code Freeze] and [Test Freeze][Test Freeze]
 - **Monday 23rd - Thursday 26th March 2026**: Week 11 - [KubeCon EU](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/)
-- **Wednesday 1st April 2026 (AoE) / Thursday 2nd April 2026, 12:00 UTC**: Week 12 — [Docs Freeze][Docs Freeze]
+- **Wednesday 8th April 2026 (AoE) / Thursday 9th April 2026, 12:00 UTC**: Week 13 — [Docs Freeze][Docs Freeze]
 - **Wednesday 22nd April 2026**: Week 15 — Kubernetes v1.36.0 released
 
 #### Note on AoE deadlines:
