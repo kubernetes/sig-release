@@ -27,7 +27,7 @@ description: |
 * [Bug Triage Tracking Board](https://rel.k8s.io/v136/bugtriage)
 * [CI Signal Project Board & Issue Tracking](https://rel.k8s.io/v136/cisignal)
 * [Retrospective Document](https://rel.k8s.io/v136/retro)
-* [kubernetes/kubernetes v1.36 milestone](https://github.com/kubernetes/kubernetes/milestone/68)
+* [kubernetes/kubernetes v1.36 milestone](https://github.com/kubernetes/kubernetes/milestone/69)
 
 #### Guides
 
