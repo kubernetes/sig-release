@@ -90,7 +90,7 @@ Example: A deadline of Thursday, Oct 16 (AoE) gives contributors their full Thur
 | Release Notes complete — reviewed & merged to [k/k][k/k] repo | Docs Lead                     | Wednesday 22nd April 2026                                                   | week 15  |                                                                          |
 | **v1.36.0 released**                                          | Branch Manager                | Wednesday 22nd April 2026                                                   | week 15  |                                                                          |
 | Release blog published                                        | Comms Lead                    | Wednesday 22nd April 2026                                                   | week 15  |                                                                          |
-| [Thaw]                                                        | Branch Manager                | Thursday 23rd April 2026                                                    | week 15  |                                                                          |
+| [Thaw]                                                        | Branch Manager                | Wednesday 22nd April 2026                                                    | week 15  |                                                                          |
 | Feature blog publication starts                               | Comms Lead                    | Thursday 23rd April 2026                                                    | week 15  |                                                                          |
 
 ## Phases
