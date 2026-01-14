@@ -4,7 +4,7 @@ Each header below (and their hidden ID tagging) creates the `rel.k8s.io/v136` na
 
 ## <a id="releasemtg"></a> Release Meeting
 
-_To be updated_
+[Google Doc for v1.36 Release Meeting](https://docs.google.com/document/d/1y2PUvyA6fTp7bLH-iN2Sp6JC3v5fHmJg60ZcDigfaFY/edit?usp=sharing)
 
 ## <a id="enhancements"></a> Enhancements Tracking
 
