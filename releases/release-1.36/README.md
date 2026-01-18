@@ -18,7 +18,7 @@ description: |
 * [v1.36 Release Calendar](https://rel.k8s.io/release-team-cal)
 * Contact: [#sig-release](https://kubernetes.slack.com/archives/C2C40FMNF) on
   slack, [release-team](mailto:release-team@kubernetes.io) on e-mail
-* [Internal Contact Info](https://rel.k8s.io/contacts) (accessible only to members of [release-team@])
+* [Internal Contact Info](https://rel.k8s.io/v136/contacts) (accessible only to members of [release-team@])
 
 #### Tracking docs
 
