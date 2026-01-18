@@ -8,7 +8,7 @@ Each header below (and their hidden ID tagging) creates the `rel.k8s.io/v136` na
 
 ## <a id="enhancements"></a> Enhancements Tracking
 
-https://github.com/orgs/kubernetes/projects/241/views/1
+[Kubernetes v1.36 Enhancements Tracking Board](https://github.com/orgs/kubernetes/projects/241/views/1)
 
 ## <a id="bugtriage"></a> Bug Triage
 
