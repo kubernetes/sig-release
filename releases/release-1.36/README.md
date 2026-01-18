@@ -105,7 +105,7 @@ Please refer to the [release phases document](../release_phases.md).
 
 [Code Freeze]: ../release_phases.md#code-freeze
 
-[Exception]: ../release_phases.md#exceptions
+[Exceptions]: ../release_phases.md#exceptions
 
 [Thaw]: ../release_phases.md#thaw
 
