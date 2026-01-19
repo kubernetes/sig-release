@@ -328,7 +328,7 @@ For v1.33, the release is planned on **Wednesday 23rd April 2025**. At this poin
 - Make sure all the templates use the consistent KEP referencing of something like: `[KEP-4974: Deprecate v1.Endpoints](https://kep.k8s.io/4974)`
 - Document the version should be "v" prefixed
 - Update the blog status field to prefix with some numbers (the current "ready for review", "review in progress", "ready to publish" are all so similar and hard to see which one's which...)
-- When getting the placeholder blog PRs for Feature Blogs, we will need to get the KEP authors to come back to us in the KEP. There were a few blogs I only caught by going through the list of blog PRs, and it was quite manual.
+- When getting the placeholder blog PRs for Feature Blogs, we will need to get the KEP authors to come back to us in the KEP. Additionally, monitor https://github.com/kubernetes/website/pulls between weeks 5 and 8 (Feature Blog opt-in period), check with the author and use labels `sig/release` and `area/blog` to keep track of any submissions not notified in the KEP thread.
 
 ## Old Updates
 
