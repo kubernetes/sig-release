@@ -1,4 +1,14 @@
-# Progress Tracking Issue
+---
+name: Release Comms Subteam Cycle Progress
+about: Used to track release comms subteam work which needs to be done every release cycle 
+title: '[1.XX] Release Comms Subteam Cycle Progress'
+labels: sig/release, area/release-eng, area/release-team
+---
+
+<!--
+This template is used for tracking tasks that the Release Comms Subteam needs to do in a release cycle.
+
+The issue should be kept open for the entirety of the release cycle, until all tasks are completed.
 
 The below is the content full content of the progress tracking issue. Replace all the `v1.XX` references to the target release.
 
@@ -8,11 +18,10 @@ Example tickets:
 - v1.33 https://github.com/kubernetes/sig-release/issues/2718
 - v1.32 https://github.com/kubernetes/sig-release/issues/2625
 
------
+-->
 
 > [!NOTE]
 > This ticket follows the [Release Team Lead Cycle Progress ticket](https://github.com/kubernetes/sig-release/issues/XXXX), and is curated for Comms specific actions and plans. More of release information can be found in [/releases/release-1.XX/README.md](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/README.md).
-
 
 # Overview
 
@@ -130,7 +139,7 @@ For v1.XX, the enhancement freeze takes place on week {{X}}.
 
 ### For Lead and Shadows
 
-* [ ] Start reaching out for Feature Blog opt-in for each KEP
+* [ ] With Enhancement freeze in effect (in week 5), start reaching out for Feature Blog opt-in for each KEP
   * [ ] Complete the first round of reach-out
   * [ ] Complete the second round of reach-out
 * [ ] Reach out to all SIGs for their input on Release Highlights
@@ -299,7 +308,7 @@ As the release coming up so near, we should be done with most of the actions by 
 - TBC
 
 ## Week 15: Release + Post Release Actions
-For v1.33, the release is planned on **Wednesday 23rd April 2025**. At this point, there shouldn't be too much that we need to handle other than last minute juggling...
+At this point, there shouldn't be too much that we need to handle other than last minute juggling...
 
 ### For Lead
 * [ ] Update the Release Announcement blog with the logo and release name!
@@ -322,7 +331,6 @@ For v1.33, the release is planned on **Wednesday 23rd April 2025**. At this poin
 
 ## Other Follow-up Actions and Notes
 
-- We should make clarification on when the Feature Blog opt-in reach-outs to happen (it was a bit vague)
 - In the opt-in reach-out, we should consider whether Feature Blog write-up was done in the past
 - We should remove the duplicated Project Board view, and adjust the column and field wording
 - Make sure all the templates use the consistent KEP referencing of something like: `[KEP-4974: Deprecate v1.Endpoints](https://kep.k8s.io/4974)`
