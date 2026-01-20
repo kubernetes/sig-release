@@ -329,15 +329,6 @@ At this point, there shouldn't be too much that we need to handle other than las
 
 - TBC
 
-## Other Follow-up Actions and Notes
-
-- In the opt-in reach-out, we should consider whether Feature Blog write-up was done in the past
-- We should remove the duplicated Project Board view, and adjust the column and field wording
-- Make sure all the templates use the consistent KEP referencing of something like: `[KEP-4974: Deprecate v1.Endpoints](https://kep.k8s.io/4974)`
-- Document the version should be "v" prefixed
-- Update the blog status field to prefix with some numbers (the current "ready for review", "review in progress", "ready to publish" are all so similar and hard to see which one's which...)
-- When getting the placeholder blog PRs for Feature Blogs, we will need to get the KEP authors to come back to us in the KEP. Additionally, monitor https://github.com/kubernetes/website/pulls between weeks 5 and 8 (Feature Blog opt-in period), check with the author and use labels `sig/release` and `area/blog` to keep track of any submissions not notified in the KEP thread.
-
 ## Old Updates
 
 <!-- By moving the latest updates from the top of the issue down here, you can keep the timeline of updates in a single view. This is not necessary, but could be useful.-->
