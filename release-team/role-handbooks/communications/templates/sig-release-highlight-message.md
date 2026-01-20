@@ -1,15 +1,13 @@
-This message is sent to SIGs, in their channel, to collect the Release Highlights for the release cycle.
+This message is sent to SIGs Slack channel to collect the Release Highlights for the release cycle.
 
+```markdown
+Hi SIG {{XXX}}! This is {{@YOURNAME}} from the {{v1.XX}} Release Communications team :wave:
+
+Release Highlights are an essential part of the Kubernetes release cycle to provide a birds-eye view of improvements, breaking or user-facing changes as a part of the release.
+On behalf of the Release Comms team, I would like to ask for your help gathering the Release Highlights for SIG {{XXX}} for the upcoming {{v1.XX}} release. If you have anything to call out, we would appreciate it if any of you can submit the content in [Kubernetes {{v1.XX}} Release Highlights GitHub discussion](https://github.com/kubernetes/sig-release/discussions/REPLACE_THIS_WITH_CORRECT_DISCUSSION).
+
+We would appreciate if this can be completed by the deadline of {{DEADLINE DETAILS, in **BOLD**}}.
+
+Thank you very much for your support in advance!
 ```
-Hi SIG @xxx 👋 
 
-this is <Comms shadow/lead name> from the <current release cycle version> Communications Team! 
-
-Release Highlights are an essential part of the Kubernetes release cycle as they provide a birds-eye view of improvements, breaking or user-facing changes that are coming as part of the upcoming release.
-
-Release Comms team is asking for your help gathering your Release Highlights for this release. If you have anything to call out, we would appreciate it if your SIG can submit the content in Kubernetes <current release cycle version> Release Highlights [GitHub discussion](https://github.com/kubernetes/sig-release/discussions/xxxx).
-
-Ideally, we would like this to be completed by **<deadline>**.
-
-Thank you so much for your cooperation :smile:
-```
