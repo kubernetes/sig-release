@@ -81,6 +81,27 @@ Release Team selection should happen in accordance with the [Release Team select
 ### Lead Shadows
 
 Once you have selected your Lead Shadows, each Shadow should get assigned to support two teams. One should be a team they have previously led or have extensive experience in. The other will be a team they have had no exposure to prior. They will work closely with their subteams to provide timely support. This will make sure that they are well-rounded to step up to lead.
+As the communication between Lead Shadows and Subteam Leads happens without the Release Team Lead, it is important for the Release Team Lead to check in with the Lead Shadows as well as the Subteam Leads to ensure that everything is running smoothly.
+
+Lead Shadows are also required to assist in various subteam tasks (as a secondary reviewer after the subteam review), including but not limited to:
+
+- Documentation:
+  - Review Release Notes PRs for clarity and completeness.
+  - Branch Sync PRs are created timely to prevent branch skew.
+  - Assisting the documentation subteam before the docs freeze.
+- Communications:
+  - Reviewing at least mid cycle blog and the release blog.
+- Enhancements:
+  - Assisting the enhancements subteam before PRR, Enhancements, and Code+Test Freeze.
+- Release Signal:
+  - Sporadically monitoring the release signal dashboard and alerting the Release Team Lead of any issues.
+
+The Release Lead Shadows are also required to assist in the following Release Team Lead tasks, including but not limited to:
+- Hosting the Release Team meetings (see [Release Team Meeting Host Playbook](#release-team-meeting-host-playbook) for more details)
+- Suggesting KEPs for mid cycle blog and release blog to the Release Team Lead and the Communications Lead.
+- Coordinating any freeze requests and starting a discussion in #sig-release Slack channel.
+
+The Release Team Lead should explicitly assign above-mentioned and additional tasks to Lead Shadows as needed.
 
 In the event that a subteam loses a shadow, we might ask the paired Lead Shadow to step in as a backup Shadow.
 
@@ -90,8 +111,13 @@ In the event that a subteam loses a shadow, we might ask the paired Lead Shadow 
   - kubernetes/sig-release
     - releases/release-x.y
       - README.md (release schedule)
-      - release-notes-draft.md (consumed by the automated release process)
       - release_team.md
+      - exceptions.yaml (list of exceptions granted during enhancements, code+test freeze)
+      - release-notes
+        - release-notes-draft.md (consumed by the automated release process)
+        - release-notes-draft.json (json used by krel to generate release notes)
+      - logos (folder for release logos)
+      - OWNERS (only for the current devel release)
 - Short links are handled with [http://bit.ly](http://bit.ly). Each release should have the following documents (replacing XYY with the release version number minus dots):
   - Retro doc: `http://bit.ly/k8sXYYretro`
   - Release Schedule overview: `http://bit.ly/k8sXYY-release-info`
