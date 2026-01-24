@@ -195,16 +195,18 @@ Wednesdays, but can be moved to a different day if needed or based on the Branch
 
 ## Release Team Meeting Host Playbook
 
-Release Team meetings are held to coordinate and discuss release-related activities. The Release Lead and Lead Shadows host Release Team meetings throughout the release cycle.
-The following playbook can be used for reference to structure the meeting, you don't need to stick step by step (word by word), it should give guidance how a meeting usually is structured. 
+Release Team meetings are held to coordinate and discuss release-related activities. The Release Lead and Lead Shadows host Release Team meetings throughout the release cycle. To accommodate team members in different timezones, there is typically both an APAC and Americas/EMEA instance of each weekly or burndown meeting.
+
+The following playbook can be used for reference to structure the meeting. While you don't need to stick to it word for word, it should give guidance for how a meeting usually is structured.
 
 ### Requirements to host the meeting as Release Team Lead / Lead Shadow
 1. Install Zoom and check your settings (especially the audio)
-2. Make sure to get the **host key** from the Emeritus Adviser or Release Lead , otherwise you wont be able to claim host share the screen and start the recording
+2. Make sure to get the **host key** from the Emeritus Adviser or Release Lead, otherwise you won't be able to claim host share the screen and start the recording
 
 ### Pre-Meeting
-1. Add a new blank agenda entry to the meeting notes by copying the template and editing the details accordingly.
-2. Announce the release team meeting about an hour before in the sig-release slack channel.
+1. At least 24 hours before the meeting (to give subteams adequate time to post their updates): Add a new blank agenda entry to the meeting notes by copying the template and editing the details (date and names of hosts) accordingly.
+2. About 1-2 hours before the meeting: Check the agenda to make sure subteam updates are filled out; if any are missing, remind the subteam lead to post their update.
+3. About 1 hour before the meeting: Announce the meeting details in the `#sig-release` slack channel. Example message (replace with appropriate details):
 
 ```txt
 Hi folks! The release meeting takes place 1 hour from now
@@ -236,7 +238,9 @@ If anyone has anything they’d like to discuss, please add to the notes.
 3. *code of conduct* **"Please be aware that this is a Kubernetes community meeting which falls under the Kubernetes code of conduct, which can be summarized to be excellent to each other, thank you all!"** 
 4. *recording warning* **"This meeting is recorded and will be publicly posted to YouTube so please be mindful what you say is being recorded."**
 5. *open discussion items*: If something is on the list, you can read it out loud and wait for the person to respond. If there is nothing on the open discussion list, you can say something like: **"There is nothing in the open discussion section in the meeting notes. Is there anything to discuss before we get into the team updates?"** wait a few seconds - **"Okay, let's move on"** 
-6. *team updates*: **"Lets start with the team updates"** Call the person giving the update and wait for the update. Ask if there are any comments or questions for the team. If no one from the team gives the update, then you can review the last update given in a previous meeting, read it aloud, and then move to the next team. 
+6. *team updates*: **"Lets start with the team updates"** Call the person giving the update and wait for the update. Ask if there are any comments or questions for the team. If no one from the team gives the update, then you can review the last update given in a previous meeting, read it aloud, and then move to the next team.
+7. *any final discussions*: Before ending the recording, ask if there is anything else that anyone would like to discuss on the record.
+8. *before stopping recording*: Say thanks and goodbye to the people watching on YouTube.
 
 ### Post-Recording
 1. *Off record discussions* **"I stopped the recording, is there anything you like to discuss off record?"** wait a few seconds
