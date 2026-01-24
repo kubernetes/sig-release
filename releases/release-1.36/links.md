@@ -12,16 +12,17 @@ Each header below (and their hidden ID tagging) creates the `rel.k8s.io/v136` na
 
 ## <a id="bugtriage"></a> Bug Triage
 
-_To be updated_
+[GitHub Bug Triage Project Board for v1.36](https://github.com/orgs/kubernetes/projects/80/views/29)
 
 ## <a id="cisignal"></a> CI Signal
 
-_To be updated_
+[GitHub CI Signal Project Board for v1.36 Issue Tracking](https://github.com/orgs/kubernetes/projects/68/views/41)
 
 ## <a id="retro"></a> Release Retrospective
 
-_To be updated_
+[Google Doc for v1.36 Release Retrospective](https://docs.google.com/document/d/11C7O8cgDxhjUJ-FcuOYwn_-tjcFva3SwADCFEUPN3NI/edit?usp=sharing)
+
 
 ## <a id="contacts"></a> Contacts
 
-_To be updated_
+[Google Sheet for v1.36 Release Team Contacts](https://docs.google.com/spreadsheets/d/1K5QnxhcTD-tqq2zZeEEQqrGHJxm9SK0nhjYJFBhwkSc/edit?usp=sharing)
