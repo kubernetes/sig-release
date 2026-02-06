@@ -13,7 +13,7 @@ As described [here](https://github.com/kubernetes/community/blob/master/sig-arch
 - The [kep.yaml](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/kep.yaml) updated with:
     - `stage` set to the current stage
     - `latest-milestone` set to the current release
-    - `milestone` struct updated with the current stage and release
+    - `milestone` struct updated with the current stage and release (only if graduating to a new stage)
 - A [PRR approval file](https://github.com/kubernetes/enhancements/blob/master/keps/prod-readiness/template/nnnn.yaml) with the PRR approver listed for the stage the KEP is targeting
 
 It is important to note that the PRR freeze **_does not_** mean that the KEPs need to have received an approval or even a review from the PRR team by this date.
