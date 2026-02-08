@@ -1,0 +1,5 @@
+pr: 136085
+releasenote:
+  text: |-
+    Added explicit logging when `WatchList` requests complete their initial listing phase.
+pr_body: ""

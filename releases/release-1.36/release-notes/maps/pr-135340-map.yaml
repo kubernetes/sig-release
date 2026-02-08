@@ -1,0 +1,5 @@
+pr: 135340
+releasenote:
+  text: |-
+    Fixed a bug causing clients to error out when decoding large CBOR encoded lists.
+pr_body: ""

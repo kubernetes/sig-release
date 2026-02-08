@@ -1,0 +1,5 @@
+pr: 132120
+releasenote:
+  text: |-
+    Fixed a potential nil pointer dereference in the scheduler's `NodeResourcesFitArgs` validation when using `RequestedToCapacityRatio` scoring strategy.
+pr_body: ""

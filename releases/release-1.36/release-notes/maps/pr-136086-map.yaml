@@ -1,0 +1,5 @@
+pr: 136086
+releasenote:
+  text: |-
+    Promoted the `watch_list_duration_seconds` metric from ALPHA to BETA.
+pr_body: ""

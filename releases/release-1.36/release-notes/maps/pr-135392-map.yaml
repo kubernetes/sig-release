@@ -1,0 +1,5 @@
+pr: 135392
+releasenote:
+  text: |-
+    Fixed queue hint for certain plugins on change to pods with nominated nodes.
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 135393
+releasenote:
+  text: |-
+    Added support for running PreBind plugins in parallel in the scheduler framework to improve binding latency.
+    Action Required: Plugins can opt-in to parallel execution by returning `AllowParallel: true` from the `PreBindPreFlight` method. PreBind plugin implementations need to be updated to return `PreBindPreFlightResult` from the `PreBindPreFlight` method; returning nil retains the existing sequential behavior.
+pr_body: ""

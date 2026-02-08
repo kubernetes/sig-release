@@ -1,0 +1,5 @@
+pr: 135874
+releasenote:
+  text: |-
+    Changed the default debug profile from `legacy` to `general`. The `legacy` profile is planned to be removed in `v1.39`.
+pr_body: ""

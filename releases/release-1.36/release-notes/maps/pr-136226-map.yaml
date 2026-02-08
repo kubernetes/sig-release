@@ -1,0 +1,5 @@
+pr: 136226
+releasenote:
+  text: |-
+    Kubelet: Fixed a data race in pod allocated resources.
+pr_body: ""

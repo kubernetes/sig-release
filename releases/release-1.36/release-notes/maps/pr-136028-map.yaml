@@ -1,0 +1,5 @@
+pr: 136028
+releasenote:
+  text: |-
+    Kubelet: Fixed logging to properly respect verbosity levels. Previously, some debug/info messages using `V().Error()` would always be printed regardless of the configured log verbosity.
+pr_body: ""

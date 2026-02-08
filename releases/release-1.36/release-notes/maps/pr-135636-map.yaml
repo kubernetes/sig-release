@@ -1,0 +1,5 @@
+pr: 135636
+releasenote:
+  text: |-
+    Fixed a bug in `DeepEqualWithNilDifferentFromEmpty` where empty slices and maps were incorrectly considered equal to non-empty ones due to using OR (`||`) instead of AND (`&&`) logic. This could cause managed fields timestamps to not update when the only change was adding or removing all elements from a list or map.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135777
+releasenote:
+  text: |-
+    Enabled the `WatchCacheInitializationPostStartHook` feature gate by default.
+pr_body: ""

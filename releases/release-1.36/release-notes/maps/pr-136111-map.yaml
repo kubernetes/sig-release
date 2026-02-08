@@ -1,0 +1,5 @@
+pr: 136111
+releasenote:
+  text: |-
+    Marked the `endpoints` field as optional in the OpenAPI spec for `discovery.k8s.io/v1` EndpointSlice. This matches server behavior and resolves validation issues.
+pr_body: ""

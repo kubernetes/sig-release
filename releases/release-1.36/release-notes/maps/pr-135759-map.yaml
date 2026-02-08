@@ -1,0 +1,5 @@
+pr: 135759
+releasenote:
+  text: |-
+    Fixed a race condition in CEL admission policy compilation that could cause `kube-apiserver` to crash with a `concurrent map read and map write` error under high load.
+pr_body: ""

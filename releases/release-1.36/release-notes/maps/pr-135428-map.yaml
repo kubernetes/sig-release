@@ -1,0 +1,5 @@
+pr: 135428
+releasenote:
+  text: |-
+    Fixed StatefulSets to always count `.status.availableReplicas` at the correct time without delay, resulting in faster StatefulSet rollout progress.
+pr_body: ""

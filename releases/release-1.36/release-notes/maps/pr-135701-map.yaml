@@ -1,0 +1,5 @@
+pr: 135701
+releasenote:
+  text: |-
+    Kubeadm: Removed usage of the deprecated `etcd` flags `--experimental-initial-corrupt-check` and `--experimental-watch-progress-notify-interval` if the `etcd` version is < `v3.6.0`. In this version of kubeadm, `etcd` < `v3.6.0` is no longer supported in terms of the Kubernetes / `etcd` version mapping. These deprecated flags have been replaced by `--feature-gates=InitialCorruptCheck=true` and `--watch-progress-notify-interval`.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135629
+releasenote:
+  text: |-
+    Fixed SELinux warning controller to not emit events for completed Pods (Succeeded and Failed states).
+pr_body: ""

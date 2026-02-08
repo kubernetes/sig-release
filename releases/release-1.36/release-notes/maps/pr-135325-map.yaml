@@ -1,0 +1,5 @@
+pr: 135325
+releasenote:
+  text: |-
+    Fixed queue hint for inter-pod anti-affinity in case deleted pod's anti-affinity matched the pending pod, which might have caused delays in scheduling.
+pr_body: ""

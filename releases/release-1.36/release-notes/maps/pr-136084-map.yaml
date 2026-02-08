@@ -1,0 +1,5 @@
+pr: 136084
+releasenote:
+  text: |-
+    Added `audit-id` to the "Starting watch" log line.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135148
+releasenote:
+  text: |-
+    Kubeadm: Added the `--allow-deprecated-api` flag to `kubeadm config validate`. By default the command prints a warning for deprecated APIs unless the flag is passed. Additionally, added missing support for `v1beta4` `UpgradeConfiguration` to `kubeadm config migrate` and `kubeadm config validate` commands.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 136582
+releasenote:
+  text: |-
+    CustomResourceDefinition (CRD) validation now strictly enforces ranges for numeric formats (`int32`, `int64`, `float`, `double`) when specified in the schema. Existing objects with out-of-range values are preserved via validation ratcheting.
+pr_body: ""

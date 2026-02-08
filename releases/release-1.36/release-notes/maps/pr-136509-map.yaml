@@ -1,0 +1,5 @@
+pr: 136509
+releasenote:
+  text: |-
+    Client-go: Fixed an unlikely deadlock during informer startup.
+pr_body: ""

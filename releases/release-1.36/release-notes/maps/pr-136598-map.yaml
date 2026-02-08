@@ -1,0 +1,5 @@
+pr: 136598
+releasenote:
+  text: |-
+    Fixed a bug where pod lifecycle hooks could run for their full duration when pods are terminated.
+pr_body: ""

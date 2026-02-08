@@ -1,0 +1,5 @@
+pr: 135394
+releasenote:
+  text: |-
+    Fixed queue hint for the `interpodaffinity` plugin in case target pod labels change.
+pr_body: ""

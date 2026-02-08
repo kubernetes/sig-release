@@ -1,0 +1,5 @@
+pr: 129664
+releasenote:
+  text: |-
+    Kube-controller-manager: Fixed `VolumeAttachment` cleanup when CSI's `attachRequired` switches from true to false.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135281
+releasenote:
+  text: |-
+    Removed event listing behavior when describing a deleted Pod from file using `kubectl describe -f`, ensuring consistent NotFound error handling across all resource types.
+pr_body: ""

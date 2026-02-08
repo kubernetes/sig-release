@@ -1,0 +1,5 @@
+pr: 135227
+releasenote:
+  text: |-
+    Fixed a bug in the `dra_operations_duration_seconds` metric where the `is_error` label was recording inverted values. Error operations now correctly report `is_error=true`, and successful operations report `is_error=false`.
+pr_body: ""

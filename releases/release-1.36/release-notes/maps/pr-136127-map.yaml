@@ -1,0 +1,5 @@
+pr: 136127
+releasenote:
+  text: |-
+    Kubeadm: Fixed a bug where `kubeadm upgrade` failed if the content of the `/var/lib/kubelet/kubeadm-flags.env` file was `KUBELET_KUBEADM_ARGS=""`.
+pr_body: ""

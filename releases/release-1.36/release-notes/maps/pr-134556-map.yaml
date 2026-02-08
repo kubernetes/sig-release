@@ -1,0 +1,5 @@
+pr: 134556
+releasenote:
+  text: |-
+    Locked the `VolumeAttributesClass` feature gate to `true` and updated the preferred storage version to `storage.k8s.io/v1`.
+pr_body: ""

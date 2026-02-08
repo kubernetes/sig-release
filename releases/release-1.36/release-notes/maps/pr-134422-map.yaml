@@ -1,0 +1,5 @@
+pr: 134422
+releasenote:
+  text: |-
+    Updated `kubectl get ingressclass` to display a `(default)` marker for the default IngressClass.
+pr_body: ""

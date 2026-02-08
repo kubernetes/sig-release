@@ -1,0 +1,5 @@
+pr: 135794
+releasenote:
+  text: |-
+    Kubelet: Fixed a data race in the volume manager's `WaitForAllPodsUnmount` that could cause errors to be lost during concurrent pod unmount operations.
+pr_body: ""

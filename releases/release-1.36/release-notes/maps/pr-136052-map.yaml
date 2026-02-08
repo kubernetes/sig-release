@@ -1,0 +1,5 @@
+pr: 136052
+releasenote:
+  text: |-
+    Added missing tests for client-go metrics.
+pr_body: ""

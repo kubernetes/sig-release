@@ -1,0 +1,5 @@
+pr: 135515
+releasenote:
+  text: |-
+    Fixed feature gates `ChangeContainerStatusOnKubeletRestart` and `StatefulSetSemanticRevisionComparison` to be visible in `--help` output across different components.
+pr_body: ""

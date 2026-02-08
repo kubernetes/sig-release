@@ -1,0 +1,5 @@
+pr: 136673
+releasenote:
+  text: |-
+    Locked the `DisableNodeKubeProxyVersion` feature gate to enabled by default.
+pr_body: ""

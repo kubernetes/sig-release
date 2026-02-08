@@ -1,0 +1,5 @@
+pr: 135418
+releasenote:
+  text: |-
+    Added write and read permissions for workloads to the `admin` cluster role, write permissions to the `edit` cluster role, and read permissions to the `view` cluster role.
+pr_body: ""

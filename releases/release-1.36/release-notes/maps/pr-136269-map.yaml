@@ -1,0 +1,5 @@
+pr: 136269
+releasenote:
+  text: |-
+    Fixed a race condition in Dynamic Resource Allocation (DRA) where the same device could be allocated twice for different `ResourceClaims` when scheduling many pods very rapidly. Depending on whether DRA drivers check for this during `NodePrepareResources` (they should, but not all may implement this properly), the second pod using the same device could fail to start until the first one is done or (worse) run in parallel.
+pr_body: ""

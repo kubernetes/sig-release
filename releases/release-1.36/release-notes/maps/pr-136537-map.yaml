@@ -1,0 +1,5 @@
+pr: 136537
+releasenote:
+  text: |-
+    Generated `fake.NewClientset` which replaces the deprecated `NewSimpleClientset` for `kube-aggregator` and `sample-apiserver`.
+pr_body: ""

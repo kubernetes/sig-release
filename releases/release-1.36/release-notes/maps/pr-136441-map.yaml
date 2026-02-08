@@ -1,0 +1,5 @@
+pr: 136441
+releasenote:
+  text: |-
+    Updated API comments to reflect the stable state of Dynamic Resource Allocation (DRA).
+pr_body: ""

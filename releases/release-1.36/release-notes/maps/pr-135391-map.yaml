@@ -1,0 +1,5 @@
+pr: 135391
+releasenote:
+  text: |-
+    Fixed issues in server side apply and client-go's `Extract{TypeName}()` and `Extract{TypeName}From()` functions where empty arrays and maps were incorrectly treated as absent, and atomic elements from associative lists were incorrectly duplicated.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135522
+releasenote:
+  text: |-
+    Promoted workqueue metrics from ALPHA to BETA.
+pr_body: ""

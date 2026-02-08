@@ -1,0 +1,5 @@
+pr: 136424
+releasenote:
+  text: |-
+    Corrected OpenAPI schema union validation for the `PodGroupPolicy` struct in `scheduling.k8s.io/v1alpha1`.
+pr_body: ""

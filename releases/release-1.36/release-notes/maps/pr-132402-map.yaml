@@ -1,0 +1,5 @@
+pr: 132402
+releasenote:
+  text: |-
+    Added `ARCH` column in the `kubectl get node -o wide` output.
+pr_body: ""

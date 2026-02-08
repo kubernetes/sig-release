@@ -1,0 +1,5 @@
+pr: 136583
+releasenote:
+  text: |-
+    Client-go: Fixed an issue where Reflector could get confused about the resource version it should use to restart a watch while receiving synthetic ADDED events at the beginning of a watch from `resourceVersion` 0 or empty string (`""`).
+pr_body: ""

@@ -1,0 +1,6 @@
+pr: 136143
+releasenote:
+  text: |-
+    Client-go: Fake client-go (i.e., anything using `k8s.io/client-go/testing`) now supports separate List+Watch calls with checking of `ResourceVersion` in the Watch call. This closes a race condition where creating an object directly after an informer cache has synced (List call completed) and before the Watch call completed would cause that object to not be sent to the informer. A visible side-effect of adding that support is that List metadata contains a `ResourceVersion` (starting at 1 for the empty set, incremented by one for each add/update) and that Watch may return objects where it previously did not.
+    Note that this List+Watch is not to be confused with the `ListWatch` feature, which uses a single call. That feature is still not supported by fake client-go.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135694
+releasenote:
+  text: |-
+    Updated `cri-tools` to `v1.35.0`.
+pr_body: ""

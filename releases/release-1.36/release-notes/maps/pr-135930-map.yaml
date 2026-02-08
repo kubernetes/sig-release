@@ -1,0 +1,5 @@
+pr: 135930
+releasenote:
+  text: |-
+    Changed the `nodeGetCapabilities` method of `csiDriverClient` to return `NewUncertainProgressError` when receiving a non-final gRPC error. This resolves residual global mount paths during rapid pod creation-deletion cycles.
+pr_body: ""
