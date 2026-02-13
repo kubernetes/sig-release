@@ -8,7 +8,7 @@
     - [Update Kubekins-e2e v2 variants](#update-kubekins-e2e-v2-variants)
     - [Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards](#update-release-branch-jobs-in-kubernetestest-infra-for-the-new-release-and-create-the-dashboards)
       - [Configure the release dashboards](#configure-the-release-dashboards)
-      - [Run test generation script](#run-test-generation-script)
+      - [Run the prepare-release-branch tool](#run-the-prepare-release-branch-tool)
       - [Submit the PR for release branch jobs and dashboards in kubernetes/test-infra](#submit-the-pr-for-release-branch-jobs-and-dashboards-in-kubernetestest-infra)
     - [Add new variant for kube-cross image](#add-new-variant-for-kube-cross-image)
     - [Update k8s-cloud-builder and k8s-ci-builder](#update-k8s-cloud-builder-and-k8s-ci-builder)
@@ -108,35 +108,14 @@ Before proceding with the next step, wait for the `post-test-infra-push-kubekins
 > [!CAUTION]
 Follow the guidelines below very carefully during the update process.
 
-- Do not remove old jobs while adding new jobs in this phase, just do not. Handle it before or after the post branch creation tasks, or let release engineering take care of this.
-- Do not segregate PRs, just separate auto-generated files from manually updated ones in two (or more) clearly documented commits.
-- Be super careful about `releng/test_config.yaml` especially when commenting out `stable4`
+- Do not remove old jobs while adding new jobs in this phase. Handle it before or after the post branch creation tasks, or let release engineering take care of this.
 - Do not hesitate to remove broken jobs, but let the interested SIG(s) know about it so they can re-add it.
 
-Updating the release branch jobs in `kubernetes/test-infra` for the new release version involves some steps, it is unpredictable work and requires manual intervention as not every job is generated.
-Some of them are added manually and live outside of the generated job tree.
-
-First of all you need to modify the `releng/test_config.yaml` file ([here](https://github.com/kubernetes/test-infra/blob/master/releng/test_config.yaml)) to:
-- Update version references
-- Rotate stable job configurations sequentially (n -> n+1) - _note: you should put config of stable1 to stable2, then repeat it until you get to the end._
-- Add new version as beta
-- Update configuration for all test suites
-
-Just shift "args" but not touch interval, sigowners or any other field.
-Remember that args are bound to a set of tests for a specific release, while intervals and everything else is bound to a release "status": stable1/2/3/4 or beta. An example of how to correctly rotate the jobs can be found [here](https://github.com/kubernetes/test-infra/pull/34668/commits/819c9d253ab873aff6626a5eaf7635560f7b769e).
-
-Keep in mind that jobs order might be different, e.g. the first stable1 job and and the first stable2 job might not be the same type of the job, so remember to pay particular attention where you're copying from and to.
-
-> [!WARNING]
-Consider what has been pointed out in [this issue](https://github.com/kubernetes/test-infra/issues/34675).
-When updating to new release image variants, you’ll need to update the jobs to use these new images. However, keep in mind that you can only update a job after the new image tag is available. If you attempt to update before the new image exists, the job may fail.
-This is related to how the tags are managed and you should consider using `latest` images instead or you will find yourself opening PRs like [this](https://github.com/kubernetes/test-infra/pull/35288) to fix the image tags for some jobs.
-
-Remember to update all configs before running the [generation script](#run-test-generation-script) for the upcoming release branch jobs and to verify that the jobs are generated correctly.
+The GCE COS e2e jobs (alphafeatures, default, reboot, serial, slow) use `fork-per-release` annotations and are automatically handled by the `prepare-release-branch` tool. Other jobs that live outside the fork-per-release system may still require manual updates.
 
 #### Configure the release dashboards
 
-After configuring the jobs you can now configure the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
+Configure the [release dashboards](https://github.com/kubernetes/test-infra/blob/master/config/testgrids/kubernetes/sig-release/config.yaml), example [commit](https://github.com/kubernetes/test-infra/commit/31fb8f2b5c4458af675e37765dfebd128da19971), remembering to:
 
 - Remove the deprecated release sig-release-1.xx-{blocking,informing} dashboards
 - Add the new dashboards for the current release e.g., sig-release-1.xx-{blocking,informing}
@@ -144,39 +123,29 @@ After configuring the jobs you can now configure the [release dashboards](https:
 > [!NOTE]
 Comparing the new jobs with previous version(s) might help to identify any missing jobs or misconfigurations.
 
-#### Run test generation script
+#### Run the prepare-release-branch tool
 
-After updating the configurations you can run the following command from the root of your `test-infra` fork to generate the updated jobs configurations, remember to use the correct architecture and OS for your environment, e.g., `GOARCH=arm64 GOOS=darwin` for macOS on ARM:
+From the root of your `test-infra` fork, run:
 
 ```bash
-GOARCH=arm64 GOOS=darwin make -C releng prepare-release-branch
+make -C releng prepare-release-branch
 ```
 
-Breaking down what the above command does:
+This tool will:
 
-- Navigates to the releng directory (-C releng)
-- Executes the `prepare-release-branch target` from the `Makefile` in that directory
-- Ensures Python 3 requirements are installed
-- Executes the `run.sh` script in the releng directory, passing `prepare-release-branch` as an argument
-- Sets error handling (errexit, nounset, pipefail)
-- Determines the repository root directory
-- Sources Go setup script `setup-go.sh`
-- Builds the binary and stores them in the `_bin` directory
-- Runs `config-rotator`
-- Runs `config-forker`
-- Runs the Python script `prepare_release_branch.py` inside a Python container
-- Passes the built tools and another Python script `generate_tests.py` as arguments to the main script
+1. Check if the next release branch (e.g. `release-1.36`) exists on `kubernetes/kubernetes`
+2. If the branch does not exist yet, exit early without making changes (safe to re-run)
+3. Fetch the Go version from the release branch
+4. Rotate existing release branch job tiers (beta → stable1 → stable2 → stable3 → stable4)
+5. Fork new job configurations for the new release branch
+
+The tool is idempotent: running it before the release branch exists is a no-op.
 
 #### Submit the PR for release branch jobs and dashboards in kubernetes/test-infra
 
 You can finally issue a new PR as [this example](https://github.com/kubernetes/test-infra/pull/34668/files) one.
 
 After this PR is merged, you will be pairing with the Release Signal lead, checking that the new dashboards are working by visiting the TestGrid pages for the new dashboards and verifying that all the necessary jobs show up correctly. This task should be considered completed within 48 hours after the dashboards are created.
-
-Additionally update/fix the following scripts, if you've found any issues with or a way to improve them (they are fragile):
-- `hack/run-in-python-container.sh`
-- `releng/run.sh`
-- `releng/prepare_release_branch.py`
 
 ### Add new variant for kube-cross image
 
