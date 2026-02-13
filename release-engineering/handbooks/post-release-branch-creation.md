@@ -110,7 +110,7 @@ Follow the guidelines below very carefully during the update process.
 
 - Do not remove old jobs while adding new jobs in this phase, just do not. Handle it before or after the post branch creation tasks, or let release engineering take care of this.
 - Do not segregate PRs, just separate auto-generated files from manually updated ones in two (or more) clearly documented commits.
-- Be super careful about `releng/test_config.yaml` epecially when commenting out `stable4`
+- Be super careful about `releng/test_config.yaml` especially when commenting out `stable4`
 - Do not hesitate to remove broken jobs, but let the interested SIG(s) know about it so they can re-add it.
 
 Updating the release branch jobs in `kubernetes/test-infra` for the new release version involves some steps, it is unpredictable work and requires manual intervention as not every job is generated.
@@ -209,7 +209,7 @@ Bumping the stable version to the n+1 version of Kubernetes is done only when th
 
      # Update after the stable marker has been updated to stable.0
      - name: "Kubernetes version (next candidate.0)"
-      version: v1.35.0
+       version: v1.35.0
        refPaths:
          - path: images/build/cross/variants.yaml
            match: "KUBERNETES_VERSION: 'v((([0-9]+)\\.([0-9]+)\\.([0-9]+)(?:-([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?)(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?)'"

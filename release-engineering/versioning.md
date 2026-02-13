@@ -1,6 +1,6 @@
 # Kubernetes Release Versioning
 
-Reference: [Semantic Versioning](http://semver.org)
+Reference: [Semantic Versioning](https://semver.org)
 
 Legend:
 
@@ -29,7 +29,7 @@ Legend:
 - X.Y.0 (Branch: release-X.Y)
   - Final release, cut from the release-X.Y branch cut two weeks prior.
   - X.Y.1-rc.0 will be tagged at the same commit on the same branch.
-  - X.Y.0 occur 3 to 4 months after X.(Y-1).0.
+  - X.Y.0 occur approximately 4 months after X.(Y-1).0.
 - X.Y.Z, Z > 0 (Branch: release-X.Y)
   - [Patch releases](#patch-releases) are released as we cherrypick commits into
     the release-X.Y branch, (which is at X.Y.Z-beta.W,) as needed.
@@ -62,7 +62,7 @@ group/version, but there are no current plans to do so.
   additional +aaaa build suffix added; X.Y.Z-beta.W.C+bbbb is C commits after
   X.Y.Z-beta.W, with an additional +bbbb build suffix added. Furthermore, builds
   that are built off of a dirty build tree, (during development, with things in
-  the tree that are not checked it,) it will be appended with -dirty.
+  the tree that are not checked in,) it will be appended with -dirty.
 
 ### Supported releases and component skew
 
@@ -76,21 +76,22 @@ minor release; we often include critical bug fixes in
 possible.
 
 Different components are expected to be compatible across different amounts of
-skew, all relative to the master version. Nodes may lag masters components by
-up to two minor versions but should be at a version no newer than the master; a
+skew, all relative to the master version. Nodes may lag master components by
+up to three minor versions but should be at a version no newer than the master; a
 client should be skewed no more than one minor version from the master, but may
-lead the master by up to one minor version. For example, a v1.3 master should
-work with v1.1, v1.2, and v1.3 nodes, and should work with v1.2, v1.3, and v1.4
-clients.
+lead the master by up to one minor version. For example, a v1.31 master should
+work with v1.28, v1.29, v1.30, and v1.31 nodes, and should work with v1.30, v1.31,
+and v1.32 clients.
 
 Furthermore, we expect to "support" three minor releases at a time. "Support"
 means we expect users to be running that version in production, though we may
-not port fixes back before the latest minor version. For example, when v1.3
-comes out, v1.0 will no longer be supported: basically, that means that the
-reasonable response to the question "my v1.0 cluster isn't working," is, "you
+not port fixes back before the latest minor version. For example, when v1.31
+comes out, v1.27 will no longer be supported: basically, that means that the
+reasonable response to the question "my v1.27 cluster isn't working," is, "you
 should probably upgrade it, (and probably should have some time ago)". With
-minor releases happening approximately every three months, that means a minor
-release is supported for approximately nine months.
+minor releases happening approximately every four months (three releases per
+year), that means a minor release is supported for approximately fourteen
+months.
 
 ## Patch releases
 

@@ -39,10 +39,10 @@ A step by step guide for cutting Kubernetes patch releases. At a high-level:
 - Update tools (~15m)
 - Run `krel stage` (~1h 15m - up to 2h)
 - Run `krel release` (~15m)
-- Run `krel stage --no-mock` (~1h 15m - up to 2h)
+- Run `krel stage --nomock` (~1h 15m - up to 2h)
 - Run `kpromo pr` & merge PR
 - Wait for image promo prow job (~1h)
-- Run `krel release --no-mock` (~15m)
+- Run `krel release --nomock` (~15m)
 - Send announcements (~30m)
 
 
@@ -386,7 +386,7 @@ You might wanna ping @release-managers on Slack to speed this process up.
 **The PR has no dependencies outside of approvals / review.**
 
 > [!CAUTION]
-In case a blocking test goes red during the release cut, you should keep the PR held and reach a consesus with @release-managers that the promo can continue.
+In case a blocking test goes red during the release cut, you should keep the PR held and reach a consensus with @release-managers that the promo can continue.
 e.g. if a test went red for infra flakyness "Node not ready" it's probably ok to continue, but it's always better to double check.
 
 > [Example PR](https://github.com/kubernetes/k8s.io/pull/3024).
@@ -460,12 +460,9 @@ dev@kubernetes.io, kubernetes-announce@googlegroups.com
 
 #### Legacy Sendgrid method:
 
-> [!TIP]
-username == email` & `password == normalx2`.
-
 ```
 cd ~/release
-export SENDGRID_API_KEY=<API_KEY previously shared>
+export SENDGRID_API_KEY=<API_KEY>
 
 krel announce send --tag v1.xx.yy-alpha|beta|rc-z --name "First Last" --email "your-email@gmail.com" --nomock
 ```
@@ -552,7 +549,7 @@ The release step will also be extended, but not substantially longer in time.
 
 See [here](post-release-branch-creation.md) for the complete list of post branch creation release tasks.
 
-Such list resides in a different document to mainain this one in a bite-sized SRE style format.
+Such list resides in a different document to maintain this one in a bite-sized SRE style format.
 
 > [!WARNING]
 You will not be able to cut an rc.1 or any other cut against the new branch until the post branch creation tasks (post rc.0) are complete.
@@ -581,11 +578,11 @@ git submodule update --init --recursive
 
 
 # from in the k/website repo
-git checkout -b schedule-updates-nov-2024
+git checkout -b schedule-updates-<month>-<year>
 schedule-builder -uc ./data/releases/schedule.yaml -e ./data/releases/eol.yaml
 git add .
 git commit -m "updating release schedule"
-git push -u origin schedule-updates-oct-2024
+git push -u origin schedule-updates-<month>-<year>
 ```
 
 ## Cleanup

@@ -136,7 +136,7 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 ### For Newcomers
 At Release Engineering meetings, we like to give newcomers a happy and warm welcome. We also give space for newcomers to introduce themselves and their motivations/interests for joining. However, if you prefer not to speak during your first meeting we'll respect that. 
 
-As of Autumn 2020 we're developing a Buddy Program to improve our onboarding. Here's how it will work:
+We have a Buddy Program to improve our onboarding. Here's how it works:
 
 - Release Managers follow up with newcomers to go over the details of this page and empower them to ask questions about our work and processes.
 - Newcomers can request a Buddy (a Release Manager), who will also be shadowed/supported by up to two Release Manager Associates.
@@ -180,7 +180,6 @@ that any final cherry-pick content is merged ahead of that last release.
    - Document the different triage per repo/image.
      - kubernetes/kubernetes
        - UNLESS there are CVEs (then we must address)
-       - Every update requires an update to bazel rules_go
      - kubernetes/release
        - images/k8s-cloud-builder
        - images/build/cross (kube-cross)
