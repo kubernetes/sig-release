@@ -1,0 +1,5 @@
+pr: 135919
+releasenote:
+  text: |-
+    Kubelet: Fixed Dynamic Resource Allocation (DRA) to correctly handle multiple `ResourceClaims` even if one is already prepared.
+pr_body: ""

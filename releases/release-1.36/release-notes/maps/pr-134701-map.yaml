@@ -1,0 +1,5 @@
+pr: 134701
+releasenote:
+  text: |-
+    Added the `--concurrent-resourceclaim-syncs` flag to `kube-controller-manager` to configure `ResourceClaim` reconcile concurrency.
+pr_body: ""

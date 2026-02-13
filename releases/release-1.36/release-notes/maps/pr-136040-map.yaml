@@ -1,0 +1,5 @@
+pr: 136040
+releasenote:
+  text: |-
+    Changed some error logs to info logs with verbosity level in `controller/resourcequota` and `controller/garbagecollector`.
+pr_body: ""

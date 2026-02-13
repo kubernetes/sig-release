@@ -1,0 +1,5 @@
+pr: 136110
+releasenote:
+  text: |-
+    Kubectl: Fixed `kyaml` output of `kubectl get ... --output-watch-events -o kyaml`.
+pr_body: ""

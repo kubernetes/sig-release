@@ -1,0 +1,5 @@
+pr: 135719
+releasenote:
+  text: |-
+    Changed the behavior of default scheduler preemption plugin when preempting Pods that are in `WaitOnPermit` phase. They are now moved to the scheduler backoff queue instead of being marked as unschedulable.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 136273
+releasenote:
+  text: |-
+    Kubeadm: Increased the timeout of the `kubeadm upgrade` `CreateJob` preflight check to 1 minute. This allows Windows worker nodes to have more time to run the preflight check. The check uses the `pause` image, so if you are experiencing slow pull times, you can either pre-pull the image on the worker using `kubeadm config images pull --kubernetes-version TARGET` or skip the preflight check with `--ignore-preflight-errors`.
+pr_body: ""

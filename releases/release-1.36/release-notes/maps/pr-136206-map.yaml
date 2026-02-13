@@ -1,0 +1,5 @@
+pr: 136206
+releasenote:
+  text: |-
+    Kubelet: Fixed a data race in the container manager.
+pr_body: ""

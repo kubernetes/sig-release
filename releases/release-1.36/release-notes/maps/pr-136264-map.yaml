@@ -1,0 +1,5 @@
+pr: 136264
+releasenote:
+  text: |-
+    Client-go: Informers can now enqueue new watch events while already-queued events are being processed. This avoids dropping watches during a burst of incoming events due to contention on slow processing. This behavior is controlled by the `UnlockWhileProcessing` client-go feature gate, which is enabled by default.
+pr_body: ""

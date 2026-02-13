@@ -1,0 +1,5 @@
+pr: 136539
+releasenote:
+  text: |-
+    Added alpha counter metric `route_controller_route_sync_total` to Cloud Controller Manager to track route syncs with cloud providers. This metric is in alpha stage.
+pr_body: ""

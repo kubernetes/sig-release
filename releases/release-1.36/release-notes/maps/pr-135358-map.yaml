@@ -1,0 +1,5 @@
+pr: 135358
+releasenote:
+  text: |-
+    Sorted runtime handlers list from the CRI runtime to prevent unnecessary Node object updates when the order changes.
+pr_body: ""

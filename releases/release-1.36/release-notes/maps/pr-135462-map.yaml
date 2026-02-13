@@ -1,0 +1,5 @@
+pr: 135462
+releasenote:
+  text: |-
+    Client-go: Default informer behavior now updates store state with all the objects in a list or relist before calling handler `OnDelete`, `OnAdd`, or `OnUpdate` methods for individual items which were deleted, added, or removed. This ensures that the store state which can be inspected by handlers corresponds to a set of objects that existed at a particular resource version on the server. This behavior is guarded by the `AtomicFIFO` feature gate, which is enabled by default in `v1.36` but can be disabled if needed to temporarily regain the previous behavior.
+pr_body: ""

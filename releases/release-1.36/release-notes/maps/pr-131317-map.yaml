@@ -1,0 +1,5 @@
+pr: 131317
+releasenote:
+  text: |-
+    Fixed static pod status displaying `Init:0/1` when unable to retrieve init container status from container runtime.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135309
+releasenote:
+  text: |-
+    Enabled YAML support for `/statusz` and `/flagz` endpoints.
+pr_body: ""

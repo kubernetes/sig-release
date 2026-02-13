@@ -1,0 +1,5 @@
+pr: 135126
+releasenote:
+  text: |-
+    Added ALPHA counter metric `scheduler_pod_scheduled_after_flush_total` to track pods successfully scheduled after timeout flush from the `unschedulablePods` queue.
+pr_body: ""

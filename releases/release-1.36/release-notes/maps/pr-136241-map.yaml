@@ -1,0 +1,5 @@
+pr: 136241
+releasenote:
+  text: |-
+    Fixed an issue in the Windows `kube-proxy` (winkernel) where IPv4 and IPv6 Service load balancers could be incorrectly shared, causing broken dual-stack Service behavior. The `kube-proxy` now tracks load balancers per IP family, enabling correct support for `PreferDualStack` and `RequireDualStack` Services on Windows nodes.
+pr_body: ""

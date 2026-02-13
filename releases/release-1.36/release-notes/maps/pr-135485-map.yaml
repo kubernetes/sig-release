@@ -1,0 +1,5 @@
+pr: 135485
+releasenote:
+  text: |-
+    Kubelet: Fixed device plugin test failures after kubelet restart.
+pr_body: ""

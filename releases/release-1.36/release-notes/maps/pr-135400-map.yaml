@@ -1,0 +1,5 @@
+pr: 135400
+releasenote:
+  text: |-
+    Kubeadm: When applying user-provided overrides using `extraArgs`, the resulting list of arguments is no longer sorted alphanumerically. Only default arguments are sorted, while overrides preserve their order. This allows finer control for flags where order matters, such as `--service-account-issuer` for `kube-apiserver`.
+pr_body: ""

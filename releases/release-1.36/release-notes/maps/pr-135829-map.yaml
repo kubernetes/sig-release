@@ -1,0 +1,5 @@
+pr: 135829
+releasenote:
+  text: |-
+    Updated cAdvisor to `v0.55.0` in vendor dependencies.
+pr_body: ""

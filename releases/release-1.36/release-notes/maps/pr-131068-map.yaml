@@ -1,0 +1,5 @@
+pr: 131068
+releasenote:
+  text: |-
+    Fixed `fake.NewClientset()` to work properly with correct schema.
+pr_body: ""

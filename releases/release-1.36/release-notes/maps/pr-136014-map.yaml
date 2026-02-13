@@ -1,0 +1,5 @@
+pr: 136014
+releasenote:
+  text: |-
+    Kubeadm: Changed `kubeadm join` to wait for the etcd learner member to start before promoting it.
+pr_body: ""

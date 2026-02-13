@@ -1,0 +1,5 @@
+pr: 136478
+releasenote:
+  text: |-
+    Kube-apiserver: Setting `--audit-log-maxsize=0` now disables audit log rotation (the default remains `100 MB`). To avoid outages due to filling disks with ever-growing audit logs, `--audit-log-maxage` now defaults to `366 (1 year)` and `--audit-log-maxbackup` now defaults to `100`. If retention of all rotated logs is desired, age and count-based pruning can be disabled by explicitly specifying `--audit-log-maxage=0` and `--audit-log-maxbackup=0`.
+pr_body: ""

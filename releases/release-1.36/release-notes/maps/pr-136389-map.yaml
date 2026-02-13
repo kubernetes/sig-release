@@ -1,0 +1,6 @@
+pr: 136389
+releasenote:
+  text: |-
+    Promoted the `RelaxedServiceNameValidation` feature gate to beta and enabled it by default.
+    Service names are now validated with `NameIsDNSLabel()`, relaxing the pre-existing validation.
+pr_body: ""

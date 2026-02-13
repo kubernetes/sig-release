@@ -1,0 +1,5 @@
+pr: 133335
+releasenote:
+  text: |-
+    Kubelet: The plugin manager now properly handles plugin registration failures by removing failed plugins from the actual state and retrying with exponential backoff (initial delay `500ms`, doubling each failure up to `~2 minutes` maximum) to protect against broken plugins causing denial of service while still allowing recovery from transient failures.
+pr_body: ""

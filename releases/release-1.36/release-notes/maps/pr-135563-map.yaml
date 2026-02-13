@@ -1,0 +1,5 @@
+pr: 135563
+releasenote:
+  text: |-
+    Fixed `kubectl delete` to properly handle deletion of multiple StatefulSet pods and exit normally.
+pr_body: ""

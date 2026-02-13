@@ -1,0 +1,5 @@
+pr: 136743
+releasenote:
+  text: |-
+    Fixed `kube-proxy` log spam when all of a Service's endpoints were unready.
+pr_body: ""

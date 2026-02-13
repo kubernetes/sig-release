@@ -1,0 +1,5 @@
+pr: 136205
+releasenote:
+  text: |-
+    Kubelet: Fixed a data race in the status manager.
+pr_body: ""

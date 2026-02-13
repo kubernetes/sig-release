@@ -1,0 +1,5 @@
+pr: 135773
+releasenote:
+  text: |-
+    Kubeadm: Removed the `ControlPlaneKubeletLocalMode` feature gate, which graduated to GA in `v1.35` and was locked to enabled.
+pr_body: ""

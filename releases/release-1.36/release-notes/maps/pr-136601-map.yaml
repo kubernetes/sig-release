@@ -1,0 +1,5 @@
+pr: 136601
+releasenote:
+  text: |-
+    Promoted `InOrderInformers` to GA via the usage of `RealFIFO`. This means that `DeltaFIFO` will gradually be deprecated in favor of `RealFIFO` in internal implementations.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 135631
+releasenote:
+  text: |-
+    Fixed a `v1.34` regression in `ipvs` and `winkernel` `kube-proxy` backends. These backends now revert to their `pre-v1.34` behavior of regularly rechecking all rules even when no Services or EndpointSlices change.
+pr_body: ""

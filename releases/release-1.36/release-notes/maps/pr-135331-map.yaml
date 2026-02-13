@@ -1,0 +1,5 @@
+pr: 135331
+releasenote:
+  text: |-
+    Updated etcd client library to `v3.6.6`.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 136643
+releasenote:
+  text: |-
+    Promoted `kubectl kuberc` commands to beta.
+pr_body: ""

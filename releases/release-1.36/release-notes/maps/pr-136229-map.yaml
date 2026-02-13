@@ -1,0 +1,5 @@
+pr: 136229
+releasenote:
+  text: |-
+    Kube-apiserver: Fixed the log verbosity level in the unsafe delete authorization check that was incorrectly using Error level instead of Info level.
+pr_body: ""

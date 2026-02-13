@@ -1,0 +1,5 @@
+pr: 136008
+releasenote:
+  text: |-
+    Client-go: Improved informer resync processing to reduce contention on store locks between incoming events and handler updates, which may result in observable timing differences of handler invocations. This behavior is guarded by the `AtomicFIFO` feature gate, which is enabled by default in `v1.36` but can be disabled if needed to temporarily regain the previous behavior.
+pr_body: ""

@@ -1,0 +1,5 @@
+pr: 136010
+releasenote:
+  text: |-
+    Kubectl: Fixed an issue where `kubectl run -i/-it` would miss container output written before the attach connection was established.
+pr_body: ""

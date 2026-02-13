@@ -1,0 +1,5 @@
+pr: 135611
+releasenote:
+  text: |-
+    Fixed DRA device taint eviction controller to avoid confusing intermediate status messages by delaying status updates after pod eviction until the informer cache is updated.
+pr_body: ""

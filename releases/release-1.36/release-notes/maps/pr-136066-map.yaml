@@ -1,0 +1,5 @@
+pr: 136066
+releasenote:
+  text: |-
+    Removed the `WatchFromStorageWithoutResourceVersion` feature gate in `v1.36`.
+pr_body: ""

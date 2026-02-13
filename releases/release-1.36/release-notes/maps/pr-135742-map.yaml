@@ -1,0 +1,5 @@
+pr: 135742
+releasenote:
+  text: |-
+    Kubeadm: Promoted the `NodeLocalCRISocket` feature gate to GA and locked it to enabled.
+pr_body: ""

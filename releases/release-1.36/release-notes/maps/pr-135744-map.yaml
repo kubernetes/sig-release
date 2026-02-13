@@ -1,0 +1,5 @@
+pr: 135744
+releasenote:
+  text: |-
+    Added the `appProtocol` field to `kubectl describe service` output.
+pr_body: ""

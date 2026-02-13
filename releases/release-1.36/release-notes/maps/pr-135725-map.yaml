@@ -1,0 +1,5 @@
+pr: 135725
+releasenote:
+  text: |-
+    Kubelet: Fixed admission to correctly handle DRA-backed extended resources, allowing Pods to be admitted even when these resources are not present in the node's allocatable capacity.
+pr_body: ""

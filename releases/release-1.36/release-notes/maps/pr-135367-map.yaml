@@ -1,0 +1,5 @@
+pr: 135367
+releasenote:
+  text: |-
+    Fixed a `v1.29` regression in the `apiserver_watch_events_sizes` metric to report total outgoing watch traffic again.
+pr_body: ""

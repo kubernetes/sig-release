@@ -1,0 +1,5 @@
+pr: 135807
+releasenote:
+  text: |-
+    Kubeadm: Removed the cleanup of the `--pod-infra-container-image` kubelet flag from `/var/lib/kubelet/kubeadm-flags.env` on upgrade. This cleanup was necessary when upgrading to `v1.35`.
+pr_body: ""

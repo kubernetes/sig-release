@@ -1,0 +1,5 @@
+pr: 135997
+releasenote:
+  text: |-
+    Added validation to prevent negative duration values for `imageMinimumGCAge`.
+pr_body: ""
