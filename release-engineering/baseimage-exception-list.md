@@ -41,10 +41,10 @@ Please feel free to edit this file when you find any updates. Links to detailed 
 | [etcd-empty-dir-cleanup] | [debian-base] | https://github.com/kubernetes/kubernetes/blob/master/cluster/images/etcd-empty-dir-cleanup/OWNERS | U | Requires shell to do some cleanup |
 | [fluentd-elasticsearch] | `ruby:2.7-slim-buster` | https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/fluentd-elasticsearch/OWNERS | U | Requires shell to install fluentd via ruby |
 | [ip-masq-agent] | [distroless-iptables] | https://github.com/kubernetes-sigs/ip-masq-agent/blob/master/OWNERS | U | Requires `iptables` |
-| [k8s-dns-dnsmasq-nanny] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
-| [k8s-dns-kube-dns] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
-| [k8s-dns-node-cache] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
-| [k8s-dns-sidecar] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/20190212-ephemeral-containers.md) |
+| [k8s-dns-dnsmasq-nanny] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/277-ephemeral-containers/README.md) |
+| [k8s-dns-kube-dns] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/277-ephemeral-containers/README.md) |
+| [k8s-dns-node-cache] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/277-ephemeral-containers/README.md) |
+| [k8s-dns-sidecar] | [debian-base] | https://github.com/kubernetes/dns/blob/master/OWNERS | U | Requires [container debugging tooling](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/277-ephemeral-containers/README.md) |
 | [kube-addon-manager] | [debian-base] | https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/addon-manager/OWNERS | U | Requires [shell](https://github.com/kubernetes/kubernetes/blob/master/cluster/addons/addon-manager/kube-addons.sh) |
 | [node-problem-detector] | [debian-base] | https://github.com/kubernetes/node-problem-detector/blob/master/OWNERS | U | Requires `libsystemd0` |
 

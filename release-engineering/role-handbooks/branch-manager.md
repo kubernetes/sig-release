@@ -504,7 +504,7 @@ See [this section](../handbooks/k8s-release-cut.md#next-release-branch-creation)
 
 #### Post new release branch creation tasks
 
-Run through the following tasks detailed [here](../handbooks/post-rc0-release-tasks.md) after the `rc.0` release is communicated and therefore the release branch has been created.
+Run through the following tasks detailed [here](../handbooks/post-release-branch-creation.md) after the `rc.0` release is communicated and therefore the release branch has been created.
 
 ---
 
@@ -653,7 +653,7 @@ For example, [#79044](https://github.com/kubernetes/kubernetes/pull/79044) is th
 
 There has been quite a bit of recent discussion (see: [1](https://github.com/kubernetes/community/pull/2408), [2](https://github.com/kubernetes/community/pull/1980)) around improving both the cherry pick process process and its documentation.
 
-After the official release has been published, the [Release Managers](../../release-managers.md#release-managers) will take over in handling cherry picks. In the time between [code thaw](#code-thaw) and the official release, cherry picks are the responsibility of the branch management team.
+After the official release has been published, the [Release Managers][release-managers] will take over in handling cherry picks. In the time between [code thaw](#code-thaw) and the official release, cherry picks are the responsibility of the branch management team.
 
 Consider the following when assessing the cherry-picks:
 
@@ -746,7 +746,7 @@ See the branch management process prior to v1.12 when `anago` was still used.
 [image-promotion]: https://sigs.k8s.io/promo-tools/docs/promotion-pull-requests.md
 [kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team
 [release-branch-job-creation]: https://git.k8s.io/test-infra/releng/README.md
-[release-managers]: /release-managers.md#release-managers
+[release-managers]: https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md
 [release-managers-group]: https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers
 
 # Visual Release Cut Process

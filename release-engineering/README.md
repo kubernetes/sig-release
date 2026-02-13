@@ -131,7 +131,7 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 
 ## Roles, Responsibilities, and Notes for Newcomers
 
-[This page](https://github.com/kubernetes/sig-release/blob/master/release-managers.md) provides details about the different roles in Release Engineering, along with requirements for moving up the "career ladder."
+[This page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) provides details about the different roles in Release Engineering, along with requirements for moving up the "career ladder."
 
 ### For Newcomers
 At Release Engineering meetings, we like to give newcomers a happy and warm welcome. We also give space for newcomers to introduce themselves and their motivations/interests for joining. However, if you prefer not to speak during your first meeting we'll respect that. 
@@ -143,7 +143,7 @@ As of Autumn 2020 we're developing a Buddy Program to improve our onboarding. He
 - Buddies will come from the same general time zone area and, as often as possible, share the same language.
 - Work-related conversations should take place in the Slack channel as much as possible to help other newcomers onboard.
  
-More information about the Buddy Program is available [on this page](https://github.com/kubernetes/sig-release/blob/master/release-managers.md).
+More information about the Buddy Program is available [on this page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md).
 
 ## Schedule of Recurring Work
 
