@@ -596,7 +596,7 @@ corresponding command line help (`-h`) outputs.
 | Official email notify test | ```krel announce send --tag vX.Y.Z``` |
 | Check mail arrives, list has expected commits? | manual/visual |
 | Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) by name on Slack for package building |
-| Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVRs (Name-Version-Release) |
+| Package testing (needs improvement) | Visually validate [yum repo](https://pkgs.k8s.io/core:/stable:/v1.x/rpm/repodata/) and [apt repo](https://pkgs.k8s.io/core:/stable:/v1.x/deb/Packages) have entries for the release version in package NVRs (Name-Version-Release) |
 | Official email notify | ```krel announce send --tag v1.13.3 --nomock``` |
 | Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/a/kubernetes.io/g/dev) got mail OK |
 | Completion | n/a |

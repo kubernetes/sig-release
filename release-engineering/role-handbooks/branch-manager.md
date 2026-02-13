@@ -68,23 +68,23 @@ construction.**
 
 ### Conventions
 
-In this handbook, we will make several references to Kubernetes releases, milestones, and [semantic versioning](http://semver.org/).
+In this handbook, we will make several references to Kubernetes releases, milestones, and [semantic versioning](https://semver.org/).
 
 For the purposes of this handbook, we'll assume that:
 
-- the current release in development is Kubernetes 1.18
-- the previous release is Kubernetes 1.17
-- the next release is Kubernetes 1.19
-- the release no longer in support is Kubernetes 1.14
+- the current release in development is Kubernetes 1.33
+- the previous release is Kubernetes 1.32
+- the next release is Kubernetes 1.34
+- the release no longer in support is Kubernetes 1.29
 
 To simplify certain instructions, we will make the following connections:
 
 | Text | SemVer | Reference Release |
 |---|---|---|
-| "current release", "current milestone", "in development" | `x.y` | Kubernetes 1.18 |
-| "previous release", "previous milestone" | `x.y-1` | Kubernetes 1.17 |
-| "next release", "next milestone" | `x.y+1` | Kubernetes 1.19 |
-| "release no longer in support" | `x.y-4` | Kubernetes 1.14 |
+| "current release", "current milestone", "in development" | `x.y` | Kubernetes 1.33 |
+| "previous release", "previous milestone" | `x.y-1` | Kubernetes 1.32 |
+| "next release", "next milestone" | `x.y+1` | Kubernetes 1.34 |
+| "release no longer in support" | `x.y-4` | Kubernetes 1.29 |
 
 **As an editor of this content, Branch Managers should periodically update these conventions and the examples contained within this handbook.**
 
@@ -336,7 +336,7 @@ corresponding help (`-h`) output.
 
 ### Beta Releases
 
-Before run the `official release step` please refer to the [Image Promotion documentation][image-promotion].
+Before running the `official release step` please refer to the [Image Promotion documentation][image-promotion].
 
 To stage a new beta release, simply run `krel stage --type=beta`. The same
 applies to `krel release --build-version=… --type=beta`.
@@ -345,9 +345,9 @@ applies to `krel release --build-version=… --type=beta`.
 
 Builds against a `release-x.y` branch are implicitly the next RC (release candidate). `krel` automatically finds and increments the current build number.
 
-**Note: If this is the first release (`rc.0`), there are additional tasks to complete. Please review them _COMPLETELY_ in the [Branch Creation section](#branch-creation), _before_ continuing.**
+**Note: If this is the first release (`rc.0`), there are additional tasks to complete. Please review them _COMPLETELY_ in the [Release Branch Creation section](#release-branch-creation), _before_ continuing.**
 
-Before run the `official release step` please refer to the [Image Promotion documentation][image-promotion].
+Before running the `official release step` please refer to the [Image Promotion documentation][image-promotion].
 
 To stage a new RC release, simply run `krel stage --type=rc --branch=release-x.y`. The same
 applies to `krel release --build-version=… --type=rc --branch=release-x.y`.
@@ -381,7 +381,7 @@ Otherwise we might have a mix of PRs against master, some have been merged in co
 
 ### Official Releases
 
-Before run the `official release step` please refer to the [Image Promotion documentation][image-promotion].
+Before running the `official release step` please refer to the [Image Promotion documentation][image-promotion].
 
 To stage a new official release, simply run `krel stage --type=official
 --branch=release-x.y`. The same applies to `krel release --build-version=…
@@ -518,7 +518,7 @@ As Branch Manager, coordinate with the Release Lead on checking the exact config
 
 #### Tide
 
-Tide automates merges and is configured via a [config.yaml][config.yaml] file. Tide identifies PRs that are mergeable using GitHub queries that correspond to the configuration. Here is an example of what the query config for `kubernetes/kubernetes` looks like without additional constraints related to the release cycle:
+Tide automates merges and is configured via a [config.yaml](https://github.com/kubernetes/test-infra/blob/master/config/prow/config.yaml) file. Tide identifies PRs that are mergeable using GitHub queries that correspond to the configuration. Here is an example of what the query config for `kubernetes/kubernetes` looks like without additional constraints related to the release cycle:
 
 ```yaml
   - repos:
@@ -674,7 +674,7 @@ The [publishing-bot](https://github.com/kubernetes/publishing-bot) is responsibl
 
 The bot also syncs the Kubernetes version tags to the published repos, prefixed with `kubernetes-`. For example, if you check out the `kubernetes-1.16.0` tag in client-go, the code you get is exactly the same as if you check out the `v1.16.0` tag in Kubernetes, and change the directory to `staging/src/k8s.io/client-go`.
 
-[client-go](https://github.com/kubernetes/client-go) follows [semver](http://semver.org/) and has its own release process. This release process and the publishing-bot are maintained by SIG API Machinery. In case of any questions related to the published staging repos, please ask someone listed in the following [OWNERS](https://git.k8s.io/publishing-bot/OWNERS) file.
+[client-go](https://github.com/kubernetes/client-go) follows [semver](https://semver.org/) and has its own release process. This release process and the publishing-bot are maintained by SIG API Machinery. In case of any questions related to the published staging repos, please ask someone listed in the following [OWNERS](https://git.k8s.io/publishing-bot/OWNERS) file.
 
 The bot runs every four hours, so it might take sometime for a new tag to appear on a published repository.
 
