@@ -92,7 +92,7 @@ https://github.com/kubernetes/test-infra/blob/master/config/jobs/image-pushing/k
 
 - promote the image from staging to production, for it to be an official image
 - create PR in kubernetes/k8s.io
-  - Update the docker image digest and its version tag @ https://github.com/kubernetes/k8s.io/blob/main/k8s.gcr.io/images/k8s-staging-build-image/images.yaml
+  - Update the docker image digest and its version tag @ https://github.com/kubernetes/k8s.io/blob/main/registry.k8s.io/images/k8s-staging-build-image/images.yaml
   - indicate the image, a link to the staging run, signature ( e.g. "Signed off by : Stephen Augustus saugustus@example.com"), CC @kubernetes/release-engineering & relevant reviewers
   - the structure of the file is structured by the digests' SHAs
 
@@ -168,4 +168,4 @@ Update release-1.x branches to build/release using go 1.N *after* all of these c
    In go1.21+, the go runtime is expected to match previous runtime behavior by default
    if we leave the go version indicated in `go.mod` files in release branches unchanged.
 
-[release-managers]: /release-managers.md
+[release-managers]: https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md

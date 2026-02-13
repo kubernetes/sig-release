@@ -550,7 +550,7 @@ The release step will also be extended, but not substantially longer in time.
 
 #### Post branch creation release tasks
 
-See [here](post-rc0-release-tasks.md) for the complete list of post branch creation release tasks.
+See [here](post-release-branch-creation.md) for the complete list of post branch creation release tasks.
 
 Such list resides in a different document to mainain this one in a bite-sized SRE style format.
 

@@ -69,7 +69,7 @@ access to multiple build and release tools:
 
 * Add your name and contact info, and if applicable a new section
   for the current release, to the [Patch Releases landing
-  page](/releases/patch-release.md) so the community knows you're the
+  page](https://github.com/kubernetes/website/blob/main/content/en/releases/patch-releases.md) so the community knows you're the
   point of contact.  If your work is specific to one particular
   release, add your name to that release's release team in the patch
   release manager row, for example [here for
@@ -92,9 +92,9 @@ access to multiple build and release tools:
   much of the tooling and process used by the branch manager pre-release
   relates to the post-release duties of Patch Release management.
   Pay close attention to the
-  [Pre-requirements](/release-team/role-handbooks/branch-manager#pre-requirements),
-  [Safety Check](/release-team/role-handbooks/branch-manager#safety-check), and
-  [Build and Release](/release-team/role-handbooks/branch-manager#build-and-release)
+  [Pre-requirements](/release-engineering/role-handbooks/branch-manager.md#prerequisites),
+  [Safety Check](/release-engineering/role-handbooks/branch-manager.md#releases-management), and
+  [Build and Release](/release-engineering/role-handbooks/branch-manager.md#releases-management)
   sections.  This outlines current requirements for running `krel stage/release` to do
   builds.
 
@@ -471,7 +471,7 @@ When you have a plan for the next patch release, send an announcement
 * *BCC*: [kubernetes-dev-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-dev-announce)
 
 several working days in advance, including a release notes preview.  Also
-update the [posted schedule](https://git.k8s.io/sig-release/releases/patch-releases.md).
+update the [posted schedule](https://git.k8s.io/website/content/en/releases/patch-releases.md).
 
 You generate the preview with the [relnotes](https://git.k8s.io/release/relnotes)
 script, run against a local checkout of the release branch, and querying
@@ -538,7 +538,7 @@ kubernetes-dev and kubernetes-announce mailing lists.
 After the release cut, reapply the `cherry-pick-approved` label to any PRs that
 had it before the freeze, and go through the backlog of new cherry-picks.
 
-Update the [posted schedule](https://git.k8s.io/sig-release/releases/patch-releases.md)
+Update the [posted schedule](https://git.k8s.io/website/content/en/releases/patch-releases.md)
 to reflect the actual release date and any initial info on the next release's timing.
 
 ### Hotfix release
@@ -586,19 +586,19 @@ corresponding command line help (`-h`) outputs.
 | Configure branch | n/a |
 | Mock build staging | `krel stage --type=official --branch=release-x.y` |
 | Mock build staging success? | Visually confirm yes |
-| Mock release | `krel release --type=official --branch=release.x.y --build-verison=…` (get the build-version from the Google Cloud console output of `krel stage`) |
+| Mock release | `krel release --type=official --branch=release-x.y --build-version=…` (get the build-version from the Google Cloud console output of `krel stage`) |
 | Mock release success? | Visually confirm yes |
 | Mock email notify test | ```krel announce send --tag v1.13.3-beta.1``` |
 | Check mail arrives, list has expected commits? | manual/visual |
 | Official build staging | `krel stage --nomock --type=official --branch=release-x.y` |
 | Official build staging success? | Visually confirm yes |
-| Official release | `krel release --nomock --type=official --branch=release.x.y --build-verison=…` |
+| Official release | `krel release --nomock --type=official --branch=release-x.y --build-version=…` |
 | Official email notify test | ```krel announce send --tag vX.Y.Z``` |
 | Check mail arrives, list has expected commits? | manual/visual |
-| Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://git.k8s.io/sig-release/release-managers.md#build-admins) by name on Slack for package building |
+| Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) by name on Slack for package building |
 | Package testing (needs improvement) | Visually validate [yum repo](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml) and [apt repo](https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages) have entries for "1.13.3" in package NVRs (Name-Version-Release) |
 | Official email notify | ```krel announce send --tag v1.13.3 --nomock``` |
 | Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/a/kubernetes.io/g/dev) got mail OK |
 | Completion | n/a |
 
-[release-managers]: /release-managers.md#release-managers
+[release-managers]: https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md
