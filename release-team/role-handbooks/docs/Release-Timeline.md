@@ -36,11 +36,11 @@
       - [Style Guide Checklist (High to Low Level)](#style-guide-checklist-high-to-low-level)
     - [Nominate a Docs Lead for the Next Release](#nominate-a-docs-lead-for-the-next-release)
   - [Late-Middle Steps (Weeks 7-8) - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
-  - [Late Steps (Weeks 9-11) - Prep for the release](#late-steps-weeks-9-11---prep-for-the-release)
-    - [Touch base with SIG Docs](#touch-base-with-sig-docs)
-    - [Touch base with SIG Cluster Lifecycle (kubeadm)](#touch-base-with-sig-cluster-lifecycle-kubeadm)
-    - [Clean up and edit the final Release Notes](#clean-up-and-edit-the-final-release-notes)
-    - [Curate the External Dependencies section](#curate-the-external-dependencies-section)
+  - [Late Steps (Weeks 9-11) - Prep for the rRelease](#late-steps-weeks-9-11---prep-for-the-rrelease)
+    - [Coordinate with SIG Docs for Release Day Support](#coordinate-with-sig-docs-for-release-day-support)
+    - [Verify SIG Cluster Lifecycle (kubeadm) Documentation](#verify-sig-cluster-lifecycle-kubeadm-documentation)
+    - [⚠️ Final Release Notes Preparation (CRITICAL TASK)](#️-final-release-notes-preparation-critical-task)
+    - [Curate the External Dependencies Section](#curate-the-external-dependencies-section)
     - [Update Releases Page (the week before the release)](#update-releases-page-the-week-before-the-release)
   - [Release Week (Week 12)](#release-week-week-12)
     - [Update the site configuration files for previous releases](#update-the-site-configuration-files-for-previous-releases)
@@ -654,7 +654,7 @@ Be congnizant of the status of the release blog post as merging and publishing t
 
 ---
 
-### ⚠️ Final Release Notes Review and Cleanup (CRITICAL TASK)
+### ⚠️ Final Release Notes Preparation (CRITICAL TASK)
 
 > [!Important]
 > This is a **Docs Lead responsibility** and a **time-intensive task**. Start this process as early as possible (after last Release Note PR is merged), as it can take considerable time depending on the number of release note PRs throughout the cycle.
@@ -667,11 +667,11 @@ Be congnizant of the status of the release blog post as merging and publishing t
    ```bash
    # Fork kubernetes/sig-release repo (if not already done)
    # Clone your fork
-   git clone https://github.com/[YOUR-USERNAME]/sig-release.git
+   git clone https://github.com/${USERNAME}/sig-release.git
    cd sig-release
    
    # Create a new branch for final release notes review
-   git checkout -b [YOUR-USERNAME]/v[future-release]-final-release-notes-review
+   git checkout -b ${USERNAME}/v[future-release]-final-release-notes-review
    ```
 
 2. **Review and Edit Release Notes Files**
@@ -685,7 +685,7 @@ Be congnizant of the status of the release blog post as merging and publishing t
    ```bash
    git add releases/release-[future-release]/release-notes/
    git commit -m "Final review and cleanup of v[future-release] release notes"
-   git push origin [YOUR-USERNAME]/v[future-release]-final-release-notes-review
+   git push origin ${USERNAME}/v[future-release]-final-release-notes-review
    ```
 
 4. **Open PR for Peer Review**
