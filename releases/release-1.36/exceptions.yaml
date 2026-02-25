@@ -1,0 +1,42 @@
+# Exception requests in v1.36
+# Google Group: https://groups.google.com/g/kubernetes-sig-release
+# Release Team Lead: Ryota Sawada ([@rytswd](https://github.com/rytswd) )
+
+# Enhancements Freeze Exceptions requested in v1.36
+
+enhancementFreeze:
+- name: "Kubelet-in-UserNS (aka Rootless mode)"
+  issue: 2033
+  date_requested: 2026-02-12
+  date_reviewed: 2026-02-18
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/yjLRh5-uYfU"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5694"
+  status: "rejected"
+
+- name: "EvictionRequest API"
+  issue: 4563
+  date_requested: 2026-02-12
+  date_reviewed: 2026-02-13
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/R9UKnQHgHh0"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/4565"
+  status: "approved"
+
+- name: "Pod-Level Checkpoint/Restore"
+  issue: 5823
+  date_requested: 2026-02-12
+  date_reviewed: 2026-02-14
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/R96-l6PIsxc"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5851"
+  status: "approved"
+
+- name: "Memory Manager Hugepages Availability Verification"
+  issue: 5759
+  date_requested: 2026-02-17
+  date_reviewed: 2026-02-18
+  thread: "https://groups.google.com/g/kubernetes-sig-release/c/PzYHCYE5cyA"
+  pull_requests:
+    - "https://github.com/kubernetes/enhancements/pull/5753"
+  status: "rejected"
