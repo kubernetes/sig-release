@@ -206,4 +206,3 @@ that any final cherry-pick content is merged ahead of that last release.
   - Curation of the [base images exception list](https://github.com/kubernetes/sig-release/blob/master/release-engineering/baseimage-exception-list.md) (most of this list is complete; more info [here](https://github.com/kubernetes/enhancements/issues/1729)).
   - Maintaining instructions on how to consume all above official artifacts, plus variations for how 
 consumers can test pre-release Alpha/Beta/RC artifacts
-  - push-build.sh maintenance, until it goes away
