@@ -183,6 +183,42 @@ _Note:_ SIG Docs prefers and welcomes a status of yellow or red on anything that
 
 [ ] On the day of any deadline, are there any outstanding items or PRs?
 
+
+#### Weekly shadow assignments (template)
+
+Post this in the private Docs team Slack DM group at the beginning of each each week so everyone knows the owner for each task. A sample template is give below for reference. Tasks vary every week, so feel free to include whatever tasks fits the bill for that week. Refer to the Responsibilities spreadsheet to know who is the assigee/reviewer for the week.
+
+```
+Hey folks, welcome to Week <WEEK NUMBER>!:kubernetes-intensifies:
+
+The tasks for this week, along with the assigned owners, are as follows
+-----------------------------------------------------------------------------------
+Release Team Updates (Meeting Link)
+<DATE> (<DAY>)
+APAC Meeting (<TIME> UTC): @<handle>
+EMEA Meeting (<TIME> UTC): @<handle>
+
+-----------------------------------------------------------------------------------
+Weekly Branch Sync PR:
+<DATE> (<DAY>)
+Assignee: @<handle>
+
+-----------------------------------------------------------------------------------
+BURNDOWN Meeting
+<DATE> (<DAY>)
+APAC (<TIME> UTC): @<handle>
+EMEA (<TIME> UTC): @<handle>
+<DATE> (<DAY>)
+APAC (<TIME> UTC): @<handle>
+EMEA (<TIME> UTC): @<handle>
+
+-----------------------------------------------------------------------------------
+v<MAJOR>.<MINOR>.<PATCH>-rc.<N> release notes
+<DATE> (<DAY>)
+Assignee: @<handle>
+Reviewer: @<handle>
+```
+
 ### Read up on the release team
 
 Read this to learn more about the entire [release team and process](https://github.com/kubernetes/sig-release/tree/master/release-team)
