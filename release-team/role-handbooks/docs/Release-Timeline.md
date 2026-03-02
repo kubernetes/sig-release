@@ -36,7 +36,7 @@
       - [Style Guide Checklist (High to Low Level)](#style-guide-checklist-high-to-low-level)
     - [Nominate a Docs Lead for the Next Release](#nominate-a-docs-lead-for-the-next-release)
   - [Late-Middle Steps (Weeks 7-8) - Sync with Comms team on the release blog post](#late-middle-steps-weeks-7-8---sync-with-comms-team-on-the-release-blog-post)
-  - [Late Steps (Weeks 9-11) - Prep for the rRelease](#late-steps-weeks-9-11---prep-for-the-rrelease)
+  - [Late Steps (Weeks 9-11) - Prep for the Release](#late-steps-weeks-9-11---prep-for-the-release)
     - [Coordinate with SIG Docs for Release Day Support](#coordinate-with-sig-docs-for-release-day-support)
     - [Verify SIG Cluster Lifecycle (kubeadm) Documentation](#verify-sig-cluster-lifecycle-kubeadm-documentation)
     - [⚠️ Final Release Notes Preparation (CRITICAL TASK)](#️-final-release-notes-preparation-critical-task)
