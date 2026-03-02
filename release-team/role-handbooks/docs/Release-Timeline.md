@@ -624,7 +624,7 @@ If unsure, send a message to their [Slack](https://kubernetes.slack.com/messages
 
 Be congnizant of the status of the release blog post as merging and publishing the release blog post is a significant step on release day e.g., [1.21 release blog](https://github.com/kubernetes/website/pull/27233).
 
-## Late Steps (Weeks 9-11) - Prep for the rRelease
+## Late Steps (Weeks 9-11) - Prep for the Release
 
 **Time Required:** ~4-6 hours total
 
