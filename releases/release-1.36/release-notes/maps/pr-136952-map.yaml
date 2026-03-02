@@ -1,0 +1,5 @@
+pr: 136952
+pr_body: ""
+releasenote:
+  text: Added `kubelet_metrics_provider` metric to help users identify where kubelet's
+    metrics are coming from.

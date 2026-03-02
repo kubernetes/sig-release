@@ -1,0 +1,5 @@
+pr: 136588
+pr_body: ""
+releasenote:
+  text: Improved `DRA scheduling` performance by splitting ResourceSlice entries into
+    shared and onNode categories, reducing Filter stage latency by ~50% in large clusters.

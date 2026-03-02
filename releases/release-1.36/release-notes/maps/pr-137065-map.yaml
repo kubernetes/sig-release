@@ -1,0 +1,6 @@
+pr: 137065
+pr_body: ""
+releasenote:
+  text: Added `apiserver_peer_proxy_errors_total` and `apiserver_peer_discovery_sync_errors_total`
+    alpha metrics to apiserver to track errors encountered in peer proxying and peer
+    discovery.

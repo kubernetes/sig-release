@@ -1,0 +1,7 @@
+pr: 137084
+pr_body: ""
+releasenote:
+  text: Removed the temporary build-tagged `ProtoMessage()` marker method implementations
+    from Kubernetes REST API types in `k8s.io/api`, which had incorrectly identified
+    them as standard `v1` proto messages. Protobuf serialization of Kubernetes API types
+    should use [k8s.io/apimachinery/pkg/runtime/serializer/protobuf](https://pkg.go.dev/k8s.io/apimachinery/pkg/runtime/serializer/protobuf).

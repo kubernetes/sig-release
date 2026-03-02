@@ -1,0 +1,5 @@
+pr: 136039
+pr_body: ""
+releasenote:
+  text: Promoted the `MutatingAdmissionPolicy` to GA (v1) in Kubernetes `1.36`. The
+    feature is now enabled by default.

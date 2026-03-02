@@ -1,0 +1,5 @@
+pr: 136411
+pr_body: ""
+releasenote:
+  text: Fixed `kubectl logs -f` to wait for containers to start instead of failing
+    immediately when pods are in ContainerCreating or PodInitializing states.

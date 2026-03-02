@@ -1,0 +1,5 @@
+pr: 134044
+pr_body: ""
+releasenote:
+  text: Changed deprecated `sets.String` with `sets.Set[string]` in apiserver admission
+    subsystem. This is a **breaking change** for consumers of the `NewLifecycle` function.

@@ -1,0 +1,5 @@
+pr: 135683
+pr_body: ""
+releasenote:
+  text: Fixed `kubectl describe` to correctly recognize uppercase acronyms as a single
+    element when displaying Custom Resource field names.

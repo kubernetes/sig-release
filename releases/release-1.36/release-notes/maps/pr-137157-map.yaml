@@ -1,0 +1,6 @@
+pr: 137157
+pr_body: ""
+releasenote:
+  text: Fixed an issue in `kube-apiserver`, allowing it to recover from an established
+    connection to an incorrect server that never returns the expected response during
+    APIService availability checks.

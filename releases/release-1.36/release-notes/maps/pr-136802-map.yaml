@@ -1,0 +1,6 @@
+pr: 136802
+pr_body: ""
+releasenote:
+  text: Fixed a data race in the `PopulateRefs` function in `k8s.io/apiserver/pkg/cel/openapi/resolver`
+    where concurrent goroutines could simultaneously modify shared pointer fields
+    from a shallow-copied schema struct.

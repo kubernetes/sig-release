@@ -1,0 +1,5 @@
+pr: 136400
+pr_body: ""
+releasenote:
+  text: Disabled `git-repo` volume plugin by default, with no option to turn it back
+    on.

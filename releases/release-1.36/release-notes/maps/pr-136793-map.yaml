@@ -1,0 +1,5 @@
+pr: 136793
+pr_body: ""
+releasenote:
+  text: Added stability-based lifecycle for declarative validation (Alpha/Beta/Stable).
+    Scheduling Workload `v1alpha1` now uses explicit declarative enforcement.
