@@ -1,8 +1,8 @@
 # Roadmap and Vision
 
-## SIG Release Roadmap for 2025 and beyond
+## SIG Release Roadmap for 2026 and beyond
 
-This document contains the SIG Release Roadmap for 2025 and beyond. More
+This document contains the SIG Release Roadmap for 2026 and beyond. More
 detailed information can be found on the corresponding project boards.
 
 ### Primary Focus
@@ -18,14 +18,6 @@ state.
 
 ### Work in progress (WIP)
 
-1. **Rewrite artifact promoter**
-
-   Outcome: Robust and fast artifact promotion tooling.
-
-   Enhancement: _none_
-
-   Project board: https://github.com/orgs/kubernetes/projects/171
-
 1. **Rework supported platforms**
 
    Outcome: Which platforms Kubernetes supports reflected in documentation and tooling.
@@ -35,8 +27,11 @@ state.
    Project board: _none_
 
 1. **Improve SIG Release contributor ladder & sustainability**
+
    Outcome: Up-to-date documentation and project boards for new and long term contributors.
+
    Enhancement: _none_
+
    Project board: _none_
 
 ### Known Risks
@@ -135,6 +130,14 @@ started or became stale.
    simplified automation.
 
 ### Done Deliverables
+
+1. **Rewrite artifact promoter**
+
+   Outcome: Robust and fast artifact promotion tooling.
+
+   Enhancement: _none_
+
+   Project board: https://github.com/orgs/kubernetes/projects/171
 
 1. **Migrate away from GCS bucket: gs://kubernetes-release**
 
