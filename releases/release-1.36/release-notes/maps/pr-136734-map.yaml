@@ -1,0 +1,5 @@
+pr: 136734
+pr_body: ""
+releasenote:
+  text: Fixed `DRA manager` not initializing sharedID from cache when DRAConsumableCapacity
+    is enabled.

@@ -1,0 +1,7 @@
+pr: 136729
+pr_body: ""
+releasenote:
+  text: Added `spec.stubPKCS10Request` to the Pod Certificates beta API to improve
+    compatibility with existing certificate authority implementations that expect
+    a PKCS#10 certificate signing request. `spec.pkixPublicKey` and `spec.proofOfPossession`
+    were deprecated in favor of this field.

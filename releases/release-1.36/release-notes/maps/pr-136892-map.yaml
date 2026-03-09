@@ -1,0 +1,4 @@
+pr: 136892
+pr_body: ""
+releasenote:
+  text: Updated kustomize dependency to `v5.8.1`.

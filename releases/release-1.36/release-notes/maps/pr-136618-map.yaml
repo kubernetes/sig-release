@@ -1,0 +1,5 @@
+pr: 136618
+pr_body: ""
+releasenote:
+  text: Added a `PodGroup` scheduling cycle to `kube-scheduler`'s main scheduling
+    loop, enabling all pods within a `PodGroup` to be scheduled within a single cycle.

@@ -1,0 +1,5 @@
+pr: 137019
+pr_body: ""
+releasenote:
+  text: Added a `show-secret` flag to the diff command to explicitly allow secret
+    values to be displayed during the diff operation.

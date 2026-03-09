@@ -1,0 +1,10 @@
+pr: 137210
+pr_body: ""
+releasenote:
+  text: "Kube-controller-manager: The job controller now defers syncing a Job object
+    when the controller has not yet observed job or pod writes from the last time
+    the object was synced. This prevents spurious creation of duplicate pods for jobs
+    when the controller's cache is stale. When a sync is deferred for this reason,
+    a `job_controller_stale_sync_skips_total` metric is incremented and a message
+    is logged by the job controller. This behavior can be temporarily disabled by
+    setting the `StaleControllerConsistencyJob` feature gate to false."

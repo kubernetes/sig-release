@@ -1,0 +1,6 @@
+pr: 136937
+pr_body: ""
+releasenote:
+  text: Fixed unsupported `Table` object detection to cover all List and Watch operations,
+    preventing the reflector from incorrectly processing resources returned in `Table`
+    format.

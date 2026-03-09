@@ -1,0 +1,6 @@
+pr: 137008
+pr_body: ""
+releasenote:
+  text: Fixed `PodCertificateRequest` OwnerReference using incorrect apiVersion "core/v1"
+    instead of "v1", which prevented garbage collection of `PodCertificateRequests`
+    when their owning Pod was deleted.

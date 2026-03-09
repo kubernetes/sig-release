@@ -1,0 +1,4 @@
+pr: 135335
+pr_body: ""
+releasenote:
+  text: Removed the generally available feature gate `HonorPVReclaimPolicy`, which was locked and enabled since `v1.33`.

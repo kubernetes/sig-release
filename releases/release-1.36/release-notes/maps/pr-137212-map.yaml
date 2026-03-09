@@ -1,0 +1,5 @@
+pr: 137212
+pr_body: ""
+releasenote:
+  text: Added the ability for the `ReplicaSet` controller to read its own writes, preventing
+    spurious reconciliation loops while the cache catches up to recent updates.
