@@ -1,0 +1,22 @@
+pr: 136042
+releasenote:
+  text: |-
+    Promoted `NodeDeclaredFeatures` to beta.
+  sigs:
+  - api-machinery
+  - apps
+  - cluster-lifecycle
+  - instrumentation
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - code-generation
+pr_body: ""

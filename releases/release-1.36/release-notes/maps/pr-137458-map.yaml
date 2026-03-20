@@ -1,0 +1,13 @@
+pr: 137458
+releasenote:
+  text: |-
+    Disallowed setting a resize restart policy of `RestartContainer` on non-sidecar initContainers, as the resize of such containers has never been supported.
+  sigs:
+  - apps
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

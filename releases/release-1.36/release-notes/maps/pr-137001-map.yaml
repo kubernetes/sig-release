@@ -1,0 +1,12 @@
+pr: 137001
+releasenote:
+  text: |-
+    Fixed redundant SSH command executions in the `etcd` failure e2e test.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

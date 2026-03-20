@@ -1,0 +1,14 @@
+pr: 137453
+releasenote:
+  text: |-
+    Added the metric `terminated_containers_total` to track the number of failed or succeeded containers, broken down by exit code.
+  sigs:
+  - instrumentation
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

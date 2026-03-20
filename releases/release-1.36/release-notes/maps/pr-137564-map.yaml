@@ -1,0 +1,13 @@
+pr: 137564
+releasenote:
+  text: |-
+    Promoted `SnapshotMetadataService` to `v1beta1`. Removed support for the `v1alpha1` version.
+  sigs:
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - test
+pr_body: ""

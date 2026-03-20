@@ -1,0 +1,10 @@
+pr: 136585
+releasenote:
+  text: |-
+    Improved a misleading error message when updating `batch.Job`'s `status.startTime`. The error for unsuspended Jobs correctly indicates the field is immutable once set, instead of incorrectly referring to the action as a "removal".
+  sigs:
+  - apps
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

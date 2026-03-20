@@ -1,0 +1,12 @@
+pr: 137566
+releasenote:
+  text: |-
+    Improved stability by sorting containers by create time and ID in `kubeGenericRuntimeManager.GetPods()` and `GetPod()`.
+  sigs:
+  - node
+  kinds:
+  - cleanup
+  - flake
+  areas:
+  - kubelet
+pr_body: ""

@@ -1,0 +1,11 @@
+pr: 137147
+releasenote:
+  text: |-
+    Fixed `kube-apiserver` startup failure during upgrade when `MultiCIDRServiceAllocator` is enabled and the cluster has a large number of namespaces. The IP address repair controller retries on Forbidden errors from admission plugins that are not yet ready.
+  sigs:
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

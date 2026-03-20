@@ -1,0 +1,15 @@
+pr: 137167
+releasenote:
+  text: |-
+    DRA `DeviceTaintRules`: the `TimeAdded` field of the taint is now automatically updated when changing the effect.
+  sigs:
+  - api-machinery
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

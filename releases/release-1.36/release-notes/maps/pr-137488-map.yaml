@@ -1,0 +1,15 @@
+pr: 137488
+releasenote:
+  text: |-
+    Added the `PodGroupPodsCount` scheduler plugin to support workload-aware scheduling by prioritizing placements with higher Pod counts within a group.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+  - workload-aware
+pr_body: ""

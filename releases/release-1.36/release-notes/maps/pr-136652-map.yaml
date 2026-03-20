@@ -1,0 +1,12 @@
+pr: 136652
+releasenote:
+  text: |-
+    Extended `NodeResourcesFit` to implement the PlacementScore extension point. The usage of the PlacementScore extension point is guarded by the `TopologyAwareWorkloadScheduling` feature gate.
+  sigs:
+  - scheduling
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - code-generation
+pr_body: ""

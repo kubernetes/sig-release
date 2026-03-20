@@ -1,0 +1,22 @@
+pr: 135048
+releasenote:
+  text: |-
+    Promoted the DRA extended resource feature to beta in `v1.36`.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - network
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - code-generation
+pr_body: ""

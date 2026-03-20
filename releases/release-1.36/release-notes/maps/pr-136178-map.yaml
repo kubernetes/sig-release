@@ -1,0 +1,13 @@
+pr: 136178
+releasenote:
+  text: |-
+    Promoted HPA metrics `reconciliations_total`, `reconciliation_duration_seconds`, `metric_computation_total`, and `metric_computation_duration_seconds` to beta.
+  sigs:
+  - apps
+  - autoscaling
+  - instrumentation
+  kinds:
+  - cleanup
+  areas:
+  - stable-metrics
+pr_body: ""

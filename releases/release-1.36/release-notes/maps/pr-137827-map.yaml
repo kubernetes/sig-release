@@ -1,0 +1,13 @@
+pr: 137827
+releasenote:
+  text: |-
+    Removed the cri-client helper method `NewLogOptions`; `LogOptions` must be constructed directly. This eliminates the unwanted dependency from cri-client to apimachinery.
+  sigs:
+  - node
+  - release
+  kinds:
+  - cleanup
+  areas:
+  - kubelet
+  - release-eng
+pr_body: ""

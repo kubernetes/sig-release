@@ -1,0 +1,26 @@
+pr: 137032
+releasenote:
+  text: |-
+    Integrated Workload and PodGroup APIs with the Job controllers to support gang-scheduling.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cli
+  - cloud-provider
+  - etcd
+  - instrumentation
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - kubectl
+  - provider/gcp
+  - code-generation
+  - workload-aware
+pr_body: ""

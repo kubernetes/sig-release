@@ -1,0 +1,15 @@
+pr: 135297
+releasenote:
+  text: |-
+    Removed CustomResourceDefinition stored versions from status upon StorageVersionMigrator migration.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+pr_body: ""

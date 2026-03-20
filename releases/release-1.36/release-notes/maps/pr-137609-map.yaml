@@ -1,0 +1,14 @@
+pr: 137609
+releasenote:
+  text: |-
+    Promoted the `ConstrainedImpersonation` feature to beta, enabled by default.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+pr_body: ""

@@ -1,0 +1,17 @@
+pr: 136711
+releasenote:
+  text: |-
+    Graduated the `ImageVolume` feature to stable.
+  sigs:
+  - apps
+  - architecture
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - conformance
+pr_body: ""

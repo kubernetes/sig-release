@@ -1,0 +1,11 @@
+pr: 137781
+releasenote:
+  text: |-
+    Enabled Prometheus native histogram support in `kube-proxy` when the feature gate is enabled. Histograms are exposed in both classic and native formats using exponential bucket configuration (factor=1.1, max buckets=160).
+  sigs:
+  - network
+  kinds:
+  - feature
+  areas:
+  - kube-proxy
+pr_body: ""

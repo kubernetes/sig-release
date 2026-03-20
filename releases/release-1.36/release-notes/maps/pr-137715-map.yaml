@@ -1,0 +1,13 @@
+pr: 137715
+releasenote:
+  text: |-
+    Writes to the ServiceCIDR main resource ignore status field changes in the request, consistent with all other Kubernetes APIs. The `ServiceCIDRStatusFieldWiping` feature gate can be disabled to restore the previous behavior; it will be locked to enabled in a future release.
+  sigs:
+  - api-machinery
+  - network
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

@@ -1,0 +1,13 @@
+pr: 136368
+releasenote:
+  text: |-
+    Promoted several EndpointSlice metrics from alpha to beta stability.
+  sigs:
+  - instrumentation
+  - network
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - stable-metrics
+pr_body: ""

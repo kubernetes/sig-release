@@ -1,0 +1,12 @@
+pr: 131744
+releasenote:
+  text: |-
+    Updated `kubectl describe node` to list aggregated ResourceSlices when the ResourceSlice API is present, detailing slice name, driver, and pool.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas:
+  - kubectl
+  - dependency
+pr_body: ""

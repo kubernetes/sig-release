@@ -1,0 +1,17 @@
+pr: 136725
+releasenote:
+  text: |-
+    Added the alpha `DRANativeResources` feature, which includes a new `ResourceSlice.Spec.Devices[*].NativeResourceMappings` field for DRA drivers to declare how device resources map to native Kubernetes resources (e.g., cpu, memory), changes in the DynamicResources plugin and the scheduler framework to correctly account for native resources requested through resource claims, and `kubelet` admission handler validation for native resource DRA requests along with standard requests in the Pod spec.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

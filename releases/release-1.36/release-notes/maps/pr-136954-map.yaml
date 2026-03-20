@@ -1,0 +1,11 @@
+pr: 136954
+releasenote:
+  text: |-
+    Server images now use `staging/src/k8s.io/component-base/logs/kube-log-runner` instead of `go-runner`; full compatibility is maintained (including the same `/go-runner` executable path). In the future Kubernetes will use base-images without go-runner.
+  sigs:
+  - instrumentation
+  - release
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

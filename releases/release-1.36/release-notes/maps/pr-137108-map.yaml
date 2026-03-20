@@ -1,0 +1,22 @@
+pr: 137108
+releasenote:
+  text: |-
+    Fixed a few log calls that did not properly format their parameters.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cluster-lifecycle
+  - network
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - dependency
+pr_body: ""

@@ -1,0 +1,13 @@
+pr: 136759
+releasenote:
+  text: |-
+    Removed `GuaranteedQoSPodCPUResize` from node declared features.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+pr_body: ""

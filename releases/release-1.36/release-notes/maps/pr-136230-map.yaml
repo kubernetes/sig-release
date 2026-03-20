@@ -1,0 +1,13 @@
+pr: 136230
+releasenote:
+  text: |-
+    Promoted mutable CSI node allocatable count to GA. The `MutableCSINodeAllocatableCount` feature gate is locked to enabled.
+  sigs:
+  - api-machinery
+  - storage
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - code-generation
+pr_body: ""

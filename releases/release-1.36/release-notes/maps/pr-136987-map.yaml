@@ -1,0 +1,15 @@
+pr: 136987
+releasenote:
+  text: |-
+    Added new RuntimeService streaming RPCs (`StreamPodSandboxes`, `StreamContainers`, `StreamContainerStats`, `StreamPodSandboxStats`, `StreamPodSandboxMetrics`) and new ImageService streaming RPC (`StreamImages`).
+  sigs:
+  - cluster-lifecycle
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kubeadm
+pr_body: ""

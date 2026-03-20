@@ -1,0 +1,10 @@
+pr: 137856
+releasenote:
+  text: |-
+    Fixed a bug where users could not update HPAv2 resources that use object metrics with `averageValue` via the v1 HPA API.
+  sigs:
+  - autoscaling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

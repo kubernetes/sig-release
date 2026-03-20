@@ -1,0 +1,13 @@
+pr: 137909
+releasenote:
+  text: |-
+    The `PLEGOnDemandRelist` feature flag is kept at beta level, but switched off by default.
+  sigs:
+  - node
+  kinds:
+  - cleanup
+  - flake
+  - failing-test
+  areas:
+  - kubelet
+pr_body: ""

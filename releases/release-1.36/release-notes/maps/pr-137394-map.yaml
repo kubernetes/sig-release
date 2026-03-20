@@ -1,0 +1,11 @@
+pr: 137394
+releasenote:
+  text: |-
+    Fixed `kubectl describe node` to correctly display resource requests and limits for Pods using Pod-level resources.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl
+pr_body: ""

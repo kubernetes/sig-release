@@ -1,0 +1,14 @@
+pr: 134660
+releasenote:
+  text: |-
+    The `kubelet` sets the `PodReadyToStartContainers` condition immediately after sandbox creation rather than after image pull, reducing the time to condition True.
+  sigs:
+  - apps
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+pr_body: ""

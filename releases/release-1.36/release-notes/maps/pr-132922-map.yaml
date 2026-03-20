@@ -1,0 +1,29 @@
+pr: 132922
+releasenote:
+  text: |-
+    The `k8s.io/client-go/transport` package automatically reloads certificate authority roots from disk when they are supplied via a file path. This functionality is enabled by default and can be disabled via the `ClientsAllowCARotation` feature gate.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - instrumentation
+  - network
+  - node
+  - release
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - release-eng
+  - code-generation
+  - dependency
+pr_body: ""

@@ -1,0 +1,11 @@
+pr: 136964
+releasenote:
+  text: |-
+    Fixed the `lastTerminationStatus` to match the `RestartAllContainers` action if the container was restarted this way.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

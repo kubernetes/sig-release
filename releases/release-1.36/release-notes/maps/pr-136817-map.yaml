@@ -1,0 +1,13 @@
+pr: 136817
+releasenote:
+  text: |-
+    The garbage collector correctly handles objects deleted externally, preventing spurious error logs.
+  sigs:
+  - api-machinery
+  - apps
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

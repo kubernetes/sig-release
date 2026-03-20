@@ -1,0 +1,14 @@
+pr: 137419
+releasenote:
+  text: |-
+    Added alpha metrics tracking the resource version the cache layer of an informer is at.
+  sigs:
+  - api-machinery
+  - architecture
+  - instrumentation
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

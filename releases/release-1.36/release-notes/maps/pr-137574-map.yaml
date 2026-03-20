@@ -1,0 +1,12 @@
+pr: 137574
+releasenote:
+  text: |-
+    Reverted the addition of the `image_id` field to the CRI API `PullImageResponse` message.
+  sigs:
+  - node
+  kinds:
+  - cleanup
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

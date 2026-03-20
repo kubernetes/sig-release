@@ -1,0 +1,14 @@
+pr: 137629
+releasenote:
+  text: |-
+    Fixed how image names are compared to the values from `preloadedImagesVerificationAllowlist` in the `kubelet`'s configuration. Previously, the use of "familiar" image names (e.g. "alpine") from a Pod did not properly match the same name in `preloadedImagesVerificationAllowlist` in the `kubelet`'s configuration.
+  sigs:
+  - auth
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+pr_body: ""

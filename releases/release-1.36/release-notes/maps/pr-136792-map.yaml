@@ -1,0 +1,20 @@
+pr: 136792
+releasenote:
+  text: |-
+    Graduated the `UserNamespacesSupport` feature gate to GA.
+  sigs:
+  - api-machinery
+  - apps
+  - cli
+  - node
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kubectl
+  - code-generation
+pr_body: ""

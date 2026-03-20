@@ -1,0 +1,17 @@
+pr: 137386
+releasenote:
+  text: |-
+    Graduated `ComponentFlagz` to beta.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - instrumentation
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

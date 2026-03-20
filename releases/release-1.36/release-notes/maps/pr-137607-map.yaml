@@ -1,0 +1,14 @@
+pr: 137607
+releasenote:
+  text: |-
+    Previously, when trying to allocate devices through DRA for a node timed out, scheduling would proceed with another node if any had the necessary resources. This potentially hid that a node was ignored. Worse, if scheduling was slow overall, the Pod was incorrectly moved to "unschedulable" and only retried after a periodic sweep. Timeouts are now errors that are always visible as Pod scheduling failures and get retried with per-Pod exponential backoff.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  - flake
+  areas:
+  - test
+pr_body: ""

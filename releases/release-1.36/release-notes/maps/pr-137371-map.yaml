@@ -1,0 +1,13 @@
+pr: 137371
+releasenote:
+  text: |-
+    DRA BindingConditions: Fixed a panic in the scheduler when the `DRABindingConditions` feature was enabled and the same claim was reused among different Pods while deallocation happened in parallel.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

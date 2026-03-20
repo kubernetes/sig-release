@@ -1,0 +1,13 @@
+pr: 137343
+releasenote:
+  text: |-
+    Added opt-in scheduling behavior for CSI volumes.
+  sigs:
+  - api-machinery
+  - scheduling
+  - storage
+  kinds:
+  - api-change
+  areas:
+  - code-generation
+pr_body: ""

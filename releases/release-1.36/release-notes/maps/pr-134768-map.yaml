@@ -1,0 +1,13 @@
+pr: 134768
+releasenote:
+  text: |-
+    Enabled the Topology, CPU, and Memory managers to recognize and act upon `pod.spec.resources`, enabling two flexible resource management models. Both models support `guaranteed` Pods that contain a mix of containers that may be eligible to receive exclusive resource allocation or be part of the Pod-allocated shared resource pool.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

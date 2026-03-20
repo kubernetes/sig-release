@@ -1,0 +1,14 @@
+pr: 135118
+releasenote:
+  text: |-
+    HPA: Improved scaling to and from zero when the `HPAScaleToZero` feature gate is enabled.
+  sigs:
+  - apps
+  - autoscaling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+pr_body: ""

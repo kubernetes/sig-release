@@ -1,0 +1,10 @@
+pr: 137254
+releasenote:
+  text: |-
+    Added the ability for the StatefulSet controller to read its own Pod and PVC writes.
+  sigs:
+  - apps
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

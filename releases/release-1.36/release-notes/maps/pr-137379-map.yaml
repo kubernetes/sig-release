@@ -1,0 +1,13 @@
+pr: 137379
+releasenote:
+  text: |-
+    Removed `v1alpha1` `WebhookAdmissionConfiguration`. It was deprecated in `v1.17` in favor of `apiserver.config.k8s.io/v1`.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - apiserver
+pr_body: ""

@@ -1,0 +1,4 @@
+pr: 136292
+releasenote:
+  text: Remove obsolete `// +build` instruction.
+pr_body: ""
