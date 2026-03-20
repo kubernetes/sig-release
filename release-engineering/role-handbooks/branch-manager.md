@@ -247,7 +247,8 @@ to the GCP build console. You can take a look at the
 [release-management-url]: https://app.slack.com/client/T09NY5SBT/CJH2GBF7Y
 [example-release-thread]: https://kubernetes.slack.com/archives/CJH2GBF7Y/p1600247891103600
 
-Once mock and nomock runs are complete, data about the jobs launched must be
+Once the release runs are complete (nomock only for patch releases, mock and
+nomock for all other release types), data about the jobs launched must be
 collected in the issue. These are assembled in a table and correspond to the
 `Collect metrics, links...` check mark.
 
@@ -327,7 +328,9 @@ This can be confusing. The v1.16.0-alpha.0 tag was created automatically in the 
 
 ##### Mock vs nomock
 
-Any `krel stage/release` command without the `--nomock` flag is a dry run. It is highly encouraged to dry run first before letting `krel stage/release` take any actual impact on the release process. Mock building/releasing can help you verify that you have a working setup!
+Any `krel stage/release` command without the `--nomock` flag is a dry run. For minor releases, RCs, alphas, and betas, it is highly encouraged to dry run first before letting `krel stage/release` take any actual impact on the release process. Mock building/releasing can help you verify that you have a working setup!
+
+For patch releases (x.y.z where z > 0), mock runs are skipped. The nomock pipeline includes built-in safety checks that make a separate mock run unnecessary for patches.
 
 To get more information on `krel stage/release`, please refer to their
 corresponding help (`-h`) output.
@@ -757,13 +760,13 @@ The diagram below shows the actions needed to cut a Kubernetes release
 flowchart TD
     Start(["Start"]) --> issue["Create a release cut issue on GitHub"] -->|"update along the way"| issue
     issue --> thread["Create a Slack Thread in #release-management \n and cc release-managers"] -->|"update along the way"| thread
-    thread --> build_admins["Contact Google Build Admins \n for their availability to plan when to cut the release"]
-    build_admins --> mock["Mock run (stage and release)"]
-    mock --> staging["Nomock stage"]
+    thread --> is_patch{{"Patch release?"}}
+    is_patch -->|Yes| staging["Nomock stage"]
+    is_patch -->|No| mock["Mock run (stage and release)"]
+    mock --> staging
     staging --> artifact_promotion["Image promotion"]
     artifact_promotion --> release["Nomock release"]
-    release --> publish_pkgs["Contact Google Build Admins to publish the deps/rpms"]
-    publish_pkgs --> announcement_chat["Notify Slack channel #release-management \n about the new release"]
+    release --> announcement_chat["Notify Slack channel #release-management \n about the new release"]
     announcement_chat --> announcement_email["Notify Community by Email \n using Krel"]
     announcement_email --> close["Close release cut GitHub Issue"]
     close --> done(["End"])
@@ -772,5 +775,5 @@ flowchart TD
     classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
     classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
     class Start,done plain;
-    class issue,thread,build_admins,mock,staging,artifact_promotion,release,publish_pkgs,announcement_chat,announcement_email,close k8s;
+    class issue,thread,is_patch,mock,staging,artifact_promotion,release,announcement_chat,announcement_email,close k8s;
 ```

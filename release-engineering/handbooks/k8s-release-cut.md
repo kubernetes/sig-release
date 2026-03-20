@@ -33,18 +33,23 @@
     - [\[Patch only\] Update schedule on k/website](#patch-only-update-schedule-on-kwebsite)
   - [Cleanup](#cleanup)
 
-A step by step guide for cutting Kubernetes patch releases. At a high-level:
+A step by step guide for cutting Kubernetes releases. At a high-level:
 
 - Maintain GitHub release cut issue
 - Update tools (~15m)
-- Run `krel stage` (~1h 15m - up to 2h)
-- Run `krel release` (~15m)
+- Run `krel stage` (~1h 15m - up to 2h) (**skip for patch releases**)
+- Run `krel release` (~15m) (**skip for patch releases**)
 - Run `krel stage --nomock` (~1h 15m - up to 2h)
 - Run `kpromo pr` & merge PR
 - Wait for image promo prow job (~1h)
 - Run `krel release --nomock` (~15m)
 - Send announcements (~30m)
 
+> [!NOTE]
+> For patch releases (x.y.z where z > 0), mock stage and mock release are skipped.
+> The nomock pipeline has built-in safety checks (provenance verification, deterministic builds)
+> that make a separate mock run unnecessary for patches. This reduces the total release
+> cut time by approximately 45 minutes per branch.
 
 ## Prerequisites
 
@@ -250,11 +255,29 @@ Helpful templates, each one has a "completed" response too:
 ```
 :thread: Release Cut v1.xx.yy-alpha|beta|rc-z (GH Issue)
 
-:hourglass_flowing_sand: Mock Stage (logs) 
+:hourglass_flowing_sand: Mock Stage (logs)
 -> :white_check_mark:
 
 :hourglass_flowing_sand: Mock Release (logs)
 -> :white_check_mark:
+
+:hourglass_flowing_sand: No-mock Stage (logs)
+-> :white_check_mark:
+
+https://github.com/kubernetes/k8s.io/pull/xxxx
+
+Image Promotion PR (link)
+cc: @release-managers
+-> Image promotion is :white_check_mark:
+
+:hourglass_flowing_sand: No-mock Release (logs)
+-> :white_check_mark:
+```
+
+For patch releases (where mock runs are skipped), use this template instead:
+
+```
+:thread: Release Cut v1.x.y (GH Issue)
 
 :hourglass_flowing_sand: No-mock Stage (logs)
 -> :white_check_mark:
@@ -292,6 +315,9 @@ Check the health of the publishing-bot by navigating to [this issue](https://git
 If the issue is open you must stop the release process and inform #release-management on Slack.
 
 ## 5. Mock stage and Mock release
+
+> [!NOTE]
+> **Skip this step for patch releases** (x.y.z where z > 0). Proceed directly to [No-mock stage](#6-no-mock-stage).
 
 > [!WARNING]
 Before cutting `alpha.1` ideally some days before, ensure that @release-managers have performed the propedeutic tasks for the alpha cut (e.g. setting up the new OBS project)

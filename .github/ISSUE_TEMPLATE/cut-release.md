@@ -76,7 +76,7 @@ Help? Ring @release-managers on slack!
 - [ ] Create a thread on #release-management: <!-- Paste link to slack -->
 - [ ] Screenshot unhealthy release branch testgrid boards
 - [ ] Check the health of the publishing-bot <!-- check if https://github.com/kubernetes/kubernetes/issues/56876 is closed  --> 
-- Mock Run
+- Mock Run (skip for patch releases)
   - [ ] Stage
   - [ ] Release
 - NoMock Run
@@ -108,8 +108,8 @@ Platform:      linux/amd64
 <!-- The following table can be automatically generated using krel --history  -->
 | Step | Command | Link | Start | Duration | Succeeded? |
 | --- | --- | --- | --- | --- | --- |
-| Mock stage | `krel stage [arguments]` | | | | |
-| Mock release | `krel release [arguments]` | | | | |
+| Mock stage (skip for patch releases) | `krel stage [arguments]` | | | | |
+| Mock release (skip for patch releases) | `krel release [arguments]` | | | | |
 | Stage | `krel stage [arguments]` | | | | |
 | Release | `krel release [arguments]` | | | | |
 
