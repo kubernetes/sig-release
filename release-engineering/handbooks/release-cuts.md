@@ -14,7 +14,7 @@
     - [Configure GitHub Personal Access Token](#configure-github-personal-access-token)
   - [1. Release cut issue](#1-release-cut-issue)
   - [2. Create a thread on the `#release-management` Slack channel](#2-create-a-thread-on-the-release-management-slack-channel)
-  - [3. Generate testgrid screenshots](#3-generate-testgrid-screenshots)
+  - [3. Generate testgrid comment](#3-generate-testgrid-comment)
   - [4. Check publishing-bot status](#4-check-publishing-bot-status)
   - [5. Mock stage and Mock release](#5-mock-stage-and-mock-release)
   - [6. No-mock stage](#6-no-mock-stage)
@@ -24,7 +24,6 @@
   - [8. No-mock release](#8-no-mock-release)
   - [9. Notify public dev Google group mailinglist](#9-notify-public-dev-google-group-mailinglist)
     - [Manually create release HTML announcements](#manually-create-release-html-announcements)
-      - [Legacy Sendgrid method:](#legacy-sendgrid-method)
   - [10. Post release tasks](#10-post-release-tasks)
     - [\[RC.0 only\] Considerations and post branch creation release tasks](#rc0-only-considerations-and-post-branch-creation-release-tasks)
       - [Next Release Branch Creation](#next-release-branch-creation)
@@ -179,24 +178,7 @@ Validate with:
 kpromo version
 ```
 
-Output should look like this:
-
-```
-_  __  ____    ____     ___    __  __    ___
-| |/ / |  _ \  |  _ \   / _ \  |  \/  |  / _ \
-| ' /  | |_) | | |_) | | | | | | |\/| | | | | |
-| . \  |  __/  |  _ <  | |_| | | |  | | | |_| |
-|_|\_\ |_|     |_| \_\  \___/  |_|  |_|  \___/
-kpromo: Kubernetes project artifact promoter
-
-GitVersion:    v3.4.4
-GitCommit:     unknown
-GitTreeState:  unknown
-BuildDate:     unknown
-GoVersion:     go1.19.1
-Compiler:      gc
-Platform:      darwin/arm64
-```
+The output should display the kpromo version information.
  
 #### Download schedule-builder
 
@@ -218,8 +200,6 @@ Navigate to `Settings > Developer Settings > Personal Access Token` to generate 
 - user
 
 Set an appropriate expiration date then click on `[GENERATE TOKEN]` and copy it.
-
-> NOTE / TODO: Look into using fine grained tokens: https://stackoverflow.com/questions/78216547/minimum-permissions-for-a-github-access-token-to-clone-push-and-pull-from-repo. Doing the bare minimum seemed to not work.
 
 Run this command in your shell to export the token and making it available for `krel` and `kpromo`. They should be short lived, no need to store.
 
@@ -253,7 +233,7 @@ Always recompile `krel` before cutting a release.
 Helpful templates, each one has a "completed" response too:
 
 ```
-:thread: Release Cut v1.xx.yy-alpha|beta|rc-z (GH Issue)
+:thread: Release Cut v1.xx.yy-alpha|beta|rc.z (GH Issue)
 
 :hourglass_flowing_sand: Mock Stage (logs)
 -> :white_check_mark:
@@ -292,12 +272,12 @@ cc: @release-managers
 -> :white_check_mark:
 ```
 
-## 3. Generate testgrid screenshots
+## 3. Generate testgrid comment
 
 Generate a comment with the `krel testgridshot` command as follows:
 
 ```
-# defaults to master / main:
+# defaults to master:
 krel testgridshot
 
 # specific branch:
@@ -320,7 +300,7 @@ If the issue is open you must stop the release process and inform #release-manag
 > **Skip this step for patch releases** (x.y.z where z > 0). Proceed directly to [No-mock stage](#6-no-mock-stage).
 
 > [!WARNING]
-Before cutting `alpha.1` ideally some days before, ensure that @release-managers have performed the propedeutic tasks for the alpha cut (e.g. setting up the new OBS project)
+Before cutting `alpha.1` ideally some days before, ensure that @release-managers have performed the preparatory tasks for the alpha cut (e.g. setting up the new OBS project)
 
 Mock stages and mock releases are non-destructive and can be reran upon failure. To begin the mock stage, run the following `krel stage` command (replace the stage with the appropriate "type").
 
@@ -357,7 +337,7 @@ At this point you should start updating the Slack ([thread](#Create-a-thread-on-
 ```
 # take the output of the previous command from the logs and run the command
 # It should look like this:
-krel release --type=alpha|beta|official|release --branch=release-1.xx --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
+krel release --type=alpha|beta|rc|official --branch=release-1.xx --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
 ```
 
 If you are releasing an `alpha.1` you will have a command output that has a `build-version` parameter value containing `alpha.0`, same goes for `alpha.2` having `alpha.1` and so on. This is expected, you can proceed with executing the krel release command.
@@ -367,7 +347,7 @@ Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) 
 
 ## 6. No-mock stage
 
-The following stages, called no-mock, create real artifacts that can be promoted for general use. The process should be near identical to the `no-mock` stages ran prior.
+The following stages, called no-mock, create real artifacts that can be promoted for general use. The process should be near identical to the mock stages ran prior.
 
 Run the no-mock staging:
 
@@ -451,7 +431,7 @@ Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) 
 You should have copied the nomock release command output from the nomock stage previously run, now you can execute the release command as follows:
 
 ```
-krel release --type=alpha|beta|official|release --branch=release-1.xx --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
+krel release --nomock --type=alpha|beta|rc|official --branch=release-1.xx --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
 ```
 
 > [!NOTE]
@@ -463,48 +443,32 @@ Ensure that you are a moderator of dev@kubernetes.io so you can send messages wi
 In case you are not part of these groups as moderator/admin, ask to be added in #release-management. 
 Ideally this is a task that should be performed during onboarding and not on the day of the cut.
 
-> **NOTE as of February 2025: Using manual is the preferred method given the issues with Sendgrid.**
+The `krel announce send` command sends announcements via the Gmail API using
+Google OAuth. A browser window will open for authentication. Use the
+`--no-browser` flag in headless environments.
+
+```
+krel announce send --tag v1.xx.yy-alpha|beta|rc.z --nomock
+```
 
 ### Manually create release HTML announcements
 
-Sometimes you might need to manually send the announcement, in which case you can run this command:
+If you need to send the announcement manually instead, generate the HTML content:
 
 ```
-krel announce send -p --tag v1.xx.yy-alpha|beta|rc.z --name "First Last" --email "your-email@gmail.com" > ~/Downloads/announce.html
+krel announce send -p --tag v1.xx.yy-alpha|beta|rc.z > ~/Downloads/announce.html
 ```
 
 And then send the email from your account as follows:
 
 ```
 # SUBJECT:
-# Kubernetes v1.xx.yy-alpha|beta|rc-z is live!
+# Kubernetes v1.xx.yy-alpha|beta|rc.z is live!
 
 # ...
 # SEND TO:
 dev@kubernetes.io, kubernetes-announce@googlegroups.com
 ```
-
-#### Legacy Sendgrid method:
-
-```
-cd ~/release
-export SENDGRID_API_KEY=<API_KEY>
-
-krel announce send --tag v1.xx.yy-alpha|beta|rc-z --name "First Last" --email "your-email@gmail.com" --nomock
-```
-
-Samples:
-
-```
-# for 1.22.14, 1.23.11, 1.24.5 and 1.25.1
-krel announce send --tag v1.24.14 --name "Jim Angel" --email "jameswangel@gmail.com" --nomock
-krel announce send --tag v1.25.10 --name "Jim Angel" --email "jameswangel@gmail.com" --nomock
-krel announce send --tag v1.26.5 --name "Jim Angel" --email "jameswangel@gmail.com" --nomock
-krel announce send --tag v1.27.2 --name "Jim Angel" --email "jameswangel@gmail.com" --nomock
-```
-
-> [!WARNING]
-You could run in a reached max recipients quota, in such case communicate with #release-management.
 
 > [!TIP]
 Kubernetes-announce might require permissions to post, check you have them or ask your release-manager buddy to post the message for you.
@@ -512,7 +476,7 @@ Kubernetes-announce might require permissions to post, check you have them or as
 Post this message in release-management:
 
 ```
-:kubernetes: Kubernetes v1.xx.yy is live! (shoutout to @xx & @Byfor helping cut the release)
+:kubernetes: Kubernetes v1.xx.yy is live! (shoutout to @xx & @yy for helping cut the release)
 https://groups.google.com/a/kubernetes.io/g/dev/c/fbaBcFvZFMo
 ```
 
@@ -534,7 +498,7 @@ Copy / paste link to #release-management notification post.
 > [!NOTE]
 Remember to provide one last final update to the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after the announcement step
 
-To valorize the release stats required in the release cut issue, run this command:
+To collect the release stats required in the release cut issue, run this command:
 
 ```
 # date should be the previous release date
@@ -560,7 +524,7 @@ Remember that before launching the `nomock release` command for an rc.0, you nee
 During a `rc.0` release our release tooling creates a new release branch named `release-X.Y`, where `X.Y.0` is the version of the upcoming release. 
 Additionally, the `rc.0` release automatically triggers an `alpha.0` build for the subsequent release (e.g. for `v1.34.0-rc.0`, `v1.35.0-alpha.0` is created automatically).
 
-Behind the scenes `krel` is executing a `git branch create` command and `git push`. 
+Behind the scenes `krel` creates the branch and pushes it to the remote. 
 
 At the same time Prow’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo, including the newly created one.
 No need to manually create the branch protection rule.
@@ -573,7 +537,7 @@ The release step will also be extended, but not substantially longer in time.
 
 #### Post branch creation release tasks
 
-See [here](post-release-branch-creation.md) for the complete list of post branch creation release tasks.
+See [here](branch-creation.md) for the complete list of post branch creation release tasks.
 
 Such list resides in a different document to maintain this one in a bite-sized SRE style format.
 
@@ -582,7 +546,7 @@ You will not be able to cut an rc.1 or any other cut against the new branch unti
 
 ### [Stable only] Code Thaw
 
-Code thaw means you need to lift the code freeze, [here](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md#code-thaw) 
+Code thaw means you need to lift the code freeze, [here](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#code-thaw)
 are the docs on how to do it, with an example PR.
 
 ### [Patch only] Update schedule on k/website

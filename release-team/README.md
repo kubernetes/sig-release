@@ -67,7 +67,7 @@ which shall be the discharged by the Release Team.
 
 ## Kubernetes Release Team roles
 
-As documented in the [Kubernetes Versioning doc](../release-engineering/versioning.md),
+As documented in the [Kubernetes Versioning doc](../release-engineering/reference/versioning.md),
 there are 3 types of Kubernetes releases:
 - Major (x.0.0)
 - Minor (x.x.0)
@@ -88,7 +88,7 @@ there are 3 types of Kubernetes releases:
 
 - Patch Release Manager: moved to a role of [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md), which operates under the Release Engineering subproject.
 - Branch Manager: moved to a role of [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md), which operates under the Release Engineering subproject.
-- Test Infra: deprecated at the end of Kubernetes 1.15. Duties are now distributed to the [Branch Manager](/release-engineering/role-handbooks/branch-manager.md) and [Test Infra On-call (SIG Testing)](https://go.k8s.io/oncall) (#testing-ops and #sig-testing on Slack).
+- Test Infra: deprecated at the end of Kubernetes 1.15. Duties are now distributed to the [Release Managers](/release-engineering/handbooks/release-manager.md) and [Test Infra On-call (SIG Testing)](https://go.k8s.io/oncall) (#testing-ops and #sig-testing on Slack).
 
 ### Release Team Shadow
 Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future

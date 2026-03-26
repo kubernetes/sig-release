@@ -1,6 +1,6 @@
 # Platform Support
 
-The Kubernetes project produces [artifacts](../artifacts.md) for different
+The Kubernetes project produces [artifacts](artifacts.md) for different
 architectures and operating systems. A "platform" is the combination of
 architecture (`GOARCH`) and operating system (`GOOS`). This document defines the
 support tiers for platforms, the criteria for each tier, and the process for
