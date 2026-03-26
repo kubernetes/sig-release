@@ -11,7 +11,7 @@ labels: sig/release, area/release-eng
 
 <!--
 
-Follow the docs here: https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/post-release-branch-creation.md
+Follow the docs here: https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/branch-creation.md
 
 Help? Ring @release-managers on slack!
 

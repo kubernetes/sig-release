@@ -83,7 +83,7 @@ lead the master by up to one minor version. For example, a v1.31 master should
 work with v1.28, v1.29, v1.30, and v1.31 nodes, and should work with v1.30, v1.31,
 and v1.32 clients.
 
-Furthermore, we expect to "support" three minor releases at a time. "Support"
+Furthermore, we expect to "support" four minor releases at a time. "Support"
 means we expect users to be running that version in production, though we may
 not port fixes back before the latest minor version. For example, when v1.31
 comes out, v1.27 will no longer be supported: basically, that means that the

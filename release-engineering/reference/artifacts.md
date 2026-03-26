@@ -39,7 +39,7 @@ Individual binaries are available at `https://dl.k8s.io/v<version>/bin/<os>/<arc
 Linux binaries are available for amd64, arm64, ppc64le, and s390x. Darwin
 binaries are available for amd64 and arm64. Windows/amd64 provides client and
 node binaries. Windows/arm64 provides only kubectl. See the
-[platform support table](platforms/) for details.
+[platform support table](platforms.md) for details.
 
 ## Tar Archives
 

@@ -7,7 +7,6 @@ various interdependent repositories that need to be updated in tandem.
 - [Scope](#scope)
 - [Signaling intent](#signaling-intent)
 - [kube-cross image](#kube-cross-image)
-  - [kube-cross image building](#kube-cross-image-building)
   - [kube-cross image promotion](#kube-cross-image-promotion)
 - [k8s-cloud-builder image](#k8s-cloud-builder-image)
 - [`kubernetes/kubernetes` updates](#kuberneteskubernetes-updates)

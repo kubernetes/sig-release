@@ -14,7 +14,7 @@
     - [Configure GitHub Personal Access Token](#configure-github-personal-access-token)
   - [1. Release cut issue](#1-release-cut-issue)
   - [2. Create a thread on the `#release-management` Slack channel](#2-create-a-thread-on-the-release-management-slack-channel)
-  - [3. Generate testgrid screenshots](#3-generate-testgrid-screenshots)
+  - [3. Generate testgrid comment](#3-generate-testgrid-comment)
   - [4. Check publishing-bot status](#4-check-publishing-bot-status)
   - [5. Mock stage and Mock release](#5-mock-stage-and-mock-release)
   - [6. No-mock stage](#6-no-mock-stage)
@@ -233,7 +233,7 @@ Always recompile `krel` before cutting a release.
 Helpful templates, each one has a "completed" response too:
 
 ```
-:thread: Release Cut v1.xx.yy-alpha|beta|rc-z (GH Issue)
+:thread: Release Cut v1.xx.yy-alpha|beta|rc.z (GH Issue)
 
 :hourglass_flowing_sand: Mock Stage (logs)
 -> :white_check_mark:
@@ -272,12 +272,12 @@ cc: @release-managers
 -> :white_check_mark:
 ```
 
-## 3. Generate testgrid screenshots
+## 3. Generate testgrid comment
 
 Generate a comment with the `krel testgridshot` command as follows:
 
 ```
-# defaults to master / main:
+# defaults to master:
 krel testgridshot
 
 # specific branch:
@@ -347,7 +347,7 @@ Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) 
 
 ## 6. No-mock stage
 
-The following stages, called no-mock, create real artifacts that can be promoted for general use. The process should be near identical to the `no-mock` stages ran prior.
+The following stages, called no-mock, create real artifacts that can be promoted for general use. The process should be near identical to the mock stages ran prior.
 
 Run the no-mock staging:
 
@@ -463,7 +463,7 @@ And then send the email from your account as follows:
 
 ```
 # SUBJECT:
-# Kubernetes v1.xx.yy-alpha|beta|rc-z is live!
+# Kubernetes v1.xx.yy-alpha|beta|rc.z is live!
 
 # ...
 # SEND TO:
@@ -524,7 +524,7 @@ Remember that before launching the `nomock release` command for an rc.0, you nee
 During a `rc.0` release our release tooling creates a new release branch named `release-X.Y`, where `X.Y.0` is the version of the upcoming release. 
 Additionally, the `rc.0` release automatically triggers an `alpha.0` build for the subsequent release (e.g. for `v1.34.0-rc.0`, `v1.35.0-alpha.0` is created automatically).
 
-Behind the scenes `krel` is executing a `git branch create` command and `git push`. 
+Behind the scenes `krel` creates the branch and pushes it to the remote. 
 
 At the same time Prow’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo, including the newly created one.
 No need to manually create the branch protection rule.
@@ -537,7 +537,7 @@ The release step will also be extended, but not substantially longer in time.
 
 #### Post branch creation release tasks
 
-See [here](post-release-branch-creation.md) for the complete list of post branch creation release tasks.
+See [here](branch-creation.md) for the complete list of post branch creation release tasks.
 
 Such list resides in a different document to maintain this one in a bite-sized SRE style format.
 
@@ -546,7 +546,7 @@ You will not be able to cut an rc.1 or any other cut against the new branch unti
 
 ### [Stable only] Code Thaw
 
-Code thaw means you need to lift the code freeze, [here](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md#code-thaw) 
+Code thaw means you need to lift the code freeze, [here](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#code-thaw)
 are the docs on how to do it, with an example PR.
 
 ### [Patch only] Update schedule on k/website

@@ -30,5 +30,5 @@ Several of the responsibilities of SIG Release are discharged by the Release Tea
 The following high-level descriptions of SIG Release processes should provide a
 general overview about the work we're doing:
 
-- [Release Notes](/release-engineering/release-notes.md)
-- [Versioning](/release-engineering/versioning.md)
+- [Release Notes](/release-engineering/README.md#release-notes)
+- [Versioning](/release-engineering/reference/versioning.md)
