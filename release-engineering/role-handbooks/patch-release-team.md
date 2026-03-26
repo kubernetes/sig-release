@@ -506,25 +506,13 @@ The freeze serves several purposes:
 1.  It allows slow test jobs like "serial", which has a period of many hours,
     to run several times at `HEAD` to ensure they pass consistently.
 
-On the day before the planned release, run a mock build with `krel stage/release`
-to make sure the tooling is ready as per the [Branch Manager
-Handbook](/release-engineering/role-handbooks/branch-manager.md).
-Also give the Google Debs/RPMs build staff notification that their
-help will be needed the next day.  Once you've done the mock build, you can
-also do a mock release and notify, sending the release notification email
-to yourself to visual confirm its content:
+Mock builds are no longer required for patch releases. The nomock pipeline
+includes built-in safety checks (provenance verification, deterministic builds)
+that make a separate mock run unnecessary. Proceed directly with
+the `--nomock` stage and release on the day of the cut.
 
-```bash
-~$ cd src/k8s.io/release
-~$ export SENDGRID_API_KEY=<API_KEY>
-~$ krel announce send --tag v1.13.2 --nomock
-```
-
-If the mock build and release goes well and CI tests show the branch
-is healthy, run the real cut the next day by repeating the build
-and release process with the `--nomock` argument in the commands.
-Collaborate with the Google Debs/RPMs build staff to insure the
-packages are successfully published.  Then announce the release:
+If CI tests show the branch is healthy, run the release cut using the
+`--nomock` argument in the commands. Then announce the release:
 
 ```bash
 ~$ cd src/k8s.io/release
@@ -584,19 +572,12 @@ corresponding command line help (`-h`) outputs.
 | --- |--- |
 | Make sure you have latest release tooling | ```cd ~/go/src/k8s.io/release && git pull``` |
 | Configure branch | n/a |
-| Mock build staging | `krel stage --type=official --branch=release-x.y` |
-| Mock build staging success? | Visually confirm yes |
-| Mock release | `krel release --type=official --branch=release-x.y --build-version=…` (get the build-version from the Google Cloud console output of `krel stage`) |
-| Mock release success? | Visually confirm yes |
-| Mock email notify test | ```krel announce send --tag v1.13.3-beta.1``` |
-| Check mail arrives, list has expected commits? | manual/visual |
 | Official build staging | `krel stage --nomock --type=official --branch=release-x.y` |
 | Official build staging success? | Visually confirm yes |
 | Official release | `krel release --nomock --type=official --branch=release-x.y --build-version=…` |
 | Official email notify test | ```krel announce send --tag vX.Y.Z``` |
 | Check mail arrives, list has expected commits? | manual/visual |
-| Package creation (needs its own improved workflow; work starting on that) | Ping [Build Admins](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) by name on Slack for package building |
-| Package testing (needs improvement) | Visually validate [yum repo](https://pkgs.k8s.io/core:/stable:/v1.x/rpm/repodata/) and [apt repo](https://pkgs.k8s.io/core:/stable:/v1.x/deb/Packages) have entries for the release version in package NVRs (Name-Version-Release) |
+| Package testing | Visually validate [yum repo](https://pkgs.k8s.io/core:/stable:/v1.x/rpm/repodata/) and [apt repo](https://pkgs.k8s.io/core:/stable:/v1.x/deb/Packages) have entries for the release version in package NVRs (Name-Version-Release) |
 | Official email notify | ```krel announce send --tag v1.13.3 --nomock``` |
 | Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/a/kubernetes.io/g/dev) got mail OK |
 | Completion | n/a |
