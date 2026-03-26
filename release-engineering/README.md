@@ -4,7 +4,7 @@
 - [Communication Channels, and How We Use Them](#communication-channels-and-how-we-use-them)
   - [Slack](#slack)
   - [Mailing List](#mailing-list)
-  - [GitHub Project Board](#github-project-board)
+  - [Roadmap and Vision](#roadmap-and-vision)
   - [Meetings](#meetings)
     - [Instructional Meetings and Using Zoom](#instructional-meetings-and-using-zoom)
 - [How We Discuss Work](#how-we-discuss-work)
@@ -80,10 +80,12 @@ For discussions related to work in progress, team priorities, policies and pract
 
 ### Communicating Decisions
 
-This section remains under development while we work on creating a stakeholder communications matrix. Generally speaking, we use these mechanisms:
+We communicate decisions through:
 
-- Release Engineering agenda notes
+- Release Engineering meeting agenda notes and recordings
 - PRs, and amendment PRs on top of prior merged PRs
+- Posts in the [#release-management](https://kubernetes.slack.com/messages/release-management) Slack channel
+- The [kubernetes-sig-release@](https://groups.google.com/forum/#!forum/kubernetes-sig-release) mailing list for broader topics
 
 ### Communicating Decisions on Pull Requests
 
@@ -108,7 +110,7 @@ We do not bypass the “at least one reviewer” rule, so please wait for a revi
 - First, bring it up in a Slack channel post that you can’t finish something. 
 - If no one responds within 2-3 days, cc @leads to raise awareness.
 - Once someone claims the issue from you, unassign yourself from the GitHub issue.
-- If the matter is not urgent, you can raise it at the Release Engineering. This tends to be successful and increases visibility around the issue.
+- If the matter is not urgent, you can raise it at the Release Engineering meeting. This tends to be successful and increases visibility around the issue.
 - Please do not reassign work to others without some sort of communication first.
 
 ### Tracking Progress
@@ -200,7 +202,6 @@ that any final cherry-pick content is merged ahead of that last release.
   - CNI plugins
   - OS base images (example: debian-base)
   - distroless-iptables
-  - debian-hyperkube-base
   - Publishing bot updates
     - The bot runs on a schedule but sometimes breaks, requiring ad hoc fixes.
   - Curation of the [base images exception list](https://github.com/kubernetes/sig-release/blob/master/release-engineering/baseimage-exception-list.md) (most of this list is complete; more info [here](https://github.com/kubernetes/enhancements/issues/1729)).

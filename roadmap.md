@@ -18,14 +18,6 @@ state.
 
 ### Work in progress (WIP)
 
-1. **Rework supported platforms**
-
-   Outcome: Which platforms Kubernetes supports reflected in documentation and tooling.
-
-   Enhancement: **TBD** ([Supported Platform Tiers](https://docs.google.com/document/d/1QnT2LJ1dNYFyvOCt_X6F8ry0KgAg8H2MjoZnt5Xgtog))
-
-   Project board: _none_
-
 1. **Improve SIG Release contributor ladder & sustainability**
 
    Outcome: Up-to-date documentation and project boards for new and long term contributors.
@@ -69,8 +61,8 @@ state.
 
 ### Other Priorities
 
-This section covers items from the past 2022 and 2024 roadmap which have not been
-started or became stale.
+This section covers items from past roadmaps which have not been started or
+became stale.
 
 1. **Make artifact validation more robust**
 
@@ -130,6 +122,15 @@ started or became stale.
    simplified automation.
 
 ### Done Deliverables
+
+1. **Rework supported platforms**
+
+   Outcome: Measurable platform support tiers with defined promotion/demotion
+   processes, reflected in documentation.
+
+   PR: https://github.com/kubernetes/sig-release/pull/2974
+
+   Design doc: https://docs.google.com/document/d/1QnT2LJ1dNYFyvOCt_X6F8ry0KgAg8H2MjoZnt5Xgtog
 
 1. **Rewrite artifact promoter**
 

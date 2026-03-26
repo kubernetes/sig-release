@@ -65,48 +65,86 @@ Some broad requirements (which can be expanded as we get more people involved):
 
 ## kube-cross image
 
-- the image that we use within kubernetes/kubernetes that allows cross compilation builds
-- it has to have the same go version that we're intending to bump Kubernetes to
-Relevant files to create a PR:
-- https://github.com/kubernetes/release/blob/master/images/build/cross/
-  - Dockerfile
-  - variants.yaml: update KUBE_CROSS_VERSION, e.g. "KUBE_CROSS_VERSION: 'v1.14'"
-  - Makefile:
-        these values must default to the current version (or prevailing minor version)
-        *e.g.
-        CONFIG?=go1.14
-        KUBE_CROSS_VERSION?=v1.14*
-- Sending this PR will trigger kube-cross image building
+The `kube-cross` image provides the cross-compilation toolchain used to build
+Kubernetes for multiple platforms. It must use the same Go version that
+Kubernetes is being updated to.
 
-### kube-cross image building
+To update the image, create a PR in
+[kubernetes/release](https://github.com/kubernetes/release/tree/master/images/build/cross/)
+modifying:
 
-Test Infra
-https://github.com/kubernetes/test-infra/blob/master/config/jobs/image-pushing/k8s-staging-build-image.yaml (don't have to change anything)
+- `variants.yaml`: update `GO_VERSION` and `KUBERNETES_VERSION` for the
+  target variant.
+- `Makefile`: update the default `GO_VERSION` and `KUBERNETES_VERSION` values
+  to match.
+- `default/Dockerfile`: usually no changes needed unless the cross-compilation
+  toolchain itself changes.
 
-- we use GCP builder
-- we only trigger these jobs on changes on the relevant directory (kubecross dir, in this case); images don't need to be built all the time
-- See Testgrid dashboard for job performance details, which lead to GCP(@ k8s-staging-build-image) (Note: a privileged account is needed to access the Execution Details)
-- Copy the docker image digest from GCP
+Merging the PR triggers the image build via a GCP Cloud Build job configured in
+[kubernetes/test-infra](https://github.com/kubernetes/test-infra/blob/master/config/jobs/image-pushing/k8s-staging-build-image.yaml).
+The build runs automatically on changes to the `images/build/cross/` directory.
 
 ### kube-cross image promotion
 
-- promote the image from staging to production, for it to be an official image
-- create PR in kubernetes/k8s.io
-  - Update the docker image digest and its version tag @ https://github.com/kubernetes/k8s.io/blob/main/registry.k8s.io/images/k8s-staging-build-image/images.yaml
-  - indicate the image, a link to the staging run, signature ( e.g. "Signed off by : Stephen Augustus saugustus@example.com"), CC @kubernetes/release-engineering & relevant reviewers
-  - the structure of the file is structured by the digests' SHAs
+After the image is built in staging, promote it to production by creating a PR
+in [kubernetes/k8s.io](https://github.com/kubernetes/k8s.io):
+
+- Update the image digest and version tag in
+  [`registry.k8s.io/images/k8s-staging-build-image/images.yaml`](https://github.com/kubernetes/k8s.io/blob/main/registry.k8s.io/images/k8s-staging-build-image/images.yaml).
+- Include a link to the staging build run and CC
+  `@kubernetes/release-engineering`.
 
 ## k8s-cloud-builder image
+
+The `k8s-cloud-builder` image is used during the release process to run
+`krel stage` and `krel release` in Google Cloud Build. It is maintained in the
+[kubernetes/release](https://github.com/kubernetes/release/tree/master/images/k8s-cloud-builder)
+repository. When updating Go, ensure that the `k8s-cloud-builder` image is
+rebuilt with the new Go version as part of the overall update.
 
 ## `kubernetes/kubernetes` updates
 
 ### `master` branch updates
 
+To update Go on the `master` branch of `kubernetes/kubernetes`:
+
+1. Ensure the promoted `kube-cross` image is available (see above).
+2. Update the Go version in
+   [`build/build-image/cross/VERSION`](https://github.com/kubernetes/kubernetes/blob/master/build/build-image/cross/VERSION)
+   and related files.
+3. Run `hack/pin-dependency.sh` and `hack/update-vendor.sh` if dependencies
+   require changes for the new Go version.
+4. Verify that all unit, integration, and e2e tests pass with the new version.
+
+Example PRs can be found in the tracking issues linked in the
+[Signaling intent](#signaling-intent) section.
+
 ### Cherry picks
+
+Cherry picking Go updates to release branches follows the same process as any
+other cherry pick (see the
+[cherry pick guide](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md)).
+Before cherry picking a Go update, ensure the prerequisites described in the
+[Minor version updates](#minor-version-updates) section are met for the target
+branch.
 
 ## kubekins and krte images
 
+The `kubekins-e2e` and `krte` images are maintained in
+[kubernetes/test-infra](https://github.com/kubernetes/test-infra). They are used
+by CI jobs and must be updated to use the new Go version after
+`kubernetes/kubernetes` has been updated. Coordinate with
+[SIG Testing](https://github.com/kubernetes/community/tree/master/sig-testing)
+for these updates.
+
 ## `publishing-bot` updates
+
+The [publishing-bot](https://github.com/kubernetes/publishing-bot) publishes
+code from `kubernetes/kubernetes/staging` to downstream repositories. After a Go
+update lands on a branch, the publishing-bot rules may need updating to ensure
+the published modules reference the correct Go version in their `go.mod` files.
+Check the publishing-bot configuration and coordinate with SIG API Machinery if
+changes are needed.
 
 ## Minor version updates
 

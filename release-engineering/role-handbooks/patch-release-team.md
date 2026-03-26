@@ -9,7 +9,6 @@ of support (for releases 1.19 and newer; release 1.18 and earlier received
 the branch's health and the ability to update from 1.X.Y to 1.(X+1).Y,
 for the newest Y on each of those two branches.
 
-- [Content Notice](#content-notice)
 - [Prerequisites for Patch Release Team members](#prerequisites-for-patch-release-team-members)
   - [General Requirements](#general-requirements)
 - [Getting started](#getting-started)
@@ -27,21 +26,6 @@ for the newest Y on each of those two branches.
   - [Hotfix release](#hotfix-release)
   - [Security release](#security-release)
 - [Release Commands Cheat Sheet](#release-commands-cheat-sheet)
-
-## Content Notice
-
-The Patch Release Team and Branch Manager roles have been consolidated into a
-single [Release Managers][release-managers] group.
-
-This means that several areas of this document may currently be out of date.
-While we work to update these documents, please reach out to
-[Release Managers][release-managers] directly for any clarifications on Release
-Engineering processes.
-
-**This notice will be removed when the documentation is no longer under
-construction.**
-
----
 
 While this playbook is intended to guide Patch Release Team members,
 it largely consists of opinions and recommendations from former
@@ -183,9 +167,8 @@ For each cherry-pick request:
     Ask the PR author for context if it's not clear to you what the release note
     should say.
 
-    Lastly, make sure the release note is located where the
-    [relnotes](https://git.k8s.io/release/relnotes) script will
-    find it.  You'll know it was not in such a place if the PR is
+    Lastly, make sure the release note is located where the release notes
+    tooling will find it. You'll know it was not in such a place if the PR is
     labelled as `do-not-merge/release-note-label-needed`.  This can be
     resolved by either of:
 
@@ -473,18 +456,10 @@ When you have a plan for the next patch release, send an announcement
 several working days in advance, including a release notes preview.  Also
 update the [posted schedule](https://git.k8s.io/website/content/en/releases/patch-releases.md).
 
-You generate the preview with the [relnotes](https://git.k8s.io/release/relnotes)
-script, run against a local checkout of the release branch, and querying
-GitHub via an API token associated with your GitHub identity.  For example:
-
-```bash
-~$ cd src/k8s.io/kubernetes
-~/src/k8s.io/kubernetes$ git checkout release-1.13
-~/src/k8s.io/kubernetes$ ../release/relnotes --htmlize-md \
-		--markdown-file=$HOME/tmp/relnotes.md \
-		--html-file=$HOME/tmp/relnotes.html \
-		--preview
-```
+You generate the preview with the
+[release-notes](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
+tool, run against a local checkout of the release branch with a `GITHUB_TOKEN`
+set in your environment.
 
 ## Release cut
 
@@ -516,12 +491,12 @@ If CI tests show the branch is healthy, run the release cut using the
 
 ```bash
 ~$ cd src/k8s.io/release
-~$ export SENDGRID_API_KEY=<API_KEY>
-~$ krel announce send --tag v1.13.2 --nomock
+~$ krel announce send --tag v1.35.2 --nomock
 ```
 
-This will automatically send the formatted announcement to the
-kubernetes-dev and kubernetes-announce mailing lists.
+This sends the formatted announcement to the kubernetes-dev and
+kubernetes-announce mailing lists via the Gmail API. A browser window will open
+for OAuth authentication. Use `--no-browser` in headless environments.
 
 After the release cut, reapply the `cherry-pick-approved` label to any PRs that
 had it before the freeze, and go through the backlog of new cherry-picks.
@@ -539,8 +514,7 @@ For example, we may need to fix a severe bug quickly without taking on the added
 risk of allowing other changes in.
 
 In this case, you would create a new, three-part branch of the form
-`release-X.Y.Z`, which [branches from a tag](https://git.k8s.io/release/docs/branching.md#branching-from-a-tag)
-called `vX.Y.Z`.
+`release-X.Y.Z`, branching from the tag `vX.Y.Z`.
 You would then use the normal cherry-pick PR flow, except that you target PRs at
 the `release-X.Y.Z` branch instead of `release-X.Y`.
 This lets you exclude the rest of the changes that already went into
@@ -578,7 +552,7 @@ corresponding command line help (`-h`) outputs.
 | Official email notify test | ```krel announce send --tag vX.Y.Z``` |
 | Check mail arrives, list has expected commits? | manual/visual |
 | Package testing | Visually validate [yum repo](https://pkgs.k8s.io/core:/stable:/v1.x/rpm/repodata/) and [apt repo](https://pkgs.k8s.io/core:/stable:/v1.x/deb/Packages) have entries for the release version in package NVRs (Name-Version-Release) |
-| Official email notify | ```krel announce send --tag v1.13.3 --nomock``` |
+| Official email notify | ```krel announce send --tag vX.Y.Z --nomock``` |
 | Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/a/kubernetes.io/g/dev) got mail OK |
 | Completion | n/a |
 

@@ -101,7 +101,7 @@ variants:
     BAZEL_VERSION: 3.4.1
 ```
 
-Before proceding with the next step, wait for the `post-test-infra-push-kubekins-e2e` postsubmit to finish. You can check the status on [the Prow Status page](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
+Before proceeding with the next step, wait for the `post-test-infra-push-kubekins-e2e` postsubmit to finish. You can check the status on [the Prow Status page](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
 
 ### Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards
 
@@ -355,7 +355,7 @@ Generally speaking, update scripts and documentation as needed to ensure they ar
 
 - [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md)
 - [Example 1.34.0-rc.0 Release Cut Issue](https://github.com/kubernetes/sig-release/issues/2824)
-- [Example of post branch creation tasks issue for 1.34.0-rc.0](https://github.com/kubernetes/sig-release/issues/2826) _this also contains an example of each PR linkedin in the body of the issue_
+- [Example of post branch creation tasks issue for 1.34.0-rc.0](https://github.com/kubernetes/sig-release/issues/2826) _this also contains an example of each PR linked in the body of the issue_
 - [Slack Discussion Thread for 1.33.0-rc.0](https://kubernetes.slack.com/archives/CJH2GBF7Y/p1744125003875769) - _do not rely on the Slack thread being long lived, if it got archived or the channel got deleted, you should just rely on the docs and the PRs linked in this document_
 
 ## Notes

@@ -2,7 +2,6 @@
 
 <!-- toc -->
 - [Branch Manager Handbook](#branch-manager-handbook)
-  - [Content Notice](#content-notice)
   - [Overview](#overview)
     - [Conventions](#conventions)
   - [Prerequisites](#prerequisites)
@@ -51,19 +50,6 @@
 - [Visual Release Cut Process](#visual-release-cut-process)
 <!-- /toc -->
 
-## Content Notice
-
-The Patch Release Team and Branch Manager roles have been consolidated into a
-single [Release Managers][release-managers] group.
-
-This means that several areas of this document may currently be out of date.
-While we work to update these documents, please reach out to
-[Release Managers][release-managers] directly for any clarifications on Release
-Engineering processes.
-
-**This notice will be removed when the documentation is no longer under
-construction.**
-
 ## Overview
 
 ### Conventions
@@ -72,19 +58,19 @@ In this handbook, we will make several references to Kubernetes releases, milest
 
 For the purposes of this handbook, we'll assume that:
 
-- the current release in development is Kubernetes 1.33
-- the previous release is Kubernetes 1.32
-- the next release is Kubernetes 1.34
-- the release no longer in support is Kubernetes 1.29
+- the current release in development is Kubernetes 1.36
+- the previous release is Kubernetes 1.35
+- the next release is Kubernetes 1.37
+- the release no longer in support is Kubernetes 1.32
 
 To simplify certain instructions, we will make the following connections:
 
 | Text | SemVer | Reference Release |
 |---|---|---|
-| "current release", "current milestone", "in development" | `x.y` | Kubernetes 1.33 |
-| "previous release", "previous milestone" | `x.y-1` | Kubernetes 1.32 |
-| "next release", "next milestone" | `x.y+1` | Kubernetes 1.34 |
-| "release no longer in support" | `x.y-4` | Kubernetes 1.29 |
+| "current release", "current milestone", "in development" | `x.y` | Kubernetes 1.36 |
+| "previous release", "previous milestone" | `x.y-1` | Kubernetes 1.35 |
+| "next release", "next milestone" | `x.y+1` | Kubernetes 1.37 |
+| "release no longer in support" | `x.y-4` | Kubernetes 1.32 |
 
 **As an editor of this content, Branch Managers should periodically update these conventions and the examples contained within this handbook.**
 
@@ -116,7 +102,7 @@ See "Cutting v1.15.0-alpha.2" under [References](#References) for an example Doc
 
 #### Release tooling
 
-To leverage/contribute to our [release tools], Release Managers will need to fork and clone the [kubernetes/release] repo.
+To use and contribute to our [release tools], Release Managers will need to fork and clone the [kubernetes/release] repo.
 
 Building and publishing releases requires the latest revision of the release tools. The release tools can be compiled by running the following command from the [kubernetes/release] repository:
 
@@ -161,16 +147,14 @@ At the end of a release, Release Managers will need to announce the new release 
 
 This can be done in one of two ways:
 
-- The `krel announce` sub command -- A [`SENDGRID_API_KEY`](https://sendgrid.com/docs/ui/account-and-settings/api-keys) will need to be configured correctly on your environment for this to work
-  - If you haven't used SendGrid before, SendGrid might require you to go through the [Sender Identity Verification process][sendgrid-identity-verification] before you can send emails/announcements
+- Using `krel announce send`, which sends the announcement via the Gmail API with Google OAuth. A browser window will open for authentication:
   ```shell
-  export SENDGRID_API_KEY=<API_KEY>
-  krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --name "<Your Name>" --name <Your Email Address>
+  krel announce send --tag vX.Y.0-{alpha,beta,rc}.Z --nomock
   ```
-- Manually -- Send the email notification manually to [kubernetes-announce][k-announce-list] and [kubernetes-dev][k-dev-list]. You can take contents of the announcement in one of the following ways:
+- Manually: send the email notification manually to [kubernetes-announce][k-announce-list] and [kubernetes-dev][k-dev-list]. You can get the announcement content in one of the following ways:
   - By taking the contents from the Release Cloud Bucket: `https://dl.k8s.io/release/v1.y.z/announcement.html` and using the subject "[kubernetes-announce] Kubernetes v1.y.z is live!", for example:
     - https://dl.k8s.io/archive/v1.31.1/announcement.html
-  - By using `krel announce` command with the `--print-only` flag
+  - By using `krel announce send` with the `--print-only` flag
 
 See the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/patch-release-team.md#release-commands-cheat-sheet) for example commands.
 
@@ -178,12 +162,10 @@ See the [Release Commands Cheat Sheet](https://github.com/kubernetes/sig-release
 [k-dev-list]: https://groups.google.com/a/kubernetes.io/g/dev
 [release tools]: https://github.com/kubernetes/release#tools
 [kubernetes/release]: https://github.com/kubernetes/release
-[sendgrid-identity-verification]: https://sendgrid.com/docs/for-developers/sending-email/sender-identity/
 
 ##### Mailing List Permissions
 
-Permissions to send mail to the [kubernetes-announce](https://groups.google.com/g/kubernetes-announce) are managed in Google Groups. To request access please reach out to the [list owners](https://groups.google.com/g/kubernetes-announce/members?q=role%3Aowner) in slack.
-This is only needed if you plan on sending mails manually (not through sendgrid).
+Permissions to send mail to the [kubernetes-announce](https://groups.google.com/g/kubernetes-announce) are managed in Google Groups. To request access please reach out to the [list owners](https://groups.google.com/g/kubernetes-announce/members?q=role%3Aowner) in Slack.
 
 #### Skopeo
 
@@ -216,23 +198,22 @@ need to be completed.
 
 For the item `Screenshot unhealthy release branch testgrid boards...`:
 
-`krel testgridshot` takes care of generating screenshots of
-[Testgrid](https://testgrid.k8s.io/) to keep as a reference of the state
-it was in before cutting a release. This subcommand will generate images
-of the boards and upload them to a Cloud Storage bucket, as well as the
-Markdown code.
+`krel testgridshot` fetches the current status of
+[Testgrid](https://testgrid.k8s.io/) dashboards to keep as a reference of the state
+they were in before cutting a release. This subcommand queries the Testgrid JSON
+summaries and generates a Markdown table listing failing (or other specified state) jobs.
 
 To invoke the subcommand, run it with the branch you are working on:
 
 ```
-krel testgridshot --branch 1.20
+krel testgridshot --branch 1.36
 ```
 
 You can include other testgrid states in the output and even have krel
 autocomment the issue for you:
 
 ```
-krel testgridshot --branch 1.20 --github-issue 12345 --states=FLAKY
+krel testgridshot --branch 1.36 --github-issue 12345 --states=FLAKY
 ```
 
 Once the script generates the Markdown table, post it as a comment on the created issue. You can take a look at the [following comment](https://github.com/kubernetes/sig-release/issues/1249#issuecomment-696702503) as an example.
@@ -297,15 +278,6 @@ The output of the command should provide a link to GCP, where you can track the
 progress of the build. The build duration takes approximately 1 hour. `krel
 stage` is building all the bits for a bunch of target operating systems and
 hardware architectures.
-
-<!-- TODO: krel is not checking testgrid
-
-Early in the release cycle, it is likely that the build might fail. By default the `stage master` command automatically looks for a place where [release master blocking tests](https://testgrid.k8s.io/sig-release-master-blocking) have green results, which traditionally has not happened in Kubernetes on an ongoing basis.
-
-WE REALLY WANT (and need) TO GET THERE. Quality needs to be a continual focus. But in the meantime, acknowledging today especially for an early alpha or beta release, it is possible to just build via:
-
-Rather than having `krel stage` pick a candidate by analyzing test data from the commit history that had no fails and building automatically from that point, we instead indicate we want to build explicitly from the last commit on the current branch.
--->
 
 #### Alpha Release
 
@@ -441,7 +413,7 @@ datafields:
         <list of fixed versions>...
 ​
       <credits and acknowledgements (optional)>
-    trackingissue: "[https://github.com/kubernetes/kubernetes/issues/TODO](https://github.com/kubernetes/kubernetes/issues/TODO)"
+    trackingissue: "https://github.com/kubernetes/kubernetes/issues/<issue-number>"
     vector: "<cvss vector string>"
     score: <cvss score>
     rating: "<CVE rating (Low/Medium/High/Critical)>"
@@ -618,7 +590,7 @@ Example PRs:
 - [1.33](https://github.com/kubernetes/test-infra/pull/34693)
 
 > [!IMPORTANT]
-After Code Thaw is performed, remind @release-managers to perform the propedeutic tasks for the next `alpha.1` cut, such as setting up the new OBS project.
+After Code Thaw is performed, remind @release-managers to perform the preparatory tasks for the next `alpha.1` cut, such as setting up the new OBS project.
 
 ### Branch Fast Forward
 
@@ -734,17 +706,14 @@ Concerns and questions can be directed to [#testing-ops](https://kubernetes.slac
 
 ## Background information
 
-You may have seen reference to `./anago` when cutting releases but there's no mention of using `anago` in this handbook, see:
+Prior to v1.12, releases were cut using a tool called `anago`. This was later
+replaced by `gcbmgr`, which in turn was replaced by `krel` (the current tool).
+All release functionality is now consolidated in `krel stage` and `krel release`.
 
-- [Summary of discussion with Caleb about moving from `anago` to `gcbmgr`](https://groups.google.com/d/topic/kubernetes-milestone-burndown/YdHa51d95VI/discussion)
+For historical context:
 
->  Note: To access this forum, you will need to join the [kubernetes-milestone-burndown](https://groups.google.com/forum/#!forum/kubernetes-milestone-burndown) Google group.
-
-See the branch management process prior to v1.12 when `anago` was still used.
-
-- [Branch Management Playbook](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
-
->  Note: To view this document, you will need to join the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) Google group.
+- [Summary of discussion about moving from `anago` to `gcbmgr`](https://groups.google.com/d/topic/kubernetes-milestone-burndown/YdHa51d95VI/discussion)
+- [Branch Management Playbook (pre-v1.12)](https://docs.google.com/document/d/1Qoqz5IZYBp6A-Q_R9CGhMAc358ykOiE49GXZU9r5usQ/edit#heading=h.s71iha1627td)
 
 [image-promotion]: https://sigs.k8s.io/promo-tools/docs/promotion-pull-requests.md
 [kubernetes-release-team]: https://groups.google.com/a/kubernetes.io/g/release-team
