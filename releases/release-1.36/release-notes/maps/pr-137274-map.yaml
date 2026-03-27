@@ -1,0 +1,11 @@
+pr: 137274
+releasenote:
+  text: |-
+    Reverted graduation of `maxLength` property.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - code-generation
+pr_body: ""

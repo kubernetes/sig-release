@@ -1,0 +1,11 @@
+pr: 137362
+releasenote:
+  text: |-
+    kubelet: Relisted Pods on-demand for lower latency operations. Guarded by the beta feature gate `PLEGOnDemandRelist`.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

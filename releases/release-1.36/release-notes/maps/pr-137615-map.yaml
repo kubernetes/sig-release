@@ -1,0 +1,12 @@
+pr: 137615
+releasenote:
+  text: |-
+    Truncated the watch cache RV metric to 15 digits to ensure precision.
+  sigs:
+  - api-machinery
+  - instrumentation
+  kinds:
+  - cleanup
+  areas:
+  - apiserver
+pr_body: ""

@@ -1,0 +1,19 @@
+pr: 137174
+releasenote:
+  text: |-
+    Graduated the `config.k8s.io/flagz` API to `v1beta1`.
+  sigs:
+  - api-machinery
+  - instrumentation
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - code-generation
+pr_body: ""

@@ -1,11 +1,11 @@
 pr: 136423
-pr_body: ""
 releasenote:
-  text: 'ACTION REQUIRED: Removed the integrated support for flex-volumes in `kubeadm`. Users
-    were advised to migrate away from flex-volumes as recommended by SIG Storage,
-    since 1.22. If kubeadm users wish to continue using the feature, they would need
-    a custom image for the KCM that is not based on distroless, pass the KCM flag
-    `--flex-volume-plugin-dir` and mount the directory `/usr/libexec/kubernetes/kubelet-plugins/volume/exec`
-    in the KCM static pod using kubeadm''s `extraVolumes` mechanism before upgrading
-    to 1.36. Up until now, kubeadm automatically did the mounting if the user passed
-    the flag.'
+  text: |-
+    ACTION REQUIRED: kubeadm: Removed the integrated support for flex-volumes. Users were advised to migrate away from flex-volumes as recommended by SIG Storage since `v1.22`. If `kubeadm` users wish to continue using the feature, they need a custom image for the KCM that is not based on distroless, pass the KCM flag `--flex-volume-plugin-dir`, and mount the directory `/usr/libexec/kubernetes/kubelet-plugins/volume/exec` in the KCM static pod using `kubeadm`'s `extraVolumes` mechanism before upgrading to `v1.36`. Previously, `kubeadm` automatically did the mounting if the user passed the flag.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - cleanup
+  areas:
+  - kubeadm
+pr_body: ""

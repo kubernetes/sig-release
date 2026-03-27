@@ -1,0 +1,14 @@
+pr: 137146
+releasenote:
+  text: |-
+    Fixed a bug where, after a `kubelet` restart, regular containers in a Pod with a sidecar (initContainer with `restartPolicy`: Always) and a `startupProbe` failed to restart after crashing. Affected Pods remained stuck with `RestartCount: 0` indefinitely.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  - regression
+  areas:
+  - test
+  - kubelet
+pr_body: ""

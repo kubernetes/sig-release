@@ -1,0 +1,33 @@
+pr: 137298
+releasenote:
+  text: |-
+    Introduced new staging modules `k8s.io/streaming` and `k8s.io/cri-streaming` for Kubernetes streaming transport and CRI streaming server code. `k8s.io/apimachinery/pkg/util/httpstream` (including `spdy` and `wsstream`) remains available as a deprecated compatibility wrapper backed by `k8s.io/streaming`. The extracted SPDY roundtripper preserves CIDR matching in `NO_PROXY`/`no_proxy`.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - instrumentation
+  - network
+  - node
+  - release
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - release-eng
+  - code-generation
+  - e2e-test-framework
+  - dependency
+pr_body: ""

@@ -1,0 +1,12 @@
+pr: 134997
+releasenote:
+  text: |-
+    Added the `--detach-keys` flag to `kubectl attach` and `kubectl run`, allowing detach without terminating the container.
+  sigs:
+  - api-machinery
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl
+pr_body: ""

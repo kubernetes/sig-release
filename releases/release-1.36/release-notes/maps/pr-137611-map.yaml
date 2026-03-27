@@ -1,0 +1,17 @@
+pr: 137611
+releasenote:
+  text: |-
+    The `kube-scheduler` now updates PodGroup status with a `PodGroupScheduled` condition reflecting whether the group was successfully scheduled or is unschedulable.
+  sigs:
+  - api-machinery
+  - apps
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+  - workload-aware
+pr_body: ""

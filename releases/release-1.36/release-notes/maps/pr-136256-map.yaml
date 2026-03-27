@@ -1,0 +1,18 @@
+pr: 136256
+releasenote:
+  text: |-
+    Added the `ExtendWebSocketsToKubelet` feature gate (beta, default true in `v1.36`). When enabled, the API server proxies WebSocket `exec/attach/portforward` requests directly to the `kubelet` rather than translating or tunneling them at the API server. The `kubelet` handles WebSocket-to-SPDY stream translation (`exec/attach`) and WebSocket tunneling (portforward) using the same handlers previously used at the API server. The `kubelet` advertises support for this feature to the API server via the `NodeDeclaredFeatures` mechanism; the API server only proxies directly to a `kubelet` that has advertised support. Two new alpha metrics track routing decisions and WebSocket streaming volume: `apiserver_websocket_streaming_requests_total` (labels: subresource, proxy_type) and `kubelet_streaming_websocket_requests_total` (label: subresource).
+  sigs:
+  - api-machinery
+  - autoscaling
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - dependency
+pr_body: ""

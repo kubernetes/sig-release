@@ -1,0 +1,13 @@
+pr: 136367
+releasenote:
+  text: |-
+    Promoted two Job controller metrics from alpha to beta stability, providing stronger API and label stability guarantees for metric consumers.
+  sigs:
+  - apps
+  - instrumentation
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - stable-metrics
+pr_body: ""

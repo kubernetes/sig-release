@@ -1,0 +1,15 @@
+pr: 137248
+releasenote:
+  text: |-
+    The cri-api client accepts a context instead of a logger on initialization.
+  sigs:
+  - cluster-lifecycle
+  - node
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - kubelet
+  - kubeadm
+pr_body: ""

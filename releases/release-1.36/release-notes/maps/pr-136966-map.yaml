@@ -1,0 +1,13 @@
+pr: 136966
+releasenote:
+  text: |-
+    Ensured single-container Pod can restart quickly with the `RestartAllContainers` action.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

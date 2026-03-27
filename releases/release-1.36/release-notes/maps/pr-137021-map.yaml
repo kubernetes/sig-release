@@ -1,0 +1,12 @@
+pr: 137021
+releasenote:
+  text: |-
+    Instrumented `/flagz` and `/statusz` endpoints with apiserver request metrics (`apiserver_request_total`, `apiserver_request_duration_seconds`), with group and version labels reflecting the content-negotiated API version.
+  sigs:
+  - api-machinery
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

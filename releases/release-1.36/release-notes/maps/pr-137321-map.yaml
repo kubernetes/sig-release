@@ -1,0 +1,10 @@
+pr: 137321
+releasenote:
+  text: |-
+    Validation messages for a Pod's `status.resourceClaimStatuses[].resourceClaimName` refer correctly to the `resourceClaimName` field instead of the `name` field.
+  sigs:
+  - apps
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

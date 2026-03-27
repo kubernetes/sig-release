@@ -1,0 +1,16 @@
+pr: 137795
+releasenote:
+  text: |-
+    DRA: Graduated Device Binding Conditions (KEP #5007) to beta, enabled by default in `v1.36`.
+  sigs:
+  - api-machinery
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

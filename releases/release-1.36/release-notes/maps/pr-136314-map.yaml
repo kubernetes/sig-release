@@ -1,0 +1,16 @@
+pr: 136314
+releasenote:
+  text: |-
+    Graduated metric `apiserver_storage_events_received_total` to beta.
+  sigs:
+  - api-machinery
+  - etcd
+  - instrumentation
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - apiserver
+  - stable-metrics
+pr_body: ""

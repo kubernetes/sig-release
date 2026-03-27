@@ -1,0 +1,13 @@
+pr: 136155
+releasenote:
+  text: |-
+    Promoted several scheduler metrics (`scheduler_goroutines`, `scheduler_permit_wait_duration_seconds`, `scheduler_plugin_evaluation_total`, `scheduler_plugin_execution_duration_seconds`, `scheduler_scheduling_algorithm_duration_seconds`, `scheduler_unschedulable_pods`) from alpha to beta stability, providing stronger API and label stability guarantees for metric consumers.
+  sigs:
+  - instrumentation
+  - scheduling
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - stable-metrics
+pr_body: ""

@@ -1,0 +1,25 @@
+pr: 137271
+releasenote:
+  text: |-
+    Added SchedulingConstraints to express topology-aware scheduling (TAS) constraints for PodGroup scheduling behind the `TopologyAwareWorkloadScheduling` feature gate. Added the TopologyPlacement plugin implementing the PlacementGenerate extension point to take constraints into consideration during PodGroup scheduling.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cli
+  - cloud-provider
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - kubectl
+  - provider/gcp
+  - code-generation
+  - workload-aware
+pr_body: ""

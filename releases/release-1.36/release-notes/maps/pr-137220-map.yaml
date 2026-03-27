@@ -1,0 +1,10 @@
+pr: 137220
+releasenote:
+  text: |-
+    The `GetPCIeRootAttributeByPCIBusID` helper accepts a `fs.ReadLinkFS` optional argument to be filesystem-independent.
+  sigs:
+  - node
+  kinds:
+  - cleanup
+  areas: []
+pr_body: ""

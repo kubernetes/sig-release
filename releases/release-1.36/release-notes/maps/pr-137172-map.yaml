@@ -1,0 +1,11 @@
+pr: 137172
+releasenote:
+  text: |-
+    Kube-apiserver: Graduated the `UnknownVersionInteroperabilityProxy` feature gate to beta, enabled by default. The `--peer-ca-file` flag is required to turn on the proxy.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

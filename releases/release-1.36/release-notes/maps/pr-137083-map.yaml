@@ -1,0 +1,12 @@
+pr: 137083
+releasenote:
+  text: |-
+    Added the PlacementGenerate extension point to the scheduler. It is used to generate placements for placement-based PodGroup scheduling. Its use is guarded by the `TopologyAwareWorkloadScheduling` feature gate.
+  sigs:
+  - scheduling
+  kinds:
+  - api-change
+  areas:
+  - code-generation
+  - workload-aware
+pr_body: ""

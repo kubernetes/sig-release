@@ -1,0 +1,10 @@
+pr: 137332
+releasenote:
+  text: |-
+    Fixed link file ownership of projected serviceAccountToken.
+  sigs:
+  - storage
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

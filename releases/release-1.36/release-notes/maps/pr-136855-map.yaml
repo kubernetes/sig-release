@@ -1,0 +1,13 @@
+pr: 136855
+releasenote:
+  text: |-
+    Added multiple conditions support to the `kubectl wait` command.
+  sigs:
+  - cli
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubectl
+pr_body: ""

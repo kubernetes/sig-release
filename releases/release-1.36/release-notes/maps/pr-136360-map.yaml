@@ -1,0 +1,12 @@
+pr: 136360
+releasenote:
+  text: |-
+    Added metric component and endpoint to generated metric reference documentation.
+  sigs:
+  - instrumentation
+  - testing
+  kinds:
+  - documentation
+  areas:
+  - test
+pr_body: ""

@@ -1,0 +1,16 @@
+pr: 136483
+releasenote:
+  text: |-
+    ACTION REQUIRED: Renamed metric `etcd_bookmark_counts` to `etcd_bookmark_total`. If you are using custom monitoring dashboards or alerting rules based on the `etcd_bookmark_counts` metric, update them to use the new `etcd_bookmark_total` metric.
+  sigs:
+  - api-machinery
+  - etcd
+  - instrumentation
+  - testing
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - test
+  - apiserver
+pr_body: ""

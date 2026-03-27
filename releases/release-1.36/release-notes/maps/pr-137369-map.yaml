@@ -1,0 +1,10 @@
+pr: 137369
+releasenote:
+  text: |-
+    Fixed container restart policy validation error message to correctly show available actions when the `RestartAllContainersOnContainerExits` feature gate is enabled.
+  sigs:
+  - apps
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

@@ -1,0 +1,16 @@
+pr: 136762
+releasenote:
+  text: |-
+    Kubelet: If the `--client-ca-file` is updated while `kubelet` is running, the updated root certificates are correctly used to advertise accepted authorities to TLS clients connecting to the `kubelet` endpoints. This behavior is guarded by the `ReloadKubeletClientCAFile` feature gate, which is enabled by default.
+  sigs:
+  - api-machinery
+  - auth
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+pr_body: ""

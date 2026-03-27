@@ -1,0 +1,21 @@
+pr: 136043
+releasenote:
+  text: |-
+    For Pod resizes requested on nodes where the resize request exceeds the node's allocatable capacity or the node is running an OS that does not support resize, the request fails in admission rather than being marked as Infeasible in the Pod status later.
+  sigs:
+  - api-machinery
+  - node
+  - release
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - release-eng
+pr_body: ""

@@ -1,0 +1,13 @@
+pr: 137266
+releasenote:
+  text: |-
+    Removed misleading `SuggestFor` entries from `kubectl wait` so that it is no longer suggested when users type `kubectl list` or `kubectl ps`.
+  sigs:
+  - cli
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - kubectl
+pr_body: ""

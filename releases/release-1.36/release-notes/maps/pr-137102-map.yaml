@@ -1,0 +1,11 @@
+pr: 137102
+releasenote:
+  text: |-
+    Kubeadm: When using `--v=1` or higher log verbosity, prints information about the CA certificate used for discovery when using `kubeadm join`.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - feature
+  areas:
+  - kubeadm
+pr_body: ""

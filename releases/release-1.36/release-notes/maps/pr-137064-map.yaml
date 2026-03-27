@@ -1,0 +1,11 @@
+pr: 137064
+releasenote:
+  text: |-
+    Added a warning when `kubectl rollout undo` is used on resources managed with `kubectl apply` to prevent unexpected behavior from annotation mismatch.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas:
+  - kubectl
+pr_body: ""

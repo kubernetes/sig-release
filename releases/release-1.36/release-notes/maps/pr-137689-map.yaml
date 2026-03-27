@@ -1,0 +1,14 @@
+pr: 137689
+releasenote:
+  text: |-
+    CustomResourceDefinitions: Fixed server-side apply field ownership tracking so that metadata ownership is correctly tracked for writes to the `/status` subresource.
+    Custom Resources: Fixed server-side apply field ownership to not update metadata from the `/status` subresource since these writes are wiped for custom resources.
+  sigs:
+  - api-machinery
+  - network
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

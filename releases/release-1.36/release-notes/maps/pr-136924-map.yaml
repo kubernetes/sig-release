@@ -1,0 +1,34 @@
+pr: 136924
+releasenote:
+  text: |-
+    Promoted `DRAPrioritizedList` to GA.
+  sigs:
+  - apps
+  - architecture
+  - autoscaling
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - network
+  - node
+  - release
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - provider/gcp
+  - release-eng
+  - kubeadm
+  - code-generation
+  - e2e-test-framework
+  - dependency
+pr_body: ""

@@ -1,0 +1,11 @@
+pr: 137780
+releasenote:
+  text: |-
+    Enabled Prometheus native histogram support in `kubelet` when the feature gate is enabled. Histograms are exposed in both classic and native formats using exponential bucket configuration (factor=1.1, max buckets=160).
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

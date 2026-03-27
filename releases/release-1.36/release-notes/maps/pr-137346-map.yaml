@@ -1,0 +1,36 @@
+pr: 137346
+releasenote:
+  text: |-
+    Added alpha support for manifest-based admission control configuration (KEP-5793). When the `ManifestBasedAdmissionControlConfig` feature gate is enabled, admission webhooks and CEL-based policies can be loaded from static manifest files on disk via the `staticManifestsDir` field in `AdmissionConfiguration`. These policies are active from API server startup, survive `etcd` unavailability, and can protect API-based admission resources from modification.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - autoscaling
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - instrumentation
+  - network
+  - node
+  - release
+  - scheduling
+  - storage
+  - testing
+  - windows
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - release-eng
+  - code-generation
+  - e2e-test-framework
+  - dependency
+pr_body: ""

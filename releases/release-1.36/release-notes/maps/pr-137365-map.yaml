@@ -1,0 +1,12 @@
+pr: 137365
+releasenote:
+  text: |-
+    DRA ResourceSlice controller: Added optional `ReconcilePoolWithName` to allow per-pool reconciliation without setting `NodeName` on slices, so the scheduler can use `NodeSelector` or `allNodes` for node-owned, cluster-visible resources (e.g. network-shared devices). "All nodes" is no longer the default. When publishing devices for the entire cluster, it must be set explicitly.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

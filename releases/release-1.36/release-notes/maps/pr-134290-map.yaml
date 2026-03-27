@@ -1,0 +1,11 @@
+pr: 134290
+releasenote:
+  text: |-
+    Reduced get PV request from KCM pv-controller for CSI volumes.
+  sigs:
+  - apps
+  - storage
+  kinds:
+  - cleanup
+  areas: []
+pr_body: ""

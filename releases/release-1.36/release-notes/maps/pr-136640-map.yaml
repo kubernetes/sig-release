@@ -1,0 +1,17 @@
+pr: 136640
+releasenote:
+  text: |-
+    Added the `tlsServerName` field to `EgressSelectorConfiguration` `TLSConfig` to allow overriding the server name used for TLS certificate verification.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+pr_body: ""

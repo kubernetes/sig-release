@@ -1,0 +1,26 @@
+pr: 136976
+releasenote:
+  text: |-
+    Introduced `scheduling.k8s.io/v1alpha2` Workload and PodGroup API to express workload-level scheduling requirements and let `kube-scheduler` act on those. Removed `scheduling.k8s.io/v1alpha1` Workload API.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cli
+  - cloud-provider
+  - etcd
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - kubectl
+  - provider/gcp
+  - code-generation
+  - workload-aware
+pr_body: ""

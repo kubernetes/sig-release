@@ -1,0 +1,10 @@
+pr: 136548
+releasenote:
+  text: |-
+    Graduated the `KubeletPSI` feature to GA, enabled by default. The `kubelet` exposes Linux cgroup Pressure Stall Information (PSI) metrics, providing deeper visibility into system and Pod-level resource contention (CPU, Memory, and I/O) via the `kubelet` Summary API.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

@@ -1,0 +1,11 @@
+pr: 137637
+releasenote:
+  text: |-
+    Explicitly wrote `memory.min=0` for QoS cgroups when the calculated requests are zero.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

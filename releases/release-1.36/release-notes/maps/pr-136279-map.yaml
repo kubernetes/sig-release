@@ -1,0 +1,11 @@
+pr: 136279
+releasenote:
+  text: |-
+    Added the `ControllerManagerReleaseLeaderElectionLockOnCancel` feature gate to gate leader election lock release on exit for `kube-controller-manager`.
+  sigs:
+  - api-machinery
+  - cloud-provider
+  kinds:
+  - feature
+  areas: []
+pr_body: ""
