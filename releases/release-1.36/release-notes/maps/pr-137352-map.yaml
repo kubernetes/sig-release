@@ -1,0 +1,19 @@
+pr: 137352
+releasenote:
+  text: |-
+    Added support for in-place Pod resize of running non-sidecar initContainers.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+pr_body: ""

@@ -1,0 +1,14 @@
+pr: 137384
+releasenote:
+  text: |-
+    Graduated `ComponentStatusz` to beta.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

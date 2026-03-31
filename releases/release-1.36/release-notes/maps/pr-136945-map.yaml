@@ -1,0 +1,13 @@
+pr: 136945
+releasenote:
+  text: |-
+    Reflected the expected replica count in the output of the `kubectl scale` command.
+  sigs:
+  - cli
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubectl
+pr_body: ""

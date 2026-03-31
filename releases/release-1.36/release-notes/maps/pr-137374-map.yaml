@@ -1,0 +1,14 @@
+pr: 137374
+releasenote:
+  text: |-
+    Added metrics for constrained impersonation: `apiserver_impersonation_attempts_total`, `apiserver_impersonation_attempts_duration_seconds`, `apiserver_impersonation_authorization_attempts_total`, and `apiserver_impersonation_authorization_attempts_duration_seconds` (labels: mode, decision).
+  sigs:
+  - api-machinery
+  - auth
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver
+pr_body: ""

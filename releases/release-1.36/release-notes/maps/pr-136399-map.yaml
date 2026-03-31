@@ -1,0 +1,16 @@
+pr: 136399
+releasenote:
+  text: |-
+    ACTION REQUIRED:
+    kube-controller-manager: Renamed metric `volume_operation_total_errors` to `volume_operation_errors_total`. If you are using custom monitoring dashboards or alerting rules based on the `volume_operation_total_errors` metric, update them to use the new `volume_operation_errors_total` metric.
+  sigs:
+  - apps
+  - instrumentation
+  - storage
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - stable-metrics
+pr_body: ""

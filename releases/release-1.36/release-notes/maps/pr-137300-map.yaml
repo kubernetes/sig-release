@@ -1,0 +1,12 @@
+pr: 137300
+releasenote:
+  text: |-
+    Updated `kubectl kuberc set` with options for setting `credentialPluginPolicy` and `credentialPluginAllowlist`.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubectl
+pr_body: ""

@@ -1,0 +1,14 @@
+pr: 137584
+releasenote:
+  text: |-
+    Added `MemoryReservationPolicy` cgroup v2 MemoryQoS support to KubeletConfiguration for `memory.min` protection.
+  sigs:
+  - node
+  - storage
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubelet
+  - code-generation
+pr_body: ""

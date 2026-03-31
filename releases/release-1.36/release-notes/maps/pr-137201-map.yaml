@@ -1,0 +1,13 @@
+pr: 137201
+releasenote:
+  text: |-
+    Added the PlacementScore extension point to the scheduler for scoring placements in placement-based PodGroup scheduling, guarded by the `TopologyAwareWorkloadScheduling` feature gate. Deprecated `MinNodeScore` and `MaxNodeScore` in favor of `MinScore` and `MaxScore`.
+  sigs:
+  - scheduling
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - code-generation
+  - workload-aware
+pr_body: ""

@@ -1,0 +1,13 @@
+pr: 137053
+releasenote:
+  text: |-
+    The `StrictIPCIDRValidation` feature gate in `kube-apiserver` is enabled by default, meaning that API fields no longer allow IP or CIDR values with extraneous leading "0"s (e.g., `010.000.000.005` rather than `10.0.0.5`) or CIDR subnet/mask values with ambiguous semantics (e.g., `192.168.0.5/24` rather than `192.168.0.0/24` or `192.168.0.5/32`).
+  sigs:
+  - network
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+pr_body: ""

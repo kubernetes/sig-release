@@ -1,0 +1,13 @@
+pr: 136912
+releasenote:
+  text: |-
+    Promoted `SELinuxChangePolicy` and `SELinuxMountReadWriteOncePod` to GA; they are enabled unconditionally.
+  sigs:
+  - apps
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+pr_body: ""

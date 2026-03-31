@@ -1,0 +1,12 @@
+pr: 137002
+releasenote:
+  text: |-
+    Capped `nf_conntrack_max` to 1,048,576 to prevent excessive memory consumption on high-core machines when using automatic calculation.
+  sigs:
+  - apps
+  - network
+  kinds:
+  - bug
+  areas:
+  - kube-proxy
+pr_body: ""

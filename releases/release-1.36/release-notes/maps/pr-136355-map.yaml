@@ -1,0 +1,19 @@
+pr: 136355
+releasenote:
+  text: |-
+    The `k8s.io/client-go/transport` package garbage collects TLS cache entries and client certificate rotation goroutines when a transport is no longer used. This functionality is enabled by default and can be controlled via the `ClientsAllowTLSCacheGC` feature gate. Binaries embedding `k8s.io/client-go` but not wiring the feature gates can disable it by setting the `KUBE_FEATURE_ClientsAllowTLSCacheGC=false` environment variable. When the feature is disabled, the TLS cache can grow indefinitely and client certificate rotation goroutines are leaked. The new `rest_client_transport_cert_rotation_gc_calls_total{}` and `rest_client_transport_cache_gc_calls_total{result: deleted/skipped}` counter metrics can be used with the preexisting `rest_client_transport_*` metrics to help with debugging.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - instrumentation
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - dependency
+pr_body: ""

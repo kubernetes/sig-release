@@ -1,0 +1,10 @@
+pr: 137398
+releasenote:
+  text: |-
+    Fixed goroutine hot-loop in client-go `StartEventWatcher` when the event broadcaster shuts down before the cancellation context fires.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

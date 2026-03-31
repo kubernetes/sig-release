@@ -1,0 +1,10 @@
+pr: 136633
+releasenote:
+  text: |-
+    Reduced the needs of the setcap build image for `kube-apiserver` by no longer requiring that image to contain a shell (`sh` or `dash` or `bash`).
+  sigs:
+  - release
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

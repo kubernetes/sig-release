@@ -1,0 +1,21 @@
+pr: 136044
+releasenote:
+  text: |-
+    Updated the `/configz` endpoint of `kubelet`, `kube-scheduler`, cloud controller manager, and `kube-proxy` to serialize the `APIVersion` and `Kind` fields and use public types instead of internal.
+  sigs:
+  - api-machinery
+  - cloud-provider
+  - cluster-lifecycle
+  - network
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - cloudprovider
+pr_body: ""

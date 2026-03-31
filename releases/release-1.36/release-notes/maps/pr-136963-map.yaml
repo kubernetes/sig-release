@@ -1,0 +1,11 @@
+pr: 136963
+releasenote:
+  text: |-
+    Preserved the logs of restarted containers for containers restarted by the `RestartAllContainers` feature.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

@@ -1,0 +1,13 @@
+pr: 136681
+releasenote:
+  text: |-
+    Promoted the `RestartAllContainersOnContainerExits` feature gate to beta, enabled by default.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

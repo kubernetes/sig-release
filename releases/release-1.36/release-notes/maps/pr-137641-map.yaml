@@ -1,0 +1,17 @@
+pr: 137641
+releasenote:
+  text: |-
+    Added a deletion protection mechanism for PodGroup objects.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - scheduling
+  - storage
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - apiserver
+  - workload-aware
+pr_body: ""

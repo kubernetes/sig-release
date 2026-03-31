@@ -1,0 +1,15 @@
+pr: 137523
+releasenote:
+  text: |-
+    Slow requests that use impersonation can be tracked via the `apiserver.latency.k8s.io/impersonation` audit event annotation when the `ConstrainedImpersonation` feature is enabled.
+  sigs:
+  - api-machinery
+  - auth
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+pr_body: ""

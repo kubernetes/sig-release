@@ -1,0 +1,24 @@
+pr: 137489
+releasenote:
+  text: |-
+    Added topology-aware scheduling (TAS) logic to the PodGroup scheduling cycle behind the `TopologyAwareWorkloadScheduling` feature gate, supporting scheduling of PodGroups on nodes with matching topology domains.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cli
+  - cloud-provider
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - kubectl
+  - provider/gcp
+  - code-generation
+pr_body: ""

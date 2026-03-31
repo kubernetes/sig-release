@@ -1,0 +1,10 @@
+pr: 137240
+releasenote:
+  text: |-
+    Fixed missing field conversions (`BindsToNode`, `BindingConditions`, `BindingFailureConditions`, `AllowMultipleAllocations`, `Capacity`) in DRA API `v1beta1` hand-written conversion code.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

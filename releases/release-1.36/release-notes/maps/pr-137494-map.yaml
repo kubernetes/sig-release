@@ -1,0 +1,11 @@
+pr: 137494
+releasenote:
+  text: |-
+    Kubeadm: Ignored EINVAL when unmounting `/var/lib/kubelet` peer mounts during reset.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm
+pr_body: ""

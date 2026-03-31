@@ -1,0 +1,17 @@
+pr: 137173
+releasenote:
+  text: |-
+    Graduated the `config.k8s.io/statusz` API to `v1beta1`.
+  sigs:
+  - api-machinery
+  - instrumentation
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - code-generation
+pr_body: ""

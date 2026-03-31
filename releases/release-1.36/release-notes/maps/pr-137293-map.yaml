@@ -1,0 +1,15 @@
+pr: 137293
+releasenote:
+  text: |-
+    Added warnings and deprecation for Service `.spec.externalIPs`.
+  sigs:
+  - apps
+  - network
+  - windows
+  kinds:
+  - api-change
+  - deprecation
+  areas:
+  - kube-proxy
+  - ipvs
+pr_body: ""

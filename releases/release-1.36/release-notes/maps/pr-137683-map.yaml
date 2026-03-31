@@ -1,0 +1,12 @@
+pr: 137683
+releasenote:
+  text: |-
+    Fixed the total Pod resources computation.
+  sigs:
+  - cli
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubectl
+pr_body: ""

@@ -1,0 +1,21 @@
+pr: 137115
+releasenote:
+  text: |-
+    Added the `--tls-curve-preferences` flag for configuring TLS key exchange mechanism.
+  sigs:
+  - api-machinery
+  - architecture
+  - cli
+  - cloud-provider
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - cloudprovider
+  - code-generation
+pr_body: ""

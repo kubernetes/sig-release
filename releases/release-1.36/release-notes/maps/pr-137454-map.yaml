@@ -1,0 +1,21 @@
+pr: 137454
+releasenote:
+  text: |-
+    Promoted the `ProcMountType` feature to GA.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cli
+  - node
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kubectl
+  - code-generation
+pr_body: ""

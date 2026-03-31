@@ -1,0 +1,14 @@
+pr: 134627
+releasenote:
+  text: |-
+    Added a new gRPC service to the `kubelet` that provides information about Pods running on the node.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+  - dependency
+pr_body: ""

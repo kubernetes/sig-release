@@ -1,0 +1,12 @@
+pr: 131950
+releasenote:
+  text: |-
+    The `kubelet_pod_start_sli_duration_seconds_bucket` metric matches Pod startup latency SLI/SLO documentation.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+  - dependency
+pr_body: ""

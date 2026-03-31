@@ -1,0 +1,13 @@
+pr: 137350
+releasenote:
+  text: |-
+    Promoted `DRAPartitionableDevices` to beta.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

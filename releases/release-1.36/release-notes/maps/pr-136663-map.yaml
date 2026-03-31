@@ -1,0 +1,11 @@
+pr: 136663
+releasenote:
+  text: |-
+    Added the `timezone` field to the `kubectl describe` CronJob output.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas:
+  - kubectl
+pr_body: ""

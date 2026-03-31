@@ -1,0 +1,12 @@
+pr: 136641
+releasenote:
+  text: |-
+    Introduced index-based naming in the ResourceSlice controller and ensured ResourceSlices and pools are sorted lexicographically before allocation, allowing users to control allocation priority.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

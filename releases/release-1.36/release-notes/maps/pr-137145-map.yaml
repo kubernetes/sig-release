@@ -1,0 +1,11 @@
+pr: 137145
+releasenote:
+  text: |-
+    For performance reasons, `kubectl describe` defaults to showing related events only when describing a single object. Passing `--show-events` explicitly when describing multiple objects or fuzzy matching on prefix still shows related events if desired.
+  sigs:
+  - cli
+  kinds:
+  - cleanup
+  areas:
+  - kubectl
+pr_body: ""

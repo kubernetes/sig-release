@@ -1,0 +1,25 @@
+pr: 137464
+releasenote:
+  text: |-
+    Added an admission plugin that validates PodGroup resources reference an existing Workload and match the declared PodGroupTemplate spec.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cli
+  - cloud-provider
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - kubectl
+  - provider/gcp
+  - code-generation
+  - workload-aware
+pr_body: ""

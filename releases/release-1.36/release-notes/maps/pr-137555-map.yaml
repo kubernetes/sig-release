@@ -1,0 +1,12 @@
+pr: 137555
+releasenote:
+  text: |-
+    Added support for the CRI (and NRI) to block Pod-level resizes.
+  sigs:
+  - node
+  kinds:
+  - bug
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

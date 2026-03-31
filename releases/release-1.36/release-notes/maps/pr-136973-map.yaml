@@ -1,0 +1,13 @@
+pr: 136973
+releasenote:
+  text: |-
+    When `kubectl exec` or `kubectl logs` are run with a specified container name, and no container with that name is found, `kubectl` lists the names of containers that would be valid to specify.
+  sigs:
+  - cli
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubectl
+pr_body: ""

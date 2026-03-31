@@ -1,0 +1,12 @@
+pr: 137473
+releasenote:
+  text: |-
+    Fixed informer-gen to generate SetTransform calls that correctly override per-informer transforms.
+  sigs:
+  - api-machinery
+  - scheduling
+  kinds:
+  - bug
+  areas:
+  - code-generation
+pr_body: ""

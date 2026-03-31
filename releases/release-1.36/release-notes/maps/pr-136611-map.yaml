@@ -1,0 +1,16 @@
+pr: 136611
+releasenote:
+  text: |-
+    The `DRAConsumableCapacity` feature gate is enabled by default.
+  sigs:
+  - api-machinery
+  - cluster-lifecycle
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+pr_body: ""

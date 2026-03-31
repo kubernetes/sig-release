@@ -1,0 +1,15 @@
+pr: 137086
+releasenote:
+  text: |-
+    Added opt-in alpha support in the kubeletplugin framework for DRA drivers to publish DRA Device metadata in Pod CDI mounts.
+  sigs:
+  - apps
+  - network
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+pr_body: ""

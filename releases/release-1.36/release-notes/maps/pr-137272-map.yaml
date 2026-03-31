@@ -1,0 +1,18 @@
+pr: 137272
+releasenote:
+  text: |-
+    Renamed `AllowlistEntry.Name` to `AllowlistEntry.Command` in the credential plugin allowlist.
+  sigs:
+  - api-machinery
+  - auth
+  - cli
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  - deprecation
+  areas:
+  - test
+  - kubectl
+  - code-generation
+pr_body: ""

@@ -1,0 +1,10 @@
+pr: 137136
+releasenote:
+  text: |-
+    Fixed validation error messages for `restartPolicyRules` and `exitCodes.values` to report "items" instead of "bytes".
+  sigs:
+  - apps
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

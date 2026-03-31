@@ -1,0 +1,11 @@
+pr: 136988
+releasenote:
+  text: |-
+    Updated `kubectl explain` to display an EXTERNAL DOCS section when a schema or field includes an `externalDocs` section. This appears after the DESCRIPTION block for top-level resources and after the field description for individual fields. The section is omitted in short mode and when `externalDocs` is absent.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas:
+  - kubectl
+pr_body: ""

@@ -1,0 +1,11 @@
+pr: 137217
+releasenote:
+  text: |-
+    CRI API: Added the `image_id` field to the `PullImageResponse` message, serving as a unique identifier for the image on the node as returned by the container runtimes.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

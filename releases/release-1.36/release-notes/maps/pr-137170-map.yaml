@@ -1,0 +1,20 @@
+pr: 137170
+releasenote:
+  text: |-
+    DRA: Graduated device taints and tolerations (KEP #5055) to beta. Support for DeviceTaints in ResourceSlices is on by default. Support for `DeviceTaintRules` depends on enabling `resource.k8s.io/v1beta2` and the `DeviceTaintRules` feature gate.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cluster-lifecycle
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

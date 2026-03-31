@@ -1,0 +1,13 @@
+pr: 137202
+releasenote:
+  text: |-
+    Added tracing for WatchList requests.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver
+pr_body: ""

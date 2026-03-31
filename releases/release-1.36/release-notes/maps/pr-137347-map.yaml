@@ -1,0 +1,10 @@
+pr: 137347
+releasenote:
+  text: |-
+    Fixed incorrect behavior when using AllocationModeAll with DRA PrioritizedList that prevented the allocator from successfully allocating a claim even when devices were available.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

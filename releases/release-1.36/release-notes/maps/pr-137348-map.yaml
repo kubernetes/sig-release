@@ -1,0 +1,11 @@
+pr: 137348
+releasenote:
+  text: |-
+    Removed the dead `--bounding-dirs` flag and `BoundingDirs` field from deepcopy-gen.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - code-generation
+pr_body: ""

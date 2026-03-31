@@ -1,0 +1,21 @@
+pr: 136763
+releasenote:
+  text: |-
+    Enabled Prometheus native histogram support in `kube-apiserver` when the feature gate is enabled. Histograms are exposed in both classic and native formats using exponential bucket configuration (factor=1.1, max buckets=160).
+  sigs:
+  - api-machinery
+  - architecture
+  - cloud-provider
+  - instrumentation
+  - network
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - cloudprovider
+pr_body: ""

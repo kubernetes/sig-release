@@ -1,0 +1,11 @@
+pr: 137326
+releasenote:
+  text: |-
+    Fixed an issue where zero-valued PSI (Pressure Stall Information) metrics were emitted by the `kubelet` when the OS does not support PSI, even if the `KubeletPSI` feature gate was enabled.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""
