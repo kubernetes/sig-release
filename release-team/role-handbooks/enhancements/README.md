@@ -421,6 +421,7 @@ Note: the Release Lead sometimes opens a single PR with the updates for all the 
 #### Meeting update rotation
 
 - Create a Google Sheet (private to the Enhancements Lead and Shadows) where the shadows can sign up to give updates at the weekly Release Team meetings.
+  - Example [meeting update rotation template](https://docs.google.com/document/d/1jfU34qJTiCdsE4yVO4BBJw763TDCLkrJ10QPmmHzwLw/edit?tab=t.0#heading=h.xrn657qem90v)
 - Make sure to include both APAC and EMEA meetings.
 - Make sure to also include the Monday/Friday burndown meetings which begin after Code Freeze.
 
@@ -428,6 +429,7 @@ Note: the Release Lead sometimes opens a single PR with the updates for all the 
 
 - Near the beginning of the release cycle, we reach out to each SIG reminding them of the enhancements-related deadlines.
 - Create a Google Sheet (private to the Enhancements Lead and Shadows) to track who will reach out to each SIG.
+  - Example [SIG outreach template](https://docs.google.com/document/d/1jfU34qJTiCdsE4yVO4BBJw763TDCLkrJ10QPmmHzwLw/edit?tab=t.601lhuiio9bs#heading=h.h2pqt5op8vqc)
 - Reach out to each [SIG](https://github.com/kubernetes/community/blob/master/sig-list.md) in their respective Slack channel, tagging one or more chairs or technical leads to communicate the Enhancements statuses. See the example [SIG Outreach communication templates](./communication-templates.md#sig-outreach-templates).
 - `sig-k8s-infra` can be skipped, as they have previously requested to be excluded from outreach.
 
@@ -649,6 +651,7 @@ Any enhancements removed from the milestone will now require an exception. As ex
 
 - The Enhancements Lead may be called upon by the Communications Lead to help with media engagement near the end of the release cycle. Please ensure that if there are any restrictions or training required by your company before engaging that you have completed those ahead of Code Thaw.
 - After the release, the Enhancements Lead will participate in a livestreamed CNCF Kubernetes Release webinar along with the Release Lead and Communications Lead. Work together to prepare a presentation highlighting a selection of enhancements from this release.
+  - Past release webinar examples: [v1.35](https://www.youtube.com/watch?v=Ydby-uIVcCg), [v1.34](https://www.youtube.com/watch?v=StyJ9b6-1t0), [v1.33](https://www.youtube.com/watch?v=1hOOplxu6g0)
 
 #### Succession
 
