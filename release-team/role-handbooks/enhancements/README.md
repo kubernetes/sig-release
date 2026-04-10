@@ -657,7 +657,7 @@ Any enhancements removed from the milestone will now require an exception. As ex
 
 - Select who will be the new Enhancements Lead for the next release. Shadows should be the first source pool. If none are available to lead then look externally through other release team members or members of [SIG Architecture Enhancements Subproject](https://github.com/kubernetes/community/blob/master/sig-architecture/README.md#enhancements)
 - Make sure to get the selection approved by the Release Team Lead and Subproject Leads before giving final confirmation to the candidate.
-- Before the next release starts, do a handoff to the incoming Enhancements Lead. It would be helpful to walk through all the tasks that the Enhancements Lead needs to do throughout the cycle, and any other information/advice that would help prepare them to lead the team successfully!
+- Before the next release starts, do a handoff call with the incoming Enhancements Lead. Walk through all the tasks that the Enhancements Lead needs to do throughout the cycle, and provide any other information/advice that would help prepare them to lead the team successfully!
 
 #### Process and Documentation Improvements
 
