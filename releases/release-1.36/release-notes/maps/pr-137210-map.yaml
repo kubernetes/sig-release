@@ -8,3 +8,8 @@ releasenote:
     a `job_controller_stale_sync_skips_total` metric is incremented and a message
     is logged by the job controller. This behavior can be temporarily disabled by
     setting the `StaleControllerConsistencyJob` feature gate to false."
+  sigs:
+  - api-machinery
+  - apps
+  kinds:
+  - feature

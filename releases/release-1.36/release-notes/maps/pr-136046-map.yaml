@@ -2,4 +2,9 @@ pr: 136046
 releasenote:
   text: |-
     Fixed log verbosity for non-error messages in the storage version migrator so they are no longer logged at error level.
+  sigs:
+  - api-machinery
+  - apps
+  kinds:
+  - bug
 pr_body: ""

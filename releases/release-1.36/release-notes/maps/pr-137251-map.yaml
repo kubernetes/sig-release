@@ -1,5 +1,11 @@
 pr: 137251
 pr_body: ""
 releasenote:
-  text: Fixed kubeadm to skip appending the client URL of etcd learner members to
-    c.Endpoints, since learners do not serve client traffic.
+  text: |-
+    Fixed kubeadm to skip appending the client URL of etcd learner members to `c.Endpoints`, since learners do not serve client traffic.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm

@@ -1,4 +1,11 @@
 pr: 137063
 pr_body: ""
 releasenote:
-  text: Added group, version, and resource labels to the existing alpha metric `apiserver_rerouted_request_total`.
+  text: |-
+    Added group, version, and resource labels to the existing alpha metric `apiserver_rerouted_request_total`.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - apiserver

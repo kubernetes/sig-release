@@ -1,5 +1,18 @@
 pr: 136039
 pr_body: ""
 releasenote:
-  text: Promoted the `MutatingAdmissionPolicy` to GA (v1) in Kubernetes `1.36`. The
-    feature is now enabled by default.
+  text: |-
+    Promoted the `MutatingAdmissionPolicy` to GA (v1) in Kubernetes `v1.36`. The feature is now enabled by default.
+  sigs:
+  - api-machinery
+  - architecture
+  - etcd
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - conformance
+  - code-generation

@@ -2,4 +2,9 @@ pr: 136118
 releasenote:
   text: |-
     Kube-apiserver: Promoted the `ExternalServiceAccountTokenSigner` feature gate to GA.
+  sigs:
+  - api-machinery
+  - auth
+  kinds:
+  - feature
 pr_body: ""

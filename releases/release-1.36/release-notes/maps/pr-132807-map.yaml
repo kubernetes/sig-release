@@ -2,4 +2,16 @@ pr: 132807
 releasenote:
   text: |-
     Added `ImageVolumeWithDigest` which includes the digest of image volumes in the container status.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
 pr_body: ""

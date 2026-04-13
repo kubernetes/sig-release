@@ -1,0 +1,13 @@
+pr: 137169
+releasenote:
+  text: |-
+    Reverted PR #136796. The kube-proxy nftables fix was re-implemented in PR #137501.
+  sigs:
+  - network
+  kinds:
+  - bug
+  - failing-test
+  areas:
+  - kube-proxy
+  - dependency
+pr_body: ""

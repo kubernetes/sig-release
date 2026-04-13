@@ -1,0 +1,16 @@
+pr: 135828
+releasenote:
+  text: |-
+    Added the `UserNamespacesHostNetwork` runtime handler and integrated the `UserNamespacesHostNetworkSupport` feature gate with the `NodeDeclaredFeatures` feature gate. The `UserNamespacesHostNetworkSupport` feature gate only takes effect when the container runtime's `UserNamespacesHostNetwork` runtime handler returns true and the `NodeDeclaredFeatures` feature gate is enabled.
+  sigs:
+  - autoscaling
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+  - dependency
+pr_body: ""

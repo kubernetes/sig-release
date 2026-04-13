@@ -1,0 +1,15 @@
+pr: 136796
+releasenote:
+  text: |-
+    kube-proxy: Fixed nftables mode to work on systems with `nft` `v1.1.3`.
+  sigs:
+  - api-machinery
+  - auth
+  - network
+  kinds:
+  - bug
+  areas:
+  - kube-proxy
+  - code-generation
+  - dependency
+pr_body: ""

@@ -2,4 +2,12 @@ pr: 136477
 releasenote:
   text: |-
     Kube-apiserver: Liveness probes will now fail when the loopback client certificate expires.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - apiserver
 pr_body: ""

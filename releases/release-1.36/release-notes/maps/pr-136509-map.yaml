@@ -2,4 +2,8 @@ pr: 136509
 releasenote:
   text: |-
     Client-go: Fixed an unlikely deadlock during informer startup.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
 pr_body: ""

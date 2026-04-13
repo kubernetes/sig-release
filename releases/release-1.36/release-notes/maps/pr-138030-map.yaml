@@ -1,0 +1,11 @@
+pr: 138030
+releasenote:
+  text: |-
+    kubelet: Fixed preservation of DRA `NodeAllocatableResourceClaimStatuses` in PodStatus.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

@@ -1,5 +1,14 @@
 pr: 137101
 pr_body: ""
 releasenote:
-  text: Added an alpha `informer_processing_latency_seconds` histogram metric to measure
-    event handler execution time in RealFIFO.
+  text: |-
+    Added an alpha `informer_processing_latency_seconds` histogram metric to measure event handler execution time in RealFIFO.
+  sigs:
+  - api-machinery
+  - architecture
+  - instrumentation
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

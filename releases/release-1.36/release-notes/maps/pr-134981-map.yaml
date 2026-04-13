@@ -1,6 +1,13 @@
 pr: 134981
 pr_body: ""
 releasenote:
-  text: Removed `container_cpu_load_average_10s`, `container_cpu_load_d_average_10s`,
-    and `cpu_tasks_state` metrics from being reported by cadvisor. This is done because
-    the values were always 0, because a flag was not enabled in the kubelet.
+  text: |-
+    Removed `container_cpu_load_average_10s`, `container_cpu_load_d_average_10s`, and `cpu_tasks_state` metrics from being reported by cadvisor. This is done because the values were always 0, because a flag was not enabled in the kubelet.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet

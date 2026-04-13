@@ -2,4 +2,10 @@ pr: 135777
 releasenote:
   text: |-
     Enabled the `WatchCacheInitializationPostStartHook` feature gate by default.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature
+  areas:
+  - apiserver
 pr_body: ""

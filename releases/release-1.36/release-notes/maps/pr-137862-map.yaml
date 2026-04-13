@@ -1,0 +1,15 @@
+pr: 137862
+releasenote:
+  text: |-
+    Added alpha support (behind the `PersistentVolumeClaimUnusedSinceTime` feature gate) for tracking PersistentVolumeClaim unused status via a new `Unused` condition on PersistentVolumeClaimStatus. When enabled, the PVC protection controller sets `Unused=True` with a `lastTransitionTime` when no non-terminal Pods reference the PersistentVolumeClaim.
+  sigs:
+  - apps
+  - auth
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+pr_body: ""

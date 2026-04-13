@@ -1,0 +1,17 @@
+pr: 135782
+releasenote:
+  text: |-
+    kube-controller-manager: Added ALPHA gauge metric `informer_queued_items` for informer queue length, published as `informer_queued_items{name=kube-controller-manager,group=<group>,resource=<resource>,version=<version>} <count>`.
+  sigs:
+  - api-machinery
+  - architecture
+  - instrumentation
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - code-generation
+pr_body: ""

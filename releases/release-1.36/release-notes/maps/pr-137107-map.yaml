@@ -2,3 +2,15 @@ pr: 137107
 pr_body: ""
 releasenote:
   text: Updated etcd images to `v3.6.8`.
+  sigs:
+  - api-machinery
+  - cloud-provider
+  - cluster-lifecycle
+  - etcd
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - provider/gcp
+  - kubeadm

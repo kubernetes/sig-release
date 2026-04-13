@@ -1,6 +1,11 @@
 pr: 135808
 pr_body: ""
 releasenote:
-  text: Deprecated the `SeparateCacheWatchRPC` feature gate. It is now locked to its default
-    value (false) and can no longer be overridden. The feature gate will be removed
-    in a future release.
+  text: |-
+    Deprecated the `SeparateCacheWatchRPC` feature gate. It is now locked to its default value (false) and can no longer be overridden. The feature gate will be removed in a future release.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - apiserver

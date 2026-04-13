@@ -1,11 +1,16 @@
 pr: 134937
 pr_body: ""
 releasenote:
-  text: "Kube-controller-manager: The daemonset controller now defers syncing a DaemonSet
-    object when the controller has not yet observed daemonset or pod writes from the
-    last time the object was synced. This prevents spurious creation of duplicate
-    pods for nodes when the controller's cache is stale. When a sync is deferred
-    for this reason, a `daemonset_controller_stale_sync_skips_total` metric is incremented
-    and a message is logged by the daemonset controller. This behavior can be temporarily
-    disabled by setting the `StaleControllerConsistencyDaemonSet` feature gate to
-    false."
+  text: |-
+    Kube-controller-manager: The daemonset controller now defers syncing a DaemonSet object when the controller has not yet observed daemonset or pod writes from the last time the object was synced. This prevents spurious creation of duplicate pods for nodes when the controller's cache is stale. When a sync is deferred for this reason, a `daemonset_controller_stale_sync_skips_total` metric is incremented and a message is logged by the daemonset controller. This behavior can be temporarily disabled by setting the `StaleControllerConsistencyDaemonSet` feature gate to false.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - e2e-test-framework

@@ -2,4 +2,10 @@ pr: 136084
 releasenote:
   text: |-
     Added `audit-id` to the "Starting watch" log line.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - apiserver
 pr_body: ""

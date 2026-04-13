@@ -2,4 +2,9 @@ pr: 136052
 releasenote:
   text: |-
     Added missing tests for client-go metrics.
+  sigs:
+  - architecture
+  - instrumentation
+  kinds:
+  - cleanup
 pr_body: ""

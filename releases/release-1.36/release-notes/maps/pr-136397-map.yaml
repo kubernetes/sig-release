@@ -2,4 +2,10 @@ pr: 136397
 releasenote:
   text: |-
     Updated node performance e2e tests to use PyTorch Wide-Deep workload instead of TensorFlow.
+  sigs:
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
 pr_body: ""

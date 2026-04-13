@@ -2,4 +2,12 @@ pr: 135623
 releasenote:
   text: |-
     Fixed `ReadWriteOncePod` preemption e2e test to run as serial, preventing it from causing other random e2e tests to flake.
+  sigs:
+  - storage
+  - testing
+  kinds:
+  - bug
+  - flake
+  areas:
+  - test
 pr_body: ""

@@ -1,7 +1,14 @@
 pr: 135749
 pr_body: ""
 releasenote:
-  text: Fixed `event_handling_duration_seconds`, `preemption_goroutines_duration_seconds`,
-    `run_podsandbox_duration_seconds`, and `store_schedule_results_duration_seconds`
-    metrics incorrectly recording near-zero latency values instead of actual durations,
-    caused by premature evaluation of `SinceInSeconds(startTime)` in a deferred call.
+  text: |-
+    Fixed `event_handling_duration_seconds`, `preemption_goroutines_duration_seconds`, `run_podsandbox_duration_seconds`, and `store_schedule_results_duration_seconds` metrics incorrectly recording near-zero latency values instead of actual durations, caused by premature evaluation of `SinceInSeconds(startTime)` in a deferred call.
+  sigs:
+  - architecture
+  - instrumentation
+  - node
+  - scheduling
+  kinds:
+  - bug
+  areas:
+  - kubelet

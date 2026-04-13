@@ -2,4 +2,11 @@ pr: 136441
 releasenote:
   text: |-
     Updated API comments to reflect the stable state of Dynamic Resource Allocation (DRA).
+  sigs:
+  - api-machinery
+  kinds:
+  - documentation
+  - api-change
+  areas:
+  - code-generation
 pr_body: ""

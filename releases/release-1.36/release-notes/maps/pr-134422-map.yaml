@@ -2,4 +2,9 @@ pr: 134422
 releasenote:
   text: |-
     Updated `kubectl get ingressclass` to display a `(default)` marker for the default IngressClass.
+  sigs:
+  - cli
+  - network
+  kinds:
+  - feature
 pr_body: ""

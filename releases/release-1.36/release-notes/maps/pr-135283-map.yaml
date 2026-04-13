@@ -2,4 +2,10 @@ pr: 135283
 releasenote:
   text: |-
     Added `kubectl explain -r` flag as a shorthand for `--recursive`.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas:
+  - kubectl
 pr_body: ""

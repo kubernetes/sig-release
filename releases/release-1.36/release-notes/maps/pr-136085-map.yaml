@@ -2,4 +2,10 @@ pr: 136085
 releasenote:
   text: |-
     Added explicit logging when `WatchList` requests complete their initial listing phase.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - apiserver
 pr_body: ""

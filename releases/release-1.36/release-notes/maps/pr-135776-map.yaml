@@ -2,4 +2,10 @@ pr: 135776
 releasenote:
   text: |-
     Kubeadm: Changed Node object patching behavior to retry on unknown (non-allowlisted) API errors within the polling duration instead of exiting early.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - feature
+  areas:
+  - kubeadm
 pr_body: ""

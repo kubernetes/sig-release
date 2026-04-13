@@ -2,4 +2,8 @@ pr: 130231
 releasenote:
   text: |-
     Updated the `ImageLocality` scheduler plugin to consider `ImageVolume` images when scoring nodes for Pod scheduling.
+  sigs:
+  - scheduling
+  kinds:
+  - feature
 pr_body: ""

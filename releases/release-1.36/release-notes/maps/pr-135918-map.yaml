@@ -2,4 +2,10 @@ pr: 135918
 releasenote:
   text: |-
     Kubectl: Fixed a panic in `kubectl exec` when the terminal size queue delegate is uninitialized.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl
 pr_body: ""

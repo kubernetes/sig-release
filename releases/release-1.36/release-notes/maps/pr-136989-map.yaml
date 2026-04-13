@@ -1,0 +1,26 @@
+pr: 136989
+releasenote:
+  text: |-
+    DRA: Added a `spec.resourceClaims` field to PodGroup resources for referencing ResourceClaims and ResourceClaimTemplates. Claims made by a PodGroup are reserved for the entire PodGroup instead of individual Pods, supporting more than 256 Pods sharing a single ResourceClaim. ResourceClaimTemplates referenced by a PodGroup's claim replicate into a ResourceClaim specific to that PodGroup, shared by all of the group's Pods.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cli
+  - cloud-provider
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - kubectl
+  - provider/gcp
+  - code-generation
+  - workload-aware
+pr_body: ""

@@ -2,4 +2,8 @@ pr: 135955
 releasenote:
   text: |-
     Aligned the `scheduler_preemption_victims` metric definition between asynchronous and synchronous preemption modes. The metric now consistently reports the number of pods chosen as victims across both modes.
+  sigs:
+  - scheduling
+  kinds:
+  - feature
 pr_body: ""

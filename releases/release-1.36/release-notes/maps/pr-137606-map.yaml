@@ -1,0 +1,17 @@
+pr: 137606
+releasenote:
+  text: |-
+    Enabled workload-aware preemption for PodGroups when the `WorkloadAwarePreemption` feature gate is active. When PodGroup scheduling fails to find placement for a PodGroup, workload-aware preemption runs for the entire group instead of running default preemption for each individual Pod.
+  sigs:
+  - apps
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - e2e-test-framework
+  - workload-aware
+pr_body: ""

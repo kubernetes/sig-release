@@ -2,4 +2,8 @@ pr: 136502
 releasenote:
   text: |-
     Fixed a bug that caused `EndpointSlice` churn for headless services with no ports defined.
+  sigs:
+  - network
+  kinds:
+  - bug
 pr_body: ""

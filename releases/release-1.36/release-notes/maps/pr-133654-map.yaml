@@ -2,4 +2,14 @@ pr: 133654
 releasenote:
   text: |-
     Kubelet: Fixed reloading of server certificate files when they are changed on disk and kubelet is dialed by IP address instead of DNS/hostname.
+  sigs:
+  - api-machinery
+  - auth
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
 pr_body: ""

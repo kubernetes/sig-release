@@ -2,4 +2,9 @@ pr: 136325
 releasenote:
   text: |-
     Fixed a `v1.34` regression when starting pods with environment variables containing a value with `$` followed by a multi-byte character.
+  sigs:
+  - architecture
+  kinds:
+  - bug
+  - regression
 pr_body: ""
