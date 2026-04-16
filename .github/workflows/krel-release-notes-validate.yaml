@@ -41,7 +41,7 @@ jobs:
         with:
           go-version: '1.23'
           check-latest: true
-      - uses: sigstore/cosign-installer@dc72c7d5c4d10cd6bcb8cf6e3fd625a9e5e537da # v3.7.0
+      - uses: sigstore/cosign-installer@cad07c2e89fa2edd6e2d7bab4c1aa38e53f76003 # v4.1.1
         with:
           use-sudo: false
       - id: install-krel
@@ -62,13 +62,25 @@ jobs:
               exit 1
           fi
           
-          KREL_CERT="https://github.com/kubernetes/release/releases/download/$KREL_VERSION/$ARTIFACT_NAME.pem"
-          KREL_SIG="https://github.com/kubernetes/release/releases/download/$KREL_VERSION/$ARTIFACT_NAME.sig"
-          
+          RELEASE_URL="https://github.com/kubernetes/release/releases/download/$KREL_VERSION"
+          COSIGN_IDENTITY="https://github.com/kubernetes/release/.github/workflows/release.yml@refs/tags/$KREL_VERSION"
+          COSIGN_ISSUER="https://token.actions.githubusercontent.com"
+
           echo "Using cosign to verify signature of krel version $KREL_VERSION"
-          if ! cosign verify-blob --certificate "$KREL_CERT" --signature "$KREL_SIG" \
-              --certificate-identity "https://github.com/kubernetes/release/.github/workflows/release.yml@refs/tags/$KREL_VERSION" \
-              --certificate-oidc-issuer "https://token.actions.githubusercontent.com" krel; then
+          # Try new bundle format first (.sigstore.json), fall back to legacy .sig/.pem
+          # Use curl -f to fail on HTTP 404 (GitHub returns HTML for missing assets)
+          if curl -sfL "$RELEASE_URL/$ARTIFACT_NAME.sigstore.json" -o "$ARTIFACT_NAME.sigstore.json" && \
+              cosign verify-blob --bundle "$ARTIFACT_NAME.sigstore.json" \
+              --certificate-identity "$COSIGN_IDENTITY" \
+              --certificate-oidc-issuer "$COSIGN_ISSUER" krel; then
+              echo "Signature verified using sigstore bundle"
+          elif cosign verify-blob \
+              --certificate "$RELEASE_URL/$ARTIFACT_NAME.pem" \
+              --signature "$RELEASE_URL/$ARTIFACT_NAME.sig" \
+              --certificate-identity "$COSIGN_IDENTITY" \
+              --certificate-oidc-issuer "$COSIGN_ISSUER" krel; then
+              echo "Signature verified using legacy .sig/.pem"
+          else
               echo "Signature verification failed for krel version: '$KREL_VERSION'"
               exit 1
           fi
