@@ -2,4 +2,8 @@ pr: 135340
 releasenote:
   text: |-
     Fixed a bug causing clients to error out when decoding large CBOR encoded lists.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
 pr_body: ""

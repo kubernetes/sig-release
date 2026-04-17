@@ -1,7 +1,0 @@
-pr: 136254
-pr_body: ""
-releasenote:
-  text: 'Extended `PostFilterResult` with a list of Pods that the `PostFilter` plugin
-    preempted. ACTION REQUIRED: `PostFilter` plugin implementations need to be updated to return the
-    preempted Pods (if any) in the `PostFilterResult` from the `PostFilter` method;
-    returning nil means the plugin did not preempt any Pods at all.'

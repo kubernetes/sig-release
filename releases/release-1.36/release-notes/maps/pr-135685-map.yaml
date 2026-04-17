@@ -2,4 +2,11 @@ pr: 135685
 releasenote:
   text: |-
     Kube-apiserver: Fixed request latency annotation `apiserver.latency.k8s.io/total` in the audit log when request took more than `500ms`.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  - regression
+  areas:
+  - apiserver
 pr_body: ""

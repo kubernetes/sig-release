@@ -4,3 +4,11 @@ releasenote:
   text: 'Kubelet: Deferred the removal of deprecated kubelet configuration flags (and
     their related fallback behavior) from version 1.36 to 1.37, aligning with the
     end of containerd v1.7 support.'
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet

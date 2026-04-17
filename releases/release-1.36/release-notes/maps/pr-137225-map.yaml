@@ -2,3 +2,21 @@ pr: 137225
 pr_body: ""
 releasenote:
   text: Updated etcd client library to `v3.6.8`.
+  sigs:
+  - api-machinery
+  - auth
+  - cloud-provider
+  - cluster-lifecycle
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - dependency
+  areas:
+  - test
+  - apiserver
+  - cloudprovider
+  - provider/gcp
+  - kubeadm
+  - dependency

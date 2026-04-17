@@ -2,4 +2,14 @@ pr: 135434
 releasenote:
   text: |-
     Fixed a loophole that allowed users to work around DRA extended resource quota set by system administrators.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
 pr_body: ""

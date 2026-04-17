@@ -2,4 +2,11 @@ pr: 135694
 releasenote:
   text: |-
     Updated `cri-tools` to `v1.35.0`.
+  sigs:
+  - cloud-provider
+  - node
+  kinds:
+  - cleanup
+  areas:
+  - provider/gcp
 pr_body: ""

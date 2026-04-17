@@ -2,4 +2,16 @@ pr: 136598
 releasenote:
   text: |-
     Fixed a bug where pod lifecycle hooks could run for their full duration when pods are terminated.
+  sigs:
+  - api-machinery
+  - auth
+  - cloud-provider
+  - node
+  - scheduling
+  kinds:
+  - dependency
+  areas:
+  - apiserver
+  - cloudprovider
+  - dependency
 pr_body: ""

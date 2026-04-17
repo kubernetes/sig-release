@@ -2,4 +2,9 @@ pr: 136450
 releasenote:
   text: |-
     Added support for unknown (non-pod) references in `ResourceClaim` `status.reservedFor`. The controller now gracefully skips these entries instead of halting sync, ensuring stale pod references can still be cleaned up.
+  sigs:
+  - apps
+  - node
+  kinds:
+  - feature
 pr_body: ""

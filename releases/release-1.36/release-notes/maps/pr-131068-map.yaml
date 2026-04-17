@@ -2,4 +2,11 @@ pr: 131068
 releasenote:
   text: |-
     Fixed `fake.NewClientset()` to work properly with correct schema.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - code-generation
 pr_body: ""

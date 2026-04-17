@@ -2,4 +2,9 @@ pr: 136050
 releasenote:
   text: |-
     Fixed log verbosity for non-error messages in the SELinux warning controller so they are no longer logged at error level.
+  sigs:
+  - apps
+  - storage
+  kinds:
+  - bug
 pr_body: ""

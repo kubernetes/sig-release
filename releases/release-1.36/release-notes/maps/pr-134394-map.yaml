@@ -2,4 +2,10 @@ pr: 134394
 releasenote:
   text: |-
     Updated kube-dns to `v1.26.7`.
+  sigs:
+  - cloud-provider
+  kinds:
+  - cleanup
+  areas:
+  - provider/gcp
 pr_body: ""

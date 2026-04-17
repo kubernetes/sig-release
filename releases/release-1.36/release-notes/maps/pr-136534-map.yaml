@@ -2,4 +2,10 @@ pr: 136534
 releasenote:
   text: |-
     Kubectl: Fixed a panic when processing pods with nil resource requests but populated container status resources.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl
 pr_body: ""

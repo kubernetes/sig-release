@@ -2,4 +2,13 @@ pr: 136673
 releasenote:
   text: |-
     Locked the `DisableNodeKubeProxyVersion` feature gate to enabled by default.
+  sigs:
+  - cli
+  - network
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - kubelet
+  - kubectl
 pr_body: ""

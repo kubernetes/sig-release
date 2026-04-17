@@ -1,0 +1,13 @@
+pr: 138049
+releasenote:
+  text: |-
+    Fixed erroneously reporting a pod-level resize in progress on Pod creation when the `InPlacePodLevelResourcesVerticalScaling` feature gate is enabled.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+pr_body: ""

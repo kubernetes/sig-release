@@ -1,6 +1,12 @@
 pr: 135502
 pr_body: ""
 releasenote:
-  text: Improved preemption behavior so that pods preempted during the `PreBind` phase
-    are now re-queued into the backoff queue instead of being deleted via the API
-    server, enabling more graceful handling of preemption during binding.
+  text: |-
+    Improved preemption behavior so that pods preempted during the `PreBind` phase are now re-queued into the backoff queue instead of being deleted via the API server, enabling more graceful handling of preemption during binding.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

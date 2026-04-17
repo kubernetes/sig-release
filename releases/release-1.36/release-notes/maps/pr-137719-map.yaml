@@ -1,0 +1,16 @@
+pr: 137719
+releasenote:
+  text: |-
+    kubelet: Added tiered cgroup v2 memory protection for MemoryQoS: `memory.min` for Guaranteed pods and `memory.low` for Burstable pods, with node-level metrics and rollback reconciliation (KEP-2570).
+  sigs:
+  - node
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

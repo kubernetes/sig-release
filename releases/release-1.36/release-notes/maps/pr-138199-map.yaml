@@ -1,0 +1,19 @@
+pr: 138199
+releasenote:
+  text: |-
+    Updated the pause image to `v3.10.2`.
+  sigs:
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  - cleanup
+  areas:
+  - test
+  - kubectl
+  - provider/gcp
+  - kubeadm
+pr_body: ""

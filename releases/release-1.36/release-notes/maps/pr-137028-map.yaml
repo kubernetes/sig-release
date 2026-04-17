@@ -1,0 +1,22 @@
+pr: 137028
+releasenote:
+  text: |-
+    Added the ResourcePoolStatusRequest API (`v1alpha1`) for querying DRA resource pool availability. External schedulers can discover available devices across pools before submitting workloads. Requires the `DRAResourcePoolStatus` feature gate (alpha).
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - etcd
+  - instrumentation
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - code-generation
+pr_body: ""

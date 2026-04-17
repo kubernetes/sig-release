@@ -1,0 +1,13 @@
+pr: 137544
+releasenote:
+  text: |-
+    Promoted the `NodeLogQuery` feature gate to GA.
+  sigs:
+  - node
+  - windows
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

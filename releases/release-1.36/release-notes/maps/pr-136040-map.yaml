@@ -2,4 +2,11 @@ pr: 136040
 releasenote:
   text: |-
     Changed some error logs to info logs with verbosity level in `controller/resourcequota` and `controller/garbagecollector`.
+  sigs:
+  - api-machinery
+  - apps
+  kinds:
+  - bug
+  areas:
+  - logging
 pr_body: ""

@@ -1,8 +1,12 @@
 pr: 134827
 pr_body: ""
 releasenote:
-  text: 'Client-go: informer stores now keep track the resourceVersion they 
-    are synced to (via add/update/delete events, or replace calls, or bookmark 
-    events), and provide a `LastStoreSyncResourceVersion` method to obtain this 
-    resource version. This method can return `""` if the store has not been synced 
-    to yet, and depends on the `AtomicFIFO` feature being enabled.'
+  text: |-
+    Client-go: informer stores now keep track the resourceVersion they are synced to (via add/update/delete events, or replace calls, or bookmark events), and provide a `LastStoreSyncResourceVersion` method to obtain this resource version. This method can return `""` if the store has not been synced to yet, and depends on the `AtomicFIFO` feature being enabled.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

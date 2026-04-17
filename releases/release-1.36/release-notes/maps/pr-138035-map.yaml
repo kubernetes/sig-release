@@ -1,0 +1,10 @@
+pr: 138035
+releasenote:
+  text: |-
+    Updated the CDI spec for discoverable metadata to `v0.5.0`.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

@@ -1,5 +1,15 @@
 pr: 134675
 pr_body: ""
 releasenote:
-  text: Updated API server internal API group to improve openapi schema correctness
-    for fields being optional or required.
+  text: |-
+    Updated API server internal API group to improve openapi schema correctness for fields being optional or required.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - node
+  - storage
+  kinds:
+  - api-change
+  areas:
+  - code-generation

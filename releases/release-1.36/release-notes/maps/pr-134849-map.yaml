@@ -2,4 +2,10 @@ pr: 134849
 releasenote:
   text: |-
     Fixed `kubectl label` output message to display `modified` when labels are both added and removed.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl
 pr_body: ""

@@ -2,4 +2,12 @@ pr: 135919
 releasenote:
   text: |-
     Kubelet: Fixed Dynamic Resource Allocation (DRA) to correctly handle multiple `ResourceClaims` even if one is already prepared.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
 pr_body: ""

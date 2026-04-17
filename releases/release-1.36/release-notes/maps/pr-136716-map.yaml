@@ -1,5 +1,13 @@
 pr: 136716
 pr_body: ""
 releasenote:
-  text: Added new `concurrent-node-status-updates` flag that is split from the `concurrent-node-syncs`
-    flag.
+  text: |-
+    Added new `concurrent-node-status-updates` flag that is split from the `concurrent-node-syncs` flag.
+  sigs:
+  - cloud-provider
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - cloudprovider
+  - code-generation

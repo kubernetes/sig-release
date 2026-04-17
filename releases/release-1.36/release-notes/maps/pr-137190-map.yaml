@@ -1,0 +1,18 @@
+pr: 137190
+releasenote:
+  text: |-
+    Added list-type support for attributes in DRA (KEP-5491). The `DRAListTypeAttributes` feature gate (disabled by default) activates the following enhancements:
+    - DRA drivers can use list-type fields (`bools`/`ints`/`strings`/`versions`) for device attributes in ResourceSlice. The number of attribute values, including scalars and lists, per single device is limited to 48.
+    - The `matchAttribute`/`distinctAttribute` constraints in ResourceClaim now work on both scalar and list attributes. The `matchAttribute` constraint matches when the intersection of all list values among candidate devices is non-empty. The `distinctAttribute` constraint (behind the `ConsumableCapacity` feature gate) matches when all list values among candidate devices are pairwise disjoint. Scalar values are implicitly treated as a singleton set.
+    - Added a new CEL function `.includes` that works on both scalar and list attributes to test inclusion (e.g., `device.attributes["dra.example.com"].model.includes("model-a")`), supporting migration when a DRA driver changes an attribute value type from scalar to list or vice versa.
+  sigs:
+  - api-machinery
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - code-generation
+pr_body: ""

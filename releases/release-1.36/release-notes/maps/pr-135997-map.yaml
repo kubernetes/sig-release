@@ -2,4 +2,13 @@ pr: 135997
 releasenote:
   text: |-
     Added validation to prevent negative duration values for `imageMinimumGCAge`.
+  sigs:
+  - api-machinery
+  - node
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - kubelet
+  - code-generation
 pr_body: ""

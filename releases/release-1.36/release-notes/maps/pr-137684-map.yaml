@@ -1,0 +1,20 @@
+pr: 137684
+releasenote:
+  text: |-
+    Graduated the `InPlacePodLevelResourcesVerticalScaling` feature gate to beta, enabled by default. Pod-level CPU and memory resources can be resized in place for Pods with pod-level resources configured.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - node
+  - release
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - release-eng
+  - code-generation
+pr_body: ""

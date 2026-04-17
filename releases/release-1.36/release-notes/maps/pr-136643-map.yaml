@@ -2,4 +2,12 @@ pr: 136643
 releasenote:
   text: |-
     Promoted `kubectl kuberc` commands to beta.
+  sigs:
+  - cli
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubectl
 pr_body: ""

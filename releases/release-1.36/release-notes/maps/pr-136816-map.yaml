@@ -1,4 +1,11 @@
 pr: 136816
 pr_body: ""
 releasenote:
-  text: Added missing flags to `webhook serving` options for `k8s.io/cloud-provider`.
+  text: |-
+    Added missing flags to `webhook serving` options for `k8s.io/cloud-provider`.
+  sigs:
+  - cloud-provider
+  kinds:
+  - feature
+  areas:
+  - cloudprovider

@@ -1,0 +1,11 @@
+pr: 137904
+releasenote:
+  text: |-
+    Fixed a `v1.35` regression in StatefulSet parallel Pod management by disabling the `MaxUnavailableStatefulSet` feature by default.
+  sigs:
+  - apps
+  kinds:
+  - bug
+  - regression
+  areas: []
+pr_body: ""

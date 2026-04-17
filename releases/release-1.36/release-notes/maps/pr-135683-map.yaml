@@ -1,5 +1,11 @@
 pr: 135683
 pr_body: ""
 releasenote:
-  text: Fixed `kubectl describe` to correctly recognize uppercase acronyms as a single
-    element when displaying Custom Resource field names.
+  text: |-
+    Fixed `kubectl describe` to correctly recognize uppercase acronyms as a single element when displaying Custom Resource field names.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

@@ -2,4 +2,11 @@ pr: 135800
 releasenote:
   text: |-
     Improved CPU usage in the `nftables` mode of `kube-proxy` when loading very large rulesets.
+  sigs:
+  - network
+  kinds:
+  - bug
+  - cleanup
+  areas:
+  - kube-proxy
 pr_body: ""

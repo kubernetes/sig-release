@@ -2,4 +2,13 @@ pr: 135522
 releasenote:
   text: |-
     Promoted workqueue metrics from ALPHA to BETA.
+  sigs:
+  - architecture
+  - instrumentation
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - stable-metrics
 pr_body: ""

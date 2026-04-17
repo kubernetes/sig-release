@@ -3,4 +3,21 @@ releasenote:
   text: |-
     Removed the in-tree Portworx volume plugin, completing the migration to CSI.
     Removed the GA `CSIMigrationPortworx` feature gate (locked since `v1.33`) and alpha `InTreePluginPortworxUnregister` feature gate, with all operations now redirected to CSI.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - node
+  - scalability
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - code-generation
+  - dependency
 pr_body: ""

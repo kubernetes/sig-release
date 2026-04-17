@@ -2,4 +2,12 @@ pr: 135485
 releasenote:
   text: |-
     Kubelet: Fixed device plugin test failures after kubelet restart.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - failing-test
+  areas:
+  - test
+  - kubelet
 pr_body: ""

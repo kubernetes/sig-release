@@ -2,4 +2,8 @@ pr: 136344
 releasenote:
   text: |-
     Renamed `PodGroupInfo` to `PodGroupState`, which may break custom scheduler plugins that use `Handle.WorkloadManager`.
+  sigs:
+  - scheduling
+  kinds:
+  - cleanup
 pr_body: ""

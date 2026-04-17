@@ -1,7 +1,14 @@
 pr: 137098
 pr_body: ""
 releasenote:
-  text: Fixed `container_swap_usage_bytes` in the `/metrics/resource` endpoint to
-    correctly report container-level swap usage instead of always reporting 0. The
-    root cause was missing logic in `addCadvisorContainerCPUAndMemoryStats` to propagate
-    swap stats from cadvisor to the container stats object.
+  text: |-
+    Fixed `container_swap_usage_bytes` in the `/metrics/resource` endpoint to correctly report container-level swap usage instead of always reporting 0. The root cause was missing logic in `addCadvisorContainerCPUAndMemoryStats` to propagate swap stats from cadvisor to the container stats object.
+  sigs:
+  - apps
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet

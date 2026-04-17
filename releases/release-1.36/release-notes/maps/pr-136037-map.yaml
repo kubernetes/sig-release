@@ -2,4 +2,10 @@ pr: 136037
 releasenote:
   text: |-
     Kubelet: Fixed a nil pointer dereference when handling pod updates of mirror pods with the `NodeDeclaredFeatures` feature gate enabled.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
 pr_body: ""
