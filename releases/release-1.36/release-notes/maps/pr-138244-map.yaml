@@ -1,0 +1,78 @@
+pr: 138244
+pr_body: "## What type of PR is this?\r\n\r\n/kind bug\r\n\r\n## What this PR does
+  / why we need it\r\n\r\nOn systems with many NUMA nodes (e.g. NVIDIA GB200 compute
+  trays with 36 OS-visible NUMA nodes, only 2 CPU NUMA nodes), the device manager's
+  `generateDeviceTopologyHints` calls `bitmask.IterateBitMasks` over **all** kubelet-known
+  NUMA nodes. Since `IterateBitMasks` enumerates every non-empty subset, the cost
+  is O(2^n) — with n=34 that is ~17 billion iterations. This causes kubelet to stall
+  indefinitely during topology hint computation and the pod never reaches `Allocate`.\r\n\r\n###
+  Root cause\r\nThe iteration space is derived from `m.numaNodes`, which includes
+  every NUMA node the OS exposes. On GB200 the majority of those nodes carry only
+  GPU HBM (Coherent Device Memory) and host zero devices for any given\r\ndevice-plugin
+  resource. Including them inflates n without contributing useful hints.\r\n\r\nThis
+  PR constrains the bitmask iteration to only the NUMA nodes that actually host available
+  or reusable devices for the requested resource, reducing the search space from 2^n
+  (machine-wide) to 2^k (device-relevant), where k is typically 1–2 on GB200 systems.\r\n\r\n###
+  Fix\r\n\r\n- Introduce `deviceNUMANodes(resource)`, which collects the NUMA node
+  IDs from **all registered devices** (`m.allDevices[resource]`) regardless of allocation
+  state. `generateDeviceTopologyHints` now iterates only over\r\nthose nodes, reducing
+  the search space from 2^n (machine-wide) to 2^k (device-relevant), where k is typically
+  1–2 on GB200 systems.\r\n\r\n- Using `allDevices` (rather than `available ∪ reusable`)
+  ensures that `minAffinitySize` and `Preferred` flags are computed identically to
+  the original code — device-less NUMA nodes contribute zero to `devicesInMask`\r\nand
+  can never reduce `minAffinitySize`, so any mask containing them is always non-preferred.
+  Removing them from iteration is therefore **behavior-preserving** for all existing
+  configurations.\r\n\r\n### Changes\r\n\r\n1. **`deviceNUMANodes(resource)`** — new
+  helper that returns the sorted list of NUMA node IDs hosting at least one device
+  for the given resource. Falls back to `m.numaNodes` when no topology info exists.\r\n\r\n2.
+  **`generateDeviceTopologyHints()`** — now calls `IterateBitMasks(deviceNUMANodes,
+  …)` instead of `IterateBitMasks(m.numaNodes, …)`. No synthetic fallback hint is
+  needed because the iteration already covers every NUMA node that could satisfy a
+  request.\r\n\r\n3. **Unit tests** :     \r\n   - `TestDeviceNUMANodes`: validates
+  NUMA node collection from `allDevices` and fallback behavior.\r\n   - `TestGenerateDeviceTopologyHintsFiltersNUMANodes`:
+  verifies that device-less NUMA nodes are excluded from hints, including a 34-device-less-node
+  scenario.\r\n   - `TestFilteredDeviceHintsMergeWithOtherProviders`: confirms that
+  filtered device hints merge correctly with CPU/memory providers through the TopologyManager.\r\n\r\n##
+  Which issue(s) this PR fixes\r\n\r\nFixes https://github.com/kubernetes/kubernetes/issues/135541\r\n\r\n##
+  How has this been tested?\r\n\r\n- All existing `TestGetTopologyHints`, `TestGetPodTopologyHints`,
+  and `TestTopologyAlignedAllocation` tests pass unchanged.\r\n- `TestDeviceNUMANodes`
+  tests validate NUMA filtering and fallback.\r\n- `TestGenerateDeviceTopologyHintsFiltersNUMANodes
+  ` validates hint filtering including a 34-device-less-node scenario.\r\n- `TestFilteredDeviceHintsMergeWithOtherProviders`
+  validates cross-provider hint merging through TopologyManager.\r\n- Verified with
+  `hack/verify-golangci-lint.sh pkg/kubelet/cm/devicemanager/...`: 0 lint issues.\r\n\r\n###
+  Validation on NVIDIA GB200 bare-metal node\r\n\r\nTested on a GB200 compute tray
+  (36 NUMA nodes) with the following kubelet configuration:\r\n​\r\n```yaml\r\ncpuManagerPolicyOptions:\r\n
+  \ distribute-cpus-across-numa: \"true\"\r\ntopologyManagerPolicy: best-effort\r\ntopologyManagerScope:
+  pod\r\ntopologyManagerPolicyOptions:\r\n  prefer-closest-numa-nodes: \"true\"\r\n
+  \ max-allowable-numa-nodes: \"36\"\r\n```\r\n\r\nCreated a KubeVirt VMI with `dedicatedCpuPlacement`,
+  120 vCPUs, 4 Blackwell GPU passthrough devices, and EGM or hugepages. With this
+  fix applied, the VMI reaches `Running` state and `Ready=True`:\r\n​\r\n```\r\n$
+  kubectl get vmi -owide\r\nNAME                         AGE   PHASE     IP            NODENAME
+  \    READY   LIVE-MIGRATABLE   PAUSED\r\ntest-120cpu-numa-4gpu-vm   29m   Running
+  \  10.244.3.17   computetray-w8   True    False\r\n```\r\n\r\nWithout this fix,
+  the same virt-launcher pod would remain stuck in `Pending` indefinitely due to the
+  topology hint computation stall described in https://github.com/kubernetes/kubernetes/issues/135541.\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\nrelease-note:\r\n```\r\nFixed
+  a kubelet device manager bug where topology hint computation enumerated O(2^n) NUMA
+  node combinations using all machine NUMA nodes. On systems with many NUMA nodes
+  that carry no devices (e.g. NVIDIA GB200 with 36 NUMA nodes), this caused kubelet
+  to stall indefinitely during pod admission. The device manager now restricts iteration
+  to NUMA nodes that actually host devices for the requested resource, reducing the
+  search space to O(2^k) where k is typically 1–2.\r\n```\r\n\r\n#### Additional documentation
+  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n<!--\r\nThis
+  section can be blank if this pull request does not require a release note.\r\n\r\nWhen
+  adding links which point to resources within git repositories, like\r\nKEPs or supporting
+  documentation, please reference a specific commit and avoid\r\nlinking directly
+  to the master branch. This ensures that links reference a\r\nspecific point in time,
+  rather than a document that may change over time.\r\n\r\nSee here for guidance on
+  getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
+  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
+  <link>\r\n- [Other doc]: <link>\r\n-->\r\n```docs\r\n\r\n```\r\n\r\n/sig node\r\n/area
+  kubelet\r\n/priority important-longterm"
+releasenote:
+  text: Fixed a kubelet device manager bug where topology hint computation enumerated
+    O(2^n) NUMA node combinations using all machine NUMA nodes. On systems with many
+    NUMA nodes that carry no devices (e.g. NVIDIA GB200 with 36 NUMA nodes), this
+    caused kubelet to stall indefinitely during pod admission. The device manager
+    now restricts iteration to NUMA nodes that actually host devices for the requested
+    resource, reducing the search space to O(2^k) where k is typically 1–2.
