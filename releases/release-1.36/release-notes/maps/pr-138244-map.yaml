@@ -1,0 +1,15 @@
+pr: 138244
+releasenote:
+  text: Fixed a kubelet device manager bug where topology hint computation enumerated
+    O(2^n) NUMA node combinations using all machine NUMA nodes. On systems with many
+    NUMA nodes that carry no devices (e.g. NVIDIA GB200 with 36 NUMA nodes), this
+    caused kubelet to stall indefinitely during pod admission. The device manager
+    now restricts iteration to NUMA nodes that actually host devices for the requested
+    resource, reducing the search space to O(2^k) where k is typically 1–2.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

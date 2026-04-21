@@ -119,8 +119,7 @@
     "sigs": [
       "node"
     ],
-    "do_not_publish": true,
-    "pr_body": "\r\n\r\n\u003c!--  Thanks for sending a pull request!  Here are some tips for you:\r\n\r\n1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide\r\n2. Please label this pull request according to what type of issue you are addressing, especially if this is a release targeted pull request. For reference on required PR/issue labels, read here:\r\nhttps://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label\r\n3. Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md\r\n4. If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews\r\n5. If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests\r\n--\u003e\r\n\r\n#### What type of PR is this?\r\n/kind cleanup\r\n\u003c!--\r\nAdd one of the following kinds:\r\n/kind bug\r\n/kind cleanup\r\n/kind documentation\r\n/kind feature\r\n\r\nOptionally add one or more of the following kinds if applicable:\r\n/kind api-change\r\n/kind deprecation\r\n/kind failing-test\r\n/kind flake\r\n/kind regression\r\n--\u003e\r\n\r\n#### What this PR does / why we need it:\r\nAdjust the expected and actual parameters of the unit test Equal function to the correct order\r\n#### Which issue(s) this PR fixes:\r\n\u003c!--\r\n*Automatically closes linked issue when PR is merged.\r\nUsage: `Fixes #\u003cissue number\u003e`, or `Fixes (paste link of issue)`.\r\n_If PR is about `failing-tests or flakes`, please post the related issues/tests in a comment and do not use `Fixes`_*\r\n--\u003e\r\nFixes #\r\n\r\n#### Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\u003c!--\r\nIf no, just write \"NONE\" in the release-note block below.\r\nIf yes, a release note is required:\r\nEnter your extended release note in the block below. If the PR requires additional action from users switching to the new release, include the string \"action required\".\r\n\r\nFor more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n--\u003e\r\n```release-note\r\n \"NONE\"\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n\u003c!--\r\nThis section can be blank if this pull request does not require a release note.\r\n\r\nWhen adding links which point to resources within git repositories, like\r\nKEPs or supporting documentation, please reference a specific commit and avoid\r\nlinking directly to the master branch. This ensures that links reference a\r\nspecific point in time, rather than a document that may change over time.\r\n\r\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease use the following format for linking documentation:\r\n- [KEP]: \u003clink\u003e\r\n- [Usage]: \u003clink\u003e\r\n- [Other doc]: \u003clink\u003e\r\n--\u003e\r\n```docs\r\n\r\n```\r\n"
+    "do_not_publish": true
   },
   "131950": {
     "commit": "18cbbbd34e8ea009934198687de5a0dba23cb22f",
@@ -652,8 +651,7 @@
     "sigs": [
       "architecture"
     ],
-    "do_not_publish": true,
-    "is_mapped": true
+    "do_not_publish": true
   },
   "134867": {
     "commit": "9b8aa0b5850cbac7b4fbb48ac4c24e2537605e8e",
@@ -669,8 +667,7 @@
     "sigs": [
       "architecture"
     ],
-    "do_not_publish": true,
-    "is_mapped": true
+    "do_not_publish": true
   },
   "134937": {
     "commit": "6adb2afe557e066738389124cefa0db496a4d3c1",
@@ -1827,8 +1824,7 @@
       "testing"
     ],
     "duplicate": true,
-    "do_not_publish": true,
-    "is_mapped": true
+    "do_not_publish": true
   },
   "135742": {
     "commit": "5262149cd6ffc83eb37f2ec6c670cd516d498359",
@@ -2677,8 +2673,7 @@
     ],
     "feature": true,
     "duplicate_kind": true,
-    "do_not_publish": true,
-    "is_mapped": true
+    "do_not_publish": true
   },
   "136084": {
     "commit": "a221280c5389cf5f4008145145259116c58fd21b",
@@ -3257,8 +3252,7 @@
     ],
     "duplicate": true,
     "duplicate_kind": true,
-    "do_not_publish": true,
-    "is_mapped": true
+    "do_not_publish": true
   },
   "136314": {
     "commit": "6c300757e80934ef07ed29a2fbf5e6db55e3005b",
@@ -8153,28 +8147,6 @@
     "duplicate": true,
     "is_mapped": true
   },
-  "137715": {
-    "commit": "aa13dc5aa3825476c3857294c4a1a4ef14cca72f",
-    "text": "Writes to the ServiceCIDR main resource ignore status field changes in the request, consistent with all other Kubernetes APIs. The `ServiceCIDRStatusFieldWiping` feature gate can be disabled to restore the previous behavior; it will be locked to enabled in a future release.",
-    "markdown": "Writes to the ServiceCIDR main resource ignore status field changes in the request, consistent with all other Kubernetes APIs. The `ServiceCIDRStatusFieldWiping` feature gate can be disabled to restore the previous behavior; it will be locked to enabled in a future release. ([#137715](https://github.com/kubernetes/kubernetes/pull/137715), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery, Network and Testing]",
-    "author": "jpbetz",
-    "author_url": "https://github.com/jpbetz",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/137715",
-    "pr_number": 137715,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery",
-      "network",
-      "testing"
-    ],
-    "duplicate": true,
-    "is_mapped": true
-  },
   "137719": {
     "commit": "c2a7819806ba6078330d495ac4ef274b2e2b3559",
     "text": "kubelet: Added tiered cgroup v2 memory protection for MemoryQoS: `memory.min` for Guaranteed pods and `memory.low` for Burstable pods, with node-level metrics and rollback reconciliation (KEP-2570).",
@@ -8204,6 +8176,28 @@
       "storage",
       "testing"
     ],
+    "is_mapped": true
+  },
+  "137715": {
+    "commit": "aa13dc5aa3825476c3857294c4a1a4ef14cca72f",
+    "text": "Writes to the ServiceCIDR main resource ignore status field changes in the request, consistent with all other Kubernetes APIs. The `ServiceCIDRStatusFieldWiping` feature gate can be disabled to restore the previous behavior; it will be locked to enabled in a future release.",
+    "markdown": "Writes to the ServiceCIDR main resource ignore status field changes in the request, consistent with all other Kubernetes APIs. The `ServiceCIDRStatusFieldWiping` feature gate can be disabled to restore the previous behavior; it will be locked to enabled in a future release. ([#137715](https://github.com/kubernetes/kubernetes/pull/137715), [@jpbetz](https://github.com/jpbetz)) [SIG API Machinery, Network and Testing]",
+    "author": "jpbetz",
+    "author_url": "https://github.com/jpbetz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/137715",
+    "pr_number": 137715,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "network",
+      "testing"
+    ],
+    "duplicate": true,
     "is_mapped": true
   },
   "137753": {
@@ -8508,6 +8502,26 @@
     "duplicate_kind": true,
     "is_mapped": true
   },
+  "138244": {
+    "commit": "0275382260bc0d5279b703d21ec7ad4db35b8d78",
+    "text": "Fixed a kubelet device manager bug where topology hint computation enumerated O(2^n) NUMA node combinations using all machine NUMA nodes. On systems with many NUMA nodes that carry no devices (e.g. NVIDIA GB200 with 36 NUMA nodes), this caused kubelet to stall indefinitely during pod admission. The device manager now restricts iteration to NUMA nodes that actually host devices for the requested resource, reducing the search space to O(2^k) where k is typically 1–2.",
+    "markdown": "Fixed a kubelet device manager bug where topology hint computation enumerated O(2^n) NUMA node combinations using all machine NUMA nodes. On systems with many NUMA nodes that carry no devices (e.g. NVIDIA GB200 with 36 NUMA nodes), this caused kubelet to stall indefinitely during pod admission. The device manager now restricts iteration to NUMA nodes that actually host devices for the requested resource, reducing the search space to O(2^k) where k is typically 1–2. ([#138244](https://github.com/kubernetes/kubernetes/pull/138244), [@fanzhangio](https://github.com/fanzhangio)) [SIG Node]",
+    "author": "fanzhangio",
+    "author_url": "https://github.com/fanzhangio",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/138244",
+    "pr_number": 138244,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "do_not_publish": true,
+    "is_mapped": true
+  },
   "138261": {
     "commit": "6e753bd2b4793152b55ad9cefd3130169fb1a749",
     "text": "Kubernetes is now built using Go `v1.26.2`.",
@@ -8525,5 +8539,47 @@
     ],
     "duplicate": true,
     "is_mapped": true
+  },
+  "138299": {
+    "commit": "f5c7b422749303542baa17f1322d95250df9b0b5",
+    "text": "Kubernetes is now built using Go `v1.26.2`.",
+    "markdown": "Kubernetes is now built using Go `v1.26.2`. ([#138299](https://github.com/kubernetes/kubernetes/pull/138299), [@xmudrii](https://github.com/xmudrii)) [SIG Release and Testing]",
+    "author": "xmudrii",
+    "author_url": "https://github.com/xmudrii",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/138299",
+    "pr_number": 138299,
+    "areas": [
+      "test",
+      "release-eng"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "release",
+      "testing"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "138318": {
+    "commit": "462e759d1995c143fda094cd7f591b10fd8cdee6",
+    "text": "Fixed running of DRA e2e tests in air-gapped clusters or with test images in private registries.",
+    "markdown": "Fixed running of DRA e2e tests in air-gapped clusters or with test images in private registries. ([#138318](https://github.com/kubernetes/kubernetes/pull/138318), [@jsafrane](https://github.com/jsafrane)) [SIG Node and Testing]",
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/138318",
+    "pr_number": 138318,
+    "areas": [
+      "test"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node",
+      "testing"
+    ],
+    "duplicate": true
   }
 }
