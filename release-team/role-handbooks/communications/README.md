@@ -107,6 +107,12 @@ The release lead will drive the content for the release theme and logo.
 3. In a second PR opened (ideally) a week before the release day, the Comms Lead will:
 - remove the `draft: true` parameter
 - ensure the date parameter is set to the release date
+- add the `release_announcement` parameter:
+
+  ```yaml
+  release_announcement:
+    minor_version: "<major>.<minor>"
+  ```
 - add the release logo and theme to the final release blog
 
 > [!IMPORTANT]  
