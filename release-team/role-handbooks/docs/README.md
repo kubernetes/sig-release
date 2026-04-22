@@ -52,7 +52,7 @@ The Docs Lead is responsible for working with the Release Team to coordinate doc
 * Approving reviewed documentation to ensure its inclusion in the upcoming release
 * Migrating the old website [version] documentation and updating it with the new release
 * Communicating changes with all of the localization branches in order to stay synced across repositories
-* Updating the [Docs Lead and Shadow Handbook](release-team/role-handbooks/docs/README.md) and [Release Team Onboarding Guide](/release-team/release-team-onboarding.md) instructions following each release
+* Updating the [Docs Lead and Shadow Handbook](/release-team/role-handbooks/docs/README.md) and [Release Team Onboarding Guide](/release-team/release-team-onboarding.md) instructions following each release
 
 ## Prerequisites for Docs Lead and Shadows
 
