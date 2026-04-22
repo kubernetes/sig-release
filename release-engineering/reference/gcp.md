@@ -13,7 +13,7 @@ The following kubernetes.io Google Groups exist to grant Release Managers access
 Mail to the groups below will be ignored. Please instead use the [contact groups listed on the Release Managers page][release-managers].
 
 - `k8s-infra-release-admins` - Release Engineering subproject owners
-- `k8s-infra-release-editors` - Patch Release Team / Branch Managers
+- `k8s-infra-release-editors` - Release Managers
 - `k8s-infra-release-viewers` - Release Manager Associates
 
 [Membership](https://git.k8s.io/k8s.io/groups/groups.yaml) and [permissions](https://git.k8s.io/k8s.io/infra/gcp/ensure-release-projects.sh) for each group is defined in [kubernetes/k8s.io](https://git.k8s.io/k8s.io).

@@ -1,8 +1,7 @@
-# Post release branch creation
+# Branch Creation
 
 <!-- toc -->
-- [Post release branch creation](#post-release-branch-creation)
-  - [Checklist](#checklist)
+- [Checklist](#checklist)
     - [Remove EOL version jobs from test-infra (optional)](#remove-eol-version-jobs-from-test-infra-optional)
     - [Update milestone applier rules and check milestone requirements](#update-milestone-applier-rules-and-check-milestone-requirements)
     - [Update Kubekins-e2e v2 variants](#update-kubekins-e2e-v2-variants)
@@ -20,7 +19,7 @@
   - [Notes](#notes)
 
 This document details the tasks that need to be executed after cutting a Kubernetes rc.0 release. These tasks ensure proper configuration for the new release branch and testing infrastructure.
-They must be executed after the `nomock release` is completed, and the release branch is created, as stated in the [branch creation chapter](k8s-release-cut.md#next-release-branch-creation) of the release cut handbook.
+They must be executed after the `nomock release` is completed, and the release branch is created, as stated in the [branch creation chapter](release-cuts.md#next-release-branch-creation) of the release cut handbook.
 
 PR can be created beforehand (and this is recommended in order to get reviews in a timely manner) but you got to remember to put a `/hold` on all the PRs, they have to be lifted only once the `nomock` release phase is done and the branch is created.
 
@@ -101,7 +100,7 @@ variants:
     BAZEL_VERSION: 3.4.1
 ```
 
-Before proceding with the next step, wait for the `post-test-infra-push-kubekins-e2e` postsubmit to finish. You can check the status on [the Prow Status page](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
+Before proceeding with the next step, wait for the `post-test-infra-push-kubekins-e2e` postsubmit to finish. You can check the status on [the Prow Status page](https://prow.k8s.io/?job=post-test-infra-push-kubekins-e2e).
 
 ### Update release branch jobs in kubernetes/test-infra for the new release and create the dashboards
 
@@ -222,7 +221,7 @@ The k8s-ci-builder needs to be updated in a similar fashion:
       CONFIG: '1.34'
       GO_VERSION: '1.24.5'
       GO_VERSION_TOOLING: '1.24.5'
-      OS_CODENAME: 'bullseye'
+      OS_CODENAME: 'bookworm'
    ```
 
 3. Submit your PR and wait for review and merge
@@ -353,9 +352,9 @@ Generally speaking, update scripts and documentation as needed to ensure they ar
 
 ## Additional Resources
 
-- [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/role-handbooks/branch-manager.md)
+- [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md)
 - [Example 1.34.0-rc.0 Release Cut Issue](https://github.com/kubernetes/sig-release/issues/2824)
-- [Example of post branch creation tasks issue for 1.34.0-rc.0](https://github.com/kubernetes/sig-release/issues/2826) _this also contains an example of each PR linkedin in the body of the issue_
+- [Example of post branch creation tasks issue for 1.34.0-rc.0](https://github.com/kubernetes/sig-release/issues/2826) _this also contains an example of each PR linked in the body of the issue_
 - [Slack Discussion Thread for 1.33.0-rc.0](https://kubernetes.slack.com/archives/CJH2GBF7Y/p1744125003875769) - _do not rely on the Slack thread being long lived, if it got archived or the channel got deleted, you should just rely on the docs and the PRs linked in this document_
 
 ## Notes

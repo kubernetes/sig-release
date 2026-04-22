@@ -518,7 +518,7 @@ The PRR Freeze is a hard deadline happening a week before the Enhancements Freez
 >   - https://github.com/kubernetes/enhancements/issues/3476#issuecomment-1467208685
 
 To avoid delays and ensure everything is in place for Code Freeze, the Enhancements Lead should: 
-- **Coordinate with the Release Branch Manager**: Reach out to the Release Branch Manager to give them a heads-up about the upcoming Code Freeze. They are responsible for raising the PR that officially enforces the Code Freeze. Coordinating early helps minimize the risk of delays and last-minute blockers. For more details on their role and responsibilities, refer to the [Release Branch Manager Handbook](/release-engineering/role-handbooks/branch-manager.md)
+- **Coordinate with the Release Managers**: Reach out to the Release Managers to give them a heads-up about the upcoming Code Freeze. They are responsible for raising the PR that officially enforces the Code Freeze. Coordinating early helps minimize the risk of delays and last-minute blockers. For more details on their role and responsibilities, refer to the [Release Manager Handbook](/release-engineering/handbooks/release-manager.md)
 
 - **Ensure the Code Freeze PR is Ready to Merge**:  
   The Code Freeze PR should be ready for merge (i.e., it has both `lgtm` and `approved` labels) **on or before the date of Code Freeze**.  
