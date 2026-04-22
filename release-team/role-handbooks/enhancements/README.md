@@ -23,8 +23,8 @@
   - [Escalation / Handling Unresponsive Enhancement Owners](#escalation--handling-unresponsive-enhancement-owners)
   - [Limitations](#limitations)
 - [Milestone Activities + Timing](#milestone-activities--timing)
-  - [Week 0](#week-0)
-  - [Week 1](#week-1)
+  - [Week 0-1](#week-0-1)
+  - [Week 1-2](#week-1-2)
   - [Before PRR Freeze](#before-prr-freeze)
   - [Before Enhancements Freeze](#before-enhancements-freeze)
   - [Week of Enhancements Freeze](#week-of-enhancements-freeze)
@@ -34,8 +34,7 @@
   - [Week of Code Freeze](#week-of-code-freeze)
   - [Code Freeze Party 🎉](#code-freeze-party-)
   - [Post Code Freeze](#post-code-freeze)
-  - [CNCF / Media Engagement](#cncf--media-engagement)
-  - [Succession](#succession)
+  - [Before End Of Release](#before-end-of-release)
 
 ## Overview
 
@@ -371,61 +370,76 @@ If there is continued unresponsiveness on issues, remove them from the milestone
 
 ## Milestone Activities + Timing
 
-> Note: The week #n timings given below are tentative. There are special releases like Kubernetes 1.19 or releases at the end of the year which may not strictly conform to that.
+### Week 0-1
 
-### Week 0
+#### Select enhancements shadows
 
-- Create the Enhancements Tracking Board for the current release
-  - Navigate to https://github.com/orgs/kubernetes/projects/, click the `New Project` button, select the `Table` template (default), and click the `Create` button.
-  - Update project settings by clicking `...` -> `Settings` from the project board
-    - Update the `Project name` to reflect the current release, e.g. **1.29 Enhancements Tracking**
-    - Set the project's `Visibility` to **Public**
-  - Update project access by clicking `Manage Access` from the settings page
-    - Set the `Base role` access to **Read**
-    - Add the following GitHub teams with **Admin** access
-      - @release-team-leads
-    - Add the following GitHub teams with  **Write** access
-      - @production-readiness
-      - @release-team-comms
-      - @release-team-docs
-      - @release-team-enhancements
-      - @prod-readiness-reviewers
-    - Add the @k8s-infra-ci-robot account to the board with **Write** access.
-  - Create all the Fields (columns) for the board
-    > Note: This is currently a manual process and  <https://github.com/orgs/community/discussions/41133> filed to help automate the process.
-    > Note: Since `v1.30` an exceptions process for the Release Doc team is enforced. The previous PR Ready for Review deadline has been replaced with a Docs Freeze phase. Make sure to add `At Risk for Docs Freeze` and `Tracked for Docs Freeze` to the options in `status` column. Moreover add `docs` to the options in `type` column.
-    - Until this can be automated; manually create fields with the same `Field Name`, `Field type`, and `Option` values from the previous release's project board.
-  - Create all the Views for the board
-    > Note: This is also currently a manual process until GitHub GraphQL APIs allow for manipulating Views
-    - Until this can be automated; manually create Views with the same Names and Fields from the previous release's project board.
-      Tip: You can easily view all the Fields present in each view by clicking the `v` next to the View's name a selecting `Configuration` -> `Fields`
-      Note: Remember to **save** each View. If there is a blue bubble next to the Views name there are unsaved changed for that view!
-  - Disable all Workflows for the project (these should all be disabled by default, but just double check)
-    - Click `...` -> `Workflows`
-    - For each workflow that enabled (has a green circle next to it), click the workflow and slide the toggle to 'Off'
-  - Find [Issues labeled `lead-opted-in`](https://github.com/kubernetes/enhancements/issues?q=+is%3Aissue+label%3Alead-opted-in+) and remove the `lead-opted-in` label from all issues (only from previous milestones!). Enhancements must be explicitly opted into each release.
-    > **Make sure you remove the `lead-opted-in` labels from all the KEPs of the previous release before you turn on the `test-infra` job. Otherwise KEPs from the previous release will be added to the board.**
-  - Update automation to add issues to the correct Enhancement Tracking Board. Open a PR into [kubernetes/test-infra](https://github.com/kubernetes/test-infra) with the following changes: 
-    - Update the [`GITHUB_PROJECT_BETA_NUMBER`](https://github.com/kubernetes/test-infra/blob/3de59f96b327c87c6d23a7308abc785268931707/config/jobs/kubernetes/sig-k8s-infra/trusted/sig-release-release-team-jobs/release-team-periodics.yaml#L20-L21) variable used by automation to identity the enhancements tracking board for the current release.
-    - Enable the test-infra job that syncs enhancements to the GitHub project board based on the `lead-opted-in` label. Update the name of the [periodic-sync-enhancements-github-project](https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-k8s-infra/trusted/sig-release-release-team-jobs/release-team-periodics.yaml#L2) cronjob with the version number of the release and enable the cronjob by commenting the impossible cron and uncommenting the `interval`. You can see how this was done for the v1.29 release cycle in [this commit](https://github.com/kubernetes/test-infra/pull/30528/files#diff-9d86ca0a46a2f74a2cf59fff3d18cbba57b5b3489ecc00c36b03f6b6a0c2ac3a).
-      > Note: Make sure you remove the `lead-opted-in` label from all the KEPs of the previous release before enabling the job. Otherwise KEPs from the previous cycle will be populated in the board.
-- Create a shortlink for the Tracking Board
-  - Create a free account on [bitly](https://bitly.com/) to create a shortlink for the new Enhancement Tracking Board following the pattern `k8sxyy-enhancements`, e.g. <https://bit.ly/k8s127-enhancements>.
-- Make a [pull request](https://github.com/kubernetes/sig-release/pull/1411) to add the shortlinked Enhancement Tracking Board to the current release page in [sig-release][sig-release].
-- Make a pull request to add the shortlinked Enhancement Tracking Board to [kubernetes/enhancements README page](https://github.com/kubernetes/enhancements#enhancements-tracking-board).
-- Find [Issues][enhancements-issues] from previous milestone that have graduated to Stable. Check to see if the KEP status has been updated to `implemented`. If it has, close the issue. If it has not, ask the issue contact to both update the KEP status field and close the Enhancement issue once the update PR has merged.
-- Close previous milestone by ensuring that there are no open issues/PRs in that milestone.
-- Gather Shadows to have them read this handbook and give expectations on what the process looks like and their particular role. If possible, try to schedule a call with the shadows to get them accustomed to the team. This helps as a great team building exercise.
-- Add Shadows to the  `release-team` and `release-team-enhancements` GitHub teams. (See [access-required](#access-required))
-- Add Shadows to the `Enhancements Contact` Field of the Enhancements Tracking Board.
-- Create a Google Sheet to track who will give updates at release team meetings
-  - Access: : **restricted access**, edit rights shared with release team enhancements shadows individually
+- See [Mentoring Shadows](#mentoring-shadows) and [Release Team Shadows](/release-team/shadows.md) for details.
+- Aim for a mixture of returning shadows with prior Enhancements experience (including those who might make good future leads), and shadows new to Enhancements or to the Release Team in general.
+- Aim for a mixture of timezones to ensure adequate coverage for both the APAC and EMEA meetings.
+- Since Enhancements has a lot of work to do at the beginning of the cycle, it is important to finalize shadows as soon as possible, ideally in the first few days once the shadow application closes.
 
-### Week 1
+#### Set up tracking board
 
-- Send an email to the [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to #chairs-and-techleads Slack channel with a call for enhancements and how to opt in to the release. Previous communications can be used as a template.
-  - [1.26 call for enhancements](https://groups.google.com/a/kubernetes.io/g/dev/c/lnxXgZmOOMo/m/r6QNJIewBwAJ?utm_medium=email)
-- Verify issues have k/k PRs associated, so they can be referenced and easily tracked. This is going to be critical come Enhancement Freeze and Code Freeze to see the status of the code.
+- Clean up the old tracking board (if it has not already been done). See [Cleaning Up Previously Tracked Issues](./tracking-board.md#cleaning-up-previously-tracked-issues) for step-by-step instructions.
+- Create the Enhancements Tracking Board for the current release. See [Setting Up New Tracking Board](./tracking-board.md#setting-up-new-tracking-board) for instructions.
+- Enable syncing of `lead-opted-in` issues to the new tracking board. See [Enabling Tracking Board Automation](./tracking-board.md#enabling-tracking-board-automation) for instructions.
+
+#### Update tracking board documentation
+
+Note: the Release Lead sometimes opens a single PR with the updates for all the subteams; sync with them to avoid duplicate work.
+
+- Make a pull request to [k/sig-release](https://github.com/kubernetes/sig-release) to add the tracking board link to the current release's `links.md` file.
+  - Example PR from v1.36: https://github.com/kubernetes/sig-release/pull/2939
+- Once the `links.md` PR is merged, create a `rel.k8s.io` shortlink in the format `https://rel.k8s.io/vXYY/enhancements` which redirects to `#enhancements` on the `links.md` page.
+  - Example from v1.36: https://rel.k8s.io/v136/enhancements redirects to https://github.com/kubernetes/sig-release/blob/master/releases/release-1.36/links.md#enhancements
+  - Sync with the Release Lead on who should create this link.
+- Once the shortlink is created, make sure the current release's README in [k/sig-release](https://github.com/kubernetes/sig-release) is updated with the shortlink. The Release Lead may do this as part of the PR to add the initial release README.
+  - Example from v1.36: https://github.com/kubernetes/sig-release/pull/2936
+- Make a pull request to [k/enhancements] to add the tracking board shortlink to the [README](https://github.com/kubernetes/enhancements#enhancements-tracking-board) and also update the [current release cycle](https://github.com/kubernetes/enhancements#current-release-cycle).
+  - Example PR: https://github.com/kubernetes/enhancements/pull/5348
+
+### Week 1-2
+
+#### Shadow onboarding
+
+- Once all shadows have been officially confirmed, start a Direct Message Slack thread with all of the shadows, where everyone can introduce themselves and coordinate on the tasks that need to be done each week.
+- Ask shadows to review this handbook again to familiarize themselves with the process for the Enhancements team.
+- Schedule an orientation call with the shadows to go over the Enhancements Shadow role expectations and walk through the schedule and overview of the tasks they will perform during the release.
+  - Note, shadows generally attend two orientations: an Enhancements Shadow orientation (organized by the Enhancements Lead) and a general Release Team shadow orientation (organized by the Subproject Lead(s))
+- If any shadow is not yet a Kubernetes organization member, ask them to follow the instructions to [request Kubernetes membership](https://github.com/kubernetes/community/blob/main/community-membership.md#member).
+- Once everyone has been added as an org member, open a pull request in [k/org](https://github.com/kubernetes/org) to add the shadows to the `enhancements`, `milestone-maintainers`, `release-team`, and `release-team-enhancements` GitHub teams.
+  - Example PRs: https://github.com/kubernetes/org/pull/6099, https://github.com/kubernetes/org/pull/5860
+- Open a pull request in [k/k8s.io](https://github.com/kubernetes/k8s.io) to add the shadows to the the `release-team@kubernetes.io`, `release-team-shadows@kubernetes.io`, and `release-team-enhancements@kubernetes.io` mailing lists.
+  - Example PRs: https://github.com/kubernetes/k8s.io/pull/8554, https://github.com/kubernetes/k8s.io/pull/8141
+- Open a pull request in [k/sig-release](https://github.com/kubernetes/sig-release) to update the current release page README with the shadow names and contact info.
+  - Note: the Release Lead sometimes opens a single PR with the updates for all the subteams; sync with them to avoid duplicate work.
+  - Example PRs: https://github.com/kubernetes/sig-release/pull/2944, https://github.com/kubernetes/sig-release/pull/2878
+- Add the shadows' GitHub handles to the `Enhancements Contact` field in the Settings page of the current release's GitHub tracking board.
+- Ask the shadows to join the relevant [Slack channels](#slack) if they haven't already.
+
+#### Meeting update rotation
+
+- Create a Google Sheet (private to the Enhancements Lead and Shadows) where the shadows can sign up to give updates at the weekly Release Team meetings.
+  - Example [meeting update rotation template](https://docs.google.com/document/d/1jfU34qJTiCdsE4yVO4BBJw763TDCLkrJ10QPmmHzwLw/edit?tab=t.0#heading=h.xrn657qem90v)
+- Make sure to include both APAC and EMEA meetings.
+- Make sure to also include the Monday/Friday burndown meetings which begin after Code Freeze.
+
+#### SIG outreach
+
+- Near the beginning of the release cycle, we reach out to each SIG reminding them of the enhancements-related deadlines.
+- Create a Google Sheet (private to the Enhancements Lead and Shadows) to track who will reach out to each SIG.
+  - Example [SIG outreach template](https://docs.google.com/document/d/1jfU34qJTiCdsE4yVO4BBJw763TDCLkrJ10QPmmHzwLw/edit?tab=t.601lhuiio9bs#heading=h.h2pqt5op8vqc)
+- Reach out to each [SIG](https://github.com/kubernetes/community/blob/master/sig-list.md) in their respective Slack channel, tagging one or more chairs or technical leads to communicate the Enhancements statuses. See the example [SIG Outreach communication templates](./communication-templates.md#sig-outreach-templates).
+- `sig-k8s-infra` can be skipped, as they have previously requested to be excluded from outreach.
+
+#### Call for enhancements
+
+- Once the release schedule is finalized, send an email to the [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to the `#chairs-and-techleads` Slack channel with a call for enhancements and how to opt in to the release. Previous communications can be used as a template.
+  - v1.36 [call for enhancements](https://groups.google.com/a/kubernetes.io/g/dev/c/mlVy85VxR_k/m/XCCQx4x7AQAJ) and [Slack message](https://kubernetes.slack.com/archives/CD6LAC15M/p1768842893550039)
+
+#### Sync with leads
+
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
 
 ### Before PRR Freeze
@@ -457,7 +471,6 @@ The PRR Freeze is a hard deadline happening a week before the Enhancements Freez
     - Update the `Status` field for this Enhancement in the Enhancement Tracking Board (`Tracked for enhancements freeze` or `At risk for enhancements freeze`)
     - KEPs targeting `stable` will need to be marked as `implemented` after code PRs are merged. This will need to be verified after the code freeze.
     - *Note*: Refer to the [README template](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/README.md?plain=1) to determine which sections are required based on the stage (`alpha`/`beta`/`stable`) that the enhancement is targeting. It is not the Enhancement team's responsibility to validate the correctness/completeness of the README content; we only need to make sure that each required section is present.
-- Reach out to each [SIG on Slack](https://github.com/kubernetes/community/blob/master/sig-list.md) tagging one or more chairs or technical leads to communicate the Enhancements statuses. See the example [SIG Outreach communication templates](./communication-templates.md#sig-outreach-templates).
 - Start syncing with Communications Team on giving an induction what's coming up for the release.
 - Send an email to [Kubernetes-Dev](https://groups.google.com/a/kubernetes.io/g/dev) that Enhancement freeze is coming and share current Enhancements status. Examples [1](https://groups.google.com/g/kubernetes-dev/c/-nTNtBBHL2Y/m/WfNzb_E1EAAJ).
 - Provide updates during release team meetings
@@ -632,22 +645,32 @@ Any enhancements removed from the milestone will now require an exception. As ex
   - Add incoming exception information to the previous created `exceptions.yaml` file (e.g., [PR #2753](https://github.com/kubernetes/sig-release/pull/2753), [PR #2593](https://github.com/kubernetes/sig-release/pull/2593)).
   - If an **Exception Request** for a previously removed Enhancement is approved by the Release Team (on the Exception Request email), update its **Status** to `Tracked for code freeze` on the Enhancement Tracking Board.
 
-### CNCF / Media Engagement
+### Before End Of Release
 
-- The Enhancements Lead may be called upon by the communications lead to help with media engagement near the end of the release cycle.  Please ensure that if there are any restrictions or training required by your company before engaging that you have completed those ahead of Code Thaw.
+#### CNCF / Media Engagement
 
-### Succession
+- The Enhancements Lead may be called upon by the Communications Lead to help with media engagement near the end of the release cycle. Please ensure that if there are any restrictions or training required by your company before engaging that you have completed those ahead of Code Thaw.
+- After the release, the Enhancements Lead will participate in a livestreamed CNCF Kubernetes Release webinar along with the Release Lead and Communications Lead. Work together to prepare a presentation highlighting a selection of enhancements from this release.
+  - Past release webinar examples: [v1.35](https://www.youtube.com/watch?v=Ydby-uIVcCg), [v1.34](https://www.youtube.com/watch?v=StyJ9b6-1t0), [v1.33](https://www.youtube.com/watch?v=1hOOplxu6g0)
 
-- Select who will be the new enhancement lead for the next release. Shadows should be the first source pool. If none are available to lead then look externally through other release team members or members of [SIG Architecture Enhancements Subproject](https://github.com/kubernetes/community/blob/master/sig-architecture/README.md#enhancements)
-- Continually work to improve Enhancements process
-- Review / update documentation as the release cycle ends
-- Close issues marked as stable that made it into the release, only after the corresponding KEPs have been marked `Implemented`
-- Close milestones that are complete
-- Cleanup old milestones
-- Open a pull request to add the exceptions.yaml file with all the KEPs which applied for an exception during enhancements freeze and code freeze. You can find an example of this exceptions.yaml file [here](/releases/release-1.25/exceptions.yaml).
+#### Succession
+
+- Select who will be the new Enhancements Lead for the next release. Shadows should be the first source pool. If none are available to lead then look externally through other release team members or members of [SIG Architecture Enhancements Subproject](https://github.com/kubernetes/community/blob/master/sig-architecture/README.md#enhancements)
+- Make sure to get the selection approved by the Release Team Lead and Subproject Leads before giving final confirmation to the candidate.
+- Before the next release starts, do a handoff call with the incoming Enhancements Lead. Walk through all the tasks that the Enhancements Lead needs to do throughout the cycle, and provide any other information/advice that would help prepare them to lead the team successfully!
+
+#### Process and Documentation Improvements
+
+- Attend the mid-release and end-of-release Release Team retros, offering any feedback/suggestions on how to improve the release process.
+- Review and make any improvements/updates to the Enhancements role handbook or other documentation.
+
+#### Tracking board cleanup
+
+- Since cleaning up the tracking board before the start of a release is often a long and tedious process, it's a good idea to get a head start on it before the current cycle ends, rather than waiting for the next release cycle to begin.
+- See [Cleaning Up Previously Tracked Issues](./tracking-board.md#cleaning-up-previously-tracked-issues) for step-by-step instructions.
+- Optionally, work together with the next Enhancements Lead to perform this cleanup. 
 
 
-[enhancements-issues]: https://github.com/kubernetes/enhancements/issues
 [k/enhancements]: https://github.com/kubernetes/enhancements
 [rt-group]: https://groups.google.com/a/kubernetes.io/g/release-team
 [rt-selection]: /release-team/release-team-selection.md
