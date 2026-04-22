@@ -15,7 +15,9 @@
 - [Process](#process)
   - [Standards](#standards)
   - [PRR Reviews](#prr-reviews)
-  - [Enhancement KEP Status](#enhancement-kep-status)
+    - [PRR Freeze](#prr-freeze)
+    - [PRR Freeze Review Process](#prr-freeze-review-process)
+    - [Enhancement KEP Status](#enhancement-kep-status)
   - [What Changes Require Tracking](#what-changes-require-tracking)
   - [Working with the Enhancement Tracking Board](#working-with-the-enhancement-tracking-board)
   - [Release Team Meeting Updates](#release-team-meeting-updates)
@@ -34,6 +36,7 @@
   - [Week of Code Freeze](#week-of-code-freeze)
   - [Code Freeze Party 🎉](#code-freeze-party-)
   - [Post Code Freeze](#post-code-freeze)
+  - [Communication Templates](#communication-templates)
   - [CNCF / Media Engagement](#cncf--media-engagement)
   - [Succession](#succession)
 
@@ -146,7 +149,7 @@ The process of maintaining an enhancement in Kubernetes is documented in the [ku
 
 It is important that this process be followed and documentation remain up-to-date as the [Enhancements repo][k/enhancements] is the primary ingress point for contributors interested in tracking enhancements.
 
-### PRR Reviews
+### PRR Reviews 
 
 The KEP template production readiness questionnaire should be filled out by the KEP authors, and reviewed by the SIG leads. 
 Once the leads are satisfied with both the overall KEP (i.e., it is ready to move to `implementable` state) and the PRR answers,
@@ -192,7 +195,39 @@ stable:
   approver: @<gh-handle-of-PRR-approver>
 ```
 
-### Enhancement KEP Status
+#### PRR Freeze
+
+The PRR freeze is a hard deadline happening one week before the [Enhancements Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#enhancements-freeze). KEPs that will miss this deadline require an [Exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) or they will be removed from the milestone.
+
+As described by the PRR team [here](https://groups.google.com/a/kubernetes.io/g/dev/c/CQ33yPqp-H4/m/hHO-NaQiAQAJ):
+
+- By the PRR freeze date, KEP authors must have completed the PRR questionnaire for all opted-in enhancements (KEPs).
+- It is important to note that the PRR freeze **_does not_** mean that the KEPs need to have received an approval or even a review from the PRR team by this date.
+- To emphasize, the sole requirement is that all opted-in KEPs have their PRR questionnaires answered by the deadline, to ensure the PRR team has sufficient time to review them by Enhancements Freeze.
+
+> Note: KEPs that doesn't complete the PRR questionnaire and get back to the reviews from the PRR team are removed from the milestone during the enhancements freeze party. The PRR freeze deadline exists as a reminder for this.
+
+#### PRR Freeze Review Process
+
+As the PRR freeze approaches, the Enhancements team should systematically review all assigned KEPs on the tracking board. For each KEP, follow this process:
+
+1. **Check PRR Freeze Requirements**:
+   - The KEP is in the current Release Milestone (e.g., v1.35)
+   - The KEP has the `lead-opted-in` label applied
+   - A PR is open or merged with the KEP's PRR questionnaire filled out
+   - A PR is open or merged with `kep.yaml` updated with the `stage`, `latest-milestone`, and `milestone` struct filled out
+   - A PR is open or merged with a PRR approval file with the PRR approver mentioned for the stage the KEP is targeting
+
+2. **Post GitHub Comments**: For each assigned KEP, post a GitHub comment using the appropriate template (see [PRR Freeze Templates](./communication-templates.md#prr-freeze-templates)) reminding them of the PRR Freeze deadline and mentioning the status of the KEP.
+
+3. **Update Board Status**: Update the status on the tracking board to either:
+   - `At risk for PRR freeze` - if the KEP does not meet the criteria
+   - `Tracked for PRR freeze` - if the KEP meets all criteria
+   - `Removed from Milestone` - if the KEP fails to meet PRR freeze requirements and is removed from the release
+
+4. **Follow Up**: Monitor KEPs marked as "At risk" and provide additional support or guidance as needed.
+
+#### Enhancement KEP Status
 
 For each Enhancement KEP, the Enhancement team needs to verify that the `status` set in the KEP is one of `provisional`, `implementable`, `implemented`, `deferred`, `rejected`, `withdrawn`, or `replaced`.
 The `status` must follow the criteria:
@@ -453,7 +488,7 @@ The PRR Freeze is a hard deadline happening a week before the Enhancements Freez
 - Since some KEPs may have been removed from the milestone after PRR Freeze, re-balance the issue assignments (`Enhancements Contact`) across the team as needed.
 - For each issue that is already `Tracked for PRR Freeze`:
   - Evaluate if the enhancement satisfies all the [Enhancements Freeze requirements](/releases/release_phases.md#enhancements-freeze) for inclusion in the current release.
-    - Comment on the Issue with a status updating using one of the [Enhancements Freeze communication templates](./communication-templates.md#enhancements-freeze-templates)
+    - Comment on the Issue with a status updating using one of the [Enhancements Freeze communication templates](./communication-templates.md#enhancement-freeze-templates)
     - Update the `Status` field for this Enhancement in the Enhancement Tracking Board (`Tracked for enhancements freeze` or `At risk for enhancements freeze`)
     - KEPs targeting `stable` will need to be marked as `implemented` after code PRs are merged. This will need to be verified after the code freeze.
     - *Note*: Refer to the [README template](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/README.md?plain=1) to determine which sections are required based on the stage (`alpha`/`beta`/`stable`) that the enhancement is targeting. It is not the Enhancement team's responsibility to validate the correctness/completeness of the README content; we only need to make sure that each required section is present.
@@ -529,7 +564,21 @@ To avoid delays and ensure everything is in place for Code Freeze, the Enhanceme
   - [PR Enforcing Code Freeze - v1.32](https://github.com/kubernetes/test-infra/pull/33778)
   - [PR Enforcing Code Freeze - v1.31](https://github.com/kubernetes/test-infra/pull/33049)
 
-Read [here](/releases/release_phases.md#code-freeze) for more information on the Code Freeze.
+Read https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#code-freeze for more information on the Code Freeze.
+
+#### Understanding Test Freeze
+
+Test freeze occurs simultaneously with [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#test-freeze). For the Enhancements team, this means:
+
+- **What it means**: No new tests may be changed or promoted to Conformance unless there are release-blocking or other exceptional reasons
+- **For enhancements**: All test PRs related to tracked enhancements must be in a merge-ready state (with `approved` and `lgtm` labels) by the test freeze deadline
+- **Verification steps**: 
+  - Ensure all test PRs for tracked enhancements are linked in the enhancement issue description
+  - Verify test PRs have the required labels (`approved` and `lgtm`) applied
+  - Check that test PRs are either merged or ready to merge by the deadline
+- **Relationship to Code Freeze**: Both code freeze and test freeze requirements must be satisfied for an enhancement to be considered "Tracked for code freeze"
+
+> **Note**: The test freeze deadline is the same as code freeze. When checking enhancement readiness, verify both code and test PRs meet the merge-ready criteria.
 
 ### Pre-Freeze Check: Catching untracked feature changes
 
@@ -615,8 +664,7 @@ At the start of the "Code Freeze Party" meeting, send an announcement in Slack (
 During the meeting:
 - Unhold (`/unhold`) the PR enforcing code freeze, allowing it to merge. This will prevent any PRs from merging unless they are in the current milestone.
 - For PRs that were already approved before the code freeze deadline, add them to the milestone so that they are able to merge. This [query](https://github.com/kubernetes/kubernetes/pulls?q=is%3Apr+is%3Aopen+label%3Aapproved+label%3Algtm+-label%3Ado-not-merge%2Fcherry-pick-not-approved+-label%3Ado-not-merge%2Fhold++-label%3Aneeds-rebase) can be used to find open PRs that are approved / ready to merge, and should be added to the milestone.
-- Review each of the tracked Enhancements to perform a final status assessment for code freeze readiness. If an Enhancement doesn't meet the requirements for the [code freeze](/releases/release_phases.md#code-freeze), notify the author of the KEP by leaving a comment on the corresponding KEP issue. Use the appropriate [Code Freeze Party communication template](./communication-templates.md#code-freeze-party-templates) **Note**: It is helpful to delegate enhancements to review to shadows to help with the process.
-- Remove any enhancements that failed to merge their code by the Code freeze deadline.
+- Review each of the tracked Enhancements to perform a final status assessment for code freeze readiness. If an Enhancement doesn't meet the requirements for the [code freeze](/releases/release_phases.md#code-freeze), notify the author of the KEP by leaving a comment on the corresponding KEP issue. Use the appropriate [Code Freeze Party communication template](./communication-templates.md#code-freeze-party-templates). **Note**: It is helpful to delegate enhancements to review, to the concerned shadows to help with the process.
   - Set their status in the sheet to `Removed from Milestone`.
   - Remove the milestone.
     ```text
@@ -630,7 +678,11 @@ During the meeting:
 Any enhancements removed from the milestone will now require an exception. As exception requests come in, discuss each with the Release Lead (and Shadows) to arrive at an approve/reject decision.
   - Add a `/hold` label to `k/k` PRs associated with incoming exceptions to prevent from accidental merge.
   - Add incoming exception information to the previous created `exceptions.yaml` file (e.g., [PR #2753](https://github.com/kubernetes/sig-release/pull/2753), [PR #2593](https://github.com/kubernetes/sig-release/pull/2593)).
-  - If an **Exception Request** for a previously removed Enhancement is approved by the Release Team (on the Exception Request email), update its **Status** to `Tracked for code freeze` on the Enhancement Tracking Board.
+  - If an **Exception Request** for a previously removed Enhancement is approved by the Release Team (on the Exception Request email), update its **Enhancement Status** to `Tracked for code freeze` on the Enhancement Tracking Board.
+
+### Communication Templates
+
+Communication templates for PRR freeze, enhancements freeze, code freeze, and SIG outreach are maintained in a separate document. See [communication-templates.md](./communication-templates.md).
 
 ### CNCF / Media Engagement
 
