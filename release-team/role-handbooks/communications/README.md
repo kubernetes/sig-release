@@ -59,7 +59,7 @@ Throughout the release cycle, the comms team works with lots of different teams 
 
 Some groups you may need to contact, on top of the already mentioned SIG Docs (Blog), include:
 
-* SIG Contributor Experience in the `#sig-contribex` slack channel and by attending meetings. They can help promote the feature blogs through social media. Also, see the special posts section below.
+* SIG Contributor Experience in the `#sig-contribex` or `#sig-contribex-comms` slack channel and by attending meetings. They can help promote the feature blogs through social media. Also, see the special posts section below.
 * Chairs and Tech Leads of SIGs in the `#chairs-and-techleads` Slack channel. This can be a helpful place to post reminders about blog deadlines SIG leads to see.
 
 ## Release deliverables
@@ -128,7 +128,9 @@ Examples of enhancements that warrant a feature blog might include:
 * features that have been in progress for a long time and are graduating 
 * features that are considered mandatory by the Release Lead.
 
-It helps to work closely with the Release Lead and use the respective SIG Slack channels to remind the SIGs about opting in to feature blogs and provide any necessary context to blog authors. 
+There have been instances where blogs requiring breaking changes for a future release have to be published. These can be published and linked in the release notes/announcement blog posts without requiring the version number in the name. 
+
+It helps to work closely with the Release Lead and use the respective SIG Slack channels to remind the SIGs about opting in to feature blogs and provide any necessary context to blog authors.
 
 **Reach out in KEP issues to ask for feature blog opt-in.** Ask every KEP owner if they want to contribute a blog by reaching out in the KEP issue. Example messaging can be found [here](/release-team/role-handbooks/communications/templates/feature-blog-opt-in-message.md).
 
@@ -259,7 +261,7 @@ See this file for some [tips and tricks](/release-team/role-handbooks/communicat
 
 The Release Communications team is **NOT** responsible for social posting. [SIG Contributor Experience](https://github.com/kubernetes/community/tree/master/sig-contributor-experience) (SIG Contribex) manages the official Kubernetes social accounts and is responsible for all posts to those accounts. SIG Contribex has created automation around blog posts, so once a blog is published to the Kubernetes website, social posts are created and posted according to SIG Contribex's automation schedule. 
 
-If the Communications team and Release Lead determine a feature or other release communication needs a more detailed communications or calls to action, reach out to with SIG Contributor Experience for help making posts use the `@contributor-comms` tag in the `#sig-contribex` Slack channel. 
+If the Communications team and Release Lead determine a feature or other release communication needs a more detailed communications or calls to action, reach out to with SIG Contributor Experience for help making posts use the `@contributor-comms` tag in the `#sig-contribex` or `#sig-contribex-comms` Slack channel. 
 
 ## Release Milestone Activities
 
