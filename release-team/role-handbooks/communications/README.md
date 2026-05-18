@@ -128,7 +128,8 @@ Examples of enhancements that warrant a feature blog might include:
 * features that have been in progress for a long time and are graduating 
 * features that are considered mandatory by the Release Lead.
 
-There have been instances where blogs requiring breaking changes for a future release have to be published. These can be published and linked in the release notes/announcement blog posts without requiring the version number in the name. 
+There have been instances where blogs covering breaking changes for a future release have to be published. 
+There are two options for blogs covering breaking changes. They can be published as a regular feature blog (post-release communication) with the standard front matter. Alternatively, if the blog needs to go out before the release announcement, it can be published without the version prefix in the front matter and then linked in the release notes or announcement blog post.
 
 It helps to work closely with the Release Lead and use the respective SIG Slack channels to remind the SIGs about opting in to feature blogs and provide any necessary context to blog authors.
 
