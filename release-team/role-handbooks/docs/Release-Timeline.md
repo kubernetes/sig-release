@@ -431,6 +431,42 @@ Now create a pull request that targets the future release (example: `dev-1.21`) 
 - On the day before any deadline, are there any outstanding items or PRs?
 - On the day of any deadline, are there any outstanding items or PRs?
 
+#### Post Weekly Assignments on Slack
+
+Post this in the private Docs team Slack DM group at the beginning of each each week so everyone knows the owner for each task. A sample template is give below for reference. Tasks vary every week, so feel free to include whatever tasks fits the bill for that week. Refer to the Responsibilities Signup Sheet to know who is the assigee/reviewer for the week.
+
+**Template**
+```
+Hey folks, welcome to Week <WEEK NUMBER>!:kubernetes-intensifies:
+
+The tasks for this week, along with the assigned owners, are as follows
+-----------------------------------------------------------------------------------
+Release Team Updates (Meeting Link)
+<DATE> (<DAY>)
+APAC Meeting (<TIME> UTC): @<handle>
+EMEA Meeting (<TIME> UTC): @<handle>
+
+-----------------------------------------------------------------------------------
+Weekly Branch Sync PR:
+<DATE> (<DAY>)
+Assignee: @<handle>
+
+-----------------------------------------------------------------------------------
+BURNDOWN Meeting
+<DATE> (<DAY>)
+APAC (<TIME> UTC): @<handle>
+EMEA (<TIME> UTC): @<handle>
+<DATE> (<DAY>)
+APAC (<TIME> UTC): @<handle>
+EMEA (<TIME> UTC): @<handle>
+
+-----------------------------------------------------------------------------------
+v<MAJOR>.<MINOR>.<PATCH>-rc.<N> release notes
+<DATE> (<DAY>)
+Assignee: @<handle>
+Reviewer: @<handle>
+```
+
 ---
 
 ## Middle Steps (Weeks 3-8)
