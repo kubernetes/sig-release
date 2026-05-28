@@ -314,7 +314,7 @@ cc: @kubernetes/sig-docs-fr-owners @kubernetes/sig-docs-de-owners @kubernetes/si
 
 ### Responsibilities Sign up Sheet
 
-Create a multisheet spreadsheet with `Weekly Branch Sync`, `Release Notes PR Creation/Review`, `Release Team Updates`, `SIG-Docs (APAC) Updates`, `SIG-Docs (EMEA) Updates`, `Burndown Meeting` sheets. This will serve as an internal schedule and signup sheet for the Docs team to follow. The schedule is used to track progress and give status during the release team meetings.
+Create a multisheet spreadsheet with `Weekly Branch Sync`, `Release Notes PR Creation/Review`, `Release Team Updates`, `SIG Docs (APAC) Updates`, `SIG Docs (EMEA) Updates`, `Burndown Meeting` sheets. This will serve as an internal schedule and signup sheet for the Docs team to follow. The schedule is used to track progress and give status during the release team meetings.
 
 Please use the template for [responsibility-signup-sheet](responsibilities-signup-sheet-template.xlsx). The Release Docs Lead would import the document into a Google Sheet, update the names of the shadows and share the link with the team.
 
