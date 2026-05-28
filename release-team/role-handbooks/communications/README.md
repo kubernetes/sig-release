@@ -262,7 +262,7 @@ See this file for some [tips and tricks](/release-team/role-handbooks/communicat
 
 The Release Communications team is **NOT** responsible for social posting. [SIG Contributor Experience](https://github.com/kubernetes/community/tree/master/sig-contributor-experience) (SIG Contribex) manages the official Kubernetes social accounts and is responsible for all posts to those accounts. SIG Contribex has created automation around blog posts, so once a blog is published to the Kubernetes website, social posts are created and posted according to SIG Contribex's automation schedule. 
 
-If the Communications team and Release Lead determine a feature or other release communication needs a more detailed communications or calls to action, reach out to with SIG Contributor Experience for help making posts use the `@contributor-comms` tag in the `#sig-contribex` or `#sig-contribex-comms` Slack channel. 
+If the Communications team and Release Lead determine a feature or other release communication needs a more detailed communications or calls to action, reach out to with SIG Contributor Experience Comms Subproject for help making posts use the `@contributor-comms` tag in the `#sig-contribex-comms` Slack channel. 
 
 ## Release Milestone Activities
 
