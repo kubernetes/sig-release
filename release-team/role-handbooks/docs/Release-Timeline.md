@@ -162,7 +162,7 @@ Thanks,
 Once all the shadows have been selected and confirmed, add the contacts to the Contact Sheet to be shared by the Release Lead / Subproject Lead. Example: [v1.21 Contact Sheet](https://bit.ly/k8s121-contacts)
 
 > [!Important]
-> Beyond meeting the basic requirements and time commitments, a good Shadow is someone who is active in SIG-Docs. Selection priority should go to previous shadows who want to eventually lead a SIG-Docs release. Other than those few guidelines, use your best judgement!
+> Beyond meeting the basic requirements and time commitments, a good shadow is someone who is active in SIG Docs. Selection priority should go to previous shadows who want to eventually lead a SIG Docs release. Other than those few guidelines, use your best judgement!
 
 #### Contact Selected Shadows
 
