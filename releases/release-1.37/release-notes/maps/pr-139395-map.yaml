@@ -1,0 +1,10 @@
+pr: 139395
+pr_body: ""
+releasenote:
+  text: |-
+    List-type attributes, the `.includes` function, and CEL macros can now be evaluated in the scheduler even when the `ListTypeAttributes` feature gate is disabled. This prevents errors during rolling upgrades or when the feature gate is toggled.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []

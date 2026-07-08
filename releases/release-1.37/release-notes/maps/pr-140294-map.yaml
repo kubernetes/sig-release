@@ -1,0 +1,29 @@
+pr: 140294
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a regression in server-side apply where patching a container type (list or map) could return `422 required` errors for apply requests that previously succeeded.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - instrumentation
+  - network
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - code-generation
+  - dependency

@@ -1,0 +1,10 @@
+pr: 140180
+pr_body: ""
+releasenote:
+  text: |-
+    When default preemption finds a potential node for a pod, the `FailedScheduling` event and `PodScheduled` condition now include the message: `preemption: found a potential placement for pod on node <node_name>, preempting <victim_count> victims`.
+  sigs:
+  - scheduling
+  kinds:
+  - feature
+  areas: []

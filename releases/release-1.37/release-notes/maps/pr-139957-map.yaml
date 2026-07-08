@@ -1,0 +1,11 @@
+pr: 139957
+pr_body: ""
+releasenote:
+  text: |-
+    kube-proxy now warns when started without an explicitly specified proxy mode (iptables, ipvs, or nftables), because the default on Linux will switch from iptables to nftables in a future release.
+  sigs:
+  - network
+  kinds:
+  - feature
+  areas:
+  - kube-proxy

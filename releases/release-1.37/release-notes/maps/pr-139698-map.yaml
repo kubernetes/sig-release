@@ -1,0 +1,10 @@
+pr: 139698
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a panic in ResourceSlice validation that could occur when the DRAConsumableCapacity feature was enabled and a capacity request policy set validRange.step to zero.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []

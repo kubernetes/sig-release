@@ -1,0 +1,17 @@
+pr: 137513
+pr_body: ""
+releasenote:
+  text: |-
+    Added the core machinery for Conditional Authorization, which enables authorizers to allow requests conditionally based on the request's content, rather than only allowing or denying them outright.
+  sigs:
+  - api-machinery
+  - auth
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
