@@ -2,7 +2,7 @@ pr: 139837
 pr_body: ""
 releasenote:
   text: |-
-    ACTION REQUIRED: The kubelet now logs its effective configuration at startup. Because these logs can expose configuration details, cluster administrators should restrict the `nodes/logs` cluster role to trusted users. This is largely a reminder of an existing best practice, since most effective configuration values can already be inferred from other log messages or kubelet behavior.
+    ACTION REQUIRED: Updated the `kubelet` to log its effective configuration at startup. Because these logs can expose configuration details, cluster administrators should restrict the `nodes/logs` ClusterRole to trusted users. This is largely a reminder of an existing best practice, since most effective configuration values can already be inferred from other log messages or `kubelet` behavior.
   sigs:
   - node
   - testing

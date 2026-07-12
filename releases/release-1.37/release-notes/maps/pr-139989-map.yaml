@@ -1,0 +1,10 @@
+pr: 139989
+pr_body: ''
+releasenote:
+  text: Improved the logic in `kubeadm` around warnings when a user sets a non-default `bindAddress` in `KubeProxyConfiguration`.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm

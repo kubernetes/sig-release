@@ -1,0 +1,9 @@
+pr: 140075
+pr_body: ''
+releasenote:
+  text: |-
+    Added the `PodGroup` field to the `PodGroupInfo` object in `kube-scheduler` to enable plugins to obtain a consistent state throughout the scheduling cycle.
+  sigs:
+  - scheduling
+  kinds:
+  - feature

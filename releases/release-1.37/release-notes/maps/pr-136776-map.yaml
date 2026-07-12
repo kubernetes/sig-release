@@ -1,0 +1,10 @@
+pr: 136776
+pr_body: ''
+releasenote:
+  text: |-
+    Updated the `pods/binding` subresource endpoint to validate the specified node name consistently.
+  sigs:
+  - apps
+  - scheduling
+  kinds:
+  - bug

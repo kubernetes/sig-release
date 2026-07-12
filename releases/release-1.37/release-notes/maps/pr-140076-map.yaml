@@ -1,0 +1,10 @@
+pr: 140076
+pr_body: ''
+releasenote:
+  text: Promoted support for `kubectl get -o kyaml` to Stable.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas:
+  - kubectl

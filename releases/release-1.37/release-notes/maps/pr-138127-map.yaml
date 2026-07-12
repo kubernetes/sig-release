@@ -1,0 +1,13 @@
+pr: 138127
+pr_body: ''
+releasenote:
+  text: |-
+    Updated `kubelet` eviction manager to exclude hugepage-reserved RAM from `AvailableBytes` in the calculation of `memory.available` on nodes with hugepages. This fixes delayed eviction and OOM kills caused by inflated available memory reporting. The `HugepageAwareEviction` feature gate (default: enabled) can be disabled to restore the previous behavior.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet

@@ -1,0 +1,13 @@
+pr: 140077
+pr_body: ''
+releasenote:
+  text: |-
+    Added PodGroup methods to `PodGroupManager` and `SharedLister`, allowing scheduler plugins to obtain a consistent PodGroup state.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

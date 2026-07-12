@@ -1,0 +1,13 @@
+pr: 140006
+pr_body: ''
+releasenote:
+  text: |-
+    Added a defense-in-depth check to the `NodeRestriction` admission plugin for PodCertificateRequests. A node can only create a PodCertificateRequest referring to a particular signer name if the Pod actually mounts a `podCertificate` projected volume source that refers to that signer name, or if an authorization check for the user (with `verb=request-podcertificate-signer` and `resource=<signerName>`) succeeds.
+  sigs:
+  - auth
+  - testing
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - test

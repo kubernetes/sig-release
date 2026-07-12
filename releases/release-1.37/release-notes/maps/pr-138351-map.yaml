@@ -1,0 +1,11 @@
+pr: 138351
+pr_body: ''
+releasenote:
+  text: |-
+    Updated `client-go` and `apimachinery` to track Go API changes in a `Go-API/CHANGELOG.md` file.
+  sigs:
+  - api-machinery
+  kinds:
+  - documentation
+  areas:
+  - dependency

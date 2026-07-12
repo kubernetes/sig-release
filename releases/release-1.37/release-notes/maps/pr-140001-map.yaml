@@ -1,0 +1,10 @@
+pr: 140001
+pr_body: ''
+releasenote:
+  text: Fixed a bug in `kube-apiserver` where a request matching multiple ValidatingAdmissionPolicy bindings with audit actions only recorded the first validation failure in the audit annotation; all audit failures are published in a single annotation.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver

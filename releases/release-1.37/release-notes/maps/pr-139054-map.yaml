@@ -1,0 +1,12 @@
+pr: 139054
+pr_body: ''
+releasenote:
+  text: |-
+    Fixed inter-pod affinity, anti-affinity, and volume restriction evaluation in `kube-scheduler` during PodGroup scheduling cycles. The scheduler snapshot's `AssumePod` and `ForgetPod` methods now correctly maintain affinity node lists and PVC usage tracking.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

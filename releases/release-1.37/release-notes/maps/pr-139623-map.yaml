@@ -1,0 +1,12 @@
+pr: 139623
+pr_body: ''
+releasenote:
+  text: |-
+    Fixed a bug in the DRA `kubelet` plugin helper where drivers with names longer than ~30 characters could not enable rolling updates because the plugin registration socket path exceeded the `AF_UNIX` path length limit. Rolling-update registration sockets now pick the shortest basename that fits under the configured registry directory, preferring `<driver>-<Pod UID>-reg.sock`, then `<driver>-<hashed UID>-reg.sock`, then `dra-<hashed driver+UID>-reg.sock`.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
