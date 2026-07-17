@@ -1,0 +1,11 @@
+pr: 138875
+pr_body: ""
+releasenote:
+  text: |-
+    Added progress reporting to StorageVersionMigration conditions, allowing users to see how many objects a migration has processed.
+  sigs:
+  - api-machinery
+  - apps
+  kinds:
+  - feature
+  areas: []

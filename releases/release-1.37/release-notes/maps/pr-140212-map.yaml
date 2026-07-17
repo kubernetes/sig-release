@@ -1,0 +1,10 @@
+pr: 140212
+pr_body: ''
+releasenote:
+  text: Fixed a bug in `kubelet` DRA where deleting a Pod could unprepare resources still in use by another Pod.
+  sigs:
+  - node
+  kinds:
+  - cleanup
+  areas:
+  - kubelet

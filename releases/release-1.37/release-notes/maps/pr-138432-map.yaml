@@ -1,0 +1,11 @@
+pr: 138432
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the `kubelet` to emit `FailedToRetrieveImagePullSecret` events only when an image pull has failed.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

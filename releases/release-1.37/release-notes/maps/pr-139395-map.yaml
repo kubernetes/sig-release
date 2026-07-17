@@ -1,0 +1,10 @@
+pr: 139395
+pr_body: ""
+releasenote:
+  text: |-
+    Enabled evaluation of list-type attributes, the `.includes` function, and CEL macros in `kube-scheduler` even when the `ListTypeAttributes` feature gate is disabled. This prevents errors during rolling upgrades or when the feature gate is toggled.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []

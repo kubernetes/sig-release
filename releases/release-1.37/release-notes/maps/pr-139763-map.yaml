@@ -1,0 +1,17 @@
+pr: 139763
+pr_body: ''
+releasenote:
+  text: |-
+    Promoted the `NodeDeclaredFeatures` feature gate to GA.
+  sigs:
+  - apps
+  - autoscaling
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet

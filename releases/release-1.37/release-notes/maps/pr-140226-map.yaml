@@ -1,0 +1,11 @@
+pr: 140226
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the `PreventStaticPodAPIReferences` feature gate. Static Pods can no longer reference API resources, and this behavior can no longer be disabled.
+  sigs:
+  - node
+  kinds:
+  - cleanup
+  areas:
+  - kubelet

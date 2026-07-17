@@ -1,0 +1,20 @@
+pr: 139240
+pr_body: ""
+releasenote:
+  text: |-
+    Added a `PreemptionPolicy` field to PodGroup, allowing users to control how `kube-scheduler` preempts Pods that belong to a PodGroup during workload-aware preemption.
+  sigs:
+  - scheduling
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - kubeadm
+  - code-generation
+  - dependency

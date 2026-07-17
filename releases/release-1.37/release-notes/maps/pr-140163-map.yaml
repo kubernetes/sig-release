@@ -1,0 +1,10 @@
+pr: 140163
+pr_body: ''
+releasenote:
+  text: Updated the `kubelet` to no longer emit `V(4)` "Label not found" logs for missing optional container annotations.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

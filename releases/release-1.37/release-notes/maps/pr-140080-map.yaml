@@ -1,0 +1,18 @@
+pr: 140080
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the PodGroup API to replace `PodGroupTemplateRef` with `WorkloadRef`, a simpler and more direct way to reference the workload a PodGroup belongs to.
+  sigs:
+  - api-machinery
+  - apps
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation

@@ -1,0 +1,13 @@
+pr: 139952
+pr_body: ''
+releasenote:
+  text: |-
+    Added the `incompletePodGroupPods` data structure to the scheduling queue to store Pods waiting for their PodGroup object to be observed by `kube-scheduler`.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

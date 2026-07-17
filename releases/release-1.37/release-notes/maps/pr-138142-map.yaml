@@ -1,0 +1,10 @@
+pr: 138142
+pr_body: ''
+releasenote:
+  text: |-
+    Updated `client-go` to preserve the source file's permissions when migrating a `kubeconfig` file (for example, `~/.kube/.kubeconfig` to `~/.kube/config`). Previously, the destination file was created with broader permissions, which could expose credentials to other users on the same system.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas: []

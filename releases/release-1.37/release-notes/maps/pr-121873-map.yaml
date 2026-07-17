@@ -1,0 +1,9 @@
+pr: 121873
+pr_body: ''
+releasenote:
+  text: |-
+    Logged the actual path type along with the expected path type when volume mount host path type mismatches occur.
+  sigs:
+  - storage
+  kinds:
+  - feature

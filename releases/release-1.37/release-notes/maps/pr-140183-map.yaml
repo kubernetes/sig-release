@@ -1,0 +1,8 @@
+pr: 140183
+pr_body: ''
+releasenote:
+  text: Updated the PodGroup `status.conditions` field to reflect the failure reason when scheduling is rejected due to mismatched `.spec.schedulerName` across Pods in a group.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

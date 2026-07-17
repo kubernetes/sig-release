@@ -1,0 +1,15 @@
+pr: 139419
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed audit logging of malformed patch request bodies.
+  sigs:
+  - api-machinery
+  - auth
+  - testing
+  kinds:
+  - bug
+  - regression
+  areas:
+  - test
+  - apiserver

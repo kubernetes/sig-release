@@ -1,0 +1,23 @@
+pr: 139870
+pr_body: ""
+releasenote:
+  text: |-
+    ACTION REQUIRED: Updated the `kubelet`''s embedded `cAdvisor` to use the leaner `github.com/google/cadvisor/lib` module, which removes three long-deprecated or legacy surfaces:
+    - Deprecated `cAdvisor` flags are no longer accepted and the `kubelet` will fail to start if any are set (only `--housekeeping-interval` is kept): `--application-metrics-count-limit`, `--boot-id-file`, `--container-hints`, `--containerd`, `--containerd-namespace`, `--enable-load-reader`, `--event-storage-age-limit`, `--event-storage-event-limit`, `--global-housekeeping-interval`, `--log-cadvisor-usage`, `--machine-id-file`, `--storage-driver-user`, `--storage-driver-password`, `--storage-driver-host`, `--storage-driver-db`, `--storage-driver-table`, `--storage-driver-secure`, `--storage-driver-buffer-duration`. Remove these from your `kubelet` configuration.
+    - `cAdvisor` application/custom metrics are no longer collected: the `userDefinedMetrics` field in `/stats/summary` and the custom `container_application_*` families in `/metrics/cadvisor`.
+    - The `/metrics/cadvisor` series `container_cpu_load_average_10s`, `container_cpu_load_d_average_10s`, and `container_tasks_state` are no longer exported.
+  sigs:
+  - api-machinery
+  - auth
+  - instrumentation
+  - network
+  - node
+  - testing
+  kinds:
+  - dependency
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - code-generation
+  - dependency

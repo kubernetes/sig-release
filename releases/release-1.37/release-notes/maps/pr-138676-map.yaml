@@ -1,0 +1,23 @@
+pr: 138676
+pr_body: ''
+releasenote:
+  text: |-
+    Promoted the DRA Device Taints and Tolerations feature to GA, making it available via the `resource.k8s.io/v1` API.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - etcd
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - conformance
+  - code-generation

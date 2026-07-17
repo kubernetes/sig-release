@@ -1,0 +1,11 @@
+pr: 136705
+pr_body: ""
+releasenote:
+  text: |-
+    Logged a warning in the `kubelet` if a static Pod defines an invalid `priority` or `priorityClassName`.
+  sigs:
+  - node
+  kinds:
+  - cleanup
+  areas:
+  - kubelet

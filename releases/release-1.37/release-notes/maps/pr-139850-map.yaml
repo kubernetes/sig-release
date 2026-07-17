@@ -1,0 +1,12 @@
+pr: 139850
+pr_body: ''
+releasenote:
+  text: |-
+    Fixed a `kubelet` memory leak regression in `v1.36` caused by leaked contexts on every Pod sync.
+  sigs:
+  - node
+  kinds:
+  - bug
+  - regression
+  areas:
+  - kubelet
