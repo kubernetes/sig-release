@@ -1,0 +1,18 @@
+pr: 140527
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\n`unprepareResources` releases the cache lock while
+  calling `NodeUnprepareResources` so a concurrent `prepareResources` for a different
+  pod could take the lock, see `prepared==true`, `addPodReference`, and skip the driver
+  call, then `unprepareResources` would un-prepare resources used by this pod.\r\n\r\nAdded
+  `unpreparing` flag on `ClaimInfo`. `unprepareResources` sets it in the first per-claim
+  withLock, once it has committed to calling `NodeUnprepareResources` for the last
+  referencing pod. `prepareResources` checks it when it finds an existing cache entry
+  and returns an error so the operation is retried after the entry has been deleted.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n#### Does this PR introduce
+  a user-facing change?\r\n```release-note\r\nkubelet/DRA: fixed a race where PrepareResources
+  could attach a pod to a ResourceClaim that was concurrently being unprepared, leaving
+  the pod running with unprepared devices.\r\n```\r\n"
+releasenote:
+  text: Fixed a race in `kubelet` where `PrepareResources` could attach a Pod to a
+    ResourceClaim that was concurrently being unprepared, leaving the Pod running
+    with unprepared devices.

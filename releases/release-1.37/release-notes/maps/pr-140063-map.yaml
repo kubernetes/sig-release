@@ -1,0 +1,28 @@
+pr: 140063
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nWhen updating a ResourceSlice, a more recent copy
+  than in the underlying store gets cached by the MutationCache. Then when that ResourceSlice
+  gets deleted on the apiserver and then the store, the MutationCache kept the stale
+  copy and returned it when the controller synced again, causing the controller to
+  erroneously not recreate the deleted ResourceSlice.\r\n\r\nDepending on timing,
+  this could have happened while updating the DRA driver:\r\n- Driver restarts, updating
+  the existing ResourceSlices.\r\n- kubelet deletes the slices before realizing that
+  the driver is running again.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nThe fix is to address a long-standing TODO
+  in the MutationCache: it needs to react to changes in the store. This allows it
+  to drop cached objects sooner and let's it remove cached objects that are known
+  to be deleted. Users of a MutationCache must inform the cache in their own informer
+  event handlers *before* triggering sync operations.\r\n\r\nThis is a different approach
+  than the one taken in https://github.com/kubernetes/kubernetes/pull/140011 where
+  the staleness was detected via a timed resync. Such a timed resync is still needed
+  after adding a ResourceSlice.\r\n\r\n/assign @Lily922\r\n\r\nThis includes your
+  integration test. The test also passed for me with current master, but that might
+  have been just luck. We need a test which triggers the bug more reliably and of
+  course also unit tests.\r\n\r\n/cc @michaelasp \r\n\r\nThis needs changes in client-go
+  tooling.\r\n\r\n#### Does this PR introduce a user-facing change?\r\n```release-note\r\nDRA
+  drivers might not have re-created ResourcSlices that were deleted by someone else,
+  depending on timing (driver updates, then someone else shortly afterwards deletes
+  them).\r\n```\r\n"
+releasenote:
+  text: Fixed a DRA issue where drivers might not recreate ResourceSlices that were
+    deleted externally, depending on timing between driver updates and deletions.

@@ -1,0 +1,14 @@
+pr: 140293
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nBuilds on https://github.com/kubernetes/kubernetes/pull/140292\r\n\r\n5th
+  PR in a series to address https://github.com/kubernetes/kubernetes/pull/140266\r\n\r\nThis
+  addresses merge ordering of `+x-kubernetes-list-type=set` to preserve order-insensitive
+  union equality that all schema-aware wrappers use.\r\n\r\n#### Which issue(s) this
+  PR is related to:\r\n\r\n\r\n#### Special notes for your reviewer:\r\n\r\n```release-note\r\nFixed
+  CEL for \"set\" and \"map\" lists: equality (`==`) no longer matches lists containing
+  duplicates, and concatenation (`+`) now correctly applies set/map merge semantics
+  to appended elements.\r\n```\r\n"
+releasenote:
+  text: Fixed CEL behavior for `set` and `map` lists. Equality (`==`) no longer matches
+    lists containing duplicates, and concatenation (`+`) now correctly applies set
+    and map merge semantics to appended elements.

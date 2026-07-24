@@ -1,0 +1,62 @@
+pr: 140189
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+  /sig cli
+  /sig security
+  /area kubectl
+
+  #### What this PR does / why we need it:
+
+  `kubectl cluster-info dump --output-directory` writes every dump file through `setupOutputWriter`, which used `os.Create` (mode `0666` before umask, typically `0644`) inside directories created with `os.MkdirAll(parent, 0755)`. Pod logs are dumped verbatim into `{dir}/{namespace}/{pod}/logs.txt`, and pod logs routinely contain application secrets (bearer tokens, connection strings, cloud credentials). With `--all-namespaces` this includes logs from namespaces the local reader would have no RBAC right to see. Any unprivileged local user on the machine where the operator ran the dump could read all of it.
+
+  This PR creates dump files with mode `0600` and kubectl-created directories with `0700`, so cluster state dumped to disk is readable only by the user who ran the command.
+
+  This matches how the project already treats locally written sensitive data:
+  - `client-go/util/keyutil.WriteKey` writes keys `0600`
+  - `client-go/tools/clientcmd` writes kubeconfig files `0600`
+  - `client-go/util/certificate` store writes pairs `0600`
+
+  Notes on scope:
+  - `os.MkdirAll` does not change permissions of directories that already exist, so a user who pre-creates the output directory with looser permissions (e.g. to share a dump deliberately) keeps that behavior; only directories kubectl itself creates are `0700`.
+  - On Windows the mode arguments are advisory, same as before; the new permissions test skips there.
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes #140095
+
+  #### Special notes for your reviewer:
+
+  The previous attempt at this (#140146) was closed without review after the CLA check failed; this is an independent implementation with test coverage.
+
+  If anyone relies on dumps being group/world-readable (e.g. handing artifacts to a support process), `chmod -R` after the fact restores that, whereas today there is no way to get safe permissions without racing the dump. Secure-by-default seemed like the right trade-off given the file contents; happy to adjust if sig-cli prefers an opt-in flag.
+
+  Test evidence (local):
+
+  ```
+  $ gofmt -l pkg/cmd/clusterinfo/   # clean
+  $ go vet ./pkg/cmd/clusterinfo/   # clean
+  $ go test ./pkg/cmd/clusterinfo/ -v -run TestSetupOutputWriter
+  --- PASS: TestSetupOutputWriterNoOp (0.00s)
+  --- PASS: TestSetupOutputWriterFile (0.00s)
+  --- PASS: TestSetupOutputWriterPermissions (0.00s)
+  ```
+
+  `TestSetupOutputWriterPermissions` asserts the created file is `0600` and the created intermediate directory is `0700`; both modes carry no group/other bits, so the assertions are umask-independent.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed `kubectl cluster-info dump --output-directory` creating world-readable dump files. Files are now created with mode 0600 and kubectl-created directories with mode 0700, since dumped pod logs can contain sensitive data.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  NONE
+  ```
+releasenote:
+  text: Fixed `kubectl cluster-info dump --output-directory` creating world-readable
+    dump files. Files are now created with mode `0600` and `kubectl`-created directories
+    with mode `0700`, because dumped Pod logs can contain sensitive data.

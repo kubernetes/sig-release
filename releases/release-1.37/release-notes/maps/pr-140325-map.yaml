@@ -1,0 +1,61 @@
+pr: 140325
+pr_body: "<!--  Thanks for sending a pull request!  Here are some tips for you:\r\n\r\n1.
+  If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution
+  and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide\r\n2.
+  Please label this pull request according to what type of issue you are addressing,
+  especially if this is a release targeted pull request. For reference on required
+  PR/issue labels, read here:\r\nhttps://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label\r\n3.
+  Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md\r\n4.
+  If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews\r\n5.
+  If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests\r\n-->\r\n\r\n####
+  What type of PR is this?\r\n\r\n/kind bug\r\n/wg device-management\r\n/sig scheduling\r\n\r\n<!--\r\nAdd
+  one of the following kinds:\r\n/kind dependency\r\n/kind cleanup\r\n/kind documentation\r\n/kind
+  feature\r\n\r\nOptionally add one or more of the following kinds if applicable:\r\n/kind
+  api-change\r\n/kind deprecation\r\n/kind failing-test\r\n/kind flake\r\n/kind regression\r\n-->\r\n\r\n####
+  What this PR does:\r\n\r\nFixes a backtracking bug in `matchAttribute` constraint
+  when `DRAListTypeAttributes` feature gate is enabled.\r\n\r\n`add()` narrowed the
+  intersection in place but `remove()` never restored it, so after backtracking, the
+  intersection remained stale and subsequent candidates were incorrectly rejected.\r\n\r\nThis
+  PR introduces an intersection stack(Option A in #140300): `add()` pushes the current
+  intersection before narrowing, and `remove()` pops it back. The regression test
+  and a backtracking coverage test for the `distinctAttribute` constraint are also
+  added.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nFixes #140300 \r\nKEP:
+  https://github.com/kubernetes/enhancements/issues/5491\r\n\r\n<!--\r\nPlease link
+  relevant issues to help with tracking.\r\n\r\nTo automatically close the linked
+  issue(s) when this PR is merged,\r\nadd the word \"Fixes\" before the issue number
+  or link.\r\nDo not use \"Fixes\" if the PR is of kind `failing-test` or `flake`.\r\n\r\nReference
+  KEPs when applicable in addition to specific issues.\r\n\r\nExamples:\r\nFixes #140300
+  \r\nKEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>\r\n\r\nIf
+  there is no associated issue, then write \"N/A\".\r\n-->\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\nThe allocator uses recursive DFS with LIFO undo closures,
+  so `remove()` is always called in the reverse order of `add()`. The stack approach
+  is correct by construction given this invariant — however, it is worth noting that
+  the correctness of this approach depends on the LIFO ordering being maintained.
+  If the allocator's backtracking structure is ever refactored to allow out-of-order
+  removal, this will silently break. \r\n\r\nAn alternative approach (storing per-device
+  sets and recomputing the intersection on `remove()`, as `distinctAttribute` constarint does),
+  Option B in #140300, would be more robust but was not chosen here due to the added
+  complexity for a marginal benefit.\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n<!--\r\nIf no, just write \"NONE\" in the release-note block below.\r\nIf
+  yes, a release note is required:\r\nEnter your extended release note in the block
+  below. If the PR requires additional action from users switching to the new release,
+  include the string \"action required\".\r\n\r\nFor more information on release notes
+  see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nKEP-5491:
+  Fixed a bug where `DRAListTypeAttributes` feature gate enabled could fail to allocate
+  devices even when a valid combination exists. This occurred when the allocator needed
+  to backtrack during allocation of multiple devices with a `matchAttribute` constraint
+  using list-type attribute values.\r\n```\r\n\r\n#### Additional documentation e.g.,
+  KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n<!--\r\nThis section
+  can be blank if this pull request does not require a release note.\r\n\r\nWhen adding
+  links which point to resources within git repositories, like\r\nKEPs or supporting
+  documentation, please reference a specific commit and avoid\r\nlinking directly
+  to the master branch. This ensures that links reference a\r\nspecific point in time,
+  rather than a document that may change over time.\r\n\r\nSee here for guidance on
+  getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
+  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
+  <link>\r\n- [Other doc]: <link>\r\n-->\r\n```docs\r\n[KEP]: https://github.com/kubernetes/enhancements/issues/5491\r\n```\r\n"
+releasenote:
+  text: Fixed a bug where enabling the `DRAListTypeAttributes` feature gate could
+    prevent device allocation even when a valid combination existed. This occurred
+    when the allocator needed to backtrack while allocating multiple devices with
+    a `matchAttribute` constraint using list-type attribute values.

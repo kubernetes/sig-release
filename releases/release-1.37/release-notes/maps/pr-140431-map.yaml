@@ -1,0 +1,54 @@
+pr: 140431
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+  /sig node
+
+  #### What this PR does / why we need it:
+
+  The structured DRA allocator can leave reserved state behind when it stops considering a candidate device, which can make a schedulable pod fail to schedule.
+
+  allocateDevice reserves a device's shared counters and adds claim constraints before it may reject a candidate on a device taint or a claim constraint. For a candidate it accepts, it also marks the device in use and reserves consumable capacity, and the backtracking search later has to undo all of that. Some of these paths did not reverse what they had done. The taint and constraint rejections left the reserved counters in place, and the success undo for an allow-multiple device released its capacity but not the counters it had reserved on its first allocation. A leaked counter reservation makes the allocator treat a counter set as exhausted, so it fails to allocate a device combination a node can satisfy.
+
+  Each call now records what it mutated in a small `deviceRollbackState` value and reverses it with one `rollbackDevice` method. Every rejection path after a successful counter reservation calls it, including the must error path, and the success path returns a closure that calls the same method, so the rejection cleanup and the backtracking undo can no longer drift apart. The capacity check runs before the capacity reservation, so a capacity rejection does not leak capacity. What it can leave behind is the claim constraint added just before the check, which `rollbackDevice` now removes.
+
+  The same rollback exposed a second miscount for allow-multiple devices that consume counters but have no consumable capacity. allocateDevice still inserts an empty entry into the capacity map for such a device, and that entry doubles as the marker that lets a later share of the device skip the counter check. The capacity collection does not reference-count empty entries, so when several shares of the device exist in one search and the rollback removes one, it deletes the marker while another share is still active, and a later share is then wrongly rejected with insufficient counters. The rollback now records whether the entry predated the share it is undoing and restores an empty marker when removing it would drop one that a surviving share still relies on.
+
+  The state is passed by value so the rejection paths keep it on the stack, and only the success path allocates a closure. allocateDevice runs in the scheduler's per-node exhaustive search where the common outcome is rejection, so this avoids adding a heap allocation for the rollback bookkeeping on rejected candidates. Building the undo closure up front and returning it would move the closure and its captured flags to the heap on every rejected candidate; `go build -gcflags=-m` confirms that with this change only the success path builds the escaping undo closure.
+
+  All three allocator variants (stable, incubating, experimental) share the same shape and are fixed together. This matters because the default feature configuration selects incubating, not stable: ConsumableCapacity and the device binding and status features are on by default and stable does not support them, so `NewAllocator` picks incubating. The bug was reachable on default clusters, not only the non-default stable variant.
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes #140436
+
+  #### Special notes for your reviewer:
+
+  The regression cases live in the shared `allocatortesting` table so they run against every variant that supports the required features, and they assert the exact allocated devices:
+
+  - `partitionable-devices-taint-releases-counter` and `partitionable-devices-constraint-releases-counter` cover the counter leak on the taint and constraint rejection paths.
+  - `partitionable-consumable-capacity-backtrack-releases-counter` covers the allow-multiple device that reserved a counter on its first allocation and must release it when the search backtracks.
+  - `consumable-capacity-rejection-rolls-back-constraints` covers the claim constraint left behind when an all-mode candidate is rejected on the in-function capacity check.
+  - `partitionable-empty-capacity-multiple-share-backtrack-keeps-counter-ownership` covers the empty-capacity device whose shared marker must survive a sibling share's backtracking.
+  - `partitionable-all-mode-constraint-must-error-with-reserved-counter` covers the must error path when the rejected device has reserved a counter.
+
+  `go test ./structured/...` is green with the change, including `-race`. The taint, constraint, backtrack, and capacity-rejection cases fail without the fix. The empty-capacity marker case fails if the rollback removes a shared marker a sibling share still holds. The must error case adds coverage of that path; the error aborts the allocation, so the rollback runs there but its effect is not separately observable.
+
+  Concurrent work: independent of #140435 (counter cache pool identity). #140437 (skip counter check for a persisted shared device) is related but separable: it and the shared-marker fix here address the same shared-device counter accounting from two sides, persisted shares across scheduling cycles there and in-flight shares within one search here. They still compose; the allocator source merges cleanly and only the shared `allocatortesting` table needs a trivial rebase for whichever lands second. #140084 and #139795 add counter and compatibility state to the same `allocateDevice` path; when they rebase, that state should be recorded in `deviceRollbackState` and undone by `rollbackDevice` rather than through a separate cleanup path.
+
+  /cc @pohly @klueska
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed DRA scheduling bugs where the structured allocator mis-counted a device's shared counters while exploring candidates: it could keep a counter reserved after rejecting or backtracking a candidate, or drop a shared device's in-use marker so a later share was charged the counter twice. Either way the allocator could treat a counter set as exhausted and leave a pod pending on a node that could satisfy it. This affected the allocator used by the default feature configuration.
+  ```
+releasenote:
+  text: Fixed DRA scheduling bugs where the structured allocator incorrectly counted
+    a device's shared counters while evaluating candidates. It could retain a counter
+    reservation after rejecting or backtracking from a candidate, or clear a shared
+    device's in-use marker, causing a later allocation to charge the counter twice.
+    These issues could cause the allocator to incorrectly treat a counter set as exhausted
+    and leave a Pod pending on a node that could satisfy its resource requirements.
+    This affected the allocator used by the default feature configuration.

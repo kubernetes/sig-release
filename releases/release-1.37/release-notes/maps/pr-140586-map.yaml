@@ -1,0 +1,32 @@
+pr: 140586
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it
+
+  `SVMController.sync` calls `resourceFor`, which returns `(nil, false, nil)` when the target resource is not in the RESTMapper (the normal "unknown resource" return). The `!exists` branch then logs `gvr.String()` on that nil `*schema.GroupVersionResource`. Because `GroupVersionResource.String()` has a value receiver, this dereferences the nil pointer and panics; the arguments to `logger.V(4).Info(...)` are evaluated unconditionally, so it happens regardless of log level. The panic crashes the whole kube-controller-manager (CrashLoopBackOff) until the offending `StorageVersionMigration` is deleted.
+
+  This can happen when a `StorageVersionMigration` is created for a resource that later disappears from the RESTMapper, e.g. a CRD deleted while its migration is still pending.
+
+  The fix logs `toBeProcessedSVM.Spec.Resource` (a `metav1.GroupResource` value, always present) instead of the nil `gvr`. The intended behavior of the branch (requeue for a minute, then fail the migration) is unchanged. The sibling `ResourceVersionController.sync` already handles the same `!exists` case without touching `gvr`.
+
+  #### Which issue(s) this PR fixes
+
+  Fixes #140561
+
+  #### Special notes for your reviewer
+
+  - One-line fix plus a regression test (`TestSyncDoesNotPanicWhenResourceNotInMapper`) that panics without the fix and passes with it.
+  - Verified end to end on kind: with a stock build, the reproduction sequence (create CRD, create StorageVersionMigration, delete CRD) puts the controller-manager into CrashLoopBackOff; with the patched build it stays healthy and the migration reaches a terminal state gracefully.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed a panic in the kube-controller-manager that could crash it when a StorageVersionMigration targeted a resource not present in the RESTMapper (for example, a CRD deleted while its migration was pending).
+  ```
+releasenote:
+  text: Fixed a panic in `kube-controller-manager` that could occur when a StorageVersionMigration
+    targeted a resource missing from the RESTMapper, for example, when a CRD was deleted
+    while its migration was pending.

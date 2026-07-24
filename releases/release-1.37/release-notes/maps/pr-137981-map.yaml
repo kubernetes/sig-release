@@ -1,0 +1,26 @@
+pr: 137981
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\nThis PR enhances the standard Pod-by-Pod preemption
+  flow to support PodGroups as preemption victims. Previously, the preemption logic
+  treated all pods individually. With this change, if a pod belongs to a PodGroup,
+  the preemption logic can treat the group as a single atomic victim.\r\n\r\nHigh-level
+  overview of how this was achieved:\r\n- **Interface Abstraction**: Introduced `Victim`
+  and `DomainVictim` separation.\r\n    - **`Victim`**: A general type used to generalize
+  single Pods and `PodGroups`. It supports operations that do not depend on a specific
+  preemption domain.\r\n    - **`DomainVictim`**: Tied strictly to a preemption domain.
+  It tracks `nodeInfos` (copies of node state, not active snapshot references, except
+  WAP flow, for WAP we are using actual reference) representing the affected blast
+  radius, which the preemption algorithm uses to identify pods for eviction. It cannot
+  be created outside of a domain.\r\n- **Constructor Methods**:\r\n    - `NewVictim`
+  signature was updated to return the `Victim` interface and made public.\r\n    -
+  Added `NewDomainForPodByPodPreemption` which initializes the preemption domain by
+  grouping pods on a node by their `PodGroupName` (if applicable).\r\n    - The `DomainVictim`
+  constructor (`newDomainVictim`) calculates `nodeInfos` internally using a snapshot
+  reference, rather than requiring them to be passed from outside the domain.\r\n\r\n####
+  Special notes for your reviewer:\r\nThe changes focus on abstracting the \"unit
+  of preemption\" into a `Victim` interface. The `NewDomainForPodByPodPreemption`
+  constructor is where the grouping logic lives.\r\n\r\n#### Does this PR introduce
+  a user-facing change?\r\n```release-note\r\nEnhanced Pod-by-Pod preemption to support
+  PodGroups as preemption victims.\r\n```\r\n"
+releasenote:
+  text: Enhanced Pod-by-Pod preemption to support PodGroups as preemption victims.

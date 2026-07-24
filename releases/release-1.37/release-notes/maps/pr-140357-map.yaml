@@ -1,0 +1,15 @@
+pr: 140357
+pr_body: "#### What type of PR is this?\r\n\r\n/kind documentation\r\n\r\n#### What
+  this PR does / why we need it:\r\n\r\nhttps://kubernetes.io/docs/reference/kubectl/generated/kubectl_explain/\r\n\r\ndescription
+  in generated file escaped in code block is not rendered because it is inside of
+  `<code>` block\r\nchange Its parentheses to uppercase like description of other
+  command. (e.g, kubectl autoscale https://kubernetes.io/docs/reference/kubectl/generated/kubectl_autoscale/)\r\n\r\nfrom\r\n<img
+  width=\"642\" height=\"236\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c03cdea8-4b08-43c2-90d0-1227e4a8ce18\"
+  />\r\n\r\nresults \r\n<img width=\"637\" height=\"229\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7fdc8917-7a69-4d5f-81f9-8edfbce52e1b\"
+  />\r\n\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nissue link: https://github.com/kubernetes/website/issues/54776
+  \r\n\r\n#### Special notes for your reviewer:\r\n\r\nNONE\r\n\r\n#### Does this
+  PR introduce a user-facing change?\r\n\r\n```\r\nkubectl explain: long description
+  updated for better docs. consistent with other command.\r\n```\r\n"
+releasenote:
+  text: Updated the `kubectl explain` long description for consistency with other
+    commands and to improve the documentation.

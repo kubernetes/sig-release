@@ -1,0 +1,47 @@
+pr: 140666
+pr_body: |+
+  **What type of PR is this?**
+
+  /kind bug
+  /sig node
+  /wg device-management
+
+  **What this PR does / why we need it**:
+
+  The consumable-capacity `validRange` step-multiple check in `validateRequestPolicyRangeStep` reads `min`, `step` and the `default`/`max` value with `Quantity.Value()`. That only reads a bound back faithfully in `[0, MaxInt64]`, and today nothing keeps the bounds inside it. A DRA driver publishes them in a `ResourceSlice`.
+
+  **Above the range**, `Value()` overflows. A bound that is a positive multiple of `2^64` (for example `18446744073709551616`) has `Sign() == 1`, so it passes the step > 0 guard added in #139698, but reads as `0`: a `step` divides by zero (an apiserver panic on admission), and a `min`, `max` or `default` compares against a value the bound does not hold, which is both a false accept and a false reject.
+
+  **Below the range**, `Value()` does not round as documented once the quantity is decimal-backed, and can read back with the wrong sign: a `min` of `-9.5Gi` reads as `+8246196746`. That is #110653, open since 2022 and confirmed by @yliaog, with a fix up in #138510. Only `step` is sign-checked today (`Sign() <= 0`), so a negative `min`, `max` or `default` reaches the arithmetic.
+
+  This rejects a `step`, `min`, `max` or `default` outside `[0, MaxInt64]` with a field error before the arithmetic runs. `Sign()` alone misses the high end and `CmpInt64` alone misses the low end, so the check needs both.
+
+  **Which issue(s) this PR fixes**:
+
+  Fixes #140472
+
+  Related to #140441: this is the validation half of the `.Value()` overflow follow-up, matching @pohly's note on #140161 that "TODO (#140441) also applies here" for the integer range. The allocator half is #140442.
+
+  **Special notes for your reviewer**:
+
+  - **The `>= 0` half is yours** (https://github.com/kubernetes/kubernetes/pull/140161#discussion_r3519117147): *"Verify that the quantities are >= 0 before extracting them and `Value() <= MaxMilliValue`"*. This does both halves for the integer path, which is the completeness gap you flagged on #140161 (https://github.com/kubernetes/kubernetes/pull/140161#discussion_r3601958130). The milli guard there is nested under the feature gate and a fractional range, so it does not cover this path.
+  - **This does not fix `Value()` itself**, and does not need to: rejecting the bound up front means the reads never see an unusable one. #138510 is the fix for the reads, and I have reviewed it.
+  - **What `min >= 0` buys on the allocator side.** `roundUpRange` reads three values, and the third is the request from the claim, which nothing validates. It does not need its own bound: the function already clamps a request below `min` with `Cmp`, which is exact, so once `min >= 0` holds a request can never be negative by the time `Value()` reads it. I checked `-9.5Gi`, `-1` and `-1E30` against `min: 0` and all three clamp to `min`. The high end is #140442's guard.
+  - **The bound checks sit under `Step != nil`, next to the reads they protect.** `min`, `max` and `default` are only read with `Value()` when a `step` is present (`roundUpRange` returns before reading when `Step == nil`, and `violateValidRange` reads them only inside `if Step != nil`), so that is where the guard runs. A side effect: a negative or over-range `min`, `max` or `default` with no `step` is accepted, since without a `step` nothing then reads it as an int64. If you would rather reject a negative capacity bound unconditionally as a general invariant, like `step` and `allocationMultiplier` already are, I can hoist the sign check out; I kept it scoped to the reads to stay within the arithmetic-safety fix.
+  - **`Value()` still rounds a fractional bound up inside `[0, MaxInt64]`**, so a `step` of `1.5` is read as `2` and `3` is reported as not a multiple of it. That is pre-existing and is what the milli path in #140161 is for; this PR only keeps the reads in range and does not claim to make them exact.
+  - **On rejecting negative bounds being a behavior change**: it is, in the same way the out-of-range rejection is. Since #140161 merged, `validateMultiAllocatableDeviceCapacity` runs under its `DeepEqual(oldDevice.Capacity, device.Capacity)` ratcheting gate, so an existing slice with such a bound is re-checked only when its capacity changes. A negative capacity bound is not meaningful, and the same function already rejects `step` with `Sign() <= 0` and `allocationMultiplier` with `Sign() <= 0`, so `min`/`max`/`default` having no sign check reads as an omission rather than a decision. Say the word if you would rather split it out.
+  - `validValues` had the same `Quantity.Value()` collision in `quantityKey` (#140457); #140161 has since fixed it by keying on `AsDec().String()` when the feature gate is on.
+  - The decimal path ends in `big.Int.Int64()`, which Go documents as undefined out of range, so the `0` above is what it happens to return rather than a contract. Rejecting the bound avoids depending on it either way.
+
+  **Does this PR introduce a user-facing change?**
+
+  ```release-note
+  Fixed a panic (integer divide by zero) and incorrect validation in ResourceSlice
+  admission when a DRA consumable-capacity validRange step, min, max or default is
+  negative or larger than 9223372036854775807.
+  ```
+
+releasenote:
+  text: Fixed a panic caused by integer division by zero and incorrect `ResourceSlice`
+    admission validation when a DRA consumable capacity `validRange` `step`, `min`,
+    `max`, or `default` value is negative or greater than `9223372036854775807`.

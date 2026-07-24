@@ -1,0 +1,12 @@
+pr: 139223
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nPromote the `metrics.k8s.io` API to v1.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/5207\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nThis PR is currently marked as a Draft until
+  the KEP's label has `lead-opt-in`.\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n\r\n```release-note\r\nThe `metrics.k8s.io` API is promoted from v1beta1
+  to v1 without any modifications\r\n```\r\n\r\n#### Additional documentation e.g.,
+  KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n- [KEP]:
+  https://github.com/kubernetes/enhancements/issues/5207\r\n```\r\n"
+releasenote:
+  text: Promoted the `metrics.k8s.io` API from `v1beta1` to `v1` without changes.

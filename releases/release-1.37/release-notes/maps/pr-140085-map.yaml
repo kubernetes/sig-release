@@ -1,0 +1,26 @@
+pr: 140085
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nEnables the EtcdRangeStream feature gate by default
+  (Beta).\r\n\r\n#### Benchmarks \r\n\r\n##### Unit benchmark\r\n\r\nWatch-cache initialization
+  is ~1.4x faster with RangeStream ([BenchmarkCacherInit](https://github.com/kubernetes/kubernetes/blob/ca9d6bbea7836876e850fb9b19022c7f4540d7ee/staging/src/k8s.io/apiserver/pkg/storage/cacher/cacher_init_bench_test.go#L41)):\r\n\r\n```\r\n
+  \                 │ rs-off.txt │             rs-on.txt              │\r\n                  │
+  \  sec/op   │   sec/op     vs base               │\r\nBenchmarkCacherInit  6.173
+  ± 16%  4.343 ± 11%  -29.65% (p=0.002 n=6)\r\n\r\n                  │    B/op     │
+  \   B/op       vs base             │\r\nBenchmarkCacherInit  11.55Gi ± 1%  10.53Gi
+  ± 0%   -8.85% (p=0.002 n=6)\r\n\r\n                  │  allocs/op │  allocs/op   vs
+  base              │\r\nBenchmarkCacherInit  64.56M ± 0%  64.66M ± 0%   +0.15% (p=0.002
+  n=6)\r\n```\r\n\r\n##### Scalability benchmark (5k nodes)\r\n\r\nWatch-cache initialization
+  is ~1.4x faster with RangeStream on a fully-loaded cluster.\r\n\r\nThe 5k-node scalability
+  test populates and fully schedules roughly 150,000 pods, on top of the configmaps,
+  endpointslices, secrets, and other objects a cluster of that size carries in etcd.
+  With the cluster in that fully-loaded state, we restart one kube-apiserver and measure
+  how long its pod watch cache takes to reinitialize from etcd.\r\n\r\n|        |
+  pod watch-cache init | run |\r\n|--------|----------------------|-----|\r\n| rs-off
+  | 10.9s                | [build](https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-e2e-gce-scale-performance-5000-experimental/2073271039801954304)
+  |\r\n| rs-on  | 8.1s (-26%)          | [build](https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/140085/pull-kubernetes-gce-master-scale-performance-5000-experimental/2075323162786009088)
+  |\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nhttps://github.com/kubernetes/enhancements/issues/5966\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nThe EtcdRangeStream
+  feature gate is now enabled by default (Beta).\r\n```\r\n\r\n#### Additional documentation
+  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\nhttps://github.com/kubernetes/enhancements/blob/master/keps/sig-etcd/5966-etcd-range-stream/README.md\r\n```\r\n\r\n\r\n"
+releasenote:
+  text: Enabled the `EtcdRangeStream` feature gate by default and promoted it to Beta.

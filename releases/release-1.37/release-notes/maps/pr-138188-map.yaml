@@ -1,0 +1,53 @@
+pr: 138188
+pr_body: |-
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  When users pass an invalid value to `--restart` or `--image-pull-policy` (e.g. `--restart=never` instead of `--restart=Never`), the error message only says "invalid restart policy: never" without telling them what the valid values are.
+
+  This change updates both error messages to list the accepted values, so users can correct their input without having to look up the docs.
+
+  Before:
+  ```
+  error: invalid restart policy: never
+  ```
+
+  After:
+  ```
+  error: invalid restart policy: never, valid values are: Always, OnFailure, Never
+  ```
+
+  The same improvement is applied to `--image-pull-policy` for consistency.
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes kubernetes/kubectl#1504
+
+  Prior PR #121570 addressed this but was closed due to inactivity. This picks up where it left off and also fixes the same issue in `verifyImagePullPolicy`.
+
+  #### Special notes for your reviewer:
+
+  The fix uses the `corev1` constants (`RestartPolicyAlways`, etc.) rather than string literals, so the error messages stay in sync if the API values ever change.
+
+  I also added two new test functions that verify the error messages contain all valid values for both `--restart` and `--image-pull-policy`.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kubectl run: error messages for invalid --restart and --image-pull-policy values now list the accepted values
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  NONE
+  ```
+
+  /sig cli
+  /area kubectl
+releasenote:
+  text: Updated `kubectl run` error messages for invalid `--restart` and `--image-pull-policy`
+    values to list the accepted values.

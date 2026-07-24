@@ -1,0 +1,8 @@
+pr: 140556
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nFix bug in CEL where quantity.Add would mutate the
+  receiver.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\n#### Special
+  notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nFix
+  bug in CEL where quantity.Add would mutate the receiver.\r\n```\r\n\r\n"
+releasenote:
+  text: Fixed a bug in CEL where `quantity.Add` mutated the receiver.

@@ -1,0 +1,27 @@
+pr: 138809
+pr_body: "#### What type of PR is this?\r\n\r\n`/kind feature\r\n`\r\n\r\n#### What
+  this PR does / why we need it:\r\n\r\n`kubectl explain --recursive` prints the full
+  schema tree for a resource. For large resources (Pod, Deployment, CRDs with deeply
+  nested specs), the output is hundreds of lines and there is no way to ask for a
+  shallower overview short of navigating field-by-field with dotted paths.\r\n\r\nThis
+  PR adds a new `--max-depth=N` flag to `kubectl explain` that caps recursion depth
+  when printing nested fields:\r\n- `--max-depth=0` (default) preserves the existing
+  unlimited behavior.\r\n- `--max-depth=N` (N > 0) prints fields up to N levels and
+  implies `--recursive`.\r\n- Negative values are rejected at validation time.\r\n\r\nThe
+  cap is threaded through both render paths so behavior is consistent regardless of
+  which one runs:\r\n- v1 (OpenAPIv2): `recursiveFieldsPrinter` carries a depth counter
+  and skips child recursion at the limit.\r\n- v2 (OpenAPIv3, default): the plaintext
+  template guards `fieldList` recursion on `lt $.level $.MaxDepth`.\r\n\r\nWhen recursion
+  stops at the limit, the field name and type marker (e.g., `spec\\t<PodSpec>`) are
+  still printed, so users see what exists and can drill down with a field path or
+  a deeper `--max-depth`.\r\n\r\n#### Which issue(s) this PR is related to:\r\nFixes
+  kubernetes/kubectl#1659\r\n\r\n#### Special notes:\r\n\r\nThe flag is purely additive
+  and backward compatible: the default `MaxDepth=0` is treated as unlimited, so existing
+  `--recursive` invocations are unchanged. Tests cover validation, the v1 printer,
+  the v2 template, and the CLI wiring; `test/cmd/discovery.sh` also exercises the
+  flag end-to-end against a CRD.\r\n\r\nDoes this PR introduce a user-facing change?\r\n\r\n```release-note\r\nAdded
+  a `--max-depth` flag to `kubectl explain --recursive` to limit the depth of nested
+  fields displayed in the output.\r\n```\r\n"
+releasenote:
+  text: Added a `--max-depth` flag to `kubectl explain --recursive` to limit the depth
+    of nested fields displayed in the output.

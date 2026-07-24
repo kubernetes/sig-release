@@ -1,0 +1,16 @@
+pr: 140047
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nTo calculate the resource footprint of a multi-container
+  pod, individually aggregate desired, allocated, and actuated resources independently
+  across the containers before taking the max - i.e. take the max of sums rather than
+  the sum of maxes. This is correct because a resize is allocated / actuated **atomically**.
+  See https://github.com/kubernetes/kubernetes/issues/140046 for more details.\r\n\r\nAlso
+  adds some additional test coverage to helpers_test.go (bringing it to 93% code coverage
+  for the package).\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nFixes
+  https://github.com/kubernetes/kubernetes/issues/140046\r\n\r\n#### Does this PR
+  introduce a user-facing change?\r\n\r\n```release-note\r\nFix the overestimation
+  of the pod's resource footprint for multi-container pods undergoing a resize.\r\n```\r\n\r\nAssisted
+  by Antigravity\r\n"
+releasenote:
+  text: Fixed the overestimation of a Pod's resource footprint during resize operations
+    for multi-container Pods.

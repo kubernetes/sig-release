@@ -1,0 +1,32 @@
+pr: 138176
+pr_body: |-
+  **What type of PR is this?**
+  /kind feature
+
+  **What this PR does / why we need it:**
+
+  Graduates two remaining scheduler metrics from ALPHA to BETA stability level, completing the work tracked in #136311 (part of the broader effort in #136107).
+
+  Both metrics have been present in Kubernetes for a long time and are in active use:
+  - `scheduler_plugin_execution_duration_seconds` — duration for running a plugin at a specific extension point
+  - `scheduler_scheduling_algorithm_duration_seconds` — scheduling algorithm latency
+
+  The other four scheduler metrics (`scheduler_goroutines`, `scheduler_permit_wait_duration_seconds`, `scheduler_plugin_evaluation_total`, `scheduler_unschedulable_pods`) were already graduated to BETA in #136155.
+
+  **Which issue(s) this PR fixes:**
+  Fixes #136311
+
+  **Special notes for your reviewer:**
+  - Changed `StabilityLevel` from `metrics.ALPHA` to `metrics.BETA` in `pkg/scheduler/metrics/metrics.go`
+  - Added corresponding entries to `test/instrumentation/testdata/stable-metrics-list.yaml`
+  - All instrumentation tests pass: `go test ./test/instrumentation/...`
+  - All scheduler metrics tests pass: `go test ./pkg/scheduler/metrics/...`
+
+  **Does this PR introduce a user-facing change?**
+
+  ```release-note
+  Graduate scheduler metrics `scheduler_plugin_execution_duration_seconds` and `scheduler_scheduling_algorithm_duration_seconds` from ALPHA to BETA stability.
+  ```
+releasenote:
+  text: Graduated the `scheduler_plugin_execution_duration_seconds` and `scheduler_scheduling_algorithm_duration_seconds`
+    metrics from Alpha to Beta.

@@ -1,0 +1,12 @@
+pr: 140576
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nBump images and versions to golang 1.26.5\r\n\r\n**Note:**
+  distroless-iptables was already updated to 0.9.6 with https://github.com/kubernetes/kubernetes/pull/140405
+  even though the PR title says otherwise\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\n\r\nPart of https://github.com/kubernetes/release/issues/4449\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nKubernetes
+  is now built with Go 1.26.5\r\n```\r\n\r\n#### Additional documentation e.g., KEPs
+  (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n\r\n```\r\n\r\n/assign
+  @xmudrii @Verolop @saschagrunert \r\n/cc @kubernetes/release-managers \r\n"
+releasenote:
+  text: Updated the Go version used to build Kubernetes to `v1.26.5`.

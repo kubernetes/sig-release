@@ -1,0 +1,46 @@
+pr: 139142
+pr_body: "<!--  Thanks for sending a pull request!  Here are some tips for you:\r\n\r\n1.
+  If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution
+  and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide\r\n2.
+  Please label this pull request according to what type of issue you are addressing,
+  especially if this is a release targeted pull request. For reference on required
+  PR/issue labels, read here:\r\nhttps://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label\r\n3.
+  Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md\r\n4.
+  If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews\r\n5.
+  If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests\r\n-->\r\n\r\n####
+  What type of PR is this?\r\n/kind feature\r\n<!--\r\nAdd one of the following kinds:\r\n/kind
+  bug\r\n/kind dependency\r\n/kind cleanup\r\n/kind documentation\r\n/kind feature\r\n\r\nOptionally
+  add one or more of the following kinds if applicable:\r\n/kind api-change\r\n/kind
+  deprecation\r\n/kind failing-test\r\n/kind flake\r\n/kind regression\r\n-->\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nThis PR proposes new datastore for HPA
+  controller instead of current bimultimap implementation.\r\n\r\nThe benchmark results
+  shows promising results.\r\n\r\n\r\n#### Benchmark results\r\n\r\n10,000 HPAs, 100
+  pods/HPA, 10 namespaces, 96-core machine.\r\n\r\n**Throughput (reconciliations/second):**\r\n\r\n|
+  Workers | Current (BiMultimap) | Proposed (SelectorStore) | Speedup |\r\n|---------|---------------------|------------------------|---------|\r\n|
+  50 | 2,635 | 444,671 | 169× |\r\n| 100 | 2,600 | 506,873 | 195× |\r\n\r\nCurrent
+  throughput **degrades** with more workers (increased contention). Proposed throughput
+  **scales** with workers until CPU saturation.\r\n\r\n**Contention (100 workers):**\r\n\r\n|
+  | Avg lock wait per operation |\r\n|---|---|\r\n| Current | 38.2 ms |\r\n| Proposed
+  | 0.178 ms |\r\n| Reduction | **214×** |\r\n\r\n**Memory:**\r\n\r\n| | Bytes/HPA
+  (10 namespaces) | Bytes/HPA (100 namespaces) |\r\n|---|---|---|\r\n| Current | 474
+  | 474 |\r\n| Proposed | 226 | 131 |\r\n\r\n**Allocations per operation (100 workers):**\r\n\r\n|
+  | Bytes/op | Allocs/op |\r\n|---|---|---|\r\n| Current | 6,148,911 | 71,303 |\r\n|
+  Proposed | 563,203 | 30,100 |\r\n\r\n#### Impact\r\n\r\nWith 100 workers and 15s
+  resync period:\r\n\r\n- **Current**: 2,600 ops/s → workers spend 99.7% of time blocked
+  on the mutex. Selector overlap check alone consumes seconds of wall clock per cycle.\r\n-
+  **Proposed**: 500K+ ops/s → selector check becomes negligible.\r\n\r\n#### Which
+  issue(s) this PR is related to:\r\n\r\n#139111 \r\n\r\n#### Special notes for your
+  reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n<!--\r\nIf
+  no, just write \"NONE\" in the release-note block below.\r\nIf yes, a release note
+  is required:\r\nEnter your extended release note in the block below. If the PR requires
+  additional action from users switching to the new release, include the string \"action
+  required\".\r\n\r\nFor more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nAdded
+  the `HPAOptimizedSelectorStore` feature gate (Beta, enabled by default) to reduce
+  lock contention in the HorizontalPodAutoscaler controller's selector overlap detection
+  and improve reconciliation throughput at high HorizontalPodAutoscaler counts and
+  concurrency.\r\n```"
+releasenote:
+  text: Added the `HPAOptimizedSelectorStore` feature gate in Beta, enabled by default,
+    to reduce lock contention in the HorizontalPodAutoscaler controller's selector
+    overlap detection and improve reconciliation throughput at high HorizontalPodAutoscaler
+    counts and concurrency.

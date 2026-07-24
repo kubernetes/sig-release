@@ -1,0 +1,39 @@
+pr: 138183
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  `NodeManager` is intended to force kube-proxy to restart when the watched `Node` changes in a way that invalidates its current network state.
+
+  That was no longer happening for node IP changes or node deletion because the exit path had been commented out. As a result, kube-proxy could keep running with stale node information.
+
+  This restores the restart path for both cases and updates the existing tests to cover that behavior.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  This brings the implementation back in line with the existing `NodeManager` behavior comment and test intent.
+
+  Tested with:
+  - `go test ./pkg/proxy -run 'TestNodeManager'`
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Kube-proxy now exits when the watched Node's IPs change or when the Node object is deleted, allowing it to restart with updated node networking state.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+
+  ```
+releasenote:
+  text: Updated `kube-proxy` to exit when the watched Node's IPs change or when the
+    Node object is deleted, allowing it to restart with updated node networking state.

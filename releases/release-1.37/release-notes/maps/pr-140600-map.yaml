@@ -1,0 +1,10 @@
+pr: 140600
+pr_body: "…tiple devices\r\n\r\nAdd one of the following kinds:\r\n/kind bug\r\n\r\n####
+  What this PR does / why we need it:\r\nThe description what the PR does is mentioned
+  in the linked issue.\r\n\r\n#### Which issue(s) this PR is related to:\r\nFixes
+  #140438 \r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nDRA
+  consumable capacity: when a request allocated multiple devices, the DistinctAttribute
+  constraint was not checked properly for each device.\r\n```\r\n"
+releasenote:
+  text: Fixed a bug in DRA consumable capacity where the `DistinctAttribute` constraint
+    was not correctly enforced for each device when a request allocated multiple devices.

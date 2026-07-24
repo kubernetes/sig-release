@@ -1,0 +1,15 @@
+pr: 140333
+pr_body: "#### What type of PR is this?\r\n\r\n/kind dependency\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nUpdate the default etcd version from v3.7.0-rc.0
+  to the final v3.7.0 release, updating both the vendored client libraries and the
+  etcd image references.\r\n\r\n```\r\n# Bump to v3.7.0\r\nhack/pin-dependency.sh
+  go.etcd.io/etcd/api/v3 v3.7.0\r\nhack/pin-dependency.sh go.etcd.io/etcd/client/pkg/v3
+  v3.7.0\r\nhack/pin-dependency.sh go.etcd.io/etcd/client/v3 v3.7.0\r\nhack/pin-dependency.sh
+  go.etcd.io/etcd/pkg/v3 v3.7.0\r\nhack/pin-dependency.sh go.etcd.io/etcd/server/v3
+  v3.7.0\r\n# Rebuild vendor directory\r\nhack/update-vendor.sh\r\n```\r\n\r\nxref:
+  https://github.com/etcd-io/etcd/issues/21605\r\n\r\n#### Which issue(s) this PR
+  is related to:\r\n\r\nN/A\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nUpdated
+  the default etcd version to 3.7.0\r\n```\r\n\r\n#### Additional documentation e.g.,
+  KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\nNONE\r\n```"
+releasenote:
+  text: Updated the default etcd version to `v3.7.0`.
