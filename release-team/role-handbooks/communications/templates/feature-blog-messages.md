@@ -57,7 +57,7 @@ For easier tracking, please let us know whether you’d like to opt in or opt ou
 > 
 
 > [!Note]
-> In your placeholder PR, use `XX` characters for the blog `date` in the front matter and file name. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
+> In your placeholder PR, use the current scheduled overall release date for the blog `date` and add a `draft:true` to the front matter. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
 ```
 
 With this one, you'd need to update the following placeholders:
@@ -84,7 +84,7 @@ This is a gentle reminder for the feature blog deadline mentioned above, which i
 > - You can find more in the [release document](LINK)
 
 > [!Note]
-> In your placeholder PR, use `XX` characters for the blog `date` in the front matter and file name. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
+> In your placeholder PR, use the current scheduled overall release date for the blog `date` and add a `draft:true` to the front matter. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
 ```
 
 With this one, you'd need to update the following placeholders:
