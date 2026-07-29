@@ -1,45 +1,14 @@
 pr: 137375
-pr_body: |
-  #### What type of PR is this?
-
-  /kind cleanup
-
-  #### What this PR does / why we need it:
-
-  Stores MutatingAdmissionPolicy and MutatingAdmissionPolicyBinding (GA in 1.36) as v1 (removing the temporary https://github.com/kubernetes/kubernetes/pull/138281).
-
-  Deleting the pin alone introduces an inconsistency with what happens at emulation version 1.34, the storage version calculation selects v1alpha1, because v1beta1 (introduced in 1.34) is not n-1 compatible there.
-
-  Normally we permit the first beta version introduced to not need `n-1` but this isn't encoded in emulation calculation code.
-
-  Commit 1 adds logging to TestEtcdStoragePath that surfaces when the emulation calculation changes an expected storage version.
-
-  Commit 2:
-
-  - skip alpha versions when searching for an n-1 compatible storage version
-  - if no non-alpha version qualifies, use the highest priority version introduced at or before the emulation version
-  - the test/integration/etcd/data.go helper that duplicated the old calculation now calls the production calculation
-
-  Commit 3 removes the pin:
-
-  - storage is v1 at 1.37, v1beta1 at emulated 1.34 through 1.36
-  - the remaining overrides in default_storage_factory_builder.go removal tracked for follow up https://github.com/kubernetes/kubernetes/issues/136994
-
-  #### Which issue(s) this PR is related to:
-
-  Fixes https://github.com/kubernetes/kubernetes/issues/138283
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  MutatingAdmissionPolicy and MutatingAdmissionPolicyBinding are now stored in etcd as admissionregistration.k8s.io/v1
-  ```
-
-  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
-
-  ```docs
-  NONE
-  ```
 releasenote:
-  text: Changed MutatingAdmissionPolicy and MutatingAdmissionPolicyBinding storage
-    in etcd to use the `admissionregistration.k8s.io/v1` API version.
+  text: |-
+    Changed MutatingAdmissionPolicy and MutatingAdmissionPolicyBinding storage in etcd to use the `admissionregistration.k8s.io/v1` API version.
+  sigs:
+  - api-machinery
+  - etcd
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - apiserver
+pr_body: ""

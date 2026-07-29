@@ -1,40 +1,10 @@
 pr: 140435
-pr_body: |+
-  #### What type of PR is this?
-
-  /kind bug
-  /sig node
-
-  #### What this PR does / why we need it:
-
-  The structured DRA allocator caches per-pool counter availability under the pool name alone, but a pool is identified by its driver and name together. When two drivers publish a pool with the same name on the same node and both consume counters, the name-only key collides: the second pool's devices are evaluated against the first driver's cached counter set definition and aggregate consumption instead of their own, so a device can be incorrectly rejected or accepted.
-
-  This keys both counter caches (`availableCounters`, `consumedCounters`) by `PoolID` (driver and pool) instead of the pool name, matching how the allocator already keys its pool map. `PoolID` is a comparable value, so the map type now enforces the pool identity: a lookup can no longer be written with the pool name alone. The change covers every site: the two map declarations and initializations, the cache lookup and insertion in `checkAvailableCounters`, and the lookup in `deallocateCountersForDevice`, in all three allocator variants (stable, incubating, experimental). Their stale "resource pool names" comments are corrected too.
-
-  #### Which issue(s) this PR is related to:
-
-  Fixes #140434
-
-  #### Special notes for your reviewer:
-
-  Two regression cases live in the shared `allocatortesting` table so they run against every variant, and they guard both caches, not only `consumedCounters`:
-
-  - `partitionable-devices-counter-cache-scoped-by-pool-ID` gives the two same-named pools different counter capacities, so the case fails unless both `availableCounters` and `consumedCounters` are keyed by `PoolID`.
-  - `partitionable-devices-counter-cache-not-crossed-between-driver-schemas` gives them different counter sets and over-consumes the second pool's counter, covering the incorrect-accept direction: with the pool-name key the second pool reuses the first pool's cached definitions and its own set is never compared.
-
-  Both fail on the current code and pass with the change. `go test ./structured/...` is green, including `-race`.
-
-  Concurrent work: logically independent of #140431 (candidate rollback state) and #140437 (skip counter check for a persisted shared device). All three add cases to the shared `allocatortesting` table, and this and #140437 also both modify `NewAllocator`, so the second of any pair to merge needs a mechanical rebase; the allocator source is otherwise clean against #140431. #140084 and #139795 also touch the counter caches; if they land or rebase around this, their caches should stay keyed by `PoolID`.
-
-  /cc @pohly @klueska
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Fixed a DRA scheduling bug where the structured allocator keyed its shared-counter caches by pool name alone, so two drivers publishing a pool with the same name on a node could use each other's counter definitions and incorrectly accept or reject device allocations in the second driver's pool.
-  ```
-
 releasenote:
-  text: Fixed a DRA scheduling bug where the structured allocator keyed shared-counter
-    caches by pool name only, causing drivers with the same pool name on a node to
-    use each other's counter definitions and incorrectly accept or reject device allocations.
+  text: |-
+    Fixed a DRA scheduling bug where the structured allocator keyed shared-counter caches by pool name only, causing two drivers with the same pool name on a node to use each other's counter definitions and incorrectly accept or reject device allocations in the second driver's pool.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

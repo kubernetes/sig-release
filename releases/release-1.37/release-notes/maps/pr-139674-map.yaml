@@ -1,25 +1,14 @@
 pr: 139674
-pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
-  PR does / why we need it:\r\n\r\nThis PR introduces a new scheduler framework extension
-  point: `PodGroupPostFilter`.\r\nThis extension point runs after `PostFilter` but
-  operates on PodGroups (used in GangScheduling) rather than individual pods.\r\n\r\nThis
-  PR builds on top of PR #139616 (which decoupled WAP logic) by introducing a fully
-  configurable `PodGroupPostFilter` extension point into the scheduler API.\r\n\r\nChanges
-  in this PR:\r\n\r\n1. Adds `PodGroupPostFilter` to the framework and validation
-  API types, exporting the interfaces (such as `PodGroupInfo` and `PodGroupPostFilterResult`)
-  via `staging/src/k8s.io/kube-scheduler/framework` so out-of-tree plugins can implement
-  it.\r\n2. Implements `RunPodGroupPostFilterPlugins` inside `framework.go` to properly
-  execute registered plugins\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP:
-  https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/5710-workload-aware-preemption\r\nRelated
-  PR: #139616\r\n\r\n#### Special notes for your reviewer:\r\n\r\n• This PR is split
-  into logical commits mimicking previous extension point PRs:\r\n  1. API config
-  changes for PodGroupPostFilter\r\n  2. Framework iteration implementation and configuration\r\n\r\n####
-  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nIntroduces
-  `PodGroupPostFilter` extension point to the scheduling framework. This replaces
-  internal hardcoding for `WorkloadAwarePreemption` with a proper, configurable extension
-  point for operating on PodGroups.\r\n```\r\n\r\n#### Additional documentation e.g.,
-  KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n- [KEP]: https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/5710-workload-aware-preemption\r\n"
 releasenote:
-  text: Added the `PodGroupPostFilter` extension point to the scheduling framework,
-    replacing the internal hardcoding for `WorkloadAwarePreemption` with a configurable
-    extension point for PodGroups.
+  text: |-
+    Added the `PodGroupPostFilter` extension point to the scheduling framework, replacing the internal hardcoding for `WorkloadAwarePreemption` with a configurable extension point for PodGroups.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

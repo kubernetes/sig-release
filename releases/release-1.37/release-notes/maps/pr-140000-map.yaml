@@ -1,28 +1,19 @@
 pr: 140000
-pr_body: "#### What type of PR is this?\r\n\r\n<!--\r\nAdd one of the following kinds:\r\n/kind
-  bug\r\n/kind dependency\r\n/kind cleanup\r\n/kind documentation\r\n/kind feature\r\n\r\nOptionally
-  add one or more of the following kinds if applicable:\r\n/kind api-change\r\n/kind
-  deprecation\r\n/kind failing-test\r\n/kind flake\r\n/kind regression\r\n-->\r\n\r\n/kind
-  feature\r\n\r\n#### What this PR does / why we need it:\r\n\r\nImplement Scheduler
-  Preemption for In-Place Pod Resize behind the alpha feature gate `InPlacePodVerticalScalingSchedulerPreemption`.\r\n\r\n####
-  Which issue(s) this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/5836\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\nCouple of things changed from the KEP: \r\n(1)
-  I decided to call the FG `InPlacePodVertifcalScalingSchedulerPreemption` to better
-  align with existing FG names\r\n(2) Per https://github.com/kubernetes/kubernetes/issues/139996,
-  kubelet-side preemption for critical pods will not run for resize (instead depending
-  on scheduler-side preemption).\r\n(3) Per https://github.com/kubernetes/kubernetes/pull/140000#discussion_r3582698835,
-  we will not have Kubelet propagate the node policy through a pod condition; rather
-  the scheduler will monitor the node policy directly.\r\n\r\nCommits are organized
-  to ease review.\r\n\r\nAntigravity assisted in writing this code.\r\n\r\n#### Does
-  this PR introduce a user-facing change?\r\n<!--\r\nIf no, just write \"NONE\" in
-  the release-note block below.\r\nIf yes, a release note is required:\r\nEnter your
-  extended release note in the block below. If the PR requires additional action from
-  users switching to the new release, include the string \"action required\".\r\n\r\nFor
-  more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nWhen
-  the alpha feature gate InPlacePodVertifcalScalingSchedulerPreemption is enabled,
-  the scheduler preempts lower-priority pods to make room for the `Deferred` in-place
-  pod resizes of higher-priority pods.\r\n```"
 releasenote:
-  text: Added scheduler support for preempting lower-priority Pods to make room for
-    `Deferred` in-place Pod resizes of higher-priority Pods when the `InPlacePodVerticalScalingSchedulerPreemption`
-    feature gate is enabled.
+  text: |-
+    Added scheduler support for preempting lower-priority Pods to make room for `Deferred` in-place Pod resizes of higher-priority Pods when the `InPlacePodVerticalScalingSchedulerPreemption` Alpha feature gate is enabled.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

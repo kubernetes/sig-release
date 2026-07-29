@@ -1,20 +1,12 @@
 pr: 138940
-pr_body: "#### What type of PR is this?\r\n\r\n/kind documentation\r\n/kind bug\r\n\r\n####
-  What this PR does / why we need it:\r\n\r\nThis PR fixes the documentation for the
-  `--metrics-bind-address` flag in `kube-proxy`, which incorrectly claimed that setting
-  it to an empty string would disable the metrics server. As discussed in the related
-  issue, because of how `v1alpha1` configuration and command line flag defaulting
-  works, setting the value to an empty string causes it to fall back to the default
-  address (`127.0.0.1:10249`) rather than disabling the server and removes the misleading
-  \"Set empty to disable.\" text to prevent user confusion, resolving the documentation
-  inconsistency as requested by maintainers in associated issue.\r\n\r\n#### Which
-  issue(s) this PR is related to:\r\n\r\nFixes #123559\r\n\r\n#### Special notes for
-  your reviewer:\r\n\r\nN/A\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nkube-proxy:
-  Corrected the `--metrics-bind-address` flag documentation by removing the incorrect
-  claim that setting it to an empty string disables the metrics server.\r\n```\r\n\r\n####
-  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
-  etc.:\r\n\r\n```docs\r\nNONE\r\n```\r\n"
 releasenote:
-  text: Corrected the `kube-proxy` `--metrics-bind-address` flag documentation by
-    removing the incorrect statement that setting the flag to an empty string disables
-    the metrics server.
+  text: |-
+    Corrected the `kube-proxy` `--metrics-bind-address` flag documentation by removing the incorrect statement that setting the flag to an empty string disables the metrics server.
+  sigs:
+  - network
+  kinds:
+  - bug
+  - documentation
+  areas:
+  - kube-proxy
+pr_body: ""

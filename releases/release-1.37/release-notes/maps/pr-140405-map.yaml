@@ -1,12 +1,11 @@
 pr: 140405
-pr_body: "#### What type of PR is this?\r\n/kind bug\r\n\r\n#### What this PR does
-  / why we need it:\r\nRebuild kube-proxy image with new distroless-iptables containing
-  nft 1.0.6.1 to fix crashes on systems with nft 1.1.3.\r\n\r\n#### Which issue(s)
-  this PR is related to:\r\nFixes #136786\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n```release-note\r\nUpdated the version of the nft binary in the kube-proxy
-  image to nftables 1.0.6.1,\r\nto fix problems resyncing kube-proxy in nftables mode
-  on systems containing\r\nrules created by recent versions of nftables.\r\n```\r\n"
 releasenote:
-  text: Updated the version of the `nft` binary in the `kube-proxy` image to `nftables
-    v1.0.6.1` to fix issues resyncing `kube-proxy` in nftables mode on systems containing
-    rules created by recent versions of nftables.
+  text: |-
+    Updated the version of the `nft` binary in the `kube-proxy` image to nftables `v1.0.6.1` to fix issues resyncing `kube-proxy` in nftables mode on systems containing rules created by recent versions of nftables.
+  sigs:
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

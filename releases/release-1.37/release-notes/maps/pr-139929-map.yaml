@@ -1,39 +1,10 @@
 pr: 139929
-pr_body: |-
-  ## Summary
-
-  Add `resource.kubernetes.io/numaNode` as a well-known DRA device attribute (KEP-6072), enabling cross-driver NUMA co-placement via `matchAttribute`.
-
-  - Add `StandardDeviceAttributeNUMANode` constant alongside existing `pcieRoot` and `pciBusID`
-  - Add `GetNUMANodeAttributeByPCIBusID()` for PCI/I/O devices (reads sysfs `numa_node` + ACPI SLIT distances)
-  - Add `GetNUMANodeAttribute()` for CPU/memory devices that already know their NUMA node
-  - Add `GetNUMANodeForCPU()` to look up a CPU core's NUMA node from sysfs
-  - Both attribute helpers accept an `AttributeForm` parameter: `ScalarAttribute` for scalar `IntValue`, `ListAttribute` for SLIT-based `IntValues` list
-  - Devices with no NUMA affinity (`numa_node = -1`) return an error so drivers omit the attribute
-
-  The `AttributeForm` parameter is operator-configured on the driver to match the cluster's `DRAListTypeAttributes` state (KEP-5491). Drivers do not detect the cluster's feature gates at runtime.
-
-  ### KEP
-
-  - [KEP-6072: DRA: Standard numaNode Device Attribute](https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/6072-dra-standard-numanode/README.md)
-
-  ### Changes
-
-  | File | Description |
-  |------|-------------|
-  | `deviceattribute/attribute.go` | Add `StandardDeviceAttributeNUMANode` constant |
-  | `deviceattribute/numa_linux.go` | NUMA helpers: `GetNUMANodeAttributeByPCIBusID`, `GetNUMANodeAttribute`, `GetNUMANodeForCPU` |
-  | `deviceattribute/numa_linux_test.go` | Unit tests for scalar, list, socket filter, and error paths |
-  | `allocatortesting/allocator_testing.go` | Allocator integration tests for `matchAttribute` with overlapping and disjoint `numaNode` lists |
-
-  ## Test plan
-
-  - [x] Unit tests: scalar and list forms, socket boundary filter, SLIT distance matrix variations, negative NUMA node rejection, PCI Bus ID validation
-  - [x] Allocator integration tests: `matchAttribute` intersection matching for overlapping lists (`[4]` ∩ `[4,5,6,7]` → match) and disjoint lists (`[0]` ∩ `[4,5,6,7]` → no match)
-
-  ```release-note
-  DRA: Add `resource.kubernetes.io/numaNode` as a standard device attribute with sysfs-based helper functions for DRA drivers (KEP-6072).
-  ```
 releasenote:
-  text: Added the standard device attribute `resource.kubernetes.io/numaNode` and
-    sysfs-based helper functions for DRA drivers.
+  text: |-
+    Added the standard device attribute `resource.kubernetes.io/numaNode` and sysfs-based helper functions for DRA drivers.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

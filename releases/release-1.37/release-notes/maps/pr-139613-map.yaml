@@ -1,16 +1,12 @@
 pr: 139613
-pr_body: "#### What type of PR is this?\r\n/kind feature\r\n/sig-scheduling\r\n\r\n####
-  What this PR does / why we need it:\r\n\r\nWhen a podgroup is successfully scheduled,
-  we want to requeue the remaining unscheduled pods of such a podgroup directly into
-  active queue using their old timestamp, this will attempt scheduling and preemption
-  immediately in the next scheduling cycle, unless a higher priority pod or podgroup
-  comes in between.\r\n\r\nKEP context:\r\nhttps://github.com/kubernetes/enhancements/blob/15ecef0909db27c649cdc3dc4d4e927354108dd1/keps/sig-scheduling/4671-gang-scheduling/README.md?plain=1#L1197-L1207\r\n\r\n####
-  Which issue(s) this PR is related to:\r\nN/A\r\n\r\n#### Does this PR introduce
-  a user-facing change?\r\n```release-note\r\nAfter successful scheduling of a podgroup,
-  its remaining unscheduled pods are requeued directly to active queue rather than
-  backoff queue. These pods preserve their old timestamp so they have precedence in
-  scheduling unless a higher priority entity comes in between.\r\n```"
 releasenote:
-  text: Updated PodGroup scheduling to requeue remaining unscheduled Pods directly
-    to the active queue after successful scheduling, preserving their original timestamps
-    so they retain scheduling precedence unless a higher priority entity is added.
+  text: |-
+    Updated PodGroup scheduling to requeue remaining unscheduled Pods directly to the active queue (rather than backoff queue) after successful PodGroup scheduling, preserving their original timestamps so they retain scheduling precedence unless a higher priority entity is added.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

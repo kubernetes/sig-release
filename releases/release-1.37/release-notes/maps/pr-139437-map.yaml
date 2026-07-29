@@ -1,20 +1,23 @@
 pr: 139437
-pr_body: "#### What type of PR is this?\r\n\r\n\r\n/kind feature\r\n/kind api-change\r\n\r\n####
-  What this PR does / why we need it:\r\n\r\nThis PR moves the ClusterTrustBundles
-  feature to GA.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/3257\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n\r\n```release-note\r\nThe ClusterTrustBundle and ClusterTrustBundleProjection
-  features move to stable and enabled by default, along with the ClusterTrustBundle
-  API.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement
-  Proposals), usage docs, etc.:\r\n\r\n<!--\r\nThis section can be blank if this pull
-  request does not require a release note.\r\n\r\nWhen adding links which point to
-  resources within git repositories, like\r\nKEPs or supporting documentation, please
-  reference a specific commit and avoid\r\nlinking directly to the master branch.
-  This ensures that links reference a\r\nspecific point in time, rather than a document
-  that may change over time.\r\n\r\nSee here for guidance on getting permanent links
-  to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
-  use the following format for linking documentation:\r\n-->\r\n```docs\r\n- [KEP]:
-  https://github.com/kubernetes/enhancements/issues/3257\r\n- [Usage]: https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/\r\n```\r\n"
 releasenote:
-  text: 'Graduated the `ClusterTrustBundle` and `ClusterTrustBundleProjection` feature
-    gates to GA and enabled them by default.'
+  text: |-
+    Graduated the `ClusterTrustBundle` and `ClusterTrustBundleProjection` feature gates to GA and enabled them by default.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - etcd
+  - node
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - conformance
+  - code-generation
+pr_body: ""

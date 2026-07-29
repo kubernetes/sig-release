@@ -1,33 +1,10 @@
 pr: 140241
-pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n/kind regression\r\n/sig
-  api-machinery\r\n\r\n#### What this PR does / why we need it:\r\n\r\nSince 1.35,
-  kube-apiserver deadlocks on SIGTERM when its identity Lease can never\r\nbe created
-  (for example, a hostname longer than the 63-byte label limit). The\r\nlease controller's
-  `sync()` holds `reconcilingLock` while retrying the create\r\nforever, and the pre-shutdown
-  hook calls `Stop()`, which blocks on that lock. The\r\ncontext that would end the
-  retries is only canceled after the pre-shutdown hooks\r\nreturn, so shutdown never
-  begins and only SIGKILL ends the process.\r\n\r\nThis PR adds a `stopCh` that `Stop()`
-  closes before taking the lock, and makes the\r\nretry wait in `backoffEnsureLease`
-  return when it fires. `Stop()` now returns\r\npromptly and shutdown proceeds; the
-  lease errors still log, but no longer block\r\nanything.\r\n\r\nIt also adds a regression
-  test. Without the `controller.go` change, the test hangs\r\nin the same 7-second
-  retry loop and fails after 30 seconds; with it, it passes in\r\nmilliseconds.\r\n\r\nVerified
-  with real binaries: on a host with a 64-byte hostname, the official\r\nv1.35.0 and
-  v1.36.2 apiservers ignore SIGTERM indefinitely, while a build with\r\nthis fix exits
-  about 2 seconds after SIGTERM. Full analysis, goroutine dump, and\r\nreproducers
-  are in the linked issue.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nFixes
-  #140242\r\n\r\nIntroduced by #134514 (v1.35.0).\r\n\r\n#### Special notes for your
-  reviewer:\r\n\r\nTo see the deadlock, run the new test without the `controller.go`
-  change:\r\n\r\n```\r\ngo test -run TestStopDoesNotBlockWhenLeaseCannotBeCreated
-  ./staging/src/k8s.io/component-helpers/apimachinery/lease/\r\n```\r\n\r\nThe `stopCh`
-  is nil-guarded in `Stop()` because tests build the `controller`\r\nstruct directly.
-  A nil channel in the select simply never fires, so zero-value\r\ncontrollers keep
-  the old behavior.\r\n\r\nThis should be cherry-picked to release-1.35 and release-1.36,
-  which both ship the\r\ndeadlock.\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n\r\n```release-note\r\nFixed kube-apiserver hanging forever on SIGTERM
-  when its identity Lease cannot be created (e.g. hostname longer than 63 bytes).\r\n```\r\n\r\n####
-  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
-  etc.:\r\n\r\n```docs\r\nNONE\r\n```"
 releasenote:
-  text: Fixed `kube-apiserver` hanging indefinitely on `SIGTERM` when it could not
-    create its identity Lease, for example, because the hostname exceeded 63 bytes.
+  text: |-
+    Fixed `kube-apiserver` hanging indefinitely on `SIGTERM` when it could not create its identity Lease, for example, because the hostname exceeded 63 bytes.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

@@ -1,29 +1,12 @@
 pr: 139980
-pr_body: " #### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n\r\n#### What
-  this PR does / why we need it:\r\n\r\nThis PR aligns the implementation of the Workload-Aware
-  Preemption with the description of it from the KEP: https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/5710-workload-aware-preemption/README.md\r\n\r\nThe
-  main changes include:\r\n- running only one scheduling algorithm after victims are
-  removed\r\n- reusing CycleStates from scheduling algorithm for victim reprieval\r\n-
-  running Filter plugins on each of the preemptors for victim reprieval\r\n\r\n####
-  Which issue(s) this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/5710\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\nThere is one little problem with this approach.
-  Removing pods from NodeInfo in preemption does not change the state of `havePodsWithRequiredAntiAffinityNodeInfoList`,
-  `havePodsWithAffinityNodeInfoList`, `usedPVCSet` in the Snapshot structure. The
-  same issue currently exists in the pod group cycle and there is an open PR to resolve
-  that:  https://github.com/kubernetes/kubernetes/pull/139054\r\n\r\nHowever the lack
-  of this support is not a blocker here as for all three fields in WAP we will produce
-  false positives. For `havePodsWithRequiredAntiAffinityNodeInfoList` and `havePodsWithAffinityNodeInfoList`
-  it means that we will potentially scan more nodes than necessary.  For usedPVCSet
-  it means that we will not support a case where removing a pod with PVC would unblock
-  scheduling of preemptor. This is on par with the current pod by pod preemption .\r\n\r\nWith
-  this change the time needed to complete test scenarios from https://github.com/kubernetes/kubernetes/pull/139773
-  from minutes to seconds.  \r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nWorkload-Aware
-  Preemption now runs only one scheduling attempt, on a cluster with all potential
-  victims removed. This can lead to a suboptimal preemption victims choice at the
-  cost of significant performance improvement.\r\n```\r\n\r\n#### Additional documentation
-  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n- [KEP]:
-  https://github.com/kubernetes/enhancements/issues/5710\r\n\r\n"
 releasenote:
-  text: Updated the `WorkloadAwarePreemption` feature to perform a single scheduling
-    attempt with all potential victims removed. This significantly improves performance
-    but can result in a less optimal choice of preemption victims.
+  text: |-
+    Updated the `WorkloadAwarePreemption` feature to perform a single scheduling attempt with all potential victims removed. This significantly improves performance but can result in a less optimal choice of preemption victims.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

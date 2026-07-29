@@ -1,54 +1,11 @@
 pr: 140056
-pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n\r\n#### What this
-  PR does / why we need it:\r\n\r\nStrip managedFields from objects received in informers
-  to reduce on cache size\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n<!--\r\nIf no, just write \"NONE\" in the release-note block below.\r\nIf
-  yes, a release note is required:\r\nEnter your extended release note in the block
-  below. If the PR requires additional action from users switching to the new release,
-  include the string \"action required\".\r\n\r\nFor more information on release notes
-  see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nImprove
-  memory usage of kube-proxy by dropping the `.metadata.managedFields` field that
-  kube-proxy doesn't require.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs
-  (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n<!--\r\nThis section
-  can be blank if this pull request does not require a release note.\r\n\r\nWhen adding
-  links which point to resources within git repositories, like\r\nKEPs or supporting
-  documentation, please reference a specific commit and avoid\r\nlinking directly
-  to the master branch. This ensures that links reference a\r\nspecific point in time,
-  rather than a document that may change over time.\r\n\r\nSee here for guidance on
-  getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
-  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
-  <link>\r\n- [Other doc]: <link>\r\n-->\r\n```docs\r\n\r\n```\r\n\r\n---\r\n/cc danwinship
-  \r\n\r\nI benchmarked this before and after, using:\r\n500 Services and 500 EndpointSlices
-  (1k items in total)\r\n5000 Services and 5000 EndpointSlices (10k items in total)\r\n50000
-  Services and 50000 EndpointSlices (100k items in total)\r\n\r\nI think the savings
-  are there, but very small, and there is also a lot of other noise making the benefits
-  hard to see on the graphs.\r\n\r\n### 500 Services and 500 EndpointSlices (1k items
-  in total)\r\n\r\n#### Before RAM\r\n\r\n<img width=\"1485\" height=\"692\" alt=\"Pasted
-  Graphic\" src=\"https://github.com/user-attachments/assets/ec27fca3-87d6-43f1-a4e0-c886aece9212\"
-  />\r\n\r\n#### After RAM\r\n\r\n<img width=\"1455\" height=\"585\" alt=\"Pasted
-  Graphic 6\" src=\"https://github.com/user-attachments/assets/65a298e7-5ec3-4c20-b150-9f29ae4d0965\"
-  />\r\n\r\n#### Before CPU\r\n\r\n<img width=\"1472\" height=\"710\" alt=\"Pasted
-  Graphic 1\" src=\"https://github.com/user-attachments/assets/66a79cc6-63cb-4f67-bb90-095c4b1c469f\"
-  />\r\n\r\n#### After CPU\r\n\r\n<img width=\"1455\" height=\"585\" alt=\"Pasted
-  Graphic 7\" src=\"https://github.com/user-attachments/assets/eb91c225-c14f-4e02-b27b-33536b0683bf\"
-  />\r\n\r\n### 5000 Services and 5000 EndpointSlices (10k items in total)\r\n\r\n####
-  Before RAM\r\n\r\n<img width=\"1457\" height=\"621\" alt=\"Pasted Graphic 2\" src=\"https://github.com/user-attachments/assets/9ae34f04-1236-42fc-891d-4a22198c501e\"
-  />\r\n\r\n#### After RAM\r\n\r\n<img width=\"1489\" height=\"577\" alt=\"Pasted
-  Graphic\" src=\"https://github.com/user-attachments/assets/d05d09ce-aa3a-4898-add7-6da44dae01e6\"
-  />\r\n\r\n#### Before CPU\r\n\r\n<img width=\"1465\" height=\"693\" alt=\"Pasted
-  Graphic 3\" src=\"https://github.com/user-attachments/assets/0a8e3aed-e56b-432f-b7c9-ad7e05234989\"
-  />\r\n\r\n#### After CPU\r\n\r\n<img width=\"1479\" height=\"582\" alt=\"Pasted
-  Graphic 1\" src=\"https://github.com/user-attachments/assets/5e2911a8-1fd8-4d08-abf1-84ba6f19eebd\"
-  />\r\n\r\n\r\n### 50000 Services and 50000 EndpointSlices (100k items in total)\r\n\r\n####
-  Before RAM\r\n\r\n<img width=\"1479\" height=\"634\" alt=\"Pasted Graphic 4\" src=\"https://github.com/user-attachments/assets/b3071129-2117-4a1e-9c46-819cb69d51fb\"
-  />\r\n\r\n#### After RAM\r\n\r\n<img width=\"1910\" height=\"573\" alt=\"Pasted
-  Graphic 2\" src=\"https://github.com/user-attachments/assets/942f36ac-8dcc-4882-aea5-24d15e534c70\"
-  />\r\n\r\n\r\n#### Before CPU\r\n\r\n<img width=\"1452\" height=\"728\" alt=\"Pasted
-  Graphic 5\" src=\"https://github.com/user-attachments/assets/8f849a16-70dc-44a0-a4d3-9245bcb95004\"
-  />\r\n\r\n#### After CPU\r\n\r\n<img width=\"1912\" height=\"574\" alt=\"Pasted
-  Graphic 3\" src=\"https://github.com/user-attachments/assets/ebc86cce-b892-4fc9-a7fa-c1b389bdd583\"
-  />\r\n"
 releasenote:
-  text: Improved memory usage of `kube-proxy` by dropping the `.metadata.managedFields`
-    field, which `kube-proxy` does not require.
+  text: |-
+    Improved memory usage of `kube-proxy` by dropping the `.metadata.managedFields` field, which `kube-proxy` does not require.
+  sigs:
+  - network
+  kinds:
+  - cleanup
+  areas:
+  - kube-proxy
+pr_body: ""

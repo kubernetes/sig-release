@@ -1,17 +1,12 @@
 pr: 140412
-pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
-  PR does / why we need it:\r\n\r\nThis PR disables all PostFilters from the pod group
-  cycle. This is a follow up to https://github.com/kubernetes/kubernetes/pull/139674
-  which introduced a PodGroupPostFilter. We expect all PostFilter owners to adapt
-  their plugins to PodGroupPostFilter if they wish to work with pod group cycle. This
-  behavior is in line with the WAP KEP: https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/5710-workload-aware-preemption\r\n\r\n####
-  Which issue(s) this PR is related to:\r\n\r\nhttps://github.com/kubernetes/enhancements/issues/5710\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\nA DRA PodGroupPostFilter will be implemented
-  in a separate PR in this release cycle.\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n\r\n```release-note\r\nPostFilter plugins are no longer run during PodGroup
-  cycle for pods from PodGroup. Instead the PodGroupPostFilter is run if the whole
-  PodGroup is unschedulable.  \r\n```\r\n\r\n#### Additional documentation e.g., KEPs
-  (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/5710-workload-aware-preemption\r\n\r\n"
 releasenote:
-  text: Updated PodGroup scheduling to skip PostFilter plugins for Pods in a PodGroup
-    cycle. Instead, `PodGroupPostFilter` runs only when the entire PodGroup is unschedulable.
+  text: |-
+    Updated PodGroup scheduling to skip PostFilter plugins for Pods in a PodGroup cycle. Instead, `PodGroupPostFilter` runs only when the entire PodGroup is unschedulable.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

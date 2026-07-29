@@ -1,19 +1,12 @@
 pr: 140311
-pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
-  PR does / why we need it:\r\n\r\nThis PR propagates a status message from Workload
-  Aware Preemption run as one of the PodGroupPostFilter plugins to the Pod Group Status
-  \r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\n#### Special notes for
-  your reviewer:\r\n\r\nThis message was originally returned by the pod group cycle
-  if any of the pods required default pod by pod preemption: https://github.com/kubernetes/kubernetes/blob/1ef08364a754caec0b6706ff61e08cfb39fd53e6/pkg/scheduler/schedule_one_podgroup.go#L373\r\n\r\nIn
-  the case of workload aware preemption this message was not propagated as the PodGroupPostFilters
-  are run after podGroupSchedulingAlgorithm. \r\n\r\nMessage is aligned with changes
-  to default preemption node in https://github.com/kubernetes/kubernetes/pull/140180\r\n\r\n####
-  Does this PR introduce a user-facing change?\r\n```release-note\r\nWhen workload
-  aware preemption finds a placement for the PodGroup, the status of the PodGroup
-  will contain \"pod group preemption found a placement for podgroup, preempting <victim_count>
-  victims\" message.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
-  Enhancement Proposals), usage docs, etc.:\r\n"
 releasenote:
-  text: Added a status message for PodGroup when workload-aware preemption finds a
-    placement, indicating that preemption found a placement and the number of victims
-    to preempt.
+  text: |-
+    Updated PodGroup status to include the `pod group preemption found a placement for podgroup, preempting <victim_count> victims` message when workload-aware preemption finds a placement.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

@@ -1,11 +1,14 @@
 pr: 140654
-pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n\r\n#### What this
-  PR does / why we need it:\r\n\r\nThis fixes an ordering bug that caused the API
-  definitions tests to fail to notice incorrect `GetResetFields` implementations.\r\n\r\n####
-  Which issue(s) this PR is related to:\r\n\r\n#### Special notes for your reviewer:\r\n\r\n####
-  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nServer-side
-  apply now correctly drops status changes when tracking field owership for PodGroup,
-  PodCompositeGroup and PodCertificateRequest.\r\n```\r\n\r\n/sig api-machinery"
 releasenote:
-  text: Fixed server-side apply to correctly drop status changes when tracking field
-    ownership for PodGroup, PodCompositeGroup, and PodCertificateRequest.
+  text: |-
+    Fixed server-side apply to correctly drop status changes when tracking field ownership for PodGroup, PodCompositeGroup, and PodCertificateRequest.
+  sigs:
+  - api-machinery
+  - auth
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+pr_body: ""

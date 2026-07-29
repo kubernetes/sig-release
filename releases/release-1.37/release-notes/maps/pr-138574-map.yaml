@@ -1,47 +1,13 @@
 pr: 138574
-pr_body: |
-  ## What type of PR is this?
-
-  /kind bug
-  /sig node
-
-  ## What this PR does / why we need it
-
-  Linux UIDs are unsigned 32-bit values, but pod status validation currently uses the existing Kubernetes pod spec UID validator, which is limited to `math.MaxInt32`. When a runtime reports `containerStatus.user.linux.uid` above `2147483647`, kubelet status updates can be rejected even though the reported UID is valid on Linux.
-
-  This PR keeps pod spec `runAsUser` and kubelet image user validation on the existing int32 UID range, and only accepts the full unsigned 32-bit Linux UID range for reported container user fields in pod status. GID and supplemental group validation remain unchanged.
-
-  ## Which issue(s) this PR fixes
-
-  Fixes #138525
-
-  ## Special notes for your reviewer
-
-  Added regression coverage for:
-  - regular, init, and ephemeral container status user UIDs at `math.MaxUint32`
-  - pod status user UIDs above `math.MaxUint32` being rejected
-  - existing pod spec `runAsUser` validation remaining unchanged
-
-  ## Test evidence
-
-  ```console
-  go test ./pkg/apis/core/validation -run 'TestValidatePodSpec|TestValidatePodUpdate|TestValidatePodStatusUpdate' -count=1
-  GOOS=linux GOARCH=386 go test ./pkg/apis/core/validation -run 'TestValidatePodSpec|TestValidatePodUpdate|TestValidatePodStatusUpdate' -count=1
-  go test k8s.io/apimachinery/pkg/util/validation -run TestIsValidUserID -count=1
-  go test ./pkg/kubelet/kuberuntime -run TestVerifyRunAsNonRoot -count=1
-  hack/verify-typecheck.sh
-  make test WHAT="./staging/src/k8s.io/apimachinery/pkg/util/validation ./pkg/apis/core/validation ./pkg/kubelet/kuberuntime" KUBE_RACE=-race
-  ```
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Fixed pod status validation for reported Linux container user UIDs so values above 2147483647 and up to the unsigned 32-bit UID limit are accepted.
-  ```
-
-  #### AI Disclosure
-
-  AI tooling was used to assist in preparing this PR. All changes and tests were reviewed and run locally by the author.
 releasenote:
-  text: Fixed Pod status validation for reported Linux container UIDs to accept values
-    above `2147483647` and up to the unsigned 32-bit UID limit.
+  text: |-
+    Fixed Pod status validation for reported Linux container user UIDs to accept values above 2147483647 and up to the unsigned 32-bit UID limit.
+  sigs:
+  - apps
+  - node
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - kubelet
+pr_body: ""

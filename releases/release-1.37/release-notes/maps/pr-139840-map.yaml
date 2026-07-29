@@ -1,21 +1,15 @@
 pr: 139840
-pr_body: "#### What type of PR is this?\r\n/kind feature\r\n/sig-scheduling\r\n\r\n####
-  What this PR does / why we need it:\r\nWhile we are able to count pods in scheduling
-  queue, we also want to be able to count pod groups. For that we are introducing
-  new metrics, by which we are able to count entities (pods or podgroups).\r\n\r\nThese
-  metrics are:\r\n`queued_entities`: Similar to `pending_pods`, it tracks the currently
-  pending entities in queues (active, backoff, etc..) of scheduler.\r\n`queue_incoming_entities_total`:
-  Similar to `queue_incoming_pods_total` it tracks total number of entities (pods
-  or podgroups) added to scheduling queue.\r\n\r\nFor both metrics We are using an
-  additional label for the entity type whether a pod or podgroup.\r\n\r\n#### Which
-  issue(s) this PR is related to:\r\nN/A\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n```release-note\r\nWe are adding two new metrics:\r\n\r\n\"queued_entities\":
-  This metric tracks the current entities (individual pods or podgroups) in queues
-  (active, backoff, etc..) of scheduler. \r\n \r\n\"queue_incoming_entities_total\":
-  \ This metric tracks total number of entities (individual pods or podgroups) added
-  to scheduling queues (active, backoff, etc..).\r\n```"
 releasenote:
-  text: Added the `queued_entities` and `queue_incoming_entities_total` scheduler
-    metrics. `queued_entities` reports the current number of scheduling entities (Pods
-    or PodGroups) in scheduler queues, and `queue_incoming_entities_total` reports
-    the total number of scheduling entities added to scheduler queues.
+  text: |-
+    Added the `queued_entities` and `queue_incoming_entities_total` scheduler metrics. `queued_entities` reports the current number of scheduling entities (Pods or PodGroups) in scheduler queues, and `queue_incoming_entities_total` reports the total number of scheduling entities added to scheduler queues.
+  sigs:
+  - instrumentation
+  - network
+  - scheduling
+  kinds:
+  - feature
+  areas:
+  - kube-proxy
+  - ipvs
+  - stable-metrics
+pr_body: ""

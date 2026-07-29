@@ -1,16 +1,10 @@
 pr: 140623
-pr_body: |-
-  Fixes kubernetes/kubernetes#140541
-
-  ### Description
-  This PR resolves a data race condition in the scheduler's `handleSchedulingFailure` function. The race occurred because the scheduler concurrently reads/writes the podInfo object while `handleSchedulingFailure` is processing. By performing a `DeepCopy` of the `podInfo` struct at the beginning of the function, we guarantee safe concurrent access and prevent data races.
-
-  ### Verification
-  Verified that the scheduler tests compile and pass successfully.
-
-  ```release-note
-  Fixed a concurrent map read/write data race condition in `handleSchedulingFailure` during scheduling failure handling.
-  ```
 releasenote:
-  text: Fixed a concurrent map read/write data race in `handleSchedulingFailure` during
-    scheduling failure handling.
+  text: |-
+    Fixed a concurrent map read/write data race in `handleSchedulingFailure` during scheduling failure handling.
+  sigs:
+  - scheduling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

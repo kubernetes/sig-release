@@ -1,15 +1,16 @@
 pr: 140107
-pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
-  PR does / why we need it:\r\n\r\nThis PR promotes the `HPAConfigurableTolerance`
-  feature gate to GA. This PR removes this gate and ensures that the related codepath
-  is always enabled.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nIssue:
-  https://github.com/kubernetes/enhancements/pull/6103\r\n\r\n#### Special notes for
-  your reviewer:\r\n\r\nA requirement highlighted in the latest update to the related
-  KEP-4951 is adding a new integration test for this feature. This has been done in
-  https://github.com/kubernetes/kubernetes/pull/139686 on June 26th. [Testgrid](https://testgrid.k8s.io/sig-release-master-blocking#integration-master&width=20&include-filter-by-regex=sig-autoscaling)
-  allows one to verify that it's not flaky. \r\n\r\n#### Does this PR introduce a
-  user-facing change?\r\n\r\n```release-note\r\nPromoted the HPAConfigurableTolerance
-  feature gate to GA.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
-  Enhancement Proposals), usage docs, etc.:\r\n\r\n- KEP: https://github.com/kubernetes/enhancements/tree/master/keps/sig-autoscaling/4951-configurable-hpa-tolerance\r\n"
 releasenote:
-  text: Promoted the `HPAConfigurableTolerance` feature gate to GA.
+  text: |-
+    Promoted the `HPAConfigurableTolerance` feature gate to GA.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

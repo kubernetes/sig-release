@@ -1,35 +1,12 @@
 pr: 140323
-pr_body: |
-  #### What type of PR is this?
-
-  /kind bug
-  /kind flake
-  /sig node
-  /wg device-management
-
-  #### What this PR does / why we need it:
-
-  When a device plugin reports a health change, the device manager looks up which pod owns the affected device so it can trigger a status sync for that pod. The lookup in [`getPodAndContainerForDevice`](https://github.com/kubernetes/kubernetes/blob/dd3e7940568f7156dabf8b3f13295e6a6469b4c8/pkg/kubelet/cm/devicemanager/pod_devices.go#L184-L198) matched on the device ID alone, iterating over all pods and all resources. Device IDs are only unique within a single resource, so when two plugins expose devices with the same ID under different resource names, the lookup can return a pod that owns the same device ID under an unrelated resource, and Go map iteration order makes the result nondeterministic.
-
-  When that happens, [`genericDeviceUpdateCallback`](https://github.com/kubernetes/kubernetes/blob/dd3e7940568f7156dabf8b3f13295e6a6469b4c8/pkg/kubelet/cm/devicemanager/manager.go#L293-L346) sends the update notification for the wrong pod, the [syncLoop handler](https://github.com/kubernetes/kubernetes/blob/dd3e7940568f7156dabf8b3f13295e6a6469b4c8/pkg/kubelet/kubelet.go#L2817-L2832) syncs that wrong pod, and the pod that actually owns the unhealthy device does not get its `allocatedResourcesStatus` updated until the next periodic sync, up to a minute later.
-
-  This is the root cause of the flaking test tracked in #140268. Every spec in [`device_plugin_failures_pod_status_test.go`](https://github.com/kubernetes/kubernetes/blob/dd3e7940568f7156dabf8b3f13295e6a6469b4c8/test/e2e_node/device_plugin_failures_pod_status_test.go#L131) registers its device as `testdevice` under a randomized resource name. When two of those specs run close together on the same node, which happens regularly in the parallel CI jobs, the health update from one spec is delivered to the other spec's pod and the 60 second `Eventually` in the test loses the race against the periodic sync. The kubelet log of failing run `ci-kubernetes-node-e2e-containerd/2074205743732494336` shows exactly this: the device for resource `test.device/device-plugin-failures-3083` goes unhealthy while the forwarded sync event carries the pod UID of the previous spec's pod from namespace `device-plugin-failures-5477`, and the right pod only flipped to Unhealthy at the next periodic sync, 2.4 seconds after the test timeout.
-
-  The fix scopes the lookup by resource name, which the callback already has on hand.
-
-  I reproduced the flake by running the two `Device Plugin Failures Pod Status` specs concurrently against a stock kubelet on a GCE Ubuntu 24.04 VM with containerd (`ginkgo -nodes=2 -focus="Device Plugin Failures Pod Status" e2e_node.test`, mirroring how the CI jobs share one kubelet across parallel ginkgo processes). It failed on the first iteration with the exact CI signature. With the fixed kubelet the same loop ran 10 consecutive iterations with zero failures, and every health transition in the kubelet log was routed to the pod in the matching namespace. `TestGetPodAndContainerForDevice` now also covers the collision case: the same device ID allocated to two pods under different resource names resolves to the correct pod for each resource.
-
-  #### Which issue(s) this PR fixes:
-
-  Fixes #140268
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  kubelet: fixed device health updates being applied to the wrong pod's status when device plugins for different resources expose devices with identical IDs. Affected pods now reflect device health changes immediately instead of waiting for the next periodic pod sync.
-  ```
 releasenote:
-  text: Fixed kubelet applying device health updates to the wrong Pod status when
-    device plugins for different resources exposed devices with identical IDs. Affected
-    Pods now reflect device health changes immediately instead of waiting for the
-    next periodic Pod sync.
+  text: |-
+    Fixed `kubelet` applying device health updates to the wrong Pod status when device plugins for different resources exposed devices with identical IDs. Affected Pods reflect device health changes immediately instead of waiting for the next periodic Pod sync.
+  sigs:
+  - node
+  kinds:
+  - bug
+  - flake
+  areas:
+  - kubelet
+pr_body: ""
