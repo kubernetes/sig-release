@@ -78,7 +78,7 @@ Here you can insert a note about a topic of the release or tangential to it. Thi
 
 The following list of enhancements is likely to be included in the upcoming v1.xx release. This is not a commitment and the release content is subject to change.
 
-### <Feature name and maturity, e.g. "Metrics API goes GA"> - Comms Owner {#anchor-id}
+### <Feature name and maturity, e.g. "Metrics API goes GA"> {#anchor-id}
 <insert here a KEP explanation paragraph>
 
 To learn more about this enhancement, refer to [KEP-xxxx: <title>](https://kep.k8s.io/xxxx).
