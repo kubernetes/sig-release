@@ -81,7 +81,7 @@ The following list of enhancements is likely to be included in the upcoming v1.x
 ### <Feature name and maturity, e.g. "Metrics API goes GA"> {#anchor-id}
 <insert here a KEP explanation paragraph>
 
-To learn more about this enhancement, refer to [KEP-xxxx: <title>](https://kep.k8s.io/xxxx).
+To learn more about this enhancement, refer to [KEP-xxxx: <title>](https://kubernetes.dev/resources/keps/xxxx).
 - Repeat for every KEP that is interesting for the release
 
 ## Want to know more?
