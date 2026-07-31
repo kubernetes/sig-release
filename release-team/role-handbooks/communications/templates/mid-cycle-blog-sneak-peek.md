@@ -6,7 +6,7 @@ The following sections should give you an idea what can be considered for this m
 * Introduction to the current status of the release
 * The Kubernetes API Removal and Deprecation process
 * Notes of important removals or deprecations (if any)
-* Ongoing major changes (multi-release deprecations still in flight, e.g. cgroup v1 removal)
+* Ongoing major changes (multi-release deprecations still in flight)
 * Breaking changes (behaviour changes that can break running workloads, separate from removals)
 * Changes (KEPs) that are deemed to be interesting
     * Order release features by impact, maturity, vision or grouped by SIG.
