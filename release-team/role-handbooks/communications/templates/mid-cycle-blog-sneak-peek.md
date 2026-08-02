@@ -67,7 +67,7 @@ Here you can insert a note about a topic of the release or tangential to it. Thi
 ### <Multi-release deprecation still in flight> {#anchor-id}
 <avoid naming the release it would land in, mention temporary override if one exists>
 
-## Breaking changes in Kubernetes v1.xx
+## Breaking changes in Kubernetes v1.xx (Optional)
 
 ### <Behaviour change that can break running workloads> {#anchor-id}
 <who is affected, and how to keep the previous behaviour>
