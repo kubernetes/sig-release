@@ -33,7 +33,7 @@ The template should give you some boilerplate. However, this blog is optional an
 ---
 layout: blog
 title: 'Kubernetes v1.XX Sneak Peek'
-date: 202n-mm-ddT08:00:00-08:00
+date: 202n-mm-dd
 slug: kubernetes-v1-XX-sneak-peek
 author: >
   [Comms team members, ordered by last name ascending]
