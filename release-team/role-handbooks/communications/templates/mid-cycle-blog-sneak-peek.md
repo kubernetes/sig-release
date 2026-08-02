@@ -36,7 +36,7 @@ title: 'Kubernetes v1.XX Sneak Peek'
 date: 202n-mm-dd
 slug: kubernetes-v1-XX-sneak-peek
 author: >
-  [Comms team members, ordered by last name ascending]
+  [Comms team members, ordered by first name ascending]
 ---
 
 As we get closer to the release date for Kubernetes v1.xx, the project develops and matures, features may be deprecated, removed, or replaced with better ones for the project's overall health. This blog outlines some of the planned changes for the Kubernetes 1.xx release, that the release team feels you should be aware of for the continued maintenance of your Kubernetes environment and keeping up to date with the latest changes. The information listed below is based on the current status of the v1.xx release and may change before the actual release date. 
