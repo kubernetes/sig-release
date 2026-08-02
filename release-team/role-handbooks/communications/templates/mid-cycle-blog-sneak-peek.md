@@ -6,20 +6,23 @@ The following sections should give you an idea what can be considered for this m
 * Introduction to the current status of the release
 * The Kubernetes API Removal and Deprecation process
 * Notes of important removals or deprecations (if any)
+* Ongoing major changes (multi-release deprecations still in flight)
+* Breaking changes (behaviour changes that can break running workloads, separate from removals)
 * Changes (KEPs) that are deemed to be interesting
     * Order release features by impact, maturity, vision or grouped by SIG.
     * This section lists out the key features (even if they are not being recommended to be used in production or are alphas).
     * Call out important API deprecations and removals
     * When possible, link upstream docs or KEP docs (past blogs link k/enhancement issues)
-* Want to know more?
+* Want to know more? (include the planned release date)
 * Get involved
     * SIGs
-    * Community meeting
-    * Where to host questions (or answer questions) 
-    * Advocates
-    * Bluesky
-    * Slack
+    * New Contributor Orientations
+    * Kubernetes contributor guide
     * Kubernetes blog
+    * Slack, X, LinkedIn, Bluesky
+    * Discuss and Stack Overflow (where to ask or answer questions)
+    * Kubernetes End User Stories
+    * Kubernetes Release Team
 
 
 ## Release Mid-Cycle Blog Template
@@ -29,18 +32,16 @@ The template should give you some boilerplate. However, this blog is optional an
 ```md
 ---
 layout: blog
-title: 'Kubernetes 1.XX: Sneak peek'
+title: 'Kubernetes v1.XX Sneak Peek'
 date: 202n-mm-dd
-slug: kubernetes-1-XX-sneak-peek
+slug: kubernetes-v1-XX-sneak-peek
 author: >
-  [Kubernetes v1.XX Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/release-team.md)
+  [Comms team members, ordered by first name ascending]
 ---
-
-**Editors:** [Comms teams members, ordered by last name ascending]
 
 As we get closer to the release date for Kubernetes v1.xx, the project develops and matures, features may be deprecated, removed, or replaced with better ones for the project's overall health. This blog outlines some of the planned changes for the Kubernetes 1.xx release, that the release team feels you should be aware of for the continued maintenance of your Kubernetes environment and keeping up to date with the latest changes. The information listed below is based on the current status of the v1.xx release and may change before the actual release date. 
 
-### The Kubernetes API Removal and Deprecation process
+### The Kubernetes API Removal and Deprecation process (add only if API deprecations/removals are present in this release; else skip)
 The Kubernetes project has a well-documented [deprecation policy](https://kubernetes.io/docs/reference/using-api/deprecation-policy/) for features. This policy states that stable APIs may only be deprecated when a newer, stable version of that same API is available and that APIs have a minimum lifetime for each stability level. A deprecated API has been marked for removal in a future Kubernetes release, it will continue to function until removal (at least one year from the deprecation), but usage will result in a warning being displayed. Removed APIs are no longer available in the current version, at which point you must migrate to using the replacement.
 
 * Generally available (GA) or stable API versions may be marked as deprecated but must not be removed within a major version of Kubernetes.
@@ -55,37 +56,63 @@ Whether an API is removed as a result of a feature graduating from beta to stabl
 
 Here you can insert a note about a topic of the release or tangential to it. This can be a note about a feature, a process, or a community initiative that you think is important to highlight in the mid-cycle blog.
 
-## Sneak peek of Kubernetes 1.xx
+## Deprecations and removals for Kubernetes v1.xx
 
-### KEP [#xxx](https://github.com/kubernetes/enhancements/issues/xxx) - Comms Owner
+### <Component>: <what is deprecated or removed>
+<one or two paragraphs; link the tracking issue or KEP. Add an {#anchor-id} only if this entry is likely to be linked from elsewhere. Avoid linking the KEP number in the title, only add it in the "read more" section.>
+- Repeat for every removal or deprecation in this release
+
+## Ongoing major changes (Optional)
+
+### <Multi-release deprecation still in flight> {#anchor-id}
+<avoid naming the release it would land in, mention temporary override if one exists>
+
+## Breaking changes in Kubernetes v1.xx (Optional)
+
+### <Behaviour change that can break running workloads> {#anchor-id}
+<who is affected, and how to keep the previous behaviour>
+
+## Featured enhancements of Kubernetes v1.xx
+
+The following list of enhancements is likely to be included in the upcoming v1.xx release. This is not a commitment and the release content is subject to change.
+
+### <Feature name and maturity, e.g. "Metrics API goes GA"> {#anchor-id}
 <insert here a KEP explanation paragraph>
+
+To learn more about this enhancement, refer to [KEP-xxxx: <title>](https://kubernetes.dev/resources/keps/xxxx).
 - Repeat for every KEP that is interesting for the release
 
 ## Want to know more?
 New features and deprecations are also announced in the Kubernetes release notes. We will formally announce what's new in [Kubernetes v1.xx](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.xx.md) as part of the CHANGELOG for that release.
 
+Kubernetes v1.xx release is planned for **<Weekday, Month DDth, YYYY>**. Stay tuned for updates!
+
 You can see the announcements of changes in the release notes for:
 
-* [Kubernetes v1.32](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.32.md)
+<!-- Only list releases the community currently supports — see the patch release support period: https://kubernetes.io/releases/patch-releases/#support-period. Update this list each cycle: drop the oldest entry, add the new one. -->
+* [Kubernetes v1.36](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.36.md)
 
-* [Kubernetes v1.31](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.31.md)
+* [Kubernetes v1.35](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.35.md)
 
-* [Kubernetes v1.30](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.30.md)
+* [Kubernetes v1.34](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.34.md)
 
-* [Kubernetes v1.29](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md)
+* [Kubernetes v1.33](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.33.md)
 
 ## Get involved
 
-The simplest way to get involved with Kubernetes is by joining one of the many [Special Interest Groups](https://github.com/kubernetes/community/blob/master/sig-list.md) (SIGs) that align with your interests. 
-Have something you’d like to broadcast to the Kubernetes community? 
-Share your voice at our weekly [community meeting](https://github.com/kubernetes/community/tree/master/communication), and through the channels below. 
-Thank you for your continued feedback and support.
+The simplest way to get involved with Kubernetes is by joining one of the many [Special Interest Groups](https://kubernetes.dev/community/community-groups/sigs/) (SIGs) that align with your interests.
 
-- Follow us on Bluesky [@Kubernetesio](https://bsky.app/profile/kubernetes.io) for the latest updates
+If you don't know where to start, join our monthly [New Contributor Orientations](https://www.kubernetes.dev/docs/orientation/)
+where we teach the community how the project is structured, and we'll guide you on how to make your first contribution to the project.
+
+- Read more on how to become a [Kubernetes Contributor](https://www.kubernetes.dev/docs/guide/)
+- Read more about what’s happening with Kubernetes on our [blog](https://kubernetes.io/blog/)
+- Join us on [Slack](http://slack.k8s.io/)
+- Follow us on [X](https://x.com/kubernetesio)
+- Follow us on [LinkedIn](https://www.linkedin.com/company/kubernetes/)
+- Follow us on [Bluesky](https://bsky.app/profile/kubernetes.io) for the latest updates
 - Join the community discussion on [Discuss](https://discuss.kubernetes.io/)
-- Join the community on [Slack](http://slack.k8s.io/)
 - Post questions (or answer questions) on [Stack Overflow](http://stackoverflow.com/questions/tagged/kubernetes)
-- Share your Kubernetes [story](https://docs.google.com/a/linuxfoundation.org/forms/d/e/1FAIpQLScuI7Ye3VQHQTwBASrgkjQDSS5TP0g3AXfFhwSM9YpHgxRKFA/viewform)
-- Read more about what’s happening with Kubernetes on the [blog](https://kubernetes.io/blog/)
+- Share your [Kubernetes End User Story](https://www.cncf.io/case-studies/)
 - Learn more about the [Kubernetes Release Team](https://github.com/kubernetes/sig-release/tree/master/release-team)
 ```
