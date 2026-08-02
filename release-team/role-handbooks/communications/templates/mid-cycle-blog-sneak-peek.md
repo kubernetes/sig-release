@@ -59,7 +59,7 @@ Here you can insert a note about a topic of the release or tangential to it. Thi
 ## Deprecations and removals for Kubernetes v1.xx
 
 ### <Component>: <what is deprecated or removed>
-<one or two paragraphs; link the tracking issue or KEP. Add an {#anchor-id} only if this entry is likely to be linked from elsewhere.>
+<one or two paragraphs; link the tracking issue or KEP. Add an {#anchor-id} only if this entry is likely to be linked from elsewhere. Avoid linking the KEP number in the title, only add it in the "read more" section.>
 - Repeat for every removal or deprecation in this release
 
 ## Ongoing major changes
