@@ -62,7 +62,7 @@ Here you can insert a note about a topic of the release or tangential to it. Thi
 <one or two paragraphs; link the tracking issue or KEP. Add an {#anchor-id} only if this entry is likely to be linked from elsewhere. Avoid linking the KEP number in the title, only add it in the "read more" section.>
 - Repeat for every removal or deprecation in this release
 
-## Ongoing major changes
+## Ongoing major changes (Optional)
 
 ### <Multi-release deprecation still in flight> {#anchor-id}
 <avoid naming the release it would land in, mention temporary override if one exists>
