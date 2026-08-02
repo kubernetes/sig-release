@@ -33,13 +33,11 @@ The template should give you some boilerplate. However, this blog is optional an
 ---
 layout: blog
 title: 'Kubernetes v1.XX Sneak Peek'
-date: 202n-mm-dd
+date: 202n-mm-ddT08:00:00-08:00
 slug: kubernetes-v1-XX-sneak-peek
 author: >
-  [Kubernetes v1.XX Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/release-team.md)
+  [Comms team members, ordered by last name ascending]
 ---
-
-**Editors:** [Comms teams members, ordered by last name ascending]
 
 As we get closer to the release date for Kubernetes v1.xx, the project develops and matures, features may be deprecated, removed, or replaced with better ones for the project's overall health. This blog outlines some of the planned changes for the Kubernetes 1.xx release, that the release team feels you should be aware of for the continued maintenance of your Kubernetes environment and keeping up to date with the latest changes. The information listed below is based on the current status of the v1.xx release and may change before the actual release date. 
 
@@ -60,8 +58,8 @@ Here you can insert a note about a topic of the release or tangential to it. Thi
 
 ## Deprecations and removals for Kubernetes v1.xx
 
-### <Component>: <what is deprecated or removed> {#anchor-id}
-<one or two paragraphs; link the tracking issue or KEP>
+### <Component>: <what is deprecated or removed>
+<one or two paragraphs; link the tracking issue or KEP. Add an {#anchor-id} only if this entry is likely to be linked from elsewhere.>
 - Repeat for every removal or deprecation in this release
 
 ## Ongoing major changes
