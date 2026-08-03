@@ -1,0 +1,12 @@
+pr: 138940
+releasenote:
+  text: |-
+    Corrected the `kube-proxy` `--metrics-bind-address` flag documentation by removing the incorrect statement that setting the flag to an empty string disables the metrics server.
+  sigs:
+  - network
+  kinds:
+  - bug
+  - documentation
+  areas:
+  - kube-proxy
+pr_body: ""

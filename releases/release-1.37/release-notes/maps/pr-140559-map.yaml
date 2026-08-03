@@ -1,0 +1,11 @@
+pr: 140559
+releasenote:
+  text: |-
+    Graduated the `ManifestBasedAdmissionControlConfig` feature gate to Beta and enabled it by default.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

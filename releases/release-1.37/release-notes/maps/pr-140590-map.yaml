@@ -1,0 +1,10 @@
+pr: 140590
+releasenote:
+  text: |-
+    Fixed a case where Pods in a PodGroup that were successfully evaluated during a failed PodGroup scheduling cycle had `nominatedNodeName` set from that evaluation instead of from PodGroup preemption.
+  sigs:
+  - scheduling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

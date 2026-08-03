@@ -1,0 +1,14 @@
+pr: 139674
+releasenote:
+  text: |-
+    Added the `PodGroupPostFilter` extension point to the scheduling framework, replacing the internal hardcoding for `WorkloadAwarePreemption` with a configurable extension point for PodGroups.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

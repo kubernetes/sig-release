@@ -1,0 +1,12 @@
+pr: 140189
+releasenote:
+  text: |-
+    Fixed `kubectl cluster-info dump --output-directory` creating world-readable dump files. Files are created with mode 0600 and `kubectl`-created directories with mode 0700, because dumped Pod logs can contain sensitive data.
+  sigs:
+  - cli
+  - security
+  kinds:
+  - bug
+  areas:
+  - kubectl
+pr_body: ""

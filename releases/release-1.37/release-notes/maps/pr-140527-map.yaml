@@ -1,0 +1,11 @@
+pr: 140527
+releasenote:
+  text: |-
+    Fixed a race in `kubelet` where `PrepareResources` could attach a Pod to a ResourceClaim that was concurrently being unprepared, leaving the Pod running with unprepared devices.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

@@ -1,0 +1,15 @@
+pr: 137187
+releasenote:
+  text: |-
+    Added the Recreate update strategy for StatefulSet, mirroring the Deployment Recreate strategy by deleting all Pods, waiting for them to terminate completely, and then creating Pods according to the `podManagementPolicy` field.
+  sigs:
+  - apps
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+  - e2e-test-framework
+pr_body: ""

@@ -1,0 +1,12 @@
+pr: 139373
+releasenote:
+  text: |-
+    Added workload preemption metrics in Alpha behind the `WorkloadAwarePreemption` feature gate.
+  sigs:
+  - instrumentation
+  - scheduling
+  kinds:
+  - feature
+  areas:
+  - stable-metrics
+pr_body: ""

@@ -1,0 +1,12 @@
+pr: 139223
+releasenote:
+  text: |-
+    Promoted the `metrics.k8s.io` API from `v1beta1` to `v1` without changes.
+  sigs:
+  - instrumentation
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - code-generation
+pr_body: ""

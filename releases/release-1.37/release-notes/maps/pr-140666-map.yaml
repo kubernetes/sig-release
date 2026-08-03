@@ -1,0 +1,10 @@
+pr: 140666
+releasenote:
+  text: |-
+    Fixed a panic caused by integer division by zero and incorrect ResourceSlice admission validation when a DRA consumable capacity `validRange` `step`, `min`, `max`, or `default` value is negative or greater than 9223372036854775807.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

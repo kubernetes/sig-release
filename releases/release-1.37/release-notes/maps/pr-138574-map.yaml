@@ -1,0 +1,13 @@
+pr: 138574
+releasenote:
+  text: |-
+    Fixed Pod status validation for reported Linux container user UIDs to accept values above 2147483647 and up to the unsigned 32-bit UID limit.
+  sigs:
+  - apps
+  - node
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - kubelet
+pr_body: ""

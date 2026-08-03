@@ -1,0 +1,12 @@
+pr: 140323
+releasenote:
+  text: |-
+    Fixed `kubelet` applying device health updates to the wrong Pod status when device plugins for different resources exposed devices with identical IDs. Affected Pods reflect device health changes immediately instead of waiting for the next periodic Pod sync.
+  sigs:
+  - node
+  kinds:
+  - bug
+  - flake
+  areas:
+  - kubelet
+pr_body: ""

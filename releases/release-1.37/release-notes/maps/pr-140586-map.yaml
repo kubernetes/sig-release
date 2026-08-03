@@ -1,0 +1,11 @@
+pr: 140586
+releasenote:
+  text: |-
+    Fixed a panic in `kube-controller-manager` that could occur when a StorageVersionMigration targeted a resource missing from the RESTMapper, for example, when a CRD was deleted while its migration was pending.
+  sigs:
+  - api-machinery
+  - apps
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

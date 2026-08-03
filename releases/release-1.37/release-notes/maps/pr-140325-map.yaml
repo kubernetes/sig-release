@@ -1,0 +1,11 @@
+pr: 140325
+releasenote:
+  text: |-
+    Fixed a bug where enabling the `DRAListTypeAttributes` feature gate could prevent device allocation even when a valid combination existed. This occurred when the allocator needed to backtrack while allocating multiple devices with a `matchAttribute` constraint using list-type attribute values.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

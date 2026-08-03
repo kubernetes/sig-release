@@ -1,0 +1,13 @@
+pr: 140267
+releasenote:
+  text: |-
+    Fixed a bug where Burstable Pod `memory.low` soft protection was ineffective because the parent cgroup lacked the ancestor coverage required by the kernel's hierarchical protection model.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+pr_body: ""

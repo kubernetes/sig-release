@@ -1,0 +1,15 @@
+pr: 140161
+releasenote:
+  text: |-
+    Fixed DRA `CapacityRequestPolicyRange` to support fractional quantities in milli-scale.
+  sigs:
+  - api-machinery
+  - node
+  - scheduling
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - code-generation
+  - dependency
+pr_body: ""

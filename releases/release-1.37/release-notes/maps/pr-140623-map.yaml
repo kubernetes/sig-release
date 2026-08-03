@@ -1,0 +1,10 @@
+pr: 140623
+releasenote:
+  text: |-
+    Fixed a concurrent map read/write data race in `handleSchedulingFailure` during scheduling failure handling.
+  sigs:
+  - scheduling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

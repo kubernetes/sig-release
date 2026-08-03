@@ -1,0 +1,14 @@
+pr: 138176
+releasenote:
+  text: |-
+    Graduated the `scheduler_plugin_execution_duration_seconds` and `scheduler_scheduling_algorithm_duration_seconds` metrics from Alpha to Beta.
+  sigs:
+  - instrumentation
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - stable-metrics
+pr_body: ""

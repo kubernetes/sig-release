@@ -1,0 +1,10 @@
+pr: 140241
+releasenote:
+  text: |-
+    Fixed `kube-apiserver` hanging indefinitely on `SIGTERM` when it could not create its identity Lease, for example, because the hostname exceeded 63 bytes.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

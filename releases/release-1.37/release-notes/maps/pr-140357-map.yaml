@@ -1,0 +1,11 @@
+pr: 140357
+releasenote:
+  text: |-
+    Updated the `kubectl explain` long description for consistency with other commands and to improve the documentation.
+  sigs:
+  - cli
+  kinds:
+  - documentation
+  areas:
+  - kubectl
+pr_body: ""

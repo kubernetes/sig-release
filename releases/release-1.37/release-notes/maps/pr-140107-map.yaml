@@ -1,0 +1,16 @@
+pr: 140107
+releasenote:
+  text: |-
+    Promoted the `HPAConfigurableTolerance` feature gate to GA.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

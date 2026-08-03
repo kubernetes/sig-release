@@ -1,0 +1,14 @@
+pr: 140654
+releasenote:
+  text: |-
+    Fixed server-side apply to correctly drop status changes when tracking field ownership for PodGroup, PodCompositeGroup, and PodCertificateRequest.
+  sigs:
+  - api-machinery
+  - auth
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+pr_body: ""

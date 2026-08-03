@@ -1,0 +1,13 @@
+pr: 140019
+releasenote:
+  text: |-
+    Updated admission webhooks to skip auth/authz virtual resources, such as `tokenreviews` and `subjectaccessreviews`, that ValidatingAdmissionPolicy and MutatingAdmissionPolicy already exclude. Added the `ExcludeAdmissionWebhookVirtualResources` feature gate in Beta, enabled by default, with an opt-out option to restore the previous behavior.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver
+pr_body: ""

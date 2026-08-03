@@ -1,0 +1,10 @@
+pr: 140431
+releasenote:
+  text: |-
+    Fixed DRA scheduling bugs where the structured allocator incorrectly counted a device's shared counters while evaluating candidates. It could retain a counter reservation after rejecting or backtracking from a candidate, or clear a shared device's in-use marker, causing a later allocation to charge the counter twice. These issues could cause the allocator to incorrectly treat a counter set as exhausted and leave a Pod pending on a node that could satisfy its resource requirements. This affected the allocator used by the default feature configuration.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

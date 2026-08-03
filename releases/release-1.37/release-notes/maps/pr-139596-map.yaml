@@ -1,0 +1,21 @@
+pr: 139596
+releasenote:
+  text: |-
+    Added the CompositePodGroup API to `scheduling.k8s.io/v1alpha3`.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - code-generation
+pr_body: ""

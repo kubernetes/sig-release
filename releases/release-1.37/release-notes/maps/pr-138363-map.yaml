@@ -1,0 +1,15 @@
+pr: 138363
+releasenote:
+  text: |-
+    Updated DRA so that the ResourceClaim controller creates ResourceClaims from ResourceClaimTemplates referenced by a Pod that is a member of a PodGroup only when the `DRAWorkloadResourceClaims` feature gate is enabled. This prevents creating a ResourceClaim for an individual Pod when it is intended to be created for the PodGroup.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+pr_body: ""

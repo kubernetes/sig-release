@@ -1,0 +1,12 @@
+pr: 140412
+releasenote:
+  text: |-
+    Updated PodGroup scheduling to skip PostFilter plugins for Pods in a PodGroup cycle. Instead, `PodGroupPostFilter` runs only when the entire PodGroup is unschedulable.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

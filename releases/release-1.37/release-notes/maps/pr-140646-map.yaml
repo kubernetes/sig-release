@@ -1,0 +1,12 @@
+pr: 140646
+releasenote:
+  text: |-
+    Fixed a regression in retrying deferred resizes caused by changes to Pod resource footprint calculation.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

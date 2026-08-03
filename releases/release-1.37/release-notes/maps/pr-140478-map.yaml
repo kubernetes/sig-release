@@ -1,0 +1,11 @@
+pr: 140478
+releasenote:
+  text: |-
+    Improved scheduler handling of large PodGroups by reducing the likelihood of scheduling stalls when member Pods transiently fail to bind to Nodes, such as when many Pods share the same ResourceClaim.
+  sigs:
+  - scheduling
+  kinds:
+  - bug
+  - flake
+  areas: []
+pr_body: ""

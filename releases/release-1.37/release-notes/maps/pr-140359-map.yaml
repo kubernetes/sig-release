@@ -1,0 +1,12 @@
+pr: 140359
+releasenote:
+  text: |-
+    Added validation to PodGroup scheduling that, when the `PodGroupPreemptionPolicy` feature gate is enabled, ensures that the preemption policies of Pods being evaluated for scheduling match the priority of the PodGroup.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

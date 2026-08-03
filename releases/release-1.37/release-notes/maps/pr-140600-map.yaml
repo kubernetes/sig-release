@@ -1,0 +1,23 @@
+pr: 140600
+releasenote:
+  text: |-
+    Fixed a bug in DRA consumable capacity where the `DistinctAttribute` constraint was not correctly enforced for each device when a request allocated multiple devices.
+  sigs:
+  - api-machinery
+  - apps
+  - cli
+  - etcd
+  - network
+  - node
+  - release
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - test
+  - apiserver
+  - kubectl
+  - release-eng
+pr_body: ""

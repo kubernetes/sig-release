@@ -1,0 +1,14 @@
+pr: 137150
+releasenote:
+  text: |-
+    Updated Pod-level resource handling so that Pod resources determine QoS only when they include a resource request or limit. Empty Pod resources (`{}`, `{requests:{}}`, or `{limits:{}}`) no longer affect QoS calculation.
+  sigs:
+  - apps
+  - cli
+  - node
+  - scheduling
+  kinds:
+  - api-change
+  areas:
+  - kubectl
+pr_body: ""

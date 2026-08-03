@@ -1,0 +1,12 @@
+pr: 140311
+releasenote:
+  text: |-
+    Updated PodGroup status to include the `pod group preemption found a placement for podgroup, preempting <victim_count> victims` message when workload-aware preemption finds a placement.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

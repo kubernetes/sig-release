@@ -1,0 +1,11 @@
+pr: 140386
+releasenote:
+  text: |-
+    Fixed a bug that could cause the admission controller to panic when evaluating CEL expressions against typed map lists with three keys.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver
+pr_body: ""

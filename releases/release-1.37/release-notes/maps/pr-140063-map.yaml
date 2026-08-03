@@ -1,0 +1,14 @@
+pr: 140063
+releasenote:
+  text: |-
+    Fixed a DRA issue where drivers might not recreate ResourceSlices that were deleted externally, depending on timing between driver updates and deletions.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

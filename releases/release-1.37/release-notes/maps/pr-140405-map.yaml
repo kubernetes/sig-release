@@ -1,0 +1,11 @@
+pr: 140405
+releasenote:
+  text: |-
+    Updated the version of the `nft` binary in the `kube-proxy` image to nftables `v1.0.6.1` to fix issues resyncing `kube-proxy` in nftables mode on systems containing rules created by recent versions of nftables.
+  sigs:
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

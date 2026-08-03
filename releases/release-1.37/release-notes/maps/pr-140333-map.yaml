@@ -1,0 +1,23 @@
+pr: 140333
+releasenote:
+  text: |-
+    Updated the default etcd version to `v3.7.0`.
+  sigs:
+  - api-machinery
+  - auth
+  - cloud-provider
+  - cluster-lifecycle
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - dependency
+  areas:
+  - test
+  - apiserver
+  - cloudprovider
+  - provider/gcp
+  - kubeadm
+  - dependency
+pr_body: ""

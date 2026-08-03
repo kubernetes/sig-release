@@ -1,0 +1,10 @@
+pr: 140702
+releasenote:
+  text: |-
+    Fixed a scheduler bug in DRA consumable capacity where a ResourceSlice with a device capacity requirement stored as a high-precision decimal, such as a fine-grained fractional value or a value above the int64 range, could be mutated in the informer cache during allocation. This mutation could incorrectly cause allocation to fail for subsequent Pods.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

@@ -1,0 +1,11 @@
+pr: 139142
+releasenote:
+  text: |-
+    Added the `HPAOptimizedSelectorStore` feature gate in Beta, enabled by default, to reduce lock contention in the HorizontalPodAutoscaler controller's selector overlap detection and improve reconciliation throughput at high HorizontalPodAutoscaler counts and concurrency.
+  sigs:
+  - apps
+  - autoscaling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

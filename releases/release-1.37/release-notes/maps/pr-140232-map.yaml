@@ -1,0 +1,34 @@
+pr: 140232
+pr_body: "#### What type of PR is this?\r\n\r\n  /kind flake\r\n\r\n  #### What this
+  PR does / why we need it:\r\n\r\n  This deflakes `TestApplyCRDuringCRDFinalization`.\r\n\r\n
+  \ The test deletes a CRD, waits for the CRD to report `Terminating=True`, then sends
+  one dry-run SSA apply and expects it to be rejected with:\r\n\r\n  ```text\r\n  create
+  not allowed while custom resource definition is terminating\r\n```\r\n\r\n  The
+  wait on the CRD object is not a sufficient synchronization point for the apply request
+  path. The CRD GET can observe the updated CRD before the crdHandler informer cache\r\n
+  \ used by the custom resource apply path observes it. In that window, the dry-run
+  apply can still succeed and the test fails with:\r\n  ```text\r\n  finalization_test.go:210:
+  An error is expected but got nil.\r\n```\r\n\r\n  This keeps the existing wait for
+  the CRD Terminating condition, then waits through the same dry-run apply path that
+  the test is validating. A nil apply error keeps polling,\r\n  unexpected non-Forbidden
+  errors fail the test, and the final Forbidden error is still checked for the expected
+  message.\r\n\r\n  Observed flakes:\r\n\r\n  - https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-integration-master/2071378038305591296\r\n
+  \ - https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-integration-master/2071393395250565120\r\n
+  \ - https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-integration-master/2073155273773551616\r\n
+  \ - https://prow.k8s.io/view/gs/kubernetes-ci-logs/logs/ci-kubernetes-integration-master/2073400903649464320\r\n\r\n
+  \ #### Which issue(s) this PR is related to:\r\n\r\n  Related to https://github.com/kubernetes/kubernetes/pull/137604\r\n\r\n
+  \ #### Special notes for your reviewer:\r\n\r\n  #137604 made the handler consider
+  a CRD terminating as soon as its deletion timestamp is set. This PR addresses the
+  remaining test-side race where the test waits on a live CRD\r\n  GET, while the
+  CR apply path observes CRD state through the handler informer cache.\r\n\r\n  Verified
+  locally:\r\n\r\n  make test-integration WHAT=./staging/src/k8s.io/apiextensions-apiserver/test/integration
+  GOFLAGS='-run=TestApplyCRDuringCRDFinalization -count=10 -v'\r\n  DONE 10 tests
+  in 40.124s\r\n\r\n  make test-integration WHAT=./staging/src/k8s.io/apiextensions-apiserver/test/integration
+  KUBE_TIMEOUT='-timeout=3600s' GOFLAGS='-run=TestApplyCRDuringCRDFinalization\r\n
+  \ -count=400 -v'\r\n  DONE 400 tests in 1584.757s\r\n\r\n  #### Does this PR introduce
+  a user-facing change?\r\n```\r\n  NONE\r\n```\r\n  #### Additional documentation
+  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n```\r\n  NONE\r\n```\r\n"
+releasenote:
+  text: Fixed a race condition where server-side apply requests for custom resources
+    could observe an updated CustomResourceDefinition before the apply path was fully
+    synchronized, causing inconsistent dry-run behavior.

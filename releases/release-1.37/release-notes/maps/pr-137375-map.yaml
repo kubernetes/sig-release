@@ -1,0 +1,14 @@
+pr: 137375
+releasenote:
+  text: |-
+    Changed MutatingAdmissionPolicy and MutatingAdmissionPolicyBinding storage in etcd to use the `admissionregistration.k8s.io/v1` API version.
+  sigs:
+  - api-machinery
+  - etcd
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - apiserver
+pr_body: ""

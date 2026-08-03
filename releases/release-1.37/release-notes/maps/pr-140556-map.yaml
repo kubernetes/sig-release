@@ -1,0 +1,11 @@
+pr: 140556
+releasenote:
+  text: |-
+    Fixed a bug in CEL where `quantity.Add` mutated the receiver.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver
+pr_body: ""

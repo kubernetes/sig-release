@@ -1,0 +1,15 @@
+pr: 137699
+releasenote:
+  text: |-
+    Updated CDI spec version selection to be dynamic, preventing the generation of incompatible CDI specifications.
+  sigs:
+  - apps
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - dependency
+pr_body: ""

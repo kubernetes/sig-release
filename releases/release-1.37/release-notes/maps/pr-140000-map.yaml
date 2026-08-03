@@ -1,0 +1,19 @@
+pr: 140000
+releasenote:
+  text: |-
+    Added scheduler support for preempting lower-priority Pods to make room for `Deferred` in-place Pod resizes of higher-priority Pods when the `InPlacePodVerticalScalingSchedulerPreemption` Alpha feature gate is enabled.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

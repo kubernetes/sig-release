@@ -1,0 +1,23 @@
+pr: 139437
+releasenote:
+  text: |-
+    Graduated the `ClusterTrustBundle` and `ClusterTrustBundleProjection` feature gates to GA and enabled them by default.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - etcd
+  - node
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - conformance
+  - code-generation
+pr_body: ""

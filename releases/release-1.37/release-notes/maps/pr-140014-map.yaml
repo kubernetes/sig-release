@@ -1,0 +1,16 @@
+pr: 140014
+releasenote:
+  text: |-
+    Added the `--concurrent-disruption-syncs` flag to `kube-controller-manager` to configure the number of concurrent disruption controller workers.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

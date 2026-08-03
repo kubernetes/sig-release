@@ -1,0 +1,11 @@
+pr: 140085
+releasenote:
+  text: |-
+    Enabled the `EtcdRangeStream` feature gate by default and promoted it to Beta.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

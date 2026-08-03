@@ -1,0 +1,10 @@
+pr: 139620
+releasenote:
+  text: |-
+    Promoted the `PersistentVolumeClaimUnusedSinceTime` feature gate to Beta in `v1.37` and enabled it by default. PersistentVolumeClaims report the `Unused` condition, indicating how long a PersistentVolumeClaim has been unused to help identify candidates for cleanup.
+  sigs:
+  - apps
+  kinds:
+  - api-change
+  areas: []
+pr_body: ""

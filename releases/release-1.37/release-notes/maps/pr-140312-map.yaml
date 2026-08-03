@@ -1,0 +1,16 @@
+pr: 140312
+releasenote:
+  text: |-
+    Added the `PreemptionPolicy` field to PodGroupTemplate to define the policy for workload-aware preemption.
+  sigs:
+  - api-machinery
+  - apps
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

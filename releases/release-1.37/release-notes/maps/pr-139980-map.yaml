@@ -1,0 +1,12 @@
+pr: 139980
+releasenote:
+  text: |-
+    Updated the `WorkloadAwarePreemption` feature to perform a single scheduling attempt with all potential victims removed. This significantly improves performance but can result in a less optimal choice of preemption victims.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

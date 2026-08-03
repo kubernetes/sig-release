@@ -1,0 +1,11 @@
+pr: 140124
+releasenote:
+  text: |-
+    Graduated the `NativeHistograms` feature gate to Beta.
+  sigs:
+  - architecture
+  - instrumentation
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

@@ -1,0 +1,14 @@
+pr: 140497
+releasenote:
+  text: |-
+    Updated CoreDNS to `v1.14.6`.
+  sigs:
+  - cloud-provider
+  - cluster-lifecycle
+  kinds:
+  - feature
+  areas:
+  - provider/gcp
+  - kubeadm
+  - dependency
+pr_body: ""

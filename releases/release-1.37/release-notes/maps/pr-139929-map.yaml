@@ -1,0 +1,10 @@
+pr: 139929
+releasenote:
+  text: |-
+    Added the standard device attribute `resource.kubernetes.io/numaNode` and sysfs-based helper functions for DRA drivers.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

@@ -1,0 +1,10 @@
+pr: 140435
+releasenote:
+  text: |-
+    Fixed a DRA scheduling bug where the structured allocator keyed shared-counter caches by pool name only, causing two drivers with the same pool name on a node to use each other's counter definitions and incorrectly accept or reject device allocations in the second driver's pool.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

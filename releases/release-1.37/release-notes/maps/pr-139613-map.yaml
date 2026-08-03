@@ -1,0 +1,12 @@
+pr: 139613
+releasenote:
+  text: |-
+    Updated PodGroup scheduling to requeue remaining unscheduled Pods directly to the active queue (rather than backoff queue) after successful PodGroup scheduling, preserving their original timestamps so they retain scheduling precedence unless a higher priority entity is added.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

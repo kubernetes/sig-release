@@ -1,0 +1,12 @@
+pr: 139993
+releasenote:
+  text: |-
+    Added the `GracefulNodeShutdownInProgress`, `DrainInProgress`, `Drained`, `MaintenancePlanned`, and `MaintenanceInProgress` Node lifecycle conditions.
+  sigs:
+  - apps
+  - node
+  kinds:
+  - api-change
+  - feature
+  areas: []
+pr_body: ""

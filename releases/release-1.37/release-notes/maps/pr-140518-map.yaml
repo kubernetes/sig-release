@@ -1,0 +1,10 @@
+pr: 140518
+releasenote:
+  text: |-
+    Fixed a DRA partitionable devices issue where counters published by a DRA driver outside the valid `int64` range could be mutated in the informer cache, causing future Pod allocations to fail incorrectly.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

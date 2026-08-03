@@ -1,0 +1,11 @@
+pr: 138183
+releasenote:
+  text: |-
+    Updated `kube-proxy` to exit when the watched Node's IPs change or when the Node object is deleted, allowing it to restart with updated node networking state.
+  sigs:
+  - network
+  kinds:
+  - bug
+  areas:
+  - kube-proxy
+pr_body: ""

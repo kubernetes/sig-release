@@ -1,0 +1,11 @@
+pr: 140056
+releasenote:
+  text: |-
+    Improved memory usage of `kube-proxy` by dropping the `.metadata.managedFields` field, which `kube-proxy` does not require.
+  sigs:
+  - network
+  kinds:
+  - cleanup
+  areas:
+  - kube-proxy
+pr_body: ""

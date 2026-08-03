@@ -1,0 +1,11 @@
+pr: 138188
+releasenote:
+  text: |-
+    Updated `kubectl run` error messages for invalid `--restart` and `--image-pull-policy` values to list the accepted values.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl
+pr_body: ""

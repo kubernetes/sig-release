@@ -1,0 +1,11 @@
+pr: 140293
+releasenote:
+  text: |-
+    Fixed CEL behavior for `set` and `map` lists. Equality (`==`) no longer matches lists containing duplicates, and concatenation (`+`) correctly applies set and map merge semantics to appended elements.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver
+pr_body: ""

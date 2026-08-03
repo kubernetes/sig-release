@@ -1,0 +1,13 @@
+pr: 140047
+releasenote:
+  text: |-
+    Fixed the overestimation of a Pod's resource footprint during resize operations for multi-container Pods.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - kubelet
+pr_body: ""
