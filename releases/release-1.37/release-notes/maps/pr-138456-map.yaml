@@ -1,0 +1,14 @@
+pr: 138456
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nThis PR adds field selector support for `ResourceSlice.spec.pool.name`.\r\n\r\nThat
+  makes it possible to list `ResourceSlice` objects for a specific pool without fetching
+  all slices first and filtering \r\nclient-side, for example:\r\n\r\n```bash\r\nkubectl
+  get resourceslice --field-selector=spec.pool.name=<pool name>\r\n```\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nFixes #137413\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nAdded
+  support for selecting ResourceSlices by pool name with the field selector `spec.pool.name`.\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n\r\n```docs\r\n\r\n```\r\n"
+releasenote:
+  text: Added support for selecting ResourceSlices by pool name with the field selector
+    `spec.pool.name`.

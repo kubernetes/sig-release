@@ -1,0 +1,16 @@
+pr: 140193
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nThis switches to the new type-safe informer API (https://github.com/kubernetes/kubernetes/pull/139821).\r\nThe
+  new type-safe API simplifies the code. It also highlights a bug: when the OnDelete
+  event occurs without the deleted DeviceTaintRule, the code which     looks up affected
+  ResourceSlices crashed.\r\n\r\nThe scheduler recovered on restart by syncing everything,
+  but     obviously not crashing and resyncing only patched ResourceSlices is better...\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n#### Special notes for your
+  reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nDRA:
+  fixed a potential crash in the scheduler (recovered after restart) when the ResourceSlice
+  tracker encounters an OnDelete event for DeviceTaintRule where the deleted object
+  is unknown.\r\n```\r\n"
+releasenote:
+  text: 'DRA: fixed a potential crash in the scheduler (recovered after restart) when
+    the ResourceSlice tracker encounters an OnDelete event for DeviceTaintRule where
+    the deleted object is unknown.'

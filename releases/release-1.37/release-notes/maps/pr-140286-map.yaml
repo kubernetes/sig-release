@@ -1,0 +1,19 @@
+pr: 140286
+pr_body: "Promote the PodsAPI feature gate to Beta (enabled by default in 1.37). Unconditionally
+  initialize and start the Pods API gRPC server during Kubelet bootstrap, allowing
+  it to handle requests and return appropriate errors when the feature gate is disabled.\r\n\r\nChain
+  the rate limiter and metrics unary server interceptors using grpc.ChainUnaryInterceptor
+  to prevent a startup panic when registering multiple unary interceptors.\r\n\r\nDefine,
+  register, and track \"pod_errors_list\" and \"pod_errors_watch\" counter metrics
+  to monitor failures in the ListPods and WatchPods endpoints, with comprehensive
+  unit tests for unary and stream interceptors.\r\n\r\nFix Ginkgo v2 spec tree construction
+  rules and Prometheus metric lookup keys in Pods API E2E tests.\r\n\r\n#### What
+  type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this PR does / why we
+  need it:\r\n\r\n- Adds some more metrics for the PodsAPI to improve visbility. \r\n-
+  Adds test to verify fix for [Kubelet restart issue](https://github.com/kubernetes/kubernetes/issues/100277)
+  that promotion was blocked on.\r\n- Promotes PodsAPI to beta for 1.37\r\n\r\n####
+  Which issue(s) this PR is related to:\r\nKEP: https://github.com/kubernetes/enhancements/pull/6126\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n```release-note\r\nKubelet PodsAPI
+  gRPC service promoted to Beta.\r\n```\r\n\r\n```docs\r\nKEP: https://github.com/kubernetes/enhancements/pull/6126\r\n```\r\n"
+releasenote:
+  text: Kubelet PodsAPI gRPC service promoted to Beta.

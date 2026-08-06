@@ -1,0 +1,44 @@
+pr: 140740
+pr_body: |
+  #### What type of PR is this?
+
+  /kind dependency
+
+  #### What this PR does / why we need it:
+
+  This updates google.golang.org/grpc from v1.81.1 to v1.82.1. Upstream published v1.82.1 as a security release. It fixes three issues.
+
+  - A gRPC server now stops reading from a connection when a peer sends too many HTTP/2 control frames. Before this change, a peer could flood a server with control frames and make it use too much memory and CPU. See grpc/grpc-go#9236. There is no fixed v1.81.x release.
+  - The GRPC_GO_EXPERIMENTAL_DISABLE_STRICT_PATH_CHECKING environment variable is removed. Setting it turned strict path checking off and brought back the authorization bypass from CVE-2026-33186.
+  - The old gzip Decompressor API now limits how much data it decompresses, so a small compressed message can no longer use an unbounded amount of memory. Kubernetes does not call this API.
+
+  The update does not change any other dependency. Kubernetes already requires newer versions of everything grpc v1.82.1 needs, so the vendor changes cover only vendor/google.golang.org/grpc.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  I ran the standard dependency workflow.
+
+  - `hack/pin-dependency.sh google.golang.org/grpc v1.82.1`
+  - `hack/update-vendor.sh`
+  - `hack/lint-dependencies.sh` passes. There are no changes to hack/unwanted-dependencies.json.
+  - `hack/verify-typecheck.sh` passes on all platforms.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Updated google.golang.org/grpc to v1.82.1. This adds a server-side limit on HTTP/2 control frame flooding. It also removes the GRPC_GO_EXPERIMENTAL_DISABLE_STRICT_PATH_CHECKING environment variable, so strict path checking is now always on.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+
+  ```
+releasenote:
+  text: Updated google.golang.org/grpc to v1.82.1. This adds a server-side limit on
+    HTTP/2 control frame flooding. It also removes the GRPC_GO_EXPERIMENTAL_DISABLE_STRICT_PATH_CHECKING
+    environment variable, so strict path checking is now always on.

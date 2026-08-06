@@ -1,0 +1,42 @@
+pr: 139921
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  The kubelet builds one static node `ObjectReference` at startup with only kind and name, no UID, because the reference must work before the Node exists in the apiserver (#42701). As a result every node event the kubelet records has `involvedObject.uid` unset, so consumers that match by UID (for example `kubectl describe node`) silently drop them.
+
+  This PR keeps that behavior but adds a `nodeRefWithUID()` helper that returns a per-call copy of the reference with the UID filled in from the node lister cache (no apiserver round-trip). When the UID isn't known yet, such as early startup or standalone mode, it falls back to the name-only reference. Copying per call keeps the shared reference immutable and the helper safe under concurrent event recording.
+
+  The kubelet's own node event sites now use it: `recordNodeStatusEvent`, `recordEvent`, and the `ContainerGCFailed`, `ImageGCFailed`, `KubeletSetupFailed`, `StartingKubelet`, and `CgroupV1` events. This covers the node-status events users most commonly inspect.
+
+  A few node events are out of scope. Events emitted before the node is registered genuinely can't carry a UID. Several subsystems also capture the static reference by pointer and emit their own node events: the oom watcher, eviction manager, image GC manager, node-shutdown manager, and DNS configurer. Routing those through a UID-aware reference needs a getter threaded into each subsystem, so it's left as follow-up. #138362 remains the complementary CLI-side fix.
+
+  #### Which issue(s) this PR is related to:
+
+  Related to #138524
+
+  #### Special notes for your reviewer:
+
+  The shared reference is used by pointer across subsystems, so the helper copies rather than mutates it to avoid a data race. The added unit test runs under `-race` and asserts the shared `nodeRef` is never mutated.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kubelet: node events recorded by the kubelet now populate `involvedObject.uid` on a best-effort basis once the node is registered, so node events can be correlated by UID (for example in `kubectl describe node`). The UID is resolved once and not refreshed afterward. If a node is deleted and recreated with a new UID while the kubelet keeps running, its events continue to use the original UID until the kubelet restarts.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+
+  ```
+releasenote:
+  text: 'kubelet: node events recorded by the kubelet now populate `involvedObject.uid`
+    on a best-effort basis once the node is registered, so node events can be correlated
+    by UID (for example in `kubectl describe node`). The UID is resolved once and
+    not refreshed afterward. If a node is deleted and recreated with a new UID while
+    the kubelet keeps running, its events continue to use the original UID until the
+    kubelet restarts.'

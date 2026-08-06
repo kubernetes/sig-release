@@ -1,0 +1,42 @@
+pr: 139876
+pr_body: "## What this PR does / why we need it\r\n\r\nWhen a client that predates
+  the DRA fields (`ResourceClaimStatuses`,\r\n`ExtendedResourceClaimStatus`, `NodeAllocatableResourceClaimStatuses`)\r\nissues
+  a `pods/status` update, those fields are absent from the Pod it\r\nsends back. The
+  apiserver stores the update as-is, effectively clearing\r\nDRA status. On the next
+  termination sync, kubelet has no claim info from\r\nthe pod status and logs:\r\n\r\n```\r\nunprepare
+  dynamic resources: pod \"…\": ResourceClaim not created yet\r\n```\r\n\r\nThis leaves
+  pods permanently stuck in `Terminating`.\r\n\r\n**Root cause** (from #139772 discussion):
+  Multus CNI uses\r\n`network-attachment-definition-client` which pins `k8s.io/client-go\r\nv0.29.0`
+  — predating DRA fields. It calls `UpdateStatus` to write an\r\nannotation, but the
+  round-tripped Pod has the DRA fields zeroed.\r\n\r\n**Fix**: extend `podStatusStrategy.PrepareForUpdate`
+  to restore all three\r\nDRA-related status fields from the old pod when the incoming
+  update omits\r\nthem. This applies to running and terminating pods because the old
+  client\r\ncan issue status updates throughout the pod lifecycle. For the two slice\r\nfields,
+  an explicit non-nil empty slice (`[]`) remains an allowed way to\r\nclear the field.\r\n\r\nThe
+  scheduler's Unreserve path now sends that explicit empty list when it\r\nclears
+  `NodeAllocatableResourceClaimStatuses`; its previous generic status\r\npatch serialized
+  the clear as an omitted field.\r\n\r\n`DropDisabledPodFields` runs afterwards and
+  will still strip the fields\r\nwhen the corresponding feature gate is disabled,
+  so there is no\r\ninteraction with the feature gate lifecycle.\r\n\r\nThis complements
+  the kubelet-side resilience fix in #139845.\r\n\r\n## Which issue(s) this PR is
+  related to\r\n\r\nFixes #139772\r\n\r\n## Type of change\r\n\r\n/kind feature\r\n/sig
+  node\r\n/sig api-machinery\r\n/wg device-management\r\n/triage accepted\r\n\r\n##
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nData in DRA-related
+  fields in pod status (resourceClaimStatuses, extendedResourceClaimStatus, and nodeAllocatableResourceClaimStatuses)
+  is now preserved when handling pod status updates that omit those fields. This prevents
+  data loss due to updates from old clients accidentally unsetting these DRA fields,
+  which could leave pods permanently stuck in Terminating.\r\n```\r\n\r\n## Testing\r\n\r\n-
+  Added eight cases to `TestStatusPrepareForUpdate` covering omitted DRA\r\n  fields
+  on running and terminating pods, plus explicit empty-slice updates.\r\n- Added `TestDRAStatusPreservedOnStatusUpdate`,
+  which exercises the\r\n  running-pod regression and explicit empty-list clearing
+  through the\r\n  apiserver.\r\n- Updated the scheduler Unreserve test to assert
+  the explicit empty-list\r\n  merge patch used to clear `NodeAllocatableResourceClaimStatuses`.\r\n-
+  `make test WHAT=./pkg/registry/core/pod GOFLAGS=-v`\r\n- `make test WHAT=./pkg/scheduler/framework/plugins/dynamicresources
+  GOFLAGS=-v`\r\n- `make test-integration WHAT=./test/integration/pods GOFLAGS=-v
+  KUBE_TEST_ARGS='-run ^TestDRAStatusPreservedOnStatusUpdate$'`\r\n"
+releasenote:
+  text: Data in DRA-related fields in pod status (resourceClaimStatuses, extendedResourceClaimStatus,
+    and nodeAllocatableResourceClaimStatuses) is now preserved when handling pod status
+    updates that omit those fields. This prevents data loss due to updates from old
+    clients accidentally unsetting these DRA fields, which could leave pods permanently
+    stuck in Terminating.

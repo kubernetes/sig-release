@@ -1,0 +1,28 @@
+pr: 140634
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n/kind api-change\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nThis PR extends the workload-aware preemption
+  (WAP) to additionally support CompositePodGroups, both as a preemptor as well as
+  a preemptee.\r\n\r\nThe high-level idea is very similar to the already existing
+  WAP support for PodGroups:\r\n- If the scheduling algorithm for a CompositePodGroup
+  returns unschedulable, run PodGroupPostFilter to check if preemption helps - and
+  if it does, actuate the preemptions of selected victims and put the CompositePodGroup
+  back to the scheduling queue.\r\n- Potential victim computation is extended to CompositePodGroups:\r\n
+  \ - CompositePodGroups with the \"single\" disruption mode tells scheduler to treat
+  its children as individual victims.\r\n  - CompositePodGroups with the \"all\" disruption
+  mode tells scheduler to treat its whole subtree as a single atomic victim.\r\n  -
+  \"all\" disruption mode overrides the \"single\" disruption mode in descendant groups.\r\n-
+  In beta, we will enforce that a CompositePodGroup with \"all\" disruption mode can
+  have descendants with the \"all\" disruption mode exclusively in runtime validation
+  in kube-scheduler.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP:
+  https://github.com/kubernetes/enhancements/issues/6012\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\nThis PR explicitly disables WAP for CompositePodGroups
+  that contain scheduling constraints (similar to what we have already for PodGroups).\r\n\r\nhttps://github.com/kubernetes/kubernetes/pull/140683
+  is going to extend the WAP support to both PGs and CPGs with the scheduling constraints.\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nAdded DisruptionMode
+  and PreemptionPolicy fields to Workload and CompositePodGroup APIs to support workload-aware
+  preemption for CompositePodGroups.\r\n```\r\n\r\n#### Additional documentation e.g.,
+  KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n- [KEP]:
+  https://github.com/kubernetes/enhancements/issues/6012\r\n```\r\n"
+releasenote:
+  text: Added DisruptionMode and PreemptionPolicy fields to Workload and CompositePodGroup
+    APIs to support workload-aware preemption for CompositePodGroups.

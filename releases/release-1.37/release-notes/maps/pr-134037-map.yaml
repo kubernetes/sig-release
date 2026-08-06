@@ -1,0 +1,21 @@
+pr: 134037
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nThis PR implements dry-run support for the unsafe
+  corrupt object deletion feature introduced in KEP-3926.\r\n\r\nThis enhancement
+  allows administrators to safely test corrupt object deletion operations before executing
+  them, providing an important safety mechanism for this potentially cluster-breaking
+  operation.\r\n\r\n#### Which issue(s) this PR fixes:\r\n \r\nFixes #\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nThis builds upon the existing unsafe deletion
+  functionality from #127513. The dry-run implementation follows Kubernetes' standard
+  dry-run patterns and maintains backward compatibility.\r\n\r\nKey changes:\r\n\r\n-
+  Removed validation restriction in that blocked dry-run with unsafe deletion options\r\n-
+  Enhanced `corrupt_obj_deleter.go` to handle dry-run requests appropriately\r\n-
+  Added comprehensive test coverage for dry-run scenarios in integration tests\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\nThis feature is feature-gated
+  by `AllowUnsafeMalformedObjectDeletion`:\r\n\r\n```release-note\r\nThe unsafe corrupt
+  object deletion feature now supports dry-run mode, allowing administrators to test
+  deletion operations safely before execution.\r\n```\r\n\r\n#### Additional documentation
+  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n- KEP: https://github.com/kubernetes/enhancements/pull/3927"
+releasenote:
+  text: The unsafe corrupt object deletion feature now supports dry-run mode, allowing
+    administrators to test deletion operations safely before execution.

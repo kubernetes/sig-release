@@ -1,0 +1,40 @@
+pr: 140769
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nFixes structured DRA allocator behavior for `allocationMode:
+  All` with consumable capacity (`DRAConsumableCapacity`).\r\n\r\nPer `CapacityRequirements`
+  godoc, an All request must fail when a device otherwise matches the request and
+  advertises sufficient static capacity, but cannot be allocated (for example, because
+  remaining capacity is exhausted on a multi-alloc device).\r\n\r\nWhen gathering
+  devices for All, the allocator incorrectly used `alloc.CmpRequestOverCapacity`,
+  which includes pre-consumed remaining capacity. Capacity-exhausted matching devices
+  were filtered out of `allDevices`, so All\r\ncould succeed with only the still-free
+  subset.\r\n\r\n##### Example\r\nTwo multi-alloc devices each with `capacity0=1`;
+  device-1 is fully consumed by another allocation. An All request for `capacity0=1`
+  must fail, not return device-2 alone.\r\n\r\nThe fix uses a static-capacity-only
+  check at All gather time (empty consumed state). Remaining capacity continues to
+  be enforced in `allocateDevice`, so a blocked matching device causes the whole All
+  request to fail, consistent with\r\nexclusive in-use devices, which were already
+  handled correctly.\r\n\r\nAlso reverts the `consumable-capacity-multi-allocatable-device-allocation-mode-all-in-use-insufficient`
+  allocator table case to expect no allocation. That case originally expected failure
+  (KEP 5075) and was later flipped to partial success alongside an ExactCount multi-device
+  fix.\r\n\r\n```yaml\r\napiVersion: resource.k8s.io/v1\r\nkind: ResourceClaim\r\nmetadata:\r\n
+  \ name: all-gpus\r\nspec:\r\n  devices:\r\n    requests:\r\n    - name: req0\r\n
+  \     exactly:\r\n        allocationMode: All\r\n        deviceClassName: gpu-class\r\n
+  \       capacity:\r\n          requests:\r\n            memory: 4Gi\r\n```\r\n\r\nIf
+  another pod already consumed all capacity on one matching device, the claim must
+  stay unallocated rather than succeeding with the remaining device(s) only.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n#### Special notes for your
+  reviewer:\r\n\r\n- Change is limited to All-mode gather in experimental and incubating
+  allocators.\r\n- Other All+capacity table cases are unchanged (`filter-out-*`, `in-use-sufficient`,
+  `allocating-insufficient`).\r\n- Requires `DRAConsumableCapacity`.\r\n\r\n#### Does
+  this PR introduce a user-facing change?\r\n\r\n```release-note\r\nFixed a bug where
+  ResourceClaims using `allocationMode: All` with consumable capacity could be partially
+  allocated when a matching device had insufficient remaining capacity. Such claims
+  now correctly fail to allocate until all matching devices can be satisfied.\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n\r\n```docs\r\n\r\n```\r\n"
+releasenote:
+  text: 'Fixed a bug where ResourceClaims using `allocationMode: All` with consumable
+    capacity could be partially allocated when a matching device had insufficient
+    remaining capacity. Such claims now correctly fail to allocate until all matching
+    devices can be satisfied.'

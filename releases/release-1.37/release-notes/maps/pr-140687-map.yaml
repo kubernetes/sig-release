@@ -1,0 +1,31 @@
+pr: 140687
+pr_body: |-
+  Assisted-by: Cursor <noreply@cursor.com>
+
+  #### What type of PR is this?
+
+  /kind feature
+
+  #### What this PR does / why we need it:
+
+  Adds declarative validation markers and generated non-registering validation functions for the v1alpha1 DRA device metadata API. Go consumers can validate required request and device fields, pod claim names, driver and device naming constraints, pool names, and attribute limits after decoding.
+
+  `DeviceAttribute` and `NetworkDeviceData` remain opaque to this generator target because their generated validators currently live under `k8s.io/kubernetes`, which cannot be imported by the published staging module.
+
+  #### Which issue(s) this PR fixes:
+
+  Fixes #137761
+
+  #### Test plan
+
+  - `go test ./staging/src/k8s.io/dynamic-resource-allocation/api/metadata/v1alpha1`
+  - `hack/verify-codegen.sh validation`
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  DRA device metadata v1alpha1 now provides generated declarative validation functions for Go consumers.
+  ```
+releasenote:
+  text: DRA device metadata v1alpha1 now provides generated declarative validation
+    functions for Go consumers.

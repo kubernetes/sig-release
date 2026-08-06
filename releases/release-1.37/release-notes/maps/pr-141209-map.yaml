@@ -1,0 +1,11 @@
+pr: 141209
+pr_body: "…issues\r\n\r\n#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nSee https://kubernetes.slack.com/archives/C0BP8PW9G/p1785963715244149\r\n\r\nWe
+  have three unresolved critical issue and disabling the feature by default will be
+  a better option at this stage of a release process.\r\n\r\n#### Special notes for
+  your reviewer:\r\n\r\nSome test lanes MAY expect it the be enabled by default. I
+  hope not, but there may be failures cause by it. Let's keep eye on those.\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nThe feature
+  gate `PodLevelResourceManagers` is disabled by default.\r\n```\r\nKEP: https://github.com/kubernetes/enhancements/issues/5526"
+releasenote:
+  text: The feature gate `PodLevelResourceManagers` is disabled by default.

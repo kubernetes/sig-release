@@ -1,0 +1,31 @@
+pr: 138916
+pr_body: "#### What type of PR is this?\r\n\r\n   /kind feature\r\n   /sig scheduling\r\n\r\n
+  \  #### What this PR does / why we need it:\r\n\r\n   Adds a `PreQueueingHintFn`
+  extension point to the scheduling framework, called once per event to return a set
+  of pod keys to evaluate instead of scanning all unschedulable pods. This addresses
+  the O(N) requeue bottleneck identified in #138095 using the extension-point approach
+  agreed upon in #138531.\r\n\r\n   The DRA plugin implements `PreQueueingHintFn`
+  for ResourceClaim events: for ResourceClaimTemplate-based claims (per-pod claims
+  with a Pod OwnerReference), it returns only the owning pod's key, reducing the requeue
+  path from O(N) to O(1). For shared claims or non-templated claims without a single
+  pod owner, it returns nil to fall back to evaluating all pods\r\n   (existing behavior).\r\n\r\n
+  \  Additionally, ResourceClaim event handling is decoupled from the informer thread
+  using an async workqueue, preventing the informer from blocking on scheduling queue
+  lock acquisition during claim events.\r\n\r\n   Both optimizations are gated behind
+  the `SchedulerPreQueueingHints` feature gate (alpha, default=false).\r\n\r\n   ####
+  Which issue(s) this PR is related to:\r\n\r\n   Fixes #138095\r\n   Supersedes #138531\r\n\r\n
+  \  #### Special notes for your reviewer:\r\n\r\n   This implements the extension-point
+  approach recommended by @pohly, @mm4tt, and @macsko in #138531 — plugin-specific
+  logic stays in the plugin, the framework provides a generic `PreQueueingHintFn`
+  that any plugin can implement.\r\n\r\n   AI tools (Kiro CLI) were used to assist
+  with development and testing of this change.\r\n\r\n\r\n   #### Does this PR introduce
+  a user-facing change?\r\nNo\r\n\r\n\r\n```release-note\r\nAdded a new beta feature
+  gate SchedulerPreQueueingHints (on by default). When enabled, scheduler plugins
+  can provide a PreQueueingHintFn that narrows the set of pods evaluated on cluster
+  events, improving scheduling throughput. The DRA plugin implements this to optimize
+  ResourceClaimTemplate-based workloads.\r\n```\r\n"
+releasenote:
+  text: Added a new beta feature gate SchedulerPreQueueingHints (on by default). When
+    enabled, scheduler plugins can provide a PreQueueingHintFn that narrows the set
+    of pods evaluated on cluster events, improving scheduling throughput. The DRA
+    plugin implements this to optimize ResourceClaimTemplate-based workloads.

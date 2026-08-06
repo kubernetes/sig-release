@@ -1,0 +1,18 @@
+pr: 140122
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nThis PR enhances In-Place Pod Vertical Scaling
+  observability for resizes in the `Deferred` statuses in two commits.\r\n\r\n1. Adds
+  the `priority_bucket` label to the `pod_pending_resizes` gauge to track the current
+  queue depth and backlog of pending pod resizes across priority tiers.\r\n2. Introduces
+  the `pod_deferred_resize_duration_seconds` histogram labeled by `resolution` (`accepted`,
+  `reverted`, `terminated`) and `priority_bucket` to measure completion latency. This
+  is only emitted when a deferred condition was actually present and cleared.\r\n\r\nThis
+  is partially motivated by but does not depend on https://github.com/kubernetes/enhancements/issues/5836.
+  It gives us an idea of how long high-priority resizes are stuck in `Deferred` status.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n#### Does this PR introduce
+  a user-facing change?\r\n\r\n```release-note\r\nAdd alpha kubelet metric `kubelet_pod_deferred_resize_duration_seconds`
+  histogram and add `priority_bucket` label to `kubelet_pod_pending_resizes` gauge.\r\n```\r\n\r\nAssisted
+  by Antigravity\r\n\r\n/sig node instrumentation\r\n/assign @tallclair"
+releasenote:
+  text: Add alpha kubelet metric `kubelet_pod_deferred_resize_duration_seconds` histogram
+    and add `priority_bucket` label to `kubelet_pod_pending_resizes` gauge.

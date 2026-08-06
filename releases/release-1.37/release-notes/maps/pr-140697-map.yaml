@@ -1,0 +1,27 @@
+pr: 140697
+pr_body: |-
+  #### What type of PR is this?
+
+  /kind feature
+
+  #### What this PR does / why we need it:
+
+  Adds `apiserver_storage_list_duration_seconds`, a histogram wrapping the whole `GetList` call (etcd read plus decode) labelled `streamed="true"|"false"`, so streamed and non-streamed list latency are comparable (unlike `etcd_request_duration_seconds`, where `list` excludes decode but `listStream` includes it).
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Added `apiserver_storage_list_duration_seconds`, a metric measuring end-to-end apiserver list latency (etcd read plus object decode), labelled by whether etcd RangeStream was used, so streamed and non-streamed lists can be compared directly.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  NONE
+releasenote:
+  text: Added `apiserver_storage_list_duration_seconds`, a metric measuring end-to-end
+    apiserver list latency (etcd read plus object decode), labelled by whether etcd
+    RangeStream was used, so streamed and non-streamed lists can be compared directly.

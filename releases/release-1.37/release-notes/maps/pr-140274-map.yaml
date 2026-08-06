@@ -1,0 +1,20 @@
+pr: 140274
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\n`PrepareResources` appends devices to a claim's `DriverState`
+  as each per-driver `NodePrepareResources` response comes in. If a driver in the
+  batch returns before the `setPrepared` step and another driver in the same batch
+  subsequently fails, the successful driver's devices stay in the cache with prepared=false.
+  On retry, `isPrepared()` is false, so the claim is re-batched, the driver's response
+  is applied again, and its devices end up duplicated in `DriverState`. This can cause
+  CRI runtimes to fail container start or attach devices twice.\r\n\r\nTreat the driver's
+  response as authoritative for the (claim, driver) pair: clear the pre-existing device
+  list before rebuilding it from the response.\r\n\r\n#### Which issue(s) this PR
+  is related to:\r\n\r\nN/A\r\n\r\n#### Special notes for your reviewer:\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nkubelet/DRA:
+  fixed a bug where retrying a partially-failed PrepareResources caused duplicate
+  CDI device IDs to be passed to the CRI runtime, which could cause container start
+  to fail.\r\n```\r\n\r\n/sig node\r\n/wg device-management"
+releasenote:
+  text: 'kubelet/DRA: fixed a bug where retrying a partially-failed PrepareResources
+    caused duplicate CDI device IDs to be passed to the CRI runtime, which could cause
+    container start to fail.'
