@@ -59,6 +59,8 @@ A KEP may still request separate exceptions at different freeze points across th
 
 #### Exceptions after docs freeze:
 - As the docs freeze takes place close to the end of the release cycle, please file an exception request as soon as possible, ideally in advance of the deadline if you know you will miss it, or within 24 hours of missing the docs freeze deadline.
+- The Kubernetes website PR review process applies to docs exception work (see [Reviewing a PR](https://kubernetes.io/docs/contribute/review/for-approvers/#reviewing-a-pr)), including technical review and approver workflows.
+- Exception requests should include at least one additional business day after technical review is complete so SIG Docs OWNERS have time to review and approve.
 - All requests will be reviewed and approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above, with input from SIG Docs.
 
 
