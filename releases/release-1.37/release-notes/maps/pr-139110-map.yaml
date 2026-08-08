@@ -1,0 +1,14 @@
+pr: 139110
+pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nThis feature graduated to stable and was enabled
+  by default in 1.36 and there haven't been any issues that suggested turning it off.
+  So this lock it to on-by-default.\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/4816\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n\r\n```release-note\r\nDRA: the DRAPrioritizedList feature gate for the
+  Prioritized List feature (GA in 1.36) is now locked to enabled-by-default and thus
+  cannot be disabled anymore.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs
+  (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n"
+releasenote:
+  text: 'DRA: the DRAPrioritizedList feature gate for the Prioritized List feature
+    (GA in 1.36) is now locked to enabled-by-default and thus cannot be disabled anymore.'

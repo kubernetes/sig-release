@@ -1,0 +1,37 @@
+pr: 140882
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+  /kind regression
+  /sig node
+
+  #### What this PR does / why we need it:
+
+  Since #130487 (v1.35.0), probe workers inherit the pod worker's sync context via `probeManager.AddPod(ctx, pod)`. The pod worker cancels that context as soon as a pod begins terminating ("Cancelling current pod sync"), so every subsequent exec probe fails with `rpc error: code = Canceled desc = context canceled`, `doProbe` discards the errored result, and the pod's Ready condition stays frozen for the entire graceful termination. Before #130487 the workers ran on `context.Background()` and readiness probes kept working during shutdown.
+
+  This PR detaches the workers' context with `context.WithoutCancel`, preserving the logger and trace values. Worker lifecycle is unchanged: workers are stopped explicitly via their stop channel (`RemovePod`/`CleanupPods`).
+
+  Verified on kind with a v1.35.0 kubelet carrying this change: a pod with an exec readiness probe (period 1s, failureThreshold 1) whose probe starts failing on SIGTERM flips Ready to False 1s after `kubectl delete`, where stock v1.35.0 stays Ready=True for the full 60s grace period. Full test matrix and `--v=4` logs in #140881.
+
+  The regression test probes through the real exec prober backed by a `CommandRunner` that honors context cancellation (mirroring CRI `ExecSync`), and fails without the fix.
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes #140881
+
+  Related: #124648, #116965, #139167
+
+  #### Special notes for your reviewer:
+
+  Only exec probes are affected by the regression; the HTTP, TCP, and gRPC probers do not take the probe context. The `ready = !workerExists` latching issue discussed in #116965 is real but separate; fixing it is only observable once this lands.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed a v1.35 regression where exec readiness probes stopped executing (failing with "context canceled") once a pod began graceful termination, leaving the pod's Ready condition frozen during shutdown.
+  ```
+releasenote:
+  text: Fixed a v1.35 regression where exec readiness probes stopped executing (failing
+    with "context canceled") once a pod began graceful termination, leaving the pod's
+    Ready condition frozen during shutdown.

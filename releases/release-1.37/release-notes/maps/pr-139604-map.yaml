@@ -1,0 +1,42 @@
+pr: 139604
+pr_body: "#### What this PR does / why we need it:\r\nAdds Prometheus metrics for
+  topology-aware scheduling (TAS) pod group placement, so the volume and latency of
+  the placement evaluation phase can be observed.\r\n\r\n3 alpha metrics are introduced,
+  gated on the beta `TopologyAwareWorkloadScheduling` feature gate by default off
+  (since they are only registered when TAS is enabled). Metrics are defined in [KEP-5732](https://github.com/kubernetes/enhancements/issues/5732):\r\n\r\n-
+  `scheduler_generated_placements_total` counter of candidate placements generated
+  when scheduling pod groups.\r\n- `scheduler_placement_evaluations_total` counter
+  of candidate placements evaluated when scheduling pod groups, split by `feasible`/`infeasible`
+  result.\r\n- `scheduler_placement_evaluation_duration_seconds` latency of evaluating
+  a single candidate placement, split by `feasible`/`infeasible` result.\r\n\r\nThe
+  TAS pod group placement algorithm phases:\r\n1. generation: generate candidate placements
+  \r\n2. evaluation: per placement loop try to fit each candidate\r\n3. scoring: pick
+  the best among feasible placements (only if there are more than 1 feasible placement)\r\n\r\nThe
+  placement generation and scoring phases are intentionally not given dedicated metrics,
+  since they are already covered by `scheduler_framework_extension_point_duration_seconds`
+  with the [`PlacementGenerate`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/framework/runtime/framework.go#L2076)
+  and [`PlacementScore`](https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/framework/runtime/framework.go#L1493)
+  extension points. \r\nThere is also existing `podgroup_scheduling_algorithm_duration_seconds`
+  which measures the overall pod group scheduling cycle, so this PR focuses on the
+  per-placement evaluation.\r\n\r\n#### Which issue(s) this PR is related to:\r\nFixes
+  [#139347](https://github.com/kubernetes/kubernetes/issues/139347)\r\n\r\n#### Special
+  notes for your reviewer:\r\nUpdated KEP metric names https://github.com/kubernetes/enhancements/pull/6234#event-27926380968\r\n\r\nOutput:\r\n```\r\n#
+  HELP scheduler_generated_placements_total [ALPHA] Number of candidate placements
+  generated when scheduling pod groups.\r\n# TYPE scheduler_generated_placements_total
+  counter\r\nscheduler_generated_placements_total{profile=\"default-scheduler\"} 5\r\n\r\n#
+  HELP scheduler_placement_evaluations_total [ALPHA] Number of candidate placements
+  evaluated... 'feasible'... 'infeasible'...\r\n# TYPE scheduler_placement_evaluations_total
+  counter\r\nscheduler_placement_evaluations_total{profile=\"default-scheduler\",result=\"feasible\"}
+  2\r\nscheduler_placement_evaluations_total{profile=\"default-scheduler\",result=\"infeasible\"}
+  3\r\n\r\n# HELP scheduler_placement_evaluation_duration_seconds [ALPHA] Latency
+  in seconds...\r\n# TYPE scheduler_placement_evaluation_duration_seconds histogram\r\nscheduler_placement_evaluation_duration_seconds_bucket{...,result=\"feasible\",le=\"0.001\"}
+  1\r\n...\r\nscheduler_placement_evaluation_duration_seconds_sum{...,result=\"feasible\"}
+  0.0127\r\nscheduler_placement_evaluation_duration_seconds_count{...,result=\"feasible\"}
+  2\r\n```\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nScheduler
+  metrics for the topology-aware scheduling (TAS) placement phases available when
+  the TopologyAwareWorkloadScheduling feature gate is enabled: scheduler_generated_placements_total,
+  scheduler_placement_evaluations_total, and scheduler_placement_evaluation_duration_seconds.\r\n```"
+releasenote:
+  text: 'Scheduler metrics for the topology-aware scheduling (TAS) placement phases
+    available when the TopologyAwareWorkloadScheduling feature gate is enabled: scheduler_generated_placements_total,
+    scheduler_placement_evaluations_total, and scheduler_placement_evaluation_duration_seconds.'

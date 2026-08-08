@@ -1,0 +1,18 @@
+pr: 140785
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nPromotes `AllowUnsafeMalformedObjectDeletion` to
+  beta as planned in KEP-3926.\r\n\r\nThe second commit fixes a side effect of enabling
+  the gate by default: LIST decode failures now go through the corrupt object deleter,
+  which replaced the underlying cause with a generic `failed to read one or more ...
+  from the storage` message. The watch cache flattens errors to their message text,
+  so the status causes are lost on that path and a broken CRD conversion webhook becomes
+  hard to diagnose. The message now carries the first underlying error as an indicator
+  for the root cause. Caught by `TestWebhookConverterWithWatchCache` in [pull-kubernetes-integration](https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/140785/pull-kubernetes-integration/2079572982832828416).\r\n\r\n####
+  Which issue(s) this PR fixes:\r\n\r\nxref kubernetes/enhancements#3926\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nThe AllowUnsafeMalformedObjectDeletion
+  feature is now beta and enabled by default. List errors for objects that cannot
+  be read from the storage now include the first underlying cause in the error message.\r\n```\r\n"
+releasenote:
+  text: The AllowUnsafeMalformedObjectDeletion feature is now beta and enabled by
+    default. List errors for objects that cannot be read from the storage now include
+    the first underlying cause in the error message.

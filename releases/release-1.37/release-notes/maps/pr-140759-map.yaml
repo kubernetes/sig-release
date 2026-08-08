@@ -1,0 +1,25 @@
+pr: 140759
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\n`kubectl` drops the group name from the error when
+  a resource type is requested with a group qualifier it doesn't belong to. For example,
+  `kubectl get pdb.hpa` prints `the server doesn't have a resource type \"pdb\"`,
+  which is wrong. `pdb` exists, it just doesn't exist in the `hpa` group. The error
+  reads as if the resource type itself is unknown, when the real problem is the group.\r\n\r\n```\r\n$
+  kubectl get pdb.hpa\r\nerror: the server doesn't have a resource type \"pdb\"\r\n```\r\nThis
+  PR includes the group in the error message when one is present, so the same command
+  now reports \r\n```\r\nthe server doesn't have a resource type \"pdb\" in group
+  \"hpa\"`.\r\n```\r\n\r\nRoot cause: in `staging/src/k8s.io/cli-runtime/pkg/resource/builder.go`,
+  `mappingFor` parses the resource arg into a `schema.GroupResource{Resource, Group}`,
+  but on a `NoMatchError` builds the error from `.Resource` only, discarding `.Group`.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nhttps://github.com/kubernetes/kubectl/issues/1865\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nAdded `TestNoSelectorUnknownResourceTypeWithGroup`
+  in `builder_test.go` covering the group case, alongside the existing `TestNoSelectorUnknowResourceType`.\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nkubectl now
+  includes the group name in the error message when a resource type is not found under
+  the specified group, e.g. \"the server doesn't have a resource type \\\"pdb\\\"
+  in group \\\"hpa\\\"\".\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
+  Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n\r\n```\r\n"
+releasenote:
+  text: kubectl now includes the group name in the error message when a resource type
+    is not found under the specified group, e.g. "the server doesn't have a resource
+    type \"pdb\" in group \"hpa\"".

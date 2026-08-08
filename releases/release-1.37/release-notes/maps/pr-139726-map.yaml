@@ -1,0 +1,12 @@
+pr: 139726
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nmetrics.k8s.io is moving to GA; `kubectl top` should
+  support it.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/5207\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nThis will be handled after PR #139223 is
+  merged.\r\n\r\nSome content were written in part with the assistance of generative
+  AI.\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nkubectl
+  top support v1.metrics.k8s.io\r\n```\r\n\r\n#### Additional documentation e.g.,
+  KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n- [KEP]:
+  https://github.com/kubernetes/enhancements/issues/5207\r\n```\r\n"
+releasenote:
+  text: kubectl top support v1.metrics.k8s.io

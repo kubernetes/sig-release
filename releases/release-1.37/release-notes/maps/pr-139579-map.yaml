@@ -1,0 +1,14 @@
+pr: 139579
+pr_body: "#### What type of PR is this?\r\n\r\n/kind api-change\r\n/kind feature\r\n\r\n####
+  What this PR does / why we need it:\r\nThis PR promotes the Pod Certificates to
+  stable. \r\n\r\n#### Which issue(s) this PR is related to:\r\nhttps://github.com/kubernetes/enhancements/issues/4317\r\n\r\n####
+  Special notes for your reviewer:\r\nThis PR added PodCertificateRequest v1 API.
+  It also drops two fields PKIXPublicKey and ProofOfPossession which were deprecated
+  in v1beta1 API.  \r\n\r\n#### Does this PR introduce a user-facing change?\r\n```release-note\r\nThe
+  Pod Certificates feature is moving to GA. The PodCertificateRequest feature gate
+  is set true by default. Two fields PKIXPublicKey and ProofOfPossession which were
+  deprecated in PodCertificateRequest v1beta1 are removed from the v1 API.\r\n```"
+releasenote:
+  text: The Pod Certificates feature is moving to GA. The PodCertificateRequest feature
+    gate is set true by default. Two fields PKIXPublicKey and ProofOfPossession which
+    were deprecated in PodCertificateRequest v1beta1 are removed from the v1 API.

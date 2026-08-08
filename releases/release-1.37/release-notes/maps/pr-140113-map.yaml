@@ -1,0 +1,59 @@
+pr: 140113
+pr_body: "**Title:** KEP-6060: Implement webhook authentication token issuance and
+  validation\r\n\r\n**Body:**\r\n\r\n## What type of PR is this?\r\n\r\n/kind feature\r\n\r\n##
+  What this PR does / why we need it:\r\n\r\nImplements KEP-6060 (API Server Webhook
+  Authentication Token) token issuance and\r\nvalidation. This allows the Kubernetes
+  API Server and Aggregated API Servers to\r\nobtain service account tokens bound
+  to webhook configurations, with attestations\r\ndeclaring which API group the bearer
+  is authorized to send AdmissionReview\r\nrequests about.\r\n\r\nWhen the API server
+  calls an admission webhook, it can present a token that is\r\nbound to the webhook
+  configuration object and attests which API group the webhook\r\nis being consulted
+  about. The webhook can inspect the token to verify the caller's\r\nidentity and
+  scope.\r\n\r\n## Which issue(s) this PR fixes:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/6060\r\n\r\n##
+  What changes are included:\r\n\r\n### API Changes\r\n\r\n- Add `Attestations map[string]AttestationValue`
+  field to `TokenRequestSpec`\r\n- Add `AttestationAdmissionReviewAPIGroups` constant\r\n-
+  Accept `ValidatingWebhookConfiguration` and `MutatingWebhookConfiguration` as\r\n
+  \ valid `BoundObjectRef.Kind` values in TokenRequest\r\n\r\n### Token Issuance (`pkg/registry/core/serviceaccount/storage/token.go`)\r\n\r\n-
+  Gate the feature behind `APIServerWebhookAuthenticationToken` (alpha, v1.37)\r\n-
+  Require `admissionReviewAPIGroups` attestation when binding to a webhook config\r\n-
+  Perform authorization check (`attest` verb on `admissionReviewAPIGroups`)\r\n- Validate
+  that the requested audience matches a webhook in the bound config\r\n- Validate
+  that the attested API group matches at least one rule in the matched webhook\r\n-
+  Require that a single webhook satisfies both audience and API group constraints\r\n-
+  Cap token expiration at 10 minutes for webhook-bound tokens\r\n- Reject token creation
+  when the webhook config has a past deletion timestamp\r\n- Embed webhook config
+  name/UID and attestations into JWT private claims\r\n\r\n### Token Validation (`pkg/serviceaccount/claims.go`)\r\n\r\n-
+  On TokenReview, validate bound webhook config still exists and UID matches\r\n-
+  Invalidate tokens when the bound webhook configuration is deleted\r\n- Propagate
+  webhook config name/UID and attestation values to user Extra fields\r\n\r\n### Validation
+  (`pkg/apis/authentication/validation/validation.go`)\r\n\r\n- Reject attestations
+  when bound object is not a webhook configuration\r\n- Reject attestations without
+  a bound object reference\r\n- Require exactly one `admissionReviewAPIGroups` attestation
+  for webhook-bound tokens\r\n- Require exactly one audience for webhook-bound tokens\r\n-
+  Validate attestation value (must be a valid DNS subdomain or `\"*\"`)\r\n\r\n###
+  User Info (`staging/.../serviceaccount/util.go`)\r\n\r\n- Populate `Extra` fields
+  for both validating and mutating webhook configurations\r\n- Propagate attestation
+  values to user Extra\r\n\r\n### Feature Gate\r\n\r\n- `APIServerWebhookAuthenticationToken`
+  (alpha, default off, v1.37)\r\n\r\n## Testing:\r\n\r\n- Integration tests (`TestServiceAccountTokenAttestations`):
+  35+ subtests covering\r\n  error cases (validation, RBAC, audience, API group, nonexistent
+  objects, UID\r\n  mismatch, deletion timestamp, expiration cap, authz revocation,
+  split\r\n  audience/API-group mismatch across webhooks) and success cases (both
+  webhook\r\n  types, URL and service audiences, wildcard attestations, full JWT payload\r\n
+  \ verification)\r\n- Integration test for feature gate disabled behavior\r\n- Unit
+  tests for validation (`TestValidateTokenRequestAttestations`)\r\n- Unit tests for
+  claims generation/validation (`TestClaims`, `TestValidatePrivateClaims`,\r\n  `TestValidatePrivateClaimsWebhookFeatureGateDisabled`)\r\n-
+  Unit tests for audience matching (`TestValidateWebhookAudience`) including path\r\n
+  \ edge cases\r\n- Unit tests for API group matching (`TestValidateAttestationAPIGroup`)\r\n-
+  Unit tests for `TokenREST.Create` webhook flow (`TestTokenRESTCreateWebhookAuthenticationFlow`,\r\n
+  \ `TestTokenRESTCreateWebhookExpirationCap`, `TestTokenRESTCreateWebhookDeletionTimestamp`)\r\n
+  \ with recording authorizer and client-go fake client assertions\r\n- Unit tests
+  for user info Extra population (`TestUserInfo`)\r\n\r\n## Does this PR introduce
+  a user-facing change?\r\n\r\n```release-note\r\nAdd alpha support (behind APIServerWebhookAuthenticationToken
+  feature gate) for\r\nbinding service account tokens to webhook configurations with
+  attestations,\r\nenabling API servers to authenticate to admission webhooks with
+  scoped tokens.\r\n```\r\n\r\n/sig auth\r\n/area apiserver\r\n/priority important-longterm"
+releasenote:
+  text: |-
+    Add alpha support (behind APIServerWebhookAuthenticationToken feature gate) for
+    binding service account tokens to webhook configurations with attestations,
+    enabling API servers to authenticate to admission webhooks with scoped tokens.

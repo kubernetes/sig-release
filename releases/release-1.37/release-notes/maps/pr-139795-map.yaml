@@ -1,0 +1,49 @@
+pr: 139795
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n/kind api-change\r\n/sig
+  scheduling\r\n/sig node\r\n\r\n#### What this PR does / why we need it:\r\n\r\nAlpha
+  implementation of [KEP-5963: DRA Device Compatibility Groups](https://github.com/kubernetes/enhancements/issues/5963).\r\n\r\nThis
+  PR adds a driver-authored `compatibilityGroups` field to each `device.consumesCounters[]`
+  entry of a `ResourceSlice`. Two devices drawing from the same counter set may be
+  co-allocated only if their groups intersect (share at least one name); a device
+  with no groups is only co-allocatable with other no-group devices. The scheduler
+  enforces this during allocation — as an additional predicate inside the DRA structured
+  allocator's existing backtracking search — and records a per-counter-set snapshot
+  of the allocated device's groups on `ResourceClaim.status`, so subsequent allocations
+  evaluate against the value captured at allocation time rather than a possibly-mutated
+  `ResourceSlice`.\r\n\r\nThe whole feature is guarded by a new alpha feature gate
+  `DRADeviceCompatibilityGroups` (off by default; kube-apiserver and kube-scheduler)
+  and builds on `DRAPartitionableDevices`. With the gate disabled there is no behavior
+  change.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/5963\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n- **API shape vs. the KEP:** the KEP specifies
+  the status snapshot as `map[string][]string`, but Kubernetes protobuf cannot represent
+  a repeated map value (`go-to-protobuf` silently drops the `repeated` flag on a map
+  value), so it is implemented as `map[string]CompatibilityGroupList`, where `CompatibilityGroupList`
+  wraps a `Groups []string`. The semantics are identical; only the wire/JSON shape
+  of the status field differs. The KEP README will be updated to match.\r\n- Allocator
+  enforcement is implemented in the `experimental` allocator variant; the `incubating`
+  and `stable` variants skip devices that declare groups it cannot evaluate (version-skew
+  safety).\r\n- Nil-matching is strict: an unset field, an explicit nil, and `[]`
+  are equivalent and mean \"no groups\"; a no-group device is only co-allocatable
+  with sibling no-group devices.\r\n- Test coverage in this PR: unit tests for the
+  group-intersection predicate; end-to-end allocator scenarios across all three variants
+  (compatible / incompatible / cross-claim snapshot read-back / feature-disabled skip);
+  field validation; and apiserver field-stripping for both the slice field and the
+  claim-status snapshot, including ratcheting. Integration tests (gate enable/disable
+  round-trip, snapshot-authoritative-over-mutated-slice), an e2e test (fake driver
+  advertising mutually exclusive MIG/vGPU groups), and a scheduler_perf workload are
+  planned as follow-ups per the KEP test plan.\r\n\r\n#### Does this PR introduce
+  a user-facing change?\r\n\r\n```release-note\r\nAdded alpha support for DRA device
+  compatibility groups, guarded by the new \r\n`DRADeviceCompatibilityGroups` feature
+  gate (off by default). \r\nDRA drivers can declare opaque `compatibilityGroups`
+  on each `device.consumesCounters[]` \r\nentry of a ResourceSlice, and the scheduler
+  only co-allocates devices drawing from the same \r\ncounter set when their declared
+  groups intersect, moving detection of incompatible co-allocation \r\nfrom preparation-time
+  failure to scheduling-time rejection.\r\n```\r\n\r\n#### Additional documentation
+  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n- KEP: https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/5963-device-compatibility-groups\r\n"
+releasenote:
+  text: "Added alpha support for DRA device compatibility groups, guarded by the new
+    \n`DRADeviceCompatibilityGroups` feature gate (off by default). \nDRA drivers
+    can declare opaque `compatibilityGroups` on each `device.consumesCounters[]` \nentry
+    of a ResourceSlice, and the scheduler only co-allocates devices drawing from the
+    same \ncounter set when their declared groups intersect, moving detection of incompatible
+    co-allocation \nfrom preparation-time failure to scheduling-time rejection."

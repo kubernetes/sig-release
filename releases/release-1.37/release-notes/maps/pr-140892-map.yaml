@@ -1,0 +1,74 @@
+pr: 140892
+pr_body: "<!--  Thanks for sending a pull request!  Here are some tips for you:\r\n\r\n1.
+  If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution
+  and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide\r\n2.
+  Please label this pull request according to what type of issue you are addressing,
+  especially if this is a release targeted pull request. For reference on required
+  PR/issue labels, read here:\r\nhttps://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label\r\n3.
+  Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md\r\n4.
+  If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews\r\n5.
+  If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests\r\n-->\r\n\r\n####
+  What type of PR is this?\r\n\r\n<!--\r\nAdd one of the following kinds:\r\n/kind
+  bug\r\n/kind dependency\r\n/kind cleanup\r\n/kind documentation\r\n/kind feature\r\n\r\nOptionally
+  add one or more of the following kinds if applicable:\r\n/kind api-change\r\n/kind
+  deprecation\r\n/kind failing-test\r\n/kind flake\r\n/kind regression\r\n-->\r\n\r\n/kind
+  bug\r\n\r\n#### What this PR does / why we need it:\r\n\r\nWhen pod.Spec.HostUsers
+  is nil (unset), it should be treated as true by default.\r\n\r\nExisting code in
+  the repository confirms this:\r\n\r\n(1) The pod spec declaration states: \"Default
+  to true.\" \"If set to true or not present\" (i.e. nil), both mean the pod shares
+  the host user namespace. Only an explicit false means an isolated namespace.\r\n\r\nhttps://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/api/core/v1/types.go#L4629\r\n\r\n```\r\n
+  \   // Use the host's user namespace.\r\n    // Optional: Default to true.\r\n    //
+  If set to true or not present, the pod will be run in the host user namespace, useful\r\n
+  \   // for when the pod needs a feature only available to the host user namespace,
+  such as\r\n    // loading a kernel module with CAP_SYS_MODULE.\r\n    // When set
+  to false, a new userns is created for the pod. Setting false is useful for\r\n    //
+  mitigating container breakout vulnerabilities even allowing users to run their\r\n
+  \   // containers as root without actually having root privileges on the host.\r\n
+  \   // +optional\r\n    HostUsers *bool `json:\"hostUsers,omitempty\" protobuf:\"bytes,37,opt,name=hostUsers\"`\r\n```\r\n\r\n(2)
+  \ In kubelet's actual userns handling code, pod.Spec.HostUsers == nil goes directly
+  into the NamespaceMode_NODE branch (reusing the host's userns, i.e. shared), returning
+  the exact same value as when *pod.Spec.HostUsers == true\r\n\r\nhttps://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/userns/userns_manager.go#L396\r\n\r\n```\r\nfunc
+  (m *UsernsManager) GetOrCreateUserNamespaceMappings(logger klog.Logger, pod *v1.Pod,
+  runtimeHandler string) (*runtimeapi.UserNamespace, error) {\r\n    featureEnabled
+  := utilfeature.DefaultFeatureGate.Enabled(features.UserNamespacesSupport)\r\n\r\n
+  \   if pod == nil || pod.Spec.HostUsers == nil {    \r\n        // if the feature
+  is enabled, specify to use the node mode...\r\n        if featureEnabled {\r\n            return
+  &runtimeapi.UserNamespace{\r\n                Mode: runtimeapi.NamespaceMode_NODE,\r\n
+  \           }, nil\r\n        }\r\n        return nil, nil\r\n    }\r\n\r\n    //
+  pod.Spec.HostUsers is set to true/false\r\n    if *pod.Spec.HostUsers {\r\n        return
+  &runtimeapi.UserNamespace{\r\n            Mode: runtimeapi.NamespaceMode_NODE,\r\n
+  \       }, nil\r\n    }\r\n\r\n    // From here onwards, hostUsers=false and it
+  creates the isolated userns\r\n}\r\n```\r\n\r\n\r\nTherefore, in the code for the
+  DefaultPodSysctls feature, the following line treats pod.Spec.HostUsers = nil as
+  hostUsers = false, which contradicts the existing convention in this repository:\r\n\r\n```\r\nhostUsers
+  := pod.Spec.HostUsers != nil && *pod.Spec.HostUsers\r\n```\r\n\r\nright way shoule
+  be \r\n\r\n```\r\nhostUsers := pod.Spec.HostUsers == nil || *pod.Spec.HostUsers\r\n```\r\n\r\nFinally,
+  when kubelet with --allowed-unsafe-sysctls=user.* set, pods that share the host
+  user namespace (the default, spec.hostUsers unset) can set user.* sysctls that should
+  be forbidden, silently bypassing the intended host-user-namespace security boundary.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n<!--\r\nPlease link relevant issues to
+  help with tracking.\r\n\r\nTo automatically close the linked issue(s) when this
+  PR is merged,\r\nadd the word \"Fixes\" before the issue number or link.\r\nDo not
+  use \"Fixes\" if the PR is of kind `failing-test` or `flake`.\r\n\r\nReference KEPs
+  when applicable in addition to specific issues.\r\n\r\nExamples:\r\nFixes #<issue
+  number>\r\n<issue link> (issue in a different repository)\r\nKEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>\r\n\r\nIf
+  there is no associated issue, then write \"N/A\".\r\n-->\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n<!--\r\nIf
+  no, just write \"NONE\" in the release-note block below.\r\nIf yes, a release note
+  is required:\r\nEnter your extended release note in the block below. If the PR requires
+  additional action from users switching to the new release, include the string \"action
+  required\".\r\n\r\nFor more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nkubelet:
+  The new DefaultPodSysctls feature treats an unset `spec.hostUsers` as true when
+  evaluating `user.*` sysctls.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs
+  (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n<!--\r\nThis section
+  can be blank if this pull request does not require a release note.\r\n\r\nWhen adding
+  links which point to resources within git repositories, like\r\nKEPs or supporting
+  documentation, please reference a specific commit and avoid\r\nlinking directly
+  to the master branch. This ensures that links reference a\r\nspecific point in time,
+  rather than a document that may change over time.\r\n\r\nSee here for guidance on
+  getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
+  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
+  <link>\r\n- [Other doc]: <link>\r\n-->\r\n```docs\r\n\r\n```\r\n"
+releasenote:
+  text: 'kubelet: The new DefaultPodSysctls feature treats an unset `spec.hostUsers`
+    as true when evaluating `user.*` sysctls.'

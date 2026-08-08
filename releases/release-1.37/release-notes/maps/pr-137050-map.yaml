@@ -1,0 +1,32 @@
+pr: 137050
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n/kind api-change\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nAdd a new declarative EvictionRequest
+  API to manage graceful eviction of pods.\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/4563\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nIntroduces API for Pods .spec.evictionResponders,
+  EvictionRequest and Eviction resource\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n<!--\r\nIf no, just write \"NONE\" in the release-note block below.\r\nIf
+  yes, a release note is required:\r\nEnter your extended release note in the block
+  below. If the PR requires additional action from users switching to the new release,
+  include the string \"action required\".\r\n\r\nFor more information on release notes
+  see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nAdd
+  a new .spec.evictionResponders Pod field, EvictionRequest and Eviction Resource.
+  This can be used by a set of requesters and responders to coordinate graceful eviction
+  of pods.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement
+  Proposals), usage docs, etc.:\r\n\r\n\r\nTODO:\r\n- [x] Rename Interceptor to Responder
+  (https://github.com/kubernetes/kubernetes/pull/137050#discussion_r2812686407)\r\n-
+  [x] SIG Auth's opinion on the EvictionRequest permissions: https://github.com/kubernetes/kubernetes/pull/137050#discussion_r2937773158\r\n-
+  [x] EvictionRequest lifecycle (cancellation, deletion): https://github.com/kubernetes/kubernetes/pull/137050#discussion_r2970400197,
+  https://github.com/kubernetes/kubernetes/pull/137050#discussion_r2948977012\r\n-
+  [x] Cancellation race is going to be handled in the controller: https://github.com/kubernetes/kubernetes/pull/137050#discussion_r2955476586\r\n-
+  [x] Status lists ordering: https://github.com/kubernetes/kubernetes/pull/137050#discussion_r2949042344,
+  https://github.com/kubernetes/kubernetes/pull/137050#discussion_r3606183250\r\n-
+  [x] Conditions max length: https://github.com/kubernetes/kubernetes/pull/137050#discussion_r2955679374\r\n-
+  [x] DV errors used for temporary inner validation checks (HWV): https://github.com/kubernetes/kubernetes/pull/137050#discussion_r2953432431\r\n-
+  [x] [Optional] DV improvements (`format=k8s-scoped-label-key`, `+k8s:monotonic`,
+  conditions, metadata, ...)\r\n- [x] Most of the tests are complete, I am just missing
+  some of the Interceptor state transitions tests (handwritten)\r\n"
+releasenote:
+  text: Add a new .spec.evictionResponders Pod field, EvictionRequest and Eviction
+    Resource. This can be used by a set of requesters and responders to coordinate
+    graceful eviction of pods.

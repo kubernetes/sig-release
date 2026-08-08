@@ -1,0 +1,28 @@
+pr: 140170
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n/kind api-change\r\n\r\n/wg
+  device-management\r\n\r\n#### What this PR does / why we need it:\r\n\r\nSecond
+  Alpha (1.37) of KEP-5677 \"DRA Resource Availability Visibility\"\r\n(feature gate
+  `DRAResourcePoolStatus`, default off).\r\n\r\nThe 1.36 alpha miscounts partitionable/consumable
+  devices: it increments `allocatedDevices` per allocation result, overcounting shareable
+  devices and ignoring shared-counter consumption. This PR fixes the accounting and
+  adds the API surface needed to describe those devices:\r\n\r\n- **Controller fixes:**
+  cap `allocatedDevices` at 1 per device, skip AdminAccess, derive `unavailableDevices`
+  from device taints.\r\n- **New API (additive, gated):** `ResourceSlice.spec.partitionTypeAttribute`
+  (all served versions — v1/v1beta1/v1beta2/v1alpha3 — gated by `DRAPartitionableDevicesType`);
+  `partitionSummary` and `shareableSummary` in ResourcePoolStatusRequest pool status
+  (v1alpha3).\r\n- **Controller computation** for the two views + validation + feature-gate
+  wiring.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/5677\r\n\r\n####
+  Special notes for your reviewer:\r\nCommits are ordered for sequential review.\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nAdded a second
+  alpha of DRA resource availability visibility (KEP-5677, feature gate `DRAResourcePoolStatus`,
+  default off): the ResourcePoolStatusRequest controller now counts partitionable
+  and consumable devices correctly (each device counted once, AdminAccess ignored,
+  taints treated as unavailable), and new optional fields describe partition and shareable
+  availability. The accounting fixes change the numbers reported by 1.36.\r\n```"
+releasenote:
+  text: 'Added a second alpha of DRA resource availability visibility (KEP-5677, feature
+    gate `DRAResourcePoolStatus`, default off): the ResourcePoolStatusRequest controller
+    now counts partitionable and consumable devices correctly (each device counted
+    once, AdminAccess ignored, taints treated as unavailable), and new optional fields
+    describe partition and shareable availability. The accounting fixes change the
+    numbers reported by 1.36.'

@@ -1,0 +1,93 @@
+pr: 139679
+pr_body: |-
+  #### What type of PR is this?
+
+  /kind feature
+
+  #### What this PR does / why we need it:
+
+  Flips `ConcurrentWatchObjectDecode` on by default (Beta, 1.37) to exercise CI with the gate enabled and collect benchmark data. Not intended to merge yet.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  The `ConcurrentWatchObjectDecode` feature gate has graduated to beta and is enabled by default.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  NONE
+  ```
+
+  ### Unit benchmarks
+
+  Watch cache initialization for pods ([`BenchmarkCacherInit`](https://github.com/kubernetes/kubernetes/blob/42d9ed9c47706cb04457410e387e07889203b888/staging/src/k8s.io/apiserver/pkg/storage/cacher/cacher_init_bench_test.go#L41)) is roughly 45% faster, 7.3s down to 4.0s populating 150k pods
+
+  https://github.com/kubernetes/kubernetes/pull/139606 points to benchmarking optimal # of goroutines.
+
+  ```
+  pkg: k8s.io/apiserver/pkg/storage/cacher
+                │  gate=off   │            gate=on             │
+                │   sec/op    │   sec/op     vs base           │
+  CacherInit      7.290 ± 43%   3.996 ± 44%  -45.18% (p=0.000 n=20)
+
+                │  gate=off   │           gate=on            │
+                │ pods/cache  │ pods/cache   vs base         │
+  CacherInit      150.0k ± 0%   150.0k ± 0%  ~ (p=1.000 n=20)
+
+                │  gate=off    │           gate=on            │
+                │     B/op     │     B/op      vs base        │
+  CacherInit      11.01Gi ± 8%   11.13Gi ± 6%  ~ (p=0.265 n=20)
+
+                │  gate=off   │            gate=on            │
+                │  allocs/op  │  allocs/op   vs base          │
+  CacherInit      64.61M ± 0%   65.35M ± 0%  +1.14% (p=0.000 n=20)
+  ```
+
+  ### Scale Test (5k nodes)
+  - [gate ON (#139679)](https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/139679/pull-kubernetes-gce-master-scale-performance-5000/2065468764312309760)
+  - [gate OFF (#139476)](https://prow.k8s.io/view/gs/kubernetes-ci-logs/pr-logs/pull/139476/pull-kubernetes-gce-master-scale-performance-5000/2062929683812454400)
+
+  Ran the 5k presubmit with gate on/off.
+
+  Watch cache is reinitiailzed in the middle with roughly 165k (exemplar) pods. (3 apiservers, one is restarted at peak)
+
+  | watch-cache init (restarted apiserver) | gate off | gate on |
+  | --- | --- | --- |
+  | pods | 13.4s | 8.3s (-38%) |
+  | deployments | 1.27s | 0.82s (-35%) |
+  | replicasets | 1.26s | 0.86s (-32%) |
+
+  ### Decode overhead
+
+  Addressing the goroutine-multiplier question from https://github.com/kubernetes/kubernetes/pull/126329#discussion_r1691415735.
+
+  The 1-to-12 goroutine multiplier from the original review (`processEventConcurrency=10` decoders plus 2 coordinators) is per etcd watch, and there is one watch per resource type. At ~500 resources (large cluster with many CRDs), that caps out around 6000 goroutines, compared to ~200k total goroutines from the apiserver. And it only reaches that cap on a relist. In steady state events trickle in one at a time, so the fan-out never engages and the transient decoders drain away. What remains is the 2 persistent coordinators per watch, versus 1 on the serial path, so +1 goroutine per resource (65 in this run). Basically invisible in steady state.
+
+  The differences in these numbers is insignificant and is likely just noise.
+
+  | metric (5k) | gate off | gate on |
+  | --- | --- | --- |
+  | peak goroutines (loaded apiserver) | ~207-211k | ~207-212k |
+  | OS threads | 126 | 122 |
+  | total apiserver CPU (cpu-seconds) | 64,417 | 64,807 |
+  | apiserver RSS after relist | 16.2G | 14.4G |
+
+  #### goroutines after restart apiserver
+
+  There's an overhead with the gate on with the 1 extra coordinator/watch per resource.
+
+  | min since restart | 0 | 5 | 10 | 15 | 20 | 25 | 30 | 40 | 50 |
+  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+  | gate OFF | 2,275 | 2,313 | 2,289 | 2,317 | 2,306 | 2,320 | 2,317 | 2,325 | 2,713 |
+  | gate ON | 2,343 | 2,390 | 2,359 | 2,387 | 2,366 | 2,416 | 2,428 | 2,628 | 3,022 |
+
+  /hold
+releasenote:
+  text: The `ConcurrentWatchObjectDecode` feature gate has graduated to beta and is
+    enabled by default.

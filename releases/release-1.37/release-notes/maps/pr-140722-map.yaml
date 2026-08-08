@@ -1,0 +1,16 @@
+pr: 140722
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nThis adds the v1beta1 version of the file format,
+  which indicates that the feature is considered beta.\r\n\r\n#### Which issue(s)
+  this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/5304\r\n\r\nFixes:
+  https://github.com/kubernetes/kubernetes/issues/137761\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\n\r\nThis currently includes:\r\n- ~~https://github.com/kubernetes/kubernetes/pull/140687
+  (slightly modified regarding `+optional/required`)~~\r\n- ~~https://github.com/kubernetes/kubernetes/pull/140684
+  (unmodified)~~\r\n\r\nIt replaces:\r\n- https://github.com/kubernetes/kubernetes/pull/139066
+  (https://github.com/kubernetes/kubernetes/pull/139066/changes#r3610313852)\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n```release-note\r\nDRA metadata
+  API: the feature is now beta. DRA driver authors must explicitly select which versions
+  to support in their metadata output if they enable the feature.\r\n```\r\n"
+releasenote:
+  text: 'DRA metadata API: the feature is now beta. DRA driver authors must explicitly
+    select which versions to support in their metadata output if they enable the feature.'

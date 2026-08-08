@@ -1,0 +1,35 @@
+pr: 140147
+pr_body: |
+  #### What type of PR is this?
+
+  /kind feature
+
+  #### What this PR does / why we need it:
+
+  Adds two labels, `trigger` and `outcome`, to the existing ALPHA metric `route_controller_route_sync_total`, so operators can see not just how many route reconciles run, but why they ran and whether they actually changed anything.
+
+  - `trigger` distinguishes reconciles caused by an observed node change (`node_change`) from those caused by the informer's periodic resync (`periodic`). Per KEP 5237, the route controller uses the resync (events where the old and new Node are identical) as a signal to run its regular cleanup reconcile.
+  - `outcome` records whether the reconcile created or deleted at least one route (`changed`) or was a no-op (`noop`).
+
+  Previously the metric only counted total reconciles, with no way to tell periodic cleanup passes from node-change-driven ones, or whether those periodic passes were just no-ops or routinely fixing drift. The new labels give operators visibility into how often periodic reconciliation is actually correcting route drift.
+
+  #### Which issue(s) this PR is related to:
+
+  - Implementation of KEP extension: https://github.com/kubernetes/enhancements/pull/6115
+
+  #### Special notes for your reviewer:
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  The route controller ALPHA metric `route_controller_route_sync_total` now carries two labels: `trigger` (`periodic` or `node_change`) and `outcome` (`changed` or `noop`). This lets operators observe how often periodic reconciliation is correcting route drift versus running as a no-op.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  - KEP: https://github.com/kubernetes/enhancements/issues/5237
+releasenote:
+  text: 'The route controller ALPHA metric `route_controller_route_sync_total` now
+    carries two labels: `trigger` (`periodic` or `node_change`) and `outcome` (`changed`
+    or `noop`). This lets operators observe how often periodic reconciliation is correcting
+    route drift versus running as a no-op.'

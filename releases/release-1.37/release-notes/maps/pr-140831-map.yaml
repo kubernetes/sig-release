@@ -1,0 +1,14 @@
+pr: 140831
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nThe queuing hint for a deleted ResourceClaim can be
+  relevant in case that the update which removed an allocation got missed. Then pods
+  would have stayed pending although resource might be available again.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n#### Special notes for your
+  reviewer:\r\n\r\nThis matches a similar logical change in https://github.com/kubernetes/kubernetes/pull/138916.\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n```release-note\r\nDRA: fixed a
+  bug where a (rare) missed informer update of a ResourceClaim could have caused pods
+  to remain pending until the unschedulable queue gets flushed.\r\n```\r\n\r\n/assign
+  @dom4ha @nojnhuh \r\n"
+releasenote:
+  text: 'DRA: fixed a bug where a (rare) missed informer update of a ResourceClaim
+    could have caused pods to remain pending until the unschedulable queue gets flushed.'

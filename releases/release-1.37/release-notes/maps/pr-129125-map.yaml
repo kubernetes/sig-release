@@ -1,0 +1,15 @@
+pr: 129125
+pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nThe main purpose is to replace context.TODO with
+  a context provided by the caller. A secondary purpose is to enable contextual logging.\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nSee https://github.com/kubernetes/kubernetes/pull/129109
+  for an introduction of the approach taken most of the time when adding alternative
+  context-aware APIs. See commit messages for additional information.\r\n\r\nMost
+  likely this will be merged by creating smaller PRs.\r\n\r\n#### Does this PR introduce
+  a user-facing change?\r\n```release-note\r\nclient-go: with very few exceptions,
+  context.TODO calls got removed by introducing new APIs where the caller passes in
+  the context. Log calls use the logger provided by the caller when available.\r\n```\r\n"
+releasenote:
+  text: 'client-go: with very few exceptions, context.TODO calls got removed by introducing
+    new APIs where the caller passes in the context. Log calls use the logger provided
+    by the caller when available.'

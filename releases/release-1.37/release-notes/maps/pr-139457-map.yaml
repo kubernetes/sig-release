@@ -1,11 +1,28 @@
 pr: 139457
+pr_body: "<!--\r\nThanks for sending a pull request! Here are some tips for you:\r\n-->\r\n\r\n####
+  What type of PR is this?\r\n\r\n/kind regression\r\n/sig apps\r\n\r\n#### What this
+  PR does / why we need it\r\n\r\nWhen the Job controller's manageJob() needs to create
+  replacement pods but defers creation because a pod-failure backoff is still active,
+  it returned a hardcoded active=0 to the caller. Since no pods were actually created
+  or deleted, this left status.active=0 while status.ready still reflected the running
+  pods.\r\n\r\nThe apiserver rejects such an update with a 422 (cannot set more ready
+  pods than active). That failed update then blocks the controller from flushing uncounted
+  terminated pods, removing finalizers, and updating job status — leaving pods stuck
+  Terminating with stale status.\r\n\r\nBoth backoff early-returns (the global path
+  and the per-index backoffLimitPerIndex path) now return the real active count. Regression
+  tests are added for both paths.\r\n\r\n#### Which issue(s) this PR fixes\r\n\r\nFixes
+  #139428\r\n\r\n#### Special notes for your reviewer\r\n\r\nThis became visible as
+  422 errors only after the ready <= active validation was introduced in 1.31 alongside
+  managedBy reaching Beta — hence /kind regression.\r\n\r\n```release-note\r\nFixed
+  a regression in default 1.32+ configurations where the Job controller could attempt
+  to report `status.active` as 0 while replacement Pod creation was deferred due to
+  pod-failure backoff, causing the Job status update to be rejected by the apiserver.
+  This could delay flushing uncounted terminated Pods, finalizer removal, and Job
+  status updates, leaving Pods stuck `Terminating` and the Job with stale status until
+  the backoff elapsed.\r\n```"
 releasenote:
-  text: |-
-    Fixed a regression where the Job controller could report `status.active` as 0 while replacement Pod creation was deferred due to pod-failure backoff, causing the Job status update to be rejected by `kube-apiserver`. This could delay flushing uncounted terminated Pods, finalizer removal, and Job status updates, leaving Pods stuck in `Terminating` and the Job with stale status until the backoff elapsed.
-  sigs:
-  - apps
-  kinds:
-  - bug
-  - regression
-  areas: []
-pr_body: ""
+  text: Fixed a regression where the Job controller could report `status.active` as
+    0 while replacement Pod creation was deferred due to pod-failure backoff, causing
+    the Job status update to be rejected by `kube-apiserver`. This could delay flushing
+    uncounted terminated Pods, finalizer removal, and Job status updates, leaving
+    Pods stuck in `Terminating` and the Job with stale status until the backoff elapsed.

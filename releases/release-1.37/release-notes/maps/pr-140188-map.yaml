@@ -1,0 +1,16 @@
+pr: 140188
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\n- Wires the `Job` controller into the workloadbuilder
+  library and building-block APIs.\r\n- Auto-derives a Workload/PodGroup from `Job.spec.scheduling`.\r\n-
+  Gated behind the `WorkloadWithJob` feature gate.\r\n- Adds integration and e2e coverage,
+  including suspended and elastic Jobs.\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\nRef #139359 \r\n\r\n[KEP]: https://github.com/kubernetes/enhancements/issues/5547\r\n\r\n####
+  Special notes for your reviewer:\r\nDepends on:\r\n- https://github.com/kubernetes/kubernetes/issues/139361\r\n-
+  https://github.com/kubernetes/kubernetes/pull/139558\r\n\r\n#### Does this PR introduce
+  a user-facing change?\r\n```release-note\r\nSupport Workload-aware scheduling (WAS)
+  APIs by integrating Job controller with workloadbuilder library and the Workload
+  building blocks APIs.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
+  Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n```"
+releasenote:
+  text: Support Workload-aware scheduling (WAS) APIs by integrating Job controller
+    with workloadbuilder library and the Workload building blocks APIs.

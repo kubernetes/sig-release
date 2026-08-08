@@ -1,0 +1,13 @@
+pr: 140511
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nNames the scheduler's informers so kube-scheduler
+  exports the client-go informer metrics that kube-apiserver (#139968) exports.\r\n\r\nDiscovered
+  while debugging scalability tests.\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\n\r\nN/A\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nkube-scheduler
+  now publishes the client-go informer metrics informer_store_resource_version, informer_queued_items
+  and informer_processing_latency_seconds, labelled name=\"kube-scheduler\".\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n\r\n```docs\r\nNONE\r\n```"
+releasenote:
+  text: kube-scheduler now publishes the client-go informer metrics informer_store_resource_version,
+    informer_queued_items and informer_processing_latency_seconds, labelled name="kube-scheduler".

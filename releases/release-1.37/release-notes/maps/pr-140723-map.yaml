@@ -1,0 +1,31 @@
+pr: 140723
+pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nMany maps in a nftables table seems to be costly
+  when adding rules. Adding rules does a scan of every map in the existing ruleset,
+  making it very expensive to do so.\r\n\r\nTo avoid having a ruleset with many maps,
+  this PR allows services with single-endpoints to avoid using a map, in an attempt
+  to decrease the number of maps in use.\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\n\r\nFixes #139513\r\n\r\n#### Special notes for your reviewer:\r\n\r\nThis
+  doesn't fix the broader problem of having many maps, but it should help with #139513.\r\nA
+  bigger refactor can land in 1.38 once we're more confident in the change\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n<!--\r\nIf no, just write \"NONE\"
+  in the release-note block below.\r\nIf yes, a release note is required:\r\nEnter
+  your extended release note in the block below. If the PR requires additional action
+  from users switching to the new release, include the string \"action required\".\r\n\r\nFor
+  more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nAvoid
+  using a maps for single-endpoint services in kube-proxy's nftables mode to increase
+  speed of programming nftables\r\n```\r\n\r\n(Any suggestion on better words here?)\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n\r\n<!--\r\nThis section can be blank if this pull request does not require
+  a release note.\r\n\r\nWhen adding links which point to resources within git repositories,
+  like\r\nKEPs or supporting documentation, please reference a specific commit and
+  avoid\r\nlinking directly to the master branch. This ensures that links reference
+  a\r\nspecific point in time, rather than a document that may change over time.\r\n\r\nSee
+  here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
+  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
+  <link>\r\n- [Other doc]: <link>\r\n-->\r\n```docs\r\n\r\n```\r\n\r\n/assign @danwinship
+  \r\n/assign @aojea \r\n/hold\r\n\r\n(Holding to ensure we have alignment with sig-net
+  leads with the path forward)\r\n\r\n"
+releasenote:
+  text: Avoid using a maps for single-endpoint services in kube-proxy's nftables mode
+    to increase speed of programming nftables

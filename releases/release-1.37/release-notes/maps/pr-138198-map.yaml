@@ -1,0 +1,41 @@
+pr: 138198
+pr_body: "\r\n\r\n#### What type of PR is this?\r\n/kind feature\r\n/kind regression\r\n\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nIntroduces a \"fast-track\" evaluation
+  path for inter-pod affinity\r\nand anti-affinity rules that use the \"kubernetes.io/hostname\"
+  topology key.\r\n\r\nIf only kubernetes.io/hostname topology is present (which is
+  a common use case), we only need to check the current node. There is no need to
+  do O(N*M) cluster-wide scans.\r\n\r\nThis optimization only affects Filtering (Required
+  rules) but does not affect Scoring (Preferred rules).\r\n\r\nKey Optimizations:\r\n
+  \    - Categorized affinity and anti-affinity terms into \"host-scoped\" (kubernetes.io/hostname)\r\n
+  \      and \"non-host-scoped\" groups during PreFilter.\r\n     - Updated NodeInfo
+  and Snapshot to specifically track pods with non-host-scoped\r\n       anti-affinity,
+  allowing the scheduler to skip global map lookups when only\r\n       kubernetes.io/hostname
+  rules are present.\r\n     - Updated the Filter phase to perform efficient local
+  checks against pods\r\n       already on the target node for kubernetes.io/hostname-scoped
+  rules, rather than relying\r\n       on global topology counts.\r\n\r\nThe change
+  is guarded with the `InterPodAffinityHostnameFastPath` feature gate which is disabled
+  by default (Alpha feature).\r\n\r\nTesting & Correctness:\r\n     - Added `TestFastTrackInterPodAffinity`
+  to `filtering_test.go` to verify the\r\n       new fast-path logic against various
+  topology and namespace scenarios.\r\n     - Added `TestAffinityDiscrepancy` to `filtering_test.go`
+  to ensure correctness\r\n       when a pod has multiple affinity terms that must
+  be satisfied by a single\r\n       existing pod.\r\n     - Modified relevant integration
+  tests (including preemption and scoring) to\r\n       execute tests combinatorially
+  with the InterPodAffinityHostnameFastPath gate\r\n       both enabled and disabled,
+  ensuring functional parity.\r\n\r\n#### Which issue(s) this PR is related to:\r\n#138314
+  \r\n\r\n#### Special notes for your reviewer:\r\n`preFilterState` and `classifyTermsBasedOnScope`
+  in filtering.go have extensive comments that explain how the terms are split based
+  on topology. \r\n\r\nThis PR was written in part with the assistance of generative
+  AI.\r\n\r\n#### Does this PR introduce a user-facing change?\r\n<!--\r\nIf no, just
+  write \"NONE\" in the release-note block below.\r\nIf yes, a release note is required:\r\nEnter
+  your extended release note in the block below. If the PR requires additional action
+  from users switching to the new release, include the string \"action required\".\r\n\r\nFor
+  more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nImproved
+  scheduling performance for required pod (anti)affinity with topologyKey: kubernetes.io/hostname.\r\n\r\nThe
+  changes are guarded with the InterPodAffinityHostnameFastPath feature flag.\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n\r\n"
+releasenote:
+  text: |-
+    Improved scheduling performance for required pod (anti)affinity with topologyKey: kubernetes.io/hostname.
+
+    The changes are guarded with the InterPodAffinityHostnameFastPath feature flag.

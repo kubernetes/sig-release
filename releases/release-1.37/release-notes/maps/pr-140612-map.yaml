@@ -1,0 +1,5 @@
+pr: 140612
+pr_body: "xref https://github.com/kubernetes/enhancements/issues/5030\r\n\r\n```release-note\r\nMove
+  prevention of pod scheduling to nodes without CSI driver beta\r\n```\r\n"
+releasenote:
+  text: Move prevention of pod scheduling to nodes without CSI driver beta

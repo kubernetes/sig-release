@@ -1,0 +1,32 @@
+pr: 140661
+pr_body: "## Problem\r\n\r\nThe NamespaceLifecycle admission plugin rejects both Create
+  and Update requests when the target namespace has been fully deleted from storage.
+  While blocking Creates is correct (no new content should appear in a deleted namespace),
+  blocking Updates prevents controllers from re-writing objects that still exist in
+  etcd.\r\n\r\nThis causes a bug in the storage version migrator (#140655): when orphaned
+  objects remain in etcd after their namespace is deleted, the migrator's Patch is
+  rejected with NotFound by NamespaceLifecycle. The migrator treats NotFound as \"object
+  deleted, safe to skip\" and reports migration as complete, even though the object
+  was never re-written.\r\n\r\n## Fix\r\n\r\nAllow Update operations through early,
+  alongside Delete, which is already allowed regardless of namespace state (line 101).
+  The storage layer validates object existence and will reject the Update if the object
+  itself is gone.\r\n\r\nOnly Create operations now proceed to the namespace existence
+  check. Patches that would create new objects are classified as Create operations
+  by the admission layer and remain blocked.\r\n\r\n## Note on admission webhooks\r\n\r\nAdmission
+  webhooks that match Update operations will now receive requests for objects in deleted
+  namespaces. This is consistent with Delete operations, which already bypass the
+  namespace existence check. Webhooks that look up the namespace should already handle
+  the missing-namespace case gracefully, since they must do so for Deletes.\r\n\r\n##
+  Test\r\n\r\n- Updated `TestAdmissionNamespaceDoesNotExist`: Update assertion flipped
+  from \"expect error\" to \"expect allowed\"\r\n- New `TestAdmissionNamespaceFullyDeleted`:
+  verifies Create is rejected, Update is allowed, and Delete is allowed when the namespace
+  is fully deleted (live lookup returns NotFound)\r\n- Mutation tested: reverting
+  the fix causes both Update assertions to fail\r\n\r\n## Context\r\n\r\nPer discussion
+  in #140655, @liggitt suggested fixing this at the admission layer rather than in
+  the migrator. This PR implements his option 2: allow the update of the orphaned
+  object if the object still exists.\r\n\r\n/sig api-machinery\r\n/kind bug\r\n\r\n```release-note\r\nFixes
+  handling of admission to allow updates to namespaced objects that exist after their
+  namespace was deleted.\r\n```"
+releasenote:
+  text: Fixes handling of admission to allow updates to namespaced objects that exist
+    after their namespace was deleted.

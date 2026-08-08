@@ -1,0 +1,57 @@
+pr: 140833
+pr_body: |-
+  #### What type of PR is this?
+
+  /kind bug
+  /sig storage
+
+  #### What this PR does / why we need it:
+
+  The PVC protection controller evaluates the `Unused` condition (gated by the `PersistentVolumeClaimUnusedSinceTime` feature) and writes it to the PVC status. During initial binding, this write races with the PV binder's `bindClaimToVolume`, which also updates the same PVC. The two writers collide and produce 409 Conflict errors, causing wasted retries on both controllers during the busy binding phase.
+
+  This PR skips the `Unused` condition evaluation until the PVC is `Bound`. Once the claim is bound, the PV binder is finished writing it, so the protection controller can safely own the condition without contending with the binder. An unbound PVC is not in use by any pod anyway, so deferring the evaluation has no functional downside.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  /cc @arvindparekh @gnufied
+
+  This fixes a binding-time conflict in the `Unused` condition introduced by KEP-5541. It was discovered during development of #140721. We measured up to 15% of the PVCs receiving a 409 Conflict error during a benchmark.
+
+  `PersistentVolumeClaimUnusedSinceTime` is Alpha in 1.36 (off by default) and Beta in 1.37 (on by default), so this only affects clusters with the feature enabled.
+
+  Since this is a slight behavior change to the `Unused` condition, it would be ideal to land it before the 1.37 release, so the "evaluate only once bound" semantics ship as part of the initial Beta (on-by-default) rollout rather than changing behavior in a later release.
+
+  Unit tests in `pvc_protection_controller_test.go` are updated: a new `bound()` helper marks the PVC as `ClaimBound` in the existing feature-enabled cases, plus a new case asserts that a pending (unbound) PVC produces no pod list and no status update.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed 409 Conflict errors between the PVC protection controller and the PV binder during initial PVC binding. The `Unused` condition is now evaluated only after the PVC is bound.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  - [KEP-5541] (Report Last Used Time On a PVC): https://github.com/kubernetes/enhancements/blob/45f8bae48eb69f8aab2f6d5a9ef55d4a2675f3d7/keps/sig-storage/5541-pvc-last-used-time-status-field/README.md
+  ```
+releasenote:
+  action_required: false
+  author: huww98
+  do_not_publish: false
+  documentation:
+  - description: '[KEP-5541] (Report Last Used Time On a PVC)'
+    type: KEP
+    url: https://github.com/kubernetes/enhancements/blob/45f8bae48eb69f8aab2f6d5a9ef55d4a2675f3d7/keps/sig-storage/5541-pvc-last-used-time-status-field/README.md
+  feature: false
+  kinds:
+  - bug
+  sigs:
+  - apps
+  - storage
+  text: Fixed 409 Conflict errors between the PVC protection controller and the PV
+    binder during initial PVC binding. The `Unused` condition is now evaluated only
+    after the PVC is bound.

@@ -1,0 +1,44 @@
+pr: 140856
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nIntroduces the Kubelet endpoint for surfacing allocated
+  pod information. This endpoint will be used to provide the `/allocated` pod subresource
+  in a later release.\r\n\r\n---\r\n\r\nThe `/allocated` subresource was originally
+  proposed as part of the (not yet merged) [Dynamic Containers KEP](https://github.com/kubernetes/enhancements/pull/6169):\r\n\r\n>
+  #### Allocated Subresource\r\n> \r\n> A new read-only `/allocated` subresource on
+  pods will surface the allocated pod spec. The allocated\r\n> pod will be fetched
+  directly from the Kubelet on-demand, thus avoiding additional storage overhead\r\n>
+  in the API server.\r\n> \r\n> The Kubelet will serve a new `/allocatedPods` endpoint
+  that functions similarly to `/pods` and\r\n> `/runningPods`, and returns a list
+  of all the allocated pods on the node. An allocated pod is\r\n> represented as a
+  `v1.Pod` object, but the status field is left blank. The subpath\r\n> `/allocatedPods/<POD
+  UID>` can be used to fetch an individual allocated pod, which is what the API\r\n>
+  server will use to serve the allocated pod subresource.\r\n> \r\n> **Justification:**
+  The desired pod spec (stored in the pod resource) can diverge from the allocated\r\n>
+  pod spec (stored locally by the Kubelet) for an arbitrary amount of time. For in-place
+  resize, this\r\n> was handled by surfacing allocated resources in the pod status.
+  This KEP (and the expected follow\r\n> ups) significantly increases the API surface
+  of the mutable / allocatable portion of the Pod spec,\r\n> and simply mirroring
+  these fields into the pod status will drastically inflate the size of the pod\r\n>
+  object. Similarly, duplicating every pod into an `AllocatedPod` object would heavily
+  inflate the API\r\n> server object count and data size.\r\n\r\nWe realized that
+  this subresource can also let us simplify a feature that is landing in v1.37, https://github.com/kubernetes/kubernetes/pull/139425\r\n\r\nSo,
+  this PR is pulling this feature into v1.37.\r\n\r\n#### Which issue(s) this PR is
+  related to:\r\n\r\nhttps://github.com/kubernetes/enhancements/issues/6030\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nThis PR was forked from https://github.com/kubernetes/kubernetes/pull/140659
+  to get the Kubelet piece into v1.37, since we were API reviewer constrained. Changes
+  from that PR include:\r\n\r\n1. Renamed the feature gate to be Kubelet specific
+  (`PodAllocatedSubresource` --> `KubeletAllocatedPodsEndpoint`)\r\n2. Changed the
+  Kubelet endpoint path to be consistent with other pod-specific endpoints (`/allocatedPods/namespace/name(/uid)`
+  with optional UID, rather than `/allocatedPods/UID`). This required some small changes
+  to the interfaces and tests to fetch pods by name instead of UID.\r\n3. Drop the
+  API changes & integration test\r\n4. Use the node proxy subresource to query the
+  Kubelet endpoint directly in the E2E test.\r\n\r\nThis PR was written with assistance
+  from Antigravity with Gemini.\r\n\r\n#### Does this PR introduce a user-facing change?\r\n```release-note\r\nA
+  new `allocatedPods` kubelet endpoint surfaces the Kubelet's allocated pod spec.
+  This can be used to debug in-place pod resizing and other issues with pod updates.
+  Requires the `KubeletAllocatedPodsEndpoint` FeatureGate.\r\n```\r\n\r\n/sig node\r\n/milestone
+  v1.37"
+releasenote:
+  text: A new `allocatedPods` kubelet endpoint surfaces the Kubelet's allocated pod
+    spec. This can be used to debug in-place pod resizing and other issues with pod
+    updates. Requires the `KubeletAllocatedPodsEndpoint` FeatureGate.
