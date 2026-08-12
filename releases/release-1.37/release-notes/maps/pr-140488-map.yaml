@@ -1,0 +1,13 @@
+pr: 140488
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nPR graduates the `PodReadyToStartContainersCondition`
+  feature gate (KEP-3085) to GA and locks it to default-true in 1.37.\r\n\r\nAlso
+  includes cleanup of gate-conditional test scaffolding and auto-generated feature-gate
+  reference docs.\r\n\r\nAlso uncomment a previously deferred test assertion for the
+  `PodReadyToStartContainers` condition (in `test/e2e/node/pods.go`).\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/4138\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nPromote PodReadyToStartContainers
+  condition to GA.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
+  Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n- [KEP]: https://github.com/kubernetes/enhancements/issues/4138\r\n```\r\n"
+releasenote:
+  text: Promote PodReadyToStartContainers condition to GA.

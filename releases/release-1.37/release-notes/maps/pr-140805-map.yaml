@@ -1,0 +1,9 @@
+pr: 140805
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nGraduate PLEGOnDemandRelist to GA. This feature
+  gate was added as an emergency-off switch with the new code path in v1.36. We haven't
+  received any major issue reports with the new functionality, so I'd like to promote
+  the feature to GA in v1.37.\r\n\r\n#### Does this PR introduce a user-facing change?\r\n```release-note\r\nPLEGOnDemandRelist
+  is now GA\r\n```\r\n\r\n/sig node\r\n/milestone v1.37\r\n/assign @SergeyKanzhelev "
+releasenote:
+  text: PLEGOnDemandRelist is now GA.

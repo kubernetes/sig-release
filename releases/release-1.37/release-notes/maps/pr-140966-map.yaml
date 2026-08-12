@@ -1,0 +1,21 @@
+pr: 140966
+pr_body: "#### What type of PR is this?\n\n/kind bug\n\n#### What this PR does / why
+  we need it:\n\n#134827 added two methods to the `cache.Store` interface — `Bookmark(rv
+  string)` and `LastStoreSyncResourceVersion() string` — but did not update `FakeCustomStore`,
+  so the fake no longer satisfies `cache.Store` and downstream test code that passes
+  a `FakeCustomStore` where a `Store` is expected fails to compile:\n\n```\ncannot
+  use &cache.FakeCustomStore{...} (value of type *cache.FakeCustomStore) as cache.Store
+  value:\n\t*cache.FakeCustomStore does not implement cache.Store (missing method
+  Bookmark)\n```\n\nThis adds the two missing func fields and delegating methods (no-op
+  / `\"\"` when the func is nil), following the file's existing pattern. Backward
+  compatible: existing struct literals keep compiling unchanged.\n\n#### Which issue(s)
+  this PR fixes:\n\nFixes #140965\n\n#### Special notes for your reviewer:\n\nHit
+  in the wild during KubeVirt's bump to client-go v0.36.2 (kubevirt/kubevirt#18315),
+  which had to carry a local wrapper to keep its test suite compiling.\n\n#### Does
+  this PR introduce a user-facing change?\n\n```release-note\nclient-go: FakeCustomStore
+  implements the Bookmark and LastStoreSyncResourceVersion methods added to the cache.Store
+  interface in v0.36, so it satisfies cache.Store again\n```\n"
+releasenote:
+  text: 'client-go: FakeCustomStore implements the Bookmark and LastStoreSyncResourceVersion
+    methods added to the cache.Store interface in v0.36, so it satisfies cache.Store
+    again.'

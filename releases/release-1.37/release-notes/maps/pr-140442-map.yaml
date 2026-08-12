@@ -1,0 +1,38 @@
+pr: 140442
+pr_body: |
+  **What type of PR is this?**
+
+  /kind bug
+  /sig node
+  /wg device-management
+
+  **What this PR does / why we need it**:
+
+  `roundUpRange` rounds a consumable-capacity request up to a Step multiple using `Quantity.Value()` int64 arithmetic. A request near `MaxInt64` makes `min + step*n` wrap to a negative value that sits below the request and passes the capacity check, and a request above `MaxInt64` wraps in `Value()` itself and reads as a satisfiable-looking value. On the fractional path the request can pass the milli-value range in the same way. The value cannot then be rounded or compared reliably.
+
+  Today the request comes from the ResourceSlice, so in practice it is well-formed. Shared consumable capacity (#140084) takes the request from the user's ResourceClaim, so an out-of-range request becomes user-reachable, and skipping the device to try the next one would let such a request drive the scheduler into backtracking.
+
+  `roundUpRange` and its helpers now return `(Quantity, error)`. A request, or a rounded value, that cannot be represented (past `MaxInt64` on the integer path, or past the milli-value range on the fractional path) returns `errCapacityRequestNotRepresentable`, and the allocator aborts the allocation with that error instead of skipping the device. A request for a capacity the device does not define still skips, since another device may define it. The int64 and milli fast paths are unchanged for representable inputs. Both allocators are covered by allocatortesting cases and the per-allocator unit tables.
+
+  **Which issue(s) this PR fixes**:
+
+  Fixes #140441
+
+  **Special notes for your reviewer**:
+
+  - For a device that defines all the requested capacity names, representability is resolved for every capacity before the policy and capacity checks, so a request that overflows aborts regardless of Go's map iteration order, rather than being masked by another capacity the map happens to visit first. A request naming a capacity the device does not define is a separate, earlier skip, since another device may define it.
+  - Aborting on the first device whose arithmetic overflows is fail-closed: a later device that could satisfy the request by exact comparison is not tried. That is what removes the backtracking, and an allocatortesting case pins it. A unit test pins the fatal-over-soft ordering within a device.
+  - The allocator rejects a resolved capacity that is negative before recording it: a stored ResourceSlice or ResourceClaim from before stricter validation could carry one, and admission does not re-check existing objects, so relying on admission alone is not enough. Overflow stays the allocator's job because it depends on the device's int64-versus-milli math that admission cannot see. Broader magnitude validation of a user-facing request belongs in #140084, and a malformed RequestPolicy is tracked in #140472.
+  - Split out of the #140161 review at @pohly's suggestion, as the non-fractional `Value()` path. @sunya-ch handled the fractional milli-value path in #140161 and left a `TODO (#140441)` that this PR resolves.
+  - #140161 has merged; this PR is rebased onto it.
+
+  **Does this PR introduce a user-facing change?**
+
+  ```release-note
+  Fixed capacity accounting in the DRA consumable-capacity allocator. A capacity request that a device's integer or milli-value range arithmetic cannot represent, or that resolves to a negative value, is now rejected instead of being treated as satisfiable and wrongly allocating a device or capping it to a smaller value.
+  ```
+releasenote:
+  text: Fixed capacity accounting in the DRA consumable-capacity allocator. A capacity
+    request that a device's integer or milli-value range arithmetic cannot represent,
+    or that resolves to a negative value, is now rejected instead of being treated
+    as satisfiable and wrongly allocating a device or capping it to a smaller value.

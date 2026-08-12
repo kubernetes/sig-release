@@ -1,0 +1,28 @@
+pr: 140651
+pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n/kind feature\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\n1. **Reorganize Default Preemption Performance
+  Tests**:\r\n   Moved default preemption related performance tests into a dedicated
+  directory (`test/integration/scheduler_perf/default_preemption/`) with dedicated
+  test entrypoints, templates, and configuration (`performance-config.yaml`) to isolate
+  preemption benchmark suites from general scheduler performance tests.\r\n\r\n\r\n2.
+  **Add `PreemptionPodGroupDisruptionMode` Performance Suite**:\r\n   Extends `test/integration/scheduler_perf/default_preemption/performance-config.yaml`
+  with a comprehensive benchmark suite comparing preemption latency across three victim
+  disruption configurations at equal scale (1000 nodes, 10,000 victim pods, 100 preemptor
+  pods):\r\n   - **`1000Nodes_1000Candidates_NoPodGroup`**: Preemption of regular
+  low-priority pods (without PodGroup).\r\n   - **`1000Nodes_1000Candidates_DisruptionSingle`**:
+  Preemption of low-priority PodGroups configured with `disruptionMode: \"single\"`.\r\n
+  \  - **`1000Nodes_1000Candidates_DisruptionAll`**: Preemption of low-priority PodGroups
+  configured with `disruptionMode: \"all\"`.\r\n\r\n\r\n#### Which issue(s) this PR
+  is related to:\r\n\r\nN/A\r\n\r\n#### Special notes for your reviewer:\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n<!--\r\nIf no, just write \"NONE\"
+  in the release-note block below.\r\nIf yes, a release note is required:\r\nEnter
+  your extended release note in the block below. If the PR requires additional action
+  from users switching to the new release, include the string \"action required\".\r\n\r\nFor
+  more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nAdded
+  scheduler performance benchmark suites comparing preemption behavior across standalone
+  (non-PodGroup) pods and PodGroups with `single` and `all` disruption modes, and
+  reorganized default preemption performance tests into a dedicated directory.\r\n```"
+releasenote:
+  text: Added scheduler performance benchmark suites comparing preemption behavior
+    across standalone (non-PodGroup) pods and PodGroups with `single` and `all` disruption
+    modes, and reorganized default preemption performance tests into a dedicated directory.

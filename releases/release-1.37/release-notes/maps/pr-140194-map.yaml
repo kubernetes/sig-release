@@ -1,0 +1,6 @@
+pr: 140194
+pr_body: "Implement API changes for supporting Volume health\r\n\r\nxref https://github.com/kubernetes/enhancements/issues/1432\r\n\r\n/sig
+  storage\r\n\r\n\r\n```release-note\r\nImplement APIs required for reporting volume
+  health\r\n```\r\n\r\n"
+releasenote:
+  text: Implement APIs required for reporting volume health.

@@ -1,0 +1,17 @@
+pr: 137536
+pr_body: "\r\n/kind bug\r\n/kind dependency\r\n/kind feature\r\n/sig network\r\n\r\n
+  \   \r\nWe introduced a feature gate \"NFTablesNetlink\" that is Beta (enabled by
+  default) in 1.37.\r\n    \r\n When this feature gate is enabled, kube-proxy initializes
+  the knftables client with the `knftables.UseNetlink` option. This enables using
+  netlink directly for listing rules instead of parsing the output of the `nft` command-line
+  binary, improving performance.\r\n    \r\nUsing a feature gate allows us to safely
+  roll this out while giving users the ability to opt-out in case of problems.\r\n\r\n```release-note\r\nKube-proxy
+  enables netlink support by default in nftables mode. Kube-proxy will now use netlink
+  directly for listing rules and chains, which improves performance by avoiding executing
+  and parsing the `nft` command-line binary. This behavior can be disabled using the
+  `NFTablesNetlink` feature gate (Beta, enabled by default).\r\n```\r\n"
+releasenote:
+  text: Kube-proxy enables netlink support by default in nftables mode. Kube-proxy
+    will now use netlink directly for listing rules and chains, which improves performance
+    by avoiding executing and parsing the `nft` command-line binary. This behavior
+    can be disabled using the `NFTablesNetlink` feature gate (Beta, enabled by default).

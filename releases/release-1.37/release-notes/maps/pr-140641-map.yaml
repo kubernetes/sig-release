@@ -1,0 +1,14 @@
+pr: 140641
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nThis PR changes return type for a case where pod group
+  preemption detects ongoing preemption. Instead of returning Unschedulable we return
+  Success with the current nominating info. With that SubmitPodGroupAlgorithmResult
+  will not override the nominating info for pods with empty nodes. \r\n\r\n#### Which
+  issue(s) this PR is related to:\r\n \r\nhttps://github.com/kubernetes/enhancements/issues/5710\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n```release-note\r\nFixed an issue where a PodGroup preemption that detected
+  ongoing preemption would clear NNN of pod group pods.\r\n```\r\n\r\n#### Additional
+  documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n"
+releasenote:
+  text: Fixed an issue where a PodGroup preemption that detected ongoing preemption
+    would clear NNN of pod group pods.

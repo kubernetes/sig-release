@@ -1,0 +1,13 @@
+pr: 140683
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n\r\n#### What
+  this PR does / why we need it:\r\n\r\nThis PR enables pod group preemption when
+  the pod group cycle fails for a pod group that was using Topology Aware Scheduling.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nhttps://github.com/kubernetes/enhancements/issues/5710\r\nhttps://github.com/kubernetes/enhancements/issues/5732\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n\r\n```release-note\r\nPod group preemption will now be run after a failed
+  pod group scheduling attempt for pod groups with Scheduling Constraints.  \r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n"
+releasenote:
+  text: Pod group preemption will now be run after a failed pod group scheduling attempt
+    for pod groups with Scheduling Constraints.

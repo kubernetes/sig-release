@@ -1,0 +1,36 @@
+pr: 140437
+pr_body: |+
+  ## What type of PR is this?
+
+  /kind bug
+
+  ## What this PR does / why we need it
+
+  The structured allocator double-counts a shared counter for a persisted allow-multiple device that is recorded only by share ID.
+
+  When a device both allows multiple allocations (`DRAConsumableCapacity`) and consumes shared counters (`DRAPartitionableDevices`), a persisted shared allocation whose result carries a `ShareID` but no `ConsumedCapacity` is represented in `AllocatedSharedDeviceIDs` with no entry in `AggregatedCapacity`. Counter availability is initialized through `IsDeviceAllocated`, which recognizes `AllocatedSharedDeviceIDs`, so the persisted allocation already subtracts the device's counters from the pool. But `deviceCapacityInUse`, which drives the counter-check skip for allow-multiple devices, looks only at `AggregatedCapacity`. It misses the persisted share, the counter check runs again, and a second claim sharing the device is rejected with a false "Insufficient counters".
+
+  This makes `deviceCapacityInUse` recognize `AllocatedSharedDeviceIDs`, the same way `IsDeviceAllocated` already does, in both the incubating and experimental allocators. The stable allocator does not support `ConsumableCapacity` and is unaffected.
+
+  ## Which issue(s) this PR fixes
+
+  Fixes #140433
+
+  ## Special notes for your reviewer
+
+  The check scans `AllocatedSharedDeviceIDs` per candidate, matching the existing `IsDeviceAllocated` pattern, rather than precomputing a `Set[DeviceID]`. This keeps a single source of truth, with no second copy of the persisted shared state, at the cost of an O(n) scan gated behind `allowMultipleAllocations`. A derived index can be added later if the scan shows up in profiles.
+
+  Regression coverage in the shared `allocatortesting` table:
+  - `partitionable-consumable-capacity-shared-device-counter-not-recharged`: the issue's case. It fails on the unfixed allocator with "Insufficient counters" and passes with the fix, in both the incubating and experimental allocators.
+  ## Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed a DRA consumable-capacity scheduling bug: a device that consumes shared counters could have them counted twice when it already had a persisted shared allocation with no consumed capacity, wrongly rejecting a later claim for the same device and leaving the pod pending.
+  ```
+
+
+releasenote:
+  text: 'Fixed a DRA consumable-capacity scheduling bug: a device that consumes shared
+    counters could have them counted twice when it already had a persisted shared
+    allocation with no consumed capacity, wrongly rejecting a later claim for the
+    same device and leaving the pod pending.'

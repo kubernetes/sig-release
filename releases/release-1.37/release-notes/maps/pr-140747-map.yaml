@@ -1,0 +1,12 @@
+pr: 140747
+pr_body: "/kind bug\r\n\r\n#### What this PR does / why we need it:\r\n\r\nThis PR
+  fixes an error message in PodGroupPostFilter. Right now it says \"error in PostFilter
+  plugins\" instead of \"error in PodGroupPostFilter plugins\".\r\n\r\n#### Which
+  issue(s) this PR is related to:\r\n\r\nhttps://github.com/kubernetes/enhancements/issues/5710\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n```release-note\r\nThe error message from PodGroupPostFilter now contains
+  correct extension point name.\r\n```\r\n\r\n#### Additional documentation e.g.,
+  KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n"
+releasenote:
+  text: The error message from PodGroupPostFilter now contains correct extension point
+    name.

@@ -1,0 +1,8 @@
+pr: 137660
+pr_body: "#### What type of PR is this?\r\n/kind bug\r\n\r\n#### What this PR does
+  / why we need it:\r\n\r\n#### Which issue(s) this PR is related to:\r\nxref #137628\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n\r\n```release-note\r\nkubelet: fix wrong Pod-level CPU requests status
+  from cgroup v2 readback\r\n```\r\n"
+releasenote:
+  text: 'kubelet: fix wrong Pod-level CPU requests status from cgroup v2 readback.'

@@ -1,0 +1,23 @@
+pr: 140717
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n- Adds reusable building block struct types to `scheduling.k8s.io`
+  for the CompositePodGroup\r\n- Add supports for CompositePodGroup to `workloadbuilder`
+  library\r\n- Enforces the `WorkloadInput` leaf/composite union in both the build
+  and validate phases: a composite node may not set leaf building blocks, and a leaf
+  node may not set composite building blocks\r\n- Enforces Workload-wide uniqueness
+  of template names at build time so a materialized (Composite)PodGroup resolves unambiguously
+  by name\r\n- Aligns `Validate` well-formedness with `BuildWorkload`: empty item
+  names are rejected in both phases, and update validation correlates old/new items
+  level-by-level by name\r\n\r\n<details><summary>Union validation flow</summary>\r\n\r\n```mermaid\r\nflowchart
+  TD\r\n  n[\"WorkloadInput (per node)\"] --> q{composite?}\r\n  q -->|yes| r{leaf
+  block set?}\r\n  q -->|no| s{composite block set?}\r\n  r -->|yes| e1[error]\r\n
+  \ s -->|yes| e2[error]\r\n  r -->|no| ok[OK]\r\n  s -->|no| ok\r\n```\r\n</details>\r\n\r\n####
+  Which issue(s) this PR is related to:\r\nRef #139359 \r\n\r\n#### Special notes
+  for your reviewer:\r\nDepends on:\r\n- https://github.com/kubernetes/kubernetes/issues/140188\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n```release-note\r\nAdd supports
+  for CompositePodGroup to building block APIs and `workloadbuilder` library.\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n```docs\r\n- [KEP]: https://github.com/kubernetes/enhancements/issues/6089\r\n```\r\n"
+releasenote:
+  text: Add supports for CompositePodGroup to building block APIs and `workloadbuilder`
+    library.

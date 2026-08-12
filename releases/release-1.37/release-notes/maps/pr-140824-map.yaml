@@ -1,0 +1,28 @@
+pr: 140824
+pr_body: |
+  #### What type of PR is this?
+
+  /kind feature
+
+  #### What this PR does / why we need it:
+
+  This PR adds an `error` outcome to the `route_sync_total` metric in the cloud-provider route controller. Previously the metric only distinguished between `changed` (at least one route was created or deleted) and `noop` outcomes, and the metric was only recorded on successful reconciles. Failed reconciles were not counted at all.
+
+  #### Which issue(s) this PR is related to:
+
+  #### Special notes for your reviewer:
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  The `route_sync_total` metric now records an `error` outcome when a route reconcile fails, in addition to the existing `changed` and `noop` outcomes.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  [KEP]: https://github.com/kubernetes/enhancements/issues/5237
+  ```
+releasenote:
+  text: The `route_sync_total` metric now records an `error` outcome when a route
+    reconcile fails, in addition to the existing `changed` and `noop` outcomes.

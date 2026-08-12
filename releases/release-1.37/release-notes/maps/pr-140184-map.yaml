@@ -1,0 +1,19 @@
+pr: 140184
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n/kind api-change\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nPromotes the workload-aware scheduling
+  APIs (`Workload` and `PodGroup` APIs) to beta.\r\n\r\n#### Which issue(s) this PR
+  is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/4671\r\nKEP:
+  https://github.com/kubernetes/enhancements/issues/5710\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\n/sig scheduling\r\n/wg workload-aware-scheduling\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nThe core
+  Workload-Aware Scheduling (WAS) API types `Workload` and `PodGroup` are promoted
+  to scheduling.k8s.io/v1beta1. If using the v1alpha2 version in 1.36, remember to
+  remove all `v1alpha2` objects from the api-server before upgrading from 1.36 to
+  1.37.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement
+  Proposals), usage docs, etc.:\r\n\r\n```docs\r\n- [KEP]: https://github.com/kubernetes/enhancements/issues/4671\r\n-
+  [KEP]: https://github.com/kubernetes/enhancements/issues/5710\r\n```\r\n"
+releasenote:
+  text: The core Workload-Aware Scheduling (WAS) API types `Workload` and `PodGroup`
+    are promoted to scheduling.k8s.io/v1beta1. If using the v1alpha2 version in 1.36,
+    remember to remove all `v1alpha2` objects from the api-server before upgrading
+    from 1.36 to 1.37.
