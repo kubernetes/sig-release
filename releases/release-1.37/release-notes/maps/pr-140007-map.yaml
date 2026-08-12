@@ -1,0 +1,14 @@
+pr: 140007
+releasenote:
+  text: |-
+    Promoted the `MemoryQoS` feature gate to Beta. `memoryThrottlingFactor` defaults to nil, and `memory.high` is not set unless explicitly configured.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

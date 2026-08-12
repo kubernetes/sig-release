@@ -1,0 +1,11 @@
+pr: 139921
+releasenote:
+  text: |-
+    `kubelet`: Populated `involvedObject.uid` on node events on a best-effort basis once the node is registered, so node events can be correlated by UID, for example in `kubectl describe node`. The UID is resolved once and not refreshed afterward. If a node is deleted and recreated with a new UID while the `kubelet` keeps running, its events continue to use the original UID until the `kubelet` restarts.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

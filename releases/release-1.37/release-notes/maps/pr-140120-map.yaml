@@ -1,25 +1,12 @@
 pr: 140120
-pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n/sig api-machinery\r\n\r\n####
-  What this PR does / why we need it:\r\n\r\n`TestVersionedValidationByFuzzing` swept
-  a hand-maintained list of group/versions. The list had drifted: a typo (`network.k8s.io`
-  instead of `networking.k8s.io`, so it matched nothing) and several groups missing
-  entirely (apps, policy, rbac, flowcontrol, scheduling). This replaces it with a
-  sweep of the scheme for served GVKs that have declarative validation, so new group/versions
-  are covered automatically with no hand maintenance.\r\n\r\nTo support this, `Scheme.HasValidationFunc`
-  is added: `Validate` alone can't tell \"no validation function registered\" from
-  \"function ran and found no errors\" (both return a nil error list).\r\n\r\nThe
-  extensions/v1beta1 skip (it opts out of declarative validation but shares an internal
-  type with versions that don't) is now applied centrally in `VerifyVersionedValidationEquivalence`
-  instead of via a per-call option, so every caller gets it. Any *other* version missing
-  declarative validation now fails the sweep instead of being silently skipped.\r\n\r\n####
-  Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n#### Special notes for your
-  reviewer:\r\n\r\nFirst commit is the apimachinery `HasValidationFunc` addition (staging
-  API), kept separate for independent review. Second is the test refactor. The new
-  method's only consumer is the fuzz-test enumeration — there's no other way to scope
-  it,\r\nsince `Validate` is ambiguous by design.\r\n\r\n#### Does this PR introduce
-  a user-facing change?\r\n\r\n​```release-note\r\nAdded the `HasValidationFunc` method
-  to `runtime.Scheme` to report whether a declarative validation function is registered
-  for a type.\r\n```\r\n"
 releasenote:
-  text: Added the `HasValidationFunc` method to `runtime.Scheme` to report whether
-    a declarative validation function is registered for a type.
+  text: |-
+    Added the `HasValidationFunc` method to `runtime.Scheme` to report whether a declarative validation function is registered for a type.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+pr_body: ""

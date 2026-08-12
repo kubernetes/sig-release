@@ -1,0 +1,17 @@
+pr: 140029
+releasenote:
+  text: |-
+    Added support for derived attributes in DRA, allowing claims to define virtual attributes using CEL expressions and use them in device constraints. This enables co-allocation of devices across different domains, for example GPUs and NICs on the same NUMA node, even if their drivers publish physical attributes differently.
+  sigs:
+  - api-machinery
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+  - dependency
+pr_body: ""

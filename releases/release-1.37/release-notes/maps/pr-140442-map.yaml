@@ -1,0 +1,10 @@
+pr: 140442
+releasenote:
+  text: |-
+    Fixed capacity accounting in the DRA consumable-capacity allocator. A capacity request that a device's integer or milli-value range arithmetic cannot represent, or that resolves to a negative value, is rejected instead of being treated as satisfiable and wrongly allocating a device or capping it to a smaller value.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

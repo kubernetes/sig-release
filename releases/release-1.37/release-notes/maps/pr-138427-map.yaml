@@ -1,0 +1,17 @@
+pr: 138427
+releasenote:
+  text: |-
+    Added an opt-in userspace TCP proxy to the nftables `kube-proxy` backend to serve localhost NodePort Services on IPv4 and IPv6.
+  sigs:
+  - instrumentation
+  - network
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kube-proxy
+  - code-generation
+  - ipvs
+pr_body: ""

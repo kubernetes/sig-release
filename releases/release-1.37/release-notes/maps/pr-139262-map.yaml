@@ -1,0 +1,11 @@
+pr: 139262
+releasenote:
+  text: |-
+    Reduced the scope of `EventedPLEG` to only accelerate detection of unexpected container terminations.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

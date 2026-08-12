@@ -1,0 +1,25 @@
+pr: 140009
+releasenote:
+  text: |-
+    Updated the Alpha `DRANodeAllocatableResources` feature:
+
+    - ResourceSlice mappings and PodStatus support direct allocations, for DRA drivers modeling CPU, memory, and hugepages as a resource, and overhead allocations, for accelerator host overhead.
+    - The `kubelet` accounts for DRA allocated resources when configuring Pod and container cgroups, OOM scores, and Memory QoS thresholds.
+    - Standard resource requests and limits can be resized in place for Pods that use DRA claims.
+    - The scheduler supports unreferenced Pod-level claims, enforces resource limits with DRA, and enforces claim sharing rules, allowing claim sharing across Pods for overhead allocations.
+    - Validation enforces constraints for the updated API and uses node declared features to confirm that target nodes have the `NodeAllocatableDRA` feature gate enabled.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - autoscaling
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

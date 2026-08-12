@@ -1,0 +1,17 @@
+pr: 139764
+releasenote:
+  text: |-
+    Added Alpha support for defining the file owner of atomically written volume files, behind the `AtomicWriteVolumeUserFields` feature gate (disabled by default).
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

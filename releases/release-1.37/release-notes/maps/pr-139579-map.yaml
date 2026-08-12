@@ -1,0 +1,23 @@
+pr: 139579
+releasenote:
+  text: |-
+    ACTION REQUIRED: Graduated Pod Certificates to GA, with the `PodCertificateRequest` feature gate enabled by default. The `PKIXPublicKey` and `ProofOfPossession` fields, deprecated in PodCertificateRequest `v1beta1`, are removed from the `v1` API. Update clients that still set these fields before upgrading.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - conformance
+  - code-generation
+pr_body: ""

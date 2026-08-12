@@ -1,0 +1,14 @@
+pr: 140683
+releasenote:
+  text: |-
+    Changed PodGroup preemption to run after a failed PodGroup scheduling attempt for PodGroups with scheduling constraints.
+  sigs:
+  - api-machinery
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

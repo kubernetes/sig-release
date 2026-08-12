@@ -1,0 +1,19 @@
+pr: 140634
+releasenote:
+  text: |-
+    Added the `DisruptionMode` and `PreemptionPolicy` fields to the Workload and CompositePodGroup APIs to support workload-aware preemption for CompositePodGroups.
+  sigs:
+  - api-machinery
+  - auth
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - code-generation
+pr_body: ""

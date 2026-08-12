@@ -1,0 +1,16 @@
+pr: 139876
+releasenote:
+  text: |-
+    Preserved data in the DRA-related Pod status fields `resourceClaimStatuses`, `extendedResourceClaimStatus`, and `nodeAllocatableResourceClaimStatuses` when handling Pod status updates that omit those fields. This prevents updates from older clients from unsetting these DRA fields, which could leave Pods permanently stuck in Terminating.
+  sigs:
+  - api-machinery
+  - auth
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver
+pr_body: ""

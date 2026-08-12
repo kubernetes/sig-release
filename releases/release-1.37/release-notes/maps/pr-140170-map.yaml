@@ -1,0 +1,17 @@
+pr: 140170
+releasenote:
+  text: |-
+    Added a second Alpha of DRA resource availability visibility (KEP-5677), behind the `DRAResourcePoolStatus` feature gate (disabled by default). The ResourcePoolStatusRequest controller counts partitionable and consumable devices correctly, counting each device once, ignoring AdminAccess, and treating taints as unavailable. Optional fields describe partition and shareable availability. These accounting fixes change the numbers reported in `v1.36`.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

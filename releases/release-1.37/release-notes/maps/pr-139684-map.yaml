@@ -1,0 +1,11 @@
+pr: 139684
+releasenote:
+  text: |-
+    Fixed Windows CPU affinity so that, when the CPU Manager `static` policy and the Memory Manager are both active under the `WindowsCPUAndMemoryAffinity` feature gate, containers are pinned to the CPU Manager's allocated set instead of the union of that set and every CPU on the selected NUMA node. The previous behavior could overlap CPUs exclusively allocated to other containers.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

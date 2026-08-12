@@ -1,0 +1,12 @@
+pr: 140851
+releasenote:
+  text: |-
+    Added the `cache_to_watcher` stage to the Alpha `apiserver_watch_events_dispatch_duration_seconds` metric to measure the latency incurred when pushing events to a watcher's result channel.
+  sigs:
+  - api-machinery
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

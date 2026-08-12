@@ -1,0 +1,14 @@
+pr: 140612
+releasenote:
+  text: |-
+    Promoted to Beta the prevention of scheduling Pods onto nodes where the required CSI driver is not installed (KEP-5030).
+  sigs:
+  - api-machinery
+  - storage
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - code-generation
+pr_body: ""

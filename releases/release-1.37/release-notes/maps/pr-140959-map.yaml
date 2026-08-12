@@ -1,0 +1,10 @@
+pr: 140959
+releasenote:
+  text: |-
+    Demoted the `SchedulerPreQueueingHints` feature gate from Beta to Alpha, disabled by default, because of issues found shortly before release.
+  sigs:
+  - scheduling
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

@@ -1,0 +1,11 @@
+pr: 140833
+releasenote:
+  text: |-
+    Fixed 409 Conflict errors between the PVC protection controller and the PV binder during initial PVC binding. The `Unused` condition is evaluated only after the PersistentVolumeClaim is bound.
+  sigs:
+  - apps
+  - storage
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

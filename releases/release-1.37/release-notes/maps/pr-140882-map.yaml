@@ -1,0 +1,12 @@
+pr: 140882
+releasenote:
+  text: |-
+    Fixed a v1.35 regression where exec readiness probes stopped executing (failing with "context canceled") once a pod began graceful termination, leaving the pod's Ready condition frozen during shutdown.
+  sigs:
+  - node
+  kinds:
+  - bug
+  - regression
+  areas:
+  - kubelet
+pr_body: ""

@@ -1,0 +1,15 @@
+pr: 138198
+releasenote:
+  text: |-
+    Improved scheduling performance for required Pod affinity and anti-affinity with `topologyKey: kubernetes.io/hostname`, behind the `InterPodAffinityHostnameFastPath` feature gate.
+  sigs:
+  - apps
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

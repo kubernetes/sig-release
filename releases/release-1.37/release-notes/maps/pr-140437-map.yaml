@@ -1,0 +1,11 @@
+pr: 140437
+releasenote:
+  text: |-
+    Fixed a DRA consumable-capacity scheduling bug where a device that consumes shared counters could have them counted twice when it already had a persisted shared allocation with no consumed capacity, wrongly rejecting a later claim for the same device and leaving the Pod pending.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

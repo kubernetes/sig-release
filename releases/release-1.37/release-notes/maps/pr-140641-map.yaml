@@ -1,0 +1,12 @@
+pr: 140641
+releasenote:
+  text: |-
+    Fixed an issue where PodGroup preemption that detected an ongoing preemption would clear `nominatedNodeName` on the PodGroup's Pods.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+pr_body: ""

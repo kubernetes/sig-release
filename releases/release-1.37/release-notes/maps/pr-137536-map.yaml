@@ -1,0 +1,14 @@
+pr: 137536
+releasenote:
+  text: |-
+    Enabled netlink support by default in `kube-proxy` nftables mode. `kube-proxy` uses netlink directly to list rules and chains, improving performance by avoiding running and parsing the `nft` command-line binary. The `NFTablesNetlink` feature gate (Beta, enabled by default) can be disabled to restore the previous behavior.
+  sigs:
+  - network
+  - testing
+  kinds:
+  - bug
+  - dependency
+  areas:
+  - kube-proxy
+  - dependency
+pr_body: ""

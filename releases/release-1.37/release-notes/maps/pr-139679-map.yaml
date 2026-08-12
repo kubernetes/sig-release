@@ -1,0 +1,12 @@
+pr: 139679
+releasenote:
+  text: |-
+    Graduated the `ConcurrentWatchObjectDecode` feature gate to Beta, enabled by default.
+  sigs:
+  - api-machinery
+  - etcd
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

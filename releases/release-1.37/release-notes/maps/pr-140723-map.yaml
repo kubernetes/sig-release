@@ -1,0 +1,11 @@
+pr: 140723
+releasenote:
+  text: |-
+    Stopped using maps for single-endpoint Services in `kube-proxy` nftables mode, increasing the speed of programming nftables.
+  sigs:
+  - network
+  kinds:
+  - cleanup
+  areas:
+  - kube-proxy
+pr_body: ""

@@ -1,0 +1,10 @@
+pr: 140081
+releasenote:
+  text: |-
+    Promoted the `PodAndContainerStatsFromCRI` feature gate to Beta, disabled by default.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

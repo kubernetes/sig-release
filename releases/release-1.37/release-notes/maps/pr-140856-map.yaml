@@ -1,0 +1,13 @@
+pr: 140856
+releasenote:
+  text: |-
+    Added the `allocatedPods` `kubelet` endpoint, which surfaces the `kubelet`'s allocated Pod spec for debugging in-place Pod resizing and other Pod update issues. Requires the `KubeletAllocatedPodsEndpoint` feature gate.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

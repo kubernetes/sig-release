@@ -1,0 +1,32 @@
+pr: 138916
+releasenote:
+  text: |-
+    Added the `SchedulerPreQueueingHints` feature gate (Alpha, disabled by default). When enabled, scheduler plugins can provide a `PreQueueingHintFn` that narrows the set of Pods evaluated on cluster events, improving scheduling throughput. The DRA plugin implements this to optimize ResourceClaimTemplate-based workloads.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - instrumentation
+  - network
+  - node
+  - scheduling
+  - storage
+  - testing
+  - windows
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - code-generation
+  - e2e-test-framework
+  - dependency
+pr_body: ""

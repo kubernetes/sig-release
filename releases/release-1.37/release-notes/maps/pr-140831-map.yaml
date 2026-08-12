@@ -1,0 +1,11 @@
+pr: 140831
+releasenote:
+  text: |-
+    DRA: Fixed a bug where a rare missed informer update of a ResourceClaim could cause Pods to remain pending until the unschedulable queue was flushed.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

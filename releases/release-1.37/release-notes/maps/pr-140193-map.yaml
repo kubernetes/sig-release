@@ -1,0 +1,12 @@
+pr: 140193
+releasenote:
+  text: |-
+    DRA: Fixed a potential crash in the scheduler, recovered after restart, when the ResourceSlice tracker encountered an OnDelete event for a DeviceTaintRule whose deleted object is unknown.
+  sigs:
+  - api-machinery
+  - node
+  kinds:
+  - cleanup
+  areas:
+  - code-generation
+pr_body: ""

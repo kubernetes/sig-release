@@ -1,0 +1,20 @@
+pr: 140334
+releasenote:
+  text: |-
+    Promoted DRA Workload resource claims to Beta. The `DRAWorkloadResourceClaims` feature gate remains disabled by default.
+  sigs:
+  - api-machinery
+  - apps
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - code-generation
+pr_body: ""

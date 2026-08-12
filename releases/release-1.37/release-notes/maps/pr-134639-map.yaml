@@ -1,0 +1,17 @@
+pr: 134639
+releasenote:
+  text: |-
+    Promoted the `KubeletInUserNamespace` feature gate to Beta (KEP-2033).
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

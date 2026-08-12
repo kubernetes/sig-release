@@ -1,0 +1,10 @@
+pr: 140747
+releasenote:
+  text: |-
+    Fixed the error message from `PodGroupPostFilter` to contain the correct extension point name.
+  sigs:
+  - scheduling
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

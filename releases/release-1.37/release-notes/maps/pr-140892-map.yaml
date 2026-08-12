@@ -1,0 +1,11 @@
+pr: 140892
+releasenote:
+  text: |-
+    `kubelet`: Changed the `DefaultPodSysctls` feature to treat an unset `spec.hostUsers` as true when evaluating `user.*` sysctls.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

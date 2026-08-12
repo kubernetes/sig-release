@@ -1,0 +1,15 @@
+pr: 138456
+releasenote:
+  text: |-
+    Added support for selecting ResourceSlices by pool name with the field selector `spec.pool.name`.
+  sigs:
+  - api-machinery
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

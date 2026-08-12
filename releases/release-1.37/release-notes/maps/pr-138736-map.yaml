@@ -1,0 +1,12 @@
+pr: 138736
+releasenote:
+  text: |-
+    Fixed a 1.33 regression that could cause a panic in the endpoint controller when processing services with empty IPFamilies field (pre-dual-stack services that were never spec-updated).
+  sigs:
+  - apps
+  - network
+  kinds:
+  - bug
+  - regression
+  areas: []
+pr_body: ""

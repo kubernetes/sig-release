@@ -1,0 +1,10 @@
+pr: 140759
+releasenote:
+  text: |-
+    Added the group name to the `kubectl` error message when a resource type is not found under the specified group, for example `the server doesn't have a resource type "pdb" in group "hpa"`.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

@@ -1,0 +1,21 @@
+pr: 140188
+releasenote:
+  text: |-
+    Added Workload-aware scheduling (WAS) support to the Job controller by integrating it with the `workloadbuilder` library and the Workload building block APIs.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - network
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - code-generation
+pr_body: ""

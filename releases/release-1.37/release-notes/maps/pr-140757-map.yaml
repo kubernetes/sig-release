@@ -1,0 +1,13 @@
+pr: 140757
+releasenote:
+  text: |-
+    Added the 90s, 120s, 180s, and 300s buckets to the `watch_list_duration_seconds` metric.
+  sigs:
+  - api-machinery
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - apiserver
+  - stable-metrics
+pr_body: ""

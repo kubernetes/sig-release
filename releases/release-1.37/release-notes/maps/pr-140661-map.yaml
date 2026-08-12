@@ -1,0 +1,13 @@
+pr: 140661
+releasenote:
+  text: |-
+    Fixed admission handling so that updates to namespaced objects that still exist after their namespace was deleted are allowed.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - apiserver
+pr_body: ""

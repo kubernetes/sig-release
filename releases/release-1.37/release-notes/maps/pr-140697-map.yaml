@@ -1,0 +1,13 @@
+pr: 140697
+releasenote:
+  text: |-
+    Added `apiserver_storage_list_duration_seconds`, a metric measuring end-to-end apiserver list latency (etcd read plus object decode), labelled by whether etcd RangeStream was used, so streamed and non-streamed lists can be compared directly.
+  sigs:
+  - api-machinery
+  - etcd
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

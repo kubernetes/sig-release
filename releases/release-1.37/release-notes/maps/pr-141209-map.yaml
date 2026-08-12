@@ -1,0 +1,10 @@
+pr: 141209
+releasenote:
+  text: |-
+    Disabled the `PodLevelResourceManagers` feature gate by default because of critical issues found before release.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

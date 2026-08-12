@@ -1,0 +1,13 @@
+pr: 139604
+releasenote:
+  text: |-
+    Added scheduler metrics for the topology-aware scheduling (TAS) placement phases, available when the `TopologyAwareWorkloadScheduling` feature gate is enabled: `scheduler_generated_placements_total`, `scheduler_placement_evaluations_total`, and `scheduler_placement_evaluation_duration_seconds`.
+  sigs:
+  - instrumentation
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""
