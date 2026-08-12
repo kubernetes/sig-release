@@ -1,7 +1,7 @@
 pr: 140573
 releasenote:
   text: |-
-    Promoted the `PodLevelResourceManagers` feature gate to Beta.
+    Promoted the `PodLevelResourceManagers` feature gate to Beta, enabled by default.
   sigs:
   - node
   - testing

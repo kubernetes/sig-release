@@ -1,7 +1,7 @@
 pr: 140463
 releasenote:
   text: |-
-    Added the Alpha `kubelet` metric `pod_level_resources_admission_total` to track adoption of KEP-2837 (Pod-Level Resources) at Pod admission, categorized by resource configuration mode and QoS class.
+    Added the Alpha `kubelet` metric `pod_level_resources_admission_total` to track adoption of Pod-Level Resources (KEP-2837) upon Pod admission, categorized by resource configuration mode and QoS class.
   sigs:
   - instrumentation
   - node

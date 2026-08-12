@@ -1,0 +1,13 @@
+pr: 138738
+releasenote:
+  text: |-
+    Added `cpu_ids` and `memory` fields at the pod level to the `PodResources` v1 API to report total allocated pod resources, while only returning container-level allocations for container-isolated containers.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

@@ -1,7 +1,7 @@
 pr: 134037
 releasenote:
   text: |-
-    Added dry-run support to unsafe corrupt object deletion, letting administrators test deletion operations before running them.
+    Added dry-run support to unsafe corrupt object deletion, letting administrators test deletion operations safely before running them.
   sigs:
   - api-machinery
   - testing

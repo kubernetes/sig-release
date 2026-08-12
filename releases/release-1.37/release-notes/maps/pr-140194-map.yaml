@@ -1,7 +1,7 @@
 pr: 140194
 releasenote:
   text: |-
-    Added the API changes required for reporting volume health, part of CSI volume health monitoring (KEP-1432).
+    Added the API changes required for reporting volume health.
   sigs:
   - api-machinery
   - apps

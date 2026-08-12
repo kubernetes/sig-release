@@ -2,7 +2,6 @@ pr: 140009
 releasenote:
   text: |-
     Updated the Alpha `DRANodeAllocatableResources` feature:
-
     - ResourceSlice mappings and PodStatus support direct allocations, for DRA drivers modeling CPU, memory, and hugepages as a resource, and overhead allocations, for accelerator host overhead.
     - The `kubelet` accounts for DRA allocated resources when configuring Pod and container cgroups, OOM scores, and Memory QoS thresholds.
     - Standard resource requests and limits can be resized in place for Pods that use DRA claims.

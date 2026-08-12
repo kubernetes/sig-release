@@ -1,7 +1,7 @@
 pr: 137762
 releasenote:
   text: |-
-    `kubelet`: Added TLS support for gRPC container probes, behind a feature gate (KEP-4939).
+    `kubelet`: Added TLS support for gRPC container probes (behind a feature gate).
   sigs:
   - api-machinery
   - apps

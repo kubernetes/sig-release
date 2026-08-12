@@ -1,7 +1,7 @@
 pr: 140740
 releasenote:
   text: |-
-    ACTION REQUIRED: Updated `google.golang.org/grpc` to `v1.82.1`, which adds a server-side limit on HTTP/2 control frame flooding. This release also removes the `GRPC_GO_EXPERIMENTAL_DISABLE_STRICT_PATH_CHECKING` environment variable, making strict path checking unconditional. Clusters that set this variable to opt out must stop relying on it before upgrading.
+    Updated `google.golang.org/grpc` to `v1.82.1`, which adds a server-side limit on HTTP/2 control frame flooding. It also removes the `GRPC_GO_EXPERIMENTAL_DISABLE_STRICT_PATH_CHECKING` environment variable, so strict path checking is now always on.
   sigs:
   - api-machinery
   - architecture
