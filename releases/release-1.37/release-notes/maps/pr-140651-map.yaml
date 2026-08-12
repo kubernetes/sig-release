@@ -6,7 +6,7 @@ releasenote:
   - scheduling
   - testing
   kinds:
-  - cleanup
+  - feature
   areas:
   - test
 pr_body: ""

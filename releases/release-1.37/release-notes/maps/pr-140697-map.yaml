@@ -7,7 +7,7 @@ releasenote:
   - etcd
   - instrumentation
   kinds:
-  - feature
+  - bug
   areas:
   - apiserver
 pr_body: ""

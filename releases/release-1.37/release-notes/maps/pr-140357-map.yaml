@@ -1,7 +1,8 @@
 pr: 140357
 releasenote:
   text: |-
-    Updated the `kubectl explain` long description for consistency with other commands and to improve the documentation.
+    Updated the `kubectl explain` long description to fix formatting in the generated documentation and improve consistency with other commands.
+  do_not_publish: false
   sigs:
   - cli
   kinds:
