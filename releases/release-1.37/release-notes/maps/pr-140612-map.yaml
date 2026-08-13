@@ -1,0 +1,14 @@
+pr: 140612
+releasenote:
+  text: |-
+    Promoted the `VolumeLimitScaling` feature gate, which adds the `preventPodSchedulingIfMissing` field to CSIDriver to prevent Pod scheduling on nodes missing a required CSI driver, to Beta.
+  sigs:
+  - api-machinery
+  - storage
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - code-generation
+pr_body: ""

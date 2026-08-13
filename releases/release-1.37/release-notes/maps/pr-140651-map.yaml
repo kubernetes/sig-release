@@ -1,0 +1,12 @@
+pr: 140651
+releasenote:
+  text: |-
+    Added scheduler performance benchmark suites comparing preemption behavior across standalone (non-PodGroup) Pods and PodGroups with `single` and `all` disruption modes, and reorganized the default preemption performance tests into a dedicated directory.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

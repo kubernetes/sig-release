@@ -1,0 +1,13 @@
+pr: 139726
+releasenote:
+  text: |-
+    Added `metrics.k8s.io/v1` support to `kubectl top`.
+  sigs:
+  - cli
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - kubectl
+  - code-generation
+pr_body: ""

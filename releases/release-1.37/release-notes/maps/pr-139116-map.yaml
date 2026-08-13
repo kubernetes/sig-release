@@ -1,0 +1,17 @@
+pr: 139116
+releasenote:
+  text: |-
+    Graduated Pod hostname overrides to GA. The `HostnameOverride` feature gate is locked to enabled.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

@@ -1,0 +1,17 @@
+pr: 139429
+releasenote:
+  text: |-
+    Added a `protocol` field to `httpGet` probes so that liveness, readiness, and startup probes can run over HTTP/2 cleartext (H2C).
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

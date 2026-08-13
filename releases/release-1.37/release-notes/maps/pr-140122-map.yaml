@@ -1,0 +1,12 @@
+pr: 140122
+releasenote:
+  text: |-
+    Added the Alpha `kubelet` metric `kubelet_pod_deferred_resize_duration_seconds` histogram and the `priority_bucket` label on the `kubelet_pod_pending_resizes` gauge.
+  sigs:
+  - instrumentation
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

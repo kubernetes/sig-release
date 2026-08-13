@@ -1,0 +1,10 @@
+pr: 139862
+releasenote:
+  text: |-
+    Added the `--proxy-url` flag to `kubectl` to override the proxy URL configured in the kubeconfig.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

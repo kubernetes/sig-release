@@ -1,0 +1,15 @@
+pr: 140366
+releasenote:
+  text: |-
+    Added `CheckpointPod` and `RestorePod` RPCs to the CRI `v1` RuntimeService API for Pod-level checkpoint and restore.
+  sigs:
+  - node
+  - testing
+  - windows
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

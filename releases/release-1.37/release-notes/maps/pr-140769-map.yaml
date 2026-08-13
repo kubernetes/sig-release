@@ -1,0 +1,10 @@
+pr: 140769
+releasenote:
+  text: |-
+    Fixed a bug where ResourceClaims using `allocationMode: All` with consumable capacity could be partially allocated when a matching device had insufficient remaining capacity. Such claims correctly fail to allocate until all matching devices can be satisfied.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

@@ -1,0 +1,17 @@
+pr: 140289
+releasenote:
+  text: |-
+    Changed the scheduler's opportunistic batching to rescore the previously chosen node when it is still feasible, allowing it to compete with cached candidates for the next hint rather than always being skipped.
+  sigs:
+  - api-machinery
+  - etcd
+  - instrumentation
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - apiserver
+  - release-eng
+pr_body: ""

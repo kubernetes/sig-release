@@ -1,0 +1,16 @@
+pr: 139795
+releasenote:
+  text: |-
+    Added Alpha support for DRA device compatibility groups, guarded by the `DRADeviceCompatibilityGroups` feature gate (disabled by default). DRA drivers can declare opaque `compatibilityGroups` on each `device.consumesCounters[]` entry of a ResourceSlice, and the scheduler only co-allocates devices drawing from the same counter set when their declared groups intersect. This moves detection of incompatible co-allocation from preparation-time failure to scheduling-time rejection.
+  sigs:
+  - api-machinery
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

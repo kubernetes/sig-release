@@ -1,0 +1,10 @@
+pr: 138834
+releasenote:
+  text: |-
+    Relaxed container security context validation so that updates to Pods may set `allowPrivilegeEscalation` together with `CAP_SYSADMIN`. Pod creation still rejects this combination.
+  sigs:
+  - apps
+  kinds:
+  - api-change
+  areas: []
+pr_body: ""

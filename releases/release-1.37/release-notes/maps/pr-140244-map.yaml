@@ -1,0 +1,17 @@
+pr: 140244
+releasenote:
+  text: |-
+    Added support for setting Unix permission bits (0000-01777) through the `mode` field on emptyDir volume directories at creation time.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation
+pr_body: ""

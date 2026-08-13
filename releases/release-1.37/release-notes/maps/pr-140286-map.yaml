@@ -1,0 +1,14 @@
+pr: 140286
+releasenote:
+  text: |-
+    Promoted the `kubelet` PodsAPI gRPC service to Beta.
+  sigs:
+  - instrumentation
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

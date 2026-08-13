@@ -1,0 +1,28 @@
+pr: 129125
+releasenote:
+  text: |-
+    `client-go`: Removed nearly all `context.TODO` calls by introducing APIs where the caller passes in the context. Log calls use the logger provided by the caller when available.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - instrumentation
+  - network
+  - node
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - logging
+  - cloudprovider
+  - code-generation
+  - dependency
+pr_body: ""

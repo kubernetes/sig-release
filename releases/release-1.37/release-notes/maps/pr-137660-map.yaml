@@ -1,0 +1,11 @@
+pr: 137660
+releasenote:
+  text: |-
+    `kubelet`: Fixed incorrect Pod-level CPU requests reported in status from the cgroup v2 readback.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

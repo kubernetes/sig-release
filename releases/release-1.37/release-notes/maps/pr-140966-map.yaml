@@ -1,0 +1,10 @@
+pr: 140966
+releasenote:
+  text: |-
+    `client-go`: Added the `Bookmark` and `LastStoreSyncResourceVersion` methods to `FakeCustomStore` so that it satisfies the `cache.Store` interface again, after those methods were added to the interface in `v0.36`.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

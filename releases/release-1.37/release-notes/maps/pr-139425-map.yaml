@@ -1,0 +1,23 @@
+pr: 139425
+releasenote:
+  text: |-
+    Added support for dynamically resizing memory-backed volumes behind the Alpha `InPlacePodVerticalScalingMemoryBackedVolumes` feature gate.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - cli
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kubectl
+  - code-generation
+  - e2e-test-framework
+pr_body: ""

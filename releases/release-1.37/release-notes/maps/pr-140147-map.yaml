@@ -1,0 +1,12 @@
+pr: 140147
+releasenote:
+  text: |-
+    Added the `trigger` (`periodic` or `node_change`) and `outcome` (`changed` or `noop`) labels to the Alpha route controller metric `route_controller_route_sync_total`. This lets operators observe how often periodic reconciliation corrects route drift versus running as a no-op.
+  sigs:
+  - cloud-provider
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - cloudprovider
+pr_body: ""

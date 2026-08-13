@@ -1,0 +1,10 @@
+pr: 140805
+releasenote:
+  text: |-
+    Promoted the `PLEGOnDemandRelist` feature gate to GA.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas: []
+pr_body: ""

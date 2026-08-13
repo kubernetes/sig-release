@@ -1,0 +1,15 @@
+pr: 140052
+releasenote:
+  text: |-
+    Added the `DefaultPodSysctls` `kubelet` configuration field for default Pod sysctls on Linux nodes, behind the Alpha `DefaultPodSysctls` feature gate (disabled by default).
+  sigs:
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

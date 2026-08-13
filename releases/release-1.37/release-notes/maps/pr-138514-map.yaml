@@ -1,0 +1,12 @@
+pr: 138514
+releasenote:
+  text: |-
+    Fixed a `kubelet` bug where init containers could be skipped when a Pod sandbox was recreated while a main container from the previous sandbox was still known to the container runtime.
+  sigs:
+  - node
+  kinds:
+  - bug
+  - regression
+  areas:
+  - kubelet
+pr_body: ""

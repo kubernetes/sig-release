@@ -1,0 +1,12 @@
+pr: 140728
+releasenote:
+  text: |-
+    Promoted the `InPlacePodVerticalScalingInitContainers` feature gate to GA.
+  sigs:
+  - apps
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet
+pr_body: ""

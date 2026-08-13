@@ -1,0 +1,12 @@
+pr: 140511
+releasenote:
+  text: |-
+    Added the `client-go` informer metrics `informer_store_resource_version`, `informer_queued_items`, and `informer_processing_latency_seconds` to `kube-scheduler`, labelled `name="kube-scheduler"`.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

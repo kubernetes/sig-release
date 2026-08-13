@@ -1,0 +1,12 @@
+pr: 140785
+releasenote:
+  text: |-
+    Promoted the `AllowUnsafeMalformedObjectDeletion` feature gate to Beta, enabled by default. List errors for objects that cannot be read from storage include the first underlying cause in the error message.
+  sigs:
+  - api-machinery
+  - etcd
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

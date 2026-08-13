@@ -1,0 +1,23 @@
+pr: 140740
+releasenote:
+  text: |-
+    Updated `google.golang.org/grpc` to `v1.82.1`, which adds a server-side limit on HTTP/2 control frame flooding. It also removes the `GRPC_GO_EXPERIMENTAL_DISABLE_STRICT_PATH_CHECKING` environment variable, so strict path checking is now always on.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - network
+  - node
+  - scheduling
+  kinds:
+  - dependency
+  areas:
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - dependency
+pr_body: ""

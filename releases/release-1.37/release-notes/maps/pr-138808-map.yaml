@@ -1,0 +1,38 @@
+pr: 138808
+releasenote:
+  text: |-
+    Changed the `kube-apiserver` CBOR encoder to encode collections item by item instead of all at once.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - autoscaling
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - contributor-experience
+  - instrumentation
+  - network
+  - node
+  - release
+  - scalability
+  - scheduling
+  - storage
+  - testing
+  - windows
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - provider/gcp
+  - release-eng
+  - kubeadm
+  - code-generation
+  - ipvs
+  - dependency
+  - stable-metrics
+pr_body: ""

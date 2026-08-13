@@ -1,0 +1,13 @@
+pr: 140488
+releasenote:
+  text: |-
+    Promoted the `PodReadyToStartContainers` condition to GA.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - kubelet
+pr_body: ""

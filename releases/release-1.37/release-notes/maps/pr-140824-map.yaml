@@ -1,0 +1,12 @@
+pr: 140824
+releasenote:
+  text: |-
+    Added an `error` outcome to the `route_sync_total` metric for failed route reconciles, alongside the existing `changed` and `noop` outcomes.
+  sigs:
+  - cloud-provider
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - cloudprovider
+pr_body: ""

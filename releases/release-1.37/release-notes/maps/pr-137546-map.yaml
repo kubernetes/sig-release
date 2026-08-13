@@ -1,0 +1,12 @@
+pr: 137546
+releasenote:
+  text: |-
+    Promoted the `DRAResourceClaimDeviceStatus` feature gate to GA.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

@@ -1,0 +1,10 @@
+pr: 135735
+releasenote:
+  text: |-
+    Fixed handling of a certificate authority path outside the `.kube/config` directory on Windows, which was converted to a relative path instead of matching the behavior on other operating systems.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas: []
+pr_body: ""

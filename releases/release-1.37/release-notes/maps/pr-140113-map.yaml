@@ -1,0 +1,16 @@
+pr: 140113
+releasenote:
+  text: |-
+    Added Alpha support for binding service account tokens to webhook configurations with attestations, behind the `APIServerWebhookAuthenticationToken` feature gate. This enables API servers to authenticate to admission webhooks with scoped tokens.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - apiserver
+  - code-generation
+pr_body: ""

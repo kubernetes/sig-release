@@ -1,0 +1,19 @@
+pr: 140013
+releasenote:
+  text: |-
+    Added support for specifying bind mount options (`noexec`, `nodev`, `nosuid`) per container volume mount.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - code-generation
+pr_body: ""

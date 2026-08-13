@@ -1,0 +1,11 @@
+pr: 140274
+releasenote:
+  text: |-
+    `kubelet`/DRA: Fixed a bug where retrying a partially failed `PrepareResources` caused duplicate CDI device IDs to be passed to the CRI runtime, which could cause container start to fail.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

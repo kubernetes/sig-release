@@ -1,0 +1,18 @@
+pr: 140717
+releasenote:
+  text: |-
+    Added CompositePodGroup support to the building block APIs and the `workloadbuilder` library.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - code-generation
+pr_body: ""

@@ -1,0 +1,22 @@
+pr: 137050
+releasenote:
+  text: |-
+    Added the `.spec.evictionResponders` Pod field, along with the EvictionRequest and Eviction resources. A set of requesters and responders can use these to coordinate graceful eviction of Pods.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - cli
+  - etcd
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - kubectl
+  - conformance
+  - code-generation
+pr_body: ""

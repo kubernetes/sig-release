@@ -1,0 +1,13 @@
+pr: 139110
+releasenote:
+  text: |-
+    DRA: Locked the `DRAPrioritizedList` feature gate to enabled by default. The Prioritized List feature reached GA in `v1.36` and can no longer be disabled.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+pr_body: ""

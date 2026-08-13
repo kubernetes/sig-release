@@ -1,0 +1,16 @@
+pr: 140422
+releasenote:
+  text: |-
+    Added the `owner_api_group` and `owner_api_kind` labels to the `dynamic_resource_allocation_resourceclaim_creates_total` metric to distinguish ResourceClaims created for Pods from those created for PodGroups under the `DRAWorkloadResourceClaims` feature gate.
+  sigs:
+  - api-machinery
+  - apps
+  - instrumentation
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+pr_body: ""

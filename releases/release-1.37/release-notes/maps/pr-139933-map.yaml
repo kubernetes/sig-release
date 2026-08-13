@@ -1,0 +1,21 @@
+pr: 139933
+releasenote:
+  text: |-
+    DRA: Added Alpha support for `DRAOptionalNodeOperations` (the `SkipNodeOperations` field in ResourceSlice and ResourceClaim), which allows skipping node-level preparation and cleanup operations.
+  sigs:
+  - api-machinery
+  - autoscaling
+  - instrumentation
+  - node
+  - release
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - release-eng
+  - code-generation
+pr_body: ""

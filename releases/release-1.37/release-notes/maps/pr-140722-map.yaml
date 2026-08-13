@@ -1,0 +1,13 @@
+pr: 140722
+releasenote:
+  text: |-
+    Promoted the DRA metadata API to Beta. DRA driver authors that enable the feature must explicitly select which versions to support in their metadata output.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+pr_body: ""

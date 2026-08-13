@@ -1,0 +1,12 @@
+pr: 140860
+releasenote:
+  text: |-
+    Added the `storage_to_cache` stage to the Alpha `apiserver_watch_events_dispatch_duration_seconds` metric to track the latency from backend decode to watch cache ingestion.
+  sigs:
+  - api-machinery
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - apiserver
+pr_body: ""

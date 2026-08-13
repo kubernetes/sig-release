@@ -1,0 +1,11 @@
+pr: 139522
+releasenote:
+  text: |-
+    Fixed a bug where non-admitted Pods could briefly count against the allocated budget, causing spurious admission failures for reasonably sized Pods.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
+pr_body: ""

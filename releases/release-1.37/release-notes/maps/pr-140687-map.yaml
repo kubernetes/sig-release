@@ -1,0 +1,12 @@
+pr: 140687
+releasenote:
+  text: |-
+    Added generated declarative validation functions for Go consumers of the DRA device metadata `v1alpha1` API.
+  sigs:
+  - node
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - dependency
+pr_body: ""

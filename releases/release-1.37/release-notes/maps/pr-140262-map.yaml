@@ -1,0 +1,13 @@
+pr: 140262
+releasenote:
+  text: |-
+    Fixed Pod-level MemoryQoS memory protection (`memory.min` and `memory.low`) being silently dropped during in-place Pod resize, and added Pod-level `memory.high` enforcement when the `PodLevelResources` feature gate is enabled.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+pr_body: ""
