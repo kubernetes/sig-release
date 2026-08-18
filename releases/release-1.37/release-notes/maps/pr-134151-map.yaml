@@ -1,0 +1,5 @@
+pr: 134151
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the no-op `DefaultWatchCacheSize` field of `k8s.io/apiserver/pkg/server/options.EtcdOptions`.

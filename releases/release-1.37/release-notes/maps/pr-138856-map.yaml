@@ -1,0 +1,5 @@
+pr: 138856
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubelet` to recover from corrupted subpath mount points (for example, stale NFS file handle) during container restart instead of leaving the pod stuck in `CreateContainerConfigError`.

@@ -1,0 +1,5 @@
+pr: 139218
+pr_body: ""
+releasenote:
+  text: |-
+    Updated pod group preemption errors to be prefixed with `pod group preemption:` message.
