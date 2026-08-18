@@ -154,10 +154,11 @@ Check out the full details of the Kubernetes 1.XX release in our [release notes]
 
 ### Availability
 
-Kubernetes v1.XX is available for download on [GitHub](https://github.com/kubernetes/kubernetes/releases/tag/v1.XX.0) or on the [Kubernetes download page](/releases/download/). 
+[Kubernetes v1.XX](/releases/1.XX/) is available for download from
+the [Kubernetes download page](/releases/download/) or directly from [GitHub](https://github.com/kubernetes/kubernetes/releases/tag/v1.XX.0).
 
-To get started with Kubernetes, check out these [tutorials](/docs/tutorials/) or run local Kubernetes clusters using [minikube](https://minikube.sigs.k8s.io/).
-You can also easily install v1.XX using [kubeadm](/docs/setup/independent/create-cluster-kubeadm/). 
+To get started with Kubernetes, check out [these tutorials](/docs/tutorials/) or run local Kubernetes clusters using [minikube](https://minikube.sigs.k8s.io/).
+You can also easily install v1.XX using [kubeadm](/docs/setup/independent/create-cluster-kubeadm/).
 
 ### Release Team
 
