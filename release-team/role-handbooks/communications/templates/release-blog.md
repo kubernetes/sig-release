@@ -21,7 +21,7 @@ This outline can be used as reference for writing up the release blog. The follo
     * Release notes are always included in the blog announcement.
 * Availability of release
     * Link to where the release can be downloaded on GitHub.
-    * Include interactive tutorials on the current release or how to get started with Kubernetes when relevant.
+    * Include tutorials on the current release or how to get started with Kubernetes when relevant.
 * Release Team
     * Mention job of release team
     * Important to highlight company contributions in a way that is respectful to the entire community – including a copy of the release team in relation to the project and their work
@@ -154,10 +154,11 @@ Check out the full details of the Kubernetes 1.XX release in our [release notes]
 
 ### Availability
 
-Kubernetes v1.XX is available for download on [GitHub](https://github.com/kubernetes/kubernetes/releases/tag/v1.XX.0) or on the [Kubernetes download page](/releases/download/). 
+[Kubernetes v1.XX](/releases/1.XX/) is available for download from
+the [Kubernetes download page](/releases/download/) or directly from [GitHub](https://github.com/kubernetes/kubernetes/releases/tag/v1.XX.0).
 
-To get started with Kubernetes, check out these [interactive tutorials](/docs/tutorials/) or run local Kubernetes clusters using [minikube](https://minikube.sigs.k8s.io/).
-You can also easily install v1.XX using [kubeadm](/docs/setup/independent/create-cluster-kubeadm/). 
+To get started with Kubernetes, check out [these tutorials](/docs/tutorials/) or run local Kubernetes clusters using [minikube](https://minikube.sigs.k8s.io/).
+You can also easily install v1.XX using [kubeadm](/docs/setup/independent/create-cluster-kubeadm/).
 
 ### Release Team
 
