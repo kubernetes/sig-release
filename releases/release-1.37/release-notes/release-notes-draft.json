@@ -2415,8 +2415,8 @@
   },
   "138572": {
     "commit": "901087fb35049e1a7d115fd0c9d8586399468615",
-    "text": "Converted the `DisruptionMode` enum field to a struct to support future extensibility. Promoted the `scheduling.k8s.io` API group from `v1alpha2` to `v1alpha3` and dropped `v1alpha2` entirely.\nACTION REQUIRED: Remove all `v1alpha2` objects from the `kube-apiserver` before performing the cluster update.",
-    "markdown": "Converted the `DisruptionMode` enum field to a struct to support future extensibility. Promoted the `scheduling.k8s.io` API group from `v1alpha2` to `v1alpha3` and dropped `v1alpha2` entirely.\n  ACTION REQUIRED: Remove all `v1alpha2` objects from the `kube-apiserver` before performing the cluster update. ([#138572](https://github.com/kubernetes/kubernetes/pull/138572), [@dom4ha](https://github.com/dom4ha)) [SIG API Machinery, Apps, CLI, Etcd, Node, Scheduling and Testing]",
+    "text": "ACTION REQUIRED: Converted the `DisruptionMode` enum field to a struct to support future extensibility. Promoted the `scheduling.k8s.io` API group from `v1alpha2` to `v1alpha3` and dropped `v1alpha2` entirely.\nRemove all `v1alpha2` objects from the `kube-apiserver` before performing the cluster update.",
+    "markdown": "ACTION REQUIRED: Converted the `DisruptionMode` enum field to a struct to support future extensibility. Promoted the `scheduling.k8s.io` API group from `v1alpha2` to `v1alpha3` and dropped `v1alpha2` entirely.\n  Remove all `v1alpha2` objects from the `kube-apiserver` before performing the cluster update. ([#138572](https://github.com/kubernetes/kubernetes/pull/138572), [@dom4ha](https://github.com/dom4ha)) [SIG API Machinery, Apps, CLI, Etcd, Node, Scheduling and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -5227,8 +5227,8 @@
   },
   "139623": {
     "commit": "df519ae7b8f39189a6cc72b9c53c9f1890adfe41",
-    "text": "Fixed a bug in the DRA `kubelet` plugin helper where drivers with names longer than ~30 characters could not enable rolling updates because the plugin registration socket path exceeded the `AF_UNIX` path length limit. Rolling-update registration sockets now pick the shortest basename that fits under the configured registry directory, preferring `<driver>-<Pod UID>-reg.sock`, then `<driver>-<hashed UID>-reg.sock`, then `dra-<hashed driver+UID>-reg.sock`.",
-    "markdown": "Fixed a bug in the DRA `kubelet` plugin helper where drivers with names longer than ~30 characters could not enable rolling updates because the plugin registration socket path exceeded the `AF_UNIX` path length limit. Rolling-update registration sockets now pick the shortest basename that fits under the configured registry directory, preferring `<driver>-<Pod UID>-reg.sock`, then `<driver>-<hashed UID>-reg.sock`, then `dra-<hashed driver+UID>-reg.sock`. ([#139623](https://github.com/kubernetes/kubernetes/pull/139623), [@vishalanarase](https://github.com/vishalanarase)) [SIG Node and Testing]",
+    "text": "Fixed a bug in the DRA `kubelet` plugin helper where drivers with names longer than ~30 characters could not enable rolling updates because the plugin registration socket path exceeded the `AF_UNIX` path length limit. Rolling-update registration sockets now pick the shortest basename that fits under the configured registry directory, preferring `\u003cdriver\u003e-\u003cPod UID\u003e-reg.sock`, then `\u003cdriver\u003e-\u003chashed UID\u003e-reg.sock`, then `dra-\u003chashed driver+UID\u003e-reg.sock`.",
+    "markdown": "Fixed a bug in the DRA `kubelet` plugin helper where drivers with names longer than ~30 characters could not enable rolling updates because the plugin registration socket path exceeded the `AF_UNIX` path length limit. Rolling-update registration sockets now pick the shortest basename that fits under the configured registry directory, preferring `\u003cdriver\u003e-\u003cPod UID\u003e-reg.sock`, then `\u003cdriver\u003e-\u003chashed UID\u003e-reg.sock`, then `dra-\u003chashed driver+UID\u003e-reg.sock`. ([#139623](https://github.com/kubernetes/kubernetes/pull/139623), [@vishalanarase](https://github.com/vishalanarase)) [SIG Node and Testing]",
     "author": "vishalanarase",
     "author_url": "https://github.com/vishalanarase",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/139623",
@@ -6034,8 +6034,8 @@
   },
   "139956": {
     "commit": "d23b43180872faf7ceefd0e57effe44ce90f058b",
-    "text": "Graduated the `SELinuxMount` feature gate to GA. The feature is now enabled by default in `v1.37`, which may break existing workloads in clusters with SELinux enabled. Please see [the Kubernetes blog post](https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/) to identify potentially problematic workloads in a `v1.36` cluster and how to fix them or opt out of `SELinuxMount` changes before upgrading to `v1.37`. Admins of clusters without SELinux enabled can ignore this release note.",
-    "markdown": "Graduated the `SELinuxMount` feature gate to GA. The feature is now enabled by default in `v1.37`, which may break existing workloads in clusters with SELinux enabled. Please see [the Kubernetes blog post](https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/) to identify potentially problematic workloads in a `v1.36` cluster and how to fix them or opt out of `SELinuxMount` changes before upgrading to `v1.37`. Admins of clusters without SELinux enabled can ignore this release note. ([#139956](https://github.com/kubernetes/kubernetes/pull/139956), [@jsafrane](https://github.com/jsafrane)) [SIG API Machinery, Apps and Node]",
+    "text": "ACTION REQUIRED: Graduated the `SELinuxMount` feature gate to GA. The feature is now enabled by default in `v1.37`, which may break existing workloads in clusters with SELinux enabled. Please see [the Kubernetes blog post](https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/) to identify potentially problematic workloads in a `v1.36` cluster and how to fix them or opt out of `SELinuxMount` changes before upgrading to `v1.37`. Admins of clusters without SELinux enabled can ignore this release note.",
+    "markdown": "ACTION REQUIRED: Graduated the `SELinuxMount` feature gate to GA. The feature is now enabled by default in `v1.37`, which may break existing workloads in clusters with SELinux enabled. Please see [the Kubernetes blog post](https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/) to identify potentially problematic workloads in a `v1.36` cluster and how to fix them or opt out of `SELinuxMount` changes before upgrading to `v1.37`. Admins of clusters without SELinux enabled can ignore this release note. ([#139956](https://github.com/kubernetes/kubernetes/pull/139956), [@jsafrane](https://github.com/jsafrane)) [SIG API Machinery, Apps and Node]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -6250,8 +6250,8 @@
   },
   "140006": {
     "commit": "f8c9f76821588a5e6b0b2d4e3adbd6e18384940a",
-    "text": "Added a defense-in-depth check to the `NodeRestriction` admission plugin for PodCertificateRequests. A node can only create a PodCertificateRequest referring to a particular signer name if the Pod actually mounts a `podCertificate` projected volume source that refers to that signer name, or if an authorization check for the user (with `verb=request-podcertificate-signer` and `resource=<signerName>`) succeeds.",
-    "markdown": "Added a defense-in-depth check to the `NodeRestriction` admission plugin for PodCertificateRequests. A node can only create a PodCertificateRequest referring to a particular signer name if the Pod actually mounts a `podCertificate` projected volume source that refers to that signer name, or if an authorization check for the user (with `verb=request-podcertificate-signer` and `resource=<signerName>`) succeeds. ([#140006](https://github.com/kubernetes/kubernetes/pull/140006), [@ahmedtd](https://github.com/ahmedtd)) [SIG Auth and Testing]",
+    "text": "Added a defense-in-depth check to the `NodeRestriction` admission plugin for PodCertificateRequests. A node can only create a PodCertificateRequest referring to a particular signer name if the Pod actually mounts a `podCertificate` projected volume source that refers to that signer name, or if an authorization check for the user (with `verb=request-podcertificate-signer` and `resource=\u003csignerName\u003e`) succeeds.",
+    "markdown": "Added a defense-in-depth check to the `NodeRestriction` admission plugin for PodCertificateRequests. A node can only create a PodCertificateRequest referring to a particular signer name if the Pod actually mounts a `podCertificate` projected volume source that refers to that signer name, or if an authorization check for the user (with `verb=request-podcertificate-signer` and `resource=\u003csignerName\u003e`) succeeds. ([#140006](https://github.com/kubernetes/kubernetes/pull/140006), [@ahmedtd](https://github.com/ahmedtd)) [SIG Auth and Testing]",
     "author": "ahmedtd",
     "author_url": "https://github.com/ahmedtd",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/140006",
@@ -7004,8 +7004,8 @@
   },
   "140180": {
     "commit": "dd3e7940568f7156dabf8b3f13295e6a6469b4c8",
-    "text": "Updated default preemption to include the message `preemption: found a potential placement for pod on node <node_name>, preempting <victim_count> victims` in the `FailedScheduling` event and `PodScheduled` condition when it finds a potential Node for a Pod.",
-    "markdown": "Updated default preemption to include the message `preemption: found a potential placement for pod on node <node_name>, preempting <victim_count> victims` in the `FailedScheduling` event and `PodScheduled` condition when it finds a potential Node for a Pod. ([#140180](https://github.com/kubernetes/kubernetes/pull/140180), [@Argh4k](https://github.com/Argh4k)) [SIG Scheduling]",
+    "text": "Updated default preemption to include the message `preemption: found a potential placement for pod on node \u003cnode_name\u003e, preempting \u003cvictim_count\u003e victims` in the `FailedScheduling` event and `PodScheduled` condition when it finds a potential Node for a Pod.",
+    "markdown": "Updated default preemption to include the message `preemption: found a potential placement for pod on node \u003cnode_name\u003e, preempting \u003cvictim_count\u003e victims` in the `FailedScheduling` event and `PodScheduled` condition when it finds a potential Node for a Pod. ([#140180](https://github.com/kubernetes/kubernetes/pull/140180), [@Argh4k](https://github.com/Argh4k)) [SIG Scheduling]",
     "author": "Argh4k",
     "author_url": "https://github.com/Argh4k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/140180",
@@ -7527,8 +7527,8 @@
   },
   "140311": {
     "commit": "e1ba634d9041534a2c8364bea10eb70ead347a27",
-    "text": "Updated PodGroup status to include the `pod group preemption found a placement for podgroup, preempting <victim_count> victims` message when workload-aware preemption finds a placement.",
-    "markdown": "Updated PodGroup status to include the `pod group preemption found a placement for podgroup, preempting <victim_count> victims` message when workload-aware preemption finds a placement. ([#140311](https://github.com/kubernetes/kubernetes/pull/140311), [@Argh4k](https://github.com/Argh4k)) [SIG Scheduling and Testing]",
+    "text": "Updated PodGroup status to include the `pod group preemption found a placement for podgroup, preempting \u003cvictim_count\u003e victims` message when workload-aware preemption finds a placement.",
+    "markdown": "Updated PodGroup status to include the `pod group preemption found a placement for podgroup, preempting \u003cvictim_count\u003e victims` message when workload-aware preemption finds a placement. ([#140311](https://github.com/kubernetes/kubernetes/pull/140311), [@Argh4k](https://github.com/Argh4k)) [SIG Scheduling and Testing]",
     "author": "Argh4k",
     "author_url": "https://github.com/Argh4k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/140311",

@@ -8,3 +8,5 @@ releasenote:
   - testing
   kinds:
   - feature
+  areas:
+  - test
