@@ -1,0 +1,14 @@
+pr: 135905
+pr_body: ""
+releasenote:
+  text: |-
+    Added three different subtypes of the cluster event resource "Pod": "AssignedPod", "UnscheduledPod", "TargetPod". Plugins can and are expected to register to specific pod events for better performance.
+  sigs:
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

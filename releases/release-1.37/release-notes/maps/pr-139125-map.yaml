@@ -1,0 +1,13 @@
+pr: 139125
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the `apiserver_storage_list_*` metrics to include `storage` and `index` labels to distinguish the storage backend and lookup path used to serve LIST requests.
+  sigs:
+  - api-machinery
+  - etcd
+  - instrumentation
+  kinds:
+  - feature
+  areas:
+  - apiserver

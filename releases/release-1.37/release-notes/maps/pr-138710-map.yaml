@@ -1,0 +1,9 @@
+pr: 138710
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the scheduler to avoid redundant preemption attempts during PodGroup scheduling when terminating victim pods are already present on the nominated nodes.
+  sigs:
+  - scheduling
+  kinds:
+  - feature

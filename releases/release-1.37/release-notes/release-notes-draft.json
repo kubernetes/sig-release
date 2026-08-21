@@ -190,8 +190,8 @@
   },
   "134151": {
     "commit": "ea692abff6bb8ed2b7e20d7e27de76f77bf083d6",
-    "text": "The no-op `DefaultWatchCacheSize` field of `k8s.io/apiserver/pkg/server/options.EtcdOptions` is now removed.",
-    "markdown": "The no-op `DefaultWatchCacheSize` field of `k8s.io/apiserver/pkg/server/options.EtcdOptions` is now removed. ([#134151](https://github.com/kubernetes/kubernetes/pull/134151), [@ialidzhikov](https://github.com/ialidzhikov)) [SIG API Machinery]",
+    "text": "Removed the no-op `DefaultWatchCacheSize` field of `k8s.io/apiserver/pkg/server/options.EtcdOptions`.",
+    "markdown": "Removed the no-op `DefaultWatchCacheSize` field of `k8s.io/apiserver/pkg/server/options.EtcdOptions`. ([#134151](https://github.com/kubernetes/kubernetes/pull/134151), [@ialidzhikov](https://github.com/ialidzhikov)) [SIG API Machinery]",
     "author": "ialidzhikov",
     "author_url": "https://github.com/ialidzhikov",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/134151",
@@ -350,8 +350,8 @@
   },
   "135905": {
     "commit": "7ca181be9704208a57ed45dd3c506f81cfe2d463",
-    "text": "Three different subtypes of the cluster event resource \"Pod\" are being added: \"AssignedPod\", \"UnscheduledPod\", \"TargetPod\". Plugins can and are expected to register to specific pod events for better performance.",
-    "markdown": "Three different subtypes of the cluster event resource \"Pod\" are being added: \"AssignedPod\", \"UnscheduledPod\", \"TargetPod\". Plugins can and are expected to register to specific pod events for better performance. ([#135905](https://github.com/kubernetes/kubernetes/pull/135905), [@iomarsayed](https://github.com/iomarsayed)) [SIG Node, Scheduling, Storage and Testing]",
+    "text": "Added three different subtypes of the cluster event resource \"Pod\": \"AssignedPod\", \"UnscheduledPod\", \"TargetPod\". Plugins can and are expected to register to specific pod events for better performance.",
+    "markdown": "Added three different subtypes of the cluster event resource \"Pod\": \"AssignedPod\", \"UnscheduledPod\", \"TargetPod\". Plugins can and are expected to register to specific pod events for better performance. ([#135905](https://github.com/kubernetes/kubernetes/pull/135905), [@iomarsayed](https://github.com/iomarsayed)) [SIG Node, Scheduling, Storage and Testing]",
     "author": "iomarsayed",
     "author_url": "https://github.com/iomarsayed",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/135905",
@@ -857,8 +857,8 @@
   },
   "137290": {
     "commit": "3e204c3d52c9937e588d7f8fb5478134e69c5900",
-    "text": "CleanupPods was always called with the original empty slice, regardless of how many pods were appended to createdPods during the test — causing all created pods to be silently leaked after each test run.\n\nThe fix wraps the call in a closure so createdPods is evaluated at deferred execution time, when it contains all pods created during the test:",
-    "markdown": "CleanupPods was always called with the original empty slice, regardless of how many pods were appended to createdPods during the test — causing all created pods to be silently leaked after each test run.\n  \n  The fix wraps the call in a closure so createdPods is evaluated at deferred execution time, when it contains all pods created during the test: ([#137290](https://github.com/kubernetes/kubernetes/pull/137290), [@bishal7679](https://github.com/bishal7679)) [SIG Scheduling and Testing]",
+    "text": "CleanupPods was always called with the original empty slice, regardless of how many pods were appended to createdPods during the test \u2014 causing all created pods to be silently leaked after each test run.\n\nThe fix wraps the call in a closure so createdPods is evaluated at deferred execution time, when it contains all pods created during the test:",
+    "markdown": "CleanupPods was always called with the original empty slice, regardless of how many pods were appended to createdPods during the test \u2014 causing all created pods to be silently leaked after each test run.\n  \n  The fix wraps the call in a closure so createdPods is evaluated at deferred execution time, when it contains all pods created during the test: ([#137290](https://github.com/kubernetes/kubernetes/pull/137290), [@bishal7679](https://github.com/bishal7679)) [SIG Scheduling and Testing]",
     "author": "bishal7679",
     "author_url": "https://github.com/bishal7679",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/137290",
@@ -2415,8 +2415,8 @@
   },
   "138572": {
     "commit": "901087fb35049e1a7d115fd0c9d8586399468615",
-    "text": "Converted the `DisruptionMode` enum field to a struct to support future extensibility. Promoted the `scheduling.k8s.io` API group from `v1alpha2` to `v1alpha3` and dropped `v1alpha2` entirely.\nACTION REQUIRED: Remove all `v1alpha2` objects from the `kube-apiserver` before performing the cluster update.",
-    "markdown": "Converted the `DisruptionMode` enum field to a struct to support future extensibility. Promoted the `scheduling.k8s.io` API group from `v1alpha2` to `v1alpha3` and dropped `v1alpha2` entirely.\n  ACTION REQUIRED: Remove all `v1alpha2` objects from the `kube-apiserver` before performing the cluster update. ([#138572](https://github.com/kubernetes/kubernetes/pull/138572), [@dom4ha](https://github.com/dom4ha)) [SIG API Machinery, Apps, CLI, Etcd, Node, Scheduling and Testing]",
+    "text": "ACTION REQUIRED: Converted the `DisruptionMode` enum field to a struct to support future extensibility. Promoted the `scheduling.k8s.io` API group from `v1alpha2` to `v1alpha3` and dropped `v1alpha2` entirely.\nRemove all `v1alpha2` objects from the `kube-apiserver` before performing the cluster update.",
+    "markdown": "ACTION REQUIRED: Converted the `DisruptionMode` enum field to a struct to support future extensibility. Promoted the `scheduling.k8s.io` API group from `v1alpha2` to `v1alpha3` and dropped `v1alpha2` entirely.\n  Remove all `v1alpha2` objects from the `kube-apiserver` before performing the cluster update. ([#138572](https://github.com/kubernetes/kubernetes/pull/138572), [@dom4ha](https://github.com/dom4ha)) [SIG API Machinery, Apps, CLI, Etcd, Node, Scheduling and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -2749,8 +2749,8 @@
   },
   "138710": {
     "commit": "9f8e03c4d0d815c45a517f76f4b4ea4139182233",
-    "text": "The scheduler now avoids redundant preemption attempts during PodGroup scheduling when terminating victim pods are already present on the nominated nodes.",
-    "markdown": "The scheduler now avoids redundant preemption attempts during PodGroup scheduling when terminating victim pods are already present on the nominated nodes. ([#138710](https://github.com/kubernetes/kubernetes/pull/138710), [@mm4tt](https://github.com/mm4tt)) [SIG Scheduling]",
+    "text": "Updated the scheduler to avoid redundant preemption attempts during PodGroup scheduling when terminating victim pods are already present on the nominated nodes.",
+    "markdown": "Updated the scheduler to avoid redundant preemption attempts during PodGroup scheduling when terminating victim pods are already present on the nominated nodes. ([#138710](https://github.com/kubernetes/kubernetes/pull/138710), [@mm4tt](https://github.com/mm4tt)) [SIG Scheduling]",
     "author": "mm4tt",
     "author_url": "https://github.com/mm4tt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/138710",
@@ -2903,8 +2903,8 @@
   },
   "138757": {
     "commit": "29d76f2ed81fd1b7930294545463939e22414932",
-    "text": "Workload-aware preemption now preempts victims so that as many as possible of the preemptor pods can be scheduled.",
-    "markdown": "Workload-aware preemption now preempts victims so that as many as possible of the preemptor pods can be scheduled. ([#138757](https://github.com/kubernetes/kubernetes/pull/138757), [@jdzikowski](https://github.com/jdzikowski)) [SIG Scheduling and Testing]",
+    "text": "Updated workload-aware preemption to preempt victims so that as many as possible of the preemptor pods can be scheduled.",
+    "markdown": "Updated workload-aware preemption to preempt victims so that as many as possible of the preemptor pods can be scheduled. ([#138757](https://github.com/kubernetes/kubernetes/pull/138757), [@jdzikowski](https://github.com/jdzikowski)) [SIG Scheduling and Testing]",
     "author": "jdzikowski",
     "author_url": "https://github.com/jdzikowski",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/138757",
@@ -3197,8 +3197,8 @@
   },
   "138856": {
     "commit": "40dab40837addd27696775e0d8da0571785cadd6",
-    "text": "Kubelet now recovers from corrupted subpath mount points (e.g. stale NFS file handle) during container restart instead of leaving the pod stuck in CreateContainerConfigError.",
-    "markdown": "Kubelet now recovers from corrupted subpath mount points (e.g. stale NFS file handle) during container restart instead of leaving the pod stuck in CreateContainerConfigError. ([#138856](https://github.com/kubernetes/kubernetes/pull/138856), [@RomanBednar](https://github.com/RomanBednar)) [SIG Storage]",
+    "text": "Fixed `kubelet` to recover from corrupted subpath mount points (for example, stale NFS file handle) during container restart instead of leaving the pod stuck in `CreateContainerConfigError`.",
+    "markdown": "Fixed `kubelet` to recover from corrupted subpath mount points (for example, stale NFS file handle) during container restart instead of leaving the pod stuck in `CreateContainerConfigError`. ([#138856](https://github.com/kubernetes/kubernetes/pull/138856), [@RomanBednar](https://github.com/RomanBednar)) [SIG Storage]",
     "author": "RomanBednar",
     "author_url": "https://github.com/RomanBednar",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/138856",
@@ -4002,8 +4002,8 @@
   },
   "139125": {
     "commit": "001e574e12abd57d4f7a64b08aedd0f05088de35",
-    "text": "The `apiserver_storage_list_*` metrics now include `storage` and `index` labels to distinguish the storage backend and lookup path used to serve LIST requests.",
-    "markdown": "The `apiserver_storage_list_*` metrics now include `storage` and `index` labels to distinguish the storage backend and lookup path used to serve LIST requests. ([#139125](https://github.com/kubernetes/kubernetes/pull/139125), [@yedou37](https://github.com/yedou37)) [SIG API Machinery, Etcd and Instrumentation]",
+    "text": "Updated the `apiserver_storage_list_*` metrics to include `storage` and `index` labels to distinguish the storage backend and lookup path used to serve LIST requests.",
+    "markdown": "Updated the `apiserver_storage_list_*` metrics to include `storage` and `index` labels to distinguish the storage backend and lookup path used to serve LIST requests. ([#139125](https://github.com/kubernetes/kubernetes/pull/139125), [@yedou37](https://github.com/yedou37)) [SIG API Machinery, Etcd and Instrumentation]",
     "author": "yedou37",
     "author_url": "https://github.com/yedou37",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/139125",
@@ -4204,8 +4204,8 @@
   },
   "139218": {
     "commit": "ec62fa4dca405a65f04a68c2b6c90777de28fb58",
-    "text": "Errors coming from pod group preemption are now prefixed with `pod group preemption:` message.",
-    "markdown": "Errors coming from pod group preemption are now prefixed with `pod group preemption:` message. ([#139218](https://github.com/kubernetes/kubernetes/pull/139218), [@Argh4k](https://github.com/Argh4k)) [SIG Scheduling]",
+    "text": "Updated pod group preemption errors to be prefixed with `pod group preemption:` message.",
+    "markdown": "Updated pod group preemption errors to be prefixed with `pod group preemption:` message. ([#139218](https://github.com/kubernetes/kubernetes/pull/139218), [@Argh4k](https://github.com/Argh4k)) [SIG Scheduling]",
     "author": "Argh4k",
     "author_url": "https://github.com/Argh4k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/139218",
@@ -6034,8 +6034,8 @@
   },
   "139956": {
     "commit": "d23b43180872faf7ceefd0e57effe44ce90f058b",
-    "text": "Graduated the `SELinuxMount` feature gate to GA. The feature is now enabled by default in `v1.37`, which may break existing workloads in clusters with SELinux enabled. Please see [the Kubernetes blog post](https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/) to identify potentially problematic workloads in a `v1.36` cluster and how to fix them or opt out of `SELinuxMount` changes before upgrading to `v1.37`. Admins of clusters without SELinux enabled can ignore this release note.",
-    "markdown": "Graduated the `SELinuxMount` feature gate to GA. The feature is now enabled by default in `v1.37`, which may break existing workloads in clusters with SELinux enabled. Please see [the Kubernetes blog post](https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/) to identify potentially problematic workloads in a `v1.36` cluster and how to fix them or opt out of `SELinuxMount` changes before upgrading to `v1.37`. Admins of clusters without SELinux enabled can ignore this release note. ([#139956](https://github.com/kubernetes/kubernetes/pull/139956), [@jsafrane](https://github.com/jsafrane)) [SIG API Machinery, Apps and Node]",
+    "text": "ACTION REQUIRED: Graduated the `SELinuxMount` feature gate to GA. The feature is now enabled by default in `v1.37`, which may break existing workloads in clusters with SELinux enabled. Please see [the Kubernetes blog post](https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/) to identify potentially problematic workloads in a `v1.36` cluster and how to fix them or opt out of `SELinuxMount` changes before upgrading to `v1.37`. Admins of clusters without SELinux enabled can ignore this release note.",
+    "markdown": "ACTION REQUIRED: Graduated the `SELinuxMount` feature gate to GA. The feature is now enabled by default in `v1.37`, which may break existing workloads in clusters with SELinux enabled. Please see [the Kubernetes blog post](https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/) to identify potentially problematic workloads in a `v1.36` cluster and how to fix them or opt out of `SELinuxMount` changes before upgrading to `v1.37`. Admins of clusters without SELinux enabled can ignore this release note. ([#139956](https://github.com/kubernetes/kubernetes/pull/139956), [@jsafrane](https://github.com/jsafrane)) [SIG API Machinery, Apps and Node]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -9015,6 +9015,40 @@
     ],
     "is_mapped": true
   },
+  "141104": {
+    "commit": "4e8291a5cce6987529042f89df0581e521f0d4af",
+    "text": "Fixed the ResourceClaim controller mutating the shared informer cache when creating a ResourceClaim from a ResourceClaimTemplate that has annotations.",
+    "markdown": "Fixed the ResourceClaim controller mutating the shared informer cache when creating a ResourceClaim from a ResourceClaimTemplate that has annotations. ([#141104](https://github.com/kubernetes/kubernetes/pull/141104), [@thc1006](https://github.com/thc1006)) [SIG Apps and Node]",
+    "author": "thc1006",
+    "author_url": "https://github.com/thc1006",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/141104",
+    "pr_number": 141104,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps",
+      "node"
+    ],
+    "duplicate": true,
+    "pr_body": ""
+  },
+  "141105": {
+    "commit": "c44d2a82ef7f87c8b4278cd13af0a55614ed2a53",
+    "text": "Fixed the DRA `kubelet` plugin helper repeating the listen error instead of reporting why removing a stale Unix domain socket failed when it could not start its listener.",
+    "markdown": "Fixed the DRA `kubelet` plugin helper repeating the listen error instead of reporting why removing a stale Unix domain socket failed when it could not start its listener. ([#141105](https://github.com/kubernetes/kubernetes/pull/141105), [@thc1006](https://github.com/thc1006)) [SIG Node]",
+    "author": "thc1006",
+    "author_url": "https://github.com/thc1006",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/141105",
+    "pr_number": 141105,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "pr_body": ""
+  },
   "141145": {
     "commit": "bbedc834eb4e2509cb913a5e0dcf5236fab6fac9",
     "text": "NONE",
@@ -9047,5 +9081,22 @@
       "node"
     ],
     "is_mapped": true
+  },
+  "141363": {
+    "commit": "a231bf3f37761e8955eefba61855da1a526a3eb9",
+    "text": "Updated the Go version used to build Kubernetes to `v1.26.6`.",
+    "markdown": "Updated the Go version used to build Kubernetes to `v1.26.6`. ([#141363](https://github.com/kubernetes/kubernetes/pull/141363), [@BenTheElder](https://github.com/BenTheElder)) [SIG Release]",
+    "author": "BenTheElder",
+    "author_url": "https://github.com/BenTheElder",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/141363",
+    "pr_number": 141363,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "release"
+    ],
+    "feature": true,
+    "pr_body": ""
   }
 }
