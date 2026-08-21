@@ -1,0 +1,37 @@
+pr: 141104
+pr_body: |
+  **What this PR does / why we need it**:
+
+  When the resourceclaim controller creates a ResourceClaim from a ResourceClaimTemplate, it reused the annotations map from the shared informer-cached template and then added the pod-claim-name annotation to it:
+
+  ```go
+  annotations := template.Spec.ObjectMeta.Annotations
+  if annotations == nil {
+      annotations = make(map[string]string)
+  }
+  annotations[resourceapi.PodResourceClaimAnnotation] = podClaim.Name
+  ```
+
+  If the template already has a non-nil annotations map, `annotations` aliases the template's map, so this writes the controller-owned annotation into the object held by the shared lister, whose objects are documented as immutable. Two workers creating claims from the same template also race on that map, each writing its own claim name.
+
+  This copies the annotations with `maps.Clone` before adding the annotation, in both the Pod and the PodGroup paths. The template's `Labels` and `Spec` are also aliased but are not mutated today, so I left them as is; happy to switch to a full copy-on-create if you prefer.
+
+  **Which issue(s) this PR fixes**:
+
+  This is a different root cause from #140217, which was a `MutationCache` eviction.
+
+  **Special notes for your reviewer**:
+
+  Added `TestCreateClaimDoesNotMutateTemplate`. It uses a template that carries a user annotation, which the existing tests do not, so they never exercise this path. The test reproduces the mutation without the fix and verifies the generated claim still receives both the template annotation and the `PodResourceClaimAnnotation`.
+
+  **Does this PR introduce a user-facing change?**
+
+  ```release-note
+  Fixed the resourceclaim controller mutating the shared informer cache when creating a ResourceClaim from a ResourceClaimTemplate that has annotations.
+  ```
+
+  /sig node
+  /wg device-management
+releasenote:
+  text: Fixed the ResourceClaim controller mutating the shared informer cache when
+    creating a ResourceClaim from a ResourceClaimTemplate that has annotations.

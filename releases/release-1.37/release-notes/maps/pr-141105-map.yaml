@@ -1,0 +1,40 @@
+pr: 141105
+pr_body: "#### What type of PR is this?\n\n/kind bug\n\n#### What this PR does / why
+  we need it:\n\n`kubeletplugin/endpoint.go` has the same typo in both cleanup paths.
+  The primary error is passed to `errors.Join` twice, so `removeErr` never reaches
+  the returned error.\n\n```go\n\tlistener, err := cfg.Listen(ctx, \"unix\", socketpath)\n\tif
+  err != nil {\n\t\tif removeErr := e.removeSocket(); removeErr != nil {\n\t\t\terr
+  = errors.Join(err, err)\n\t\t}\n\t\treturn nil, err\n\t}\n```\n\n```go\nfunc (l
+  *unixListener) Close() error {\n\terr := l.Listener.Close()\n\tif removeErr := l.endpoint.removeSocket();
+  removeErr != nil {\n\t\terr = errors.Join(err, err)\n\t}\n\treturn err\n}\n```\n\nThe
+  two halves differ in what can be seen today.\n\n`listen` is the observable one.
+  Its error goes through `startGRPCServer` to `kubeletplugin.Start`, so a driver that
+  cannot bind its socket surfaces it. When the stale-socket removal also fails, that
+  error reads:\n\n```\nlisten error\nlisten error\n```\n\nThe removal failure, which
+  is the thing that explains why the bind could not happen, is gone.\n\n`unixListener.Close`
+  is currently latent. The listener usually closes cleanly, so `err` is nil and the
+  call is `errors.Join(nil, nil)`, which is nil: `Close` returns success with the
+  socket still on disk. Nothing observes that today, because the listener is handed
+  to `grpc.Server.Serve`, which closes it in a deferred `ls.Close()` and discards
+  the error, and `unixListener` is unexported. It is fixed because the code does not
+  do what it says, not because something is failing because of it.\n\n#### Which issue(s)
+  this PR is related to:\n\nNone filed; found while reading these paths.\n\n#### Special
+  notes for your reviewer:\n\nI traced the callers before writing this, since making
+  a previously-nil `Close` return an error could have been a behaviour change. It
+  is not: `endpoint.listen` has one caller, the listener goes to gRPC, and both `Serve`'s
+  defer and `Server.Stop` drop the error from closing a listener.\n\nThe test covers
+  `Close` only. `listen` removes the socket before binding and returns early when
+  that fails, so getting a failure out of its second `removeSocket` would need the
+  removal to succeed once and fail immediately after. Both sites are fixed anyway,
+  since it is one typo.\n\nThe removal is made to fail by pointing the endpoint at
+  a directory that is not empty. `os.Remove` refuses that, without depending on file
+  permissions or on which user runs the test. The listener is a stub whose `Close`
+  returns nil in the first test and a sentinel error in the second, so the second
+  one also checks that the listener's own error survives the join.\n\n#### Does this
+  PR introduce a user-facing change?\n\n```release-note\nThe DRA kubelet plugin helper
+  now reports why removing a stale Unix domain socket failed when it cannot start
+  its listener, instead of repeating the listen error twice.\n```\n"
+releasenote:
+  text: Fixed the DRA `kubelet` plugin helper repeating the listen error instead of
+    reporting why removing a stale Unix domain socket failed when it could not start
+    its listener.
