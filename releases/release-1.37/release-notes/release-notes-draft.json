@@ -9015,6 +9015,40 @@
     ],
     "is_mapped": true
   },
+  "141104": {
+    "commit": "4e8291a5cce6987529042f89df0581e521f0d4af",
+    "text": "Fixed the ResourceClaim controller mutating the shared informer cache when creating a ResourceClaim from a ResourceClaimTemplate that has annotations.",
+    "markdown": "Fixed the ResourceClaim controller mutating the shared informer cache when creating a ResourceClaim from a ResourceClaimTemplate that has annotations. ([#141104](https://github.com/kubernetes/kubernetes/pull/141104), [@thc1006](https://github.com/thc1006)) [SIG Apps and Node]",
+    "author": "thc1006",
+    "author_url": "https://github.com/thc1006",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/141104",
+    "pr_number": 141104,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "apps",
+      "node"
+    ],
+    "duplicate": true,
+    "pr_body": ""
+  },
+  "141105": {
+    "commit": "c44d2a82ef7f87c8b4278cd13af0a55614ed2a53",
+    "text": "Fixed the DRA `kubelet` plugin helper repeating the listen error instead of reporting why removing a stale Unix domain socket failed when it could not start its listener.",
+    "markdown": "Fixed the DRA `kubelet` plugin helper repeating the listen error instead of reporting why removing a stale Unix domain socket failed when it could not start its listener. ([#141105](https://github.com/kubernetes/kubernetes/pull/141105), [@thc1006](https://github.com/thc1006)) [SIG Node]",
+    "author": "thc1006",
+    "author_url": "https://github.com/thc1006",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/141105",
+    "pr_number": 141105,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "pr_body": ""
+  },
   "141145": {
     "commit": "bbedc834eb4e2509cb913a5e0dcf5236fab6fac9",
     "text": "NONE",
@@ -9047,5 +9081,22 @@
       "node"
     ],
     "is_mapped": true
+  },
+  "141363": {
+    "commit": "a231bf3f37761e8955eefba61855da1a526a3eb9",
+    "text": "Updated the Go version used to build Kubernetes to `v1.26.6`.",
+    "markdown": "Updated the Go version used to build Kubernetes to `v1.26.6`. ([#141363](https://github.com/kubernetes/kubernetes/pull/141363), [@BenTheElder](https://github.com/BenTheElder)) [SIG Release]",
+    "author": "BenTheElder",
+    "author_url": "https://github.com/BenTheElder",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/141363",
+    "pr_number": 141363,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "release"
+    ],
+    "feature": true,
+    "pr_body": ""
   }
 }
