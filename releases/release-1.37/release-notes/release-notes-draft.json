@@ -5078,7 +5078,7 @@
   "139584": {
     "commit": "9e570c4124691bd0d765e780d0225655f99a905e",
     "text": "Updated the Go version used to build Kubernetes to `v1.26.4`.",
-    "markdown": "Updated the Go version used to build Kubernetes to `v1.26.4`. ([#139584](https://github.com/kubernetes/kubernetes/pull/139584), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "markdown": "Updated the Go version used to build Kubernetes to `v1.26.4`. ([#139584](https://github.com/kubernetes/kubernetes/pull/139584), [@cpanato](https://github.com/cpanato)) [SIG Release]",
     "author": "cpanato",
     "author_url": "https://github.com/cpanato",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/139584",
@@ -5091,8 +5091,7 @@
       "feature"
     ],
     "sigs": [
-      "release",
-      "testing"
+      "release"
     ],
     "feature": true,
     "duplicate": true,
@@ -5731,7 +5730,7 @@
   "139837": {
     "commit": "7e7ca37be95483b2fc2e89dcf7c51fa476575e0e",
     "text": "ACTION REQUIRED: Updated the `kubelet` to log its effective configuration at startup. Because these logs can expose configuration details, cluster administrators should restrict the `nodes/logs` ClusterRole to trusted users. This is largely a reminder of an existing best practice, since most effective configuration values can already be inferred from other log messages or `kubelet` behavior.",
-    "markdown": "ACTION REQUIRED: Updated the `kubelet` to log its effective configuration at startup. Because these logs can expose configuration details, cluster administrators should restrict the `nodes/logs` ClusterRole to trusted users. This is largely a reminder of an existing best practice, since most effective configuration values can already be inferred from other log messages or `kubelet` behavior. ([#139837](https://github.com/kubernetes/kubernetes/pull/139837), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG Node and Testing]",
+    "markdown": "ACTION REQUIRED: Updated the `kubelet` to log its effective configuration at startup. Because these logs can expose configuration details, cluster administrators should restrict the `nodes/logs` ClusterRole to trusted users. This is largely a reminder of an existing best practice, since most effective configuration values can already be inferred from other log messages or `kubelet` behavior. ([#139837](https://github.com/kubernetes/kubernetes/pull/139837), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG Node]",
     "author": "SergeyKanzhelev",
     "author_url": "https://github.com/SergeyKanzhelev",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/139837",
@@ -5744,8 +5743,7 @@
       "feature"
     ],
     "sigs": [
-      "node",
-      "testing"
+      "node"
     ],
     "feature": true,
     "duplicate": true,
@@ -8188,7 +8186,7 @@
   "140576": {
     "commit": "3591bd50c5a8bed7ba12df640853c11864e1ec65",
     "text": "Updated the Go version used to build Kubernetes to `v1.26.5`.",
-    "markdown": "Updated the Go version used to build Kubernetes to `v1.26.5`. ([#140576](https://github.com/kubernetes/kubernetes/pull/140576), [@palnabarun](https://github.com/palnabarun)) [SIG Release and Testing]",
+    "markdown": "Updated the Go version used to build Kubernetes to `v1.26.5`. ([#140576](https://github.com/kubernetes/kubernetes/pull/140576), [@palnabarun](https://github.com/palnabarun)) [SIG Release]",
     "author": "palnabarun",
     "author_url": "https://github.com/palnabarun",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/140576",
@@ -8201,8 +8199,7 @@
       "feature"
     ],
     "sigs": [
-      "release",
-      "testing"
+      "release"
     ],
     "feature": true,
     "duplicate": true,

@@ -4,7 +4,6 @@ releasenote:
     Updated the Go version used to build Kubernetes to `v1.26.5`.
   sigs:
   - release
-  - testing
   kinds:
   - feature
   areas:
