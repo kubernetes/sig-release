@@ -2,7 +2,7 @@ pr: 138801
 pr_body: ""
 releasenote:
   text: |-
-    Functions and structs that take in `authorizer.Authorizer` might now choose to accept only a smaller interface, `authorizer.UnconditionalAuthorizer`, in case only the receiver only needs to perform unconditional authorization requests and wants to signal this in the code for clarity. Any authorizer implementation must still implement the full `authorizer.Authorizer` interface.
+    Functions and structs that take in `authorizer.Authorizer` might choose to accept only a smaller interface, `authorizer.UnconditionalAuthorizer`, in case only the receiver only needs to perform unconditional authorization requests and wants to signal this in the code for clarity. Any authorizer implementation must still implement the full `authorizer.Authorizer` interface.
   sigs:
   - api-machinery
   - auth

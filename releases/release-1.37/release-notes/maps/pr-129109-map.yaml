@@ -2,7 +2,7 @@ pr: 129109
 pr_body: ''
 releasenote:
   text: |-
-    Added context-aware APIs to `client-go` for REST mapping and discovery, replacing internal blocking API calls that used `context.TODO`. Consumers of `client-go` are encouraged to switch to the new APIs. The old APIs are now marked as deprecated, but there is no plan to remove them.
+    Added context-aware APIs to `client-go` for REST mapping and discovery, replacing internal blocking API calls that used `context.TODO`. Consumers of `client-go` are encouraged to switch to the new APIs. The old APIs are marked as deprecated, but there is no plan to remove them.
   sigs:
   - api-machinery
   - apps

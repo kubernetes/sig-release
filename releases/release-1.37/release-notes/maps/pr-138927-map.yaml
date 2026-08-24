@@ -2,7 +2,7 @@ pr: 138927
 pr_body: ""
 releasenote:
   text: |-
-    Fixed a `kube-proxy` IPVS-mode performance bug where `syncProxyRules` could take tens of seconds in clusters with many Services because `GetAllLocalAddressesExcept` issued one full netlink address dump per interface. The function now issues a single dump per address family, reducing `syncProxyRules` latency by orders of magnitude on large clusters.
+    Fixed a `kube-proxy` IPVS-mode performance bug where `syncProxyRules` could take tens of seconds in clusters with many Services because `GetAllLocalAddressesExcept` issued one full netlink address dump per interface. The function issues a single dump per address family, reducing `syncProxyRules` latency by orders of magnitude on large clusters.
   sigs:
   - network
   kinds:
