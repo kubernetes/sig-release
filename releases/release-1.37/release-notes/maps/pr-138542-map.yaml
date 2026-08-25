@@ -2,7 +2,7 @@ pr: 138542
 pr_body: ""
 releasenote:
   text: |-
-    `kube-controller-manager` and `kube-scheduler` now both expose `dynamic_resource_allocation_resourceclaim_creates_total` as a metric for the number of ResourceClaims created, replacing the differently named metrics in each component. The `kube-controller-manager` metric `resource_claims` was moved to the same `dynamic_resource_allocation` subsystem.
+    `kube-controller-manager` and `kube-scheduler` both expose `dynamic_resource_allocation_resourceclaim_creates_total` as a metric for the number of ResourceClaims created, replacing the differently named metrics in each component. The `kube-controller-manager` metric `resource_claims` was moved to the same `dynamic_resource_allocation` subsystem.
   sigs:
   - apps
   - instrumentation

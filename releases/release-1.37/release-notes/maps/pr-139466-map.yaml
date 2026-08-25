@@ -2,7 +2,7 @@ pr: 139466
 pr_body: ""
 releasenote:
   text: |-
-    The `MaxUnavailableStatefulSet` feature is now enabled by default.
+    The `MaxUnavailableStatefulSet` feature is enabled by default.
   sigs:
   - apps
   kinds:

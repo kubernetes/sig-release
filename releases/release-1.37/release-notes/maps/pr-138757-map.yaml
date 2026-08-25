@@ -1,0 +1,12 @@
+pr: 138757
+pr_body: ""
+releasenote:
+  text: |-
+    Updated workload-aware preemption to preempt victims so that as many as possible of the preemptor pods can be scheduled.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
