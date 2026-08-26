@@ -8,7 +8,24 @@ description: |
   Release Team contact information, tracking spreadsheets and more!
 ---
 
-# Kubernetes v1.37
+# Kubernetes v1.37: Garhwal
+
+![Kubernetes v1.37: Garhwal](./logo/k8s-v1.37.svg)
+
+Kubernetes v1.37 is named **Garhwal** (गढ़वाल, pronounced _gaṛhvāl_), after the Himalayan region of Uttarakhand, India.
+Inspired by its snow-capped peaks, deodar forests, terraced fields, rivers, and mountain paths,
+the theme celebrates a community in which every layer, route, and contribution is connected.
+
+Imagined as a window into Garhwal, the logo shows terraced fields rising towards snowy peaks
+and a river gathering mountain streams.
+Together, they represent contributions from many SIGs and communities flowing into one project,
+while the deodar forest reflects an ecosystem where distinct projects share common ground and grow side by side.
+
+A frame inspired by _ringaal_ basketry surrounds the landscape,
+showing how individual contributions gain strength when woven together.
+Within it, the colourful [Himalayan monal](https://en.wikipedia.org/wiki/Himalayan_monal) represents the community's many skills and perspectives,
+while red _buransh_ flowers carry Kubernetes helm symbols at their centres.
+A mountain house marked १.३७ (1.37 in Devanagari numerals) grounds the release in Garhwal.
 
 #### Links
 
