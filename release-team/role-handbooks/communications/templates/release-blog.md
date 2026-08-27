@@ -56,9 +56,10 @@ The release announcement is held to the [Kubernetes style guide](https://kuberne
 
 * Sentence case headings, and an explicit `{#anchor}` on every feature heading so release notes and social posts can deep-link it.
 * Start case for graduation phases (Alpha, Beta, Stable, Generally Available); italics and lowercase for a feature or concept on first mention (`_gang scheduling_`).
-* Use U.S. English. Wrap source lines at around 80 characters, but never break a line inside `[...]` or `(...)` — a split link renders as literal text.
+* Use U.S. English. 
+* Wrap source lines at around 80 characters, but never break a line inside `[...]` or `(...)` 
 * Write as if the release has already happened: pre-release behavior goes in the past tense.
-* Per-section technical review: make sure to receive a review from KEP authors and owning SIG's leads.
+* Make sure to receive a review from KEP authors and/or owning SIG's leads for new features or behavior in this upcoming cycle.
 
 ## Latest Release Blogs as Reference
 * [Kubernetes v1.37: Garhwal](https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/)
