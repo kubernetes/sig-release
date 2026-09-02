@@ -18,7 +18,7 @@ The Slack channel for each SIG is usually #sig-, but accurate links are availabl
 ### What should I say?
 Following is a bootstrap template that you can use to reach out to the individual SIGs informing them about the discussion thread. This template includes the important information to convey to the SIG, but you are free to add your own personalization to the message if you'd like to.
 
-A template message can be found [here](/release-team/role-handbooks/communications/templates/release-highlight-message.md)
+A template message can be found [here](/release-team/role-handbooks/communications/templates/sig-release-highlight-message.md)
 
 Following that message it is advised to ping the SIGs every 2 weeks to remind them about the release highlights.
 

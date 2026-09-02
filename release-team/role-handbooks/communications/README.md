@@ -100,15 +100,7 @@ The release lead will drive the content for the release theme and logo.
 
 #### Process to publish the release blog
 
-1. Open a PR against [k/website](https://github.com/kubernetes/website) targeting the `main` branch, and adding a front matter with `draft: true`. This flag will ensure that the blog will not be published even if it passes the target publication date, but available from the CI build for PRs.
-
-2. The PR has to be reviewed by the SIG Docs Blog team, which will provide a content and style review. SIG's chairs and tech leads will provide a tech review. After `lgtm` and `approve` labels are applied, the blog can be merged to the `main` branch. With the `draft: true` flag, this blog will not be published to the website.
-
-3. In a second PR opened (ideally) a week before the release day, the Comms Lead will:
-- remove the `draft: true` parameter
-- ensure the date parameter is set to the release date
-- add the `release_announcement` parameter:
-- add the `themes` parameter with the release code name, if applicable
+1. Open a PR against [k/website](https://github.com/kubernetes/website) targeting the `main` branch, and adding a front matter with `draft: true`. This flag will ensure that the blog will not be published even if it passes the target publication date, but available from the CI build for PRs. Set no `date` parameter, and include the `release_announcement` parameter along with the `themes` parameter with the release code name, if applicable:
 
   ```yaml
   release_announcement:
@@ -116,6 +108,12 @@ The release lead will drive the content for the release theme and logo.
     themes:
       - "Release CodeName 1"
   ```
+
+2. The PR has to be reviewed by the SIG Docs Blog team, which will provide a content and style review. SIG's chairs and tech leads will provide a tech review. After `lgtm` and `approve` labels are applied, the blog can be merged to the `main` branch. With the `draft: true` flag, this blog will not be published to the website.
+
+3. In a second PR opened (ideally) a week before the release day, the Comms Lead will:
+- remove the `draft: true` parameter
+- add the `date` parameter, set to the release date
 - add the release logo and theme to the final release blog
 
 > [!IMPORTANT]  
@@ -142,7 +140,7 @@ There are two options for blogs covering breaking changes. They can be published
 
 It helps to work closely with the Release Lead and use the respective SIG Slack channels to remind the SIGs about opting in to feature blogs and provide any necessary context to blog authors.
 
-**Reach out in KEP issues to ask for feature blog opt-in.** Ask every KEP owner if they want to contribute a blog by reaching out in the KEP issue. Example messaging can be found [here](/release-team/role-handbooks/communications/templates/feature-blog-opt-in-message.md).
+**Reach out in KEP issues to ask for feature blog opt-in.** Ask every KEP owner if they want to contribute a blog by reaching out in the KEP issue. Example messaging can be found [here](/release-team/role-handbooks/communications/templates/feature-blog-messages.md).
 
 > [!IMPORTANT]
 > **Make sure to proactively track PRs raised against the k/website repository** Feature blog authors sometimes open PRs on [kubernetes/website](https://github.com/kubernetes/website/pulls?q=is%3Apr+is%3Aopen+label%3Ablog) with the `blog` label independently before or during the comms team’s outreach process without notifying anyone in the KEP thread. These PRs will not appear in the opt-in tracking sheet and can be missed entirely if the team only tracks blogs sourced from direct responses. Starting from the enhancements freeze and continuing through the feature blog freeze, it is important to regularly check for open PRs labeled `blog` on the k/website repository and cross-reference them against the feature blog tracking board. Any PRs not already tracked should be added, assigned to a comms team member and any further outreach must be conduted via the blog PR (not the KEP issue).
@@ -472,7 +470,7 @@ There are other templates available in the [templates folder](/release-team/role
 - [Mid-cycle / deprecations and removal blog template](/release-team/role-handbooks/communications/templates/mid-cycle-blog-sneak-peek.md)
 - [Release Highlight Discussion](/release-team/role-handbooks/communications/templates/release-highlights-discussion.md)
 - [Release Highlight Tracking Issue](/release-team/role-handbooks/communications/templates/release-highlights-tracking-issue.md)
-- [Release Highlight Message](/release-team/role-handbooks/communications/templates/release-highlight-message.md)
+- [Release Highlight Message](/release-team/role-handbooks/communications/templates/sig-release-highlight-message.md)
 - [Feature blog messages](/release-team/role-handbooks/communications/templates/feature-blog-messages.md)
 - [Mail for the CNCF webinar](/release-team/role-handbooks/communications/templates/webinar-email.md)
 - [Mail to coordinate the PR with the CNCF](/release-team/role-handbooks/communications/templates/pr-email.md)
