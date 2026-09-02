@@ -106,7 +106,7 @@ This is a message to send Feature Blog authors in their Feature Blog PR if they 
 ```
 Hi @xx 👋 -- this is YOURNAME (@your_github_id) from the vX.yy Communications Team!
 
-Just a friendly reminder that we are approaching the feature blog "ready for review" deadline: **<<BLOG_READY>> WEEKDAY, DAY MONTH**. We ask you to have the blog in non-draft state by retitling using `/retitle` it to remove the "[WIP]" from the title but retaining `draft:true` in the frontmatter. Additionally, ensure that the write-up is complete so that we can start the blog review from SIG Docs Blog team. 
+Just a friendly reminder that we are approaching the feature blog "ready for review" deadline: **<<BLOG_READY>> WEEKDAY, DAY MONTH**. We ask you to have the blog in non-draft state by retitling using `/retitle` it to remove the "[WIP]" from the title but retaining `draft:true` in the frontmatter. Additionally, ensure that the write-up is complete so that we can start the blog review from SIG Docs Blog team.
 
 If you have any questions or need help, please don't hesitate to reach out to me or any of the Communications Team members. We are here to help you!
 ```
