@@ -178,7 +178,19 @@ author: <author>
 
 Use the blog schedule field in the Feature Blog view on the tracking board to assign a publication date.
 
-Feature blog publication usually starts the day after the release. The release blog goes out on same day as the release and the first feature blog typically goes out the day after the release. The rest of the blogs are published one-at-a-time, typically at a rate of two to three posts weekly. Depending on how many feature blogs you have, you may want to publish one per day after the release (excluding weekends). In general, all feature blogs should be published within month of the release day. 
+Feature blog publication usually starts the day after the release. The release blog goes out on same day as the release and the first feature blog typically goes out the day after the release. The rest of the blogs are usually published one per day, so each post gets its own day of attention. Two to three posts a week is the minimum cadence; with a larger set of blogs, one per working day is common, and doubling up on a day is fine when the count or the calendar requires it. In general, all feature blogs should be published within month of the release day. 
+
+**Publish Monday to Friday, and work around major global holidays.** Posts that land on a weekend or a public holiday get less reach, and reviewers are harder to reach if a published post needs a fix. Before you commit to the schedule, check the weeks after the release for holidays that affect a large part of the community, and shift the affected posts to the next working day rather than dropping them. The note on KubeCons, holidays and `sig-docs-blog` review capacity in [Release Milestone Activities](#release-milestone-activities) applies to this schedule too.
+
+**The team decides the ordering.** There is no required order, so pick the approach that tells the best story for the release and apply it consistently. Common approaches:
+
+- **By impact**, leading with the changes that affect the most users.
+- **Grouped by feature area**, so related posts land together, for example a single post covering a family of related changes.
+- **Grouped by the stage of the features covered**, for example Stable first, then Beta, then Alpha.
+
+These combine well: a schedule can run Stable first and then Beta, while still grouping one feature family into a single post that spans stages. State which approach you used when you post the schedule in `#sig-docs-blog`, so authors and reviewers understand why a post sits where it does.
+
+Publishing every feature blog at the same time of day also helps readers and makes the schedule easier to keep straight.
 
 > Note that blog PRs in k/website are dated, and automation will publish future-dated entries. This enables a PR process decoupled from blog publication date. Once a blog has passed the review process and its after the release day, the PR can be merged and will be published on the date on the blog. 
 
@@ -388,7 +400,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <li>Participate in the release retro part 1
         <li>Feature blog freeze is this week
         <li>Assign remaining feature blog topics
-        <li>Establish feature blog post-release publication schedule, typically 2-3 posts per week.
+        <li>Establish feature blog post-release publication schedule, at least 2-3 posts per week, up to one per working day for a larger set. Weekdays only, working around major global holidays
         <li>Post the feature blog publication schedule in <code>#sig-docs-blog</code> (<a href="https://kubernetes.slack.com/archives/CJDHVD54J/p1628649661040600">example post</a>)
         <li>Establish a regular cadence status check-in with the <code>#sig-docs-blog</code> team and maintain the publication schedule post in Slack to keep everyone synced
         <li>Request placeholder PRs in k/website from all feature blog authors
