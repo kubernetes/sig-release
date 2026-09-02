@@ -400,7 +400,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
         <li>Participate in the release retro part 1
         <li>Feature blog freeze is this week
         <li>Assign remaining feature blog topics
-        <li>Establish feature blog post-release publication schedule, at least 2-3 posts per week, up to one per working day for a larger set. Weekdays only, working around major global holidays
+        <li>Establish feature blog post-release publication schedule of one per workday, working around major global holidays
         <li>Post the feature blog publication schedule in <code>#sig-docs-blog</code> (<a href="https://kubernetes.slack.com/archives/CJDHVD54J/p1628649661040600">example post</a>)
         <li>Establish a regular cadence status check-in with the <code>#sig-docs-blog</code> team and maintain the publication schedule post in Slack to keep everyone synced
         <li>Request placeholder PRs in k/website from all feature blog authors
