@@ -53,6 +53,8 @@ There is a channel on the Kubernetes Slack workspace, `#release-comms`, which is
 How a particular team communicates day-to-day is up to the Comms Lead and teams members, but usually they Slack DM on day-to-day coordination and post summary updates in `#release-comms`.
 A good practice is to also update `#sig-docs` and `#sig-docs-blogs` channels with the status of the release blog, feature blogs, and other deliverables.
 
+For the weekly status post, use the [weekly status update template](/release-team/role-handbooks/communications/templates/weekly-status-update.md). It covers the upcoming deadlines, the team's action items, the feature blog opt-in counts, and who is covering each Release Team meeting slot.
+
 ## Working with other teams and SIGs
 
 Throughout the release cycle, the comms team works with lots of different teams within the Kubernetes community. As a Comms lead or member of the comms team, you should feel empowered to reach out and ask questions or ask for help from SIGs and other Release team members to meet deadlines.
@@ -467,6 +469,7 @@ Remember to consider (whenever possible) KubeCons, holidays (e.g. American Thank
 To support you in the creation of the release blog this [outline](/release-team/role-handbooks/communications/templates/release-blog.md) summarize ideas for sections and gives you a template for easier release blog creation.
 
 There are other templates available in the [templates folder](/release-team/role-handbooks/communications/templates/), such as:
+- [Weekly status update](/release-team/role-handbooks/communications/templates/weekly-status-update.md)
 - [Mid-cycle / deprecations and removal blog template](/release-team/role-handbooks/communications/templates/mid-cycle-blog-sneak-peek.md)
 - [Release Highlight Discussion](/release-team/role-handbooks/communications/templates/release-highlights-discussion.md)
 - [Release Highlight Tracking Issue](/release-team/role-handbooks/communications/templates/release-highlights-tracking-issue.md)
