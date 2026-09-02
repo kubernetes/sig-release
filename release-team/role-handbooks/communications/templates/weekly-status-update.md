@@ -54,13 +54,3 @@ Notes on filling this in:
 * **Number of opt-ins grouped by stage.** Add this once blog PRs are open. The stages match the columns on the comms tracking board.
 * **Release Team Updates.** One entry per Release Team meeting in the coming week, with the APAC and EMEA slots listed separately, since coverage is assigned per slot. Meeting times and links come from the [Kubernetes community calendar](https://www.kubernetes.dev/resources/calendar/), and the people to assign are on the current cycle's [release team roster](https://github.com/kubernetes/sig-release/tree/master/release-team). Use `Async` when no one attends live and `<None Yet>` when the slot still needs an owner, which doubles as a request for volunteers.
 * **Tracking issue.** Link the comms weekly tracking issue for the current cycle ([v1.37 example](https://github.com/kubernetes/sig-release/issues/3027)) so readers can follow the week-by-week breakdown.
-
-## References
-
-* [Communications role handbook](/release-team/role-handbooks/communications/README.md), and its [Slack channel section](/release-team/role-handbooks/communications/README.md#slack-channel) covering where and when to post this update
-* [Release cycle timeline and milestones](https://www.kubernetes.dev/resources/release/)
-* [Kubernetes community calendar](https://www.kubernetes.dev/resources/calendar/) for Release Team and SIG Docs meeting times and links
-* [Release team rosters by cycle](https://github.com/kubernetes/sig-release/tree/master/release-team)
-* [Comms weekly tracking issue, v1.37](https://github.com/kubernetes/sig-release/issues/3027) as an example of the week-by-week breakdown this update links to
-* [`#release-comms` on Kubernetes Slack](https://kubernetes.slack.com/archives/CNT9Y603D), where the update is posted
-* [Feature blog messages](/release-team/role-handbooks/communications/templates/feature-blog-messages.md) and [release highlight message](/release-team/role-handbooks/communications/templates/sig-release-highlight-message.md) templates, for the outreach the action items usually refer to
