@@ -32,7 +32,7 @@ Open a new issue using [this template](https://github.com/kubernetes/sig-release
 
 ### Remove EOL version jobs from test-infra (optional)
 
-Consider removing jobs for versions that are going EOL. This is sometimes done before adding new jobs to avoid overwhelming the Prow cluster.
+Consider removing jobs for versions that are going EOL. **This is not a priority for the post branch creation tasks**, prioritize adding the new release's jobs (see below) first; EOL job removal can happen later and does not need to precede or block that work.
 
 Removing EOL jobs involves different steps, including deleting old configs from `config/jobs/kubernetes/sig-release/release-branch-jobs/` e.g. 1.29 EOL jobs removed in [this PR](https://github.com/kubernetes/test-infra/pull/34672).
 There could also be some other jobs living outside `config/jobs/kubernetes/sig-release/release-branch-jobs` that also needs to be removed.
@@ -53,7 +53,7 @@ You should also remove the unused EOL jobs from the `kubekins-e2e-v2/variants.ya
 ```
 
 > [!NOTE]
-This step may alternatively be performed as part of a patch release process. It's mandatory to consult with the release engineering team regarding the timing of this step.
+This step may alternatively be performed as part of a patch release process, or deferred until after the rest of the post branch creation tasks are done. It's mandatory to consult with the release engineering team regarding the timing of this step.
 
 ### Update milestone applier rules and check milestone requirements
 
