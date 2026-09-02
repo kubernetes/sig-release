@@ -24,7 +24,7 @@ Some timelines to keep in mind:
 - <insert feature blog ready for review here>: Feature blogs ready for review
 - You can find more in the [release document](https://github.com/kubernetes/sig-release/tree/master/releases/release-<version>#timeline)
 
-**Note**: In your placeholder PR, use the current scheduled overall release date for the blog `date` and add a `draft:true` to the front matter. This will help us to merging this ahead of the release date and scheduling it after the release date.
+**Note**: Title your blog PR in the following format: "[WIP] KEP:<number>: <name> blog". In your placeholder PR, add `draft:true` to the front matter to indicate its draft status. This will help us merge this blog prior to the release date and schedule it after the release date.
 
 For easier tracking, please let us know whether you’d like to opt in or opt out. If you’re opting in, kindly include the skeleton blog PR in your reply.
 
@@ -57,7 +57,9 @@ For easier tracking, please let us know whether you’d like to opt in or opt ou
 > 
 
 > [!Note]
-> In your placeholder PR, use the current scheduled overall release date for the blog `date` and add a `draft:true` to the front matter. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
+> Title your blog PR in the following format: "[WIP] KEP:<number>: <name> blog". In your placeholder PR, add `draft:true` to the front matter to indicate its draft status. This will help us merge this blog prior to the release date and schedule it after the release date.
+
+
 ```
 
 With this one, you'd need to update the following placeholders:
@@ -84,7 +86,9 @@ This is a gentle reminder for the feature blog deadline mentioned above, which i
 > - You can find more in the [release document](LINK)
 
 > [!Note]
-> In your placeholder PR, use the current scheduled overall release date for the blog `date` and add a `draft:true` to the front matter. We will work with you on updating the PR with the publication date once we have a final number of feature blogs for this release.
+> Title your blog PR in the following format: "[WIP] KEP:<number>: <name> blog". In your placeholder PR, add `draft:true` to the front matter to indicate its draft status. This will help us merge this blog prior to the release date and schedule it after the release date.
+
+
 ```
 
 With this one, you'd need to update the following placeholders:
@@ -102,7 +106,7 @@ This is a message to send Feature Blog authors in their Feature Blog PR if they 
 ```
 Hi @xx 👋 -- this is YOURNAME (@your_github_id) from the vX.yy Communications Team!
 
-Just a friendly reminder that we are approaching the feature blog "ready for review" deadline: **<<BLOG_READY>> WEEKDAY, DAY MONTH**. We ask you to have the blog in non-draft state, and all write-up to be complete, so that we can start the blog review from SIG Docs Blog team.
+Just a friendly reminder that we are approaching the feature blog "ready for review" deadline: **<<BLOG_READY>> WEEKDAY, DAY MONTH**. We ask you to have the blog in non-draft state by retitling using `/retitle` it to remove the "[WIP]" from the title but retaining `draft:true` in the frontmatter. Additionally, ensure that the write-up is complete so that we can start the blog review from SIG Docs Blog team. 
 
 If you have any questions or need help, please don't hesitate to reach out to me or any of the Communications Team members. We are here to help you!
 ```
