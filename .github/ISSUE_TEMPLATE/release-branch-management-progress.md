@@ -58,7 +58,7 @@ As of Day, xx Month (week X):
 - [ ] Create release cuts rota and share, ask shadows to self-assign cuts
 - [ ] Add lead + shadows to [`k8s-infra-release-editors`](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
 - [ ] Ask the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) and [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) moderators to allow lead + shadows to post (see [Mailing List Permissions](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#mailing-list-permissions))
-- [ ] Confirm machine setup per [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md)
+- [ ] Confirm machine setup per [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#machine-setup)
 
 ## Week 4: v1.XX.0-alpha.1 (Wed DD Mon YYYY)
 - [ ] Assign and cut release
