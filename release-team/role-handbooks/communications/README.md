@@ -178,7 +178,7 @@ author: <author>
 
 Use the blog schedule field in the Feature Blog view on the tracking board to assign a publication date.
 
-Feature blog publication usually starts the day after the release. The release blog goes out on same day as the release and the first feature blog typically goes out the day after the release. The rest of the blogs are usually published one per day, so each post gets its own day of attention. Two to three posts a week is the minimum cadence; with a larger set of blogs, one per working day is common, and doubling up on a day is fine when the count or the calendar requires it. In general, all feature blogs should be published within month of the release day. 
+Feature blog publication usually starts the day after the release. The release blog goes out on same day as the release and the first feature blog typically goes out the day after the release. The rest of the blogs are published one per weekday, so each post gets its own day of attention.
 
 **Publish Monday to Friday, and work around major global holidays.** Posts that land on a weekend or a public holiday get less reach, and reviewers are harder to reach if a published post needs a fix. Before you commit to the schedule, check the weeks after the release for holidays that affect a large part of the community, and shift the affected posts to the next working day rather than dropping them. The note on KubeCons, holidays and `sig-docs-blog` review capacity in [Release Milestone Activities](#release-milestone-activities) applies to this schedule too.
 
