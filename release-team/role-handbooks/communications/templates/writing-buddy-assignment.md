@@ -9,9 +9,10 @@ Hi @xx 👋 vx.yy Communications team here,
 
 Please:
 
+- Check in with your buddy and connect with them about your respective PRs on Slack or GitHub, this is an important part of the buddy role!
 - Review this PR, paying attention to the [guidelines](https://kubernetes.io/docs/contribute/blog/guidelines/) and [review hints](https://kubernetes.io/docs/contribute/blog/writing-buddy/#pull-request-review)
 - Update your own PR based on any best practices you identify that should be applied
-- Remember to be compassionate with your fellow article author
+- Remember to be compassionate with your fellow article author, and remember that buddying goes both ways! 
 ```
 
 You'd need to update the following placeholders:
