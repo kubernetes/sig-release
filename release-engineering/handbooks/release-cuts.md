@@ -63,6 +63,9 @@ You can find the complete list of release signal team members at this link (subs
 Ensure that there are no patch releases in progress, coordinating with @release-managers.
 These are typically scheduled on different days of the week, so there is usually no need to plan around them, but since they can sometimes overlap with other release activities, it's good to double-check.
 
+> [!NOTE]
+Before starting the cut, check whether a Go version update is in progress or planned, by looking for an open tracking issue in `kubernetes/release` (see [Signaling intent](go-updates.md#signaling-intent)) and coordinating with @kubernetes/release-engineering. Starting a cut while a Go update is mid-flight can cause job failures.
+
 ### Access to GCP
 
 You must be a member of [k8s-infra-release-editors](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml) on GitHub.
@@ -287,6 +290,9 @@ krel testgridshot --branch 1.xx
 Post the comment generated in the **GitHub issue**.
 
 This comment contains a current snapshot of the test results for the target branch, if there is any error you should stop the release process and inform #release-management on Slack. Before proceeding the failing tests need to be either fixed or marked as non-release blocking.
+
+> [!IMPORTANT]
+> The default `krel testgridshot` targets `master`, which is only correct up to and including `rc.0`. For `rc.1` and later, and for stable/patch releases, the release branch already exists, so pass `--branch 1.xx` to screenshot testgrid **on the release branch** instead of master.
 
 ## 4. Check publishing-bot status
 
