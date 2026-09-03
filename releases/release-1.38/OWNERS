@@ -1,0 +1,11 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - release-team-lead
+  - release-team-lead-shadows
+
+reviewers:
+  - communications-subteam-approvers
+  - docs-subteam-approvers
+  - enhancements-subteam-approvers
+  - release-signal-subteam-approvers

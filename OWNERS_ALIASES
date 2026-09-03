@@ -29,17 +29,17 @@ aliases:
     - fsmunoz # Release Team Subproject Lead
     - katcosgrove # Release Team Subproject Lead
   release-team-lead:
-    - dipesh-rawat # v1.37
+    - sreeram-venkitesh # v1.38
   release-team-lead-shadows:
-    - aibarbetta # v1.37
-    - Prajyot-Parab # v1.37
-    - rayandas # v1.37
-    - sayanchowdhury # v1.37
+    - adilGhaffarDev # v1.38
+    - aibarbetta # v1.38
+    - Prajyot-Parab # v1.38
+    - rayandas # v1.38
   communications-subteam-approvers:
-    - SwathiR03 # v1.37
+    - RinkiyaKeDad # v1.38
   docs-subteam-approvers:
-    - kernel-kun # v1.37
+    - Caesarsage # v1.38
   enhancements-subteam-approvers:
-    - whtssub # v1.37
+    - tico88612 # v1.38
   release-signal-subteam-approvers:
-    - adilGhaffarDev # v1.37
+    - kei01234kei # v1.38
