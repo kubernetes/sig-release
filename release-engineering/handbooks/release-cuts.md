@@ -1,36 +1,37 @@
 # Cutting a Kubernetes release
 
 <!-- toc -->
-- [Cutting a Kubernetes release](#cutting-a-kubernetes-release)
-  - [Prerequisites](#prerequisites)
-    - [Green Release Signal (pre-releases only)](#green-release-signal-pre-releases-only)
-    - [Access to GCP](#access-to-gcp)
-    - [Install latest software (every time)](#install-latest-software-every-time)
-      - [Download or update `Go` to the latest available stable version:](#download-or-update-go-to-the-latest-available-stable-version)
-      - [Download or update the `gcloud` CLI to interact with GCP.](#download-or-update-the-gcloud-cli-to-interact-with-gcp)
-      - [Download or update `krel`](#download-or-update-krel)
-      - [Download or update the latest `kpromo` tool](#download-or-update-the-latest-kpromo-tool)
-      - [Download schedule-builder](#download-schedule-builder)
-    - [Configure GitHub Personal Access Token](#configure-github-personal-access-token)
-  - [1. Release cut issue](#1-release-cut-issue)
-  - [2. Create a thread on the `#release-management` Slack channel](#2-create-a-thread-on-the-release-management-slack-channel)
-  - [3. Generate testgrid comment](#3-generate-testgrid-comment)
-  - [4. Check publishing-bot status](#4-check-publishing-bot-status)
-  - [5. Mock stage and Mock release](#5-mock-stage-and-mock-release)
-  - [6. No-mock stage](#6-no-mock-stage)
-  - [7. Image promotion](#7-image-promotion)
-    - [Merge promo PR](#merge-promo-pr)
-    - [Wait on image promotion job](#wait-on-image-promotion-job)
-  - [8. No-mock release](#8-no-mock-release)
-  - [9. Notify public dev Google group mailinglist](#9-notify-public-dev-google-group-mailinglist)
-    - [Manually create release HTML announcements](#manually-create-release-html-announcements)
-  - [10. Post release tasks](#10-post-release-tasks)
-    - [\[RC.0 only\] Considerations and post branch creation release tasks](#rc0-only-considerations-and-post-branch-creation-release-tasks)
-      - [Next Release Branch Creation](#next-release-branch-creation)
-      - [Post branch creation release tasks](#post-branch-creation-release-tasks)
-    - [\[Stable only\] Code Thaw](#stable-only-code-thaw)
-    - [\[Patch only\] Update schedule on k/website](#patch-only-update-schedule-on-kwebsite)
-  - [Cleanup](#cleanup)
+- [Prerequisites](#prerequisites)
+  - [Access to GCP](#access-to-gcp)
+  - [Milestone maintainer](#milestone-maintainer)
+  - [Mailing list permissions](#mailing-list-permissions)
+  - [Green Release Signal (pre-releases only)](#green-release-signal-pre-releases-only)
+  - [Install latest software (every time)](#install-latest-software-every-time)
+    - [Download or update `Go` to the latest available stable version:](#download-or-update-go-to-the-latest-available-stable-version)
+    - [Download or update the `gcloud` CLI to interact with GCP.](#download-or-update-the-gcloud-cli-to-interact-with-gcp)
+    - [Download or update `krel`](#download-or-update-krel)
+    - [Download or update the latest `kpromo` tool](#download-or-update-the-latest-kpromo-tool)
+    - [Download schedule-builder](#download-schedule-builder)
+  - [Configure GitHub Personal Access Token](#configure-github-personal-access-token)
+- [1. Release cut issue](#1-release-cut-issue)
+- [2. Create a thread on the `#release-management` Slack channel](#2-create-a-thread-on-the-release-management-slack-channel)
+- [3. Generate testgrid comment](#3-generate-testgrid-comment)
+- [4. Check publishing-bot status](#4-check-publishing-bot-status)
+- [5. Mock stage and Mock release](#5-mock-stage-and-mock-release)
+- [6. No-mock stage](#6-no-mock-stage)
+- [7. Image promotion](#7-image-promotion)
+  - [Merge promo PR](#merge-promo-pr)
+  - [Wait on image promotion job](#wait-on-image-promotion-job)
+- [8. No-mock release](#8-no-mock-release)
+- [9. Notify public dev Google group mailinglist](#9-notify-public-dev-google-group-mailinglist)
+  - [Manually create release HTML announcements](#manually-create-release-html-announcements)
+- [10. Post release tasks](#10-post-release-tasks)
+  - [\[RC.0 only\] Considerations and post branch creation release tasks](#rc0-only-considerations-and-post-branch-creation-release-tasks)
+    - [Next Release Branch Creation](#next-release-branch-creation)
+    - [Post branch creation release tasks](#post-branch-creation-release-tasks)
+  - [\[Stable only\] Code Thaw](#stable-only-code-thaw)
+  - [\[Patch only\] Update schedule on k/website](#patch-only-update-schedule-on-kwebsite)
+- [Cleanup](#cleanup)
 
 A step by step guide for cutting Kubernetes releases. At a high-level:
 
@@ -52,6 +53,26 @@ A step by step guide for cutting Kubernetes releases. At a high-level:
 
 ## Prerequisites
 
+### Access to GCP
+
+Your email address must be added to the `k8s-infra-release-editors` group in [k8s.io groups.yaml](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml).
+
+Group membership grants access to [Google Cloud Platform (GCP)](https://console.cloud.google.com/) for issuing `krel` commands that ultimately launch [Cloud Build](https://cloud.google.com/build) jobs.
+
+> [Example PR](https://github.com/kubernetes/k8s.io/pull/7781)
+
+### Milestone maintainer
+
+You must be added to the `milestone-maintainers` team in [k/org teams.yaml](https://github.com/kubernetes/org/blob/main/config/kubernetes/sig-release/teams.yaml). This allows you to assign a milestone to the release cut issues.
+
+> [Example PR](https://github.com/kubernetes/org/pull/6491)
+
+### Mailing list permissions
+
+In order to send the [release announcement emails](#9-notify-public-dev-google-group-mailinglist), you must have permissions to send email to both the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) and [kubernetes-announce](https://groups.google.com/g/kubernetes-announce) groups.
+- Add yourself to both groups
+- Ask a current moderator for each group to whitelist your email address so your first email doesn't get stuck in the moderation queue. After that, any emails you send should go through without moderation. See [mailing list permissions](./release-manager.md#mailing-list-permissions) or reach out to `@release-managers` in the `#release-management` Slack channel.
+
 ### Green Release Signal (pre-releases only)
 
 On the same day of the release, a green signal must've been given in the #release-management Slack channel. If in doubt, double check with the current Release Signal Team Lead.
@@ -62,14 +83,6 @@ You can find the complete list of release signal team members at this link (subs
 > [!NOTE]
 Ensure that there are no patch releases in progress, coordinating with @release-managers.
 These are typically scheduled on different days of the week, so there is usually no need to plan around them, but since they can sometimes overlap with other release activities, it's good to double-check.
-
-### Access to GCP
-
-You must be a member of [k8s-infra-release-editors](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml) on GitHub.
-
-Group membership grants access to [Google Cloud Platform (GCP)](https://console.cloud.google.com/) for issuing `krel` commands that ultimately launch [Cloud Build](https://cloud.google.com/build) jobs.
-
-> [Example PR](https://github.com/kubernetes/k8s.io/pull/7781)
 
 ### Install latest software (every time)
 
@@ -83,8 +96,9 @@ Begin by updating to the latest package versions. This helps reduce failure poin
 
 #### Download or update `Go` to the latest available stable version:
 
-[go.dev/dl](https://go.dev/dl/)
+For manual installation, follow instructions in https://go.dev/doc/install
 
+Or to use brew:
 ```
 # to install
 brew install go
@@ -102,6 +116,9 @@ export PATH="$HOME/go/bin:${PATH}"
 source ~/.zshrc
 ```
 
+> [!NOTE]
+> The actual Go version used to build the release is defined in the [kubernetes/release](https://github.com/kubernetes/release) repo (see [Go updates](./go-updates.md) for more information). The local Go version is used for installing/running the tools. While the two Go versions don't need to be exactly in sync, it is recommended to keep them as close as possible (i.e. at least the same minor Go version) to ensure the release cut goes smoothly.
+
 #### Download or update the `gcloud` CLI to interact with GCP.
 
 ```
@@ -116,6 +133,7 @@ Ensure your GCP credentials are active.
     
 ```
 gcloud auth login
+gcloud auth application-default login
 ```
 
 You will be prompted to log in via your default browser.
@@ -192,7 +210,7 @@ go install k8s.io/release/cmd/schedule-builder@latest
 
 Get a GitHub API token (one off or expiration based)
 
-Navigate to `Settings > Developer Settings > Personal Access Token` to generate a new token. For the scopes, select:
+Navigate to `Settings > Developer Settings > Personal access tokens > Tokens (classic)` to generate a new token. For the scopes, select:
 
 - repo
 - gist
@@ -329,7 +347,7 @@ If you encounter this error
 
 The `krel` tool outputs a link to the logs.
 
-This takes about **2 hours**. Once passed, move on to the "release" command using a specific build-version string (output from the first stage).
+The mock stage takes about **30 minutes**. Once passed, move on to the "release" command using a specific build-version string (output from the first stage).
 
 > [!NOTE]
 At this point you should start updating the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue)
@@ -340,7 +358,9 @@ At this point you should start updating the Slack ([thread](#Create-a-thread-on-
 krel release --type=alpha|beta|rc|official --branch=release-1.xx --build-version=v1.xx.yy-alpha|beta|rc-z+<some-hash>
 ```
 
-If you are releasing an `alpha.1` you will have a command output that has a `build-version` parameter value containing `alpha.0`, same goes for `alpha.2` having `alpha.1` and so on. This is expected, you can proceed with executing the krel release command.
+If you are releasing an `alpha.1` you will have a command output that has a `BUILDVERSION` parameter value containing `alpha.0`, same goes for `alpha.2` having `alpha.1` and so on. This is expected, you can proceed with executing the krel release command.
+
+The mock release generally takes about **10 minutes**.
 
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after this step
@@ -364,7 +384,7 @@ krel stage --type official --branch release-1.xx --nomock
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after this no-mock stage step
 
-This also takes about **2 hours**. Once passed, move on to the `kpromo` command.
+The no-mock stage takes about **1 hour**. Once passed, move on to the `kpromo` command.
 
 > [!CAUTION]
 Do not run the release command yet, just copy it somewhere and wait for the image promo to happen first (which means the image promo PR gets merged and the prow job has to be completed).
@@ -439,10 +459,6 @@ Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) 
 
 ## 9. Notify public dev Google group mailinglist
 
-Ensure that you are a moderator of dev@kubernetes.io so you can send messages without passing by the moderation queue, and also an admin of [kubernetes-announce](https://groups.google.com/g/kubernetes-announce).
-In case you are not part of these groups as moderator/admin, ask to be added in #release-management. 
-Ideally this is a task that should be performed during onboarding and not on the day of the cut.
-
 The `krel announce send` command sends announcements via the Gmail API using
 Google OAuth. A browser window will open for authentication. Use the
 `--no-browser` flag in headless environments.
@@ -499,15 +515,14 @@ Copy / paste link to #release-management notification post.
 Remember to provide one last final update to the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after the announcement step
 
 To collect the release stats required in the release cut issue, run this command:
+- `date-from` should be the start date of the release cut (when the first command was run)
+- `date-to` should be the end date of the release cut (when the last command was run)
 
 ```
-# date should be the previous release date
-krel history --branch master --date-from yyyy-mm-dd 
+krel history --branch master|release-1.xx --date-from yyyy-mm-dd --date-to yyyy-mm-dd
 
-krel history --branch release-1.xx --date-from yyyy-mm-dd
-
-#example
-krel history --branch release-1.33 --date-from 2025-04-23
+# example
+krel history --branch release-1.33 --date-from 2025-04-23 --date-to 2025-04-24
 ```
 
 ## 10. Post release tasks
