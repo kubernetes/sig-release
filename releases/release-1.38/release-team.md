@@ -7,7 +7,7 @@
 | Communications    |  Arsh Sharma ([@RinkiyaKeDad](https://github.com/RinkiyaKeDad) / Slack: `@arsh`)                           |                                                                                                                                                            |
 | Release Signal    | Keisuke Ishigami ([@kei01234kei](https://github.com/kei01234kei) / Slack: `@Keisuke Ishigami`) |                                                                                                                                                            |
 | Docs              | Destiny Erhabor ([@Caesarsage](https://github.com/Caesarsage) / Slack: `@Destiny Erhabor`)                       |                                                                                                                                                            |
-| Branch Manager    |                    |                                                                                                                                                            |
+| Branch Manager    | Agustina Barbetta ([@aibarbetta](https://github.com/aibarbetta) / Slack: `@aibarbetta`)                   | Jenny Shu ([@jenshu](https://github.com/jenshu) / Slack: `@Jenny Shu`), Ryota Sawada ([@rytswd](https://github.com/rytswd) / Slack: `@Ryota`)             |
 
 Review the [Release Managers page](https://github.com/kubernetes/website/blob/main/content/en/releases/release-managers.md) for up-to-date contact information on Release Engineering personnel.
 
