@@ -26,6 +26,26 @@ state.
 
    Project board: _none_
 
+1. **Make artifact validation more robust**
+
+   Outcome: Provide a fast and error-resistant workflow for artifact promotion compliant with SLSA.
+
+   Enhancement: was kubernetes/enhancements#3027
+
+   Tracking issue: https://github.com/kubernetes-sigs/promo-tools/issues/1972
+
+1. **Enhance Kubernetes binary artifact management (Consumable)**
+
+   https://github.com/kubernetes/sig-release/issues/1372
+
+   Enhancement: _none_
+
+   Outcome: Being able to promote files as artifacts and using this mechanism
+   for Kubernetes releases.
+
+   Milestones: https://github.com/kubernetes-sigs/promo-tools/milestone/5,
+   https://github.com/kubernetes-sigs/promo-tools/milestone/6
+
 ### Known Risks
 
 1. **We rely on different SIGs for our work**
@@ -64,14 +84,6 @@ state.
 This section covers items from past roadmaps which have not been started or
 became stale.
 
-1. **Make artifact validation more robust**
-
-   Outcome: Provide a fast and error-resistant workflow for artifact promotion compliant with SLSA.
-
-   Enhancement: was kubernetes/enhancements#3027
-
-   Project board: https://github.com/orgs/kubernetes/projects/171
-
 1. **Enable other Kubernetes subprojects to use our packages infrastructure**
 
    Outcome: Building a CLI, library and documentation for Kubernetes related
@@ -87,7 +99,7 @@ became stale.
 
    Enhancement: none (was kubernetes/enhancements#3027)
 
-   Project board: https://github.com/orgs/kubernetes/projects/138
+   Project board: _none_
 
 1. **Make Kubernetes releases more flexible**
 
@@ -95,15 +107,6 @@ became stale.
    custom infrastructure environments.
 
    Enhancement: none
-
-1. **Enhance Kubernetes binary artifact management (Consumable)**
-
-   https://github.com/kubernetes/sig-release/issues/1372
-
-   Enhancement: _none_
-
-   Outcome: Being able to promote files as artifacts and using this mechanism
-   for Kubernetes releases.
 
 1. **Define and collect metrics about Kubernetes releases (Introspectable)**
 
@@ -138,7 +141,7 @@ became stale.
 
    Enhancement: _none_
 
-   Project board: https://github.com/orgs/kubernetes/projects/171
+   Repository: https://github.com/kubernetes-sigs/promo-tools
 
 1. **Migrate away from GCS bucket: gs://kubernetes-release**
 
