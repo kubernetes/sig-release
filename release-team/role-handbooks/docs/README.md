@@ -145,6 +145,7 @@ Reference the Docs [Release Timeline](Release-Timeline.md) for key dates and res
 - [Hackmd](https://hackmd.io/)
 - [LWKD](http://lwkd.info) *(note: contributing to LWKD is not a requirement as part of the Docs shadow role, but might be of interest to shadows.)*
 - [Kubernetes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/)
+- [Generating Reference Documentation for a Release](https://kubernetes.io/docs/contribute/generate-ref-docs/release-generation/) *(note: the generated reference sets are built by a SIG Docs tech lead, not the Docs Lead)*
 
 ## Debugging Tips
 
