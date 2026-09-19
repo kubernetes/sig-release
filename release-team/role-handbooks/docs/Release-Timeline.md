@@ -495,7 +495,7 @@ The Release Tracking Github board contains multiple views for the Enhancements, 
 The Docs view contains the following items:
  - **Title**: The Title of the KEP
  - **Assignees**: The KEP authors or the assignees
- - **Status**: Track the status of the KEP. This cycles between the _Enhancement Freeze_, _PRR Freeze_, _Code Freeze_, and the _Docs Freeze_.
+ - **Status**: Track the status of the KEP. This cycles between the _KEP Readiness Deadline_, _Enhancement Freeze_, _Code Freeze_, and the _Docs Freeze_.
  - **Docs Required?**: Track if the Enhancements requires a Docs update.
     1. **Need docs**: Actively needs docs to support the enhancement in the [future-release]
     1. **Has Docs**: Actively has docs in place on Kubernetes website or in flight

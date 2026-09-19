@@ -42,12 +42,16 @@ Email them to:
 
 You should have *very high confidence* on the "additional time needed" number. The Release Team will not grant multiple exceptions for the **same** freeze for a single enhancement — once an exception has been approved or rejected for a given freeze, the decision is final and additional time cannot be requested for that freeze. The same goes for over-estimating on the time needed: if the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.
 
-A KEP may still request separate exceptions at different freeze points across the release cycle (e.g. a PRR Freeze exception and, later, a Code/Test Freeze exception), each evaluated on its own merits. The [combined PRR + Enhancements Freeze request described below](#exceptions-after-prr-freeze) remains the one case where a single request may cover two freezes.
+A KEP may still request separate exceptions at different freeze points across the release cycle (e.g. a KEP Readiness Deadline exception and, later, a Code/Test Freeze exception), each evaluated on its own merits. The [combined KEP Readiness + Enhancements Freeze request described below](#exceptions-after-kep-readiness-deadline) remains the one case where a single request may cover two freezes.
+
+#### Exceptions after KEP readiness deadline:
+- Requests for exceptions must be submitted within 3 days after the KEP readiness deadline. You may file an exception request in advance if you know your KEP will miss the KEP readiness deadline.
+- Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request (please mention that the request is for both the KEP readiness deadline and enhancements freeze, and list the expected completion date of both combined).
+- All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after PRR freeze:
-- Requests for exceptions must be submitted within 3 days after PRR freeze. You may file an exception request in advance if you know your KEP will miss the PRR freeze deadline.
-- Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request (please mention that the request is for both PRR freeze and enhancements freeze, and list the expected completion date of both combined).
-- All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.
+
+As of v1.38, this deadline has been renamed to the `KEP Readiness Deadline`. See [Exceptions after KEP readiness deadline](#exceptions-after-kep-readiness-deadline).
 
 #### Exceptions after enhancements freeze:
 - Requests for exceptions must be submitted within 3 days after enhancements freeze. You may file an exception request in advance if you know your KEP will miss the enhancements freeze deadline.

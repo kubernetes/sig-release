@@ -194,8 +194,8 @@ graph LR
     RNC --> END
 
     subgraph Enhancements
-        SET[Start Enhancements Tracking] --> PRRF[Production Readiness Review Freeze]
-        PRRF --> EF[Enhancements Freeze]
+        SET[Start Enhancements Tracking] --> KRD[KEP Readiness Deadline]
+        KRD --> EF[Enhancements Freeze]
         EF --> CF[Code Freeze]
         CF --> TF[Test Freeze]
     end
@@ -227,7 +227,7 @@ graph LR
     classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
     classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
     class START,END plain;
-    class SET,PRRF,EF k8s;
+    class SET,KRD,EF k8s;
     class DPD,DRD,DCF k8s;
     class FBOD,RBRD,FBRD k8s;
     class CMT,FDRN,RNC k8s;
@@ -242,7 +242,7 @@ graph TD
     subgraph Release Team Schedule
         START[Start of Release Cycle]
         START_ENHANCEMENTS_TRACKING[Start Enhancements Tracking]
-        PRR_FREEZE[Production Readiness Review Freeze]
+        KEP_READINESS_DEADLINE[KEP Readiness Deadline]
         ENHANCEMENTS_FREEZE[Enhancements Freeze]
         FEATURE_BLOG_FREEZE[Feature Blog Freeze]
         CODE_FREEZE[Code Freeze]
@@ -254,8 +254,8 @@ graph TD
         END[Release Day]
 
         START --> START_ENHANCEMENTS_TRACKING
-        START_ENHANCEMENTS_TRACKING --> PRR_FREEZE
-        PRR_FREEZE --> ENHANCEMENTS_FREEZE
+        START_ENHANCEMENTS_TRACKING --> KEP_READINESS_DEADLINE
+        KEP_READINESS_DEADLINE --> ENHANCEMENTS_FREEZE
         ENHANCEMENTS_FREEZE --> FEATURE_BLOG_FREEZE
         FEATURE_BLOG_FREEZE --> CODE_FREEZE
         CODE_FREEZE --> DOCS_PLACEHOLDER_FREEZE
@@ -321,7 +321,7 @@ graph TD
     classDef plain fill:#ddd,stroke:#fff,stroke-width:4px,color:#000;
     classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
     class KEP_AUTHOR plain;
-    class START,PRR_FREEZE,ENHANCEMENTS_FREEZE,FEATURE_BLOG_FREEZE,CODE_FREEZE,DOCS_PLACEHOLDER_FREEZE,TEST_FREEZE,START_ENHANCEMENTS_TRACKING,DOCS_READY_FOR_REVIEW,FEATURE_BLOG_READY_FOR_REVIEW,DOCS_FREEZE,END,FEATURE_BLOG_PUBLISHED k8s;
+    class START,KEP_READINESS_DEADLINE,ENHANCEMENTS_FREEZE,FEATURE_BLOG_FREEZE,CODE_FREEZE,DOCS_PLACEHOLDER_FREEZE,TEST_FREEZE,START_ENHANCEMENTS_TRACKING,DOCS_READY_FOR_REVIEW,FEATURE_BLOG_READY_FOR_REVIEW,DOCS_FREEZE,END,FEATURE_BLOG_PUBLISHED k8s;
     class DISCUSS,ISSUE,KEP k8s;
     class OPT_IN,KEP_DONE,CODE_COMPLETE,TEST_COMPLETE,DOCS_PLACEHOLDER_COMPLETE,DOCS_READY_TO_REVIEW_COMPLETE,DOCS_COMPLETE,FEATURE_BLOG_OPT_IN,FEATURE_BLOG_POST_COMPLETE k8s;
 ```

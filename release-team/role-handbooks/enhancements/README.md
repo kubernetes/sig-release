@@ -28,7 +28,7 @@
 - [Milestone Activities + Timing](#milestone-activities--timing)
   - [Week 0-1](#week-0-1)
   - [Week 1-2](#week-1-2)
-  - [PRR Freeze Tasks](#prr-freeze-tasks)
+  - [KEP Readiness Deadline Tasks](#kep-readiness-deadline-tasks)
   - [Enhancements Freeze Tasks](#enhancements-freeze-tasks)
   - [Code Freeze Tasks](#code-freeze-tasks)
   - [Communication Templates](#communication-templates)
@@ -191,9 +191,9 @@ stable:
   approver: @<gh-handle-of-PRR-approver>
 ```
 
-#### PRR Freeze
+#### KEP Readiness Deadline
 
-See [PRR Freeze](/releases/release_phases.md#prr-freeze) for the definition and deadline details.
+See [KEP Readiness Deadline](/releases/release_phases.md#kep-readiness-deadline) for the definition and deadline details.
 
 ### Enhancement KEP Status
 
@@ -276,8 +276,8 @@ Refer to [Release Phases](/releases/release_phases.md) for detailed requirements
 
 |                 Status | Description                                                                                                                                 |
 |-----------------------:|---------------------------------------------------------------------------------------------------------------------------------------------|
-|                Tracked For PRR Freeze | Enhancement has met all PRR Freeze requirements for inclusion into current release.                                                                    |
-|                At Risk For PRR Freeze | Enhancement does not currently meet PRR Freeze requirements for inclusion into current release.
+|                Tracked For KEP Readiness | Enhancement has met all KEP Readiness Deadline requirements for inclusion into current release.                                                                    |
+|                At Risk For KEP Readiness | Enhancement does not currently meet KEP Readiness Deadline requirements for inclusion into current release.
 |                Tracked For Enhancement Freeze | Enhancement has met all Enhancements Freeze requirements for inclusion into current release.                                                                    |
 |                At Risk For Enhancement Freeze | Enhancement does not currently meet Enhancements Freeze requirements for inclusion into current release.                                                        |
 |                Tracked For Code Freeze | Enhancement has met all Code Freeze and Test Freeze requirements for inclusion into current release.                                                                    |
@@ -401,13 +401,13 @@ The `Exception Requests` view filters on `has:exception-request-type` and surfac
 |                          Field | Description                                                                                                                  |
 |-------------------------------:|------------------------------------------------------------------------------------------------------------------------------|
 |                          Title | Title of (and link to) the KEP `Issue` in k/enhancements. For additional exceptions on the same KEP, this is a draft item.   |
-|                         Status | The KEP's current tracking status (e.g. `Tracked for PRR freeze`, `Removed from Milestone`).                                 |
+|                         Status | The KEP's current tracking status (e.g. `Tracked for KEP readiness`, `Removed from Milestone`).                                 |
 |                            SIG | Owning SIG.                                                                                                                  |
-|         Exception Request Type | The freeze the exception applies to: `PRR Freeze`, `Enhancements Freeze`, `Code and Test Freeze`, or `Docs Freeze`.          |
+|         Exception Request Type | The freeze the exception applies to: `KEP Readiness Deadline`, `Enhancements Freeze`, `Code and Test Freeze`, or `Docs Freeze`.          |
 |               Exception Status | `In Review` while the Release Team is evaluating the request, then `Approved` or `Rejected` once a decision has been made.   |
 |         Exception Request Link | Link to the Google Groups thread where the request was filed.                                                                |
 |  Exception Request Slack Thread | Link to the corresponding `#sig-release` Slack thread.                                                              |
-|          Exception Related PRs | Links to PRs associated with the exception (k/enhancements PRs for PRR/Enhancements Freeze, k/k PRs for Code/Test Freeze).   |
+|          Exception Related PRs | Links to PRs associated with the exception (k/enhancements PRs for KEP Readiness Deadline/Enhancements Freeze, k/k PRs for Code/Test Freeze).   |
 |                Additional Time | The additional time requested by the enhancement owner, in calendar days.                                                    |
 |         Exception Request Date | Date (UTC) the exception was requested.                                                                                            |
 |        Exception Decision Date | Date (UTC) the Release Team approved or rejected the exception.                                                                    |
@@ -420,7 +420,7 @@ When an exception request email comes in:
 
 1. **Locate the KEP in the `Enhancements` view** by searching for the KEP number.
     - If the KEP does not appear, it is likely being filtered out by the default view filter (e.g., `-status:Deferred,"Removed from Milestone" -enhancement-type:Docs`). Temporarily remove the relevant filter so the KEP becomes visible.
-2. **Set the `Exception Request Type`** field on the KEP to the appropriate freeze (`PRR Freeze`, `Enhancements Freeze`, `Code and Test Freeze`, or `Docs Freeze`).
+2. **Set the `Exception Request Type`** field on the KEP to the appropriate freeze (`KEP Readiness Deadline`, `Enhancements Freeze`, `Code and Test Freeze`, or `Docs Freeze`).
 3. **Set the `Status` field on the `Enhancements` view to `Exception Pending`** to indicate the request is open and awaiting a Release Team decision.
 4. As soon as `Exception Request Type` has a value, the KEP automatically appears in the `Exception Requests` view. Switch to that view, set `Exception Status` to `In Review`, and fill in the remaining fields (`Exception Request Link`, `Exception Request Slack Thread`, `Exception Related PRs`, `Additional Time`, `Exception Request Date`, etc.).
 5. Assign the request to the Enhancements Lead, Release Lead or a Release Lead shadow via the `Exception Liaison` field for follow-up on the Slack thread.
@@ -434,7 +434,7 @@ As the request moves through the Release Team's decision and any follow-up work,
     - If **approved**: set `Exception Status` to `Approved` and the KEP `Status` to `Exception Approved`.
     - If **rejected**: set `Exception Status` to `Rejected` and the KEP `Status` to `Removed from Milestone` (see [Label and milestone updates](#label-and-milestone-updates-when-removing-or-re-adding-a-kep) below).
 - **Once the deadline granted by the exception has passed**, re-evaluate the KEP and update its `Status` accordingly:
-    - If the KEP has satisfied all the requirements for the freeze, move it to the appropriate `Tracked for ...` status (e.g. `Tracked for PRR freeze`, `Tracked for enhancements freeze`, `Tracked for code freeze`, `Tracked for docs freeze`). See [Label and milestone updates](#label-and-milestone-updates-when-removing-or-re-adding-a-kep) below for the corresponding label changes.
+    - If the KEP has satisfied all the requirements for the freeze, move it to the appropriate `Tracked for ...` status (e.g. `Tracked for KEP readiness`, `Tracked for enhancements freeze`, `Tracked for code freeze`, `Tracked for docs freeze`). See [Label and milestone updates](#label-and-milestone-updates-when-removing-or-re-adding-a-kep) below for the corresponding label changes.
     - If the KEP missed the new deadline, set its `Status` to `Removed from Milestone`.
 
 ##### Label and milestone updates when removing or re-adding a KEP
@@ -570,24 +570,24 @@ At the beginning of the release cycle, we reach out to each SIG reminding them t
 
 - Work with the Release Lead to introduce yourself, talk about release information, and relay information about opting into the release with SIG Leads.
 
-### PRR Freeze Tasks
+### KEP Readiness Deadline Tasks
 
-[PRR Freeze](/releases/release_phases.md#prr-freeze) is a hard deadline happening a week before Enhancements Freeze. By this date, a PR must be open (it's not required to be merged yet) with all the required KEP updates. KEPs that will miss this deadline require a [PRR freeze exception](/releases/EXCEPTIONS.md#exceptions-after-prr-freeze) or they will be removed from the milestone.
+The [KEP Readiness Deadline](/releases/release_phases.md#kep-readiness-deadline) is a hard deadline happening a week before Enhancements Freeze. By this date, a PR must be open (it's not required to be merged yet) with all the required KEP updates. KEPs that will miss this deadline require a [KEP readiness deadline exception](/releases/EXCEPTIONS.md#exceptions-after-kep-readiness-deadline) or they will be removed from the milestone.
 
-#### Before PRR Freeze
+#### Before KEP Readiness Deadline
 
 - Monitor the Release Tracking Board for new additions (as SIGs may opt-in KEPs for the release up until the deadline), and assign an `Enhancements Contact` to each issue.
 - For opted-in issues periodically (a few times a week, increasing to daily closer to the deadlines):
   - Ensure issue is in the current milestone
   - Ensure issue has correct labels (`stage/xxx` is accurate, etc.)
   - Ensure the `SIG`, `Stage`, and `Enhancement Type` Fields in the Release Tracking Board are populated and accurate
-  - Evaluate if the enhancement satisfies all the [PRR Freeze requirements](/releases/release_phases.md#prr-freeze) for inclusion in the current release.
-    - Comment on the issue using one of the [PRR Freeze communication templates](./communication-templates.md#prr-freeze-templates)
-    - Update the issue `Status` to either `Tracked for PRR freeze` or `At risk for PRR freeze` on the tracking board
-  - If the KEP meets the PRR Freeze requirements (`Tracked for PRR freeze`), then proceed to the [Enhancements Freeze Tasks](#enhancements-freeze-tasks) immediately. Since the two deadlines are only a week apart, it is crucial to give the KEP authors feedback as soon as possible so they can fix any issues before the deadlines.
+  - Evaluate if the enhancement satisfies all the [KEP Readiness Deadline requirements](/releases/release_phases.md#kep-readiness-deadline) for inclusion in the current release.
+    - Comment on the issue using one of the [KEP Readiness Deadline communication templates](./communication-templates.md#kep-readiness-deadline-templates)
+    - Update the issue `Status` to either `Tracked for KEP readiness` or `At risk for KEP readiness` on the tracking board
+  - If the KEP meets the KEP Readiness Deadline requirements (`Tracked for KEP readiness`), then proceed to the [Enhancements Freeze Tasks](#enhancements-freeze-tasks) immediately. Since the two deadlines are only a week apart, it is crucial to give the KEP authors feedback as soon as possible so they can fix any issues before the deadlines.
 - Prepare a PR to [disable syncing of issues to the tracking board](./tracking-board.md#disabling-tracking-board-automation).
   - Add a `/hold` so it doesn't merge yet.
-  - Get all the required approvals ahead of time, so that during PRR Freeze we can just unhold it to let it merge.
+  - Get all the required approvals ahead of time, so that during the KEP Readiness Party we can just unhold it to let it merge.
 
 > [!TIP]
 > In case they are not linked from the issue description, both the `kep.yaml` and `README.md` can be found in a directory with the format `https://github.com/kubernetes/enhancements/tree/master/keps/<sig>/<kep-issue-number>-<kep-title>/`, and the PRR can be found at `https://github.com/kubernetes/enhancements/blob/master/keps/prod-readiness/<sig>/<kep-number>.yaml`.
@@ -599,33 +599,33 @@ At the beginning of the release cycle, we reach out to each SIG reminding them t
 > - No changes are needed to the PRR.
 > - Verify that the KEP author has followed the [Kubernetes Deprecation Policy](https://kubernetes.io/docs/reference/using-api/deprecation-policy/). If there is any uncertaintly, it may be helpful to start a thread in the #enhancements channel in Slack.
 
-#### Week of PRR Freeze
+#### Week of KEP Readiness Deadline
 
-- Schedule a "PRR Freeze Party" for the day of the PRR Freeze. Invite all the Enhancement shadows, Subproject Leads, Release Team Lead and Lead Shadows (make participation optional for the invitees due to potential timezone differences). Post the "PRR Freeze Party" meeting details in the `#sig-release` and `#release-enhancements` Slack channels.
+- Schedule a "KEP Readiness Party" for the day of the KEP Readiness Deadline. Invite all the Enhancement shadows, Subproject Leads, Release Team Lead and Lead Shadows (make participation optional for the invitees due to potential timezone differences). Post the "KEP Readiness Party" meeting details in the `#sig-release` and `#release-enhancements` Slack channels.
 
-#### PRR Freeze Party
+#### KEP Readiness Party
 
-At the start of the "PRR Freeze Party" meeting, send an announcement in Slack (`#sig-release` and `#release-enhancements`) that the meeting is starting.
+At the start of the "KEP Readiness Party" meeting, send an announcement in Slack (`#sig-release` and `#release-enhancements`) that the meeting is starting.
 
 During the meeting:
-- Unhold (`/unhold`) the PR enforcing PRR freeze, allowing it to merge. This will prevent any new issues from getting synced to the tracking board.
-- Review each of the `At risk for PRR freeze` issues to perform a final assessment of [PRR Freeze](/releases/release_phases.md#prr-freeze) readiness. Comment on the issue using one of the [PRR Freeze Party Templates](./communication-templates.md#prr-freeze-party-templates) and update the issue status to either `Tracked for PRR freeze` or `Removed from Milestone`.
+- Unhold (`/unhold`) the PR enforcing the KEP readiness deadline, allowing it to merge. This will prevent any new issues from getting synced to the tracking board.
+- Review each of the `At risk for KEP readiness` issues to perform a final assessment of whether they meet the [KEP Readiness Deadline](/releases/release_phases.md#kep-readiness-deadline) requirements. Comment on the issue using one of the [KEP Readiness Party Templates](./communication-templates.md#kep-readiness-party-templates) and update the issue status to either `Tracked for KEP readiness` or `Removed from Milestone`.
 
-#### After PRR Freeze
+#### After KEP Readiness Deadline
 
-- Send an email to the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to the `#sig-release` and `#release-enhancements` Slack channels that PRR freeze is in effect.
-  - Example v1.36 [PRR Freeze announcement](https://groups.google.com/a/kubernetes.io/g/dev/c/p7K3THZeWh0) and [Slack message](https://kubernetes.slack.com/archives/C2C40FMNF/p1770295244813829)
-- Work with the Release Lead team to track any PRR Freeze [exceptions](#exceptions) that come in.
+- Send an email to the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to the `#sig-release` and `#release-enhancements` Slack channels that the KEP Readiness Deadline has passed.
+  - Example v1.36 [mailing list announcement](https://groups.google.com/a/kubernetes.io/g/dev/c/p7K3THZeWh0) and [Slack message](https://kubernetes.slack.com/archives/C2C40FMNF/p1770295244813829)
+- Work with the Release Lead team to track any KEP Readiness Deadline [exceptions](#exceptions) that come in.
 - Begin the [Enhancements Freeze Tasks](#enhancements-freeze-tasks) as soon as possible, as the deadline is only a week away.
 
 ### Enhancements Freeze Tasks
 
-[Enhancements Freeze](/releases/release_phases.md#enhancements-freeze) occurs one week after PRR Freeze. By this date, all required KEP updates must be merged into the [k/enhancements] repo. KEPs that will miss this deadline require an [Enhancements freeze exception](/releases/EXCEPTIONS.md#exceptions-after-enhancements-freeze) or they will be removed from the milestone.
+[Enhancements Freeze](/releases/release_phases.md#enhancements-freeze) occurs one week after the KEP Readiness Deadline. By this date, all required KEP updates must be merged into the [k/enhancements] repo. KEPs that will miss this deadline require an [Enhancements freeze exception](/releases/EXCEPTIONS.md#exceptions-after-enhancements-freeze) or they will be removed from the milestone.
 
 #### Before Enhancements Freeze
 
-- If necessary, re-balance the issue assignments (`Enhancements Contact`) across the team, since some KEPs may have been removed from the milestone after PRR Freeze.
-- For each issue that is already `Tracked for PRR Freeze`:
+- If necessary, re-balance the issue assignments (`Enhancements Contact`) across the team, since some KEPs may have been removed from the milestone after the KEP Readiness Deadline.
+- For each issue that is already `Tracked for KEP readiness`:
   - Evaluate if the enhancement satisfies all the [Enhancements Freeze requirements](/releases/release_phases.md#enhancements-freeze) for inclusion in the current release.
     - Comment on the issue using one of the [Enhancements Freeze communication templates](./communication-templates.md#enhancements-freeze-templates)
     - Update the issue `Status` to either `Tracked for enhancements freeze` or `At risk for enhancements freeze` on the tracking board
@@ -710,7 +710,7 @@ During the meeting:
 
 ### Communication Templates
 
-Communication templates for PRR freeze, enhancements freeze, code freeze, and SIG outreach are maintained in a separate document. See [communication-templates.md](./communication-templates.md).
+Communication templates for KEP readiness deadline, enhancements freeze, code freeze, and SIG outreach are maintained in a separate document. See [communication-templates.md](./communication-templates.md).
 
 ### Before End Of Release
 

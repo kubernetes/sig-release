@@ -42,7 +42,7 @@ We will rotate the person giving updates at each Release Team meeting. Please si
       <td style="border: 1px solid black;"></td>
     </tr>
     <tr>
-      <td colspan="4" style="text-align: center; border: 1px solid black; background-color: lightgreen;"><strong>PRR Freeze: yyyy-mm-dd</strong></td>
+      <td colspan="4" style="text-align: center; border: 1px solid black; background-color: lightgreen;"><strong>KEP Readiness Deadline: yyyy-mm-dd</strong></td>
     </tr>
     <tr>
       <td style="border: 1px solid black;">5</td>
