@@ -336,7 +336,7 @@ This is an example of a typical release cycle and the order of how tasks will fl
     </tr>
     <tr>
         <td>3</td>
-        <td><b>Production Readiness Freeze</b></td>
+        <td><b>KEP Readiness Deadline</b></td>
         <td>
         <ul>
         <li>Get access to the <code>Enhancements</code> and <code>Feature blog opt-in</code> tracking boards and start following along. Edit the <code>Comms Opt-in Assignee</code> and <code>Comms Editor</code> columns with everyone on the comms team.
