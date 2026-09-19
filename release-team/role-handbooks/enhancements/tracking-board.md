@@ -170,7 +170,7 @@ Previous PRs for reference:
 
 ## Disabling Tracking Board Automation
 
-At [PRR Freeze](/releases/release_phases.md#prr-freeze), we need to disable the automatic syncing of KEPs to the tracking board. This involves opening a pull request in [k/test-infra](https://github.com/kubernetes/test-infra) that does the inverse of the change [above](#enabling-tracking-board-automation).
+At the [KEP Readiness Deadline](/releases/release_phases.md#kep-readiness-deadline), we need to disable the automatic syncing of KEPs to the tracking board. This involves opening a pull request in [k/test-infra](https://github.com/kubernetes/test-infra) that does the inverse of the change [above](#enabling-tracking-board-automation).
 
 Previous PRs for reference:
 - [v1.35 disable periodic sync](https://github.com/kubernetes/test-infra/pull/35664)

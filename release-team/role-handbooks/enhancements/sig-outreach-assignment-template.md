@@ -52,9 +52,9 @@ For each of your assigned SIGs:
 ```markdown
 Hello #sig-{ SIG_NAME } 👋 { CURRENT_RELEASE } Enhancements team here.
 
-Just checking in as we approach PRR freeze at { PRR_FREEZE_DATETIME } and enhancements freeze at { ENHANCEMENTS_FREEZE_DATETIME }.
+Just checking in as we approach the KEP readiness deadline at { KEP_READINESS_DATETIME } and enhancements freeze at { ENHANCEMENTS_FREEZE_DATETIME }.
 
-Your SIG has submitted `{ X }` enhancements for the { CURRENT_RELEASE } cycle, and { Y } enhancements are currently `At risk for PRR freeze`.
+Your SIG has submitted `{ X }` enhancements for the { CURRENT_RELEASE } cycle, and { Y } enhancements are currently `At risk for KEP readiness`.
 
 Refer to the [announcement here]({link to announcement for current release cycle}) for the list of review requirements. If your SIG still plans to submit more enhancements, follow the instructions in the announcement so the enhancements team can begin tracking. Please plan to make KEP updates to meet all the requirements before the above freeze deadlines. Please reach out to [#release-enhancements](https://kubernetes.slack.com/archives/C02BY55KV7E) if you have any questions.
 ```
@@ -66,7 +66,7 @@ Refer to the [announcement here]({link to announcement for current release cycle
 ```markdown
 Hello #sig-{ SIG_NAME } 👋 { CURRENT_RELEASE } Enhancements team here.
 
-Just checking in as we approach PRR freeze at { PRR_FREEZE_DATETIME } and enhancements freeze at { ENHANCEMENTS_FREEZE_DATETIME }.
+Just checking in as we approach the KEP readiness deadline at { KEP_READINESS_DATETIME } and enhancements freeze at { ENHANCEMENTS_FREEZE_DATETIME }.
 
 Your SIG has not submitted any enhancements for the { CURRENT_RELEASE } cycle.
 

@@ -6,21 +6,21 @@ The freeze dates/times for the current release can be found at `https://github.c
 
 ## Table of Contents
 
-- [PRR Freeze Templates](#prr-freeze-templates)
-- [PRR Freeze Party Templates](#prr-freeze-party-templates)
+- [KEP Readiness Deadline Templates](#kep-readiness-deadline-templates)
+- [KEP Readiness Party Templates](#kep-readiness-party-templates)
 - [Enhancements Freeze Templates](#enhancements-freeze-templates)
 - [Enhancements Freeze Party Templates](#enhancements-freeze-party-templates)
 - [Code Freeze Templates](#code-freeze-templates)
 - [Code Freeze Party Templates](#code-freeze-party-templates)
 
-## PRR Freeze Templates
+## KEP Readiness Deadline Templates
 
-❌ If the enhancement **does not** meet the PRR Freeze criteria for inclusion in the current release, add an issue comment using this template:
+❌ If the enhancement **does not** meet the KEP Readiness Deadline criteria for inclusion in the current release, add an issue comment using this template:
 
 ```markdown
 Hello {enhancement owner} 👋, {current release} Enhancements team here.
 
-This is a reminder of the upcoming [PRR freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#prr-freeze) on **{ PRR_FREEZE_DATETIME }**.
+This is a reminder of the upcoming [KEP Readiness Deadline](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#kep-readiness-deadline) on **{ KEP_READINESS_DATETIME }**.
 
 This enhancement is targeting stage `{stage}` for {current release} (correct me, if otherwise)
 
@@ -33,23 +33,23 @@ Here's where this enhancement currently stands:
 For this KEP, we would just need to update the following:
 - {insert list of action items}
 
-Note that the PR is not required to be approved or merged by the PRR freeze deadline. Having the PRR questionnaire filled out by the deadline will help ensure that the PRR team has enough time to review your KEP before **enhancements freeze on { ENHANCEMENTS_FREEZE_DATETIME }**. For more information on the PRR process, see [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval).
+Note that the PR is not required to be approved or merged by the KEP Readiness Deadline. Having the PRR questionnaire filled out by the deadline will help ensure that the PRR team has enough time to review your KEP before **enhancements freeze on { ENHANCEMENTS_FREEZE_DATETIME }**. For more information on the PRR process, see [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval).
 
-The status of this enhancement is marked as `At risk for PRR freeze`. Please keep the issue description up-to-date with appropriate stages as well.
+The status of this enhancement is marked as `At risk for KEP readiness`. Please keep the issue description up-to-date with appropriate stages as well.
 
-If you anticipate missing PRR freeze, you can file an [exception request](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) in advance. Thank you!
+If you anticipate missing the KEP Readiness Deadline, you can file an [exception request](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) in advance. Thank you!
 ```
 
-Then make sure the status of the enhancement is set to `At risk for PRR freeze`.
+Then make sure the status of the enhancement is set to `At risk for KEP readiness`.
 
 ---
 
-✅ If the enhancement **does** meet the PRR Freeze criteria for inclusion in the current release, add an issue comment using this template:
+✅ If the enhancement **does** meet the KEP Readiness Deadline criteria for inclusion in the current release, add an issue comment using this template:
 
 ```markdown
 Hello {enhancement owner} 👋, {current release} Enhancements team here.
 
-This is a reminder of the upcoming [PRR freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#prr-freeze) on **{ PRR_FREEZE_DATETIME }**.
+This is a reminder of the upcoming [KEP readiness deadline](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#kep-readiness-deadline) on **{ KEP_READINESS_DATETIME }**.
 
 This enhancement is targeting stage `{stage}` for {current release} (correct me, if otherwise)
 
@@ -59,25 +59,25 @@ Here's where this enhancement currently stands:
 - [x] PR open or merged with [kep.yaml](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/kep.yaml) updated with the `stage`, `latest-milestone`, and `milestone` struct filled out.
 - [x] PR open or merged with a [PRR approval file](https://github.com/kubernetes/enhancements/blob/master/keps/prod-readiness/template/nnnn.yaml) with the PRR approver listed for the stage the KEP is targeting.
 
-Note that the PR is not required to be approved or merged by the PRR freeze deadline. Having the PRR questionnaire filled out by the deadline will help ensure that the PRR team has enough time to review your KEP before **enhancements freeze on { ENHANCEMENTS_FREEZE_DATETIME }**. For more information on the PRR process, see [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval).
+Note that the PR is not required to be approved or merged by the KEP readiness deadline. Having the PRR questionnaire filled out by the deadline will help ensure that the PRR team has enough time to review your KEP before **enhancements freeze on { ENHANCEMENTS_FREEZE_DATETIME }**. For more information on the PRR process, see [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval).
 
-With all the PRR freeze requirements in place, this enhancement is now marked as `Tracked for PRR freeze`! Please keep the issue description up-to-date with appropriate stages as well.
+With all the KEP readiness deadline requirements in place, this enhancement is now marked as `Tracked for KEP readiness`! Please keep the issue description up-to-date with appropriate stages as well.
 
 /label tracked/yes
 ```
 
-Then make sure the status of the enhancement is set to `Tracked for PRR freeze`.
+Then make sure the status of the enhancement is set to `Tracked for KEP readiness`.
 
-## PRR Freeze Party Templates
+## KEP Readiness Party Templates
 
-These templates should be used during the PRR Freeze Party for KEPs that are `At risk for PRR freeze`.
+These templates should be used during the KEP Readiness Party for KEPs that are `At risk for KEP readiness`.
 
-❌ If the enhancement **does not** meet the PRR Freeze criteria for inclusion in the current release, add an issue comment using this template:
+❌ If the enhancement **does not** meet the KEP Readiness Deadline criteria for inclusion in the current release, add an issue comment using this template:
 
 ```markdown
 Hello {enhancement owner} 👋, {current release} Enhancements team here.
 
-Unfortunately, this enhancement did not meet requirements for [PRR freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#prr-freeze).
+Unfortunately, this enhancement did not meet requirements for the [KEP readiness deadline](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#kep-readiness-deadline).
 
 If you still wish to progress this enhancement in {current release}, please file an [exception](https://github.com/kubernetes/sig-release/blob/master/releases/EXCEPTIONS.md) request as soon as possible, within three days. If you have any questions, you can reach out in the #release-enhancements channel on Slack and we'll be happy to help. Thanks!
 
@@ -89,17 +89,17 @@ Then make sure the status of the enhancement is set to `Removed from Milestone`.
 
 ---
 
-✅ If the enhancement **does** meet the PRR Freeze criteria for inclusion in the current release, add an issue comment using this template:
+✅ If the enhancement **does** meet the KEP Readiness Deadline criteria for inclusion in the current release, add an issue comment using this template:
 
 ```markdown
 Hello {enhancement owner} 👋, {current release} Enhancements team here.
 
-With all the requirements fulfilled, this enhancement is now marked as tracked for the upcoming PRR freeze 🚀
+With all the requirements fulfilled, this enhancement is now marked as tracked for the upcoming KEP readiness deadline 🚀
 
 /label tracked/yes
 ```
 
-Then make sure the status of the enhancement is set to `Tracked for PRR freeze`.
+Then make sure the status of the enhancement is set to `Tracked for KEP readiness`.
 
 ## Enhancements Freeze Templates
 
