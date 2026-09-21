@@ -1,14 +1,14 @@
 # Release Phases
 
-## PRR Freeze
+## KEP Readiness Deadline
 
-The PRR freeze is a hard deadline happening one week before the [Enhancements Freeze]. After PRR freeze, no new KEPs may be opted into the milestone.
+The KEP Readiness Deadline is a hard deadline happening one week before the [Enhancements Freeze]. After the KEP Readiness Deadline, no new KEPs may be opted into the milestone.
 
 All enhancements wishing to be included in the current release must have an [open issue in kubernetes/enhancements](https://github.com/kubernetes/enhancements/issues/) that:
 - is in the current Release Milestone
 - has the `lead-opted-in` label applied
 
-As described [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval), by the PRR freeze date, KEP authors must have at least a PR opened in [kubernetes/enhancements] with:
+As described [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval), by the KEP Readiness Deadline, KEP authors must have at least a PR opened in [kubernetes/enhancements] with:
 - The KEP's [PRR questionnaire](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template#production-readiness-review-questionnaire) filled out
 - The [kep.yaml](https://github.com/kubernetes/enhancements/blob/master/keps/NNNN-kep-template/kep.yaml) updated with:
     - `stage` set to the current stage
@@ -16,14 +16,18 @@ As described [here](https://github.com/kubernetes/community/blob/master/sig-arch
     - `milestone` struct updated with the current stage and release (only if graduating to a new stage)
 - A [PRR approval file](https://github.com/kubernetes/enhancements/blob/master/keps/prod-readiness/template/nnnn.yaml) with the PRR approver listed for the stage the KEP is targeting
 
-It is important to note that the PRR freeze **_does not_** mean that the KEPs need to have received an approval or even a review from the PRR team by this date.
+It is important to note that the KEP Readiness Deadline **_does not_** mean that the KEPs need to have received an approval or even a review from the PRR team by this date.
 
 If the enhancement does not meet these requirements, it will be removed from the
 milestone and will require an [Exception].
 
+## PRR Freeze
+
+As of v1.38, this deadline has been renamed to the [KEP Readiness Deadline].
+
 ## Enhancements Freeze
 
-By enhancements freeze, all enhancements must have the PRR freeze requirements listed above, as well as the following updates, merged into [kubernetes/enhancements]:
+By enhancements freeze, all enhancements must have the [KEP Readiness Deadline] requirements listed above, as well as the following updates, merged into [kubernetes/enhancements]:
 
 - The `kep.yaml` updated with:
     - `status` set to `implementable`
@@ -102,7 +106,7 @@ branch.
 
 ## Exceptions
 
-Starting at [PRR Freeze], the release team will solicit and rule on
+Starting at the [KEP Readiness Deadline], the release team will solicit and rule on
 [Exception] requests for enhancements and test work that is unlikely to be done
 by [Code Freeze]. The [Exception] approval is the responsibility of the SIG or SIGs
 labeled in the pull request. The release team may intervene or deny the request
@@ -175,7 +179,7 @@ After Docs Freeze, the owners of any outstanding documentation PRs must file an 
 [kubernetes/enhancements]: https://github.com/kubernetes/enhancements
 [Kubernetes Release Calendar]: https://bit.ly/k8s-release-cal
 [Exception]: ./EXCEPTIONS.md
-[PRR Freeze]: #prr-freeze
+[KEP Readiness Deadline]: #kep-readiness-deadline
 [Enhancements Freeze]: #enhancements-freeze
 [Code Freeze]: #code-freeze
 [Test Freeze]: #test-freeze
