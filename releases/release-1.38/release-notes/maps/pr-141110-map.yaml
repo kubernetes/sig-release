@@ -1,0 +1,9 @@
+pr: 141110
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed stale or incorrect mappings from extended resource names to DeviceClasses when multiple DeviceClasses used the same extended resource name and one of them was updated or deleted.
+  sigs:
+  - node
+  kinds:
+  - bug

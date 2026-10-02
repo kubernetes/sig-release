@@ -1,0 +1,10 @@
+pr: 141608
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the EndpointSliceMirroring controller treating a `NotFound` error as a failure when deleting an EndpointSlice that was already gone, which caused unnecessary retries and misleading error logs.
+  sigs:
+  - apps
+  - network
+  kinds:
+  - bug

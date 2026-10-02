@@ -1,0 +1,11 @@
+pr: 141487
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed an issue where a container that was recreated while the `kubelet` could not reach the `kube-apiserver` was reported Ready after a `kubelet` restart, before its own readiness probe had run.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

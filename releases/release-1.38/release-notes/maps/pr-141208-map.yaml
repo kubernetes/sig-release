@@ -1,0 +1,13 @@
+pr: 141208
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the `apidiscovery.k8s.io/v2beta1` types, including the `k8s.io/api/apidiscovery/v2beta1` Go package, and the `AggregatedDiscoveryRemoveBetaType` feature gate.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - apiserver
+  - code-generation

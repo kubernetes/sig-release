@@ -1,0 +1,9 @@
+pr: 141831
+pr_body: ""
+releasenote:
+  text: |-
+    Added an API server warning when a DeviceTaintRule is created or updated with a `deviceSelector` that is present but empty, because that selector matches every device from every driver in the cluster. Scripts that run `kubectl` with `--warnings-as-errors` against an intentional select-all rule get a non-zero exit code even though the object is created, the same as for `PodSecurity` warn-level violations.
+  sigs:
+  - node
+  kinds:
+  - feature

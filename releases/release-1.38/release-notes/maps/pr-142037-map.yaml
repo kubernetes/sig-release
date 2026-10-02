@@ -1,0 +1,11 @@
+pr: 142037
+pr_body: ""
+releasenote:
+  text: |-
+    Added support for ML-DSA keys to `kubeadm`. The `encryptionAlgorithm` field in `ClusterConfiguration` accepts ML-DSA-44, ML-DSA-65, and ML-DSA-87 for new clusters, in the `v1beta4` API and the disabled `v1` API. Other components such as `kube-apiserver` and etcd might not support ML-DSA in this release, so a default `kubeadm` setup that uses it can fail.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - feature
+  areas:
+  - kubeadm

@@ -1,0 +1,9 @@
+pr: 138510
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `resource.Quantity.Value()` and `MilliValue()` to round negative values away from zero, as documented. Previously, small negative quantities could round toward positive infinity (for example, `ParseQuantity("-.484785E-7466").Value()` returned `1` instead of `-1`).
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

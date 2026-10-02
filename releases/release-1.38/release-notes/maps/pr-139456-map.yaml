@@ -1,0 +1,11 @@
+pr: 139456
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` CPU Manager ignoring the Topology Manager's multi-NUMA affinity when the `distribute-cpus-across-numa` policy option was enabled. CPU allocations stay aligned with device topology, for example GPUs and NICs, across NUMA nodes.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

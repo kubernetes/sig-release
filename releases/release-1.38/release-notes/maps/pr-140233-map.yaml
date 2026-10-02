@@ -1,0 +1,12 @@
+pr: 140233
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the plain-text `/flagz` response to state that it reports command-line flag values or their defaults, not the effective runtime configuration, and to point to `/configz` where available.
+  sigs:
+  - api-machinery
+  - instrumentation
+  kinds:
+  - documentation
+  areas:
+  - apiserver

@@ -1,0 +1,10 @@
+pr: 141800
+pr_body: ""
+releasenote:
+  text: |-
+    Extended the `kube-scheduler` queue metrics to support CompositePodGroup.
+  sigs:
+  - instrumentation
+  - scheduling
+  kinds:
+  - feature

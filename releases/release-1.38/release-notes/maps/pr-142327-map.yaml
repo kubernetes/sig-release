@@ -1,0 +1,10 @@
+pr: 142327
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the Pod `binding` subresource to return the Pod's updated `resourceVersion` in the metadata of its Status response.
+  sigs:
+  - api-machinery
+  - node
+  kinds:
+  - feature

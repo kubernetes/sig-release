@@ -1,0 +1,10 @@
+pr: 141641
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed CRD validation failures for `minItems` and `minProperties` reporting the misleading `Invalid value: <count>` instead of `Too few: <count>: must have at least N items`.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  - api-change

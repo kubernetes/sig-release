@@ -1,0 +1,11 @@
+pr: 141534
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubectl explain` printing the `KIND`/`VERSION` header to stdout when the command failed because of an invalid field path. The error is still written to stderr, and the exit code is unchanged.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

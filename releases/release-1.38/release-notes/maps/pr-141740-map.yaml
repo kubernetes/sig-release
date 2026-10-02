@@ -1,0 +1,11 @@
+pr: 141740
+pr_body: ""
+releasenote:
+  text: |-
+    Updated `crictl` (cri-tools) to `v1.37.0`.
+  sigs:
+  - cloud-provider
+  kinds:
+  - cleanup
+  areas:
+  - provider/gcp

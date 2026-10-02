@@ -1,0 +1,12 @@
+pr: 141460
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the `Pods, completes the lifecycle of a Pod and the PodStatus` conformance test to cover resetting the `PodReadyToStartContainers` condition.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

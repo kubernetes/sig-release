@@ -1,0 +1,11 @@
+pr: 140058
+pr_body: ""
+releasenote:
+  text: |-
+    Added autocompletion support for `kubectl explain`.
+  sigs:
+  - cli
+  kinds:
+  - feature
+  areas:
+  - kubectl

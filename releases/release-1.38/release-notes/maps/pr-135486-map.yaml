@@ -1,0 +1,10 @@
+pr: 135486
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the DefaultPreemption plugin in `kube-scheduler` returning an error when a filter extender rejected a Pod. Nodes rejected by a filter extender are passed to preemption-capable scheduler extenders as candidates with empty victim lists, so those extenders must handle candidates that have no victims.
+  sigs:
+  - scheduling
+  kinds:
+  - bug
+  - api-change

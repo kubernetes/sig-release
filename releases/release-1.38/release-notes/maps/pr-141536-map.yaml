@@ -1,0 +1,13 @@
+pr: 141536
+pr_body: ""
+releasenote:
+  text: |-
+    Promoted the `volume_operation_errors_total` metric in `kube-controller-manager` from Alpha to Beta stability.
+  sigs:
+  - apps
+  - instrumentation
+  - storage
+  kinds:
+  - feature
+  areas:
+  - stable-metrics

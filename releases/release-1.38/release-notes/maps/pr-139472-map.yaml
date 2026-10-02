@@ -1,0 +1,15 @@
+pr: 139472
+pr_body: ""
+releasenote:
+  text: |-
+    Changed topology-aware workload scheduling (TAS) in `kube-scheduler` to respect the Pod `status.nominatedNodeName` field when selecting a placement for a PodGroup. This does not apply to PodGroups that belong to a CompositePodGroup ([#140863](https://github.com/kubernetes/kubernetes/issues/140863)).
+  sigs:
+  - api-machinery
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation

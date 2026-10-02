@@ -1,0 +1,10 @@
+pr: 141493
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `rest_client_dns_resolution_duration_seconds` metric in `client-go` never being registered, so components did not expose it on `/metrics` and its observations were dropped.
+  sigs:
+  - architecture
+  - instrumentation
+  kinds:
+  - bug

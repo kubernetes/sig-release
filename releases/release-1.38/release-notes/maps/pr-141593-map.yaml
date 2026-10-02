@@ -1,0 +1,13 @@
+pr: 141593
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the EndpointSlice controller leaving an EndpointSlice stale or incorrect when a Service and its Pods were rapidly deleted and recreated.
+  sigs:
+  - apps
+  - network
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

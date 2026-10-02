@@ -1,0 +1,11 @@
+pr: 141100
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a `kubelet` panic when validating an in-place decrease of a container memory limit while pod-level memory usage stats were unavailable.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

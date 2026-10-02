@@ -1,0 +1,16 @@
+pr: 142046
+pr_body: ""
+releasenote:
+  text: |-
+    Added the `clientCertificateKeyAlgorithm` and `serverCertificateKeyAlgorithm` fields to `KubeletConfiguration`, so the `kubelet` can request client and server certificates with ECDSA, RSA, or ML-DSA keys. The default remains ECDSA-P256.
+  sigs:
+  - api-machinery
+  - auth
+  - node
+  - scheduling
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubelet
+  - code-generation

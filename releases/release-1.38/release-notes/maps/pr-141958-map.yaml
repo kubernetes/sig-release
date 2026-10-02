@@ -1,0 +1,12 @@
+pr: 141958
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` running a container as Unconfined when its Pod had an unknown or empty `seccompProfile.type`. The container fails to start with `CreateContainerConfigError` instead. API validation already rejects both values, so this only affects Pods that reached the `kubelet` without passing API validation, or a `kubelet` older than an API server that supports a seccomp profile type it does not know.
+  sigs:
+  - auth
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

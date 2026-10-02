@@ -1,0 +1,14 @@
+pr: 141556
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where Pods requesting DRA-backed extended resources failed to schedule when the DRA devices also contributed node allocatable resources, with the Alpha `DRANodeAllocatableResources` feature gate enabled.
+  sigs:
+  - apps
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

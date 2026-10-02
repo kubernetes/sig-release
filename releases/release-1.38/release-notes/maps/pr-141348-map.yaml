@@ -1,0 +1,9 @@
+pr: 141348
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the `LimitRanger` admission plugin to compare resource quantities exactly. A LimitRange minimum, maximum, or limit-to-request ratio is enforced for quantities large enough to overflow an int64 instead of being silently skipped, and a ratio constraint no longer rejects an equal request and limit above 2^63. Requests and limits within one milli-unit of a bound, such as a request of 0.9999 against a minimum of 1, are rejected, where previously rounding placed them on the bound.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

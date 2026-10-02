@@ -1,0 +1,12 @@
+pr: 141314
+pr_body: ""
+releasenote:
+  text: |-
+    Exposed PlacementFeasible as an extension point in `kube-scheduler`, so out-of-tree plugins can evaluate whether a PodGroup placement is feasible.
+  sigs:
+  - scheduling
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - code-generation

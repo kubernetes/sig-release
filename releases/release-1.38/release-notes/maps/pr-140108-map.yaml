@@ -1,0 +1,9 @@
+pr: 140108
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the `RuntimeClass` admission plugin to admit Pods with an empty `spec.runtimeClassName`.
+  sigs:
+  - node
+  kinds:
+  - bug

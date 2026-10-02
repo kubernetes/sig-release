@@ -1,0 +1,11 @@
+pr: 140862
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the deprecated and unused `metrics.k8s.io/v1alpha1` API types from `k8s.io/metrics`. Clients still using them should migrate to `metrics.k8s.io/v1` or `metrics.k8s.io/v1beta1`.
+  sigs:
+  - instrumentation
+  kinds:
+  - api-change
+  areas:
+  - code-generation

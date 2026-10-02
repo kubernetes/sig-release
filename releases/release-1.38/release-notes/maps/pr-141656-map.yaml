@@ -1,0 +1,11 @@
+pr: 141656
+pr_body: ""
+releasenote:
+  text: |-
+    Added an example to the `kubectl top pod` help text showing how to filter metrics by node with `--field-selector`.
+  sigs:
+  - cli
+  kinds:
+  - documentation
+  areas:
+  - kubectl

@@ -1,0 +1,12 @@
+pr: 141577
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a performance degradation in the `kube-scheduler` scheduling queue when PodGroups were waiting for quorum and a large number of events arrived.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

@@ -1,0 +1,12 @@
+pr: 142035
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a `v1.36` regression where `kube-proxy` tried to lower the `nf_conntrack_max` sysctl after its target value was capped, which failed on systems where `kube-proxy` cannot modify sysctls. `kube-proxy` no longer changes `nf_conntrack_max` when the current value is already higher than the value it would set.
+  sigs:
+  - network
+  kinds:
+  - bug
+  - regression
+  areas:
+  - kube-proxy

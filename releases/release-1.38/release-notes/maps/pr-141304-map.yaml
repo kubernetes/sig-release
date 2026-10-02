@@ -1,0 +1,9 @@
+pr: 141304
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the EndpointSlice controller retrying reconciliation when an EndpointSlice selected for deletion had already been removed.
+  sigs:
+  - network
+  kinds:
+  - bug

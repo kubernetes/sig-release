@@ -1,0 +1,10 @@
+pr: 141509
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `FailedToCreateEndpoint` and `FailedToUpdateEndpoint` events from the endpoints controller being recorded in the `default` namespace instead of the Service's namespace.
+  sigs:
+  - apps
+  - network
+  kinds:
+  - bug

@@ -1,0 +1,12 @@
+pr: 141527
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the OpenAPI schema for ValidatingAdmissionPolicyBinding and MutatingAdmissionPolicyBinding to mark `spec.paramRef.parameterNotFoundAction` as required, matching existing API server validation. Client-side validators, for example kubeconform, can catch the missing field before apply.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - code-generation

@@ -1,0 +1,11 @@
+pr: 141984
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed CEL cost estimation rejecting legitimate CRD validation rules that chain a URL accessor function (`getScheme`, `getHostname`, `getHost`, `getPort`, `getEscapedPath`, or `getQuery`) into a string operation such as `matches()`. The estimator treated the intermediate result as unbounded; it propagates the size bound from the input URL instead.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver

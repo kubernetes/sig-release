@@ -1,0 +1,10 @@
+pr: 142038
+pr_body: ""
+releasenote:
+  text: |-
+    Added support in `client-go` for ML-DSA keys from the `crypto/mldsa` package in Go `v1.27`.
+  sigs:
+  - api-machinery
+  - auth
+  kinds:
+  - feature

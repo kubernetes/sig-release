@@ -1,0 +1,10 @@
+pr: 142395
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed decoding of stored resource quantities with a decimal exponent outside the int32 range, such as `1e4294967296`, which `v1.37` and earlier accepted by narrowing the exponent.
+  do_not_publish: true
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

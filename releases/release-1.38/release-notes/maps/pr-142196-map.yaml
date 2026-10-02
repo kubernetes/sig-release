@@ -1,0 +1,13 @@
+pr: 142196
+pr_body: ""
+releasenote:
+  text: |-
+    Added support for PKCS#10 signing requests signed with ML-DSA (post-quantum) keys in the CertificateSigningRequest API, behind the `CertificateSigningRequestMLDSA` feature gate.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  kinds:
+  - api-change
+  areas:
+  - code-generation

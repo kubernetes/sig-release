@@ -1,0 +1,11 @@
+pr: 141169
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed PersistentVolumeClaim `status.capacity` accepting a negative quantity whose `Value()` overflowed (for example `-9.5Gi` or `-1e30`), and rejecting a positive capacity whose `Value()` wrapped negative (for example `9223372036854775808`).
+  sigs:
+  - api-machinery
+  - apps
+  - storage
+  kinds:
+  - bug

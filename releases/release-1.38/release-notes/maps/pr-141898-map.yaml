@@ -1,0 +1,9 @@
+pr: 141898
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed DRA requests with `allocationMode` set to All failing to schedule when a resource pool on one candidate node was incomplete or invalid. `kube-scheduler` continues trying other nodes instead.
+  sigs:
+  - node
+  kinds:
+  - bug

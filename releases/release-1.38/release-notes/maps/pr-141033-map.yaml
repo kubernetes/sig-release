@@ -1,0 +1,17 @@
+pr: 141033
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the etcd client SDK to [`v3.7.1`](https://github.com/etcd-io/etcd/releases/tag/v3.7.1).
+  sigs:
+  - api-machinery
+  - auth
+  - cloud-provider
+  - node
+  - scheduling
+  kinds:
+  - cleanup
+  areas:
+  - apiserver
+  - cloudprovider
+  - dependency

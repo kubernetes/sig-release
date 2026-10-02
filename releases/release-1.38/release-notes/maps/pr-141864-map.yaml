@@ -1,0 +1,9 @@
+pr: 141864
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug in `kube-scheduler` where a PodGroup and a CompositePodGroup with the same name could cause lookup collisions.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

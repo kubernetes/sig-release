@@ -1,0 +1,10 @@
+pr: 141397
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a HorizontalPodAutoscaler bug on amd64 where an extremely large metric value could scale a workload down to `minReplicas` instead of up, and an extreme Percent scaling policy could block scaling up entirely. Replica calculations are capped at the int32 maximum, so the HorizontalPodAutoscaler scales up toward `maxReplicas`, matching the behavior on all other architectures.
+  sigs:
+  - apps
+  - autoscaling
+  kinds:
+  - bug

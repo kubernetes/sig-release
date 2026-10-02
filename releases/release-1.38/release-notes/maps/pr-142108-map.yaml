@@ -1,0 +1,18 @@
+pr: 142108
+pr_body: ""
+releasenote:
+  text: |-
+    Added Beta support for requesting Pod certificates signed with ML-DSA keys, behind the `PodCertificateMLDSA` feature gate. The PodCertificateRequest API and the `podCertificate` projected volume source accept the MLDSA44, MLDSA65, and MLDSA87 key types.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - autoscaling
+  - node
+  - scheduling
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubelet
+  - code-generation

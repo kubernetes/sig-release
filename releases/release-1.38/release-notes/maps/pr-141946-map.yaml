@@ -1,0 +1,20 @@
+pr: 141946
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the `DynamicResourceAllocation` feature gate, which has been GA and locked to enabled since `v1.35`. Dynamic resource allocation is always enabled.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - code-generation

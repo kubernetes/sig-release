@@ -1,0 +1,13 @@
+pr: 135338
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the `ServiceAccountTokenPodNodeInfo` feature gate, which has been GA and locked to enabled since `v1.32`.
+  sigs:
+  - auth
+  - node
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test

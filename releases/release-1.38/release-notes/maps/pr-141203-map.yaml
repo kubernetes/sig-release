@@ -1,0 +1,11 @@
+pr: 141203
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `resource.Quantity` parsing to reject decimal exponents that are too large to represent as an internal scale, instead of silently narrowing them to an unrelated value (for example, `1e4294967297` no longer parsed as `1e1`).
+  do_not_publish: true
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  - cleanup

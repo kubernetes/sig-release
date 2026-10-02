@@ -1,0 +1,9 @@
+pr: 140459
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `resource.Quantity.String()`, `MarshalJSON()`, and `ToUnstructured()` silently dropping the magnitude of `DecimalSI` quantities larger than 10^18 (for example `1000E`) and of `BinarySI` quantities grown past `Ei` through arithmetic (for example 2^70), which corrupted the value and broke round-tripping through `String()`, JSON, and YAML. Such quantities serialize to an exact base-10 representation, using decimal exponent notation where trailing zeros allow it (for example `1e21`) and the full decimal integer otherwise (for example `1180591620717411303424` for 2^70). Quantities within the supported suffix range serialize as before.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

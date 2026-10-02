@@ -1,0 +1,9 @@
+pr: 141785
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the preemption algorithm in `kube-scheduler` so that it no longer ignores a PodDisruptionBudget with an empty selector.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

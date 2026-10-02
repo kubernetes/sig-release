@@ -1,0 +1,12 @@
+pr: 140803
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the Node authorizer in `kube-apiserver` to process authorization graph updates from a queue instead of in informer callbacks, which reduces lock contention and keeps the graph from falling behind when updates are slow.
+  sigs:
+  - api-machinery
+  - auth
+  kinds:
+  - feature
+  areas:
+  - apiserver

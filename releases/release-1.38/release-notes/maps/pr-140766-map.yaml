@@ -1,0 +1,11 @@
+pr: 140766
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` CPU Manager `distribute-cpus-across-cores` policy option to select CPUs using CPU topology instead of relying on logical CPU numbering, improving CPU distribution across physical cores on systems where sibling threads have contiguous CPU IDs.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

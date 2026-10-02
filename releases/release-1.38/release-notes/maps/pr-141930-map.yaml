@@ -1,0 +1,10 @@
+pr: 141930
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed CompositePodGroup validation in the `kube-scheduler` scheduling cycle to check that child CompositePodGroups and PodGroups match the `priority` and `preemptionPolicy` of the root group.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - bug

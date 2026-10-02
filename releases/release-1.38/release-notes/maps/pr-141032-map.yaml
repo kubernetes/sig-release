@@ -1,0 +1,17 @@
+pr: 141032
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the default etcd version to `v3.7.1`.
+  sigs:
+  - api-machinery
+  - cloud-provider
+  - cluster-lifecycle
+  - etcd
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - provider/gcp
+  - kubeadm

@@ -1,0 +1,13 @@
+pr: 139561
+pr_body: ""
+releasenote:
+  text: |-
+    Added the `ManagedFieldsOptOut` Alpha feature gate to `kube-apiserver`, disabled by default. When enabled, clients can omit `metadata.managedFields` from responses by adding `drop=metadata.managedFields` to the `Accept` header, for example `Accept: application/json;drop=metadata.managedFields`. This works for all verbs, including watch, for built-in and custom resources, in every supported media type.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver

@@ -1,0 +1,10 @@
+pr: 142190
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed ResourceQuota updates failing validation on a `spec.hard`, `status.hard`, or `status.used` value that the object already held, so a quota holding a value that an older release accepted can still be updated and its status synced.
+  sigs:
+  - api-machinery
+  - apps
+  kinds:
+  - bug

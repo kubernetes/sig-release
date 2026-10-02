@@ -1,0 +1,11 @@
+pr: 139115
+pr_body: ""
+releasenote:
+  text: |-
+    Graduated the container env files feature to GA. The `EnvFiles` feature gate is locked to enabled.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet

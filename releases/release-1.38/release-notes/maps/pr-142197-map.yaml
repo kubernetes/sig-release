@@ -1,0 +1,9 @@
+pr: 142197
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the Pod `eviction` subresource to return the Pod's updated `resourceVersion` in the metadata of its Status response.
+  sigs:
+  - node
+  kinds:
+  - feature

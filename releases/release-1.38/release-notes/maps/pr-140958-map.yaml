@@ -1,0 +1,10 @@
+pr: 140958
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a division-by-zero overflow or underflow in the HorizontalPodAutoscaler replica calculator when the replica count was 0.
+  sigs:
+  - apps
+  - autoscaling
+  kinds:
+  - bug

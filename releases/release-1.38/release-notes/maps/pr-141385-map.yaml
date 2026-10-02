@@ -1,0 +1,11 @@
+pr: 141385
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug in the attach-detach controller that could delay volume detach by up to one node status update interval (about 5 minutes) after a Pod was deleted, when the volume attach was uncertain or the `kubelet` had not yet reported the volume in the Node `status.volumesInUse` field.
+  sigs:
+  - apps
+  - storage
+  kinds:
+  - bug
+  - cleanup

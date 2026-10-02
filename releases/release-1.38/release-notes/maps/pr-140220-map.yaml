@@ -1,0 +1,11 @@
+pr: 140220
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where the `kubelet` logged `--manifest-url-header` credential values, for example `Authorization` tokens, at startup. The `kubelet` logs only the header names.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

@@ -1,0 +1,11 @@
+pr: 141968
+pr_body: ""
+releasenote:
+  text: |-
+    Added a `kubeadm` preflight warning when `getent` is not found in `PATH`. The `kubelet` uses it to resolve the `kubelet` user when setting up user namespace ID mappings.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - cleanup
+  areas:
+  - kubeadm

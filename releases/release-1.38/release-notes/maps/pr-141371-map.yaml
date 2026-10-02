@@ -1,0 +1,14 @@
+pr: 141371
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kube-proxy` leaving conntrack entries for the frontend IPs of a deleted UDP Service until they expired, instead of clearing them when the Service was deleted.
+  sigs:
+  - network
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kube-proxy
+  - ipvs

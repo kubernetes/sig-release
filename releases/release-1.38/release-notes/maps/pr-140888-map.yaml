@@ -1,0 +1,9 @@
+pr: 140888
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the `apiserver_request_total` metric to count requests to the aggregated `/openapi/v2` endpoint under the `subresource="openapi/v2"` label.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup

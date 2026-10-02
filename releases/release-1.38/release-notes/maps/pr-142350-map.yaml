@@ -1,0 +1,10 @@
+pr: 142350
+pr_body: ""
+releasenote:
+  text: |-
+    Added a `KeyGenerator` option to `SelfSignedCertKeyOptions` in `k8s.io/client-go/util/cert`, so self-signed certificates can be generated with a key algorithm other than RSA. The default remains a 2048-bit RSA key.
+  sigs:
+  - api-machinery
+  - auth
+  kinds:
+  - feature

@@ -1,0 +1,14 @@
+pr: 141979
+pr_body: ""
+releasenote:
+  text: |-
+    Graduated the `StrictIPCIDRValidation` feature gate ([KEP-4858](https://kep.k8s.io/4858)) to GA, so the stricter validation rules for IP and CIDR values in Kubernetes API types are always in effect.
+  sigs:
+  - api-machinery
+  - apps
+  - network
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

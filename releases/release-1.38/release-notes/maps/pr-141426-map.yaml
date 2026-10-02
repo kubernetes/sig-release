@@ -1,0 +1,11 @@
+pr: 141426
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where the `kubelet` could fail to start a container that requests a DRA-backed extended resource with the same name as a resource previously handled by a device plugin.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

@@ -1,0 +1,11 @@
+pr: 141337
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubeadm init` storing a node-specific systemd-resolved `resolvConf` path in the cluster-wide `kubelet-config` ConfigMap.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm

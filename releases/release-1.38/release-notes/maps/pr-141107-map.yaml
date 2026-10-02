@@ -1,0 +1,9 @@
+pr: 141107
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the DRA ResourceSlice controller to preserve `timeAdded` for every unchanged device taint when updating a ResourceSlice.
+  sigs:
+  - node
+  kinds:
+  - bug

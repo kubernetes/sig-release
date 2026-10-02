@@ -1,0 +1,11 @@
+pr: 139728
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the types in the `authorization.k8s.io/v1` and `authorization.k8s.io/v1beta1` APIs to mark each field explicitly as optional or required, so the published OpenAPI schema reports them correctly.
+  sigs:
+  - auth
+  kinds:
+  - api-change
+  areas:
+  - code-generation

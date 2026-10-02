@@ -1,0 +1,9 @@
+pr: 141815
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed an off-by-one error in DRA driver registration that accepted a registration socket path of exactly 108 bytes, which exceeds the Unix socket path limit. Out-of-tree DRA drivers could fail to register during a rolling update when their socket path reached that length.
+  sigs:
+  - node
+  kinds:
+  - bug

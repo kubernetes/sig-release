@@ -1,0 +1,10 @@
+pr: 141736
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a race in `client-go` `MutationCache` indexed lookups that could temporarily hide a recently created replacement object.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  - flake

@@ -1,0 +1,12 @@
+pr: 142118
+pr_body: ""
+releasenote:
+  text: |-
+    ACTION REQUIRED: Changed the `PodNominator.NominatedPodsForNode` method in the `kube-scheduler` framework to take a `klog.Logger` as its first argument. Out-of-tree scheduler plugins that call this method must pass a logger.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test

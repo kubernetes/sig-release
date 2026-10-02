@@ -1,0 +1,28 @@
+pr: 142410
+pr_body: ""
+releasenote:
+  text: |-
+    Updated `google.golang.org/grpc` to `v1.84.0` to pick up the fix for CVE-2026-84304. Also updated the etcd client SDK to `v3.7.2`.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - etcd
+  - instrumentation
+  - network
+  - node
+  - scheduling
+  - storage
+  kinds:
+  - dependency
+  areas:
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - code-generation
+  - dependency

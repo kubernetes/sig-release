@@ -1,0 +1,9 @@
+pr: 139450
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a race condition in the `kube-scheduler` scheduling queue that could permanently drop an unschedulable Pod from the queue without scheduler retries.
+  sigs:
+  - scheduling
+  kinds:
+  - bug
