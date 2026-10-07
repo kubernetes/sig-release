@@ -1,0 +1,13 @@
+pr: 141253
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kube-scheduler` not recording the rejecting plugins for member Pods when a PlacementFeasible plugin rejected their PodGroup, which the scheduling queue uses to decide when to retry them. Also improved the readability of PodGroup status messages.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

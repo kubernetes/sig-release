@@ -1,0 +1,9 @@
+pr: 141182
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the Permit extension point implementation from the GangScheduling plugin in `kube-scheduler`. The PlacementFeasible extension point covers the same functionality.
+  sigs:
+  - scheduling
+  kinds:
+  - cleanup

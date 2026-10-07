@@ -1,0 +1,9 @@
+pr: 142013
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `resource.Quantity` `Cmp` and `CmpInt64` methods returning an incorrect result when the scales of the two quantities differed by more than an int32 can represent.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

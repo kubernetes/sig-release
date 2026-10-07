@@ -1,0 +1,21 @@
+pr: 138724
+pr_body: ""
+releasenote:
+  text: |-
+    Added `resourceVersion` to delete responses, so clients can track the version at which an object was deleted. The value is either the revision of the delete itself or a later revision at which the object was already observed as deleted.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - code-generation

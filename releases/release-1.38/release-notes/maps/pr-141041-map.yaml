@@ -1,0 +1,13 @@
+pr: 141041
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` CPU Manager re-allocating CPUs from scratch after a `kubelet` restart for Pods with pod-level CPU allocations. The checkpointed pod-level CPU set and container assignments are restored as-is, so running Pods are no longer rejected or moved to different CPUs, which leaked exclusive CPUs.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet

@@ -1,0 +1,12 @@
+pr: 141489
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a panic in the Windows `kube-proxy` (winkernel) that could terminate `kube-proxy` when an HNS load balancer without port mappings was enumerated.
+  sigs:
+  - network
+  - windows
+  kinds:
+  - bug
+  areas:
+  - kube-proxy

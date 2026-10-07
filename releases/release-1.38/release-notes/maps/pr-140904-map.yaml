@@ -1,0 +1,11 @@
+pr: 140904
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a `kubelet` panic in DRA device health monitoring when the on-disk health checkpoint file contained a null map, either at the top level or for a driver's `Devices` map, for example `{"driverA":{"Devices":null}}`.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

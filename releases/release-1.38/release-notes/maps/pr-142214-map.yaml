@@ -1,0 +1,11 @@
+pr: 142214
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubectl describe service` printing `+ 0 more...` after the endpoint list when exactly three ready endpoints were followed by not-ready endpoints.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

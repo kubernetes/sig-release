@@ -1,0 +1,13 @@
+pr: 138219
+pr_body: ""
+releasenote:
+  text: |-
+    Changed `kube-apiserver` to return a JSON Status object with the `application/json` content type for requests to unknown `/apis/...` paths and for final delegation 404s, instead of a plain-text `404 page not found` body.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver

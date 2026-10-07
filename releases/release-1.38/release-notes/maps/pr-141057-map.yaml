@@ -1,0 +1,9 @@
+pr: 141057
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed StatefulSet scale-down becoming blocked with `podManagementPolicy` set to Parallel when a failed scale-up left desired Pods missing and a ResourceQuota prevented their creation.
+  sigs:
+  - apps
+  kinds:
+  - bug

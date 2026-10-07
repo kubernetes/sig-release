@@ -1,0 +1,11 @@
+pr: 141238
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug in the `kubelet` CPU Manager where enabling both the `distribute-cpus-across-cores` and `align-by-socket` policy options allocated CPUs across sockets even when a single socket had enough capacity.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

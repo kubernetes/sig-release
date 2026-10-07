@@ -1,0 +1,9 @@
+pr: 141980
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed decoding a JSON or CBOR null into a previously serialized `resource.Quantity`, which left its cached text in place, so the quantity read as zero while `String`, JSON, CBOR, and unstructured conversion still returned the previous value.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

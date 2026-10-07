@@ -1,0 +1,23 @@
+pr: 141976
+pr_body: ""
+releasenote:
+  text: |-
+    Updated `google.golang.org/grpc` to `v1.82.2` to address CVE-2026-84445.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - network
+  - node
+  - scheduling
+  kinds:
+  - dependency
+  areas:
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - dependency

@@ -1,0 +1,13 @@
+pr: 142176
+pr_body: ""
+releasenote:
+  text: |-
+    Updated Kubernetes to build with Go `v1.27.1`.
+  sigs:
+  - release
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - release-eng

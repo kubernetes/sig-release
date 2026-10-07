@@ -1,0 +1,11 @@
+pr: 141261
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` CPU Manager gauge metrics `kubelet_cpu_manager_exclusive_cpu_allocation_count`, `kubelet_cpu_manager_shared_pool_size_millicores`, and `kubelet_cpu_manager_allocation_per_numa` drifting from the actual CPU allocation state.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

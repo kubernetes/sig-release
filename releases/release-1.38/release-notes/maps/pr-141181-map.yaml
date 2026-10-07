@@ -1,0 +1,12 @@
+pr: 141181
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` accepting negative CSI volume expansion sizes whose int64 conversion overflowed and lost the sign. The `kubelet` rejects such sizes.
+  sigs:
+  - node
+  - storage
+  kinds:
+  - bug
+  areas:
+  - kubelet

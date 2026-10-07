@@ -1,0 +1,12 @@
+pr: 138182
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the sysadmin profile of `kubectl debug` to detect Windows nodes and run the debug Pod as a Windows HostProcess container with `NT AUTHORITY\SYSTEM` access.
+  sigs:
+  - cli
+  - windows
+  kinds:
+  - feature
+  areas:
+  - kubectl

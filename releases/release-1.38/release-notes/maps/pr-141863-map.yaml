@@ -1,0 +1,9 @@
+pr: 141863
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed an issue where the in-tree iSCSI detach of a block volume could fail permanently when the `/dev/disk/by-path` link was already gone, for example when the iSCSI session was lost before teardown. The volume stayed in the Node `status.volumesInUse` field and blocked attaching it on other nodes.
+  sigs:
+  - storage
+  kinds:
+  - bug

@@ -1,0 +1,11 @@
+pr: 141981
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a `kubeadm` preflight check on OpenRC systems that reported a service as enabled whenever `rc-update show default` mentioned its name anywhere, including as part of another service's name.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm

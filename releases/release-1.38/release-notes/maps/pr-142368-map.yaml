@@ -1,0 +1,11 @@
+pr: 142368
+pr_body: ""
+releasenote:
+  text: |-
+    Added support in `validation-gen` for the `+k8s:minimum` and `+k8s:maximum` tags on `time.Duration` fields, using quoted Go duration strings such as `+k8s:minimum="1s"`. Integer values for these tags on `time.Duration` fields are rejected.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature
+  areas:
+  - code-generation

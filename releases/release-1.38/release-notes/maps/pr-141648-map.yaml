@@ -1,0 +1,9 @@
+pr: 141648
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where a DeviceTaintRule with no `spec.deviceSelector` matched every device in the cluster, which made all DRA devices unschedulable for NoSchedule or NoExecute taints. Such a rule matches no devices, as documented. To target all devices, use an explicit empty selector (`deviceSelector: {}`).
+  sigs:
+  - node
+  kinds:
+  - bug

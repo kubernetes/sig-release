@@ -1,0 +1,9 @@
+pr: 141264
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `resource.Quantity` overflowing when `Neg()` was called on `math.MinInt64` or `Sub()` was called with `math.MinInt64` as the subtrahend. The result switches to the decimal representation and keeps the exact value, for example `2^63` for `-math.MinInt64`, so `AsInt64()` returns false for it.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

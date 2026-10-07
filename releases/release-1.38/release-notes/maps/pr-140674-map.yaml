@@ -1,0 +1,12 @@
+pr: 140674
+pr_body: ""
+releasenote:
+  text: |-
+    Added `resource.MaxMilliQuantity()`, which returns the largest quantity whose `MilliValue()` and `ScaledValue(resource.Milli)` do not overflow an int64. For a non-negative quantity, compare it against this bound with `Quantity.Cmp` before calling `MilliValue()` or `ScaledValue(resource.Milli)`.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - code-generation

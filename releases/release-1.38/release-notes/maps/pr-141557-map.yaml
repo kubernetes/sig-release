@@ -1,0 +1,10 @@
+pr: 141557
+pr_body: ""
+releasenote:
+  text: |-
+    Added helpers to the `workloadbuilder` package in `k8s.io/component-helpers` that generate unique names for Workloads and PodGroups, which controllers can use when creating these objects.
+  sigs:
+  - apps
+  - scheduling
+  kinds:
+  - feature

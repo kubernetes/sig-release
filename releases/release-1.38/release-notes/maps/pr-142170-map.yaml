@@ -1,0 +1,10 @@
+pr: 142170
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `LimitRanger` admission plugin rejecting a PersistentVolumeClaim update because of a request that the update left unchanged, even when that request is outside the LimitRange minimum or maximum. Requests that an update changes, adds, or removes are checked against both the minimum and the maximum, as on create.
+  sigs:
+  - api-machinery
+  - storage
+  kinds:
+  - bug

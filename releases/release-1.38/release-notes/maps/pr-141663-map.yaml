@@ -1,0 +1,30 @@
+pr: 141663
+pr_body: ""
+releasenote:
+  text: |-
+    Updated Kubernetes to build with Go `v1.27.1`.
+  do_not_publish: true
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - instrumentation
+  - network
+  - node
+  - scheduling
+  - storage
+  kinds:
+  - dependency
+  areas:
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - code-generation
+  - dependency
+  - code-organization

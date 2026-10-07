@@ -1,0 +1,14 @@
+pr: 141260
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the error returned when an update clears the Node `spec.podCIDRs` field to `field cannot be cleared once set`, replacing `node updates may not change podCIDR except from "" to valid`.
+  sigs:
+  - api-machinery
+  - apps
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - api-validation

@@ -1,0 +1,12 @@
+pr: 141175
+pr_body: ""
+releasenote:
+  text: |-
+    Renamed the `cache_to_watcher` stage of the Alpha `apiserver_watch_events_dispatch_duration_seconds` metric to `watcher_to_client_handler`.
+  sigs:
+  - api-machinery
+  - instrumentation
+  kinds:
+  - cleanup
+  areas:
+  - apiserver

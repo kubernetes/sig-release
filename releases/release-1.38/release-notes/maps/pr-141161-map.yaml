@@ -1,0 +1,13 @@
+pr: 141161
+pr_body: ""
+releasenote:
+  text: |-
+    Promoted the `apiserver_flowcontrol_priority_level_seat_utilization` metric to Beta.
+  sigs:
+  - api-machinery
+  - instrumentation
+  kinds:
+  - cleanup
+  areas:
+  - apiserver
+  - stable-metrics

@@ -1,0 +1,11 @@
+pr: 140230
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubectl` applying `kuberc` defaults to unrelated commands with the same final subcommand name, for example applying a default for `kubectl config view` to `kubectl kuberc view`. Defaults are matched by the full command path.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

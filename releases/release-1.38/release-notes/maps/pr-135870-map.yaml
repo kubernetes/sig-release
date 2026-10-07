@@ -1,0 +1,14 @@
+pr: 135870
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the `kubelet` to build without cgo by default on all platforms. To build it with cgo, set the `KUBE_CGO_OVERRIDES` environment variable, for example `KUBE_CGO_OVERRIDES=kubelet`, when building Kubernetes. Nodes that resolve the `kubelet` user for user namespace ID mappings through a directory service, such as LDAP, sssd, or FreeIPA, need `getent` in `PATH`; without it, the `kubelet` falls back to the default ID range.
+  sigs:
+  - architecture
+  - node
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - kubelet

@@ -1,0 +1,12 @@
+pr: 142289
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where DeviceTaintRule taints with the NoExecute effect did not evict Pods using DRA-backed extended resources, which are tracked in the Pod `status.extendedResourceClaimStatus` field.
+  sigs:
+  - apps
+  - auth
+  - node
+  - scheduling
+  kinds:
+  - bug

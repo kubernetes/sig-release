@@ -1,0 +1,11 @@
+pr: 139356
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `pv_collector_total_pv_count` metric reporting `plugin_name="N/A"` for CSI-provisioned PersistentVolumes. The label shows `kubernetes.io/csi:<driver-name>` instead, for example `kubernetes.io/csi:ebs.csi.aws.com`.
+  sigs:
+  - api-machinery
+  - apps
+  - storage
+  kinds:
+  - bug

@@ -1,0 +1,10 @@
+pr: 140256
+pr_body: ""
+releasenote:
+  text: |-
+    ACTION REQUIRED: Graduated DRA device taints and device taint rules to GA, and locked the `DRADeviceTaints` and `DRADeviceTaintRules` feature gates to enabled. Remove any `--feature-gates` entries that set these gates to false before upgrading. Both gates are planned for removal in `v1.41`.
+  sigs:
+  - apps
+  - node
+  kinds:
+  - feature

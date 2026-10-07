@@ -1,0 +1,17 @@
+pr: 142273
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `client-go` adding the key encipherment key usage to self-signed CA certificates generated with non-RSA keys. Key encipherment applies only to RSA keys.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+  - apiserver

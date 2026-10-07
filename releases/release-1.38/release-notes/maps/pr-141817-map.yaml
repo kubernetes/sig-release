@@ -1,0 +1,10 @@
+pr: 141817
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `resource.Quantity` serializing ordinary BinarySI values, such as 2000, in exponent form (`2e3`) instead of as plain integers.
+  do_not_publish: true
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

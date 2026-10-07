@@ -1,0 +1,11 @@
+pr: 142215
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubectl describe node` printing `-9223372036854775808%` for per-Pod resource percentages on nodes that had not reported allocatable resources. The totals in the `Allocated resources` section use the same resource accounting as the per-Pod rows.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

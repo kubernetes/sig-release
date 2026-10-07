@@ -1,0 +1,9 @@
+pr: 142003
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed rolling updates of DRA drivers with long names that use the `kubeletplugin` helper library, by shortening the automatically generated DRA service socket paths when they would exceed the Unix socket path limit.
+  sigs:
+  - node
+  kinds:
+  - bug

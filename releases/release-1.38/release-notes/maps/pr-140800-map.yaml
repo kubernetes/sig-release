@@ -1,0 +1,12 @@
+pr: 140800
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the help text of `kube-scheduler` metrics that carry a `profile` label to describe that label.
+  sigs:
+  - instrumentation
+  - scheduling
+  kinds:
+  - documentation
+  areas:
+  - stable-metrics

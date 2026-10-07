@@ -1,0 +1,11 @@
+pr: 141613
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubectl get --sort-by` producing an inconsistent order when multiple resources lacked the selected sort field.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

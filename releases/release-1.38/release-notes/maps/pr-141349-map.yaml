@@ -1,0 +1,9 @@
+pr: 141349
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed validation rejecting whole-number resource quantities, such as extended resource requests, with `must be an integer` when they were large enough to overflow an int64 in milli-units.
+  sigs:
+  - apps
+  kinds:
+  - bug

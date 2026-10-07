@@ -1,0 +1,11 @@
+pr: 141589
+pr_body: ""
+releasenote:
+  text: |-
+    Changed `kubectl label` and `kubectl annotate` to return an error when modification arguments are passed with the `--list` flag.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

@@ -1,0 +1,15 @@
+pr: 140317
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `client-go` clientset constructors overwriting a non-nil `NegotiatedSerializer` set in `rest.Config`.
+  sigs:
+  - api-machinery
+  - auth
+  - cli
+  - instrumentation
+  kinds:
+  - bug
+  areas:
+  - kubectl
+  - code-generation

@@ -1,0 +1,11 @@
+pr: 141333
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `apiserver_watch_cache_events_dispatched_total` metric counting bookmark events.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver

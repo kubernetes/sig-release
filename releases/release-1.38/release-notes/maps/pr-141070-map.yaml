@@ -1,0 +1,11 @@
+pr: 141070
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` Memory Manager not restoring pod-scope topology hints for multi-container Pods after a `kubelet` restart.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

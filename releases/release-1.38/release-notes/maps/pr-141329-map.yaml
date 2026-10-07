@@ -1,0 +1,9 @@
+pr: 141329
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the Job controller not retrying removal of the `batch.kubernetes.io/job-tracking` finalizer from Pods, which could leave those Pods stuck in deletion.
+  sigs:
+  - apps
+  kinds:
+  - bug

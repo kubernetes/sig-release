@@ -1,0 +1,12 @@
+pr: 140607
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `NodeRestriction` admission plugin denying a node's service account token audience request when resolving the Pod's CSI volume sources failed, for example because a referenced CSIDriver, PersistentVolumeClaim, or PersistentVolume was not found, even if the node was granted the `request-serviceaccounts-token-audience` permission. This applies when the `ServiceAccountNodeAudienceRestriction` feature gate is enabled.
+  sigs:
+  - auth
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

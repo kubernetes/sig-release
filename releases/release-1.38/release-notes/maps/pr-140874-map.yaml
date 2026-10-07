@@ -1,0 +1,11 @@
+pr: 140874
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubectl top pod --sum` column alignment when the `--no-headers` flag was specified.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

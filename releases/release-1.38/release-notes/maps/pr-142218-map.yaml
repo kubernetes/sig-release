@@ -1,0 +1,9 @@
+pr: 142218
+pr_body: ""
+releasenote:
+  text: |-
+    Added validation to the DRA helper code for publishing ResourceSlices, which checks that drivers use the short attribute and capacity names without the driver prefix. DRA driver authors can opt out of this check.
+  sigs:
+  - node
+  kinds:
+  - feature

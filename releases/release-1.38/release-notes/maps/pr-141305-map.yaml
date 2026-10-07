@@ -1,0 +1,13 @@
+pr: 141305
+pr_body: ""
+releasenote:
+  text: |-
+    Added the `AsScaledInt64` and `AsMilliInt64` methods to `resource.Quantity`, which report int64 overflow with a boolean. The `Value`, `MilliValue`, and `ScaledValue` methods saturate to `math.MinInt64` or `math.MaxInt64` on overflow instead of returning a wrapped value. As a result, a `kubelet` CPU reservation no longer wraps to a negative value when the configured quantity exceeds that range.
+  sigs:
+  - api-machinery
+  - node
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubelet

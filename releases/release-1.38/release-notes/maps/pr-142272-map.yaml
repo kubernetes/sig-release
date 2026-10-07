@@ -1,0 +1,11 @@
+pr: 142272
+pr_body: ""
+releasenote:
+  text: |-
+    Updated cAdvisor to `v0.60.6`.
+  sigs:
+  - node
+  kinds:
+  - dependency
+  areas:
+  - dependency

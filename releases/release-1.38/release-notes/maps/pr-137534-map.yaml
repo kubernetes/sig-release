@@ -1,0 +1,13 @@
+pr: 137534
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where the `kubelet` device manager could assign the same device ID to multiple Pods at the same time.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet

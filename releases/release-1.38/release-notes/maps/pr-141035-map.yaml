@@ -1,0 +1,12 @@
+pr: 141035
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a panic in `kubectl auth reconcile` when an error occurred while reconciling a RoleBinding or ClusterRoleBinding.
+  sigs:
+  - auth
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

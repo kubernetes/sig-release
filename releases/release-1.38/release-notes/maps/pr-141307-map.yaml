@@ -1,0 +1,9 @@
+pr: 141307
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kube-scheduler` crashing, or skipping the `firstAvailable` fallback in the DRA allocator, when the device request counts of a ResourceClaim added up past the int range. A request over the per-claim device limit is rejected with an error that names it, and an oversized `firstAvailable` alternative falls through to a smaller one.
+  sigs:
+  - node
+  kinds:
+  - bug

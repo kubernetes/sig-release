@@ -1,0 +1,15 @@
+pr: 141789
+pr_body: ""
+releasenote:
+  text: |-
+    ACTION REQUIRED: Removed the `SeparateTaintEvictionController` feature gate from `kube-controller-manager`. Remove this gate from any `--feature-gates` configuration before upgrading. The standalone taint eviction controller always handles taint-based eviction, and you can still disable it with `--controllers=-taint-eviction-controller`.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test

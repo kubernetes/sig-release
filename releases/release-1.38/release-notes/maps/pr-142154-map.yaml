@@ -1,0 +1,10 @@
+pr: 142154
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed an issue where the HorizontalPodAutoscaler included Pod overhead in the request calculation for Pods using pod-level resources.
+  sigs:
+  - apps
+  - autoscaling
+  kinds:
+  - bug

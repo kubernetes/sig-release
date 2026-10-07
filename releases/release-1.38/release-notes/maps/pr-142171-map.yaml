@@ -1,0 +1,10 @@
+pr: 142171
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `LimitRanger` admission plugin re-validating resource requests and limits that a Pod resize left unchanged. Only the values that a resize changes are checked against the LimitRange, so an existing Pod is no longer rejected on resize by a constraint it already violates.
+  sigs:
+  - api-machinery
+  - node
+  kinds:
+  - bug

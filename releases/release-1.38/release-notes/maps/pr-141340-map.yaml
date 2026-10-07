@@ -1,0 +1,9 @@
+pr: 141340
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug in the PodTopologySpread scheduler plugin where a topology spread constraint with an empty `labelSelector` (`labelSelector: {}`) was silently ignored instead of matching all Pods in the namespace.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

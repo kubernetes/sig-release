@@ -1,0 +1,11 @@
+pr: 142116
+pr_body: ""
+releasenote:
+  text: |-
+    Added the `--validation-extensions-file` flag to `validation-gen`, which takes a YAML file that declares project-specific `+k8s:format=<name>` values, each backed by a regular expression.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature
+  areas:
+  - code-generation

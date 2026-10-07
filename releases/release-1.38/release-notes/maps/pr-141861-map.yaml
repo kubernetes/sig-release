@@ -1,0 +1,17 @@
+pr: 141861
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the documentation of the Node `status.volumesAttached[].devicePath` field to describe its platform-specific meaning. On Linux it is the host block device node, and on Windows it contains the CSI volume ID.
+  sigs:
+  - api-machinery
+  - apps
+  - cli
+  - storage
+  - windows
+  kinds:
+  - documentation
+  - api-change
+  areas:
+  - kubectl
+  - code-generation

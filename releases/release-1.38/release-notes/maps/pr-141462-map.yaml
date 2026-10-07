@@ -1,0 +1,14 @@
+pr: 141462
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the bundled CoreDNS version to `v1.14.7`.
+  sigs:
+  - cloud-provider
+  - cluster-lifecycle
+  kinds:
+  - cleanup
+  areas:
+  - provider/gcp
+  - kubeadm
+  - dependency

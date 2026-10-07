@@ -1,0 +1,9 @@
+pr: 140519
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kube-scheduler` logging the scheduler extender TLS private key (`tlsConfig.keyData`) when logging its component configuration at verbosity level 2 or higher.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

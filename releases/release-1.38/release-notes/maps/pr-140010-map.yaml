@@ -1,0 +1,11 @@
+pr: 140010
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the Job and CronJob types in the `batch/v1` and `batch/v1beta1` APIs to mark each field explicitly as optional or required, so the published OpenAPI schema reports them correctly.
+  sigs:
+  - apps
+  kinds:
+  - api-change
+  areas:
+  - code-generation

@@ -1,0 +1,10 @@
+pr: 141714
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the `KubeletTracing` feature gate, which has been GA and locked to default since `v1.34`.
+  sigs:
+  - instrumentation
+  - node
+  kinds:
+  - cleanup

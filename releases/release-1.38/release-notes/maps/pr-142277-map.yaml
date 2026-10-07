@@ -1,0 +1,12 @@
+pr: 142277
+pr_body: ""
+releasenote:
+  text: |-
+    Changed `resource.Quantity` so that calling `String` or encoding a quantity no longer mutates the instance, which it previously did in some cases. If an instance needs its string representation multiple times, call `CacheString` to pre-populate the value while the caller owns the instance and can safely mutate it. This is only needed for instances not created by `ParseQuantity`, such as those built directly or modified through math operations.
+  sigs:
+  - api-machinery
+  kinds:
+  - api-change
+  - flake
+  - feature
+  - failing-test

@@ -1,0 +1,11 @@
+pr: 140730
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where the `kubelet` could hang during Pod admission when the CPU Manager `distribute-cpus-across-numa` and `full-pcpus-only` policy options were both enabled and per-NUMA CPU availability was not a multiple of the hardware thread count per core.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet
