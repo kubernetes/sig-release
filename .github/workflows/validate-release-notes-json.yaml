@@ -1,0 +1,92 @@
+# Copyright 2026 The Kubernetes Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Validate release-notes JSON
+
+on:
+  pull_request:
+    paths:
+      - "releases/release-*/release-notes/**/*.json"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-json:
+    name: Validate release-notes JSON syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          fetch-depth: 0
+
+      - name: Identify changed JSON files
+        id: changed
+        run: |
+          set -euo pipefail
+          base="${{ github.event.pull_request.base.sha }}"
+          head="${{ github.event.pull_request.head.sha }}"
+
+          mapfile -t files < <(
+            git diff --name-only --diff-filter=AM "$base" "$head" \
+              | grep -E '^releases/release-[^/]+/release-notes/.*\.json$' \
+              || true
+          )
+
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No matching JSON files changed."
+            echo "found=false" >>"$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "found=true" >>"$GITHUB_OUTPUT"
+          printf '%s\n' "${files[@]}" >changed_json_files.txt
+          echo "Changed JSON files:"
+          cat changed_json_files.txt
+
+      - name: Validate JSON syntax with jq
+        if: steps.changed.outputs.found == 'true'
+        run: |
+          set -euo pipefail
+
+          # Escape characters for GitHub Actions workflow command messages.
+          # Per https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions
+          # %, \r and \n must be URL-encoded in command-string messages.
+          escape_msg() {
+            local msg="$1"
+            msg="${msg//%/%25}"
+            msg="${msg//$'\r'/%0D}"
+            msg="${msg//$'\n'/%0A}"
+            printf '%s' "$msg"
+          }
+
+          failed=0
+          while IFS= read -r file; do
+            if [ -z "$file" ]; then continue; fi
+            if ! jq empty "$file" 2>jq_error.txt; then
+              err="$(cat jq_error.txt)"
+              err_escaped="$(escape_msg "$err")"
+              echo "::error file=$file::Invalid JSON — $err_escaped"
+              failed=1
+            else
+              echo "OK: $file"
+            fi
+          done <changed_json_files.txt
+
+          if [ "$failed" -ne 0 ]; then
+            echo ""
+            echo "One or more JSON files failed validation. See annotations above."
+            exit 1
+          fi
