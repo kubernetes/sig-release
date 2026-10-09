@@ -1,0 +1,58 @@
+pr: 141616
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\n`InstanceMetadata.AdditionalLabels` are currently
+  applied only during the initial synchronization of a node carrying the external
+  cloud-provider taint.\r\n\r\nConsequently:\r\n\r\n* labels introduced by a newer
+  cloud provider are not added to already initialized nodes;\r\n* labels removed from
+  a node are not restored;\r\n* changed values are not updated, leaving provider-specific
+  topology labels stale after operations such as an instance live migration.\r\n\r\nThis
+  PR introduces the versioned `CloudNodeAdditionalLabelsReconciliation` feature gate,
+  available as Alpha from 1.38 and disabled by default. When enabled in the cloud-controller-manager,
+  the existing periodic node status update also adds missing additional labels and
+  updates values that differ from the current provider metadata.\r\n\r\nThe controller
+  preserves unrelated labels, rejects Kubernetes-reserved label namespaces, and does
+  not delete labels that the provider stops returning. Provider-owned maps are treated
+  as read-only. The existing `InstanceMetadata()` result is reused, without an additional
+  cloud-provider API request.\r\n\r\nThe gate leaves initial node labeling and node-address
+  updates unchanged. Operators can opt into periodic reconciliation with:\r\n\r\n```text\r\n--feature-gates=CloudNodeAdditionalLabelsReconciliation=true\r\n```\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nFixes #141631\r\n\r\nRelated OpenStack
+  issue:\r\n\r\nkubernetes/cloud-provider-openstack#2579\r\n\r\nRelated OpenStack
+  provider implementation:\r\n\r\nhttps://github.com/kubernetes/cloud-provider-openstack/pull/3166\r\n\r\nPrevious
+  implementation attempts:\r\n\r\nhttps://github.com/kubernetes/kubernetes/pull/130888\r\nhttps://github.com/kubernetes/kubernetes/pull/131096\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nThis is a focused successor to #130888 and
+  #131096.\r\n\r\nUnlike #131096, this PR does not combine Node spec and status updates,
+  change the external cloud-provider taint removal order, or modify the existing `/status`
+  subresource handling for node addresses.\r\n\r\nThe implementation uses the existing
+  conflict-safe `AddOrUpdateLabelsOnNode` helper. Tests cover:\r\n\r\n* adding a missing
+  label;\r\n* updating a changed label;\r\n* preserving unrelated labels;\r\n* rejecting
+  Kubernetes-reserved label namespaces;\r\n* adding a missing label with an empty
+  value.\r\n\r\nThe versioned gate addresses the compatibility concerns raised in
+  #141631. It is registered in the shared controller-manager feature package used
+  by external CCMs, as well as the Kubernetes feature registry. The generated feature
+  references are updated.\r\n\r\nWith the gate enabled, the provider's current values
+  overwrite conflicting edits to the same label keys. Operators should coordinate
+  with any external controllers that also manage those keys before enabling it. Existing
+  Pods are not automatically rescheduled by this change.\r\n\r\nTests cover the enabled
+  and disabled paths, node initialization with the gate disabled, continued address
+  updates, reserved namespaces, empty label values, and concurrent reconciliation
+  using a shared provider map. Version tests verify the default, explicit opt-in,
+  `AllAlpha` behavior, and rejection of activation while emulating 1.37.\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nAdded the
+  Alpha CloudNodeAdditionalLabelsReconciliation feature gate, disabled by default.
+  When enabled in the cloud-controller-manager, the cloud node controller periodically
+  adds or updates node labels returned through InstanceMetadata.AdditionalLabels.
+  Provider values overwrite conflicting changes to the same label keys, including
+  changes made by other controllers. Initial node labeling is unchanged, and labels
+  no longer returned by the provider are not removed.\r\n```\r\n\r\n#### Additional
+  documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\nN/A\r\n```\r\n\r\n####
+  AI usage disclosure:\r\n\r\nYES. AI was used to analyze the previous implementation
+  attempts, adapt the change to the current codebase, and assist with test cases and
+  PR documentation. I reviewed and validated the resulting changes and remain responsible
+  for the submitted code in accordance with `AGENTS.md` and `CONTRIBUTING.md`.\r\n"
+releasenote:
+  text: Added the Alpha `CloudNodeAdditionalLabelsReconciliation` feature gate, disabled
+    by default. When enabled in the `cloud-controller-manager`, the cloud node controller
+    periodically adds or updates node labels returned through `InstanceMetadata.AdditionalLabels`.
+    Provider values overwrite conflicting changes to the same label keys, including
+    changes made by other controllers. Initial node labeling is unchanged, and labels
+    no longer returned by the provider are not removed.

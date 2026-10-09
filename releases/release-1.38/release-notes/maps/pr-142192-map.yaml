@@ -1,0 +1,43 @@
+pr: 142192
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+  /sig autoscaling
+
+  #### What this PR does / why we need it:
+
+  `GetResourceUtilizationRatio` sums per-pod metric values and requests as raw `int64`, multiplies the metrics total by 100 and narrows to `int32`. All three steps wrap silently. Near `math.MaxInt64` the HPA ends up with a `currentUtilization` of 0 and a negative raw average, and scales the wrong way or not at all.
+
+  The two totals are now accumulated exactly with `math/big`, the percentage is taken exactly, and only the final `int32` narrowing is clamped to `math.MaxInt32`/`math.MinInt32`, so an oversized utilization keeps its direction instead of wrapping. The raw average of `int64` values always fits an `int64`, so `rawAverageValue` is unchanged in type and meaning. `GetMetricUsageRatio` had the same unchecked sum and now accumulates the same way. Nothing changes for inputs that fit today and there is no new error path.
+
+  #### Which issue(s) this PR is related to:
+
+  Related to #141166 (HPA row of the Quantity int64 overflow burndown; does not close the tracker)
+
+  #### Special notes for your reviewer:
+
+  Continues #141978, which GitHub closed on a force-push and refuses to reopen; the two review comments from @jpbetz there (doc comment, and the exact sum in `GetMetricUsageRatio`) are addressed in this head. /cc @jpbetz
+
+  The `int32` narrowing saturates rather than returning an error, matching the direction-preserving cap taken for replica counts in #141397. If you would rather the HPA surface an error condition when the percentage does not fit, that is a two-line change and I am happy to make it.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed the HorizontalPodAutoscaler utilization and usage calculations wrapping to a wrong or negative current value when pod metric or request totals exceeded int64 or the utilization percentage exceeded int32; the reported percentage now saturates at the int32 limit.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+
+  ```
+
+  #### AI usage disclosure:
+
+  YES. An AI coding agent drafted the change and tests under my direction; I reviewed and ran them.
+releasenote:
+  text: Fixed the HorizontalPodAutoscaler utilization and usage calculations wrapping
+    to a wrong or negative current value when pod metric or request totals exceeded
+    `int64` or the utilization percentage exceeded `int32`; the reported percentage
+    now saturates at the `int32` limit.

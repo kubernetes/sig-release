@@ -1,0 +1,12 @@
+pr: 142574
+pr_body: "Multiple references from one object to another object can exist:\r\n\r\n*
+  pod → multiple references to the same secret / configmap / resourceclaim / pvc\r\n*
+  pv → multiple references to the same secret\r\n\r\nWhen adding to the graph, avoid
+  adding the same edge multiple times, since that also increments the destination
+  index multiple times. When edges are removed, that index is only decremented a single
+  time per edge.\r\n\r\nAdded covering unit tests.\r\n\r\n/sig auth\r\n/cc @enj\r\n\r\n```release-note\r\nFixed
+  refcounting leak in the node authorizer graph for pods which reference secrets,
+  configmaps, or pvcs multiple times\r\n```"
+releasenote:
+  text: Fixed a reference counting leak in the Node authorizer graph for Pods that
+    reference Secrets, ConfigMaps, or PersistentVolumeClaims multiple times.

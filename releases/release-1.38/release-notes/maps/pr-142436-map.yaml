@@ -1,0 +1,41 @@
+pr: 142436
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+  /sig cli
+
+  #### What this PR does / why we need it:
+
+  If `missing` is not a label on pod `foo`, running `kubectl label pod foo missing- -o json` prints `label "missing" not found.` before the JSON. This makes the output invalid for tools that read it from a pipe.
+
+  Send the message to stderr instead. Add regression coverage for default, name, JSON, YAML, and server dry-run output.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  The new cases fail before the fix, including JSON/YAML decoding errors.
+
+  Tested with `make test WHAT=./staging/src/k8s.io/kubectl/pkg/cmd/label GOFLAGS=-v`: all 41 tests pass with the race detector. Formatting and `git diff --check` also pass.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  `kubectl label` now prints messages about nonexistent labels to stderr instead of stdout, so they no longer break JSON or YAML output.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  NONE
+  ```
+
+  #### AI usage disclosure:
+
+  YES. Codex helped identify the bug, write the fix and tests, run the tests, and draft this description.
+releasenote:
+  text: Fixed `kubectl label` writing messages about nonexistent labels to stdout,
+    which broke JSON and YAML output. The messages are sent to stderr instead.

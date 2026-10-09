@@ -1,0 +1,22 @@
+pr: 142527
+pr_body: "#### What type of PR is this?\n\n/kind bug\n/sig api-machinery\n\n#### What
+  this PR does / why we need it:\n\n`YAMLReader` silently dropped the last line of
+  a stream when that line had no trailing newline and a length that is an exact multiple
+  of the buffer size. In that case `LineReader.Read` returns the line together with
+  `io.EOF` (as `io.Reader` allows), and `YAMLReader.Read` discarded it. `YAMLReader.Read`
+  now keeps a line returned with `io.EOF`, ignoring the bare `\"\\n\"` that `LineReader`
+  appends at a normal EOF; writing that one too would make `Read` never return `io.EOF`.\n\nThe
+  added test fails at 4096, 8192 and 16384 bytes without the fix, and passes at 4095
+  and 4097 either way.\n\n#### Which issue(s) this PR is related to:\n\nFixes #142526\n\n####
+  Special notes for your reviewer:\n\nReal-world trigger: Argo CD strips the trailing
+  newline from plugin output before decoding it, so a Helm chart whose last line was
+  16384 bytes was applied truncated.\n\n#### Does this PR introduce a user-facing
+  change?\n\n```release-note\nFixed k8s.io/apimachinery/pkg/util/yaml silently dropping
+  the last line of a YAML stream when it has no trailing newline and its length is
+  an exact multiple of the reader buffer size.\n```\n\n#### Additional documentation
+  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n```docs\n\n```\n\n\U0001F916
+  Generated with [Claude Code](https://claude.com/claude-code)\n"
+releasenote:
+  text: Fixed `k8s.io/apimachinery/pkg/util/yaml` silently dropping the last line
+    of a YAML stream when it has no trailing newline and its length is an exact multiple
+    of the reader buffer size.

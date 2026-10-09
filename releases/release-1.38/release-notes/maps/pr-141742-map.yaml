@@ -1,0 +1,58 @@
+pr: 141742
+pr_body: "\r\n#### What type of PR is this?\r\n\r\n/kind bug\r\n/sig scheduling\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\n`deletePodHandler` records the pod deletion
+  latency with:\r\n\r\n```go\r\nmetrics.PodDeletionsLatency.Observe(float64(time.Since(fireAt)
+  * time.Second))\r\n```\r\n\r\n`time.Since` already returns a `time.Duration` in
+  nanoseconds, so multiplying by `time.Second` scales it by a further 1e9 instead
+  of converting to seconds.\r\n\r\n`taint_eviction_controller_pod_deletion_duration_seconds`
+  is documented as \"Latency, in seconds, ...\" and uses buckets from 0.005 to 240.
+  With the current code the observed values are:\r\n\r\n| actual latency | observed
+  \            | expected |\r\n| :------------- | :------------------- | :-------
+  |\r\n| 5ms            | 5000000000000000     | 0.005    |\r\n| 1s             |
+  1000000000000000000  | 1        |\r\n| 9s             | 9000000000000000000  | 9
+  \       |\r\n| 10s            | -8446744073709551616 | 10       |\r\n| 20s            |
+  1553255926290448384  | 20       |\r\n| 30s            | -6893488147419103232 | 30
+  \      |\r\n\r\nBelow roughly 9.2s every observation lands in the `+Inf` bucket.
+  Above that the multiplication overflows int64 and wraps around, so the recorded
+  value is arbitrary. Negative values count in the lowest bucket, so a slow eviction
+  can look faster than 5ms. `_sum` is meaningless in all cases.\r\n\r\n`DeviceTaintEvictionController`
+  already does this correctly in `pkg/controller/devicetainteviction/device_taint_eviction.go`:\r\n\r\n```go\r\ntc.metrics.PodDeletionsLatency.Observe(float64(podDeletionLatency.Seconds()))\r\n```\r\n\r\nThis
+  PR makes `TaintEvictionController` do the same and adds the regression test the
+  package was missing, which is why this went unnoticed since the controller was split
+  out in KEP-3902.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nFixes
+  #142617\r\n\r\n#### Special notes for your reviewer:\r\n\r\nThe test calls `deletePodHandler`
+  with `fireAt` 10s in the past and checks that exactly one sample of about 10 seconds
+  was recorded. 10s is above the ~9.2s overflow point. With the change in `taint_eviction.go`
+  reverted, it fails with:\r\n\r\n```\r\n--- FAIL: TestPodDeletionsLatencyObservedInSeconds
+  (0.01s)\r\n    taint_eviction_test.go:1049: observed latency = -8.441319545709552e+18
+  seconds, want between 10 and 11\r\n```\r\n\r\nVerified on linux/arm64 with golang:1.26:
+  `go test -race ./pkg/controller/tainteviction/ -count=1` passes, and `go vet` and
+  `gofmt` are clean.\r\n\r\n#141311, opened earlier, makes the same one-line change,
+  and #141568 includes it as part of the retry-queue work.\r\n\r\nThe metric is ALPHA,
+  so the corrected values are not a compatibility concern, but anyone graphing or
+  alerting on it will see the series change from `+Inf`-only or arbitrary values to
+  real ones.\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nFixed
+  the `taint_eviction_controller_pod_deletion_duration_seconds` metric, which recorded
+  nanoseconds scaled by 1e9 instead of seconds. Latencies below about 9.2 seconds
+  fell into the `+Inf` bucket, and longer ones overflowed and were recorded as arbitrary,
+  often negative, values.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
+  Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n\r\n```\r\n\r\n####
+  AI usage disclosure:\r\n\r\nYES. I used Claude Code to help locate this bug (it
+  surfaced while auditing metric observation call sites), to draft the regression
+  test, and to verify the before/after behaviour in a linux container. I reviewed
+  every line and am responsible for the submitted changes.\r\n"
+releasenote:
+  action_required: false
+  author: imusmanmalik
+  do_not_publish: false
+  documentation: []
+  feature: false
+  kinds:
+  - bug
+  sigs:
+  - apps
+  - scheduling
+  text: Fixed the `taint_eviction_controller_pod_deletion_duration_seconds` metric,
+    which recorded nanoseconds scaled by `1e9` instead of seconds. Latencies below
+    about 9.2 seconds fell into the `+Inf` bucket, and longer ones overflowed and
+    were recorded as arbitrary, often negative, values.

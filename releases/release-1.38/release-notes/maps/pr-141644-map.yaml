@@ -1,0 +1,120 @@
+pr: 141644
+pr_body: |+
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  `validateQualifiedName` (handwritten) and `resourcesQualifiedName` (declarative)
+  both split a `resource.k8s.io` qualified name on `/` and switch on the number of
+  parts, handling only 1 and 2. A value with two or more slashes matches neither
+  case and is returned with an empty error list, so it bypasses every check the
+  two-part case performs -- not only the slash count, but the empty-prefix and
+  empty-name checks as well.
+
+  Both validators currently accept all of these:
+
+  | input | errors before | errors after |
+  | --- | --- | --- |
+  | `a/b/c` | 0 | 1 |
+  | `a/b/c/d` | 0 | 1 |
+  | `/a/b` | 0 | 1 |
+  | `a//b` | 0 | 1 |
+
+  The two validators do not cover the same fields on `resource.k8s.io/v1`.
+
+  Handwritten `validateQualifiedName` is called on the `Device.Attributes` and
+  `Device.Capacity` map keys only. Through `validateFullyQualifiedName` it also
+  reaches `matchAttribute`, `distinctAttribute` and `partitionTypeAttribute`.
+  `capacityKey`, `requests` and `consumedCapacity` are typed `QualifiedName` but
+  nothing called the function on them and they carry no format marker either.
+  `capacityKey` is now checked in `validateNodeAllocatableMapping`, so a malformed
+  key reports the format error rather than `NotFound`. `requests` and
+  `consumedCapacity` are left alone, they are covered by #140563.
+
+  Declarative `resourcesQualifiedName` is unexported and is only called from
+  `ResourceFullyQualifiedName`, so it reaches just the three fields tagged
+  `+k8s:format=k8s-resource-fully-qualified-name`: `matchAttribute`,
+  `distinctAttribute`, and `partitionTypeAttribute` (that one behind
+  `DRAPartitionableDevicesType`). `type QualifiedName` carries no format marker, so
+  the map keys and `capacityKey` have no declarative counterpart at all.
+
+  `DeclarativeValidationBeta` has defaulted on since 1.36, so where the two do
+  overlap both are active and neither backstops the other.
+
+  It is not only cosmetic. `parseQualifiedName` in
+  `staging/src/k8s.io/dynamic-resource-allocation/cel/compile.go` splits on the
+  first slash only, so a stored `a/b/c` attribute key is exposed to CEL as domain
+  `a` and identifier `b/c` -- an identifier that still contains a slash, which a
+  device selector cannot address.
+
+  Both functions get the missing `default` case, emitting the same message, so the
+  two stay equivalent and the declarative/handwritten mismatch metric stays at 0.
+
+  On ratcheting: the declarative path already skips unchanged values, since the
+  generated validators short-circuit on `oldValueCorrelated && op.Type == Update`.
+  That covers `matchAttribute`, `distinctAttribute` and `partitionTypeAttribute`.
+
+  On the handwritten side the ratchet sits on `spec.devices`. That list is
+  `+listType=atomic`, so the generated validation compares the whole list and
+  revalidates every device once anything in it changes; the handwritten validation
+  now does the same, and the two agree on what an update grandfathers. A
+  ResourceSlice that already stores a non-compliant key stays updatable while its
+  device list is untouched, for example when only the pool generation changes.
+  Adding or changing any device reports the stored key. The per-device comparisons
+  of `attributes`, `capacity` and `taints` are subsumed by the list comparison and
+  are gone.
+
+  The per-device node selection check also reads `spec.perDeviceNodeSelection`,
+  so it moves out of `validateDevice` into `validateDeviceNodeSelection` and runs
+  when either the device list or that field changes. Flipping
+  `perDeviceNodeSelection` on an unchanged list therefore checks only the node
+  selection fields, and does not revalidate what the generated code covers.
+
+  The other two handwritten call sites need nothing. `validateDeviceConstraint`
+  runs on create only, because `validateDeviceClaim` is reached from
+  `ValidateResourceClaim` and `ValidateResourceClaimTemplate` and both update
+  validators treat the spec as immutable. In `validatePartitionTypeAttribute` the
+  `validateFullyQualifiedName` call is a guard rather than a check: it returns
+  early and appends nothing, so a stored malformed name produces no error. All
+  three cases have update tests.
+
+  The two TODOs describing this gap, added in #134602, are removed.
+
+  #### Which issue(s) this PR is related to:
+
+  No issue filed; the gap was documented in-tree by the TODOs this PR removes.
+
+  #### Special notes for your reviewer:
+
+  Beyond the tightening itself, the only behavior change is where the update
+  ratchet sits: `capacity` and `taints` were compared per device, and are now
+  covered by the one comparison of `spec.devices`.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Creating or updating a resource.k8s.io object with a qualified name that contains more than one slash, such as a device attribute key `a/b/c`, is now rejected. Objects that already store such a name remain updatable as long as the field holding it is left unchanged; for a ResourceSlice, as long as `spec.devices` is unchanged, since any change to that atomic list revalidates every device in it.
+  ```
+
+  /sig api-machinery
+  /sig node
+  /wg device-management
+  /area api-validation
+
+
+
+
+
+
+
+releasenote:
+  kinds:
+  - api-change
+  text: Changed validation to reject creating or updating a resource.k8s.io object
+    with a qualified name that contains more than one slash, such as the device attribute
+    key `a/b/c`. Objects that already store such a name remain updatable as long as
+    the field holding it is left unchanged; for a ResourceSlice, as long as `spec.devices`
+    is unchanged, since any change to that atomic list revalidates every device in
+    it.

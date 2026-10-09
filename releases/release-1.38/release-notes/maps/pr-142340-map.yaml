@@ -1,0 +1,38 @@
+pr: 142340
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  Canonicalizes `AllocatedResourcesStatus` by resource name and each resource health list by resource ID in both the device manager and DRA manager. This prevents unchanged resource health from producing different serialized Pod statuses and unnecessary API updates.
+
+  Regression tests seed deliberately unsorted existing statuses, so the old behavior fails deterministically without relying on randomized map iteration.
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes #142293
+
+  #### Special notes for your reviewer:
+
+  Focused race tests and the DRA package tests pass. The device-manager package passes with `TestDevicePluginReRegistrationProbeMode` excluded; that unrelated timing-sensitive test passes alone but can fail under parallel load.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Kubelet now reports allocated resource health statuses in deterministic order, preventing unnecessary Pod status updates when resource health is unchanged.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  NONE
+  ```
+
+  #### AI usage disclosure:
+
+  YES. AI assistance was used to trace the affected kubelet paths, implement deterministic ordering, and add regression coverage. The human author is responsible for reviewing all submitted changes in accordance with `AGENTS.md` and `CONTRIBUTING.md`.
+releasenote:
+  text: Fixed the `kubelet` to report allocated resource health statuses in deterministic
+    order, preventing unnecessary Pod status updates when resource health is unchanged.

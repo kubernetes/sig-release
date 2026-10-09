@@ -1,0 +1,55 @@
+pr: 140880
+pr_body: "## What type of PR is this?\r\n\r\n/kind bug\r\n/sig node\r\n/area kubelet\r\n\r\n##
+  What this PR does / why we need it\r\n\r\nFixes an issue where kubelet propagates
+  unusable scoped IPv6 link-local nameservers into pods using `dnsPolicy: Default`.\r\n\r\nToday,
+  when kubelet reads the node's resolver configuration, nameserver entries are copied
+  into the pod's `/etc/resolv.conf` verbatim. If the node contains a scoped IPv6 link-local
+  nameserver such as:\r\n\r\n```text\r\nnameserver fe80::29c:2ff:fea9:fdd0%3\r\n```\r\n\r\nthat
+  exact value is written into every `dnsPolicy: Default` pod.\r\n\r\nThe scope (`%3`
+  in this example) refers to an interface index that only exists in the node's network
+  namespace. Regular pods run in their own network namespace, so the scoped address
+  cannot be used from inside the pod, resulting in DNS failures such as:\r\n\r\n-
+  `network unreachable`\r\n- `invalid argument`\r\n\r\nThis also affects workloads
+  (such as CoreDNS when configured with `dnsPolicy: Default`) that inherit the node
+  resolver configuration and forward DNS queries using `/etc/resolv.conf`.\r\n\r\n###
+  This change\r\n\r\nThis PR filters inherited scoped IPv6 link-local nameservers
+  **only** for pods that satisfy:\r\n\r\n- `dnsPolicy: Default`\r\n- `hostNetwork:
+  false`\r\n\r\nThe filtering removes nameservers that:\r\n\r\n- are IPv6\r\n- are
+  link-local unicast (`fe80::/10`)\r\n- contain a scope zone (for example `%3` or
+  `%eth0`)\r\n\r\nExamples:\r\n\r\n| Nameserver | Result |\r\n|------------|--------|\r\n|
+  `1.1.1.1` | ✅ preserved |\r\n| `2001:4860:4860::8888` | ✅ preserved |\r\n| `fe80::1`
+  | ✅ preserved |\r\n| `fe80::1%3` | ❌ removed |\r\n| `fe80::1%eth0` | ❌ removed |\r\n\r\nHost-network
+  pods are **not** modified because they share the node network namespace and can
+  legitimately use scoped link-local addresses.\r\n\r\nThe filtering is performed
+  in the kubelet pod DNS generation flow rather than in `parseResolvConf()`, keeping
+  the resolver parser responsible only for parsing while making the filtering decision
+  where pod networking context is available.\r\n\r\n## Which issue(s) this PR fixes\r\n\r\nFixes
+  #140844\r\n\r\n## Special notes for your reviewer\r\n\r\n### Unit tests\r\n\r\nAdded
+  unit tests covering:\r\n\r\n- IPv4 nameservers are preserved.\r\n- Global IPv6 nameservers
+  are preserved.\r\n- Scoped IPv6 link-local nameservers with numeric zones are removed.\r\n-
+  Scoped IPv6 link-local nameservers with interface-name zones are removed.\r\n- Unscoped
+  IPv6 link-local nameservers are preserved.\r\n- Mixed nameserver lists only remove
+  the scoped link-local entries.\r\n- Malformed nameserver values remain unchanged.\r\n-
+  `dnsPolicy: Default` with `hostNetwork: false` filters inherited scoped IPv6 link-local
+  nameservers.\r\n- `dnsPolicy: Default` with `hostNetwork: true` preserves them.\r\n-
+  Other DNS policies retain their existing behaviour.\r\n\r\n### Manual validation\r\n\r\nBuilt
+  kubelet from this branch and configured it to use a resolver file containing:\r\n\r\n```text\r\nnameserver
+  1.1.1.1\r\nnameserver fe80::29c:2ff:fea9:fdd0%3\r\nnameserver 2001:4860:4860::8888\r\noptions
+  timeout:1 attempts:1\r\n```\r\n\r\n#### Scenario 1\r\n\r\nPod configuration:\r\n\r\n```yaml\r\ndnsPolicy:
+  Default\r\nhostNetwork: false\r\n```\r\n\r\nResult:\r\n\r\n```text\r\nnameserver
+  1.1.1.1\r\nnameserver 2001:4860:4860::8888\r\noptions attempts:1 timeout:1\r\n```\r\n\r\nThe
+  scoped IPv6 link-local nameserver was correctly removed.\r\n\r\n#### Scenario 2\r\n\r\nPod
+  configuration:\r\n\r\n```yaml\r\ndnsPolicy: Default\r\nhostNetwork: true\r\n```\r\n\r\nResult:\r\n\r\n```text\r\nnameserver
+  1.1.1.1\r\nnameserver fe80::29c:2ff:fea9:fdd0%3\r\nnameserver 2001:4860:4860::8888\r\noptions
+  timeout:1 attempts:1\r\n```\r\n\r\nThe scoped IPv6 link-local nameserver was correctly
+  preserved because the pod shares the host network namespace.\r\n\r\nThese tests
+  verify that:\r\n\r\n- only normal `dnsPolicy: Default` pods are filtered,\r\n- host-network
+  pods retain the existing behaviour,\r\n- IPv4 and global IPv6 nameservers remain
+  unchanged.\r\n\r\n## Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nFixed
+  kubelet so that pods using `dnsPolicy: Default` no longer inherit scoped IPv6 link-local
+  nameservers (for example `fe80::1%3`) from the node resolver configuration unless
+  the pod uses the host network namespace.\r\n```"
+releasenote:
+  text: Fixed `kubelet` so that pods with `dnsPolicy` set to Default no longer inherit
+    scoped IPv6 link-local nameservers (for example `fe80::1%3`) from the node resolver
+    configuration unless the pod uses the host network namespace.

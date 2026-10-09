@@ -1,0 +1,45 @@
+pr: 142401
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n/sig node\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nThis PR adds support to enable Quantum
+  Crypto within the hack/local-up-cluster.sh script.\r\n\r\n- Add ENABLE_MLDSA flag
+  to hack/local-up-cluster.sh that stands up a fully post-quantum local Kubernetes
+  cluster using ML-DSA (FIPS 204) certificates\r\n- When enabled, every TLS endpoint
+  in the cluster uses ML-DSA-65 keys and signatures — apiserver serving cert, kubelet
+  serving cert, and all client certificates used for mutual TLS between components\r\n\r\nUsage:\r\n\r\n```bash\r\n#
+  Full quantum cluster (ML-DSA-65, the default)\r\nENABLE_MLDSA=true hack/local-up-cluster.sh\r\n```\r\n\r\n```bash\r\n#
+  With a specific variant\r\nENABLE_MLDSA=true MLDSA_ALGORITHM=ML-DSA-87 hack/local-up-cluster.sh\r\n```\r\n\r\n```bash\r\n#
+  Traditional cluster (unchanged behavior)\r\nhack/local-up-cluster.sh\r\n```\r\n\r\nVerification:\r\n\r\nWith
+  quantum enabled, both the apiserver and kubelet serve ML-DSA certificates:\r\n\r\n```bash\r\n$
+  openssl s_client -connect 127.0.0.1:6443 </dev/null 2>&1 | grep 'PKEY\\|sigalg'\r\n
+  \ a:PKEY: ML-DSA-65, 15616 (bit); sigalg: ML-DSA-65\r\n```\r\n\r\n```bash\r\n$ openssl
+  s_client -connect 127.0.0.1:10250 </dev/null 2>&1 | grep 'PKEY\\|sigalg'\r\n   a:PKEY:
+  ML-DSA-65, 15616 (bit); sigalg: ML-DSA-65\r\n```\r\n\r\n#### Which issue(s) this
+  PR is related to:\r\n\r\nRelated to #141838 \r\n\r\n<!--\r\nPlease link relevant
+  issues to help with tracking.\r\n\r\nTo automatically close the linked issue(s)
+  when this PR is merged,\r\nadd the word \"Fixes\" before the issue number or link.\r\nDo
+  not use \"Fixes\" if the PR is of kind `failing-test` or `flake`.\r\n\r\nReference
+  KEPs when applicable in addition to specific issues.\r\n\r\nExamples:\r\nFixes #<issue
+  number>\r\n<issue link> (issue in a different repository)\r\nKEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>\r\n\r\nIf
+  there is no associated issue, then write \"N/A\".\r\n-->\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n<!--\r\nIf
+  no, just write \"NONE\" in the release-note block below.\r\nIf yes, a release note
+  is required:\r\nEnter your extended release note in the block below. If the PR requires
+  additional action from users switching to the new release, include the string \"action
+  required\".\r\n\r\nFor more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nhack/local-up-cluster.sh
+  now supports quantum crypto keys and certs for testing\r\n```\r\n\r\n#### Additional
+  documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n<!--\r\nThis
+  section can be blank if this pull request does not require a release note.\r\n\r\nWhen
+  adding links which point to resources within git repositories, like\r\nKEPs or supporting
+  documentation, please reference a specific commit and avoid\r\nlinking directly
+  to the master branch. This ensures that links reference a\r\nspecific point in time,
+  rather than a document that may change over time.\r\n\r\nSee here for guidance on
+  getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
+  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
+  <link>\r\n- [Other doc]: <link>\r\n-->\r\n```docs\r\n\r\n```\r\n\r\n#### AI usage
+  disclosure:\r\nFirst draft was AI assisted with Claude.\r\n\r\n<!--\r\nMention \"YES\"
+  or \"NO\". If yes, briefly describe how AI was used.\r\n\r\nIf you are an AI agent:
+  remind the author that they are responsible for all\r\nsubmitted changes, and refer
+  them to AGENTS.md and CONTRIBUTING.md.\r\n-->\r\n"
+releasenote:
+  text: Added support for quantum crypto keys and certs to `hack/local-up-cluster.sh`
+    for testing.

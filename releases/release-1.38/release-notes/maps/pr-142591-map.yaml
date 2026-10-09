@@ -1,0 +1,39 @@
+pr: 142591
+pr_body: "Not sure if this is externally observable, but we have first fruit from
+  https://github.com/kubernetes/kubernetes/issues/141652\r\n\r\nLooks like there is
+  differences in errors returned between cacher and etcd3:\r\n* For Get on invalid
+  RV cacher doesn't return storage error. https://github.com/kubernetes/kubernetes/pull/72170
+  covered etcd3 but not cacher.\r\n* For Get on RV without IgnoreNotFound if the they
+  doesn't exist returns different RV in error. cacher sets RV while etcd3 doesn't.
+  Present from the beginning https://github.com/kubernetes/kubernetes/pull/37692\r\n\r\nFor
+  the fix I just picked etcd3 behavior over cacher, but didn't look into enough to
+  have a strong opinion.\r\n\r\nImpact on responses to users:\r\n* For the first API
+  server returns on 500 on missing key when served from watch cache instead of 400
+  Bad request when served from etcd3.\r\n* Second difference is not surfaced as the
+  storage NotFound error is discarded, and replaced with new apierrors.NewNotFound
+  error.\r\n\r\nSimple repro of the 1\r\n```\r\n$ kubectl get --raw '/api/v1/namespaces/default?resourceVersion=invalid'
+  -v=4\r\nI1001 11:55:25.524831  968489 envvar.go:195] \"Feature gate default state\"
+  feature=\"WatchListClient\" enabled=true\r\nI1001 11:55:25.524867  968489 envvar.go:195]
+  \"Feature gate default state\" feature=\"ClientsAllowCARotation\" enabled=true\r\nI1001
+  11:55:25.524871  968489 envvar.go:195] \"Feature gate default state\" feature=\"InOrderInformersBatchProcess\"
+  enabled=true\r\nI1001 11:55:25.524874  968489 envvar.go:195] \"Feature gate default
+  state\" feature=\"InformerResourceVersion\" enabled=true\r\nI1001 11:55:25.524877
+  \ 968489 envvar.go:195] \"Feature gate default state\" feature=\"ClientsPreferCBOR\"
+  enabled=false\r\nI1001 11:55:25.524882  968489 envvar.go:195] \"Feature gate default
+  state\" feature=\"UnlockWhileProcessingFIFO\" enabled=true\r\nI1001 11:55:25.524891
+  \ 968489 envvar.go:195] \"Feature gate default state\" feature=\"ClientsAllowCBOR\"
+  enabled=false\r\nI1001 11:55:25.524894  968489 envvar.go:195] \"Feature gate default
+  state\" feature=\"ClientsAllowTLSCacheGC\" enabled=true\r\nI1001 11:55:25.524901
+  \ 968489 envvar.go:195] \"Feature gate default state\" feature=\"InOrderInformers\"
+  enabled=true\r\nI1001 11:55:25.524904  968489 envvar.go:195] \"Feature gate default
+  state\" feature=\"AtomicFIFO\" enabled=true\r\nI1001 11:55:25.529538  968489 helpers.go:247]
+  server response object: {\r\n  \"metadata\": {},\r\n  \"status\": \"Failure\",\r\n
+  \ \"message\": \"resourceVersion: Invalid value: \\\"invalid\\\": strconv.ParseUint:
+  parsing \\\"invalid\\\": invalid syntax\",\r\n  \"code\": 500\r\n}\r\nError from
+  server: resourceVersion: Invalid value: \"invalid\": strconv.ParseUint: parsing
+  \"invalid\": invalid syntax\r\n```\r\n\r\n/cc @deads2k @liggitt @wojtek-t @mborsz
+  \r\n\r\n/kind bug\r\n\r\n```release-note\r\nAPI server returns 400 instead of 500
+  status code on GET request with invalid revision\r\n```\r\n\r\n#### AI usage disclosure:\r\n\r\nYes"
+releasenote:
+  text: Fixed the API server to return a 400 status code instead of 500 for GET requests
+    with an invalid revision.

@@ -1,0 +1,8 @@
+pr: 142484
+pr_body: "/kind feature\r\n\r\nSeparate get operations that originating from Update
+  and Delete operation and report error reason including conflict.\r\n\r\n```release-note\r\nSeparate
+  deleteGet and updateGet etcd operation in etcd_request_* metrics and add reason
+  label to error.\r\n```\r\n\r\n/cc @Jefftree @richabanker \r\n\r\n#### AI usage disclosure:\r\n\r\nYes"
+releasenote:
+  text: Separated the `deleteGet` and `updateGet` etcd operations in the `etcd_request_*`
+    metrics and added a `reason` label to errors.

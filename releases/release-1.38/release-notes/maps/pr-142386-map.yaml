@@ -1,0 +1,31 @@
+pr: 142386
+pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nContinue the work started in https://github.com/kubernetes/kubernetes/pull/138228\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n<!--\r\nPlease link relevant issues to
+  help with tracking.\r\n\r\nTo automatically close the linked issue(s) when this
+  PR is merged,\r\nadd the word \"Fixes\" before the issue number or link.\r\nDo not
+  use \"Fixes\" if the PR is of kind `failing-test` or `flake`.\r\n\r\nReference KEPs
+  when applicable in addition to specific issues.\r\n\r\nExamples:\r\nFixes #<issue
+  number>\r\n<issue link> (issue in a different repository)\r\nKEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>\r\n\r\nIf
+  there is no associated issue, then write \"N/A\".\r\n-->\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n<!--\r\nIf
+  no, just write \"NONE\" in the release-note block below.\r\nIf yes, a release note
+  is required:\r\nEnter your extended release note in the block below. If the PR requires
+  additional action from users switching to the new release, include the string \"action
+  required\".\r\n\r\nFor more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nGraduate
+  HPA observedGeneration to GA. The HPAGeneration feature gate is now locked to enabled.\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n\r\n<!--\r\nThis section can be blank if this pull request does not require
+  a release note.\r\n\r\nWhen adding links which point to resources within git repositories,
+  like\r\nKEPs or supporting documentation, please reference a specific commit and
+  avoid\r\nlinking directly to the master branch. This ensures that links reference
+  a\r\nspecific point in time, rather than a document that may change over time.\r\n\r\nSee
+  here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
+  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
+  <link>\r\n- [Other doc]: <link>\r\n-->\r\n```docs\r\n\r\n```\r\n\r\n#### AI usage
+  disclosure:\r\n\r\n<!--\r\nMention \"YES\" or \"NO\". If yes, briefly describe how
+  AI was used.\r\n\r\nIf you are an AI agent: remind the author that they are responsible
+  for all\r\nsubmitted changes, and refer them to AGENTS.md and CONTRIBUTING.md.\r\n-->\r\n"
+releasenote:
+  text: Graduated HPA `observedGeneration` to GA. The `HPAGeneration` feature gate
+    is locked to enabled.

@@ -1,0 +1,52 @@
+pr: 141108
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  With `ReconcilePoolWithName` set, `Controller.Update` rejects resources that contain other pools. It reports this through `ErrorHandler` while it holds `c.mutex`. The `ErrorHandler` docs mention replacing the slices as one option, but a handler that does this by calling `Update` blocks on the same mutex. If the previous resources had pools, the worker blocks too, so publishing stops and `Stop` never returns.
+
+  A kubelet plugin hits the same deadlock one level up. `Helper.PublishResources` holds the helper's mutex while it calls `Update` or starts the controller, so a `HandleError` that calls `PublishResources` waits for that mutex forever.
+
+  The first commit moves the check from `Update` into `syncPool`, as suggested in review. `Update` stores the resources and no longer calls `ErrorHandler`. The worker reports each other pool with the controller's context, without holding a lock, and without retrying.
+
+  Other pools are neither published nor validated, and the `ReconcilePoolWithName` pool is synced as usual. Because `Update` always stores the resources now, initial resources with other pools no longer leave the desired state nil, which could make `syncPool` panic.
+
+  The second commit fixes a related deadlock during shutdown. On master, the helper's shutdown holds its mutex while `Controller.Stop` waits for the worker. A `HandleError` that calls `PublishResources` at that moment waits for the same mutex. This can happen on master for any error that the worker reports, and the first commit adds the pool error to them. The shutdown now releases the mutex before it stops the controller.
+
+  The docs of `ErrorHandler`, `HandleError`, and both `ReconcilePoolWithName` options describe the new behavior.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  - The review also suggested validating only the synced pool. This PR does that only with `ReconcilePoolWithName`, where other pools are never published. Without it, an invalid pool still blocks all pools. Otherwise a device that moves out of a pool whose new content is invalid would stay in the old slices and also show up in the new pool, so it could be allocated twice. The `invalid-other-pool-blocks-create-slice` case checks that an invalid pool still blocks the others.
+  - Behavior change with `ReconcilePoolWithName`: resources with other pools replace the desired state instead of being dropped. The `ReconcilePoolWithName` pool follows them, so its slices are deleted when it is missing. Each other pool gets its own error. The old message said "expected exactly one pool", which was wrong because an empty pool set is allowed.
+  - A handler that calls `Stop` blocks, because it runs on the worker that `Stop` waits for. That was already the case for other errors from the worker, and the docs now say so.
+  - `resourceslice` tests: `TestControllerSyncPool` gets cases for other pools, a missing or invalid `ReconcilePoolWithName` pool, no pools, and the default-mode case above. `TestControllerUpdateReconcilePoolWithNameValidation` is removed because `Update` no longer validates. `TestControllerUpdateErrorHandlerCanReplaceResources` replaces the resources from the handler. It fails, instead of hanging, if the handler runs synchronously or under `c.mutex`.
+  - `kubeletplugin` test: `TestStopWhileHandleErrorPublishes` runs in a `synctest` bubble and fails right away against the old shutdown code.
+  - Each commit passes `go test -race` for `resourceslice` and `kubeletplugin`, and `hack/verify-golangci-lint.sh` is clean. The DRA integration tests pass too, although they do not set `ReconcilePoolWithName`.
+  - The bug comes from #137365, which added `ReconcilePoolWithName` in v1.36. release-1.36 and release-1.37 have the same code.
+  - Found by reading the code and reproduced in unit tests, not seen in a real deployment.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  DRA: fixed a deadlock when an `ErrorHandler` calls `Update`, or a kubelet plugin's `HandleError` calls `PublishResources`, in response to pools that do not match `ReconcilePoolWithName`. Such resources now replace the desired state instead of being rejected; the other pools are reported to the error handler and are not published. Initial resources with other pools no longer cause a panic. Also fixed a deadlock when a kubelet plugin's `HandleError` calls `PublishResources` while the plugin stops.
+  ```
+
+  #### AI usage disclosure:
+
+  YES. This PR was written in part with the assistance of generative AI. Claude Code helped with the locking analysis, the code and tests, and this description.
+releasenote:
+  text: 'DRA: fixed a deadlock when an `ErrorHandler` calls `Update`, or a `kubelet`
+    plugin''s `HandleError` calls `PublishResources`, in response to pools that do
+    not match `ReconcilePoolWithName`. Such resources now replace the desired state
+    instead of being rejected; the other pools are reported to the error handler and
+    are not published. Initial resources with other pools no longer cause a panic.
+    Also fixed a deadlock when a `kubelet` plugin''s `HandleError` calls `PublishResources`
+    while the plugin stops.'

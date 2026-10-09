@@ -1,0 +1,28 @@
+pr: 141566
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\n`informer-gen` formed the GVR resource name used by
+  `WithInformerName` by blindly appending `\"s\"` to the lowercased type name:\r\n\r\n```go\r\n\"resourceName\":
+  strings.ToLower(t.Name.Name) + \"s\",\r\n```\r\n\r\nFor API types whose plural is
+  not `name + \"s\"` (e.g. `Endpoints`, `NetworkPolicy`, `ComponentStatus`), this
+  produced wrong resources such as `endpointss`, `networkpolicys` and `componentstatuss`
+  in the generated informer code.\r\n\r\nThis was inconsistent with the same generator's
+  `generic.go` template, which already uses the `--plural-exceptions`-aware `AllLowercasePluralNamer`.
+  This PR reuses that namer for `resourceName` in `informer.go`, so generated informers
+  carry the correct GVR. The client-go informers are regenerated with the fixed generator
+  (33 files corrected).\r\n\r\nThe second commit fixes two godoc bugs in the generated
+  informer factory template: the example referenced a non-existent `typeInformer`
+  variable (defined as `typedInformer`) and ranged over `synced` instead of its `Synced`
+  channel, so the example could not compile as written.\r\n\r\n#### Which issue(s)
+  this PR fixes:\r\n\r\nFixes #139383\r\n\r\n#### Special notes for your reviewer:\r\n\r\n-
+  The generator change and the regenerated output are split into two self-contained
+  commits: one for the pluralization fix, one for the factory godoc fix.\r\n- Verified
+  end-to-end: rebuilt `informer-gen` from staging (the exact path `hack/update-codegen.sh`
+  uses via the `replace` directive), deleted and regenerated all client-go informers;
+  only the 33 expected GVR lines and the factory godoc lines changed.\r\n- `staging/src/k8s.io/code-generator`
+  build/vet/tests pass; `client-go` builds.\r\n\r\n#### Does this PR introduce a user-facing
+  change?\r\n\r\n```release-note\r\nkube-controller-manager: Informer metrics now
+  use correctly pluralized resource names\r\n```\r\n\r\n#### Additional documentation
+  e.g., KEPs, usage documentation, etc.:\r\n\r\n```docs\r\nNONE\r\n```\r\n"
+releasenote:
+  text: Fixed `kube-controller-manager` informer metrics to use correctly pluralized
+    resource names.
