@@ -1,0 +1,22 @@
+pr: 142537
+pr_body: |
+  #### What type of PR is this?
+  /kind cleanup
+
+  #### What this PR does / why we need it:
+  Moves consistency store to client-go so it is easier for downstream consumers to use.
+
+  #### Which issue(s) this PR is related to:
+  KEP: https://github.com/kubernetes/enhancements/issues/5647
+
+  #### Special notes for your reviewer:
+
+  #### Does this PR introduce a user-facing change?
+  ```release-note
+  Add consistency store to client-go and deprecate in pkg/controller
+  ```
+
+  #### AI usage disclosure:
+  YES used for the move, however this is a fairly rote PR, just moving packages.
+releasenote:
+  text: Added the consistency store to `client-go` and deprecated it in `pkg/controller`.

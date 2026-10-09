@@ -1,0 +1,24 @@
+pr: 142146
+pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nThe main motivation is to enable the use of ktesting
+  in all code developed in the kubernetes/kubernetes repository, including staging
+  repos. Currently it can be used only in core Kubernetes tests, not staging repos,
+  because that would cause an import cycle.\r\n\r\nA secondary motivation is to enable
+  use outside of Kubernetes. Maybe being able to use it will motivate other developers
+  to contribute to it.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP:
+  https://github.com/kubernetes/enhancements/issues/6356\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\nAfter KEP approval and staging repo creation this PR is
+  ready for review. It uses the approach describe in the KEP:\r\n- move all code\r\n-
+  adapt paths tree-wide\r\n\r\nThe advantage is that \"git log -p --follow\" and \"git
+  blame --follow\" track the full history. We are also done sooner.\r\n\r\nThe downside
+  is the large number of modified files. However, is usually the same import path
+  change, so hopefully this can be reviewed and merged.\r\n\r\nConflicts with other
+  pending PRs should be limited to go.mod/sum and the import block.\r\n\r\n#### Does
+  this PR introduce a user-facing change?\r\n\r\n```release-note\r\nktesting: the
+  former internal packages are now available as k8s.io/ktesting (core package + API)
+  and k8s.io/client-go/ktesting (additional APIs for testing against an apiserver).\r\n```\r\n\r\n####
+  AI usage disclosure:\r\n\r\nNO"
+releasenote:
+  text: Made the former internal `ktesting` packages available as `k8s.io/ktesting`
+    (core package and API) and `k8s.io/client-go/ktesting` (additional APIs for testing
+    against an apiserver).

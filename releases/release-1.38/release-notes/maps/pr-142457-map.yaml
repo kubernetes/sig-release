@@ -1,0 +1,40 @@
+pr: 142457
+pr_body: |
+  #### What type of PR is this?
+
+  /kind cleanup
+
+  #### What this PR does / why we need it:
+
+  Moves the gRPC probe from the deprecated `grpc.DialContext` with `WithBlock` to `grpc.NewClient`. The client does no I/O until the health check runs, so the one probe timeout still covers connect and RPC. The target uses the `passthrough` resolver, which hands the address to the probe dialer unresolved, as `DialContext` did by default; `NewClient` would otherwise pick the `dns` resolver. Connection errors now surface from the RPC as `Unavailable` and map to the existing "failed to connect" message.
+
+  Behavior change: a refused connection fails the probe at once instead of retrying until `timeoutSeconds`, and a server that never answers reports `timeout: health rpc did not complete within <timeout>` instead of `timeout: failed to connect service`. Probe outcomes do not change.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  The unreachable-host test, which asserted the old exact timeout text against port 32, is replaced by a connection-refused test on a closed local port that also checks the probe returns well before its 10s timeout. Precedent: #137955 did the same move for cri-client. The second commit fixes a pre-existing flake in two container lifecycle tests (`exit -1` in busybox) that failed this PR's node e2e run; the comment below has the history.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kubelet: gRPC probes fail immediately when the connection is refused instead of retrying until the probe timeout. The failure message for a server that never answers is now "timeout: health rpc did not complete within <timeout>".
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+
+  ```
+
+  #### AI usage disclosure:
+
+  YES. AI tooling helped write the change and draft this description. The author reviewed and verified all of it.
+releasenote:
+  text: 'Changed the `kubelet` gRPC probes to fail immediately when the connection is
+    refused, instead of retrying until the probe timeout. The failure message for
+    a server that never answers changed to "timeout: health rpc did not complete within
+    <timeout>".'

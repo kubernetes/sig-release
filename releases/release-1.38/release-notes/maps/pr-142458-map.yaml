@@ -1,0 +1,36 @@
+pr: 142458
+pr_body: |
+  #### What type of PR is this?
+
+  /kind cleanup
+
+  #### What this PR does / why we need it:
+
+  The pods API gRPC server rate-limits unary calls but not `WatchPods` streams, and grpc defaults to unlimited concurrent streams. Every client already holds node power through the root-only socket, so this is hygiene: a leaking monitoring agent could otherwise hold unlimited watch streams. The server now caps concurrent streams per connection at 100 and runs stream openings through the same rate limiter as unary calls, via a stream interceptor next to the existing unary one.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  One small test covers the new stream interceptor. The podresources and device-plugin registration servers are unchanged.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kubelet: the pods API gRPC server now limits concurrent streams per connection to 100 and applies its request rate limit to WatchPods stream openings.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+
+  ```
+
+  #### AI usage disclosure:
+
+  YES. AI tooling helped write the change and draft this description. The author reviewed and verified all of it.
+releasenote:
+  text: Limited the `kubelet` pods API gRPC server to 100 concurrent streams per connection
+    and applied its request rate limit to `WatchPods` stream openings.

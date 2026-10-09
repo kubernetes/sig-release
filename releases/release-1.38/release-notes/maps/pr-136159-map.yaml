@@ -1,0 +1,12 @@
+pr: 136159
+pr_body: "#### What type of PR is this?\r\n\r\n/kind documentation\r\n\r\n#### What
+  this PR does / why we need it:\r\n\r\nFix the URL in the `JSONSchemaProps` comment
+  to render correctly. The current inline format `(http://json-schema.org/)` does
+  not render as a proper link in godoc. Changed the format to use `See: <url>` to
+  remove the trailing `)` which prevented the URL from being rendered as a proper
+  hyperlink. Also updated http to https.\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\n\r\nFixes #136158\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nFixed
+  JSONSchemaProps comment to properly render JSON Schema URL as a valid link\r\n```\r\n"
+releasenote:
+  text: Fixed `JSONSchemaProps` comment to properly render JSON Schema URL as a valid
+    link.

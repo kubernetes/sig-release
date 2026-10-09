@@ -1,0 +1,36 @@
+pr: 140447
+pr_body: |
+  #### What type of PR is this?
+
+  /kind cleanup
+  /sig instrumentation
+  /sig network
+
+  #### What this PR does / why we need it:
+
+  `endpoint_slice_controller_changes` is a counter that lacks the conventional `_total` suffix, which blocks any future graduation past Alpha (see #136306 / #136368).
+
+  This PR:
+  - Introduces `endpoint_slice_controller_changes_total` at **ALPHA** (metrics cannot be introduced at BETA).
+  - Deprecates the old `endpoint_slice_controller_changes` name in 1.37 (`DeprecatedVersion`), keeping it at ALPHA for the deprecation grace period.
+  - Increments both metrics during the transition so there is no gap in telemetry.
+  - Updates generated metric documentation accordingly.
+
+  A follow-up can graduate `endpoint_slice_controller_changes_total` to BETA after the required soak period.
+
+  #### Which issue(s) this PR fixes:
+
+  Related to #136306
+
+  #### Special notes for your reviewer:
+
+  Addresses review feedback from @tico88612 (rename + deprecation instead of graduating the misnamed metric) and @rexagod (do not introduce the replacement metric at BETA).
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  The `endpoint_slice_controller_changes` metric is deprecated in favor of `endpoint_slice_controller_changes_total`. Both metrics are emitted during the deprecation period.
+  ```
+releasenote:
+  text: Deprecated the `endpoint_slice_controller_changes` metric in favor of `endpoint_slice_controller_changes_total`.
+    Both metrics are emitted during the deprecation period.

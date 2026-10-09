@@ -1,0 +1,32 @@
+pr: 141021
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n/wg workload-aware-scheduling\r\n/sig
+  scheduling\r\n\r\n#### What this PR does / why we need it:\r\n\r\nImplements garbage
+  collection finalizer protection for `CompositePodGroup` objects to enforce hierarchical,
+  bottom-up cleanup:\r\n\r\n- **Admission**: Extends the `PodGroupProtection` admission
+  plugin (`plugin/pkg/admission/scheduling/podgroupprotection`) to mark newly created
+  `CompositePodGroup` objects with the `scheduling.k8s.io/compositepodgroup-protection`
+  finalizer.\r\n- **Controller**: Extends `PodGroupProtectionController` (`pkg/controller/scheduling/podgroupprotection`)
+  to index `PodGroup` and `CompositePodGroup` objects by `spec.parentCompositePodGroupName`.\r\n-
+  **Lifecycle Invariants**: When a `CompositePodGroup` is marked for deletion, the
+  controller retains its finalizer while any child `PodGroup` or `CompositePodGroup`
+  still references it as a parent. The finalizer is dropped only after all child groups
+  have been removed, ensuring deletion proceeds leaf-to-root (`Pod` -> `PodGroup`
+  -> child `CompositePodGroup` -> root `CompositePodGroup`).\r\n- **Testing**: Adds
+  full integration test coverage in `test/integration/podgroupprotection` verifying
+  multi-level hierarchical deletion and finalizer protection.\r\n\r\nThis PR is stacked
+  on https://github.com/kubernetes/kubernetes/pull/142387!\r\n\r\n#### Which issue(s)
+  this PR is related to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/6012-composite-podgroup-api/README.md\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nStacked PR on https://github.com/kubernetes/kubernetes/pull/142387!\r\n\r\n-
+  Extends the existing `PodGroupProtection` infrastructure without altering standard
+  `PodGroup` protection semantics.\r\n- Uses `spec.parentCompositePodGroupName` indexers
+  in the shared informer cache to evaluate parent-child references without API server
+  queries.\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nAdd
+  garbage collection finalizer protection (`scheduling.k8s.io/compositepodgroup-protection`)
+  for CompositePodGroup objects to ensure hierarchical bottom-up cleanup of pod groups.\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n\r\n```docs\r\n- [KEP]: https://github.com/kubernetes/enhancements/issues/6012\r\n```\r\n\r\n####
+  AI was used while crafting the PR"
+releasenote:
+  text: Added garbage collection finalizer protection (`scheduling.k8s.io/compositepodgroup-protection`)
+    for CompositePodGroup objects to ensure hierarchical bottom-up cleanup of PodGroup
+    objects.

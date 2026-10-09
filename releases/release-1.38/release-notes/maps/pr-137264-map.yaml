@@ -1,0 +1,22 @@
+pr: 137264
+pr_body: "#### What type of PR is this?\r\n/kind bug\r\n\r\n\r\n#### What this PR
+  does / why we need it:\r\nThis fixes `equality.Semantic.DeepDerivative` for slices
+  by rejecting prefix-only matches.\r\nPreviously, extra trailing items in existing
+  were ignored; now desired slices must match existing length (eg `[\"--foo\",\"--bar\"]`
+  vs `[\"--foo\",\"--bar\",\"--baz\"]` returns false).\r\n#### Which issue(s) this
+  PR is related to:\r\nFixes #136991\r\n\r\n#### Special notes for your reviewer:\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n<!--\r\nIf no, just write \"NONE\"
+  in the release-note block below.\r\nIf yes, a release note is required:\r\nEnter
+  your extended release note in the block below. If the PR requires additional action
+  from users switching to the new release, include the string \"action required\".\r\n\r\nFor
+  more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nThe
+  `apiequality.Semantic.DeepDerivative` function fixes slice comparisons to treat
+  a RHS slice with additional items compared to a non-empty LHS slice as different.
+  For example, `[1]` and `[1,2,3]` were previously considered identical, and are now
+  considered different.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
+  Enhancement Proposals), usage docs, etc.:\r\n"
+releasenote:
+  text: Fixed the `apiequality.Semantic.DeepDerivative` function's slice comparison
+    so that a right-hand slice with additional items, compared to a non-empty left-hand
+    slice, is treated as different. For example, `[1]` and `[1,2,3]` were previously
+    considered identical, but are considered different.

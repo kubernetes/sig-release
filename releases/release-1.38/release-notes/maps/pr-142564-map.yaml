@@ -1,0 +1,15 @@
+pr: 142564
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\n`kubectl kuberc set --section credentialplugin --policy
+  AllowAll` kept the existing allowlist in kuberc.\r\nThat combination fails validation
+  on load, so kubectl stopped working until the file was fixed by hand.\r\n\r\nThis
+  PR clears the allowlist in that case.\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\n\r\nFixes https://github.com/kubernetes/kubectl/issues/1888\r\n\r\n#### Special
+  notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nFixed
+  `kubectl kuberc set` leaving a stale credential plugin allowlist when the policy
+  is changed to AllowAll or DenyAll, which caused kubectl to fail.\r\n```\r\n\r\n####
+  AI usage disclosure:\r\n\r\nYES. AI was used to generate the unit test cases. The
+  fix itself was written by me.\r\nThe author reviewed and verified all of it."
+releasenote:
+  text: Fixed `kubectl kuberc set` leaving a stale credential plugin allowlist when
+    the policy is changed to AllowAll or DenyAll, which caused `kubectl` to fail.

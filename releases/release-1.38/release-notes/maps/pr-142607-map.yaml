@@ -1,0 +1,45 @@
+pr: 142607
+pr_body: |+
+  #### What type of PR is this?
+
+  /kind bug
+  /kind regression
+  /sig api-machinery
+
+  #### What this PR does / why we need it:
+
+  Go 1.27 rejects requests with more than 500 header values by default (`http.Server.MaxHeaderValueCount`, golang/go#79936), independently of `MaxHeaderBytes`. Impersonation and request-header authentication carry one header line per group, so a kube-apiserver built with Go 1.27 returns 431 for users with about 500 groups before authentication runs. Details and a reproduction are in #142606.
+
+  This sets `MaxHeaderValueCount` to 16384 for secure serving and deprecated insecure serving: the existing 1 MiB `MaxHeaderBytes` at about 64 bytes per value (~16 for the header name and ~48 for the value). The limit stays bounded against floods of tiny headers while accepting identities with thousands of groups.
+
+  The new test (Go 1.27 only) serves through `SecureServingInfo` and checks that 1,000 and 16,334 repeated `Impersonate-Group` values reach the handler over HTTP/1.1 and HTTP/2, and that 16,385 are rejected with 431.
+
+  With kube-apiserver built from this branch, impersonation and request-header requests with up to 1,000 groups return 200 over both protocols. v1.38.0-alpha.1 returns 431 from 495 groups over HTTP/2 and from 500 over HTTP/1.1.
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes #142606
+
+  #### Special notes for your reviewer:
+
+  - A constant keeps this change small. Alternatives: a `SecureServingInfo` field so embedders can choose, a flag (an operator knob with no current tuning guidance), or deriving it from `MaxHeaderBytes`.
+  - Aggregated API servers built on `k8s.io/apiserver` pick this up. Servers that construct their own `http.Server` need the same change.
+  - `MaxHeaderValueCount` is new in Go 1.27, so `setMaxHeaderValueCount` has a go1.27 build-tagged implementation and a no-op for older Go. This commit applies cleanly to release-1.34 through 1.37 and passes `go vet` there with Go 1.26.8; release-1.34 needs the year-bearing copyright header in the new files.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kube-apiserver and other servers built on k8s.io/apiserver now accept up to 16384 request header values. Without this, Go 1.27's default of 500 rejects impersonated or proxied users with about 500 or more groups with HTTP 431. Releases built with Go 1.26 had no separate header-count limit.
+  ```
+
+  #### AI usage disclosure:
+
+  YES. AI tools were used to reproduce the problem, draft the change and test, and draft this description. I reviewed the change and am responsible for it.
+
+
+releasenote:
+  text: Fixed `kube-apiserver` and other servers built on `k8s.io/apiserver` so they
+    accept up to 16384 request header values. Without this, the Go 1.27 default limit
+    of 500 header values rejects impersonated or proxied users with about 500 or more
+    groups with HTTP 431. Releases built with Go 1.26 had no separate header-count
+    limit.

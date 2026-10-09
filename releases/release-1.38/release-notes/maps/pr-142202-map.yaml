@@ -1,0 +1,36 @@
+pr: 142202
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
+  does / why we need it:\r\n\r\nWhen the ResourceClaim requested \"driver.example.com/bandwidth\"
+  and that DRA driver published the capacity as \"bandwidth\", the request failed.
+  Same for the inverse case.\r\n\r\nA less likely problem existed when a DRA driver
+  flipped between publishing with and without its own driver name as prefix: the allocation
+  result stored literally what came from the driver at the time of allocation, which
+  then wouldn't be considered after flipping to the other format.\r\n\r\nNothing prevents
+  DRA drivers and users from publishing resp. requesting the same capacity with and
+  without driver name prefix. Validation could prevent this for ResourceSlices (driver
+  name is known) but doesn't. It's probably also not worth doing because DRA drivers
+  are trusted and  can trivially avoid this; validation would just add overhead. https://github.com/kubernetes/kubernetes/pull/142218
+  makes sure that DRA driver behave well.\r\n\r\nLookup for constraints resolves this
+  conflict via \"fully-qualified wins\". Consumable capacity and CEL resolution was
+  random (last one in map iteration wins), now also prefers fully-qualified.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\n\r\nFixes: https://github.com/kubernetes/kubernetes/issues/140650\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\nThe fix is to normalize names (drop redundant
+  prefix) before comparing. To support downgrades, the allocation result is written
+  with the simpler name without the driver name as prefix because that is what was
+  written in practice before.\r\n\r\nI have included making the consumable capacities
+  and CEL capacities/attributes lookup deterministic in this PR. The one about CEL
+  could also be a separate PR, but it seems related enough to not add that review
+  overhead.\r\n\r\n#### Does this PR introduce a user-facing change?\r\n```release-note\r\nDRA
+  consumable capacity: requesting capacity had to be done with the capacity name exactly
+  as published by drivers, i.e. typically without the driver name prefix. When requesting
+  with a fully-qualified name, the request failed. Now both unqualified and fully-qualified
+  names work. A related, less likely problem existed when a DRA driver changed how
+  it published capacity and some capacity was allocated already.\r\n```\r\n\r\n####
+  AI usage disclosure:\r\n\r\nYES: test cases were written manually, then AI was used
+  to fix the code based on a description what the solution should look like."
+releasenote:
+  text: Fixed DRA consumable capacity requests failing when the request used a fully-qualified
+    capacity name. Requests now work with both the unqualified name, as published
+    by drivers (typically without the driver name prefix), and the fully-qualified
+    name. A related, less likely problem also occurred when a DRA driver changed how
+    it published capacity after some capacity had already been allocated.

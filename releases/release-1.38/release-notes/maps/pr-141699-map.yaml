@@ -1,0 +1,24 @@
+pr: 141699
+pr_body: |
+  #### What This PR does / why we need it:
+
+  Fix reading container logs on Windows when the container log root (e.g. C:\var\lib\containers) is itself a Windows volume-mount point (reparse point) onto a secondary disk. filepath.EvalSymlinks cannot traverse such reparse points, so the kubelet previously failed to read logs even though the path was accessible. This PR makes log-path symlink resolution best-effort on Windows: if a path is reachable via regular file operations it is used even when it cannot be fully resolved.
+
+  #### Special notes for your reviewer:
+
+  Added a deterministic unit test for the Windows evalSymlinks helper covering both the resolvable path and the missing-path error contract, so the fallback behavior is pinned even where a cross-volume mount point is unavailable. The integration test TestReadLogsMountPoint covers the real mount-point path.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kubelet: fixed a regression on Windows where the container log file could not be read when the container log directory is a volume mount point (reparse point) onto a secondary disk, because symbolic-link resolution cannot traverse such mount points.
+  ```
+
+  #### AI disclosure
+
+  This PR was authored with the assistance of an AI coding agent. A human maintainer is responsible for the correctness and content of all changes.
+releasenote:
+  text: Fixed a regression in `kubelet` on Windows where the container log file could
+    not be read when the container log directory is a volume mount point (reparse
+    point) onto a secondary disk, because symbolic-link resolution cannot traverse
+    such mount points.
