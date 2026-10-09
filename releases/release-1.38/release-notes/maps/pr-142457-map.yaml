@@ -1,0 +1,12 @@
+pr: 142457
+pr_body: ""
+releasenote:
+  text: |-
+    Changed the `kubelet` gRPC probes to fail immediately when the connection is refused, instead of retrying until the probe timeout. The failure message for a server that never answers changed to "timeout: health rpc did not complete within <timeout>".
+  sigs:
+  - node
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test

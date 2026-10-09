@@ -1,0 +1,13 @@
+pr: 142564
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubectl kuberc set` leaving a stale credential plugin allowlist when the policy is changed to AllowAll or DenyAll, which caused `kubectl` to fail.
+  sigs:
+  - cli
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubectl

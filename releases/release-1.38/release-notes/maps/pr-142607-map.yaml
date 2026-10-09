@@ -1,0 +1,13 @@
+pr: 142607
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kube-apiserver` and other servers built on `k8s.io/apiserver` so they accept up to 16384 request header values. Without this, the Go `v1.27` default limit of 500 header values rejects impersonated or proxied users with about 500 or more groups with HTTP 431. Releases built with Go `v1.26` had no separate header-count limit.
+  sigs:
+  - api-machinery
+  - auth
+  kinds:
+  - bug
+  - regression
+  areas:
+  - apiserver

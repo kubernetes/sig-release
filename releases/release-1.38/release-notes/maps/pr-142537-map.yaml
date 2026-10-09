@@ -1,0 +1,12 @@
+pr: 142537
+pr_body: ""
+releasenote:
+  text: |-
+    Added the consistency store to `client-go` and deprecated it in `pkg/controller`.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - node
+  kinds:
+  - cleanup

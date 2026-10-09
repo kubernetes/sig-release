@@ -1,0 +1,11 @@
+pr: 142401
+pr_body: ""
+releasenote:
+  text: |-
+    Added support for post-quantum keys and certificates to `hack/local-up-cluster.sh` for testing.
+  sigs:
+  - architecture
+  kinds:
+  - feature
+  areas:
+  - dependency

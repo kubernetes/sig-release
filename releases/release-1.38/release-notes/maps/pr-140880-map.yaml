@@ -1,0 +1,12 @@
+pr: 140880
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` so that Pods with `dnsPolicy` set to Default no longer inherit scoped IPv6 link-local nameservers (for example `fe80::1%3`) from the node resolver configuration unless the Pod uses the host network namespace.
+  sigs:
+  - network
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

@@ -1,0 +1,16 @@
+pr: 141345
+pr_body: ""
+releasenote:
+  text: |-
+    ACTION REQUIRED: Fixed several bugs in the ID range handling for Pods using user namespaces (`spec.hostUsers: false`). Before upgrading the `kubelet`:
+
+    - If the subordinate ID range for the `kubelet` user in `/etc/subuid` and `/etc/subgid` ends at or past 4294967295, for example `kubelet:65536:4294901760`, reduce the count by at least one `idsPerPod` (65536 by default). Such a range contains an ID the kernel can't map, and the `kubelet` refuses to start with it.
+    - Delete any Pod stuck in `ContainerCreating` with a `FailedCreatePodSandBox` event, or drain the node. An earlier `kubelet` may have assigned such a Pod the invalid range, and the upgraded `kubelet` refuses to start with `create user namespace manager: record pod mappings for existing pod "<uid>": id 4294901760 is out of range`.
+
+    The `kubelet` also no longer fails to start when the `kubelet` user exists but the `getsubids` binary is not installed; it falls back to the default ID range, as documented. Pods are no longer assigned the ID range ending at 4294967295 (2^32-1), which the kernel refuses to map, so the default range ends one `idsPerPod` block lower.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

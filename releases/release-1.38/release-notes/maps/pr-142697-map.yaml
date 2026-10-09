@@ -1,0 +1,11 @@
+pr: 142697
+pr_body: ""
+releasenote:
+  text: |-
+    Changed `applyconfiguration-gen` to honor `+k8s:openapi-model-package` when looking up OpenAPI definitions, and to fail if the schema has no definition for a root type.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - code-generation

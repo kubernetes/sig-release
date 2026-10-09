@@ -1,0 +1,16 @@
+pr: 141021
+pr_body: ""
+releasenote:
+  text: |-
+    Added garbage collection finalizer protection (`scheduling.k8s.io/compositepodgroup-protection`) for CompositePodGroup objects to ensure hierarchical bottom-up cleanup of PodGroup objects.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test

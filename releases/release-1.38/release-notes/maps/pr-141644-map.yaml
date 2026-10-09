@@ -1,0 +1,14 @@
+pr: 141644
+pr_body: ""
+releasenote:
+  text: |-
+    Changed validation to reject creating or updating a `resource.k8s.io` object with a qualified name that contains more than one slash, such as the device attribute key `a/b/c`. Objects that already store such a name remain updatable as long as the field holding it is left unchanged; for a ResourceSlice, as long as `spec.devices` is unchanged, since any change to that atomic list revalidates every device in it.
+  sigs:
+  - api-machinery
+  - node
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - api-validation

@@ -1,0 +1,9 @@
+pr: 137264
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `apiequality.Semantic.DeepDerivative` function's slice comparison so that a right-hand slice with additional items, compared to a non-empty left-hand slice, is treated as different. For example, `[1]` and `[1,2,3]` were previously considered identical, but are considered different.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

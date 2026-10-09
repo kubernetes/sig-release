@@ -1,0 +1,23 @@
+pr: 142340
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `kubelet` to report allocated resource health statuses in deterministic order, preventing unnecessary Pod status updates when resource health is unchanged.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - cloud-provider
+  - node
+  - release
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - cloudprovider
+  - release-eng

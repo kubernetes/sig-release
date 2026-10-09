@@ -1,0 +1,14 @@
+pr: 142591
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the API server to return a 400 status code instead of 500 for GET requests with an invalid revision.
+  sigs:
+  - api-machinery
+  - etcd
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - apiserver

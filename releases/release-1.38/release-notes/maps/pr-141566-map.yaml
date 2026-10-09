@@ -1,0 +1,11 @@
+pr: 141566
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kube-controller-manager` informer metrics to use correctly pluralized resource names.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - code-generation
