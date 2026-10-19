@@ -9,7 +9,7 @@ labels: sig/release, area/release-eng
 
 e.g., (at)example_user
 
-### [Chair/Technical Lead](https://git.k8s.io/sig-release/lead/onboarding.md) role
+### [Chair/Technical Lead](https://git.k8s.io/sig-release/leads/onboarding.md) role
 
 e.g., Chair, Technical Lead
 
@@ -18,33 +18,29 @@ e.g., Chair, Technical Lead
 **All pull requests within these checklists should be marked with an _explicit_
 hold and only released once approved by a SIG Release (subproject) owner.**
 
-- [ ] Addition of a new Release Manager has been discussed with and approved by
-      SIG Release owners
+- [ ] Addition of a new Chair/Technical Lead has been discussed with and
+      approved by the SIG Release leads
 - [ ] Ensure new Chair/Technical Lead:
   - [ ] Has joined the following mailing lists:
-    - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
-    - [kubernetes-release-team](https://groups.google.com/a/kubernetes.io/g/release-team)
-    - [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev)
-    - [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
-    - [release-managers](https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers)
-    - [release-managers-private](https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers-private)
+    - [kubernetes-sig-release](https://groups.google.com/g/kubernetes-sig-release)
+    - [release-team](https://groups.google.com/a/kubernetes.io/g/release-team)
+    - [dev](https://groups.google.com/a/kubernetes.io/g/dev)
+    - [kubernetes-announce](https://groups.google.com/g/kubernetes-announce)
+    - [release-managers](https://groups.google.com/a/kubernetes.io/g/release-managers)
+    - [release-managers-private](https://groups.google.com/a/kubernetes.io/g/release-managers-private)
   - [ ] Has joined the following Slack channels:
     - [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF)
     - [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y)
   - [ ] Is a [Kubernetes GitHub org member](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
   - [ ] Is part of the [@kubernetes/sig-release-admins](https://github.com/orgs/kubernetes/teams/sig-release-admins) GitHub team
-- [ ] Update [Release Managers](https://git.k8s.io/sig-release/release-managers.md) page to include the new Chair or Technical Lead
+- [ ] Update the [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md) page to include the new Chair or Technical Lead
 
 <!--
 Uncomment the appropriate checklist for the Chair/Technical Lead role the new candidate will hold.
 
-As you work through the checklist, use the following PRs as guides:
-- k/sig-release: https://github.com/kubernetes/sig-release/pull/868
-- k/org: https://github.com/kubernetes/org/pull/1440
-- k/release: https://github.com/kubernetes/release/pull/950
-- k/k8s.io: https://github.com/kubernetes/k8s.io/pull/481
-- k/test-infra: https://github.com/kubernetes/test-infra/pull/15465
-- k/community: https://github.com/kubernetes/community/pull/4284
+As you work through the checklist, use the PRs linked from the most recent
+closed "Chair/Technical Lead access for" issues in this repository as guides:
+https://github.com/kubernetes/sig-release/issues?q=is%3Aissue+%22Technical+Lead+access+for%22
 -->
 
 <!--
@@ -74,14 +70,14 @@ As you work through the checklist, use the following PRs as guides:
 - [ ] Update `SECURITY_CONTACTS`
   - [ ] `kubernetes/release`
   - [ ] `kubernetes/sig-release`
-- [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/groups.yaml)
-  - `leads` (members)
+- [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/sig-release/groups.yaml)
+  - `sig-release-leads` (members)
   - `k8s-infra-release-admins` (members)
   - `k8s-infra-release-editors` (members)
   - `release-comms` (owners)
   - `release-managers` (owners)
   - `release-managers-private` (owners)
-- [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
+- [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/g/kubernetes-announce)
 - [ ] Manually add to the [Release Team Google Group](https://groups.google.com/a/kubernetes.io/g/release-team)
 - [ ] Update Slack `release-managers` and `release-team-leads` User Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
 - [ ] Manually add to the [#release-private](https://kubernetes.slack.com/archives/GKEA5EL67) Slack channel
