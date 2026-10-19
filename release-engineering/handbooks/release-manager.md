@@ -13,6 +13,7 @@
     - [Skopeo](#skopeo)
 - [Release cutting](#release-cutting)
   - [Creating and managing the release issue](#creating-and-managing-the-release-issue)
+    - [Release tracking issue](#release-tracking-issue)
     - [Testgrid](#testgrid)
     - [Cloud Build job data](#cloud-build-job-data)
     - [Closing the issue](#closing-the-issue)
@@ -41,7 +42,7 @@
 - [Search past builds](#search-past-builds)
 - [Release commands cheat sheet](#release-commands-cheat-sheet)
 - [References](#references)
-- [Background information](#background-information)
+  - [Test Infra references](#test-infra-references)
 - [Visual release cut process](#visual-release-cut-process)
 
 ## Overview
@@ -62,19 +63,19 @@ milestones, and [semantic versioning](https://semver.org/).
 
 For the purposes of this handbook, we'll assume that:
 
-- the current release in development is Kubernetes 1.36
-- the previous release is Kubernetes 1.35
-- the next release is Kubernetes 1.37
-- the release no longer in support is Kubernetes 1.32
+- the current release in development is Kubernetes 1.38
+- the previous release is Kubernetes 1.37
+- the next release is Kubernetes 1.39
+- the release no longer in support is Kubernetes 1.34
 
 To simplify certain instructions, we will make the following connections:
 
 | Text | SemVer | Reference Release |
 |---|---|---|
-| "current release", "current milestone", "in development" | `x.y` | Kubernetes 1.36 |
-| "previous release", "previous milestone" | `x.y-1` | Kubernetes 1.35 |
-| "next release", "next milestone" | `x.y+1` | Kubernetes 1.37 |
-| "release no longer in support" | `x.y-4` | Kubernetes 1.32 |
+| "current release", "current milestone", "in development" | `x.y` | Kubernetes 1.38 |
+| "previous release", "previous milestone" | `x.y-1` | Kubernetes 1.37 |
+| "next release", "next milestone" | `x.y+1` | Kubernetes 1.39 |
+| "release no longer in support" | `x.y-4` | Kubernetes 1.34 |
 
 **As an editor of this content, Release Managers should periodically update
 these conventions and the examples contained within this handbook.**
@@ -106,9 +107,6 @@ Windows is not supported by [release tools].
 
 While our tooling may not support every platform, you may find success running
 within a container image.
-
-See "Cutting v1.15.0-alpha.2" under [References](#references) for an example
-Dockerfile.
 
 **If you notice that [release tools] are not working as expected, please file an
 issue in [kubernetes/release].**
@@ -157,10 +155,11 @@ gcloud auth login
 ```
 
 It might ask you to define the default project, region, and similar settings.
-The project can be set to `kubernetes-release-test`, while other settings can be
-ignored.
+The project can be set to `k8s-release`, which is the project `krel` uses by
+default for staging and Cloud Build jobs (see the
+[GCP reference](../reference/gcp.md)), while other settings can be ignored.
 
-In addition to `gcloud,` `gsutil` is required as well. By default, it comes
+In addition to `gcloud`, `gsutil` is required as well. By default, it comes
 with Google Cloud SDK.
 
 #### Sending mail
@@ -184,15 +183,15 @@ This can be done in one of two ways:
   [kubernetes-announce][k-announce-list] and [kubernetes-dev][k-dev-list]. You
   can get the announcement content in one of the following ways:
   - By taking the contents from the Release Cloud Bucket:
-    `https://dl.k8s.io/release/v1.y.z/announcement.html` and using the subject
-    "[kubernetes-announce] Kubernetes v1.y.z is live!", for example:
-    - https://dl.k8s.io/release/v1.31.1/announcement.html
+    `https://dl.k8s.io/release/v1.XX.Y/announcement.html` and using the subject
+    `[kubernetes-announce] Kubernetes v1.XX.Y is live!`, for example:
+    - https://dl.k8s.io/release/v1.37.0/announcement.html
   - By using `krel announce send` with the `--print-only` flag
 
 See the [Release Commands Cheat Sheet](#release-commands-cheat-sheet) for
 example commands.
 
-[k-announce-list]: https://groups.google.com/forum/#!forum/kubernetes-announce
+[k-announce-list]: https://groups.google.com/g/kubernetes-announce
 [k-dev-list]: https://groups.google.com/a/kubernetes.io/g/dev
 [release tools]: https://github.com/kubernetes/release#tools
 [kubernetes/release]: https://github.com/kubernetes/release
@@ -234,66 +233,44 @@ For the detailed step-by-step procedure, see the
 ### Creating and managing the release issue
 
 Prior to cutting a release version,
-[open a "Cut a Release" issue](https://github.com/kubernetes/sig-release/issues/new?template=cut-release.md&title=Cut+1.x.y-%7Balpha%2Cbeta%2Crc%7D.z+release)
+[open a "Cut a Release" issue](https://github.com/kubernetes/sig-release/issues/new?template=cut-release.md&title=Cut+v1.x.y-%7Balpha%2Cbeta%2Crc%7D.z+release)
 on [kubernetes/sig-release](https://github.com/kubernetes/sig-release).
 
 On the issue template, there are comments describing the predefined items that
 need to be completed.
 
+#### Release tracking issue
+
+In addition to the per-cut issues, the Branch Management lead opens one
+umbrella "Releases tracking issue" per release cycle in
+[kubernetes/sig-release](https://github.com/kubernetes/sig-release). It lists
+every planned cut of the cycle (alphas, beta, release candidates and the
+official release) with its scheduled date and links to the individual cut
+issues as they are opened. The
+[Release Branch Management Subteam Cycle Progress](../../.github/ISSUE_TEMPLATE/release-branch-management-progress.md)
+issue links to it and both are closed after Thaw.
+
 #### Testgrid
 
-For the item `Screenshot unhealthy release branch testgrid boards...`:
-
-`krel testgridshot` fetches the current status of
-[Testgrid](https://testgrid.k8s.io/) dashboards to keep as a reference of the
-state they were in before cutting a release. This subcommand queries the
-Testgrid JSON summaries and generates a Markdown table listing failing (or other
-specified state) jobs.
-
-To invoke the subcommand, run it with the branch you are working on:
-
-```
-krel testgridshot --branch 1.36
-```
-
-You can include other testgrid states in the output and even have krel
-autocomment the issue for you:
-
-```
-krel testgridshot --branch 1.36 --github-issue 12345 --states=FLAKY
-```
-
-Once the script generates the Markdown table, post it as a comment on the
-created issue. You can take a look at the
-[following comment](https://github.com/kubernetes/sig-release/issues/1249#issuecomment-696702503)
-as an example.
+For the item `Screenshot unhealthy release branch testgrid boards...`, run
+`krel testgridshot` as described in
+[step 3 of the Release Cut Handbook](release-cuts.md#3-generate-testgrid-comment)
+and post the generated Markdown table as a comment on the cut issue.
 
 #### Cloud Build job data
 
-When running a release cut, you should open a thread in the
-[#release-management][release-management-url] Slack channel and include links to
-the GCP build console. You can take a look at the
-[following thread][example-release-thread] as an example.
+When running a release cut, open a thread in the
+[#release-management][release-management-url] Slack channel and include links
+to the GCP build console, as described in
+[step 2 of the Release Cut Handbook](release-cuts.md#2-create-a-thread-on-the-release-management-slack-channel).
 
 [release-management-url]: https://app.slack.com/client/T09NY5SBT/CJH2GBF7Y
-[example-release-thread]: https://kubernetes.slack.com/archives/CJH2GBF7Y/p1600247891103600
 
 Once the release runs are complete (nomock only for patch releases, mock and
-nomock for all other release types), data about the jobs launched must be
-collected in the issue. These are assembled in a table and correspond to the
-`Collect metrics, links...` check mark.
-
-After the release process has been completed, get the data table by using the
-`krel history` subcommand. It will output a markdown table with the options used
-to run the jobs, links to the GCB logs, and the result of each run.
-
-```shell
-krel history --branch release-1.xy --date-from <date-of-release>
-```
-
-The generated table is then appended to the release issue, as it can be seen in
-the
-[following issue for the v1.20.0-alpha.1 release](https://github.com/kubernetes/sig-release/issues/1249#issue-705792603).
+nomock for all other release types), collect the data about the jobs with
+`krel history` and append the generated table to the cut issue. The exact
+command is in
+[step 9 of the Release Cut Handbook](release-cuts.md#9-send-release-announcement).
 
 __Note:__ `krel history` works using the
 [Default Application Credentials](https://cloud.google.com/sdk/gcloud/reference/auth/application-default)
@@ -317,8 +294,8 @@ gcloud auth application-default login
 
 After having thoroughly read the section on cutting a release version of the
 handbook, and that all items on the checklist have completed (you may include
-notes on events that was unique to cutting that release version as comments),
-close the issue with `/close` as a comment the issue thread.
+notes on events that were unique to cutting that release version as comments),
+close the issue with `/close` as a comment in the issue thread.
 
 ### Release types
 
@@ -343,25 +320,20 @@ as close to that state as possible:
 
 1. PRs tagged with the release cycle milestone should have all merged onto
    `master`.
-2. Run [`krel ff`](#branch-fast-forward) to ensure `master` and the release
-   branch have the same commits.
+2. Confirm that the periodic [branch fast forward](#branch-fast-forward) job
+   has caught up, so that `master` and the release branch have the same
+   commits.
 3. Factors for lifting Code Freeze: zero pending PRs, no open issues tagged with
    the milestone, and no failing release-blocking tests.
 
 ### Mock vs nomock
 
 Any `krel stage/release` command without the `--nomock` flag is a dry run. For
-minor releases, RCs, alphas, and betas, it is highly encouraged to dry run first
-before letting `krel stage/release` take any actual impact on the release
-process. Mock building/releasing can help you verify that you have a working
-setup.
-
-For patch releases (x.y.z where z > 0), mock runs are skipped. The nomock
-pipeline includes built-in safety checks that make a separate mock run
-unnecessary for patches.
-
-To get more information on `krel stage/release`, please refer to their
-corresponding help (`-h`) output.
+pre-releases and the official release, always dry run first. For patch
+releases (x.y.z where z > 0), mock runs are skipped because the nomock
+pipeline has built-in safety checks. See
+[step 5 of the Release Cut Handbook](release-cuts.md#5-mock-stage-and-mock-release)
+for the procedure.
 
 **Note: Mock builds can only be mock released. A nomock release requires a
 nomock build to be staged.**
@@ -381,9 +353,11 @@ The following are some ways to determine if the release process was successful:
 
 Release Managers are responsible for managing patches against Kubernetes release
 branches and making the 1.X.Y patch releases during the support period after
-each 1.X minor release. Kubernetes 1.X releases receive approximately one year
-of support (for releases 1.19 and newer) in terms of patches for bugfixes and
-ongoing CI ensuring the branch's health.
+each 1.X minor release. Each minor release is supported for approximately 14
+months (12 months of full support plus 2 months of maintenance mode), see the
+[support period](https://kubernetes.io/releases/patch-releases/#support-period)
+policy. Support consists of patches for bugfixes and ongoing CI ensuring the
+branch's health.
 
 ### Getting started with patch releases
 
@@ -402,17 +376,15 @@ tools:
   the
   [sig-release teams configuration](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
   adding your userid to the kubernetes-release-managers member list.
-* Ask the list owner(s) to add you to the
-  [release-managers-private](https://groups.google.com/a/kubernetes.io/forum/#!forum/release-managers-private)
-  via the owner contact form
-  [here](https://groups.google.com/forum/#!contactowner/kubernetes-dev).
-* Ask the list owner(s) to give you access to post to these mailing lists:
-   * [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce)
-     via owner contact form
-     [here](https://groups.google.com/forum/#!contactowner/kubernetes-announce)
-   * [kubernetes-dev-announce](https://groups.google.com/forum/#!forum/kubernetes-dev-announce)
-     via owner contact form
-     [here](https://groups.google.com/forum/#!contactowner/kubernetes-dev-announce)
+* Get added to the
+  [release-managers-private](https://groups.google.com/a/kubernetes.io/g/release-managers-private)
+  group by sending a pull request against
+  [`groups/sig-release/groups.yaml`](https://git.k8s.io/k8s.io/groups/sig-release/groups.yaml)
+  in `kubernetes/k8s.io` (the Release Manager onboarding issue tracks this).
+* Get permission to post to the
+  [kubernetes-announce](https://groups.google.com/g/kubernetes-announce) and
+  [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) lists, see
+  [Mailing List Permissions](#mailing-list-permissions).
 * If applicable, sync up with the outgoing Release Manager to take ownership of
   any lingering issues on the branch.
 * Review the [Prerequisites](#prerequisites) and
@@ -437,7 +409,7 @@ on your release branch.
 **Finding outstanding cherry-picks**
 
 Use a GitHub search such as
-[`is:pr is:open label:do-not-merge/cherry-pick-not-approved base:release-1.36`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+base%3Arelease-1.36+label%3Ado-not-merge%2Fcherry-pick-not-approved+)
+[`is:pr is:open label:do-not-merge/cherry-pick-not-approved base:release-1.38`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+base%3Arelease-1.38+label%3Ado-not-merge%2Fcherry-pick-not-approved+)
 to find all un-triaged cherry-pick PRs for a branch.
 
 **Review criteria**
@@ -500,40 +472,32 @@ Escalate to test owners,
 
 ### Release timing
 
-The general guideline is to leave about 2 to 4 weeks between patch releases on
-a given minor release branch. The lower bound is intended to avoid upgrade churn
-for cluster administrators, and to allow patches time to undergo testing on
-`master` and on the release branch. The upper bound is intended to avoid making
-users wait too long for fixes that are ready to go.
+Patch releases are cut on a monthly cadence for all supported minor versions.
+The dates are published in advance on the
+[patch releases page](https://git.k8s.io/website/content/en/releases/patch-releases.md),
+together with the cherry-pick deadline for each release, which is about a week
+before the cut. The monthly cadence avoids upgrade churn for cluster
+administrators and gives patches time to undergo testing on `master` and on the
+release branch, while not making users wait too long for fixes that are ready
+to go.
 
-The actual timing is up to the Release Manager, who should take into account
-input from cherry-pick PR authors and SIGs. For example, some bugs may be
-serious enough, and have a clear enough fix, to trigger a new patch release
-immediately.
+The Release Managers may deviate from the schedule, taking into account input
+from cherry-pick PR authors and SIGs. For example, some bugs may be serious
+enough, and have a clear enough fix, to trigger a new patch release
+immediately, see [Hotfix release](#hotfix-release).
 
-When you have a plan for the next patch release, send an announcement
-([example](https://groups.google.com/forum/#!topic/kubernetes-dev-announce/HGYsjOFtcdU)):
-
-* TO: [kubernetes-dev@googlegroups.com](https://groups.google.com/a/kubernetes.io/g/dev)
-* *BCC*: [kubernetes-dev-announce@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-dev-announce)
-
-several working days in advance, including a release notes preview. Also update
-the
-[posted schedule](https://git.k8s.io/website/content/en/releases/patch-releases.md).
-
-You generate the preview with the
+About a week before the cut, send a reminder of the cherry-pick deadline to
+[dev@kubernetes.io](https://groups.google.com/a/kubernetes.io/g/dev), including
+a preview of the release notes and the cherry-pick status report. You generate
+the preview with the
 [release-notes](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
 tool, run against a local checkout of the release branch with a `GITHUB_TOKEN`
 set in your environment.
 
 ### Patch release cut
 
-A few days before you plan to cut a patch release, put a temporary freeze on
-cherry-pick requests by removing the `cherry-pick-approved` label from any PR
-that isn't ready to merge. Leave a comment explaining that a freeze is in effect
-until after the release.
-
-The freeze serves several purposes:
+Cherry-pick PRs that are not approved and merged by the announced cherry-pick
+deadline wait for the next patch release. The deadline serves several purposes:
 
 1.  It ensures a minimum time period during which problems with the accepted
     patches may be discovered by people testing on `master`, or by continuous
@@ -560,8 +524,7 @@ This sends the formatted announcement to the kubernetes-dev and
 kubernetes-announce mailing lists via the Gmail API. A browser window will open
 for OAuth authentication. Use `--no-browser` in headless environments.
 
-After the release cut, reapply the `cherry-pick-approved` label to any PRs that
-had it before the freeze, and go through the backlog of new cherry-picks.
+After the release cut, go through the backlog of new cherry-picks.
 
 Update the
 [posted schedule](https://git.k8s.io/website/content/en/releases/patch-releases.md)
@@ -621,10 +584,10 @@ release cycle branch (`release-x.y`) are the only branches affected during this
 period.
 
 Code freeze initiates additional merge requirements, while Code thaw marks the
-switch back to the development phase. Look at the
-[release cycle timeline](https://github.com/kubernetes/sig-release/tree/master/releases)
-for the exact dates for code freeze and code thaw. Usually the date for code
-thaw is flexible depending on pending PRs.
+switch back to the development phase. Look at the release cycle timeline in
+the `README.md` of the [current release directory](../../releases/) for the
+exact dates for code freeze and code thaw. Usually the date for code thaw is
+flexible depending on pending PRs.
 
 As Release Manager, coordinate with the Release Lead on checking the exact
 config changes required to enable and disable merge restrictions.
@@ -687,10 +650,10 @@ starts so they know not to do any major changes.
 ```yaml
   - repos:
     - kubernetes/kubernetes
-    milestone: v1.36
+    milestone: v1.38
     includedBranches:
     - master
-    - release-1.36
+    - release-1.38
     labels:
     - lgtm
     - approved
@@ -701,7 +664,7 @@ starts so they know not to do any major changes.
     - kubernetes/kubernetes
     excludedBranches:
     - master
-    - release-1.36
+    - release-1.38
     labels:
     - lgtm
     - approved
@@ -710,10 +673,9 @@ starts so they know not to do any major changes.
       ...
 ```
 
-Example PR:
-
- - [1.18](https://github.com/kubernetes/test-infra/pull/16603)
- - [1.17](https://github.com/kubernetes/test-infra/pull/15301)
+The Code Freeze PR of the previous cycle is linked from that cycle's
+[Release Branch Management Subteam Cycle Progress](../../.github/ISSUE_TEMPLATE/release-branch-management-progress.md)
+issue and serves as the template for the next one.
 
 #### Code Thaw
 
@@ -733,7 +695,8 @@ Freeze.
 ```
 
 Update the `milestoneapplier` plugin configs for the following repos to the
-**_next_** milestone:
+**_next_** milestone (the per-branch rules were already added as part of the
+[post branch creation tasks](branch-creation.md#update-milestone-applier-rules-and-check-milestone-requirements)):
 
 - `kubernetes/enhancements`
 - `kubernetes/kubernetes`
@@ -741,9 +704,9 @@ Update the `milestoneapplier` plugin configs for the following repos to the
 - `kubernetes/sig-release`
 - `kubernetes/test-infra`
 
-Example PRs:
+Example PR:
 
-- [1.33](https://github.com/kubernetes/test-infra/pull/34693)
+- [v1.33](https://github.com/kubernetes/test-infra/pull/34693)
 
 > [!IMPORTANT]
 After Code Thaw is performed, remind @release-managers to perform the
@@ -754,13 +717,19 @@ project.
 
 ### Branch fast forward
 
-We now run the branch fast forward automatically to even the branches.
+Between the creation of the release branch (`rc.0`) and [Code Thaw](#code-thaw),
+the release branch is kept even with `master` by the periodic
+[`git-repo-kubernetes-fast-forward`](https://testgrid.k8s.io/sig-release-releng-blocking#git-repo-kubernetes-fast-forward)
+Prow job, which runs `krel ff` and is part of the release-blocking dashboard.
+No manual cherry-picks against the current release branch are needed during
+this period.
 
-Noted that no need for manual cherry-pick against current release and the job
-would be promoted to
-[release-blocking](https://testgrid.k8s.io/sig-release-releng-blocking#git-repo-kubernetes-fast-forward).
+The job pauses while a `Cut vX.Y.0` release cut issue is open, to avoid
+conflicts with a release running in parallel, and stops permanently once the
+`vX.Y.0` tag exists. See the
+[cut-release issue template](../../.github/ISSUE_TEMPLATE/cut-release.md).
 
-Once code freeze is lifted ([code thaw](#code-thaw) occurred), PRs that need to
+Once code freeze is lifted ([Code Thaw](#code-thaw) occurred), PRs that need to
 be merged onto the release branch are cherry-picked over from `master`.
 
 ### Reverts
@@ -786,7 +755,7 @@ During code freeze, cherry-pick handling follows the same
 considerations:
 
 - Check regularly for new cherry picks with
-  [`is:open is:pr base:release-x.y label:do-not-merge/cherry-pick-not-approved`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+base%3Arelease-1.36+label%3Ado-not-merge%2Fcherry-pick-not-approved)
+  [`is:open is:pr base:release-x.y label:do-not-merge/cherry-pick-not-approved`](https://github.com/kubernetes/kubernetes/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+base%3Arelease-1.38+label%3Ado-not-merge%2Fcherry-pick-not-approved)
 - Each cherry-pick diverges the latest release candidate from the bits to be
   released as the official release
 - Engage with the cherry-pick requester: how important is it, can it be pushed
@@ -797,7 +766,7 @@ considerations:
 - If cherry-picks merge, consider whether another release candidate is needed
 
 Identify
-[release blocking issues or PRs](https://github.com/kubernetes/sig-release/blob/master/release-blocking-jobs.md)
+[release blocking issues or PRs](../../release-blocking-jobs.md)
 as soon as possible and let the release lead know if there is not enough
 attention on them.
 
@@ -812,9 +781,9 @@ responsible for publishing the code in
 repositories.
 
 The bot also syncs the Kubernetes version tags to the published repos, prefixed
-with `kubernetes-`. For example, if you check out the `kubernetes-1.16.0` tag in
+with `kubernetes-`. For example, if you check out the `kubernetes-1.37.0` tag in
 client-go, the code you get is exactly the same as if you check out the
-`v1.16.0` tag in Kubernetes, and change the directory to
+`v1.37.0` tag in Kubernetes, and change the directory to
 `staging/src/k8s.io/client-go`.
 
 [client-go](https://github.com/kubernetes/client-go) follows
@@ -827,8 +796,8 @@ in the following
 The bot runs every four hours, so it might take sometime for a new tag to appear
 on a published repository.
 
-The client-go major release (e.g. `v1.18.0`) is released manually a day after
-the main Kubernetes release.
+The client-go minor release (`v0.Y.0`, for example `v0.37.0` for Kubernetes
+v1.37.0) is released manually a day after the main Kubernetes release.
 
 ## Debugging
 
@@ -841,7 +810,7 @@ and can be inspected there.
 
 To search past `cloudbuilds` to make any kind of analysis and check metrics you
 can use the Google Cloud Console for that. You can access
-[Google Cloud Build History](https://console.cloud.google.com/cloud-build/builds?project=kubernetes-release-test).
+[Google Cloud Build History](https://console.cloud.google.com/cloud-build/builds?project=k8s-release).
 
 There you can see all the `cloudbuilds` that already ran or if there is any one
 running in the moment you can see that as well.
@@ -851,7 +820,7 @@ textbox. When you click there it opens a dropdown box to you select which kind
 of keys you want to filter.
 
 For example you can select `Tags` and then add the tags you want to filter,
-like, `Tags: release-1.36 Status: Successful`.
+like, `Tags: release-1.38 Status: Successful`.
 
 ## Release commands cheat sheet
 
@@ -869,16 +838,13 @@ corresponding command line help (`-h`) outputs.
 | Check mail arrives, list has expected commits? | manual/visual |
 | Package testing | Visually validate [yum repo](https://pkgs.k8s.io/core:/stable:/v1.x/rpm/repodata/) and [apt repo](https://pkgs.k8s.io/core:/stable:/v1.x/deb/Packages) have entries for the release version in package NVRs (Name-Version-Release) |
 | Official email notify | ```krel announce send --tag vX.Y.Z --nomock``` |
-| Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) and [k-dev](https://groups.google.com/a/kubernetes.io/g/dev) got mail OK |
+| Check mail arrives | manual/visual check that [k-announce](https://groups.google.com/g/kubernetes-announce) and [k-dev](https://groups.google.com/a/kubernetes.io/g/dev) got mail OK |
 | Completion | n/a |
 
 ## References
 
 - [Release Tools Documentation](https://github.com/kubernetes/release/blob/master/README.md)
 - [Generic Release Steps](https://docs.google.com/document/d/1x-GQDZpKk3WajtSnO0axDazE9Xs2mOSVgjziIuTWNO0/edit)
-- [Detailed overview (Cutting v1.15.0-alpha.2)](https://docs.google.com/document/d/1Xv5w_eNvLvD-nNinMNqQAh0qlzee8btqAyHyFFMz3z4/edit?usp=sharing)
-- If you prefer a video walk-through, see
-  [cutting release candidate v1.15.0-rc.1](https://youtu.be/ldYt1elShD4).
 
 ### Test Infra references
 

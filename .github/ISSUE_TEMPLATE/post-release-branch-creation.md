@@ -20,7 +20,7 @@ Help? Ring @release-managers on slack!
 - [ ] Create a thread in #release-management: <!-- Paste link to Slack thread -->
 - [ ] (optional) Remove jobs for EOL versions, **only** if agreed upon with Release Managers
 <!--
-Branch Managers might not have a context on if it is "safe" to remove the EOL jobs. We try to be firm with the deadlines and stop cutting patches as soon as we reach the EOL date, but e.g. there might be a new patch needed because of some important security fix, in which case only Release Managers will know about that.
+The Branch Management lead might not have the context to know if it is "safe" to remove the EOL jobs. We try to be firm with the deadlines and stop cutting patches as soon as we reach the EOL date, but e.g. there might be a new patch needed because of some important security fix, in which case only Release Managers will know about that.
 
 There might be a significant time/delay between the release reaching EOL and the new branch being created, leaving those jobs hanging for a while, which has an impact on the project infra costs.
 
@@ -62,16 +62,16 @@ answer yourself or may require group discussion.
 
 Please list them here.
 
-Follow up with Branch Managers/Patch Release Team/Release Engineering
-subproject owners to get these questions answered.
+Follow up with Release Managers or Release Engineering subproject owners to
+get these questions answered.
 
 - [ ] Item 1
 - [ ] Item 2
 - [ ] Item 3
 -->
 
-/milestone <!-- v1.x e.g. v1.14 -->
-/assign <!-- @ the Release or Branch Manager responsible for this release -->
+/milestone <!-- v1.x e.g. v1.38 -->
+/assign <!-- @ the Release Manager responsible for this release -->
 /cc @kubernetes/release-managers @kubernetes/release-team-release-signal
 /priority important-soon
 /kind documentation

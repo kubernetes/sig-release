@@ -9,7 +9,7 @@ labels: sig/release, area/release-eng
 
 e.g., (at)example_user
 
-### [Release Manager](https://git.k8s.io/sig-release/release-managers.md) role
+### [Release Manager](https://git.k8s.io/website/content/en/releases/release-managers.md) role
 
 e.g., Release Manager, Release Manager Associate
 
@@ -32,25 +32,21 @@ e.g., permanent, temporary
 - [ ] Addition of a new Release Manager has been discussed with and approved by Release Engineering subproject owners
 - [ ] Ensure new Release Manager:
   - [ ] Has joined the following mailing lists:
-    - [kubernetes-sig-release](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+    - [kubernetes-sig-release](https://groups.google.com/g/kubernetes-sig-release)
     - [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev)
   - [ ] Has joined the following Slack channels:
     - [#sig-release](https://kubernetes.slack.com/messages/C2C40FMNF)
     - [#release-management](https://kubernetes.slack.com/messages/CJH2GBF7Y)
   - [ ] Is a [Kubernetes GitHub org member](https://github.com/kubernetes/community/blob/master/community-membership.md#member)
 - [ ] Update [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md) page to include the new Release Manager
-- [ ] Update the [`cherry_pick_approved` prow plugin configuration](https://github.com/kubernetes/test-infra/blob/ce9ca27/config/prow/plugins.yaml#L1104-L1115) section to contain the new approver.
+- [ ] Update the `cherry_pick_approved` section of the [prow plugin configuration](https://github.com/kubernetes/test-infra/blob/master/config/prow/plugins.yaml) to contain the new approver.
 
-<!-- 
+<!--
 Uncomment the appropriate checklist for the Release Manager role the new candidate will hold.
 
-As you work through the checklist, use the following PRs as guides:
-- k/sig-release: https://github.com/kubernetes/sig-release/pull/868
-- k/org: https://github.com/kubernetes/org/pull/1440
-- k/release: https://github.com/kubernetes/release/pull/950
-- k/k8s.io: https://github.com/kubernetes/k8s.io/pull/481
-- k/test-infra: https://github.com/kubernetes/test-infra/pull/15465
-- k/community: https://github.com/kubernetes/community/pull/4284
+As you work through the checklist, use the PRs linked from the most recent
+closed "Release Manager access for" issues in this repository as guides:
+https://github.com/kubernetes/sig-release/issues?q=is%3Aissue+%22Release+Manager+access+for%22
 -->
 
 <!--
@@ -85,20 +81,20 @@ As you work through the checklist, use the following PRs as guides:
     - [ ] `OWNERS_ALIASES`
       - Add entry in the `release-engineering-reviewers` section
     - [ ] `staging/publishing/OWNERS`
-      - Add entry in the `reviewers` sectionpublishing-bot-reviewers
+      - Add entry in the `reviewers` section
   - [ ] `kubernetes/k8s.io`
     - [ ] `OWNERS_ALIASES`
       - Add entries in the following sections:
         - `release-engineering-approvers`
         - `publishing-bot-reviewers`
-    - [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/groups.yaml)
+    - [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/sig-release/groups.yaml)
       - `k8s-infra-release-editors@`
       - `k8s-infra-release-viewers@`
       - `release-managers@`
       - `release-managers-private@`
   - [ ] `kubernetes/publishing-bot` `OWNERS_ALIASES`
     - Add entry in the `release-engineering-approvers` section
-- [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) see [mailing-list-permissions](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#mailing-list-permissions)
+- [ ] Manually grant permission to post on [kubernetes-announce](https://groups.google.com/g/kubernetes-announce), see [mailing list permissions](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#mailing-list-permissions)
 - [ ] Manually add to the [Release Team Google Group](https://groups.google.com/a/kubernetes.io/g/release-team)
 - [ ] Update Slack `release-managers` User Group [(`kubernetes/community`)](https://git.k8s.io/community/communication/slack-config/sig-release/usergroups.yaml)
 -->
@@ -109,7 +105,7 @@ As you work through the checklist, use the following PRs as guides:
 - [ ] Update GitHub teams [(`kubernetes/org`)](https://git.k8s.io/org/config/kubernetes/sig-release/teams.yaml)
   - `milestone-maintainers`
   - `release-engineering`
-- [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/groups.yaml)
+- [ ] Update Google Groups/GCP IAM membership [(`kubernetes/k8s.io`)](https://git.k8s.io/k8s.io/groups/sig-release/groups.yaml)
   - `k8s-infra-release-viewers@`
   - `release-managers@`
 -->

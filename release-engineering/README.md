@@ -16,9 +16,10 @@ subproject of [SIG Release](https://git.k8s.io/community/sig-release).
 - **[Security Releases](handbooks/security-releases.md)** - Coordinating with
   the Security Response Committee, managing CVE data maps, and handling security
   releases.
-- **[Branch Creation](handbooks/branch-creation.md)** - Infrastructure tasks
-  after rc.0 is cut, including branch configuration, CI jobs, and testgrid
-  setup.
+- **[Post Branch Creation Tasks](handbooks/branch-creation.md)** -
+  Infrastructure tasks after rc.0 is cut and the release branch exists,
+  including milestone rules, CI jobs, builder images, publishing-bot rules and
+  testgrid setup.
 - **[Go Version Management](handbooks/go-updates.md)** - Updating Go versions
   in Kubernetes, including kube-cross images and dependency management.
 
@@ -36,10 +37,25 @@ subproject of [SIG Release](https://git.k8s.io/community/sig-release).
 - **[GCP Projects and IAM](reference/gcp.md)** - GCP project inventory and IAM
   configuration for release infrastructure.
 
+### Issue Templates
+
+The handbooks rely on the following issue templates in this repository:
+
+- **[Cut a release](../.github/ISSUE_TEMPLATE/cut-release.md)** - Tracking
+  issue for every release cut.
+- **[Post Release Branch Creation Tasks](../.github/ISSUE_TEMPLATE/post-release-branch-creation.md)** -
+  Checklist for the tasks after rc.0.
+- **[Release Branch Management Subteam Cycle Progress](../.github/ISSUE_TEMPLATE/release-branch-management-progress.md)** -
+  Cycle-wide tracking issue for the Branch Management subteam.
+- **[Release Manager onboarding](../.github/ISSUE_TEMPLATE/release-manager.md)** -
+  Access checklist for new Release Managers and Release Manager Associates.
+- **[Chair or Technical Lead onboarding](../.github/ISSUE_TEMPLATE/lead.md)** -
+  Access checklist for new SIG Release Chairs and Technical Leads.
+
 ### Planning
 
-- **[Roadmap and Vision](https://github.com/kubernetes/sig-release/blob/master/roadmap.md)** -
-  SIG Release roadmap and long-term vision.
+- **[Roadmap and Vision](../roadmap.md)** - SIG Release roadmap and long-term
+  vision.
 
 ## Roles and Responsibilities
 
@@ -73,15 +89,15 @@ direct messages, to avoid duplicating conversations and drive transparency.
 
 ### Mailing List
 
-The [kubernetes-sig-release@](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+The [kubernetes-sig-release@](https://groups.google.com/g/kubernetes-sig-release)
 mailing list is available for topics that are too complex for Slack or GitHub.
 
 ### Meetings
 
 Release Engineering meetings take place every other Tuesday at 7:30am PT /
-14:30 UTC and last 60 minutes. Meeting agendas and notes are available
-[here](https://bit.ly/k8s-releng-meeting). Meetings are recorded and follow
-the Kubernetes Code of Conduct.
+14:30 UTC and last 60 minutes. The current invite is linked from the
+[meeting agendas and notes](https://bit.ly/k8s-releng-meeting). Meetings are
+recorded and follow the Kubernetes Code of Conduct.
 
 ## How We Work
 
@@ -95,7 +111,7 @@ We communicate decisions through:
 - Release Engineering meeting agenda notes and recordings
 - PRs, and amendment PRs on top of prior merged PRs
 - Posts in [#release-management](https://kubernetes.slack.com/messages/release-management)
-- The [kubernetes-sig-release@](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+- The [kubernetes-sig-release@](https://groups.google.com/g/kubernetes-sig-release)
   mailing list for broader topics
 
 ### Pull Request Flow
@@ -185,14 +201,15 @@ updating the relevant repositories during a patch release.
 - Cherry pick triage and approval
 - Provide status updates at Release Team meetings
 
-### Bimonthly
+### Every two months
 
 - k/release updates (Go dependencies, semver tags)
 
 ### Monthly
 
-- Patch releases for the supported minor versions
-  - Notify the community of the pending deadline a week before
+- Patch releases for the supported minor versions, see
+  [Patch release management](handbooks/release-manager.md#patch-release-management)
+  - Notify the community of the pending cherry pick deadline a week before
   - Generate and share cherry pick status reports
   - Communicate ahead of the final release from a release branch
   - Deprovision CI for the oldest release branch after its last release
