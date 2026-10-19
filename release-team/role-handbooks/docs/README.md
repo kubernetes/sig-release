@@ -1,212 +1,303 @@
 # Kubernetes Docs Role Handbook
+
 - [Overview](#overview)
-    - [Common Terms](#common-terms)
-- [Tasks and Responsibilities](#tasks-and-responsibilities)
-- [Prerequisites for Docs Lead and Shadows](#prerequisites-for-docs-lead-and-shadows)
-    - [General Requirements](#general-requirements)
-    - [Time Requirements](#time-requirements)
-    - [Prerequisites for Docs Leads](#prerequisites-for-docs-leads)
-    - [Prerequisites for Shadows](#prerequisites-for-shadows)
-    - [Machine and GitHub Setup](#machine-and-github-setup)
-      - [Set up krel](#set-up-krel)
-      - [Fork the kubernetes repositories](#fork-the-kubernetes-repositories)
-- [Release Timeline](#release-timeline)
+  - [Common terms](#common-terms)
+- [Tasks and responsibilities](#tasks-and-responsibilities)
+  - [Responsibilities overview](#responsibilities-overview)
+- [Prerequisites for the Docs Lead and shadows](#prerequisites-for-the-docs-lead-and-shadows)
+  - [General requirements](#general-requirements)
+  - [Time requirements](#time-requirements)
+  - [Prerequisites for Docs Leads](#prerequisites-for-docs-leads)
+  - [Prerequisites for shadows](#prerequisites-for-shadows)
+  - [Machine and GitHub setup](#machine-and-github-setup)
+    - [Set up krel](#set-up-krel)
+    - [Fork the Kubernetes repositories](#fork-the-kubernetes-repositories)
+- [Release timeline](#release-timeline)
 - [Tools](#tools)
-- [Debugging Tips](#debugging-tips)
-- [Release Notes File Structure](#release-notes-file-structure)
-- [TODOs](#todos)
+- [Debugging tips](#debugging-tips)
+- [Release notes file structure](#release-notes-file-structure)
+- [Improvement ideas](#improvement-ideas)
 
 ## Overview
 
-This document covers the responsibilities, time commitments, and timeline for Docs Leads shepherding docs releases for Kubernetes, including the generation and fine-tuning of Release Notes. Docs Lead Shadows should also read through this document and understand the launch processes so they can do it in the future.
+This document covers the responsibilities, time commitments and timeline for
+Docs Leads shepherding docs releases for Kubernetes, including the generation
+and fine-tuning of the release notes. Docs shadows should also read through
+this document and understand the launch process so they can do it in the
+future.
 
-The Docs Lead will be responsible for introducing shadows to the team and the release notes subcommand in [krel](https://github.com/kubernetes/release/tree/master/docs/krel). Shadows should expect to perform this task at least once themselves. The Docs Lead should indicate pain points and known issues to the shadows (if there are any) and work on strategies for overcoming them to avoid their coalescence during the later weeks.
+The Docs Lead introduces the shadows to the team and to the `release-notes`
+subcommand of [krel](https://github.com/kubernetes/release/tree/master/docs/krel).
+Shadows should expect to perform this task at least once themselves. The Docs
+Lead should point out pain points and known issues to the shadows and work
+on strategies for overcoming them, to avoid them piling up in the later
+weeks.
 
-If there are potential fixes to the issues indicated and team members are keen, fixes and automation of the process are encouraged but not required.
+If there are potential fixes to the issues and team members are keen, fixes
+and automation of the process are encouraged but not required.
 
-**Please refer to the Docs [Release Timeline](/release-team/role-handbooks/docs/Release-Timeline.md) for an exhaustive list of the responsibilities of the Docs Team.** 
+**The [release timeline](release-timeline.md) has the exhaustive list of
+Docs team responsibilities, grouped by release milestone.**
 
-### Common Terms
+### Common terms
 
-| Variable             | Explanation                                 | Example                                                  |
-|----------------------|---------------------------------------------|----------------------------------------------------------|
-| [current release]    | Active Kubernetes release                   | 1.27                                                     |
-| [future release]     | Release that the team is actively composing | 1.28                                                     |
-| [integration branch] | A PR [WIP] merging dev branch into main   | [Official 1.27 Release Docs dev branch](https://github.com/kubernetes/website/pull/39124) |                                                    
+| Term | Explanation | Example (v1.38 cycle) |
+|------|-------------|-----------------------|
+| `<current release>` | The active Kubernetes release | 1.37 |
+| `<future release>` | The release the team is actively composing | 1.38 |
+| `<next release>` | The release after the future release | 1.39 |
+| Integration branch | The PR that merges `dev-<future release>` into `main` on release day | [v1.21 integration branch](https://github.com/kubernetes/website/pull/26153) |
+| Release Tracking Board | The GitHub project the Enhancements team sets up for the cycle | [v1.38 links](/releases/release-1.38/links.md#releasetracking) |
 
-## Tasks and Responsibilities
+## Tasks and responsibilities
 
-The Docs Lead is responsible for working with the Release Team to coordinate documentation updates for the next Kubernetes release, including the generation of Release Notes.
+The Docs Lead works with the Release Team to coordinate documentation updates
+for the next Kubernetes release, including the generation of the release
+notes.
 
-### Responsibilities Overview
+### Responsibilities overview
 
-* Identifying new Kubernetes features and enhancements ([Kubernetes Enhancement Proposals, also referred to as KEPs](https://www.kubernetes.dev/resources/keps/)) that require documentation, and track them in the Release Tracking board for the release cycle (for example, [v1.37 Release Tracking board](https://github.com/orgs/kubernetes/projects/264)).
-* Creating a dev branch used by contributors to target documentation updates for the upcoming release
-* Generating, reviewing, and fixing Release Notes periodically throughout the release cycle
-* Offering guidance to contributors about how to contribute new feature and enhancements documentation and working with contributors to modify existing docs to accurately represent any upcoming changes 
-* Providing weekly updates to the Release Team about the current state of release-bound docs
-* Mentoring Docs Lead Shadows throughout this process and empowering them with the knowledge needed to be future Docs Leads
-* Working with SIG Docs to review documentation PRs according to the website [Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/) to ensure quality 
-* Working with SIG owners to ensure documentation is reviewed for technical accuracy
-* Working with Release Comms to review the Release Blog
-* Approving reviewed documentation to ensure its inclusion in the upcoming release
-* Migrating the old website [version] documentation and updating it with the new release
-* Communicating changes with all of the localization branches in order to stay synced across repositories
-* Updating the [Docs Lead and Shadow Handbook](/release-team/role-handbooks/docs/README.md) and [Release Team Onboarding Guide](/release-team/release-team-onboarding.md) instructions following each release
+- Identify new Kubernetes features and enhancements
+  ([Kubernetes Enhancement Proposals, KEPs](https://www.kubernetes.dev/resources/keps/))
+  that require documentation, and track them in the Release Tracking Board
+  for the release cycle (linked from `releases/release-<future release>/links.md`).
+- Create the dev branch that contributors target with documentation updates
+  for the upcoming release.
+- Generate, review and fix the release notes periodically throughout the
+  release cycle.
+- Guide contributors on how to document new features and enhancements, and
+  work with them to update existing docs so that they accurately represent
+  upcoming changes.
+- Provide weekly updates to the Release Team about the state of
+  release-bound docs.
+- Mentor the Docs shadows throughout the process and empower them with the
+  knowledge needed to be future Docs Leads.
+- Work with SIG Docs to review documentation PRs according to the website
+  [style guide](https://kubernetes.io/docs/contribute/style/style-guide/).
+- Work with the SIG owners to ensure documentation is reviewed for technical
+  accuracy.
+- Work with Release Comms to review the release blog.
+- Approve reviewed documentation to ensure its inclusion in the upcoming
+  release.
+- Migrate the previous website version documentation and update it with the
+  new release.
+- Communicate changes to all localization teams to stay in sync across
+  branches.
+- Update this handbook, the [release timeline](release-timeline.md) and the
+  [Release Team onboarding guide](/release-team/release-team-onboarding.md)
+  after each release.
 
-## Prerequisites for Docs Lead and Shadows
+## Prerequisites for the Docs Lead and shadows
 
-### General Requirements
+### General requirements
 
-Before continuing on to the Docs specific requirements listed below, please review the tasks in the [Release Team Onboarding Guide](/release-team/release-team-onboarding.md).
+Before continuing with the Docs specific requirements below, complete the
+tasks in the [Release Team onboarding guide](/release-team/release-team-onboarding.md).
 
-### Time Requirements
+### Time requirements
 
-Releases are usually 15 weeks long. In general, there is less work in the first few weeks of the release cycle, more work in the middle as KEP owners need to be reminded to contribute documentation updates, and a lot of work in the last few weeks of the release cycle as documentation must be reviewed and approved prior to release day. The largest time commitment for the Docs Lead is the release day itself, because on that day the Docs Lead must follow the process to merge all documentation updates and unfreeze the website. 
+Release cycles run for 14 to 16 weeks. There is less work before
+Enhancements Freeze, more work between Enhancements Freeze and Code Freeze
+as KEP owners need to be reminded to contribute documentation updates, and a
+lot of work between Code Freeze and release day as documentation must be
+reviewed and approved. The largest time commitment for the Docs Lead is
+release day itself, when the Docs Lead merges all documentation updates and
+unfreezes the website.
 
 General time requirements for leads and shadows are:
 
-- ½ hour to 2 hours a day, reviewing incoming enhancements, tracking documentation PRs, and monitoring Slack
-- Between 1 and 2 hours a week to attend the majority of Release Team (weekly) and Burndown meetings (daily during Code Freeze), subject to time zone appropriateness
-- Up to 1 hour weekly to attend [SIG Docs meetings](https://github.com/kubernetes/community/tree/master/sig-docs#meetings) for status reports
-- Create [known issues issue](https://github.com/kubernetes/sig-release/blob/master/release-team/role-handbooks/release-notes/known-issues-bucket.md) in kubernetes/kubernetes to capture known issues for the release
-- Send [an email to SIG-leads](https://github.com/kubernetes/sig-release/blob/master/release-team/role-handbooks/release-notes/sig-leads-email.md) to ensure major changes for their SIGs are accurately reflected in the release notes
-- Send a slack message to the sig channels to ensure major changes for the SIGs are accurately reflected in the release notes 
+- Half an hour to two hours a day reviewing incoming enhancements, tracking
+  documentation PRs and monitoring Slack.
+- One to two hours a week to attend the majority of the Release Team
+  meetings (weekly) and the burndown meetings (several times a week after
+  Code Freeze), subject to time zone appropriateness.
+- Up to one hour a week to attend
+  [SIG Docs meetings](https://github.com/kubernetes/community/tree/master/sig-docs#meetings)
+  for status reports.
 
-#### Onboarding Session (week 1) ~1 hour
+#### Onboarding session, about one hour
 
-In the first week of the release cycle, the Docs Lead will organize an onboarding session with the shadows to go over general responsibilities and expectations.
+In the first week of the release cycle, the Docs Lead organizes an
+onboarding session with the shadows to go over the general responsibilities
+and expectations.
 
-#### Early and mid release cycle (weeks 1-8) ~1-5 hours/week
+#### Before Code Freeze, one to five hours a week
 
-In the first 8 weeks of the cycle, the Docs team must attend weekly release meetings and run the [release-notes subcommand of krel](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md) for every `alpha`, `beta` and `rc` to create an early draft of the release notes. This ensures that the overall quality of the release notes can be verified from the beginning of the release cycle.
+Until Code Freeze, the Docs team attends the weekly Release Team meetings
+and runs the [release-notes subcommand of krel](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md)
+after every pre-release cut to create an early draft of the release notes.
+This ensures that the overall quality of the release notes can be verified
+from the beginning of the release cycle.
 
-Weekly branch syncs must be run to ensure consistency from `main` to `dev-[future-release]`. The Docs team is responsible for the communication of documentation-related deadlines to KEP owners and SIG leads, as well as the tracking of documentation and enforcement of deadlines.
+Weekly branch syncs keep `dev-<future release>` consistent with `main`. The
+Docs team communicates the documentation deadlines to the KEP owners and SIG
+leads, tracks the documentation PRs and enforces the deadlines.
 
-All members of the Docs subteam should participate in PR reviews as time allows.
+All members of the Docs team participate in PR reviews as time allows.
 
-#### Late release cycle (weeks 9-12+) ~4-10 hours/week
+#### Code Freeze to release day, four to ten hours a week
 
-This period has an increase in release team meetings each week and there is also significantly more work to do to ensure the release notes and documentation are in good working order for the release.
+The Release Team meets more often in this period, and there is significantly
+more work to do to ensure that the release notes and documentation are in
+good order for the release.
 
-The `release-notes` subcommand of `krel` must continue to be run on the release branch (for `alpha`, `beta` and `rc` releases) in order to pull in any outstanding PRs that are merged between the beginning of code freeze and the release.
+The `release-notes` subcommand of krel must continue to be run for each
+`rc` to pull in any outstanding PRs merged between Code Freeze and the
+release.
 
-The Docs Lead will sync with the Comms team as well as SIG Docs and SIG Cluster-lifecycle, as well as begin prepping the website for the release day. On release day, the Docs Lead merges the documentation, publishes the release blog, and updates the website.
+The Docs Lead syncs with the Comms team, SIG Docs and SIG Cluster Lifecycle,
+and prepares the website for release day. On release day, the Docs Lead
+merges the documentation, publishes the release blog and updates the
+website.
 
-**During the last weeks of the release, shadows should expect to spend at least 5 hours and leads at least 10 hours finalizing the launch.**
+**During the last weeks of the release, shadows should expect to spend at
+least five hours and leads at least ten hours a week finalizing the launch.**
 
 ### Prerequisites for Docs Leads
 
 In addition to the time requirements above, a Docs Lead must:
 
-- Familiarity with Github
-- Have the ability to add a milestone to issues, so must be a member of the [website milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/). Access can be requested by creating a [PR](https://github.com/kubernetes/org/pull/2235) against `kubernetes/org` repo.
-> Note: access to see [website milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/) is restricted to Kubernetes GitHub org members
-- Have the ability to `/approve` PRs. Access can be requested by creating a [PR](https://github.com/kubernetes/website/pull/20351) against `main` branch.
-- Take the [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/) training course
+- Be familiar with GitHub.
+- Be able to add milestones to issues, which requires membership of the
+  [website milestone maintainers](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/)
+  team. Request access with a PR against `kubernetes/org`, for example
+  [this one](https://github.com/kubernetes/org/pull/2235). Viewing the team
+  is restricted to Kubernetes GitHub org members.
+- Be able to `/approve` PRs in `kubernetes/website`. Request access with a
+  PR against the `main` branch that adds you to `OWNERS_ALIASES`, for
+  example [this one](https://github.com/kubernetes/website/pull/20351).
+- Take the [Inclusive Speaker Orientation (LFC101)](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/)
+  training course.
 
-### Prerequisites for Shadows
+### Prerequisites for shadows
 
-Docs Lead Shadows are people who are preparing to be a Docs Lead in the future. In addition to the time requirements above, shadows must:
+Docs shadows are people who are preparing to be a Docs Lead in the future.
+In addition to the time requirements above, shadows must:
 
-- Strong written and verbal communications skills
-- A working knowledge of Kubernetes concepts
-- Familiarity with Git and command line tools.
-- Project management experience is helpful but not required.
-- Have signed the [contributor CLA](https://github.com/kubernetes/community/blob/master/CLA.md) for Kubernetes.
-- Be invested in becoming an org member within the release cycle. This can often be achieved during the release cycle with sponsorship from a role lead. See the [Release Team onboarding guide](/release-team/release-team-onboarding.md) for more details.
-- General knowledge of our SIG Docs [areas of responsibility](https://github.com/kubernetes/community/tree/master/sig-docs#subprojects).
-- Experience with the general process involved with [contributing](https://kubernetes.io/docs/contribute/start/) to Kubernetes website.
-- Be a [milestone maintainer](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/) in order to have the ability to add a milestone to an issue. Access can be requested by creating a [PR](https://github.com/kubernetes/org/pull/2235) against `kubernetes/org` repo.
+- Have strong written and verbal communication skills.
+- Have a working knowledge of Kubernetes concepts.
+- Be familiar with Git and command line tools.
+- Have signed the [contributor CLA](https://github.com/kubernetes/community/blob/master/CLA.md)
+  for Kubernetes.
+- Be invested in becoming an org member within the release cycle. This can
+  often be achieved during the release cycle with sponsorship from a role
+  lead. See the [Release Team onboarding guide](/release-team/release-team-onboarding.md)
+  for details.
+- Have general knowledge of the SIG Docs
+  [areas of responsibility](https://github.com/kubernetes/community/tree/master/sig-docs#subprojects).
+- Have experience with the general process of
+  [contributing](https://kubernetes.io/docs/contribute/start/) to the
+  Kubernetes website.
+- Be a [website milestone maintainer](https://github.com/orgs/kubernetes/teams/website-milestone-maintainers/)
+  in order to add milestones to issues. Request access with a PR against
+  `kubernetes/org` (see the Docs Lead prerequisites above).
 
-### Machine and GitHub Setup
+Project management experience is helpful but not required.
 
-#### Setup krel
+### Machine and GitHub setup
 
-[Install Go](https://golang.org/doc/install) in your machine and follow the [instructions to build the release tools](https://github.com/kubernetes/release/tree/master/docs/krel#installation) in your machine. Check the system requirements in the krel documentation.
+#### Set up krel
 
-#### Fork the kubernetes repositories
+[Install Go](https://golang.org/doc/install) and follow the
+[instructions to build the release tools](https://github.com/kubernetes/release/tree/master/docs/krel#installation).
+Check the system requirements in the krel documentation.
 
-Fork the following repositories to your GitHub account, and clone them using SSH:
+#### Fork the Kubernetes repositories
 
- - [`kubernetes/sig-release`](https://github.com/kubernetes/sig-release): This is where you will push regular PRs to keep the Release Notes draft up to date.
- - [`kubernetes-sigs/release-notes`](https://github.com/kubernetes-sigs/release-notes): This repo has the [release notes website](https://relnotes.k8s.io) sources
+Fork the following repositories to your GitHub account and clone them using
+SSH:
 
-## Release Timeline
+- [`kubernetes/sig-release`](https://github.com/kubernetes/sig-release): this
+  is where you push the regular PRs that keep the release notes draft up to
+  date.
+- [`kubernetes/website`](https://github.com/kubernetes/website): this is
+  where the docs live and where the branch sync PRs go.
+- [`kubernetes-sigs/release-notes`](https://github.com/kubernetes-sigs/release-notes):
+  the sources of the [release notes website](https://relnotes.k8s.io).
 
-Reference the Docs [Release Timeline](Release-Timeline.md) for key dates and responsibilities during the release cycle and the Kubernetes Release Information page for the specific release (e.g. [Kubernetes 1.28 Release Information page](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.28/README.md) for information regarding the current release cycle including important dates, Release Team contact information, tracking spreadsheets, and more.
+## Release timeline
+
+The [release timeline](release-timeline.md) lists the Docs team tasks for
+each release milestone. The dates for the current cycle are in the release
+directory, `releases/release-<future release>/README.md`, together with the
+Release Team contacts and tracking links.
 
 ## Tools
-- [krel](https://github.com/kubernetes/release/tree/master/docs/krel) The Kubernetes Release Toolbox *(note: always use the latest version of krel to ensure you have the latest fixes/patches)*
+
+- [krel](https://github.com/kubernetes/release/tree/master/docs/krel), the
+  Kubernetes release toolbox. Always use the latest version of krel to get
+  the latest fixes.
 - [The krel `release-notes` subcommand](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md)
-- [The old release notes tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
-- [Release notes website](https://relnotes.k8s.io) *(note: release notes website is automatically updated)*
-- [go-modiff](https://github.com/saschagrunert/go-modiff)
-- [Hackmd](https://hackmd.io/)
-- [LWKD](http://lwkd.info) *(note: contributing to LWKD is not a requirement as part of the Docs shadow role, but might be of interest to shadows.)*
-- [Kubernetes Documentation Style Guide](https://kubernetes.io/docs/contribute/style/style-guide/)
-- [Generating Reference Documentation for a Release](https://kubernetes.io/docs/contribute/generate-ref-docs/release-generation/) *(note: the generated reference sets are built by a SIG Docs tech lead, not the Docs Lead)*
+- [The `release-notes` tool](https://github.com/kubernetes/release/tree/master/cmd/release-notes)
+  that krel builds on
+- [Release notes website](https://relnotes.k8s.io), which is updated
+  automatically
+- [go-modiff](https://github.com/saschagrunert/go-modiff) for the
+  dependencies section
+- [HackMD](https://hackmd.io/)
+- [LWKD](http://lwkd.info). Contributing to LWKD is not a requirement of the
+  Docs shadow role, but might be of interest to shadows.
+- [Kubernetes documentation style guide](https://kubernetes.io/docs/contribute/style/style-guide/)
+- [Generating reference documentation for a release](https://kubernetes.io/docs/contribute/generate-ref-docs/release-generation/).
+  The generated reference sets are built by a SIG Docs tech lead, not the
+  Docs Lead.
 
-## Debugging Tips
+## Debugging tips
 
-If you are having trouble running the `krel` tool, here are some common issues and solutions:
+If you are having trouble running krel, here are some common issues and
+solutions:
 
-1. Try running with `--log-level=debug` or `--log-level=trace` to get more information about what is going wrong.
-2. A temp directory gets created at `/var/folders/7t/273pt80d51l70mj4rxznq_lm0000gn/T/<k8s-hash>` when the `krel` tool is called.
-If this data is stale, you can try clearing to remove old data with `rm -rf /var/folders/7t/273pt80d51l70mj4rxznq_lm0000gn/T/k8s`
+1. Run with `--log-level=debug` or `--log-level=trace` to get more
+   information about what is going wrong.
+1. krel creates a temporary directory named `k8s-<hash>` in the system
+   temporary directory (`$TMPDIR` on macOS, usually `/tmp` on Linux) when it
+   runs. If this data is stale, remove the `k8s-*` directories there and run
+   krel again.
 
-Checkout the documentation for the [krel `release-notes` subcommand](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md).
+See the documentation of the
+[krel `release-notes` subcommand](https://github.com/kubernetes/release/blob/master/docs/krel/release-notes.md)
+for more.
 
-## Release Notes File Structure
+## Release notes file structure
 
-All the release notes for a release are stored under the [releases](https://github.com/kubernetes/sig-release/tree/master/releases) 
-directory in the sig-release repo. 
+All release notes of a release are stored under the
+[releases](https://github.com/kubernetes/sig-release/tree/master/releases)
+directory of the sig-release repo.
 
-For each release there is a JSON and markdown file that contains the collected release notes across path releases. For example,
-the 1.30 release [markdown file](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.30/release-notes/release-notes-draft.md)
-contains all the correctly formatted release notes text for the 1.30 release. The [JSON file](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.30/release-notes/release-notes-draft.json)
-contains the release notes metadata that is used to generate the markdown file. 
+For each release there is a JSON and a Markdown file that contain the
+collected release notes across the pre-releases. For example,
+`releases/release-<future release>/release-notes/release-notes-draft.md`
+contains all the correctly formatted release notes text for the release, and
+`release-notes-draft.json` contains the release notes metadata used to
+generate the Markdown file.
 
-When a Docs team member runs the `krel release-notes` command, a new session is created so that you can pause and resume
-the editing process. For example the 1.30 release notes sessions are stored in the [sessions](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.30/release-notes/sessions)
-directory in the sig-release repo under `release-1.30`.
+When a Docs team member runs `krel release-notes`, a new session is created
+so that the editing process can be paused and resumed. The sessions are
+stored in the `release-notes/sessions` directory of the release.
 
-If a Docs team member finds a mistake in the release notes, the edit will be saved as a map yaml file in the [maps](https://github.com/kubernetes/sig-release/tree/master/releases/release-1.30/release-notes/maps)
-directory. These maps are used to generate the markdown file and JSON file with the correctly edited release note. 
+When a Docs team member fixes a release note, the edit is saved as a map YAML
+file in the `release-notes/maps` directory of the release. These maps are
+used to generate the Markdown and JSON files with the corrected release
+note.
 
-## TODOs
+## Improvement ideas
 
-As a Docs shadow, if you are interested in contributing to the improvement of the release notes process, consider the following
-areas of improvement:
+Docs shadows interested in improving the release notes process can pick up
+one of these ideas:
 
-#### Github Workflow to Detect Common Release Note Issues
-
-- YAML linter to block invalid yaml merging in from manually edited release notes. If suggestions are commited that have 
-invalid yaml, the krel tool will not be able to be run on the next release until the error is fixed in a separate pr. 
-See [example PR](https://github.com/kubernetes/sig-release/pull/2446) from the 1.30 release that unblocked the `v1.30.0-alpha.3` release.
-- Spell check based on dictionary of common Kubernetes terms.
-- Check for correct punctuation in release notes.
-- Check for incorrect tense in release notes.
-- Look into using [Vale.sh](https://vale.sh/) or the [Valve GitHub action](https://github.com/errata-ai/vale) to add editorial checks to the release notes PR
-
-Some initial work has been done in [this GitHub workflow](https://github.com/npolshakova/sig-release/blob/npolshak/workflow/.github/workflows/release-notes-checker.yaml) to introduce checks for common issues in release notes. 
-Here is an [example run of the workflow](https://github.com/rudrakshkarpe/sig-release/actions/runs/8073807523/job/22058097731) for the 1.30.0-alpha2 release. This is a good starting point for further improvements.
-
-#### Release Notes tool to automatically process language
-
-If any team members have NLP experience, implement functionality in release-notes tool to automatically process language in generated release notes file
-
-Goals:
-
-- Generate uniform style across release notes (ie. past tense, formatting).
-- Decrease copy editing time.
-
-#### Release Notes Machine Learning Classifier
-
-The idea is to build a continuous release notes improvement process to train a machine learning model to classify.
-release notes as good or bad. The input for the model should be created continuously during the whole release cycle.
-by Release Notes Team of SIG Release. See the [issue](https://github.com/kubernetes/enhancements/issues/1833) for more details.
-
-#### Krel tool improvements 
-
-- Update krel tool to show progress of how many PRs to review are left and other bugs.
+- A GitHub workflow that detects common release note issues in the release
+  notes PRs: a YAML linter that blocks invalid YAML from manually edited
+  maps (invalid YAML blocks krel for the next pre-release until it is fixed
+  in a separate PR, see [this v1.30 PR](https://github.com/kubernetes/sig-release/pull/2446)),
+  a spell check based on a dictionary of common Kubernetes terms, and checks
+  for punctuation and tense. [Vale](https://vale.sh/) and its
+  [GitHub action](https://github.com/errata-ai/vale-action) are candidates
+  for the editorial checks.
+- Language processing in the `release-notes` tool to generate a uniform
+  style across release notes (past tense, formatting) and decrease the copy
+  editing time.
+- A release notes classifier that learns from the edits made during the
+  cycle to flag notes that need attention. See
+  [kubernetes/enhancements#1833](https://github.com/kubernetes/enhancements/issues/1833).
+- krel improvements, for example showing how many PRs are left to review in
+  the editing flow.

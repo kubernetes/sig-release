@@ -1,24 +1,29 @@
-First search in [Kubernetes
-issues](https://github.com/kubernetes/kubernetes/issues) to ensure that an
-issue hasn't already been created for `known issues` in the current release. Create a regular issue in
+# Known issues umbrella issue
+
+The Docs team creates one umbrella issue per release to collect the entries
+for the "Known Issues" section of the release notes.
+
+First search the [Kubernetes issues](https://github.com/kubernetes/kubernetes/issues)
+to make sure that a known issues umbrella issue hasn't already been created
+for the current release. Then create a regular issue in
 [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/new)
 with a title such as:
 
 ```
-<RELEASE NUMBER> Release Notes: "Known Issues"
-
+v1.XX Release Notes: "Known Issues"
 ```
 
 And a body such as:
 
 ```
-This issue is a bucket placeholder for collaborating on the "Known Issues" additions for the 1.13 Release Notes. If you know of issues or API changes that are going out in 1.13, please comment here so that we can coordinate incorporating information about these changes in the Release Notes.
+This issue is a bucket placeholder for collaborating on the "Known Issues" additions for the v1.XX release notes. If you know of issues or API changes that are going out in v1.XX, please comment here so that we can coordinate incorporating information about these changes in the release notes.
 
-/assign @<RELEASE NOTES TEAM MEMBERS>
+/assign @<Docs team members>
 
 /sig release
-/milestone v<RELEASE NUMBER>
+/milestone v1.XX
 ```
 
-Note: You need to be part of `kubernetes/kubernetes-milestone-maintainers` to
-use the `/milestone` label. If this does not currently apply to you, send a message to the release notes lead or release lead to set the milestone.
+Note: you need to be a member of `kubernetes/kubernetes-milestone-maintainers`
+to use the `/milestone` command. If you are not, ask the Docs Lead or the
+Release Team Lead to set the milestone.

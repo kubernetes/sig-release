@@ -44,7 +44,7 @@ Release Team Updates (<meeting link>)
 -----------------------------------------------------------------------------------
 cc: <@comms team members>
 
-For more information about what I(the comms lead) do on a week-by-week basis, please check: <link to the comms weekly tracking issue>
+For more information about what I (the Comms Lead) do on a week-by-week basis, please check: <link to the comms weekly tracking issue>
 ```
 
 Notes on filling this in:
@@ -52,13 +52,13 @@ Notes on filling this in:
 * **Important Dates for Comms.** Include both the deadlines coming up in the next five days and the ones just met, so the thread doubles as a record of what shipped when. Milestones worth calling out:
   * Feature blog opt-in deadline
   * Release highlights deadline
-  * Mid-cycle blog publication
+  * Deprecations and Removals blog publication
   * Feature blog freeze
   * Feature blog "ready for review" deadline
   * Release announcement ready for review deadline
 
   Cross-check the dates against the [release cycle timeline](https://www.kubernetes.dev/resources/release/) and the [comms milestone activities](/release-team/role-handbooks/communications/README.md#release-milestone-activities).
-* **Number of opt-ins.** Counts come from the comms tracking board. They can move down as well as up, since feature blogs may be pruned after the blog freeze; when that happens, say so inline, for example `Current number of blogs: 30 (Will be pruned)`.
-* **Number of opt-ins grouped by stage.** Add this once blog PRs are open. The stages match the columns on the comms tracking board, so group the board by that column rather than counting the cards by hand, and read the totals straight off the groups.
-* **Release Team Updates.** One entry per Release Team meeting in the coming week, with the APAC and EMEA slots listed separately, since coverage is assigned per slot. Meeting times and links come from the [Kubernetes community calendar](https://www.kubernetes.dev/resources/calendar/), and the people to assign are on the current cycle's [release team roster](https://github.com/kubernetes/sig-release/tree/master/release-team). Use `Async` when no one attends live and `<None Yet>` when the slot still needs an owner, which doubles as a request for volunteers.
+* **Number of opt-ins.** Counts come from the Comms Project Board. They can move down as well as up, since feature blogs may be pruned after the blog freeze; when that happens, say so inline, for example `Current number of blogs: 30 (Will be pruned)`.
+* **Number of opt-ins grouped by stage.** Add this once blog PRs are open. The stages match the columns on the Comms Project Board, so group the board by that column rather than counting the cards by hand, and read the totals straight off the groups.
+* **Release Team Updates.** One entry per Release Team meeting in the coming week, with the APAC and EMEA slots listed separately, since coverage is assigned per slot. Meeting times and links come from the [Kubernetes community calendar](https://www.kubernetes.dev/resources/calendar/), and the people to assign are on the current cycle's [release team roster](/releases). Use `Async` when no one attends live and `<None Yet>` when the slot still needs an owner, which doubles as a request for volunteers.
 * **Tracking issue.** Link the comms weekly tracking issue for the current cycle ([v1.37 example](https://github.com/kubernetes/sig-release/issues/3027)) so readers can follow the week-by-week breakdown.

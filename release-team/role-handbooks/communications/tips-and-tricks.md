@@ -1,64 +1,67 @@
-### Tips and best practices
+# Communications tips and tricks
 
-#### Use the 2 week guideline
+Advice collected by previous Communications Leads and shadows. The process itself is described in the [Communications handbook](README.md).
 
-Try to give 2 weeks notice for all deadlines and requests for reviews. When planning to reach out for blog opt-in or asking for reviews on blog drafts, you should start posting messages or have blog drafts ready for review at least two weeks from the deadline. Especially when asking for blog reviews, as the blog team is understaffed, this will give reviewers enough time to do the review and you enough time to address any feedback. This is best effort guideline, as the schedule does not always allow for this much lead time before a deadline.
+## Use the 2 week guideline
 
-#### Reaching out to KEP owners, blog authors, and reviewers
+Try to give 2 weeks notice for all deadlines and requests for reviews. When planning to reach out for blog opt-in or asking for reviews on blog drafts, you should start posting messages or have blog drafts ready for review at least two weeks from the deadline. Especially when asking for blog reviews, as the blog team is understaffed, this will give reviewers enough time to do the review and you enough time to address any feedback. This is a best effort guideline, as the schedule does not always allow for this much lead time before a deadline.
 
-Post messages to GitHub or in SIG slack channels for the best visibility into ongoing work and to allow other contributors to help. Having messages in the KEPs, blog PRs, or SIG slack channels, can help centralize information about the work being done and any outstanding issues. If you need to escalate an issue to Release Leads or SIG Chairs, having public messages/records of conversations can make it easy to tag who you need to. 
+## Reaching out to KEP owners, blog authors, and reviewers
 
-If you do use direct messages to contact someone during a release, post summaries of the conversation to PRs or SIG slack channels. This way everyone can stay up-to-date on the ongoing work.
+Post messages to GitHub or in SIG Slack channels for the best visibility into ongoing work and to allow other contributors to help. Having messages in the KEPs, blog PRs, or SIG Slack channels can help centralize information about the work being done and any outstanding issues. If you need to escalate an issue to the Release Team Lead or SIG Chairs, having public messages and records of conversations makes it easy to tag who you need to.
 
-#### Deadlines
+If you do use direct messages to contact someone during a release, post summaries of the conversation to PRs or SIG Slack channels. This way everyone can stay up to date on the ongoing work.
 
-As much as possible stick to the comms deadlines set in the release schedule for the mid-cycle blog and main release blog. This will ensure that no release-blocking issues come up and that all blogs go out when they need to.
+## Deadlines
 
-Feature blog deadlines are a little more flexible compared to other release deadlines. Because the feature blogs are published after the release, there is usually more wiggle room on the deadlines. In general, as long as blog authors are responsive and blog content is getting added/reviewed, it's OK to give authors extra time to finish their work. If you need to, you can publish the blog later in the publication schedule to give the author and reviewers more time to complete the blog. If you feel that a blog author is not responsive, progress is not being made, and the deadlines have been stretched too far, escalate to the release or SIG chairs or cancel the blog. A blog can always be written outside of the release cycle.
+As much as possible stick to the comms deadlines set in the release schedule for the Deprecations and Removals blog and the release blog. This will ensure that no release-blocking issues come up and that all blogs go out when they need to.
 
-##### An example process to handle blog opt-in deadlines
+Feature blog deadlines are a little more flexible compared to other release deadlines. Because the feature blogs are published after the release, there is usually more wiggle room on the deadlines. In general, as long as blog authors are responsive and blog content is getting added and reviewed, it's OK to give authors extra time to finish their work. If you need to, you can publish the blog later in the publication schedule to give the author and reviewers more time to complete the blog. If you feel that a blog author is not responsive, progress is not being made, and the deadlines have been stretched too far, escalate to the Release Team Lead or SIG Chairs, or cancel the blog. A blog can always be written outside of the release cycle.
 
-Pushing deadlines is a common practice in the release team, but it's not always clear how to handle it for Comms since we don't have a hard deadline like code/docs freeze. 
-Here's a proposal for a process to handle the push of deadlines for blogs:
+### Handling pushed feature blog deadlines
 
-- Talk with the Release Lead about the new deadline and the reason for the push;
-- Push the new deadline out with a clear message to the author(s) and the SIGs involved;
-- Ask the author(s) to confirm if they are ready for review on the new deadline;
-- Are you ready for review on the new (pushed back) deadline?
-  - If yes, comms decides the feature blog publishing date and follows through to get the SIGs to review and push sig docs to do the same (eventually providing additional review);
-  - If not, the feature blog follows the standard sig docs process, the approvers decide when to publish and the responsibility of reaching out to SIGs for the tech review passes to the author;
+Pushing deadlines is a common practice in the release team, but it's not always clear how to handle it for Comms since we don't have a hard deadline like Code Freeze or Docs Freeze. When a feature blog deadline has to move:
 
-This eases up our work as Comms after the release is complete and helps sig-docs not to have a big urgent backlog of blogs to review.
+1. Talk with the Release Team Lead about the new deadline and the reason for the push.
+2. Announce the new deadline with a clear message to the author(s) and the SIGs involved.
+3. Ask the author(s) to confirm whether they will be ready for review on the new deadline.
+   - If yes, Comms decides the feature blog publishing date and follows through to get the SIGs to review, and asks SIG Docs Blog to do the same (eventually providing additional review).
+   - If not, the feature blog follows the standard SIG Docs Blog process: the approvers decide when to publish and the responsibility of reaching out to SIGs for the tech review passes to the author.
 
-#### Useful queries on the enhancement board
+This eases up our work as Comms after the release is complete and helps SIG Docs Blog not to have a big urgent backlog of blogs to review.
 
-My issues as comms-opt-in-assignee:
-`https://github.com/orgs/kubernetes/projects/195/views/4?filterQuery=comms-opt-in-assignee%3A<username>`
+## Useful views on the Release Tracking Board
 
-All the issues that are tracked for the enhancements freeze:
-`https://github.com/orgs/kubernetes/projects/195/views/4?filterQuery=status%3A%22Tracked+for+enhancements+freeze%22+&sortedBy%5Bdirection%5D=desc&sortedBy%5BcolumnId%5D=Status`
+The Release Tracking Board for the current cycle is linked from `releases/release-1.XX/links.md`. Open its Feature Blog view and use the filter box to build these views; save the ones you use often as personal views:
 
-All issues tracked for enhancement freeze + at risk for code freeze, with a placeholder created:
-`https://github.com/orgs/kubernetes/projects/195/views/4?filterQuery=status%3A%22Tracked+for+enhancements+freeze%22%2C%22At+risk+for+code+freeze%22+blog-status%3A%22Placeholder+created%22&sortedBy%5Bdirection%5D=desc&sortedBy%5BcolumnId%5D=Status&sortedBy%5Bdirection%5D=asc&sortedBy%5BcolumnId%5D=130436282`
+- **My KEPs as comms opt-in assignee:** filter `comms-opt-in-assignee:<your GitHub handle>`.
+- **All KEPs tracked for Enhancements Freeze:** filter `status:"Tracked for enhancements freeze"`, sorted by status.
+- **KEPs tracked for Enhancements Freeze or at risk for Code Freeze that already have a placeholder PR:** filter `status:"Tracked for enhancements freeze","At risk for code freeze" blog-status:"Placeholder created"`.
+- **KEPs tracked for Code Freeze or with an exception that have a placeholder PR linked:** filter `status:"Tracked for code freeze","Exception Required" has:pod-pr`.
 
-All issues tracked for code freeze and exceptions (after code freeze), that have a placeholder created, with a link assigned:
-`https://github.com/orgs/kubernetes/projects/195/views/4?filterQuery=status%3A%22Tracked+for+code+freeze%22%2C%22Exception+Required%22+has%3Apod-pr`
+The exact field and status names live on the board; adjust the filters if the current cycle's board uses different ones.
 
-#### KEP statuses for Comms purposes
+## Blog status values for Comms purposes
 
-These are the possible values of Blog Status in the enhancement board explained:
+The Release Tracking Board records two things per KEP: the outcome of the opt-in outreach, and the stage of the blog once a PR exists. The stage names match the ones reported in the [weekly status update](templates/weekly-status-update.md).
 
-- `Opted-in` - the owner replied to your comment on the issue, expressing their interest in having a blog about their KEP
-- `Opted-out` - the owner replied to your comment on the issue, saying that there won't be a blog - this can be for various reason that we don't ask as we don't necessarily need to know why!
-- `Placeholder created` - the owner created a placeholder PR and linked it in the KEP - in this last case, "Placeholder created" we also fill the field "pod-PR" with the GitHub link. (see picture #2)
-- `Opted out (no answer)` value to track the lack of communication around the blog opt-in. Only after deadline
-- `Cancelled` - when the KEP is cancelled or the author doesn't want to proceed with the blog anymore, it can be used to track blogs that fell off the release cycle too due to deadlines being missed.
-- `Ready for review` - when the content of the blog is ready for review, communicate with SIG-docs-(blog) to get the content review started and with the SIGs involved to get the tech review needed.
-- `Merged` - when the blog is merged and ready to be scheduled.
-- `Scheduled` - when the blog is scheduled for publication on the Kubernetes blog.
-- `Published` - when the blog is published, it can be used to track the status of the blog post-release.
+Opt-in outcome:
 
-#### I was asked to rebase my blogs, help me!
+- `Opted-in`: the owner replied to your comment on the issue, expressing their interest in having a blog about their KEP.
+- `Opted-out`: the owner replied to your comment on the issue, saying that there won't be a blog. This can be for various reasons that we don't ask about, as we don't necessarily need to know why.
+- `Opted-out (no answer)`: tracks the lack of communication around the blog opt-in. Only set after the deadline.
+- `Cancelled`: the KEP is cancelled or the author doesn't want to proceed with the blog anymore. Also used to track blogs that fell off the release cycle due to missed deadlines.
+
+Blog stage:
+
+- `Placeholder created`: the owner created a placeholder PR and linked it in the KEP. Fill the `pod-PR` field with the PR link at the same time. The weekly status update counts these as `Placeholder (WIP/Ready, not asked for review)` or `No Content` depending on whether the PR has content.
+- `Ready for review`: the content of the blog is ready for review. Communicate with SIG Docs Blog to get the content review started and with the SIGs involved to get the tech review needed.
+- `Review in progress`: editorial or tech review has started.
+- `Merged`: the blog is merged (as a draft) and ready to be scheduled.
+- `Scheduled`: the blog is scheduled for publication on the Kubernetes blog.
+- `Published`: the blog is published. Used to track the status of the blog post-release.
+
+## I was asked to rebase my blog, help me!
 
 In case you are asked to rebase (on main) and squash:
 
@@ -85,4 +88,4 @@ git rebase -i upstream/main
 git push -f
 ```
 
-_Yes, you can do everything in a single rebase command, but if you are not used to how git works, doing it in two steps helps avoiding mistakes_
+_Yes, you can do everything in a single rebase command, but if you are not used to how git works, doing it in two steps helps avoid mistakes._

@@ -113,48 +113,23 @@ Thanks!
 
 Important: Make sure either you or the previous Enhancements Lead has completed the [end of release cleanup](#end-of-release-cleanup) steps above, before setting up the new board.
 
-### Option 1: Copying Previous Board (Preferred)
+### Copying the Previous Board
 
-The easiest way to set up the new board is to make a copy of the board from the previous release (which will copy over all the views and columns), and then clean up some of the field values.
+The way to set up the new board is to make a copy of the board from the previous release (which copies all the views, fields and workflows), and then clean up some of the field values.
 
-1. Go to https://github.com/orgs/kubernetes/projects, select the tracking board from last release, and click `Make a copy` (you can leave it private at first)
-2. In the settings for the new project, go through all the fields and clear out the assignees that are no longer relevant (e.g. from `Enhancements Contact`, `Docs Assignee`, `Comms Opt-in Assignee`, `Comms Editor`).
+1. Go to https://github.com/orgs/kubernetes/projects, select the tracking board from the last release, and click `Make a copy` (you can leave it private at first)
+2. Update the `Project name` in the project settings to reflect the current release, e.g. **v1.XX Release Tracking**
+3. In the settings for the new project, go through all the fields and clear out the assignees that are no longer relevant (e.g. from `Enhancements Contact`, `Docs Assignee`, `Comms Opt-in Assignee`, `Comms Editor`).
     - You can leave yourself and other leads for the current release there, but remove the shadows since they will change.
     - Leave the `PRR Assignees` alone, as those are managed by the Production Readiness Review team.
-3. Make the tracking board public
-4. Close the release tracking board for the previous release
-
-### Option 2: Manual Steps (Old)
-
-While it's generally easier / preferable to use [Option 1](#option-1-copying-previous-board-preferred) to create the new board, below are steps to manually create the board, for reference:
-
-- Navigate to https://github.com/orgs/kubernetes/projects/, click the `New Project` button, select the `Table` template (default), and click the `Create` button.
-- Update project settings by clicking `...` -> `Settings` from the project board
-  - Update the `Project name` to reflect the current release, e.g. **v1.29 Release Tracking**
-  - Set the project's `Visibility` to **Public**
-- Update project access by clicking `Manage Access` from the settings page
-  - Set the `Base role` access to **Read**
-  - Add the following GitHub teams with **Admin** access
-    - @release-team-leads
-  - Add the following GitHub teams with  **Write** access
-    - @production-readiness
-    - @release-team-comms
-    - @release-team-docs
-    - @release-team-enhancements
-    - @prod-readiness-reviewers
-  - Add the @k8s-infra-ci-robot account to the board with **Write** access.
-- Create all the Fields (columns) for the board
-  > Note: This is currently a manual process and  <https://github.com/orgs/community/discussions/41133> filed to help automate the process.
-  > Note: Since `v1.30` an exceptions process for the Release Doc team is enforced. The previous PR Ready for Review deadline has been replaced with a Docs Freeze phase. Make sure to add `At Risk for Docs Freeze` and `Tracked for Docs Freeze` to the options in `status` column. Moreover add `docs` to the options in `type` column.
-  - Until this can be automated; manually create fields with the same `Field Name`, `Field type`, and `Option` values from the previous release's project board.
-- Create all the Views for the board
-  > Note: This is also currently a manual process until GitHub GraphQL APIs allow for manipulating Views
-  - Until this can be automated; manually create Views with the same Names and Fields from the previous release's project board.
-    Tip: You can easily view all the Fields present in each view by clicking the `v` next to the View's name a selecting `Configuration` -> `Fields`
-    Note: Remember to **save** each View. If there is a blue bubble next to the Views name there are unsaved changed for that view!
-- Disable all Workflows for the project (these should all be disabled by default, but just double check)
-  - Click `...` -> `Workflows`
-  - For each workflow that is enabled (has a green circle next to it), click the workflow and slide the toggle to 'Off'
+4. Verify the project access (`Manage Access` on the settings page):
+    - `Base role` is **Read**
+    - `@release-team-leads` has **Admin** access
+    - `@production-readiness`, `@prod-readiness-reviewers`, `@release-team-comms`, `@release-team-docs` and `@release-team-enhancements` have **Write** access
+    - The `@k8s-infra-ci-robot` account has **Write** access
+5. Verify that all workflows are disabled (`...` -> `Workflows`; each enabled workflow has a green circle next to it)
+6. Make the tracking board public
+7. Close the release tracking board for the previous release
 
 ## Enabling Tracking Board Automation
 

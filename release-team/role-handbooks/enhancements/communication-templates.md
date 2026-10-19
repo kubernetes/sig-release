@@ -85,7 +85,7 @@ If you still wish to progress this enhancement in {current release}, please file
 /milestone clear
 ```
 
-Then make sure the status of the enhancement is set to `Removed from Milestone`. 
+Then make sure the status of the enhancement is set to `Removed from Milestone`.
 
 ---
 
@@ -146,7 +146,6 @@ Here’s where this enhancement currently stands:
 - [X] KEP readme using the [latest template](https://github.com/kubernetes/enhancements/tree/master/keps/NNNN-kep-template) has been merged into the k/enhancements repo.
 - [X] KEP status is marked as `implementable` for `latest-milestone: { CURRENT_RELEASE }`. KEPs targeting `stable` will need to be marked as `implemented` after code PRs are merged.
 - [X] KEP readme has up-to-date graduation criteria.
-- [X] KEP has [submitted a production readiness review](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval) request for approval and has a reviewer assigned.
 - [X] KEP has a production readiness review that has been completed and merged into k/enhancements. (For more information on the PRR process, check [here](https://github.com/kubernetes/community/blob/master/sig-architecture/production-readiness.md#submitting-a-kep-for-production-readiness-approval)).
 - [X] There are no other outstanding (unmerged) PRs that modify the KEP readme or kep.yaml file.
 
@@ -165,7 +164,7 @@ These templates should be used during the Enhancements Freeze Party for KEPs tha
 
 ❌ If the enhancement **does not** meet the Enhancements Freeze criteria for inclusion in the current release, add an issue comment using this template:
 
-```markdown 
+```markdown
 Hello {enhancement owner} 👋, {current release} Enhancements team here.
 
 Unfortunately, this enhancement did not meet requirements for [enhancements freeze](https://github.com/kubernetes/sig-release/blob/master/releases/release_phases.md#enhancements-freeze).
@@ -260,7 +259,7 @@ These templates should be used during the Code Freeze Party for KEPs that are `A
 
 ❌ If the enhancement **does not** meet the Code Freeze and Test Freeze criteria for inclusion in the current release, add an issue comment using this template:
 
-```markdown 
+```markdown
 Hello {enhancement owner} 👋, {current release} Enhancements team here,
 
 Unfortunately, the implementation (code-related) PRs associated with this enhancement are not in the merge-ready state by code-freeze and hence this enhancement is now removed from the {current release} milestone.

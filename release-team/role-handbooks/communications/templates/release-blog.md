@@ -1,5 +1,5 @@
 # Outline for the Kubernetes Release Blog
-This outline can be used as reference for writing up the release blog. The following sections should give you an idea what can be consider for the blog, but it's not necessary to include every section. Include the ones that make sense for the features/announcements in the release.
+This outline can be used as reference for writing up the release blog. The following sections should give you an idea what can be considered for the blog, but it's not necessary to include every section. Include the ones that make sense for the features/announcements in the release.
 
 * Introduction to release
     * The first paragraph of the release blog announcement introduces the release, its focus, and its importance.
@@ -13,7 +13,7 @@ This outline can be used as reference for writing up the release blog. The follo
 * Changes in Stable, Beta, Alpha
     * One section per phase, one `###` per feature, `####` for sub-features under a grouping heading (for example, DRA or Workload-aware Scheduling).
     * Name grouping headings consistently: `<Family> features graduating to <Phase>` (or `<Family>: Features graduating to <Phase>`) for graduations, and `<Family>: Alpha features to look out for` for Alpha.
-    * When possible, link upstream docs or KEP docs. Use `https://www.kubernetes.dev/resources/keps/XXXX/` for the KEP itself, and deep-link the KEP README on GitHub when citing a specific section (for example, `.../README.md#graduation-criteria`).
+    * When possible, link upstream docs or KEP docs. Use `https://www.kubernetes.dev/resources/keps/<number>/` for the KEP itself, and deep-link the KEP README on GitHub when citing a specific section (for example, `.../README.md#graduation-criteria`).
     * State the feature gate and whether it is on or off by default, for every feature.
 * Other notable changes
     * Changes that matter to users but don't belong to a single graduation, such as a default flipping or a subproject retirement.
@@ -29,10 +29,9 @@ This outline can be used as reference for writing up the release blog. The follo
     * Include tutorials on the current release or how to get started with Kubernetes when relevant.
 * Release team
     * Mention job of release team
-    * Important to highlight company contributions in a way that is respectful to the entire community – including a copy of the release team in relation to the project and their work
+    * Important to highlight company contributions in a way that is respectful to the entire community, including a copy of the release team in relation to the project and their work
     * Mention efforts of community
     * Mention the growth of the community
-    * List of contributors to the spec should go in the 5 Day blog series
 * Project velocity
     * Growth since the last release
     * Number of companies involved in the release
@@ -41,7 +40,7 @@ This outline can be used as reference for writing up the release blog. The follo
     * Relevant KubeCon dates and information
     * Conferences where the release will be discussed
 * Upcoming release webinar
-    * CNCF hosts a release webinar 30 days after the release is available. Webinar is conducted by the release team and discusses the current release. Include information on the webinar in the release announcement blog to encourage attendance.
+    * CNCF hosts a release webinar 3-4 weeks after the release is available. Webinar is conducted by the release team and discusses the current release. Include information on the webinar in the release announcement blog to encourage attendance.
 * Get involved
     * SIGs
     * New Contributor Orientation
@@ -56,8 +55,8 @@ The release announcement is held to the [Kubernetes style guide](https://kuberne
 
 * Sentence case headings, and an explicit `{#anchor}` on every feature heading so release notes and social posts can deep-link it.
 * Start case for graduation phases (Alpha, Beta, Stable, Generally Available); italics and lowercase for a feature or concept on first mention (`_gang scheduling_`).
-* Use U.S. English. 
-* Wrap source lines at around 80 characters, but never break a line inside `[...]` or `(...)` 
+* Use U.S. English.
+* Wrap source lines at around 80 characters, but never break a line inside `[...]` or `(...)`
 * Write as if the release has already happened: pre-release behavior goes in the past tense.
 * Make sure to receive a review from KEP authors and/or owning SIG's leads for new features or behavior in this upcoming cycle.
 
@@ -72,7 +71,9 @@ The release announcement is held to the [Kubernetes style guide](https://kuberne
 
 The template should give you some boilerplate. However, each release has its own story to tell, there will be always something special around and exactly this flavour must be brought and individualized into the release blog. Don't be just a copy cat.
 
-Open the announcement as a draft placeholder PR against `main` in `kubernetes/website`. Keep `draft: true` and set no `date` — a follow-up PR sets the date and drops the draft flag when the release ships.
+Open the announcement as a draft placeholder PR against `main` in `kubernetes/website`. Keep `draft: true` and set no `date`; a follow-up PR sets the date and drops the draft flag when the release ships.
+
+<!-- Links starting with /releases/ or /docs/ below are kubernetes.io site-relative links and are correct inside the blog post. -->
 
 ```md
 ---
@@ -93,9 +94,9 @@ release_announcement:
 
 Similar to previous releases, the release of [Kubernetes v1.XX](/releases/1.XX/) introduces new Stable, Beta, and Alpha features. The consistent delivery of high-quality releases underscores the strength of our development cycle and the vibrant support from our community.
 
-This release consists of X enhancements.
-Of those enhancements, X have graduated to Stable, X have graduated to Beta,
-X are entering Alpha, and X are deprecations or removals.
+This release consists of <N> enhancements.
+Of those enhancements, <N> have graduated to Stable, <N> have graduated to Beta,
+<N> are entering Alpha, and <N> are deprecations or removals.
 
 ## Release theme and logo
 
@@ -105,7 +106,7 @@ X are entering Alpha, and X are deprecations or removals.
 
 {{< figure src="k8s-v1.XX.svg" alt="Kubernetes v1.XX <release theme> logo, <description of what the image shows>" class="release-logo" >}}
 
-<THE STORY BEHIND THE RELEASE NAME AND THE LOGO, AND CREDIT FOR THE LOGO ARTIST. IF YOU NEED A FOOTNOTE, USE INLINE `<sup>1</sup>` IN THE BODY AND `<sub>1. ...</sub>` AT THE END OF THE SECTION — MARKDOWN FOOTNOTES ARE NOT ENABLED FOR BLOG POSTS.>
+<THE STORY BEHIND THE RELEASE NAME AND THE LOGO, AND CREDIT FOR THE LOGO ARTIST. IF YOU NEED A FOOTNOTE, USE INLINE `<sup>1</sup>` IN THE BODY AND `<sub>1. ...</sub>` AT THE END OF THE SECTION; MARKDOWN FOOTNOTES ARE NOT ENABLED FOR BLOG POSTS.>
 
 ## Spotlight on key updates
 
@@ -115,7 +116,7 @@ Kubernetes v1.XX is packed with new features and improvements. Here are a few se
 
 <1-2 PARAGRAPH DESCRIPTION OF THE CHANGE, WRITTEN FOR USERS WHO HAVE NOT READ THE KEP>
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ### Beta: <feature name> {#spotlight-beta-feature}
 
@@ -123,7 +124,7 @@ This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/k
 
 This feature is on by default; you can disable it with the `SomeFeatureGate` feature gate.
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ### Alpha: <feature name> {#spotlight-alpha-feature}
 
@@ -131,12 +132,12 @@ This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/k
 
 This is an opt-in, off-by-default Alpha feature. To try it out, enable the `SomeFeatureGate` feature gate.
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ## Features graduating to Stable
 
 <!-- This section is a prose selection of highlights. The full enumerated list of promotions belongs
-     only under "Graduations to Stable" further down — do not paste that list's intro here. -->
+     only under "Graduations to Stable" further down; do not paste that list's intro here. -->
 
 _This is a selection of some of the improvements that are now Generally Available following the v1.XX release._
 
@@ -144,7 +145,7 @@ _This is a selection of some of the improvements that are now Generally Availabl
 
 <1-2 PARAGRAPH DESCRIPTION OF CHANGE>
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ### <grouping title, for a family of related features> {#grouping-title}
 
@@ -154,7 +155,7 @@ This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/k
 
 <1-2 PARAGRAPH DESCRIPTION OF CHANGE>
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ## Features graduating to Beta
 
@@ -166,7 +167,7 @@ _This is a selection of some of the improvements that are now Beta following the
 
 This feature is behind the `SomeFeatureGate` feature gate (**on** by default).
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ### <family>: Features graduating to Beta {#family-beta}
 
@@ -176,7 +177,7 @@ This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/k
 
 <1-2 PARAGRAPH DESCRIPTION OF CHANGE>
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ## New features in Alpha
 
@@ -188,7 +189,7 @@ _This is a selection of some of the improvements that are now Alpha following th
 
 This is an opt-in, off-by-default Alpha feature. To try it out, enable the `SomeFeatureGate` feature gate.
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ### <family>: Alpha features to look out for {#family-alpha}
 
@@ -198,7 +199,7 @@ This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/k
 
 <1-2 PARAGRAPH DESCRIPTION OF CHANGE>
 
-This work was done as part of [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/) led by [SIG XXXX](https://www.kubernetes.dev/community/community-groups/sigs/xxxx/).
+This work was done as part of [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/) led by [SIG <name>](https://www.kubernetes.dev/community/community-groups/sigs/<name>/).
 
 ## Other notable changes
 
@@ -214,29 +215,33 @@ _Changes that matter to users but are not a graduation: a default flipping, a su
 
 This lists all the features that graduated to Stable (also known as general availability). For a full list of updates including new features and graduations from Alpha to Beta, see the release notes.
 
-This release includes a total of X enhancements promoted to Stable:
+This release includes a total of <N> enhancements promoted to Stable:
 
-* [KEP TITLE](https://www.kubernetes.dev/resources/keps/XXXX/)
+* [<KEP title>](https://www.kubernetes.dev/resources/keps/<number>/)
 
 ## Deprecations, removals, and community updates
 
 As Kubernetes develops and matures, features may be deprecated, removed, or replaced with better ones for the project's overall health.
 See the Kubernetes [deprecation and removal policy](/docs/reference/using-api/deprecation-policy/) for more details on this process.
-Many of these deprecations and removals were announced in the [Deprecations and Removals blog](LINK TO THE MID-CYCLE SNEAK PEEK / DEPRECATIONS AND REMOVALS BLOG).
+Many of these deprecations and removals were announced in the [Deprecations and Removals blog](<link to the Deprecations and Removals blog, if one was published>).
 
 ### <deprecation title> {#deprecation-title}
 
 <1-2 PARAGRAPH DESCRIPTION, INCLUDING WHAT USERS SHOULD MIGRATE TO AND BY WHEN>
 
-To learn more about this deprecation, refer to [KEP #XXXX](https://www.kubernetes.dev/resources/keps/XXXX/).
+To learn more about this deprecation, refer to [KEP #<number>](https://www.kubernetes.dev/resources/keps/<number>/).
 
 <IF THE DEPRECATION HAS NO KEP, CITE THE ORIGINAL ISSUE INSTEAD:>
 
-See [kubernetes/kubernetes#XXXXXX](https://github.com/kubernetes/kubernetes/issues/XXXXXX) for the original issue and discussion.
+See [kubernetes/kubernetes#<number>](https://github.com/kubernetes/kubernetes/issues/<number>) for the original issue and discussion.
 
 ### Ongoing major change: <change planned for a future release> {#future-change}
 
 <ANYTHING THAT LANDS IN A LATER RELEASE GETS ITS OWN HEADING WITH "FUTURE" OR "ONGOING" IN IT, SO READERS DON'T ASSUME IT APPLIES TO v1.XX>
+
+## Known issues
+
+<OPTIONAL. CALL OUT SPECIFIC KNOWN ISSUES AND WORKAROUNDS, AGREED WITH THE DOCS LEAD; DROP THE SECTION IF THERE ARE NONE.>
 
 ## Release notes
 
@@ -260,7 +265,7 @@ This requires the specialized skills of people from all corners of our community
 
 We would like to thank the entire [release team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/release-team.md) for the hours spent hard at work to deliver the Kubernetes v1.XX release to our community.
 The Release Team's membership ranges from first-time shadows to returning team leads with experience forged over several release cycles.
-A very special thanks goes out to our release lead, RELEASE LEAD, for supporting us through a successful release cycle, advocating for us, making sure that we could all contribute in the best way possible, and challenging us to improve the release process.
+A very special thanks goes out to our release lead, <Release Team Lead name>, for supporting us through a successful release cycle, advocating for us, making sure that we could all contribute in the best way possible, and challenging us to improve the release process.
 
 ## Project velocity
 
@@ -269,15 +274,15 @@ A very special thanks goes out to our release lead, RELEASE LEAD, for supporting
 The CNCF K8s [DevStats](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&var-period=m&var-repogroup_name=All) project aggregates a number of interesting data points related to the velocity of Kubernetes and various sub-projects.
 This includes everything from individual contributions to the number of companies that are contributing and is an illustration of the depth and breadth of effort that goes into evolving this ecosystem.
 
-During the v1.XX release cycle, which spanned X weeks from START DATE to RELEASE DATE, Kubernetes received contributions from as many as X different companies and X,XXX individuals.
+During the v1.XX release cycle, which spanned <N> weeks from <start date> to <release date>, Kubernetes received contributions from as many as <N> different companies and <N> individuals.
 
-<PIN BOTH SOURCE LINKS TO THE CYCLE'S START AND END TIMESTAMPS. `from` AND `to` ARE UNIX EPOCH TIME IN MILLISECONDS — NOT SECONDS (for example, `1779058800000`). NEVER LEAVE `to=now`, OR THE DASHBOARD WILL STOP MATCHING THE NUMBERS IN THIS PARAGRAPH. REFRESH THE NUMBERS RIGHT BEFORE MERGE — THEY MOVE DURING REVIEW.>
+<PIN BOTH SOURCE LINKS TO THE CYCLE'S START AND END TIMESTAMPS. `from` AND `to` ARE UNIX EPOCH TIME IN MILLISECONDS, NOT SECONDS (for example, `1779058800000`). NEVER LEAVE `to=now`, OR THE DASHBOARD WILL STOP MATCHING THE NUMBERS IN THIS PARAGRAPH. REFRESH THE NUMBERS RIGHT BEFORE MERGE; THEY MOVE DURING REVIEW.>
 
 <CHECK THE TWO SOURCE LINKS ACTUALLY DIFFER: THE FIRST USES `var-repogroup_name=Kubernetes`, THE SECOND USES `var-repogroup_name=All`. MAKE SURE NEITHER URL PICKED UP STRAY WHITESPACE (`%20`) WHEN COPIED OUT OF THE DASHBOARD.>
 
 Source for this data:
-- [Companies contributing to Kubernetes](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&from=START_MS&to=END_MS&var-period=d28&var-repogroup_name=Kubernetes&var-repo_name=kubernetes%2Fkubernetes)
-- [Overall ecosystem contributions](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&from=START_MS&to=END_MS&var-period=d28&var-repogroup_name=All&var-repo_name=kubernetes%2Fkubernetes)
+- [Companies contributing to Kubernetes](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&from=<start ms>&to=<end ms>&var-period=d28&var-repogroup_name=Kubernetes&var-repo_name=kubernetes%2Fkubernetes)
+- [Overall ecosystem contributions](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&from=<start ms>&to=<end ms>&var-period=d28&var-repogroup_name=All&var-repo_name=kubernetes%2Fkubernetes)
 
 By contribution we mean when someone makes a commit, code review, comment, creates an issue or PR, reviews a PR (including blogs and documentation) or comments on issues and PRs.
 
@@ -289,23 +294,23 @@ If you are interested in contributing, see our [getting started](https://www.kub
 
 Explore the upcoming KubeCons worldwide:
 
-- [KubeCon + CloudNativeCon <REGION>](LINK):
-  Month D–D, YYYY, in City, Country
+- [KubeCon + CloudNativeCon <region>](<link>):
+  <Month D-D, YYYY, in City, Country>
 
-Explore the upcoming Kubernetes Community Days (KCDs) taking place for the rest of YYYY:
+Explore the upcoming Kubernetes Community Days (KCDs) taking place for the rest of <YYYY>:
 
-### Month YYYY
+### <Month YYYY>
 
-- [KCD <CITY>](LINK):
-  Month D, YYYY, in City, Country
+- [KCD <city>](<link>):
+  <Month D, YYYY, in City, Country>
 
 You can find the latest event details at the [CNCF Events Page](https://community2.cncf.io/events/#/list).
 
 ## Upcoming release webinar
 
-Join members of the Kubernetes v1.XX Release Team on **DAY, DATE at TIME (UTC)** to learn about the release highlights of this release. For more information and registration, visit the [event page on the CNCF Online Programs site](LINK).
+Join members of the Kubernetes v1.XX Release Team on **<weekday, date at time UTC>** to learn about the release highlights of this release. For more information and registration, visit the [event page on the CNCF Online Programs site](<link>).
 
-<RELEASE WEBINAR NORMALLY TAKES PLACE 30 DAYS AFTER THE RELEASE; ALIGN WITH CNCF TO HIGHLIGHT IT>
+<THE RELEASE WEBINAR NORMALLY TAKES PLACE 3-4 WEEKS AFTER THE RELEASE; ALIGN WITH THE CNCF TO HIGHLIGHT IT>
 
 ## Get involved
 

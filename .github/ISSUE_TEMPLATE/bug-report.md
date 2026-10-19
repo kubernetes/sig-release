@@ -17,10 +17,3 @@ If the matter is security related, please disclose it privately via https://kube
 #### How to reproduce it (as minimally and precisely as possible):
 
 #### Anything else we need to know?:
-
-#### Environment:
-
-- Cloud provider or hardware configuration:
-- OS (e.g: `cat /etc/os-release`):
-- Kernel (e.g. `uname -a`):
-- Others:

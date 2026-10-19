@@ -2,10 +2,12 @@
 
 Useful links:
 - Calendar: https://rel.k8s.io/release-team-cal
-- Agenda: { MEETING_AGENDA_LINK } (e.g. https://rel.k8s.io/v136/releasemtg)
-- Release timeline: { RELEASE_TIMELINE_LINK} (e.g. https://github.com/kubernetes/sig-release/tree/master/releases/release-1.36)
+- Agenda: { MEETING_AGENDA_LINK } (e.g. https://rel.k8s.io/v138/releasemtg)
+- Release timeline: { RELEASE_TIMELINE_LINK} (e.g. https://github.com/kubernetes/sig-release/tree/master/releases/release-1.38)
 
 We will rotate the person giving updates at each Release Team meeting. Please sign up for 3-5 slots in the timezone that works for you!
+
+The rows below follow the v1.38 schedule (KEP Readiness Deadline in week 4, Enhancements Freeze in week 5, Code Freeze in week 12, burndown meetings from week 13, release in week 16). Adjust the rows and milestone banners to the schedule of the current release before sharing the sheet.
 
 <table style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -84,10 +86,16 @@ We will rotate the person giving updates at each Release Team meeting. Please si
       <td style="border: 1px solid black;"></td>
     </tr>
     <tr>
+      <td style="border: 1px solid black;">11</td>
+      <td style="border: 1px solid black;">Wed yyyy-mm-dd</td>
+      <td style="border: 1px solid black;"></td>
+      <td style="border: 1px solid black;"></td>
+    </tr>
+    <tr>
       <td colspan="4" style="text-align: center; border: 1px solid black; background-color: lightgreen;"><strong>Code Freeze and Test Freeze: yyyy-mm-dd</strong></td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;">11</td>
+      <td style="border: 1px solid black;">12</td>
       <td style="border: 1px solid black;">Wed yyyy-mm-dd</td>
       <td style="border: 1px solid black;"></td>
       <td style="border: 1px solid black;"></td>
@@ -96,24 +104,6 @@ We will rotate the person giving updates at each Release Team meeting. Please si
       <td colspan="4" style="text-align: center; border: 1px solid black; background-color: lightgreen;"><strong>Begin burndown meetings (Mon/Wed/Fri)</strong></td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;">12</td>
-      <td style="border: 1px solid black;">Mon yyyy-mm-dd</td>
-      <td style="border: 1px solid black;"></td>
-      <td style="border: 1px solid black;"></td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;">12</td>
-      <td style="border: 1px solid black;">Wed yyyy-mm-dd</td>
-      <td style="border: 1px solid black;"></td>
-      <td style="border: 1px solid black;"></td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;">12</td>
-      <td style="border: 1px solid black;">Fri yyyy-mm-dd</td>
-      <td style="border: 1px solid black;"></td>
-      <td style="border: 1px solid black;"></td>
-    </tr>
-    <tr>
       <td style="border: 1px solid black;">13</td>
       <td style="border: 1px solid black;">Mon yyyy-mm-dd</td>
       <td style="border: 1px solid black;"></td>
@@ -158,6 +148,18 @@ We will rotate the person giving updates at each Release Team meeting. Please si
     <tr>
       <td style="border: 1px solid black;">15</td>
       <td style="border: 1px solid black;">Wed yyyy-mm-dd</td>
+      <td style="border: 1px solid black;"></td>
+      <td style="border: 1px solid black;"></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;">15</td>
+      <td style="border: 1px solid black;">Fri yyyy-mm-dd</td>
+      <td style="border: 1px solid black;"></td>
+      <td style="border: 1px solid black;"></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;">16</td>
+      <td style="border: 1px solid black;">Mon yyyy-mm-dd</td>
       <td style="border: 1px solid black;"></td>
       <td style="border: 1px solid black;"></td>
     </tr>

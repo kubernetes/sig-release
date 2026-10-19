@@ -17,6 +17,9 @@ lead and are maintained by the entire release signal team. The [CI Signal Projec
 the failures and flakes on the testgrid dashboards. In contrast, the [Bug Triage Board](#bug-triage-project-board) tracks the
 current status of all issues and PRs targeting the release, their priorities, and to distribute the work amongst the team.
 
+Both boards are reused across release cycles and are not recreated for each release. The setup steps below only adjust
+names, fields and filters for the new cycle.
+
 ## Project Board Overview
 
 ### CI Signal Project Board
@@ -29,8 +32,9 @@ board. You may create issues from the board or add them later. This board acts a
 state of the CI and is referred to by both the general public and the release management team. Issues directly created in the
 kubernetes/kubernetes repository are not directly added to the board; they need to be manually added.
 
-The CI component of the release signal team only looks at the dashboard mentioned in this document, failures on other boards, if
-important and not mentioned may go unnoticed by the team.
+The CI component of the release signal team only looks at the dashboards listed in the
+[Release Signal handbook](README.md#overview) (master-blocking, master-informing, release-x.y-blocking and
+release-x.y-informing). Failures on other boards may go unnoticed by the team.
 
 #### Information on the CI Signal Board
 
@@ -82,8 +86,8 @@ time availability throughout the cycle. The release signal team should keep an e
 they are tracked.
 
 The project board is public so that both the release team and anyone interested from the community can stay updated about the
-current status of issues and PRs that are targetting the release. Write access to the board is limited to members
-of [@kubernetes/release-team-bug-triage](https://github.com/orgs/kubernetes/teams/release-team-bug-triage).
+current status of issues and PRs that are targeting the release. Write access to the board is limited to members
+of [@kubernetes/release-team-release-signal](https://github.com/orgs/kubernetes/teams/release-team-release-signal).
 
 New issues and PRs that target the current release milestone are automatically added to the board with
 a [a prow job](https://prow.k8s.io/?job=periodic-sync-bug-triage-github-project-*). The prow job is defined
@@ -135,11 +139,11 @@ The bug triage board has a number of views to simplify issue management.
 At the beginning of the cycle, the Release Signal Lead should prepare the bug triage board for the ongoing release cycle. The
 following steps should be taken:
 
-1. Edit bug triage board name for current cycle, e.g. `[sig-release] 1.xx bug-triage`
-2. Update the milestone for the periodic prow job. [Example PR from 1.28](https://github.com/kubernetes/test-infra/pull/29527)
+1. Edit bug triage board name for current cycle, e.g. `[sig-release] v1.XX bug-triage`
+2. Update the milestone for the periodic prow job. [Example PR](https://github.com/kubernetes/test-infra/pull/29527)
 3. Edit the [Responsible](https://github.com/orgs/kubernetes/projects/80/settings/fields/2845019) field and add the new Release Signal
    team members
-4. Update the milestone filter to `milestone:v1.xx` in all relevant views. You can do this by editing the filter and then
+4. Update the milestone filter to `milestone:v1.XX` in all relevant views. You can do this by editing the filter and then
    clicking `Save`
 5. Set the `Status` field to `Pending inclusion` value for all open issues and PRs targeting the current milestone to indicate
    that no one is responsible yet at the beginning of the cycle. Later, any Release Signal member picking up the issue/PR should set

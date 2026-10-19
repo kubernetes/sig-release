@@ -2,10 +2,10 @@
 
 <h3>Minimum text, maximum learning.</h3>
 
-Detailed version of this is the [Release Signal Handbook](/release-team/role-handbooks/release-signal/README.md). This is meant to be a quick
+Detailed version of this is the [Release Signal Handbook](README.md). This is meant to be a quick
 reference rather than a comprehensive guide.
 
-Also refer to [tips and tricks of the game](/release-team/role-handbooks/release-signal/README.md#tips-and-tricks-of-the-game).
+Also refer to [tips and tricks of the game](README.md#tips-and-tricks-of-the-game).
 
 ## Release Signal - Testgrid Observation Loop
 
@@ -16,7 +16,7 @@ flowchart TD
     C -- Is a flake --> B
     C -- Not a flake --> A
     B --> D["Add relevant details"]
-    D --> A1["Add labels: </br> #8226; Priority </br> #8226; Milestone </br> #8226; SIG Label"]
+    D --> A1["Add labels:<br/>- Priority<br/>- Milestone<br/>- SIG label"]
     A1 --> E["Tag @kubernetes/release-team-release-signal"]
     E --> F["Message #release-ci-signal Slack channel"]
     F --> G["Reach out to SIG on Slack"]
@@ -26,7 +26,7 @@ flowchart TD
     I -- Not a blocker --> K["Mark as non-blocker"]
     J & K --> L["Add issue with Metadata (e.g. Links, Notes, etc.) to CI Signal Board"]
     L --> A
-    
+
     style H fill:#FFD700,color:#000000
     style I fill:#90EE90,color:#000000
     style J fill:#FF6347,color:#FFFFFF
@@ -34,14 +34,11 @@ flowchart TD
 
     linkStyle 0 stroke:red,stroke-width:2px;
     linkStyle 1,2 stroke:purple,stroke-width:2px;
-
-    classDef important fill:#FF9999,stroke:#333,stroke-width:2px,color:#000000;
-    class N important
 ```
 
 ## Release Signal - Go or No-Go
 
-Go or No-Go signal with diagrams and steps can be found [here](/release-team/role-handbooks/release-signal/README.md#release-cutting---go-or-no-go). 
+Go or No-Go signal with diagrams and steps can be found [here](README.md#release-cutting---go-or-no-go).
 
 ## Release Signal - Following up on issues/PRs in milestone
 

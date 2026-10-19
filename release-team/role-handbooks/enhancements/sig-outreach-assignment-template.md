@@ -1,7 +1,7 @@
 # SIG Outreach
 
 We need to reach out to each SIG via Slack reminding them to submit enhancements.
-See full list of SIGs here: https://github.com/kubernetes/community/blob/master/sig-list.md 
+See full list of SIGs here: https://github.com/kubernetes/community/blob/master/sig-list.md
 - `sig-k8s-infra` can be skipped, as they have previously requested to be excluded from outreach.
 
 For each of your assigned SIGs:

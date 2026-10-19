@@ -26,8 +26,8 @@
   - [Escalation / Handling Unresponsive Enhancement Owners](#escalation--handling-unresponsive-enhancement-owners)
   - [Limitations](#limitations)
 - [Milestone Activities + Timing](#milestone-activities--timing)
-  - [Week 0-1](#week-0-1)
-  - [Week 1-2](#week-1-2)
+  - [Before the cycle starts](#before-the-cycle-starts)
+  - [First two weeks of the cycle](#first-two-weeks-of-the-cycle)
   - [KEP Readiness Deadline Tasks](#kep-readiness-deadline-tasks)
   - [Enhancements Freeze Tasks](#enhancements-freeze-tasks)
   - [Code Freeze Tasks](#code-freeze-tasks)
@@ -44,7 +44,6 @@ An Enhancements Lead holds the following responsibilities:
 
 - Maintain the active status of Enhancements within [kubernetes/enhancements][k/enhancements]
 - Facilitate communication between Enhancement Owners, and SIG leadership, as necessary
-
 - Assist in Communications activities (in conjunction with the Communications Lead & the CNCF Communications team):
   - Help collate the Release Highlights of the release, including but not limited to:
     - new enhancements
@@ -59,7 +58,7 @@ An Enhancements Lead holds the following responsibilities:
   - CNCF Kubernetes Release webinar (with the Release Lead and Communications Lead)
   - Identify potential contributors for the “5 Days of Kubernetes” blog series
 - Identify candidates to assume the Enhancements Lead role (according to the [Release Team selection process](/release-team/release-team-selection.md)) in the following release cycle
-  - Chose Enhancement shadows whom you believe would be a good fit for succession and help mentor them throughout the release cycle
+  - Choose Enhancement shadows whom you believe would be a good fit for succession and help mentor them throughout the release cycle
 
 ## Prerequisites
 
@@ -83,14 +82,14 @@ Helpful characteristics of an Enhancements Lead include:
 
 Enhancements is one of the most time-intensive areas of the release team, and especially so during the early parts of the release. An Enhancements Lead can expect to spend:
 
-- Beginning of the cycle through enhancement freeze: ~8–15 hours a week
+- Beginning of the cycle through enhancement freeze: ~8-15 hours a week
 - Week of enhancements freeze: 20+ hours
-- Enhancement Freeze through Code Freeze: ~4–7 hours a week
-- Code Freeze through Release Day: ~1–4 hours a week
+- Enhancement Freeze through Code Freeze: ~4-7 hours a week
+- Code Freeze through Release Day: ~1-4 hours a week
 
 Note that Enhancements Lead in particular will need to do work **during the week** during the early release, and will need to be available at least daily.
 
-Enhancements shadows can expect to spend ~10–15 hours a week during the early release until enhancements freeze, and ~1–5 hours a week after enhancements freeze. Unlike Enhancements Lead, shadows can expect to do their work largely on weekends if they desire.
+Enhancements shadows can expect to spend ~10-15 hours a week during the early release until enhancements freeze, and ~1-5 hours a week after enhancements freeze. Unlike Enhancements Lead, shadows can expect to do their work largely on weekends if they desire.
 
 ### Mentoring Shadows
 
@@ -153,7 +152,7 @@ the authors request a PRR approval. See [submitting a KEP for production readine
 
 When should a KEP owner request for a new PRR?
 1. When the KEP is ready to move to `implementable` state from `provisional`.
-2. Everytime the KEP graduates to a new stage (`alpha`/`beta`/`stable`) the KEP needs a new PRR approval. If the KEP is graduating and is missing a section in the README that was not required for earlier stages (e.g. the scalability section is only required for `beta` or `stable`) it will need a new PRR review.
+2. Every time the KEP graduates to a new stage (`alpha`/`beta`/`stable`) the KEP needs a new PRR approval. If the KEP is graduating and is missing a section in the README that was not required for earlier stages (e.g. the scalability section is only required for `beta` or `stable`) it will need a new PRR review.
 3. When there are major changes introduced in the responses of the PRR questionnaire in the KEP README.md file (this requires a new PRR review even if the KEP is staying in the same stage).
 
 For example, the Enhancements team needs to check the KEP has PRR approval when:
@@ -204,7 +203,7 @@ The `status` must follow the criteria:
 |--------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   provisional | The KEP has been proposed and is actively being defined. This is the starting state while the KEP is being fleshed out and actively defined and discussed. The owning SIG has accepted that this work must be done. |
 | implementable | Enhancement KEP should no longer have major changes and must be approved by each of the KEP approvers to enter `implementable`.                                                                                     |
-|   implemented | Enhancement is graduating to`Stable`, code PRs are merged and feature flags have been removed. Once a feature has become `implemented`, major changes should get new KEPs.                                          |
+|   implemented | Enhancement is graduating to `Stable`, code PRs are merged and feature flags have been removed. Once a feature has become `implemented`, major changes should get new KEPs.                                          |
 |      deferred | Enhancement is proposed but not actively being worked on or the Enhancement has been bumped to a future release by owning SIG.                                                                                      |
 |      rejected | The approvers and authors have decided that this KEP is not moving forward. The KEP is kept around as a historical document.                                                                                        |
 |     withdrawn | Enhancement KEP authors have withdrawn the KEP and Enhancement will be removed from the code.                                                                                                                       |
@@ -236,7 +235,7 @@ Information in this document will be focused on how the Enhancements team should
 #### Enhancements View
 
 The `Enhancements` view is the primary view for the project board and is owned by the Enhancements subteam.
-This view is used source of truth for tracking the status of enhancements included in a given release.
+This view is used as the source of truth for tracking the status of enhancements included in a given release.
 
 > - **Do not** archive items from the board! Enhancements that are no longer being tracked for the current release are filtered out of the default View but should remain in the board for tracking purposes.
 
@@ -263,7 +262,8 @@ This view is used source of truth for tracking the status of enhancements includ
 |   Graduating | Enhancement is graduating to `Beta` or `Stable`.                                                              |
 |  Deprecation | Enhancement is tracking a deprecations or removals.                                                           |
 |         Docs | This is a PR for Docs that is being tracked by Docs team.                                                     |
-Notes :
+
+Notes:
 
 - If the feature is graduating to `Alpha`, the type can either be Net New/Major Change. But usually when features are introduced to Kubernetes, they are not Major Changes.
 - If the feature is graduating to `Beta/Stable`, almost always the type is Graduating/Major Change. One exception to that is some features directly jump the hoop to Beta, in that case, the type can be Net New for even a `Beta` feature.
@@ -276,18 +276,18 @@ Refer to [Release Phases](/releases/release_phases.md) for detailed requirements
 
 |                 Status | Description                                                                                                                                 |
 |-----------------------:|---------------------------------------------------------------------------------------------------------------------------------------------|
-|                Tracked For KEP Readiness | Enhancement has met all KEP Readiness Deadline requirements for inclusion into current release.                                                                    |
-|                At Risk For KEP Readiness | Enhancement does not currently meet KEP Readiness Deadline requirements for inclusion into current release.
-|                Tracked For Enhancement Freeze | Enhancement has met all Enhancements Freeze requirements for inclusion into current release.                                                                    |
-|                At Risk For Enhancement Freeze | Enhancement does not currently meet Enhancements Freeze requirements for inclusion into current release.                                                        |
-|                Tracked For Code Freeze | Enhancement has met all Code Freeze and Test Freeze requirements for inclusion into current release.                                                                    |
-|                At Risk For Code Freeze | Enhancement does not currently meet Code Freeze and Test Freeze requirements for inclusion into current release. |
-|                Tracked For Docs Freeze | Enhancement has met all Docs Freeze requirements for inclusion into current release.                                                                    |
-|                At Risk For Docs Freeze | Enhancement does not currently meet Docs Freeze requirements for inclusion into current release. |
+|                Tracked for KEP readiness | Enhancement has met all KEP Readiness Deadline requirements for inclusion into current release.                                                                    |
+|                At risk for KEP readiness | Enhancement does not currently meet KEP Readiness Deadline requirements for inclusion into current release.
+|                Tracked for enhancements freeze | Enhancement has met all Enhancements Freeze requirements for inclusion into current release.                                                                    |
+|                At risk for enhancements freeze | Enhancement does not currently meet Enhancements Freeze requirements for inclusion into current release.                                                        |
+|                Tracked for code freeze | Enhancement has met all Code Freeze and Test Freeze requirements for inclusion into current release.                                                                    |
+|                At risk for code freeze | Enhancement does not currently meet Code Freeze and Test Freeze requirements for inclusion into current release. |
+|                Tracked for docs freeze | Enhancement has met all Docs Freeze requirements for inclusion into current release.                                                                    |
+|                At risk for docs freeze | Enhancement does not currently meet Docs Freeze requirements for inclusion into current release. |
 |     Exception Pending | Enhancement did not meet requirements for the current release phase, and an [exception](#exceptions) has been requested but not yet approved by the Release Team. |
 |     Exception Approved | Enhancement did not meet requirements for the current release phase, and an [exception](#exceptions) has been requested and approved by the Release Team. |
 |               Deferred | Enhancement has been bumped to a future release by owning SIG.                                                                              |
-| Removed From Milestone | Enhancement did not meet requirements for one of the release phases and was removed from the milestone by the Release Team.  |
+| Removed from Milestone | Enhancement did not meet requirements for one of the release phases and was removed from the milestone by the Release Team.  |
 
 Notes:
 
@@ -476,20 +476,18 @@ If there is continued unresponsiveness on issues, remove them from the milestone
 ### Limitations
 
 - Enhancements issues that are not submitted to [k/enhancements][k/enhancements] are not actively tracked in the context of the Release Team and Release cycle e.g.,
-  - `kubeadm` (https://github.com/kubernetes/kubeadm/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Akind%2Ffeature+milestone%3Av1.12+)
+  - `kubeadm` (https://github.com/kubernetes/kubeadm/issues?q=is%3Aissue+label%3Akind%2Ffeature+milestone%3Av1.XX)
   - out-of-tree Cloud Provider code that may live in `kubernetes-sigs/*`
   - additional out-of-tree code that may live in the following organizations:
     - `kubernetes`
     - `kubernetes-client`
     - `kubernetes-csi`
-    - `kubernetes-incubator`
-    - `kubernetes-sig-testing`
-  - `kubernetes-sigs`
+    - `kubernetes-sigs`
 - Finding consensus on how frequently to triage enhancements
 
 ## Milestone Activities + Timing
 
-### Week 0-1
+### Before the cycle starts
 
 #### Select enhancements shadows
 
@@ -517,7 +515,7 @@ If there is continued unresponsiveness on issues, remove them from the milestone
 - Make a pull request to [k/enhancements] to add the tracking board shortlink to the [README](https://github.com/kubernetes/enhancements#enhancements-tracking-board) and also update the [current release cycle](https://github.com/kubernetes/enhancements#current-release-cycle).
   - Example PR: https://github.com/kubernetes/enhancements/pull/5348
 
-### Week 1-2
+### First two weeks of the cycle
 
 #### Shadow onboarding
 
@@ -544,7 +542,7 @@ The Enhancements Lead and Shadows take turns giving updates at each Release Team
 
 - Create a Google Doc (private to the Enhancements Lead and Shadows) where the shadows can sign up for the meeting rotation.
   - Make sure to include both APAC and EMEA meetings.
-  - Make sure to also include the Monday/Friday burndown meetings which begin after Code Freeze.
+  - Make sure to also include the Monday/Wednesday/Friday burndown meetings which begin the week after Code Freeze.
   - Here is an example [meeting update rotation template](./meeting-rotation-template.md) that can be used.
     - Open the template, select all text, and copy
     - Open the Google Doc and select Edit -> Paste from Markdown
@@ -597,7 +595,7 @@ The [KEP Readiness Deadline](/releases/release_phases.md#kep-readiness-deadline)
 > - The `kep.yaml` should have `status` set to `withdrawn`, and the `latest-milestone` updated to the current release.
 > - The `README.md` should be updated to indicate that the KEP is deprecated or withdrawn.
 > - No changes are needed to the PRR.
-> - Verify that the KEP author has followed the [Kubernetes Deprecation Policy](https://kubernetes.io/docs/reference/using-api/deprecation-policy/). If there is any uncertaintly, it may be helpful to start a thread in the #enhancements channel in Slack.
+> - Verify that the KEP author has followed the [Kubernetes Deprecation Policy](https://kubernetes.io/docs/reference/using-api/deprecation-policy/). If there is any uncertainty, it may be helpful to start a thread in the #enhancements channel in Slack.
 
 #### Week of KEP Readiness Deadline
 
@@ -650,7 +648,7 @@ During the meeting:
 - Send an email to the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) mailing list and a message to the `#sig-release` and `#release-enhancements` Slack channels that Enhancements freeze is in effect.
   - Example v1.36 [Enhancements Freeze announcement](https://groups.google.com/a/kubernetes.io/g/dev/c/1-2jX0mJwAQ) and [Slack message](https://kubernetes.slack.com/archives/C2C40FMNF/p1770901172439199)
 - Work with the Release Lead team to track any Enhancements Freeze [exceptions](#exceptions) that come in.
-- Assist the Communications Lead with selecting enhancements to highlight for the mid-cycle blog.
+- Assist the Communications Lead with selecting enhancements to highlight for the Deprecations and Removals blog.
 - After a week or two (to allow time for Release Docs to perform their reach-outs for docs deadlines), the team should get started on [Code Freeze Tasks](#code-freeze-tasks).
 
 ### Code Freeze Tasks
@@ -669,7 +667,7 @@ During the meeting:
   - Comment on the issue using one of the [Code Freeze communication templates](./communication-templates.md#code-freeze-templates)
   - Update the issue `Status` to either `Tracked for code freeze` or `At risk for code freeze` on the tracking board
   - KEPs targeting `stable` for the release will now need to be marked as `implemented` after code PRs are merged.
-- To avoid delays and ensure everything is in place for Code Freeze, the Enhancements Lead must: 
+- To avoid delays and ensure everything is in place for Code Freeze, the Enhancements Lead must:
   - **Coordinate with the Release Managers**: Reach out to the Release Managers to give them a heads-up about the upcoming Code Freeze. They are responsible for raising the PR that officially enforces the Code Freeze. Coordinating early helps minimize the risk of delays and last-minute blockers. For more details on their role and responsibilities, refer to the [Release Manager Handbook](/release-engineering/handbooks/release-manager.md)
   - **Ensure the Code Freeze PR is opened and ready to merge**: The Code Freeze PR should be ready for merge (i.e., it has both `lgtm` and `approved` labels) **on or before the date of Code Freeze**.
     - **Recommendation:** Work with the Release Managers to get the PR created ahead of time and ensure all **required labels** (`lgtm`, `approved`) are in place. They can add a `/hold` to prevent the PR from merging early - then simply lift the hold in the Code Freeze Party.
@@ -716,7 +714,7 @@ Communication templates for KEP readiness deadline, enhancements freeze, code fr
 
 #### CNCF / Media Engagement
 
-- The Enhancements Lead may be called upon by the Communications Lead to help with media engagement near the end of the release cycle. Please ensure that if there are any restrictions or training required by your company before engaging that you have completed those ahead of Code Thaw.
+- The Enhancements Lead may be called upon by the Communications Lead to help with media engagement near the end of the release cycle. Please ensure that if there are any restrictions or training required by your company before engaging that you have completed those ahead of Thaw.
 - After the release, the Enhancements Lead will participate in a livestreamed CNCF Kubernetes Release webinar along with the Release Lead and Communications Lead. Work together to prepare a presentation highlighting a selection of enhancements from this release.
   - Past release webinar examples: [v1.35](https://www.youtube.com/watch?v=Ydby-uIVcCg), [v1.34](https://www.youtube.com/watch?v=StyJ9b6-1t0), [v1.33](https://www.youtube.com/watch?v=1hOOplxu6g0)
 
