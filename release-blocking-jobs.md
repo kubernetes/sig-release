@@ -23,13 +23,13 @@ If you want to add a Blocking job, please ask to add them to the appropriate
 Informing dashboard first. The release team can later decide if the test should
 be moved to the Blocking dashboard.
 
-Additional documentation may be found in the [CI Signal Role Handbook](./release-team/role-handbooks/ci-signal/README.md).
+Additional documentation may be found in the [Release Signal Role Handbook](release-team/role-handbooks/release-signal/README.md).
 
 ## Release-Blocking Criteria and Dashboard
 
 Jobs on the Blocking dashboard for a particular release should block that
 release if they do not have at least three successive "green" runs at go/nogo
-decision time.  In some cases, the CI Signal team may authorize release with a
+decision time.  In some cases, the Release Signal team may authorize release with a
 job still failing for thoroughly investigated reasons, but the general
 expectation is "jobs red, do not release."
 
@@ -37,11 +37,9 @@ As such, criteria for what jobs are on Blocking are rather stringent, in order
 to prevent aborting a release unnecessarily.  Note that not all current jobs
 meet the below criteria completely due to technical debt.  Blocking jobs must:
 
-- Have a documented reason for its inclusion in the Blocking suite
-<!-- TODO(spiffxp, jberkus):
-  - need to determine by policy where such documentation would exist
-  - this will probably be tied to the process of adding new jobs
--->
+- Have a documented reason for its inclusion in the Blocking suite. The
+  reason lives in the k/sig-release issue and the test-infra PR that promoted
+  the job (see [Promoting or Demoting Jobs](#promoting-or-demoting-jobs))
 - Provision clusters via open-source software instead of a hosted service
 - Have the average of 75% percentile duration of all runs for a week finishing in 120 minutes or less
 - Run at least every 3 hours
@@ -66,14 +64,12 @@ us the chance to make two changes/decisions in a 24 hour period.
 The thresholds given have some flexibility. We recognize that not every job may be
 able to strictly adhere to all of these criteria all of the time.  We also
 recognize that metrics can be gamed. Thus we consider human review to be the
-ultimate authority in the process to promote a demote a job as
+ultimate authority in the process to promote or demote a job as
 Blocking, and metrics to be the triggering criteria for such review.
 There is no shame in being demoted, and once the problems have been fixed, a
 job can be promoted back.
 
 ## Release-Informing Dashboard
-
-
 
 Jobs that are considered useful or necessary to inform whether a commit on
 master is ready for release, but that clearly do not meet Blocking
@@ -86,7 +82,7 @@ intrinsic race conditions.
 These jobs may still block the release, but because they require a lot of
 manual, human interpretation, we choose to move them to a separate dashboard.
 
-CI Signal Team members will regularly check the Informing Dashboard for new
+Release Signal team members will regularly check the Informing Dashboard for new
 failures.  Unexplained failures that are not flakes should be considered reason
 to block the release until the failures are investigated and evaluated.
 Unlike Blocking, however, jobs in Informing do not need to be green before
@@ -143,7 +139,7 @@ The general process to promote or demote jobs follows these steps:
 1. Ensure approval from the job OWNERS, SIG Release Tech Leads or Chairs as well
    as:
 
-   - the current Release Team Lead, CI Signal Lead and Release Manager if the
+   - the current Release Team Lead, Release Signal Lead and Release Manager if the
      intention is to change a `sig-release-master-*` dashboard
    - the Release Managers if the intention is to change a `sig-release-1.x-*`
      dashboard

@@ -37,10 +37,10 @@ If your repo has certain guidelines for contribution, put them here ahead of the
 
 ## Contact Information
 
-<!-- TODO(contact): Dedupe with README and k/community -->
-
 - [Slack channel](https://kubernetes.slack.com/messages/sig-release)
-- [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-release)
+- [Mailing list](https://groups.google.com/g/kubernetes-sig-release)
+
+See the [README](README.md#join-us) for meeting details and further links.
 
 ## Contributing Code
 
@@ -78,26 +78,17 @@ immediately, but we encourage you to bring them to our attention via one of our
 >
 > If you need a new component release to unblock your project, please contact us to request one.
 
-<!--
-TODO(contribute): Review Crossplane release process for more inspiration
-ref: https://github.com/crossplane/crossplane/blob/master/docs/reference/release-cycle.md
--->
-
 Be sure to practice [good git commit hygiene] as you make your changes. All but
 the smallest changes should be broken up into a few commits that tell a story.
 Use your git commits to provide context for the folks who will review PR, and
 the folks who will be spelunking the codebase in the months and years to come.
 Ensure each of your commits is signed-off by using `git commit -s`. SIG Release
-members highly values readable, idiomatic Go code. Familiarize yourself with
+members highly value readable, idiomatic Go code. Familiarize yourself with
 the [Coding Style](#coding-style) section below and try to preempt any comments
 your reviewers would otherwise leave. Most repos will contain `Makefile`s or
 [`mage`][mage] targets that will help you build/test/lint/verify your changes.
 If you don't see a target for your use case, maybe that could be your first
 contribution!
-
-<!--
-TODO(contribute): Decide on stance around testing libraries: https://github.com/golang/go/wiki/TestComments#assert-libraries
--->
 
 All code should be covered by tests. We strive, wherever possible, to follow
 the common Go [test review comments]. We encourage the use of table-driven
@@ -213,7 +204,7 @@ func capture(w goose.Wrangler, looseGeese int) error {
                 // return value is, so a descriptive name names sense here too.
                 captured, err := w.Wrangle()
                 if err != nil {
-                        return errors.Wrap(err, "defeated by geese")
+                        return fmt.Errorf("defeated by geese: %w", err)
                 }
                 looseGeese = looseGeese - captured
         }
@@ -265,8 +256,8 @@ func WithFowlWrangler(fw fowl.Wrangler) Option {
 
 func NewWrangler(looseGeese int, o ...Option) *Wrangler {
         w := &Wrangler{
-                fw: fowl.DefaultWrangler{}
-                loose: 
+                fw:    fowl.DefaultWrangler{},
+                loose: looseGeese,
         }
 
         for _, fn := range o {
@@ -281,7 +272,7 @@ func example() {
                 WithFowlWrangler(chicken.NewWrangler()),
                 WithSomeOtherOption(),
                 WithYetAnotherOption())
-        
+
         w.Wrangle()
 }
 ```
@@ -346,25 +337,21 @@ Quoting [Effective Go]:
 
 ### Wrap Errors
 
-<!--
-TODO(contribute): Consider error packages like
-[`crossplane-runtime/pkg/errors`]
--->
-
 Always wrap errors with context. This allows us to emit logs and events with
 useful, specific errors that can be related to deeper parts of the codebase
 without having to actually plumb loggers and event sources deep down into the
-codebase.
+codebase. Use `fmt.Errorf` with the `%w` verb from the standard library so that
+callers can still inspect the wrapped error with `errors.Is` and `errors.As`.
 
 For example:
 
 ```go
-import "github.com/crossplane/crossplane-runtime/pkg/errors"
+import "fmt"
 
 func example() error {
         v, err := fetch()
         if err != nil {
-                return errors.Wrap(err, "could not fetch the thing")
+                return fmt.Errorf("fetching the thing: %w", err)
         }
 
         store(embiggen(v))
@@ -385,12 +372,15 @@ So for example, instead of:
 func example() error {
         err := enable()
         if err != nil {
-                return errors.Wrap(err, "could not enable the thing")
+                return fmt.Errorf("enabling the thing: %w", err)
         }
 
         // 'err' still exists here at the function scope.
 
-        return errors.Wrap(emit(), "could not emit the thing")
+        if err := emit(); err != nil {
+                return fmt.Errorf("emitting the thing: %w", err)
+        }
+        return nil
 }
 ```
 
@@ -400,13 +390,16 @@ We prefer:
 func example() error {
         if err := enable(); err != nil {
                 // 'err' exists here inside the conditional block.
-                return errors.Wrap(err, "could not enable the thing")
+                return fmt.Errorf("enabling the thing: %w", err)
         }
 
         // 'err' does not exist here at the function scope. It's scoped to the
         // above conditional block.
 
-        return errors.Wrap(emit(), "could not emit the thing")
+        if err := emit(); err != nil {
+                return fmt.Errorf("emitting the thing: %w", err)
+        }
+        return nil
 }
 ```
 
@@ -419,11 +412,11 @@ That is, instead of:
 ```go
 func example() error {
         if v, err := fetch(); err != nil {
-                return errors.Wrap(err, "could not enable the thing")
+                return fmt.Errorf("fetching the thing: %w", err)
         } else {
                 store(embiggen(v))
         }
-        
+
         return nil
 }
 ```
@@ -434,7 +427,7 @@ We prefer:
 func example() error {
         v, err := fetch()
         if err != nil {
-                return errors.Wrap(err, "could not enable the thing")
+                return fmt.Errorf("fetching the thing: %w", err)
         }
 
         store(embiggen(v))
@@ -468,7 +461,7 @@ func TestExample(t *testing.T) {
                 err    error
         }
 
-        cases := map[string]struct{
+        cases := map[string]struct {
                 reason string
                 args   args
                 want   want
@@ -477,16 +470,16 @@ func TestExample(t *testing.T) {
                 "BriefTestCaseSummary": {
                         reason: "A longer summary of what we're testing - printed if the test fails.",
                         args: args{
-                                ctx: context.Background(),
+                                ctx:   context.Background(),
                                 input: "some input value",
-                        }
+                        },
                         want: want{
-                                output: "the expected output",
-                                err: nil,
-                        }
+                                output: 42,
+                                err:    nil,
+                        },
                 },
         }
-        
+
         for name, tc := range cases {
                 t.Run(name, func(t *testing.T) {
                         got, err := Example(tc.args.ctx, tc.args.input)
@@ -494,7 +487,7 @@ func TestExample(t *testing.T) {
                         // We prefer to use https://github.com/google/go-cmp/
                         // even for simple comparisons to keep test output
                         // consistent.
-                        if diff := cmp.Diff(tc.want.err, err, test.EquateErrors()); diff != "" {
+                        if diff := cmp.Diff(tc.want.err, err, cmpopts.EquateErrors()); diff != "" {
                                 t.Errorf("%s\nExample(...): -want, +got:\n%s", tc.reason, diff)
                         }
 
@@ -508,70 +501,29 @@ func TestExample(t *testing.T) {
 
 ## Establishing a Development Environment
 
-<!--
-TODO(contribute): Evaluate Crossplane guidance on establishing a development
-environment.
+This repository contains documentation only, so no build environment is needed
+to contribute here. Changes are Markdown files reviewed through the usual
+Kubernetes [GitHub workflow](https://git.k8s.io/community/contributors/guide/github-workflow.md).
 
-The Crossplane project consists of several repositories under the crossplane and
-crossplane-contrib GitHub organisations. Most of these projects use the Upbound
-[build submodule]; a library of common Makefiles. Establishing a development
-environment typically requires:
+The SIG Release code repositories, such as [kubernetes/release](https://github.com/kubernetes/release)
+and the [kubernetes-sigs](https://git.k8s.io/community/sig-release#subprojects)
+projects owned by Release Engineering, are Go projects. Setting up a development
+environment for them typically requires:
 
 1. Forking and cloning the repository you wish to work on.
-1. Installing development dependencies.
-1. Running `make` to establish the build submodule.
+1. Installing the Go version declared in the repository's `go.mod` file.
+1. Running `make help` (or `mage -l` in repositories that use [`mage`][mage])
+   to discover the available build, test, lint and verify targets.
 
-Run `make help` for information on the available Make targets. Useful targets
-include:
-
-- `make reviewable` - Run code generation, linters, and unit tests.
-- `make e2e` - Run end-to-end tests.
-- `make` - Build Crossplane.
-
-Once you've built Crossplane you can deploy it to a Kubernetes cluster of your
-choice. [`kind`] (Kubernetes in Docker) is a good choice for development. The
-`kind.sh` script contains several utilities to deploy and run a development
-build of Crossplane to `kind`:
-
-```bash
-# Build Crossplane locally.
-make
-
-# See what commands are available.
-./cluster/local/kind.sh help
-
-# Start a new kind cluster. Specifying KUBE_IMAGE is optional.
-KUBE_IMAGE=kindest/node:v1.23.0 ./cluster/local/kind.sh up
-
-# Use Helm to deploy the local build of Crossplane.
-./cluster/local/kind.sh helm-install
-
-# Use Helm to upgrade the local build of Crossplane.
-./cluster/local/kind.sh helm-upgrade
-```
-
-When iterating rapidly on a change it can be faster to run Crossplane as a local
-process, rather than as a pod deployed by Helm to your Kubernetes cluster. Use
-Helm to install your local Crossplane build per the above instructions, then:
-
-```bash
-# Stop the Helm-deployed Crossplane pod.
-kubectl -n crossplane-system scale deploy crossplane --replicas=0
-
-# Run Crossplane locally; it should connect to your kind cluster if said cluster
-# is your active kubectl context. You can also go run cmd/crossplane/main.go.
-make run
-```
--->
-
-Coming soon!
+Each repository documents its specific requirements in its own `README.md` or
+`CONTRIBUTING.md`; those documents take precedence over this general guidance.
 
 ## Attribution
 
 This guide was initially created from the
 [`kubernetes-template-project`][template-project].
 
-The style guide was copied from the amazing
+The style guide was adapted from the
 [CONTRIBUTING.md][crossplane-contributing] created by the
 [Crossplane][crossplane] project maintainers.
 
@@ -592,16 +544,12 @@ the following Crossplane contributors:
 [crossplane]: https://github.com/crossplane
 [crossplane-contributing]: https://github.com/crossplane/crossplane/blob/master/CONTRIBUTING.md
 [crossplane-contributing-commit]: https://github.com/crossplane/crossplane/blob/2c10ff0e81b83d609cfa81c3a24ce842ab234c38/CONTRIBUTING.md
-[build submodule]: https://github.com/upbound/build/
-[`kind`]: https://kind.sigs.k8s.io/
 [kubernetes-release-cycle]: https://kubernetes.io/releases/release/
 [good git commit hygiene]: https://www.futurelearn.com/info/blog/telling-stories-with-your-git-history
-[Developer Certificate of Origin]: https://github.com/apps/dco
-[code review comments]: https://github.com/golang/go/wiki/CodeReviewComments
-[test review comments]: https://github.com/golang/go/wiki/TestComments
-[Effective Go]: https://golang.org/doc/effective_go
+[code review comments]: https://go.dev/wiki/CodeReviewComments
+[test review comments]: https://go.dev/wiki/TestComments
+[Effective Go]: https://go.dev/doc/effective_go
 [Dave Cheney's blog]: https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
-[`crossplane-runtime/pkg/errors`]: https://pkg.go.dev/github.com/crossplane/crossplane-runtime/pkg/errors
 [golangci-lint]: https://golangci-lint.run/
 [mage]: https://magefile.org/
 [sig-release-subprojects]: https://git.k8s.io/community/sig-release#subprojects

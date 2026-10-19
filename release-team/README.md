@@ -3,6 +3,8 @@
 - [Overview][overview]
 - [Specific responsibilities][specific-responsibilities]
 - [Kubernetes Release Team roles][kubernetes-release-team-roles]
+  - [Release Team Shadows](#release-team-shadows)
+  - [Individual Contributors](#individual-contributors)
 - [Other activities of the Release Team][other-activities-of-the-release-team]
 - [Release Team Selection][release-team-selection]
 - [Milestone Maintainers][milestone-maintainers]
@@ -14,15 +16,16 @@
 The Kubernetes Release Team is embedded within SIG Release and is responsible for the day to day work required to
 successfully release while the SIG at large is focused on the continued improvement of the release process. Historically
 the Release Manager (previously Release Czar)
-and later Release Team have assumed the following responsibilities
+and later Release Team have assumed the following responsibilities:
 - Authority to build and publish releases at the published release date under the auspices of the CNCF
 - Authority to accept or reject cherrypick merge requests to the release branch
 - Authority to accept or reject PRs to the kubernetes/kubernetes master branch during code freeze period
 - Changing the release timeline as needed if keeping it would materially impact the stability or quality of the release
 
-These responsibilities will continue to be discharged by SIG release through the Release Team. This charter grants SIG 
+These responsibilities will continue to be discharged by SIG Release through the Release Team. The
+[SIG Release charter](https://git.k8s.io/community/sig-release/charter.md) grants SIG
 Release the following additional responsibilities:
-- Authority to revert code changes which imperil the ability to produce a release by the communicated date or otherwise 
+- Authority to revert code changes which imperil the ability to produce a release by the communicated date or otherwise
   negatively impact the quality of the release (e.g. insufficient testing, lack of documentation)
 - Authority to guard code changes behind a feature flag which do not meet criteria for release
 - Authority to close the submit queue to any changes which do not target the release as part of enforcing the code freeze
@@ -75,65 +78,87 @@ there are 3 types of Kubernetes releases:
 
 ![release-team](release-team.svg "Release Team Diagram")
 
-| Role              | Handbook                                                           |
-|-------------------|--------------------------------------------------------------------|
-| Release Team Lead | [Lead Handbook](role-handbooks/release-team-lead/README.md)        |
-| Enhancements      | [Enhancements Handbook](role-handbooks/enhancements/README.md)     |
-| Release Signal    | [Release Signal Handbook](role-handbooks/release-signal/README.md) |
-| Docs              | [Docs Handbook](role-handbooks/docs/README.md)                     |
-| Communications    | [Communications Handbook](role-handbooks/communications/README.md) |
+| Role              | Handbook                                                                 |
+|-------------------|--------------------------------------------------------------------------|
+| Release Team Lead | [Lead Handbook](role-handbooks/release-team-lead/README.md)              |
+| Enhancements      | [Enhancements Handbook](role-handbooks/enhancements/README.md)           |
+| Release Signal    | [Release Signal Handbook](role-handbooks/release-signal/README.md)       |
+| Docs              | [Docs Handbook](role-handbooks/docs/README.md)                           |
+| Communications    | [Communications Handbook](role-handbooks/communications/README.md)       |
+| Emeritus Adviser  | [Emeritus Adviser Handbook](role-handbooks/emeritus-adviser/README.md)   |
 
+The Release Team is supported by the [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md)
+of the Release Engineering subproject, who cut the releases and manage the
+release branches. The Release Manager assigned to a release cycle is listed as
+"Branch Manager" in the release's `release-team.md` file.
+
+Related documents:
+
+- [Release Team Selection](release-team-selection.md)
+- [Release Team Onboarding Guide](release-team-onboarding.md)
+- [Release Team Shadows](shadows.md)
+- [Release Team Removal Process](release-team-removal.md)
 
 #### Retired Release Team roles
 
 - Patch Release Manager: moved to a role of [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md), which operates under the Release Engineering subproject.
 - Branch Manager: moved to a role of [Release Managers](https://git.k8s.io/website/content/en/releases/release-managers.md), which operates under the Release Engineering subproject.
 - Test Infra: deprecated at the end of Kubernetes 1.15. Duties are now distributed to the [Release Managers](/release-engineering/handbooks/release-manager.md) and [Test Infra On-call (SIG Testing)](https://go.k8s.io/oncall) (#testing-ops and #sig-testing on Slack).
+- CI Signal and Bug Triage: merged into the Release Signal role.
+- Release Notes: merged into the Docs role.
 
-### Release Team Shadow
-Any Release Team member may select one or more mentees to shadow the release process in order to help fulfill future
+### Release Team Shadows
+
+Any Release Team role lead may select one or more mentees to shadow the release process in order to help fulfill future
 Release Team staffing requirements and continue to grow the Kubernetes community in general. Potential mentees should
 be prepared to devote a significant amount of time to shadowing their mentor during the release cycle. Successful Release Team Shadows
-should be prepared to assume a lead role in a subsequent release.
+should be prepared to assume a lead role in a subsequent release. See the [Release Team Shadows guide](shadows.md) for details.
 
 ### Individual Contributors
-Release responsibilities of individual contributors to the Kubernetes project are captured below
+
+Release responsibilities of individual contributors to the Kubernetes project are captured below.
 
 #### During a patch release
+
 If you have a patch that needs to be ported back to a previous release (meaning it is a critical bug/security fix), once it is merged to the Kubernetes `master` branch:
 - Follow the [cherry-pick instructions to open a cherry-pick PR.](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md)
-- The Patch Release Manager will then review the PR and if it is ok for cherry-picking, will apply a `cherrypick-approved` label to it.
+- The Release Managers will then review the PR and if it is ok for cherry-picking, will apply a `cherry-pick-approved` label to it.
 
 #### During a major/minor release
 
 ##### Propose and track enhancement
-If you are developing an enhancement for Kubernetes, make sure that an issue is open in the [enhancements repository](https://github.com/kubernetes/enhancements/issues). If you are targeting a particular release, make sure the issue is marked with the corresponding release milestone.
 
-Ensure that all code for your enhancement is written, tested, reviewed, and merged before code freeze date for the target release.
+If you are developing an enhancement for Kubernetes, make sure that an issue is open in the [enhancements repository](https://github.com/kubernetes/enhancements/issues). If you are targeting a particular release, make sure the issue is marked with the corresponding release milestone and follow the deadlines in the [release phases](/releases/release_phases.md).
+
+Ensure that all code for your enhancement is written, tested, reviewed, and merged before the code freeze date for the target release.
 
 During the code freeze period, fix any bugs discovered with your enhancement, and write enhancement documentation.
 
 ##### Write enhancement documentation
 
-1. Make sure your enhancement for the upcoming release is on the github release tracking board (e.g. [link](https://github.com/orgs/kubernetes/projects/98) for 1.26).
-2. Create a PR with documentation for your enhancement in the [documents repo](https://github.com/kubernetes/kubernetes.github.io).
-    - **Your PR should target the release branch (e.g. [release-1.6](https://github.com/kubernetes/kubernetes.github.io/tree/release-1.6)), not the [`master`](https://github.com/kubernetes/kubernetes.github.io/tree/master) branch.**
-      - Any changes to the master branch become live on https://kubernetes.io/docs/ as soon as they are merged, and for releases we do not want documentation to go live until the release is cut.
-3. Add link to your docs PR in the release tracking board, and notify the docs lead for the release ( Release team details for each release can be found under the [releases](../releases) directory. E.g. [Docs lead](../releases/release-1.26/release-team.md) for 1.26).
-4. The docs lead will review your PR and give you feedback.
-5. Once approved, the docs lead will merge your PR into the release branch.
-6. When the release is cut, the docs lead will push the docs release branch to master, making your docs live on https://kubernetes.io/docs/.
+1. Make sure your enhancement for the upcoming release is on the Release Tracking Board. The board is linked from the `links.md` file of the current release directory under [releases](../releases).
+2. Create a placeholder PR with documentation for your enhancement in the [kubernetes/website](https://github.com/kubernetes/website) repository by the [Docs Placeholder PR Deadline](/releases/release_phases.md#docs-placeholder-pr-deadline).
+    - **Your PR must target the `dev-1.XX` branch for the release in development, not `main`.** Changes to `main` go live on https://kubernetes.io/docs/ as soon as they are merged, and release documentation must not go live before the release is cut.
+3. Add the link to your docs PR on the Release Tracking Board and notify the Docs Lead for the release. The Release Team for each release is listed in the `release-team.md` file of the release directory.
+4. Complete the documentation by the [Docs Ready for Review Deadline](/releases/release_phases.md#docs-ready-for-review-deadline). The Docs team and SIG Docs will review your PR and give you feedback.
+5. Once approved, the PR is merged into the `dev-1.XX` branch before [Docs Freeze](/releases/release_phases.md#docs-freeze).
+6. On release day, the Docs team merges the `dev-1.XX` branch into `main`, making your docs live on https://kubernetes.io/docs/.
+
+See the [Docs section of the release phases](/releases/release_phases.md#docs) and the [Docs Handbook](role-handbooks/docs/README.md) for details.
 
 ## Other activities of the Release Team
 
 ### During "Major" releases
+
 To date no major release has been scheduled, however, SIG Release would be responsible for working closely with SIG Testing
 to coordinate this effort across SIGs. The precise work required to produce a major release (e.g. 2.0, 3.0)
 is undefined.
 
 ### During "Security" releases
-For all unplanned or embargoed releases
+
+For all unplanned or embargoed releases:
 - Facilitate security releases following the [Security Release Process](https://git.k8s.io/security/security-release-process.md)
+  and the [Security Releases handbook](/release-engineering/handbooks/security-releases.md)
 
 ## Release Team Selection
 
@@ -147,30 +172,27 @@ The [milestone maintainers](https://github.com/kubernetes/community/blob/master/
 
 Across release cycles, a "/milestone" is one of the best signals for [issue triage](https://github.com/kubernetes/community/blob/master/contributors/guide/issue-triage.md#milestones) whether or not an issue or PR is actually targeted for the current release milestone.
 
-Adding the in-progress release milestone to pull requests after the Code Freeze is strictly prohibited, as it can compromise the stability of the release. Prior to making such changes, approval must be obtained from both the Release Team Lead and the Emeritus Advisor(s).
+Adding the in-progress release milestone to pull requests after the Code Freeze is strictly prohibited, as it can compromise the stability of the release. Prior to making such changes, approval must be obtained from both the Release Team Lead and the Emeritus Adviser.
 
-Each release cycle, the current Release Team Lead must update membership to the aforementioned GitHub team.
+Each release cycle, the current Release Team Lead must update the membership of the [milestone-maintainers](https://github.com/orgs/kubernetes/teams/milestone-maintainers) GitHub team.
 
-The actual process of maintaining milestones is owned by the SIGs and special elected contributors. The SIG Release team steers the enhancements through the release cycle and take care that only well-maintained enhancements will make it up to a new major release.
+The actual process of maintaining milestones is owned by the SIGs and special elected contributors. The SIG Release team steers the enhancements through the release cycle and takes care that only well-maintained enhancements make it into a new minor release.
+
 ---
 
 ## Filing exceptions
 
-The process for filing an enhancement exception can be found [here][exceptions].
-
+The process for filing an enhancement exception can be found in the [exceptions document][exceptions].
 
 [overview]: #overview
 [specific-responsibilities]: #specific-responsibilities
 [kubernetes-release-team-roles]: #kubernetes-release-team-roles
 [other-activities-of-the-release-team]: #other-activities-of-the-release-team
-[release-managers]: /release-managers.md
 [release-team-selection]: #release-team-selection
 [release-team-selection-process]: release-team-selection.md
 [milestone-maintainers]: #milestone-maintainers
 [filing-exceptions]: #filing-exceptions
 [exceptions]: /releases/EXCEPTIONS.md
-[k/enhancements]: https://git.k8s.io/enhancements
-[k/org]: https://git.k8s.io/org
 
 ## Visual Release Path
 
@@ -278,10 +300,10 @@ graph TD
     subgraph During the Release
         OPT_IN[Opt-in to the Release]
         KEP_DONE[KEP Approved and Merged]
-    
+
         CODE_COMPLETE[All k/k PRs Merged]
         TEST_COMPLETE[All Test PRs Merged]
-        
+
         FEATURE_BLOG_OPT_IN[Opt-in for Feature Blog]
         FEATURE_BLOG_POST_COMPLETE[Complete Feature Blog]
 
@@ -291,12 +313,12 @@ graph TD
 
         KEP --> OPT_IN
         OPT_IN --> |Work On KEP| KEP_DONE
-        
+
         KEP_DONE --> |Work On Code| CODE_COMPLETE
         KEP_DONE --> |Work On Draft Doc| DOCS_PLACEHOLDER_COMPLETE
         KEP_DONE --> |Work On Test| TEST_COMPLETE
 
-        KEP_DONE --> | Optional | FEATURE_BLOG_OPT_IN 
+        KEP_DONE --> | Optional | FEATURE_BLOG_OPT_IN
         FEATURE_BLOG_OPT_IN --------> |Work On Blog Post| FEATURE_BLOG_POST_COMPLETE
 
         DOCS_PLACEHOLDER_COMPLETE --> |Complete Doc| DOCS_READY_TO_REVIEW_COMPLETE
