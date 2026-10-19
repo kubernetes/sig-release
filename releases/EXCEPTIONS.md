@@ -1,12 +1,12 @@
-# Exceptions to Milestone Enhancement Complete dates
+# Exceptions to release milestone deadlines
 
-For minor (1.x) milestones, the Kubernetes project has enhancement complete dates (hitting enhancement complete is all enhancement LGTMed and in submit queue with tests written) after which no new enhancements are accepted. Since minor releases come three times per year, missing a enhancement complete date by just one day can mean that enhancement takes an additional 4 months to be released.
+For minor (1.x) milestones, the Kubernetes project has a set of deadlines (the [release phases](release_phases.md): KEP Readiness Deadline, Enhancements Freeze, Code Freeze, Test Freeze and Docs Freeze) after which no new enhancement work is accepted. Since minor releases come three times per year, missing a deadline by just one day can mean that an enhancement takes an additional four months to be released.
 
-While the enhancement complete milestone dates are published well in advance, and the default is that missing the date means your enhancement will be part of the next milestone, there may be cases where an exception makes sense.
+While the deadlines are published well in advance, and the default is that missing a deadline means your enhancement will be part of the next milestone, there may be cases where an exception makes sense.
 
 Note that the exception process only applies to enhancements, not bugs managed by the Release Signal team.
 
-If you have questions about the status of your enhancement, including the reasons for its removal from the milestone, please reach out to the enhancements lead in the `#release-enhancements` channel on Slack.  Some trivial "clerical errors", such as forgetting the set the milestone, can be remedied without a formal exception.
+If you have questions about the status of your enhancement, including the reasons for its removal from the milestone, please reach out to the enhancements lead in the `#release-enhancements` channel on Slack. Some trivial "clerical errors", such as forgetting to set the milestone, can be remedied without a formal exception.
 
 ## Exception Criteria
 
@@ -20,7 +20,7 @@ The length of exception needed should be on the order of days, not weeks. If the
 
 A reasonable length for an exception request is 3 days or fewer. If your enhancement requires a longer exception, it may not be ready for the release and a significantly stronger argument with respect to risk and impact will be required.
 
-You should have *very high confidence* on the "additional time needed" number. The Release Team will not grant multiple exceptions for the **same** freeze for a single enhancement — once an exception has been approved or rejected for a given freeze, the decision is final and additional time cannot be requested for that freeze. The same goes for over-estimating on the time needed: if the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.
+You should have *very high confidence* on the "additional time needed" number. The Release Team will not grant multiple exceptions for the **same** freeze for a single enhancement: once an exception has been approved or rejected for a given freeze, the decision is final and additional time cannot be requested for that freeze. The same goes for over-estimating on the time needed: if the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.
 
 A KEP may still request separate exceptions at different freeze points across the release cycle (e.g. a KEP Readiness Deadline exception and, later, a Code/Test Freeze exception), each evaluated on its own merits. The [combined KEP Readiness + Enhancements Freeze request described below](#exceptions-after-kep-readiness-deadline) remains the one case where a single request may cover two freezes.
 
@@ -40,7 +40,7 @@ where `$Phase` is one of `KEP Readiness Deadline`, `Enhancements Freeze`, `Code 
 - Enhancement status (alpha/beta/stable):
 - SIG:
 - k/enhancements repo issue #:
-- PR #’s:
+- PR #s:
 - Additional time needed (in calendar days, due end of day AoE):
 - Reason this enhancement is critical for this milestone:
 - Risks from adding code late: (to k8s stability, testing, etc.)
@@ -52,12 +52,12 @@ Email them to:
 - release-team@kubernetes.io
 - kubernetes-sig-release@googlegroups.com
 
-Once you have emailed this, post the same information in the #sig-release channel in Slack. This is where discussion will occur with the Release Team. 
+Once you have emailed this, post the same information in the #sig-release channel in Slack. This is where discussion will occur with the Release Team.
 
 #### Exceptions after KEP readiness deadline:
 - Requests for exceptions must be submitted within 3 days after the KEP readiness deadline. Requests made more than 3 days after this deadline will be denied. You may file an exception request in advance if you know your KEP will miss the KEP readiness deadline.
 - Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request. In this case, you must specify that this is an exception request for both phases. The total number of days requested must reflect the total number of days required to meet both deadlines' requirements.
-- All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.
+- All requests will be reviewed and either approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after PRR freeze:
 
@@ -77,17 +77,18 @@ As of v1.38, this deadline has been renamed to the `KEP Readiness Deadline`. See
 - Exception requests should include at least one additional business day after technical review is complete so SIG Docs OWNERS have time to review and approve.
 - All requests will be reviewed and approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above, with input from SIG Docs.
 
-Information about the current release can be found in the relevant release directory:
-- important dates e.g., [releases/release-1.14/README.md](/releases/release-1.14/README.md)
-- Release Team members e.g., [releases/release-1.14/release_team.md](/releases/release-1.14/release_team.md)
+Information about the current release can be found in the relevant release directory under [`releases/`](./), for example [releases/release-1.38/](release-1.38/):
+- important dates in `README.md`
+- Release Team members in `release-team.md`
+- tracking boards and meeting notes in `links.md`
 
-Once an exception is approved, it will be broadcast broadly: the release team will send an email with the data and approval to kubernetes-dev@ and your SIG group.
+Once an exception is approved, it will be broadcast broadly: the release team will send an email with the data and approval to dev@kubernetes.io and your SIG group.
 
 ### Tracking Exception Requests
 
 Starting with the v1.36 release cycle, exception requests are tracked on the release's Release Tracking Board using the `Exception Requests` view (e.g., [v1.36 Exception Requests view](https://github.com/orgs/kubernetes/projects/241/views/7)) instead of an `exceptions.yaml` file in the release directory.
 
-When an exception request comes in, the Enhancements Lead, Release Lead Shadows, or the Release Lead are responsible for:
+When an exception request comes in, the Enhancements Lead, the Release Team Lead shadows, or the Release Team Lead are responsible for:
 
 - Setting the `Exception Request Type` field on the KEP in the Release Tracking Board so it surfaces in the `Exception Requests` view.
 - Populating the request metadata (links to the Google Groups thread, Slack thread, related PRs, requested time, request/decision dates, and final status).
