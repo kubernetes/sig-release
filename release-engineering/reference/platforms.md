@@ -193,16 +193,17 @@ they reach end of life.
 
 ## Current Platform Support
 
-| Platform          |       Tier 1       |       Tier 2       | Tier 3 | Notes       |
-| ----------------- | :----------------: | :----------------: | :----: | ----------- |
-| `amd64-linux`     | :heavy_check_mark: |                    |        |             |
-| `arm64-linux`     |                    | :heavy_check_mark: |        |             |
-| `amd64-darwin`    |                    | :heavy_check_mark: |        | client only |
-| `arm64-darwin`    |                    | :heavy_check_mark: |        | client only |
-| `ppc64le-linux`   |                    | :heavy_check_mark: |        |             |
-| `s390x-linux`     |                    | :heavy_check_mark: |        |             |
-| `amd64-windows`   |                    | :heavy_check_mark: |        | client and node |
-| `arm64-windows`   |                    | :heavy_check_mark: |        | client only |
+| Platform        |       Tier 1       |       Tier 2       |       Tier 3       | Notes                                                                                                        |
+| --------------- | :----------------: | :----------------: | :----------------: | ------------------------------------------------------------------------------------------------------------ |
+| `amd64-linux`   | :heavy_check_mark: |                    |                    |                                                                                                              |
+| `arm64-linux`   |                    | :heavy_check_mark: |                    |                                                                                                              |
+| `amd64-darwin`  |                    | :heavy_check_mark: |                    | client only                                                                                                  |
+| `arm64-darwin`  |                    | :heavy_check_mark: |                    | client only                                                                                                  |
+| `ppc64le-linux` |                    | :heavy_check_mark: |                    |                                                                                                              |
+| `s390x-linux`   |                    | :heavy_check_mark: |                    |                                                                                                              |
+| `amd64-windows` |                    | :heavy_check_mark: |                    | client and node                                                                                              |
+| `arm64-windows` |                    | :heavy_check_mark: |                    | client only                                                                                                  |
+| `riscv64-linux` |                    |                    | :heavy_check_mark: | [docs](https://github.com/riseproject-dev/kubernetes-riscv/blob/riscv-support/riscv64/docs/cluster-setup.md) |
 
 ## Removed Platforms
 
