@@ -1,0 +1,38 @@
+pr: 142146
+pr_body: ""
+releasenote:
+  text: |-
+    Made the former internal `ktesting` packages available as `k8s.io/ktesting` (core package and API) and `k8s.io/client-go/ktesting` (additional APIs for testing against an apiserver).
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - autoscaling
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - etcd
+  - instrumentation
+  - network
+  - node
+  - release
+  - scheduling
+  - storage
+  - testing
+  - windows
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - release-eng
+  - kubeadm
+  - code-generation
+  - ipvs
+  - e2e-test-framework
+  - dependency

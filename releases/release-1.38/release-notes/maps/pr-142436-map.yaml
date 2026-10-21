@@ -1,0 +1,11 @@
+pr: 142436
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubectl label` writing messages about nonexistent labels to stdout, which broke JSON and YAML output. The messages are sent to stderr instead.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

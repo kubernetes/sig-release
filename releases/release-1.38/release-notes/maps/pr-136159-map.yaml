@@ -1,0 +1,10 @@
+pr: 136159
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `JSONSchemaProps` comment to properly render JSON Schema URL as a valid link.
+  sigs:
+  - api-machinery
+  kinds:
+  - documentation
+  - api-change

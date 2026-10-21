@@ -1,0 +1,13 @@
+pr: 141744
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the `MatchLabelKeysInPodAffinity` feature gate.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test

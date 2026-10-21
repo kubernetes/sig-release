@@ -1,0 +1,10 @@
+pr: 142750
+pr_body: ""
+releasenote:
+  text: |-
+    Updated the TokenReview internal type to improve cast speed from the latest external version.
+  sigs:
+  - auth
+  kinds:
+  - cleanup
+  - api-change

@@ -1,0 +1,21 @@
+pr: 142700
+pr_body: ""
+releasenote:
+  text: |-
+    Removed `kubemark` from the Kubernetes repository.
+  sigs:
+  - api-machinery
+  - cloud-provider
+  - instrumentation
+  - network
+  - scalability
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - kube-proxy
+  - provider/gcp
+  - release-eng
+  - e2e-test-framework

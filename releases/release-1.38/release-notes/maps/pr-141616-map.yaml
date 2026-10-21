@@ -1,0 +1,12 @@
+pr: 141616
+pr_body: ""
+releasenote:
+  text: |-
+    Added the Alpha `CloudNodeAdditionalLabelsReconciliation` feature gate, disabled by default. When enabled in the `cloud-controller-manager`, the cloud node controller periodically adds or updates node labels returned through `InstanceMetadata.AdditionalLabels`. Provider values overwrite conflicting changes to the same label keys, including changes made by other controllers. Initial node labeling is unchanged, and labels no longer returned by the provider are not removed.
+  sigs:
+  - api-machinery
+  - cloud-provider
+  kinds:
+  - feature
+  areas:
+  - cloudprovider

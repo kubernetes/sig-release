@@ -1,0 +1,9 @@
+pr: 142574
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a reference counting leak in the Node authorizer graph for Pods that reference Secrets, ConfigMaps, or PersistentVolumeClaims multiple times.
+  sigs:
+  - auth
+  kinds:
+  - bug

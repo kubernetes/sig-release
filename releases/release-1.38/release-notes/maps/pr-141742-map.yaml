@@ -1,0 +1,11 @@
+pr: 141742
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `taint_eviction_controller_pod_deletion_duration_seconds` metric, which recorded nanoseconds scaled by `1e9` instead of seconds. Latencies below about 9.2 seconds fell into the `+Inf` bucket, and longer ones overflowed and were recorded as arbitrary, often negative, values.
+  do_not_publish: false
+  sigs:
+  - apps
+  - scheduling
+  kinds:
+  - bug

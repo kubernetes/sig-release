@@ -1,0 +1,12 @@
+pr: 142686
+pr_body: ""
+releasenote:
+  text: |-
+    Updated NodeLocal DNSCache to `1.27.1`.
+  sigs:
+  - cloud-provider
+  - network
+  kinds:
+  - feature
+  areas:
+  - provider/gcp

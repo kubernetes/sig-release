@@ -1,0 +1,9 @@
+pr: 141108
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a DRA deadlock when an `ErrorHandler` calls `Update`, or a `kubelet` plugin's `HandleError` calls `PublishResources`, in response to pools that do not match `ReconcilePoolWithName`. Such resources replace the desired state instead of being rejected; the other pools are reported to the error handler and are not published. Initial resources with other pools no longer cause a panic. Also fixed a deadlock when a `kubelet` plugin's `HandleError` calls `PublishResources` while the plugin stops.
+  sigs:
+  - node
+  kinds:
+  - bug

@@ -1,0 +1,13 @@
+pr: 140447
+pr_body: ""
+releasenote:
+  text: |-
+    Deprecated the `endpoint_slice_controller_changes` metric in favor of `endpoint_slice_controller_changes_total`. Both metrics are emitted during the deprecation period.
+  sigs:
+  - architecture
+  - instrumentation
+  - network
+  kinds:
+  - api-change
+  areas:
+  - stable-metrics

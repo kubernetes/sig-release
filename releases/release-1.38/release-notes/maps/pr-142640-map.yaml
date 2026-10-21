@@ -1,0 +1,11 @@
+pr: 142640
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kubectl create ingress` panicking on rules that contain extra equals signs.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

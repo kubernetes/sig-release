@@ -1,0 +1,9 @@
+pr: 142490
+pr_body: ""
+releasenote:
+  text: |-
+    Promoted the `KubeProxyNFTablesLocalhostNodePorts` feature gate to Beta and enabled it by default.
+  sigs:
+  - network
+  kinds:
+  - feature

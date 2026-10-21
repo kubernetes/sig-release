@@ -1,0 +1,11 @@
+pr: 142458
+pr_body: ""
+releasenote:
+  text: |-
+    Limited the `kubelet` pods API gRPC server to 100 concurrent streams per connection and applied its request rate limit to `WatchPods` stream openings.
+  sigs:
+  - node
+  kinds:
+  - cleanup
+  areas:
+  - kubelet

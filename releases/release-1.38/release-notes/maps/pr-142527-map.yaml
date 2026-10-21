@@ -1,0 +1,9 @@
+pr: 142527
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `k8s.io/apimachinery/pkg/util/yaml` silently dropping the last line of a YAML stream when it has no trailing newline and its length is an exact multiple of the reader buffer size.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

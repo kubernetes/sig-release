@@ -1,0 +1,10 @@
+pr: 142192
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the HorizontalPodAutoscaler utilization and usage calculations wrapping to a wrong or negative current value when pod metric or request totals exceeded `int64` or the utilization percentage exceeded `int32`; the reported percentage saturates at the `int32` limit.
+  sigs:
+  - apps
+  - autoscaling
+  kinds:
+  - bug

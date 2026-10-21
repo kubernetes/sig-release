@@ -1,0 +1,15 @@
+pr: 142202
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed DRA consumable capacity requests failing when the request used a fully-qualified capacity name. Requests work with both the unqualified name, as published by drivers (typically without the driver name prefix), and the fully-qualified name. A related, less likely problem also occurred when a DRA driver changed how it published capacity after some capacity had already been allocated.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - code-generation

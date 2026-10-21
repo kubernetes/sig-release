@@ -1,0 +1,12 @@
+pr: 141699
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a regression in `kubelet` on Windows where the container log file could not be read when the container log directory is a volume mount point (reparse point) onto a secondary disk, because symbolic-link resolution cannot traverse such mount points.
+  sigs:
+  - node
+  - windows
+  kinds:
+  - bug
+  areas:
+  - kubelet
