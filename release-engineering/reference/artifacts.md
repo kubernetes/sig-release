@@ -2,7 +2,7 @@
 
 This document describes the artifacts produced by the Kubernetes release
 process. The canonical list of artifacts for any release is available at
-`https://dl.k8s.io/v<version>/`.
+`https://dl.k8s.io/release/v<version>/`.
 
 All binary artifacts include corresponding `.sha256` and `.sha512` checksums.
 
@@ -22,7 +22,7 @@ multi-architecture manifest lists.
 
 ## Binaries
 
-Individual binaries are available at `https://dl.k8s.io/v<version>/bin/<os>/<arch>/`.
+Individual binaries are available at `https://dl.k8s.io/release/v<version>/bin/<os>/<arch>/`.
 
 | Binary                  | linux | darwin | windows |
 | ----------------------- | :---: | :----: | :-----: |
@@ -49,6 +49,7 @@ node binaries. Windows/arm64 provides only kubectl. See the
 | kubernetes-server-**[system-arch]**.tar.gz  |        |  ✅   |         |          |
 | kubernetes-node-**[system-arch]**.tar.gz    |        |  ✅   |   ✅    |          |
 | kubernetes-test-**[system-arch]**.tar.gz    |   ✅   |  ✅   |   ✅    |    ✅    |
+| kubernetes-manifests.tar.gz                 |        |       |         |    ✅    |
 | kubernetes-src.tar.gz                       |        |       |         |    ✅    |
 | kubernetes.tar.gz                           |        |       |         |    ✅    |
 
@@ -75,8 +76,8 @@ for repository setup instructions.
 
 | Package                                         | amd64 | arm64 | ppc64el | s390x |
 | ----------------------------------------------- | :---: | :---: | :-----: | :---: |
-| cri-tools-**[version]**.**[arch]**.deb           |  ✅   |  ✅   |   ✅    |  ✅   |
-| kubeadm-**[version]**.**[arch]**.deb             |  ✅   |  ✅   |   ✅    |  ✅   |
-| kubectl-**[version]**.**[arch]**.deb             |  ✅   |  ✅   |   ✅    |  ✅   |
-| kubelet-**[version]**.**[arch]**.deb             |  ✅   |  ✅   |   ✅    |  ✅   |
-| kubernetes-cni-**[version]**.**[arch]**.deb      |  ✅   |  ✅   |   ✅    |  ✅   |
+| cri-tools_**[version]**_**[arch]**.deb           |  ✅   |  ✅   |   ✅    |  ✅   |
+| kubeadm_**[version]**_**[arch]**.deb             |  ✅   |  ✅   |   ✅    |  ✅   |
+| kubectl_**[version]**_**[arch]**.deb             |  ✅   |  ✅   |   ✅    |  ✅   |
+| kubelet_**[version]**_**[arch]**.deb             |  ✅   |  ✅   |   ✅    |  ✅   |
+| kubernetes-cni_**[version]**_**[arch]**.deb      |  ✅   |  ✅   |   ✅    |  ✅   |
