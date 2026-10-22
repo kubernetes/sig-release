@@ -23,7 +23,7 @@ If you want to add a Blocking job, please ask to add them to the appropriate
 Informing dashboard first. The release team can later decide if the test should
 be moved to the Blocking dashboard.
 
-Additional documentation may be found in the [CI Signal Role Handbook](./release-team/role-handbooks/ci-signal/README.md).
+Additional documentation may be found in the [Release Signal Role Handbook](./release-team/role-handbooks/release-signal/README.md).
 
 ## Release-Blocking Criteria and Dashboard
 
