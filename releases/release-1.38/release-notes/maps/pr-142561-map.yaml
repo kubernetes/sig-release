@@ -1,26 +1,5 @@
+---
 pr: 142561
-pr_body: "#### What type of PR is this?\r\n/kind feature\r\n\r\n#### What this PR
-  does / why we need it:\r\nInitial implementation of Future Conformance, including
-  marking the \"Services should support named targetPorts that resolve to different
-  ports on different endpoints\" test as 1.41 conformance, and generating the initial
-  `future-conformance.yaml`.\r\n\r\nI initially updated all of the existing conformance
-  tests to use `WithConformanceVersion` as well, but it turns out that for the moment,
-  we can't switch the `conformance.yaml` generation over to using the semver constraints
-  rather than the doc comments because of a bug in ginkgo (https://github.com/onsi/ginkgo/pull/1687).
-  So I split that out for now.\r\n\r\n#### Which issue(s) this PR is related to:\r\nKEP:
-  https://github.com/kubernetes/enhancements/issues/5922\r\n\r\nFixes #132954\r\n(promoting
-  the targetPort test to conformance)\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n```release-note\r\nThe e2e test \"Services should support named targetPorts
-  that resolve to different ports on different endpoints\" is now labeled `[FutureConformance]`
-  and `[Conformance: [>=1.41]]`, indicating that it will become a Conformance requirement
-  in Kubernetes 1.41. Third party service proxy implementations should ensure that
-  they implement this functionality correctly before then.\r\n\r\n(This is the first
-  e2e test to make use of `[FutureConformance]` labeling, introduced in 1.38.)\r\n```\r\n\r\n/assign
-  @dims @BenTheElder @pohly "
 releasenote:
-  text: 'Added `[FutureConformance]` and `[Conformance: [>=1.41]]` labels to the e2e
-    test "Services should support named targetPorts that resolve to different ports
-    on different endpoints", indicating that it will become a Conformance requirement
-    in Kubernetes `v1.41`. Third-party service proxy implementations should ensure
-    they implement this functionality correctly before then. (This is the first e2e
-    test to use the `[FutureConformance]` labeling introduced in `v1.38`.)'
+  text: |-
+    Added `[FutureConformance]` and `[Conformance: [>=1.41]]` labels to the e2e test "Services should support named targetPorts that resolve to different ports on different endpoints", indicating that it will become a Conformance requirement in Kubernetes `v1.41`. Third-party service proxy implementations should ensure they implement this functionality correctly before then. This is the first e2e test to use the `[FutureConformance]` labeling introduced in `v1.38`.

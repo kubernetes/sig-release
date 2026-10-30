@@ -1,30 +1,4 @@
+---
 pr: 143288
-pr_body: |-
-  #### What type of PR is this?
-
-  /kind bug
-  /kind cleanup
-
-  #### What this PR does / why we need it:
-
-  - Removes the OpenAPI v2 `QueryParamVerifier` fallback from `kubectl`'s `Validator()` and marks `NewQueryParamVerifier`, `QueryParamVerifier`, and `NewFallbackQueryParamVerifier` as deprecated.
-  - Fixes `supportsQueryParamV3` to return `NewParamUnsupportedError` when a GVK has no `PATCH` operation in OpenAPI v3 (such as `ReplicationControllerList` or `ServiceList`).
-
-  #### Which issue(s) this PR fixes:
-
-  Fixes #143292
-  Part of #126849
-
-  #### Special notes for your reviewer:
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Fixed a bug where `kubectl` OpenAPI v3 query parameter verification failed on typed `*List` resources (such as `ReplicationControllerList` and `ServiceList`) and fell back to downloading `/openapi/v2`.
-  ```
 releasenote:
-  kinds:
-  - bug
-  text: Fixed an issue where `kubectl` OpenAPI v3 query parameter verification failed
-    on typed *List resources (such as ReplicationControllerList and ServiceList) and
-    fell back to downloading `/openapi/v2`.e
+  text: Fixed an issue where `kubectl` OpenAPI v3 query parameter verification failed on typed *List resources (such as ReplicationControllerList and ServiceList) and fell back to downloading `/openapi/v2`.
