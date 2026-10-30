@@ -1,37 +1,6 @@
+---
 pr: 142575
-pr_body: "#### What type of PR is this?\r\n\r\n/kind cleanup\r\n/sig api-machinery\r\n\r\n####
-  What this PR does / why we need it:\r\n\r\n`decodeToList` read each list item three
-  times: into `list.Object` with the items included, into a struct that collected
-  the raw items, and again from each item's raw bytes. The dynamic client's `List`
-  and `kubectl get -o json` go through it.\r\n\r\nThis PR decodes the list once with
-  json/v2, following liggitt's suggestion in review. `util/json` gets `CaseSensitivePreserveIntsV2Options`,
-  which decodes like `Unmarshal` into `interface{}` values. `decodeToList` decodes
-  `items` as maps and every other member into `list.Object`.\r\n\r\n`BenchmarkDecodeList`,
-  12 runs, go1.27.0, Apple M4 Pro. Time is the fastest run, as the machine was loaded.\r\n\r\n|
-  | master | this PR |\r\n|---|---|---|\r\n| pods-10 | 220µs, 226KiB, 4,243 allocs
-  | 148µs, 117KiB, 2,657 allocs |\r\n| pods-1000 | 22ms, 21.9MiB, 421k allocs | 15ms,
-  11.2MiB, 263k allocs |\r\n| large-strings-10 | 9.7ms, 3.3MiB, 510 allocs | 0.8ms,
-  1.1MiB, 274 allocs |\r\n\r\nWell-formed lists decode as before. I compared master
-  and this branch locally over 22,000 inputs through every `UnstructuredJSONScheme`
-  entry point, including list responses recorded from a kube-apiserver, and over dynamic
-  client, informer and `kubectl get` output. Malformed input differs in error text,
-  in what a failed decode leaves in the list, and in repeated `items` keys: master
-  keeps the last array and this merges the arrays element by element. Decoding `null`
-  into a list that already has content keeps its members.\r\n\r\njson/v2 is slower
-  than master for lists with large members other than `items` and for deeply nested
-  arrays inside items, by up to 1.5x. It allocates several times as many objects for
-  arrays of bare booleans or nulls, with half the bytes. List responses have small
-  top-level members, while deep nesting and boolean arrays are possible in custom
-  resources.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\n```\r\nmake test WHAT=./staging/src/k8s.io/apimachinery/...\r\ngo
-  test -run '^$' -bench BenchmarkDecodeList -count 12 ./staging/src/k8s.io/apimachinery/pkg/apis/meta/v1/unstructured/\r\n```\r\n\r\n`make
-  test` also passes for client-go, cli-runtime, kubectl, apiextensions-apiserver,
-  and the apiserver endpoints and admission packages.\r\n\r\n#### Does this PR introduce
-  a user-facing change?\r\n\r\n```release-note\r\nDecoding JSON lists into `unstructured.UnstructuredList`,
-  as the dynamic client and `kubectl get -o json` do, now uses about half the memory,
-  and decode time drops by about a third.\r\n```\r\n\r\n#### AI usage disclosure:\r\n\r\nYES.
-  An AI coding assistant (Claude Opus 5.5) helped write the change and the tests.
-  I reviewed the diff, and ran the tests and benchmarks.\r\n"
+pr_body: ''
 releasenote:
   text: Improved memory and CPU efficiency when decoding JSON lists into `unstructured.UnstructuredList`
     (such as in the dynamic client and `kubectl get -o json`), reducing memory usage

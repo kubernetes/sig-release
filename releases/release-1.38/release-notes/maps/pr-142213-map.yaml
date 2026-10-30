@@ -1,21 +1,6 @@
+---
 pr: 142213
-pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
-  does / why we need it:\r\n\r\n`describeContainerEnvVars` switches over the `EnvVarSource`
-  kinds it knows about and has no case for `fileKeyRef` (KEP-3721 / `EnvFiles`), so
-  an env var whose only source is a file key produced no output at all under `Environment:`,
-  not even its name. This adds the missing case and renders it in the same style as
-  the other key references:\r\n\r\n```\r\n      TOKEN:  <set to the key 'TOKEN' of
-  file 'app.env' in volume 'config'>  Optional: false\r\n```\r\n\r\nThe two new `TestDescribeContainers`
-  cases fail before the change (the variable is absent from the output) and pass after
-  it. I also ran them against the `v1.37.0` tag to confirm the release is affected.\r\n\r\n####
-  Which issue(s) this PR is related to:\r\n\r\nFixes #142208\r\n\r\n#### Special notes
-  for your reviewer:\r\n\r\nOutput wording mirrors the existing `configMapKeyRef`
-  / `secretKeyRef` lines. No behaviour change for any other env var source.\r\n\r\n####
-  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nkubectl describe
-  pod now lists environment variables that are sourced from a file (valueFrom.fileKeyRef).
-  Previously they were omitted from the Environment section.\r\n```\r\n\r\n#### Additional
-  documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\n-
-  [KEP]: https://github.com/kubernetes/enhancements/issues/3721\r\n```\r\n"
+pr_body: ''
 releasenote:
   text: Fixed `kubectl describe pod` to list environment variables sourced from a
     file (`valueFrom.fileKeyRef`) in the Environment section.

@@ -1,16 +1,6 @@
+---
 pr: 142830
-pr_body: "#### What type of PR is this?\r\n/kind feature\r\n/kind api-change\r\n/sig
-  scheduling\r\n/wg workload-aware-scheduling\r\n\r\n#### What this PR does / why
-  we need it:\r\n\r\nWe are extending the validation for the Workload API to enforce
-  these invariants and prevent semantically improper parent-child relationships:\r\n-
-  A composite podgroup template with `gang` scheduling policy, must have its child
-  templates with `gang` scheduling policy as well. \r\n- A composite podgroup template
-  with `all` disruption mode, must have its child templates with `all` disruption
-  mode as well.\L\r\n\r\n#### Which issue(s) this PR is related to:\r\nKEP: https://github.com/kubernetes/enhancements/issues/6012\r\n\r\n####
-  Special notes for your reviewer:\r\nNone\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n```release-note\r\nExtend Workload API validation to require child templates
-  of a CompositePodGroupTemplate with a `gang` scheduling policy or `all` disruption
-  mode to also use a `gang` scheduling policy or `all` disruption mode, respectively.\r\n```"
+pr_body: ''
 releasenote:
   text: Extended Workload API validation to require child templates of a CompositePodGroupTemplate
     with a `gang` scheduling policy or `all` disruption mode to also use a `gang`

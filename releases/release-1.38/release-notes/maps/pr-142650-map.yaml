@@ -1,22 +1,6 @@
+---
 pr: 142650
-pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
-  does / why we need it:\r\n\r\n`reconcileOldReplicaSets` ignored errors from `cleanupUnhealthyReplicas`
-  and `scaleDownOldReplicaSetsForRollingUpdate` by returning `false, nil`. When an
-  old ReplicaSet scale-down failed during a rolling update, sync looked successful
-  and the workqueue did not retry via `AddRateLimited`.\r\n\r\nPropagate those errors
-  the same way `reconcileNewReplicaSet` already does, and add a unit test that injects
-  a ReplicaSet update failure.\r\n\r\n/sig apps\r\n\r\n#### Which issue(s) this PR
-  is related to:\r\n\r\nN/A\r\n\r\n#### Special notes for your reviewer:\r\n\r\n-
-  Only the error-return paths in `reconcileOldReplicaSets` change; \"cannot scale
-  down yet\" still returns `nil`.\r\n- Unit test: `TestDeploymentController_reconcileOldReplicaSetsScaleError`
-  (regression for this bug). `reconcileNewReplicaSet` already returned scale errors;
-  no matching error-injection test existed there, so this PR does not add one.\r\n\r\n####
-  Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nThe Deployment
-  controller now retries when scaling down an old ReplicaSet fails during a rolling
-  update, instead of treating that failure as success.\r\n```\r\n\r\n#### Additional
-  documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\nN/A\r\n\r\n####
-  AI usage disclosure:\r\n\r\nYES. AI-assisted tools were used for implementation
-  and test drafting; I reviewed and validated the final change."
+pr_body: ''
 releasenote:
   text: Fixed the Deployment controller to retry when scaling down an old ReplicaSet
     fails during a rolling update, instead of treating that failure as a success.

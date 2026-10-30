@@ -1,28 +1,6 @@
+---
 pr: 142791
-pr_body: |
-  #### What type of PR is this?
-
-  /kind cleanup
-
-  #### What this PR does / why we need it:
-
-  Adds the `kustomize_disable_go_plugin_support` build tag to the binaries. kubectl never loads kustomize Go plugins. With cgo, the std `plugin` package makes the linker treat the binary as dynamically linking Go and keep every method, exported or not. kubectl built on darwin with cgo: 60.8 MB to 56.8 MB. Static release builds are unchanged. Split out of #142698 as asked in https://github.com/kubernetes/kubernetes/pull/142698#discussion_r4206541886.
-
-  #### Which issue(s) this PR is related to:
-
-  Related to #142698
-
-  #### Special notes for your reviewer:
-
-  With the tag, `go list -deps ./cmd/kubectl` no longer contains `plugin`, and `kubectl kustomize` renders a kustomization identically with both builds. Loading a Go `.so` plugin under `--enable-alpha-plugins` now fails with "plugin load is disabled"; static builds already failed with "plugin: not implemented". Exec and KRM function plugins are unaffected.
-
-  AI usage disclosure: YES. An AI assistant helped measure and draft the change; the author reviewed everything.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  kubectl kustomize no longer loads kustomize Go (`.so`) plugins; exec and KRM function plugins are unaffected. Static release binaries never loaded `.so` plugins.
-  ```
+pr_body: ''
 releasenote:
   text: Removed support for loading kustomize Go (`.so`) plugins in `kubectl kustomize`.
     Exec and KRM function plugins are unaffected; static release binaries never loaded

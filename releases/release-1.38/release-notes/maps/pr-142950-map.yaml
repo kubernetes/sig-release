@@ -1,39 +1,6 @@
+---
 pr: 142950
-pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
-  does / why we need it:\r\n\r\n- Fixes scheduler event handling for `PodGroup` and
-  `CompositePodGroup` objects that are deleted and recreated with the same namespace
-  and name.\r\n- Kubernetes informers may coalesce a deletion and subsequent recreation
-  into a single update notification.\r\n- In this scenario, the old and new objects
-  have the same namespace and name but different UIDs, representing different object
-  instances.\r\n- Previously, the scheduler's update handlers treated these notifications
-  as ordinary updates instead of explicitly removing the old object and adding the
-  replacement.\r\n- Updates `updatePodGroup` and `updateCompositePodGroup` to compare
-  the UIDs of the old and new objects.\r\n- When the UIDs differ, the handlers process
-  the event as a deletion of the old object followed by an addition of the new object.\r\n-
-  Preserves the existing update behavior when both objects have the same UID.\r\n-
-  Retains the resource-version equality check for same-UID objects, while ensuring
-  a UID mismatch takes precedence over that check.\r\n- Preserves event-handling metric
-  semantics by recording replacement events through the delete and add handlers rather
-  than as ordinary updates.\r\n- Adds regression tests for both resource types, covering
-  replacement scenarios with different UIDs.\r\n\r\n#### Which issue(s) this PR is
-  related to:\r\n\r\nFixes #142930\r\n\r\n#### Special notes for your reviewer:\r\n\r\n-
-  The change is limited to scheduler event handling for `PodGroup` and `CompositePodGroup`
-  resources.\r\n- Objects with matching UIDs continue through the existing update
-  path, including the resource-version no-op check.\r\n- Objects with different UIDs
-  are handled as a deletion of the old object followed by an addition of the new object.\r\n-
-  Regression tests cover replacement events for both resource types.\r\n- No public
-  API or resource schema changes are introduced.\r\n- Validation performed locally:\r\n
-  \ - `go test ./pkg/scheduler -run 'Test(UpdatePodGroup|UpdateCompositePodGroup)$'
-  -count=1`\r\n  - `go test ./pkg/scheduler -count=1`\r\n  - `git diff --check`\r\n-
-  All listed tests passed locally.\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n\r\n```release-note\r\nkube-scheduler: PodGroup and CompositePodGroup
-  objects that are deleted and recreated under the same name while the scheduler's
-  watch is interrupted are now processed as a deletion followed by an addition rather
-  than an in-place update, keeping the scheduler's cache and queue hierarchy consistent.\r\n```\r\n\r\n####
-  AI usage disclosure:\r\n\r\n- YES. AI assistance was used for support with some
-  testing and test-related analysis.\r\n- The author is responsible for reviewing
-  and validating all submitted changes and ensuring compliance with the Kubernetes
-  contribution guidelines, including `AGENTS.md` and `CONTRIBUTING.md` where applicable."
+pr_body: ''
 releasenote:
   text: Fixed `kube-scheduler` handling of PodGroup and CompositePodGroup objects
     deleted and recreated under the same name during a watch interruption, processing

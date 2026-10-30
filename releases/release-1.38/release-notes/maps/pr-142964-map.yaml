@@ -1,12 +1,6 @@
+---
 pr: 142964
-pr_body: "#### What type of PR is this?\n\n/kind cleanup\n\n#### What this PR does
-  / why we need it:\n\n`int64` is what the implementation can support. Larger numbers
-  shouldn't be needed, but where allowed by the official semver regular expression.\n\n####
-  Which issue(s) this PR is related to:\n\nhttps://github.com/kubernetes/kubernetes/pull/142406#discussion_r4223560509\n\n####
-  Special notes for your reviewer:\n\n/cc @harche \n\n#### Does this PR introduce
-  a user-facing change?\n```release-note\nDRA ResourceSlice validation: new version
-  numbers in device attributes must fit into int64.\n```\n\n#### AI usage disclosure:\n\nYES:
-  code generated."
+pr_body: ''
 releasenote:
   text: Updated Dynamic Resource Allocation (DRA) ResourceSlice validation to require
     version numbers in device attributes to fit into `int64`.

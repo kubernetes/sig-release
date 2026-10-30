@@ -1,18 +1,6 @@
+---
 pr: 140939
-pr_body: |
-  Adds the `OpenAPIV2LazyBuild` feature gate (beta, on by default). Today the OpenAPI v2 spec is built at startup and kept for the life of the process even if `/openapi/v2` is never requested. With the gate on, it is built on the first request instead.
-
-  - `GenericAPIServer.StaticOpenAPISpec` becomes a `cached.Value[*spec.Swagger]` (a `cached.Once`), built in `PrepareRun` when the gate is off, or on first `Get` when it is on. The CRD OpenAPI controller takes the same value.
-  - The build runs once; the result, including an error, is cached. Gate off: a broken spec still fails startup. Gate on: it is logged once; the server's own `/openapi/v2` serves 503, and the aggregated `/openapi/v2` omits that server's APIs, as it does today for any delegate whose spec is unavailable.
-  - `routes.InstallV2` now returns the `cached.Value` instead of building the spec.
-  - Tests: unit (build on demand, build once, cached error, byte/ETag parity with the eager path) and an integration test that reads the heap profile in-process to assert the spec is not built at startup with the gate on and is after the first request to the aggregated endpoint.
-
-  /kind feature
-  /sig api-machinery
-
-  ```release-note
-  Added the `OpenAPIV2LazyBuild` feature gate (beta, enabled by default): kube-apiserver builds the /openapi/v2 spec on first request instead of at startup, reducing memory on clusters that rarely or never request it. Served content, ETags and update behavior are unchanged. With the gate enabled, a spec that fails to build no longer fails startup; it is logged and omitted from the aggregated /openapi/v2. Set `--feature-gates=OpenAPIV2LazyBuild=false` to restore eager building. Library consumers: `GenericAPIServer.StaticOpenAPISpec` is now a `cached.Value[*spec.Swagger]`, and `apiextensions-apiserver`'s OpenAPI `Controller.Run` takes one.
-  ```
+pr_body: ''
 releasenote:
   text: 'Added the `OpenAPIV2LazyBuild` feature gate (Beta, enabled by default): `kube-apiserver`
     builds the `/openapi/v2` spec on first request instead of at startup, reducing

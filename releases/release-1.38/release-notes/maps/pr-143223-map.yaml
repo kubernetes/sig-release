@@ -1,44 +1,6 @@
+---
 pr: 143223
-pr_body: |-
-  #### What type of PR is this?
-
-  /kind feature
-
-  #### What this PR does / why we need it:
-
-  The device manager already tracks how many devices it considers healthy and unhealthy for each resource, and never reports it. The only device-plugin metrics kubelet exposes are `device_plugin_registration_total` and `device_plugin_alloc_duration_seconds`, so from outside a node the single observable symptom of devices going bad is `allocatable` shrinking — which conflates three different causes: the plugin reported devices unhealthy, the plugin deregistered, or the hardware is gone. An operator cannot tell them apart from metrics alone.
-
-  This adds `kubelet_device_plugin_devices{resource_name, health_state}`, an ALPHA gauge sourced from the sets `GetCapacity` already walks.
-
-  Two cases motivate it concretely. A healthy device turning unhealthy leaves node **capacity** unchanged, because capacity counts both sets and only allocatable counts healthy devices — so the event is at best inferable by diffing two other series. And a resource whose devices have all gone unhealthy looks exactly like a resource whose plugin went away, since both end up at zero allocatable.
-
-  #### Which issue(s) this PR is related to:
-
-  Related to #140656 (structured GPU device health reporting) and #123037 (observability of the kubelet managers). It does not resolve either: this reports only the healthy/unhealthy split kubelet already knows, and takes no position on the richer device-health API discussed in #140656.
-
-  #### Special notes for your reviewer:
-
-  **Why `GetCapacity`.** The counts change in four places, but `GetCapacity` is the one that already holds `m.mutex` and already iterates exactly `m.healthyDevices` and `m.unhealthyDevices` to compute capacity and allocatable, and its `deletedResources` loop is where resources are garbage collected. Instrumenting there is three lines in one function instead of four scattered sites, and the series cleanup falls out naturally. The refresh cadence becomes the node status sync rather than every `ListAndWatch` message, which seems right for a gauge.
-
-  **Why the series are deleted.** Resources really are removed from the maps in that loop, so without removing the series too, the last observed counts would be reported forever for a resource that no longer exists. The `GaugeVec` in `component-base` has no `DeletePartialMatch`, so this is two explicit `DeleteLabelValues` calls.
-
-  **Naming.** #140656 proposed `kubelet_device_health_state{resource,device,state}`. I went with `device_plugin_devices{resource_name,health_state}` to stay inside the existing `device_plugin_*` family and to follow `kubelet_running_containers{container_state}` — a gauge whose value is a count, with the state in a label. Happy to rename if reviewers prefer the other form.
-
-  **No per-device label, deliberately.** Whole-device plugins advertise one ID per card, where a `device` label would be fine. Shared-resource plugins advertise synthetic quota units instead — the RDMA shared device plugin publishes several dozen identical units per node — so a per-device label there yields many series that carry no information, because the IDs do not correspond to distinct hardware. Per-device detail is already available through the podresources API.
-
-  **Test.** `TestGetCapacityDevicePluginDevicesMetric` covers the initial split, a healthy-to-unhealthy transition that moves a device between the two series while capacity is unchanged, and removal of the series when the endpoint's grace period expires and the resource is garbage collected. I checked that it fails if the two label values are swapped and if the `DeleteLabelValues` calls are dropped, so it is not passing vacuously.
-
-  **Unrelated flake, for the record.** `TestDevicePluginReRegistrationProbeMode` fails intermittently for me on an unmodified tree — 3 of 5 runs on darwin/arm64, at `manager_test.go:291` expecting 1 and getting 2. It is pre-existing and not touched by this change, and I have not checked whether it reproduces on a platform CI actually runs.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  kubelet: added the ALPHA metric `kubelet_device_plugin_devices`, a gauge of the number of devices the device manager currently knows about, broken down by `resource_name` and `health_state` (`healthy` or `unhealthy`). This makes devices reported unhealthy by a device plugin distinguishable from devices that are gone because the plugin deregistered, which previously both appeared only as a drop in allocatable.
-  ```
-
-  #### AI usage disclosure:
-
-  YES. The code and test in this PR were written with Claude Code, working from my analysis of where the counts were already tracked and unreported. I directed the design decisions above (instrumenting `GetCapacity`, the metric name, the absence of a per-device label), reviewed the diff, and ran the tests and the mutation checks described above. I am responsible for all of it; the usual disclaimer applies that no tool's output should be taken on trust, including mine.
+pr_body: ''
 releasenote:
   text: Added the Alpha metric `kubelet_device_plugin_devices` in `kubelet`, a gauge
     of the number of devices the device manager knows about, broken down by `resource_name`

@@ -1,27 +1,6 @@
+---
 pr: 137133
-pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
-  PR does / why we need it:\r\nIntroduce a new evictionrequest-controller to observe
-  and manage the new Eviction and EvictionRequest APIs from the lifecycle API group.
-  It automatically creates Evictions according to EvictionRequests and coordinates
-  external responders via eviction status, ensuring that the eviction contract is
-  upheld.\r\n\r\n#### Which issue(s) this PR is related to:\r\nKEP: https://github.com/kubernetes/enhancements/issues/4563\r\n\r\n####
-  Special notes for your reviewer:\r\nIntroduces a new kube-controller-manager controller
-  (evictionrequests) for managing EvictionRequests.\r\n\r\nDepends on the EvictionRequest
-  API: https://github.com/kubernetes/kubernetes/pull/137050\r\n\r\nTODO:\r\n\r\n *
-  [ ]  EvictionRequest tests\r\n\r\n#### Does this PR introduce a user-facing change?\r\n```release-note\r\nIntroduce
-  a new evictionrequest-controller to observe and manage the new Eviction and EvictionRequest
-  APIs from the lifecycle API group. It automatically creates Evictions according
-  to EvictionRequests and coordinates external responders via eviction status, ensuring
-  that the eviction contract is upheld.\r\n```\r\n\r\n#### Additional documentation
-  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n<!--\r\nThis
-  section can be blank if this pull request does not require a release note.\r\n\r\nWhen
-  adding links which point to resources within git repositories, like\r\nKEPs or supporting
-  documentation, please reference a specific commit and avoid\r\nlinking directly
-  to the master branch. This ensures that links reference a\r\nspecific point in time,
-  rather than a document that may change over time.\r\n\r\nSee here for guidance on
-  getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
-  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
-  <link>\r\n- [Other doc]: <link>\r\n-->\r\n"
+pr_body: ''
 releasenote:
   text: Introduced the `evictionrequest-controller` to observe and manage the Eviction
     and EvictionRequest APIs from the lifecycle API group. It automatically creates

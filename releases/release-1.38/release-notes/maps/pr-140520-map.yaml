@@ -1,21 +1,5 @@
+---
 pr: 140520
-pr_body: "\r\n\r\n\r\n#### What type of PR is this?\r\n\r\n/kind documentation\r\n\r\n####
-  What this PR does / why we need it:\r\n\r\n1. fix inconsistent indentation\r\nfrom
-  \r\n<img width=\"781\" height=\"267\" alt=\"image\" src=\"https://github.com/user-attachments/assets/97db9411-fb30-44d9-a681-a318f18cc0d1\"
-  />\r\nresults\r\n\r\n<img width=\"791\" height=\"527\" alt=\"image\" src=\"https://github.com/user-attachments/assets/ce20a441-0b79-45ee-b86c-65857b23777c\"
-  />\r\n\r\n\r\n2. prevent wildcard asterisks from being parsed as emphasis\r\n\r\n
-  from\r\n<img width=\"697\" height=\"133\" alt=\"image\" src=\"https://github.com/user-attachments/assets/215c25a8-02f8-4ee2-bfbe-aad5493e2a12\"
-  />\r\n<img width=\"463\" height=\"203\" alt=\"image\" src=\"https://github.com/user-attachments/assets/006fd3ff-eb9c-4141-9495-6f1a020e0af1\"
-  />\r\n\r\nresults\r\n<img width=\"547\" height=\"117\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7c767f4a-2c94-4ae0-a3ce-ddfc732063f8\"
-  />\r\n<img width=\"505\" height=\"157\" alt=\"image\" src=\"https://github.com/user-attachments/assets/dae64b48-676e-4d26-a5d1-dc6015e71457\"
-  />\r\n\r\n\r\n\r\n3. escape angle-bracketed placeholders to prevent hidden text\r\nfrom\r\n<img
-  width=\"474\" height=\"101\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c2c1d916-66b9-4839-924e-f6506fa535a9\"
-  />\r\nresults\r\n<img width=\"408\" height=\"102\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0b71f161-37ad-4fd1-ac90-49febfa7922e\"
-  />\r\n\r\n\r\n\r\n#### Which issue(s) this PR is related to:\r\nN/A\r\nbut, References:
-  https://github.com/kubernetes-sigs/reference-docs/pull/455#issuecomment-4583177156\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n\r\n```release-note\r\nkubelet-config: (v1beta1) improve documentation
-  readability\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement
-  Proposals), usage docs, etc.:"
+pr_body: ''
 releasenote:
   text: Improved documentation readability for the `kubelet` configuration API (`v1beta1`).

@@ -1,35 +1,6 @@
+---
 pr: 143284
-pr_body: |-
-  #### What type of PR is this?
-
-  /kind feature
-
-  #### What this PR does / why we need it:
-
-  Add 2 new metrics to track errors from pod sync:
-  1. `kubelet_sync_result_errors_total`: a counter that is incremented for every error returned in a `SyncResult`, with a label for the sync action.
-  2. `kubelet_pod_worker_errors_total`: a counter for any error raised during the pod worker loop.
-
-  These metrics were proposed as part of the Dynamic Containers PRR: https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5972-dynamic-containers/README.md#are-there-any-missing-metrics-that-would-be-useful-to-have-to-improve-observability-of-this-feature
-
-  #### Which issue(s) this PR is related to:
-
-  https://github.com/kubernetes/enhancements/issues/5972
-
-  #### Special notes for your reviewer:
-
-  #### Does this PR introduce a user-facing change?
-  ```release-note
-  Add 2 new metrics to track errors syncing pods:
-  1. `kubelet_sync_result_errors_total`: a counter that is incremented for every failed sync action.
-  2. `kubelet_pod_worker_errors_total`: a counter for any error raised during the pod worker loop.
-  ```
-
-  #### AI usage disclosure:
-
-  YES. AI written, human reviewed.
-
-  /sig node
+pr_body: ''
 releasenote:
   text: Added the `kubelet_sync_result_errors_total` metric (counter incremented for
     every failed sync action) and `kubelet_pod_worker_errors_total` metric (counter

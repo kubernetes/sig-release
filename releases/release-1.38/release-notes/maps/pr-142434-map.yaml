@@ -1,32 +1,6 @@
+---
 pr: 142434
-pr_body: |
-  #### What type of PR is this?
-
-  /kind feature
-
-  #### What this PR does / why we need it:
-
-  `InitializeTLS` generates a self-signed serving certificate when neither `serverTLSBootstrap` nor an explicit certificate is configured. That path called `GenerateSelfSignedCertKey`, which always produces a 2048-bit RSA key, and ignored `serverCertificateKeyAlgorithm` even though it has `KubeletConfiguration` in hand.
-
-  Nothing rejects the combination, so the field is silently dropped: config validation accepts `serverCertificateKeyAlgorithm` regardless of `serverTLSBootstrap`, and only requires TLS 1.3 for the ML-DSA variants. The bootstrapped path already honors the field (`pkg/kubelet/certificate/kubelet.go`), so the two ways a kubelet can get a serving certificate disagreed—and they disagreed even with the field unset, since it documents and defaults to ECDSA-P256 while this path produced RSA-2048.
-
-  This PR passes the same key generator the bootstrapped path uses, via the `GenerateKey` option added in #142350. A cluster asking for ML-DSA serving keys now gets them on both paths.
-
-  Part of #141838.
-
-  #### Which issue(s) this PR fixes:
-
-  Fixes #
-
-  #### Special notes for your reviewer:
-
-  New table test `TestInitializeTLSSelfSignedKeyAlgorithm` asserts the exact key in the generated certificate (curve for ECDSA, bit length for RSA, parameter set for ML-DSA) across unset / ECDSA-P384 / RSA-4096 / ML-DSA-65. Verified all four fail without the change—the unset case reports generated cert key = RSA 2048, want ECDSA P-256.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Kubelet now honors serverCertificateKeyAlgorithm when generating its self-signed serving certificate. Previously that certificate was always RSA-2048; it now uses the configured algorithm, defaulting to ECDSA-P256 as documented.
-  ```
+pr_body: ''
 releasenote:
   text: Updated `kubelet` to honor `serverCertificateKeyAlgorithm` when generating
     its self-signed serving certificate. Previously, that certificate was always RSA-2048;

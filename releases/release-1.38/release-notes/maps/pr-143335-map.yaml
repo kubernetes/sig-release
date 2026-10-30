@@ -1,32 +1,6 @@
+---
 pr: 143335
-pr_body: |
-  #### What type of PR is this?
-
-  /kind cleanup
-
-  #### What this PR does / why we need it:
-
-  Removes the GA `ExecProbeTimeout` feature gate.
-
-  The gate graduated to GA in 1.20 and was locked to default in 1.35. Under the three-release emulation window (`minRemovalVer = specVer.AddMinor(3)`), 1.38 is the first release where the feature gate can be dropped.
-
-  The exec probe timeout behavior in kubelet is unconditional, and no code references remain outside the gate's registration.
-
-  Regenerated feature gate references in `test/compatibility_lifecycle/reference/`.
-
-  #### Which issue(s) this PR fixes:
-
-  Fixes #
-
-  #### Special notes for your reviewer:
-
-  /sig node
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  The `ExecProbeTimeout` feature gate, which was graduated to GA and locked to default in 1.35, has been removed.
-  ```
+pr_body: ''
 releasenote:
   text: Removed the `ExecProbeTimeout` feature gate, which was graduated to GA in
     `v1.35`.

@@ -1,25 +1,5 @@
+---
 pr: 142702
-pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
-  PR does / why we need it:\r\n\r\nGraduates the `ShardedListAndWatch` feature gate
-  to Beta.\r\n\r\nTested 10,000 Pods (~2.7 KB each) across 10 `kube-state-metrics`
-  shards:\r\n\r\n|Metric|Client-Side|Server-Side|Delta|\r\n|---|---:|---:|---:|\r\n|apiserver
-  watch events|100,027|10,012|-90%|\r\n|apiserver CPU|11.0s|1.2s|-89%|\r\n|apiserver
-  heap allocs|600 MiB|78 MiB|-87%|\r\n|apiserver RSS growth|+77 MiB|+16 MiB|-79%|\r\n|kube-state-metrics
-  CPU (per shard)|1.07s|0.31s|-71%|\r\n|kube-state-metrics heap allocs (per shard)|113
-  MiB|44 MiB|-61%|\r\n\r\nI am actually quite surprised by the result. Sharding is
-  expected to reduce events and help on the controller side, but apiserver actually
-  benefits significantly. \r\n\r\nProjected benefits are lower CPU + heap allocs per
-  client shard, and better memory utilization. Secondary benefits include reduced
-  network cost.\r\n\r\nIn theory, the incremental cost of a watcher shouldn't be that
-  high. Unfortunately for WatchList we deepcopy every init event which leads to duplicate
-  work per object during an initial list. As a result sharding performs provides a
-  significant improvement to apiserver load as well during initialization and reconnects.
-  This is a watchlist bug that is being tracked that currently makes sharding results
-  look really great on the apiserver.\r\n\r\n#### Which issue(s) this PR is related
-  to:\r\n\r\nKEP: https://github.com/kubernetes/enhancements/issues/5866\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n\r\n```release-note\r\nGraduates the `ShardedListAndWatch` feature gate
-  to Beta.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement
-  Proposals), usage docs, etc.:\r\n\r\n```docs\r\n- [KEP]: https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/5866-server-side-sharded-list-and-watch\r\n```\r\n"
+pr_body: ''
 releasenote:
   text: Promoted the `ShardedListAndWatch` feature gate to Beta.

@@ -1,59 +1,6 @@
+---
 pr: 143221
-pr_body: |-
-  #### What type of PR is this?
-
-  /kind bug
-  /sig node
-
-  #### What this PR does / why we need it:
-
-  `ParseEnv` currently accepts `KEY='value'#suffix` and returns `value`, whereas Bash interprets that assignment as `value#suffix`.
-
-  The parser trims whitespace after the closing quote before checking for `#`, losing the distinction between a separated comment and an unquoted suffix.
-
-  This change rejects a hash immediately after the closing quote using the existing `unexpected content after closing quote` error. Comments separated by a space or tab remain supported, as do literal hashes inside quoted values.
-
-  Seven table-driven regression cases cover:
-  - Space/tab-separated comments after normal, empty, and multiline values.
-  - Adjacent hash suffixes after normal, empty, and multiline values.
-  - An invalid earlier entry when requesting a later key.
-
-  #### Which issue(s) this PR is related to:
-
-  N/A
-
-  Related precedent: https://github.com/kubernetes/kubernetes/pull/142665 addresses whitespace after `=`, rather than the closing-quote boundary.
-
-  #### Special notes for your reviewer:
-
-  This tightens accepted syntax. Previously accepted entries containing adjacent hash suffixes will now produce parsing errors and may prevent affected containers from starting or restarting.
-
-  For an intended comment, use:
-  `KEY='value' #suffix`
-
-  For an intended literal suffix, use:
-  `KEY='value#suffix'`
-
-  Maintainer feedback on this compatibility change is requested.
-
-  Validation performed during preparation on macOS/arm64 with Go 1.27.3:
-  - Four new rejection cases failed against the original parser.
-  - All seven new cases passed with the parser fix.
-  - `go test -count=1 -race -v ./pkg/kubelet/util/env` passed.
-  - `go vet ./pkg/kubelet/util/env` passed.
-  - Formatting and `git diff --check` passed.
-
-  Full kubelet, integration, end-to-end, Linux, and Windows tests were not run.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Kubelet now rejects env-file entries with a hash immediately after a closing single quote, such as KEY='value'#suffix, instead of silently ignoring the suffix. Action required: add a space or tab before an intended comment, or move an intended literal suffix inside the single quotes. Affected containers may fail to start until these entries are corrected.
-  ```
-
-  #### AI usage disclosure:
-
-  YES. AI assisted with local validation and this description.
+pr_body: ''
 releasenote:
   text: 'ACTION REQUIRED: `kubelet` rejects env-file entries with a hash immediately
     after a closing single quote, such as `KEY=''value''#suffix`, instead of silently

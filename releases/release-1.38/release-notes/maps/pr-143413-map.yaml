@@ -1,8 +1,5 @@
+---
 pr: 143413
-pr_body: "#### What type of PR is this?\n/kind bug\n/sig cli\n\n#### What this PR
-  does / why we need it:\nSSIA\n\n#### Which issue(s) this PR is related to:\nN/A\n\n####
-  Special notes for your reviewer:\n/assign @ardaguclu \n\n#### Does this PR introduce
-  a user-facing change?\n```release-note\nAdd missing newlines when parsing kuberc
-  returns errors.\n```\n\n#### AI usage disclosure:\nNO\n"
+pr_body: ''
 releasenote:
   text: Fixed missing newlines when `kuberc` parsing returns errors.

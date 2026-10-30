@@ -1,46 +1,6 @@
+---
 pr: 143111
-pr_body: |-
-  #### What type of PR is this?
-
-  /kind bug
-
-  #### What this PR does / why we need it:
-
-  The disruption controller only inspected the current pod on updates and only enqueued a single matching PodDisruptionBudget. That left PDB status stale when:
-
-  1. A pod's labels changed so it no longer matched a previously matching PDB (that PDB was never woken).
-  2. Multiple PDBs matched one pod (only one was enqueued, so the others' status could drift).
-
-  This change:
-  - Returns all matching PDBs from the helper and enqueues all of them from add/update/delete.
-  - On pod update, when labels change, also enqueues PDBs that matched the old labels (deduped with current matches).
-
-  Adds unit tests covering label-change enqueue of the previously matching PDB and enqueue of all overlapping PDBs on add.
-
-  /sig apps
-
-  #### Which issue(s) this PR is related to:
-
-  Fixes #143043
-
-  #### Special notes for your reviewer:
-
-  - Overlapping PDBs remain unsupported for eviction; this only fixes status enqueue/reconcile.
-  - Multi-PDB warning event no longer says a PDB was "chose arbitrarily."
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  The PodDisruptionBudget controller now updates PDB status when a pod's labels change away from a previously matching PDB, and when multiple PDBs match the same pod.
-  ```
-
-  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
-
-  N/A
-
-  #### AI usage disclosure:
-
-  YES. AI-assisted tools were used for research and understanding; I wrote, tested and validated the code.
+pr_body: ''
 releasenote:
   text: Updated the PodDisruptionBudget controller to update PDB status when a Pod's
     labels change away from a previously matching PDB, and when multiple PDBs match

@@ -1,35 +1,6 @@
+---
 pr: 141969
-pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
-  PR does / why we need it:\r\n\r\nAdds `compositepodgroup` label support to workload
-  preemption metrics in the scheduler so that preemption behavior can be observed
-  separately for `PodGroup` and `CompositePodGroup` workloads.\r\n\r\n#### Which issue(s)
-  this PR is related to:\r\n\r\nKEP: [KEP-6012](https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/6012-composite-podgroup-api#readme)\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\nSummary of changes by preemption metric\r\n|
-  Metric | Labels | Pre-PR Behavior | Changes in this PR |\r\n| :--- | :--- | :---
-  | :--- |\r\n| `workload_preemption_attempts_total` | `preemptor`, `result` | Only
-  had `result` label | Added `preemptor` label (`podgroup` / `compositepodgroup`);
-  recorded in `DefaultPreemption.PodGroupPostFilter` via `string(pgInfo.GetType())`
-  |\r\n| `workload_preemption_victims` | `preemptor` | Unlabeled `*metrics.Histogram`
-  | Changed to `*metrics.HistogramVec` with `preemptor` label (`podgroup` / `compositepodgroup`);
-  recorded in `PreemptionExecutor.PrepareCandidate` via `preemptor.Type()` |\r\n|
-  `preemption_evaluation_duration_seconds` | `preemptor`, `result` | Hardcoded `\"podgroup\"`
-  in `PodGroupEvaluator.evaluate` | Updated `PodGroupEvaluator.evaluate` to record
-  `preemptor.getType()` (`podgroup` / `compositepodgroup`) |\r\n| `preemption_workload_disruptions`
-  | `preemptor` | Already used `preemptor.Type()` | Verified existing dynamic recording;
-  added unit test coverage for `compositepodgroup` preemptor in `TestPrepareCandidate`
-  |\r\n| `preemption_pdb_violations_total` | `preemptor` | Already used `preemptor.Type()`
-  | Verified existing dynamic recording; added unit test coverage for `compositepodgroup`
-  preemptor in `TestPrepareCandidate` |\r\n| `preemption_execution_duration_seconds`
-  | `preemptor`, `result` | Already used `preemptor.Type()` | Verified existing dynamic
-  recording for `podgroup` and `compositepodgroup` |\r\n\r\n/sig scheduling\r\n/wg
-  workload-aware-scheduling\r\n\r\n#### Does this PR introduce a user-facing change?\r\n```release-note\r\nAdded
-  support to CompositePodGroup to preemption metrics. Changed alpha metric by adding
-  `preemptor` label (`podgroup` or `compositepodgroup`) to `scheduler_workload_preemption_attempts_total`
-  and `scheduler_workload_preemption_victims`, and updated `scheduler_preemption_evaluation_duration_seconds`
-  to distinguish `compositepodgroup` preemptors.\r\n```\r\n\r\n#### Additional documentation
-  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n```docs\r\n\r\n```\r\n\r\n####
-  AI usage disclosure:\r\n\r\nYES, AI assistance was used to update metric definitions,
-  call sites, and unit tests."
+pr_body: ''
 releasenote:
   text: Added CompositePodGroup support to preemption metrics. Added a `preemptor`
     label (`podgroup` or `compositepodgroup`) to the alpha metrics `scheduler_workload_preemption_attempts_total`

@@ -1,30 +1,5 @@
+---
 pr: 143201
-pr_body: |
-  #### What type of PR is this?
-
-  /kind dependency
-  /sig release
-
-  #### What this PR does / why we need it:
-
-  go1.27.3 is a security release (https://go.dev/doc/devel/release#go1.27.3). Production binaries build with it via GOTOOLCHAIN. kube-cross and go-runner images for 1.27.3 are not published yet and can follow separately, as with 1.27.2 (#142873).
-
-  #### Which issue(s) this PR is related to:
-
-  N/A
-
-  #### Special notes for your reviewer:
-
-  N/A
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Kubernetes is now built with Go 1.27.3
-  ```
-
-  #### AI usage disclosure:
-
-  YES. An AI coding agent checked the release and images, made the edit and ran the build check.
+pr_body: ''
 releasenote:
   text: Updated Kubernetes to build using Go `v1.27.3`.

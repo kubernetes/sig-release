@@ -1,41 +1,6 @@
+---
 pr: 140308
-pr_body: |
-  **What type of PR is this?**
-
-  /kind bug
-
-  **What this PR does / why we need it**
-
-  The TAS placement generator treated an empty string both as the "no domain seen yet" marker in `getScheduledPodsTopologyDomain` and as a valid topology label value. A pod group whose scheduled pods spanned `""` and a non-empty domain could slip past the "more than 1 domain" check and silently resolve its required domain to `""`.
-
-  Per review discussion, this PR now treats an empty label value as a node labeling mistake rather than a domain:
-
-  - `GeneratePlacements` ignores nodes whose topology label is empty, so new pod groups are never placed onto them.
-  - `getScheduledPodsTopologyDomain` returns an explicit error when an already-scheduled pod is on such a node.
-  - `TopologyConstraint.Key` docs (v1alpha3 and v1beta1) state that nodes with a missing or empty label value belong to no domain. Generated files are updated accordingly.
-
-  `PodTopologySpread` and `InterPodAffinity` still accept empty label values; that is existing behavior and is left alone.
-
-  **Which issue(s) this PR fixes**
-
-  None
-
-  **Special notes for your reviewer**
-
-  Tests:
-  - `TestGetScheduledPodsTopologyDomainEmptyValue` checks that a pod on an empty-labeled node is rejected, alone and in both orderings relative to a non-empty domain.
-  - `TestGeneratePlacements` gains a case where an already-scheduled pod is on an empty-labeled node (error), and a case where empty-labeled nodes are skipped for a new group.
-
-  `api/openapi-spec/swagger.json` was updated by hand for the two `Key` descriptions: regenerating it locally pulled in unrelated `resource.k8s.io` changes. The v3 openapi files are generator output.
-
-  **Does this PR introduce a user-facing change?**
-
-  ```release-note
-  kube-scheduler: in the alpha TopologyAwareWorkloadScheduling placement generator, nodes whose topology label value is an empty string are no longer treated as a topology domain. They are skipped when generating placements, and a pod group with an already-scheduled pod on such a node now fails placement generation with an explicit error instead of resolving its domain to "".
-  ```
-
-  /sig scheduling
-  /wg workload-aware-scheduling
+pr_body: ''
 releasenote:
   text: Fixed an issue in the Alpha `TopologyAwareWorkloadScheduling` placement generator
     in `kube-scheduler` where nodes with an empty string topology label value were

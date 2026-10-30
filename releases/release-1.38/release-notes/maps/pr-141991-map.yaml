@@ -1,16 +1,6 @@
+---
 pr: 141991
-pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
-  does / why we need it:\r\n\r\nAn in-place resize writes only CPU or memory settings
-  to the Pod cgroup. The cgroup conversion treats an omitted hugepage map as empty
-  and sets every supported hugepage limit to zero.\r\n\r\nSkip hugepage conversion
-  when the map is nil. An explicit empty map still clears all hugepage limits, preserving
-  Pod creation behavior.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n\r\n```release-note\r\nFixed a bug where in-place Pod resizing reset
-  existing hugepage limits to zero.\r\n```\r\n\r\n#### Additional documentation e.g.,
-  KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\nNONE\r\n```\r\n\r\n####
-  AI usage disclosure:\r\n\r\nYES. AI implemented the code under my guidance and helped
-  draft the PR description.\r\n\r\n/sig node\r\n/cc @tallclair"
+pr_body: ''
 releasenote:
   text: Fixed an issue in `kubelet` where in-place Pod resizing reset existing hugepage
     limits to zero.

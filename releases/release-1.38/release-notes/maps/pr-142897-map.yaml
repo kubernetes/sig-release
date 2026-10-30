@@ -1,20 +1,6 @@
+---
 pr: 142897
-pr_body: |
-  Promotes the KEP-4006 WebSocket streaming metrics from ALPHA to BETA for GA.
-
-  - `apiserver_stream_translator_requests_total`
-  - `apiserver_stream_tunnel_requests_total`
-  - `apiserver_websocket_streaming_requests_total`
-  - `kubelet_websocket_streaming_requests_total`
-
-  /kind feature
-  /sig api-machinery
-  /sig node
-  /sig instrumentation
-
-  ```release-note
-  The WebSocket streaming metrics `apiserver_stream_translator_requests_total`, `apiserver_stream_tunnel_requests_total`, `apiserver_websocket_streaming_requests_total` and `kubelet_websocket_streaming_requests_total` are now BETA.
-  ```
+pr_body: ''
 releasenote:
   text: Promoted the WebSocket streaming metrics `apiserver_stream_translator_requests_total`,
     `apiserver_stream_tunnel_requests_total`, `apiserver_websocket_streaming_requests_total`,

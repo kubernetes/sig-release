@@ -1,23 +1,6 @@
+---
 pr: 143253
-pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n/sig scheduling\r\n\r\n####
-  What this PR does / why we need it:\r\n\r\nLeave an unset `preemptionPolicy` in
-  a PodGroup or CompositePodGroup unset until priority admission resolves it from
-  the PriorityClass, matching the Pod admission flow.\r\n\r\nBefore, API defaulting
-  set `PreemptLowerPriority` for PriorityClass before admission ran. A group referencing
-  a different PriorityClass with `preemptionPolicy: Never` was then rejected even
-  when the user omitted the group's policy.\r\n\r\nRemoved this early defaulting for
-  PodGroup (`v1alpha3` and `v1beta1`) and for CompositePodGroup (`v1alpha3`). When
-  policies are explicit it is kept, and priority admission continues rejecting policies
-  that conflict with the PriorityClass. PriorityClass defaulting is unchanged when
-  the policy is actually nil.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nFixes
-  #143252\r\n\r\n#### Special notes for your reviewer:\r\n\r\nThe new integration
-  test fails on master before this fix.\r\n\r\nValidation:\r\n- Scheduling API, PodGroup/CompositePodGroup
-  registry, and priority-admission unit tests\r\n- `TestPodGroupPriorityClassPreemptionPolicy`
-  API-server integration test\r\n- `TestRoundTripTypes` API serialization tests\r\n-
-  `make update` + golangci-lint\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nPodGroup
-  and CompositePodGroup creation will no longer be rejected when preemptionPolicy is
-  unset and the referenced PriorityClass specifies preemptionPolicy: Never.\r\n```\r\n\r\n####
-  AI usage disclosure:\r\nYes"
+pr_body: ''
 releasenote:
   text: Fixed an issue where PodGroup and CompositePodGroup creation was rejected
     when `preemptionPolicy` was unset and the referenced PriorityClass specified `preemptionPolicy`

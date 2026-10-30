@@ -1,29 +1,6 @@
+---
 pr: 143207
-pr_body: "#### What type of PR is this?\n\n/kind bug\n\n#### What this PR does / why
-  we need it:\n\nThe kubeadm dry-run health-check Job reactor passes the requested
-  name and namespace to `getJob` in the opposite order from its signature.\n\nFor
-  example, a GET for `kube-system/upgrade-health-check-12345` returns a Job named
-  `kube-system` in namespace `upgrade-health-check-12345`. The incorrect metadata
-  also appears in the attached dry-run output.\n\nThis change:\n- Passes namespace
-  before name to `getJob`.\n- Constructs the expected Job independently in the reactor
-  test, preventing the test from repeating and masking the production argument-order
-  mistake.\n- Adds coverage for a suffixed health-check Job name, matching the naming
-  pattern used by the upgrade health check.\n\nThe live-client upgrade path and Job
-  completion conditions are unchanged.\n\n#### Which issue(s) this PR is related to:\n\nN/A\n\n####
-  Special notes for your reviewer:\n\nThis is a pre-existing dry-run metadata bug,
-  not a regression introduced by the recent fake-client refactor in #142742.\n\nValidation
-  of the proposed patch was performed in an AI assisted environment against commit
-  `c3b1e97124b974a50411c6527d1c03199287b511`, using Go 1.27.3 on darwin/arm64 with
-  vendored dependencies.\n\nResults for that prepared patch:\n- The updated `TestReactors/HealthCheckJobReactor`
-  failed against the original production code, showing reversed metadata for both
-  the base and suffixed Job names.\n- The regression test passed after correcting
-  the production call.\n- The complete `cmd/kubeadm/app/util/apiclient` package tests
-  passed.\n- The complete `cmd/kubeadm/app/phases/upgrade` package tests passed.\n-
-  The complete `cmd/kubeadm/app/cmd/upgrade` package tests passed.\n- Formatting and
-  whitespace checks passed.\n\n#### Does this PR introduce a user-facing change?\n\n```release-note\r\nkubeadm:
-  fixed swapped Job names and namespaces in upgrade health-check when dry-running.\r\n```\n\n####
-  AI usage disclosure:\n\nYES. AI assisted with identifying the issue and drafting
-  this PR description. The changes were applied manually."
+pr_body: ''
 releasenote:
   text: Fixed an issue in `kubeadm` where Job names and namespaces were swapped during
     dry-run upgrade health checks.

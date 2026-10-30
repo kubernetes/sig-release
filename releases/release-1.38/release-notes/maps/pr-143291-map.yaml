@@ -1,39 +1,6 @@
+---
 pr: 143291
-pr_body: "#### What type of PR is this?\n\n/kind bug\n/sig api-machinery\n/sig network\n\n####
-  What this PR does / why we need it:\n\nLegacy Services and PersistentVolumeClaims
-  lose their read-time defaults on cached watch events and status subresource requests,
-  which can cause the ServiceCIDR repair controller to delete active IPAddress allocations
-  after a status update. Combines #143279 with the regression tests from #143113 and
-  #143228, moving read-time decoration into the storage decoder so defaults apply
-  across reads, watches, and shared subresource stores, and status updates on legacy
-  objects persist those defaulted fields to storage.\n\n#### Which issue(s) this PR
-  fixes:\n\nSupersedes #143279, #143113, #143228\n\n#### Special notes for your reviewer:\n\nWithout
-  the storage decoder change:\n\n```\n$ go test -v ./pkg/registry/core/service/storage
-  -run '^TestStatusDefaultOnRead$'\n=== RUN   TestStatusDefaultOnRead\n    storage_test.go:11988:
-  statusStorage.Get clusterIPs: expected [10.0.0.10], got []\n    storage_test.go:11991:
-  statusStorage.Get ipFamilies: expected [IPv4], got []\n    storage_test.go:11994:
-  statusStorage.Get ipFamilyPolicy: expected SingleStack, got <nil>\n    storage_test.go:12013:
-  statusStorage.Update clusterIPs: expected [10.0.0.10], got []\n    storage_test.go:12016:
-  statusStorage.Update ipFamilies: expected [IPv4], got []\n    storage_test.go:12019:
-  statusStorage.Update ipFamilyPolicy: expected SingleStack, got <nil>\n--- FAIL:
-  TestStatusDefaultOnRead (1.81s)\nFAIL\nFAIL\tk8s.io/kubernetes/pkg/registry/core/service/storage\t1.915s\n\n$
-  go test -v ./test/integration/servicecidr -run '^(TestMigrateService|TestLegacyServiceStatusUpdateDuplicateIP)$'\n===
-  RUN   TestMigrateService\n    allocator_test.go:238: Service stored in etcd {\"kind\":\"Service\",\"apiVersion\":\"v1\",\"metadata\":{\"name\":\"test-old-service\",\"namespace\":\"old-service-ns\",\"uid\":\"08675309-9376-9376-9376-086753099999\",\"creationTimestamp\":\"2026-10-21T22:09:10Z\"},\"spec\":{\"ports\":[{\"name\":\"test-port\",\"port\":81,\"targetPort\":0}],\"clusterIP\":\"10.0.0.11\"},\"status\":{\"loadBalancer\":{}}}\n
-  \   allocator_test.go:256: timed out waiting for the condition\n--- FAIL: TestMigrateService
-  (11.71s)\n=== RUN   TestLegacyServiceStatusUpdateDuplicateIP\n    allocator_test.go:450:
-  timed out waiting for IPAddress 192.168.0.2 to be created by repair controller:
-  context deadline exceeded\n--- FAIL: TestLegacyServiceStatusUpdateDuplicateIP (16.69s)\nFAIL\nFAIL\tk8s.io/kubernetes/test/integration/servicecidr\t28.682s\n```\n\nWith
-  the storage decoder change:\n\n```\n$ go test -v ./pkg/registry/core/service/storage
-  -run '^TestStatusDefaultOnRead$'\n=== RUN   TestStatusDefaultOnRead\n--- PASS: TestStatusDefaultOnRead
-  (0.82s)\nPASS\nok  \tk8s.io/kubernetes/pkg/registry/core/service/storage\t0.927s\n\n$
-  go test -v ./test/integration/servicecidr -run '^(TestMigrateService|TestLegacyServiceStatusUpdateDuplicateIP)$'\n===
-  RUN   TestMigrateService\n    allocator_test.go:238: Service stored in etcd {\"kind\":\"Service\",\"apiVersion\":\"v1\",\"metadata\":{\"name\":\"test-old-service\",\"namespace\":\"old-service-ns\",\"uid\":\"08675309-9376-9376-9376-086753099999\",\"creationTimestamp\":\"2026-10-21T22:08:41Z\"},\"spec\":{\"ports\":[{\"name\":\"test-port\",\"port\":81,\"targetPort\":0}],\"clusterIP\":\"10.0.0.11\"},\"status\":{\"loadBalancer\":{}}}\n---
-  PASS: TestMigrateService (2.53s)\n=== RUN   TestLegacyServiceStatusUpdateDuplicateIP\n---
-  PASS: TestLegacyServiceStatusUpdateDuplicateIP (4.12s)\nPASS\nok  \tk8s.io/kubernetes/test/integration/servicecidr\t6.930s\n```\n\n####
-  Does this PR introduce a user-facing change?\n\n```release-note\nFix a bug where
-  cached watch events and status subresource requests did not apply storage read-time
-  defaults to legacy Services and PersistentVolumeClaims, which could cause the ServiceCIDR
-  repair controller to delete active Service IPAddress objects after a status update.\n```\n"
+pr_body: ''
 releasenote:
   text: Fixed an issue where cached watch events and `status` subresource requests
     did not apply storage read-time defaults to legacy Services and PersistentVolumeClaims,

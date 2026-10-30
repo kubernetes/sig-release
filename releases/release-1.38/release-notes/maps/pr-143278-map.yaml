@@ -1,30 +1,6 @@
+---
 pr: 143278
-pr_body: "#### What type of PR is this?\r\n/kind feature\r\n\r\n#### What this PR
-  does / why we need it:\r\n`kube-apiserver` and `kube-scheduler` restrict some workload
-  configurations that `workloadbuilder` allowed so far. Adding matching restrictions
-  to `workloadbuilder`'s own validation will make the library more robust and provide
-  fail-fast mechanism for incorrect workloads.\r\n\r\nSpecifically, this PR extends
-  workloadbuilder with the following checks:\r\n\r\n- **Maximum tree depth (validateWorkloadItemTree)**:
-  Rejects `WorkloadItem` hierarchies with depth exceeding `WorkloadMaxTreeDepth` (4,
-  i.e. at most 3 composite levels and 1 leaf level).\r\n- **Maximum children per composite
-  node (validateWorkloadItemTree)**: Rejects any `WorkloadItem` with more than `WorkloadMaxPodGroupTemplates`
-  (8) leaf children templates or more than `WorkloadMaxPodGroupTemplates` composite
-  children templates.\r\n- **Parent-child scheduling policy compatibility (Builder.Validate)**:
-  Requires child groups to resolve to the `Gang` scheduling policy when their parent
-  composite group uses `Gang`.\r\n- **Parent-child disruption mode compatibility (Builder.Validate)**:
-  Requires child groups to resolve to the `All` disruption mode when their parent
-  composite group uses `All`.\r\n- **Defaulted Basic scheduling policy handling (Builder.Validate)**:
-  Treats an unset (nil or empty) `SchedulingPolicy` as `Basic` (matching compilation
-  behavior) when validating `BuildOptions.AllowedPolicies`, `Basic` policy + `All`
-  disruption mode incompatibility, and parent-child policy compatibility.\r\n- **Uniform
-  PriorityClassName across the hierarchy (Builder.Validate)**: Rejects trees where
-  any item's resolved `PriorityClassName` differs from the root's, reporting a single
-  error at the root path.\r\n\r\n#### Which issue(s) this PR is related to:\r\nN/A\r\n\r\n####
-  Special notes for your reviewer:\r\n/sig scheduling\r\n/wg workload-aware-scheduling\r\n\r\n####
-  Does this PR introduce a user-facing change?\r\n```release-note\r\nExtended workloadbuilder
-  validation to enforce hierarchy depth/size limits, parent-child scheduling policy
-  and disruption mode compatibility and uniform priorityClassName across the workload
-  tree.\r\n```\r\n\r\n#### AI usage disclosure:\r\nYES"
+pr_body: ''
 releasenote:
   text: Extended `workloadbuilder` validation to enforce hierarchy depth and size
     limits, parent-child scheduling policy and disruption mode compatibility, and

@@ -1,14 +1,6 @@
+---
 pr: 143396
-pr_body: "#### What type of PR is this?\n\n/kind cleanup\n/sig cli\n\n#### What this
-  PR does / why we need it:\n\n- `kubectl explain` no longer falls back to the deprecated
-  `/openapi/v2` endpoint when `/openapi/v3` fails; the v3 error is returned.\n- `--output=plaintext-openapiv2`
-  prints a deprecation warning. It will be removed per the CLI deprecation policy.\n\n####
-  Which issue(s) this PR fixes:\n\nPart of #141455\n\n#### Does this PR introduce
-  a user-facing change?\n\n```release-note\n`kubectl explain` no longer falls back
-  to `/openapi/v2` when `/openapi/v3` is unavailable. The `--output=plaintext-openapiv2`
-  option is deprecated and will be removed in a future release.\n```\n\n#### AI usage
-  disclosure:\n\nYES. Claude Code helped with the code and tests; I reviewed and verified
-  the changes.\n\n\U0001F916 Generated with [Claude Code](https://claude.com/claude-code)\n"
+pr_body: ''
 releasenote:
   text: Removed the `/openapi/v2` fallback in `kubectl explain` when `/openapi/v3`
     is unavailable. The `--output=plaintext-openapiv2` option is deprecated and will

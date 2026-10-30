@@ -1,19 +1,6 @@
+---
 pr: 142048
-pr_body: |-
-  Moves client-go's `UnstructuredExtractor` from the deprecated `/openapi/v2` to `/openapi/v3`.
-
-  Fixes #126849
-
-  /kind cleanup
-  /sig api-machinery
-
-  ```release-note
-  client-go: `NewUnstructuredExtractor` builds its type information from `/openapi/v3`, per group-version, instead of the deprecated `/openapi/v2` document. Adds `managedfields.NewGVKParserFromOpenAPIV3`.
-  ```
-
-  #### AI usage disclosure:
-
-  YES. Implementation, tests and description drafted with AI assistance (Claude Code), reviewed by the author.
+pr_body: ''
 releasenote:
   text: Updated `NewUnstructuredExtractor` in `client-go` to build its type information
     per group-version from `/openapi/v3` instead of the deprecated `/openapi/v2` document,

@@ -1,31 +1,5 @@
+---
 pr: 142873
-pr_body: |+
-  #### What type of PR is this?
-
-  /kind dependency
-  /sig release
-
-  #### What this PR does / why we need it:
-
-  go1.27.2 is a security release (https://go.dev/doc/devel/release#go1.27.2). Production binaries build with it via GOTOOLCHAIN. kube-cross and go-runner images for 1.27.2 are not published yet and can follow separately, as with 1.26.6 (#141363).
-
-  #### Which issue(s) this PR is related to:
-
-  N/A
-
-  #### Special notes for your reviewer:
-
-  Second commit: go1.27.2 writes unified export data V5 (golang/go#81306), which x/tools before v0.50.0 cannot read, so mockery failed verify-mocks (vektra/mockery#1187). hack/tools moves to x/tools v0.51.0; verify-mocks and verify-codegen pass with it.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Kubernetes is now built with Go 1.27.2
-  ```
-
-  #### AI usage disclosure:
-
-  YES. Claude Code checked the release and images, made the edit and ran the build check.
-
+pr_body: ''
 releasenote:
   text: Updated Kubernetes to build using Go `v1.27.2`.

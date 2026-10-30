@@ -1,13 +1,6 @@
+---
 pr: 142860
-pr_body: "Promotes the four KEP-4006 feature gates to GA and locks them on, per the
-  KEP's v1.38 graduation criteria:\r\n* `TranslateStreamCloseWebsocketRequests` (beta
-  since 1.30),\r\n* `PortForwardWebsockets` (1.31),\r\n* `AuthorizePodWebsocketUpgradeCreatePermission`
-  (1.35),\r\n* `ExtendWebSocketsToKubelet` (1.36). \r\n\r\nTests that exercised the
-  gate-off paths are removed; gate checks in code stay until the deprecation window
-  ends.\r\n\r\n/kind feature\r\n/sig api-machinery\r\n/sig node\r\n\r\n```release-note\r\nThe
-  KEP-4006 WebSocket streaming feature gates `TranslateStreamCloseWebsocketRequests`,
-  `PortForwardWebsockets`, `AuthorizePodWebsocketUpgradeCreatePermission` and `ExtendWebSocketsToKubelet`
-  are promoted to GA and locked on. They can no longer be disabled.\r\n```\r\n"
+pr_body: ''
 releasenote:
   text: Promoted the WebSocket streaming feature gates `TranslateStreamCloseWebsocketRequests`,
     `PortForwardWebsockets`, `AuthorizePodWebsocketUpgradeCreatePermission`, and `ExtendWebSocketsToKubelet`

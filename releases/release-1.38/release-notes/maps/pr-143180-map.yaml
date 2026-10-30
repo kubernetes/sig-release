@@ -1,38 +1,6 @@
+---
 pr: 143180
-pr_body: |2
-
-  #### What type of PR is this?
-
-  /kind cleanup
-
-  #### What this PR does / why we need it:
-
-  Renames the entity label on `scheduler_queued_entities` and
-  `scheduler_queue_incoming_entities_total` from `type` to `entity`, matching
-  the topology-aware placement metrics. `type` is also ambiguous next to
-  `scheduler_cache_size{type}`, where it means the cached object kind.
-
-  Follow-up to https://github.com/kubernetes/kubernetes/pull/141800 after discussion in https://github.com/kubernetes/kubernetes/pull/141929#discussion_r4313296178.
-
-
-  #### Which issue(s) this PR is related to:
-  KEP: [KEP-6012](https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/6012-composite-podgroup-api#readme)
-
-  #### Special notes for your reviewer:
-  /sig scheduling
-  /wg workload-aware-scheduling
-
-
-  #### Does this PR introduce a user-facing change?
-  ```release-note
-  ACTION REQUIRED the `type` label on the alpha metrics `scheduler_queued_entities`
-  and `scheduler_queue_incoming_entities_total` was renamed to `entity`.
-  Please update dashboards and alerts that filter on `type`.
-  ```
-
-  #### AI usage disclosure:
-
-  YES, AI generated but reviewed by myself
+pr_body: ''
 releasenote:
   text: 'ACTION REQUIRED: Renamed the `type` label on the Alpha metrics `scheduler_queued_entities`
     and `scheduler_queue_incoming_entities_total` to `entity`. Update monitoring dashboards

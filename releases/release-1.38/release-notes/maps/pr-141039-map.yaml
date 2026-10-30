@@ -1,51 +1,6 @@
+---
 pr: 141039
-pr_body: "#### What type of PR is this?\r\n\r\n<!--\r\nAdd one of the following kinds:\r\n/kind
-  bug\r\n/kind dependency\r\n/kind cleanup\r\n/kind documentation\r\n/kind feature\r\n\r\nOptionally
-  add one or more of the following kinds if applicable:\r\n/kind api-change\r\n/kind
-  deprecation\r\n/kind failing-test\r\n/kind flake\r\n/kind regression\r\n-->\r\n\r\n/kind
-  feature\r\n\r\n#### What this PR does / why we need it:\r\n\r\nThis PR is intended
-  to be an isolated prefactor. It introduces a new format for the pod resource allocation
-  and actuation checkpoint files to have them store the entire PodSpec, along with
-  startup migration code.\r\n\r\nThis will be useful for:\r\n- Reliably checking whether
-  a pod sandbox needs to be resized when pod-level resources are not set, which was
-  discussed in https://github.com/kubernetes/kubernetes/pull/138857#pullrequestreview-4557860191.\r\n-
-  Making allocation manager the source of truth for pod allocations: https://github.com/kubernetes/kubernetes/issues/139831.\r\n-
-  Dynamic containers https://github.com/kubernetes/enhancements/pull/6169.\r\n- Dynamic
-  volumes https://github.com/kubernetes/enhancements/issues/6395.\r\n- Any future
-  features that choose to make some aspect of the pod dynamically adjustable at runtime.\r\n\r\nThis
-  also converts the checkpoint file to be serialized with protobuf, which will result
-  in significant performance improvements over the legacy JSON format.\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\nLocal testing steps:\r\n\r\n##### Manual
-  upgrade scenario\r\n1. Created a kind cluster from `master` with all relevant feature
-  gates (`InPlacePodVerticalScaling`, `InPlacePodLevelResourcesVerticalScaling`, and
-  `InPlacePodVerticalScalingMemoryBackedVolumes`) enabled.\r\n1. Created a pod that
-  had container-level resources, pod-level resources, and a memory-backed volume with
-  a size limit.\r\n1. Resized all these values to intentionally put it in a `Deferred`
-  status.\r\n1. Hot-plugged a new build of kubelet based on this branch.\r\n1. Observed
-  the pod get re-admitted based on its pre-resize values, and stay `Deferred`. \r\n1.
-  Double checked the correctness of the allocated and actuated checkpoint files.\r\n\r\n#####
-  Manual downgrade scenario\r\n1. Reverted kubelet back to the version built from
-  master.\r\n1. Observed the pod get re-admitted based on its pre-resize values, and
-  stay `Deferred`. \r\n1. Observed the allocation checkpoint revert back to v1 format.\r\n1.
-  Deleted a pod to make room for the resize, observe the resize complete.\r\n1. Observe
-  the allocation checkpoint get updated, and the actuation checkpoint revert back
-  to v1 format (with the actuated resize values)\r\n\r\nAlso ran all the pod resize
-  e2e tests locally (including the serial ones that do not normally run in presubmit),
-  and had my AI agent continuously watch for resize events and validate the checkpoint
-  files against them for my local cluster.\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n<!--\r\nIf no, just write \"NONE\" in the release-note block below.\r\nIf
-  yes, a release note is required:\r\nEnter your extended release note in the block
-  below. If the PR requires additional action from users switching to the new release,
-  include the string \"action required\".\r\n\r\nFor more information on release notes
-  see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nIntroduce
-  a new protobuf-based checkpoint format for kubelet resource allocation and actuation
-  checkpoint files (`allocated_pods_state` and `actuated_pods_state`), adding a top-level
-  `version` field set to `\"v2\"`.\r\nThe checkpoint's `data` field now contains a
-  protobuf-encoded `podList`. It also maintains the legacy `entries` field for backward
-  compatibility during kubelet downgrades, and automatically migrates unversioned
-  `v1` checkpoints on upgrade.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs
-  (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n/sig node\r\n\r\nAssisted
-  by Antigravity\r\n"
+pr_body: ''
 releasenote:
   text: Introduced a protobuf-based checkpoint format for `kubelet` resource allocation
     and actuation checkpoint files (`allocated_pods_state` and `actuated_pods_state`),

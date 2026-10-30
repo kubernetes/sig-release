@@ -1,46 +1,6 @@
+---
 pr: 142719
-pr_body: |
-  > [!NOTE]
-  > This PR is copied from original PR https://github.com/kubernetes/kubernetes/pull/142375 by @macsko while the author is on leave, in order to finish review and merge it. It includes @macsko's commit plus a follow-up commit fixing CPG preemption integration test setups (`preemption_test.go`) where child `PodGroup`s were missing `DisruptionModeAll()`.
-
-  #### What type of PR is this?
-
-  /kind feature
-
-  #### What this PR does / why we need it:
-
-  This PR adds more validation steps to pod group cycle in kube-scheduler to enforce the cases where:
-   - the hierarchy does not exceed WorkloadMaxTreeDepth (and has no CompositePodGroup at depth WorkloadMaxTreeDepth),
-   - all groups in the hierarchy reference the same Workload as the root group,
-   - no gang parent group has a basic child group,
-   - no parent group with All disruption mode has a child group with Single disruption mode.
-
-  It implements the decision from CPG KEP (https://github.com/kubernetes/enhancements/issues/6012).
-
-  #### Which issue(s) this PR is related to:
-
-  KEP: https://github.com/kubernetes/enhancements/issues/6012
-  Original PR: https://github.com/kubernetes/kubernetes/pull/142375
-
-  #### Special notes for your reviewer:
-
-  Copied from #142375. A follow-up commit was added to configure `.DisruptionModeAll()` on child `PodGroup`s in `test/integration/scheduler/preemption/preemption_test.go`, fixing integration test failures caused by API defaulting.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Strengthened runtime PodGroup and CompositePodGroup hierarchy validation in kube-scheduler to verify maximum tree depth, Workload reference consistency, scheduling policies (no Gang parent with Basic child), and disruption modes (no All parent with Single child).
-  ```
-
-  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
-
-  ```docs
-
-  ```
-
-  #### AI usage disclosure:
-
-  AI was used in the PR's preparation as a tool that helped in coding, not in the architectural decisions. Changes were reviewed before pushing.
+pr_body: ''
 releasenote:
   text: Strengthened runtime PodGroup and CompositePodGroup hierarchy validation in
     `kube-scheduler` to verify maximum tree depth, Workload reference consistency,

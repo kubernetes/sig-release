@@ -1,12 +1,6 @@
+---
 pr: 142684
-pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n\r\n#### What this PR
-  does / why we need it:\r\n\r\nIn pod group preemption the getLowerPriorityNominatedPods
-  always return 0 pods as the candidate name for cluster wide preemption is \"cluster\"\r\n\r\n####
-  Which issue(s) this PR is related to:\r\n\r\nN/A\r\n\r\n#### Special notes for your
-  reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n\r\n```release-note\r\nPod
-  group preemption clears the nominated node name of lower priority pods running on
-  nodes nominated for pod group.\r\n```\r\n\r\n#### AI usage disclosure:\r\n\r\nYES.
-  The AI was used for extending test cases to cover executor changes.\r\n\r\n"
+pr_body: ''
 releasenote:
   text: Fixed PodGroup preemption to clear the nominated node name of lower-priority
     Pods running on nodes nominated for the PodGroup.

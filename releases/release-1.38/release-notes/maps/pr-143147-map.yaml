@@ -1,35 +1,6 @@
+---
 pr: 143147
-pr_body: |+
-  #### What type of PR is this?
-
-  /kind bug
-  /sig node
-  /area kubelet
-
-  #### What this PR does / why we need it:
-
-  `compressLog` ignored the errors from closing the gzip writer and the temporary file. Closing the gzip writer writes the rest of the compressed data and the trailer, so if that write failed (for example, the disk filled up), the kubelet still renamed the incomplete archive into place and deleted the original rotated log. The log was lost and the `.gz` was corrupt.
-
-  Both close errors are now checked. On failure, the temporary file is removed by the existing deferred cleanup and the original log is kept, so it gets compressed again on a later pass.
-
-  #### Which issue(s) this PR is related to:
-
-  Fixes #143146
-
-  #### Special notes for your reviewer:
-
-  `TestCompressLogKeepsLogWhenArchiveIsIncomplete` (Linux only) compresses an empty log with the temporary archive symlinked to `/dev/full`, so nothing is written during the copy and `Close` fails with `ENOSPC` when it writes the archive. It checks that `compressLog` returns an error, the original log is unchanged, and neither the archive nor the temporary file is left behind. The test fails on master (compressLog returns nil and removes the log) and passes with this change.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  kubelet: fixed rotated container logs being deleted when writing their compressed copy failed, for example on a full disk.
-  ```
-
-  #### AI usage disclosure:
-
-  YES. An AI assistant helped find the bug and draft the fix and tests; I reviewed, ran and verified them.
-
+pr_body: ''
 releasenote:
   text: Fixed an issue in `kubelet` where rotated container logs were deleted when
     writing their compressed copy failed (for example, on a full disk).

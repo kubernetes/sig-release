@@ -1,29 +1,6 @@
+---
 pr: 143286
-pr_body: |-
-  #### What type of PR is this?
-
-  /kind cleanup
-
-  #### What this PR does / why we need it:
-
-  Removes the deprecated `/openapi/v2` fallback (`OpenAPIGetter`) from `kubectl apply` and `kubectl diff` client-side patch calculation (`Patcher.patchSimple`).
-
-  OpenAPI v3 graduated to GA in v1.27. Previously, when applying or diffing a resource that does not use StrategicMergePatch (such as any Custom Resource / CRD), `gvkSupportsPatchOpenAPIV3` returned `false`, leaving `patch == nil` and unconditionally falling back to `p.OpenAPIGetter.OpenAPISchema()` (`GET /openapi/v2`) before computing a JSON Merge Patch. Removing this fallback avoids unnecessary `/openapi/v2` downloads on Custom Resource updates and keeps server-side lazy OpenAPI v2 construction (#140939) cold.
-
-  #### Which issue(s) this PR fixes:
-
-  Part of #126849
-
-  #### Special notes for your reviewer:
-
-  /sig cli
-  /assign @liggitt
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  kubectl apply and kubectl diff no longer fall back to fetching the deprecated /openapi/v2 schema when calculating client-side patches.
-  ```
+pr_body: ''
 releasenote:
   text: Updated `kubectl apply` and `kubectl diff` to no longer fall back to fetching
     the deprecated `/openapi/v2` schema when calculating client-side patches.

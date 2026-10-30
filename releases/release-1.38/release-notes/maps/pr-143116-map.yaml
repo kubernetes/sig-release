@@ -1,24 +1,5 @@
+---
 pr: 143116
-pr_body: |-
-  #### What type of PR is this?
-
-  /kind feature
-
-  #### What this PR does / why we need it:
-
-  * Bump images and versions to Go 1.27.2 and update distroless-iptables
-
-  #### Which issue(s) this PR is related to:
-
-  xref https://github.com/kubernetes/release/issues/4561
-
-  #### Does this PR introduce a user-facing change?
-  ```release-note
-  Kubernetes is now built using Go 1.27.2
-  ```
-
-  #### AI usage disclosure:
-
-  No
+pr_body: ''
 releasenote:
   text: Updated the Go compiler used to build Kubernetes to `v1.27.2`.

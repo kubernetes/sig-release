@@ -1,43 +1,6 @@
+---
 pr: 143087
-pr_body: "#### What type of PR is this?\n\n/kind bug\n/area kubeadm\n\n#### What this
-  PR does / why we need it:\n\nWhen an etcd upgrade fails, kubeadm restores the etcd
-  data dir from the backup it took before the upgrade. On Linux that restore never
-  worked. The backup was `cp -r <dataDir> <backupDir>` into an already existing `<backupDir>`,
-  so the data landed in `<backupDir>/<basename(dataDir)>`. The restore was `cp -r
-  <backupDir> <dataDir>`, which copied the whole backup dir *inside* the live data
-  dir and left the live data untouched, while kubeadm printed \"Etcd data rollback
-  successful\".\n\n- `CopyDir` is now one portable Go implementation in `copy.go`;
-  the `cp` and `xcopy` variants in `copy_unix.go` and `copy_windows.go` are gone.
-  It copies the contents of `src` into `dest` and keeps the source's file modes, so
-  a restored etcd data dir stays 0700/0600.\n- `rollbackEtcdData` removes `<dataDir>/member`
-  before restoring, so files etcd wrote after the backup (WAL segments, snapshots)
-  don't survive the rollback.\n- The backup copies the data dir of a running etcd
-  and can fail when etcd renames a WAL file mid-copy. It is now retried for up to
-  30 seconds, from an empty backup dir each time.\n\n#### Which issue(s) this PR is
-  related to:\n\nFixes kubernetes/kubeadm#3330\nFixes kubernetes/kubeadm#3324\n\n####
-  Special notes for your reviewer:\n\n- `CopyDir` walks `src` with `filepath.WalkDir`
-  and reuses the existing `CopyFile`, which opens the destination with the source's
-  mode and `O_TRUNC`. `os.CopyFS` was the obvious candidate but creates directories
-  0777 and files `0666|perm&0777` and refuses to overwrite (`O_CREATE|O_EXCL`), which
-  would loosen the restored etcd data dir; see the discussion below.\n- I checked
-  the retry by making one file in the data dir unreadable: when the file goes away
-  the backup succeeds on the next attempt, and when it doesn't the upgrade fails after
-  30 seconds with the underlying copy error.\n- `rollbackEtcdData` now stats `<backupEtcdDir>/member`
-  and returns before touching the live data dir if it isn't there, so a missing backup
-  can't leave the node with neither. `TestRollbackEtcdData` covers both directions;
-  without the guard its second case fails with `rollbackEtcdData() error = <nil>,
-  wantErr true`.\n- The `TestCopyDir/existing_destination` subtest copies into an
-  already existing `dst`, as both the backup and the restore do, and checks that the
-  contents land in `dst` and `src` isn't nested inside it. It fails on master on Linux
-  and passes with this change.\n- On Linux the backup layout changes from `<backupDir>/etcd/member`
-  to `<backupDir>/member`, which is what Windows already did.\n\n#### Does this PR
-  introduce a user-facing change?\n\n```release-note\r\nkubeadm: fixed the automatic
-  rollback of the etcd data directory after a failed etcd upgrade, which previously
-  copied the backup into a subdirectory of the member directory instead of restoring
-  where it should be. The etcd backup directory now holds the member directory's contents.
-  The etcd data backup before an upgrade is now retried for up to 30 seconds if copying
-  fails.\r\n```\n\n#### AI usage disclosure:\n\nYES. An AI assistant helped find the
-  bug and draft the fix and tests; I reviewed, ran and verified them.\n"
+pr_body: ''
 releasenote:
   text: Fixed an issue in `kubeadm` where automatic rollback of the etcd data directory
     after a failed etcd upgrade copied the backup into a subdirectory of the member

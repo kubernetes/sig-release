@@ -1,11 +1,5 @@
+---
 pr: 139824
-pr_body: "#### What type of PR is this?\r\n/kind api-change\r\n/kind feature\r\n\r\n####
-  What this PR does / why we need it:\r\nIntroduces CRI API changes required for [KEP
-  5474 (writable cgroups)](https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/5474-enable-writable-cgroups#cri-api-changes).\r\n\r\n####
-  Which issue(s) this PR is related to:\r\nKEP: https://github.com/kubernetes/enhancements/issues/5474\r\n\r\n####
-  Special notes for your reviewer:\r\n\r\n#### Does this PR introduce a user-facing
-  change?\r\n```release-note\r\nAdd `cgroup_mount_mode` to the CRI API to support
-  writable cgroups\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
-  Enhancement Proposals), usage docs, etc.:\r\n```docs\r\n- [KEP]: https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/5474-enable-writable-cgroups\r\n```\r\n"
+pr_body: ''
 releasenote:
   text: Added `cgroup_mount_mode` to the CRI API to support writable cgroups.

@@ -1,37 +1,6 @@
+---
 pr: 142761
-pr_body: |
-  #### What type of PR is this?
-
-  /kind bug
-
-  #### What this PR does / why we need it:
-
-  When the kubelet terminates a pod with a failure status (eviction, critical-pod preemption, graceful node shutdown) and the container handles SIGTERM by exiting 0, the pod ends up `Succeeded` with an empty reason. The caller's status override sets `Phase=Failed` and the reason in the status manager cache, but that update is withheld while containers may still be running, and `generateAPIPodStatus` later recomputes `Succeeded` from the exit code. Because the recomputed phase differs from the cached one, the reason and message are dropped too.
-
-  Per the discussion with @tallclair on the issue, this does two things:
-
-  - `SyncTerminatingPod` re-applies the caller's status override to the status it generates after the containers have stopped, which is the update the status manager is allowed to publish as terminal.
-  - `generateAPIPodStatus` no longer lets a pod move from `Failed` to `Succeeded`. A `Failed` phase already recorded wins over a `Succeeded` phase computed from exit codes alone. `Succeeded` to `Failed` remains allowed in the cached status; a terminal phase already published to the API server is still protected by the existing illegal-transition check.
-
-  #### Which issue(s) this PR is related to:
-
-  Fixes #141483
-
-  #### Special notes for your reviewer:
-
-  The override is applied at both status updates rather than moved; the first application is harmless with the merge guard in place. Each hunk is covered independently: reverting only the `SyncTerminatingPod` change fails the new termination test on the override count, reverting only the merge change fails it on phase and conditions.
-
-  Verified end to end on kind with the same emptyDir `sizeLimit` eviction repro, container exiting 0 on SIGTERM: stock `kindest/node:v1.37.0` reports `Succeeded` with no reason (3/3), a node image built from this branch reports `Failed / Evicted` with the message (3/3).
-
-  This does not cover a kubelet restart before the terminal status reaches the API server, where the cached decision is lost. That gap exists today for every eviction and is not widened here; it would need a durable marker on the pod object and is left for a follow-up.
-
-  AI assistance (Claude) was used to draft the change and tests. I reviewed the code, ran the kubelet, status, eviction, preemption and node-shutdown test suites, and verified the behaviour on kind.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  Fixed the kubelet losing a pod's failure phase and reason when its containers exited successfully during eviction, kubelet preemption, or graceful node shutdown.
-  ```
+pr_body: ''
 releasenote:
   text: Fixed an issue where `kubelet` lost a Pod's failure phase and reason when
     containers exited successfully during eviction, `kubelet` preemption, or graceful

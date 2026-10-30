@@ -1,33 +1,6 @@
+---
 pr: 142655
-pr_body: |+
-  #### What type of PR is this?
-
-  /kind cleanup
-  /sig auth
-  /sig api-machinery
-
-  #### What this PR does / why we need it:
-
-  `authorizerfactory` and the webhook authorizer imported `authorization/cel` and `apis/apiserver/validation` to compile match conditions, so the kubelet linked cel-go and antlr for conditions it never sets. `webhook.New` now takes a compiled `Matcher`, `NewFromInterface` drops the compiler, the unused `DelegatingAuthorizerConfig.Compiler` field is removed, `validation.NewWebhookMatcher` builds the matcher for kube-apiserver and other servers, and `MatcherMetrics` moves to the CEL-free `authorization/metrics` package with aliases left in `authorization/cel`.
-
-  #### Which issue(s) this PR is related to:
-
-  N/A
-
-  #### Special notes for your reviewer:
-
-  Together with #142654 the kubelet links no CEL: 83.7 MB to 76.9 MB on linux/amd64 and 171 fewer packages. All in-tree callers are updated and the `test/integration/auth` authz-config tests pass.
-
-  #### Does this PR introduce a user-facing change?
-
-  ```release-note
-  k8s.io/apiserver: `webhook.New` takes a compiled `webhook.Matcher` instead of match conditions and a CEL compiler, `webhook.NewFromInterface` drops its compiler argument, and `authorizerfactory.DelegatingAuthorizerConfig.Compiler` is removed. `validation.ValidateAndCompileMatchConditions` is replaced by `validation.NewWebhookMatcher`.
-  ```
-
-  #### AI usage disclosure:
-
-  YES. An AI coding assistant drafted the change and ran the tests; the author reviewed and verified it.
-
+pr_body: ''
 releasenote:
   text: Updated `k8s.io/apiserver` so that `webhook.New` takes a compiled `webhook.Matcher`
     instead of match conditions and a CEL compiler, `webhook.NewFromInterface` dropped
