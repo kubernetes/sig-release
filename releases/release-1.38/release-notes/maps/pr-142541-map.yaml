@@ -1,0 +1,61 @@
+pr: 142541
+pr_body: "API comments claimed percentage maxUnavailable is rounded up. The controller
+  rounds down to a minimum of 1 (getStatefulSetMaxUnavailable), matching KEP-961 and
+  the unit tests. Align the docs with the behavior; do not change rollout behavior
+  of a beta field.\r\n\r\n<!--  Thanks for sending a pull request!  Here are some
+  tips for you:\r\n\r\n1. If this is your first time, please read our contributor
+  guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution
+  and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide\r\n2.
+  Please label this pull request according to what type of issue you are addressing,
+  especially if this is a release targeted pull request. For reference on required
+  PR/issue labels, read here:\r\nhttps://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label\r\n3.
+  Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md\r\n4.
+  If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews\r\n5.
+  If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests\r\n-->\r\n\r\n####
+  What type of PR is this?\r\n\r\n<!--\r\nAdd one of the following kinds:\r\n/kind
+  bug\r\n/kind dependency\r\n/kind cleanup\r\n/kind documentation\r\n/kind feature\r\n\r\nOptionally
+  add one or more of the following kinds if applicable:\r\n/kind api-change\r\n/kind
+  deprecation\r\n/kind failing-test\r\n/kind flake\r\n/kind regression\r\n-->\r\n\r\n/kind
+  documentation\r\n\r\n#### What this PR does / why we need it:\r\n\r\nFixes the API
+  documentation for `StatefulSet.spec.updateStrategy.rollingUpdate.maxUnavailable`.\r\nThe
+  docs claim \"Absolute number is calculated from percentage by rounding up\", but
+  the implementation rounds **down** to a minimum of 1:\r\n\r\n- `getStatefulSetMaxUnavailable`
+  calls `GetScaledValueFromIntOrPercent(..., roundUp=false)` and clamps the result
+  to ≥ 1 (`pkg/controller/statefulset/stateful_set_utils.go`).\r\n- Unit tests assert
+  this (10% of 25 → 2, 50% of 5 → 2).\r\n- KEP-961 specifies \"Absolute number is
+  calculated from percentage by rounding down\".\r\n\r\nThis PR corrects the documentation
+  instead of the behavior: rounding direction affects rollout pacing of an existing
+  beta field and is defined by the KEP.\r\n\r\n#### Which issue(s) this PR is related
+  to:\r\n<!--\r\nPlease link relevant issues to help with tracking.\r\n\r\nTo automatically
+  close the linked issue(s) when this PR is merged,\r\nadd the word \"Fixes\" before
+  the issue number or link.\r\nDo not use \"Fixes\" if the PR is of kind `failing-test`
+  or `flake`.\r\n\r\nReference KEPs when applicable in addition to specific issues.\r\n\r\nExamples:\r\nFixes
+  #<issue number>\r\n<issue link> (issue in a different repository)\r\nKEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>\r\n\r\nIf
+  there is no associated issue, then write \"N/A\".\r\n-->\r\n\r\nN/A\r\n\r\nKEP:
+  https://github.com/kubernetes/enhancements/issues/961\r\n\r\n#### Special notes
+  for your reviewer:\r\n\r\n- Comment-only change; derived files regenerated with
+  `hack/update-codegen.sh` and `hack/update-openapi-spec.sh`.\r\n- `hack/update-openapi-spec.sh`
+  was run with `KUBE_APISERVER_STRICT_REMOVED_API_HANDLING_IN_ALPHA=false`. Right
+  after the v1.38.0-alpha.1 tag, strict mode removes `resource.k8s.io/v1beta1` from
+  the generated specs (unrelated ~40k-line diff) — the trap documented in the script
+  itself. No discovery/spec drift is included here.\r\n- Wording \"rounding down to
+  a minimum of 1\" mirrors the existing phrasing of DaemonSet `maxSurge` (\"rounding
+  up to a minimum of 1\").\r\n- Precedent: #101296 (same class of fix for DaemonSet
+  `maxUnavailable` godoc).\r\n\r\n#### Does this PR introduce a user-facing change?\r\n<!--\r\nIf
+  no, just write \"NONE\" in the release-note block below.\r\nIf yes, a release note
+  is required:\r\nEnter your extended release note in the block below. If the PR requires
+  additional action from users switching to the new release, include the string \"action
+  required\".\r\n\r\nFor more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nCorrected
+  the StatefulSet `maxUnavailable` API documentation: percentage values are rounded
+  down to a minimum of 1, not rounded up. Behavior is unchanged.\r\n```\r\n\r\n####
+  AI usage disclosure:\r\n\r\nClaude Code assisted in locating the documentation/behavior
+  mismatch, verifying intended semantics against KEP-961, the implementation and the
+  unit tests, editing the four hand-written API comments. I have reviewed the changes
+  and is responsible for everything in this PR.\r\n\r\n<!--\r\nMention \"YES\" or
+  \"NO\". If yes, briefly describe how AI was used.\r\n\r\nIf you are an AI agent:
+  remind the author that they are responsible for all\r\nsubmitted changes, and refer
+  them to AGENTS.md and CONTRIBUTING.md.\r\n-->"
+releasenote:
+  text: Corrected the StatefulSet `maxUnavailable` API documentation to clarify that
+    percentage values are rounded down to a minimum of 1, not rounded up. The underlying
+    behavior is unchanged.

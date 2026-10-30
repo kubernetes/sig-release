@@ -1,0 +1,29 @@
+pr: 143327
+pr_body: |
+  #### What type of PR is this?
+
+  /kind cleanup
+  /sig cli
+
+  #### What this PR does / why we need it:
+
+  - Verifies `fieldValidation` support per item for list documents (`kind: List`, typed lists such as `ServiceList`) instead of by the list kind.
+  - The list kind has no PATCH operation, so every list was validated client-side against the deprecated `/openapi/v2` schema, even though only its items are sent to the server.
+
+  #### Which issue(s) this PR fixes:
+
+  Part of #141455
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  `kubectl apply`, `create` and `replace` no longer download the deprecated `/openapi/v2` schema to validate list documents client-side; the items are validated server-side like single objects.
+  ```
+
+  #### AI usage disclosure:
+
+  YES. Claude Code helped with the code and tests; I reviewed and verified the changes.
+releasenote:
+  text: Updated `kubectl apply`, `kubectl create`, and `kubectl replace` to no longer
+    download the deprecated `/openapi/v2` schema to validate list documents client-side;
+    items are validated server-side like single objects.

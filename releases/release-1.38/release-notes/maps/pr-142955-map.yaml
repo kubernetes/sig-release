@@ -1,0 +1,31 @@
+pr: 142955
+pr_body: "\r\n#### What type of PR is this?\r\n\r\n/kind feature\r\n/kind api-change\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\n- Parametrize `scheduler_preemption_workload_disruptions`
+  metric by victim type (`pod`, `podgroup`, `compositepodgroup`) \r\n- Unify single
+  pod victims ordering in workload preemption regardless whether they are standalone
+  pods or members of PodGroups or CompositePodGroups with `DisruptionMode=Single`
+  ancestor.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP: [KEP-6012](https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/6012-composite-podgroup-api#readme)\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n/sig scheduling\r\n/wg workload-aware-scheduling\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n```release-note\r\nkube-scheduler:
+  the alpha metric `scheduler_preemption_workload_disruptions` gained a `victim` label
+  (`pod`, `podgroup`, `compositepodgroup`). Standalone pods evicted by a workload
+  preemption are now counted (`victim=pod`), and pods of groups with `DisruptionMode=Single`
+  are counted as `victim=pod` instead of as group disruptions.\r\nkube-scheduler:
+  during workload preemption, pods of PodGroups or CompositePodGroups with `DisruptionMode=Single`
+  now rank as individual pods when choosing victims, instead of above standalone pods
+  of the same priority.\r\nAction Required: the kube-scheduler framework interface
+  `PreemptionVictim` has a new `Type()` method, and `PreemptionCandidate.NumPodGroupDisruptions()`
+  was replaced by `NumDisruptionsByVictimType()`. Out-of-tree implementations of these
+  interfaces must be updated.\r\n```\r\n\r\n#### AI usage disclosure:\r\n\r\nYes,
+  AI assisted\r\n"
+releasenote:
+  text: 'ACTION REQUIRED: The `kube-scheduler` framework interface `PreemptionVictim`
+    added a `Type()` method, and `PreemptionCandidate.NumPodGroupDisruptions()` was
+    replaced by `NumDisruptionsByVictimType()`; out-of-tree implementations of these
+    interfaces must be updated. Additionally, the alpha metric `scheduler_preemption_workload_disruptions`
+    added a `victim` label (`pod`, `podgroup`, `compositepodgroup`). Standalone Pods
+    evicted by a workload preemption are counted as `victim=pod`, and Pods of groups
+    with `DisruptionMode=Single` are counted as `victim=pod` instead of as group disruptions.
+    During workload preemption in `kube-scheduler`, Pods of PodGroups or CompositePodGroups
+    with `DisruptionMode=Single` rank as individual Pods when choosing victims, instead
+    of above standalone Pods of the same priority.'

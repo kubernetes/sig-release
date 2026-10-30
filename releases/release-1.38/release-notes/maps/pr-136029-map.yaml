@@ -1,0 +1,59 @@
+pr: 136029
+pr_body: "\r\n\r\n<!--  Thanks for sending a pull request!  Here are some tips for
+  you:\r\n\r\n1. If this is your first time, please read our contributor guidelines:
+  https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution
+  and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide\r\n2.
+  Please label this pull request according to what type of issue you are addressing,
+  especially if this is a release targeted pull request. For reference on required
+  PR/issue labels, read here:\r\nhttps://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label\r\n3.
+  Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md\r\n4.
+  If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews\r\n5.
+  If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests\r\n-->\r\n\r\n####
+  What type of PR is this?\r\n\r\n/kind cleanup\r\n\r\n<!--\r\nAdd one of the following
+  kinds:\r\n/kind bug\r\n/kind cleanup\r\n/kind documentation\r\n/kind feature\r\n\r\nOptionally
+  add one or more of the following kinds if applicable:\r\n/kind api-change\r\n/kind
+  deprecation\r\n/kind failing-test\r\n/kind flake\r\n/kind regression\r\n-->\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nWhen a node is deleted, its `volumesInUse`
+  is preserved in the AD controller cache as `MountedByNode`, preventing detach until
+  the 6-minute force-detach timeout expires. This change clears `MountedByNode` immediately
+  on node deletion instead.\r\n\r\nNode deletion typically means the underlying node
+  is gone, so waiting 6 minutes provides no benefit. If the node is deleted by accident,
+  this is still acceptable because:\r\n- detach is still gated by pod deletion (PodGC
+  deletes pods on deleted nodes after ~40s quarantine)\r\n- once pods are deleted,
+  kubelet cannot clean up anyway (CNI/CSI pods are force-deleted together with the
+  node)\r\n\r\nAdditional motivation:\r\n- Without this change, volumes on deleted
+  nodes are stuck permanently when `--disable-force-detach-on-timeout` is enabled,
+  as out-of-service taint cannot be applied to a deleted node and `MountedByNode`
+  blocks reconciliation\r\n- This fixes a slow memory leak: deleted nodes' `volumesInUse`
+  entries remain in cache indefinitely if nodes are constantly recycled\r\n\r\n**Relationship
+  to kubelet graceful shutdown (#139660):** The kubelet fix addresses nodes that are
+  shut down but the Node object is not deleted. This PR addresses nodes where the
+  Node object is deleted, where kubelet is irrelevant.\r\n\r\n\r\n#### Which issue(s)
+  this PR is related to:\r\n<!--\r\nPlease link relevant issues to help with tracking.\r\n\r\nTo
+  automatically close the linked issue(s) when this PR is merged,\r\nadd the word
+  \"Fixes\" before the issue number or link.\r\nDo not use \"Fixes\" if the PR is
+  of kind `failing-test` or `flake`.\r\n\r\nReference KEPs when applicable in addition
+  to specific issues.\r\n\r\nExamples:\r\nFixes #<issue number>\r\n<issue link> (issue
+  in a different repository)\r\nKEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>\r\n\r\nIf
+  there is no associated issue, then write \"N/A\".\r\n-->\r\nRelated: #65392 — that
+  issue and the subsequent non-graceful shutdown KEP ([KEP-2268](https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/2268-non-graceful-shutdown))
+  address the case where the Node object still exists but the node is unreachable.
+  This PR handles the complementary case where the Node object is deleted (e.g. node
+  scaled down, crashed, or manually removed).\r\n\r\n\r\n#### Special notes for your
+  reviewer:\r\n\r\n#### Does this PR introduce a user-facing change?\r\n<!--\r\nIf
+  no, just write \"NONE\" in the release-note block below.\r\nIf yes, a release note
+  is required:\r\nEnter your extended release note in the block below. If the PR requires
+  additional action from users switching to the new release, include the string \"action
+  required\".\r\n\r\nFor more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nAllow
+  immediate volume detach when node is deleted\r\n```\r\n\r\n#### Additional documentation
+  e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n\r\n<!--\r\nThis
+  section can be blank if this pull request does not require a release note.\r\n\r\nWhen
+  adding links which point to resources within git repositories, like\r\nKEPs or supporting
+  documentation, please reference a specific commit and avoid\r\nlinking directly
+  to the master branch. This ensures that links reference a\r\nspecific point in time,
+  rather than a document that may change over time.\r\n\r\nSee here for guidance on
+  getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\r\n\r\nPlease
+  use the following format for linking documentation:\r\n- [KEP]: <link>\r\n- [Usage]:
+  <link>\r\n- [Other doc]: <link>\r\n-->\r\n```docs\r\n\r\n```\r\n"
+releasenote:
+  text: Allowed immediate volume detachment when a Node is deleted.

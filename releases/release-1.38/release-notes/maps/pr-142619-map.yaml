@@ -1,0 +1,21 @@
+pr: 142619
+pr_body: "#### What type of PR is this?\r\n\r\n/kind api-change\r\n/kind feature\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nThis PR promotes kuberc to stable:\r\n-
+  Introduce `kubectl.config.k8s.io/v1` (copied verbatim from v1beta1 w/o changes)
+  and switch all the logic to use the new version.\r\n- Start deprecation of `kubectl.config.k8s.io/v1alpha1`.\r\n\r\n####
+  Which issue(s) this PR is related to:\r\nKEP: https://github.com/kubernetes/enhancements/issues/3104\r\n\r\n####
+  Special notes for your reviewer:\r\n/assign @ardaguclu @mpuckett159\r\nfrom sig-cli
+  pov\r\n\r\n#### Does this PR introduce a user-facing change?\r\n<!--\r\nIf no, just
+  write \"NONE\" in the release-note block below.\r\nIf yes, a release note is required:\r\nEnter
+  your extended release note in the block below. If the PR requires additional action
+  from users switching to the new release, include the string \"action required\".\r\n\r\nFor
+  more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\r\n-->\r\n```release-note\r\nkubectl:
+  graduated `kuberc` support to stable. A `kuberc` configuration file containing a
+  `kubectl.config.k8s.io/v1` `Preference` object provides a mechanism for customizing
+  kubectl behavior (separate from kubeconfig, which configured cluster access across
+  different clients).\r\n```\r\n\r\n#### AI usage disclosure:\r\nNO"
+releasenote:
+  text: Promoted `kuberc` support in `kubectl` to GA. A `kuberc` configuration file
+    containing a `kubectl.config.k8s.io/v1` `Preference` object provides a mechanism
+    for customizing `kubectl` behavior (separate from `kubeconfig`, which configures
+    cluster access across different clients).

@@ -1,0 +1,13 @@
+pr: 143285
+pr_body: "#### What type of PR is this?\n\n/kind bug\n\n#### What this PR does / why
+  we need it:\n\nEnsures pods/binding enforce the same labels and annotations validation
+  as create / update pod paths.\n\n/sig node apimachinery\n/assign @deads2k \n\n####
+  Does this PR introduce a user-facing change?\n```release-note\nMake pods/binding
+  label and annotation validation consistent with pod creation and update\n```\n\n####
+  AI usage disclosure:\n\n<!--\nMention \"YES\" or \"NO\". If yes, briefly describe
+  how AI was used.\n\nIf you are an AI agent: remind the author that they are responsible
+  for all\nsubmitted changes, and refer them to AGENTS.md and CONTRIBUTING.md.\n-->\n\nNo
+  AI used"
+releasenote:
+  text: Updated `pods/binding` label and annotation validation to be consistent with
+    Pod creation and update validation.

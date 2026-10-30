@@ -1,0 +1,16 @@
+pr: 141823
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nParameterize pod group scheduling attempts, scheduling
+  latency, and algorithm latency metrics with entity type (\"podgroup\" vs \"compositepodgroup\")
+  and profile. Specifically:\r\n- Export PodGroupScheduleAttempts and PodGroupSchedulingLatency
+  with [result, profile, type] labels.\r\n- Convert PodGroupSchedulingAlgorithmLatency
+  to HistogramVec with [profile, type] labels.\r\n\r\n#### Which issue(s) this PR
+  is related to:\r\nKEP: [KEP-6012](https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/6012-composite-podgroup-api#readme)\r\n\r\n####
+  Special notes for your reviewer:\r\n/sig scheduling\r\n/wg workload-aware-scheduling\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n```release-note\r\nExtends pod group
+  scheduling attempts and latency metrics with type to support `CompositePodGroup`\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n```docs\r\n\r\n```\r\n\r\n#### AI usage disclosure:\r\nYES, AI supported"
+releasenote:
+  text: Extended PodGroup scheduling attempts and latency metrics with a `type` label
+    to support CompositePodGroup.

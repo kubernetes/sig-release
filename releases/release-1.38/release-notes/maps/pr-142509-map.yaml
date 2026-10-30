@@ -1,0 +1,35 @@
+pr: 142509
+pr_body: |+
+  #### What type of PR is this?
+
+  /kind feature
+  /kind api-change
+  /sig node
+
+  #### What this PR does / why we need it:
+
+  CRI API for KEP-6061: the `OCI` seccomp profile type (`oci_ref`, `base_profile`), the `ImageService` RPCs `PullSecurityProfile`, `ListSecurityProfiles`, and `RemoveSecurityProfile`, the `seccomp_profile_oci` runtime feature, and the `SecurityProfileInvalid` well-known error. The proto documents the lifecycle and error contract for runtimes. Client, fakes, instrumented service, and e2e CRI proxies implement the RPCs; the kubelet does not call them yet.
+
+  #### Which issue(s) this PR is related to:
+
+  KEP: https://github.com/kubernetes/enhancements/issues/6061
+
+  #### Special notes for your reviewer:
+
+  First PR of the chain, so CRI-O and containerd can build against it. `SecurityProfileKind` values are unprefixed as in the KEP (like `SupplementalGroupsPolicy`). `seccomp_profile_oci` is node-wide rather than per runtime handler, because the merge happens before the OCI spec reaches the handler. Differences from the KEP, reconciled in one KEP update once the implementation is done: the proto does not define the artifact format (which formats a runtime accepts and how it validates them is up to the runtime, with the KEP's format as the recommendation); `ListSecurityProfiles` and `RemoveSecurityProfile` move from beta to alpha, so the kubelet owns the lifecycle of pulled profiles from the start; `SecurityProfileBase.BaseType` has `RuntimeDefault` as its zero value instead of an unspecified value; the merge is two-way, the base profile (the runtime default unless the pod spec selects a `Localhost` base) intersected with the OCI profile, instead of the KEP's three-way merge with the runtime baseline as a floor; `oci_ref` or `base_profile` on another profile type is rejected as a kubelet programming error; and `SecurityProfileKind` has no reserved `AppArmor` value (beta adds one if it needs it).
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  CRI API: added the `PullSecurityProfile`, `ListSecurityProfiles`, and `RemoveSecurityProfile` RPCs, the `OCI` seccomp profile type with `oci_ref` and `SecurityProfileBase`, the `seccomp_profile_oci` runtime feature, and the `SecurityProfileInvalid` well-known error, for seccomp profiles pulled from OCI registries (Alpha).
+  ```
+
+  #### AI usage disclosure:
+
+  YES. AI assisted with the change, its tests, and review.
+
+releasenote:
+  text: Added the `PullSecurityProfile`, `ListSecurityProfiles`, and `RemoveSecurityProfile`
+    RPCs, the `OCI` seccomp profile type with `oci_ref` and `SecurityProfileBase`,
+    the `seccomp_profile_oci` runtime feature, and the `SecurityProfileInvalid` well-known
+    error to the CRI API for seccomp profiles pulled from OCI registries (Alpha).

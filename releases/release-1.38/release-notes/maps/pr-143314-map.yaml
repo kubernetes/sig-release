@@ -1,0 +1,24 @@
+pr: 143314
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  We calculate informer lag and watch cache lag based on resource version, so publishing 0 before initial sync skews the data during startup and restarts. Defer creating the metric series until a resource version is recorded, matching the [apiserver watch cache](https://github.com/kubernetes/kubernetes/blob/5ef140c09dc653e642e6e06ee9c5bea9a5383c67/staging/src/k8s.io/apiserver/pkg/storage/cacher/metrics/metrics.go#L345-L347).
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed the `informer_store_resource_version` metric reporting 0 before an informer store records a resource version.
+  ```
+releasenote:
+  text: Fixed an issue where the `informer_store_resource_version` metric reported
+    0 before an informer store recorded a resource version.

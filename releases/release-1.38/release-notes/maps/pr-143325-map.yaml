@@ -1,0 +1,11 @@
+pr: 143325
+pr_body: "/kind feature\r\n\r\n```release-note\r\nImprove reliability of serving of
+  Exact LIST on resources with infrequent updates from watch cache by keep the last
+  snapshots behind compaction window\r\n```\r\n\r\nThis matches the etcd behavior
+  where we keep old key revisions before compaction if the key didn't change since.\r\n\r\nFollowup
+  to https://github.com/kubernetes/kubernetes/pull/142848\r\n\r\n/cc @rpb-ant\r\n\r\n####
+  AI usage disclosure:\r\n\r\n"
+releasenote:
+  text: Improved the reliability of serving Exact LIST requests on resources with
+    infrequent updates from the watch cache by keeping the last snapshot behind the
+    compaction window.

@@ -1,0 +1,40 @@
+pr: 143376
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  `DeviceToleration.effect` says "Empty means match all taint effects", and `resourceclaim.ToleratesTaint` implements that. The device taint eviction controller skipped every toleration whose effect was not exactly `NoExecute` before calling it, so a toleration without an effect did not protect the pod from a `NoExecute` taint and the pod was evicted.
+
+  Accept an empty effect as well as `NoExecute` there, and add a test case (fails without the change).
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes #143373
+
+  #### Special notes for your reviewer:
+
+  Tested with `go test ./pkg/controller/devicetainteviction`. Also reproduced on a v1.37.1 cluster with the example driver before the change.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed device taint eviction ignoring a DeviceToleration with an empty effect; per the API documentation it now tolerates NoExecute taints like any other matching toleration.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  NONE
+  ```
+
+  #### AI usage disclosure:
+  YES. Used to help scope the fix location, draft the implementation and unit test, and run the live cluster
+  reproduction. All changes reviewed, tested (unit tests + live cluster verification), and understood by the
+  author before submitting.
+releasenote:
+  text: Fixed an issue in device taint eviction where a DeviceToleration with an empty
+    `effect` field was ignored; per the API documentation, it tolerates NoExecute
+    taints like any other matching toleration.

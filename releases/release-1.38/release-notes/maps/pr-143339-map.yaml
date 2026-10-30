@@ -1,0 +1,29 @@
+pr: 143339
+pr_body: |-
+  #### What type of PR is this?
+
+  /kind feature
+
+  #### What this PR does / why we need it:
+
+  Bump images and versions to Go 1.27.3 and update distroless-iptables
+
+  #### Which issue(s) this PR is related to:
+
+  Part of https://github.com/kubernetes/release/issues/4581
+
+  #### Special notes for your reviewer:
+
+  None.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Kubernetes is now built using Go 1.27.3
+  ```
+
+  #### AI usage disclosure:
+
+  Yes, for verifying if the bumps are correct.
+releasenote:
+  text: Updated Kubernetes to build using Go `v1.27.3`.

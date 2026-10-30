@@ -1,0 +1,42 @@
+pr: 142923
+pr_body: |-
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  In the Job controller `manageJob` create path, a failed pod creation correctly incremented `creationsFailed`, but `creationsSucceeded` was incremented unconditionally afterward. That made `job_pods_creation_total` record the same failed attempt as both `failed` and `succeeded`.
+
+  This PR increments `creationsSucceeded` only when create returns nil (and keeps the existing early return for namespace terminating). It also folds the duplicate `if err != nil` into one block.
+
+  Adds `TestJobPodsCreationTotal` covering create success and create failure metric outcomes.
+
+  Related prior attempt (closed, unmerged): https://github.com/kubernetes/kubernetes/pull/136377
+
+  /sig apps
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  Metrics-only correctness; Job status / expectations behavior unchanged aside from which counters are bumped on create failure.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Job controller: `job_pods_creation_total` no longer counts a failed pod creation as both succeeded and failed.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  N/A
+
+  #### AI usage disclosure:
+
+  YES. AI-assisted tools were used for research and understanding; I tested and validated the code.
+releasenote:
+  text: Fixed an issue in the Job controller where `job_pods_creation_total` counted
+    a failed Pod creation as both succeeded and failed.

@@ -1,0 +1,32 @@
+pr: 143337
+pr_body: |
+  #### What type of PR is this?
+
+  /kind cleanup
+
+  #### What this PR does / why we need it:
+
+  Removes the GA `SystemdWatchdog` feature gate.
+
+  The gate graduated to GA and was locked to default in 1.35. Under the three-release emulation window (`minRemovalVer = specVer.AddMinor(3)`), 1.38 is the first release where the feature gate can be dropped.
+
+  The systemd watchdog integration in kubelet is unconditional when supported by the host, and no code references remain outside the gate's registration.
+
+  Regenerated feature gate references in `test/compatibility_lifecycle/reference/`.
+
+  #### Which issue(s) this PR fixes:
+
+  Fixes #
+
+  #### Special notes for your reviewer:
+
+  /sig node
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  The `SystemdWatchdog` feature gate, which was graduated to GA and locked to default in 1.35, has been removed.
+  ```
+releasenote:
+  text: Removed the `SystemdWatchdog` feature gate, which graduated to GA and was
+    locked to default in `v1.35`.

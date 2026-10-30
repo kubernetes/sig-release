@@ -1,0 +1,26 @@
+pr: 143365
+pr_body: "#### What type of PR is this?\n\n/kind bug\n\n#### What this PR does / why
+  we need it:\n\nIn `watchSomething.run`, the `<-w.stopChan` case of the `select`
+  used a naked `break`, which only leaves the `select`, not the enclosing `for` loop.
+  After `Stop()` the loop kept reading and converting events from the upstream watch
+  and never reached the deferred `close(w.resultChan)` that `watch.Interface` consumers
+  wait for. Changed to `return`.\n\nSupersedes #141244 by @dwin-gharibi, who wrote
+  the fix and the regression test. This PR applies the review feedback from that PR
+  (drop the inline comment, reword the test comment, squash into one commit).\n\n####
+  Which issue(s) this PR is related to:\n\nFixes #141243\n\n#### Special notes for
+  your reviewer:\n\nIn practice this is usually masked: `Stop()` calls `w.upstream.Stop()`
+  first, and a well-behaved upstream closes its channel, which ends the loop through
+  the `!ok` branch. The wrapper should still not depend on upstream behaviour for
+  its own termination.\n\nThe new test uses an upstream whose channel stays open after
+  `Stop()` and asserts that `run` returns and that queued upstream events are not
+  drained. With the fix reverted it fails with `run did not return after Stop`.\n\n####
+  Does this PR introduce a user-facing change?\n\n```release-note\nFixed the DRA converting
+  watch client not terminating when stopped, which left its result channel open and
+  kept draining the upstream watch.\n```\n\n#### AI usage disclosure:\n\nYES. Claude
+  Code was used to rebase the original PR's patch onto master, apply the reviewer-requested
+  edits, and run the tests. The fix and the test were written by the original author.\n\n\U0001F916
+  Generated with [Claude Code](https://claude.com/claude-code)\n"
+releasenote:
+  text: Fixed an issue where the Dynamic Resource Allocation (DRA) converting watch
+    client did not terminate when stopped, which left its result channel open and
+    kept draining the upstream watch.

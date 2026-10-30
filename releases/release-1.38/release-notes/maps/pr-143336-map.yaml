@@ -1,0 +1,32 @@
+pr: 143336
+pr_body: |
+  #### What type of PR is this?
+
+  /kind cleanup
+
+  #### What this PR does / why we need it:
+
+  Removes the deprecated `AllowOverwriteTerminationGracePeriodSeconds` feature gate.
+
+  The gate was deprecated in 1.32 and locked to false in 1.35. Under the three-release emulation window (`minRemovalVer = specVer.AddMinor(3)`), 1.38 is the first release where the feature gate can be dropped.
+
+  The soft-eviction override guarded by this gate has already been removed, and no code references remain outside the gate's registration.
+
+  Regenerated feature gate references in `test/compatibility_lifecycle/reference/`.
+
+  #### Which issue(s) this PR fixes:
+
+  Fixes #
+
+  #### Special notes for your reviewer:
+
+  /sig node
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  The deprecated `AllowOverwriteTerminationGracePeriodSeconds` feature gate, locked to default in 1.35, has been removed.
+  ```
+releasenote:
+  text: Removed the deprecated `AllowOverwriteTerminationGracePeriodSeconds` feature
+    gate, which was locked to default in `v1.35`.

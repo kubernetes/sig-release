@@ -1,0 +1,26 @@
+pr: 142216
+pr_body: "#### What type of PR is this?\n\n/kind bug\n\n#### What this PR does / why
+  we need it:\n\n`labels.Parse` accepts `key!=value`, but `metav1.ParseToLabelSelector`,
+  which is documented as being kept in sync with that parser, had no case for `selection.NotEquals`
+  and fell through to `\"!=\" is not a valid label selector operator`. As a result
+  `kubectl create pdb --selector='app!=web'` and `kubectl set selector ... 'app!=web'`
+  rejected a selector that works with `kubectl get -l`.\n\n`key!=value` selects exactly
+  what `key notin (value)` selects (both match when the key is absent), so this maps
+  `NotEquals` to `LabelSelectorOpNotIn` with a single value.\n\n`TestParseToLabelSelector`
+  is new: it covers every operator, and for each parsed `LabelSelector` it also checks
+  that `LabelSelectorAsSelector` matches the same label sets as `labels.Parse` of
+  the original string. The `foo!=bar` case fails before the change and passes after
+  it; also verified failing against the `v1.37.0` tag.\n\n#### Which issue(s) this
+  PR is related to:\n\nFixes #142211\n\n#### Special notes for your reviewer:\n\n`>`
+  and `<` remain rejected with their existing explicit error; only `!=` changes.\n\n####
+  Does this PR introduce a user-facing change?\n\n```release-note\nSelector strings
+  using \"!=\" (for example `app!=web`) are now accepted by commands that convert
+  a selector into a LabelSelector, such as `kubectl create pdb --selector` and `kubectl
+  set selector`; they are translated to a `NotIn` match expression.\n```\n\n#### Additional
+  documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n```docs\n\n```\n\n\U0001F916
+  Generated with [Claude Code](https://claude.com/claude-code)\n"
+releasenote:
+  text: Added support for selector strings using `!=` (for example `app!=web`) in
+    commands that convert a selector into a LabelSelector, such as `kubectl create
+    pdb --selector` and `kubectl set selector`; they are translated to a `NotIn` match
+    expression.

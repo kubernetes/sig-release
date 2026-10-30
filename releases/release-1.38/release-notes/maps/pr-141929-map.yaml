@@ -1,0 +1,15 @@
+pr: 141929
+pr_body: "#### What type of PR is this?\r\n\r\n/kind feature\r\n\r\n#### What this
+  PR does / why we need it:\r\n\r\nParameterizes Topology-Aware Scheduling (TAS) candidate
+  placement metrics with the entity `type` label (`podgroup` vs `compositepodgroup`)
+  to support `CompositePodGroup` workloads alongside standard `PodGroup`s.\r\n\r\nNote
+  that candidate placement generation and evaluation metrics are emitted for both
+  the root `CompositePodGroup` and recursively for its nested child `PodGroup`s during
+  simulation.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nKEP: [KEP-6012](https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/6012-composite-podgroup-api#readme)\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n/sig scheduling\r\n/wg workload-aware-scheduling\r\n\r\n####
+  Does this PR introduce a user-facing change?\r\n```release-note\r\nExtends topology-aware
+  placement metrics with type to support `CompositePodGroup`\r\n```\r\n\r\n#### Additional
+  documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\r\n```docs\r\n\r\n```\r\n\r\n####
+  AI usage disclosure:\r\n\r\nYES, AI supported"
+releasenote:
+  text: Extended topology-aware placement metrics with a `type` label to support CompositePodGroup.

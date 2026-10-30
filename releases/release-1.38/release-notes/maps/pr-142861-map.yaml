@@ -1,0 +1,14 @@
+pr: 142861
+pr_body: |
+  `KUBECTL_REMOTE_COMMAND_WEBSOCKETS` and `KUBECTL_PORT_FORWARD_WEBSOCKETS` are removed. So kubectl always uses WebSockets first (falling back to SPDY) for `exec`, `attach`, `cp` and `port-forward`.
+
+  /kind feature
+  /sig cli
+
+  ```release-note
+  The `KUBECTL_REMOTE_COMMAND_WEBSOCKETS` and `KUBECTL_PORT_FORWARD_WEBSOCKETS` environment variables are removed; the features are GA. kubectl always uses WebSockets (with SPDY fallback) for `exec`, `attach`, `cp` and `port-forward`.
+  ```
+releasenote:
+  text: Removed the `KUBECTL_REMOTE_COMMAND_WEBSOCKETS` and `KUBECTL_PORT_FORWARD_WEBSOCKETS`
+    environment variables following graduation to GA. `kubectl` always uses WebSockets
+    (with SPDY fallback) for `exec`, `attach`, `cp`, and `port-forward`.

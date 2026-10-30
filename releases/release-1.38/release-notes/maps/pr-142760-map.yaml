@@ -1,0 +1,32 @@
+pr: 142760
+pr_body: |-
+  #### What type of PR is this?
+
+  /kind feature
+
+  #### What this PR does / why we need it:
+
+  - Adds `sharding.NewShardRangeSelector` and `cache.NewShardedListWatch` helpers for sharded list/watch with client-side fallback
+  - Adds `SharedInformer.SetShardSelector` and `WithShardSelector` factory options (`informers`, `metadatainformer`, `dynamicinformer`, `informer-gen`)
+  - Adds E2E tests for server-side sharded list and watch
+
+  #### Which issue(s) this PR is related to:
+
+  KEP: https://github.com/kubernetes/enhancements/issues/5866
+
+  #### Special notes for your reviewer:
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Adds `sharding.NewShardRangeSelector` and `cache.NewShardedListWatch` helpers for sharded informers and reflectors.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  - [KEP]: https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/5866-server-side-sharded-list-and-watch
+  ```
+releasenote:
+  text: Added `sharding.NewShardRangeSelector` and `cache.NewShardedListWatch` helpers
+    for sharded informers and reflectors.

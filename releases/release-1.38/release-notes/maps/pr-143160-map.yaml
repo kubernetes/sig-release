@@ -1,0 +1,57 @@
+pr: 143160
+pr_body: |
+  #### What type of PR is this?
+
+  /kind feature
+  /kind api-change
+
+  #### What this PR does / why we need it:
+
+  Implements the mutating webhook merge order for KEP-5793.
+
+  Manifest-based mutating webhooks always run before webhooks registered through the API, so moving a webhook from a `MutatingWebhookConfiguration` to a manifest file changes the order webhooks run in. This adds a `staticOrder` field to `WebhookAdmissionConfiguration` for `MutatingAdmissionWebhook`:
+
+  - `StaticFirst` (default, same as unset): current behavior.
+  - `StaticLast`: manifest-based webhooks run after API-registered ones.
+  - `ByName`: both are stably sorted together by configuration name, like API-registered webhooks are today. A migrated `<name>.static.k8s.io` keeps its slot, except relative to configurations named `<name>-*`, or `<name>.*` that sort before `<name>.static.k8s.io` (for example `foo-bar` or `foo.bar.io`).
+
+  `staticOrder` requires `staticManifestsDir` and the `ManifestBasedAdmissionControlConfig` feature gate. `ValidatingAdmissionWebhook` rejects anything but `StaticFirst`. The merged list is cached, so there is no per-request cost. The effective order is logged at startup when `staticManifestsDir` is set.
+
+  #### Which issue(s) this PR is related to:
+
+  KEP: https://github.com/kubernetes/enhancements/issues/5793
+
+  #### Special notes for your reviewer:
+
+  - Design: kubernetes/enhancements#6417. Commits are API type, validation, merge behavior, integration test.
+  - `generic.NewCompositeWebhookSource` in `k8s.io/apiserver` is now unexported. Its only caller was in the same package, and its replacement takes the merge order.
+  - `--emulated-version=1.37` accepts `staticOrder` while a real 1.37 binary rejects it under strict decoding. Per the KEP it shares the existing beta gate, and since the field only lives in the local admission config file, a rollback fails at startup instead of silently changing the order.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Add the `staticOrder` field to `WebhookAdmissionConfiguration` for the `MutatingAdmissionWebhook` plugin (KEP-5793). It controls whether manifest-based mutating webhooks run before (`StaticFirst`, the default), after (`StaticLast`), or interleaved by configuration name with (`ByName`) webhooks registered through the API. It requires `staticManifestsDir` and the `ManifestBasedAdmissionControlConfig` feature gate. Remove `staticOrder` before downgrading to v1.37 or earlier, which reject it at startup.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  - [KEP]: https://github.com/kubernetes/enhancements/tree/master/keps/sig-api-machinery/5793-manifest-based-admission-control-config
+  ```
+
+  #### AI usage disclosure:
+
+  YES. AI helped draft the code, tests and this description; I reviewed all of it and I'm responsible for it.
+
+  /label api-review
+  /sig api-machinery auth
+  /priority important-soon
+  /milestone v1.38
+  /triage accepted
+releasenote:
+  text: Added the `staticOrder` field to WebhookAdmissionConfiguration for the `MutatingAdmissionWebhook`
+    plugin (KEP-5793). It controls whether manifest-based mutating webhooks run before
+    (StaticFirst, the default), after (StaticLast), or interleaved by configuration
+    name with (ByName) webhooks registered through the API. It requires `staticManifestsDir`
+    and the `ManifestBasedAdmissionControlConfig` feature gate. Remove `staticOrder`
+    before downgrading to `v1.37` or earlier, which rejects it at startup.

@@ -1,0 +1,41 @@
+pr: 142983
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+  /sig api-machinery
+
+  #### What this PR does / why we need it:
+
+  Follow-up to #141641, which wired `minItems`/`minProperties` to `field.TooFew` and added `CauseTypeTooShort` to metav1. `minLength` was still missing from the switch in `kubeOpenAPIResultToFieldErrors`, so it fell through to `default:`:
+
+  ```
+  fieldX: Invalid value: "ab": fieldX in body should be at least 3 chars long
+  ```
+
+  After this PR it matches `maxLength` and what declarative validation emits for `+k8s:minLength`:
+
+  ```
+  fieldX: Too short: must be at least 3 characters
+  ```
+
+  #### Which issue(s) this PR is related to:
+
+  N/A, follow-up to #141641.
+
+  #### Special notes for your reviewer:
+
+  - `hasBlockingErr` in `pkg/registry/customresource/strategy.go` is not touched. Invalid and TooShort are both non-blocking, so CEL rules run exactly as before (#141641 left TooFew out of that list for the same reason).
+  - "characters" is accurate here: kube-openapi counts runes for `minLength`.
+  - Not included: `uniqueItems` still reports Invalid, because kube-openapi's duplicate error carries no value to build `field.Duplicate` from.
+  - #142746 touches only the imports of these two files, so a rebase either way is trivial.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  CRD validation failures for `minLength` now report `Too short: must be at least N characters` (cause type `FieldValueTooShort`) instead of `Invalid value`.
+  ```
+releasenote:
+  text: 'Fixed CustomResourceDefinition validation failures for `minLength` to report
+    `Too short: must be at least N characters` (cause type `FieldValueTooShort`) instead
+    of `Invalid value`.'

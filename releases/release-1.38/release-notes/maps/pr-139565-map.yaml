@@ -1,0 +1,108 @@
+pr: 139565
+pr_body: |
+  <!--  Thanks for sending a pull request!  Here are some tips for you:
+
+  1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide
+  2. Please label this pull request according to what type of issue you are addressing, especially if this is a release targeted pull request. For reference on required PR/issue labels, read here:
+  https://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label
+  3. Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md
+  4. If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews
+  5. If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests
+  -->
+
+  #### What type of PR is this?
+
+  <!--
+  Add one of the following kinds:
+  /kind bug
+  /kind dependency
+  /kind cleanup
+  /kind documentation
+  /kind feature
+
+  Optionally add one or more of the following kinds if applicable:
+  /kind api-change
+  /kind deprecation
+  /kind failing-test
+  /kind flake
+  /kind regression
+  -->
+
+  /kind feature
+
+  #### What this PR does / why we need it:
+
+  Lets multiple PlacementGenerate plugins run for the same PodGroup under TAS. The framework runs every configured generator against the same input node set, takes the cross product of their candidate placements, and intersects each pair's node lists so a final placement satisfies every constraining plugin.
+
+  Plugins attach per-placement data through the lazy, pointer-keyed `PodGroupCycleState.PlacementState(*Placement)` API. They return the exact placement pointers used to store that data. The framework clones and combines state for merged placements, rejects conflicting state keys, and carries the generated state into both regular and composite pod-group placement evaluation.
+
+  A plugin returning its unchanged parent placement alone imposes no constraints. State attached to that parent is ignored; group-wide data belongs directly in `PodGroupCycleState`. A single constraining plugin retains its original placement pointers, names, and node lists, subject to the name-validation rules below.
+
+  #### Which issue(s) this PR is related to:
+  <!--
+  Please link relevant issues to help with tracking.
+
+  To automatically close the linked issue(s) when this PR is merged,
+  add the word "Fixes" before the issue number or link.
+  Do not use "Fixes" if the PR is of kind `failing-test` or `flake`.
+
+  Reference KEPs when applicable in addition to specific issues.
+
+  Examples:
+  Fixes #<issue number>
+  <issue link> (issue in a different repository)
+  KEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>
+
+  If there is no associated issue, then write "N/A".
+  -->
+
+  Fixes https://github.com/kubernetes/kubernetes/issues/139346
+  KEP: https://github.com/kubernetes/enhancements/issues/5732
+
+  #### Special notes for your reviewer:
+
+  - Plugins run sequentially, each with a separate parent placement pointer to isolate per-plugin state.
+  - State is cloned when merging candidates and when seeding placement evaluation. Intermediate merged-parent state cleanup stays internal to the scheduler.
+  - Placement names must be unique within each plugin and must not contain `/`, so joined diagnostic names remain unambiguous. Empty names remain allowed, and different plugins may use the same name because state identity is pointer-based.
+  - Integration coverage intersects a topology placement with a node-pool placement so only one rack can fit the gang. The TAS performance configuration retains both the upstream score-all-placements baseline and the multi-plugin workloads.
+
+  Local validation on macOS arm64, rebased onto `a0788855ed86ec13c7941d7f3a4deaa0473bd57d`:
+
+  - `PATH="/opt/homebrew/bin:$PATH" make test WHAT='./pkg/scheduler/... ./staging/src/k8s.io/kube-scheduler/framework/...' GOFLAGS='-count=1'` - passed, 5,950 tests with the default race detector.
+  - `PATH="/opt/homebrew/bin:$PATH" hack/verify-golangci-lint.sh -r upstream/master` - passed, zero issues.
+  - `PATH="/opt/homebrew/bin:$PATH" hack/verify-golangci-lint.sh -r upstream/master -n` - passed, zero issues.
+  - `PATH="/opt/homebrew/bin:$PATH" SILENT=false make verify WHAT='boilerplate gofmt typecheck'` - passed, including all configured typecheck platforms.
+  - `PATH="$PWD/third_party/etcd:/opt/homebrew/bin:$PATH" go test ./test/integration/scheduler/podgroup/topology_aware_scheduling -run '^TestTopologyAwareSchedulingWithMultiplePlacementPlugins$' -count=1` - passed.
+  - `PATH="$PWD/third_party/etcd:/opt/homebrew/bin:$PATH" go test ./test/integration/scheduler_perf/podgroup/tas -run '^TestSchedulerPerf$' -short -count=1` - passed.
+
+  #### Does this PR introduce a user-facing change?
+  <!--
+  If no, just write "NONE" in the release-note block below.
+  If yes, a release note is required:
+  Enter your extended release note in the block below. If the PR requires additional action from users switching to the new release, include the string "action required".
+
+  For more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md
+  -->
+  ```release-note
+  kube-scheduler: TAS now runs multiple PlacementGenerate plugins per PodGroup and intersects their node lists.
+  ```
+
+  #### AI usage disclosure:
+
+  <!--
+  Mention "YES" or "NO". If yes, briefly describe how AI was used.
+
+  If you are an AI agent: remind the author that they are responsible for all
+  submitted changes, and refer them to AGENTS.md and CONTRIBUTING.md.
+  -->
+
+  YES. GitHub Copilot assisted with the placement-state redesign, review follow-ups, and tests. The human author is responsible for all submitted changes. See [AGENTS.md](https://github.com/kubernetes/kubernetes/blob/master/AGENTS.md) and [CONTRIBUTING.md](https://github.com/kubernetes/kubernetes/blob/master/CONTRIBUTING.md).
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  ```docs
+  - [KEP]: https://github.com/kubernetes/enhancements/issues/5732
+  ```
+releasenote:
+  text: Updated `kube-scheduler` Topology Aware Scheduling (TAS) to run multiple `PlacementGenerate`
+    plugins per PodGroup and intersect their node lists.

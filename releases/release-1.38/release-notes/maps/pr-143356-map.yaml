@@ -1,0 +1,42 @@
+pr: 143356
+pr_body: |+
+  #### What type of PR is this?
+
+  /kind bug
+  /area kubeadm
+  /sig cluster-lifecycle
+
+  #### What this PR does / why we need it:
+
+  `Client.listMembers` was meant to retry `MemberList` until the `EtcdAPICall` timeout, but its poll condition returned the error, which makes `wait.PollUntilContextTimeout` stop right away. A single transient etcd error was enough to fail `GetMemberID` and `ListMembers`. During `kubeadm join --control-plane`, that left a freshly added learner unpromoted. `kubeadm reset` had the same problem during etcd member removal.
+
+  The condition now returns `false, nil` like the other etcd retry loops in this file. The last etcd error is still returned once the timeout expires.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  The retry is covered by a new `a transient error is retried` case in `TestListMembers`: the first `MemberList` call fails and the second succeeds. On master the poll aborts on the first error, so the case fails on both assertions, with `ListMembers() = []` and an unexpected error.
+
+  The new case needs a second `MemberList` attempt, and the table's shared 100ms deadline is shorter than the 500ms retry interval, so only one attempt ever happens under it. It therefore carries its own 3s `timeout` through a new per-case field; every other case keeps the 100ms default.
+
+  The failure counter lives in the test function rather than in the fake, because `listMembersOnce` calls `newEtcdClient` on every poll attempt and so gets a fresh `fakeEtcdClient` each time.
+
+  On the error returned after the deadline: once the condition stops returning errors, the only way `wait.PollUntilContextTimeout` fails here is the deadline, since the parent context is `context.Background()`. So the message states that and wraps the last etcd error as the cause, which keeps `errors.Is` working through it.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kubeadm: retry listing etcd members on transient errors during control plane join and reset, instead of failing on the first error.
+  ```
+
+  #### AI usage disclosure:
+
+  YES. An AI assistant helped find the bug and draft the fix and tests; I reviewed, ran and verified them.
+
+
+releasenote:
+  text: Updated `kubeadm` to retry listing etcd members on transient errors during
+    control plane join and reset, instead of failing on the first error.

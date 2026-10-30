@@ -1,0 +1,40 @@
+pr: 143378
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  A `DeviceTaintRule` event can reach `Tracker.syncSlice` after the ResourceSlice informer store has received an updated slice, but before the tracker has updated its cached copy. The two copies can then have different device lists.
+
+  For DeviceTaintRule events, `syncSlice` compares device taints by index to avoid a full deep comparison. If the updated slice has more devices than the cached one, that comparison reads past the end of the old list and panics.
+
+  This change checks the device counts first. If they differ, the tracker updates its cache and notifies listeners instead of comparing devices by index. The existing taint comparison remains in place when the counts match.
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  `TestPatchChangedDeviceList` reproduces the event ordering deterministically: it updates the informer store from one device to three without running the ResourceSlice handler, then runs the DeviceTaintRule handler. Without the fix, the test panics at `tracker.go:551`. With the fix, it checks the patched slice and the update event sent to a listener.
+
+  Checks run locally from `staging/src/k8s.io/dynamic-resource-allocation`:
+
+  - `GOTOOLCHAIN=auto go test ./resourceslice/... -count=1 -timeout 300s` — passed
+  - `GOTOOLCHAIN=auto go vet ./resourceslice/tracker` — passed
+  - `git diff --check` — passed
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed a kube-scheduler panic when a ResourceSlice changes its device count while a matching DeviceTaintRule event is processed.
+  ```
+
+  #### AI usage disclosure:
+
+  YES: AI written, human reviewed & edited.
+releasenote:
+  text: Fixed a `kube-scheduler` panic when a ResourceSlice changed its device count
+    while a matching DeviceTaintRule event was being processed.

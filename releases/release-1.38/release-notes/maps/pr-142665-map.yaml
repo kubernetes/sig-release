@@ -1,0 +1,66 @@
+pr: 142665
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n/sig node\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\n`FileKeyRef` ignores `optional` when
+  the env file does not exist, and reports a key with an empty value as missing, leaving
+  the container in `CreateContainerConfigError` in both cases. Both come from `ParseEnv`
+  returning only `(string, error)`, which leaves the caller using an empty return
+  value as its not-found sentinel and returning on the open error before it checks
+  `optional`.\r\n\r\n`ParseEnv` now also returns whether the key was found, and the
+  caller skips the variable when the file is absent and the reference is optional.
+  The `ConfigMapKeyRef` branch in the same function already distinguishes these cases
+  this way, using the `ok` value from the map lookup.\r\n\r\nOnly a missing file is
+  treated as skippable. Permission errors, `ENOTDIR`, read failures and syntax errors
+  still fail the container, which matches the ConfigMap and Secret paths where only
+  `IsNotFound` is tolerated.\r\n\r\n`ParseEnv` now also rejects `KEY= 'val'`. That
+  line used to be read as an empty value, and the code comment said this matched bash,
+  but bash ends the assignment at the whitespace and runs `val` as a command. Whitespace
+  after `=` followed by nothing or by a comment, as in `KEY=   ` or `KEY= # comment`,
+  still assigns an empty value, as it does in bash. Any other content after that whitespace
+  fails with `unexpected content after whitespace following '='`. Like the existing
+  whitespace-before-`=` check, the error fires for any line the parser reads before
+  it finds the requested key.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nFixes
+  #142662\r\n\r\n#### Special notes for your reviewer:\r\n\r\n`ParseEnv` gains a `found`
+  return. It has one production caller and one test in tree, both updated here. The
+  similarly named `ParseEnv` in `staging/src/k8s.io/kubectl/pkg/cmd/set/env` is a
+  different function and is untouched.\r\n\r\nUnit tests:\r\n\r\n- `TestMakeEnvironmentVariablesWithFileKeyRef`
+  has five new cases. A missing file with `optional` and a key with an empty value
+  fail before this change with `couldn't parse env file` and `environment variable
+  key \"EMPTY\" not found in file`. A key written as `EMPTY= # comment` must be published
+  as an empty value. A file containing `DATABASE= 'db'`, referenced with `optional`
+  unset and set, must fail in both cases.\r\n- `TestParseEnv` has eight new cases
+  for the text after `=`. The old parser accepts `KEY1= 'val1'` (for that key and
+  for a later one) and `KEY1= val1`, so those cases fail on it with `expected error,
+  got none`. `KEY1=#x` must also fail, as it already did, because bash reads it as
+  the value `#x`. `KEY1=   `, `KEY1= # comment` and a tab followed by a comment must
+  give an empty value, and a later key in the same file must still be found. These
+  empty cases run through the existing `bash --posix` cross-check. A `wantNotFound`
+  field keeps the empty-value and absent-key cases apart.\r\n\r\ne2e tests in `test/e2e/common/node/file_key.go`:\r\n\r\n-
+  `should handle optional missing file or key` now also references a file that is
+  never written, so it covers what its name says.\r\n- `should publish a key with
+  an empty value` checks that `EMPTY_KEY=''` reaches the container as an empty variable.\r\n-
+  `should fail when the file has invalid syntax even if the key is optional` checks
+  that `BAD_KEY= 'value'` still ends in `CreateContainerConfigError`.\r\n\r\nI ran
+  the `FileKeyRef` e2e tests (`e2e.test --provider=skeleton --ginkgo.focus=FileKeyRef`)
+  on two kind clusters. On a node image built from this branch, all 14 pass. On stock
+  `kindest/node:v1.37.0`, 11 pass and these three fail: the missing-file and empty-value
+  pods stay in `CreateContainerConfigError` with `couldn't parse env file` and `environment
+  variable key \"EMPTY_KEY\" not found in file`, and the invalid-syntax pod starts,
+  because the old parser read `BAD_KEY= 'value'` as an empty value.\r\n\r\nVerified
+  on linux/arm64 with golang:1.27: `go test -race ./pkg/kubelet/util/env/`, `go test
+  ./pkg/kubelet/ ./pkg/kubelet/util/...`, `go vet` (including `./test/e2e/common/node/`)
+  and `gofmt`, all clean. The two pod specs in the issue reproduce the old behaviour
+  on stock v1.36.1 and v1.37.0 clusters.\r\n\r\nI have not opened backports. `EnvFiles`
+  is default-on in 1.35 through 1.37, and I am happy to prepare cherry-picks if sig-node
+  wants them.\r\n\r\n/cc @HirazawaUi @SergeyKanzhelev\r\n\r\n#### Does this PR introduce
+  a user-facing change?\r\n\r\n```release-note\r\nkubelet: FileKeyRef now honors `optional:
+  true` when the env file does not exist, and publishes a key with an empty value
+  (`KEY=''`) instead of reporting it as missing. A value after whitespace following
+  `=` in an env file, as in `KEY= 'value'`, is now a parse error instead of being
+  read as an empty value.\r\n```\r\n\r\n#### Additional documentation e.g., KEPs (Kubernetes
+  Enhancement Proposals), usage docs, etc.:\r\n\r\n```docs\r\nKEP-3721: https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/3721-support-for-env-files\r\n```"
+releasenote:
+  text: 'Fixed `FileKeyRef` handling in `kubelet` to honor `optional: true` when the
+    env file does not exist, publishing a key with an empty value (`KEY=''''`) instead
+    of reporting it as missing. Additionally, a value after whitespace following `=`
+    in an env file (such as `KEY= ''value''`) causes a parse error instead of being
+    read as an empty value.'

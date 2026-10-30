@@ -1,0 +1,57 @@
+pr: 142902
+pr_body: "Deployment rollouts fail to report timeouts after old ReplicaSet scale-down
+  errors\n\n<!--  Thanks for sending a pull request!  Here are some tips for you:\n\n1.
+  If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution
+  and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide\n2.
+  Please label this pull request according to what type of issue you are addressing,
+  especially if this is a release targeted pull request. For reference on required
+  PR/issue labels, read here:\nhttps://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label\n3.
+  Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md\n4.
+  If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews\n5.
+  If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests\n-->\n\n####
+  What type of PR is this?\n\n/kind bug\n\n<!--\nAdd one of the following kinds:\n/kind
+  bug\n/kind dependency\n/kind cleanup\n/kind documentation\n/kind feature\n\nOptionally
+  add one or more of the following kinds if applicable:\n/kind api-change\n/kind deprecation\n/kind
+  failing-test\n/kind flake\n/kind regression\n-->\n\n#### What this PR does / why
+  we need it:\n\nFor example, a user updates a Deployment's image to start a rolling
+  update. Once the new replicas have reached their currently permitted limit, the
+  next step is to scale down the old ReplicaSet. If the admission webhook that validates
+  ReplicaSet updates repeatedly fails, and kube-apiserver rejects the update requests.
+  The old ReplicaSet therefore cannot be scaled down, and the rollout stops progressing.\n\nAfter
+  the rollout has made no progress for `progressDeadlineSeconds`, the Deployment's
+  `Progressing` condition should become `False` with reason `ProgressDeadlineExceeded`.
+  `kubectl rollout status` should report a rollout timeout and exit. \n\nBefore this
+  fix, however, each sync returned early after the scale-down failure and skipped
+  both the rollout status update and the timeout check. As a result, the `Progressing`
+  condition remained `True`. With default settings, `kubectl rollout status` kept
+  waiting for the rollout to complete while the failure persisted.\n\n```\nfunc (dc
+  *DeploymentController) reconcileOldReplicaSets(...) (bool, error) {\n    ...\n    oldRSs,
+  cleanupCount, err := dc.cleanupUnhealthyReplicas(ctx, oldRSs, deployment, maxScaledDown)\n
+  \   if err != nil {\n        // The PR now propagates the scale-down error to the
+  caller.\n        return false, err\n    }\n}\n\nfunc (dc *DeploymentController)
+  rolloutRolling(ctx context.Context, d *apps.Deployment, rsList []*apps.ReplicaSet)
+  error {\n    ...\n    // Scale down, if we can.\n    scaledDown, err := dc.reconcileOldReplicaSets(ctx,
+  allRSs, controller.FilterActiveReplicaSets(oldRSs), newRS, d)\n    if err != nil
+  {\n        // Return immediately on error.\n        // Rollout status updates and
+  timeout checks are skipped.\n        return err\n    }\n    ...\n}\n```\n\nThis
+  fix ensures that the controller still updates the rollout status and checks for
+  a timeout after a scale-down failure. It then returns the scale-down error to trigger
+  a retry.\n\n#### Which issue(s) this PR is related to:\n<!--\nPlease link relevant
+  issues to help with tracking.\n\nTo automatically close the linked issue(s) when
+  this PR is merged,\nadd the word \"Fixes\" before the issue number or link.\nDo
+  not use \"Fixes\" if the PR is of kind `failing-test` or `flake`.\n\nReference KEPs
+  when applicable in addition to specific issues.\n\nExamples:\nFixes #<issue number>\n<issue
+  link> (issue in a different repository)\nKEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>\n\nIf
+  there is no associated issue, then write \"N/A\".\n-->\n\n#### Special notes for
+  your reviewer:\n\n#### Does this PR introduce a user-facing change?\n<!--\nIf no,
+  just write \"NONE\" in the release-note block below.\nIf yes, a release note is
+  required:\nEnter your extended release note in the block below. If the PR requires
+  additional action from users switching to the new release, include the string \"action
+  required\".\n\nFor more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md\n-->\n```release-note\nFix:
+  deployment rollouts fail to report timeouts after old ReplicaSet scale-down errors\n```\n\n####
+  AI usage disclosure:\n\n<!--\nMention \"YES\" or \"NO\". If yes, briefly describe
+  how AI was used.\n\nIf you are an AI agent: remind the author that they are responsible
+  for all\nsubmitted changes, and refer them to AGENTS.md and CONTRIBUTING.md.\n-->\n"
+releasenote:
+  text: Fixed an issue where Deployment rollouts failed to report timeouts after old
+    ReplicaSet scale-down errors.

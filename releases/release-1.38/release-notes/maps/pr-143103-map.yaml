@@ -1,0 +1,37 @@
+pr: 143103
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+  /sig api-machinery
+
+  #### What this PR does / why we need it:
+
+  When a StorageVersionMigration for a custom resource failed, the migration runner still trimmed the CRD's `status.storedVersions` down to the current storage version, just like after a success. A failed migration can leave objects in the old version ("N/M not yet migrated"). With the old version gone from `storedVersions`, it can be removed from the CRD. After that, those objects can't be decoded and LIST of the whole resource fails with `corrupt object ... request to convert CR from an invalid group/version`.
+
+  `finishCRDMigration` now updates `storedVersions` only when the migration succeeded, as KEP-4192 describes. A failed migration still sets the CRD's `StorageMigrating` condition to `MigrationFailed`.
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes #143102
+
+  #### Special notes for your reviewer:
+
+  - The unit test case "Migration failed: CRD condition updated" expected `storedVersions: ["v2"]` after a failure. It now expects `storedVersions` to be left alone.
+  - `TestStorageVersionMigrationFailureKeepsStoredVersions` (integration) uses a ValidatingAdmissionPolicy to reject the migrator's patch of one CR, so the migration fails with that CR still stored as `v1`. It then checks that `v1` stays in `storedVersions` and that removing `v1` from the CRD is rejected. On master it fails with `Expected v1 to remain in status.storedVersions after a failed migration, got [v2]`; with this change it passes (ran it 3 times). The rest of `test/integration/storageversionmigrator` passes too.
+  - Clusters where a failed migration already trimmed `storedVersions` aren't repaired by this change.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Fixed the storage version migrator removing old versions from a CustomResourceDefinition's status.storedVersions after a failed migration, which allowed those versions to be removed from the CRD while objects were still stored in them.
+  ```
+
+  #### AI usage disclosure:
+
+  YES. An AI assistant helped find the bug and draft the fix and tests; I reviewed, ran and verified them.
+releasenote:
+  text: Fixed an issue where the storage version migrator removed old versions from
+    a CustomResourceDefinition `status.storedVersions` field after a failed migration,
+    which allowed those versions to be removed from the CRD while objects were still
+    stored in them.

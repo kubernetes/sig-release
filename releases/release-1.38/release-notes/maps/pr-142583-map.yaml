@@ -1,0 +1,42 @@
+pr: 142583
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+  /sig network
+  /area kube-proxy
+
+  #### What this PR does / why we need it:
+
+  - Report validation errors using public v1alpha1 JSON and YAML field names instead of internal Go type and field names
+  - Match the public layout for conntrack and local detection and select sync period paths according to proxy mode
+  - Preserve validation rules and array indexes while treating clusterCIDR as a scalar field
+  - Update existing expectations and add regression tests that validate converted v1alpha1 configurations
+
+  #### Which issue(s) this PR is related to:
+
+  Fixes #142580
+
+  #### Special notes for your reviewer:
+
+  Validated locally on macOS
+
+  - Configuration API and kube-proxy application unit tests passed
+  - Race-enabled validation tests and Go vet passed
+  - New regression tests fail against the original validator and pass with this change
+  - Go formatting and changed-file boilerplate checks passed
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kube-proxy configuration validation errors now identify public configuration field paths rather than internal Go type and field names
+  ```
+
+  #### AI usage disclosure:
+
+  YES
+
+  AI assisted with issue investigation, implementation, regression tests, local verification, and PR preparation
+releasenote:
+  text: Fixed `kube-proxy` configuration validation errors to identify public configuration
+    field paths rather than internal Go type and field names.

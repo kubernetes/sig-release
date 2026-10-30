@@ -1,0 +1,18 @@
+pr: 140816
+pr_body: "#### What type of PR is this?\r\n\r\n/kind bug\r\n/sig node\r\n\r\n####
+  What this PR does / why we need it:\r\n\r\nThe static Memory Manager calculates
+  pod-scope resource requests independently for each memory resource type. The final
+  aggregation previously iterated only over resource names requested by app containers,
+  which dropped hugepage sizes requested exclusively by init containers.\r\n\r\nThis
+  PR aggregates over the union of resource names requested by app, restartable init,
+  and regular init containers before applying the existing per-resource calculation.
+  It also adds a regression test where `hugepages-1Gi` is requested only by a regular
+  init container.\r\n\r\n#### Which issue(s) this PR is related to:\r\n\r\nFixes #140814\r\n\r\n####
+  Special notes for your reviewer:\r\n\r\n```console\r\n```\r\n\r\n#### Does this
+  PR introduce a user-facing change?\r\n\r\n```release-note\r\nFixed static Memory
+  Manager pod-scope accounting for memory resource types requested only by init containers.\r\n```\r\n\r\n####
+  Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs,
+  etc.:\r\n\r\n```docs\r\nNONE\r\n```\r\n"
+releasenote:
+  text: Fixed static Memory Manager Pod-scope accounting in `kubelet` for memory resource
+    types requested only by init containers.

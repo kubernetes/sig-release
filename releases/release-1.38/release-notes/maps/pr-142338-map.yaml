@@ -1,0 +1,34 @@
+pr: 142338
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  Rejects empty fields in `kubectl create ingress --default-backend` and empty keys in `--annotation`.
+
+  Previously, `--default-backend=:8080` and `--default-backend=svc:` were accepted because validation only checked that the value split into two `:` fields. `--annotation==oops` was accepted the same way and stored an annotation with an empty key. `--rule` already requires a non-empty service name and port.
+
+  Adds regression coverage in `TestCreateIngressValidation`.
+
+  #### Which issue(s) this PR fixes:
+
+  Fixes kubernetes/kubectl#1885
+
+  #### Special notes for your reviewer:
+
+  Tests:
+
+  ```console
+  go test ./staging/src/k8s.io/kubectl/pkg/cmd/create -run TestCreateIngressValidation -count=1
+  ```
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  kubectl create ingress now rejects a --default-backend with an empty service name or port, and an --annotation with an empty key.
+  ```
+releasenote:
+  text: Fixed `kubectl create ingress` to reject a `--default-backend` with an empty
+    Service name or port, and an `--annotation` with an empty key.

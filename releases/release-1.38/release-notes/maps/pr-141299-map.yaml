@@ -1,0 +1,16 @@
+pr: 141299
+pr_body: |-
+  Bounds steady-state memory retained in `runtime.AllocatorPool` behind the `AllocatorPoolBufferCap` feature gate (beta, enabled by default):
+
+  - **256 KiB pool cap:** Buffers that grow larger than 256 KiB are released to the GC after use instead of being returned to `runtime.AllocatorPool`.
+  - **`max(n, 2*cap)` buffer growth:** Replaces the `2*cap+n` growth formula with `max(n, 2*cap)` so pooled buffers grow by at most 2x instead of up to 3x.
+
+  /kind feature
+  /sig api-machinery
+
+  ```release-note
+  Added the `AllocatorPoolBufferCap` feature gate (beta, enabled by default) to bound protobuf encode buffers retained in `runtime.AllocatorPool` at 256 KiB.
+  ```
+releasenote:
+  text: Added the `AllocatorPoolBufferCap` feature gate (Beta, enabled by default)
+    to bound protobuf encode buffers retained in `runtime.AllocatorPool` at 256 KiB.

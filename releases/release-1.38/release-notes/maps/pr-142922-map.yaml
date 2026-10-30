@@ -1,0 +1,45 @@
+pr: 142922
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  When the Job controller deletes pods, it also adjusts `status.ready` by counting how many of those pods were Ready. Two helpers did that incorrectly when `DeletePod` failed:
+
+  - `deleteActivePods` (Job failed / finished: delete remaining active pods) always counted a Ready pod toward `deletedReady`, even if the delete errored.
+  - `deleteJobPods` (scale-down when over parallelism, suspend, etc.: patch tracking finalizer then delete) did the same after a failed `DeletePod`.
+
+  Callers then subtract that count from `jobCtx.ready`, so a failed delete could undercount Ready until a later sync corrected it.
+
+  This PR only decrements Ready when the delete actually succeeded (or the pod was already gone / `NotFound`).
+
+  #### Which issue(s) this PR is related to:
+
+  N/A
+
+  #### Special notes for your reviewer:
+
+  - `deleteActivePods`: Ready increment moved into the success branch (`else if`).
+  - `deleteJobPods`: Ready increment gated on `err == nil || apierrors.IsNotFound(err)` (same success notion as the delete path).
+  - Tests: `FakePodControl.DeleteErr` so Patch can succeed while Delete fails (needed for `deleteJobPods`). New `TestControllerSyncJob` cases for scale-down and job-fail paths.
+
+  /sig apps
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  Job status.ready no longer decreases when deleting a Ready pod fails.
+  ```
+
+  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+  N/A
+
+  #### AI usage disclosure:
+
+  YES. AI-assisted tools were used for research and understanding; I tested and validated the code.
+releasenote:
+  text: Fixed an issue where Job `status.ready` decreased when deleting a Ready Pod
+    failed.

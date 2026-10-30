@@ -1,0 +1,21 @@
+pr: 143187
+pr_body: |
+  #### What type of PR is this?
+
+  /kind bug
+
+  #### What this PR does / why we need it:
+
+  Since the creation of `kubectl proxy` more paths have been created that would allow for leaking administrative ports. This PR adds a filter to ensure that the new paths are filtered properly.
+
+  #### Does this PR introduce a user-facing change?
+
+  ```release-note
+  adds node run api path to default kubectl proxy filter
+  ```
+
+  #### AI usage disclosure:
+
+  NO
+releasenote:
+  text: Added the Node run API path to the default `kubectl proxy` filter.
