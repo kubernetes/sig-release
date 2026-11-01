@@ -2,4 +2,4 @@
 pr: 142856
 pr_body: ''
 releasenote:
-  text: Fixed Job integration to use a fixed name for PodGroup templates.
+  text: Fixed PodGroup template naming in the Job integration to avoid name-length overflow.

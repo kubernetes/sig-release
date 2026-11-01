@@ -2,4 +2,4 @@
 pr: 143116
 pr_body: ''
 releasenote:
-  text: Updated the Go compiler used to build Kubernetes to `v1.27.2`.
+  text: Updated Kubernetes to build using Go `v1.27.2`.

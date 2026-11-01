@@ -2,13 +2,12 @@
 pr: 142955
 pr_body: ''
 releasenote:
-  text: 'ACTION REQUIRED: The `kube-scheduler` framework interface `PreemptionVictim`
-    added a `Type()` method, and `PreemptionCandidate.NumPodGroupDisruptions()` was
-    replaced by `NumDisruptionsByVictimType()`; out-of-tree implementations of these
-    interfaces must be updated. Additionally, the alpha metric `scheduler_preemption_workload_disruptions`
-    added a `victim` label (`pod`, `podgroup`, `compositepodgroup`). Standalone Pods
-    evicted by a workload preemption are counted as `victim=pod`, and Pods of groups
-    with `DisruptionMode=Single` are counted as `victim=pod` instead of as group disruptions.
-    During workload preemption in `kube-scheduler`, Pods of PodGroups or CompositePodGroups
-    with `DisruptionMode=Single` rank as individual Pods when choosing victims, instead
-    of above standalone Pods of the same priority.'
+  text: 'ACTION REQUIRED: Added a `Type()` method to the `kube-scheduler` framework
+    interface `PreemptionVictim` and replaced `PreemptionCandidate.NumPodGroupDisruptions()`
+    with `NumDisruptionsByVictimType()`. Update out-of-tree implementations of these
+    interfaces. Added a `victim` label (`pod`, `podgroup`, `compositepodgroup`) to
+    the Alpha metric `scheduler_preemption_workload_disruptions`. Standalone Pods evicted
+    by a workload preemption are counted as `victim=pod`, and Pods of groups with `DisruptionMode=Single`
+    are counted as `victim=pod` instead of as group disruptions. During workload preemption,
+    Pods of PodGroups or CompositePodGroups with `DisruptionMode=Single` rank as individual
+    Pods when choosing victims, instead of above standalone Pods of the same priority.'

@@ -2,4 +2,4 @@
 pr: 141164
 pr_body: ''
 releasenote:
-  text: Promoted `apiserver_resource_size_estimate_bytes` to Beta.
+  text: Promoted the `apiserver_resource_size_estimate_bytes` metric to Beta.

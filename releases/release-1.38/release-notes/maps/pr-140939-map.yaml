@@ -2,7 +2,7 @@
 pr: 140939
 pr_body: ''
 releasenote:
-  text: 'Added the `OpenAPIV2LazyBuild` feature gate (Beta, enabled by default): `kube-apiserver`
+  text: 'Added the `OpenAPIV2LazyBuild` feature gate (enabled by default in Beta): `kube-apiserver`
     builds the `/openapi/v2` spec on first request instead of at startup, reducing
     memory on clusters that rarely or never request it. Served content, ETags, and
     update behavior are unchanged. With the gate enabled, a spec that fails to build

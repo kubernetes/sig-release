@@ -2,5 +2,4 @@
 pr: 142846
 pr_body: ''
 releasenote:
-  text: Increased PodGroup priority validation to the highest possible value that
-    can be set.
+  text: Allowed PodGroups to use system PriorityClasses by raising the maximum allowed priority value.
