@@ -1,0 +1,7 @@
+---
+pr: 142007
+pr_body: ''
+releasenote:
+  text: Updated the metrics `apiserver_resource_size_estimate_bytes` and `apiserver_resource_objects`
+    to include explicit observation timestamps. They preserve the last known metric
+    value on error instead of reporting `-1`.

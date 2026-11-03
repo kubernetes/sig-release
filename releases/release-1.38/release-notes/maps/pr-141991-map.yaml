@@ -1,0 +1,6 @@
+---
+pr: 141991
+pr_body: ''
+releasenote:
+  text: Fixed an issue in `kubelet` where in-place Pod resizing reset existing hugepage
+    limits to zero.

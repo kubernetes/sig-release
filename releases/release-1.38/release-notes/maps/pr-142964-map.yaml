@@ -1,0 +1,6 @@
+---
+pr: 142964
+pr_body: ''
+releasenote:
+  text: Updated Dynamic Resource Allocation (DRA) ResourceSlice validation to require
+    version numbers in device attributes to fit into `int64`.

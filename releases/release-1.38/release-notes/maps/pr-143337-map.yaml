@@ -1,0 +1,6 @@
+---
+pr: 143337
+pr_body: ''
+releasenote:
+  text: Removed the `SystemdWatchdog` feature gate, which graduated to GA and was
+    locked to default in `v1.35`.

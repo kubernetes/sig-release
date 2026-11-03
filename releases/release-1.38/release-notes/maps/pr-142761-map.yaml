@@ -1,0 +1,7 @@
+---
+pr: 142761
+pr_body: ''
+releasenote:
+  text: Fixed an issue where `kubelet` lost a Pod's failure phase and reason when
+    containers exited successfully during eviction, `kubelet` preemption, or graceful
+    node shutdown.

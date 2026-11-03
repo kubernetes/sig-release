@@ -1,0 +1,7 @@
+---
+pr: 143180
+pr_body: ''
+releasenote:
+  text: 'ACTION REQUIRED: Renamed the `type` label on the Alpha metrics `scheduler_queued_entities`
+    and `scheduler_queue_incoming_entities_total` to `entity`. Update monitoring dashboards
+    and alerts that filter on `type`.'

@@ -1,0 +1,8 @@
+---
+pr: 142216
+pr_body: ''
+releasenote:
+  text: Added support for selector strings using `!=` (for example `app!=web`) in
+    commands that convert a selector into a LabelSelector, such as `kubectl create
+    pdb --selector` and `kubectl set selector`; they are translated to a `NotIn` match
+    expression.

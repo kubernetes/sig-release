@@ -1,0 +1,6 @@
+---
+pr: 139565
+pr_body: ''
+releasenote:
+  text: Updated `kube-scheduler` Topology Aware Scheduling (TAS) to run multiple `PlacementGenerate`
+    plugins per PodGroup and intersect their node lists.

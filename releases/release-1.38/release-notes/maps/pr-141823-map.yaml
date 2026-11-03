@@ -1,0 +1,6 @@
+---
+pr: 141823
+pr_body: ''
+releasenote:
+  text: Extended PodGroup scheduling attempts and latency metrics with a `type` label
+    to support CompositePodGroup.

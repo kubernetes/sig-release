@@ -1,0 +1,7 @@
+---
+pr: 143278
+pr_body: ''
+releasenote:
+  text: Extended `workloadbuilder` validation to enforce hierarchy depth and size
+    limits, parent-child scheduling policy and disruption mode compatibility, and
+    uniform `priorityClassName` across the workload tree.

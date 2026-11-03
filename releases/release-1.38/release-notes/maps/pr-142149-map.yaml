@@ -1,0 +1,6 @@
+---
+pr: 142149
+pr_body: ''
+releasenote:
+  text: Fixed `kubectl` event table formatting to keep multi-line event messages inside
+    their table rows.

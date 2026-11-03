@@ -1,0 +1,6 @@
+---
+pr: 142975
+pr_body: ''
+releasenote:
+  text: Added support in `kube-apiserver` for the `ShardedListAndWatch` feature for
+    custom resources and dynamic clients that use Unstructured objects.

@@ -1,0 +1,9 @@
+---
+pr: 140308
+pr_body: ''
+releasenote:
+  text: Fixed an issue in the Alpha `TopologyAwareWorkloadScheduling` placement generator
+    in `kube-scheduler` where nodes with an empty string topology label value were
+    treated as a topology domain. These nodes are skipped when generating placements,
+    and a PodGroup with an already-scheduled Pod on such a node fails placement generation
+    with an explicit error instead of resolving its domain to an empty string.

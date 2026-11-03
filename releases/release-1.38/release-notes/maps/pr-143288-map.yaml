@@ -1,0 +1,5 @@
+---
+pr: 143288
+pr_body: ''
+releasenote:
+  text: Fixed an issue where `kubectl` OpenAPI v3 query parameter verification failed on typed `*List` resources (such as ReplicationControllerList and ServiceList) and fell back to downloading `/openapi/v2`.

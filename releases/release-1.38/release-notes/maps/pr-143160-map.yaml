@@ -1,0 +1,10 @@
+---
+pr: 143160
+pr_body: ''
+releasenote:
+  text: Added the `staticOrder` field to WebhookAdmissionConfiguration for the `MutatingAdmissionWebhook`
+    plugin (KEP-5793). It controls whether manifest-based mutating webhooks run before
+    (StaticFirst, the default), after (StaticLast), or interleaved by configuration
+    name with (ByName) webhooks registered through the API. It requires `staticManifestsDir`
+    and the `ManifestBasedAdmissionControlConfig` feature gate. Remove `staticOrder`
+    before downgrading to `v1.37` or earlier, which rejects it at startup.

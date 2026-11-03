@@ -1,0 +1,7 @@
+---
+pr: 142541
+pr_body: ''
+releasenote:
+  text: Corrected the StatefulSet `maxUnavailable` API documentation to clarify that
+    percentage values are rounded down to a minimum of 1, not rounded up. The underlying
+    behavior is unchanged.

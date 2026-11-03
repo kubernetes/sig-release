@@ -1,0 +1,7 @@
+---
+pr: 142861
+pr_body: ''
+releasenote:
+  text: Removed the `KUBECTL_REMOTE_COMMAND_WEBSOCKETS` and `KUBECTL_PORT_FORWARD_WEBSOCKETS`
+    environment variables following graduation to GA. `kubectl` always uses WebSockets
+    (with SPDY fallback) for `exec`, `attach`, `cp`, and `port-forward`.

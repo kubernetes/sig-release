@@ -1,0 +1,5 @@
+---
+pr: 137633
+pr_body: ''
+releasenote:
+  text: Added conditional authorization support to the webhook authorizer in `kube-apiserver`.

@@ -1,0 +1,9 @@
+---
+pr: 143223
+pr_body: ''
+releasenote:
+  text: Added the Alpha metric `kubelet_device_plugin_devices` in `kubelet`, a gauge
+    of the number of devices the device manager knows about, broken down by `resource_name`
+    and `health_state` (`healthy` or `unhealthy`). This makes devices reported unhealthy
+    by a device plugin distinguishable from devices that are gone because the plugin
+    deregistered, which previously both appeared only as a drop in allocatable.

@@ -1,0 +1,8 @@
+---
+pr: 143103
+pr_body: ''
+releasenote:
+  text: Fixed an issue where the storage version migrator removed old versions from
+    a CustomResourceDefinition `status.storedVersions` field after a failed migration,
+    which allowed those versions to be removed from the CRD while objects were still
+    stored in them.

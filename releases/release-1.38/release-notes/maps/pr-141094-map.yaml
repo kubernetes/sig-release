@@ -1,0 +1,8 @@
+---
+pr: 141094
+pr_body: ''
+releasenote:
+  text: Tightened StatefulSet Pod name validation to require the form `<pod-name>-<ordinal>`
+    without leading zeros (for example, `web-01` for StatefulSet `web`). Previously,
+    the controller adopted such a Pod as ordinal 1 and could treat it as a replica
+    in place of `web-1`.

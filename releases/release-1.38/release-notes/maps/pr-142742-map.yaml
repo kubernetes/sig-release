@@ -1,0 +1,6 @@
+---
+pr: 142742
+pr_body: ''
+releasenote:
+  text: Updated `kubeadm` to use a custom fake client for dry-running, reducing the
+    `kubeadm` binary size by 20%.

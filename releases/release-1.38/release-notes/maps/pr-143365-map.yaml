@@ -1,0 +1,7 @@
+---
+pr: 143365
+pr_body: ''
+releasenote:
+  text: Fixed an issue where the Dynamic Resource Allocation (DRA) converting watch
+    client did not terminate when stopped, which left its result channel open and
+    kept draining the upstream watch.

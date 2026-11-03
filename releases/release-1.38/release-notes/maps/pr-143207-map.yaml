@@ -1,0 +1,6 @@
+---
+pr: 143207
+pr_body: ''
+releasenote:
+  text: Fixed an issue in `kubeadm` where Job names and namespaces were swapped during
+    dry-run upgrade health checks.

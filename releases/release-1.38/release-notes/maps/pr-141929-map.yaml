@@ -1,0 +1,5 @@
+---
+pr: 141929
+pr_body: ''
+releasenote:
+  text: Extended topology-aware placement metrics with a `type` label to support CompositePodGroup.

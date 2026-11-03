@@ -1,0 +1,8 @@
+---
+pr: 137133
+pr_body: ''
+releasenote:
+  text: Introduced the `evictionrequest-controller` to observe and manage the Eviction
+    and EvictionRequest APIs from the lifecycle API group. It automatically creates
+    Evictions according to EvictionRequests and coordinates external responders via
+    eviction status, ensuring that the eviction contract is upheld.

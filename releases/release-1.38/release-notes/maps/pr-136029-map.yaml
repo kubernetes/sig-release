@@ -1,0 +1,5 @@
+---
+pr: 136029
+pr_body: ''
+releasenote:
+  text: Allowed immediate volume detachment when a Node is deleted.

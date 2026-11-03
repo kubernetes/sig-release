@@ -1,0 +1,5 @@
+---
+pr: 143413
+pr_body: ''
+releasenote:
+  text: Fixed missing newlines in `kubectl` error messages when parsing `kuberc` fails.

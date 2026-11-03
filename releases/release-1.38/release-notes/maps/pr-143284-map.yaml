@@ -1,0 +1,7 @@
+---
+pr: 143284
+pr_body: ''
+releasenote:
+  text: Added the `kubelet_sync_result_errors_total` metric (counter incremented for
+    every failed sync action) and `kubelet_pod_worker_errors_total` metric (counter
+    for errors raised during the Pod worker loop) to track errors when syncing Pods.

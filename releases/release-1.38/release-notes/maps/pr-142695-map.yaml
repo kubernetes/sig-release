@@ -1,0 +1,8 @@
+---
+pr: 142695
+pr_body: ''
+releasenote:
+  text: Added `rest.Config.DropManagedFields` in `client-go`, which requests the API
+    server to omit `metadata.managedFields` from responses and strips it from decoded
+    objects when the server does not. It takes effect with the Alpha `ManagedFieldsOptOutClient`
+    feature gate, which also opts `kube-controller-manager` shared informers in.

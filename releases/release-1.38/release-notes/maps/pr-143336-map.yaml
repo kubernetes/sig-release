@@ -1,0 +1,6 @@
+---
+pr: 143336
+pr_body: ''
+releasenote:
+  text: Removed the deprecated `AllowOverwriteTerminationGracePeriodSeconds` feature
+    gate, which was locked to default in `v1.35`.

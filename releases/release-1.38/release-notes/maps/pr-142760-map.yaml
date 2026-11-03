@@ -1,0 +1,6 @@
+---
+pr: 142760
+pr_body: ''
+releasenote:
+  text: Added `sharding.NewShardRangeSelector` and `cache.NewShardedListWatch` helpers
+    for sharded informers and reflectors.

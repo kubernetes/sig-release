@@ -1,0 +1,7 @@
+---
+pr: 142791
+pr_body: ''
+releasenote:
+  text: Removed support for loading kustomize Go (`.so`) plugins in `kubectl kustomize`.
+    Exec and KRM function plugins are unaffected; static release binaries never loaded
+    `.so` plugins.

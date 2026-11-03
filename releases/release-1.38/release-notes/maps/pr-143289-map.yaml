@@ -1,0 +1,5 @@
+---
+pr: 143289
+pr_body: ''
+releasenote:
+  text: Added write-gating and leader recovery for leader election in `client-go`.

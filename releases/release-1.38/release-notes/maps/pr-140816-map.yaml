@@ -1,0 +1,6 @@
+---
+pr: 140816
+pr_body: ''
+releasenote:
+  text: Fixed static Memory Manager Pod-scope accounting in `kubelet` for memory resource
+    types requested only by init containers.

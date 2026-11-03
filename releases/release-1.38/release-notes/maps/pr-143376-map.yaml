@@ -1,0 +1,7 @@
+---
+pr: 143376
+pr_body: ''
+releasenote:
+  text: Fixed an issue in device taint eviction where a DeviceToleration with an empty
+    `effect` field was ignored; per the API documentation, it tolerates NoExecute
+    taints like any other matching toleration.

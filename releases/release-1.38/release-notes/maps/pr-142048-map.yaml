@@ -1,0 +1,7 @@
+---
+pr: 142048
+pr_body: ''
+releasenote:
+  text: Updated `NewUnstructuredExtractor` in `client-go` to build its type information
+    per group-version from `/openapi/v3` instead of the deprecated `/openapi/v2` document,
+    and added `managedfields.NewGVKParserFromOpenAPIV3`.

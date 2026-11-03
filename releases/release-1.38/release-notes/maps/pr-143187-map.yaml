@@ -1,0 +1,5 @@
+---
+pr: 143187
+pr_body: ''
+releasenote:
+  text: Updated `kubectl proxy` to reject requests to the Node proxy `run` path by default, matching the existing `exec` and `attach` rejections.

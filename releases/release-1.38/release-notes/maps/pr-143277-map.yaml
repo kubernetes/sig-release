@@ -1,0 +1,6 @@
+---
+pr: 143277
+pr_body: ''
+releasenote:
+  text: Fixed `kubectl` so that `--kuberc` takes precedence over `KUBERC` even when
+    it points to the default `kuberc` path.

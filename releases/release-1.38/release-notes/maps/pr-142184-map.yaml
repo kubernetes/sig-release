@@ -1,0 +1,8 @@
+---
+pr: 142184
+pr_body: ''
+releasenote:
+  text: Fixed an issue in the Alpha userspace nftables localhost proxy (`KubeProxyNFTablesLocalhostNodePorts`
+    feature gate) where the proxy was not accessible if `kube-proxy` was running the
+    service without `localhost` in `--nodeport-addresses` and then restarted with
+    `localhost` in `--nodeport-addresses`.

@@ -1,0 +1,6 @@
+---
+pr: 141377
+pr_body: ''
+do_not_publish: true
+releasenote:
+  text: Internal goleak test flake fix.

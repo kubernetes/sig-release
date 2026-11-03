@@ -1,0 +1,9 @@
+---
+pr: 143087
+pr_body: ''
+releasenote:
+  text: Fixed an issue in `kubeadm` where automatic rollback of the etcd data directory
+    after a failed etcd upgrade copied the backup into a subdirectory of the member
+    directory instead of restoring it. The etcd backup directory contains the member
+    directory contents, and etcd data backups before upgrades are retried for up to
+    30 seconds if copying fails.

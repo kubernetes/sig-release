@@ -1,0 +1,8 @@
+---
+pr: 142719
+pr_body: ''
+releasenote:
+  text: Strengthened runtime PodGroup and CompositePodGroup hierarchy validation in
+    `kube-scheduler` to verify maximum tree depth, Workload reference consistency,
+    scheduling policies (no `Gang` parent with `Basic` child), and disruption modes
+    (no `All` parent with `Single` child).

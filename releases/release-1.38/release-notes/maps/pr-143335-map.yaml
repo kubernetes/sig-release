@@ -1,0 +1,6 @@
+---
+pr: 143335
+pr_body: ''
+releasenote:
+  text: Removed the `ExecProbeTimeout` feature gate, which was graduated to GA in
+    `v1.35`.

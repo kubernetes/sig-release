@@ -1,0 +1,8 @@
+---
+pr: 143291
+pr_body: ''
+releasenote:
+  text: Fixed an issue where cached watch events and `status` subresource requests
+    did not apply storage read-time defaults to legacy Services and PersistentVolumeClaims,
+    which could cause the ServiceCIDR repair controller to delete active Service IPAddress
+    objects after a status update.

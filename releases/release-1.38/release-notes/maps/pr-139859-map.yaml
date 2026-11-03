@@ -1,0 +1,7 @@
+---
+pr: 139859
+pr_body: ''
+releasenote:
+  text: Added `percentageOfPlacementsToScore` to `kube-scheduler` configuration. With
+    `TopologyAwareWorkloadScheduling` enabled, the scheduler evaluates an adaptive
+    subset of placements by default. Set it to 100 to evaluate all placements as before.

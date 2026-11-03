@@ -1,0 +1,8 @@
+---
+pr: 142619
+pr_body: ''
+releasenote:
+  text: Promoted `kuberc` support in `kubectl` to GA. A `kuberc` configuration file
+    containing a `kubectl.config.k8s.io/v1` Preference object provides a mechanism
+    for customizing `kubectl` behavior (separate from `kubeconfig`, which configures
+    cluster access across different clients).

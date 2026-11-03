@@ -1,0 +1,6 @@
+---
+pr: 143314
+pr_body: ''
+releasenote:
+  text: Fixed an issue where the `informer_store_resource_version` metric reported
+    0 before an informer store recorded a resource version.

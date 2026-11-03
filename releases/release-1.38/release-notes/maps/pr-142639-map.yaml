@@ -1,0 +1,5 @@
+---
+pr: 142639
+pr_body: ''
+releasenote:
+  text: Added validation for credential plugin allowlist paths in `kuberc set`.

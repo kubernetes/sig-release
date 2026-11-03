@@ -1,0 +1,5 @@
+---
+pr: 143358
+pr_body: ''
+releasenote:
+  text: Updated the etcd client SDK to [`v3.7.3`](https://github.com/etcd-io/etcd/issues/22604).

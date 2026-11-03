@@ -1,0 +1,6 @@
+---
+pr: 140295
+pr_body: ''
+releasenote:
+  text: Promoted the Topology-Aware Scheduling (TAS) feature gate `TopologyAwareWorkloadScheduling`
+    to Beta.

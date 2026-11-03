@@ -1,0 +1,7 @@
+---
+pr: 142575
+pr_body: ''
+releasenote:
+  text: Improved memory and CPU efficiency when decoding JSON lists into `unstructured.UnstructuredList`
+    (such as in the dynamic client and `kubectl get -o json`), reducing memory usage
+    by approximately half and decode time by about one third.

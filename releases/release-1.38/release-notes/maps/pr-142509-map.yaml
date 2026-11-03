@@ -1,0 +1,8 @@
+---
+pr: 142509
+pr_body: ''
+releasenote:
+  text: Added the `PullSecurityProfile`, `ListSecurityProfiles`, and `RemoveSecurityProfile`
+    RPCs, the `OCI` seccomp profile type with `oci_ref` and `SecurityProfileBase`,
+    the `seccomp_profile_oci` runtime feature, and the `SecurityProfileInvalid` well-known
+    error to the CRI API for seccomp profiles pulled from OCI registries (Alpha).

@@ -1,0 +1,6 @@
+---
+pr: 142650
+pr_body: ''
+releasenote:
+  text: Fixed the Deployment controller to retry when scaling down an old ReplicaSet
+    fails during a rolling update, instead of treating that failure as a success.

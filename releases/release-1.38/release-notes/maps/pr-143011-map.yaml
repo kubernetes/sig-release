@@ -1,0 +1,8 @@
+---
+pr: 143011
+pr_body: ''
+releasenote:
+  text: Removed direct access to the `Raw` byte slice in `ObjectMeta.ManagedFields[*].FieldsV1`
+    for Go API objects. Callers should use the accessor methods (`GetRawBytes`, `GetRawString`,
+    `SetRawBytes`, `SetRawString`, `GetRawReader`, and `NewFieldsV1`). Building with
+    `-tags=fieldsv1byte` restores temporary access to the previous `Raw []byte` implementation.

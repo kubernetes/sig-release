@@ -1,0 +1,7 @@
+---
+pr: 143111
+pr_body: ''
+releasenote:
+  text: Updated the PodDisruptionBudget controller to update PDB status when a Pod's
+    labels change away from a previously matching PDB, and when multiple PDBs match
+    the same Pod.

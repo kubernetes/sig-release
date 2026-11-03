@@ -1,0 +1,7 @@
+---
+pr: 143253
+pr_body: ''
+releasenote:
+  text: Fixed an issue where PodGroup and CompositePodGroup creation was rejected
+    when `preemptionPolicy` was unset and the referenced PriorityClass specified `preemptionPolicy`
+    as Never.

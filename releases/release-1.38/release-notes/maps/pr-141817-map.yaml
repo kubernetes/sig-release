@@ -1,0 +1,5 @@
+---
+pr: 141817
+pr_body: ''
+releasenote:
+  text: Fixed `resource.Quantity` serialization to keep zero-exponent BinarySI values on the integer path.

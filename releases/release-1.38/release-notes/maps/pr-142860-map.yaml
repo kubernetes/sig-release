@@ -1,0 +1,7 @@
+---
+pr: 142860
+pr_body: ''
+releasenote:
+  text: Promoted the WebSocket streaming feature gates `TranslateStreamCloseWebsocketRequests`,
+    `PortForwardWebsockets`, `AuthorizePodWebsocketUpgradeCreatePermission`, and `ExtendWebSocketsToKubelet`
+    to GA (locked on and can no longer be disabled).

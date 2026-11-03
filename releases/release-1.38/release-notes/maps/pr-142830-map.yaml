@@ -1,0 +1,7 @@
+---
+pr: 142830
+pr_body: ''
+releasenote:
+  text: Extended Workload API validation to require child templates of a CompositePodGroupTemplate
+    with a `gang` scheduling policy or `all` disruption mode to also use a `gang`
+    scheduling policy or `all` disruption mode, respectively.

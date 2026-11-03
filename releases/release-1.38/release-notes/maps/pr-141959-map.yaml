@@ -1,0 +1,5 @@
+---
+pr: 141959
+pr_body: ''
+releasenote:
+  text: Added conditional authorization support to `kube-apiserver`.

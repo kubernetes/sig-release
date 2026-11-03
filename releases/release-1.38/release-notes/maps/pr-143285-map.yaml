@@ -1,0 +1,6 @@
+---
+pr: 143285
+pr_body: ''
+releasenote:
+  text: Updated `pods/binding` label and annotation validation to be consistent with
+    Pod creation and update validation.

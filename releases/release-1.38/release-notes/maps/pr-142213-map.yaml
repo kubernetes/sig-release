@@ -1,0 +1,6 @@
+---
+pr: 142213
+pr_body: ''
+releasenote:
+  text: Fixed `kubectl describe pod` to list environment variables sourced from a
+    file (`valueFrom.fileKeyRef`) in the Environment section.
