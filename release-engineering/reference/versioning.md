@@ -28,14 +28,13 @@ Legend:
     (X.Y.0-rc.W | W > 0) as necessary.
 - X.Y.0 (Branch: release-X.Y)
   - Final release, cut from the release-X.Y branch cut two weeks prior.
-  - X.Y.1-rc.0 will be tagged at the same commit on the same branch.
   - X.Y.0 occur approximately 4 months after X.(Y-1).0.
 - X.Y.Z, Z > 0 (Branch: release-X.Y)
   - [Patch releases](#patch-releases) are released as we cherrypick commits into
-    the release-X.Y branch, (which is at X.Y.Z-beta.W,) as needed.
-  - X.Y.Z is cut straight from the release-X.Y branch, and X.Y.Z+1-beta.0 is
-    tagged on the followup commit that updates pkg/version/base.go with the beta
-    version.
+    the release-X.Y branch as needed.
+  - Between patch releases the branch carries no pre-release tag; `git
+    describe` reports it as X.Y.Z-N-g<hash> relative to the last patch release.
+  - X.Y.Z+1 is cut and tagged straight from the release-X.Y branch by `krel`.
 - X.Y.Z, Z > 0 (Branch: release-X.Y.Z)
   - These are special and different in that the X.Y.Z tag is branched to isolate
     the emergency/critical fix from all other changes that have landed on the
@@ -43,9 +42,8 @@ Legend:
   - Cut release-X.Y.Z branch to hold the isolated patch release
   - Tag release-X.Y.Z branch + fixes with X.Y.(Z+1)
   - Branched [patch releases](#patch-releases) are rarely needed but used for
-    emergency/critical fixes to the latest release
-  - See [#19849](https://issues.k8s.io/19849) tracking the work that is needed
-    for this kind of release to be possible.
+    emergency/critical fixes to the latest release, see
+    [Hotfix release](../handbooks/release-manager.md#hotfix-release)
 
 ### Major version timeline
 
@@ -76,22 +74,21 @@ minor release; we often include critical bug fixes in
 possible.
 
 Different components are expected to be compatible across different amounts of
-skew, all relative to the master version. Nodes may lag master components by
-up to three minor versions but should be at a version no newer than the master; a
-client should be skewed no more than one minor version from the master, but may
-lead the master by up to one minor version. For example, a v1.31 master should
-work with v1.28, v1.29, v1.30, and v1.31 nodes, and should work with v1.30, v1.31,
-and v1.32 clients.
+skew, all relative to the control plane version. Nodes may lag the control
+plane by up to three minor versions but should be at a version no newer than
+the control plane; a client should be skewed no more than one minor version
+from the control plane, but may lead it by up to one minor version. For
+example, a vX.Y control plane should work with vX.Y-3 to vX.Y nodes, and with
+vX.Y-1 to vX.Y+1 clients. The authoritative rules are in the
+[version skew policy](https://kubernetes.io/releases/version-skew-policy/).
 
-Furthermore, we expect to "support" four minor releases at a time. "Support"
-means we expect users to be running that version in production, though we may
-not port fixes back before the latest minor version. For example, when v1.31
-comes out, v1.27 will no longer be supported: basically, that means that the
-reasonable response to the question "my v1.27 cluster isn't working," is, "you
-should probably upgrade it, (and probably should have some time ago)". With
-minor releases happening approximately every four months (three releases per
-year), that means a minor release is supported for approximately fourteen
-months.
+Furthermore, each minor release is supported for approximately 14 months (12
+months of full support plus 2 months of maintenance mode), see the
+[support period](https://kubernetes.io/releases/patch-releases/#support-period)
+policy. "Support" means we expect users to be running that version in
+production, and that fixes are ported back to it. The reasonable response to
+the question "my unsupported cluster isn't working" is "you should probably
+upgrade it, (and probably should have some time ago)".
 
 ## Patch releases
 
@@ -104,18 +101,20 @@ They should not contain miscellaneous feature additions or improvements, and
 especially no incompatibilities should be introduced between patch versions of
 the same minor version (or even major version).
 
-Dependencies, such as Docker or Etcd, should also not be changed unless
+Dependencies, such as containerd or etcd, should also not be changed unless
 absolutely necessary, and also just to fix critical bugs (so, at most patch
 version changes, not new major nor minor versions).
 
 ## Upgrades
 
-- Users can upgrade from any 1.x release to any other 1.x release as a
-  rolling upgrade across their cluster. (Rolling upgrade means being able to
-  upgrade the master first, then one node at a time. See [#4855](https://issues.k8s.io/4855) for details.)
-  - However, we do not recommend upgrading more than two minor releases at a
-    time (see [Supported releases and component skew](#Supported-releases-and-component-skew)), and do not recommend
-    running non-latest patch releases of a given minor release.
+- Clusters are upgraded as a rolling upgrade, control plane first and then
+  one node at a time, following the
+  [version skew policy](https://kubernetes.io/releases/version-skew-policy/):
+  the control plane is upgraded one minor version at a time, and nodes may
+  lag the control plane by up to three minor versions (see
+  [Supported releases and component skew](#supported-releases-and-component-skew)).
+  - We do not recommend running non-latest patch releases of a given minor
+    release.
 - No hard breaking changes over version boundaries.
   - For example, if a user is at 1.x, we may require them to upgrade to
     1.x+y before upgrading to 2.x. In others words, an upgrade across
