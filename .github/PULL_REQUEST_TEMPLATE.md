@@ -11,6 +11,7 @@ https://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-k
 
 <!--
 Add one of the following kinds:
+/kind bug
 /kind cleanup
 /kind documentation
 /kind feature

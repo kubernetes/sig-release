@@ -1,4 +1,4 @@
-# Google Cloud Platform <!-- omit in toc -->
+# Google Cloud Platform
 
 - [IAM](#iam)
 - [Projects](#projects)
@@ -16,7 +16,7 @@ Mail to the groups below will be ignored. Please instead use the [contact groups
 - `k8s-infra-release-editors` - Release Managers
 - `k8s-infra-release-viewers` - Release Manager Associates
 
-[Membership](https://git.k8s.io/k8s.io/groups/groups.yaml) and [permissions](https://git.k8s.io/k8s.io/infra/gcp/ensure-release-projects.sh) for each group is defined in [kubernetes/k8s.io](https://git.k8s.io/k8s.io).
+[Membership](https://git.k8s.io/k8s.io/groups/sig-release/groups.yaml) and [permissions](https://git.k8s.io/k8s.io/infra/gcp/bash/ensure-release-projects.sh) for each group are defined in [kubernetes/k8s.io](https://git.k8s.io/k8s.io).
 
 ## Projects
 
@@ -24,11 +24,12 @@ Mail to the groups below will be ignored. Please instead use the [contact groups
 
 | Name | Status | Tenancy | Ownership | Purpose |
 |---|---|---|---|---|
-| `kubernetes-release-test` | Active | Google | Release Engineering | Staging project for Kubernetes releases (Google) |
-| `google-containers` | Active | Google | Google | Production project for Kubernetes releases (Google) |
-| `k8s-staging-kubernetes` | Active | Kubernetes | Release Engineering | Staging project for Kubernetes releases (K8s Infra) |
+| `k8s-release` | Active | Kubernetes | Release Engineering | Default project for `krel` staging and release Cloud Build jobs (K8s Infra) |
+| `k8s-staging-kubernetes` | Active | Kubernetes | Release Engineering | Staging registry project for Kubernetes release images (K8s Infra) |
 | `k8s-release-test-prod` | Active | Kubernetes | Release Engineering | Test production project for Kubernetes releases (K8s Infra) |
-| `k8s-artifacts-prod` | Active | Kubernetes | WG K8s Infra | Production project for Kubernetes Community (K8s Infra) |
+| `k8s-artifacts-prod` | Active | Kubernetes | SIG K8s Infra | Production project for Kubernetes Community artifacts (`registry.k8s.io`) (K8s Infra) |
+| `kubernetes-release-test` | Legacy | Google | Release Engineering | Former staging project for Kubernetes releases; no longer used by `krel` |
+| `google-containers` | Frozen | Google | Google | Former production project (`k8s.gcr.io`), frozen since 2023 |
 
 ### Release Engineering
 

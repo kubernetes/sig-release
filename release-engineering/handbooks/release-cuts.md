@@ -18,12 +18,12 @@
 - [3. Generate testgrid comment](#3-generate-testgrid-comment)
 - [4. Check publishing-bot status](#4-check-publishing-bot-status)
 - [5. Mock stage and Mock release](#5-mock-stage-and-mock-release)
-- [6. No-mock stage](#6-no-mock-stage)
+- [6. Nomock stage](#6-nomock-stage)
 - [7. Image promotion](#7-image-promotion)
   - [Merge promo PR](#merge-promo-pr)
   - [Wait on image promotion job](#wait-on-image-promotion-job)
-- [8. No-mock release](#8-no-mock-release)
-- [9. Notify public dev Google group mailinglist](#9-notify-public-dev-google-group-mailinglist)
+- [8. Nomock release](#8-nomock-release)
+- [9. Send release announcement](#9-send-release-announcement)
   - [Manually create release HTML announcements](#manually-create-release-html-announcements)
 - [10. Post release tasks](#10-post-release-tasks)
   - [\[RC.0 only\] Considerations and post branch creation release tasks](#rc0-only-considerations-and-post-branch-creation-release-tasks)
@@ -32,14 +32,15 @@
   - [\[Stable only\] Code Thaw](#stable-only-code-thaw)
   - [\[Patch only\] Update schedule on k/website](#patch-only-update-schedule-on-kwebsite)
 - [Cleanup](#cleanup)
+<!-- /toc -->
 
 A step by step guide for cutting Kubernetes releases. At a high-level:
 
 - Maintain GitHub release cut issue
 - Update tools (~15m)
-- Run `krel stage` (~1h 15m - up to 2h) (**skip for patch releases**)
-- Run `krel release` (~15m) (**skip for patch releases**)
-- Run `krel stage --nomock` (~1h 15m - up to 2h)
+- Run `krel stage` (~30m) (**skip for patch releases**)
+- Run `krel release` (~10m) (**skip for patch releases**)
+- Run `krel stage --nomock` (~1h)
 - Run `kpromo pr` & merge PR
 - Wait for image promo prow job (~1h)
 - Run `krel release --nomock` (~15m)
@@ -49,7 +50,7 @@ A step by step guide for cutting Kubernetes releases. At a high-level:
 > For patch releases (x.y.z where z > 0), mock stage and mock release are skipped.
 > The nomock pipeline has built-in safety checks (provenance verification, deterministic builds)
 > that make a separate mock run unnecessary for patches. This reduces the total release
-> cut time by approximately 45 minutes per branch.
+> cut time by approximately 40 minutes per branch.
 
 ## Prerequisites
 
@@ -69,16 +70,14 @@ You must be added to the `milestone-maintainers` team in [k/org teams.yaml](http
 
 ### Mailing list permissions
 
-In order to send the [release announcement emails](#9-notify-public-dev-google-group-mailinglist), you must have permissions to send email to both the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) and [kubernetes-announce](https://groups.google.com/g/kubernetes-announce) groups.
+In order to send the [release announcement emails](#9-send-release-announcement), you must have permissions to send email to both the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) and [kubernetes-announce](https://groups.google.com/g/kubernetes-announce) groups.
 - Add yourself to both groups
 - Ask a current moderator for each group to allowlist your email address so your first email doesn't get stuck in the moderation queue. After that, any emails you send should go through without moderation. See [mailing list permissions](./release-manager.md#mailing-list-permissions) or reach out to `@release-managers` in the `#release-management` Slack channel.
 
 ### Green Release Signal (pre-releases only)
 
 On the same day of the release, a green signal must've been given in the #release-management Slack channel. If in doubt, double check with the current Release Signal Team Lead.
-You can find the complete list of release signal team members at this link (substitute `1.xx` with the current release version):
-
-`https://github.com/kubernetes/sig-release/blob/master/releases/release-1.xx/release-team.md`
+You can find the complete list of Release Signal team members in the `release-team.md` file of the [current release directory](../../releases/).
 
 > [!NOTE]
 Ensure that there are no patch releases in progress, coordinating with @release-managers.
@@ -95,7 +94,7 @@ Begin by updating to the latest package versions. This helps reduce failure poin
 - gcloud (GCP CLI)
 - krel (OSS CLI Tool)
 - kpromo (OSS CLI Tool)
-- [optional] schedule-builder (OSS CLI Tool) 
+- [optional] schedule-builder (OSS CLI Tool)
 
 #### Download or update `Go` to the latest available stable version:
 
@@ -105,18 +104,16 @@ Or to use brew:
 ```
 # to install
 brew install go
-    
+
 # to update (latest)
 brew upgrade go
 ```
 
-[optional] if on a Linux-based system using [zsh](https://www.zsh.org/) (Mac, Linux, Windows WSL) add to `~/.zshrc` PATH:
+[optional] Make sure the Go binary directory is on your `PATH`. Add the following to your shell profile (for example `~/.bashrc`, `~/.zshrc` or `~/.config/fish/config.fish`, adapting the syntax to your shell) and reload it:
 
 ```
 export GOPATH=$(go env GOPATH)
 export PATH="$HOME/go/bin:${PATH}"
-#reload your .zshrc
-source ~/.zshrc
 ```
 
 > [!NOTE]
@@ -127,13 +124,13 @@ source ~/.zshrc
 ```
 # to install
 brew install --cask google-cloud-sdk
-    
+
 # to update
 gcloud components update --quiet
 ```
 
 Ensure your GCP credentials are active.
-    
+
 ```
 gcloud auth login
 gcloud auth application-default login
@@ -142,11 +139,11 @@ gcloud auth application-default login
 You will be prompted to log in via your default browser.
 
 > [!TIP]
-Ensure that the email you are using to login is the same added in the [Access to GCP](#Access-to-GCP) step.
+Ensure that the email you are using to login is the same added in the [Access to GCP](#access-to-gcp) step.
 
 #### Download or update `krel`
 
-Krel ([docs](https://github.com/kubernetes/release/blob/master/docs/krel/README.md)).
+krel ([docs](https://github.com/kubernetes/release/blob/master/docs/krel/README.md)).
 
 First time:
 
@@ -169,27 +166,28 @@ Compile `krel` using the script in the repo:
 ```
 ./compile-release-tools krel
 ```
- 
+
 Validate with:
 
 ```
 krel version
 ```
-   
+
 
 #### Download or update the latest `kpromo` tool
 
-Run the following command ([source](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md#preparing-environment)) to get the latest release of `kpromo`:
+Run the following command ([source](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md#preparing-environment)) to install `kpromo` from the `main` branch:
 
 ```
 go install sigs.k8s.io/promo-tools/v4/cmd/kpromo@main
 ```
 
-or to build the latest version directly from a target branch:
+or to build it directly from a target branch:
 
 ```
 git clone https://github.com/kubernetes-sigs/promo-tools
-git pull origin <target-branch>
+cd promo-tools
+git checkout <target-branch>
 make kpromo
 ```
 
@@ -200,14 +198,14 @@ kpromo version
 ```
 
 The output should display the kpromo version information.
- 
+
 #### Download schedule-builder
 
 Only when cutting a patch release (not a pre-release like alpha, beta, etc.).
 
 ```
 go install k8s.io/release/cmd/schedule-builder@latest
-``` 
+```
 
 ### Configure GitHub Personal Access Token
 
@@ -237,13 +235,13 @@ An example issue you can follow can be found [here](https://github.com/kubernete
 The issue contains a series of steps to follow and at some point you will be asked to input the `krel version` command output:
 
 ```
-GitVersion:    v0.13.0
-GitCommit:     2c2e73f4e15c85beba135e4513308bffa79abc64
+GitVersion:    v0.XX.Y
+GitCommit:     <commit>
 GitTreeState:  clean
-BuildDate:     2022-09-14T08:01:01
-GoVersion:     go1.19.1
+BuildDate:     YYYY-MM-DDTHH:MM:SS
+GoVersion:     go1.XX.Y
 Compiler:      gc
-Platform:      darwin/arm64
+Platform:      <os>/<arch>
 ```
 
 > [!WARNING]
@@ -262,7 +260,7 @@ Helpful templates, each one has a "completed" response too:
 :hourglass_flowing_sand: Mock Release (logs)
 -> :white_check_mark:
 
-:hourglass_flowing_sand: No-mock Stage (logs)
+:hourglass_flowing_sand: Nomock Stage (logs)
 -> :white_check_mark:
 
 https://github.com/kubernetes/k8s.io/pull/xxxx
@@ -271,7 +269,7 @@ Image Promotion PR (link)
 cc: @release-managers
 -> Image promotion is :white_check_mark:
 
-:hourglass_flowing_sand: No-mock Release (logs)
+:hourglass_flowing_sand: Nomock Release (logs)
 -> :white_check_mark:
 ```
 
@@ -280,7 +278,7 @@ For patch releases (where mock runs are skipped), use this template instead:
 ```
 :thread: Release Cut v1.x.y (GH Issue)
 
-:hourglass_flowing_sand: No-mock Stage (logs)
+:hourglass_flowing_sand: Nomock Stage (logs)
 -> :white_check_mark:
 
 https://github.com/kubernetes/k8s.io/pull/xxxx
@@ -289,7 +287,7 @@ Image Promotion PR (link)
 cc: @release-managers
 -> Image promotion is :white_check_mark:
 
-:hourglass_flowing_sand: No-mock Release (logs)
+:hourglass_flowing_sand: Nomock Release (logs)
 -> :white_check_mark:
 ```
 
@@ -303,9 +301,15 @@ krel testgridshot
 
 # specific branch:
 krel testgridshot --branch 1.xx
+
+# post the comment on the release cut issue directly and
+# also include flaky jobs (the default is failing jobs only):
+krel testgridshot --branch 1.xx --github-issue <issue-number> --states=FAILING,FLAKY
 ```
 
-Post the comment generated in the **GitHub issue**.
+Post the comment generated in the **GitHub issue**, or let `krel` do it by
+passing `--github-issue`. The `--states` flag selects which testgrid states are
+screenshotted; `FAILING` is the default, add `FLAKY` to include flaking jobs.
 
 This comment contains a current snapshot of the test results for the target branch, if there is any error you should stop the release process and inform #release-management on Slack. Before proceeding the failing tests need to be either fixed or marked as non-release blocking.
 
@@ -321,7 +325,7 @@ If the issue is open you must stop the release process and inform #release-manag
 ## 5. Mock stage and Mock release
 
 > [!NOTE]
-> **Skip this step for patch releases** (x.y.z where z > 0). Proceed directly to [No-mock stage](#6-no-mock-stage).
+> **Skip this step for patch releases** (x.y.z where z > 0). Proceed directly to [Nomock stage](#6-nomock-stage).
 
 > [!WARNING]
 Before cutting `alpha.1` ideally some days before, ensure that @release-managers have performed the preparatory tasks for the alpha cut (e.g. setting up the new OBS project)
@@ -344,19 +348,19 @@ krel stage --type rc --branch release-1.xx
 
 > [!WARNING]
 If you encounter an error that looks like this
-`Step #4: level=fatal msg="checking out obs project: checking out obs project: command /usr/local/bin/osc checkout isv:kubernetes:core:prerelease:v1.33:build did not succeed: Server returned an error: HTTP Error 404: Not Found\nProject not found: isv:kubernetes:core:prerelease:v1.33:build\n"`
+`Step #4: level=fatal msg="checking out obs project: checking out obs project: command /usr/local/bin/osc checkout isv:kubernetes:core:prerelease:v1.XX:build did not succeed: Server returned an error: HTTP Error 404: Not Found\nProject not found: isv:kubernetes:core:prerelease:v1.XX:build\n"`
 The OBS project has not been created, contact @release-managers on Slack.
 
 > [!CAUTION]
 If you encounter this error
-"FATA submit stage job: verifying repository state: local HEAD (d2eb4818bbaf2820128f21c1895308dad4cfc6de) is not equal to latest remote commit (90469b0184a2e3d1b31209bf8fed413273f92a17)" you need to pull the release repo [as follows](#Download-or-update-krel-docs)
+"FATA submit stage job: verifying repository state: local HEAD (d2eb4818bbaf2820128f21c1895308dad4cfc6de) is not equal to latest remote commit (90469b0184a2e3d1b31209bf8fed413273f92a17)" you need to pull the release repo [as follows](#download-or-update-krel)
 
 The `krel` tool outputs a link to the logs.
 
 The mock stage takes about **30 minutes**. Once passed, move on to the "release" command using a specific build-version string (output from the first stage).
 
 > [!NOTE]
-At this point you should start updating the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue)
+At this point you should start updating the Slack ([thread](#2-create-a-thread-on-the-release-management-slack-channel)) and the release-cut GitHub [issue](#1-release-cut-issue)
 
 ```
 # take the output of the previous command from the logs and run the command
@@ -368,23 +372,23 @@ The `--build-version` value can be found by looking for the `BUILDVERSION` param
 
 | Release cut version | BUILDVERSION format |
 | -------- | -------- |
-| `v1.37.0-alpha.1` | `v1.37.0-alpha.0+<hash>` |
-| `v1.37.0-alpha.2` | `v1.37.0-alpha.1+<hash>` |
-| `v1.37.0-beta.0` | `v1.37.0-alpha.3+<hash>` |
-| `v1.37.0-rc.0` | `v1.37.0-beta.0+<hash>` |
-| `v1.37.0` | `v1.37.0-rc.1+<hash>` |
-| `v1.37.1` | `v1.37.0+<hash>` |
+| `v1.XX.0-alpha.1` | `v1.XX.0-alpha.0+<hash>` |
+| `v1.XX.0-alpha.2` | `v1.XX.0-alpha.1+<hash>` |
+| `v1.XX.0-beta.0` | `v1.XX.0-alpha.3+<hash>` |
+| `v1.XX.0-rc.0` | `v1.XX.0-beta.0+<hash>` |
+| `v1.XX.0` | `v1.XX.0-rc.1+<hash>` |
+| `v1.XX.1` | `v1.XX.0+<hash>` |
 
 The mock release generally takes about **10 minutes**.
 
 > [!NOTE]
-Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after this step
+Remember to update the Slack ([thread](#2-create-a-thread-on-the-release-management-slack-channel)) and the release-cut GitHub [issue](#1-release-cut-issue) after this step
 
-## 6. No-mock stage
+## 6. Nomock stage
 
-The following stages, called no-mock, create real artifacts that can be promoted for general use. The process should be near identical to the mock stages ran prior.
+The following stages, called nomock, create real artifacts that can be promoted for general use. The process should be near identical to the mock stages ran prior.
 
-Run the no-mock staging:
+Run the nomock staging:
 
 ```
 # if cutting an unreleased version
@@ -397,26 +401,38 @@ krel stage --type official --branch release-1.xx --nomock
 ```
 
 > [!NOTE]
-Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after this no-mock stage step
+Remember to update the Slack ([thread](#2-create-a-thread-on-the-release-management-slack-channel)) and the release-cut GitHub [issue](#1-release-cut-issue) after this nomock stage step
 
-The no-mock stage takes about **1 hour**. Once passed, move on to the `kpromo` command.
+The nomock stage takes about **1 hour**. Once passed, move on to the `kpromo` command.
 
 > [!CAUTION]
 Do not run the release command yet, just copy it somewhere and wait for the image promo to happen first (which means the image promo PR gets merged and the prow job has to be completed).
 
 ## 7. Image promotion
 
-Complete docs can be found [here](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md)
+Complete docs can be found [here](https://github.com/kubernetes-sigs/promo-tools/blob/main/docs/promotion-pull-requests.md).
 
- > [!WARNING]
-`FATA growing manifest with image filter [] and tag [1.29.0-alpha.1]: no images survived filtering; double-check your --filter_* flag(s) for typos`
+Run `kpromo pr` to open the image promotion pull request against `kubernetes/k8s.io`. The `--interactive` (`-i`) flag asks for confirmation before every step and is recommended:
+
+```
+# pre-release, official or patch release
+kpromo pr -i --fork=<your-github-username> --tag=v1.xx.yy-alpha|beta|rc.z
+
+# rc.0, which also promotes the alpha.0 of the next release
+kpromo pr -i --fork=<your-github-username> --tag=v1.xx.0-rc.0 --tag=v1.yy.0-alpha.0
+```
+
+The PR reviewers default to `@kubernetes/release-engineering` and can be changed with `--reviewers`.
+
+> [!WARNING]
+`FATA growing manifest with image filter [] and tag [1.xx.0-alpha.1]: no images survived filtering; double-check your --filter_* flag(s) for typos`
 means you forgot the letter "v" in the tag parameter.
 
 Once you've run the command its output should look like this:
 
 ```
-INFO Successfully created PR #xxxx                
-INFO Successfully created PR: https://github.com/kubernetes/k8s.io/pull/xxxx 
+INFO Successfully created PR #xxxx
+INFO Successfully created PR: https://github.com/kubernetes/k8s.io/pull/xxxx
 ```
 
 ### Merge promo PR
@@ -448,7 +464,7 @@ To Rerun, click the refresh icon button shown below:
 
 <img width="1710" alt="image" src="https://github.com/user-attachments/assets/9ea490ca-c99b-42bc-80f6-df890c9e145d" />
 
-The UI can be funky at times, if you click rerun and it forces you to log in - you might need to click it again. 
+The UI can be funky at times, if you click rerun and it forces you to log in - you might need to click it again.
 In case it doesn't it should show a pop up:
 - if it says it didn’t run, retry
 - if it says it ran wait 30s and check again (takes a minute)
@@ -459,9 +475,9 @@ That is the hash of the job you want to check and rerun if it fails.
 If the job is stuck in "triggered" (empty clock yellow icon), especially after a rerun, it's normal and expected. Please wait and do not touch it.
 
 > [!NOTE]
-Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after the image promotion step
+Remember to update the Slack ([thread](#2-create-a-thread-on-the-release-management-slack-channel)) and the release-cut GitHub [issue](#1-release-cut-issue) after the image promotion step
 
-## 8. No-mock release
+## 8. Nomock release
 
 You should have copied the nomock release command output from the nomock stage previously run, now you can execute the release command as follows:
 
@@ -470,9 +486,9 @@ krel release --nomock --type=alpha|beta|rc|official --branch=release-1.xx --buil
 ```
 
 > [!NOTE]
-Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after this no-mock release step.
+Remember to update the Slack ([thread](#2-create-a-thread-on-the-release-management-slack-channel)) and the release-cut GitHub [issue](#1-release-cut-issue) after this nomock release step.
 
-## 9. Notify public dev Google group mailinglist
+## 9. Send release announcement
 
 The `krel announce send` command sends announcements via the Gmail API using
 Google OAuth. A browser window will open for authentication. Use the
@@ -487,7 +503,7 @@ krel announce send --tag v1.xx.yy-alpha|beta|rc.z --nomock
 If you need to send the announcement manually instead, generate the HTML content:
 
 ```
-krel announce send -p --tag v1.xx.yy-alpha|beta|rc.z > ~/Downloads/announce.html
+krel announce send --print-only --tag v1.xx.yy-alpha|beta|rc.z > ~/Downloads/announce.html
 ```
 
 And then send the email from your account as follows:
@@ -504,30 +520,17 @@ dev@kubernetes.io, kubernetes-announce@googlegroups.com
 > [!TIP]
 Kubernetes-announce might require permissions to post, check you have them or ask your release-manager buddy to post the message for you.
 
-Post this message in release-management:
+Post this message in #release-management, linking the announcement email thread on dev@kubernetes.io:
 
 ```
-:kubernetes: Kubernetes v1.xx.yy is live! (shoutout to @xx & @yy for helping cut the release)
-https://groups.google.com/a/kubernetes.io/g/dev/c/fbaBcFvZFMo
+:kubernetes: Kubernetes v1.xx.yy is live! (shoutout to @<helper> & @<helper> for helping cut the release)
+https://groups.google.com/a/kubernetes.io/g/dev/c/<thread-id>
 ```
 
-Examples
-
-```
-:kubernetes: Kubernetes v1.23.11 is live! (shoutout to @arnaud & @Benjamin Kazemi for helping cut the release)
-https://groups.google.com/a/kubernetes.io/g/dev/c/E14i6e2ndNc
-
-:kubernetes: Kubernetes v1.24.5 is live! (shoutout to @arnaud & @Benjamin Kazemi for helping cut the release)
-https://groups.google.com/a/kubernetes.io/g/dev/c/WSQwY55HeeI
-
-:kubernetes: Kubernetes v1.25.1 is live! (shoutout to @arnaud & @Benjamin Kazemi for helping cut the release)
-https://groups.google.com/a/kubernetes.io/g/dev/c/R5vB-jFqnDw
-```
-
-Copy / paste link to #release-management notification post.
+Copy / paste the link to the #release-management notification post into the release cut issue.
 
 > [!NOTE]
-Remember to provide one last final update to the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after the announcement step
+Remember to provide one last final update to the Slack ([thread](#2-create-a-thread-on-the-release-management-slack-channel)) and the release-cut GitHub [issue](#1-release-cut-issue) after the announcement step
 
 To collect the release stats required in the release cut issue, run this command:
 - `date-from` should be the start date of the release cut (when the first command was run)
@@ -537,7 +540,7 @@ To collect the release stats required in the release cut issue, run this command
 krel history --branch master|release-1.xx --date-from yyyy-mm-dd --date-to yyyy-mm-dd
 
 # example
-krel history --branch release-1.33 --date-from 2025-04-23 --date-to 2025-04-24
+krel history --branch release-1.38 --date-from 2026-12-03 --date-to 2026-12-03
 ```
 
 ## 10. Post release tasks
@@ -548,21 +551,21 @@ Remember that before launching the `nomock release` command for an rc.0, you nee
 
 #### Next Release Branch Creation
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The new release branch is created in the `nomock` staging phase and pushed to the repository during the `nomock` release phase of an rc.0 cut.
 
-During a `rc.0` release our release tooling creates a new release branch named `release-X.Y`, where `X.Y.0` is the version of the upcoming release. 
-Additionally, the `rc.0` release automatically triggers an `alpha.0` build for the subsequent release (e.g. for `v1.34.0-rc.0`, `v1.35.0-alpha.0` is created automatically).
+During a `rc.0` release our release tooling creates a new release branch named `release-X.Y`, where `X.Y.0` is the version of the upcoming release.
+Additionally, the `rc.0` release automatically triggers an `alpha.0` build for the subsequent release (e.g. for `v1.38.0-rc.0`, `v1.39.0-alpha.0` is created automatically).
 
-Behind the scenes `krel` creates the branch and pushes it to the remote. 
+Behind the scenes `krel` creates the branch and pushes it to the remote.
 
-At the same time Prow’s [`branchprotector`](https://git.k8s.io/test-infra/prow/cmd/branchprotector/README.md) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo, including the newly created one.
+At the same time Prow's [`branchprotector`](https://github.com/kubernetes-sigs/prow/tree/main/cmd/branchprotector) runs every hour at 54 minutes past the hour and automatically adds [branch protection](https://help.github.com/articles/about-protected-branches/) to any new branch in the `kubernetes/kubernetes` repo, including the newly created one.
 No need to manually create the branch protection rule.
 
 However, it is important to ensure that the branch is protected. We had cases where the branch was not protected and this was noticed very late.
 
-> [!NOTE]  
-This means that the staging step will take about twice as long, as it will stage both versions `vX.Y.0-rc.0` and `vX.{Y+1}.0-alpha.0`. 
+> [!NOTE]
+This means that the staging step will take about twice as long, as it will stage both versions `vX.Y.0-rc.0` and `vX.{Y+1}.0-alpha.0`.
 The release step will also be extended, but not substantially longer in time.
 
 #### Post branch creation release tasks
@@ -576,7 +579,7 @@ You will not be able to cut an rc.1 or any other cut against the new branch unti
 
 ### [Stable only] Code Thaw
 
-Code thaw means you need to lift the code freeze, [here](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#code-thaw)
+Code thaw means you need to lift the code freeze, [here](release-manager.md#code-thaw)
 are the docs on how to do it, with an example PR.
 
 ### [Patch only] Update schedule on k/website
@@ -607,5 +610,5 @@ git push -u origin schedule-updates-<month>-<year>
 
 ## Cleanup
 
-Close the release cut issue and possibly related issues, open new issues if you find any docs or feature missing, and ask Google admins to revoke your personal access to GCP if it is no longer required.
+Close the release cut issue and possibly related issues, and open new issues if you find any docs or feature missing. If your GCP access is no longer required (for example after a temporary Release Manager assignment), open a pull request against [`groups/sig-release/groups.yaml`](https://git.k8s.io/k8s.io/groups/sig-release/groups.yaml) to remove yourself from the `k8s-infra-release-editors` group.
 You might want to delete your GitHub access token too.

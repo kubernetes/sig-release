@@ -29,7 +29,7 @@ tells you to.
 See the [Security Release Process](https://git.k8s.io/security/security-release-process.md)
 doc for more details.
 
-[security-release-team]: https://groups.google.com/a/kubernetes.io/forum/#!forum/security-release-team
+[security-release-team]: https://groups.google.com/a/kubernetes.io/g/security-release-team
 
 ## CVE data maps
 
@@ -80,7 +80,7 @@ krel cve edit CVE-2022-0000
 
 ### Multiple releases affected by the same CVE
 
-If multiple affected releases are affected by the same CVE, you must put a data
+If multiple releases are affected by the same CVE, you must put a data
 map for each release in the **same data map file**, such as:
 
 ```yaml
