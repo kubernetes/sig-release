@@ -1,0 +1,11 @@
+pr: 143328
+pr_body: ""
+releasenote:
+  text: |-
+    `kubectl` no longer downloads the deprecated `/openapi/v2` schema for client-side validation. With `--validate=strict`, resources whose API does not support server-side field validation are no longer validated against a schema.
+  sigs:
+  - cli
+  kinds:
+  - cleanup
+  areas:
+  - kubectl

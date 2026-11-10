@@ -1,0 +1,15 @@
+pr: 140280
+pr_body: ""
+releasenote:
+  text: |-
+    kubeadm: The CoreDNS `dns.imageTag` override in `ClusterConfiguration` is now used for Corefile migration, upgrade preflight checks, and `kubeadm upgrade plan` output, in addition to the deployed manifest.
+  sigs:
+  - api-machinery
+  - cluster-lifecycle
+  - network
+  kinds:
+  - feature
+  areas:
+  - kube-proxy
+  - apiserver
+  - kubeadm

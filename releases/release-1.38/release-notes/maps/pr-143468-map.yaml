@@ -1,0 +1,13 @@
+pr: 143468
+pr_body: ""
+releasenote:
+  text: |-
+    Updated CoreDNS from v1.14.7 to v1.15.0.
+  sigs:
+  - cluster-lifecycle
+  - testing
+  kinds:
+  - feature
+  areas:
+  - kubeadm
+  - dependency

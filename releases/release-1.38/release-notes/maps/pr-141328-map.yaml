@@ -1,0 +1,9 @@
+pr: 141328
+pr_body: ""
+releasenote:
+  text: |-
+    kube-scheduler: the per-node resource totals no longer wrap negative when the requests of the pods assigned to a node exceed int64, which could make the node look like it had spare capacity.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

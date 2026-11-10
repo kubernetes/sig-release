@@ -1,0 +1,11 @@
+pr: 143450
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a regression in v1.37 where kube-scheduler could treat the devices of an allocated ResourceClaim as free after PreBind failed, which could lead to allocating the same device twice.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - bug
+  - regression

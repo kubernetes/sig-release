@@ -2,7 +2,7 @@ pr: 141106
 pr_body: ""
 releasenote:
   text: |-
-    Fixed a panic in DRA drivers that use `k8s.io/dynamic-resource-allocation/client` to `Get` a ResourceClaim and then call `UpdateStatus` on it after the client selected `resource.k8s.io/v1beta2`. The client selects that version when a driver built with the `v1`-based helper runs against a Kubernetes `v1.33` API server, or when an object-level `NotFound` error makes it fall back from `v1` to `v1beta2`.
+    Fixed a panic in DRA drivers that use `k8s.io/dynamic-resource-allocation/client` to `Get` a ResourceClaim and then call `UpdateStatus` on it after the client selected `resource.k8s.io/v1beta2`. The client selects that version when a driver built with the `v1`-based helper runs against a Kubernetes v1.33 API server, or when an object-level `NotFound` error makes it fall back from `v1` to `v1beta2`. Affected drivers must be rebuilt with the fixed module; upgrading the API server does not fix them.
   sigs:
   - node
   kinds:

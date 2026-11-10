@@ -1,0 +1,19 @@
+pr: 142397
+pr_body: ""
+releasenote:
+  text: |-
+    Added support for issuing ServiceAccount tokens signed by an ML-DSA key, behind the beta `ServiceAccountTokenMLDSA` feature gate (enabled by default). The OIDC token authenticator also accepts tokens signed with ML-DSA keys.
+  sigs:
+  - api-machinery
+  - auth
+  - cloud-provider
+  - cluster-lifecycle
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver
+  - cloudprovider
+  - dependency

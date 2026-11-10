@@ -1,6 +1,9 @@
----
 pr: 143378
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed a `kube-scheduler` panic when a ResourceSlice changed its device count
-    while a matching DeviceTaintRule event was being processed.
+  text: |-
+    Fixed a `kube-scheduler` panic when a ResourceSlice changed its device count while a matching DeviceTaintRule event was being processed.
+  sigs:
+  - node
+  kinds:
+  - bug

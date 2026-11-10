@@ -1,0 +1,11 @@
+pr: 143385
+pr_body: ""
+releasenote:
+  text: |-
+    kubectl no longer treats arguments that contain `-v=` (for example the label `tier-v=8` or the selector `-l app-v=9`) as the log verbosity flag. Previously these silently raised the log level for the whole command.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

@@ -1,6 +1,11 @@
----
 pr: 143356
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Updated `kubeadm` to retry listing etcd members on transient errors during
-    control plane join and reset, instead of failing on the first error.
+  text: |-
+    Updated `kubeadm` to retry listing etcd members on transient errors during control plane join and reset, instead of failing on the first error.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm

@@ -1,0 +1,11 @@
+pr: 143784
+pr_body: ""
+releasenote:
+  text: |-
+    Fix error reporting for invalid flags in kuberc aliases to display the alias name instead of the binary name.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

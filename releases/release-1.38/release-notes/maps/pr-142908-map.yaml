@@ -1,0 +1,12 @@
+pr: 142908
+pr_body: ""
+releasenote:
+  text: |-
+    cloud-controller-manager now honors the `NativeHistograms` feature gate. When the gate is enabled, its histogram metrics are also exposed in native histogram format.
+  sigs:
+  - cloud-provider
+  - instrumentation
+  kinds:
+  - bug
+  areas:
+  - cloudprovider

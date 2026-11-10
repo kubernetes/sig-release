@@ -1,0 +1,10 @@
+pr: 143309
+pr_body: ""
+releasenote:
+  text: |-
+    DRAConsumableCapacity and DRAFractionalCapacityRange are now GA.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - feature

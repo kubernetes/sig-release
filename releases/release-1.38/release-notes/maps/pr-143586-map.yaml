@@ -1,0 +1,11 @@
+pr: 143586
+pr_body: ""
+releasenote:
+  text: |-
+    kubectl: fixed `--kuberc=<path>` truncating paths that contain `=`.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

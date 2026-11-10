@@ -1,12 +1,13 @@
----
 pr: 140939
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: 'Added the `OpenAPIV2LazyBuild` feature gate (enabled by default in Beta): `kube-apiserver`
-    builds the `/openapi/v2` spec on first request instead of at startup, reducing
-    memory on clusters that rarely or never request it. Served content, ETags, and
-    update behavior are unchanged. With the gate enabled, a spec that fails to build
-    no longer fails startup; it is logged and omitted from the aggregated `/openapi/v2`.
-    Set `--feature-gates=OpenAPIV2LazyBuild=false` to restore eager building. For
-    library consumers, `GenericAPIServer.StaticOpenAPISpec` is a `cached.Value[*spec.Swagger]`,
-    and `apiextensions-apiserver` OpenAPI `Controller.Run` accepts it.'
+  text: |-
+    Added the `OpenAPIV2LazyBuild` feature gate (enabled by default in Beta): `kube-apiserver` builds the `/openapi/v2` spec on first request instead of at startup, reducing memory on clusters that rarely or never request it. Served content, ETags, and update behavior are unchanged. With the gate enabled, a spec that fails to build no longer fails startup; it is logged and omitted from the aggregated `/openapi/v2`. Set `--feature-gates=OpenAPIV2LazyBuild=false` to restore eager building. For library consumers, `GenericAPIServer.StaticOpenAPISpec` is a `cached.Value[*spec.Swagger]`, and `apiextensions-apiserver` OpenAPI `Controller.Run` accepts it.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver

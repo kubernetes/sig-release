@@ -1,0 +1,11 @@
+pr: 143558
+pr_body: ""
+releasenote:
+  text: |-
+    kubectl: fixed a stray line break in the object name in error messages from `kubectl set` subcommands when used with `--local` on resources from a named API group.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

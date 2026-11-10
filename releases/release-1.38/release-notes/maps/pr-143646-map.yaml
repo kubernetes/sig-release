@@ -1,0 +1,13 @@
+pr: 143646
+pr_body: ""
+releasenote:
+  text: |-
+    The kubelet now applies declarative validation to static pod manifests. Previously such static pods ran while the API server rejected their mirror pods.
+  sigs:
+  - api-machinery
+  - node
+  kinds:
+  - cleanup
+  areas:
+  - kubelet
+  - apiserver

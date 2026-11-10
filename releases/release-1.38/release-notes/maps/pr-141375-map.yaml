@@ -1,0 +1,16 @@
+pr: 141375
+pr_body: ""
+releasenote:
+  text: |-
+    DRA claim PerContainer overhead referenced only by non-restartable init containers now counts toward the pod's peak resource calculation instead of its entire duration. This is effective only when DRANodeAllocatableResources feature gate is enabled.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - scheduling
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - kubelet
+  - code-generation

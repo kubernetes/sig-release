@@ -1,0 +1,11 @@
+pr: 143604
+pr_body: ""
+releasenote:
+  text: |-
+    kubeadm: `kubeadm upgrade diff` and the dry run of `kubeadm upgrade apply` and `kubeadm upgrade node` now include the etcd static Pod manifest when etcd is managed by kubeadm.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - feature
+  areas:
+  - kubeadm

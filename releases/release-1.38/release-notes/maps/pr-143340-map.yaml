@@ -1,0 +1,11 @@
+pr: 143340
+pr_body: ""
+releasenote:
+  text: |-
+    kube-proxy no longer misses the initial Node zone when an already-running informer replays its cached Node, ensuring topology-aware routing uses the configured zone without requiring a restart.
+  sigs:
+  - network
+  kinds:
+  - bug
+  areas:
+  - kube-proxy

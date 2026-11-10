@@ -1,0 +1,14 @@
+pr: 143266
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the alpha `PodGroupPreemptionPolicy` feature gate. The `preemptionPolicy` field of PodGroup, CompositePodGroup, and Workload templates is now available whenever the `GenericWorkload` feature gate (or `CompositePodGroup` for CompositePodGroup objects) is enabled, and the Priority admission plugin populates it in that case.
+  sigs:
+  - api-machinery
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  areas:
+  - test
+  - code-generation

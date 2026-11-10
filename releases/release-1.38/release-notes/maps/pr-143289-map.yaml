@@ -1,5 +1,9 @@
----
 pr: 143289
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Added write-gating and leader recovery for leader election in `client-go`.
+  text: |-
+    Added write-gating and leader recovery for leader election in `client-go`.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature

@@ -1,6 +1,14 @@
----
 pr: 142760
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Added `sharding.NewShardRangeSelector` and `cache.NewShardedListWatch` helpers
-    for sharded informers and reflectors.
+  text: |-
+    Added `sharding.NewShardRangeSelector` and `cache.NewShardedListWatch` helpers for sharded informers and reflectors.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation

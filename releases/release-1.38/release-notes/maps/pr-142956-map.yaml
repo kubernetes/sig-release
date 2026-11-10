@@ -1,0 +1,14 @@
+pr: 142956
+pr_body: ""
+releasenote:
+  text: |-
+    Promoted the `Recreate` update strategy for StatefulSets to beta; the `StatefulSetRecreateStrategy` feature gate is now enabled by default. The Recreate strategy deletes all Pods and waits for them to fully terminate before creating new Pods according to `podManagementPolicy`.
+  sigs:
+  - apps
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation

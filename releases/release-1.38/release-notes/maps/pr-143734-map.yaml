@@ -1,0 +1,15 @@
+pr: 143734
+pr_body: ""
+releasenote:
+  text: |-
+    kubeconfig clusters can set `min-connection-pool-size` to configure client-go's `MinConnectionPoolSize`. Exec credential plugins with `provideClusterInfo: true` receive the value in `spec.cluster`.
+  sigs:
+  - api-machinery
+  - auth
+  - cli
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubectl
+  - code-generation

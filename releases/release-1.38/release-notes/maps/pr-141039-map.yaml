@@ -1,10 +1,11 @@
----
 pr: 141039
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Introduced a protobuf-based checkpoint format for `kubelet` resource allocation
-    and actuation checkpoint files (`allocated_pods_state` and `actuated_pods_state`),
-    adding a top-level `version` field set to `"v2"`. The checkpoint's `data` field
-    contains a protobuf-encoded `podList`. It also maintains the legacy `entries`
-    field for backward compatibility during `kubelet` downgrades, and automatically
-    migrates unversioned `v1` checkpoints on upgrade.
+  text: |-
+    Introduced a protobuf-based checkpoint format for `kubelet` resource allocation and actuation checkpoint files (`allocated_pods_state` and `actuated_pods_state`), adding a top-level `version` field set to `"v2"`. The checkpoint's `data` field contains a protobuf-encoded `podList`. It also maintains the legacy `entries` field for backward compatibility during `kubelet` downgrades, and automatically migrates unversioned `v1` checkpoints on upgrade.
+  sigs:
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet

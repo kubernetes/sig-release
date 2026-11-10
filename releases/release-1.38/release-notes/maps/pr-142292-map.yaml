@@ -1,0 +1,12 @@
+pr: 142292
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where duplicate (status, reason) volume health conditions, or more than 16 conditions, reported by a CSI driver caused kubelet pod status patching to fail with a 422 validation error, blocking pod deletion. kubelet now keeps only the first condition for each (status, reason) pair, up to 16 conditions.
+  sigs:
+  - node
+  - storage
+  kinds:
+  - bug
+  areas:
+  - kubelet

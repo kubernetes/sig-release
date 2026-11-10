@@ -1,6 +1,9 @@
----
 pr: 142902
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue where Deployment rollouts failed to report timeouts after old
-    ReplicaSet scale-down errors.
+  text: |-
+    Fixed an issue where Deployment rollouts failed to report timeouts after old ReplicaSet scale-down errors.
+  sigs:
+  - apps
+  kinds:
+  - bug

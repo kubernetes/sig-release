@@ -1,0 +1,19 @@
+pr: 143657
+pr_body: ""
+releasenote:
+  text: |-
+    Updated github.com/go-jose/go-jose/v4 to v4.1.7 to address CVE-2026-116587 and five other advisories. JWK parsing now rejects RSA keys larger than 4096 bits, so an external OIDC issuer that uses a larger key will stop authenticating.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cloud-provider
+  - cluster-lifecycle
+  - node
+  kinds:
+  - bug
+  - dependency
+  areas:
+  - apiserver
+  - cloudprovider
+  - dependency

@@ -1,6 +1,11 @@
----
 pr: 142583
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed `kube-proxy` configuration validation errors to identify public configuration
-    field paths rather than internal Go type and field names.
+  text: |-
+    Fixed `kube-proxy` configuration validation errors to identify public configuration field paths rather than internal Go type and field names.
+  sigs:
+  - network
+  kinds:
+  - bug
+  areas:
+  - kube-proxy

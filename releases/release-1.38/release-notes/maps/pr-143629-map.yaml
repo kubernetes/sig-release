@@ -1,0 +1,11 @@
+pr: 143629
+pr_body: ""
+releasenote:
+  text: |-
+    kubeadm: when the version to upgrade to is below the minimum supported control plane version, `kubeadm upgrade` now shows the minimum supported version in the error instead of the current cluster version.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm

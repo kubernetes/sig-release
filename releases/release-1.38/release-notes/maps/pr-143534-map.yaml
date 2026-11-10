@@ -1,0 +1,16 @@
+pr: 143534
+pr_body: ""
+releasenote:
+  text: |-
+    With the alpha `WorkloadWithJob` feature gate enabled, the Job controller now finds the Workload and PodGroup for a Job by name. A Job that sets `spec.scheduling` gets its own Workload and PodGroup regardless of its owner, including Jobs created by a CronJob. A Job with a controller owner that does not set `spec.scheduling` gets none. A Job with the `scheduling.k8s.io/workload-name` or `scheduling.k8s.io/group-template-name` annotation selects a template in an existing Workload, and `spec.scheduling` is rejected when either annotation is set.
+  sigs:
+  - api-machinery
+  - apps
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation

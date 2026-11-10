@@ -1,5 +1,9 @@
----
 pr: 143201
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Updated Kubernetes to build using Go `v1.27.3`.
+  text: |-
+    Updated Kubernetes to build using Go `v1.27.3`.
+  sigs:
+  - release
+  kinds:
+  - dependency

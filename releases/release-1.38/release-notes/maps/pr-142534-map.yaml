@@ -1,0 +1,9 @@
+pr: 142534
+pr_body: ""
+releasenote:
+  text: |-
+    `NewSnapshot` in `k8s.io/kubernetes/pkg/scheduler/backend/cache` now lists nodes in a deterministic order: the order of its `nodes` argument, followed by node names that only appear in pods, in pod order. Previously the order could change between calls with the same input.
+  sigs:
+  - scheduling
+  kinds:
+  - cleanup

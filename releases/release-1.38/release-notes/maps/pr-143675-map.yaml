@@ -1,0 +1,11 @@
+pr: 143675
+pr_body: ""
+releasenote:
+  text: |-
+    kubectl cluster-info dump now closes the files it writes with --output-directory, which avoids "too many open files" errors on large clusters.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

@@ -1,7 +1,10 @@
----
 pr: 143376
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue in device taint eviction where a DeviceToleration with an empty
-    `effect` field was ignored; per the API documentation, it tolerates NoExecute
-    taints like any other matching toleration.
+  text: |-
+    Fixed an issue in device taint eviction where a DeviceToleration with an empty `effect` field was ignored; per the API documentation, it tolerates NoExecute taints like any other matching toleration.
+  sigs:
+  - apps
+  - scheduling
+  kinds:
+  - bug

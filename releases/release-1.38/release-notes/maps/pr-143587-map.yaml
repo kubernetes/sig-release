@@ -1,0 +1,13 @@
+pr: 143587
+pr_body: ""
+releasenote:
+  text: |-
+    The `NodeSwap` feature gate, which graduated to GA and was locked to default in 1.34, has been removed.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - test
+  - kubelet

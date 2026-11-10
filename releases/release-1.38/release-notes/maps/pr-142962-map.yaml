@@ -1,0 +1,40 @@
+pr: 142962
+pr_body: ""
+releasenote:
+  text: |-
+    Promoted the workload-aware scheduling building-block types (for example, `WorkloadPodGroupSchedulingPolicy` and `WorkloadPodGroupSchedulingConstraints`) from `scheduling.k8s.io/v1alpha3` to `scheduling.k8s.io/v1` for the KEP-6089 beta milestone; the `v1alpha3` Go types remain as aliases. `WorkloadPodGroupSchedulingConstraints.Topology` and `WorkloadCompositePodGroupSchedulingConstraints.Topology` now use `WorkloadTopologyConstraint` instead of `v1alpha3.TopologyConstraint`, so external controllers must update the element type. The corresponding apply configurations moved to `k8s.io/client-go/applyconfigurations/scheduling/v1`.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - autoscaling
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - etcd
+  - instrumentation
+  - network
+  - node
+  - release
+  - scheduling
+  - storage
+  - testing
+  - windows
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - release-eng
+  - kubeadm
+  - conformance
+  - code-generation
+  - e2e-test-framework
+  - dependency
+  - stable-metrics

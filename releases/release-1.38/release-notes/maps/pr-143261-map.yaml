@@ -1,0 +1,9 @@
+pr: 143261
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where pods with required pod affinity or anti-affinity terms using namespaceSelector were not requeued on assigned-pod events that could make them schedulable, which delayed scheduling until the periodic unschedulable-pods flush.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

@@ -1,8 +1,12 @@
----
 pr: 142719
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Strengthened runtime PodGroup and CompositePodGroup hierarchy validation in
-    `kube-scheduler` to verify maximum tree depth, Workload reference consistency,
-    scheduling policies (no `Gang` parent with `Basic` child), and disruption modes
-    (no `All` parent with `Single` child).
+  text: |-
+    Strengthened runtime PodGroup and CompositePodGroup hierarchy validation in `kube-scheduler` to verify maximum tree depth (4), Workload reference consistency, scheduling policies (no `Gang` parent with `Basic` child), and disruption modes (no `All` parent with `Single` child). The scheduler does not schedule a hierarchy that fails validation, and sets the `PodGroupInitiallyScheduled` or `CompositePodGroupInitiallyScheduled` condition to `False` with reason `PodGroupError` or `CompositePodGroupError`.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

@@ -1,0 +1,21 @@
+pr: 142511
+pr_body: ""
+releasenote:
+  text: |-
+    Added the `OCI` seccomp profile type as an alpha API (KEP-6061). With the `SecurityProfileOCI` feature gate enabled, a `seccompProfile` can set `type: OCI` with a digest-pinned `oci.ref` and an optional `oci.baseProfile` (`RuntimeDefault` or `Localhost`). Privileged containers cannot use an `OCI` profile, and Pod Security admission rejects `OCI` profiles at the Baseline and Restricted levels. The kubelet in this release does not pull or apply OCI seccomp profiles.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - cli
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubectl
+  - code-generation
+  - dependency

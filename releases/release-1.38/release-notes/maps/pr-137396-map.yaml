@@ -1,8 +1,24 @@
----
 pr: 137396
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Introduced the `imperative-eviction.k8s.io/evictor` responder controller for
-    Pods. This responder is executed last, after all other responders have run, and
-    attempts to evict a Pod using the imperative eviction API (`pods/<name>/eviction`
-    subresource), fulfilling the declarative Eviction API contract.
+  text: |-
+    Introduced the `imperative-eviction.k8s.io/evictor` responder controller for Pods. This responder is executed last, after all other responders have run, and attempts to evict a Pod using the imperative eviction API (`pods/<name>/eviction` subresource), fulfilling the declarative Eviction API contract.
+  sigs:
+  - api-machinery
+  - apps
+  - architecture
+  - auth
+  - cli
+  - etcd
+  - instrumentation
+  - node
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - kubectl
+  - conformance
+  - code-generation

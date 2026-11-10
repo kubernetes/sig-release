@@ -1,8 +1,10 @@
----
 pr: 142088
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue in volume binding (scheduler CSI storage capacity) where storage
-    sizes were compared using overflowing `int64` values; exact quantity comparison
-    is used instead, preventing incorrect scheduling decisions for storage sizes larger
-    than 2^63 bytes.
+  text: |-
+    Fixed an issue in volume binding (scheduler CSI storage capacity) where storage sizes were compared using overflowing `int64` values; exact quantity comparison is used instead, preventing incorrect scheduling decisions for storage sizes larger than 2^63 bytes.
+  sigs:
+  - scheduling
+  - storage
+  kinds:
+  - bug

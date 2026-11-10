@@ -1,0 +1,12 @@
+pr: 143557
+pr_body: ""
+releasenote:
+  text: |-
+    kubeadm: fixed a bug where the error for missing CA files did not include the hint to run `kubeadm init phase certs ca`.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  - regression
+  areas:
+  - kubeadm
