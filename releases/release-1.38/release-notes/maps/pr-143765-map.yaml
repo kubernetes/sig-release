@@ -1,0 +1,10 @@
+pr: 143765
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug in kube-scheduler where NodeResourcesFit scoring ignored the PodLevelResources, InPlacePodVerticalScaling, and InPlacePodLevelResourcesVerticalScaling feature gates when computing pod resource requests.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - bug

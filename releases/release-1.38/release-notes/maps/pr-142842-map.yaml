@@ -1,0 +1,13 @@
+pr: 142842
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where kubelet was killing containers one at a time when restarting them without deleting the pod.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet

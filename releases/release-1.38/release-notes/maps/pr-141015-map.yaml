@@ -1,0 +1,11 @@
+pr: 141015
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where a ValidatingAdmissionPolicy or MutatingAdmissionPolicy with a `paramKind` referencing a built-in type, such as `v1/ConfigMap`, permanently stopped resolving parameters once all of its bindings were deleted. Until the API server was restarted, affected policies either denied every matched request (with `parameterNotFoundAction: Deny`) or silently evaluated against a stale parameter. Policies whose `paramKind` is a custom resource were not affected.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver

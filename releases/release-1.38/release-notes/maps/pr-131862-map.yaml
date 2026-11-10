@@ -1,0 +1,15 @@
+pr: 131862
+pr_body: ""
+releasenote:
+  text: |-
+    Added the `WatchFromStorageWithoutPrevKV` feature gate to `kube-apiserver` (beta, enabled by default). When enabled, the watch cache watches etcd without the `prev-kv` option, reducing load on etcd.
+  sigs:
+  - api-machinery
+  - etcd
+  - node
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver

@@ -1,5 +1,9 @@
----
 pr: 142856
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed PodGroup template naming in the Job integration to avoid name-length overflow.
+  text: |-
+    Fixed PodGroup template naming in the Job integration to avoid name-length overflow.
+  sigs:
+  - apps
+  kinds:
+  - bug

@@ -1,0 +1,9 @@
+pr: 143105
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a client-go panic when a connection-rotation dialer is constructed without a custom dial function. It now uses the documented default network dialer.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

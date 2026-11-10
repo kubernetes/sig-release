@@ -1,0 +1,13 @@
+pr: 143696
+pr_body: ""
+releasenote:
+  text: |-
+    Added the alpha `ConsistentGetFromCache` feature gate. When enabled, kube-apiserver reads the current object from the watch cache instead of from etcd when processing update, patch, and delete requests.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver

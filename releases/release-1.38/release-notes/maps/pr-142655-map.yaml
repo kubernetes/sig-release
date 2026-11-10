@@ -1,9 +1,14 @@
----
 pr: 142655
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Updated `k8s.io/apiserver` so that `webhook.New` takes a compiled `webhook.Matcher`
-    instead of match conditions and a CEL compiler, `webhook.NewFromInterface` dropped
-    its compiler argument, `authorizerfactory.DelegatingAuthorizerConfig.Compiler`
-    was removed, and `validation.ValidateAndCompileMatchConditions` was replaced by
-    `validation.NewWebhookMatcher`.
+  text: |-
+    Updated `k8s.io/apiserver` so that `webhook.New` takes a compiled `webhook.Matcher` instead of match conditions and a CEL compiler, `webhook.NewFromInterface` dropped its compiler argument, `authorizerfactory.DelegatingAuthorizerConfig.Compiler` was removed, and `validation.ValidateAndCompileMatchConditions` was replaced by `validation.NewWebhookMatcher`.
+  sigs:
+  - api-machinery
+  - auth
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - apiserver
+  - code-organization

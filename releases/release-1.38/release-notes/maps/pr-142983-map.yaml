@@ -1,7 +1,9 @@
----
 pr: 142983
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: 'Fixed CustomResourceDefinition validation failures for `minLength` to report
-    `Too short: must be at least N characters` (cause type `FieldValueTooShort`) instead
-    of `Invalid value`.'
+  text: |-
+    Fixed CustomResourceDefinition validation failures for `minLength` to report `Too short: must be at least N characters` (cause type `FieldValueTooShort`) instead of `Invalid value`.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

@@ -1,0 +1,12 @@
+pr: 142789
+pr_body: ""
+releasenote:
+  text: |-
+    Added the alpha `KubeAPIServerWorkloadsTrust` feature gate. When enabled, automounted ServiceAccount volumes get the kube-apiserver serving trust from ClusterTrustBundles with the `kubernetes.io/kube-apiserver-serving` signer instead of from the `kube-root-ca.crt` ConfigMap distributed to every namespace. The gate requires the `ClusterTrustBundle` and `ClusterTrustBundleProjection` feature gates.
+  sigs:
+  - auth
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

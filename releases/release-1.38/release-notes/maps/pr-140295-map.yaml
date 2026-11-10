@@ -1,6 +1,20 @@
----
 pr: 140295
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Promoted the Topology-Aware Scheduling (TAS) feature gate `TopologyAwareWorkloadScheduling`
-    to Beta.
+  text: |-
+    Promoted the Topology-Aware Scheduling (TAS) feature gate `TopologyAwareWorkloadScheduling` to Beta.
+  sigs:
+  - api-machinery
+  - apps
+  - etcd
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - apiserver
+  - code-generation

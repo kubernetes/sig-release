@@ -1,0 +1,9 @@
+pr: 142938
+pr_body: ""
+releasenote:
+  text: |-
+    client-go: Added the `MinConnectionPoolSize` field to `rest.Config` and `transport.Config`. When it is greater than 1, the client spreads requests across at least that many connections to the server and sends each request to a connection with fewer requests in flight. This helps when a single load balancer fronts multiple API server backends. Clients that do not set the field are not affected. The beta `ClientsAllowConnectionPool` client-go feature gate controls this behavior and is enabled by default. To disable it, set `KUBE_FEATURE_ClientsAllowConnectionPool=false`.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature

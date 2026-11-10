@@ -1,0 +1,16 @@
+pr: 143287
+pr_body: ""
+releasenote:
+  text: |-
+    DRA ResourceClaim and ResourceClaimTemplate capacity requests now reject negative quantities, invalid capacity names, and maps containing more than 32 entries. New ResourceClaim allocation results enforce equivalent validation for consumed capacity. Updates preserve unchanged capacity fields accepted under earlier validation. The scheduler also rejects negative consumed quantities and computed footprints when calculating DRA node-allocatable resource demand.
+  sigs:
+  - api-machinery
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - test
+  - code-generation

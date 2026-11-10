@@ -1,0 +1,25 @@
+pr: 142746
+pr_body: ""
+releasenote:
+  text: |-
+    The CustomResourceDefinition API types and generated clients are now published in the new module `k8s.io/apiextensions-api`, which does not depend on `k8s.io/apiserver`. The corresponding packages in `k8s.io/apiextensions-apiserver` remain as deprecated aliases; `go fix -inline ./...` migrates callers. The protobuf package of the CRD `.proto` files changes to `k8s.io.apiextensions_api.pkg.apis.apiextensions.v1` (and `v1beta1`); the wire format is unchanged.
+  sigs:
+  - api-machinery
+  - apps
+  - autoscaling
+  - cli
+  - etcd
+  - release
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - test
+  - apiserver
+  - release-eng
+  - code-generation
+  - e2e-test-framework
+  - dependency

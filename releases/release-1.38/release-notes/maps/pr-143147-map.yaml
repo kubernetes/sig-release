@@ -1,6 +1,11 @@
----
 pr: 143147
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue in `kubelet` where rotated container logs were deleted when
-    writing their compressed copy failed (for example, on a full disk).
+  text: |-
+    Fixed an issue in `kubelet` where rotated container logs were deleted when writing their compressed copy failed (for example, on a full disk).
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

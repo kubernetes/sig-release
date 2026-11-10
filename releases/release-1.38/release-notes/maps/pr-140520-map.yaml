@@ -1,5 +1,12 @@
----
 pr: 140520
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Improved documentation readability for the `kubelet` configuration API (`v1beta1`).
+  text: |-
+    Improved documentation readability for the `kubelet` configuration API (`v1beta1`).
+  sigs:
+  - node
+  kinds:
+  - documentation
+  - api-change
+  areas:
+  - code-generation

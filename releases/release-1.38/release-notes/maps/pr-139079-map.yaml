@@ -1,0 +1,13 @@
+pr: 139079
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the generally available feature gate `RecoverVolumeExpansionFailure`, which was locked and enabled since 1.34.
+  sigs:
+  - api-machinery
+  - apps
+  - auth
+  - storage
+  kinds:
+  - cleanup
+  - api-change

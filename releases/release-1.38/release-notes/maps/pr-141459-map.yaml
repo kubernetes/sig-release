@@ -1,0 +1,12 @@
+pr: 141459
+pr_body: ""
+releasenote:
+  text: |-
+    kubelet now clears name-keyed ClusterTrustBundle cache entries when a ClusterTrustBundle that has a `spec.signerName` changes. Before this, a pod that projected such a bundle by name could get stale trust anchors for up to 5 minutes after the object was updated.
+  sigs:
+  - auth
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

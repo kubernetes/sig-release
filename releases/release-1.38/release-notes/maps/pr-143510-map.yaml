@@ -1,0 +1,9 @@
+pr: 143510
+pr_body: ""
+releasenote:
+  text: |-
+    ClusterTrustBundle API objects now increment metadata.generation when their spec is modified. PodCertificateRequest objects pin to a metadata.generation of 1 on creation.
+  sigs:
+  - auth
+  kinds:
+  - feature

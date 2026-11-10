@@ -1,0 +1,14 @@
+pr: 141732
+pr_body: ""
+releasenote:
+  text: |-
+    Promoted the `SchedulerPreQueueingHints` feature gate to beta, enabled by default. It reduces kube-scheduler requeue work for DRA ResourceClaim events.
+  sigs:
+  - instrumentation
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

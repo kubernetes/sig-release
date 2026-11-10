@@ -1,6 +1,9 @@
----
 pr: 142922
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue where Job `status.ready` decreased when deleting a Ready Pod
-    failed.
+  text: |-
+    Fixed an issue where Job `status.ready` decreased when deleting a Ready Pod failed.
+  sigs:
+  - apps
+  kinds:
+  - bug

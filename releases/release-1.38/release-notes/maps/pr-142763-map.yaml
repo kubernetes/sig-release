@@ -1,0 +1,11 @@
+pr: 142763
+pr_body: ""
+releasenote:
+  text: |-
+    kube-apiserver: Fixed a race during graceful shutdown that let active watch requests close without the rate limiting configured by `--shutdown-watch-termination-grace-period`. With many open watches, a large share of them could close at once, causing their clients to reconnect at the same time.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver

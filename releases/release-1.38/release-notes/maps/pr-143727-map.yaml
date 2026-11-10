@@ -1,0 +1,10 @@
+pr: 143727
+pr_body: ""
+releasenote:
+  text: |-
+    Fixes an issue where kubelet fails to register CSINode objects when a node is quickly recreated with the same name, which previously prevented CSI volumes from attaching to the new node.
+  sigs:
+  - storage
+  kinds:
+  - bug
+  - regression

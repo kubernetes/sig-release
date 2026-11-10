@@ -1,0 +1,13 @@
+pr: 143114
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed StatefulSet rolling updates counting unavailable Pods below `partition` against the `maxUnavailable` budget, which could stall the update, including when `maxUnavailable` is unset and defaults to 1. A percentage `maxUnavailable` is now calculated from the number of Pods in the update range (`replicas - partition`) instead of from all replicas.
+  sigs:
+  - api-machinery
+  - apps
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - code-generation

@@ -1,5 +1,28 @@
----
 pr: 143358
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Updated the etcd client SDK to [`v3.7.3`](https://github.com/etcd-io/etcd/issues/22604).
+  text: |-
+    Updated the etcd client SDK to [`v3.7.3`](https://github.com/etcd-io/etcd/issues/22604).
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - instrumentation
+  - network
+  - node
+  - scheduling
+  - storage
+  - testing
+  kinds:
+  - cleanup
+  areas:
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - code-generation
+  - dependency

@@ -1,6 +1,9 @@
----
 pr: 142923
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue in the Job controller where `job_pods_creation_total` counted
-    a failed Pod creation as both succeeded and failed.
+  text: |-
+    Fixed an issue in the Job controller where `job_pods_creation_total` counted a failed Pod creation as both succeeded and failed.
+  sigs:
+  - apps
+  kinds:
+  - bug

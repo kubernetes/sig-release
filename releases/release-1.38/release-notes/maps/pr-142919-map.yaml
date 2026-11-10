@@ -1,6 +1,11 @@
----
 pr: 142919
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue where the API server watch cache (`cacher`) returned `/` in
-    `continue` tokens.
+  text: |-
+    Fixed an issue where the API server watch cache (`cacher`) returned `/` in `continue` tokens.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver

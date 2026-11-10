@@ -1,6 +1,11 @@
----
 pr: 143277
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed `kubectl` so that `--kuberc` takes precedence over `KUBERC` even when
-    it points to the default `kuberc` path.
+  text: |-
+    Fixed `kubectl` so that `--kuberc` takes precedence over `KUBERC` even when it points to the default `kuberc` path.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

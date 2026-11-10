@@ -1,0 +1,22 @@
+pr: 143439
+pr_body: ""
+releasenote:
+  text: |-
+    Updated cel-go to v0.33.0 (now imported as cel.dev/cel-go). The existing CEL cost model and optional-types behavior are kept. Two changes are visible: the estimated cost of comparing CEL types (`type(a) == type(b)`) is now accurate rather than effectively unbounded, and CEL compilation errors no longer include the `(in container '')` suffix.
+    ACTION REQUIRED (Go consumers of Kubernetes libraries): `k8s.io/apiserver`, `k8s.io/apiextensions-apiserver` and `k8s.io/dynamic-resource-allocation` now depend on cel.dev/cel-go v0.33.0 instead of github.com/google/cel-go (the module was renamed upstream). Code that passes cel-go types (for example cel.EnvOption, cel.ProgramOption, *cel.Env, *cel.Type or ref.Val) to or from these libraries must update its imports to `cel.dev/cel-go/...`.
+  sigs:
+  - api-machinery
+  - auth
+  - cloud-provider
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - cloudprovider
+  - code-generation
+  - dependency

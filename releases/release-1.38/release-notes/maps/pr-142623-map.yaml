@@ -1,0 +1,13 @@
+pr: 142623
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a race condition in `kube-scheduler` async preemption where a preemptor pod could remain stuck in the unschedulable queue if its last victim pod was already deleted before the preemption API call executed. Changed the boolean return value of `preemption.Executor.PreemptPod` in `pkg/scheduler/framework/preemption` to return `true` when the API server deletes a bound victim (and will emit a pod deletion event), and `false` when the victim was preempted only in scheduler memory or was already deleted.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  - flake
+  areas:
+  - test

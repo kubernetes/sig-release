@@ -1,0 +1,11 @@
+pr: 143628
+pr_body: ""
+releasenote:
+  text: |-
+    kubeadm: `kubeadm upgrade plan` now returns an error instead of panicking when the latest kube-apiserver version cannot be determined.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm

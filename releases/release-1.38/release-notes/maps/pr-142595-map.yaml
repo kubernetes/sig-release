@@ -1,0 +1,13 @@
+pr: 142595
+pr_body: ""
+releasenote:
+  text: |-
+    kube-scheduler: Added a QueueingHint that immediately re-queues a nominated pod when an update to its nominated node's Allocatable means the pod can no longer fit on that node, so it can preempt on another node without waiting for the original victims to terminate.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

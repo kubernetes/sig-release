@@ -1,5 +1,18 @@
----
 pr: 141014
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue where `kubelet` set Pod sandbox CPU and memory limits to the partial sum of container limits when only some containers declared them. Sandbox limits are unlimited when unset to match Pod cgroup behavior, and containers explicitly setting a limit of 0 are treated as not declared when computing Pod-level limits.
+  text: |-
+    Fixed an issue where `kubelet` set Pod sandbox CPU and memory limits to the partial sum of container limits when only some containers declared them. Sandbox limits are unlimited when unset to match Pod cgroup behavior, and containers explicitly setting a limit of 0 are treated as not declared when computing Pod-level limits.
+  sigs:
+  - api-machinery
+  - apps
+  - cli
+  - node
+  - scheduling
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - kubelet
+  - kubectl
+  - code-generation

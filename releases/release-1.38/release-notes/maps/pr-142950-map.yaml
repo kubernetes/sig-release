@@ -1,8 +1,9 @@
----
 pr: 142950
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed `kube-scheduler` handling of PodGroup and CompositePodGroup objects
-    deleted and recreated under the same name during a watch interruption, processing
-    them as a deletion followed by an addition rather than an in-place update to keep
-    the cache and queue hierarchy consistent.
+  text: |-
+    Fixed `kube-scheduler` handling of PodGroup and CompositePodGroup objects deleted and recreated under the same name during a watch interruption, processing them as a deletion followed by an addition rather than an in-place update to keep the cache and queue hierarchy consistent.
+  sigs:
+  - scheduling
+  kinds:
+  - bug
