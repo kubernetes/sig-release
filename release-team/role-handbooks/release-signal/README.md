@@ -598,6 +598,8 @@ A flaky test is a software test that yields both passing and failing results des
 
 If a test is suspected to be flaky and not enough evidence is present on the testgrid dashboard itself, search that test name in [Triage](https://go.k8s.io/triage) to see the test results across different jobs. Not all results may be accurate, as tests running in different jobs may have different configurations. But this, overall, gives a good picture of the test's health.
 
+Jobs that fail with 50X errors from a cloud provider are to be considered platform outage/brownout and should be disregarded from flake calculations.
+
 ### Priority Labels
 
 Issues you create for test failures and flakes must be assigned a `priority` label, that is compatible with the priorities
