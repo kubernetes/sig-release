@@ -2,7 +2,7 @@ pr: 143729
 pr_body: ""
 releasenote:
   text: |-
-    With the alpha `ManagedFieldsOptOutClient` feature gate enabled, kube-scheduler's informers no longer receive `metadata.managedFields`.
+    Changed `kube-scheduler` informers to stop receiving `metadata.managedFields` when the Alpha `ManagedFieldsOptOutClient` feature gate is enabled.
   sigs:
   - scheduling
   kinds:

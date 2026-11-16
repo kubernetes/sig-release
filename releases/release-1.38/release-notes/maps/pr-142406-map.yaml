@@ -2,7 +2,7 @@ pr: 142406
 pr_body: ""
 releasenote:
   text: |-
-    DRA: various improvements in the scheduling code make allocating devices faster. Also fixes semver comparisons during match/distinct attribute comparisons such that they now properly ignore build information. Pod scheduling fails consistently when unsupported value types are encountered for match/distinct attributes (can only occur in invalid cluster configurations). Previously they only caused a scheduling failure when actually doing a comparison.
+    Improved the speed of DRA device allocation in the scheduling code. Fixed semver comparisons for match/distinct attributes to ignore build information. Changed Pod scheduling to fail consistently when unsupported value types are encountered for match/distinct attributes (this can only occur in invalid cluster configurations). Previously, they caused a scheduling failure only when a comparison was performed.
   sigs:
   - api-machinery
   - apps

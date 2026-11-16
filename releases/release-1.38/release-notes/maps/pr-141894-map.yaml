@@ -1,6 +1,6 @@
 ---
 pr: 141894
 pr_body: ''
-do_not_publish: true
 releasenote:
   text: Internal Go struct tags definition change.
+  do_not_publish: true

@@ -2,7 +2,7 @@ pr: 143088
 pr_body: ""
 releasenote:
   text: |-
-    Promoted the CompositePodGroup API to `scheduling.k8s.io/v1beta1` and the `CompositePodGroup` feature gate to beta. The feature gate and the `scheduling.k8s.io/v1beta1` API are both disabled by default.
+    Promoted the CompositePodGroup API to `scheduling.k8s.io/v1beta1` and the `CompositePodGroup` feature gate to Beta. The feature gate and the `scheduling.k8s.io/v1beta1` API are both disabled by default.
   sigs:
   - api-machinery
   - apps

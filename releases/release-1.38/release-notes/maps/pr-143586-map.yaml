@@ -2,7 +2,7 @@ pr: 143586
 pr_body: ""
 releasenote:
   text: |-
-    kubectl: fixed `--kuberc=<path>` truncating paths that contain `=`.
+    Fixed `kubectl` truncating `--kuberc=<path>` paths that contain `=`.
   sigs:
   - cli
   kinds:

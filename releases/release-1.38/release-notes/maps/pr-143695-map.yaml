@@ -2,7 +2,7 @@ pr: 143695
 pr_body: ""
 releasenote:
   text: |-
-    Workload validation now rejects Workloads whose PodGroupTemplates and CompositePodGroupTemplates have different `preemptionPolicy` values, including a mix of set and unset. Existing Workloads can still be updated.
+    Fixed Workload validation to reject Workloads whose PodGroupTemplates and CompositePodGroupTemplates have different `preemptionPolicy` values, including a mix of set and unset. Existing Workloads can still be updated.
   sigs:
   - scheduling
   - testing
