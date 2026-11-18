@@ -14,7 +14,7 @@ Exceptions will be granted on the basis of *risk*, *length of exception required
 
 The enhancement coming in late should represent a **low risk to the Kubernetes system** - it should not risk other areas of the code, and it should itself be well contained and tested.
 
-Your PRs should be under active review, with acknowledgement from all necessary reviewers and approvers, including API reviewers.
+Your PRs should be under active review, with all necessary reviewers and approvers identified (including API reviewers) with confirmations they have time to complete reviews/re-reviews before the requested extension deadline.
 
 The length of exception needed should be on the order of days, not weeks. If there are 3 PRs in and 1 still waiting review, that's a much stronger case than a enhancement that doesn't have any PRs out yet. Granted exception requests are due at the end of the last day [Anywhere on Earth (AoE) time](https://dateful.com/convert/aoe-anywhere-on-earth), counted from the day of Code Freeze.
 
