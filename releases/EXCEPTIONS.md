@@ -14,15 +14,25 @@ Exceptions will be granted on the basis of *risk*, *length of exception required
 
 The enhancement coming in late should represent a **low risk to the Kubernetes system** - it should not risk other areas of the code, and it should itself be well contained and tested.
 
-The length of exception needed should be on the order of days, not weeks. If there are 3 PRs in and 1 still waiting review, that's a much stronger case than a enhancement that doesn't have any PRs out yet. Granted exception requests are due at the end of the last day [Anywhere on Earth (AoE) time](https://dateful.com/convert/aoe-anywhere-on-earth).
+Your PRs should be under active review, with acknowledgement from all necessary reviewers and approvers, including API reviewers.
 
-Exceptions should be filed at the earliest opportunity i.e., as soon as it's clear an enhancement may miss the deadline.
+The length of exception needed should be on the order of days, not weeks. If there are 3 PRs in and 1 still waiting review, that's a much stronger case than a enhancement that doesn't have any PRs out yet. Granted exception requests are due at the end of the last day [Anywhere on Earth (AoE) time](https://dateful.com/convert/aoe-anywhere-on-earth), counted from the day of Code Freeze.
+
+A reasonable length for an exception request is less than 3 days. If your enhancement requires a longer exception, it may not be ready for the release and a significantly stronger argument with respect to risk and impact will be required. 
+
+You should have *very high confidence* on the "additional time needed" number. The Release Team will not grant multiple exceptions for the **same** freeze for a single enhancement — once an exception has been approved or rejected for a given freeze, the decision is final and additional time cannot be requested for that freeze. The same goes for over-estimating on the time needed: if the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.
+
+A KEP may still request separate exceptions at different freeze points across the release cycle (e.g. a KEP Readiness Deadline exception and, later, a Code/Test Freeze exception), each evaluated on its own merits. The [combined KEP Readiness + Enhancements Freeze request described below](#exceptions-after-kep-readiness-deadline) remains the one case where a single request may cover two freezes.
+
+Exceptions should be filed at the earliest opportunity i.e., as soon as it's clear an enhancement may miss the deadline. Filing an exception request before the deadline is preferred.
 
 ## Requesting an exception
 
 ### Enhancement Owners
 
-To file for an exception, please fill out the questions below:
+To file for an exception, please fill out the questions below, with the subject line in the following format:
+
+Email subject line: [SIG $Name] [$Phase Exception Request] KEP-$Number
 
 - Enhancement name:
 - Enhancement status (alpha/beta/stable):
@@ -32,7 +42,7 @@ To file for an exception, please fill out the questions below:
 - Additional time needed (in calendar days, due end of day AoE):
 - Reason this enhancement is critical for this milestone:
 - Risks from adding code late: (to k8s stability, testing, etc.)
-- Risks from cutting enhancement: (partial implementation, critical customer usecase, etc.)
+- Risks from cutting enhancement: (partial implementation, critical customer usecase, etc. it is not sufficient to state that not granting the exception means implementation will be delayed by a release, that is implied)
 
 Email them to:
 
@@ -40,13 +50,12 @@ Email them to:
 - release-team@kubernetes.io
 - kubernetes-sig-release@googlegroups.com
 
-You should have *very high confidence* on the "additional time needed" number. The Release Team will not grant multiple exceptions for the **same** freeze for a single enhancement — once an exception has been approved or rejected for a given freeze, the decision is final and additional time cannot be requested for that freeze. The same goes for over-estimating on the time needed: if the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.
+Once you have emailed this, post the same information in the #sig-release channel in Slack. This is where discussion will occur with the Release Team. 
 
-A KEP may still request separate exceptions at different freeze points across the release cycle (e.g. a KEP Readiness Deadline exception and, later, a Code/Test Freeze exception), each evaluated on its own merits. The [combined KEP Readiness + Enhancements Freeze request described below](#exceptions-after-kep-readiness-deadline) remains the one case where a single request may cover two freezes.
 
 #### Exceptions after KEP readiness deadline:
 - Requests for exceptions must be submitted within 3 days after the KEP readiness deadline. You may file an exception request in advance if you know your KEP will miss the KEP readiness deadline.
-- Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request (please mention that the request is for both the KEP readiness deadline and enhancements freeze, and list the expected completion date of both combined).
+- Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request. In this case, you must specify that this is an exception request for both phases. The total number of days requested must reflect the total number of days required to meet both deadline's requirements.
 - All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after PRR freeze:
@@ -54,26 +63,24 @@ A KEP may still request separate exceptions at different freeze points across th
 As of v1.38, this deadline has been renamed to the `KEP Readiness Deadline`. See [Exceptions after KEP readiness deadline](#exceptions-after-kep-readiness-deadline).
 
 #### Exceptions after enhancements freeze:
-- Requests for exceptions must be submitted within 3 days after enhancements freeze. You may file an exception request in advance if you know your KEP will miss the enhancements freeze deadline.
+- Requests for exceptions must be submitted within 3 days after enhancements freeze. Requests made more than 3 days after this deadline are likely to be denied. You may file an exception request in advance if you know your KEP will miss the enhancements freeze deadline.
 - All requests will be reviewed and either approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after code freeze and test freeze:
-- Requests for exceptions must be submitted within 3 days after code freeze and test freeze. You may file an exception request in advance if you know your KEP will miss the code freeze and test freeze deadline.
+- Requests for exceptions must be submitted within 3 days after code freeze and test freeze. You may file an exception request in advance if you know your KEP will miss the code freeze and test freeze deadline. Requests made more than 3 days after this deadline are likely to be denied.
 - All requests for exception will be reviewed and either approved or rejected during the first meeting. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after docs freeze:
-- As the docs freeze takes place close to the end of the release cycle, please file an exception request as soon as possible, ideally in advance of the deadline if you know you will miss it, or within 24 hours of missing the docs freeze deadline.
+- As the docs freeze takes place close to the end of the release cycle, file an exception request as soon as possible, ideally in advance of the deadline if you know you will miss it, or within 24 hours of missing the docs freeze deadline.
 - The Kubernetes website PR review process applies to docs exception work (see [Reviewing a PR](https://kubernetes.io/docs/contribute/review/for-approvers/#reviewing-a-pr)), including technical review and approver workflows.
 - Exception requests should include at least one additional business day after technical review is complete so SIG Docs OWNERS have time to review and approve.
 - All requests will be reviewed and approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above, with input from SIG Docs.
-
 
 Information about the current release can be found in the relevant release directory:
 - important dates e.g., [releases/release-1.14/README.md](/releases/release-1.14/README.md)
 - Release Team members e.g., [releases/release-1.14/release_team.md](/releases/release-1.14/release_team.md)
 
-
-Once an exception is approved, it should be broadcast broadly: send an email with the data and approval to kubernetes-dev@ and your SIG group, then follow up with a reply to that email once the enhancement is completed.
+Once an exception is approved, it will be broadcast broadly: the release team will send an email with the data and approval to kubernetes-dev@ and your SIG group.
 
 ### Tracking Exception Requests
 
