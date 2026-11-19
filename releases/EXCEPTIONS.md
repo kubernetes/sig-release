@@ -54,9 +54,8 @@ Email them to:
 
 Once you have emailed this, post the same information in the #sig-release channel in Slack. This is where discussion will occur with the Release Team. 
 
-
 #### Exceptions after KEP readiness deadline:
-- Requests for exceptions must be submitted within 3 days after the KEP readiness deadline. You may file an exception request in advance if you know your KEP will miss the KEP readiness deadline.
+- Requests for exceptions must be submitted within 3 days after the KEP readiness deadline. Requests made more than 3 days after this deadline will be denied. You may file an exception request in advance if you know your KEP will miss the KEP readiness deadline.
 - Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request. In this case, you must specify that this is an exception request for both phases. The total number of days requested must reflect the total number of days required to meet both deadlines' requirements.
 - All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
@@ -65,15 +64,15 @@ Once you have emailed this, post the same information in the #sig-release channe
 As of v1.38, this deadline has been renamed to the `KEP Readiness Deadline`. See [Exceptions after KEP readiness deadline](#exceptions-after-kep-readiness-deadline).
 
 #### Exceptions after enhancements freeze:
-- Requests for exceptions must be submitted within 3 days after enhancements freeze. Requests made more than 3 days after this deadline are likely to be denied. You may file an exception request in advance if you know your KEP will miss the enhancements freeze deadline.
+- Requests for exceptions must be submitted within 3 days after enhancements freeze. Requests made more than 3 days after this deadline will be denied. You may file an exception request in advance if you know your KEP will miss the enhancements freeze deadline.
 - All requests will be reviewed and either approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after code freeze and test freeze:
-- Requests for exceptions must be submitted within 3 days after code freeze and test freeze. You may file an exception request in advance if you know your KEP will miss the code freeze and test freeze deadline. Requests made more than 3 days after this deadline are likely to be denied.
+- Requests for exceptions must be submitted within 3 days after code freeze and test freeze. Requests made more than 3 days after this deadline will be denied. You may file an exception request in advance if you know your KEP will miss the code freeze and test freeze deadline. Requests made more than 3 days after this deadline are likely to be denied.
 - All requests for exception will be reviewed and either approved or rejected during the first meeting. The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after docs freeze:
-- As the docs freeze takes place close to the end of the release cycle, file an exception request as soon as possible, ideally in advance of the deadline if you know you will miss it, or within 24 hours of missing the docs freeze deadline.
+- As the docs freeze takes place close to the end of the release cycle, file an exception request as soon as possible, ideally in advance of the deadline if you know you will miss it, or within 24 hours of missing the docs freeze deadline. Requests made more than 24 hours after this deadline will be denied.
 - The Kubernetes website PR review process applies to docs exception work (see [Reviewing a PR](https://kubernetes.io/docs/contribute/review/for-approvers/#reviewing-a-pr)), including technical review and approver workflows.
 - Exception requests should include at least one additional business day after technical review is complete so SIG Docs OWNERS have time to review and approve.
 - All requests will be reviewed and approved or rejected as they come in. The release team will be responsible for approving or rejecting exceptions based on the questions above, with input from SIG Docs.
