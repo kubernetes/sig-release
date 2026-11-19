@@ -57,7 +57,7 @@ Once you have emailed this, post the same information in the #sig-release channe
 
 #### Exceptions after KEP readiness deadline:
 - Requests for exceptions must be submitted within 3 days after the KEP readiness deadline. You may file an exception request in advance if you know your KEP will miss the KEP readiness deadline.
-- Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request. In this case, you must specify that this is an exception request for both phases. The total number of days requested must reflect the total number of days required to meet both deadline's requirements.
+- Due to the proximity to enhancements freeze, if you anticipate that you will need an enhancements freeze exception as well, you may submit an exception request for both in the same request. In this case, you must specify that this is an exception request for both phases. The total number of days requested must reflect the total number of days required to meet both deadlines' requirements.
 - All requests will be reviewed and either approved or rejected as they come in.  The release team will be responsible for approving or rejecting exceptions based on the questions above.
 
 #### Exceptions after PRR freeze:
