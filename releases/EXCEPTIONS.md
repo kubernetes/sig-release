@@ -44,7 +44,7 @@ where `$Phase` is one of `KEP Readiness Deadline`, `Enhancements Freeze`, `Code 
 - Additional time needed (in calendar days, due end of day AoE):
 - Reason this enhancement is critical for this milestone:
 - Risks from adding code late: (to k8s stability, testing, etc.)
-- Risks from cutting enhancement: (partial implementation, critical customer usecase, etc. it is not sufficient to state that not granting the exception means implementation will be delayed by a release, that is implied)
+- Risks from cutting enhancement: (partial implementation, critical customer usecase, etc.). It is not sufficient to state that not granting the exception means the implementation will be delayed by a release; that is implied.
 
 Email them to:
 
