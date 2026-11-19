@@ -30,7 +30,7 @@ state.
 
    Outcome: Provide a fast and error-resistant workflow for artifact promotion compliant with SLSA.
 
-   Enhancement: was kubernetes/enhancements#3027
+   Enhancement: https://github.com/kubernetes/enhancements/issues/3027 (SLSA compliance)
 
    Tracking issue: https://github.com/kubernetes-sigs/promo-tools/issues/1972
 
