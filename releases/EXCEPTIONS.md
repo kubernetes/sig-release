@@ -18,7 +18,7 @@ Your PRs should be under active review, with all necessary reviewers and approve
 
 The length of exception needed should be on the order of days, not weeks. If there are 3 PRs in and 1 still waiting review, that's a much stronger case than an enhancement that doesn't have any PRs out yet. Granted exception requests are due at the end of the last day [Anywhere on Earth (AoE) time](https://dateful.com/convert/aoe-anywhere-on-earth), counted from the day of the relevant deadline.
 
-A reasonable length for an exception request is less than 3 days. If your enhancement requires a longer exception, it may not be ready for the release and a significantly stronger argument with respect to risk and impact will be required. 
+A reasonable length for an exception request is 3 days or fewer. If your enhancement requires a longer exception, it may not be ready for the release and a significantly stronger argument with respect to risk and impact will be required.
 
 You should have *very high confidence* on the "additional time needed" number. The Release Team will not grant multiple exceptions for the **same** freeze for a single enhancement — once an exception has been approved or rejected for a given freeze, the decision is final and additional time cannot be requested for that freeze. The same goes for over-estimating on the time needed: if the exception request is rejected on the basis that the asking time is too high, we will not re-evaluate if the asking time decreases.
 
