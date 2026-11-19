@@ -30,9 +30,11 @@ Exceptions should be filed at the earliest opportunity i.e., as soon as it's cle
 
 ### Enhancement Owners
 
-To file for an exception, please fill out the questions below, with the subject line in the following format:
+To file for an exception, send an email with the following subject line and answer the questions below:
 
-Email subject line: [SIG $Name] [$Phase Exception Request] KEP-$Number
+`[SIG $Name] [$Phase Exception Request] KEP-$Number`
+
+where `$Phase` is one of `KEP Readiness Deadline`, `Enhancements Freeze`, `Code and Test Freeze` or `Docs Freeze`. For a combined request, use `KEP Readiness Deadline + Enhancements Freeze`.
 
 - Enhancement name:
 - Enhancement status (alpha/beta/stable):
