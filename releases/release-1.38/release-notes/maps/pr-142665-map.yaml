@@ -1,9 +1,13 @@
----
 pr: 142665
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: 'Fixed `FileKeyRef` handling in `kubelet` to honor `optional: true` when the
-    env file does not exist, publishing a key with an empty value (`KEY=''''`) instead
-    of reporting it as missing. Additionally, a value after whitespace following `=`
-    in an env file (such as `KEY= ''value''`) causes a parse error instead of being
-    read as an empty value.'
+  text: |-
+    Fixed `FileKeyRef` handling in `kubelet` to honor `optional: true` when the env file does not exist, publishing a key with an empty value (`KEY=''`) instead of reporting it as missing. Additionally, a value after whitespace following `=` in an env file (such as `KEY= 'value'`) causes a parse error instead of being read as an empty value.
+  sigs:
+  - node
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test
+  - kubelet

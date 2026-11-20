@@ -1,0 +1,11 @@
+pr: 143028
+pr_body: ""
+releasenote:
+  text: |-
+    Added an optional `double_value` field to the CRI `Metric` message, which the kubelet prefers over the integer `value` field. Container runtimes that set it avoid sub-second precision loss in CPU and PSI metrics sourced from the CRI.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

@@ -1,5 +1,10 @@
----
 pr: 136029
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Allowed immediate volume detachment when a Node is deleted.
+  text: |-
+    Allowed immediate volume detachment when a Node is deleted.
+  sigs:
+  - apps
+  - storage
+  kinds:
+  - cleanup

@@ -1,0 +1,9 @@
+pr: 143729
+pr_body: ""
+releasenote:
+  text: |-
+    Changed `kube-scheduler` informers to stop receiving `metadata.managedFields` when the Alpha `ManagedFieldsOptOutClient` feature gate is enabled.
+  sigs:
+  - scheduling
+  kinds:
+  - feature

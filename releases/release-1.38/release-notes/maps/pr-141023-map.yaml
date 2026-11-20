@@ -2,7 +2,7 @@ pr: 141023
 pr_body: ""
 releasenote:
   text: |-
-    Changed the CompositePodGroup `spec.schedulingPolicy.gang.minGroupCount` field to be mutable. When it decreases, `kube-scheduler` re-enqueues the affected Pods.
+    Made the CompositePodGroup `spec.schedulingPolicy.gang.minGroupCount` field mutable, including in CompositePodGroup templates in a Workload. A change applies only to Pods that have not been scheduled. When the value decreases, `kube-scheduler` re-enqueues the Pods in that CompositePodGroup hierarchy.
   sigs:
   - api-machinery
   - scheduling

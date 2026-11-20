@@ -1,0 +1,11 @@
+pr: 143595
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed `kube-apiserver` sending an extra periodic bookmark to WatchList watchers about 1 second after the initial-events-end bookmark; these watchers now follow the regular bookmark interval.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature
+  areas:
+  - apiserver

@@ -1,7 +1,12 @@
----
 pr: 142434
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Updated `kubelet` to honor `serverCertificateKeyAlgorithm` when generating
-    its self-signed serving certificate. Previously, that certificate was always RSA-2048.
-    Now it uses the configured algorithm, defaulting to ECDSA-P256.
+  text: |-
+    Updated `kubelet` to honor `serverCertificateKeyAlgorithm` when generating its self-signed serving certificate. Previously, that certificate was always RSA-2048. Now it uses the configured algorithm, defaulting to ECDSA-P256.
+  sigs:
+  - auth
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet

@@ -1,6 +1,12 @@
----
 pr: 142684
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed PodGroup preemption to clear the nominated node name of lower-priority
-    Pods running on nodes nominated for the PodGroup.
+  text: |-
+    Fixed PodGroup preemption not clearing the nominated node name of lower-priority Pods that were nominated to the nodes chosen for the PodGroup.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

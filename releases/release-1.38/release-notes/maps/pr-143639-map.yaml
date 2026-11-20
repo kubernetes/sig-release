@@ -1,0 +1,11 @@
+pr: 143639
+pr_body: ""
+releasenote:
+  text: |-
+    Improved the performance of field selection in CEL expressions.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - apiserver

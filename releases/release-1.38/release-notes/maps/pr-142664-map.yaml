@@ -1,0 +1,11 @@
+pr: 142664
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `scheduler_batch_cache_flushed_total` metric to report a discarded batch state once rather than once per following pod, and limited it to states found unusable when a hint is requested. Moved its `empty_list` and `pod_not_batchable` reasons to the new Alpha metric `scheduler_store_schedule_results_total`, which records the outcome of each attempt to store scheduling results for opportunistic batching. Removed the `pod_failed` reason, which could never be reported.
+  sigs:
+  - instrumentation
+  - scheduling
+  kinds:
+  - bug
+  - cleanup

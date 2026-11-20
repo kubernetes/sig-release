@@ -1,0 +1,9 @@
+pr: 142429
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a data race in kube-scheduler where concurrent Reject and Preempt calls on a Pod waiting at the Permit extension point could both report success.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

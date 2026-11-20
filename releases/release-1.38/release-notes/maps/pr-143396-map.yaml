@@ -1,7 +1,11 @@
----
 pr: 143396
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Removed the `/openapi/v2` fallback in `kubectl explain` when `/openapi/v3`
-    is unavailable. The `--output=plaintext-openapiv2` option is deprecated and will
-    be removed in a future release.
+  text: |-
+    Removed the `/openapi/v2` fallback in `kubectl explain` when `/openapi/v3` is unavailable. The `--output=plaintext-openapiv2` option is deprecated and will be removed in a future release.
+  sigs:
+  - cli
+  kinds:
+  - cleanup
+  areas:
+  - kubectl

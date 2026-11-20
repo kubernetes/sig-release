@@ -1,0 +1,13 @@
+pr: 143478
+pr_body: ""
+releasenote:
+  text: |-
+    Promoted the `DRAPartitionableDevices` feature gate to GA and locked it to true.
+  sigs:
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

@@ -1,7 +1,11 @@
----
 pr: 143327
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Updated `kubectl apply`, `kubectl create`, and `kubectl replace` to no longer
-    download the deprecated `/openapi/v2` schema to validate list documents client-side;
-    items are validated server-side like single objects.
+  text: |-
+    Updated `kubectl apply`, `kubectl create`, and `kubectl replace` to no longer download the deprecated `/openapi/v2` schema to validate list documents client-side; items are validated server-side like single objects.
+  sigs:
+  - cli
+  kinds:
+  - cleanup
+  areas:
+  - kubectl

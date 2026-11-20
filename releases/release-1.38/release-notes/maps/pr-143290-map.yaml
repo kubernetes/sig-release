@@ -1,0 +1,9 @@
+pr: 143290
+pr_body: ""
+releasenote:
+  text: |-
+    Added `Pausable`, an optional client-go workqueue interface with `Pause` and `Resume` methods that controllers can use to stop and restart item retrieval; while paused, `Get` blocks, and `Add`, `Done` and `Forget` keep working.
+  sigs:
+  - api-machinery
+  kinds:
+  - feature

@@ -1,0 +1,9 @@
+pr: 143716
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed the `scheduler_framework_extension_point_duration_seconds` metric for the `PreEnqueue` extension point, which always reported `status="Success"` even when a PreEnqueue plugin gated the pod.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

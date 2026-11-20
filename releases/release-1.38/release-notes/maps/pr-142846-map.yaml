@@ -1,5 +1,14 @@
----
 pr: 142846
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Allowed PodGroups to use system PriorityClasses by raising the maximum allowed priority value.
+  text: |-
+    Allowed PodGroups to use system PriorityClasses by raising the maximum allowed priority value.
+  sigs:
+  - apps
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  - api-change
+  areas:
+  - test

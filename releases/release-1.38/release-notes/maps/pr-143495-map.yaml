@@ -1,0 +1,12 @@
+pr: 143495
+pr_body: ""
+releasenote:
+  text: |-
+    Changed API validation to reject PodGroups, CompositePodGroups, and Workload templates that set the `all` disruption mode with a scheduling policy other than `gang` when they are created. Existing objects with this combination can still be updated.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test

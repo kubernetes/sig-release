@@ -1,5 +1,14 @@
----
 pr: 141164
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Promoted the `apiserver_resource_size_estimate_bytes` metric to Beta.
+  text: |-
+    Promoted the `apiserver_resource_size_estimate_bytes` metric to Beta.
+  sigs:
+  - api-machinery
+  - etcd
+  - instrumentation
+  kinds:
+  - cleanup
+  areas:
+  - apiserver
+  - stable-metrics

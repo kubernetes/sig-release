@@ -1,0 +1,16 @@
+pr: 143065
+pr_body: ""
+releasenote:
+  text: |-
+    Added built-in iptables-legacy vs iptables-nft detection to the `kube-proxy` iptables and ipvs modes. If you build your own `kube-proxy` image, you no longer need to include the iptables-wrapper binary.
+  sigs:
+  - network
+  - node
+  kinds:
+  - cleanup
+  - feature
+  areas:
+  - kubelet
+  - kube-proxy
+  - ipvs
+  - dependency

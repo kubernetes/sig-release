@@ -1,0 +1,9 @@
+pr: 142823
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug in fake client-go's object tracker where deletions that occurred between an initial List and subsequent Watch were lost.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug

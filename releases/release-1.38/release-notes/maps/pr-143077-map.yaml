@@ -1,0 +1,11 @@
+pr: 143077
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a kube-apiserver goroutine and memory leak: a watch-list (sendInitialEvents=true) watcher stayed blocked forever when the client disconnected while the watch cache closed the watcher as too slow.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver

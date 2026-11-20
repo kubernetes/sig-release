@@ -1,8 +1,28 @@
----
 pr: 143011
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Removed direct access to the `Raw` byte slice in `ObjectMeta.ManagedFields[*].FieldsV1`
-    for Go API objects. Callers should use the accessor methods (`GetRawBytes`, `GetRawString`,
-    `SetRawBytes`, `SetRawString`, `GetRawReader`, and `NewFieldsV1`). Building with
-    `-tags=fieldsv1byte` restores temporary access to the previous `Raw []byte` implementation.
+  text: |-
+    Changed `metav1.FieldsV1` in `ObjectMeta.ManagedFields` to store its contents as an interned string by default, so Go code can no longer access the `Raw` byte slice directly. Use the accessor methods instead: `GetRawBytes`, `GetRawString`, `SetRawBytes`, `SetRawString`, `GetRawReader`, and `NewFieldsV1`. To keep the previous `Raw []byte` field, build with `-tags=fieldsv1byte`. The JSON, CBOR, and protobuf wire formats and the published OpenAPI are unchanged.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - cluster-lifecycle
+  - instrumentation
+  - network
+  - node
+  - scheduling
+  - storage
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - code-generation
+  - dependency
