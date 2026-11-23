@@ -1,6 +1,10 @@
----
 pr: 141823
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Extended PodGroup scheduling attempts and latency metrics with a `type` label
-    to support CompositePodGroup.
+  text: |-
+    Added an `entity` label (`podgroup` or `compositepodgroup`) to the `scheduler_podgroup_schedule_attempts_total`, `scheduler_podgroup_scheduling_attempt_duration_seconds`, and `scheduler_podgroup_scheduling_algorithm_duration_seconds` metrics to distinguish PodGroup from CompositePodGroup scheduling. The `scheduler_podgroup_scheduling_algorithm_duration_seconds` metric also has a new `profile` label.
+  sigs:
+  - instrumentation
+  - scheduling
+  kinds:
+  - feature

@@ -1,0 +1,14 @@
+pr: 142125
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the GA `WinDSR` and `WinOverlay` feature gates. Windows DSR continues to be controlled by the `kube-proxy` `winkernel.enableDSR` or `--enable-dsr` setting, and Windows overlay networking no longer requires a feature gate.
+  sigs:
+  - cloud-provider
+  - network
+  - windows
+  kinds:
+  - cleanup
+  areas:
+  - kube-proxy
+  - provider/gcp

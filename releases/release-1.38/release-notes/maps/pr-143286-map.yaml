@@ -1,6 +1,11 @@
----
 pr: 143286
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Updated `kubectl apply` and `kubectl diff` to no longer fall back to fetching
-    the deprecated `/openapi/v2` schema when calculating client-side patches.
+  text: |-
+    Updated `kubectl apply` and `kubectl diff` to no longer fall back to fetching the deprecated `/openapi/v2` schema when calculating client-side patches.
+  sigs:
+  - cli
+  kinds:
+  - cleanup
+  areas:
+  - kubectl

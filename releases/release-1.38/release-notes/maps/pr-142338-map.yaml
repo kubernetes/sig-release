@@ -1,6 +1,11 @@
----
 pr: 142338
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed `kubectl create ingress` to reject a `--default-backend` with an empty
-    Service name or port, and an `--annotation` with an empty key.
+  text: |-
+    Fixed `kubectl create ingress` to reject a `--default-backend` with an empty Service name or port, and an `--annotation` with an empty key.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

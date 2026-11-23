@@ -1,8 +1,10 @@
----
 pr: 141969
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Added CompositePodGroup support to preemption metrics. Added a `preemptor`
-    label (`podgroup` or `compositepodgroup`) to the Alpha metrics `scheduler_workload_preemption_attempts_total`
-    and `scheduler_workload_preemption_victims`, and updated `scheduler_preemption_evaluation_duration_seconds`
-    to distinguish `compositepodgroup` preemptors.
+  text: |-
+    Added CompositePodGroup support to preemption metrics. Added a `preemptor` label (`podgroup` or `compositepodgroup`) to the Alpha metrics `scheduler_workload_preemption_attempts_total` and `scheduler_workload_preemption_victims`, and updated `scheduler_preemption_evaluation_duration_seconds` to distinguish `compositepodgroup` preemptors.
+  sigs:
+  - instrumentation
+  - scheduling
+  kinds:
+  - feature

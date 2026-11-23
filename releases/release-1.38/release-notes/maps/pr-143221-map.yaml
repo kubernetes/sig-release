@@ -1,9 +1,11 @@
----
 pr: 143221
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: 'ACTION REQUIRED: Changed `kubelet` to reject env-file entries with a hash immediately
-    after a closing single quote, such as `KEY=''value''#suffix`, instead of silently
-    ignoring the suffix. Add a space or tab before an intended comment, or move an
-    intended literal suffix inside the single quotes. Affected containers may fail
-    to start until these entries are corrected.'
+  text: |-
+    ACTION REQUIRED: Changed `kubelet` to reject env-file entries with a hash immediately after a closing single quote, such as `KEY='value'#suffix`, instead of silently ignoring the suffix. Add a space or tab before an intended comment, or move an intended literal suffix inside the single quotes. Affected containers may fail to start until these entries are corrected.
+  sigs:
+  - node
+  kinds:
+  - bug
+  areas:
+  - kubelet

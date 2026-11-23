@@ -1,0 +1,11 @@
+pr: 143823
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a leak in `kubeadm` of one named pipe connection per responding CRI socket on Windows when detecting the container runtime socket.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - bug
+  areas:
+  - kubeadm

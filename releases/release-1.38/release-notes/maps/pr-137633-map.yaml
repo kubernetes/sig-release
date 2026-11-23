@@ -1,5 +1,28 @@
----
 pr: 137633
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Added conditional authorization support to the webhook authorizer in `kube-apiserver`.
+  text: |-
+    Added conditional authorization support to the webhook authorizer in `kube-apiserver`.
+  sigs:
+  - api-machinery
+  - architecture
+  - auth
+  - cli
+  - cloud-provider
+  - instrumentation
+  - network
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - kubelet
+  - kube-proxy
+  - apiserver
+  - kubectl
+  - cloudprovider
+  - code-generation
+  - dependency

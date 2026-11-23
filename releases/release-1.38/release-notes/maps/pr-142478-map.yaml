@@ -1,0 +1,16 @@
+pr: 142478
+pr_body: ""
+releasenote:
+  text: |-
+    Graduated DRA Device Binding Conditions (KEP-5007) to GA. The `DRADeviceBindingConditions` feature gate is now locked to enabled.
+  sigs:
+  - api-machinery
+  - node
+  - scheduling
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - code-generation

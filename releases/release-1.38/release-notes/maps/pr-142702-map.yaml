@@ -1,5 +1,15 @@
----
 pr: 142702
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Promoted the `ShardedListAndWatch` feature gate to Beta.
+  text: |-
+    Promoted the `ShardedListAndWatch` feature gate to Beta.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - code-generation

@@ -1,5 +1,12 @@
----
 pr: 139824
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Added `cgroup_mount_mode` to the CRI API to support writable cgroups.
+  text: |-
+    Added `cgroup_mount_mode` to the CRI API to support writable cgroups.
+  sigs:
+  - node
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - kubelet

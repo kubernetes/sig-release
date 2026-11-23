@@ -1,7 +1,15 @@
----
 pr: 142897
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Promoted the WebSocket streaming metrics `apiserver_stream_translator_requests_total`,
-    `apiserver_stream_tunnel_requests_total`, `apiserver_websocket_streaming_requests_total`,
-    and `kubelet_websocket_streaming_requests_total` to Beta.
+  text: |-
+    Promoted the WebSocket streaming metrics `apiserver_stream_translator_requests_total`, `apiserver_stream_tunnel_requests_total`, `apiserver_websocket_streaming_requests_total`, and `kubelet_websocket_streaming_requests_total` to Beta.
+  sigs:
+  - api-machinery
+  - instrumentation
+  - node
+  kinds:
+  - feature
+  areas:
+  - kubelet
+  - apiserver
+  - stable-metrics

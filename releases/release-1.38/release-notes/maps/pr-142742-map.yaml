@@ -1,6 +1,12 @@
----
 pr: 142742
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Updated `kubeadm` to use a custom fake client for dry-running, reducing the
-    `kubeadm` binary size by 20%.
+  text: |-
+    Updated `kubeadm` to use a custom fake client for dry-running, reducing the `kubeadm` binary size by 20%.
+  sigs:
+  - cluster-lifecycle
+  kinds:
+  - cleanup
+  areas:
+  - kubeadm
+  - code-organization

@@ -1,6 +1,13 @@
----
 pr: 141299
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Added the `AllocatorPoolBufferCap` feature gate (Beta, enabled by default)
-    to bound protobuf encode buffers retained in `runtime.AllocatorPool` at 256 KiB.
+  text: |-
+    Added the `AllocatorPoolBufferCap` feature gate (Beta, enabled by default) to bound protobuf encode buffers retained in `runtime.AllocatorPool` at 256 KiB.
+  sigs:
+  - api-machinery
+  - testing
+  kinds:
+  - feature
+  areas:
+  - test
+  - apiserver

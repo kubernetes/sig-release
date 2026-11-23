@@ -1,0 +1,14 @@
+pr: 142467
+pr_body: ""
+releasenote:
+  text: |-
+    Added Beta support for users to define the desired file owner of atomically written volume files. This is behind the `AtomicWriteVolumeUserFields` feature gate (enabled by default).
+  sigs:
+  - api-machinery
+  - apps
+  - storage
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - code-generation

@@ -1,0 +1,11 @@
+pr: 141905
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug where ResourceQuota admission could admit a request that exceeds quota when, in the same admission batch, a status update on another quota in the namespace hit a conflict and triggered a retry.
+  sigs:
+  - api-machinery
+  kinds:
+  - bug
+  areas:
+  - apiserver

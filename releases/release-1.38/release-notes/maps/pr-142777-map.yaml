@@ -1,0 +1,13 @@
+pr: 142777
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug in kube-scheduler where the `PodGroupInitiallyScheduled` or `CompositePodGroupInitiallyScheduled` condition of a PodGroup or CompositePodGroup could be overwritten from `True` to `False` by a scheduling cycle that ran before the scheduler observed its own status update.
+  sigs:
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  - flake
+  areas:
+  - test

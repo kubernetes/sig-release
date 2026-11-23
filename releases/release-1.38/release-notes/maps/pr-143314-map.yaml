@@ -1,6 +1,15 @@
----
 pr: 143314
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed an issue where the `informer_store_resource_version` metric reported
-    0 before an informer store recorded a resource version.
+  text: |-
+    Fixed an issue where the `informer_store_resource_version` metric reported 0 before an informer store recorded a resource version. The metric series is now created only after the first resource version is recorded.
+  sigs:
+  - api-machinery
+  - architecture
+  - instrumentation
+  - scheduling
+  - testing
+  kinds:
+  - bug
+  areas:
+  - test

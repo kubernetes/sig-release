@@ -1,5 +1,17 @@
----
 pr: 141959
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Added conditional authorization support to `kube-apiserver`.
+  text: |-
+    Added conditional authorization support to `kube-apiserver`.
+  sigs:
+  - api-machinery
+  - auth
+  - instrumentation
+  - testing
+  kinds:
+  - api-change
+  - feature
+  areas:
+  - test
+  - apiserver
+  - code-generation

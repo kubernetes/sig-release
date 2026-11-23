@@ -1,0 +1,9 @@
+pr: 141328
+pr_body: ""
+releasenote:
+  text: |-
+    Fixed a bug in `kube-scheduler` where the per-node resource totals wrapped negative when the requests of the pods assigned to a node exceeded int64, which could make the node look like it had spare capacity.
+  sigs:
+  - scheduling
+  kinds:
+  - bug

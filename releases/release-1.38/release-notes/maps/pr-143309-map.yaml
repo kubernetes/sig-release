@@ -1,0 +1,10 @@
+pr: 143309
+pr_body: ""
+releasenote:
+  text: |-
+    Promoted `DRAConsumableCapacity` and `DRAFractionalCapacityRange` to GA.
+  sigs:
+  - node
+  - scheduling
+  kinds:
+  - feature

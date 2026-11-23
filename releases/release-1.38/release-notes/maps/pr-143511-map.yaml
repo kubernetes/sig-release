@@ -1,0 +1,15 @@
+pr: 143511
+pr_body: ""
+releasenote:
+  text: |-
+    Renamed the `kubelet` pod certificate manager's work queue to `podcertificate_projection`. Work queue metrics use that name as the label. This change is part of the migration to newer contextual logging APIs.
+  sigs:
+  - auth
+  - node
+  - testing
+  kinds:
+  - cleanup
+  - feature
+  areas:
+  - test
+  - kubelet

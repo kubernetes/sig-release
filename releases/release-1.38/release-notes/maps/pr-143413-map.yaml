@@ -1,5 +1,11 @@
----
 pr: 143413
-pr_body: ''
+pr_body: ""
 releasenote:
-  text: Fixed missing newlines in `kubectl` error messages when parsing `kuberc` fails.
+  text: |-
+    Fixed missing newlines in `kubectl` error messages when parsing `kuberc` fails.
+  sigs:
+  - cli
+  kinds:
+  - bug
+  areas:
+  - kubectl

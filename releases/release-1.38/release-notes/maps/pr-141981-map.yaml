@@ -2,7 +2,7 @@ pr: 141981
 pr_body: ""
 releasenote:
   text: |-
-    Fixed a `kubeadm` preflight check on OpenRC systems that reported a service as enabled whenever `rc-update show default` mentioned its name anywhere, including as part of another service's name.
+    Fixed a `kubeadm` preflight check on OpenRC systems that reported a service as enabled whenever `rc-update show default` mentioned its name anywhere, including as part of another service's name. As a result, `kubeadm` did not warn when the `kubelet` service was not enabled in the default runlevel.
   sigs:
   - cluster-lifecycle
   kinds:

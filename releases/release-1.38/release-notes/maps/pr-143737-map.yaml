@@ -1,0 +1,13 @@
+pr: 143737
+pr_body: ""
+releasenote:
+  text: |-
+    Corrected the API documentation for the `priority` and `priorityClassName` fields of CompositePodGroupTemplate. The Priority admission controller does not process Workloads, so it resolves these fields only when a CompositePodGroup is created from the template. Also corrected the documentation for the PodGroup `spec.priorityClassName` field.
+  sigs:
+  - api-machinery
+  - scheduling
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - code-generation

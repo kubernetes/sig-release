@@ -1,0 +1,19 @@
+pr: 142093
+pr_body: ""
+releasenote:
+  text: |-
+    Removed the locked GA feature gate `SupplementalGroupsPolicy`. Components no
+    longer accept `--feature-gates=SupplementalGroupsPolicy=...`; remove it from any
+    component configuration before upgrading.
+  sigs:
+  - api-machinery
+  - apps
+  - node
+  - testing
+  kinds:
+  - cleanup
+  - api-change
+  areas:
+  - test
+  - kubelet
+  - code-generation

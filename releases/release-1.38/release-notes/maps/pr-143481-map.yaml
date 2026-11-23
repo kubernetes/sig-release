@@ -1,0 +1,11 @@
+pr: 143481
+pr_body: ""
+releasenote:
+  text: |-
+    Improved the performance of MutatingAdmissionPolicy by avoiding redundant conversions and allocations when evaluating nested CEL `Object{}` expressions.
+  sigs:
+  - api-machinery
+  kinds:
+  - cleanup
+  areas:
+  - apiserver
