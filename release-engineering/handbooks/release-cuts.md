@@ -426,6 +426,9 @@ You might wanna ping @release-managers on Slack to speed this process up.
 
 **The PR has no dependencies outside of approvals / review.**
 
+If `pull-k8sio-cip` fails with `provenance policy not satisfied`, see
+[Wait on image promotion job](#wait-on-image-promotion-job).
+
 > [!CAUTION]
 In case a blocking test goes red during the release cut, you should keep the PR held and reach a consensus with @release-managers that the promo can continue.
 e.g. if a test went red for infra flakyness "Node not ready" it's probably ok to continue, but it's always better to double check.
@@ -457,6 +460,24 @@ You might notice different jobs running, be sure to check out the hash from the 
 That is the hash of the job you want to check and rerun if it fails.
 
 If the job is stuck in "triggered" (empty clock yellow icon), especially after a rerun, it's normal and expected. Please wait and do not touch it.
+
+If the job or the `pull-k8sio-cip` check of the promotion PR fails with
+`provenance policy not satisfied`, an image lacks valid SLSA provenance from
+the stage. If the message ends with `attestation discovery failed`, rerun the
+job (or `/retest` the check), which usually fixes it. Otherwise, don't work
+around it: stop the release and ask the SIG Release leads in the Slack thread,
+quoting the message. `no SLSA build provenance found` means the provenance is
+missing; a message like `referrer provenance sha256:...: not signed by a
+signer the builders name` means it was found but rejected.
+
+If the provenance is missing, the leads can decide to switch the policy in
+[`registry.k8s.io/manifests/k8s-staging-kubernetes/promoter-manifest.yaml`](https://github.com/kubernetes/k8s.io/blob/main/registry.k8s.io/manifests/k8s-staging-kubernetes/promoter-manifest.yaml)
+back to `warn` until the release is out. If the provenance was rejected
+(wrong signer, builder or source), the policy stays in `require`. Merging the
+switch reruns the image promotion job for the Kubernetes images, which
+promotes them if the promotion PR is merged; otherwise `/retest` the promotion
+PR and merge it. Right after the release, the release manager switches the
+policy back to `require` and notes both changes in the release cut issue.
 
 > [!NOTE]
 Remember to update the Slack ([thread](#Create-a-thread-on-release-management)) and the release-cut GitHub [issue](#Release-cut-issue) after the image promotion step
