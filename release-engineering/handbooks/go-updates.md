@@ -8,11 +8,11 @@ various interdependent repositories that need to be updated in tandem.
 - [Signaling intent](#signaling-intent)
 - [kube-cross image](#kube-cross-image)
   - [kube-cross image promotion](#kube-cross-image-promotion)
-- [k8s-cloud-builder image](#k8s-cloud-builder-image)
+- [k8s-cloud-builder and k8s-ci-builder images](#k8s-cloud-builder-and-k8s-ci-builder-images)
 - [`kubernetes/kubernetes` updates](#kuberneteskubernetes-updates)
   - [`master` branch updates](#master-branch-updates)
   - [Cherry picks](#cherry-picks)
-- [kubekins and krte images](#kubekins-and-krte-images)
+- [kubekins-e2e-v2 and krte images](#kubekins-e2e-v2-and-krte-images)
 - [`publishing-bot` updates](#publishing-bot-updates)
 - [Minor version updates](#minor-version-updates)
 
@@ -40,13 +40,8 @@ a minor version update _may_ require:
 - coordination with external projects e.g., golang, etcd
 - extended lead time to merge (rebases, mending test failures)
 
-Minor version updates are initially made *only* to the current development branch,
-and require additional [tracking of changes and prerequisites](#minor-version-updates),
-before backporting changes to release branches.
-
 **Please pair with a more senior Release Manager if you find yourself working
 on a minor version update.**
-
 
 ## Signaling intent
 
@@ -72,6 +67,7 @@ To update the image, create a PR in
 [kubernetes/release](https://github.com/kubernetes/release/tree/master/images/build/cross/)
 modifying:
 
+- `dependencies.yaml`: update the Go version entry.
 - `variants.yaml`: update `GO_VERSION` and `KUBERNETES_VERSION` for the
   target variant.
 - `Makefile`: update the default `GO_VERSION` and `KUBERNETES_VERSION` values
@@ -79,9 +75,14 @@ modifying:
 - `default/Dockerfile`: usually no changes needed unless the cross-compilation
   toolchain itself changes.
 
-Merging the PR triggers the image build via a GCP Cloud Build job configured in
-[kubernetes/test-infra](https://github.com/kubernetes/test-infra/blob/master/config/jobs/image-pushing/k8s-staging-build-image.yaml).
-The build runs automatically on changes to the `images/build/cross/` directory.
+Merging the PR triggers the
+[`post-release-push-image-kube-cross`](https://prow.k8s.io/?job=post-release-push-image-kube-cross)
+postsubmit, which builds and pushes the image to the
+`gcr.io/k8s-staging-build-image` staging registry. The detailed step-by-step
+procedure, including the `dependencies.yaml` entries and how to verify the
+built image, is in the
+[Add new variant for kube-cross image](branch-creation.md#add-new-variant-for-kube-cross-image)
+section of the post branch creation handbook.
 
 ### kube-cross image promotion
 
@@ -93,13 +94,16 @@ in [kubernetes/k8s.io](https://github.com/kubernetes/k8s.io):
 - Include a link to the staging build run and CC
   `@kubernetes/release-engineering`.
 
-## k8s-cloud-builder image
+## k8s-cloud-builder and k8s-ci-builder images
 
 The `k8s-cloud-builder` image is used during the release process to run
-`krel stage` and `krel release` in Google Cloud Build. It is maintained in the
-[kubernetes/release](https://github.com/kubernetes/release/tree/master/images/k8s-cloud-builder)
-repository. When updating Go, ensure that the `k8s-cloud-builder` image is
-rebuilt with the new Go version as part of the overall update.
+`krel stage` and `krel release` in Google Cloud Build. The `k8s-ci-builder`
+image is used by CI jobs in `kubernetes/release`. Both are maintained in the
+[kubernetes/release](https://github.com/kubernetes/release/tree/master/images)
+repository and reference the `kube-cross` image, so they must be updated once
+the new `kube-cross` image is promoted. The procedure is in the
+[Update k8s-cloud-builder and k8s-ci-builder](branch-creation.md#update-k8s-cloud-builder-and-k8s-ci-builder)
+section of the post branch creation handbook.
 
 ## `kubernetes/kubernetes` updates
 
@@ -108,9 +112,16 @@ rebuilt with the new Go version as part of the overall update.
 To update Go on the `master` branch of `kubernetes/kubernetes`:
 
 1. Ensure the promoted `kube-cross` image is available (see above).
-2. Update the Go version in
-   [`build/build-image/cross/VERSION`](https://github.com/kubernetes/kubernetes/blob/master/build/build-image/cross/VERSION)
-   and related files.
+2. Update the Go version in the following files:
+   - [`.go-version`](https://github.com/kubernetes/kubernetes/blob/master/.go-version):
+     the Go version used to build Kubernetes
+   - [`build/build-image/cross/VERSION`](https://github.com/kubernetes/kubernetes/blob/master/build/build-image/cross/VERSION):
+     the tag of the new `kube-cross` image
+   - [`hack/lib/golang.sh`](https://github.com/kubernetes/kubernetes/blob/master/hack/lib/golang.sh):
+     the minimum Go version (`minimum_go_version`), for minor version updates
+   - [`staging/publishing/rules.yaml`](https://github.com/kubernetes/kubernetes/blob/master/staging/publishing/rules.yaml):
+     the Go version of the affected branch, see
+     [`publishing-bot` updates](#publishing-bot-updates)
 3. Run `hack/pin-dependency.sh` and `hack/update-vendor.sh` if dependencies
    require changes for the new Go version.
 4. Verify that all unit, integration, and e2e tests pass with the new version.
@@ -127,12 +138,18 @@ Before cherry picking a Go update, ensure the prerequisites described in the
 [Minor version updates](#minor-version-updates) section are met for the target
 branch.
 
-## kubekins and krte images
+## kubekins-e2e-v2 and krte images
 
-The `kubekins-e2e` and `krte` images are maintained in
-[kubernetes/test-infra](https://github.com/kubernetes/test-infra). They are used
-by CI jobs and must be updated to use the new Go version after
-`kubernetes/kubernetes` has been updated. Coordinate with
+The `kubekins-e2e-v2` and `krte` images are maintained in
+[kubernetes/test-infra](https://github.com/kubernetes/test-infra) and are used
+by CI jobs. The `kubekins-e2e-v2` image does not pin a Go version: each variant
+in
+[`images/kubekins-e2e-v2/variants.yaml`](https://github.com/kubernetes/test-infra/blob/master/images/kubekins-e2e-v2/variants.yaml)
+names a `K8S_BRANCH`, and the image build reads the `.go-version` file from
+that branch of `kubernetes/kubernetes`. Once the Go update has merged into a
+branch, a rebuild of the matching variant picks it up; see
+[Update Kubekins-e2e v2 variants](branch-creation.md#update-kubekins-e2e-v2-variants)
+for how the variants are maintained. Coordinate with
 [SIG Testing](https://github.com/kubernetes/community/tree/master/sig-testing)
 for these updates.
 
@@ -140,10 +157,10 @@ for these updates.
 
 The [publishing-bot](https://github.com/kubernetes/publishing-bot) publishes
 code from `kubernetes/kubernetes/staging` to downstream repositories. After a Go
-update lands on a branch, the publishing-bot rules may need updating to ensure
-the published modules reference the correct Go version in their `go.mod` files.
-Check the publishing-bot configuration and coordinate with SIG API Machinery if
-changes are needed.
+update lands on a branch, update the `go` field of that branch in
+[`staging/publishing/rules.yaml`](https://github.com/kubernetes/kubernetes/blob/master/staging/publishing/rules.yaml)
+so the published modules reference the correct Go version in their `go.mod`
+files. Coordinate with SIG API Machinery if further changes are needed.
 
 ## Minor version updates
 
@@ -167,7 +184,9 @@ that were required to adopt a new go minor version (go 1.N). This typically incl
 Prioritize making the prereq changes as minimal and low-risk as possible.
 Merge those changes to the default Kubernetes development branch *prior* to updating to go 1.N.
 This ensures those changes build and pass tests with both go 1.N and 1.(N‑1).
-Here is an [example of tracking prereq changes for go1.20](https://github.com/kubernetes/release/issues/2815#issuecomment-1373891562).
+Here is an [example of tracking prereq changes for go1.20](https://github.com/kubernetes/release/issues/2815#issuecomment-1373891562);
+more recent minor version updates are linked from the tracking issues in
+[Signaling intent](#signaling-intent).
 
 **2. Backport prereq changes to release-1.x branches**
 
@@ -195,7 +214,7 @@ Update release-1.x branches to build/release using go 1.N *after* all of these c
 2. go 1.N has been used in a released Kubernetes version for at least 1 month
    * this ensures all release-blocking and release-informing CI has run on go 1.N
    * this gives time for release candidates and early adoption by the Kubernetes community
-3. Backported code and dependency changes build and pass unit and integration tests with both go 1.N 
+3. Backported code and dependency changes build and pass unit and integration tests with both go 1.N
    and the go minor version used for the .0 release of the Kubernetes release branch
    * this ensures consumers of patch releases of published Kubernetes
      libraries are not *forced* to update to go 1.N

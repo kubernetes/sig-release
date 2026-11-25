@@ -29,7 +29,7 @@ Example tickets:
 <!-- Keep this in sync with the most recent entry added to "Status / Notes" below. -->
 
 As of Day, xx Month (week X):
-* TBC
+* <latest status>
 
 ## Currently Tracked Goals
 - [ ] Alpha releases (alpha.1, alpha.2, alpha.3)
@@ -44,23 +44,23 @@ As of Day, xx Month (week X):
 - [v1.XX Schedule](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/README.md#timeline)
 - [Cutting a Kubernetes release](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-cuts.md)
 - [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md)
-- [Branch creation handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/branch-creation.md)
+- [Post Branch Creation Tasks](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/branch-creation.md)
 
 # Schedule
 
-<!-- The weeks below follow the standard release schedule phases. Update the calendar dates in each heading to match /releases/release-1.XX/README.md#timeline for this cycle, and add/remove weeks if the schedule differs. -->
+<!-- The weeks below follow the v1.38 release schedule (16 weeks). Update the calendar dates in each heading to match /releases/release-1.XX/README.md#timeline for this cycle, and add/remove weeks if the schedule differs. -->
 
-## Week 1–3: Onboarding & setup
+## Week 1-3: Onboarding & setup
 - [ ] Select and onboard shadows
 - [ ] Create Slack group and send instructions
 - [ ] Update [release-team.md](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.XX/release-team.md) and `k/org` teams.yaml (lead + shadows as milestone maintainers)
-- [ ] Create the v1.XX [Releases tracking issue](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#creating-and-managing-the-release-issue) in `k/sig-release`
+- [ ] Create the v1.XX [Releases tracking issue](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#release-tracking-issue) in `k/sig-release`
 - [ ] Create release cuts rota and share, ask shadows to self-assign cuts
 - [ ] Add lead + shadows to [`k8s-infra-release-editors`](https://github.com/kubernetes/k8s.io/blob/main/groups/sig-release/groups.yaml)
-- [ ] Ask the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) and [kubernetes-announce](https://groups.google.com/forum/#!forum/kubernetes-announce) moderators to allow lead + shadows to post (see [Mailing List Permissions](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#mailing-list-permissions))
+- [ ] Ask the [kubernetes-dev](https://groups.google.com/a/kubernetes.io/g/dev) and [kubernetes-announce](https://groups.google.com/g/kubernetes-announce) moderators to allow lead + shadows to post (see [Mailing List Permissions](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#mailing-list-permissions))
 - [ ] Confirm machine setup per [Release Manager Handbook](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#machine-setup)
 
-## Week 4: v1.XX.0-alpha.1 (Wed DD Mon YYYY)
+## Week 4: v1.XX.0-alpha.1 (Wed DD Mon YYYY) + KEP Readiness Deadline
 - [ ] Assign and cut release
 
 ## Week 5: Enhancements Freeze
@@ -75,36 +75,39 @@ As of Day, xx Month (week X):
 ## Week 8: v1.XX.0-alpha.3 (Wed DD Mon YYYY)
 - [ ] Assign and cut release
 
-## Week 9: v1.XX.0-beta.0 (Wed DD Mon YYYY)
+## Week 9
+- No tasks
+
+## Week 10: v1.XX.0-beta.0 (Wed DD Mon YYYY)
 - [ ] Assign and cut release
 
-## Week 10: Code Freeze + Test Freeze begin (Wed DD Mon AoE)
+## Week 11
+- No tasks
+
+## Week 12: Code Freeze + Test Freeze begin (Mon DD Mon AoE / Tue DD Mon 12:00 UTC)
 See [Code Freeze](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#code-freeze)
 - [ ] Open Code Freeze enforcement PR
 - [ ] Confirm Code Freeze enforcement by making sure the above PR is merged after Code and Test freeze party
 
-## Week 11: Burndown begins
+## Week 13: Burndown begins
 - No tasks
 
-## Week 12: Branch creation + v1.XX.0-rc.0 (Wed DD Mon YYYY)
+## Week 14: Branch creation + v1.XX.0-rc.0 (Thu DD Mon YYYY)
 - [ ] Stage and release rc.0
   - [ ] Create `release-1.XX` branch. See [RC.0 only Considerations](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-cuts.md#rc0-only-considerations-and-post-branch-creation-release-tasks)
 - [ ] Reach out to release-managers a few days before the cut. Make sure someone is available to help you with the post branch creation tasks, some bugs may come up.
-- [ ] Complete [post-release-branch-creation](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-cuts.md#post-branch-creation-release-tasks) tasks
+- [ ] Complete the [post branch creation tasks](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/branch-creation.md)
   - [ ] Create `release-1.XX` jobs (test-infra)
 
-## Week 13
-- No tasks
-
-## Week 14: v1.XX.0-rc.1 (Wed DD Mon YYYY)
+## Week 15: v1.XX.0-rc.1 (Wed DD Mon YYYY)
 - [ ] Assign and cut release
 
-## Week 15: v1.XX.0 + Thaw (Wed DD Mon YYYY)
+## Week 16: v1.XX.0 + Thaw (Wed DD Mon YYYY)
 - [ ] Reach out to release-managers a few days before the cut, so someone is on standby in case something goes wrong.
-- [ ] Run Mock Stage and Mock release the night before of the release
+- [ ] Run Mock Stage and Mock release the night before the release
 - [ ] Stage and release v1.XX.0
 - [ ] Perform Code Thaw ([revert Tide config](https://github.com/kubernetes/sig-release/blob/master/release-engineering/handbooks/release-manager.md#code-thaw))
-- [ ] Nominate next Branch Manager Lead
+- [ ] Nominate next Branch Management Lead
 - [ ] Participate in release retro
 - [ ] Update the Release Manager Handbook with lessons learned
 - [ ] Close the Releases tracking issue and this progress issue
