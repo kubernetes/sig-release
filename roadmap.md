@@ -1,14 +1,16 @@
 # Roadmap and Vision
 
-## SIG Release Roadmap for 2026 and beyond
+## SIG Release Roadmap for 2027 and beyond
 
-This document contains the SIG Release Roadmap for 2026 and beyond. More
-detailed information can be found on the corresponding project boards.
+This document contains the SIG Release Roadmap for 2027 and beyond. More
+detailed information can be found on the corresponding issues and project
+boards.
 
 ### Primary Focus
 
 Decrease **technical debt** and provide a **sustainable foundation** for long
-term contributors of SIG Release.
+term contributors of SIG Release, while **hardening the release supply chain**
+with SLSA Build Level 3 provenance, VEX attestations and OCI artifacts.
 
 ### Deliverables
 
@@ -24,27 +26,51 @@ state.
 
    Enhancement: _none_
 
+   Progress: https://github.com/kubernetes/sig-release/pull/3126
+
    Project board: _none_
 
-1. **Make artifact validation more robust**
+1. **Reach SLSA Build Level 3 for release artifacts (Secure)**
 
-   Outcome: Provide a fast and error-resistant workflow for artifact promotion compliant with SLSA.
+   Outcome: Kubernetes release files and images ship signed SLSA provenance
+   from a separate signing build, so release managers and admins can't forge
+   it, meeting SLSA Build Level 3. The deb and rpm packages built on OBS get
+   SLSA provenance as well.
 
-   Enhancement: https://github.com/kubernetes/enhancements/issues/3027 (SLSA compliance)
+   Enhancement: https://github.com/kubernetes/enhancements/issues/3027 (to be
+   updated to the current plan)
 
-   Tracking issue: https://github.com/kubernetes-sigs/promo-tools/issues/1972
+   Tracking issues: https://github.com/kubernetes/release/issues/4610 (release
+   files and images), https://github.com/kubernetes/release/issues/3091 (deb
+   and rpm packages)
 
-1. **Enhance Kubernetes binary artifact management (Consumable)**
+1. **Publish VEX attestations for Kubernetes releases (Secure / Introspectable)**
 
-   https://github.com/kubernetes/sig-release/issues/1372
+   Outcome: Signed OpenVEX documents for each release image and binary,
+   attached and promoted like the provenance and updated when new
+   vulnerabilities appear, so scanners can drop findings that don't apply.
 
    Enhancement: _none_
 
-   Outcome: Being able to promote files as artifacts and using this mechanism
-   for Kubernetes releases.
+   Related enhancement: https://github.com/kubernetes/enhancements/issues/6377
+   (SIG Security, maintainer assessments for the master branch, merged into the
+   release VEX once they cover release branches)
 
-   Milestones: https://github.com/kubernetes-sigs/promo-tools/milestone/5,
-   https://github.com/kubernetes-sigs/promo-tools/milestone/6
+   Tracking issues: https://github.com/kubernetes/release/issues/4603,
+   https://github.com/kubernetes-sigs/promo-tools/issues/2059
+
+1. **Promote files as OCI artifacts (Consumable)**
+
+   https://github.com/kubernetes/sig-release/issues/1372
+
+   Outcome: Files are promoted as OCI artifacts through the image pipeline, so
+   they get signatures, provenance and verification summaries like images, and
+   replace the file promoter. Kubernetes release binaries as OCI artifacts are
+   an optional follow-up.
+
+   Enhancement: _none_
+
+   Tracking issue: https://github.com/kubernetes-sigs/promo-tools/issues/2065
 
 ### Known Risks
 
@@ -60,22 +86,30 @@ state.
    means that there is a risk of delaying because of investing more time in
    pre-research.
 
+1. **OCI artifact distribution depends on registry costs**
+
+   Promoting files and release binaries as OCI artifacts increases registry
+   storage and traffic. The conventions are on hold until SIG K8s Infra agrees
+   on the cost, which can delay the deliverable.
+
 ### Requests to Other Teams
 
 1. **SIG K8s Infra**
 
-   For general infrastructure support we rely on.
+   For general infrastructure support we rely on, in particular the signing
+   build, its service accounts and triggers for SLSA Build Level 3, and the
+   registry storage and traffic costs of OCI artifacts.
 
 1. **SIG Architecture**
 
-   For the formalization of the released platforms and input about the overall
-   supply chain.
+   For input about the overall supply chain.
 
 1. **SIG Security**
 
-   For content which should be part of the release metadata.
+   For content which should be part of the release metadata, like VEX
+   attestations and SLSA provenance.
 
-1. **SIG Contribex**
+1. **SIG ContribEx**
 
    For getting input about sustainable contributor experience.
 
@@ -93,20 +127,12 @@ became stale.
 
    Project board: https://github.com/orgs/kubernetes/projects/137
 
-1. **Modernize and Extend Release Metadata**
-
-   Outcome: Providing release metadata compliant to the latest industry standards.
-
-   Enhancement: none (was kubernetes/enhancements#3027)
-
-   Project board: _none_
-
 1. **Make Kubernetes releases more flexible**
 
    Outcome: Provide more possibilities for Kubernetes releases to be created in
    custom infrastructure environments.
 
-   Enhancement: none
+   Enhancement: _none_
 
 1. **Define and collect metrics about Kubernetes releases (Introspectable)**
 
@@ -125,6 +151,18 @@ became stale.
    simplified automation.
 
 ### Done Deliverables
+
+1. **Make artifact validation more robust**
+
+   Outcome: A fast and error-resistant workflow for artifact promotion with
+   SLSA provenance policies and verification summaries. The policy for the
+   Kubernetes images runs in `warn` mode until the switch to `require` in
+   https://github.com/kubernetes/release/issues/4610.
+
+   Enhancement: https://github.com/kubernetes/enhancements/issues/3027 (SLSA
+   compliance)
+
+   Tracking issue: https://github.com/kubernetes-sigs/promo-tools/issues/1972
 
 1. **Rework supported platforms**
 
